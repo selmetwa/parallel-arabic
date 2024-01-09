@@ -1,14 +1,7 @@
-<script lang="ts">
-	import { enhance } from '$app/forms';
-
-	import type { PageData } from './$types';
-
-	export let data: PageData;
-</script>
-
-<h1>Profile</h1>
-<p>User id: {data.userId}</p>
-<p>Email: {data.email}</p>
-<form method="post" action="?/logout" use:enhance>
-	<input type="submit" value="Sign out" />
-</form>
+<h1 class="font-sans text-3xl text-blue-400">Welcome</h1>
+<section class="grid w-full h-full gap-2 lg:grid-cols-2">
+  <div class="outline outline-black bg-blue-300"></div>
+  <div class="outline outline-black bg-blue-300"></div>
+  <div class="outline outline-black bg-blue-300"></div>
+  <div class="outline outline-black bg-blue-300"></div>
+</section>

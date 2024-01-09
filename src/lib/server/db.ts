@@ -4,7 +4,7 @@ import { Kysely, SqliteDialect } from 'kysely';
 
 import type { ColumnType } from 'kysely';
 
-export const sqliteDatabase = sqlite('database.db');
+export const sqliteDatabase = sqlite('db.sqlite');
 sqliteDatabase.exec(fs.readFileSync('schema.sql', 'utf8'));
 
 console.log({ sqliteDatabase })

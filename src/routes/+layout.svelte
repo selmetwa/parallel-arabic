@@ -1,4 +1,12 @@
+<script>
+	import '../app.css';
+  import Navigation from '../components/Navigation.svelte';
+</script>
+
 <svelte:head>
-	<title>Email & password auth with Lucia</title>
+	<title>Parallel Arabic</title>
 </svelte:head>
-<slot />
+<div class="max-w-6xl h-full m-auto bg-blue-200 border-x border-blue-100">
+  <Navigation />
+	<slot />
+</div>
