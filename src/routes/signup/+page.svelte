@@ -1,20 +1,24 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
-
+  import Button from "../../components/Button.svelte";
+  import Input from "../../components/Input.svelte";
 	import type { ActionData } from './$types';
 
 	export let form: ActionData;
 </script>
 
-<h1>Sign up</h1>
-<form method="post" use:enhance>
-	<label for="email">Email</label>
-	<input name="email" id="email" /><br />
-	<label for="password">Password</label>
-	<input type="password" name="password" id="password" /><br />
-	<input type="submit" />
+<form method="post" use:enhance class="border-b border-r border-raison flex flex-col gap-2 p-2 bg-blue-300 max-w-[350px]">
+  <h1 class="text-xl font-semibold">Sign up</h1>
+  <Input placeholder="example@gmail.com" type="email" name="email"></Input>
+  <Input type="password" name="password" placeholder="******"></Input>
+  <Button type="submit">
+    Sign Up
+  </Button>
+  {#if form?.message}
+    <p class="error">{form.message}</p>
+  {/if}
+  <a href="/login" class="text-blue-500">Already have an account? Login</a>
 </form>
-{#if form?.message}
-	<p class="error">{form.message}</p>
-{/if}
-<a href="/login">Sign in</a>
+
+
+

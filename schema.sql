@@ -26,3 +26,9 @@ CREATE TABLE if not exists password_reset_token (
     user_id VARCHAR(15) NOT NULL,
     expires BIGINT NOT NULL
 );
+
+CREATE TABLE if not exists stories (
+    id VARCHAR(15) PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    difficulty INTEGER NOT NULL
+);

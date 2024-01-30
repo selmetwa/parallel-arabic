@@ -2,7 +2,7 @@ import { auth } from '$lib/server/lucia';
 import { fail, redirect } from '@sveltejs/kit';
 import { SqliteError } from 'better-sqlite3';
 import { generateEmailVerificationToken } from '$lib/server/token';
-import { isValidEmail, sendEmailVerificationLink } from '$lib/server/email';
+import { isValidEmail }  from '$lib/server/email';
 
 import type { PageServerLoad, Actions } from './$types';
 
@@ -10,7 +10,6 @@ export const load: PageServerLoad = async ({ locals }) => {
 	const session = await locals.auth.validate();
 	if (session) {
     console.log({ session })
-		// if (!session.user.emailVerified) throw redirect(302, '/email-verification');
 		throw redirect(302, '/');
 	}
 	return {};

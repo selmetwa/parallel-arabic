@@ -1,14 +1,13 @@
 import { auth } from '$lib/server/lucia';
 import { fail, redirect } from '@sveltejs/kit';
-import { sqliteDatabase } from '$lib/server/db';
 
 import type { PageServerLoad, Actions } from './$types';
 
 export const load: PageServerLoad = async ({ locals }) => {
 	const session = await locals.auth.validate();
-  const a = sqliteDatabase.prepare('SELECT * FROM user').all();
-  console.log({ a })
+
 	if (!session) throw redirect(302, '/login');
+
 	return {
 		userId: session.user.userId,
 		email: session.user.email
