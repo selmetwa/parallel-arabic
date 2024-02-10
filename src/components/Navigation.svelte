@@ -5,5 +5,6 @@
     <ul class="w-full flex gap-2 px-4">
         <li><a class="text-blue-500" href="/">Home</a></li>
         <li><a class="text-blue-500" href="/profile">Profile</a></li>
+        <li><a class="text-blue-500" href="/stories">Stories</a></li>
     </ul>
 </nav>
