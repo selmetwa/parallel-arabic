@@ -30,5 +30,8 @@ CREATE TABLE if not exists password_reset_token (
 CREATE TABLE if not exists stories (
     id VARCHAR(15) PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
-    difficulty INTEGER NOT NULL
+    key VARCHAR(255) NOT NULL,
+    description TEXT NOT NULL,
+    difficulty INTEGER NOT NULL,
+    created_at BIGINT NOT NULL
 );
