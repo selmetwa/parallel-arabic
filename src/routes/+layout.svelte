@@ -1,11 +1,7 @@
 <script>
 	import '../app.css';
-	import { setContext } from 'svelte';
-	import { onMount } from 'svelte';
 	import Navigation from '../components/Navigation.svelte';
 	export let data;
-
-	console.log({ data })
 </script>
 
 <svelte:head>
