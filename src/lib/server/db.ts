@@ -14,18 +14,6 @@ export const db = new Kysely<Database>({
 	dialect
 });
 
-// const a = uuidv4()
-// console.log({ a })
-
-// db.insertInto('story').values({
-//   id: uuidv4(),
-//   title: 'Omar and Sarah',
-//   key: 'omar-and-sarah',
-//   description: 'This is the first story.',
-//   difficulty: 1,
-//   created_at: Date.now()
-// }).execute();
-
 type Database = {
 	user: UserTable;
 	user_session: SessionTable;
