@@ -1,5 +1,7 @@
 import { redirect } from '@sveltejs/kit';
 import { db } from '$lib/server/db';
+import * as path from 'path';
+import { convertStory } from '../../../helpers/convert-to-story';
 
 import type { PageServerLoad } from './$types';
 
@@ -8,13 +10,34 @@ export const load: PageServerLoad = async ({ locals, params }) => {
 	if (!session) throw redirect(302, '/login');
 
   const storyId = params.storyId;
-  console.log({ storyId });
-  // const stories = await db.selectFrom('story').selectAll().execute();
-  // console.log({ stories });
+  const story = await db.selectFrom('story').selectAll().where('id', '=', storyId).execute();
 
-	// return {
-	// 	userId: session.user.userId,
-	// 	email: session.user.email,
-  //   stories
-	// };
+  let formattedStory = null;
+
+  if (story.length > 0) {
+    const key = story[0].key;
+    // refactor this
+    const filePath = path.join("/Users/sherifelmetwally/Desktop/parallel-arabic/src", 'stories', `${key}.js`);
+    try {
+      const storyFile = await import(filePath);
+      const storyObj = storyFile.story
+      formattedStory = convertStory(storyObj);
+    } catch (error) {
+      // throw error to client
+      if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
+        console.error(`File not found: ${filePath}`);
+      } else {
+        console.error(`Error reading file: ${filePath}`, error);
+      }
+    }
+} else {
+    console.log(`No story found for ID ${storyId}`);
+}
+
+	return {
+		userId: session.user.userId,
+		email: session.user.email,
+    formattedStory: formattedStory,
+    story
+	};
 };
