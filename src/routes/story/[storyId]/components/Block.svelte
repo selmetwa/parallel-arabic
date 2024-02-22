@@ -1,10 +1,10 @@
 <script lang="ts">
-	import type { KeyWord } from '../types';
-
+    import type { KeyWord } from '../types';
+import Word from './Word.svelte'
 	export let keyWords: KeyWord[] = [];
 	export let words: string[] = [];
 	export let showBlock = true;
-	export let isArabic = false;
+	export let type = ''
 	export let setActiveWord = (obj: KeyWord) => {};
 
   function removeArabicDiacritics(inputString: string) {
@@ -19,9 +19,24 @@
 
 	function checkForKeyWord(event: Event) {
 		const word = (event.target as HTMLButtonElement).value;
-		const keyWord = keyWords.find((keyWord) => removeArabicDiacritics(keyWord.arabic.trim()) === removeArabicDiacritics(word.trim()));
+		// const keyWord = keyWords.find((keyWord) => removeArabicDiacritics(keyWord.arabic.trim()) === removeArabicDiacritics(word.trim()));
+    const keyWord = keyWords.find(
+			(keyWord) => {
+        if (type === 'arabic') {
+          return removeArabicDiacritics(keyWord.arabic.trim()) === removeArabicDiacritics(word.trim())
+        }
+        if (type === 'english') {
+          return keyWord.english.trim().toLowerCase() === word.trim().toLowerCase()
+        }
+        if (type === 'transliterated') {
+          return keyWord.transliterated.trim().toLowerCase() === word.trim().toLowerCase()
+        }
+      }
+		);
+    console.log({ word, keyWord })
 
 		if (keyWord !== undefined) {
+      console.log({ keyWord })
 			return setActiveWord(keyWord);
 		}
 
@@ -34,21 +49,17 @@
 </script>
 
 {#if showBlock}
-	<div class="border-2 border-blue-400 bg-blue-300 px-4 py-10">
-		{#if isArabic}
+	<div class="border-2 border-blue-400 bg-blue-300 px-4 py-10 flex-1">
+		{#if type === 'arabic'}
 			<div class="flex flex-row flex-wrap gap-1" dir="rtl">
 				{#each words.reverse() as word}
-					<button class="text-4xl" value={word} on:click={checkForKeyWord}>
-						{word}
-					</button>
+          <Word {word} {keyWords} {checkForKeyWord} {type} />
 				{/each}
 			</div>
 		{:else}
 			<div class="flex flex-row flex-wrap gap-1">
 				{#each words as word}
-					<span class="text-4xl">
-						{word}
-					</span>
+          <Word {word} {keyWords} {checkForKeyWord} {type} />
 				{/each}
 			</div>
 		{/if}

@@ -6,7 +6,6 @@
 	import ActiveWordBlock from './components/ActiveWordBlock.svelte';
 
 	export let data: PageData;
-	console.log({ data });
 	const sentencesLength = data.formattedStory?.text.length || 0;
 	const keyWords = data.formattedStory?.keyWords || [];
 
@@ -49,6 +48,7 @@
 	}
 
 	function setActiveWord(obj: KeyWord) {
+    console.log({ obj })
 		activeWordObj = obj;
 	}
 
@@ -86,10 +86,14 @@
     {showWordDetails}
     {updateBlocksToShow}
   />
-	<div class="mt-8 grid h-auto grid-cols-1 gap-1 sm:grid-cols-2">
-		<Block words={englishWords} showBlock={showEnglish} {keyWords} />
-		<Block words={arabicWords} showBlock={showArabic} isArabic={true} {setActiveWord} {keyWords} />
-		<ActiveWordBlock {activeWordObj} showBlock={showWordDetails} />
-		<Block {keyWords} words={transliteratedWords} showBlock={showTransliterated} />
-	</div>
+    <section class="mt-8 flex flex-col gap-1">
+      <div class="flex flex-col sm:flex-row gap-1">
+        <Block words={englishWords} showBlock={showEnglish} {keyWords} {setActiveWord} type='english' />
+        <Block words={arabicWords} showBlock={showArabic} type='arabic' {setActiveWord} {keyWords} />
+      </div>
+      <div class="flex flex-col sm:flex-row gap-1">
+        <ActiveWordBlock {activeWordObj} showBlock={showWordDetails} />
+        <Block {keyWords} words={transliteratedWords} showBlock={showTransliterated} {setActiveWord} type='transliterated' />
+      </div>
+    </section>
 </main>
