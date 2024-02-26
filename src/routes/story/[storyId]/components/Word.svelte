@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import type { KeyWord } from '../types';
 
 	export let word = '';
@@ -41,20 +40,20 @@
 
 {#if type === 'arabic'}
 	{#if isKeyWord}
-		<button class="text-4xl underline decoration-blue-500" value={word} on:click={checkForKeyWord}>
+		<button class="text-4xl underline decoration-tile-600 text-text-300" value={word} on:click={checkForKeyWord}>
 			{word}
 		</button>
 	{:else}
-		<button class="text-4xl" value={word} on:click={checkForKeyWord}>
+		<button class="text-4xl text-text-300" value={word} on:click={checkForKeyWord}>
 			{word}
 		</button>
 	{/if}
 {:else if isKeyWord}
-	<button class="text-4xl underline decoration-blue-500" value={word} on:click={checkForKeyWord}>
+	<button class="text-4xl underline decoration-tile-600 text-text-300" value={word} on:click={checkForKeyWord}>
 		{word}
 	</button>
 {:else}
-	<span class="text-4xl">
+	<span class="text-4xl text-text-300">
 		{word}
 	</span>
 {/if}

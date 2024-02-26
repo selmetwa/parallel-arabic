@@ -3,7 +3,7 @@
   export let handleCloseDrawer = () => {};
 </script>
 
-<div class="{`drawer ${isOpen ? 'open' : ''}`}">
+<div class="{`drawer ${isOpen ? 'open' : ''} bg-tile-300 border-r border-tile-600`}">
   <!-- Your drawer content goes here -->
   <slot />
 </div>
@@ -19,7 +19,6 @@
   }
   .drawer {
     width: var(--width);
-    background-color: #ccc;
     position: fixed;
     top: 0;
     right: calc(var(--width) * -1); /* Start off-screen */

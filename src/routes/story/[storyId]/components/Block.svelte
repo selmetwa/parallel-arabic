@@ -46,7 +46,7 @@
 </script>
 
 {#if showBlock}
-	<div class="flex-1 bg-blue-300 px-4 py-10">
+	<div class="flex-1 bg-tile-300 px-4 py-10">
 		{#if type === 'arabic'}
 			<div class="flex flex-row flex-wrap gap-1" dir="rtl">
 				{#each words.reverse() as word}
