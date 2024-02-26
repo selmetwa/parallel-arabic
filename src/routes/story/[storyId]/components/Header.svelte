@@ -8,6 +8,9 @@
   export let key = '';
   export let previousSentence = () => {};
   export let nextSentence = () => {};
+
+  export let handleOpenDrawer = () => {};
+
   export let updateBlocksToShow = (value: Event) => {};
   export let sentence = 0;
 
@@ -20,8 +23,9 @@
   </figure>
   <div>
     <div class="flex flex-row gap-1">
-      <Button onClick={previousSentence} type="button">Back</Button>
-      <Button onClick={nextSentence} type="button">Next</Button>
+      <Button onClick={handleOpenDrawer} type="button">Open Drawer</Button>
+      <!-- <Button onClick={previousSentence} type="button">Back</Button>
+      <Button onClick={nextSentence} type="button">Next</Button> -->
     </div>
     <p>Sentance: {sentence + 1}</p>
     <div>

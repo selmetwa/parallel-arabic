@@ -32,3 +32,9 @@ export type ResponseData = {
   key: string;
   difficulty: number;
 }
+
+export enum Mode {
+  SingleText = 'SingleText',
+  BiText = 'BiText',
+  SentanceView = 'SentanceView'
+}

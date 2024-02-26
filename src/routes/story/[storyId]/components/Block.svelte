@@ -1,42 +1,39 @@
 <script lang="ts">
-    import type { KeyWord } from '../types';
-import Word from './Word.svelte'
+	import type { KeyWord } from '../types';
+	import Word from './Word.svelte';
 	export let keyWords: KeyWord[] = [];
 	export let words: string[] = [];
 	export let showBlock = true;
-	export let type = ''
+	export let type = '';
 	export let setActiveWord = (obj: KeyWord) => {};
 
-  function removeArabicDiacritics(inputString: string) {
-    const diacriticsPattern = /[\u060C\u064B-\u065F\u0670\u0640]/g;
-    return inputString.replace(diacriticsPattern, '');
-  }
+	function removeArabicDiacritics(inputString: string) {
+		const diacriticsPattern = /[\u060C\u064B-\u065F\u0670\u0640]/g;
+		return inputString.replace(diacriticsPattern, '');
+	}
 
-  function removeComma(inputString: string) {
-    const commataPattern = /[\u060C]/g;
-    return inputString.replace(commataPattern, '');
-  }
+	function removeComma(inputString: string) {
+		const commataPattern = /[\u060C]/g;
+		return inputString.replace(commataPattern, '');
+	}
 
 	function checkForKeyWord(event: Event) {
 		const word = (event.target as HTMLButtonElement).value;
-		// const keyWord = keyWords.find((keyWord) => removeArabicDiacritics(keyWord.arabic.trim()) === removeArabicDiacritics(word.trim()));
-    const keyWord = keyWords.find(
-			(keyWord) => {
-        if (type === 'arabic') {
-          return removeArabicDiacritics(keyWord.arabic.trim()) === removeArabicDiacritics(word.trim())
-        }
-        if (type === 'english') {
-          return keyWord.english.trim().toLowerCase() === word.trim().toLowerCase()
-        }
-        if (type === 'transliterated') {
-          return keyWord.transliterated.trim().toLowerCase() === word.trim().toLowerCase()
-        }
-      }
-		);
-    console.log({ word, keyWord })
+		const keyWord = keyWords.find((keyWord) => {
+			if (type === 'arabic') {
+				return (
+					removeArabicDiacritics(keyWord.arabic.trim()) === removeArabicDiacritics(word.trim())
+				);
+			}
+			if (type === 'english') {
+				return keyWord.english.trim().toLowerCase() === word.trim().toLowerCase();
+			}
+			if (type === 'transliterated') {
+				return keyWord.transliterated.trim().toLowerCase() === word.trim().toLowerCase();
+			}
+		});
 
 		if (keyWord !== undefined) {
-      console.log({ keyWord })
 			return setActiveWord(keyWord);
 		}
 
@@ -49,17 +46,17 @@ import Word from './Word.svelte'
 </script>
 
 {#if showBlock}
-	<div class="border-2 border-blue-400 bg-blue-300 px-4 py-10 flex-1">
+	<div class="flex-1 bg-blue-300 px-4 py-10">
 		{#if type === 'arabic'}
 			<div class="flex flex-row flex-wrap gap-1" dir="rtl">
 				{#each words.reverse() as word}
-          <Word {word} {keyWords} {checkForKeyWord} {type} />
+					<Word {word} {keyWords} {checkForKeyWord} {type} />
 				{/each}
 			</div>
 		{:else}
 			<div class="flex flex-row flex-wrap gap-1">
 				{#each words as word}
-          <Word {word} {keyWords} {checkForKeyWord} {type} />
+					<Word {word} {keyWords} {checkForKeyWord} {type} />
 				{/each}
 			</div>
 		{/if}

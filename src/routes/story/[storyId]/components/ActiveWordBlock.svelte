@@ -10,7 +10,7 @@
 </script>
 
 {#if showBlock}
-	<div class="border-2 border-blue-400 bg-blue-300 px-4 py-10 items-center flex flex-col text-left flex-1">
+	<div class="px-4 py-10 items-center flex flex-col text-left flex-1  bg-blue-300">
 		{#if activeWordObj.arabic}
 			<p class="text-4xl">{activeWordObj.arabic}</p>
 			<p class="text-4xl">{activeWordObj.english}</p>
