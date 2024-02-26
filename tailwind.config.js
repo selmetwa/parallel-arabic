@@ -10,19 +10,21 @@ const config = {
       colors: {
         black: '#000000',
         raison: '#2E282A',
-        white: {
-          100: '#FFFFFF',
-          200: '#FAFAFA',
+        brand: 'var(--brand)',
+        tile: {
+          100: 'var(--tile1)',
+          200: 'var(--tile2)',
+          300: 'var(--tile3)',
+          400: 'var(--tile4)',
+          500: 'var(--tile5)',
+          600: 'var(--tile6)',
         },
-        grey: {
-          100: '#ececec',
-          200: '#d6d6d6'
+        text: {
+          '100': 'var(--text1)',
+          '200': 'var(--text2)',
+          '300': 'var(--text3)',
         },
         blue: {
-          100: '#E6E6E6',
-          200: '#F2F6F7',
-          300: '#E6EEEF',
-          400: '#B4CCCF',
           500: '#0000ff'
         },
         red: {

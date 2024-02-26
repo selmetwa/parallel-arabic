@@ -8,7 +8,9 @@
 	<title>Parallel Arabic</title>
 </svelte:head>
 
-<div class="max-w-6xl h-full m-auto bg-blue-200 border-x border-raison">
-	<Navigation session={!!data.session}/>
-	<slot />
+<div class="bg-tile-100">
+  <div class="max-w-6xl h-full m-auto border-x border-tile-600 bg-tile-200">
+    <Navigation session={!!data.session}/>
+    <slot />
+  </div>
 </div>
