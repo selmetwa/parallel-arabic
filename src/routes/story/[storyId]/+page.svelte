@@ -6,21 +6,25 @@
 	import { Mode } from './types';
 	import Header from './components/Header.svelte';
 	import Drawer from '../../../components/Drawer.svelte';
+	import Button from '../../../components/Button.svelte';
+
 	export let data: PageData;
 	const sentences = data.formattedStory?.text || [];
 	const sentencesLength = sentences.length || 0;
-	let sentence = 0;
 	const keyWords = data.formattedStory?.keyWords || [];
 
-	let mode = Mode.SingleText;
+
+	let sentence = 0;
+	let mode = Mode.SentanceView;
 
 	let isOpen = false;
 
-	let root, doc;
+	let root: HTMLElement | null;
+  let doc: Element | null;
 
 	onMount(() => {
 		root = document.documentElement;
-		doc = document.firstElementChild;
+		doc = document.firstElementChild || null;
 	});
 
 	function updateMode(event: Event) {
@@ -71,16 +75,18 @@
 		{ value: 'sentence-view', text: 'Sentence View' }
 	];
 
-	const onHue = (e) => {
-		localStorage.setItem('--brand-hue', e.target.value);
-		root.style.setProperty('--brand-hue', e.target.value);
+	const onHue = (event: Event) => {
+		const value = (event.target as HTMLInputElement).value;
+
+		localStorage.setItem('--brand-hue', value);
+		root?.style.setProperty('--brand-hue', value);
 	};
 
-	const onTheme = (e) => {
-		const val = e.target.value;
-		console.log({ val });
-		localStorage.setItem('color-scheme', e.target.value);
-		doc.setAttribute('color-scheme', e.target.value);
+	const onTheme = (event: Event) => {
+		const value = (event.target as HTMLInputElement).value;
+
+		localStorage.setItem('color-scheme',value);
+		doc?.setAttribute('color-scheme',value);
 	};
 </script>
 
@@ -158,15 +164,9 @@
 		</fieldset>
 	</Drawer>
 
-  <Header
-		key={data.story[0].key}
-    {handleOpenDrawer}
-		{previousSentence}
-		{nextSentence}
-		{sentence}
-	/>
+	<Header {handleOpenDrawer} />
 
-	<section class="divide-tile-600 mt-8 flex flex-col divide-y">
+	<section class="flex flex-col divide-y divide-tile-600 border-b border-t border-tile-600">
 		{#if mode === Mode.SentanceView}
 			<Sentence sentence={sentences[sentence]} {mode} {keyWords} />
 		{:else}
@@ -175,6 +175,16 @@
 			{/each}
 		{/if}
 	</section>
+	{#if mode === Mode.SentanceView}
+		<footer class="mt-4 w-full flex items-center justify-center">
+			<div class="flex w-2/4 flex-row gap-1">
+        {#if sentence > 0}
+          <Button onClick={previousSentence} type="button">Back</Button>
+        {/if}
+        {#if sentence < sentencesLength - 1}
+          <Button onClick={nextSentence} type="button">Next</Button>
+        {/if}
+			</div>
+		</footer>
+	{/if}
 </main>
-
-
