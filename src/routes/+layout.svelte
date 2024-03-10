@@ -3,7 +3,6 @@
 	import Navigation from '../components/Navigation.svelte';
 	import Drawer from '../components/Drawer.svelte';
 	import { onMount } from 'svelte';
-
 	let isOpen = false;
 
 	let root: HTMLElement | null;

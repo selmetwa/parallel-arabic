@@ -4,7 +4,7 @@
 	import type { PageData } from './$types';
 	import { Mode } from './types';
 	import Header from './components/Header.svelte';
-
+  import Modal from '../../../components/Modal.svelte';
 	export let data: PageData;
 	const sentences = data.formattedStory?.text || [];
 	const sentencesLength = sentences.length || 0;
@@ -46,10 +46,24 @@
 		}
 		sentence--;
 	}
+ let isModalOpen = false;
+
+  function openModal() {
+    isModalOpen = true;
+  }
+  function closeModal() {
+    isModalOpen = false;
+  }
 </script>
 
+<Modal isOpen={isModalOpen} handleCloseModal={closeModal}>
+  <h1>modal</h1>
+</Modal>
+
 <main class="h-full">
+  <button on:click={openModal}>Open Modal</button>
 	<Header {updateMode} />
+
 	<section class="flex flex-col divide-y divide-tile-600 border-b border-t border-tile-600">
 		{#if mode === Mode.SentanceView}
 			<Sentence sentence={sentences[sentence]} {mode} {keyWords} />

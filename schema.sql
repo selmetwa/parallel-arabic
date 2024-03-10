@@ -35,3 +35,13 @@ CREATE TABLE if not exists stories (
     difficulty INTEGER NOT NULL,
     created_at BIGINT NOT NULL
 );
+
+CREATE TABLE if not exists saved_word (
+    id VARCHAR(15) PRIMARY KEY,
+    user_id VARCHAR(15) NOT NULL,
+    arabic_word VARCHAR(255) NOT NULL,
+    english_word VARCHAR(255) NOT NULL,
+    transliterated_word VARCHAR(255) NOT NULL,
+    created_at BIGINT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES user(id)
+)

@@ -21,6 +21,7 @@ type Database = {
 	email_verification_token: VerificationTokenTable;
 	password_reset_token: VerificationTokenTable;
   story: Story;
+  saved_word: SavedWord;
 };
 
 type UserTable = {
@@ -54,5 +55,14 @@ type Story = {
   key: string;
   description: string;
   difficulty: number;
+  created_at: ColumnType<bigint, number>;
+}
+
+type SavedWord = {
+  id: string;
+  user_id: string;
+  arabic_word: string;
+  english_word: string;
+  transliterated_word: string;
   created_at: ColumnType<bigint, number>;
 }

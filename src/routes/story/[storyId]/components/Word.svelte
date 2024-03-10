@@ -40,7 +40,7 @@
 
 {#if type === 'arabic'}
 	{#if isKeyWord}
-		<button class="text-4xl underline decoration-tile-600 text-text-300" value={word} on:click={checkForKeyWord}>
+		<button class="text-4xl underline text-text-300 bg-tile-400 px-1 rounded-lg" value={word} on:click={checkForKeyWord}>
 			{word}
 		</button>
 	{:else}
@@ -49,7 +49,7 @@
 		</button>
 	{/if}
 {:else if isKeyWord}
-	<button class="text-4xl underline decoration-tile-600 text-text-300" value={word} on:click={checkForKeyWord}>
+	<button class="text-4xl bg-tile-400 text-text-300 px-1 rounded-lg" value={word} on:click={checkForKeyWord}>
 		{word}
 	</button>
 {:else}

@@ -22,16 +22,13 @@ export const convertStory = (story) => {
     }
   }
 
-  console.log(keyWords);
   for (let i = 0; i < keyWords.length; i++) {
-    // arabic, english, trans
     const split = keyWords[i].split("=")
     output.keyWords.push({
       arabic: split[0].trim(),
       english: split[1].trim(),
       transliterated: split[2].trim(),
     })
-    console.log({ split })
   }
   return output
 }

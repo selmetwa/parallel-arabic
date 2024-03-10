@@ -4,7 +4,7 @@
 </script>
 
 <button 
-  class="border border-raison color-text-300 bg-gray-100 hover:bg-gray-200 py-1 font-semibold px-3 w-full whitespace-nowrap text-raison" 
+  class="border border-tile-600 text-text-300 bg-tile-500 hover:bg-tile-600 py-1 font-semibold px-3 w-full whitespace-nowrap text-raison" 
   type={type}
   on:click={onClick}
 >

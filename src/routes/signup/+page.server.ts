@@ -9,7 +9,6 @@ import type { PageServerLoad, Actions } from './$types';
 export const load: PageServerLoad = async ({ locals }) => {
 	const session = await locals.auth.validate();
 	if (session) {
-    console.log({ session })
 		throw redirect(302, '/');
 	}
 	return {};
@@ -21,8 +20,6 @@ export const actions: Actions = {
 		const email = formData.get('email');
 		const password = formData.get('password');
 
-    console.log({ email, password })
-  
 		// basic check
 		if (!isValidEmail(email)) {
 			return fail(400, {
