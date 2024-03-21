@@ -7,19 +7,16 @@
 	export let mode: Mode;
 	export let keyWords: KeyWord[] = [];
 
-	let englishWords: string[] = [];
-	let arabicWords: string[] = [];
-	let transliteratedWords: string[] = [];
-
-	let activeWordObj = {
+	export let activeWordObj = {
 		english: '',
 		arabic: '',
 		transliterated: ''
 	};
+  export let setActiveWord = (word: KeyWord) => {}
 
-	function setActiveWord(obj: KeyWord) {
-		activeWordObj = obj;
-	}
+	let englishWords: string[] = [];
+	let arabicWords: string[] = [];
+	let transliteratedWords: string[] = [];
 
 	$: {
 		englishWords = sentence.english || [];

@@ -3,7 +3,7 @@
   export let handleCloseModal = () => {};
 </script>
 
-<div class="{`modal ${isOpen ? 'open' : ''} bg-tile-300 border-r border-tile-600`}">
+<div class="{`modal ${isOpen ? 'open' : ''} bg-tile-300 border-4 border-tile-600`}">
   <!-- Your modal content goes here -->
   <slot />
 </div>
@@ -23,7 +23,6 @@
     top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%);
-    height: 50%;
     z-index: 10;
     opacity: 0; /* Start with 0 opacity for fade-in effect */
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;

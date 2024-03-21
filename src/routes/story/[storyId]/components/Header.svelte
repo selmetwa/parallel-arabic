@@ -1,21 +1,19 @@
 <script lang="ts">
-	import Button from '../../../../components/Button.svelte';
 	export let key = '';
-	export let handleOpenDrawer = () => {};
 	export let updateMode = (event: Event) => {};
+	import { Mode } from '../types';
+
+  export let mode: Mode = Mode.SingleText;
 
 	const modeOptions = [
-		{ value: 'single-text', text: 'Single Text' },
-		{ value: 'bi-text', text: 'Bi Text' },
-		{ value: 'sentence-view', text: 'Sentence View' }
+		{ value: Mode.SingleText, text: 'Single Text' },
+		{ value: Mode.BiText, text: 'Bi Text' },
+		{ value: Mode.SentanceView, text: 'Sentence View' }
 	];
 </script>
 
-<header
-	class="flex w-full flex-col justify-between gap-4 border-t border-tile-600 bg-tile-300 p-3 sm:flex-row"
->
+<header class="flex w-full flex-col justify-between gap-4 border-t border-tile-600 bg-tile-300 p-3 sm:flex-row">
 	<figure>
-		<figcaption>Listen to the Story</figcaption>
 		<audio controls src={`/src/stories/${key}.mp3`}></audio>
 	</figure>
 	<fieldset>
@@ -28,6 +26,7 @@
 						class="flex w-full flex-row items-center gap-2 p-2 text-base sm:cursor-pointer"
 					>
 						<input
+              checked={option.value === mode}
 							type="radio"
 							name="mode"
 							id={option.value}
