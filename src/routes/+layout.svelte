@@ -88,7 +88,7 @@
 			</div>
 		</form>
 	</Drawer>
-	<div class="m-auto h-full max-w-5xl border-x border-tile-600 bg-tile-200">
+	<div class="m-auto h-full max-w-[800px] border-x border-tile-600 bg-tile-200">
 		<Navigation {handleOpenDrawer} />
 		<slot />
 	</div>

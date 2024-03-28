@@ -4,7 +4,6 @@
 	import type { PageData } from './$types';
 
 	export let data: PageData;
-	console.log({ data });
 </script>
 
 <section class="mt-8 px-4">
