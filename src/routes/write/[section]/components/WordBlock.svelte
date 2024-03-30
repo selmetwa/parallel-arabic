@@ -30,6 +30,7 @@
 	let showHint = false;
 	let showAnswer = false;
 	let response = '';
+  let correctAnswer = ''
 
 	function updateKeyboardStyle() {
 		if (typeof document === 'undefined') return;
@@ -55,11 +56,11 @@
 		}
 	}
 	$: hue.subscribe(() => {
-		updateKeyboardStyle()
+		updateKeyboardStyle();
 	});
 
-	$: theme.subscribe((value) => {
-		updateKeyboardStyle()
+	$: theme.subscribe(() => {
+		updateKeyboardStyle();
 	});
 
 	$: if (word.english) {
@@ -68,6 +69,7 @@
 		showHint = false;
 		showAnswer = false;
 		response = '';
+    let correctAnswer = ''
 
 		if (typeof document !== 'undefined') {
 			const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
@@ -120,7 +122,7 @@
 
 		if (areArraysEqual(myInputArr, egyptianArabicArr)) {
 			isCorrect = true;
-
+      correctAnswer = word.egyptianArabic
 			const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
 			keyboard && keyboard.resetValue();
 		}
@@ -129,7 +131,7 @@
 	onMount(() => {
 		const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
 
-    updateKeyboardStyle()
+		updateKeyboardStyle();
 
 		document.addEventListener('keydown', () => {
 			const value = keyboard && keyboard.getTextAreaValue();
@@ -154,7 +156,6 @@
 		showHint = !showHint;
 	}
 
-	console.log({ word });
 	const saveWord = async () => {
 		const res = await fetch(`${window.location.origin}/api/save-word`, {
 			method: 'POST',
@@ -188,24 +189,25 @@
 			<Button type="button" onClick={saveWord}>Save word</Button>
 		</div>
 	</div>
-	<div class="mt-8 flex flex-col">
-		<div class="mx-auto">
-			<div class="flex flex-row items-center gap-2">
-				<h1 class="text-[50px] font-bold text-text-300">{word.english}</h1>
+  {#if isCorrect}
+    <div class="py-2 w-full bg-green-100 transition-all duration-300 flex flex-row items-center justify-center gap-2">
+      <span class="text-text-300 font-semibold text-lg">{correctAnswer} is correct</span>
+    </div>
+  {/if}
+	<div class="mt-8 flex flex-col text-wrap">
+		<div class="mx-auto w-fit text-center">
+			<div class="flex flex-row items-center justify-center gap-2">
+				<h1 class="w-fit text-[50px] font-bold text-text-300">{word.english}</h1>
 				{#if showHint}
-					<p class="text-[25px] text-text-300">({word.egyptianArabicTransliteration})</p>
+					<p class="w-fit text-[25px] text-text-300">({word.egyptianArabicTransliteration})</p>
 				{/if}
-        {#if showAnswer}
-				<p class="text-[35px] text-text-300">({word.egyptianArabic})</p>
-			{/if}
+				{#if showAnswer}
+					<p class="w-fit text-[35px] text-text-300">({word.egyptianArabic})</p>
+				{/if}
 			</div>
-
-			<div>
-				{#if isCorrect}
-					<p class="text-[25px] text-text-300">Correct!</p>
-				{/if}
+			<div class="mx-auto max-w-[800px] overflow-auto break-words px-8">
 				{#each attempt as { letter, correct }}
-					<span class={cn('text-[25px]', { 'text-green-500': correct, 'text-red-500': !correct })}
+					<span class={cn('text-[35px]', { 'text-green-500': correct, 'text-red-500': !correct })}
 						>{letter}</span
 					>
 				{/each}

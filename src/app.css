@@ -15,6 +15,7 @@
   --tile4-light: hsl(var(--brand-hue) 20% 70%);
   --tile5-light: hsl(var(--brand-hue) 20% 65%);
   --tile6-light: hsl(var(--brand-hue) 20% 60%);
+  --green-light: hsl(133 20% 70%);
   --tile-shadow-light: var(--brand-hue) 10% 20%;
   --shadow-strength-light: .02;
   /* dark */
@@ -27,6 +28,7 @@
   --tile4-dark: hsl(var(--brand-hue) 5% 25%);
   --tile5-dark: hsl(var(--brand-hue) 10% 30%);
   --tile6-dark: hsl(var(--brand-hue) 15% 35%);
+  --green-dark: hsl(124 5% 25%);
   --tile-shadow-dark: var(--brand-hue) 50% 3%;
   --shadow-strength-dark: .8;
   /* dim */
@@ -39,6 +41,7 @@
   --tile4-dim: hsl(var(--brand-hue) 5% 35%);
   --tile5-dim: hsl(var(--brand-hue) 5% 40%);
   --tile6-dim: hsl(var(--brand-hue) 5% 45%);
+  --green-dim: hsl(125 5% 35%);
   --tile-shadow-dim: var(--brand-hue) 30% 13%;
   --shadow-strength-dim: .2;
   margin: 0;
@@ -58,6 +61,7 @@
   --tile4: var(--tile4-light);
   --tile5: var(--tile5-light);
   --tile6: var(--tile6-light);
+  --green1: var(--green-light);
   --tile-shadow-light: var(--tile-shadow-light);
   --shadow-strength: var(--shadow-strength-light);
   --spacing: 0.35rem;
@@ -76,6 +80,9 @@
   --tile2: var(--tile2-light);
   --tile3: var(--tile3-light);
   --tile4: var(--tile4-light);
+  --tile5: var(--tile5-light);
+  --tile6: var(--tile6-light);
+  --green1: var(--green-light);
   --tile-shadow-light: var(--tile-shadow-light);
   --shadow-strength: var(--shadow-strength-light);
 }
@@ -91,7 +98,7 @@
   --tile4: var(--tile4-dark);
   --tile5: var(--tile5-dark);
   --tile6: var(--tile6-dark);
-  --tile-shadow: var(--tile-shadow-dark);
+  --green1: var(--green-dark);
   --shadow-strength: var(--shadow-strength-dark);
 }
 
@@ -106,7 +113,7 @@
   --tile4: var(--tile4-dim);
   --tile5: var(--tile5-dim);
   --tile6: var(--tile6-dim);
-  --tile-shadow: var(--tile-shadow-dim);
+  --green1: var(--green-dim);
   --shadow-strength: var(--shadow-strength-dim);
 }
 

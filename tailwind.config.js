@@ -24,6 +24,9 @@ const config = {
           '200': 'var(--text2)',
           '300': 'var(--text1)',
         },
+        green: {
+          '100': 'var(--green1)',
+        },
         blue: {
           500: '#0000ff'
         },
