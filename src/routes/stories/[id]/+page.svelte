@@ -1,11 +1,18 @@
 <script lang="ts">
 	import Button from '../../../components/Button.svelte';
 	import Sentence from './components/Sentence.svelte';
-	import type { PageData } from './$types';
-	import { Mode, type KeyWord } from './types';
+	import { Mode, type KeyWord, type TextObj } from './types';
 	import Header from './components/Header.svelte';
   import Modal from '../../../components/Modal.svelte';
-	export let data: PageData;
+
+	export let data: {
+    session: any
+    formattedStory: {
+      text: TextObj[]
+      keyWords: KeyWord[]
+    }
+  };
+
 	const sentences = data.formattedStory?.text || [];
 	const sentencesLength = sentences.length || 0;
 	const keyWords = data.formattedStory?.keyWords || [];

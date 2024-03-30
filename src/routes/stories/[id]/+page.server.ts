@@ -3,15 +3,14 @@ import { db } from '$lib/server/db';
 import * as path from 'path';
 import { convertStory } from '../../../helpers/convert-to-story';
 
-import type { PageServerLoad } from './$types';
+import type { PageServerLoad } from '../../story/[storyId]/$types';
 
-export const load: PageServerLoad = async ({ locals, params }) => {
+export const load: PageServerLoad = async ({ locals, params }: { locals: any, params: any }) => {
 	const session = await locals.auth.validate();
 	if (!session) throw redirect(302, '/login');
 
-  const storyId = params.storyId;
+  const storyId = params.id;
   const story = await db.selectFrom('story').selectAll().where('id', '=', storyId).execute();
-
   let formattedStory = null;
 
   if (story.length > 0) {
@@ -23,7 +22,6 @@ export const load: PageServerLoad = async ({ locals, params }) => {
       const storyObj = storyFile.story
       formattedStory = convertStory(storyObj);
     } catch (error) {
-      // throw error to client
       if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
         console.error(`File not found: ${filePath}`);
       } else {
