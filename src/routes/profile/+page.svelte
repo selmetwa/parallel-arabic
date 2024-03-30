@@ -45,7 +45,7 @@
 	}
   tr {
     background-color: var(--tile3);
-    color: var(--text3);
+    color: var(--text2);
   }
   tr:nth-child(even) {
     background-color: var(--tile2);

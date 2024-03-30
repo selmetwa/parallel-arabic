@@ -22,7 +22,7 @@ const config = {
         text: {
           '100': 'var(--text1)',
           '200': 'var(--text2)',
-          '300': 'var(--text3)',
+          '300': 'var(--text1)',
         },
         blue: {
           500: '#0000ff'

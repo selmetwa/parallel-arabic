@@ -13,6 +13,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     .selectFrom('saved_word')
     .selectAll()
     .where('arabic_word', '=', data.activeWordObj.arabic)
+    .where('user_id', '=', userId || '')
     .executeTakeFirst();
 
   if (wordExists) {

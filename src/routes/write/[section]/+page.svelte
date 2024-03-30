@@ -25,7 +25,7 @@
 </script>
 
 <section>
-	<div class="m-auto text-center pt-16 px-8 bg-tile-300">
+	<div class="m-auto text-center pt-8 px-8 bg-tile-300">
 		<div class="flex w-full justify-between">
 			<div class="w-max">
 				{#if index > 0}
@@ -33,7 +33,7 @@
 				{/if}
 			</div>
       <div>
-        <h1 class="text-lg font-bold">{index + 1} / {data.words.length}</h1>
+        <h1 class="text-lg font-bold text-text-300">{index + 1} / {data.words.length}</h1>
       </div>
 			<div class="w-max">
 				{#if index < data.words.length - 1}

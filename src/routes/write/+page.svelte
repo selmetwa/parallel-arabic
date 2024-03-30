@@ -5,6 +5,9 @@
   const sections = data.data; 
 </script>
 
+
+<p class="ml-8 pt-12 pb-4">asdasd</p>
+
 <section class="grid grid-cols-1 sm:grid-cols-3 gap-3 p-8">
   {#each sections as section}
       <a 
