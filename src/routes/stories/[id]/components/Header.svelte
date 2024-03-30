@@ -12,7 +12,7 @@
 	];
 </script>
 
-<header class="flex w-full flex-col justify-between gap-4 border-t border-tile-600 bg-tile-300 p-3 sm:flex-row">
+<header class="flex w-full flex-col justify-between gap-4 bg-tile-300 p-3 sm:flex-row">
 	<figure>
 		<audio controls src={`/src/stories/${key}.mp3`}></audio>
 	</figure>

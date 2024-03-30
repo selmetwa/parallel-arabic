@@ -9,6 +9,7 @@
   --brand-light: hsl(var(--brand-hue) var(--brand-saturation) var(--brand-lightness));
   --text1-light: hsl(var(--brand-hue) var(--brand-saturation) 10%);
   --text2-light: hsl(var(--brand-hue) 30% 30%);
+  --text3-light: hsl(var(--brand-hue) 30% 40%);
   --tile1-light: hsl(var(--brand-hue) 25% 85%);
   --tile2-light: hsl(var(--brand-hue) 20% 80%);
   --tile3-light: hsl(var(--brand-hue) 20% 75%);
@@ -22,6 +23,7 @@
   --brand-dark: hsl( var(--brand-hue) calc(var(--brand-saturation) / 1.5) calc(var(--brand-lightness) / 1.5));
   --text1-dark: hsl(var(--brand-hue) 15% 80%);
   --text2-dark: hsl(var(--brand-hue) 10% 70%);
+  --text3-dark: hsl(var(--brand-hue) 10% 60%);
   --tile1-dark: hsl(var(--brand-hue) 10% 10%);
   --tile2-dark: hsl(var(--brand-hue) 10% 15%);
   --tile3-dark: hsl(var(--brand-hue) 5% 20%);
@@ -35,6 +37,7 @@
   --brand-dim: hsl( var(--brand-hue) calc(var(--brand-saturation) / 1.25) calc(var(--brand-lightness) / 1.25));
   --text1-dim: hsl(var(--brand-hue) 15% 75%);
   --text2-dim: hsl(var(--brand-hue) 10% 61%);
+  --text3-dim: hsl(var(--brand-hue) 10% 50%);
   --tile1-dim: hsl(var(--brand-hue) 10% 20%);
   --tile2-dim: hsl(var(--brand-hue) 10% 25%);
   --tile3-dim: hsl(var(--brand-hue) 5% 30%);
@@ -55,6 +58,7 @@
   --brand: var(--brand-light);
   --text1: var(--text1-light);
   --text2: var(--text2-light);
+  --text3: var(--text3-light);
   --tile1: var(--tile1-light);
   --tile2: var(--tile2-light);
   --tile3: var(--tile3-light);
@@ -76,6 +80,7 @@
   --brand: var(--brand-light);
   --text1: var(--text1-light);
   --text2: var(--text2-light);
+  --text3: var(--text3-light);
   --tile1: var(--tile1-light);
   --tile2: var(--tile2-light);
   --tile3: var(--tile3-light);
@@ -92,6 +97,7 @@
   --brand: var(--brand-dark);
   --text1: var(--text1-dark);
   --text2: var(--text2-dark);
+  --text3: var(--text3-dark);
   --tile1: var(--tile1-dark);
   --tile2: var(--tile2-dark);
   --tile3: var(--tile3-dark);
@@ -107,6 +113,7 @@
   --brand: var(--brand-dim);
   --text1: var(--text1-dim);
   --text2: var(--text2-dim);
+  --text3: var(--text3-dim);
   --tile1: var(--tile1-dim);
   --tile2: var(--tile2-dim);
   --tile3: var(--tile3-dim);
