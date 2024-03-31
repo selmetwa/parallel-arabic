@@ -17,18 +17,17 @@
 		const keyWord = keyWords.find(
 			(keyWord) => {
         if (type === 'arabic') {
-          return removeArabicDiacritics(keyWord.arabic.trim()) === removeArabicDiacritics(word.trim())
+          return removeArabicDiacritics(keyWord.arabic.trim().replace(/,/g, '')) === removeArabicDiacritics(word.trim().replace(/,/g, ''))
         }
         if (type === 'english') {
-          return keyWord.english.trim().toLowerCase() === word.trim().toLowerCase()
+          return keyWord.english.trim().toLowerCase().replace(/,/g, '') === word.trim().toLowerCase().replace(/,/g, '')
         }
         if (type === 'transliterated') {
-          return keyWord.transliterated.trim().toLowerCase() === word.trim().toLowerCase()
+          return keyWord.transliterated.trim().toLowerCase().replace(/,/g, '') === word.trim().toLowerCase().replace(/,/g, '')
         }
       }
 		);
 
-    console.log({keyWord, keyWords, word, type})
 		if (keyWord !== undefined) {
 			isKeyWord = true;
 		} else {
@@ -40,7 +39,7 @@
 
 {#if type === 'arabic'}
 	{#if isKeyWord}
-		<button class="text-4xl underline text-text-300 bg-tile-400 px-1 rounded-lg" value={word} on:click={checkForKeyWord}>
+		<button class="text-4xl underline text-text-300 bg-tile-400 px-1 rounded-sm hover:bg-tile-500 transitional-all duration-300" value={word} on:click={checkForKeyWord}>
 			{word}
 		</button>
 	{:else}
@@ -49,7 +48,7 @@
 		</button>
 	{/if}
 {:else if isKeyWord}
-	<button class="text-4xl bg-tile-400 text-text-300 px-1 rounded-lg" value={word} on:click={checkForKeyWord}>
+	<button class="text-4xl bg-tile-400 text-text-300 px-1 rounded-sm hover:bg-tile-500 transitional-all duration-300" value={word} on:click={checkForKeyWord}>
 		{word}
 	</button>
 {:else}

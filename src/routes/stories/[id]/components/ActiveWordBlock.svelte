@@ -29,12 +29,15 @@
 </script>
 
 {#if showBlock}
-	<div class="flex flex-1 flex-col items-center bg-tile-300 px-4 py-10 text-left">
+	<div class="flex flex-1 flex-col items-center justify-center bg-tile-300 px-4 py-10 text-left">
 		{#if activeWordObj.arabic}
 			<div class="flex flex-col items-center p-4">
 				<p class="text-4xl text-text-300">{activeWordObj.arabic}</p>
-				<p class="text-4xl text-text-300">{activeWordObj.english}</p>
-				<p class="text-4xl text-text-300">{activeWordObj.transliterated}</p>
+        <div class="flex flex-row items-center gap-2">
+          <p class="text-xl text-text-200">{activeWordObj.english}</p>
+          <p class="text-xl text-text-200">/</p>
+				  <p class="text-xl text-text-200">{activeWordObj.transliterated}</p>
+        </div>
         <div class="mt-2">
           <Button
             type="button"
@@ -49,8 +52,8 @@
 			</div>
 		{:else}
 			<div>
-				<p class="m-auto w-fit">No active word</p>
-				<p>Click on an arabic word</p>
+				<p class="m-auto w-fit text-xl font-semibold text-text-300">No active word</p>
+				<p class="text-text-200">Click on an arabic word</p>
 			</div>
 		{/if}
 	</div>

@@ -15,6 +15,7 @@
 	}
 
 	function previous() {
+    console.log(index);
 		if (index === 0) {
 			return;
 		}

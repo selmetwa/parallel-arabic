@@ -124,8 +124,8 @@
 		{/if}
 	</section>
 	{#if mode === Mode.SentanceView}
-		<footer class="mt-4 w-full flex items-center justify-center">
-			<div class="flex w-2/4 flex-row gap-1">
+		<footer class="mt-8 w-full flex items-center justify-center">
+			<div class="flex w-1/4 flex-row gap-1">
         {#if sentence > 0}
           <Button onClick={previousSentence} type="button">Back</Button>
         {/if}

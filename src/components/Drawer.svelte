@@ -3,11 +3,13 @@
   export let handleCloseDrawer = () => {};
 </script>
 
-<div class="{`drawer ${isOpen ? 'open' : ''} bg-tile-300 border-r border-tile-600`}">
+<div class="{`drawer ${isOpen ? 'open' : ''} bg-tile-300 border border-l border-tile-400`}">
   <!-- Your drawer content goes here -->
   <slot />
 </div>
 
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- svelte-ignore a11y-no-static-element-interactions -->
 <div class="{`overlay ${isOpen ? 'open' : ''}`}" on:click={handleCloseDrawer}>
   <!-- Clicking on the overlay will close the drawer -->
 </div>
@@ -15,7 +17,7 @@
 
 <style>
   :root {
-    --width: 700px;
+    --width: 250px;
   }
   .drawer {
     width: var(--width);
@@ -24,6 +26,7 @@
     right: calc(var(--width) * -1); /* Start off-screen */
     height: 100%;
     z-index: 10;
+    border-left: 8px solid var(--tile6);
     transition: right 0.3s ease-in-out;
   }
 

@@ -1,13 +1,19 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
-
+  import Button from '../../components/Button.svelte';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
 </script>
 
 <section class="mt-8 px-4">
+  <form method="post" action="?/logout" use:enhance class="w-fit ml-auto">
+    <Button type='submit'>
+      Sign out
+    </Button>
+  </form>
 	<h2 class="text-xl text-text-300 font-semibold pb-4">Saved Words</h2>
+
 	<table class="border">
 		<thead>
 			<tr>
@@ -27,9 +33,7 @@
 		</tbody>
 	</table>
 </section>
-<form method="post" action="?/logout" use:enhance>
-	<input type="submit" value="Sign out" />
-</form>
+
 
 <style>
 	table {

@@ -20,6 +20,7 @@
 			setProperty: (key: string, value: string) => void;
 		};
 	};
+
 	type Attempt = {
 		letter: string;
 		correct: boolean;
@@ -30,7 +31,20 @@
 	let showHint = false;
 	let showAnswer = false;
 	let response = '';
-  let correctAnswer = ''
+	let correctAnswer = '';
+
+	let egyptianArabicWord = '';
+	if (word.egyptianArabic.includes('–') || word.egyptianArabic.includes('-')) {
+		if (word.egyptianArabic.includes('–')) {
+			egyptianArabicWord = word.egyptianArabic.split('–')[0].trim();
+		}
+
+		if (word.egyptianArabic.includes('-')) {
+			egyptianArabicWord = word.egyptianArabic.split('-')[0].trim();
+		}
+	} else {
+		egyptianArabicWord = word.egyptianArabic;
+	}
 
 	function updateKeyboardStyle() {
 		if (typeof document === 'undefined') return;
@@ -42,9 +56,9 @@
 		const tile4 = getComputedStyle(document.body).getPropertyValue('--tile4');
 		const tile5 = getComputedStyle(document.body).getPropertyValue('--tile5');
 		const tile6 = getComputedStyle(document.body).getPropertyValue('--tile6');
-    const text1 = getComputedStyle(document.body).getPropertyValue('--text1');
-    const text3 = getComputedStyle(document.body).getPropertyValue('--text3');
-  
+		const text1 = getComputedStyle(document.body).getPropertyValue('--text1');
+		const text3 = getComputedStyle(document.body).getPropertyValue('--text3');
+
 		if (keyboard) {
 			keyboard.style.setProperty('--button-background-color', tile4);
 			keyboard.style.setProperty('--button-active-background-color', tile5);
@@ -54,8 +68,8 @@
 			keyboard.style.setProperty('--textarea-input-color', text1);
 			keyboard.style.setProperty('--max-keyboard-width', '900px');
 			keyboard.style.setProperty('--button-color', text1);
-      keyboard.style.setProperty('--button-eng-color', text3);
-      keyboard.style.setProperty('--button-shifted-color', text3);
+			keyboard.style.setProperty('--button-eng-color', text3);
+			keyboard.style.setProperty('--button-shifted-color', text3);
 		}
 	}
 	$: hue.subscribe(() => {
@@ -72,7 +86,19 @@
 		showHint = false;
 		showAnswer = false;
 		response = '';
-    let correctAnswer = ''
+		correctAnswer = '';
+
+		if (word.egyptianArabic.includes('–') || word.egyptianArabic.includes('-')) {
+			if (word.egyptianArabic.includes('–')) {
+				egyptianArabicWord = word.egyptianArabic.split('–')[0].trim();
+			}
+
+			if (word.egyptianArabic.includes('-')) {
+				egyptianArabicWord = word.egyptianArabic.split('-')[0].trim();
+			}
+		} else {
+			egyptianArabicWord = word.egyptianArabic;
+		}
 
 		if (typeof document !== 'undefined') {
 			const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
@@ -106,7 +132,7 @@
 
 	function compareMyInput(myInput: string) {
 		const myInputArr = myInput.split('');
-		const egyptianArabicArr = word.egyptianArabic.split('');
+		const egyptianArabicArr = egyptianArabicWord.split('');
 
 		const result = myInputArr.map((letter, index) => {
 			if (letter === egyptianArabicArr[index]) {
@@ -125,7 +151,7 @@
 
 		if (areArraysEqual(myInputArr, egyptianArabicArr)) {
 			isCorrect = true;
-      correctAnswer = word.egyptianArabic
+			correctAnswer = egyptianArabicWord;
 			const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
 			keyboard && keyboard.resetValue();
 		}
@@ -165,7 +191,7 @@
 			headers: { accept: 'application/json' },
 			body: JSON.stringify({
 				activeWordObj: {
-					arabic: word.egyptianArabic,
+					arabic: egyptianArabicWord,
 					english: word.english,
 					transliterated: word.egyptianArabicTransliteration
 				}
@@ -192,11 +218,13 @@
 			<Button type="button" onClick={saveWord}>Save word</Button>
 		</div>
 	</div>
-  {#if isCorrect}
-    <div class="py-2 w-full bg-green-100 transition-all duration-300 flex flex-row items-center justify-center gap-2">
-      <span class="text-text-300 font-semibold text-lg">{correctAnswer} is correct</span>
-    </div>
-  {/if}
+	{#if isCorrect}
+		<div
+			class="flex w-full flex-row items-center justify-center gap-2 bg-green-100 py-2 transition-all duration-300"
+		>
+			<span class="text-lg font-semibold text-text-300">{correctAnswer} is correct</span>
+		</div>
+	{/if}
 	<div class="mt-8 flex flex-col text-wrap">
 		<div class="mx-auto w-fit text-center">
 			<div class="flex flex-row items-center justify-center gap-2">
@@ -205,7 +233,7 @@
 					<p class="w-fit text-[25px] text-text-300">({word.egyptianArabicTransliteration})</p>
 				{/if}
 				{#if showAnswer}
-					<p class="w-fit text-[35px] text-text-300">({word.egyptianArabic})</p>
+					<p class="w-fit text-[35px] text-text-300">({egyptianArabicWord})</p>
 				{/if}
 			</div>
 			<div class="mx-auto max-w-[800px] overflow-auto break-words px-8">

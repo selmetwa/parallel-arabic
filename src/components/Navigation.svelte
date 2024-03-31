@@ -11,7 +11,7 @@
         <li><a class="text-text-300 text-lg underline" href="/profile">Profile</a></li>
         <li class="ml-auto">
           <Button onClick={handleOpenDrawer} type="button">
-            Settings
+            Menu
           </Button>
         </li>
     </ul>

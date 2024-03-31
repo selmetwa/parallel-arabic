@@ -18,9 +18,10 @@
 	}
 
 	function checkForKeyWord(event: Event) {
-		const word = (event.target as HTMLButtonElement).value;
+		const word = (event.target as HTMLButtonElement).value.replace(/,/g, '');
 		const keyWord = keyWords.find((keyWord) => {
 			if (type === 'arabic') {
+        console.log({ word })
 				return (
 					removeArabicDiacritics(keyWord.arabic.trim()) === removeArabicDiacritics(word.trim())
 				);
