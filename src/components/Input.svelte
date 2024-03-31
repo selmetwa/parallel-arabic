@@ -1,5 +1,4 @@
 <script lang="ts">
-  export let placeholder: string;
   export let name: string;
   export let type: string;
 </script>
@@ -9,8 +8,7 @@
   <input  
     type={type}
     name={name}
-    placeholder={placeholder}
     id={name}
-    class="py-2 border border-tile-500 rounded-0 text-text-300"
+    class="py-1 border border-tile-600 bg-tile-200 rounded-0 text-text-300 "
   />
 </div>

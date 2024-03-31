@@ -9,8 +9,8 @@
 
 <form method="post" use:enhance class="border-b border-r border-tile-500 flex flex-col gap-2 p-2 bg-tile-300 max-w-[350px]">
   <h1 class="text-xl font-semibold text-text-300">Sign up</h1>
-  <Input placeholder="example@gmail.com" type="email" name="email"></Input>
-  <Input type="password" name="password" placeholder="******"></Input>
+  <Input type="email" name="email"></Input>
+  <Input type="password" name="password"></Input>
   <Button type="submit">
     Sign Up
   </Button>

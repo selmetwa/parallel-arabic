@@ -1,6 +1,6 @@
 <script lang="ts">
   export let type: "button" | "submit";
-  export let onClick: () => void;
+  export let onClick: (() => void) | undefined = undefined;
 </script>
 
 <button 
