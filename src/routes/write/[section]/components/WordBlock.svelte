@@ -187,7 +187,7 @@
 	}
 
 	const saveWord = async () => {
-		const res = await fetch(`${window.location.origin}/api/save-word`, {
+		const res = await fetch('/api/save-word', {
 			method: 'POST',
 			headers: { accept: 'application/json' },
 			body: JSON.stringify({

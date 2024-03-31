@@ -12,7 +12,7 @@
 	};
 
 	const saveWord = async () => {
-		const res = await fetch(`${window.location.origin}/api/save-word`, {
+		const res = await fetch('/api/save-word', {
 			method: 'POST',
 			headers: { accept: 'application/json' },
 			body: JSON.stringify({
@@ -34,9 +34,11 @@
 			<div class="flex flex-col items-center p-4">
 				<p class="text-4xl text-text-300">{activeWordObj.arabic}</p>
 				<div class="flex flex-row items-center gap-2">
-					<p class="text-xl text-text-200">{activeWordObj.english}</p>
+          {#if activeWordObj.english}
+					<p class="text-xl text-text-200">{activeWordObj.english} /</p>
 					<p class="text-xl text-text-200">/</p>
 					<p class="text-xl text-text-200">{activeWordObj.transliterated}</p>
+          {/if}
 				</div>
 
 				<div class="mt-2 flex flex-row items-center gap-2">

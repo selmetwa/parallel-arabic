@@ -3,16 +3,16 @@
 	import Sentence from './components/Sentence.svelte';
 	import { Mode, type KeyWord, type TextObj } from './types';
 	import Header from './components/Header.svelte';
-  import Modal from '../../../components/Modal.svelte';
+	import Modal from '../../../components/Modal.svelte';
 	import { speakText } from '../../../helpers/speak-arabic';
 
 	export let data: {
-    session: any
-    formattedStory: {
-      text: TextObj[]
-      keyWords: KeyWord[]
-    }
-  };
+		session: any;
+		formattedStory: {
+			text: TextObj[];
+			keyWords: KeyWord[];
+		};
+	};
 
 	const sentences = data.formattedStory?.text || [];
 	const sentencesLength = sentences.length || 0;
@@ -20,10 +20,10 @@
 
 	let sentence = 0;
 	let mode = Mode.SingleText;
-  let response = '';
+	let response = '';
 
 	function updateMode(event: Event) {
-    mode = (event.target as HTMLInputElement).value as Mode;
+		mode = (event.target as HTMLInputElement).value as Mode;
 	}
 
 	function nextSentence() {
@@ -42,37 +42,37 @@
 		sentence--;
 	}
 
-  let isModalOpen = false;
-  let timer: any = null;
+	let isModalOpen = false;
+	let timer: any = null;
 
-  function closeModal() {
-    timer = setTimeout(() => {
-      activeWordObj = {
-        english: '',
-        arabic: '',
-        transliterated: ''
-      };
-    }, 3000)
-    isModalOpen = false;
-  }
+	function closeModal() {
+		timer = setTimeout(() => {
+			activeWordObj = {
+				english: '',
+				arabic: '',
+				transliterated: ''
+			};
+		}, 3000);
+		isModalOpen = false;
+	}
 
-  export let activeWordObj: KeyWord = {
+	export let activeWordObj: KeyWord = {
 		english: '',
 		arabic: '',
 		transliterated: ''
 	};
 
-  function setActiveWord(word: KeyWord) {
-    clearTimeout(timer);
-    activeWordObj = word;
+	function setActiveWord(word: KeyWord) {
+		clearTimeout(timer);
+		activeWordObj = word;
 
-    if (mode !== Mode.SentanceView) {
-      isModalOpen = true;
-    }
-  }
+		if (mode !== Mode.SentanceView) {
+			isModalOpen = true;
+		}
+	}
 
-  const saveWord = async () => {
-		const res = await fetch(`${window.location.origin}/api/save-word`, {
+	const saveWord = async () => {
+		const res = await fetch('/api/save-word', {
 			method: 'POST',
 			headers: { accept: 'application/json' },
 			body: JSON.stringify({
@@ -80,40 +80,39 @@
 			})
 		});
 
-    const data = await res.json();
-    response = data.message;
-    setTimeout(() => {
-      response = '';
-    }, 3000);
+		const data = await res.json();
+		response = data.message;
+		setTimeout(() => {
+			response = '';
+		}, 3000);
 	};
 </script>
 
 <Modal isOpen={isModalOpen} handleCloseModal={closeModal}>
-  <div class="flex flex-col items-center p-4">
-    <p class="text-4xl text-text-300">{activeWordObj.arabic}</p>
-    <p class="text-4xl text-text-300">{activeWordObj.english}</p>
-    <p class="text-4xl text-text-300">{activeWordObj.transliterated}</p>
-    <div class="mt-2 flex flex-row items-center gap-2 w-full">
-      <Button type="button" onClick={saveWord}>Save Word</Button>
-      <Button type="button" onClick={() => speakText(activeWordObj.arabic)}>Listen</Button>
-    </div>
-    {#if response}
-    <p class="text-md text-text-300">{response}</p>
-  {/if}
-  </div>
+	<div class="flex flex-col items-center p-4">
+		<p class="text-4xl text-text-300">{activeWordObj.arabic}</p>
+		<div class="mt-1 flex flex-row items-center gap-2">
+			{#if activeWordObj.english}
+				<p class="text-lg text-text-300">{activeWordObj.english}</p>
+				<p class="text-lg text-text-300">/</p>
+				<p class="text-lg text-text-300">{activeWordObj.transliterated}</p>
+			{/if}
+		</div>
+		<div class="mt-2 flex w-full flex-row items-center gap-2">
+			<Button type="button" onClick={saveWord}>Save Word</Button>
+			<Button type="button" onClick={() => speakText(activeWordObj.arabic)}>Listen</Button>
+		</div>
+		{#if response}
+			<p class="mt-2 text-md text-text-300">{response}</p>
+		{/if}
+	</div>
 </Modal>
 
 <main class="h-full">
 	<Header {updateMode} {mode} />
 	<section class="flex flex-col divide-y divide-tile-600 border-b border-t border-tile-600">
 		{#if mode === Mode.SentanceView}
-			<Sentence 
-        {setActiveWord}
-        {activeWordObj}
-        sentence={sentences[sentence]} 
-        {mode} 
-        {keyWords}
-      />
+			<Sentence {setActiveWord} {activeWordObj} sentence={sentences[sentence]} {mode} {keyWords} />
 		{:else}
 			{#each sentences as sentence}
 				<Sentence {sentence} {mode} {keyWords} {setActiveWord} {activeWordObj} />
@@ -121,14 +120,14 @@
 		{/if}
 	</section>
 	{#if mode === Mode.SentanceView}
-		<footer class="mt-8 w-full flex items-center justify-center">
+		<footer class="mt-8 flex w-full items-center justify-center">
 			<div class="flex w-1/4 flex-row gap-1">
-        {#if sentence > 0}
-          <Button onClick={previousSentence} type="button">Back</Button>
-        {/if}
-        {#if sentence < sentencesLength - 1}
-          <Button onClick={nextSentence} type="button">Next</Button>
-        {/if}
+				{#if sentence > 0}
+					<Button onClick={previousSentence} type="button">Back</Button>
+				{/if}
+				{#if sentence < sentencesLength - 1}
+					<Button onClick={nextSentence} type="button">Next</Button>
+				{/if}
 			</div>
 		</footer>
 	{/if}

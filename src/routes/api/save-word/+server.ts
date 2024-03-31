@@ -6,6 +6,11 @@ import { db } from '../../../lib/server/db';
 export const POST: RequestHandler = async ({ request, locals }) => {
   const data = await request.json();
 	const session = await locals.auth.validate();
+
+  if (!session) {
+    return error(401, { message: 'You must have an account do that' });
+  }
+
   const userId = session?.user.userId;
   const wordId = uuidv4();
 
