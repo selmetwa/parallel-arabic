@@ -1,9 +1,9 @@
 <script lang="ts">
 	import type { KeyWord } from '../types';
 	import Button from '../../../../components/Button.svelte';
-
+	import { speakText } from '../../../../helpers/speak-arabic';
 	export let showBlock = true;
-  let response = '';
+	let response = '';
 
 	export let activeWordObj: KeyWord = {
 		english: '',
@@ -20,11 +20,11 @@
 			})
 		});
 
-    const data = await res.json();
-    response = data.message;
-    setTimeout(() => {
-      response = '';
-    }, 3000);
+		const data = await res.json();
+		response = data.message;
+		setTimeout(() => {
+			response = '';
+		}, 3000);
 	};
 </script>
 
@@ -33,22 +33,19 @@
 		{#if activeWordObj.arabic}
 			<div class="flex flex-col items-center p-4">
 				<p class="text-4xl text-text-300">{activeWordObj.arabic}</p>
-        <div class="flex flex-row items-center gap-2">
-          <p class="text-xl text-text-200">{activeWordObj.english}</p>
-          <p class="text-xl text-text-200">/</p>
-				  <p class="text-xl text-text-200">{activeWordObj.transliterated}</p>
-        </div>
-        <div class="mt-2">
-          <Button
-            type="button"
-            onClick={saveWord}
-          >
-            Save Word
-          </Button>
-          {#if response}
-            <p class="text-md text-text-300">{response}</p>
-          {/if}
-        </div>
+				<div class="flex flex-row items-center gap-2">
+					<p class="text-xl text-text-200">{activeWordObj.english}</p>
+					<p class="text-xl text-text-200">/</p>
+					<p class="text-xl text-text-200">{activeWordObj.transliterated}</p>
+				</div>
+
+				<div class="mt-2 flex flex-row items-center gap-2">
+					<Button type="button" onClick={saveWord}>Save Word</Button>
+					<Button type="button" onClick={() => speakText(activeWordObj.arabic)}>Hear Word</Button>
+				</div>
+				{#if response}
+					<p class="text-md text-text-300">{response}</p>
+				{/if}
 			</div>
 		{:else}
 			<div>

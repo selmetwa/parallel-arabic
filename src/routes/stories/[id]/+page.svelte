@@ -4,6 +4,7 @@
 	import { Mode, type KeyWord, type TextObj } from './types';
 	import Header from './components/Header.svelte';
   import Modal from '../../../components/Modal.svelte';
+	import { speakText } from '../../../helpers/speak-arabic';
 
 	export let data: {
     session: any
@@ -92,17 +93,13 @@
     <p class="text-4xl text-text-300">{activeWordObj.arabic}</p>
     <p class="text-4xl text-text-300">{activeWordObj.english}</p>
     <p class="text-4xl text-text-300">{activeWordObj.transliterated}</p>
-    <div class="mt-2">
-      <Button
-        type="button"
-        onClick={saveWord}
-      >
-        Save Word
-      </Button>
-      {#if response}
-        <p class="text-md text-text-300">{response}</p>
-      {/if}
+    <div class="mt-2 flex flex-row items-center gap-2 w-full">
+      <Button type="button" onClick={saveWord}>Save Word</Button>
+      <Button type="button" onClick={() => speakText(activeWordObj.arabic)}>Listen</Button>
     </div>
+    {#if response}
+    <p class="text-md text-text-300">{response}</p>
+  {/if}
   </div>
 </Modal>
 

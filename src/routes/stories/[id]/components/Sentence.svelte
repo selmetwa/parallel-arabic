@@ -26,7 +26,7 @@
 </script>
 
 <div class="flex flex-col divide-y divide-tile-600">
-	<div class="flex flex-col divide-x divide-tile-600 sm:flex-row">
+	<div class="flex flex-col-reverse divide-x divide-tile-600 sm:flex-row">
 		<Block
 			words={englishWords}
 			type="english"
@@ -42,7 +42,7 @@
     />
 	</div>
 	{#if mode === Mode.SentanceView}
-		<div class="flex flex-col divide-x divide-tile-600 sm:flex-row">
+		<div class="flex flex-col-reverse divide-x divide-tile-600 sm:flex-row">
 			<ActiveWordBlock {activeWordObj} />
 			<Block
 				words={transliteratedWords}

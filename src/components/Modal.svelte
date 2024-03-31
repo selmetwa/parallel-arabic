@@ -23,7 +23,7 @@
     top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%);
-    z-index: 10;
+    z-index: -1;
     opacity: 0; /* Start with 0 opacity for fade-in effect */
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   }
@@ -43,6 +43,7 @@
 
   .modal.open {
     opacity: 1;
+    z-index: 10;
   }
 
   .overlay.open {

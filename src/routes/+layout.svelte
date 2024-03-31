@@ -47,9 +47,8 @@
 	<title>Parallel Arabic</title>
 </svelte:head>
 
-<div class="z-10 h-full bg-tile-100">
 	<Drawer {isOpen} {handleCloseDrawer}>
-    <div>
+    <div class="border">
       <header class="border-b-2 border-tile-600 py-4 px-3">
         <h1 class="text-3xl font-bold text-text-300">Settings</h1>
       </header>
@@ -107,7 +106,7 @@
 		</form>
   </div>
 	</Drawer>
-	<div class="flex min-h-full flex-row">
+	<div class="flex min-h-full flex-row h-full">
 		<aside class="flex flex-1 justify-center overflow-hidden py-12">
 			<div class="flex flex-col gap-5">
 				<Svg />
@@ -116,7 +115,7 @@
 				<Svg />
 			</div>
 		</aside>
-		<main class="min-h-full w-[800px] max-w-[800px] shrink-0 border-x border-tile-600 bg-tile-200">
+		<main class="min-h-full w-full md:w-[800px] max-w-[800px] shrink-0 border-x border-tile-600 bg-tile-200 h-full">
 			<Navigation {handleOpenDrawer} />
 			<slot />
     </main>
@@ -129,7 +128,6 @@
 			</div>
 		</aside>
 	</div>
-</div>
 
 <style>
 	.text {

@@ -11,6 +11,6 @@
     name={name}
     placeholder={placeholder}
     id={name}
-    class="py-[2px] border border-raison rounded-0"
+    class="py-2 border border-tile-500 rounded-0 text-text-300"
   />
 </div>
