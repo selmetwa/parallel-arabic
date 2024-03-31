@@ -6,8 +6,8 @@
 </script>
 
 <section class="h-full p-8">
-  <h1 class="text-2xl font-bold">Stories</h1>
-  <ul>
+  <h1 class="text-xl font-bold text-text-200">Stories</h1>
+  <ul class="mt-4">
     {#each stories as story}
       <li>
         <a href={`/stories/${story.id}`} class="text-3xl font-bold">

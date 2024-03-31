@@ -2,7 +2,6 @@
 	export let key = '';
 	export let updateMode = (event: Event) => {};
 	import { Mode } from '../types';
-
   export let mode: Mode = Mode.SingleText;
 
 	const modeOptions = [
@@ -14,7 +13,7 @@
 
 <header class="flex w-full flex-col justify-between gap-4 bg-tile-300 p-3 sm:flex-row">
 	<figure>
-		<audio controls src={`/src/stories/${key}.mp3`}></audio>
+		<audio controls src="/omar-and-sarah.mp3"></audio>
 	</figure>
 	<fieldset>
 		<legend class="sr-only">Select Mode</legend>
