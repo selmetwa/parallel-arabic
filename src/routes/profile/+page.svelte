@@ -2,8 +2,22 @@
 	import { enhance } from '$app/forms';
   import Button from '../../components/Button.svelte';
 	import type { PageData } from './$types';
+  import { mkConfig, generateCsv, download } from "export-to-csv";
 
 	export let data: PageData;
+
+  const dataToExport = data.savedWords.map(word => ({
+    arabic: word.arabic_word,
+    english: word.english_word,
+    transliterated: word.transliterated_word
+  }));
+  const csvConfig = mkConfig({ useKeysAsHeaders: true });
+  const csv = generateCsv(csvConfig)(dataToExport);
+
+  function downloadCsv() {
+    download(csvConfig)(csv);
+  }
+  console.log(data);
 </script>
 
 <section class="mt-8 px-4">
@@ -12,7 +26,12 @@
       Sign out
     </Button>
   </form>
-	<h2 class="text-xl text-text-300 font-semibold pb-4">Saved Words</h2>
+  <header class="flex flex-row gap-2 items-center justify-between mt-8 mb-4">
+    <h2 class="text-xl text-text-300 font-semibold">Saved Words</h2>
+    <div class="w-fit">
+    <Button onClick={downloadCsv}>Download CSV</Button>
+    </div>
+  </header>
 
 	<table class="border">
 		<thead>
