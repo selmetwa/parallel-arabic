@@ -17,17 +17,19 @@
   function downloadCsv() {
     download(csvConfig)(csv);
   }
-  console.log(data);
 </script>
 
-<section class="mt-8 px-4">
+<section class="px-4 py-8">
   <form method="post" action="?/logout" use:enhance class="w-fit ml-auto">
     <Button type='submit'>
       Sign out
     </Button>
   </form>
   <header class="flex flex-row gap-2 items-center justify-between mt-8 mb-4">
-    <h2 class="text-xl text-text-300 font-semibold">Saved Words</h2>
+    <div>
+      <h2 class="text-xl text-text-300 font-semibold">Saved Words</h2>
+      <p class="text-text-200">Export saved words as a CSV and import into an Anki deck.</p>
+    </div>
     <div class="w-fit">
     <Button onClick={downloadCsv}>Download CSV</Button>
     </div>

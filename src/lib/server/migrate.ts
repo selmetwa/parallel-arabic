@@ -6,7 +6,7 @@ import { promises as fs } from 'fs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-console.log({ __filename, __dirname })
+
 const migrator = new Migrator({
   db,
   provider: new FileMigrationProvider({
@@ -17,7 +17,6 @@ const migrator = new Migrator({
 })
 
 const { error, results } = await migrator.migrateToLatest()
-console.log({ error, results })
 
 results?.forEach((it) => {
   if (it.status === 'Success') {

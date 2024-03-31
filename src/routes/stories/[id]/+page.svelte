@@ -108,7 +108,7 @@
 	</div>
 </Modal>
 
-<main class="h-full">
+<main>
 	<Header {updateMode} {mode} />
 	<section class="flex flex-col divide-y divide-tile-600 border-b border-t border-tile-600">
 		{#if mode === Mode.SentanceView}

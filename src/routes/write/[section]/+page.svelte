@@ -3,8 +3,6 @@
 	import Button from '../../../components/Button.svelte';
 	export let data;
 
-	console.log({ data });
-
 	let index = 0;
 
 	function next() {
@@ -15,7 +13,6 @@
 	}
 
 	function previous() {
-    console.log(index);
 		if (index === 0) {
 			return;
 		}

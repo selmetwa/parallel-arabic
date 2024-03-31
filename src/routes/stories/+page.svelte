@@ -5,7 +5,7 @@
   const { stories } = data;
 </script>
 
-<section class="h-full p-8">
+<section class="p-8">
   <h1 class="text-xl font-bold text-text-200">Stories</h1>
   <ul class="mt-4">
     {#each stories as story}

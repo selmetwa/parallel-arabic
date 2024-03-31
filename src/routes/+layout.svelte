@@ -8,7 +8,6 @@
 
   export let data;
 
-  console.log({data})
 	let isOpen = false;
 
 	let root: HTMLElement | null;
@@ -53,10 +52,10 @@
 	<Drawer {isOpen} {handleCloseDrawer}>
     <div>
       <header class="border-b-2 border-tile-600 py-4 px-3">
-        <h1 class="text-3xl font-bold text-text-300">Settings</h1>
+        <h1 class="text-xl font-bold text-text-300">Settings</h1>
       </header>
-		<div class="content input-wrapper flex flex-col gap-2 pl-3 pr-8 mt-8">
-      <label for="hue" class="text-text-300 text-xl font-semibold">Hue</label>
+		<div class="content input-wrapper flex flex-col pl-3 pr-8 mt-8">
+      <label for="hue" class="text-text-300 text-lg font-medium">Hue</label>
 			<input
 				on:input={onHue}
 				type="range"
@@ -68,48 +67,48 @@
 				tabindex="0"
 			/>
 		</div>
-		<form on:input={onTheme} class="flex flex-col gap-4 mt-8 px-3">
-			<div class="flex flex-row items-center gap-2 cursor-pointer">
+		<form on:input={onTheme} class="flex flex-col gap-2 mt-8 px-3">
+			<div class="flex flex-row items-center gap-1 cursor-pointer">
 				<input
 					checked
 					type="radio"
 					id="light"
 					name="theme"
-          class="w-5 h-5"
+          class="w-4 h-4"
 					value="light"
 					aria-label="radio-button-light-theme"
 					tabindex="0"
 				/>
-        <label for="light" class="text-text-300 text-xl font-semibold">Light Mode</label>
+        <label for="light" class="text-text-300 text-base font-medium">Light Mode</label>
 			</div>
-			<div class="flex flex-row items-center gap-2 cursor-pointer">
+			<div class="flex flex-row items-center gap-1 cursor-pointer">
 				<input
 					type="radio"
 					id="dim"
 					name="theme"
 					value="dim"
-          class="w-5 h-5"
+          class="w-4 h-4"
 					aria-label="radio-button-dim-theme"
 					tabindex="0"
 				/>
-        <label for="dim" class="text-text-300 text-xl font-semibold">Dim Mode </label>
+        <label for="dim" class="text-text-300 text-base font-medium">Dim Mode </label>
 			</div>
-			<div class="flex flex-row items-center gap-2 cursor-pointer">
+			<div class="flex flex-row items-center gap-1 cursor-pointer">
 				<input
 					type="radio"
 					id="dark"
 					name="theme"
 					value="dark"
-          class="w-5 h-5"
+          class="w-4 h-4"
 					aria-label="radio-button-dark-theme"
 					tabindex="0"
 				/>
-        <label for="dark" class="text-text-300 text-xl font-semibold">Dark Mode</label>
+        <label for="dark" class="text-text-300 text-base font-medium">Dark Mode</label>
 			</div>
 		</form>
   </div>
 	</Drawer>
-	<div class="flex min-h-full flex-row h-full">
+	<div class="flex flex-row">
 		<aside class="flex flex-1 justify-center overflow-hidden py-12">
 			<div class="flex flex-col gap-5">
 				<Svg />
@@ -118,7 +117,7 @@
 				<Svg />
 			</div>
 		</aside>
-		<main class="min-h-full w-full md:w-[800px] max-w-[800px] shrink-0 border-x border-tile-600 bg-tile-200 h-full">
+		<main class="min-h-full w-full md:w-[800px] max-w-[800px] shrink-0 border-x border-tile-600 bg-tile-200">
 			<Navigation {handleOpenDrawer} session={data.session} />
 			<slot />
     </main>

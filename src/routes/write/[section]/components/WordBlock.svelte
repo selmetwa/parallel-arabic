@@ -103,10 +103,8 @@
 
 		if (typeof document !== 'undefined') {
 			const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
-			console.log(keyboard);
 			document.addEventListener('keydown', () => {
 				const value = keyboard && keyboard.getTextAreaValue();
-				console.log(value);
 				if (typeof value === 'string') {
 					compareMyInput(value);
 				}

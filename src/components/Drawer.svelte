@@ -26,7 +26,7 @@
     right: calc(var(--width) * -1); /* Start off-screen */
     height: 100%;
     z-index: 10;
-    border-left: 8px solid var(--tile6);
+    border-left: 4px solid var(--tile6);
     transition: right 0.3s ease-in-out;
   }
 
