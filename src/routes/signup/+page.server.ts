@@ -1,7 +1,6 @@
 import { auth } from '$lib/server/lucia';
 import { fail, redirect } from '@sveltejs/kit';
 import { SqliteError } from 'better-sqlite3';
-import { generateEmailVerificationToken } from '$lib/server/token';
 import { isValidEmail }  from '$lib/server/email';
 
 import type { PageServerLoad, Actions } from './$types';
@@ -48,8 +47,6 @@ export const actions: Actions = {
 				attributes: {}
 			});
 			locals.auth.setSession(session); // set session cookie
-			const token = await generateEmailVerificationToken(user.userId);
-			// await sendEmailVerificationLink(token);
 		} catch (e) {
 			// check for unique constraint error in user table
 			if (e instanceof SqliteError && e.code === 'SQLITE_CONSTRAINT_UNIQUE') {

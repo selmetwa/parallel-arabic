@@ -6,6 +6,9 @@
 	import { hue, theme } from '../store/store';
 	import Svg from '../components/Svg.svelte';
 
+  export let data;
+
+  console.log({data})
 	let isOpen = false;
 
 	let root: HTMLElement | null;
@@ -48,12 +51,12 @@
 </svelte:head>
 
 	<Drawer {isOpen} {handleCloseDrawer}>
-    <div class="border">
+    <div>
       <header class="border-b-2 border-tile-600 py-4 px-3">
         <h1 class="text-3xl font-bold text-text-300">Settings</h1>
       </header>
 		<div class="content input-wrapper flex flex-col gap-2 pl-3 pr-8 mt-8">
-      <label for="hue" class="text-text-300 text-xl font-semibold">Brand Hue</label>
+      <label for="hue" class="text-text-300 text-xl font-semibold">Hue</label>
 			<input
 				on:input={onHue}
 				type="range"
@@ -116,7 +119,7 @@
 			</div>
 		</aside>
 		<main class="min-h-full w-full md:w-[800px] max-w-[800px] shrink-0 border-x border-tile-600 bg-tile-200 h-full">
-			<Navigation {handleOpenDrawer} />
+			<Navigation {handleOpenDrawer} session={data.session} />
 			<slot />
     </main>
 		<aside class="flex flex-1 justify-center overflow-hidden py-12">
@@ -128,14 +131,3 @@
 			</div>
 		</aside>
 	</div>
-
-<style>
-	.text {
-		padding: 10px;
-		/* line-height: 100px; */
-		/* font-family: Rakkas; */
-		color: var(--text-300);
-		font-size: 50px;
-		opacity: 0.1;
-	}
-</style>

@@ -1,13 +1,9 @@
-import { redirect } from '@sveltejs/kit';
 import { db } from '$lib/server/db';
 import * as path from 'path';
 import { convertStory } from '../../../helpers/convert-to-story';
 
-import type { PageServerLoad } from '../../story/[storyId]/$types';
-
-export const load: PageServerLoad = async ({ locals, params }: { locals: any, params: any }) => {
+export const load = async ({ locals, params }) => {
 	const session = await locals.auth.validate();
-	if (!session) throw redirect(302, '/login');
 
   const storyId = params.id;
   const story = await db.selectFrom('story').selectAll().where('id', '=', storyId).execute();
@@ -33,8 +29,8 @@ export const load: PageServerLoad = async ({ locals, params }: { locals: any, pa
 }
 
 	return {
-		userId: session.user.userId,
-		email: session.user.email,
+		userId: (session && session.user.userId) || null,
+		email:(session && session.user.email) || '',
     formattedStory: formattedStory,
     story
 	};

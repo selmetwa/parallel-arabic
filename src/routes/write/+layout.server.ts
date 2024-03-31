@@ -1,7 +1,3 @@
-import { redirect } from '@sveltejs/kit';
-
-import type { PageServerLoad } from './$types';
-
 const API_URL = 'https://egyptian-arabic-vocab-selmetwa.koyeb.app';
 
 const sections = [
@@ -107,10 +103,7 @@ const sections = [
   }
  ] 
 
-export const load: PageServerLoad = async ({ locals, params }) => {
-	const session = await locals.auth.validate();
-	if (!session) throw redirect(302, '/login');
-
+export const load = async () => {
   const updatedSections = await Promise.all(
     sections.map(async (section) => {
       try {
