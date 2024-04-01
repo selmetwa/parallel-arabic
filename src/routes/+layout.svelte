@@ -122,9 +122,12 @@
 				<Svg />
 			</div>
 		</aside>
-		<main class="min-h-full w-full md:w-[800px] max-w-[800px] shrink-0 border-x border-tile-600 bg-tile-200">
+		<main class="relative min-h-full w-full md:w-[800px] max-w-[800px] shrink-0 border-x border-tile-600 bg-tile-200">
 			<Navigation {handleOpenDrawer} />
 			<slot />
+      <footer class="absolute bottom-0 p-4 mt-4">
+        <a href="https://github.com/selmetwa/parallel-arabic" target="_blank" class="text-text-200 underline text-sm font-medium">Built by Sherif Elmetwally</a>
+      </footer>
     </main>
 		<aside class="flex flex-1 justify-center overflow-hidden py-12">
 			<div class="flex flex-col gap-5">
