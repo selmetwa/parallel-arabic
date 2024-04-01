@@ -3,6 +3,7 @@
 Parallel Arabic enables users to read arabic texts alongside the same text in English.
 
 Each story features a dictionary of key words, transliteration of the text, and full native audio recordings, creating a fully self-contained learning environment without the need for outside resources.
+
 <img width="500" alt="Screenshot 2024-04-01 at 12 15 29 AM" src="https://github.com/selmetwa/parallel-arabic/assets/46908343/7d8f87a4-c6d1-412c-b2f5-6a969ad176de">
 
 ### Writing 
