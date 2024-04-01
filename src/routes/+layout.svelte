@@ -50,11 +50,14 @@
 
 	<Drawer {isOpen} {handleCloseDrawer}>
     <div>
-      <header class="border-b-2 border-tile-600 py-4 px-3">
+      <header class="items-center border-b-2 border-tile-600 py-4 px-3 flex flex-row justify-between">
         <h1 class="text-xl font-bold text-text-300">Settings</h1>
-        <Button onClick={handleCloseDrawer} type="button">
-          Close
-        </Button>
+        <div class="w-fit">
+          <Button onClick={handleCloseDrawer} type="button">
+            Close
+          </Button>
+        </div>
+
       </header>
 		<div class="content input-wrapper flex flex-col pl-3 pr-8 mt-8">
       <label for="hue" class="text-text-300 text-lg font-medium">Hue</label>
