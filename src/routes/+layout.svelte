@@ -5,6 +5,7 @@
 	import { onMount } from 'svelte';
 	import { hue, theme } from '../store/store';
 	import Svg from '../components/Svg.svelte';
+	import Button from '../components/Button.svelte';
 
 	let isOpen = false;
 
@@ -51,6 +52,9 @@
     <div>
       <header class="border-b-2 border-tile-600 py-4 px-3">
         <h1 class="text-xl font-bold text-text-300">Settings</h1>
+        <Button onClick={handleCloseDrawer} type="button">
+          Close
+        </Button>
       </header>
 		<div class="content input-wrapper flex flex-col pl-3 pr-8 mt-8">
       <label for="hue" class="text-text-300 text-lg font-medium">Hue</label>
