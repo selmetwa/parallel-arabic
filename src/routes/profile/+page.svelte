@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	import { enhance } from '$app/forms';
   import Button from '../../components/Button.svelte';
 	import type { PageData } from './$types';
@@ -78,4 +78,4 @@
   td {
     font-size: 20px;
   }
-</style>
+</style> -->
