@@ -6,8 +6,6 @@
 	import { hue, theme } from '../store/store';
 	import Svg from '../components/Svg.svelte';
 
-  export let data;
-
 	let isOpen = false;
 
 	let root: HTMLElement | null;
@@ -118,7 +116,7 @@
 			</div>
 		</aside>
 		<main class="min-h-full w-full md:w-[800px] max-w-[800px] shrink-0 border-x border-tile-600 bg-tile-200">
-			<Navigation {handleOpenDrawer} session={data.session} />
+			<Navigation {handleOpenDrawer} />
 			<slot />
     </main>
 		<aside class="flex flex-1 justify-center overflow-hidden py-12">

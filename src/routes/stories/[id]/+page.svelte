@@ -99,7 +99,7 @@
 			{/if}
 		</div>
 		<div class="mt-2 flex w-full flex-row items-center gap-2">
-			<Button type="button" onClick={saveWord}>Save Word</Button>
+			<!-- <Button type="button" onClick={saveWord}>Save Word</Button> -->
 			<Button type="button" onClick={() => speakText(activeWordObj.arabic)}>Listen</Button>
 		</div>
 		{#if response}

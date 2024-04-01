@@ -214,7 +214,7 @@
 		<div class="flex w-full flex-col items-center gap-2 sm:w-2/4 sm:flex-row">
 			<Button type="button" onClick={toggleAnswer}>{showAnswer ? 'Hide' : 'Show'} answer</Button>
 			<Button type="button" onClick={toggleHint}>{showHint ? 'Hide' : 'Show'} hint</Button>
-			<Button type="button" onClick={saveWord}>Save word</Button>
+			<!-- <Button type="button" onClick={saveWord}>Save word</Button> -->
 			<Button type="button" onClick={() => speakText(egyptianArabicWord)}>Hear word</Button>
 		</div>
 	</div>

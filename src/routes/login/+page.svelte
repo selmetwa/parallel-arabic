@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	import { enhance } from '$app/forms';
 	import Button from '../../components/Button.svelte';
 	import Input from '../../components/Input.svelte';
@@ -20,4 +20,4 @@
 		<p class="error">{form.message}</p>
 	{/if}
 	<a href="/signup" class="text-text-200 underline">Create an account</a>
-</form>
+</form> -->

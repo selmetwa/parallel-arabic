@@ -42,7 +42,7 @@
 				</div>
 
 				<div class="mt-2 flex flex-row items-center gap-2">
-					<Button type="button" onClick={saveWord}>Save Word</Button>
+					<!-- <Button type="button" onClick={saveWord}>Save Word</Button> -->
 					<Button type="button" onClick={() => speakText(activeWordObj.arabic)}>Hear Word</Button>
 				</div>
 				{#if response}

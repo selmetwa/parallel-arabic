@@ -1,6 +1,5 @@
 <script lang="ts">
   export let handleOpenDrawer: () => void;
-  export let session: {} | null
   import Button from "./Button.svelte";
 </script>
 
@@ -8,15 +7,14 @@
     <ul class="w-full flex gap-4 px-4 items-center">
         <li><a class="text-text-300 text-sm sm:text-base underline" href="/stories">Read</a></li>
         <li><a class="text-text-300 text-sm sm:text-base underline" href="/write">Write</a></li>
-        {#if session}
+        <!-- {#if session}
           <li><a class="text-text-300 text-sm sm:text-base underline" href="/profile">Profile</a></li>
-
-        {/if}
+        {/if} -->
         <div class="ml-auto flex flex-row gap-4 items-center">
-          {#if !session}
+          <!-- {#if !session}
           <li><a class="text-text-300 text-sm sm:text-base underline" href="/login">Login</a></li>
           <li><a class="text-text-300 text-sm sm:text-base underline" href="/signup">Sign Up</a></li>        
-          {/if}
+          {/if} -->
           <li>
             <Button onClick={handleOpenDrawer} type="button">
               Menu
