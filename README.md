@@ -16,5 +16,3 @@ Practice writing over 4000 words, with realtime spellchecking. The tool contains
 - Sveltekit
 - [API for Egyptian Arabic Vocabulary](https://egyptian-arabic-vocab-selmetwa.koyeb.app/)
 - [Fully Featured Arabic Virtual Keyboard](https://selmetwa.github.io/arabic-virtual-keyboard-demo/)
-#### TODO
-Vercel does not allow `sqlite` databases, so I have to port the DB to postgres in order to re-add authentication and the saving of words.
