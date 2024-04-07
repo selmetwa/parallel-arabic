@@ -7,6 +7,8 @@
 	import Svg from '../components/Svg.svelte';
 	import Button from '../components/Button.svelte';
 
+  export let data;
+
 	let isOpen = false;
 
 	let root: HTMLElement | null;
@@ -123,7 +125,7 @@
 			</div>
 		</aside>
 		<main class="relative min-h-full w-full md:w-[800px] max-w-[800px] shrink-0 border-x border-tile-600 bg-tile-200">
-			<Navigation {handleOpenDrawer} />
+			<Navigation {handleOpenDrawer} session={data.session} />
 			<slot />
       <footer class="absolute bottom-0 p-4 mt-4">
         <a href="https://github.com/selmetwa/parallel-arabic" target="_blank" class="text-text-200 underline text-sm font-medium">Built by Sherif Elmetwally</a>

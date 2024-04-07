@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "start": "node build",
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
@@ -16,8 +17,10 @@
     "db:up": "vite-node --options.transformMode.ssr='/.*/' ./src/lib/server/migrate.ts"
   },
   "devDependencies": {
+    "@flydotio/dockerfile": "^0.5.4",
     "@playwright/test": "^1.28.1",
     "@sveltejs/adapter-auto": "^3.0.0",
+    "@sveltejs/adapter-node": "^5.0.1",
     "@sveltejs/kit": "^2.0.0",
     "@sveltejs/vite-plugin-svelte": "^3.0.0",
     "@types/better-sqlite3": "^7.6.8",
