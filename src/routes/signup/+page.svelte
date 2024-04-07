@@ -1,4 +1,4 @@
-<!-- <script lang="ts">
+<script lang="ts">
 	import { enhance } from '$app/forms';
   import Button from "../../components/Button.svelte";
   import Input from "../../components/Input.svelte";
@@ -21,4 +21,4 @@
 </form>
 
 
- -->
+

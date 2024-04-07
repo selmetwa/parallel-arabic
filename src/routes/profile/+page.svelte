@@ -1,4 +1,4 @@
-<!-- <script lang="ts">
+<script lang="ts">
 	import { enhance } from '$app/forms';
   import Button from '../../components/Button.svelte';
 	import type { PageData } from './$types';
@@ -31,7 +31,7 @@
       <p class="text-text-200">Export saved words as a CSV and import into an Anki deck.</p>
     </div>
     <div class="w-fit">
-    <Button onClick={downloadCsv}>Download CSV</Button>
+    <Button onClick={downloadCsv} type="button">Download CSV</Button>
     </div>
   </header>
 
@@ -78,4 +78,4 @@
   td {
     font-size: 20px;
   }
-</style> -->
+</style>
