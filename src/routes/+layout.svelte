@@ -6,7 +6,6 @@
 	import { hue, theme } from '../store/store';
 	import Svg from '../components/Svg.svelte';
 	import Button from '../components/Button.svelte';
-
   export let data;
 
 	let isOpen = false;
