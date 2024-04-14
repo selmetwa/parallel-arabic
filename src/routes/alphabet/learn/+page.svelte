@@ -2,54 +2,29 @@
 	import { letters } from '../../../constants/alphabet';
 	import Button from '../../../components/Button.svelte';
 	import cn from 'classnames';
-	console.log(letters);
 	import { hue, theme } from '../../../store/store';
   import { onMount } from 'svelte';
-
-  type Keyboard = {
-		getTextAreaValue: () => string | undefined;
-		resetValue: () => void;
-		style: {
-			setProperty: (key: string, value: string) => void;
-		};
-	};
+  import { updateKeyboardStyle } from '../../../helpers/update-keyboard-style';
+  import { goto } from '$app/navigation';
 
 	$: page = 0;
 
-	function playAudio(event: Event) {
-		console.log({ event });
-		const value = (event.target as HTMLButtonElement).value;
-		const audio = new Audio(`/letters/audios/${value}.mp3`);
+	function playAudio(letter: string) {
+		const audio = new Audio(`/letters/audios/${letter}.mp3`);
 		audio.play();
 	}
 
-  function updateKeyboardStyle() {
-		if (typeof document === 'undefined') return;
+  function nextPage() {
+    if (page === 1) {
+      goto('/alphabet/practice');
+    }
 
-		const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
+    page += 1;
+  }
 
-		const tile1 = getComputedStyle(document.body).getPropertyValue('--tile1');
-		const tile3 = getComputedStyle(document.body).getPropertyValue('--tile3');
-		const tile4 = getComputedStyle(document.body).getPropertyValue('--tile4');
-		const tile5 = getComputedStyle(document.body).getPropertyValue('--tile5');
-		const tile6 = getComputedStyle(document.body).getPropertyValue('--tile6');
-		const text1 = getComputedStyle(document.body).getPropertyValue('--text1');
-		const text3 = getComputedStyle(document.body).getPropertyValue('--text3');
-
-		if (keyboard) {
-			keyboard.style.setProperty('--button-background-color', tile4);
-			keyboard.style.setProperty('--button-active-background-color', tile5);
-			keyboard.style.setProperty('--button-active-border', `1px solid ${tile6}`);
-			keyboard.style.setProperty('--button-hover-background-color', tile3);
-			keyboard.style.setProperty('--textarea-background-color', tile1);
-			keyboard.style.setProperty('--textarea-input-color', text1);
-			keyboard.style.setProperty('--max-keyboard-width', '900px');
-			keyboard.style.setProperty('--button-color', text1);
-			keyboard.style.setProperty('--button-eng-color', text3);
-			keyboard.style.setProperty('--button-shifted-color', text3);
-		}
-	}
-
+  function previousPage() {
+    page -= 1;
+  }
   onMount(() => {
     updateKeyboardStyle();
   });
@@ -64,9 +39,9 @@
 
 <header class="flex w-2/4 flex-row gap-2 px-8 pt-8">
 	{#if page > 0}
-		<Button onClick={() => (page -= 1)} type="button">Previous</Button>
+		<Button onClick={previousPage} type="button">Previous</Button>
 	{/if}
-	<Button onClick={() => (page += 1)} type="button">Next</Button>
+	<Button onClick={nextPage} type="button">Next</Button>
 </header>
 {#if page === 0}
 	<section class="px-8 py-4">
@@ -77,12 +52,12 @@
 		<p class="mt-3 text-lg text-text-200">Click on a letter to hear its name</p>
 		<div class="mt-5 grid grid-cols-4 gap-3 sm:grid-cols-10" dir="rtl">
 			{#each letters as letter}
-        <div class="flex flex-col justify-center w-full">
+        <div class="flex flex-col items-center justify-center !w-full shrink-0">
           <p class="text-sm text-text-200">{letter.name}</p>
           <button
-            on:click={playAudio}
+            on:click={() => playAudio(letter.key)}
             value={letter.key}
-            class="flex cursor-pointer items-center justify-center rounded-md border-2 border-tile-500 bg-tile-400 p-2 text-3xl text-text-300 transition-all duration-300 ease-in-out hover:bg-tile-500"
+            class="flex w-full cursor-pointer items-center justify-center rounded-md border-2 border-tile-500 bg-tile-400 p-2 text-3xl text-text-300 transition-all duration-300 ease-in-out hover:bg-tile-500"
           >
             {letter.isolated}
           </button>
@@ -103,10 +78,15 @@
 		<p class="mt-3 text-lg text-text-200">Click on a letter to hear its name</p>
 		<div class="mt-5 grid grid-cols-4 gap-3 sm:grid-cols-6" dir="rtl">
 			{#each letters as letter}
+      <div class="flex flex-col items-center justify-center !w-full shrink-0">
+        <p class="text-sm text-text-200">{letter.name}</p>
 				<button
-					on:click={playAudio}
-					value={letter.key}
-					class="flex cursor-pointer items-center justify-center rounded-md border-2 border-tile-500 bg-tile-400 text-3xl text-text-300 transition-all duration-300 ease-in-out hover:bg-tile-500"
+					on:click={() => playAudio(letter.key)}
+					value={letter.isolated}
+					class={cn(
+            "flex cursor-pointer w-full items-center justify-center rounded-md border-2 border-tile-500 bg-tile-400 text-3xl text-text-300 transition-all duration-300 ease-in-out hover:bg-tile-500",
+            {'!bg-green-100 !border-green-100 hover:!bg-green-100': !letter.start || !letter.middle}
+            )}
 				>
 					<div class="w-full p-3">
 						<p class="text-3xl">
@@ -119,12 +99,8 @@
 						</div>
 					</div>
 				</button>
+        </div>
 			{/each}
-		</div>
-
-    <div class="mt-4 px-2">
-      <p>Practice typing to see how the letters interact with eachother</p>
-			<arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
 		</div>
 	</section>
 {:else if page === 2}
