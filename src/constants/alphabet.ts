@@ -251,15 +251,15 @@ export const letters = [
     middle: 'ﻴ',
     end: 'ﻲ'
   },
-  {
-    name: 'Hamza',
-    key: 'hamza',
-    description: 'Hamza is a glottal stop sound that is not a letter of the Arabic alphabet. It is used to represent the glottal stop sound.',
-    isolated: 'ء',
-    start: 'ﺀ',
-    middle: null,
-    end: 'ﺀ'
-  }
+  // {
+  //   name: 'Hamza',
+  //   key: 'hamza',
+  //   description: 'Hamza is a glottal stop sound that is not a letter of the Arabic alphabet. It is used to represent the glottal stop sound.',
+  //   isolated: 'ء',
+  //   start: 'ﺀ',
+  //   middle: null,
+  //   end: 'ﺀ'
+  // }
 ]
 
 export const numbers = [
