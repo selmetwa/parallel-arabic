@@ -3,7 +3,7 @@ export const letters = [
     name: 'Alif',
     key: 'alif',
     description: 'Alif is the first letter of the Arabic alphabet. It is a long vowel sound.',
-    isolated: 'ﺍ',
+    isolated: 'ا',
     start: null,
     middle: null,
     end: 'ﺎ'
