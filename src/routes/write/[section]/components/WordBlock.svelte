@@ -171,6 +171,8 @@
 			response = '';
 		}, 3000);
 	};
+
+
 </script>
 
 <div>
@@ -203,15 +205,12 @@
 					<p class="w-fit text-[35px] text-text-300">({egyptianArabicWord})</p>
 				{/if}
 			</div>
-			<div class="mx-auto max-w-[800px] overflow-auto break-words px-8">
-				{#each attempt as { letter, correct }}
-					<span class={cn('text-[35px]', { 'text-green-500': correct, 'text-red-500': !correct })}
-						>{letter}</span
-					>
-				{/each}
-			</div>
+      <span class='text-[35px]'>
+        {@html attempt.map(({ letter, correct }) => 
+        `<span class="${cn('text-[35px]', { 'text-green-500': correct, 'text-red-500': !correct })}">${letter}</span>`
+      ).join('')}
+      </span>
 		</div>
-
 		<div class="mt-4 px-2">
 			<arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
 		</div>

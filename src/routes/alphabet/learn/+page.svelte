@@ -35,6 +35,8 @@
 	$: theme.subscribe(() => {
 		updateKeyboardStyle();
 	});
+
+  const lettersToRender = letters;
 </script>
 
 <header class="flex w-2/4 flex-row gap-2 px-8 pt-8">
@@ -51,7 +53,7 @@
 		</p>
 		<p class="mt-3 text-lg text-text-200">Click on a letter to hear its name</p>
 		<div class="mt-5 grid grid-cols-4 gap-3 sm:grid-cols-10" dir="rtl">
-			{#each letters as letter}
+			{#each lettersToRender as letter}
         <div class="flex flex-col items-center justify-center !w-full shrink-0">
           <p class="text-sm text-text-200">{letter.name}</p>
           <button
