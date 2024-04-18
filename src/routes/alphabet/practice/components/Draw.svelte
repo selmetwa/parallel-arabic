@@ -2,7 +2,7 @@
 	import { type Letter } from '../../../../types';
 	export let letter: Letter;
 	import Button from '../../../../components/Button.svelte';
-  import CanvasNew from './CanvasNew.svelte';
+  import Canvas from './Canvas.svelte';
 
 	let showHint = false;
 	let showAnswer = false;
@@ -57,4 +57,4 @@
   </div>
 {/if}
 
-<CanvasNew  {letter} />
+  <Canvas {letter} background='var(--tile-500)'  />

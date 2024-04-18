@@ -7,7 +7,7 @@
   import { updateKeyboardStyle } from '../../../../helpers/update-keyboard-style';
   import { type Keyboard } from '../../../../types/index';
 	import Button from '../../../../components/Button.svelte';
-  import CanvasNew from '../../../alphabet/practice/components/CanvasNew.svelte';
+  import Canvas from '../../../alphabet/practice/components/Canvas.svelte';
 
 	type Word = {
 		english: string;
@@ -234,6 +234,6 @@
 
 {#if mode === 'draw'}
 <div class="mt-4 px-6">
-  <CanvasNew letter={word} weight={5} />
+  <Canvas letter={word} />
 </div>
 {/if}
