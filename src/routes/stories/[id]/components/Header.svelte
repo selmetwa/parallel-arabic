@@ -22,7 +22,7 @@
 				<li>
 					<label
 						for={option.value}
-						class="flex w-full flex-row items-center gap-2 p-2 text-base sm:cursor-pointer"
+						class="flex w-full flex-row items-center gap-1 p-1 text-base sm:cursor-pointer"
 					>
 						<input
               checked={option.value === mode}
