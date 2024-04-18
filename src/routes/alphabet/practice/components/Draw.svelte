@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Canvas from './Canvas.svelte';
 	import { type Letter } from '../../../../types';
 	export let letter: Letter;
 	import Button from '../../../../components/Button.svelte';
@@ -33,12 +32,12 @@
 	}
 </script>
 
-<div class="flex flex-col sm:flex-row justify-between">
+<div class="flex flex-col sm:flex-row sm:justify-between">
 	<div class="flex flex-col gap-1">
 		<h2 class="text-text-200">Listen to the audio and write the letter</h2>
 		<audio src={`/letters/audios/${letter.key}.mp3`} controls></audio>
 	</div>
-	<div class="mt-2">
+	<div class="mt-4">
 		<div>
 			<Button className="!h-fit !w-fit" onClick={toggleHint} type="button">
 				{showHint ? 'Hide' : 'Show'} hint
@@ -57,4 +56,5 @@
     {@html svgData}
   </div>
 {/if}
-  <CanvasNew  {letter} />
+
+<CanvasNew  {letter} />

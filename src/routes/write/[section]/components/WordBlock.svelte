@@ -1,13 +1,14 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import cn from 'classnames';
+
 	import { hue, theme } from '../../../../store/store';
 	import { speakText } from '../../../../helpers/speak-arabic';
   import { updateKeyboardStyle } from '../../../../helpers/update-keyboard-style';
   import { type Keyboard } from '../../../../types/index';
 	import Button from '../../../../components/Button.svelte';
-  import Canvas from '../../../alphabet/practice/components/Canvas.svelte';
   import CanvasNew from '../../../alphabet/practice/components/CanvasNew.svelte';
+
 	type Word = {
 		english: string;
 		egyptianArabic: string;
@@ -30,8 +31,8 @@
 	let showAnswer = false;
 	let response = '';
 	let correctAnswer = '';
-
 	let egyptianArabicWord = '';
+
 	if (word.egyptianArabic.includes('–') || word.egyptianArabic.includes('-')) {
 		if (word.egyptianArabic.includes('–')) {
 			egyptianArabicWord = word.egyptianArabic.split('–')[0].trim();
@@ -127,7 +128,7 @@
 		}
 	}
 
-  $: if (mode) {
+  $: if (mode === 'keyboard') {
 		updateKeyboardStyle();
   }
 
@@ -188,13 +189,13 @@
 		{#if response}
 			<p class="mb-1 w-fit text-sm text-text-300">{response}</p>
 		{/if}
-		<div class="flex w-full flex-col items-center gap-2 sm:w-2/4 sm:flex-row">
+		<div class="grid grid-cols-2 gap-2 sm:grid-cols-5">
 			<Button type="button" onClick={toggleAnswer}>{showAnswer ? 'Hide' : 'Show'} answer</Button>
 			<Button type="button" onClick={toggleHint}>{showHint ? 'Hide' : 'Show'} hint</Button>
 			<Button type="button" onClick={saveWord}>Save word</Button>
 			<Button type="button" onClick={() => speakText(egyptianArabicWord)}>Hear word</Button>
 			<Button type="button" onClick={switchMode}>
-        {mode === 'draw' ? 'Switch to keyboard' : 'Switch to canvas'}
+        {mode === 'draw' ? 'Type' : 'Draw'}
       </Button>
 		</div>
 	</div>
@@ -227,7 +228,6 @@
         <arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
       </div>
     {/if}
-
 	</div>
 </div>
 

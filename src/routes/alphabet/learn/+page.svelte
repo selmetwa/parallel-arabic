@@ -67,7 +67,7 @@
 			{/each}
 		</div>
 	</section>
-{:else if page === 1}
+{:else}
 	<section class="p-8">
 		<p class="text-xl text-text-300">Arabic is a cursive language, written from right to left..</p>
 		<p class="mt-3 text-xl text-text-300">
@@ -105,6 +105,4 @@
 			{/each}
 		</div>
 	</section>
-{:else if page === 2}
-	3
 {/if}
