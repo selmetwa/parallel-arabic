@@ -51,7 +51,7 @@
 		<p class="mt-3 text-xl text-text-300">
 			Here they are arranged in order starting from top right and moving across to the left.
 		</p>
-		<p class="mt-3 text-lg text-text-200">Click on a letter to hear its name</p>
+		<p class="mt-3 text-md text-text-200">Click on a letter to hear its name</p>
 		<div class="mt-5 grid grid-cols-4 gap-3 sm:grid-cols-10" dir="rtl">
 			{#each lettersToRender as letter}
         <div class="flex flex-col items-center justify-center !w-full shrink-0">
@@ -75,9 +75,9 @@
 			medial, or final position in a word.
 		</p>
 		<p class="mt-3 text-xl text-text-300">
-			Six letters ( ز ـ ر ـ ذ ـ د ـ و ـ أ ) have only two forms, Independent and final.
+    Six letters (ا - ز ـ ر ـ ذ ـ د ـ و ) have only two forms, Independent and final.
 		</p>
-		<p class="mt-3 text-lg text-text-200">Click on a letter to hear its name</p>
+		<p class="mt-3 text-md text-text-200">Click on a letter to hear its name</p>
 		<div class="mt-5 grid grid-cols-4 gap-3 sm:grid-cols-6" dir="rtl">
 			{#each letters as letter}
       <div class="flex flex-col items-center justify-center !w-full shrink-0">
