@@ -194,9 +194,6 @@
 			<Button type="button" onClick={toggleHint}>{showHint ? 'Hide' : 'Show'} hint</Button>
 			<Button type="button" onClick={saveWord}>Save word</Button>
 			<Button type="button" onClick={() => speakText(egyptianArabicWord)}>Hear word</Button>
-			<Button type="button" onClick={switchMode}>
-        {mode === 'draw' ? 'Type' : 'Draw'}
-      </Button>
 		</div>
 	</div>
 	{#if isCorrect}
@@ -230,10 +227,3 @@
     {/if}
 	</div>
 </div>
-
-
-{#if mode === 'draw'}
-<div class="mt-4 px-6">
-  <Canvas letter={word} />
-</div>
-{/if}
