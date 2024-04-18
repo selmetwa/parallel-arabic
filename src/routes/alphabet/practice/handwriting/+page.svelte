@@ -4,7 +4,8 @@
   import Draw from '../components/Draw.svelte';
 
 	$: index = 0;
-	const randomizedLetters = letters.sort(() => Math.random() - 0.5);
+  const lettersCopy = [...letters];
+	const randomizedLetters = lettersCopy.sort(() => Math.random() - 0.5);
 
 	$: letter = randomizedLetters[index];
 

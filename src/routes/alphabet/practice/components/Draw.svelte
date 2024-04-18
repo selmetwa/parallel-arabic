@@ -3,6 +3,7 @@
 	import { type Letter } from '../../../../types';
 	export let letter: Letter;
 	import Button from '../../../../components/Button.svelte';
+  import CanvasNew from './CanvasNew.svelte';
 
 	let showHint = false;
 	let showAnswer = false;
@@ -32,12 +33,12 @@
 	}
 </script>
 
-<div class="flex flex-row justify-between">
+<div class="flex flex-col sm:flex-row justify-between">
 	<div class="flex flex-col gap-1">
-		<h2 class="text-text-200">Listen to the audio and type the letter</h2>
+		<h2 class="text-text-200">Listen to the audio and write the letter</h2>
 		<audio src={`/letters/audios/${letter.key}.mp3`} controls></audio>
 	</div>
-	<div>
+	<div class="mt-2">
 		<div>
 			<Button className="!h-fit !w-fit" onClick={toggleHint} type="button">
 				{showHint ? 'Hide' : 'Show'} hint
@@ -52,10 +53,8 @@
 	</div>
 </div>
 {#if showAnswer}
-<div class="flex items-center justify-center mx-auto">
-  {@html svgData}
-</div>
+  <div class="flex items-center justify-center mx-auto">
+    {@html svgData}
+  </div>
 {/if}
-<main class="mt-3 flex flex-row gap-2">
-	<Canvas color="var(--text3)" background="var(--tile6)" {letter} />
-</main>
+  <CanvasNew  {letter} />

@@ -6,7 +6,8 @@
   import { updateKeyboardStyle } from '../../../../helpers/update-keyboard-style';
   import { type Keyboard } from '../../../../types/index';
 	import Button from '../../../../components/Button.svelte';
-
+  import Canvas from '../../../alphabet/practice/components/Canvas.svelte';
+  import CanvasNew from '../../../alphabet/practice/components/CanvasNew.svelte';
 	type Word = {
 		english: string;
 		egyptianArabic: string;
@@ -21,6 +22,9 @@
 	};
 
 	export let word: Word;
+  export let mode: string;
+  export let switchMode: () => void;
+
 	let attemptTemp: Attempt[] = [];
 	let showHint = false;
 	let showAnswer = false;
@@ -123,6 +127,10 @@
 		}
 	}
 
+  $: if (mode) {
+		updateKeyboardStyle();
+  }
+
 	onMount(() => {
 		const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
 
@@ -185,6 +193,9 @@
 			<Button type="button" onClick={toggleHint}>{showHint ? 'Hide' : 'Show'} hint</Button>
 			<Button type="button" onClick={saveWord}>Save word</Button>
 			<Button type="button" onClick={() => speakText(egyptianArabicWord)}>Hear word</Button>
+			<Button type="button" onClick={switchMode}>
+        {mode === 'draw' ? 'Switch to keyboard' : 'Switch to canvas'}
+      </Button>
 		</div>
 	</div>
 	{#if isCorrect}
@@ -211,8 +222,18 @@
       ).join('')}
       </span>
 		</div>
-		<div class="mt-4 px-2">
-			<arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
-		</div>
+    {#if mode === 'keyboard'}
+      <div class="mt-4 px-2">
+        <arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
+      </div>
+    {/if}
+
 	</div>
 </div>
+
+
+{#if mode === 'draw'}
+<div class="mt-4 px-6">
+  <CanvasNew letter={word} weight={5} />
+</div>
+{/if}
