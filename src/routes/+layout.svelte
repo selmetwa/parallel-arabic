@@ -125,7 +125,7 @@
 				<Svg />
 			</div>
 		</aside>
-		<main class="relative min-h-full w-full md:w-[800px] max-w-[800px] shrink-0 border-x border-tile-600 bg-tile-200 pb-24">
+		<main class="relative !min-h-full w-full md:w-[800px] max-w-[800px] shrink-0 border-x border-tile-600 bg-tile-200 pb-24">
 			<Navigation {handleOpenDrawer} session={data.session} />
 			<slot />
       <Footer />
