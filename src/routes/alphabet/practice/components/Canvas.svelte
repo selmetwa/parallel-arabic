@@ -4,7 +4,7 @@
 	export let width = 700;
 	export let height = 400;
 	export let color = 'var(--text3)';
-	export let background = '#fff';
+	export let background = 'var(--tile-500)';
 	export let letter;
 
 	$: if (letter) {
@@ -25,7 +25,9 @@
 	});
 
 	$: if (context) {
-		context.strokeStyle = color;
+    console.log(context);
+		context.strokeStyle = 'var(--text3)';
+    context.fillStyle = 'var(--text3)';
 	}
 
 	const handleStart = ({ offsetX: x, offsetY: y }) => {
