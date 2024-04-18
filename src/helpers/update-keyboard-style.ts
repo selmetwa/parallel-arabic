@@ -3,7 +3,6 @@ import { type Keyboard } from "../types";
 export const updateKeyboardStyle = () => {
 
   if (typeof document === 'undefined') return;
-  console.log('updateKeyboardStyle');
 
   const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
 
