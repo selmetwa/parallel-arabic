@@ -1,10 +1,13 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import cn from 'classnames';
+
 	import { hue, theme } from '../../../../store/store';
 	import { speakText } from '../../../../helpers/speak-arabic';
-
+  import { updateKeyboardStyle } from '../../../../helpers/update-keyboard-style';
+  import { type Keyboard } from '../../../../types/index';
 	import Button from '../../../../components/Button.svelte';
+  import CanvasNew from '../../../alphabet/practice/components/CanvasNew.svelte';
 
 	type Word = {
 		english: string;
@@ -14,27 +17,22 @@
 		egyptianArabicTransliteration: string;
 	};
 
-	type Keyboard = {
-		getTextAreaValue: () => string | undefined;
-		resetValue: () => void;
-		style: {
-			setProperty: (key: string, value: string) => void;
-		};
-	};
-
 	type Attempt = {
 		letter: string;
 		correct: boolean;
 	};
 
 	export let word: Word;
+  export let mode: string;
+  export let switchMode: () => void;
+
 	let attemptTemp: Attempt[] = [];
 	let showHint = false;
 	let showAnswer = false;
 	let response = '';
 	let correctAnswer = '';
-
 	let egyptianArabicWord = '';
+
 	if (word.egyptianArabic.includes('–') || word.egyptianArabic.includes('-')) {
 		if (word.egyptianArabic.includes('–')) {
 			egyptianArabicWord = word.egyptianArabic.split('–')[0].trim();
@@ -47,32 +45,6 @@
 		egyptianArabicWord = word.egyptianArabic;
 	}
 
-	function updateKeyboardStyle() {
-		if (typeof document === 'undefined') return;
-
-		const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
-
-		const tile1 = getComputedStyle(document.body).getPropertyValue('--tile1');
-		const tile3 = getComputedStyle(document.body).getPropertyValue('--tile3');
-		const tile4 = getComputedStyle(document.body).getPropertyValue('--tile4');
-		const tile5 = getComputedStyle(document.body).getPropertyValue('--tile5');
-		const tile6 = getComputedStyle(document.body).getPropertyValue('--tile6');
-		const text1 = getComputedStyle(document.body).getPropertyValue('--text1');
-		const text3 = getComputedStyle(document.body).getPropertyValue('--text3');
-
-		if (keyboard) {
-			keyboard.style.setProperty('--button-background-color', tile4);
-			keyboard.style.setProperty('--button-active-background-color', tile5);
-			keyboard.style.setProperty('--button-active-border', `1px solid ${tile6}`);
-			keyboard.style.setProperty('--button-hover-background-color', tile3);
-			keyboard.style.setProperty('--textarea-background-color', tile1);
-			keyboard.style.setProperty('--textarea-input-color', text1);
-			keyboard.style.setProperty('--max-keyboard-width', '900px');
-			keyboard.style.setProperty('--button-color', text1);
-			keyboard.style.setProperty('--button-eng-color', text3);
-			keyboard.style.setProperty('--button-shifted-color', text3);
-		}
-	}
 	$: hue.subscribe(() => {
 		updateKeyboardStyle();
 	});
@@ -156,6 +128,10 @@
 		}
 	}
 
+  $: if (mode === 'keyboard') {
+		updateKeyboardStyle();
+  }
+
 	onMount(() => {
 		const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
 
@@ -204,6 +180,8 @@
 			response = '';
 		}, 3000);
 	};
+
+
 </script>
 
 <div>
@@ -211,11 +189,14 @@
 		{#if response}
 			<p class="mb-1 w-fit text-sm text-text-300">{response}</p>
 		{/if}
-		<div class="flex w-full flex-col items-center gap-2 sm:w-2/4 sm:flex-row">
+		<div class="grid grid-cols-2 gap-2 sm:grid-cols-5">
 			<Button type="button" onClick={toggleAnswer}>{showAnswer ? 'Hide' : 'Show'} answer</Button>
 			<Button type="button" onClick={toggleHint}>{showHint ? 'Hide' : 'Show'} hint</Button>
 			<Button type="button" onClick={saveWord}>Save word</Button>
 			<Button type="button" onClick={() => speakText(egyptianArabicWord)}>Hear word</Button>
+			<Button type="button" onClick={switchMode}>
+        {mode === 'draw' ? 'Type' : 'Draw'}
+      </Button>
 		</div>
 	</div>
 	{#if isCorrect}
@@ -236,17 +217,23 @@
 					<p class="w-fit text-[35px] text-text-300">({egyptianArabicWord})</p>
 				{/if}
 			</div>
-			<div class="mx-auto max-w-[800px] overflow-auto break-words px-8">
-				{#each attempt as { letter, correct }}
-					<span class={cn('text-[35px]', { 'text-green-500': correct, 'text-red-500': !correct })}
-						>{letter}</span
-					>
-				{/each}
-			</div>
+      <span class='text-[35px]'>
+        {@html attempt.map(({ letter, correct }) => 
+        `<span class="${cn('text-[35px]', { 'text-green-500': correct, 'text-red-500': !correct })}">${letter}</span>`
+      ).join('')}
+      </span>
 		</div>
-
-		<div class="mt-4 px-2">
-			<arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
-		</div>
+    {#if mode === 'keyboard'}
+      <div class="mt-4 px-2">
+        <arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
+      </div>
+    {/if}
 	</div>
 </div>
+
+
+{#if mode === 'draw'}
+<div class="mt-4 px-6">
+  <CanvasNew letter={word} weight={5} />
+</div>
+{/if}
