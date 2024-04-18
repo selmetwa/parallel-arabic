@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte';
-  import Atrament, { MODE_DRAW, MODE_ERASE, MODE_FILL, MODE_DISABLED } from 'atrament';
+  import Atrament, { MODE_DRAW, MODE_ERASE} from 'atrament';
 	export let letter;
   export let weight = 15
   let sketchpad;

@@ -18,7 +18,7 @@
 	}
 </script>
 
-<section class="px-8 py-2">
+<section class="px-2 sm:px-8 py-2">
 	<header class="flex w-fit flex-row items-center gap-2 whitespace-nowrap py-8">
 		{#if index > 0}
 			<Button onClick={handlePrevious} type="button">Previous</Button>
@@ -32,6 +32,6 @@
 	</header>
 </section>
 
-<section class="px-8">
+<section class="px-2 sm:px-8">
   <LetterBlock {letter} {handleNext} />
 </section>

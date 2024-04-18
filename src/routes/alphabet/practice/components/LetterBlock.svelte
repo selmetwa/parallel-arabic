@@ -75,13 +75,13 @@
 	});
 </script>
 
-<div class="flex flex-row justify-between">
+<div class="flex flex-col sm:flex-row justify-between">
 	<div class="flex flex-col gap-1">
 		<h2 class="text-text-200">Listen to the audio and type the letter</h2>
 		<audio src={`/letters/audios/${letter.key}.mp3`} controls></audio>
 	</div>
 	<div>
-    <div>
+    <div class="flex flex-row mt-2 sm:mt-0 gap-2">
       <Button className="!h-fit !w-fit" onClick={toggleHint} type="button">
         {showHint ? 'Hide' : 'Show'} hint
       </Button>
@@ -114,7 +114,7 @@
 	>
 		{attempt}
 	</div>
-	<div class="mt-8">
+	<div class="mt-3 sm:mt-8">
 		<arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
 	</div>
 </div>

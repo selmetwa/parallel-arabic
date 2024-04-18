@@ -19,7 +19,7 @@
 </script>
 
 <section class="px-8 py-4">
-	<header class="flex w-fit flex-row items-center gap-2 whitespace-nowrap py-8">
+	<header class="flex w-fit flex-row items-center gap-2 whitespace-nowrap py-4 sm:py-8">
 		{#if index > 0}
 			<Button onClick={handlePrevious} type="button">Previous</Button>
 		{/if}
