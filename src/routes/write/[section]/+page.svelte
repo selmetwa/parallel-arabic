@@ -5,7 +5,7 @@
 
 	let index = 0;
 
-  $: mode = 'keyboard';
+  let mode = 'keyboard';
 
 	function next() {
 		if (index === data.words.length - 1) {
@@ -23,7 +23,7 @@
 
 	$: word = data.words.slice(1)[index];
 
-  function switchMode() {
+  function handleSwitchMode() {
     mode = mode === 'draw' ? 'keyboard' : 'draw';
   }
 </script>
@@ -46,5 +46,5 @@
 			</div>
 		</div>
 	</div>
-  <WordBlock {word} {mode} {switchMode} />
+  <WordBlock {word} {mode} switchMode={handleSwitchMode} />
 </section>
