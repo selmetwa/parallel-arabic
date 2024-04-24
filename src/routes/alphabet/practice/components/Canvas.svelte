@@ -1,126 +1,99 @@
 <script>
-	import { onMount } from 'svelte';
+  import { writable } from 'svelte/store';
+  import { getStroke } from 'perfect-freehand';
 
-	export let width = 700;
-	export let height = 400;
-	export let color = 'var(--text3)';
-	export let background = 'var(--tile-500)';
-	export let letter;
+  export let letter;
+  export let size; 
 
-	$: if (letter) {
-		clearCanvas();
-	}
-	let canvas;
-	let context;
-	let isDrawing;
-	let start;
+  $: if (letter) {
+    clear()
+  }
+  
+  const points = writable([[]]);
 
-	let t, l;
+  export function getSvgPathFromStroke(stroke) {
+    if (!stroke.length) return "";
 
-	onMount(() => {
-		context = canvas.getContext('2d');
-		context.lineWidth = 10;
+    const d = stroke.reduce(
+      (acc, [x0, y0], i, arr) => {
+        const [x1, y1] = arr[(i + 1) % arr.length];
+        acc.push(x0, y0, (x0 + x1) / 2, (y0 + y1) / 2);
+        return acc;
+      },
+      ["M", ...stroke[0], "Q"]
+    );
 
-		handleSize();
-	});
+    d.push("Z");
+    return d.join(" ");
+  }
 
-	$: if (context) {
-    console.log(context);
-		context.strokeStyle = 'var(--text3)';
-    context.fillStyle = 'var(--text3)';
-	}
+  function handlePointerDown(e) {
+    e.target.setPointerCapture(e.pointerId);
+    const rect = e.target.getBoundingClientRect();
+    points.update(points => {
+      points.push([[e.clientX - rect.left, e.clientY - rect.top, e.pressure]]);
+      return points;
+    });
+  }
 
-	const handleStart = ({ offsetX: x, offsetY: y }) => {
-		if (color === background) {
-			context.clearRect(0, 0, width, height);
-		} else {
-			isDrawing = true;
-			start = { x, y };
-		}
-	};
+  function handlePointerMove(e) {
+    if (e.buttons !== 1) return;
+    const rect = e.target.getBoundingClientRect();
+    points.update(points => {
+      points[points.length - 1].push([e.clientX - rect.left, e.clientY - rect.top, e.pressure]);
+      return points;
+    });
+  }
 
-	const handleEnd = () => {
-		isDrawing = false;
-	};
-	const handleMove = ({ offsetX: x1, offsetY: y1 }) => {
-		if (!isDrawing) return;
+  let pathData = [];
 
-		const { x, y } = start;
-		context.beginPath();
-		context.moveTo(x, y);
-		context.lineTo(x1, y1);
-		context.closePath();
-		context.stroke();
+  $: {
+    pathData = $points.map(strokePoints => {
+      const stroke = getStroke(strokePoints, {
+        size: size,
+        thinning: 0.5,
+        smoothing: 0.2,
+        streamline: 0.2,
+        simulatePressure: true,
+        start: {
+          taper: 0,
+          easing: (t) => 1 - Math.cos((t * Math.PI) / 2),
+        },
+        end: {
+          taper: 0,
+          easing: (t) => 1 - Math.cos((t * Math.PI) / 2),
+        },
+      });
+      return getSvgPathFromStroke(stroke);
+    });
+  }
 
-		start = { x: x1, y: y1 };
-	};
-
-	const clearCanvas = () => {
-    if (typeof context !== 'undefined') {
-      context.clearRect(0, 0, width, height);
-    }
-	};
-
-	const handleSize = () => {
-		const { top, left } = canvas.getBoundingClientRect();
-		t = top;
-		l = left;
-	};
+  function clear() {
+    points.set([[]]);
+  }
 </script>
 
-<svelte:window on:resize={handleSize} />
-
-<div>
-	<button on:click={clearCanvas} class="text-sm text-text-200 underline">Clear Canvas</button>
-	<canvas
-		id="main-canvas"
-		class="border-[10px] border-tile-500"
-		{width}
-		{height}
-		style:background
-		bind:this={canvas}
-		on:mousedown={handleStart}
-		on:touchstart={(e) => {
-			const { clientX, clientY } = e.touches[0];
-			handleStart({
-				offsetX: clientX - l,
-				offsetY: clientY - t
-			});
-		}}
-		on:mouseup={handleEnd}
-		on:touchend={handleEnd}
-		on:mouseleave={handleEnd}
-		on:mousemove={handleMove}
-		on:touchmove={(e) => {
-			const { clientX, clientY } = e.touches[0];
-			handleMove({
-				offsetX: clientX - l,
-				offsetY: clientY - t
-			});
-		}}
-	/>
+<div class="wrapper">
+  <button on:click={clear} class="text-text-200 underline">Clear</button>
+  <svg on:pointerdown={handlePointerDown} on:pointermove={handlePointerMove} style="touch-action: none;">
+    {#each pathData as path, i (i)}
+      <path d={path} />
+    {/each}
+  </svg>
 </div>
 
-<style>	
-	:global(.visually-hidden:not(:focus):not(:active)) {
-		clip: rect(0 0 0 0);
-		clip-path: inset(50%);
-		height: 1px;
-		width: 1px;
-		overflow: hidden;
-		position: absolute;
-		white-space: nowrap;
-	}
-	
-	main {
-		max-width: 300px;
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem 0;
-	}
-	
-	main :global(canvas) {
-		align-self: center;
-	}
-	
+<style>
+  .wrapper {
+    user-select: none;
+    margin-top: 8px;
+  }
+
+svg {
+  width: 100%;
+  height: 500px;
+  border: 5px solid var(--tile5);
+  fill: var(--text3);
+  background-color: var(--tile4);
+  touch-action: none;
+}
 </style>

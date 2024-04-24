@@ -57,4 +57,4 @@
   </div>
 {/if}
 
-  <Canvas {letter} background='var(--tile-500)'  />
+<Canvas {letter} size={20} />

@@ -48,14 +48,12 @@
   "type": "module",
   "dependencies": {
     "@lucia-auth/adapter-sqlite": "^2.0.1",
-    "atrament": "^4.1.0",
     "better-sqlite3": "^9.2.2",
-    "catenary-curve": "^2.0.1",
     "classnames": "^2.5.1",
     "export-to-csv": "^1.2.4",
     "kysely": "^0.27.1",
-    "lazy-brush": "^2.0.1",
     "lucia": "^2.7.6",
+    "perfect-freehand": "^1.2.2",
     "resize-observer-polyfill": "^1.5.1",
     "uuid": "^9.0.1"
   }
