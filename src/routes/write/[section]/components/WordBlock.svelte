@@ -219,7 +219,7 @@
 			</div>
       <span class='text-[35px]'>
         {@html attempt.map(({ letter, correct }) => 
-        `<span class="${cn('text-[35px]', { 'text-green-500': correct, 'text-red-500': !correct })}">${letter}</span>`
+        `<span class="${cn('text-[35px]', { 'text-green-500': correct, 'text-red-500': !correct })}">&zwj;&zwj;${letter}&zwj;&zwj;</span>`
       ).join('')}
       </span>
 		</div>
