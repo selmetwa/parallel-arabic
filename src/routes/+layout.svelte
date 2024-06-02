@@ -116,7 +116,7 @@
 		</form>
   </div>
 	</Drawer>
-	<div class="flex flex-row">
+	<div class="flex flex-row h-full">
 		<aside class="flex flex-1 justify-center overflow-hidden py-12">
 			<div class="flex flex-col gap-5">
 				<Svg />
@@ -125,7 +125,7 @@
 				<Svg />
 			</div>
 		</aside>
-		<main class="relative !min-h-full w-full md:w-[800px] max-w-[800px] shrink-0 border-x border-tile-600 bg-tile-200 pb-24">
+		<main class="relative !min-h-full w-full md:w-[800px] max-w-[800px] shrink-0 border-x border-tile-600 bg-tile-200 pb-24 h-fit">
 			<Navigation {handleOpenDrawer} session={data.session} />
 			<slot />
       <Footer />
