@@ -8,7 +8,7 @@
   import { type Keyboard } from '../../../../types/index';
 	import Button from '../../../../components/Button.svelte';
   import Canvas from '../../../alphabet/practice/components/Canvas.svelte';
-
+import { getBrowserInfo } from '../../../../helpers/get-browser-info'
 	type Word = {
 		english: string;
 		egyptianArabic: string;
@@ -181,7 +181,7 @@
 		}, 3000);
 	};
 
-
+  const isSafari = getBrowserInfo()
 </script>
 
 <div>
@@ -217,11 +217,19 @@
 					<p class="w-fit text-[35px] text-text-300">({egyptianArabicWord})</p>
 				{/if}
 			</div>
-      <span class='text-[35px]'>
-        {@html attempt.map(({ letter, correct }) => 
-        `<span class="${cn('text-[35px]', { 'text-green-500': correct, 'text-red-500': !correct })}">&zwj;&zwj;${letter}&zwj;&zwj;</span>`
-      ).join('')}
-      </span>
+      {#if isSafari}
+        <span class='text-[35px]'>
+          {@html attempt.map(({ letter, correct }) => 
+          `<span class="${cn('text-[35px]', { 'text-green-500': correct, 'text-red-500': !correct })}">&zwj;&zwj;${letter}&zwj;&zwj;</span>`
+        ).join('')}
+        </span>
+      {:else}
+        <span class='text-[35px]'>
+          {@html attempt.map(({ letter, correct }) => 
+          `<span class="${cn('text-[35px]', { 'text-green-500': correct, 'text-red-500': !correct })}">${letter}</span>`
+        ).join('')}
+        </span>
+      {/if}
 		</div>
     {#if mode === 'keyboard'}
       <div class="mt-4 px-2">
