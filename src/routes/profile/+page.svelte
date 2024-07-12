@@ -11,8 +11,16 @@
     english: word.english_word,
     transliterated: word.transliterated_word
   }));
+
   const csvConfig = mkConfig({ useKeysAsHeaders: true });
-  const csv = generateCsv(csvConfig)(dataToExport);
+
+  let csv: any;
+
+  if (data.savedWords.length === 0) {
+    csv = "No data to export";
+  } else {
+    csv = generateCsv(csvConfig)(dataToExport);
+  }
 
   function downloadCsv() {
     download(csvConfig)(csv);
@@ -35,7 +43,8 @@
     </div>
   </header>
 
-	<table class="border">
+
+	<table>
 		<thead>
 			<tr>
 				<th>Arabic</th>
@@ -44,6 +53,9 @@
 			</tr>
 		</thead>
 		<tbody>
+      {#if data.savedWords.length === 0}
+        <p class="mt-2">No saved words</p>
+      {/if}
 			{#each data.savedWords as word}
 				<tr>
 					<td>{word.arabic_word}</td>
