@@ -11,6 +11,8 @@ export type KeyWord = {
   arabic: string;
   english: string;
   transliterated: string;
+  description: string;
+  isLoading: boolean;
 }
 
 export type TextObj = {

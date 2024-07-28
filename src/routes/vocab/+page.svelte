@@ -126,8 +126,29 @@
       count: 172
     }
   ];
+
+  const testOpen = async () => {
+		const res = await fetch('/api/open-ai', {
+			method: 'POST',
+			headers: { accept: 'application/json' },
+			body: JSON.stringify({
+				question: 'what is the capital of France?'
+			})
+		});
+
+    const data = await res.json();
+    console.log(data);
+	};
+
+  // function testOpenAI() {
+  //   fetch('https://api.openai.com/v1/engines/davinci/completions', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application
+  // }
   </script>
   
+  <button on:click={testOpen}>click me</button>
   <p class="text-text-200 text-xl pl-8 mt-12">Practice over 4,000 words with fun multiple choice quizzes.</p>
   <section class="grid grid-cols-1 sm:grid-cols-2 gap-3 p-8 mb-12">
     {#each sections as section}

@@ -17,7 +17,7 @@
 
 <style>
   :root {
-    --width: 250px;
+    --width: 350px;
   }
   .drawer {
     width: var(--width);
