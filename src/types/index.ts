@@ -15,3 +15,20 @@ export type Letter = {
   middle: string | null,
   end: string
 }
+
+export type wordObjectItem = {
+  egyptianArabic: string
+  english: string
+  egyptianArabicTransliteration: string
+  standardArabic: string
+  standardArabicTransliteration: string
+}
+
+export type wordObjectGroup = {
+[key: string]: wordObjectItem
+first: wordObjectItem
+second: wordObjectItem
+third: wordObjectItem
+fourth: wordObjectItem
+answer: wordObjectItem
+}
