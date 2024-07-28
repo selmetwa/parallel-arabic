@@ -17,31 +17,42 @@
 		return inputString.replace(commataPattern, '');
 	}
 
-	function checkForKeyWord(event: Event) {
+  async function askChatGTP(word: string) {
+    const res = await fetch('/api/open-ai', {
+			method: 'POST',
+			headers: { accept: 'application/json' },
+			body: JSON.stringify({
+				question: `What does ${word} mean in Egyptian Arabic?`
+			})
+		});
+
+    const data = await res.json();
+
+    return data;
+  }
+
+	async function assignActiveWord(event: Event) {
+
+    setActiveWord({
+		 	english: '',
+		 	arabic: '',
+		 	transliterated: '',
+      description: '',
+      isLoading: true
+		 });
+
 		const word = (event.target as HTMLButtonElement).value.replace(/,/g, '');
-		const keyWord = keyWords.find((keyWord) => {
-			if (type === 'arabic') {
-				return (
-					removeArabicDiacritics(keyWord.arabic.trim()) === removeArabicDiacritics(word.trim())
-				);
-			}
-			if (type === 'english') {
-				return keyWord.english.trim().toLowerCase() === word.trim().toLowerCase();
-			}
-			if (type === 'transliterated') {
-				return keyWord.transliterated.trim().toLowerCase() === word.trim().toLowerCase();
-			}
-		});
+    const cleanWord = removeComma(word);
+    const res = await askChatGTP(cleanWord);
+    const message = res.message.message.content;
 
-		if (keyWord !== undefined) {
-			return setActiveWord(keyWord);
-		}
-
-		setActiveWord({
-			english: '',
-			arabic: removeComma(word),
-			transliterated: ''
-		});
+		 setActiveWord({
+		 	english: '',
+		 	arabic: removeComma(word),
+		 	transliterated: '',
+      description: message,
+      isLoading: false
+		 });
 	}
 </script>
 
@@ -50,13 +61,13 @@
 		{#if type === 'arabic'}
 			<div class="flex flex-row flex-wrap gap-1" dir="rtl">
 				{#each words.reverse() as word}
-					<Word {word} {keyWords} {checkForKeyWord} {type} />
+					<Word {word} {keyWords} {assignActiveWord} {type} />
 				{/each}
 			</div>
 		{:else}
 			<div class="flex flex-row flex-wrap gap-1">
 				{#each words as word}
-					<Word {word} {keyWords} {checkForKeyWord} {type} />
+					<Word {word} {keyWords} {assignActiveWord} {type} />
 				{/each}
 			</div>
 		{/if}

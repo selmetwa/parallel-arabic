@@ -3,7 +3,7 @@
 
 	export let word = '';
 	export let keyWords: KeyWord[] = [];
-	export let checkForKeyWord = (event: Event) => {};
+	export let assignActiveWord = (event: Event) => {};
 	export let type = '';
 
 	function removeArabicDiacritics(inputString: string) {
@@ -39,16 +39,16 @@
 
 {#if type === 'arabic'}
 	{#if isKeyWord}
-		<button class="text-4xl underline text-text-300 bg-tile-400 px-1 rounded-sm hover:bg-tile-500 transitional-all duration-300" value={word} on:click={checkForKeyWord}>
+		<button class="text-4xl underline text-text-300 bg-tile-400 px-1 rounded-sm hover:bg-tile-500 transitional-all duration-300" value={word} on:click={assignActiveWord}>
 			{word}
 		</button>
 	{:else}
-		<button class="text-4xl text-text-300" value={word} on:click={checkForKeyWord}>
+		<button class="text-4xl text-text-300" value={word} on:click={assignActiveWord}>
 			{word}
 		</button>
 	{/if}
 {:else if isKeyWord}
-	<button class="text-4xl bg-tile-400 text-text-300 px-1 rounded-sm hover:bg-tile-500 transitional-all duration-300" value={word} on:click={checkForKeyWord}>
+	<button class="text-4xl bg-tile-400 text-text-300 px-1 rounded-sm hover:bg-tile-500 transitional-all duration-300" value={word} on:click={assignActiveWord}>
 		{word}
 	</button>
 {:else}

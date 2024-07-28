@@ -10,7 +10,9 @@
 	export let activeWordObj = {
 		english: '',
 		arabic: '',
-		transliterated: ''
+		transliterated: '',
+    description: '',
+    isLoading: false,
 	};
   export let setActiveWord = (word: KeyWord) => {}
 
