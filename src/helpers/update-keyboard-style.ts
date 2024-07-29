@@ -1,11 +1,11 @@
 import { type Keyboard } from "../types";
 
 export const updateKeyboardStyle = () => {
-
-  if (typeof document === 'undefined') return;
+  if (typeof document === 'undefined') {
+    return
+  };
 
   const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
-
   const tile1 = getComputedStyle(document.body).getPropertyValue('--tile1');
   const tile3 = getComputedStyle(document.body).getPropertyValue('--tile3');
   const tile4 = getComputedStyle(document.body).getPropertyValue('--tile4');

@@ -1,9 +1,9 @@
 <section class="p-4 text-text-300">
-  <p >
-    Arabic Virtual Keyboard is a tool that helps english speakers write in Arabic without having a dedicated arabic keyboard
+  <p>
+    This keyboard is a tool that helps english speakers write in Arabic without having a dedicated arabic keyboard installed on their computer
   </p>
   <p>The keyboard is fully featured and contains support for all letters, numbers, special characters, diacritical marks, and text to speech.</p>
-  <p>If you are not comfortable with the arabic alphabet yet please head over to <a href="/alphabet">The alphabet learning section</a></p>
+  <p>If you are not comfortable with the arabic alphabet yet please head over to <a href="/alphabet" class="underline !text-text-300">The alphabet learning section</a></p>
   <div class="tables">
     <div class="column">
       <div class="table_wrapper">
