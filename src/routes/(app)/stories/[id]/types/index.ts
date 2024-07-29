@@ -13,6 +13,7 @@ export type KeyWord = {
   transliterated: string;
   description: string;
   isLoading: boolean;
+  type: string;
 }
 
 export type TextObj = {

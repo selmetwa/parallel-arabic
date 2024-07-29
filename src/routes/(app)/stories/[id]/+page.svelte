@@ -5,7 +5,7 @@
 	import Header from './components/Header.svelte';
 	import Modal from '../../../../components/Modal.svelte';
 	import { speakText } from '../../../../helpers/speak-arabic';
-
+  import { getWordObjectToSave } from '../../../../helpers/get-word-object-to-save';
 	export let data: {
 		session: any;
 		formattedStory: {
@@ -51,6 +51,7 @@
 		transliterated: '',
     description: '',
     isLoading: false,
+    type: ''
 	};
 
 	function closeModal() {
@@ -61,6 +62,7 @@
 				transliterated: '',
         description: '',
         isLoading: false,
+        type: ''
 			};
 		}, 3000);
 		isModalOpen = false;
@@ -76,11 +78,18 @@
 	}
 
 	const saveWord = async () => {
+    const wordToSave = activeWordObj.arabic;
+    const type = activeWordObj.type;
+
+    const chatgptres = await getWordObjectToSave(wordToSave, type);
+    const jsonBlob = chatgptres.message.message.content;
+    const _activeWordObj = JSON.parse(jsonBlob);
+  
 		const res = await fetch('/api/save-word', {
 			method: 'POST',
 			headers: { accept: 'application/json' },
 			body: JSON.stringify({
-				activeWordObj
+				activeWordObj: _activeWordObj
 			})
 		});
 

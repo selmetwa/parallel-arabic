@@ -42,7 +42,8 @@
 		 	arabic: '',
 		 	transliterated: '',
       description: '',
-      isLoading: true
+      isLoading: true,
+      type: ''
 		 });
 
 		const word = (event.target as HTMLButtonElement).value.replace(/,/g, '');
@@ -55,7 +56,8 @@
 		 	arabic: removeComma(word),
 		 	transliterated: '',
       description: message,
-      isLoading: false
+      isLoading: false,
+      type: type
 		 });
 	}
 </script>
