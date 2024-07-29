@@ -1,29 +1,33 @@
 <script>
   export let isOpen = true;
   export let handleCloseModal = () => {};
+
+
+  export let width = '400px';
+  export let height = 'fit-content';
 </script>
 
-<div class="{`modal ${isOpen ? 'open' : ''} bg-tile-300 border-4 border-tile-600`}">
+<dialog 
+open={isOpen}
+class="{`modal ${isOpen ? 'open' : ''} bg-tile-300 border-4 border-tile-600`}" style="--width: {width}; --height: {height};">
   <!-- Your modal content goes here -->
   <slot />
-</div>
+</dialog>
 
 <div class="{`overlay ${isOpen ? 'open' : ''}`}" on:click={handleCloseModal}>
   <!-- Clicking on the overlay will close the modal -->
 </div>
 
 <style>
-  :root {
-    --width: 400px;
-  }
-
   .modal {
-    width: var(--width);
+    width: min(var(--width), 100%);
+    height: var(--height);
     position: fixed;
     top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%);
     z-index: -1;
+    overflow-x: auto;
     opacity: 0; /* Start with 0 opacity for fade-in effect */
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   }

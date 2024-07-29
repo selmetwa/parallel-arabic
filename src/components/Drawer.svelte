@@ -1,5 +1,5 @@
 <script>
-  export let isOpen = true;
+  export let isOpen = false;
   export let handleCloseDrawer = () => {};
 </script>
 
@@ -16,10 +16,8 @@
 
 
 <style>
-  :root {
-    --width: 350px;
-  }
   .drawer {
+    --width: 100%;
     width: var(--width);
     position: fixed;
     top: 0;
@@ -29,6 +27,12 @@
     border-left: 4px solid var(--tile6);
     transition: right 0.3s ease-in-out;
   }
+
+  @media only screen and (min-width: 420px) {
+    .drawer {
+      --width: 400px;
+    }
+}
 
   .overlay {
     position: fixed;

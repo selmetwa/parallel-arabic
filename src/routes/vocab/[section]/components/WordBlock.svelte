@@ -2,6 +2,8 @@
 	import RadioButton from '../../../../components/RadioButton.svelte';
 	import Button from '../../../../components/Button.svelte';
   import type { wordObjectItem, wordObjectGroup } from '../../../../types';
+	import { speakText } from '../../../../helpers/speak-arabic';
+
 	export let next: () => void;
 
 	export let wordObj: wordObjectGroup;
@@ -99,7 +101,8 @@
 		<Button type="button" onClick={toggleHint}>{showHint ? 'Hide' : 'Show'} hint</Button>
 		<Button type="button" onClick={saveWord}>Save word</Button>
 		<Button type="button" onClick={toggleFormat}>Toggle Format</Button>
-	</div>
+		<Button type="button" onClick={() => speakText(wordObj.answer.egyptianArabic)}>Hear Word</Button>
+	</div> 
 	{#if isCorrect}
 		<div
 			class="flex w-full flex-row items-center justify-center gap-2 bg-green-100 py-2 transition-all duration-300"

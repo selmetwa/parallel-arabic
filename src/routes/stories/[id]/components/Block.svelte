@@ -7,22 +7,26 @@
 	export let type = '';
 	export let setActiveWord = (obj: KeyWord) => {};
 
-	function removeArabicDiacritics(inputString: string) {
-		const diacriticsPattern = /[\u060C\u064B-\u065F\u0670\u0640]/g;
-		return inputString.replace(diacriticsPattern, '');
-	}
-
 	function removeComma(inputString: string) {
 		const commataPattern = /[\u060C]/g;
 		return inputString.replace(commataPattern, '');
 	}
 
   async function askChatGTP(word: string) {
+    let question = '';
+    if (type === 'arabic') {
+      question = `What does ${word} mean in Egyptian Arabic?`;
+    } else if (type === 'english') {
+      question = `What is the word for ${word} in Egyptian Arabic?`;
+    } else {
+      question = `What does ${word} mean in Egyptian Arabic?`;
+    }
+  
     const res = await fetch('/api/open-ai', {
 			method: 'POST',
 			headers: { accept: 'application/json' },
 			body: JSON.stringify({
-				question: `What does ${word} mean in Egyptian Arabic?`
+				question: question
 			})
 		});
 
