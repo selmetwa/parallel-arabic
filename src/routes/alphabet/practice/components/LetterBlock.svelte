@@ -4,8 +4,9 @@
 	import { hue, theme } from '../../../../store/store';
 	import { type Letter, type Keyboard } from '../../../../types';
 	import Button from '../../../../components/Button.svelte';
+  import Modal from '../../../../components/Modal.svelte';
+  import KeyboardDocumentation from '../../../../components/KeyboardDocumentation.svelte';
 	import cn from 'classnames';
-
 	export let letter: Letter;
   export let handleNext: () => void;
 
@@ -13,12 +14,15 @@
 	$: isCorrect = false;
 	let showHint = false;
   let showAnswer = false;
+  $: isInfoModalOpen = false;
+
 
 	$: if (letter.isolated) {
 		attempt = '';
 		isCorrect = false;
 		showHint = false;
     showAnswer = false;
+    isInfoModalOpen = false;
 	}
 
 	function toggleHint() {
@@ -73,6 +77,14 @@
 			}
 		});
 	});
+
+  function openInfoModal() {
+    isInfoModalOpen = true;
+  }
+
+  function closeInfoModal() {
+    isInfoModalOpen = false;
+  }
 </script>
 
 <div class="flex flex-col sm:flex-row justify-between">
@@ -114,7 +126,11 @@
 	>
 		{attempt}
 	</div>
-	<div class="mt-3 sm:mt-8">
+  <Modal isOpen={isInfoModalOpen} handleCloseModal={closeInfoModal} height="70%" width="80%">
+    <KeyboardDocumentation></KeyboardDocumentation>
+  </Modal>
+	<div class="my-3 sm:mt-8">
 		<arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
 	</div>
+  <button class="text-text-300 underline" on:click={openInfoModal}>How does this keyboard work?</button>
 </div>
