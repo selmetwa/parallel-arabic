@@ -13,6 +13,7 @@
 		transliterated: '',
     description: '',
     isLoading: false,
+    type: ''
 	};
   export let setActiveWord = (word: KeyWord) => {}
 
