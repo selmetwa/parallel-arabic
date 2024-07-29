@@ -22,7 +22,7 @@
           {/if}
           <li>
             <Button onClick={handleOpenDrawer} type="button">
-              Menu
+              Theme
             </Button>
           </li>
         </div>
