@@ -135,8 +135,10 @@
 	}
 
   $: if (mode) {
-		const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
-    keyboard && keyboard.resetValue();
+    if (typeof document !== 'undefined') {
+      const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
+      keyboard && keyboard.resetValue();
+    }
   }
 	onMount(() => {
 		const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
