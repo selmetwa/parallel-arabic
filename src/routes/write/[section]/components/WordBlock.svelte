@@ -1,14 +1,17 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { onMount, onDestroy } from 'svelte';
 	import cn from 'classnames';
 
 	import { hue, theme } from '../../../../store/store';
 	import { speakText } from '../../../../helpers/speak-arabic';
-  import { updateKeyboardStyle } from '../../../../helpers/update-keyboard-style';
-  import { type Keyboard } from '../../../../types/index';
+	import { updateKeyboardStyle } from '../../../../helpers/update-keyboard-style';
+	import { type Keyboard } from '../../../../types/index';
 	import Button from '../../../../components/Button.svelte';
-  import Canvas from '../../../alphabet/practice/components/Canvas.svelte';
-import { getBrowserInfo } from '../../../../helpers/get-browser-info'
+	import Canvas from '../../../alphabet/practice/components/Canvas.svelte';
+	import { getBrowserInfo } from '../../../../helpers/get-browser-info';
+  import Modal from '../../../../components/Modal.svelte';
+  import KeyboardDocumentation from '../../../../components/KeyboardDocumentation.svelte';
+
 	type Word = {
 		english: string;
 		egyptianArabic: string;
@@ -23,8 +26,8 @@ import { getBrowserInfo } from '../../../../helpers/get-browser-info'
 	};
 
 	export let word: Word;
-  export let mode: string;
-  export let switchMode: () => void;
+	export let mode: string;
+	export let switchMode: () => void;
 
 	let attemptTemp: Attempt[] = [];
 	let showHint = false;
@@ -32,6 +35,7 @@ import { getBrowserInfo } from '../../../../helpers/get-browser-info'
 	let response = '';
 	let correctAnswer = '';
 	let egyptianArabicWord = '';
+  $: isInfoModalOpen = false;
 
 	if (word.egyptianArabic.includes('–') || word.egyptianArabic.includes('-')) {
 		if (word.egyptianArabic.includes('–')) {
@@ -53,14 +57,16 @@ import { getBrowserInfo } from '../../../../helpers/get-browser-info'
 		updateKeyboardStyle();
 	});
 
-	$: if (word.english) {
+	$: if (word.english || mode) {
+		attemptTemp = [];
 		attempt = [];
 		isCorrect = false;
 		showHint = false;
 		showAnswer = false;
 		response = '';
 		correctAnswer = '';
-
+    isInfoModalOpen = false;
+  
 		if (word.egyptianArabic.includes('–') || word.egyptianArabic.includes('-')) {
 			if (word.egyptianArabic.includes('–')) {
 				egyptianArabicWord = word.egyptianArabic.split('–')[0].trim();
@@ -128,10 +134,10 @@ import { getBrowserInfo } from '../../../../helpers/get-browser-info'
 		}
 	}
 
-  $: if (mode === 'keyboard') {
-		updateKeyboardStyle();
+  $: if (mode) {
+		const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
+    keyboard && keyboard.resetValue();
   }
-
 	onMount(() => {
 		const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
 
@@ -181,7 +187,15 @@ import { getBrowserInfo } from '../../../../helpers/get-browser-info'
 		}, 3000);
 	};
 
-  const isSafari = getBrowserInfo()
+	const isSafari = getBrowserInfo();
+
+  function openInfoModal() {
+    isInfoModalOpen = true;
+  }
+
+  function closeInfoModal() {
+    isInfoModalOpen = false;
+  }
 </script>
 
 <div>
@@ -195,8 +209,8 @@ import { getBrowserInfo } from '../../../../helpers/get-browser-info'
 			<Button type="button" onClick={saveWord}>Save word</Button>
 			<Button type="button" onClick={() => speakText(egyptianArabicWord)}>Hear word</Button>
 			<Button type="button" onClick={switchMode}>
-        {mode === 'draw' ? 'Type' : 'Draw'}
-      </Button>
+				{mode === 'draw' ? 'Type' : 'Draw'}
+			</Button>
 		</div>
 	</div>
 	{#if isCorrect}
@@ -217,31 +231,42 @@ import { getBrowserInfo } from '../../../../helpers/get-browser-info'
 					<p class="w-fit text-[35px] text-text-300">({egyptianArabicWord})</p>
 				{/if}
 			</div>
-      {#if isSafari}
-        <span class='text-[35px]'>
-          {@html attempt.map(({ letter, correct }) => 
-          `<span class="${cn('text-[35px]', { 'text-green-500': correct, 'text-red-500': !correct })}">&zwj;&zwj;${letter}&zwj;&zwj;</span>`
-        ).join('')}
-        </span>
-      {:else}
-        <span class='text-[35px]'>
-          {@html attempt.map(({ letter, correct }) => 
-          `<span class="${cn('text-[35px]', { 'text-green-500': correct, 'text-red-500': !correct })}">${letter}</span>`
-        ).join('')}
-        </span>
-      {/if}
+			{#if isSafari}
+				<span class="text-[35px]">
+					{@html attempt
+						.map(
+							({ letter, correct }) =>
+								`<span class="${cn('text-[35px]', {
+									'text-green-500': correct,
+									'text-red-500': !correct
+								})}">&zwj;&zwj;${letter}&zwj;&zwj;</span>`
+						)
+						.join('')}
+				</span>
+			{:else}
+				<span class="text-[35px]">
+					{@html attempt
+						.map(
+							({ letter, correct }) =>
+								`<span class="${cn('text-[35px]', {
+									'text-green-500': correct,
+									'text-red-500': !correct
+								})}">${letter}</span>`
+						)
+						.join('')}
+				</span>
+			{/if}
 		</div>
-    {#if mode === 'keyboard'}
-      <div class="mt-4 px-2">
-        <arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
-      </div>
-    {/if}
+      <Modal isOpen={isInfoModalOpen} handleCloseModal={closeInfoModal} height="70%" width="80%">
+        <KeyboardDocumentation></KeyboardDocumentation>
+      </Modal>
+			<div class={cn("block mt-4 px-2", { '!hidden': mode === 'draw'})}>
+				<arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
+        <button class="mt-3 text-text-300 underline" on:click={openInfoModal}>How does this keyboard work?</button>
+			</div>
 	</div>
 </div>
 
-
-{#if mode === 'draw'}
-  <div class="mt-4 px-6">
-    <Canvas letter={word} size={10} />
-  </div>
-{/if}
+	<div class={cn("hidden mt-4 px-6", { '!block': mode === 'draw'})}>
+		<Canvas letter={word} size={10} />
+	</div>
