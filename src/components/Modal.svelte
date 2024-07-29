@@ -1,4 +1,5 @@
 <script>
+  import Button from "./Button.svelte";
   export let isOpen = true;
   export let handleCloseModal = () => {};
 
@@ -11,6 +12,9 @@
 open={isOpen}
 class="{`modal ${isOpen ? 'open' : ''} bg-tile-300 border-4 border-tile-600`}" style="--width: {width}; --height: {height};">
   <!-- Your modal content goes here -->
+   <div class="absolute top-0 right-0 p-2">
+    <Button onClick={handleCloseModal} type="button">X</Button>
+   </div>
   <slot />
 </dialog>
 
