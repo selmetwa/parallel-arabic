@@ -4,8 +4,8 @@
 	import { Mode, type KeyWord, type TextObj } from './types';
 	import Header from './components/Header.svelte';
 	import Modal from '../../../../components/Modal.svelte';
-	import { speakText } from '../../../../helpers/speak-arabic';
   import { getWordObjectToSave } from '../../../../helpers/get-word-object-to-save';
+  
 	export let data: {
 		session: any;
 		formattedStory: {
@@ -118,7 +118,6 @@
     {/if}
 		<div class="mt-2 flex w-full flex-row items-center gap-2">
 			<Button type="button" onClick={saveWord}>Save Word</Button>
-			<Button type="button" onClick={() => speakText(activeWordObj.arabic)}>Listen</Button>
 		</div>
 		{#if response}
 			<p class="mt-2 text-md text-text-300">{response}</p>

@@ -4,6 +4,7 @@ export const getWordObjectToSave = async (word: string, type: string) => {
     question = `
     Can you please return JSON and no other text for this word where the keys are english, arabic, transliterated. 
     And fill in those values accordingly given the egyptian arabic word. 
+    Please make sure that we are translating english from egyptian arabic.
     can you please make sure the transliterated value only uses latin characters.
     The word is ${word}
     `;
@@ -11,6 +12,7 @@ export const getWordObjectToSave = async (word: string, type: string) => {
     question = `
     Can you please return JSON and no other text for this word where the keys are english, arabic, transliterated. 
     And fill in those values accordingly given the english word. 
+    Please make sure that we are translating to egyptian arabic.
     Please make sure that the arabic value is egyptian arabic. 
     Can you please make sure the transliterated value only uses latin characters.
     The word is ${word}
