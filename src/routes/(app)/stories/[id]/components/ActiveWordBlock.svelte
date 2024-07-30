@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { KeyWord } from '../types';
 	import Button from '../../../../../components/Button.svelte';
-	import { speakText } from '../../../../../helpers/speak-arabic';
   import { getWordObjectToSave } from '../../../../../helpers/get-word-object-to-save';
 	export let showBlock = true;
 	let response = '';
@@ -56,7 +55,6 @@
         <p class="my-2 text-text-200">{activeWordObj.description}</p>
 				<div class="mt-2 flex flex-row items-center gap-2">
 					<Button type="button" onClick={saveWord}>Save Word</Button>
-					<Button type="button" onClick={() => speakText(activeWordObj.arabic)}>Hear Word</Button>
 				</div>
 				{#if response}
 					<p class="text-md text-text-300">{response}</p>

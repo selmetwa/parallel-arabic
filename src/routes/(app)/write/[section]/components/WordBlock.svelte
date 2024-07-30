@@ -3,7 +3,6 @@
 	import cn from 'classnames';
 
 	import { hue, theme } from '../../../../../store/store';
-	import { speakText } from '../../../../../helpers/speak-arabic';
 	import { updateKeyboardStyle } from '../../../../../helpers/update-keyboard-style';
 	import { type Keyboard } from '../../../../../types/index';
 	import Button from '../../../../../components/Button.svelte';
@@ -209,7 +208,6 @@
 			<Button type="button" onClick={toggleAnswer}>{showAnswer ? 'Hide' : 'Show'} answer</Button>
 			<Button type="button" onClick={toggleHint}>{showHint ? 'Hide' : 'Show'} hint</Button>
 			<Button type="button" onClick={saveWord}>Save word</Button>
-			<Button type="button" onClick={() => speakText(egyptianArabicWord)}>Hear word</Button>
 			<Button type="button" onClick={switchMode}>
 				{mode === 'draw' ? 'Type' : 'Draw'}
 			</Button>
