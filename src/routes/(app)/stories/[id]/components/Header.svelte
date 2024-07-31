@@ -3,7 +3,7 @@
 	export let updateMode = (event: Event) => {};
 	import { Mode } from '../types';
   export let mode: Mode = Mode.SingleText;
-
+  import RadioButton from '../../../../../components/RadioButton.svelte';
 	const modeOptions = [
 		{ value: Mode.SingleText, text: 'Single Text' },
 		{ value: Mode.BiText, text: 'Bi Text' },
@@ -11,7 +11,7 @@
 	];
 </script>
 
-<header class="flex w-full flex-col justify-between gap-4 bg-tile-300 p-3 sm:flex-row">
+<header class="flex w-full sm:items-center flex-col justify-between gap-4 bg-tile-300 p-3 sm:flex-row">
 	<figure>
 		<audio controls src="/omar-and-sarah.mp3"></audio>
 	</figure>
@@ -20,23 +20,15 @@
 		<ul class="flex flex-row gap-1">
 			{#each modeOptions as option}
 				<li>
-					<label
-						for={option.value}
-						class="flex w-full flex-row items-center gap-1 p-1 text-base sm:cursor-pointer"
-					>
-						<input
-              checked={option.value === mode}
-							type="radio"
-							name="mode"
-							id={option.value}
-							value={option.value}
-							on:change={updateMode}
-						/>
-						<span
-							class="select-none overflow-hidden text-ellipsis whitespace-nowrap text-base font-normal"
-							>{option.text}</span
-						>
-					</label>
+          <RadioButton 
+            wrapperClass="!p-2 h-min"
+            className="text-sm !p-1 h-min font-semibold"
+            selectableFor={option.value}
+            value={option.value}
+            text={option.text}
+            isSelected={option.value === mode}
+            onClick={updateMode}
+          />
 				</li>
 			{/each}
 		</ul>

@@ -7,6 +7,7 @@
 	import Svg from '../../components/Svg.svelte';
 	import Button from '../../components/Button.svelte';
   import Footer from "../../components/Footer.svelte";
+  import RadioButton from '../../components/RadioButton.svelte';
 
   export let data;
 
@@ -43,6 +44,12 @@
 		doc?.setAttribute('color-scheme', value);
 		theme.set(value);
 	};
+
+  let themeValue = ''
+
+theme.subscribe((value) => {
+  themeValue = value;
+});
 </script>
 
 <svelte:head>
@@ -74,43 +81,30 @@
 			/>
 		</div>
 		<form on:input={onTheme} class="flex flex-col gap-2 mt-8 px-3">
-			<div class="flex flex-row items-center gap-1 cursor-pointer">
-				<input
-					checked
-					type="radio"
-					id="light"
-					name="theme"
-          class="w-4 h-4"
-					value="light"
-					aria-label="radio-button-light-theme"
-					tabindex="0"
-				/>
-        <label for="light" class="text-text-300 text-base font-medium">Light Mode</label>
-			</div>
-			<div class="flex flex-row items-center gap-1 cursor-pointer">
-				<input
-					type="radio"
-					id="dim"
-					name="theme"
-					value="dim"
-          class="w-4 h-4"
-					aria-label="radio-button-dim-theme"
-					tabindex="0"
-				/>
-        <label for="dim" class="text-text-300 text-base font-medium">Dim Mode </label>
-			</div>
-			<div class="flex flex-row items-center gap-1 cursor-pointer">
-				<input
-					type="radio"
-					id="dark"
-					name="theme"
-					value="dark"
-          class="w-4 h-4"
-					aria-label="radio-button-dark-theme"
-					tabindex="0"
-				/>
-        <label for="dark" class="text-text-300 text-base font-medium">Dark Mode</label>
-			</div>
+      <RadioButton 
+        selectableFor="light"
+        onClick={onTheme}
+        value="light" 
+        isSelected={themeValue === 'light'}
+        text="Light"
+        className="text-lg"
+        />
+        <RadioButton 
+        selectableFor="dim"
+        onClick={onTheme}
+        value="dim" 
+        isSelected={themeValue === 'dim'}
+        text="Dim" 
+        className="text-lg"
+        />
+        <RadioButton 
+        onClick={onTheme}
+        className="text-lg"
+        selectableFor="dark"
+        value="dark" 
+        isSelected={themeValue === 'Dark'}
+        text="Dark" 
+        />
 		</form>
   </div>
 	</Drawer>
@@ -140,6 +134,6 @@
 
   <style>
     main {
-      width: min(1200px, 100%);
+      width: min(1100px, 100%);
     }
   </style>
