@@ -4,8 +4,10 @@
   export let text: string
   export let value: string
   export let isSelected: Boolean
-  export let onClick: (e: any) => void
+  export let onClick: (e: any) => void | undefined
   export let selectableFor: string
+  export let className = ''
+  export let wrapperClass = ''
 </script>
 
 <label
@@ -13,7 +15,8 @@
   aria-labelledby={selectableFor}
   class={cn(
     "border-2 border-tile-500 flex gap-4 flex-row items-center border w-full p-4 text-base rounded-lg sm:cursor-pointer relative bg-tile-300 hover:bg-tile-500 transition-all duration-300",
-    { "!bg-tile-600 !border-tile-600": isSelected }
+    { "!bg-tile-600 !border-tile-600": isSelected },
+    wrapperClass
   )}
   style={isSelected ? "background-color: var(--tile6); border-color: var(--tile6)" : ""}
 >
@@ -26,5 +29,8 @@
     style="appearance: none;"
     class="appearance-none absolute left-full top-full"
   />
-  <span class="overflow-hidden text-text-300 text-ellipsis text-3xl font-normal whitespace-nowrap select-none">{text}</span>
+  <span class={cn(
+    "overflow-hidden text-text-300 text-ellipsis text-3xl font-normal whitespace-nowrap select-none",
+    className,    
+    )}>{text}</span>
 </label>

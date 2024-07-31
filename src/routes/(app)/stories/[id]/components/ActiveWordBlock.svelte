@@ -63,7 +63,7 @@
 		{:else}
 			<div>
 				<p class="m-auto w-fit text-xl font-semibold text-text-300">No active word</p>
-				<p class="text-text-200">Click on an arabic word</p>
+				<p class="text-text-200">Click on a word to learn more</p>
 			</div>
 		{/if}
 	</div>
