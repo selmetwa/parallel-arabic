@@ -1,4 +1,4 @@
-<header class="mt-14 px-6 sm:px-8 py-8 flex flex-row gap-6 items-center">
+<header class="mt-14 px-6 sm:px-8 py-8 flex flex-col sm:flex-row gap-6 items-center">
   <div class="flex-1">
     <h1 class="text-5xl text-text-200 font-semibold text-balance leading-2">Learn Egyptian Arabic in a fun way!</h1>
     <p class="text-text-200 mt-6 text-2xl leading-8	">Parallel Arabic provides a fully self-contained learning environment without the need for outside resources.</p>
@@ -14,7 +14,7 @@
     <img src="/images/banner.png" class="opacity-75" alt="banner" />
   </div>
 </header>
-<section class="px-6 sm:px-8 grid grid-cols-2 grid-rows-2 gap-4 mt-4">
+<section class="px-6 sm:px-8 grid sm:grid-cols-2 sm:grid-rows-2 gap-4 mt-4">
   <article class="bg-tile-400 p-4 border-2 border-tile-600 flex flex-col space-between gap-2">
     <p class="text-text-300">Wow this is perfect for what I need currently. The stories section in particular is a great idea as I can't find any graded stories for learning. Thank you so much for this :)</p>
     <div class="flex flex-row gap-2 items-center mt-auto">
@@ -47,7 +47,7 @@
 
 
 <section class="px-6 sm:px-8 mt-12 w-full">
-  <article class="flex flex-row gap-6 w-full items-center">
+  <article class="flex flex-col-reverse sm:flex-row gap-6 w-full items-center">
     <div class="flex-1">
       <img src="/images/banner.png" class="opacity-75" alt="banner" />
     </div>
@@ -64,7 +64,7 @@
 </section>
 
 <section class="px-6 sm:px-8 mt-12 w-full">
-  <article class="flex flex-row gap-6 w-full items-center">
+  <article class="flex flex-col sm:flex-row gap-6 w-full items-center">
     <div class="flex-1">
       <h3 class="text-3xl text-text-200 font-semibold">Writing</h3>
       <ul class="list-disc list-inside">
@@ -81,7 +81,7 @@
 </section>
 
 <section class="px-6 sm:px-8 mt-12 w-full">
-  <article class="flex flex-row gap-6 w-full items-center">
+  <article class="flex flex-col-reverse sm:flex-row gap-6 w-full items-center">
     <div class="flex-1">
       <img src="/images/alphabet.png" class="opacity-75 " alt="alphabet" />
     </div>
@@ -97,7 +97,7 @@
 </section>
 
 <section class="px-6 sm:px-8 mt-12 w-full">
-  <article class="flex flex-row gap-6 w-full items-center">
+  <article class="flex flex-col sm:flex-row gap-6 w-full items-center">
     <div class="flex-1">
       <h3 class="text-3xl text-text-200 font-semibold">Vocabulary</h3>
       <ul class="list-disc list-inside">
@@ -111,7 +111,7 @@
 </section>
 
 <section class="px-6 sm:px-8 mt-12 w-full">
-  <article class="flex flex-row gap-6 w-full items-center">
+  <article class="flex flex-col-reverse sm:flex-row gap-6 w-full items-center">
     <div class="flex-1">
       <img src="/images/handwriting.png" class="opacity-75 " alt="handwriting" />
     </div>
