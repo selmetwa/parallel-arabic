@@ -14,7 +14,7 @@
   for={selectableFor}
   aria-labelledby={selectableFor}
   class={cn(
-    "border-2 border-tile-500 flex gap-4 flex-row items-center border w-full p-4 text-base rounded-lg sm:cursor-pointer relative bg-tile-300 hover:bg-tile-500 transition-all duration-300",
+    "border-2 border-tile-500 flex gap-4 flex-row items-center border w-full p-4 text-base sm:cursor-pointer relative bg-tile-300 hover:bg-tile-500 transition-all duration-300",
     { "!bg-tile-600 !border-tile-600": isSelected },
     wrapperClass
   )}
