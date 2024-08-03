@@ -30,7 +30,7 @@
     class="appearance-none absolute left-full top-full"
   />
   <span class={cn(
-    "overflow-hidden text-text-300 text-ellipsis text-3xl font-normal whitespace-nowrap select-none",
+    "text-text-300 text-3xl font-normal select-none",
     className,    
     )}>{text}</span>
 </label>
