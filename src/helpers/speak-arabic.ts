@@ -3,9 +3,9 @@ export const speakText = (word: string) => {
   utterance.rate = .5;
   utterance.lang = "ar-001";
   
-  utterance.onstart = () => console.log("Speech started");
-  utterance.onend = () => console.log("Speech ended");
-  utterance.onerror = (event) => console.error("Speech synthesis error", event);
+  // utterance.onstart = () => console.log("Speech started");
+  // utterance.onend = () => console.log("Speech ended");
+  // utterance.onerror = (event) => console.error("Speech synthesis error", event);
   
   const speak = () => {
     const voices = window.speechSynthesis.getVoices();

@@ -32,3 +32,18 @@ third: wordObjectItem
 fourth: wordObjectItem
 answer: wordObjectItem
 }
+
+export type sentenceObjectItem = {
+  arabic: string
+  english: string
+  transliteration: string
+}
+
+export type sentenceObjectGroup = {
+  [key: string]: sentenceObjectItem
+  first: sentenceObjectItem
+  second: sentenceObjectItem
+  third: sentenceObjectItem
+  fourth: sentenceObjectItem
+  answer: sentenceObjectItem
+}
