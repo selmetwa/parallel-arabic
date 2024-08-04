@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Button from '../../../../components/Button.svelte';
-	import { type sentenceObjectGroup, type sentenceObjectItem } from '../../../../types/index';
-	import RadioButton from '../../../../components/RadioButton.svelte';
+	import Button from '$lib/components/Button.svelte';
+	import { type sentenceObjectGroup, type sentenceObjectItem } from '$lib/types/index';
+	import RadioButton from '$lib/components/RadioButton.svelte';
 
 	export let index = 0;
 

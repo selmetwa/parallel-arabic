@@ -14,7 +14,7 @@
     "format": "prettier --write .",
     "test:integration": "playwright test",
     "test:unit": "vitest",
-    "db:up": "vite-node --options.transformMode.ssr='/.*/' ./src/lib/server/migrate.ts"
+    "db:up": "vite-node ./src/lib/server/migrate.ts"
   },
   "devDependencies": {
     "@flydotio/dockerfile": "^0.5.4",

@@ -1,4 +1,4 @@
-import { type Keyboard } from "../types";
+import { type Keyboard } from "$lib/types";
 
 export const updateKeyboardStyle = () => {
   if (typeof document === 'undefined') {

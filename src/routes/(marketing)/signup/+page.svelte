@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
-	import Button from '../../../components/Button.svelte';
-	import Input from '../../../components/Input.svelte';
+	import Button from '$lib/components/Button.svelte';
+	import Input from '$lib/components/Input.svelte';
 	import type { ActionData } from './$types';
 
 	export let form: ActionData;

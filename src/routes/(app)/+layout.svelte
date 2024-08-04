@@ -1,13 +1,13 @@
 <script lang="ts">
 	import '../../app.css';
-	import Navigation from '../../components/Navigation.svelte';
-	import Drawer from '../../components/Drawer.svelte';
+	import Navigation from '$lib/components/Navigation.svelte';
+	import Drawer from '$lib/components/Drawer.svelte';
 	import { onMount } from 'svelte';
-	import { hue, theme } from '../../store/store';
-	import Svg from '../../components/Svg.svelte';
-	import Button from '../../components/Button.svelte';
-  import Footer from "../../components/Footer.svelte";
-  import RadioButton from '../../components/RadioButton.svelte';
+	import { hue, theme } from '$lib/store/store';
+	import Svg from '$lib/components/Svg.svelte';
+	import Button from '$lib/components/Button.svelte';
+  import Footer from "$lib/components/Footer.svelte";
+  import RadioButton from '$lib/components/RadioButton.svelte';
 
   export let data;
 

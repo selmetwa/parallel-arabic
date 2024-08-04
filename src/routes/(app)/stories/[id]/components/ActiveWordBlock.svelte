@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { KeyWord } from '../types';
-	import Button from '../../../../../components/Button.svelte';
-  import { getWordObjectToSave } from '../../../../../helpers/get-word-object-to-save';
+	import Button from '$lib/components/Button.svelte';
+  import { getWordObjectToSave } from '$lib/helpers/get-word-object-to-save';
 	export let showBlock = true;
 	let response = '';
 
