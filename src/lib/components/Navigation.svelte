@@ -12,7 +12,6 @@
         <li><a class="text-text-300 text-sm sm:text-base underline" href="/sentences">Sentences</a></li>
         <li><a class="text-text-300 text-sm sm:text-base underline" href="/alphabet">Alphabet</a></li>
         <li><a class="text-text-300 text-sm sm:text-base underline" href="/vocab">Vocab</a></li>
-        <li><a class="text-text-300 text-sm sm:text-base underline" href="/about">About</a></li>
         {#if session}
           <li><a class="text-text-300 text-sm sm:text-base underline" href="/profile">Profile</a></li>
         {/if}
