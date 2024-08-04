@@ -53,7 +53,7 @@ theme.subscribe((value) => {
 </script>
 
 <svelte:head>
-	<title>Parallel Arabic asd</title>
+	<title>Parallel Arabic</title>
 </svelte:head>
 
 	<Drawer {isOpen} {handleCloseDrawer}>
