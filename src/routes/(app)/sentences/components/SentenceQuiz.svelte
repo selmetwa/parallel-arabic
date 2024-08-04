@@ -2,6 +2,7 @@
 	import Button from '$lib/components/Button.svelte';
 	import { type sentenceObjectGroup, type sentenceObjectItem } from '$lib/types/index';
 	import RadioButton from '$lib/components/RadioButton.svelte';
+  import SaveButton from '$lib/components/SaveButton.svelte';
 
 	export let index = 0;
 
@@ -11,7 +12,6 @@
 	$: isIncorrect = false;
 	$: showHint = false;
 	$: showAnswer = false;
-	$: response = '';
 	$: selectedObj = {} as sentenceObjectItem;
 	$: selected = null;
 
@@ -56,26 +56,6 @@
 		}
 	}
 
-	const saveWord = async () => {
-		const res = await fetch('/api/save-word', {
-			method: 'POST',
-			headers: { accept: 'application/json' },
-			body: JSON.stringify({
-				activeWordObj: {
-					arabic: sentenceObj.answer.arabic,
-					english: sentenceObj.answer.english,
-					transliterated: sentenceObj.answer.transliteration
-				}
-			})
-		});
-
-		const data = await res.json();
-		response = data.message;
-		setTimeout(() => {
-			response = '';
-		}, 3000);
-	};
-
 	function getObjectByEnglishValue(data: sentenceObjectGroup, englishValue: string) {
 		for (let key in data) {
 			if (data[key].english === englishValue) {
@@ -102,7 +82,6 @@
 
 	$: if (sentenceObj) {
       selectedObj = {} as sentenceObjectItem;
-			response = '';
 			showHint = false;
 			selected = null;
 			isCorrect = false;
@@ -110,11 +89,6 @@
 </script>
 
 {#if sentenceObj}
-	{#if response}
-		<div class="bg-tile-500 py-2 text-center font-semibold">
-			<p class="text-md text-text-300">{response}</p>
-		</div>
-	{/if}
 	{#if isCorrect}
 		<div
 			class="flex w-full flex-row items-center justify-center gap-2 bg-green-100 py-2 transition-all duration-300"
@@ -136,7 +110,11 @@
 	<div class="mt-10 flex w-full flex-col sm:flex-row gap-2 px-4 sm:w-1/2">
 		<Button onClick={() => (showHint = !showHint)} type="button">Show Hint</Button>
 		<Button onClick={() => (showAnswer = !showAnswer)} type="button">Show Answer</Button>
-		<Button onClick={saveWord} type="button">Save Sentence</Button>
+    <SaveButton type="sentence" objectToSave={{
+					arabic: sentenceObj.answer.arabic,
+					english: sentenceObj.answer.english,
+					transliterated: sentenceObj.answer.transliteration
+				}}></SaveButton>
 	</div>
 
   <section class="px-8">

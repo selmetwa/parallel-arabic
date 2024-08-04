@@ -22,7 +22,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     .executeTakeFirst();
 
   if (wordExists) {
-    return json({ message: 'You have already saved this word' });
+    return json({ message: 'You have already saved this' });
   }
 
   try {
@@ -36,7 +36,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
       created_at: new Date().getTime()
     }).executeTakeFirst();
 
-    return json({ message: 'Word saved' });
+    return json({ message: 'Saved' });
   } catch (e) {
     return error(500, { message: 'Something went wrong' });
   }

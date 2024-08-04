@@ -21,7 +21,6 @@ export const POST: RequestHandler = async ({ request, locals }) => {
       model: "gpt-4o-mini",
     });
   
-    console.log(completion.choices[0]);
     return json({ message: completion.choices[0] });
 
   } catch (e) {

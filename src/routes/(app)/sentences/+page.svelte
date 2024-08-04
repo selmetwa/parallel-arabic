@@ -3,11 +3,12 @@
 	import Button from '$lib/components/Button.svelte';
 	import RadioButton from '$lib/components/RadioButton.svelte';
 	import SentenceQuiz from './components/SentenceQuiz.svelte';
+  import { sentencesInStore, sentenceIndexInStore } from '$lib/store/store';
 
 	$: isLoading = false;
-	$: sentences = [];
+	$: sentences = $sentencesInStore || [];
 
-	$: index = 0;
+	$: index = $sentenceIndexInStore || 0;
 	$: sentence = sentences[index];
 	$: option = 'beginner';
 	$: mode = 'write';
@@ -27,6 +28,7 @@
 		const jsonBlob = chatgptres.message.message.content;
 		const _sentences = JSON.parse(jsonBlob);
 		sentences = [...sentences, ..._sentences.sentences];
+    sentencesInStore.set(sentences);
 		isLoading = false;
 	}
 
@@ -35,6 +37,7 @@
 			return;
 		}
 		index = index + 1;
+    sentenceIndexInStore.set(index);
 	}
 
 	function previous() {
@@ -42,6 +45,7 @@
 			return;
 		}
 		index = index - 1;
+    sentenceIndexInStore.set(index);
 	}
 
 	$: if (index) {
@@ -69,11 +73,7 @@
 	$: isLastSentence = index === sentences.length - 1;
 </script>
 
-{#if isLastSentence}
-	<div class="m-auto bg-tile-300 px-8 py-8 pb-4 text-center">
-		<Button onClick={loadMoreSentences} type="button">Load More Sentences</Button>
-	</div>
-{/if}
+
 
 {#if !isLoading && sentences.length === 0}
 	<section class="mx-auto mt-12 w-full border border-tile-500 bg-tile-300 sm:w-1/2">
@@ -154,7 +154,9 @@
 			</svg>
 			<span class="sr-only">Loading...</span>
 		</div>
-		<p>Generating your sentences, hang tight.</p>
+		<p>Generating your sentences, hang tight. <br>
+      this usually takes a few seconds.
+    </p>
 	</div>
 {:else if sentences.length > 0 && index < sentences.length}
 	<section>
@@ -172,10 +174,14 @@
 					{#if index < sentences.length - 1}
 						<Button onClick={next} type="button">Next</Button>
 					{/if}
+          {#if isLastSentence && !isLoading}
+            <Button onClick={loadMoreSentences} type="button">Load More Sentences</Button>
+        {/if}
 				</div>
 			</div>
 		</div>
 	</section>
+
 	{#if mode === 'write'}
 		<SentenceBlock {sentence} />
 	{/if}
@@ -184,3 +190,4 @@
 		<SentenceQuiz {sentences} {index} />
 	{/if}
 {/if}
+

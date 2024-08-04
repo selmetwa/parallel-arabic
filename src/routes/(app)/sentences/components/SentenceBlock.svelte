@@ -6,7 +6,8 @@
 	import KeyboardDocumentation from '$lib/components/KeyboardDocumentation.svelte';
 	import Modal from '$lib/components/Modal.svelte';
 	import Button from '$lib/components/Button.svelte';
-
+  import SaveButton from '$lib/components/SaveButton.svelte';
+  
 	import { onMount } from 'svelte';
 	import cn from 'classnames';
 
@@ -35,7 +36,6 @@
 	$: isInfoModalOpen = false;
 	$: showHint = false;
 	$: showAnswer = false;
-  $: response = '';
 
   $: if (sentence.arabic) {
 		attemptTemp = [];
@@ -44,7 +44,6 @@
 		showHint = false;
 		showAnswer = false;
     isInfoModalOpen = false;
-    response = '';
   
 		if (typeof document !== 'undefined') {
 			const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
@@ -129,35 +128,9 @@
 	function closeInfoModal() {
 		isInfoModalOpen = false;
 	}
-
-  const saveWord = async () => {
-    console.log({ sentence})
-		const res = await fetch('/api/save-word', {
-			method: 'POST',
-			headers: { accept: 'application/json' },
-			body: JSON.stringify({
-				activeWordObj: {
-          arabic: sentence.arabic,
-          english: sentence.english,
-          transliterated: sentence.transliteration,
-        }
-			})
-		});
-
-		const data = await res.json();
-		response = data.message;
-		setTimeout(() => {
-			response = '';
-		}, 3000);
-	};
 </script>
 
 {#if sentence}
-  {#if response}
-    <div class="bg-tile-500 py-2 text-center font-semibold">
-      <p class="text-md text-text-300">{response}</p>
-    </div>
-    {/if}
 	{#if isCorrect}
   <div class="bg-green-100 py-2 text-center font-semibold">
     <p class="text-xl text-text-300">{sentence.arabic} is Correct</p>
@@ -166,7 +139,14 @@
 	<div class="mt-10 flex w-full flex-row gap-2 px-4 sm:w-1/2">
 		<Button onClick={() => (showHint = !showHint)} type="button">Show Hint</Button>
 		<Button onClick={() => (showAnswer = !showAnswer)} type="button">Show Answer</Button>
-		<Button onClick={saveWord} type="button">Save Sentence</Button>
+    <SaveButton
+      objectToSave={{
+        arabic: sentence.arabic,
+        english: sentence.english,
+        transliterated: sentence.transliteration,
+      }}
+      type="Sentence"
+    ></SaveButton>
 	</div>
   <div class="mx-auto w-fit text-center mt-6">
     <div class="flex flex-col items-center justify-center gap-2">

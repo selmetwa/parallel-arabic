@@ -33,7 +33,7 @@
         </li>
         <li class="flex gap-2 items-start">
           <Checkmark />
-          <span>Unlimited practice sentences for beginner and intermediate levels</span>
+          <span>Unlimited AI practice sentences for beginner and intermediate levels</span>
         </li>
         <li class="flex gap-2 items-start">
           <Checkmark />
@@ -42,6 +42,10 @@
         <li class="flex gap-2 items-start">
           <Checkmark />
           <span>Access to 4,100 vocabulary words and multiple choice quizzes</span>
+        </li>
+        <li class="flex gap-2 items-start">
+          <Checkmark />
+          <span>Access to custom built Anki decks for Egyptian Arabic</span>
         </li>
         <li class="flex gap-2 items-start">
           <Checkmark />

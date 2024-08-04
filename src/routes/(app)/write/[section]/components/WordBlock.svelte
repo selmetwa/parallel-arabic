@@ -10,6 +10,7 @@
 	import { getBrowserInfo } from '$lib/helpers/get-browser-info';
   import Modal from '$lib/components/Modal.svelte';
   import KeyboardDocumentation from '$lib/components/KeyboardDocumentation.svelte';
+  import SaveButton from '$lib/components/SaveButton.svelte';
 
 	type Word = {
 		english: string;
@@ -31,7 +32,6 @@
 	let attemptTemp: Attempt[] = [];
 	let showHint = false;
 	let showAnswer = false;
-	let response = '';
 	let correctAnswer = '';
 	let egyptianArabicWord = '';
   $: isInfoModalOpen = false;
@@ -62,7 +62,6 @@
 		isCorrect = false;
 		showHint = false;
 		showAnswer = false;
-		response = '';
 		correctAnswer = '';
     isInfoModalOpen = false;
   
@@ -167,27 +166,6 @@
 		showHint = !showHint;
 	}
 
-	const saveWord = async () => {
-		const res = await fetch('/api/save-word', {
-			method: 'POST',
-			headers: { accept: 'application/json' },
-			body: JSON.stringify({
-				activeWordObj: {
-					arabic: egyptianArabicWord,
-					english: word.english,
-					transliterated: word.egyptianArabicTransliteration
-				}
-			})
-		});
-
-		const data = await res.json();
-		response = data.message;
-
-		setTimeout(() => {
-			response = '';
-		}, 3000);
-	};
-
 	const isSafari = getBrowserInfo();
 
   function openInfoModal() {
@@ -201,13 +179,16 @@
 
 <div>
 	<div class="bg-tile-300 px-8 py-4">
-		{#if response}
-			<p class="mb-1 w-fit text-sm text-text-300">{response}</p>
-		{/if}
 		<div class="grid grid-cols-2 gap-2 sm:grid-cols-5">
 			<Button type="button" onClick={toggleAnswer}>{showAnswer ? 'Hide' : 'Show'} answer</Button>
 			<Button type="button" onClick={toggleHint}>{showHint ? 'Hide' : 'Show'} hint</Button>
-			<Button type="button" onClick={saveWord}>Save word</Button>
+      <SaveButton 
+      type="Word"
+      objectToSave={{
+        arabic: egyptianArabicWord,
+        english: word.english,
+        transliterated: word.egyptianArabicTransliteration
+      }}></SaveButton>
 			<Button type="button" onClick={switchMode}>
 				{mode === 'draw' ? 'Type' : 'Draw'}
 			</Button>

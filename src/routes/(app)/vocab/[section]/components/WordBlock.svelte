@@ -2,6 +2,7 @@
 	import RadioButton from '$lib/components/RadioButton.svelte';
 	import Button from '$lib/components/Button.svelte';
   import type { wordObjectItem, wordObjectGroup } from '$lib/types';
+  import SaveButton from '$lib/components/SaveButton.svelte';
 
 	export let next: () => void;
 
@@ -12,13 +13,11 @@
 	$: selectedObj = {} as wordObjectItem;
 	$: selected = null;
 	$: showHint = false;
-	$: response = '';
 	$: showQuestionInEnglish = true;
 
 	$: {
 		if (wordObj) {
       selectedObj = {} as wordObjectItem;
-			response = '';
 			showHint = false;
 			selected = null;
 			isCorrect = false;
@@ -61,33 +60,9 @@
   function toggleFormat() {
     showQuestionInEnglish = !showQuestionInEnglish;
   }
-
-	const saveWord = async () => {
-		const res = await fetch('/api/save-word', {
-			method: 'POST',
-			headers: { accept: 'application/json' },
-			body: JSON.stringify({
-				activeWordObj: {
-					arabic: wordObj.answer.egyptianArabic,
-					english: wordObj.answer.english,
-					transliterated: wordObj.answer.egyptianArabicTransliteration
-				}
-			})
-		});
-
-		const data = await res.json();
-		response = data.message;
-
-		setTimeout(() => {
-			response = '';
-		}, 3000);
-	};
 </script>
 
 <section class="flex flex-col gap-4 p-4 py-8">
-	{#if response}
-		<span class="text-lg text-text-300">{response}</span>
-	{/if}
 	<div class="flex flex-wrap items-center gap-2">
 		<h2 class="text-2xl font-bold text-text-100">
 			{showQuestionInEnglish ? wordObj.answer.english : wordObj.answer.egyptianArabic}
@@ -98,7 +73,11 @@
 	</div>
 	<div class="flex flex-col min-[420px]:flex-row gap-2">
 		<Button type="button" onClick={toggleHint}>{showHint ? 'Hide' : 'Show'} hint</Button>
-		<Button type="button" onClick={saveWord}>Save word</Button>
+     <SaveButton objectToSave={{
+      arabic: wordObj.answer.egyptianArabic,
+      english: wordObj.answer.english,
+      transliterated: wordObj.answer.egyptianArabicTransliteration
+    }} type="Word"></SaveButton>
 		<Button type="button" onClick={toggleFormat}>Toggle Format</Button>
 	</div> 
 	{#if isCorrect}
