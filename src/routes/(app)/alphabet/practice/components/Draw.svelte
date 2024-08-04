@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { type Letter } from '../../../../../types';
+	import { type Letter } from '$lib/types';
 	export let letter: Letter;
-	import Button from '../../../../../components/Button.svelte';
+	import Button from '$lib/components/Button.svelte';
   import Canvas from './Canvas.svelte';
 
 	let showHint = false;

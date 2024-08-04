@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { letters } from '../../../../../constants/alphabet';
+	import { letters } from '$lib/constants/alphabet';
 	import LetterBlock from './../components/LetterBlock.svelte';
-	import Button from '../../../../../components/Button.svelte';
+	import Button from '$lib/components/Button.svelte';
 
 	$: index = 0;
   const lettersCopy = [...letters];

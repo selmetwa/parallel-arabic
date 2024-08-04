@@ -1,6 +1,6 @@
 <script>
 	import WordBlock from './components/WordBlock.svelte';
-	import Button from '../../../../components/Button.svelte';
+	import Button from '$lib/components/Button.svelte';
 	export let data;
 
 	let index = 0;

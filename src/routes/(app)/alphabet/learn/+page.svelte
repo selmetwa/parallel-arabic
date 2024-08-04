@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { letters } from '../../../../constants/alphabet';
-	import Button from '../../../../components/Button.svelte';
+	import { letters } from '$lib/constants/alphabet';
+	import Button from '$lib/components/Button.svelte';
 	import cn from 'classnames';
-	import { hue, theme } from '../../../../store/store';
+	import { hue, theme } from '$lib/store/store';
   import { onMount } from 'svelte';
-  import { updateKeyboardStyle } from '../../../../helpers/update-keyboard-style';
+  import { updateKeyboardStyle } from '$lib/helpers/update-keyboard-style';
   import { goto } from '$app/navigation';
 
 	$: page = 0;

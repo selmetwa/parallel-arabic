@@ -1,7 +1,7 @@
 <script lang="ts">
-	import RadioButton from '../../../../../components/RadioButton.svelte';
-	import Button from '../../../../../components/Button.svelte';
-  import type { wordObjectItem, wordObjectGroup } from '../../../../../types';
+	import RadioButton from '$lib/components/RadioButton.svelte';
+	import Button from '$lib/components/Button.svelte';
+  import type { wordObjectItem, wordObjectGroup } from '$lib/types';
 
 	export let next: () => void;
 

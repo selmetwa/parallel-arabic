@@ -1,10 +1,10 @@
 <script lang="ts">
-	import Button from '../../../../components/Button.svelte';
+	import Button from '$lib/components/Button.svelte';
 	import Sentence from './components/Sentence.svelte';
 	import { Mode, type KeyWord, type TextObj } from './types';
 	import Header from './components/Header.svelte';
-	import Modal from '../../../../components/Modal.svelte';
-  import { getWordObjectToSave } from '../../../../helpers/get-word-object-to-save';
+	import Modal from '$lib/components/Modal.svelte';
+  import { getWordObjectToSave } from '$lib/helpers/get-word-object-to-save';
   
 	export let data: {
 		session: any;

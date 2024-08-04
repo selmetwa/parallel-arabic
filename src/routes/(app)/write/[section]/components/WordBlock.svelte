@@ -2,14 +2,14 @@
 	import { onMount, onDestroy } from 'svelte';
 	import cn from 'classnames';
 
-	import { hue, theme } from '../../../../../store/store';
-	import { updateKeyboardStyle } from '../../../../../helpers/update-keyboard-style';
-	import { type Keyboard } from '../../../../../types/index';
-	import Button from '../../../../../components/Button.svelte';
+	import { hue, theme } from '$lib/store/store';
+	import { updateKeyboardStyle } from '$lib/helpers/update-keyboard-style';
+	import { type Keyboard } from '$lib/types/index';
+	import Button from '$lib/components/Button.svelte';
 	import Canvas from '../../../../(app)/alphabet/practice/components/Canvas.svelte';
-	import { getBrowserInfo } from '../../../../../helpers/get-browser-info';
-  import Modal from '../../../../../components/Modal.svelte';
-  import KeyboardDocumentation from '../../../../../components/KeyboardDocumentation.svelte';
+	import { getBrowserInfo } from '$lib/helpers/get-browser-info';
+  import Modal from '$lib/components/Modal.svelte';
+  import KeyboardDocumentation from '$lib/components/KeyboardDocumentation.svelte';
 
 	type Word = {
 		english: string;

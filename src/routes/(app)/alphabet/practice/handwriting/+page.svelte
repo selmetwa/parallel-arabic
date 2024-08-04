@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { letters } from '../../../../../constants/alphabet';
-	import Button from '../../../../../components/Button.svelte';
+	import { letters } from '$lib/constants/alphabet';
+	import Button from '$lib/components/Button.svelte';
   import Draw from '../components/Draw.svelte';
 
 	$: index = 0;

@@ -3,7 +3,8 @@
 	export let updateMode = (event: Event) => {};
 	import { Mode } from '../types';
   export let mode: Mode = Mode.SingleText;
-  import RadioButton from '../../../../../components/RadioButton.svelte';
+  import RadioButton from '$lib/components/RadioButton.svelte';
+  
 	const modeOptions = [
 		{ value: Mode.SingleText, text: 'Single Text' },
 		{ value: Mode.BiText, text: 'Bi Text' },

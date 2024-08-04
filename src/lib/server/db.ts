@@ -28,6 +28,7 @@ type UserTable = {
 	id: string;
 	email: string;
 	email_verified: number;
+  is_subscriber: boolean
 };
 
 type SessionTable = {

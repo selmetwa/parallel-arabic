@@ -1,7 +1,7 @@
 <script lang="ts">
 	import SentenceBlock from './components/SentenceBlock.svelte';
-	import Button from '../../../components/Button.svelte';
-	import RadioButton from '../../../components/RadioButton.svelte';
+	import Button from '$lib/components/Button.svelte';
+	import RadioButton from '$lib/components/RadioButton.svelte';
 	import SentenceQuiz from './components/SentenceQuiz.svelte';
 
 	$: isLoading = false;

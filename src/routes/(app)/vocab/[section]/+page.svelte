@@ -1,7 +1,7 @@
   <script lang="ts">
-	  import Button from '../../../../components/Button.svelte';
+	  import Button from '$lib/components/Button.svelte';
     import WordBlock from './components/WordBlock.svelte';
-  	import type { wordObjectItem, wordObjectGroup } from '../../../../types';
+  	import type { wordObjectItem, wordObjectGroup } from '$lib/types';
 
   export let data: any;
 

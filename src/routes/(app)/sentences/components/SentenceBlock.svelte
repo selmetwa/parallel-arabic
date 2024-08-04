@@ -1,12 +1,11 @@
 <script lang="ts">
-	import { type Keyboard } from '../../../../types/index';
-	import { updateKeyboardStyle } from '../../../../helpers/update-keyboard-style';
-	import { hue, theme } from '../../../../store/store';
-	import { getBrowserInfo } from '../../../../helpers/get-browser-info';
-	import KeyboardDocumentation from '../../../../components/KeyboardDocumentation.svelte';
-	import Modal from '../../../../components/Modal.svelte';
-	import Button from '../../../../components/Button.svelte';
-	import { speakText } from '../../../../helpers/speak-arabic';
+	import { type Keyboard } from '$lib/types/index';
+	import { updateKeyboardStyle } from '$lib/helpers/update-keyboard-style';
+	import { hue, theme } from '$lib/store/store';
+	import { getBrowserInfo } from '$lib/helpers/get-browser-info';
+	import KeyboardDocumentation from '$lib/components/KeyboardDocumentation.svelte';
+	import Modal from '$lib/components/Modal.svelte';
+	import Button from '$lib/components/Button.svelte';
 
 	import { onMount } from 'svelte';
 	import cn from 'classnames';
