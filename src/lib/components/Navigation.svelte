@@ -5,7 +5,7 @@
   export let session
 </script>
 
-<nav class="w-full border-b border-tile-600 py-4 bg-tile-300">
+<nav class="w-full border-b border-tile-600 py-4 bg-tile-300 relative">
     <ul class="w-full flex gap-4 px-4 items-center flex-wrap">
         <li><a class="text-text-300 text-sm sm:text-base underline" href="/stories">Read</a></li>
         <li><a class="text-text-300 text-sm sm:text-base underline" href="/write">Write</a></li>
