@@ -1,7 +1,7 @@
 <script>
   import Checkmark from "$lib/components/Checkmark.svelte";
 </script>
-<section class="mt-14 px-6 sm:px-8 py-8 flex flex-col gap-6">
+<section class="mt-4 px-6 sm:px-8 py-8 flex flex-col gap-6">
   <h1 class="text-text-300 text-5xl font-bold mx-auto">Pricing</h1>
   <div class="flex flex-col sm:flex-row mx-4 lg:mx-40 gap-3">
     <div class="flex-1 border-2 border-tile-500">
