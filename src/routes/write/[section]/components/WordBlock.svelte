@@ -6,7 +6,7 @@
 	import { updateKeyboardStyle } from '$lib/helpers/update-keyboard-style';
 	import { type Keyboard } from '$lib/types/index';
 	import Button from '$lib/components/Button.svelte';
-	import Canvas from '../../../../(app)/alphabet/practice/components/Canvas.svelte';
+	import Canvas from '../../../alphabet/practice/components/Canvas.svelte';
 	import { getBrowserInfo } from '$lib/helpers/get-browser-info';
   import Modal from '$lib/components/Modal.svelte';
   import KeyboardDocumentation from '$lib/components/KeyboardDocumentation.svelte';

@@ -48,6 +48,7 @@
   "type": "module",
   "dependencies": {
     "@lucia-auth/adapter-sqlite": "^2.0.1",
+    "@stripe/stripe-js": "^4.1.0",
     "better-sqlite3": "^9.2.2",
     "classnames": "^2.5.1",
     "export-to-csv": "^1.2.4",
@@ -56,6 +57,7 @@
     "openai": "^4.53.2",
     "perfect-freehand": "^1.2.2",
     "resize-observer-polyfill": "^1.5.1",
+    "stripe": "^16.6.0",
     "uuid": "^9.0.1"
   }
 }

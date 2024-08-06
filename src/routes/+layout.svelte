@@ -1,5 +1,5 @@
 <script lang="ts">
-	import '../../app.css';
+	import '../app.css';
 	import Navigation from '$lib/components/Navigation.svelte';
 	import Drawer from '$lib/components/Drawer.svelte';
 	import { onMount } from 'svelte';
@@ -134,6 +134,6 @@
 
   <style>
     main {
-      width: min(800px, 100%);
+      width: min(1000px, 100%);
     }
   </style>

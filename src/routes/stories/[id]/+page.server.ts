@@ -1,4 +1,4 @@
-import { convertStory } from '../../../../lib/helpers/convert-to-story';
+import { convertStory } from '$lib/helpers/convert-to-story';
 
 const story = {
   title: "Omar and Sarah",

@@ -28,7 +28,9 @@ type UserTable = {
 	id: string;
 	email: string;
 	email_verified: number;
-  is_subscriber: boolean
+  is_subscriber: boolean;
+  subscriber_id: string;
+  subscription_end_date: ColumnType<bigint, number>;
 };
 
 type SessionTable = {

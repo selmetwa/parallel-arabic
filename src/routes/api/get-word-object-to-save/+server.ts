@@ -4,7 +4,7 @@ import { env } from '$env/dynamic/private';
 import OpenAI from "openai";
 
 export const POST: RequestHandler = async ({ request, locals }) => {
-  const openai = new OpenAI({ apiKey: env['open_ai_key'] });
+  const openai = new OpenAI({ apiKey: env['OPEN_API_KEY'] });
 
   const session = await locals.auth.validate();
 
