@@ -5,13 +5,13 @@ export async function up(db: Kysely<any>): Promise<void> {
   console.log('running migration up');
   await db.schema
     .alterTable('user')
-    .addColumn('is_subscriber', 'boolean', (col) => col.notNull().defaultTo(false))
+    .addColumn('subscription_end_date', 'bigint')
     .execute();
 }
 
 export async function down(db: Kysely<any>): Promise<void> {
   await db.schema
     .alterTable('user')
-    .dropColumn('is_subscriber')
+    .dropColumn('subscription_end_date')
     .execute();
 }

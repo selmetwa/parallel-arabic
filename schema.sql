@@ -2,7 +2,9 @@ CREATE TABLE if not exists user (
     id VARCHAR(15) PRIMARY KEY,
     email VARCHAR(31) NOT NULL UNIQUE,
     email_verified INTEGER NOT NULL,
-    is_subscriber BOOLEAN NOT NULL
+    is_subscriber BOOLEAN NOT NULL,
+    subscriber_id VARCHAR(255),
+    subscription_end_date BIGINT
 );
 CREATE TABLE if not exists user_key (
     id VARCHAR(255) PRIMARY KEY,
