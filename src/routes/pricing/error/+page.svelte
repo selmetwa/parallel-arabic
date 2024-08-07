@@ -1,0 +1,1 @@
+<p>Something went wrong processing your payment</p>

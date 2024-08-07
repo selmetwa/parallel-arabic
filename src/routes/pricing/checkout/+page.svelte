@@ -4,7 +4,7 @@
   import { loadStripe } from "@stripe/stripe-js";
 
   // Types and variables
-  import { PUBLIC_STRIPE_PUBLISHABLE_KEY } from "$env/static/public";
+  import { PUBLIC_TEST_STRIPE_PUBLISHABLE_KEY } from "$env/static/public";
   import { goto } from "$app/navigation";
 
   export let data;
@@ -17,7 +17,7 @@
    *
    */
   onMount(async () => {
-    const stripe = await loadStripe(PUBLIC_STRIPE_PUBLISHABLE_KEY);
+    const stripe = await loadStripe(PUBLIC_TEST_STRIPE_PUBLISHABLE_KEY);
     const clientSecret = data.clientSecret;
 
     if (stripe && clientSecret) {
@@ -32,7 +32,7 @@
     }
 
     // If everything above fails, then reroute to the error page
-    // goto("/shopping/error");
+    goto("/pricing/error");
   });
 </script>
 <div class="flex justify-center min-h-screen py-4">

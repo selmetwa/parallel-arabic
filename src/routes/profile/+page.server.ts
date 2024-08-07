@@ -11,12 +11,10 @@ export const load: PageServerLoad = async ({ locals }) => {
   }
 
   const userId = session && session.user.userId || null;
-  const savedWords = await db.selectFrom('saved_word').selectAll().where('user_id', '=', userId).execute();
+  const user = await db.selectFrom('user').selectAll().where('id', '=', userId).executeTakeFirst();
 
 	return {
-		userId: userId,
-		email:(session && session.user.email) || null,
-    savedWords
+		user
 	};
 };
 
