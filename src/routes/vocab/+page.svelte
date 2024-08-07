@@ -136,7 +136,7 @@
 <p class="mt-12 pl-8 text-xl text-text-200">
 	Practice over 4,000 words with fun multiple choice quizzes.
 </p>
-<section class="mb-12 grid grid-cols-1 gap-3 p-8 sm:grid-cols-2">
+<section class="mb-12 grid grid-cols-1 gap-3 p-8 sm:grid-cols-3">
 	{#each sections as section}
 		<a
 			class="transitional-all cursor-pointer border-2 border-tile-600 bg-tile-400 p-4 text-center font-semibold duration-300 hover:bg-tile-500"

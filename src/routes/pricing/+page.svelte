@@ -1,6 +1,7 @@
 <script>
 	import Checkmark from '$lib/components/Checkmark.svelte';
-  import { PUBLIC_PRICE_ID } from '$env/static/public'
+  import Button from '$lib/components/Button.svelte';
+  import { PUBLIC_TEST_PRICE_ID } from '$env/static/public'
   export let data;
 
   console.log({ data })
@@ -8,7 +9,7 @@
 
 <section class="mt-4 flex flex-col gap-6 px-6 py-8 sm:px-8">
 	<h1 class="mx-auto text-5xl font-bold text-text-300">Pricing</h1>
-	<div class="mx-4 flex flex-col gap-3 sm:flex-row lg:mx-40">
+	<div class="mx-4 flex flex-col gap-3 sm:flex-row lg:mx-12">
 		<div class="flex-1 border-2 border-tile-500">
 			<div class="border-b border-tile-600 bg-tile-300 pb-2 pt-3 text-center">
 				<h2 class="px-4 text-2xl font-bold">Free Tier</h2>
@@ -28,7 +29,7 @@
 		<div class="flex-1 border-2 border-tile-600 bg-tile-300 pb-3">
 			<div class="border-b border-tile-600 bg-tile-500 pb-2 pt-3 text-center">
 				<h2 class="px-4 text-2xl font-bold">Monthly Subscription</h2>
-				<h3 class="px-4 text-xl font-medium">$5/month</h3>
+				<h3 class="px-4 text-xl font-medium">$10/month</h3>
 			</div>
 
 			<ul class="mt-3 flex flex-col gap-4 px-4 text-text-300">
@@ -61,10 +62,12 @@
 					<span>Save keywords and phrases to personal wordbank</span>
 				</li>
 			</ul>
-      <form method="POST" action="?/subscribe">
+      <form method="POST" action="/?/subscribe" class="px-4 mt-4">
         <!-- Modify this value using your own Stripe price_id -->
-        <input type="hidden" name="price_id" value={PUBLIC_PRICE_ID} />
-        <button class="p-5 text-white rounded-full min-w-32 bg-info"> Subscribe</button>
+        <input type="hidden" name="price_id" value={PUBLIC_TEST_PRICE_ID} />
+        <Button type="submit">
+          Subscribe
+        </Button>
       </form>
 		</div>
 	</div>
