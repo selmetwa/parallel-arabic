@@ -70,5 +70,5 @@ export const load: PageServerLoad = async ({ url, locals }) => {
 		};
 	}
 
-	redirect(302, '/shopping/error');
+	redirect(302, '/pricing/error');
 };
