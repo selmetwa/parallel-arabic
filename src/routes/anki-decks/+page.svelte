@@ -128,12 +128,7 @@
   ]
 </script>
 
-
-
-
-
-
-<h1 class="text-4xl text-text-300 font-semibold mt-12 px-8 py-6">Anki Decks</h1>
+<h1 class="text-4xl text-text-300 font-semibold mt-4 px-8 py-6">Anki Decks</h1>
 <ul class="gap-4 list-disc list-inside grid grid-cols-2 px-8">
   {#each decks as deck}
     <li>
