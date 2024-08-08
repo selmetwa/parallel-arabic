@@ -79,20 +79,30 @@ export const actions = {
    * Retrieve the email from the form data, then attempt to cancel the
    * subscription. Redirect according to success of error.
    */
-  // cancel: async ({ request }) => {
-  //   const form = await request.formData();
-  //   const subscriptionId = form.get("subscriptionId") as string;
-  //   const subscription = await StripeService.cancel(subscriptionId);
+  cancel: async ({ request, locals }) => {
+    const form = await request.formData();
+    const subscriptionId = form.get("subscription_id") as string;
+    const subscription = await StripeService.cancel(subscriptionId);
 
-  //   if (subscription) {
-  //     const user = db.getUser();
-  //     if (user) {
-  //       user.subscriptionStatus = subscription.status;
-  //       user.subscriptionEndDate = subscription.cancel_at as number;
-  //       db.updateUser(user);
-  //       redirect(302, "/shopping/canceled");
-  //     }
-  //   }
-  //   redirect(302, "/shopping/error");
-  // },
+    if (subscription) {
+      const authSession = await locals.auth.validate();
+      const userId = authSession && authSession.user.userId;
+      const user = await db.selectFrom('user').selectAll().where('id', '=', userId).executeTakeFirst();
+
+      if (user) {
+        const result = await db
+          .updateTable('user')
+          .set({
+            is_subscriber: 0 as unknown as boolean,
+            subscriber_id: '',
+          })
+          .where('id', '=', userId)
+          .executeTakeFirst();
+  
+      console.log(result.numUpdatedRows);
+        redirect(302, "/pricing/canceled");
+      }
+    }
+    redirect(302, "/pricing/error");
+  },
 } satisfies Actions;
