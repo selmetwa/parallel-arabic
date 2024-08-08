@@ -35,8 +35,6 @@ export const load: PageServerLoad = async ({ url, locals }) => {
 	 * charge. This rollback has not been implemented.
 	 *
 	 */
-	// let user = db.getUser();
-
 	const user = await db.selectFrom('user').selectAll().where('id', '=', userId).executeTakeFirst();
 
 	// Get the current date and time
@@ -63,14 +61,7 @@ export const load: PageServerLoad = async ({ url, locals }) => {
 			.executeTakeFirst();
 
 		console.log(result.numUpdatedRows);
-
-		const user = await db
-			.selectFrom('user')
-			.selectAll()
-			.where('id', '=', userId)
-			.executeTakeFirst();
-
-		console.log({ user, result });
+		console.log({ result });
 		return {
 			session: authSession,
 			isSubscribed: true,
