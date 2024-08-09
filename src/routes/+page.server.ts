@@ -1,9 +1,7 @@
-// Modules and libraries
 import { StripeService } from "$lib/services/stripe.service";
 import { redirect, fail } from "@sveltejs/kit";
 import { auth } from '$lib/server/lucia';
-
-// Types
+import { getUserHasActiveSubscription } from "$lib/helpers/get-user-has-active-subscription";
 import type { Actions } from "./$types";
 
 import type { PageServerLoad } from "./$types";
@@ -22,11 +20,12 @@ export const load: PageServerLoad = async ({ locals }) => {
 
   const user = await db.selectFrom('user').selectAll().where('id', '=', userId).executeTakeFirst();
 
+  const isSubscribed = await getUserHasActiveSubscription(userId ?? "");
   console.log({ user });
 
   return {
     session,
-    isSubscribed: user?.is_subscriber,
+    isSubscribed: isSubscribed,
     subscriptionId: user?.subscriber_id,
     subscriptionEndDate: user?.subscription_end_date,
   };
@@ -55,12 +54,17 @@ export const actions = {
    * was successful a client secret is returned and that is passed back to the
    * user via cookies in hooks.server.ts.
    */
-  subscribe: async ({ request, cookies }) => {
+  subscribe: async ({ request, cookies, locals }) => {
+    const authSession = await locals.auth.validate();
+
+    if (!authSession) {
+      throw redirect(302, '/login');
+    }
+  
     const form = await request.formData();
     const priceId = form.get("price_id") as string;
     const session = await StripeService.subscribe(priceId);
-    console.log({ priceId, session })
-
+    console.log({ session });
     if (session?.client_secret) {
       cookies.set("client-secret", session.client_secret, {
         path: "/",

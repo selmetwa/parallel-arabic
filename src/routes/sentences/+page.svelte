@@ -4,6 +4,11 @@
 	import RadioButton from '$lib/components/RadioButton.svelte';
 	import SentenceQuiz from './components/SentenceQuiz.svelte';
   import { sentencesInStore, sentenceIndexInStore } from '$lib/store/store';
+  import { PUBLIC_TEST_PRICE_ID } from '$env/static/public'
+
+  export let data;
+
+  console.log({ data })
 
 	$: isLoading = false;
 	$: sentences = $sentencesInStore || [];
@@ -12,6 +17,7 @@
 	$: sentence = sentences[index];
 	$: option = 'beginner';
 	$: mode = 'write';
+  $: sentencesViewed = data.sentencesViewed;
 
 	async function generateSentance(option: string, copy: any) {
 		isLoading = true;
@@ -32,10 +38,21 @@
 		isLoading = false;
 	}
 
+  async function updateSentencesViewed() {
+    const res = await fetch('/api/increment-sentences', {
+      method: 'POST',
+      headers: { accept: 'application/json' },
+      body: JSON.stringify({})
+    });
+    const json = await res.json();
+    sentencesViewed = json.sentencesViewed;
+  }
 	function next() {
 		if (index === sentences.length - 1) {
 			return;
 		}
+
+    updateSentencesViewed();
 		index = index + 1;
     sentenceIndexInStore.set(index);
 	}
@@ -71,11 +88,30 @@
 	}
 
 	$: isLastSentence = index === sentences.length - 1;
+
+  $: hasReachedLimit = !data.isSubscribed && sentencesViewed >= 20;
 </script>
 
+{#if hasReachedLimit}
+<div class="mx-4 mb-6 mt-12 border border-tile-600 bg-tile-300 py-4 text-center sm:mx-36">
+  <h1 class="text-2xl font-bold text-text-300">
+    You have reached your limit of 20 sentences.
+  </h1>
+  <p class="text-xl text-text-200 mt-2">
+    To continue practicing, please subscribe.
+  </p>
+  <form method="POST" action="/?/subscribe" class="mt-4 w-fit mx-auto">
+    <!-- Modify this value using your own Stripe price_id -->
+    <input type="hidden" name="price_id" value={PUBLIC_TEST_PRICE_ID} />
 
+    <Button type="submit">
+      Subscribe
+    </Button>
+  </form>
+</div>
+{/if}
 
-{#if !isLoading && sentences.length === 0}
+{#if !isLoading && sentences.length === 0 && !hasReachedLimit}
 	<section class="mx-auto mt-12 w-full border border-tile-500 bg-tile-300 sm:w-1/2">
 		<form class="flex flex-col gap-3 p-5" on:submit={generateSentences}>
 			<p class="text-2xl text-text-300">
@@ -158,7 +194,7 @@
       this usually takes a few seconds.
     </p>
 	</div>
-{:else if sentences.length > 0 && index < sentences.length}
+{:else if sentences.length > 0 && index < sentences.length && !hasReachedLimit}
 	<section>
 		<div class="m-auto bg-tile-300 px-8 py-8 pb-4 text-center">
 			<div class="flex w-full justify-between">

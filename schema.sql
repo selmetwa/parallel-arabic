@@ -5,6 +5,7 @@ CREATE TABLE if not exists user (
     is_subscriber BOOLEAN NOT NULL,
     subscriber_id VARCHAR(255),
     subscription_end_date BIGINT
+    sentences_viewed INTEGER
 );
 CREATE TABLE if not exists user_key (
     id VARCHAR(255) PRIMARY KEY,

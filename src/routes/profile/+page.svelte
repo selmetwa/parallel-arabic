@@ -12,8 +12,10 @@
 
 <section class="">
   <header class="flex bg-tile-400 flex-row py-6 px-12 gap-2 items-center justify-between">
-    <h1 class="text-2xl text-text-300 font-semibold">{data.user?.email}</h1>
-    <a href="/profile/saved-words" class="text-lg text-text-300 underline">View Wordbank</a>
+    <div class="flex flex-row gap-2 items-center">
+      <h1 class="text-2xl text-text-300 font-semibold">{data.user?.email}</h1>
+      <a href="/profile/saved-words" class="text-lg text-text-300 underline">View Wordbank</a>
+    </div>
     <div class="flex flex-row gap-2">
       <form method="post" action="?/logout" use:enhance class="w-fit">
         <Button type='submit'>
