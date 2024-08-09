@@ -5,4 +5,4 @@
 	<script src="https://js.stripe.com/v3/"></script>
 </svelte:head>
 
-<div id="embedded-checkout"></div>
+<!-- <div id="embedded-checkout"></div> -->

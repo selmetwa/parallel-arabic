@@ -18,11 +18,27 @@
 			<ul class="mt-3 flex flex-col gap-4 px-4 text-text-300">
 				<li class="flex items-start items-center gap-2">
 					<Checkmark />
-					<span>Access to one story</span>
+					<span>Access to one conversation with native audio</span>
+				</li>
+        <li class="flex items-start gap-2">
+					<Checkmark />
+					<span>20 AI practice sentences for beginner and intermediate levels</span>
+				</li>
+        <li class="flex items-start gap-2">
+					<Checkmark />
+					<span>Access to 156 vocabulary words for writing and handwriting practice</span>
+				</li>
+				<li class="flex items-start gap-2">
+					<Checkmark />
+					<span>Access to 156 vocabulary words and multiple choice quizzes</span>
 				</li>
 				<li class="flex items-start gap-2">
 					<Checkmark />
 					<span>Access to Alphabet learning</span>
+				</li>
+        <li class="flex items-start gap-2">
+					<Checkmark />
+					<span>Save keywords and phrases to personal wordbank</span>
 				</li>
 			</ul>
 		</div>
@@ -33,9 +49,9 @@
 			</div>
 
 			<ul class="mt-3 flex flex-col gap-4 px-4 text-text-300">
-				<li class="flex items-start items-center gap-2">
+				<li class="flex items-start gap-2">
 					<Checkmark />
-					<span>Access to all stories and conversations</span>
+					<span>Access to all stories and conversations with native audio</span>
 				</li>
 				<li class="flex items-start gap-2">
 					<Checkmark />

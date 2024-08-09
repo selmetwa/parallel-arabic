@@ -25,6 +25,7 @@
         clientSecret,
       });
 
+      console.log(checkout);
       if (checkout) {
         checkout.mount("#checkout");
         return;
@@ -36,7 +37,7 @@
   });
 </script>
 <div class="flex justify-center min-h-screen py-4">
-  <div class="border border-tile-500 w-full sm:w-3/4 h-fit">
+  <div class="border border-tile-500 w-2/3 bg-tile-300">
     <div id="checkout"></div>
   </div>
 </div>

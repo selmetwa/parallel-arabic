@@ -65,21 +65,8 @@
             Close
           </Button>
         </div>
-
       </header>
-		<div class="content input-wrapper flex flex-col pl-3 pr-8 mt-8">
-      <label for="hue" class="text-text-300 text-lg font-medium">Hue</label>
-			<input
-				on:input={onHue}
-				type="range"
-				value="200"
-				min="0"
-				max="260"
-				class="brand-hue-input"
-				aria-label="hue-slider"
-				tabindex="0"
-			/>
-		</div>
+
 		<form on:input={onTheme} class="flex flex-col gap-2 mt-8 px-3">
       <RadioButton 
         selectableFor="light"

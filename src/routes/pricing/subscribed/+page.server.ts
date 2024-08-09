@@ -60,8 +60,6 @@ export const load: PageServerLoad = async ({ url, locals }) => {
 			.where('id', '=', userId)
 			.executeTakeFirst();
 
-		console.log(result.numUpdatedRows);
-		console.log({ result });
 		return {
 			session: authSession,
 			isSubscribed: true,

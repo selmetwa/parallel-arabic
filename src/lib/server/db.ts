@@ -31,6 +31,7 @@ type UserTable = {
   is_subscriber: boolean;
   subscriber_id: string;
   subscription_end_date: ColumnType<bigint, number>;
+  sentences_viewed: number;
 };
 
 type SessionTable = {
