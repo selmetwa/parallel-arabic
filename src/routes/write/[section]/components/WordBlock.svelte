@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount, onDestroy } from 'svelte';
+	import { onMount } from 'svelte';
 	import cn from 'classnames';
 
 	import { hue, theme } from '$lib/store/store';
@@ -178,7 +178,7 @@
 </script>
 
 <div>
-	<div class="bg-tile-300 px-8 py-4">
+	<div class="pb-4 pt-12">
 		<div class="grid grid-cols-2 gap-2 sm:grid-cols-5">
 			<Button type="button" onClick={toggleAnswer}>{showAnswer ? 'Hide' : 'Show'} answer</Button>
 			<Button type="button" onClick={toggleHint}>{showHint ? 'Hide' : 'Show'} hint</Button>
@@ -201,7 +201,7 @@
 			<span class="text-lg font-semibold text-text-300">{correctAnswer} is correct</span>
 		</div>
 	{/if}
-	<div class="mt-8 flex flex-col text-wrap">
+	<div class="flex flex-col text-wrap mt-4">
 		<div class="mx-auto w-fit text-center">
 			<div class="flex flex-row items-center justify-center gap-2">
 				<h1 class="w-fit text-[50px] font-bold text-text-300">{word.english}</h1>
@@ -241,13 +241,13 @@
       <Modal isOpen={isInfoModalOpen} handleCloseModal={closeInfoModal} height="70%" width="80%">
         <KeyboardDocumentation></KeyboardDocumentation>
       </Modal>
-			<div class={cn("block mt-4 px-2", { '!hidden': mode === 'draw'})}>
+			<div class={cn("block", { '!hidden': mode === 'draw'})}>
 				<arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
         <button class="mt-3 text-text-300 underline" on:click={openInfoModal}>How does this keyboard work?</button>
 			</div>
 	</div>
 </div>
 
-	<div class={cn("hidden mt-4 px-6", { '!block': mode === 'draw'})}>
+	<div class={cn("hidden", { '!block': mode === 'draw'})}>
 		<Canvas letter={word} size={10} />
 	</div>

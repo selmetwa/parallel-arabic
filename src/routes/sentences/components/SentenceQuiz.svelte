@@ -88,6 +88,7 @@
 			isIncorrect = false;	}
 </script>
 
+<section class="px-4 sm:px-16">
 {#if sentenceObj}
 	{#if isCorrect}
 		<div
@@ -107,7 +108,7 @@
 			</span>
 		</div>
 	{/if}
-	<div class="mt-10 flex w-full flex-col sm:flex-row gap-2 px-4 sm:w-1/2">
+	<div class="mt-10 flex w-full flex-col sm:flex-row gap-2 sm:w-fit">
 		<Button onClick={() => (showHint = !showHint)} type="button">Show Hint</Button>
 		<Button onClick={() => (showAnswer = !showAnswer)} type="button">Show Answer</Button>
     <SaveButton type="sentence" objectToSave={{
@@ -117,8 +118,8 @@
 				}}></SaveButton>
 	</div>
 
-  <section class="px-8">
-	<div class="mx-4 mt-6">
+  <section class="">
+	<div class="mt-6">
 		<div class="flex flex-col items-center justify-center gap-2">
 			<h1 class="w-fit text-[40px] font-bold text-text-300">{sentenceObj.answer.english}</h1>
 			{#if showHint}
@@ -161,3 +162,4 @@
 	</fieldset>
 </section>
 {/if}
+</section>

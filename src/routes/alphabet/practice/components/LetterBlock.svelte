@@ -109,7 +109,6 @@
     {/if}
 	</div>
 </div>
-<div class="mt-4 w-1/4"></div>
 <div class="mt-8">
 	{#if isCorrect}
 		<p class="text-text-200">Correct!</p>
@@ -129,8 +128,8 @@
   <Modal isOpen={isInfoModalOpen} handleCloseModal={closeInfoModal} height="70%" width="80%">
     <KeyboardDocumentation></KeyboardDocumentation>
   </Modal>
-	<div class="my-3 sm:mt-8">
+	<div class="mt-2">
 		<arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
 	</div>
-  <button class="text-text-300 underline" on:click={openInfoModal}>How does this keyboard work?</button>
+  <button class="text-text-300 underline mt-2" on:click={openInfoModal}>How does this keyboard work?</button>
 </div>

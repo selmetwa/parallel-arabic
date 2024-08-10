@@ -85,7 +85,6 @@
 <style>
   .wrapper {
     user-select: none;
-    margin-top: 8px;
   }
 
 svg {

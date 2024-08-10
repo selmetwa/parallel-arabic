@@ -155,7 +155,6 @@
   ]
 
   export let data;
-  console.log({ data })
 
   $: isModalOpen = false;
 
@@ -169,10 +168,12 @@ function handleCloseModal() {
 </script>
 <PaywallModal isOpen={isModalOpen} {handleCloseModal}></PaywallModal>
 <h1 class="text-4xl text-text-300 font-semibold mt-4 px-8 pt-6">Anki Decks</h1>
+<p class=" pl-8 text-text-300 text-lg">Click on the links to download</p>
+
 {#if !data.isSubscribed}
-  <p class=" pl-8 text-text-300 text-lg pb-8">You are not currently subscribed and will not have access to all the vocabulary</p>
+  <p class=" pl-8 text-text-300 text-lg">You are not currently subscribed and will not have access to all the vocabulary</p>
 {/if}
-<ul class="gap-4 list-disc list-inside sm:grid sm:grid-cols-2 px-8">
+<ul class="gap-4 list-disc list-inside sm:grid sm:grid-cols-2 px-8 mt-4">
   {#each decks as deck}
   {#if deck.isPaywalled && !data.isSubscribed}
     <li>
@@ -180,7 +181,7 @@ function handleCloseModal() {
       on:click={openPaywallModal}
       class="text-text-300 text-lg underline hover:text-text-500 transition-colors duration-300"
       >
-       🔒 {deck.name} Deck ({deck.count} Words)
+       🔒 {deck.name} ({deck.count} Words)
       </button>
     </li>
   {:else}
@@ -190,7 +191,7 @@ function handleCloseModal() {
       href={deck.path} 
       download={deck.path}
       >
-      {deck.name} Deck ({deck.count} Words)
+      {deck.name} ({deck.count} Words)
     </a>
   </li>
   {/if}

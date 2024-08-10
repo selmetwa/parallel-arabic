@@ -62,9 +62,9 @@
   }
 </script>
 
-<section class="flex flex-col gap-4 p-4 py-8">
+<section class="flex flex-col gap-4 py-8">
 	<div class="flex flex-wrap items-center gap-2">
-		<h2 class="text-2xl font-bold text-text-100">
+		<h2 class="text-3xl font-bold text-text-100">
 			{showQuestionInEnglish ? wordObj.answer.english : wordObj.answer.egyptianArabic}
 		</h2>
 		{#if showHint}
