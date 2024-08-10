@@ -28,9 +28,8 @@
   }
 </script>
 
-<section>
-	<div class="m-auto text-center pt-8 px-8 bg-tile-300">
-		<div class="flex w-full justify-between">
+<header class="px-4 sm:px-16 bg-tile-400 py-8 text-center border-b border-tile-600">
+		<div class="flex w-full justify-between items-center">
 			<div class="w-max">
 				{#if index > 0}
 					<Button onClick={previous} type="button">Previous</Button>
@@ -45,6 +44,8 @@
 				{/if}
 			</div>
 		</div>
-	</div>
+</header>
+
+<section class="px-4 sm:px-16">
   <WordBlock {word} {mode} switchMode={handleSwitchMode} />
 </section>

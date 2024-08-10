@@ -3,12 +3,13 @@
 	import Button from '$lib/components/Button.svelte';
 	import RadioButton from '$lib/components/RadioButton.svelte';
 	import SentenceQuiz from './components/SentenceQuiz.svelte';
-  import { sentencesInStore, sentenceIndexInStore } from '$lib/store/store';
-  import { PUBLIC_TEST_PRICE_ID } from '$env/static/public'
+	import { sentencesInStore, sentenceIndexInStore } from '$lib/store/store';
+	import { PUBLIC_TEST_PRICE_ID } from '$env/static/public';
+  import { goto } from '$app/navigation';
 
-  export let data;
+	export let data;
 
-  console.log({ data })
+	console.log({ data });
 
 	$: isLoading = false;
 	$: sentences = $sentencesInStore || [];
@@ -17,7 +18,7 @@
 	$: sentence = sentences[index];
 	$: option = 'beginner';
 	$: mode = 'write';
-  $: sentencesViewed = data.sentencesViewed;
+	$: sentencesViewed = data.sentencesViewed;
 
 	async function generateSentance(option: string, copy: any) {
 		isLoading = true;
@@ -34,27 +35,27 @@
 		const jsonBlob = chatgptres.message.message.content;
 		const _sentences = JSON.parse(jsonBlob);
 		sentences = [...sentences, ..._sentences.sentences];
-    sentencesInStore.set(sentences);
+		sentencesInStore.set(sentences);
 		isLoading = false;
 	}
 
-  async function updateSentencesViewed() {
-    const res = await fetch('/api/increment-sentences', {
-      method: 'POST',
-      headers: { accept: 'application/json' },
-      body: JSON.stringify({})
-    });
-    const json = await res.json();
-    sentencesViewed = json.sentencesViewed;
-  }
+	async function updateSentencesViewed() {
+		const res = await fetch('/api/increment-sentences', {
+			method: 'POST',
+			headers: { accept: 'application/json' },
+			body: JSON.stringify({})
+		});
+		const json = await res.json();
+		sentencesViewed = json.sentencesViewed;
+	}
 	function next() {
 		if (index === sentences.length - 1) {
 			return;
 		}
 
-    updateSentencesViewed();
+		updateSentencesViewed();
 		index = index + 1;
-    sentenceIndexInStore.set(index);
+		sentenceIndexInStore.set(index);
 	}
 
 	function previous() {
@@ -62,7 +63,7 @@
 			return;
 		}
 		index = index - 1;
-    sentenceIndexInStore.set(index);
+		sentenceIndexInStore.set(index);
 	}
 
 	$: if (index) {
@@ -79,7 +80,7 @@
 
 	function generateSentences(event: any) {
 		event.preventDefault();
-    const copy = [...sentences];
+		const copy = [...sentences];
 		generateSentance(option, copy);
 	}
 
@@ -89,32 +90,36 @@
 
 	$: isLastSentence = index === sentences.length - 1;
 
-  $: hasReachedLimit = !data.isSubscribed && sentencesViewed >= 20;
+	$: hasReachedLimit = !data.isSubscribed && sentencesViewed >= 20;
 </script>
-
-{#if hasReachedLimit}
+{#if !data.session}
 <div class="mx-4 mb-6 mt-12 border border-tile-600 bg-tile-300 py-4 text-center sm:mx-36">
-  <h1 class="text-2xl font-bold text-text-300">
-    You have reached your limit of 20 sentences.
-  </h1>
-  <p class="text-xl text-text-200 mt-2">
-    To continue practicing, please subscribe.
-  </p>
-  <form method="POST" action="/?/subscribe" class="mt-4 w-fit mx-auto">
-    <!-- Modify this value using your own Stripe price_id -->
-    <input type="hidden" name="price_id" value={PUBLIC_TEST_PRICE_ID} />
-
-    <Button type="submit">
-      Subscribe
+  <h1 class="text-2xl font-bold text-text-300">You must have an account to access this content.</h1>
+  <div class="mx-auto mt-4 w-fit">
+    <Button type="button" onClick={() => goto('/signup')}>
+      Create Account
     </Button>
-  </form>
+  </div>
 </div>
 {/if}
 
-{#if !isLoading && sentences.length === 0 && !hasReachedLimit}
+{#if hasReachedLimit && data.session}
+	<div class="mx-4 mb-6 mt-12 border border-tile-600 bg-tile-300 py-4 text-center sm:mx-36">
+		<h1 class="text-2xl font-bold text-text-300">You have reached your limit of 20 sentences.</h1>
+		<p class="mt-2 text-xl text-text-200">To continue practicing, please subscribe.</p>
+		<form method="POST" action="/?/subscribe" class="mx-auto mt-4 w-fit">
+			<!-- Modify this value using your own Stripe price_id -->
+			<input type="hidden" name="price_id" value={PUBLIC_TEST_PRICE_ID} />
+
+			<Button type="submit">Subscribe</Button>
+		</form>
+	</div>
+{/if}
+
+{#if !isLoading && sentences.length === 0 && !hasReachedLimit && data.session}
 	<section class="mx-auto mt-12 w-full border border-tile-500 bg-tile-300 sm:w-1/2">
 		<form class="flex flex-col gap-3 p-5" on:submit={generateSentences}>
-			<p class="text-2xl text-text-300">
+			<p class="text-3xl text-text-300 font-bold">
 				Practice your egyptian arabic skills with generated sentences.
 			</p>
 			<p class="text-md text-text-300">Select difficulty.</p>
@@ -190,40 +195,40 @@
 			</svg>
 			<span class="sr-only">Loading...</span>
 		</div>
-		<p>Generating your sentences, hang tight. <br>
-      this usually takes a few seconds.
-    </p>
+		<p class="text-text-300 text-2xl">
+			Generating your sentences, hang tight. <br />
+			this usually takes a few seconds.
+		</p>
 	</div>
-{:else if sentences.length > 0 && index < sentences.length && !hasReachedLimit}
-	<section>
-		<div class="m-auto bg-tile-300 px-8 py-8 pb-4 text-center">
-			<div class="flex w-full justify-between">
-				<div class="w-max">
-					{#if index > 0}
-						<Button onClick={previous} type="button">Previous</Button>
-					{/if}
-				</div>
-				<div>
-					<h1 class="text-lg font-bold text-text-300">{index + 1} / {sentences.length}</h1>
-				</div>
-				<div class="w-max">
-					{#if index < sentences.length - 1}
-						<Button onClick={next} type="button">Next</Button>
-					{/if}
-          {#if isLastSentence && !isLoading}
-            <Button onClick={loadMoreSentences} type="button">Load More Sentences</Button>
-        {/if}
-				</div>
+{:else if sentences.length > 0 && index < sentences.length && !hasReachedLimit && data.session}
+	<header class="m-auto border-b border-tile-600 bg-tile-400 px-4 py-8 pb-4 text-center sm:px-16">
+		<div class="flex w-full items-center justify-between">
+			<div class="w-max">
+				{#if index > 0}
+					<Button onClick={previous} type="button">Previous</Button>
+				{/if}
+			</div>
+			<div>
+				<h1 class="text-lg font-bold text-text-300">{index + 1} / {sentences.length}</h1>
+			</div>
+			<div class="w-max">
+				{#if index < sentences.length - 1}
+					<Button onClick={next} type="button">Next</Button>
+				{/if}
+				{#if isLastSentence && !isLoading}
+					<Button onClick={loadMoreSentences} type="button">Load More Sentences</Button>
+				{/if}
 			</div>
 		</div>
-	</section>
+	</header>
 
 	{#if mode === 'write'}
+  <section class="px-4 pb-4 sm:px-16">
 		<SentenceBlock {sentence} />
+  </section>
 	{/if}
 
 	{#if mode === 'quiz'}
 		<SentenceQuiz {sentences} {index} />
 	{/if}
 {/if}
-

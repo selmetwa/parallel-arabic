@@ -106,7 +106,7 @@
 		</aside>
 		<main class="relative !min-h-full shrink-0 border-x border-tile-600 bg-tile-200 pb-24 h-fit">
 			<Navigation {handleOpenDrawer} session={data.session} />
-			<slot />
+        <slot />
       <Footer />
     </main>
 		<aside class="flex flex-1 justify-center overflow-hidden py-12">
