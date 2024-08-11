@@ -49,7 +49,7 @@
 			isIncorrect = false;
 
 			setTimeout(() => {
-				next();
+				// next();
 			}, 1000);
 		} else {
 			isIncorrect = true;

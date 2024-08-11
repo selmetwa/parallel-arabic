@@ -31,5 +31,4 @@
       <p class="text-text-300 text-lg font-medium">Practice with custom built Anki decks for egyptian arabic.</p>
     </a>
   </div>
-  
 </section>

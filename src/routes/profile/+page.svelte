@@ -32,7 +32,7 @@
       {/if}
     </div>
   </header>
-  <div class="mx-auto mb-6 mt-12 border w-fit p-6 border-tile-600 bg-tile-400 text-center">
+  <div class="mx-auto mb-6 mt-12 border w-fit p-6 border-tile-600 bg-tile-400 text-left">
     {#if isSubscriber}
       <h1 class="text-2xl font-bold text-text-300">You are subscribed</h1>
       <p class="mt-2 text-lg text-text-300">
@@ -46,7 +46,7 @@
       <p class="mt-2 text-lg text-text-300">
         Subscribe for $10/month to get access to all the features
       </p>
-			<ul class="mt-3 flex flex-col gap-4 px-4 text-text-300">
+			<ul class="mt-3 flex flex-col gap-4 text-text-300">
 				<li class="flex items-start items-center gap-2">
 					<Checkmark />
 					<span>Access to all stories and conversations</span>
@@ -76,7 +76,7 @@
 					<span>Save keywords and phrases to personal wordbank</span>
 				</li>
 			</ul>
-      <form method="POST" action="/?/subscribe" class="px-4 mt-4">
+      <form method="POST" action="/?/subscribe" class="mt-6">
         <!-- Modify this value using your own Stripe price_id -->
         <input type="hidden" name="price_id" value={PUBLIC_TEST_PRICE_ID} />
           <Button type="submit">

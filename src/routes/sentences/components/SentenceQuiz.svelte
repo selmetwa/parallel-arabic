@@ -92,7 +92,7 @@
 {#if sentenceObj}
 	{#if isCorrect}
 		<div
-			class="flex w-full flex-row items-center justify-center gap-2 bg-green-100 py-2 transition-all duration-300"
+			class="flex w-full flex-row items-center mt-5 justify-center gap-2 bg-green-100 py-2 transition-all duration-300"
 		>
 			<span class="text-lg font-semibold text-text-300">
 				{sentenceObj.answer.arabic} is correct

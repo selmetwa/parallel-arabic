@@ -8,7 +8,7 @@
 </script>
 
 <Modal isOpen={isOpen} handleCloseModal={handleCloseModal}>
-  <div class="p-4 text-text-300">
+  <div class="p-6 text-text-300">
     <h2 class="text-2xl font-bold">Subscriber Only Content</h2>
     <ul class="mt-3 flex flex-col gap-4 text-text-300">
       <li class="flex items-start gap-2">
