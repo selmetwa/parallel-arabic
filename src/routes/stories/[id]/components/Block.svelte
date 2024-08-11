@@ -36,7 +36,6 @@
   }
 
 	async function assignActiveWord(event: Event) {
-
     setActiveWord({
 		 	english: '',
 		 	arabic: '',

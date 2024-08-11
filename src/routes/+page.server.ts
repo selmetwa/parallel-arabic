@@ -56,6 +56,12 @@ export const actions = {
    */
   subscribe: async ({ request, cookies, locals }) => {
     const authSession = await locals.auth.validate();
+    const userId = authSession && authSession.user.userId;
+    const isSubscribed = await getUserHasActiveSubscription(userId ?? "");
+
+    if (isSubscribed) {
+      throw redirect(302, '/profile');
+    }
 
     if (!authSession) {
       throw redirect(302, '/login');
@@ -64,7 +70,7 @@ export const actions = {
     const form = await request.formData();
     const priceId = form.get("price_id") as string;
     const session = await StripeService.subscribe(priceId);
-    console.log({ session });
+  
     if (session?.client_secret) {
       cookies.set("client-secret", session.client_secret, {
         path: "/",
