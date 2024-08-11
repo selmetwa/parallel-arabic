@@ -10,10 +10,8 @@
 	import { Mode, type KeyWord } from './types';
 	export let data;
 
-	let mode = Mode.SentanceView;
+	let mode = Mode.SingleText;
 	const sentences = data.sentences;
-
-
 
 	let timer: any = null;
 	$: index = 0;
@@ -177,7 +175,7 @@
 		<Sentence sentence={sentences[index].english} {setActiveWord} type="english" />
 		<Sentence sentence={sentences[index].arabic} {setActiveWord} type="arabic" />
 		<div
-			class="flex flex-col items-center justify-center border-b border-tile-600 px-5 py-12 text-text-300"
+			class="flex flex-col items-center justify-center border-b border-tile-600 px-5 py-10 text-text-300"
 		>
 			{#if activeWordObj.description || activeWordObj.isLoading}
 				<div class="flex flex-col items-center p-4">

@@ -43,7 +43,7 @@
 	}
 </script>
 
-<div dir={isArabic ? 'rtl' : 'ltr'} class="border-b border-tile-600 px-5 py-12">
+<div dir={isArabic ? 'rtl' : 'ltr'} class="border-b border-tile-600 px-5 py-10 flex flex-col justify-center">
 	<p class="text-lg font-semibold text-text-200">{sentence.speaker}</p>
 	<div class="mt-1 flex flex-wrap gap-2 text-text-300">
 		{#if isArabic}

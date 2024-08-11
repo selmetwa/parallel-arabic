@@ -9,6 +9,9 @@
 
 <section class="mt-4 flex flex-col gap-6 px-6 py-8 sm:px-8">
 	<h1 class="mx-auto text-5xl font-bold text-text-300">Pricing</h1>
+  <p class="text-xl text-text-200 mx-auto">
+    Take your Egyptian Arabic to the next level for the price of two cups of coffee a month.
+  </p>
 	<div class="mx-4 flex flex-col gap-3 sm:flex-row lg:mx-12">
 		<div class="flex-1 border-2 border-tile-500">
 			<div class="border-b border-tile-600 bg-tile-300 pb-2 pt-3 text-center">
@@ -22,7 +25,7 @@
 				</li>
         <li class="flex items-start gap-2">
 					<Checkmark />
-					<span>20 AI practice sentences for beginner and intermediate levels</span>
+					<span>20 AI practice sentences for beginner and intermediate levels <span class="text-text-200 text-md">*requires account</span></span>
 				</li>
         <li class="flex items-start gap-2">
 					<Checkmark />
