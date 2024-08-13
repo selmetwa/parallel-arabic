@@ -9,8 +9,6 @@
 
 	export let data;
 
-	console.log({ data });
-
 	$: isLoading = false;
 	$: sentences = $sentencesInStore || [];
 

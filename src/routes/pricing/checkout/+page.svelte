@@ -25,7 +25,6 @@
         clientSecret,
       });
 
-      console.log(checkout);
       if (checkout) {
         checkout.mount("#checkout");
         return;

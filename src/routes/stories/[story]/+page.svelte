@@ -142,26 +142,30 @@
 </script>
 
 <WordModal {activeWordObj} {isModalOpen} {closeModal}></WordModal>
-<header class="flex flex-row items-center justify-between border-b border-tile-600 px-8 py-8">
-	<div>Audio goes here</div>
-	<fieldset>
-		<legend class="sr-only">Select Mode</legend>
-		<ul class="flex flex-row gap-1">
-			{#each modeOptions as option}
-				<li>
-					<RadioButton
-						wrapperClass="!p-2 h-min"
-						className="text-sm !p-1 h-min font-semibold"
-						selectableFor={option.value}
-						value={option.value}
-						text={option.text}
-						isSelected={option.value === mode}
-						onClick={updateMode}
-					/>
-				</li>
-			{/each}
-		</ul>
-	</fieldset>
+<header class="border-b border-tile-600 text-center px-4 sm:px-8 pb-8">
+  <h1 class="text-4xl text-text-200 font-semibold py-8">{data.title.arabic} / {data.title.english}</h1>
+  <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between ">
+    <div>Audio goes here</div>
+    <fieldset>
+      <legend class="sr-only">Select Mode</legend>
+      <ul class="flex flex-row gap-1">
+        {#each modeOptions as option}
+          <li>
+            <RadioButton
+              wrapperClass="!p-2 h-min"
+              className="text-sm !p-1 h-min font-semibold"
+              selectableFor={option.value}
+              value={option.value}
+              text={option.text}
+              isSelected={option.value === mode}
+              onClick={updateMode}
+            />
+          </li>
+        {/each}
+      </ul>
+    </fieldset>
+  </div>
+
 </header>
 
 {#if error}
@@ -171,9 +175,9 @@
 {/if}
 
 {#if mode === Mode.SentanceView}
-	<section class="grid grid-cols-2 grid-rows-2 divide-x divide-tile-600 bg-tile-400">
-		<Sentence sentence={sentences[index].english} {setActiveWord} type="english" />
-		<Sentence sentence={sentences[index].arabic} {setActiveWord} type="arabic" />
+	<section class="grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-2 divide-x divide-tile-600 bg-tile-300">
+		  <Sentence sentence={sentences[index].english} {setActiveWord} type="english" />
+      <Sentence sentence={sentences[index].arabic} {setActiveWord} type="arabic" />
 		<div
 			class="flex flex-col items-center justify-center border-b border-tile-600 px-5 py-10 text-text-300"
 		>
@@ -244,7 +248,7 @@
 				<p class="text-lg">Click on a word to get a full definition.</p>
 			{/if}
 		</div>
-		<Sentence sentence={sentences[index].transliteration} {setActiveWord} type="transliterated" />
+      <Sentence sentence={sentences[index].transliteration} {setActiveWord} type="transliterated" />
 	</section>
 	<div class="flex flex-col items-center gap-2">
 		<div class="mt-4 flex w-fit flex-row items-center gap-2">
@@ -263,9 +267,9 @@
 	{#each sentences as sentence}
 		<section
 			class={cn(
-				'grid divide-tile-600 bg-tile-400',
+				'sm:grid divide-tile-600 bg-tile-300',
 				{ 'grid-cols-1 grid-rows-1': mode === Mode.SingleText },
-				{ 'grid-cols-2 grid-rows-1 divide-x': mode === Mode.BiText }
+				{ 'flex flex-col-reverse sm:grid-cols-2 sm:grid-rows-1 divide-x': mode === Mode.BiText }
 			)}
 		>
 			{#if mode === Mode.BiText}
