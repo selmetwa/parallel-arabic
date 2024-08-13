@@ -2,6 +2,7 @@ import { auth } from '$lib/server/lucia';
 import { fail, redirect } from '@sveltejs/kit';
 import type { PageServerLoad, Actions } from './$types';
 import { db } from '$lib/server/db';
+import { getUserHasActiveSubscription } from '$lib/helpers/get-user-has-active-subscription.js'
 
 export const load: PageServerLoad = async ({ locals }) => {
 	const session = await locals.auth.validate();
@@ -14,7 +15,8 @@ export const load: PageServerLoad = async ({ locals }) => {
   const user = await db.selectFrom('user').selectAll().where('id', '=', userId).executeTakeFirst();
 
 	return {
-		user
+		user,
+    hasActiveSubscription: await getUserHasActiveSubscription(userId ?? "")
 	};
 };
 
