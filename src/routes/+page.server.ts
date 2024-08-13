@@ -58,7 +58,9 @@ export const actions = {
     const userId = authSession && authSession.user.userId;
     const isSubscribed = await getUserHasActiveSubscription(userId ?? "");
 
-    if (isSubscribed) {
+  const user = await db.selectFrom('user').selectAll().where('id', '=', userId).executeTakeFirst();
+
+    if (isSubscribed && user?.subscriber_id) {
       throw redirect(302, '/profile');
     }
 

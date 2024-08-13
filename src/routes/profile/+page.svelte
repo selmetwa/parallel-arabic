@@ -3,11 +3,11 @@
   import Button from '$lib/components/Button.svelte';
   import { PUBLIC_TEST_PRICE_ID } from '$env/static/public'
 	import Checkmark from '$lib/components/Checkmark.svelte';
-
   export let data;
 
   const subscriberId = data.user?.subscriber_id;
-  const isSubscriber = data.user?.is_subscriber;
+
+  console.log({ data })
 </script>
 
 <section class="">
@@ -22,7 +22,7 @@
           Sign out
         </Button>
       </form>
-      {#if isSubscriber}
+      {#if data.hasActiveSubscription  && subscriberId}
         <form method="post" action="/?/cancel">
           <input type="hidden" name="subscription_id" value={subscriberId} />
           <Button type="submit">
@@ -33,7 +33,7 @@
     </div>
   </header>
   <div class="mx-auto mb-6 mt-12 border w-fit p-6 border-tile-600 bg-tile-400 text-left">
-    {#if isSubscriber}
+    {#if data.hasActiveSubscription && subscriberId}
       <h1 class="text-2xl font-bold text-text-300">You are subscribed</h1>
       <p class="mt-2 text-lg text-text-300">
         Thank you for supporting Parallel Arabic!
@@ -41,6 +41,19 @@
       <p class="mt-2 text-lg text-text-300">
         Your subscription will renew on {new Date(data.user?.subscription_end_date * 1000).toLocaleString()}
       </p>
+
+    {:else if data.hasActiveSubscription && !subscriberId}
+    <h1 class="text-2xl font-bold text-text-300">You have canceled your subscription</h1>
+    <p class="mt-2 text-lg text-text-300">
+      You will have access to all features until {new Date(data.user?.subscription_end_date * 1000).toLocaleString()}
+    </p>
+    <form method="POST" action="/?/subscribe" class="mt-6">
+      <!-- Modify this value using your own Stripe price_id -->
+      <input type="hidden" name="price_id" value={PUBLIC_TEST_PRICE_ID} />
+        <Button type="submit">
+          Re-Subscribe
+        </Button>
+    </form>
     {:else}
       <h1 class="text-2xl font-bold text-text-300">You are currently not subscribed</h1>
       <p class="mt-2 text-lg text-text-300">
