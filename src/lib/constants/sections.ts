@@ -1,5 +1,11 @@
 export const sections = [
   {
+    name: 'Verbs',
+    path: 'verbs',
+    count: 97,
+    isPaywalled: false
+  },
+  {
     name: 'Animals',
     path: 'animals',
     count: 156,

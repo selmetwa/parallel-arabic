@@ -21,7 +21,6 @@ export const load: PageServerLoad = async ({ locals }) => {
   const user = await db.selectFrom('user').selectAll().where('id', '=', userId).executeTakeFirst();
 
   const isSubscribed = await getUserHasActiveSubscription(userId ?? "");
-  console.log({ user });
 
   return {
     session,

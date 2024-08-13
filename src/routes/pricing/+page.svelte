@@ -2,9 +2,6 @@
 	import Checkmark from '$lib/components/Checkmark.svelte';
   import Button from '$lib/components/Button.svelte';
   import { PUBLIC_TEST_PRICE_ID } from '$env/static/public'
-  export let data;
-
-  console.log({ data })
 </script>
 
 <section class="mt-4 flex flex-col gap-6 px-6 py-8 sm:px-8">

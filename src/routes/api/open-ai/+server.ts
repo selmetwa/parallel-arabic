@@ -3,11 +3,10 @@ import type { RequestHandler } from './$types';
 import { env } from '$env/dynamic/private';
 import OpenAI from "openai";
 
-export const POST: RequestHandler = async ({ request, locals }) => {
+export const POST: RequestHandler = async ({ request }) => {
   const openai = new OpenAI({ apiKey: env['OPEN_API_KEY'] });
 
   const data = await request.json();
-  console.log(data);
 
   try {
     const completion = await openai.chat.completions.create({
@@ -15,7 +14,6 @@ export const POST: RequestHandler = async ({ request, locals }) => {
       model: "gpt-4o-mini",
     });
   
-    console.log(completion.choices[0]);
     return json({ message: completion.choices[0] });
 
   } catch (e) {
