@@ -6,10 +6,14 @@
 	import Button from '$lib/components/Button.svelte';
   import { getWordObjectToSave } from '$lib/helpers/get-word-object-to-save';
   import Checkmark from "$lib/components/Checkmark.svelte";
+	import { PUBLIC_TEST_PRICE_ID } from '$env/static/public';
 
 	import { Mode, type KeyWord } from './types';
 	export let data;
 
+  const isPaywalled = data.isPaywalled;
+
+  console.log({ data })
 	let mode = Mode.SingleText;
 	const sentences = data.sentences;
 
@@ -141,6 +145,18 @@
 	};
 </script>
 
+{#if isPaywalled && !data.hasActiveSubscription}
+<div class="mx-4 mb-6 mt-12 border border-tile-600 bg-tile-300 py-4 text-center sm:mx-36">
+  <h1 class="text-2xl font-bold text-text-300">You are not subscribed.</h1>
+  <p class="mt-2 text-xl text-text-200">To continue practicing, please subscribe.</p>
+  <form method="POST" action="/?/subscribe" class="mx-auto mt-4 w-fit">
+    <!-- Modify this value using your own Stripe price_id -->
+    <input type="hidden" name="price_id" value={PUBLIC_TEST_PRICE_ID} />
+
+    <Button type="submit">Subscribe</Button>
+  </form>
+</div>
+{:else}
 <WordModal {activeWordObj} {isModalOpen} {closeModal}></WordModal>
 <header class="border-b border-tile-600 text-center px-4 sm:px-8 pb-8">
   <h1 class="text-4xl text-text-200 font-semibold py-8">{data.title.arabic} / {data.title.english}</h1>
@@ -278,4 +294,6 @@
 			<Sentence sentence={sentence.arabic} type="arabic" {setActiveWord} />
 		</section>
 	{/each}
+{/if}
+
 {/if}
