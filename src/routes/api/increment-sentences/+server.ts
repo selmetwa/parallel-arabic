@@ -14,7 +14,7 @@ export const POST: RequestHandler = async ({ locals }) => {
     .set('sentences_viewed', newSentencesViewed)
     .where('id', '=', userId || '').execute();
   
-    console.log({result});
+    console.log("sentences updated: ", {result});
 
     return json({ sentencesViewed: newSentencesViewed });
 }

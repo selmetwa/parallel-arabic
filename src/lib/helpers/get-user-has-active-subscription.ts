@@ -12,9 +12,9 @@ export const getUserHasActiveSubscription = async (userId: string) => {
     return true
   }
 
-  if (today < futureDate) {
-    return true
-  }
+  // if (today < futureDate) {
+  //   return true
+  // }
 
   return false
 };
