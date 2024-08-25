@@ -21,6 +21,10 @@
       </li>
       <li class="flex items-start gap-2">
         <Checkmark />
+        <span>Access to all verbs for verb conjugation practice</span>
+      </li>
+      <li class="flex items-start gap-2">
+        <Checkmark />
         <span>Access to 4,100 vocabulary words for writing and handwriting practice</span>
       </li>
       <li class="flex items-start gap-2">

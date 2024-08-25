@@ -80,6 +80,13 @@
 			Improve verb conjugation, sentence structure, and possessive pronouns with unlimited AI generated sentences and get instant feedback on your writing..
 		</p>
 	</div>
+  <div>
+		<img src="/images/verbs.png" alt="verbs" class="h-[300px] w-full object-contain" />
+		<h3 class="mt-4 text-2xl font-semibold text-text-300">Verb Conjugation</h3>
+		<p class="mt-1 text-lg text-text-300">
+			Practice your verb conjugations in egyptian arabic with realtime spellchecking.
+		</p>
+	</div>
 	<div>
 		<img src="/images/writing.png" class="h-[300px] w-full object-contain" alt="writing" />
 		<h3 class="mt-4 text-2xl font-semibold text-text-300">Writing Practice</h3>

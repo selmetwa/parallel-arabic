@@ -26,6 +26,10 @@
 				</li>
         <li class="flex items-start gap-2">
 					<Checkmark />
+					<span>Access to one verb for verb conjugation practice</span>
+				</li>
+        <li class="flex items-start gap-2">
+					<Checkmark />
 					<span>Access to 156 vocabulary words for writing and handwriting practice</span>
 				</li>
 				<li class="flex items-start gap-2">
@@ -56,6 +60,10 @@
 				<li class="flex items-start gap-2">
 					<Checkmark />
 					<span>Unlimited AI practice sentences for beginner and intermediate levels</span>
+				</li>
+        <li class="flex items-start gap-2">
+					<Checkmark />
+					<span>Access to all verbs for verb conjugation practice</span>
 				</li>
 				<li class="flex items-start gap-2">
 					<Checkmark />
