@@ -4,6 +4,9 @@
   </p>
   <p>The keyboard is fully featured and contains support for all letters, numbers, special characters, diacritical marks, and text to speech.</p>
   <p>If you are not comfortable with the arabic alphabet yet please head over to <a href="/alphabet" class="underline !text-text-300">The alphabet learning section</a></p>
+  <a href="https://selmetwa.github.io/arabic-virtual-keyboard-demo/" target="_blank" class="underline text-text-300">
+    For a more detailed explanation of the keyboard, please visit the demo page
+  </a>
   <div class="tables">
     <div class="column">
       <div class="table_wrapper">
@@ -508,7 +511,7 @@ tr:nth-of-type(even) td {
   background-color: var(--tile4);
 }
 
-h4 {
+/* h4 {
   margin: 16px 0;
-}
+} */
 </style>

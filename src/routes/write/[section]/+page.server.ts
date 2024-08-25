@@ -8,6 +8,7 @@ export const load: PageServerLoad = async ({ params }) => {
 	const json = await response.json();
 
 	return {
-		words: json
+		words: json,
+    section
 	};
 };

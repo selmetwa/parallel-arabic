@@ -4,7 +4,6 @@
   export let objectToSave = {};
   export let type = 'Word';
 
-
   $: response = '';
   $: isLoading = false;
   $: error = '';
