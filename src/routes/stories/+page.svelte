@@ -17,7 +17,7 @@ function handleCloseModal() {
 
 <PaywallModal isOpen={isModalOpen} {handleCloseModal}></PaywallModal>
 
-<section class=" px-4 sm:mt-12 sm:px-16 mt-4">
+<section class="px-4 sm:mt-8 sm:px-16 mt-4">
 <h1 class="text-4xl font-bold text-text-300">Read</h1>
 <p class="text-text-200 text-lg">Improve your Egyptian Arabic reading and listening comprehension skills with these conversations written by professional arabic teachers</p>
 <ul class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">

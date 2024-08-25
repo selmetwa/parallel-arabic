@@ -6,6 +6,7 @@ CREATE TABLE if not exists user (
     subscriber_id VARCHAR(255),
     subscription_end_date BIGINT
     sentences_viewed INTEGER
+    verb_conjugation_tenses_viewed INTEGER
 );
 CREATE TABLE if not exists user_key (
     id VARCHAR(255) PRIMARY KEY,

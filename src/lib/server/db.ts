@@ -32,6 +32,7 @@ type UserTable = {
   subscriber_id: string;
   subscription_end_date: ColumnType<bigint, number>;
   sentences_viewed: number;
+  verb_conjugation_tenses_viewed: number;
 };
 
 type SessionTable = {
