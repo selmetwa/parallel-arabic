@@ -3,7 +3,7 @@
 	import Button from '$lib/components/Button.svelte';
   import type { wordObjectItem, wordObjectGroup } from '$lib/types';
   import SaveButton from '$lib/components/SaveButton.svelte';
-
+import { speakArabic } from '$lib/helpers/speak-arabic';
 	export let next: () => void;
 
 	export let wordObj: wordObjectGroup;
@@ -73,6 +73,7 @@
 	</div>
 	<div class="flex flex-col min-[420px]:flex-row gap-2">
 		<Button type="button" onClick={toggleHint}>{showHint ? 'Hide' : 'Show'} hint</Button>
+		<Button type="button" onClick={() => speakArabic(wordObj.answer.egyptianArabic)}>Listen to prononcuation</Button>
      <SaveButton objectToSave={{
       arabic: wordObj.answer.egyptianArabic,
       english: wordObj.answer.english,

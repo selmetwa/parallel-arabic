@@ -7,7 +7,7 @@
 	import Modal from '$lib/components/Modal.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import SaveButton from '$lib/components/SaveButton.svelte';
-
+  import { speakArabic } from '$lib/helpers/speak-arabic';
 	import { onMount } from 'svelte';
 	import cn from 'classnames';
 
@@ -136,6 +136,7 @@
 	<div class="mt-10 flex w-full flex-row gap-2 sm:w-fit">
 		<Button onClick={() => (showHint = !showHint)} type="button">Show Hint</Button>
 		<Button onClick={() => (showAnswer = !showAnswer)} type="button">Show Answer</Button>
+		<Button onClick={() => speakArabic(sentence.arabic)} type="button">Listen</Button>
 		<SaveButton
 			objectToSave={{
 				arabic: sentence.arabic,

@@ -32,12 +32,20 @@
       <p class="text-text-200 text-md">Read short stories in egyptian arabic alongside the english translation and transliteration of the text.</p>
     </li>
     <li>
-      <h2 class="text-xl font-semibold text-text-200">Writing</h2>
-      <p class="text-text-200 text-md">Practice writing over <b>4,000</b> Arabic words with a virtual arabic keyboard custom built for english speakers.</p>
+      <h2 class="text-xl font-semibold text-text-200">Sentence Practice</h2>
+      <p class="text-md text-text-200">
+        Practice reading comprehension and writing skills with AI generated short sentences.
+      </p>
     </li>
     <li>
-      <h2 class="text-xl font-semibold text-text-200">Sentence Practice</h2>
-      <p class="text-text-200 text-md">Practice reading comprehension and writing skills with AI generated short sentences.</p>
+      <h2 class="text-xl font-semibold text-text-200">Verb Conjugation</h2>
+      <p class="text-md text-text-200">
+        Practice your verb conjugations in egyptian arabic with realtime spellchecking.
+      </p>
+    </li>
+    <li>
+      <h2 class="text-xl font-semibold text-text-200">Writing</h2>
+      <p class="text-text-200 text-md">Practice writing over <b>4,000</b> Arabic words with a virtual arabic keyboard custom built for english speakers.</p>
     </li>
     <li>
       <h2 class="text-xl font-semibold text-text-200">Vocabulary</h2>

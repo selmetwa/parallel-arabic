@@ -10,7 +10,7 @@
         <li><a class="text-text-300 text-sm sm:text-base underline" href="/stories">Read</a></li>
         <li><a class="text-text-300 text-sm sm:text-base underline" href="/write">Write</a></li>
         <li><a class="text-text-300 text-sm sm:text-base underline" href="/sentences">Sentences</a></li>
-        <li><a class="text-text-300 text-sm sm:text-base underline" href="/grammar">Grammar</a></li>
+        <li><a class="text-text-300 text-sm sm:text-base underline" href="/grammar">Verb Conjugation</a></li>
         <li><a class="text-text-300 text-sm sm:text-base underline" href="/alphabet">Alphabet</a></li>
         <li><a class="text-text-300 text-sm sm:text-base underline" href="/vocab">Vocab</a></li>
         {#if session}
