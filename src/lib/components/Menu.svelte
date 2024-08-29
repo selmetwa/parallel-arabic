@@ -40,7 +40,7 @@
     </button>
   </div>
 
-  <dialog open={dropdownOpen} class={`dropdown-menu origin-top-right absolute right-0 mt-2 w-56 bg-tile-300 rounded-md shadow-lg ring-1 ring-black ring-opacity-5`}>
+  <dialog open={dropdownOpen} class={`dropdown-menu origin-top-right absolute right-0 mt-2 w-56 bg-tile-300 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50`}>
     <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
       <slot />
     </div>

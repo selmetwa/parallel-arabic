@@ -74,7 +74,7 @@
 				let end = '';
 				const verbWeWant = verb.egyptianArabic;
 
-				const presentTenseVerb = verb.egyptianArabic.trim().split(/[-–]/)[1].trim().slice(1);
+				const presentTenseVerb = verb.egyptianArabic.trim().split(/[-–]/)[0].trim();
 
 				if (conjugation.includes('-')) {
 					start = conjugation.split(/[-–]/)[0];
@@ -204,18 +204,16 @@
 			</div>
 			{#if showHint}
 				<div class="flex flex-col items-start">
-					<p class="whitespace-nowrap text-sm">Verb Arabic (Present - Past)</p>
+					<p class="whitespace-nowrap text-sm">Verb Arabic</p>
 					<p class="whitespace-nowrap text-2xl">
-						{conjugatedVerbArray[conjugationIndex].verbWeWant}
+						{conjugatedVerbArray[conjugationIndex].verbWeWant.split(/[-–]/)[0]}
 					</p>
 				</div>
 				<div class="flex flex-col items-start">
-					<p class="whitespace-nowrap text-sm">Verb Arabic (Present - Past)</p>
+					<p class="whitespace-nowrap text-sm">Verb Transliterated</p>
 					<p class="whitespace-nowrap text-2xl">
 						{conjugatedVerbArray[conjugationIndex].transliterationWeWant
-							.split(/[-–]/)
-							.reverse()
-							.join()}
+							.split(/[-–]/)[0]}
 					</p>
 				</div>
 			{/if}

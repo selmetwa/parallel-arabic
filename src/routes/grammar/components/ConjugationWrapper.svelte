@@ -3,11 +3,12 @@
   import WordBlock from './WordBlock.svelte';
   import Table from './Table.svelte';
 	import SaveButton from '$lib/components/SaveButton.svelte';
+  import Menu from '$lib/components/Menu.svelte';
+  import { speakArabic } from '$lib/helpers/speak-arabic';
 
 	export let wordIndex;
   export let verbToConjugate;
   export let updateTensesViewed: () => void;
-  import Menu from '$lib/components/Menu.svelte';
 
   $: conjugationIndex = 0;
 	$: showHint = false;
@@ -26,8 +27,6 @@
     updateTensesViewed();
     conjugationIndex = conjugationIndex + 1;
   }
-
-  console.log({ verbToConjugate})
 </script>
 
 {#if showTable}
@@ -60,6 +59,9 @@
     </button>
     <button on:click={() => showAnswer = !showAnswer} class="block px-4 py-2 text-sm text-text-300 hover:bg-tile-400 w-full text-left">
       {showAnswer ? 'Hide' : 'Show'} Answer
+    </button>
+    <button on:click={() => speakArabic(verbToConjugate.egyptianArabic.trim().split(/[-–]/)[0].trim())} class="block px-4 py-2 text-sm text-text-300 hover:bg-tile-400 w-full text-left">
+      Listen to Pronunciation
     </button>
     <SaveButton
     objectToSave={{

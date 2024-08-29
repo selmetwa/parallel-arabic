@@ -89,7 +89,7 @@
           <tr>
               <td>انا</td>
               <td>ت</td>
-              <td>با</td>
+              <td>ب</td>
               <td>ها</td>
               <td>ا</td>
           </tr>

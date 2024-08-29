@@ -11,6 +11,7 @@
   import Modal from '$lib/components/Modal.svelte';
   import KeyboardDocumentation from '$lib/components/KeyboardDocumentation.svelte';
   import SaveButton from '$lib/components/SaveButton.svelte';
+  import { speakArabic } from '$lib/helpers/speak-arabic';
 
 	type Word = {
 		english: string;
@@ -182,6 +183,7 @@
 		<div class="grid grid-cols-2 gap-2 sm:grid-cols-5">
 			<Button type="button" onClick={toggleAnswer}>{showAnswer ? 'Hide' : 'Show'} answer</Button>
 			<Button type="button" onClick={toggleHint}>{showHint ? 'Hide' : 'Show'} hint</Button>
+      <Button type="button" onClick={() => speakArabic(egyptianArabicWord)}>Speak</Button>
       <SaveButton 
       type="Word"
       objectToSave={{
