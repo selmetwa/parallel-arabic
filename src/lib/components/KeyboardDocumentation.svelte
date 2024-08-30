@@ -4,7 +4,7 @@
   </p>
   <p>The keyboard is fully featured and contains support for all letters, numbers, special characters, diacritical marks, and text to speech.</p>
   <p>If you are not comfortable with the arabic alphabet yet please head over to <a href="/alphabet" class="underline !text-text-300">The alphabet learning section</a></p>
-  <a href="https://selmetwa.github.io/arabic-virtual-keyboard-demo/" target="_blank" class="underline text-text-300">
+  <a href="https://selmetwa.github.io/arabic-virtual-keyboard-demo/" target="_blank" class="underline !text-text-300">
     For a more detailed explanation of the keyboard, please visit the demo page
   </a>
   <div class="tables">
