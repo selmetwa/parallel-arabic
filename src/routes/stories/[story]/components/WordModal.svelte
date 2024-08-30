@@ -3,6 +3,7 @@
   import Button from "$lib/components/Button.svelte";
   import Checkmark from "$lib/components/Checkmark.svelte";
   import { getWordObjectToSave } from '$lib/helpers/get-word-object-to-save';
+  import { speakArabic } from "$lib/helpers/speak-arabic";
 
   export let activeWordObj = {
     english: "",
@@ -129,6 +130,9 @@
         {:else}
           Save Word
         {/if}
+      </Button>
+      <Button onClick={() => speakArabic(activeWordObj.arabic)} type="button">
+        Audio
       </Button>
 		</div>
 	</div>

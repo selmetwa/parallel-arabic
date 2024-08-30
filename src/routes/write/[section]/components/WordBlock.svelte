@@ -12,6 +12,7 @@
   import KeyboardDocumentation from '$lib/components/KeyboardDocumentation.svelte';
   import SaveButton from '$lib/components/SaveButton.svelte';
   import { speakArabic } from '$lib/helpers/speak-arabic';
+  import InfoDisclaimer from '$lib/components/InfoDisclaimer.svelte';
 
 	type Word = {
 		english: string;
@@ -37,14 +38,17 @@
 	let egyptianArabicWord = '';
   $: isInfoModalOpen = false;
 
-	if (word.egyptianArabic.includes('–') || word.egyptianArabic.includes('-')) {
-		if (word.egyptianArabic.includes('–')) {
-			egyptianArabicWord = word.egyptianArabic.split('–')[0].trim();
-		}
+  const regex = /[-–]/;
 
-		if (word.egyptianArabic.includes('-')) {
-			egyptianArabicWord = word.egyptianArabic.split('-')[0].trim();
-		}
+	if (regex.test(word.egyptianArabic)) {
+    egyptianArabicWord = word.egyptianArabic.split(regex)[0].trim();
+		// if (word.egyptianArabic.includes('–')) {
+		// 	egyptianArabicWord = word.egyptianArabic.split('–')[0].trim();
+		// }
+
+		// if (word.egyptianArabic.includes('-')) {
+		// 	egyptianArabicWord = word.egyptianArabic.split('-')[0].trim();
+		// }
 	} else {
 		egyptianArabicWord = word.egyptianArabic;
 	}
@@ -66,14 +70,15 @@
 		correctAnswer = '';
     isInfoModalOpen = false;
   
-		if (word.egyptianArabic.includes('–') || word.egyptianArabic.includes('-')) {
-			if (word.egyptianArabic.includes('–')) {
-				egyptianArabicWord = word.egyptianArabic.split('–')[0].trim();
-			}
+		if (regex.test(word.egyptianArabic)) {
+      egyptianArabicWord = word.egyptianArabic.split(regex)[0].trim();
+			// if (word.egyptianArabic.includes('–')) {
+			// 	egyptianArabicWord = word.egyptianArabic.split('–')[0].trim();
+			// }
 
-			if (word.egyptianArabic.includes('-')) {
-				egyptianArabicWord = word.egyptianArabic.split('-')[0].trim();
-			}
+			// if (word.egyptianArabic.includes('-')) {
+			// 	egyptianArabicWord = word.egyptianArabic.split('-')[0].trim();
+			// }
 		} else {
 			egyptianArabicWord = word.egyptianArabic;
 		}
@@ -107,8 +112,8 @@
 	}
 
 	function compareMyInput(myInput: string) {
-		const myInputArr = myInput.split('');
-		const egyptianArabicArr = egyptianArabicWord.split('');
+		const myInputArr = myInput.trim().split('');
+		const egyptianArabicArr = egyptianArabicWord.trim().split('');
 
 		const result = myInputArr.map((letter, index) => {
 			if (letter === egyptianArabicArr[index]) {
@@ -180,6 +185,7 @@
 
 <div>
 	<div class="pb-4 pt-12">
+    <InfoDisclaimer></InfoDisclaimer>
 		<div class="grid grid-cols-2 gap-2 sm:grid-cols-5">
 			<Button type="button" onClick={toggleAnswer}>{showAnswer ? 'Hide' : 'Show'} answer</Button>
 			<Button type="button" onClick={toggleHint}>{showHint ? 'Hide' : 'Show'} hint</Button>

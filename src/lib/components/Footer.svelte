@@ -5,5 +5,6 @@
     <li><a href="/anki-decks">Anki Decks</a></li>
     <li><a href="https://github.com/selmetwa/parallel-arabic">Source Code</a></li>
     <li><a href="/support">Support</a></li>
+    <li><a href="/faq">FAQ</a></li>
   </ul>
 </footer>

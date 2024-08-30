@@ -73,12 +73,14 @@
 				let start = '';
 				let end = '';
 				const verbWeWant = verb.egyptianArabic;
+        const regex = /[-–]/;
 
-				const presentTenseVerb = verb.egyptianArabic.trim().split(/[-–]/)[0].trim();
+				const presentTenseVerb = verb.egyptianArabic.trim().split(regex)[0].trim();
 
-				if (conjugation.includes('-')) {
-					start = conjugation.split(/[-–]/)[0];
-					end = conjugation.split(/[-–]/)[1];
+
+				if (regex.test(conjugation)) {
+					start = conjugation.split(regex)[0];
+					end = conjugation.split(regex)[1];
 				} else {
 					start = conjugation;
 				}

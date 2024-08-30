@@ -10,7 +10,7 @@
   import { speakArabic } from '$lib/helpers/speak-arabic';
 	import { onMount } from 'svelte';
 	import cn from 'classnames';
-
+import InfoDisclaimer from '$lib/components/InfoDisclaimer.svelte';
 	export let sentence: {
 		arabic: string;
 		english: string;
@@ -133,6 +133,7 @@
 			<p class="text-xl text-text-300">{sentence.arabic} is Correct</p>
 		</div>
 	{/if}
+  <InfoDisclaimer></InfoDisclaimer>
 	<div class="mt-10 flex w-full flex-row gap-2 sm:w-fit">
 		<Button onClick={() => (showHint = !showHint)} type="button">Show Hint</Button>
 		<Button onClick={() => (showAnswer = !showAnswer)} type="button">Show Answer</Button>
