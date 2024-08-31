@@ -45,11 +45,11 @@
 
 <div dir={isArabic ? 'rtl' : 'ltr'} class="border-b border-tile-600 px-5 py-10 flex flex-col justify-center">
 	<p class="text-lg font-semibold text-text-200">{sentence.speaker}</p>
-	<div class="mt-1 flex flex-wrap gap-2 text-text-300">
+	<div class="mt-1 flex flex-wrap gap-1 text-text-300">
 		{#if isArabic}
 			{#each words.reverse() as word}
 				<button
-					class="transitional-all rounded-sm text-5xl duration-300 hover:bg-tile-500"
+					class="transitional-all p-1 rounded-sm text-5xl duration-300 hover:bg-tile-500"
 					value={word}
 					on:click={assignActiveWord}
 				>
@@ -59,7 +59,7 @@
 		{:else}
 			{#each words as word}
 				<button
-					class="transitional-all rounded-sm text-4xl duration-300 hover:bg-tile-500"
+					class="transitional-all p-1 rounded-sm text-4xl duration-300 hover:bg-tile-500"
 					value={word}
 					on:click={assignActiveWord}
 				>

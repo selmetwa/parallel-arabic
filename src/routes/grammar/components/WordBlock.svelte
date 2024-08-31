@@ -105,6 +105,10 @@
 	}
 
 	function areArraysEqual(arr1: Array<string>, arr2: Array<string>) {
+
+    if (!arr1 || !arr2) {
+      return false;
+    }
 		if (arr1.length !== arr2.length) {
 			return false;
 		}
@@ -140,7 +144,7 @@
 
 		attemptTemp = result;
 
-		if (areArraysEqual(myInputArr, verbArray)) {
+		if (areArraysEqual(myInputArr, (verbArray || []))) {
 			isCorrect = true;
 		}
 	}

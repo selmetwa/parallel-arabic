@@ -1,9 +1,9 @@
 <script lang="ts">
 	import RadioButton from '$lib/components/RadioButton.svelte';
 	import Button from '$lib/components/Button.svelte';
-  import type { wordObjectItem, wordObjectGroup } from '$lib/types';
-  import SaveButton from '$lib/components/SaveButton.svelte';
-import { speakArabic } from '$lib/helpers/speak-arabic';
+	import type { wordObjectItem, wordObjectGroup } from '$lib/types';
+	import SaveButton from '$lib/components/SaveButton.svelte';
+	import { speakArabic } from '$lib/helpers/speak-arabic';
 	export let next: () => void;
 
 	export let wordObj: wordObjectGroup;
@@ -17,7 +17,7 @@ import { speakArabic } from '$lib/helpers/speak-arabic';
 
 	$: {
 		if (wordObj) {
-      selectedObj = {} as wordObjectItem;
+			selectedObj = {} as wordObjectItem;
 			showHint = false;
 			selected = null;
 			isCorrect = false;
@@ -57,9 +57,9 @@ import { speakArabic } from '$lib/helpers/speak-arabic';
 		}
 	}
 
-  function toggleFormat() {
-    showQuestionInEnglish = !showQuestionInEnglish;
-  }
+	function toggleFormat() {
+		showQuestionInEnglish = !showQuestionInEnglish;
+	}
 </script>
 
 <section class="flex flex-col gap-4 py-8">
@@ -71,26 +71,31 @@ import { speakArabic } from '$lib/helpers/speak-arabic';
 			<p class="text-lg text-text-300">{wordObj.answer.egyptianArabicTransliteration}</p>
 		{/if}
 	</div>
-	<div class="flex flex-col min-[420px]:flex-row gap-2">
+	<div class="grid grid-cols-2 gap-2 sm:grid-cols-1">
 		<Button type="button" onClick={toggleHint}>{showHint ? 'Hide' : 'Show'} hint</Button>
-		<Button type="button" onClick={() => speakArabic(wordObj.answer.egyptianArabic)}>Listen to prononcuation</Button>
-     <SaveButton objectToSave={{
-      arabic: wordObj.answer.egyptianArabic,
-      english: wordObj.answer.english,
-      transliterated: wordObj.answer.egyptianArabicTransliteration
-    }} type="Word"></SaveButton>
+		<Button type="button" onClick={() => speakArabic(wordObj.answer.egyptianArabic)}
+			>Listen to prononcuation</Button
+		>
+		<SaveButton
+			objectToSave={{
+				arabic: wordObj.answer.egyptianArabic,
+				english: wordObj.answer.english,
+				transliterated: wordObj.answer.egyptianArabicTransliteration
+			}}
+			type="Word"
+		></SaveButton>
 		<Button type="button" onClick={toggleFormat}>Toggle Format</Button>
-	</div> 
+	</div>
 	{#if isCorrect}
 		<div
 			class="flex w-full flex-row items-center justify-center gap-2 bg-green-100 py-2 transition-all duration-300"
 		>
 			<span class="text-lg font-semibold text-text-300">
-        {#if showQuestionInEnglish}
-          {wordObj.answer.egyptianArabic}
-        {:else}
-          {wordObj.answer.english}
-        {/if} is correct
+				{#if showQuestionInEnglish}
+					{wordObj.answer.egyptianArabic}
+				{:else}
+					{wordObj.answer.english}
+				{/if} is correct
 			</span>
 		</div>
 	{/if}
@@ -98,18 +103,16 @@ import { speakArabic } from '$lib/helpers/speak-arabic';
 		<div
 			class="flex w-full flex-row items-center justify-center gap-2 bg-red-100 py-2 transition-all duration-300"
 		>
-			<span class="text-lg font-semibold text-text-300"
-				>
-        {#if showQuestionInEnglish}
-          {selectedObj.egyptianArabic}
-        {:else}
-          {selectedObj.english}
-        {/if} is incorrect
-      </span
-			>
+			<span class="text-lg font-semibold text-text-300">
+				{#if showQuestionInEnglish}
+					{selectedObj.egyptianArabic}
+				{:else}
+					{selectedObj.english}
+				{/if} is incorrect
+			</span>
 		</div>
 	{/if}
-	<fieldset class="grid grid-rows-1 grid-cols-1 sm:grid-rows-2 sm:grid-cols-2 gap-3">
+	<fieldset class="grid grid-cols-1 grid-rows-1 gap-3 sm:grid-cols-2 sm:grid-rows-2">
 		<RadioButton
 			text={showQuestionInEnglish ? wordObj.first.egyptianArabic : wordObj.first.english}
 			value={wordObj.first.english}

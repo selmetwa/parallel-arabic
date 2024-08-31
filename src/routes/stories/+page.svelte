@@ -13,6 +13,8 @@
 function handleCloseModal() {
   isModalOpen = false;
 }
+
+  console.log({ stories })
 </script>
 
 <PaywallModal isOpen={isModalOpen} {handleCloseModal}></PaywallModal>
@@ -26,14 +28,16 @@ function handleCloseModal() {
       <li>
         <button on:click={openPaywallModal} class="flex w-full">
           <article class="w-full px-4 py-8 flex-col flex gap-2 border-2 border-tile-600 text-center bg-tile-400 hover:bg-tile-500 transitional-all duration-300 cursor-pointer font-semibold">
-            <p class="text-3xl text-text-300 flex flex-row items-center w-fit gap-2 mx-auto">
+            <p class="text-xl text-text-300 flex flex-row items-center w-fit gap-2 mx-auto">
               {#if value.isPaywalled}
                 <span class="text-lg">🔒</span>
               {/if}
-              {value.story.title.english}
+              {value.story.title.english} / {value.story.title.arabic}
             </p>
-            <p class="text-xl text-text-200">{value.story.title.arabic}</p>
-            <p class="text-base text-text-200">{value.story.sentences.length} Sentences</p>
+            <div>
+              <p class="text-base text-text-200">{value.story.sentences.length} Sentences</p>
+              <p class="text-base text-text-200">{value.description}</p>
+            </div>
           </article>
         </button>
       </li>
@@ -41,11 +45,13 @@ function handleCloseModal() {
       <li>
         <a href={`/stories/${key}`}>
           <article class="px-4 py-8 flex-col flex gap-2 border-2 border-tile-600 text-center bg-tile-400 hover:bg-tile-500 transitional-all duration-300 cursor-pointer font-semibold">
-            <p class="text-3xl text-text-300 ">
-              {value.story.title.english}
+            <p class="text-xl text-text-300 ">
+              {value.story.title.english} / {value.story.title.arabic}
             </p>
-            <p class="text-xl text-text-200">{value.story.title.arabic}</p>
-            <p class="text-base text-text-200">{value.story.sentences.length} Sentences</p>
+            <div>
+              <p class="text-base text-text-200">{value.story.sentences.length} Sentences</p>
+              <p class="text-base text-text-200">{value.description}</p>
+            </div>
           </article>
         </a>
       </li>
