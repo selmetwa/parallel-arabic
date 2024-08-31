@@ -3,6 +3,8 @@
 	import ConjugationWrapper from '../components/ConjugationWrapper.svelte';
 	import { PUBLIC_TEST_PRICE_ID } from '$env/static/public';
 	import { verbToConjugateIndexInStore } from '$lib/store/store';
+	import { goto } from '$app/navigation';
+
 	export let data;
 
 	$: wordIndex = $verbToConjugateIndexInStore || 0;

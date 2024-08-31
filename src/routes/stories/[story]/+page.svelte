@@ -197,12 +197,22 @@
 
 	{#if mode === Mode.SentanceView}
 		<section
-			class="grid grid-cols-1 divide-x divide-tile-600 bg-tile-300 sm:grid-cols-2 sm:grid-rows-2"
+			class="grid grid-cols-1 grid-rows-4 divide-x divide-tile-600 bg-tile-300 sm:grid-cols-2 sm:grid-rows-2"
 		>
-			<Sentence sentence={sentences[index].english} {setActiveWord} type="english" />
-			<Sentence sentence={sentences[index].arabic} {setActiveWord} type="arabic" />
+			<Sentence
+        sentence={sentences[index].english} 
+        {setActiveWord} 
+        type="english" 
+        classname="row-[2] sm:row-[1] sm:col-[1]"
+      />
+			<Sentence 
+        classname="row-[1] sm:row-[1] sm:col-[2]"
+        sentence={sentences[index].arabic} 
+        {setActiveWord} 
+        type="arabic" 
+        />
 			<div
-				class="flex flex-col items-center justify-center border-b border-tile-600 px-5 py-10 text-text-300"
+				class="flex flex-col items-center justify-center border-b border-tile-600 px-5 py-10 text-text-300 row-[4] sm:row-[2] col-[1]"
 			>
 				{#if activeWordObj.description || activeWordObj.isLoading}
 					<div class="flex flex-col items-center p-4">
@@ -271,7 +281,12 @@
 					<p class="text-lg">Click on a word to get a full definition.</p>
 				{/if}
 			</div>
-			<Sentence sentence={sentences[index].transliteration} {setActiveWord} type="transliterated" />
+			<Sentence 
+        classname="row-[3] sm:row-[2] sm:col-[2]"
+        sentence={sentences[index].transliteration} 
+        {setActiveWord} 
+        type="transliterated" 
+        />
 		</section>
 		<div class="flex flex-col items-center gap-2">
 			<div class="mt-4 flex w-fit flex-row items-center gap-2">
