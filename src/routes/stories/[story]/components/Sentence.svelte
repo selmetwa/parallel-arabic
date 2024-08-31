@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { askChatGTP } from '../helpers/ask-chat-gpt';
+  import cn from 'classnames';
+
 	type TSentence = {
 		speaker: string;
 		text: string;
@@ -8,6 +10,7 @@
 	export let sentence: TSentence;
 	export let setActiveWord: (word: any) => void;
 	export let type = '';
+  export let classname = '';
 
 	$: isArabic = type === 'arabic';
 	$: words = isArabic ? sentence.text.split(' ').reverse() : sentence.text.split(' ');
@@ -43,7 +46,13 @@
 	}
 </script>
 
-<div dir={isArabic ? 'rtl' : 'ltr'} class="border-b border-tile-600 px-5 py-10 flex flex-col justify-center">
+<div 
+dir={isArabic ? 'rtl' : 'ltr'} 
+class={cn(
+  "border-b border-tile-600 px-5 py-10 flex flex-col justify-center",
+  classname
+  )}
+>
 	<p class="text-lg font-semibold text-text-200">{sentence.speaker}</p>
 	<div class="mt-1 flex flex-wrap gap-1 text-text-300">
 		{#if isArabic}
