@@ -6,7 +6,9 @@
 	import Button from '$lib/components/Button.svelte';
   import Modal from '$lib/components/Modal.svelte';
   import KeyboardDocumentation from '$lib/components/KeyboardDocumentation.svelte';
-	import cn from 'classnames';
+	import Audio from '$lib/components/Audio.svelte';
+
+  import cn from 'classnames';
 	export let letter: Letter;
   export let handleNext: () => void;
 
@@ -90,7 +92,7 @@
 <div class="flex flex-col sm:flex-row justify-between">
 	<div class="flex flex-col gap-1">
 		<h2 class="text-text-200">Listen to the audio and type the letter</h2>
-		<audio src={`/letters/audios/${letter.key}.mp3`} controls></audio>
+    <Audio src={`/letters/audios/${letter.key}.mp3`}></Audio>
 	</div>
 	<div>
     <div class="flex flex-row mt-2 sm:mt-0 gap-2">

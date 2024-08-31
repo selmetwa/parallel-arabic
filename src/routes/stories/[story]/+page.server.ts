@@ -13,6 +13,8 @@ export const load = async ({ params, locals }) => {
     isPaywalled: stories[params.story].isPaywalled,
     title: story.title,
     sentences: story.sentences,
+    audio: story.audio ?? undefined,
+    description: stories[params.story].description,
     hasActiveSubscription
   }
 };

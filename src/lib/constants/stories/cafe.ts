@@ -1,4 +1,6 @@
+
 export const coffeeShop = {
+  audio: undefined,
   title: {
     arabic: "محل قهوة",
     english: 'Coffee Shop',

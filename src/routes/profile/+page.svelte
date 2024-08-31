@@ -11,9 +11,9 @@
 </script>
 
 <section class="">
-  <header class="flex bg-tile-400 flex-row py-6 px-12 gap-2 items-center justify-between">
-    <div class="flex flex-row gap-2 items-center">
-      <h1 class="text-2xl text-text-300 font-semibold">{data.user?.email}</h1>
+  <header class="flex bg-tile-400 flex-row py-6 px-4 sm:px-12 gap-4 items-center justify-between">
+    <div class="flex flex-col sm:flex-row gap-2 items-start sm:items-center">
+      <h1 class="text-lg sm:text-2xl text-text-300 font-semibold">{data.user?.email}</h1>
       <a href="/profile/saved-words" class="text-lg text-text-300 underline">View Wordbank</a>
     </div>
     <div class="flex flex-row gap-2">

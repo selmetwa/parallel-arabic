@@ -7,10 +7,12 @@
 	import Modal from '$lib/components/Modal.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import SaveButton from '$lib/components/SaveButton.svelte';
-  import { speakArabic } from '$lib/helpers/speak-arabic';
+	import { speakArabic } from '$lib/helpers/speak-arabic';
 	import { onMount } from 'svelte';
 	import cn from 'classnames';
-import InfoDisclaimer from '$lib/components/InfoDisclaimer.svelte';
+	import InfoDisclaimer from '$lib/components/InfoDisclaimer.svelte';
+	import DefinitionModal from './DefinitionModal.svelte';
+
 	export let sentence: {
 		arabic: string;
 		english: string;
@@ -36,6 +38,10 @@ import InfoDisclaimer from '$lib/components/InfoDisclaimer.svelte';
 	$: isInfoModalOpen = false;
 	$: showHint = false;
 	$: showAnswer = false;
+	$: isDefinitionModalOpen = false;
+	$: isLoadingDefinition = false;
+	$: definition = '';
+  $: targetWord = '';
 
 	$: if (sentence.arabic) {
 		attemptTemp = [];
@@ -44,6 +50,10 @@ import InfoDisclaimer from '$lib/components/InfoDisclaimer.svelte';
 		showHint = false;
 		showAnswer = false;
 		isInfoModalOpen = false;
+		isDefinitionModalOpen = false;
+		isLoadingDefinition = false;
+		definition = '';
+    targetWord = '';
 
 		if (typeof document !== 'undefined') {
 			const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
@@ -125,16 +135,54 @@ import InfoDisclaimer from '$lib/components/InfoDisclaimer.svelte';
 	function closeInfoModal() {
 		isInfoModalOpen = false;
 	}
+
+	function openDefinitionModal() {
+		isDefinitionModalOpen = true;
+	}
+
+	function closeDefinitionModal() {
+		isDefinitionModalOpen = false;
+    definition = '';
+	}
+
+	async function askChatGTP(word: string) {
+    targetWord = word;
+    isLoadingDefinition = true;
+		openDefinitionModal();
+		const question = `What does ${word} mean in Egyptian Arabic? Considering the following sentences ${sentence.arabic} ${sentence.english} ${sentence.transliteration} but please do not reveal the entire meaning of the sentence, and dont say anything about the rest of the sentence at all, just use it as a reference to derive the definition.`;
+
+		const res = await fetch('/api/open-ai', {
+			method: 'POST',
+			headers: { accept: 'application/json' },
+			body: JSON.stringify({
+				question: question
+			})
+		});
+
+		const data = await res.json();
+
+		definition = data.message.message.content;
+		isLoadingDefinition = false;
+	}
 </script>
 
+<DefinitionModal
+	activeWordObj={{
+		english: targetWord,
+		isLoading: isLoadingDefinition,
+		description: definition,
+	}}
+	isModalOpen={isDefinitionModalOpen}
+	closeModal={closeDefinitionModal}
+></DefinitionModal>
 {#if sentence}
 	{#if isCorrect}
-		<div class="bg-green-100 py-2 text-center font-semibold mt-5">
+		<div class="mt-5 bg-green-100 py-2 text-center font-semibold">
 			<p class="text-xl text-text-300">{sentence.arabic} is Correct</p>
 		</div>
 	{/if}
-  <InfoDisclaimer></InfoDisclaimer>
-	<div class="mt-10 flex w-full flex-row gap-2 sm:w-fit">
+	<InfoDisclaimer></InfoDisclaimer>
+	<div class="mt-10 grid grid-cols-2 sm:grid-cols-4 flex-row gap-2 sm:w-full">
 		<Button onClick={() => (showHint = !showHint)} type="button">Show Hint</Button>
 		<Button onClick={() => (showAnswer = !showAnswer)} type="button">Show Answer</Button>
 		<Button onClick={() => speakArabic(sentence.arabic)} type="button">Listen</Button>
@@ -149,7 +197,15 @@ import InfoDisclaimer from '$lib/components/InfoDisclaimer.svelte';
 	</div>
 	<div class="mx-auto mt-6 w-fit text-center">
 		<div class="flex flex-col items-center justify-center gap-2">
-			<h1 class="w-fit text-[40px] font-bold text-text-300">{sentence.english}</h1>
+			<!-- <h1 class="w-fit text-[40px] font-bold text-text-300">{sentence.english}</h1> -->
+			<h1 class="flex w-fit flex-row text-[40px] font-bold text-text-300 flex-wrap">
+				{#each sentence.english.split(' ') as word}
+					<button
+						on:click={() => askChatGTP(word)}
+						class="p-1 text-[40px] duration-300 hover:bg-tile-500">{word}</button
+					>
+				{/each}
+			</h1>
 			{#if showHint}
 				<p class="w-fit text-[25px] text-text-300">({sentence.transliteration})</p>
 			{/if}
