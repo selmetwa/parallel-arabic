@@ -1,19 +1,28 @@
 <script lang="ts">
+	import type { T } from 'vitest/dist/reporters-qc5Smpt5.js';
 	import { askChatGTP } from '../helpers/ask-chat-gpt';
   import cn from 'classnames';
+
+  type TWholeSentence = {
+    arabic: TSentence;
+    english: TSentence;
+    transliteration: TSentence;
+  }
 
 	type TSentence = {
 		speaker: string;
 		text: string;
 	};
 
-	export let sentence: TSentence;
+	export let sentence: TWholeSentence;
 	export let setActiveWord: (word: any) => void;
 	export let type = '';
   export let classname = '';
 
+  $: _sentence = sentence[type];
+
 	$: isArabic = type === 'arabic';
-	$: words = isArabic ? sentence.text.split(' ').reverse() : sentence.text.split(' ');
+	$: words = isArabic ? _sentence.text.split(' ').reverse() : _sentence.text.split(' ');
 
 	function removeComma(inputString: string) {
 		const commataPattern = /[\u060C]/g;
@@ -32,7 +41,11 @@
 
 		const word = (event.target as HTMLButtonElement).value.replace(/,/g, '');
 		const cleanWord = removeComma(word);
-		const res = await askChatGTP(cleanWord, type);
+		const res = await askChatGTP(cleanWord, type, {
+      arabic: sentence.arabic.text,
+      english: sentence.english.text,
+      transliteration: sentence.transliteration.text
+    });
 		const message = res.message.message.content;
 
 		setActiveWord({
@@ -44,6 +57,8 @@
 			type: type
 		});
 	}
+
+  console.log('sentence', sentence);
 </script>
 
 <div 
@@ -53,7 +68,7 @@ class={cn(
   classname
   )}
 >
-	<p class="text-lg font-semibold text-text-200">{sentence.speaker}</p>
+	<p class="text-lg font-semibold text-text-200">{_sentence.speaker}</p>
 	<div class="mt-1 flex flex-wrap gap-1 text-text-300">
 		{#if isArabic}
 			{#each words.reverse() as word}

@@ -11,6 +11,7 @@
 	import { Mode, type KeyWord } from './types';
 	export let data;
 
+  console.log({ data })
 	const isPaywalled = data.isPaywalled;
 
 	let mode = Mode.SingleText;
@@ -148,9 +149,7 @@
 		<h1 class="text-2xl font-bold text-text-300">You are not subscribed.</h1>
 		<p class="mt-2 text-xl text-text-200">To continue practicing, please subscribe.</p>
 		<form method="POST" action="/?/subscribe" class="mx-auto mt-4 w-fit">
-			<!-- Modify this value using your own Stripe price_id -->
 			<input type="hidden" name="price_id" value={PUBLIC_TEST_PRICE_ID} />
-
 			<Button type="submit">Subscribe</Button>
 		</form>
 	</div>
@@ -163,7 +162,7 @@
 		<div class="flex flex-col items-start justify-between sm:flex-row sm:items-center">
 			<div class="w-full">
 				{#if data.audio}
-					<Audio src={data.audio} title={data.title.arabic}></Audio>
+					<Audio src={data.audio}></Audio>
 				{/if}
 			</div>
 			<fieldset class="flex w-full place-content-end">
@@ -200,17 +199,17 @@
 			class="grid grid-cols-1 grid-rows-4 divide-x divide-tile-600 bg-tile-300 sm:grid-cols-2 sm:grid-rows-2"
 		>
 			<Sentence
-        sentence={sentences[index].english} 
+        sentence={sentences[index]} 
         {setActiveWord} 
         type="english" 
         classname="row-[2] sm:row-[1] sm:col-[1]"
       />
-			<Sentence 
+			<Sentence
         classname="row-[1] sm:row-[1] sm:col-[2]"
-        sentence={sentences[index].arabic} 
+        sentence={sentences[index]} 
         {setActiveWord} 
         type="arabic" 
-        />
+      />
 			<div
 				class="flex flex-col items-center justify-center border-b border-tile-600 px-5 py-10 text-text-300 row-[4] sm:row-[2] col-[1]"
 			>
@@ -283,10 +282,10 @@
 			</div>
 			<Sentence 
         classname="row-[3] sm:row-[2] sm:col-[2]"
-        sentence={sentences[index].transliteration} 
+        sentence={sentences[index]} 
         {setActiveWord} 
-        type="transliterated" 
-        />
+        type="transliteration" 
+      />
 		</section>
 		<div class="flex flex-col items-center gap-2">
 			<div class="mt-4 flex w-fit flex-row items-center gap-2">
@@ -311,9 +310,9 @@
 				)}
 			>
 				{#if mode === Mode.BiText}
-					<Sentence sentence={sentence.english} {setActiveWord} type="english" />
+          <Sentence sentence={sentence} {setActiveWord} type="english"  />
 				{/if}
-				<Sentence sentence={sentence.arabic} type="arabic" {setActiveWord} />
+				  <Sentence sentence={sentence} type="arabic" {setActiveWord} />
 			</section>
 		{/each}
 	{/if}

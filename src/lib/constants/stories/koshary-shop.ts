@@ -472,6 +472,7 @@ for (let i = 0; i < a; i++) {
 }
 
 export const kosharyShop = {
+  audio: '/audio/koshary-shop/full-audio.wav',
   title: {
     arabic: "محل كشري",
     english: 'Koshary Shop',

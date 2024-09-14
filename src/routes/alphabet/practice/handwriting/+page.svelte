@@ -5,9 +5,9 @@
 
 	$: index = 0;
 	const lettersCopy = [...letters];
-	const randomizedLetters = lettersCopy.sort(() => Math.random() - 0.5);
+	// const randomizedLetters = lettersCopy.sort(() => Math.random() - 0.5);
 
-	$: letter = randomizedLetters[index];
+	$: letter = lettersCopy[index];
 
 	function handleNext() {
 		index += 1;
@@ -23,11 +23,11 @@
     {#if index > 0}
       <Button onClick={handlePrevious} type="button">Previous</Button>
     {/if}
-    {#if index < randomizedLetters.length - 1}
+    {#if index < lettersCopy.length - 1}
       <Button onClick={handleNext} type="button">Next</Button>
     {/if}
     <p class="text-text-200">
-      {index + 1} / {randomizedLetters.length}
+      {index + 1} / {lettersCopy.length}
     </p>
   </header>
 	<Draw {letter} />

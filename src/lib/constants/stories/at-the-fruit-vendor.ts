@@ -325,6 +325,7 @@ for (let i = 0; i < a; i++) {
 }
 
 export const atTheFruitVendor = {
+  audio: '/audio/at-the-fruit-vendor/full-audio.wav',
   title: {
     arabic: 'عند الفكهاني',
     english: 'At the Fruit Vendor',
