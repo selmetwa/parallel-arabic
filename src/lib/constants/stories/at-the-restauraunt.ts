@@ -422,6 +422,7 @@ for (let i = 0; i < a; i++) {
 }
 
 export const atTheRestaurant = {
+  audio: '/audio/at-the-restaurant/full-audio.wav',
   title: {
     arabic: 'في المطعم',
     english: 'At the Restaurant',

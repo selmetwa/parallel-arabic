@@ -505,6 +505,7 @@ for (let i = 0; i < a; i++) {
 }
 
 export const atTheBarbers = {
+  audio: '/audio/at-the-barbers/full-audio.wav',
   title: {
      arabic: "عند الحلاق",
      english: "At the Barber's",
