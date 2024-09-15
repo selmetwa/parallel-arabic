@@ -11,7 +11,6 @@
 	import { Mode, type KeyWord } from './types';
 	export let data;
 
-  console.log({ data })
 	const isPaywalled = data.isPaywalled;
 
 	let mode = Mode.SingleText;

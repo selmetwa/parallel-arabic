@@ -6,8 +6,6 @@
   export let data;
 
   const subscriberId = data.user?.subscriber_id;
-
-  console.log({ data })
 </script>
 
 <section class="">

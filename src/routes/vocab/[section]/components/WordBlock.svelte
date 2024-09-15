@@ -71,7 +71,7 @@
 			<p class="text-lg text-text-300">{wordObj.answer.egyptianArabicTransliteration}</p>
 		{/if}
 	</div>
-	<div class="grid grid-cols-2 gap-2 sm:grid-cols-1">
+	<div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
 		<Button type="button" onClick={toggleHint}>{showHint ? 'Hide' : 'Show'} hint</Button>
 		<Button type="button" onClick={() => speakArabic(wordObj.answer.egyptianArabic)}
 			>Listen to prononcuation</Button
