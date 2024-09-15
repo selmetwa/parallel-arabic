@@ -10,36 +10,36 @@ export const stories = {
   'at-the-restaurant':  {
     isPaywalled: false,
     story: atTheRestaurant,
-    description: 'Sentence by sentence audio',
+    description: 'With audio',
   },
   'at-the-fruit-vendor': {
     isPaywalled: true,
     story: atTheFruitVendor,
-    description: 'Sentence by sentence audio',
+    description: 'With audio',
     type: 'sentence-by-sentence-audio',
   },
   'koshary-shop': {
     isPaywalled: true,
     story: kosharyShop,
-    description: 'Sentence by sentence audio',
+    description: 'With audio',
     type: 'sentence-by-sentence-audio',
   },
   'at-the-barbers': {
     isPaywalled: true,
     story: atTheBarbers,
-    description: 'Sentence by sentence audio',
+    description: 'With audio',
     type: 'sentence-by-sentence-audio',
   },
   'at-the-hotel': {
     isPaywalled: true,
     story: atTheHotel,
-    description: 'Sentence by sentence audio',
+    description: 'With audio',
     type: 'sentence-by-sentence-audio'
   },
   'omar-and-sarah': {
     isPaywalled: true,
     story: omarAndSarah,
-    description: 'Audio for the whole story',
+    description: 'With audio',
     type: 'audio'
   },
   'cafe': {

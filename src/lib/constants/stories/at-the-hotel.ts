@@ -272,6 +272,7 @@ for (let i = 0; i < a; i++) {
 }
 
 export const atTheHotel = {
+  audio: '/audio/at-the-hotel/full-audio.wav',
   title: {
     arabic: "بالفندق",
     english: "At the Hotel",
