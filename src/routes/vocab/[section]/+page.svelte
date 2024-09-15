@@ -3,7 +3,7 @@
 	import WordBlock from './components/WordBlock.svelte';
 	import type { wordObjectGroup } from '$lib/types';
 	import { sections } from '$lib/constants/sections';
-	import { PUBLIC_TEST_PRICE_ID } from '$env/static/public';
+	import { PUBLIC_PRICE_ID } from '$env/static/public';
 
 	export let data: any;
 
@@ -64,7 +64,7 @@
 		<p class="mt-2 text-xl text-text-200">To continue practicing, please subscribe.</p>
 		<form method="POST" action="/?/subscribe" class="mx-auto mt-4 w-fit">
 			<!-- Modify this value using your own Stripe price_id -->
-			<input type="hidden" name="price_id" value={PUBLIC_TEST_PRICE_ID} />
+			<input type="hidden" name="price_id" value={PUBLIC_PRICE_ID} />
 
 			<Button type="submit">Subscribe</Button>
 		</form>

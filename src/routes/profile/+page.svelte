@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
   import Button from '$lib/components/Button.svelte';
-  import { PUBLIC_TEST_PRICE_ID } from '$env/static/public'
+  import { PUBLIC_PRICE_ID } from '$env/static/public'
 	import Checkmark from '$lib/components/Checkmark.svelte';
   export let data;
 
@@ -47,7 +47,7 @@
     </p>
     <form method="POST" action="/?/subscribe" class="mt-6">
       <!-- Modify this value using your own Stripe price_id -->
-      <input type="hidden" name="price_id" value={PUBLIC_TEST_PRICE_ID} />
+      <input type="hidden" name="price_id" value={PUBLIC_PRICE_ID} />
         <Button type="submit">
           Re-Subscribe
         </Button>
@@ -93,7 +93,7 @@
 			</ul>
       <form method="POST" action="/?/subscribe" class="mt-6">
         <!-- Modify this value using your own Stripe price_id -->
-        <input type="hidden" name="price_id" value={PUBLIC_TEST_PRICE_ID} />
+        <input type="hidden" name="price_id" value={PUBLIC_PRICE_ID} />
           <Button type="submit">
             Subscribe
           </Button>

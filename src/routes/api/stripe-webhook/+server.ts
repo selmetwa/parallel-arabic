@@ -1,14 +1,20 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import Stripe from 'stripe';
-import { TEST_STRIPE_SECRET,  } from '$env/static/private';
+import { STRIPE_SECRET,  } from '$env/static/private';
 import { PUBLIC_TEST_WEBHOOK_SECRET } from '$env/static/public';
 import { json } from '@sveltejs/kit';
 import { db } from '$lib/server/db';
 
 // Initialize Stripe with your secret key
-const stripe = new Stripe(TEST_STRIPE_SECRET, {
+const stripe = new Stripe(STRIPE_SECRET, {
 	apiVersion: '2024-08-11'
 });
+
+export const GET = async () => {
+  return json({
+    message: "Hey, you're not supposed to be here!"
+  })
+}
 
 export const POST: RequestHandler = async ({ request }) => {
 	const signature = request.headers.get('stripe-signature') || '';

@@ -1,7 +1,7 @@
 <script>
 	import Checkmark from '$lib/components/Checkmark.svelte';
   import Button from '$lib/components/Button.svelte';
-  import { PUBLIC_TEST_PRICE_ID } from '$env/static/public'
+  import { PUBLIC_PRICE_ID } from '$env/static/public'
 </script>
 
 <section class="mt-4 flex flex-col gap-6 px-6 py-8 sm:px-8">
@@ -89,7 +89,7 @@
 			</ul>
       <form method="POST" action="/?/subscribe" class="px-4 mt-4">
         <!-- Modify this value using your own Stripe price_id -->
-        <input type="hidden" name="price_id" value={PUBLIC_TEST_PRICE_ID} />
+        <input type="hidden" name="price_id" value={PUBLIC_PRICE_ID} />
 
         <Button type="submit">
           Subscribe
