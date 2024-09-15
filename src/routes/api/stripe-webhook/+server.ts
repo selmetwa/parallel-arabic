@@ -1,7 +1,7 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import Stripe from 'stripe';
 import { STRIPE_SECRET,  } from '$env/static/private';
-import { PUBLIC_TEST_WEBHOOK_SECRET } from '$env/static/public';
+import { PUBLIC_WEBHOOK_SECRET } from '$env/static/public';
 import { json } from '@sveltejs/kit';
 import { db } from '$lib/server/db';
 
@@ -23,7 +23,7 @@ export const POST: RequestHandler = async ({ request }) => {
 	let event;
 
 	try {
-		event = stripe.webhooks.constructEvent(payload, signature, PUBLIC_TEST_WEBHOOK_SECRET);
+		event = stripe.webhooks.constructEvent(payload, signature, PUBLIC_WEBHOOK_SECRET);
 	} catch (err) {
 		return json({
 			status: 400,
