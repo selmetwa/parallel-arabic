@@ -2,7 +2,7 @@
 	import WordBlock from './components/WordBlock.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import { sections } from '$lib/constants/sections';
-	import { PUBLIC_TEST_PRICE_ID } from '$env/static/public';
+	import { PUBLIC_PRICE_ID } from '$env/static/public';
 
 	export let data;
 
@@ -38,7 +38,7 @@
   <h1 class="text-2xl font-bold text-text-300">You are not subscribed.</h1>
   <p class="mt-2 text-xl text-text-200">To continue practicing, please subscribe.</p>
   <form method="POST" action="/?/subscribe" class="mx-auto mt-4 w-fit">
-    <input type="hidden" name="price_id" value={PUBLIC_TEST_PRICE_ID} />
+    <input type="hidden" name="price_id" value={PUBLIC_PRICE_ID} />
 
     <Button type="submit">Subscribe</Button>
   </form>

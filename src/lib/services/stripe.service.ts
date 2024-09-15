@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Stripe } from 'stripe';
-import { PUBLIC_DOMAIN, PUBLIC_TEST_STRIPE_PUBLISHABLE_KEY } from '$env/static/public';
-import { TEST_STRIPE_SECRET } from '$env/static/private';
+import { PUBLIC_DOMAIN, PUBLIC_STRIPE_PUBLISHABLE_KEY } from '$env/static/public';
+import { STRIPE_SECRET } from '$env/static/private';
 
 let stripe: Stripe | undefined;
 
@@ -94,8 +94,8 @@ const subscribe = async (priceId: string): Promise<Stripe.Checkout.Session | und
  *
  */
 const initializeStripe = async (): Promise<boolean> => {
-	if (TEST_STRIPE_SECRET && PUBLIC_TEST_STRIPE_PUBLISHABLE_KEY) {
-		stripe = new Stripe(TEST_STRIPE_SECRET);
+	if (STRIPE_SECRET && PUBLIC_STRIPE_PUBLISHABLE_KEY) {
+		stripe = new Stripe(STRIPE_SECRET);
 		return true;
 	}
 	return false;
