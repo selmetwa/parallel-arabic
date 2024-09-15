@@ -17,10 +17,7 @@ async function migrateToLatest() {
 		}),
 	});
 
-	console.log({ migrator });
 	const { error, results } = await migrator.migrateToLatest();
-
-	console.log({ error, results });
 
 	results?.forEach((it) => {
 		if (it.status === 'Success') {

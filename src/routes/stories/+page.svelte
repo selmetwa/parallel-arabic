@@ -14,7 +14,6 @@ function handleCloseModal() {
   isModalOpen = false;
 }
 
-  console.log({ stories })
 </script>
 
 <PaywallModal isOpen={isModalOpen} {handleCloseModal}></PaywallModal>

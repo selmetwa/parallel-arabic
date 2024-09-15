@@ -2,7 +2,6 @@
 import { Kysely } from 'kysely';
 
 export async function up(db: Kysely<any>): Promise<void> {
-  console.log('running migration up');
   await db.schema
     .alterTable('user')
     .addColumn('subscription_end_date', 'bigint')

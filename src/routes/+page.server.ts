@@ -110,7 +110,7 @@ export const actions = {
           .where('id', '=', userId)
           .executeTakeFirst();
   
-      console.log(result.numUpdatedRows);
+        console.log(result.numUpdatedRows);
         redirect(302, "/pricing/canceled");
       }
     }

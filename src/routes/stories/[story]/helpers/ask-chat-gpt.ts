@@ -7,7 +7,6 @@ type TFullSentence = {
 export const askChatGTP = async (word: string, type: string, fullSentence: TFullSentence) => {
   let question = '';
 
-  console.log('fullSentence', fullSentence);
   const a = `Please use the following text to get the definition: ${fullSentence.arabic} ${fullSentence.transliteration} ${fullSentence.english}`;
   if (type === 'arabic') {
     question = `What does ${word} mean in Egyptian Arabic? ${a} `;
@@ -17,7 +16,6 @@ export const askChatGTP = async (word: string, type: string, fullSentence: TFull
     question = `What does ${word} mean in Egyptian Arabic? ${a}`;
   }
 
-  console.log('question', question);
   const res = await fetch('/api/open-ai', {
     method: 'POST',
     headers: { accept: 'application/json' },

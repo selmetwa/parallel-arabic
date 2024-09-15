@@ -452,15 +452,6 @@ const transliteration = [
 ];
 
 const a = arabic.length;
-const e = english.length;
-const t = transliteration.length;
-
-
-console.log('koshary')
-console.log({
-  a, e, t
-})
-
 const output = [];
 
 for (let i = 0; i < a; i++) {

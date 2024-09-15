@@ -57,8 +57,6 @@
 			type: type
 		});
 	}
-
-  console.log('sentence', sentence);
 </script>
 
 <div 
