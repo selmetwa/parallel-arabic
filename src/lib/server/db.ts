@@ -3,8 +3,9 @@ import { Kysely, SqliteDialect } from 'kysely';
 import type { ColumnType } from 'kysely';
 import { readFileSync } from 'fs';
 
-export const sqliteDatabase = sqlite('db.sqlite');
-sqliteDatabase.exec(readFileSync('schema.sql', 'utf8'));
+export const sqliteDatabase = sqlite('src/data/db.sqlite');
+
+sqliteDatabase.exec(readFileSync('src/data/schema.sql', 'utf8'));
 
 const dialect = new SqliteDialect({
 	database: sqliteDatabase

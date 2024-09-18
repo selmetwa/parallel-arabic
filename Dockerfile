@@ -4,6 +4,9 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 
+# Install sqlite3
+RUN apt-get update && apt-get install -y sqlite3
+
 # Declare build arguments for secrets
 ARG OPEN_API_KEY
 ARG STRIPE_SECRET
