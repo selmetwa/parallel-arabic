@@ -11,3 +11,5 @@ vite.config.ts.timestamp-*
 todo.md
 static/anki_decks/
 Dockerfile
+*.sqlite3*
+*.sqlite*
