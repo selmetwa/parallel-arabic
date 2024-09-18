@@ -16,6 +16,10 @@ primary_region = 'ewr'
   min_machines_running = 0
   processes = ['app']
 
+[mounts]
+  source = "database_volume"
+  destination = "src/data" 
+
 [[vm]]
   memory = '1gb'
   cpu_kind = 'shared'
