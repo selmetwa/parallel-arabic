@@ -29,26 +29,10 @@ RUN TEST_STRIPE_SECRET=$TEST_STRIPE_SECRET
 RUN PUBLIC_TEST_PRICE_ID=$PUBLIC_TEST_PRICE_ID
 RUN PUBLIC_TEST_WEBHOOK_SECRET=$PUBLIC_TEST_WEBHOOK_SECRET
 RUN TEST_PUBLIC_DOMAIN=$TEST_PUBLIC_DOMAIN
-# RUN --mount=type=secret,id=OPEN_API_KEY 
-# RUN --mount=type=secret,id=STRIPE_SECRET 
-# RUN --mount=type=secret,id=PUBLIC_STRIPE_PUBLISHABLE_KEY 
-# RUN --mount=type=secret,id=PUBLIC_DOMAIN 
-# RUN --mount=type=secret,id=PUBLIC_PRICE_ID 
-# RUN --mount=type=secret,id=PUBLIC_TEST_STRIPE_PUBLISHABLE_KEY 
-# RUN --mount=type=secret,id=TEST_STRIPE_SECRET 
-# RUN --mount=type=secret,id=PUBLIC_TEST_PRICE_ID 
-# RUN --mount=type=secret,id=PUBLIC_TEST_WEBHOOK_SECRET 
-# RUN --mount=type=secret,id=TEST_PUBLIC_DOMAIN 
-# RUN OPEN_API_KEY="$(cat /run/secrets/OPEN_API_KEY)" 
-# RUN STRIPE_SECRET="$(cat /run/secrets/STRIPE_SECRET)" 
-# RUN PUBLIC_STRIPE_PUBLISHABLE_KEY="$(cat /run/secrets/PUBLIC_STRIPE_PUBLISHABLE_KEY)" 
-# RUN PUBLIC_DOMAIN="$(cat /run/secrets/PUBLIC_DOMAIN)" 
-# RUN PUBLIC_PRICE_ID="$(cat /run/secrets/PUBLIC_PRICE_ID)" 
-# RUN PUBLIC_TEST_STRIPE_PUBLISHABLE_KEY="$(cat /run/secrets/PUBLIC_TEST_STRIPE_PUBLISHABLE_KEY)" 
-# RUN TEST_STRIPE_SECRET="$(cat /run/secrets/TEST_STRIPE_SECRET)" 
-# RUN PUBLIC_TEST_PRICE_ID="$(cat /run/secrets/PUBLIC_TEST_PRICE_ID)" 
-# RUN PUBLIC_TEST_WEBHOOK_SECRET="$(cat /run/secrets/PUBLIC_TEST_WEBHOOK_SECRET)" 
-# RUN TEST_PUBLIC_DOMAIN="$(cat /run/secrets/TEST_PUBLIC_DOMAIN)" 
+
+# Setup sqlite3 on a separate volume
+RUN mkdir -p /data
+VOLUME /data
 
 EXPOSE 5173
 CMD ["npm", "run", "dev", "--open"]

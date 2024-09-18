@@ -18,7 +18,7 @@ primary_region = 'ewr'
 
 [mounts]
   source = "database_volume"
-  destination = "src/data" 
+  destination = "/data"
 
 [[vm]]
   memory = '1gb'
