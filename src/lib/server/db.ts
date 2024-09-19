@@ -3,8 +3,10 @@ import { Kysely, SqliteDialect } from 'kysely';
 import type { ColumnType } from 'kysely';
 import { readFileSync } from 'fs';
 
+// sqlite:////Users/sherifelmetwally/Desktop/parallel-arabic/data/db.sqlite
+
 // /Users/sherifelmetwally/Desktop/parallel-arabic/data/db.sqlite
-export const sqliteDatabase = sqlite('data/db.sqlite');
+export const sqliteDatabase = sqlite('/Users/sherifelmetwally/Desktop/parallel-arabic/data/db.sqlite');
 
 sqliteDatabase.exec(readFileSync('schema.sql', 'utf8'));
 
