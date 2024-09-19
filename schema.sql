@@ -4,8 +4,8 @@ CREATE TABLE if not exists user (
     email_verified INTEGER NOT NULL,
     is_subscriber BOOLEAN NOT NULL,
     subscriber_id VARCHAR(255),
-    subscription_end_date BIGINT
-    sentences_viewed INTEGER
+    subscription_end_date BIGINT,
+    sentences_viewed INTEGER,
     verb_conjugation_tenses_viewed INTEGER
 );
 CREATE TABLE if not exists user_key (
