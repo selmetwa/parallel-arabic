@@ -45,6 +45,8 @@ export const actions: Actions = {
 					email: email.toLowerCase(),
 					email_verified: Number(false),
           is_subscriber: 0,
+          sentences_viewed: 0,
+          verb_conjugation_tenses_viewed: 0,
 				}
 			});
 			const session = await auth.createSession({
