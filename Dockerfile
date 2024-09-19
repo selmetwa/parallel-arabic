@@ -4,6 +4,9 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 
+# Copy the .env.production file into the container
+COPY .env.production .env
+
 # Install sqlite3
 RUN apt-get update && apt-get install -y sqlite3
 
