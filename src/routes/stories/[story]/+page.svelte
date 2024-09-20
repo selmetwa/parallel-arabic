@@ -136,7 +136,7 @@
 			response = data.message;
 		}
 
-		setTimeout(() => {
+		setTimeout(() => { 
 			error = '';
 			response = '';
 		}, 3000);
