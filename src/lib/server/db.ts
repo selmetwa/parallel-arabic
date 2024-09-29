@@ -4,7 +4,6 @@ import type { ColumnType } from 'kysely';
 import { readFileSync } from 'fs';
 import { DB_PATH } from '$env/static/private';
 
-
 console.log('DB_PATH', DB_PATH);
 export const sqliteDatabase = sqlite(DB_PATH);
 

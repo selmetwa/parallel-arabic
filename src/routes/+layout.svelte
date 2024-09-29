@@ -10,7 +10,6 @@
   import RadioButton from '$lib/components/RadioButton.svelte';
 
   export let data;
-
 	let isOpen = false;
 
 	let root: HTMLElement | null;
@@ -29,16 +28,8 @@
 		isOpen = true;
 	}
 
-	const onHue = (event: Event) => {
-		const value = (event.target as HTMLInputElement).value;
-
-		localStorage.setItem('--brand-hue', value);
-		root?.style.setProperty('--brand-hue', value);
-		hue.set(value);
-	};
-
 	const onTheme = (event: Event) => {
-		const value = (event.target as HTMLInputElement).value;
+	 const value = (event.target as HTMLInputElement).value;
 
 		localStorage.setItem('color-scheme', value);
 		doc?.setAttribute('color-scheme', value);
@@ -105,7 +96,11 @@
 			</div>
 		</aside>
 		<main class="relative !min-h-full shrink-0 border-x border-tile-600 bg-tile-200 pb-24 h-fit">
-			<Navigation {handleOpenDrawer} session={data.session} />
+			<Navigation 
+        {handleOpenDrawer} 
+        session={data.session}
+        userEmail={data?.user?.email ?? ""}
+      />
         <slot />
       <Footer />
     </main>

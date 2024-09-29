@@ -10,7 +10,7 @@
 		<div class="mt-6">
 			<a
 				href="/signup"
-				class="mt-6 w-full whitespace-nowrap border border-tile-600 bg-tile-500 px-5 py-2 font-semibold text-text-300 text-text-300 duration-300 hover:bg-tile-600"
+				class="mt-6 w-full whitespace-nowrap border border-tile-600 bg-tile-500 px-5 py-2 font-semibold  text-text-300 duration-300 hover:bg-tile-600"
 			>
 				Get Started Now!
 			</a>

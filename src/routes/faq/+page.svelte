@@ -1,7 +1,6 @@
 <section class="px-4 sm:px-16 mt-8">
   <h1 class="text-text-200 text-4xl font-bold">Frequently Asked Questions</h1>
 </section>
-
 <section class="px-4 sm:px-16 flex flex-col gap-2 mt-10">
 	<h2 class="text-text-200 text-3xl font-bold">Why Learn Egyptian Arabic</h2>
 	<p class="text-text-300 text-lg leading-2">
