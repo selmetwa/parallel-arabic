@@ -365,17 +365,6 @@ main {
   justify-content: center;
 }
 
-header {
-  width: 100%;
-  margin-top: 30px;
-}
-
-.nav {
-  display: flex;
-  flex-direction: row;
-  gap: 6px;
-}
-
 ul {
   margin-bottom: 8px;
 }
