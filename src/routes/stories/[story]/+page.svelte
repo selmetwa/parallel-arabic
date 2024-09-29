@@ -16,7 +16,7 @@
 	let mode = Mode.SingleText;
 	const sentences = data.sentences;
 
-	let timer: any = null;
+	let timer = null;
 	$: index = 0;
 	$: isLoading = false;
 	$: isModalOpen = false;
@@ -69,9 +69,9 @@
 	}
 
 	const modeOptions = [
-		{ value: Mode.SingleText, text: 'Single Text' },
-		{ value: Mode.BiText, text: 'Bi Text' },
-		{ value: Mode.SentanceView, text: 'Sentence View' }
+		{ value: Mode.SingleText, text: 'Arabic' },
+		{ value: Mode.BiText, text: 'English & Arabic' },
+		{ value: Mode.SentanceView, text: 'English, Arabic, and Transliteration' }
 	];
 
 	function updateMode(event: Event) {
@@ -170,8 +170,8 @@
 					{#each modeOptions as option}
 						<li>
 							<RadioButton
-								wrapperClass="!p-2 h-min"
-								className="text-sm !p-1 h-min font-semibold"
+								wrapperClass="!p-1 h-min"
+								className="text-xs !p-1 h-min font-semibold"
 								selectableFor={option.value}
 								value={option.value}
 								text={option.text}
