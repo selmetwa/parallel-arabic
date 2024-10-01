@@ -3,10 +3,6 @@
   import Button from "./Button.svelte";
 
   export let session
-  export let userEmail;
-
-
-  const adminEmails = ["sherifliketheclash@gmail.com", "selmetwa@gmail.com"]
 </script>
 
 <nav class="w-full border-b border-tile-600 py-4 bg-tile-300 relative">
@@ -17,9 +13,6 @@
         <li><a class="text-text-300 text-sm sm:text-base underline" href="/write">Write</a></li>
         <li><a class="text-text-300 text-sm sm:text-base underline" href="/alphabet">Alphabet</a></li>
         <li><a class="text-text-300 text-sm sm:text-base underline" href="/vocab">Vocab</a></li>
-        {#if adminEmails.includes(userEmail)}
-          <li><a class="text-text-300 text-sm sm:text-base underline" href="/admin-panel">Admin</a></li>
-        {/if}
         {#if session}
           <li><a class="text-text-300 text-sm sm:text-base underline" href="/profile">Profile</a></li>
         {/if}
