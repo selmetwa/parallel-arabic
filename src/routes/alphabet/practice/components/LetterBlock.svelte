@@ -17,7 +17,8 @@
 	let showHint = false;
   let showAnswer = false;
   $: isInfoModalOpen = false;
-
+  $: keyboardValue = '';
+  let keyboard = 'virtual'
 
 	$: if (letter.isolated) {
 		attempt = '';
@@ -25,6 +26,7 @@
 		showHint = false;
     showAnswer = false;
     isInfoModalOpen = false;
+    keyboardValue = '';
 	}
 
 	function toggleHint() {
@@ -87,6 +89,16 @@
   function closeInfoModal() {
     isInfoModalOpen = false;
   }
+
+  function onRegularKeyboard(e) {
+    const value = e.target.value;
+    compareMyInput(value);
+    keyboardValue = value;
+  }
+
+  function toggleKeyboard() {
+    keyboard = keyboard === 'virtual' ? 'physical' : 'virtual';
+  }
 </script>
 
 <div class="flex flex-col sm:flex-row justify-between">
@@ -130,8 +142,22 @@
   <Modal isOpen={isInfoModalOpen} handleCloseModal={closeInfoModal} height="70%" width="80%">
     <KeyboardDocumentation></KeyboardDocumentation>
   </Modal>
-	<div class="mt-2">
-		<arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
-	</div>
+  <div>
+    <button on:click={toggleKeyboard}>
+      {keyboard === 'virtual' ? 'Use other keyboard' : 'Use builtin keyboard'}
+    </button>
+    <div class={cn('block', { 'hidden': keyboard !== 'virtual'})}>
+      <arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
+      <button class="mt-3 text-text-300 underline" on:click={openInfoModal}>How does this keyboard work?</button>
+    </div>
+    <textarea 
+    value={keyboardValue}
+    on:input={onRegularKeyboard}
+    class={cn(
+      "block w-full min-h-32 text-text-300 bg-tile-400",
+      {'hidden': keyboard === 'virtual'}
+    )}
+    />
+  </div>
   <button class="text-text-300 underline mt-2" on:click={openInfoModal}>How does this keyboard work?</button>
 </div>
