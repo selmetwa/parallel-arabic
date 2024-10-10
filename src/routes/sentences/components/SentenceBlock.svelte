@@ -42,6 +42,8 @@
 	$: isLoadingDefinition = false;
 	$: definition = '';
   $: targetWord = '';
+  $: keyboardValue = '';
+  let keyboard = 'virtual'
 
 	$: if (sentence.arabic) {
 		attemptTemp = [];
@@ -54,6 +56,7 @@
 		isLoadingDefinition = false;
 		definition = '';
     targetWord = '';
+    keyboardValue = '';
 
 		if (typeof document !== 'undefined') {
 			const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
@@ -164,6 +167,16 @@
 		definition = data.message.message.content;
 		isLoadingDefinition = false;
 	}
+
+  function onRegularKeyboard(e) {
+    const value = e.target.value;
+    compareMyInput(value);
+    keyboardValue = value;
+  }
+
+  function toggleKeyboard() {
+    keyboard = keyboard === 'virtual' ? 'physical' : 'virtual';
+  }
 </script>
 
 <DefinitionModal
@@ -244,9 +257,20 @@
 		<KeyboardDocumentation></KeyboardDocumentation>
 	</Modal>
 	<div class="mt-4 block">
-		<arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
-		<button class="mt-3 text-text-300 underline" on:click={openInfoModal}
-			>How does this keyboard work?
-		</button>
+    <button on:click={toggleKeyboard}>
+      {keyboard === 'virtual' ? 'Use other keyboard' : 'Use builtin keyboard'}
+    </button>
+    <div class={cn('block', { 'hidden': keyboard !== 'virtual'})}>
+      <arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
+      <button class="mt-3 text-text-300 underline" on:click={openInfoModal}>How does this keyboard work?</button>
+    </div>
+    <textarea 
+    on:input={onRegularKeyboard}
+    value={keyboardValue}
+    class={cn(
+      "block w-full min-h-32 text-text-300 bg-tile-400",
+      {'hidden': keyboard === 'virtual'}
+    )}
+    />
 	</div>
 {/if}

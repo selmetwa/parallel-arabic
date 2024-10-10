@@ -32,12 +32,15 @@
 	let attemptTemp: Attempt[] = [];
 	$: attempt = attemptTemp;
 	$: isCorrect = false;
+  $: keyboardValue = '';
+  let keyboard = 'virtual'
 
 	let conjugatedVerbArray: Array<ConjugatedVerb> = [];
 
 	$: if (conjugationIndex) {
 		attemptTemp = [];
 		isCorrect = false;
+    keyboardValue = '';
 	}
 
 	function conjugate(verb: {
@@ -182,6 +185,16 @@
 
 		verbArray = cleanWord;
 	}
+
+  function onRegularKeyboard(e) {
+    const value = e.target.value;
+    compareMyInput(value);
+    keyboardValue = value;
+  }
+
+  function toggleKeyboard() {
+    keyboard = keyboard === 'virtual' ? 'physical' : 'virtual';
+  }
 </script>
 
 {#if isCorrect}
@@ -248,5 +261,18 @@
 	</span>
 </div>
 <div class="mt-5">
-	<arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
+  <button on:click={toggleKeyboard}>
+    {keyboard === 'virtual' ? 'Use other keyboard' : 'Use builtin keyboard'}
+  </button>
+  <div class={cn('block', { 'hidden': keyboard !== 'virtual'})}>
+    <arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
+  </div>
+  <textarea 
+  value={keyboardValue}
+  on:input={onRegularKeyboard}
+  class={cn(
+    "block w-full min-h-32 text-text-300 bg-tile-400",
+    {'hidden': keyboard === 'virtual'}
+  )}
+  />
 </div>

@@ -36,19 +36,15 @@
 	let showAnswer = false;
 	let correctAnswer = '';
 	let egyptianArabicWord = '';
+  let keyboard = 'virtual'
+
   $: isInfoModalOpen = false;
+  $: keyboardValue = '';
 
   const regex = /[-–]/;
 
 	if (regex.test(word.egyptianArabic)) {
     egyptianArabicWord = word.egyptianArabic.split(regex)[0].trim();
-		// if (word.egyptianArabic.includes('–')) {
-		// 	egyptianArabicWord = word.egyptianArabic.split('–')[0].trim();
-		// }
-
-		// if (word.egyptianArabic.includes('-')) {
-		// 	egyptianArabicWord = word.egyptianArabic.split('-')[0].trim();
-		// }
 	} else {
 		egyptianArabicWord = word.egyptianArabic;
 	}
@@ -69,16 +65,10 @@
 		showAnswer = false;
 		correctAnswer = '';
     isInfoModalOpen = false;
-  
+    keyboardValue = '';
+
 		if (regex.test(word.egyptianArabic)) {
       egyptianArabicWord = word.egyptianArabic.split(regex)[0].trim();
-			// if (word.egyptianArabic.includes('–')) {
-			// 	egyptianArabicWord = word.egyptianArabic.split('–')[0].trim();
-			// }
-
-			// if (word.egyptianArabic.includes('-')) {
-			// 	egyptianArabicWord = word.egyptianArabic.split('-')[0].trim();
-			// }
 		} else {
 			egyptianArabicWord = word.egyptianArabic;
 		}
@@ -181,6 +171,16 @@
   function closeInfoModal() {
     isInfoModalOpen = false;
   }
+
+  function onRegularKeyboard(e) {
+    const value = e.target.value;
+    keyboardValue = value;
+    compareMyInput(value);
+  }
+
+  function toggleKeyboard() {
+    keyboard = keyboard === 'virtual' ? 'physical' : 'virtual';
+  }
 </script>
 
 <div>
@@ -250,8 +250,21 @@
         <KeyboardDocumentation></KeyboardDocumentation>
       </Modal>
 			<div class={cn("block", { '!hidden': mode === 'draw'})}>
-				<arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
-        <button class="mt-3 text-text-300 underline" on:click={openInfoModal}>How does this keyboard work?</button>
+        <button on:click={toggleKeyboard}>
+          {keyboard === 'virtual' ? 'Use other keyboard' : 'Use builtin keyboard'}
+        </button>
+        <div class={cn('block', { 'hidden': keyboard !== 'virtual'})}>
+          <arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
+          <button class="mt-3 text-text-300 underline" on:click={openInfoModal}>How does this keyboard work?</button>
+        </div>
+        <textarea 
+        value={keyboardValue}
+        on:input={onRegularKeyboard}
+        class={cn(
+          "block w-full min-h-32 text-text-300 bg-tile-400",
+          {'hidden': keyboard === 'virtual'}
+        )}
+        />
 			</div>
 	</div>
 </div>
