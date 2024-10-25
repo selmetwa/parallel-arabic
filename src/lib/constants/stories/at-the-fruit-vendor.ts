@@ -1,103 +1,129 @@
 const arabic = [
   {
     speaker: "جورج",
-    text: "لو سمحت بكام المانجا دي؟"
+    text: "لو سمحت بكام المانجا دي؟",
+    audio: '/audio/at-the-fruit-vendor/sentence-audio/1.wav'
+
   },
   {
     speaker: "الفكهاني",
-    text: "أهلًا، اتفضل يا باشا، المانجا دي بـ ٣٥ جنيه، وفيه مانجا من الإسماعيلية لسه جايالي بـ ٤٥ جنيه الكليو"
+    text: "أهلًا، اتفضل يا باشا، المانجا دي بـ ٣٥ جنيه، وفيه مانجا من الإسماعيلية لسه جايالي بـ ٤٥ جنيه الكليو",
+    audio: '/audio/at-the-fruit-vendor/sentence-audio/2.wav'
   },
   {
     speaker: "جورج",
-    text: "اديني اتنين كيلو من دي، واتنين من دي"
+    text: "اديني اتنين كيلو من دي، واتنين من دي",
+    audio: '/audio/at-the-fruit-vendor/sentence-audio/3.wav'
   },
   {
     speaker: "زبون",
-    text: "السلام عليكم"
+    text: "السلام عليكم",
+    audio: '/audio/at-the-fruit-vendor/sentence-audio/4.wav'
   },
   {
     speaker: "الفكهاني",
-    text: "وعليكم السلام .. أهلًا يا باشا، إزاي حضرتك والأولاد؟"
+    text: "وعليكم السلام .. أهلًا يا باشا، إزاي حضرتك والأولاد؟",
+    audio: '/audio/at-the-fruit-vendor/sentence-audio/5.wav'
   },
   {
     speaker: "زبون",
-    text: "الحمد لله بخير، اسمع، أنا عايز ۲ كيلو موز و۲ كيلو عنب أحمر، وكيلو برقوق"
+    text: "الحمد لله بخير، اسمع، أنا عايز ۲ كيلو موز و۲ كيلو عنب أحمر، وكيلو برقوق",
+    audio: '/audio/at-the-fruit-vendor/sentence-audio/6.wav'
   },
   {
     speaker: "جورج",
-    text: "إيه البرقوق ده؟"
+    text: "إيه البرقوق ده؟",
+    audio: '/audio/at-the-fruit-vendor/sentence-audio/7.wav'
   },
   {
     speaker: "الفكهاني",
-    text: "هو ده يا أستاذ .. فاكهة جميلة جدًا مليانة فيتامينات وبتقلل الإمساك ومشاكل الهضم"
+    text: "هو ده يا أستاذ .. فاكهة جميلة جدًا مليانة فيتامينات وبتقلل الإمساك ومشاكل الهضم",
+    audio: '/audio/at-the-fruit-vendor/sentence-audio/8.wav'
   },
   {
     speaker: "جورج",
-    text: "ماشي، هاتلي أنا كمان كيلو برقوق أجربه"
+    text: "ماشي، هاتلي أنا كمان كيلو برقوق أجربه",
+    audio: '/audio/at-the-fruit-vendor/sentence-audio/9.wav'
   },
   {
     speaker: "زبون",
-    text: "حضرتك منين؟"
+    text: "حضرتك منين؟",
+    audio: '/audio/at-the-fruit-vendor/sentence-audio/10.wav'
   },
   {
     speaker: "جورج",
-    text: "من إنجلترا"
+    text: "من إنجلترا",
+    audio: '/audio/at-the-fruit-vendor/sentence-audio/11.wav'
   },
   {
     speaker: "زبون",
-    text: "تعرف إني كنت في إيرلندا لمدة سنتين عشان الماجستير. كل الناس هناك كانوا مقتنعين إني أيرلندي عشان شكلي زَيُّهم"
+    text: "تعرف إني كنت في إيرلندا لمدة سنتين عشان الماجستير. كل الناس هناك كانوا مقتنعين إني أيرلندي عشان شكلي زَيُّهم",
+    audio: '/audio/at-the-fruit-vendor/sentence-audio/12.wav'
   },
   {
     speaker: "جورج",
-    text: "صح، أنت أبيضاني أوي فعلًا"
+    text: "صح، أنت أبيضاني أوي فعلًا",
+    audio: '/audio/at-the-fruit-vendor/sentence-audio/13.wav'
   },
   {
     speaker: "الفكهاني",
-    text: "تؤمر بحاجة تانية يا باشا؟"
+    text: "تؤمر بحاجة تانية يا باشا؟",
+    audio: '/audio/at-the-fruit-vendor/sentence-audio/14.wav'
   },
   {
     speaker: "جورج",
-    text: "ممكن كيلو تين شوكي معاهم"
+    text: "ممكن كيلو تين شوكي معاهم",
+    audio: '/audio/at-the-fruit-vendor/sentence-audio/15.wav'
   },
   {
     speaker: "زبون",
-    text: "أنت بتعمل إيه في القاهرة صحيح؟"
+    text: "أنت بتعمل إيه في القاهرة صحيح؟",
+    audio: '/audio/at-the-fruit-vendor/sentence-audio/16.wav'
   },
   {
     speaker: "جورج",
-    text: "بعمل ماجستير في اللغة العربية في جامعة القاهرة"
+    text: "بعمل ماجستير في اللغة العربية في جامعة القاهرة",
+    audio: '/audio/at-the-fruit-vendor/sentence-audio/17.wav'
   },
   {
     speaker: "زبون",
-    text: "طب جميل والله، العربي بتاعك حلو أوي"
+    text: "طب جميل والله، العربي بتاعك حلو أوي",
+    audio: '/audio/at-the-fruit-vendor/sentence-audio/18.wav'
   },
   {
     speaker: "جورج",
-    text: "شكراً .. أنا بدرس عربي فصحى في الجامعة .. بس بتعلم مصري من الكلام مع الناس في الشارع كل يوم"
+    text: "شكراً .. أنا بدرس عربي فصحى في الجامعة .. بس بتعلم مصري من الكلام مع الناس في الشارع كل يوم",
+    audio: '/audio/at-the-fruit-vendor/sentence-audio/19.wav'
   },
   {
     speaker: "زبون",
-    text: "شاطر جداً .. بالتوفيق"
+    text: "شاطر جداً .. بالتوفيق",
+    audio: '/audio/at-the-fruit-vendor/sentence-audio/20.wav'
   },
   {
     speaker: "الفكهاني",
-    text: "اتفضل، حسابك ۲۲٥ جنيه يا أستاذ"
+    text: "اتفضل، حسابك ۲۲٥ جنيه يا أستاذ",
+    audio: '/audio/at-the-fruit-vendor/sentence-audio/21.wav'
   },
   {
     speaker: "جورج",
-    text: "شكراً يا عم"
+    text: "شكراً يا عم",
+    audio: '/audio/at-the-fruit-vendor/sentence-audio/22.wav'
   },
   {
     speaker: "الفكهاني",
-    text: "عرفة"
+    text: "عرفة",
+    audio: '/audio/at-the-fruit-vendor/sentence-audio/23.wav'
   },
   {
     speaker: "جورج",
-    text: "شكرًا لحضرتك يا عم عرفة، فرصة سعيدة. مع السلامة"
+    text: "شكرًا لحضرتك يا عم عرفة، فرصة سعيدة. مع السلامة",
+    audio: '/audio/at-the-fruit-vendor/sentence-audio/24.wav'
   },
   {
     speaker: "زبون",
-    text: "أنا أسعد.. سلام"
+    text: "أنا أسعد.. سلام",
+    audio: '/audio/at-the-fruit-vendor/sentence-audio/25.wav'
   }
 ];
 

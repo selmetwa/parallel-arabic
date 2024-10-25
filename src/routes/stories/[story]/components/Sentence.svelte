@@ -1,8 +1,9 @@
 <script lang="ts">
 	import { askChatGTP } from '../helpers/ask-chat-gpt';
 	import cn from 'classnames';
-	import Button from '$lib/components/Button.svelte';
 	import Checkmark from '$lib/components/Checkmark.svelte';
+	import Audio from '$lib/components/Audio.svelte';
+	import { Mode } from '../types';
 
 	type TWholeSentence = {
 		arabic: TSentence;
@@ -19,6 +20,8 @@
 	export let setActiveWord: (word: any) => void;
 	export let type = '';
 	export let classname = '';
+  export let index;
+  export let mode;
 
 	$: _sentence = sentence[type];
 
@@ -101,12 +104,18 @@
 			response = '';
 		}, 3000);
 	}
+  console.log('mode', mode);
 </script>
 
 <div
 	dir={isArabic ? 'rtl' : 'ltr'}
 	class={cn('relative flex flex-col justify-center border-b border-tile-600 px-5 py-10', classname)}
 >
+  {#if type === 'arabic' && _sentence.audio && mode !== 'SentanceView'}
+    <div class="absolute top-0 right-0 w-1/4">
+      <Audio src={_sentence.audio}></Audio>
+    </div>
+  {/if}
 	{#if type === 'arabic'}
 		<button
 			type="button"
