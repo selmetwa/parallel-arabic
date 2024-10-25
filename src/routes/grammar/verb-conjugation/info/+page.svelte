@@ -10,6 +10,7 @@
 <h4>Example: Verb "كتب" (katab) – to write</h4>
 
 <table>
+  <tbody>
     <tr>
         <th>Person</th>
         <th>Conjugation</th>
@@ -64,6 +65,7 @@
         <td>katabu</td>
         <td>They wrote</td>
     </tr>
+  </tbody>
 </table>
 
 <h3>2. Present Tense Conjugation (المضارع)</h3>
@@ -73,6 +75,7 @@
 <h4>Example: Verb "كتب" (katab) – to write</h4>
 
 <table>
+  <tbody>
     <tr>
         <th>Person</th>
         <th>Conjugation</th>
@@ -127,6 +130,7 @@
         <td>biyiktibu</td>
         <td>They write</td>
     </tr>
+  </tbody>
 </table>
 
 <h4>Key Points:</h4>
