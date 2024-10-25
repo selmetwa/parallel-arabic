@@ -2,135 +2,168 @@
 const arabic = [
   {
     speaker: "جورج",
-    text: "مساء الخير .. عندك ترابيزة لإتنين لو سمحت؟"
+    text: "مساء الخير .. عندك ترابيزة لإتنين لو سمحت؟",
+    audio: '/audio/at-the-restaurant/sentence-audio/1.wav'
   },
   {
     speaker: "مدير المطعم",
-    text: "مساء النور يا أفندم، آه طبعاً. تحب تقعد بره ولا جوه؟"
+    text: "مساء النور يا أفندم، آه طبعاً. تحب تقعد بره ولا جوه؟",
+    audio: '/audio/at-the-restaurant/sentence-audio/2.wav'
   },
   {
     speaker: "جورج",
-    text: "إيه رأيك يا صوفيا؟"
+    text: "إيه رأيك يا صوفيا؟",
+    audio: '/audio/at-the-restaurant/sentence-audio/3.wav'
   },
   {
     speaker: "صوفيا",
-    text: "أظن خلينا بره"
+    text: "أظن خلينا بره",
+    audio: '/audio/at-the-restaurant/sentence-audio/4.wav'
   },
   {
     speaker: "جورج",
-    text: "أنا قولت كده برضه. ممكن ترابيزة بره لو سمحت."
+    text: "أنا قولت كده برضه. ممكن ترابيزة بره لو سمحت.",
+    audio: '/audio/at-the-restaurant/sentence-audio/5.wav'
   },
   {
     speaker: "مدير المطعم",
-    text: "تمام يا أفندم .. بقترح تقعدوا على الترابيزة اللي هناك دي بعيد عن الدوشة، إيه رأيكوا؟"
+    text: "تمام يا أفندم .. بقترح تقعدوا على الترابيزة اللي هناك دي بعيد عن الدوشة، إيه رأيكوا؟",
+    audio: '/audio/at-the-restaurant/sentence-audio/6.wav'
   },
   {
     speaker: "صوفيا",
-    text: "حلوة إضاءة المكان ده"
+    text: "حلوة إضاءة المكان ده",
+    audio: '/audio/at-the-restaurant/sentence-audio/7.wav'
   },
   {
     speaker: "جورج",
-    text: "جميل (....) ممكن المنيو لو سمحت؟"
+    text: "جميل (....) ممكن المنيو لو سمحت؟",
+    audio: '/audio/at-the-restaurant/sentence-audio/8.wav'
   },
   {
     speaker: "مدير المطعم",
-    text: "اتفضل، بقترح عليكوا طبق اليوم وهو \"طبق الحمام المحشي مع شوربة العدس\" ..  إحنا بنعمله كويس أوي وبنقترحه على كل الزباين"
+    text: "اتفضل، بقترح عليكوا طبق اليوم وهو \"طبق الحمام المحشي مع شوربة العدس\" ..  إحنا بنعمله كويس أوي وبنقترحه على كل الزباين",
+    audio: '/audio/at-the-restaurant/sentence-audio/9.wav'
   },
   {
     speaker: "صوفيا",
-    text: "طيب عظيم، ممكن أجربه، نجربه ولا إيه؟"
+    text: "طيب عظيم، ممكن أجربه، نجربه ولا إيه؟",
+    audio: '/audio/at-the-restaurant/sentence-audio/10.wav'
   },
   {
     speaker: "جورج",
-    text: "آه يلا بينا، خلينا نشوف"
+    text: "آه يلا بينا، خلينا نشوف",
+    audio: '/audio/at-the-restaurant/sentence-audio/11.wav'
   },
   {
     speaker: "مدير المطعم",
-    text: "ماشي يا أفندم، كده اتنين طبق حمام محشي، واتنين شوربة عدس، هل تحبوا معاه أي إضافات؟"
+    text: "ماشي يا أفندم، كده اتنين طبق حمام محشي، واتنين شوربة عدس، هل تحبوا معاه أي إضافات؟",
+    audio: '/audio/at-the-restaurant/sentence-audio/12.wav'
   },
   {
     speaker: "جورج",
-    text: "ممكن سلطة خضرا كمان.. وشوية مخلل لو سمحت"
+    text: "ممكن سلطة خضرا كمان.. وشوية مخلل لو سمحت",
+    audio: '/audio/at-the-restaurant/sentence-audio/13.wav'
   },
   {
     speaker: "مدير المطعم",
-    text: "تمام يا أفندم .. تحبوا أي حلويات؟"
+    text: "تمام يا أفندم .. تحبوا أي حلويات؟",
+    audio: '/audio/at-the-restaurant/sentence-audio/14.wav'
   },
   {
     speaker: "صوفيا",
-    text: "آه. عندك أم علي؟ أنا نفسي أجربها من ساعة ما جيت مصر"
+    text: "آه. عندك أم علي؟ أنا نفسي أجربها من ساعة ما جيت مصر",
+    audio: '/audio/at-the-restaurant/sentence-audio/15.wav'
   },
   {
     speaker: "مدير المطعم",
-    text: "آه يا أفندم .. المطعم بتاعنا مشهور بيها .. هتعجِبك أوي إن شاء الله"
+    text: "آه يا أفندم .. المطعم بتاعنا مشهور بيها .. هتعجِبك أوي إن شاء الله",
+    audio: '/audio/at-the-restaurant/sentence-audio/16.wav'
   },
   {
     speaker: "جورج",
-    text: "طيب مادام كده .. خليهم اتنين لو سمحت"
+    text: "طيب مادام كده .. خليهم اتنين لو سمحت",
+    audio: '/audio/at-the-restaurant/sentence-audio/17.wav'
   },
   {
     speaker: "مدير المطعم",
-    text: "تمام يا أفندم .. تحبوا تشربوا حاجة مع الأكل؟"
+    text: "تمام يا أفندم .. تحبوا تشربوا حاجة مع الأكل؟",
+    audio: '/audio/at-the-restaurant/sentence-audio/18.wav'
   },
   {
     speaker: "صوفيا",
-    text: "ممكن عصير برتقان لو سمحت؟"
+    text: "ممكن عصير برتقان لو سمحت؟",
+    audio: '/audio/at-the-restaurant/sentence-audio/19.wav'
   },
   {
     speaker: "جورج",
-    text: "وأنا هاخد إزازة مية صغيرة"
+    text: "وأنا هاخد إزازة مية صغيرة",
+    audio: '/audio/at-the-restaurant/sentence-audio/20.wav'
   },
   {
     speaker: "صوفيا",
-    text: "خليهم إزازتين لو سمحت"
+    text: "خليهم إزازتين لو سمحت",
+    audio: '/audio/at-the-restaurant/sentence-audio/21.wav'
   },
   {
     speaker: "مدير المطعم",
-    text: "تمام يا أفندم، ربع ساعة بالظبط والأوردر يبقى عند حضرتكوا"
+    text: "تمام يا أفندم، ربع ساعة بالظبط والأوردر يبقى عند حضرتكوا",
+    audio: '/audio/at-the-restaurant/sentence-audio/22.wav'
   },
   {
     speaker: "صوفيا",
-    text: "أوه جميل، الأكل شكله لذيذ"
+    text: "أوه جميل، الأكل شكله لذيذ",
+    audio: '/audio/at-the-restaurant/sentence-audio/23.wav'
   },
   {
     speaker: "مدير المطعم",
-    text: "اتفضلوا يا أفندم .. بالهنا والشفا"
+    text: "اتفضلوا يا أفندم .. بالهنا والشفا",
+    audio: '/audio/at-the-restaurant/sentence-audio/24.wav'
   },
   {
     speaker: "جورج وصوفيا (في نفس الوقت)",
-    text: "الله يهنيك"
+    text: "الله يهنيك",
+    audio: '/audio/at-the-restaurant/sentence-audio/25.wav'
   },
   {
     speaker: "مدير المطعم",
-    text: "الأكل عجبكم يا أفندم؟"
+    text: "الأكل عجبكم يا أفندم؟",
+    audio: '/audio/at-the-restaurant/sentence-audio/26.wav'
   },
   {
     speaker: "صوفيا",
-    text: "آه العدس تحفة، أول مرة أجربه"
+    text: "آه العدس تحفة، أول مرة أجربه",
+    audio: '/audio/at-the-restaurant/sentence-audio/27.wav'
   },
   {
     speaker: "جورج",
-    text: "والحمام حلو، مِسْتِوي كويس .. فعلًا وجبة حلوة .. ممكن الحساب لو سمحت؟"
+    text: "والحمام حلو، مِسْتِوي كويس .. فعلًا وجبة حلوة .. ممكن الحساب لو سمحت؟",
+    audio: '/audio/at-the-restaurant/sentence-audio/28.wav'
   },
   {
     speaker: "مدير المطعم",
-    text: "حضرتك تحب تدفع كاش ولا فيزا؟"
+    text: "حضرتك تحب تدفع كاش ولا فيزا؟",
+    audio: '/audio/at-the-restaurant/sentence-audio/29.wav'
   },
   {
     speaker: "جورج",
-    text: "ممكن كاش لو سمحت"
+    text: "ممكن كاش لو سمحت",
+    audio: '/audio/at-the-restaurant/sentence-audio/30.wav'
   },
   {
     speaker: "مدير المطعم",
-    text: "تحت أمرك يا أفندم .. ثانية واحدة .. اتفضل الفاتورة"
+    text: "تحت أمرك يا أفندم .. ثانية واحدة .. اتفضل الفاتورة",
+    audio: '/audio/at-the-restaurant/sentence-audio/31.wav'
   },
   {
     speaker: "جورج",
-    text: "شكراً .. خلي الباقي عشانك"
+    text: "شكراً .. خلي الباقي عشانك",
+    audio: '/audio/at-the-restaurant/sentence-audio/32.wav'
   },
   {
     speaker: "مدير المطعم",
-    text: "شكراً يا أفندم، شرفتونا، بنتمنى نشوفكوا مرة تانية"
+    text: "شكراً يا أفندم، شرفتونا، بنتمنى نشوفكوا مرة تانية",
+    audio: '/audio/at-the-restaurant/sentence-audio/33.wav'
   }
 ];
 

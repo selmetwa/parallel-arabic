@@ -136,11 +136,13 @@
 			response = data.message;
 		}
 
-		setTimeout(() => { 
+		setTimeout(() => {
 			error = '';
 			response = '';
 		}, 3000);
 	};
+
+	console.log({ index, sentences });
 </script>
 
 {#if isPaywalled && !data.hasActiveSubscription}
@@ -161,7 +163,11 @@
 		<div class="flex flex-col items-start justify-between sm:flex-row sm:items-center">
 			<div class="w-full">
 				{#if data.audio}
-					<Audio src={data.audio}></Audio>
+					{#if mode === Mode.SentanceView}
+						<Audio src={sentences[index].arabic.audio}></Audio>
+					{:else}
+						<Audio src={data.audio}></Audio>
+					{/if}
 				{/if}
 			</div>
 			<fieldset class="flex w-full place-content-end">
@@ -198,19 +204,23 @@
 			class="grid grid-cols-1 grid-rows-4 divide-x divide-tile-600 bg-tile-300 sm:grid-cols-2 sm:grid-rows-2"
 		>
 			<Sentence
-        sentence={sentences[index]} 
-        {setActiveWord} 
-        type="english" 
-        classname="row-[2] sm:row-[1] sm:col-[1]"
-      />
+				{index}
+				sentence={sentences[index]}
+				{setActiveWord}
+				type="english"
+				classname="row-[2] sm:row-[1] sm:col-[1]"
+				{mode}
+			/>
 			<Sentence
-        classname="row-[1] sm:row-[1] sm:col-[2]"
-        sentence={sentences[index]} 
-        {setActiveWord} 
-        type="arabic" 
-      />
+				{index}
+				classname="row-[1] sm:row-[1] sm:col-[2]"
+				sentence={sentences[index]}
+				{setActiveWord}
+				type="arabic"
+				{mode}
+			/>
 			<div
-				class="flex flex-col items-center justify-center border-b border-tile-600 px-5 py-10 text-text-300 row-[4] sm:row-[2] col-[1]"
+				class="col-[1] row-[4] flex flex-col items-center justify-center border-b border-tile-600 px-5 py-10 text-text-300 sm:row-[2]"
 			>
 				{#if activeWordObj.description || activeWordObj.isLoading}
 					<div class="flex flex-col items-center p-4">
@@ -279,12 +289,14 @@
 					<p class="text-lg">Click on a word to get a full definition.</p>
 				{/if}
 			</div>
-			<Sentence 
-        classname="row-[3] sm:row-[2] sm:col-[2]"
-        sentence={sentences[index]} 
-        {setActiveWord} 
-        type="transliteration" 
-      />
+			<Sentence
+				{index}
+				classname="row-[3] sm:row-[2] sm:col-[2]"
+				sentence={sentences[index]}
+				{setActiveWord}
+				type="transliteration"
+				{mode}
+			/>
 		</section>
 		<div class="flex flex-col items-center gap-2">
 			<div class="mt-4 flex w-fit flex-row items-center gap-2">
@@ -309,9 +321,21 @@
 				)}
 			>
 				{#if mode === Mode.BiText}
-          <Sentence sentence={sentence} {setActiveWord} type="english"  />
+					<Sentence
+						{sentence}
+						{setActiveWord}
+						type="english"
+						index={sentences.indexOf(sentence)}
+						{mode}
+					/>
 				{/if}
-				  <Sentence sentence={sentence} type="arabic" {setActiveWord} />
+				<Sentence
+					{sentence}
+					type="arabic"
+					{setActiveWord}
+					{mode}
+					index={sentences.indexOf(sentence)}
+				/>
 			</section>
 		{/each}
 	{/if}
