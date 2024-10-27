@@ -148,8 +148,6 @@
 			response = '';
 		}, 3000);
 	};
-
-	console.log({ index, sentences });
 </script>
 
 {#if isPaywalled && !data.hasActiveSubscription}

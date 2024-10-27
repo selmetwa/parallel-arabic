@@ -77,7 +77,6 @@
 	}
 
 	async function saveWord() {
-		console.log('saveWord');
 		isLoading = true;
 
 		const res = await fetch('/api/save-word', {

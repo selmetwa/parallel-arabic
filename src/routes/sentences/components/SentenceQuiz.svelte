@@ -13,7 +13,6 @@
 
 	let { index = 0, sentences }: Props = $props();
 
-  $inspect({ index, sentences })
 	let isCorrect = $state(false);
 	let isIncorrect = $state(false);
 	let showHint = $state(false);
