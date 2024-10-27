@@ -1,9 +1,13 @@
 <script lang="ts">
-	export let key = '';
-	export let updateMode = (event: Event) => {};
 	import { Mode } from '../types';
-  export let mode: Mode = Mode.SingleText;
   import RadioButton from '$lib/components/RadioButton.svelte';
+	interface Props {
+		key?: string;
+		updateMode?: any;
+		mode?: Mode;
+	}
+
+	let { key = '', updateMode = (event: Event) => {}, mode = Mode.SingleText }: Props = $props();
   
 	const modeOptions = [
 		{ value: Mode.SingleText, text: 'Single Text' },

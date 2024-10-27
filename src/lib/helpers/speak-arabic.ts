@@ -1,5 +1,6 @@
 import EasySpeech from 'easy-speech';
 export const speakArabic = async (text: string) => {
+  EasySpeech.init()
 	const a = EasySpeech.detect();
 
 	EasySpeech.init({ maxTimeout: 5000, interval: 250 })

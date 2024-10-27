@@ -1,10 +1,15 @@
-<script>
+<script lang="ts">
   import { PUBLIC_PRICE_ID } from '$env/static/public'
   import Modal from '$lib/components/Modal.svelte';
 	import Checkmark from '$lib/components/Checkmark.svelte';
   import Button from '$lib/components/Button.svelte';
-  export let isOpen = false;
-  export let handleCloseModal = () => {};
+ 
+  type Props = {
+    isOpen: boolean;
+    handleCloseModal: () => void;
+  }
+
+  let { isOpen = false, handleCloseModal = () => {} }: Props = $props();
 </script>
 
 <Modal isOpen={isOpen} handleCloseModal={handleCloseModal}>

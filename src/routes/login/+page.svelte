@@ -4,7 +4,11 @@
 	import Input from '$lib/components/Input.svelte';
 	import type { ActionData } from './$types';
 
-	export let form: ActionData;
+  interface Props {
+    form: ActionData;
+  }
+
+  let { form }: Props = $props();
 </script>
 
 <section class="flex flex-col sm:flex-row gap-4 px-4 sm:px-20 pt-4 sm:mt-12">

@@ -4,12 +4,17 @@
 	import { sections } from '$lib/constants/sections';
 	import { PUBLIC_PRICE_ID } from '$env/static/public';
 
-	export let data;
+  let { data } = $props();
 
-	let index = 0;
+	let index = $state(0);
+  let mode = $state('keyboard');
+  let word = $derived.by(() => {
+    if (data && data.words) {
+      return data?.words?.slice(1)[index];
+    }
 
-  let mode = 'keyboard';
-
+    return {}
+  })
 	function next() {
 		if (index === data.words.length - 1) {
 			return;
@@ -23,8 +28,6 @@
 		}
 		index = index - 1;
 	}
-
-	$: word = data.words.slice(1)[index];
 
   function handleSwitchMode() {
     mode = mode === 'draw' ? 'keyboard' : 'draw';

@@ -1,20 +1,25 @@
 <script lang="ts">
+	import { run } from 'svelte/legacy';
+
 	import Button from '$lib/components/Button.svelte';
 	import { type sentenceObjectGroup, type sentenceObjectItem } from '$lib/types/index';
 	import RadioButton from '$lib/components/RadioButton.svelte';
   import SaveButton from '$lib/components/SaveButton.svelte';
 
-	export let index = 0;
+	interface Props {
+		index?: number;
+		sentences: sentenceObjectItem[];
+	}
 
-	export let sentences: sentenceObjectItem[];
+	let { index = 0, sentences }: Props = $props();
 
-	$: isCorrect = false;
-	$: isIncorrect = false;
-	$: showHint = false;
-	$: showAnswer = false;
-	$: selectedObj = {} as sentenceObjectItem;
-	$: selected = null;
-
+	let isCorrect = $state(false);
+	let isIncorrect = $state(false);
+	let showHint = $state(false);
+	let showAnswer = $state(false);
+	let selectedObj = $state({} as sentenceObjectItem);
+	let selected = $state(null);
+	
 	function shuffleArray(array: any) {
 		const _arr = [...array];
 		for (let i = _arr.length - 1; i > 0; i--) {
@@ -24,37 +29,30 @@
 		return _arr;
 	}
 
-	$: sentenceObj = {} as sentenceObjectGroup;
-	let targetSentence = sentences.slice(1)[0];
-	let shuffledWords = shuffleArray(
-		sentences.slice(1).filter((w: any) => targetSentence.english !== w.english)
-	);
-	let shuffledAnswers = shuffleArray([
-		targetSentence,
-		shuffledWords[0],
-		shuffledWords[1],
-		shuffledWords[2]
-	]);
-	$: {
-		if (sentences.length > index) {
-			targetSentence = sentences.slice(1)[index];
-			shuffledWords = shuffleArray(sentences.slice(1));
-			shuffledAnswers = shuffleArray([
-				targetSentence,
-				shuffledWords[0],
-				shuffledWords[1],
-				shuffledWords[2]
-			]);
+  let targetSentence = $derived(sentences.slice(1)[index])
 
-			if (shuffledAnswers) {
-				sentenceObj.answer = targetSentence;
-				sentenceObj.first = shuffledAnswers[0];
-				sentenceObj.second = shuffledAnswers[1];
-				sentenceObj.third = shuffledAnswers[2];
-				sentenceObj.fourth = shuffledAnswers[3];
-			}
-		}
-	}
+  let sentenceObj = $derived.by(() => {
+    if (sentences.length > index) {
+      const shuffledWords = shuffleArray(sentences.slice(1));
+
+      const shuffledAnswers = shuffleArray([
+        targetSentence,
+        shuffledWords[0],
+        shuffledWords[1],
+        shuffledWords[2]
+      ]);
+
+      return {
+        answer: targetSentence,
+        first: shuffledAnswers[0],
+        second: shuffledAnswers[1],
+        third: shuffledAnswers[2],
+        fourth: shuffledAnswers[3]
+      }
+    } else {
+      return {} as sentenceObjectGroup;
+    }
+  })
 
 	function getObjectByEnglishValue(data: sentenceObjectGroup, englishValue: string) {
 		for (let key in data) {
@@ -80,12 +78,15 @@
 		}
 	}
 
-	$: if (sentenceObj) {
-      selectedObj = {} as sentenceObjectItem;
-			showHint = false;
-			selected = null;
-			isCorrect = false;
-			isIncorrect = false;	}
+	$effect(() => {
+		if (sentenceObj) {
+	      selectedObj = {} as sentenceObjectItem;
+				showHint = false;
+				selected = null;
+				isCorrect = false;
+				isIncorrect = false;	
+      }
+	});
 </script>
 
 <section class="px-4 sm:px-16">
@@ -101,7 +102,7 @@
 	{/if}
 	{#if isIncorrect}
 		<div
-			class="flex w-full flex-row items-center justify-center gap-2 bg-red-100 py-2 transition-all duration-300"
+			class="flex w-full flex-row items-center justify-center gap-2 bg-red-100 py-2 transition-all duration-300 mt-5"
 		>
 			<span class="text-lg font-semibold text-text-300">
 				{selectedObj.arabic} is incorrect

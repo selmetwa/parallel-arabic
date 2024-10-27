@@ -9,39 +9,46 @@
 	import { PUBLIC_PRICE_ID } from '$env/static/public';
 	import Audio from '$lib/components/Audio.svelte';
 	import { Mode, type KeyWord } from './types';
-	export let data;
 
-	const isPaywalled = data.isPaywalled;
-
-	let mode = Mode.SingleText;
-	const sentences = data.sentences;
-
-	let timer = null;
-	$: index = 0;
-	$: isLoading = false;
-	$: isModalOpen = false;
-	$: response = '';
-	$: error = '';
-
-	export let activeWordObj: KeyWord = {
+  let { data, activeWordObj = $bindable({
 		english: '',
 		arabic: '',
 		transliterated: '',
 		description: '',
 		isLoading: false,
 		type: ''
-	};
+	}) }: Props = $props();
 
-	$: if (index) {
-		activeWordObj = {
-			english: '',
-			arabic: '',
-			transliterated: '',
-			description: '',
-			isLoading: false,
-			type: ''
-		};
+	const isPaywalled = data.isPaywalled;
+
+	let mode = $state(Mode.SingleText);
+	const sentences = data.sentences;
+
+	let timer = null;
+	let index = $state(0);
+	let isLoading = $state(false);
+	let isModalOpen = $state(false);
+	let response = $state('');
+	let error = $state('');
+	
+	interface Props {
+		data: any;
+		activeWordObj?: KeyWord;
 	}
+
+	$effect(() => {
+		if (index) {
+			activeWordObj = {
+				english: '',
+				arabic: '',
+				transliterated: '',
+				description: '',
+				isLoading: false,
+				type: ''
+			};
+		}
+	});
+
 	function closeModal() {
 		timer = setTimeout(() => {
 			activeWordObj = {
@@ -141,8 +148,6 @@
 			response = '';
 		}, 3000);
 	};
-
-	console.log({ index, sentences });
 </script>
 
 {#if isPaywalled && !data.hasActiveSubscription}

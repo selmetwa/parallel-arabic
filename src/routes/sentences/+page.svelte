@@ -1,22 +1,50 @@
 <script lang="ts">
+	import { run } from 'svelte/legacy';
+
 	import SentenceBlock from './components/SentenceBlock.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import RadioButton from '$lib/components/RadioButton.svelte';
 	import SentenceQuiz from './components/SentenceQuiz.svelte';
 	import { sentencesInStore, sentenceIndexInStore } from '$lib/store/store';
 	import { PUBLIC_PRICE_ID } from '$env/static/public';
-  import { goto } from '$app/navigation';
+	import { goto } from '$app/navigation';
 
-	export let data;
+	let { data } = $props();
 
-	$: isLoading = false;
-	$: sentences = $sentencesInStore || [];
+	let isLoading = $state(false);
 
-	$: index = $sentenceIndexInStore || 0;
-	$: sentence = sentences[index];
-	$: option = 'beginner';
-	$: mode = 'write';
-	$: sentencesViewed = data.sentencesViewed;
+	let index = $state(0);
+	let sentences = $state([]);
+  let sentence = $derived(sentences[index]);
+	// let sentence: {
+	// 	arabic: string;
+	// 	english: string;
+	// 	transliteration: string;
+	// } = $state({
+	// 	arabic: '',
+	// 	english: '',
+	// 	transliteration: ''
+	// });
+
+	$effect(() => {
+		sentences = $sentencesInStore || [];
+	});
+
+	$effect(() => {
+		index = $sentenceIndexInStore || 0;
+	});
+	// let sentence;
+	// run(() => {
+	// 	sentence = sentences[index];
+	// });
+	let option = $state('beginner');
+
+	let mode = $state('write');
+
+	let sentencesViewed = $state(data.sentencesViewed);
+	// run(() => {
+	// 	sentencesViewed = data.sentencesViewed;
+	// });
 
 	async function generateSentance(option: string, copy: any) {
 		isLoading = true;
@@ -64,9 +92,11 @@
 		sentenceIndexInStore.set(index);
 	}
 
-	$: if (index) {
-		sentence = sentences[index];
-	}
+	// run(() => {
+	// 	if (index) {
+	// 		sentence = sentences[index];
+	// 	}
+	// });
 
 	function setMode(event: any) {
 		mode = event.target.value;
@@ -86,19 +116,20 @@
 		generateSentance(option, sentences);
 	}
 
-	$: isLastSentence = index === sentences.length - 1;
+	let isLastSentence = $derived(index === sentences.length - 1);
 
-	$: hasReachedLimit = !data.isSubscribed && sentencesViewed >= 20;
+	let hasReachedLimit = $derived(!data.isSubscribed && sentencesViewed >= 20);
 </script>
+
 {#if !data.session}
-<div class="mx-4 mb-6 mt-12 border border-tile-600 bg-tile-300 py-4 text-center sm:mx-36">
-  <h1 class="text-2xl font-bold text-text-300">You must have an account to access this content.</h1>
-  <div class="mx-auto mt-4 w-fit">
-    <Button type="button" onClick={() => goto('/signup')}>
-      Create Account
-    </Button>
-  </div>
-</div>
+	<div class="mx-4 mb-6 mt-12 border border-tile-600 bg-tile-300 py-4 text-center sm:mx-36">
+		<h1 class="text-2xl font-bold text-text-300">
+			You must have an account to access this content.
+		</h1>
+		<div class="mx-auto mt-4 w-fit">
+			<Button type="button" onClick={() => goto('/signup')}>Create Account</Button>
+		</div>
+	</div>
 {/if}
 
 {#if hasReachedLimit && data.session}
@@ -116,8 +147,8 @@
 
 {#if !isLoading && sentences.length === 0 && !hasReachedLimit && data.session}
 	<section class="mx-auto mt-12 w-full border border-tile-500 bg-tile-300 sm:w-1/2">
-		<form class="flex flex-col gap-3 p-5" on:submit={generateSentences}>
-			<p class="text-3xl text-text-300 font-bold">
+		<form class="flex flex-col gap-3 p-5" onsubmit={generateSentences}>
+			<p class="text-3xl font-bold text-text-300">
 				Practice your egyptian arabic skills with generated sentences.
 			</p>
 			<p class="text-md text-text-300">Select difficulty.</p>
@@ -130,7 +161,6 @@
 				value="beginner"
 				text="Beginner"
 			>
-				Beginner
 			</RadioButton>
 			<RadioButton
 				className="!text-xl"
@@ -139,10 +169,18 @@
 				selectableFor="intermediate"
 				isSelected={option === 'intermediate'}
 				text="Intermediate"
-				value="intermediate">Intermediate</RadioButton
+				value="intermediate"></RadioButton
 			>
-
-			<p class="text-md text-text-300">Select learning mode.</p>
+      <RadioButton
+      className="!text-xl"
+      wrapperClass="!p-2"
+      onClick={setOption}
+      selectableFor="advanced"
+      isSelected={option === 'advanced'}
+      text="Advanced"
+      value="advanced"></RadioButton
+    >
+    <hr class="border border-tile-600 my-2">
 			<RadioButton
 				className="!text-xl"
 				wrapperClass="!p-2"
@@ -152,7 +190,6 @@
 				value="write"
 				text="Practice Writing"
 			>
-				Beginner
 			</RadioButton>
 			<RadioButton
 				className="!text-xl"
@@ -163,7 +200,6 @@
 				value="quiz"
 				text="Multiple Choice Quiz"
 			>
-				Beginner
 			</RadioButton>
 			<Button type="submit">Generate Sentences</Button>
 		</form>
@@ -193,7 +229,7 @@
 			</svg>
 			<span class="sr-only">Loading...</span>
 		</div>
-		<p class="text-text-300 text-2xl">
+		<p class="text-2xl text-text-300">
 			Generating your sentences, hang tight. <br />
 			this usually takes a few seconds.
 		</p>
@@ -221,9 +257,9 @@
 	</header>
 
 	{#if mode === 'write'}
-  <section class="px-4 pb-4 sm:px-16">
-		<SentenceBlock {sentence} />
-  </section>
+		<section class="px-4 pb-4 sm:px-16">
+			<SentenceBlock {sentence} />
+		</section>
 	{/if}
 
 	{#if mode === 'quiz'}
