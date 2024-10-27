@@ -1,12 +1,21 @@
 <script>
   import Button from "$lib/components/Button.svelte";
   import Checkmark from "$lib/components/Checkmark.svelte";
-  export let objectToSave = {};
-  export let type = 'Word';
+  /**
+   * @typedef {Object} Props
+   * @property {any} [objectToSave]
+   * @property {string} [type]
+   */
 
-  $: response = '';
-  $: isLoading = false;
-  $: error = '';
+  /** @type {Props} */
+  let { objectToSave = {}, type = 'Word' } = $props();
+
+  let response = $state('');
+  
+  let isLoading = $state(false);
+  
+  let error = $state('');
+  
 
   const saveWord = async () => {
     isLoading = true;

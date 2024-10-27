@@ -3,11 +3,12 @@
 	import Button from '$lib/components/Button.svelte';
 	import Draw from '../components/Draw.svelte';
 
-	$: index = 0;
+	let index = $state(0);
+	
 	const lettersCopy = [...letters];
 	// const randomizedLetters = lettersCopy.sort(() => Math.random() - 0.5);
 
-	$: letter = lettersCopy[index];
+	let letter = $derived(lettersCopy[index]);
 
 	function handleNext() {
 		index += 1;

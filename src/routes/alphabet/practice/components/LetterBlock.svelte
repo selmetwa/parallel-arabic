@@ -4,59 +4,70 @@
 	import { hue, theme } from '$lib/store/store';
 	import { type Letter, type Keyboard } from '$lib/types';
 	import Button from '$lib/components/Button.svelte';
-  import Modal from '$lib/components/Modal.svelte';
-  import KeyboardDocumentation from '$lib/components/KeyboardDocumentation.svelte';
+	import Modal from '$lib/components/Modal.svelte';
+	import KeyboardDocumentation from '$lib/components/KeyboardDocumentation.svelte';
 	import Audio from '$lib/components/Audio.svelte';
 
-  import cn from 'classnames';
-	export let letter: Letter;
-  export let handleNext: () => void;
+	import cn from 'classnames';
+	type Props = { letter: Letter; }
 
-	$: attempt = '';
-	$: isCorrect = false;
-	let showHint = false;
-  let showAnswer = false;
-  $: isInfoModalOpen = false;
-  $: keyboardValue = '';
-  let keyboard = 'virtual'
+	let { letter }: Props = $props();
 
-	$: if (letter.isolated) {
-		attempt = '';
-		isCorrect = false;
-		showHint = false;
-    showAnswer = false;
-    isInfoModalOpen = false;
-    keyboardValue = '';
-	}
+	let attempt = $state('');
+	let isCorrect = $state(false);
+	let showHint = $state(false);
+	let showAnswer = $state(false);
+	let isInfoModalOpen = $state(false);
+	let keyboardValue = $state('');
+	let keyboard = $state('virtual');
+
+	$effect(() => {
+		if (letter.isolated) {
+			if (window !== undefined) {
+				const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
+				if (keyboard) {
+					keyboard.resetValue();
+				}
+			}
+
+			attempt = '';
+			isCorrect = false;
+			showHint = false;
+			showAnswer = false;
+			isInfoModalOpen = false;
+			keyboardValue = '';
+		}
+	});
 
 	function toggleHint() {
 		showHint = !showHint;
 	}
 
-  function toggleAnswer() {
-    showAnswer = !showAnswer;
-  }
-	$: hue.subscribe(() => {
-		updateKeyboardStyle();
+	function toggleAnswer() {
+		showAnswer = !showAnswer;
+	}
+	$effect(() => {
+		hue.subscribe(() => {
+			updateKeyboardStyle();
+		});
 	});
 
-	$: theme.subscribe(() => {
-		updateKeyboardStyle();
+	$effect(() => {
+		theme.subscribe(() => {
+			updateKeyboardStyle();
+		});
 	});
 
 	function compareMyInput(value: string) {
 		attempt = value;
 		if (value === letter.isolated) {
 			isCorrect = true;
-      setTimeout(() => {
-        if (window !== undefined) {
-          const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
-          if (keyboard) {
-            keyboard.resetValue()
-          }
-        }
-        handleNext();
-      }, 3000)
+			if (window !== undefined) {
+				const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
+				if (keyboard) {
+					keyboard.resetValue();
+				}
+			}
 		} else {
 			isCorrect = false;
 		}
@@ -67,14 +78,14 @@
 
 		updateKeyboardStyle();
 
-		document.addEventListener('keydown', () => {
+		keyboard?.addEventListener('keydown', () => {
 			const value = keyboard && keyboard.getTextAreaValue();
 			if (typeof value === 'string') {
 				compareMyInput(value);
 			}
 		});
 
-		document.addEventListener('click', () => {
+		keyboard?.addEventListener('click', () => {
 			const value = keyboard && keyboard.getTextAreaValue();
 			if (typeof value === 'string') {
 				compareMyInput(value);
@@ -82,45 +93,48 @@
 		});
 	});
 
-  function openInfoModal() {
-    isInfoModalOpen = true;
-  }
+	function openInfoModal() {
+		isInfoModalOpen = true;
+	}
 
-  function closeInfoModal() {
-    isInfoModalOpen = false;
-  }
+	function closeInfoModal() {
+		isInfoModalOpen = false;
+	}
 
-  function onRegularKeyboard(e) {
-    const value = e.target.value;
-    compareMyInput(value);
-    keyboardValue = value;
-  }
+	function onRegularKeyboard(e: Event) {
+		const target = e.target as HTMLInputElement | null;
+		if (target) {
+			const value = target.value;
+			compareMyInput(value);
+			keyboardValue = value;
+		}
+	}
 
-  function toggleKeyboard() {
-    keyboard = keyboard === 'virtual' ? 'physical' : 'virtual';
-  }
+	function toggleKeyboard() {
+		keyboard = keyboard === 'virtual' ? 'physical' : 'virtual';
+	}
 </script>
 
-<div class="flex flex-col sm:flex-row justify-between">
+<div class="flex flex-col justify-between sm:flex-row">
 	<div class="flex flex-col gap-1">
 		<h2 class="text-text-200">Listen to the audio and type the letter</h2>
-    <Audio src={`/letters/audios/${letter.key}.mp3`}></Audio>
+		<Audio src={`/letters/audios/${letter.key}.mp3`}></Audio>
 	</div>
 	<div>
-    <div class="flex flex-row mt-2 sm:mt-0 gap-2">
-      <Button className="!h-fit !w-fit" onClick={toggleHint} type="button">
-        {showHint ? 'Hide' : 'Show'} hint
-      </Button>
-      <Button className="!h-fit !w-fit" onClick={toggleAnswer} type="button">
-        {showAnswer ? 'Hide' : 'Show'} answer
-      </Button>
-    </div>
+		<div class="mt-2 flex flex-row gap-2 sm:mt-0">
+			<Button className="!h-fit !w-fit" onClick={toggleHint} type="button">
+				{showHint ? 'Hide' : 'Show'} hint
+			</Button>
+			<Button className="!h-fit !w-fit" onClick={toggleAnswer} type="button">
+				{showAnswer ? 'Hide' : 'Show'} answer
+			</Button>
+		</div>
 		{#if showHint}
-			<p class="text-xl mt-2 text-text-200">{letter.name}</p>
+			<p class="mt-2 text-xl text-text-200">{letter.name}</p>
 		{/if}
-    {#if showAnswer}
-      <p class="text-3xl mt-2 text-text-200">{letter.isolated}</p>
-    {/if}
+		{#if showAnswer}
+			<p class="mt-2 text-3xl text-text-200">{letter.isolated}</p>
+		{/if}
 	</div>
 </div>
 <div class="mt-8">
@@ -139,25 +153,25 @@
 	>
 		{attempt}
 	</div>
-  <Modal isOpen={isInfoModalOpen} handleCloseModal={closeInfoModal} height="70%" width="80%">
-    <KeyboardDocumentation></KeyboardDocumentation>
-  </Modal>
-  <div>
-    <button on:click={toggleKeyboard}>
-      {keyboard === 'virtual' ? 'Use other keyboard' : 'Use builtin keyboard'}
-    </button>
-    <div class={cn('block', { 'hidden': keyboard !== 'virtual'})}>
-      <arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
-      <button class="mt-3 text-text-300 underline" on:click={openInfoModal}>How does this keyboard work?</button>
-    </div>
-    <textarea 
-    value={keyboardValue}
-    on:input={onRegularKeyboard}
-    class={cn(
-      "block w-full min-h-32 text-text-300 bg-tile-400",
-      {'hidden': keyboard === 'virtual'}
-    )}
-    />
-  </div>
-  <button class="text-text-300 underline mt-2" on:click={openInfoModal}>How does this keyboard work?</button>
+	<Modal isOpen={isInfoModalOpen} handleCloseModal={closeInfoModal} height="70%" width="80%">
+		<KeyboardDocumentation></KeyboardDocumentation>
+	</Modal>
+	<div>
+		<button onclick={toggleKeyboard}>
+			{keyboard === 'virtual' ? 'Use other keyboard' : 'Use builtin keyboard'}
+		</button>
+		<div class={cn('block', { hidden: keyboard !== 'virtual' })}>
+			<arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
+			<button class="mt-3 text-text-300 underline" onclick={openInfoModal}
+				>How does this keyboard work?</button
+			>
+		</div>
+		<textarea
+			value={keyboardValue}
+			oninput={onRegularKeyboard}
+			class={cn('block min-h-32 w-full bg-tile-400 text-text-300', {
+				hidden: keyboard === 'virtual'
+			})}
+		></textarea>
+	</div>
 </div>

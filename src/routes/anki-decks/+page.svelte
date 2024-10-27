@@ -154,9 +154,10 @@
     }
   ]
 
-  export let data;
+  let { data } = $props();
 
-  $: isModalOpen = false;
+  let isModalOpen = $state(false);
+  
 
 function openPaywallModal() {
   isModalOpen = true;
@@ -178,7 +179,7 @@ function handleCloseModal() {
   {#if deck.isPaywalled && !data.isSubscribed}
     <li>
       <button 
-      on:click={openPaywallModal}
+      onclick={openPaywallModal}
       class="text-text-300 text-lg underline hover:text-text-500 transition-colors duration-300"
       >
        🔒 {deck.name} ({deck.count} Words)

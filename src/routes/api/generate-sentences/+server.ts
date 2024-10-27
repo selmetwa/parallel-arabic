@@ -8,7 +8,7 @@ export const POST: RequestHandler = async ({ request }) => {
   const data = await request.json();
 
   const intermediate_request = data.option === 'intermediate' ? 'Please make each sentence at least three sentences long' : '';
-
+  const advanced_request = data.option === 'advanced' ? 'Please make each sentence at least five sentences long and use more complex tenses and vocabulary' : '';
 
   let question = `
     Can you please provide 20 ${data.option} sentences for someone who is trying to learn EGYPTIAN arabic.
@@ -33,6 +33,7 @@ export const POST: RequestHandler = async ({ request }) => {
     Please do not include any punctuation in the arabic sentences. Only letters and spaces.
 
     ${intermediate_request}
+    ${advanced_request}
 
     Can you make sure each sentence follows this format 
     {

@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { run } from 'svelte/legacy';
+
 	import { type Keyboard } from '$lib/types/index';
 	import { updateKeyboardStyle } from '$lib/helpers/update-keyboard-style';
 	import { hue, theme } from '$lib/store/store';
@@ -13,61 +15,33 @@
 	import InfoDisclaimer from '$lib/components/InfoDisclaimer.svelte';
 	import DefinitionModal from './DefinitionModal.svelte';
 
-	export let sentence: {
+	interface Props {
+		sentence: {
 		arabic: string;
 		english: string;
 		transliteration: string;
 	};
+	}
+
+	let { sentence }: Props = $props();
 
 	type Attempt = {
 		letter: string;
 		correct: boolean;
 	};
 
-	$: hue.subscribe(() => {
-		updateKeyboardStyle();
-	});
-
-	$: theme.subscribe(() => {
-		updateKeyboardStyle();
-	});
-
-	let attemptTemp: Attempt[] = [];
-	$: attempt = attemptTemp;
-	$: isCorrect = false;
-	$: isInfoModalOpen = false;
-	$: showHint = false;
-	$: showAnswer = false;
-	$: isDefinitionModalOpen = false;
-	$: isLoadingDefinition = false;
-	$: definition = '';
-  $: targetWord = '';
-  $: keyboardValue = '';
-  let keyboard = 'virtual'
-
-	$: if (sentence.arabic) {
-		attemptTemp = [];
-		attempt = [];
-		isCorrect = false;
-		showHint = false;
-		showAnswer = false;
-		isInfoModalOpen = false;
-		isDefinitionModalOpen = false;
-		isLoadingDefinition = false;
-		definition = '';
-    targetWord = '';
-    keyboardValue = '';
-
-		if (typeof document !== 'undefined') {
-			const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
-			document.addEventListener('keydown', () => {
-				const value = keyboard && keyboard.getTextAreaValue();
-				if (typeof value === 'string') {
-					compareMyInput(value);
-				}
-			});
-		}
-	}
+  let attempt: Attempt[] = $state([]);
+	let attemptTemp: Attempt[] = $state([]);
+  let keyboard = $state('virtual')
+	let isCorrect = $state(false);
+	let isInfoModalOpen = $state(false);
+	let showHint = $state(false);
+	let showAnswer = $state(false);
+	let isDefinitionModalOpen = $state(false);
+	let isLoadingDefinition = $state(false);
+	let definition = $state('');
+  let targetWord = $state('');
+  let keyboardValue = $state('');
 
 	function areArraysEqual(arr1: Array<string>, arr2: Array<string>) {
 		if (arr1.length !== arr2.length) {
@@ -177,6 +151,47 @@
   function toggleKeyboard() {
     keyboard = keyboard === 'virtual' ? 'physical' : 'virtual';
   }
+	$effect(() => {
+		hue.subscribe(() => {
+			updateKeyboardStyle();
+		});
+	});
+	$effect(() => {
+		theme.subscribe(() => {
+			updateKeyboardStyle();
+		});
+	});
+	$effect(() => {
+		if (sentence.arabic) {
+			attemptTemp = [];
+			attempt = [];
+			isCorrect = false;
+			showHint = false;
+			showAnswer = false;
+			isInfoModalOpen = false;
+			isDefinitionModalOpen = false;
+			isLoadingDefinition = false;
+			definition = '';
+	    targetWord = '';
+	    keyboardValue = '';
+
+			if (typeof document !== 'undefined') {
+				const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
+        keyboard && keyboard.resetValue();
+				document.addEventListener('keydown', () => {
+					const value = keyboard && keyboard.getTextAreaValue();
+					if (typeof value === 'string') {
+						compareMyInput(value);
+					}
+				});
+			}
+		}
+	});
+	$effect(() => {
+		attempt = attemptTemp;
+	});
+
+	
 </script>
 
 <DefinitionModal
@@ -214,7 +229,7 @@
 			<h1 class="flex w-fit flex-row text-[40px] font-bold text-text-300 flex-wrap">
 				{#each sentence.english.split(' ') as word}
 					<button
-						on:click={() => askChatGTP(word)}
+						onclick={() => askChatGTP(word)}
 						class="p-1 text-[40px] duration-300 hover:bg-tile-500">{word}</button
 					>
 				{/each}
@@ -257,20 +272,20 @@
 		<KeyboardDocumentation></KeyboardDocumentation>
 	</Modal>
 	<div class="mt-4 block">
-    <button on:click={toggleKeyboard}>
+    <button onclick={toggleKeyboard}>
       {keyboard === 'virtual' ? 'Use other keyboard' : 'Use builtin keyboard'}
     </button>
     <div class={cn('block', { 'hidden': keyboard !== 'virtual'})}>
       <arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
-      <button class="mt-3 text-text-300 underline" on:click={openInfoModal}>How does this keyboard work?</button>
+      <button class="mt-3 text-text-300 underline" onclick={openInfoModal}>How does this keyboard work?</button>
     </div>
     <textarea 
-    on:input={onRegularKeyboard}
+    oninput={onRegularKeyboard}
     value={keyboardValue}
     class={cn(
       "block w-full min-h-32 text-text-300 bg-tile-400",
       {'hidden': keyboard === 'virtual'}
     )}
-    />
+></textarea>
 	</div>
 {/if}

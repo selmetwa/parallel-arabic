@@ -1,10 +1,10 @@
 <script lang="ts">
-	export let data;
 	import PaywallModal from '$lib/components/PaywallModal.svelte';
 	import { sections } from '$lib/constants/sections';
+	let { data } = $props();
 
-	$: isModalOpen = false;
-
+	let isModalOpen = $state(false);
+	
 	function openPaywallModal() {
 		isModalOpen = true;
 	}
@@ -28,7 +28,7 @@
 		{#each sections as section}
 			{#if section.isPaywalled && !data.hasActiveSubscription}
 				<button
-					on:click={openPaywallModal}
+					onclick={openPaywallModal}
 					class="transitional-all cursor-pointer border-2 border-tile-600 bg-tile-400 p-4 text-center font-semibold duration-300 hover:bg-tile-500"
 				>
 					{#if section.isPaywalled}

@@ -16,21 +16,31 @@
 		text: string;
 	};
 
-	export let sentence: TWholeSentence;
-	export let setActiveWord: (word: any) => void;
-	export let type = '';
-	export let classname = '';
-  export let index;
-  export let mode;
+	interface Props {
+		sentence: TWholeSentence;
+		setActiveWord: (word: any) => void;
+		type?: string;
+		classname?: string;
+		index: any;
+		mode: any;
+	}
 
-	$: _sentence = sentence[type];
+	let {
+		sentence,
+		setActiveWord,
+		type = '',
+		classname = '',
+		index,
+		mode
+	}: Props = $props();
 
-	$: isLoading = false;
-	$: error = '';
-	$: response = '';
-
-	$: isArabic = type === 'arabic';
-	$: words = isArabic ? _sentence.text.split(' ').reverse() : _sentence.text.split(' ');
+	let _sentence = $derived(sentence[type]);
+	let isLoading = $state(false);
+	let error = $state('');
+	let response = $state('');
+	
+	let isArabic = $derived(type === 'arabic');
+	let words = $derived(isArabic ? _sentence.text.split(' ').reverse() : _sentence.text.split(' '));
 
 	function removeComma(inputString: string) {
 		const commataPattern = /[\u060C]/g;
@@ -104,7 +114,6 @@
 			response = '';
 		}, 3000);
 	}
-  console.log('mode', mode);
 </script>
 
 <div
@@ -120,7 +129,7 @@
 		<button
 			type="button"
 			class="absolute left-2 top-2 text-[14px] text-text-200 underline"
-			on:click={saveWord}
+			onclick={saveWord}
 		>
 			{#if isLoading}
 				<span class="flex flex-row items-center gap-2 text-center">
@@ -165,7 +174,7 @@
 				<button
 					class="transitional-all rounded-sm p-1 text-5xl duration-300 hover:bg-tile-500"
 					value={word}
-					on:click={assignActiveWord}
+					onclick={assignActiveWord}
 				>
 					{word}
 				</button>
@@ -175,7 +184,7 @@
 				<button
 					class="transitional-all rounded-sm p-1 text-4xl duration-300 hover:bg-tile-500"
 					value={word}
-					on:click={assignActiveWord}
+					onclick={assignActiveWord}
 				>
 					{word}
 				</button>

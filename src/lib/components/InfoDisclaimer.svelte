@@ -1,6 +1,7 @@
 <script>
 	import Button from './Button.svelte';
-	$: isOpen = true;
+	let isOpen = $state(true);
+	
 
 	function close() {
 		isOpen = false;
