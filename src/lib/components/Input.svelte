@@ -1,6 +1,10 @@
 <script lang="ts">
-  export let name: string;
-  export let type: string;
+  interface Props {
+    name: string;
+    type: string;
+  }
+
+  let { name, type }: Props = $props();
 </script>
 
 <div class="flex flex-col">

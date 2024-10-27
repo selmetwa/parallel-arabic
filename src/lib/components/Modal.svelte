@@ -1,11 +1,24 @@
 <script>
   import Button from "./Button.svelte";
-  export let isOpen = true;
-  export let handleCloseModal = () => {};
 
 
-  export let width = '400px';
-  export let height = 'fit-content';
+  /**
+   * @typedef {Object} Props
+   * @property {boolean} [isOpen]
+   * @property {any} [handleCloseModal]
+   * @property {string} [width]
+   * @property {string} [height]
+   * @property {import('svelte').Snippet} [children]
+   */
+
+  /** @type {Props} */
+  let {
+    isOpen = true,
+    handleCloseModal = () => {},
+    width = '400px',
+    height = 'fit-content',
+    children
+  } = $props();
 </script>
 
 <dialog 
@@ -15,10 +28,10 @@ class="{`modal ${isOpen ? 'open' : ''} bg-tile-300 border-4 border-tile-600`}" s
    <div class="absolute top-0 right-0 p-2">
     <Button onClick={handleCloseModal} type="button">X</Button>
    </div>
-  <slot />
+  <slot></slot>
 </dialog>
 
-<div class="{`overlay ${isOpen ? 'open' : ''}`}" on:click={handleCloseModal}>
+<div class="{`overlay ${isOpen ? 'open' : ''}`}" onclick={handleCloseModal}>
   <!-- Clicking on the overlay will close the modal -->
 </div>
 

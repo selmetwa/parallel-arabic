@@ -1,5 +1,5 @@
 <script>
-	export let data;
+	let { data } = $props();
 
 	const timestamp = data.user?.subscription_end_date ?? 0;
 	const date = new Date(timestamp * 1000);

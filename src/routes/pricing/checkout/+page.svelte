@@ -7,7 +7,7 @@
   import { PUBLIC_STRIPE_PUBLISHABLE_KEY } from "$env/static/public";
   import { goto } from "$app/navigation";
 
-  export let data;
+  let { data } = $props();
 
   /**
    * Checkout onMount

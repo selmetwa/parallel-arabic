@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { run } from 'svelte/legacy';
+
 	import { onMount } from 'svelte';
 	import cn from 'classnames';
 
@@ -27,19 +29,24 @@
 		correct: boolean;
 	};
 
-	export let word: Word;
-	export let mode: string;
-	export let switchMode: () => void;
+	interface Props {
+		word: Word;
+		mode: string;
+		switchMode: () => void;
+	}
 
-	let attemptTemp: Attempt[] = [];
-	let showHint = false;
-	let showAnswer = false;
-	let correctAnswer = '';
-	let egyptianArabicWord = '';
-  let keyboard = 'virtual'
+	let { word, mode, switchMode }: Props = $props();
 
-  $: isInfoModalOpen = false;
-  $: keyboardValue = '';
+	let attemptTemp: Attempt[] = $state([]);
+	let showHint = $state(false);
+	let showAnswer = $state(false);
+	let correctAnswer = $state('');
+	let egyptianArabicWord = $state('');
+  let keyboard = $state('virtual')
+	let attempt = $state([]);
+	let isCorrect = $state(false);
+  let isInfoModalOpen = $state(false);
+  let keyboardValue = $state('');
 
   const regex = /[-–]/;
 
@@ -49,43 +56,6 @@
 		egyptianArabicWord = word.egyptianArabic;
 	}
 
-	$: hue.subscribe(() => {
-		updateKeyboardStyle();
-	});
-
-	$: theme.subscribe(() => {
-		updateKeyboardStyle();
-	});
-
-	$: if (word.english || mode) {
-		attemptTemp = [];
-		attempt = [];
-		isCorrect = false;
-		showHint = false;
-		showAnswer = false;
-		correctAnswer = '';
-    isInfoModalOpen = false;
-    keyboardValue = '';
-
-		if (regex.test(word.egyptianArabic)) {
-      egyptianArabicWord = word.egyptianArabic.split(regex)[0].trim();
-		} else {
-			egyptianArabicWord = word.egyptianArabic;
-		}
-
-		if (typeof document !== 'undefined') {
-			const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
-			document.addEventListener('keydown', () => {
-				const value = keyboard && keyboard.getTextAreaValue();
-				if (typeof value === 'string') {
-					compareMyInput(value);
-				}
-			});
-		}
-	}
-
-	$: attempt = attemptTemp;
-	$: isCorrect = false;
 
 	function areArraysEqual(arr1: Array<string>, arr2: Array<string>) {
 		if (arr1.length !== arr2.length) {
@@ -128,12 +98,6 @@
 		}
 	}
 
-  $: if (mode) {
-    if (typeof document !== 'undefined') {
-      const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
-      keyboard && keyboard.resetValue();
-    }
-  }
 	onMount(() => {
 		const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
 
@@ -181,6 +145,59 @@
   function toggleKeyboard() {
     keyboard = keyboard === 'virtual' ? 'physical' : 'virtual';
   }
+
+	
+	$effect(() => {
+		hue.subscribe(() => {
+			updateKeyboardStyle();
+		});
+	});
+	$effect(() => {
+		theme.subscribe(() => {
+			updateKeyboardStyle();
+		});
+	});
+	$effect(() => {
+		if (word.english || mode) {
+			attemptTemp = [];
+			attempt = [];
+			isCorrect = false;
+			showHint = false;
+			showAnswer = false;
+			correctAnswer = '';
+	    isInfoModalOpen = false;
+	    keyboardValue = '';
+
+			if (regex.test(word.egyptianArabic)) {
+	      egyptianArabicWord = word.egyptianArabic.split(regex)[0].trim();
+			} else {
+				egyptianArabicWord = word.egyptianArabic;
+			}
+
+			if (typeof document !== 'undefined') {
+				const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
+        keyboard && keyboard.resetValue();
+				document.addEventListener('keydown', () => {
+					const value = keyboard && keyboard.getTextAreaValue();
+					if (typeof value === 'string') {
+						compareMyInput(value);
+					}
+				});
+			}
+		}
+	});
+	$effect(() => {
+		attempt = attemptTemp;
+	});
+	
+  $effect(() => {
+		if (mode) {
+	    if (typeof document !== 'undefined') {
+	      const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
+	      keyboard && keyboard.resetValue();
+	    }
+	  }
+	});
 </script>
 
 <div>
@@ -250,21 +267,21 @@
         <KeyboardDocumentation></KeyboardDocumentation>
       </Modal>
 			<div class={cn("block", { '!hidden': mode === 'draw'})}>
-        <button on:click={toggleKeyboard}>
+        <button onclick={toggleKeyboard}>
           {keyboard === 'virtual' ? 'Use other keyboard' : 'Use builtin keyboard'}
         </button>
         <div class={cn('block', { 'hidden': keyboard !== 'virtual'})}>
           <arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
-          <button class="mt-3 text-text-300 underline" on:click={openInfoModal}>How does this keyboard work?</button>
+          <button class="mt-3 text-text-300 underline" onclick={openInfoModal}>How does this keyboard work?</button>
         </div>
         <textarea 
         value={keyboardValue}
-        on:input={onRegularKeyboard}
+        oninput={onRegularKeyboard}
         class={cn(
           "block w-full min-h-32 text-text-300 bg-tile-400",
           {'hidden': keyboard === 'virtual'}
         )}
-        />
+></textarea>
 			</div>
 	</div>
 </div>

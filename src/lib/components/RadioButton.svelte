@@ -1,13 +1,25 @@
 <script lang="ts">
   import cn from "classnames";
 
-  export let text: string
-  export let value: string
-  export let isSelected: Boolean
-  export let onClick: (e: any) => void | undefined
-  export let selectableFor: string
-  export let className = ''
-  export let wrapperClass = ''
+  interface Props {
+    text: string;
+    value: string;
+    isSelected: Boolean;
+    onClick: (e: any) => void | undefined;
+    selectableFor: string;
+    className?: string;
+    wrapperClass?: string;
+  }
+
+  let {
+    text,
+    value,
+    isSelected,
+    onClick,
+    selectableFor,
+    className = '',
+    wrapperClass = ''
+  }: Props = $props();
 </script>
 
 <label
@@ -21,7 +33,7 @@
   style={isSelected ? "background-color: var(--tile6); border-color: var(--tile6)" : ""}
 >
   <input
-    on:click={onClick}
+    onclick={onClick}
     value={value}
     id={selectableFor}
     checked={!!isSelected}

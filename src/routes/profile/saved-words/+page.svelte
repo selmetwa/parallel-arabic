@@ -4,7 +4,11 @@
 	import type { PageData } from './$types';
   import { mkConfig, generateCsv, download } from "export-to-csv";
 
-	export let data: PageData;
+  interface Props {
+    data: PageData;
+  }
+
+  let { data }: Props = $props();
 
   const dataToExport = data.savedWords.map(word => ({
     arabic: word.arabic_word,

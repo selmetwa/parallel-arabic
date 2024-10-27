@@ -5,21 +5,30 @@
   import { getWordObjectToSave } from '$lib/helpers/get-word-object-to-save';
   import { speakArabic } from "$lib/helpers/speak-arabic";
 
-  export let activeWordObj = {
+
+  /**
+   * @typedef {Object} Props
+   * @property {any} [activeWordObj]
+   * @property {boolean} [isModalOpen]
+   * @property {any} closeModal
+   */
+
+  /** @type {Props} */
+  let { activeWordObj = {
     english: "",
     arabic: "",
     transliterated: "",
     description: "",
     isLoading: false,
     type: "",
-  };
+  }, isModalOpen = false, closeModal } = $props();
 
-  export let isModalOpen = false;
-  export let closeModal
-
-  $: response = "";
-  $: error = "";
-  $: isLoading = false;
+  let response = $state("");
+  
+  let error = $state("");
+  
+  let isLoading = $state(false);
+  
 
   const saveWord = async () => {
     isLoading = true;

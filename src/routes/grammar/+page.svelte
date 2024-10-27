@@ -1,7 +1,7 @@
 <script>
 	import { goto } from '$app/navigation';
 	import Button from '$lib/components/Button.svelte';
-	export let data;
+	let { data } = $props();
 </script>
 
 {#if !data.session}

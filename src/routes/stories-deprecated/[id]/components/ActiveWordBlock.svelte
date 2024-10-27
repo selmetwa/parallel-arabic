@@ -4,20 +4,27 @@
 	import { getWordObjectToSave } from '$lib/helpers/get-word-object-to-save';
 	import Checkmark from '$lib/components/Checkmark.svelte';
 
-	export let showBlock = true;
 
-	$: response = '';
-	$: isLoading = false;
-	$: error = '';
+	let response = $state('');
+	
+	let isLoading = $state(false);
+	
+	let error = $state('');
+	
 
-	export let activeWordObj: KeyWord = {
+	interface Props {
+		showBlock?: boolean;
+		activeWordObj?: KeyWord;
+	}
+
+	let { showBlock = true, activeWordObj = {
 		english: '',
 		arabic: '',
 		transliterated: '',
 		description: '',
 		isLoading: false,
 		type: ''
-	};
+	} }: Props = $props();
 
 	const saveWord = async () => {
 		isLoading = true;

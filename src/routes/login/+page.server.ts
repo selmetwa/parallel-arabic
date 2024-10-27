@@ -44,8 +44,7 @@ export const actions: Actions = {
 				message: 'An unknown error occurred'
 			});
 		}
-		// redirect to profile page
 		// make sure you don't throw inside a try/catch block!
-		throw redirect(302, '/');
+		throw redirect(302, '/stories');
 	}
 };
