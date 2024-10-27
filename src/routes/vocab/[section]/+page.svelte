@@ -44,9 +44,7 @@
 	}
 
   let wordObj = $derived.by(() => {
-    console.log('deriving');
     if (data.words.length > index) {
-      // const _word = data.words.slice(1)[index];
 			const _shuffledWords = shuffleArray(data.words.slice(1));
 			const _shuffledAnswers = shuffleArray([word, _shuffledWords[0], _shuffledWords[1], _shuffledWords[2]]);
 
@@ -59,22 +57,6 @@
       };
     }
   })
-
-	// $effect(() => {
-	// 	if (data.words.length > index) {
-	// 		word = data.words.slice(1)[index];
-	// 		shuffledWords = shuffleArray(data.words.slice(1));
-	// 		shuffledAnswers = shuffleArray([word, shuffledWords[0], shuffledWords[1], shuffledWords[2]]);
-
-	// 		if (shuffledAnswers) {
-	// 			wordObj.answer = word;
-	// 			wordObj.first = shuffledAnswers[0];
-	// 			wordObj.second = shuffledAnswers[1];
-	// 			wordObj.third = shuffledAnswers[2];
-	// 			wordObj.fourth = shuffledAnswers[3];
-	// 		}
-	// 	}
-	// });
 
 	const isPaywalled = sections && sections?.find((section) => section.path === data.section).isPaywalled;
 </script>

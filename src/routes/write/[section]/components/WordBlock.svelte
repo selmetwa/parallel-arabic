@@ -158,7 +158,6 @@
 		});
 	});
 	$effect(() => {
-    $inspect(word);
 		if (word.english || mode) {
 			attemptTemp = [];
 			attempt = [];
@@ -199,8 +198,6 @@
 	    }
 	  }
 	});
-
-  $inspect({ attempt, attemptTemp })
 </script>
 
 <div>

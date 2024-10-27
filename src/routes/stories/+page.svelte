@@ -1,6 +1,7 @@
 <script>
   import { stories } from '$lib/constants/stories';
-  import PaywallModal from '$lib/components/PaywallModal.svelte';
+    import PaywallModal from '$lib/components/PaywallModal.svelte';
+  import CreateStoryModal from './components/CreateStoryModal.svelte';
 
   let { data } = $props();
   
@@ -22,6 +23,7 @@ function handleCloseModal() {
 <section class="px-4 sm:mt-8 sm:px-16 mt-4 pb-12 sm:pb-0">
 <h1 class="text-4xl font-bold text-text-300">Read</h1>
 <p class="text-text-200 text-lg">Improve your Egyptian Arabic reading and listening comprehension skills with these conversations written by professional arabic teachers</p>
+<CreateStoryModal></CreateStoryModal>
 <ul class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
     {#each Object.entries(stories) as [key, value]}
       {#if value.isPaywalled && !data.hasActiveSubscription}
