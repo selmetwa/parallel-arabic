@@ -1,23 +1,32 @@
 <script lang="ts">
+	import { run } from 'svelte/legacy';
+
 	import { type Letter } from '$lib/types';
-	export let letter: Letter;
 	import Button from '$lib/components/Button.svelte';
   import Canvas from './Canvas.svelte';
 	import Audio from '$lib/components/Audio.svelte';
-
-	let showHint = false;
-	let showAnswer = false;
-
-	$: if (letter.isolated) {
-		showHint = false;
-		showAnswer = false;
+	interface Props {
+		letter: Letter;
 	}
+
+	let { letter }: Props = $props();
+
+	let showHint = $state(false);
+	let showAnswer = $state(false);
+
+	run(() => {
+		if (letter.isolated) {
+			showHint = false;
+			showAnswer = false;
+		}
+	});
 
 	function toggleHint() {
 		showHint = !showHint;
 	}
 
-  $: svgData = '';
+  let svgData = $state('');
+	
 
 	async function toggleAnswer() {
     if (showAnswer === false) {

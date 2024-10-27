@@ -1,11 +1,21 @@
 <script lang="ts">
 	import type { KeyWord } from '../types';
 	import Word from './Word.svelte';
-	export let keyWords: KeyWord[] = [];
-	export let words: string[] = [];
-	export let showBlock = true;
-	export let type = '';
-	export let setActiveWord = (obj: KeyWord) => {};
+	interface Props {
+		keyWords?: KeyWord[];
+		words?: string[];
+		showBlock?: boolean;
+		type?: string;
+		setActiveWord?: any;
+	}
+
+	let {
+		keyWords = [],
+		words = [],
+		showBlock = true,
+		type = '',
+		setActiveWord = (obj: KeyWord) => {}
+	}: Props = $props();
 
 	function removeComma(inputString: string) {
 		const commataPattern = /[\u060C]/g;

@@ -7,23 +7,19 @@
   import Checkmark from '$lib/components/Checkmark.svelte';
   import { getWordObjectToSave } from '$lib/helpers/get-word-object-to-save';
   
-	export let data: {
-		session: any;
-		formattedStory: {
-			text: TextObj[];
-			keyWords: KeyWord[];
-		};
-	};
 
 	const sentences = data.formattedStory?.text || [];
 	const sentencesLength = sentences.length || 0;
 	const keyWords = data.formattedStory?.keyWords || [];
 
-	let sentence = 0;
-	let mode = Mode.SingleText;
-  $: response = '';
-  $: isLoading = false;
-  $: error = '';
+	let sentence = $state(0);
+	let mode = $state(Mode.SingleText);
+  let response = $state('');
+	
+  let isLoading = $state(false);
+	
+  let error = $state('');
+	
 
 	function updateMode(event: Event) {
 		mode = (event.target as HTMLInputElement).value as Mode;
@@ -45,17 +41,28 @@
 		sentence--;
 	}
 
-	let isModalOpen = false;
+	let isModalOpen = $state(false);
 	let timer: any = null;
 
-  export let activeWordObj: KeyWord = {
+	interface Props {
+		data: {
+		session: any;
+		formattedStory: {
+			text: TextObj[];
+			keyWords: KeyWord[];
+		};
+	};
+		activeWordObj?: KeyWord;
+	}
+
+	let { data, activeWordObj = $bindable({
 		english: '',
 		arabic: '',
 		transliterated: '',
     description: '',
     isLoading: false,
     type: ''
-	};
+	}) }: Props = $props();
 
 	function closeModal() {
 		timer = setTimeout(() => {

@@ -1,16 +1,23 @@
 <script>
-  export let isOpen = false;
-  export let handleCloseDrawer = () => {};
+  /**
+   * @typedef {Object} Props
+   * @property {boolean} [isOpen]
+   * @property {any} [handleCloseDrawer]
+   * @property {import('svelte').Snippet} [children]
+   */
+
+  /** @type {Props} */
+  let { isOpen = false, handleCloseDrawer = () => {}, children } = $props();
 </script>
 
 <div class="{`drawer ${isOpen ? 'open' : ''} bg-tile-300 border border-l border-tile-400`}">
   <!-- Your drawer content goes here -->
-  <slot />
+  {@render children?.()}
 </div>
 
-<!-- svelte-ignore a11y-click-events-have-key-events -->
-<!-- svelte-ignore a11y-no-static-element-interactions -->
-<div class="{`overlay ${isOpen ? 'open' : ''}`}" on:click={handleCloseDrawer}>
+<!-- svelte-ignore a11y_click_events_have_key_events -->
+<!-- svelte-ignore a11y_no_static_element_interactions -->
+<div class="{`overlay ${isOpen ? 'open' : ''}`}" onclick={handleCloseDrawer}>
   <!-- Clicking on the overlay will close the drawer -->
 </div>
 

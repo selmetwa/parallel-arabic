@@ -5,9 +5,20 @@
 	import { sections } from '$lib/constants/sections';
 	import { PUBLIC_PRICE_ID } from '$env/static/public';
 
-	export let data: any;
+	interface Props {
+		data: any;
+	}
 
-	let index = 0;
+	let { data }: Props = $props();
+
+	let index = $state(0);
+	// let wordObj = $derived({} as wordObjectGroup);
+	// let word = $state(data.words.slice(1)[0]);
+  let word = $derived(data.words.slice(1)[index]);
+	let shuffledWords = $state(shuffleArray(
+		data.words.slice(1).filter((w: any) => word.english !== w.english)
+	));
+	// let shuffledAnswers = $state(shuffleArray([word, shuffledWords[0], shuffledWords[1], shuffledWords[2]]));
 
 	function next() {
 		if (index === data.words.length - 1) {
@@ -32,29 +43,21 @@
 		return _arr;
 	}
 
-	$: wordObj = {} as wordObjectGroup;
-	let word = data.words.slice(1)[0];
-	let shuffledWords = shuffleArray(
-		data.words.slice(1).filter((w: any) => word.english !== w.english)
-	);
-	let shuffledAnswers = shuffleArray([word, shuffledWords[0], shuffledWords[1], shuffledWords[2]]);
-	$: {
-		if (data.words.length > index) {
-			word = data.words.slice(1)[index];
-			shuffledWords = shuffleArray(data.words.slice(1));
-			shuffledAnswers = shuffleArray([word, shuffledWords[0], shuffledWords[1], shuffledWords[2]]);
+  let wordObj = $derived.by(() => {
+    if (data.words.length > index) {
+			const _shuffledWords = shuffleArray(data.words.slice(1));
+			const _shuffledAnswers = shuffleArray([word, _shuffledWords[0], _shuffledWords[1], _shuffledWords[2]]);
 
-			if (shuffledAnswers) {
-				wordObj.answer = word;
-				wordObj.first = shuffledAnswers[0];
-				wordObj.second = shuffledAnswers[1];
-				wordObj.third = shuffledAnswers[2];
-				wordObj.fourth = shuffledAnswers[3];
-			}
-		}
-	}
+      return {
+        answer: word,
+        first: _shuffledAnswers[0],
+        second: _shuffledAnswers[1],
+        third: _shuffledAnswers[2],
+        fourth: _shuffledAnswers[3]
+      };
+    }
+  })
 
-  const a = sections && sections?.find((section) => section.path === data.section)
 	const isPaywalled = sections && sections?.find((section) => section.path === data.section).isPaywalled;
 </script>
 
@@ -63,9 +66,7 @@
 		<h1 class="text-2xl font-bold text-text-300">You are not subscribed.</h1>
 		<p class="mt-2 text-xl text-text-200">To continue practicing, please subscribe.</p>
 		<form method="POST" action="/?/subscribe" class="mx-auto mt-4 w-fit">
-			<!-- Modify this value using your own Stripe price_id -->
 			<input type="hidden" name="price_id" value={PUBLIC_PRICE_ID} />
-
 			<Button type="submit">Subscribe</Button>
 		</form>
 	</div>

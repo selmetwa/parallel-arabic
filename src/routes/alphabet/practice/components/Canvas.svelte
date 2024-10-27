@@ -1,13 +1,11 @@
 <script>
+  import { run } from 'svelte/legacy';
+
   import { writable } from 'svelte/store';
   import { getStroke } from 'perfect-freehand';
 
-  export let letter;
-  export let size; 
+  let { letter, size } = $props();
 
-  $: if (letter) {
-    clear()
-  }
   
   const points = writable([[]]);
 
@@ -45,9 +43,18 @@
     });
   }
 
-  let pathData = [];
+  let pathData = $state([]);
 
-  $: {
+
+  function clear() {
+    points.set([[]]);
+  }
+  $effect(() => {
+    if (letter) {
+      clear()
+    }
+  });
+  $effect(() => {
     pathData = $points.map(strokePoints => {
       const stroke = getStroke(strokePoints, {
         size: size,
@@ -66,16 +73,12 @@
       });
       return getSvgPathFromStroke(stroke);
     });
-  }
-
-  function clear() {
-    points.set([[]]);
-  }
+  });
 </script>
 
 <div class="wrapper">
-  <button on:click={clear} class="text-text-200 underline">Clear</button>
-  <svg on:pointerdown={handlePointerDown} on:pointermove={handlePointerMove} style="touch-action: none;">
+  <button onclick={clear} class="text-text-200 underline">Clear</button>
+  <svg onpointerdown={handlePointerDown} onpointermove={handlePointerMove} style="touch-action: none;">
     {#each pathData as path, i (i)}
       <path d={path} />
     {/each}

@@ -1,19 +1,29 @@
 <script lang="ts">
+	import { run } from 'svelte/legacy';
+
 	import cn from 'classnames';
 	import { onMount } from 'svelte';
 	import { conjugation_cases, conjugations } from '../constants';
 	import { updateKeyboardStyle } from '$lib/helpers/update-keyboard-style';
 	import { type Keyboard } from '$lib/types/index';
 
-	export let showHint = false;
-  export let showAnswer = false;
+	interface Props {
+		showHint?: boolean;
+		showAnswer?: boolean;
+		conjugationIndex: any;
+		verbToConjugate: {
+      egyptianArabic: string;
+      egyptianArabicTransliteration: string;
+      english: string;
+    };
+	}
 
-	export let conjugationIndex;
-	export let verbToConjugate: {
-		egyptianArabic: string;
-		egyptianArabicTransliteration: string;
-		english: string;
-	};
+	let {
+		showHint = $bindable(false),
+		showAnswer = false,
+		conjugationIndex,
+		verbToConjugate
+	}: Props = $props();
 
 	type ConjugatedVerb = {
 		possessive: string;
@@ -24,24 +34,33 @@
 		englishWeWant: string;
 		verbWeWant: string;
 	};
+
 	type Attempt = {
 		letter: string;
 		correct: boolean;
 	};
 
-	let attemptTemp: Attempt[] = [];
-	$: attempt = attemptTemp;
-	$: isCorrect = false;
-  $: keyboardValue = '';
-  let keyboard = 'virtual'
+	let attemptTemp: Attempt[] = $state([]);
+	let attempt = $state([]);
 
-	let conjugatedVerbArray: Array<ConjugatedVerb> = [];
+	$effect(() => {
+		attempt = attemptTemp;
+	});
 
-	$: if (conjugationIndex) {
-		attemptTemp = [];
-		isCorrect = false;
-    keyboardValue = '';
-	}
+	let isCorrect = $state(false);
+  let keyboardValue = $state('');
+  let keyboard = $state('virtual')
+	let conjugatedVerbArray: Array<ConjugatedVerb> = $state([]);
+
+	$effect(() => {
+		if (conjugationIndex || verbToConjugate.egyptianArabic) {
+      const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
+      keyboard && keyboard.resetValue();
+			attemptTemp = [];
+			isCorrect = false;
+	    keyboardValue = '';
+		}
+	});
 
 	function conjugate(verb: {
 		egyptianArabic: string;
@@ -173,18 +192,20 @@
 		});
 	});
 
-	let verbArray: Array<string> = [];
+	let verbArray: Array<string> = $state([]);
 
-	$: if (conjugationIndex || verbToConjugate.egyptianArabic) {
-		conjugatedVerbArray = conjugate(verbToConjugate);
-		attemptTemp = [];
-		attempt = [];
-		const cleanWord = conjugatedVerbArray[conjugationIndex]?.conjugatedVerb
-			.split('')
-			.filter((char: string) => char !== ' ');
+	run(() => {
+		if (conjugationIndex || verbToConjugate.egyptianArabic) {
+			conjugatedVerbArray = conjugate(verbToConjugate);
+			attemptTemp = [];
+			attempt = [];
+			const cleanWord = conjugatedVerbArray[conjugationIndex]?.conjugatedVerb
+				.split('')
+				.filter((char: string) => char !== ' ');
 
-		verbArray = cleanWord;
-	}
+			verbArray = cleanWord;
+		}
+	});
 
   function onRegularKeyboard(e) {
     const value = e.target.value;
@@ -261,7 +282,7 @@
 	</span>
 </div>
 <div class="mt-5">
-  <button on:click={toggleKeyboard}>
+  <button onclick={toggleKeyboard}>
     {keyboard === 'virtual' ? 'Use other keyboard' : 'Use builtin keyboard'}
   </button>
   <div class={cn('block', { 'hidden': keyboard !== 'virtual'})}>
@@ -269,10 +290,10 @@
   </div>
   <textarea 
   value={keyboardValue}
-  on:input={onRegularKeyboard}
+  oninput={onRegularKeyboard}
   class={cn(
     "block w-full min-h-32 text-text-300 bg-tile-400",
     {'hidden': keyboard === 'virtual'}
   )}
-  />
+></textarea>
 </div>

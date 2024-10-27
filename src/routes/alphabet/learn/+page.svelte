@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { run } from 'svelte/legacy';
+
 	import { letters } from '$lib/constants/alphabet';
 	import Button from '$lib/components/Button.svelte';
 	import cn from 'classnames';
@@ -7,7 +9,8 @@
 	import { updateKeyboardStyle } from '$lib/helpers/update-keyboard-style';
 	import { goto } from '$app/navigation';
 
-	$: page = 0;
+	let page = $state(0);
+	
 
 	function playAudio(letter: string) {
 		const audio = new Audio(`/letters/audios/${letter}.mp3`);
@@ -28,12 +31,16 @@
 	onMount(() => {
 		updateKeyboardStyle();
 	});
-	$: hue.subscribe(() => {
-		updateKeyboardStyle();
+	run(() => {
+		hue.subscribe(() => {
+			updateKeyboardStyle();
+		});
 	});
 
-	$: theme.subscribe(() => {
-		updateKeyboardStyle();
+	run(() => {
+		theme.subscribe(() => {
+			updateKeyboardStyle();
+		});
 	});
 
 	const lettersToRender = letters;
@@ -58,7 +65,7 @@
 					<div class="flex !w-full shrink-0 flex-col items-center justify-center">
 						<p class="text-sm text-text-200">{letter.name}</p>
 						<button
-							on:click={() => playAudio(letter.key)}
+							onclick={() => playAudio(letter.key)}
 							value={letter.key}
 							class="flex w-full cursor-pointer items-center justify-center rounded-md border-2 border-tile-500 bg-tile-400 p-2 text-3xl text-text-300 transition-all duration-300 ease-in-out hover:bg-tile-500"
 						>
@@ -86,7 +93,7 @@
 					<div class="flex !w-full shrink-0 flex-col items-center justify-center">
 						<p class="text-sm text-text-200">{letter.name}</p>
 						<button
-							on:click={() => playAudio(letter.key)}
+							onclick={() => playAudio(letter.key)}
 							value={letter.isolated}
 							class={cn(
 								'flex w-full cursor-pointer items-center justify-center rounded-md border-2 border-tile-500 bg-tile-400 text-3xl text-text-300 transition-all duration-300 ease-in-out hover:bg-tile-500',

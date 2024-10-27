@@ -3,7 +3,7 @@
   import Button from '$lib/components/Button.svelte';
   import { PUBLIC_PRICE_ID } from '$env/static/public'
 	import Checkmark from '$lib/components/Checkmark.svelte';
-  export let data;
+  let { data } = $props();
 
   const subscriberId = data.user?.subscriber_id;
 </script>

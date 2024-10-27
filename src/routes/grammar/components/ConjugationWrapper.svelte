@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { run } from 'svelte/legacy';
+
 	import Button from '$lib/components/Button.svelte';
   import WordBlock from './WordBlock.svelte';
   import Table from './Table.svelte';
@@ -6,18 +8,25 @@
   import Menu from '$lib/components/Menu.svelte';
   import { speakArabic } from '$lib/helpers/speak-arabic';
 
-	export let wordIndex;
-  export let verbToConjugate;
-  export let updateTensesViewed: () => void;
-
-  $: conjugationIndex = 0;
-	$: showHint = false;
-	$: showTable = false;
-  $: showAnswer = false;
-
-  $: if (wordIndex) {
-    conjugationIndex = 0;
+  interface Props {
+    wordIndex: any;
+    verbToConjugate: any;
+    updateTensesViewed: () => void;
   }
+
+  let { wordIndex, verbToConjugate, updateTensesViewed }: Props = $props();
+
+  let conjugationIndex = $state(0);
+	let showHint = $state(false);
+	let showTable = $state(false);
+  let showAnswer = $state(false);
+  
+
+  $effect(() => {
+    if (wordIndex) {
+      conjugationIndex = 0;
+    }
+  });
 
   async function next() {
     if (conjugationIndex === 31) {
@@ -51,16 +60,16 @@
 
 
 <Menu>
-    <button on:click={() => showHint = !showHint} class="block px-4 py-2 text-sm text-text-300 hover:bg-tile-400 w-full text-left">
+    <button onclick={() => showHint = !showHint} class="block px-4 py-2 text-sm text-text-300 hover:bg-tile-400 w-full text-left">
       {showHint ? 'Hide' : 'Show'} Hint
     </button>
-    <button on:click={() => showTable = !showTable} class="block px-4 py-2 text-sm text-text-300 hover:bg-tile-400 w-full text-left">
+    <button onclick={() => showTable = !showTable} class="block px-4 py-2 text-sm text-text-300 hover:bg-tile-400 w-full text-left">
       {showTable ? 'Hide' : 'Show'} Conjugation Table
     </button>
-    <button on:click={() => showAnswer = !showAnswer} class="block px-4 py-2 text-sm text-text-300 hover:bg-tile-400 w-full text-left">
+    <button onclick={() => showAnswer = !showAnswer} class="block px-4 py-2 text-sm text-text-300 hover:bg-tile-400 w-full text-left">
       {showAnswer ? 'Hide' : 'Show'} Answer
     </button>
-    <button on:click={() => speakArabic(verbToConjugate.egyptianArabic.trim().split(/[-–]/)[0].trim())} class="block px-4 py-2 text-sm text-text-300 hover:bg-tile-400 w-full text-left">
+    <button onclick={() => speakArabic(verbToConjugate.egyptianArabic.trim().split(/[-–]/)[0].trim())} class="block px-4 py-2 text-sm text-text-300 hover:bg-tile-400 w-full text-left">
       Listen to Pronunciation
     </button>
     <SaveButton
