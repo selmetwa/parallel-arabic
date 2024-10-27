@@ -9,8 +9,8 @@
   import Footer from "$lib/components/Footer.svelte";
   import RadioButton from '$lib/components/RadioButton.svelte';
 
-  export let data;
-	let isOpen = false;
+  let { data, children } = $props();
+	let isOpen = $state(false);
 
 	let root: HTMLElement | null;
 	let doc: Element | null;
@@ -36,7 +36,7 @@
 		theme.set(value);
 	};
 
-  let themeValue = ''
+  let themeValue = $state('')
 
   theme.subscribe((value) => {
     themeValue = value;
@@ -58,7 +58,7 @@
         </div>
       </header>
 
-		<form on:input={onTheme} class="flex flex-col gap-2 mt-8 px-3">
+		<form oninput={onTheme} class="flex flex-col gap-2 mt-8 px-3">
       <RadioButton 
         selectableFor="light"
         onClick={onTheme}
@@ -101,7 +101,7 @@
         session={data.session}
         userEmail={data?.user?.email ?? ""}
       />
-        <slot />
+        <slot></slot>
       <Footer />
     </main>
 		<aside class="flex flex-1 justify-center overflow-hidden py-12">

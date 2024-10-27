@@ -4,6 +4,7 @@ export type Keyboard = {
   style: {
     setProperty: (key: string, value: string) => void;
   };
+  addEventListener: (event: string, callback: (e: Event) => void) => void;
 };
 
 export type Letter = {

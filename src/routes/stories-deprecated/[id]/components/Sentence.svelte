@@ -1,31 +1,43 @@
 <script lang="ts">
+	import { run } from 'svelte/legacy';
+
 	import Block from './Block.svelte';
 	import ActiveWordBlock from './ActiveWordBlock.svelte';
 	import { type TextObj, type KeyWord, Mode } from '../types';
 
-	export let sentence: TextObj;
-	export let mode: Mode;
-	export let keyWords: KeyWord[] = [];
 
-	export let activeWordObj = {
+	interface Props {
+		sentence: TextObj;
+		mode: Mode;
+		keyWords?: KeyWord[];
+		activeWordObj?: any;
+		setActiveWord?: any;
+	}
+
+	let {
+		sentence,
+		mode,
+		keyWords = [],
+		activeWordObj = {
 		english: '',
 		arabic: '',
 		transliterated: '',
     description: '',
     isLoading: false,
     type: ''
-	};
-  export let setActiveWord = (word: KeyWord) => {}
+	},
+		setActiveWord = (word: KeyWord) => {}
+	}: Props = $props();
 
-	let englishWords: string[] = [];
-	let arabicWords: string[] = [];
-	let transliteratedWords: string[] = [];
+	let englishWords: string[] = $state([]);
+	let arabicWords: string[] = $state([]);
+	let transliteratedWords: string[] = $state([]);
 
-	$: {
+	run(() => {
 		englishWords = sentence.english || [];
 		arabicWords = sentence.arabic.reverse() || [];
 		transliteratedWords = sentence.transliterated || [];
-	}
+	});
 </script>
 
 <div class="flex flex-col divide-y divide-tile-600">

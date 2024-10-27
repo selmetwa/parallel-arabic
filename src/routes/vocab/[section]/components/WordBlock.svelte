@@ -4,18 +4,26 @@
 	import type { wordObjectItem, wordObjectGroup } from '$lib/types';
 	import SaveButton from '$lib/components/SaveButton.svelte';
 	import { speakArabic } from '$lib/helpers/speak-arabic';
-	export let next: () => void;
 
-	export let wordObj: wordObjectGroup;
+	interface Props {
+		next: () => void;
+		wordObj: wordObjectGroup;
+	}
 
-	$: isCorrect = false;
-	$: isIncorrect = false;
-	$: selectedObj = {} as wordObjectItem;
-	$: selected = null;
-	$: showHint = false;
-	$: showQuestionInEnglish = true;
+	let { next, wordObj }: Props = $props();
 
-	$: {
+	let isCorrect = $state(false);
+	let isIncorrect = $state(false);
+	let selectedObj = $state({} as wordObjectItem);
+	let selected = $state(null);
+	let showHint = $state(false);
+	let showQuestionInEnglish = $state(true);
+
+	$effect(() => {
+		selectedObj = {} as wordObjectItem;
+	});
+
+	$effect(() => {
 		if (wordObj) {
 			selectedObj = {} as wordObjectItem;
 			showHint = false;
@@ -23,7 +31,7 @@
 			isCorrect = false;
 			isIncorrect = false;
 		}
-	}
+	});
 
 	function getObjectByEnglishValue(data: wordObjectGroup, englishValue: string) {
 		for (let key in data) {
