@@ -2,11 +2,11 @@ import sqlite from 'better-sqlite3';
 import { Kysely, SqliteDialect } from 'kysely';
 import type { ColumnType } from 'kysely';
 import { readFileSync } from 'fs';
-// import { DB_PATH } from '$env/static/private';
+import { DB_PATH } from '$env/static/private';
 
 // const dbPath = process.env.DB_PATH;
 // console.log({ dbPath, DB_PATH });
-export const sqliteDatabase = sqlite("data/db.sqlite");
+export const sqliteDatabase = sqlite(DB_PATH);
 
 sqliteDatabase.exec(readFileSync('schema.sql', 'utf8'));
 
