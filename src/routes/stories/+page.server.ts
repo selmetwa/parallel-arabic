@@ -6,10 +6,10 @@ export const load = async ({ locals }) => {
   const userId = session && session.user.userId || null;
 
   const hasActiveSubscription = await getUserHasActiveSubscription(userId ?? "");
-  const user_generated_stories = await db.selectFrom('generated_story').selectAll().execute();
+  // const user_generated_stories = await db.selectFrom('generated_story').selectAll().execute();
 
   return {
     hasActiveSubscription,
-    user_generated_stories
+    // user_generated_stories
   }
 };
