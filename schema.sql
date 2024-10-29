@@ -8,6 +8,17 @@ CREATE TABLE if not exists user (
     sentences_viewed INTEGER,
     verb_conjugation_tenses_viewed INTEGER
 );
+
+CREATE TABLE if not exists generated_story (
+    id VARCHAR(15) PRIMARY KEY,
+    user_id VARCHAR(15) NOT NULL,
+    title VARCHAR(255) NOT NULL,
+    description TEXT NOT NULL,
+    difficulty INTEGER NOT NULL,
+    story_body JSON NOT NULL,
+    created_at BIGINT NOT NULL
+);
+
 CREATE TABLE if not exists user_key (
     id VARCHAR(255) PRIMARY KEY,
     user_id VARCHAR(15) NOT NULL,

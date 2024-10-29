@@ -42,9 +42,4 @@ export const stories = {
     description: 'With audio',
     type: 'audio'
   },
-  'cafe': {
-    isPaywalled: true,
-    story: coffeeShop,
-    description: 'AI generated, no audio'
-  },
 }

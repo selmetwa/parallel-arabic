@@ -1,23 +1,25 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { generatedStoryInStore } from "$lib/store/store";
-	import { json } from "@sveltejs/kit";
   import cn from 'classnames';
-	import Sentence from '../stories/[story]/components/Sentence.svelte';
-	import WordModal from '../stories/[story]/components/WordModal.svelte';
+	import Sentence from '../../stories/[story]/components/Sentence.svelte';
+	import WordModal from '../../stories/[story]/components/WordModal.svelte';
 	import RadioButton from '$lib/components/RadioButton.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import { getWordObjectToSave } from '$lib/helpers/get-word-object-to-save';
 	import Checkmark from '$lib/components/Checkmark.svelte';
-	import { PUBLIC_PRICE_ID } from '$env/static/public';
-	import Audio from '$lib/components/Audio.svelte';
-	import { Mode, type KeyWord } from '../stories/[story]/types';
+	import { Mode, type KeyWord } from '../../stories/[story]/types';
+	import type { PageData } from './$types';
 
+  interface Props {
+    data: PageData;
+  }
+
+  let { data }: Props = $props();
   let story = $state({})
 
   onMount(() => {
-    // const a = $generatedStoryInStore
-    story = JSON.parse($generatedStoryInStore)
+    story = JSON.parse(data.story[0].story_body)
   })
 
 	let mode = $state(Mode.SingleText);
