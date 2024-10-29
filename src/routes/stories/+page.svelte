@@ -7,23 +7,23 @@
   console.log({ data });
   let isModalOpen = $state(false);
 
-  let userGeneratedStories = $derived.by(() => {
-    const output = []
+  // let userGeneratedStories = $derived.by(() => {
+  //   const output = []
 
-    for (const story of data.user_generated_stories) {
-      const a = JSON.parse(story.story_body)
+  //   for (const story of data.user_generated_stories) {
+  //     const a = JSON.parse(story.story_body)
   
-      output.push({
-        id: story.id,
-        title: `${a.title.arabic} / ${a.title.english}`,
-        description: story.description,
-        createdAt: story.created_at,
-        difficulty: story.difficulty,
-        length: a.sentences.length
-      })
-    }
-    return output
-  })
+  //     output.push({
+  //       id: story.id,
+  //       title: `${a.title.arabic} / ${a.title.english}`,
+  //       description: story.description,
+  //       createdAt: story.created_at,
+  //       difficulty: story.difficulty,
+  //       length: a.sentences.length
+  //     })
+  //   }
+  //   return output
+  // })
 
   function openPaywallModal() {
   isModalOpen = true;
@@ -40,7 +40,7 @@ function handleCloseModal() {
 <section class="px-4 sm:mt-8 sm:px-16 mt-4 pb-12 sm:pb-0">
 <h1 class="text-4xl font-bold text-text-300">Read</h1>
 <p class="text-text-200 text-lg">Improve your Egyptian Arabic reading and listening comprehension skills with these conversations written by professional arabic teachers</p>
-<CreateStoryModal></CreateStoryModal>
+<!-- <CreateStoryModal></CreateStoryModal> -->
 <ul class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
     {#each Object.entries(stories) as [key, value]}
       {#if value.isPaywalled && !data.hasActiveSubscription}
@@ -79,7 +79,7 @@ function handleCloseModal() {
   </ul>
 </section>
 
-
+<!-- 
 <section class="px-4 sm:mt-8 sm:px-16 mt-4 pb-12 sm:pb-0">
   <h2 class="text-2xl font-bold text-text-300">User Generated Stories</h2>
   <p class="text-lg text-text-200">
@@ -103,4 +103,4 @@ function handleCloseModal() {
     </li>
   {/each}
   </ul>
-</section>
+</section> -->
