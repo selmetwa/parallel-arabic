@@ -9,6 +9,7 @@
 	let description = $state('');
 	let option = $state('beginner');
 	let isLoading = $state(false);
+  let title = $state('');
 
 	function openModal() {
 		isOpen = true;
@@ -26,17 +27,17 @@
 			headers: { accept: 'application/json' },
 			body: JSON.stringify({
 				option,
-				description
+				description,
+        title,
 			})
 		});
+    console.log({ res });
 
 		const chatgptres = await res.json();
-		const jsonBlob = chatgptres.message.message.content;
+    console.log({ chatgptres });
 
-    generatedStoryInStore.set(jsonBlob);
 		isLoading = false;
-
-    goto('/generated-story');
+    await goto('/generated-stories/' + chatgptres.storyId);
 	}
 
 	function setOption(event: any) {
@@ -80,12 +81,26 @@
         <i>Story is AI generated and may contain mistakes, or words not exclusive to Egyptian Arabic</i>
       </p>
 			<form onsubmit={handleSubmit}>
+        <div class="mt-4 flex flex-col">
+					<label for="title" class="text-text-200"
+						>Give your story a tit le</label
+					>
+					<input
+						type="text"
+            required
+						name="title"
+						bind:value={title}
+						id="title"
+						class="rounded-0 border border-tile-600 bg-tile-200 py-2 text-text-300"
+					/>
+				</div>
 				<div class="mt-4 flex flex-col">
 					<label for="description" class="text-text-200"
 						>What do you want the story to be about</label
 					>
 					<input
 						type="text"
+            required
 						name="description"
 						bind:value={description}
 						id="description"
