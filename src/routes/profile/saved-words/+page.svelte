@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { enhance } from '$app/forms';
   import Button from '$lib/components/Button.svelte';
 	import type { PageData } from './$types';
   import { mkConfig, generateCsv, download } from "export-to-csv";

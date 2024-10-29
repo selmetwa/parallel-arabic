@@ -3,7 +3,6 @@ import { atTheFruitVendor } from "./at-the-fruit-vendor"
 import { kosharyShop } from "./koshary-shop"
 import { atTheBarbers } from "./at-the-barbers"
 import { atTheHotel } from "./at-the-hotel"
-import { coffeeShop } from "./cafe"
 import { omarAndSarah } from "./omar-and-sarah"
 
 export const stories = {
@@ -41,10 +40,5 @@ export const stories = {
     story: omarAndSarah,
     description: 'With audio',
     type: 'audio'
-  },
-  'cafe': {
-    isPaywalled: true,
-    story: coffeeShop,
-    description: 'AI generated, no audio'
   },
 }

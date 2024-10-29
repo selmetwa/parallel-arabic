@@ -4,7 +4,8 @@ import type { ColumnType } from 'kysely';
 import { readFileSync } from 'fs';
 import { DB_PATH } from '$env/static/private';
 
-console.log('DB_PATH', DB_PATH);
+// const dbPath = process.env.DB_PATH;
+// console.log({ dbPath, DB_PATH });
 export const sqliteDatabase = sqlite(DB_PATH);
 
 sqliteDatabase.exec(readFileSync('schema.sql', 'utf8'));
@@ -25,7 +26,18 @@ type Database = {
 	password_reset_token: VerificationTokenTable;
   story: Story;
   saved_word: SavedWord;
+  generated_story: GeneratedStoryTable;
 };
+
+type GeneratedStoryTable = {
+  id: string;
+  user_id: string;
+  title: string;
+  description: string;
+  difficulty: string;
+  story_body: JSON;
+  created_at: ColumnType<bigint, number>;
+}
 
 type UserTable = {
 	id: string;
