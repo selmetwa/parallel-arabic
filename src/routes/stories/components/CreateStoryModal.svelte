@@ -34,7 +34,6 @@
     console.log({ res });
 
 		const chatgptres = await res.json();
-    console.log({ chatgptres });
 
 		isLoading = false;
     await goto('/generated-stories/' + chatgptres.storyId);
@@ -83,7 +82,7 @@
 			<form onsubmit={handleSubmit}>
         <div class="mt-4 flex flex-col">
 					<label for="title" class="text-text-200"
-						>Give your story a tit le</label
+						>Give your story a title</label
 					>
 					<input
 						type="text"
