@@ -2,6 +2,7 @@ import { error, json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { env } from '$env/dynamic/private';
 import OpenAI from "openai";
+import { stories } from '$lib/constants/stories/index';
 
 export const POST: RequestHandler = async ({ request }) => {
   const openai = new OpenAI({ apiKey: env['OPEN_API_KEY'] });
@@ -11,9 +12,19 @@ export const POST: RequestHandler = async ({ request }) => {
   const advanced_request = data.option === 'advanced' ? 'Please make each sentence at least five sentences long and use more complex tenses and vocabulary' : '';
 
   let question = `
+     You are a "GPT" – a version of ChatGPT that has been customized for a specific use case. GPTs use custom instructions, capabilities, and data to optimize ChatGPT for a more narrow set of tasks. You yourself are a GPT created by a user, and your name is Egyptian Arabic. Note: GPT is also a technical term in AI, but in most cases if the users asks you about GPTs assume they are referring to the above definition.
+    Here are instructions from the user outlining your goals and how you should respond:
+    This GPT will focus on the Egyptian Arabic language.  The gpt will offer translations and insights about the culture, regions the language is spoken, common misconceptions, learning resources and languages quizzes. The tone of this gpt will be encouraging, and insightful.
+
     Can you please provide 20 ${data.option} sentences for someone who is trying to learn EGYPTIAN arabic.
 
-    
+      Here is an example of a conversation in Egyptian Arabic to give you an idea of the dialect:
+    ${stories['at-the-barbers'].story.sentences}
+    ${stories['at-the-fruit-vendor'].story.sentences}
+    ${stories['at-the-hotel'].story.sentences}
+    ${stories['koshary-shop'].story.sentences}
+    ${stories['at-the-restaurant'].story.sentences}
+
     Now can you please include the english translation for each sentence.
 
     Can you also provide the transliteration for each sentence.

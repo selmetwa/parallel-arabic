@@ -15,6 +15,7 @@
 
     return {}
   })
+
 	function next() {
 		if (index === data.words.length - 1) {
 			return;

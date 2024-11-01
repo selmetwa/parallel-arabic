@@ -1,5 +1,5 @@
 export const omarAndSarah = {
-  audio: '/omar-and-sarah.mp3',
+  audio: '/audio/omar-and-sarah.mp3',
   title: {
     arabic: "عُمَر وسَارة",
     english: 'Omar and Sarah',

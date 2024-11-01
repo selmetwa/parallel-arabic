@@ -1,151 +1,188 @@
 const arabic = [
   {
     speaker: "جورج",
-    text: "السلام عليكم"
+    text: "السلام عليكم",
+    audio: '/audio/koshary-shop/sentence-audio/1.wav'
   },
   {
     speaker: "رجل ١",
-    text: "وعليكم السلام يا أستاذ، اتفضل"
+    text: "وعليكم السلام يا أستاذ، اتفضل",
+    audio: '/audio/koshary-shop/sentence-audio/2.wav'
   },
   {
     speaker: "جورج",
-    text: "عايز طبق كشري لو سمحت"
+    text: "عايز طبق كشري لو سمحت",
+    audio: '/audio/koshary-shop/sentence-audio/3.wav'
   },
   {
     speaker: "رجل ١",
-    text: "حجم ايه؟"
+    text: "حجم ايه؟",
+    audio: '/audio/koshary-shop/sentence-audio/4.wav'
   },
   {
     speaker: "جورج",
-    text: "عندك أحجام إيه؟"
+    text: "عندك أحجام إيه؟",
+    audio: '/audio/koshary-shop/sentence-audio/5.wav'
   },
   {
     speaker: "رجل ١",
-    text: "فيه كبير بـ ٤٥ جنيه، وسط بـ ٣٥ جنيه، وصغير بـ ٣٠ جنيه"
+    text: "فيه كبير بـ ٤٥ جنيه، وسط بـ ٣٥ جنيه، وصغير بـ ٣٠ جنيه",
+    audio: '/audio/koshary-shop/sentence-audio/6.wav'
   },
   {
     speaker: "جورج",
-    text: "ممكن واحد \"وسط\" لو سمحت، بس مش عايز عليه شطة"
+    text: "ممكن واحد \"وسط\" لو سمحت، بس مش عايز عليه شطة",
+    audio: '/audio/koshary-shop/sentence-audio/7.wav'
   },
   {
     speaker: "رجل ١",
-    text: "تمام يا أستاذ، ٣٥ جنيه، عايز حاجة تانية؟"
+    text: "تمام يا أستاذ، ٣٥ جنيه، عايز حاجة تانية؟",
+    audio: '/audio/koshary-shop/sentence-audio/8.wav'
   },
   {
     speaker: "جورج",
-    text: "ممكن تقترح عليا صنف تاني معاه أجربه؟"
+    text: "ممكن تقترح عليا صنف تاني معاه أجربه؟",
+    audio: '/audio/koshary-shop/sentence-audio/9.wav'
   },
   {
     speaker: "رجل ١",
-    text: "عندك المنيو على الحيطة، اختار اللي تحبه"
+    text: "عندك المنيو على الحيطة، اختار اللي تحبه",
+    audio: '/audio/koshary-shop/sentence-audio/10.wav'
   },
   {
     speaker: "جورج",
-    text: "ما أنا عايزك أنت تقترح عليا حاجة"
+    text: "ما أنا عايزك أنت تقترح عليا حاجة",
+    audio: '/audio/koshary-shop/sentence-audio/11.wav'
   },
   {
     speaker: "رجل ١",
-    text: "شوف يا حسن الزبون ده"
+    text: "شوف يا حسن الزبون ده",
+    audio: '/audio/koshary-shop/sentence-audio/12.wav'
   },
   {
     speaker: "رجل ٢ - حسن",
-    text: "أيوه يا باشا، اتفضل"
+    text: "أيوه يا باشا، اتفضل",
+    audio: '/audio/koshary-shop/sentence-audio/13.wav'
   },
   {
     speaker: "جورج",
-    text: "اقترح عليا حاجة مع طبق الكشري الوسط"
+    text: "اقترح عليا حاجة مع طبق الكشري الوسط",
+    audio: '/audio/koshary-shop/sentence-audio/14.wav'
   },
   {
     speaker: "حسن",
-    text: "ممكن تجرب المكرونة بالبشاميل، بنعملها حلوة، وممكن كمان تحلي بالرز بلبن"
+    text: "ممكن تجرب المكرونة بالبشاميل، بنعملها حلوة، وممكن كمان تحلي بالرز بلبن",
+    audio: '/audio/koshary-shop/sentence-audio/15.wav'
   },
   {
     speaker: "جورج",
-    text: "أيوه، كنت عايز أجربه فعلًا .. خلاص يبقى واحد رز بلبن مع الكشري ولو كنت لسه جعان هجرب المكرونة، اتفضل الفلوس"
+    text: "أيوه، كنت عايز أجربه فعلًا .. خلاص يبقى واحد رز بلبن مع الكشري ولو كنت لسه جعان هجرب المكرونة، اتفضل الفلوس",
+    audio: '/audio/koshary-shop/sentence-audio/16.wav'
   },
   {
     speaker: "حسن",
-    text: "(....) البُون أهو، اتفضل جوا وهجيبلك الأكل"
+    text: "(....) البُون أهو، اتفضل جوا وهجيبلك الأكل",
+    audio: '/audio/koshary-shop/sentence-audio/17.wav'
   },
   {
     speaker: "جورج",
-    text: "شكرًا، هو مواعيدكوا إيه؟ .. بتقفلوا الساعة كام؟"
+    text: "شكرًا، هو مواعيدكوا إيه؟ .. بتقفلوا الساعة كام؟",
+    audio: '/audio/koshary-shop/sentence-audio/18.wav'
   },
   {
     speaker: "حسن",
-    text: "إحنا شغالين ٢٤ ساعة يا باشا، أي وقت هتلاقينا"
+    text: "إحنا شغالين ٢٤ ساعة يا باشا، أي وقت هتلاقينا",
+    audio: '/audio/koshary-shop/sentence-audio/19.wav'
   },
   {
     speaker: "جورج",
-    text: "شكرًا"
+    text: "شكرًا",
+    audio: '/audio/koshary-shop/sentence-audio/20.wav'
   },
   {
     speaker: "حسن",
-    text: "ياه يا أستاذ، أنت لسه هنا، عجبك الكشري ولا ايه؟"
+    text: "ياه يا أستاذ، أنت لسه هنا، عجبك الكشري ولا ايه؟",
+    audio: '/audio/koshary-shop/sentence-audio/21.wav'
   },
   {
     speaker: "جورج",
-    text: "جدا لدرجة إني طلبت طبق تاني"
+    text: "جدا لدرجة إني طلبت طبق تاني",
+    audio: '/audio/koshary-shop/sentence-audio/22.wav'
   },
   {
     speaker: "حسن",
-    text: "بالهناء والشفاء"
+    text: "بالهناء والشفاء",
+    audio: '/audio/koshary-shop/sentence-audio/23.wav'
   },
   {
     speaker: "جورج",
-    text: "بقولك، أنا عايز أجرب أكل مصري حلو زي الكشري كده.. فيه إيه لازم أجربه؟"
+    text: "بقولك، أنا عايز أجرب أكل مصري حلو زي الكشري كده.. فيه إيه لازم أجربه؟",
+    audio: '/audio/koshary-shop/sentence-audio/24.wav'
   },
   {
     speaker: "حسن",
-    text: "فيه مثلًا الملوخية.. الحواوشي"
+    text: "فيه مثلًا الملوخية.. الحواوشي",
+    audio: '/audio/koshary-shop/sentence-audio/25.wav'
   },
   {
     speaker: "جورج",
-    text: "امم.. وإيه كمان؟"
+    text: "امم.. وإيه كمان؟",
+    audio: '/audio/koshary-shop/sentence-audio/26.wav'
   },
   {
     speaker: "حسن",
-    text: "ورق العنب والمحاشي طبعًا .. وكمان المُمبار.. لازم تجربه"
+    text: "ورق العنب والمحاشي طبعًا .. وكمان المُمبار.. لازم تجربه",
+    audio: '/audio/koshary-shop/sentence-audio/27.wav'
   },
   {
     speaker: "جورج",
-    text: "بس يعني فيه أي محلات في المنطقة دي بيعملوا الأكل ده؟"
+    text: "بس يعني فيه أي محلات في المنطقة دي بيعملوا الأكل ده؟",
+    audio: '/audio/koshary-shop/sentence-audio/28.wav'
   },
   {
     speaker: "حسن",
-    text: "طبعًا يا أستاذ، خش يمين النَّاصية الجاية هتلاقي مطاعم كتير"
+    text: "طبعًا يا أستاذ، خش يمين النَّاصية الجاية هتلاقي مطاعم كتير",
+    audio: '/audio/koshary-shop/sentence-audio/29.wav'
   },
   {
     speaker: "جورج",
-    text: "جميل"
+    text: "جميل",
+    audio: '/audio/koshary-shop/sentence-audio/30.wav'
   },
   {
     speaker: "حسن",
-    text: "جربت تشرب عصير قصب طيب؟"
+    text: "جربت تشرب عصير قصب طيب؟",
+    audio: '/audio/koshary-shop/sentence-audio/31.wav'
   },
   {
     speaker: "جورج",
-    text: "لأ لسه"
+    text: "لأ لسه",
+    audio: '/audio/koshary-shop/sentence-audio/32.wav'
   },
   {
     speaker: "حسن",
-    text: "أهو ده بقى لازم تجربه"
+    text: "أهو ده بقى لازم تجربه",
+    audio: '/audio/koshary-shop/sentence-audio/33.wav'
   },
   {
     speaker: "جورج",
-    text: "هجيبه دلوقتي بعد ما أخلص أكل"
+    text: "هجيبه دلوقتي بعد ما أخلص أكل",
+    audio: '/audio/koshary-shop/sentence-audio/34.wav'
   },
   {
     speaker: "حسن",
-    text: "هيعجبك أوي .. بالهناء والشفاء"
+    text: "هيعجبك أوي .. بالهناء والشفاء",
+    audio: '/audio/koshary-shop/sentence-audio/35.wav'
   },
   {
     speaker: "جورج",
-    text: "شكرًا على ذوقك"
+    text: "شكرًا على ذوقك",
+    audio: '/audio/koshary-shop/sentence-audio/36.wav'
   },
   {
     speaker: "حسن",
-    text: "عفوًا يا أستاذ، نورت بلدنا مصر أم الدنيا"
+    text: "عفوًا يا أستاذ، نورت بلدنا مصر أم الدنيا",
+    audio: '/audio/koshary-shop/sentence-audio/37.wav'
   }
 ];
 

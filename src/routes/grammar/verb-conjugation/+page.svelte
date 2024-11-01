@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { run } from 'svelte/legacy';
-
 	import Button from '$lib/components/Button.svelte';
 	import ConjugationWrapper from '../components/ConjugationWrapper.svelte';
 	import { PUBLIC_PRICE_ID } from '$env/static/public';
@@ -9,13 +7,15 @@
 
 	let { data } = $props();
 
-	let wordIndex = $state($verbToConjugateIndexInStore || 0);
+  let verbToConjugateIndexInLocalStorage = $derived.by(() => {
+    if (typeof localStorage === 'undefined') return null;
+  
+    return localStorage.getItem('verbToConjugateIndex');
+  })
+
+	let wordIndex = $state($verbToConjugateIndexInStore || Number(verbToConjugateIndexInLocalStorage) || 0);
 	let verbToConjugate = $derived(data.words[wordIndex]);
 	let tensesViewed = $state(data.tensesViewed || 0);
-
-	// run(() => {
-	// 	tensesViewed = data.tensesViewed || 0;
-	// });
 
 	async function updateTensesViewed() {
 		await fetch('/api/increment_tenses_viewed', {
@@ -29,9 +29,15 @@
 			});
 	}
 
+  $effect(() => {
+    verbToConjugateIndexInStore.set(wordIndex);
+    localStorage.setItem('verbToConjugateIndex', wordIndex.toString());
+  })
+
 	function next() {
 		wordIndex = wordIndex + 1;
 		verbToConjugateIndexInStore.set(wordIndex);
+    localStorage.setItem('verbToConjugateIndex', wordIndex.toString());
 	}
 
 	function previous() {

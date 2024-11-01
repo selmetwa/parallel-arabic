@@ -1,163 +1,203 @@
 const arabic = [
   {
     speaker: "جورج",
-    text: "صباح الخير"
+    text: "صباح الخير",
+    audio: '/audio/at-the-barbers/sentence-audio/1.wav'
   },
   {
     speaker: "عم رضا الحلاق",
-    text: "صباح النور يا أستاذ"
+    text: "صباح النور يا أستاذ",
+    audio: '/audio/at-the-barbers/sentence-audio/2.wav'
   },
   {
     speaker: "جورج",
-    text: "عايز أحلق دقني، بكام؟"
+    text: "عايز أحلق دقني، بكام؟",
+    audio: '/audio/at-the-barbers/sentence-audio/3.wav'
   },
   {
     speaker: "عم رضا",
-    text: "الدقن بـ ٣٥ جنيه"
+    text: "الدقن بـ ٣٥ جنيه",
+    audio: '/audio/at-the-barbers/sentence-audio/4.wav'
   },
   {
     speaker: "جورج",
-    text: "ماشي"
+    text: "ماشي",
+    audio: '/audio/at-the-barbers/sentence-audio/5.wav'
   },
   {
     speaker: "عم رضا",
-    text: "ممكن خمس دقايق أخلَّص الزبون ده"
+    text: "ممكن خمس دقايق أخلَّص الزبون ده",
+    audio: '/audio/at-the-barbers/sentence-audio/6.wav'
   },
   {
     speaker: "جورج",
-    text: "براحتك أنا مش ورايا حاجة..  المكان هنا مميز أوي، شعبي كده ومليان محلات في كل حِتَّة"
+    text: "براحتك أنا مش ورايا حاجة..  المكان هنا مميز أوي، شعبي كده ومليان محلات في كل حِتَّة",
+    audio: '/audio/at-the-barbers/sentence-audio/7.wav'
   },
   {
     speaker: "عم رضا",
-    text: "أيوه يا باشا، العباسية دايمًا كده، على فكرة المحل بتاعي ده بقاله أكتر من ٤٠ سنة، كان من أوائل المحلات اللي هنا"
+    text: "أيوه يا باشا، العباسية دايمًا كده، على فكرة المحل بتاعي ده بقاله أكتر من ٤٠ سنة، كان من أوائل المحلات اللي هنا",
+    audio: '/audio/at-the-barbers/sentence-audio/8.wav'
   },
   {
     speaker: "جورج",
-    text: "جميل"
+    text: "جميل",
+    audio: '/audio/at-the-barbers/sentence-audio/9.wav'
   },
   {
     speaker: "عم رضا",
-    text: "اتفضل يا أستاذ، هتحلق دقنك بس؟"
+    text: "اتفضل يا أستاذ، هتحلق دقنك بس؟",
+    audio: '/audio/at-the-barbers/sentence-audio/10.wav'
   },
   {
     speaker: "جورج",
-    text: "آه، أنا في العادي بحلقها بنفسي في البيت، بس عايز أجرب أحلقها عند حلاق"
+    text: "آه، أنا في العادي بحلقها بنفسي في البيت، بس عايز أجرب أحلقها عند حلاق",
+    audio: '/audio/at-the-barbers/sentence-audio/11.wav'
   },
   {
     speaker: "عم رضا",
-    text: "ما أحلق لك الشعر بالمرة"
+    text: "ما أحلق لك الشعر بالمرة",
+    audio: '/audio/at-the-barbers/sentence-audio/12.wav'
   },
   {
     speaker: "جورج",
-    text: "هتعرف تظبطه؟"
+    text: "هتعرف تظبطه؟",
+    audio: '/audio/at-the-barbers/sentence-audio/13.wav'
   },
   {
     speaker: "عم رضا",
-    text: "عيب عليك! ما تقلقش ده أنا (عم رضا) تقدر تسأل عني في المنطقة هنا.. قولي بس أنت عايز إيه ومتخافش"
+    text: "عيب عليك! ما تقلقش ده أنا (عم رضا) تقدر تسأل عني في المنطقة هنا.. قولي بس أنت عايز إيه ومتخافش",
+    audio: '/audio/at-the-barbers/sentence-audio/14.wav'
   },
   {
     speaker: "جورج",
-    text: "طيب ممكن أجرب قَصِّة الكابوريا .. عايز أقصر الجناب أكتر من باقي الشعر .. زي أحمد زكي في فيلم \"كابوريا\" كده"
+    text: "طيب ممكن أجرب قَصِّة الكابوريا .. عايز أقصر الجناب أكتر من باقي الشعر .. زي أحمد زكي في فيلم \"كابوريا\" كده",
+    audio: '/audio/at-the-barbers/sentence-audio/15.wav'
   },
   {
     speaker: "عم رضا",
-    text: "(يضحك) الله! ده أنت طلعت مصري أكتر منا! حضرتك منين؟"
+    text: "(يضحك) الله! ده أنت طلعت مصري أكتر منا! حضرتك منين؟",
+    audio: '/audio/at-the-barbers/sentence-audio/16.wav'
   },
   {
     speaker: "جورج",
-    text: "إنجلترا"
+    text: "إنجلترا",
+    audio: '/audio/at-the-barbers/sentence-audio/17.wav'
   },
   {
     speaker: "عم رضا",
-    text: "ليفربول؟"
+    text: "ليفربول؟",
+    audio: '/audio/at-the-barbers/sentence-audio/18.wav'
   },
   {
     speaker: "جورج",
-    text: "لا لندن"
+    text: "لا لندن",
+    audio: '/audio/at-the-barbers/sentence-audio/19.wav'
   },
   {
     speaker: "عم رضا",
-    text: "محمد صلاح عامل شغل عظيم عندكم"
+    text: "محمد صلاح عامل شغل عظيم عندكم",
+    audio: '/audio/at-the-barbers/sentence-audio/20.wav'
   },
   {
     speaker: "جورج",
-    text: "ده حقيقي، من ساعة ما جيت وأنا ملاحظ إن كل القهاوي حاطَّه صورته، حاجة جميلة ومُشَرِّفَة"
+    text: "ده حقيقي، من ساعة ما جيت وأنا ملاحظ إن كل القهاوي حاطَّه صورته، حاجة جميلة ومُشَرِّفَة",
+    audio: '/audio/at-the-barbers/sentence-audio/21.wav'
   },
   {
     speaker: "عم رضا",
-    text: "طبعاً. ده فخر مصر"
+    text: "طبعاً. ده فخر مصر",
+    audio: '/audio/at-the-barbers/sentence-audio/22.wav'
   },
   {
     speaker: "جورج",
-    text: "بس إزاي بتتفرج على التليفزيون وأنت بتحلق لي في نفس الوقت؟"
+    text: "بس إزاي بتتفرج على التليفزيون وأنت بتحلق لي في نفس الوقت؟",
+    audio: '/audio/at-the-barbers/sentence-audio/23.wav'
   },
   {
     speaker: "عم رضا",
-    text: "عادي يا أستاذ ماتقلقش مش هعورك، أنا مِتْعَوِّد"
+    text: "عادي يا أستاذ ماتقلقش مش هعورك، أنا مِتْعَوِّد",
+    audio: '/audio/at-the-barbers/sentence-audio/24.wav'
   },
   {
     speaker: "جورج",
-    text: "طيب ما تجيب حاجة تانية غير قناة الأخبار"
+    text: "طيب ما تجيب حاجة تانية غير قناة الأخبار",
+    audio: '/audio/at-the-barbers/sentence-audio/25.wav'
   },
   {
     speaker: "عم رضا",
-    text: "أصل بصراحة عايز أعرف رئيس الوزراء قال إيه في مؤتمر النهاردة"
+    text: "أصل بصراحة عايز أعرف رئيس الوزراء قال إيه في مؤتمر النهاردة",
+    audio: '/audio/at-the-barbers/sentence-audio/26.wav'
   },
   {
     speaker: "جورج",
-    text: "حضرتك من مصر، قصدي من القاهرة؟"
+    text: "حضرتك من مصر، قصدي من القاهرة؟",
+    audio: '/audio/at-the-barbers/sentence-audio/27.wav'
   },
   {
     speaker: "عم رضا",
-    text: "أنا أصلاً من بورسعيد، بس عايش هنا من التمانينات"
+    text: "أنا أصلاً من بورسعيد، بس عايش هنا من التمانينات",
+    audio: '/audio/at-the-barbers/sentence-audio/28.wav'
   },
   {
     speaker: "جورج",
-    text: "لعلمك، محلات الحلاقة عندنا في لندن مختلفة كتير عن اللي عندكوا"
+    text: "لعلمك، محلات الحلاقة عندنا في لندن مختلفة كتير عن اللي عندكوا",
+    audio: '/audio/at-the-barbers/sentence-audio/29.wav'
   },
   {
     speaker: "عم رضا",
-    text: "إزاي بقى احكيلي"
+    text: "إزاي بقى احكيلي",
+    audio: '/audio/at-the-barbers/sentence-audio/30.wav'
   },
   {
     speaker: "جورج",
-    text: "في شكلها، وعمومًا الحلاقين هناك مبتتكلمش كتير مع الزباين"
+    text: "في شكلها، وعمومًا الحلاقين هناك مبتتكلمش كتير مع الزباين",
+    audio: '/audio/at-the-barbers/sentence-audio/31.wav'
   },
   {
     speaker: "عم رضا",
-    text: "(يضحك) ما هو الكلام ده يا أستاذ اللي بيضيع الوقت عشان الزبون ميزهقش"
+    text: "(يضحك) ما هو الكلام ده يا أستاذ اللي بيضيع الوقت عشان الزبون ميزهقش",
+    audio: '/audio/at-the-barbers/sentence-audio/32.wav'
   },
   {
     speaker: "جورج",
-    text: "صوت الكلاكسات والتكاتك عالية أوي في المنطقة هنا"
+    text: "صوت الكلاكسات والتكاتك عالية أوي في المنطقة هنا",
+    audio: '/audio/at-the-barbers/sentence-audio/33.wav'
   },
   {
     speaker: "عم رضا",
-    text: "يمكن مبقيتش حاسس بيها عشان وداني اتعودت عليها .. بس كده، نعيمًا يا باشا"
+    text: "يمكن مبقيتش حاسس بيها عشان وداني اتعودت عليها .. بس كده، نعيمًا يا باشا",
+    audio: '/audio/at-the-barbers/sentence-audio/34.wav'
   },
   {
     speaker: "جورج",
-    text: "الله ينعم عليك، كام كده؟"
+    text: "الله ينعم عليك، كام كده؟",
+    audio: '/audio/at-the-barbers/sentence-audio/35.wav'
   },
   {
     speaker: "عم رضا",
-    text: "كده شعر ودقن ب ٧٠ جنيه. وخلي عنك خالص"
+    text: "كده شعر ودقن ب ٧٠ جنيه. وخلي عنك خالص",
+    audio: '/audio/at-the-barbers/sentence-audio/36.wav'
   },
   {
     speaker: "جورج",
-    text: "شكراً. بس ده حقك مينفعش .. اتفضل ١٠٠ جنيه"
+    text: "شكراً. بس ده حقك مينفعش .. اتفضل ١٠٠ جنيه",
+    audio: '/audio/at-the-barbers/sentence-audio/37.wav'
   },
   {
     speaker: "عم رضا",
-    text: "اتفضل الباقي ٣٠ جنيه"
+    text: "اتفضل الباقي ٣٠ جنيه",
+    audio: '/audio/at-the-barbers/sentence-audio/38.wav'
   },
   {
     speaker: "جورج",
-    text: "شكراً.. لازم هجيلك مرة تانية"
+    text: "شكراً.. لازم هجيلك مرة تانية",
+    audio: '/audio/at-the-barbers/sentence-audio/39.wav'
   },
   {
     speaker: "عم رضا",
-    text: "تنور أي وقت"
+    text: "تنور أي وقت",
+    audio: '/audio/at-the-barbers/sentence-audio/40.wav'
   }
 ];
 
