@@ -3,7 +3,7 @@
 	import cn from 'classnames';
 	import Checkmark from '$lib/components/Checkmark.svelte';
 	import Audio from '$lib/components/Audio.svelte';
-	import { Mode } from '../types';
+	import AudioButton from '$lib/components/AudioButton.svelte';
 
 	type TWholeSentence = {
 		arabic: TSentence;
@@ -23,6 +23,7 @@
 		classname?: string;
 		index: any;
 		mode: any;
+		isGenerated?: boolean;
 	}
 
 	let {
@@ -31,14 +32,15 @@
 		type = '',
 		classname = '',
 		index,
-		mode
+		mode,
+		isGenerated
 	}: Props = $props();
 
 	let _sentence = $derived(sentence[type]);
 	let isLoading = $state(false);
 	let error = $state('');
 	let response = $state('');
-	
+
 	let isArabic = $derived(type === 'arabic');
 	let words = $derived(isArabic ? _sentence.text.split(' ').reverse() : _sentence.text.split(' '));
 
@@ -119,11 +121,18 @@
 	dir={isArabic ? 'rtl' : 'ltr'}
 	class={cn('relative flex flex-col justify-center border-b border-tile-600 px-5 py-10', classname)}
 >
-  {#if type === 'arabic' && _sentence.audio && mode !== 'SentanceView'}
-    <div class="absolute top-0 right-0 w-1/4">
-      <Audio src={_sentence.audio}></Audio>
-    </div>
-  {/if}
+	{#if type === 'arabic' && mode !== 'SentanceView'}
+		{#if _sentence.audio}
+			<div class="absolute right-0 top-0 w-1/4">
+				<Audio src={_sentence.audio}></Audio>
+			</div>
+		{/if}
+		{#if !_sentence.audio}
+			<div class="absolute bottom-0 left-0 w-fit">
+				<AudioButton text={_sentence.text}>Play Audio</AudioButton>
+			</div>
+		{/if}
+	{/if}
 	{#if type === 'arabic'}
 		<button
 			type="button"
@@ -155,7 +164,7 @@
 				</span>
 			{:else if response && !error}
 				<span class="flex flex-row items-center gap-2 text-center">
-          <Checkmark></Checkmark>
+					<Checkmark></Checkmark>
 					{response}
 				</span>
 			{:else}

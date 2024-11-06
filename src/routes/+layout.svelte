@@ -14,7 +14,6 @@
 
 	let root: HTMLElement | null;
 	let doc: Element | null;
-
 	onMount(() => {
 		root = document.documentElement;
 		doc = document.firstElementChild || null;
@@ -116,6 +115,7 @@
 
   <style>
     main {
-      width: min(1000px, 100%);
+      width: min(var(--layout-width), 100%);
     }
   </style>
+

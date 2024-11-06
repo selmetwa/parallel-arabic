@@ -21,8 +21,16 @@
 				href="grammar/verb-conjugation"
 				class="transitional-all flex flex-1 cursor-pointer flex-col gap-2 border-2 border-tile-600 bg-tile-400 px-4 py-8 text-center font-semibold duration-300 hover:bg-tile-500"
 			>
-				<h2 class="text-3xl text-text-300">Verb Conjugations</h2>
-				<p class="text-lg text-text-200">Practice your verb conjugations</p>
+				<h2 class="text-3xl text-text-300">Verb Conjugations Practice</h2>
+				<p class="text-lg text-text-200">Practice conjugating verbs</p>
+			</a>
+		</div>
+    <div class="mt-4 flex flex-col gap-4 sm:flex-row">
+			<a
+				href="grammar/verb-conjugation-flashcards"
+				class="transitional-all flex flex-1 cursor-pointer flex-col gap-2 border-2 border-tile-600 bg-tile-400 px-4 py-8 text-center font-semibold duration-300 hover:bg-tile-500"
+			>
+				<h2 class="text-3xl text-text-300">Verb Conjugation Flashcards</h2>
 			</a>
 		</div>
 	</section>

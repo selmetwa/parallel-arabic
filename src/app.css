@@ -76,6 +76,7 @@
   --overlay: var(--spacing) calc(var(--spacing) * -3) var(--spacing) var(--spacing);
   --size-one: 10px;
   --size-two: 10px;
+  --layout-width: 1000px;
 }
 
 [color-scheme="light"] {

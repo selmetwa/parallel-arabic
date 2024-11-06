@@ -148,6 +148,7 @@
 			response = '';
 		}, 3000);
 	};
+
 </script>
 
 {#if isPaywalled && !data.hasActiveSubscription}
@@ -173,6 +174,8 @@
 					{:else}
 						<Audio src={data.audio}></Audio>
 					{/if}
+        {:else}
+          <p class="text-lg text-text-300">No audio available</p>
 				{/if}
 			</div>
 			<fieldset class="flex w-full place-content-end">

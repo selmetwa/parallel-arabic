@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { run } from 'svelte/legacy';
-
 	import { onMount } from 'svelte';
 	import cn from 'classnames';
 
@@ -13,8 +11,8 @@
   import Modal from '$lib/components/Modal.svelte';
   import KeyboardDocumentation from '$lib/components/KeyboardDocumentation.svelte';
   import SaveButton from '$lib/components/SaveButton.svelte';
-  import { speakArabic } from '$lib/helpers/speak-arabic';
   import InfoDisclaimer from '$lib/components/InfoDisclaimer.svelte';
+  import AudioButton from "$lib/components/AudioButton.svelte";
 
 	type Word = {
 		english: string;
@@ -136,7 +134,7 @@
     isInfoModalOpen = false;
   }
 
-  function onRegularKeyboard(e) {
+  function onRegularKeyboard(e: any) {
     const value = e.target.value;
     keyboardValue = value;
     compareMyInput(value);
@@ -206,7 +204,7 @@
 		<div class="grid grid-cols-2 gap-2 sm:grid-cols-5">
 			<Button type="button" onClick={toggleAnswer}>{showAnswer ? 'Hide' : 'Show'} answer</Button>
 			<Button type="button" onClick={toggleHint}>{showHint ? 'Hide' : 'Show'} hint</Button>
-      <Button type="button" onClick={() => speakArabic(egyptianArabicWord)}>Speak</Button>
+      <AudioButton text={word.egyptianArabic.split(regex)[1].trim()}>Audio</AudioButton>
       <SaveButton 
       type="Word"
       objectToSave={{

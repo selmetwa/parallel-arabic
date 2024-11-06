@@ -1,12 +1,9 @@
 <script lang="ts">
-  import { run } from 'svelte/legacy';
-
 	import Button from '$lib/components/Button.svelte';
   import WordBlock from './WordBlock.svelte';
   import Table from './Table.svelte';
 	import SaveButton from '$lib/components/SaveButton.svelte';
-  import Menu from '$lib/components/Menu.svelte';
-  import { speakArabic } from '$lib/helpers/speak-arabic';
+  import AudioButton from "$lib/components/AudioButton.svelte";
 
   interface Props {
     wordIndex: any;
@@ -58,27 +55,27 @@
 	</div>
 </header>
 
-
-<Menu>
-    <button onclick={() => showHint = !showHint} class="block px-4 py-2 text-sm text-text-300 hover:bg-tile-400 w-full text-left">
-      {showHint ? 'Hide' : 'Show'} Hint
-    </button>
-    <button onclick={() => showTable = !showTable} class="block px-4 py-2 text-sm text-text-300 hover:bg-tile-400 w-full text-left">
-      {showTable ? 'Hide' : 'Show'} Conjugation Table
-    </button>
-    <button onclick={() => showAnswer = !showAnswer} class="block px-4 py-2 text-sm text-text-300 hover:bg-tile-400 w-full text-left">
-      {showAnswer ? 'Hide' : 'Show'} Answer
-    </button>
-    <button onclick={() => speakArabic(verbToConjugate.egyptianArabic.trim().split(/[-–]/)[0].trim())} class="block px-4 py-2 text-sm text-text-300 hover:bg-tile-400 w-full text-left">
-      Listen to Pronunciation
-    </button>
-    <SaveButton
+<menu class="flex flex-row gap-2 my-6">
+  <Button onClick={() => showHint = !showHint}  type='button'>
+    {showHint ? 'Hide' : 'Show'} Hint
+  </Button>
+  <Button onClick={() => showTable = !showTable} type='button'>
+    {showTable ? 'Hide' : 'Show'} Conjugation Table
+  </Button>
+  <Button onClick={() => showAnswer = !showAnswer} type='button'>
+    {showAnswer ? 'Hide' : 'Show'} Answer
+  </Button>
+  <AudioButton text={verbToConjugate.egyptianArabic.trim().split(/[-–]/)[1].trim()}>
+    Listen to Pronunciation
+  </AudioButton>
+  <SaveButton
     objectToSave={{
       arabic: verbToConjugate.egyptianArabic,
       english: verbToConjugate.english,
       transliterated: verbToConjugate.egyptianArabicTransliteration
     }}
-  ></SaveButton>
-</Menu>
+    ></SaveButton>
+</menu>
+
 <WordBlock {conjugationIndex} {verbToConjugate} {showHint} {showAnswer}></WordBlock>
 

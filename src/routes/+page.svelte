@@ -14,7 +14,7 @@
       <h2 class="text-3xl text-text-300 font-semibold">Sentence Practice</h2>
       <p class="text-text-300 text-lg font-medium">Practice reading comprehension and writing skills with AI generated arabic sentences.</p>
     </a>
-    <a href="/grammar/verb-conjugation" class="px-4 py-8 flex-1 flex-col flex gap-2 border-2 border-tile-600 text-center bg-tile-400 hover:bg-tile-500 transitional-all duration-300 cursor-pointer">
+    <a href="/grammar" class="px-4 py-8 flex-1 flex-col flex gap-2 border-2 border-tile-600 text-center bg-tile-400 hover:bg-tile-500 transitional-all duration-300 cursor-pointer">
       <h2 class="text-3xl text-text-300 font-semibold">Verb Conjugation</h2>
       <p class="text-text-300 text-lg font-medium">Practice conjugating 97 verbs in all forms.</p>
     </a>

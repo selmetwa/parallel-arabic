@@ -3,8 +3,7 @@
   import Button from "$lib/components/Button.svelte";
   import Checkmark from "$lib/components/Checkmark.svelte";
   import { getWordObjectToSave } from '$lib/helpers/get-word-object-to-save';
-  import { speakArabic } from "$lib/helpers/speak-arabic";
-
+  import AudioButton from "$lib/components/AudioButton.svelte";
 
   /**
    * @typedef {Object} Props
@@ -140,9 +139,9 @@
           Save Word
         {/if}
       </Button>
-      <Button onClick={() => speakArabic(activeWordObj.arabic)} type="button">
+      <AudioButton text={activeWordObj.arabic}>
         Audio
-      </Button>
+      </AudioButton>
 		</div>
 	</div>
 </Modal>
