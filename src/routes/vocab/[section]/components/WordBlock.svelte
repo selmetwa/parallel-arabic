@@ -3,14 +3,14 @@
 	import Button from '$lib/components/Button.svelte';
 	import type { wordObjectItem, wordObjectGroup } from '$lib/types';
 	import SaveButton from '$lib/components/SaveButton.svelte';
-	import { speakArabic } from '$lib/helpers/speak-arabic';
+	import AudioButton from '$lib/components/AudioButton.svelte';
 
 	interface Props {
 		next: () => void;
 		wordObj: wordObjectGroup;
 	}
 
-	let { next, wordObj }: Props = $props();
+	let { wordObj }: Props = $props();
 
 	let isCorrect = $state(false);
 	let isIncorrect = $state(false);
@@ -81,9 +81,7 @@
 	</div>
 	<div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
 		<Button type="button" onClick={toggleHint}>{showHint ? 'Hide' : 'Show'} hint</Button>
-		<Button type="button" onClick={() => speakArabic(wordObj.answer.egyptianArabic)}
-			>Listen to prononcuation</Button
-		>
+		<AudioButton text={wordObj.answer.egyptianArabic}>Listen to Pronunciation</AudioButton>
 		<SaveButton
 			objectToSave={{
 				arabic: wordObj.answer.egyptianArabic,

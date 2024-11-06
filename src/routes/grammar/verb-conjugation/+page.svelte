@@ -74,6 +74,9 @@
 					<Button onClick={previous} className="w-fit" type="submit">Previous Word</Button>
 				{/if}
 			</div>
+      <div class="w-fit">
+        {wordIndex + 1} / {data.words.length}
+      </div>
 			{#if wordIndex < data.words.length - 1}
 				<div class="w-fit">
 					<Button onClick={next} className="w-fit" type="submit">Next Word</Button>

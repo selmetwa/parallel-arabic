@@ -1,22 +1,28 @@
-import EasySpeech from 'easy-speech';
+import { Howl } from 'howler';
+
 export const speakArabic = async (text: string) => {
-  EasySpeech.init()
-	const a = EasySpeech.detect();
-
-	EasySpeech.init({ maxTimeout: 5000, interval: 250 })
-		.then(() => console.debug('load complete'))
-		.catch((e) => console.error(e));
-
-	const voices = EasySpeech.voices();
-	const arabicVoices = voices.filter((voice) => voice.lang.includes('ar'));
-
-	await EasySpeech.speak({
-		text: text,
-		voice: arabicVoices[0], // optional, will use a default or fallback
-		pitch: 1,
-		rate: 0.75,
-		volume: 1,
-		// there are more events, see the API for supported events
-		boundary: (e) => console.debug('boundary reached')
+	const res = await fetch('/api/text-to-speech', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify({ text })
 	});
+
+	// Convert response to a blob
+	const audioBlob = await res.blob();
+
+	// Create a URL for the audio blob
+	const audioUrl = URL.createObjectURL(audioBlob);
+
+	// Create a Howl instance to play the audio
+	const sound = new Howl({
+		src: [audioUrl],
+		autoplay: true,
+    html5: true,
+		format: ['mp3'] // or 'wav', based on the format of the returned blob
+	});
+
+	// Play the audio
+	sound.play();
 };

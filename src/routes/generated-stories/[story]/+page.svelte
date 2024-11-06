@@ -1,6 +1,5 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { generatedStoryInStore } from "$lib/store/store";
   import cn from 'classnames';
 	import Sentence from '../../stories/[story]/components/Sentence.svelte';
 	import WordModal from '../../stories/[story]/components/WordModal.svelte';
@@ -10,8 +9,9 @@
 	import Checkmark from '$lib/components/Checkmark.svelte';
 	import { Mode, type KeyWord } from '../../stories/[story]/types';
 	import type { PageData } from './$types';
+	import AudioButton from '$lib/components/AudioButton.svelte';
 
-  interface Props {
+  interface Props { 
     data: PageData;
   }
 
@@ -166,6 +166,13 @@
     {story?.title?.arabic} / {story?.title?.english}
   </h1>
   <div class="flex flex-col items-start justify-between sm:flex-row sm:items-center">
+    <div class="w-fit">
+        {#if mode === Mode.SentanceView}
+        <AudioButton text={sentences[index].arabic.text}>
+          Play Audio
+        </AudioButton>
+        {/if}
+    </div>
     <fieldset class="flex w-full place-content-end">
       <legend class="sr-only">Select Mode</legend>
       <ul class="flex flex-row gap-1">
@@ -200,6 +207,7 @@
     class="grid grid-cols-1 grid-rows-4 divide-x divide-tile-600 bg-tile-300 sm:grid-cols-2 sm:grid-rows-2"
   >
     <Sentence
+    isGenerated={true}
       {index}
       sentence={sentences[index]}
       {setActiveWord}
@@ -208,6 +216,7 @@
       {mode}
     />
     <Sentence
+    isGenerated={true}
       {index}
       classname="row-[1] sm:row-[1] sm:col-[2]"
       sentence={sentences[index]}
@@ -286,6 +295,7 @@
       {/if}
     </div>
     <Sentence
+    isGenerated={true}
       {index}
       classname="row-[3] sm:row-[2] sm:col-[2]"
       sentence={sentences[index]}
@@ -323,9 +333,11 @@
           type="english"
           index={sentences.indexOf(sentence)}
           {mode}
+          isGenerated={true}
         />
       {/if}
       <Sentence
+      isGenerated={true}
         {sentence}
         type="arabic"
         {setActiveWord}
