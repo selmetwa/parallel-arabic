@@ -34,7 +34,7 @@
     mode = mode === 'draw' ? 'keyboard' : 'draw';
   }
 
-  const isPaywalled = sections.find(section => section.path === data.section).isPaywalled;
+  const isPaywalled = sections.find(section => section.path === data.section).isPaywalled ?? false;
 </script>
 
 {#if isPaywalled && !data.isSubscribed}

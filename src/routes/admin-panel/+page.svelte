@@ -1,6 +1,9 @@
 <script>
 	let { data } = $props();
 </script>
+
+<h3>User Count: {data.userCount}</h3>
+<h3>Subscriber Count: {data.subscriberCount}</h3>
 <table>
 	<thead>
 		<tr>

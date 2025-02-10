@@ -19,10 +19,6 @@ export const actions: Actions = {
 		const email = formData.get('email');
 		const password = formData.get('password');
 
-    console.log({
-      email,
-      password
-    })
 		// basic check
 		if (!isValidEmail(email)) {
 			return fail(400, {
@@ -53,8 +49,6 @@ export const actions: Actions = {
 			});
 			locals.auth.setSession(session); // set session cookie
 		} catch (e) {
-
-      console.log({ auth_error: e})
 			// check for unique constraint error in user table
 			if (e instanceof SqliteError && e.code === 'SQLITE_CONSTRAINT_UNIQUE') {
 				return fail(400, {

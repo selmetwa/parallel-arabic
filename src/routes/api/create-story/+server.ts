@@ -92,14 +92,11 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 				})
 				.executeTakeFirst();
 
-			console.log({ storyId });
 			return json({ storyId: storyId });
 		} catch (e) {
-			console.log({ e });
 			return error(500, { message: 'Something went wrong' });
 		}
 	} catch (e) {
-		console.log({ e });
 		return error(500, { message: 'Something went wrong' });
 	}
 };

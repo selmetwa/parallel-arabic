@@ -1,7 +1,6 @@
 <script>
   import Modal from "$lib/components/Modal.svelte";
 
-
   /**
    * @typedef {Object} Props
    * @property {any} [activeWordObj]

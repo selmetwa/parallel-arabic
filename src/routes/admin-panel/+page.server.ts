@@ -59,7 +59,9 @@ export const load: PageServerLoad = async ({ locals }) => {
 	return {
 		user,
     users,
-    savedWordsCount: savedWords.length
+    savedWordsCount: savedWords.length,
+    userCount: users.length,
+    subscriberCount: users.filter(u => !!u.is_subscriber).length
 	};
 };
 
