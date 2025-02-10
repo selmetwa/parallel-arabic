@@ -4,7 +4,6 @@
   import CreateStoryModal from './components/CreateStoryModal.svelte';
 
   let { data } = $props();
-  console.log({ data });
   let isModalOpen = $state(false);
 
   let userGeneratedStories = $derived.by(() => {

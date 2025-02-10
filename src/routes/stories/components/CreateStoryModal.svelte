@@ -31,7 +31,6 @@
         title,
 			})
 		});
-    console.log({ res });
 
 		const chatgptres = await res.json();
 
