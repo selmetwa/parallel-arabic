@@ -204,7 +204,7 @@
 		<div class="grid grid-cols-2 gap-2 sm:grid-cols-5">
 			<Button type="button" onClick={toggleAnswer}>{showAnswer ? 'Hide' : 'Show'} answer</Button>
 			<Button type="button" onClick={toggleHint}>{showHint ? 'Hide' : 'Show'} hint</Button>
-      <AudioButton text={word.egyptianArabic.split(regex)[1].trim()}>Audio</AudioButton>
+      <AudioButton text={egyptianArabicWord}>Audio</AudioButton>
       <SaveButton 
       type="Word"
       objectToSave={{
