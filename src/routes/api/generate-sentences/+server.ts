@@ -3,7 +3,7 @@ import type { RequestHandler } from './$types';
 import { env } from '$env/dynamic/private';
 import OpenAI from "openai";
 import { stories } from '$lib/constants/stories/index';
-
+import { commonWords } from '$lib/constants/common-words';
 export const POST: RequestHandler = async ({ request }) => {
   const openai = new OpenAI({ apiKey: env['OPEN_API_KEY'] });
   const data = await request.json();
@@ -19,12 +19,27 @@ export const POST: RequestHandler = async ({ request }) => {
     Can you please provide 20 ${data.option} sentences for someone who is trying to learn EGYPTIAN arabic.
 
       Here is an example of a conversation in Egyptian Arabic to give you an idea of the dialect:
-    ${stories['at-the-barbers'].story.sentences}
-    ${stories['at-the-fruit-vendor'].story.sentences}
-    ${stories['at-the-hotel'].story.sentences}
-    ${stories['koshary-shop'].story.sentences}
-    ${stories['at-the-restaurant'].story.sentences}
+   ${stories['at-the-barbers'].story.sentences.map(sentence => 
+      `${sentence.arabic.speaker}: ${sentence.arabic.text} (${sentence.transliteration.text}) - "${sentence.english.text}"`
+    ).join('\n')}
+    ${stories['at-the-fruit-vendor'].story.sentences.map(sentence => 
+      `${sentence.arabic.speaker}: ${sentence.arabic.text} (${sentence.transliteration.text}) - "${sentence.english.text}"`
+    ).join('\n')}
+    ${stories['at-the-hotel'].story.sentences.map(sentence => 
+      `${sentence.arabic.speaker}: ${sentence.arabic.text} (${sentence.transliteration.text}) - "${sentence.english.text}"`
+    ).join('\n')}
+    ${stories['koshary-shop'].story.sentences.map(sentence => 
+      `${sentence.arabic.speaker}: ${sentence.arabic.text} (${sentence.transliteration.text}) - "${sentence.english.text}"`
+    ).join('\n')}
+    ${stories['at-the-restaurant'].story.sentences.map(sentence => 
+      `${sentence.arabic.speaker}: ${sentence.arabic.text} (${sentence.transliteration.text}) - "${sentence.english.text}"`
+    ).join('\n')}
 
+    Here are 3000 of the most common words in Egyptian Arabic, please use these words in your sentences:
+     ${commonWords.map(word => 
+      `${word.word} (${word.franco}) means "${word.en}"`
+    ).join('. ')}
+  
     Now can you please include the english translation for each sentence.
 
     Can you also provide the transliteration for each sentence.
@@ -58,6 +73,7 @@ export const POST: RequestHandler = async ({ request }) => {
     question += `Please do not include any of the following sentences in the response: ${data.sentences.join(', ')}.`
   }
 
+  console.log('question', question)
   try {
     const completion = await openai.chat.completions.create({
       messages: [{ role: "system", content: question }],
