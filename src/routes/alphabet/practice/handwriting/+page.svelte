@@ -3,19 +3,30 @@
 	import Button from '$lib/components/Button.svelte';
 	import Draw from '../components/Draw.svelte';
 
-	let index = $state(0);
+  import { updateUrl } from '$lib/helpers/update-url';
+
+let index = $state((() => {
+  if (typeof window !== 'undefined') {
+    const params = new URLSearchParams(window.location.search);
+    const urlIndex = parseInt(params.get('letter') ?? '0') || 0;
+    // Ensure index is within bounds
+    return Math.min(Math.max((urlIndex-1), 0), (letters.length ?? 1) - 1);
+  }
+  return 0;
+})());
 	
 	const lettersCopy = [...letters];
-	// const randomizedLetters = lettersCopy.sort(() => Math.random() - 0.5);
 
 	let letter = $derived(lettersCopy[index]);
 
 	function handleNext() {
 		index += 1;
+    updateUrl('letter', (index+1).toString());
 	}
 
 	function handlePrevious() {
 		index -= 1;
+    updateUrl('letter', (index+1).toString());
 	}
 </script>
 
