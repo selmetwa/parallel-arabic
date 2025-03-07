@@ -1,11 +1,9 @@
 <script lang="ts">
-	import { run } from 'svelte/legacy';
-
 	import SentenceBlock from './components/SentenceBlock.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import RadioButton from '$lib/components/RadioButton.svelte';
 	import SentenceQuiz from './components/SentenceQuiz.svelte';
-	import { sentencesInStore, sentenceIndexInStore } from '$lib/store/store';
+	import { sentencesInStore } from '$lib/store/store';
 	import { PUBLIC_PRICE_ID } from '$env/static/public';
 	import { goto } from '$app/navigation';
   import { updateUrl } from '$lib/helpers/update-url';
@@ -13,22 +11,17 @@
 
 	let isLoading = $state(false);
 
-	// let index = $state(0);
   let index = $state((() => {
     if (typeof window !== 'undefined') {
       const params = new URLSearchParams(window.location.search);
       const urlIndex = parseInt(params.get('sentence') ?? '0') || 0;
-      console.log({ urlIndex })
-      // Ensure index is within bounds of sentences array
       return urlIndex ? urlIndex - 1 : 0;
     }
     return 0;
   })());
 
-  $inspect({ index })
   let sentences = $state((() => {
   if (typeof window !== 'undefined') {
-    // Try to load sentences from localStorage
     const savedSentences = localStorage.getItem('sentences');
     if (savedSentences) {
       return JSON.parse(savedSentences);
