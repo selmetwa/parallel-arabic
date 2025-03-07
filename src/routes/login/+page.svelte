@@ -9,6 +9,7 @@
   }
 
   let { form }: Props = $props();
+
 </script>
 
 <section class="flex flex-col sm:flex-row gap-4 px-4 sm:px-20 pt-4 sm:mt-12">
@@ -19,13 +20,16 @@
     class="flex-1 border border-tile-500 flex flex-col gap-2 p-2 bg-tile-300"
   >
     <h1 class="text-xl font-semibold text-text-300">Login to your account</h1>
-    <Input  type="email" name="email"></Input>
-    <Input type="password" name="password"></Input>
+    <Input  type="email" name="email" label="Email"></Input>
+    <Input type="password" name="password" label="Password"></Input>
     <Button type="submit" className="mt-1">Log In</Button>
     {#if form?.message}
       <p class="error">{form.message}</p>
     {/if}
-    <a href="/signup" class="text-text-200 underline">Create an account</a>
+    <footer class="flex flex-row gap-2 justify-between">
+      <a href="/signup" class="text-text-200 underline">Create an account</a>
+      <a href="/password-reset" class="text-text-200 underline">Forgot Password?</a>
+    </footer>
   </form>
   </div>
 
