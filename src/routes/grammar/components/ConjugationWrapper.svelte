@@ -78,7 +78,7 @@
 	</div>
 </header>
 
-<menu class="flex flex-col sm:flex-row gap-2 my-6">
+<menu class="flex flex-col lg:flex-row gap-2 my-6">
   <Button onClick={() => showHint = !showHint}  type='button'>
     {showHint ? 'Hide' : 'Show'} Hint
   </Button>
