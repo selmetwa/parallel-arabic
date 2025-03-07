@@ -19,9 +19,10 @@
 			english: string;
 			transliteration: string;
 		};
+		resetSentences: () => void;
 	}
 
-	let { sentence }: Props = $props();
+	let { sentence, resetSentences }: Props = $props();
 
 	type Attempt = {
 		letter: string;
@@ -206,7 +207,7 @@
 		</div>
 	{/if}
 	<InfoDisclaimer></InfoDisclaimer>
-	<div class="mt-10 grid grid-cols-2 flex-row gap-2 sm:w-full sm:grid-cols-4">
+	<div class="mt-10 grid grid-cols-2 flex-row gap-2 sm:w-full sm:grid-cols-5">
 		<Button onClick={() => (showHint = !showHint)} type="button">Show Hint</Button>
 		<Button onClick={() => (showAnswer = !showAnswer)} type="button">Show Answer</Button>
 		<AudioButton text={sentence.arabic}>Listen</AudioButton>
@@ -218,6 +219,7 @@
 			}}
 			type="Sentence"
 		></SaveButton>
+		<Button onClick={resetSentences} type="button">Reset</Button>
 	</div>
 	<div class="mx-auto mt-6 w-fit text-center">
 		<div class="flex flex-col items-center justify-center gap-2">

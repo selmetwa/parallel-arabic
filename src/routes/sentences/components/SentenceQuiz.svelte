@@ -9,9 +9,10 @@
 	interface Props {
 		index?: number;
 		sentences: sentenceObjectItem[];
+    resetSentences: () => void;
 	}
 
-	let { index = 0, sentences }: Props = $props();
+	let { index = 0, sentences, resetSentences }: Props = $props();
 
 	let isCorrect = $state(false);
 	let isIncorrect = $state(false);
@@ -117,6 +118,7 @@
 					english: sentenceObj.answer.english,
 					transliterated: sentenceObj.answer.transliteration
 				}}></SaveButton>
+    <Button onClick={resetSentences} type="button">Reset</Button>
 	</div>
 
   <section class="">

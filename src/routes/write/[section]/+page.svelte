@@ -3,10 +3,19 @@
 	import Button from '$lib/components/Button.svelte';
 	import { sections } from '$lib/constants/sections';
 	import { PUBLIC_PRICE_ID } from '$env/static/public';
-
+  import { updateUrl } from '$lib/helpers/update-url';
   let { data } = $props();
 
-	let index = $state(0);
+  let index = $state((() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const urlIndex = parseInt(params.get('word') ?? '0') || 0;
+      // Ensure index is within bounds
+      return Math.min(Math.max(urlIndex-1, 0), (data?.words?.length ?? 1) - 1);
+    }
+    return 0;
+  })());
+
   let mode = $state('keyboard');
   let word = $derived.by(() => {
     if (data && data.words) {
@@ -21,6 +30,7 @@
 			return;
 		}
 		index = index + 1;
+    updateUrl('word', (index+1) .toString());
 	}
 
 	function previous() {
@@ -28,13 +38,15 @@
 			return;
 		}
 		index = index - 1;
+    updateUrl('word', (index+1).toString());
 	}
 
   function handleSwitchMode() {
     mode = mode === 'draw' ? 'keyboard' : 'draw';
+    updateUrl('mode', mode);
   }
 
-  const isPaywalled = sections.find(section => section.path === data.section).isPaywalled ?? false;
+  const isPaywalled = sections.find(section => section.path === data.section)?.isPaywalled ?? false;
 </script>
 
 {#if isPaywalled && !data.isSubscribed}
