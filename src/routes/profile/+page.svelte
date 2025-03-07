@@ -15,7 +15,18 @@
       <a href="/profile/saved-words" class="text-lg text-text-300 underline">View Wordbank</a>
     </div>
     <div class="flex flex-row gap-2">
-      <form method="post" action="?/logout" use:enhance class="w-fit">
+      <form 
+        method="post" 
+        action="?/logout" 
+        use:enhance={() => {
+          return async ({ result }) => {
+            console.log({ result });
+            localStorage.clear();
+            window.location.href = '/login';
+          }
+        }} 
+        class="w-fit"
+      >
         <Button type='submit'>
           Sign out
         </Button>

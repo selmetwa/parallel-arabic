@@ -2,18 +2,23 @@
 	import Button from '$lib/components/Button.svelte';
 	import ConjugationWrapper from '../components/ConjugationWrapper.svelte';
 	import { PUBLIC_PRICE_ID } from '$env/static/public';
-	import { verbToConjugateIndexInStore } from '$lib/store/store';
 	import { goto } from '$app/navigation';
+	import { updateUrl } from '$lib/helpers/update-url';
 
 	let { data } = $props();
 
-  let verbToConjugateIndexInLocalStorage = $derived.by(() => {
-    if (typeof localStorage === 'undefined') return null;
-  
-    return localStorage.getItem('verbToConjugateIndex');
-  })
+	let wordIndex = $state(
+		(() => {
+			if (typeof window !== 'undefined') {
+				const params = new URLSearchParams(window.location.search);
+				const urlIndex = parseInt(params.get('verb') ?? '0') || 0;
+				// Ensure index is within bounds
+				return Math.min(Math.max(urlIndex-1, 0), (data?.words?.length ?? 1) - 1);
+			}
+			return 0;
+		})()
+	);
 
-	let wordIndex = $state($verbToConjugateIndexInStore || Number(verbToConjugateIndexInLocalStorage) || 0);
 	let verbToConjugate = $derived(data.words[wordIndex]);
 	let tensesViewed = $state(data.tensesViewed || 0);
 
@@ -29,20 +34,14 @@
 			});
 	}
 
-  $effect(() => {
-    verbToConjugateIndexInStore.set(wordIndex);
-    localStorage.setItem('verbToConjugateIndex', wordIndex.toString());
-  })
-
 	function next() {
 		wordIndex = wordIndex + 1;
-		verbToConjugateIndexInStore.set(wordIndex);
-    localStorage.setItem('verbToConjugateIndex', wordIndex.toString());
+		updateUrl('verb', (wordIndex+1).toString());
 	}
 
 	function previous() {
 		wordIndex = wordIndex - 1;
-		verbToConjugateIndexInStore.set(wordIndex);
+		updateUrl('verb', (wordIndex+1).toString());
 	}
 </script>
 
@@ -74,9 +73,9 @@
 					<Button onClick={previous} className="w-fit" type="submit">Previous Word</Button>
 				{/if}
 			</div>
-      <div class="w-fit">
-        {wordIndex + 1} / {data.words.length}
-      </div>
+			<div class="w-fit">
+				{wordIndex + 1} / {data.words.length}
+			</div>
 			{#if wordIndex < data.words.length - 1}
 				<div class="w-fit">
 					<Button onClick={next} className="w-fit" type="submit">Next Word</Button>

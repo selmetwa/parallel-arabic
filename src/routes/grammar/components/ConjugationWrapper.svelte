@@ -4,6 +4,7 @@
   import Table from './Table.svelte';
 	import SaveButton from '$lib/components/SaveButton.svelte';
   import AudioButton from "$lib/components/AudioButton.svelte";
+  import { updateUrl } from '$lib/helpers/update-url';
 
   interface Props {
     wordIndex: any;
@@ -13,15 +14,28 @@
 
   let { wordIndex, verbToConjugate, updateTensesViewed }: Props = $props();
 
-  let conjugationIndex = $state(0);
+  let conjugationIndex = $state(
+		(() => {
+			if (typeof window !== 'undefined') {
+				const params = new URLSearchParams(window.location.search);
+				const urlIndex = parseInt(params.get('tense') ?? '0') || 0;
+				// Ensure index is within bounds
+				return Math.min(Math.max(urlIndex-1, 0), (31) - 1);
+			}
+			return 0;
+		})()
+	);
+  let previousWordIndex = $state(wordIndex);
+
 	let showHint = $state(false);
 	let showTable = $state(false);
   let showAnswer = $state(false);
-  
 
   $effect(() => {
-    if (wordIndex) {
+    if (wordIndex && wordIndex !== previousWordIndex) {
+      previousWordIndex = wordIndex;
       conjugationIndex = 0;
+      updateUrl('tense', (conjugationIndex+1).toString());
     }
   });
 
@@ -32,6 +46,15 @@
 
     updateTensesViewed();
     conjugationIndex = conjugationIndex + 1;
+    updateUrl('tense', (conjugationIndex+1).toString());
+  }
+
+  async function previous() {
+    if (conjugationIndex === 0) {
+      return;
+    }
+    conjugationIndex = conjugationIndex - 1;
+    updateUrl('tense', (conjugationIndex+1).toString());
   }
 </script>
 
@@ -42,7 +65,7 @@
 	<div class="flex flex-row justify-between px-4 sm:px-16">
 		<div class="w-fit">
 			{#if conjugationIndex > 0}
-				<Button onClick={() => (conjugationIndex -= 1)} className="w-fit" type="submit"
+				<Button onClick={previous} className="w-fit" type="submit"
 					>Previous Tense</Button
 				>
 			{/if}
@@ -55,7 +78,7 @@
 	</div>
 </header>
 
-<menu class="flex flex-col sm:flex-row gap-2 my-6">
+<menu class="flex flex-col lg:flex-row gap-2 my-6">
   <Button onClick={() => showHint = !showHint}  type='button'>
     {showHint ? 'Hide' : 'Show'} Hint
   </Button>

@@ -1,50 +1,52 @@
 <script lang="ts">
-	import { run } from 'svelte/legacy';
-
 	import SentenceBlock from './components/SentenceBlock.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import RadioButton from '$lib/components/RadioButton.svelte';
 	import SentenceQuiz from './components/SentenceQuiz.svelte';
-	import { sentencesInStore, sentenceIndexInStore } from '$lib/store/store';
+	import { sentencesInStore } from '$lib/store/store';
 	import { PUBLIC_PRICE_ID } from '$env/static/public';
 	import { goto } from '$app/navigation';
-
+  import { updateUrl } from '$lib/helpers/update-url';
 	let { data } = $props();
 
 	let isLoading = $state(false);
 
-	let index = $state(0);
-	let sentences = $state([]);
+  let index = $state((() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const urlIndex = parseInt(params.get('sentence') ?? '0') || 0;
+      return urlIndex ? urlIndex - 1 : 0;
+    }
+    return 0;
+  })());
+
+  let sentences = $state((() => {
+  if (typeof window !== 'undefined') {
+    const savedSentences = localStorage.getItem('sentences');
+    if (savedSentences) {
+      return JSON.parse(savedSentences);
+    }
+  }
+  return $sentencesInStore;
+})());
+
   let sentence = $derived(sentences[index]);
-	// let sentence: {
-	// 	arabic: string;
-	// 	english: string;
-	// 	transliteration: string;
-	// } = $state({
-	// 	arabic: '',
-	// 	english: '',
-	// 	transliteration: ''
-	// });
+  $effect(() => {
+    if (sentences.length > 0) {
+      index = Math.min(index, sentences.length - 1);
+    }
+  });
 
-	$effect(() => {
-		sentences = $sentencesInStore || [];
-	});
-
-	$effect(() => {
-		index = $sentenceIndexInStore || 0;
-	});
-	// let sentence;
-	// run(() => {
-	// 	sentence = sentences[index];
-	// });
 	let option = $state('beginner');
 
-	let mode = $state('write');
+  let mode = $state((() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('mode') || 'write';
+    }
+  })());
 
 	let sentencesViewed = $state(data.sentencesViewed);
-	// run(() => {
-	// 	sentencesViewed = data.sentencesViewed;
-	// });
 
 	async function generateSentance(option: string, copy: any) {
 		isLoading = true;
@@ -62,8 +64,11 @@
 		const _sentences = JSON.parse(jsonBlob);
 		sentences = [...sentences, ..._sentences.sentences];
 		sentencesInStore.set(sentences);
+    localStorage.setItem('sentences', JSON.stringify(sentences));
 		isLoading = false;
 	}
+
+  $inspect({ sentences })
 
 	async function updateSentencesViewed() {
 		const res = await fetch('/api/increment-sentences', {
@@ -81,7 +86,7 @@
 
 		updateSentencesViewed();
 		index = index + 1;
-		sentenceIndexInStore.set(index);
+    updateUrl('sentence', (index+1).toString());
 	}
 
 	function previous() {
@@ -89,17 +94,12 @@
 			return;
 		}
 		index = index - 1;
-		sentenceIndexInStore.set(index);
+		updateUrl('sentence', (index+1).toString());
 	}
-
-	// run(() => {
-	// 	if (index) {
-	// 		sentence = sentences[index];
-	// 	}
-	// });
 
 	function setMode(event: any) {
 		mode = event.target.value;
+    updateUrl('mode', mode);
 	}
 
 	function setOption(event: any) {
@@ -115,6 +115,13 @@
 	function loadMoreSentences() {
 		generateSentance(option, sentences);
 	}
+
+  function resetSentences() {
+    sentences = [];
+    index = 0;
+    localStorage.removeItem('sentences');
+    updateUrl('sentence', '0');
+  }
 
 	let isLastSentence = $derived(index === sentences.length - 1);
 
@@ -258,11 +265,11 @@
 
 	{#if mode === 'write'}
 		<section class="px-4 pb-4 sm:px-16">
-			<SentenceBlock {sentence} />
+			<SentenceBlock {sentence} {resetSentences} />
 		</section>
 	{/if}
 
 	{#if mode === 'quiz'}
-		<SentenceQuiz {sentences} {index} />
+		<SentenceQuiz {sentences} {index} {resetSentences} />
 	{/if}
 {/if}

@@ -1,30 +1,37 @@
 <script lang="ts">
 	import Button from '$lib/components/Button.svelte';
 	import WordBlock from './components/WordBlock.svelte';
-	import type { wordObjectGroup } from '$lib/types';
 	import { sections } from '$lib/constants/sections';
 	import { PUBLIC_PRICE_ID } from '$env/static/public';
-
+  import { updateUrl } from '$lib/helpers/update-url';
 	interface Props {
 		data: any;
 	}
 
 	let { data }: Props = $props();
 
-	let index = $state(0);
-	// let wordObj = $derived({} as wordObjectGroup);
-	// let word = $state(data.words.slice(1)[0]);
+	// let index = $state(0);
+  let index = $state((() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const urlIndex = parseInt(params.get('word') ?? '0') || 0;
+      // Ensure index is within bounds
+      return Math.min(Math.max(urlIndex-1, 0), (data?.words?.length ?? 1) - 1);
+    }
+    return 0;
+  })());
+
   let word = $derived(data.words.slice(1)[index]);
 	let shuffledWords = $state(shuffleArray(
 		data.words.slice(1).filter((w: any) => word.english !== w.english)
 	));
-	// let shuffledAnswers = $state(shuffleArray([word, shuffledWords[0], shuffledWords[1], shuffledWords[2]]));
 
 	function next() {
 		if (index === data.words.length - 1) {
 			return;
 		}
 		index = index + 1;
+    updateUrl('word', (index+1).toString());
 	}
 
 	function previous() {
@@ -32,6 +39,7 @@
 			return;
 		}
 		index = index - 1;
+    updateUrl('word', (index+1).toString());
 	}
 
 	function shuffleArray(array: any) {
