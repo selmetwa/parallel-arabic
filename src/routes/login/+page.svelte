@@ -53,11 +53,11 @@
     </li>
     <li>
       <h2 class="text-xl font-semibold text-text-200">Writing</h2>
-      <p class="text-text-200 text-md">Practice writing over <b>4,000</b> Arabic words with a virtual arabic keyboard custom built for english speakers.</p>
+      <p class="text-text-200 text-md">Practice writing over <b>6,000</b> Arabic words with a virtual arabic keyboard custom built for english speakers.</p>
     </li>
     <li>
       <h2 class="text-xl font-semibold text-text-200">Vocabulary</h2>
-      <p class="text-text-200 text-md">Practice over <b>4,000</b> words with fun multiple choice quizzes</p>
+      <p class="text-text-200 text-md">Practice over <b>6,000</b> words with fun multiple choice quizzes</p>
     </li>
     <li>
       <h2 class="text-xl font-semibold text-text-200">Alphabet</h2>

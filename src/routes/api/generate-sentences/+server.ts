@@ -19,27 +19,15 @@ export const POST: RequestHandler = async ({ request }) => {
     Can you please provide 20 ${data.option} sentences for someone who is trying to learn EGYPTIAN arabic.
 
       Here is an example of a conversation in Egyptian Arabic to give you an idea of the dialect:
-   ${stories['at-the-barbers'].story.sentences.map(sentence => 
-      `${sentence.arabic.speaker}: ${sentence.arabic.text} (${sentence.transliteration.text}) - "${sentence.english.text}"`
-    ).join('\n')}
-    ${stories['at-the-fruit-vendor'].story.sentences.map(sentence => 
-      `${sentence.arabic.speaker}: ${sentence.arabic.text} (${sentence.transliteration.text}) - "${sentence.english.text}"`
-    ).join('\n')}
-    ${stories['at-the-hotel'].story.sentences.map(sentence => 
-      `${sentence.arabic.speaker}: ${sentence.arabic.text} (${sentence.transliteration.text}) - "${sentence.english.text}"`
-    ).join('\n')}
-    ${stories['koshary-shop'].story.sentences.map(sentence => 
-      `${sentence.arabic.speaker}: ${sentence.arabic.text} (${sentence.transliteration.text}) - "${sentence.english.text}"`
-    ).join('\n')}
-    ${stories['at-the-restaurant'].story.sentences.map(sentence => 
-      `${sentence.arabic.speaker}: ${sentence.arabic.text} (${sentence.transliteration.text}) - "${sentence.english.text}"`
-    ).join('\n')}
+
 
     Here are 3000 of the most common words in Egyptian Arabic, please use these words in your sentences:
      ${commonWords.map(word => 
       `${word.word} (${word.franco}) means "${word.en}"`
     ).join('. ')}
-  
+    
+    please only use the words in the common words list.
+
     Now can you please include the english translation for each sentence.
 
     Can you also provide the transliteration for each sentence.
@@ -70,7 +58,11 @@ export const POST: RequestHandler = async ({ request }) => {
   `
 
   if (data.sentences.length > 0) {
-    question += `Please do not include any of the following sentences in the response: ${data.sentences.join(', ')}.`
+    if (data.sentences.length > 0) {
+      question += `
+      Previously generated sentences (DO NOT include any of these exact sentences in your response):
+      ${JSON.stringify(data.sentences, null, 2)}`;
+    }
   }
 
   console.log('question', question)

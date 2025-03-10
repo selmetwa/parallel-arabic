@@ -223,7 +223,6 @@
 	</div>
 	<div class="mx-auto mt-6 w-fit text-center">
 		<div class="flex flex-col items-center justify-center gap-2">
-			<!-- <h1 class="w-fit text-[40px] font-bold text-text-300">{sentence.english}</h1> -->
 			<h1 class="flex w-fit flex-row flex-wrap text-[40px] font-bold text-text-300">
 				{#each sentence.english.split(' ') as word}
 					<button

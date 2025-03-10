@@ -70,6 +70,16 @@
 			translation. As well as AI generated definitions for each word.
 		</p>
 	</div>
+  <div>
+		<img src="/images/speak.png" alt="banner" class="h-[300px] w-full object-contain" />
+		<h3 class="mt-4 text-2xl font-semibold text-text-300">Practice Speaking</h3>
+		<p class="mt-1 text-lg text-text-300">
+			Improve your speaking skills with AI generated sentences, and practice your pronunciation.
+		</p>
+    <p class="mt-2 text-lg text-text-300">
+      Get realtime feedback on your pronunciation and correct your mistakes with our AI pronunciation assessment.
+    </p>
+	</div>
 	<div>
 		<img src="/images/sentences.png" alt="sentences" class="h-[300px] w-full object-contain" />
 		<h3 class="mt-4 text-2xl font-semibold text-text-300">Sentence Practice</h3>
@@ -77,7 +87,7 @@
 			Practice your writing and reading skills with our sentence practice tool.
 		</p>
 		<p class="mt-2 text-lg text-text-300">
-			Improve verb conjugation, sentence structure, and possessive pronouns with unlimited AI generated sentences and get instant feedback on your writing..
+			Improve verb conjugation, sentence structure, and possessive pronouns with unlimited AI generated sentences and get instant feedback on your writing.
 		</p>
 	</div>
   <div>
@@ -91,7 +101,7 @@
 		<img src="/images/writing.png" class="h-[300px] w-full object-contain" alt="writing" />
 		<h3 class="mt-4 text-2xl font-semibold text-text-300">Writing Practice</h3>
 		<p class="mt-1 text-lg text-text-300">
-			Practice your writing skills with over 4,000 practice words.
+			Practice your writing skills with over 6,000 practice words.
 		</p>
 		<p class="mt-2 text-lg text-text-300">Virtual keyboard custom built for english speakers</p>
 		<p class="mt-2 text-lg text-text-300">
@@ -102,7 +112,7 @@
 		<img src="/images/vocab.png" class="h-[300px] w-full object-contain" alt="writing" />
 		<h3 class="mt-4 text-2xl font-semibold text-text-300">Vocabulary Practice</h3>
 		<p class="mt-1 text-lg text-text-300">
-			Practice over 4,000 words with fun multiple choice quizzes
+			Practice over 6,000 words with fun multiple choice quizzes
 		</p>
 	</div>
 	<div>
@@ -116,6 +126,6 @@
 	<div>
 		<img src="/images/handwriting.png" class="h-[300px] w-full object-contain" alt="writing" />
 		<h3 class="mt-4 text-2xl font-semibold text-text-300">Handwriting</h3>
-		<p class="mt-1 text-lg text-text-300">Practice your handwriting on over 4,000 words. Hopefully its better than mine.</p>
+		<p class="mt-1 text-lg text-text-300">Practice your handwriting on over 6,000 words. Hopefully its better than mine.</p>
 	</div>
 </div>

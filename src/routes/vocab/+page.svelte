@@ -17,7 +17,7 @@
 <section class="mt-8 px-4 sm:mt-12 sm:px-16">
 	<PaywallModal isOpen={isModalOpen} {handleCloseModal}></PaywallModal>
 	<h1 class="text-2xl font-semibold text-text-300">
-		Practice over 4,000 words with fun multiple choice quizzes.
+		Practice over 6,000 words with fun multiple choice quizzes.
 	</h1>
 	{#if !data.hasActiveSubscription}
 		<p class="text-lg text-text-300">

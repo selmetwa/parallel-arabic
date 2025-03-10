@@ -20,7 +20,6 @@
         action="?/logout" 
         use:enhance={() => {
           return async ({ result }) => {
-            console.log({ result });
             localStorage.clear();
             window.location.href = '/login';
           }
@@ -83,11 +82,11 @@
         </li>
 				<li class="flex items-start gap-2">
 					<Checkmark />
-					<span>Access to 4,100 vocabulary words for writing and handwriting practice</span>
+					<span>Access to over 6,000 vocabulary words for writing and handwriting practice</span>
 				</li>
 				<li class="flex items-start gap-2">
 					<Checkmark />
-					<span>Access to 4,100 vocabulary words and multiple choice quizzes</span>
+					<span>Access to over 6,000 vocabulary words and multiple choice quizzes</span>
 				</li>
 				<li class="flex items-start gap-2">
 					<Checkmark />
