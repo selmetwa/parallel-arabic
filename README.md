@@ -20,7 +20,7 @@ Practice your verb conjugations in egyptian arabic with realtime spellchecking.
 
 ### Writing Practice
 ![image](https://github.com/user-attachments/assets/18057ef6-2618-43d2-9ecc-b1de8815d0f4)
-Practice your writing skills with over 4,000 practice words.
+Practice your writing skills with over 6,000 practice words.
 
 Virtual keyboard custom built for english speakers
 
@@ -28,7 +28,7 @@ Save words to personal wordbank to practice later or export to an Anki deck
 
 ### Vocabulary Practice
 ![image](https://github.com/user-attachments/assets/179389a7-ac89-42a2-8f3e-8064e17f3c3b)
-Practice over 4,000 words with fun multiple choice quizzes
+Practice over 6,000 words with fun multiple choice quizzes
 
 ### Alphabet Practice
 ![image](https://github.com/user-attachments/assets/e7788055-4ddd-48d0-9411-8133944b00b1)

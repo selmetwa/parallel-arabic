@@ -84,14 +84,14 @@
 			<li>
 				<h2 class="text-xl font-semibold text-text-200">Writing</h2>
 				<p class="text-md text-text-200">
-					Practice writing over <b>4,000</b> Arabic words with a virtual arabic keyboard custom built
+					Practice writing over <b>6,000</b> Arabic words with a virtual arabic keyboard custom built
 					for english speakers.
 				</p>
 			</li>
 			<li>
 				<h2 class="text-xl font-semibold text-text-200">Vocabulary</h2>
 				<p class="text-md text-text-200">
-					Practice over <b>4,000</b> words with fun multiple choice quizzes
+					Practice over <b>6,000</b> words with fun multiple choice quizzes
 				</p>
 			</li>
 			<li>

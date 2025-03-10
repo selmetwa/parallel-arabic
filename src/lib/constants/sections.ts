@@ -12,6 +12,12 @@ export const sections = [
     isPaywalled: false
   },
   {
+    name: 'Most common Egyptian Arabic words',
+    path: 'most_common',
+    count: 2404,
+    isPaywalled: true
+  },
+  {
     name: 'Vocabulary from around the house',
     path: 'vocabulary_from_around_the_house',
     count: 253,

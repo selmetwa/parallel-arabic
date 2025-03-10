@@ -10,8 +10,6 @@
 	const { word }: Props = $props();
 	const root = $derived(word.egyptianArabic.split(/[-–]/)[0].trim());
 	const transliteratedRoot = $derived(word.egyptianArabicTransliteration.split(/[-–]/)[0].trim());
-
-	console.log({ word });
 </script>
 <div class="mb-12 flex flex-col sm:flex-row gap-4 items-center">
   <div class="flex-1">
