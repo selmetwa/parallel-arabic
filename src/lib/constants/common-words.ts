@@ -7290,7 +7290,7 @@ export const commonWords = [
   {
     _id: "66c5f28455f970ee167d2ccc",
     word: "يحصل",
-    appeared: 4000,
+    appeared: 6000,
     en: "happens",
     franco: "yehsal"
   },
@@ -13211,7 +13211,7 @@ export const commonWords = [
   {
     _id: "66c5f28455f970ee167d2ccb",
     word: "أنها",
-    appeared: 4000,
+    appeared: 6000,
     en: "that it",
     franco: "enha"
   },

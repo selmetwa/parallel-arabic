@@ -55,7 +55,8 @@
 {/if}
 <Button onClick={!isLoading ? saveWord : undefined} type="button">
   {#if isLoading}
-  <span class="flex flex-row items-center gap-2 text-center">
+
+  <span class="flex flex-row items-center gap-2 text-center mx-auto">
     <div role="status">
 			<svg
 				aria-hidden="true"

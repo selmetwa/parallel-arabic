@@ -18,7 +18,7 @@
 
 <section class="mt-8 px-4 sm:mt-12 sm:px-16">
 	<PaywallModal isOpen={isModalOpen} {handleCloseModal}></PaywallModal>
-	<h1 class="mt-12 text-2xl font-semibold text-text-300">Practice writing over 4,000 words.</h1>
+	<h1 class="mt-12 text-2xl font-semibold text-text-300">Practice writing over 6,000 words.</h1>
 	{#if !hasActiveSubscription}
 		<p class="text-lg text-text-300">
 			You are not currently subscribed and will not have access to all the vocabulary
