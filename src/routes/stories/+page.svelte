@@ -2,6 +2,7 @@
   import { stories } from '$lib/constants/stories';
     import PaywallModal from '$lib/components/PaywallModal.svelte';
   import CreateStoryModal from './components/CreateStoryModal.svelte';
+  import { BLOCKED_STORY_IDS } from '$lib/constants/stories/blocked';
 
   let { data } = $props();
   let isModalOpen = $state(false);
@@ -11,7 +12,11 @@
 
     for (const story of data.user_generated_stories) {
       const a = JSON.parse(story.story_body)
-  
+
+      if (BLOCKED_STORY_IDS.includes(story.id)) {
+        continue
+      }
+
       output.push({
         id: story.id,
         title: `${a.title.arabic} / ${a.title.english}`,
