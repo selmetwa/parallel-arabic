@@ -12,7 +12,6 @@ export const load = async ({ params, locals }) => {
     throw error(404, 'This story is blocked');
   }
 
-  console.log({ story})
   return { 
     userId,
     story

@@ -40,7 +40,7 @@
 	};
 </script>
 
-<div class="flex flex-col">
+<div class="flex flex-col w-full">
   <p class="block sm:hidden text-xs whitespace-nowrap">Silent mode must be off</p>
   <Button onClick={speakArabic} type="button">
     {#if isLoading}

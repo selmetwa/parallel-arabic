@@ -105,7 +105,7 @@
       </div>
     {/if}
 		<div class="mt-2 flex w-full flex-row items-center gap-2">
-      
+      <div class="flex flex-1">
 			<Button type="button" onClick={saveWord}>
         {#if isLoading}
         <span class="flex flex-row items-center gap-2 text-center mx-auto w-fit">
@@ -139,9 +139,12 @@
           Save Word
         {/if}
       </Button>
+    </div>
+    <div class="flex flex-1">
       <AudioButton text={activeWordObj.arabic}>
         Audio
       </AudioButton>
+    </div>
 		</div>
 	</div>
 </Modal>

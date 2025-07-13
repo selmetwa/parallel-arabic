@@ -4,9 +4,7 @@ import type { ColumnType } from 'kysely';
 import { readFileSync } from 'fs';
 import { DB_PATH } from '$env/static/private';
 
-// const dbPath = process.env.DB_PATH;
-// console.log({ dbPath, DB_PATH });
-export const sqliteDatabase = sqlite(DB_PATH);
+export const sqliteDatabase = sqlite(DB_PATH); // replace with 'data/db.sqlite' for db migration
 
 sqliteDatabase.exec(readFileSync('schema.sql', 'utf8'));
 
@@ -48,6 +46,10 @@ type UserTable = {
   subscription_end_date: ColumnType<bigint, number>;
   sentences_viewed: number;
   verb_conjugation_tenses_viewed: number;
+  google_id?: string;
+	name?: string;
+	picture?: string;
+	auth_provider: string;
 };
 
 type SessionTable = {
