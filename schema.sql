@@ -6,7 +6,11 @@ CREATE TABLE if not exists user (
     subscriber_id VARCHAR(255),
     subscription_end_date BIGINT,
     sentences_viewed INTEGER,
-    verb_conjugation_tenses_viewed INTEGER
+    verb_conjugation_tenses_viewed INTEGER,
+    google_id VARCHAR(255),
+    auth_provider VARCHAR(255),
+    name VARCHAR(255),
+    picture VARCHAR(255)
 );
 
 CREATE TABLE if not exists generated_story (

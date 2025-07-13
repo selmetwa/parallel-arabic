@@ -52,6 +52,7 @@
   "dependencies": {
     "@11labs/client": "^0.0.1",
     "@lucia-auth/adapter-sqlite": "^2.0.1",
+    "@lucia-auth/oauth": "^3.5.3",
     "@stripe/stripe-js": "^4.1.0",
     "better-sqlite3": "^9.2.2",
     "classnames": "^2.5.1",

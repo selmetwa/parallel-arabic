@@ -42,8 +42,6 @@ export const isValidEmail = (maybeEmail: unknown): maybeEmail is string => {
 
 export const sendPasswordResetLink = async (token: string, _email: string) => {
 	const url = `https://parallel-arabic.com/password-reset/token=${token}`;
-  console.log({ url });
 	const email = await sendEmail(url, _email);
-  console.log({ email });
 	return email;
 };
