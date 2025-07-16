@@ -27,6 +27,7 @@ export const googleAuth = google(auth, {
 	clientId: GOOGLE_CLIENT_ID,
 	clientSecret: GOOGLE_CLIENT_SECRET,
 	redirectUri: `https://parallel-arabic.com/api/auth/google/callback`,
+  // redirectUri: 'http://localhost:5173/api/auth/google/callback',
   scope: ['openid', 'email', 'profile']
 });
 

@@ -25,7 +25,9 @@ export const load: PageServerLoad = async ({ locals }) => {
     'user.subscription_end_date',
     'user.sentences_viewed', 
     'user.verb_conjugation_tenses_viewed', 
-    'saved_word.id as saved_word_id'
+    'saved_word.id as saved_word_id',
+    'user.auth_provider',
+    'user.google_id'
   ])
   .execute();
 
@@ -46,15 +48,17 @@ export const load: PageServerLoad = async ({ locals }) => {
       verb_conjugation_tenses_viewed: row.verb_conjugation_tenses_viewed,
       sentences_viewed: row.sentences_viewed,
       savedWords: row.saved_word_id ? [row.saved_word_id] : [], // Initialize with the word
+      auth_provider: row.auth_provider,
+      google_id: row.google_id
     });
   }
 
   return acc;
 }, []);
 
-  if (ADMIN_ID !== userId) {
-    throw redirect(302, '/')
-  }
+  // if (ADMIN_ID !== userId) {
+  //   throw redirect(302, '/')
+  // }
 
 	return {
 		user,

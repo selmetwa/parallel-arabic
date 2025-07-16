@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
+	import { page } from '$app/stores';
 	import Button from '$lib/components/Button.svelte';
 	import Input from '$lib/components/Input.svelte';
 	import type { ActionData } from './$types';
@@ -25,6 +26,11 @@
     <Button type="submit" className="mt-1">Log In</Button>
     {#if form?.message}
       <p class="error">{form.message}</p>
+    {/if}
+    {#if $page.url.searchParams.get('error') === 'account_exists'}
+      <p class="error">This Google account is already associated with an existing user. Please try logging in instead of signing up.</p>
+    {:else if $page.url.searchParams.get('error') === 'oauth_error'}
+      <p class="error">Authentication failed. Please try again.</p>
     {/if}
     <div class="mt-1">
       <a 
