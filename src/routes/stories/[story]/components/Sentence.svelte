@@ -12,8 +12,9 @@
 	};
 
 	type TSentence = {
-		speaker: string;
+		speaker?: string;
 		text: string;
+		audio?: string;
 	};
 
 	interface Props {
@@ -36,13 +37,13 @@
 		isGenerated
 	}: Props = $props();
 
-	let _sentence = $derived(sentence[type]);
+	let _sentence = $derived((sentence && type && (type in sentence)) ? sentence[type as keyof TWholeSentence] : { speaker: '', text: '' });
 	let isLoading = $state(false);
 	let error = $state('');
 	let response = $state('');
 
 	let isArabic = $derived(type === 'arabic');
-	let words = $derived(isArabic ? _sentence.text.split(' ').reverse() : _sentence.text.split(' '));
+	let words = $derived(_sentence?.text ? (isArabic ? _sentence.text.split(' ').reverse() : _sentence.text.split(' ')) : []);
 
 	function removeComma(inputString: string) {
 		const commataPattern = /[\u060C]/g;
@@ -122,12 +123,12 @@
 	class={cn('relative flex flex-col justify-center border-b border-tile-600 px-5 py-10', classname)}
 >
 	{#if type === 'arabic' && mode !== 'SentanceView'}
-		{#if _sentence.audio}
+		{#if _sentence && 'audio' in _sentence && _sentence.audio}
 			<div class="absolute right-0 top-0 w-1/4">
 				<Audio src={_sentence.audio}></Audio>
 			</div>
 		{/if}
-		{#if !_sentence.audio}
+		{#if !(_sentence && 'audio' in _sentence && _sentence.audio)}
 			<div class="absolute bottom-0 left-0 w-fit">
 				<AudioButton text={_sentence.text}>Play Audio</AudioButton>
 			</div>

@@ -22,43 +22,91 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 
 	const description = data.description;
 
+	// Add variety to story creation prompts
+	const storyStyles = [
+		"Create a unique and engaging story",
+		"Write an original and captivating story", 
+		"Develop a creative and interesting story",
+		"Craft a distinctive and compelling story",
+		"Generate a fresh and imaginative story",
+		"Compose an innovative and varied story",
+		"Build a dynamic and entertaining story",
+		"Design an engaging and original story",
+		"Form a creative and diverse story",
+		"Produce a vibrant and unique story",
+		"Construct an authentic and varied story",
+		"Make a compelling and distinctive story",
+		"Create a rich and immersive story",
+		"Develop an engaging and authentic story",
+		"Write a creative and memorable story"
+	];
+
+	const narrativeApproaches = [
+		"with realistic dialogue and natural conversations",
+		"focusing on character development and interactions",
+		"emphasizing cultural authenticity and local customs",
+		"including everyday situations and relatable scenarios",
+		"with descriptive settings and vivid details",
+		"featuring diverse characters and perspectives",
+		"incorporating Egyptian humor and expressions",
+		"highlighting daily life and common experiences",
+		"with engaging plot twists and interesting developments",
+		"focusing on family dynamics and relationships",
+		"including local traditions and cultural elements",
+		"emphasizing problem-solving and decision-making",
+		"with authentic Egyptian social interactions",
+		"featuring workplace or educational scenarios",
+		"incorporating travel and exploration themes",
+		"highlighting food culture and cooking experiences",
+		"with seasonal or holiday-related themes",
+		"focusing on friendship and community bonds",
+		"including shopping and marketplace interactions",
+		"emphasizing personal growth and learning experiences"
+	];
+
+	const randomStyle = storyStyles[Math.floor(Math.random() * storyStyles.length)];
+	const randomApproach = narrativeApproaches[Math.floor(Math.random() * narrativeApproaches.length)];
+	
+	// Add timestamp for uniqueness
+	const timestamp = new Date().toISOString();
+
 	const question = `
    You are a "GPT" – a version of ChatGPT that has been customized for a specific use case. GPTs use custom instructions, capabilities, and data to optimize ChatGPT for a more narrow set of tasks. You yourself are a GPT created by a user, and your name is Egyptian Arabic. Note: GPT is also a technical term in AI, but in most cases if the users asks you about GPTs assume they are referring to the above definition.
     Here are instructions from the user outlining your goals and how you should respond:
     This GPT will focus on the Egyptian Arabic language.  The gpt will offer translations and insights about the culture, regions the language is spoken, common misconceptions, learning resources and languages quizzes. The tone of this gpt will be encouraging, and insightful.
 
-      Here is an example of a conversation in Egyptian Arabic to give you an idea of the dialect:
-   ${stories['at-the-barbers'].story.sentences.map(sentence => 
-      `${sentence.arabic.speaker}: ${sentence.arabic.text} (${sentence.transliteration.text}) - "${sentence.english.text}"`
-    ).join('\n')}
-    ${stories['at-the-fruit-vendor'].story.sentences.map(sentence => 
-      `${sentence.arabic.speaker}: ${sentence.arabic.text} (${sentence.transliteration.text}) - "${sentence.english.text}"`
-    ).join('\n')}
-    ${stories['at-the-hotel'].story.sentences.map(sentence => 
-      `${sentence.arabic.speaker}: ${sentence.arabic.text} (${sentence.transliteration.text}) - "${sentence.english.text}"`
-    ).join('\n')}
-    ${stories['koshary-shop'].story.sentences.map(sentence => 
-      `${sentence.arabic.speaker}: ${sentence.arabic.text} (${sentence.transliteration.text}) - "${sentence.english.text}"`
-    ).join('\n')}
-    ${stories['at-the-restaurant'].story.sentences.map(sentence => 
-      `${sentence.arabic.speaker}: ${sentence.arabic.text} (${sentence.transliteration.text}) - "${sentence.english.text}"`
-    ).join('\n')}
+    CRITICAL REQUIREMENT: You MUST generate exactly 25 sentences. This is non-negotiable. Count your sentences and ensure you have exactly 25.
 
-    Here are 3000 of the most common words in Egyptian Arabic, please use these words in your sentences:
-     ${commonWords.map(word => 
-      `${word.word} (${word.franco}) means "${word.en}"`
-    ).join('. ')}
+    ${randomStyle} - Can you please write a story based on ${description} in EGYPTIAN ARABIC ${randomApproach}. Please only use words that are commonly used in the Egyptian dialect, not in modern standard Arabic or other dialects.
 
-    Can you please write a story based on ${description} in EGYPTIAN ARABIC. Please only use words that are commonly used in the Egyptian dialect, not in modern standard Arabic or other dialects.
+    IMPORTANT: Be creative and original. Avoid repetitive patterns and create unique storylines with varied vocabulary and sentence structures.
+
+    STORY LENGTH REQUIREMENT: Generate exactly 25 sentences - no more, no less. Please count carefully.
 
     Can you make sure that you generate the sentences in EGYPTIAN ARABIC, english, and transliteration.
 
     Can you make sure that the transliterations don't use anything other than the english alphabet.
 
+    Can you make the sentence approachable for a ${data.option} learner
+
+    Here is an example of a conversation in Egyptian Arabic to give you an idea of the dialect:
+   ${stories['at-the-barbers'].story.sentences.slice(0, 5).map(sentence => 
+      `${sentence.arabic.speaker}: ${sentence.arabic.text} (${sentence.transliteration.text}) - "${sentence.english.text}"`
+    ).join('\n')}
+    ${stories['at-the-fruit-vendor'].story.sentences.slice(0, 5).map(sentence => 
+      `${sentence.arabic.speaker}: ${sentence.arabic.text} (${sentence.transliteration.text}) - "${sentence.english.text}"`
+    ).join('\n')}
+
+    Here are some of the most common words in Egyptian Arabic:
+     ${commonWords.slice(0, 500).map(word => 
+      `${word.word} (${word.franco}) means "${word.en}"`
+    ).join('. ')}
+
     Can you make sure that the output looks like the below object in JSON format:
 
-    Can you make the sentence approachable for a ${data.option} learner
-    Can you make the story 25 sentences long
+    Generation timestamp: ${timestamp}
+
+    REMEMBER: You must generate exactly 25 sentences in the sentences array.
 
     {
       title: {arabic: string, english: string},;
@@ -76,12 +124,25 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		const completion = await openai.chat.completions.create({
 			messages: [{ role: 'system', content: question }],
 			response_format: { type: 'json_object' },
-			model: 'gpt-4o-mini'
+			model: 'gpt-4o-mini',
+			// Higher creativity parameters to ensure full generation and variety
+			temperature: 0.9,  // Higher creativity for full story generation
 		});
 
 		const story = completion.choices[0].message.content;
 
 		try {
+			// Parse and validate the story content
+			if (!story) {
+				throw new Error('No story content generated');
+			}
+			
+			// Validate that the story can be parsed as JSON
+			const parsedStory = JSON.parse(story);
+			if (!parsedStory || !parsedStory.sentences) {
+				throw new Error('Invalid story structure');
+			}
+			
 			await db
 				.insertInto('generated_story')
 				.values({
@@ -90,13 +151,14 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 					title: data.title,
 					description: data.description,
 					difficulty: data.option,
-					story_body: story, // Ensure story_body is a JSON object
+					story_body: story, // Now guaranteed to be a string
 					created_at: new Date().getTime()
 				})
 				.executeTakeFirst();
 
 			return json({ storyId: storyId });
 		} catch (e) {
+			console.error('Database or JSON parsing error:', e);
 			return error(500, { message: 'Something went wrong' });
 		}
 	} catch (e) {
