@@ -33,7 +33,7 @@ type GeneratedStoryTable = {
   title: string;
   description: string;
   difficulty: string;
-  story_body: JSON;
+  story_body: string; // SQLite stores JSON as strings
   created_at: ColumnType<bigint, number>;
 }
 
