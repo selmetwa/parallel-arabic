@@ -16,14 +16,38 @@
   }
 
   let { data }: Props = $props();
-  let story = $state({})
+  let story = $state({} as any)
+
+  $inspect({ data })
+  // Function to filter out incomplete sentences
+  function filterValidSentences(sentences: any[]): any[] {
+    return sentences.filter(sentence => 
+      sentence && 
+      sentence.arabic?.text && 
+      sentence.english?.text && 
+      sentence.transliteration?.text &&
+      typeof sentence.arabic.text === 'string' &&
+      typeof sentence.english.text === 'string' &&
+      typeof sentence.transliteration.text === 'string' &&
+      sentence.arabic.text.trim() !== '' &&
+      sentence.english.text.trim() !== '' &&
+      sentence.transliteration.text.trim() !== ''
+    );
+  }
 
   onMount(() => {
-    story = JSON.parse(data.story[0].story_body)
+    if (data.story?.[0]?.story_body) {
+      const parsedStory = JSON.parse(data.story[0].story_body)
+      // Filter sentences when loading the story
+      if (parsedStory.sentences) {
+        parsedStory.sentences = filterValidSentences(parsedStory.sentences)
+      }
+      story = parsedStory
+    }
   })
 
 	let mode = $state(Mode.SingleText);
-	const sentences = $derived(story?.sentences);
+	const sentences = $derived(story?.sentences || []);
 
   let activeWordObj = $state({
 		english: '',
@@ -34,7 +58,7 @@
 		type: ''
 	})
 
-	let timer = null;
+	let timer: NodeJS.Timeout | null = null;
 	let index = $state(0);
 	let isLoading = $state(false);
 	let isModalOpen = $state(false);
@@ -96,7 +120,9 @@
 	}
 
 	function setActiveWord(word: KeyWord) {
-		clearTimeout(timer);
+		if (timer) {
+			clearTimeout(timer);
+		}
 		activeWordObj = word;
 
 		if (mode !== Mode.SentanceView) {
@@ -161,38 +187,44 @@
 </script>
 
 <WordModal {activeWordObj} {isModalOpen} {closeModal}></WordModal>
-<header class="border-b border-tile-600 px-4 pb-8 text-center sm:px-8">
-  <h1 class="py-8 text-4xl font-semibold text-text-200">
-    {story?.title?.arabic} / {story?.title?.english}
-  </h1>
-  <div class="flex flex-col items-start justify-between sm:flex-row sm:items-center">
-    <div class="w-fit">
-        {#if mode === Mode.SentanceView}
-        <AudioButton text={sentences[index].arabic.text}>
-          Play Audio
-        </AudioButton>
-        {/if}
+{#if sentences.length > 0}
+  <header class="border-b border-tile-600 px-4 pb-8 text-center sm:px-8">
+    <h1 class="py-8 text-4xl font-semibold text-text-200">
+      {story?.title?.arabic} / {story?.title?.english}
+    </h1>
+    <div class="flex flex-col items-start justify-between sm:flex-row sm:items-center">
+      <div class="w-fit">
+          {#if mode === Mode.SentanceView && sentences[index]}
+          <AudioButton text={sentences[index].arabic.text}>
+            Play Audio
+          </AudioButton>
+          {/if}
+      </div>
+      <fieldset class="flex w-full place-content-end">
+        <legend class="sr-only">Select Mode</legend>
+        <ul class="flex flex-row gap-1">
+          {#each modeOptions as option}
+            <li>
+              <RadioButton
+                wrapperClass="!p-1 h-min"
+                className="text-xs !p-1 h-min font-semibold"
+                selectableFor={option.value}
+                value={option.value}
+                text={option.text}
+                isSelected={option.value === mode}
+                onClick={updateMode}
+              />
+            </li>
+          {/each}
+        </ul>
+      </fieldset>
     </div>
-    <fieldset class="flex w-full place-content-end">
-      <legend class="sr-only">Select Mode</legend>
-      <ul class="flex flex-row gap-1">
-        {#each modeOptions as option}
-          <li>
-            <RadioButton
-              wrapperClass="!p-1 h-min"
-              className="text-xs !p-1 h-min font-semibold"
-              selectableFor={option.value}
-              value={option.value}
-              text={option.text}
-              isSelected={option.value === mode}
-              onClick={updateMode}
-            />
-          </li>
-        {/each}
-      </ul>
-    </fieldset>
+  </header>
+{:else}
+  <div class="flex items-center justify-center py-20">
+    <p class="text-xl text-text-200">Loading story...</p>
   </div>
-</header>
+{/if}
 
 {#if error}
   <div
@@ -202,7 +234,7 @@
   </div>
 {/if}
 
-{#if mode === Mode.SentanceView}
+{#if mode === Mode.SentanceView && sentences.length > 0 && sentences[index]}
   <section
     class="grid grid-cols-1 grid-rows-4 divide-x divide-tile-600 bg-tile-300 sm:grid-cols-2 sm:grid-rows-2"
   >
@@ -317,7 +349,7 @@
       {index + 1} / {sentences.length}
     </p>
   </div>
-{:else}
+{:else if sentences.length > 0}
   {#each sentences as sentence}
     <section
       class={cn(

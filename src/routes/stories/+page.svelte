@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { stories } from '$lib/constants/stories';
     import PaywallModal from '$lib/components/PaywallModal.svelte';
   import CreateStoryModal from './components/CreateStoryModal.svelte';
@@ -6,6 +6,23 @@
 
   let { data } = $props();
   let isModalOpen = $state(false);
+
+  // Function to filter out incomplete sentences
+  function filterValidSentences(sentences: any[]) {
+    if (!Array.isArray(sentences)) return [];
+    return sentences.filter(sentence => 
+      sentence && 
+      sentence.arabic?.text && 
+      sentence.english?.text && 
+      sentence.transliteration?.text &&
+      typeof sentence.arabic.text === 'string' &&
+      typeof sentence.english.text === 'string' &&
+      typeof sentence.transliteration.text === 'string' &&
+      sentence.arabic.text.trim() !== '' &&
+      sentence.english.text.trim() !== '' &&
+      sentence.transliteration.text.trim() !== ''
+    );
+  }
 
   let userGeneratedStories = $derived.by(() => {
     const output = []
@@ -17,13 +34,16 @@
         continue
       }
 
+      // Filter valid sentences and get the count
+      const validSentences = filterValidSentences(a.sentences || []);
+
       output.push({
         id: story.id,
-        title: `${a.title.arabic} / ${a.title.english}`,
+        title: `${a.title?.arabic || ''} / ${a.title?.english || ''}`,
         description: story.description,
         createdAt: story.created_at,
         difficulty: story.difficulty,
-        length: a.sentences.length
+        length: validSentences.length
       })
     }
     return output

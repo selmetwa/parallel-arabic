@@ -9,8 +9,6 @@
   import SaveButton from '$lib/components/SaveButton.svelte';
   let { sentence, resetSentences } = $props();
 
-  $inspect(sentence);
-
   let recording = $state(false);
   let mediaRecorder = $state(null);
   let audioChunks = $state([]);
