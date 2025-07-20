@@ -90,56 +90,60 @@
 	});
 </script>
 
-<section class="px-4 sm:px-16">
+<section class="py-4">
 {#if sentenceObj}
 	{#if isCorrect}
-		<div
-			class="flex w-full flex-row items-center mt-5 justify-center gap-2 bg-green-100 py-2 transition-all duration-300"
-		>
-			<span class="text-lg font-semibold text-text-300">
+		<div class="flex w-full flex-row items-center mb-4 justify-center gap-2 bg-green-100 py-3 px-4 border-2 border-green-100 transition-all duration-300">
+			<span class="text-lg font-bold text-text-300">
 				{sentenceObj.answer.arabic} is correct
 			</span>
 		</div>
 	{/if}
 	{#if isIncorrect}
-		<div
-			class="flex w-full flex-row items-center justify-center gap-2 bg-red-100 py-2 transition-all duration-300 mt-5"
-		>
-			<span class="text-lg font-semibold text-text-300">
+		<div class="flex w-full flex-row items-center justify-center gap-2 bg-red-100 py-3 px-4 border-2 border-red-100 transition-all duration-300 mb-4">
+			<span class="text-lg font-bold text-text-300">
 				{selectedObj.arabic} is incorrect
 			</span>
 		</div>
 	{/if}
-	<div class="mt-10 flex w-full flex-col sm:flex-row gap-2 sm:w-fit">
-		<Button onClick={() => (showHint = !showHint)} type="button">Show Hint</Button>
-		<Button onClick={() => (showAnswer = !showAnswer)} type="button">Show Answer</Button>
-    <SaveButton type="sentence" objectToSave={{
-					arabic: sentenceObj.answer.arabic,
-					english: sentenceObj.answer.english,
-					transliterated: sentenceObj.answer.transliteration
-				}}></SaveButton>
-    <Button onClick={resetSentences} type="button">Reset</Button>
+	
+	<div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
+		<Button onClick={() => (showHint = !showHint)} type="button">
+			{showHint ? 'Hide' : 'Show'} Hint
+		</Button>
+		<Button onClick={() => (showAnswer = !showAnswer)} type="button">
+			{showAnswer ? 'Hide' : 'Show'} Answer
+		</Button>
+		<SaveButton type="sentence" objectToSave={{
+			arabic: sentenceObj.answer.arabic,
+			english: sentenceObj.answer.english,
+			transliterated: sentenceObj.answer.transliteration
+		}} />
+		<Button onClick={resetSentences} type="button">Reset</Button>
 	</div>
 
-  <section class="">
-	<div class="mt-6">
-		<div class="flex flex-col items-center justify-center gap-2">
-			<h1 class="w-fit text-[40px] font-bold text-text-300">{sentenceObj.answer.english}</h1>
+	<div class="text-center mb-6">
+		<div class="flex flex-col items-center justify-center gap-3">
+			<h1 class="text-3xl sm:text-4xl font-bold text-text-300">{sentenceObj.answer.english}</h1>
 			{#if showHint}
-				<p class="w-fit text-[25px] text-text-300">({sentenceObj.answer.transliteration})</p>
+				<p class="text-xl text-text-200">({sentenceObj.answer.transliteration})</p>
 			{/if}
 			{#if showAnswer}
-				<p class="w-fit text-[25px] text-text-300">({sentenceObj.answer.arabic})</p>
+				<p class="text-2xl text-text-300">({sentenceObj.answer.arabic})</p>
 			{/if}
 		</div>
 	</div>
-	<fieldset class="grid grid-cols-1 grid-rows-1 gap-3 sm:grid-cols-2 sm:grid-rows-2 mt-4">
+	
+	<fieldset class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+		<legend class="sr-only">Choose the correct Arabic translation</legend>
 		<RadioButton
 			text={sentenceObj.first.arabic}
 			value={sentenceObj.first.english}
 			isSelected={selected === sentenceObj.first.english}
 			onClick={handleClick}
 			selectableFor={sentenceObj.first.english}
+			wrapperClass="!p-3"
+			className="!text-lg !font-medium"
 		/>
 		<RadioButton
 			text={sentenceObj.second.arabic}
@@ -147,6 +151,8 @@
 			isSelected={selected === sentenceObj.second.english}
 			onClick={handleClick}
 			selectableFor={sentenceObj.second.english}
+			wrapperClass="!p-3"
+			className="!text-lg !font-medium"
 		/>
 		<RadioButton
 			text={sentenceObj.third.arabic}
@@ -154,6 +160,8 @@
 			value={sentenceObj.third.english}
 			isSelected={selected === sentenceObj.third.english}
 			selectableFor={sentenceObj.third.english}
+			wrapperClass="!p-3"
+			className="!text-lg !font-medium"
 		/>
 		<RadioButton
 			text={sentenceObj.fourth.arabic}
@@ -161,8 +169,9 @@
 			isSelected={selected === sentenceObj.fourth.english}
 			selectableFor={sentenceObj.fourth.english}
 			onClick={handleClick}
+			wrapperClass="!p-3"
+			className="!text-lg !font-medium"
 		/>
 	</fieldset>
-</section>
 {/if}
 </section>

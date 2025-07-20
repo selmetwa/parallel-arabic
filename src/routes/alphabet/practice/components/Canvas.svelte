@@ -77,7 +77,7 @@
 </script>
 
 <div class="wrapper">
-  <button onclick={clear} class="text-text-200 underline">Clear</button>
+  <button onclick={clear} class="text-text-200 underline mb-2">Clear</button>
   <svg onpointerdown={handlePointerDown} onpointermove={handlePointerMove} style="touch-action: none;">
     {#each pathData as path, i (i)}
       <path d={path} />
@@ -90,12 +90,12 @@
     user-select: none;
   }
 
-svg {
-  width: 100%;
-  height: 500px;
-  border: 5px solid var(--tile5);
-  fill: var(--text3);
-  background-color: var(--tile4);
-  touch-action: none;
-}
+  svg {
+    width: 100%;
+    height: 500px;
+    border: 2px solid var(--tile6);
+    fill: var(--text3);
+    background-color: var(--tile4);
+    touch-action: none;
+  }
 </style>

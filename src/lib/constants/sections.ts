@@ -12,13 +12,13 @@ export const sections = [
     isPaywalled: false
   },
   {
-    name: 'Most common Egyptian Arabic words',
+    name: 'Most common words',
     path: 'most_common',
     count: 2404,
     isPaywalled: true
   },
   {
-    name: 'Vocabulary from around the house',
+    name: 'Around the house',
     path: 'vocabulary_from_around_the_house',
     count: 253,
     isPaywalled: true
@@ -48,7 +48,7 @@ export const sections = [
     isPaywalled: true
   },
   {
-    name: 'Emotions and personality traits',
+    name: 'Emotions',
     path: 'emotions__and__personality_traits',
     count: 214,
     isPaywalled: true

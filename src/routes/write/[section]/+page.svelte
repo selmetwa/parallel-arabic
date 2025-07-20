@@ -50,35 +50,36 @@
 </script>
 
 {#if isPaywalled && !data.isSubscribed}
-<div class="mx-4 mb-6 mt-12 border border-tile-600 bg-tile-300 py-4 text-center sm:mx-36">
-  <h1 class="text-2xl font-bold text-text-300">You are not subscribed.</h1>
-  <p class="mt-2 text-xl text-text-200">To continue practicing, please subscribe.</p>
-  <form method="POST" action="/?/subscribe" class="mx-auto mt-4 w-fit">
-    <input type="hidden" name="price_id" value={PUBLIC_PRICE_ID} />
-
-    <Button type="submit">Subscribe</Button>
-  </form>
-</div>
+	<div class="px-3 mt-6 sm:px-8 max-w-5xl mx-auto">
+		<div class="border border-tile-600 bg-tile-300 py-4 px-3 text-center">
+			<h1 class="text-2xl font-bold text-text-300">You are not subscribed.</h1>
+			<p class="mt-2 text-xl text-text-200">To continue practicing, please subscribe.</p>
+			<form method="POST" action="/?/subscribe" class="mx-auto mt-4 w-fit">
+				<input type="hidden" name="price_id" value={PUBLIC_PRICE_ID} />
+				<Button type="submit">Subscribe</Button>
+			</form>
+		</div>
+	</div>
 {:else}
-<header class="px-4 sm:px-16 bg-tile-400 py-8 text-center border-b border-tile-600">
-  <div class="flex w-full justify-between items-center">
-    <div class="w-max">
-      {#if index > 0}
-        <Button onClick={previous} type="button">Previous</Button>
-      {/if}
-    </div>
-    <div>
-      <h1 class="text-lg font-bold text-text-300">{index + 1} / {data.words.length}</h1>
-    </div>
-    <div class="w-max">
-      {#if index < data.words.length - 1}
-        <Button onClick={next} type="button">Next</Button>
-      {/if}
-    </div>
-  </div>
-</header>
+	<header class="border-b border-tile-600 bg-tile-400 px-3 py-4 text-center sm:px-8">
+		<div class="flex w-full items-center justify-between max-w-5xl mx-auto">
+			<div class="w-max">
+				{#if index > 0}
+					<Button onClick={previous} type="button">Previous</Button>
+				{/if}
+			</div>
+			<div>
+				<h1 class="text-lg font-bold text-text-300">{index + 1} / {data.words.length} words</h1>
+			</div>
+			<div class="w-max">
+				{#if index < data.words.length - 1}
+					<Button onClick={next} type="button">Next</Button>
+				{/if}
+			</div>
+		</div>
+	</header>
 
-<section class="px-4 sm:px-16">
-<WordBlock {word} {mode} switchMode={handleSwitchMode} />
-</section>
+	<div class="px-3 mt-6 sm:px-8 max-w-5xl mx-auto">
+		<WordBlock {word} {mode} switchMode={handleSwitchMode} />
+	</div>
 {/if}  

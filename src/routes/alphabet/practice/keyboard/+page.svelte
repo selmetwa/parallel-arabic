@@ -29,19 +29,18 @@
 	}
 </script>
 
-<section class="mt-8 px-4 sm:mt-2 lg:px-20">
-	<div class="py-2">
-		<header class="flex w-fit flex-row items-center gap-2 whitespace-nowrap py-8">
-			{#if index > 0}
-				<Button onClick={handlePrevious} type="button">Previous</Button>
-			{/if}
-			{#if index < lettersCopy.length - 1}
-				<Button onClick={handleNext} type="button">Next</Button>
-			{/if}
-			<p class="text-text-200">
-				{index + 1} / {lettersCopy.length}
-			</p>
-		</header>
-	</div>
+<section class="px-3 mt-6 sm:px-8 max-w-6xl mx-auto">
+	<header class="flex w-fit flex-row items-center gap-2 whitespace-nowrap mb-6">
+		{#if index > 0}
+			<Button onClick={handlePrevious} type="button">Previous</Button>
+		{/if}
+		{#if index < lettersCopy.length - 1}
+			<Button onClick={handleNext} type="button">Next</Button>
+		{/if}
+		<p class="text-text-200 ml-2">
+			{index + 1} / {lettersCopy.length}
+		</p>
+	</header>
+	
 	<LetterBlock {letter} />
 </section>

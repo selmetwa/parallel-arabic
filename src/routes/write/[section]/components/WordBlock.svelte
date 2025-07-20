@@ -41,7 +41,7 @@
 	let correctAnswer = $state('');
 	let egyptianArabicWord = $state('');
   let keyboard = $state('virtual')
-	let attempt = $state([]);
+	let attempt: Attempt[] = $state([]);
 	let isCorrect = $state(false);
   let isInfoModalOpen = $state(false);
   let keyboardValue = $state('');
@@ -199,91 +199,105 @@
 </script>
 
 <div>
-	<div class="pb-4 pt-12">
-    <InfoDisclaimer></InfoDisclaimer>
-		<div class="grid grid-cols-2 gap-2 sm:grid-cols-5">
+	<div class="mb-6">
+		<InfoDisclaimer></InfoDisclaimer>
+		<div class="grid grid-cols-3 sm:grid-cols-5 gap-2 mt-4">
 			<Button type="button" onClick={toggleAnswer}>{showAnswer ? 'Hide' : 'Show'} answer</Button>
 			<Button type="button" onClick={toggleHint}>{showHint ? 'Hide' : 'Show'} hint</Button>
-      <AudioButton text={egyptianArabicWord}>Audio</AudioButton>
-      <SaveButton 
-      type="Word"
-      objectToSave={{
-        arabic: egyptianArabicWord,
-        english: word.english,
-        transliterated: word.egyptianArabicTransliteration
-      }}></SaveButton>
+			<AudioButton text={egyptianArabicWord}>Audio</AudioButton>
+			<SaveButton 
+				type="Word"
+				objectToSave={{
+					arabic: egyptianArabicWord,
+					english: word.english,
+					transliterated: word.egyptianArabicTransliteration
+				}}></SaveButton>
 			<Button type="button" onClick={switchMode}>
 				{mode === 'draw' ? 'Type' : 'Draw'}
 			</Button>
 		</div>
 	</div>
+	
 	{#if isCorrect}
-		<div
-			class="flex w-full flex-row items-center justify-center gap-2 bg-green-100 py-2 transition-all duration-300"
-		>
+		<div class="flex w-full flex-row items-center justify-center gap-2 py-2 transition-all duration-300 mb-4" style="background-color: var(--green1);">
 			<span class="text-lg font-semibold text-text-300">{correctAnswer} is correct</span>
 		</div>
 	{/if}
-	<div class="flex flex-col text-wrap mt-4">
-		<div class="mx-auto w-fit text-center">
-			<div class="flex flex-row items-center justify-center gap-2">
-				<h1 class="w-fit text-[50px] font-bold text-text-300">{word.english}</h1>
+	
+	<div class="bg-tile-300 border border-tile-500 px-3 py-6 shadow-lg mb-6">
+		<div class="text-center">
+			<div class="flex flex-col sm:flex-row items-center justify-center gap-2 mb-4">
+				<h1 class="text-4xl sm:text-5xl font-bold text-text-300">{word.english}</h1>
 				{#if showHint}
-					<p class="w-fit text-[25px] text-text-300">({word.egyptianArabicTransliteration})</p>
+					<p class="text-xl sm:text-2xl text-text-200">({word.egyptianArabicTransliteration})</p>
 				{/if}
 				{#if showAnswer}
-					<p class="w-fit text-[35px] text-text-300">({egyptianArabicWord})</p>
+					<p class="text-2xl sm:text-3xl text-text-300">({egyptianArabicWord})</p>
 				{/if}
 			</div>
-			{#if isSafari}
-				<span class="text-[35px]">
-					{@html attempt
-						.map(
-							({ letter, correct }) =>
-								`<span class="${cn('text-[35px]', {
-									'text-green-500': correct,
-									'text-red-500': !correct
-								})}">&zwj;&zwj;${letter}&zwj;&zwj;</span>`
-						)
-						.join('')}
-				</span>
-			{:else}
-				<span class="text-[35px]">
-					{@html attempt
-						.map(
-							({ letter, correct }) =>
-								`<span class="${cn('text-[35px]', {
-									'text-green-500': correct,
-									'text-red-500': !correct
-								})}">${letter}</span>`
-						)
-						.join('')}
-				</span>
-			{/if}
-		</div>
-      <Modal isOpen={isInfoModalOpen} handleCloseModal={closeInfoModal} height="70%" width="80%">
-        <KeyboardDocumentation></KeyboardDocumentation>
-      </Modal>
-			<div class={cn("block", { '!hidden': mode === 'draw'})}>
-        <button onclick={toggleKeyboard}>
-          {keyboard === 'virtual' ? 'Use other keyboard' : 'Use builtin keyboard'}
-        </button>
-        <div class={cn('block', { 'hidden': keyboard !== 'virtual'})}>
-          <arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
-          <button class="mt-3 text-text-300 underline" onclick={openInfoModal}>How does this keyboard work?</button>
-        </div>
-        <textarea 
-        value={keyboardValue}
-        oninput={onRegularKeyboard}
-        class={cn(
-          "block w-full min-h-32 text-text-300 bg-tile-400",
-          {'hidden': keyboard === 'virtual'}
-        )}
-></textarea>
+			
+			<div class="text-center">
+				{#if isSafari}
+					<span class="text-3xl">
+						{@html attempt
+							.map(
+								({ letter, correct }) =>
+									`<span class="${cn('text-3xl', {
+										'text-green-500': correct,
+										'text-red-500': !correct
+									})}">&zwj;&zwj;${letter}&zwj;&zwj;</span>`
+							)
+							.join('')}
+					</span>
+				{:else}
+					<span class="text-3xl">
+						{@html attempt
+							.map(
+								({ letter, correct }) =>
+									`<span class="${cn('text-3xl', {
+										'text-green-500': correct,
+										'text-red-500': !correct
+									})}">${letter}</span>`
+							)
+							.join('')}
+					</span>
+				{/if}
 			</div>
+		</div>
+		
+		<Modal isOpen={isInfoModalOpen} handleCloseModal={closeInfoModal} height="70%" width="80%">
+			<KeyboardDocumentation></KeyboardDocumentation>
+		</Modal>
+		
+		<div class={cn("block mt-6", { '!hidden': mode === 'draw'})}>
+			<div class="mb-3 flex items-center justify-between">
+				<button onclick={toggleKeyboard} class="text-sm text-text-300 underline">
+					{keyboard === 'virtual' ? 'Use other keyboard' : 'Use builtin keyboard'}
+				</button>
+				{#if keyboard === 'virtual'}
+					<button class="text-sm text-text-300 underline" onclick={openInfoModal}>
+						How does this keyboard work?
+					</button>
+				{/if}
+			</div>
+			
+			<div class={cn('block', { 'hidden': keyboard !== 'virtual'})}>
+				<arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
+			</div>
+			
+			<textarea 
+				value={keyboardValue}
+				oninput={onRegularKeyboard}
+				placeholder="Type your answer here..."
+				class={cn(
+					"block w-full min-h-32 text-text-300 bg-tile-300 border border-tile-500 p-3",
+					{'hidden': keyboard === 'virtual'}
+				)}
+			></textarea>
+		</div>
 	</div>
 </div>
 
-	<div class={cn("hidden", { '!block': mode === 'draw'})}>
-		<Canvas letter={word} size={10} />
-	</div>
+<div class={cn("hidden", { '!block': mode === 'draw'})}>
+	<Canvas letter={word} size={10} />
+</div>
