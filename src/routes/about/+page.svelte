@@ -1,131 +1,269 @@
-<header class="mt-14 flex flex-col items-center gap-6 px-6 py-8 sm:flex-row sm:px-8">
-	<div class="flex-1">
-		<h1 class="leading-2 text-balance text-5xl font-semibold text-text-200">
-			Learn Egyptian Arabic in a fun way!
-		</h1>
-		<p class="mt-6 text-2xl leading-8 text-text-200">
-			Parallel Arabic provides a fully self-contained learning environment without the need for
-			outside resources.
-		</p>
-		<div class="mt-6">
-			<a
-				href="/signup"
-				class="mt-6 w-full whitespace-nowrap border border-tile-600 bg-tile-500 px-5 py-2 font-semibold  text-text-300 duration-300 hover:bg-tile-600"
-			>
-				Get Started Now!
-			</a>
+<section class="min-h-screen bg-tile-300">
+	<!-- Hero Section -->
+	<header>
+		<div class="max-w-7xl mx-auto px-4 sm:px-8 py-12 sm:py-16">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+				<div class="text-center lg:text-left">
+					<h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-300 leading-tight mb-6">
+						Learn Egyptian Arabic in a fun way!
+					</h1>
+					<p class="text-lg sm:text-xl text-text-200 leading-relaxed mb-8">
+						Parallel Arabic provides a fully self-contained learning environment without the need for outside resources.
+					</p>
+					<a
+						href="/signup"
+						class="inline-block px-8 py-3 text-lg font-semibold bg-tile-500 border-2 border-tile-600 text-text-300 hover:bg-tile-600 transition-colors duration-300 shadow-lg"
+					>
+						Get Started Now!
+					</a>
+				</div>
+				<div class="flex justify-center lg:justify-end">
+					<img src="/images/banner.png" class="max-w-full h-auto opacity-90" alt="Parallel Arabic Banner" />
+				</div>
+			</div>
 		</div>
-	</div>
-	<div class="flex-1">
-		<img src="/images/banner.png" class="opacity-75" alt="banner" />
-	</div>
-</header>
-<section class="mt-4 grid gap-4 px-6 sm:grid-cols-2 sm:grid-rows-2 sm:px-8">
-	<article class="space-between flex flex-col gap-2 border-2 border-tile-600 bg-tile-400 p-4">
-		<p class="text-text-300">
-			Wow this is perfect for what I need currently. The stories section in particular is a great
-			idea as I can't find any graded stories for learning. Thank you so much for this :)
-		</p>
-		<div class="mt-auto flex flex-row items-center gap-2">
-			<img src="/images/reddit.png" alt="reddit logo" class="h-10 w-10 rounded-full" />
-			<p class="text-[14px] text-text-200">Kind Redditor</p>
-		</div>
-	</article>
+	</header>
 
-	<article class="space-between flex flex-col gap-2 border-2 border-tile-600 bg-tile-400 p-4">
-		<p class="text-text-300">
-			I love it! This is something I have been searching for ages :) thank you so much
-		</p>
-		<div class="mt-auto flex flex-row items-center gap-2">
-			<img src="/images/reddit.png" alt="reddit logo" class="h-10 w-10 rounded-full" />
-			<p class="text-[14px] text-text-200">Kind Redditor</p>
+	<!-- Testimonials Section -->
+	<section class="py-12 sm:py-16">
+		<div class="max-w-7xl mx-auto px-4 sm:px-8">
+			<h2 class="text-2xl sm:text-3xl font-bold text-text-300 text-center mb-8">What Our Users Say</h2>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+				<article class="bg-tile-400 border-2 border-tile-600 p-4 shadow-lg flex flex-col h-full">
+					<p class="text-text-300 text-base leading-relaxed flex-grow">
+						"Wow this is perfect for what I need currently. The stories section in particular is a great idea as I can't find any graded stories for learning. Thank you so much for this :)"
+					</p>
+				</article>
+
+				<article class="bg-tile-400 border-2 border-tile-600 p-4 shadow-lg flex flex-col h-full">
+					<p class="text-text-300 text-base leading-relaxed flex-grow">
+						"I love it! This is something I have been searching for ages :) thank you so much"
+					</p>
+				</article>
+
+				<article class="bg-tile-400 border-2 border-tile-600 p-4 shadow-lg flex flex-col h-full">
+					<p class="text-text-300 text-base leading-relaxed flex-grow">
+						"This is great! As someone outgrowing Duolingo this is perfect."
+					</p>
+				</article>
+
+				<article class="bg-tile-400 border-2 border-tile-600 p-4 shadow-lg flex flex-col h-full">
+					<p class="text-text-300 text-base leading-relaxed flex-grow">
+						"This is great. I might finally be able to understand the Egyptian shows. My Arabic is terrible. In the first lesson I learned a new word!"
+					</p>
+				</article>
+
+				<article class="bg-tile-400 border-2 border-tile-600 p-4 shadow-lg flex flex-col h-full">
+					<p class="text-text-300 text-base leading-relaxed flex-grow">
+						"Fantastic tool, really."
+					</p>
+				</article>
+			</div>
 		</div>
-	</article>
-	<article class="space-between flex flex-col gap-2 border-2 border-tile-600 bg-tile-400 p-4">
-		<p class="text-text-300">This is great! As someone outgrowing Duolingo this is perfect.</p>
-		<div class="mt-auto flex flex-row items-center gap-2">
-			<img src="/images/reddit.png" alt="reddit logo" class="h-10 w-10 rounded-full" />
-			<p class="text-[14px] text-text-200">Kind Redditor</p>
+	</section>
+
+	<!-- Features Section -->
+	<section class="py-12 sm:py-16">
+		<div class="max-w-7xl mx-auto px-4 sm:px-8">
+			<h2 class="text-2xl sm:text-3xl font-bold text-text-300 text-center mb-12">Complete Learning Platform</h2>
+			
+			<div class="grid grid-cols-1 gap-8">
+				<!-- Conversations Feature -->
+				<div class="bg-tile-500 border-2 border-tile-600 shadow-lg overflow-hidden">
+					<div class="flex flex-col sm:flex-row">
+						<div class="sm:w-2/5 h-48 sm:h-auto bg-tile-300 border-r-0 sm:border-r-2 border-b-2 sm:border-b-0 border-tile-600 flex items-center justify-center p-4">
+							<img src="/images/banner.png" alt="Conversations" class="max-w-full max-h-full object-contain" />
+						</div>
+						<div class="sm:w-3/5 p-6 flex flex-col justify-between">
+							<div>
+								<h3 class="text-xl font-bold text-text-300 mb-3">Real Conversations</h3>
+								<p class="text-base text-text-200 leading-relaxed mb-3">
+									Practical Egyptian Arabic conversations recorded by native speakers with full transcripts and translations.
+								</p>
+								<p class="text-base text-text-200 leading-relaxed mb-4">
+									AI-generated definitions for every word to accelerate your learning.
+								</p>
+							</div>
+							<a
+								href="/stories"
+								class="inline-block px-6 py-3 text-base font-semibold bg-tile-600 border-2 border-tile-600 text-text-300 hover:bg-tile-700 transition-colors duration-300 shadow-md w-fit"
+							>
+								Practice Conversations
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Speaking Practice -->
+				<div class="bg-tile-500 border-2 border-tile-600 shadow-lg overflow-hidden">
+					<div class="flex flex-col sm:flex-row">
+						<div class="sm:w-2/5 h-48 sm:h-auto bg-tile-300 border-r-0 sm:border-r-2 border-b-2 sm:border-b-0 border-tile-600 flex items-center justify-center p-4">
+							<img src="/images/speak.png" alt="Speaking Practice" class="max-w-full max-h-full object-contain" />
+						</div>
+						<div class="sm:w-3/5 p-6 flex flex-col justify-between">
+							<div>
+								<h3 class="text-xl font-bold text-text-300 mb-3">Speaking Practice</h3>
+								<p class="text-base text-text-200 leading-relaxed mb-3">
+									AI-generated sentences for pronunciation practice with real-time feedback.
+								</p>
+								<p class="text-base text-text-200 leading-relaxed mb-4">
+									Advanced pronunciation assessment to correct your mistakes instantly.
+								</p>
+							</div>
+							<a
+								href="/speak"
+								class="inline-block px-6 py-3 text-base font-semibold bg-tile-600 border-2 border-tile-600 text-text-300 hover:bg-tile-700 transition-colors duration-300 shadow-md w-fit"
+							>
+								Start Speaking
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Sentence Practice -->
+				<div class="bg-tile-500 border-2 border-tile-600 shadow-lg overflow-hidden">
+					<div class="flex flex-col sm:flex-row">
+						<div class="sm:w-2/5 h-48 sm:h-auto bg-tile-300 border-r-0 sm:border-r-2 border-b-2 sm:border-b-0 border-tile-600 flex items-center justify-center p-4">
+							<img src="/images/sentences.png" alt="Sentence Practice" class="max-w-full max-h-full object-contain" />
+						</div>
+						<div class="sm:w-3/5 p-6 flex flex-col justify-between">
+							<div>
+								<h3 class="text-xl font-bold text-text-300 mb-3">Sentence Practice</h3>
+								<p class="text-base text-text-200 leading-relaxed mb-3">
+									Master writing and reading with unlimited AI-generated sentences.
+								</p>
+								<p class="text-base text-text-200 leading-relaxed mb-4">
+									Practice verb conjugation, sentence structure, and possessive pronouns.
+								</p>
+							</div>
+							<a
+								href="/sentences"
+								class="inline-block px-6 py-3 text-base font-semibold bg-tile-600 border-2 border-tile-600 text-text-300 hover:bg-tile-700 transition-colors duration-300 shadow-md w-fit"
+							>
+								Practice Sentences
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Verb Conjugation -->
+				<div class="bg-tile-500 border-2 border-tile-600 shadow-lg overflow-hidden">
+					<div class="flex flex-col sm:flex-row">
+						<div class="sm:w-2/5 h-48 sm:h-auto bg-tile-300 border-r-0 sm:border-r-2 border-b-2 sm:border-b-0 border-tile-600 flex items-center justify-center p-4">
+							<img src="/images/verbs.png" alt="Verb Conjugation" class="max-w-full max-h-full object-contain" />
+						</div>
+						<div class="sm:w-3/5 p-6 flex flex-col justify-between">
+							<div>
+								<h3 class="text-xl font-bold text-text-300 mb-3">Verb Conjugation</h3>
+								<p class="text-base text-text-200 leading-relaxed mb-4">
+									Master Egyptian Arabic verb conjugations with real-time spell checking and instant feedback.
+								</p>
+							</div>
+							<a
+								href="/grammar"
+								class="inline-block px-6 py-3 text-base font-semibold bg-tile-600 border-2 border-tile-600 text-text-300 hover:bg-tile-700 transition-colors duration-300 shadow-md w-fit"
+							>
+								Practice Verbs
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Writing Practice -->
+				<div class="bg-tile-500 border-2 border-tile-600 shadow-lg overflow-hidden">
+					<div class="flex flex-col sm:flex-row">
+						<div class="sm:w-2/5 h-48 sm:h-auto bg-tile-300 border-r-0 sm:border-r-2 border-b-2 sm:border-b-0 border-tile-600 flex items-center justify-center p-4">
+							<img src="/images/writing.png" alt="Writing Practice" class="max-w-full max-h-full object-contain" />
+						</div>
+						<div class="sm:w-3/5 p-6 flex flex-col justify-between">
+							<div>
+								<h3 class="text-xl font-bold text-text-300 mb-3">Writing Practice</h3>
+								<p class="text-base text-text-200 leading-relaxed mb-3">
+									Practice writing skills with over 6,000 words using our custom virtual keyboard.
+								</p>
+								<p class="text-base text-text-200 leading-relaxed mb-4">
+									Save words to your personal wordbank or export to Anki decks.
+								</p>
+							</div>
+							<a
+								href="/write"
+								class="inline-block px-6 py-3 text-base font-semibold bg-tile-600 border-2 border-tile-600 text-text-300 hover:bg-tile-700 transition-colors duration-300 shadow-md w-fit"
+							>
+								Start Writing
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Vocabulary -->
+				<div class="bg-tile-500 border-2 border-tile-600 shadow-lg overflow-hidden">
+					<div class="flex flex-col sm:flex-row">
+						<div class="sm:w-2/5 h-48 sm:h-auto bg-tile-300 border-r-0 sm:border-r-2 border-b-2 sm:border-b-0 border-tile-600 flex items-center justify-center p-4">
+							<img src="/images/vocab.png" alt="Vocabulary Practice" class="max-w-full max-h-full object-contain" />
+						</div>
+						<div class="sm:w-3/5 p-6 flex flex-col justify-between">
+							<div>
+								<h3 class="text-xl font-bold text-text-300 mb-3">Vocabulary Quizzes</h3>
+								<p class="text-base text-text-200 leading-relaxed mb-4">
+									Learn over 6,000 words through engaging multiple choice quizzes and interactive exercises.
+								</p>
+							</div>
+							<a
+								href="/vocab"
+								class="inline-block px-6 py-3 text-base font-semibold bg-tile-600 border-2 border-tile-600 text-text-300 hover:bg-tile-700 transition-colors duration-300 shadow-md w-fit"
+							>
+								Practice Vocabulary
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Alphabet -->
+				<div class="bg-tile-500 border-2 border-tile-600 shadow-lg overflow-hidden">
+					<div class="flex flex-col sm:flex-row">
+						<div class="sm:w-2/5 h-48 sm:h-auto bg-tile-300 border-r-0 sm:border-r-2 border-b-2 sm:border-b-0 border-tile-600 flex items-center justify-center p-4">
+							<img src="/images/alphabet.png" alt="Alphabet Practice" class="max-w-full max-h-full object-contain" />
+						</div>
+						<div class="sm:w-3/5 p-6 flex flex-col justify-between">
+							<div>
+								<h3 class="text-xl font-bold text-text-300 mb-3">Alphabet Mastery</h3>
+								<p class="text-base text-text-200 leading-relaxed mb-4">
+									Master Arabic script with typing and drawing practice, accompanied by native pronunciation audio.
+								</p>
+							</div>
+							<a
+								href="/alphabet"
+								class="inline-block px-6 py-3 text-base font-semibold bg-tile-600 border-2 border-tile-600 text-text-300 hover:bg-tile-700 transition-colors duration-300 shadow-md w-fit"
+							>
+								Learn Alphabet
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Handwriting -->
+				<div class="bg-tile-500 border-2 border-tile-600 shadow-lg overflow-hidden">
+					<div class="flex flex-col sm:flex-row">
+						<div class="sm:w-2/5 h-48 sm:h-auto bg-tile-300 border-r-0 sm:border-r-2 border-b-2 sm:border-b-0 border-tile-600 flex items-center justify-center p-4">
+							<img src="/images/handwriting.png" alt="Handwriting Practice" class="max-w-full max-h-full object-contain" />
+						</div>
+						<div class="sm:w-3/5 p-6 flex flex-col justify-between">
+							<div>
+								<h3 class="text-xl font-bold text-text-300 mb-3">Handwriting Practice</h3>
+								<p class="text-base text-text-200 leading-relaxed mb-4">
+									Develop beautiful Arabic handwriting skills with practice exercises across 6,000+ words.
+								</p>
+							</div>
+							<a
+								href="/write"
+								class="inline-block px-6 py-3 text-base font-semibold bg-tile-600 border-2 border-tile-600 text-text-300 hover:bg-tile-700 transition-colors duration-300 shadow-md w-fit"
+							>
+								Practice Handwriting
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-	</article>
-  <article class="space-between flex flex-col gap-2 border-2 border-tile-600 bg-tile-400 p-4">
-		<p class="text-text-300">Fantastic tool, really.</p>
-		<div class="mt-auto flex flex-row items-center gap-2">
-			<img src="/images/reddit.png" alt="reddit logo" class="h-10 w-10 rounded-full" />
-			<p class="text-[14px] text-text-200">Kind Redditor</p>
-		</div>
-	</article>
+	</section>
 </section>
-
-<div class="mt-12 grid grid-cols-1 grid-rows-auto sm:grid-cols-2 sm:grid-rows-3 gap-12 sm:gap-20 px-6 sm:px-8">
-	<div>
-		<img src="/images/banner.png" alt="banner" class="h-[300px] w-full object-contain" />
-		<h3 class="mt-4 text-2xl font-semibold text-text-300">Learn the Arabic you need</h3>
-		<p class="mt-1 text-lg text-text-300">
-			Dive into practical, real-world Egyptian Arabic conversations. You will learn the vocabulary,
-			grammar, and natural flow of everyday arabic interactions.
-		</p>
-		<p class="mt-2 text-lg text-text-300">
-			All conversations are recorded by native speakers and come with a full transcript and
-			translation. As well as AI generated definitions for each word.
-		</p>
-	</div>
-  <div>
-		<img src="/images/speak.png" alt="banner" class="h-[300px] w-full object-contain" />
-		<h3 class="mt-4 text-2xl font-semibold text-text-300">Practice Speaking</h3>
-		<p class="mt-1 text-lg text-text-300">
-			Improve your speaking skills with AI generated sentences, and practice your pronunciation.
-		</p>
-    <p class="mt-2 text-lg text-text-300">
-      Get realtime feedback on your pronunciation and correct your mistakes with our AI pronunciation assessment.
-    </p>
-	</div>
-	<div>
-		<img src="/images/sentences.png" alt="sentences" class="h-[300px] w-full object-contain" />
-		<h3 class="mt-4 text-2xl font-semibold text-text-300">Sentence Practice</h3>
-		<p class="mt-1 text-lg text-text-300">
-			Practice your writing and reading skills with our sentence practice tool.
-		</p>
-		<p class="mt-2 text-lg text-text-300">
-			Improve verb conjugation, sentence structure, and possessive pronouns with unlimited AI generated sentences and get instant feedback on your writing.
-		</p>
-	</div>
-  <div>
-		<img src="/images/verbs.png" alt="verbs" class="h-[300px] w-full object-contain" />
-		<h3 class="mt-4 text-2xl font-semibold text-text-300">Verb Conjugation</h3>
-		<p class="mt-1 text-lg text-text-300">
-			Practice your verb conjugations in egyptian arabic with realtime spellchecking.
-		</p>
-	</div>
-	<div>
-		<img src="/images/writing.png" class="h-[300px] w-full object-contain" alt="writing" />
-		<h3 class="mt-4 text-2xl font-semibold text-text-300">Writing Practice</h3>
-		<p class="mt-1 text-lg text-text-300">
-			Practice your writing skills with over 6,000 practice words.
-		</p>
-		<p class="mt-2 text-lg text-text-300">Virtual keyboard custom built for english speakers</p>
-		<p class="mt-2 text-lg text-text-300">
-			Save words to personal wordbank to practice later or export to an Anki deck
-		</p>
-	</div>
-	<div>
-		<img src="/images/vocab.png" class="h-[300px] w-full object-contain" alt="writing" />
-		<h3 class="mt-4 text-2xl font-semibold text-text-300">Vocabulary Practice</h3>
-		<p class="mt-1 text-lg text-text-300">
-			Practice over 6,000 words with fun multiple choice quizzes
-		</p>
-	</div>
-	<div>
-		<img src="/images/alphabet.png" class="h-[300px] w-full object-contain" alt="writing" />
-		<h3 class="mt-4 text-2xl font-semibold text-text-300">Alphabet Practice</h3>
-		<p class="mt-1 text-lg text-text-300">
-			Master the Arabic script, and practice typing and drawing characters. Each letter is
-			accompanied by native audio for perfect pronunciation.
-		</p>
-	</div>
-	<div>
-		<img src="/images/handwriting.png" class="h-[300px] w-full object-contain" alt="writing" />
-		<h3 class="mt-4 text-2xl font-semibold text-text-300">Handwriting</h3>
-		<p class="mt-1 text-lg text-text-300">Practice your handwriting on over 6,000 words. Hopefully its better than mine.</p>
-	</div>
-</div>

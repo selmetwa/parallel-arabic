@@ -55,11 +55,7 @@
 
 	let option = $state('beginner');
 
-  let mode = $state((() => {
-    if (typeof window !== 'undefined') {
-      const params = new URLSearchParams(window.location.search);
-    }
-  })());
+  // Remove mode state since it's not needed for speaking
 
 	let sentencesViewed = $state(data.sentencesViewed);
 
@@ -80,7 +76,7 @@
 		const newSentences = filterValidSentences(_sentences.sentences || []);
 		const updatedSentences = [...sentences, ...newSentences];
 		sentences = updatedSentences;
-		sentencesInStore.set(updatedSentences);
+		sentencesInStore.set(updatedSentences as any);
     localStorage.setItem('speak_sentence', JSON.stringify(updatedSentences));
 		isLoading = false;
 	}
@@ -116,6 +112,8 @@
 		option = event.target.value;
 	}
 
+	// Remove setMode function since it's not needed
+
 	function generateSentences(event: any) {
 		event.preventDefault();
 		const copy = [...sentences];
@@ -139,82 +137,102 @@
 </script>
 
 {#if !data.session}
-	<div class="mx-4 mb-6 mt-12 border border-tile-600 bg-tile-300 py-4 text-center sm:mx-36">
-		<h1 class="text-2xl font-bold text-text-300">
-			You must have an account to access this content.
-		</h1>
-		<div class="mx-auto mt-4 w-fit">
-			<Button type="button" onClick={() => goto('/signup')}>Create Account</Button>
+	<div class="px-3 mt-6 sm:px-8 max-w-5xl mx-auto">
+		<div class="border border-tile-600 bg-tile-300 py-4 px-3 text-center">
+			<h1 class="text-2xl font-bold text-text-300">
+				You must have an account to access this content.
+			</h1>
+			<div class="mx-auto mt-4 w-fit">
+				<Button type="button" onClick={() => goto('/signup')}>Create Account</Button>
+			</div>
 		</div>
 	</div>
 {/if}
 
 {#if hasReachedLimit && data.session}
-	<div class="mx-4 mb-6 mt-12 border border-tile-600 bg-tile-300 py-4 text-center sm:mx-36">
-		<h1 class="text-2xl font-bold text-text-300">You have reached your limit of 20 sentences.</h1>
-		<p class="mt-2 text-xl text-text-200">To continue practicing, please subscribe.</p>
-		<form method="POST" action="/?/subscribe" class="mx-auto mt-4 w-fit">
-			<!-- Modify this value using your own Stripe price_id -->
-			<input type="hidden" name="price_id" value={PUBLIC_PRICE_ID} />
+	<div class="px-3 mt-6 sm:px-8 max-w-5xl mx-auto">
+		<div class="border border-tile-600 bg-tile-300 py-4 px-3 text-center">
+			<h1 class="text-2xl font-bold text-text-300">You have reached your limit of 20 sentences.</h1>
+			<p class="mt-2 text-xl text-text-200">To continue practicing, please subscribe.</p>
+			<form method="POST" action="/?/subscribe" class="mx-auto mt-4 w-fit">
+				<!-- Modify this value using your own Stripe price_id -->
+				<input type="hidden" name="price_id" value={PUBLIC_PRICE_ID} />
 
-			<Button type="submit">Subscribe</Button>
-		</form>
+				<Button type="submit">Subscribe</Button>
+			</form>
+		</div>
 	</div>
 {/if}
 
 {#if !isLoading && sentences.length === 0 && !hasReachedLimit && data.session}
-	<section class="mx-auto mt-12 w-full border border-tile-500 bg-tile-300 sm:w-1/2">
-		<form class="flex flex-col gap-3 p-5" onsubmit={generateSentences}>
-			<p class="text-3xl font-bold text-text-300">
-				Practice your speaking with generated sentences.
-			</p>
-			<p class="text-md text-text-300">Select difficulty.</p>
-			<RadioButton
-				className="!text-xl"
-				wrapperClass="!p-2"
-				onClick={setOption}
-				selectableFor="beginner"
-				isSelected={option === 'beginner'}
-				value="beginner"
-				text="Beginner"
-			>
-			</RadioButton>
-			<RadioButton
-				className="!text-xl"
-				wrapperClass="!p-2"
-				onClick={setOption}
-				selectableFor="intermediate"
-				isSelected={option === 'intermediate'}
-				text="Intermediate"
-				value="intermediate"></RadioButton
-			>
-      <RadioButton
-      className="!text-xl"
-      wrapperClass="!p-2"
-      onClick={setOption}
-      selectableFor="advanced"
-      isSelected={option === 'advanced'}
-      text="Advanced"
-      value="advanced"></RadioButton
-    >
-			<Button type="submit">Generate Sentences</Button>
-		</form>
+	<section class="px-3 mt-6 sm:px-8 max-w-3xl mx-auto">
+		<div class="border-2 border-tile-600 bg-tile-400 shadow-lg">
+			<form class="flex flex-col gap-4 p-6" onsubmit={generateSentences}>
+				<div class="text-left mb-4">
+					<h1 class="text-xl sm:text-2xl text-text-300 font-bold mb-2 tracking-tight">
+						Practice your speaking with generated sentences.
+					</h1>
+					<p class="text-text-200 text-lg leading-snug">Select your preferred difficulty.</p>
+				</div>
+				
+				<div class="flex flex-col gap-3">
+					<h2 class="text-lg font-bold text-text-300">Select difficulty</h2>
+					<div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+						<RadioButton
+							className="!text-base !font-medium"
+							wrapperClass="!p-3 border-2 border-tile-600 hover:border-tile-500 transition-colors duration-300"
+							onClick={setOption}
+							selectableFor="beginner"
+							isSelected={option === 'beginner'}
+							value="beginner"
+							text="Beginner"
+						/>
+						<RadioButton
+							className="!text-base !font-medium"
+							wrapperClass="!p-3 border-2 border-tile-600 hover:border-tile-500 transition-colors duration-300"
+							onClick={setOption}
+							selectableFor="intermediate"
+							isSelected={option === 'intermediate'}
+							text="Intermediate"
+							value="intermediate"
+						/>
+						<RadioButton
+							className="!text-base !font-medium"
+							wrapperClass="!p-3 border-2 border-tile-600 hover:border-tile-500 transition-colors duration-300"
+							onClick={setOption}
+							selectableFor="advanced"
+							isSelected={option === 'advanced'}
+							text="Advanced"
+							value="advanced"
+						/>
+					</div>
+				</div>
+				
+				<div class="pt-2">
+					<Button type="submit">Generate Sentences</Button>
+				</div>
+			</form>
+		</div>
 	</section>
 {/if}
 
 {#if isLoading}
-	<div
-		class="mx-auto my-12 flex w-fit flex-col items-center gap-3 border border-tile-600 bg-tile-400 p-4 text-text-200 sm:flex-row"
-	>
-		<AlphabetCycle />
-		<p class="text-2xl text-text-300">
-			Generating your sentences, hang tight. <br />
-			this usually takes a few seconds.
-		</p>
+	<div class="px-3 mt-6 sm:px-8 max-w-3xl mx-auto">
+		<div class="flex flex-col items-center gap-4 border-2 border-tile-600 bg-tile-400 p-6 text-text-200 shadow-lg">
+			<AlphabetCycle />
+			<div class="text-center">
+				<p class="text-2xl text-text-300 font-bold mb-1">
+					Generating your sentences
+				</p>
+				<p class="text-text-200">
+					This usually takes a few seconds.
+				</p>
+			</div>
+		</div>
 	</div>
 {:else if sentences.length > 0 && index < sentences.length && !hasReachedLimit && data.session}
-	<header class="m-auto border-b border-tile-600 bg-tile-400 px-4 py-8 pb-4 text-center sm:px-16">
-		<div class="flex w-full items-center justify-between">
+	<header class="border-b border-tile-600 bg-tile-400 px-3 py-4 text-center sm:px-8">
+		<div class="flex w-full items-center justify-between max-w-5xl mx-auto">
 			<div class="w-max">
 				{#if index > 0}
 					<Button onClick={previous} type="button">Previous</Button>
@@ -223,7 +241,7 @@
 			<div>
 				<h1 class="text-lg font-bold text-text-300">{index + 1} / {sentences.length}</h1>
 			</div>
-			<div class="w-max">
+			<div class="w-max flex gap-2">
 				{#if index < sentences.length - 1}
 					<Button onClick={next} type="button">Next</Button>
 				{/if}

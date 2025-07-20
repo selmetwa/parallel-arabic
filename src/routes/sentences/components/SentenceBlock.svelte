@@ -202,14 +202,20 @@
 ></DefinitionModal>
 {#if sentence}
 	{#if isCorrect}
-		<div class="mt-5 bg-green-100 py-2 text-center font-semibold">
-			<p class="text-xl text-text-300">{sentence.arabic} is Correct</p>
+		<div class="mb-4 bg-green-100 py-3 px-4 text-center border-2 border-green-100">
+			<p class="text-lg font-bold text-text-300">{sentence.arabic} is Correct</p>
 		</div>
 	{/if}
+	
 	<InfoDisclaimer></InfoDisclaimer>
-	<div class="mt-10 grid grid-cols-2 flex-row gap-2 sm:w-full sm:grid-cols-5">
-		<Button onClick={() => (showHint = !showHint)} type="button">Show Hint</Button>
-		<Button onClick={() => (showAnswer = !showAnswer)} type="button">Show Answer</Button>
+	
+	<div class="grid grid-cols-2 sm:grid-cols-5 gap-2 mb-6">
+		<Button onClick={() => (showHint = !showHint)} type="button">
+			{showHint ? 'Hide' : 'Show'} Hint
+		</Button>
+		<Button onClick={() => (showAnswer = !showAnswer)} type="button">
+			{showAnswer ? 'Hide' : 'Show'} Answer
+		</Button>
 		<AudioButton text={sentence.arabic}>Listen</AudioButton>
 		<SaveButton
 			objectToSave={{
@@ -218,70 +224,83 @@
 				transliterated: sentence.transliteration
 			}}
 			type="Sentence"
-		></SaveButton>
+		/>
 		<Button onClick={resetSentences} type="button">Reset</Button>
 	</div>
-	<div class="mx-auto mt-6 w-fit text-center">
-		<div class="flex flex-col items-center justify-center gap-2">
-			<h1 class="flex w-fit flex-row flex-wrap text-[40px] font-bold text-text-300">
+	
+	<div class="text-center mb-6">
+		<div class="flex flex-col items-center justify-center gap-3">
+			<h1 class="flex w-fit flex-row flex-wrap text-3xl sm:text-4xl font-bold text-text-300">
 				{#each sentence.english.split(' ') as word}
 					<button
 						onclick={() => askChatGTP(word)}
-						class="p-1 text-[40px] duration-300 hover:bg-tile-500">{word}</button
+						class="p-1 text-3xl sm:text-4xl duration-300 hover:bg-tile-500 border-2 border-transparent hover:border-tile-600"
+						>{word}</button
 					>
 				{/each}
 			</h1>
 			{#if showHint}
-				<p class="w-fit text-[25px] text-text-300">({sentence.transliteration})</p>
+				<p class="text-xl text-text-200">({sentence.transliteration})</p>
 			{/if}
 			{#if showAnswer}
-				<p class="w-fit text-[35px] text-text-300">({sentence.arabic})</p>
+				<p class="text-2xl text-text-300">({sentence.arabic})</p>
 			{/if}
 		</div>
-		{#if isSafari}
-			<span class="text-[35px]">
-				{@html attempt
-					.map(
-						({ letter, correct }) =>
-							`<span class="${cn('text-[35px]', {
-								'text-green-500': correct,
-								'text-red-500': !correct
-							})}">&zwj;&zwj;${letter}&zwj;&zwj;</span>`
-					)
-					.join('')}
-			</span>
-		{:else}
-			<span class="text-[35px]">
-				{@html attempt
-					.map(
-						({ letter, correct }) =>
-							`<span class="${cn('text-[35px]', {
-								'text-green-500': correct,
-								'text-red-500': !correct
-							})}">${letter}</span>`
-					)
-					.join('')}
-			</span>
-		{/if}
+		
+		<div class="mt-4">
+			{#if isSafari}
+				<span class="text-2xl sm:text-3xl">
+					{@html attempt
+						.map(
+							({ letter, correct }) =>
+								`<span class="${cn('text-2xl sm:text-3xl', {
+									'text-green-500': correct,
+									'text-red-500': !correct
+								})}">&zwj;&zwj;${letter}&zwj;&zwj;</span>`
+						)
+						.join('')}
+				</span>
+			{:else}
+				<span class="text-2xl sm:text-3xl">
+					{@html attempt
+						.map(
+							({ letter, correct }) =>
+								`<span class="${cn('text-2xl sm:text-3xl', {
+									'text-green-500': correct,
+									'text-red-500': !correct
+								})}">${letter}</span>`
+						)
+						.join('')}
+				</span>
+			{/if}
+		</div>
 	</div>
 
 	<Modal isOpen={isInfoModalOpen} handleCloseModal={closeInfoModal} height="70%" width="80%">
 		<KeyboardDocumentation></KeyboardDocumentation>
 	</Modal>
-	<div class="mt-4 block">
-		<button onclick={toggleKeyboard}>
-			{keyboard === 'virtual' ? 'Use other keyboard' : 'Use builtin keyboard'}
-		</button>
+	
+	<div class="mb-6 p-4">
+		<div class="mb-3 flex items-center justify-between">
+			<button onclick={toggleKeyboard} class="text-sm text-text-300 underline">
+				{keyboard === 'virtual' ? 'Use other keyboard' : 'Use builtin keyboard'}
+			</button>
+			{#if keyboard === 'virtual'}
+				<button class="text-sm text-text-300 underline" onclick={openInfoModal}>
+					How does this keyboard work?
+				</button>
+			{/if}
+		</div>
+		
 		<div class={cn('block', { hidden: keyboard !== 'virtual' })}>
 			<arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
-			<button class="mt-3 text-text-300 underline" onclick={openInfoModal}
-				>How does this keyboard work?</button
-			>
 		</div>
+		
 		<textarea
 			oninput={onRegularKeyboard}
 			value={keyboardValue}
-			class={cn('block min-h-32 w-full bg-tile-400 text-text-300', {
+			placeholder="Type your answer here..."
+			class={cn('block min-h-32 w-full rounded border bg-tile-300 p-3 text-text-300', {
 				hidden: keyboard === 'virtual'
 			})}
 		></textarea>

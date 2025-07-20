@@ -24,7 +24,7 @@
 	let mode = $state(Mode.SingleText);
 	const sentences = data.sentences;
 
-	let timer = null;
+	let timer: ReturnType<typeof setTimeout> | null = null;
 	let index = $state(0);
 	let isLoading = $state(false);
 	let isModalOpen = $state(false);
@@ -86,7 +86,9 @@
 	}
 
 	function setActiveWord(word: KeyWord) {
-		clearTimeout(timer);
+		if (timer) {
+			clearTimeout(timer);
+		}
 		activeWordObj = word;
 
 		if (mode !== Mode.SentanceView) {
@@ -162,40 +164,79 @@
 	</div>
 {:else}
 	<WordModal {activeWordObj} {isModalOpen} {closeModal}></WordModal>
-	<header class="border-b border-tile-600 px-4 pb-8 text-center sm:px-8">
-		<h1 class="py-8 text-4xl font-semibold text-text-200">
-			{data.title.arabic} / {data.title.english}
-		</h1>
-		<div class="flex flex-col items-start justify-between sm:flex-row sm:items-center">
-			<div class="w-full">
-				{#if data.audio}
-					{#if mode === Mode.SentanceView}
-						<Audio src={sentences[index].arabic.audio}></Audio>
-					{:else}
-						<Audio src={data.audio}></Audio>
-					{/if}
-        {:else}
-          <p class="text-lg text-text-300">No audio available</p>
-				{/if}
+	<header class="border-b border-tile-600 bg-tile-400">
+		<div class="max-w-5xl mx-auto px-3 sm:px-8">
+			<!-- Title Section -->
+			<div class="py-6 text-center">
+				<h1 class="text-3xl sm:text-4xl font-bold text-text-300 tracking-tight">
+					<span class="block text-xl sm:text-2xl text-text-200 mb-1">
+						{data.title.arabic}
+					</span>
+					<span class="block">
+						{data.title.english}
+					</span>
+				</h1>
 			</div>
-			<fieldset class="flex w-full place-content-end">
-				<legend class="sr-only">Select Mode</legend>
-				<ul class="flex flex-row gap-1">
-					{#each modeOptions as option}
-						<li>
-							<RadioButton
-								wrapperClass="!p-1 h-min"
-								className="text-xs !p-1 h-min font-semibold"
-								selectableFor={option.value}
-								value={option.value}
-								text={option.text}
-								isSelected={option.value === mode}
-								onClick={updateMode}
-							/>
-						</li>
-					{/each}
-				</ul>
-			</fieldset>
+			
+			<!-- Controls Section -->
+			<div class="pb-6 grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+				<!-- Audio Controls -->
+				<div class="bg-tile-300 border border-tile-500 px-4 py-4 shadow-lg">
+					<div class="flex justify-between items-center mb-3">
+						<h3 class="text-sm font-semibold text-text-200 tracking-wide">Audio</h3>
+						{#if mode === Mode.SentanceView}
+							<div class="flex items-center gap-3">
+								{#if index > 0}
+									<Button onClick={previous} type="button">Previous</Button>
+								{/if}
+                <div class="flex flex-row items-center gap-3">
+                  <span class="text-text-300 font-semibold">
+                    {index + 1}
+                  </span>
+                  <span>/</span>
+                  <span class="text-text-300 font-semibold">
+                    {sentences.length}
+                  </span>
+                </div>
+								{#if index < sentences.length - 1}
+									<Button onClick={next} type="button">Next</Button>
+								{/if}
+							</div>
+						{/if}
+					</div>
+					{#if data.audio}
+						{#if mode === Mode.SentanceView}
+							<Audio src={sentences[index].arabic.audio}></Audio>
+						{:else}
+							<Audio src={data.audio}></Audio>
+						{/if}
+					{:else}
+						<div class="flex items-center justify-center py-4">
+							<p class="text-text-300 text-sm">No audio available</p>
+						</div>
+					{/if}
+				</div>
+				
+				<!-- Mode Selection -->
+				<div class="bg-tile-300 border border-tile-500 px-4 py-4 shadow-lg">
+					<fieldset>
+						<legend class="text-sm font-semibold text-text-200 mb-3 tracking-wide">Reading Mode</legend>
+						<div class="space-y-2">
+							{#each modeOptions as option}
+								<RadioButton
+									wrapperClass="!p-2 w-full"
+									className="text-sm !p-2 font-medium w-full text-left"
+									selectableFor={option.value}
+									value={option.value}
+									text={option.text}
+									isSelected={option.value === mode}
+									onClick={updateMode}
+								/>
+							{/each}
+						</div>
+					</fieldset>
+				</div>
+			</div>
 		</div>
 	</header>
 
@@ -306,19 +347,21 @@
 				{mode}
 			/>
 		</section>
-		<div class="flex flex-col items-center gap-2">
-			<div class="mt-4 flex w-fit flex-row items-center gap-2">
-				{#if index > 0}
-					<Button onClick={previous} type="button">Previous</Button>
-				{/if}
-				{#if index < sentences.length - 1}
-					<Button onClick={next} type="button">Next</Button>
-				{/if}
+		{#if mode !== Mode.SentanceView}
+			<div class="flex flex-col items-center gap-2 py-6">
+				<div class="flex w-fit flex-row items-center gap-3">
+					{#if index > 0}
+						<Button onClick={previous} type="button">Previous</Button>
+					{/if}
+					<span class="text-text-300 font-semibold">
+						{index + 1} / {sentences.length}
+					</span>
+					{#if index < sentences.length - 1}
+						<Button onClick={next} type="button">Next</Button>
+					{/if}
+				</div>
 			</div>
-			<p class="text-md text-text-300">
-				{index + 1} / {sentences.length}
-			</p>
-		</div>
+		{/if}
 	{:else}
 		{#each sentences as sentence}
 			<section
