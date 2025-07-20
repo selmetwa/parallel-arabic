@@ -41,7 +41,7 @@
 	};
 
 	let attemptTemp: Attempt[] = $state([]);
-	let attempt = $state([]);
+	let attempt: Attempt[] = $state([]);
 
 	$effect(() => {
 		attempt = attemptTemp;
@@ -73,7 +73,7 @@
 		const output: Array<ConjugatedVerb> = [];
 
 		conjugation_cases.forEach((c) => {
-			const conjugation = conjugations[c.value][c.tense];
+			const conjugation = (conjugations as any)[c.value][c.tense];
 			const verbWeWant = verb.egyptianArabic;
 
 			if (c.tense === 'past') {
@@ -207,8 +207,8 @@
 		}
 	});
 
-  function onRegularKeyboard(e) {
-    const value = e.target.value;
+  function onRegularKeyboard(e: Event) {
+    const value = (e.target as HTMLTextAreaElement).value;
     compareMyInput(value);
     keyboardValue = value;
   }
@@ -219,61 +219,61 @@
 </script>
 
 {#if isCorrect}
-	<div
-		class="mb-4 flex w-full flex-row items-center justify-center gap-2 bg-green-100 py-2 transition-all duration-300"
-	>
+	<div class="mb-4 flex w-full flex-row items-center justify-center gap-2 py-2 transition-all duration-300" style="background-color: var(--green1);">
 		<span class="text-lg font-semibold text-text-300">Correct</span>
 	</div>
 {/if}
+
 {#if conjugatedVerbArray.length > 0}
-	<div class="mx-auto w-fit border-2 border-tile-500 bg-tile-400 px-12 py-6 text-center mt-4">
-		<div class="flex flex-row gap-6  flex-wrap">
-			<div class="flex flex-col items-start">
-				<p class="whitespace-nowrap text-sm">Pronoun</p>
-				<p class="whitespace-nowrap text-2xl">{conjugatedVerbArray[conjugationIndex].possessive}</p>
+	<div class="border border-tile-500 bg-tile-400 px-3 py-4 text-center mb-6 shadow-lg">
+		<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+			<div class="flex flex-col items-center">
+				<p class="text-sm text-text-200 mb-1">Pronoun</p>
+				<p class="text-xl text-text-300 font-bold">{conjugatedVerbArray[conjugationIndex].possessive}</p>
 			</div>
-			<div class="flex flex-col items-start">
-				<p class="whitespace-nowrap text-sm">Tense</p>
-				<p class="whitespace-nowrap text-2xl">{conjugatedVerbArray[conjugationIndex].tense}</p>
+			<div class="flex flex-col items-center">
+				<p class="text-sm text-text-200 mb-1">Tense</p>
+				<p class="text-xl text-text-300 font-bold">{conjugatedVerbArray[conjugationIndex].tense}</p>
 			</div>
-			<div class="flex flex-col items-start">
-				<p class="whitespace-nowrap text-sm">Verb</p>
-				<p class="whitespace-nowrap text-2xl">
+			<div class="flex flex-col items-center">
+				<p class="text-sm text-text-200 mb-1">Verb</p>
+				<p class="text-xl text-text-300 font-bold">
 					{conjugatedVerbArray[conjugationIndex].englishWeWant}
 				</p>
 			</div>
 			{#if showHint}
-				<div class="flex flex-col items-start">
-					<p class="whitespace-nowrap text-sm">Verb Arabic</p>
-					<p class="whitespace-nowrap text-2xl">
+				<div class="flex flex-col items-center">
+					<p class="text-sm text-text-200 mb-1">Verb Arabic</p>
+					<p class="text-xl text-text-300">
 						{conjugatedVerbArray[conjugationIndex].verbWeWant.split(/[-–]/)[0]}
 					</p>
 				</div>
-				<div class="flex flex-col items-start">
-					<p class="whitespace-nowrap text-sm">Verb Transliterated</p>
-					<p class="whitespace-nowrap text-2xl">
+				<div class="flex flex-col items-center">
+					<p class="text-sm text-text-200 mb-1">Verb Transliterated</p>
+					<p class="text-xl text-text-300">
 						{conjugatedVerbArray[conjugationIndex].transliterationWeWant
 							.split(/[-–]/)[0]}
 					</p>
 				</div>
 			{/if}
-      {#if showAnswer}
-        <div class="flex flex-col items-start">
-          <p class="whitespace-nowrap text-sm">Conjugated Answer</p>
-          <p class="whitespace-nowrap text-xl">
-            {conjugatedVerbArray[conjugationIndex].conjugatedVerb}
-          </p>
-        </div>
-      {/if}
+			{#if showAnswer}
+				<div class="flex flex-col items-center">
+					<p class="text-sm text-text-200 mb-1">Conjugated Answer</p>
+					<p class="text-2xl text-text-300 font-bold">
+						{conjugatedVerbArray[conjugationIndex].conjugatedVerb}
+					</p>
+				</div>
+			{/if}
 		</div>
 	</div>
 {/if}
-<div class="mt-12 w-fit mx-auto">
+
+<div class="mb-6 text-center">
 	<span>
 		{@html attempt
 			.map(
 				({ letter, correct }) =>
-					`<span class="${cn('text-5xl', {
+					`<span class="${cn('text-4xl', {
 						'text-green-500': correct,
 						'text-red-500': !correct
 					})}">${letter}</span>`
@@ -281,19 +281,24 @@
 			.join('')}
 	</span>
 </div>
-<div class="mt-5">
-  <button onclick={toggleKeyboard}>
-    {keyboard === 'virtual' ? 'Use other keyboard' : 'Use builtin keyboard'}
-  </button>
-  <div class={cn('block', { 'hidden': keyboard !== 'virtual'})}>
-    <arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
-  </div>
-  <textarea 
-  value={keyboardValue}
-  oninput={onRegularKeyboard}
-  class={cn(
-    "block w-full min-h-32 text-text-300 bg-tile-400",
-    {'hidden': keyboard === 'virtual'}
-  )}
-></textarea>
+
+<div class="mb-6 px-3 py-4">
+	<div class="mb-3 flex items-center justify-between">
+		<button onclick={toggleKeyboard} class="text-sm text-text-300 underline">
+			{keyboard === 'virtual' ? 'Use other keyboard' : 'Use builtin keyboard'}
+		</button>
+	</div>
+	
+	<div class={cn('block', { hidden: keyboard !== 'virtual' })}>
+		<arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
+	</div>
+	
+	<textarea
+		value={keyboardValue}
+		oninput={onRegularKeyboard}
+		placeholder="Type your answer here..."
+		class={cn('block min-h-32 w-full border bg-tile-300 p-3 text-text-300', {
+			hidden: keyboard === 'virtual'
+		})}
+	></textarea>
 </div>

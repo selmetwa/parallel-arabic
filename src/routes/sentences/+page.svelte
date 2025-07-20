@@ -170,78 +170,97 @@
 {/if}
 
 {#if !isLoading && sentences.length === 0 && !hasReachedLimit && data.session}
-	<section class="mx-auto mt-12 w-full border border-tile-500 bg-tile-300 sm:w-1/2">
-		<form class="flex flex-col gap-3 p-5" onsubmit={generateSentences}>
-			<p class="text-3xl font-bold text-text-300">
-				Practice your egyptian arabic skills with generated sentences.
-			</p>
-			<p class="text-md text-text-300">Select difficulty.</p>
-			<RadioButton
-				className="!text-xl"
-				wrapperClass="!p-2"
-				onClick={setOption}
-				selectableFor="beginner"
-				isSelected={option === 'beginner'}
-				value="beginner"
-				text="Beginner"
-			>
-			</RadioButton>
-			<RadioButton
-				className="!text-xl"
-				wrapperClass="!p-2"
-				onClick={setOption}
-				selectableFor="intermediate"
-				isSelected={option === 'intermediate'}
-				text="Intermediate"
-				value="intermediate"></RadioButton
-			>
-      <RadioButton
-      className="!text-xl"
-      wrapperClass="!p-2"
-      onClick={setOption}
-      selectableFor="advanced"
-      isSelected={option === 'advanced'}
-      text="Advanced"
-      value="advanced"></RadioButton
-    >
-    <hr class="border border-tile-600 my-2">
-			<RadioButton
-				className="!text-xl"
-				wrapperClass="!p-2"
-				onClick={setMode}
-				selectableFor="write"
-				isSelected={mode === 'write'}
-				value="write"
-				text="Practice Writing"
-			>
-			</RadioButton>
-			<RadioButton
-				className="!text-xl"
-				wrapperClass="!p-2"
-				onClick={setMode}
-				selectableFor="quiz"
-				isSelected={mode === 'quiz'}
-				value="quiz"
-				text="Multiple Choice Quiz"
-			>
-			</RadioButton>
-			<Button type="submit">Generate Sentences</Button>
-		</form>
+	<section class="px-3 mt-6 sm:px-8 max-w-3xl mx-auto">
+		<div class="border-2 border-tile-600 bg-tile-400 shadow-lg">
+			<form class="flex flex-col gap-4 p-6" onsubmit={generateSentences}>
+				<div class="text-left mb-4">
+					<h1 class="text-xl sm:text-2xl text-text-300 font-bold mb-2 tracking-tight">
+						Practice your egyptian arabic skills with generated sentences.
+					</h1>
+					<p class="text-text-200 text-lg leading-snug">Select your preferred difficulty and practice mode.</p>
+				</div>
+				
+				<div class="flex flex-col gap-3">
+					<h2 class="text-lg font-bold text-text-300">Select difficulty</h2>
+					<div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+						<RadioButton
+							className="!text-base !font-medium"
+							wrapperClass="!p-3 border-2 border-tile-600 hover:border-tile-500 transition-colors duration-300"
+							onClick={setOption}
+							selectableFor="beginner"
+							isSelected={option === 'beginner'}
+							value="beginner"
+							text="Beginner"
+						/>
+						<RadioButton
+							className="!text-base !font-medium"
+							wrapperClass="!p-3 border-2 border-tile-600 hover:border-tile-500 transition-colors duration-300"
+							onClick={setOption}
+							selectableFor="intermediate"
+							isSelected={option === 'intermediate'}
+							text="Intermediate"
+							value="intermediate"
+						/>
+						<RadioButton
+							className="!text-base !font-medium"
+							wrapperClass="!p-3 border-2 border-tile-600 hover:border-tile-500 transition-colors duration-300"
+							onClick={setOption}
+							selectableFor="advanced"
+							isSelected={option === 'advanced'}
+							text="Advanced"
+							value="advanced"
+						/>
+					</div>
+				</div>
+				
+				<div class="border-t border-tile-600 pt-4">
+					<h2 class="text-lg font-bold text-text-300 mb-3">Select practice mode</h2>
+					<div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+						<RadioButton
+							className="!text-base !font-medium"
+							wrapperClass="!p-3 border-2 border-tile-600 hover:border-tile-500 transition-colors duration-300"
+							onClick={setMode}
+							selectableFor="write"
+							isSelected={mode === 'write'}
+							value="write"
+							text="Practice Writing"
+						/>
+						<RadioButton
+							className="!text-base !font-medium"
+							wrapperClass="!p-3 border-2 border-tile-600 hover:border-tile-500 transition-colors duration-300"
+							onClick={setMode}
+							selectableFor="quiz"
+							isSelected={mode === 'quiz'}
+							value="quiz"
+							text="Multiple Choice Quiz"
+						/>
+					</div>
+				</div>
+				
+				<div class="pt-2">
+					<Button type="submit">Generate Sentences</Button>
+				</div>
+			</form>
+		</div>
 	</section>
 {/if}
 
 {#if isLoading}
-	<div
-		class="mx-auto my-12 flex w-fit flex-col items-center gap-3 border border-tile-600 bg-tile-400 p-4 text-text-200 sm:flex-row"
-	>
-  <AlphabetCycle />
-		<p class="text-2xl text-text-300">
-			Generating your sentences, hang tight. <br />
-			this usually takes a few seconds.
-		</p>
+	<div class="px-3 mt-6 sm:px-8 max-w-3xl mx-auto">
+		<div class="flex flex-col items-center gap-4 border-2 border-tile-600 bg-tile-400 p-6 text-text-200 shadow-lg">
+			<AlphabetCycle />
+			<div class="text-center">
+				<p class="text-2xl text-text-300 font-bold mb-1">
+					Generating your sentences
+				</p>
+				<p class="text-text-200">
+					This usually takes a few seconds.
+				</p>
+			</div>
+		</div>
 	</div>
 {:else if sentences.length > 0 && index < sentences.length && !hasReachedLimit && data.session}
-	<header class="m-auto border-b border-tile-600 bg-tile-400 px-4 py-8 pb-4 text-center sm:px-16">
+	<header class="px-3 sm:px-8 max-w-6xl mx-auto border-b border-tile-600 bg-tile-400 py-4 shadow-lg">
 		<div class="flex w-full items-center justify-between">
 			<div class="w-max">
 				{#if index > 0}
@@ -251,24 +270,26 @@
 			<div>
 				<h1 class="text-lg font-bold text-text-300">{index + 1} / {sentences.length}</h1>
 			</div>
-			<div class="w-max">
+			<div class="w-max flex gap-2">
 				{#if index < sentences.length - 1}
 					<Button onClick={next} type="button">Next</Button>
 				{/if}
 				{#if isLastSentence && !isLoading}
-					<Button onClick={loadMoreSentences} type="button">Load More Sentences</Button>
+					<Button onClick={loadMoreSentences} type="button">Load More</Button>
 				{/if}
 			</div>
 		</div>
 	</header>
 
 	{#if mode === 'write'}
-		<section class="px-4 pb-4 sm:px-16">
+		<section class="px-3 sm:px-8 max-w-6xl mx-auto py-4">
 			<SentenceBlock {sentence} {resetSentences} />
 		</section>
 	{/if}
 
 	{#if mode === 'quiz'}
-		<SentenceQuiz {sentences} {index} {resetSentences} />
+		<section class="px-3 sm:px-8 max-w-6xl mx-auto">
+			<SentenceQuiz {sentences} {index} {resetSentences} />
+		</section>
 	{/if}
 {/if}

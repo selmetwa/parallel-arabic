@@ -167,35 +167,69 @@ function handleCloseModal() {
   isModalOpen = false;
 }
 </script>
-<PaywallModal isOpen={isModalOpen} {handleCloseModal}></PaywallModal>
-<h1 class="text-4xl text-text-300 font-semibold mt-4 px-8 pt-6">Anki Decks</h1>
-<p class=" pl-8 text-text-300 text-lg">Click on the links to download</p>
 
-{#if !data.isSubscribed}
-  <p class=" pl-8 text-text-300 text-lg">You are not currently subscribed and will not have access to all the vocabulary</p>
-{/if}
-<ul class="gap-4 list-disc list-inside sm:grid sm:grid-cols-2 px-8 mt-4">
-  {#each decks as deck}
-  {#if deck.isPaywalled && !data.isSubscribed}
-    <li>
-      <button 
-      onclick={openPaywallModal}
-      class="text-text-300 text-lg underline hover:text-text-500 transition-colors duration-300"
-      >
-       🔒 {deck.name} ({deck.count} Words)
-      </button>
-    </li>
-  {:else}
-  <li>
-    <a 
-      class="text-text-300 text-lg underline hover:text-text-500 transition-colors duration-300"
-      href={deck.path} 
-      download={deck.path}
-      >
-      {deck.name} ({deck.count} Words)
-    </a>
-  </li>
-  {/if}
+<section class="min-h-screen bg-tile-300">
+  <PaywallModal isOpen={isModalOpen} {handleCloseModal}></PaywallModal>
+  
+  <!-- Header Section -->
+  <header class="border-b-2 border-tile-600 bg-tile-400 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 py-12">
+      <div class="text-center">
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-300 mb-4">
+          Anki Decks
+        </h1>
+        <p class="text-lg sm:text-xl text-text-200 leading-relaxed mb-4">
+          Download custom Egyptian Arabic flashcard decks for Anki
+        </p>
+        {#if !data.isSubscribed}
+          <div class="bg-tile-500 border-2 border-tile-600 p-4 max-w-2xl mx-auto">
+            <p class="text-base text-text-200">
+              🔒 Subscribe to access all vocabulary decks and enhance your learning experience
+            </p>
+          </div>
+        {/if}
+      </div>
+    </div>
+  </header>
 
-  {/each}
-</ul>
+  <!-- Decks Grid Section -->
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        {#each decks as deck}
+          <div class="bg-tile-400 border-2 border-tile-600 p-4 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="font-bold text-text-300 text-base leading-tight">{deck.name}</h3>
+              {#if deck.isPaywalled && !data.isSubscribed}
+                <span class="text-xl">🔒</span>
+              {/if}
+            </div>
+            
+            <div class="mb-4">
+              <span class="inline-block bg-tile-500 border border-tile-600 px-3 py-1 text-sm font-medium text-text-200">
+                {deck.count} Words
+              </span>
+            </div>
+
+            {#if deck.isPaywalled && !data.isSubscribed}
+              <button 
+                onclick={openPaywallModal}
+                class="w-full px-4 py-2 text-sm font-semibold bg-tile-500 border-2 border-tile-600 text-text-300 hover:bg-tile-600 transition-colors duration-300 shadow-md"
+              >
+                Download Deck
+              </button>
+            {:else}
+              <a 
+                class="block w-full px-4 py-2 text-sm font-semibold bg-tile-600 border-2 border-tile-600 text-text-300 hover:bg-tile-700 transition-colors duration-300 shadow-md text-center"
+                href={deck.path} 
+                download={deck.path}
+              >
+                Download Deck
+              </a>
+            {/if}
+          </div>
+        {/each}
+      </div>
+    </div>
+  </section>
+</section>

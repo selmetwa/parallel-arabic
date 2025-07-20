@@ -61,44 +61,46 @@
 {#if showTable}
   <Table></Table>
 {/if}
-<header class="py-2">
-	<div class="flex flex-row justify-between px-4 sm:px-16">
-		<div class="w-fit">
+
+<header class="border-b border-tile-600 bg-tile-400 px-3 py-4 text-center mb-6">
+	<div class="flex w-full items-center justify-between">
+		<div class="w-max">
 			{#if conjugationIndex > 0}
-				<Button onClick={previous} className="w-fit" type="submit"
-					>Previous Tense</Button
-				>
+				<Button onClick={previous} className="w-fit" type="submit">Previous Tense</Button>
 			{/if}
 		</div>
-    {#if conjugationIndex < 31}
-      <div class="w-fit">
-        <Button onClick={next} className="w-fit" type="submit">Next Tense</Button>
-      </div>
-    {/if}
+		<div>
+			<h2 class="text-lg font-bold text-text-300">{conjugationIndex + 1} / 32 tenses</h2>
+		</div>
+		<div class="w-max">
+			{#if conjugationIndex < 31}
+				<Button onClick={next} className="w-fit" type="submit">Next Tense</Button>
+			{/if}
+		</div>
 	</div>
 </header>
 
-<menu class="flex flex-col lg:flex-row gap-2 my-6">
-  <Button onClick={() => showHint = !showHint}  type='button'>
-    {showHint ? 'Hide' : 'Show'} Hint
-  </Button>
-  <Button onClick={() => showTable = !showTable} type='button'>
-    {showTable ? 'Hide' : 'Show'} Conjugation Table
-  </Button>
-  <Button onClick={() => showAnswer = !showAnswer} type='button'>
-    {showAnswer ? 'Hide' : 'Show'} Answer
-  </Button>
-  <AudioButton text={verbToConjugate.egyptianArabic.trim().split(/[-–]/)[1].trim()}>
-    Listen to Pronunciation
-  </AudioButton>
-  <SaveButton
-    objectToSave={{
-      arabic: verbToConjugate.egyptianArabic,
-      english: verbToConjugate.english,
-      transliterated: verbToConjugate.egyptianArabicTransliteration
-    }}
-    ></SaveButton>
-</menu>
+<div class="grid grid-cols-3 sm:grid-cols-5 gap-2 mb-6">
+	<Button onClick={() => showHint = !showHint} type='button'>
+		{showHint ? 'Hide' : 'Show'} Hint
+	</Button>
+	<Button onClick={() => showTable = !showTable} type='button'>
+		{showTable ? 'Hide' : 'Show'} Table
+	</Button>
+	<Button onClick={() => showAnswer = !showAnswer} type='button'>
+		{showAnswer ? 'Hide' : 'Show'} Answer
+	</Button>
+	<AudioButton text={verbToConjugate.egyptianArabic.trim().split(/[-–]/)[1].trim()}>
+		Audio
+	</AudioButton>
+	<SaveButton
+		objectToSave={{
+			arabic: verbToConjugate.egyptianArabic,
+			english: verbToConjugate.english,
+			transliterated: verbToConjugate.egyptianArabicTransliteration
+		}}
+	></SaveButton>
+</div>
 
 <WordBlock {conjugationIndex} {verbToConjugate} {showHint} {showAnswer}></WordBlock>
 

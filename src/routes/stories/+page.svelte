@@ -39,7 +39,7 @@
 
       output.push({
         id: story.id,
-        title: `${a.title?.arabic || ''} / ${a.title?.english || ''}`,
+        title: `${a.title?.english || ''} / ${a.title?.arabic || ''}`,
         description: story.description,
         createdAt: story.created_at,
         difficulty: story.difficulty,
@@ -61,39 +61,48 @@ function handleCloseModal() {
 
 <PaywallModal isOpen={isModalOpen} {handleCloseModal}></PaywallModal>
 
-<section class="px-4 sm:mt-8 sm:px-16 mt-4 pb-12 sm:pb-0">
-<h1 class="text-4xl font-bold text-text-300">Read</h1>
-<p class="text-text-200 text-lg">Improve your Egyptian Arabic reading and listening comprehension skills with these conversations written by professional arabic teachers</p>
-<CreateStoryModal></CreateStoryModal>
-<ul class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+<section class="px-3 mt-6 sm:px-8 max-w-5xl mx-auto">
+  <div class="text-left mb-6">
+    <h1 class="text-3xl sm:text-4xl text-text-300 font-bold mb-1 tracking-tight">Read</h1>
+    <p class="text-text-200 text-lg sm:text-xl leading-snug">Improve your Egyptian Arabic reading and listening comprehension skills with these conversations written by professional arabic teachers</p>
+    <CreateStoryModal></CreateStoryModal>
+  </div>
+  
+  <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 auto-rows-fr">
     {#each Object.entries(stories) as [key, value]}
       {#if value.isPaywalled && !data.hasActiveSubscription}
-      <li>
+      <li class="flex">
         <button onclick={openPaywallModal} class="flex w-full">
-          <article class="w-full px-4 py-8 flex-col flex gap-2 border-2 border-tile-600 text-center bg-tile-400 hover:bg-tile-500 transitional-all duration-300 cursor-pointer font-semibold">
-            <p class="text-xl text-text-300 flex flex-row items-center w-fit gap-2 mx-auto">
-              {#if value.isPaywalled}
-                <span class="text-lg">🔒</span>
-              {/if}
-              {value.story.title.english} / {value.story.title.arabic}
-            </p>
-            <div>
-              <p class="text-base text-text-200">{value.story.sentences.length} Sentences</p>
-              <p class="text-base text-text-200">{value.description}</p>
+          <article class="group w-full px-3 py-4 flex flex-col justify-between border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
+            <div class="flex flex-col gap-1">
+              <div class="flex flex-row items-center gap-2">
+                {#if value.isPaywalled}
+                  <span class="text-lg leading-none flex-shrink-0 self-start mt-[4px]">🔒</span>
+                {/if}
+                <p class="text-xl text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300 flex-1">
+                  {value.story.title.english} / {value.story.title.arabic}
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-0 mt-1">
+              <p class="text-sm text-text-200 opacity-90 group-hover:opacity-100 transition-opacity duration-300">{value.story.sentences.length} Sentences</p>
+              <p class="text-sm text-text-200 opacity-90 group-hover:opacity-100 transition-opacity duration-300">{value.description}</p>
             </div>
           </article>
         </button>
       </li>
       {:else}
-      <li>
-        <a href={`/stories/${key}`}>
-          <article class="px-4 py-8 flex-col flex gap-2 border-2 border-tile-600 text-center bg-tile-400 hover:bg-tile-500 transitional-all duration-300 cursor-pointer font-semibold">
-            <p class="text-xl text-text-300 ">
-              {value.story.title.english} / {value.story.title.arabic}
-            </p>
-            <div>
-              <p class="text-base text-text-200">{value.story.sentences.length} Sentences</p>
-              <p class="text-base text-text-200">{value.description}</p>
+      <li class="flex">
+        <a href={`/stories/${key}`} class="flex w-full">
+          <article class="group w-full px-3 py-4 flex flex-col justify-between border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
+            <div class="flex flex-col gap-1">
+              <p class="text-xl text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">
+                {value.story.title.english} / {value.story.title.arabic}
+              </p>
+            </div>
+            <div class="flex flex-col gap-0 mt-1">
+              <p class="text-sm text-text-200 opacity-90 group-hover:opacity-100 transition-opacity duration-300">{value.story.sentences.length} Sentences</p>
+              <p class="text-sm text-text-200 opacity-90 group-hover:opacity-100 transition-opacity duration-300">{value.description}</p>
             </div>
           </article>
         </a>
@@ -104,22 +113,27 @@ function handleCloseModal() {
 </section>
 
 
-<section class="px-4 sm:mt-8 sm:px-16 mt-4 pb-12 sm:pb-0">
-  <h2 class="text-2xl font-bold text-text-300">User Generated Stories</h2>
-  <p class="text-lg text-text-200">
-    Read stories created by other parallel arabic learners.
-  </p>
-  <ul class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+<section class="px-3 mt-8 sm:px-8 max-w-5xl mx-auto pb-12 sm:pb-0">
+  <div class="text-left mb-6">
+    <h2 class="text-2xl text-text-300 font-bold mb-1">User Generated Stories</h2>
+    <p class="text-text-200 text-lg leading-snug">
+      Read stories created by other parallel arabic learners.
+    </p>
+  </div>
+  
+  <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 auto-rows-fr">
     {#each userGeneratedStories as story}
-    <li>
-      <a href={`/generated-stories/${story.id}`}>
-        <article class="px-4 py-8 flex-col flex gap-2 border-2 border-tile-600 text-center bg-tile-400 hover:bg-tile-500 transitional-all duration-300 cursor-pointer font-semibold">
-          <p class="text-xl text-text-300 ">
-            {story.title}
-          </p>
-          <div>
-            <p class="text-base text-text-200">{story.length} Sentences</p>
-            <p class="text-base text-text-200">Difficulty: {story.difficulty}</p>
+    <li class="flex">
+      <a href={`/generated-stories/${story.id}`} class="flex w-full">
+        <article class="group w-full px-3 py-4 flex flex-col justify-between border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
+          <div class="flex flex-col gap-1">
+            <p class="text-xl text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">
+              {story.title}
+            </p>
+          </div>
+          <div class="flex flex-col gap-0 mt-1">
+            <p class="text-sm text-text-200 opacity-90 group-hover:opacity-100 transition-opacity duration-300">{story.length} Sentences</p>
+            <p class="text-sm text-text-200 opacity-90 group-hover:opacity-100 transition-opacity duration-300">Difficulty: {story.difficulty}</p>
           </div>
         </article>
       </a>
