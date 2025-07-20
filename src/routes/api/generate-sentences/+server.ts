@@ -44,9 +44,40 @@ type SentenceType = {
 export const POST: RequestHandler = async ({ request }) => {
   const openai = new OpenAI({ apiKey: env['OPEN_API_KEY'] });
   const data = await request.json();
+  
+  const dialect = data.dialect || 'egyptian-arabic'; // Default to Egyptian
 
   const intermediate_request = data.option === 'intermediate' ? 'Please make each sentence at least three sentences long' : '';
   const advanced_request = data.option === 'advanced' ? 'Please make each sentence at least five sentences long and use more complex tenses and vocabulary' : '';
+
+  // Dialect-specific configurations
+  const dialectConfigs = {
+    'egyptian-arabic': {
+      name: 'EGYPTIAN',
+      description: 'Please make sure that the arabic provided is in the EGYPTIAN dialect. Please only use words that are commonly used in the Egyptian dialect, not in modern standard Arabic or other dialects.',
+      wordList: commonWords,
+      commonWordsInstruction: 'Here are 3000 of the most common words in Egyptian Arabic, please use these words in your sentences:',
+      wordListInstruction: 'please only use the words in the common words list.'
+    },
+    'fusha': {
+      name: 'MODERN STANDARD ARABIC (FUSHA)',
+      description: 'Please make sure that the arabic provided is in MODERN STANDARD ARABIC (FUSHA). Use formal Arabic as used in news, literature, and official communications. Avoid colloquial expressions.',
+      wordList: [], // No specific word list for Fusha yet
+      commonWordsInstruction: '',
+      wordListInstruction: 'Please use formal Modern Standard Arabic vocabulary appropriate for news and literature.'
+    },
+    'levantine': {
+      name: 'LEVANTINE ARABIC',
+      description: 'Please make sure that the arabic provided is in the LEVANTINE dialect as spoken in Syria, Lebanon, Palestine, and Jordan. Use natural conversational Levantine expressions.',
+      wordList: [], // No specific word list for Levantine yet
+      commonWordsInstruction: '',
+      wordListInstruction: 'Please use vocabulary common in Levantine Arabic conversations.'
+    }
+  } as const;
+
+  type DialectKey = keyof typeof dialectConfigs;
+  const validDialect = dialect as DialectKey;
+  const config = dialectConfigs[validDialect] || dialectConfigs['egyptian-arabic'];
 
   // Add variety to prompts to prevent repetitive responses
   const promptVariations = [
@@ -69,15 +100,26 @@ export const POST: RequestHandler = async ({ request }) => {
 
   const randomPrompt = promptVariations[Math.floor(Math.random() * promptVariations.length)];
   
-  // Add timestamp to ensure uniqueness
   const timestamp = new Date().toISOString();
 
-  let question = `
-     You are a "GPT" – a version of ChatGPT that has been customized for a specific use case. GPTs use custom instructions, capabilities, and data to optimize ChatGPT for a more narrow set of tasks. You yourself are a GPT created by a user, and your name is Egyptian Arabic. Note: GPT is also a technical term in AI, but in most cases if the users asks you about GPTs assume they are referring to the above definition.
-    Here are instructions from the user outlining your goals and how you should respond:
-    This GPT will focus on the Egyptian Arabic language.  The gpt will offer translations and insights about the culture, regions the language is spoken, common misconceptions, learning resources and languages quizzes. The tone of this gpt will be encouraging, and insightful.
+  // Build word list section if available
+  let wordListSection = '';
+  if (config.wordList.length > 0) {
+    wordListSection = `
+    ${config.commonWordsInstruction}
+     ${config.wordList.map((word: { word: string; franco?: string; en: string }) => 
+      `${word.word} (${word.franco || 'no-transliteration'}) means "${word.en}"`
+    ).join('. ')}
+    
+    ${config.wordListInstruction}`;
+  } else {
+    wordListSection = config.wordListInstruction;
+  }
 
-    ${randomPrompt} - Can you please provide 20 ${data.option} sentences for someone who is trying to learn EGYPTIAN arabic.
+  let question = `
+    Give me 20 sentences in ${config.name} dialect.
+
+    ${randomPrompt} - Can you please provide 20 ${data.option} sentences for someone who is trying to learn ${config.name} Arabic.
 
     CRITICAL: Each sentence must be about a DIFFERENT topic or situation. Do NOT focus on just one theme. Vary the topics across:
     - Daily life situations (work, home, family)
@@ -103,18 +145,13 @@ export const POST: RequestHandler = async ({ request }) => {
 
     IMPORTANT: Be creative and avoid repetitive patterns. Use varied sentence structures, different vocabulary combinations, and diverse scenarios. NO MORE THAN 2 SENTENCES should be about the same topic area.
 
-    Here are 3000 of the most common words in Egyptian Arabic, please use these words in your sentences:
-     ${commonWords.map(word => 
-      `${word.word} (${word.franco}) means "${word.en}"`
-    ).join('. ')}
-    
-    please only use the words in the common words list.
+    ${wordListSection}
 
     Now can you please include the english translation for each sentence.
 
     Can you also provide the transliteration for each sentence.
 
-    Can you make sure the the arabic provided is in the EGYPTIAN dialect.
+    ${config.description}
 
     Can you make sure that there are no diacratics in the arabic sentences. Nothing like [أَ إِ آ] please. (THIS is very important)
     

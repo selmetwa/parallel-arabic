@@ -1,12 +1,12 @@
 import { Howl } from 'howler';
 
-export const speakArabic = async (text: string) => {
+export const speakArabic = async (text: string, dialect: string = 'egyptian-arabic') => {
 	const res = await fetch('/api/text-to-speech', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json'
 		},
-		body: JSON.stringify({ text })
+		body: JSON.stringify({ text, dialect })
 	});
 
 	// Convert response to a blob

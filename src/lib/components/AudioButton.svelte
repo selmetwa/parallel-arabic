@@ -3,8 +3,9 @@
 
 	import Button from '$lib/components/Button.svelte';
 
-  let { text, children }: {
+  let { text, dialect = 'egyptian-arabic', children }: {
     text: string;
+    dialect?: string;
     children?: any;
   } = $props();
 
@@ -17,7 +18,7 @@
 			headers: {
 				'Content-Type': 'application/json'
 			},
-			body: JSON.stringify({ text })
+			body: JSON.stringify({ text, dialect })
 		});
 
 		// Convert response to a blob
