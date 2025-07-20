@@ -1,6 +1,7 @@
 <script lang="ts">
 	import '../app.css';
 	import Navigation from '$lib/components/Navigation.svelte';
+	import DialectNavigation from '$lib/components/DialectNavigation.svelte';
 	import Drawer from '$lib/components/Drawer.svelte';
 	import { onMount } from 'svelte';
 	import { hue, theme } from '$lib/store/store';
@@ -100,6 +101,7 @@
         session={data.session}
         userEmail={data?.user?.email ?? ""}
       />
+			<DialectNavigation />
         <slot></slot>
       <Footer />
     </main>
