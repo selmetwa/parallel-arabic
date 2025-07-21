@@ -5,7 +5,7 @@
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 				<div class="text-center lg:text-left">
 					<h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-300 leading-tight mb-6">
-						Learn Egyptian Arabic in a fun way!
+						Learn Arabic in a fun way!
 					</h1>
 					<p class="text-lg sm:text-xl text-text-200 leading-relaxed mb-8">
 						Parallel Arabic provides a fully self-contained learning environment without the need for outside resources.
@@ -85,7 +85,7 @@
 								</p>
 							</div>
 							<a
-								href="/stories"
+								href="/egyptian-arabic/stories"
 								class="inline-block px-6 py-3 text-base font-semibold bg-tile-600 border-2 border-tile-600 text-text-300 hover:bg-tile-700 transition-colors duration-300 shadow-md w-fit"
 							>
 								Practice Conversations
@@ -111,7 +111,7 @@
 								</p>
 							</div>
 							<a
-								href="/speak"
+								href="/egyptian-arabic/speak"
 								class="inline-block px-6 py-3 text-base font-semibold bg-tile-600 border-2 border-tile-600 text-text-300 hover:bg-tile-700 transition-colors duration-300 shadow-md w-fit"
 							>
 								Start Speaking
@@ -137,7 +137,7 @@
 								</p>
 							</div>
 							<a
-								href="/sentences"
+								href="/egyptian-arabic/sentences"
 								class="inline-block px-6 py-3 text-base font-semibold bg-tile-600 border-2 border-tile-600 text-text-300 hover:bg-tile-700 transition-colors duration-300 shadow-md w-fit"
 							>
 								Practice Sentences
@@ -160,7 +160,7 @@
 								</p>
 							</div>
 							<a
-								href="/grammar"
+								href="/egyptian-arabic/grammar"
 								class="inline-block px-6 py-3 text-base font-semibold bg-tile-600 border-2 border-tile-600 text-text-300 hover:bg-tile-700 transition-colors duration-300 shadow-md w-fit"
 							>
 								Practice Verbs
@@ -186,7 +186,7 @@
 								</p>
 							</div>
 							<a
-								href="/write"
+								href="/egyptian-arabic/write"
 								class="inline-block px-6 py-3 text-base font-semibold bg-tile-600 border-2 border-tile-600 text-text-300 hover:bg-tile-700 transition-colors duration-300 shadow-md w-fit"
 							>
 								Start Writing
@@ -209,7 +209,7 @@
 								</p>
 							</div>
 							<a
-								href="/vocab"
+								href="/egyptian-arabic/vocab"
 								class="inline-block px-6 py-3 text-base font-semibold bg-tile-600 border-2 border-tile-600 text-text-300 hover:bg-tile-700 transition-colors duration-300 shadow-md w-fit"
 							>
 								Practice Vocabulary
@@ -255,7 +255,7 @@
 								</p>
 							</div>
 							<a
-								href="/write"
+								href="/egyptian-arabic/write"
 								class="inline-block px-6 py-3 text-base font-semibold bg-tile-600 border-2 border-tile-600 text-text-300 hover:bg-tile-700 transition-colors duration-300 shadow-md w-fit"
 							>
 								Practice Handwriting
