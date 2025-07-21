@@ -179,5 +179,5 @@ export const GET: RequestHandler = async ({ url, cookies, locals }) => {
 		throw redirect(302, '/login?error=oauth_error');
 	}
 
-	throw redirect(302, '/stories');
+	throw redirect(302, '/');
 };

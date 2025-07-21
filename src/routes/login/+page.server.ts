@@ -52,6 +52,6 @@ export const actions: Actions = {
 			});
 		}
 		// make sure you don't throw inside a try/catch block!
-		throw redirect(302, '/stories');
+		throw redirect(302, '/');
 	}
 };

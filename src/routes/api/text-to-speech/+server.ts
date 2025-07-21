@@ -12,26 +12,74 @@ const client = new ElevenLabsClient({
 	apiKey: ELEVENLABS_API_KEY
 });
 
+// Dialect-specific voice configuration
+const getVoiceConfig = (dialect: string) => {
+  switch (dialect) {
+    case 'fusha':
+      return {
+        voice: 'Mona',
+        speed: 0.9,
+        stability: 0.9,
+        similarity_boost: 0.9
+      };
+    case 'egyptian-arabic':
+      return {
+        voice: 'Haytham',
+        speed: 0.9,
+        stability: 0.9,
+        similarity_boost: 0.9
+      };
+    case 'levantine':
+      return {
+        voice: 'Sara - Kind & Expressive',
+        speed: 0.9,
+        stability: 0.9,
+        similarity_boost: 0.9
+      };
+    case 'darija':
+      return {
+        voice: 'Ghizlane - Moroccan Darija Dialect',
+        speed: 0.9,
+        stability: 0.9,
+        similarity_boost: 0.9
+      };
+    default:
+      // Default to Egyptian voice for backwards compatibility
+      return {
+        voice: 'Haytham',
+        speed: 0.9,
+        stability: 0.9,
+        similarity_boost: 0.9
+      };
+  }
+};
+
 export const POST: RequestHandler = async ({ request }) => {
 	const data = await request.json();
+  const { text, dialect } = data;
+
+  const voiceConfig = getVoiceConfig(dialect);
 
 	const audioStream = await client.generate({
-		voice: 'Haytham',
+		voice: voiceConfig.voice,
 		model_id: 'eleven_turbo_v2_5',
-		text: data.text,
+		text: text,
     voice_settings: {
-      stability: 0.9,
-      similarity_boost: 0.9,
-      speed      : 0.7,
+      stability: voiceConfig.stability,
+      similarity_boost: voiceConfig.similarity_boost
     }
-
 	});
 
-	const chunks: Buffer[] = [];
+	const chunks: Uint8Array[] = [];
 	for await (const chunk of audioStream) {
 		chunks.push(chunk);
 	}
 
 	const content = Buffer.concat(chunks);
-  return new Response(content)
+  return new Response(content, {
+    headers: {
+      'Content-Type': 'audio/mpeg',
+      'X-Playback-Rate': voiceConfig.speed.toString()
+    }
+  });
 };

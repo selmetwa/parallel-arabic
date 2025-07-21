@@ -2,9 +2,10 @@
   import { Howl } from 'howler';
 
 	import Button from '$lib/components/Button.svelte';
-
-  let { text, children }: {
+  import { type Dialect } from '$lib/types/index';
+  let { text, dialect = 'egyptian-arabic', children }: {
     text: string;
+    dialect: Dialect;
     children?: any;
   } = $props();
 
@@ -17,8 +18,11 @@
 			headers: {
 				'Content-Type': 'application/json'
 			},
-			body: JSON.stringify({ text })
+			body: JSON.stringify({ text, dialect })
 		});
+
+		// Get playback rate from response headers
+		const playbackRate = parseFloat(res.headers.get('X-Playback-Rate') || '1.0');
 
 		// Convert response to a blob
 		const audioBlob = await res.blob();
@@ -30,6 +34,7 @@
 		const sound = new Howl({
 			src: [audioUrl],
 			autoplay: true,
+			rate: playbackRate,
 			format: ['mp3'] // or 'wav', based on the format of the returned blob
 		});
 
