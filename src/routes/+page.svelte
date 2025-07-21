@@ -22,37 +22,34 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       <!-- Egyptian Arabic -->
       <a href="/egyptian-arabic" class="group px-4 py-6 flex-col flex gap-2 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
-        <div class="text-4xl mb-2">🇪🇬</div>
         <h3 class="text-xl text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">Egyptian Arabic</h3>
         <p class="text-text-300 text-sm font-medium leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">
           Learn the most widely understood Arabic dialect. Perfect for movies, music, and everyday conversation across the Arab world.
         </p>
         <div class="mt-2 text-xs text-text-200 opacity-75">
-          ✓ Stories ✓ Speaking ✓ Grammar ✓ Vocabulary ✓ Writing
+          ✓ Stories ✓ Speaking ✓ Sentences ✓ Vocabulary ✓ Writing
         </div>
       </a>
 
       <!-- Modern Standard Arabic (Fusha) -->
-      <a href="/fusha" class="group px-4 py-6 flex-col flex gap-2 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform opacity-60">
-        <div class="text-4xl mb-2">📚</div>
+      <a href="/fusha" class="group px-4 py-6 flex-col flex gap-2 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
         <h3 class="text-xl text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">Modern Standard Arabic</h3>
         <p class="text-text-300 text-sm font-medium leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">
           Master formal Arabic used in news, literature, and official communications. The foundation of all Arabic dialects.
         </p>
         <div class="mt-2 text-xs text-text-200 opacity-75">
-          Coming Soon...
+          ✓ Stories ✓ Speaking ✓ Sentences
         </div>
       </a>
 
       <!-- Levantine Arabic -->
-      <a href="/levantine" class="group px-4 py-6 flex-col flex gap-2 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform opacity-60">
-        <div class="text-4xl mb-2">🌍</div>
+      <a href="/levantine" class="group px-4 py-6 flex-col flex gap-2 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
         <h3 class="text-xl text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">Levantine Arabic</h3>
         <p class="text-text-300 text-sm font-medium leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">
           Explore the dialect of Syria, Lebanon, Palestine, and Jordan. Known for its melodic sound and cultural richness.
         </p>
         <div class="mt-2 text-xs text-text-200 opacity-75">
-          Coming Soon...
+          ✓ Stories ✓ Speaking ✓ Sentences
         </div>
       </a>
     </div>

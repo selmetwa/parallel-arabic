@@ -1,7 +1,7 @@
 <script lang="ts">
   import { stories } from '$lib/constants/stories';
     import PaywallModal from '$lib/components/PaywallModal.svelte';
-  import CreateStoryModal from './components/CreateStoryModal.svelte';
+  import CreateStoryModal from '$lib/components/dialect-shared/story/components/CreateStoryModal.svelte';
   import { BLOCKED_STORY_IDS } from '$lib/constants/stories/blocked';
 
   let { data } = $props();
@@ -65,7 +65,7 @@ function handleCloseModal() {
   <div class="text-left mb-6">
     <h1 class="text-3xl sm:text-4xl text-text-300 font-bold mb-1 tracking-tight">Read</h1>
     <p class="text-text-200 text-lg sm:text-xl leading-snug">Improve your Egyptian Arabic reading and listening comprehension skills with these conversations written by professional arabic teachers</p>
-    <CreateStoryModal></CreateStoryModal>
+    <CreateStoryModal dialect="egyptian-arabic"></CreateStoryModal>
   </div>
   
   <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 auto-rows-fr">

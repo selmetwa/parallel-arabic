@@ -5,9 +5,11 @@
   import RecordButton from '$lib/components/RecordButton.svelte';
   import Similarity from '$lib/components/Similarity.svelte';
   import AudioButton from '$lib/components/AudioButton.svelte';
-  import DefinitionModal from '../../sentences/components/DefinitionModal.svelte';
+  import DefinitionModal from '$lib/components/dialect-shared/sentences/DefinitionModal.svelte';
   import SaveButton from '$lib/components/SaveButton.svelte';
-  let { sentence, resetSentences } = $props();
+  import { type Dialect } from '$lib/types/index';
+
+  let { sentence, resetSentences, dialect } = $props();
 
   let recording = $state(false);
   let mediaRecorder: MediaRecorder | null = $state(null);
@@ -80,12 +82,18 @@
 		definition = '';
 	}
 
+  const dialectName: Record<Dialect, string> = {
+    fusha: 'Modern Standard Arabic',
+    levantine: 'Levantine Arabic',
+    darija: 'Moroccan Darija',
+    'egyptian-arabic': 'Egyptian Arabic'
+  }
+
   async function askChatGTP(word: string) {
 		targetWord = word;
 		isLoadingDefinition = true;
 		openDefinitionModal();
-		const question = `What does ${word} mean in Egyptian Arabic? Considering the following sentences ${sentence.arabic} ${sentence.english} ${sentence.transliteration} but please do not reveal the entire meaning of the sentence, and dont say anything about the rest of the sentence at all, just use it as a reference to derive the definition.`;
-
+		const question = `What does ${word} mean in ${dialectName[dialect as Dialect]}? Considering the following sentences ${sentence.arabic} ${sentence.english} ${sentence.transliteration} but please do not reveal the entire meaning of the sentence, and dont say anything about the rest of the sentence at all, just use it as a reference to derive the definition.`;
 		const res = await fetch('/api/open-ai', {
 			method: 'POST',
 			headers: { accept: 'application/json' },
@@ -122,7 +130,7 @@
 	activeWordObj={{
 		english: targetWord,
 		isLoading: isLoadingDefinition,
-		description: definition
+		description: definition,
 	}}
 	isModalOpen={isDefinitionModalOpen}
 	closeModal={closeDefinitionModal}
@@ -130,7 +138,7 @@
 
 <div class="px-3 mt-6 sm:px-8 max-w-5xl mx-auto">
 	<div class="grid grid-cols-2 sm:grid-cols-5 gap-2 mb-12">
-		<AudioButton text={sentence.arabic}>Hear Audio</AudioButton>
+		<AudioButton text={sentence.arabic} dialect={dialect}>Hear Audio</AudioButton>
 		<Button onClick={() => showHint = !showHint} type="button">{showHint ? 'Hide Transliteration' : 'Show Transliteration'}</Button>
 		<Button onClick={() => showAnswer = !showAnswer} type="button">{showAnswer ? 'Hide Arabic' : 'Show Arabic'}</Button>
 		<SaveButton

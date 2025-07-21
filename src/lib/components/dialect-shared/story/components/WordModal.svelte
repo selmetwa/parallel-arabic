@@ -1,18 +1,18 @@
-<script>
+<script lang="ts">
   import Modal from "$lib/components/Modal.svelte";
   import Button from "$lib/components/Button.svelte";
   import Checkmark from "$lib/components/Checkmark.svelte";
   import { getWordObjectToSave } from '$lib/helpers/get-word-object-to-save';
   import AudioButton from "$lib/components/AudioButton.svelte";
+  import { type Dialect } from '$lib/types/index';
 
-  /**
-   * @typedef {Object} Props
-   * @property {any} [activeWordObj]
-   * @property {boolean} [isModalOpen]
-   * @property {any} closeModal
-   */
+   type Props = {
+    activeWordObj: any;
+    isModalOpen: boolean;
+    closeModal: () => void;
+    dialect: Dialect;
+   }
 
-  /** @type {Props} */
   let { activeWordObj = {
     english: "",
     arabic: "",
@@ -20,7 +20,7 @@
     description: "",
     isLoading: false,
     type: "",
-  }, isModalOpen = false, closeModal } = $props();
+  }, isModalOpen = false, closeModal, dialect }: Props = $props();
 
   let response = $state("");
   
@@ -141,7 +141,7 @@
       </Button>
     </div>
     <div class="flex flex-1">
-      <AudioButton text={activeWordObj.arabic}>
+      <AudioButton text={activeWordObj.arabic} dialect={dialect}>
         Audio
       </AudioButton>
     </div>

@@ -1,14 +1,17 @@
 <script lang="ts">
 	import cn from 'classnames';
-	import Sentence from './components/Sentence.svelte';
-	import WordModal from './components/WordModal.svelte';
+	// import Sentence from './components/Sentence.svelte';
+	// import WordModal from './components/WordModal.svelte';
+  import Sentence from '$lib/components/dialect-shared/story/components/Sentence.svelte';
+  import WordModal from '$lib/components/dialect-shared/story/components/WordModal.svelte';
 	import RadioButton from '$lib/components/RadioButton.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import { getWordObjectToSave } from '$lib/helpers/get-word-object-to-save';
 	import Checkmark from '$lib/components/Checkmark.svelte';
 	import { PUBLIC_PRICE_ID } from '$env/static/public';
 	import Audio from '$lib/components/Audio.svelte';
-	import { Mode, type KeyWord } from './types';
+	// import { Mode, type KeyWord } from './types';
+  import { Mode, type KeyWord } from '$lib/types/index';
 
   let { data, activeWordObj = $bindable({
 		english: '',
@@ -163,7 +166,7 @@
 		</form>
 	</div>
 {:else}
-	<WordModal {activeWordObj} {isModalOpen} {closeModal}></WordModal>
+	<WordModal {activeWordObj} {isModalOpen} {closeModal} dialect="egyptian-arabic"></WordModal>
 	<header class="border-b border-tile-600 bg-tile-400">
 		<div class="max-w-5xl mx-auto px-3 sm:px-8">
 			<!-- Title Section -->
@@ -259,6 +262,7 @@
 				type="english"
 				classname="row-[2] sm:row-[1] sm:col-[1]"
 				{mode}
+				dialect="egyptian-arabic"
 			/>
 			<Sentence
 				{index}
@@ -267,6 +271,7 @@
 				{setActiveWord}
 				type="arabic"
 				{mode}
+				dialect="egyptian-arabic"
 			/>
 			<div
 				class="col-[1] row-[4] flex flex-col items-center justify-center border-b border-tile-600 px-5 py-10 text-text-300 sm:row-[2]"
@@ -345,6 +350,7 @@
 				{setActiveWord}
 				type="transliteration"
 				{mode}
+				dialect="egyptian-arabic"
 			/>
 		</section>
 		{#if mode !== Mode.SentanceView}
@@ -378,6 +384,7 @@
 						type="english"
 						index={sentences.indexOf(sentence)}
 						{mode}
+						dialect="egyptian-arabic"
 					/>
 				{/if}
 				<Sentence
@@ -386,6 +393,7 @@
 					{setActiveWord}
 					{mode}
 					index={sentences.indexOf(sentence)}
+					dialect="egyptian-arabic"
 				/>
 			</section>
 		{/each}

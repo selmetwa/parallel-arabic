@@ -1,19 +1,16 @@
-<script>
+<script lang="ts">
   import Modal from "$lib/components/Modal.svelte";
+  type Props = {
+    activeWordObj: any;
+    isModalOpen: boolean;
+    closeModal: () => void;
+  }
 
-  /**
-   * @typedef {Object} Props
-   * @property {any} [activeWordObj]
-   * @property {boolean} [isModalOpen]
-   * @property {any} closeModal
-   */
-
-  /** @type {Props} */
   let { activeWordObj = {
     english: "",
     description: "",
     isLoading: false,
-  }, isModalOpen = false, closeModal } = $props();
+  }, isModalOpen = false, closeModal }: Props = $props();
 
   let error = $derived("");
 </script>

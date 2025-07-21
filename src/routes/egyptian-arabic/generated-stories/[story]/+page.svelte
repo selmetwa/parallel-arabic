@@ -186,7 +186,7 @@
 	};
 </script>
 
-<WordModal {activeWordObj} {isModalOpen} {closeModal}></WordModal>
+<WordModal {activeWordObj} {isModalOpen} {closeModal} dialect="egyptian-arabic"></WordModal>
 {#if sentences.length > 0}
   <header class="border-b border-tile-600 px-4 pb-8 text-center sm:px-8">
     <h1 class="py-8 text-4xl font-semibold text-text-200">

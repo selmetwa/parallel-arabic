@@ -1,6 +1,7 @@
 <script lang="ts">
   import PaywallModal from '$lib/components/PaywallModal.svelte';
-  import CreateStoryModal from './components/CreateStoryModal.svelte';
+  // import CreateStoryModal from './components/CreateStoryModal.svelte';
+  import CreateStoryModal from '$lib/components/dialect-shared/story/components/CreateStoryModal.svelte';
   import { BLOCKED_STORY_IDS } from '$lib/constants/stories/blocked';
   import { onMount } from 'svelte';
   import { currentDialect } from '$lib/store/store';
@@ -78,7 +79,7 @@
   <div class="text-left mb-6">
     <h1 class="text-3xl sm:text-4xl text-text-300 font-bold mb-1 tracking-tight">Fusha Stories</h1>
     <p class="text-text-200 text-lg sm:text-xl leading-snug">Practice reading Modern Standard Arabic with AI-generated stories tailored to formal Arabic style.</p>
-    <CreateStoryModal></CreateStoryModal>
+    <CreateStoryModal dialect="fusha"></CreateStoryModal>
   </div>
   
   {#if fushaGeneratedStories.length === 0}

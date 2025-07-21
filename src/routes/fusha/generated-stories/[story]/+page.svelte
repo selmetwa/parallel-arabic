@@ -1,13 +1,16 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import cn from 'classnames';
-	import Sentence from '../../stories/[story]/components/Sentence.svelte';
-	import WordModal from '../../stories/[story]/components/WordModal.svelte';
+	// import Sentence from '../../stories/[story]/components/Sentence.svelte';
+	// import WordModal from '../../stories/[story]/components/WordModal.svelte';
+  import Sentence from '$lib/components/dialect-shared/story/components/Sentence.svelte';
+  import WordModal from '$lib/components/dialect-shared/story/components/WordModal.svelte';
 	import RadioButton from '$lib/components/RadioButton.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import { getWordObjectToSave } from '$lib/helpers/get-word-object-to-save';
 	import Checkmark from '$lib/components/Checkmark.svelte';
-	import { Mode, type KeyWord } from '../../../egyptian-arabic/stories/[story]/types';
+	// import { Mode, type KeyWord } from '../../../egyptian-arabic/stories/[story]/types';
+  import { Mode, type KeyWord } from '$lib/types/index';
 	import type { PageData } from './$types';
 	import AudioButton from '$lib/components/AudioButton.svelte';
   import { currentDialect } from '$lib/store/store';
@@ -188,7 +191,7 @@
 	};
 </script>
 
-<WordModal {activeWordObj} {isModalOpen} {closeModal}></WordModal>
+<WordModal {activeWordObj} {isModalOpen} {closeModal} dialect="fusha"></WordModal>
 {#if sentences.length > 0}
   <header class="border-b border-tile-600 px-4 pb-8 text-center sm:px-8">
     <h1 class="py-8 text-4xl font-semibold text-text-200">
@@ -197,7 +200,7 @@
     <div class="flex flex-col items-start justify-between sm:flex-row sm:items-center">
       <div class="w-fit">
           {#if mode === Mode.SentanceView && sentences[index]}
-          <AudioButton text={sentences[index].arabic.text}>
+          <AudioButton text={sentences[index].arabic.text} dialect="fusha">
             Play Audio
           </AudioButton>
           {/if}
@@ -248,6 +251,7 @@
       type="english"
       classname="row-[2] sm:row-[1] sm:col-[1]"
       {mode}
+      dialect="fusha"
     />
     <Sentence
     isGenerated={true}
@@ -257,6 +261,7 @@
       {setActiveWord}
       type="arabic"
       {mode}
+      dialect="fusha"
     />
     <div
       class="col-[1] row-[4] flex flex-col items-center justify-center border-b border-tile-600 px-5 py-10 text-text-300 sm:row-[2]"
@@ -336,6 +341,7 @@
       {setActiveWord}
       type="transliteration"
       {mode}
+      dialect="fusha"
     />
   </section>
   <div class="flex flex-col items-center gap-2">
@@ -368,6 +374,7 @@
           index={sentences.indexOf(sentence)}
           {mode}
           isGenerated={true}
+          dialect="fusha"
         />
       {/if}
       <Sentence
@@ -377,6 +384,7 @@
         {setActiveWord}
         {mode}
         index={sentences.indexOf(sentence)}
+        dialect="fusha"
       />
     </section>
   {/each}
