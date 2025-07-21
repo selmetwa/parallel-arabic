@@ -65,7 +65,7 @@ function handleCloseModal() {
   <div class="text-left mb-6">
     <h1 class="text-3xl sm:text-4xl text-text-300 font-bold mb-1 tracking-tight">Read</h1>
     <p class="text-text-200 text-lg sm:text-xl leading-snug">Improve your Egyptian Arabic reading and listening comprehension skills with these conversations written by professional arabic teachers</p>
-    <CreateStoryModal dialect="egyptian-arabic"></CreateStoryModal>
+    <CreateStoryModal dialect="egyptian-arabic" data={data}></CreateStoryModal>
   </div>
   
   <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 auto-rows-fr">

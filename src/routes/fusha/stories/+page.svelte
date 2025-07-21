@@ -79,7 +79,7 @@
   <div class="text-left mb-6">
     <h1 class="text-3xl sm:text-4xl text-text-300 font-bold mb-1 tracking-tight">Fusha Stories</h1>
     <p class="text-text-200 text-lg sm:text-xl leading-snug">Practice reading Modern Standard Arabic with AI-generated stories tailored to formal Arabic style.</p>
-    <CreateStoryModal dialect="fusha"></CreateStoryModal>
+    <CreateStoryModal dialect="fusha" data={data}></CreateStoryModal>
   </div>
   
   {#if fushaGeneratedStories.length === 0}

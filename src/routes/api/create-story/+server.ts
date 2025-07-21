@@ -87,6 +87,12 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 			description: 'Please use Levantine Arabic dialect as spoken in Syria, Lebanon, Palestine, and Jordan. Use natural conversational Levantine expressions.',
 			examples: [], // No pre-built examples for Levantine yet
 			commonWords: [] // No specific word list for Levantine yet
+		},
+		'darija': {
+			name: 'MOROCCAN DARIJA',
+			description: 'Please use Moroccan Darija dialect as spoken in Morocco. Use natural conversational Moroccan Arabic expressions and vocabulary.',
+			examples: [], // No pre-built examples for Darija yet
+			commonWords: [] // No specific word list for Darija yet
 		}
 	} as const;
 

@@ -8,10 +8,11 @@
 
   interface Props {
     dialect: Dialect;
+    data: any;
 	}
 
-  const { dialect }: Props = $props();
-
+  const { data, dialect }: Props = $props();
+  console.log({ data })
 	let isOpen = $state(false);
 	let description = $state('');
 	let option = $state('beginner');
@@ -19,6 +20,9 @@
   let title = $state('');
 
 	function openModal() {
+    if (!data.session) {
+      goto('/signup')
+    }
 		isOpen = true;
 	}
 
