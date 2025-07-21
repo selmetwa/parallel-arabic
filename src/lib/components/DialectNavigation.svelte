@@ -3,7 +3,7 @@
   import { onMount } from 'svelte';
   import { page } from '$app/stores';
 
-  type DialectKey = 'egyptian-arabic' | 'fusha' | 'levantine';
+  type DialectKey = 'egyptian-arabic' | 'fusha' | 'levantine' | 'darija';
 
   // Update dialect based on current route
   onMount(() => {
@@ -15,6 +15,8 @@
         currentDialect.set('fusha');
       } else if (path.startsWith('/levantine')) {
         currentDialect.set('levantine');
+      } else if (path.startsWith('/darija')) {
+        currentDialect.set('darija');
       } else {
         currentDialect.set('');
       }
@@ -43,13 +45,19 @@
       { href: '/levantine/stories', label: 'Stories' },
       { href: '/levantine/speak', label: 'Speaking' },
       { href: '/levantine/sentences', label: 'Sentences' }
+    ],
+    'darija': [
+      { href: '/darija/stories', label: 'Stories' },
+      { href: '/darija/speak', label: 'Speaking' },
+      { href: '/darija/sentences', label: 'Sentences' }
     ]
   };
 
   const dialectNames: Record<DialectKey, string> = {
     'egyptian-arabic': 'Egyptian Arabic',
     'fusha': 'Modern Standard Arabic (Fusha)',
-    'levantine': 'Levantine Arabic'
+    'levantine': 'Levantine Arabic',
+    'darija': 'Darija'
   };
 </script>
 

@@ -5,7 +5,7 @@
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 				<div class="text-center lg:text-left">
 					<h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-300 leading-tight mb-6">
-						Learn Egyptian Arabic in a fun way!
+						Learn Arabic in a fun way!
 					</h1>
 					<p class="text-lg sm:text-xl text-text-200 leading-relaxed mb-8">
 						Parallel Arabic provides a fully self-contained learning environment without the need for outside resources.

@@ -9,7 +9,7 @@
   let isModalOpen = $state(false);
 
   onMount(() => {
-    currentDialect.set('levantine');
+    currentDialect.set('darija');
   });
 
   // Function to filter out incomplete sentences
@@ -29,8 +29,8 @@
     );
   }
 
-  // Filter stories for Levantine dialect and remove the dialect suffix from title
-  let levantineGeneratedStories = $derived.by(() => {
+  // Filter stories for darija dialect and remove the dialect suffix from title
+  let darijaGeneratedStories = $derived.by(() => {
     const output = []
 
     for (const story of data.user_generated_stories) {
@@ -40,16 +40,16 @@
         continue
       }
 
-      // Only include stories that end with _levantine
-      if (!story.title?.endsWith('_levantine')) {
+      // Only include stories that end with _darija
+      if (!story.title?.endsWith('_darija')) {
         continue
       }
 
       // Filter valid sentences and get the count
       const validSentences = filterValidSentences(a.sentences || []);
 
-      // Remove the _levantine suffix from the title for display
-      const displayTitle = story.title.replace('_levantine', '');
+      // Remove the _darija suffix from the title for display
+      const displayTitle = story.title.replace('_darija', '');
 
       output.push({
         id: story.id,
@@ -76,23 +76,25 @@
 
 <section class="px-3 mt-6 sm:px-8 max-w-5xl mx-auto">
   <div class="text-left mb-6">
-    <h1 class="text-3xl sm:text-4xl text-text-300 font-bold mb-1 tracking-tight">Levantine Stories</h1>
-    <p class="text-text-200 text-lg sm:text-xl leading-snug">Practice reading Levantine Arabic with AI-generated stories from the Levant region.</p>
-    <CreateStoryModal dialect="levantine" data={data}></CreateStoryModal>
+    <h1 class="text-3xl sm:text-4xl text-text-300 font-bold mb-1 tracking-tight">Darija Stories</h1>
+    <p class="text-text-200 text-lg sm:text-xl leading-snug">
+      Practice reading Darija with AI-generated Stories.
+    </p>
+    <CreateStoryModal dialect="darija" data={data}></CreateStoryModal>
   </div>
   
-  {#if levantineGeneratedStories.length === 0}
+  {#if darijaGeneratedStories.length === 0}
     <div class="text-center py-12">
-      <div class="text-6xl mb-4">🌍</div>
-      <h2 class="text-2xl text-text-300 font-bold mb-4">No Levantine Stories Yet</h2>
-      <p class="text-text-200 mb-6">Create your first Levantine Arabic story to get started!</p>
+      <div class="text-6xl mb-4">📚</div>
+      <h2 class="text-2xl text-text-300 font-bold mb-4">No darija Stories Yet</h2>
+      <p class="text-text-200 mb-6">Create your first Modern Standard Arabic story to get started!</p>
     </div>
   {:else}
-    <h2 class="text-2xl text-text-300 font-bold mb-4">AI-Generated Levantine Stories</h2>
+    <h2 class="text-2xl text-text-300 font-bold mb-4">AI-Generated darija Stories</h2>
     <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 auto-rows-fr">
-      {#each levantineGeneratedStories as story}
+      {#each darijaGeneratedStories as story}
       <li class="flex">
-        <a href={`/levantine/generated-stories/${story.id}`} class="flex w-full">
+        <a href={`/darija/generated-stories/${story.id}`} class="flex w-full">
           <article class="group w-full px-3 py-4 flex flex-col justify-between border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
             <div class="flex flex-col gap-1">
               <p class="text-xl text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">

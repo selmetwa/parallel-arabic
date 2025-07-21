@@ -36,6 +36,13 @@ const getVoiceConfig = (dialect: string) => {
         stability: 0.9,
         similarity_boost: 0.9
       };
+    case 'darija':
+      return {
+        voice: 'Ghizlane - Moroccan Darija Dialect',
+        speed: 0.9,
+        stability: 0.9,
+        similarity_boost: 0.9
+      };
     default:
       // Default to Egyptian voice for backwards compatibility
       return {

@@ -72,6 +72,13 @@ export const POST: RequestHandler = async ({ request }) => {
       wordList: [], // No specific word list for Levantine yet
       commonWordsInstruction: '',
       wordListInstruction: 'Please use vocabulary common in Levantine Arabic conversations.'
+    },
+    'darija': {
+      name: 'MOROCCAN DARIJA',
+      description: 'Please make sure that the arabic provided is in MOROCCAN DARIJA as spoken in Morocco. Use natural conversational Moroccan Arabic expressions and vocabulary.',
+      wordList: [], // No specific word list for Darija yet
+      commonWordsInstruction: '',
+      wordListInstruction: 'Please use vocabulary common in Moroccan Darija conversations.'
     }
   } as const;
 

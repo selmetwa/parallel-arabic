@@ -2,7 +2,7 @@ import { writable } from 'svelte/store';
 
 export const hue = writable('');
 export const theme = writable('light');
-export const currentDialect = writable(''); // 'egyptian-arabic', 'fusha', 'levantine', or ''
+export const currentDialect = writable(''); // 'egyptian-arabic', 'fusha', 'levantine', 'darija', or ''
 
 // Egyptian Arabic stores
 export const egyptianSentencesInStore = writable([]);
@@ -18,3 +18,8 @@ export const fushaGeneratedStoryInStore = writable('');
 export const levantineSentencesInStore = writable([]);
 export const levantineSentenceIndexInStore = writable(0);
 export const levantineGeneratedStoryInStore = writable('');
+
+// Darija stores
+export const darijaSentencesInStore = writable([]);
+export const darijaSentenceIndexInStore = writable(0);
+export const darijaGeneratedStoryInStore = writable('');
