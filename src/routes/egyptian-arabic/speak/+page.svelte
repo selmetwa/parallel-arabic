@@ -5,7 +5,8 @@
 	import { PUBLIC_PRICE_ID } from '$env/static/public';
 	import { goto } from '$app/navigation';
   import { updateUrl } from '$lib/helpers/update-url';
-  import SpeakSentence from './components/SpeakSentence.svelte';
+  // import SpeakSentence from './components/SpeakSentence.svelte';
+  import SpeakSentence from '$lib/components/dialect-shared/speak/SpeakSentence.svelte';
   import AlphabetCycle from '$lib/components/AlphabetCycle.svelte';
   import { type sentenceObjectItem } from '$lib/types/index';
   import { onMount } from 'svelte';
@@ -258,5 +259,5 @@
 		</div>
 	</header>
 
-	<SpeakSentence {sentence} {resetSentences} />
+	<SpeakSentence {sentence} {resetSentences} dialect="egyptian-arabic" />
 {/if}

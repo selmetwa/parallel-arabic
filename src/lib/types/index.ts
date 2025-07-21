@@ -48,3 +48,27 @@ export type sentenceObjectGroup = {
   fourth: sentenceObjectItem
   answer: sentenceObjectItem
 }
+
+export type Dialect = 'fusha' | 'levantine' | 'darija' | 'egyptian-arabic';
+
+export type DialectName = {
+  fusha: 'Modern Standard Arabic',
+  levantine: 'Levantine Arabic',
+  darija: 'Moroccan Darija',
+  'egyptian-arabic': 'Egyptian Arabic'
+}
+
+export enum Mode {
+  SingleText = 'SingleText',
+  BiText = 'BiText',
+  SentanceView = 'SentanceView'
+}
+
+export type KeyWord = {
+  arabic: string;
+  english: string;
+  transliterated: string;
+  description: string;
+  isLoading: boolean;
+  type: string;
+}

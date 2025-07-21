@@ -1,8 +1,10 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import cn from 'classnames';
-	import Sentence from '../../stories/[story]/components/Sentence.svelte';
-	import WordModal from '../../stories/[story]/components/WordModal.svelte';
+	// import Sentence from '../../stories/[story]/components/Sentence.svelte';
+	// import WordModal from '../../stories/[story]/components/WordModal.svelte';
+  import Sentence from '$lib/components/dialect-shared/story/components/Sentence.svelte';
+  import WordModal from '$lib/components/dialect-shared/story/components/WordModal.svelte';
 	import RadioButton from '$lib/components/RadioButton.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import { getWordObjectToSave } from '$lib/helpers/get-word-object-to-save';
@@ -188,7 +190,7 @@
 	};
 </script>
 
-<WordModal {activeWordObj} {isModalOpen} {closeModal}></WordModal>
+<WordModal {activeWordObj} {isModalOpen} {closeModal} dialect="levantine"></WordModal>
 {#if sentences.length > 0}
   <header class="border-b border-tile-600 px-4 pb-8 text-center sm:px-8">
     <h1 class="py-8 text-4xl font-semibold text-text-200">
@@ -197,7 +199,7 @@
     <div class="flex flex-col items-start justify-between sm:flex-row sm:items-center">
       <div class="w-fit">
           {#if mode === Mode.SentanceView && sentences[index]}
-          <AudioButton text={sentences[index].arabic.text}>
+          <AudioButton text={sentences[index].arabic.text} dialect="levantine">
             Play Audio
           </AudioButton>
           {/if}
@@ -241,6 +243,7 @@
     class="grid grid-cols-1 grid-rows-4 divide-x divide-tile-600 bg-tile-300 sm:grid-cols-2 sm:grid-rows-2"
   >
     <Sentence
+      dialect="levantine"
     isGenerated={true}
       {index}
       sentence={sentences[index]}
@@ -250,6 +253,7 @@
       {mode}
     />
     <Sentence
+      dialect="levantine"
     isGenerated={true}
       {index}
       classname="row-[1] sm:row-[1] sm:col-[2]"
@@ -329,6 +333,7 @@
       {/if}
     </div>
     <Sentence
+    dialect="levantine"
     isGenerated={true}
       {index}
       classname="row-[3] sm:row-[2] sm:col-[2]"
@@ -368,9 +373,11 @@
           index={sentences.indexOf(sentence)}
           {mode}
           isGenerated={true}
+          dialect="levantine"
         />
       {/if}
       <Sentence
+      dialect="levantine"
       isGenerated={true}
         {sentence}
         type="arabic"

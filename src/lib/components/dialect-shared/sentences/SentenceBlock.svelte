@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { type Keyboard } from '$lib/types/index';
+	import { type Keyboard, type Dialect } from '$lib/types/index';
 	import { updateKeyboardStyle } from '$lib/helpers/update-keyboard-style';
 	import { hue, theme } from '$lib/store/store';
 	import { getBrowserInfo } from '$lib/helpers/get-browser-info';
@@ -20,9 +20,10 @@
 			transliteration: string;
 		};
 		resetSentences: () => void;
+    dialect: Dialect;
 	}
 
-	let { sentence, resetSentences }: Props = $props();
+	let { sentence, resetSentences, dialect }: Props = $props();
 
 	type Attempt = {
 		letter: string;
@@ -121,11 +122,18 @@
 		definition = '';
 	}
 
+  const dialectName: Record<Dialect, string> = {
+    fusha: 'Modern Standard Arabic',
+    levantine: 'Levantine Arabic',
+    darija: 'Moroccan Darija',
+    'egyptian-arabic': 'Egyptian Arabic'
+  }
+
 	async function askChatGTP(word: string) {
 		targetWord = word;
 		isLoadingDefinition = true;
 		openDefinitionModal();
-		const question = `What does ${word} mean in Egyptian Arabic? Considering the following sentences ${sentence.arabic} ${sentence.english} ${sentence.transliteration} but please do not reveal the entire meaning of the sentence, and dont say anything about the rest of the sentence at all, just use it as a reference to derive the definition.`;
+		const question = `What does ${word} mean in ${dialectName[dialect]}? Considering the following sentences ${sentence.arabic} ${sentence.english} ${sentence.transliteration} but please do not reveal the entire meaning of the sentence, and dont say anything about the rest of the sentence at all, just use it as a reference to derive the definition.`;
 
 		const res = await fetch('/api/open-ai', {
 			method: 'POST',
@@ -216,7 +224,7 @@
 		<Button onClick={() => (showAnswer = !showAnswer)} type="button">
 			{showAnswer ? 'Hide' : 'Show'} Answer
 		</Button>
-		<AudioButton text={sentence.arabic} dialect="egyptian-arabic">Listen</AudioButton>
+		<AudioButton text={sentence.arabic} dialect={dialect}>Listen</AudioButton>
 		<SaveButton
 			objectToSave={{
 				arabic: sentence.arabic,

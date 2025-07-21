@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { run } from 'svelte/legacy';
-
 	import Button from '$lib/components/Button.svelte';
 	import { type sentenceObjectGroup, type sentenceObjectItem } from '$lib/types/index';
 	import RadioButton from '$lib/components/RadioButton.svelte';

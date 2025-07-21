@@ -18,21 +18,21 @@ const getVoiceConfig = (dialect: string) => {
     case 'fusha':
       return {
         voice: 'Mona',
-        speed: 1.0,
+        speed: 0.9,
         stability: 0.9,
         similarity_boost: 0.9
       };
     case 'egyptian-arabic':
       return {
         voice: 'Haytham',
-        speed: 0.7,
+        speed: 0.9,
         stability: 0.9,
         similarity_boost: 0.9
       };
     case 'levantine':
       return {
         voice: 'Sara - Kind & Expressive',
-        speed: 0.6,
+        speed: 0.9,
         stability: 0.9,
         similarity_boost: 0.9
       };
@@ -40,7 +40,7 @@ const getVoiceConfig = (dialect: string) => {
       // Default to Egyptian voice for backwards compatibility
       return {
         voice: 'Haytham',
-        speed: 0.7,
+        speed: 0.9,
         stability: 0.9,
         similarity_boost: 0.9
       };
@@ -59,8 +59,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		text: text,
     voice_settings: {
       stability: voiceConfig.stability,
-      similarity_boost: voiceConfig.similarity_boost,
-      ...(voiceConfig.speed !== 1.0 && { speaking_rate: voiceConfig.speed })
+      similarity_boost: voiceConfig.similarity_boost
     }
 	});
 
@@ -70,5 +69,10 @@ export const POST: RequestHandler = async ({ request }) => {
 	}
 
 	const content = Buffer.concat(chunks);
-  return new Response(content);
+  return new Response(content, {
+    headers: {
+      'Content-Type': 'audio/mpeg',
+      'X-Playback-Rate': voiceConfig.speed.toString()
+    }
+  });
 };

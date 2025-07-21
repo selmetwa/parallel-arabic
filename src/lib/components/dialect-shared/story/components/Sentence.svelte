@@ -4,7 +4,7 @@
 	import Checkmark from '$lib/components/Checkmark.svelte';
 	import Audio from '$lib/components/Audio.svelte';
 	import AudioButton from '$lib/components/AudioButton.svelte';
-
+	import { type Dialect } from '$lib/types/index';
 	type TWholeSentence = {
 		arabic: TSentence;
 		english: TSentence;
@@ -25,6 +25,7 @@
 		index: any;
 		mode: any;
 		isGenerated?: boolean;
+		dialect: Dialect;
 	}
 
 	let {
@@ -34,7 +35,8 @@
 		classname = '',
 		index,
 		mode,
-		isGenerated
+		isGenerated,
+		dialect
 	}: Props = $props();
 
 	let _sentence = $derived((sentence && type && (type in sentence)) ? sentence[type as keyof TWholeSentence] : { speaker: '', text: '' });
@@ -66,7 +68,7 @@
 			arabic: sentence.arabic.text,
 			english: sentence.english.text,
 			transliteration: sentence.transliteration.text
-		});
+		}, dialect);
 		const message = res.message.message.content;
 
 		setActiveWord({
@@ -130,7 +132,7 @@
 		{/if}
 		{#if !(_sentence && 'audio' in _sentence && _sentence.audio)}
 			<div class="absolute bottom-0 left-0 w-fit">
-				<AudioButton text={_sentence.text}>Play Audio</AudioButton>
+				<AudioButton text={_sentence.text} dialect={dialect}>Play Audio</AudioButton>
 			</div>
 		{/if}
 	{/if}

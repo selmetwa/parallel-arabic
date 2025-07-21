@@ -1,8 +1,8 @@
 <script lang="ts">
-	import SentenceBlock from './components/SentenceBlock.svelte';
+	import SentenceBlock from '$lib/components/dialect-shared/sentences/SentenceBlock.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import RadioButton from '$lib/components/RadioButton.svelte';
-	import SentenceQuiz from './components/SentenceQuiz.svelte';
+	import SentenceQuiz from '$lib/components/dialect-shared/sentences/SentenceQuiz.svelte';
 	import { egyptianSentencesInStore, currentDialect } from '$lib/store/store';
 	import { PUBLIC_PRICE_ID } from '$env/static/public';
 	import { goto } from '$app/navigation';
@@ -290,7 +290,7 @@
 
 	{#if mode === 'write'}
 		<section class="px-3 sm:px-8 max-w-6xl mx-auto py-4">
-			<SentenceBlock {sentence} {resetSentences} />
+			<SentenceBlock {sentence} {resetSentences} dialect="egyptian-arabic" />
 		</section>
 	{/if}
 

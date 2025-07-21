@@ -8,31 +8,34 @@
 </script>
 
 <section class="px-3 mt-6 sm:px-8 max-w-5xl mx-auto">
-  <div class="text-center mb-8">
-    <div class="text-8xl mb-4">📚</div>
-    <h1 class="text-3xl sm:text-4xl text-text-300 font-bold mb-4 tracking-tight">
+  <div class="text-left mb-6">
+    <h1 class="text-3xl sm:text-4xl text-text-300 font-bold mb-1 tracking-tight">
       Modern Standard Arabic (Fusha)
     </h1>
-    <p class="text-text-200 text-lg sm:text-xl leading-snug mb-6">
-      Master formal Arabic used in news, literature, and official communications.
+    <p class="text-text-200 text-lg sm:text-xl leading-snug">
+      Master formal Arabic used in news, literature, and official communications. The foundation of all Arabic dialects.
     </p>
-    
-    <div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-8 max-w-2xl mx-auto">
-      <h2 class="text-2xl text-text-300 font-bold mb-4">Coming Soon!</h2>
-      <p class="text-text-200 leading-relaxed mb-4">
-        We're working hard to bring you comprehensive Modern Standard Arabic lessons. 
-        This will include all the features available in Egyptian Arabic, tailored specifically for formal Arabic.
-      </p>
-      <p class="text-text-200 leading-relaxed">
-        In the meantime, you can start with <a href="/egyptian-arabic" class="text-blue-400 hover:text-blue-300 underline">Egyptian Arabic</a> 
-        or learn the <a href="/alphabet" class="text-blue-400 hover:text-blue-300 underline">Arabic Alphabet</a> which is shared across all dialects.
-      </p>
-    </div>
   </div>
   
-  <div class="text-center">
-    <a href="/" class="inline-block px-6 py-3 bg-tile-500 hover:bg-tile-600 text-text-200 font-medium rounded-lg border-2 border-tile-600 hover:border-tile-500 transition-all duration-300">
-      ← Back to Home
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+    <a href="/fusha/stories" class="group px-3 py-4 flex-col flex gap-1 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
+      <h2 class="text-xl text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">Read Stories</h2>
+      <p class="text-text-300 text-sm font-medium leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">Short stories with translations and AI definitions in formal Arabic.</p>
+    </a>
+    
+    <a href="/fusha/speak" class="group px-3 py-4 flex-col flex gap-1 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
+      <h2 class="text-xl text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">Practice Speaking</h2>
+      <p class="text-text-300 text-sm font-medium leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">Record yourself and get pronunciation feedback for formal Arabic.</p>
+    </a>
+    
+    <a href="/fusha/sentences" class="group px-3 py-4 flex-col flex gap-1 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
+      <h2 class="text-xl text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">Sentence Drills</h2>
+      <p class="text-text-300 text-sm font-medium leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">Build comprehension with AI-generated exercises in Modern Standard Arabic.</p>
+    </a>
+    
+    <a href="/alphabet" class="group px-3 py-4 flex-col flex gap-1 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
+      <h2 class="text-xl text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">Arabic Alphabet</h2>
+      <p class="text-text-300 text-sm font-medium leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">Learn the 28 letters and their connections.</p>
     </a>
   </div>
 </section> 

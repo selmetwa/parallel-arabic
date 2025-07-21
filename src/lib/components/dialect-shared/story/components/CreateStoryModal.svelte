@@ -2,9 +2,16 @@
 	import Button from '$lib/components/Button.svelte';
 	import Modal from '$lib/components/Modal.svelte';
 	import RadioButton from '$lib/components/RadioButton.svelte';
-	import { fushaGeneratedStoryInStore } from '$lib/store/store';
   import { goto } from '$app/navigation';
   import AlphabetCycle from '$lib/components/AlphabetCycle.svelte';
+  import { type Dialect } from '$lib/types/index';
+
+  interface Props {
+    dialect: Dialect;
+	}
+
+  const { dialect }: Props = $props();
+
 	let isOpen = $state(false);
 	let description = $state('');
 	let option = $state('beginner');
@@ -28,20 +35,27 @@
 			body: JSON.stringify({
 				option,
 				description,
-        title: title + '_fusha', // Add dialect suffix
-        dialect: 'fusha' // Specify dialect for story generation
+        title: title + '_' + dialect, // Add dialect suffix
+        dialect: dialect // Specify dialect for story generation
 			})
 		});
 
 		const chatgptres = await res.json();
 
 		isLoading = false;
-    await goto('/fusha/generated-stories/' + chatgptres.storyId);
+    await goto('/' + dialect + '/generated-stories/' + chatgptres.storyId);
 	}
 
 	function setOption(event: any) {
 		option = event.target.value;
 	}
+
+  const dialectName: Record<Dialect, string> = {
+    fusha: 'Modern Standard Arabic',
+    levantine: 'Levantine Arabic',
+    darija: 'Moroccan Darija',
+    'egyptian-arabic': 'Egyptian Arabic'
+  }
 </script>
 
 <Modal {isOpen} handleCloseModal={closeModal} width="600px">
@@ -52,14 +66,14 @@
 			>
 				<AlphabetCycle />
 				<p class="text-2xl text-text-300">
-					Generating your Fusha story, hang tight. <br />
+					Generating your {dialectName[dialect]} story, hang tight. <br />
 					this usually takes a few seconds.
 				</p>
 			</div>
 		{:else}
-			<h1 class="text-2xl font-semibold text-text-300">Create Modern Standard Arabic Story</h1>
+			<h1 class="text-2xl font-semibold text-text-300">Create {dialectName[dialect]} Story</h1>
       <p>
-        <i>Story is AI generated in formal Arabic (Fusha) and may contain mistakes</i>
+        <i>Story is AI generated in {dialectName[dialect]} and may contain mistakes</i>
       </p>
 			<form onsubmit={handleSubmit}>
         <div class="mt-4 flex flex-col">
@@ -127,5 +141,5 @@
 </Modal>
 
 <div class="w-fit mt-2">
-  <Button onClick={openModal} type="button">Create your own Fusha story</Button>
+  <Button onClick={openModal} type="button">Create your own {dialectName[dialect]} story</Button>
 </div> 
