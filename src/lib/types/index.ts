@@ -49,13 +49,15 @@ export type sentenceObjectGroup = {
   answer: sentenceObjectItem
 }
 
-export type Dialect = 'fusha' | 'levantine' | 'darija' | 'egyptian-arabic';
+export type Dialect = 'fusha' | 'levantine' | 'darija' | 'egyptian-arabic' | 'iraqi' | 'khaleeji';
 
 export type DialectName = {
   fusha: 'Modern Standard Arabic',
   levantine: 'Levantine Arabic',
   darija: 'Moroccan Darija',
-  'egyptian-arabic': 'Egyptian Arabic'
+  'egyptian-arabic': 'Egyptian Arabic',
+  iraqi: 'Iraqi Arabic',
+  khaleeji: 'Khaleeji Arabic'
 }
 
 export enum Mode {

@@ -43,6 +43,20 @@ const getVoiceConfig = (dialect: string) => {
         stability: 0.9,
         similarity_boost: 0.9
       };
+    case 'iraqi':
+      return {
+        voice: 'Mona', // Using Levantine voice as fallback for Iraqi
+        speed: 0.9,
+        stability: 0.9,
+        similarity_boost: 0.9
+      };
+    case 'khaleeji':
+      return {
+        voice: 'Ghawi',
+        speed: 0.9,
+        stability: 0.9,
+        similarity_boost: 0.9
+      };
     default:
       // Default to Egyptian voice for backwards compatibility
       return {

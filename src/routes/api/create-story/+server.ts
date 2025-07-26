@@ -93,6 +93,18 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 			description: 'Please use Moroccan Darija dialect as spoken in Morocco. Use natural conversational Moroccan Arabic expressions and vocabulary.',
 			examples: [], // No pre-built examples for Darija yet
 			commonWords: [] // No specific word list for Darija yet
+		},
+		'iraqi': {
+			name: 'IRAQI ARABIC',
+			description: 'Please use Iraqi Arabic dialect as spoken in Iraq. Use natural conversational Iraqi expressions and vocabulary.',
+			examples: [], // No pre-built examples for Iraqi yet
+			commonWords: [] // No specific word list for Iraqi yet
+		},
+		'khaleeji': {
+			name: 'KHALEEJI ARABIC',
+			description: 'Please use Khaleeji Arabic dialect as spoken in the Gulf states (UAE, Saudi Arabia, Kuwait, Bahrain, Qatar, Oman). Use natural conversational Gulf Arabic expressions and vocabulary.',
+			examples: [], // No pre-built examples for Khaleeji yet
+			commonWords: [] // No specific word list for Khaleeji yet
 		}
 	} as const;
 
