@@ -79,6 +79,20 @@ export const POST: RequestHandler = async ({ request }) => {
       wordList: [], // No specific word list for Darija yet
       commonWordsInstruction: '',
       wordListInstruction: 'Please use vocabulary common in Moroccan Darija conversations.'
+    },
+    'iraqi': {
+      name: 'IRAQI ARABIC',
+      description: 'Please make sure that the arabic provided is in the IRAQI dialect as spoken in Iraq. Use natural conversational Iraqi expressions and vocabulary.',
+      wordList: [], // No specific word list for Iraqi yet
+      commonWordsInstruction: '',
+      wordListInstruction: 'Please use vocabulary common in Iraqi Arabic conversations.'
+    },
+    'khaleeji': {
+      name: 'KHALEEJI ARABIC',
+      description: 'Please make sure that the arabic provided is in the KHALEEJI dialect as spoken in the Gulf states (UAE, Saudi Arabia, Kuwait, Bahrain, Qatar, Oman). Use natural conversational Gulf Arabic expressions and vocabulary.',
+      wordList: [], // No specific word list for Khaleeji yet
+      commonWordsInstruction: '',
+      wordListInstruction: 'Please use vocabulary common in Khaleeji Arabic conversations.'
     }
   } as const;
 
