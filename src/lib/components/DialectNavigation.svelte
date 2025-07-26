@@ -3,7 +3,7 @@
   import { onMount } from 'svelte';
   import { page } from '$app/stores';
 
-  type DialectKey = 'egyptian-arabic' | 'fusha' | 'levantine' | 'darija';
+  type DialectKey = 'egyptian-arabic' | 'fusha' | 'levantine' | 'darija' | 'iraqi' | 'khaleeji';
 
   // Update dialect based on current route
   onMount(() => {
@@ -17,6 +17,10 @@
         currentDialect.set('levantine');
       } else if (path.startsWith('/darija')) {
         currentDialect.set('darija');
+      } else if (path.startsWith('/iraqi')) {
+        currentDialect.set('iraqi');
+      } else if (path.startsWith('/khaleeji')) {
+        currentDialect.set('khaleeji');
       } else {
         currentDialect.set('');
       }
@@ -50,6 +54,16 @@
       { href: '/darija/stories', label: 'Stories' },
       { href: '/darija/speak', label: 'Speaking' },
       { href: '/darija/sentences', label: 'Sentences' }
+    ],
+    'iraqi': [
+      { href: '/iraqi/stories', label: 'Stories' },
+      { href: '/iraqi/speak', label: 'Speaking' },
+      { href: '/iraqi/sentences', label: 'Sentences' }
+    ],
+    'khaleeji': [
+      { href: '/khaleeji/stories', label: 'Stories' },
+      { href: '/khaleeji/speak', label: 'Speaking' },
+      { href: '/khaleeji/sentences', label: 'Sentences' }
     ]
   };
 
@@ -57,7 +71,9 @@
     'egyptian-arabic': 'Egyptian Arabic',
     'fusha': 'Modern Standard Arabic (Fusha)',
     'levantine': 'Levantine Arabic',
-    'darija': 'Darija'
+    'darija': 'Darija',
+    'iraqi': 'Iraqi Arabic',
+    'khaleeji': 'Khaleeji Arabic'
   };
 </script>
 
