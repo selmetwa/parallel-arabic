@@ -34,6 +34,25 @@
         continue
       }
 
+      // Filter to only show Egyptian Arabic stories
+      // Include stories that either:
+      // 1. Don't have any dialect suffix (default Egyptian Arabic)
+      // 2. Explicitly end with _egyptian-arabic
+      // Exclude stories that end with other dialect suffixes
+      const hasOtherDialectSuffix = story.title && (
+        story.title.endsWith('_darija') ||
+        story.title.endsWith('_levantine') ||
+        story.title.endsWith('_fusha') ||
+        story.title.endsWith('_iraqi') ||
+        story.title.endsWith('_khaleeji')
+      );
+
+      // Skip stories that belong to other dialects
+      if (hasOtherDialectSuffix) {
+        $inspect('skipping story:', story.title)
+        continue
+      }
+
       // Filter valid sentences and get the count
       const validSentences = filterValidSentences(a.sentences || []);
 
