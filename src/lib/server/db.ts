@@ -2,9 +2,8 @@ import sqlite from 'better-sqlite3';
 import { Kysely, SqliteDialect } from 'kysely';
 import type { ColumnType } from 'kysely';
 import { readFileSync } from 'fs';
-import { DB_PATH } from '$env/static/private';
 
-export const sqliteDatabase = sqlite(DB_PATH); // replace with 'data/db.sqlite' for db migration
+export const sqliteDatabase = sqlite('/data/db.sqlite'); // replace with 'data/db.sqlite' for db migration
 
 sqliteDatabase.exec(readFileSync('schema.sql', 'utf8'));
 
@@ -34,6 +33,7 @@ type GeneratedStoryTable = {
   description: string;
   difficulty: string;
   story_body: string; // SQLite stores JSON as strings
+  dialect: string;
   created_at: ColumnType<bigint, number>;
 }
 
