@@ -6,6 +6,8 @@ import { v4 as uuidv4 } from 'uuid';
 import { db } from '../../../lib/server/db';
 import { stories } from '$lib/constants/stories/index';
 import { commonWords } from '$lib/constants/common-words';
+import { getSpeakerNames } from '$lib/utils/voice-config';
+import { generateStoryAudio } from '../../../lib/server/audio-generation';
 
 export const POST: RequestHandler = async ({ request, locals }) => {
 	const openai = new OpenAI({ apiKey: env['OPEN_API_KEY'] });
@@ -25,6 +27,9 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 	const storyType = data.storyType || 'story'; // 'story' or 'conversation'
 	const sentenceCount = data.sentenceCount || 25; // Default to 25 sentences
 	const theme = data.theme || ''; // Optional theme
+
+	// Generate speaker names if it's a conversation
+	const speakerNames = storyType === 'conversation' ? getSpeakerNames(dialect) : null;
 
 	// Generate a simple title based on theme and story type
 	const generateTitle = (theme: string, storyType: string, dialect: string) => {
@@ -179,7 +184,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		Here is an example of a conversation in ${config.name} to give you an idea of the dialect:
 		${config.examples.map((exampleSet: any) => 
 			exampleSet.map((sentence: any) => 
-				`${sentence.arabic.speaker}: ${sentence.arabic.text} (${sentence.transliteration.text}) - "${sentence.english.text}"`
+				`${sentence.arabic.speaker || 'Speaker'}: ${sentence.arabic.text} (${sentence.transliteration.text}) - "${sentence.english.text}"`
 			).join('\n')
 		).join('\n')}`;
 	}
@@ -190,7 +195,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		commonWordsSection = `
 		Here are some of the most common words in ${config.name}:
 		${config.commonWords.map((word: any) => 
-			`${word.word} (${word.franco}) means "${word.en}"`
+			`${word.word} (${word.franco || 'N/A'}) means "${word.en}"`
 		).join('. ')}`;
 	}
 
@@ -208,10 +213,13 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     ${storyType === 'conversation' ? `
     CONVERSATION SPECIFIC REQUIREMENTS:
     - Format as a dialogue between 2 people with clear speaker labels
+    - Use EXACTLY these two speaker names: "${speakerNames?.speaker1}" and "${speakerNames?.speaker2}"
+    - Alternate between the two speakers naturally throughout the conversation
     - Include natural conversational elements like greetings, questions, responses
     - Make it practical and useful for language learners
     - Use realistic, everyday language appropriate for the scenario
     - Include cultural context and appropriate social interactions
+    - Each sentence should include the speaker's name
     ` : `
     STORY SPECIFIC REQUIREMENTS:
     - Create a narrative with clear beginning, middle, and end
@@ -286,28 +294,20 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 					description: data.description,
 					difficulty: data.option,
 					story_body: story, // Now guaranteed to be a string
+					dialect: dialect, // Add the dialect from the request
 					created_at: new Date().getTime()
 				})
 				.executeTakeFirst();
 
 			// Generate audio for the story in the background
 			try {
-				const audioResponse = await fetch(`${request.url.replace('/create-story', '/generate-story-audio')}`, {
-					method: 'POST',
-					headers: {
-						'Content-Type': 'application/json',
-					},
-					body: JSON.stringify({
-						storyId: storyId,
-						dialect: dialect
-					})
-				});
-
-				if (audioResponse.ok) {
-					const audioResult = await audioResponse.json();
+				// Use direct function call instead of HTTP request to avoid routing issues on Fly.io
+				const audioResult = await generateStoryAudio(storyId, dialect);
+				
+				if (audioResult.success) {
 					console.log('Audio generated successfully:', audioResult.audioPath);
 				} else {
-					console.warn('Audio generation failed:', await audioResponse.text());
+					console.warn('Audio generation failed:', audioResult.error);
 				}
 			} catch (audioError) {
 				// Don't fail the story creation if audio generation fails
@@ -316,10 +316,12 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 
 			return json({ storyId: storyId });
 		} catch (e) {
+      console.log({ e });
 			console.error('Database or JSON parsing error:', e);
 			return error(500, { message: 'Something went wrong' });
 		}
 	} catch (e) {
+    console.log({ e });
 		return error(500, { message: 'Something went wrong' });
 	}
 };

@@ -20,8 +20,15 @@ CREATE TABLE if not exists generated_story (
     description TEXT NOT NULL,
     difficulty INTEGER NOT NULL,
     story_body JSON NOT NULL,
+    dialect VARCHAR(50) NOT NULL DEFAULT 'egyptian-arabic',
     created_at BIGINT NOT NULL
 );
+
+-- Indexes for better query performance
+-- CREATE INDEX IF NOT EXISTS idx_generated_story_user_id ON generated_story(user_id);
+-- CREATE INDEX IF NOT EXISTS idx_generated_story_created_at ON generated_story(created_at);
+-- CREATE INDEX IF NOT EXISTS idx_generated_story_dialect ON generated_story(dialect);
+-- CREATE INDEX IF NOT EXISTS idx_generated_story_user_dialect ON generated_story(user_id, dialect);
 
 CREATE TABLE if not exists user_key (
     id VARCHAR(255) PRIMARY KEY,

@@ -1,14 +1,24 @@
 import fs from 'fs';
 import path from 'path';
 
+// Helper function to get the base data directory
+function getDataDirectory(): string {
+	// Check if we're in production (Fly.io) or development
+	// return process.env.NODE_ENV === 'production' ? '/data' : 'data';
+  // return '/data';
+  return 'data' // for local development
+}
+
 export function getStoryAudioPath(storyId: string, dialect: string): string | null {
   try {
     const dialectDir = dialect || 'egyptian-arabic';
     const fileName = `${storyId}.mp3`;
-    const filePath = path.join(process.cwd(), 'static', 'audio', 'generated', dialectDir, fileName);
+    const dataDir = getDataDirectory();
+    const filePath = path.join(dataDir, 'audio', dialectDir, fileName);
     
     if (fs.existsSync(filePath)) {
-      return `/audio/generated/${dialectDir}/${fileName}`;
+      // Return the API endpoint path instead of direct file path
+      return `/api/audio/${dialectDir}/${fileName}`;
     }
     
     return null;

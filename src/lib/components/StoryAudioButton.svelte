@@ -156,16 +156,7 @@
   const speedOptions = [0.5, 0.7, 0.8, 0.9, 1];
 </script>
 
-{#if isChecking}
-  <div class="flex items-center gap-2 text-sm text-text-300">
-    <div class="h-4 w-4 animate-spin rounded-full border-2 border-text-300 border-t-transparent"></div>
-    {#if pollCount > 0}
-      Generating audio... ({pollCount}/30s)
-    {:else}
-      Checking audio...
-    {/if}
-  </div>
-{:else if audioExists}
+{#if audioExists}
   <div class="flex flex-col gap-2">
     <Button
       onClick={toggleStoryAudio}

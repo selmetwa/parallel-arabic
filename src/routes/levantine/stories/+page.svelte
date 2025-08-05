@@ -40,11 +40,6 @@
         continue
       }
 
-      // Only include stories that end with _levantine
-      if (!story.title?.endsWith('_levantine')) {
-        continue
-      }
-
       // Filter valid sentences and get the count
       const validSentences = filterValidSentences(a.sentences || []);
 
