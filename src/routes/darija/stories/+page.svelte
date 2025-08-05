@@ -29,7 +29,6 @@
     );
   }
 
-  // Filter stories for darija dialect and remove the dialect suffix from title
   let darijaGeneratedStories = $derived.by(() => {
     const output = []
 
@@ -40,16 +39,8 @@
         continue
       }
 
-      // Only include stories that end with _darija
-      if (!story.title?.endsWith('_darija')) {
-        continue
-      }
-
       // Filter valid sentences and get the count
       const validSentences = filterValidSentences(a.sentences || []);
-
-      // Remove the _darija suffix from the title for display
-      const displayTitle = story.title.replace('_darija', '');
 
       output.push({
         id: story.id,

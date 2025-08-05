@@ -10,6 +10,7 @@
   import { Mode, type KeyWord } from '$lib/types/index';
 	import type { PageData } from './$types';
 	import AudioButton from '$lib/components/AudioButton.svelte';
+  import StoryAudioButton from '$lib/components/StoryAudioButton.svelte';
   import { currentDialect } from '$lib/store/store';
 
   interface Props { 
@@ -195,11 +196,14 @@
       {story?.title?.arabic} / {story?.title?.english}
     </h1>
     <div class="flex flex-col items-start justify-between sm:flex-row sm:items-center">
-      <div class="w-fit">
+      <div class="flex w-fit gap-2">
           {#if mode === Mode.SentanceView && sentences[index]}
           <AudioButton text={sentences[index].arabic.text} dialect="khaleeji">
             Play Audio
           </AudioButton>
+          {/if}
+          {#if data.story?.[0]?.id}
+          <StoryAudioButton storyId={data.story[0].id} dialect="khaleeji" />
           {/if}
       </div>
       <fieldset class="flex w-full place-content-end">

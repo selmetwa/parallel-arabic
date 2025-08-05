@@ -30,7 +30,6 @@
     );
   }
 
-  // Filter stories for iraqi dialect and remove the dialect suffix from title
   let iraqiGeneratedStories = $derived.by(() => {
     const output = []
 
@@ -41,16 +40,8 @@
         continue
       }
 
-      // Only include stories that end with _iraqi
-      if (!story.title?.endsWith('_iraqi')) {
-        continue
-      }
-
       // Filter valid sentences and get the count
       const validSentences = filterValidSentences(a.sentences || []);
-
-      // Remove the _iraqi suffix from the title for display
-      const displayTitle = story.title.replace('_iraqi', '');
 
       output.push({
         id: story.id,
@@ -78,18 +69,18 @@
 <section class="px-3 mt-6 sm:px-8 max-w-5xl mx-auto">
   <div class="text-left mb-6">
     <h1 class="text-3xl sm:text-4xl text-text-300 font-bold mb-1 tracking-tight">iraqi Stories</h1>
-    <p class="text-text-200 text-lg sm:text-xl leading-snug">Practice reading Modern Standard Arabic with AI-generated stories tailored to formal Arabic style.</p>
+    <p class="text-text-200 text-lg sm:text-xl leading-snug">Practice reading Iraqi Arabic with AI-generated stories tailored to formal Arabic style.</p>
     <CreateStoryModal dialect="iraqi" data={data}></CreateStoryModal>
   </div>
   
   {#if iraqiGeneratedStories.length === 0}
     <div class="text-center py-12">
       <div class="text-6xl mb-4">📚</div>
-      <h2 class="text-2xl text-text-300 font-bold mb-4">No iraqi Stories Yet</h2>
-      <p class="text-text-200 mb-6">Create your first Modern Standard Arabic story to get started!</p>
+      <h2 class="text-2xl text-text-300 font-bold mb-4">No Iraqi Stories Yet</h2>
+      <p class="text-text-200 mb-6">Create your first Iraqi Arabic story to get started!</p>
     </div>
   {:else}
-    <h2 class="text-2xl text-text-300 font-bold mb-4">AI-Generated iraqi Stories</h2>
+    <h2 class="text-2xl text-text-300 font-bold mb-4">AI-Generated Iraqi Stories</h2>
     <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 auto-rows-fr">
       {#each iraqiGeneratedStories as story}
       <li class="flex">

@@ -28,18 +28,18 @@
     const output = []
 
     for (const story of data.user_generated_stories) {
-      const a = JSON.parse(story.story_body)
+      const storyBody = JSON.parse(story.story_body)
 
       if (BLOCKED_STORY_IDS.includes(story.id)) {
         continue
       }
 
       // Filter valid sentences and get the count
-      const validSentences = filterValidSentences(a.sentences || []);
+      const validSentences = filterValidSentences(storyBody.sentences || []);
 
       output.push({
         id: story.id,
-        title: `${a.title?.english || ''} / ${a.title?.arabic || ''}`,
+        title: `${storyBody.title?.english || ''} / ${storyBody.title?.arabic || ''}`,
         description: story.description,
         createdAt: story.created_at,
         difficulty: story.difficulty,

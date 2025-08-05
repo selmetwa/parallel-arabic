@@ -41,11 +41,6 @@
         continue
       }
 
-      // Only include stories that end with _khaleeji
-      if (!story.title?.endsWith('_khaleeji')) {
-        continue
-      }
-
       // Filter valid sentences and get the count
       const validSentences = filterValidSentences(a.sentences || []);
 
@@ -85,8 +80,8 @@
   {#if khaleejiGeneratedStories.length === 0}
     <div class="text-center py-12">
       <div class="text-6xl mb-4">📚</div>
-      <h2 class="text-2xl text-text-300 font-bold mb-4">No khaleeji Stories Yet</h2>
-      <p class="text-text-200 mb-6">Create your first Modern Standard Arabic story to get started!</p>
+      <h2 class="text-2xl text-text-300 font-bold mb-4">No Khaleeji Stories Yet</h2>
+      <p class="text-text-200 mb-6">Create your first Khaleeji Arabic story to get started!</p>
     </div>
   {:else}
     <h2 class="text-2xl text-text-300 font-bold mb-4">AI-Generated khaleeji Stories</h2>
