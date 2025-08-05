@@ -30,7 +30,6 @@
     );
   }
 
-  // Filter stories for Fusha dialect and remove the dialect suffix from title
   let fushaGeneratedStories = $derived.by(() => {
     const output = []
 
@@ -41,16 +40,8 @@
         continue
       }
 
-      // Only include stories that end with _fusha
-      if (!story.title?.endsWith('_fusha')) {
-        continue
-      }
-
       // Filter valid sentences and get the count
       const validSentences = filterValidSentences(a.sentences || []);
-
-      // Remove the _fusha suffix from the title for display
-      const displayTitle = story.title.replace('_fusha', '');
 
       output.push({
         id: story.id,

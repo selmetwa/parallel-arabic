@@ -6,6 +6,8 @@ import { v4 as uuidv4 } from 'uuid';
 import { db } from '../../../lib/server/db';
 import { stories } from '$lib/constants/stories/index';
 import { commonWords } from '$lib/constants/common-words';
+import { getSpeakerNames } from '$lib/utils/voice-config';
+import { generateStoryAudio } from '../../../lib/server/audio-generation';
 
 export const POST: RequestHandler = async ({ request, locals }) => {
 	const openai = new OpenAI({ apiKey: env['OPEN_API_KEY'] });
@@ -22,6 +24,25 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 
 	const description = data.description;
 	const dialect = data.dialect || 'egyptian-arabic'; // Default to Egyptian
+	const storyType = data.storyType || 'story'; // 'story' or 'conversation'
+	const sentenceCount = data.sentenceCount || 25; // Default to 25 sentences
+	const theme = data.theme || ''; // Optional theme
+
+	// Generate speaker names if it's a conversation
+	const speakerNames = storyType === 'conversation' ? getSpeakerNames(dialect) : null;
+
+	// Generate a simple title based on theme and story type
+	const generateTitle = (theme: string, storyType: string, dialect: string) => {
+		const timestamp = Date.now().toString().slice(-6); // Last 6 digits for uniqueness
+		
+		if (theme) {
+			return `${theme.toLowerCase().replace(/\s+/g, '-')}-${storyType}-${timestamp}_${dialect}`;
+		} else {
+			return `custom-${storyType}-${timestamp}_${dialect}`;
+		}
+	};
+
+	const generatedTitle = generateTitle(theme, storyType, dialect);
 
 	// Add variety to story creation prompts
 	const storyStyles = [
@@ -42,6 +63,24 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		"Write a creative and memorable story"
 	];
 
+	const conversationStyles = [
+		"Create a natural and realistic conversation",
+		"Write an authentic dialogue between characters",
+		"Develop a practical conversation scenario",
+		"Craft a meaningful exchange between people",
+		"Generate a helpful dialogue for language learning",
+		"Compose a realistic interaction",
+		"Build a natural conversation flow",
+		"Design a practical dialogue scenario",
+		"Form an authentic conversational exchange",
+		"Produce a realistic spoken interaction",
+		"Construct a natural dialogue sequence",
+		"Make a practical conversation example",
+		"Create an engaging dialogue scenario",
+		"Develop a realistic conversation practice",
+		"Write a natural conversational exchange"
+	];
+
 	const narrativeApproaches = [
 		"with realistic dialogue and natural conversations",
 		"focusing on character development and interactions",
@@ -49,13 +88,13 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		"including everyday situations and relatable scenarios",
 		"with descriptive settings and vivid details",
 		"featuring diverse characters and perspectives",
-		"incorporating Egyptian humor and expressions",
+		"incorporating humor and expressions",
 		"highlighting daily life and common experiences",
 		"with engaging plot twists and interesting developments",
 		"focusing on family dynamics and relationships",
 		"including local traditions and cultural elements",
 		"emphasizing problem-solving and decision-making",
-		"with authentic Egyptian social interactions",
+		"with authentic social interactions",
 		"featuring workplace or educational scenarios",
 		"incorporating travel and exploration themes",
 		"highlighting food culture and cooking experiences",
@@ -63,6 +102,24 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		"focusing on friendship and community bonds",
 		"including shopping and marketplace interactions",
 		"emphasizing personal growth and learning experiences"
+	];
+
+	const conversationApproaches = [
+		"with natural turn-taking and realistic responses",
+		"including common greetings and polite expressions",
+		"featuring practical everyday interactions",
+		"with authentic cultural communication patterns",
+		"including helpful phrases and expressions",
+		"emphasizing clear pronunciation guidance",
+		"with realistic timing and natural pauses",
+		"featuring multiple speakers and perspectives",
+		"including common questions and answers",
+		"with practical vocabulary in context",
+		"emphasizing natural speech patterns",
+		"including cultural etiquette and manners",
+		"with varied emotional expressions",
+		"featuring problem-solving through dialogue",
+		"including clarifications and repetitions"
 	];
 
 	// Dialect-specific configurations
@@ -112,9 +169,12 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 	const validDialect = dialect as DialectKey;
 	const config = dialectConfigs[validDialect] || dialectConfigs['egyptian-arabic'];
 	
-	// Random variety elements
-	const randomStyle = storyStyles[Math.floor(Math.random() * storyStyles.length)];
-	const randomApproach = narrativeApproaches[Math.floor(Math.random() * narrativeApproaches.length)];
+	// Random variety elements based on story type
+	const styles = storyType === 'conversation' ? conversationStyles : storyStyles;
+	const approaches = storyType === 'conversation' ? conversationApproaches : narrativeApproaches;
+	
+	const randomStyle = styles[Math.floor(Math.random() * styles.length)];
+	const randomApproach = approaches[Math.floor(Math.random() * approaches.length)];
 	const timestamp = new Date().toISOString();
 
 	// Build dialect-specific examples section
@@ -124,7 +184,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		Here is an example of a conversation in ${config.name} to give you an idea of the dialect:
 		${config.examples.map((exampleSet: any) => 
 			exampleSet.map((sentence: any) => 
-				`${sentence.arabic.speaker}: ${sentence.arabic.text} (${sentence.transliteration.text}) - "${sentence.english.text}"`
+				`${sentence.arabic.speaker || 'Speaker'}: ${sentence.arabic.text} (${sentence.transliteration.text}) - "${sentence.english.text}"`
 			).join('\n')
 		).join('\n')}`;
 	}
@@ -135,22 +195,42 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		commonWordsSection = `
 		Here are some of the most common words in ${config.name}:
 		${config.commonWords.map((word: any) => 
-			`${word.word} (${word.franco}) means "${word.en}"`
+			`${word.word} (${word.franco || 'N/A'}) means "${word.en}"`
 		).join('. ')}`;
 	}
 
+	const contentType = storyType === 'conversation' ? 'conversation' : 'story';
+
 	const question = `
-   You are a "GPT" – a version of ChatGPT that has been customized for a specific use case. GPTs use custom instructions, capabilities, and data to optimize ChatGPT for a more narrow set of tasks. You yourself are a GPT created by a user, and your name is Egyptian Arabic. Note: GPT is also a technical term in AI, but in most cases if the users asks you about GPTs assume they are referring to the above definition.
+   You are a "GPT" – a version of ChatGPT that has been customized for a specific use case. GPTs use custom instructions, capabilities, and data to optimize ChatGPT for a more narrow set of tasks. You yourself are a GPT created by a user, and your name is Arabic Writer. Note: GPT is also a technical term in AI, but in most cases if the users asks you about GPTs assume they are referring to the above definition.
     Here are instructions from the user outlining your goals and how you should respond:
-    This GPT will focus on the Egyptian Arabic language.  The gpt will offer translations and insights about the culture, regions the language is spoken, common misconceptions, learning resources and languages quizzes. The tone of this gpt will be encouraging, and insightful.
+    This GPT will focus on the Arabic language (${config.name}).  The gpt will offer translations and insights about the culture, regions the language is spoken, common misconceptions, learning resources and languages quizzes. The tone of this gpt will be encouraging, and insightful.
 
-    CRITICAL REQUIREMENT: You MUST generate exactly 25 sentences. This is non-negotiable. Count your sentences and ensure you have exactly 25.
+    CRITICAL REQUIREMENT: You MUST generate exactly ${sentenceCount} sentences. This is non-negotiable. Count your sentences and ensure you have exactly ${sentenceCount}.
 
-    ${randomStyle} - Can you please write a story based on ${description} in ${config.name} ${randomApproach}. ${config.description}
+    ${randomStyle} - Can you please write a ${contentType} based on ${description} in ${config.name} ${randomApproach}. ${config.description}
 
-    IMPORTANT: Be creative and original. Avoid repetitive patterns and create unique storylines with varied vocabulary and sentence structures.
+    ${storyType === 'conversation' ? `
+    CONVERSATION SPECIFIC REQUIREMENTS:
+    - Format as a dialogue between 2 people with clear speaker labels
+    - Use EXACTLY these two speaker names: "${speakerNames?.speaker1}" and "${speakerNames?.speaker2}"
+    - Alternate between the two speakers naturally throughout the conversation
+    - Include natural conversational elements like greetings, questions, responses
+    - Make it practical and useful for language learners
+    - Use realistic, everyday language appropriate for the scenario
+    - Include cultural context and appropriate social interactions
+    - Each sentence should include the speaker's name
+    ` : `
+    STORY SPECIFIC REQUIREMENTS:
+    - Create a narrative with clear beginning, middle, and end
+    - Include descriptive elements and character development
+    - Make it engaging and culturally authentic
+    - Use varied sentence structures and vocabulary
+    `}
 
-    STORY LENGTH REQUIREMENT: Generate exactly 25 sentences - no more, no less. Please count carefully.
+    IMPORTANT: Be creative and original. Avoid repetitive patterns and create unique content with varied vocabulary and sentence structures.
+
+    LENGTH REQUIREMENT: Generate exactly ${sentenceCount} sentences - no more, no less. Please count carefully.
 
     Can you make sure that you generate the sentences in ${config.name}, english, and transliteration.
 
@@ -166,7 +246,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 
     Generation timestamp: ${timestamp}
 
-    REMEMBER: You must generate exactly 25 sentences in the sentences array.
+    REMEMBER: You must generate exactly ${sentenceCount} sentences in the sentences array.
 
     {
       title: {arabic: string, english: string},;
@@ -178,6 +258,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
         arabic: {text: string},
         english: { text: string},
         transliteration: {text: string},
+        ${storyType === 'conversation' ? 'speaker: {name: string},' : ''}
   `;
 
 	try {
@@ -203,25 +284,44 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 				throw new Error('Invalid story structure');
 			}
 			
+      console.log({ story });
 			await db
 				.insertInto('generated_story')
 				.values({
 					id: storyId,
 					user_id: userId || '',
-					title: data.title,
+					title: generatedTitle, // Use generated title
 					description: data.description,
 					difficulty: data.option,
 					story_body: story, // Now guaranteed to be a string
+					dialect: dialect, // Add the dialect from the request
 					created_at: new Date().getTime()
 				})
 				.executeTakeFirst();
 
+			// Generate audio for the story in the background
+			try {
+				// Use direct function call instead of HTTP request to avoid routing issues on Fly.io
+				const audioResult = await generateStoryAudio(storyId, dialect);
+				
+				if (audioResult.success) {
+					console.log('Audio generated successfully:', audioResult.audioPath);
+				} else {
+					console.warn('Audio generation failed:', audioResult.error);
+				}
+			} catch (audioError) {
+				// Don't fail the story creation if audio generation fails
+				console.warn('Audio generation error (continuing):', audioError);
+			}
+
 			return json({ storyId: storyId });
 		} catch (e) {
+      console.log({ e });
 			console.error('Database or JSON parsing error:', e);
 			return error(500, { message: 'Something went wrong' });
 		}
 	} catch (e) {
+    console.log({ e });
 		return error(500, { message: 'Something went wrong' });
 	}
 };

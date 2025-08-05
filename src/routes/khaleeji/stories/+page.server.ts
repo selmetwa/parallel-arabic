@@ -6,7 +6,12 @@ export const load = async ({ locals }) => {
   const userId = session && session.user.userId || null;
 
   const hasActiveSubscription = await getUserHasActiveSubscription(userId ?? "");
-  const user_generated_stories = await db.selectFrom('generated_story').selectAll().execute();
+  const user_generated_stories = await db
+    .selectFrom('generated_story')
+    .selectAll()
+    .where('dialect', '=', 'khaleeji')
+    .orderBy('created_at', 'desc')
+    .execute();
 
   return {
     hasActiveSubscription,

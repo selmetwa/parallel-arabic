@@ -8,7 +8,7 @@ export const load = async ({ params, locals }) => {
 
   const story = await db.selectFrom('generated_story').selectAll().where('id', '=', params.story).execute();
 
-  if (BLOCKED_STORY_IDS.includes(story?.[0].id)) {
+  if (BLOCKED_STORY_IDS.includes(story?.[0]?.id)) {
     throw error(404, 'This story is blocked');
   }
 

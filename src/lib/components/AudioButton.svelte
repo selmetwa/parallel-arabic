@@ -10,9 +10,17 @@
   } = $props();
 
 	let isLoading = $state(false);
+	let playbackRate = $state(0.9);
+	let currentSound: Howl | null = null;
 
 	const speakArabic = async () => {
 		isLoading = true;
+		
+		// Stop any currently playing sound
+		if (currentSound) {
+			currentSound.stop();
+		}
+		
 		const res = await fetch('/api/text-to-speech', {
 			method: 'POST',
 			headers: {
@@ -22,7 +30,7 @@
 		});
 
 		// Get playback rate from response headers
-		const playbackRate = parseFloat(res.headers.get('X-Playback-Rate') || '1.0');
+		const serverPlaybackRate = parseFloat(res.headers.get('X-Playback-Rate') || '1.0');
 
 		// Convert response to a blob
 		const audioBlob = await res.blob();
@@ -31,17 +39,17 @@
 		const audioUrl = URL.createObjectURL(audioBlob);
 
 		// Create a Howl instance to play the audio
-		const sound = new Howl({
+		currentSound = new Howl({
 			src: [audioUrl],
 			autoplay: true,
-			rate: playbackRate,
+			rate: serverPlaybackRate * playbackRate, // Apply both server and user playback rates
 			format: ['mp3'] // or 'wav', based on the format of the returned blob
 		});
 
 		isLoading = false;
 
 		// Play the audio
-		sound.play();
+		currentSound.play();
 	};
 </script>
 

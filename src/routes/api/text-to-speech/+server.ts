@@ -1,6 +1,7 @@
 import { ElevenLabsClient } from 'elevenlabs';
 import { env } from '$env/dynamic/private';
 import type { RequestHandler } from './$types';
+import { getVoiceConfig } from '$lib/utils/voice-config';
 
 const ELEVENLABS_API_KEY = env.ELEVENLABS_API_KEY;
 
@@ -11,62 +12,6 @@ if (!ELEVENLABS_API_KEY) {
 const client = new ElevenLabsClient({
 	apiKey: ELEVENLABS_API_KEY
 });
-
-// Dialect-specific voice configuration
-const getVoiceConfig = (dialect: string) => {
-  switch (dialect) {
-    case 'fusha':
-      return {
-        voice: 'Mona',
-        speed: 0.9,
-        stability: 0.9,
-        similarity_boost: 0.9
-      };
-    case 'egyptian-arabic':
-      return {
-        voice: 'Haytham',
-        speed: 0.9,
-        stability: 0.9,
-        similarity_boost: 0.9
-      };
-    case 'levantine':
-      return {
-        voice: 'Sara - Kind & Expressive',
-        speed: 0.9,
-        stability: 0.9,
-        similarity_boost: 0.9
-      };
-    case 'darija':
-      return {
-        voice: 'Ghizlane - Moroccan Darija Dialect',
-        speed: 0.9,
-        stability: 0.9,
-        similarity_boost: 0.9
-      };
-    case 'iraqi':
-      return {
-        voice: 'Mona', // Using Levantine voice as fallback for Iraqi
-        speed: 0.9,
-        stability: 0.9,
-        similarity_boost: 0.9
-      };
-    case 'khaleeji':
-      return {
-        voice: 'Ghawi',
-        speed: 0.9,
-        stability: 0.9,
-        similarity_boost: 0.9
-      };
-    default:
-      // Default to Egyptian voice for backwards compatibility
-      return {
-        voice: 'Haytham',
-        speed: 0.9,
-        stability: 0.9,
-        similarity_boost: 0.9
-      };
-  }
-};
 
 export const POST: RequestHandler = async ({ request }) => {
 	const data = await request.json();
@@ -93,7 +38,6 @@ export const POST: RequestHandler = async ({ request }) => {
   return new Response(content, {
     headers: {
       'Content-Type': 'audio/mpeg',
-      'X-Playback-Rate': voiceConfig.speed.toString()
     }
   });
 };
