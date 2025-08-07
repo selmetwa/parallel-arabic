@@ -3,7 +3,7 @@ import { Kysely, SqliteDialect } from 'kysely';
 import type { ColumnType } from 'kysely';
 import { readFileSync } from 'fs';
 
-export const sqliteDatabase = sqlite('/data/db.sqlite'); // replace with 'data/db.sqlite' for db migration
+export const sqliteDatabase = sqlite('data/db.sqlite'); // replace with 'data/db.sqlite' for db migration
 
 sqliteDatabase.exec(readFileSync('schema.sql', 'utf8'));
 

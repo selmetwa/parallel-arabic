@@ -9,6 +9,7 @@
 	import Button from '$lib/components/Button.svelte';
   import Footer from "$lib/components/Footer.svelte";
   import RadioButton from '$lib/components/RadioButton.svelte';
+  import ChatWidget from '$lib/components/ChatWidget.svelte';
 
   let { data, children } = $props();
 	let isOpen = $state(false);
@@ -114,6 +115,9 @@
 			</div>
 		</aside>
 	</div>
+
+  <!-- Chat Widget - only shows on desktop -->
+  <ChatWidget />
 
   <style>
     main {
