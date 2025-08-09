@@ -26,23 +26,25 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 	const dialect = data.dialect || 'egyptian-arabic'; // Default to Egyptian
 	const storyType = data.storyType || 'story'; // 'story' or 'conversation'
 	const sentenceCount = data.sentenceCount || 25; // Default to 25 sentences
-	const theme = data.theme || ''; // Optional theme
+	const learningTopics = data.learningTopics || []; // Array of selected learning topics
+	const vocabularyWords = data.vocabularyWords || ''; // Vocabulary words to feature
 
 	// Generate speaker names if it's a conversation
 	const speakerNames = storyType === 'conversation' ? getSpeakerNames(dialect) : null;
 
-	// Generate a simple title based on theme and story type
-	const generateTitle = (theme: string, storyType: string, dialect: string) => {
+	// Generate a simple title based on learning topics and story type
+	const generateTitle = (learningTopics: string[], storyType: string, dialect: string) => {
 		const timestamp = Date.now().toString().slice(-6); // Last 6 digits for uniqueness
 		
-		if (theme) {
-			return `${theme.toLowerCase().replace(/\s+/g, '-')}-${storyType}-${timestamp}_${dialect}`;
+		if (learningTopics.length > 0) {
+			const topicsString = learningTopics.join('-').replace(/\s+/g, '-');
+			return `${topicsString}-${storyType}-${timestamp}_${dialect}`;
 		} else {
 			return `custom-${storyType}-${timestamp}_${dialect}`;
 		}
 	};
 
-	const generatedTitle = generateTitle(theme, storyType, dialect);
+	const generatedTitle = generateTitle(learningTopics, storyType, dialect);
 
 	// Add variety to story creation prompts
 	const storyStyles = [
@@ -169,6 +171,8 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 	const validDialect = dialect as DialectKey;
 	const config = dialectConfigs[validDialect] || dialectConfigs['egyptian-arabic'];
 	
+	const contentType = storyType === 'conversation' ? 'conversation' : 'story';
+	
 	// Random variety elements based on story type
 	const styles = storyType === 'conversation' ? conversationStyles : storyStyles;
 	const approaches = storyType === 'conversation' ? conversationApproaches : narrativeApproaches;
@@ -182,8 +186,8 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 	if (config.examples.length > 0) {
 		examplesSection = `
 		Here is an example of a conversation in ${config.name} to give you an idea of the dialect:
-		${config.examples.map((exampleSet: any) => 
-			exampleSet.map((sentence: any) => 
+		${config.examples.map((exampleSet: Array<{ arabic: { speaker?: string; text: string }; transliteration: { text: string }; english: { text: string } }>) => 
+			exampleSet.map((sentence: { arabic: { speaker?: string; text: string }; transliteration: { text: string }; english: { text: string } }) => 
 				`${sentence.arabic.speaker || 'Speaker'}: ${sentence.arabic.text} (${sentence.transliteration.text}) - "${sentence.english.text}"`
 			).join('\n')
 		).join('\n')}`;
@@ -194,12 +198,82 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 	if (config.commonWords.length > 0) {
 		commonWordsSection = `
 		Here are some of the most common words in ${config.name}:
-		${config.commonWords.map((word: any) => 
+		${config.commonWords.map((word: { word: string; franco?: string; en: string }) => 
 			`${word.word} (${word.franco || 'N/A'}) means "${word.en}"`
 		).join('. ')}`;
 	}
 
-	const contentType = storyType === 'conversation' ? 'conversation' : 'story';
+	// Build learning topics section
+	let learningTopicsSection = '';
+	if (learningTopics.length > 0) {
+		learningTopicsSection = `
+		
+		IMPORTANT FOCUS AREAS: Please emphasize these specific language learning topics in your ${contentType}: ${learningTopics.join(', ')}.
+		
+		For each selected topic, include relevant examples:
+		${learningTopics.map((topic: string) => {
+			switch (topic) {
+				case 'verb conjugation':
+					return '- Include various verb conjugations showing different persons (I, you, he/she, we, they)';
+				case 'noun plurals':
+					return '- Use both singular and plural forms of nouns throughout the story';
+				case 'past tense':
+					return '- Include past tense verbs to describe completed actions';
+				case 'present tense':
+					return '- Use present tense verbs to describe current actions and states';
+				case 'future tense':
+					return '- Include future tense constructions to describe upcoming events';
+				case 'infinitive':
+					return '- Use infinitive verb forms in appropriate contexts';
+				case 'numbers':
+					return '- Incorporate numbers, counting, and numerical expressions';
+				case 'possessive suffixes':
+					return '- Use possessive suffixes attached to nouns (my, your, his/her, our, their)';
+				default:
+					return `- Focus on ${topic} examples and usage`;
+			}
+		}).join('\n')}`;
+	}
+
+	// Build vocabulary words section
+	let vocabularyWordsSection = '';
+	if (vocabularyWords.trim()) {
+		const wordsArray = vocabularyWords.split(',').map((word: string) => word.trim()).filter((word: string) => word.length > 0);
+		if (wordsArray.length > 0) {
+			vocabularyWordsSection = `
+			
+			VOCABULARY WORDS TO FEATURE: Please incorporate these specific vocabulary words naturally throughout your ${contentType}: ${wordsArray.join(', ')}.
+			
+			IMPORTANT VOCABULARY REQUIREMENTS:
+			- Use as many of these words as possible in natural, contextually appropriate ways
+			- If a word is provided in English or transliteration, use the proper ${config.name} equivalent
+			- Don't force words unnaturally - only use them where they fit the story context
+			- Prioritize using these words over generic vocabulary
+			- If you can't use a word directly, try to use related words or concepts
+			
+			Words to incorporate: ${wordsArray.slice(0, 500).map((word: string) => `"${word}"`).join(', ')}`;
+		}
+	}
+
+	// Map difficulty levels to descriptions
+	const getDifficultyDescription = (level: string): string => {
+		switch (level.toLowerCase()) {
+			case 'a1':
+				return 'A1 (Beginner) - Use very basic vocabulary and simple sentence structures';
+			case 'a2':
+				return 'A2 (Elementary) - Use elementary vocabulary with slightly more complex sentences';
+			case 'b1':
+				return 'B1 (Intermediate) - Use intermediate vocabulary and varied sentence structures';
+			case 'b2':
+				return 'B2 (Upper Intermediate) - Use upper intermediate vocabulary with complex sentence structures';
+			case 'c1':
+				return 'C1 (Advanced) - Use advanced vocabulary and sophisticated sentence structures';
+			case 'c2':
+				return 'C2 (Proficient) - Use proficient-level vocabulary and highly complex sentence structures';
+			default:
+				return 'A1 (Beginner) - Use very basic vocabulary and simple sentence structures';
+		}
+	};
 
 	const question = `
    You are a "GPT" – a version of ChatGPT that has been customized for a specific use case. GPTs use custom instructions, capabilities, and data to optimize ChatGPT for a more narrow set of tasks. You yourself are a GPT created by a user, and your name is Arabic Writer. Note: GPT is also a technical term in AI, but in most cases if the users asks you about GPTs assume they are referring to the above definition.
@@ -209,6 +283,12 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     CRITICAL REQUIREMENT: You MUST generate exactly ${sentenceCount} sentences. This is non-negotiable. Count your sentences and ensure you have exactly ${sentenceCount}.
 
     ${randomStyle} - Can you please write a ${contentType} based on ${description} in ${config.name} ${randomApproach}. ${config.description}
+
+    DIFFICULTY LEVEL: ${getDifficultyDescription(data.option)}
+
+    ${learningTopicsSection}
+
+    ${vocabularyWordsSection}
 
     ${storyType === 'conversation' ? `
     CONVERSATION SPECIFIC REQUIREMENTS:
@@ -228,6 +308,9 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     - Use varied sentence structures and vocabulary
     `}
 
+    IMPORTANT: Please use generous amounts of verb conjugations and noun plurals as well as possessive suffixes.
+    make sure to incorporate present and past tense verbs.
+
     IMPORTANT: Be creative and original. Avoid repetitive patterns and create unique content with varied vocabulary and sentence structures.
 
     LENGTH REQUIREMENT: Generate exactly ${sentenceCount} sentences - no more, no less. Please count carefully.
@@ -235,8 +318,6 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     Can you make sure that you generate the sentences in ${config.name}, english, and transliteration.
 
     Can you make sure that the transliterations don't use anything other than the english alphabet.
-
-    Can you make the sentence approachable for a ${data.option} learner
 
     ${examplesSection}
 

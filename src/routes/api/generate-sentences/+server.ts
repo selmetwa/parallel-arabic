@@ -46,9 +46,34 @@ export const POST: RequestHandler = async ({ request }) => {
   const data = await request.json();
   
   const dialect = data.dialect || 'egyptian-arabic'; // Default to Egyptian
+  const learningTopics = data.learningTopics || []; // Array of selected learning topics
+  const vocabularyWords = data.vocabularyWords || ''; // Vocabulary words to feature
 
-  const intermediate_request = data.option === 'intermediate' ? 'Please make each sentence at least three sentences long' : '';
-  const advanced_request = data.option === 'advanced' ? 'Please make each sentence at least five sentences long and use more complex tenses and vocabulary' : '';
+  const intermediate_request = data.option === 'intermediate' || data.option === 'b1' || data.option === 'b2' ? 'Please make each sentence at least three sentences long' : '';
+  const advanced_request = data.option === 'advanced' || data.option === 'c1' || data.option === 'c2' ? 'Please make each sentence at least five sentences long and use more complex tenses and vocabulary' : '';
+
+  // Map difficulty levels to descriptions
+  const getDifficultyDescription = (level: string): string => {
+    switch (level.toLowerCase()) {
+      case 'a1':
+      case 'beginner':
+        return 'A1 (Beginner) - Use very basic vocabulary and simple sentence structures';
+      case 'a2':
+        return 'A2 (Elementary) - Use elementary vocabulary with slightly more complex sentences';
+      case 'b1':
+      case 'intermediate':
+        return 'B1 (Intermediate) - Use intermediate vocabulary and varied sentence structures';
+      case 'b2':
+        return 'B2 (Upper Intermediate) - Use upper intermediate vocabulary with complex sentence structures';
+      case 'c1':
+      case 'advanced':
+        return 'C1 (Advanced) - Use advanced vocabulary and sophisticated sentence structures';
+      case 'c2':
+        return 'C2 (Proficient) - Use proficient-level vocabulary and highly complex sentence structures';
+      default:
+        return 'A1 (Beginner) - Use very basic vocabulary and simple sentence structures';
+    }
+  };
 
   // Dialect-specific configurations
   const dialectConfigs = {
@@ -137,10 +162,68 @@ export const POST: RequestHandler = async ({ request }) => {
     wordListSection = config.wordListInstruction;
   }
 
+  // Build learning topics section
+  let learningTopicsSection = '';
+  if (learningTopics.length > 0) {
+    learningTopicsSection = `
+    
+    IMPORTANT FOCUS AREAS: Please emphasize these specific language learning topics in your sentences: ${learningTopics.join(', ')}.
+    
+    For each selected topic, include relevant examples across the 20 sentences:
+    ${learningTopics.map((topic: string) => {
+      switch (topic) {
+        case 'verb conjugation':
+          return '- Include various verb conjugations showing different persons (I, you, he/she, we, they)';
+        case 'noun plurals':
+          return '- Use both singular and plural forms of nouns throughout the sentences';
+        case 'past tense':
+          return '- Include past tense verbs to describe completed actions';
+        case 'present tense':
+          return '- Use present tense verbs to describe current actions and states';
+        case 'future tense':
+          return '- Include future tense constructions to describe upcoming events';
+        case 'infinitive':
+          return '- Use infinitive verb forms in appropriate contexts';
+        case 'numbers':
+          return '- Incorporate numbers, counting, and numerical expressions';
+        case 'possessive suffixes':
+          return '- Use possessive suffixes attached to nouns (my, your, his/her, our, their)';
+        default:
+          return `- Focus on ${topic} examples and usage`;
+      }
+    }).join('\n')}`;
+  }
+
+  // Build vocabulary words section
+  let vocabularyWordsSection = '';
+  if (vocabularyWords.trim()) {
+    const wordsArray = vocabularyWords.split(',').map((word: string) => word.trim()).filter((word: string) => word.length > 0);
+    if (wordsArray.length > 0) {
+      vocabularyWordsSection = `
+      
+      VOCABULARY WORDS TO FEATURE: Please incorporate these specific vocabulary words naturally throughout your sentences: ${wordsArray.join(', ')}.
+      
+      IMPORTANT VOCABULARY REQUIREMENTS:
+      - Use as many of these words as possible in natural, contextually appropriate ways
+      - If a word is provided in English or transliteration, use the proper ${config.name} equivalent
+      - Don't force words unnaturally - only use them where they fit the sentence context
+      - Prioritize using these words over generic vocabulary
+      - If you can't use a word directly, try to use related words or concepts
+      
+      Words to incorporate: ${wordsArray.slice(0, 100).map((word: string) => `"${word}"`).join(', ')}`;
+    }
+  }
+
   let question = `
     Give me 20 sentences in ${config.name} dialect.
 
-    ${randomPrompt} - Can you please provide 20 ${data.option} sentences for someone who is trying to learn ${config.name} Arabic.
+    ${randomPrompt} - Can you please provide 20 sentences for someone who is learning ${config.name} Arabic.
+
+    DIFFICULTY LEVEL: ${getDifficultyDescription(data.option)}
+
+    ${learningTopicsSection}
+
+    ${vocabularyWordsSection}
 
     CRITICAL: Each sentence must be about a DIFFERENT topic or situation. Do NOT focus on just one theme. Vary the topics across:
     - Daily life situations (work, home, family)
