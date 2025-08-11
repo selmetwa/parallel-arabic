@@ -47,38 +47,113 @@
 	let isArabic = $derived(type === 'arabic');
 	let words = $derived(_sentence?.text ? (isArabic ? _sentence.text.split(' ').reverse() : _sentence.text.split(' ')) : []);
 
+	// Cache for storing word definitions
+	let wordCache = new Map<string, string>();
+	let hoverTimeouts = new Map<string, NodeJS.Timeout>();
+
 	function removeComma(inputString: string) {
 		const commataPattern = /[\u060C]/g;
 		return inputString.replace(commataPattern, '');
 	}
 
-	async function assignActiveWord(event: Event) {
-		setActiveWord({
-			english: '',
-			arabic: '',
-			transliterated: '',
-			description: '',
-			isLoading: true,
-			type: ''
-		});
-
+	// Pre-fetch word definition on hover with debouncing
+	async function handleWordHover(event: Event) {
 		const word = (event.target as HTMLButtonElement).value.replace(/,/g, '');
 		const cleanWord = removeComma(word);
-		const res = await askChatGTP(cleanWord, type, {
-			arabic: sentence.arabic.text,
-			english: sentence.english.text,
-			transliteration: sentence.transliteration.text
-		}, dialect);
-		const message = res.message.message.content;
+		const cacheKey = `${cleanWord}-${type}-${dialect}`;
 
-		setActiveWord({
-			english: '',
-			arabic: removeComma(word),
-			transliterated: '',
-			description: message,
-			isLoading: false,
-			type: type
-		});
+		// Clear existing timeout for this word
+		if (hoverTimeouts.has(cacheKey)) {
+			clearTimeout(hoverTimeouts.get(cacheKey));
+		}
+
+		// Skip if already cached
+		if (wordCache.has(cacheKey)) {
+			return;
+		}
+
+		// Set a timeout to avoid making requests on quick mouse movements
+		const timeout = setTimeout(async () => {
+			try {
+				const res = await askChatGTP(cleanWord, type, {
+					arabic: sentence.arabic.text,
+					english: sentence.english.text,
+					transliteration: sentence.transliteration.text
+				}, dialect);
+				
+				// Cache the result
+				if (res.message?.message?.content) {
+					wordCache.set(cacheKey, res.message.message.content);
+				}
+			} catch (error) {
+				console.error('Error pre-fetching word definition:', error);
+			}
+			hoverTimeouts.delete(cacheKey);
+		}, 300); // 300ms debounce delay
+
+		hoverTimeouts.set(cacheKey, timeout);
+	}
+
+	// Clear timeout when mouse leaves
+	function handleWordLeave(event: Event) {
+		const word = (event.target as HTMLButtonElement).value.replace(/,/g, '');
+		const cleanWord = removeComma(word);
+		const cacheKey = `${cleanWord}-${type}-${dialect}`;
+
+		if (hoverTimeouts.has(cacheKey)) {
+			clearTimeout(hoverTimeouts.get(cacheKey));
+			hoverTimeouts.delete(cacheKey);
+		}
+	}
+
+	async function assignActiveWord(event: Event) {
+		const word = (event.target as HTMLButtonElement).value.replace(/,/g, '');
+		const cleanWord = removeComma(word);
+		const cacheKey = `${cleanWord}-${type}-${dialect}`;
+
+		// Check if we have a cached definition
+		const cachedDefinition = wordCache.get(cacheKey);
+
+		if (cachedDefinition) {
+			// Use cached data for instant display
+			setActiveWord({
+				english: '',
+				arabic: removeComma(word),
+				transliterated: '',
+				description: cachedDefinition,
+				isLoading: false,
+				type: type
+			});
+		} else {
+			// Fallback to the original behavior
+			setActiveWord({
+				english: '',
+				arabic: '',
+				transliterated: '',
+				description: '',
+				isLoading: true,
+				type: ''
+			});
+
+			const res = await askChatGTP(cleanWord, type, {
+				arabic: sentence.arabic.text,
+				english: sentence.english.text,
+				transliteration: sentence.transliteration.text
+			}, dialect);
+			const message = res.message.message.content;
+
+			// Cache the result for future use
+			wordCache.set(cacheKey, message);
+
+			setActiveWord({
+				english: '',
+				arabic: removeComma(word),
+				transliterated: '',
+				description: message,
+				isLoading: false,
+				type: type
+			});
+		}
 	}
 
 	async function saveWord() {
@@ -186,6 +261,8 @@
 					class="transitional-all rounded-sm p-1 text-5xl duration-300 hover:bg-tile-500"
 					value={word}
 					onclick={assignActiveWord}
+					onmouseover={handleWordHover}
+					onmouseleave={handleWordLeave}
 				>
 					{word}
 				</button>
@@ -196,6 +273,8 @@
 					class="transitional-all rounded-sm p-1 text-4xl duration-300 hover:bg-tile-500"
 					value={word}
 					onclick={assignActiveWord}
+					onmouseover={handleWordHover}
+					onmouseleave={handleWordLeave}
 				>
 					{word}
 				</button>
