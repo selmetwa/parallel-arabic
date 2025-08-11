@@ -31,8 +31,8 @@ interface ParsedStory {
 function getDataDirectory(): string {
 	// Check if we're in production (Fly.io) or development
 	// return process.env.NODE_ENV === 'production' ? '/data' : 'data';
-  return '/data';
-  // return 'data' // for local development
+  // return '/data';
+  return 'data' // for local development
 }
 
 export async function generateStoryAudio(storyId: string, dialect: string): Promise<{ success: boolean; audioPath?: string; fileName?: string; playbackRate?: number; error?: string }> {
