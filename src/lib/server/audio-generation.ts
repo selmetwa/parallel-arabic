@@ -111,7 +111,6 @@ export async function generateStoryAudio(storyId: string, dialect: string): Prom
 			success: true,
 			audioPath: audioPath,
 			fileName: fileName,
-			playbackRate: voiceConfig.speed
 		};
 
 	} catch (err) {
