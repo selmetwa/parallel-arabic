@@ -141,7 +141,7 @@
       </Button>
     </div>
     <div class="flex flex-1">
-      <AudioButton text={activeWordObj.arabic}>
+      <AudioButton text={activeWordObj.arabic} dialect="egyptian-arabic">
         Audio
       </AudioButton>
     </div>
