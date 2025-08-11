@@ -5,8 +5,8 @@ import path from 'path';
 function getDataDirectory(): string {
 	// Check if we're in production (Fly.io) or development
 	// return process.env.NODE_ENV === 'production' ? '/data' : 'data';
-  return '/data';
-  // return 'data' // for local development
+  // return '/data';
+  return 'data' // for local development
 }
 
 export function getStoryAudioPath(storyId: string, dialect: string): string | null {
@@ -31,4 +31,39 @@ export function getStoryAudioPath(storyId: string, dialect: string): string | nu
 
 export function storyAudioExists(storyId: string, dialect: string): boolean {
   return getStoryAudioPath(storyId, dialect) !== null;
+}
+
+export function saveUploadedAudioFile(audioBuffer: Buffer, storyId: string, dialect: string): { success: boolean; audioPath?: string; error?: string } {
+  try {
+    const dialectDir = dialect || 'egyptian-arabic';
+    const dataDir = getDataDirectory();
+    const audioDir = path.join(dataDir, 'audio', dialectDir);
+    
+    // Ensure the directory exists
+    if (!fs.existsSync(audioDir)) {
+      fs.mkdirSync(audioDir, { recursive: true });
+    }
+
+    // Use only storyId as filename to match existing pattern
+    const fileName = `${storyId}.mp3`;
+    const filePath = path.join(audioDir, fileName);
+    
+    // Write the audio file
+    fs.writeFileSync(filePath, new Uint8Array(audioBuffer));
+
+    // Return the API endpoint path for serving
+    const audioPath = `/api/audio/${dialectDir}/${fileName}`;
+
+    return {
+      success: true,
+      audioPath: audioPath
+    };
+
+  } catch (error) {
+    console.error('Error saving uploaded audio file:', error);
+    return {
+      success: false,
+      error: 'Failed to save audio file'
+    };
+  }
 } 
