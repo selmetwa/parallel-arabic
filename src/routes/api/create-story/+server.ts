@@ -8,11 +8,27 @@ import { stories } from '$lib/constants/stories/index';
 import { commonWords } from '$lib/constants/common-words';
 import { getSpeakerNames } from '$lib/utils/voice-config';
 import { generateStoryAudio } from '../../../lib/server/audio-generation';
+import { saveUploadedAudioFile } from '$lib/utils/audio-utils';
+
+interface GenerationData {
+	description: string;
+	dialect: string;
+	storyType: string;
+	sentenceCount: number;
+	learningTopics: string[];
+	vocabularyWords: string;
+	option: string;
+}
+
+// Type guard function
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function isTranscriptionMode(data: any): boolean {
+	return data && data.mode === 'transcription';
+}
 
 export const POST: RequestHandler = async ({ request, locals }) => {
 	const openai = new OpenAI({ apiKey: env['OPEN_API_KEY'] });
-	const data = await request.json();
-
+	
 	const session = await locals.auth.validate();
 
 	if (!session) {
@@ -22,12 +38,149 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 	const userId = session?.user.userId;
 	const storyId = uuidv4();
 
-	const description = data.description;
-	const dialect = data.dialect || 'egyptian-arabic'; // Default to Egyptian
-	const storyType = data.storyType || 'story'; // 'story' or 'conversation'
-	const sentenceCount = data.sentenceCount || 25; // Default to 25 sentences
-	const learningTopics = data.learningTopics || []; // Array of selected learning topics
-	const vocabularyWords = data.vocabularyWords || ''; // Vocabulary words to feature
+	// Handle both FormData (transcription mode) and JSON (AI generation mode)
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	let data: any;
+	const requestContentType = request.headers.get('content-type');
+	
+	if (requestContentType && requestContentType.includes('multipart/form-data')) {
+		// Handle FormData for transcription mode with audio files
+		const formData = await request.formData();
+		data = {
+			mode: formData.get('mode'),
+			transcript: formData.get('transcript'),
+			sentences: JSON.parse(formData.get('sentences') as string || '[]'),
+			dialect: formData.get('dialect'),
+			customTitle: formData.get('customTitle'),
+			originalFileName: formData.get('originalFileName'),
+			audioFile: formData.get('audioFile')
+		};
+	} else {
+		// Handle JSON for AI generation mode
+		data = await request.json();
+	}
+
+	// Check if this is transcription mode
+	if (isTranscriptionMode(data)) {
+		// Handle audio transcription mode
+		const transcript = data.transcript;
+		const sentences = data.sentences || [];
+		const dialect = data.dialect || 'egyptian-arabic';
+		const customTitle = data.customTitle || '';
+		const originalFileName = data.originalFileName || '';
+		const audioFile = data.audioFile as File;
+
+		// Save the uploaded audio file to data/audio directory
+		if (audioFile) {
+			const audioBuffer = Buffer.from(await audioFile.arrayBuffer());
+			const saveResult = saveUploadedAudioFile(audioBuffer, storyId, dialect);
+			
+			if (!saveResult.success) {
+				console.error('Failed to save audio file:', saveResult.error);
+				// Don't fail the story creation, just log the error
+			}
+		}
+
+		// Generate title from custom title or filename
+		const generateTitleFromAudio = (customTitle: string, fileName: string, dialect: string) => {
+			const timestamp = Date.now().toString().slice(-6);
+			if (customTitle.trim()) {
+				return customTitle.trim();
+			} else if (fileName) {
+				// Clean up filename
+				const baseName = fileName.replace(/\.[^/.]+$/, '').replace(/[-_]/g, ' ');
+				return baseName;
+			} else {
+				return `audio-story-${timestamp}_${dialect}`;
+			}
+		};
+
+		const storyTitle = generateTitleFromAudio(customTitle, originalFileName, dialect);
+
+		// Format the transcription data to match the story structure
+		const formatTranscriptionToStory = (sentences: Array<{arabic: string, english: string, transliteration: string}>, transcript: string, title: string) => {
+			// If we have structured sentences, use them
+			if (sentences && sentences.length > 0) {
+				const formattedSentences = sentences.map((sentence) => ({
+					arabic: { text: sentence.arabic },
+					english: { text: sentence.english },
+					transliteration: { text: sentence.transliteration }
+				}));
+
+				return {
+					title: {
+						arabic: title,
+						english: title
+					},
+					description: {
+						arabic: 'قصة من ملف صوتي',
+						english: 'Story from audio file'
+					},
+					sentences: formattedSentences
+				};
+			} else {
+				// If we only have raw transcript, split into sentences
+				const sentenceTexts = transcript
+					.split(/[.!?؟۔]/)
+					.map(s => s.trim())
+					.filter(s => s.length > 0);
+
+				const formattedSentences = sentenceTexts.map((sentenceText) => ({
+					arabic: { text: sentenceText },
+					english: { text: '[Translation needed]' },
+					transliteration: { text: '[Transliteration needed]' }
+				}));
+
+				return {
+					title: {
+						arabic: title,
+						english: title
+					},
+					description: {
+						arabic: 'قصة من ملف صوتي',
+						english: 'Story from audio file'
+					},
+					sentences: formattedSentences
+				};
+			}
+		};
+
+		const storyData = formatTranscriptionToStory(sentences, transcript, storyTitle);
+
+		try {
+			// Save to database
+			await db
+				.insertInto('generated_story')
+				.values({
+					id: storyId,
+					user_id: userId || '',
+					title: storyTitle,
+					description: 'Story created from uploaded audio file',
+					difficulty: 'a1', // Default difficulty for transcribed content
+					story_body: JSON.stringify(storyData),
+					dialect: dialect,
+					created_at: new Date().getTime()
+				})
+				.executeTakeFirst();
+
+			// Note: We don't generate audio for transcription mode since we already have the original audio
+			// The original audio file would need to be saved separately for playback
+
+			return json({ storyId: storyId });
+		} catch (e) {
+			console.error('Database error:', e);
+			return error(500, { message: 'Failed to save transcribed story' });
+		}
+	}
+
+	// Original AI generation mode continues below...
+	const description = (data as GenerationData).description;
+	const dialect = (data as GenerationData).dialect || 'egyptian-arabic'; // Default to Egyptian
+	const storyType = (data as GenerationData).storyType || 'story'; // 'story' or 'conversation'
+	const sentenceCount = (data as GenerationData).sentenceCount || 25; // Default to 25 sentences
+	const learningTopics = (data as GenerationData).learningTopics || []; // Array of selected learning topics
+	const vocabularyWords = (data as GenerationData).vocabularyWords || ''; // Vocabulary words to feature
+	const option = (data as GenerationData).option;
 
 	// Generate speaker names if it's a conversation
 	const speakerNames = storyType === 'conversation' ? getSpeakerNames(dialect) : null;
@@ -284,7 +437,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 
     ${randomStyle} - Can you please write a ${contentType} based on ${description} in ${config.name} ${randomApproach}. ${config.description}
 
-    DIFFICULTY LEVEL: ${getDifficultyDescription(data.option)}
+    DIFFICULTY LEVEL: ${getDifficultyDescription(option)}
 
     ${learningTopicsSection}
 
@@ -372,8 +525,8 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 					id: storyId,
 					user_id: userId || '',
 					title: generatedTitle, // Use generated title
-					description: data.description,
-					difficulty: data.option,
+					description: description,
+					difficulty: option,
 					story_body: story, // Now guaranteed to be a string
 					dialect: dialect, // Add the dialect from the request
 					created_at: new Date().getTime()

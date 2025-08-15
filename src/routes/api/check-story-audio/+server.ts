@@ -14,11 +14,9 @@ export const GET: RequestHandler = async ({ url }) => {
 	const audioPath = getStoryAudioPath(storyId, dialect);
 	
 	if (audioPath) {
-		const voiceConfig = getVoiceConfig(dialect);
 		return json({
 			exists: true,
 			audioPath: audioPath,
-			playbackRate: voiceConfig.speed
 		});
 	}
 	
