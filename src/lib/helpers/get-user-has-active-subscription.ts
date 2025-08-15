@@ -1,4 +1,5 @@
 import { db } from '$lib/server/db';
+import { BLESSED_EMAILS } from '$lib/constants/blessed-emails';
 
 export const getUserHasActiveSubscription = async (userId: string) => {
   const user = await db.selectFrom('user').selectAll().where('id', '=', userId).executeTakeFirst();
@@ -13,6 +14,10 @@ export const getUserHasActiveSubscription = async (userId: string) => {
   }
 
   if (today < futureDate) {
+    return true
+  }
+
+  if (BLESSED_EMAILS.includes(user?.email || '')) {
     return true
   }
 

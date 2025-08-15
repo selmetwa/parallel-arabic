@@ -14,9 +14,18 @@ export const load: PageServerLoad = async ({ locals }) => {
   const userId = session && session.user.userId || null;
   const user = await db.selectFrom('user').selectAll().where('id', '=', userId).executeTakeFirst();
 
+  // Fetch user's generated stories across all dialects
+  const userGeneratedStories = await db
+    .selectFrom('generated_story')
+    .selectAll()
+    .where('user_id', '=', userId || '')
+    .orderBy('created_at', 'desc')
+    .execute();
+
 	return {
 		user,
-    hasActiveSubscription: await getUserHasActiveSubscription(userId ?? "")
+    hasActiveSubscription: await getUserHasActiveSubscription(userId ?? ""),
+    userGeneratedStories
 	};
 };
 

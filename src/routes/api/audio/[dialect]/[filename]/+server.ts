@@ -5,8 +5,6 @@ import path from 'path';
 
 // Helper function to get the base data directory
 function getDataDirectory(): string {
-	// Check if we're in production (Fly.io) or development
-	// return process.env.NODE_ENV === 'production' ? '/data' : 'data';
   return '/data';
   // return 'data' // for local development
 }

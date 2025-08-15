@@ -126,7 +126,9 @@
     fusha: 'Modern Standard Arabic',
     levantine: 'Levantine Arabic',
     darija: 'Moroccan Darija',
-    'egyptian-arabic': 'Egyptian Arabic'
+    'egyptian-arabic': 'Egyptian Arabic',
+    iraqi: 'Iraqi Arabic',
+    khaleeji: 'Khaleeji Arabic'
   }
 
 	async function askChatGTP(word: string) {

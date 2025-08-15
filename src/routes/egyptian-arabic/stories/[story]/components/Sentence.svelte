@@ -127,10 +127,9 @@
 			<div class="absolute right-0 top-0 w-1/4">
 				<Audio src={_sentence.audio}></Audio>
 			</div>
-		{/if}
-		{#if !(_sentence && 'audio' in _sentence && _sentence.audio)}
+		{:else}
 			<div class="absolute bottom-0 left-0 w-fit">
-				<AudioButton text={_sentence.text}>Play Audio</AudioButton>
+				<AudioButton text={_sentence.text} dialect="egyptian-arabic">Play Audio</AudioButton>
 			</div>
 		{/if}
 	{/if}
