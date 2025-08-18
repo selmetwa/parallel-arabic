@@ -73,20 +73,20 @@
 <section class="flex flex-col gap-4 py-8">
 	<div class="flex flex-wrap items-center gap-2">
 		<h2 class="text-3xl font-bold text-text-100">
-			{showQuestionInEnglish ? wordObj.answer.english : wordObj.answer.egyptianArabic}
+			{showQuestionInEnglish ? wordObj.answer.english : wordObj.answer.arabic}
 		</h2>
 		{#if showHint}
-			<p class="text-lg text-text-300">{wordObj.answer.egyptianArabicTransliteration}</p>
+			<p class="text-lg text-text-300">{wordObj.answer.transliteration}</p>
 		{/if}
 	</div>
 	<div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
 		<Button type="button" onClick={toggleHint}>{showHint ? 'Hide' : 'Show'} hint</Button>
-		<AudioButton text={wordObj.answer.egyptianArabic}>Listen to Pronunciation</AudioButton>
+		<AudioButton text={wordObj.answer.arabic} dialect="egyptian-arabic">Listen to Pronunciation</AudioButton>
 		<SaveButton
 			objectToSave={{
-				arabic: wordObj.answer.egyptianArabic,
+				arabic: wordObj.answer.arabic,
 				english: wordObj.answer.english,
-				transliterated: wordObj.answer.egyptianArabicTransliteration
+				transliterated: wordObj.answer.transliteration
 			}}
 			type="Word"
 		></SaveButton>
@@ -98,7 +98,7 @@
 		>
 			<span class="text-lg font-semibold text-text-300">
 				{#if showQuestionInEnglish}
-					{wordObj.answer.egyptianArabic}
+					{wordObj.answer.arabic}
 				{:else}
 					{wordObj.answer.english}
 				{/if} is correct
@@ -111,7 +111,7 @@
 		>
 			<span class="text-lg font-semibold text-text-300">
 				{#if showQuestionInEnglish}
-					{selectedObj.egyptianArabic}
+					{selectedObj.arabic}
 				{:else}
 					{selectedObj.english}
 				{/if} is incorrect
@@ -120,28 +120,28 @@
 	{/if}
 	<fieldset class="grid grid-cols-1 grid-rows-1 gap-3 sm:grid-cols-2 sm:grid-rows-2">
 		<RadioButton
-			text={showQuestionInEnglish ? wordObj.first.egyptianArabic : wordObj.first.english}
+			text={showQuestionInEnglish ? wordObj.first.arabic : wordObj.first.english}
 			value={wordObj.first.english}
 			isSelected={selected === wordObj.first.english}
 			onClick={handleClick}
 			selectableFor={wordObj.first.english}
 		/>
 		<RadioButton
-			text={showQuestionInEnglish ? wordObj.second.egyptianArabic : wordObj.second.english}
+			text={showQuestionInEnglish ? wordObj.second.arabic : wordObj.second.english}
 			value={wordObj.second.english}
 			isSelected={selected === wordObj.second.english}
 			onClick={handleClick}
 			selectableFor={wordObj.second.english}
 		/>
 		<RadioButton
-			text={showQuestionInEnglish ? wordObj.third.egyptianArabic : wordObj.third.english}
+			text={showQuestionInEnglish ? wordObj.third.arabic : wordObj.third.english}
 			onClick={handleClick}
 			value={wordObj.third.english}
 			isSelected={selected === wordObj.third.english}
 			selectableFor={wordObj.third.english}
 		/>
 		<RadioButton
-			text={showQuestionInEnglish ? wordObj.fourth.egyptianArabic : wordObj.fourth.english}
+			text={showQuestionInEnglish ? wordObj.fourth.arabic : wordObj.fourth.english}
 			value={wordObj.fourth.english}
 			isSelected={selected === wordObj.fourth.english}
 			selectableFor={wordObj.fourth.english}

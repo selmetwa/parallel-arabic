@@ -139,7 +139,7 @@
 
 	let isLastSentence = $derived(index === sentences.length - 1);
 
-	let hasReachedLimit = $derived(!data.isSubscribed && sentencesViewed >= 20);
+	let hasReachedLimit = $derived(!data.isSubscribed && sentencesViewed >= 5);
 </script>
 
 {#if !data.session}

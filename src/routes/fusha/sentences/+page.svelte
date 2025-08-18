@@ -261,7 +261,7 @@
     { value: 'c2', label: 'C2 (Proficient)' }
   ];
 
-	let hasReachedLimit = $derived(!data.isSubscribed && sentencesViewed >= 20);
+	let hasReachedLimit = $derived(!data.isSubscribed && sentencesViewed >= 5);
 </script>
 
 {#if !data.session}

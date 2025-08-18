@@ -6,7 +6,7 @@
 	import { updateKeyboardStyle } from '$lib/helpers/update-keyboard-style';
 	import { type Keyboard } from '$lib/types/index';
 	import Button from '$lib/components/Button.svelte';
-	import Canvas from '../../../alphabet/practice/components/Canvas.svelte';
+	import Canvas from '$lib/components/Canvas.svelte';
 	import { getBrowserInfo } from '$lib/helpers/get-browser-info';
   import Modal from '$lib/components/Modal.svelte';
   import KeyboardDocumentation from '$lib/components/KeyboardDocumentation.svelte';
@@ -16,10 +16,9 @@
 
 	type Word = {
 		english: string;
-		egyptianArabic: string;
-		standardArabic: string;
-		standardArabicTransliteration: string;
-		egyptianArabicTransliteration: string;
+		arabic: string;
+		transliteration: string;
+		audioUrl?: string;
 	};
 
 	type Attempt = {
@@ -48,10 +47,10 @@
 
   const regex = /[-–]/;
 
-	if (regex.test(word.egyptianArabic)) {
-    egyptianArabicWord = word.egyptianArabic.split(regex)[0].trim();
+	if (regex.test(word.arabic)) {
+    egyptianArabicWord = word.arabic.split(regex)[0].trim();
 	} else {
-		egyptianArabicWord = word.egyptianArabic;
+		egyptianArabicWord = word.arabic;
 	}
 
 
@@ -166,10 +165,10 @@
 	    isInfoModalOpen = false;
 	    keyboardValue = '';
 
-			if (regex.test(word.egyptianArabic)) {
-	      egyptianArabicWord = word.egyptianArabic.split(regex)[0].trim();
+			if (regex.test(word.arabic)) {
+	      egyptianArabicWord = word.arabic.split(regex)[0].trim();
 			} else {
-				egyptianArabicWord = word.egyptianArabic;
+				egyptianArabicWord = word.arabic;
 			}
 
 			if (typeof document !== 'undefined') {
@@ -204,13 +203,13 @@
 		<div class="grid grid-cols-3 sm:grid-cols-5 gap-2 mt-4">
 			<Button type="button" onClick={toggleAnswer}>{showAnswer ? 'Hide' : 'Show'} answer</Button>
 			<Button type="button" onClick={toggleHint}>{showHint ? 'Hide' : 'Show'} hint</Button>
-			<AudioButton text={egyptianArabicWord}>Audio</AudioButton>
+			<AudioButton text={egyptianArabicWord} dialect="egyptian-arabic">Audio</AudioButton>
 			<SaveButton 
 				type="Word"
 				objectToSave={{
 					arabic: egyptianArabicWord,
 					english: word.english,
-					transliterated: word.egyptianArabicTransliteration
+					transliterated: word.transliteration
 				}}></SaveButton>
 			<Button type="button" onClick={switchMode}>
 				{mode === 'draw' ? 'Type' : 'Draw'}
@@ -229,7 +228,7 @@
 			<div class="flex flex-col sm:flex-row items-center justify-center gap-2 mb-4">
 				<h1 class="text-4xl sm:text-5xl font-bold text-text-300">{word.english}</h1>
 				{#if showHint}
-					<p class="text-xl sm:text-2xl text-text-200">({word.egyptianArabicTransliteration})</p>
+					<p class="text-xl sm:text-2xl text-text-200">({word.transliteration})</p>
 				{/if}
 				{#if showAnswer}
 					<p class="text-2xl sm:text-3xl text-text-300">({egyptianArabicWord})</p>
