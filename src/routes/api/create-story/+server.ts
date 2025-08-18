@@ -26,6 +26,91 @@ function isTranscriptionMode(data: any): boolean {
 	return data && data.mode === 'transcription';
 }
 
+async function aiSentenceSegmentation(arabicText: string, openai: OpenAI): Promise<string[]> {
+	try {
+		console.log('Starting AI-powered sentence segmentation...');
+		
+		const response = await openai.chat.completions.create({
+			model: 'gpt-4o',
+			messages: [
+				{
+					role: 'system',
+					content: `You are an expert Arabic linguist. Your task is to split Arabic transcripts into natural, well-formed sentences. 
+
+IMPORTANT GUIDELINES:
+- Consider natural speech pauses and breathing points
+- Respect Arabic grammar and semantic meaning
+- Aim for sentences between 20-150 characters each
+- Split at logical thought boundaries
+- Handle run-on sentences by finding natural break points
+- Preserve the original meaning and context
+- Remove any incomplete fragments or filler words
+
+Return your response as a JSON object with a "sentences" array containing the segmented sentences.`
+				},
+				{
+					role: 'user',
+					content: `Please segment this Arabic transcript into natural sentences:
+
+"${arabicText}"
+
+Format as: {"sentences": ["sentence1", "sentence2", ...]}`
+				}
+			],
+			response_format: { type: 'json_object' },
+			temperature: 0.2,
+			max_tokens: 3000
+		});
+
+		const content = response.choices[0].message.content;
+		if (content) {
+			const result = JSON.parse(content);
+			const sentences = result.sentences || [];
+			
+			// Filter and clean sentences
+			const cleanedSentences = sentences
+				.filter((s: string) => s && s.trim().length > 5) // Remove very short fragments
+				.map((s: string) => s.trim());
+			
+			console.log(`AI segmentation completed: ${cleanedSentences.length} sentences from original text`);
+			return cleanedSentences;
+		}
+		
+		throw new Error('No content in AI response');
+	} catch (error) {
+		console.error('AI segmentation failed, falling back to regex:', error);
+		
+		// Fallback to enhanced regex if AI fails
+		return enhancedRegexSegmentation(arabicText);
+	}
+}
+
+function enhancedRegexSegmentation(arabicText: string): string[] {
+	// Enhanced fallback with better punctuation handling
+	const sentences = arabicText
+		.split(/[.!?؟۔،؛]/) // Include more Arabic punctuation
+		.map(s => s.trim())
+		.filter(s => s.length > 5); // Filter out very short fragments
+	
+	// Handle overly long sentences by splitting on conjunctions
+	const finalSentences: string[] = [];
+	const maxLength = 180;
+	
+	for (const sentence of sentences) {
+		if (sentence.length <= maxLength) {
+			finalSentences.push(sentence);
+		} else {
+			// Split long sentences on Arabic connectors
+			const parts = sentence
+				.split(/\s+(و|لكن|ولكن|ثم|فإن|لذلك|بعد ذلك|أيضا|كذلك|من ناحية أخرى)\s+/)
+				.filter(s => s.length > 5);
+			finalSentences.push(...parts);
+		}
+	}
+	
+	return finalSentences;
+}
+
 export const POST: RequestHandler = async ({ request, locals }) => {
 	const openai = new OpenAI({ apiKey: env['OPEN_API_KEY'] });
 	
@@ -98,7 +183,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		const storyTitle = generateTitleFromAudio(customTitle, originalFileName, dialect);
 
 		// Format the transcription data to match the story structure
-		const formatTranscriptionToStory = (sentences: Array<{arabic: string, english: string, transliteration: string}>, transcript: string, title: string) => {
+		const formatTranscriptionToStory = async (sentences: Array<{arabic: string, english: string, transliteration: string}>, transcript: string, title: string) => {
 			// If we have structured sentences, use them
 			if (sentences && sentences.length > 0) {
 				const formattedSentences = sentences.map((sentence) => ({
@@ -119,11 +204,8 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 					sentences: formattedSentences
 				};
 			} else {
-				// If we only have raw transcript, split into sentences
-				const sentenceTexts = transcript
-					.split(/[.!?؟۔]/)
-					.map(s => s.trim())
-					.filter(s => s.length > 0);
+				// If we only have raw transcript, use AI-powered sentence segmentation
+				const sentenceTexts = await aiSentenceSegmentation(transcript, openai);
 
 				const formattedSentences = sentenceTexts.map((sentenceText) => ({
 					arabic: { text: sentenceText },
@@ -145,7 +227,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 			}
 		};
 
-		const storyData = formatTranscriptionToStory(sentences, transcript, storyTitle);
+		const storyData = await formatTranscriptionToStory(sentences, transcript, storyTitle);
 
 		try {
 			// Save to database

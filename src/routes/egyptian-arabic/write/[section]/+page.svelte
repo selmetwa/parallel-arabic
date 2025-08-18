@@ -17,6 +17,7 @@
   })());
 
   let mode = $state('keyboard');
+  $inspect(data);
   let word = $derived.by(() => {
     if (data && data.words) {
       return data?.words?.slice(1)[index];

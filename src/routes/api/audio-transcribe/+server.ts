@@ -16,21 +16,101 @@ interface TranscriptSentence {
 interface EnhancedTranscriptResponse {
   transcript: string;
   sentences: TranscriptSentence[];
-  transcriptSource: 'whisper';
+  transcriptSource: string;
   originalFileName: string;
   fileSize: number;
   fileType: string;
+}
+
+async function aiSentenceSegmentation(arabicText: string, openai: OpenAI): Promise<string[]> {
+  try {
+    console.log('Starting AI-powered sentence segmentation...');
+    
+    const response = await openai.chat.completions.create({
+      model: 'gpt-4o',
+      messages: [
+        {
+          role: 'system',
+          content: `You are an expert Arabic linguist. Your task is to split Arabic transcripts into natural, well-formed sentences. 
+
+IMPORTANT GUIDELINES:
+- Consider natural speech pauses and breathing points
+- Respect Arabic grammar and semantic meaning
+- Aim for sentences between 20-150 characters each
+- Split at logical thought boundaries
+- Handle run-on sentences by finding natural break points
+- Preserve the original meaning and context
+- Remove any incomplete fragments or filler words
+
+Return your response as a JSON object with a "sentences" array containing the segmented sentences.`
+        },
+        {
+          role: 'user',
+          content: `Please segment this Arabic transcript into natural sentences:
+
+"${arabicText}"
+
+Format as: {"sentences": ["sentence1", "sentence2", ...]}`
+        }
+      ],
+      response_format: { type: 'json_object' },
+      temperature: 0.2,
+      max_tokens: 3000
+    });
+
+    const content = response.choices[0].message.content;
+    if (content) {
+      const result = JSON.parse(content);
+      const sentences = result.sentences || [];
+      
+      // Filter and clean sentences
+      const cleanedSentences = sentences
+        .map((s: string) => s.trim());
+      
+      console.log(`AI segmentation completed: ${cleanedSentences.length} sentences from original text`);
+      return cleanedSentences;
+    }
+    
+    throw new Error('No content in AI response');
+  } catch (error) {
+    console.error('AI segmentation failed, falling back to regex:', error);
+    
+    // Fallback to enhanced regex if AI fails
+    return enhancedRegexSegmentation(arabicText);
+  }
+}
+
+function enhancedRegexSegmentation(arabicText: string): string[] {
+  // Enhanced fallback with better punctuation handling
+  const sentences = arabicText
+    .split(/[.!?؟۔،؛]/) // Include more Arabic punctuation
+    .map(s => s.trim())
+  
+  // Handle overly long sentences by splitting on conjunctions
+  const finalSentences: string[] = [];
+  const maxLength = 180;
+  
+  for (const sentence of sentences) {
+    if (sentence.length <= maxLength) {
+      finalSentences.push(sentence);
+    } else {
+      // Split long sentences on Arabic connectors
+      const parts = sentence
+        .split(/\s+(و|لكن|ولكن|ثم|فإن|لذلك|بعد ذلك|أيضا|كذلك|من ناحية أخرى)\s+/)
+        .filter(s => s.length > 5);
+      finalSentences.push(...parts);
+    }
+  }
+  
+  return finalSentences;
 }
 
 async function translateAndTransliterate(arabicText: string): Promise<TranscriptSentence[]> {
   const openai = new OpenAI({ apiKey: OPENAI_API_KEY });
   
   try {
-    // First, split the Arabic text into sentences
-    const sentences = arabicText
-      .split(/[.!?؟۔]/)
-      .map(s => s.trim())
-      .filter(s => s.length > 0);
+    // Use AI-powered sentence segmentation instead of simple regex
+    const sentences = await aiSentenceSegmentation(arabicText, openai);
     
     const results: TranscriptSentence[] = [];
     
@@ -105,11 +185,8 @@ ${batch.map((s, idx) => `${idx + 1}. ${s}`).join('\n')}`;
     return results;
   } catch (error) {
     console.error('Error in translation/transliteration:', error);
-    // Return basic structure if translation fails
-    const sentences = arabicText
-      .split(/[.!?؟۔]/)
-      .map(s => s.trim())
-      .filter(s => s.length > 0);
+    // Return basic structure if translation fails - using enhanced regex fallback
+    const sentences = enhancedRegexSegmentation(arabicText);
       
     return sentences.map(sentence => ({
       arabic: sentence,
