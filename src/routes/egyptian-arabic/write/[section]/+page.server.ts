@@ -44,7 +44,7 @@ export const load: PageServerLoad = async ({ params }) => {
 	}));
 
 	return {
-		words: transformedWords,
+		words: transformedWords.slice(1, transformedWords.length - 1),
 		section
 	};
 };

@@ -43,6 +43,21 @@
 	let targetWord = $state('');
 	let keyboardValue = $state('');
 
+	// Function to normalize Arabic text for comparison
+	function normalizeArabicText(text: string): string {
+		return text
+			// Remove diacritics
+			.replace(/[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06ED\u08D3-\u08E1\u08E3-\u08FF]/g, '')
+			// Normalize Alif variants to plain Alif (ا)
+			.replace(/[آأإٱ]/g, 'ا')
+			// Normalize Ya Maqsoura (ى) to regular Ya (ي)
+			.replace(/ى/g, 'ي')
+			// Normalize Waw with Hamza (ؤ) to plain Waw (و)
+			.replace(/ؤ/g, 'و')
+			// Normalize Ya with Hamza (ئ) to regular Ya (ي)
+			.replace(/ئ/g, 'ي');
+	}
+
 	function areArraysEqual(arr1: Array<string>, arr2: Array<string>) {
 		if (arr1.length !== arr2.length) {
 			return false;
@@ -58,11 +73,22 @@
 	}
 
 	function compareMyInput(value: string) {
-		const myInputArr = value.split('');
-		const egyptianArabicArr = sentence.arabic.split('');
+		// Normalize both user input and target sentence for comparison only
+		const normalizedInput = normalizeArabicText(value.trim());
+		const normalizedTarget = normalizeArabicText(sentence.arabic.trim());
+		
+		const myInputArr = normalizedInput.split('');
+		const arabicArr = normalizedTarget.split('');
 
-		const result = myInputArr.map((letter, index) => {
-			if (letter === egyptianArabicArr[index]) {
+		// For visual feedback, compare character by character using normalized versions
+		const visualInputArr = value.trim().split('');
+
+		const result = visualInputArr.map((letter, index) => {
+			// Check if the normalized versions match at this position
+			const normalizedUserChar = normalizeArabicText(letter);
+			const normalizedTargetChar = normalizeArabicText(sentence.arabic.trim().split('')[index] || '');
+			
+			if (normalizedUserChar === normalizedTargetChar) {
 				return {
 					letter,
 					correct: true
@@ -76,7 +102,7 @@
 
 		attemptTemp = result;
 
-		if (areArraysEqual(myInputArr, egyptianArabicArr)) {
+		if (areArraysEqual(myInputArr, arabicArr)) {
 			isCorrect = true;
 			const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
 			keyboard && keyboard.resetValue();
