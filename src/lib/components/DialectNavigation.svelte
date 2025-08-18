@@ -43,7 +43,9 @@
     'fusha': [
       { href: '/fusha/stories', label: 'Stories' },
       { href: '/fusha/speak', label: 'Speaking' },
-      { href: '/fusha/sentences', label: 'Sentences' }
+      { href: '/fusha/sentences', label: 'Sentences' },
+      { href: '/fusha/write', label: 'Writing' },
+      { href: '/fusha/vocab', label: 'Vocabulary' },
     ],
     'levantine': [
       { href: '/levantine/stories', label: 'Stories' },

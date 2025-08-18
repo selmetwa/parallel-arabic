@@ -1,5 +1,6 @@
 <script>
-	import WordBlock from './components/WordBlock.svelte';
+	// import WordBlock from './components/WordBlock.svelte';
+  import WriteWordBlock from '$lib/components/dialect-shared/vocab/WriteWordBlock.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import { sections } from '$lib/constants/sections';
 	import { PUBLIC_PRICE_ID } from '$env/static/public';
@@ -19,11 +20,22 @@
   let mode = $state('keyboard');
   $inspect(data);
   let word = $derived.by(() => {
-    if (data && data.words) {
-      return data?.words?.slice(1)[index];
+    if (data && data.words && data.words.length > 0) {
+      const currentWord = data.words[index];
+      return {
+        english: currentWord.english || '',
+        arabic: currentWord.arabic || '',
+        transliteration: currentWord.transliteration || '',
+        audioUrl: currentWord.audioUrl || undefined
+      };
     }
 
-    return {}
+    return {
+      english: '',
+      arabic: '',
+      transliteration: '',
+      audioUrl: undefined
+    }
   })
 
 	function next() {
@@ -81,6 +93,8 @@
 	</header>
 
 	<div class="px-3 mt-6 sm:px-8 max-w-5xl mx-auto">
-		<WordBlock {word} {mode} switchMode={handleSwitchMode} />
+		{#if word.english}
+			<WriteWordBlock {word} {mode} switchMode={handleSwitchMode} dialect="egyptian-arabic" />
+		{/if}
 	</div>
 {/if}  
