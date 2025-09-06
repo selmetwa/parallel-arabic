@@ -169,7 +169,7 @@ export const POST: RequestHandler = async ({ request }) => {
     
     IMPORTANT FOCUS AREAS: Please emphasize these specific language learning topics in your sentences: ${learningTopics.join(', ')}.
     
-    For each selected topic, include relevant examples across the 20 sentences:
+    For each selected topic, include relevant examples across the 10 sentences:
     ${learningTopics.map((topic: string) => {
       switch (topic) {
         case 'verb conjugation':
@@ -210,14 +210,14 @@ export const POST: RequestHandler = async ({ request }) => {
       - Prioritize using these words over generic vocabulary
       - If you can't use a word directly, try to use related words or concepts
       
-      Words to incorporate: ${wordsArray.slice(0, 100).map((word: string) => `"${word}"`).join(', ')}`;
+      Words to incorporate: ${[...wordsArray].sort(() => Math.random() - 0.5).slice(0, Math.min(100, wordsArray.length)).map((word: string) => `"${word}"`).join(', ')}`;
     }
   }
 
   let question = `
-    Give me 20 sentences in ${config.name} dialect.
+    Give me 10 sentences in ${config.name} dialect.
 
-    ${randomPrompt} - Can you please provide 20 sentences for someone who is learning ${config.name} Arabic.
+    ${randomPrompt} - Can you please provide 10 sentences for someone who is learning ${config.name} Arabic.
 
     DIFFICULTY LEVEL: ${getDifficultyDescription(data.option)}
 
@@ -274,7 +274,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
     Generation timestamp: ${timestamp}
 
-    REMEMBER: Maximum 2 sentences per topic area. Ensure diverse themes across all 20 sentences.
+    REMEMBER: Maximum 2 sentences per topic area. Ensure diverse themes across all 10 sentences.
 
     Can you make sure each sentence follows this format 
     {
