@@ -140,6 +140,8 @@
 
 	async function generateSentance(option: string, copy: any) {
 		isLoading = true;
+		isError = false;
+		errorMessage = '';
     
     let finalVocabularyWords = vocabularyWords;
     
@@ -154,27 +156,48 @@
       }
     }
     
-		const res = await fetch('/api/generate-sentences', {
-			method: 'POST',
-			headers: { accept: 'application/json' },
-			body: JSON.stringify({
-				option,
-				sentences: copy,
-				dialect: 'darija',
-        learningTopics: selectedLearningTopics,
-        vocabularyWords: finalVocabularyWords
-			})
-		});
+    try {
+      const res = await fetch('/api/generate-sentences', {
+        method: 'POST',
+        headers: { accept: 'application/json' },
+        body: JSON.stringify({
+          option,
+          sentences: copy,
+          dialect: 'darija',
+          learningTopics: selectedLearningTopics,
+          vocabularyWords: finalVocabularyWords
+        })
+      });
 
-		const chatgptres = await res.json();
-		const jsonBlob = chatgptres.message.message.content;
-		const _sentences = JSON.parse(jsonBlob);
-		const newSentences = filterValidSentences(_sentences.sentences || []);
-		const updatedSentences = [...sentences, ...newSentences];
-		sentences = updatedSentences;
-		darijaSentencesInStore.set(updatedSentences as any);
-    localStorage.setItem('speak_sentence_darija', JSON.stringify(updatedSentences));
-		isLoading = false;
+      if (!res.ok) {
+        throw new Error(`Server error: ${res.status} ${res.statusText}`);
+      }
+
+      const chatgptres = await res.json();
+      
+      if (!chatgptres.message?.message?.content) {
+        throw new Error('Invalid response format from server');
+      }
+      
+      const jsonBlob = chatgptres.message.message.content;
+      const _sentences = JSON.parse(jsonBlob);
+      const newSentences = filterValidSentences(_sentences.sentences || []);
+      
+      if (newSentences.length === 0) {
+        throw new Error('No valid sentences were generated. Please try again.');
+      }
+      
+      const updatedSentences = [...sentences, ...newSentences];
+      sentences = updatedSentences;
+      darijaSentencesInStore.set(updatedSentences as any);
+      localStorage.setItem('speak_sentence_darija', JSON.stringify(updatedSentences));
+    } catch (error) {
+      console.error('Error generating sentences:', error);
+      isError = true;
+      errorMessage = error instanceof Error ? error.message : 'An unexpected error occurred while generating sentences. Please try again.';
+    } finally {
+      isLoading = false;
+    }
 	}
 
 	async function updateSentencesViewed() {

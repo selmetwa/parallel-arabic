@@ -1,38 +1,120 @@
-## Parallel Arabic is a language learning tool for Egyptian Arabic 
+## Parallel Arabic - Comprehensive Arabic Language Learning Platform
 
-### Reading
-![image](https://github.com/user-attachments/assets/9a18e4f4-50b3-4dd4-bbed-4f36376e7718)
-Dive into practical, real-world Egyptian Arabic conversations. 
+Parallel Arabic is a comprehensive language learning platform designed to help learners master multiple Arabic dialects and Modern Standard Arabic through interactive, AI-powered lessons and real-world practice.
 
-You will learn the vocabulary, grammar, and natural flow of everyday arabic interactions.
+## Supported Arabic Varieties
 
-All conversations are recorded by native speakers and come with a full transcript and translation. As well as AI generated definitions for each word.
+The platform offers learning resources for six major Arabic varieties:
 
-### Sentence Practice
-![image](https://github.com/user-attachments/assets/f5aeb01f-f574-4d7b-9e16-c93ec61c0722)
-Practice your writing and reading skills with our sentence practice tool.
+- **Egyptian Arabic** - The most widely understood Arabic dialect, perfect for movies, music, and everyday conversation across the Arab world
+- **Modern Standard Arabic (Fusha)** - Formal Arabic used in news, literature, and official communications
+- **Levantine Arabic** - Dialect spoken in Syria, Lebanon, Palestine, and Jordan
+- **Moroccan Darija** - Moroccan Arabic dialect
+- **Iraqi Arabic** - Iraqi dialect with unique vocabulary and expressions
+- **Khaleeji Arabic** - Gulf Arabic dialect spoken in the Arabian Peninsula
 
-Improve verb conjugation, sentence structure, and possessive pronouns with unlimited AI generated sentences and get instant feedback on your writing.
+## Core Features
 
-### Verb Conjugation
-![image](https://github.com/user-attachments/assets/23683380-30c8-4620-ae1b-e22c30aaed0d)
-Practice your verb conjugations in egyptian arabic with realtime spellchecking.
+### Story Reading and Comprehension
+Immerse yourself in practical, real-world Arabic conversations through curated short stories and AI-generated narratives. Each story includes:
+- Native speaker audio recordings with natural pronunciation
+- Complete English translations and transliterations
+- AI-generated definitions for individual words
+- Interactive word lookup and saving functionality
+- Multiple difficulty levels (A1-C2) to match your proficiency
+- Both pre-written stories and custom AI-generated content based on your preferences
+
+### Speaking Practice and Pronunciation
+Develop your speaking skills with advanced speech recognition technology:
+- Record yourself speaking Arabic sentences and receive instant pronunciation feedback
+- Similarity scoring that compares your pronunciation to native speakers
+- Speech-to-text transcription to see how accurately you're pronouncing words
+- Progressive difficulty levels to gradually improve your speaking ability
+- Practice with authentic sentences from stories and lessons
+
+### Sentence Practice and Writing
+Master Arabic sentence structure with AI-powered practice tools:
+- Unlimited AI-generated sentences tailored to your learning level
+- Practice verb conjugation, sentence structure, and possessive pronouns
+- Instant feedback on your writing with real-time spell checking
+- Difficulty levels from beginner (A1) to advanced (C2)
+- Customizable topics and vocabulary focus areas
+- Translation exercises from English to Arabic
+
+### Grammar Learning (Egyptian Arabic)
+Comprehensive grammar lessons specifically designed for Egyptian Arabic:
+- Verb conjugation practice with real-time feedback
+- Interactive exercises for different grammatical structures
+- Progressive lessons building from basic to advanced concepts
+- Practical examples using authentic Egyptian Arabic expressions
 
 ### Writing Practice
-![image](https://github.com/user-attachments/assets/18057ef6-2618-43d2-9ecc-b1de8815d0f4)
-Practice your writing skills with over 6,000 practice words.
+Develop your Arabic writing skills through structured practice:
+- Over 6,000 practice words across multiple categories
+- Custom-built virtual Arabic keyboard designed for English speakers
+- Support for all Arabic letters, numbers, special characters, and diacritical marks
+- Personal word bank to save and review challenging vocabulary
+- Export saved words to Anki flashcard decks for continued practice
+- Text-to-speech functionality to hear correct pronunciation while typing
 
-Virtual keyboard custom built for english speakers
+### Vocabulary Learning
+Build your Arabic vocabulary through engaging exercises:
+- Multiple choice quizzes with over 6,000 words
+- Categorized vocabulary sections (animals, food, clothing, emotions, etc.)
+- Interactive flashcard-style learning
+- Progress tracking and spaced repetition
+- AI-generated example sentences using new vocabulary
+- Audio pronunciation for all vocabulary items
 
-Save words to personal wordbank to practice later or export to an Anki deck
+### Alphabet Mastery
+Master the Arabic script from the ground up:
+- Complete coverage of all 28 Arabic letters
+- Interactive typing practice for each letter
+- Handwriting practice with stroke order guidance
+- Native audio pronunciation for each character
+- Letter recognition exercises
+- Practice with letter variations in different positions (initial, medial, final, isolated)
 
-### Vocabulary Practice
-![image](https://github.com/user-attachments/assets/179389a7-ac89-42a2-8f3e-8064e17f3c3b)
-Practice over 6,000 words with fun multiple choice quizzes
+### AI-Powered Content Generation
+Advanced AI capabilities enhance your learning experience:
+- Generate custom stories based on your interests and difficulty level
+- Create unlimited practice sentences focused on specific grammatical topics
+- Personalized vocabulary exercises
+- Adaptive content that matches your proficiency level
+- Multiple content types including narratives, conversations, and instructional material
 
-### Alphabet Practice
-![image](https://github.com/user-attachments/assets/e7788055-4ddd-48d0-9411-8133944b00b1)
-Master the Arabic script, and practice typing and drawing characters. Each letter is accompanied by native audio for perfect pronunciation.
+### Anki Deck Integration
+Seamless integration with the popular Anki spaced repetition system:
+- Pre-built vocabulary decks for different categories (verbs, animals, food, etc.)
+- Export your personal saved words to custom Anki decks
+- Ready-to-use flashcard sets with Arabic, English, and transliteration
+- Thousands of professionally curated vocabulary items
+
+## Technical Features
+
+### User Account Management
+- Secure user registration and authentication
+- Google OAuth integration for easy login
+- Password reset functionality
+- Personal profile management
+- Learning progress tracking
+
+### Audio and Speech Technology
+- High-quality text-to-speech in multiple Arabic dialects
+- Speech recognition and pronunciation scoring
+- Native speaker audio recordings
+- Audio playback controls and speed adjustment
+
+### Responsive Design
+- Mobile-friendly interface that works on all devices
+- Optimized for both desktop and mobile learning
+- Clean, intuitive user interface designed for language learners
+
+### Subscription and Payment
+- Freemium model with basic features available to all users
+- Premium subscription for advanced features and unlimited access
+- Secure payment processing through Stripe
+- Multiple pricing tiers to fit different learning needs
 
 #### Tools used
 - Sveltekit

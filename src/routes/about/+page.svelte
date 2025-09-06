@@ -78,7 +78,7 @@
 							<div>
 								<h3 class="text-xl font-bold text-text-300 mb-3">Real Conversations</h3>
 								<p class="text-base text-text-200 leading-relaxed mb-3">
-									Practical Egyptian Arabic conversations recorded by native speakers with full transcripts and translations.
+									Practical Arabic conversations recorded by native speakers with full transcripts and translations.
 								</p>
 								<p class="text-base text-text-200 leading-relaxed mb-4">
 									AI-generated definitions for every word to accelerate your learning.
@@ -156,7 +156,7 @@
 							<div>
 								<h3 class="text-xl font-bold text-text-300 mb-3">Verb Conjugation</h3>
 								<p class="text-base text-text-200 leading-relaxed mb-4">
-									Master Egyptian Arabic verb conjugations with real-time spell checking and instant feedback.
+									Master Arabic verb conjugations with real-time spell checking and instant feedback.
 								</p>
 							</div>
 							<a
@@ -236,29 +236,6 @@
 								class="inline-block px-6 py-3 text-base font-semibold bg-tile-600 border-2 border-tile-600 text-text-300 hover:bg-tile-700 transition-colors duration-300 shadow-md w-fit"
 							>
 								Learn Alphabet
-							</a>
-						</div>
-					</div>
-				</div>
-
-				<!-- Handwriting -->
-				<div class="bg-tile-500 border-2 border-tile-600 shadow-lg overflow-hidden">
-					<div class="flex flex-col sm:flex-row">
-						<div class="sm:w-2/5 h-48 sm:h-auto bg-tile-300 border-r-0 sm:border-r-2 border-b-2 sm:border-b-0 border-tile-600 flex items-center justify-center p-4">
-							<img src="/images/handwriting.png" alt="Handwriting Practice" class="max-w-full max-h-full object-contain" />
-						</div>
-						<div class="sm:w-3/5 p-6 flex flex-col justify-between">
-							<div>
-								<h3 class="text-xl font-bold text-text-300 mb-3">Handwriting Practice</h3>
-								<p class="text-base text-text-200 leading-relaxed mb-4">
-									Develop beautiful Arabic handwriting skills with practice exercises across 6,000+ words.
-								</p>
-							</div>
-							<a
-								href="/egyptian-arabic/write"
-								class="inline-block px-6 py-3 text-base font-semibold bg-tile-600 border-2 border-tile-600 text-text-300 hover:bg-tile-700 transition-colors duration-300 shadow-md w-fit"
-							>
-								Practice Handwriting
 							</a>
 						</div>
 					</div>

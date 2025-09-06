@@ -13,6 +13,8 @@
 	let { data } = $props();
 
 	let isLoading = $state(false);
+	let isError = $state(false);
+	let errorMessage = $state('');
 
   onMount(() => {
     currentDialect.set('darija');
@@ -146,6 +148,8 @@
 
 	async function generateSentance(option: string, copy: any) {
 		isLoading = true;
+		isError = false;
+		errorMessage = '';
     
     let finalVocabularyWords = vocabularyWords;
     
@@ -160,27 +164,48 @@
       }
     }
     
-		const res = await fetch('/api/generate-sentences', {
-			method: 'POST',
-			headers: { accept: 'application/json' },
-			body: JSON.stringify({
-				option,
-				sentences: copy,
-				dialect: 'darija',
-        learningTopics: selectedLearningTopics,
-        vocabularyWords: finalVocabularyWords
-			})
-		});
+    try {
+      const res = await fetch('/api/generate-sentences', {
+        method: 'POST',
+        headers: { accept: 'application/json' },
+        body: JSON.stringify({
+          option,
+          sentences: copy,
+          dialect: 'darija',
+          learningTopics: selectedLearningTopics,
+          vocabularyWords: finalVocabularyWords
+        })
+      });
 
-		const chatgptres = await res.json();
-		const jsonBlob = chatgptres.message.message.content;
-		const _sentences = JSON.parse(jsonBlob);
-		const newSentences = filterValidSentences(_sentences.sentences || []);
-		const updatedSentences = [...sentences, ...newSentences];
-		sentences = updatedSentences;
-		darijaSentencesInStore.set(updatedSentences as any);
-    localStorage.setItem('sentences_darija', JSON.stringify(updatedSentences));
-		isLoading = false;
+      if (!res.ok) {
+        throw new Error(`Server error: ${res.status} ${res.statusText}`);
+      }
+
+      const chatgptres = await res.json();
+      
+      if (!chatgptres.message?.message?.content) {
+        throw new Error('Invalid response format from server');
+      }
+      
+      const jsonBlob = chatgptres.message.message.content;
+      const _sentences = JSON.parse(jsonBlob);
+      const newSentences = filterValidSentences(_sentences.sentences || []);
+      
+      if (newSentences.length === 0) {
+        throw new Error('No valid sentences were generated. Please try again.');
+      }
+      
+      const updatedSentences = [...sentences, ...newSentences];
+      sentences = updatedSentences;
+      darijaSentencesInStore.set(updatedSentences as any);
+      localStorage.setItem('sentences_darija', JSON.stringify(updatedSentences));
+    } catch (error) {
+      console.error('Error generating sentences:', error);
+      isError = true;
+      errorMessage = error instanceof Error ? error.message : 'An unexpected error occurred while generating sentences. Please try again.';
+    } finally {
+      isLoading = false;
+    }
 	}
 
 	async function updateSentencesViewed() {
@@ -283,6 +308,27 @@
 
 			<Button type="submit">Subscribe</Button>
 		</form>
+	</div>
+{/if}
+
+{#if isError}
+	<div class="px-3 mt-6 sm:px-8 max-w-3xl mx-auto">
+		<div class="flex flex-col items-center gap-4 border-2 border-tile-600 bg-tile-400 p-6 text-text-200 shadow-lg">
+			<div class="text-center">
+				<p class="text-2xl text-text-300 font-bold mb-1">
+					Generation Failed
+				</p>
+				<p class="text-text-300 mb-4">
+					{errorMessage}
+				</p>
+				<button
+					onclick={() => { isError = false; errorMessage = ''; }}
+					class="px-4 py-2 bg-tile-500 text-text-300 rounded border border-tile-600 hover:bg-tile-600 hover:border-tile-500 transition-colors"
+				>
+					Try Again
+				</button>
+			</div>
+		</div>
 	</div>
 {/if}
 
