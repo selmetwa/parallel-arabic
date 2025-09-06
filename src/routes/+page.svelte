@@ -38,7 +38,7 @@
           Master formal Arabic used in news, literature, and official communications. The foundation of all Arabic dialects.
         </p>
         <div class="mt-2 text-xs text-text-200 opacity-75">
-          ✓ Stories ✓ Speaking ✓ Sentences
+          ✓ Stories ✓ Speaking ✓ Sentences ✓ Vocabulary ✓ Writing
         </div>
       </a>
 
@@ -49,7 +49,7 @@
           Explore the dialect of Syria, Lebanon, Palestine, and Jordan. Known for its melodic sound and cultural richness.
         </p>
         <div class="mt-2 text-xs text-text-200 opacity-75">
-          ✓ Stories ✓ Speaking ✓ Sentences
+          ✓ Stories ✓ Speaking ✓ Sentences ✓ Vocabulary ✓ Writing
         </div>
       </a>
 
@@ -60,12 +60,12 @@
           Explore the unique dialect of Morocco. Known for its distinctive vocabulary and French/Berber influences.
         </p>
         <div class="mt-2 text-xs text-text-200 opacity-75">
-          ✓ Stories ✓ Speaking ✓ Sentences
+          ✓ Stories ✓ Speaking ✓ Sentences ✓ Vocabulary ✓ Writing
         </div>
       </a>
 
       <!-- Khaleeji Arabic -->
-      <a href="/khaleeji" class="group px-4 py-6 flex-col flex gap-2 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
+      <!-- <a href="/khaleeji" class="group px-4 py-6 flex-col flex gap-2 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
         <h3 class="text-xl text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">Khaleeji Arabic</h3>
         <p class="text-text-300 text-sm font-medium leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">
           Master the Gulf Arabic dialect spoken in UAE, Saudi Arabia, Kuwait, Bahrain, Qatar, and Oman.
@@ -73,7 +73,7 @@
         <div class="mt-2 text-xs text-text-200 opacity-75">
           ✓ Stories ✓ Speaking ✓ Sentences
         </div>
-      </a>
+      </a> -->
     </div>
   </div>
 

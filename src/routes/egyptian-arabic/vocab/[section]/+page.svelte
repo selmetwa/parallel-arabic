@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Button from '$lib/components/Button.svelte';
-	import WordBlock from './components/WordBlock.svelte';
+	// import WordBlock from './components/WordBlock.svelte';
+  import VocabQuizBlock from '$lib/components/dialect-shared/vocab/VocabQuizBlock.svelte';
 	import { sections } from '$lib/constants/sections';
 	import { PUBLIC_PRICE_ID } from '$env/static/public';
   import { updateUrl } from '$lib/helpers/update-url';
@@ -100,6 +101,6 @@
 	</header>
 
 	<div class="px-3 mt-6 sm:px-8 max-w-5xl mx-auto">
-		<WordBlock {wordObj} {next} />
+		<VocabQuizBlock {wordObj} {next} dialect="egyptian-arabic" />
 	</div>
 {/if}

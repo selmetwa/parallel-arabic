@@ -1,4 +1,14 @@
 <script lang="ts">
+	/**
+	 * SentenceBlock Component
+	 * 
+	 * Features:
+	 * - Single word click for individual definitions
+	 * - Multi-word selection by dragging across words
+	 * - Visual feedback for selected words with blue highlighting
+	 * - "Define" button appears when words are selected
+	 * - "Clear Selection" button to reset selection
+	 */
 	import { type Keyboard, type Dialect } from '$lib/types/index';
 	import { updateKeyboardStyle } from '$lib/helpers/update-keyboard-style';
 	import { hue, theme } from '$lib/store/store';
@@ -41,7 +51,29 @@
 	let isLoadingDefinition = $state(false);
 	let definition = $state('');
 	let targetWord = $state('');
+	let targetArabicWord = $state('');
 	let keyboardValue = $state('');
+	
+	// Multi-word selection state
+	let selectedWords = $state<string[]>([]);
+	let isSelecting = $state(false);
+	let selectionStartIndex = $state(-1);
+	let selectionEndIndex = $state(-1);
+
+	// Function to normalize Arabic text for comparison
+	function normalizeArabicText(text: string): string {
+		return text
+			// Remove diacritics
+			.replace(/[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06ED\u08D3-\u08E1\u08E3-\u08FF]/g, '')
+			// Normalize Alif variants to plain Alif (ا)
+			.replace(/[آأإٱ]/g, 'ا')
+			// Normalize Ya Maqsoura (ى) to regular Ya (ي)
+			.replace(/ى/g, 'ي')
+			// Normalize Waw with Hamza (ؤ) to plain Waw (و)
+			.replace(/ؤ/g, 'و')
+			// Normalize Ya with Hamza (ئ) to regular Ya (ي)
+			.replace(/ئ/g, 'ي');
+	}
 
 	function areArraysEqual(arr1: Array<string>, arr2: Array<string>) {
 		if (arr1.length !== arr2.length) {
@@ -58,11 +90,22 @@
 	}
 
 	function compareMyInput(value: string) {
-		const myInputArr = value.split('');
-		const egyptianArabicArr = sentence.arabic.split('');
+		// Normalize both user input and target sentence for comparison only
+		const normalizedInput = normalizeArabicText(value.trim());
+		const normalizedTarget = normalizeArabicText(sentence.arabic.trim());
+		
+		const myInputArr = normalizedInput.split('');
+		const arabicArr = normalizedTarget.split('');
 
-		const result = myInputArr.map((letter, index) => {
-			if (letter === egyptianArabicArr[index]) {
+		// For visual feedback, compare character by character using normalized versions
+		const visualInputArr = value.trim().split('');
+
+		const result = visualInputArr.map((letter, index) => {
+			// Check if the normalized versions match at this position
+			const normalizedUserChar = normalizeArabicText(letter);
+			const normalizedTargetChar = normalizeArabicText(sentence.arabic.trim().split('')[index] || '');
+			
+			if (normalizedUserChar === normalizedTargetChar) {
 				return {
 					letter,
 					correct: true
@@ -76,7 +119,7 @@
 
 		attemptTemp = result;
 
-		if (areArraysEqual(myInputArr, egyptianArabicArr)) {
+		if (areArraysEqual(myInputArr, arabicArr)) {
 			isCorrect = true;
 			const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
 			keyboard && keyboard.resetValue();
@@ -131,11 +174,56 @@
     khaleeji: 'Khaleeji Arabic'
   }
 
-	async function askChatGTP(word: string) {
-		targetWord = word;
+	// Function to filter only Arabic characters
+	function filterArabicCharacters(text: string): string {
+		// Arabic Unicode range: \u0600-\u06FF, \u0750-\u077F, \u08A0-\u08FF, \uFB50-\uFDFF, \uFE70-\uFEFF
+		return text.replace(/[^\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDFF\uFE70-\uFEFF\s]/g, '').trim();
+	}
+
+	// Function to map English words to corresponding Arabic words
+	function mapEnglishToArabic(englishWords: string[]): string {
+		const allEnglishWords = sentence.english.split(' ');
+		const allArabicWords = sentence.arabic.split(' ');
+		
+		// Find the indices of the selected English words
+		const selectedIndices: number[] = [];
+		
+		for (const englishWord of englishWords) {
+			const index = allEnglishWords.findIndex((word, i) => 
+				word.toLowerCase() === englishWord.toLowerCase() && !selectedIndices.includes(i)
+			);
+			if (index !== -1) {
+				selectedIndices.push(index);
+			}
+		}
+		
+		// Extract corresponding Arabic words
+		const correspondingArabicWords = selectedIndices
+			.sort((a, b) => a - b) // Maintain order
+			.map(index => allArabicWords[index])
+			.filter(word => word); // Remove undefined/empty words
+		
+		if (correspondingArabicWords.length > 0) {
+			const arabicText = correspondingArabicWords.join(' ');
+			return filterArabicCharacters(arabicText);
+		}
+		
+		// Fallback: filter the entire Arabic sentence
+		return filterArabicCharacters(sentence.arabic);
+	}
+
+	async function askChatGTP(words: string | string[]) {
+		const wordsArray = Array.isArray(words) ? words : [words];
+		targetWord = wordsArray.join(' ');
+		
+		// Map English words to Arabic equivalent and filter for Arabic characters only
+		targetArabicWord = mapEnglishToArabic(wordsArray);
+		
 		isLoadingDefinition = true;
 		openDefinitionModal();
-		const question = `What does ${word} mean in ${dialectName[dialect]}? Considering the following sentences ${sentence.arabic} ${sentence.english} ${sentence.transliteration} but please do not reveal the entire meaning of the sentence, and dont say anything about the rest of the sentence at all, just use it as a reference to derive the definition.`;
+		
+		const wordText = wordsArray.length === 1 ? wordsArray[0] : `the phrase "${wordsArray.join(' ')}"`;
+		const question = `What does ${wordText} mean in ${dialectName[dialect]}? Considering the following sentences ${sentence.arabic} ${sentence.english} ${sentence.transliteration} but please do not reveal the entire meaning of the sentence, and dont say anything about the rest of the sentence at all, just use it as a reference to derive the definition.`;
 
 		const res = await fetch('/api/open-ai', {
 			method: 'POST',
@@ -149,6 +237,45 @@
 
 		definition = data.message.message.content;
 		isLoadingDefinition = false;
+	}
+
+	// Word selection functions
+	function handleWordMouseDown(index: number, event: MouseEvent) {
+		event.preventDefault();
+		isSelecting = true;
+		selectionStartIndex = index;
+		selectionEndIndex = index;
+		updateSelectedWords();
+	}
+
+	function handleWordMouseEnter(index: number) {
+		if (isSelecting) {
+			selectionEndIndex = index;
+			updateSelectedWords();
+		}
+	}
+
+	function handleWordMouseUp() {
+		isSelecting = false;
+	}
+
+	function updateSelectedWords() {
+		const words = sentence.english.split(' ');
+		const start = Math.min(selectionStartIndex, selectionEndIndex);
+		const end = Math.max(selectionStartIndex, selectionEndIndex);
+		selectedWords = words.slice(start, end + 1);
+	}
+
+	function clearSelection() {
+		selectedWords = [];
+		selectionStartIndex = -1;
+		selectionEndIndex = -1;
+	}
+
+	function isWordSelected(index: number): boolean {
+		const start = Math.min(selectionStartIndex, selectionEndIndex);
+		const end = Math.max(selectionStartIndex, selectionEndIndex);
+		return selectedWords.length > 0 && index >= start && index <= end;
 	}
 
 	function onRegularKeyboard(e: any) {
@@ -182,7 +309,14 @@
 			isLoadingDefinition = false;
 			definition = '';
 			targetWord = '';
+			targetArabicWord = '';
 			keyboardValue = '';
+			
+			// Clear selection state
+			selectedWords = [];
+			isSelecting = false;
+			selectionStartIndex = -1;
+			selectionEndIndex = -1;
 
 			if (typeof document !== 'undefined') {
 				const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
@@ -204,11 +338,13 @@
 <DefinitionModal
 	activeWordObj={{
 		english: targetWord,
+		arabic: targetArabicWord,
 		isLoading: isLoadingDefinition,
 		description: definition
 	}}
 	isModalOpen={isDefinitionModalOpen}
 	closeModal={closeDefinitionModal}
+	{dialect}
 ></DefinitionModal>
 {#if sentence}
 	{#if isCorrect}
@@ -218,6 +354,14 @@
 	{/if}
 	
 	<InfoDisclaimer></InfoDisclaimer>
+	
+	<!-- Multi-word selection instructions -->
+	<div class="mb-4 p-3 bg-tile-400 border-l-4 border-tile-500 rounded-r hover:bg-tile-500 transition-colors duration-300">
+		<p class="text-sm text-text-300">
+			<strong>💡 Tip:</strong> Click individual words for definitions, or 
+			<strong>click and drag across multiple words</strong> to select a phrase and get its definition!
+		</p>
+	</div>
 	
 	<div class="grid grid-cols-2 sm:grid-cols-5 gap-2 mb-6">
 		<Button onClick={() => (showHint = !showHint)} type="button">
@@ -240,15 +384,52 @@
 	
 	<div class="text-center mb-6">
 		<div class="flex flex-col items-center justify-center gap-3">
-			<h1 class="flex w-fit flex-row flex-wrap text-3xl sm:text-4xl font-bold text-text-300">
-				{#each sentence.english.split(' ') as word}
+			<!-- Selection controls -->
+			{#if selectedWords.length > 0}
+				<div class="flex gap-2 mb-2">
 					<button
+						onclick={() => askChatGTP(selectedWords)}
+						class="px-3 py-1 bg-tile-400 text-text-300 rounded border border-tile-600 hover:bg-tile-500 hover:border-tile-500 transition-colors"
+					>
+						Define "{selectedWords.join(' ')}"
+					</button>
+					<button
+						onclick={clearSelection}
+						class="px-3 py-1 bg-tile-400 text-text-300 rounded border border-tile-600 hover:bg-tile-500 hover:border-tile-500 transition-colors"
+					>
+						Clear Selection
+					</button>
+				</div>
+			{/if}
+			
+			<div 
+				class="flex w-fit flex-row flex-wrap text-3xl sm:text-4xl font-bold text-text-300 select-none"
+				onmouseup={handleWordMouseUp}
+				role="application"
+				aria-label="Word selection area for definitions"
+			>
+				{#each sentence.english.split(' ') as word, index}
+					<span
+						onmousedown={(e) => handleWordMouseDown(index, e)}
+						onmouseenter={() => handleWordMouseEnter(index)}
 						onclick={() => askChatGTP(word)}
-						class="p-1 text-3xl sm:text-4xl duration-300 hover:bg-tile-500 border-2 border-transparent hover:border-tile-600"
-						>{word}</button
+						onkeydown={(e) => {
+							if (e.key === 'Enter' || e.key === ' ') {
+								e.preventDefault();
+								askChatGTP(word);
+							}
+						}}
+						role="button"
+						tabindex="0"
+						aria-label={`Get definition for: ${word}`}
+						class={cn("p-1 text-3xl sm:text-4xl duration-300 cursor-pointer border-2", {
+							"bg-blue-200 border-blue-400": isWordSelected(index),
+							"hover:bg-tile-500 border-transparent hover:border-tile-600": !isWordSelected(index)
+						})}
+						>{word}</span
 					>
 				{/each}
-			</h1>
+			</div>
 			{#if showHint}
 				<p class="text-xl text-text-200">({sentence.transliteration})</p>
 			{/if}

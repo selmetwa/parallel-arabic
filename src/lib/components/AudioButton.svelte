@@ -3,9 +3,10 @@
 
 	import Button from '$lib/components/Button.svelte';
   import { type Dialect } from '$lib/types/index';
-  let { text, dialect = 'egyptian-arabic', children }: {
+  let { text, dialect = 'egyptian-arabic', audioUrl, children }: {
     text: string;
     dialect: Dialect;
+    audioUrl?: string;
     children?: any;
   } = $props();
 
@@ -21,35 +22,63 @@
 			currentSound.stop();
 		}
 		
-		const res = await fetch('/api/text-to-speech', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json'
-			},
-			body: JSON.stringify({ text, dialect })
-		});
+		try {
+			let finalAudioUrl: string;
+			let serverPlaybackRate = 1.0;
 
-		// Get playback rate from response headers
-		const serverPlaybackRate = parseFloat(res.headers.get('X-Playback-Rate') || '1.0');
+			// Prefer audioUrl if provided, otherwise use TTS
+			if (audioUrl) {
+				finalAudioUrl = audioUrl;
+				// Default playback rate for pre-recorded audio
+				serverPlaybackRate = 1.0;
+			} else {
+				// Fall back to TTS
+				const res = await fetch('/api/text-to-speech', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json'
+					},
+					body: JSON.stringify({ text, dialect })
+				});
 
-		// Convert response to a blob
-		const audioBlob = await res.blob();
+				if (!res.ok) {
+					throw new Error(`TTS request failed: ${res.statusText}`);
+				}
 
-		// Create a URL for the audio blob
-		const audioUrl = URL.createObjectURL(audioBlob);
+				// Get playback rate from response headers
+				serverPlaybackRate = parseFloat(res.headers.get('X-Playback-Rate') || '1.0');
 
-		// Create a Howl instance to play the audio
-		currentSound = new Howl({
-			src: [audioUrl],
-			autoplay: true,
-			rate: serverPlaybackRate * playbackRate, // Apply both server and user playback rates
-			format: ['mp3'] // or 'wav', based on the format of the returned blob
-		});
+				// Convert response to a blob
+				const audioBlob = await res.blob();
 
-		isLoading = false;
+				// Create a URL for the audio blob
+				finalAudioUrl = URL.createObjectURL(audioBlob);
+			}
 
-		// Play the audio
-		currentSound.play();
+			// Create a Howl instance to play the audio
+			currentSound = new Howl({
+				src: [finalAudioUrl],
+				autoplay: true,
+				rate: serverPlaybackRate * playbackRate, // Apply both server and user playback rates
+				format: ['mp3', 'wav'], // Support both formats
+				onloaderror: (id, error) => {
+					console.error('Audio load error:', error);
+					isLoading = false;
+				},
+				onplayerror: (id, error) => {
+					console.error('Audio play error:', error);
+					isLoading = false;
+				}
+			});
+
+			isLoading = false;
+
+			// Play the audio
+			currentSound.play();
+		} catch (error) {
+			console.error('Audio playback failed:', error);
+			isLoading = false;
+		}
 	};
 </script>
 

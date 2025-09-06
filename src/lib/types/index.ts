@@ -18,11 +18,10 @@ export type Letter = {
 }
 
 export type wordObjectItem = {
-  egyptianArabic: string
+  arabic: string
   english: string
-  egyptianArabicTransliteration: string
-  standardArabic: string
-  standardArabicTransliteration: string
+  transliteration: string
+  audioUrl?: string
 }
 
 export type wordObjectGroup = {

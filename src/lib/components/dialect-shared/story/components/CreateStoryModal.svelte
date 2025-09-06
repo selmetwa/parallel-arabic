@@ -371,16 +371,7 @@
               selectableFor="generate"
               isSelected={creationMode === 'generate'}
               value="generate"
-              text="✨ AI Generate"
-            />
-            <RadioButton
-              className="!text-lg"
-              wrapperClass="!p-2"
-              onClick={(e) => creationMode = e.target.value}
-              selectableFor="upload"
-              isSelected={creationMode === 'upload'}
-              value="upload"
-              text="🎵 From Audio"
+              text="AI Generate"
             />
           </div>
           <p class="text-sm text-text-200">

@@ -18,35 +18,43 @@
     <ul class="mt-3 flex flex-col gap-4 text-text-300">
       <li class="flex items-start gap-2">
         <Checkmark />
+        <span><strong>Multiple Arabic dialects:</strong> Egyptian, Levantine, Moroccan & Fusha</span>
+      </li>
+      <li class="flex items-start gap-2">
+        <Checkmark />
         <span>Access to all stories and conversations with native audio</span>
       </li>
       <li class="flex items-start gap-2">
         <Checkmark />
-        <span>Unlimited AI practice sentences for beginner and intermediate levels</span>
+        <span><strong>Unlimited AI-generated practice sentences</strong> for all skill levels</span>
       </li>
       <li class="flex items-start gap-2">
         <Checkmark />
-        <span>Access to all verbs for verb conjugation practice</span>
+        <span><strong>Advanced speaking practice</strong> with real-time pronunciation feedback</span>
       </li>
       <li class="flex items-start gap-2">
         <Checkmark />
-        <span>Access to over 6,000 vocabulary words for writing and handwriting practice</span>
+        <span>Access to all verbs for comprehensive verb conjugation practice</span>
       </li>
       <li class="flex items-start gap-2">
         <Checkmark />
-        <span>Access to over 6,000 vocabulary words and multiple choice quizzes</span>
+        <span>Access to <strong>over 15,000 vocabulary words</strong> for writing and handwriting practice</span>
       </li>
       <li class="flex items-start gap-2">
         <Checkmark />
-        <span>Access to custom built Anki decks for Egyptian Arabic</span>
+        <span>Access to <strong>over 15,000 vocabulary words</strong> and multiple choice quizzes</span>
       </li>
       <li class="flex items-start gap-2">
         <Checkmark />
-        <span>Access to Alphabet learning</span>
+        <span>Access to custom built Anki decks for all dialects</span>
       </li>
       <li class="flex items-start gap-2">
         <Checkmark />
-        <span>Save keywords and phrases to personal wordbank</span>
+        <span>Complete Arabic Alphabet mastery with native pronunciation</span>
+      </li>
+      <li class="flex items-start gap-2">
+        <Checkmark />
+        <span>Save unlimited keywords and phrases to personal wordbank</span>
       </li>
     </ul>
     <form method="POST" action="/?/subscribe" class="mt-4">

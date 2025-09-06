@@ -6,9 +6,9 @@
 
 <section class="mt-4 flex flex-col gap-6 px-6 py-8 sm:px-8">
 	<h1 class="mx-auto text-5xl font-bold text-text-300">Pricing</h1>
-  <p class="text-xl text-text-200 mx-auto">
-    Take your Egyptian Arabic to the next level for the price of one lesson on
-     <a class="underline text-xl text-text-200" target="_blank" href="https://www.italki.com/en/teachers/arabic?from%5B0%5D=EG&speaks%5B0%5D=english">Italki</a> a month.
+  <p class="text-xl text-text-200 mx-auto text-center max-w-4xl">
+    Master multiple Arabic dialects with AI-powered learning, speaking practice, and 15,000+ vocabulary words — all for the price of one lesson on
+     <a class="underline text-xl text-text-200" target="_blank" href="https://www.italki.com/en/teachers/arabic?from%5B0%5D=EG&speaks%5B0%5D=english">Italki</a> per month.
   </p>
 	<div class="mx-4 flex flex-col gap-3 sm:flex-row lg:mx-12">
 		<div class="flex-1 border-2 border-tile-500">
@@ -23,7 +23,11 @@
 				</li>
         <li class="flex items-start gap-2">
 					<Checkmark />
-					<span>20 AI practice sentences for beginner and intermediate levels <span class="text-text-200 text-md">*requires account</span></span>
+					<span>20 AI-generated practice sentences across multiple dialects <span class="text-text-200 text-md">*requires account</span></span>
+				</li>
+        <li class="flex items-start gap-2">
+					<Checkmark />
+					<span>Basic speaking practice with pronunciation feedback</span>
 				</li>
         <li class="flex items-start gap-2">
 					<Checkmark />
@@ -39,7 +43,7 @@
 				</li>
 				<li class="flex items-start gap-2">
 					<Checkmark />
-					<span>Access to Alphabet learning</span>
+					<span>Access to Arabic Alphabet learning with audio</span>
 				</li>
         <li class="flex items-start gap-2">
 					<Checkmark />
@@ -56,35 +60,43 @@
 			<ul class="mt-3 flex flex-col gap-4 px-4 text-text-300">
 				<li class="flex items-start gap-2">
 					<Checkmark />
+					<span><strong>Multiple Arabic dialects:</strong> Egyptian, Levantine, Moroccan & Fusha</span>
+				</li>
+				<li class="flex items-start gap-2">
+					<Checkmark />
 					<span>Access to all stories and conversations with native audio</span>
 				</li>
 				<li class="flex items-start gap-2">
 					<Checkmark />
-					<span>Unlimited AI practice sentences for beginner and intermediate levels</span>
+					<span><strong>Unlimited AI-generated practice sentences</strong> for all skill levels</span>
+				</li>
+				<li class="flex items-start gap-2">
+					<Checkmark />
+					<span><strong>Advanced speaking practice</strong> with real-time pronunciation feedback</span>
 				</li>
         <li class="flex items-start gap-2">
 					<Checkmark />
-					<span>Access to all verbs for verb conjugation practice</span>
+					<span>Access to all verbs for comprehensive verb conjugation practice</span>
 				</li>
 				<li class="flex items-start gap-2">
 					<Checkmark />
-					<span>Access to over 6,000 vocabulary words for writing and handwriting practice</span>
+					<span>Access to <strong>over 15,000 vocabulary words</strong> for writing and handwriting practice</span>
 				</li>
 				<li class="flex items-start gap-2">
 					<Checkmark />
-					<span>Access to over 6,000 vocabulary words and multiple choice quizzes</span>
+					<span>Access to <strong>over 15,000 vocabulary words</strong> and multiple choice quizzes</span>
 				</li>
 				<li class="flex items-start gap-2">
 					<Checkmark />
-					<span>Access to custom built Anki decks for Egyptian Arabic</span>
+					<span>Access to custom built Anki decks for all dialects</span>
 				</li>
 				<li class="flex items-start gap-2">
 					<Checkmark />
-					<span>Access to Alphabet learning</span>
+					<span>Complete Arabic Alphabet mastery with native pronunciation</span>
 				</li>
 				<li class="flex items-start gap-2">
 					<Checkmark />
-					<span>Save keywords and phrases to personal wordbank</span>
+					<span>Save unlimited keywords and phrases to personal wordbank</span>
 				</li>
 			</ul>
       <form method="POST" action="/?/subscribe" class="px-4 mt-4">

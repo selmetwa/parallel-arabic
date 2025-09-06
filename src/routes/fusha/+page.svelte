@@ -33,6 +33,16 @@
       <p class="text-text-300 text-sm font-medium leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">Build comprehension with AI-generated exercises in Modern Standard Arabic.</p>
     </a>
     
+    <a href="/fusha/write" class="group px-3 py-4 flex-col flex gap-1 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
+      <h2 class="text-xl text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">Write</h2>
+      <p class="text-text-300 text-sm font-medium leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">Write Modern Standard Arabic</p>
+    </a>
+
+    <a href="/fusha/vocab" class="group px-3 py-4 flex-col flex gap-1 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
+      <h2 class="text-xl text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">Vocabulary</h2>
+      <p class="text-text-300 text-sm font-medium leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">Learn Modern Standard Arabic vocabulary</p>
+    </a>
+    
     <a href="/alphabet" class="group px-3 py-4 flex-col flex gap-1 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
       <h2 class="text-xl text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">Arabic Alphabet</h2>
       <p class="text-text-300 text-sm font-medium leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">Learn the 28 letters and their connections.</p>
