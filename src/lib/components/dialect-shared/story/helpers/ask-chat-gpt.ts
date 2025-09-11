@@ -13,7 +13,7 @@ export const askChatGTP = async (word: string, type: string, fullSentence: TFull
     fusha: 'Modern Standard Arabic',
     levantine: 'Levantine Arabic',
     darija: 'Moroccan Darija',
-    'egyptian-arabic': 'Egyptian Arabic'
+    'egyptian-arabic': 'Egyptian Arabic',
   }
 
   const _dialectName = dialectName[dialect];

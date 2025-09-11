@@ -13,6 +13,9 @@
   import SaveButton from '$lib/components/SaveButton.svelte';
   import InfoDisclaimer from '$lib/components/InfoDisclaimer.svelte';
   import AudioButton from "$lib/components/AudioButton.svelte";
+  import DefinitionModal from '$lib/components/dialect-shared/sentences/DefinitionModal.svelte';
+  import { askChatGTP } from '$lib/components/dialect-shared/story/helpers/ask-chat-gpt';
+  import { normalizeArabicText, normalizeArabicTextLight, filterArabicCharacters } from '$lib/utils/arabic-normalization';
 
 	type Word = {
 		english: string;
@@ -45,33 +48,21 @@
 	let isCorrect = $state(false);
   let isInfoModalOpen = $state(false);
   let keyboardValue = $state('');
+  
+  // Multi-word selection state
+  let selectedWords = $state<string[]>([]);
+  let isSelecting = $state(false);
+  let selectionStartIndex = $state(-1);
+  let selectionEndIndex = $state(-1);
+  let isDefinitionModalOpen = $state(false);
+  let isLoadingDefinition = $state(false);
+  let definition = $state('');
+  let targetWord = $state('');
+  let targetArabicWord = $state('');
 
   const regex = /[-–]/;
 
 
-	/**
-	 * Normalize Arabic text by removing diacritics and standardizing letter forms
-	 * This includes:
-	 * - Removing diacritics (تشكيل): َ ً ُ ٌ ِ ٍ ْ ّ ٓ ٔ ٕ ٖ ٗ ٘ ٙ ٚ ٛ ٜ ٝ ٞ ٟ ٠ ٭ ٰ ۥ ۦ
-	 * - Normalizing Alif variants: آ أ إ ٱ → ا
-	 * - Normalizing Ya variants: ى (Ya Maqsoura) → ي
-	 * - Normalizing Ta Marbuta: ة → ه
-	 * - Normalizing Waw with Hamza: ؤ → و
-	 */
-	function normalizeArabicText(text: string): string {
-		return text
-			// Remove diacritics first
-			// .replace(/[\u064B-\u065F\u0670\u06D6-\u06ED]/g, '')
-      .replace(/[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06ED\u08D3-\u08E1\u08E3-\u08FF]/g, '')
-			// Normalize Alif variants to plain Alif (ا)
-			.replace(/[آأإٱ]/g, 'ا')
-			// Normalize Ya Maqsoura (ى) to regular Ya (ي)
-			.replace(/ى/g, 'ي')
-			// Normalize Waw with Hamza (ؤ) to plain Waw (و)
-			.replace(/ؤ/g, 'و')
-			// Normalize Ya with Hamza (ئ) to plain Ya (ي)
-			.replace(/ئ/g, 'ي');
-	}
 
 	function areArraysEqual(arr1: Array<string>, arr2: Array<string>) {
 		if (arr1.length !== arr2.length) {
@@ -88,20 +79,25 @@
 	}
 
 	function compareMyInput(myInput: string) {
-		// Normalize both user input and target word for comparison only
+		// Use strict normalization for final comparison
 		const normalizedInput = normalizeArabicText(myInput.trim());
 		const normalizedTarget = normalizeArabicText(arabicWord.trim());
 		
 		const myInputArr = normalizedInput.split('');
 		const arabicArr = normalizedTarget.split('');
 
-		// For visual feedback, compare character by character using normalized versions
+		// For visual feedback, normalize entire strings first, then compare character by character
+		const lightNormalizedInput = normalizeArabicTextLight(myInput.trim());
+		const lightNormalizedTarget = normalizeArabicTextLight(arabicWord.trim());
+		
 		const visualInputArr = myInput.trim().split('');
+		const normalizedInputArr = lightNormalizedInput.split('');
+		const normalizedTargetArr = lightNormalizedTarget.split('');
 
 		const result = visualInputArr.map((letter, index) => {
-			// Check if the normalized versions match at this position
-			const normalizedUserChar = normalizeArabicText(letter);
-			const normalizedTargetChar = normalizeArabicText(arabicWord.trim().split('')[index] || '');
+			// Compare the normalized characters at the same position
+			const normalizedUserChar = normalizedInputArr[index] || '';
+			const normalizedTargetChar = normalizedTargetArr[index] || '';
 			
 			if (normalizedUserChar === normalizedTargetChar) {
 				return {
@@ -117,7 +113,7 @@
 
 		attemptTemp = result;
 
-		// Use the normalized versions for final correctness check
+		// Use the strict normalized versions for final correctness check
 		if (areArraysEqual(myInputArr, arabicArr)) {
 			isCorrect = true;
 			correctAnswer = arabicWord; // Show the original word
@@ -174,6 +170,97 @@
     keyboard = keyboard === 'virtual' ? 'physical' : 'virtual';
   }
 
+  // Multi-word selection functions
+  function handleWordMouseDown(index: number, event: MouseEvent) {
+    event.preventDefault();
+    isSelecting = true;
+    selectionStartIndex = index;
+    selectionEndIndex = index;
+    updateSelectedWords();
+  }
+
+  function handleWordMouseEnter(index: number) {
+    if (isSelecting) {
+      selectionEndIndex = index;
+      updateSelectedWords();
+    }
+  }
+
+  function handleWordMouseUp() {
+    isSelecting = false;
+  }
+
+  function updateSelectedWords() {
+    if (selectionStartIndex === -1 || selectionEndIndex === -1) return;
+    
+    const start = Math.min(selectionStartIndex, selectionEndIndex);
+    const end = Math.max(selectionStartIndex, selectionEndIndex);
+    
+    const englishWords = word.english.split(' ');
+    selectedWords = englishWords.slice(start, end + 1);
+  }
+
+  function clearSelection() {
+    selectedWords = [];
+    selectionStartIndex = -1;
+    selectionEndIndex = -1;
+  }
+
+  function isWordSelected(index: number): boolean {
+    const start = Math.min(selectionStartIndex, selectionEndIndex);
+    const end = Math.max(selectionStartIndex, selectionEndIndex);
+    return selectedWords.length > 0 && index >= start && index <= end;
+  }
+
+  // Function to map English words to corresponding Arabic words
+  function mapEnglishToArabic(englishWords: string[]): string {
+    // For single word vocab, we'll just return the filtered Arabic word
+    // since we don't have complex sentence mapping like in sentences
+    return filterArabicCharacters(arabicWord);
+  }
+
+  async function defineSelectedWords() {
+    if (selectedWords.length === 0) return;
+
+    const wordsArray = selectedWords;
+    targetWord = wordsArray.join(' ');
+    
+    // Map English words to Arabic equivalent and filter for Arabic characters only
+    targetArabicWord = mapEnglishToArabic(wordsArray);
+    
+    isLoadingDefinition = true;
+    isDefinitionModalOpen = true;
+    
+    try {
+      // Use the shared askChatGTP helper
+      const data = await askChatGTP(
+        targetWord, 
+        'english', 
+        {
+          english: word.english,
+          arabic: arabicWord,
+          transliteration: word.transliteration
+        }, 
+        dialect
+      );
+      
+      definition = data.message.message.content;
+    } catch (error) {
+      console.error('Error fetching definition:', error);
+      definition = 'Error loading definition. Please try again.';
+    }
+    
+    isLoadingDefinition = false;
+    clearSelection();
+  }
+
+  function closeDefinitionModal() {
+    isDefinitionModalOpen = false;
+    definition = '';
+    targetWord = '';
+    targetArabicWord = '';
+  }
+
 	
 	$effect(() => {
 		hue.subscribe(() => {
@@ -195,6 +282,14 @@
 			correctAnswer = '';
 	    isInfoModalOpen = false;
 	    keyboardValue = '';
+	    
+	    // Clear selection state when word changes
+	    clearSelection();
+	    isDefinitionModalOpen = false;
+	    isLoadingDefinition = false;
+	    definition = '';
+	    targetWord = '';
+	    targetArabicWord = '';
 
 			if (typeof document !== 'undefined') {
 				const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
@@ -231,6 +326,18 @@
 	});
 </script>
 
+<DefinitionModal
+	activeWordObj={{
+		english: targetWord,
+		arabic: targetArabicWord,
+		isLoading: isLoadingDefinition,
+		description: definition
+	}}
+	isModalOpen={isDefinitionModalOpen}
+	closeModal={closeDefinitionModal}
+	{dialect}
+></DefinitionModal>
+
 <div>
 	<div class="mb-6">
 		<InfoDisclaimer></InfoDisclaimer>
@@ -259,8 +366,52 @@
 	
 	<div class="bg-tile-300 border border-tile-500 px-3 py-6 shadow-lg mb-6">
 		<div class="text-center">
-			<div class="flex flex-col sm:flex-row items-center justify-center gap-2 mb-4">
-				<h1 class="text-4xl sm:text-5xl font-bold text-text-300">{word.english}</h1>
+			<div class="flex flex-col items-center justify-center gap-2 mb-4">
+				<!-- Selection controls -->
+				{#if selectedWords.length > 0}
+					<div class="mb-3 flex gap-2 justify-center">
+						<button
+							onclick={defineSelectedWords}
+							class="px-3 py-1 bg-tile-400 text-text-300 rounded border border-tile-600 hover:bg-tile-500 hover:border-tile-500 transition-colors text-sm"
+						>
+							Define "{selectedWords.join(' ')}"
+						</button>
+						<button
+							onclick={clearSelection}
+							class="px-3 py-1 bg-tile-400 text-text-300 rounded border border-tile-600 hover:bg-tile-500 hover:border-tile-500 transition-colors text-sm"
+						>
+							Clear Selection
+						</button>
+					</div>
+				{/if}
+				
+				<!-- Selectable English word display -->
+				<div 
+					class="flex flex-wrap gap-1 items-center justify-center select-none mb-2"
+					role="group"
+					aria-label="Word selection area for definitions"
+				>
+					{#each word.english.split(' ') as englishWord, index}
+						<button
+							onmousedown={(e) => handleWordMouseDown(index, e)}
+							onmouseenter={() => handleWordMouseEnter(index)}
+							onmouseup={handleWordMouseUp}
+							onclick={() => {
+								// Single click selects the word and defines it immediately
+								selectedWords = [englishWord];
+								selectionStartIndex = index;
+								selectionEndIndex = index;
+								defineSelectedWords();
+							}}
+							aria-label={`Get definition for: ${englishWord}`}
+							class={cn("text-4xl sm:text-5xl font-bold cursor-pointer p-1 border-2 transition-all duration-300", {
+								"bg-blue-200 border-blue-400 text-text-300": isWordSelected(index),
+								"hover:bg-tile-500 border-transparent hover:border-tile-600 text-text-300": !isWordSelected(index)
+							})}
+						>{englishWord}</button>
+					{/each}
+				</div>
+				
 				{#if showHint}
 					<p class="text-xl sm:text-2xl text-text-200">({word.transliteration})</p>
 				{/if}

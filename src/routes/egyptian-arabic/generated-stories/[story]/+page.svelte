@@ -1,13 +1,13 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import cn from 'classnames';
-	import Sentence from '../../stories/[story]/components/Sentence.svelte';
-	import WordModal from '../../stories/[story]/components/WordModal.svelte';
+	import Sentence from '$lib/components/dialect-shared/story/components/Sentence.svelte';
+	import WordModal from '$lib/components/dialect-shared/story/components/WordModal.svelte';
 	import RadioButton from '$lib/components/RadioButton.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import { getWordObjectToSave } from '$lib/helpers/get-word-object-to-save';
 	import Checkmark from '$lib/components/Checkmark.svelte';
-	import { Mode, type KeyWord } from '../../stories/[story]/types';
+	import { Mode, type KeyWord } from '$lib/types/index';
 	import type { PageData } from './$types';
 	import AudioButton from '$lib/components/AudioButton.svelte';
   import StoryAudioButton from '$lib/components/StoryAudioButton.svelte';
@@ -250,6 +250,7 @@
       type="english"
       classname="row-[2] sm:row-[1] sm:col-[1]"
       {mode}
+      dialect="egyptian-arabic"
     />
     <Sentence
     isGenerated={true}
@@ -259,6 +260,7 @@
       {setActiveWord}
       type="arabic"
       {mode}
+      dialect="egyptian-arabic"
     />
     <div
       class="col-[1] row-[4] flex flex-col items-center justify-center border-b border-tile-600 px-5 py-10 text-text-300 sm:row-[2]"
@@ -338,6 +340,7 @@
       {setActiveWord}
       type="transliteration"
       {mode}
+      dialect="egyptian-arabic"
     />
   </section>
   <div class="flex flex-col items-center gap-2">
@@ -370,6 +373,7 @@
           index={sentences.indexOf(sentence)}
           {mode}
           isGenerated={true}
+          dialect="egyptian-arabic"
         />
       {/if}
       <Sentence
@@ -379,6 +383,7 @@
         {setActiveWord}
         {mode}
         index={sentences.indexOf(sentence)}
+        dialect="egyptian-arabic"
       />
     </section>
   {/each}

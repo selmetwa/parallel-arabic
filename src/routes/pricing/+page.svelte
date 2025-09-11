@@ -23,7 +23,7 @@
 				</li>
         <li class="flex items-start gap-2">
 					<Checkmark />
-					<span>20 AI-generated practice sentences across multiple dialects <span class="text-text-200 text-md">*requires account</span></span>
+					<span>5 AI-generated practice sentences across multiple dialects <span class="text-text-200 text-md">*requires account</span></span>
 				</li>
         <li class="flex items-start gap-2">
 					<Checkmark />
