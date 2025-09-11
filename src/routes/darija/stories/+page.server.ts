@@ -1,11 +1,10 @@
-import { getUserHasActiveSubscription } from "$lib/helpers/get-user-has-active-subscription";
 import { db } from '$lib/server/db';
 
-export const load = async ({ locals }) => {
-  const session = await locals.auth.validate();
-  const userId = session && session.user.userId || null;
-
-  const hasActiveSubscription = await getUserHasActiveSubscription(userId ?? "");
+export const load = async ({ parent }) => {
+  // Get session and subscription status from layout (no DB query for auth needed!)
+  const { session, isSubscribed } = await parent();
+  
+  // Only fetch generated stories from DB
   const user_generated_stories = await db
     .selectFrom('generated_story')
     .selectAll()
@@ -14,9 +13,9 @@ export const load = async ({ locals }) => {
     .execute();
 
   return {
-    session,
-    isSubscribed: hasActiveSubscription,
-    hasActiveSubscription,
+    session,  // Use from layout!
+    isSubscribed,  // Use from layout!
+    hasActiveSubscription: isSubscribed,  // Keep for backward compatibility
     user_generated_stories
   }
 }; 

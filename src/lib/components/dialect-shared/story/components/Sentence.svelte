@@ -5,6 +5,7 @@
 	import Audio from '$lib/components/Audio.svelte';
 	import AudioButton from '$lib/components/AudioButton.svelte';
 	import { type Dialect } from '$lib/types/index';
+	import { filterArabicCharacters, removeArabicComma } from '$lib/utils/arabic-normalization';
 	type TWholeSentence = {
 		arabic: TSentence;
 		english: TSentence;
@@ -26,6 +27,7 @@
 		mode: any;
 		isGenerated?: boolean;
 		dialect: Dialect;
+		intersecting?: boolean;
 	}
 
 	let {
@@ -36,7 +38,8 @@
 		index,
 		mode,
 		isGenerated,
-		dialect
+		dialect,
+		intersecting = true
 	}: Props = $props();
 
 	let _sentence = $derived((sentence && type && (type in sentence)) ? sentence[type as keyof TWholeSentence] : { speaker: '', text: '' });
@@ -51,15 +54,119 @@
 	let wordCache = new Map<string, string>();
 	let hoverTimeouts = new Map<string, NodeJS.Timeout>();
 
-	function removeComma(inputString: string) {
-		const commataPattern = /[\u060C]/g;
-		return inputString.replace(commataPattern, '');
+	// Multi-word selection state
+	let selectedWords = $state<string[]>([]);
+	let isSelecting = $state(false);
+	let selectionStartIndex = $state(-1);
+	let selectionEndIndex = $state(-1);
+
+	// Clear all hover timeouts when component goes out of view
+	function clearAllHoverTimeouts() {
+		hoverTimeouts.forEach((timeout) => {
+			clearTimeout(timeout);
+		});
+		hoverTimeouts.clear();
+	}
+
+	// Clear timeouts when component goes out of view
+	$effect(() => {
+		if (!intersecting) {
+			clearAllHoverTimeouts();
+			clearSelection(); // Also clear word selection when out of view
+		}
+	});
+
+	// Clear selection when sentence changes
+	$effect(() => {
+		if (_sentence?.text) {
+			clearSelection();
+		}
+	});
+
+
+	// Multi-word selection functions
+	function handleWordMouseDown(index: number, event: MouseEvent) {
+		event.preventDefault();
+		isSelecting = true;
+		selectionStartIndex = index;
+		selectionEndIndex = index;
+		updateSelectedWords();
+	}
+
+	function handleWordMouseEnter(index: number) {
+		if (isSelecting) {
+			selectionEndIndex = index;
+			updateSelectedWords();
+		}
+	}
+
+	function handleWordMouseUp() {
+		isSelecting = false;
+	}
+
+	function updateSelectedWords() {
+		if (selectionStartIndex === -1 || selectionEndIndex === -1) return;
+		
+		const start = Math.min(selectionStartIndex, selectionEndIndex);
+		const end = Math.max(selectionStartIndex, selectionEndIndex);
+		
+		// Get the original words array (not reversed)
+		const originalWords = _sentence?.text ? _sentence.text.split(' ') : [];
+		selectedWords = originalWords.slice(start, end + 1);
+	}
+
+	function clearSelection() {
+		selectedWords = [];
+		selectionStartIndex = -1;
+		selectionEndIndex = -1;
+	}
+
+	function isWordSelected(index: number): boolean {
+		const start = Math.min(selectionStartIndex, selectionEndIndex);
+		const end = Math.max(selectionStartIndex, selectionEndIndex);
+		return selectedWords.length > 0 && index >= start && index <= end;
+	}
+
+
+	// Function to map English words to corresponding Arabic words
+	function mapEnglishToArabic(englishWords: string[]): string {
+		const allEnglishWords = sentence.english.text.split(' ');
+		const allArabicWords = sentence.arabic.text.split(' ');
+		
+		// Find the indices of the selected English words
+		const selectedIndices: number[] = [];
+		
+		for (const englishWord of englishWords) {
+			const index = allEnglishWords.findIndex((word, i) => 
+				word.toLowerCase() === englishWord.toLowerCase() && !selectedIndices.includes(i)
+			);
+			if (index !== -1) {
+				selectedIndices.push(index);
+			}
+		}
+		
+		// Extract corresponding Arabic words
+		const correspondingArabicWords = selectedIndices
+			.sort((a, b) => a - b) // Maintain order
+			.map(index => allArabicWords[index])
+			.filter(word => word); // Remove undefined/empty words
+		
+		if (correspondingArabicWords.length > 0) {
+			const arabicText = correspondingArabicWords.join(' ');
+			return filterArabicCharacters(arabicText);
+		}
+		
+		// Fallback: filter the entire Arabic sentence
+		return filterArabicCharacters(sentence.arabic.text);
 	}
 
 	// Pre-fetch word definition on hover with debouncing
 	async function handleWordHover(event: Event) {
+		// Only pre-fetch if component is in view
+		if (!intersecting) return;
+		
 		const word = (event.target as HTMLButtonElement).value.replace(/,/g, '');
-		const cleanWord = removeComma(word);
+		const cleanWord = removeArabicComma(word);
 		const cacheKey = `${cleanWord}-${type}-${dialect}`;
 
 		// Clear existing timeout for this word
@@ -97,7 +204,7 @@
 	// Clear timeout when mouse leaves
 	function handleWordLeave(event: Event) {
 		const word = (event.target as HTMLButtonElement).value.replace(/,/g, '');
-		const cleanWord = removeComma(word);
+		const cleanWord = removeArabicComma(word);
 		const cacheKey = `${cleanWord}-${type}-${dialect}`;
 
 		if (hoverTimeouts.has(cacheKey)) {
@@ -108,7 +215,7 @@
 
 	async function assignActiveWord(event: Event) {
 		const word = (event.target as HTMLButtonElement).value.replace(/,/g, '');
-		const cleanWord = removeComma(word);
+		const cleanWord = removeArabicComma(word);
 		const cacheKey = `${cleanWord}-${type}-${dialect}`;
 
 		// Check if we have a cached definition
@@ -118,7 +225,7 @@
 			// Use cached data for instant display
 			setActiveWord({
 				english: '',
-				arabic: removeComma(word),
+				arabic: removeArabicComma(word),
 				transliterated: '',
 				description: cachedDefinition,
 				isLoading: false,
@@ -147,13 +254,53 @@
 
 			setActiveWord({
 				english: '',
-				arabic: removeComma(word),
+				arabic: removeArabicComma(word),
 				transliterated: '',
 				description: message,
 				isLoading: false,
 				type: type
 			});
 		}
+	}
+
+	// Function to define multiple selected words
+	async function defineSelectedWords() {
+		if (selectedWords.length === 0) return;
+
+		const wordsArray = selectedWords;
+		const targetWord = wordsArray.join(' ');
+		
+		// Map English words to Arabic equivalent and filter for Arabic characters only
+		const targetArabicWord = type === 'english' ? mapEnglishToArabic(wordsArray) : wordsArray.join(' ');
+		
+		setActiveWord({
+			english: '',
+			arabic: '',
+			transliterated: '',
+			description: '',
+			isLoading: true,
+			type: ''
+		});
+
+		const res = await askChatGTP(targetWord, type, {
+			arabic: sentence.arabic.text,
+			english: sentence.english.text,
+			transliteration: sentence.transliteration.text
+		}, dialect);
+		
+		const message = res.message.message.content;
+
+		setActiveWord({
+			english: type === 'english' ? targetWord : '',
+			arabic: type === 'arabic' ? targetArabicWord : targetArabicWord,
+			transliterated: '',
+			description: message,
+			isLoading: false,
+			type: type
+		});
+
+		// Clear selection after defining
+		clearSelection();
 	}
 
 	async function saveWord() {
@@ -254,27 +401,77 @@
 		{/if}
 	{/if}
 	<p class="text-lg font-semibold text-text-200">{_sentence.speaker}</p>
-	<div class="mt-1 flex flex-wrap gap-1 text-text-300">
+	
+	<!-- Selection controls -->
+	{#if selectedWords.length > 0}
+		<div class="mb-3 flex gap-2 justify-center">
+			<button
+				onclick={defineSelectedWords}
+				class="px-3 py-1 bg-tile-400 text-text-300 rounded border border-tile-600 hover:bg-tile-500 hover:border-tile-500 transition-colors text-sm"
+			>
+				Define "{selectedWords.join(' ')}"
+			</button>
+			<button
+				onclick={clearSelection}
+				class="px-3 py-1 bg-tile-400 text-text-300 rounded border border-tile-600 hover:bg-tile-500 hover:border-tile-500 transition-colors text-sm"
+			>
+				Clear Selection
+			</button>
+		</div>
+	{/if}
+	
+	<div 
+		class="mt-1 flex flex-wrap gap-1 text-text-300 select-none"
+		onmouseup={handleWordMouseUp}
+		role="application"
+		aria-label="Word selection area for definitions"
+	>
 		{#if isArabic}
-			{#each words.reverse() as word}
+			{#each words.reverse() as word, index}
 				<button
-					class="transitional-all rounded-sm p-1 text-5xl duration-300 hover:bg-tile-500"
+					class={cn("transitional-all rounded-sm p-1 text-5xl duration-300 cursor-pointer border-2", {
+						"bg-blue-200 border-blue-400": isWordSelected(index),
+						"hover:bg-tile-500 border-transparent hover:border-tile-600": !isWordSelected(index)
+					})}
 					value={word}
 					onclick={assignActiveWord}
 					onmouseover={handleWordHover}
 					onmouseleave={handleWordLeave}
+					onmousedown={(e) => handleWordMouseDown(index, e)}
+					onmouseenter={() => handleWordMouseEnter(index)}
+					onkeydown={(e) => {
+						if (e.key === 'Enter' || e.key === ' ') {
+							e.preventDefault();
+							assignActiveWord(e);
+						}
+					}}
+					tabindex="0"
+					aria-label={`Get definition for: ${word}`}
 				>
 					{word}
 				</button>
 			{/each}
 		{:else}
-			{#each words as word}
+			{#each words as word, index}
 				<button
-					class="transitional-all rounded-sm p-1 text-4xl duration-300 hover:bg-tile-500"
+					class={cn("transitional-all rounded-sm p-1 text-4xl duration-300 cursor-pointer border-2", {
+						"bg-blue-200 border-blue-400": isWordSelected(index),
+						"hover:bg-tile-500 border-transparent hover:border-tile-600": !isWordSelected(index)
+					})}
 					value={word}
 					onclick={assignActiveWord}
 					onmouseover={handleWordHover}
 					onmouseleave={handleWordLeave}
+					onmousedown={(e) => handleWordMouseDown(index, e)}
+					onmouseenter={() => handleWordMouseEnter(index)}
+					onkeydown={(e) => {
+						if (e.key === 'Enter' || e.key === ' ') {
+							e.preventDefault();
+							assignActiveWord(e);
+						}
+					}}
+					tabindex="0"
+					aria-label={`Get definition for: ${word}`}
 				>
 					{word}
 				</button>

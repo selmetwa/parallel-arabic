@@ -22,6 +22,7 @@
 	import InfoDisclaimer from '$lib/components/InfoDisclaimer.svelte';
 	import DefinitionModal from './DefinitionModal.svelte';
 	import AudioButton from '$lib/components/AudioButton.svelte';
+	import { normalizeArabicText, normalizeArabicTextLight, filterArabicCharacters } from '$lib/utils/arabic-normalization';
 
 	interface Props {
 		sentence: {
@@ -60,20 +61,6 @@
 	let selectionStartIndex = $state(-1);
 	let selectionEndIndex = $state(-1);
 
-	// Function to normalize Arabic text for comparison
-	function normalizeArabicText(text: string): string {
-		return text
-			// Remove diacritics
-			.replace(/[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06ED\u08D3-\u08E1\u08E3-\u08FF]/g, '')
-			// Normalize Alif variants to plain Alif (ا)
-			.replace(/[آأإٱ]/g, 'ا')
-			// Normalize Ya Maqsoura (ى) to regular Ya (ي)
-			.replace(/ى/g, 'ي')
-			// Normalize Waw with Hamza (ؤ) to plain Waw (و)
-			.replace(/ؤ/g, 'و')
-			// Normalize Ya with Hamza (ئ) to regular Ya (ي)
-			.replace(/ئ/g, 'ي');
-	}
 
 	function areArraysEqual(arr1: Array<string>, arr2: Array<string>) {
 		if (arr1.length !== arr2.length) {
@@ -90,20 +77,25 @@
 	}
 
 	function compareMyInput(value: string) {
-		// Normalize both user input and target sentence for comparison only
+		// Use strict normalization for final comparison
 		const normalizedInput = normalizeArabicText(value.trim());
 		const normalizedTarget = normalizeArabicText(sentence.arabic.trim());
 		
 		const myInputArr = normalizedInput.split('');
 		const arabicArr = normalizedTarget.split('');
 
-		// For visual feedback, compare character by character using normalized versions
+		// For visual feedback, normalize entire strings first, then compare character by character
+		const lightNormalizedInput = normalizeArabicTextLight(value.trim());
+		const lightNormalizedTarget = normalizeArabicTextLight(sentence.arabic.trim());
+		
 		const visualInputArr = value.trim().split('');
+		const normalizedInputArr = lightNormalizedInput.split('');
+		const normalizedTargetArr = lightNormalizedTarget.split('');
 
 		const result = visualInputArr.map((letter, index) => {
-			// Check if the normalized versions match at this position
-			const normalizedUserChar = normalizeArabicText(letter);
-			const normalizedTargetChar = normalizeArabicText(sentence.arabic.trim().split('')[index] || '');
+			// Compare the normalized characters at the same position
+			const normalizedUserChar = normalizedInputArr[index] || '';
+			const normalizedTargetChar = normalizedTargetArr[index] || '';
 			
 			if (normalizedUserChar === normalizedTargetChar) {
 				return {
@@ -119,6 +111,7 @@
 
 		attemptTemp = result;
 
+		// Use the strict normalized versions for final correctness check
 		if (areArraysEqual(myInputArr, arabicArr)) {
 			isCorrect = true;
 			const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
@@ -174,11 +167,6 @@
     khaleeji: 'Khaleeji Arabic'
   }
 
-	// Function to filter only Arabic characters
-	function filterArabicCharacters(text: string): string {
-		// Arabic Unicode range: \u0600-\u06FF, \u0750-\u077F, \u08A0-\u08FF, \uFB50-\uFDFF, \uFE70-\uFEFF
-		return text.replace(/[^\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDFF\uFE70-\uFEFF\s]/g, '').trim();
-	}
 
 	// Function to map English words to corresponding Arabic words
 	function mapEnglishToArabic(englishWords: string[]): string {

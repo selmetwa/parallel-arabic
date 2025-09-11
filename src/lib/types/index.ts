@@ -55,8 +55,6 @@ export type DialectName = {
   levantine: 'Levantine Arabic',
   darija: 'Moroccan Darija',
   'egyptian-arabic': 'Egyptian Arabic',
-  iraqi: 'Iraqi Arabic',
-  khaleeji: 'Khaleeji Arabic'
 }
 
 export enum Mode {
