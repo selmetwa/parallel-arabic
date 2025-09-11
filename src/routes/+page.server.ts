@@ -14,19 +14,15 @@ import { db } from "$lib/server/db";
  * the options as necessary.
  *
  */
-export const load: PageServerLoad = async ({ locals }) => {
-  const session = await locals.auth.validate();
-  const userId = session && session.user.userId || null;
-
-  const user = await db.selectFrom('user').selectAll().where('id', '=', userId).executeTakeFirst();
-
-  const isSubscribed = await getUserHasActiveSubscription(userId ?? "");
+export const load: PageServerLoad = async ({ parent }) => {
+  // Get all user data from layout (no additional DB queries needed!)
+  const { session, isSubscribed, user } = await parent();
 
   return {
-    session,
-    isSubscribed: isSubscribed,
-    subscriptionId: user?.subscriber_id,
-    subscriptionEndDate: user?.subscription_end_date,
+    session,  // Use from layout!
+    isSubscribed,  // Use from layout!
+    subscriptionId: user?.subscriber_id,  // Use from layout!
+    subscriptionEndDate: user?.subscription_end_date,  // Use from layout!
   };
 };
 

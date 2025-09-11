@@ -13,7 +13,7 @@
       Welcome to Parallel Arabic
     </h1>
     <p class="text-text-200 text-lg sm:text-xl leading-snug">
-      A comprehensive learning environment for Arabic dialects and Modern Standard Arabic.
+      A comprehensive practice environment for Arabic dialects and Modern Standard Arabic.
     </p>
   </div>
   

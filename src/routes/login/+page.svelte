@@ -56,32 +56,40 @@
 <div class="flex-3 border border-tile-600 bg-tile-400">
   <ul class="p-8 flex flex-col gap-3">
     <li>
-      <h2 class="text-xl font-semibold text-text-200">Reading</h2>
-      <p class="text-text-200 text-md">Read short stories in egyptian arabic alongside the english translation and transliteration of the text.</p>
+      <h2 class="text-xl font-semibold text-text-200">Multiple Arabic Dialects</h2>
+      <p class="text-text-200 text-md">Learn <strong>Egyptian, Levantine, Moroccan & Fusha</strong> with comprehensive practice material for each dialect.</p>
     </li>
     <li>
-      <h2 class="text-xl font-semibold text-text-200">Sentence Practice</h2>
+      <h2 class="text-xl font-semibold text-text-200">Stories & Audio</h2>
       <p class="text-md text-text-200">
-        Practice reading comprehension and writing skills with AI generated short sentences.
+        Access to all stories and conversations with native audio pronunciation.
       </p>
     </li>
     <li>
-      <h2 class="text-xl font-semibold text-text-200">Verb Conjugation</h2>
+      <h2 class="text-xl font-semibold text-text-200">AI-Generated Practice</h2>
       <p class="text-md text-text-200">
-        Practice your verb conjugations in egyptian arabic with realtime spellchecking.
+        <strong>Unlimited AI-generated practice sentences</strong> for all skill levels across all dialects.
       </p>
     </li>
     <li>
-      <h2 class="text-xl font-semibold text-text-200">Writing</h2>
-      <p class="text-text-200 text-md">Practice writing over <b>6,000</b> Arabic words with a virtual arabic keyboard custom built for english speakers.</p>
+      <h2 class="text-xl font-semibold text-text-200">Speaking Practice</h2>
+      <p class="text-text-200 text-md"><strong>Advanced speaking practice</strong> with real-time pronunciation feedback.</p>
     </li>
     <li>
-      <h2 class="text-xl font-semibold text-text-200">Vocabulary</h2>
-      <p class="text-text-200 text-md">Practice over <b>6,000</b> words with fun multiple choice quizzes</p>
+      <h2 class="text-xl font-semibold text-text-200">Comprehensive Vocabulary</h2>
+      <p class="text-text-200 text-md">Access to <strong>over 15,000 vocabulary words</strong> with multiple choice quizzes and writing practice.</p>
     </li>
     <li>
-      <h2 class="text-xl font-semibold text-text-200">Alphabet</h2>
-      <p class="text-text-200 text-md">Master the Arabic script</p>
+      <h2 class="text-xl font-semibold text-text-200">Verb Mastery</h2>
+      <p class="text-text-200 text-md">Access to all verbs for comprehensive verb conjugation practice across all dialects.</p>
+    </li>
+    <li>
+      <h2 class="text-xl font-semibold text-text-200">Custom Anki Decks</h2>
+      <p class="text-text-200 text-md">Access to custom built Anki decks for all dialects for efficient spaced repetition learning.</p>
+    </li>
+    <li>
+      <h2 class="text-xl font-semibold text-text-200">Arabic Alphabet</h2>
+      <p class="text-text-200 text-md">Complete Arabic Alphabet mastery with native pronunciation and handwriting practice.</p>
     </li>
   </ul>
 </div>
