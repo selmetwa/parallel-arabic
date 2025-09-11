@@ -1,23 +1,25 @@
 import type { PageServerLoad } from "./$types";
-import { getUserHasActiveSubscription } from "$lib/helpers/get-user-has-active-subscription";
 import { db } from '$lib/server/db';
 
 const API_URL = 'https://egyptian-arabic-vocab-selmetwa.koyeb.app';
 
-export const load: PageServerLoad = async ({ locals }) => {
-  const session = await locals.auth.validate();
-  const userId = session && session.user.userId || null;
+export const load: PageServerLoad = async ({ parent }) => {
+  // Get session and subscription status from layout (no DB query for auth needed!)
+  const { session, isSubscribed } = await parent();
+  const userId = session?.user.userId || null;
 
-  const response = await fetch(`${API_URL}/vocab/verbs`);
+  // Fetch verb data and user-specific data in parallel
+  const [response, tensesViewed] = await Promise.all([
+    fetch(`${API_URL}/vocab/verbs`),
+    userId ? db.selectFrom('user').select('verb_conjugation_tenses_viewed').where('id', '=', userId).executeTakeFirst() : null
+  ]);
+  
 	const json = await response.json();
-  const tensesViewed = await db.selectFrom('user').select('verb_conjugation_tenses_viewed').where('id', '=', userId ?? '').executeTakeFirst();
-
-  const hasActiveSubscription = await getUserHasActiveSubscription(userId ?? "");
 
   return {
 		words: json.slice(2),
-    session,
-    hasActiveSubscription,
+    session,  // Use from layout!
+    hasActiveSubscription: isSubscribed,  // Use from layout!
     tensesViewed: tensesViewed?.verb_conjugation_tenses_viewed ?? 0,
   };
 };

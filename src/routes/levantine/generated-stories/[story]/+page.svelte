@@ -9,7 +9,7 @@
 	import Button from '$lib/components/Button.svelte';
 	import { getWordObjectToSave } from '$lib/helpers/get-word-object-to-save';
 	import Checkmark from '$lib/components/Checkmark.svelte';
-	import { Mode, type KeyWord } from '../../../egyptian-arabic/stories/[story]/types';
+	import { Mode, type KeyWord } from '$lib/types/index';
 	import type { PageData } from './$types';
 	import AudioButton from '$lib/components/AudioButton.svelte';
   import StoryAudioButton from '$lib/components/StoryAudioButton.svelte';

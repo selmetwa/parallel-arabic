@@ -4,6 +4,7 @@
 	// import WordModal from './components/WordModal.svelte';
   import Sentence from '$lib/components/dialect-shared/story/components/Sentence.svelte';
   import WordModal from '$lib/components/dialect-shared/story/components/WordModal.svelte';
+	import IntersectionObserver from '$lib/components/IntersectionObserver.svelte';
 	import RadioButton from '$lib/components/RadioButton.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import { getWordObjectToSave } from '$lib/helpers/get-word-object-to-save';
@@ -370,32 +371,41 @@
 		{/if}
 	{:else}
 		{#each sentences as sentence}
-			<section
-				class={cn(
-					'divide-tile-600 bg-tile-300 sm:grid',
-					{ 'grid-cols-1 grid-rows-1': mode === Mode.SingleText },
-					{ 'flex flex-col-reverse divide-x sm:grid-cols-2 sm:grid-rows-1': mode === Mode.BiText }
-				)}
-			>
-				{#if mode === Mode.BiText}
-					<Sentence
-						{sentence}
-						{setActiveWord}
-						type="english"
-						index={sentences.indexOf(sentence)}
-						{mode}
-						dialect="egyptian-arabic"
-					/>
+			<IntersectionObserver top={100} bottom={100} preventRefetch={true} let:intersecting let:shouldLoad>
+				{#if shouldLoad}
+					<section
+						class={cn(
+							'divide-tile-600 bg-tile-300 sm:grid',
+							{ 'grid-cols-1 grid-rows-1': mode === Mode.SingleText },
+							{ 'flex flex-col-reverse divide-x sm:grid-cols-2 sm:grid-rows-1': mode === Mode.BiText }
+						)}
+					>
+						{#if mode === Mode.BiText}
+							<Sentence
+								{sentence}
+								{setActiveWord}
+								type="english"
+								index={sentences.indexOf(sentence)}
+								{mode}
+								dialect="egyptian-arabic"
+								{intersecting}
+							/>
+						{/if}
+						<Sentence
+							{sentence}
+							type="arabic"
+							{setActiveWord}
+							{mode}
+							index={sentences.indexOf(sentence)}
+							dialect="egyptian-arabic"
+							{intersecting}
+						/>
+					</section>
+				{:else}
+					<!-- Placeholder to maintain layout while sentence is not in view -->
+					<div class="min-h-[200px] bg-tile-300 border-b border-tile-600"></div>
 				{/if}
-				<Sentence
-					{sentence}
-					type="arabic"
-					{setActiveWord}
-					{mode}
-					index={sentences.indexOf(sentence)}
-					dialect="egyptian-arabic"
-				/>
-			</section>
+			</IntersectionObserver>
 		{/each}
 	{/if}
 {/if}

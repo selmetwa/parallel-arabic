@@ -5,10 +5,10 @@
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 				<div class="text-center lg:text-left">
 					<h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-300 leading-tight mb-6">
-						Learn Arabic in a fun way!
+						Practice Arabic in a fun way!
 					</h1>
 					<p class="text-lg sm:text-xl text-text-200 leading-relaxed mb-8">
-						Parallel Arabic provides a fully self-contained learning environment without the need for outside resources.
+						Parallel Arabic provides a fully self-contained practice environment without the need for outside resources.
 					</p>
 					<a
 						href="/signup"
@@ -31,7 +31,7 @@
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-3">
 				<article class="bg-tile-400 border-2 border-tile-600 p-4 shadow-lg flex flex-col h-full">
 					<p class="text-text-300 text-base leading-relaxed flex-grow">
-						"Wow this is perfect for what I need currently. The stories section in particular is a great idea as I can't find any graded stories for learning. Thank you so much for this :)"
+						"Wow this is perfect for what I need currently. The stories section in particular is a great idea as I can't find any graded stories for practice. Thank you so much for this :)"
 					</p>
 				</article>
 
@@ -65,7 +65,7 @@
 	<!-- Features Section -->
 	<section class="py-12 sm:py-16">
 		<div class="max-w-7xl mx-auto px-4 sm:px-8">
-			<h2 class="text-2xl sm:text-3xl font-bold text-text-300 text-center mb-12">Complete Learning Platform</h2>
+			<h2 class="text-2xl sm:text-3xl font-bold text-text-300 text-center mb-12">Complete Practice Platform</h2>
 			
 			<div class="grid grid-cols-1 gap-8">
 				<!-- Conversations Feature -->
@@ -81,7 +81,7 @@
 									Practical Arabic conversations recorded by native speakers with full transcripts and translations.
 								</p>
 								<p class="text-base text-text-200 leading-relaxed mb-4">
-									AI-generated definitions for every word to accelerate your learning.
+									AI-generated definitions for every word to accelerate your practice.
 								</p>
 							</div>
 							<a
@@ -205,7 +205,7 @@
 							<div>
 								<h3 class="text-xl font-bold text-text-300 mb-3">Vocabulary Quizzes</h3>
 								<p class="text-base text-text-200 leading-relaxed mb-4">
-									Learn over 6,000 words through engaging multiple choice quizzes and interactive exercises.
+									Practice over 6,000 words through engaging multiple choice quizzes and interactive exercises.
 								</p>
 							</div>
 							<a
@@ -235,7 +235,7 @@
 								href="/alphabet"
 								class="inline-block px-6 py-3 text-base font-semibold bg-tile-600 border-2 border-tile-600 text-text-300 hover:bg-tile-700 transition-colors duration-300 shadow-md w-fit"
 							>
-								Learn Alphabet
+								Practice Alphabet
 							</a>
 						</div>
 					</div>

@@ -3,6 +3,7 @@ import type { RequestHandler } from './$types';
 import { env } from '$env/dynamic/private';
 import OpenAI from "openai";
 import { commonWords } from '$lib/constants/common-words';
+import { normalizeArabicText } from '$lib/utils/arabic-normalization';
 
 // Function to clean unwanted characters from text
 function cleanText(text: string, type: 'arabic' | 'english' | 'transliteration'): string {
@@ -17,10 +18,8 @@ function cleanText(text: string, type: 'arabic' | 'english' | 'transliteration')
   cleaned = cleaned.replace(/…/g, '...'); // Replace ellipsis with three dots
   
   if (type === 'arabic') {
-    // Remove diacritics and unwanted Arabic characters
-    cleaned = cleaned.replace(/[\u064B-\u065F\u0670\u06D6-\u06ED]/g, ''); // Remove Arabic diacritics
-    // Keep only basic Arabic letters, spaces, and common punctuation
-    cleaned = cleaned.replace(/[^\u0600-\u06FF\s]/g, '');
+    // Use the new normalization logic for Arabic text
+    cleaned = normalizeArabicText(cleaned);
   } else if (type === 'english') {
     // For English, remove non-standard characters but keep basic punctuation
     cleaned = cleaned.replace(/[^\w\s.,!?-]/g, '');
