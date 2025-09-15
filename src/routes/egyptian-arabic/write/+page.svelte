@@ -50,9 +50,6 @@
 								</p>
 							</div>
 						</div>
-						<div class="flex flex-col gap-0 mt-1">
-							<p class="text-sm text-text-200 opacity-90 group-hover:opacity-100 transition-opacity duration-300">{section.count} words</p>
-						</div>
 					</article>
 				</button>
 			</li>
@@ -67,9 +64,6 @@
 							<p class="text-xl text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">
 								{section.name}
 							</p>
-						</div>
-						<div class="flex flex-col gap-0 mt-1">
-							<p class="text-sm text-text-200 opacity-90 group-hover:opacity-100 transition-opacity duration-300">{section.count} words</p>
 						</div>
 					</article>
 				</a>
