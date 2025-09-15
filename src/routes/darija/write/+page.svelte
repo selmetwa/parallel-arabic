@@ -1,6 +1,6 @@
 <script lang="ts">
 	import PaywallModal from '$lib/components/PaywallModal.svelte';
-	import { fushaSections } from '$lib/constants/fusha-sections';
+	import { darijaSections } from '$lib/constants/darija-sections';
 
 	let { data } = $props();
 
@@ -20,9 +20,9 @@
 
 <section class="px-3 mt-6 sm:px-8 max-w-5xl mx-auto">
 	<div class="text-left mb-6">
-		<h1 class="text-3xl sm:text-4xl text-text-300 font-bold mb-1 tracking-tight">Fusha Writing Practice</h1>
+		<h1 class="text-3xl sm:text-4xl text-text-300 font-bold mb-1 tracking-tight">Writing Practice</h1>
 		<p class="text-text-200 text-lg sm:text-xl leading-snug">
-			Practice writing Modern Standard Arabic words with interactive exercises.
+			Practice writing over 2,200 words with interactive exercises.
 		</p>
 		{#if !hasActiveSubscription}
 			<p class="text-text-200 text-base mt-2 opacity-90">
@@ -32,7 +32,7 @@
 	</div>
 	
 	<ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 auto-rows-fr">
-		{#each fushaSections as section}
+		{#each darijaSections as section}
 			{#if section.isPaywalled && !hasActiveSubscription}
 			<li class="flex">
 				<button

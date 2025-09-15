@@ -50,12 +50,16 @@
     'levantine': [
       { href: '/levantine/stories', label: 'Stories' },
       { href: '/levantine/speak', label: 'Speaking' },
-      { href: '/levantine/sentences', label: 'Sentences' }
+      { href: '/levantine/sentences', label: 'Sentences' },
+      { href: '/levantine/write', label: 'Writing' },
+      { href: '/levantine/vocab', label: 'Vocabulary' }
     ],
     'darija': [
       { href: '/darija/stories', label: 'Stories' },
       { href: '/darija/speak', label: 'Speaking' },
-      { href: '/darija/sentences', label: 'Sentences' }
+      { href: '/darija/sentences', label: 'Sentences' },
+      { href: '/darija/write', label: 'Writing' },
+      { href: '/darija/vocab', label: 'Vocabulary' }
     ],
     'iraqi': [
       { href: '/iraqi/stories', label: 'Stories' },
