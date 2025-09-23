@@ -47,7 +47,7 @@
 		<ul class="flex flex-col gap-3 p-8">
 			<li>
 				<h2 class="text-xl font-semibold text-text-200">Multiple Arabic Dialects</h2>
-				<p class="text-text-200 text-md">Learn <strong>Egyptian, Levantine, Moroccan & Fusha</strong> with comprehensive practice material for each dialect.</p>
+				<p class="text-text-200 text-md">Learn <strong>Egyptian, Moroccan & Fusha</strong> with comprehensive practice material for each dialect.</p>
 			</li>
 			<li>
 				<h2 class="text-xl font-semibold text-text-200">Stories & Audio</h2>

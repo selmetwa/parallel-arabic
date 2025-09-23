@@ -71,4 +71,16 @@ CREATE TABLE if not exists saved_word (
     transliterated_word VARCHAR(255) NOT NULL,
     created_at BIGINT NOT NULL,
     FOREIGN KEY (user_id) REFERENCES user(id)
-)
+);
+
+CREATE TABLE if not exists video (
+    id VARCHAR(15) PRIMARY KEY,
+    user_id VARCHAR(15) NOT NULL,
+    title VARCHAR(255) NOT NULL,
+    description TEXT NOT NULL,
+    url VARCHAR(255) NOT NULL,
+    thumbnail_url VARCHAR(255) NOT NULL,
+    dialect VARCHAR(50) NOT NULL,
+    created_at BIGINT NOT NULL,
+    video_body JSON NOT NULL
+);

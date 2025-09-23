@@ -3,7 +3,7 @@ import { Kysely, SqliteDialect } from 'kysely';
 import type { ColumnType } from 'kysely';
 import { readFileSync } from 'fs';
 
-export const sqliteDatabase = sqlite('/data/db.sqlite'); // replace with 'data/db.sqlite' for db migration
+export const sqliteDatabase = sqlite('data/db.sqlite'); // replace with 'data/db.sqlite' for db migration
 
 sqliteDatabase.exec(readFileSync('schema.sql', 'utf8'));
 
@@ -24,6 +24,7 @@ type Database = {
   story: Story;
   saved_word: SavedWord;
   generated_story: GeneratedStoryTable;
+  video: Video;
 };
 
 type GeneratedStoryTable = {
@@ -35,6 +36,18 @@ type GeneratedStoryTable = {
   story_body: string; // SQLite stores JSON as strings
   dialect: string;
   created_at: ColumnType<bigint, number>;
+}
+
+type Video = {
+  id: string;
+  user_id: string;
+  title: string;
+  description: string;
+  url: string;
+  thumbnail_url: string;
+  dialect: string;
+  created_at: ColumnType<bigint, number>;
+  video_body: string; // SQLite stores JSON as strings
 }
 
 type UserTable = {
@@ -88,3 +101,4 @@ type SavedWord = {
   transliterated_word: string;
   created_at: ColumnType<bigint, number>;
 }
+
