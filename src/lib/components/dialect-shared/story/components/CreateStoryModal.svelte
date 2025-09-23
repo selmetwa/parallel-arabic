@@ -218,7 +218,16 @@
         storyFormData.append('originalFileName', audioFile.name);
         storyFormData.append('audioFile', audioFile); // Send the actual audio file
 
-        const createStoryResponse = await fetch('/api/create-story', {
+        // const API_URL = dialect === 'egyptian-arabic' ? '/api/create-story-egyptian' : '/api/create-story';
+        let API_URL = '/api/create-story';
+        if (dialect === 'egyptian-arabic') {
+          API_URL = '/api/create-story-egyptian';
+        } else if (dialect === 'darija') {
+          API_URL = '/api/create-story-darija';
+        }
+
+        console.log({ API_URL, dialect });
+        const createStoryResponse = await fetch(API_URL, {
           method: 'POST',
           body: storyFormData // Send as FormData instead of JSON
         });
@@ -248,7 +257,13 @@
           }
         }
         
-        const res = await fetch('/api/create-story', {
+        let API_URL = '/api/create-story';
+        if (dialect === 'egyptian-arabic') {
+          API_URL = '/api/create-story-egyptian';
+        } else if (dialect === 'darija') {
+          API_URL = '/api/create-story-darija';
+        } 
+          const res = await fetch(API_URL, {
           method: 'POST',
           headers: { accept: 'application/json' },
           body: JSON.stringify({
@@ -342,16 +357,24 @@
 				class="mx-auto my-4 flex w-fit flex-col items-center gap-3 p-4 text-text-200 sm:flex-row"
 			>
 				<AlphabetCycle />
+        <div class="flex flex-col gap-2">
 				<p class="text-2xl text-text-300">
-					{#if isTranscribing}
-						Transcribing your audio and creating your {dialectName[dialect]} {storyType}...
-						<br />
-						This usually takes 2-5 minutes.
-					{:else}
-						Generating your {dialectName[dialect]} {storyType}, hang tight. <br />
-						this usually takes a few seconds.
-					{/if}
+          {#if dialect === 'darija'}
+            Generating your {storyType} using an LLM adapted specifically for Moroccan Darija.
+          {:else if dialect === 'egyptian-arabic'}
+            Generating your {storyType} using an LLM adapted specifically for Egyptian Arabic.
+          {:else}
+            Generating your {dialectName[dialect]} {storyType}, hang tight.
+          {/if}
 				</p>
+        <p class="text-xl text-text-200">
+          {#if dialect === 'darija' || dialect === 'egyptian-arabic'}
+            This usually takes up to 30 seconds.
+          {:else}
+            This usually takes a few seconds.
+          {/if}
+        </p>
+      </div>
 			</div>
 		{:else}
 			<h1 class="text-2xl font-semibold text-text-300">Create {dialectName[dialect]} {storyType === 'story' ? 'Story' : 'Conversation'}</h1>

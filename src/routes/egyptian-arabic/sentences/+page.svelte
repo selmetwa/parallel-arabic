@@ -165,7 +165,7 @@
     }
     
     try {
-      const res = await fetch('/api/generate-sentences', {
+      const res = await fetch('/api/generate-sentences-egyptian', {
         method: 'POST',
         headers: { accept: 'application/json' },
         body: JSON.stringify({
@@ -489,10 +489,10 @@
 			<AlphabetCycle />
 			<div class="text-center">
 				<p class="text-2xl text-text-300 font-bold mb-1">
-					Generating your sentences
+					Generating your Egyptian Arabic sentences using an LLM adapted specifically for Egyptian Arabic
 				</p>
 				<p class="text-text-200">
-					This usually takes a few seconds.
+					This may take up to 30 seconds.
 				</p>
 			</div>
 		</div>
