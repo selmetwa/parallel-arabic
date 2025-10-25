@@ -3,7 +3,7 @@
   import { onMount } from 'svelte';
   import { page } from '$app/stores';
 
-  type DialectKey = 'egyptian-arabic' | 'fusha' | 'levantine' | 'darija' | 'iraqi' | 'khaleeji';
+  type DialectKey = 'egyptian-arabic' | 'fusha' | 'levantine' | 'darija';
 
   // Update dialect based on current route
   onMount(() => {
@@ -32,45 +32,35 @@
   // Define features for each dialect
   const dialectFeatures: Record<DialectKey, Array<{ href: string; label: string; disabled?: boolean }>> = {
     'egyptian-arabic': [
-      { href: '/egyptian-arabic/stories', label: 'Stories' },
-      { href: '/egyptian-arabic/speak', label: 'Speaking' },
-      { href: '/egyptian-arabic/sentences', label: 'Sentences' },
+      // { href: '/egyptian-arabic/stories', label: 'Stories' },
+      // { href: '/egyptian-arabic/speak', label: 'Speaking' },
+      // { href: '/egyptian-arabic/sentences', label: 'Sentences' },
       { href: '/egyptian-arabic/grammar', label: 'Grammar' },
       { href: '/egyptian-arabic/write', label: 'Writing' },
       { href: '/egyptian-arabic/vocab', label: 'Vocabulary' },
       { href: '/egyptian-arabic/anki-decks', label: 'Anki Decks' }
     ],
     'fusha': [
-      { href: '/fusha/stories', label: 'Stories' },
-      { href: '/fusha/speak', label: 'Speaking' },
-      { href: '/fusha/sentences', label: 'Sentences' },
+      // { href: '/fusha/stories', label: 'Stories' },
+      // { href: '/fusha/speak', label: 'Speaking' },
+      // { href: '/fusha/sentences', label: 'Sentences' },
       { href: '/fusha/write', label: 'Writing' },
       { href: '/fusha/vocab', label: 'Vocabulary' },
     ],
     'levantine': [
-      { href: '/levantine/stories', label: 'Stories' },
-      { href: '/levantine/speak', label: 'Speaking' },
-      { href: '/levantine/sentences', label: 'Sentences' },
+      // { href: '/levantine/stories', label: 'Stories' },
+      // { href: '/levantine/speak', label: 'Speaking' },
+      // { href: '/levantine/sentences', label: 'Sentences' },
       { href: '/levantine/write', label: 'Writing' },
       { href: '/levantine/vocab', label: 'Vocabulary' }
     ],
     'darija': [
-      { href: '/darija/stories', label: 'Stories' },
-      { href: '/darija/speak', label: 'Speaking' },
-      { href: '/darija/sentences', label: 'Sentences' },
+      // { href: '/darija/stories', label: 'Stories' },
+      // { href: '/darija/speak', label: 'Speaking' },
+      // { href: '/darija/sentences', label: 'Sentences' },
       { href: '/darija/write', label: 'Writing' },
       { href: '/darija/vocab', label: 'Vocabulary' }
     ],
-    'iraqi': [
-      { href: '/iraqi/stories', label: 'Stories' },
-      { href: '/iraqi/speak', label: 'Speaking' },
-      { href: '/iraqi/sentences', label: 'Sentences' }
-    ],
-    'khaleeji': [
-      { href: '/khaleeji/stories', label: 'Stories' },
-      { href: '/khaleeji/speak', label: 'Speaking' },
-      { href: '/khaleeji/sentences', label: 'Sentences' }
-    ]
   };
 
   const dialectNames: Record<DialectKey, string> = {
@@ -78,8 +68,6 @@
     'fusha': 'Modern Standard Arabic (Fusha)',
     'levantine': 'Levantine Arabic',
     'darija': 'Darija',
-    'iraqi': 'Iraqi Arabic',
-    'khaleeji': 'Khaleeji Arabic'
   };
 </script>
 

@@ -1,16 +1,22 @@
 import { redirect } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
-import { db } from '$lib/server/db';
+import { supabase } from '$lib/supabaseClient';
 
-export const load: PageServerLoad = async ({ locals }) => {
-	const session = await locals.auth.validate();
+export const load: PageServerLoad = async ({ locals, parent }) => {
+	const { session, user } = await parent();
 
-  if (!session) {
+  if (!session || !user) {
     throw redirect(302, '/login');
   }
 
-  const userId = session && session.user.userId || null;
-  const savedWords = await db.selectFrom('saved_word').selectAll().where('user_id', '=', userId).execute();
+  const userId = user && user.id || null;
+  console.log({ userId })
+  const { data: savedWords, error } = await supabase
+  .from('saved_word')
+  .select('*')
+  .eq('user_id', userId);
+
+  console.log({ savedWords, error })
 
 	return {
 		userId: userId,

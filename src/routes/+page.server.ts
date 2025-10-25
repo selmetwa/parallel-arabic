@@ -1,11 +1,8 @@
 import { StripeService } from "$lib/services/stripe.service";
 import { redirect, fail } from "@sveltejs/kit";
-import { auth } from '$lib/server/lucia';
-import { getUserHasActiveSubscription } from "$lib/helpers/get-user-has-active-subscription";
 import type { Actions } from "./$types";
 
 import type { PageServerLoad } from "./$types";
-import { db } from "$lib/server/db";
 
 /**
  * Home page load
@@ -34,13 +31,6 @@ export const load: PageServerLoad = async ({ parent }) => {
  *
  */
 export const actions = {
-  logout: async ({ locals }) => {
-		const session = await locals.auth.validate();
-		if (!session) return fail(401);
-		await auth.invalidateSession(session.sessionId); // invalidate session
-		locals.auth.setSession(null); // remove cookie
-		throw redirect(302, '/login'); // redirect to login page
-	},
   /**
    * Subscribe
    *
@@ -49,35 +39,49 @@ export const actions = {
    * was successful a client secret is returned and that is passed back to the
    * user via cookies in hooks.server.ts.
    */
-  subscribe: async ({ request, cookies, locals }) => {
-    const authSession = await locals.auth.validate();
-    const userId = authSession && authSession.user.userId;
-    const isSubscribed = await getUserHasActiveSubscription(userId ?? "");
-
-  const user = await db.selectFrom('user').selectAll().where('id', '=', userId).executeTakeFirst();
-
-    if (isSubscribed && user?.subscriber_id) {
-      throw redirect(302, '/profile');
-    }
-
-    if (!authSession) {
+  subscribe: async ({ request, cookies, locals: { safeGetSession } }) => {
+    console.log('🚀 Subscribe action called');
+    const { session } = await safeGetSession();
+    
+    console.log('👤 Session:', session?.user ? 'User authenticated' : 'No user session');
+    
+    if (!session?.user) {
+      console.log('❌ Redirecting to login - no session');
       throw redirect(302, '/login');
     }
   
     const form = await request.formData();
     const priceId = form.get("price_id") as string;
-    const session = await StripeService.subscribe(priceId);
-  
-    if (session?.client_secret) {
-      cookies.set("client-secret", session.client_secret, {
+    
+    if (!priceId) {
+      return fail(400, { error: 'Price ID is required' });
+    }
+    
+    console.log('💳 Calling StripeService.subscribe with priceId:', priceId);
+    
+    let stripeSession;
+    try {
+      stripeSession = await StripeService.subscribe(priceId);
+    } catch (error) {
+      console.error('❌ Stripe subscription error:', error);
+      return fail(500, { error: 'Failed to create subscription' });
+    }
+    
+    console.log('🎯 Stripe session result:', stripeSession ? 'Success' : 'Failed', stripeSession?.client_secret ? 'Has client_secret' : 'No client_secret');
+    
+    if (stripeSession?.client_secret) {
+      cookies.set("client-secret", stripeSession.client_secret, {
         path: "/",
         httpOnly: true,
         secure: true,
       });
-      redirect(302, "/pricing/checkout");
+      console.log('✅ Redirecting to /pricing/checkout');
+      throw redirect(302, "/pricing/checkout");
+    } else {
+      console.log('❌ No client secret received from Stripe');
     }
 
-    redirect(302, "/pricing/error");
+    throw redirect(302, "/pricing/error");
   },
 
   /**
@@ -86,30 +90,31 @@ export const actions = {
    * Retrieve the email from the form data, then attempt to cancel the
    * subscription. Redirect according to success of error.
    */
-  cancel: async ({ request, locals }) => {
-    const form = await request.formData();
-    const subscriptionId = form.get("subscription_id") as string;
-    const subscription = await StripeService.cancel(subscriptionId);
-
-    if (subscription) {
-      const authSession = await locals.auth.validate();
-      const userId = authSession && authSession.user.userId;
-      const user = await db.selectFrom('user').selectAll().where('id', '=', userId).executeTakeFirst();
-
-      if (user) {
-        const result = await db
-          .updateTable('user')
-          .set({
-            is_subscriber: 0 as unknown as boolean,
-            subscriber_id: '',
-          })
-          .where('id', '=', userId)
-          .executeTakeFirst();
-  
-        console.log(result.numUpdatedRows);
-        redirect(302, "/pricing/canceled");
-      }
+  cancel: async ({ request, locals: { safeGetSession } }) => {
+    const { session } = await safeGetSession();
+    
+    if (!session?.user) {
+      throw redirect(302, '/login');
     }
-    redirect(302, "/pricing/error");
+
+    try {
+      const form = await request.formData();
+      const subscriptionId = form.get("subscription_id") as string;
+      
+      if (!subscriptionId) {
+        return fail(400, { error: 'Subscription ID is required' });
+      }
+
+      const canceledSubscription = await StripeService.cancel(subscriptionId);
+      
+      if (canceledSubscription) {
+        throw redirect(302, '/pricing/canceled');
+      } else {
+        return fail(500, { error: 'Failed to cancel subscription' });
+      }
+    } catch (error) {
+      console.error('Stripe cancellation error:', error);
+      return fail(500, { error: 'Failed to cancel subscription' });
+    }
   },
 } satisfies Actions;
