@@ -1,12 +1,12 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import Stripe from 'stripe';
-import { TEST_STRIPE_SECRET,  } from '$env/static/private';
-import { PUBLIC_TEST_WEBHOOK_SECRET } from '$env/static/public';
+import { STRIPE_SECRET,  } from '$env/static/private';
+import { PUBLIC_WEBHOOK_SECRET } from '$env/static/public';
 import { json } from '@sveltejs/kit';
 import { supabase } from '$lib/supabaseClient';
 
 // Initialize Stripe with your secret key
-const stripe = new Stripe(TEST_STRIPE_SECRET, {
+const stripe = new Stripe(STRIPE_SECRET, {
 	apiVersion: '2024-06-20'
 });
 
@@ -23,7 +23,7 @@ export const POST: RequestHandler = async ({ request }) => {
 	let event;
 
 	try {
-		event = stripe.webhooks.constructEvent(payload, signature, PUBLIC_TEST_WEBHOOK_SECRET);
+		event = stripe.webhooks.constructEvent(payload, signature, PUBLIC_WEBHOOK_SECRET);
 	} catch (err) {
 		return json({
 			status: 400,
