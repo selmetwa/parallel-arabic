@@ -128,14 +128,44 @@
     </form>
   </div>
 
-  <div class="flex-1 p-2 border border-tile-500 bg-tile-300">
-    <h2 class="text-xl font-semibold text-text-300">Welcome to Parallel Arabic</h2>
-    <p class="text-text-200 mt-2">Accelerate your Arabic with our immersive learning platform.</p>
-    <ul class="list-disc list-inside text-text-200 mt-4 space-y-2">
-      <li>Interactive stories and conversations</li>
-      <li>Voice recognition and pronunciation practice</li>
-      <li>Multiple Arabic dialects</li>
-      <li>Personalized learning experience</li>
+  <div class="flex-3 border border-tile-600 bg-tile-400">
+    <ul class="p-8 flex flex-col gap-3">
+      <li>
+        <h2 class="text-xl font-semibold text-text-200">Multiple Arabic Dialects</h2>
+        <p class="text-text-200 text-md">Learn <strong>Egyptian, Moroccan & Fusha</strong> with comprehensive practice material for each dialect.</p>
+      </li>
+      <li>
+        <h2 class="text-xl font-semibold text-text-200">Stories & Audio</h2>
+        <p class="text-md text-text-200">
+          Access to all stories and conversations with native audio pronunciation.
+        </p>
+      </li>
+      <li>
+        <h2 class="text-xl font-semibold text-text-200">AI-Generated Practice</h2>
+        <p class="text-md text-text-200">
+          <strong>Unlimited AI-generated practice sentences</strong> for all skill levels across all dialects.
+        </p>
+      </li>
+      <li>
+        <h2 class="text-xl font-semibold text-text-200">Speaking Practice</h2>
+        <p class="text-text-200 text-md"><strong>Advanced speaking practice</strong> with real-time pronunciation feedback.</p>
+      </li>
+      <li>
+        <h2 class="text-xl font-semibold text-text-200">Comprehensive Vocabulary</h2>
+        <p class="text-text-200 text-md">Access to <strong>over 15,000 vocabulary words</strong> with multiple choice quizzes and writing practice.</p>
+      </li>
+      <li>
+        <h2 class="text-xl font-semibold text-text-200">Verb Mastery</h2>
+        <p class="text-text-200 text-md">Access to all verbs for comprehensive verb conjugation practice across all dialects.</p>
+      </li>
+      <li>
+        <h2 class="text-xl font-semibold text-text-200">Custom Anki Decks</h2>
+        <p class="text-text-200 text-md">Access to custom built Anki decks for all dialects for efficient spaced repetition learning.</p>
+      </li>
+      <li>
+        <h2 class="text-xl font-semibold text-text-200">Arabic Alphabet</h2>
+        <p class="text-text-200 text-md">Complete Arabic Alphabet mastery with native pronunciation and handwriting practice.</p>
+      </li>
     </ul>
   </div>
 </section>

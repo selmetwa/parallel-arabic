@@ -85,7 +85,7 @@
 								</p>
 							</div>
 							<a
-								href="/egyptian-arabic/stories"
+								href="/stories"
 								class="inline-block px-6 py-3 text-base font-semibold bg-tile-600 border-2 border-tile-600 text-text-300 hover:bg-tile-700 transition-colors duration-300 shadow-md w-fit"
 							>
 								Practice Conversations
@@ -94,6 +94,27 @@
 					</div>
 				</div>
 
+        <!-- Videos -->
+         <div class="bg-tile-500 border-2 border-tile-600 shadow-lg overflow-hidden">
+          <div class="flex flex-col sm:flex-row">
+            <div class="sm:w-2/5 h-48 sm:h-auto bg-tile-300 border-r-0 sm:border-r-2 border-b-2 sm:border-b-0 border-tile-600 flex items-center justify-center p-4">
+              <img src="/images/videos.png" alt="Videos" class="max-w-full max-h-full object-contain" />
+            </div>
+            <div class="sm:w-3/5 p-6 flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold text-text-300 mb-3">Videos</h3>
+                <p class="text-base text-text-200 leading-relaxed mb-3">
+                  Interactive Arabic videos with transcripts, translations, and transliterations from all dialects.
+                </p>
+                <p class="text-base text-text-200 leading-relaxed mb-4">
+                  Watch and learn from YouTube videos with transcripts, translations, and transliterations.
+                </p>
+              </div>
+              <a href="/videos" class="inline-block px-6 py-3 text-base font-semibold bg-tile-600 border-2 border-tile-600 text-text-300 hover:bg-tile-700 transition-colors duration-300 shadow-md w-fit">
+                Practice Videos</a>
+            </div>
+          </div>
+         </div>
 				<!-- Speaking Practice -->
 				<div class="bg-tile-500 border-2 border-tile-600 shadow-lg overflow-hidden">
 					<div class="flex flex-col sm:flex-row">
@@ -111,7 +132,7 @@
 								</p>
 							</div>
 							<a
-								href="/egyptian-arabic/speak"
+								href="/speak"
 								class="inline-block px-6 py-3 text-base font-semibold bg-tile-600 border-2 border-tile-600 text-text-300 hover:bg-tile-700 transition-colors duration-300 shadow-md w-fit"
 							>
 								Start Speaking
@@ -137,7 +158,7 @@
 								</p>
 							</div>
 							<a
-								href="/egyptian-arabic/sentences"
+								href="/sentences"
 								class="inline-block px-6 py-3 text-base font-semibold bg-tile-600 border-2 border-tile-600 text-text-300 hover:bg-tile-700 transition-colors duration-300 shadow-md w-fit"
 							>
 								Practice Sentences

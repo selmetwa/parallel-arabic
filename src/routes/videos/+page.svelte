@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import VideoUploadModal from '$lib/components/VideoUploadModal.svelte';
-
+	import Button from '$lib/components/Button.svelte';
 	let { data } = $props();
 
   // Get dialect badge color
@@ -19,6 +19,17 @@
 
   $inspect(data);
 </script>
+
+{#if !data.session}
+	<div class="mx-4 mb-6 mt-12 border border-tile-600 bg-tile-300 py-4 text-center sm:mx-36">
+		<h1 class="text-2xl font-bold text-text-300">
+			You must have an account to access this content.
+		</h1>
+		<div class="mx-auto mt-4 w-fit">
+			<Button type="button" onClick={() => goto('/signup')}>Create Account</Button>
+		</div>
+	</div>
+  {:else}
 
 <div class="px-3 mt-6 sm:px-8 max-w-7xl mx-auto">
   <div class="text-left mb-6">
@@ -84,6 +95,8 @@
     </div>
   {/if}
 </div>
+{/if}
+
 
 <style>
   .line-clamp-2 {
