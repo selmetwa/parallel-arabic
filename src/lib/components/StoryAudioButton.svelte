@@ -6,83 +6,24 @@
     storyId: string;
     dialect: string;
     class?: string;
+    audioPath: string
   }
 
-  let { storyId, dialect, class: className = '' }: Props = $props();
+  let { storyId, dialect, class: className = '', audioPath }: Props = $props();
   
-  let audioExists = $state(false);
-  let audioPath = $state('');
+  $inspect({ audioPath })
   let playbackRate = $state(1.0);
-  let isChecking = $state(true);
   let isPlaying = $state(false);
   let isPaused = $state(false);
   let currentAudio: HTMLAudioElement | null = null;
-  let pollCount = $state(0);
-  let maxPollAttempts = 30; // 30 seconds max
-  let pollInterval: NodeJS.Timeout | null = null;
-
-  async function checkAudioExists() {
-    try {
-      const response = await fetch(`/api/check-story-audio?storyId=${storyId}&dialect=${dialect}`);
-      const data = await response.json();
-      
-      if (data.exists) {
-        audioExists = true;
-        audioPath = data.audioPath || '';
-        playbackRate = data.playbackRate || 1.0;
-        isChecking = false;
-        if (pollInterval) {
-          clearInterval(pollInterval);
-          pollInterval = null;
-        }
-        return true;
-      }
-      return false;
-    } catch (error) {
-      console.warn('Failed to check story audio:', error);
-      return false;
-    }
-  }
-
-  onMount(async () => {
-    // Initial check
-    const initialExists = await checkAudioExists();
-    
-    if (!initialExists) {
-      // Start polling if audio doesn't exist yet
-      pollInterval = setInterval(async () => {
-        pollCount++;
-        
-        const exists = await checkAudioExists();
-        
-        if (exists || pollCount >= maxPollAttempts) {
-          if (!exists) {
-            // Audio still doesn't exist after 30 seconds
-            audioExists = false;
-            isChecking = false;
-          }
-          
-          if (pollInterval) {
-            clearInterval(pollInterval);
-            pollInterval = null;
-          }
-        }
-      }, 1000); // Check every second
-    }
-  });
-
-  onDestroy(() => {
-    if (pollInterval) {
-      clearInterval(pollInterval);
-    }
-    if (currentAudio) {
-      currentAudio.pause();
-      currentAudio = null;
-    }
-  });
 
   function toggleStoryAudio() {
-    if (!audioPath) return;
+    if (!audioPath) {
+      console.warn('No audio path provided');
+      return;
+    }
+
+    console.log('🎵 Attempting to play audio:', audioPath);
 
     // If audio is currently playing, pause it
     if (isPlaying && currentAudio && !currentAudio.paused) {
@@ -125,11 +66,27 @@
       currentAudio = null;
     });
     
-    currentAudio.addEventListener('error', () => {
+    currentAudio.addEventListener('error', (errorEvent) => {
       isPlaying = false;
       isPaused = false;
+      console.error('Failed to play story audio:', errorEvent);
+      console.error('Audio path:', audioPath);
+      
+      // Let's fetch the URL directly to see what error we get
+      fetch(audioPath)
+        .then(response => {
+          if (!response.ok) {
+            return response.text().then(text => {
+              console.error('Storage error response:', text);
+              console.error('Status:', response.status, response.statusText);
+            });
+          }
+        })
+        .catch(fetchError => {
+          console.error('Fetch error:', fetchError);
+        });
+      
       currentAudio = null;
-      console.error('Failed to play story audio');
     });
 
     currentAudio.play().catch(error => {
@@ -156,7 +113,7 @@
   const speedOptions = [0.5, 0.7, 0.8, 0.9, 1];
 </script>
 
-{#if audioExists}
+{#if audioPath}
   <div class="flex flex-col gap-2">
     <Button
       onClick={toggleStoryAudio}

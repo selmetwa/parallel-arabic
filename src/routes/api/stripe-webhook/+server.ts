@@ -1,12 +1,12 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import Stripe from 'stripe';
-import { STRIPE_SECRET,  } from '$env/static/private';
-import { PUBLIC_WEBHOOK_SECRET } from '$env/static/public';
+import { TEST_STRIPE_SECRET,  } from '$env/static/private';
+import { PUBLIC_TEST_WEBHOOK_SECRET } from '$env/static/public';
 import { json } from '@sveltejs/kit';
-import { db } from '$lib/server/db';
+import { supabase } from '$lib/supabaseClient';
 
 // Initialize Stripe with your secret key
-const stripe = new Stripe(STRIPE_SECRET, {
+const stripe = new Stripe(TEST_STRIPE_SECRET, {
 	apiVersion: '2024-06-20'
 });
 
@@ -23,7 +23,7 @@ export const POST: RequestHandler = async ({ request }) => {
 	let event;
 
 	try {
-		event = stripe.webhooks.constructEvent(payload, signature, PUBLIC_WEBHOOK_SECRET);
+		event = stripe.webhooks.constructEvent(payload, signature, PUBLIC_TEST_WEBHOOK_SECRET);
 	} catch (err) {
 		return json({
 			status: 400,
@@ -34,7 +34,16 @@ export const POST: RequestHandler = async ({ request }) => {
   console.log('Event:', event);
 
   async function updateSubscription(subscriptionId: string) {
-    const userToUpdate = await db.selectFrom('user').selectAll().where('subscriber_id', '=', subscriptionId).executeTakeFirst();
+    const { data: userToUpdate, error: fetchError } = await supabase
+      .from('user')
+      .select('*')
+      .eq('subscriber_id', subscriptionId)
+      .single();
+
+    if (fetchError && fetchError.code !== 'PGRST116') {
+      console.error('Error fetching user for subscription update:', fetchError);
+      return;
+    }
 
     if (userToUpdate) {
       console.log('Updating user as subscriber');
@@ -61,17 +70,21 @@ export const POST: RequestHandler = async ({ request }) => {
         subscriptionEndDate = Math.floor(thirtyDaysFromNow.getTime() / 1000);
       }
 
-      const result = await db
-        .updateTable('user')
-        .set({
-          is_subscriber: 1 as unknown as boolean,
+      const { data: result, error: updateError } = await supabase
+        .from('user')
+        .update({
+          is_subscriber: true,
           subscriber_id: subscriptionId,
-          subscription_end_date: subscriptionEndDate as unknown as bigint
+          subscription_end_date: new Date(subscriptionEndDate * 1000).toISOString()
         })
-        .where('subscriber_id', '=', subscriptionId)
-        .executeTakeFirst();
-      
-      console.log('User updated:', result);
+        .eq('subscriber_id', subscriptionId)
+        .select();
+
+      if (updateError) {
+        console.error('Error updating user subscription:', updateError);
+      } else {
+        console.log('User updated:', result);
+      }
     }
   }
 

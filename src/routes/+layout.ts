@@ -1,0 +1,75 @@
+import { createBrowserClient, createServerClient, isBrowser } from '@supabase/ssr'
+import { PUBLIC_SUPABASE_PUBLISHABLE_KEY, PUBLIC_SUPABASE_URL } from '$env/static/public'
+import type { LayoutLoad } from './$types'
+
+export const load: LayoutLoad = async ({ data, depends, fetch }) => {
+  console.log('🔍 [+layout.ts] Starting client layout load...', { isBrowser: isBrowser() })
+  
+  try {
+    /**
+     * Declare a dependency so the layout can be invalidated, for example, on
+     * session refresh.
+     */
+    depends('supabase:auth')
+
+    console.log('🔍 [+layout.ts] Creating Supabase client...')
+    const supabase = isBrowser()
+      ? createBrowserClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_PUBLISHABLE_KEY, {
+          global: {
+            fetch,
+          },
+        })
+      : createServerClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_PUBLISHABLE_KEY, {
+          global: {
+            fetch,
+          },
+          cookies: {
+            getAll() {
+              return data.cookies
+            },
+          },
+        })
+
+    console.log('🔍 [+layout.ts] Getting session...')
+    /**
+     * It's fine to use `getSession` here, because on the client, `getSession` is
+     * safe, and on the server, it reads `session` from the `LayoutData`, which
+     * safely checked the session using `safeGetSession`.
+     */
+    const {
+      data: { session },
+    } = await supabase.auth.getSession()
+
+    console.log('🔍 [+layout.ts] Getting user...')
+    const {
+      data: { user },
+    } = await supabase.auth.getUser()
+
+    console.log('🔍 [+layout.ts] Client layout load completed:', { 
+      hasSession: !!session, 
+      hasUser: !!user 
+    })
+
+    return { session, supabase, user }
+  } catch (error) {
+    console.error('❌ [+layout.ts] Error in client layout load:', error)
+    console.error('❌ [+layout.ts] Error stack:', error instanceof Error ? error.stack : 'No stack trace')
+    
+    // Try to create a basic client for fallback
+    try {
+      console.log('🔄 [+layout.ts] Attempting fallback client creation...')
+      const fallbackSupabase = createBrowserClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_PUBLISHABLE_KEY, {
+        global: { fetch },
+      })
+      
+      return { 
+        session: null, 
+        supabase: fallbackSupabase, 
+        user: null 
+      }
+    } catch (fallbackError) {
+      console.error('❌ [+layout.ts] Fallback also failed:', fallbackError)
+      throw error; // Re-throw original error
+    }
+  }
+}

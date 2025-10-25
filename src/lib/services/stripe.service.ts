@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Stripe } from 'stripe';
 import { PUBLIC_DOMAIN, PUBLIC_STRIPE_PUBLISHABLE_KEY } from '$env/static/public';
-import { STRIPE_SECRET } from '$env/static/private';
+import { TEST_STRIPE_SECRET } from '$env/static/private';
 
 let stripe: Stripe | undefined;
 
@@ -67,9 +67,12 @@ const getSubscription = async (
  *
  */
 const subscribe = async (priceId: string): Promise<Stripe.Checkout.Session | undefined> => {
+  console.log('🔄 [stripe-service] Creating checkout session for priceId:', priceId);
+  console.log('🔄 [stripe-service] Stripe instance initialized:', !!stripe);
 	if (stripe) {
 		try {
-			return await stripe.checkout.sessions.create({
+			console.log('🔄 [stripe-service] Calling stripe.checkout.sessions.create...');
+			const session = await stripe.checkout.sessions.create({
 				ui_mode: 'embedded',
 				line_items: [
 					{
@@ -78,11 +81,16 @@ const subscribe = async (priceId: string): Promise<Stripe.Checkout.Session | und
 					}
 				],
 				mode: 'subscription',
-				return_url: `${PUBLIC_DOMAIN}/pricing/subscribed?session_id={CHECKOUT_SESSION_ID}`
+				return_url: `http://localhost:5173/pricing/subscribed?session_id={CHECKOUT_SESSION_ID}`,
+				// return_url: `${PUBLIC_DOMAIN}/pricing/subscribed?session_id={CHECKOUT_SESSION_ID}`
 			});
+			console.log('✅ [stripe-service] Checkout session created successfully:', !!session.client_secret);
+			return session;
 		} catch (error: any) {
-			console.error(error);
+			console.error('❌ [stripe-service] Error creating checkout session:', error);
 		}
+	} else {
+		console.error('❌ [stripe-service] Stripe not initialized!');
 	}
 };
 
@@ -94,8 +102,8 @@ const subscribe = async (priceId: string): Promise<Stripe.Checkout.Session | und
  *
  */
 const initializeStripe = async (): Promise<boolean> => {
-	if (STRIPE_SECRET && PUBLIC_STRIPE_PUBLISHABLE_KEY) {
-		stripe = new Stripe(STRIPE_SECRET);
+	if (TEST_STRIPE_SECRET && PUBLIC_STRIPE_PUBLISHABLE_KEY) {
+		stripe = new Stripe(TEST_STRIPE_SECRET);
 		return true;
 	}
 	return false;

@@ -1,9 +1,10 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
-import { db } from '$lib/server/db';
+import { supabase } from '$lib/supabaseClient';
 import { env } from '$env/dynamic/private';
 import OpenAI from 'openai';
 import { v4 as uuidv4 } from 'uuid';
+import { uploadVideoToStorage } from '$lib/helpers/storage-helpers';
 
 const YOUTUBE_TRANSCRIPT_API_KEY = '68d0d002c95b838ec92e4efb';
 const YOUTUBE_TRANSCRIPT_API_URL = 'https://www.youtube-transcript.io/api/transcripts';
@@ -94,11 +95,11 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 	try {
 		// Check authentication
 		const session = await locals.auth.validate();
-		if (!session) {
+		if (!session?.sessionId) {
 			return json({ error: 'Authentication required' }, { status: 401 });
 		}
 
-		const { videoId } = await request.json();
+		const { videoId, customTitle, dialect } = await request.json();
 
 		if (!videoId) {
 			return json({ error: 'Video ID is required' }, { status: 400 });
@@ -148,8 +149,16 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 
 	const videoData = data[0];
 	
+  const TRANSCRIPT = videoData?.tracks[0]?.transcript;
+
 	// Check if we have valid tracks data
-	if (!videoData || !videoData.tracks || !Array.isArray(videoData.tracks) || videoData.tracks.length === 0) {
+	if (
+    !videoData || 
+    !videoData.tracks || 
+    !Array.isArray(videoData.tracks) || 
+    videoData.tracks.length === 0 ||
+    TRANSCRIPT.length === 0
+  ) {
 		return json({ error: 'No transcript tracks found for this video' }, { status: 404 });
 	}
 
@@ -159,14 +168,13 @@ export const POST: RequestHandler = async ({ request, locals }) => {
       transcript: videoData.tracks[0].transcript 
     });
 
-    const TRANSCRIPT = videoData.tracks[0].transcript;
 	if (!TRANSCRIPT) {
 		return json({ error: 'Transcript not available for this video' }, { status: 404 });
 	}
 
 	// Initialize OpenAI
 	const openai = new OpenAI({ apiKey: env['OPEN_API_KEY'] });
-	const userId = session.user.userId;
+	const userId = session.user.id;
 	const videoDbId = uuidv4();
 
 	// Format the transcript using ChatGPT
@@ -179,21 +187,39 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 
 	console.log(`ChatGPT formatted transcript with ${formattedVideo.lines.length} lines`);
 
-	// Save to video table
-	await db
-		.insertInto('video')
-		.values({
+	// Upload video content to Supabase Storage
+	console.log('✅ Video processed, uploading to storage...');
+	
+	const storageResult = await uploadVideoToStorage(videoDbId, formattedVideo);
+	
+	if (!storageResult.success) {
+		console.error('Storage upload failed:', storageResult.error);
+		throw new Error(`Failed to upload video to storage: ${storageResult.error}`);
+	}
+	
+	console.log('✅ Video uploaded to storage, saving metadata to database...');
+
+	// Save video metadata to database with storage file key
+	const { error: insertError } = await supabase
+		.from('video')
+		.insert({
 			id: videoDbId,
 			user_id: userId,
-			title: formattedVideo.title?.english || videoData.title || 'Untitled Video',
+			title: customTitle ?? (formattedVideo.title?.english || videoData.title || 'Untitled Video'),
 			description: formattedVideo.description?.english || 'Video from YouTube',
 			url: `https://www.youtube.com/watch?v=${videoId}`,
 			thumbnail_url: `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`,
-			dialect: 'egyptian-arabic',
-			created_at: new Date().getTime(),
-			video_body: JSON.stringify(formattedVideo)
+			dialect: dialect ?? 'egyptian-arabic',
+			created_at: new Date().toISOString(),
+			video_body: storageResult.fileKey! // Store file key instead of JSON
 		})
-		.executeTakeFirst();
+		.select()
+		.single();
+
+	if (insertError) {
+		console.error('Database insert error:', insertError);
+		throw insertError;
+	}
 
 	console.log(`Saved video to database with ID: ${videoDbId}`);
 
@@ -201,7 +227,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		success: true,
 		videoId: videoId,
 		videoDbId: videoDbId,
-		title: formattedVideo.title,
+		title: customTitle || videoData?.title || 'Untitled Video',
 		description: formattedVideo.description,
 		linesCount: formattedVideo.lines.length,
 		formattedVideo: formattedVideo

@@ -93,7 +93,7 @@ export const POST: RequestHandler = async ({ request }) => {
   const openai = new OpenAI({ apiKey: env['OPEN_API_KEY'] });
   const data = await request.json();
   
-  const dialect = data.dialect || 'egyptian-arabic'; // Default to Egyptian
+  const dialect = 'egyptian-arabic'; // Default to Egyptian
   const learningTopics = data.learningTopics || []; // Array of selected learning topics
   const vocabularyWords = data.vocabularyWords || ''; // Vocabulary words to feature
 
@@ -132,41 +132,6 @@ export const POST: RequestHandler = async ({ request }) => {
       commonWordsInstruction: 'Here are 3000 of the most common words in Egyptian Arabic, please use these words in your sentences:',
       wordListInstruction: 'please only use the words in the common words list.'
     },
-    'fusha': {
-      name: 'MODERN STANDARD ARABIC (FUSHA)',
-      description: 'Please make sure that the arabic provided is in MODERN STANDARD ARABIC (FUSHA). Use formal Arabic as used in news, literature, and official communications. Avoid colloquial expressions.',
-      wordList: [], // No specific word list for Fusha yet
-      commonWordsInstruction: '',
-      wordListInstruction: 'Please use formal Modern Standard Arabic vocabulary appropriate for news and literature.'
-    },
-    'levantine': {
-      name: 'LEVANTINE ARABIC',
-      description: 'Please make sure that the arabic provided is in the LEVANTINE dialect as spoken in Syria, Lebanon, Palestine, and Jordan. Use natural conversational Levantine expressions.',
-      wordList: [], // No specific word list for Levantine yet
-      commonWordsInstruction: '',
-      wordListInstruction: 'Please use vocabulary common in Levantine Arabic conversations.'
-    },
-    'darija': {
-      name: 'MOROCCAN DARIJA',
-      description: 'Please make sure that the arabic provided is in MOROCCAN DARIJA as spoken in Morocco. Use natural conversational Moroccan Arabic expressions and vocabulary.',
-      wordList: [], // No specific word list for Darija yet
-      commonWordsInstruction: '',
-      wordListInstruction: 'Please use vocabulary common in Moroccan Darija conversations.'
-    },
-    'iraqi': {
-      name: 'IRAQI ARABIC',
-      description: 'Please make sure that the arabic provided is in the IRAQI dialect as spoken in Iraq. Use natural conversational Iraqi expressions and vocabulary.',
-      wordList: [], // No specific word list for Iraqi yet
-      commonWordsInstruction: '',
-      wordListInstruction: 'Please use vocabulary common in Iraqi Arabic conversations.'
-    },
-    'khaleeji': {
-      name: 'KHALEEJI ARABIC',
-      description: 'Please make sure that the arabic provided is in the KHALEEJI dialect as spoken in the Gulf states (UAE, Saudi Arabia, Kuwait, Bahrain, Qatar, Oman). Use natural conversational Gulf Arabic expressions and vocabulary.',
-      wordList: [], // No specific word list for Khaleeji yet
-      commonWordsInstruction: '',
-      wordListInstruction: 'Please use vocabulary common in Khaleeji Arabic conversations.'
-    }
   } as const;
 
   type DialectKey = keyof typeof dialectConfigs;
@@ -375,6 +340,49 @@ export const POST: RequestHandler = async ({ request }) => {
               const improvedArabic = await improveArabicWithEgyptianModel(originalArabic);
               console.log({ originalArabic, improvedArabic });
               parsedContent.sentences[i].arabic = improvedArabic;
+              
+              // Update transliteration and English to match the improved Arabic
+              if (improvedArabic !== originalArabic) {
+                console.log(`Updating English and transliteration for improved Arabic: ${improvedArabic}`);
+                try {
+                  const updateCompletion = await openai.chat.completions.create({
+                    messages: [{ 
+                      role: "system", 
+                      content: `Given this Egyptian Arabic sentence: "${improvedArabic}"
+                      
+                      Please provide:
+                      1. An accurate English translation
+                      2. An accurate transliteration using only English alphabet letters
+                      
+                      Make sure the transliteration reflects authentic Egyptian pronunciation.
+                      
+                      Return ONLY a JSON object in this exact format:
+                      {
+                        "english": "the english translation",
+                        "transliteration": "the transliteration"
+                      }
+                      
+                      No other text or explanation.` 
+                    }],
+                    response_format: { type: "json_object" },
+                    model: "gpt-4o-mini",
+                    temperature: 0.3, // Lower temperature for more consistent translations
+                  });
+                  
+                  const updateResponse = updateCompletion.choices[0].message?.content;
+                  if (updateResponse) {
+                    const updateData = JSON.parse(updateResponse);
+                    if (updateData.english && updateData.transliteration) {
+                      parsedContent.sentences[i].english = cleanText(updateData.english, 'english');
+                      parsedContent.sentences[i].transliteration = cleanText(updateData.transliteration, 'transliteration');
+                      console.log(`Updated translations for sentence ${i + 1}`);
+                    }
+                  }
+                } catch (updateError) {
+                  console.error(`Failed to update translations for sentence ${i + 1}:`, updateError);
+                  // Keep original English and transliteration if update fails
+                }
+              }
             }
             console.log('Completed Arabic improvement with Egyptian model');
           }

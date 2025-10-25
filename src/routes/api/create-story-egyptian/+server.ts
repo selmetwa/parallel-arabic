@@ -3,12 +3,13 @@ import type { RequestHandler } from './$types';
 import { env } from '$env/dynamic/private';
 import OpenAI from 'openai';
 import { v4 as uuidv4 } from 'uuid';
-import { db } from '../../../lib/server/db';
+import { supabase } from '$lib/supabaseClient';
 import { stories } from '$lib/constants/stories/index';
 import { commonWords } from '$lib/constants/common-words';
 import { getSpeakerNames } from '$lib/utils/voice-config';
 import { generateStoryAudio } from '../../../lib/server/audio-generation';
 import { saveUploadedAudioFile } from '$lib/utils/audio-utils';
+import { uploadStoryToStorage } from '$lib/helpers/storage-helpers';
 
 interface GenerationData {
 	description: string;
@@ -165,11 +166,11 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 	
 	const session = await locals.auth.validate();
 
-	if (!session) {
+	if (!session?.sessionId) {
 		return error(401, { message: 'You must have an account do that' });
 	}
 
-	const userId = session?.user.userId;
+	const userId = session?.user?.id;
 	const storyId = uuidv4();
 
 	// Handle both FormData (transcription mode) and JSON (AI generation mode)
@@ -279,20 +280,38 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		const storyData = await formatTranscriptionToStory(sentences, transcript, storyTitle);
 
 		try {
-			// Save to database
-			await db
-				.insertInto('generated_story')
-				.values({
+			console.log('✅ Egyptian Arabic transcription processed, uploading to storage...');
+			
+			// Upload transcribed story JSON to Supabase Storage
+			const storageResult = await uploadStoryToStorage(storyId, storyData);
+			
+			if (!storageResult.success) {
+				console.error('Storage upload failed:', storageResult.error);
+				throw new Error(`Failed to upload transcribed story to storage: ${storageResult.error}`);
+			}
+			
+			console.log('✅ Egyptian Arabic transcribed story uploaded to storage, saving to database...');
+			
+			// Save transcribed story metadata with storage file key
+			const { data: savedStory, error: insertError } = await supabase
+				.from('generated_story')
+				.insert({
 					id: storyId,
 					user_id: userId || '',
 					title: storyTitle,
 					description: 'Story created from uploaded audio file',
 					difficulty: 'a1', // Default difficulty for transcribed content
-					story_body: JSON.stringify(storyData),
+					story_body: storageResult.fileKey!, // Store file key instead of JSON
 					dialect: dialect,
-					created_at: new Date().getTime()
+					created_at: new Date().toISOString()
 				})
-				.executeTakeFirst();
+				.select()
+				.single();
+
+			if (insertError) {
+				console.error('Database insert error:', insertError);
+				throw insertError;
+			}
 
 			// Note: We don't generate audio for transcription mode since we already have the original audio
 			// The original audio file would need to be saved separately for playback
@@ -661,22 +680,38 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 
 			console.log('Improved Arabic sentences with Egyptian model');
 			
-			const finalStory = JSON.stringify(parsedStory);
-
-			console.log({ story: finalStory });
-			await db
-				.insertInto('generated_story')
-				.values({
+			console.log('✅ Egyptian Arabic story generated, uploading to storage...');
+			
+			// Upload story JSON to Supabase Storage
+			const storageResult = await uploadStoryToStorage(storyId, parsedStory);
+			
+			if (!storageResult.success) {
+				console.error('Storage upload failed:', storageResult.error);
+				throw new Error(`Failed to upload story to storage: ${storageResult.error}`);
+			}
+			
+			console.log('✅ Egyptian Arabic story uploaded to storage, saving to database...');
+			
+			// Save story metadata with storage file key
+			const { data: savedStory, error: insertError } = await supabase
+				.from('generated_story')
+				.insert({
 					id: storyId,
 					user_id: userId || '',
 					title: generatedTitle, // Use generated title
 					description: description,
 					difficulty: option,
-					story_body: finalStory, // Use improved story
+					story_body: storageResult.fileKey!, // Store file key instead of JSON
 					dialect: dialect, // Add the dialect from the request
-					created_at: new Date().getTime()
+					created_at: new Date().toISOString()
 				})
-				.executeTakeFirst();
+				.select()
+				.single();
+
+			if (insertError) {
+				console.error('Database insert error:', insertError);
+				throw insertError;
+			}
 
 			// Generate audio for the story in the background
 			try {

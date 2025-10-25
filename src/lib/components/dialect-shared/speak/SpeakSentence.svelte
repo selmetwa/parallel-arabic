@@ -21,7 +21,7 @@
 	let isDefinitionModalOpen = $state(false);
 	let isLoadingDefinition = $state(false);
 	let definition = $state('');
-	let targetWord = $state('');
+  let targetWord = $state('');
   let audioURL = $state('');
 
   $effect(() => {

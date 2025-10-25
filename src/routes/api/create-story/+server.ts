@@ -3,12 +3,12 @@ import type { RequestHandler } from './$types';
 import { env } from '$env/dynamic/private';
 import OpenAI from 'openai';
 import { v4 as uuidv4 } from 'uuid';
-import { db } from '../../../lib/server/db';
+import { supabase } from '$lib/supabaseClient';
 import { stories } from '$lib/constants/stories/index';
 import { commonWords } from '$lib/constants/common-words';
 import { getSpeakerNames } from '$lib/utils/voice-config';
 import { generateStoryAudio } from '../../../lib/server/audio-generation';
-import { saveUploadedAudioFile } from '$lib/utils/audio-utils';
+import { uploadStoryToStorage } from '$lib/helpers/storage-helpers';
 
 interface GenerationData {
 	description: string;
@@ -20,107 +20,16 @@ interface GenerationData {
 	option: string;
 }
 
-// Type guard function
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function isTranscriptionMode(data: any): boolean {
-	return data && data.mode === 'transcription';
-}
-
-async function aiSentenceSegmentation(arabicText: string, openai: OpenAI): Promise<string[]> {
-	try {
-		console.log('Starting AI-powered sentence segmentation...');
-		
-		const response = await openai.chat.completions.create({
-			model: 'gpt-4o',
-			messages: [
-				{
-					role: 'system',
-					content: `You are an expert Arabic linguist. Your task is to split Arabic transcripts into natural, well-formed sentences. 
-
-IMPORTANT GUIDELINES:
-- Consider natural speech pauses and breathing points
-- Respect Arabic grammar and semantic meaning
-- Aim for sentences between 20-150 characters each
-- Split at logical thought boundaries
-- Handle run-on sentences by finding natural break points
-- Preserve the original meaning and context
-- Remove any incomplete fragments or filler words
-
-Return your response as a JSON object with a "sentences" array containing the segmented sentences.`
-				},
-				{
-					role: 'user',
-					content: `Please segment this Arabic transcript into natural sentences:
-
-"${arabicText}"
-
-Format as: {"sentences": ["sentence1", "sentence2", ...]}`
-				}
-			],
-			response_format: { type: 'json_object' },
-			temperature: 0.2,
-			max_tokens: 3000
-		});
-
-		const content = response.choices[0].message.content;
-		if (content) {
-			const result = JSON.parse(content);
-			const sentences = result.sentences || [];
-			
-			// Filter and clean sentences
-			const cleanedSentences = sentences
-				.filter((s: string) => s && s.trim().length > 5) // Remove very short fragments
-				.map((s: string) => s.trim());
-			
-			console.log(`AI segmentation completed: ${cleanedSentences.length} sentences from original text`);
-			return cleanedSentences;
-		}
-		
-		throw new Error('No content in AI response');
-	} catch (error) {
-		console.error('AI segmentation failed, falling back to regex:', error);
-		
-		// Fallback to enhanced regex if AI fails
-		return enhancedRegexSegmentation(arabicText);
-	}
-}
-
-function enhancedRegexSegmentation(arabicText: string): string[] {
-	// Enhanced fallback with better punctuation handling
-	const sentences = arabicText
-		.split(/[.!?؟۔،؛]/) // Include more Arabic punctuation
-		.map(s => s.trim())
-		.filter(s => s.length > 5); // Filter out very short fragments
-	
-	// Handle overly long sentences by splitting on conjunctions
-	const finalSentences: string[] = [];
-	const maxLength = 180;
-	
-	for (const sentence of sentences) {
-		if (sentence.length <= maxLength) {
-			finalSentences.push(sentence);
-		} else {
-			// Split long sentences on Arabic connectors
-			const parts = sentence
-				.split(/\s+(و|لكن|ولكن|ثم|فإن|لذلك|بعد ذلك|أيضا|كذلك|من ناحية أخرى)\s+/)
-				.filter(s => s.length > 5);
-			finalSentences.push(...parts);
-		}
-	}
-	
-	return finalSentences;
-}
-
 export const POST: RequestHandler = async ({ request, locals }) => {
 	const openai = new OpenAI({ apiKey: env['OPEN_API_KEY'] });
 	
-	const session = await locals.auth.validate();
+	const {sessionId, user} = await locals?.auth?.validate() || {};
 
-	if (!session) {
+	if (!sessionId) {
 		return error(401, { message: 'You must have an account do that' });
 	}
 
-	const userId = session?.user.userId;
+  const userId  = user?.id;
 	const storyId = uuidv4();
 
 	// Handle both FormData (transcription mode) and JSON (AI generation mode)
@@ -143,116 +52,6 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 	} else {
 		// Handle JSON for AI generation mode
 		data = await request.json();
-	}
-
-	// Check if this is transcription mode
-	if (isTranscriptionMode(data)) {
-		// Handle audio transcription mode
-		const transcript = data.transcript;
-		const sentences = data.sentences || [];
-		const dialect = data.dialect || 'egyptian-arabic';
-		const customTitle = data.customTitle || '';
-		const originalFileName = data.originalFileName || '';
-		const audioFile = data.audioFile as File;
-
-		// Save the uploaded audio file to data/audio directory
-		if (audioFile) {
-			const audioBuffer = Buffer.from(await audioFile.arrayBuffer());
-			const saveResult = saveUploadedAudioFile(audioBuffer, storyId, dialect);
-			
-			if (!saveResult.success) {
-				console.error('Failed to save audio file:', saveResult.error);
-				// Don't fail the story creation, just log the error
-			}
-		}
-
-		// Generate title from custom title or filename
-		const generateTitleFromAudio = (customTitle: string, fileName: string, dialect: string) => {
-			const timestamp = Date.now().toString().slice(-6);
-			if (customTitle.trim()) {
-				return customTitle.trim();
-			} else if (fileName) {
-				// Clean up filename
-				const baseName = fileName.replace(/\.[^/.]+$/, '').replace(/[-_]/g, ' ');
-				return baseName;
-			} else {
-				return `audio-story-${timestamp}_${dialect}`;
-			}
-		};
-
-		const storyTitle = generateTitleFromAudio(customTitle, originalFileName, dialect);
-
-		// Format the transcription data to match the story structure
-		const formatTranscriptionToStory = async (sentences: Array<{arabic: string, english: string, transliteration: string}>, transcript: string, title: string) => {
-			// If we have structured sentences, use them
-			if (sentences && sentences.length > 0) {
-				const formattedSentences = sentences.map((sentence) => ({
-					arabic: { text: sentence.arabic },
-					english: { text: sentence.english },
-					transliteration: { text: sentence.transliteration }
-				}));
-
-				return {
-					title: {
-						arabic: title,
-						english: title
-					},
-					description: {
-						arabic: 'قصة من ملف صوتي',
-						english: 'Story from audio file'
-					},
-					sentences: formattedSentences
-				};
-			} else {
-				// If we only have raw transcript, use AI-powered sentence segmentation
-				const sentenceTexts = await aiSentenceSegmentation(transcript, openai);
-
-				const formattedSentences = sentenceTexts.map((sentenceText) => ({
-					arabic: { text: sentenceText },
-					english: { text: '[Translation needed]' },
-					transliteration: { text: '[Transliteration needed]' }
-				}));
-
-				return {
-					title: {
-						arabic: title,
-						english: title
-					},
-					description: {
-						arabic: 'قصة من ملف صوتي',
-						english: 'Story from audio file'
-					},
-					sentences: formattedSentences
-				};
-			}
-		};
-
-		const storyData = await formatTranscriptionToStory(sentences, transcript, storyTitle);
-
-		try {
-			// Save to database
-			await db
-				.insertInto('generated_story')
-				.values({
-					id: storyId,
-					user_id: userId || '',
-					title: storyTitle,
-					description: 'Story created from uploaded audio file',
-					difficulty: 'a1', // Default difficulty for transcribed content
-					story_body: JSON.stringify(storyData),
-					dialect: dialect,
-					created_at: new Date().getTime()
-				})
-				.executeTakeFirst();
-
-			// Note: We don't generate audio for transcription mode since we already have the original audio
-			// The original audio file would need to be saved separately for playback
-
-			return json({ storyId: storyId });
-		} catch (e) {
-			console.error('Database error:', e);
-			return error(500, { message: 'Failed to save transcribed story' });
-		}
 	}
 
 	// Original AI generation mode continues below...
@@ -600,20 +399,38 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 				throw new Error('Invalid story structure');
 			}
 			
-      console.log({ story });
-			await db
-				.insertInto('generated_story')
-				.values({
+      console.log('✅ Story generated, uploading to storage...');
+			
+			// Upload story JSON to Supabase Storage
+			const storageResult = await uploadStoryToStorage(storyId, parsedStory);
+			
+			if (!storageResult.success) {
+				console.error('Storage upload failed:', storageResult.error);
+				throw new Error(`Failed to upload story to storage: ${storageResult.error}`);
+			}
+			
+			console.log('✅ Story uploaded to storage, saving to database...');
+			
+			// Save story metadata with storage file key
+			const { data: savedStory, error: insertError } = await supabase
+				.from('generated_story')
+				.insert({
 					id: storyId,
 					user_id: userId || '',
 					title: generatedTitle, // Use generated title
 					description: description,
 					difficulty: option,
-					story_body: story, // Now guaranteed to be a string
+					story_body: storageResult.fileKey!, // Store file key instead of JSON
 					dialect: dialect, // Add the dialect from the request
-					created_at: new Date().getTime()
+					created_at: new Date().toISOString()
 				})
-				.executeTakeFirst();
+				.select()
+				.single();
+
+			if (insertError) {
+				console.error('Database insert error:', insertError);
+				throw insertError;
+			}
 
 			// Generate audio for the story in the background
 			try {

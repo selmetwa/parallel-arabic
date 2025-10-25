@@ -4,7 +4,7 @@
 	import RadioButton from '$lib/components/RadioButton.svelte';
 	import SentenceQuiz from '$lib/components/dialect-shared/sentences/SentenceQuiz.svelte';
 	import { egyptianSentencesInStore, currentDialect } from '$lib/store/store';
-	import { PUBLIC_PRICE_ID } from '$env/static/public';
+	import { PUBLIC_TEST_PRICE_ID } from '$env/static/public';
 	import { goto } from '$app/navigation';
   import { updateUrl } from '$lib/helpers/update-url';
   import AlphabetCycle from '$lib/components/AlphabetCycle.svelte';
@@ -46,8 +46,14 @@
     if (typeof window !== 'undefined') {
       const savedSentences = localStorage.getItem('sentences_egyptian');
       if (savedSentences) {
-        const parsed = JSON.parse(savedSentences);
-        return filterValidSentences(parsed);
+        try {
+          const parsed = JSON.parse(savedSentences);
+          return filterValidSentences(parsed);
+        } catch (error) {
+          console.error('Error parsing saved sentences from localStorage:', error);
+          // Clear corrupted data
+          localStorage.removeItem('sentences_egyptian');
+        }
       }
     }
     const storeSentences = Array.isArray($egyptianSentencesInStore) ? $egyptianSentencesInStore : [];
@@ -188,7 +194,13 @@
       }
       
       const jsonBlob = chatgptres.message.message.content;
-      const _sentences = JSON.parse(jsonBlob);
+      let _sentences;
+      try {
+        _sentences = JSON.parse(jsonBlob);
+      } catch (error) {
+        console.error('Error parsing generated sentences JSON:', error);
+        throw new Error('Failed to parse generated sentences');
+      }
       const newSentences = filterValidSentences(_sentences.sentences || []);
       
       if (newSentences.length === 0) {
@@ -301,11 +313,11 @@
 
 {#if hasReachedLimit && data.session}
 	<div class="mx-4 mb-6 mt-12 border border-tile-600 bg-tile-300 py-4 text-center sm:mx-36">
-		<h1 class="text-2xl font-bold text-text-300">You have reached your limit of 20 sentences.</h1>
+		<h1 class="text-2xl font-bold text-text-300">You have reached your limit of 5 sentences.</h1>
 		<p class="mt-2 text-xl text-text-200">To continue practicing, please subscribe.</p>
 		<form method="POST" action="/?/subscribe" class="mx-auto mt-4 w-fit">
 			<!-- Modify this value using your own Stripe price_id -->
-			<input type="hidden" name="price_id" value={PUBLIC_PRICE_ID} />
+			<input type="hidden" name="price_id" value={PUBLIC_TEST_PRICE_ID} />
 
 			<Button type="submit">Subscribe</Button>
 		</form>

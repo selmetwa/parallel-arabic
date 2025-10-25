@@ -3,12 +3,13 @@ import type { RequestHandler } from './$types';
 import { env } from '$env/dynamic/private';
 import OpenAI from 'openai';
 import { v4 as uuidv4 } from 'uuid';
-import { db } from '../../../lib/server/db';
+import { supabase } from '$lib/supabaseClient';
 import { stories } from '$lib/constants/stories/index';
 import { commonWords } from '$lib/constants/common-words';
 import { getSpeakerNames } from '$lib/utils/voice-config';
 import { generateStoryAudio } from '../../../lib/server/audio-generation';
 import { saveUploadedAudioFile } from '$lib/utils/audio-utils';
+import { uploadStoryToStorage } from '$lib/helpers/storage-helpers';
 
 interface GenerationData {
 	description: string;
@@ -31,9 +32,9 @@ async function improveArabicWithDarjiaModel(arabicText: string): Promise<string>
 	try {
 		console.log('Improving Arabic with Darija model...');
 		
-		const prompt = `الرجاء ترجمة النص العربي التالي إلى الدارجة المغربية الأصيلة. احتفظ بنفس المعنى ولكن استعمل الكلمات والتعبيرات الشائعة فالدارجة.
+    const prompt = `الرجاء ترجمة النص العربي التالي إلى الدارجة المغربية الأصيلة. احتفظ بنفس المعنى ولكن استعمل الكلمات والتعبيرات الشائعة فالدارجة.:${arabicText}`;;
 
-:${arabicText}`;
+		// const prompt = `الرجاء ترجمة النص العربي التالي إلى الدارجة المغربية الأصيلة. احتفظ بنفس المعنى ولكن استعمل الكلمات والتعبيرات الشائعة فالدارجة.
 
 		const response = await fetch('https://selmetwa--nilechat-generator-api-generate.modal.run', {
 			method: 'POST',
@@ -72,6 +73,49 @@ async function improveArabicWithDarjiaModel(arabicText: string): Promise<string>
 		console.error('Failed to improve Arabic with darija model:', error);
 		// Return original text if improvement fails
 		return arabicText;
+	}
+}
+
+// Function to update transliteration using ChatGPT after Arabic text is improved
+async function updateTransliterationWithChatGPT(improvedArabicText: string, openai: OpenAI): Promise<string> {
+	try {
+		console.log('Updating transliteration for improved Arabic text...');
+		
+		const response = await openai.chat.completions.create({
+			model: 'gpt-4o',
+			messages: [
+				{
+					role: 'system',
+					content: `You are an expert in Moroccan Darija transliteration. Your task is to provide accurate transliterations of Moroccan Darija text using only English letters.
+
+IMPORTANT GUIDELINES:
+- Use ONLY English alphabet letters (a-z, A-Z)
+- No diacritics, special characters, or numbers
+- Follow natural pronunciation patterns for Moroccan Darija
+- Make it readable for English speakers learning Arabic
+- Ensure consistency in transliteration style
+- Use common transliteration conventions for Moroccan Arabic
+
+Return only the transliteration text, nothing else.`
+				},
+				{
+					role: 'user',
+					content: `Please provide an accurate transliteration of this Moroccan Darija text using only English letters:
+
+"${improvedArabicText}"`
+				}
+			],
+			temperature: 0.2, // Low temperature for consistency
+			max_tokens: 500
+		});
+
+		const transliteration = response.choices[0].message.content?.trim() || '';
+		console.log('ChatGPT transliteration update completed');
+		return transliteration;
+	} catch (error) {
+		console.error('Failed to update transliteration with ChatGPT:', error);
+		// Return a fallback message if update fails
+		return '[Transliteration update failed]';
 	}
 }
 
@@ -169,7 +213,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		return error(401, { message: 'You must have an account do that' });
 	}
 
-	const userId = session?.user.userId;
+	const userId = session?.user.id;
 	const storyId = uuidv4();
 
 	// Handle both FormData (transcription mode) and JSON (AI generation mode)
@@ -199,7 +243,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		// Handle audio transcription mode
 		const transcript = data.transcript;
 		const sentences = data.sentences || [];
-		const dialect = data.dialect || 'egyptian-arabic';
+		const dialect = data.dialect || 'darija';
 		const customTitle = data.customTitle || '';
 		const originalFileName = data.originalFileName || '';
 		const audioFile = data.audioFile as File;
@@ -279,20 +323,38 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		const storyData = await formatTranscriptionToStory(sentences, transcript, storyTitle);
 
 		try {
-			// Save to database
-			await db
-				.insertInto('generated_story')
-				.values({
+			console.log('✅ Darija transcription processed, uploading to storage...');
+			
+			// Upload transcribed story JSON to Supabase Storage
+			const storageResult = await uploadStoryToStorage(storyId, storyData);
+			
+			if (!storageResult.success) {
+				console.error('Storage upload failed:', storageResult.error);
+				throw new Error(`Failed to upload transcribed story to storage: ${storageResult.error}`);
+			}
+			
+			console.log('✅ Darija transcribed story uploaded to storage, saving to database...');
+			
+			// Save transcribed story metadata with storage file key
+			const { data: savedStory, error: insertError } = await supabase
+				.from('generated_story')
+				.insert({
 					id: storyId,
 					user_id: userId || '',
 					title: storyTitle,
 					description: 'Story created from uploaded audio file',
 					difficulty: 'a1', // Default difficulty for transcribed content
-					story_body: JSON.stringify(storyData),
+					story_body: storageResult.fileKey!, // Store file key instead of JSON
 					dialect: dialect,
-					created_at: new Date().getTime()
+					created_at: new Date().toISOString()
 				})
-				.executeTakeFirst();
+				.select()
+				.single();
+
+			if (insertError) {
+				console.error('Database insert error:', insertError);
+				throw insertError;
+			}
 
 			// Note: We don't generate audio for transcription mode since we already have the original audio
 			// The original audio file would need to be saved separately for playback
@@ -306,7 +368,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 
 	// Original AI generation mode continues below...
 	const description = (data as GenerationData).description;
-	const dialect = (data as GenerationData).dialect || 'egyptian-arabic'; // Default to Egyptian
+	const dialect = (data as GenerationData).dialect || 'darija';
 	const storyType = (data as GenerationData).storyType || 'story'; // 'story' or 'conversation'
 	const sentenceCount = (data as GenerationData).sentenceCount || 25; // Default to 25 sentences
 	const learningTopics = (data as GenerationData).learningTopics || []; // Array of selected learning topics
@@ -425,35 +487,17 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 			examples: [], // No pre-built examples for Fusha yet
 			commonWords: [] // No specific word list for Fusha yet
 		},
-		'levantine': {
-			name: 'LEVANTINE ARABIC',
-			description: 'Please use Levantine Arabic dialect as spoken in Syria, Lebanon, Palestine, and Jordan. Use natural conversational Levantine expressions.',
-			examples: [], // No pre-built examples for Levantine yet
-			commonWords: [] // No specific word list for Levantine yet
-		},
 		'darija': {
 			name: 'MOROCCAN DARIJA',
 			description: 'Please use Moroccan Darija dialect as spoken in Morocco. Use natural conversational Moroccan Arabic expressions and vocabulary.',
 			examples: [], // No pre-built examples for Darija yet
 			commonWords: [] // No specific word list for Darija yet
 		},
-		'iraqi': {
-			name: 'IRAQI ARABIC',
-			description: 'Please use Iraqi Arabic dialect as spoken in Iraq. Use natural conversational Iraqi expressions and vocabulary.',
-			examples: [], // No pre-built examples for Iraqi yet
-			commonWords: [] // No specific word list for Iraqi yet
-		},
-		'khaleeji': {
-			name: 'KHALEEJI ARABIC',
-			description: 'Please use Khaleeji Arabic dialect as spoken in the Gulf states (UAE, Saudi Arabia, Kuwait, Bahrain, Qatar, Oman). Use natural conversational Gulf Arabic expressions and vocabulary.',
-			examples: [], // No pre-built examples for Khaleeji yet
-			commonWords: [] // No specific word list for Khaleeji yet
-		}
 	} as const;
 
 	type DialectKey = keyof typeof dialectConfigs;
 	const validDialect = dialect as DialectKey;
-	const config = dialectConfigs[validDialect] || dialectConfigs['egyptian-arabic'];
+	const config = dialectConfigs[validDialect] || dialectConfigs['darija'];
 	
 	const contentType = storyType === 'conversation' ? 'conversation' : 'story';
 	
@@ -651,32 +695,58 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 			
 			console.log('ChatGPT generated story with', parsedStory.sentences.length, 'sentences');
 
-			// NEW: Improve Arabic sentences with darjia model
+			// NEW: Improve Arabic sentences with darjia model and update transliterations
 			for (let i = 0; i < parsedStory.sentences.length; i++) {
 				const originalArabic = parsedStory.sentences[i].arabic.text;
 				const improvedArabic = await improveArabicWithDarjiaModel(originalArabic);
         console.log({ originalArabic, improvedArabic });
+				
+				// Update the Arabic text
 				parsedStory.sentences[i].arabic.text = improvedArabic;
+				
+				// Update the transliteration to match the improved Arabic
+				const updatedTransliteration = await updateTransliterationWithChatGPT(improvedArabic, openai);
+				console.log({ 
+					originalTransliteration: parsedStory.sentences[i].transliteration.text,
+					updatedTransliteration 
+				});
+				parsedStory.sentences[i].transliteration.text = updatedTransliteration;
 			}
 
-			console.log('Improved Arabic sentences with darjia model');
+			console.log('Improved Arabic sentences with darjia model and updated transliterations');
 			
-			const finalStory = JSON.stringify(parsedStory);
-
-			console.log({ story: finalStory });
-			await db
-				.insertInto('generated_story')
-				.values({
+			console.log('✅ Darija story generated, uploading to storage...');
+			
+			// Upload story JSON to Supabase Storage
+			const storageResult = await uploadStoryToStorage(storyId, parsedStory);
+			
+			if (!storageResult.success) {
+				console.error('Storage upload failed:', storageResult.error);
+				throw new Error(`Failed to upload story to storage: ${storageResult.error}`);
+			}
+			
+			console.log('✅ Darija story uploaded to storage, saving to database...');
+			
+			// Save story metadata with storage file key
+			const { data: savedStory, error: insertError } = await supabase
+				.from('generated_story')
+				.insert({
 					id: storyId,
 					user_id: userId || '',
 					title: generatedTitle, // Use generated title
 					description: description,
 					difficulty: option,
-					story_body: finalStory, // Use improved story
+					story_body: storageResult.fileKey!, // Store file key instead of JSON
 					dialect: dialect, // Add the dialect from the request
-					created_at: new Date().getTime()
+					created_at: new Date().toISOString()
 				})
-				.executeTakeFirst();
+				.select()
+				.single();
+
+			if (insertError) {
+				console.error('Database insert error:', insertError);
+				throw insertError;
+			}
 
 			// Generate audio for the story in the background
 			try {
