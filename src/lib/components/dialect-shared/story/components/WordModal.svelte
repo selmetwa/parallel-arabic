@@ -53,7 +53,18 @@
     }
 
     const jsonBlob = chatgptres.message.message.content;
-    const _activeWordObj = JSON.parse(jsonBlob);
+    let _activeWordObj;
+    try {
+      _activeWordObj = JSON.parse(jsonBlob);
+    } catch (error) {
+      console.error('Error parsing word object JSON:', error);
+      error = 'Failed to parse word data';
+      isLoading = false;
+      setTimeout(() => {
+        error = '';
+      }, 3000);
+      return;
+    }
   
 		const res = await fetch('/api/save-word', {
 			method: 'POST',

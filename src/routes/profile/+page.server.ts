@@ -1,40 +1,37 @@
-import { auth } from '$lib/server/lucia';
-import { fail, redirect } from '@sveltejs/kit';
-import type { PageServerLoad, Actions } from './$types';
-import { db } from '$lib/server/db';
-import { getUserHasActiveSubscription } from '$lib/helpers/get-user-has-active-subscription.js'
+import { redirect } from '@sveltejs/kit';
+import type { Actions } from './$types';
+import { supabase } from '$lib/supabaseClient';
+import { getUserHasActiveSubscription } from '$lib/helpers/get-user-has-active-subscription.js';
+import { getStoriesByUser } from '$lib/helpers/story-helpers';
 
-export const load: PageServerLoad = async ({ locals }) => {
-	const session = await locals.auth.validate();
+export const load = async ({ locals, parent }) => {
+	const { session, user } = await parent();
 
-  if (!session) {
+  if (!session || !user) {
     throw redirect(302, '/login');
   }
 
-  const userId = session && session.user.userId || null;
-  const user = await db.selectFrom('user').selectAll().where('id', '=', userId).executeTakeFirst();
+  const userId = user.id;
 
-  // Fetch user's generated stories across all dialects
-  const userGeneratedStories = await db
-    .selectFrom('generated_story')
-    .selectAll()
-    .where('user_id', '=', userId || '')
-    .orderBy('created_at', 'desc')
-    .execute();
+  // Fetch user's generated stories with full content from storage
+  const storiesResult = await getStoriesByUser(userId || '');
+  
+  let userGeneratedStories = [];
+  if (!storiesResult.success) {
+    console.error('Error fetching user stories:', storiesResult.error);
+  } else {
+    userGeneratedStories = storiesResult.stories || [];
+  }
 
 	return {
-		user,
     hasActiveSubscription: await getUserHasActiveSubscription(userId ?? ""),
     userGeneratedStories
 	};
 };
 
 export const actions: Actions = {
-	logout: async ({ locals }) => {
-		const session = await locals.auth.validate();
-		if (!session) return fail(401);
-		await auth.invalidateSession(session.sessionId); // invalidate session
-		locals.auth.setSession(null); // remove cookie
-		throw redirect(302, '/login'); // redirect to login page
+	logout: async () => {
+		// Redirect to the main logout endpoint for consistency
+		throw redirect(302, '/auth/logout');
 	}
 };

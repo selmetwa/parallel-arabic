@@ -1,4 +1,4 @@
-import { db } from '$lib/server/db';
+import { supabase } from '$lib/supabaseClient';
 import { BLESSED_EMAILS } from '$lib/constants/blessed-emails';
 
 export const getUserHasActiveSubscription = async (userId: string | null) => {
@@ -8,11 +8,15 @@ export const getUserHasActiveSubscription = async (userId: string | null) => {
   }
 
   // Only fetch the fields we need instead of selectAll()
-  const user = await db
-    .selectFrom('user')
-    .select(['is_subscriber', 'subscription_end_date', 'email'])
-    .where('id', '=', userId)
-    .executeTakeFirst();
+  const { data: user, error } = await supabase
+    .from('user')
+    .select('is_subscriber, subscription_end_date, email')
+    .eq('id', userId)
+    .single();
+
+  if (error && error.code !== 'PGRST116') {
+    console.error('Error fetching user subscription:', error);
+  }
 
   if (!user) {
     return false;
@@ -30,7 +34,7 @@ export const getUserHasActiveSubscription = async (userId: string | null) => {
 
   // Check subscription end date last (requires date math)
   if (user.subscription_end_date) {
-    const futureDate = new Date(user.subscription_end_date * 1000);
+    const futureDate = new Date(user.subscription_end_date);
     const today = new Date();
     if (today < futureDate) {
       return true;

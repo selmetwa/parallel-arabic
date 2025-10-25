@@ -1,67 +1,46 @@
-import { auth } from '$lib/server/lucia';
-import { fail, redirect } from '@sveltejs/kit';
-import { SqliteError } from 'better-sqlite3';
-import { isValidEmail }  from '$lib/server/email';
+import { redirect } from '@sveltejs/kit'
+import type { Actions } from './$types'
+import { syncSupabaseUserWithDB } from '$lib/helpers/supabase-auth-helpers'
 
-import type { PageServerLoad, Actions } from './$types';
+export const load = async ({ locals: { safeGetSession } }) => {
+  const { session } = await safeGetSession()
 
-export const load: PageServerLoad = async ({ locals }) => {
-	const session = await locals.auth.validate();
-	if (session) {
-		throw redirect(302, '/');
-	}
-	return {};
-};
+  // If already logged in, redirect to home
+  if (session) {
+    redirect(303, '/')
+  }
+
+  return {}
+}
 
 export const actions: Actions = {
-	default: async ({ request, locals }) => {
-		const formData = await request.formData();
-		const email = formData.get('email');
-		const password = formData.get('password');
+  signup: async ({ request, locals: { supabase } }) => {
+    const formData = await request.formData()
+    const email = formData.get('email') as string
+    const password = formData.get('password') as string
 
-		// basic check
-		if (!isValidEmail(email)) {
-			return fail(400, {
-				message: 'Invalid email'
-			});
-		}
-		if (typeof password !== 'string' || password.length < 6 || password.length > 255) {
-			return fail(400, {
-				message: 'Invalid password'
-			});
-		}
-		try {
-			const user = await auth.createUser({
-				key: {
-					providerId: 'email', // auth method
-					providerUserId: email.toLowerCase(), // unique id when using "email" auth method
-					password // hashed by Lucia
-				},
-				attributes: {
-					email: email.toLowerCase(),
-					email_verified: Number(false),
-          is_subscriber: 0,
-				}
-			});
-			const session = await auth.createSession({
-				userId: user.userId,
-				attributes: {}
-			});
-			locals.auth.setSession(session); // set session cookie
-		} catch (e) {
-			// check for unique constraint error in user table
-			if (e instanceof SqliteError && e.code === 'SQLITE_CONSTRAINT_UNIQUE') {
-				return fail(400, {
-					message: 'Account already exists'
-				});
-			}
-			return fail(500, {
-				message: 'An unknown error occurred'
-			});
-		}
-		// redirect to
-		// make sure you don't throw inside a try/catch block!
-    throw redirect(302, '/');
-		// throw redirect(302, '/email-verification');
-	}
-};
+    const { data, error } = await supabase.auth.signUp({ email, password })
+    console.log('data', data)
+    if (error) {
+      return {
+        error: error.message
+      }
+    }
+
+    // If user was created, sync with our database
+    if (data.user) {
+      try {
+        await syncSupabaseUserWithDB(data.user, supabase)
+        console.log('User synced to database:', data.user.email)
+      } catch (syncError) {
+        console.error('Failed to sync user to database:', syncError)
+        // Note: We don't return an error here because the auth was successful
+        // The user sync can be retried on login
+      }
+    }
+    
+    return {
+      message: 'Check your email for the confirmation link!'
+    }
+  }
+}

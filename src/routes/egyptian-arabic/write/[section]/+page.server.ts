@@ -11,7 +11,11 @@ interface ApiWordResponse {
 	audioUrl?: string;
 }
 
-export const load: PageServerLoad = async ({ params }) => {
+export const load: PageServerLoad = async ({ params, parent }) => {
+
+  const { isSubscribed } = await parent();
+
+
 	// Handle special case: most_common uses local data
 	if (params.section === 'most_common') {
 		const _words = commonWords.map(
@@ -45,6 +49,7 @@ export const load: PageServerLoad = async ({ params }) => {
 
 	return {
 		words: transformedWords.slice(1, transformedWords.length - 1),
-		section
+		section,
+    isSubscribed
 	};
 };

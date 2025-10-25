@@ -1,19 +1,23 @@
-import { db } from '$lib/server/db';
+import { supabase } from '$lib/supabaseClient';
+import { getStoriesByDialect } from '$lib/helpers/story-helpers';
 
 export const load = async ({ parent }) => {
   // Get subscription status from layout (no DB query for auth needed!)
   const { isSubscribed } = await parent();
   
-  // Only fetch generated stories from DB
-  const user_generated_stories = await db
-    .selectFrom('generated_story')
-    .selectAll()
-    .where('dialect', '=', 'egyptian-arabic')
-    .orderBy('created_at', 'desc')
-    .execute();
+  // Fetch generated stories with full content from storage
+  const storiesResult = await getStoriesByDialect('egyptian-arabic');
+  
+  let user_generated_stories = [];
+  if (!storiesResult.success) {
+    console.error('Error fetching egyptian-arabic stories:', storiesResult.error);
+  } else {
+    user_generated_stories = storiesResult.stories || [];
+  }
 
+  console.log('user_generated_stories count:', user_generated_stories.length)
   return {
     hasActiveSubscription: isSubscribed,  // Use from layout!
-    user_generated_stories
+    user_generated_stories: user_generated_stories || []
   }
 };

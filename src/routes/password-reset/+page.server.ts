@@ -3,7 +3,7 @@ import { auth } from "$lib/server/lucia";
 import { fail } from "@sveltejs/kit";
 import { generatePasswordResetToken } from "$lib/server/token";
 import { isValidEmail, sendPasswordResetLink } from "$lib/server/email";
-import { db } from "$lib/server/db";
+import { supabase } from "$lib/supabaseClient";
 import type { Actions } from "./$types";
 
 export const actions: Actions = {
@@ -17,16 +17,25 @@ export const actions: Actions = {
 			});
 		}
 		try {
-			const storedUser = await db
-				.selectFrom("user")
-				.selectAll()
-				.where("email", "=", email.toLowerCase())
-				.executeTakeFirst();
+			const { data: storedUser, error } = await supabase
+				.from("user")
+				.select("*")
+				.eq("email", email.toLowerCase())
+				.single();
+
+			if (error && error.code !== 'PGRST116') {
+				console.error('Error fetching user for password reset:', error);
+				return fail(500, {
+					message: "An unknown error occurred"
+				});
+			}
+
 			if (!storedUser) {
 				return fail(400, {
 					message: "User does not exist"
 				});
 			}
+
 			const user = auth.transformDatabaseUser(storedUser);
 			const token = await generatePasswordResetToken(user.userId);
 			await sendPasswordResetLink(token, email);

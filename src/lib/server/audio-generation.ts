@@ -1,9 +1,9 @@
 import { ElevenLabsClient } from 'elevenlabs';
 import { env } from '$env/dynamic/private';
 import { getVoiceConfig } from '$lib/utils/voice-config';
-import { db } from './db';
-import fs from 'fs';
-import path from 'path';
+import { uploadAudioToStorage, getAudioUrl } from '$lib/helpers/storage-helpers';
+import { downloadStoryFromStorage } from '$lib/helpers/storage-helpers';
+import { supabase } from '$lib/supabaseClient';
 
 const ELEVENLABS_API_KEY = env.ELEVENLABS_API_KEY;
 
@@ -27,27 +27,32 @@ interface ParsedStory {
 	sentences: StorySentence[];
 }
 
-// Helper function to get the base data directory
-function getDataDirectory(): string {
-  return '/data';
-  // return 'data' // for local development
-}
+// No longer need local directory helper - using Supabase storage
 
 export async function generateStoryAudio(storyId: string, dialect: string): Promise<{ success: boolean; audioPath?: string; fileName?: string; playbackRate?: number; error?: string }> {
 	try {
-		// Fetch the story from the database
-		const story = await db
-			.selectFrom('generated_story')
-			.selectAll()
-			.where('id', '=', storyId)
-			.executeTakeFirst();
+		// Fetch the story from the database (metadata)
+		const { data: story, error: storyError } = await supabase
+			.from('generated_story')
+			.select('*')
+			.eq('id', storyId)
+			.single();
 
-		if (!story) {
+		if (storyError || !story) {
+			console.error('Story fetch error:', storyError);
 			return { success: false, error: 'Story not found' };
 		}
 
-		// Parse the story body
-		const parsedStory: ParsedStory = JSON.parse(story.story_body);
+		// Download the story content from storage
+		const storyContentResult = await downloadStoryFromStorage(story.story_body);
+		
+		if (!storyContentResult.success || !storyContentResult.data) {
+			console.error('Failed to download story from storage:', storyContentResult.error);
+			return { success: false, error: 'Failed to load story content' };
+		}
+
+		// Parse the story content
+		const parsedStory: ParsedStory = storyContentResult.data as ParsedStory;
 		
 		if (!parsedStory.sentences || !Array.isArray(parsedStory.sentences)) {
 			return { success: false, error: 'Invalid story format' };
@@ -88,29 +93,35 @@ export async function generateStoryAudio(storyId: string, dialect: string): Prom
 
 		const audioBuffer = Buffer.concat(chunks);
 
-		// Create directory structure in the data volume: /data/audio/[dialect]/
+		// Upload audio to Supabase storage
 		const dialectDir = dialect || 'egyptian-arabic';
-		const dataDir = getDataDirectory();
-		const audioDir = path.join(dataDir, 'audio', dialectDir);
+		const audioUploadResult = await uploadAudioToStorage(storyId, dialectDir, audioBuffer);
 		
-		// Ensure the directory exists
-		if (!fs.existsSync(audioDir)) {
-			fs.mkdirSync(audioDir, { recursive: true });
+		if (!audioUploadResult.success) {
+			console.error('Failed to upload audio to storage:', audioUploadResult.error);
+			return { success: false, error: `Failed to save audio: ${audioUploadResult.error}` };
 		}
 
-		// Use only storyId as filename
-		const fileName = `${storyId}.mp3`;
-		const filePath = path.join(audioDir, fileName);
-		fs.writeFileSync(filePath, new Uint8Array(audioBuffer));
+		console.log('✅ Audio uploaded successfully:', audioUploadResult.fileKey);
 
-		// For serving the file, we need to create a route that can serve from the data directory
-		// Return a path that our audio serving endpoint can handle
-		const audioPath = `/api/audio/${dialectDir}/${fileName}`;
+		// Update the story record with the audio file key
+		const { error: updateError } = await supabase
+			.from('generated_story')
+			.update({ audio_file_key: audioUploadResult.fileKey })
+			.eq('id', storyId);
 
+		if (updateError) {
+			console.error('Failed to update story with audio file key:', updateError);
+			// Don't fail the entire operation - audio is uploaded successfully
+		}
+
+		// Get a signed URL for the uploaded audio file
+		const audioUrlResult = await getAudioUrl(audioUploadResult.fileKey!);
+		
 		return {
 			success: true,
-			audioPath: audioPath,
-			fileName: fileName,
+			audioPath: audioUrlResult.success ? audioUrlResult.url! : audioUploadResult.publicUrl!, // Use signed URL if available, fallback to public
+			fileName: audioUploadResult.fileKey!,
 		};
 
 	} catch (err) {

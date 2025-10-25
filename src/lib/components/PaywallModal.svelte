@@ -18,7 +18,7 @@
     <ul class="mt-3 flex flex-col gap-4 text-text-300">
       <li class="flex items-start gap-2">
         <Checkmark />
-        <span><strong>Multiple Arabic dialects:</strong> Egyptian, Levantine, Moroccan & Fusha</span>
+        <span><strong>Multiple Arabic dialects:</strong> Egyptian, Moroccan & Fusha</span>
       </li>
       <li class="flex items-start gap-2">
         <Checkmark />

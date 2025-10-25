@@ -1,16 +1,27 @@
 import type { PageServerLoad } from "./$types";
 import { getUserHasActiveSubscription } from "$lib/helpers/get-user-has-active-subscription";
-import { db } from '$lib/server/db';
+import { supabase } from '$lib/supabaseClient';
 
 const API_URL = 'https://egyptian-arabic-vocab-selmetwa.koyeb.app';
 
 export const load: PageServerLoad = async ({ locals }) => {
   const session = await locals.auth.validate();
-  const userId = session && session.user.userId || null;
+  const userId = session && session.user?.id || null;
 
   const response = await fetch(`${API_URL}/vocab/verbs`);
 	const json = await response.json();
-  const tensesViewed = await db.selectFrom('user').select('verb_conjugation_tenses_viewed').where('id', '=', userId ?? '').executeTakeFirst();
+  
+  const { data: tensesViewedData, error } = await supabase
+    .from('user')
+    .select('verb_conjugation_tenses_viewed')
+    .eq('id', userId ?? '')
+    .single();
+
+  if (error && error.code !== 'PGRST116') {
+    console.error('Error fetching user tenses viewed:', error);
+  }
+
+  const tensesViewed = tensesViewedData;
 
   const hasActiveSubscription = await getUserHasActiveSubscription(userId ?? "");
 
