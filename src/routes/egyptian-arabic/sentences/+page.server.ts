@@ -1,13 +1,23 @@
 import type { PageServerLoad } from "./$types";
-import { db } from '$lib/server/db';
+import { supabase } from '$lib/supabaseClient';
 
-export const load: PageServerLoad = async ({ locals }) => {
-  const session = await locals.auth.validate();
-  const userId = session && session.user.userId || null;
+export const load: PageServerLoad = async ({ locals, parent }) => {
+  const { session, isSubscribed } = await parent();
 
-  const sentencesViewed = await db.selectFrom('user').select('sentences_viewed').where('id', '=', userId ?? '').executeTakeFirst();
+  const userId = session && session.user?.id || null;
+
+  const { data: userData, error } = await supabase
+    .from('user')
+    .select('sentences_viewed')
+    .eq('id', userId ?? '')
+    .single();
+
+  if (error && error.code !== 'PGRST116') {
+    console.error('Error fetching user sentences:', error);
+  }
 
   return {
-    sentencesViewed: sentencesViewed?.sentences_viewed ?? 0,
+    sentencesViewed: userData?.sentences_viewed ?? 0,
+    isSubscribed
   };
 };

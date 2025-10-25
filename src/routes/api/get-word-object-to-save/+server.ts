@@ -8,7 +8,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 
   const session = await locals.auth.validate();
 
-  if (!session) {
+  if (!session?.sessionId) {
     return error(401, { message: 'You must have an account do that' });
   }
 

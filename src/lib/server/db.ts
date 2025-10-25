@@ -33,8 +33,9 @@ type GeneratedStoryTable = {
   title: string;
   description: string;
   difficulty: string;
-  story_body: string; // SQLite stores JSON as strings
+  story_body: string; // File key for JSON object in 'generated_story' bucket
   dialect: string;
+  audio_file_key?: string; // File key for audio in 'generated_story_audio' bucket
   created_at: ColumnType<bigint, number>;
 }
 
@@ -47,7 +48,7 @@ type Video = {
   thumbnail_url: string;
   dialect: string;
   created_at: ColumnType<bigint, number>;
-  video_body: string; // SQLite stores JSON as strings
+  video_body: string; // File key for JSON object in 'video' bucket
 }
 
 type UserTable = {
@@ -55,14 +56,16 @@ type UserTable = {
 	email: string;
 	email_verified: number;
   is_subscriber: boolean;
-  subscriber_id: string;
-  subscription_end_date: ColumnType<bigint, number>;
-  sentences_viewed: number;
-  verb_conjugation_tenses_viewed: number;
+  subscriber_id?: string;
+  subscription_end_date?: ColumnType<bigint, number>;
+  sentences_viewed?: number;
+  verb_conjugation_tenses_viewed?: number;
   google_id?: string;
 	name?: string;
 	picture?: string;
-	auth_provider: string;
+	auth_provider?: string;
+  supabase_auth_id?: string;
+  created_at?: ColumnType<bigint, number>;
 };
 
 type SessionTable = {

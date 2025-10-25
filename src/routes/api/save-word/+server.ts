@@ -1,40 +1,47 @@
 import { v4 as uuidv4 } from 'uuid';
-import { error, json } from '@sveltejs/kit';
+import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
-import { db } from '../../../lib/server/db';
+import { supabase } from '$lib/supabaseClient';
 
 export const POST: RequestHandler = async ({ request, locals }) => {
   const data = await request.json();
-	const session = await locals.auth.validate();
+	const { sessionId, user } = await locals?.auth?.validate() || {};
 
-  if (!session) {
-    return error(401, { message: 'You must have an account do that' });
+  if (!sessionId) {
+    return json({ message: 'You must have an account do that' });
   }
 
-  const userId = session?.user.userId;
+  console.log({
+    sessionId,
+    data,
+    user
+  })
+  const userId = user.id;
   const wordId = uuidv4();
 
-  const wordExists = await db
-    .selectFrom('saved_word')
-    .selectAll()
-    .where('arabic_word', '=', data.activeWordObj.arabic)
-    .where('user_id', '=', userId || '')
-    .executeTakeFirst();
+  const { data: wordExists, error } = await supabase
+  .from('saved_word')
+  .select('*')
+  .eq('arabic_word', data.activeWordObj.arabic)
+  .eq('user_id', userId || '');
 
-  if (wordExists) {
+  if (wordExists?.[0]?.id) {
     return json({ message: 'You have already saved this' });
   }
 
   try {
-    await db.insertInto('saved_word')
-    .values({
+    const { data: insertData, error: insertError } = await supabase.from('saved_word').insert([{
       id: wordId,
-      user_id: userId || '',
-      arabic_word: data.activeWordObj.arabic || '',
-      english_word: data.activeWordObj.english || '',
-      transliterated_word: data.activeWordObj.transliterated || '',
+      user_id: userId ?? '',
+      arabic_word: data.activeWordObj.arabic ?? '',
+      english_word: data.activeWordObj.english ?? '',
+      transliterated_word: data.activeWordObj.transliterated ?? '',
       created_at: new Date().getTime()
-    }).executeTakeFirst();
+    }]).select();
+
+    if (insertError) {
+      return json({ message: 'Something went wrong' });
+    }
 
     return json({ message: 'Saved' });
   } catch (e) {

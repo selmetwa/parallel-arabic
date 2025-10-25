@@ -1,6 +1,6 @@
 import { redirect } from '@sveltejs/kit';
 import type { PageServerLoad, Actions } from './$types';
-import { db } from '$lib/server/db';
+import { supabase } from '$lib/supabaseClient';
 import { ADMIN_ID } from '$env/static/private';
 import nodemailer from 'nodemailer';
 import { env } from '$env/dynamic/private';
@@ -22,23 +22,28 @@ export const load: PageServerLoad = async ({ locals }) => {
     throw redirect(302, '/login');
   }
 
-  const userId = session && session.user.userId || null;
+  const userId = session && session.user?.id || null;
   
   if (ADMIN_ID !== userId) {
     throw redirect(302, '/')
   }
 
   // Get all users with basic info
-  const users = await db
-    .selectFrom('user')
-    .select(['id', 'email', 'is_subscriber'])
-    .execute();
+  const { data: users, error } = await supabase
+    .from('user')
+    .select('id, email, is_subscriber');
 
-  const userCount = users.length;
-  const subscriberCount = users.filter(u => u.is_subscriber).length;
+  if (error) {
+    console.error('Error fetching users:', error);
+    throw redirect(302, '/');
+  }
+
+  const userList = users || [];
+  const userCount = userList.length;
+  const subscriberCount = userList.filter(u => u.is_subscriber).length;
 
 	return {
-    users,
+    users: userList,
     userCount,
     subscriberCount
 	};
@@ -48,11 +53,11 @@ export const actions: Actions = {
   sendEmail: async ({ request, locals }) => {
     const session = await locals.auth.validate();
 
-    if (!session) {
+    if (!session?.sessionId) {
       throw redirect(302, '/login');
     }
 
-    const userId = session && session.user.userId || null;
+    const userId = session && session.user.id || null;
     
     if (ADMIN_ID !== userId) {
       throw redirect(302, '/')
@@ -75,18 +80,24 @@ export const actions: Actions = {
       let recipients: string[] = [];
 
       if (recipientType === 'all') {
-        const users = await db
-          .selectFrom('user')
-          .select(['email'])
-          .execute();
-        recipients = users.map(u => u.email);
+        const { data: users, error } = await supabase
+          .from('user')
+          .select('email');
+        if (error) {
+          console.error('Error fetching users for email:', error);
+          throw new Error('Failed to fetch users');
+        }
+        recipients = (users || []).map(u => u.email);
       } else if (recipientType === 'subscribers') {
-        const subscribers = await db
-          .selectFrom('user')
-          .select(['email'])
-          .where('is_subscriber', '=', true)
-          .execute();
-        recipients = subscribers.map(u => u.email);
+        const { data: subscribers, error } = await supabase
+          .from('user')
+          .select('email')
+          .eq('is_subscriber', true);
+        if (error) {
+          console.error('Error fetching subscribers for email:', error);
+          throw new Error('Failed to fetch subscribers');
+        }
+        recipients = (subscribers || []).map(u => u.email);
       } else if (recipientType === 'custom') {
         if (!customEmail) {
           return {

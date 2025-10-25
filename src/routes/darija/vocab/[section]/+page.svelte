@@ -2,7 +2,7 @@
 	import Button from '$lib/components/Button.svelte';
   import VocabQuizBlock from '$lib/components/dialect-shared/vocab/VocabQuizBlock.svelte';
 	import { darijaSections } from '$lib/constants/darija-sections';
-	import { PUBLIC_PRICE_ID } from '$env/static/public';
+	import { PUBLIC_TEST_PRICE_ID } from '$env/static/public';
   import { updateUrl } from '$lib/helpers/update-url';
 	interface Props {
 		data: any;
@@ -75,7 +75,7 @@
 			<h1 class="text-2xl font-bold text-text-300">You are not subscribed.</h1>
 			<p class="mt-2 text-xl text-text-200">To continue practicing, please subscribe.</p>
 			<form method="POST" action="/?/subscribe" class="mx-auto mt-4 w-fit">
-				<input type="hidden" name="price_id" value={PUBLIC_PRICE_ID} />
+				<input type="hidden" name="price_id" value={PUBLIC_TEST_PRICE_ID} />
 				<Button type="submit">Subscribe</Button>
 			</form>
 		</div>

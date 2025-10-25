@@ -1,18 +1,20 @@
 import type { PageServerLoad } from "./$types";
-import { db } from '$lib/server/db';
+import { supabase } from '$lib/supabaseClient';
 
 const API_URL = 'https://egyptian-arabic-vocab-selmetwa.koyeb.app';
 
 export const load: PageServerLoad = async ({ parent }) => {
   // Get session and subscription status from layout (no DB query for auth needed!)
   const { session, isSubscribed } = await parent();
-  const userId = session?.user.userId || null;
+  const userId = session?.user.id || null;
 
   // Fetch verb data and user-specific data in parallel
-  const [response, tensesViewed] = await Promise.all([
+  const [response, tensesViewedResult] = await Promise.all([
     fetch(`${API_URL}/vocab/verbs`),
-    userId ? db.selectFrom('user').select('verb_conjugation_tenses_viewed').where('id', '=', userId).executeTakeFirst() : null
+    userId ? supabase.from('user').select('verb_conjugation_tenses_viewed').eq('id', userId).single() : null
   ]);
+
+  const tensesViewed = tensesViewedResult?.data || null;
   
 	const json = await response.json();
 

@@ -1,6 +1,8 @@
 <script>
   import Button from "$lib/components/Button.svelte";
   import Checkmark from "$lib/components/Checkmark.svelte";
+  import { supabase } from '$lib/supabaseClient';
+  
   /**
    * @typedef {Object} Props
    * @property {any} [objectToSave]
@@ -11,41 +13,64 @@
   let { objectToSave = {}, type = 'Word' } = $props();
 
   let response = $state('');
-  
   let isLoading = $state(false);
-  
   let error = $state('');
-  
 
   const saveWord = async () => {
     isLoading = true;
-		const res = await fetch('/api/save-word', {
-			method: 'POST',
-			headers: { accept: 'application/json' },
-			body: JSON.stringify({
-				activeWordObj: objectToSave
-			})
-		});
+    error = '';
+    
+    try {
+      // Get current Supabase session for auth token
+      const { data: { session } } = await supabase.auth.getSession();
+      
+      if (!session) {
+        error = 'You must be logged in to save words';
+        isLoading = false;
+        return;
+      }
 
-    isLoading = false;
-		const data = await res.json();
+      const res = await fetch('/api/save-word-supabase', {
+        method: 'POST',
+        headers: { 
+          'accept': 'application/json',
+          'content-type': 'application/json',
+          'authorization': `Bearer ${session.access_token}`
+        },
+        body: JSON.stringify({
+          activeWordObj: objectToSave
+        })
+      });
 
-    if ([
-      'You have already saved this', 
-      'You must have an account do that',
-      'Something went wrong'
-    ].includes(data.message)) {
-      error = data.message;
+      const data = await res.json();
+
+      if (!res.ok) {
+        error = data.message || 'Something went wrong';
+        response = '';
+      } else if ([
+        'You have already saved this', 
+        'You must have an account to do that',
+        'Something went wrong'
+      ].includes(data.message)) {
+        error = data.message;
+        response = '';
+      } else {
+        error = '';
+        response = data.message;
+      }
+    } catch (err) {
+      error = 'Network error occurred';
       response = '';
-    } else {
-      error = '';
-      response = data.message;
     }
-		setTimeout(() => {
+    
+    isLoading = false;
+    
+    // Clear messages after 3 seconds
+    setTimeout(() => {
       error = '';
-			response = '';
-		}, 3000);
-	};
+      response = '';
+    }, 3000);
+  };
 </script>
 
 {#if error}

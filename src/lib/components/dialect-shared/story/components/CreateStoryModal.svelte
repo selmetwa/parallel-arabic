@@ -5,6 +5,8 @@
   import { goto } from '$app/navigation';
   import AlphabetCycle from '$lib/components/AlphabetCycle.svelte';
   import { type Dialect } from '$lib/types/index';
+  import { toast } from 'svelte-sonner';
+  import { showStoryCreationToast, showStorySuccessToast, showTranscriptionToast, showTranscriptionSuccessToast, showErrorToast } from '$lib/helpers/toast-helpers';
 
   interface Props {
     dialect: Dialect;
@@ -43,6 +45,15 @@
 
 	function closeModal() {
 		isOpen = false;
+		// Reset form state when modal is closed (but don't interrupt ongoing generation)
+		if (!isLoading) {
+			description = '';
+			vocabularyWords = '';
+			selectedLearningTopics = [];
+			audioFile = null;
+			audioFileError = '';
+			fileError = '';
+		}
 	}
 
   function handleFileChange(event: Event) {
@@ -57,6 +68,10 @@
       if (file.size > maxSize) {
         fileError = 'File size must be less than 150KB';
         vocabularyFile = null;
+        toast.error('File too large', {
+          description: 'Vocabulary file must be less than 150KB. Please reduce file size and try again.',
+          duration: Infinity
+        });
         return;
       }
       
@@ -67,10 +82,18 @@
       if (!allowedTypes.includes(file.type) && !['txt', 'csv'].includes(fileExtension || '')) {
         fileError = 'Only TXT and CSV files are allowed';
         vocabularyFile = null;
+        toast.error('Invalid file type', {
+          description: 'Only TXT and CSV files are allowed for vocabulary lists. Please select a different file.',
+          duration: Infinity
+        });
         return;
       }
       
       vocabularyFile = file;
+      toast.success('Vocabulary file loaded', {
+        description: `Successfully loaded ${file.name} (${Math.round(file.size / 1024)}KB)`,
+        duration: 3000 // Auto-dismiss success notifications after 3 seconds
+      });
     } else {
       vocabularyFile = null;
     }
@@ -113,6 +136,10 @@
     if (file.size > maxSize) {
       audioFileError = 'Audio file size must be less than 25MB';
       audioFile = null;
+      toast.error('Audio file too large', {
+        description: 'Audio file must be less than 25MB. Please compress your audio file or select a different one.',
+        duration: Infinity
+      });
       return;
     }
     
@@ -125,10 +152,20 @@
     if (!allowedTypes.includes(file.type)) {
       audioFileError = 'Unsupported file type. Supported formats: MP3, WAV, FLAC, M4A, MP4, WebM, OGG';
       audioFile = null;
+      toast.error('Unsupported audio format', {
+        description: 'Please select an audio file in one of these formats: MP3, WAV, FLAC, M4A, MP4, WebM, or OGG.',
+        duration: Infinity
+      });
       return;
     }
     
     audioFile = file;
+    
+    // Show success toast
+    toast.success('Audio file loaded', {
+      description: `Successfully loaded ${file.name} (${formatFileSize(file.size)})`,
+      duration: 3000 // Auto-dismiss success notifications after 3 seconds
+    });
     
     // Auto-generate title from filename if not using custom title
     if (!useCustomTitle) {
@@ -180,22 +217,62 @@
 
 	async function handleSubmit(event: any) {
 		event.preventDefault();
-		isLoading = true;
-		isTranscribing = creationMode === 'upload';
     
+    // Validate inputs first
+    if (creationMode === 'upload' && !audioFile) {
+      audioFileError = 'Please select an audio file';
+      // Show error toast for immediate feedback
+      toast.error('Please select an audio file', {
+        description: 'You need to upload an Arabic audio file to transcribe',
+        duration: Infinity
+      });
+      return;
+    }
+    
+    // Prepare data for background generation
+    const generationData = {
+      creationMode,
+      audioFile,
+      useCustomTitle,
+      customTitle,
+      option,
+      description,
+      dialect,
+      storyType,
+      sentenceCount,
+      selectedLearningTopics,
+      vocabularyWords,
+      vocabularyInputMode,
+      vocabularyFile
+    };
+    
+    // Show loading state and keep modal open
+    isLoading = true;
+    isTranscribing = creationMode === 'upload';
+    
+    // Show initial processing toast
+    const processingToastId = creationMode === 'upload' 
+      ? showTranscriptionToast()
+      : showStoryCreationToast(dialect, storyType);
+    
+    // Continue generation (modal stays open)
+    generateStoryInBackground(generationData, processingToastId);
+	}
+
+  async function generateStoryInBackground(data: any, processingToastId: any) {
     try {
-      if (creationMode === 'upload') {
+      if (data.creationMode === 'upload') {
         // Audio upload mode - transcribe and create story from audio
-        if (!audioFile) {
-          audioFileError = 'Please select an audio file';
-          isLoading = false;
-          isTranscribing = false;
+        if (!data.audioFile) {
+          showErrorToast(processingToastId, 'Please select an audio file');
           return;
         }
 
         // Step 1: Transcribe the audio file
+        toast.loading('Transcribing audio...', { id: processingToastId });
+        
         const formData = new FormData();
-        formData.append('audio', audioFile);
+        formData.append('audio', data.audioFile);
 
         const transcribeResponse = await fetch('/api/audio-transcribe', {
           method: 'POST',
@@ -209,24 +286,26 @@
         }
 
         // Step 2: Create story from transcription
+        toast.loading('Creating story from transcription...', { id: processingToastId });
+        
         const storyFormData = new FormData();
         storyFormData.append('mode', 'transcription');
         storyFormData.append('transcript', transcriptionData.transcript);
         storyFormData.append('sentences', JSON.stringify(transcriptionData.sentences || []));
-        storyFormData.append('dialect', dialect);
-        storyFormData.append('customTitle', useCustomTitle ? customTitle : '');
-        storyFormData.append('originalFileName', audioFile.name);
-        storyFormData.append('audioFile', audioFile); // Send the actual audio file
+        storyFormData.append('dialect', data.dialect);
+        storyFormData.append('customTitle', data.useCustomTitle ? data.customTitle : '');
+        storyFormData.append('originalFileName', data.audioFile.name);
+        storyFormData.append('audioFile', data.audioFile); // Send the actual audio file
 
         // const API_URL = dialect === 'egyptian-arabic' ? '/api/create-story-egyptian' : '/api/create-story';
         let API_URL = '/api/create-story';
-        if (dialect === 'egyptian-arabic') {
+        if (data.dialect === 'egyptian-arabic') {
           API_URL = '/api/create-story-egyptian';
-        } else if (dialect === 'darija') {
+        } else if (data.dialect === 'darija') {
           API_URL = '/api/create-story-darija';
         }
 
-        console.log({ API_URL, dialect });
+        console.log({ API_URL, dialect: data.dialect });
         const createStoryResponse = await fetch(API_URL, {
           method: 'POST',
           body: storyFormData // Send as FormData instead of JSON
@@ -238,59 +317,74 @@
           throw new Error(storyResult.error || 'Failed to create story from transcription');
         }
 
+        // Success! Show success toast with link (no auto-redirect)
+        console.log('✅ [CreateStoryModal] Transcription success, showing toast:', storyResult.storyId);
+        showTranscriptionSuccessToast(processingToastId, storyResult.storyId);
+        
+        // Reset loading states and close modal so user can see the success
         isLoading = false;
         isTranscribing = false;
-        await goto('/' + dialect + '/generated-stories/' + storyResult.storyId);
-        
+        closeModal();        
       } else {
         // Original AI generation mode
-        let finalVocabularyWords = vocabularyWords;
+        let finalVocabularyWords = data.vocabularyWords;
         
         // If file mode is selected and a file is uploaded, process it
-        if (vocabularyInputMode === 'file' && vocabularyFile) {
+        if (data.vocabularyInputMode === 'file' && data.vocabularyFile) {
           try {
-            finalVocabularyWords = await processVocabularyFile(vocabularyFile);
+            finalVocabularyWords = await processVocabularyFile(data.vocabularyFile);
           } catch (error) {
-            fileError = 'Failed to process file';
-            isLoading = false;
+            const errorMsg = error instanceof Error ? error.message : 'Failed to process vocabulary file';
+            showErrorToast(processingToastId, 'Failed to process vocabulary file', errorMsg);
             return;
           }
         }
         
         let API_URL = '/api/create-story';
-        if (dialect === 'egyptian-arabic') {
+        if (data.dialect === 'egyptian-arabic') {
           API_URL = '/api/create-story-egyptian';
-        } else if (dialect === 'darija') {
+        } else if (data.dialect === 'darija') {
           API_URL = '/api/create-story-darija';
         } 
-          const res = await fetch(API_URL, {
+        
+        const res = await fetch(API_URL, {
           method: 'POST',
           headers: { accept: 'application/json' },
           body: JSON.stringify({
-            option,
-            description,
-            dialect: dialect, // Specify dialect for story generation
-            storyType: storyType,
-            sentenceCount: sentenceCount,
-            learningTopics: selectedLearningTopics, // Send selected learning topics
+            option: data.option,
+            description: data.description,
+            dialect: data.dialect, // Specify dialect for story generation
+            storyType: data.storyType,
+            sentenceCount: data.sentenceCount,
+            learningTopics: data.selectedLearningTopics, // Send selected learning topics
             vocabularyWords: finalVocabularyWords // Send vocabulary words to feature
           })
         });
 
         const chatgptres = await res.json();
 
+        if (!res.ok) {
+          throw new Error(chatgptres.error || 'Failed to create story');
+        }
+
+        // Success! Show success toast with link (no auto-redirect)
+        console.log('✅ [CreateStoryModal] Story generation success, showing toast:', chatgptres.storyId);
+        showStorySuccessToast(processingToastId, data.storyType, chatgptres.storyId);
+        
+        // Reset loading states and close modal so user can see the success
         isLoading = false;
-        await goto('/' + dialect + '/generated-stories/' + chatgptres.storyId);
+        closeModal();
       }
     } catch (error) {
       console.error('Error creating story:', error);
-      if (creationMode === 'upload') {
-        audioFileError = error instanceof Error ? error.message : 'Failed to create story from audio';
-        isTranscribing = false;
-      } else {
-        fileError = error instanceof Error ? error.message : 'Failed to create story';
-      }
+      
+      // Show error toast
+      const errorMsg = error instanceof Error ? error.message : 'An unexpected error occurred';
+      showErrorToast(processingToastId, 'Failed to create content', errorMsg);
+      
+      // Reset loading states
       isLoading = false;
+      isTranscribing = false;
     }
 	}
 
@@ -369,10 +463,13 @@
 				</p>
         <p class="text-xl text-text-200">
           {#if dialect === 'darija' || dialect === 'egyptian-arabic'}
-            This usually takes up to 30 seconds.
+            This usually takes up to 2 minutes.
           {:else}
             This usually takes a few seconds.
           {/if}
+        </p>
+        <p class="text-lg text-text-200 bg-tile-400 p-3 rounded border border-tile-500">
+          💡 <strong>Tip:</strong> You can close this modal and continue using the app. We'll notify you with a toast when your {storyType} is ready!
         </p>
       </div>
 			</div>

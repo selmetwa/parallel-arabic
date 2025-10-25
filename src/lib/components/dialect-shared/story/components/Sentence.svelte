@@ -23,6 +23,7 @@
 		setActiveWord: (word: any) => void;
 		type?: string;
 		classname?: string;
+    innerClassname?: string;
 		index: any;
 		mode: any;
 		isGenerated?: boolean;
@@ -35,6 +36,7 @@
 		setActiveWord,
 		type = '',
 		classname = '',
+		innerClassname = '',
 		index,
 		mode,
 		isGenerated,
@@ -115,7 +117,10 @@
 		selectedWords = originalWords.slice(start, end + 1);
 	}
 
-	function clearSelection() {
+	function clearSelection(event?: Event) {
+		// Prevent the click from bubbling up to parent elements (e.g., video timeline)
+		event?.stopPropagation();
+		
 		selectedWords = [];
 		selectionStartIndex = -1;
 		selectionEndIndex = -1;
@@ -214,6 +219,9 @@
 	}
 
 	async function assignActiveWord(event: Event) {
+		// Prevent the click from bubbling up to parent elements (e.g., video timeline)
+		event.stopPropagation();
+		
 		const word = (event.target as HTMLButtonElement).value.replace(/,/g, '');
 		const cleanWord = removeArabicComma(word);
 		const cacheKey = `${cleanWord}-${type}-${dialect}`;
@@ -264,7 +272,10 @@
 	}
 
 	// Function to define multiple selected words
-	async function defineSelectedWords() {
+	async function defineSelectedWords(event?: Event) {
+		// Prevent the click from bubbling up to parent elements (e.g., video timeline)
+		event?.stopPropagation();
+		
 		if (selectedWords.length === 0) return;
 
 		const wordsArray = selectedWords;
@@ -421,7 +432,7 @@
 	{/if}
 	
 	<div 
-		class="mt-1 flex flex-wrap gap-1 text-text-300 select-none"
+		class={cn("mt-1 flex flex-wrap gap-1 text-text-300 select-none", innerClassname)}
 		onmouseup={handleWordMouseUp}
 		role="application"
 		aria-label="Word selection area for definitions"

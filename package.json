@@ -14,7 +14,9 @@
     "format": "prettier --write .",
     "test:integration": "playwright test",
     "test:unit": "vitest",
-    "db:up": "vite-node ./src/lib/server/migrate.ts"
+    "db:up": "vite-node ./src/lib/server/migrate.ts",
+    "migrate:auth": "node migrate-users-to-auth.js",
+    "migrate:auth:test": "node migrate-users-to-auth.js --test"
   },
   "devDependencies": {
     "@flydotio/dockerfile": "^0.5.4",
@@ -55,9 +57,12 @@
     "@lucia-auth/adapter-sqlite": "^2.0.1",
     "@lucia-auth/oauth": "^3.5.3",
     "@stripe/stripe-js": "^4.1.0",
+    "@supabase/ssr": "^0.7.0",
+    "@supabase/supabase-js": "^2.58.0",
     "@types/fluent-ffmpeg": "^2.1.27",
     "better-sqlite3": "^9.2.2",
     "classnames": "^2.5.1",
+    "dotenv": "^16.3.1",
     "easy-speech": "^2.3.1",
     "elevenlabs": "^0.18.2",
     "export-to-csv": "^1.2.4",
@@ -72,6 +77,7 @@
     "playht": "^0.9.8",
     "resize-observer-polyfill": "^1.5.1",
     "stripe": "^16.6.0",
+    "svelte-sonner": "^1.0.5",
     "ts-node": "^10.9.2",
     "uuid": "^9.0.1",
     "youtube-transcript": "^1.2.1",

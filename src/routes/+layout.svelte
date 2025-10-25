@@ -4,21 +4,39 @@
 	import DialectNavigation from '$lib/components/DialectNavigation.svelte';
 	import Drawer from '$lib/components/Drawer.svelte';
 	import { onMount } from 'svelte';
-	import { hue, theme } from '$lib/store/store';
+	import { theme } from '$lib/store/store';
 	import Svg from '$lib/components/Svg.svelte';
 	import Button from '$lib/components/Button.svelte';
   import Footer from "$lib/components/Footer.svelte";
   import RadioButton from '$lib/components/RadioButton.svelte';
   import ChatWidget from '$lib/components/ChatWidget.svelte';
-
+  import { Toaster } from 'svelte-sonner';
+  
+  import { invalidate } from '$app/navigation'
+  
   let { data, children } = $props();
+  $inspect(data)
 	let isOpen = $state(false);
 
 	let root: HTMLElement | null;
 	let doc: Element | null;
+	
+	// Get session and supabase client from data
+	let { session, supabase } = $derived(data)
+	
 	onMount(() => {
 		root = document.documentElement;
 		doc = document.firstElementChild || null;
+		
+		// Listen to auth changes and invalidate layout when session changes
+		const { data: authData } = supabase.auth.onAuthStateChange((event: string, newSession: any) => {
+			if (newSession?.expires_at !== session?.expires_at) {
+        console.log('session changed')
+				invalidate('supabase:auth')
+			}
+		})
+		
+		return () => authData.subscription.unsubscribe()
 	});
 
 	function handleCloseDrawer() {
@@ -103,7 +121,7 @@
         userEmail={data?.user?.email ?? ""}
       />
 			<DialectNavigation />
-        <slot></slot>
+        {@render children()}
       <Footer />
     </main>
 		<aside class="flex flex-1 justify-center overflow-hidden py-12">
@@ -118,6 +136,15 @@
 
   <!-- Chat Widget - only shows on desktop -->
   <ChatWidget />
+
+  <!-- Toast notifications -->
+  <Toaster 
+    position="bottom-right" 
+    richColors={true}
+    closeButton={true}
+    visibleToasts={5}
+    expand={false}
+  />
 
   <style>
     main {

@@ -4,7 +4,7 @@ import { redirect } from '@sveltejs/kit';
 
 // Types and variables
 import type { PageServerLoad } from './$types';
-import { db } from '$lib/server/db';
+import { supabase } from '$lib/supabaseClient';
 
 /**
  * Subscribed load
@@ -17,15 +17,17 @@ import { db } from '$lib/server/db';
  */
 export const load: PageServerLoad = async ({ url, locals }) => {
 	const authSession = await locals.auth.validate();
-	const userId = authSession && authSession.user.userId;
+	const userId = authSession && authSession.user.id;
 
 	const stripeSessionId = url.searchParams.get('session_id');
 	if (stripeSessionId == null) {
+    console.log('❌ No stripe session ID found');
 		redirect(302, '/pricing/error');
 	}
 
 	const stripeSession = await StripeService.getSession(stripeSessionId);
 	if (stripeSession?.payment_status != 'paid') {
+    console.log('❌ Stripe session payment status is not paid');
 		redirect(302, '/pricing/error');
 	}
 
@@ -35,7 +37,16 @@ export const load: PageServerLoad = async ({ url, locals }) => {
 	 * charge. This rollback has not been implemented.
 	 *
 	 */
-	const user = await db.selectFrom('user').selectAll().where('id', '=', userId).executeTakeFirst();
+	const { data: user, error: userError } = await supabase
+		.from('user')
+		.select('*')
+		.eq('id', userId)
+		.single();
+
+	if (userError && userError.code !== 'PGRST116') {
+		console.error('❌ Error fetching user:', userError);
+		redirect(302, '/pricing/error');
+	}
 
 	const subscriberId = String(stripeSession.subscription ?? '');
 	
@@ -71,17 +82,22 @@ export const load: PageServerLoad = async ({ url, locals }) => {
 	if (user) {
 		console.log('Updating user as subscriber');
 
-		const result = await db
-			.updateTable('user')
-			.set({
-				is_subscriber: 1 as unknown as boolean,
+		const { data: updatedUser, error: updateError } = await supabase
+			.from('user')
+			.update({
+				is_subscriber: true,
 				subscriber_id: subscriberId,
-				subscription_end_date: subscriptionEndDate as unknown as bigint
+				subscription_end_date: subscriptionEndDate  // Keep as Unix timestamp (bigint)
 			})
-			.where('id', '=', userId)
-			.executeTakeFirst();
+			.eq('id', userId)
+			.select();
 
-    console.log('Result:', result);
+		if (updateError) {
+			console.error('❌ Error updating user subscription:', updateError);
+			redirect(302, '/pricing/error');
+		}
+
+    console.log('Result:', updatedUser);
 
 		return {
 			session: authSession,
@@ -91,5 +107,6 @@ export const load: PageServerLoad = async ({ url, locals }) => {
 		};
 	}
 
+	console.log('❌ Redirecting to error page');
 	redirect(302, '/pricing/error');
 };
