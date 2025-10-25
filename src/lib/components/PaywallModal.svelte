@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { PUBLIC_TEST_PRICE_ID } from '$env/static/public'
+  import { PUBLIC_PRICE_ID } from '$env/static/public'
   import Modal from '$lib/components/Modal.svelte';
 	import Checkmark from '$lib/components/Checkmark.svelte';
   import Button from '$lib/components/Button.svelte';
@@ -59,7 +59,7 @@
     </ul>
     <form method="POST" action="/?/subscribe" class="mt-4">
       <!-- Modify this value using your own Stripe price_id -->
-      <input type="hidden" name="price_id" value={PUBLIC_TEST_PRICE_ID} />
+      <input type="hidden" name="price_id" value={PUBLIC_PRICE_ID} />
       <Button type="submit">
         Subscribe
       </Button>
