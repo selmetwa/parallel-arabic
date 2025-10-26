@@ -40,13 +40,9 @@ export const actions = {
    * user via cookies in hooks.server.ts.
    */
   subscribe: async ({ request, cookies, locals: { safeGetSession } }) => {
-    console.log('🚀 Subscribe action called');
     const { session } = await safeGetSession();
     
-    console.log('👤 Session:', session?.user ? 'User authenticated' : 'No user session');
-    
     if (!session?.user) {
-      console.log('❌ Redirecting to login - no session');
       throw redirect(302, '/login');
     }
   

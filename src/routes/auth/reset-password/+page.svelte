@@ -15,52 +15,35 @@
   // Get the session from the layout data instead of trying to fetch it again
   $effect(() => {
     if ($page.data?.session) {
-      console.log('✅ [reset-password] Session received from layout:', { 
-        userId: $page.data.session?.user?.id,
-        email: $page.data.session?.user?.email 
-      })
       session = $page.data.session
     }
   })
 
   onMount(() => {
-    console.log('🔍 [reset-password] onMount started')
-    console.log('🔍 [reset-password] Page data:', { 
-      hasPageData: !!$page.data,
-      hasSession: !!$page.data?.session,
-      hasUser: !!$page.data?.user
-    })
-    
     // Check if we already have session from page data
     if ($page.data?.session) {
-      console.log('✅ [reset-password] Session found in page data')
       session = $page.data.session
     } else {
-      console.log('❌ [reset-password] No session in page data, redirecting to login')
       goto('/login?error=Invalid reset link or session expired')
     }
 
     // Listen for auth changes using the supabase client from layout
     const supabaseClient = $page.data?.supabase || supabase
     const { data: { subscription } } = supabaseClient.auth.onAuthStateChange((_event, _session) => {
-      console.log('🔄 [reset-password] Auth state changed:', { event: _event, hasSession: !!_session })
       session = _session
       
       if (!_session && _event !== 'SIGNED_OUT') {
-        console.log('❌ [reset-password] Session lost, redirecting to login')
         goto('/login?error=Session expired')
       }
     })
 
     return () => {
-      console.log('🧹 [reset-password] Cleaning up auth subscription')
       subscription.unsubscribe()
     }
   })
 
   async function handlePasswordReset(event: Event) {
     event.preventDefault()
-    console.log('🔍 [reset-password] Starting password reset...')
     loading = true
     error = ''
     message = ''
@@ -79,7 +62,6 @@
     }
 
     try {
-      console.log('🔍 [reset-password] Updating password with Supabase...')
       const supabaseClient = $page.data?.supabase || supabase
       const { error: updateError } = await supabaseClient.auth.updateUser({
         password: password
@@ -89,7 +71,6 @@
         console.error('❌ [reset-password] Password update error:', updateError)
         error = updateError.message
       } else {
-        console.log('✅ [reset-password] Password updated successfully!')
         message = 'Password updated successfully! Redirecting...'
         // Redirect after a short delay
         setTimeout(() => {
@@ -118,7 +99,6 @@
       </h1>
 
       {#if session}
-        {console.log('✅ [reset-password] Rendering form - session exists:', { userId: session?.user?.id, email: session?.user?.email })}
         <form onsubmit={handlePasswordReset} class="space-y-4">
           <div>
             <label for="password" class="block text-sm font-medium text-text-200 mb-2">
@@ -169,7 +149,6 @@
           </Button>
         </form>
       {:else}
-        {console.log('❌ [reset-password] No session - showing loading state')}
         <div class="text-center">
           <p class="text-text-200 mb-4">
             Loading reset session...
@@ -179,7 +158,7 @@
       {/if}
 
       <div class="mt-6 text-center">
-        <a href="/login-supabase" class="text-blue-500 hover:text-blue-600 underline">
+        <a href="/login" class="text-blue-500 hover:text-blue-600 underline">
           Back to Sign In
         </a>
       </div>

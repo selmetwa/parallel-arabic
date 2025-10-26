@@ -396,10 +396,8 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 			// Validate that the story can be parsed as JSON
 			const parsedStory = JSON.parse(story);
 			if (!parsedStory || !parsedStory.sentences) {
-				throw new Error('Invalid story structure');
-			}
-			
-      console.log('✅ Story generated, uploading to storage...');
+			throw new Error('Invalid story structure');
+		}
 			
 			// Upload story JSON to Supabase Storage
 			const storageResult = await uploadStoryToStorage(storyId, parsedStory);
@@ -408,8 +406,6 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 				console.error('Storage upload failed:', storageResult.error);
 				throw new Error(`Failed to upload story to storage: ${storageResult.error}`);
 			}
-			
-			console.log('✅ Story uploaded to storage, saving to database...');
 			
 			// Save story metadata with storage file key
 			const { data: savedStory, error: insertError } = await supabase
@@ -437,9 +433,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 				// Use direct function call instead of HTTP request to avoid routing issues on Fly.io
 				const audioResult = await generateStoryAudio(storyId, dialect);
 				
-				if (audioResult.success) {
-					console.log('Audio generated successfully:', audioResult.audioPath);
-				} else {
+			if (!audioResult.success) {
 					console.warn('Audio generation failed:', audioResult.error);
 				}
 			} catch (audioError) {
@@ -447,14 +441,12 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 				console.warn('Audio generation error (continuing):', audioError);
 			}
 
-			return json({ storyId: storyId });
-		} catch (e) {
-      console.log({ e });
-			console.error('Database or JSON parsing error:', e);
+		return json({ storyId: storyId });
+	} catch (e) {
+		console.error('Database or JSON parsing error:', e);
 			return error(500, { message: 'Something went wrong' });
 		}
 	} catch (e) {
-    console.log({ e });
 		return error(500, { message: 'Something went wrong' });
 	}
 };

@@ -20,7 +20,6 @@ export const actions: Actions = {
     const password = formData.get('password') as string
 
     const { data, error } = await supabase.auth.signUp({ email, password })
-    console.log('data', data)
     if (error) {
       return {
         error: error.message
@@ -31,7 +30,6 @@ export const actions: Actions = {
     if (data.user) {
       try {
         await syncSupabaseUserWithDB(data.user, supabase)
-        console.log('User synced to database:', data.user.email)
       } catch (syncError) {
         console.error('Failed to sync user to database:', syncError)
         // Note: We don't return an error here because the auth was successful
