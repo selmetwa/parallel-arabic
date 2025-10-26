@@ -1,5 +1,4 @@
 import { supabase } from '$lib/supabaseClient';
-import { BLESSED_EMAILS } from '$lib/constants/blessed-emails';
 
 export const getUserHasActiveSubscription = async (userId: string | null) => {
   // Fast path for no user
@@ -24,11 +23,6 @@ export const getUserHasActiveSubscription = async (userId: string | null) => {
 
   // Check is_subscriber first (fastest - simple boolean check)
   if (user.is_subscriber) {
-    return true;
-  }
-
-  // Check blessed emails (in-memory check)
-  if (BLESSED_EMAILS.includes(user.email || '')) {
     return true;
   }
 
