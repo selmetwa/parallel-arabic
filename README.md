@@ -1,17 +1,15 @@
-## Parallel Arabic - Comprehensive Arabic Language Learning Platform
-
-Parallel Arabic is a comprehensive language learning platform designed to help learners master multiple Arabic dialects and Modern Standard Arabic through interactive, AI-powered lessons and real-world practice.
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/2981aa69-92c2-4214-95e0-5db9b491e561" alt="pattern" width="300" />
+  <h2>Parallel Arabic is a comprehensive language learning platform designed to help learners master multiple Arabic dialects and Modern Standard Arabic through interactive, AI-powered lessons and real-world practice.</h2>
+</div>
 
 ## Supported Arabic Varieties
 
-The platform offers learning resources for six major Arabic varieties:
+The platform offers learning resources for three major Arabic varieties:
 
 - **Egyptian Arabic** - The most widely understood Arabic dialect, perfect for movies, music, and everyday conversation across the Arab world
 - **Modern Standard Arabic (Fusha)** - Formal Arabic used in news, literature, and official communications
-- **Levantine Arabic** - Dialect spoken in Syria, Lebanon, Palestine, and Jordan
 - **Moroccan Darija** - Moroccan Arabic dialect
-- **Iraqi Arabic** - Iraqi dialect with unique vocabulary and expressions
-- **Khaleeji Arabic** - Gulf Arabic dialect spoken in the Arabian Peninsula
 
 ## Core Features
 
@@ -104,17 +102,6 @@ Seamless integration with the popular Anki spaced repetition system:
 - Speech recognition and pronunciation scoring
 - Native speaker audio recordings
 - Audio playback controls and speed adjustment
-
-### Responsive Design
-- Mobile-friendly interface that works on all devices
-- Optimized for both desktop and mobile learning
-- Clean, intuitive user interface designed for language learners
-
-### Subscription and Payment
-- Freemium model with basic features available to all users
-- Premium subscription for advanced features and unlimited access
-- Secure payment processing through Stripe
-- Multiple pricing tiers to fit different learning needs
 
 #### Tools used
 - Sveltekit
