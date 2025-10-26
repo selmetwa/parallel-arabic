@@ -1,7 +1,5 @@
 // routes/password-reset/+page.server.ts
-import { auth } from "$lib/server/lucia";
 import { fail } from "@sveltejs/kit";
-import { generatePasswordResetToken } from "$lib/server/token";
 import { isValidEmail, sendPasswordResetLink } from "$lib/server/email";
 import { supabase } from "$lib/supabaseClient";
 import type { Actions } from "./$types";
@@ -36,8 +34,8 @@ export const actions: Actions = {
 				});
 			}
 
-			const user = auth.transformDatabaseUser(storedUser);
-			const token = await generatePasswordResetToken(user.userId);
+			// const user = auth.transformDatabaseUser(storedUser);
+			const token = '123456';
 			await sendPasswordResetLink(token, email);
 			return {
 				success: true
