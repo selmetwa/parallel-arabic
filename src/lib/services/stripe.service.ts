@@ -81,8 +81,8 @@ const subscribe = async (priceId: string): Promise<Stripe.Checkout.Session | und
 					}
 				],
 				mode: 'subscription',
-				return_url: `http://localhost:5173/pricing/subscribed?session_id={CHECKOUT_SESSION_ID}`,
-				// return_url: `${PUBLIC_DOMAIN}/pricing/subscribed?session_id={CHECKOUT_SESSION_ID}`
+				// return_url: `http://localhost:5173/pricing/subscribed?session_id={CHECKOUT_SESSION_ID}`,
+				return_url: `${PUBLIC_DOMAIN}/pricing/subscribed?session_id={CHECKOUT_SESSION_ID}`
 			});
 			console.log('✅ [stripe-service] Checkout session created successfully:', !!session.client_secret);
 			return session;
