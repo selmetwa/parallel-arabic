@@ -32,7 +32,5 @@ export const POST: RequestHandler = async ({ locals }) => {
     console.error('Error updating sentences:', updateError);
   }
   
-    console.log("sentences updated: ", {result});
-
     return json({ sentencesViewed: newSentencesViewed });
 }

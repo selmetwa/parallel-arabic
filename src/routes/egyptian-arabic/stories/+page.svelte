@@ -5,7 +5,6 @@
   import { BLOCKED_STORY_IDS } from '$lib/constants/stories/blocked';
 
   let { data } = $props();
-  console.log('data', data)
   let isModalOpen = $state(false);
 
   // Function to filter out incomplete sentences

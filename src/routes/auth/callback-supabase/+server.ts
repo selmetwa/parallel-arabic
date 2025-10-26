@@ -25,12 +25,9 @@ export const GET: RequestHandler = async ({ url }) => {
       }
 
       if (data.session && data.user) {
-        console.log('Successfully authenticated user:', data.user.email)
-        
         // Sync user data with your existing database
         try {
           await syncSupabaseUserWithDB(data.user, supabase)
-          console.log('User synced to database:', data.user.email)
         } catch (syncError) {
           console.error('Failed to sync user to database:', syncError)
           // Continue with login even if sync fails - can be retried later

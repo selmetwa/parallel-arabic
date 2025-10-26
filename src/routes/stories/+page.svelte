@@ -5,7 +5,6 @@
   import { BLOCKED_STORY_IDS } from '$lib/constants/stories/blocked';
 
   let { data } = $props();
-  console.log('stories data', data)
   let isModalOpen = $state(false);
   let selectedDialect = $state('egyptian-arabic');
 

@@ -122,8 +122,6 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 			})
 		});
 
-		console.log({ response });
-
 		if (!response.ok) {
 			const errorText = await response.text();
 			console.error('YouTube Transcript API error:', errorText);
@@ -139,9 +137,6 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		}
 
 		const data = await response.json();
-		console.log({ 
-      data 
-    });
 		// Extract transcript data
 		if (!data || !Array.isArray(data) || data.length === 0) {
 			return json({ error: 'No transcript data found' }, { status: 404 });
@@ -162,12 +157,6 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		return json({ error: 'No transcript tracks found for this video' }, { status: 404 });
 	}
 
-    console.log({ 
-      videoData, 
-      tracks: videoData.tracks,
-      transcript: videoData.tracks[0].transcript 
-    });
-
 	if (!TRANSCRIPT) {
 		return json({ error: 'Transcript not available for this video' }, { status: 404 });
 	}
@@ -178,18 +167,13 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 	const videoDbId = uuidv4();
 
 	// Format the transcript using ChatGPT
-	console.log('Formatting transcript with ChatGPT...');
 	const formattedVideo = await formatTranscriptWithChatGPT(TRANSCRIPT, openai);
 	
 	if (!formattedVideo || !formattedVideo.lines || !Array.isArray(formattedVideo.lines)) {
 		throw new Error('Invalid formatted video structure from ChatGPT');
 	}
 
-	console.log(`ChatGPT formatted transcript with ${formattedVideo.lines.length} lines`);
-
 	// Upload video content to Supabase Storage
-	console.log('✅ Video processed, uploading to storage...');
-	
 	const storageResult = await uploadVideoToStorage(videoDbId, formattedVideo);
 	
 	if (!storageResult.success) {
@@ -197,8 +181,6 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		throw new Error(`Failed to upload video to storage: ${storageResult.error}`);
 	}
 	
-	console.log('✅ Video uploaded to storage, saving metadata to database...');
-
 	// Save video metadata to database with storage file key
 	const { error: insertError } = await supabase
 		.from('video')
@@ -220,8 +202,6 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		console.error('Database insert error:', insertError);
 		throw insertError;
 	}
-
-	console.log(`Saved video to database with ID: ${videoDbId}`);
 
 	return json({
 		success: true,

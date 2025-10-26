@@ -3,8 +3,6 @@ import { PUBLIC_SUPABASE_PUBLISHABLE_KEY, PUBLIC_SUPABASE_URL } from '$env/stati
 import type { LayoutLoad } from './$types'
 
 export const load: LayoutLoad = async ({ data, depends, fetch }) => {
-  console.log('🔍 [+layout.ts] Starting client layout load...', { isBrowser: isBrowser() })
-  
   try {
     /**
      * Declare a dependency so the layout can be invalidated, for example, on
@@ -12,7 +10,6 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
      */
     depends('supabase:auth')
 
-    console.log('🔍 [+layout.ts] Creating Supabase client...')
     const supabase = isBrowser()
       ? createBrowserClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_PUBLISHABLE_KEY, {
           global: {
@@ -30,7 +27,6 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
           },
         })
 
-    console.log('🔍 [+layout.ts] Getting session...')
     /**
      * It's fine to use `getSession` here, because on the client, `getSession` is
      * safe, and on the server, it reads `session` from the `LayoutData`, which
@@ -40,15 +36,9 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
       data: { session },
     } = await supabase.auth.getSession()
 
-    console.log('🔍 [+layout.ts] Getting user...')
     const {
       data: { user },
     } = await supabase.auth.getUser()
-
-    console.log('🔍 [+layout.ts] Client layout load completed:', { 
-      hasSession: !!session, 
-      hasUser: !!user 
-    })
 
     return { session, supabase, user }
   } catch (error) {

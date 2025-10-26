@@ -31,7 +31,6 @@ export const POST: RequestHandler = async ({ locals: { supabase }, cookies }) =>
     console.error('Error during logout:', error)
   }
   
-  console.log('logout successful')
   // Always redirect to home, even if there were errors
   redirect(303, '/')
 }

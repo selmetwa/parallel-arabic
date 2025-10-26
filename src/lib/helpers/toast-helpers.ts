@@ -20,31 +20,20 @@ export function showSentenceGenerationToast(dialect: string) {
  * Toast helper for successful sentence generation
  */
 export function showSentenceSuccessToast(toastId: string | number, count: number, dialect: string) {
-  console.log('🔧 [toast-helpers] showSentenceSuccessToast called:', {
-    toastId,
-    count,
-    dialect
-  });
-  
-  console.log('🔧 [toast-helpers] Dismissing loading toast:', toastId);
   toast.dismiss(toastId);
 
   // Add small delay to avoid race condition
   setTimeout(() => {
-    console.log('🔧 [toast-helpers] Creating success toast after delay...');
-    const successToastId = toast.success(`Generated ${count} new sentences!`, {
+    toast.success(`Generated ${count} new sentences!`, {
       description: `${count} ${getDialectDisplayName(dialect)} sentences are ready to practice`,
       action: {
         label: 'Start Practicing',
         onClick: () => {
-          console.log('🔗 [toast-helpers] Navigating to sentences page');
           goto('/sentences');
         }
       },
       duration: Infinity // Requires manual dismissal
     });
-    
-    console.log('✅ [toast-helpers] Success toast created with ID:', successToastId);
   }, 100);
 }
 

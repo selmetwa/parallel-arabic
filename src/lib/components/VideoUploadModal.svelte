@@ -82,19 +82,9 @@
     error = '';
     
     // Show processing toast
-    console.log('🔄 [VideoUploadModal] Creating processing toast...');
     const toastResult = showVideoProcessingToast('YouTube');
-    console.log('🔍 [VideoUploadModal] Toast function returned:', toastResult, typeof toastResult);
     processingToastId = toastResult;
     toastIdBackup = toastResult; // Store backup copy
-    console.log('🔄 [VideoUploadModal] Processing toast created with ID:', processingToastId, typeof processingToastId);
-    console.log('🔄 [VideoUploadModal] Backup toast ID stored:', toastIdBackup);
-    
-    // Add a small delay to check if the state persists
-    setTimeout(() => {
-      console.log('⏰ [VideoUploadModal] After timeout, processingToastId is:', processingToastId);
-      console.log('⏰ [VideoUploadModal] After timeout, toastIdBackup is:', toastIdBackup);
-    }, 10);
     
     try {
       if (uploadMode === 'youtube') {
@@ -128,46 +118,22 @@
         });
 
         const result = await response.json();
-        
-        console.log('🎥 [VideoUploadModal] API response:', {
-          ok: response.ok,
-          status: response.status,
-          result
-        });
 
         if (!response.ok) {
           throw new Error(result.error || 'Failed to process YouTube video');
         }
-
-        console.log('🎉 [VideoUploadModal] About to show success toast:', {
-          processingToastId,
-          processingToastIdType: typeof processingToastId,
-          processingToastIdIsNull: processingToastId === null,
-          processingToastIdIsUndefined: processingToastId === undefined,
-          toastIdBackup,
-          toastIdBackupType: typeof toastIdBackup,
-          videoDbId: result.videoDbId,
-          title: result.title
-        });
 
         // Use backup if reactive state is null
         const validToastId = processingToastId || toastIdBackup;
 
         // Show success toast with navigation action
         if (validToastId) {
-          console.log('✅ [VideoUploadModal] Valid toast ID found, showing success toast with ID:', validToastId);
           showVideoProcessingSuccessToast(validToastId, result.videoDbId, result.title);
         } else {
-          console.log('❌ [VideoUploadModal] Both processingToastId and toastIdBackup are null/undefined, cannot show success toast');
           // Fallback: show a new success toast without dismissing the loading one
-          console.log('🔄 [VideoUploadModal] Creating fallback success toast');
           showVideoProcessingSuccessToast('fallback-success', result.videoDbId, result.title);
         }
         
-        console.log('✅ [VideoUploadModal] Success toast called, navigating to video...');
-
-        // Success - redirect to the video
-        // await goto(`/video/${result.videoDbId}`);
         closeModal();
       } 
     } catch (err) {
@@ -175,24 +141,14 @@
       const errorMsg = err instanceof Error ? err.message : 'An unexpected error occurred';
       error = errorMsg;
       
-      console.log('❌ [VideoUploadModal] About to show error toast:', {
-        processingToastId,
-        toastIdBackup,
-        errorMsg
-      });
-      
       // Use backup if reactive state is null
       const validToastId = processingToastId || toastIdBackup;
       
       // Show error toast
       if (validToastId) {
-        console.log('❌ [VideoUploadModal] Valid toast ID found for error, using ID:', validToastId);
         showVideoProcessingErrorToast(validToastId, errorMsg);
-      } else {
-        console.log('❌ [VideoUploadModal] No valid toast ID for error handling');
       }
     } finally {
-      console.log('🧹 [VideoUploadModal] Cleaning up - setting loading states to false');
       isLoading = false;
       isProcessing = false;
     }
