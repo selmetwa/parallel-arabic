@@ -31,8 +31,6 @@ export const POST: RequestHandler = async ({ request }) => {
 		});
 	}
 
-  console.log('Event:', event);
-
   async function updateSubscription(subscriptionId: string) {
     const { data: userToUpdate, error: fetchError } = await supabase
       .from('user')
@@ -46,8 +44,6 @@ export const POST: RequestHandler = async ({ request }) => {
     }
 
     if (userToUpdate) {
-      console.log('Updating user as subscriber');
-
       // Get the actual subscription from Stripe instead of hardcoding 30 days
       let subscriptionEndDate: number;
       
@@ -82,8 +78,6 @@ export const POST: RequestHandler = async ({ request }) => {
 
       if (updateError) {
         console.error('Error updating user subscription:', updateError);
-      } else {
-        console.log('User updated:', result);
       }
     }
   }
@@ -92,7 +86,6 @@ export const POST: RequestHandler = async ({ request }) => {
 	switch (event.type) {
 		case 'customer.subscription.updated':
       updateSubscription(event.data.object.id)
-			console.log('Subscription updated:', event.data.object);
 			break;
 		// Add other cases for different event types as needed
 		default:

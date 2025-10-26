@@ -85,10 +85,6 @@ const supabase: Handle = async ({ event, resolve }) => {
         return { session: null, user: null }
       }
 
-      console.log('✅ [hooks.server.ts] Successfully retrieved user:', { 
-        dbUserId: realUser.id,
-        dbUserEmail: realUser.email 
-      })
       return { session, user: realUser }
       
     } catch (error) {

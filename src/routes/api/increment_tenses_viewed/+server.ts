@@ -32,7 +32,5 @@ export const POST: RequestHandler = async ({ locals }) => {
     console.error('Error updating tenses:', updateError);
   }
   
-    console.log("tenses updated: ", {result});
-
     return json({ tensesViewed: newTensesViewed });
 }

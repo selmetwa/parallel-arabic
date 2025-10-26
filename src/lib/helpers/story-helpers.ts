@@ -42,10 +42,8 @@ export async function getStoryById(storyId: string): Promise<{ success: boolean;
       audio_url: audioUrl // Add audio URL if available
     };
 
-    console.log('✅ Story retrieved successfully:', storyId);
     return { success: true, story: fullStory };
   } catch (error) {
-    console.error('Error retrieving story:', error);
     return { success: false, error: (error as Error).message };
   }
 }
@@ -105,10 +103,8 @@ export async function getStoriesByUser(userId: string): Promise<{ success: boole
       })
     );
 
-    console.log(`✅ Retrieved ${storiesWithContent.length} stories for user ${userId}`);
     return { success: true, stories: storiesWithContent };
   } catch (error) {
-    console.error('Error retrieving user stories:', error);
     return { success: false, error: (error as Error).message };
   }
 }
@@ -171,10 +167,8 @@ export async function getAllStories(limit?: number): Promise<{ success: boolean;
       })
     );
 
-    console.log(`✅ Retrieved ${storiesWithContent.length} stories from all dialects`);
     return { success: true, stories: storiesWithContent };
   } catch (error) {
-    console.error('Error retrieving all stories:', error);
     return { success: false, error: (error as Error).message };
   }
 }
