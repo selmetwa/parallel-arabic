@@ -31,7 +31,6 @@
 		// Listen to auth changes and invalidate layout when session changes
 		const { data: authData } = supabase.auth.onAuthStateChange((event: string, newSession: any) => {
 			if (newSession?.expires_at !== session?.expires_at) {
-        console.log('session changed')
 				invalidate('supabase:auth')
 			}
 		})

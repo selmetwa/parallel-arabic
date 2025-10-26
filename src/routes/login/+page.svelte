@@ -18,8 +18,6 @@
     loading = true;
 
     const redirectUrl = `${window.location.origin}/auth/callback`;
-    console.log('🔗 Using redirect URL:', redirectUrl);
-    console.log('🌍 Window location origin:', window.location.origin);
 
     const { error: authError } = await supabase.auth.signInWithOAuth({
       provider: 'google',

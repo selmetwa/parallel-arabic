@@ -14,7 +14,6 @@
 	}
 
   const { data, dialect }: Props = $props();
-  console.log({ data })
 	let isOpen = $state(false);
 	let description = $state('');
 	let option = $state('a1');
@@ -305,7 +304,6 @@
           API_URL = '/api/create-story-darija';
         }
 
-        console.log({ API_URL, dialect: data.dialect });
         const createStoryResponse = await fetch(API_URL, {
           method: 'POST',
           body: storyFormData // Send as FormData instead of JSON
@@ -318,7 +316,6 @@
         }
 
         // Success! Show success toast with link (no auto-redirect)
-        console.log('✅ [CreateStoryModal] Transcription success, showing toast:', storyResult.storyId);
         showTranscriptionSuccessToast(processingToastId, storyResult.storyId);
         
         // Reset loading states and close modal so user can see the success
@@ -368,7 +365,6 @@
         }
 
         // Success! Show success toast with link (no auto-redirect)
-        console.log('✅ [CreateStoryModal] Story generation success, showing toast:', chatgptres.storyId);
         showStorySuccessToast(processingToastId, data.storyType, chatgptres.storyId);
         
         // Reset loading states and close modal so user can see the success

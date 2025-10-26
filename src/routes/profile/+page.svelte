@@ -4,7 +4,6 @@
   import type { PageData } from './$types';
 
   let { data }: { data: PageData } = $props();
-  console.log({ data });
 </script>
 
 <div class="px-4 sm:px-20 pt-4 sm:mt-12">

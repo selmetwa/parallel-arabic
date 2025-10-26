@@ -1,20 +1,11 @@
 import type { LayoutServerLoad } from './$types'
 
 export const load: LayoutServerLoad = async ({ locals: { safeGetSession }, cookies }) => {
-  console.log('🔍 [+layout.server.ts] Starting layout load...')
-  
   try {
-    console.log('🔍 [+layout.server.ts] Calling safeGetSession...')
     const { session, user } = await safeGetSession()
-    console.log('🔍 [+layout.server.ts] safeGetSession result:', { 
-      hasSession: !!session, 
-      hasUser: !!user,
-      userEmail: user?.email 
-    })
     
     // Fast path: no user = no subscription
     if (!user) {
-      console.log('🔍 [+layout.server.ts] No user found, returning early')
       return {
         session,
         user,
@@ -24,7 +15,6 @@ export const load: LayoutServerLoad = async ({ locals: { safeGetSession }, cooki
       };
     }
 
-    console.log('🔍 [+layout.server.ts] Computing subscription status...')
     // Compute subscription status inline (no extra DB query)
     const subscriptionEndDate = user?.subscription_end_date ? new Date(user.subscription_end_date) : null;
     const isSubscribed = !!(                         
@@ -32,7 +22,6 @@ export const load: LayoutServerLoad = async ({ locals: { safeGetSession }, cooki
       (subscriptionEndDate && new Date() < subscriptionEndDate) // Date check
     );
 
-    console.log('🔍 [+layout.server.ts] Layout load completed successfully:', { isSubscribed })
     return {
       session,
       user: user,  // Database user for backward compatibility

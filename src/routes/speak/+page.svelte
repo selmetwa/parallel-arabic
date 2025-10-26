@@ -236,16 +236,8 @@
       sentences = updatedSentences;
       localStorage.setItem(`speak_sentence_${selectedDialect}`, JSON.stringify(updatedSentences));
       
-      console.log('🎉 [speak] About to show success toast:', {
-        toastId,
-        newSentencesCount: newSentences.length,
-        selectedDialect
-      });
-      
       // Show success toast
       showSpeakSentenceSuccessToast(toastId, newSentences.length, selectedDialect);
-      
-      console.log('✅ [speak] Success toast should now be visible');
       
     } catch (error) {
       console.error('Error generating sentences:', error);

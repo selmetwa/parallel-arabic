@@ -11,11 +11,6 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     return json({ message: 'You must have an account do that' });
   }
 
-  console.log({
-    sessionId,
-    data,
-    user
-  })
   const userId = user.id;
   const wordId = uuidv4();
 

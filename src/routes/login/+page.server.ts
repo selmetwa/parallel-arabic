@@ -19,7 +19,6 @@ export const actions: Actions = {
     const password = formData.get('password') as string
 
     const { data, error } = await supabase.auth.signInWithPassword({ email, password })
-    console.log({ data, error })
 
     if (error) {
       return {
