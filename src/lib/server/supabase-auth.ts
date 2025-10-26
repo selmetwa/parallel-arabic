@@ -1,10 +1,11 @@
 import { createClient } from '@supabase/supabase-js';
-import { PUBLIC_VITE_PUBLIC_SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY } from '$env/static/private';
+import { SUPABASE_SERVICE_ROLE_KEY } from '$env/static/private';
+import { PUBLIC_SUPABASE_URL } from '$env/static/public';
 import type { User } from '@supabase/supabase-js';
 import { redirect } from '@sveltejs/kit';
 
 // Create server-side Supabase client with service role key for auth verification
-const supabaseServer = createClient(PUBLIC_VITE_PUBLIC_SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
+const supabaseServer = createClient(PUBLIC_SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
 
 /**
  * Verify Supabase auth token from request headers
