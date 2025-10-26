@@ -1,5 +1,3 @@
-import { supabase } from '$lib/supabaseClient';
-import { BLESSED_EMAILS } from '$lib/constants/blessed-emails';
 import type { LayoutServerLoad } from './$types'
 
 export const load: LayoutServerLoad = async ({ locals: { safeGetSession }, cookies }) => {
@@ -31,7 +29,6 @@ export const load: LayoutServerLoad = async ({ locals: { safeGetSession }, cooki
     const subscriptionEndDate = user?.subscription_end_date ? new Date(user.subscription_end_date) : null;
     const isSubscribed = !!(                         
       user?.is_subscriber ||                           // Primary check: boolean field
-      BLESSED_EMAILS.includes(user?.email || '') ||   // Blessed emails
       (subscriptionEndDate && new Date() < subscriptionEndDate) // Date check
     );
 

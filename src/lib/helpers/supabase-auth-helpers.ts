@@ -106,11 +106,9 @@ export async function getSupabaseUserSubscriptionStatus(supabaseUser: SupabaseUs
     }
 
     // Use your existing subscription logic
-    const BLESSED_EMAILS: string[] = [] // Import this from your constants if needed
     const subscriptionEndDate = user.subscription_end_date ? new Date(user.subscription_end_date) : null
     const isSubscribed = !!(                         
       user.is_subscriber ||                           
-      BLESSED_EMAILS.includes(user.email || '') ||   
       (subscriptionEndDate && new Date() < subscriptionEndDate)
     )
 
