@@ -22,20 +22,12 @@
     
     try {
       // Get current Supabase session for auth token
-      const { data: { session } } = await supabase.auth.getSession();
-      
-      if (!session) {
-        error = 'You must be logged in to save words';
-        isLoading = false;
-        return;
-      }
 
-      const res = await fetch('/api/save-word-supabase', {
+      const res = await fetch('/api/save-word', {
         method: 'POST',
         headers: { 
           'accept': 'application/json',
           'content-type': 'application/json',
-          'authorization': `Bearer ${session.access_token}`
         },
         body: JSON.stringify({
           activeWordObj: objectToSave
