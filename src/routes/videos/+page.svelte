@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import VideoUploadModal from '$lib/components/VideoUploadModal.svelte';
-	import Button from '$lib/components/Button.svelte';
+
 	let { data } = $props();
 
   // Get dialect badge color
@@ -10,26 +10,10 @@
       'egyptian-arabic': 'bg-blue-100 text-blue-800',
       'darija': 'bg-green-100 text-green-800',
       'fusha': 'bg-purple-100 text-purple-800',
-      'levantine': 'bg-pink-100 text-pink-800',
-      'iraqi': 'bg-yellow-100 text-yellow-800',
-      'khaleeji': 'bg-indigo-100 text-indigo-800'
     };
     return colors[dialect as keyof typeof colors] || 'bg-gray-100 text-gray-800';
   }
-
-  $inspect(data);
 </script>
-
-{#if !data.session}
-	<div class="mx-4 mb-6 mt-12 border border-tile-600 bg-tile-300 py-4 text-center sm:mx-36">
-		<h1 class="text-2xl font-bold text-text-300">
-			You must have an account to access this content.
-		</h1>
-		<div class="mx-auto mt-4 w-fit">
-			<Button type="button" onClick={() => goto('/signup')}>Create Account</Button>
-		</div>
-	</div>
-  {:else}
 
 <div class="px-3 mt-6 sm:px-8 max-w-7xl mx-auto">
   <div class="text-left mb-6">
@@ -95,8 +79,6 @@
     </div>
   {/if}
 </div>
-{/if}
-
 
 <style>
   .line-clamp-2 {

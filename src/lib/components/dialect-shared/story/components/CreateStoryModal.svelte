@@ -7,13 +7,24 @@
   import { type Dialect } from '$lib/types/index';
   import { toast } from 'svelte-sonner';
   import { showStoryCreationToast, showStorySuccessToast, showTranscriptionToast, showTranscriptionSuccessToast, showErrorToast } from '$lib/helpers/toast-helpers';
+import PaywallModal from '$lib/components/PaywallModal.svelte';
+let isPaywallModalOpen = $state(false);
 
+function openPaywallModal() {
+  isPaywallModalOpen = true;
+}
+
+function handleClosePaywallModal() {
+  isPaywallModalOpen = false;
+}
   interface Props {
     dialect: Dialect;
     data: any;
 	}
 
   const { data, dialect }: Props = $props();
+
+  $inspect(data);
 	let isOpen = $state(false);
 	let description = $state('');
 	let option = $state('a1');
@@ -406,11 +417,8 @@
 
   const dialectName: Record<Dialect, string> = {
     fusha: 'Modern Standard Arabic',
-    levantine: 'Levantine Arabic',
     darija: 'Moroccan Darija',
     'egyptian-arabic': 'Egyptian Arabic',
-    iraqi: 'Iraqi Arabic',
-    khaleeji: 'Khaleeji Arabic'
   }
 
   const learningTopicOptions = [
@@ -439,6 +447,8 @@
     { value: 'c2', label: 'C2 (Proficient)' }
   ];
 </script>
+
+<PaywallModal isOpen={isPaywallModalOpen} handleCloseModal={handleClosePaywallModal}></PaywallModal>
 
 <Modal {isOpen} handleCloseModal={closeModal} width="700px" height={isLoading ? "fit-content" : "90%"}>
 	<div class="p-4">
@@ -804,5 +814,9 @@
 </Modal>
 
 <div class="w-fit mt-2">
-  <Button onClick={openModal} type="button">Create your own {dialectName[dialect]} content</Button>
+  {#if !data.session || !data.isSubscribed || !data.hasActiveSubscription}
+    <Button onClick={openPaywallModal} type="button">Create your own {dialectName[dialect]} content</Button>
+  {:else}
+    <Button onClick={openModal} type="button">Create your own {dialectName[dialect]} content</Button>
+  {/if}
 </div> 
