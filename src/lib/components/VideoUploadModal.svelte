@@ -8,6 +8,7 @@
     showVideoProcessingSuccessToast, 
     showVideoProcessingErrorToast 
   } from '$lib/helpers/toast-helpers';
+  import PaywallModal from '$lib/components/PaywallModal.svelte';
 
   interface Props {
     data: any;
@@ -15,6 +16,8 @@
 
   const { data }: Props = $props();
   
+
+  let isPaywallModalOpen = $state(false);
 	let isOpen = $state(false);
 	let isLoading = $state(false);
   let isProcessing = $state(false);
@@ -34,6 +37,14 @@
   let error = $state('');
   let processingToastId: string | number | null = $state(null);
   let toastIdBackup: string | number | null = null; // Non-reactive backup
+
+  function openPaywallModal() {
+    isPaywallModalOpen = true;
+  }
+
+  function handleClosePaywallModal() {
+    isPaywallModalOpen = false;
+  }
 
 	function openModal() {
     if (!data.session) {
@@ -160,6 +171,8 @@
     { value: 'fusha', label: 'Modern Standard Arabic' }
   ];
 </script>
+
+<PaywallModal isOpen={isPaywallModalOpen} handleCloseModal={handleClosePaywallModal}></PaywallModal>
 
 <Modal {isOpen} handleCloseModal={closeModal} width="600px" height='fit-content'>
 	<div class="p-4">
@@ -312,5 +325,9 @@
 </Modal>
 
 <div class="w-fit">
-  <Button onClick={openModal} type="button">Upload Arabic Video</Button>
+  {#if !data.session || !data.isSubscribed || !data.hasActiveSubscription}
+    <Button onClick={openPaywallModal} type="button">Upload Arabic Video</Button>
+  {:else}
+    <Button onClick={openModal} type="button">Upload Arabic Video</Button>
+  {/if}
 </div>

@@ -351,17 +351,6 @@
 
 </script>
 
-{#if !data.session}
-	<div class="mx-4 mb-6 mt-12 border border-tile-600 bg-tile-300 py-4 text-center sm:mx-36">
-		<h1 class="text-2xl font-bold text-text-300">
-			You must have an account to access this content.
-		</h1>
-		<div class="mx-auto mt-4 w-fit">
-			<Button type="button" onClick={() => goto('/signup')}>Create Account</Button>
-		</div>
-	</div>
-{/if}
-
 {#if hasReachedLimit && data.session}
 	<div class="mx-4 mb-6 mt-12 border border-tile-600 bg-tile-300 py-4 text-center sm:mx-36">
 		<h1 class="text-2xl font-bold text-text-300">You have reached your limit of 5 sentences.</h1>
@@ -394,7 +383,7 @@
 	</div>
 {/if}
 
-{#if !isLoading && sentences.length === 0 && !hasReachedLimit && data.session}
+{#if !isLoading && sentences.length === 0 && !hasReachedLimit}
 	<section class="px-3 mt-6 sm:px-8 max-w-3xl mx-auto">
 		<div class="border-2 border-tile-600 bg-tile-400 shadow-lg">
 			<form class="flex flex-col gap-4 p-6" onsubmit={generateSentences}>
@@ -579,7 +568,7 @@
 			</div>
 		</div>
 	</div>
-{:else if sentences.length > 0 && index < sentences.length && !hasReachedLimit && data.session}
+{:else if sentences.length > 0 && index < sentences.length && !hasReachedLimit}
 	<header class="px-3 sm:px-8 max-w-6xl mx-auto border-b border-tile-600 bg-tile-400 py-4 shadow-lg">
 		<div class="flex w-full items-center justify-between">
 			<div class="w-max">
