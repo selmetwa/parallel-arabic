@@ -7,11 +7,6 @@ export const load: PageServerLoad = async ({ params, parent }) => {
 	const { session } = await parent();
 	const videoId = params.id;
 
-  console.log({ videoId });
-	if (!session) {
-		throw error(401, 'Authentication required');
-	}
-
 	try {
 		const { data: video, error: selectError } = await supabase
 			.from('video')
@@ -52,9 +47,6 @@ export const load: PageServerLoad = async ({ params, parent }) => {
 				'egyptian-arabic': 'Egyptian Arabic',
 				'darija': 'Moroccan Darija',
 				'fusha': 'Modern Standard Arabic',
-				'levantine': 'Levantine Arabic',
-				'iraqi': 'Iraqi Arabic',
-				'khaleeji': 'Khaleeji Arabic'
 			};
 			return dialectNames[dialect as keyof typeof dialectNames] || dialect;
 		}
