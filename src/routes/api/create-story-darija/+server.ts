@@ -1,7 +1,7 @@
 import { error, json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { env } from '$env/dynamic/private';
-import OpenAI from 'openai';
+import { GoogleGenAI } from '@google/genai';
 import { v4 as uuidv4 } from 'uuid';
 import { supabase } from '$lib/supabaseClient';
 import { stories } from '$lib/constants/stories/index';
@@ -10,6 +10,8 @@ import { getSpeakerNames } from '$lib/utils/voice-config';
 import { generateStoryAudio } from '../../../lib/server/audio-generation';
 import { saveUploadedAudioFile } from '$lib/utils/audio-utils';
 import { uploadStoryToStorage } from '$lib/helpers/storage-helpers';
+import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
+import { createStorySchema, createSentenceSegmentationSchema } from '$lib/utils/gemini-schemas';
 
 interface GenerationData {
 	description: string;
@@ -27,108 +29,12 @@ function isTranscriptionMode(data: any): boolean {
 	return data && data.mode === 'transcription';
 }
 
-// Function to improve Arabic text using the darija Arabic model
-async function improveArabicWithDarjiaModel(arabicText: string): Promise<string> {
-	try {
-		console.log('Improving Arabic with Darija model...');
-		
-    const prompt = `الرجاء ترجمة النص العربي التالي إلى الدارجة المغربية الأصيلة. احتفظ بنفس المعنى ولكن استعمل الكلمات والتعبيرات الشائعة فالدارجة.:${arabicText}`;;
 
-		// const prompt = `الرجاء ترجمة النص العربي التالي إلى الدارجة المغربية الأصيلة. احتفظ بنفس المعنى ولكن استعمل الكلمات والتعبيرات الشائعة فالدارجة.
-
-		const response = await fetch('https://selmetwa--nilechat-generator-api-generate.modal.run', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify({
-				prompt: prompt,
-				max_tokens: 2000
-			})
-		});
-
-		if (!response.ok) {
-			throw new Error(`darjia model request failed: ${response.status} ${response.statusText}`);
-		}
-
-		const result = await response.json();
-		console.log('darjia Arabic model response received');
-		
-		// Extract text from response
-		let improvedText = '';
-		if (typeof result === 'string') {
-			improvedText = result;
-		} else if (result.response) {
-			improvedText = result.response;
-		} else if (result.text) {
-			improvedText = result.text;
-		} else if (result.content) {
-			improvedText = result.content;
-		} else {
-			improvedText = JSON.stringify(result);
-		}
-
-		return improvedText.trim();
-	} catch (error) {
-		console.error('Failed to improve Arabic with darija model:', error);
-		// Return original text if improvement fails
-		return arabicText;
-	}
-}
-
-// Function to update transliteration using ChatGPT after Arabic text is improved
-async function updateTransliterationWithChatGPT(improvedArabicText: string, openai: OpenAI): Promise<string> {
-	try {
-		console.log('Updating transliteration for improved Arabic text...');
-		
-		const response = await openai.chat.completions.create({
-			model: 'gpt-4o',
-			messages: [
-				{
-					role: 'system',
-					content: `You are an expert in Moroccan Darija transliteration. Your task is to provide accurate transliterations of Moroccan Darija text using only English letters.
-
-IMPORTANT GUIDELINES:
-- Use ONLY English alphabet letters (a-z, A-Z)
-- No diacritics, special characters, or numbers
-- Follow natural pronunciation patterns for Moroccan Darija
-- Make it readable for English speakers learning Arabic
-- Ensure consistency in transliteration style
-- Use common transliteration conventions for Moroccan Arabic
-
-Return only the transliteration text, nothing else.`
-				},
-				{
-					role: 'user',
-					content: `Please provide an accurate transliteration of this Moroccan Darija text using only English letters:
-
-"${improvedArabicText}"`
-				}
-			],
-			temperature: 0.2, // Low temperature for consistency
-			max_tokens: 500
-		});
-
-		const transliteration = response.choices[0].message.content?.trim() || '';
-		console.log('ChatGPT transliteration update completed');
-		return transliteration;
-	} catch (error) {
-		console.error('Failed to update transliteration with ChatGPT:', error);
-		// Return a fallback message if update fails
-		return '[Transliteration update failed]';
-	}
-}
-
-async function aiSentenceSegmentation(arabicText: string, openai: OpenAI): Promise<string[]> {
+async function aiSentenceSegmentation(arabicText: string, ai: GoogleGenAI): Promise<string[]> {
 	try {
 		console.log('Starting AI-powered sentence segmentation...');
 		
-		const response = await openai.chat.completions.create({
-			model: 'gpt-4o',
-			messages: [
-				{
-					role: 'system',
-					content: `You are an expert Arabic linguist. Your task is to split Arabic transcripts into natural, well-formed sentences. 
+		const prompt = `You are an expert Arabic linguist. Your task is to split Arabic transcripts into natural, well-formed sentences. 
 
 IMPORTANT GUIDELINES:
 - Consider natural speech pauses and breathing points
@@ -139,25 +45,30 @@ IMPORTANT GUIDELINES:
 - Preserve the original meaning and context
 - Remove any incomplete fragments or filler words
 
-Return your response as a JSON object with a "sentences" array containing the segmented sentences.`
-				},
-				{
-					role: 'user',
-					content: `Please segment this Arabic transcript into natural sentences:
+Return your response as a JSON object with a "sentences" array containing the segmented sentences.
+
+Please segment this Arabic transcript into natural sentences:
 
 "${arabicText}"
 
-Format as: {"sentences": ["sentence1", "sentence2", ...]}`
-				}
-			],
-			response_format: { type: 'json_object' },
-			temperature: 0.2,
-			max_tokens: 3000
+Format as: {"sentences": ["sentence1", "sentence2", ...]}`;
+
+		const segmentationSchema = createSentenceSegmentationSchema();
+		const response = await ai.models.generateContent({
+			model: 'gemini-2.5-flash',
+			contents: prompt,
+			// @ts-expect-error - generationConfig is valid but types may be outdated
+			generationConfig: {
+				temperature: 0.2,
+				maxOutputTokens: 3000,
+				responseMimeType: 'application/json',
+				responseJsonSchema: segmentationSchema.jsonSchema
+			}
 		});
 
-		const content = response.choices[0].message.content;
+		const content = response.text;
 		if (content) {
-			const result = JSON.parse(content);
+			const result = parseJsonFromGeminiResponse(content, segmentationSchema.zodSchema);
 			const sentences = result.sentences || [];
 			
 			// Filter and clean sentences
@@ -204,16 +115,23 @@ function enhancedRegexSegmentation(arabicText: string): string[] {
 	return finalSentences;
 }
 
-export const POST: RequestHandler = async ({ request, locals }) => {
-	const openai = new OpenAI({ apiKey: env['OPEN_API_KEY'] });
-	
-	const session = await locals.auth.validate();
 
-	if (!session) {
+export const POST: RequestHandler = async ({ request, locals }) => {
+	const apiKey = env['GEMINI_API_KEY'];
+	if (!apiKey) {
+		return error(500, { message: 'GEMINI_API_KEY is not configured' });
+	}
+	
+	const ai = new GoogleGenAI({ apiKey });
+	
+	// @ts-expect-error - auth property exists on locals at runtime
+	const {sessionId, user} = await locals?.auth?.validate() || {};
+
+	if (!sessionId) {
 		return error(401, { message: 'You must have an account do that' });
 	}
 
-	const userId = session?.user.id;
+	const userId = user?.id;
 	const storyId = uuidv4();
 
 	// Handle both FormData (transcription mode) and JSON (AI generation mode)
@@ -298,7 +216,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 				};
 			} else {
 				// If we only have raw transcript, use AI-powered sentence segmentation
-				const sentenceTexts = await aiSentenceSegmentation(transcript, openai);
+				const sentenceTexts = await aiSentenceSegmentation(transcript, ai);
 
 				const formattedSentences = sentenceTexts.map((sentenceText) => ({
 					arabic: { text: sentenceText },
@@ -336,7 +254,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 			console.log('✅ Darija transcribed story uploaded to storage, saving to database...');
 			
 			// Save transcribed story metadata with storage file key
-			const { data: savedStory, error: insertError } = await supabase
+			const { error: insertError } = await supabase
 				.from('generated_story')
 				.insert({
 					id: storyId,
@@ -671,15 +589,20 @@ export const POST: RequestHandler = async ({ request, locals }) => {
   `;
 
 	try {
-		const completion = await openai.chat.completions.create({
-			messages: [{ role: 'system', content: question }],
-			response_format: { type: 'json_object' },
-			model: 'gpt-4o-mini',
-			// Higher creativity parameters to ensure full generation and variety
-			temperature: 0.9,  // Higher creativity for full story generation
+		const storySchema = createStorySchema(storyType === 'conversation');
+		const response = await ai.models.generateContent({
+			model: 'gemini-2.5-flash',
+			contents: question,
+			// @ts-expect-error - generationConfig is valid but types may be outdated
+			generationConfig: {
+				temperature: 0.9,
+				maxOutputTokens: 8000, // Increase token limit for stories
+				responseMimeType: 'application/json',
+				responseJsonSchema: storySchema.jsonSchema
+			}
 		});
 
-		const story = completion.choices[0].message.content;
+		const story = response.text;
 
 		try {
 			// Parse and validate the story content
@@ -687,33 +610,16 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 				throw new Error('No story content generated');
 			}
 			
-			// Validate that the story can be parsed as JSON
-			const parsedStory = JSON.parse(story);
+			// Log the raw response for debugging (first 2000 chars)
+			console.log('Raw Gemini response (first 2000 chars):', story.substring(0, 2000));
+			
+			// Validate that the story can be parsed as JSON (handling markdown code blocks)
+			const parsedStory = parseJsonFromGeminiResponse(story, storySchema.zodSchema);
 			if (!parsedStory || !parsedStory.sentences) {
 				throw new Error('Invalid story structure');
 			}
 			
-			console.log('ChatGPT generated story with', parsedStory.sentences.length, 'sentences');
-
-			// NEW: Improve Arabic sentences with darjia model and update transliterations
-			for (let i = 0; i < parsedStory.sentences.length; i++) {
-				const originalArabic = parsedStory.sentences[i].arabic.text;
-				const improvedArabic = await improveArabicWithDarjiaModel(originalArabic);
-        console.log({ originalArabic, improvedArabic });
-				
-				// Update the Arabic text
-				parsedStory.sentences[i].arabic.text = improvedArabic;
-				
-				// Update the transliteration to match the improved Arabic
-				const updatedTransliteration = await updateTransliterationWithChatGPT(improvedArabic, openai);
-				console.log({ 
-					originalTransliteration: parsedStory.sentences[i].transliteration.text,
-					updatedTransliteration 
-				});
-				parsedStory.sentences[i].transliteration.text = updatedTransliteration;
-			}
-
-			console.log('Improved Arabic sentences with darjia model and updated transliterations');
+			console.log('Gemini generated story with', parsedStory.sentences.length, 'sentences');
 			
 			console.log('✅ Darija story generated, uploading to storage...');
 			
@@ -728,7 +634,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 			console.log('✅ Darija story uploaded to storage, saving to database...');
 			
 			// Save story metadata with storage file key
-			const { data: savedStory, error: insertError } = await supabase
+			const { error: insertError } = await supabase
 				.from('generated_story')
 				.insert({
 					id: storyId,

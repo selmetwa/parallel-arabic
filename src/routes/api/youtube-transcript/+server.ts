@@ -2,9 +2,11 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { supabase } from '$lib/supabaseClient';
 import { env } from '$env/dynamic/private';
-import OpenAI from 'openai';
+import { GoogleGenAI } from '@google/genai';
 import { v4 as uuidv4 } from 'uuid';
 import { uploadVideoToStorage } from '$lib/helpers/storage-helpers';
+import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
+import { createFormattedVideoSchema } from '$lib/utils/gemini-schemas';
 
 const YOUTUBE_TRANSCRIPT_API_KEY = '68d0d002c95b838ec92e4efb';
 const YOUTUBE_TRANSCRIPT_API_URL = 'https://www.youtube-transcript.io/api/transcripts';
@@ -21,8 +23,8 @@ interface FormattedVideo {
 	}>;
 }
 
-async function formatTranscriptWithChatGPT(transcript: unknown, openai: OpenAI): Promise<FormattedVideo> {
-	const prompt = `You are an expert Arabic linguist specializing in Egyptian Arabic. Your task is to convert raw YouTube transcript lines into a structured format for language learning.
+async function formatTranscriptWithGemini(transcript: unknown, ai: GoogleGenAI): Promise<FormattedVideo> {
+	const systemPrompt = `You are an expert Arabic linguist specializing in Egyptian Arabic. Your task is to convert raw YouTube transcript lines into a structured format for language learning.
 
 Each transcript line has timing information (start time and duration) and text. You need to:
 1. Keep the original start and dur timing values
@@ -65,28 +67,32 @@ Return your response as a JSON object with this structure:
   ]
 }`;
 
+	const userPrompt = `Please format this transcript into Arabic, English, and transliteration:\n\n${JSON.stringify(transcript, null, 2)}`;
+
+	const fullPrompt = `${systemPrompt}\n\n${userPrompt}`;
+
 	try {
-		const completion = await openai.chat.completions.create({
-			messages: [
-				{ role: 'system', content: prompt },
-				{ 
-					role: 'user', 
-					content: `Please format this transcript into Arabic, English, and transliteration:\n\n${JSON.stringify(transcript, null, 2)}`
-				}
-			],
-			response_format: { type: 'json_object' },
-			model: 'gpt-4o-mini',
-			temperature: 0.7,
+		const formattedVideoSchema = createFormattedVideoSchema();
+		const response = await ai.models.generateContent({
+			model: 'gemini-2.5-flash',
+			contents: fullPrompt,
+			// @ts-expect-error - generationConfig is valid but types may be outdated
+			generationConfig: {
+				temperature: 0.7,
+				maxOutputTokens: 10000, // Large token limit for video transcripts
+				responseMimeType: 'application/json',
+				responseJsonSchema: formattedVideoSchema.jsonSchema
+			}
 		});
 
-		const result = completion.choices[0].message.content;
+		const result = response.text;
 		if (!result) {
-			throw new Error('No response from ChatGPT');
+			throw new Error('No response from Gemini');
 		}
 
-		return JSON.parse(result);
+		return parseJsonFromGeminiResponse(result, formattedVideoSchema.zodSchema);
 	} catch (error) {
-		console.error('ChatGPT formatting error:', error);
+		console.error('Gemini formatting error:', error);
 		throw error;
 	}
 }
@@ -94,6 +100,7 @@ Return your response as a JSON object with this structure:
 export const POST: RequestHandler = async ({ request, locals }) => {
 	try {
 		// Check authentication
+		// @ts-expect-error - auth property exists on locals at runtime
 		const session = await locals.auth.validate();
 		if (!session?.sessionId) {
 			return json({ error: 'Authentication required' }, { status: 401 });
@@ -161,16 +168,21 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		return json({ error: 'Transcript not available for this video' }, { status: 404 });
 	}
 
-	// Initialize OpenAI
-	const openai = new OpenAI({ apiKey: env['OPEN_API_KEY'] });
+	// Initialize Gemini
+	const apiKey = env['GEMINI_API_KEY'];
+	if (!apiKey) {
+		return json({ error: 'GEMINI_API_KEY is not configured' }, { status: 500 });
+	}
+	
+	const ai = new GoogleGenAI({ apiKey });
 	const userId = session.user.id;
 	const videoDbId = uuidv4();
 
-	// Format the transcript using ChatGPT
-	const formattedVideo = await formatTranscriptWithChatGPT(TRANSCRIPT, openai);
+	// Format the transcript using Gemini
+	const formattedVideo = await formatTranscriptWithGemini(TRANSCRIPT, ai);
 	
 	if (!formattedVideo || !formattedVideo.lines || !Array.isArray(formattedVideo.lines)) {
-		throw new Error('Invalid formatted video structure from ChatGPT');
+		throw new Error('Invalid formatted video structure from Gemini');
 	}
 
 	// Upload video content to Supabase Storage
