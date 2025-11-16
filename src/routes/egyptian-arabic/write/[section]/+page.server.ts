@@ -1,55 +1,42 @@
 import type { PageServerLoad } from './$types';
-import { commonWords } from '$lib/constants/common-words';
-
-const API_URL = 'https://egyptian-arabic-vocab-selmetwa.koyeb.app';
-
-// Type for the new API response format
-interface ApiWordResponse {
-	english: string;
-	arabic: string;
-	transliteration: string;
-	audioUrl?: string;
-}
+import { supabase } from '$lib/supabaseClient';
 
 export const load: PageServerLoad = async ({ params, parent }) => {
-
   const { isSubscribed } = await parent();
 
+  const section = params.section;
+  const dialect = 'egyptian-arabic';
 
-	// Handle special case: most_common uses local data
-	if (params.section === 'most_common') {
-		const _words = commonWords.map(
-			(word) => ({
-				english: word.en,
-				arabic: word.word,
-				transliteration: word.franco,
-				audioUrl: undefined
-			})
-		);
-		return {
-			words: _words,
-			section: 'most_common'
-		};
-	}
+  // Query words from database
+  // Sort by frequency (highest first) - especially important for most_common section
+  const { data: words, error } = await supabase
+    .from('word')
+    .select('arabic_word, english_word, transliterated_word, audio_url, frequency')
+    .eq('dialect', dialect)
+    .eq('category', section)
+    .order('frequency', { ascending: false, nullsFirst: false });
 
-	const section = params.section;
-	
-	// All other sections use the new API format: /vocab/egyptian/{section}
-	const apiUrl = `${API_URL}/vocab/egyptian/${section}`;
-	const response = await fetch(apiUrl);
-	const json: ApiWordResponse[] = await response.json();
+  if (error) {
+    console.error('Error fetching words from database:', error);
+    // Fallback to empty array if query fails
+    return {
+      words: [],
+      section,
+      isSubscribed
+    };
+  }
 
-	// The API already returns the correct format, just ensure audioUrl is defined
-	const transformedWords = json.map((word) => ({
-		english: word.english,
-		arabic: word.arabic,
-		transliteration: word.transliteration,
-		audioUrl: word.audioUrl || undefined
-	}));
+  // Transform database format to component format
+  const transformedWords = (words || []).map((word) => ({
+    english: word.english_word,
+    arabic: word.arabic_word,
+    transliteration: word.transliterated_word,
+    audioUrl: word.audio_url || undefined
+  }));
 
-	return {
-		words: transformedWords.slice(1, transformedWords.length - 1),
-		section,
+  return {
+    words: transformedWords,
+    section,
     isSubscribed
-	};
+  };
 };

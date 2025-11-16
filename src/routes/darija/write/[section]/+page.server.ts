@@ -1,37 +1,43 @@
 import type { PageServerLoad } from './$types';
-
-const API_URL = 'https://egyptian-arabic-vocab-selmetwa.koyeb.app';
-
-// Type for the new API response format
-interface ApiWordResponse {
-	english: string;
-	arabic: string;
-	transliteration: string;
-	audioUrl?: string;
-}
+import { supabase } from '$lib/supabaseClient';
 
 export const load: PageServerLoad = async ({ params, parent }) => {
 	// Get subscription status from layout (no DB query needed!)
 	const { isSubscribed } = await parent();
 	
 	const section = params.section;
-	
-	// Use the new API format: /vocab/darija/{section}
-	const apiUrl = `${API_URL}/vocab/darija/${section}`;
-	const response = await fetch(apiUrl);
-	const json: ApiWordResponse[] = await response.json();
+	const dialect = 'darija';
 
-	// The API already returns the correct format, just ensure audioUrl is defined
-	const transformedWords = json.map((word) => ({
-		english: word.english,
-		arabic: word.arabic,
-		transliteration: word.transliteration,
-		audioUrl: word.audioUrl || undefined
+	// Query words from database
+	// Sort by frequency (highest first) for proper ordering
+	const { data: words, error } = await supabase
+		.from('word')
+		.select('arabic_word, english_word, transliterated_word, audio_url, frequency')
+		.eq('dialect', dialect)
+		.eq('category', section)
+		.order('frequency', { ascending: false, nullsFirst: false });
+
+	if (error) {
+		console.error('Error fetching words from database:', error);
+		// Fallback to empty array if query fails
+		return {
+			words: [],
+			section,
+			isSubscribed
+		};
+	}
+
+	// Transform database format to component format
+	const transformedWords = (words || []).map((word) => ({
+		english: word.english_word,
+		arabic: word.arabic_word,
+		transliteration: word.transliterated_word,
+		audioUrl: word.audio_url || undefined
 	}));
 
 	return {
-		words: transformedWords.slice(1, transformedWords.length - 1),
+		words: transformedWords,
 		section,
-		isSubscribed  // Pass subscription status
+		isSubscribed
 	};
 };

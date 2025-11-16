@@ -1,7 +1,9 @@
 import { error, json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { env } from '$env/dynamic/private';
-import OpenAI from 'openai';
+import { GoogleGenAI } from '@google/genai';
+import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
+import { createStorySchema } from '$lib/utils/gemini-schemas';
 import { v4 as uuidv4 } from 'uuid';
 import { supabase } from '$lib/supabaseClient';
 import { stories } from '$lib/constants/stories/index';
@@ -21,7 +23,12 @@ interface GenerationData {
 }
 
 export const POST: RequestHandler = async ({ request, locals }) => {
-	const openai = new OpenAI({ apiKey: env['OPEN_API_KEY'] });
+	const apiKey = env['GEMINI_API_KEY'];
+	if (!apiKey) {
+		return error(500, { message: 'GEMINI_API_KEY is not configured' });
+	}
+	
+	const ai = new GoogleGenAI({ apiKey });
 	
 	const {sessionId, user} = await locals?.auth?.validate() || {};
 
@@ -377,15 +384,20 @@ export const POST: RequestHandler = async ({ request, locals }) => {
   `;
 
 	try {
-		const completion = await openai.chat.completions.create({
-			messages: [{ role: 'system', content: question }],
-			response_format: { type: 'json_object' },
-			model: 'gpt-4o-mini',
-			// Higher creativity parameters to ensure full generation and variety
-			temperature: 0.9,  // Higher creativity for full story generation
+		const storySchema = createStorySchema(storyType === 'conversation');
+		const response = await ai.models.generateContent({
+			model: 'gemini-2.5-flash',
+			contents: question,
+			// @ts-expect-error - generationConfig is valid but types may be outdated
+			generationConfig: {
+				temperature: 0.9,
+				maxOutputTokens: 8000, // Increase token limit for stories
+				responseMimeType: 'application/json',
+				responseJsonSchema: storySchema.jsonSchema
+			}
 		});
 
-		const story = completion.choices[0].message.content;
+		const story = response.text;
 
 		try {
 			// Parse and validate the story content
@@ -394,7 +406,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 			}
 			
 			// Validate that the story can be parsed as JSON
-			const parsedStory = JSON.parse(story);
+			const parsedStory = parseJsonFromGeminiResponse(story, storySchema.zodSchema);
 			if (!parsedStory || !parsedStory.sentences) {
 			throw new Error('Invalid story structure');
 		}

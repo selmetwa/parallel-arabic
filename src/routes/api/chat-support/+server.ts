@@ -1,7 +1,7 @@
 import { error, json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { env } from '$env/dynamic/private';
-import OpenAI from "openai";
+import { GoogleGenAI } from "@google/genai";
 
 type ChatMessage = {
   role: 'user' | 'assistant';
@@ -10,7 +10,12 @@ type ChatMessage = {
 
 export const POST: RequestHandler = async ({ request }) => {
   try {
-    const openai = new OpenAI({ apiKey: env['OPEN_API_KEY'] });
+    const apiKey = env['GEMINI_API_KEY'];
+    if (!apiKey) {
+      return error(500, { message: 'GEMINI_API_KEY is not configured' });
+    }
+    
+    const ai = new GoogleGenAI({ apiKey });
     const { message, conversation } = await request.json();
 
     if (!message || typeof message !== 'string') {
@@ -44,32 +49,31 @@ Guidelines:
 
 The user may ask about grammar rules, vocabulary, pronunciation, culture, or need help with Arabic text. Always aim to be educational and supportive.`;
 
-    // Prepare messages for OpenAI
-    const messages: OpenAI.Chat.Completions.ChatCompletionMessageParam[] = [
-      { role: "system", content: systemPrompt },
-      ...conversationHistory.map((msg: ChatMessage) => ({
-        role: msg.role,
-        content: msg.content
-      })),
-      { role: "user", content: message }
-    ];
+    // Build conversation context
+    const conversationContext = conversationHistory.map((msg: ChatMessage) => 
+      `${msg.role === 'user' ? 'User' : 'Assistant'}: ${msg.content}`
+    ).join('\n');
+    
+    const fullPrompt = `${systemPrompt}\n\n${conversationContext ? `Previous conversation:\n${conversationContext}\n\n` : ''}User: ${message}\n\nAssistant:`;
 
-    const completion = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
-      messages: messages,
-      temperature: 0.7,
-      max_tokens: 500, // Keep responses reasonably sized for chat
-      top_p: 0.9,
+    const response = await ai.models.generateContent({
+      model: "gemini-2.5-flash",
+      contents: fullPrompt,
+      generationConfig: {
+        temperature: 0.7,
+        maxOutputTokens: 500,
+        topP: 0.9
+      }
     });
 
-    const response = completion.choices[0]?.message?.content;
+    const responseText = response.text;
 
-    if (!response) {
-      throw new Error('No response from OpenAI');
+    if (!responseText) {
+      throw new Error('No response from Gemini');
     }
 
     return json({ 
-      message: response,
+      message: responseText,
       timestamp: new Date().toISOString()
     });
 

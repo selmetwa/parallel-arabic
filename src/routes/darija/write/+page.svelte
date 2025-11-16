@@ -29,6 +29,28 @@
 				You are not currently subscribed and will not have access to all the vocabulary
 			</p>
 		{/if}
+		
+		<!-- Tabs -->
+		<div class="flex gap-4 mt-4 border-b border-tile-600">
+			<a 
+				href="/darija/vocab" 
+				class="px-4 py-2 text-text-200 hover:text-text-300 transition-colors"
+			>
+				Vocab
+			</a>
+			<a 
+				href="/darija/write" 
+				class="px-4 py-2 text-text-300 font-semibold border-b-2 border-tile-600 hover:text-text-200 transition-colors"
+			>
+				Write
+			</a>
+			<a 
+				href="/review" 
+				class="px-4 py-2 text-text-200 hover:text-text-300 transition-colors"
+			>
+				Vocabulary Review
+			</a>
+		</div>
 	</div>
 	
 	<ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 auto-rows-fr">

@@ -1,8 +1,10 @@
 import { error, json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { env } from '$env/dynamic/private';
-import OpenAI from "openai";
+import { GoogleGenAI } from "@google/genai";
 import { type Dialect } from '$lib/types/index';
+import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
+import { createTranslationResponseSchema } from '$lib/utils/gemini-schemas';
 
 type ChatMessage = {
   role: 'user' | 'assistant';
@@ -21,7 +23,12 @@ const dialectNames: Record<Dialect, string> = {
 
 export const POST: RequestHandler = async ({ request }) => {
   try {
-    const openai = new OpenAI({ apiKey: env['OPEN_API_KEY'] });
+    const apiKey = env['GEMINI_API_KEY'];
+    if (!apiKey) {
+      return error(500, { message: 'GEMINI_API_KEY is not configured' });
+    }
+    
+    const ai = new GoogleGenAI({ apiKey });
     const { message, dialect, conversation } = await request.json();
 
     if (!message || typeof message !== 'string') {
@@ -68,48 +75,44 @@ Format your response as JSON with this exact structure:
   "transliteration": "transliteration here"
 }`;
 
-    // Prepare messages for OpenAI
-    const messages: OpenAI.Chat.Completions.ChatCompletionMessageParam[] = [
-      { role: "system", content: systemPrompt },
-      ...conversationHistory.map((msg: ChatMessage) => ({
-        role: msg.role,
-        content: msg.content
-      })),
-      { role: "user", content: message }
-    ];
+    // Build conversation context
+    const conversationContext = conversationHistory.map((msg: ChatMessage) => 
+      `${msg.role === 'user' ? 'User' : 'Assistant'}: ${msg.content}`
+    ).join('\n');
+    
+    const fullPrompt = `${systemPrompt}\n\n${conversationContext ? `Previous conversation:\n${conversationContext}\n\n` : ''}User: ${message}\n\nAssistant:`;
 
-    const completion = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
-      messages: messages,
-      temperature: 0.7,
-      max_tokens: 500,
-      top_p: 0.9,
-      response_format: { type: "json_object" }
+    const translationSchema = createTranslationResponseSchema();
+    const response = await ai.models.generateContent({
+      model: "gemini-2.5-flash",
+      contents: fullPrompt,
+      // @ts-expect-error - generationConfig is valid but types may be outdated
+      generationConfig: {
+        temperature: 0.7,
+        maxOutputTokens: 500,
+        topP: 0.9,
+        responseMimeType: 'application/json',
+        responseJsonSchema: translationSchema.jsonSchema
+      }
     });
 
-    const responseContent = completion.choices[0]?.message?.content;
+    const responseContent = response.text;
 
     if (!responseContent) {
-      throw new Error('No response from OpenAI');
+      throw new Error('No response from Gemini');
     }
 
     // Parse the JSON response
     let parsedResponse;
     try {
-      parsedResponse = JSON.parse(responseContent);
+      parsedResponse = parseJsonFromGeminiResponse(responseContent, translationSchema.zodSchema);
     } catch (parseError) {
-      // If JSON parsing fails, try to extract JSON from the response
-      const jsonMatch = responseContent.match(/\{[\s\S]*\}/);
-      if (jsonMatch) {
-        parsedResponse = JSON.parse(jsonMatch[0]);
-      } else {
-        // Fallback: create a structured response from plain text
-        parsedResponse = {
-          arabic: responseContent,
-          english: responseContent,
-          transliteration: responseContent
-        };
-      }
+      // Fallback: create a structured response from plain text
+      parsedResponse = {
+        arabic: responseContent,
+        english: responseContent,
+        transliteration: responseContent
+      };
     }
 
     // Validate the response structure
