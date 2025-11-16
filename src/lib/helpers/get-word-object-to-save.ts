@@ -41,5 +41,27 @@ export const getWordObjectToSave = async (word: string, type: string) => {
 
 	const data = await res.json();
 
-	return data;
+	// Handle error responses (when message is a string)
+	if (typeof data.message === 'string') {
+		return { error: data.message };
+	}
+
+	// Handle success responses (when message is an object with content)
+	if (data.message?.content) {
+		let content = data.message.content;
+		
+		// Strip markdown code blocks if present
+		// Handles patterns like ```json\n{...}\n``` or ```\n{...}\n```
+		content = content.replace(/^```(?:json)?\s*\n?/gm, '').replace(/\n?```\s*$/gm, '').trim();
+		
+		try {
+			const parsed = JSON.parse(content);
+			return { success: true, data: parsed };
+		} catch (e) {
+			console.error('Error parsing JSON from API response:', e);
+			return { error: 'Failed to parse word data' };
+		}
+	}
+
+	return { error: 'Unexpected response format' };
 };

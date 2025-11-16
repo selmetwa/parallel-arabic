@@ -630,7 +630,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 			// Log the raw response for debugging (first 2000 chars)
 			console.log('Raw Gemini response (first 2000 chars):', story.substring(0, 2000));
 			
-			// Validate that the story can be parsed as JSON (handling markdown code blocks)
+			// Validate that the story can be parsed as JSON (handles markdown code blocks if present)
 			const parsedStory = parseJsonFromGeminiResponse(story, storySchema.zodSchema);
 			if (!parsedStory || !parsedStory.sentences) {
 				throw new Error('Invalid story structure');
