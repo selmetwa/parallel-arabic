@@ -26,7 +26,7 @@ export const load: LayoutServerLoad = async ({ locals: { safeGetSession }, cooki
       session,
       user: user,  // Database user for backward compatibility
       cookies: cookies.getAll(),
-      isSubscribed: true
+      isSubscribed
     };
   } catch (error) {
     console.error('❌ [+layout.server.ts] Error in layout load:', error)

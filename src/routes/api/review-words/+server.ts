@@ -1,6 +1,8 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { supabase } from '$lib/supabaseClient';
+import { getUserHasActiveSubscription } from '$lib/helpers/get-user-has-active-subscription';
+import { getUserReviewCount } from '$lib/helpers/get-user-review-count';
 
 export const GET: RequestHandler = async ({ locals }) => {
   const { sessionId, user } = await locals?.auth?.validate() || {};
@@ -10,6 +12,23 @@ export const GET: RequestHandler = async ({ locals }) => {
   }
 
   const userId = user.id;
+  
+  // Check paywall: allow free users up to 5 reviews, then require subscription
+  const [hasActiveSubscription, reviewCount] = await Promise.all([
+    getUserHasActiveSubscription(userId),
+    getUserReviewCount(userId)
+  ]);
+
+  if (!hasActiveSubscription && reviewCount >= 5) {
+    return json({ 
+      error: 'Subscription required',
+      message: 'You\'ve reached the free limit of 5 word reviews. Please subscribe to continue using spaced repetition.',
+      requiresSubscription: true,
+      reviewCount,
+      words: []
+    }, { status: 403 });
+  }
+
   const now = Date.now();
 
   try {
@@ -61,7 +80,12 @@ export const GET: RequestHandler = async ({ locals }) => {
       isLearning: word.is_learning
     }));
 
-    return json({ words });
+    return json({ 
+      words,
+      reviewCount,
+      hasActiveSubscription,
+      remainingFreeReviews: hasActiveSubscription ? null : Math.max(0, 5 - reviewCount)
+    });
   } catch (error) {
     console.error('Error in review-words endpoint:', error);
     return json({ error: 'Internal server error' }, { status: 500 });

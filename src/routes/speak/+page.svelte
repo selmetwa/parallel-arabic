@@ -10,6 +10,7 @@
   import { type sentenceObjectItem, type Dialect } from '$lib/types/index';
   import { onMount } from 'svelte';
   import { showSentenceGenerationToast, showSpeakSentenceSuccessToast, showSentenceErrorToast } from '$lib/helpers/toast-helpers';
+  import Tooltip from '$lib/components/Tooltip.svelte';
 
 	let { data } = $props();
 
@@ -509,7 +510,21 @@
         </div>
 				
 				<div class="pt-2">
-					<Button type="submit">Generate Speaking Sentences</Button>
+					{#if !data.session}
+						<Tooltip text="An account is required to access this feature">
+							<Button 
+								type="submit" 
+								disabled={true}
+								className="opacity-50 cursor-not-allowed"
+							>
+								Generate Speaking Sentences
+							</Button>
+						</Tooltip>
+					{:else}
+						<Button type="submit">
+							Generate Speaking Sentences
+						</Button>
+					{/if}
 				</div>
 			</form>
 		</div>
@@ -547,7 +562,22 @@
 					<Button onClick={next} type="button">Next</Button>
 				{/if}
 				{#if isLastSentence && !isLoading}
-					<Button onClick={loadMoreSentences} type="button">Load More Sentences</Button>
+					{#if !data.session}
+						<Tooltip text="An account is required to access this feature">
+							<Button 
+								onClick={loadMoreSentences} 
+								type="button"
+								disabled={true}
+								className="opacity-50 cursor-not-allowed"
+							>
+								Load More Sentences
+							</Button>
+						</Tooltip>
+					{:else}
+						<Button onClick={loadMoreSentences} type="button">
+							Load More Sentences
+						</Button>
+					{/if}
 				{/if}
 			</div>
 		</div>
