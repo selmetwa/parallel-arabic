@@ -24,48 +24,79 @@ export async function POST({ request }) {
   // Default to Arabic if no language specified (for backward compatibility)
   const languageCode = language === "en" ? "en" : "ar";
 
-  // Save the file to a temporary location
-  const uploadsDir = path.join(process.cwd(), "static/uploads");
-  if (!fs.existsSync(uploadsDir)) fs.mkdirSync(uploadsDir, { recursive: true });
+  // Use /tmp directory for Vercel compatibility (writable in serverless environments)
+  const tmpDir = '/tmp';
+  if (!fs.existsSync(tmpDir)) {
+    // Fallback to process.cwd()/tmp for local development
+    const fallbackTmpDir = path.join(process.cwd(), "tmp");
+    if (!fs.existsSync(fallbackTmpDir)) {
+      fs.mkdirSync(fallbackTmpDir, { recursive: true });
+    }
+    const filePath = path.join(fallbackTmpDir, `audio_${Date.now()}_${file.name}`);
+    const arrayBuffer = await file.arrayBuffer();
+    const buffer = Buffer.from(arrayBuffer);
+    fs.writeFileSync(filePath, new Uint8Array(arrayBuffer));
+    
+    return await processAudio(filePath, buffer, file.type, file.name, languageCode, fallbackTmpDir);
+  }
 
-  const filePath = path.join(uploadsDir, file.name);
+  const filePath = path.join(tmpDir, `audio_${Date.now()}_${file.name}`);
   const arrayBuffer = await file.arrayBuffer();
   const buffer = Buffer.from(arrayBuffer);
   fs.writeFileSync(filePath, new Uint8Array(arrayBuffer));
 
   console.log(`File saved: ${filePath}, transcribing in ${languageCode}`);
 
+  return await processAudio(filePath, buffer, file.type, file.name, languageCode, tmpDir);
+}
+
+async function processAudio(
+  filePath: string,
+  buffer: Buffer,
+  originalMimeType: string,
+  originalFileName: string,
+  languageCode: string,
+  tmpDir: string
+) {
   // Convert WebM to MP3 if needed (ElevenLabs may not support WebM)
   let audioBuffer = buffer;
-  let audioMimeType = file.type;
-  let audioFileName = file.name;
+  let audioMimeType = originalMimeType;
+  let audioFileName = originalFileName;
   let tempConvertedPath: string | null = null;
+  const tempOriginalPath: string | null = filePath;
 
   try {
-
-    if (file.type === 'audio/webm' || file.name.endsWith('.webm')) {
+    if (originalMimeType === 'audio/webm' || originalFileName.endsWith('.webm')) {
       console.log('Converting WebM to MP3 for ElevenLabs compatibility...');
-      const convertedPath = path.join(uploadsDir, `converted_${Date.now()}.mp3`);
+      const convertedPath = path.join(tmpDir, `converted_${Date.now()}.mp3`);
       tempConvertedPath = convertedPath;
       
-      await new Promise<void>((resolve, reject) => {
-        ffmpeg(filePath)
-          .toFormat('mp3')
-          .audioCodec('libmp3lame')
-          .audioBitrate(128)
-          .on('end', () => {
-            console.log('WebM to MP3 conversion completed');
-            audioBuffer = fs.readFileSync(convertedPath);
-            audioMimeType = 'audio/mpeg';
-            audioFileName = convertedPath.split(path.sep).pop() || 'converted.mp3';
-            resolve();
-          })
-          .on('error', (err) => {
-            console.error('FFmpeg conversion error:', err);
-            reject(err);
-          })
-          .save(convertedPath);
-      });
+      try {
+        await new Promise<void>((resolve, reject) => {
+          ffmpeg(filePath)
+            .toFormat('mp3')
+            .audioCodec('libmp3lame')
+            .audioBitrate(128)
+            .on('end', () => {
+              console.log('WebM to MP3 conversion completed');
+              audioBuffer = fs.readFileSync(convertedPath);
+              audioMimeType = 'audio/mpeg';
+              audioFileName = convertedPath.split(path.sep).pop() || 'converted.mp3';
+              resolve();
+            })
+            .on('error', (err) => {
+              console.error('FFmpeg conversion error:', err);
+              reject(err);
+            })
+            .save(convertedPath);
+        });
+      } catch (ffmpegError) {
+        console.error('FFmpeg conversion failed, trying to send WebM directly:', ffmpegError);
+        // If FFmpeg fails, try sending WebM directly - ElevenLabs might support it now
+        audioBuffer = buffer;
+        audioMimeType = originalMimeType;
+        audioFileName = originalFileName;
+      }
     }
 
     const _formData = new FormData();
@@ -104,10 +135,8 @@ export async function POST({ request }) {
     if (transcribedText && transcribedText.length > 0) {
       console.log(`Transcription successful with language: ${languageCode}`, { text: transcribedText });
       
-      // Clean up converted file if it exists
-      if (tempConvertedPath && fs.existsSync(tempConvertedPath)) {
-        fs.unlinkSync(tempConvertedPath);
-      }
+      // Clean up temporary files
+      cleanupFiles(tempOriginalPath, tempConvertedPath);
       
       return json({ text: transcribedText });
     } else {
@@ -116,15 +145,31 @@ export async function POST({ request }) {
   } catch (error) {
     console.error(`Transcription error with ${languageCode}:`, error);
     
-    // Clean up converted file on error
-    if (tempConvertedPath && fs.existsSync(tempConvertedPath)) {
-      try {
-        fs.unlinkSync(tempConvertedPath);
-      } catch (cleanupError) {
-        console.error('Error cleaning up converted file:', cleanupError);
-      }
-    }
+    // Clean up temporary files on error
+    cleanupFiles(tempOriginalPath, tempConvertedPath);
     
-    return json({ error: "Failed to transcribe" }, { status: 500 });
+    // Return more detailed error message
+    const errorMessage = error instanceof Error ? error.message : "Failed to transcribe";
+    return json({ error: errorMessage }, { status: 500 });
+  }
+}
+
+function cleanupFiles(originalPath: string | null, convertedPath: string | null) {
+  // Clean up original file
+  if (originalPath && fs.existsSync(originalPath)) {
+    try {
+      fs.unlinkSync(originalPath);
+    } catch (cleanupError) {
+      console.error('Error cleaning up original file:', cleanupError);
+    }
+  }
+  
+  // Clean up converted file if it exists
+  if (convertedPath && fs.existsSync(convertedPath)) {
+    try {
+      fs.unlinkSync(convertedPath);
+    } catch (cleanupError) {
+      console.error('Error cleaning up converted file:', cleanupError);
+    }
   }
 }
