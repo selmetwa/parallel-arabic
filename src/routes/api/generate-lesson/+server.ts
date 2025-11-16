@@ -1,9 +1,11 @@
 import { error, json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { env } from '$env/dynamic/private';
-import OpenAI from 'openai';
+import { GoogleGenAI } from '@google/genai';
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
+import { createLessonSchema, createTranslationUpdateSchema } from '$lib/utils/gemini-schemas';
 
 // Function to improve Arabic text using the Egyptian Arabic model (Nile4B)
 async function improveArabicWithEgyptianModel(arabicText: string): Promise<string> {
@@ -59,36 +61,41 @@ async function updateTranslations(
 	improvedArabic: string,
 	originalEnglish: string,
 	originalTransliteration: string,
-	openai: OpenAI
+	ai: GoogleGenAI
 ): Promise<{ english: string; transliteration: string }> {
 	try {
-		const completion = await openai.chat.completions.create({
-			messages: [{
-				role: 'system',
-				content: `Given this Egyptian Arabic sentence: "${improvedArabic}"
-				
-				Please provide:
-				1. An accurate English translation
-				2. An accurate transliteration using only English alphabet letters
-				
-				Make sure the transliteration reflects authentic Egyptian pronunciation.
-				
-				Return ONLY a JSON object in this exact format:
-				{
-					"english": "the english translation",
-					"transliteration": "the transliteration"
-				}
-				
-				No other text or explanation.`
-			}],
-			response_format: { type: 'json_object' },
-			model: 'gpt-4o-mini',
-			temperature: 0.3,
+		const prompt = `Given this Egyptian Arabic sentence: "${improvedArabic}"
+
+Please provide:
+1. An accurate English translation
+2. An accurate transliteration using only English alphabet letters
+
+Make sure the transliteration reflects authentic Egyptian pronunciation.
+
+Return ONLY a JSON object in this exact format:
+{
+	"english": "the english translation",
+	"transliteration": "the transliteration"
+}
+
+No other text or explanation.`;
+
+		const translationUpdateSchema = createTranslationUpdateSchema();
+		const response = await ai.models.generateContent({
+			model: 'gemini-2.5-flash',
+			contents: prompt,
+			// @ts-expect-error - generationConfig is valid but types may be outdated
+			generationConfig: {
+				temperature: 0.3,
+				maxOutputTokens: 8000,
+				responseMimeType: 'application/json',
+				responseJsonSchema: translationUpdateSchema.jsonSchema
+			}
 		});
 
-		const response = completion.choices[0].message?.content;
-		if (response) {
-			const data = JSON.parse(response);
+		const content = response.text;
+		if (content) {
+			const data = parseJsonFromGeminiResponse(content, translationUpdateSchema.zodSchema);
 			return {
 				english: data.english || originalEnglish,
 				transliteration: data.transliteration || originalTransliteration
@@ -105,7 +112,12 @@ async function updateTranslations(
 }
 
 export const POST: RequestHandler = async ({ request }) => {
-	const openai = new OpenAI({ apiKey: env['OPEN_API_KEY'] });
+	const apiKey = env['GEMINI_API_KEY'];
+	if (!apiKey) {
+		return error(500, { message: 'GEMINI_API_KEY is not configured' });
+	}
+	
+	const ai = new GoogleGenAI({ apiKey });
 
 	try {
 		// Read the lesson template
@@ -196,19 +208,25 @@ interface Lesson {
 
 Return ONLY the JSON object, no other text.`;
 
-		const completion = await openai.chat.completions.create({
-			messages: [{ role: 'system', content: prompt }],
-			response_format: { type: 'json_object' },
-			model: 'gpt-4o-mini',
-			temperature: 0.7,
+		const lessonSchema = createLessonSchema();
+		const response = await ai.models.generateContent({
+			model: 'gemini-2.5-flash',
+			contents: prompt,
+			// @ts-expect-error - generationConfig is valid but types may be outdated
+			generationConfig: {
+				temperature: 0.7,
+				maxOutputTokens: 15000, // Large token limit for complex lesson structures
+				responseMimeType: 'application/json',
+				responseJsonSchema: lessonSchema.jsonSchema
+			}
 		});
 
-		const responseContent = completion.choices[0].message?.content;
+		const responseContent = response.text;
 		if (!responseContent) {
-			throw new Error('No response from OpenAI');
+			throw new Error('No response from Gemini');
 		}
 
-		let lesson = JSON.parse(responseContent);
+		let lesson = parseJsonFromGeminiResponse(responseContent, lessonSchema.zodSchema);
 
 		// Improve all Arabic text with Nile4B model
 		console.log('Improving Arabic content with Egyptian model...');
@@ -220,7 +238,7 @@ Return ONLY the JSON object, no other text.`;
 				lesson.title.arabic,
 				lesson.title.english || '',
 				lesson.title.transliteration || '',
-				openai
+				ai
 			);
 			if (translations.english) lesson.title.english = translations.english;
 			if (translations.transliteration) lesson.title.transliteration = translations.transliteration;
@@ -236,7 +254,7 @@ Return ONLY the JSON object, no other text.`;
 						subLesson.title.arabic,
 						subLesson.title.english || '',
 						subLesson.title.transliteration || '',
-						openai
+						ai
 					);
 					if (translations.english) subLesson.title.english = translations.english;
 					if (translations.transliteration) subLesson.title.transliteration = translations.transliteration;
@@ -249,7 +267,7 @@ Return ONLY the JSON object, no other text.`;
 						subLesson.content.title.arabic,
 						subLesson.content.title.english || '',
 						subLesson.content.title.transliteration || '',
-						openai
+						ai
 					);
 					if (translations.english) subLesson.content.title.english = translations.english;
 					if (translations.transliteration) subLesson.content.title.transliteration = translations.transliteration;
@@ -264,7 +282,7 @@ Return ONLY the JSON object, no other text.`;
 								phrase.arabic,
 								phrase.english || '',
 								phrase.transliteration || '',
-								openai
+								ai
 							);
 							if (translations.english) phrase.english = translations.english;
 							if (translations.transliteration) phrase.transliteration = translations.transliteration;
@@ -289,7 +307,7 @@ Return ONLY the JSON object, no other text.`;
 										option.arabic,
 										option.english || '',
 										option.transliteration || '',
-										openai
+										ai
 									);
 									if (translations.english) option.english = translations.english;
 									if (translations.transliteration) option.transliteration = translations.transliteration;
@@ -318,7 +336,7 @@ Return ONLY the JSON object, no other text.`;
 								exercise.hint.arabic,
 								exercise.hint.english || '',
 								exercise.hint.transliteration || '',
-								openai
+								ai
 							);
 							if (translations.english) exercise.hint.english = translations.english;
 							if (translations.transliteration) exercise.hint.transliteration = translations.transliteration;

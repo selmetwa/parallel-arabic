@@ -6,7 +6,7 @@
 	import { PUBLIC_PRICE_ID } from '$env/static/public';
   import { updateUrl } from '$lib/helpers/update-url';
   let { data } = $props();
-
+  $inspect(data);
   let index = $state((() => {
     if (typeof window !== 'undefined') {
       const params = new URLSearchParams(window.location.search);

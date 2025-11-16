@@ -1,9 +1,11 @@
 import { error, json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { env } from '$env/dynamic/private';
-import OpenAI from "openai";
+import { GoogleGenAI } from "@google/genai";
 import { commonWords } from '$lib/constants/common-words';
 import { normalizeArabicText } from '$lib/utils/arabic-normalization';
+import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
+import { createSentencesSchema } from '$lib/utils/gemini-schemas';
 
 // Function to clean unwanted characters from text
 function cleanText(text: string, type: 'arabic' | 'english' | 'transliteration'): string {
@@ -41,7 +43,12 @@ type SentenceType = {
 };
 
 export const POST: RequestHandler = async ({ request }) => {
-  const openai = new OpenAI({ apiKey: env['OPEN_API_KEY'] });
+  const apiKey = env['GEMINI_API_KEY'];
+  if (!apiKey) {
+    return error(500, { message: 'GEMINI_API_KEY is not configured' });
+  }
+  
+  const ai = new GoogleGenAI({ apiKey });
   const data = await request.json();
   
   const dialect = data.dialect || 'egyptian-arabic'; // Default to Egyptian
@@ -292,33 +299,71 @@ export const POST: RequestHandler = async ({ request }) => {
   }
 
   try {
-    const completion = await openai.chat.completions.create({
-      messages: [{ role: "system", content: question }],
-      response_format: { type: "json_object" },
-      model: "gpt-4o-mini",
-      // Add randomness parameters
-      temperature: 0.9,  // Higher temperature for more creativity
-      top_p: 0.95,      // Nucleus sampling for variety
-      frequency_penalty: 0.5,  // Penalize repetitive tokens
-      presence_penalty: 0.3,   // Encourage new topics
+    const sentencesSchema = createSentencesSchema();
+    const response = await ai.models.generateContent({
+      model: "gemini-2.5-flash",
+      contents: question,
+      // @ts-expect-error - generationConfig is valid but types may be outdated
+      generationConfig: {
+        temperature: 0.9,
+        topP: 0.95,
+        maxOutputTokens: 4000, // Increase token limit to prevent truncation
+        responseMimeType: 'application/json',
+        responseJsonSchema: sentencesSchema.jsonSchema
+      }
     });
     
+    // Initialize responseData from response
+    const responseData: { message: { content: string } } = {
+      message: { content: '' }
+    };
+    
     // Clean the generated sentences
-    const responseData = completion.choices[0];
-    if (responseData.message?.content) {
+    const content = response.text;
+    if (content) {
+      // Log full response for debugging truncated JSON
+      console.log('Full Gemini response length:', content.length);
+      console.log('Last 500 chars of response:', content.substring(Math.max(0, content.length - 500)));
+      
       try {
-        const parsedContent = JSON.parse(responseData.message.content);
+        const parsedContent = parseJsonFromGeminiResponse(content, sentencesSchema.zodSchema);
         if (parsedContent.sentences && Array.isArray(parsedContent.sentences)) {
+          console.log('Gemini generated', parsedContent.sentences.length, 'sentences');
+          
+          // Validate we have complete sentences
+          const incompleteSentences = parsedContent.sentences.filter((s: SentenceType) => 
+            !s.arabic || !s.english || !s.transliteration ||
+            s.arabic.trim() === '' || s.english.trim() === '' || s.transliteration.trim() === ''
+          );
+          
+          if (incompleteSentences.length > 0) {
+            console.warn(`Found ${incompleteSentences.length} incomplete sentences, filtering them out`);
+            parsedContent.sentences = parsedContent.sentences.filter((s: SentenceType) => 
+              s.arabic && s.english && s.transliteration &&
+              s.arabic.trim() !== '' && s.english.trim() !== '' && s.transliteration.trim() !== ''
+            );
+          }
+          
+          // Clean the sentences first
           parsedContent.sentences = parsedContent.sentences.map((sentence: SentenceType) => ({
             arabic: cleanText(sentence.arabic || '', 'arabic'),
             english: cleanText(sentence.english || '', 'english'),
             transliteration: cleanText(sentence.transliteration || '', 'transliteration')
           }));
+          
           responseData.message.content = JSON.stringify(parsedContent);
+        } else {
+          console.error('No sentences array found in parsed content');
+          throw new Error('Invalid response structure: missing sentences array');
         }
       } catch (parseError) {
         console.error('Error parsing generated content:', parseError);
+        console.error('Response content (first 2000 chars):', content.substring(0, 2000));
+        console.error('Response content (last 2000 chars):', content.substring(Math.max(0, content.length - 2000)));
+        throw parseError;
       }
+    } else {
+      throw new Error('No content received from Gemini');
     }
     
     return json({ message: responseData });

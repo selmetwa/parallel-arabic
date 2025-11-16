@@ -16,7 +16,11 @@
     "test:unit": "vitest",
     "db:up": "vite-node ./src/lib/server/migrate.ts",
     "migrate:auth": "node migrate-users-to-auth.js",
-    "migrate:auth:test": "node migrate-users-to-auth.js --test"
+    "migrate:auth:test": "node migrate-users-to-auth.js --test",
+    "sync:subscriptions": "vite-node scripts/sync-stripe-subscriptions.ts",
+    "sync:subscriptions:dry": "vite-node scripts/sync-stripe-subscriptions.ts --dry-run",
+    "populate:words": "vite-node scripts/populate-words.ts",
+    "populate:words:dry": "vite-node scripts/populate-words.ts --dry-run"
   },
   "devDependencies": {
     "@flydotio/dockerfile": "^0.5.4",
@@ -30,6 +34,7 @@
     "@types/eslint": "8.56.0",
     "@types/fast-levenshtein": "^0.0.4",
     "@types/howler": "^2.2.12",
+    "@types/moment": "^2.13.0",
     "@types/nodemailer": "^6.4.17",
     "@types/uuid": "^9.0.8",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
@@ -55,12 +60,14 @@
   "dependencies": {
     "@11labs/client": "^0.0.1",
     "@distube/ytdl-core": "^4.15.9",
+    "@google/genai": "^1.29.1",
     "@lucia-auth/adapter-sqlite": "^2.0.1",
     "@lucia-auth/oauth": "^3.5.3",
     "@stripe/stripe-js": "^4.1.0",
     "@supabase/ssr": "^0.7.0",
     "@supabase/supabase-js": "^2.58.0",
     "@types/fluent-ffmpeg": "^2.1.27",
+    "ajv": "^8.12.0",
     "classnames": "^2.5.1",
     "dotenv": "^16.3.1",
     "easy-speech": "^2.3.1",
@@ -69,10 +76,10 @@
     "fast-levenshtein": "^3.0.0",
     "fluent-ffmpeg": "^2.1.3",
     "howler": "^2.2.4",
+    "jsonrepair": "^3.13.1",
     "kysely": "^0.27.1",
     "lucia": "^2.7.6",
     "nodemailer": "^6.10.0",
-    "openai": "^4.53.2",
     "perfect-freehand": "^1.2.2",
     "playht": "^0.9.8",
     "resize-observer-polyfill": "^1.5.1",
@@ -81,6 +88,8 @@
     "ts-node": "^10.9.2",
     "uuid": "^9.0.1",
     "youtube-transcript": "^1.2.1",
-    "ytdl-core": "^4.11.5"
+    "ytdl-core": "^4.11.5",
+    "zod": "^3.25.76",
+    "zod-to-json-schema": "^3.24.6"
   }
 }
