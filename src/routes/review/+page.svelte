@@ -7,6 +7,7 @@
   import type { PageData } from './$types';
   import { goto } from '$app/navigation';
   import AlphabetCycle from '$lib/components/AlphabetCycle.svelte';
+  import { PUBLIC_PRICE_ID } from '$env/static/public';
 
   interface Props {
     data: PageData;
@@ -36,6 +37,10 @@
   let sessionComplete = $state(false);
   let reviewedCount = $state(0);
   let reviewedWordIds = $state<Set<string>>(new Set());
+  let totalReviewCount = $state<number | null>(null);
+  let hasActiveSubscription = $state(false);
+  let remainingFreeReviews = $state<number | null>(null);
+  let requiresSubscription = $state(false);
   
   // Sentence generation state
   let showGenerateSentences = $state(false);
@@ -130,8 +135,22 @@
       const result = await response.json();
 
       if (!response.ok) {
+        // Handle paywall
+        if (result.requiresSubscription) {
+          requiresSubscription = true;
+          totalReviewCount = result.reviewCount || 0;
+          words = [];
+          isLoading = false;
+          return;
+        }
         throw new Error(result.error || 'Failed to load words');
       }
+
+      // Update subscription and review count info
+      totalReviewCount = result.reviewCount || 0;
+      hasActiveSubscription = result.hasActiveSubscription || false;
+      remainingFreeReviews = result.remainingFreeReviews ?? null;
+      requiresSubscription = false;
 
       const loadedWords = result.words || [];
       
@@ -199,11 +218,24 @@
       const result = await response.json();
 
       if (!response.ok) {
+        // Handle paywall
+        if (result.requiresSubscription) {
+          requiresSubscription = true;
+          totalReviewCount = result.reviewCount || 0;
+          error = result.message || 'Subscription required to continue reviewing words.';
+          return;
+        }
         throw new Error(result.error || 'Failed to record review');
       }
 
       reviewedCount++;
       reviewedWordIds.add(word.id);
+      
+      // Update total review count if returned
+      if (result.reviewCount !== undefined) {
+        totalReviewCount = result.reviewCount;
+        remainingFreeReviews = hasActiveSubscription ? null : Math.max(0, 5 - (totalReviewCount || 0));
+      }
       
       // Save progress after each review
       saveProgress();
@@ -590,7 +622,28 @@
     <header class="mb-8 text-center">
       <h1 class="text-4xl font-bold text-text-300 mb-2">Review Words</h1>
       <p class="text-text-200">Practice your saved words with spaced repetition</p>
+      {#if remainingFreeReviews !== null && remainingFreeReviews > 0 && !hasActiveSubscription}
+        <p class="text-sm text-text-200 mt-2">
+          <span class="font-semibold">{remainingFreeReviews}</span> free review{remainingFreeReviews !== 1 ? 's' : ''} remaining
+        </p>
+      {/if}
     </header>
+
+    {#if requiresSubscription}
+      <div class="bg-yellow-50 border-2 border-yellow-400 rounded-lg p-8 text-center mb-6">
+        <h2 class="text-2xl font-bold text-yellow-800 mb-4">Free Limit Reached</h2>
+        <p class="text-lg text-yellow-700 mb-6">
+          You've completed {totalReviewCount} word review{totalReviewCount !== 1 ? 's' : ''}. 
+          Subscribe to continue using spaced repetition and unlock unlimited reviews!
+        </p>
+        <form method="POST" action="/?/subscribe" class="flex justify-center">
+          <input type="hidden" name="price_id" value={PUBLIC_PRICE_ID} />
+          <Button type="submit" className="bg-yellow-600 hover:bg-yellow-700">
+            Subscribe Now
+          </Button>
+        </form>
+      </div>
+    {/if}
 
     {#if isLoading}
       <div class="flex justify-center items-center py-20">
@@ -608,9 +661,7 @@
     {:else if sessionComplete}
       <div class="bg-tile-300 border border-tile-500 rounded-lg p-8 text-center">
         <h2 class="text-3xl font-bold text-text-300 mb-4">Session Complete!</h2>
-        <p class="text-xl text-text-200 mb-6">
-          You reviewed {reviewedCount} word{reviewedCount !== 1 ? 's' : ''} today.
-        </p>
+
         <div class="space-y-4">
           <div class="flex gap-4 justify-center flex-wrap">
           <Button onClick={startNewSession} type="button">Review More</Button>

@@ -2,6 +2,8 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { supabase } from '$lib/supabaseClient';
 import { calculateNextReview } from '$lib/helpers/spaced-repetition';
+import { getUserHasActiveSubscription } from '$lib/helpers/get-user-has-active-subscription';
+import { getUserReviewCount } from '$lib/helpers/get-user-review-count';
 import { v4 as uuidv4 } from 'uuid';
 
 export const POST: RequestHandler = async ({ request, locals }) => {
@@ -13,6 +15,21 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 
   const userId = user.id;
   const { saved_word_id, difficulty } = await request.json();
+
+  // Check paywall: allow free users up to 5 reviews, then require subscription
+  const [hasActiveSubscription, reviewCount] = await Promise.all([
+    getUserHasActiveSubscription(userId),
+    getUserReviewCount(userId)
+  ]);
+
+  if (!hasActiveSubscription && reviewCount >= 5) {
+    return json({ 
+      error: 'Subscription required',
+      message: 'You\'ve reached the free limit of 5 word reviews. Please subscribe to continue using spaced repetition.',
+      requiresSubscription: true,
+      reviewCount
+    }, { status: 403 });
+  }
 
   if (!saved_word_id || !difficulty || difficulty < 1 || difficulty > 3) {
     return json({ error: 'Invalid request. saved_word_id and difficulty (1-3) required.' }, { status: 400 });
