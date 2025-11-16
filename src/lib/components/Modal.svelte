@@ -59,12 +59,12 @@ class="{`modal ${isOpen ? 'open' : ''} bg-tile-300 border-4 border-tile-600`}" s
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
-    z-index: 9;
+    z-index: 99;
   }
 
   .modal.open {
     opacity: 1;
-    z-index: 10;
+    z-index: 100;
   }
 
   .overlay.open {
