@@ -55,6 +55,10 @@
 	let targetArabicWord = $state('');
 	let keyboardValue = $state('');
 	
+	// Ref to the keyboard element for this component instance
+	let keyboardElement: Keyboard | null = $state(null);
+	let keyboardContainer: HTMLDivElement | null = $state(null);
+	
 	// Multi-word selection state
 	let selectedWords = $state<string[]>([]);
 	let isSelecting = $state(false);
@@ -112,31 +116,49 @@
 		attemptTemp = result;
 
 		// Use the strict normalized versions for final correctness check
-		if (areArraysEqual(myInputArr, arabicArr)) {
+		if (areArraysEqual(myInputArr, arabicArr) && value.trim().length > 0) {
 			isCorrect = true;
-			const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
-			keyboard && keyboard.resetValue();
+			keyboardElement && keyboardElement.resetValue();
+		} else if (value.trim().length === 0) {
+			// Reset isCorrect when input is cleared
+			isCorrect = false;
+		}
+	}
+
+	function checkInput() {
+		if (!keyboardElement) return;
+		const value = keyboardElement.getTextAreaValue();
+		if (typeof value === 'string') {
+			compareMyInput(value);
 		}
 	}
 
 	onMount(() => {
-		const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
+		// Find the keyboard element within this component's container
+		if (keyboardContainer) {
+			keyboardElement = keyboardContainer.querySelector('arabic-keyboard') as Keyboard | null;
+		}
+		
+		// Update styles for all keyboards (or specific one if available)
+		if (keyboardElement) {
+			updateKeyboardStyle(keyboardElement);
+		} else {
+			updateKeyboardStyle();
+		}
 
-		updateKeyboardStyle();
-
-		document.addEventListener('keydown', () => {
-			const value = keyboard && keyboard.getTextAreaValue();
-			if (typeof value === 'string') {
-				compareMyInput(value);
-			}
-		});
-
-		document.addEventListener('click', () => {
-			const value = keyboard && keyboard.getTextAreaValue();
-			if (typeof value === 'string') {
-				compareMyInput(value);
-			}
-		});
+		// Listen for virtual keyboard changes
+		document.addEventListener('keydown', checkInput);
+		document.addEventListener('click', checkInput);
+		
+		// Also check periodically for virtual keyboard changes (fallback)
+		// Use a reasonable interval to avoid performance issues
+		const intervalId = setInterval(checkInput, 300);
+		
+		return () => {
+			document.removeEventListener('keydown', checkInput);
+			document.removeEventListener('click', checkInput);
+			clearInterval(intervalId);
+		};
 	});
 
 	const isSafari = getBrowserInfo();
@@ -268,8 +290,8 @@
 
 	function onRegularKeyboard(e: any) {
 		const value = e.target.value;
-		compareMyInput(value);
 		keyboardValue = value;
+		compareMyInput(value);
 	}
 
 	function toggleKeyboard() {
@@ -277,11 +299,13 @@
 	}
 	$effect(() => {
 		hue.subscribe(() => {
+			// Update all keyboards when hue changes
 			updateKeyboardStyle();
 		});
 	});
 	$effect(() => {
 		theme.subscribe(() => {
+			// Update all keyboards when theme changes
 			updateKeyboardStyle();
 		});
 	});
@@ -307,19 +331,41 @@
 			selectionEndIndex = -1;
 
 			if (typeof document !== 'undefined') {
-				const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
-				keyboard && keyboard.resetValue();
-				document.addEventListener('keydown', () => {
-					const value = keyboard && keyboard.getTextAreaValue();
-					if (typeof value === 'string') {
-						compareMyInput(value);
+				// Find the keyboard element within this component's container
+				if (keyboardContainer) {
+					keyboardElement = keyboardContainer.querySelector('arabic-keyboard') as Keyboard | null;
+				}
+				keyboardElement && keyboardElement.resetValue();
+				
+				// Update keyboard styles when sentence changes
+				// Use setTimeout to ensure DOM is ready
+				setTimeout(() => {
+					if (keyboardElement) {
+						updateKeyboardStyle(keyboardElement);
+					} else {
+						updateKeyboardStyle();
 					}
-				});
+				}, 0);
 			}
 		}
 	});
 	$effect(() => {
 		attempt = attemptTemp;
+	});
+	
+	// Update keyboard element reference when keyboard type changes or container is ready
+	$effect(() => {
+		if (keyboardContainer && keyboard === 'virtual') {
+			// Use setTimeout to ensure DOM is updated
+			setTimeout(() => {
+				keyboardElement = keyboardContainer.querySelector('arabic-keyboard') as Keyboard | null;
+				if (keyboardElement) {
+					updateKeyboardStyle(keyboardElement);
+				}
+			}, 0);
+		} else {
+			keyboardElement = null;
+		}
 	});
 </script>
 
@@ -459,10 +505,10 @@
 		<KeyboardDocumentation></KeyboardDocumentation>
 	</Modal>
 	
-	<div class="mb-6 p-4">
+	<div class="mb-6 p-4" bind:this={keyboardContainer}>
 		<div class="mb-3 flex items-center justify-between">
 			<button onclick={toggleKeyboard} class="text-sm text-text-300 underline">
-				{keyboard === 'virtual' ? 'Use other keyboard' : 'Use builtin keyboard'}
+				{keyboard === 'virtual' ? 'Use native keyboard' : 'Use builtin keyboard'}
 			</button>
 			{#if keyboard === 'virtual'}
 				<button class="text-sm text-text-300 underline" onclick={openInfoModal}>

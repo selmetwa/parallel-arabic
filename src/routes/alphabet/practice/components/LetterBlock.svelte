@@ -158,7 +158,7 @@
 	</Modal>
 	<div>
 		<button onclick={toggleKeyboard}>
-			{keyboard === 'virtual' ? 'Use other keyboard' : 'Use builtin keyboard'}
+			{keyboard === 'virtual' ? 'Use native keyboard' : 'Use builtin keyboard'}
 		</button>
 		<div class={cn('block', { hidden: keyboard !== 'virtual' })}>
 			<arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>

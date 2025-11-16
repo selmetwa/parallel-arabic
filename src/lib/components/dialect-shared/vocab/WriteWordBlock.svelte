@@ -456,7 +456,7 @@
 		<div class={cn("block mt-6", { '!hidden': mode === 'draw'})}>
 			<div class="mb-3 flex items-center justify-between">
 				<button onclick={toggleKeyboard} class="text-sm text-text-300 underline">
-					{keyboard === 'virtual' ? 'Use other keyboard' : 'Use builtin keyboard'}
+					{keyboard === 'virtual' ? 'Use native keyboard' : 'Use builtin keyboard'}
 				</button>
 				{#if keyboard === 'virtual'}
 					<button class="text-sm text-text-300 underline" onclick={openInfoModal}>
