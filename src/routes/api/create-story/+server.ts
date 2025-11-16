@@ -405,7 +405,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 				throw new Error('No story content generated');
 			}
 			
-			// Validate that the story can be parsed as JSON
+			// Validate that the story can be parsed as JSON (handles markdown code blocks if present)
 			const parsedStory = parseJsonFromGeminiResponse(story, storySchema.zodSchema);
 			if (!parsedStory || !parsedStory.sentences) {
 			throw new Error('Invalid story structure');

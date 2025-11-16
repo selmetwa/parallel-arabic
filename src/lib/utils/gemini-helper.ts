@@ -54,6 +54,7 @@ export async function callGeminiWithSchema<T>(
 		throw new Error('No content received from Gemini');
 	}
 
+	// Use parseJsonFromGeminiResponse which handles markdown code blocks if present
 	return parseJsonFromGeminiResponse(content, zodSchema.zodSchema);
 }
 
