@@ -34,13 +34,10 @@
     const wordToSave = activeWordObj.arabic;
     const type = activeWordObj.type;
 
-    const chatgptres = await getWordObjectToSave(wordToSave, type);
-    const message = chatgptres.message;
-    if ([
-      'You must have an account do that',
-      'Something went wrong'
-    ].includes(message)) {
-      error = message;
+    const result = await getWordObjectToSave(wordToSave, type);
+    
+    if (result.error) {
+      error = result.error;
       response = '';
       isLoading = false;
 
@@ -49,17 +46,20 @@
         response = '';
       }, 3000);
 
-      return
-    }
-
-    const jsonBlob = chatgptres.message.message.content;
-    let _activeWordObj;
-    try {
-      _activeWordObj = JSON.parse(jsonBlob);
-    } catch (error) {
-      console.error('Error parsing word object JSON:', error);
       return;
     }
+
+    if (!result.success || !result.data) {
+      error = 'Failed to get word data';
+      response = '';
+      isLoading = false;
+      setTimeout(() => {
+        error = '';
+      }, 3000);
+      return;
+    }
+
+    const _activeWordObj = result.data;
   
 		const res = await fetch('/api/save-word', {
 			method: 'POST',
