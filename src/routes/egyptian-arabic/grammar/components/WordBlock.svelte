@@ -285,7 +285,7 @@
 <div class="mb-6 px-3 py-4">
 	<div class="mb-3 flex items-center justify-between">
 		<button onclick={toggleKeyboard} class="text-sm text-text-300 underline">
-			{keyboard === 'virtual' ? 'Use other keyboard' : 'Use builtin keyboard'}
+			{keyboard === 'virtual' ? 'Use native keyboard' : 'Use builtin keyboard'}
 		</button>
 	</div>
 	
