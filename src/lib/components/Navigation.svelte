@@ -18,6 +18,7 @@
         <li><a class="text-text-300 text-sm sm:text-base underline" href="/">Home</a></li>
         <li><a class="text-text-300 text-sm sm:text-base underline" href="/about">About</a></li>
         {#if session}
+          <li><a class="text-text-300 text-sm sm:text-base underline" href="/review">Review</a></li>
           <li><a class="text-text-300 text-sm sm:text-base underline" href="/profile">Profile</a></li>
         {/if}
         <menu class="ml-auto flex flex-row gap-4 items-center">

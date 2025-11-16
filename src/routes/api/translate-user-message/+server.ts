@@ -1,8 +1,10 @@
 import { error, json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { env } from '$env/dynamic/private';
-import OpenAI from "openai";
+import { GoogleGenAI } from "@google/genai";
 import { type Dialect } from '$lib/types/index';
+import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
+import { createTranslationWithFeedbackSchema } from '$lib/utils/gemini-schemas';
 
 const dialectNames: Record<Dialect, string> = {
   'fusha': 'Modern Standard Arabic (Fusha)',
@@ -16,7 +18,12 @@ const dialectNames: Record<Dialect, string> = {
 
 export const POST: RequestHandler = async ({ request }) => {
   try {
-    const openai = new OpenAI({ apiKey: env['OPEN_API_KEY'] });
+    const apiKey = env['GEMINI_API_KEY'];
+    if (!apiKey) {
+      return error(500, { message: 'GEMINI_API_KEY is not configured' });
+    }
+    
+    const ai = new GoogleGenAI({ apiKey });
     const { message, dialect, inputLanguage } = await request.json();
 
     if (!message || typeof message !== 'string') {
@@ -82,50 +89,46 @@ Format your response as JSON with this exact structure:
 }`;
     }
 
-    const messages: OpenAI.Chat.Completions.ChatCompletionMessageParam[] = [
-      { role: "system", content: systemPrompt },
-      { role: "user", content: message }
-    ];
+    const fullPrompt = `${systemPrompt}\n\nUser message: ${message}`;
 
-    const completion = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
-      messages: messages,
-      temperature: 0.3,
-      max_tokens: 300,
-      top_p: 0.9,
-      response_format: { type: "json_object" }
+    const translationWithFeedbackSchema = createTranslationWithFeedbackSchema();
+    const response = await ai.models.generateContent({
+      model: "gemini-2.5-flash",
+      contents: fullPrompt,
+      // @ts-expect-error - generationConfig is valid but types may be outdated
+      generationConfig: {
+        temperature: 0.3,
+        maxOutputTokens: 300,
+        topP: 0.9,
+        responseMimeType: 'application/json',
+        responseJsonSchema: translationWithFeedbackSchema.jsonSchema
+      }
     });
 
-    const responseContent = completion.choices[0]?.message?.content;
+    const responseContent = response.text;
 
     if (!responseContent) {
-      throw new Error('No response from OpenAI');
+      throw new Error('No response from Gemini');
     }
 
     // Parse the JSON response
     let parsedResponse;
     try {
-      parsedResponse = JSON.parse(responseContent);
+      parsedResponse = parseJsonFromGeminiResponse(responseContent, translationWithFeedbackSchema.zodSchema);
     } catch (parseError) {
-      // If JSON parsing fails, try to extract JSON from the response
-      const jsonMatch = responseContent.match(/\{[\s\S]*\}/);
-      if (jsonMatch) {
-        parsedResponse = JSON.parse(jsonMatch[0]);
+      // Fallback: create a structured response
+      if (actualIsArabic) {
+        parsedResponse = {
+          arabic: message,
+          english: message,
+          transliteration: message
+        };
       } else {
-        // Fallback: create a structured response
-        if (actualIsArabic) {
-          parsedResponse = {
-            arabic: message,
-            english: message,
-            transliteration: message
-          };
-        } else {
-          parsedResponse = {
-            arabic: message,
-            english: message,
-            transliteration: message
-          };
-        }
+        parsedResponse = {
+          arabic: message,
+          english: message,
+          transliteration: message
+        };
       }
     }
 

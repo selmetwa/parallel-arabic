@@ -1,20 +1,26 @@
 import { error, json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { env } from '$env/dynamic/private';
-import OpenAI from "openai";
+import { GoogleGenAI } from "@google/genai";
 
 export const POST: RequestHandler = async ({ request }) => {
-  const openai = new OpenAI({ apiKey: env['OPEN_API_KEY'] });
+  const apiKey = env['GEMINI_API_KEY'];
+  if (!apiKey) {
+    return error(500, { message: 'GEMINI_API_KEY is not configured' });
+  }
+  
+  const ai = new GoogleGenAI({ apiKey });
 
   const data = await request.json();
 
   try {
-    const completion = await openai.chat.completions.create({
-      messages: [{ role: "system", content: data.question }],
-      model: "gpt-4o-mini",
+    const response = await ai.models.generateContent({
+      model: "gemini-2.5-flash",
+      contents: data.question
     });
   
-    return json({ message: completion.choices[0] });
+    console.log({ response, candidates: response.candidates, text: response.text });
+    return json({ message: { message: { content: response.text } } });
 
   } catch (e) {
     console.error(e);

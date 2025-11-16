@@ -71,7 +71,7 @@ export const POST: RequestHandler = async ({ request }) => {
         .update({
           is_subscriber: true,
           subscriber_id: subscriptionId,
-          subscription_end_date: new Date(subscriptionEndDate * 1000).toISOString()
+          subscription_end_date: subscriptionEndDate  // Store as Unix timestamp (seconds)
         })
         .eq('subscriber_id', subscriptionId)
         .select();
