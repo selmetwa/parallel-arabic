@@ -2,6 +2,7 @@ import { error, json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { env } from '$env/dynamic/private';
 import { GoogleGenAI } from "@google/genai";
+import { generateContentWithRetry, GeminiApiError } from '$lib/utils/gemini-api-retry';
 
 type ChatMessage = {
   role: 'user' | 'assistant';
@@ -56,7 +57,7 @@ The user may ask about grammar rules, vocabulary, pronunciation, culture, or nee
     
     const fullPrompt = `${systemPrompt}\n\n${conversationContext ? `Previous conversation:\n${conversationContext}\n\n` : ''}User: ${message}\n\nAssistant:`;
 
-    const response = await ai.models.generateContent({
+    const response = await generateContentWithRetry(ai, {
       model: "gemini-2.5-flash",
       contents: fullPrompt,
       generationConfig: {
@@ -79,6 +80,14 @@ The user may ask about grammar rules, vocabulary, pronunciation, culture, or nee
 
   } catch (e) {
     console.error('Chat support error:', e);
+    
+    // Check if it's a 503 error (model overloaded)
+    if (e instanceof GeminiApiError && e.is503) {
+      return error(503, { 
+        message: 'The AI model is currently overloaded. Please try again in a few moments. We\'re working to handle the high demand.' 
+      });
+    }
+    
     return error(500, { 
       message: 'I\'m having trouble responding right now. Please try again in a moment.' 
     });

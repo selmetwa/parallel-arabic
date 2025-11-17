@@ -8,6 +8,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { supabase } from '$lib/supabaseClient';
 import { stories } from '$lib/constants/stories/index';
 import { commonWords } from '$lib/constants/common-words';
+import { generateContentWithRetry } from '$lib/utils/gemini-api-retry';
 import { getSpeakerNames } from '$lib/utils/voice-config';
 import { generateStoryAudio } from '../../../lib/server/audio-generation';
 import { uploadStoryToStorage } from '$lib/helpers/storage-helpers';
@@ -385,7 +386,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 
 	try {
 		const storySchema = createStorySchema(storyType === 'conversation');
-		const response = await ai.models.generateContent({
+		const response = await generateContentWithRetry(ai, {
 			model: 'gemini-2.5-flash',
 			contents: question,
 			// @ts-expect-error - generationConfig is valid but types may be outdated

@@ -5,6 +5,7 @@ import { GoogleGenAI } from "@google/genai";
 import { type Dialect } from '$lib/types/index';
 import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
 import { createTranslationResponseSchema } from '$lib/utils/gemini-schemas';
+import { generateContentWithRetry, GeminiApiError } from '$lib/utils/gemini-api-retry';
 
 type ChatMessage = {
   role: 'user' | 'assistant';
@@ -83,7 +84,7 @@ Format your response as JSON with this exact structure:
     const fullPrompt = `${systemPrompt}\n\n${conversationContext ? `Previous conversation:\n${conversationContext}\n\n` : ''}User: ${message}\n\nAssistant:`;
 
     const translationSchema = createTranslationResponseSchema();
-    const response = await ai.models.generateContent({
+    const response = await generateContentWithRetry(ai, {
       model: "gemini-2.5-flash",
       contents: fullPrompt,
       // @ts-expect-error - generationConfig is valid but types may be outdated
@@ -138,6 +139,14 @@ Format your response as JSON with this exact structure:
 
   } catch (e) {
     console.error('Tutor chat error:', e);
+    
+    // Check if it's a 503 error (model overloaded)
+    if (e instanceof GeminiApiError && e.is503) {
+      return error(503, { 
+        message: 'The AI model is currently overloaded. Please try again in a few moments. We\'re working to handle the high demand.' 
+      });
+    }
+    
     return error(500, { 
       message: 'I\'m having trouble responding right now. Please try again in a moment.' 
     });
