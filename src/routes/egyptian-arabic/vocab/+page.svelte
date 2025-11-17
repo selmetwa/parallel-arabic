@@ -20,7 +20,7 @@
 	<div class="text-left mb-6">
 		<h1 class="text-3xl sm:text-4xl text-text-300 font-bold mb-1 tracking-tight">Vocabulary Builder</h1>
 		<p class="text-text-200 text-lg sm:text-xl leading-snug">
-			Practice over 6,000 words with fun multiple choice quizzes.
+			Practice over 16,000 words with fun multiple choice quizzes.
 		</p>
 		{#if !data.hasActiveSubscription}
 			<p class="text-text-200 text-base mt-2 opacity-90">
