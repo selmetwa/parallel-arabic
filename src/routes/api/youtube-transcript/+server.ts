@@ -7,6 +7,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { uploadVideoToStorage } from '$lib/helpers/storage-helpers';
 import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
 import { createFormattedVideoSchema } from '$lib/utils/gemini-schemas';
+import { generateContentWithRetry } from '$lib/utils/gemini-api-retry';
 
 const YOUTUBE_TRANSCRIPT_API_KEY = '68d0d002c95b838ec92e4efb';
 const YOUTUBE_TRANSCRIPT_API_URL = 'https://www.youtube-transcript.io/api/transcripts';
@@ -73,7 +74,7 @@ Return your response as a JSON object with this structure:
 
 	try {
 		const formattedVideoSchema = createFormattedVideoSchema();
-		const response = await ai.models.generateContent({
+		const response = await generateContentWithRetry(ai, {
 			model: 'gemini-2.5-flash',
 			contents: fullPrompt,
 			// @ts-expect-error - generationConfig is valid but types may be outdated
