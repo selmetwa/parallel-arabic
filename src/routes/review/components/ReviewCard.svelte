@@ -217,7 +217,7 @@
       {#if showHint}
         <p class="text-xl text-text-200 mb-2">({word.transliteration})</p>
       {/if}
-      <div class="flex justify-center gap-2 mt-4 flex-row flex-wrap">
+      <div class="flex flex-row justify-center gap-2 mt-4 flex-row">
         <Button onClick={() => (showHint = !showHint)} type="button">
           {showHint ? 'Hide' : 'Show'} Hint
         </Button>
@@ -234,14 +234,6 @@
         >
           {word.arabic}
         </h2>
-        
-        <!-- Multi-word selection tip -->
-        <div class="mb-4 p-3 bg-tile-400 border-l-4 border-tile-500 rounded-r hover:bg-tile-500 transition-colors duration-300">
-          <p class="text-sm text-text-300">
-            <strong>💡 Tip:</strong> Click individual words for definitions, or 
-            <strong>click and drag across multiple words</strong> to select a phrase and get its definition!
-          </p>
-        </div>
         
         <div class="flex flex-col items-center justify-center gap-3">
           <!-- Selection controls -->
@@ -294,7 +286,7 @@
           {/if}
         </div>
         
-        <div class="flex justify-center gap-2 mt-4 flex-wrap">
+        <div class="flex justify-center gap-2 mt-4 flex-row">
           <AudioButton text={word.arabic} dialect={word.dialect as Dialect} audioUrl={word.audioUrl}>
             Listen
           </AudioButton>
