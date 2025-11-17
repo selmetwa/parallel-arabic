@@ -8,6 +8,7 @@ import { stories } from '$lib/constants/stories/index';
 import { commonWords } from '$lib/constants/common-words';
 import { getSpeakerNames } from '$lib/utils/voice-config';
 import { generateStoryAudio } from '../../../lib/server/audio-generation';
+import { generateContentWithRetry } from '$lib/utils/gemini-api-retry';
 import { saveUploadedAudioFile } from '$lib/utils/audio-utils';
 import { uploadStoryToStorage } from '$lib/helpers/storage-helpers';
 import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
@@ -54,7 +55,7 @@ Please segment this Arabic transcript into natural sentences:
 Format as: {"sentences": ["sentence1", "sentence2", ...]}`;
 
 		const segmentationSchema = createSentenceSegmentationSchema();
-		const response = await ai.models.generateContent({
+		const response = await generateContentWithRetry(ai, {
 			model: 'gemini-2.5-flash',
 			contents: prompt,
 			// @ts-expect-error - generationConfig is valid but types may be outdated
@@ -590,7 +591,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 
 	try {
 		const storySchema = createStorySchema(storyType === 'conversation');
-		const response = await ai.models.generateContent({
+		const response = await generateContentWithRetry(ai, {
 			model: 'gemini-2.5-flash',
 			contents: question,
 			// @ts-expect-error - generationConfig is valid but types may be outdated
