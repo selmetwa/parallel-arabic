@@ -166,6 +166,7 @@
 
       isTranscribing = false;
       isGettingResponse = true;
+      scrollToBottom();
 
       // Add user message to conversation with all three versions
       const userMsg: ConversationMessage = {
@@ -184,6 +185,9 @@
       };
       conversation = [...conversation, userMsg];
       scrollToBottom();
+      
+      // Scroll again after a short delay to ensure loading state is visible
+      setTimeout(() => scrollToBottom(), 100);
 
       // Get conversation history for context
       // Use the original transcribed message for user messages, Arabic for tutor messages
@@ -238,6 +242,9 @@
       };
       conversation = [...conversation, tutorMsg];
       scrollToBottom();
+      
+      // Scroll again after a short delay to ensure tutor message is visible
+      setTimeout(() => scrollToBottom(), 100);
 
       // Auto-play tutor audio response
       if (tutorData.arabic) {
@@ -328,7 +335,7 @@
 <PaywallModal isOpen={isModalOpen} handleCloseModal={handleCloseModal}></PaywallModal>
 
 <section class="w-full">
-  <div class="px-3 mt-6 sm:px-8 max-w-5xl mx-auto mb-6">
+  <div class="px-3 mt-6 sm:px-8 mb-6">
     <div class="text-left mb-6">
       <h1 class="text-3xl sm:text-4xl text-text-300 font-bold mb-1 tracking-tight">
         Arabic Tutor
@@ -369,7 +376,7 @@
 
   <!-- Recording Controls - Sticky -->
   <div class="sticky top-0 z-50 bg-tile-200 border-b border-tile-600 shadow-lg mb-6">
-    <div class="px-3 sm:px-8 py-4 max-w-5xl mx-auto">
+    <div class="px-3 sm:px-8 py-4">
       <div class="flex items-center gap-4 mb-4">
       <!-- Arabic Recording Button -->
       <div class="flex flex-col items-center gap-2">
@@ -422,10 +429,6 @@
           <p class="text-text-300 font-medium">
             Recording {recordingLanguage === 'ar' ? 'Arabic' : 'English'}... Click the same button again to stop
           </p>
-        {:else if isTranscribing}
-          <p class="text-text-300 font-medium">Transcribing your {recordingLanguage === 'ar' ? 'Arabic' : 'English'} message...</p>
-        {:else if isGettingResponse}
-          <p class="text-text-300 font-medium">Getting tutor response...</p>
         {:else if !hasActiveSubscription}
           <p class="text-text-200">
             <strong>Subscriber Only:</strong> This feature requires an active subscription. 
@@ -441,12 +444,12 @@
   </div>
 
   <!-- Conversation Transcript -->
-  <div class="px-3 sm:px-8 max-w-5xl mx-auto">
+  <div class="w-full px-3 sm:px-8">
     <div
       bind:this={transcriptContainer}
       class="bg-tile-300 border border-tile-500 rounded-lg p-4 min-h-[400px] max-h-[600px] overflow-y-auto"
     >
-    {#if conversation.length === 0}
+    {#if conversation.length === 0 && !isTranscribing && !isGettingResponse}
       <div class="flex items-center justify-center h-full min-h-[400px]">
         <p class="text-text-200 text-center">
           Start a conversation by clicking one of the recording buttons above.<br/>
@@ -652,6 +655,35 @@
             </div>
           {/if}
         {/each}
+        
+        <!-- Loading States within Chat -->
+        {#if isTranscribing}
+          <div class="flex flex-col gap-2 border-b border-tile-600 pb-4 bg-tile-400 rounded-lg p-6 animate-pulse">
+            <div class="flex items-center gap-3">
+              <div class="w-3 h-3 bg-blue-500 rounded-full animate-bounce"></div>
+              <div class="w-3 h-3 bg-blue-500 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+              <div class="w-3 h-3 bg-blue-500 rounded-full animate-bounce" style="animation-delay: 0.4s"></div>
+              <p class="text-lg font-semibold text-text-300 ml-2">
+                Transcribing your {recordingLanguage === 'ar' ? 'Arabic' : 'English'} message...
+              </p>
+            </div>
+            <p class="text-text-200 text-sm ml-11">Processing your audio and generating translations, feedback, and suggestions</p>
+          </div>
+        {/if}
+        
+        {#if isGettingResponse}
+          <div class="flex flex-col gap-2 border-b border-tile-600 pb-4 bg-tile-300 rounded-lg p-6 animate-pulse">
+            <div class="flex items-center gap-3">
+              <div class="w-3 h-3 bg-green-500 rounded-full animate-bounce"></div>
+              <div class="w-3 h-3 bg-green-500 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+              <div class="w-3 h-3 bg-green-500 rounded-full animate-bounce" style="animation-delay: 0.4s"></div>
+              <p class="text-lg font-semibold text-text-300 ml-2">
+                Tutor is thinking...
+              </p>
+            </div>
+            <p class="text-text-200 text-sm ml-11">Getting your personalized response</p>
+          </div>
+        {/if}
       </div>
     {/if}
   </div>

@@ -24,6 +24,12 @@ export async function POST({ request }) {
   // Default to Arabic if no language specified (for backward compatibility)
   const languageCode = language === "en" ? "en" : "ar";
 
+  // Validate audio file size (minimum 1KB to avoid empty files)
+  const arrayBuffer = await file.arrayBuffer();
+  if (arrayBuffer.byteLength < 1000) {
+    return json({ error: "Audio file is too small. Please ensure you recorded audio." }, { status: 400 });
+  }
+
   // Use /tmp directory for Vercel compatibility (writable in serverless environments)
   const tmpDir = '/tmp';
   if (!fs.existsSync(tmpDir)) {
@@ -33,7 +39,6 @@ export async function POST({ request }) {
       fs.mkdirSync(fallbackTmpDir, { recursive: true });
     }
     const filePath = path.join(fallbackTmpDir, `audio_${Date.now()}_${file.name}`);
-    const arrayBuffer = await file.arrayBuffer();
     const buffer = Buffer.from(arrayBuffer);
     fs.writeFileSync(filePath, new Uint8Array(arrayBuffer));
     
@@ -41,7 +46,6 @@ export async function POST({ request }) {
   }
 
   const filePath = path.join(tmpDir, `audio_${Date.now()}_${file.name}`);
-  const arrayBuffer = await file.arrayBuffer();
   const buffer = Buffer.from(arrayBuffer);
   fs.writeFileSync(filePath, new Uint8Array(arrayBuffer));
 
@@ -130,6 +134,15 @@ async function processAudio(
     }
 
     const _data = await apiResponse.json();
+    
+    // Log the full response for debugging
+    console.log('ElevenLabs API response:', {
+      hasText: !!_data.text,
+      textLength: _data.text?.length || 0,
+      responseKeys: Object.keys(_data),
+      fullResponse: JSON.stringify(_data)
+    });
+    
     const transcribedText = _data.text?.trim();
     
     if (transcribedText && transcribedText.length > 0) {
@@ -140,10 +153,34 @@ async function processAudio(
       
       return json({ text: transcribedText });
     } else {
-      throw new Error("Empty transcription result");
+      // Provide more helpful error message
+      const errorDetails = {
+        responseReceived: !!_data,
+        responseKeys: _data ? Object.keys(_data) : [],
+        rawText: _data?.text,
+        languageCode,
+        audioFileName: audioFileName,
+        audioSize: audioBuffer.length
+      };
+      
+      console.error('Empty transcription result:', errorDetails);
+      
+      // Check if audio might be too short or silent
+      if (audioBuffer.length < 1000) {
+        throw new Error("Audio file is too short or empty. Please record at least 1 second of audio.");
+      }
+      
+      throw new Error("No speech detected in audio. Please ensure the audio contains clear speech and try again.");
     }
   } catch (error) {
     console.error(`Transcription error with ${languageCode}:`, error);
+    console.error('Error details:', {
+      errorType: error instanceof Error ? error.constructor.name : typeof error,
+      errorMessage: error instanceof Error ? error.message : String(error),
+      languageCode,
+      audioFileName: originalFileName,
+      audioSize: buffer.length
+    });
     
     // Clean up temporary files on error
     cleanupFiles(tempOriginalPath, tempConvertedPath);
