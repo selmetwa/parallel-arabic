@@ -32,12 +32,6 @@
           Spaced repetition for saved words.
         </p>
       </a>
-      <div class="px-4 py-5 flex-col flex gap-2 border-2 border-tile-600 text-left bg-tile-400">
-        <h3 class="text-lg text-text-300 font-bold">Choose Your Dialect</h3>
-        <p class="text-text-300 text-xs font-medium leading-tight opacity-90">
-          Select a dialect below for vocabulary, writing, and more.
-        </p>
-      </div>
     </div>
   </div>
 
