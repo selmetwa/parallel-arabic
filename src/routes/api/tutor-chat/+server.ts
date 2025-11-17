@@ -98,6 +98,7 @@ Format your response as JSON with this exact structure:
 
     const responseContent = response.text;
 
+    console.log('responseContent', responseContent);
     if (!responseContent) {
       throw new Error('No response from Gemini');
     }
