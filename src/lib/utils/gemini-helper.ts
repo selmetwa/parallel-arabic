@@ -6,6 +6,7 @@
 import type { GoogleGenAI } from '@google/genai';
 import type { z } from 'zod';
 import { parseJsonFromGeminiResponse } from './gemini-json-parser';
+import { generateContentWithRetry } from './gemini-api-retry';
 
 interface GeminiCallOptions {
 	model?: string;
@@ -16,6 +17,7 @@ interface GeminiCallOptions {
 
 /**
  * Makes a Gemini API call with structured output and Zod validation
+ * Includes automatic retry with exponential backoff for 503 and other 5xx errors
  * 
  * @param ai - GoogleGenAI instance
  * @param prompt - The prompt to send to Gemini
@@ -36,7 +38,8 @@ export async function callGeminiWithSchema<T>(
 		maxOutputTokens
 	} = options;
 
-	const response = await ai.models.generateContent({
+	// Use retry wrapper for automatic retry on 503/5xx errors
+	const response = await generateContentWithRetry(ai, {
 		model,
 		contents: prompt,
 		// @ts-expect-error - generationConfig is valid but types may be outdated

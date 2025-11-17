@@ -2,6 +2,7 @@ import { error, json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { env } from '$env/dynamic/private';
 import { GoogleGenAI } from "@google/genai";
+import { generateContentWithRetry, GeminiApiError } from '$lib/utils/gemini-api-retry';
 
 export const POST: RequestHandler = async ({ request }) => {
   const apiKey = env['GEMINI_API_KEY'];
@@ -14,7 +15,7 @@ export const POST: RequestHandler = async ({ request }) => {
   const data = await request.json();
 
   try {
-    const response = await ai.models.generateContent({
+    const response = await generateContentWithRetry(ai, {
       model: "gemini-2.5-flash",
       contents: data.question
     });
@@ -24,6 +25,14 @@ export const POST: RequestHandler = async ({ request }) => {
 
   } catch (e) {
     console.error(e);
+    
+    // Check if it's a 503 error (model overloaded)
+    if (e instanceof GeminiApiError && e.is503) {
+      return error(503, { 
+        message: 'The AI model is currently overloaded. Please try again in a few moments. We\'re working to handle the high demand.' 
+      });
+    }
+    
     return error(500, { message: 'Something went wrong' });
   }
 }

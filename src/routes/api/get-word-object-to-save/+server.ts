@@ -2,6 +2,7 @@ import { error, json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { env } from '$env/dynamic/private';
 import { GoogleGenAI } from "@google/genai";
+import { generateContentWithRetry } from '$lib/utils/gemini-api-retry';
 
 export const POST: RequestHandler = async ({ request, locals }) => {
   const apiKey = env['GEMINI_API_KEY'];
@@ -20,7 +21,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
   const data = await request.json();
 
   try {
-    const response = await ai.models.generateContent({
+    const response = await generateContentWithRetry(ai, {
       model: "gemini-2.5-flash",
       contents: data.question,
       generationConfig: {
