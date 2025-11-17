@@ -94,6 +94,50 @@
 					</div>
 				</div>
 
+        <!-- Tutor-->
+
+        <div class="bg-tile-500 border-2 border-tile-600 shadow-lg overflow-hidden">
+          <div class="flex flex-col sm:flex-row">
+            <div class="sm:w-2/5 h-64 sm:h-auto bg-tile-300 border-r-0 sm:border-r-2 border-b-2 sm:border-b-0 border-tile-600 flex items-center justify-center p-4">
+              <img src="/images/tutor.png" alt="Tutor" class="max-w-full max-h-full object-contain" />
+            </div>
+            <div class="sm:w-3/5 p-6 flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold text-text-300 mb-3">Tutor</h3>
+   
+                <p class="text-base text-text-200 leading-relaxed mb-4">
+                  Practice speaking Arabic with an AI tutor. Choose your dialect and have a conversation, get real-time feedback! Use the "Speak Arabic" button for Arabic conversation, or "Ask in English" to ask questions like "how do I say X?".
+                </p>
+              </div>
+              <a href="/tutor" class="inline-block px-6 py-3 text-base font-semibold bg-tile-600 border-2 border-tile-600 text-text-300 hover:bg-tile-700 transition-colors duration-300 shadow-md w-fit">
+                Practice with Tutor
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spaced Repetition-->
+        <div class="bg-tile-500 border-2 border-tile-600 shadow-lg overflow-hidden">
+          <div class="flex flex-col sm:flex-row">
+            <div class="sm:w-2/5 h-48 sm:h-auto bg-tile-300 border-r-0 sm:border-r-2 border-b-2 sm:border-b-0 border-tile-600 flex items-center justify-center p-4">
+              <img src="/images/spaced-repetition.png" alt="Spaced Repetition" class="max-w-full max-h-full object-contain" />
+            </div>
+            <div class="sm:w-3/5 p-6 flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold text-text-300 mb-3">Spaced Repetition</h3>
+                <p class="text-base text-text-200 leading-relaxed mb-3">
+                  Practice with spaced repetition to remember words and sentences.
+                </p>
+                <p class="text-base text-text-200 leading-relaxed mb-4">
+                  Generate your own content, or import words from over 116,000 vocab words.
+                </p>
+              </div>
+              <a href="/review" class="inline-block px-6 py-3 text-base font-semibold bg-tile-600 border-2 border-tile-600 text-text-300 hover:bg-tile-700 transition-colors duration-300 shadow-md w-fit">
+                Practice with Spaced Repetition
+              </a>
+            </div>
+          </div>
+        </div>
         <!-- Videos -->
          <div class="bg-tile-500 border-2 border-tile-600 shadow-lg overflow-hidden">
           <div class="flex flex-col sm:flex-row">
@@ -200,7 +244,7 @@
 							<div>
 								<h3 class="text-xl font-bold text-text-300 mb-3">Writing Practice</h3>
 								<p class="text-base text-text-200 leading-relaxed mb-3">
-									Practice writing skills with over 6,000 words using our custom virtual keyboard.
+									Practice writing skills with over 16,000 words using our custom virtual keyboard.
 								</p>
 								<p class="text-base text-text-200 leading-relaxed mb-4">
 									Save words to your personal wordbank or export to Anki decks.
@@ -226,7 +270,7 @@
 							<div>
 								<h3 class="text-xl font-bold text-text-300 mb-3">Vocabulary Quizzes</h3>
 								<p class="text-base text-text-200 leading-relaxed mb-4">
-									Practice over 6,000 words through engaging multiple choice quizzes and interactive exercises.
+									Practice over 16,000 words through engaging multiple choice quizzes and interactive exercises.
 								</p>
 							</div>
 							<a

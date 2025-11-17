@@ -663,14 +663,14 @@
         <h2 class="text-3xl font-bold text-text-300 mb-4">Session Complete!</h2>
 
         <div class="space-y-4">
-          <div class="flex gap-4 justify-center flex-wrap">
+          <div class="flex flex-row gap-4 justify-center flex-wrap">
           <Button onClick={startNewSession} type="button">Review More</Button>
           <Button onClick={() => goto('/review/import')} type="button">Import More Words</Button>
             <Button onClick={() => showGenerateSentences = true} type="button">Generate Sentences</Button>
             <Button onClick={() => showGenerateWords = true} type="button">Generate Words</Button>
           </div>
           <div class="flex flex-col gap-2 text-sm text-text-200 text-center">
-            <p><strong>Import More Words:</strong> Import from over 16,000 vocab words</p>
+            <p><strong>Import More Words:</strong> Import from over 116,000 vocab words</p>
             <p><strong>Generate Words:</strong> Create your own content, great for beginners</p>
             <p><strong>Generate Sentences:</strong> Great for sentence-based comprehension</p>
           </div>
@@ -689,7 +689,7 @@
             <Button onClick={() => showGenerateWords = true} type="button">Generate Words</Button>
           </div>
           <div class="flex flex-col gap-2 text-sm text-text-200 text-center">
-            <p><strong>Import Words:</strong> Import from over 16,000 vocab words</p>
+            <p><strong>Import Words:</strong> Import from over 116,000 vocab words</p>
             <p><strong>Generate Words:</strong> Create your own content, great for beginners</p>
             <p><strong>Generate Sentences:</strong> Great for sentence-based comprehension</p>
           </div>
