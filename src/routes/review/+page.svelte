@@ -670,7 +670,7 @@
             <Button onClick={() => showGenerateWords = true} type="button">Generate Words</Button>
           </div>
           <div class="flex flex-col gap-2 text-sm text-text-200 text-center">
-            <p><strong>Import More Words:</strong> Import from over 116,000 vocab words</p>
+            <p><strong>Import More Words:</strong> Import from over 16,000 vocab words</p>
             <p><strong>Generate Words:</strong> Create your own content, great for beginners</p>
             <p><strong>Generate Sentences:</strong> Great for sentence-based comprehension</p>
           </div>
@@ -689,7 +689,7 @@
             <Button onClick={() => showGenerateWords = true} type="button">Generate Words</Button>
           </div>
           <div class="flex flex-col gap-2 text-sm text-text-200 text-center">
-            <p><strong>Import Words:</strong> Import from over 116,000 vocab words</p>
+            <p><strong>Import Words:</strong> Import from over 16,000 vocab words</p>
             <p><strong>Generate Words:</strong> Create your own content, great for beginners</p>
             <p><strong>Generate Sentences:</strong> Great for sentence-based comprehension</p>
           </div>
