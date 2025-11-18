@@ -129,7 +129,7 @@
                   Practice with spaced repetition to remember words and sentences.
                 </p>
                 <p class="text-base text-text-200 leading-relaxed mb-4">
-                  Generate your own content, or import words from over 116,000 vocab words.
+                  Generate your own content, or import words from over 16,000 vocab words.
                 </p>
               </div>
               <a href="/review" class="inline-block px-6 py-3 text-base font-semibold bg-tile-600 border-2 border-tile-600 text-text-300 hover:bg-tile-700 transition-colors duration-300 shadow-md w-fit">

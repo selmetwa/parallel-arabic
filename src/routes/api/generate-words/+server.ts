@@ -7,6 +7,7 @@ import { normalizeArabicText } from '$lib/utils/arabic-normalization';
 import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
 import { createWordsSchema } from '$lib/utils/gemini-schemas';
 import { generateContentWithRetry, GeminiApiError } from '$lib/utils/gemini-api-retry';
+import { supabase } from '$lib/supabaseClient';
 
 // Function to clean unwanted characters from text
 function cleanText(text: string, type: 'arabic' | 'english' | 'transliteration'): string {
@@ -37,7 +38,7 @@ function cleanText(text: string, type: 'arabic' | 'english' | 'transliteration')
   return cleaned;
 }
 
-export const POST: RequestHandler = async ({ request }) => {
+export const POST: RequestHandler = async ({ request, locals }) => {
   const apiKey = env['GEMINI_API_KEY'];
   if (!apiKey) {
     return error(500, { message: 'GEMINI_API_KEY is not configured' });
@@ -50,6 +51,31 @@ export const POST: RequestHandler = async ({ request }) => {
   const wordTypes = data.wordTypes || []; // Array of selected word types (nouns, numbers, etc.)
   const difficulty = data.difficulty || 'a1';
   const customRequest = data.customRequest || ''; // Custom user input for word types
+
+  // Get user's saved words to exclude duplicates
+  let savedArabicWords: string[] = [];
+  try {
+    const { sessionId, user } = await locals?.auth?.validate() || {};
+    if (sessionId && user) {
+      const userId = user.id;
+      const { data: savedWords, error: savedWordsError } = await supabase
+        .from('saved_word')
+        .select('arabic_word')
+        .eq('user_id', userId);
+      
+      if (!savedWordsError && savedWords) {
+        // Normalize and clean saved words for comparison
+        savedArabicWords = savedWords
+          .map((word) => word.arabic_word)
+          .filter(Boolean)
+          .map((word) => normalizeArabicText(cleanText(word, 'arabic')))
+          .filter(Boolean);
+      }
+    }
+  } catch (err) {
+    // If we can't fetch saved words, continue without exclusion (non-critical)
+    console.warn('Could not fetch saved words for duplicate exclusion:', err);
+  }
 
   // Map difficulty levels to descriptions
   const getDifficultyDescription = (level: string): string => {
@@ -148,6 +174,20 @@ export const POST: RequestHandler = async ({ request }) => {
     }
   }
 
+  // Build exclusion section for saved words
+  let exclusionSection = '';
+  if (savedArabicWords.length > 0) {
+    // Limit to first 500 words to avoid prompt being too long
+    const wordsToExclude = savedArabicWords.slice(0, 500);
+    exclusionSection = `
+    
+    CRITICAL: DO NOT GENERATE ANY OF THESE WORDS (user already has them saved):
+    ${wordsToExclude.join(', ')}
+    
+    You MUST generate 20 NEW words that are NOT in the list above. If you generate any duplicate words, the request will fail.
+    `;
+  }
+
   let question = `
     Give me 20 individual words in ${config.name} dialect.
 
@@ -158,6 +198,8 @@ export const POST: RequestHandler = async ({ request }) => {
     DIFFICULTY LEVEL: ${getDifficultyDescription(difficulty)}
 
     ${wordListSection}
+
+    ${exclusionSection}
 
     ${config.description}
 
@@ -220,8 +262,28 @@ export const POST: RequestHandler = async ({ request }) => {
       };
     }).filter((word: any) => word && word.arabic && word.english && word.transliteration);
 
+    // Filter out duplicates with saved words (safety check)
+    if (savedArabicWords.length > 0) {
+      const normalizedSavedWords = new Set(savedArabicWords);
+      words = words.filter((word: any) => {
+        const normalizedArabic = normalizeArabicText(word.arabic);
+        return !normalizedSavedWords.has(normalizedArabic);
+      });
+    }
+
+    // Also filter duplicates within the generated words themselves
+    const seenArabic = new Set<string>();
+    words = words.filter((word: any) => {
+      const normalizedArabic = normalizeArabicText(word.arabic);
+      if (seenArabic.has(normalizedArabic)) {
+        return false; // Duplicate within generated words
+      }
+      seenArabic.add(normalizedArabic);
+      return true;
+    });
+
     if (words.length === 0) {
-      throw new Error('No valid words generated');
+      throw new Error('No valid words generated (all were duplicates or invalid)');
     }
 
     return json({
