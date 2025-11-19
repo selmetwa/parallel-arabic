@@ -5,6 +5,9 @@
 	import Button from '$lib/components/Button.svelte';
 	import Sentence from '$lib/components/dialect-shared/story/components/Sentence.svelte';
 	import DefinitionModal from '$lib/components/dialect-shared/sentences/DefinitionModal.svelte';
+	import DialectComparisonModal from '$lib/components/dialect-shared/sentences/DialectComparisonModal.svelte';
+	import type { DialectComparisonSchema } from '$lib/utils/gemini-schemas';
+	import type { Dialect } from '$lib/types';
 
 	let { data } = $props();
 	let currentLineIndex = $state(0);
@@ -25,6 +28,50 @@
 
 	// Modal state
 	let isDefinitionModalOpen = $state(false);
+
+	// Dialect Comparison State
+	let isComparisonModalOpen = $state(false);
+	let comparisonData = $state<DialectComparisonSchema | null>(null);
+	let isComparing = $state(false);
+	let comparisonText = $state('');
+	let comparisonEnglish = $state('');
+	let comparisonError = $state<string | null>(null);
+
+	async function compareDialects(text: string, english?: string, transliteration?: string) {
+		isComparing = true;
+		isComparisonModalOpen = true;
+		comparisonData = null;
+		comparisonText = text;
+		comparisonEnglish = english || '';
+		comparisonError = null;
+
+		try {
+			const res = await fetch('/api/compare-dialects', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ 
+					text,
+					currentDialect: data.video.dialect,
+					transliteration
+				})
+			});
+			
+			if (res.ok) {
+				comparisonData = await res.json();
+			} else {
+				const errorData = await res.json().catch(() => ({ message: 'Failed to compare dialects' }));
+				comparisonError = errorData.message || 'Failed to compare dialects. Please try again.';
+			}
+		} catch (e) {
+			comparisonError = e instanceof Error ? e.message : 'An unexpected error occurred. Please try again.';
+		} finally {
+			isComparing = false;
+		}
+	}
+
+	function closeComparisonModal() {
+		isComparisonModalOpen = false;
+	}
 
 	// Get dialect badge color
 	function getDialectBadgeColor(dialect: string) {
@@ -254,22 +301,37 @@
 				</div>
 			</div>
 			
-			<div class="flex justify-between items-center mb-4">
-				<Button 
-					onClick={previousLine} 
-					disabled={currentLineIndex === 0}
-					type="button"
-				>
-					Previous
-				</Button>
+			<div class="flex flex-col gap-2 mb-4">
+				<div class="flex justify-between items-center">
+					<Button 
+						onClick={previousLine} 
+						disabled={currentLineIndex === 0}
+						type="button"
+					>
+						Previous
+					</Button>
+					
+					<Button 
+						onClick={nextLine} 
+						disabled={currentLineIndex >= (data.video.lines?.length || 1) - 1}
+						type="button"
+					>
+						Next
+					</Button>
+				</div>
 				
-				<Button 
-					onClick={nextLine} 
-					disabled={currentLineIndex >= (data.video.lines?.length || 1) - 1}
-					type="button"
-				>
-					Next
-				</Button>
+				{#if data.video.lines && data.video.lines[currentLineIndex]?.arabic?.text}
+					<Button 
+						onClick={() => compareDialects(
+							data.video.lines[currentLineIndex].arabic.text,
+							data.video.lines[currentLineIndex].english?.text,
+							data.video.lines[currentLineIndex].transliteration?.text
+						)}
+						type="button"
+					>
+						Compare Dialects
+					</Button>
+				{/if}
 			</div>
 		</div>
 
@@ -372,4 +434,15 @@
 	isModalOpen={isDefinitionModalOpen}
 	closeModal={closeDefinitionModal}
 	dialect={data.video.dialect}
+/>
+
+<DialectComparisonModal
+	isOpen={isComparisonModalOpen}
+	closeModal={closeComparisonModal}
+	originalText={comparisonText}
+	originalEnglish={comparisonEnglish}
+	{comparisonData}
+	isLoading={isComparing}
+	error={comparisonError}
+	currentDialect={data.video.dialect as Dialect}
 />

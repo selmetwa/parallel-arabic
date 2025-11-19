@@ -2,7 +2,9 @@
   import Button from '$lib/components/Button.svelte';
   import AudioButton from '$lib/components/AudioButton.svelte';
   import DefinitionModal from '$lib/components/dialect-shared/sentences/DefinitionModal.svelte';
+  import DialectComparisonModal from '$lib/components/dialect-shared/sentences/DialectComparisonModal.svelte';
   import type { Dialect } from '$lib/types';
+  import type { DialectComparisonSchema } from '$lib/utils/gemini-schemas';
   import cn from 'classnames';
   import { filterArabicCharacters } from '$lib/utils/arabic-normalization';
 
@@ -42,6 +44,46 @@
   let definition = $state('');
   let targetWord = $state('');
   let targetArabicWord = $state('');
+
+  // Dialect Comparison State
+  let isComparisonModalOpen = $state(false);
+  let comparisonData = $state<DialectComparisonSchema | null>(null);
+  let isComparing = $state(false);
+  let comparisonError = $state<string | null>(null);
+
+  async function compareDialects() {
+    isComparing = true;
+    isComparisonModalOpen = true;
+    comparisonData = null;
+    comparisonError = null;
+
+    try {
+      const res = await fetch('/api/compare-dialects', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          text: word.arabic,
+          currentDialect: word.dialect,
+          transliteration: word.transliteration
+        })
+      });
+      
+      if (res.ok) {
+        comparisonData = await res.json();
+      } else {
+        const errorData = await res.json().catch(() => ({ message: 'Failed to compare dialects' }));
+        comparisonError = errorData.message || 'Failed to compare dialects. Please try again.';
+      }
+    } catch (e) {
+      comparisonError = e instanceof Error ? e.message : 'An unexpected error occurred. Please try again.';
+    } finally {
+      isComparing = false;
+    }
+  }
+
+  function closeComparisonModal() {
+    isComparisonModalOpen = false;
+  }
 
   const dialectName: Record<string, string> = {
     fusha: 'Modern Standard Arabic',
@@ -205,6 +247,17 @@
   dialect={word.dialect as Dialect}
 />
 
+<DialectComparisonModal
+  isOpen={isComparisonModalOpen}
+  closeModal={closeComparisonModal}
+  originalText={word.arabic}
+  originalEnglish={word.english}
+  {comparisonData}
+  isLoading={isComparing}
+  error={comparisonError}
+  currentDialect={word.dialect as Dialect}
+/>
+
 <div class="bg-tile-300 border border-tile-500 rounded-lg shadow-lg p-6 sm:p-8">
   <div class="text-center mb-6">
     {#if !showAnswer}
@@ -286,10 +339,11 @@
           {/if}
         </div>
         
-        <div class="flex justify-center gap-2 mt-4 flex-row">
+        <div class="flex justify-center gap-2 mt-4 flex-row flex-wrap">
           <AudioButton text={word.arabic} dialect={word.dialect as Dialect} audioUrl={word.audioUrl}>
             Listen
           </AudioButton>
+          <Button onClick={compareDialects} type="button">Compare Dialects</Button>
           <Button onClick={toggleAnswer} type="button">Hide Answer</Button>
         </div>
       </div>
