@@ -22,7 +22,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 
   try {
     const response = await generateContentWithRetry(ai, {
-      model: "gemini-2.5-flash",
+      model: "gemini-3-pro-preview",
       contents: data.question,
       generationConfig: {
         responseMimeType: 'application/json'

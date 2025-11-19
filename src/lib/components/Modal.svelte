@@ -8,6 +8,7 @@
    * @property {any} [handleCloseModal]
    * @property {string} [width]
    * @property {string} [height]
+   * @property {number} [zIndex]
    * @property {import('svelte').Snippet} [children]
    */
 
@@ -17,13 +18,14 @@
     handleCloseModal = () => {},
     width = '400px',
     height = 'fit-content',
+    zIndex = 100,
     children
   } = $props();
 </script>
 
 <dialog 
 open={isOpen}
-class="{`modal ${isOpen ? 'open' : ''} bg-tile-300 border-4 border-tile-600`}" style="--width: {width}; --height: {height};">
+class="{`modal ${isOpen ? 'open' : ''} bg-tile-300 border-4 border-tile-600`}" style="--width: {width}; --height: {height}; --z-index: {zIndex};">
   <!-- Your modal content goes here -->
    <div class="absolute top-0 right-0 p-2">
     <Button onClick={handleCloseModal} type="button">X</Button>
@@ -31,7 +33,7 @@ class="{`modal ${isOpen ? 'open' : ''} bg-tile-300 border-4 border-tile-600`}" s
   <slot></slot>
 </dialog>
 
-<div class="{`overlay ${isOpen ? 'open' : ''}`}" onclick={handleCloseModal}>
+<div class="{`overlay ${isOpen ? 'open' : ''}`}" onclick={handleCloseModal} style="z-index: {zIndex - 1};">
   <!-- Clicking on the overlay will close the modal -->
 </div>
 
@@ -59,12 +61,11 @@ class="{`modal ${isOpen ? 'open' : ''} bg-tile-300 border-4 border-tile-600`}" s
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
-    z-index: 99;
   }
 
   .modal.open {
     opacity: 1;
-    z-index: 100;
+    z-index: var(--z-index);
   }
 
   .overlay.open {

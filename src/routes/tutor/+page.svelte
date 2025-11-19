@@ -7,7 +7,10 @@
   import Sentence from '$lib/components/dialect-shared/story/components/Sentence.svelte';
   import AudioButton from '$lib/components/AudioButton.svelte';
   import PaywallModal from '$lib/components/PaywallModal.svelte';
+  import DialectComparisonModal from '$lib/components/dialect-shared/sentences/DialectComparisonModal.svelte';
+  import Button from '$lib/components/Button.svelte';
   import { type Dialect } from '$lib/types/index';
+  import type { DialectComparisonSchema } from '$lib/utils/gemini-schemas';
 
   let { data } = $props();
 
@@ -67,6 +70,50 @@
   let isTranscribing = $state(false);
   let isGettingResponse = $state(false);
   let transcriptContainer: HTMLDivElement | null = $state(null);
+
+  // Dialect Comparison State
+  let isComparisonModalOpen = $state(false);
+  let comparisonData = $state<DialectComparisonSchema | null>(null);
+  let isComparing = $state(false);
+  let comparisonText = $state('');
+  let comparisonEnglish = $state('');
+  let comparisonError = $state<string | null>(null);
+
+  async function compareDialects(text: string, english?: string, transliteration?: string) {
+    isComparing = true;
+    isComparisonModalOpen = true;
+    comparisonData = null;
+    comparisonText = text;
+    comparisonEnglish = english || '';
+    comparisonError = null;
+
+    try {
+      const res = await fetch('/api/compare-dialects', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          text,
+          currentDialect: selectedDialect,
+          transliteration
+        })
+      });
+      
+      if (res.ok) {
+        comparisonData = await res.json();
+      } else {
+        const errorData = await res.json().catch(() => ({ message: 'Failed to compare dialects' }));
+        comparisonError = errorData.message || 'Failed to compare dialects. Please try again.';
+      }
+    } catch (e) {
+      comparisonError = e instanceof Error ? e.message : 'An unexpected error occurred. Please try again.';
+    } finally {
+      isComparing = false;
+    }
+  }
+
+  function closeComparisonModal() {
+    isComparisonModalOpen = false;
+  }
 
   function setDialect(e: Event) {
     const target = e.target as HTMLInputElement;
@@ -335,6 +382,17 @@
 
 <PaywallModal isOpen={isModalOpen} handleCloseModal={handleCloseModal}></PaywallModal>
 
+<DialectComparisonModal
+  isOpen={isComparisonModalOpen}
+  closeModal={closeComparisonModal}
+  originalText={comparisonText}
+  originalEnglish={comparisonEnglish}
+  {comparisonData}
+  isLoading={isComparing}
+  error={comparisonError}
+  currentDialect={selectedDialect}
+/>
+
 <section class="w-full">
   <div class="px-3 mt-6 sm:px-8 mb-6">
     <div class="text-left mb-6">
@@ -598,11 +656,16 @@
                       Transliteration
                     </button>
                   </div>
-                  {#if message.arabic}
-                    <AudioButton text={message.arabic} dialect={selectedDialect}>
-                      🔊 Play Audio
-                    </AudioButton>
-                  {/if}
+                  <div class="flex gap-2">
+                    {#if message.arabic}
+                      <AudioButton text={message.arabic} dialect={selectedDialect}>
+                        🔊 Play Audio
+                      </AudioButton>
+                      <Button onClick={() => compareDialects(message.arabic || '', message.english, message.transliteration)} type="button">
+                        Compare Dialects
+                      </Button>
+                    {/if}
+                  </div>
                 </div>
               </div>
               {#if message.showArabic !== false}
