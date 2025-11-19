@@ -80,6 +80,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
         arabic_word: arabicWord,
         english_word: englishWord,
         transliterated_word: transliteratedWord,
+        dialect: dialect, // Store dialect directly
         ease_factor: 2.5, // Default ease factor
         interval_days: 0, // Start at 0 days
         repetitions: 0, // No repetitions yet

@@ -97,6 +97,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
       arabic_word: word.arabic_word,
       english_word: word.english_word,
       transliterated_word: word.transliterated_word,
+      dialect: dialect, // Store dialect directly
       ease_factor: 2.5,
       interval_days: 0,
       repetitions: 0,

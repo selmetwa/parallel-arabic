@@ -66,7 +66,8 @@ interface Section {
 const dialectApiPaths: Record<string, string> = {
   'egyptian-arabic': 'egyptian',
   'darija': 'darija',
-  'fusha': 'modern-standard-arabic'
+  'fusha': 'modern-standard-arabic',
+  'levantine': 'levantine'
 };
 
 async function fetchWordsFromApi(dialect: string, sectionPath: string): Promise<ApiWord[]> {
@@ -238,6 +239,7 @@ async function populateAllWords(dryRun: boolean = false, specificDialect?: strin
   let egyptianSections: Section[] = [];
   let darijaSections: Section[] = [];
   let fushaSections: Section[] = [];
+  let levantineSections: Section[] = [];
 
   try {
     // Try with .js extension first (for TypeScript compiled output)
@@ -280,6 +282,19 @@ async function populateAllWords(dryRun: boolean = false, specificDialect?: strin
     }
   }
 
+  try {
+    const levantineModule = await import('../src/lib/constants/levantine-sections.js');
+    levantineSections = levantineModule.levantineSections || [];
+  } catch (error: unknown) {
+    try {
+      const levantineModule = await import('../src/lib/constants/levantine-sections.ts');
+      levantineSections = levantineModule.levantineSections || [];
+    } catch (fallbackError: unknown) {
+      const message = error instanceof Error ? error.message : 'Unknown error';
+      console.error('❌ Error loading Levantine sections:', message);
+    }
+  }
+
   const dialects: Array<{ name: string; sections: Section[] }> = [];
 
   if (!specificDialect || specificDialect === 'egyptian-arabic') {
@@ -290,6 +305,9 @@ async function populateAllWords(dryRun: boolean = false, specificDialect?: strin
   }
   if (!specificDialect || specificDialect === 'fusha') {
     dialects.push({ name: 'fusha', sections: fushaSections });
+  }
+  if (!specificDialect || specificDialect === 'levantine') {
+    dialects.push({ name: 'levantine', sections: levantineSections });
   }
 
   let totalWords = 0;

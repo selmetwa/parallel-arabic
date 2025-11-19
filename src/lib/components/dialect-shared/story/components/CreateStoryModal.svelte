@@ -45,6 +45,8 @@ function handleClosePaywallModal() {
   let isTranscribing = $state(false);
   let customTitle = $state('');
   let useCustomTitle = $state(false);
+  let generationError = $state('');
+  let errorDetails = $state('');
 
 	function openModal() {
     if (!data.session) {
@@ -63,6 +65,8 @@ function handleClosePaywallModal() {
 			audioFile = null;
 			audioFileError = '';
 			fileError = '';
+			generationError = '';
+			errorDetails = '';
 		}
 	}
 
@@ -228,6 +232,10 @@ function handleClosePaywallModal() {
 	async function handleSubmit(event: any) {
 		event.preventDefault();
     
+    // Clear any previous errors
+    generationError = '';
+    errorDetails = '';
+    
     // Validate inputs first
     if (creationMode === 'upload' && !audioFile) {
       audioFileError = 'Please select an audio file';
@@ -385,11 +393,36 @@ function handleClosePaywallModal() {
     } catch (error) {
       console.error('Error creating story:', error);
       
-      // Show error toast
+      // Parse and display user-friendly error messages
       const errorMsg = error instanceof Error ? error.message : 'An unexpected error occurred';
-      showErrorToast(processingToastId, 'Failed to create content', errorMsg);
       
-      // Reset loading states
+      // Set user-friendly error messages based on error type
+      if (errorMsg.includes('Failed to parse JSON')) {
+        generationError = 'AI Response Format Error';
+        errorDetails = 'The AI generated content in an unexpected format. This is usually temporary. Please try again, and if the issue persists, try adjusting your prompt or reducing the content length.';
+      } else if (errorMsg.includes('transcribe')) {
+        generationError = 'Transcription Failed';
+        errorDetails = errorMsg.includes('Audio file too large') 
+          ? 'The audio file is too large. Please use a file smaller than 25MB or try compressing it.'
+          : 'We couldn\'t transcribe the audio file. Please ensure it contains clear Arabic speech and try again.';
+      } else if (errorMsg.includes('fetch') || errorMsg.includes('network')) {
+        generationError = 'Connection Error';
+        errorDetails = 'Unable to reach the server. Please check your internet connection and try again.';
+      } else if (errorMsg.includes('timeout') || errorMsg.includes('time out')) {
+        generationError = 'Request Timeout';
+        errorDetails = 'The generation took too long. Try creating shorter content or simplifying your request.';
+      } else if (errorMsg.includes('rate limit') || errorMsg.includes('quota')) {
+        generationError = 'Service Limit Reached';
+        errorDetails = 'Too many requests in a short time. Please wait a moment and try again.';
+      } else {
+        generationError = 'Generation Failed';
+        errorDetails = errorMsg || 'An unexpected error occurred. Please try again. If the problem persists, try simplifying your request or reducing the content length.';
+      }
+      
+      // Show error toast
+      showErrorToast(processingToastId, generationError, errorDetails);
+      
+      // Reset loading states but keep modal open so user can see error and try again
       isLoading = false;
       isTranscribing = false;
     }
@@ -484,6 +517,31 @@ function handleClosePaywallModal() {
       <p>
         <i>{storyType === 'story' ? 'Story' : 'Conversation'} is AI generated in {dialectName[dialect]} and may contain mistakes</i>
       </p>
+      
+      <!-- Error Message Display -->
+      {#if generationError}
+        <div class="mt-4 p-4 border-2 border-red-400 bg-red-50 rounded-lg">
+          <div class="flex items-start gap-3">
+            <div class="flex-shrink-0 mt-1">
+              <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-lg font-semibold text-red-700 mb-1">{generationError}</h3>
+              <p class="text-sm text-red-600">{errorDetails}</p>
+              <button
+                type="button"
+                onclick={() => { generationError = ''; errorDetails = ''; }}
+                class="mt-3 text-sm text-red-700 hover:text-red-800 underline"
+              >
+                Dismiss
+              </button>
+            </div>
+          </div>
+        </div>
+      {/if}
+      
 			<form onsubmit={handleSubmit}>
 
         <!-- Creation Mode Selection -->

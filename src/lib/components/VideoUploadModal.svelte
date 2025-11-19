@@ -167,8 +167,9 @@
 
   const dialectOptions = [
     { value: 'egyptian-arabic', label: 'Egyptian Arabic' },
-    { value: 'darija', label: 'Moroccan Darija' },
-    { value: 'fusha', label: 'Modern Standard Arabic' }
+    { value: 'fusha', label: 'Modern Standard Arabic' },
+    { value: 'levantine', label: 'Levantine Arabic' },
+    { value: 'darija', label: 'Moroccan Darija' }
   ];
 </script>
 
