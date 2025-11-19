@@ -7,7 +7,7 @@
 <section class="mt-4 flex flex-col gap-6 px-6 py-8 sm:px-8">
 	<h1 class="mx-auto text-5xl font-bold text-text-300">Pricing</h1>
   <p class="text-xl text-text-200 mx-auto text-center max-w-4xl">
-    Master multiple Arabic dialects with AI-powered learning, speaking practice, and 15,000+ vocabulary words — all for the price of one lesson on
+    Master multiple Arabic dialects with AI-powered learning, speaking practice, and 16,000+ vocabulary words — all for the price of one lesson on
      <a class="underline text-xl text-text-200" target="_blank" href="https://www.italki.com/en/teachers/arabic?from%5B0%5D=EG&speaks%5B0%5D=english">Italki</a> per month.
   </p>
 	<div class="mx-4 flex flex-col gap-3 sm:flex-row lg:mx-12">
@@ -60,7 +60,19 @@
 			<ul class="mt-3 flex flex-col gap-4 px-4 text-text-300">
 				<li class="flex items-start gap-2">
 					<Checkmark />
-					<span><strong>Multiple Arabic dialects:</strong> Egyptian, Moroccan & Fusha</span>
+					<span><strong>Multiple Arabic dialects:</strong> Egyptian, Levantine, Moroccan & Fusha</span>
+				</li>
+				<li class="flex items-start gap-2">
+					<Checkmark />
+					<span><strong>AI Tutor:</strong> Practice speaking with an AI tutor with real-time feedback</span>
+				</li>
+				<li class="flex items-start gap-2">
+					<Checkmark />
+					<span><strong>Spaced repetition system</strong> to remember words and sentences effectively</span>
+				</li>
+				<li class="flex items-start gap-2">
+					<Checkmark />
+					<span><strong>Interactive videos</strong> with transcripts, translations, and transliterations</span>
 				</li>
 				<li class="flex items-start gap-2">
 					<Checkmark />
@@ -74,21 +86,17 @@
 					<Checkmark />
 					<span><strong>Advanced speaking practice</strong> with real-time pronunciation feedback</span>
 				</li>
-        <li class="flex items-start gap-2">
+				<li class="flex items-start gap-2">
+					<Checkmark />
+					<span>Access to <strong>over 16,000 vocabulary words</strong> with multiple choice quizzes</span>
+				</li>
+				<li class="flex items-start gap-2">
 					<Checkmark />
 					<span>Access to all verbs for comprehensive verb conjugation practice</span>
 				</li>
 				<li class="flex items-start gap-2">
 					<Checkmark />
-					<span>Access to <strong>over 15,000 vocabulary words</strong> for writing and handwriting practice</span>
-				</li>
-				<li class="flex items-start gap-2">
-					<Checkmark />
-					<span>Access to <strong>over 15,000 vocabulary words</strong> and multiple choice quizzes</span>
-				</li>
-				<li class="flex items-start gap-2">
-					<Checkmark />
-					<span>Access to custom built Anki decks for all dialects</span>
+					<span>Writing and handwriting practice with custom virtual keyboard</span>
 				</li>
 				<li class="flex items-start gap-2">
 					<Checkmark />
@@ -96,7 +104,7 @@
 				</li>
 				<li class="flex items-start gap-2">
 					<Checkmark />
-					<span>Save unlimited keywords and phrases to personal wordbank</span>
+					<span>Access to custom built Anki decks for all dialects</span>
 				</li>
 			</ul>
       <form method="POST" action="/?/subscribe" class="px-4 mt-4">
