@@ -9,7 +9,7 @@
 
   let { data }: Props = $props();
 
-  type Dialect = 'egyptian-arabic' | 'darija' | 'fusha';
+  type Dialect = 'egyptian-arabic' | 'darija' | 'fusha' | 'levantine';
 
   let selectedDialect = $state<Dialect>('egyptian-arabic');
   let selectedCategory = $state('most_common'); // Default to most_common
@@ -19,8 +19,9 @@
 
   const dialectOptions: Array<{ value: Dialect; label: string }> = [
     { value: 'egyptian-arabic', label: 'Egyptian Arabic' },
-    { value: 'darija', label: 'Moroccan Darija' },
-    { value: 'fusha', label: 'Modern Standard Arabic (Fusha)' }
+    { value: 'fusha', label: 'Modern Standard Arabic (Fusha)' },
+    { value: 'levantine', label: 'Levantine Arabic' },
+    { value: 'darija', label: 'Moroccan Darija' }
   ];
 
   const currentSections = $derived.by(() => {
@@ -95,7 +96,9 @@
         <div>
           <label class="block text-text-300 font-semibold mb-2">
             Category
-            <span class="text-text-200 text-sm font-normal ml-2">(Recommended: Most common words)</span>
+            {#if selectedDialect === 'egyptian-arabic'}
+              <span class="text-text-200 text-sm font-normal ml-2">(Recommended: Most common words)</span>
+            {/if}
           </label>
           <select
             bind:value={selectedCategory}
@@ -171,7 +174,11 @@
     <div class="mt-6 bg-tile-300 border border-tile-500 rounded-lg p-4">
       <h3 class="text-text-300 font-semibold mb-2">💡 Tips</h3>
       <ul class="text-text-200 space-y-1 text-sm">
-        <li>• Start with "Most common words" for the best learning experience</li>
+        {#if selectedDialect === 'egyptian-arabic'}
+          <li>• Start with "Most common words" for the best learning experience</li>
+        {:else}
+          <li>• Choose categories that match your learning goals</li>
+        {/if}
         <li>• Words you already have saved will be skipped automatically</li>
         <li>• You can import from multiple categories to build your review deck</li>
         <li>• Review your words regularly for best results!</li>

@@ -123,6 +123,71 @@ function normalizeArrayToObject<T>(data: unknown, zodSchema: z.ZodSchema<T>): un
 }
 
 /**
+ * Extracts error context from JSON parsing errors
+ * Helps identify the exact location and surrounding content where parsing failed
+ */
+function getJsonErrorContext(text: string, error: Error): string {
+	const errorMessage = error.message;
+	// Extract position from error message (e.g., "at position 3054")
+	const positionMatch = errorMessage.match(/position (\d+)/);
+	const lineMatch = errorMessage.match(/line (\d+)/);
+	const columnMatch = errorMessage.match(/column (\d+)/);
+	
+	let contextInfo = `Error: ${errorMessage}\n`;
+	
+	if (positionMatch) {
+		const position = parseInt(positionMatch[1], 10);
+		const start = Math.max(0, position - 100);
+		const end = Math.min(text.length, position + 100);
+		const before = text.substring(start, position);
+		const after = text.substring(position, end);
+		
+		contextInfo += `\nContext around position ${position}:\n`;
+		contextInfo += `BEFORE: ...${before}\n`;
+		contextInfo += `AFTER: ${after}...\n`;
+	}
+	
+	if (lineMatch && columnMatch) {
+		const lineNum = parseInt(lineMatch[1], 10);
+		const colNum = parseInt(columnMatch[1], 10);
+		const lines = text.split('\n');
+		
+		if (lineNum > 0 && lineNum <= lines.length) {
+			const problemLine = lines[lineNum - 1];
+			contextInfo += `\nLine ${lineNum}: ${problemLine}\n`;
+			contextInfo += ' '.repeat(9 + colNum) + '^\n';
+			
+			// Show surrounding lines for context
+			if (lineNum > 1) {
+				contextInfo += `Line ${lineNum - 1}: ${lines[lineNum - 2]}\n`;
+			}
+			if (lineNum < lines.length) {
+				contextInfo += `Line ${lineNum + 1}: ${lines[lineNum]}\n`;
+			}
+		}
+	}
+	
+	return contextInfo;
+}
+
+/**
+ * Attempts to repair common JSON formatting issues
+ * Handles: trailing commas, unescaped newlines, etc.
+ */
+function attemptJsonRepair(text: string): string {
+	console.log('[JSON Repair] Attempting to repair JSON...');
+	let repaired = text;
+	
+	// Remove trailing commas before closing braces/brackets
+	// This is a common issue with LLM-generated JSON
+	repaired = repaired.replace(/,(\s*[}\]])/g, '$1');
+	
+	console.log('[JSON Repair] Removed trailing commas');
+	
+	return repaired;
+}
+
+/**
  * Parses JSON from Gemini structured output response with Zod schema validation
  * 
  * Structured outputs with responseMimeType: 'application/json' + responseJsonSchema
@@ -132,6 +197,7 @@ function normalizeArrayToObject<T>(data: unknown, zodSchema: z.ZodSchema<T>): un
  * Handles known issues:
  * - Markdown code blocks wrapping JSON (Gemini 2.5 models)
  * - Arrays returned instead of objects (e.g., [{...}] instead of { sentences: [{...}] })
+ * - Trailing commas and other common formatting issues
  * 
  * @param text - The raw text response from Gemini
  * @param zodSchema - Zod schema to validate against
@@ -223,22 +289,66 @@ export function parseJsonFromGeminiResponse<T = unknown>(
 				throw validationError;
 			}
 		} catch (fallbackError) {
-			// If both strategies fail, log error details and throw
-			console.error('[Gemini JSON Parser] Both parsing strategies failed!');
-			const preview = text.length > 1000 ? text.substring(0, 1000) + '...' : text;
-			console.error('[Gemini JSON Parser] Original text preview:', preview);
-			console.error('[Gemini JSON Parser] Direct parse error:', e instanceof Error ? e.message : String(e));
-			console.error('[Gemini JSON Parser] Fallback parse error:', fallbackError instanceof Error ? fallbackError.message : String(fallbackError));
-			
-			// Try to show what cleanJsonResponse returned
+			// Strategy 3: Try repairing common JSON issues
+			console.log('[Gemini JSON Parser] Cleaned parse failed, attempting JSON repair...');
 			try {
 				const cleaned = cleanJsonResponse(text);
-				console.error('[Gemini JSON Parser] Cleaned text that failed:', cleaned.substring(0, 500));
-			} catch (cleanError) {
-				console.error('[Gemini JSON Parser] Error during cleaning:', cleanError);
+				const repaired = attemptJsonRepair(cleaned);
+				console.log('[Gemini JSON Parser] Repaired text length:', repaired.length);
+				console.log('[Gemini JSON Parser] Text changed after repair:', repaired !== cleaned);
+				
+				const parsed = JSON.parse(repaired);
+				console.log('[Gemini JSON Parser] Repaired parse successful, validating with Zod...');
+				console.log('[Gemini JSON Parser] Parsed type:', Array.isArray(parsed) ? 'array' : typeof parsed);
+				
+				// Try validation, with normalization if needed
+				try {
+					const validated = zodSchema.parse(parsed);
+					console.log('[Gemini JSON Parser] Zod validation successful after repair!');
+					return validated;
+				} catch (validationError) {
+					// If validation fails and we have an array, try normalizing it
+					if (Array.isArray(parsed)) {
+						console.log('[Gemini JSON Parser] Validation failed with array, attempting normalization...');
+						const normalized = normalizeArrayToObject(parsed, zodSchema);
+						if (normalized !== parsed) {
+							console.log('[Gemini JSON Parser] Normalized structure, retrying validation...');
+							const validated = zodSchema.parse(normalized);
+							console.log('[Gemini JSON Parser] Zod validation successful after repair + normalization!');
+							return validated;
+						}
+					}
+					throw validationError;
+				}
+			} catch (repairError) {
+				// If all strategies fail, log detailed error context and throw
+				console.error('[Gemini JSON Parser] All parsing strategies failed!');
+				const preview = text.length > 1000 ? text.substring(0, 1000) + '...' : text;
+				console.error('[Gemini JSON Parser] Original text preview:', preview);
+				console.error('[Gemini JSON Parser] Direct parse error:', e instanceof Error ? e.message : String(e));
+				console.error('[Gemini JSON Parser] Fallback parse error:', fallbackError instanceof Error ? fallbackError.message : String(fallbackError));
+				console.error('[Gemini JSON Parser] Repair parse error:', repairError instanceof Error ? repairError.message : String(repairError));
+				
+				// Show detailed error context for the repair attempt (most likely to succeed)
+				if (repairError instanceof Error) {
+					try {
+						const cleaned = cleanJsonResponse(text);
+						const repaired = attemptJsonRepair(cleaned);
+						const errorContext = getJsonErrorContext(repaired, repairError);
+						console.error('[Gemini JSON Parser] Detailed error context:\n', errorContext);
+						
+						// Log the full repaired text for debugging
+						console.error('[Gemini JSON Parser] Full repaired text (first 2000 chars):', repaired.substring(0, 2000));
+						if (repaired.length > 2000) {
+							console.error('[Gemini JSON Parser] Full repaired text (last 1000 chars):', repaired.substring(repaired.length - 1000));
+						}
+					} catch (contextError) {
+						console.error('[Gemini JSON Parser] Error generating context:', contextError);
+					}
+				}
+				
+				throw new Error(`Failed to parse JSON from Gemini response: ${text.substring(0, 200)}...`);
 			}
-			
-			throw new Error(`Failed to parse JSON from Gemini response: ${text.substring(0, 200)}...`);
 		}
 	}
 }

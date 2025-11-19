@@ -54,6 +54,7 @@
   const dialectOptions = [
     { value: 'egyptian-arabic', label: 'Egyptian Arabic' },
     { value: 'fusha', label: 'Modern Standard Arabic (Fusha)' },
+    { value: 'levantine', label: 'Levantine Arabic' },
   ];
 
   let selectedDialect = $state<Dialect>('egyptian-arabic');

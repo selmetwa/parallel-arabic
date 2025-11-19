@@ -18,7 +18,19 @@
     <ul class="mt-3 flex flex-col gap-4 text-text-300">
       <li class="flex items-start gap-2">
         <Checkmark />
-        <span><strong>Multiple Arabic dialects:</strong> Egyptian, Moroccan & Fusha</span>
+        <span><strong>Multiple Arabic dialects:</strong> Egyptian, Levantine, Moroccan & Fusha</span>
+      </li>
+      <li class="flex items-start gap-2">
+        <Checkmark />
+        <span><strong>AI Tutor:</strong> Practice speaking with an AI tutor with real-time feedback</span>
+      </li>
+      <li class="flex items-start gap-2">
+        <Checkmark />
+        <span><strong>Spaced repetition system</strong> to remember words and sentences effectively</span>
+      </li>
+      <li class="flex items-start gap-2">
+        <Checkmark />
+        <span><strong>Interactive videos</strong> with transcripts, translations, and transliterations</span>
       </li>
       <li class="flex items-start gap-2">
         <Checkmark />
@@ -34,19 +46,15 @@
       </li>
       <li class="flex items-start gap-2">
         <Checkmark />
+        <span>Access to <strong>over 16,000 vocabulary words</strong> with multiple choice quizzes</span>
+      </li>
+      <li class="flex items-start gap-2">
+        <Checkmark />
         <span>Access to all verbs for comprehensive verb conjugation practice</span>
       </li>
       <li class="flex items-start gap-2">
         <Checkmark />
-        <span>Access to <strong>over 15,000 vocabulary words</strong> for writing and handwriting practice</span>
-      </li>
-      <li class="flex items-start gap-2">
-        <Checkmark />
-        <span>Access to <strong>over 15,000 vocabulary words</strong> and multiple choice quizzes</span>
-      </li>
-      <li class="flex items-start gap-2">
-        <Checkmark />
-        <span>Access to custom built Anki decks for all dialects</span>
+        <span>Writing and handwriting practice with custom virtual keyboard</span>
       </li>
       <li class="flex items-start gap-2">
         <Checkmark />
@@ -54,7 +62,7 @@
       </li>
       <li class="flex items-start gap-2">
         <Checkmark />
-        <span>Save unlimited keywords and phrases to personal wordbank</span>
+        <span>Access to custom built Anki decks for all dialects</span>
       </li>
     </ul>
     <form method="POST" action="/?/subscribe" class="mt-4">

@@ -41,6 +41,7 @@ export const GET: RequestHandler = async ({ locals }) => {
         arabic_word,
         english_word,
         transliterated_word,
+        dialect,
         ease_factor,
         interval_days,
         repetitions,
@@ -49,8 +50,7 @@ export const GET: RequestHandler = async ({ locals }) => {
         is_learning,
         word_id,
         word:word_id (
-          audio_url,
-          dialect
+          audio_url
         )
       `)
       .eq('user_id', userId)
@@ -71,7 +71,7 @@ export const GET: RequestHandler = async ({ locals }) => {
       english: word.english_word,
       transliteration: word.transliterated_word,
       audioUrl: word.word?.audio_url || undefined,
-      dialect: word.word?.dialect || 'egyptian-arabic',
+      dialect: word.dialect || 'egyptian-arabic', // Use dialect from saved_word table
       easeFactor: word.ease_factor,
       intervalDays: word.interval_days,
       repetitions: word.repetitions,

@@ -62,14 +62,16 @@
 
   const dialectOptions = [
     { value: 'egyptian-arabic', label: 'Egyptian Arabic' },
-    { value: 'darija', label: 'Moroccan Darija' },
     { value: 'fusha', label: 'Modern Standard Arabic' },
+    { value: 'levantine', label: 'Levantine Arabic' },
+    { value: 'darija', label: 'Moroccan Darija' },
   ];
 
   // Get dialect badge color
   function getDialectBadgeColor(dialect: string) {
     const colors = {
       'egyptian-arabic': 'bg-tile-500 text-text-300',
+      'levantine': 'bg-orange-100 text-orange-800',
       'darija': 'bg-green-100 text-green-800',
       'fusha': 'bg-purple-100 text-purple-800',
     };
