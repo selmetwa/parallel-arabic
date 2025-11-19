@@ -4,6 +4,7 @@
   import Checkmark from "$lib/components/Checkmark.svelte";
   import { getWordObjectToSave } from '$lib/helpers/get-word-object-to-save';
   import AudioButton from "$lib/components/AudioButton.svelte";
+  import DialectComparisonModal from "$lib/components/dialect-shared/sentences/DialectComparisonModal.svelte";
 
   /**
    * @typedef {Object} Props
@@ -28,6 +29,45 @@
   
   let isLoading = $state(false);
   
+  // Dialect Comparison State
+  let isComparisonModalOpen = $state(false);
+  let comparisonData = $state(null);
+  let isComparing = $state(false);
+  let comparisonError = $state(null);
+
+  async function compareDialects() {
+    isComparing = true;
+    isComparisonModalOpen = true;
+    comparisonData = null;
+    comparisonError = null;
+
+    try {
+      const res = await fetch('/api/compare-dialects', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          text: activeWordObj.arabic,
+          currentDialect: 'egyptian-arabic',
+          transliteration: activeWordObj.transliterated || activeWordObj.transliteration
+        })
+      });
+      
+      if (res.ok) {
+        comparisonData = await res.json();
+      } else {
+        const errorData = await res.json().catch(() => ({ message: 'Failed to compare dialects' }));
+        comparisonError = errorData.message || 'Failed to compare dialects. Please try again.';
+      }
+    } catch (e) {
+      comparisonError = e instanceof Error ? e.message : 'An unexpected error occurred. Please try again.';
+    } finally {
+      isComparing = false;
+    }
+  }
+
+  function closeComparisonModal() {
+    isComparisonModalOpen = false;
+  }
 
   const saveWord = async () => {
     isLoading = true;
@@ -91,12 +131,23 @@
 	};
 </script>
 
+<DialectComparisonModal
+  isOpen={isComparisonModalOpen}
+  closeModal={closeComparisonModal}
+  originalText={activeWordObj.arabic}
+  originalEnglish={activeWordObj.english}
+  {comparisonData}
+  isLoading={isComparing}
+  error={comparisonError}
+  currentDialect="egyptian-arabic"
+/>
+
 {#if error}
   <div class="absolute top-0 w-full py-4 bg-red-100 h-[107px] sm:h-[67px] left-0 text-center z-50">
     <p class="font-semibold text-text-300 text-xl">{error}</p>
   </div>
 {/if}
-<Modal isOpen={isModalOpen} handleCloseModal={closeModal}>
+<Modal isOpen={isModalOpen} handleCloseModal={closeModal} width="max(70%, 600px)" height="fit-content">
 	<div class="flex flex-col items-center p-4">
 		<p class="text-4xl text-text-300">{activeWordObj.arabic}</p>
     <p class="my-2 text-text-200">{activeWordObj.description}</p>
@@ -110,8 +161,9 @@
         <span class="sr-only">Loading...</span>
       </div>
     {/if}
-		<div class="mt-2 flex w-full flex-row items-center gap-2">
-      <div class="flex flex-1">
+		<div class="mt-2 flex w-full flex-col gap-2">
+      <div class="flex flex-row gap-2">
+        <div class="flex flex-1">
 			<Button type="button" onClick={saveWord}>
         {#if isLoading}
         <span class="flex flex-row items-center gap-2 text-center mx-auto w-fit">
@@ -151,6 +203,12 @@
         Audio
       </AudioButton>
     </div>
+      </div>
+      <div class="flex w-full">
+        <Button type="button" onClick={compareDialects}>
+          Compare Dialects
+        </Button>
+      </div>
 		</div>
 	</div>
 </Modal>

@@ -290,3 +290,26 @@ export function createLessonSchema() {
 
 export type LessonSchema = z.infer<ReturnType<typeof createLessonSchema>['zodSchema']>;
 
+/**
+ * Schema for dialect comparison
+ */
+export function createDialectComparisonSchema() {
+	const dialectSchema = z.object({
+		arabic: z.string(),
+		transliteration: z.string()
+	});
+
+	const schema = z.object({
+		egyptian: dialectSchema,
+		darija: dialectSchema,
+		levantine: dialectSchema,
+		fusha: dialectSchema
+	});
+
+	return {
+		zodSchema: schema,
+		jsonSchema: zodToJsonSchema(schema)
+	};
+}
+
+export type DialectComparisonSchema = z.infer<ReturnType<typeof createDialectComparisonSchema>['zodSchema']>;
