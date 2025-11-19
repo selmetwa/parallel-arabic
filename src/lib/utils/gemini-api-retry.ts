@@ -1,7 +1,7 @@
 /**
  * Retry utility for Gemini API calls with exponential backoff
  * Handles 503 (Service Unavailable) and other 5xx errors from Gemini API
- * Falls back to gemini-2.0-flash if all retries fail
+ * Model priority: gemini-3-pro-preview → gemini-2.5-flash → gemini-2.0-flash
  */
 
 import type { GoogleGenAI } from '@google/genai';
@@ -12,7 +12,7 @@ interface RetryOptions {
 	maxDelayMs?: number;
 	backoffMultiplier?: number;
 	retryableStatusCodes?: number[];
-	fallbackModel?: string;
+	fallbackModels?: string[];
 }
 
 const DEFAULT_OPTIONS: Required<RetryOptions> = {
@@ -21,7 +21,7 @@ const DEFAULT_OPTIONS: Required<RetryOptions> = {
 	maxDelayMs: 16000, // Max 16 seconds delay
 	backoffMultiplier: 2, // Double the delay each time
 	retryableStatusCodes: [503, 500, 502, 504, 429], // Service Unavailable, Internal Server Error, Bad Gateway, Gateway Timeout, Too Many Requests
-	fallbackModel: 'gemini-2.0-flash' // Fallback model to use if all retries fail
+	fallbackModels: ['gemini-2.5-flash', 'gemini-2.0-flash'] // Fallback models to use if all retries fail
 };
 
 /**
@@ -191,7 +191,7 @@ export async function retryGeminiApiCall<T>(
 
 /**
  * Helper function to wrap generateContent calls with retry logic
- * Falls back to gemini-2.0-flash if all retries fail with retryable errors
+ * Falls back through a chain of models: gemini-3-pro-preview → gemini-2.5-flash → gemini-2.0-flash
  * 
  * @param ai - GoogleGenAI instance
  * @param params - Parameters to pass to generateContent
@@ -204,7 +204,8 @@ export async function generateContentWithRetry(
 	options: RetryOptions = {}
 ) {
 	const retryOptions = { ...DEFAULT_OPTIONS, ...options };
-	const originalModel = params.model || 'gemini-2.5-flash';
+	const originalModel = params.model || 'gemini-3-pro-preview';
+	const triedModels = new Set<string>([originalModel]);
 
 	try {
 		// Try with original model and retries
@@ -214,34 +215,52 @@ export async function generateContentWithRetry(
 			options
 		);
 	} catch (error) {
-		// If error is retryable (503, 500, etc.) and we have a fallback model, try it
-		if (error instanceof GeminiApiError && error.isRetryable && retryOptions.fallbackModel) {
-			// Only fallback if the original model is not already the fallback
-			if (originalModel !== retryOptions.fallbackModel) {
+		// If error is retryable (503, 500, etc.) and we have fallback models, try them
+		if (error instanceof GeminiApiError && error.isRetryable && retryOptions.fallbackModels) {
+			let lastFallbackError = error;
+
+			// Try each fallback model in sequence
+			for (const fallbackModel of retryOptions.fallbackModels) {
+				// Skip if we've already tried this model
+				if (triedModels.has(fallbackModel)) {
+					continue;
+				}
+
 				console.warn(
-					`All retries failed with ${originalModel}. Falling back to ${retryOptions.fallbackModel}...`,
+					`All retries failed with ${originalModel}. Falling back to ${fallbackModel}...`,
 					{ statusCode: error.statusCode, message: error.message }
 				);
 
 				try {
-					// Try once with fallback model (no retries to avoid infinite loops)
+					// Try with fallback model (no retries to avoid infinite loops)
 					const fallbackParams = {
 						...params,
-						model: retryOptions.fallbackModel
+						model: fallbackModel
 					};
 					return await ai.models.generateContent(fallbackParams);
 				} catch (fallbackError) {
-					// If fallback also fails, throw the original error with 503 info
+					// Log the failure and try next fallback
 					const fallbackStatusCode = getStatusCode(fallbackError);
-					console.error(`Fallback model ${retryOptions.fallbackModel} also failed:`, {
+					console.error(`Fallback model ${fallbackModel} also failed:`, {
 						statusCode: fallbackStatusCode,
 						error: fallbackError
 					});
 					
-					// Preserve original error info, especially if it was a 503
-					throw error;
+					lastFallbackError = fallbackError instanceof GeminiApiError 
+						? fallbackError 
+						: new GeminiApiError(
+							fallbackError instanceof Error ? fallbackError.message : String(fallbackError),
+							fallbackStatusCode,
+							true
+						);
+					
+					triedModels.add(fallbackModel);
+					// Continue to next fallback model
 				}
 			}
+
+			// All fallbacks failed, throw the last error
+			throw lastFallbackError;
 		}
 
 		// Re-throw the error if not retryable or no fallback

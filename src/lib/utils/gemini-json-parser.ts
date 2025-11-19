@@ -81,15 +81,81 @@ function cleanJsonResponse(response: string): string {
  * @returns Normalized data structure, or original data if normalization doesn't help
  */
 function normalizeArrayToObject<T>(data: unknown, zodSchema: z.ZodSchema<T>): unknown {
-	if (!Array.isArray(data) || data.length === 0) {
+	// Handle case where data is an object with a single property containing the array
+	// e.g. { translations: [...] } or { dialects: [...] } or { translations: {egyptian_arabic: {...}} }
+	let arrayData = data;
+	if (!Array.isArray(data) && typeof data === 'object' && data !== null) {
+		// Check for specific known array properties first
+		const record = data as Record<string, unknown>;
+		
+		// Handle translations as an object (e.g., {translations: {egyptian_arabic: {...}}})
+		if (record.translations && typeof record.translations === 'object' && !Array.isArray(record.translations)) {
+			console.log('[normalizeArrayToObject] Found "translations" object property');
+			const translationsObj = record.translations as Record<string, unknown>;
+			
+			// Map Gemini's key names to our expected keys
+			const keyMap: Record<string, string> = {
+				'egyptian_arabic': 'egyptian',
+				'moroccan_darija': 'darija',
+				'levantine_arabic': 'levantine',
+				'modern_standard_arabic': 'fusha',
+				'fusha': 'fusha'
+			};
+			
+			const normalized: Record<string, unknown> = {};
+			let hasDialectStructure = false;
+			
+			for (const [key, val] of Object.entries(translationsObj)) {
+				const mappedKey = keyMap[key] || key;
+				// Check if this looks like a dialect entry (has arabic_script and transliteration)
+				if (val && typeof val === 'object' && 'arabic_script' in val && 'transliteration' in val) {
+					hasDialectStructure = true;
+					const dialectVal = val as Record<string, unknown>;
+					normalized[mappedKey] = {
+						arabic: dialectVal.arabic_script,
+						transliteration: dialectVal.transliteration
+					};
+				} else if (val && typeof val === 'object' && 'arabic' in val && 'transliteration' in val) {
+					// Already in correct format
+					hasDialectStructure = true;
+					normalized[mappedKey] = val;
+				}
+			}
+			
+			if (hasDialectStructure) {
+				console.log('[normalizeArrayToObject] Successfully transformed nested translations object');
+				return normalized;
+			}
+		}
+		
+		if (Array.isArray(record.translations)) {
+			console.log('[normalizeArrayToObject] Found "translations" array property');
+			arrayData = record.translations;
+		} else if (Array.isArray(record.dialects)) {
+			console.log('[normalizeArrayToObject] Found "dialects" array property');
+			arrayData = record.dialects;
+		} else {
+			// Fallback to checking if there's only one property and it's an array
+			const keys = Object.keys(data);
+			if (keys.length === 1) {
+				const value = record[keys[0]];
+				if (Array.isArray(value)) {
+					console.log('[normalizeArrayToObject] Nested array detected in property:', keys[0]);
+					arrayData = value;
+				}
+			}
+		}
+	}
+
+	if (!Array.isArray(arrayData) || arrayData.length === 0) {
 		return data;
 	}
 
 	// Check if array items match the expected structure (have arabic, english, transliteration)
-	const firstItem = data[0];
+	const firstItem = arrayData[0];
+	if (firstItem && typeof firstItem === 'object') {
+		// Case 1: Standard sentence/word structure
 	if (
-		firstItem &&
-		typeof firstItem === 'object' &&
 		'arabic' in firstItem &&
 		'english' in firstItem &&
 		'transliteration' in firstItem
@@ -97,12 +163,12 @@ function normalizeArrayToObject<T>(data: unknown, zodSchema: z.ZodSchema<T>): un
 		// Try wrapping as sentences or words
 		// Common property names used in our schemas
 		const candidates = [
-			{ sentences: data },
-			{ words: data }
+				{ sentences: arrayData },
+				{ words: arrayData }
 		];
 		
 		console.log('[normalizeArrayToObject] Array detected, trying to wrap as object...');
-		console.log('[normalizeArrayToObject] Array length:', data.length);
+			console.log('[normalizeArrayToObject] Array length:', arrayData.length);
 		console.log('[normalizeArrayToObject] First item keys:', Object.keys(firstItem));
 		
 		// Try each candidate and return the first one that validates
@@ -117,6 +183,53 @@ function normalizeArrayToObject<T>(data: unknown, zodSchema: z.ZodSchema<T>): un
 		// If none validate, default to sentences (most common case)
 		console.log('[normalizeArrayToObject] No candidate validated, defaulting to sentences');
 		return candidates[0];
+		}
+
+		// Case 2: Dialect comparison structure
+		// Gemini sometimes returns an array of objects with variety_name, dialect, or dialect_name instead of a keyed object
+		const hasVarietyName = 'variety_name' in firstItem;
+		const hasDialect = 'dialect' in firstItem;
+		const hasDialectName = 'dialect_name' in firstItem;
+		
+		if ((hasVarietyName || hasDialect || hasDialectName) && 'arabic_script' in firstItem && 'transliteration' in firstItem) {
+			console.log('[normalizeArrayToObject] Dialect comparison array detected, transforming to object...');
+			
+			const dialectMap: Record<string, string> = {
+				'Modern Standard Arabic (Fusha)': 'fusha',
+				'Egyptian Arabic': 'egyptian',
+				'Moroccan Darija': 'darija',
+				'Levantine Arabic': 'levantine'
+			};
+
+			const normalized: Record<string, { arabic: string; transliteration: string }> = {};
+			
+			// Cast data to array of objects since we checked firstItem
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
+			const items = arrayData as Array<any>;
+			
+			for (const item of items) {
+				const dialectName = item.variety_name || item.dialect || item.dialect_name;
+				const key = dialectMap[dialectName];
+				if (key) {
+					normalized[key] = {
+						arabic: item.arabic_script,
+						transliteration: item.transliteration
+					};
+				}
+			}
+			
+			// Check if we have all required keys
+			const requiredKeys = ['fusha', 'egyptian', 'darija', 'levantine'];
+			const hasAllKeys = requiredKeys.every(k => k in normalized);
+			
+			if (hasAllKeys) {
+				console.log('[normalizeArrayToObject] Successfully transformed dialect array to object');
+				return normalized;
+			} else {
+				console.warn('[normalizeArrayToObject] Missing keys in transformed dialect object:', 
+					requiredKeys.filter(k => !(k in normalized)));
+			}
+		}
 	}
 
 	return data;
@@ -238,16 +351,14 @@ export function parseJsonFromGeminiResponse<T = unknown>(
 			console.log('[Gemini JSON Parser] Zod validation successful!');
 			return validated;
 		} catch (validationError) {
-			// If validation fails and we have an array, try normalizing it
-			if (Array.isArray(parsed)) {
-				console.log('[Gemini JSON Parser] Validation failed with array, attempting normalization...');
+			// If validation fails, try normalizing it (handles arrays and objects with nested arrays)
+			console.log('[Gemini JSON Parser] Validation failed, attempting normalization...');
 				const normalized = normalizeArrayToObject(parsed, zodSchema);
 				if (normalized !== parsed) {
 					console.log('[Gemini JSON Parser] Normalized structure, retrying validation...');
 					const validated = zodSchema.parse(normalized);
 					console.log('[Gemini JSON Parser] Zod validation successful after normalization!');
 					return validated;
-				}
 			}
 			throw validationError;
 		}
@@ -275,16 +386,14 @@ export function parseJsonFromGeminiResponse<T = unknown>(
 				console.log('[Gemini JSON Parser] Zod validation successful after cleaning!');
 				return validated;
 			} catch (validationError) {
-				// If validation fails and we have an array, try normalizing it
-				if (Array.isArray(parsed)) {
-					console.log('[Gemini JSON Parser] Validation failed with array, attempting normalization...');
+				// If validation fails, try normalizing it (handles arrays and objects with nested arrays)
+				console.log('[Gemini JSON Parser] Validation failed, attempting normalization...');
 					const normalized = normalizeArrayToObject(parsed, zodSchema);
 					if (normalized !== parsed) {
 						console.log('[Gemini JSON Parser] Normalized structure, retrying validation...');
 						const validated = zodSchema.parse(normalized);
 						console.log('[Gemini JSON Parser] Zod validation successful after cleaning + normalization!');
 						return validated;
-					}
 				}
 				throw validationError;
 			}
@@ -307,16 +416,14 @@ export function parseJsonFromGeminiResponse<T = unknown>(
 					console.log('[Gemini JSON Parser] Zod validation successful after repair!');
 					return validated;
 				} catch (validationError) {
-					// If validation fails and we have an array, try normalizing it
-					if (Array.isArray(parsed)) {
-						console.log('[Gemini JSON Parser] Validation failed with array, attempting normalization...');
+					// If validation fails, try normalizing it (handles arrays and objects with nested arrays)
+					console.log('[Gemini JSON Parser] Validation failed, attempting normalization...');
 						const normalized = normalizeArrayToObject(parsed, zodSchema);
 						if (normalized !== parsed) {
 							console.log('[Gemini JSON Parser] Normalized structure, retrying validation...');
 							const validated = zodSchema.parse(normalized);
 							console.log('[Gemini JSON Parser] Zod validation successful after repair + normalization!');
 							return validated;
-						}
 					}
 					throw validationError;
 				}

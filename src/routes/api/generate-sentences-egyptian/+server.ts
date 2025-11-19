@@ -268,7 +268,7 @@ export const POST: RequestHandler = async ({ request }) => {
   try {
     const sentencesSchema = createSentencesSchema();
     const response = await generateContentWithRetry(ai, {
-      model: "gemini-2.5-flash",
+      model: "gemini-3-pro-preview",
       contents: question,
       // @ts-expect-error - generationConfig is valid but types may be outdated
       generationConfig: {

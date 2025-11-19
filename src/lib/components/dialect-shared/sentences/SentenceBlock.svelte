@@ -21,8 +21,10 @@
 	import cn from 'classnames';
 	import InfoDisclaimer from '$lib/components/InfoDisclaimer.svelte';
 	import DefinitionModal from './DefinitionModal.svelte';
+	import DialectComparisonModal from './DialectComparisonModal.svelte';
 	import AudioButton from '$lib/components/AudioButton.svelte';
 	import { normalizeArabicText, normalizeArabicTextLight, filterArabicCharacters } from '$lib/utils/arabic-normalization';
+	import type { DialectComparisonSchema } from '$lib/utils/gemini-schemas';
 
 	interface Props {
 		sentence: {
@@ -54,6 +56,46 @@
 	let targetWord = $state('');
 	let targetArabicWord = $state('');
 	let keyboardValue = $state('');
+	
+	// Dialect Comparison State
+	let isComparisonModalOpen = $state(false);
+	let comparisonData = $state<DialectComparisonSchema | null>(null);
+	let isComparing = $state(false);
+	let comparisonError = $state<string | null>(null);
+
+	async function compareDialects() {
+		isComparing = true;
+		isComparisonModalOpen = true;
+		comparisonData = null;
+		comparisonError = null;
+
+		try {
+			const res = await fetch('/api/compare-dialects', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ 
+					text: sentence.arabic,
+					currentDialect: dialect,
+					transliteration: sentence.transliteration
+				})
+			});
+			
+			if (res.ok) {
+				comparisonData = await res.json();
+			} else {
+				const errorData = await res.json().catch(() => ({ message: 'Failed to compare dialects' }));
+				comparisonError = errorData.message || 'Failed to compare dialects. Please try again.';
+			}
+		} catch (e) {
+			comparisonError = e instanceof Error ? e.message : 'An unexpected error occurred. Please try again.';
+		} finally {
+			isComparing = false;
+		}
+	}
+
+	function closeComparisonModal() {
+		isComparisonModalOpen = false;
+	}
 	
 	// Ref to the keyboard element for this component instance
 	let keyboardElement: Keyboard | null = $state(null);
@@ -380,6 +422,18 @@
 	closeModal={closeDefinitionModal}
 	{dialect}
 ></DefinitionModal>
+
+<DialectComparisonModal
+	isOpen={isComparisonModalOpen}
+	closeModal={closeComparisonModal}
+	originalText={sentence.arabic}
+	originalEnglish={sentence.english}
+	{comparisonData}
+	isLoading={isComparing}
+	error={comparisonError}
+	currentDialect={dialect}
+/>
+
 {#if sentence}
 	{#if isCorrect}
 		<div class="mb-4 bg-green-100 py-3 px-4 text-center border-2 border-green-100">
@@ -397,7 +451,7 @@
 		</p>
 	</div>
 	
-	<div class="grid grid-cols-2 sm:grid-cols-5 gap-2 mb-6">
+	<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2 mb-6">
 		<Button onClick={() => (showHint = !showHint)} type="button">
 			{showHint ? 'Hide' : 'Show'} Hint
 		</Button>
@@ -405,6 +459,9 @@
 			{showAnswer ? 'Hide' : 'Show'} Answer
 		</Button>
 		<AudioButton text={sentence.arabic} dialect={dialect}>Listen</AudioButton>
+		<Button onClick={compareDialects} type="button">
+			Compare Dialects
+		</Button>
 		<SaveButton
 			objectToSave={{
 				arabic: sentence.arabic,
