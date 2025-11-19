@@ -3,6 +3,7 @@ import { redirect } from '@sveltejs/kit';
 import { sections } from '$lib/constants/sections';
 import { darijaSections } from '$lib/constants/darija-sections';
 import { fushaSections } from '$lib/constants/fusha-sections';
+import { levantineSections } from '$lib/constants/levantine-sections';
 
 export const load: PageServerLoad = async ({ parent }) => {
   const { session, user } = await parent();
@@ -17,7 +18,8 @@ export const load: PageServerLoad = async ({ parent }) => {
     sections: {
       'egyptian-arabic': sections,
       'darija': darijaSections,
-      'fusha': fushaSections
+      'fusha': fushaSections,
+      'levantine': levantineSections
     }
   };
 };

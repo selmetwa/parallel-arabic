@@ -130,7 +130,23 @@
     <ul class="p-8 flex flex-col gap-3">
       <li>
         <h2 class="text-xl font-semibold text-text-200">Multiple Arabic Dialects</h2>
-        <p class="text-text-200 text-md">Learn <strong>Egyptian, Moroccan & Fusha</strong> with comprehensive practice material for each dialect.</p>
+        <p class="text-text-200 text-md">Learn <strong>Egyptian, Levantine, Moroccan & Fusha</strong> with comprehensive practice material for each dialect.</p>
+      </li>
+      <li>
+        <h2 class="text-xl font-semibold text-text-200">AI Tutor</h2>
+        <p class="text-md text-text-200">
+          Practice speaking Arabic with an AI tutor. Choose your dialect and have a conversation with real-time feedback.
+        </p>
+      </li>
+      <li>
+        <h2 class="text-xl font-semibold text-text-200">Spaced Repetition</h2>
+        <p class="text-md text-text-200">
+          Practice with spaced repetition to remember words and sentences. Generate your own content or import from <strong>over 16,000 vocab words</strong>.
+        </p>
+      </li>
+      <li>
+        <h2 class="text-xl font-semibold text-text-200">Interactive Videos</h2>
+        <p class="text-text-200 text-md">Watch and learn from YouTube videos with transcripts, translations, and transliterations from all dialects.</p>
       </li>
       <li>
         <h2 class="text-xl font-semibold text-text-200">Stories & Audio</h2>
@@ -150,7 +166,7 @@
       </li>
       <li>
         <h2 class="text-xl font-semibold text-text-200">Comprehensive Vocabulary</h2>
-        <p class="text-text-200 text-md">Access to <strong>over 15,000 vocabulary words</strong> with multiple choice quizzes and writing practice.</p>
+        <p class="text-text-200 text-md">Access to <strong>over 16,000 vocabulary words</strong> with multiple choice quizzes and writing practice.</p>
       </li>
       <li>
         <h2 class="text-xl font-semibold text-text-200">Verb Mastery</h2>

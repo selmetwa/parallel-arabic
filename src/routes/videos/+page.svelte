@@ -8,6 +8,7 @@
   function getDialectBadgeColor(dialect: string) {
     const colors = {
       'egyptian-arabic': 'bg-blue-100 text-blue-800',
+      'levantine': 'bg-orange-100 text-orange-800',
       'darija': 'bg-green-100 text-green-800',
       'fusha': 'bg-purple-100 text-purple-800',
     };
