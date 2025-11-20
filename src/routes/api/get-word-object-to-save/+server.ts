@@ -21,9 +21,15 @@ export const POST: RequestHandler = async ({ request, locals }) => {
   const data = await request.json();
 
   try {
+    const enhancedQuestion = `${data.question}
+
+IMPORTANT: 
+1. Return PURE JSON only.
+2. Do NOT wrap the response in markdown code blocks (no \`\`\`json ... \`\`\`).`;
+
     const response = await generateContentWithRetry(ai, {
       model: "gemini-3-pro-preview",
-      contents: data.question,
+      contents: enhancedQuestion,
       generationConfig: {
         responseMimeType: 'application/json'
       }

@@ -135,8 +135,14 @@
 		targetWord = word;
 		isLoadingDefinition = true;
 		openDefinitionModal();
-		const question = `What does ${word} mean in ${dialectName[dialect as Dialect]}? Considering the following sentences ${sentence.arabic} ${sentence.english} ${sentence.transliteration} but please do not reveal the entire meaning of the sentence, and dont say anything about the rest of the sentence at all, just use it as a reference to derive the definition.`;
-		const res = await fetch('/api/open-ai', {
+		const question = `What does ${word} mean in ${dialectName[dialect as Dialect]}? Considering the following sentences:
+		Arabic: "${sentence.arabic}"
+		English: "${sentence.english}"
+		Transliteration: "${sentence.transliteration}"
+		
+		Please provide a definition based on the context.`;
+		
+		const res = await fetch('/api/definition-sentence', {
 			method: 'POST',
 			headers: { accept: 'application/json' },
 			body: JSON.stringify({
@@ -146,7 +152,15 @@
 
 		const data = await res.json();
 
-		definition = data.message.message.content;
+		// Store the structured JSON response as a string so the UI can parse it
+		try {
+			const parsed = JSON.parse(data.message.content);
+			definition = JSON.stringify(parsed);
+		} catch (e) {
+			// Fallback for plain text responses (shouldn't happen with structured output)
+			definition = data.message.content;
+		}
+		
 		isLoadingDefinition = false;
 	}
 
