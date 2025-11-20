@@ -228,11 +228,6 @@ export function createLessonSchema() {
 		transliteration: z.string()
 	});
 
-	const titleSchema = z.object({
-		arabic: z.string(),
-		english: z.string()
-	});
-
 	const explanationSchema = z.object({
 		english: z.string()
 	});
@@ -313,3 +308,29 @@ export function createDialectComparisonSchema() {
 }
 
 export type DialectComparisonSchema = z.infer<ReturnType<typeof createDialectComparisonSchema>['zodSchema']>;
+
+/**
+ * Schema for word definition
+ */
+export function createWordDefinitionSchema() {
+	const schema = z.object({
+		arabic: z.string(),
+		transliteration: z.string(),
+		definition: z.string(),
+		breakdown: z.array(z.object({
+			word: z.string(),
+			arabic: z.string(),
+			transliteration: z.string(),
+			meaning: z.string(),
+			context: z.string().optional()
+		})),
+		contextualMeaning: z.string()
+	});
+
+	return {
+		zodSchema: schema,
+		jsonSchema: zodToJsonSchema(schema)
+	};
+}
+
+export type WordDefinitionSchema = z.infer<ReturnType<typeof createWordDefinitionSchema>['zodSchema']>;

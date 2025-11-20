@@ -38,10 +38,23 @@ export async function callGeminiWithSchema<T>(
 		maxOutputTokens
 	} = options;
 
+	// Enhanced prompt with schema and strict formatting instructions
+	const schemaString = JSON.stringify(zodSchema.jsonSchema, null, 2);
+	const enhancedPrompt = `${prompt}
+
+CRITICAL: You must return a valid JSON object exactly matching this schema:
+${schemaString}
+
+IMPORTANT: 
+1. Return PURE JSON only.
+2. Do NOT wrap the response in markdown code blocks (no \`\`\`json ... \`\`\`).
+3. Do NOT include any explanations or other text.
+4. Ensure the response is valid JSON that can be parsed by JSON.parse().`;
+
 	// Use retry wrapper for automatic retry on 503/5xx errors
 	const response = await generateContentWithRetry(ai, {
 		model,
-		contents: prompt,
+		contents: enhancedPrompt,
 		// @ts-expect-error - generationConfig is valid but types may be outdated
 		generationConfig: {
 			temperature,

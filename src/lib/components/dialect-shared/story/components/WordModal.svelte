@@ -30,6 +30,16 @@
   
   let isLoading = $state(false);
   
+  // Parse description as JSON if possible
+  let parsedDescription = $derived.by(() => {
+    if (!activeWordObj.description) return null;
+    try {
+      return JSON.parse(activeWordObj.description);
+    } catch {
+      return null;
+    }
+  });
+  
   // Dialect Comparison State
   let isComparisonModalOpen = $state(false);
   let comparisonData = $state<DialectComparisonSchema | null>(null);
@@ -149,9 +159,54 @@
   </div>
 {/if}
 <Modal isOpen={isModalOpen} handleCloseModal={closeModal} width="max(70%, 600px)" height="fit-content">
-	<div class="flex flex-col items-center p-4">
+	<div class="flex flex-col items-center p-4 min-w-[400px]">
 		<p class="text-4xl text-text-300">{activeWordObj.arabic}</p>
-    <p class="my-2 text-text-200">{activeWordObj.description}</p>
+    
+    {#if activeWordObj.description}
+      {#if parsedDescription}
+        <div class="w-full bg-tile-300 border border-tile-500 p-4 rounded my-2">
+          <!-- Arabic and Transliteration -->
+          {#if parsedDescription.arabic || parsedDescription.transliteration}
+            <div class="mb-3 pb-3 border-b border-tile-400">
+              {#if parsedDescription.arabic}
+                <p class="text-2xl text-text-300 font-bold mb-1" dir="rtl">{parsedDescription.arabic}</p>
+              {/if}
+              {#if parsedDescription.transliteration}
+                <p class="text-lg text-text-200 italic">{parsedDescription.transliteration}</p>
+              {/if}
+            </div>
+          {/if}
+          
+          <p class="text-text-300 leading-relaxed mb-2">{parsedDescription.definition}</p>
+          
+          {#if parsedDescription.contextualMeaning}
+            <p class="text-text-200 text-sm mt-2 italic">Context: {parsedDescription.contextualMeaning}</p>
+          {/if}
+
+          {#if parsedDescription.breakdown && parsedDescription.breakdown.length > 0}
+            <div class="mt-3 pt-3 border-t border-tile-400">
+              <p class="text-sm font-bold text-text-200 mb-2">Breakdown:</p>
+              <div class="space-y-2">
+                {#each parsedDescription.breakdown as item}
+                  <div class="flex flex-col text-sm">
+                    <div class="flex items-baseline gap-2">
+                      <span class="font-bold text-text-300" dir="rtl">{item.arabic}</span>
+                      <span class="text-text-200">({item.word})</span>
+                    </div>
+                    <div class="text-text-200 ml-2">
+                      <span class="italic">{item.transliteration}</span>
+                      <span> - {item.meaning}</span>
+                    </div>
+                  </div>
+                {/each}
+              </div>
+            </div>
+          {/if}
+        </div>
+      {:else}
+        <p class="my-2 text-text-200">{activeWordObj.description}</p>
+      {/if}
+    {/if}
 
     {#if activeWordObj.isLoading}
       <div role="status">

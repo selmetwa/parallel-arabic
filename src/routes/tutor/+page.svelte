@@ -94,7 +94,8 @@
         body: JSON.stringify({ 
           text,
           currentDialect: selectedDialect,
-          transliteration
+          transliteration,
+          english: english || ''
         })
       });
       

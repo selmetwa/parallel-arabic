@@ -301,9 +301,21 @@ export const POST: RequestHandler = async ({ request }) => {
 
   try {
     const sentencesSchema = createSentencesSchema();
+    
+    const schemaString = JSON.stringify(sentencesSchema.jsonSchema, null, 2);
+    const enhancedQuestion = `${question}
+
+CRITICAL: You must return a valid JSON object exactly matching this schema:
+${schemaString}
+
+IMPORTANT: 
+1. Return PURE JSON only.
+2. Do NOT wrap the response in markdown code blocks (no \`\`\`json ... \`\`\`).
+3. Do NOT include any explanations or other text.`;
+
     const response = await generateContentWithRetry(ai, {
       model: "gemini-3-pro-preview",
-      contents: question,
+      contents: enhancedQuestion,
       // @ts-expect-error - generationConfig is valid but types may be outdated
       generationConfig: {
         temperature: 0.9,
