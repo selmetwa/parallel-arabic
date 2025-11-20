@@ -17,16 +17,31 @@ export const askChatGTP = async (word: string, type: string, fullSentence: TFull
   }
 
   const _dialectName = dialectName[dialect];
-  const a = `Please use the following text to get the definition: ${fullSentence.arabic} ${fullSentence.transliteration} ${fullSentence.english}`;
+  
   if (type === 'arabic') {
-    question = `What does ${word} mean in ${_dialectName}? ${a} `;
+    question = `What does ${word} mean in ${_dialectName}? Considering the following sentences:
+		Arabic: "${fullSentence.arabic}"
+		English: "${fullSentence.english}"
+		Transliteration: "${fullSentence.transliteration}"
+		
+		Please provide a definition based on the context.`;
   } else if (type === 'english') {
-    question = `What is the word for ${word} in ${_dialectName}? ${a}`;
+    question = `What is the word for "${word}" in ${_dialectName}? Considering the following sentences:
+		Arabic: "${fullSentence.arabic}"
+		English: "${fullSentence.english}"
+		Transliteration: "${fullSentence.transliteration}"
+		
+		Please provide the Arabic word/phrase and its definition based on the context.`;
   } else {
-    question = `What does ${word} mean in ${_dialectName}? ${a}`;
+    question = `What does ${word} mean in ${_dialectName}? Considering the following sentences:
+		Arabic: "${fullSentence.arabic}"
+		English: "${fullSentence.english}"
+		Transliteration: "${fullSentence.transliteration}"
+		
+		Please provide a definition based on the context.`;
   }
 
-  const res = await fetch('/api/open-ai', {
+  const res = await fetch('/api/definition-sentence', {
     method: 'POST',
     headers: { accept: 'application/json' },
     body: JSON.stringify({
@@ -36,5 +51,13 @@ export const askChatGTP = async (word: string, type: string, fullSentence: TFull
 
   const data = await res.json();
 
-  return data;
+  // Return in the same format as before for backward compatibility
+  // The content will be structured JSON string
+  return {
+    message: {
+      message: {
+        content: data.message.content
+      }
+    }
+  };
 }

@@ -41,6 +41,7 @@ class="{`modal ${isOpen ? 'open' : ''} bg-tile-300 border-4 border-tile-600`}" s
   .modal {
     width: min(var(--width), 100%);
     height: var(--height);
+    max-height: 90%;
     position: fixed;
     top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */

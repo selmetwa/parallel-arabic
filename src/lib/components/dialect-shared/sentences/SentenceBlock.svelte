@@ -76,7 +76,8 @@
 				body: JSON.stringify({ 
 					text: sentence.arabic,
 					currentDialect: dialect,
-					transliteration: sentence.transliteration
+					transliteration: sentence.transliteration,
+					english: sentence.english
 				})
 			});
 			
@@ -275,9 +276,14 @@
 		openDefinitionModal();
 		
 		const wordText = wordsArray.length === 1 ? wordsArray[0] : `the phrase "${wordsArray.join(' ')}"`;
-		const question = `What does ${wordText} mean in ${dialectName[dialect]}? Considering the following sentences ${sentence.arabic} ${sentence.english} ${sentence.transliteration} but please do not reveal the entire meaning of the sentence, and dont say anything about the rest of the sentence at all, just use it as a reference to derive the definition.`;
+		const question = `What does ${wordText} mean in ${dialectName[dialect]}? Considering the following sentences:
+		Arabic: "${sentence.arabic}"
+		English: "${sentence.english}"
+		Transliteration: "${sentence.transliteration}"
+		
+		Please provide a definition based on the context.`;
 
-		const res = await fetch('/api/open-ai', {
+		const res = await fetch('/api/definition-sentence', {
 			method: 'POST',
 			headers: { accept: 'application/json' },
 			body: JSON.stringify({
@@ -287,7 +293,18 @@
 
 		const data = await res.json();
 
-		definition = data.message.message.content;
+		// Store the structured JSON response as a string so the UI can parse it
+		// The response should already be valid JSON from the API
+		try {
+			// Verify it's valid JSON and store it as a string for the UI components
+			const parsed = JSON.parse(data.message.content);
+			// Store the entire parsed object as JSON string for the UI to parse
+			definition = JSON.stringify(parsed);
+		} catch (e) {
+			// Fallback for plain text responses (shouldn't happen with structured output)
+			definition = data.message.content;
+		}
+		
 		isLoadingDefinition = false;
 	}
 

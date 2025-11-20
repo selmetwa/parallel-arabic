@@ -14,7 +14,7 @@ export const POST: RequestHandler = async ({ request }) => {
   
   const ai = new GoogleGenAI({ apiKey });
 
-  const { text, currentDialect, transliteration } = await request.json();
+  const { text, currentDialect, transliteration, english } = await request.json();
 
   if (!text) {
       return error(400, { message: 'Text is required' });
@@ -61,8 +61,14 @@ export const POST: RequestHandler = async ({ request }) => {
   }
   
   prompt += `Original text: "${text}"\n\n`;
+  if (english) {
+    prompt += `English context: "${english}"\n\n`;
+  }
   prompt += `Provide the Arabic script and transliteration for each dialect.\n`;
-  prompt += `Return the response in JSON format matching the schema.`;
+  
+  const schemaString = JSON.stringify(jsonSchema, null, 2);
+  prompt += `CRITICAL: You must return a valid JSON object exactly matching this schema:\n${schemaString}\n\n`;
+  prompt += `IMPORTANT:\n1. Return PURE JSON only.\n2. Do NOT wrap the response in markdown code blocks (no \`\`\`json ... \`\`\`).\n3. Do NOT include any explanations or other text.`;
 
   try {
     const response = await generateContentWithRetry(ai, {
