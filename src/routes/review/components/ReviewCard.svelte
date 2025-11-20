@@ -95,7 +95,9 @@
     fusha: 'Modern Standard Arabic',
     levantine: 'Levantine Arabic',
     darija: 'Moroccan Darija',
-    'egyptian-arabic': 'Egyptian Arabic'
+    'egyptian-arabic': 'Egyptian Arabic',
+    iraqi: 'Iraqi Arabic',
+    khaleeji: 'Khaleeji Arabic'
   };
 
   function handleDifficultyClick(difficulty: 1 | 2 | 3) {
@@ -335,6 +337,13 @@
 
 <div class="bg-tile-300 border border-tile-500 rounded-lg shadow-lg p-6 sm:p-8">
   <div class="text-center mb-6">
+    <!-- Dialect Badge -->
+    <div class="mb-4">
+      <span class="inline-block px-3 py-1 bg-tile-500 text-text-300 rounded-full text-sm font-semibold">
+        {dialectName[word.dialect] || word.dialect}
+      </span>
+    </div>
+    
     {#if !showAnswer}
       <div class="flex flex-col items-center justify-center gap-3 mb-4">
         <!-- Arabic word selection controls -->
