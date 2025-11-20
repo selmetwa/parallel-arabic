@@ -52,7 +52,8 @@
 				body: JSON.stringify({ 
 					text,
 					currentDialect: data.video.dialect,
-					transliteration
+					transliteration,
+					english: english || ''
 				})
 			});
 			
