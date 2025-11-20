@@ -34,11 +34,17 @@
   let showHint = $state(false);
   let selectedDifficulty = $state<1 | 2 | 3 | null>(null);
   
-  // Drag-to-highlight state
+  // Drag-to-highlight state (English words)
   let selectedWords = $state<string[]>([]);
   let isSelecting = $state(false);
   let selectionStartIndex = $state(-1);
   let selectionEndIndex = $state(-1);
+  
+  // Drag-to-highlight state (Arabic words)
+  let selectedArabicWords = $state<string[]>([]);
+  let isSelectingArabic = $state(false);
+  let selectionStartIndexArabic = $state(-1);
+  let selectionEndIndexArabic = $state(-1);
   let isDefinitionModalOpen = $state(false);
   let isLoadingDefinition = $state(false);
   let definition = $state('');
@@ -112,6 +118,7 @@
       showHint = false;
       selectedDifficulty = null;
       clearSelection();
+      clearArabicSelection();
     }
   });
 
@@ -119,6 +126,7 @@
     showAnswer = !showAnswer;
     if (!showAnswer) {
       clearSelection();
+      clearArabicSelection();
     }
   }
 
@@ -154,6 +162,46 @@
     isSelecting = false;
     selectionStartIndex = -1;
     selectionEndIndex = -1;
+  }
+  
+  // Arabic word selection functions
+  function handleArabicWordMouseDown(index: number, event: MouseEvent) {
+    event.preventDefault();
+    isSelectingArabic = true;
+    selectionStartIndexArabic = index;
+    selectionEndIndexArabic = index;
+    updateSelectedArabicWords();
+  }
+
+  function handleArabicWordMouseEnter(index: number) {
+    if (isSelectingArabic) {
+      selectionEndIndexArabic = index;
+      updateSelectedArabicWords();
+    }
+  }
+
+  function handleArabicWordMouseUp() {
+    isSelectingArabic = false;
+  }
+
+  function updateSelectedArabicWords() {
+    const arabicWords = word.arabic.split(' ');
+    const start = Math.min(selectionStartIndexArabic, selectionEndIndexArabic);
+    const end = Math.max(selectionStartIndexArabic, selectionEndIndexArabic);
+    selectedArabicWords = arabicWords.slice(start, end + 1);
+  }
+
+  function clearArabicSelection() {
+    selectedArabicWords = [];
+    isSelectingArabic = false;
+    selectionStartIndexArabic = -1;
+    selectionEndIndexArabic = -1;
+  }
+
+  function isArabicWordSelected(index: number): boolean {
+    const start = Math.min(selectionStartIndexArabic, selectionEndIndexArabic);
+    const end = Math.max(selectionStartIndexArabic, selectionEndIndexArabic);
+    return selectedArabicWords.length > 0 && index >= start && index <= end;
   }
 
   function isWordSelected(index: number): boolean {
@@ -196,19 +244,34 @@
 
   async function askChatGTP(words: string | string[]) {
     const wordsArray = Array.isArray(words) ? words : [words];
-    targetWord = wordsArray.join(' ');
+    const wordsText = wordsArray.join(' ');
     
-    // Map English words to Arabic equivalent and filter for Arabic characters only
-    targetArabicWord = mapEnglishToArabic(wordsArray);
+    // Check if the input contains Arabic characters
+    const hasArabicChars = /[\u0600-\u06FF]/.test(wordsText);
+    
+    if (hasArabicChars) {
+      // Input is Arabic - use it directly
+      targetArabicWord = wordsText;
+      targetWord = ''; // No English equivalent needed
+    } else {
+      // Input is English - map to Arabic
+      targetWord = wordsText;
+      targetArabicWord = mapEnglishToArabic(wordsArray);
+    }
     
     isLoadingDefinition = true;
     isDefinitionModalOpen = true;
     
-    const wordText = wordsArray.length === 1 ? wordsArray[0] : `the phrase "${wordsArray.join(' ')}"`;
-    const question = `What does ${wordText} mean in ${dialectName[word.dialect] || word.dialect}? Considering the following: "${word.arabic}" means "${word.english}" in ${dialectName[word.dialect] || word.dialect}. Please provide a detailed definition but do not reveal the entire meaning if this is part of a phrase, and don't say anything about the rest of the sentence at all, just use it as a reference to derive the definition.`;
+    const wordText = wordsArray.length === 1 ? wordsArray[0] : `the phrase "${wordsText}"`;
+    const question = `What does ${wordText} mean in ${dialectName[word.dialect] || word.dialect}? Considering the following sentences:
+		Arabic: "${word.arabic}"
+		English: "${word.english}"
+		Transliteration: "${word.transliteration}"
+		
+		Please provide a definition based on the context.`;
 
     try {
-      const res = await fetch('/api/open-ai', {
+      const res = await fetch('/api/definition-sentence', {
         method: 'POST',
         headers: { accept: 'application/json' },
         body: JSON.stringify({
@@ -217,7 +280,18 @@
       });
 
       const data = await res.json();
-      definition = data.message.message.content;
+
+      // Store the structured JSON response as a string so the UI can parse it
+      // The response should already be valid JSON from the API
+      try {
+        // Verify it's valid JSON and store it as a string for the UI components
+        const parsed = JSON.parse(data.message.content);
+        // Store the entire parsed object as JSON string for the UI to parse
+        definition = JSON.stringify(parsed);
+      } catch (e) {
+        // Fallback for plain text responses (shouldn't happen with structured output)
+        definition = data.message.content;
+      }
     } catch (error) {
       console.error('Error fetching definition:', error);
       definition = 'Error loading definition. Please try again.';
@@ -232,6 +306,7 @@
     targetWord = '';
     targetArabicWord = '';
     clearSelection();
+    clearArabicSelection();
   }
 </script>
 
@@ -261,12 +336,55 @@
 <div class="bg-tile-300 border border-tile-500 rounded-lg shadow-lg p-6 sm:p-8">
   <div class="text-center mb-6">
     {#if !showAnswer}
-      <h2 class="text-4xl sm:text-5xl font-bold text-text-100 mb-4 cursor-pointer hover:opacity-80 transition-opacity"
-          onclick={() => askChatGTP(word.arabic)}
-          title="Click to get definition"
-      >
-        {word.arabic}
-      </h2>
+      <div class="flex flex-col items-center justify-center gap-3 mb-4">
+        <!-- Arabic word selection controls -->
+        {#if selectedArabicWords.length > 0}
+          <div class="flex gap-2 mb-2">
+            <button
+              onclick={() => askChatGTP(selectedArabicWords.join(' '))}
+              class="px-3 py-1 bg-tile-400 text-text-300 rounded border border-tile-600 hover:bg-tile-500 hover:border-tile-500 transition-colors"
+            >
+              Define "{selectedArabicWords.join(' ')}"
+            </button>
+            <button
+              onclick={clearArabicSelection}
+              class="px-3 py-1 bg-tile-400 text-text-300 rounded border border-tile-600 hover:bg-tile-500 hover:border-tile-500 transition-colors"
+            >
+              Clear Selection
+            </button>
+          </div>
+        {/if}
+        
+        <div 
+          class="flex w-fit flex-row flex-wrap text-4xl sm:text-5xl font-bold text-text-100 select-none"
+          onmouseup={handleArabicWordMouseUp}
+          aria-label="Arabic word selection area for definitions"
+          role="application"
+          dir="rtl"
+        >
+          {#each word.arabic.split(' ') as arabicWord, index}
+            <span
+              onmousedown={(e) => handleArabicWordMouseDown(index, e)}
+              onmouseenter={() => handleArabicWordMouseEnter(index)}
+              onclick={() => askChatGTP(arabicWord)}
+              onkeydown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  askChatGTP(arabicWord);
+                }
+              }}
+              role="button"
+              tabindex="0"
+              aria-label={`Get definition for: ${arabicWord}`}
+              class={cn("p-1 text-4xl sm:text-5xl duration-300 cursor-pointer border-2", {
+                "bg-blue-200 border-blue-400": isArabicWordSelected(index),
+                "hover:opacity-80 border-transparent hover:border-tile-600": !isArabicWordSelected(index)
+              })}
+              dir="rtl"
+            >{arabicWord}</span>
+          {/each}
+        </div>
+      </div>
       {#if showHint}
         <p class="text-xl text-text-200 mb-2">({word.transliteration})</p>
       {/if}
@@ -281,12 +399,55 @@
       </div>
     {:else}
       <div class="space-y-4">
-        <h2 class="text-4xl sm:text-5xl font-bold text-text-100 cursor-pointer hover:opacity-80 transition-opacity"
-            onclick={() => askChatGTP(word.arabic)}
-            title="Click to get definition"
-        >
-          {word.arabic}
-        </h2>
+        <div class="flex flex-col items-center justify-center gap-3">
+          <!-- Arabic word selection controls -->
+          {#if selectedArabicWords.length > 0}
+            <div class="flex gap-2 mb-2">
+              <button
+                onclick={() => askChatGTP(selectedArabicWords.join(' '))}
+                class="px-3 py-1 bg-tile-400 text-text-300 rounded border border-tile-600 hover:bg-tile-500 hover:border-tile-500 transition-colors"
+              >
+                Define "{selectedArabicWords.join(' ')}"
+              </button>
+              <button
+                onclick={clearArabicSelection}
+                class="px-3 py-1 bg-tile-400 text-text-300 rounded border border-tile-600 hover:bg-tile-500 hover:border-tile-500 transition-colors"
+              >
+                Clear Selection
+              </button>
+            </div>
+          {/if}
+          
+          <div 
+            class="flex w-fit flex-row flex-wrap text-4xl sm:text-5xl font-bold text-text-100 select-none"
+            onmouseup={handleArabicWordMouseUp}
+            aria-label="Arabic word selection area for definitions"
+            role="application"
+            dir="rtl"
+          >
+            {#each word.arabic.split(' ') as arabicWord, index}
+              <span
+                onmousedown={(e) => handleArabicWordMouseDown(index, e)}
+                onmouseenter={() => handleArabicWordMouseEnter(index)}
+                onclick={() => askChatGTP(arabicWord)}
+                onkeydown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    askChatGTP(arabicWord);
+                  }
+                }}
+                role="button"
+                tabindex="0"
+                aria-label={`Get definition for: ${arabicWord}`}
+                class={cn("p-1 text-4xl sm:text-5xl duration-300 cursor-pointer border-2", {
+                  "bg-blue-200 border-blue-400": isArabicWordSelected(index),
+                  "hover:opacity-80 border-transparent hover:border-tile-600": !isArabicWordSelected(index)
+                })}
+                dir="rtl"
+              >{arabicWord}</span>
+            {/each}
+          </div>
+        </div>
         
         <div class="flex flex-col items-center justify-center gap-3">
           <!-- Selection controls -->
@@ -310,8 +471,8 @@
           <div 
             class="flex w-fit flex-row flex-wrap text-3xl sm:text-4xl font-bold text-text-300 select-none"
             onmouseup={handleWordMouseUp}
-            role="application"
             aria-label="Word selection area for definitions"
+            role="application"
           >
             {#each word.english.split(' ') as englishWord, index}
               <span
