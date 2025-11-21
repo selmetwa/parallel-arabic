@@ -220,6 +220,7 @@ export type SentenceSegmentationSchema = z.infer<ReturnType<typeof createSentenc
 
 /**
  * Schema for lesson generation (complex nested structure)
+ * Includes review words and sentences for spaced repetition learning
  */
 export function createLessonSchema() {
 	const titleWithTransliterationSchema = z.object({
@@ -253,7 +254,7 @@ export function createLessonSchema() {
 
 	const exerciseSchema = z.object({
 		id: z.string(),
-		type: z.enum(["multiple-choice", "fill-in-blank", "translation", "matching"]),
+		type: z.enum(["multiple-choice", "fill-in-blank", "matching"]),
 		question: z.object({
 			english: z.string(),
 			arabic: z.string().optional()
@@ -261,7 +262,18 @@ export function createLessonSchema() {
 		options: z.array(exerciseOptionSchema).optional(),
 		correctAnswer: z.union([z.string(), z.array(z.string())]),
 		hint: hintSchema.optional()
-	});
+	}).refine(
+		(data) => {
+			// Fill-in-blank and multiple-choice exercises MUST have options
+			if ((data.type === "fill-in-blank" || data.type === "multiple-choice") && (!data.options || data.options.length === 0)) {
+				return false;
+			}
+			return true;
+		},
+		{
+			message: "fill-in-blank and multiple-choice exercises must include an options array"
+		}
+	);
 
 	const subLessonSchema = z.object({
 		id: z.string(),
@@ -270,11 +282,106 @@ export function createLessonSchema() {
 		exercises: z.array(exerciseSchema).min(1)
 	});
 
+	// Review section schema - words and sentences for spaced repetition
+	const reviewSectionSchema = z.object({
+		words: z.array(textWithTranslationSchema).length(10), // Exactly 10 review words
+		sentences: z.array(textWithTranslationSchema).length(5) // Exactly 5 review sentences that include the review words
+	});
+
+	// Grammar rule schema
+	const grammarRuleSchema = z.object({
+		title: z.string(), // Name of the grammar rule
+		arabic: z.string().optional(), // Arabic explanation
+		english: z.string(), // English explanation
+		examples: z.array(textWithTranslationSchema).optional() // Example sentences/phrases
+	});
+
+	// Cultural note schema
+	const culturalNoteSchema = z.object({
+		title: z.string().optional(), // Title of the cultural note
+		arabic: z.string().optional(), // Arabic cultural context
+		english: z.string() // English cultural context
+	});
+
+	// Pronunciation tip schema
+	const pronunciationTipSchema = z.object({
+		sound: z.string(), // The Arabic sound/letter
+		transliteration: z.string().optional(), // How it's written in transliteration
+		description: z.string(), // How to pronounce it
+		examples: z.array(z.object({
+			arabic: z.string(),
+			transliteration: z.string(),
+			english: z.string()
+		})).optional() // Example words
+	});
+
+	// Common mistake schema
+	const commonMistakeSchema = z.object({
+		mistake: z.string(), // The incorrect usage
+		correct: z.string(), // The correct usage
+		explanation: z.string(), // Why it's wrong and how to fix it
+		examples: z.array(z.object({
+			incorrect: textWithTranslationSchema,
+			correct: textWithTranslationSchema
+		})).optional()
+	});
+
+	// Related lesson schema
+	const relatedLessonSchema = z.object({
+		id: z.string().optional(), // Lesson ID if it exists
+		title: z.string(), // Title of related lesson
+		reason: z.string().optional() // Why it's related (e.g., "builds on", "prerequisite", "similar topic")
+	});
+
+	// Quiz schema - comprehensive quiz at the end of the lesson
+	const quizSchema = z.object({
+		title: z.string().optional(), // Quiz title
+		description: z.string().optional(), // Quiz description
+		questions: z.array(exerciseSchema).min(3).max(10) // 3-10 quiz questions
+	});
+
 	const schema = z.object({
 		id: z.string(),
 		title: titleWithTransliterationSchema,
 		level: z.enum(["beginner", "intermediate", "advanced"]),
-		subLessons: z.array(subLessonSchema).min(1)
+		description: z.object({
+			arabic: z.string().optional(),
+			english: z.string()
+		}).optional(),
+		learningObjectives: z.array(z.string()).optional(), // What students will learn
+		estimatedDuration: z.number().optional(), // Duration in minutes
+		prerequisites: z.array(z.string()).optional(), // Required prior knowledge
+		subLessons: z.array(subLessonSchema).min(1),
+		review: reviewSectionSchema, // Review words and sentences
+		summary: z.object({
+			arabic: z.string().optional(),
+			english: z.string()
+		}).optional(), // Lesson summary/key takeaways
+		keyTakeaways: z.array(z.string()).optional(), // Main points to remember
+		grammarFocus: z.array(grammarRuleSchema).optional(), // Specific grammar rules covered
+		culturalNotes: z.array(culturalNoteSchema).optional(), // Cultural context related to the lesson
+		pronunciationTips: z.array(pronunciationTipSchema).optional(), // Notes for difficult sounds
+		commonMistakes: z.array(commonMistakeSchema).optional(), // Errors to avoid
+		relatedLessons: z.array(relatedLessonSchema).optional(), // Links to related lessons
+		difficultyTags: z.array(z.enum([
+			"vocabulary-heavy",
+			"grammar-focused",
+			"conversation-focused",
+			"reading-focused",
+			"writing-focused",
+			"listening-focused",
+			"speaking-focused",
+			"beginner-friendly",
+			"challenging",
+			"interactive"
+		])).optional(), // Tags describing lesson characteristics
+		audioPractice: z.object({
+			hasSpeakingPractice: z.boolean().optional(), // Whether lesson includes speaking practice
+			hasListeningPractice: z.boolean().optional(), // Whether lesson includes listening practice
+			audioFilesCount: z.number().optional(), // Number of audio files/examples
+			notes: z.string().optional() // Additional notes about audio practice
+		}).optional(), // Speaking/listening practice indicators
+		quiz: quizSchema.optional() // Comprehensive quiz at the end of the lesson
 	});
 
 	return {

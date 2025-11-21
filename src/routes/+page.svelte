@@ -26,6 +26,12 @@
           Learn the 28 letters and their connections.
         </p>
       </a>
+      <a href="/lessons" class="group px-4 py-5 flex-col flex gap-2 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
+        <h3 class="text-lg text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">Lessons</h3>
+        <p class="text-text-300 text-xs font-medium leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+          Comprehensive AI-generated lessons with exercises and pronunciation practice.
+        </p>
+      </a>
       <a href="/review" class="group px-4 py-5 flex-col flex gap-2 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
         <h3 class="text-lg text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">Vocabulary Review</h3>
         <p class="text-text-300 text-xs font-medium leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">
