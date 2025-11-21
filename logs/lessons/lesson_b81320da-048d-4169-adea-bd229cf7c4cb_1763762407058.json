@@ -1,0 +1,9 @@
+{
+  "timestamp": "2025-11-21T22:00:07.058Z",
+  "lessonId": "b81320da-048d-4169-adea-bd229cf7c4cb",
+  "stage": "parse_attempt",
+  "method": "direct_json_parse",
+  "success": false,
+  "error": "Unexpected token '`', \"```json\n{\n\"... is not valid JSON",
+  "stack": "SyntaxError: Unexpected token '`', \"```json\n{\n\"... is not valid JSON\n    at JSON.parse (<anonymous>)\n    at POST (/Users/sherifelmetwally/Desktop/parallel-arabic/src/routes/api/create-lesson/+server.ts:471:30)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Module.render_endpoint (/Users/sherifelmetwally/Desktop/parallel-arabic/node_modules/@sveltejs/kit/src/runtime/server/endpoint.js:49:18)\n    at async resolve (/Users/sherifelmetwally/Desktop/parallel-arabic/node_modules/@sveltejs/kit/src/runtime/server/respond.js:462:17)\n    at async Module.respond (/Users/sherifelmetwally/Desktop/parallel-arabic/node_modules/@sveltejs/kit/src/runtime/server/respond.js:338:20)\n    at async file:///Users/sherifelmetwally/Desktop/parallel-arabic/node_modules/@sveltejs/kit/src/exports/vite/dev/index.js:524:22"
+}

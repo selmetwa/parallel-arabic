@@ -1,0 +1,507 @@
+<script lang="ts">
+	import { onMount } from 'svelte';
+	import { page } from '$app/stores';
+	import type { PageData } from './$types';
+	import InlineAudioButton from '$lib/components/InlineAudioButton.svelte';
+	import InteractiveExercise from '$lib/components/dialect-shared/lesson/InteractiveExercise.svelte';
+	import ReviewCarousel from '$lib/components/dialect-shared/lesson/ReviewCarousel.svelte';
+	import PronunciationTestModal from '$lib/components/dialect-shared/lesson/PronunciationTestModal.svelte';
+	import type { Dialect } from '$lib/types/index';
+
+	let { data } = $props<{ data: PageData }>();
+	
+	let lesson = $state(data.lesson);
+	let loading = $state(false);
+	let error = $state<string | null>(data.error || null);
+	
+	// Pronunciation test modal state
+	let pronunciationModalOpen = $state(false);
+	let pronunciationText = $state('');
+	let pronunciationTransliteration = $state('');
+	let pronunciationEnglish = $state('');
+
+	function openPronunciationTest(text: string, transliteration?: string, english?: string) {
+		pronunciationText = text;
+		pronunciationTransliteration = transliteration || '';
+		pronunciationEnglish = english || '';
+		pronunciationModalOpen = true;
+	}
+
+	function closePronunciationModal() {
+		pronunciationModalOpen = false;
+		pronunciationText = '';
+		pronunciationTransliteration = '';
+		pronunciationEnglish = '';
+	}
+
+	// Note: Lessons are now stored in database, so we don't need sessionStorage fallback
+	// But keeping the check for backward compatibility with any old lessons in sessionStorage
+	onMount(() => {
+		if (data.checkSessionStorage && !lesson) {
+			// Lesson not found in database - show error
+			error = data.error || 'Lesson not found.';
+		}
+	});
+
+	// Get lesson body (the actual lesson content)
+	const lessonBody = lesson?.lesson_body || lesson;
+	
+	// Get dialect for audio (convert database dialect to Dialect type)
+	const dialect = (lesson?.dialect || lessonBody?.dialect || 'egyptian-arabic') as Dialect;
+
+	// Helper functions
+	function getLevelBadgeColor(level: string) {
+		const colors = {
+			beginner: 'bg-green-100 text-green-800',
+			intermediate: 'bg-yellow-100 text-yellow-800',
+			advanced: 'bg-red-100 text-red-800',
+		};
+		return colors[level as keyof typeof colors] || 'bg-gray-100 text-gray-800';
+	}
+
+	function getDialectBadgeColor(dialect: string) {
+		const colors = {
+			'egyptian-arabic': 'bg-tile-500 text-text-300',
+			'levantine': 'bg-orange-100 text-orange-800',
+			'darija': 'bg-green-100 text-green-800',
+			'fusha': 'bg-purple-100 text-purple-800',
+		};
+		return colors[dialect as keyof typeof colors] || 'bg-gray-100 text-gray-800';
+	}
+
+	function capitalizeFirst(str: string) {
+		return str.charAt(0).toUpperCase() + str.slice(1);
+	}
+</script>
+
+<svelte:head>
+	<title>
+		{lessonBody?.title?.english || 'Lesson'} - Parallel Arabic
+	</title>
+</svelte:head>
+
+<div class="min-h-screen bg-tile-100">
+	{#if error}
+		<div class="px-3 py-12 sm:px-8 max-w-5xl mx-auto">
+			<div class="bg-red-50 border border-red-200 rounded-lg p-6 text-center">
+				<h1 class="text-2xl font-bold text-red-800 mb-2">Lesson Not Found</h1>
+				<p class="text-red-600">{error}</p>
+				<a href="/lessons" class="mt-4 inline-block text-blue-600 hover:text-blue-800 underline">
+					← Back to Lessons
+				</a>
+			</div>
+		</div>
+	{:else if !lessonBody}
+		<div class="px-3 py-12 sm:px-8 max-w-5xl mx-auto">
+			<div class="text-center">
+				<p class="text-text-200 text-lg">Loading lesson...</p>
+			</div>
+		</div>
+	{:else}
+		<!-- Header -->
+		<div class="bg-tile-200 border-b border-tile-600">
+			<div class="px-3 py-6 sm:px-8 max-w-5xl mx-auto">
+				<a href="/lessons" class="inline-flex items-center text-text-300 hover:text-text-200 mb-4 transition-colors">
+					<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+					</svg>
+					Back to Lessons
+				</a>
+				
+				<div class="flex flex-wrap gap-2 mb-4">
+					{#if lessonBody.dialect || lesson?.dialect}
+						<span class="inline-flex items-center px-3 py-1 text-sm font-medium rounded-full {getDialectBadgeColor(lessonBody.dialect || lesson?.dialect)}">
+							{lesson?.dialect_name || capitalizeFirst((lessonBody.dialect || lesson?.dialect || '').replace('-', ' '))}
+						</span>
+					{/if}
+					{#if lessonBody.level}
+						<span class="inline-flex items-center px-3 py-1 text-sm font-medium rounded-full {getLevelBadgeColor(lessonBody.level)}">
+							{capitalizeFirst(lessonBody.level)}
+						</span>
+					{/if}
+					{#if lessonBody.estimatedDuration}
+						<span class="inline-flex items-center px-3 py-1 text-sm font-medium rounded-full bg-blue-100 text-blue-800">
+							~{lessonBody.estimatedDuration} min
+						</span>
+					{/if}
+				</div>
+
+				<h1 class="text-3xl sm:text-4xl font-bold text-text-300 mb-2">
+					{lessonBody.title?.english || 'Untitled Lesson'}
+				</h1>
+				{#if lessonBody.title?.arabic}
+					<div class="flex items-center gap-2 mb-2">
+						<h2 class="text-2xl sm:text-3xl text-text-200" dir="rtl">
+							{lessonBody.title.arabic}
+						</h2>
+						<InlineAudioButton text={lessonBody.title.arabic} {dialect} />
+					</div>
+				{/if}
+				{#if lessonBody.title?.transliteration}
+					<p class="text-lg text-text-200 italic">
+						{lessonBody.title.transliteration}
+					</p>
+				{/if}
+
+				{#if lessonBody.description}
+					<div class="mt-4 text-text-200">
+						{#if lessonBody.description.english}
+							<p class="text-lg mb-2">{lessonBody.description.english}</p>
+						{/if}
+						{#if lessonBody.description.arabic}
+							<p class="text-lg" dir="rtl">{lessonBody.description.arabic}</p>
+						{/if}
+					</div>
+				{/if}
+
+				{#if lessonBody.learningObjectives && lessonBody.learningObjectives.length > 0}
+					<div class="mt-6">
+						<h3 class="text-xl font-semibold text-text-300 mb-2">Learning Objectives</h3>
+						<ul class="list-disc list-inside space-y-1 text-text-200">
+							{#each lessonBody.learningObjectives as objective}
+								<li>{objective}</li>
+							{/each}
+						</ul>
+					</div>
+				{/if}
+			</div>
+		</div>
+
+		<!-- Main Content -->
+		<div class="px-3 py-8 sm:px-8 max-w-5xl mx-auto">
+			<!-- Sub-Lessons -->
+			{#if lessonBody.subLessons && lessonBody.subLessons.length > 0}
+				<div class="space-y-8 mb-12">
+					{#each lessonBody.subLessons as subLesson, index}
+						<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg">
+							<div class="mb-4">
+								<span class="inline-block bg-tile-500 text-text-300 px-3 py-1 rounded-full text-sm font-semibold mb-2">
+									Sub-lesson {index + 1}
+								</span>
+								<h2 class="text-2xl font-bold text-text-300 mt-2">
+									{subLesson.title?.english || 'Untitled Sub-lesson'}
+								</h2>
+								{#if subLesson.title?.arabic}
+									<div class="flex items-center gap-2 mt-1">
+										<h3 class="text-xl text-text-200" dir="rtl">
+											{subLesson.title.arabic}
+										</h3>
+										<InlineAudioButton text={subLesson.title.arabic} {dialect} />
+									</div>
+								{/if}
+								{#if subLesson.title?.transliteration}
+									<p class="text-text-200 italic mt-1">
+										{subLesson.title.transliteration}
+									</p>
+								{/if}
+							</div>
+
+							<!-- Content Section -->
+							{#if subLesson.content}
+								<div class="mb-6">
+									{#if subLesson.content.title}
+										<h3 class="text-xl font-semibold text-text-300 mb-3">
+											{subLesson.content.title.english || subLesson.content.title.arabic}
+										</h3>
+									{/if}
+
+									<!-- Phrases/Vocabulary -->
+									{#if subLesson.content.phrases && subLesson.content.phrases.length > 0}
+										<div class="mb-6">
+											<h4 class="text-lg font-semibold text-text-300 mb-3">Vocabulary & Phrases</h4>
+											<div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+												{#each subLesson.content.phrases as phrase}
+													<div class="bg-tile-300 p-4 rounded border border-tile-600">
+														<div class="flex items-start justify-between gap-2">
+															<div class="flex-1">
+																<div class="flex items-center gap-2 mb-1">
+																	<p class="text-xl font-semibold text-text-300" dir="rtl">
+																		{phrase.arabic}
+																	</p>
+																	<InlineAudioButton text={phrase.arabic} {dialect} />
+																</div>
+																<p class="text-text-200 font-medium">{phrase.english}</p>
+																<p class="text-text-200 italic text-sm mt-1">{phrase.transliteration}</p>
+															</div>
+															<button
+																type="button"
+																onclick={() => openPronunciationTest(phrase.arabic, phrase.transliteration, phrase.english)}
+																class="px-3 py-1 text-xs bg-tile-500 text-text-300 rounded hover:bg-tile-600 transition-colors whitespace-nowrap"
+																title="Test pronunciation"
+															>
+																🎤 Test
+															</button>
+														</div>
+													</div>
+												{/each}
+											</div>
+										</div>
+									{/if}
+
+									<!-- Explanations -->
+									{#if subLesson.content.explanations && subLesson.content.explanations.length > 0}
+										<div class="mb-6">
+											<h4 class="text-lg font-semibold text-text-300 mb-3">Explanations</h4>
+											<div class="space-y-2">
+												{#each subLesson.content.explanations as explanation}
+													<div class="bg-tile-300 p-4 rounded border border-tile-600">
+														<p class="text-text-200">{explanation.english}</p>
+													</div>
+												{/each}
+											</div>
+										</div>
+									{/if}
+								</div>
+							{/if}
+
+							<!-- Exercises -->
+							{#if subLesson.exercises && subLesson.exercises.length > 0}
+								<div class="mt-6 pt-6 border-t border-tile-600">
+									<h4 class="text-lg font-semibold text-text-300 mb-4">Exercises</h4>
+									<div class="space-y-6">
+										{#each subLesson.exercises as exercise}
+											<InteractiveExercise {exercise} {dialect} />
+										{/each}
+									</div>
+								</div>
+							{/if}
+						</div>
+					{/each}
+				</div>
+			{/if}
+
+			<!-- Review Section -->
+			{#if lessonBody.review}
+				<div class="mb-8 space-y-6">
+					<!-- Review Words -->
+					{#if lessonBody.review.words && lessonBody.review.words.length > 0}
+						<ReviewCarousel items={lessonBody.review.words} {dialect} title="Key Vocabulary" />
+					{/if}
+
+					<!-- Review Sentences -->
+					{#if lessonBody.review.sentences && lessonBody.review.sentences.length > 0}
+						<ReviewCarousel items={lessonBody.review.sentences} {dialect} title="Practice Sentences" />
+					{/if}
+				</div>
+			{/if}
+
+			<!-- Additional Sections -->
+			<div class="space-y-6">
+				<!-- Grammar Focus -->
+				{#if lessonBody.grammarFocus && lessonBody.grammarFocus.length > 0}
+					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg">
+						<h2 class="text-2xl font-bold text-text-300 mb-4">Grammar Focus</h2>
+						<div class="space-y-4">
+							{#each lessonBody.grammarFocus as grammar}
+								<div class="bg-tile-300 p-4 rounded border border-tile-600">
+									<h3 class="text-lg font-semibold text-text-300 mb-2">{grammar.title}</h3>
+									<p class="text-text-200 mb-2">{grammar.english}</p>
+									{#if grammar.arabic}
+										<p class="text-text-200 mb-2" dir="rtl">{grammar.arabic}</p>
+									{/if}
+									{#if grammar.examples && grammar.examples.length > 0}
+										<div class="mt-3 space-y-2">
+											{#each grammar.examples as example}
+												<div class="pl-4 border-l-2 border-tile-500">
+													<div class="flex items-center gap-2 justify-between">
+														<div class="flex items-center gap-2 flex-1">
+															<p class="text-text-300 font-semibold" dir="rtl">{example.arabic}</p>
+															<InlineAudioButton text={example.arabic} {dialect} />
+														</div>
+														<button
+															type="button"
+															onclick={() => openPronunciationTest(example.arabic, example.transliteration, example.english)}
+															class="px-2 py-1 text-xs bg-tile-500 text-text-300 rounded hover:bg-tile-600 transition-colors whitespace-nowrap"
+															title="Test pronunciation"
+														>
+															🎤 Test
+														</button>
+													</div>
+													<p class="text-text-200">{example.english}</p>
+													<p class="text-text-200 italic text-sm">{example.transliteration}</p>
+												</div>
+											{/each}
+										</div>
+									{/if}
+								</div>
+							{/each}
+						</div>
+					</div>
+				{/if}
+
+				<!-- Cultural Notes -->
+				{#if lessonBody.culturalNotes && lessonBody.culturalNotes.length > 0}
+					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg">
+						<h2 class="text-2xl font-bold text-text-300 mb-4">Cultural Notes</h2>
+						<div class="space-y-4">
+							{#each lessonBody.culturalNotes as note}
+								<div class="bg-tile-300 p-4 rounded border border-tile-600">
+									{#if note.title}
+										<h3 class="text-lg font-semibold text-text-300 mb-2">{note.title}</h3>
+									{/if}
+									<p class="text-text-200">{note.english}</p>
+									{#if note.arabic}
+										<p class="text-text-200 mt-2" dir="rtl">{note.arabic}</p>
+									{/if}
+								</div>
+							{/each}
+						</div>
+					</div>
+				{/if}
+
+				<!-- Pronunciation Tips -->
+				{#if lessonBody.pronunciationTips && lessonBody.pronunciationTips.length > 0}
+					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg">
+						<h2 class="text-2xl font-bold text-text-300 mb-4">Pronunciation Tips</h2>
+						<div class="space-y-4">
+							{#each lessonBody.pronunciationTips as tip}
+								<div class="bg-tile-300 p-4 rounded border border-tile-600">
+									<h3 class="text-lg font-semibold text-text-300 mb-2">
+										Sound: {tip.sound}
+										{#if tip.transliteration}
+											<span class="text-text-200 font-normal">({tip.transliteration})</span>
+										{/if}
+									</h3>
+									<p class="text-text-200 mb-2">{tip.description}</p>
+									{#if tip.examples && tip.examples.length > 0}
+										<div class="mt-3 space-y-2">
+											{#each tip.examples as example}
+												<div class="pl-4 border-l-2 border-tile-500">
+													<div class="flex items-center gap-2 justify-between">
+														<div class="flex items-center gap-2 flex-1">
+															<p class="text-text-300 font-semibold" dir="rtl">{example.arabic}</p>
+															<InlineAudioButton text={example.arabic} {dialect} />
+														</div>
+														<button
+															type="button"
+															onclick={() => openPronunciationTest(example.arabic, example.transliteration, example.english)}
+															class="px-2 py-1 text-xs bg-tile-500 text-text-300 rounded hover:bg-tile-600 transition-colors whitespace-nowrap"
+															title="Test pronunciation"
+														>
+															🎤 Test
+														</button>
+													</div>
+													<p class="text-text-200">{example.english}</p>
+													<p class="text-text-200 italic text-sm">{example.transliteration}</p>
+												</div>
+											{/each}
+										</div>
+									{/if}
+								</div>
+							{/each}
+						</div>
+					</div>
+				{/if}
+
+				<!-- Common Mistakes -->
+				{#if lessonBody.commonMistakes && lessonBody.commonMistakes.length > 0}
+					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg">
+						<h2 class="text-2xl font-bold text-text-300 mb-4">Common Mistakes</h2>
+						<div class="space-y-4">
+							{#each lessonBody.commonMistakes as mistake}
+								<div class="bg-tile-300 p-4 rounded border border-tile-600">
+									<h3 class="text-lg font-semibold text-text-300 mb-2">{mistake.mistake}</h3>
+									<p class="text-text-200 mb-2">
+										<strong>Correct:</strong> {mistake.correct}
+									</p>
+									<p class="text-text-200">{mistake.explanation}</p>
+									{#if mistake.examples && mistake.examples.length > 0}
+										<div class="mt-4 space-y-3">
+											{#each mistake.examples as example}
+												<div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+													<div class="p-3 bg-red-50 border border-red-200 rounded">
+														<p class="text-sm font-semibold text-red-800 mb-1">Incorrect</p>
+														<div class="flex items-center gap-2 mb-1">
+															<p class="text-text-300 font-semibold" dir="rtl">{example.incorrect.arabic}</p>
+															<InlineAudioButton text={example.incorrect.arabic} {dialect} />
+														</div>
+														<p class="text-text-200 text-sm">{example.incorrect.english}</p>
+													</div>
+													<div class="p-3 bg-green-50 border border-green-200 rounded">
+														<div class="flex items-center justify-between mb-1">
+															<p class="text-sm font-semibold text-green-800">Correct</p>
+															<button
+																type="button"
+																onclick={() => openPronunciationTest(example.correct.arabic, example.correct.transliteration, example.correct.english)}
+																class="px-2 py-1 text-xs bg-green-200 text-green-800 rounded hover:bg-green-300 transition-colors whitespace-nowrap"
+																title="Test pronunciation"
+															>
+																🎤 Test
+															</button>
+														</div>
+														<div class="flex items-center gap-2 mb-1">
+															<p class="text-text-300 font-semibold" dir="rtl">{example.correct.arabic}</p>
+															<InlineAudioButton text={example.correct.arabic} {dialect} />
+														</div>
+														<p class="text-text-200 text-sm">{example.correct.english}</p>
+													</div>
+												</div>
+											{/each}
+										</div>
+									{/if}
+								</div>
+							{/each}
+						</div>
+					</div>
+				{/if}
+
+				<!-- Summary -->
+				{#if lessonBody.summary}
+					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg">
+						<h2 class="text-2xl font-bold text-text-300 mb-4">Summary</h2>
+						{#if lessonBody.summary.english}
+							<p class="text-text-200 text-lg mb-2">{lessonBody.summary.english}</p>
+						{/if}
+						{#if lessonBody.summary.arabic}
+							<p class="text-text-200 text-lg" dir="rtl">{lessonBody.summary.arabic}</p>
+						{/if}
+					</div>
+				{/if}
+
+				<!-- Key Takeaways -->
+				{#if lessonBody.keyTakeaways && lessonBody.keyTakeaways.length > 0}
+					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg">
+						<h2 class="text-2xl font-bold text-text-300 mb-4">Key Takeaways</h2>
+						<ul class="list-disc list-inside space-y-2 text-text-200">
+							{#each lessonBody.keyTakeaways as takeaway}
+								<li>{takeaway}</li>
+							{/each}
+						</ul>
+					</div>
+				{/if}
+
+				<!-- Quiz Section -->
+				{#if lessonBody.quiz && lessonBody.quiz.questions && lessonBody.quiz.questions.length > 0}
+					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg">
+						<h2 class="text-2xl font-bold text-text-300 mb-2">Lesson Quiz</h2>
+						{#if lessonBody.quiz.title}
+							<h3 class="text-xl font-semibold text-text-300 mb-2">{lessonBody.quiz.title}</h3>
+						{/if}
+						{#if lessonBody.quiz.description}
+							<p class="text-text-200 mb-6">{lessonBody.quiz.description}</p>
+						{/if}
+						<div class="space-y-6">
+							{#each lessonBody.quiz.questions as question, index}
+								<div>
+									<p class="text-sm text-text-200 mb-2">Question {index + 1} of {lessonBody.quiz.questions.length}</p>
+									<InteractiveExercise exercise={question} {dialect} />
+								</div>
+							{/each}
+						</div>
+					</div>
+				{/if}
+			</div>
+		</div>
+	{/if}
+</div>
+
+<!-- Pronunciation Test Modal -->
+<PronunciationTestModal
+	isOpen={pronunciationModalOpen}
+	closeModal={closePronunciationModal}
+	text={pronunciationText}
+	transliteration={pronunciationTransliteration}
+	english={pronunciationEnglish}
+	{dialect}
+/>
+

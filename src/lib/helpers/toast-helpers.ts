@@ -295,6 +295,45 @@ export function showVideoProcessingErrorToast(toastId: string | number, error: s
 }
 
 /**
+ * Toast helper for lesson creation
+ */
+export function showLessonCreationToast(dialect: string) {
+  const toastId = toast.loading(`Creating your ${getDialectDisplayName(dialect)} lesson...`, {
+    description: dialect === 'darija' || dialect === 'egyptian-arabic' 
+      ? 'This usually takes up to 2 minutes' 
+      : 'This usually takes up to 2 minutes',
+    duration: Infinity // Never auto-close
+  });
+  
+  console.log('🔄 [toast-helpers] Created lesson loading toast:', { toastId, dialect });
+  return toastId;
+}
+
+/**
+ * Toast helper for successful lesson creation with navigation
+ */
+export function showLessonSuccessToast(toastId: string | number, lessonId: string) {
+  console.log('🎉 [toast-helpers] Showing lesson success toast:', { toastId, lessonId });
+  
+  // Dismiss the loading toast first
+  toast.dismiss(toastId);
+  
+  // Show the success toast with action button
+  const resultToastId = toast.success('Lesson created successfully!', {
+    description: 'Click the button below to view your new lesson',
+    action: {
+      label: 'View Lesson',
+      onClick: () => {
+        console.log('🔗 [toast-helpers] Navigating to lesson:', lessonId);
+        goto(`/lessons/${lessonId}`);
+      }
+    },
+    duration: Infinity
+  });
+  console.log('✅ [toast-helpers] Success toast created:', resultToastId);
+}
+
+/**
  * Get display name for dialect
  */
 function getDialectDisplayName(dialect: string): string {

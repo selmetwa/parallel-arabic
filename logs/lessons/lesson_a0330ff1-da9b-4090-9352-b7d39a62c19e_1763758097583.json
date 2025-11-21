@@ -1,0 +1,11 @@
+{
+  "timestamp": "2025-11-21T20:48:17.583Z",
+  "lessonId": "a0330ff1-da9b-4090-9352-b7d39a62c19e",
+  "stage": "error",
+  "errorType": "Lesson generation error",
+  "error": {
+    "error": "{\"message\":\"Something went wrong while processing the lesson\"}",
+    "type": "object"
+  },
+  "fullError": "{\"status\":500,\"body\":{}}"
+}
