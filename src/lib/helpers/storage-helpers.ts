@@ -249,3 +249,83 @@ export async function deleteAudioFromStorage(fileKey: string): Promise<{ success
     return { success: false, error: (error as Error).message };
   }
 }
+
+/**
+ * Upload lesson JSON to the generated_lesson bucket
+ */
+export async function uploadLessonToStorage(lessonId: string, lessonData: object): Promise<{ success: boolean; fileKey?: string; error?: string }> {
+  try {
+    const fileName = `${lessonId}.json`;
+    const fileContent = JSON.stringify(lessonData, null, 2);
+
+    const { error } = await supabase.storage
+      .from('generated_lesson')
+      .upload(fileName, fileContent, {
+        contentType: 'application/json',
+        upsert: true // Allow overwriting if file exists
+      });
+
+    if (error) {
+      console.error('Storage upload error:', error);
+      return { success: false, error: error.message };
+    }
+
+    console.log('✅ Lesson uploaded to storage:', fileName);
+    return { success: true, fileKey: fileName };
+  } catch (error) {
+    console.error('Lesson upload failed:', error);
+    return { success: false, error: (error as Error).message };
+  }
+}
+
+/**
+ * Download lesson JSON from the generated_lesson bucket
+ */
+export async function downloadLessonFromStorage(fileKey: string): Promise<{ success: boolean; data?: object; error?: string }> {
+  try {
+    const { data, error } = await supabase.storage
+      .from('generated_lesson')
+      .download(fileKey);
+
+    if (error) {
+      console.error('Storage download error:', error);
+      return { success: false, error: error.message };
+    }
+
+    if (!data) {
+      return { success: false, error: 'No data returned from storage' };
+    }
+
+    // Convert blob to text and parse JSON
+    const jsonText = await data.text();
+    const lessonData = JSON.parse(jsonText);
+
+    console.log('✅ Lesson downloaded from storage:', fileKey);
+    return { success: true, data: lessonData };
+  } catch (error) {
+    console.error('Lesson download failed:', error);
+    return { success: false, error: (error as Error).message };
+  }
+}
+
+/**
+ * Delete lesson from storage
+ */
+export async function deleteLessonFromStorage(fileKey: string): Promise<{ success: boolean; error?: string }> {
+  try {
+    const { error } = await supabase.storage
+      .from('generated_lesson')
+      .remove([fileKey]);
+
+    if (error) {
+      console.error('Storage delete error:', error);
+      return { success: false, error: error.message };
+    }
+
+    console.log('✅ Lesson deleted from storage:', fileKey);
+    return { success: true };
+  } catch (error) {
+    console.error('Lesson delete failed:', error);
+    return { success: false, error: (error as Error).message };
+  }
+}
