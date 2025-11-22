@@ -17,25 +17,25 @@ export default defineConfig({
 				orientation: 'portrait-primary',
 				icons: [
 					{
-						src: '/icons/icon.png',
+						src: '/icons/icon-192.png',
 						sizes: '192x192',
 						type: 'image/png',
 						purpose: 'any'
 					},
 					{
-						src: '/icons/icon.png',
+						src: '/icons/icon-512.png',
 						sizes: '512x512',
 						type: 'image/png',
 						purpose: 'any'
 					},
 					{
-						src: '/icons/icon.png',
+						src: '/icons/icon-192.png',
 						sizes: '192x192',
 						type: 'image/png',
 						purpose: 'maskable'
 					},
 					{
-						src: '/icons/icon.png',
+						src: '/icons/icon-512.png',
 						sizes: '512x512',
 						type: 'image/png',
 						purpose: 'maskable'
@@ -48,28 +48,28 @@ export default defineConfig({
 						short_name: 'Lessons',
 						description: 'View your lessons',
 						url: '/lessons',
-						icons: [{ src: '/icons/icon.png', sizes: '192x192', type: 'image/png' }]
+						icons: [{ src: '/icons/icon-192.png', sizes: '192x192', type: 'image/png' }]
 					},
 					{
 						name: 'Review',
 						short_name: 'Review',
 						description: 'Review vocabulary',
 						url: '/review',
-						icons: [{ src: '/icons/icon.png', sizes: '192x192', type: 'image/png' }]
+						icons: [{ src: '/icons/icon-192.png', sizes: '192x192', type: 'image/png' }]
 					},
 					{
 						name: 'Tutor',
 						short_name: 'Tutor',
 						description: 'Practice with tutor',
 						url: '/tutor',
-						icons: [{ src: '/icons/icon.png', sizes: '192x192', type: 'image/png' }]
+						icons: [{ src: '/icons/icon-192.png', sizes: '192x192', type: 'image/png' }]
 					},
 					{
 						name: 'Stories',
 						short_name: 'Stories',
 						description: 'Read Arabic stories',
 						url: '/stories',
-						icons: [{ src: '/icons/icon.png', sizes: '192x192', type: 'image/png' }]
+						icons: [{ src: '/icons/icon-192.png', sizes: '192x192', type: 'image/png' }]
 					}
 				]
 			}
