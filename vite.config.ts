@@ -6,6 +6,25 @@ export default defineConfig({
 	plugins: [
 		sveltekit(),
 		SvelteKitPWA({
+			strategies: 'generateSW',
+			workbox: {
+				globPatterns: ['client/**/*.{js,css,ico,png,svg,webp,webmanifest}'],
+				navigateFallback: '/',
+				navigateFallbackDenylist: [/^\/api\//],
+				runtimeCaching: [
+					{
+						urlPattern: ({ url }) => url.pathname.startsWith('/'),
+						handler: 'NetworkFirst',
+						options: {
+							cacheName: 'pages-cache',
+							expiration: {
+								maxEntries: 50,
+								maxAgeSeconds: 30 * 24 * 60 * 60 // 30 days
+							}
+						}
+					}
+				]
+			},
 			manifest: {
 				name: 'Parallel Arabic',
 				short_name: 'Parallel Arabic',
