@@ -13,6 +13,7 @@
   import { Toaster } from 'svelte-sonner';
   
   import { invalidate } from '$app/navigation'
+  import { pwaInfo } from 'virtual:pwa-info';
   
   let { data, children } = $props();
   $inspect(data)
@@ -24,9 +25,23 @@
 	// Get session and supabase client from data
 	let { session, supabase } = $derived(data)
 	
-	onMount(() => {
+	onMount(async () => {
 		root = document.documentElement;
 		doc = document.firstElementChild || null;
+		
+		// Register PWA service worker
+		if (pwaInfo) {
+			const { registerSW } = await import('virtual:pwa-register');
+			registerSW({
+				immediate: true,
+				onRegistered(r) {
+					console.log(`SW Registered: ${r}`);
+				},
+				onRegisterError(error) {
+					console.log('SW registration error', error);
+				}
+			});
+		}
 		
 		// Listen to auth changes and invalidate layout when session changes
 		const { data: authData } = supabase.auth.onAuthStateChange((event: string, newSession: any) => {
@@ -59,10 +74,14 @@
   theme.subscribe((value) => {
     themeValue = value;
   });
+
+	// PWA manifest link
+	const webManifest = $derived(pwaInfo ? pwaInfo.webManifest.linkTag : '');
 </script>
 
 <svelte:head>
 	<title>Parallel Arabic</title>
+	{@html webManifest}
 </svelte:head>
 
 	<Drawer {isOpen} {handleCloseDrawer}>
