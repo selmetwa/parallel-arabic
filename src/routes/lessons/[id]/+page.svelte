@@ -490,6 +490,22 @@
 						</div>
 					</div>
 				{/if}
+
+				<!-- Create Your Own Lesson CTA -->
+				<div class="mt-12 mb-8 bg-gradient-to-r from-tile-500 to-tile-600 border-2 border-tile-600 rounded-xl p-8 shadow-xl">
+					<div class="text-center">
+						<h2 class="text-3xl font-bold text-text-300 mb-3">Ready to Create Your Own Lesson?</h2>
+						<p class="text-text-200 text-lg mb-6 max-w-2xl mx-auto">
+							You've completed this lesson! Now create a personalized lesson tailored to your specific learning goals and interests.
+						</p>
+						<a 
+							href="/lessons" 
+							class="inline-block px-8 py-4 bg-tile-300 hover:bg-tile-200 text-text-300 font-bold text-lg rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 transform border-2 border-tile-400"
+						>
+							Create Your Own Lesson →
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	{/if}
