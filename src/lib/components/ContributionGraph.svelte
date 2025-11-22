@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Tooltip from '$lib/components/Tooltip.svelte';
+
   interface ContributionData {
     reviewedByDate: Record<string, number>;
     savedByDate: Record<string, number>;
@@ -18,6 +20,7 @@
   let isLoading = $state(true);
   let error = $state<string | null>(null);
   let selectedMetric = $state<'all' | 'reviewed' | 'saved'>('all');
+  let hoveredDay = $state<string | null>(null);
 
   // Helper function to format date as YYYY-MM-DD
   function formatDateKey(date: Date): string {
@@ -37,7 +40,7 @@
   // Get intensity level for a day (0-4)
   function getIntensity(dateKey: string): number {
     if (!contributionData) return 0;
-    
+
     let count = 0;
     if (selectedMetric === 'all' || selectedMetric === 'reviewed') {
       count += contributionData.reviewedByDate[dateKey] || 0;
@@ -45,7 +48,7 @@
     if (selectedMetric === 'all' || selectedMetric === 'saved') {
       count += contributionData.savedByDate[dateKey] || 0;
     }
-    
+
     if (count === 0) return 0;
     if (count === 1) return 1;
     if (count <= 3) return 2;
@@ -53,30 +56,30 @@
     return 4;
   }
 
-  // Get color class based on intensity
-  function getColorClass(intensity: number): string {
+  // Get color based on intensity
+  function getColor(intensity: number): string {
     switch (intensity) {
-      case 0: return 'bg-tile-400 border-tile-500';
-      case 1: return 'bg-green-500 border-green-600';
-      case 2: return 'bg-green-600 border-green-700';
-      case 3: return 'bg-green-700 border-green-800';
-      case 4: return 'bg-green-800 border-green-900';
-      default: return 'bg-tile-400 border-tile-500';
+      case 0: return '#ebedf0';
+      case 1: return '#c6e48b';
+      case 2: return '#7bc96f';
+      case 3: return '#239a3b';
+      case 4: return '#196127';
+      default: return '#ebedf0';
     }
   }
 
   // Get tooltip text
   function getTooltip(dateKey: string): string {
     if (!contributionData) return formatDate(dateKey);
-    
+
     const reviewed = contributionData.reviewedByDate[dateKey] || 0;
     const saved = contributionData.savedByDate[dateKey] || 0;
     const total = reviewed + saved;
-    
+
     if (total === 0) {
       return `${formatDate(dateKey)}: No activity`;
     }
-    
+
     const parts: string[] = [];
     if (reviewed > 0) {
       parts.push(`${reviewed} word${reviewed !== 1 ? 's' : ''} reviewed`);
@@ -84,7 +87,7 @@
     if (saved > 0) {
       parts.push(`${saved} word${saved !== 1 ? 's' : ''} saved`);
     }
-    
+
     return `${formatDate(dateKey)}: ${parts.join(', ')}`;
   }
 
@@ -93,13 +96,13 @@
     const days: DayData[] = [];
     const today = new Date();
     today.setHours(0, 0, 0, 0);
-    
+
     for (let i = 364; i >= 0; i--) {
       const date = new Date(today);
       date.setDate(date.getDate() - i);
       const dateKey = formatDateKey(date);
       const intensity = getIntensity(dateKey);
-      
+
       days.push({
         date,
         dateKey,
@@ -107,7 +110,7 @@
         intensity
       });
     }
-    
+
     return days;
   }
 
@@ -115,21 +118,53 @@
   function generateWeeks(): DayData[][] {
     const days = generateDays();
     const weeks: DayData[][] = [];
-    
+
     for (let i = 0; i < days.length; i += 7) {
       weeks.push(days.slice(i, i + 7));
     }
-    
+
     return weeks;
   }
 
-  let weeks = $derived(generateWeeks());
+  // Get month labels for the bottom of the graph
+  function getMonthLabels(): Record<number, string> {
+    const days = generateDays();
+    const monthLabels: Record<number, string> = {};
+    let lastMonth = -1;
+
+    // Check each week to see if it starts a new month
+    for (let i = 0; i < days.length; i += 7) {
+      const weekIndex = Math.floor(i / 7);
+      const firstDayOfWeek = days[i];
+      
+      if (firstDayOfWeek) {
+        const currentMonth = firstDayOfWeek.date.getMonth();
+        // Show label if this is the first week of a new month, or if it's within the first 3 days of the month
+        if (currentMonth !== lastMonth && firstDayOfWeek.date.getDate() <= 3) {
+          monthLabels[weekIndex] = firstDayOfWeek.date.toLocaleDateString('en-US', { month: 'short' });
+          lastMonth = currentMonth;
+        }
+      }
+    }
+
+    return monthLabels;
+  }
+
+  const weeks = $derived.by(() => {
+    if (!contributionData) return [];
+    return generateWeeks();
+  });
+
+  const monthLabels = $derived.by(() => {
+    if (!contributionData) return {};
+    return getMonthLabels();
+  });
 
   // Fetch contribution data
   async function fetchData() {
     isLoading = true;
     error = null;
-    
+
     try {
       const response = await fetch('/api/contribution-data');
       if (!response.ok) {
@@ -168,7 +203,7 @@
         <span class="text-text-300 font-semibold ml-1">{contributionData?.totalSentencesViewed || 0}</span>
       </div>
     </div>
-    
+
     <div class="flex gap-2 mb-4">
       <button
         type="button"
@@ -201,37 +236,54 @@
   {:else if error}
     <div class="text-red-500 text-center py-12">{error}</div>
   {:else if contributionData}
-    <div class="overflow-x-auto">
-      <div class="flex gap-1 min-w-max">
-        {#each weeks as week}
-          <div class="flex flex-col gap-1">
+    <div class="overflow-x-auto md:overflow-x-visible">
+      <div class="flex gap-0.5 min-w-max md:min-w-0 md:flex-wrap md:justify-start">
+        {#each weeks as week, weekIndex}
+          <div class="flex flex-col gap-0.5">
             {#each week as day}
-              {@const colorClass = getColorClass(day.intensity)}
-              <div
-                class="w-3 h-3 border rounded {colorClass} cursor-pointer hover:ring-2 hover:ring-green-400 transition-all"
-                title={getTooltip(day.dateKey)}
-                role="button"
-                tabindex="0"
-              >
-                <span class="sr-only">{getTooltip(day.dateKey)}</span>
-              </div>
+              {@const color = getColor(day.intensity)}
+              {@const tooltip = getTooltip(day.dateKey)}
+              <Tooltip text={tooltip} position="top">
+                <div
+                  class="w-2.5 h-2.5 border rounded cursor-pointer transition-all hover:ring-2 hover:ring-green-400"
+                  style="background-color: {color}; border-color: {color === '#ebedf0' ? '#d1d5da' : color};"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span class="sr-only">{tooltip}</span>
+                </div>
+              </Tooltip>
             {/each}
           </div>
         {/each}
       </div>
-      
+
+      <!-- Month labels row -->
+      <div class="flex gap-0.5 min-w-max md:min-w-0 md:flex-wrap md:justify-start mt-1">
+        {#each weeks as week, weekIndex}
+          <div class="flex flex-col gap-0.5 w-2.5">
+            {#if monthLabels[weekIndex]}
+              <div class="h-4 flex items-start">
+                <span class="text-xs text-text-200 whitespace-nowrap -ml-0.5">{monthLabels[weekIndex]}</span>
+              </div>
+            {:else}
+              <div class="h-4"></div>
+            {/if}
+          </div>
+        {/each}
+      </div>
+
       <div class="flex items-center justify-between mt-4 text-xs text-text-200">
         <span>Less</span>
-        <div class="flex gap-1 items-center">
-          <div class="w-3 h-3 border rounded bg-tile-400 border-tile-500"></div>
-          <div class="w-3 h-3 border rounded bg-green-500 border-green-600"></div>
-          <div class="w-3 h-3 border rounded bg-green-600 border-green-700"></div>
-          <div class="w-3 h-3 border rounded bg-green-700 border-green-800"></div>
-          <div class="w-3 h-3 border rounded bg-green-800 border-green-900"></div>
+        <div class="flex gap-0.5 items-center">
+          <div class="w-2.5 h-2.5 border rounded" style="background-color: #ebedf0; border-color: #d1d5da;"></div>
+          <div class="w-2.5 h-2.5 border rounded" style="background-color: #c6e48b;"></div>
+          <div class="w-2.5 h-2.5 border rounded" style="background-color: #7bc96f;"></div>
+          <div class="w-2.5 h-2.5 border rounded" style="background-color: #239a3b;"></div>
+          <div class="w-2.5 h-2.5 border rounded" style="background-color: #196127;"></div>
         </div>
         <span>More</span>
       </div>
     </div>
   {/if}
 </div>
-

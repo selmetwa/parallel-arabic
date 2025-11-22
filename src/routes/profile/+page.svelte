@@ -57,7 +57,7 @@
   }
 </script>
 
-<div class="px-4 sm:px-20 pt-4 sm:mt-12">
+<div class="px-4 sm:px-8 lg:px-12 xl:px-20 pt-4 sm:mt-12 max-w-7xl mx-auto">
   <h1 class="text-3xl font-bold text-text-300 mb-6">Profile</h1>
   
   <div class="space-y-6">
@@ -69,7 +69,6 @@
       <h2 class="text-xl font-semibold text-text-300 mb-4">Account Information</h2>
       <div class="space-y-2">
         <p class="text-text-200"><strong>Email:</strong> {data.user?.email || 'Not available'}</p>
-        <p class="text-text-200"><strong>User ID:</strong> {data.user?.id || 'Not available'}</p>
         <p class="text-text-200"><strong>Subscription:</strong> {data.hasActiveSubscription ? 'Active' : 'Not active'}</p>
       </div>
       
@@ -105,6 +104,7 @@
       <p class="text-text-200 mb-4">Manage your review deck and saved words.</p>
       <div class="flex flex-col gap-3">
         <a href="/profile/saved-words" class="text-blue-500 underline">View Saved Words</a>
+        <a href="/review/all-words" class="text-blue-500 underline">View All Review Words</a>
         <a href="/review" class="text-blue-500 underline">Go to Review</a>
         
         <div class="border-t border-tile-600 pt-4 mt-4">
