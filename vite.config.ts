@@ -41,6 +41,22 @@ export default defineConfig({
 						purpose: 'maskable'
 					}
 				],
+				screenshots: [
+					{
+						src: '/screenshots/desktop.png',
+						sizes: '1280x720',
+						type: 'image/png',
+						form_factor: 'wide',
+						label: 'Parallel Arabic Desktop View'
+					},
+					{
+						src: '/screenshots/mobile.png',
+						sizes: '390x844',
+						type: 'image/png',
+						form_factor: 'narrow',
+						label: 'Parallel Arabic Mobile View'
+					}
+				],
 				categories: ['education', 'lifestyle'],
 				shortcuts: [
 					{
