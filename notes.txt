@@ -1,0 +1,6 @@
+
+manually backup db lol 
+
+flyctl sftp shell parallel-arabic
+cd /data
+get db.sqlite /Users/sherifelmetwally/Desktop/fly_data/db.sqlite
