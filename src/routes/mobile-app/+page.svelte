@@ -40,9 +40,9 @@
 
 				<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg">
 					<div class="text-4xl mb-4">💾</div>
-					<h3 class="text-xl font-bold text-text-300 mb-3">Offline Capabilities</h3>
+					<h3 class="text-xl font-bold text-text-300 mb-3">Faster Performance</h3>
 					<p class="text-text-200 leading-relaxed">
-						Some content works offline, so you can practice even without an internet connection.
+						Cached assets load instantly, giving you a smoother and faster learning experience.
 					</p>
 				</div>
 			</div>
@@ -117,70 +117,6 @@
 			</div>
 		</section>
 
-		<!-- Testing Your PWA -->
-		<section class="mb-12">
-			<h2 class="text-2xl sm:text-3xl font-bold text-text-300 mb-6">Testing Your PWA Setup</h2>
-			<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg mb-6">
-				<p class="text-text-200 leading-relaxed mb-4">
-					Want to verify that your PWA is set up correctly? Here's how to test it:
-				</p>
-				
-				<div class="space-y-6">
-					<div>
-						<h4 class="text-lg font-bold text-text-300 mb-3">1. Check Service Worker (Chrome DevTools)</h4>
-						<ol class="list-decimal list-inside space-y-2 text-text-200 ml-2">
-							<li>Open your site in Chrome</li>
-							<li>Press <strong class="text-text-300">F12</strong> or <strong class="text-text-300">Right-click → Inspect</strong></li>
-							<li>Go to the <strong class="text-text-300">Application</strong> tab</li>
-							<li>Click <strong class="text-text-300">Service Workers</strong> in the left sidebar</li>
-							<li>You should see your service worker registered and running</li>
-							<li>Check the <strong class="text-text-300">Manifest</strong> section to verify your app details</li>
-						</ol>
-					</div>
-
-					<div>
-						<h4 class="text-lg font-bold text-text-300 mb-3">2. Test Install Prompt</h4>
-						<ol class="list-decimal list-inside space-y-2 text-text-200 ml-2">
-							<li>In Chrome DevTools, go to <strong class="text-text-300">Application → Manifest</strong></li>
-							<li>Click <strong class="text-text-300">"Add to homescreen"</strong> button (if available)</li>
-							<li>Or look for the install icon in Chrome's address bar</li>
-							<li>On mobile, you should see the install prompt after visiting the site</li>
-						</ol>
-					</div>
-
-					<div>
-						<h4 class="text-lg font-bold text-text-300 mb-3">3. Lighthouse PWA Audit</h4>
-						<ol class="list-decimal list-inside space-y-2 text-text-200 ml-2">
-							<li>Open Chrome DevTools (<strong class="text-text-300">F12</strong>)</li>
-							<li>Go to the <strong class="text-text-300">Lighthouse</strong> tab</li>
-							<li>Select <strong class="text-text-300">Progressive Web App</strong> checkbox</li>
-							<li>Click <strong class="text-text-300">"Analyze page load"</strong></li>
-							<li>Review the PWA score and recommendations</li>
-						</ol>
-					</div>
-
-					<div>
-						<h4 class="text-lg font-bold text-text-300 mb-3">4. Test Offline Functionality</h4>
-						<ol class="list-decimal list-inside space-y-2 text-text-200 ml-2">
-							<li>In Chrome DevTools, go to <strong class="text-text-300">Application → Service Workers</strong></li>
-							<li>Check <strong class="text-text-300">"Offline"</strong> checkbox</li>
-							<li>Refresh the page - cached content should still load</li>
-							<li>Uncheck "Offline" to restore connection</li>
-						</ol>
-					</div>
-
-					<div>
-						<h4 class="text-lg font-bold text-text-300 mb-3">5. Verify Manifest</h4>
-						<ol class="list-decimal list-inside space-y-2 text-text-200 ml-2">
-							<li>Visit <strong class="text-text-300">your-site.com/manifest.json</strong></li>
-							<li>Verify all fields are correct (name, icons, theme color, etc.)</li>
-							<li>Check that icons exist at the specified paths</li>
-						</ol>
-					</div>
-				</div>
-			</div>
-		</section>
-
 		<!-- Troubleshooting -->
 		<section class="mb-12">
 			<h2 class="text-2xl sm:text-3xl font-bold text-text-300 mb-6">Troubleshooting</h2>
@@ -193,9 +129,9 @@
 						</p>
 					</div>
 					<div>
-						<h4 class="text-lg font-bold text-text-300 mb-2">The app isn't working offline</h4>
+						<h4 class="text-lg font-bold text-text-300 mb-2">Does the app work offline?</h4>
 						<p class="leading-relaxed">
-							While Parallel Arabic is a Progressive Web App, some features require an internet connection. Offline capabilities are limited to cached content.
+							Parallel Arabic requires an internet connection to function. The app caches static assets for faster loading, but you'll need internet access to access lessons, stories, and other content.
 						</p>
 					</div>
 					<div>

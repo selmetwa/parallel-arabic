@@ -11,13 +11,25 @@
       "src": "/icons/icon.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
       "src": "/icons/icon.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "categories": ["education", "lifestyle"],
@@ -26,28 +38,28 @@
       "short_name": "Lessons",
       "description": "View your lessons",
       "url": "/lessons",
-      "icons": [{ "src": "/icons/icon.png", "sizes": "192x192" }]
+      "icons": [{ "src": "/icons/icon.png", "sizes": "192x192", "type": "image/png" }]
     },
     {
       "name": "Review",
       "short_name": "Review",
       "description": "Review vocabulary",
       "url": "/review",
-      "icons": [{ "src": "/icons/icon.png", "sizes": "192x192" }]
+      "icons": [{ "src": "/icons/icon.png", "sizes": "192x192", "type": "image/png" }]
     },
     {
       "name": "Tutor",
       "short_name": "Tutor",
       "description": "Practice with tutor",
       "url": "/tutor",
-      "icons": [{ "src": "/icons/icon.png", "sizes": "192x192" }]
+      "icons": [{ "src": "/icons/icon.png", "sizes": "192x192", "type": "image/png" }]
     },
     {
       "name": "Stories",
       "short_name": "Stories",
       "description": "Read Arabic stories",
       "url": "/stories",
-      "icons": [{ "src": "/icons/icon.png", "sizes": "192x192" }]
+      "icons": [{ "src": "/icons/icon.png", "sizes": "192x192", "type": "image/png" }]
     }
   ]
 }
