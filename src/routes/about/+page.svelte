@@ -5,16 +5,19 @@
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 				<div class="text-center lg:text-left">
 					<h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-300 leading-tight mb-6">
-						Practice Arabic in a fun way!
+						Master Arabic Dialects<br class="hidden sm:block" /> Through Real Practice
 					</h1>
-					<p class="text-lg sm:text-xl text-text-200 leading-relaxed mb-8">
-						Parallel Arabic provides a fully self-contained practice environment without the need for outside resources.
+					<p class="text-lg sm:text-xl text-text-200 leading-relaxed mb-4">
+						The only platform that combines <strong class="text-text-300">stories, videos, conversations, sentences, live-chat tutoring, spaced repetition, and personalized lessons</strong>—all in one place. No more switching between apps or struggling to find graded content.
+					</p>
+					<p class="text-base sm:text-lg text-text-200 mb-8">
+						Whether you're learning Egyptian, Levantine, Moroccan, or Modern Standard Arabic, we've got you covered.
 					</p>
 					<a
 						href="/signup"
-						class="inline-block px-8 py-3 text-lg font-semibold bg-tile-500 border-2 border-tile-600 text-text-300 hover:bg-tile-600 transition-colors duration-300 shadow-lg"
+						class="inline-block px-8 py-4 text-lg font-semibold bg-tile-500 border-2 border-tile-600 text-text-300 hover:bg-tile-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
 					>
-						Get Started Now!
+						Start Learning Free →
 					</a>
 				</div>
 				<div class="flex justify-center lg:justify-end">
@@ -23,6 +26,40 @@
 			</div>
 		</div>
 	</header>
+
+	<!-- Key Features Highlight -->
+	<section class="py-12 sm:py-16 bg-tile-200 border-y border-tile-600">
+		<div class="max-w-7xl mx-auto px-4 sm:px-8">
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+				<!-- On-Demand Definitions -->
+				<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg text-center">
+					<div class="text-4xl mb-4">📖</div>
+					<h3 class="text-xl font-bold text-text-300 mb-3">On-Demand Definitions</h3>
+					<p class="text-text-200 leading-relaxed">
+						No more turning to the back of the textbook. Get instant definitions for every word as you read, right when you need them.
+					</p>
+				</div>
+
+				<!-- Parallel Text -->
+				<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg text-center">
+					<div class="text-4xl mb-4">🔤</div>
+					<h3 class="text-xl font-bold text-text-300 mb-3">Arabic, English & Transliteration</h3>
+					<p class="text-text-200 leading-relaxed">
+						Every word and sentence comes with Arabic script, English translation, and transliteration—learn how to read, understand, and pronounce simultaneously.
+					</p>
+				</div>
+
+				<!-- Native Voices -->
+				<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg text-center">
+					<div class="text-4xl mb-4">🎙️</div>
+					<h3 class="text-xl font-bold text-text-300 mb-3">Real Dialect-Specific Voices</h3>
+					<p class="text-text-200 leading-relaxed">
+						Listen to native speakers from each dialect. Authentic pronunciation for Egyptian, Levantine, Moroccan, and Modern Standard Arabic.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<!-- Testimonials Section -->
 	<section class="py-12 sm:py-16">

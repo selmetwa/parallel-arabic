@@ -29,7 +29,7 @@
       <a href="/lessons" class="group px-4 py-5 flex-col flex gap-2 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
         <h3 class="text-lg text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">Lessons</h3>
         <p class="text-text-300 text-xs font-medium leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-          Comprehensive AI-generated lessons with exercises and pronunciation practice.
+          Comprehensive lessons with exercises and pronunciation practice.
         </p>
       </a>
       <a href="/review" class="group px-4 py-5 flex-col flex gap-2 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
@@ -48,7 +48,7 @@
       <a href="/stories" class="group px-4 py-5 flex-col flex gap-2 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
         <h3 class="text-lg text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">Stories</h3>
         <p class="text-text-300 text-xs font-medium leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-          Read short stories with translations and AI definitions.
+          Read short stories with translations and instant definitions.
         </p>
       </a>
       <a href="/videos" class="group px-4 py-5 flex-col flex gap-2 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
@@ -60,19 +60,19 @@
       <a href="/sentences" class="group px-4 py-5 flex-col flex gap-2 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
         <h3 class="text-lg text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">Sentences</h3>
         <p class="text-text-300 text-xs font-medium leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-          Practice with AI-generated sentences in your dialect.
+          Practice with sentences in your dialect.
         </p>
       </a>
       <a href="/speak" class="group px-4 py-5 flex-col flex gap-2 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
         <h3 class="text-lg text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">Speak</h3>
         <p class="text-text-300 text-xs font-medium leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-          Practice speaking with AI-generated sentences and audio feedback.
+          Practice speaking with sentences and audio feedback.
         </p>
       </a>
       <a href="/tutor" class="group px-4 py-5 flex-col flex gap-2 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
         <h3 class="text-lg text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">Tutor</h3>
         <p class="text-text-300 text-xs font-medium leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-          Have conversations with an AI Arabic tutor.
+          Have conversations with an Arabic tutor.
         </p>
       </a>
     </div>
