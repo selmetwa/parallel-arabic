@@ -1,21 +1,47 @@
-.DS_Store
-node_modules
-/build
-/.svelte-kit
-/package
+# Capacitor
+.capacitor/
+ios/
+android/
+*.xcworkspace
+*.xcodeproj
+capacitor.config.json
+
+# Build outputs
+build/
+dist/
+.svelte-kit/
+
+# Dependencies
+node_modules/
+
+# Environment variables
 .env
-.env.*
-!.env.example
-vite.config.js.timestamp-*
-vite.config.ts.timestamp-*
-todo.md
-static/anki_decks/
-Dockerfile
-*.sqlite3*
-*.sqlite*
-*.db
-/data/audio/
-data/audio
-src/lib/constants/blessed-emails.ts
-notes.txt
-.vercel
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing
+coverage/
+.nyc_output/
+
+# Misc
+*.pem
+*.key
+.env.production

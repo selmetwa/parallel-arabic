@@ -42,3 +42,4 @@ function getDialectDisplayName(dialect: string) {
 	return dialectNames[dialect as keyof typeof dialectNames] || dialect;
 }
 
+
