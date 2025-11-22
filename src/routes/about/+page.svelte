@@ -27,6 +27,36 @@
 		</div>
 	</header>
 
+	<!-- Mobile App Section -->
+	<section class="py-12 sm:py-16 bg-tile-200 border-y border-tile-600">
+		<div class="max-w-7xl mx-auto px-4 sm:px-8">
+			<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-8 shadow-lg">
+				<div class="flex flex-col md:flex-row items-center gap-6">
+					<div class="flex-1 text-center md:text-left">
+						<h2 class="text-2xl sm:text-3xl font-bold text-text-300 mb-4">
+							📱 Available as a Mobile App
+						</h2>
+						<p class="text-lg text-text-200 leading-relaxed mb-4">
+							Install Parallel Arabic on your phone or tablet for quick access and a native app experience. Works on iOS, Android, and desktop browsers.
+						</p>
+						<p class="text-base text-text-200 mb-6">
+							Get faster loading times, offline capabilities, and quick access from your home screen—all without downloading from an app store.
+						</p>
+						<a
+							href="/mobile-app"
+							class="inline-block px-6 py-3 text-base font-semibold bg-tile-600 border-2 border-tile-600 text-text-300 hover:bg-tile-700 transition-colors duration-300 shadow-md"
+						>
+							Learn How to Install →
+						</a>
+					</div>
+					<div class="flex-shrink-0">
+						<div class="text-6xl">📱</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<!-- Key Features Highlight -->
 	<section class="py-12 sm:py-16 bg-tile-200 border-y border-tile-600">
 		<div class="max-w-7xl mx-auto px-4 sm:px-8">
