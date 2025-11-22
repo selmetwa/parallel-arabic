@@ -85,7 +85,7 @@ Format your response as JSON with this exact structure:
 
     const translationSchema = createTranslationResponseSchema();
     const response = await generateContentWithRetry(ai, {
-      model: "gemini-3-pro-preview",
+      model: "gemini-2.5-flash",
       contents: fullPrompt,
       // @ts-expect-error - generationConfig is valid but types may be outdated
       generationConfig: {
