@@ -13,6 +13,9 @@ const config = {
     adapter: adapter(),
     csrf: {
       checkOrigin: false,
+    },
+    serviceWorker: {
+      register: false  // Disable SvelteKit's service worker registration (handled by vite-pwa plugin)
     }
   },
   preprocess: [vitePreprocess({})]

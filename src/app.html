@@ -17,47 +17,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Add these PWA meta tags -->
+  <!-- PWA meta tags -->
   <meta name="theme-color" content="#365463" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="Parallel Arabic" />
+  <link rel="apple-touch-icon" href="/icons/icon.png" />
 
-  <!-- Manifest link -->
-  <link rel="manifest" href="/manifest.json" />
-  <link rel="apple-touch-icon" href="/icons/icon.png" /> %sveltekit.head%
+  <!-- Manifest link will be injected by the plugin via +layout.svelte -->
+  %sveltekit.head%
 </head>
 
 <body data-sveltekit-preload-data="hover">
   <div style="display: contents">%sveltekit.body%</div>
-
-  <!-- Service Worker Registration -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', async() => {
-        try {
-          // Check if service worker file exists
-          const response = await fetch('/sw.js', {
-            method: 'HEAD'
-          });
-          if (response.ok) {
-            await navigator.serviceWorker.register('/sw.js', {
-              scope: '/'
-            });
-            console.log('Service Worker registered successfully');
-          }
-        } catch (error) {
-          // Silently fail in dev mode
-          if (
-            import.meta.env.DEV) {
-            console.log('Service Worker not available in dev mode');
-          } else {
-            console.error('Service Worker registration failed:', error);
-          }
-        }
-      });
-    }
-  </script>
 </body>
 
 </html>
