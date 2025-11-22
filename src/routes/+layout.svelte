@@ -76,7 +76,7 @@
   });
 
 	// PWA manifest link
-	$: webManifest = pwaInfo ? pwaInfo.webManifest.linkTag : '';
+	const webManifest = $derived(pwaInfo ? pwaInfo.webManifest.linkTag : '');
 </script>
 
 <svelte:head>
