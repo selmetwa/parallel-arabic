@@ -41,7 +41,7 @@ ${JSON.stringify(jsonSchema, null, 2)}
 - The response must be valid JSON that can be parsed directly by JSON.parse().`;
 
     const response = await generateContentWithRetry(ai, {
-      model: "gemini-3-pro-preview",
+      model: "gemini-2.5-flash",
       contents: enhancedQuestion,
       // @ts-expect-error - generationConfig is valid but types may be outdated
       generationConfig: {
