@@ -1,7 +1,7 @@
 /**
  * Retry utility for Gemini API calls with exponential backoff
  * Handles 503 (Service Unavailable) and other 5xx errors from Gemini API
- * Model priority: gemini-3-pro-preview → gemini-2.5-flash → gemini-2.0-flash
+ * Model priority: gemini-2.5-flash → gemini-2.0-flash
  */
 
 import type { GoogleGenAI } from '@google/genai';
@@ -21,7 +21,7 @@ const DEFAULT_OPTIONS: Required<RetryOptions> = {
 	maxDelayMs: 16000, // Max 16 seconds delay
 	backoffMultiplier: 2, // Double the delay each time
 	retryableStatusCodes: [503, 500, 502, 504, 429], // Service Unavailable, Internal Server Error, Bad Gateway, Gateway Timeout, Too Many Requests
-	fallbackModels: ['gemini-2.5-flash', 'gemini-2.0-flash'] // Fallback models to use if all retries fail
+	fallbackModels: ['gemini-2.0-flash'] // Fallback models to use if all retries fail
 };
 
 /**
@@ -191,7 +191,7 @@ export async function retryGeminiApiCall<T>(
 
 /**
  * Helper function to wrap generateContent calls with retry logic
- * Falls back through a chain of models: gemini-3-pro-preview → gemini-2.5-flash → gemini-2.0-flash
+ * Falls back through a chain of models: gemini-2.5-flash → gemini-2.0-flash
  * 
  * @param ai - GoogleGenAI instance
  * @param params - Parameters to pass to generateContent
@@ -204,7 +204,7 @@ export async function generateContentWithRetry(
 	options: RetryOptions = {}
 ) {
 	const retryOptions = { ...DEFAULT_OPTIONS, ...options };
-	const originalModel = params.model || 'gemini-3-pro-preview';
+	const originalModel = params.model || 'gemini-2.5-flash';
 	const triedModels = new Set<string>([originalModel]);
 
 	try {

@@ -335,7 +335,7 @@
   currentDialect={word.dialect as Dialect}
 />
 
-<div class="bg-tile-300 border border-tile-500 rounded-lg shadow-lg p-6 sm:p-8">
+<div class="bg-tile-400/50 border-2 border-tile-600 rounded-xl shadow-lg p-8 sm:p-10">
   <div class="text-center mb-6">
     <!-- Dialect Badge -->
     <div class="mb-4">
