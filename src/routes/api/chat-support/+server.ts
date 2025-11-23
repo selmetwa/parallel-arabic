@@ -58,7 +58,7 @@ The user may ask about grammar rules, vocabulary, pronunciation, culture, or nee
     const fullPrompt = `${systemPrompt}\n\n${conversationContext ? `Previous conversation:\n${conversationContext}\n\n` : ''}User: ${message}\n\nAssistant:`;
 
     const response = await generateContentWithRetry(ai, {
-      model: "gemini-3-pro-preview",
+      model: "gemini-2.5-flash",
       contents: fullPrompt,
       generationConfig: {
         temperature: 0.7,

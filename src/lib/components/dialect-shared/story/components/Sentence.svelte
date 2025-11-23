@@ -232,9 +232,9 @@
 		if (cachedDefinition) {
 			// Use cached data for instant display
 			setActiveWord({
-				english: '',
-				arabic: removeArabicComma(word),
-				transliterated: '',
+				english: type === 'english' ? removeArabicComma(word) : '',
+				arabic: type === 'arabic' ? removeArabicComma(word) : '',
+				transliterated: type === 'transliteration' ? removeArabicComma(word) : '',
 				description: cachedDefinition,
 				isLoading: false,
 				type: type
@@ -261,9 +261,9 @@
 			wordCache.set(cacheKey, message);
 
 			setActiveWord({
-				english: '',
-				arabic: removeArabicComma(word),
-				transliterated: '',
+				english: type === 'english' ? removeArabicComma(word) : '',
+				arabic: type === 'arabic' ? removeArabicComma(word) : '',
+				transliterated: type === 'transliteration' ? removeArabicComma(word) : '',
 				description: message,
 				isLoading: false,
 				type: type
@@ -303,8 +303,8 @@
 
 		setActiveWord({
 			english: type === 'english' ? targetWord : '',
-			arabic: type === 'arabic' ? targetArabicWord : targetArabicWord,
-			transliterated: '',
+			arabic: type === 'arabic' ? targetArabicWord : '',
+			transliterated: type === 'transliteration' ? targetWord : '',
 			description: message,
 			isLoading: false,
 			type: type

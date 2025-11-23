@@ -7,134 +7,108 @@
   });
 </script>
 
-<section class="px-3 mt-6 sm:px-8 max-w-5xl mx-auto">
-  <div class="text-left mb-6">
-    <h1 class="text-3xl sm:text-4xl text-text-300 font-bold mb-1 tracking-tight">
+<section class="px-4 mt-12 sm:px-8 max-w-7xl mx-auto mb-20">
+  <!-- Hero Section -->
+  <div class="text-left mb-12">
+    <h1 class="text-4xl sm:text-5xl text-text-300 font-bold mb-4 tracking-tight">
       Welcome to Parallel Arabic
     </h1>
-    <p class="text-text-200 text-lg sm:text-xl leading-snug">
-      A comprehensive practice environment for Arabic dialects and Modern Standard Arabic.
+    <p class="text-text-200 text-lg sm:text-xl leading-relaxed opacity-90 max-w-3xl">
+      Your comprehensive practice environment. Master Arabic dialects and Modern Standard Arabic through stories, conversations, and interactive tools.
     </p>
   </div>
-  <!-- Getting Started & Study Tools Combined -->
-  <div class="mb-6">
-    <h2 class="text-2xl text-text-300 font-bold mb-3">Getting Started</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
-      <a href="/alphabet" class="group px-4 py-5 flex-col flex gap-2 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
-        <h3 class="text-lg text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">Arabic Alphabet</h3>
-        <p class="text-text-300 text-xs font-medium leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-          Learn the 28 letters and their connections.
+
+  <!-- Getting Started -->
+  <div class="mb-16">
+    <div class="flex items-center gap-4 mb-6">
+      <h2 class="text-2xl sm:text-3xl text-text-300 font-bold">Start Here</h2>
+      <div class="h-0.5 bg-tile-500 flex-1 opacity-50 rounded-full"></div>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <a href="/alphabet" class="group flex flex-col bg-tile-400 border-2 border-tile-600 rounded-lg p-8 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1">
+        <div class="text-4xl mb-4">✍️</div>
+        <h3 class="text-2xl font-bold text-text-300 mb-2 group-hover:text-text-200 transition-colors">Arabic Alphabet</h3>
+        <p class="text-text-200 text-base leading-relaxed opacity-90 group-hover:opacity-100">
+          Master the script. Learn the 28 letters, their forms, and how to connect them.
         </p>
       </a>
-      <a href="/lessons" class="group px-4 py-5 flex-col flex gap-2 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
-        <h3 class="text-lg text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">Lessons</h3>
-        <p class="text-text-300 text-xs font-medium leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-          Comprehensive lessons with exercises and pronunciation practice.
+
+      <a href="/lessons" class="group flex flex-col bg-tile-400 border-2 border-tile-600 rounded-lg p-8 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1">
+        <div class="text-4xl mb-4">📚</div>
+        <h3 class="text-2xl font-bold text-text-300 mb-2 group-hover:text-text-200 transition-colors">Lessons</h3>
+        <p class="text-text-200 text-base leading-relaxed opacity-90 group-hover:opacity-100">
+          Structured path. Comprehensive lessons with exercises and pronunciation practice.
         </p>
       </a>
-      <a href="/review" class="group px-4 py-5 flex-col flex gap-2 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
-        <h3 class="text-lg text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">Vocabulary Review</h3>
-        <p class="text-text-300 text-xs font-medium leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-          Spaced repetition for saved words.
+
+      <a href="/review" class="group flex flex-col bg-tile-400 border-2 border-tile-600 rounded-lg p-8 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1">
+        <div class="text-4xl mb-4">🧠</div>
+        <h3 class="text-2xl font-bold text-text-300 mb-2 group-hover:text-text-200 transition-colors">Vocabulary Review</h3>
+        <p class="text-text-200 text-base leading-relaxed opacity-90 group-hover:opacity-100">
+          Never forget a word. Smart spaced repetition for your personal vocabulary.
         </p>
       </a>
     </div>
   </div>
 
-  <!-- Practice Activities - Compact Grid -->
-  <div class="mb-6">
-    <h2 class="text-2xl text-text-300 font-bold mb-3">Practice Activities</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-      <a href="/stories" class="group px-4 py-5 flex-col flex gap-2 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
-        <h3 class="text-lg text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">Stories</h3>
-        <p class="text-text-300 text-xs font-medium leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-          Read short stories with translations and instant definitions.
+  <!-- Immersion & Content -->
+  <div class="mb-16">
+    <div class="flex items-center gap-4 mb-6">
+      <h2 class="text-2xl sm:text-3xl text-text-300 font-bold">Immersion & Content</h2>
+      <div class="h-0.5 bg-tile-500 flex-1 opacity-50 rounded-full"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <a href="/stories" class="group flex flex-col bg-tile-400 border-2 border-tile-600 rounded-lg p-8 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1">
+        <div class="text-4xl mb-4">📖</div>
+        <h3 class="text-2xl font-bold text-text-300 mb-2 group-hover:text-text-200 transition-colors">Stories</h3>
+        <p class="text-text-200 text-base leading-relaxed opacity-90 group-hover:opacity-100">
+          Read short stories with instant definitions, audio, and parallel translations.
         </p>
       </a>
-      <a href="/videos" class="group px-4 py-5 flex-col flex gap-2 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
-        <h3 class="text-lg text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">Videos</h3>
-        <p class="text-text-300 text-xs font-medium leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-          Watch YouTube videos with transcripts and translations.
-        </p>
-      </a>
-      <a href="/sentences" class="group px-4 py-5 flex-col flex gap-2 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
-        <h3 class="text-lg text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">Sentences</h3>
-        <p class="text-text-300 text-xs font-medium leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-          Practice with sentences in your dialect.
-        </p>
-      </a>
-      <a href="/speak" class="group px-4 py-5 flex-col flex gap-2 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
-        <h3 class="text-lg text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">Speak</h3>
-        <p class="text-text-300 text-xs font-medium leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-          Practice speaking with sentences and audio feedback.
-        </p>
-      </a>
-      <a href="/tutor" class="group px-4 py-5 flex-col flex gap-2 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
-        <h3 class="text-lg text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">Tutor</h3>
-        <p class="text-text-300 text-xs font-medium leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-          Have conversations with an Arabic tutor.
+
+      <a href="/videos" class="group flex flex-col bg-tile-400 border-2 border-tile-600 rounded-lg p-8 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1">
+        <div class="text-4xl mb-4">📺</div>
+        <h3 class="text-2xl font-bold text-text-300 mb-2 group-hover:text-text-200 transition-colors">Videos</h3>
+        <p class="text-text-200 text-base leading-relaxed opacity-90 group-hover:opacity-100">
+          Watch authentic content with interactive transcripts and dialect-specific translations.
         </p>
       </a>
     </div>
   </div>
-  <!-- Dialect-Specific Learning Section -->
-  <div class="mb-6">
-    <h2 class="text-2xl text-text-300 font-bold mb-3">Dialect-Specific Learning</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <!-- Egyptian Arabic -->
-      <a href="/egyptian-arabic" class="group px-4 py-6 flex-col flex gap-2 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
-        <h3 class="text-xl text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">Egyptian Arabic</h3>
-        <p class="text-text-300 text-sm font-medium leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-          Learn the most widely understood Arabic dialect. Perfect for movies, music, and everyday conversation across the Arab world.
+
+  <!-- Interactive Practice -->
+  <div>
+    <div class="flex items-center gap-4 mb-6">
+      <h2 class="text-2xl sm:text-3xl text-text-300 font-bold">Interactive Practice</h2>
+      <div class="h-0.5 bg-tile-500 flex-1 opacity-50 rounded-full"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <a href="/speak" class="group flex flex-col bg-tile-400 border-2 border-tile-600 rounded-lg p-8 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1">
+        <div class="text-4xl mb-4">🎙️</div>
+        <h3 class="text-2xl font-bold text-text-300 mb-2 group-hover:text-text-200 transition-colors">Speak</h3>
+        <p class="text-text-200 text-base leading-relaxed opacity-90 group-hover:opacity-100">
+          Improve pronunciation with AI feedback on your spoken sentences.
         </p>
-        <div class="mt-2 text-xs text-text-200 opacity-75">
-         ✓ Vocabulary ✓ Writing ✓ Grammar ✓ Anki Decks
-        </div>
       </a>
 
-      <!-- Modern Standard Arabic (Fusha) -->
-      <a href="/fusha" class="group px-4 py-6 flex-col flex gap-2 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
-        <h3 class="text-xl text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">Modern Standard Arabic</h3>
-        <p class="text-text-300 text-sm font-medium leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-          Master formal Arabic used in news, literature, and official communications. The foundation of all Arabic dialects.
+      <a href="/tutor" class="group flex flex-col bg-tile-400 border-2 border-tile-600 rounded-lg p-8 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1">
+        <div class="text-4xl mb-4">💬</div>
+        <h3 class="text-2xl font-bold text-text-300 mb-2 group-hover:text-text-200 transition-colors">AI Tutor</h3>
+        <p class="text-text-200 text-base leading-relaxed opacity-90 group-hover:opacity-100">
+          Practice conversation in any dialect with an intelligent AI tutor.
         </p>
-        <div class="mt-2 text-xs text-text-200 opacity-75">
-          ✓ Vocabulary ✓ Writing
-        </div>
       </a>
 
-      <!-- Levantine Arabic -->
-      <a href="/levantine" class="group px-4 py-6 flex-col flex gap-2 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
-        <h3 class="text-xl text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">Levantine Arabic</h3>
-        <p class="text-text-300 text-sm font-medium leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-          Explore the dialect of Syria, Lebanon, Palestine, and Jordan. Known for its melodic sound and cultural richness.
+      <a href="/sentences" class="group flex flex-col bg-tile-400 border-2 border-tile-600 rounded-lg p-8 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1">
+        <div class="text-4xl mb-4">📝</div>
+        <h3 class="text-2xl font-bold text-text-300 mb-2 group-hover:text-text-200 transition-colors">Sentences</h3>
+        <p class="text-text-200 text-base leading-relaxed opacity-90 group-hover:opacity-100">
+          Drill sentence structures and grammar patterns in context.
         </p>
-        <div class="mt-2 text-xs text-text-200 opacity-75">
-          ✓ Vocabulary ✓ Writing
-        </div>
       </a>
-
-      <!-- Moroccan Arabic (Darija) -->
-      <a href="/darija" class="group px-4 py-6 flex-col flex gap-2 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
-        <h3 class="text-xl text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">Moroccan Arabic</h3>
-        <p class="text-text-300 text-sm font-medium leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-          Explore the unique dialect of Morocco. Known for its distinctive vocabulary and French/Berber influences.
-        </p>
-        <div class="mt-2 text-xs text-text-200 opacity-75">
-          ✓ Vocabulary ✓ Writing
-        </div>
-      </a>
-
-      <!-- Khaleeji Arabic -->
-      <!-- <a href="/khaleeji" class="group px-4 py-6 flex-col flex gap-2 border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
-        <h3 class="text-xl text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">Khaleeji Arabic</h3>
-        <p class="text-text-300 text-sm font-medium leading-tight opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-          Master the Gulf Arabic dialect spoken in UAE, Saudi Arabia, Kuwait, Bahrain, Qatar, and Oman.
-        </p>
-        <div class="mt-2 text-xs text-text-200 opacity-75">
-          ✓ Stories ✓ Speaking ✓ Sentences
-        </div>
-      </a> -->
     </div>
   </div>
 </section>

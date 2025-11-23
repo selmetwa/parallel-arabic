@@ -70,61 +70,79 @@
   }
 </script>
 
-<div class="min-h-screen bg-tile-200">
-  <div class="max-w-4xl mx-auto px-4 py-8">
-    <header class="mb-8 text-center">
-      <h1 class="text-4xl font-bold text-text-300 mb-2">Import Words</h1>
-      <p class="text-text-200">Add words from vocabulary categories to your review deck</p>
+<div class="min-h-screen bg-tile-300 py-12">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6">
+    <header class="mb-12 text-center">
+      <h1 class="text-4xl sm:text-5xl font-bold text-text-300 tracking-tight mb-4">Import Words</h1>
+      <p class="text-lg sm:text-xl text-text-200 max-w-2xl mx-auto">
+        Add words from vocabulary categories to your review deck
+      </p>
     </header>
 
-    <div class="bg-tile-300 border border-tile-500 rounded-lg shadow-lg p-6 sm:p-8">
-      <div class="space-y-6">
+    <div class="bg-tile-400/50 border-2 border-tile-600 rounded-xl shadow-lg p-8 sm:p-10">
+      <div class="space-y-8">
         <!-- Dialect Selection -->
         <div>
-          <label class="block text-text-300 font-semibold mb-2">Dialect</label>
-          <select
-            bind:value={selectedDialect}
-            class="w-full bg-tile-400 border border-tile-600 text-text-300 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-tile-600"
-          >
-            {#each dialectOptions as option}
-              <option value={option.value}>{option.label}</option>
-            {/each}
-          </select>
+          <label class="block text-lg font-bold text-text-300 mb-3">Select Dialect</label>
+          <div class="relative">
+            <select
+              bind:value={selectedDialect}
+              class="w-full appearance-none bg-tile-300 border-2 border-tile-500 text-text-300 px-5 py-4 rounded-xl focus:outline-none focus:border-tile-600 focus:ring-0 transition-colors text-lg"
+            >
+              {#each dialectOptions as option}
+                <option value={option.value}>{option.label}</option>
+              {/each}
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-5 text-text-300">
+              <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </div>
+          </div>
         </div>
 
         <!-- Category Selection -->
         <div>
-          <label class="block text-text-300 font-semibold mb-2">
-            Category
+          <label class="block text-lg font-bold text-text-300 mb-3">
+            Choose Category
             {#if selectedDialect === 'egyptian-arabic'}
-              <span class="text-text-200 text-sm font-normal ml-2">(Recommended: Most common words)</span>
+              <span class="text-text-200 text-sm font-normal ml-2 block sm:inline sm:ml-2 mt-1 sm:mt-0">Recommended: Most common words</span>
             {/if}
           </label>
-          <select
-            bind:value={selectedCategory}
-            class="w-full bg-tile-400 border border-tile-600 text-text-300 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-tile-600"
-          >
-            {#each currentSections as section}
-              <option value={section.path} selected={section.path === 'most_common'}>
-                {section.name} {section.isPaywalled ? '(Premium)' : ''}
-              </option>
-            {/each}
-          </select>
+          <div class="relative">
+            <select
+              bind:value={selectedCategory}
+              class="w-full appearance-none bg-tile-300 border-2 border-tile-500 text-text-300 px-5 py-4 rounded-xl focus:outline-none focus:border-tile-600 focus:ring-0 transition-colors text-lg"
+            >
+              {#each currentSections as section}
+                <option value={section.path} selected={section.path === 'most_common'}>
+                  {section.name} {section.isPaywalled ? '(Premium)' : ''}
+                </option>
+              {/each}
+            </select>
+             <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-5 text-text-300">
+              <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </div>
+          </div>
         </div>
 
         <!-- Limit Selection -->
         <div>
-          <label class="block text-text-300 font-semibold mb-2">
+          <label class="block text-lg font-bold text-text-300 mb-3">
             Number of Words
           </label>
-          <input
-            type="number"
-            bind:value={importLimit}
-            min="1"
-            max="200"
-            class="w-full bg-tile-400 border border-tile-600 text-text-300 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-tile-600"
-          />
-          <p class="text-text-200 text-sm mt-1">Import up to {importLimit} words from this category</p>
+          <div class="relative">
+            <input
+              type="number"
+              bind:value={importLimit}
+              min="1"
+              max="200"
+              class="w-full bg-tile-300 border-2 border-tile-500 text-text-300 px-5 py-4 rounded-xl focus:outline-none focus:border-tile-600 focus:ring-0 transition-colors text-lg"
+            />
+          </div>
+          <p class="text-text-200 text-sm mt-2 ml-1">Import up to {importLimit} words from this category</p>
         </div>
 
         <!-- Import Button -->
@@ -133,7 +151,7 @@
             onClick={importWords} 
             type="button" 
             disabled={isImporting}
-            className="w-full"
+            className="w-full !py-4 !text-lg !rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all"
           >
             {#if isImporting}
               Importing...
@@ -145,10 +163,13 @@
 
         <!-- Result Message -->
         {#if importResult}
-          <div class="mt-6 p-4 rounded-lg {importResult.success ? 'bg-green-100 border border-green-400' : 'bg-red-100 border border-red-400'}">
+          <div class="mt-6 p-6 rounded-xl border-2 {importResult.success ? 'bg-green-100 border-green-400' : 'bg-red-100 border-red-400'}">
             {#if importResult.success}
-              <p class="text-green-800 font-semibold mb-2">Success!</p>
-              <p class="text-green-700 mb-4">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="text-2xl">✅</span>
+                <h3 class="text-xl font-bold text-green-800">Success!</h3>
+              </div>
+              <p class="text-green-700 mb-6 text-lg">
                 {importResult.message || `Imported ${importResult.imported} word${importResult.imported !== 1 ? 's' : ''}`}
                 {importResult.skipped > 0 && ` (${importResult.skipped} already in your deck)`}
               </p>
@@ -156,13 +177,16 @@
                 <Button 
                   onClick={() => goto('/review')} 
                   type="button"
-                  className="bg-green-600 hover:bg-green-700 text-white"
+                  className="!bg-green-600 !hover:bg-green-700 !text-white w-full !py-3 !text-lg"
                 >
                   Start Reviewing Now →
                 </Button>
               {/if}
             {:else}
-              <p class="text-red-800 font-semibold mb-2">Error</p>
+              <div class="flex items-center gap-3 mb-3">
+                <span class="text-2xl">❌</span>
+                <h3 class="text-xl font-bold text-red-800">Error</h3>
+              </div>
               <p class="text-red-700">{importResult.message}</p>
             {/if}
           </div>
@@ -171,19 +195,20 @@
     </div>
 
     <!-- Info Box -->
-    <div class="mt-6 bg-tile-300 border border-tile-500 rounded-lg p-4">
-      <h3 class="text-text-300 font-semibold mb-2">💡 Tips</h3>
-      <ul class="text-text-200 space-y-1 text-sm">
+    <div class="mt-8 bg-tile-400/30 border-2 border-tile-500 rounded-xl p-6 sm:p-8">
+      <h3 class="text-xl font-bold text-text-300 mb-4 flex items-center gap-2">
+        <span>💡</span> Tips for Success
+      </h3>
+      <ul class="text-text-200 space-y-3 text-base">
         {#if selectedDialect === 'egyptian-arabic'}
-          <li>• Start with "Most common words" for the best learning experience</li>
+          <li class="flex gap-2"><span class="text-text-300">•</span> Start with "Most common words" for the best learning experience</li>
         {:else}
-          <li>• Choose categories that match your learning goals</li>
+          <li class="flex gap-2"><span class="text-text-300">•</span> Choose categories that match your learning goals</li>
         {/if}
-        <li>• Words you already have saved will be skipped automatically</li>
-        <li>• You can import from multiple categories to build your review deck</li>
-        <li>• Review your words regularly for best results!</li>
+        <li class="flex gap-2"><span class="text-text-300">•</span> Words you already have saved will be skipped automatically</li>
+        <li class="flex gap-2"><span class="text-text-300">•</span> You can import from multiple categories to build your review deck</li>
+        <li class="flex gap-2"><span class="text-text-300">•</span> Review your words regularly for best results!</li>
       </ul>
     </div>
   </div>
 </div>
-

@@ -203,12 +203,19 @@
   currentDialect={dialect}
 />
 
-<div class="px-3 mt-6 sm:px-8 max-w-5xl mx-auto">
-	<div class="grid grid-cols-2 sm:grid-cols-5 gap-2 mb-12">
+<div class="px-4 mt-6 sm:px-8 lg:px-12 max-w-7xl mx-auto pb-12">
+	<!-- Controls Bar -->
+	<div class="flex flex-wrap items-center justify-center gap-3 mb-8 p-4 bg-tile-300/50 border border-tile-500/30 rounded-xl">
 		<AudioButton text={sentence.arabic} dialect={dialect}>Hear Audio</AudioButton>
-		<Button onClick={() => showHint = !showHint} type="button">{showHint ? 'Hide Transliteration' : 'Show Transliteration'}</Button>
-		<Button onClick={() => showAnswer = !showAnswer} type="button">{showAnswer ? 'Hide Arabic' : 'Show Arabic'}</Button>
-		<Button onClick={compareDialects} type="button">Compare Dialects</Button>
+		<Button onClick={() => showHint = !showHint} type="button" className="!py-2 !px-4 !text-sm bg-tile-400 hover:bg-tile-500 text-text-200 border-tile-500">
+      {showHint ? 'Hide Transliteration' : 'Show Transliteration'}
+    </Button>
+		<Button onClick={() => showAnswer = !showAnswer} type="button" className="!py-2 !px-4 !text-sm bg-tile-400 hover:bg-tile-500 text-text-200 border-tile-500">
+      {showAnswer ? 'Hide Arabic' : 'Show Arabic'}
+    </Button>
+		<Button onClick={compareDialects} type="button" className="!py-2 !px-4 !text-sm bg-tile-400 hover:bg-tile-500 text-text-200 border-tile-500">
+      Compare Dialects
+    </Button>
 		<SaveButton
 			objectToSave={{
 				arabic: sentence.arabic,
@@ -217,46 +224,49 @@
 			}}
 			type="Sentence"
 		></SaveButton>
-		<Button onClick={resetSentences} type="button">Reset</Button>
+		<Button onClick={resetSentences} type="button" className="!py-2 !px-4 !text-sm bg-red-50 hover:bg-red-100 text-red-600 border-red-200">
+      Reset
+    </Button>
 	</div>
 
-	<div class="bg-tile-300 border border-tile-500 flex flex-col gap-4 items-center px-3 py-12 shadow-lg mt-6 min-h-[300px] h-full relative">
+  <!-- Recording Area -->
+	<div class="bg-tile-400/30 border-2 border-tile-600 flex flex-col gap-8 items-center px-6 py-16 shadow-lg rounded-xl min-h-[400px] h-full relative overflow-hidden">
 		{#if !recording}
-			<button class="absolute center top-0 right-[50%] translate-x-[50%] translate-y-[-50%]" onclick={startRecording} disabled={recording}>
+			<button class="absolute top-6 right-6 z-10 transition-transform hover:scale-110" onclick={startRecording} disabled={recording} aria-label="Start Recording">
 				<RecordButton />
 			</button>
 		{:else}
-			<button class="absolute center top-0 right-[50%] translate-x-[50%] translate-y-[-50%]" onclick={stopRecording} disabled={!recording}>
+			<button class="absolute top-6 right-6 z-10 transition-transform hover:scale-110" onclick={stopRecording} disabled={!recording} aria-label="Stop Recording">
 				<AudioLoading />
 			</button>
 		{/if}
 
 		{#if similarity > 0}
-			<div class="absolute right-0 top-0 md:translate-y-[-40%] md:translate-x-[40%]">
+			<div class="absolute left-6 top-6 z-10 scale-90 origin-top-left">
 				<Similarity score={similarity} />
 			</div>
 		{/if}
 		
-		<div class="text-center">
-			<h3 class="text-3xl sm:text-4xl text-text-300 font-bold mb-2">
+		<div class="text-center w-full max-w-4xl mx-auto flex flex-col items-center justify-center flex-1 gap-8">
+			<h3 class="text-4xl sm:text-5xl md:text-6xl text-text-300 font-bold leading-relaxed flex flex-wrap justify-center gap-x-2 gap-y-1">
 				{#each sentence.english.split(' ') as word}
 					<button
 						onclick={() => askChatGTP(word)}
-						class="p-1 text-3xl sm:text-4xl duration-300 hover:bg-tile-500 border-2 border-transparent hover:border-tile-600">
+						class="px-1 py-0.5 rounded transition-all duration-200 hover:bg-tile-500/50 hover:text-tile-800 border-b-2 border-transparent hover:border-tile-600">
 							{word}
 					</button>
 				{/each}
 			</h3>
 			
-			<div class="flex flex-col gap-2 mt-4">
+			<div class="flex flex-col gap-4 items-center w-full transition-all duration-300 min-h-[6rem]">
 				{#if showHint}
-					<p class="text-xl text-text-200">
+					<p class="text-2xl text-text-200 font-medium italic bg-tile-300/50 px-6 py-2 rounded-full border border-tile-500/30 animate-in fade-in slide-in-from-bottom-2">
 						{sentence.transliteration}
 					</p>
 				{/if}
 
 				{#if showAnswer}
-					<p class="text-3xl text-text-300">
+					<p class="text-4xl sm:text-5xl text-text-300 font-bold font-arabic mt-2 animate-in fade-in slide-in-from-bottom-2" dir="rtl">
 						{sentence.arabic}
 					</p>
 				{/if}
@@ -264,8 +274,9 @@
 		</div>
 		
 		{#if transcribedText}
-			<div class="w-full px-3 py-4 bg-tile-400 border border-tile-500 mt-4">
-				<p class="text-2xl sm:text-3xl text-center text-text-300">
+			<div class="w-full max-w-3xl px-6 py-6 bg-tile-300/50 border border-tile-500/50 rounded-xl mt-8 animate-in slide-in-from-bottom-4">
+        <p class="text-sm text-text-200 mb-2 uppercase tracking-wider font-bold text-center">You said:</p>
+				<p class="text-3xl sm:text-4xl text-center text-text-300 font-arabic" dir="rtl">
 					{transcribedText}
 				</p>
 			</div>
