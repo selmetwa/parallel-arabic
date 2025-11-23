@@ -38,7 +38,7 @@
 
 			output.push({
 				id: lessonData.id,
-				title: `${lessonBody?.title?.english || lessonData.title || ''} / ${lessonBody?.title?.arabic || lessonData.title_arabic || ''}`,
+				title: lessonBody?.title?.english || lessonData.title || '',
 				description: lessonData.description || lessonBody?.description?.english || '',
 				createdAt: lessonData.created_at,
 				level: lessonData.level || lessonBody?.level || 'beginner',
@@ -87,6 +87,11 @@
 		return colors[level as keyof typeof colors] || 'bg-gray-100 text-gray-800';
 	}
 
+	function getDialectLabel(dialect: string, originalName?: string) {
+		if (dialect === 'fusha') return 'MSA';
+		return originalName || dialect;
+	}
+
 	function capitalizeFirst(str: string) {
 		return str.charAt(0).toUpperCase() + str.slice(1);
 	}
@@ -94,83 +99,85 @@
 
 <PaywallModal isOpen={isModalOpen} {handleCloseModal}></PaywallModal>
 
-<section class="px-3 mt-6 sm:px-8 max-w-5xl mx-auto">
-	<div class="text-left mb-6">
-		<h1 class="text-3xl sm:text-4xl text-text-300 font-bold mb-1 tracking-tight">Lessons</h1>
-		<p class="text-text-200 text-lg sm:text-xl leading-snug">Learn Arabic with comprehensive AI-generated lessons from all dialects</p>
+<section class="px-4 mt-12 sm:px-8 max-w-7xl mx-auto mb-20">
+	<div class="text-left mb-12">
+		<h1 class="text-4xl sm:text-5xl text-text-300 font-bold mb-4 tracking-tight">Lessons</h1>
+		<p class="text-text-200 text-lg sm:text-xl leading-relaxed opacity-90 max-w-3xl">Learn Arabic with comprehensive AI-generated lessons from all dialects.</p>
 		
 		<!-- Dialect Selection for Lesson Creation -->
-		<div class="mt-4 mb-4 flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-			<div class="flex flex-col gap-2">
-				<label for="dialect-select" class="text-sm text-text-300 font-medium">Choose dialect for new lesson:</label>
-				<select 
-					id="dialect-select"
-					bind:value={selectedDialect}
-					class="px-3 py-2 border border-tile-600 bg-tile-200 text-text-300 rounded focus:outline-none focus:border-tile-500"
-				>
-					{#each dialectOptions as option}
-						<option value={option.value}>{option.label}</option>
-					{/each}
-				</select>
-			</div>
-			<div class="mt-2 sm:mt-6">
-				<CreateLessonModal dialect={selectedDialect as any} data={data}></CreateLessonModal>
+		<div class="mt-8 p-6 bg-tile-400/50 border border-tile-500 rounded-xl inline-block">
+			<h3 class="text-lg font-bold text-text-300 mb-4">Create a New Lesson</h3>
+			<div class="flex flex-col sm:flex-row gap-4 items-start sm:items-end">
+				<div class="flex flex-col gap-2">
+					<label for="dialect-select" class="text-sm text-text-200 font-medium">Choose dialect:</label>
+					<div class="relative">
+						<select 
+							id="dialect-select"
+							bind:value={selectedDialect}
+							class="appearance-none pl-4 pr-10 py-2.5 border border-tile-500 bg-tile-300 text-text-300 rounded-lg focus:outline-none focus:border-tile-600 focus:ring-1 focus:ring-tile-600 min-w-[200px] cursor-pointer"
+						>
+							{#each dialectOptions as option}
+								<option value={option.value}>{option.label}</option>
+							{/each}
+						</select>
+						<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-text-300">
+							<svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+							</svg>
+						</div>
+					</div>
+				</div>
+				<div class="flex-shrink-0">
+					<CreateLessonModal dialect={selectedDialect as any} data={data}></CreateLessonModal>
+				</div>
 			</div>
 		</div>
 	</div>
-</section>
 
-<section class="px-3 mt-8 sm:px-8 max-w-5xl mx-auto pb-12 sm:pb-0">
-	<div class="text-left mb-6">
-		<h2 class="text-2xl text-text-300 font-bold mb-1">Generated Lessons</h2>
-		<p class="text-text-200 text-lg leading-snug">
-			Comprehensive lessons created by Parallel Arabic learners from all dialects.
-		</p>
-	</div>
-	
-	{#if userGeneratedLessons.length === 0}
-		<div class="text-center py-12">
-			<p class="text-text-200 text-lg mb-4">No lessons yet. Create your first lesson to get started!</p>
+	<div>
+		<div class="flex items-center gap-4 mb-8">
+			<h2 class="text-2xl sm:text-3xl text-text-300 font-bold">Generated Lessons</h2>
+			<div class="h-0.5 bg-tile-500 flex-1 opacity-50 rounded-full"></div>
 		</div>
-	{:else}
-		<ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 auto-rows-fr">
-			{#each userGeneratedLessons as lesson}
-				<li class="flex">
-					<a href={`/lessons/${lesson.id}`} class="flex w-full">
-						<article class="group w-full px-3 py-4 flex flex-col justify-between border-2 border-tile-600 text-left bg-tile-400 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
-							<div class="flex flex-col gap-2">
-								<p class="text-xl text-text-300 font-bold group-hover:text-text-200 transition-colors duration-300">
-									{lesson.title}
-								</p>
-								<div class="flex flex-wrap gap-2">
-									<span class="inline-flex items-center px-2 py-1 text-xs font-medium rounded-full {getDialectBadgeColor(lesson.dialect)}">
-										{lesson.dialectName}
-									</span>
-									<span class="inline-flex items-center px-2 py-1 text-xs font-medium rounded-full {getLevelBadgeColor(lesson.level)}">
-										{capitalizeFirst(lesson.level)}
-									</span>
+		
+		{#if userGeneratedLessons.length === 0}
+			<div class="text-center py-16 bg-tile-400/30 border-2 border-dashed border-tile-500 rounded-xl">
+				<div class="text-6xl mb-4 opacity-50">📚</div>
+				<p class="text-text-200 text-xl mb-2">No lessons yet</p>
+				<p class="text-text-200 text-base opacity-70">Create your first lesson to get started!</p>
+			</div>
+		{:else}
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+				{#each userGeneratedLessons as lesson}
+					<a href={`/lessons/${lesson.id}`} class="group flex flex-col bg-tile-400 border-2 border-tile-600 rounded-xl p-8 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1">
+						<div class="flex justify-between items-start mb-4">
+							<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium rounded-full {getDialectBadgeColor(lesson.dialect)}">
+								{getDialectLabel(lesson.dialect, lesson.dialectName)}
+							</span>
+							<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium rounded-full {getLevelBadgeColor(lesson.level)}">
+								{capitalizeFirst(lesson.level)}
+							</span>
+						</div>
+						
+						<h3 class="text-2xl font-bold text-text-300 mb-3 group-hover:text-text-200 transition-colors leading-tight flex-grow">
+							{lesson.title}
+						</h3>
+						
+						<div class="flex items-center gap-4 pt-4 border-t border-tile-500/50 mt-auto text-sm text-text-200 font-medium opacity-80">
+							<div class="flex items-center gap-1.5">
+								<span>📄</span>
+								<span>{lesson.subLessonCount} {lesson.subLessonCount === 1 ? 'Sub-lesson' : 'Sub-lessons'}</span>
+							</div>
+							{#if lesson.estimatedDuration}
+								<div class="flex items-center gap-1.5">
+									<span>⏱️</span>
+									<span>~{lesson.estimatedDuration}m</span>
 								</div>
-							</div>
-							<div class="flex flex-col gap-0 mt-2">
-								<p class="text-sm text-text-200 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-									{lesson.subLessonCount} {lesson.subLessonCount === 1 ? 'Sub-lesson' : 'Sub-lessons'}
-								</p>
-								{#if lesson.estimatedDuration}
-									<p class="text-sm text-text-200 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-										~{lesson.estimatedDuration} minutes
-									</p>
-								{/if}
-								{#if lesson.description}
-									<p class="text-sm text-text-200 opacity-90 group-hover:opacity-100 transition-opacity duration-300 line-clamp-2">
-										{lesson.description}
-									</p>
-								{/if}
-							</div>
-						</article>
+							{/if}
+						</div>
 					</a>
-				</li>
-			{/each}
-		</ul>
-	{/if}
+				{/each}
+			</div>
+		{/if}
+	</div>
 </section>
-

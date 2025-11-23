@@ -340,32 +340,32 @@
 </script>
 
 {#if hasReachedLimit && data.session}
-	<div class="px-3 mt-6 sm:px-8 max-w-5xl mx-auto">
-		<div class="border border-tile-600 bg-tile-300 py-4 px-3 text-center">
-			<h1 class="text-2xl font-bold text-text-300">You have reached your limit of 5 sentences.</h1>
-			<p class="mt-2 text-xl text-text-200">To continue practicing, please subscribe.</p>
-			<form method="POST" action="/?/subscribe" class="mx-auto mt-4 w-fit">
+	<div class="px-4 mt-6 sm:px-8 lg:px-12 max-w-7xl mx-auto">
+		<div class="border border-tile-600 bg-tile-300 py-8 px-6 text-center rounded-xl shadow-sm">
+			<h1 class="text-3xl font-bold text-text-300 mb-2">You have reached your limit of 5 sentences.</h1>
+			<p class="text-xl text-text-200 mb-6">To continue practicing, please subscribe.</p>
+			<form method="POST" action="/?/subscribe" class="mx-auto w-fit">
 				<!-- Modify this value using your own Stripe price_id -->
 				<input type="hidden" name="price_id" value={PUBLIC_PRICE_ID} />
-				<Button type="submit">Subscribe</Button>
+				<Button type="submit" className="!text-lg !px-8 !py-3">Subscribe Now</Button>
 			</form>
 		</div>
 	</div>
 {/if}
 
 {#if isError}
-	<div class="px-3 mt-6 sm:px-8 max-w-3xl mx-auto">
-		<div class="flex flex-col items-center gap-4 border-2 border-tile-600 bg-tile-400 p-6 text-text-200 shadow-lg">
+	<div class="px-4 mt-6 sm:px-8 lg:px-12 max-w-7xl mx-auto">
+		<div class="flex flex-col items-center gap-4 border-2 border-tile-600 bg-tile-400 p-8 text-text-200 shadow-md rounded-xl">
 			<div class="text-center">
-				<p class="text-2xl text-text-300 font-bold mb-1">
+				<p class="text-3xl text-text-300 font-bold mb-2">
 					Generation Failed
 				</p>
-				<p class="text-text-300 mb-4">
+				<p class="text-text-300 text-lg mb-6 max-w-2xl mx-auto">
 					{errorMessage}
 				</p>
 				<button
 					onclick={() => { isError = false; errorMessage = ''; }}
-					class="px-4 py-2 bg-tile-500 text-text-300 rounded border border-tile-600 hover:bg-tile-600 hover:border-tile-500 transition-colors"
+					class="px-6 py-2 bg-tile-500 text-text-300 rounded-lg border border-tile-600 hover:bg-tile-600 hover:border-tile-500 transition-all duration-300 font-bold"
 				>
 					Try Again
 				</button>
@@ -375,24 +375,24 @@
 {/if}
 
 {#if !isLoading && sentences.length === 0 && !hasReachedLimit}
-	<section class="px-3 mt-6 sm:px-8 max-w-3xl mx-auto">
-		<div class="border-2 border-tile-600 bg-tile-400 shadow-lg">
-			<form class="flex flex-col gap-4 p-6" onsubmit={generateSentences}>
-				<div class="text-left mb-4">
-					<h1 class="text-xl sm:text-2xl text-text-300 font-bold mb-2 tracking-tight">
-						Practice speaking Arabic with AI-generated sentences.
+	<section class="px-4 mt-6 sm:px-8 lg:px-12 max-w-7xl mx-auto">
+		<div class="border-2 border-tile-600 bg-tile-400/50 shadow-sm rounded-xl overflow-hidden">
+			<form class="flex flex-col p-8" onsubmit={generateSentences}>
+				<div class="text-left mb-8 pb-6 border-b border-tile-500">
+					<h1 class="text-4xl sm:text-5xl text-text-300 font-bold mb-3 tracking-tight">
+						Practice speaking Arabic
 					</h1>
-					<p class="text-text-200 text-lg leading-snug">Choose your dialect, difficulty, and start speaking practice.</p>
+					<p class="text-text-200 text-xl sm:text-2xl leading-relaxed">Choose your dialect, difficulty, and start speaking practice with AI feedback.</p>
 				</div>
 
         <!-- Dialect Selection -->
-        <div class="flex flex-col gap-3">
-					<h2 class="text-lg font-bold text-text-300">Select Arabic Dialect</h2>
-					<div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+        <div class="flex flex-col gap-4 mb-8">
+					<h2 class="text-2xl font-bold text-text-300">Select Arabic Dialect</h2>
+					<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
 						{#each dialectOptions as dialectOption}
 							<RadioButton
-								className="!text-base !font-medium"
-								wrapperClass="!p-3 border-2 border-tile-600 hover:border-tile-500 transition-colors duration-300"
+								className="!text-lg !font-medium"
+								wrapperClass="!p-4 border-2 border-tile-600 hover:border-tile-500 transition-colors duration-300 rounded-xl bg-tile-300/50"
 								onClick={setDialect}
 								selectableFor={dialectOption.value}
 								isSelected={selectedDialect === dialectOption.value}
@@ -403,13 +403,13 @@
 					</div>
 				</div>
 				
-				<div class="flex flex-col gap-3 border-t border-tile-600 pt-4">
-					<h2 class="text-lg font-bold text-text-300">Select difficulty level</h2>
-					<div class="grid grid-cols-2 gap-2">
+				<div class="flex flex-col gap-4 mb-8 border-t border-tile-500 pt-8">
+					<h2 class="text-2xl font-bold text-text-300">Select difficulty level</h2>
+					<div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
 						{#each difficultyOptions as difficultyOption}
 							<RadioButton
 								className="!text-base !font-medium"
-								wrapperClass="!p-3 border-2 border-tile-600 hover:border-tile-500 transition-colors duration-300"
+								wrapperClass="!p-3 border-2 border-tile-600 hover:border-tile-500 transition-colors duration-300 rounded-xl bg-tile-300/50"
 								onClick={setOption}
 								selectableFor={difficultyOption.value}
 								isSelected={option === difficultyOption.value}
@@ -421,27 +421,29 @@
 				</div>
 
         <!-- Learning Topics Selection -->
-        <div class="flex flex-col gap-3 border-t border-tile-600 pt-4">
-          <h2 class="text-lg font-bold text-text-300">Focus on specific language topics (optional)</h2>
-          <p class="text-sm text-text-200">Select multiple topics to emphasize in your speaking practice</p>
-          <div class="grid grid-cols-2 gap-2">
+        <div class="flex flex-col gap-4 mb-8 border-t border-tile-500 pt-8">
+          <div class="flex flex-col gap-1">
+            <h2 class="text-2xl font-bold text-text-300">Focus on specific topics</h2>
+            <p class="text-text-200">Select multiple topics to emphasize in your speaking practice (optional)</p>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {#each learningTopicOptions as topic}
               <button
                 type="button"
-                class="text-left p-2 border border-tile-600 bg-tile-200 hover:bg-tile-400 transition-colors text-text-300 text-sm {selectedLearningTopics.includes(topic) ? 'bg-tile-500 border-tile-400' : ''}"
+                class="text-left p-3 rounded-lg border-2 transition-all duration-200 text-text-300 text-sm font-medium {selectedLearningTopics.includes(topic) ? 'bg-tile-500 border-tile-400 shadow-inner' : 'bg-tile-300/50 border-tile-600 hover:bg-tile-300 hover:border-tile-500'}"
                 onclick={() => toggleLearningTopic(topic)}
               >
-                <span class="mr-2">{selectedLearningTopics.includes(topic) ? '✓' : ''}</span>
+                <span class="mr-2">{selectedLearningTopics.includes(topic) ? '✓' : '○'}</span>
                 {topic}
               </button>
             {/each}
           </div>
           {#if selectedLearningTopics.length > 0}
-            <div class="text-sm text-text-200">
-              Selected: {selectedLearningTopics.join(', ')}
+            <div class="text-sm text-text-200 mt-2 p-3 bg-tile-300/30 rounded-lg border border-tile-500/30 flex justify-between items-center">
+              <span>Selected: <strong>{selectedLearningTopics.join(', ')}</strong></span>
               <button
                 type="button"
-                class="ml-2 underline hover:text-text-300"
+                class="ml-4 text-red-400 hover:text-red-300 underline text-xs font-bold"
                 onclick={() => selectedLearningTopics = []}
               >
                 Clear all
@@ -451,78 +453,87 @@
         </div>
 
         <!-- Vocabulary Words Input -->
-        <div class="flex flex-col gap-3 border-t border-tile-600 pt-4">
-          <h2 class="text-lg font-bold text-text-300">Include specific vocabulary words (optional)</h2>
-          <p class="text-sm text-text-200">Enter words you're studying that you'd like to practice speaking</p>
+        <div class="flex flex-col gap-4 mb-8 border-t border-tile-500 pt-8">
+          <div class="flex flex-col gap-1">
+            <h2 class="text-2xl font-bold text-text-300">Include specific vocabulary</h2>
+            <p class="text-text-200">Enter words you're studying that you'd like to practice (optional)</p>
+          </div>
           
           <!-- Input Mode Toggle -->
-          <div class="flex gap-2 mb-3">
+          <div class="flex p-1 bg-tile-300/50 rounded-lg w-fit border border-tile-600">
             <button
               type="button"
-              class="px-3 py-1 text-sm border border-tile-600 transition-colors {vocabularyInputMode === 'text' ? 'bg-tile-500 text-text-300' : 'bg-tile-200 text-text-200 hover:bg-tile-400'}"
+              class="px-4 py-2 text-sm rounded-md transition-all duration-200 font-bold {vocabularyInputMode === 'text' ? 'bg-tile-500 text-text-300 shadow-sm' : 'text-text-200 hover:text-text-300'}"
               onclick={() => { vocabularyInputMode = 'text'; vocabularyFile = null; fileError = ''; }}
             >
-              Text Input
+              ✍️ Text Input
             </button>
             <button
               type="button"
-              class="px-3 py-1 text-sm border border-tile-600 transition-colors {vocabularyInputMode === 'file' ? 'bg-tile-500 text-text-300' : 'bg-tile-200 text-text-200 hover:bg-tile-400'}"
+              class="px-4 py-2 text-sm rounded-md transition-all duration-200 font-bold {vocabularyInputMode === 'file' ? 'bg-tile-500 text-text-300 shadow-sm' : 'text-text-200 hover:text-text-300'}"
               onclick={() => { vocabularyInputMode = 'file'; vocabularyWords = ''; }}
             >
-              File Upload
+              📂 File Upload
             </button>
           </div>
           
           {#if vocabularyInputMode === 'text'}
-            <textarea
-              bind:value={vocabularyWords}
-              rows="3"
-              class="rounded-0 border border-tile-600 bg-tile-200 py-2 px-2 text-text-300 resize-none"
-              placeholder="Enter vocabulary words separated by commas (e.g., بيت, مدرسة, طعام, سيارة)"
-            ></textarea>
-            <p class="text-xs text-text-200">
-              <strong>Tip:</strong> You can enter words in Arabic, English, or transliteration. Separate multiple words with commas.
-            </p>
+            <div class="relative">
+              <textarea
+                bind:value={vocabularyWords}
+                rows="3"
+                class="w-full rounded-xl border-2 border-tile-600 bg-tile-300/50 py-3 px-4 text-text-300 resize-none focus:border-tile-400 focus:ring-0 transition-colors text-lg"
+                placeholder="Enter vocabulary words separated by commas (e.g., بيت, مدرسة, طعام, سيارة)"
+              ></textarea>
+              <div class="absolute bottom-3 right-3 text-xs text-text-200 bg-tile-400/80 px-2 py-1 rounded">
+                Supports Arabic, English, Transliteration
+              </div>
+            </div>
           {:else}
-            <div class="space-y-2">
+            <div class="p-6 border-2 border-dashed border-tile-600 rounded-xl bg-tile-300/30 text-center hover:bg-tile-300/50 transition-colors relative group">
               <input
                 type="file"
                 accept=".txt,.csv"
                 onchange={handleFileChange}
-                class="block w-full text-sm text-text-300 file:mr-4 file:py-2 file:px-4 file:rounded-0 file:border-0 file:text-sm file:font-medium file:bg-tile-400 file:text-text-300 hover:file:bg-tile-500 border border-tile-600 bg-tile-200 p-2"
+                class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
               />
-              <p class="text-xs text-text-200">
-                <strong>Supported formats:</strong> TXT, CSV files (max 150KB)<br/>
-                <strong>TXT format:</strong> Words separated by commas, spaces, or new lines<br/>
-                <strong>CSV format:</strong> Words in any column, separated by commas
-              </p>
+              <div class="flex flex-col items-center justify-center gap-2">
+                <span class="text-4xl group-hover:scale-110 transition-transform duration-300">📄</span>
+                <p class="text-lg font-bold text-text-300">Drop your vocabulary file here</p>
+                <p class="text-sm text-text-200">or click to browse</p>
+                <div class="mt-2 text-xs text-text-200 bg-tile-400/50 px-3 py-1 rounded-full">
+                  Supports TXT & CSV (max 150KB)
+                </div>
+              </div>
+            </div>
               {#if vocabularyFile}
-                <p class="text-sm text-green-400">
-                  ✓ File loaded: {vocabularyFile.name} ({Math.round(vocabularyFile.size / 1024)}KB)
-                </p>
+                <div class="p-3 bg-green-900/20 border border-green-500/30 rounded-lg flex items-center gap-2 text-green-400">
+                  <span>✓</span>
+                  <span>File loaded: <strong>{vocabularyFile.name}</strong> ({Math.round(vocabularyFile.size / 1024)}KB)</span>
+                </div>
               {/if}
               {#if fileError}
-                <p class="text-sm text-red-400">
-                  ⚠ {fileError}
-                </p>
+                <div class="p-3 bg-red-900/20 border border-red-500/30 rounded-lg flex items-center gap-2 text-red-400">
+                  <span>⚠</span>
+                  <span>{fileError}</span>
+                </div>
               {/if}
-            </div>
           {/if}
         </div>
 				
-				<div class="pt-2">
+				<div class="pt-4">
 					{#if !data.session}
 						<Tooltip text="An account is required to access this feature">
 							<Button 
 								type="submit" 
 								disabled={true}
-								className="opacity-50 cursor-not-allowed"
+								className="opacity-50 cursor-not-allowed w-full !text-xl !py-4"
 							>
 								Generate Speaking Sentences
 							</Button>
 						</Tooltip>
 					{:else}
-						<Button type="submit">
+						<Button type="submit" className="w-full !text-xl !py-4 shadow-lg hover:translate-y-[-2px]">
 							Generate Speaking Sentences
 						</Button>
 					{/if}
@@ -533,34 +544,38 @@
 {/if}
 
 {#if isLoading}
-	<div class="px-3 mt-6 sm:px-8 max-w-3xl mx-auto">
-		<div class="flex flex-col items-center gap-4 border-2 border-tile-600 bg-tile-400 p-6 text-text-200 shadow-lg">
-			<AlphabetCycle />
-			<div class="text-center">
-				<p class="text-2xl text-text-300 font-bold mb-1">
-					Generating your {dialectOptions.find(d => d.value === selectedDialect)?.label} sentences for speaking practice
+	<div class="px-4 mt-6 sm:px-8 lg:px-12 max-w-7xl mx-auto">
+		<div class="flex flex-col items-center gap-6 border-2 border-tile-600 bg-tile-400 p-12 text-text-200 shadow-md rounded-xl text-center">
+			<div class="scale-150 mb-4">
+				<AlphabetCycle />
+			</div>
+			<div>
+				<p class="text-3xl text-text-300 font-bold mb-2">
+					Generating your {dialectOptions.find(d => d.value === selectedDialect)?.label} sentences
 				</p>
-				<p class="text-text-200">
-					This may take up to 30 seconds.
+				<p class="text-text-200 text-xl">
+					Creating personalized speaking practice... (up to 30s)
 				</p>
 			</div>
 		</div>
 	</div>
 {:else if sentences.length > 0 && index < sentences.length && !hasReachedLimit}
-	<header class="border-b border-tile-600 bg-tile-400 px-3 py-4 text-center sm:px-8">
-		<div class="flex w-full items-center justify-between max-w-5xl mx-auto">
+	<header class="border-b border-tile-600 bg-tile-400/50 px-4 py-4 text-center sm:px-8 lg:px-12 shadow-sm mb-8">
+		<div class="flex w-full items-center justify-between max-w-7xl mx-auto">
 			<div class="w-max">
 				{#if index > 0}
-					<Button onClick={previous} type="button">Previous</Button>
+					<Button onClick={previous} type="button" className="!text-sm">Previous</Button>
 				{/if}
 			</div>
-			<div>
-				<h1 class="text-lg font-bold text-text-300">{index + 1} / {sentences.length}</h1>
-				<p class="text-sm text-text-200">{dialectOptions.find(d => d.value === selectedDialect)?.label}</p>
+			<div class="flex flex-col items-center">
+				<h1 class="text-xl font-bold text-text-300">Sentence {index + 1} of {sentences.length}</h1>
+				<div class="text-sm font-medium text-text-200 bg-tile-300/50 px-3 py-0.5 rounded-full border border-tile-500/30 mt-1">
+          {dialectOptions.find(d => d.value === selectedDialect)?.label}
+        </div>
 			</div>
 			<div class="w-max flex gap-2">
 				{#if index < sentences.length - 1}
-					<Button onClick={next} type="button">Next</Button>
+					<Button onClick={next} type="button" className="!text-sm">Next</Button>
 				{/if}
 				{#if isLastSentence && !isLoading}
 					{#if !data.session}
@@ -569,14 +584,14 @@
 								onClick={loadMoreSentences} 
 								type="button"
 								disabled={true}
-								className="opacity-50 cursor-not-allowed"
+								className="opacity-50 cursor-not-allowed !text-sm"
 							>
-								Load More Sentences
+								Load More
 							</Button>
 						</Tooltip>
 					{:else}
-						<Button onClick={loadMoreSentences} type="button">
-							Load More Sentences
+						<Button onClick={loadMoreSentences} type="button" className="!text-sm">
+							Load More
 						</Button>
 					{/if}
 				{/if}
