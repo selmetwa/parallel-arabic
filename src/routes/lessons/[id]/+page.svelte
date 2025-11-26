@@ -14,6 +14,10 @@
 	let loading = $state(false);
 	let error = $state<string | null>(data.error || null);
 	
+	// Sub-lesson navigation state
+	let currentSubLessonIndex = $state(0);
+	let showSubLessonIndex = $state(true);
+	
 	// Pronunciation test modal state
 	let pronunciationModalOpen = $state(false);
 	let pronunciationText = $state('');
@@ -41,6 +45,16 @@
 			// Lesson not found in database - show error
 			error = data.error || 'Lesson not found.';
 		}
+		
+		// Set wider width for lesson page
+		const root = document.documentElement;
+		const originalWidth = getComputedStyle(root).getPropertyValue('--layout-width');
+		root.style.setProperty('--layout-width', '1600px');
+		
+		// Restore original width on unmount
+		return () => {
+			root.style.setProperty('--layout-width', originalWidth);
+		};
 	});
 
 	// Get lesson body (the actual lesson content)
@@ -72,6 +86,45 @@
 	function capitalizeFirst(str: string) {
 		return str.charAt(0).toUpperCase() + str.slice(1);
 	}
+	
+	// Helper function to count exercises in a sub-lesson
+	function countExercises(subLesson: any): number {
+		return subLesson?.exercises?.length || 0;
+	}
+	
+	// Navigation functions
+	function goToSubLesson(index: number) {
+		if (lessonBody?.subLessons && index >= 0 && index < lessonBody.subLessons.length) {
+			currentSubLessonIndex = index;
+			// Scroll to top of sub-lesson area
+			const subLessonElement = document.getElementById(`sub-lesson-${index}`);
+			if (subLessonElement) {
+				subLessonElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			}
+		}
+	}
+	
+	function goToNextSubLesson() {
+		if (lessonBody?.subLessons && currentSubLessonIndex < lessonBody.subLessons.length - 1) {
+			goToSubLesson(currentSubLessonIndex + 1);
+		}
+	}
+	
+	function goToPreviousSubLesson() {
+		if (currentSubLessonIndex > 0) {
+			goToSubLesson(currentSubLessonIndex - 1);
+		}
+	}
+	
+	// Check if we're on the last sub-lesson
+	const isLastSubLesson = $derived.by(() => {
+		return lessonBody?.subLessons ? currentSubLessonIndex === lessonBody.subLessons.length - 1 : false;
+	});
+	
+	// Check if we're on the first sub-lesson
+	const isFirstSubLesson = $derived.by(() => {
+		return currentSubLessonIndex === 0;
+	});
 </script>
 
 <svelte:head>
@@ -82,7 +135,7 @@
 
 <div class="min-h-screen bg-tile-100">
 	{#if error}
-		<div class="px-3 py-12 sm:px-8 max-w-5xl mx-auto">
+		<div class="px-3 py-12 sm:px-8 mx-auto" style="max-width: var(--layout-width, 1600px);">
 			<div class="bg-red-50 border border-red-200 rounded-lg p-6 text-center">
 				<h1 class="text-2xl font-bold text-red-800 mb-2">Lesson Not Found</h1>
 				<p class="text-red-600">{error}</p>
@@ -92,7 +145,7 @@
 			</div>
 		</div>
 	{:else if !lessonBody}
-		<div class="px-3 py-12 sm:px-8 max-w-5xl mx-auto">
+		<div class="px-3 py-12 sm:px-8 mx-auto" style="max-width: var(--layout-width, 1600px);">
 			<div class="text-center">
 				<p class="text-text-200 text-lg">Loading lesson...</p>
 			</div>
@@ -100,7 +153,7 @@
 	{:else}
 		<!-- Header -->
 		<div class="bg-tile-200 border-b border-tile-600">
-			<div class="px-3 py-6 sm:px-8 max-w-5xl mx-auto">
+			<div class="px-3 py-6 sm:px-8 mx-auto" style="max-width: var(--layout-width, 1600px);">
 				<a href="/lessons" class="inline-flex items-center text-text-300 hover:text-text-200 mb-4 transition-colors">
 					<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
@@ -168,12 +221,112 @@
 		</div>
 
 		<!-- Main Content -->
-		<div class="px-3 py-8 sm:px-8 max-w-5xl mx-auto">
+		<div class="px-3 py-8 sm:px-8 mx-auto" style="max-width: var(--layout-width, 1600px);">
 			<!-- Sub-Lessons -->
 			{#if lessonBody.subLessons && lessonBody.subLessons.length > 0}
-				<div class="space-y-8 mb-12">
+				<div class="flex gap-6 mb-12">
+					<!-- Sub-Lesson Index Sidebar -->
+					<div class="hidden lg:block w-64 flex-shrink-0">
+						<div class="sticky top-6 bg-tile-400 border-2 border-tile-600 rounded-lg p-4 shadow-lg">
+							<div class="flex items-center justify-between mb-4">
+								<h3 class="text-lg font-bold text-text-300">Sub-Lessons</h3>
+								<button
+									type="button"
+									onclick={() => showSubLessonIndex = !showSubLessonIndex}
+									class="p-1 hover:bg-tile-500 rounded transition-colors"
+									title={showSubLessonIndex ? 'Hide index' : 'Show index'}
+									aria-label={showSubLessonIndex ? 'Hide sub-lesson index' : 'Show sub-lesson index'}
+								>
+									<svg class="w-5 h-5 text-text-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={showSubLessonIndex ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}></path>
+									</svg>
+								</button>
+							</div>
+							{#if showSubLessonIndex}
+								<nav class="space-y-2">
+									{#each lessonBody.subLessons as subLesson, index}
+										<button
+											type="button"
+											onclick={() => goToSubLesson(index)}
+											class="w-full text-left p-3 rounded-lg border-2 transition-all {currentSubLessonIndex === index ? 'bg-tile-500 border-tile-600 text-text-300' : 'bg-tile-300 border-tile-500 text-text-200 hover:bg-tile-400 hover:border-tile-600'}"
+										>
+											<div class="flex items-start justify-between gap-2">
+												<div class="flex-1 min-w-0">
+													<div class="font-semibold text-sm mb-1 truncate">
+														{index + 1}. {subLesson.title?.english || `Sub-lesson ${index + 1}`}
+													</div>
+													{#if subLesson.exercises && subLesson.exercises.length > 0}
+														<div class="text-xs opacity-75 flex items-center gap-1">
+															<span>📝</span>
+															<span>{subLesson.exercises.length} {subLesson.exercises.length === 1 ? 'exercise' : 'exercises'}</span>
+														</div>
+													{:else}
+														<div class="text-xs opacity-50">No exercises</div>
+													{/if}
+												</div>
+												{#if currentSubLessonIndex === index}
+													<div class="w-2 h-2 bg-tile-600 rounded-full flex-shrink-0 mt-1.5"></div>
+												{/if}
+											</div>
+										</button>
+									{/each}
+								</nav>
+							{/if}
+						</div>
+					</div>
+					
+					<!-- Sub-Lesson Content Area -->
+					<div class="flex-1 min-w-0">
+						<!-- Mobile Index Toggle -->
+						<div class="lg:hidden mb-4">
+							<button
+								type="button"
+								onclick={() => showSubLessonIndex = !showSubLessonIndex}
+								class="w-full bg-tile-400 border-2 border-tile-600 rounded-lg p-4 flex items-center justify-between"
+							>
+								<span class="font-bold text-text-300">
+									Sub-lesson {currentSubLessonIndex + 1} of {lessonBody.subLessons.length}
+								</span>
+								<svg class="w-5 h-5 text-text-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={showSubLessonIndex ? "M5 15l7-7 7 7" : "M19 9l-7 7-7-7"}></path>
+								</svg>
+							</button>
+							{#if showSubLessonIndex}
+								<div class="mt-2 bg-tile-400 border-2 border-tile-600 rounded-lg p-4">
+									<nav class="space-y-2">
+										{#each lessonBody.subLessons as subLesson, index}
+											<button
+												type="button"
+												onclick={() => { goToSubLesson(index); showSubLessonIndex = false; }}
+												class="w-full text-left p-3 rounded-lg border-2 transition-all {currentSubLessonIndex === index ? 'bg-tile-500 border-tile-600 text-text-300' : 'bg-tile-300 border-tile-500 text-text-200 hover:bg-tile-400'}"
+											>
+												<div class="flex items-start justify-between gap-2">
+													<div class="flex-1 min-w-0">
+														<div class="font-semibold text-sm mb-1 truncate">
+															{index + 1}. {subLesson.title?.english || `Sub-lesson ${index + 1}`}
+														</div>
+														{#if subLesson.exercises && subLesson.exercises.length > 0}
+															<div class="text-xs opacity-75 flex items-center gap-1">
+																<span>📝</span>
+																<span>{subLesson.exercises.length} {subLesson.exercises.length === 1 ? 'exercise' : 'exercises'}</span>
+															</div>
+														{:else}
+															<div class="text-xs opacity-50">No exercises</div>
+														{/if}
+													</div>
+												</div>
+											</button>
+										{/each}
+									</nav>
+								</div>
+							{/if}
+						</div>
+						
+						<!-- Current Sub-Lesson Display -->
+						<div class="relative">
 					{#each lessonBody.subLessons as subLesson, index}
-						<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg">
+								{#if index === currentSubLessonIndex}
+									<div id="sub-lesson-{index}" class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg">
 							<div class="mb-4">
 								<span class="inline-block bg-tile-500 text-text-300 px-3 py-1 rounded-full text-sm font-semibold mb-2">
 									Sub-lesson {index + 1}
@@ -257,7 +410,9 @@
 							<!-- Exercises -->
 							{#if subLesson.exercises && subLesson.exercises.length > 0}
 								<div class="mt-6 pt-6 border-t border-tile-600">
-									<h4 class="text-lg font-semibold text-text-300 mb-4">Exercises</h4>
+									<h4 class="text-lg font-semibold text-text-300 mb-4">
+										Exercises ({subLesson.exercises.length})
+									</h4>
 									<div class="space-y-6">
 										{#each subLesson.exercises as exercise}
 											<InteractiveExercise {exercise} {dialect} />
@@ -265,14 +420,65 @@
 									</div>
 								</div>
 							{/if}
+							
+							<!-- Navigation Buttons -->
+							<div class="mt-8 pt-6 border-t border-tile-600 flex items-center justify-between">
+								<button
+									type="button"
+									onclick={goToPreviousSubLesson}
+									disabled={isFirstSubLesson}
+									class="px-6 py-3 bg-tile-500 text-text-300 rounded-lg font-semibold hover:bg-tile-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+								>
+									<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+									</svg>
+									Previous
+								</button>
+								
+								<div class="text-text-200 text-sm font-medium">
+									{currentSubLessonIndex + 1} of {lessonBody.subLessons.length}
+								</div>
+								
+								{#if isLastSubLesson}
+									<button
+										type="button"
+										onclick={() => {
+											const reviewSection = document.getElementById('review-section');
+											if (reviewSection) {
+												reviewSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+											}
+										}}
+										class="px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors flex items-center gap-2"
+									>
+										Continue to Review
+										<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+										</svg>
+									</button>
+								{:else}
+									<button
+										type="button"
+										onclick={goToNextSubLesson}
+										class="px-6 py-3 bg-tile-500 text-text-300 rounded-lg font-semibold hover:bg-tile-600 transition-colors flex items-center gap-2"
+									>
+										Next
+										<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+										</svg>
+									</button>
+								{/if}
+							</div>
+									</div>
+								{/if}
+							{/each}
 						</div>
-					{/each}
+					</div>
 				</div>
 			{/if}
 
 			<!-- Review Section -->
 			{#if lessonBody.review}
-				<div class="mb-8 space-y-6">
+				<div id="review-section" class="mb-8 space-y-6">
 					<!-- Review Words -->
 					{#if lessonBody.review.words && lessonBody.review.words.length > 0}
 						<ReviewCarousel items={lessonBody.review.words} {dialect} title="Key Vocabulary" />

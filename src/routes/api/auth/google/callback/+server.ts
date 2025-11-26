@@ -33,6 +33,16 @@ export const GET: RequestHandler = async ({ url, locals: { supabase } }) => {
     if (data.session && data.user) {
       console.log('✅ Google OAuth successful for:', data.user.email);
       
+      // Check if this is a new user before syncing
+      const { data: existingUser, error: selectError } = await supabase
+        .from('user')
+        .select('id')
+        .eq('supabase_auth_id', data.user.id)
+        .single()
+      
+      // PGRST116 = no rows returned, meaning it's a new user
+      const isNewUser = !existingUser && selectError?.code === 'PGRST116'
+      
       try {
         // Sync user data with your existing database using our helper
         console.log('🔄 Syncing user with database...');
@@ -44,8 +54,10 @@ export const GET: RequestHandler = async ({ url, locals: { supabase } }) => {
         // Don't block the user from logging in
       }
       
-      console.log('🏠 Redirecting to:', next);
-      throw redirect(303, next);
+      // If it's a new user, redirect with newSignup flag to trigger onboarding
+      const redirectUrl = isNewUser ? '/?newSignup=true' : next
+      console.log('🏠 Redirecting to:', redirectUrl);
+      throw redirect(303, redirectUrl);
     }
     
     // No session created

@@ -4,6 +4,7 @@ import { supabase } from '$lib/supabaseClient';
 import { calculateNextReview } from '$lib/helpers/spaced-repetition';
 import { getUserHasActiveSubscription } from '$lib/helpers/get-user-has-active-subscription';
 import { getUserReviewCount } from '$lib/helpers/get-user-review-count';
+import { trackActivitySimple } from '$lib/helpers/track-activity';
 import { v4 as uuidv4 } from 'uuid';
 
 export const POST: RequestHandler = async ({ request, locals }) => {
@@ -57,6 +58,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     );
 
     // Update saved_word with new spaced repetition data
+    // Also clear forgotten_in_session flag since word is being reviewed
     const { error: updateError } = await supabase
       .from('saved_word')
       .update({
@@ -65,7 +67,8 @@ export const POST: RequestHandler = async ({ request, locals }) => {
         repetitions: reviewResult.repetitions,
         next_review_date: reviewResult.nextReviewDate,
         last_review_date: Date.now(),
-        is_learning: reviewResult.intervalDays < 30 // Consider mastered if interval > 30 days
+        is_learning: reviewResult.intervalDays < 30, // Consider mastered if interval > 30 days
+        forgotten_in_session: false // Clear forgotten flag when reviewed
       })
       .eq('id', saved_word_id);
 
@@ -95,6 +98,11 @@ export const POST: RequestHandler = async ({ request, locals }) => {
       console.error('Error creating review record:', reviewError);
       // Don't fail the request if review history fails
     }
+
+    // Track activity (non-blocking)
+    trackActivitySimple(userId, 'review', 1).catch(err => {
+      console.error('Error tracking review activity:', err);
+    });
 
     return json({
       success: true,
