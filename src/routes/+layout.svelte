@@ -16,7 +16,10 @@
   import { invalidate, goto } from '$app/navigation'
   import { page } from '$app/stores'
   import { pwaInfo } from 'virtual:pwa-info';
-  
+  import { dev } from '$app/environment';
+  import { injectAnalytics } from '@vercel/analytics/sveltekit';
+
+
   let { data, children } = $props();
   $inspect(data)
 	let isOpen = $state(false);
@@ -41,6 +44,9 @@
 		root = document.documentElement;
 		doc = document.firstElementChild || null;
 		
+    // Inject analytics
+    injectAnalytics({ mode: dev ? 'development' : 'production' });
+
 		// Register PWA service worker
 		if (pwaInfo) {
 			const { registerSW } = await import('virtual:pwa-register');
