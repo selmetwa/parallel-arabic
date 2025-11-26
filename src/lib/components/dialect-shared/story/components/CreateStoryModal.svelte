@@ -8,6 +8,7 @@
 	import { toast } from 'svelte-sonner';
 	import { showStoryCreationToast, showStorySuccessToast, showTranscriptionToast, showTranscriptionSuccessToast, showErrorToast } from '$lib/helpers/toast-helpers';
 	import PaywallModal from '$lib/components/PaywallModal.svelte';
+	import { fetchUserReviewWords } from '$lib/helpers/fetch-review-words';
 
 	let isPaywallModalOpen = $state(false);
 
@@ -49,6 +50,13 @@
 	let generationError = $state('');
 	let errorDetails = $state('');
 
+	// Review words only mode
+	let useReviewWordsOnly = $state(false);
+	let reviewWordsSource = $state<'all' | 'due-for-review'>('all');
+	let reviewWords = $state<Array<{ arabic: string; english: string; transliteration: string }>>([]);
+	let isLoadingReviewWords = $state(false);
+	let reviewWordsError = $state('');
+
 	function openModal() {
 		if (!data.session) {
 			goto('/signup');
@@ -68,8 +76,47 @@
 			fileError = '';
 			generationError = '';
 			errorDetails = '';
+			useReviewWordsOnly = false;
+			reviewWordsSource = 'all';
+			reviewWords = [];
+			reviewWordsError = '';
 		}
 	}
+
+	async function loadReviewWords() {
+		if (!data.user?.id) {
+			reviewWordsError = 'User not found';
+			return;
+		}
+
+		isLoadingReviewWords = true;
+		reviewWordsError = '';
+		
+		try {
+			const words = await fetchUserReviewWords(data.user.id, reviewWordsSource);
+      console.log('words', words);
+			reviewWords = words;
+			
+			if (words.length === 0) {
+				reviewWordsError = `You don't have any ${reviewWordsSource === 'all' ? 'saved words' : 'words due for review'} yet. Add words to your review deck first.`;
+			}
+		} catch (error) {
+			console.error('Error loading review words:', error);
+			reviewWordsError = 'Failed to load review words. Please try again.';
+		} finally {
+			isLoadingReviewWords = false;
+		}
+	}
+
+	// Watch for changes to review words source and toggle
+	$effect(() => {
+		if (useReviewWordsOnly && isOpen && data.user?.id) {
+			loadReviewWords();
+		} else {
+			reviewWords = [];
+			reviewWordsError = '';
+		}
+	});
 
 	function handleFileChange(event: Event) {
 		const target = event.target as HTMLInputElement;
@@ -248,6 +295,12 @@
 			return;
 		}
 		
+		// Validate review words mode
+		if (useReviewWordsOnly && reviewWords.length === 0) {
+			reviewWordsError = `You don't have any ${reviewWordsSource === 'all' ? 'saved words' : 'words due for review'} yet. Add words to your review deck first.`;
+			return;
+		}
+		
 		// Prepare data for background generation
 		const generationData = {
 			creationMode,
@@ -262,7 +315,10 @@
 			selectedLearningTopics,
 			vocabularyWords,
 			vocabularyInputMode,
-			vocabularyFile
+			vocabularyFile,
+			useReviewWordsOnly,
+			reviewWordsSource,
+			reviewWords
 		};
 		
 		// Show loading state and keep modal open
@@ -374,7 +430,10 @@
 						storyType: data.storyType,
 						sentenceCount: data.sentenceCount,
 						learningTopics: data.selectedLearningTopics, // Send selected learning topics
-						vocabularyWords: finalVocabularyWords // Send vocabulary words to feature
+						vocabularyWords: finalVocabularyWords, // Send vocabulary words to feature
+						useReviewWordsOnly: data.useReviewWordsOnly || false,
+						reviewWordsSource: data.reviewWordsSource || 'all',
+						reviewWords: data.reviewWords || []
 					})
 				});
 
@@ -557,6 +616,128 @@
 			
 			<form onsubmit={handleSubmit} class="flex flex-col gap-6">
 
+				<!-- Review Words Only Toggle - Prominent Feature -->
+				<div class="flex flex-col gap-4 bg-gradient-to-br from-tile-400/40 to-tile-500/30 p-5 rounded-xl border-2 border-tile-600/60 shadow-lg">
+					<div class="flex items-start justify-between gap-4">
+						<div class="flex flex-col gap-2 flex-1">
+							<div class="flex items-center gap-2">
+								<span class="text-2xl">🎯</span>
+								<p class="text-base font-bold text-text-300">Use Review Words Only</p>
+							</div>
+							<p class="text-sm text-text-200 leading-relaxed">
+								<strong class="text-text-300">Context-Based Learning:</strong> Generate content using words you're already learning. This reinforces your memory by seeing words in new contexts, improving retention through spaced repetition. Experience your vocabulary in authentic, meaningful stories and conversations that help you learn faster.
+							</p>
+						</div>
+						<div class="relative flex items-center flex-shrink-0">
+							<input
+								type="checkbox"
+								id="useReviewWordsOnly"
+								bind:checked={useReviewWordsOnly}
+								class="peer w-6 h-6 cursor-pointer appearance-none rounded border-2 border-tile-600 bg-tile-200 checked:bg-tile-600 checked:border-tile-600 focus:ring-offset-0 focus:ring-2 focus:ring-tile-500 transition-all"
+							/>
+							<svg class="absolute w-4 h-4 text-white pointer-events-none opacity-0 peer-checked:opacity-100 left-1 top-1 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+						</div>
+					</div>
+				</div>
+
+				{#if useReviewWordsOnly}
+					<!-- Review Words Only Mode -->
+					<div class="flex flex-col gap-4 bg-tile-400/30 p-4 rounded-xl border border-tile-500/50">
+						<!-- Review Words Source Selection -->
+						<div class="flex flex-col gap-2">
+							<label class="text-sm font-bold text-text-300">Word Source</label>
+							<div class="flex gap-4">
+								<RadioButton
+									className="!text-sm !font-medium"
+									wrapperClass="!p-3 !rounded-lg flex-1 hover:bg-tile-400/50 transition-colors"
+									onClick={(e) => { reviewWordsSource = e.target.value as 'all' | 'due-for-review'; }}
+									selectableFor="all"
+									isSelected={reviewWordsSource === 'all'}
+									value="all"
+									text="All Saved Words"
+								/>
+								<RadioButton
+									className="!text-sm !font-medium"
+									wrapperClass="!p-3 !rounded-lg flex-1 hover:bg-tile-400/50 transition-colors"
+									onClick={(e) => { reviewWordsSource = e.target.value as 'all' | 'due-for-review'; }}
+									selectableFor="due-for-review"
+									isSelected={reviewWordsSource === 'due-for-review'}
+									value="due-for-review"
+									text="Words Due for Review"
+								/>
+							</div>
+						</div>
+
+						<!-- Word Count Display -->
+						{#if isLoadingReviewWords}
+							<div class="text-sm text-text-200">Loading words...</div>
+						{:else if reviewWordsError}
+							<div class="p-3 bg-red-50/50 border border-red-200 rounded-lg">
+								<p class="text-sm text-red-600">{reviewWordsError}</p>
+							</div>
+						{:else if reviewWords.length > 0}
+							<div class="p-3 bg-tile-300 border border-tile-500 rounded-lg">
+								<p class="text-sm font-medium text-text-300">
+									{reviewWords.length} word{reviewWords.length !== 1 ? 's' : ''} will be used in your {storyType}
+								</p>
+							</div>
+						{/if}
+					</div>
+
+					<!-- Content Type (keep for review words mode) -->
+					<div class="flex flex-col gap-2">
+						<label class="text-sm font-bold text-text-300">Content Type</label>
+						<div class="flex gap-4">
+							<RadioButton
+								className="!text-sm !font-medium"
+								wrapperClass="!p-3 !rounded-lg flex-1 hover:bg-tile-400/50 transition-colors"
+								onClick={setStoryType}
+								selectableFor="story"
+								isSelected={storyType === 'story'}
+								value="story"
+								text="Story (Narrative)"
+							/>
+							<RadioButton
+								className="!text-sm !font-medium"
+								wrapperClass="!p-3 !rounded-lg flex-1 hover:bg-tile-400/50 transition-colors"
+								onClick={setStoryType}
+								selectableFor="conversation"
+								isSelected={storyType === 'conversation'}
+								value="conversation"
+								text="Conversation (Dialogue)"
+							/>
+						</div>
+					</div>
+
+					<!-- Difficulty Selection (keep for review words mode) -->
+					<div class="flex flex-col gap-2">
+						<label class="text-sm font-bold text-text-300">Difficulty Level</label>
+						<div class="flex flex-col gap-2">
+							{#each difficultyOptions as difficultyOption}
+								<RadioButton
+									className="!text-sm"
+									wrapperClass="!p-2 !rounded-lg hover:bg-tile-400/50 transition-colors"
+									onClick={setOption}
+									selectableFor={difficultyOption.value}
+									isSelected={option === difficultyOption.value}
+									value={difficultyOption.value}
+									text={difficultyOption.label}
+								/>
+							{/each}
+						</div>
+					</div>
+
+					<div class="pt-2">
+						<Button 
+							type="submit" 
+							className="w-full py-3 text-base font-bold shadow-md hover:shadow-lg transition-all"
+							disabled={reviewWords.length === 0 || isLoadingReviewWords}
+						>
+							Create {storyType === 'story' ? 'Story' : 'Conversation'}
+						</Button>
+					</div>
+				{:else}
+					<!-- Original Generation Mode -->
 				<!-- Creation Mode Selection -->
 				<div class="flex flex-col gap-3 bg-tile-400/30 p-4 rounded-xl border border-tile-500/50">
 					<p class="text-sm font-bold text-text-300">Choose Creation Method</p>
@@ -589,7 +770,7 @@
 					</p>
 				</div>
 
-				{#if creationMode === 'upload'}
+				{#if creationMode === 'upload' && !useReviewWordsOnly}
 					<!-- Audio Upload Section -->
 					<div class="p-5 border border-tile-500 bg-tile-300 rounded-xl shadow-sm">
 						<h3 class="text-lg font-bold text-text-300 mb-2">Upload Arabic Audio</h3>
@@ -717,7 +898,135 @@
 					</div>
 				{/if}
 
-				{#if creationMode === 'generate'}
+				{#if creationMode === 'upload' && !useReviewWordsOnly}
+					<!-- Audio Upload Section (only show when not in review words mode) -->
+					<div class="p-5 border border-tile-500 bg-tile-300 rounded-xl shadow-sm">
+						<h3 class="text-lg font-bold text-text-300 mb-2">Upload Arabic Audio</h3>
+						<p class="text-sm text-text-200 mb-4 flex items-center gap-2">
+							<span class="text-lg">ℹ️</span>
+							<span>Use <a href="https://ezconv.com/" class="text-text-300 font-medium hover:underline" target="_blank">ezconv.com</a> to convert YouTube videos to MP3.</span>
+						</p>
+						
+						<!-- Title Input for Audio Mode -->
+						<div class="mb-6">
+							<div class="flex items-center gap-2 mb-3 cursor-pointer group" onclick={() => useCustomTitle = !useCustomTitle}>
+								<div class="relative flex items-center">
+									<input
+										type="checkbox"
+										id="useCustomTitle"
+										bind:checked={useCustomTitle}
+										class="peer w-4 h-4 cursor-pointer appearance-none rounded border border-tile-600 bg-tile-200 checked:bg-tile-600 checked:border-tile-600 focus:ring-offset-0 focus:ring-1 focus:ring-tile-500 transition-all"
+									/>
+									<svg class="absolute w-3 h-3 text-white pointer-events-none opacity-0 peer-checked:opacity-100 left-0.5 top-0.5 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+								</div>
+								<label for="useCustomTitle" class="text-sm text-text-300 font-medium cursor-pointer select-none group-hover:text-text-200 transition-colors">
+									Use custom title
+								</label>
+							</div>
+							
+							{#if useCustomTitle}
+								<input
+									type="text"
+									bind:value={customTitle}
+									placeholder="Enter custom title for your story..."
+									class="w-full rounded-lg border border-tile-500 bg-tile-200 py-2.5 px-3 text-text-300 focus:border-tile-600 focus:ring-1 focus:ring-tile-600 transition-all"
+								/>
+							{:else if audioFile}
+								<p class="text-sm text-text-200 bg-tile-400/30 p-2 rounded-lg border border-tile-500/30">
+									Title will be: <span class="font-bold text-text-300">{customTitle}</span>
+								</p>
+							{/if}
+						</div>
+
+						<!-- Audio File Drop Zone -->
+						<div
+							class="relative border-2 border-dashed rounded-xl p-8 text-center transition-all duration-200 
+								{isDragOver ? 'border-blue-400 bg-blue-50/10' : audioFile ? 'border-green-500 bg-green-50/10' : 'border-tile-500 hover:border-tile-600 hover:bg-tile-400/30'}"
+							ondrop={handleAudioDrop}
+							ondragover={handleAudioDragOver}
+							ondragleave={handleAudioDragLeave}
+						>
+							{#if audioFile}
+								<div class="space-y-4">
+									<div class="flex items-center justify-center">
+										<div class="w-16 h-16 rounded-full bg-green-100/20 flex items-center justify-center text-green-500">
+											<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+											</svg>
+										</div>
+									</div>
+									<div>
+										<p class="text-base font-bold text-text-300 mb-1">{audioFile.name}</p>
+										<p class="text-xs font-medium text-text-200 bg-tile-400/50 px-2 py-1 rounded-full inline-block">
+											{formatFileSize(audioFile.size)} • {audioFile.type.split('/')[1]?.toUpperCase() || 'AUDIO'}
+										</p>
+									</div>
+									<button
+										type="button"
+										onclick={removeAudioFile}
+										class="px-4 py-2 bg-tile-400 text-text-300 rounded-lg hover:bg-tile-500 transition-colors text-sm font-medium border border-tile-500 hover:border-tile-600"
+									>
+										Remove File
+									</button>
+								</div>
+							{:else}
+								<div class="space-y-4">
+									<div class="flex items-center justify-center">
+										<div class="w-16 h-16 rounded-full bg-tile-400/50 flex items-center justify-center text-tile-600">
+											<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+											</svg>
+										</div>
+									</div>
+									<div>
+										<p class="text-lg font-bold text-text-300 mb-1">Drop audio file here</p>
+										<p class="text-sm text-text-200">or click anywhere to browse</p>
+									</div>
+									<div class="text-xs text-text-200 opacity-70">
+										MP3, WAV, FLAC, M4A, MP4, WebM, OGG (max 25MB)
+									</div>
+								</div>
+								
+								<input
+									type="file"
+									accept="audio/*"
+									onchange={handleAudioFileSelect}
+									class="inset-0 absolute w-full h-full opacity-0 cursor-pointer"
+								/>
+							{/if}
+						</div>
+						
+						{#if audioFileError}
+							<div class="mt-3 p-3 bg-red-50/50 border border-red-200 rounded-lg flex items-center gap-2">
+								<svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+								<p class="text-sm font-medium text-red-600">{audioFileError}</p>
+							</div>
+						{/if}
+						
+						<!-- Transcribe Button for Audio Mode -->
+						{#if audioFile}
+							<div class="mt-6">
+								<Button type="submit" className="w-full py-3 text-base font-bold shadow-md hover:shadow-lg transition-all">
+									{#if isTranscribing}
+										<div class="flex items-center justify-center gap-2">
+											<div role="status">
+												<svg aria-hidden="true" class="h-5 w-5 animate-spin fill-white text-white/30" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+													<path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
+												</svg>
+											</div>
+											<span>Transcribing...</span>
+										</div>
+									{:else}
+										<span>🎵 Transcribe & Create</span>
+									{/if}
+								</Button>
+							</div>
+						{/if}
+					</div>
+				{/if}
+
+				{#if creationMode === 'generate' && !useReviewWordsOnly}
 					<!-- Original AI Generation Options -->
 					<div class="flex flex-col gap-2">
 						<label class="text-sm font-bold text-text-300">Content Type</label>
@@ -881,6 +1190,7 @@
 							Create {storyType === 'story' ? 'Story' : 'Conversation'}
 						</Button>
 					</div>
+				{/if}
 				{/if}
 			</form>
 		{/if}

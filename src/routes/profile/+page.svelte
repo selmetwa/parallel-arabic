@@ -2,6 +2,8 @@
   import { enhance } from '$app/forms';
   import Button from '$lib/components/Button.svelte';
   import ContributionGraph from '$lib/components/ContributionGraph.svelte';
+  import ReviewWordsStats from './components/ReviewWordsStats.svelte';
+  import AllTimeStats from '$lib/components/AllTimeStats.svelte';
   import type { PageData } from './$types';
   import { goto } from '$app/navigation';
 
@@ -61,6 +63,14 @@
   <h1 class="text-3xl font-bold text-text-300 mb-6">Profile</h1>
   
   <div class="space-y-6">
+    <!-- All-Time Stats -->
+    <div class="bg-tile-400 border-2 border-tile-600 rounded-xl p-6 sm:p-8 shadow-lg">
+      <AllTimeStats user={data.user} />
+    </div>
+
+    <!-- Review Words Stats - Prominently displayed -->
+    <ReviewWordsStats wordStats={data.wordStats} />
+
     <!-- Activity Graph -->
     <ContributionGraph />
 
@@ -70,6 +80,24 @@
       <div class="space-y-2">
         <p class="text-text-200"><strong>Email:</strong> {data.user?.email || 'Not available'}</p>
         <p class="text-text-200"><strong>Subscription:</strong> {data.hasActiveSubscription ? 'Active' : 'Not active'}</p>
+        {#if data.targetDialect}
+          <p class="text-text-200">
+            <strong>Target Dialect:</strong> 
+            <span class="capitalize">
+              {data.targetDialect === 'egyptian-arabic' ? 'Egyptian Arabic' : 
+               data.targetDialect === 'fusha' ? 'MSA (Fusha)' :
+               data.targetDialect === 'levantine' ? 'Levantine' :
+               data.targetDialect === 'darija' ? 'Moroccan' :
+               data.targetDialect.replace('-', ' ')}
+            </span>
+          </p>
+        {/if}
+        {#if data.learningReason}
+          <p class="text-text-200"><strong>Learning Reason:</strong> {data.learningReason}</p>
+        {/if}
+        {#if data.proficiencyLevel}
+          <p class="text-text-200"><strong>Proficiency Level:</strong> {data.proficiencyLevel}</p>
+        {/if}
       </div>
       
       <!-- Logout Form -->

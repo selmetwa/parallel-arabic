@@ -2,6 +2,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { supabase } from '$lib/supabaseClient';
+import { trackActivitySimple } from '$lib/helpers/track-activity';
 
 export const POST: RequestHandler = async ({ request, locals }) => {
   const data = await request.json();
@@ -77,6 +78,11 @@ export const POST: RequestHandler = async ({ request, locals }) => {
       console.error('Error saving word:', insertError);
       return json({ message: 'Something went wrong' });
     }
+
+    // Track activity (non-blocking)
+    trackActivitySimple(userId, 'saved_word', 1).catch(err => {
+      console.error('Error tracking saved word activity:', err);
+    });
 
     return json({ message: 'Saved' });
   } catch (e) {

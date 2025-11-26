@@ -10,6 +10,16 @@ export const GET: RequestHandler = async ({ url, locals: { supabase } }) => {
     const { data, error } = await supabase.auth.exchangeCodeForSession(code)
     
     if (!error && data.session && data.user) {
+      // Check if this is a new user before syncing
+      const { data: existingUser, error: selectError } = await supabase
+        .from('user')
+        .select('id')
+        .eq('supabase_auth_id', data.user.id)
+        .single()
+      
+      // PGRST116 = no rows returned, meaning it's a new user
+      const isNewUser = !existingUser && selectError?.code === 'PGRST116'
+      
       try {
         // Sync user data with your existing database
         await syncSupabaseUserWithDB(data.user, supabase)
@@ -18,7 +28,10 @@ export const GET: RequestHandler = async ({ url, locals: { supabase } }) => {
         // Continue with login even if sync fails - can be retried later
       }
       
-      redirect(303, `/${next.slice(1)}`)
+      // If it's a new user, redirect with newSignup flag to trigger onboarding
+      const redirectPath = next.startsWith('/') ? next : `/${next}`
+      const redirectUrl = isNewUser ? '/?newSignup=true' : redirectPath
+      redirect(303, redirectUrl)
     } else {
       console.error('❌ Code exchange failed:', error)
     }

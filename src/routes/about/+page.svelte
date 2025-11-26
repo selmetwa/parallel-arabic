@@ -196,7 +196,7 @@
                   Practice with spaced repetition to remember words and sentences.
                 </p>
                 <p class="text-base text-text-200 leading-relaxed mb-4">
-                  Generate your own content, or import words from over 16,000 vocab words.
+                  Generate your own content, or import words from over 20,000 vocab words.
                 </p>
               </div>
               <a href="/review" class="inline-block px-6 py-3 text-base font-semibold bg-tile-600 border-2 border-tile-600 text-text-300 hover:bg-tile-700 transition-colors duration-300 shadow-md w-fit">
@@ -311,7 +311,7 @@
 							<div>
 								<h3 class="text-xl font-bold text-text-300 mb-3">Writing Practice</h3>
 								<p class="text-base text-text-200 leading-relaxed mb-3">
-									Practice writing skills with over 16,000 words using our custom virtual keyboard.
+									Practice writing skills with over 20,000 words using our custom virtual keyboard.
 								</p>
 								<p class="text-base text-text-200 leading-relaxed mb-4">
 									Save words to your personal wordbank or export to Anki decks.
@@ -337,7 +337,7 @@
 							<div>
 								<h3 class="text-xl font-bold text-text-300 mb-3">Vocabulary Quizzes</h3>
 								<p class="text-base text-text-200 leading-relaxed mb-4">
-									Practice over 16,000 words through engaging multiple choice quizzes and interactive exercises.
+									Practice over 20,000 words through engaging multiple choice quizzes and interactive exercises.
 								</p>
 							</div>
 							<a

@@ -224,7 +224,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     - Each word object must have: "arabic", "english", "transliteration"
     - Example format: {"words": [{"arabic": "بيت", "english": "house", "transliteration": "bayt"}, ...]}
 
-    Please generate exactly 20 words.
+    Please generate exactly 10 words.
   `;
 
   try {

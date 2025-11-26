@@ -26,9 +26,10 @@
   interface Props {
     word: ReviewWord;
     onReview: (difficulty: 1 | 2 | 3) => void;
+    onForgot?: () => void;
   }
 
-  let { word, onReview }: Props = $props();
+  let { word, onReview, onForgot }: Props = $props();
 
   let showAnswer = $state(false);
   let showHint = $state(false);
@@ -111,6 +112,16 @@
     setTimeout(() => {
       selectedDifficulty = null;
     }, 500);
+  }
+
+  function handleForgot() {
+    selectedDifficulty = null;
+    showAnswer = false;
+    showHint = false;
+    clearSelection();
+    if (onForgot) {
+      onForgot();
+    }
   }
   
   // Reset state when word changes
@@ -523,7 +534,7 @@
   {#if showAnswer}
     <div class="border-t border-tile-500 pt-6 mt-6">
       <p class="text-center text-text-200 mb-4 font-semibold">How well did you remember this word?</p>
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
         <button
           type="button"
           onclick={() => handleDifficultyClick(1)}
@@ -557,6 +568,19 @@
           <div class="text-sm font-normal mt-1">Forgot or struggled</div>
         </button>
       </div>
+      {#if onForgot}
+        <div class="flex justify-center mt-4">
+          <button
+            type="button"
+            onclick={handleForgot}
+            disabled={selectedDifficulty !== null}
+            class="border-2 border-orange-500 bg-orange-100 hover:bg-orange-200 text-text-300 py-3 px-8 rounded-lg font-semibold text-base transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+          >
+            <span class="text-xl">❌</span>
+            <span>Forgot - Review Again</span>
+          </button>
+        </div>
+      {/if}
     </div>
   {/if}
 
