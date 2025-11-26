@@ -23,11 +23,16 @@ function cleanJsonResponse(response: string): string {
 	const trimmed = response.trim();
 	
 	console.log('[cleanJsonResponse] Response length:', response.length);
+	console.log('[cleanJsonResponse] Trimmed starts with ```:', trimmed.startsWith('```'));
 	console.log('[cleanJsonResponse] Trimmed ends with ```:', trimmed.endsWith(endMarker));
 	
-	// Only proceed if the string ends with the end marker
-	if (!trimmed.endsWith(endMarker)) {
-		console.log('[cleanJsonResponse] Response does not end with ```, returning original');
+	// Check if response is wrapped in markdown code blocks
+	// Handle both ```json and ``` cases
+	const hasStartMarker = trimmed.toLowerCase().startsWith(startMarker.toLowerCase()) || trimmed.startsWith('```');
+	const hasEndMarker = trimmed.endsWith(endMarker);
+	
+	if (!hasStartMarker || !hasEndMarker) {
+		console.log('[cleanJsonResponse] Response does not appear to be wrapped in markdown code blocks, returning original');
 		return response;
 	}
 	
@@ -35,18 +40,35 @@ function cleanJsonResponse(response: string): string {
 		// Find the first occurrence of the start marker (case-insensitive search)
 		const lowerResponse = response.toLowerCase();
 		const startMarkerLower = startMarker.toLowerCase();
-		const startIndex = lowerResponse.indexOf(startMarkerLower);
+		let startIndex = lowerResponse.indexOf(startMarkerLower);
+		
+		// If ```json not found, try just ```
+		if (startIndex === -1) {
+			startIndex = response.indexOf('```');
+		}
 		
 		console.log('[cleanJsonResponse] Start marker index:', startIndex);
 		
 		if (startIndex === -1) {
-			// Start marker "```json" not found, return original
-			console.log('[cleanJsonResponse] Start marker "```json" not found, returning original');
+			// No start marker found, return original
+			console.log('[cleanJsonResponse] Start marker not found, returning original');
 			return response;
 		}
 		
-		// Calculate the actual start of the JSON content (after the marker)
-		const jsonStart = startIndex + startMarker.length;
+		// Determine the actual start of JSON content
+		// If it's ```json, skip past it; if it's just ```, skip past that
+		let jsonStart: number;
+		if (lowerResponse.substring(startIndex).startsWith(startMarkerLower)) {
+			jsonStart = startIndex + startMarker.length;
+		} else {
+			jsonStart = startIndex + 3; // Skip past ```
+		}
+		
+		// Skip any whitespace/newlines after the start marker
+		while (jsonStart < response.length && /\s/.test(response[jsonStart])) {
+			jsonStart++;
+		}
+		
 		console.log('[cleanJsonResponse] JSON content starts at index:', jsonStart);
 		
 		// Find the last occurrence of the end marker (to handle multiple ``` in content)
@@ -59,6 +81,13 @@ function cleanJsonResponse(response: string): string {
 			const trimmedSlice = contentSlice.trim();
 			console.log('[cleanJsonResponse] Extracted content length:', trimmedSlice.length);
 			console.log('[cleanJsonResponse] Extracted content first 200 chars:', trimmedSlice.substring(0, 200));
+			
+			// Verify we extracted something meaningful
+			if (trimmedSlice.length === 0) {
+				console.warn('[cleanJsonResponse] Extracted content is empty, returning original');
+				return response;
+			}
+			
 			return trimmedSlice;
 		} else {
 			// Start marker found after or at the end marker, malformed
@@ -338,11 +367,24 @@ export function parseJsonFromGeminiResponse<T = unknown>(
 		throw new Error('Zod schema is required for parsing');
 	}
 
-	// Strategy 1: Standard approach - direct JSON.parse + zodSchema.parse
-	console.log('[Gemini JSON Parser] Attempting direct JSON.parse...');
+	// Strategy 1: Check if response is wrapped in markdown code blocks FIRST
+	// This is a known issue with Gemini 2.5 models even with structured outputs
+	const trimmed = text.trim();
+	const isWrappedInMarkdown = trimmed.startsWith('```') && trimmed.endsWith('```');
+	
+	let textToParse = text;
+	if (isWrappedInMarkdown) {
+		console.log('[Gemini JSON Parser] Detected markdown code blocks, cleaning first...');
+		textToParse = cleanJsonResponse(text);
+		console.log('[Gemini JSON Parser] Cleaned text length:', textToParse.length);
+		console.log('[Gemini JSON Parser] Text changed after cleaning:', textToParse !== text);
+	}
+	
+	// Strategy 2: Standard approach - direct JSON.parse + zodSchema.parse
+	console.log('[Gemini JSON Parser] Attempting JSON.parse...');
 	try {
-		const parsed = JSON.parse(text);
-		console.log('[Gemini JSON Parser] Direct parse successful, validating with Zod...');
+		const parsed = JSON.parse(textToParse);
+		console.log('[Gemini JSON Parser] Parse successful, validating with Zod...');
 		console.log('[Gemini JSON Parser] Parsed type:', Array.isArray(parsed) ? 'array' : typeof parsed);
 		
 		// Try direct validation first
@@ -353,51 +395,48 @@ export function parseJsonFromGeminiResponse<T = unknown>(
 		} catch (validationError) {
 			// If validation fails, try normalizing it (handles arrays and objects with nested arrays)
 			console.log('[Gemini JSON Parser] Validation failed, attempting normalization...');
-				const normalized = normalizeArrayToObject(parsed, zodSchema);
-				if (normalized !== parsed) {
-					console.log('[Gemini JSON Parser] Normalized structure, retrying validation...');
-					const validated = zodSchema.parse(normalized);
-					console.log('[Gemini JSON Parser] Zod validation successful after normalization!');
-					return validated;
+			const normalized = normalizeArrayToObject(parsed, zodSchema);
+			if (normalized !== parsed) {
+				console.log('[Gemini JSON Parser] Normalized structure, retrying validation...');
+				const validated = zodSchema.parse(normalized);
+				console.log('[Gemini JSON Parser] Zod validation successful after normalization!');
+				return validated;
 			}
 			throw validationError;
 		}
 	} catch (e) {
-		console.warn('[Gemini JSON Parser] Direct parse/validation failed:', e instanceof Error ? e.message : String(e));
+		console.warn('[Gemini JSON Parser] Parse/validation failed:', e instanceof Error ? e.message : String(e));
 		
-		// If direct parse fails, try cleaning markdown code blocks (known issue with Gemini 2.5 models)
-		// See: https://github.com/googleapis/python-genai/issues/637
-		//      https://github.com/googleapis/js-genai/issues/976
-		console.log('[Gemini JSON Parser] Attempting fallback: cleaning markdown code blocks...');
-		try {
-			const cleaned = cleanJsonResponse(text);
-			console.log('[Gemini JSON Parser] Cleaned text length:', cleaned.length);
-			console.log('[Gemini JSON Parser] Cleaned text first 500 chars:', cleaned.substring(0, 500));
-			console.log('[Gemini JSON Parser] Cleaned text last 200 chars:', cleaned.substring(Math.max(0, cleaned.length - 200)));
-			console.log('[Gemini JSON Parser] Text changed after cleaning:', cleaned !== text);
-			
-			const parsed = JSON.parse(cleaned);
-			console.log('[Gemini JSON Parser] Cleaned parse successful, validating with Zod...');
-			console.log('[Gemini JSON Parser] Parsed type:', Array.isArray(parsed) ? 'array' : typeof parsed);
-			
-			// Try validation, with normalization if needed
+		// If we already cleaned markdown but still failed, try cleaning again (in case first attempt missed something)
+		if (!isWrappedInMarkdown) {
+			console.log('[Gemini JSON Parser] Attempting fallback: cleaning markdown code blocks...');
 			try {
-				const validated = zodSchema.parse(parsed);
-				console.log('[Gemini JSON Parser] Zod validation successful after cleaning!');
-				return validated;
-			} catch (validationError) {
-				// If validation fails, try normalizing it (handles arrays and objects with nested arrays)
-				console.log('[Gemini JSON Parser] Validation failed, attempting normalization...');
-					const normalized = normalizeArrayToObject(parsed, zodSchema);
-					if (normalized !== parsed) {
-						console.log('[Gemini JSON Parser] Normalized structure, retrying validation...');
-						const validated = zodSchema.parse(normalized);
-						console.log('[Gemini JSON Parser] Zod validation successful after cleaning + normalization!');
+				const cleaned = cleanJsonResponse(text);
+				console.log('[Gemini JSON Parser] Cleaned text length:', cleaned.length);
+				console.log('[Gemini JSON Parser] Text changed after cleaning:', cleaned !== text);
+				
+				if (cleaned !== text) {
+					const parsed = JSON.parse(cleaned);
+					console.log('[Gemini JSON Parser] Cleaned parse successful, validating with Zod...');
+					
+					// Try validation, with normalization if needed
+					try {
+						const validated = zodSchema.parse(parsed);
+						console.log('[Gemini JSON Parser] Zod validation successful after cleaning!');
 						return validated;
+					} catch (validationError) {
+						console.log('[Gemini JSON Parser] Validation failed, attempting normalization...');
+						const normalized = normalizeArrayToObject(parsed, zodSchema);
+						if (normalized !== parsed) {
+							console.log('[Gemini JSON Parser] Normalized structure, retrying validation...');
+							const validated = zodSchema.parse(normalized);
+							console.log('[Gemini JSON Parser] Zod validation successful after cleaning + normalization!');
+							return validated;
+						}
+						throw validationError;
+					}
 				}
-				throw validationError;
-			}
-		} catch (fallbackError) {
+			} catch (fallbackError) {
 			// Strategy 3: Try repairing common JSON issues
 			console.log('[Gemini JSON Parser] Cleaned parse failed, attempting JSON repair...');
 			try {
@@ -455,6 +494,7 @@ export function parseJsonFromGeminiResponse<T = unknown>(
 				}
 				
 				throw new Error(`Failed to parse JSON from Gemini response: ${text.substring(0, 200)}...`);
+			}
 			}
 		}
 	}

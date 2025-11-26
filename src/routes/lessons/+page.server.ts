@@ -2,7 +2,7 @@ import { getAllLessons } from '$lib/helpers/lesson-helpers';
 
 export const load = async ({ parent }) => {
 	// Get session and subscription status from layout
-	const { session, isSubscribed } = await parent();
+	const { session, isSubscribed, user } = await parent();
 	
 	// Fetch all generated lessons in one efficient query
 	const lessonsResult = await getAllLessons();
@@ -27,7 +27,8 @@ export const load = async ({ parent }) => {
 		session,
 		isSubscribed,
 		hasActiveSubscription: isSubscribed, // Keep for backward compatibility
-		user_generated_lessons: allUserGeneratedLessons
+		user_generated_lessons: allUserGeneratedLessons,
+    user: user,
 	};
 };
 

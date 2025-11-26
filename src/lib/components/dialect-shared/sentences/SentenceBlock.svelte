@@ -162,8 +162,9 @@
 		if (areArraysEqual(myInputArr, arabicArr) && value.trim().length > 0) {
 			isCorrect = true;
 			keyboardElement && keyboardElement.resetValue();
-		} else if (value.trim().length === 0) {
-			// Reset isCorrect when input is cleared
+		} else if (value.trim().length === 0 && !isCorrect) {
+			// Reset isCorrect when input is cleared, but only if it wasn't already correct
+			// (prevents resetting after successful answer when keyboard is cleared)
 			isCorrect = false;
 		}
 	}
@@ -188,6 +189,13 @@
 		} else {
 			updateKeyboardStyle();
 		}
+
+		// Track sentence view
+		fetch('/api/track-sentence-view', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({ count: 1 })
+		}).catch(err => console.error('Error tracking sentence view:', err));
 
 		// Listen for virtual keyboard changes
 		document.addEventListener('keydown', checkInput);

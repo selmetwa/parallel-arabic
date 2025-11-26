@@ -27,14 +27,31 @@ export const actions: Actions = {
     }
 
     // If user was created, sync with our database
+    let isNewUser = false
     if (data.user) {
       try {
+        const { data: existingUser, error: selectError } = await supabase
+          .from('user')
+          .select('id')
+          .eq('supabase_auth_id', data.user.id)
+          .single()
+        
+        // Check if this is a new user (doesn't exist in our DB yet)
+        // PGRST116 = no rows returned, meaning it's a new user
+        isNewUser = !existingUser && selectError?.code === 'PGRST116'
+        
         await syncSupabaseUserWithDB(data.user, supabase)
       } catch (syncError) {
         console.error('Failed to sync user to database:', syncError)
         // Note: We don't return an error here because the auth was successful
         // The user sync can be retried on login
       }
+    }
+    
+    // If it's a new user and they're already authenticated (email confirmation not required),
+    // redirect to home with newSignup flag to trigger onboarding
+    if (isNewUser && data.session) {
+      throw redirect(303, '/?newSignup=true')
     }
     
     return {

@@ -11,6 +11,7 @@
   import Button from '$lib/components/Button.svelte';
   import { type Dialect } from '$lib/types/index';
   import type { DialectComparisonSchema } from '$lib/utils/gemini-schemas';
+  import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
 
   let { data } = $props();
 
@@ -60,7 +61,7 @@
     { value: 'levantine', label: 'Levantine Arabic' },
   ];
 
-  let selectedDialect = $state<Dialect>('egyptian-arabic');
+  let selectedDialect = $state<Dialect>(getDefaultDialect(data.user) as Dialect);
   let recording = $state(false);
   let recordingLanguage = $state<'ar' | 'en'>('ar'); // Track which language mode is active
   let mediaRecorder: MediaRecorder | null = $state(null);

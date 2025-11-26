@@ -1,14 +1,15 @@
 <script lang="ts">
   import { Howl } from 'howler';
-
-	import Button from '$lib/components/Button.svelte';
   import { type Dialect } from '$lib/types/index';
-  let { text, dialect = 'egyptian-arabic', audioUrl, children }: {
+  
+  interface Props {
     text: string;
-    dialect: Dialect;
+    dialect?: Dialect;
     audioUrl?: string;
-    children?: any;
-  } = $props();
+    className?: string;
+  }
+  
+  let { text, dialect = 'egyptian-arabic', audioUrl, className = '' }: Props = $props();
 
 	let isLoading = $state(false);
 	let playbackRate = $state(0.9);
@@ -82,34 +83,46 @@
 	};
 </script>
 
-<div class="flex flex-col w-full">
-  <p class="block sm:hidden text-xs whitespace-nowrap">Silent mode must be off</p>
-  <Button onClick={speakArabic} type="button">
-    {#if isLoading}
-      <span class="flex flex-row items-center gap-2 text-center mx-auto w-fit">
-        <div role="status">
-          <svg
-            aria-hidden="true"
-            class="h-[24px] w-[24px] animate-spin fill-tile-300 text-text-200 dark:text-text-200"
-            viewBox="0 0 100 101"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
-              fill="currentColor"
-            />
-            <path
-              d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
-              fill="currentFill"
-            />
-          </svg>
-          <span class="sr-only">Loading...</span>
-        </div>
-      </span>
-    {:else}
-      {@render children?.()}
-    {/if}
-  </Button>
-  
-</div>
+<button
+	type="button"
+	onclick={speakArabic}
+	class="inline-flex shrink-0 items-center justify-center p-1 rounded hover:bg-tile-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed {className}"
+	disabled={isLoading}
+	aria-label="Play audio"
+>
+	{#if isLoading}
+		<svg
+			class="w-4 h-4 animate-spin"
+			fill="none"
+			viewBox="0 0 24 24"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<circle
+				class="opacity-25"
+				cx="12"
+				cy="12"
+				r="10"
+				stroke="currentColor"
+				stroke-width="4"
+			></circle>
+			<path
+				class="opacity-75"
+				fill="currentColor"
+				d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+			></path>
+		</svg>
+	{:else}
+		<svg
+			class="w-4 h-4"
+			fill="currentColor"
+			viewBox="0 0 20 20"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path
+				fill-rule="evenodd"
+				d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.617.793L4.383 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.383l4-3.617a1 1 0 011.617.793zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z"
+				clip-rule="evenodd"
+			/>
+		</svg>
+	{/if}
+</button>
