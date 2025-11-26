@@ -12,6 +12,8 @@
 	import { onMount } from 'svelte';
 	import { showSentenceGenerationToast, showSentenceSuccessToast, showSentenceErrorToast } from '$lib/helpers/toast-helpers';
 	import Tooltip from '$lib/components/Tooltip.svelte';
+	import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
+	import { fetchUserReviewWords } from '$lib/helpers/fetch-review-words';
 
 	let { data } = $props();
 
@@ -45,7 +47,7 @@
 		);
 	}
 
-	let selectedDialect = $state('egyptian-arabic');
+	let selectedDialect = $state(getDefaultDialect(data.user));
 	let sentences = $state((() => {
 		if (typeof window !== 'undefined') {
 			const savedSentences = localStorage.getItem(`sentences_${selectedDialect}`);
@@ -76,6 +78,13 @@
 	let vocabularyInputMode = $state('text'); // 'text' or 'file'
 	let vocabularyFile = $state<File | null>(null);
 	let fileError = $state('');
+
+	// Review words only mode
+	let useReviewWordsOnly = $state(false);
+	let reviewWordsSource = $state<'all' | 'due-for-review'>('all');
+	let reviewWords = $state<Array<{ arabic: string; english: string; transliteration: string }>>([]);
+	let isLoadingReviewWords = $state(false);
+	let reviewWordsError = $state('');
 
 	let mode = $state((() => {
 		if (typeof window !== 'undefined') {
@@ -115,6 +124,40 @@
 			selectedLearningTopics = [...selectedLearningTopics, topic];
 		}
 	}
+
+	async function loadReviewWords() {
+		if (!data.user?.id) {
+			reviewWordsError = 'User not found';
+			return;
+		}
+
+		isLoadingReviewWords = true;
+		reviewWordsError = '';
+		
+		try {
+			const words = await fetchUserReviewWords(data.user.id, reviewWordsSource);
+			reviewWords = words;
+			
+			if (words.length === 0) {
+				reviewWordsError = `You don't have any ${reviewWordsSource === 'all' ? 'saved words' : 'words due for review'} yet. Add words to your review deck first.`;
+			}
+		} catch (error) {
+			console.error('Error loading review words:', error);
+			reviewWordsError = 'Failed to load review words. Please try again.';
+		} finally {
+			isLoadingReviewWords = false;
+		}
+	}
+
+	// Watch for changes to review words source and toggle
+	$effect(() => {
+		if (useReviewWordsOnly && data.user?.id) {
+			loadReviewWords();
+		} else {
+			reviewWords = [];
+			reviewWordsError = '';
+		}
+	});
 
 	function handleFileChange(event: Event) {
 		const target = event.target as HTMLInputElement;
@@ -185,10 +228,17 @@
 		// Show processing toast
 		const toastId = showSentenceGenerationToast(selectedDialect, 5);
 		
+		// Validate review words mode
+		if (useReviewWordsOnly && reviewWords.length === 0) {
+			showSentenceErrorToast(toastId, `You don't have any ${reviewWordsSource === 'all' ? 'saved words' : 'words due for review'} yet. Add words to your review deck first.`);
+			isLoading = false;
+			return;
+		}
+
 		let finalVocabularyWords = vocabularyWords;
 		
 		// If file mode is selected and a file is uploaded, process it
-		if (vocabularyInputMode === 'file' && vocabularyFile) {
+		if (!useReviewWordsOnly && vocabularyInputMode === 'file' && vocabularyFile) {
 			try {
 				finalVocabularyWords = await processVocabularyFile(vocabularyFile);
 			} catch (error) {
@@ -212,8 +262,11 @@
 					option,
 					sentences: copy,
 					dialect: selectedDialect,
-					learningTopics: selectedLearningTopics,
-					vocabularyWords: finalVocabularyWords
+					learningTopics: useReviewWordsOnly ? [] : selectedLearningTopics,
+					vocabularyWords: useReviewWordsOnly ? '' : finalVocabularyWords,
+					useReviewWordsOnly: useReviewWordsOnly || false,
+					reviewWordsSource: reviewWordsSource || 'all',
+					reviewWords: reviewWords || []
 				})
 			});
 
@@ -401,101 +454,211 @@
 			</div>
 			
 			<form class="flex flex-col gap-8 p-6 sm:p-8" onsubmit={generateSentences}>
-				<!-- Dialect Selection -->
-				<div class="flex flex-col gap-3">
-					<h3 class="text-sm font-bold text-text-300 uppercase tracking-wider opacity-80">Select Dialect</h3>
-					<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-						{#each dialectOptions as dialectOption}
-							<RadioButton
-								className="!text-base !font-medium"
-								wrapperClass="!p-3 !rounded-lg hover:bg-tile-400/50 transition-colors duration-200"
-								onClick={setDialect}
-								selectableFor={dialectOption.value}
-								isSelected={selectedDialect === dialectOption.value}
-								value={dialectOption.value}
-								text={dialectOption.label}
+				<!-- Review Words Only Toggle -->
+				<div class="flex flex-col gap-3 bg-tile-400/30 p-4 rounded-xl border border-tile-500/50">
+					<div class="flex items-center justify-between">
+						<div class="flex flex-col gap-1">
+							<p class="text-sm font-bold text-text-300">Use Review Words Only</p>
+							<p class="text-xs text-text-200 opacity-80">
+								Generate content using words you're already learning. This reinforces your memory by seeing words in new contexts, improving retention through spaced repetition.
+							</p>
+						</div>
+						<div class="relative flex items-center">
+							<input
+								type="checkbox"
+								id="useReviewWordsOnly"
+								bind:checked={useReviewWordsOnly}
+								class="peer w-5 h-5 cursor-pointer appearance-none rounded border border-tile-600 bg-tile-200 checked:bg-tile-600 checked:border-tile-600 focus:ring-offset-0 focus:ring-1 focus:ring-tile-500 transition-all"
 							/>
-						{/each}
+							<svg class="absolute w-3 h-3 text-white pointer-events-none opacity-0 peer-checked:opacity-100 left-1 top-1 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+						</div>
 					</div>
 				</div>
-				
-				<div class="border-t border-tile-500/50 pt-6">
-					<h3 class="text-sm font-bold text-text-300 uppercase tracking-wider opacity-80 mb-3">Difficulty Level</h3>
-					<div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-						{#each difficultyOptions as difficultyOption}
+
+				{#if useReviewWordsOnly}
+					<!-- Review Words Only Mode -->
+					<!-- Dialect Selection -->
+					<div class="flex flex-col gap-3">
+						<h3 class="text-sm font-bold text-text-300 uppercase tracking-wider opacity-80">Select Dialect</h3>
+						<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+							{#each dialectOptions as dialectOption}
+								<RadioButton
+									className="!text-base !font-medium"
+									wrapperClass="!p-3 !rounded-lg hover:bg-tile-400/50 transition-colors duration-200"
+									onClick={setDialect}
+									selectableFor={dialectOption.value}
+									isSelected={selectedDialect === dialectOption.value}
+									value={dialectOption.value}
+									text={dialectOption.label}
+								/>
+							{/each}
+						</div>
+					</div>
+
+					<!-- Review Words Source Selection -->
+					<div class="flex flex-col gap-2">
+						<label class="text-sm font-bold text-text-300">Word Source</label>
+						<div class="flex gap-4">
 							<RadioButton
 								className="!text-sm !font-medium"
-								wrapperClass="!p-2.5 !rounded-lg hover:bg-tile-400/50 transition-colors duration-200"
-								onClick={setOption}
-								selectableFor={difficultyOption.value}
-								isSelected={option === difficultyOption.value}
-								value={difficultyOption.value}
-								text={difficultyOption.label}
+								wrapperClass="!p-3 !rounded-lg flex-1 hover:bg-tile-400/50 transition-colors"
+								onClick={(e) => { reviewWordsSource = e.target.value as 'all' | 'due-for-review'; }}
+								selectableFor="all"
+								isSelected={reviewWordsSource === 'all'}
+								value="all"
+								text="All Saved Words"
 							/>
-						{/each}
+							<RadioButton
+								className="!text-sm !font-medium"
+								wrapperClass="!p-3 !rounded-lg flex-1 hover:bg-tile-400/50 transition-colors"
+								onClick={(e) => { reviewWordsSource = e.target.value as 'all' | 'due-for-review'; }}
+								selectableFor="due-for-review"
+								isSelected={reviewWordsSource === 'due-for-review'}
+								value="due-for-review"
+								text="Words Due for Review"
+							/>
+						</div>
 					</div>
-				</div>
 
-				<!-- Learning Topics Selection -->
-				<div class="border-t border-tile-500/50 pt-6">
-					<h3 class="text-sm font-bold text-text-300 uppercase tracking-wider opacity-80 mb-1">Grammar Focus <span class="text-text-200 text-xs font-normal normal-case opacity-70 ml-1">(Optional)</span></h3>
-					<p class="text-xs text-text-200 mb-3">Select topics to emphasize in your sentences.</p>
-					<div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-						{#each learningTopicOptions as topic}
-							<button
-								type="button"
-								class="text-left px-3 py-2 rounded-lg border text-xs font-medium transition-all duration-200
-									{selectedLearningTopics.includes(topic) 
-										? 'bg-tile-500 border-tile-600 text-text-300 shadow-sm' 
-										: 'bg-tile-300 border-tile-500 text-text-200 hover:border-tile-600 hover:text-text-300'}"
-								onclick={() => toggleLearningTopic(topic)}
-							>
-								<div class="flex items-center gap-2">
-									<div class="w-3 h-3 rounded-full border border-current flex items-center justify-center text-[8px]">
-										{#if selectedLearningTopics.includes(topic)}✓{/if}
-									</div>
-									{topic}
-								</div>
-							</button>
-						{/each}
-					</div>
-					{#if selectedLearningTopics.length > 0}
-						<div class="mt-3 flex items-center justify-between text-xs text-text-200 bg-tile-300/50 p-2 rounded-lg border border-tile-500/30">
-							<span>Selected: <span class="text-text-300 font-medium">{selectedLearningTopics.join(', ')}</span></span>
-							<button
-								type="button"
-								class="ml-2 text-text-300 hover:underline font-medium"
-								onclick={() => selectedLearningTopics = []}
-							>
-								Clear all
-							</button>
+					<!-- Word Count Display -->
+					{#if isLoadingReviewWords}
+						<div class="text-sm text-text-200">Loading words...</div>
+					{:else if reviewWordsError}
+						<div class="p-3 bg-red-50/50 border border-red-200 rounded-lg">
+							<p class="text-sm text-red-600">{reviewWordsError}</p>
+						</div>
+					{:else if reviewWords.length > 0}
+						<div class="p-3 bg-tile-300 border border-tile-500 rounded-lg">
+							<p class="text-sm font-medium text-text-300">
+								{reviewWords.length} word{reviewWords.length !== 1 ? 's' : ''} will be used in your sentences
+							</p>
 						</div>
 					{/if}
-				</div>
 
-				<!-- Vocabulary Words Input -->
-				<div class="border-t border-tile-500/50 pt-6">
-					<div class="flex justify-between items-center mb-3">
-						<h3 class="text-sm font-bold text-text-300 uppercase tracking-wider opacity-80">Custom Vocabulary <span class="text-text-200 text-xs font-normal normal-case opacity-70 ml-1">(Optional)</span></h3>
-						
-						<!-- Input Mode Toggle -->
-						<div class="flex bg-tile-300 rounded-lg p-1 border border-tile-500">
-							<button
-								type="button"
-								class="px-3 py-1 text-xs font-medium rounded-md transition-all {vocabularyInputMode === 'text' ? 'bg-tile-500 text-text-300 shadow-sm' : 'text-text-200 hover:text-text-300'}"
-								onclick={() => { vocabularyInputMode = 'text'; vocabularyFile = null; fileError = ''; }}
-							>
-								Text
-							</button>
-							<button
-								type="button"
-								class="px-3 py-1 text-xs font-medium rounded-md transition-all {vocabularyInputMode === 'file' ? 'bg-tile-500 text-text-300 shadow-sm' : 'text-text-200 hover:text-text-300'}"
-								onclick={() => { vocabularyInputMode = 'file'; vocabularyWords = ''; }}
-							>
-								Upload
-							</button>
+					<!-- Difficulty Selection -->
+					<div class="border-t border-tile-500/50 pt-6">
+						<h3 class="text-sm font-bold text-text-300 uppercase tracking-wider opacity-80 mb-3">Difficulty Level</h3>
+						<div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+							{#each difficultyOptions as difficultyOption}
+								<RadioButton
+									className="!text-sm !font-medium"
+									wrapperClass="!p-2.5 !rounded-lg hover:bg-tile-400/50 transition-colors duration-200"
+									onClick={setOption}
+									selectableFor={difficultyOption.value}
+									isSelected={option === difficultyOption.value}
+									value={difficultyOption.value}
+									text={difficultyOption.label}
+								/>
+							{/each}
 						</div>
 					</div>
+
+					<div class="pt-4">
+						<Button 
+							type="submit" 
+							className="w-full !py-4 !text-lg !rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all"
+							disabled={reviewWords.length === 0 || isLoadingReviewWords}
+						>
+							Generate Sentences
+						</Button>
+					</div>
+				{:else}
+					<!-- Original Generation Mode -->
+					<!-- Dialect Selection -->
+					<div class="flex flex-col gap-3">
+						<h3 class="text-sm font-bold text-text-300 uppercase tracking-wider opacity-80">Select Dialect</h3>
+						<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+							{#each dialectOptions as dialectOption}
+								<RadioButton
+									className="!text-base !font-medium"
+									wrapperClass="!p-3 !rounded-lg hover:bg-tile-400/50 transition-colors duration-200"
+									onClick={setDialect}
+									selectableFor={dialectOption.value}
+									isSelected={selectedDialect === dialectOption.value}
+									value={dialectOption.value}
+									text={dialectOption.label}
+								/>
+							{/each}
+						</div>
+					</div>
+					
+					<div class="border-t border-tile-500/50 pt-6">
+						<h3 class="text-sm font-bold text-text-300 uppercase tracking-wider opacity-80 mb-3">Difficulty Level</h3>
+						<div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+							{#each difficultyOptions as difficultyOption}
+								<RadioButton
+									className="!text-sm !font-medium"
+									wrapperClass="!p-2.5 !rounded-lg hover:bg-tile-400/50 transition-colors duration-200"
+									onClick={setOption}
+									selectableFor={difficultyOption.value}
+									isSelected={option === difficultyOption.value}
+									value={difficultyOption.value}
+									text={difficultyOption.label}
+								/>
+							{/each}
+						</div>
+					</div>
+
+					<!-- Learning Topics Selection -->
+					<div class="border-t border-tile-500/50 pt-6">
+						<h3 class="text-sm font-bold text-text-300 uppercase tracking-wider opacity-80 mb-1">Grammar Focus <span class="text-text-200 text-xs font-normal normal-case opacity-70 ml-1">(Optional)</span></h3>
+						<p class="text-xs text-text-200 mb-3">Select topics to emphasize in your sentences.</p>
+						<div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+							{#each learningTopicOptions as topic}
+								<button
+									type="button"
+									class="text-left px-3 py-2 rounded-lg border text-xs font-medium transition-all duration-200
+										{selectedLearningTopics.includes(topic) 
+											? 'bg-tile-500 border-tile-600 text-text-300 shadow-sm' 
+											: 'bg-tile-300 border-tile-500 text-text-200 hover:border-tile-600 hover:text-text-300'}"
+									onclick={() => toggleLearningTopic(topic)}
+								>
+									<div class="flex items-center gap-2">
+										<div class="w-3 h-3 rounded-full border border-current flex items-center justify-center text-[8px]">
+											{#if selectedLearningTopics.includes(topic)}✓{/if}
+										</div>
+										{topic}
+									</div>
+								</button>
+							{/each}
+						</div>
+						{#if selectedLearningTopics.length > 0}
+							<div class="mt-3 flex items-center justify-between text-xs text-text-200 bg-tile-300/50 p-2 rounded-lg border border-tile-500/30">
+								<span>Selected: <span class="text-text-300 font-medium">{selectedLearningTopics.join(', ')}</span></span>
+								<button
+									type="button"
+									class="ml-2 text-text-300 hover:underline font-medium"
+									onclick={() => selectedLearningTopics = []}
+								>
+									Clear all
+								</button>
+							</div>
+						{/if}
+					</div>
+
+					<!-- Vocabulary Words Input -->
+					<div class="border-t border-tile-500/50 pt-6">
+						<div class="flex justify-between items-center mb-3">
+							<h3 class="text-sm font-bold text-text-300 uppercase tracking-wider opacity-80">Custom Vocabulary <span class="text-text-200 text-xs font-normal normal-case opacity-70 ml-1">(Optional)</span></h3>
+							
+							<!-- Input Mode Toggle -->
+							<div class="flex bg-tile-300 rounded-lg p-1 border border-tile-500">
+								<button
+									type="button"
+									class="px-3 py-1 text-xs font-medium rounded-md transition-all {vocabularyInputMode === 'text' ? 'bg-tile-500 text-text-300 shadow-sm' : 'text-text-200 hover:text-text-300'}"
+									onclick={() => { vocabularyInputMode = 'text'; vocabularyFile = null; fileError = ''; }}
+								>
+									Text
+								</button>
+								<button
+									type="button"
+									class="px-3 py-1 text-xs font-medium rounded-md transition-all {vocabularyInputMode === 'file' ? 'bg-tile-500 text-text-300 shadow-sm' : 'text-text-200 hover:text-text-300'}"
+									onclick={() => { vocabularyInputMode = 'file'; vocabularyWords = ''; }}
+								>
+									Upload
+								</button>
+							</div>
+						</div>
 					
 					<div class="rounded-xl bg-tile-300/50 p-4 border border-tile-500/50">
 						{#if vocabularyInputMode === 'text'}
@@ -533,7 +696,8 @@
 						{/if}
 					</div>
 				</div>
-				
+
+				<!-- Practice Mode (only show in original mode) -->
 				<div class="border-t border-tile-500/50 pt-6">
 					<h3 class="text-sm font-bold text-text-300 uppercase tracking-wider opacity-80 mb-3">Practice Mode</h3>
 					<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -575,6 +739,7 @@
 						</Button>
 					{/if}
 				</div>
+				{/if}
 			</form>
 		</div>
 	</section>

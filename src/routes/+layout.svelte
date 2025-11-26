@@ -3,6 +3,7 @@
 	import Navigation from '$lib/components/Navigation.svelte';
 	import DialectNavigation from '$lib/components/DialectNavigation.svelte';
 	import Drawer from '$lib/components/Drawer.svelte';
+	import Onboarding from '$lib/components/Onboarding.svelte';
 	import { onMount } from 'svelte';
 	import { theme } from '$lib/store/store';
 	import Svg from '$lib/components/Svg.svelte';
@@ -12,12 +13,23 @@
   import ChatWidget from '$lib/components/ChatWidget.svelte';
   import { Toaster } from 'svelte-sonner';
   
-  import { invalidate } from '$app/navigation'
+  import { invalidate, goto } from '$app/navigation'
+  import { page } from '$app/stores'
   import { pwaInfo } from 'virtual:pwa-info';
   
   let { data, children } = $props();
   $inspect(data)
 	let isOpen = $state(false);
+	
+	// Use showOnboarding from server data (which already checks URL and onboarding status)
+	// Update reactively when data or URL changes
+	let showOnboarding = $state(data.showOnboarding || false);
+	
+	$effect(() => {
+		// Update showOnboarding when server data changes
+		// The server already checks: newSignup=true AND !onboarding_completed
+		showOnboarding = data.showOnboarding || false;
+	});
 
 	let root: HTMLElement | null;
 	let doc: Element | null;
@@ -59,6 +71,16 @@
 
 	function handleOpenDrawer() {
 		isOpen = true;
+	}
+
+	function handleCloseOnboarding() {
+		showOnboarding = false;
+		// Remove the newSignup query parameter from URL
+		const url = new URL(window.location.href);
+		url.searchParams.delete('newSignup');
+		goto(url.pathname + url.search, { replaceState: true, noScroll: true });
+		// Invalidate to refresh the layout data
+		invalidate('supabase:auth');
 	}
 
 	const onTheme = (event: Event) => {
@@ -163,6 +185,9 @@
     visibleToasts={5}
     expand={false}
   />
+
+  <!-- Onboarding Modal - Shows automatically for new users -->
+  <Onboarding isOpen={showOnboarding} handleCloseModal={handleCloseOnboarding} />
 
   <style>
     main {

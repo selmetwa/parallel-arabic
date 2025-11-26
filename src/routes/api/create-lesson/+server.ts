@@ -18,6 +18,9 @@ interface LessonGenerationData {
 	learningTopics?: string[];
 	vocabularyWords?: string;
 	subLessonCount?: number;
+	useReviewWordsOnly?: boolean;
+	reviewWordsSource?: 'all' | 'due-for-review';
+	reviewWords?: Array<{ arabic: string; english: string; transliteration: string }>;
 }
 
 /**
@@ -48,41 +51,25 @@ function writeDebugLog(lessonId: string, logData: Record<string, unknown>) {
 }
 
 /**
- * Extract all words and sentences from a lesson and save them to the user's review deck
+ * Extract KEY VOCAB words (about 10) from lesson review section and save them to the user's review deck
  */
 async function saveLessonWordsAndSentences(
 	lesson: LessonSchema,
 	userId: string,
 	dialect: string
 ): Promise<void> {
-	const wordsAndSentences: Array<{
+	// Only extract KEY VOCAB words from review section (about 10 words)
+	const keyVocabWords: Array<{
 		arabic: string;
 		english: string;
 		transliteration: string;
 	}> = [];
 
-	// Extract words from sub-lesson phrases
-	if (lesson.subLessons && Array.isArray(lesson.subLessons)) {
-		for (const subLesson of lesson.subLessons) {
-			if (subLesson.content?.phrases && Array.isArray(subLesson.content.phrases)) {
-				for (const phrase of subLesson.content.phrases) {
-					if (phrase.arabic && phrase.english && phrase.transliteration) {
-						wordsAndSentences.push({
-							arabic: phrase.arabic.trim(),
-							english: phrase.english.trim(),
-							transliteration: phrase.transliteration.trim()
-						});
-					}
-				}
-			}
-		}
-	}
-
-	// Extract review words
+	// Extract only the review words (KEY VOCAB words)
 	if (lesson.review?.words && Array.isArray(lesson.review.words)) {
 		for (const word of lesson.review.words) {
 			if (word.arabic && word.english && word.transliteration) {
-				wordsAndSentences.push({
+				keyVocabWords.push({
 					arabic: word.arabic.trim(),
 					english: word.english.trim(),
 					transliteration: word.transliteration.trim()
@@ -91,93 +78,12 @@ async function saveLessonWordsAndSentences(
 		}
 	}
 
-	// Extract review sentences
-	if (lesson.review?.sentences && Array.isArray(lesson.review.sentences)) {
-		for (const sentence of lesson.review.sentences) {
-			if (sentence.arabic && sentence.english && sentence.transliteration) {
-				wordsAndSentences.push({
-					arabic: sentence.arabic.trim(),
-					english: sentence.english.trim(),
-					transliteration: sentence.transliteration.trim()
-				});
-			}
-		}
-	}
-
-	// Extract words from grammar focus examples
-	if (lesson.grammarFocus && Array.isArray(lesson.grammarFocus)) {
-		for (const grammar of lesson.grammarFocus) {
-			if (grammar.examples && Array.isArray(grammar.examples)) {
-				for (const example of grammar.examples) {
-					if (example.arabic && example.english && example.transliteration) {
-						wordsAndSentences.push({
-							arabic: example.arabic.trim(),
-							english: example.english.trim(),
-							transliteration: example.transliteration.trim()
-						});
-					}
-				}
-			}
-		}
-	}
-
-	// Extract words from pronunciation tips examples
-	if (lesson.pronunciationTips && Array.isArray(lesson.pronunciationTips)) {
-		for (const tip of lesson.pronunciationTips) {
-			if (tip.examples && Array.isArray(tip.examples)) {
-				for (const example of tip.examples) {
-					if (example.arabic && example.english && example.transliteration) {
-						wordsAndSentences.push({
-							arabic: example.arabic.trim(),
-							english: example.english.trim(),
-							transliteration: example.transliteration.trim()
-						});
-					}
-				}
-			}
-		}
-	}
-
-	// Extract words from common mistakes examples
-	if (lesson.commonMistakes && Array.isArray(lesson.commonMistakes)) {
-		for (const mistake of lesson.commonMistakes) {
-			if (mistake.examples && Array.isArray(mistake.examples)) {
-				for (const example of mistake.examples) {
-					// Add correct examples
-					if (example.correct?.arabic && example.correct.english && example.correct.transliteration) {
-						wordsAndSentences.push({
-							arabic: example.correct.arabic.trim(),
-							english: example.correct.english.trim(),
-							transliteration: example.correct.transliteration.trim()
-						});
-					}
-					// Add incorrect examples (for learning purposes)
-					if (example.incorrect?.arabic && example.incorrect.english && example.incorrect.transliteration) {
-						wordsAndSentences.push({
-							arabic: example.incorrect.arabic.trim(),
-							english: example.incorrect.english.trim(),
-							transliteration: example.incorrect.transliteration.trim()
-						});
-					}
-				}
-			}
-		}
-	}
-
-	// Remove duplicates based on Arabic text
-	const uniqueWords = new Map<string, typeof wordsAndSentences[0]>();
-	for (const item of wordsAndSentences) {
-		if (item.arabic && !uniqueWords.has(item.arabic)) {
-			uniqueWords.set(item.arabic, item);
-		}
-	}
-
-	const uniqueArray = Array.from(uniqueWords.values());
-
-	if (uniqueArray.length === 0) {
-		console.log('No words/sentences to save from lesson');
+	if (keyVocabWords.length === 0) {
+		console.log('No KEY VOCAB words found in lesson review section');
 		return;
 	}
+
+	const uniqueArray = keyVocabWords;
 
 	// Save words/sentences using the same logic as save-sentences endpoint
 	const now = Date.now();
@@ -242,7 +148,7 @@ async function saveLessonWordsAndSentences(
 	}
 
 	if (savedWordsToInsert.length === 0) {
-		console.log('All words/sentences from lesson already exist in review deck');
+		console.log('All KEY VOCAB words from lesson already exist in review deck');
 		return;
 	}
 
@@ -252,11 +158,11 @@ async function saveLessonWordsAndSentences(
 		.insert(savedWordsToInsert);
 
 	if (insertError) {
-		console.error('Error saving lesson words/sentences:', insertError);
-		throw new Error(`Failed to save words/sentences: ${insertError.message}`);
+		console.error('Error saving KEY VOCAB words:', insertError);
+		throw new Error(`Failed to save KEY VOCAB words: ${insertError.message}`);
 	}
 
-	console.log(`✅ Saved ${savedWordsToInsert.length} words/sentences from lesson to review deck`);
+	console.log(`✅ Saved ${savedWordsToInsert.length} KEY VOCAB words from lesson to review deck`);
 }
 
 export const POST: RequestHandler = async ({ request, locals }) => {
@@ -284,6 +190,8 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 	const learningTopics = data.learningTopics || [];
 	const vocabularyWords = data.vocabularyWords || '';
 	const subLessonCount = data.subLessonCount || 3; // Default to 3 sub-lessons
+	const useReviewWordsOnly = data.useReviewWordsOnly || false;
+	const reviewWords = data.reviewWords || [];
 
 	// Dialect-specific configurations
 	const dialectConfigs = {
@@ -373,9 +281,26 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		}).join('\n')}`;
 	}
 
-	// Build vocabulary words section
+	// Build review words section (highest priority when useReviewWordsOnly is true)
+	let reviewWordsSection = '';
+	if (useReviewWordsOnly && reviewWords.length > 0) {
+		const wordsList = reviewWords.map((word) => 
+			`Arabic: ${word.arabic}, English: ${word.english}, Transliteration: ${word.transliteration}`
+		).join('\n');
+		
+		reviewWordsSection = `
+		
+		CRITICAL: You MUST use ALL of the following words in your lesson. These are words the user is actively learning, and including them reinforces their memory. Use each word at least once. If you cannot naturally include all words, prioritize using as many as possible, but make the content feel natural.
+		
+		REQUIRED WORDS TO INCLUDE:
+		${wordsList}
+		
+		The user is learning these specific words. Seeing them in context will help reinforce their learning through spaced repetition. Make sure to use these words naturally throughout your lesson, including in the review section.`;
+	}
+
+	// Build vocabulary words section (only if not using review words only)
 	let vocabularyWordsSection = '';
-	if (vocabularyWords.trim()) {
+	if (!useReviewWordsOnly && vocabularyWords.trim()) {
 		const wordsArray = vocabularyWords.split(',').map((word: string) => word.trim()).filter((word: string) => word.length > 0);
 		if (wordsArray.length > 0) {
 			vocabularyWordsSection = `
@@ -415,6 +340,8 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 	LEVEL: ${levelDescription[level]}
 	
 	${learningTopicsSection}
+	
+	${reviewWordsSection}
 	
 	${vocabularyWordsSection}
 	

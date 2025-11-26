@@ -20,6 +20,7 @@ export const load: PageServerLoad = async ({ parent }) => {
     isSubscribed,  // Use from layout!
     subscriptionId: user?.subscriber_id,  // Use from layout!
     subscriptionEndDate: user?.subscription_end_date,  // Use from layout!
+    user, // Include full user object for stats
   };
 };
 

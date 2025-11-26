@@ -1,6 +1,10 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { currentDialect } from '$lib/store/store';
+  import MinimalStats from '$lib/components/MinimalStats.svelte';
+  import type { PageData } from './$types';
+
+  let { data }: { data: PageData } = $props();
 
   onMount(() => {
     currentDialect.set('');
@@ -8,14 +12,9 @@
 </script>
 
 <section class="px-4 mt-12 sm:px-8 max-w-7xl mx-auto mb-20">
-  <!-- Hero Section -->
-  <div class="text-left mb-12">
-    <h1 class="text-4xl sm:text-5xl text-text-300 font-bold mb-4 tracking-tight">
-      Welcome to Parallel Arabic
-    </h1>
-    <p class="text-text-200 text-lg sm:text-xl leading-relaxed opacity-90 max-w-3xl">
-      Your comprehensive practice environment. Master Arabic dialects and Modern Standard Arabic through stories, conversations, and interactive tools.
-    </p>
+  <!-- Minimal Stats Section -->
+  <div class="mb-12">
+    <MinimalStats user={data.user} />
   </div>
 
   <!-- Getting Started -->

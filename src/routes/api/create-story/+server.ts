@@ -21,6 +21,9 @@ interface GenerationData {
 	learningTopics: string[];
 	vocabularyWords: string;
 	option: string;
+	useReviewWordsOnly?: boolean;
+	reviewWordsSource?: 'all' | 'due-for-review';
+	reviewWords?: Array<{ arabic: string; english: string; transliteration: string }>;
 }
 
 export const POST: RequestHandler = async ({ request, locals }) => {
@@ -70,6 +73,8 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 	const learningTopics = (data as GenerationData).learningTopics || []; // Array of selected learning topics
 	const vocabularyWords = (data as GenerationData).vocabularyWords || ''; // Vocabulary words to feature
 	const option = (data as GenerationData).option;
+	const useReviewWordsOnly = (data as GenerationData).useReviewWordsOnly || false;
+	const reviewWords = (data as GenerationData).reviewWords || [];
 
 	// Generate speaker names if it's a conversation
 	const speakerNames = storyType === 'conversation' ? getSpeakerNames(dialect) : null;
@@ -277,9 +282,26 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		}).join('\n')}`;
 	}
 
-	// Build vocabulary words section
+	// Build review words section (highest priority when useReviewWordsOnly is true)
+	let reviewWordsSection = '';
+	if (useReviewWordsOnly && reviewWords.length > 0) {
+		const wordsList = reviewWords.map((word) => 
+			`Arabic: ${word.arabic}, English: ${word.english}, Transliteration: ${word.transliteration}`
+		).join('\n');
+		
+		reviewWordsSection = `
+		
+		CRITICAL: You MUST use ALL of the following words in your content. These are words the user is actively learning, and including them reinforces their memory. Use each word at least once. If you cannot naturally include all words, prioritize using as many as possible, but make the content feel natural.
+		
+		REQUIRED WORDS TO INCLUDE:
+		${wordsList}
+		
+		The user is learning these specific words. Seeing them in context will help reinforce their learning through spaced repetition. Make sure to use these words naturally throughout your ${contentType}.`;
+	}
+
+	// Build vocabulary words section (only if not using review words only)
 	let vocabularyWordsSection = '';
-	if (vocabularyWords.trim()) {
+	if (!useReviewWordsOnly && vocabularyWords.trim()) {
 		const wordsArray = vocabularyWords.split(',').map((word: string) => word.trim()).filter((word: string) => word.length > 0);
 		if (wordsArray.length > 0) {
 			vocabularyWordsSection = `
@@ -329,6 +351,8 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     DIFFICULTY LEVEL: ${getDifficultyDescription(option)}
 
     ${learningTopicsSection}
+
+    ${reviewWordsSection}
 
     ${vocabularyWordsSection}
 

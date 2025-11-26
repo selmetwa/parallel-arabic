@@ -40,7 +40,13 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
       data: { user },
     } = await supabase.auth.getUser()
 
-    return { session, supabase, user }
+    // Preserve showOnboarding from server data
+    return { 
+      session, 
+      supabase, 
+      user,
+      showOnboarding: data.showOnboarding ?? false
+    }
   } catch (error) {
     console.error('❌ [+layout.ts] Error in client layout load:', error)
     console.error('❌ [+layout.ts] Error stack:', error instanceof Error ? error.stack : 'No stack trace')
@@ -55,7 +61,8 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
       return { 
         session: null, 
         supabase: fallbackSupabase, 
-        user: null 
+        user: null,
+        showOnboarding: data.showOnboarding ?? false
       }
     } catch (fallbackError) {
       console.error('❌ [+layout.ts] Fallback also failed:', fallbackError)

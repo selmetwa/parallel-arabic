@@ -56,6 +56,8 @@ export const POST: RequestHandler = async ({ request }) => {
   const dialect = 'egyptian-arabic'; // Default to Egyptian
   const learningTopics = data.learningTopics || []; // Array of selected learning topics
   const vocabularyWords = data.vocabularyWords || ''; // Vocabulary words to feature
+  const useReviewWordsOnly = data.useReviewWordsOnly || false;
+  const reviewWords = data.reviewWords || [];
 
   const intermediate_request = data.option === 'intermediate' || data.option === 'b1' || data.option === 'b2' ? 'Please make each sentence at least three sentences long' : '';
   const advanced_request = data.option === 'advanced' || data.option === 'c1' || data.option === 'c2' ? 'Please make each sentence at least five sentences long and use more complex tenses and vocabulary' : '';
@@ -142,7 +144,7 @@ export const POST: RequestHandler = async ({ request }) => {
     
     IMPORTANT FOCUS AREAS: Please emphasize these specific language learning topics in your sentences: ${learningTopics.join(', ')}.
     
-    For each selected topic, include relevant examples across the 10 sentences:
+    For each selected topic, include relevant examples across the 5 sentences:
     ${learningTopics.map((topic: string) => {
       switch (topic) {
         case 'verb conjugation':
@@ -167,9 +169,26 @@ export const POST: RequestHandler = async ({ request }) => {
     }).join('\n')}`;
   }
 
-  // Build vocabulary words section
+  // Build review words section (highest priority when useReviewWordsOnly is true)
+  let reviewWordsSection = '';
+  if (useReviewWordsOnly && reviewWords.length > 0) {
+    const wordsList = reviewWords.map((word) => 
+      `Arabic: ${word.arabic}, English: ${word.english}, Transliteration: ${word.transliteration}`
+    ).join('\n');
+    
+    reviewWordsSection = `
+    
+    CRITICAL: You MUST use ALL of the following words in your sentences. These are words the user is actively learning, and including them reinforces their memory. Use each word at least once. If you cannot naturally include all words, prioritize using as many as possible, but make the sentences feel natural.
+    
+    REQUIRED WORDS TO INCLUDE:
+    ${wordsList}
+    
+    The user is learning these specific words. Seeing them in context will help reinforce their learning through spaced repetition. Make sure to use these words naturally throughout your sentences.`;
+  }
+
+  // Build vocabulary words section (only if not using review words only)
   let vocabularyWordsSection = '';
-  if (vocabularyWords.trim()) {
+  if (!useReviewWordsOnly && vocabularyWords.trim()) {
     const wordsArray = vocabularyWords.split(',').map((word: string) => word.trim()).filter((word: string) => word.length > 0);
     if (wordsArray.length > 0) {
       vocabularyWordsSection = `
@@ -188,13 +207,15 @@ export const POST: RequestHandler = async ({ request }) => {
   }
 
   let question = `
-    Give me 10 sentences in ${config.name} dialect.
+    Give me 5 sentences in ${config.name} dialect.
 
-    ${randomPrompt} - Can you please provide 10 sentences for someone who is learning ${config.name} Arabic.
+    ${randomPrompt} - Can you please provide 5 sentences for someone who is learning ${config.name} Arabic.
 
     DIFFICULTY LEVEL: ${getDifficultyDescription(data.option)}
 
     ${learningTopicsSection}
+
+    ${reviewWordsSection}
 
     ${vocabularyWordsSection}
 
@@ -247,7 +268,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
     Generation timestamp: ${timestamp}
 
-    REMEMBER: Maximum 2 sentences per topic area. Ensure diverse themes across all 10 sentences.
+    REMEMBER: Maximum 2 sentences per topic area. Ensure diverse themes across all 5 sentences.
 
     Can you make sure each sentence follows this format 
     {

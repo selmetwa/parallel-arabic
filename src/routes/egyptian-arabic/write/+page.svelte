@@ -22,7 +22,7 @@
 	<div class="text-left mb-6">
 		<h1 class="text-3xl sm:text-4xl text-text-300 font-bold mb-1 tracking-tight">Writing Practice</h1>
 		<p class="text-text-200 text-lg sm:text-xl leading-snug">
-			Practice writing over 16,000 words with interactive exercises.
+			Practice writing over 20,000 words with interactive exercises.
 		</p>
 		{#if !hasActiveSubscription}
 			<p class="text-text-200 text-base mt-2 opacity-90">

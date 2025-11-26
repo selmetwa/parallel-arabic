@@ -4,6 +4,47 @@
 
 	let { data } = $props();
 
+	let searchQuery = $state('');
+	let selectedDialect = $state<string>('all');
+	let sortBy = $state<'newest' | 'oldest' | 'title'>('newest');
+
+	const dialectOptions = [
+		{ value: 'all', label: 'All Dialects' },
+		{ value: 'egyptian-arabic', label: 'Egyptian Arabic' },
+		{ value: 'levantine', label: 'Levantine Arabic' },
+		{ value: 'darija', label: 'Moroccan Darija' },
+		{ value: 'fusha', label: 'Modern Standard Arabic' },
+	];
+
+	const filteredAndSortedVideos = $derived.by(() => {
+		let filtered = [...data.videos];
+
+		// Filter by search query
+		if (searchQuery.trim()) {
+			const query = searchQuery.toLowerCase();
+			filtered = filtered.filter(video =>
+				video.title?.toLowerCase().includes(query) ||
+				video.description?.toLowerCase().includes(query)
+			);
+		}
+
+		// Filter by dialect
+		if (selectedDialect !== 'all') {
+			filtered = filtered.filter(video => video.dialect === selectedDialect);
+		}
+
+		// Sort
+		if (sortBy === 'newest') {
+			filtered.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
+		} else if (sortBy === 'oldest') {
+			filtered.sort((a, b) => new Date(a.created_at).getTime() - new Date(b.created_at).getTime());
+		} else if (sortBy === 'title') {
+			filtered.sort((a, b) => (a.title || '').localeCompare(b.title || ''));
+		}
+
+		return filtered;
+	});
+
   // Get dialect badge color
   function getDialectBadgeColor(dialect: string) {
     const colors = {
@@ -27,14 +68,73 @@
     <VideoUploadModal {data} />
   </div>
 
+  <!-- Search and Filter Controls -->
+  <div class="mb-6 space-y-4">
+    <!-- Search Bar -->
+    <div class="relative">
+      <input
+        type="text"
+        placeholder="Search videos by title or description..."
+        bind:value={searchQuery}
+        class="w-full pl-10 pr-4 py-3 border border-tile-500 bg-tile-300 text-text-300 rounded-lg focus:outline-none focus:border-tile-600 focus:ring-1 focus:ring-tile-600"
+      />
+      <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+        <svg class="h-5 w-5 text-text-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Filters and Sort -->
+    <div class="flex flex-col sm:flex-row gap-4">
+      <!-- Dialect Filter -->
+      <div class="flex-1">
+        <label for="dialect-filter" class="block text-sm font-medium text-text-200 mb-2">Filter by Dialect</label>
+        <select
+          id="dialect-filter"
+          bind:value={selectedDialect}
+          class="w-full px-4 py-2.5 border border-tile-500 bg-tile-300 text-text-300 rounded-lg focus:outline-none focus:border-tile-600 focus:ring-1 focus:ring-tile-600 cursor-pointer"
+        >
+          {#each dialectOptions as option}
+            <option value={option.value}>{option.label}</option>
+          {/each}
+        </select>
+      </div>
+
+      <!-- Sort -->
+      <div class="flex-1">
+        <label for="sort-filter" class="block text-sm font-medium text-text-200 mb-2">Sort By</label>
+        <select
+          id="sort-filter"
+          bind:value={sortBy}
+          class="w-full px-4 py-2.5 border border-tile-500 bg-tile-300 text-text-300 rounded-lg focus:outline-none focus:border-tile-600 focus:ring-1 focus:ring-tile-600 cursor-pointer"
+        >
+          <option value="newest">Newest First</option>
+          <option value="oldest">Oldest First</option>
+          <option value="title">Title (A-Z)</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Results Count -->
+    <div class="text-sm text-text-200">
+      Showing {filteredAndSortedVideos.length} of {data.videos.length} videos
+    </div>
+  </div>
+
   {#if data.videos.length === 0}
     <div class="text-center py-12">
       <p class="text-xl text-text-200">No videos available yet.</p>
       <p class="text-text-200 mt-2">Be the first to upload a video!</p>
     </div>
+  {:else if filteredAndSortedVideos.length === 0}
+    <div class="text-center py-12">
+      <p class="text-xl text-text-200">No videos found matching your criteria.</p>
+      <p class="text-text-200 mt-2">Try adjusting your search or filters.</p>
+    </div>
   {:else}
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {#each data.videos as video}
+      {#each filteredAndSortedVideos as video}
         <button 
           onclick={() => goto(`/video/${video.id}`)}
           class="group bg-tile-400 border-2 border-tile-600 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 cursor-pointer hover:shadow-xl hover:-translate-y-1 transform"

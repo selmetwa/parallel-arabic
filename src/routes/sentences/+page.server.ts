@@ -3,7 +3,7 @@ import { supabase } from '$lib/supabaseClient';
 
 export const load: PageServerLoad = async ({ locals, parent }) => {
   // Get session and subscription info from parent layout
-  const { session, isSubscribed } = await parent();
+  const { session, isSubscribed, user } = await parent();
 
   const userId = session && session.user.id || null;
 
@@ -19,6 +19,7 @@ export const load: PageServerLoad = async ({ locals, parent }) => {
 
   return {
     sentencesViewed: userData?.sentences_viewed ?? 0,
-    isSubscribed
+    isSubscribed,
+    user
   };
 };

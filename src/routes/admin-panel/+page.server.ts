@@ -43,7 +43,19 @@ export const load: PageServerLoad = async ({ locals }) => {
       sentences_viewed,
       verb_conjugation_tenses_viewed,
       auth_provider,
-      google_id
+      google_id,
+      current_streak,
+      longest_streak,
+      total_reviews,
+      total_sentences_viewed,
+      total_stories_viewed,
+      total_lessons_viewed,
+      total_saved_words,
+      reviews_this_week,
+      sentences_viewed_this_week,
+      stories_viewed_this_week,
+      lessons_viewed_this_week,
+      saved_words_this_week
     `);
 
   if (usersError) {

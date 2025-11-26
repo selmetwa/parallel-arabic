@@ -15,6 +15,18 @@
 		savedWords: string[];
 		auth_provider: string;
 		google_id: string | null;
+		current_streak?: number | null;
+		longest_streak?: number | null;
+		total_reviews?: number | null;
+		total_sentences_viewed?: number | null;
+		total_stories_viewed?: number | null;
+		total_lessons_viewed?: number | null;
+		total_saved_words?: number | null;
+		reviews_this_week?: number | null;
+		sentences_viewed_this_week?: number | null;
+		stories_viewed_this_week?: number | null;
+		lessons_viewed_this_week?: number | null;
+		saved_words_this_week?: number | null;
 	};
 
 	// Calculate engagement metrics
@@ -49,7 +61,16 @@
 		totalUsers: data.userCount,
 		subscribers: data.subscriberCount,
 		googleAuth: users.filter(user => user.auth_provider === 'google').length,
-		emailAuth: users.filter(user => user.auth_provider === 'email').length
+		emailAuth: users.filter(user => user.auth_provider === 'email').length,
+		// Activity stats
+		totalReviews: users.reduce((sum, u) => sum + (u.total_reviews || 0), 0),
+		totalStories: users.reduce((sum, u) => sum + (u.total_stories_viewed || 0), 0),
+		totalLessons: users.reduce((sum, u) => sum + (u.total_lessons_viewed || 0), 0),
+		activeStreaks: users.filter(u => (u.current_streak || 0) > 0).length,
+		avgStreak: users.length > 0 
+			? (users.reduce((sum, u) => sum + (u.current_streak || 0), 0) / users.length).toFixed(1)
+			: '0',
+		weeklyActivity: users.reduce((sum, u) => sum + (u.reviews_this_week || 0) + (u.lessons_viewed_this_week || 0) + (u.stories_viewed_this_week || 0), 0)
 	};
 
 	const subscriptionRate = ((stats.subscribers / stats.totalUsers) * 100).toFixed(1);
@@ -95,12 +116,12 @@
 		<div class="bg-tile-300 border-2 border-tile-600 p-6 rounded-lg">
 			<div class="flex items-center justify-between">
 				<div>
-					<p class="text-text-200 text-sm font-medium">Google Auth</p>
-					<p class="text-3xl font-bold text-text-300">{stats.googleAuth}</p>
-					<p class="text-text-200 text-xs">({((stats.googleAuth / stats.totalUsers) * 100).toFixed(1)}%)</p>
+					<p class="text-text-200 text-sm font-medium">Active Streaks</p>
+					<p class="text-3xl font-bold text-text-300">{stats.activeStreaks}</p>
+					<p class="text-text-200 text-xs">Avg: {stats.avgStreak} days</p>
 				</div>
 				<div class="w-12 h-12 bg-tile-500 rounded-lg flex items-center justify-center">
-					<span class="text-2xl">🔐</span>
+					<span class="text-2xl">🔥</span>
 				</div>
 			</div>
 		</div>
@@ -108,12 +129,67 @@
 		<div class="bg-tile-300 border-2 border-tile-600 p-6 rounded-lg">
 			<div class="flex items-center justify-between">
 				<div>
-					<p class="text-text-200 text-sm font-medium">Email Auth</p>
-					<p class="text-3xl font-bold text-text-300">{stats.emailAuth}</p>
-					<p class="text-text-200 text-xs">({((stats.emailAuth / stats.totalUsers) * 100).toFixed(1)}%)</p>
+					<p class="text-text-200 text-sm font-medium">Total Reviews</p>
+					<p class="text-3xl font-bold text-text-300">{stats.totalReviews.toLocaleString()}</p>
+					<p class="text-text-200 text-xs">All-time</p>
 				</div>
 				<div class="w-12 h-12 bg-tile-500 rounded-lg flex items-center justify-center">
-					<span class="text-2xl">✉️</span>
+					<span class="text-2xl">📚</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Activity Stats Cards -->
+	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+		<div class="bg-tile-300 border-2 border-tile-600 p-6 rounded-lg">
+			<div class="flex items-center justify-between">
+				<div>
+					<p class="text-text-200 text-sm font-medium">Total Stories</p>
+					<p class="text-3xl font-bold text-text-300">{stats.totalStories.toLocaleString()}</p>
+					<p class="text-text-200 text-xs">Viewed</p>
+				</div>
+				<div class="w-12 h-12 bg-tile-500 rounded-lg flex items-center justify-center">
+					<span class="text-2xl">📖</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="bg-tile-300 border-2 border-tile-600 p-6 rounded-lg">
+			<div class="flex items-center justify-between">
+				<div>
+					<p class="text-text-200 text-sm font-medium">Total Lessons</p>
+					<p class="text-3xl font-bold text-text-300">{stats.totalLessons.toLocaleString()}</p>
+					<p class="text-text-200 text-xs">Viewed</p>
+				</div>
+				<div class="w-12 h-12 bg-tile-500 rounded-lg flex items-center justify-center">
+					<span class="text-2xl">🎓</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="bg-tile-300 border-2 border-tile-600 p-6 rounded-lg">
+			<div class="flex items-center justify-between">
+				<div>
+					<p class="text-text-200 text-sm font-medium">This Week</p>
+					<p class="text-3xl font-bold text-text-300">{stats.weeklyActivity.toLocaleString()}</p>
+					<p class="text-text-200 text-xs">Activities</p>
+				</div>
+				<div class="w-12 h-12 bg-tile-500 rounded-lg flex items-center justify-center">
+					<span class="text-2xl">📊</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="bg-tile-300 border-2 border-tile-600 p-6 rounded-lg">
+			<div class="flex items-center justify-between">
+				<div>
+					<p class="text-text-200 text-sm font-medium">Google Auth</p>
+					<p class="text-3xl font-bold text-text-300">{stats.googleAuth}</p>
+					<p class="text-text-200 text-xs">({((stats.googleAuth / stats.totalUsers) * 100).toFixed(1)}%)</p>
+				</div>
+				<div class="w-12 h-12 bg-tile-500 rounded-lg flex items-center justify-center">
+					<span class="text-2xl">🔐</span>
 				</div>
 			</div>
 		</div>
@@ -261,35 +337,50 @@
 				<thead class="bg-green1">
 					<tr>
 						<th class="px-4 py-3 text-left text-sm font-medium text-text-300">Email</th>
+						<th class="px-4 py-3 text-right text-sm font-medium text-text-300">Streak</th>
+						<th class="px-4 py-3 text-right text-sm font-medium text-text-300">Reviews</th>
+						<th class="px-4 py-3 text-right text-sm font-medium text-text-300">Stories</th>
+						<th class="px-4 py-3 text-right text-sm font-medium text-text-300">Lessons</th>
 						<th class="px-4 py-3 text-right text-sm font-medium text-text-300">Saved Words</th>
-						<th class="px-4 py-3 text-right text-sm font-medium text-text-300">Sentences</th>
-						<th class="px-4 py-3 text-right text-sm font-medium text-text-300">Verb Tenses</th>
 						<th class="px-4 py-3 text-left text-sm font-medium text-text-300">Auth</th>
 						<th class="px-4 py-3 text-left text-sm font-medium text-text-300">Subscription End</th>
 					</tr>
 				</thead>
 				<tbody>
 					{#each subscribers as subscriber, index}
+						{@const typedUser = subscriber as AdminUser}
 						<tr class="{index % 2 === 0 ? 'bg-tile-200' : 'bg-tile-300'} hover:bg-tile-400 transition-colors">
 							<td class="px-4 py-3 text-sm text-text-300 max-w-xs truncate font-medium">
-								{subscriber.email}
+								{typedUser.email}
 							</td>
 							<td class="px-4 py-3 text-right text-sm text-text-300 font-medium">
-								{subscriber.savedWords.length ?? 0}
+								{#if typedUser.current_streak && typedUser.current_streak > 0}
+									<span class="flex items-center justify-end gap-1">
+										🔥 {typedUser.current_streak}
+									</span>
+								{:else}
+									<span class="text-text-200">—</span>
+								{/if}
 							</td>
 							<td class="px-4 py-3 text-right text-sm text-text-300 font-medium">
-								{subscriber.sentences_viewed}
+								{typedUser.total_reviews ?? 0}
 							</td>
 							<td class="px-4 py-3 text-right text-sm text-text-300 font-medium">
-								{subscriber.verb_conjugation_tenses_viewed}
+								{typedUser.total_stories_viewed ?? 0}
+							</td>
+							<td class="px-4 py-3 text-right text-sm text-text-300 font-medium">
+								{typedUser.total_lessons_viewed ?? 0}
+							</td>
+							<td class="px-4 py-3 text-right text-sm text-text-300 font-medium">
+								{typedUser.savedWords.length ?? 0}
 							</td>
 							<td class="px-4 py-3 text-sm text-text-300">
-								<span class="capitalize">{subscriber.auth_provider}</span>
+								<span class="capitalize">{typedUser.auth_provider}</span>
 							</td>
 							<td class="px-4 py-3 text-sm text-text-200">
-								{#if subscriber.subscription_end_date}
+								{#if typedUser.subscription_end_date}
 									<span class="font-medium">
-										{new Date(Number(subscriber.subscription_end_date) * 1000).toLocaleDateString()}
+										{new Date(Number(typedUser.subscription_end_date) * 1000).toLocaleDateString()}
 									</span>
 								{:else}
 									<span class="text-yellow-400">No end date</span>
@@ -299,7 +390,7 @@
 					{/each}
 					{#if subscribers.length === 0}
 						<tr>
-							<td colspan="6" class="px-4 py-8 text-center text-text-200">
+							<td colspan="8" class="px-4 py-8 text-center text-text-200">
 								No active subscribers yet
 							</td>
 						</tr>
@@ -322,9 +413,11 @@
 					<tr>
 						<th class="px-4 py-3 text-left text-sm font-medium text-text-300">Email</th>
 						<th class="px-4 py-3 text-left text-sm font-medium text-text-300">Status</th>
+						<th class="px-4 py-3 text-right text-sm font-medium text-text-300">Streak</th>
+						<th class="px-4 py-3 text-right text-sm font-medium text-text-300">Reviews</th>
+						<th class="px-4 py-3 text-right text-sm font-medium text-text-300">Stories</th>
+						<th class="px-4 py-3 text-right text-sm font-medium text-text-300">Lessons</th>
 						<th class="px-4 py-3 text-right text-sm font-medium text-text-300">Saved Words</th>
-						<th class="px-4 py-3 text-right text-sm font-medium text-text-300">Sentences</th>
-						<th class="px-4 py-3 text-right text-sm font-medium text-text-300">Verb Tenses</th>
 						<th class="px-4 py-3 text-left text-sm font-medium text-text-300">Auth</th>
 						<th class="px-4 py-3 text-left text-sm font-medium text-text-300">Subscription</th>
 					</tr>
@@ -348,13 +441,25 @@
 								{/if}
 							</td>
 							<td class="px-4 py-3 text-right text-sm text-text-300 font-medium">
+								{#if typedUser.current_streak && typedUser.current_streak > 0}
+									<span class="flex items-center justify-end gap-1">
+										🔥 {typedUser.current_streak}
+									</span>
+								{:else}
+									<span class="text-text-200">—</span>
+								{/if}
+							</td>
+							<td class="px-4 py-3 text-right text-sm text-text-300 font-medium">
+								{typedUser.total_reviews ?? 0}
+							</td>
+							<td class="px-4 py-3 text-right text-sm text-text-300 font-medium">
+								{typedUser.total_stories_viewed ?? 0}
+							</td>
+							<td class="px-4 py-3 text-right text-sm text-text-300 font-medium">
+								{typedUser.total_lessons_viewed ?? 0}
+							</td>
+							<td class="px-4 py-3 text-right text-sm text-text-300 font-medium">
 								{typedUser.savedWords.length ?? 0}
-							</td>
-							<td class="px-4 py-3 text-right text-sm text-text-300 font-medium">
-								{typedUser.sentences_viewed}
-							</td>
-							<td class="px-4 py-3 text-right text-sm text-text-300 font-medium">
-								{typedUser.verb_conjugation_tenses_viewed}
 							</td>
 							<td class="px-4 py-3 text-sm text-text-300">
 								<span class="capitalize">{typedUser.auth_provider}</span>

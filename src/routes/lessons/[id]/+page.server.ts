@@ -1,9 +1,10 @@
 import { error } from '@sveltejs/kit';
 import { getLessonById } from '$lib/helpers/lesson-helpers';
+import { trackActivitySimple } from '$lib/helpers/track-activity';
 import type { PageServerLoad } from './$types';
 
-export const load: PageServerLoad = async ({ params, parent }) => {
-	const { session } = await parent();
+export const load: PageServerLoad = async ({ params, parent, locals }) => {
+	const { session, user } = await parent();
 	const lessonId = params.id;
 
 	if (!lessonId) {
@@ -22,6 +23,13 @@ export const load: PageServerLoad = async ({ params, parent }) => {
 			error: lessonResult.error || 'Lesson not found',
 			checkSessionStorage: true // Flag to check sessionStorage on client
 		};
+	}
+
+	// Track lesson view (non-blocking)
+	if (user?.id) {
+		trackActivitySimple(user.id, 'lesson', 1).catch(err => {
+			console.error('Error tracking lesson view:', err);
+		});
 	}
 
 	// Add dialect display name
