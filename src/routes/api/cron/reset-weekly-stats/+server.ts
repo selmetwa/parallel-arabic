@@ -6,20 +6,18 @@ import { supabase } from '$lib/supabaseClient';
  * Cron job to reset weekly stats for users whose week has changed
  * Should be run daily (e.g., at midnight UTC)
  * 
- * This endpoint should be protected with a secret token or run via a cron service
+ * Vercel cron jobs will call this endpoint with CRON_SECRET in Authorization header
  */
-export const POST: RequestHandler = async ({ request }) => {
-  // Optional: Add authentication/authorization check here
-  // For example, check for a secret token in headers
+export const GET: RequestHandler = async ({ request }) => {
+  // Vercel adds CRON_SECRET to Authorization header for cron job invocations
   const authHeader = request.headers.get('authorization');
-  const expectedToken = process.env.CRON_SECRET_TOKEN;
+  const cronSecret = process.env.CRON_SECRET;
   
-  if (expectedToken && authHeader !== `Bearer ${expectedToken}`) {
+  if (cronSecret && authHeader !== `Bearer ${cronSecret}`) {
     return json({ error: 'Unauthorized' }, { status: 401 });
   }
 
   try {
-    const now = Date.now();
     const currentDate = new Date();
     const utcDate = new Date(Date.UTC(
       currentDate.getUTCFullYear(),
@@ -84,18 +82,18 @@ export const POST: RequestHandler = async ({ request }) => {
 };
 
 /**
- * GET endpoint for manual testing/debugging
+ * POST endpoint for manual testing/debugging
  */
-export const GET: RequestHandler = async ({ request }) => {
-  // Optional: Add authentication/authorization check here
+export const POST: RequestHandler = async ({ request }) => {
+  // Allow manual testing with CRON_SECRET
   const authHeader = request.headers.get('authorization');
-  const expectedToken = process.env.CRON_SECRET_TOKEN;
+  const cronSecret = process.env.CRON_SECRET;
   
-  if (expectedToken && authHeader !== `Bearer ${expectedToken}`) {
+  if (cronSecret && authHeader !== `Bearer ${cronSecret}`) {
     return json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  // Call the POST handler logic
-  return POST({ request } as any);
+  // Call the GET handler logic
+  return GET({ request } as any);
 };
 
