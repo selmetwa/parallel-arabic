@@ -24,6 +24,10 @@
     <!-- Content -->
     <div class="p-6 flex-grow overflow-y-auto">
         <ul class="flex flex-col gap-3 text-text-200">
+            <li class="flex items-start gap-3 bg-tile-300/50 p-3 rounded-lg border border-tile-500">
+                <div class="shrink-0 mt-1"><Checkmark /></div>
+                <span><strong class="text-text-300">Structured Lessons:</strong> Follow comprehensive learning paths organized by modules and topics for Egyptian Arabic, Levantine, Moroccan Darija, and Modern Standard Arabic. Progress through lessons sequentially with progress tracking and unlock new content as you advance.</span>
+            </li>
             <li class="flex items-start gap-3">
                 <div class="shrink-0 mt-1"><Checkmark /></div>
                 <span><strong class="text-text-300">Multiple Arabic dialects:</strong> Egyptian, Levantine, Moroccan & Fusha</span>
