@@ -1,0 +1,917 @@
+{
+  "topicId": "m8-t2",
+  "title": "Language for Visiting and Invitations in Darija",
+  "dialect": "darija",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Greeting Upon Arrival",
+          "arabic": "تحية عند الوصول"
+        },
+        "text": "When you arrive at someone's house or meet them for an invitation, the most common and polite greeting in Darija is the traditional Islamic greeting. It is used universally.",
+        "examples": [
+          {
+            "arabic": "السلام عليكم",
+            "english": "Peace be upon you (Hello)",
+            "transliteration": "As-salamu alaykum"
+          },
+          {
+            "arabic": "وعليكم السلام",
+            "english": "And peace be upon you (Reply)",
+            "transliteration": "Wa alaykum as-salam"
+          }
+        ],
+        "audioText": "As-salamu alaykum"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking How Someone Is",
+          "arabic": "السؤال عن الحال"
+        },
+        "text": "After the initial greeting, it's polite to ask about the person's well-being. The form changes slightly depending on if you are speaking to a male or a female.",
+        "examples": [
+          {
+            "arabic": "كي داير؟",
+            "english": "How are you? (to a male)",
+            "transliteration": "Kay dayer?"
+          },
+          {
+            "arabic": "كي دايرة؟",
+            "english": "How are you? (to a female)",
+            "transliteration": "Kay dayra?"
+          },
+          {
+            "arabic": "كي دايرين؟",
+            "english": "How are you? (to a group)",
+            "transliteration": "Kay dayrin?"
+          }
+        ],
+        "audioText": "Kay dayer? Kay dayra? Kay dayrin?"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Welcome and Expressing Pleasure",
+          "arabic": "الترحيب والتعبير عن السرور"
+        },
+        "text": "Upon a guest's arrival, the host will often use a welcoming phrase. It's a way to express happiness that the guest has come.",
+        "examples": [
+          {
+            "arabic": "مرحبا بك",
+            "english": "Welcome (to a male/female - singular)",
+            "transliteration": "Marhaba bik"
+          },
+          {
+            "arabic": "مرحبا بيكم",
+            "english": "Welcome (to a group/plural)",
+            "transliteration": "Marhaba bikum"
+          },
+          {
+            "arabic": "مرحبا بيكم الدار داركم",
+            "english": "Welcome, make yourself at home (literally: the house is your house)",
+            "transliteration": "Marhaba bikum eddar darkum"
+          }
+        ],
+        "audioText": "Marhaba bik. Marhaba bikum. Marhaba bikum eddar darkum."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "السلام عليكم! كي داير؟",
+        "english": "Hello! How are you? (to a male)",
+        "transliteration": "As-salamu alaykum! Kay dayer?"
+      },
+      "context": "Greeting a male friend upon arrival."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "مرحبا بيكِ الدار داركِ!",
+        "english": "Welcome, make yourself at home! (to a female)",
+        "transliteration": "Marhaba bikِ eddar darkِ!"
+      },
+      "context": "A host welcoming a female guest."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the polite way to greet a group of people when arriving?",
+      "options": [
+        {
+          "id": "a",
+          "text": "السلام عليكم",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "صباح الخير",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "مساء الخير",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "«السلام عليكم» is the most common and polite greeting for any number of people at any time.",
+      "hint": {
+        "transliteration": "As-salamu alaykum",
+        "arabic": "السلام عليكم"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would you ask a female 'How are you?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "كي داير؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كي دايرة؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كي دايرين؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«كي دايرة؟» is used for a female, while «كي داير؟» is for a male and «كي دايرين؟» for a group.",
+      "hint": {
+        "transliteration": "Kay dayra?",
+        "arabic": "كي دايرة؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the welcoming phrase: مرحبا ___ الدار داركم.",
+      "options": [
+        {
+          "id": "a",
+          "text": "بيك",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بيكم",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بيه",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«مرحبا بيكم» is used when welcoming a group, matching «الدار داركم» which is also plural.",
+      "hint": {
+        "transliteration": "bīkum",
+        "arabic": "بيكم"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Further Inquiring About Well-being",
+          "arabic": "مزيد من السؤال عن الحال"
+        },
+        "text": "Beyond 'How are you?', you can use more general phrases to ask if everything is alright or if someone is fine.",
+        "examples": [
+          {
+            "arabic": "لاباس؟",
+            "english": "Are you fine? / Is everything okay?",
+            "transliteration": "Labas?"
+          },
+          {
+            "arabic": "كلشي بخير؟",
+            "english": "Is everything good?",
+            "transliteration": "Kulshi bkhir?"
+          }
+        ],
+        "audioText": "Labas? Kulshi bkhir?"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Responding to Inquiries About Well-being",
+          "arabic": "الرد على السؤال عن الحال"
+        },
+        "text": "When asked how you are, it's customary to respond positively and express gratitude.",
+        "examples": [
+          {
+            "arabic": "لاباس، الحمد لله",
+            "english": "Fine, thanks to God.",
+            "transliteration": "Labas, l-hamdullah"
+          },
+          {
+            "arabic": "بخير، بارك الله فيك",
+            "english": "Good, may God bless you (thank you).",
+            "transliteration": "Bkhir, barak Allahu fik"
+          }
+        ],
+        "audioText": "Labas, l-hamdullah. Bkhir, barak Allahu fik."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for Permission to Enter / Inviting to Sit",
+          "arabic": "طلب الإذن بالدخول / دعوة للجلوس"
+        },
+        "text": "When visiting, you might need to ask if it's okay to enter, or the host might invite you in or to sit down.",
+        "examples": [
+          {
+            "arabic": "واش ممكن ندخل؟",
+            "english": "Is it possible for me to come in?",
+            "transliteration": "Wash mumkin ndkhul?"
+          },
+          {
+            "arabic": "تفضل / تفضلي / تفضلوا",
+            "english": "Please, come in / have a seat (m/f/plural)",
+            "transliteration": "Tfaddal / Tfaddali / Tfaddalu"
+          },
+          {
+            "arabic": "اجلس / اجلسي / اجلسوا",
+            "english": "Sit down (m/f/plural)",
+            "transliteration": "Ajelas / Ajelsi / Ajelsu"
+          }
+        ],
+        "audioText": "Wash mumkin ndkhul? Tfaddal. Ajels."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "لاباس؟ كلشي بخير؟",
+        "english": "Are you fine? Is everything good?",
+        "transliteration": "Labas? Kulshi bkhir?"
+      },
+      "context": "A casual way to check on someone's well-being."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "تفضلي اجلسي، لاباس، الحمد لله.",
+        "english": "Please sit down (to female), I'm fine, thanks to God.",
+        "transliteration": "Tfaddali ajelsi, Labas, l-hamdullah."
+      },
+      "context": "A host inviting a female guest to sit, and the guest responding to an inquiry."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you politely ask a male to sit down?",
+      "options": [
+        {
+          "id": "a",
+          "text": "اجلسي",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "اجلس",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "اجلسوا",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«اجلس» is the command form for a male, «اجلسي» for a female, and «اجلسوا» for a group.",
+      "hint": {
+        "transliteration": "Ajelas",
+        "arabic": "اجلس"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is a common response when someone asks 'لاباس؟'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "لا شكرا",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "لاباس، الحمد لله",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أنا جيعان",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«لاباس، الحمد لله» is the standard positive response, meaning 'Fine, thanks to God'.",
+      "hint": {
+        "transliteration": "Labas, l-hamdullah",
+        "arabic": "لاباس، الحمد لله"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the phrase for inviting someone to come in (to a group): ___.",
+      "options": [
+        {
+          "id": "a",
+          "text": "تفضل",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "تفضلي",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "تفضلوا",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "«تفضلوا» is the plural form of 'please, come in', used for a group.",
+      "hint": {
+        "transliteration": "Tfaddalu",
+        "arabic": "تفضلوا"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Inviting Someone Over",
+          "arabic": "دعوة شخص ما"
+        },
+        "text": "When you want to invite someone to your home or for an event, there are a few common ways to express it.",
+        "examples": [
+          {
+            "arabic": "بغيت نعرض عليك",
+            "english": "I'd like to invite you (to a male/female - singular)",
+            "transliteration": "Bghit n'aered alik"
+          },
+          {
+            "arabic": "بغيت نعرض عليكم",
+            "english": "I'd like to invite you (to a group/plural)",
+            "transliteration": "Bghit n'aered alikum"
+          },
+          {
+            "arabic": "واش تجي عندنا؟",
+            "english": "Will you come to our place? (informal, to a male)",
+            "transliteration": "Wash tji endna?"
+          }
+        ],
+        "audioText": "Bghit n'aered alik. Bghit n'aered alikum. Wash tji endna?"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Accepting an Invitation",
+          "arabic": "قبول الدعوة"
+        },
+        "text": "When accepting an invitation, it's polite to show enthusiasm and confirm your attendance.",
+        "examples": [
+          {
+            "arabic": "بكل سرور",
+            "english": "With pleasure / Gladly",
+            "transliteration": "Bkul surur"
+          },
+          {
+            "arabic": "إن شاء الله",
+            "english": "God willing (often used to confirm attendance, implies 'yes')",
+            "transliteration": "In sha' Allah"
+          },
+          {
+            "arabic": "أكيد غادي نجي",
+            "english": "Certainly, I will come",
+            "transliteration": "Akid ghadi nji"
+          }
+        ],
+        "audioText": "Bkul surur. In sha' Allah. Akid ghadi nji."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Declining an Invitation Politely",
+          "arabic": "رفض الدعوة بلباقة"
+        },
+        "text": "If you cannot accept an invitation, it's important to decline politely, often with an apology and a reason if appropriate.",
+        "examples": [
+          {
+            "arabic": "سمح ليا",
+            "english": "Excuse me / Forgive me (to a male)",
+            "transliteration": "Smeh liya"
+          },
+          {
+            "arabic": "سمحي ليا",
+            "english": "Excuse me / Forgive me (to a female)",
+            "transliteration": "Semhi liya"
+          },
+          {
+            "arabic": "ماشي مشكل مرة أخرى",
+            "english": "No problem, another time",
+            "transliteration": "Mashi mushkil marra ukhra"
+          },
+          {
+            "arabic": "شكرا بزاف على الدعوة",
+            "english": "Thank you very much for the invitation",
+            "transliteration": "Shukran bzzaf ala d-da'wa"
+          }
+        ],
+        "audioText": "Smeh liya. Mashi mushkil marra ukhra. Shukran bzzaf ala d-da'wa."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بغيت نعرض عليكم للعشا.",
+        "english": "I'd like to invite you (plural) for dinner.",
+        "transliteration": "Bghit n'aered alikum l-l'asha."
+      },
+      "context": "Inviting a couple or family for dinner."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "سمح ليا، ما نقدرش نجي اليوم. شكرا على الدعوة.",
+        "english": "Excuse me (m), I can't come today. Thank you for the invitation.",
+        "transliteration": "Smeh liya, ma nqdersh nji lyum. Shukran ala d-da'wa."
+      },
+      "context": "Declining an invitation politely due to unavailability."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would you invite a female friend?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بغيت نعرض عليكِ",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "واش تجي عندنا؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "بغينا نعرضو عليكم",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "«بغيت نعرض عليكِ» is the singular female form of 'I'd like to invite you'.",
+      "hint": {
+        "transliteration": "Bghit n'aered alikِ",
+        "arabic": "بغيت نعرض عليكِ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is a common way to accept an invitation that implies 'yes' but uses a religious phrase?",
+      "options": [
+        {
+          "id": "a",
+          "text": "لا",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "إن شاء الله",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مرة أخرى",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«إن شاء الله» (God willing) is frequently used in Darija to indicate acceptance of an invitation or intention to do something.",
+      "hint": {
+        "transliteration": "In sha' Allah",
+        "arabic": "إن شاء الله"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the polite phrase to decline an invitation to a male: ___ ليا، ما نقدرش نجي.",
+      "options": [
+        {
+          "id": "a",
+          "text": "سمح",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "سمحي",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "شكرا",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "«سمح ليا» is 'excuse me' or 'forgive me' when speaking to a male. «سمحي ليا» is for a female.",
+      "hint": {
+        "transliteration": "Smeh",
+        "arabic": "سمح"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Offering Food or Drink",
+          "arabic": "تقديم الطعام والشراب"
+        },
+        "text": "As a host, offering food and drink is a central part of Moroccan hospitality. It's polite to insist a little, and for guests to accept gracefully.",
+        "examples": [
+          {
+            "arabic": "تفضلوا",
+            "english": "Please (used when offering food/drink to a group, or generally inviting)",
+            "transliteration": "Tfaddalu"
+          },
+          {
+            "arabic": "واش كاين شي حاجة تشربوها؟",
+            "english": "Is there anything you'd like to drink? (to a group)",
+            "transliteration": "Wash kayn shi haja tsharbuha?"
+          },
+          {
+            "arabic": "واش تاكل شي حاجة؟",
+            "english": "Would you eat something? (to a male)",
+            "transliteration": "Wash takul shi haja?"
+          }
+        ],
+        "audioText": "Tfaddalu. Wash kayn shi haja tsharbuha? Wash takul shi haja?"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Accepting / Declining Food & Drink",
+          "arabic": "قبول / رفض الطعام والشراب"
+        },
+        "text": "As a guest, you can accept or politely decline. It's common for hosts to insist once or twice, so a mild initial refusal might be followed by acceptance.",
+        "examples": [
+          {
+            "arabic": "شكرا بزاف",
+            "english": "Thank you very much",
+            "transliteration": "Shukran bzzaf"
+          },
+          {
+            "arabic": "لا شكرا، بارك الله فيك",
+            "english": "No thank you, may God bless you (polite refusal)",
+            "transliteration": "La shukran, barak Allahu fik"
+          },
+          {
+            "arabic": "شويا",
+            "english": "A little (when accepting a small amount)",
+            "transliteration": "Shwiya"
+          }
+        ],
+        "audioText": "Shukran bzzaf. La shukran, barak Allahu fik. Shwiya."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Praising the Host and Food",
+          "arabic": "مدح المضيف والطعام"
+        },
+        "text": "It's a sign of appreciation and good manners to compliment the host, their home, or the food. This strengthens social bonds.",
+        "examples": [
+          {
+            "arabic": "الله يعطيك الصحة",
+            "english": "May God give you health (a common compliment to the host/cook)",
+            "transliteration": "Allah ya'tik as-sahha"
+          },
+          {
+            "arabic": "بصحتك",
+            "english": "To your health (to a male/female - singular, when eating/drinking)",
+            "transliteration": "Bessahhtek"
+          },
+          {
+            "arabic": "بصحتكم",
+            "english": "To your health (to a group/plural, when eating/drinking)",
+            "transliteration": "Bessahhtkum"
+          },
+          {
+            "arabic": "ما شاء الله، كلشي غزال",
+            "english": "What God willed, everything is wonderful (complimenting the home/food)",
+            "transliteration": "Ma sha' Allah, kulshi ghzal"
+          }
+        ],
+        "audioText": "Allah ya'tik as-sahha. Bessahhtek. Ma sha' Allah, kulshi ghzal."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "تفضلوا، واش كاين شي حاجة تشربوها؟",
+        "english": "Please come in, is there anything you'd like to drink? (to a group)",
+        "transliteration": "Tfaddalu, wash kayn shi haja tsharbuha?"
+      },
+      "context": "A host welcoming guests and offering refreshments."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شكرا بزاف! الله يعطيك الصحة على هاد الأكل الزوين.",
+        "english": "Thank you very much! May God give you health for this beautiful food.",
+        "transliteration": "Shukran bzzaf! Allah ya'tik as-sahha ala had l-akl z-zwin."
+      },
+      "context": "A guest complimenting the host on their cooking."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is a polite way to offer food to a male guest?",
+      "options": [
+        {
+          "id": "a",
+          "text": "واش تاكل شي حاجة؟",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "واش تاكلي شي حاجة؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "واش تاكلوا شي حاجة؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "«واش تاكل شي حاجة؟» is used for a male. «تاكلي» is for a female, and «تاكلوا» for a group.",
+      "hint": {
+        "transliteration": "Wash takul shi haja?",
+        "arabic": "واش تاكل شي حاجة؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you politely decline an offer of food/drink, thanking the host?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بغيت أكثر",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "لا شكرا، بارك الله فيك",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أنا جيعان بزاف",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«لا شكرا، بارك الله فيك» is a very polite way to refuse, combining thanks with a blessing.",
+      "hint": {
+        "transliteration": "La shukran, barak Allahu fik",
+        "arabic": "لا شكرا، بارك الله فيك"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the phrase to praise a host's efforts (may God give you health): الله ___ الصحة.",
+      "options": [
+        {
+          "id": "a",
+          "text": "يعطيك",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "يعطينا",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "تعطيني",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "«الله يعطيك الصحة» is the correct phrase, meaning 'May God give you health'.",
+      "hint": {
+        "transliteration": "ya'tik",
+        "arabic": "يعطيك"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for the Bathroom",
+          "arabic": "السؤال عن المرحاض"
+        },
+        "text": "It's useful to know how to ask for the bathroom politely during a visit.",
+        "examples": [
+          {
+            "arabic": "عفاك، فين الطواليت؟",
+            "english": "Please, where is the toilet?",
+            "transliteration": "Afak, fin t-twalit?"
+          }
+        ],
+        "audioText": "Afak, fin t-twalit?"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Saying Goodbye",
+          "arabic": "توديع الضيوف"
+        },
+        "text": "When leaving or saying goodbye to guests, there are several common phrases to express farewell and hope to meet again.",
+        "examples": [
+          {
+            "arabic": "بسلامة",
+            "english": "Goodbye / Safely",
+            "transliteration": "Bslama"
+          },
+          {
+            "arabic": "نتلاقاو خير",
+            "english": "May we meet again in goodness",
+            "transliteration": "N'tlaqaw khir"
+          },
+          {
+            "arabic": "شكرا على الزيارة",
+            "english": "Thank you for the visit (host to guest)",
+            "transliteration": "Shukran ala z-ziyara"
+          }
+        ],
+        "audioText": "Bslama. N'tlaqaw khir. Shukran ala z-ziyara."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Thanking for Hospitality",
+          "arabic": "الشكر على الضيافة"
+        },
+        "text": "As a departing guest, it's essential to thank your host for their hospitality.",
+        "examples": [
+          {
+            "arabic": "الله يخلف عليك",
+            "english": "May God reward you (for your generosity/hospitality)",
+            "transliteration": "Allah ykhellaf alik"
+          },
+          {
+            "arabic": "شكرا بزاف على الضيافة",
+            "english": "Thank you very much for the hospitality",
+            "transliteration": "Shukran bzzaf ala d-diyafa"
+          }
+        ],
+        "audioText": "Allah ykhellaf alik. Shukran bzzaf ala d-diyafa."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "عفاك، فين الطواليت؟",
+        "english": "Please, where is the toilet?",
+        "transliteration": "Afak, fin t-twalit?"
+      },
+      "context": "A guest asking for the bathroom."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بسلامة! شكرا بزاف على الضيافة، الله يخلف عليك.",
+        "english": "Goodbye! Thank you very much for the hospitality, may God reward you.",
+        "transliteration": "Bslama! Shukran bzzaf ala d-diyafa, Allah ykhellaf alik."
+      },
+      "context": "A guest leaving and thanking the host."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is a common Darija phrase to say 'goodbye'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "مرحبا",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بسلامة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أهلاً وسهلاً",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«بسلامة» is the most common way to say goodbye in Darija.",
+      "hint": {
+        "transliteration": "Bslama",
+        "arabic": "بسلامة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How does a guest thank the host for their hospitality, using a phrase that invokes a blessing?",
+      "options": [
+        {
+          "id": "a",
+          "text": "شكرا بزاف",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الله يخلف عليك",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بصحتك",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«الله يخلف عليك» is a common and culturally significant way to thank someone for their generosity, wishing them divine reward.",
+      "hint": {
+        "transliteration": "Allah ykhellaf alik",
+        "arabic": "الله يخلف عليك"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the phrase: عفاك، فين ___؟ (Please, where is the toilet?)",
+      "options": [
+        {
+          "id": "a",
+          "text": "الكوزينة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الصالون",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "الطواليت",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "«الطواليت» is the Darija word for toilet.",
+      "hint": {
+        "transliteration": "t-twalit",
+        "arabic": "الطواليت"
+      }
+    }
+  ]
+}

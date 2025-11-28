@@ -1,0 +1,969 @@
+{
+  "topicId": "m6-t1",
+  "title": "Asking About Directions (Fusha)",
+  "dialect": "fusha",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Polite Opening: Excuse Me / Pardon Me"
+        },
+        "text": "Before asking for directions, it's polite to start with an opening phrase. 'Excuse me' or 'Pardon me' are good ways to get someone's attention. The phrase 'لو سمحت' (law samaht) is very common and changes slightly based on who you're speaking to.",
+        "examples": [
+          {
+            "arabic": "مَعْذِرَةً",
+            "english": "Excuse me / Pardon me",
+            "transliteration": "Ma'dhiratan"
+          },
+          {
+            "arabic": "لو سَمَحْتَ؟",
+            "english": "Excuse me? (to a male)",
+            "transliteration": "Law samahta?"
+          },
+          {
+            "arabic": "لو سَمَحْتِ؟",
+            "english": "Excuse me? (to a female)",
+            "transliteration": "Law samahti?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "How to Ask 'Where is...?'"
+        },
+        "text": "The fundamental question for asking directions is 'Where is...?' In Arabic, this is أينَ...؟ (Ayna...?). This phrase does not change whether the place you're asking about is masculine or feminine.",
+        "examples": [
+          {
+            "arabic": "أينَ المستشفى؟",
+            "english": "Where is the hospital?",
+            "transliteration": "Ayna al-mustashfa?"
+          },
+          {
+            "arabic": "أينَ البنك؟",
+            "english": "Where is the bank?",
+            "transliteration": "Ayna al-bank?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Common Places"
+        },
+        "text": "Here are some common places you might need to ask directions for. These words are often used with the definite article الـ (al-) meaning 'the'.",
+        "examples": [
+          {
+            "arabic": "المستشفى",
+            "english": "The hospital",
+            "transliteration": "Al-Mustashfa"
+          },
+          {
+            "arabic": "البنك",
+            "english": "The bank",
+            "transliteration": "Al-Bank"
+          },
+          {
+            "arabic": "محطة القطار",
+            "english": "The train station",
+            "transliteration": "Mahattat al-Qitar"
+          },
+          {
+            "arabic": "السوق",
+            "english": "The market",
+            "transliteration": "As-Suq"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "لو سَمَحْتَ، أينَ السوق؟",
+        "english": "Excuse me (to a male), where is the market?",
+        "transliteration": "Law samahta, ayna as-suq?"
+      },
+      "context": "Asking a male for directions to the market."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "مَعْذِرَةً، أينَ محطة القطار؟",
+        "english": "Pardon me, where is the train station?",
+        "transliteration": "Ma'dhiratan, ayna mahattat al-qitar?"
+      },
+      "context": "A polite way to ask for the train station's location."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the polite phrase to get attention before asking a question, when addressing a female?",
+      "options": [
+        {
+          "id": "a",
+          "text": "لو سَمَحْتَ؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مَعْذِرَةً",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "لو سَمَحْتِ؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "To politely address a female, you use 'لو سَمَحْتِ؟' with the kasra at the end.",
+      "hint": {
+        "transliteration": "Law samahti?",
+        "arabic": "لو سَمَحْتِ؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'Where is the hospital?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "أينَ المستشفى؟",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "المستشفى أينَ؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "ماذا المستشفى؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "The correct way to ask 'Where is...?' is 'أينَ...؟'.",
+      "hint": {
+        "transliteration": "Ayna al-mustashfa?",
+        "arabic": "أينَ المستشفى؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the phrase: لو سَمَحْتَ، أينَ ___؟ (If you want to ask 'where is the bank?')",
+      "options": [
+        {
+          "id": "a",
+          "text": "المستشفى",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "البنك",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "السوق",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "To ask about the bank, you use the Arabic word 'البنك'.",
+      "hint": {
+        "transliteration": "al-Bank",
+        "arabic": "البنك"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing 'I Want to Go To...'"
+        },
+        "text": "A more complete way to ask for directions is to state your intention: 'I want to go to...' This phrase is أريدُ أن أذهَبَ إلى... (Ureedu an adh-haba ila...).",
+        "examples": [
+          {
+            "arabic": "أُريدُ أن أذهَبَ إلى البنك.",
+            "english": "I want to go to the bank.",
+            "transliteration": "Ureedu an adh-haba ila al-bank."
+          },
+          {
+            "arabic": "أُريدُ أن أذهَبَ إلى المستشفى.",
+            "english": "I want to go to the hospital.",
+            "transliteration": "Ureedu an adh-haba ila al-mustashfa."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Basic Directions: Straight, Right, Left"
+        },
+        "text": "These are crucial words for understanding directions. They usually come after a verb of movement.",
+        "examples": [
+          {
+            "arabic": "مباشَرَةً",
+            "english": "Straight",
+            "transliteration": "Mubasharatan"
+          },
+          {
+            "arabic": "يَمينًا",
+            "english": "Right",
+            "transliteration": "Yameenan"
+          },
+          {
+            "arabic": "يَسارًا",
+            "english": "Left",
+            "transliteration": "Yasaran"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Verbs for Giving Directions: Go, Turn"
+        },
+        "text": "When someone tells you directions, they will use imperative verbs (commands). Note the difference for addressing a male versus a female.",
+        "examples": [
+          {
+            "arabic": "اذهَب",
+            "english": "Go (m)",
+            "transliteration": "Idh-hab"
+          },
+          {
+            "arabic": "اذهَبي",
+            "english": "Go (f)",
+            "transliteration": "Idh-habee"
+          },
+          {
+            "arabic": "انعَطِف",
+            "english": "Turn (m)",
+            "transliteration": "In'atif"
+          },
+          {
+            "arabic": "انعَطِفي",
+            "english": "Turn (f)",
+            "transliteration": "In'atifee"
+          },
+          {
+            "arabic": "اذهَب مباشَرَةً ثم انعَطِف يَمينًا.",
+            "english": "Go straight then turn right (m).",
+            "transliteration": "Idh-hab mubasharatan thumma in'atif yameenan."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "اذهَب مباشَرَةً ثم انعَطِف يَسارًا.",
+        "english": "Go straight, then turn left (to a male).",
+        "transliteration": "Idh-hab mubasharatan thumma in'atif yasaran."
+      },
+      "context": "Giving directions to a male, instructing him to go straight and then turn left."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أُريدُ أن أذهَبَ إلى محطة القطار ثم انعَطِف يَمينًا.",
+        "english": "I want to go to the train station, then turn right (after reaching it).",
+        "transliteration": "Ureedu an adh-haba ila mahattat al-qitar thumma in'atif yameenan."
+      },
+      "context": "Stating the destination and a subsequent action for a male."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'I want to go to the market'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أُريدُ السوق.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أُريدُ أن أذهَبَ إلى السوق.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "السوق أُريدُ.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "The full phrase 'I want to go to...' is 'أُريدُ أن أذهَبَ إلى...'.",
+      "hint": {
+        "transliteration": "Ureedu an adh-haba ila as-suq.",
+        "arabic": "أُريدُ أن أذهَبَ إلى السوق."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the correct Arabic for 'Turn left' (addressing a female)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "انعَطِف يَسارًا.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "انعَطِفي يَسارًا.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "اذهَبي يَسارًا.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "To tell a female to 'turn', you use 'انعَطِفي'.",
+      "hint": {
+        "transliteration": "In'atifee yasaran.",
+        "arabic": "انعَطِفي يَسارًا."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: اذهَب ___ ثم انعَطِف يَمينًا. (Go straight then turn right.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "يَمينًا",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "يَسارًا",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "مباشَرَةً",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'مباشَرَةً' means 'straight'.",
+      "hint": {
+        "transliteration": "mubasharatan",
+        "arabic": "مباشَرَةً"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Prepositions of Location: Near, Far, Next to"
+        },
+        "text": "These words help describe the proximity and relative position of places. They are essential for understanding more detailed directions.",
+        "examples": [
+          {
+            "arabic": "بِجانِب",
+            "english": "Next to",
+            "transliteration": "Bijanib"
+          },
+          {
+            "arabic": "قَريب مِن",
+            "english": "Near to",
+            "transliteration": "Qarib min"
+          },
+          {
+            "arabic": "بَعيد عَن",
+            "english": "Far from",
+            "transliteration": "Ba'eed 'an"
+          },
+          {
+            "arabic": "البنك قَريب مِن المستشفى.",
+            "english": "The bank is near the hospital.",
+            "transliteration": "Al-bank qarib min al-mustashfa."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for Clarification"
+        },
+        "text": "If you didn't understand, or want to confirm a detail, these phrases are very useful for getting more information or asking someone to repeat.",
+        "examples": [
+          {
+            "arabic": "هل هذا بَعيد؟",
+            "english": "Is this far?",
+            "transliteration": "Hal hadha ba'eed?"
+          },
+          {
+            "arabic": "هل هذا قَريب؟",
+            "english": "Is this near?",
+            "transliteration": "Hal hadha qarib?"
+          },
+          {
+            "arabic": "هل يُمْكِنُكَ تِكرار ذلك؟",
+            "english": "Can you repeat that? (to a male)",
+            "transliteration": "Hal yumkinuka tikrar dhalika?"
+          },
+          {
+            "arabic": "هل يُمْكِنُكِ تِكرار ذلك؟",
+            "english": "Can you repeat that? (to a female)",
+            "transliteration": "Hal yumkinuki tikrar dhalika?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Understanding Landmarks"
+        },
+        "text": "Directions often involve landmarks. Knowing these common phrases will help you understand where to turn or continue.",
+        "examples": [
+          {
+            "arabic": "عِنْدَ الإشارة",
+            "english": "At the traffic light",
+            "transliteration": "Ind al-isharah"
+          },
+          {
+            "arabic": "عِنْدَ الدوّار",
+            "english": "At the roundabout",
+            "transliteration": "Ind ad-dawwar"
+          },
+          {
+            "arabic": "بَعْدَ الـ...",
+            "english": "After the...",
+            "transliteration": "Ba'da al-..."
+          },
+          {
+            "arabic": "قَبْلَ الـ...",
+            "english": "Before the...",
+            "transliteration": "Qabla al-..."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هل البنك بَعيد عَن المستشفى؟",
+        "english": "Is the bank far from the hospital?",
+        "transliteration": "Hal al-bank ba'eed 'an al-mustashfa?"
+      },
+      "context": "Asking if two locations are far from each other."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "انعَطِف يَمينًا عِنْدَ الإشارة.",
+        "english": "Turn right at the traffic light (to a male).",
+        "transliteration": "In'atif yameenan 'ind al-isharah."
+      },
+      "context": "Giving directions to a male, using a landmark."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "لو سَمَحْتِ، هل يُمْكِنُكِ تِكرار ذلك؟",
+        "english": "Excuse me (to a female), can you repeat that?",
+        "transliteration": "Law samahti, hal yumkinuki tikrar dhalika?"
+      },
+      "context": "Politely asking a female to repeat directions."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'near to'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بَعيد عَن",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بِجانِب",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "قَريب مِن",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'قَريب مِن' means 'near to'.",
+      "hint": {
+        "transliteration": "qarib min",
+        "arabic": "قَريب مِن"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic for 'at the roundabout'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بَعْدَ الدوّار",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "عِنْدَ الدوّار",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "قَبْلَ الدوّار",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'عِنْدَ' means 'at' or 'by'.",
+      "hint": {
+        "transliteration": "ind ad-dawwar",
+        "arabic": "عِنْدَ الدوّار"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: انعَطِف يَمينًا ___ الإشارة. (Turn right at the traffic light (m).)",
+      "options": [
+        {
+          "id": "a",
+          "text": "بَعْدَ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "قَبْلَ",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "عِنْدَ",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'عِنْدَ' means 'at', indicating the location of the action.",
+      "hint": {
+        "transliteration": "ind",
+        "arabic": "عِنْدَ"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "'You Will Find...' / 'It Is Located...'"
+        },
+        "text": "These phrases are used to tell you where your destination will be. 'ستَجِدُ' is for a male, 'ستَجِدينَ' for a female. 'يَقَعُ' is for masculine places, 'تَقَعُ' for feminine places.",
+        "examples": [
+          {
+            "arabic": "سَتَجِدُ",
+            "english": "You will find (m)",
+            "transliteration": "Satājid"
+          },
+          {
+            "arabic": "سَتَجِدينَ",
+            "english": "You will find (f)",
+            "transliteration": "Satājidīna"
+          },
+          {
+            "arabic": "يَقَعُ",
+            "english": "It is located (m)",
+            "transliteration": "Yaqa'u"
+          },
+          {
+            "arabic": "تَقَعُ",
+            "english": "It is located (f)",
+            "transliteration": "Taqa'u"
+          },
+          {
+            "arabic": "سَتَجِدُ المستشفى على يَمينِكَ.",
+            "english": "You will find the hospital on your right (m).",
+            "transliteration": "Satājid al-mustashfa 'ala yameenika."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "More Precise Directions: Cross"
+        },
+        "text": "When a road, bridge, or intersection needs to be crossed, this verb is used. Remember to differentiate between male and female commands.",
+        "examples": [
+          {
+            "arabic": "اعْبُر",
+            "english": "Cross (m)",
+            "transliteration": "A'bur"
+          },
+          {
+            "arabic": "اعْبُري",
+            "english": "Cross (f)",
+            "transliteration": "A'buree"
+          },
+          {
+            "arabic": "اعْبُر الشارع ثم اذهَب مباشَرَةً.",
+            "english": "Cross the street then go straight (m).",
+            "transliteration": "A'bur ash-shari' thumma idh-hab mubasharatan."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for a Specific Path"
+        },
+        "text": "Sometimes you want to know the 'best' or 'which' path to take, rather than just 'where is it?'.",
+        "examples": [
+          {
+            "arabic": "ما هو أفْضَلُ طَريقٍ لـِ...؟",
+            "english": "What is the best way to...?",
+            "transliteration": "Ma huwa afdal tareeqin li...?"
+          },
+          {
+            "arabic": "أيُّ طَريقٍ يؤَدّي إلى...؟",
+            "english": "Which road leads to...?",
+            "transliteration": "Ayyu tareeqin yu'addee ila...?"
+          },
+          {
+            "arabic": "ما هو أفْضَلُ طَريقٍ لِلسوق؟",
+            "english": "What is the best way to the market?",
+            "transliteration": "Ma huwa afdal tareeqin lis-suq?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "سَتَجِدُ البنك بَعْدَ الدوّار.",
+        "english": "You will find the bank after the roundabout (to a male).",
+        "transliteration": "Satājid al-bank ba'da ad-dawwar."
+      },
+      "context": "Telling a male where he will find the bank relative to a landmark."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أيُّ طَريقٍ يؤَدّي إلى محطة القطار؟",
+        "english": "Which road leads to the train station?",
+        "transliteration": "Ayyu tareeqin yu'addee ila mahattat al-qitar?"
+      },
+      "context": "Asking which specific road to take to reach the train station."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "اعْبُري الشارع ثم انعَطِفي يَمينًا.",
+        "english": "Cross the street, then turn right (to a female).",
+        "transliteration": "A'buree ash-shari' thumma in'atifee yameenan."
+      },
+      "context": "Giving combined directions to a female, including crossing a street."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'You will find' (addressing a female)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "سَتَجِدُ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "يَقَعُ",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "سَتَجِدينَ",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'سَتَجِدينَ' is the correct form for 'you will find' when addressing a female.",
+      "hint": {
+        "transliteration": "Satājidīna",
+        "arabic": "سَتَجِدينَ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic for 'Cross the street' (addressing a male)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "اعْبُري الشارع.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "اعْبُر الشارع.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "اذهَب الشارع.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'اعْبُر الشارع' is the command 'cross the street' for a male.",
+      "hint": {
+        "transliteration": "A'bur ash-shari'",
+        "arabic": "اعْبُر الشارع."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: ___ هو أفْضَلُ طَريقٍ لِلمستشفى؟ (What is the best way to the hospital?)",
+      "options": [
+        {
+          "id": "a",
+          "text": "كيف",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ما",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "لماذا",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'ما' is used here to ask 'what' in 'What is the best way'.",
+      "hint": {
+        "transliteration": "Ma",
+        "arabic": "ما"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing Gratitude"
+        },
+        "text": "It's always important to thank someone who helped you with directions. These phrases are universally understood and appreciated.",
+        "examples": [
+          {
+            "arabic": "شُكْرًا جَزيلًا",
+            "english": "Thank you very much",
+            "transliteration": "Shukran jazeelan"
+          },
+          {
+            "arabic": "عَفْوًا",
+            "english": "You're welcome",
+            "transliteration": "Afwan"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Confirming Understanding"
+        },
+        "text": "It's good practice to check if you understood the directions, or to let the person know that you did. This ensures you're on the right track.",
+        "examples": [
+          {
+            "arabic": "هل فَهِمْتَ؟",
+            "english": "Did you understand? (m)",
+            "transliteration": "Hal fahimta?"
+          },
+          {
+            "arabic": "هل فَهِمْتِ؟",
+            "english": "Did you understand? (f)",
+            "transliteration": "Hal fahimti?"
+          },
+          {
+            "arabic": "نَعَم، فَهِمْتُ.",
+            "english": "Yes, I understood.",
+            "transliteration": "Na'am, fahimtu."
+          },
+          {
+            "arabic": "لا، لم أفهم بَعْدُ.",
+            "english": "No, I haven't understood yet.",
+            "transliteration": "La, lam afham ba'du."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for Help if Lost"
+        },
+        "text": "If despite all your efforts, you find yourself lost, these phrases can be very helpful to ask for further assistance.",
+        "examples": [
+          {
+            "arabic": "أنا ضائِع.",
+            "english": "I am lost (m).",
+            "transliteration": "Ana daa'i'."
+          },
+          {
+            "arabic": "أنا ضائِعَة.",
+            "english": "I am lost (f).",
+            "transliteration": "Ana daa'iah."
+          },
+          {
+            "arabic": "هل يُمْكِنُكَ مُساعدتي؟",
+            "english": "Can you help me? (to a male)",
+            "transliteration": "Hal yumkinuka musa'adati?"
+          },
+          {
+            "arabic": "هل يُمْكِنُكِ مُساعدتي؟",
+            "english": "Can you help me? (to a female)",
+            "transliteration": "Hal yumkinuki musa'adati?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شُكْرًا جَزيلًا لِمُساعدتِكَ.",
+        "english": "Thank you very much for your help (to a male).",
+        "transliteration": "Shukran jazeelan limusa'adatik."
+      },
+      "context": "Expressing sincere thanks for help received."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هل فَهِمْتَ؟ نَعَم، فَهِمْتُ.",
+        "english": "Did you understand? (to a male) Yes, I understood.",
+        "transliteration": "Hal fahimta? Na'am, fahimtu."
+      },
+      "context": "A short conversation confirming understanding with a male."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا ضائِعَة. هل يُمْكِنُكَ مُساعدتي؟",
+        "english": "I am lost (female). Can you help me? (to a male).",
+        "transliteration": "Ana daa'iah. Hal yumkinuka musa'adati?"
+      },
+      "context": "A female asking a male for help because she is lost."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic for 'Thank you very much'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "عَفْوًا",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مَعْذِرَةً",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "شُكْرًا جَزيلًا",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'شُكْرًا جَزيلًا' is the phrase for 'Thank you very much'.",
+      "hint": {
+        "transliteration": "Shukran jazeelan",
+        "arabic": "شُكْرًا جَزيلًا"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'I am lost' (as a female)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أنا ضائِع.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أنا ضائِعَة.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أنا مفقود.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "The feminine form for 'I am lost' is 'أنا ضائِعَة'.",
+      "hint": {
+        "transliteration": "Ana daa'iah",
+        "arabic": "أنا ضائِعَة."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the conversation: 'Did you understand? (to a female)' (response: No, I haven't understood yet.) - هل فَهِمْتِ؟ - لا، ___ بَعْدُ.",
+      "options": [
+        {
+          "id": "a",
+          "text": "فَهِمْتُ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أَفْهَمُ",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "لم أفهم",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "To say 'I haven't understood yet', you use 'لم أفهم بَعْدُ'.",
+      "hint": {
+        "transliteration": "lam afham",
+        "arabic": "لم أفهم"
+      }
+    }
+  ]
+}

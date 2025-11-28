@@ -1,0 +1,886 @@
+{
+  "topicId": "m7-t2",
+  "title": "Talking About Daily Programs and Habits",
+  "dialect": "fusha",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Introduction: Daily Routines and Habits"
+        },
+        "text": "In this lesson, you will learn how to discuss your daily schedule and recurring activities in Arabic. We'll start with essential vocabulary for routines and habits.",
+        "examples": [
+          {
+            "arabic": "برنامج يومي",
+            "english": "Daily program / Daily schedule",
+            "transliteration": "barnāmaj yawmī"
+          },
+          {
+            "arabic": "عادة",
+            "english": "Habit",
+            "transliteration": "ādah"
+          },
+          {
+            "arabic": "عادات يومية",
+            "english": "Daily habits",
+            "transliteration": "ādāt yawmiyyah"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Verb: I wake up / I get up (أستيقظ)"
+        },
+        "text": "The verb 'أستيقظ' means 'I wake up' or 'I get up'. This is a common verb used when discussing the start of your day. It's in the present tense, first person singular.",
+        "examples": [
+          {
+            "arabic": "أستيقظُ",
+            "english": "I wake up / I get up",
+            "transliteration": "astayqithu",
+            "diacriticalNotes": "The 'ض' (ḍād) sound is similar to a 'd' but deeper and more emphatic."
+          },
+          {
+            "arabic": "أستيقظ مبكراً.",
+            "english": "I wake up early.",
+            "transliteration": "astayqithu mubakkiran."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Verb: I eat (آكل)"
+        },
+        "text": "'آكل' means 'I eat'. This verb is fundamental for talking about meals throughout your day. Notice the long 'aa' sound at the beginning.",
+        "examples": [
+          {
+            "arabic": "آكلُ",
+            "english": "I eat",
+            "transliteration": "aakulu",
+            "diacriticalNotes": "The hamza on alif followed by another alif indicates a long 'aa' sound."
+          },
+          {
+            "arabic": "آكل الفطور.",
+            "english": "I eat breakfast.",
+            "transliteration": "aakulu al-futur."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أستيقظ باكراً كل يوم.",
+        "english": "I wake up early every day.",
+        "transliteration": "astayqithu bakiran kulla yawm."
+      },
+      "context": "Using 'أستيقظ' to describe a daily routine."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "عندي عادة أن آكل فطوراً صحياً.",
+        "english": "I have a habit of eating a healthy breakfast.",
+        "transliteration": "indī ādah an aakula futur an sahhiyy an."
+      },
+      "context": "Combining 'عادة' with 'آكل' to express a habit."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'habit'?",
+      "options": [
+        {
+          "id": "a1",
+          "text": "برنامج",
+          "isCorrect": false
+        },
+        {
+          "id": "a2",
+          "text": "عادة",
+          "isCorrect": true
+        },
+        {
+          "id": "a3",
+          "text": "طعام",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a2",
+      "explanation": "'عادة' (ādah) means habit.",
+      "hint": {
+        "transliteration": "ādah",
+        "arabic": "عادة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I wake up early' with the correct verb.",
+      "options": [
+        {
+          "id": "b1",
+          "text": "أنام",
+          "isCorrect": false
+        },
+        {
+          "id": "b2",
+          "text": "أستيقظ",
+          "isCorrect": true
+        },
+        {
+          "id": "b3",
+          "text": "أشرب",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b2",
+      "explanation": "'أستيقظ' (astayqithu) means 'I wake up'.",
+      "hint": {
+        "transliteration": "astayqithu",
+        "arabic": "أستيقظ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which verb means 'I eat'?",
+      "options": [
+        {
+          "id": "c1",
+          "text": "أستيقظ",
+          "isCorrect": false
+        },
+        {
+          "id": "c2",
+          "text": "أذهب",
+          "isCorrect": false
+        },
+        {
+          "id": "c3",
+          "text": "آكل",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c3",
+      "explanation": "'آكل' (aakulu) means 'I eat'.",
+      "hint": {
+        "transliteration": "aakulu",
+        "arabic": "آكل"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Time Expressions: In the morning, In the evening/at night"
+        },
+        "text": "To specify when activities happen, you'll need time expressions like 'in the morning' and 'in the evening/at night'.",
+        "examples": [
+          {
+            "arabic": "في الصباح",
+            "english": "In the morning",
+            "transliteration": "fi as-sabah"
+          },
+          {
+            "arabic": "في المساء",
+            "english": "In the evening / At night",
+            "transliteration": "fi al-masaa'"
+          },
+          {
+            "arabic": "أستيقظ في الصباح.",
+            "english": "I wake up in the morning.",
+            "transliteration": "astayqithu fi as-sabah."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Verb: I drink (أشرب)"
+        },
+        "text": "'أشرب' means 'I drink'. This verb, like 'آكل', is essential for talking about your daily intake. It is also in the present tense, first person singular.",
+        "examples": [
+          {
+            "arabic": "أشربُ",
+            "english": "I drink",
+            "transliteration": "ashrabu"
+          },
+          {
+            "arabic": "أشرب القهوة في الصباح.",
+            "english": "I drink coffee in the morning.",
+            "transliteration": "ashrabu al-qahwah fi as-sabah."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Meal Vocabulary"
+        },
+        "text": "Knowing the names of the main meals will help you describe your eating habits.",
+        "examples": [
+          {
+            "arabic": "الفطور",
+            "english": "Breakfast",
+            "transliteration": "al-futur"
+          },
+          {
+            "arabic": "الغداء",
+            "english": "Lunch",
+            "transliteration": "al-ghada'"
+          },
+          {
+            "arabic": "العشاء",
+            "english": "Dinner",
+            "transliteration": "al-'asha'"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أتناول الغداء في المطعم في المساء.",
+        "english": "I have lunch at the restaurant in the evening.",
+        "transliteration": "atanāwalu al-ghadā' fi al-mat'am fi al-masā'."
+      },
+      "context": "Using meal vocabulary and time expressions."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "في الصباح، أشرب الشاي وآكل الفطور.",
+        "english": "In the morning, I drink tea and eat breakfast.",
+        "transliteration": "fi as-sabah, ashrabu ash-shay wa aakulu al-futur."
+      },
+      "context": "Combining time, drinking, and eating."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic phrase for 'In the morning'?",
+      "options": [
+        {
+          "id": "d1",
+          "text": "في المساء",
+          "isCorrect": false
+        },
+        {
+          "id": "d2",
+          "text": "في الصباح",
+          "isCorrect": true
+        },
+        {
+          "id": "d3",
+          "text": "في الليل",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "d2",
+      "explanation": "'في الصباح' (fi as-sabah) means 'in the morning'.",
+      "hint": {
+        "transliteration": "fi as-sabah",
+        "arabic": "في الصباح"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I ___ water.' (Use the correct verb)",
+      "options": [
+        {
+          "id": "e1",
+          "text": "آكل",
+          "isCorrect": false
+        },
+        {
+          "id": "e2",
+          "text": "أشرب",
+          "isCorrect": true
+        },
+        {
+          "id": "e3",
+          "text": "أستيقظ",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "e2",
+      "explanation": "'أشرب' (ashrabu) means 'I drink'.",
+      "hint": {
+        "transliteration": "ashrabu",
+        "arabic": "أشرب"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which of these words means 'Breakfast'?",
+      "options": [
+        {
+          "id": "f1",
+          "text": "العشاء",
+          "isCorrect": false
+        },
+        {
+          "id": "f2",
+          "text": "الغداء",
+          "isCorrect": false
+        },
+        {
+          "id": "f3",
+          "text": "الفطور",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "f3",
+      "explanation": "'الفطور' (al-futur) is breakfast.",
+      "hint": {
+        "transliteration": "al-futur",
+        "arabic": "الفطور"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Verb: I go (أذهب) and the preposition 'to' (إلى)"
+        },
+        "text": "The verb 'أذهب' means 'I go'. When going 'to' a place, you use the preposition 'إلى'.",
+        "examples": [
+          {
+            "arabic": "أذهبُ",
+            "english": "I go",
+            "transliteration": "ath-habu"
+          },
+          {
+            "arabic": "إلى",
+            "english": "To",
+            "transliteration": "ila"
+          },
+          {
+            "arabic": "أذهبُ إلى العمل.",
+            "english": "I go to work.",
+            "transliteration": "ath-habu ila al-'amal."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Daily Activities: Work and Study"
+        },
+        "text": "Here are common destinations for daily routines.",
+        "examples": [
+          {
+            "arabic": "العمل",
+            "english": "The work / Work",
+            "transliteration": "al-'amal"
+          },
+          {
+            "arabic": "الدراسة",
+            "english": "The study / Studying",
+            "transliteration": "ad-dirasah"
+          },
+          {
+            "arabic": "أذهب إلى الدراسة.",
+            "english": "I go to study (e.g., to school/university).",
+            "transliteration": "ath-habu ila ad-dirasah."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Connectors: Then (ثم), After that (بعد ذلك)"
+        },
+        "text": "To link different activities in your daily program, you can use these connectors.",
+        "examples": [
+          {
+            "arabic": "ثم",
+            "english": "Then",
+            "transliteration": "thumma"
+          },
+          {
+            "arabic": "بعد ذلك",
+            "english": "After that",
+            "transliteration": "ba'da dhalik"
+          },
+          {
+            "arabic": "آكل الفطور، ثم أذهب إلى العمل.",
+            "english": "I eat breakfast, then I go to work.",
+            "transliteration": "aakulu al-futur, thumma ath-habu ila al-'amal."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أذهب إلى الجامعة بعد الفطور.",
+        "english": "I go to the university after breakfast.",
+        "transliteration": "ath-habu ila al-jami'ah ba'da al-futur."
+      },
+      "context": "Using 'أذهب' and 'بعد' to describe an activity sequence."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "في الصباح أستيقظ، ثم أشرب القهوة.",
+        "english": "In the morning I wake up, then I drink coffee.",
+        "transliteration": "fi as-sabah astayqithu, thumma ashrabu al-qahwah."
+      },
+      "context": "Sequencing actions using 'ثم'."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic verb for 'I go'?",
+      "options": [
+        {
+          "id": "g1",
+          "text": "أقرأ",
+          "isCorrect": false
+        },
+        {
+          "id": "g2",
+          "text": "أنام",
+          "isCorrect": false
+        },
+        {
+          "id": "g3",
+          "text": "أذهب",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "g3",
+      "explanation": "'أذهب' (ath-habu) means 'I go'.",
+      "hint": {
+        "transliteration": "ath-habu",
+        "arabic": "أذهب"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I go ___ work.'",
+      "options": [
+        {
+          "id": "h1",
+          "text": "من",
+          "isCorrect": false
+        },
+        {
+          "id": "h2",
+          "text": "في",
+          "isCorrect": false
+        },
+        {
+          "id": "h3",
+          "text": "إلى",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "h3",
+      "explanation": "'إلى' (ila) means 'to'.",
+      "hint": {
+        "transliteration": "ila",
+        "arabic": "إلى"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'then'?",
+      "options": [
+        {
+          "id": "i1",
+          "text": "الآن",
+          "isCorrect": false
+        },
+        {
+          "id": "i2",
+          "text": "ثم",
+          "isCorrect": true
+        },
+        {
+          "id": "i3",
+          "text": "دائماً",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "i2",
+      "explanation": "'ثم' (thumma) means 'then'.",
+      "hint": {
+        "transliteration": "thumma",
+        "arabic": "ثم"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Frequency Adverbs: Always (دائماً), Usually (عادةً)"
+        },
+        "text": "Use these adverbs to describe how often you perform an action. They typically come before or after the verb.",
+        "examples": [
+          {
+            "arabic": "دائماً",
+            "english": "Always",
+            "transliteration": "daa'iman"
+          },
+          {
+            "arabic": "عادةً",
+            "english": "Usually / Normally",
+            "transliteration": "ādatan"
+          },
+          {
+            "arabic": "أذهبُ عادةً إلى العمل بالسيارة.",
+            "english": "I usually go to work by car.",
+            "transliteration": "ath-habu ādatan ila al-'amal bi as-sayyarah."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Frequency Adverbs: Sometimes (أحياناً), Rarely (نادراً)"
+        },
+        "text": "These adverbs help express less frequent activities.",
+        "examples": [
+          {
+            "arabic": "أحياناً",
+            "english": "Sometimes",
+            "transliteration": "ahyaanan"
+          },
+          {
+            "arabic": "نادراً",
+            "english": "Rarely",
+            "transliteration": "naadiran"
+          },
+          {
+            "arabic": "نادراً ما آكل في الخارج.",
+            "english": "I rarely eat out.",
+            "transliteration": "naadiran ma aakulu fi al-kharij."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'What do you do?' (ماذا تفعلُ؟ / ماذا تفعلينَ؟)"
+        },
+        "text": "To ask about someone's daily activities, use 'ماذا تفعل؟' (to a male) or 'ماذا تفعلين؟' (to a female). Pay attention to the verb endings.",
+        "examples": [
+          {
+            "arabic": "ماذا تفعلُ؟",
+            "english": "What do you do? (to a male)",
+            "transliteration": "madha taf'alu",
+            "diacriticalNotes": "The 'ُ' (dammah) on the last letter indicates masculine singular."
+          },
+          {
+            "arabic": "ماذا تفعلينَ؟",
+            "english": "What do you do? (to a female)",
+            "transliteration": "madha taf'aleena",
+            "diacriticalNotes": "The 'ينَ' (eena) ending indicates feminine singular."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ماذا تفعلُ عادةً في المساء؟",
+        "english": "What do you usually do in the evening? (to a male)",
+        "transliteration": "madha taf'alu ādatan fi al-masaa'?"
+      },
+      "context": "Asking about a male's evening routine using a frequency adverb."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أحياناً، أشرب القهوة في المساء.",
+        "english": "Sometimes, I drink coffee in the evening.",
+        "transliteration": "ahyaanan, ashrabu al-qahwah fi al-masaa'."
+      },
+      "context": "Using 'أحياناً' to describe an occasional habit."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'always' in Arabic?",
+      "options": [
+        {
+          "id": "j1",
+          "text": "أحياناً",
+          "isCorrect": false
+        },
+        {
+          "id": "j2",
+          "text": "نادراً",
+          "isCorrect": false
+        },
+        {
+          "id": "j3",
+          "text": "دائماً",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "j3",
+      "explanation": "'دائماً' (daa'iman) means 'always'.",
+      "hint": {
+        "transliteration": "daa'iman",
+        "arabic": "دائماً"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I ___ go to the gym.' (Use 'sometimes')",
+      "options": [
+        {
+          "id": "k1",
+          "text": "دائماً",
+          "isCorrect": false
+        },
+        {
+          "id": "k2",
+          "text": "أحياناً",
+          "isCorrect": true
+        },
+        {
+          "id": "k3",
+          "text": "نادراً",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "k2",
+      "explanation": "'أحياناً' (ahyaanan) means 'sometimes'.",
+      "hint": {
+        "transliteration": "ahyaanan",
+        "arabic": "أحياناً"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would you ask 'What do you do?' to a female?",
+      "options": [
+        {
+          "id": "l1",
+          "text": "ماذا تفعلُ؟",
+          "isCorrect": false
+        },
+        {
+          "id": "l2",
+          "text": "ماذا تفعلينَ؟",
+          "isCorrect": true
+        },
+        {
+          "id": "l3",
+          "text": "ماذا تفعلون؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "l2",
+      "explanation": "'ماذا تفعلينَ؟' (madha taf'aleena) is used for a female.",
+      "hint": {
+        "transliteration": "madha taf'aleena",
+        "arabic": "ماذا تفعلينَ؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Verb: I read (أقرأ)"
+        },
+        "text": "'أقرأ' means 'I read'. This is a useful verb for describing leisure activities or study habits.",
+        "examples": [
+          {
+            "arabic": "أقرأُ",
+            "english": "I read",
+            "transliteration": "aqra'u"
+          },
+          {
+            "arabic": "كتاباً",
+            "english": "A book",
+            "transliteration": "kitaban"
+          },
+          {
+            "arabic": "أقرأُ كتاباً في المساء.",
+            "english": "I read a book in the evening.",
+            "transliteration": "aqra'u kitaban fi al-masaa'."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Verb: I watch (أشاهد)"
+        },
+        "text": "'أشاهد' means 'I watch'. Use this for watching TV, movies, or other visual media.",
+        "examples": [
+          {
+            "arabic": "أشاهدُ",
+            "english": "I watch",
+            "transliteration": "ushahidu"
+          },
+          {
+            "arabic": "التلفاز",
+            "english": "The television / TV",
+            "transliteration": "at-tilfaz"
+          },
+          {
+            "arabic": "أشاهد التلفاز بعد العشاء.",
+            "english": "I watch TV after dinner.",
+            "transliteration": "ushahidu at-tilfaz ba'da al-'asha'."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Verb: I sleep (أنام)"
+        },
+        "text": "'أنام' means 'I sleep'. This verb completes the cycle of your daily routine.",
+        "examples": [
+          {
+            "arabic": "أنامُ",
+            "english": "I sleep",
+            "transliteration": "anaamu"
+          },
+          {
+            "arabic": "أنامُ مبكراً في الليل.",
+            "english": "I sleep early at night.",
+            "transliteration": "anaamu mubakkiran fi al-layl."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "في الليل، أشاهد التلفاز ثم أنام.",
+        "english": "At night, I watch TV then I sleep.",
+        "transliteration": "fi al-layl, ushahidu at-tilfaz thumma anaam."
+      },
+      "context": "Describing evening activities before sleeping."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أقرأُ كتاباً قبل أن أنام.",
+        "english": "I read a book before I sleep.",
+        "transliteration": "aqra'u kitaban qabla an anaam."
+      },
+      "context": "Combining reading with the act of sleeping."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which verb means 'I read'?",
+      "options": [
+        {
+          "id": "m1",
+          "text": "أنام",
+          "isCorrect": false
+        },
+        {
+          "id": "m2",
+          "text": "أشاهد",
+          "isCorrect": false
+        },
+        {
+          "id": "m3",
+          "text": "أقرأ",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "m3",
+      "explanation": "'أقرأ' (aqra'u) means 'I read'.",
+      "hint": {
+        "transliteration": "aqra'u",
+        "arabic": "أقرأ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I ___ television.' (Use the correct verb)",
+      "options": [
+        {
+          "id": "n1",
+          "text": "آكل",
+          "isCorrect": false
+        },
+        {
+          "id": "n2",
+          "text": "أشاهد",
+          "isCorrect": true
+        },
+        {
+          "id": "n3",
+          "text": "أذهب",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "n2",
+      "explanation": "'أشاهد' (ushahidu) means 'I watch'.",
+      "hint": {
+        "transliteration": "ushahidu",
+        "arabic": "أشاهد"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic verb for 'I sleep'?",
+      "options": [
+        {
+          "id": "o1",
+          "text": "أستيقظ",
+          "isCorrect": false
+        },
+        {
+          "id": "o2",
+          "text": "أنام",
+          "isCorrect": true
+        },
+        {
+          "id": "o3",
+          "text": "أشرب",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "o2",
+      "explanation": "'أنام' (anaamu) means 'I sleep'.",
+      "hint": {
+        "transliteration": "anaamu",
+        "arabic": "أنام"
+      }
+    }
+  ]
+}

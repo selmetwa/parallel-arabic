@@ -1,0 +1,892 @@
+{
+  "topicId": "m5-t2",
+  "title": "Asking about the location of things (Part 2): Advanced questions and directions",
+  "dialect": "egyptian-arabic",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Do you know where... is?",
+          "arabic": "هل تعرف فين...؟ / تعرف فين...؟"
+        },
+        "text": "To ask if someone knows the location of something in Egyptian Arabic, you can use 'تعرف فين...؟' (Ta'raf feen...?) for a more direct, informal approach, or 'هل تعرف فين...؟' (Hal ta'raf feen...?) for a slightly more formal but still common way. Remember, 'فين' (feen) means 'where'.",
+        "examples": [
+          {
+            "arabic": "تعرف فين محطة المترو؟",
+            "english": "Do you know where the metro station is?",
+            "transliteration": "Ta'raf feen mahattet el-metro?"
+          },
+          {
+            "arabic": "هل تعرف فين أقرب مستشفى؟",
+            "english": "Do you know where the nearest hospital is?",
+            "transliteration": "Hal ta'raf feen aqrab mostashfa?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Could you tell me where... is?",
+          "arabic": "ممكن تقول لي فين...؟"
+        },
+        "text": "This is a polite way to ask for directions or a location. 'ممكن' (mumkin) means 'possible' or 'can I/you', and 'تقول لي' (ta'ool li) means 'you tell me'. It directly translates to 'Is it possible for you to tell me where...?'.",
+        "examples": [
+          {
+            "arabic": "ممكن تقول لي فين أقرب بنك؟",
+            "english": "Could you tell me where the nearest bank is?",
+            "transliteration": "Mumkin ta'ool-li feen aqrab bank?"
+          },
+          {
+            "arabic": "ممكن تقول لي فين قسم الشرطة؟",
+            "english": "Could you tell me where the police station is?",
+            "transliteration": "Mumkin ta'ool-li feen qism esh-shorta?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking about something *near* something else",
+          "arabic": "قريب من...؟"
+        },
+        "text": "To ask if a place is near another specific landmark or location, you use 'قريب من' (orayyib min) meaning 'near to'. 'قريب' (orayyib) is masculine, 'قريبة' (orayyiba) is feminine. When asking a question, you can simply raise your intonation or add 'هل' (hal) for formality.",
+        "examples": [
+          {
+            "arabic": "المطعم قريب من الفندق؟",
+            "english": "Is the restaurant near the hotel?",
+            "transliteration": "El-mat'am orayyib min el-fondoq?"
+          },
+          {
+            "arabic": "المكتبة قريبة من الجامعة؟",
+            "english": "Is the library near the university?",
+            "transliteration": "El-maktaba orayyiba min el-gam'a?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "تعرف فين أقرب صيدلية؟",
+        "english": "Do you know where the nearest pharmacy is?",
+        "transliteration": "Ta'raf feen aqrab saydaliya?"
+      },
+      "context": "A direct question asking for the location of a pharmacy."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ممكن تقول لي فين المتحف؟",
+        "english": "Could you tell me where the museum is?",
+        "transliteration": "Mumkin ta'ool-li feen el-matḥaf?"
+      },
+      "context": "A polite request for directions to a museum."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "المحل قريب من بيتك؟",
+        "english": "Is the shop near your house?",
+        "transliteration": "El-maḥall orayyib min baitak?"
+      },
+      "context": "Asking if a specific shop is close to someone's home."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Choose the correct polite phrase to ask 'Could you tell me where the market is?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "تعرف السوق فين؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ممكن تقول لي فين السوق؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "السوق قريب من هنا؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'ممكن تقول لي فين...؟' is the polite way to ask 'Could you tell me where...?'.",
+      "hint": {
+        "transliteration": "Mumkin ta'ool-li feen es-souq?",
+        "arabic": "ممكن تقول لي فين السوق؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Fill in the blank to ask: 'Do you know ___ the train station is?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "إزاي",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "فين",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "إمتى",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'فين' (feen) means 'where' and is used to ask about location.",
+      "hint": {
+        "transliteration": "feen",
+        "arabic": "فين"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'near' (masculine) in Egyptian Arabic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بعيد",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "قريب",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "فوق",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'قريب' (orayyib) means 'near' (masculine).",
+      "hint": {
+        "transliteration": "orayyib",
+        "arabic": "قريب"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "How can I get to...?",
+          "arabic": "إزاي أروح لـ...؟"
+        },
+        "text": "When you're directly asking for directions on how to reach a place, 'إزاي أروح لـ...؟' (Ezai arouh li...?) is the most common phrase. 'إزاي' (ezai) means 'how', and 'أروح' (arouh) means 'I go/get'. The 'لـ' (li) acts as 'to'.",
+        "examples": [
+          {
+            "arabic": "إزاي أروح لـميدان التحرير؟",
+            "english": "How can I get to Tahrir Square?",
+            "transliteration": "Ezai arouh li-midan et-taḥrir?"
+          },
+          {
+            "arabic": "إزاي أروح لـأهرامات الجيزة؟",
+            "english": "How can I get to the Giza Pyramids?",
+            "transliteration": "Ezai arouh li-ahramat el-giza?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Is it far from here?",
+          "arabic": "هي بعيدة من هنا؟"
+        },
+        "text": "To ask about the distance, you can use 'بعيدة من هنا؟' (ba'eeda min hena?). 'بعيدة' (ba'eeda) means 'far' (feminine), and 'من هنا' (min hena) means 'from here'. For a masculine noun, it would be 'هو بعيد من هنا؟' (howa ba'eed min hena?).",
+        "examples": [
+          {
+            "arabic": "المحطة بعيدة من هنا؟",
+            "english": "Is the station far from here?",
+            "transliteration": "El-maḥaṭṭa ba'eeda min hena?"
+          },
+          {
+            "arabic": "المول بعيد من هنا؟",
+            "english": "Is the mall far from here?",
+            "transliteration": "El-mol ba'eed min hena?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Is it close?",
+          "arabic": "هي قريبة؟"
+        },
+        "text": "Similar to 'is it far?', you can ask 'Is it close?' using 'هي قريبة؟' (hiyya orayyiba?) for feminine nouns or 'هو قريب؟' (howa orayyib?) for masculine nouns. 'قريبة' (orayyiba) is 'close' (feminine).",
+        "examples": [
+          {
+            "arabic": "العيادة قريبة؟",
+            "english": "Is the clinic close?",
+            "transliteration": "El-'iyada orayyiba?"
+          },
+          {
+            "arabic": "البنزينة قريبة؟",
+            "english": "Is the gas station close?",
+            "transliteration": "El-banzina orayyiba?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "إزاي أروح لـمحطة الأتوبيس؟",
+        "english": "How can I get to the bus station?",
+        "transliteration": "Ezai arouh li-maḥaṭṭet el-autobees?"
+      },
+      "context": "Asking for directions to a bus station."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "السينما بعيدة من هنا ولا قريبة؟",
+        "english": "Is the cinema far from here or close?",
+        "transliteration": "Es-sinema ba'eeda min hena walla orayyiba?"
+      },
+      "context": "Asking about the distance of the cinema."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الشاطئ بعيد من هنا؟",
+        "english": "Is the beach far from here?",
+        "transliteration": "Esh-shaṭi' ba'eed min hena?"
+      },
+      "context": "Asking if the beach is a long distance away."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'How can I get to the airport?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "فين المطار؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "المطار قريب؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "إزاي أروح لـلمطار؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'إزاي أروح لـ...؟' is used to ask 'How can I get to...?'",
+      "hint": {
+        "transliteration": "Ezai arouh lil-maṭar?",
+        "arabic": "إزاي أروح لـلمطار؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'الجامعة ___ من هنا؟' (Is the university far from here?)",
+      "options": [
+        {
+          "id": "a",
+          "text": "قريب",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بعيدة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "تحت",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'الجامعة' (el-gam'a) is feminine, so it takes the feminine adjective 'بعيدة' (ba'eeda).",
+      "hint": {
+        "transliteration": "ba'eeda",
+        "arabic": "بعيدة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which of these means 'close' (feminine)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بعيد",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "قريبة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "فوق",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'قريبة' (orayyiba) is the feminine form of 'close'.",
+      "hint": {
+        "transliteration": "orayyiba",
+        "arabic": "قريبة"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Go straight",
+          "arabic": "إمشي طوالي / إمشي على طول"
+        },
+        "text": "To give the instruction to 'go straight', you can use either 'إمشي طوالي' (Emshi tawali) or 'إمشي على طول' (Emshi 'ala tool). Both are very common and mean the same. 'إمشي' (emshi) is the command form for 'go/walk'.",
+        "examples": [
+          {
+            "arabic": "إمشي طوالي وبعدين لِف يمين.",
+            "english": "Go straight and then turn right.",
+            "transliteration": "Emshi tawali w ba'deen liff yemeen."
+          },
+          {
+            "arabic": "إمشي على طول لحد ما تشوف البنك.",
+            "english": "Go straight until you see the bank.",
+            "transliteration": "Emshi 'ala tool liḥadd ma teshuf el-bank."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Turn right",
+          "arabic": "لِف يمين / خش يمين"
+        },
+        "text": "To instruct someone to 'turn right', you can use 'لِف يمين' (Liff yemeen) or 'خش يمين' (Khosh yemeen). 'لِف' (liff) means 'turn' and 'خش' (khosh) means 'enter' but is commonly used for turning in directions. 'يمين' (yemeen) is 'right'.",
+        "examples": [
+          {
+            "arabic": "عند الإشارة، لِف يمين.",
+            "english": "At the traffic light, turn right.",
+            "transliteration": " 'And el-ishara, liff yemeen."
+          },
+          {
+            "arabic": "خش يمين بعد الصيدلية.",
+            "english": "Turn right after the pharmacy.",
+            "transliteration": "Khosh yemeen ba'd es-saydaliya."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Turn left",
+          "arabic": "لِف شمال / خش شمال"
+        },
+        "text": "Similarly, to instruct someone to 'turn left', you use 'لِف شمال' (Liff shemal) or 'خش شمال' (Khosh shemal). 'شمال' (shemal) means 'left'.",
+        "examples": [
+          {
+            "arabic": "بعد الكوبري، لِف شمال.",
+            "english": "After the bridge, turn left.",
+            "transliteration": "Ba'd el-kobri, liff shemal."
+          },
+          {
+            "arabic": "خش شمال عند أول شارع.",
+            "english": "Turn left at the first street.",
+            "transliteration": "Khosh shemal 'and awwal shari'."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "إمشي طوالي وبعدين خش يمين.",
+        "english": "Go straight and then turn right.",
+        "transliteration": "Emshi tawali w ba'deen khosh yemeen."
+      },
+      "context": "A common sequence of directions."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "إمشي على طول لحد ما تلاقي مدرسة على شمالك.",
+        "english": "Go straight until you find a school on your left.",
+        "transliteration": "Emshi 'ala tool liḥadd ma tla'i madrasa 'ala shemalak."
+      },
+      "context": "Using a landmark for direction."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "لِف شمال عند البنك.",
+        "english": "Turn left at the bank.",
+        "transliteration": "Liff shemal 'and el-bank."
+      },
+      "context": "Giving a turn instruction using a landmark."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Egyptian Arabic phrase for 'Go straight'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "لِف يمين",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "إمشي طوالي",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "إمشي شمال",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'إمشي طوالي' (Emshi tawali) or 'إمشي على طول' (Emshi 'ala tool) both mean 'go straight'.",
+      "hint": {
+        "transliteration": "Emshi tawali",
+        "arabic": "إمشي طوالي"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Fill in the blank: 'خش ___ بعد الإشارة.' (Turn right after the traffic light.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "شمال",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "يمين",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "فوق",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'يمين' (yemeen) means 'right'.",
+      "hint": {
+        "transliteration": "yemeen",
+        "arabic": "يمين"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'Turn left'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "لِف شمال",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "لِف يمين",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "إمشي طوالي",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "'لِف شمال' (Liff shemal) means 'turn left'.",
+      "hint": {
+        "transliteration": "Liff shemal",
+        "arabic": "لِف شمال"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "It's next to...",
+          "arabic": "هي جنب... / هي بجانب..."
+        },
+        "text": "To describe something's location relative to another object, you can say 'هي جنب...' (Hiyya gamb...) or 'هي بجانب...' (Hiyya bi-ganib...). Both mean 'it's next to' or 'it's beside'. 'جنب' (gamb) is more common in spoken Egyptian Arabic. Remember to match the gender of the noun with 'هو' (howa) for masculine or 'هي' (hiyya) for feminine.",
+        "examples": [
+          {
+            "arabic": "المكتبة جنب البنك.",
+            "english": "The library is next to the bank.",
+            "transliteration": "El-maktaba gamb el-bank."
+          },
+          {
+            "arabic": "المطعم بجانب الصيدلية.",
+            "english": "The restaurant is next to the pharmacy.",
+            "transliteration": "El-mat'am bi-ganib es-saydaliya."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "It's opposite...",
+          "arabic": "هي قصاد... / هي في وشّ..."
+        },
+        "text": "To say something is 'opposite' another landmark, you can use 'هي قصاد...' (Hiyya ossad...) or 'هي في وشّ...' (Hiyya fi weshsh...). 'قصاد' (ossad) is more literal, while 'في وشّ' (fi weshsh) literally means 'in front of the face of' but is commonly used to mean 'opposite' or 'facing'.",
+        "examples": [
+          {
+            "arabic": "السينما قصاد المتحف.",
+            "english": "The cinema is opposite the museum.",
+            "transliteration": "Es-sinema ossad el-matḥaf."
+          },
+          {
+            "arabic": "المستشفى في وشّ الجراج.",
+            "english": "The hospital is opposite the garage.",
+            "transliteration": "El-mostashfa fi weshsh el-garag."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "It's before/after...",
+          "arabic": "هي قبل... / هي بعد..."
+        },
+        "text": "To describe a location relative to another in terms of sequence (e.g., you pass one thing before reaching the other), use 'هي قبل...' (Hiyya abl...) meaning 'it's before' or 'هي بعد...' (Hiyya ba'd...) meaning 'it's after'. These are crucial for giving sequential directions.",
+        "examples": [
+          {
+            "arabic": "المخبز قبل السوبر ماركت.",
+            "english": "The bakery is before the supermarket.",
+            "transliteration": "El-makhbaz abl es-souper market."
+          },
+          {
+            "arabic": "المكتبة بعد المطعم.",
+            "english": "The library is after the restaurant.",
+            "transliteration": "El-maktaba ba'd el-mat'am."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "المدرسة جنب المسجد.",
+        "english": "The school is next to the mosque.",
+        "transliteration": "El-madrasa gamb el-masgid."
+      },
+      "context": "Describing the location of a school relative to a mosque."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "المحل قصاد الفندق.",
+        "english": "The shop is opposite the hotel.",
+        "transliteration": "El-maḥall ossad el-fondoq."
+      },
+      "context": "Indicating the shop's location across from the hotel."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "المطعم بعد البنك على طول.",
+        "english": "The restaurant is right after the bank.",
+        "transliteration": "El-mat'am ba'd el-bank 'ala tool."
+      },
+      "context": "Giving a precise sequential location."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'It's next to the cinema' (assuming 'it' is feminine)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "هي قصاد السينما",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "هي جنب السينما",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "هي بعد السينما",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'هي جنب...' (Hiyya gamb...) means 'it's next to...'.",
+      "hint": {
+        "transliteration": "Hiyya gamb es-sinema",
+        "arabic": "هي جنب السينما"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'الصيدلية ___ المتحف.' (The pharmacy is opposite the museum.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "جنب",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "قصاد",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "قبل",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'قصاد' (ossad) means 'opposite'.",
+      "hint": {
+        "transliteration": "ossad",
+        "arabic": "قصاد"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'The cafe is after the bank'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "القهوة قبل البنك",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "القهوة بعد البنك",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "القهوة جنب البنك",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'بعد' (ba'd) means 'after'.",
+      "hint": {
+        "transliteration": "El-ahwa ba'd el-bank",
+        "arabic": "القهوة بعد البنك"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Do I cross the street?",
+          "arabic": "هعدّي الشارع؟"
+        },
+        "text": "When receiving directions, you might need to confirm if you need to cross the street. You can ask 'هعدّي الشارع؟' (Ha'addi esh-shari'?). 'هعدّي' (ha'addi) means 'I will cross', and 'الشارع' (esh-shari') means 'the street'.",
+        "examples": [
+          {
+            "arabic": "هعدّي الشارع ولا هو في نفس الناحية؟",
+            "english": "Do I cross the street, or is it on the same side?",
+            "transliteration": "Ha'addi esh-shari' walla howa fi nafs en-nahya?"
+          },
+          {
+            "arabic": "أول ما توصل، هعدّي الشارع؟",
+            "english": "Once I arrive, do I cross the street?",
+            "transliteration": "Awwal ma tosal, ha'addi esh-shari'?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Is it on the first/second floor?",
+          "arabic": "هل هو في الدور الأول/التاني؟"
+        },
+        "text": "For locations within a building, you might ask about the floor. 'هل هو في الدور الأول؟' (Hal howa fi ed-door el-awwal?) means 'Is it on the first floor?'. 'الدور' (ed-door) means 'floor'. 'الأول' (el-awwal) is 'first', and 'التاني' (et-tani) is 'second'. Remember to use 'هي' (hiyya) for feminine nouns.",
+        "examples": [
+          {
+            "arabic": "المكتب في الدور التاني؟",
+            "english": "Is the office on the second floor?",
+            "transliteration": "El-maktab fi ed-door et-tani?"
+          },
+          {
+            "arabic": "العيادة في الدور الأول.",
+            "english": "The clinic is on the first floor.",
+            "transliteration": "El-'iyada fi ed-door el-awwal."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Thank you for your help",
+          "arabic": "شكراً على مساعدتك"
+        },
+        "text": "It's always polite to thank someone for their help, especially after they've given you directions. 'شكراً على مساعدتك' (Shokran 'ala mosa'adtak) means 'Thank you for your help'. You can also use 'متشكر جداً' (Metshakkir giddan) meaning 'very thankful' (masculine speaker) or 'متشكرة جداً' (Metshakkira giddan) for a feminine speaker.",
+        "examples": [
+          {
+            "arabic": "شكراً على مساعدتك، عرفت أوصل دلوقتي.",
+            "english": "Thank you for your help, I know how to get there now.",
+            "transliteration": "Shokran 'ala mosa'adtak, 'areft awṣal dilwa'ti."
+          },
+          {
+            "arabic": "متشكر جداً يا فندم.",
+            "english": "Thank you very much, sir/madam.",
+            "transliteration": "Metshakkir giddan ya fandam."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هعدّي الشارع عشان أوصل للبنك؟",
+        "english": "Do I cross the street to get to the bank?",
+        "transliteration": "Ha'addi esh-shari' 'ashan awṣal lil-bank?"
+      },
+      "context": "Asking for confirmation about crossing the street."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "المحل في الدور الأول.",
+        "english": "The shop is on the first floor.",
+        "transliteration": "El-maḥall fi ed-door el-awwal."
+      },
+      "context": "Stating the floor number for a shop."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "متشكر جداً لمساعدتك.",
+        "english": "Thank you very much for your help.",
+        "transliteration": "Metshakkir giddan li-mosa'adtak."
+      },
+      "context": "A polite thank you to someone who helped with directions (male speaker)."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'Do I cross the street?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "فين الشارع؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "إمشي في الشارع؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "هعدّي الشارع؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'هعدّي الشارع؟' (Ha'addi esh-shari'?) means 'Do I cross the street?'.",
+      "hint": {
+        "transliteration": "Ha'addi esh-shari'?",
+        "arabic": "هعدّي الشارع؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'العيادة في الدور ___.' (The clinic is on the second floor.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "الأول",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "التاني",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "التالت",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'التاني' (et-tani) means 'second'.",
+      "hint": {
+        "transliteration": "et-tani",
+        "arabic": "التاني"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase expresses 'Thank you for your help'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "صباح الخير",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شكراً على مساعدتك",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مع السلامة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'شكراً على مساعدتك' (Shokran 'ala mosa'adtak) is the correct phrase.",
+      "hint": {
+        "transliteration": "Shokran 'ala mosa'adtak",
+        "arabic": "شكراً على مساعدتك"
+      }
+    }
+  ]
+}

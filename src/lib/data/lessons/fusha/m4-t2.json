@@ -1,0 +1,874 @@
+{
+  "topicId": "m4-t2",
+  "title": "At the Supermarket",
+  "dialect": "fusha",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Supermarket and Shopping"
+        },
+        "text": "When you go to buy groceries, you typically visit a 'supermarket'. Learning these basic words will help you begin your shopping trip.",
+        "examples": [
+          {
+            "arabic": "سوبر ماركت",
+            "english": "supermarket",
+            "transliteration": "sūbar mārcat"
+          },
+          {
+            "arabic": "تسوق",
+            "english": "shopping (noun/gerund)",
+            "transliteration": "tasawwuq"
+          },
+          {
+            "arabic": "أنا أتسوق",
+            "english": "I am shopping",
+            "transliteration": "anā atasawwaq"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Basic Groceries: Bread, Milk, Eggs"
+        },
+        "text": "Let's learn some of the most common items you might buy at a supermarket: bread, milk, and eggs.",
+        "examples": [
+          {
+            "arabic": "خبز",
+            "english": "bread",
+            "transliteration": "khubz"
+          },
+          {
+            "arabic": "حليب",
+            "english": "milk",
+            "transliteration": "ḥalīb"
+          },
+          {
+            "arabic": "بيض",
+            "english": "eggs",
+            "transliteration": "bayḍ"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'What do you want?'"
+        },
+        "text": "When a shop assistant asks you what you want, they will use one of these phrases, depending on your gender. Notice the subtle difference in the ending vowel.",
+        "examples": [
+          {
+            "arabic": "ماذا تريد؟",
+            "english": "What do you want? (to a male)",
+            "transliteration": "mādhā turīd?",
+            "diacriticalNotes": "The 'd' in 'تريد' has a sukoon. The ending is silent for a male."
+          },
+          {
+            "arabic": "ماذا تُريدين؟",
+            "english": "What do you want? (to a female)",
+            "transliteration": "mādhā turīdīn?",
+            "diacriticalNotes": "The 'd' in 'تُريدين' has a kasra, followed by 'ya' and 'noon' with a fatḥa."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا ذاهب إلى السوبر ماركت لأتسوق.",
+        "english": "I am going to the supermarket to shop.",
+        "transliteration": "anā dhāhib ilā as-sūbar mārcat li-atasawwaq."
+      },
+      "context": "Using 'supermarket' and 'to shop'."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أريد خبزاً وحليباً وبيضا.",
+        "english": "I want bread, milk, and eggs.",
+        "transliteration": "urīd khubzan wa ḥalīban wa bayḍan."
+      },
+      "context": "Listing common grocery items after 'I want'."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'I am shopping'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أنا أتسوق",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "أنا أذهب",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "أنا أكل",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "أنا أتسوق (anā atasawwaq) translates to 'I am shopping'.",
+      "hint": {
+        "transliteration": "anā atasawwaq",
+        "arabic": "أنا أتسوق"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'What do you want?' to a male?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ماذا تريدين؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ماذا تريد؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "ما هذا؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "ماذا تريد؟ (mādhā turīd?) is used when addressing a male. ماذا تُريدين؟ (mādhā turīdīn?) is for a female.",
+      "hint": {
+        "transliteration": "mādhā turīd?",
+        "arabic": "ماذا تريد؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: أنا أريد ___ (milk) و ___ (bread).",
+      "options": [
+        {
+          "id": "a",
+          "text": "حليباً، خبزاً",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "ماءً، بيضاً",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "لحماً، فواكه",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "The words for milk and bread are حليباً (ḥalīban) and خبزاً (khubzan) respectively.",
+      "hint": {
+        "transliteration": "ḥalīban, khubzan",
+        "arabic": "حليباً، خبزاً"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Quantities: Kilogram, Piece, Box"
+        },
+        "text": "When buying items, especially produce, you'll need to specify quantities. These are common units of measurement.",
+        "examples": [
+          {
+            "arabic": "كيلوغرام",
+            "english": "kilogram",
+            "transliteration": "kīlūghrām"
+          },
+          {
+            "arabic": "قطعة",
+            "english": "piece / item",
+            "transliteration": "qiṭʿah"
+          },
+          {
+            "arabic": "صندوق",
+            "english": "box",
+            "transliteration": "ṣundūq"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Common Items: Fruits, Vegetables, Meat"
+        },
+        "text": "Expanding on your grocery list, here are essential categories of food you'll find.",
+        "examples": [
+          {
+            "arabic": "فاكهة",
+            "english": "fruit (singular)",
+            "transliteration": "fākihah"
+          },
+          {
+            "arabic": "فواكه",
+            "english": "fruits (plural)",
+            "transliteration": "fawākih"
+          },
+          {
+            "arabic": "خضروات",
+            "english": "vegetables",
+            "transliteration": "khuḍrawāt"
+          },
+          {
+            "arabic": "لحم",
+            "english": "meat",
+            "transliteration": "laḥm"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'How much is this?'"
+        },
+        "text": "An important question to ask before buying something is its price. This phrase is used universally.",
+        "examples": [
+          {
+            "arabic": "بكم هذا؟",
+            "english": "How much is this? (masculine)",
+            "transliteration": "bi-kam hādhā?"
+          },
+          {
+            "arabic": "بكم هذه؟",
+            "english": "How much is this? (feminine)",
+            "transliteration": "bi-kam hādhihi?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أريد كيلوغراماً واحداً من الفاكهة.",
+        "english": "I want one kilogram of fruit.",
+        "transliteration": "urīd kīlūghrāman wāḥidan min al-fākihah."
+      },
+      "context": "Using a quantity and 'fruit'."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بكم هذا اللحم؟",
+        "english": "How much is this meat?",
+        "transliteration": "bi-kam hādhā al-laḥm?"
+      },
+      "context": "Asking the price of meat."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'kilogram'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "صندوق",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كيلوغرام",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "قطعة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "كيلوغرام (kīlūghrām) means 'kilogram'.",
+      "hint": {
+        "transliteration": "kīlūghrām",
+        "arabic": "كيلوغرام"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'vegetables'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "فواكه",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "خضروات",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "لحم",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "خضروات (khuḍrawāt) means 'vegetables'.",
+      "hint": {
+        "transliteration": "khuḍrawāt",
+        "arabic": "خضروات"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: أريد __ (a piece) من __ (fruit).",
+      "options": [
+        {
+          "id": "a",
+          "text": "قطعةً، الفاكهة",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "صندوقاً، اللحم",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "كيلوغراماً، الخبز",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "The words are قطعةً (qiṭʿatan) for 'a piece' and الفاكهة (al-fākihah) for 'the fruit'.",
+      "hint": {
+        "transliteration": "qiṭʿatan, al-fākihah",
+        "arabic": "قطعةً، الفاكهة"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Beverages: Water, Juice, Coffee"
+        },
+        "text": "Don't forget to stock up on drinks! Here are some common options.",
+        "examples": [
+          {
+            "arabic": "ماء",
+            "english": "water",
+            "transliteration": "māʾ"
+          },
+          {
+            "arabic": "عصير",
+            "english": "juice",
+            "transliteration": "ʿaṣīr"
+          },
+          {
+            "arabic": "قهوة",
+            "english": "coffee",
+            "transliteration": "qahwah"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Dairy Products: Cheese, Yogurt"
+        },
+        "text": "The dairy section is usually a must-visit. Here are two popular items.",
+        "examples": [
+          {
+            "arabic": "جبنة",
+            "english": "cheese",
+            "transliteration": "jubnah"
+          },
+          {
+            "arabic": "زبادي",
+            "english": "yogurt",
+            "transliteration": "zabādī"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for Section Location: 'Where is the... section?'"
+        },
+        "text": "If you can't find something, you can ask a staff member where a particular section is.",
+        "examples": [
+          {
+            "arabic": "أين قِسمُ الخضروات؟",
+            "english": "Where is the vegetables section?",
+            "transliteration": "ayna qismu al-khuḍrawāt?"
+          },
+          {
+            "arabic": "أين قِسمُ الأجبان؟",
+            "english": "Where is the cheese section?",
+            "transliteration": "ayna qismu al-ajbān?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هل عندكم عصير وقهوة؟",
+        "english": "Do you have juice and coffee?",
+        "transliteration": "hal ʿindakum ʿaṣīr wa qahwah?"
+      },
+      "context": "Asking about availability of beverages."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أين قِسمُ الألبان؟ أريد جبنة وزبادي.",
+        "english": "Where is the dairy section? I want cheese and yogurt.",
+        "transliteration": "ayna qismu al-albān? urīd jubnah wa zabādī."
+      },
+      "context": "Asking for the dairy section to buy cheese and yogurt."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which Arabic word means 'water'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "عصير",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "قهوة",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "ماء",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "ماء (māʾ) is the Arabic word for 'water'.",
+      "hint": {
+        "transliteration": "māʾ",
+        "arabic": "ماء"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'Where is the cheese section?'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أين قِسمُ الألبان؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أين قِسمُ الأجبان؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أين قِسمُ الفاكهة؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "قِسمُ الأجبان (qismu al-ajbān) means 'the cheese section'.",
+      "hint": {
+        "transliteration": "ayna qismu al-ajbān?",
+        "arabic": "أين قِسمُ الأجبان؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: أريد __ (cheese) و __ (yogurt).",
+      "options": [
+        {
+          "id": "a",
+          "text": "جبنة، زبادي",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "حليباً، خبزاً",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "ماءً، عصير",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "The words for cheese and yogurt are جبنة (jubnah) and زبادي (zabādī).",
+      "hint": {
+        "transliteration": "jubnah, zabādī",
+        "arabic": "جبنة، زبادي"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "The Bill"
+        },
+        "text": "After you've gathered all your items, you'll go to the checkout to pay and receive your bill.",
+        "examples": [
+          {
+            "arabic": "الفاتورة",
+            "english": "the bill / invoice",
+            "transliteration": "al-fātūrah"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Cashier"
+        },
+        "text": "The person who processes your payment at the checkout counter is called the cashier.",
+        "examples": [
+          {
+            "arabic": "أمين الصندوق",
+            "english": "cashier (male)",
+            "transliteration": "amīn aṣ-ṣundūq"
+          },
+          {
+            "arabic": "أمينة الصندوق",
+            "english": "cashier (female)",
+            "transliteration": "amīnah aṣ-ṣundūq"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Payment Methods: Cash, Credit Card"
+        },
+        "text": "It's important to know how to state your preferred payment method.",
+        "examples": [
+          {
+            "arabic": "نقداً",
+            "english": "in cash",
+            "transliteration": "naqdan"
+          },
+          {
+            "arabic": "بطاقة ائتمان",
+            "english": "credit card",
+            "transliteration": "biṭāqat iʾtimān"
+          },
+          {
+            "arabic": "سأدفع",
+            "english": "I will pay",
+            "transliteration": "sa-adfaʿ"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "كم سعر الفاتورة؟",
+        "english": "How much is the bill?",
+        "transliteration": "kam siʿr al-fātūrah?"
+      },
+      "context": "Asking the total cost of the bill."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "سأدفع نقداً لأمين الصندوق.",
+        "english": "I will pay cash to the cashier.",
+        "transliteration": "sa-adfaʿ naqdan li-amīn aṣ-ṣundūq."
+      },
+      "context": "Indicating payment method and recipient."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'the bill'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "النقود",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الفاتورة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "الشراء",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "الفاتورة (al-fātūrah) means 'the bill'.",
+      "hint": {
+        "transliteration": "al-fātūrah",
+        "arabic": "الفاتورة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'credit card' in Arabic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بطاقة تعريف",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بطاقة ائتمان",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بطاقة عمل",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "بطاقة ائتمان (biṭāqat iʾtimān) means 'credit card'.",
+      "hint": {
+        "transliteration": "biṭāqat iʾtimān",
+        "arabic": "بطاقة ائتمان"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: سأدفع __ (in cash) أو بـ __ (credit card).",
+      "options": [
+        {
+          "id": "a",
+          "text": "نقداً، بطاقة ائتمان",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "يدوياً، شيك",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "جزئياً، تحويل بنكي",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "نقداً (naqdan) means 'in cash' and بطاقة ائتمان (biṭāqat iʾtimān) means 'credit card'.",
+      "hint": {
+        "transliteration": "naqdan, biṭāqat iʾtimān",
+        "arabic": "نقداً، بطاقة ائتمان"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for Assistance: 'Can I help?' / 'Help'"
+        },
+        "text": "Sometimes you might need help or offer it to others. These phrases are useful in a supermarket context.",
+        "examples": [
+          {
+            "arabic": "مساعدة",
+            "english": "help (noun)",
+            "transliteration": "musāʿadah"
+          },
+          {
+            "arabic": "هل يمكنني المساعدة؟",
+            "english": "Can I help? (offering help)",
+            "transliteration": "hal yumkinunī al-musāʿadah?"
+          },
+          {
+            "arabic": "أحتاج مساعدة",
+            "english": "I need help",
+            "transliteration": "aḥtāju musāʿadah"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Checking Availability: 'Do you have...?'"
+        },
+        "text": "Before searching endlessly, it's efficient to ask if a specific item is available.",
+        "examples": [
+          {
+            "arabic": "هل يوجد لديكم حليب؟",
+            "english": "Do you have milk?",
+            "transliteration": "hal yūjad ladaykum ḥalīb?"
+          },
+          {
+            "arabic": "هل يوجد لديكم خبز طازج؟",
+            "english": "Do you have fresh bread?",
+            "transliteration": "hal yūjad ladaykum khubz ṭāzij?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Polite Expressions: 'Thank You' and 'Please'"
+        },
+        "text": "Always remember to be polite. These expressions are fundamental in any interaction.",
+        "examples": [
+          {
+            "arabic": "شكراً",
+            "english": "Thank you",
+            "transliteration": "shukran"
+          },
+          {
+            "arabic": "من فضلك",
+            "english": "Please (to male)",
+            "transliteration": "min faḍlika"
+          },
+          {
+            "arabic": "من فضلكِ",
+            "english": "Please (to female)",
+            "transliteration": "min faḍliki"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أحتاج مساعدة، من فضلك.",
+        "english": "I need help, please.",
+        "transliteration": "aḥtāju musāʿadah, min faḍlika/i."
+      },
+      "context": "Asking for help politely."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هل يوجد لديكم عصير برتقال؟ شكراً.",
+        "english": "Do you have orange juice? Thank you.",
+        "transliteration": "hal yūjad ladaykum ʿaṣīr burtuqāl? shukran."
+      },
+      "context": "Checking availability and expressing gratitude."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'I need help'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أريد شراء",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أحتاج مساعدة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "يمكنني الدفع",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "أحتاج مساعدة (aḥtāju musāʿadah) means 'I need help'.",
+      "hint": {
+        "transliteration": "aḥtāju musāʿadah",
+        "arabic": "أحتاج مساعدة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'Do you have fresh bread?'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "هل يوجد خبز؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "هل تبيعون خبزاً؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "هل يوجد لديكم خبز طازج؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "هل يوجد لديكم خبز طازج؟ (hal yūjad ladaykum khubz ṭāzij?) means 'Do you have fresh bread?'.",
+      "hint": {
+        "transliteration": "hal yūjad ladaykum khubz ṭāzij?",
+        "arabic": "هل يوجد لديكم خبز طازج؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: ___ (Thank you) على الـ ___ (help).",
+      "options": [
+        {
+          "id": "a",
+          "text": "شكراً، مساعدة",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "مرحباً، طعام",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "عفواً، فاتورة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "شكراً (shukran) means 'Thank you' and مساعدة (musāʿadah) means 'help'.",
+      "hint": {
+        "transliteration": "shukran, musāʿadah",
+        "arabic": "شكراً، مساعدة"
+      }
+    }
+  ]
+}

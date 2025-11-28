@@ -1,0 +1,762 @@
+{
+  "topicId": "m1-t1",
+  "title": "Greetings and Apologies (Levantine Arabic)",
+  "dialect": "levantine",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Basic Hello"
+        },
+        "text": "The most common and friendly way to say hello in Levantine Arabic, suitable for almost any informal situation.",
+        "examples": [
+          {
+            "arabic": "مرحباً",
+            "english": "Hello",
+            "transliteration": "Marhaba"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Good Morning"
+        },
+        "text": "Used to greet someone specifically in the morning.",
+        "examples": [
+          {
+            "arabic": "صباح الخير",
+            "english": "Good morning",
+            "transliteration": "Sabah el-kheir"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Good Evening"
+        },
+        "text": "Used to greet someone in the evening or at night.",
+        "examples": [
+          {
+            "arabic": "مساء الخير",
+            "english": "Good evening",
+            "transliteration": "Masa el-kheir"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "مرحباً، صباح الخير!",
+        "english": "Hello, good morning!",
+        "transliteration": "Marhaba, Sabah el-kheir!"
+      },
+      "context": "Greeting someone warmly in the morning."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "مساء الخير، كيفك؟",
+        "english": "Good evening, how are you? (to a male)",
+        "transliteration": "Masa el-kheir, Kifak?"
+      },
+      "context": "A casual evening greeting."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Levantine Arabic phrase for 'Hello'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "صباح الخير",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مرحباً",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مساء الخير",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "Marhaba",
+        "arabic": "مرحباً"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the greeting for 'Good Morning': صباح _____",
+      "options": [
+        {
+          "id": "a",
+          "text": "المساء",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الليل",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "الخير",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "el-kheir",
+        "arabic": "الخير"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'Good evening' in Levantine Arabic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "صباح النور",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مساء الخير",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أهلاً وسهلاً",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "Masa el-kheir",
+        "arabic": "مساء الخير"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "How are you? (male)"
+        },
+        "text": "A common informal way to ask 'How are you?' when speaking to a male.",
+        "examples": [
+          {
+            "arabic": "كيفكَ؟",
+            "english": "How are you? (to a male)",
+            "transliteration": "Kifak?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "How are you? (female)"
+        },
+        "text": "The feminine form of asking 'How are you?' when speaking to a female.",
+        "examples": [
+          {
+            "arabic": "كيفكِ؟",
+            "english": "How are you? (to a female)",
+            "transliteration": "Kifik?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "I'm fine, thank you."
+        },
+        "text": "A common way to respond that you are fine, followed by 'thank you'. The adjective 'منيح' changes for gender.",
+        "examples": [
+          {
+            "arabic": "أنا منيح، شكراً.",
+            "english": "I'm fine (male), thank you.",
+            "transliteration": "Ana mnih, shukran."
+          },
+          {
+            "arabic": "أنا منيحة، شكراً.",
+            "english": "I'm fine (female), thank you.",
+            "transliteration": "Ana mniha, shukran."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "مرحباً يا سامي، كيفكَ؟ أنا منيح، شكراً.",
+        "english": "Hello Sami, how are you? I'm fine, thank you.",
+        "transliteration": "Marhaba ya Sami, Kifak? Ana mnih, shukran."
+      },
+      "context": "A man greeting another man and responding."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "صباح الخير يا سارة، كيفكِ؟",
+        "english": "Good morning Sarah, how are you? (to a female)",
+        "transliteration": "Sabah el-kheir ya Sara, Kifik?"
+      },
+      "context": "A polite morning greeting to a woman."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'How are you?' when speaking to a male?",
+      "options": [
+        {
+          "id": "a",
+          "text": "كيفكِ؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كيفكَ؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كيف الحال؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "Kifak?",
+        "arabic": "كيفكَ؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would a female say 'I'm fine, thank you'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أنا منيح، شكراً.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أنا منيحة، شكراً.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أنا بخير، شكراً.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "Ana mniha, shukran.",
+        "arabic": "أنا منيحة، شكراً."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the phrase: 'How are you?' (to a female): _____",
+      "options": [
+        {
+          "id": "a",
+          "text": "كيفكَ؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كيفكِ؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "ماذا بكِ؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "Kifik?",
+        "arabic": "كيفكِ؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "What's your news? (male/female)"
+        },
+        "text": "Another informal way to ask 'How are things?' or 'What's new?' The ending changes based on gender.",
+        "examples": [
+          {
+            "arabic": "شو أخباركَ؟",
+            "english": "What's your news? (to a male)",
+            "transliteration": "Shu akhbarak?"
+          },
+          {
+            "arabic": "شو أخباركِ؟",
+            "english": "What's your news? (to a female)",
+            "transliteration": "Shu akhbarik?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Welcome"
+        },
+        "text": "A warm and inviting greeting used to welcome someone.",
+        "examples": [
+          {
+            "arabic": "أهلاً وسهلاً",
+            "english": "Welcome",
+            "transliteration": "Ahlan wa sahlan"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Goodbye"
+        },
+        "text": "A common and polite way to say goodbye, literally meaning 'with safety'.",
+        "examples": [
+          {
+            "arabic": "مع السلامة",
+            "english": "Goodbye",
+            "transliteration": "Ma'a salame"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أهلاً وسهلاً بكَ! شو أخباركَ؟",
+        "english": "Welcome! What's your news? (to a male)",
+        "transliteration": "Ahlan wa sahlan bik! Shu akhbarak?"
+      },
+      "context": "Welcoming a male guest and asking about his well-being."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "مع السلامة يا صديقتي، بتمنى لكِ يوم حلو.",
+        "english": "Goodbye, my friend (female), I wish you a nice day.",
+        "transliteration": "Ma'a salame ya sadiqati, batmanna lik yom helo."
+      },
+      "context": "Bidding farewell to a female friend."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'What's your news?' to a female?",
+      "options": [
+        {
+          "id": "a",
+          "text": "شو أخباركَ؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شو أخباركِ؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كيف حالكِ؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "Shu akhbarik?",
+        "arabic": "شو أخباركِ؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Levantine Arabic phrase for 'Welcome'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "مع السلامة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "صباح الخير",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "أهلاً وسهلاً",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "Ahlan wa sahlan",
+        "arabic": "أهلاً وسهلاً"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the farewell: 'Goodbye': مع _____",
+      "options": [
+        {
+          "id": "a",
+          "text": "الخير",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الشكر",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "السلامة",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "as-salame",
+        "arabic": "السلامة"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Sorry / Excuse me (male)"
+        },
+        "text": "Used to apologize or to get someone's attention when speaking to a male.",
+        "examples": [
+          {
+            "arabic": "آسفٌ",
+            "english": "Sorry / Excuse me (to a male)",
+            "transliteration": "Aasif"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Sorry / Excuse me (female)"
+        },
+        "text": "The feminine form for 'Sorry' or 'Excuse me' when speaking to a female.",
+        "examples": [
+          {
+            "arabic": "آسفةٌ",
+            "english": "Sorry / Excuse me (to a female)",
+            "transliteration": "Aasifa"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Please forgive me (male/female)"
+        },
+        "text": "A more direct way to ask for forgiveness, suitable for more significant apologies. The verb changes for gender.",
+        "examples": [
+          {
+            "arabic": "سامحني",
+            "english": "Please forgive me (to a male)",
+            "transliteration": "Samahni"
+          },
+          {
+            "arabic": "سامحيني",
+            "english": "Please forgive me (to a female)",
+            "transliteration": "Samhini"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "آسفٌ، ما سمعتكَ.",
+        "english": "Sorry, I didn't hear you. (to a male)",
+        "transliteration": "Aasif, ma sama'tak."
+      },
+      "context": "A man apologizing for not hearing another man."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "سامحيني، عملت غلط.",
+        "english": "Please forgive me (female), I made a mistake.",
+        "transliteration": "Samhini, 'amalt ghalat."
+      },
+      "context": "A woman asking for forgiveness."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'Sorry' when speaking to a male?",
+      "options": [
+        {
+          "id": "a",
+          "text": "آسفةٌ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "آسفٌ",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "عفواً",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "Aasif",
+        "arabic": "آسفٌ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'Please forgive me' when spoken to a female?",
+      "options": [
+        {
+          "id": "a",
+          "text": "سامحني",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "سامحيني",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "اعذرني",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "Samhini",
+        "arabic": "سامحيني"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the apology: 'Sorry' (to a female): _____",
+      "options": [
+        {
+          "id": "a",
+          "text": "آسفٌ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "آسفةٌ",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مسامحة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "Aasifa",
+        "arabic": "آسفةٌ"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "No problem / It's okay"
+        },
+        "text": "A common response to an apology, indicating that it's not an issue.",
+        "examples": [
+          {
+            "arabic": "ما في مشكلة",
+            "english": "No problem / It's okay",
+            "transliteration": "Ma fi mushkile"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Don't worry (male/female)"
+        },
+        "text": "Used to reassure someone not to worry. The ending changes for gender.",
+        "examples": [
+          {
+            "arabic": "ولا يهمّكَ",
+            "english": "Don't worry (to a male)",
+            "transliteration": "Wala yhemmak"
+          },
+          {
+            "arabic": "ولا يهمِّكِ",
+            "english": "Don't worry (to a female)",
+            "transliteration": "Wala yhemmik"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "It's all good / Everything is fine"
+        },
+        "text": "A casual phrase to say everything is alright, often used after an apology or concern.",
+        "examples": [
+          {
+            "arabic": "كله تمام",
+            "english": "It's all good / Everything is fine",
+            "transliteration": "Kullu tamam"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "آسفٌ على التأخير. - ما في مشكلة، كله تمام.",
+        "english": "Sorry for the delay. - No problem, it's all good.",
+        "transliteration": "Aasif 'ala at-ta'kheer. - Ma fi mushkile, kullu tamam."
+      },
+      "context": "Apologizing for being late and receiving a reassuring reply."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ولا يهمّكَ يا صديقي، كل شي منيح.",
+        "english": "Don't worry, my friend (male), everything is fine.",
+        "transliteration": "Wala yhemmak ya sadeeqi, kull shi mnih."
+      },
+      "context": "Reassuring a male friend."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'No problem' in Levantine Arabic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "لا مشكلة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ما في مشكلة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مشكلة صغيرة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "Ma fi mushkile",
+        "arabic": "ما في مشكلة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'Don't worry' when speaking to a female?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ولا يهمّكَ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ولا يهمِّكِ",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "لا تقلقي",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "Wala yhemmik",
+        "arabic": "ولا يهمِّكِ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the phrase: 'It's all good': كله _____",
+      "options": [
+        {
+          "id": "a",
+          "text": "سيء",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "تمام",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "صعب",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "tamam",
+        "arabic": "تمام"
+      }
+    }
+  ]
+}

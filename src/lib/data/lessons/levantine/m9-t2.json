@@ -1,0 +1,852 @@
+{
+  "topicId": "m9-t2",
+  "title": "Giving Gifts: Likes and Dislikes (Levantine)",
+  "dialect": "levantine",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing 'I like' and 'I don't like'",
+          "arabic": "التعبير عن 'أنا أحب' و 'أنا لا أحب'"
+        },
+        "text": "To express what you like or don't like in Levantine Arabic, you use the verbs 'بحب' (b7ibb) for 'I like' and 'ما بحب' (ma b7ibb) for 'I don't like'. These are commonly used when discussing preferences, including gifts.",
+        "examples": [
+          {
+            "arabic": "أنا بحب الورد.",
+            "english": "I like flowers.",
+            "transliteration": "Ana b7ibb il-ward."
+          },
+          {
+            "arabic": "أنا ما بحب الشوكولاتة.",
+            "english": "I don't like chocolate.",
+            "transliteration": "Ana ma b7ibb ish-shokolata."
+          }
+        ],
+        "audioText": "أنا بحب الورد. أنا ما بحب الشوكولاتة."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Key Vocabulary: Gift",
+          "arabic": "مفردات أساسية: هدية"
+        },
+        "text": "The word for 'gift' in Levantine Arabic is 'هدية' (hadiyye). To say 'to give a gift', you can use 'أعطي هدية' (a3Te hadiyye) or 'قدم هدية' (2addam hadiyye).",
+        "examples": [
+          {
+            "arabic": "هاي هدية حلوة.",
+            "english": "This is a nice gift.",
+            "transliteration": "Hay hadiyye 7elwe."
+          },
+          {
+            "arabic": "بدي أعطيه هدية.",
+            "english": "I want to give him a gift.",
+            "transliteration": "Biddi a3Teh hadiyye."
+          }
+        ],
+        "audioText": "هاي هدية حلوة. بدي أعطيه هدية."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Common Gift Items",
+          "arabic": "هدايا شائعة"
+        },
+        "text": "Let's learn some common gift items. Knowing these will help you express what you like or suggest for others.",
+        "examples": [
+          {
+            "arabic": "ورد",
+            "english": "Flowers",
+            "transliteration": "Ward"
+          },
+          {
+            "arabic": "كتاب",
+            "english": "Book",
+            "transliteration": "Ktaab"
+          },
+          {
+            "arabic": "شوكولاتة",
+            "english": "Chocolate",
+            "transliteration": "Shokolata"
+          }
+        ],
+        "audioText": "ورد، كتاب، شوكولاتة."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا بحب أقدم هدية ورد.",
+        "english": "I like to give a gift of flowers.",
+        "transliteration": "Ana b7ibb a2addem hadiyyet ward."
+      },
+      "context": "Combining 'I like' with giving a specific type of gift."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هو ما بحب الشوكولاتة، بدو كتاب.",
+        "english": "He doesn't like chocolate, he wants a book.",
+        "transliteration": "Huwa ma b7ibb ish-shokolata, biddo ktaab."
+      },
+      "context": "Practicing likes/dislikes with different gift items."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'I like' in Levantine Arabic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أنا بحب",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "أنا ما بحب",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "أنت بتحب",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "hint": {
+        "transliteration": "Ana b7ibb",
+        "arabic": "أنا بحب"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I don't like ___.' (chocolate)",
+      "options": [
+        {
+          "id": "a",
+          "text": "ورد",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كتاب",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "شوكولاتة",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "shokolata",
+        "arabic": "شوكولاتة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'gift'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ورد",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "هدية",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كتاب",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "hadiyye",
+        "arabic": "هدية"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'What do you like?'",
+          "arabic": "كيف تسأل 'ماذا تحب؟'"
+        },
+        "text": "To ask someone what they like, you'll use 'شو' (shu) for 'what' and conjugate the verb 'تحب' (t7ibb) according to gender. Remember: 'بتحب' for male and 'بتحبي' for female.",
+        "examples": [
+          {
+            "arabic": "شو بتحب؟",
+            "english": "What do you (m) like?",
+            "transliteration": "Shu bte7ebb?"
+          },
+          {
+            "arabic": "شو بتحبي؟",
+            "english": "What do you (f) like?",
+            "transliteration": "Shu bte7ebbī?"
+          }
+        ],
+        "audioText": "شو بتحب؟ شو بتحبي؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "More Gift Categories",
+          "arabic": "المزيد من فئات الهدايا"
+        },
+        "text": "Let's expand our vocabulary for gift categories. These are common choices for gifts.",
+        "examples": [
+          {
+            "arabic": "لباس / تياب",
+            "english": "Clothes",
+            "transliteration": "Lbaas / tyaab"
+          },
+          {
+            "arabic": "عطر",
+            "english": "Perfume",
+            "transliteration": "3eTer"
+          },
+          {
+            "arabic": "إلكترونيات",
+            "english": "Electronics",
+            "transliteration": "Elektroniyyaat"
+          }
+        ],
+        "audioText": "لباس، تياب، عطر، إلكترونيات."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing 'I prefer'",
+          "arabic": "التعبير عن 'أنا أفضّل'"
+        },
+        "text": "When you want to express a stronger preference or choose between options, you use 'بفضّل' (bfaDDel) which means 'I prefer'.",
+        "examples": [
+          {
+            "arabic": "أنا بفضّل العطر ع اللباس.",
+            "english": "I prefer perfume over clothes.",
+            "transliteration": "Ana bfaDDel il-3eTer 3a l-lbaas."
+          },
+          {
+            "arabic": "هي بتفضّل الكتب.",
+            "english": "She prefers books.",
+            "transliteration": "Hiyye btefaDDel il-kutub."
+          }
+        ],
+        "audioText": "أنا بفضّل العطر ع اللباس. هي بتفضّل الكتب."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شو بتحب تجيب هدية؟ أنا بفضّل إلكترونيات.",
+        "english": "What do you (m) like to get as a gift? I prefer electronics.",
+        "transliteration": "Shu bte7ebb tjiib hadiyye? Ana bfaDDel elektroniyyaat."
+      },
+      "context": "Asking and stating preferences for gift categories."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هي بتحبي عطر أو تياب؟",
+        "english": "Does she (f) like perfume or clothes?",
+        "transliteration": "Hiyye bte7ebbī 3eTer aw tyaab?"
+      },
+      "context": "Asking about someone else's preferences using 'or'."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask a female 'What do you like?'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "شو بتحب؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شو بتحبي؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "شو بحب؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "Shu bte7ebbī?",
+        "arabic": "شو بتحبي؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I prefer ___.' (clothes)",
+      "options": [
+        {
+          "id": "a",
+          "text": "عطر",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "تياب",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كتاب",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "tyaab",
+        "arabic": "تياب"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which of these words means 'perfume'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "إلكترونيات",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "لباس",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "عطر",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "3eTer",
+        "arabic": "عطر"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing Gratitude: 'Thank you'",
+          "arabic": "التعبير عن الشكر: 'شكراً'"
+        },
+        "text": "When receiving a gift, it's essential to express gratitude. The most common way to say 'thank you' is 'شكراً' (shukran).",
+        "examples": [
+          {
+            "arabic": "شكراً على الهدية.",
+            "english": "Thank you for the gift.",
+            "transliteration": "Shukran 3ala l-hadiyye."
+          },
+          {
+            "arabic": "شكراً كتير!",
+            "english": "Thank you very much!",
+            "transliteration": "Shukran ktiir!"
+          }
+        ],
+        "audioText": "شكراً على الهدية. شكراً كتير!"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Polite Response: 'You're welcome'",
+          "arabic": "الرد المهذب: 'أهلاً وسهلاً'"
+        },
+        "text": "After someone thanks you for a gift, you can reply with 'أهلاً وسهلاً' (ahlan w sahlan) or 'عفواً' (3afwan) to mean 'you're welcome'.",
+        "examples": [
+          {
+            "arabic": "شكراً!",
+            "english": "Thank you!",
+            "transliteration": "Shukran!"
+          },
+          {
+            "arabic": "أهلاً وسهلاً.",
+            "english": "You're welcome.",
+            "transliteration": "Ahlan w sahlan."
+          }
+        ],
+        "audioText": "شكراً! أهلاً وسهلاً."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Praising a Gift: 'I love it!' / 'It's beautiful!'",
+          "arabic": "مدح الهدية: 'أحببتها!' / 'إنها جميلة!'"
+        },
+        "text": "To show genuine appreciation for a gift, you can use phrases like 'حبيتها كتير!' (7abbaytha ktiir!) meaning 'I loved it a lot!' or 'حلوة كتير!' (7elwe ktiir!) meaning 'It's very beautiful!'",
+        "examples": [
+          {
+            "arabic": "الهدية حلوة كتير، حبيتها!",
+            "english": "The gift is very beautiful, I loved it!",
+            "transliteration": "Il-hadiyye 7elwe ktiir, 7abbaytha!"
+          },
+          {
+            "arabic": "يا الله، شو حلوة!",
+            "english": "Oh my God, how beautiful!",
+            "transliteration": "Ya Allah, shu 7elwe!"
+          }
+        ],
+        "audioText": "الهدية حلوة كتير، حبيتها! يا الله، شو حلوة!"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شكراً كتير على الهدية الحلوة، حبيتها!",
+        "english": "Thank you very much for the beautiful gift, I loved it!",
+        "transliteration": "Shukran ktiir 3ala l-hadiyye l-7elwe, 7abbaytha!"
+      },
+      "context": "Combining expressions of gratitude and appreciation."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أهلاً وسهلاً، بتمنى عجبتك.",
+        "english": "You're welcome, I hope you liked it.",
+        "transliteration": "Ahlan w sahlan, btamanna 3ajabtak."
+      },
+      "context": "A polite reply after someone thanks you, expressing hope they liked the gift."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'Thank you for the gift'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "شكراً على الهدية.",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "أهلاً وسهلاً.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "حلوة كتير.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "hint": {
+        "transliteration": "Shukran 3ala l-hadiyye.",
+        "arabic": "شكراً على الهدية."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the conversation: A: 'شكراً كتير!' B: '___'",
+      "options": [
+        {
+          "id": "a",
+          "text": "حلوة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "هدية",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "أهلاً وسهلاً",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "Ahlan w sahlan",
+        "arabic": "أهلاً وسهلاً"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'It's very beautiful!'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أنا بحبها.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "حلوة كتير!",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "شو بتحبي؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "7elwe ktiir!",
+        "arabic": "حلوة كتير!"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Politely Declining a Preference: 'Not my style/preference'",
+          "arabic": "رفض تفضيل بلباقة: 'ليس أسلوبي/ذوقي'"
+        },
+        "text": "Sometimes a gift might not be exactly what you'd choose. To politely express this without being rude, you can say 'مو ستايلي' (muu stayli) meaning 'not my style' or 'مو ذوقي' (muu zaw2i) meaning 'not my taste/preference'.",
+        "examples": [
+          {
+            "arabic": "هاي الهدية مو ستايلي.",
+            "english": "This gift is not my style.",
+            "transliteration": "Hay il-hadiyye muu stayli."
+          },
+          {
+            "arabic": "معليش، بس مو ذوقي.",
+            "english": "Excuse me, but it's not my taste.",
+            "transliteration": "Ma3leesh, bas muu zaw2i."
+          }
+        ],
+        "audioText": "هاي الهدية مو ستايلي. معليش، بس مو ذوقي."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Gift Occasions: Birthday and Anniversary",
+          "arabic": "مناسبات الهدايا: عيد الميلاد وعيد الزواج"
+        },
+        "text": "Gifts are often given for special occasions. Two common ones are 'عيد ميلاد' (3iid miilaad - birthday) and 'عيد زواج' (3iid zawaaj - wedding anniversary).",
+        "examples": [
+          {
+            "arabic": "رح أجيب هدية لعيد ميلاده.",
+            "english": "I will get a gift for his birthday.",
+            "transliteration": "Ra7 ajiib hadiyye la-3iid miilado."
+          },
+          {
+            "arabic": "مبروك عيد زواجكم!",
+            "english": "Congratulations on your wedding anniversary!",
+            "transliteration": "Mabruuk 3iid zawaajkom!"
+          }
+        ],
+        "audioText": "رح أجيب هدية لعيد ميلاده. مبروك عيد زواجكم!"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Types of Gifts: Practical vs. Personalized",
+          "arabic": "أنواع الهدايا: عملية مقابل شخصية"
+        },
+        "text": "People have different preferences regarding the nature of gifts. Some prefer practical gifts, others prefer personalized ones. 'هدايا عملية' (hadaya 3amaliyye) are practical gifts, and 'هدايا شخصية' (hadaya shakhsiyye) are personalized gifts.",
+        "examples": [
+          {
+            "arabic": "أنا بحب الهدايا العملية.",
+            "english": "I like practical gifts.",
+            "transliteration": "Ana b7ibb il-hadaya l-3amaliyye."
+          },
+          {
+            "arabic": "هي بتفضّل الهدايا الشخصية.",
+            "english": "She prefers personalized gifts.",
+            "transliteration": "Hiyye btefaDDel il-hadaya sh-shakhsiyye."
+          }
+        ],
+        "audioText": "أنا بحب الهدايا العملية. هي بتفضّل الهدايا الشخصية."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "عيد ميلاده قرب، بس هو ما بحب الهدايا العملية، بفضّل الشخصية.",
+        "english": "His birthday is approaching, but he doesn't like practical gifts, he prefers personalized ones.",
+        "transliteration": "3iid miilado 2areb, bas huwwa ma b7ibb il-hadaya l-3amaliyye, bfaDDel ish-shakhsiyye."
+      },
+      "context": "Discussing gift preferences for a birthday."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "مو ستايلي الورد بعيد الزواج، بفضّل شي تاني.",
+        "english": "Flowers are not my style for a wedding anniversary, I prefer something else.",
+        "transliteration": "Muu stayli l-ward b-3iid iz-zawaaj, bfaDDel shi taani."
+      },
+      "context": "Politely declining a common gift for a specific occasion."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'not my style'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "مو ذوقي",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مو ستايلي",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مو حلو",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "muu stayli",
+        "arabic": "مو ستايلي"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'She likes ___ gifts.' (personalized)",
+      "options": [
+        {
+          "id": "a",
+          "text": "عملية",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شخصية",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كبيرة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "shakhsiyye",
+        "arabic": "شخصية"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic for 'birthday'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "عيد زواج",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "عيد ميلاد",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "عيد سعيد",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "3iid miilaad",
+        "arabic": "عيد ميلاد"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for Gift Ideas: 'What should I get him/her?'",
+          "arabic": "طلب أفكار للهدايا: 'شو أجيب له/لها؟'"
+        },
+        "text": "When you're unsure what gift to choose, you can ask for suggestions using 'شو أجيب له/لها؟' (shu ajiib lo/laha?), meaning 'What should I get him/her?'. The 'له' (lo) is for male, and 'لها' (laha) is for female.",
+        "examples": [
+          {
+            "arabic": "شو أجيب له هدية بعيد ميلاده؟",
+            "english": "What should I get him for his birthday gift?",
+            "transliteration": "Shu ajiib lo hadiyye b-3iid miilado?"
+          },
+          {
+            "arabic": "هي بتحب القراءة، شو أجيب لها؟",
+            "english": "She likes reading, what should I get her?",
+            "transliteration": "Hiyye bte7ebb il-2iraa'a, shu ajiib laha?"
+          }
+        ],
+        "audioText": "شو أجيب له هدية بعيد ميلاده؟ هي بتحب القراءة، شو أجيب لها؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "The Sentiment: 'It's the thought that counts'",
+          "arabic": "المعنى: 'المهم النية'"
+        },
+        "text": "A common saying when giving or receiving gifts, emphasizing the intention behind it, is 'المهم النية' (il-muhemm in-niyye), which literally translates to 'The important thing is the intention'.",
+        "examples": [
+          {
+            "arabic": "لا يهم نوع الهدية، المهم النية.",
+            "english": "The type of gift doesn't matter, it's the thought that counts.",
+            "transliteration": "La yhemm naw3 il-hadiyye, il-muhemm in-niyye."
+          }
+        ],
+        "audioText": "لا يهم نوع الهدية، المهم النية."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing Surprise and Gratitude (Advanced)",
+          "arabic": "التعبير عن المفاجأة والامتنان (متقدم)"
+        },
+        "text": "To express 'surprise', you use 'مفاجأة' (mufaaja'a). To say you are 'grateful' (male/female), use 'ممتن' (mumtann) / 'ممتنة' (mumtanna).",
+        "examples": [
+          {
+            "arabic": "يا لها من مفاجأة جميلة!",
+            "english": "What a beautiful surprise!",
+            "transliteration": "Ya laha min mufaaja'a jamiile!"
+          },
+          {
+            "arabic": "أنا ممتن/ة كتير على كرمك.",
+            "english": "I am very grateful for your generosity.",
+            "transliteration": "Ana mumtann/e ktiir 3ala karamak."
+          }
+        ],
+        "audioText": "يا لها من مفاجأة جميلة! أنا ممتن/ة كتير على كرمك."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "كانت مفاجأة حلوة، أنا كتير ممتن!",
+        "english": "It was a nice surprise, I am very grateful!",
+        "transliteration": "Kaanat mufaaja'a 7elwe, ana ktiir mumtann!"
+      },
+      "context": "Expressing surprise and gratitude for a gift (male speaker)."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شو أجيب لها؟ المهم النية مو نوع الهدية.",
+        "english": "What should I get her? It's the thought that counts, not the type of gift.",
+        "transliteration": "Shu ajiib laha? Il-muhemm in-niyye muu naw3 il-hadiyye."
+      },
+      "context": "Discussing gift ideas while remembering the importance of intention."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would you ask 'What should I get him?' (for a male)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "شو أجيب لها؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شو أجيب له؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "شو أجيب إلها؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "Shu ajiib lo?",
+        "arabic": "شو أجيب له؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the phrase: 'It's the ___ that counts.' (thought/intention)",
+      "options": [
+        {
+          "id": "a",
+          "text": "الهدية",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "النية",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "الشكر",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "in-niyye",
+        "arabic": "النية"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'surprise'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "شكر",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ممتن",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "مفاجأة",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "mufaaja'a",
+        "arabic": "مفاجأة"
+      }
+    }
+  ]
+}

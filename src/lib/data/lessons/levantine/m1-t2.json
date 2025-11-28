@@ -1,0 +1,882 @@
+{
+  "topicId": "m1-t2",
+  "title": "Introducing Yourself and Nationalities (Levantine Arabic)",
+  "dialect": "levantine",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Basic Greetings",
+          "arabic": "تحيات أساسية"
+        },
+        "text": "Let's start with some common ways to say hello in Levantine Arabic. These greetings can be used at any time of day.",
+        "examples": [
+          {
+            "arabic": "مرحباً",
+            "english": "Hello / Welcome",
+            "transliteration": "Marḥaba"
+          },
+          {
+            "arabic": "أهلاً وسهلاً",
+            "english": "Welcome (more formal)",
+            "transliteration": "Ahlan wa sahlan"
+          },
+          {
+            "arabic": "السلام عليكم",
+            "english": "Peace be upon you (common Islamic greeting)",
+            "transliteration": "As-salamu alaykum"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Time-Specific Greetings",
+          "arabic": "تحيات حسب الوقت"
+        },
+        "text": "Just like in English, there are greetings specific to the time of day.",
+        "examples": [
+          {
+            "arabic": "صباح الخير",
+            "english": "Good morning",
+            "transliteration": "Ṣabaḥ el-kher"
+          },
+          {
+            "arabic": "مساء الخير",
+            "english": "Good evening",
+            "transliteration": "Masa' el-kher"
+          },
+          {
+            "arabic": "تصبح على خير",
+            "english": "Good night (to a male)",
+            "transliteration": "Tiṣbaḥ ala kher"
+          },
+          {
+            "arabic": "تصبحي على خير",
+            "english": "Good night (to a female)",
+            "transliteration": "Tiṣbaḥi ala kher"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'What's your name?'",
+          "arabic": "السؤال عن الاسم"
+        },
+        "text": "To ask someone their name in Levantine Arabic, you use 'شو اسمك؟'. The ending changes slightly depending on whether you're speaking to a male or a female. The word 'اسم' (ism) means 'name'.",
+        "examples": [
+          {
+            "arabic": "شو اسمكَ؟",
+            "english": "What's your name? (to a male)",
+            "transliteration": "Shu ismak?"
+          },
+          {
+            "arabic": "شو اسمِك؟",
+            "english": "What's your name? (to a female)",
+            "transliteration": "Shu ismik?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "مرحباً، شو اسمِك؟",
+        "english": "Hello, what's your name? (to a female)",
+        "transliteration": "Marḥaba, shu ismik?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "صباح الخير، شو اسمكَ؟",
+        "english": "Good morning, what's your name? (to a male)",
+        "transliteration": "Ṣabaḥ el-kher, shu ismak?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Choose the correct greeting for 'Good evening'.",
+      "options": [
+        {
+          "id": "a",
+          "text": "صباح الخير",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مساء الخير",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مرحباً",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'مساء الخير' means 'Good evening'.",
+      "hint": {
+        "transliteration": "Masa' el-kher",
+        "arabic": "مساء الخير"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'What's your name?' to a male?",
+      "options": [
+        {
+          "id": "a",
+          "text": "شو اسمِك؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شو اسمكَ؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كيفك؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'شو اسمكَ؟' is used to ask a male his name.",
+      "hint": {
+        "transliteration": "Shu ismak?",
+        "arabic": "شو اسمكَ؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the greeting: '___ الخير' (Good morning)",
+      "options": [
+        {
+          "id": "a",
+          "text": "مساء",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "صباح",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أهلاً",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'صباح الخير' means 'Good morning'.",
+      "hint": {
+        "transliteration": "Ṣabaḥ",
+        "arabic": "صباح"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Saying 'My name is...'",
+          "arabic": "قول 'اسمي...'"
+        },
+        "text": "To say 'My name is...' you simply use 'اسمي' (ismi) followed by your name. 'اسمي' literally means 'my name'.",
+        "examples": [
+          {
+            "arabic": "اسمي أحمد.",
+            "english": "My name is Ahmad.",
+            "transliteration": "Ismi Aḥmad."
+          },
+          {
+            "arabic": "اسمي سارة.",
+            "english": "My name is Sara.",
+            "transliteration": "Ismi Sara."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'How are you?'",
+          "arabic": "السؤال عن الحال"
+        },
+        "text": "After greetings, it's common to ask 'How are you?'. The Levantine phrase is 'كيفك؟' (kifak/kifik), which also changes slightly for male and female.",
+        "examples": [
+          {
+            "arabic": "كيفكَ؟",
+            "english": "How are you? (to a male)",
+            "transliteration": "Kifak?"
+          },
+          {
+            "arabic": "كيفِك؟",
+            "english": "How are you? (to a female)",
+            "transliteration": "Kifik?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Responding 'I am fine'",
+          "arabic": "الرد 'أنا بخير'"
+        },
+        "text": "To respond that you are fine, you use 'أنا منيح' (ana mniḥ) for males and 'أنا منيحة' (ana mnīḥa) for females. 'أنا' (ana) means 'I'.",
+        "examples": [
+          {
+            "arabic": "أنا منيح.",
+            "english": "I am fine. (male)",
+            "transliteration": "Ana mniḥ."
+          },
+          {
+            "arabic": "أنا منيحة.",
+            "english": "I am fine. (female)",
+            "transliteration": "Ana mnīḥa."
+          },
+          {
+            "arabic": "الحمد لله.",
+            "english": "Thanks be to God (very common polite response, regardless of gender).",
+            "transliteration": "Al-ḥamdu li-llah."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "مساء الخير، اسمي يوسف. كيفكَ؟",
+        "english": "Good evening, my name is Yousef. How are you? (to a male)",
+        "transliteration": "Masa' el-kher, ismi Yusef. Kifak?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا منيحة، الحمد لله. وشو اسمِك؟",
+        "english": "I am fine, thank God. And what's your name? (female speaking to female)",
+        "transliteration": "Ana mnīḥa, al-ḥamdu li-llah. Wa shu ismik?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would a female say 'I am fine'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أنا منيح",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أنا منيحة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أنا شكراً",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'أنا منيحة' is used by a female to say 'I am fine'.",
+      "hint": {
+        "transliteration": "Ana mnīḥa",
+        "arabic": "أنا منيحة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the most common polite response to 'How are you?' (Kifak/Kifik)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "اسمي...",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مرحباً",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "الحمد لله",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'الحمد لله' is a very common and polite response meaning 'Thanks be to God'.",
+      "hint": {
+        "transliteration": "Al-ḥamdu li-llah",
+        "arabic": "الحمد لله"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'اسمي ___' (My name is Ahmed).",
+      "options": [
+        {
+          "id": "a",
+          "text": "أحمد",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "سارة",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "مرحبا",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "To say 'My name is Ahmed', you use 'اسمي أحمد'.",
+      "hint": {
+        "transliteration": "Aḥmad",
+        "arabic": "أحمد"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'And you?'",
+          "arabic": "السؤال 'وأنت؟'"
+        },
+        "text": "After someone asks you a question, it's polite to ask them back. In Levantine Arabic, you use 'وإنتَ؟' (wa inta?) for a male and 'وإنتِ؟' (wa inti?) for a female.",
+        "examples": [
+          {
+            "arabic": "أنا منيح، وإنتَ؟",
+            "english": "I'm fine, and you? (to a male)",
+            "transliteration": "Ana mniḥ, wa inta?"
+          },
+          {
+            "arabic": "اسمي سارة، وإنتِ؟",
+            "english": "My name is Sara, and you? (to a female)",
+            "transliteration": "Ismi Sara, wa inti?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Where are you from?'",
+          "arabic": "السؤال 'من أين أنت؟'"
+        },
+        "text": "To ask where someone is from, you say 'من وين إنت؟' (min weyn inta/inti?). 'وين' (weyn) means 'where' and 'من' (min) means 'from'. The 'إنت' changes for male/female.",
+        "examples": [
+          {
+            "arabic": "من وين إنتَ؟",
+            "english": "Where are you from? (to a male)",
+            "transliteration": "Min weyn inta?"
+          },
+          {
+            "arabic": "من وين إنتِ؟",
+            "english": "Where are you from? (to a female)",
+            "transliteration": "Min weyn inti?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Saying 'I am from...' (Countries)",
+          "arabic": "قول 'أنا من...' (بلدان)"
+        },
+        "text": "To state your country of origin, use 'أنا من' (ana min) followed by the country's name. Here are some common countries in the Levantine region.",
+        "examples": [
+          {
+            "arabic": "أنا من سوريا.",
+            "english": "I am from Syria.",
+            "transliteration": "Ana min Suriya."
+          },
+          {
+            "arabic": "أنا من لبنان.",
+            "english": "I am from Lebanon.",
+            "transliteration": "Ana min Lubnan."
+          },
+          {
+            "arabic": "أنا من الأردن.",
+            "english": "I am from Jordan.",
+            "transliteration": "Ana min Al-Urdun."
+          },
+          {
+            "arabic": "أنا من فلسطين.",
+            "english": "I am from Palestine.",
+            "transliteration": "Ana min Falasṭīn."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "صباح الخير، أنا من لبنان. من وين إنتِ؟",
+        "english": "Good morning, I am from Lebanon. Where are you from? (to a female)",
+        "transliteration": "Ṣabaḥ el-kher, ana min Lubnan. Min weyn inti?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "مساء الخير، أنا من سوريا، وإنتَ؟",
+        "english": "Good evening, I am from Syria, and you? (to a male)",
+        "transliteration": "Masa' el-kher, ana min Suriya, wa inta?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'Where are you from?' to a female?",
+      "options": [
+        {
+          "id": "a",
+          "text": "من وين إنتَ؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "من وين إنتِ؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "شو اسمك؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'من وين إنتِ؟' is used to ask a female where she is from.",
+      "hint": {
+        "transliteration": "Min weyn inti?",
+        "arabic": "من وين إنتِ؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'أنا من ___' (I am from Jordan).",
+      "options": [
+        {
+          "id": "a",
+          "text": "لبنان",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الأردن",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "سوريا",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'الأردن' means Jordan.",
+      "hint": {
+        "transliteration": "Al-Urdun",
+        "arabic": "الأردن"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'where'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "شو",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "وين",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "من",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'وين' means 'where'.",
+      "hint": {
+        "transliteration": "weyn",
+        "arabic": "وين"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'What's your nationality?'",
+          "arabic": "السؤال عن الجنسية"
+        },
+        "text": "To ask about someone's nationality, you say 'شو جنسيتك؟' (shu jinsīytak/jinsīytik?). 'جنسية' (jinsiyya) means 'nationality'. This question also changes for male/female.",
+        "examples": [
+          {
+            "arabic": "شو جنسيتكَ؟",
+            "english": "What's your nationality? (to a male)",
+            "transliteration": "Shu jinsīytak?"
+          },
+          {
+            "arabic": "شو جنسيتِك؟",
+            "english": "What's your nationality? (to a female)",
+            "transliteration": "Shu jinsīytik?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Stating your Nationality (Male)",
+          "arabic": "ذكر جنسيتك (مذكر)"
+        },
+        "text": "To state your nationality as a male, you typically add a 'ـي' (ī) ending to the country's root. For example, from 'سوريا' (Suriya) you get 'سوري' (Sūri).",
+        "examples": [
+          {
+            "arabic": "أنا سوري.",
+            "english": "I am Syrian. (male)",
+            "transliteration": "Ana Sūri."
+          },
+          {
+            "arabic": "أنا لبناني.",
+            "english": "I am Lebanese. (male)",
+            "transliteration": "Ana Lubnāni."
+          },
+          {
+            "arabic": "أنا أردني.",
+            "english": "I am Jordanian. (male)",
+            "transliteration": "Ana Urduni."
+          },
+          {
+            "arabic": "أنا فلسطيني.",
+            "english": "I am Palestinian. (male)",
+            "transliteration": "Ana Falasṭīni."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Stating your Nationality (Female)",
+          "arabic": "ذكر جنسيتك (مؤنث)"
+        },
+        "text": "To state your nationality as a female, you add 'ـية' (iyya) ending. For example, from 'سوريا' (Suriya) you get 'سورية' (Sūriyya).",
+        "examples": [
+          {
+            "arabic": "أنا سورية.",
+            "english": "I am Syrian. (female)",
+            "transliteration": "Ana Sūriyya."
+          },
+          {
+            "arabic": "أنا لبنانية.",
+            "english": "I am Lebanese. (female)",
+            "transliteration": "Ana Lubnāniyya."
+          },
+          {
+            "arabic": "أنا أردنية.",
+            "english": "I am Jordanian. (female)",
+            "transliteration": "Ana Urduniyya."
+          },
+          {
+            "arabic": "أنا فلسطينية.",
+            "english": "I am Palestinian. (female)",
+            "transliteration": "Ana Falasṭīniyya."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "مرحباً، شو جنسيتِك؟ أنا لبنانية.",
+        "english": "Hello, what's your nationality? (to a female) I am Lebanese. (female)",
+        "transliteration": "Marḥaba, shu jinsīytik? Ana Lubnāniyya."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "اسمي فارس، أنا أردني. شو جنسيتكَ؟",
+        "english": "My name is Fares, I am Jordanian. (male) What's your nationality? (to a male)",
+        "transliteration": "Ismi Fares, ana Urduni. Shu jinsīytak?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would a male say 'I am Syrian'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أنا سورية",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أنا سوري",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أنا من سوريا",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'أنا سوري' is for a male. 'أنا سورية' is for a female. 'أنا من سوريا' means 'I am from Syria'.",
+      "hint": {
+        "transliteration": "Ana Sūri",
+        "arabic": "أنا سوري"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Choose the correct nationality for a female from Lebanon.",
+      "options": [
+        {
+          "id": "a",
+          "text": "لبناني",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "لبنانية",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "لبنان",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'لبنانية' is the female nationality for someone from Lebanon. 'لبناني' is male. 'لبنان' is the country.",
+      "hint": {
+        "transliteration": "Lubnāniyya",
+        "arabic": "لبنانية"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the question: 'شو ___؟' (What's your nationality? - to a female)",
+      "options": [
+        {
+          "id": "a",
+          "text": "اسمكِ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كيفكِ",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "جنسيتِك",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'جنسيتِك' means 'your nationality' (female).",
+      "hint": {
+        "transliteration": "jinsīytik",
+        "arabic": "جنسيتِك"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Putting It All Together: A Short Introduction",
+          "arabic": "المقدمة الكاملة: تعارف قصير"
+        },
+        "text": "Now let's combine everything we've learned into a short self-introduction.",
+        "examples": [
+          {
+            "arabic": "مرحباً، اسمي سامي. كيفكَ؟ أنا منيح، الحمد لله. أنا من سوريا، أنا سوري.",
+            "english": "Hello, my name is Sami. How are you? (to Sami, male) I'm fine, thank God. I am from Syria, I am Syrian. (male)",
+            "transliteration": "Marḥaba, ismi Sami. Kifak? Ana mniḥ, al-ḥamdu li-llah. Ana min Suriya, ana Sūri."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Nice to Meet You",
+          "arabic": "تشرفنا"
+        },
+        "text": "After an introduction, it's polite to say 'Nice to meet you'. In Levantine Arabic, the common phrase is 'تشرفنا' (tasharrafna). This phrase is gender-neutral.",
+        "examples": [
+          {
+            "arabic": "تشرفنا.",
+            "english": "Nice to meet you.",
+            "transliteration": "Tasharrafna."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Goodbyes",
+          "arabic": "الوداع"
+        },
+        "text": "Finally, let's learn some common ways to say goodbye.",
+        "examples": [
+          {
+            "arabic": "مع السلامة",
+            "english": "Goodbye (with peace)",
+            "transliteration": "Ma'a s-salāma"
+          },
+          {
+            "arabic": "بشوفكَ / بشوفِك",
+            "english": "See you (to a male / to a female)",
+            "transliteration": "Bashūfak / Bashūfik"
+          },
+          {
+            "arabic": "إلى اللقاء",
+            "english": "Until we meet again (more formal)",
+            "transliteration": "Ila al-liqā'"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "مرحباً، اسمي نور، أنا أردنية. تشرفنا! مع السلامة.",
+        "english": "Hello, my name is Nour, I am Jordanian. (female) Nice to meet you! Goodbye.",
+        "transliteration": "Marḥaba, ismi Nour, ana Urduniyya. Tasharrafna! Ma'a s-salāma."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "صباح الخير! أنا من فلسطين، أنا فلسطيني. بشوفكَ!",
+        "english": "Good morning! I am from Palestine, I am Palestinian. (male) See you! (to a male)",
+        "transliteration": "Ṣabaḥ el-kher! Ana min Falasṭīn, ana Falasṭīni. Bashūfak!"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What does 'تشرفنا' mean?",
+      "options": [
+        {
+          "id": "a",
+          "text": "كيفك؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "نايس تو ميت يو (Nice to meet you)",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "صباح الخير",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'تشرفنا' means 'Nice to meet you'.",
+      "hint": {
+        "transliteration": "Tasharrafna",
+        "arabic": "تشرفنا"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'Goodbye' in a common Levantine way?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بشوفِك",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "إلى اللقاء",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "مع السلامة",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'مع السلامة' is a very common way to say goodbye.",
+      "hint": {
+        "transliteration": "Ma'a s-salāma",
+        "arabic": "مع السلامة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the goodbye phrase: '___ اللقاء' (Until we meet again).",
+      "options": [
+        {
+          "id": "a",
+          "text": "مع",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "إلى",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بشوف",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'إلى اللقاء' means 'Until we meet again'.",
+      "hint": {
+        "transliteration": "Ila",
+        "arabic": "إلى"
+      }
+    }
+  ]
+}

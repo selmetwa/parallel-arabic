@@ -1,0 +1,888 @@
+{
+  "topicId": "m1-t2",
+  "title": "Introducing yourself, nationalities",
+  "dialect": "egyptian-arabic",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Saying 'Hello'",
+          "arabic": "تحية 'أهلاً'"
+        },
+        "text": "The most common way to say \"hello\" in Egyptian Arabic is \"أهلاً\". You can also say \"أهلاً وسهلاً\" for a more formal and welcoming greeting, often used when welcoming someone to a place.",
+        "examples": [
+          {
+            "arabic": "أهلاً",
+            "english": "Hello",
+            "transliteration": "Ahlan"
+          },
+          {
+            "arabic": "أهلاً وسهلاً",
+            "english": "Hello / Welcome",
+            "transliteration": "Ahlan wa sahlan"
+          }
+        ],
+        "audioText": "Ahlan. Ahlan wa sahlan."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'How are you?'",
+          "arabic": "سؤال 'إزيك؟'"
+        },
+        "text": "To ask \"How are you?\" in Egyptian Arabic, you say \"إزيك؟\". The pronunciation of the last letter changes slightly depending on whether you are speaking to a male or a female.",
+        "examples": [
+          {
+            "arabic": "إزيكَ؟",
+            "english": "How are you? (to a male)",
+            "transliteration": "Izzayak?"
+          },
+          {
+            "arabic": "إزيكِ؟",
+            "english": "How are you? (to a female)",
+            "transliteration": "Izzayik?"
+          }
+        ],
+        "audioText": "Izzayak? Izzayik?"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Stating Your Name",
+          "arabic": "ذكر اسمك"
+        },
+        "text": "To introduce your name, you say \"اسمي\" followed by your name. \"اسمي\" literally means \"my name is...\".",
+        "examples": [
+          {
+            "arabic": "اسمي أحمد.",
+            "english": "My name is Ahmed.",
+            "transliteration": "Ismi Ahmed."
+          },
+          {
+            "arabic": "اسمي سارة.",
+            "english": "My name is Sara.",
+            "transliteration": "Ismi Sara."
+          }
+        ],
+        "audioText": "Ismi Ahmed. Ismi Sara."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أهلاً، اسمي علي.",
+        "english": "Hello, my name is Ali.",
+        "transliteration": "Ahlan, ismi Ali."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "إزيكِ؟ اسمي منى.",
+        "english": "How are you? (to a female) My name is Mona.",
+        "transliteration": "Izzayik? Ismi Mona."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أهلاً وسهلاً، إزيكَ؟",
+        "english": "Welcome, how are you? (to a male)",
+        "transliteration": "Ahlan wa sahlan, izzayak?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the correct way to ask 'How are you?' to a male?",
+      "options": [
+        {
+          "id": "a",
+          "text": "إزيكِ؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "إزيكَ؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "اسمي؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "To ask a male 'How are you?', you say 'إزيكَ؟'.",
+      "hint": {
+        "transliteration": "Izzayak?",
+        "arabic": "إزيكَ؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'My name is...'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أهلاً",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "منين",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "اسمي",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'اسمي' means 'my name is'.",
+      "hint": {
+        "transliteration": "Ismi",
+        "arabic": "اسمي"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the greeting: '___ وسهلاً'",
+      "options": [
+        {
+          "id": "a",
+          "text": "أهلاً",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "اسمي",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "إزيكَ",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "The full greeting is 'أهلاً وسهلاً'.",
+      "hint": {
+        "transliteration": "Ahlan",
+        "arabic": "أهلاً"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Where are you from?'",
+          "arabic": "سؤال 'إنتَ منين؟'"
+        },
+        "text": "To ask someone where they are from, you use \"إنتَ منين؟\" for a male and \"إنتِ منين؟\" for a female. \"منين\" means \"from where\".",
+        "examples": [
+          {
+            "arabic": "إنتَ منين؟",
+            "english": "Where are you from? (to a male)",
+            "transliteration": "Inta menein?"
+          },
+          {
+            "arabic": "إنتِ منين؟",
+            "english": "Where are you from? (to a female)",
+            "transliteration": "Inti menein?"
+          }
+        ],
+        "audioText": "Inta menein? Inti menein?"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Saying 'I am from...'",
+          "arabic": "قول 'أنا من...'"
+        },
+        "text": "To respond to \"Where are you from?\", you say \"أنا من...\" followed by your country or city. \"أنا\" means \"I\" and \"من\" means \"from\".",
+        "examples": [
+          {
+            "arabic": "أنا من مصر.",
+            "english": "I am from Egypt.",
+            "transliteration": "Ana min Masr."
+          },
+          {
+            "arabic": "أنا من أمريكا.",
+            "english": "I am from America.",
+            "transliteration": "Ana min Amreeka."
+          }
+        ],
+        "audioText": "Ana min Masr. Ana min Amreeka."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Common Countries",
+          "arabic": "دول شائعة"
+        },
+        "text": "Here are a few common country names in Egyptian Arabic.",
+        "examples": [
+          {
+            "arabic": "مصر",
+            "english": "Egypt",
+            "transliteration": "Masr"
+          },
+          {
+            "arabic": "أمريكا",
+            "english": "America",
+            "transliteration": "Amreeka"
+          },
+          {
+            "arabic": "إنجلترا",
+            "english": "England",
+            "transliteration": "Ingleterra"
+          },
+          {
+            "arabic": "السعودية",
+            "english": "Saudi Arabia",
+            "transliteration": "As-Sa'oodiya"
+          }
+        ],
+        "audioText": "Masr. Amreeka. Ingleterra. As-Sa'oodiya."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أهلاً يا أحمد، إنتَ منين؟",
+        "english": "Hello Ahmed, where are you from? (to a male)",
+        "transliteration": "Ahlan ya Ahmed, inta menein?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "اسمي ليلى، أنا من مصر.",
+        "english": "My name is Laila, I am from Egypt.",
+        "transliteration": "Ismi Laila, ana min Masr."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "إزيكِ يا سارة؟ إنتِ من أمريكا؟",
+        "english": "How are you, Sara? Are you from America? (to a female)",
+        "transliteration": "Izzayik ya Sara? Inti min Amreeka?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask a female 'Where are you from?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "إنتَ منين؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "إنتِ منين؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "اسمك إيه؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'إنتِ منين؟' is used to ask a female 'Where are you from?'.",
+      "hint": {
+        "transliteration": "Inti menein?",
+        "arabic": "إنتِ منين؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'Egypt'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أمريكا",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مصر",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "إنجلترا",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'مصر' is the Arabic word for Egypt.",
+      "hint": {
+        "transliteration": "Masr",
+        "arabic": "مصر"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'أنا ___ أمريكا.' (I am ___ America.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "من",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "اسمي",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "إنتَ",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "'من' means 'from'.",
+      "hint": {
+        "transliteration": "min",
+        "arabic": "من"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Nationality: Egyptian",
+          "arabic": "الجنسية: مصري"
+        },
+        "text": "To state your nationality, you use different forms for male and female. The masculine form ends with 'يّ' and the feminine form ends with 'يّة'.",
+        "examples": [
+          {
+            "arabic": "أنا مَصْريّ.",
+            "english": "I am Egyptian. (male)",
+            "transliteration": "Ana Masry."
+          },
+          {
+            "arabic": "أنا مَصْرِيّة.",
+            "english": "I am Egyptian. (female)",
+            "transliteration": "Ana Masreya."
+          }
+        ],
+        "audioText": "Ana Masry. Ana Masreya."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Nationality: American",
+          "arabic": "الجنسية: أمريكي"
+        },
+        "text": "Similar to Egyptian, American also has male and female forms, following the same pattern with 'يّ' for male and 'يّة' for female.",
+        "examples": [
+          {
+            "arabic": "أنا أمريكيّ.",
+            "english": "I am American. (male)",
+            "transliteration": "Ana Amreeki."
+          },
+          {
+            "arabic": "أنا أمْرِيكيّة.",
+            "english": "I am American. (female)",
+            "transliteration": "Ana Amreekiya."
+          }
+        ],
+        "audioText": "Ana Amreeki. Ana Amreekiya."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'What is your nationality?'",
+          "arabic": "سؤال 'إيه جنسيتك؟'"
+        },
+        "text": "To directly ask about someone's nationality, you say \"إنتَ جنسيتك إيه؟\" for a male, and \"إنتِ جنسيتك إيه؟\" for a female. \"جنسيتك\" means \"your nationality\", and \"إيه\" means \"what\".",
+        "examples": [
+          {
+            "arabic": "إنتَ جنسيتك إيه؟",
+            "english": "What is your nationality? (to a male)",
+            "transliteration": "Inta gensiyetak eih?"
+          },
+          {
+            "arabic": "إنتِ جنسيتك إيه؟",
+            "english": "What is your nationality? (to a female)",
+            "transliteration": "Inti gensiyetik eih?"
+          }
+        ],
+        "audioText": "Inta gensiyetak eih? Inti gensiyetik eih?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أهلاً يا علي، أنا أمريكيّ. إنتَ مَصْريّ؟",
+        "english": "Hello Ali, I am American (m). Are you Egyptian (m)?",
+        "transliteration": "Ahlan ya Ali, ana Amreeki. Inta Masry?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "اسمي نورا، أنا مَصْرِيّة. إنتِ جنسيتك إيه؟",
+        "english": "My name is Nora, I am Egyptian (f). What is your nationality? (to a female)",
+        "transliteration": "Ismi Nora, ana Masreya. Inti gensiyetik eih?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا من أمريكا، أنا أمْرِيكيّة.",
+        "english": "I am from America, I am American. (female)",
+        "transliteration": "Ana min Amreeka, ana Amreekiya."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the correct phrase for 'I am Egyptian' when spoken by a female?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أنا مَصْريّ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أنا مَصْرِيّة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أنا أمْرِيكيّة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "The feminine form for 'Egyptian' is 'مَصْرِيّة'.",
+      "hint": {
+        "transliteration": "Ana Masreya",
+        "arabic": "أنا مَصْرِيّة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask a male 'What is your nationality?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "إنتِ جنسيتك إيه؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "إنتَ منين؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "إنتَ جنسيتك إيه؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'إنتَ جنسيتك إيه؟' is used to ask a male 'What is your nationality?'.",
+      "hint": {
+        "transliteration": "Inta gensiyetak eih?",
+        "arabic": "إنتَ جنسيتك إيه؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'أنا ___.' (I am American. (male))",
+      "options": [
+        {
+          "id": "a",
+          "text": "أمْرِيكيّة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أمريكيّ",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مَصْرِيّة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "The masculine form for 'American' is 'أمريكيّ'.",
+      "hint": {
+        "transliteration": "Amreeki",
+        "arabic": "أمريكيّ"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Stating Your Nationality (Review)",
+          "arabic": "ذكر جنسيتك (مراجعة)"
+        },
+        "text": "Let's review stating your nationality, remembering to use the correct masculine or feminine form. For example, for Saudi nationality.",
+        "examples": [
+          {
+            "arabic": "أنا سعوديّ.",
+            "english": "I am Saudi. (male)",
+            "transliteration": "Ana Sa'oodi."
+          },
+          {
+            "arabic": "أنا سُعودِيّة.",
+            "english": "I am Saudi. (female)",
+            "transliteration": "Ana Sa'oodiya."
+          }
+        ],
+        "audioText": "Ana Sa'oodi. Ana Sa'oodiya."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "More Nationalities",
+          "arabic": "جنسيات أخرى"
+        },
+        "text": "Here are a couple more nationalities following the male ('يّ') and female ('يّة') patterns.",
+        "examples": [
+          {
+            "arabic": "بريطانيّ / بْرِيطَانِيّة",
+            "english": "British (male / female)",
+            "transliteration": "Britaany / Britaanya"
+          },
+          {
+            "arabic": "صينيّ / صِينِيّة",
+            "english": "Chinese (male / female)",
+            "transliteration": "Seeni / Seeniya"
+          }
+        ],
+        "audioText": "Britaany / Britaanya. Seeni / Seeniya."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking to Repeat",
+          "arabic": "طلب التكرار"
+        },
+        "text": "If you didn't understand something, you can politely ask someone to repeat what they said using \"معلش ممكن تعيد؟\". \"معلش\" means \"excuse me/sorry\", \"ممكن\" means \"can/possible\", and \"تعيد\" means \"you repeat\".",
+        "examples": [
+          {
+            "arabic": "معلش ممكن تعيد؟",
+            "english": "Excuse me, can you repeat?",
+            "transliteration": "Ma'lesh mumken te'eed?"
+          }
+        ],
+        "audioText": "Ma'lesh mumken te'eed?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "اسمي ماريا، أنا صِينِيّة.",
+        "english": "My name is Maria, I am Chinese (f).",
+        "transliteration": "Ismi Maria, ana Seeniya."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا بريطانيّ. معلش ممكن تعيد؟",
+        "english": "I am British (m). Excuse me, can you repeat?",
+        "transliteration": "Ana Britaany. Ma'lesh mumken te'eed?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "إنتَ جنسيتك إيه؟ أنا سُعودِيّة.",
+        "english": "What is your nationality? (to a male) I am Saudi (f).",
+        "transliteration": "Inta gensiyetak eih? Ana Sa'oodiya."
+      },
+      "context": "This is an example of two people talking, one asking and one answering."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'I am British' (male)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أنا بْرِيطَانِيّة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أنا بريطانيّ",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أنا صِينِيّة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "The masculine form for 'British' is 'بريطانيّ'.",
+      "hint": {
+        "transliteration": "Ana Britaany",
+        "arabic": "أنا بريطانيّ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic phrase for 'Excuse me, can you repeat?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "اسمي إيه؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "معلش ممكن تعيد؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أنا منين؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'معلش ممكن تعيد؟' is the polite way to ask someone to repeat.",
+      "hint": {
+        "transliteration": "Ma'lesh mumken te'eed?",
+        "arabic": "معلش ممكن تعيد؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'أنا ___.' (I am Chinese. (female))",
+      "options": [
+        {
+          "id": "a",
+          "text": "صينيّ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "سعوديّ",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "صِينِيّة",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "The feminine form for 'Chinese' is 'صِينِيّة'.",
+      "hint": {
+        "transliteration": "Seeniya",
+        "arabic": "صِينِيّة"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Saying 'Nice to meet you'",
+          "arabic": "قول 'تشرّفنا'"
+        },
+        "text": "After introductions, it's polite to say \"تشرّفنا\", which means \"we are honored\" or \"nice to meet you\". It's a common and friendly phrase.",
+        "examples": [
+          {
+            "arabic": "تشرّفنا.",
+            "english": "Nice to meet you.",
+            "transliteration": "Tasharrafna."
+          }
+        ],
+        "audioText": "Tasharrafna."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Saying 'Goodbye'",
+          "arabic": "قول 'مع السلامة'"
+        },
+        "text": "The most common way to say goodbye in Egyptian Arabic is \"مع السلامة\". It literally means \"with safety\" and is suitable for all situations.",
+        "examples": [
+          {
+            "arabic": "مع السلامة.",
+            "english": "Goodbye.",
+            "transliteration": "Ma'a salama."
+          }
+        ],
+        "audioText": "Ma'a salama."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Saying 'Thank you'",
+          "arabic": "قول 'شكراً'"
+        },
+        "text": "To express gratitude, you simply say \"شكراً\". To say \"thank you very much\", you add \"جزيلاً\".",
+        "examples": [
+          {
+            "arabic": "شكراً.",
+            "english": "Thank you.",
+            "transliteration": "Shukran."
+          },
+          {
+            "arabic": "شكراً جزيلاً.",
+            "english": "Thank you very much.",
+            "transliteration": "Shukran gazeelan."
+          }
+        ],
+        "audioText": "Shukran. Shukran gazeelan."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "تشرّفنا يا أحمد، مع السلامة.",
+        "english": "Nice to meet you, Ahmed, goodbye.",
+        "transliteration": "Tasharrafna ya Ahmed, ma'a salama."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شكراً جزيلاً!",
+        "english": "Thank you very much!",
+        "transliteration": "Shukran gazeelan!"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أهلاً، اسمي منى. تشرّفنا.",
+        "english": "Hello, my name is Mona. Nice to meet you.",
+        "transliteration": "Ahlan, ismi Mona. Tasharrafna."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic phrase for 'Nice to meet you'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "شكراً",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مع السلامة",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "تشرّفنا",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'تشرّفنا' means 'nice to meet you' or 'we are honored'.",
+      "hint": {
+        "transliteration": "Tasharrafna",
+        "arabic": "تشرّفنا"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'Goodbye'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أهلاً",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مع السلامة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "شكراً",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'مع السلامة' is the standard way to say goodbye.",
+      "hint": {
+        "transliteration": "Ma'a salama",
+        "arabic": "مع السلامة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the phrase: '___ جزيلاً.' (Thank you very much.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "أهلاً",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شكراً",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مع",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'شكراً جزيلاً' means 'thank you very much'.",
+      "hint": {
+        "transliteration": "Shukran",
+        "arabic": "شكراً"
+      }
+    }
+  ]
+}

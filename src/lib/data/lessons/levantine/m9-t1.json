@@ -1,0 +1,847 @@
+{
+  "topicId": "m9-t1",
+  "title": "Social Interactions: Offering, Apologies, and Gifts (Levantine)",
+  "dialect": "levantine",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Offering Assistance (Formal)"
+        },
+        "text": "To offer help or something to eat/drink formally, you can use \"تفضل\" (tafaḍḍal) if addressing a male, \"تفضلي\" (tafaḍḍalī) if addressing a female, or \"تفضلوا\" (tafaḍḍalū) if addressing a group. This is often followed by the item or action.",
+        "examples": [
+          {
+            "arabic": "تفضّل اشرب قهوة.",
+            "english": "Please, have some coffee. (to male)",
+            "transliteration": "Tafaḍḍal eshrab qahwe."
+          },
+          {
+            "arabic": "تفضّلوا ساعدوني.",
+            "english": "Please, help me. (to plural)",
+            "transliteration": "Tafaḍḍalū sāʿedūnī."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Offering Assistance (Informal)"
+        },
+        "text": "Informally, you might use \"بتحب\" (bteḥebb) for a male, \"بتحبّي\" (bteḥebbī) for a female, or \"بتحبّوا\" (bteḥebbū) for a group, meaning \"Do you like/want?\". Or simply directly offer something using a verb.",
+        "examples": [
+          {
+            "arabic": "بتحبّ كاسة شاي؟",
+            "english": "Do you want a cup of tea? (to male)",
+            "transliteration": "Bteḥebb kāset shāy?"
+          },
+          {
+            "arabic": "أجيب لك مي؟",
+            "english": "Shall I bring you water? (to male)",
+            "transliteration": "Ajīb lak mayy?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Inviting Someone"
+        },
+        "text": "To invite someone, you can use phrases like \"عازمَك على...\" (ʿāzmak ʿala...) for a male or \"عازمِك على...\" (ʿāzmik ʿala...) for a female, meaning \"I'm inviting you to...\". You can also form a question using \"بتعزمني؟\" (bteʿzemnī?), \"Are you inviting me?\"",
+        "examples": [
+          {
+            "arabic": "عازمك على العشا بكرة.",
+            "english": "I'm inviting you for dinner tomorrow. (to male)",
+            "transliteration": "ʿĀzmak ʿala l-ʿasha bukra."
+          },
+          {
+            "arabic": "بتعزّميني على قهوة؟",
+            "english": "Are you inviting me for coffee? (female to female)",
+            "transliteration": "Bteʿzemīnī ʿala qahwe?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "تفضّل اشرب شي.",
+        "english": "Please, have something to drink. (to male)",
+        "transliteration": "Tafaḍḍal eshrab shī."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بتحبّي قهوة؟",
+        "english": "Do you want coffee? (to a female)",
+        "transliteration": "Bteḥebbī qahwe?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا عازمك على الغدا اليوم.",
+        "english": "I'm inviting you for lunch today. (to a male)",
+        "transliteration": "Ana ʿāzmak ʿala l-ghada l-yōm."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the formal way to offer a female a drink?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بتحبّي تشربي؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "تفضّلي اشربي.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "شو بدك تشربي؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«تفضّلي» is the formal way to address a female.",
+      "hint": {
+        "transliteration": "Tafaḍḍalī eshrabī."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would you informally ask a male friend if he wants tea?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بتحبّ شاي؟",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "تفضّل شاي؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "أجيبلك شاي؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "«بتحبّ» is the informal way to ask a male if he wants something.",
+      "hint": {
+        "transliteration": "Bteḥebb shāy?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the phrase for 'I am inviting you (female) for dinner'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "عازمِك على العشا.",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "بتحبّي العشا؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "تعالي على العشا.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "«عازمِك» is the correct form for inviting a female.",
+      "hint": {
+        "transliteration": "ʿĀzmik ʿala l-ʿasha."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Accepting an Offer or Invitation"
+        },
+        "text": "To accept, you can say \"شكراً\" (shukran - thank you) and then express agreement, or directly use \"يا ريت\" (yā rēt - I wish/I'd love to) or \"أكيد\" (akīd - certainly).",
+        "examples": [
+          {
+            "arabic": "شكراً، يا ريت.",
+            "english": "Thank you, I'd love to.",
+            "transliteration": "Shukran, yā rēt."
+          },
+          {
+            "arabic": "أكيد، بقبل دعوتك.",
+            "english": "Certainly, I accept your invitation.",
+            "transliteration": "Akīd, baqbāl daʿwetak."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Declining Politely"
+        },
+        "text": "To politely decline, start with \"شكراً\" (shukran - thank you) and then explain why, or use \"يا ريت، بس...\" (yā rēt, bas... - I wish, but...).",
+        "examples": [
+          {
+            "arabic": "شكراً كتير، بس ما بقدر.",
+            "english": "Thank you very much, but I can't.",
+            "transliteration": "Shukran ktīr, bas mā baqdar."
+          },
+          {
+            "arabic": "يا ريت، بس عندي موعد.",
+            "english": "I'd love to, but I have an appointment.",
+            "transliteration": "Yā rēt, bas ʿandī mawʿid."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking if Someone Needs Something"
+        },
+        "text": "To ask if someone needs anything, use \"بدّك شي؟\" (baddak shī? - to male), \"بدّكِ شي؟\" (baddik shī? - to female), or \"بدّكن شي؟\" (baddkon shī? - to plural).",
+        "examples": [
+          {
+            "arabic": "بدّك شي قبل ما أروح؟",
+            "english": "Do you need anything before I leave? (to male)",
+            "transliteration": "Baddak shī qabl mā arūḥ?"
+          },
+          {
+            "arabic": "بدّكن شي من السوبر ماركت؟",
+            "english": "Do you need anything from the supermarket? (to plural)",
+            "transliteration": "Baddkon shī min as-sūbar māraket?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شكراً على دعوتك، بقبلها بكل سرور.",
+        "english": "Thank you for your invitation, I accept it with pleasure. (to male)",
+        "transliteration": "Shukran ʿala daʿwetak, baqbālha bi-kull surūr."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "يا ريت، بس مشغولة اليوم.",
+        "english": "I'd love to, but I'm busy today. (female speaker)",
+        "transliteration": "Yā rēt, bas mashghūle l-yōm."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هل بدّكن شي مني قبل ما نمشي؟",
+        "english": "Do you (plural) need anything from me before we leave?",
+        "transliteration": "Hal baddkon shī mennī qabl mā nemshī?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you politely accept an invitation?",
+      "options": [
+        {
+          "id": "a",
+          "text": "لا شكرا.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أكيد، بقبل دعوتك.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "ما بدي.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«أكيد، بقبل دعوتك» means 'Certainly, I accept your invitation' and is a polite way to accept.",
+      "hint": {
+        "transliteration": "Akīd, baqbāl daʿwetak."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is a polite way for a male to decline an offer because he's busy?",
+      "options": [
+        {
+          "id": "a",
+          "text": "لا.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "يا ريت، بس عندي شغل.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "ما فيي أجي.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«يا ريت، بس عندي شغل» means 'I wish, but I have work' (I'm busy).",
+      "hint": {
+        "transliteration": "Yā rēt, bas ʿandī shoghl."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask a female if she needs anything?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بدّك شي؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بدّكِ شي؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "شو بدك؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«بدّكِ» (with a kasra) is used when addressing a female.",
+      "hint": {
+        "transliteration": "Baddik shī?"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Apologizing (General)"
+        },
+        "text": "The most common way to apologize is \"آسف\" (āsef - to male), \"آسفة\" (āsfe - to female), or \"آسفين\" (āsfīn - to plural), meaning \"sorry\". You can also add \"كتير\" (ktīr - very) for emphasis.",
+        "examples": [
+          {
+            "arabic": "آسف، تأخّرت.",
+            "english": "Sorry, I'm late. (male speaker)",
+            "transliteration": "Āsef, taʾakhkhart."
+          },
+          {
+            "arabic": "آسفة كتير على الإزعاج.",
+            "english": "Very sorry for the disturbance. (female speaker)",
+            "transliteration": "Āsfe ktīr ʿala l-izʿāj."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Accepting an Apology"
+        },
+        "text": "To accept an apology, you can say \"ما في مشكلة\" (mā fī mushkile - no problem) or \"ولا يهمك\" (wala yehemmak - don't worry about it - to male), \"ولا يهمِّك\" (wala yehemmik - to female).",
+        "examples": [
+          {
+            "arabic": "ما في مشكلة أبداً.",
+            "english": "Absolutely no problem.",
+            "transliteration": "Mā fī mushkile abadan."
+          },
+          {
+            "arabic": "ولا يهمك، عادي.",
+            "english": "Don't worry about it, it's fine. (to male)",
+            "transliteration": "Wala yehemmak, ʿādī."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Reassuring After an Apology"
+        },
+        "text": "After accepting an apology, you might want to reassure the person. Phrases like \"صار خير\" (ṣār khēr - all's well that ends well/it's okay now) or \"خلص، انسى الموضوع\" (khalaṣ, insa l-mawḍūʿ - enough, forget about it - to male) are common.",
+        "examples": [
+          {
+            "arabic": "ولا يهمِّك، صار خير.",
+            "english": "Don't worry, it's okay now. (to female)",
+            "transliteration": "Wala yehemmik, ṣār khēr."
+          },
+          {
+            "arabic": "انسى الموضوع، ما صار شي.",
+            "english": "Forget about it, nothing happened. (to male)",
+            "transliteration": "Insa l-mawḍūʿ, mā ṣār shī."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا آسفة على الخطأ.",
+        "english": "I am sorry for the mistake. (female speaker)",
+        "transliteration": "Ana āsfe ʿala l-khaṭaʾ."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ما في مشكلة، ولا يهمك.",
+        "english": "No problem, don't worry about it. (to a male)",
+        "transliteration": "Mā fī mushkile, wala yehemmak."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "خلاص، انسى الموضوع.",
+        "english": "Okay, forget about the matter. (to a male)",
+        "transliteration": "Khalāṣ, insa l-mawḍūʿ."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How does a female apologize for being late?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أنا آسف على التأخير.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أنا آسفة على التأخير.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "ما بدي أجي.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«آسفة» is the feminine form of 'sorry'.",
+      "hint": {
+        "transliteration": "Ana āsfe ʿala t-taʾkhīr."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What phrase means 'No problem' when accepting an apology?",
+      "options": [
+        {
+          "id": "a",
+          "text": "شكراً.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ما في مشكلة.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "ليش؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«ما في مشكلة» directly translates to 'no problem'.",
+      "hint": {
+        "transliteration": "Mā fī mushkile."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would you reassure a female friend after she apologizes, telling her 'don't worry about it'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ولا يهمكِ.",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "ولا يهمك.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "مش مهم.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "«ولا يهمكِ» (with kasra) is the correct form for addressing a female.",
+      "hint": {
+        "transliteration": "Wala yehemmik."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for Gift Ideas"
+        },
+        "text": "To ask for gift ideas, you can use \"شو رأيك بـ...؟\" (shū raʾyak b-...?) meaning \"What do you think of...?\" or \"شو ممكن جيب لـ...؟\" (shū mumkin jīb l-...?) for \"What can I bring for...?\"",
+        "examples": [
+          {
+            "arabic": "شو رأيك بهدية لعيد ميلادها؟",
+            "english": "What do you think about a gift for her birthday? (to male)",
+            "transliteration": "Shū raʾyak bi-hadīye la-ʿīd mīlādha?"
+          },
+          {
+            "arabic": "شو ممكن جيب لأمي؟",
+            "english": "What can I bring for my mom?",
+            "transliteration": "Shū mumkin jīb la-ʾummī?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Suggesting a Gift (General)"
+        },
+        "text": "To suggest a gift, you can say \"ممكن تجيب/تجيبي...\" (mumkin tajīb/tajībī...) meaning \"You could bring...\" or \"فكرة حلوة إنّك تجيب...\" (fikra ḥelwe innak tajīb...) meaning \"It's a nice idea that you bring...\".",
+        "examples": [
+          {
+            "arabic": "ممكن تجيب ورد.",
+            "english": "You could bring flowers. (to male)",
+            "transliteration": "Mumkin tajīb ward."
+          },
+          {
+            "arabic": "فكرة حلوة إنّك تجيب كتاب.",
+            "english": "It's a nice idea that you bring a book. (to male)",
+            "transliteration": "Fikra ḥelwe innak tajīb kitāb."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Suggesting Specific Gift Items"
+        },
+        "text": "When suggesting specific items, just name them, or introduce with \"هدية حلوة بتكون...\" (hadīye ḥelwe btikūn...) meaning \"A nice gift would be...\". Common items include \"ورد\" (ward - flowers), \"عطر\" (ʿeṭr - perfume), \"ساعة\" (sāʿa - watch), \"كتاب\" (kitāb - book), \"ملابس\" (malābes - clothes).",
+        "examples": [
+          {
+            "arabic": "الورد هدية حلوة.",
+            "english": "Flowers are a nice gift.",
+            "transliteration": "Al-ward hadīye ḥelwe."
+          },
+          {
+            "arabic": "العطر خيار ممتاز.",
+            "english": "Perfume is an excellent choice.",
+            "transliteration": "Al-ʿeṭr khiyār mumtāz."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شو رأيك بهدية عيد ميلاد لأختي؟",
+        "english": "What do you think about a birthday gift for my sister? (to male)",
+        "transliteration": "Shū raʾyak bi-hadīyet ʿīd mīlād la-ʾokhtī?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ممكن تجيبي عطر إلها.",
+        "english": "You (female) could bring perfume for her.",
+        "transliteration": "Mumkin tajībī ʿeṭr ʾelhā."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الساعة هدية كتير حلوة.",
+        "english": "A watch is a very nice gift.",
+        "transliteration": "As-sāʿa hadīye ktīr ḥelwe."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would you ask for gift ideas for someone's birthday (to a male)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "شو بدك؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شو رأيك بهدية لعيد ميلاد؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "شو هو عيد الميلاد؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«شو رأيك بهدية لعيد ميلاد؟» means 'What do you think about a gift for a birthday?'.",
+      "hint": {
+        "transliteration": "Shū raʾyak bi-hadīye la-ʿīd mīlād?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is a general phrase to suggest 'you (male) could bring flowers'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "جيب ورد.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ممكن تجيب ورد.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بدّي ورد.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«ممكن تجيب» means 'you could bring'.",
+      "hint": {
+        "transliteration": "Mumkin tajīb ward."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which of the following is a common gift item suggestion?",
+      "options": [
+        {
+          "id": "a",
+          "text": "سيارة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "عطر",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كرسي",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«عطر» (perfume) is a common gift.",
+      "hint": {
+        "transliteration": "ʿEṭr."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing Appreciation for a Gift"
+        },
+        "text": "To show appreciation, you can say \"كتير حلوة الهدية\" (ktīr ḥelwe l-hadīye - the gift is very nice) or \"عجبتني كتير\" (ʿajabtnī ktīr - I liked it a lot).",
+        "examples": [
+          {
+            "arabic": "الهدية كتير حلوة، شكراً إلك.",
+            "english": "The gift is very nice, thank you.",
+            "transliteration": "Al-hadīye ktīr ḥelwe, shukran ilak."
+          },
+          {
+            "arabic": "عجبتني الساعة كتير.",
+            "english": "I liked the watch a lot.",
+            "transliteration": "ʿAjabtnī as-sāʿa ktīr."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Thanking for a Gift"
+        },
+        "text": "The simple \"شكراً\" (shukran - thank you) is always appropriate. You can add \"كتير\" (ktīr - very) or \"الله يخليك/ي\" (allāh ykhallīk/y - May God keep you - to male/female) which expresses gratitude and a wish for their well-being.",
+        "examples": [
+          {
+            "arabic": "شكراً كتير على الهدية.",
+            "english": "Thank you very much for the gift.",
+            "transliteration": "Shukran ktīr ʿala l-hadīye."
+          },
+          {
+            "arabic": "الله يخلّيكِ، ما كان في داعي.",
+            "english": "May God keep you, there was no need. (to female)",
+            "transliteration": "Allāh ykhallīkī, mā kān fī dāʿī."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Wishing Someone Well on an Occasion"
+        },
+        "text": "For birthdays, \"عيد ميلاد سعيد\" (ʿīd mīlād saʿīd - Happy Birthday). For general occasions like holidays, \"كل عام وأنتَ بخير\" (kull ʿām w inta bkhēr - May you be well every year - to male) or \"كل عام وأنتِ بخير\" (kull ʿām w inti bkhēr - to female).",
+        "examples": [
+          {
+            "arabic": "عيد ميلاد سعيد!",
+            "english": "Happy Birthday!",
+            "transliteration": "ʿĪd mīlād saʿīd!"
+          },
+          {
+            "arabic": "كل عام وأنتَ بخير بمناسبة العيد.",
+            "english": "May you be well every year on the occasion of Eid. (to male)",
+            "transliteration": "Kull ʿām w inta bkhēr bi-munāsabet al-ʿīd."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الهدية عجبتني كتير، شكراً.",
+        "english": "I liked the gift a lot, thank you.",
+        "transliteration": "Al-hadīye ʿajabtnī ktīr, shukran."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الله يخلّيكِ على الهدية الرائعة.",
+        "english": "May God keep you for the wonderful gift. (to a female)",
+        "transliteration": "Allāh ykhallīkī ʿala l-hadīye r-rāʾiʿa."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "كل عام وأنتَ بخير يا صديقي!",
+        "english": "Happy returns (May you be well every year), my friend! (to a male)",
+        "transliteration": "Kull ʿām w inta bkhēr yā ṣadīqī!"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you express that 'the gift is very nice'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "الهدية مو حلوة.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الهدية كتير حلوة.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "ما في هدية.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«كتير حلوة الهدية» directly means 'the gift is very nice'.",
+      "hint": {
+        "transliteration": "Al-hadīye ktīr ḥelwe."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is a polite way to thank a female for a gift, implying 'there was no need'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "شكراً، كان لازم.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الله يخلّيكِ، ما كان في داعي.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "ليش جبتيها؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«الله يخلّيكِ، ما كان في داعي» is a common and polite way to express gratitude while also suggesting the gift wasn't necessary, but appreciated.",
+      "hint": {
+        "transliteration": "Allāh ykhallīkī, mā kān fī dāʿī."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you wish a male friend 'Happy Birthday'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "عيد ميلاد سعيد!",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "كل عام وأنتِ بخير.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "صباح الخير.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "«عيد ميلاد سعيد» is the direct translation for Happy Birthday.",
+      "hint": {
+        "transliteration": "ʿĪd mīlād saʿīd!"
+      }
+    }
+  ]
+}

@@ -1,0 +1,800 @@
+{
+  "topicId": "m2-t1",
+  "title": "Identifying and Asking About Classroom Objects (Levantine)",
+  "dialect": "levantine",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking about masculine objects: What is this?"
+        },
+        "text": "To ask \"What is this?\" when referring to a masculine object in Levantine Arabic, we use \"شو هادا؟\". This phrase is commonly used in everyday conversation.",
+        "examples": [
+          {
+            "arabic": "شو هادا؟",
+            "english": "What is this? (masculine)",
+            "transliteration": "Shu hada?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Vocabulary: Book"
+        },
+        "text": "The word for \"book\" in Levantine Arabic is \"كتاب\". It is a masculine noun. Pay attention to its pronunciation.",
+        "examples": [
+          {
+            "arabic": "كتاب",
+            "english": "Book",
+            "transliteration": "kitāb"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Vocabulary: Pen"
+        },
+        "text": "The word for \"pen\" in Levantine Arabic is \"قلم\". Like \"كتاب\", it is also a masculine noun. We will use this in sentences.",
+        "examples": [
+          {
+            "arabic": "قلم",
+            "english": "Pen",
+            "transliteration": "qalam"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شو هادا؟ هادا كتاب.",
+        "english": "What is this? This is a book.",
+        "transliteration": "Shu hada? Hada kitāb."
+      },
+      "context": "Asking and answering about a masculine object."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شو هادا؟ هادا قلم.",
+        "english": "What is this? This is a pen.",
+        "transliteration": "Shu hada? Hada qalam."
+      },
+      "context": "Practicing identifying another masculine object."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'book'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "قلم",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كتاب",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "طاولة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "The Arabic word for 'book' is 'كتاب'.",
+      "hint": {
+        "transliteration": "kitāb",
+        "arabic": "كتاب"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'What is this?' (referring to a masculine object)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "شو هادي؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شو هادا؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "شو هي؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "For masculine objects, we use 'شو هادا؟'.",
+      "hint": {
+        "transliteration": "Shu hada?",
+        "arabic": "شو هادا؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which of these is a masculine noun?",
+      "options": [
+        {
+          "id": "a",
+          "text": "شنطة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كتاب",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "طاولة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'كتاب' is a masculine noun. 'شنطة' and 'طاولة' are feminine.",
+      "hint": {
+        "transliteration": "kitāb",
+        "arabic": "كتاب"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking about feminine objects: What is this?"
+        },
+        "text": "To ask \"What is this?\" when referring to a feminine object in Levantine Arabic, we use \"شو هادي؟\". Notice the change from \"هادا\" to \"هادي\" to match the gender.",
+        "examples": [
+          {
+            "arabic": "شو هادي؟",
+            "english": "What is this? (feminine)",
+            "transliteration": "Shu hadi?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Vocabulary: Table/Desk"
+        },
+        "text": "The word for \"table\" or \"desk\" is \"طاولة\". This is a feminine noun, often identified by the ending \"ة\" (taa marbuuta).",
+        "examples": [
+          {
+            "arabic": "طاولة",
+            "english": "Table/Desk",
+            "transliteration": "ṭāwleh"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Vocabulary: Bag"
+        },
+        "text": "The word for \"bag\" or \"backpack\" is \"شنطة\". This is also a feminine noun, ending with \"ة\".",
+        "examples": [
+          {
+            "arabic": "شنطة",
+            "english": "Bag",
+            "transliteration": "shanṭa"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شو هادي؟ هادي طاولة.",
+        "english": "What is this? This is a table.",
+        "transliteration": "Shu hadi? Hadi ṭāwleh."
+      },
+      "context": "Asking and answering about a feminine object."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شو هادي؟ هادي شنطة.",
+        "english": "What is this? This is a bag.",
+        "transliteration": "Shu hadi? Hadi shanṭa."
+      },
+      "context": "Practicing identifying another feminine object."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'bag'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "قلم",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كتاب",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "شنطة",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "The Arabic word for 'bag' is 'شنطة'.",
+      "hint": {
+        "transliteration": "shanṭa",
+        "arabic": "شنطة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'What is this?' (referring to a feminine object)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "شو هادا؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شو هادي؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "شو هو؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "For feminine objects, we use 'شو هادي؟'.",
+      "hint": {
+        "transliteration": "Shu hadi?",
+        "arabic": "شو هادي؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Identify the feminine noun.",
+      "options": [
+        {
+          "id": "a",
+          "text": "قلم",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كرسي",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "طاولة",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'طاولة' is a feminine noun, identifiable by the 'ة' at the end. 'قلم' and 'كرسي' are masculine.",
+      "hint": {
+        "transliteration": "ṭāwleh",
+        "arabic": "طاولة"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Vocabulary: Chair"
+        },
+        "text": "The word for \"chair\" in Levantine Arabic is \"كرسي\". It is a masculine noun.",
+        "examples": [
+          {
+            "arabic": "كرسي",
+            "english": "Chair",
+            "transliteration": "kursi"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Vocabulary: Pencil"
+        },
+        "text": "The word for \"pencil\" is \"قلم رصاص\". It literally means \"pen of lead\". This phrase is masculine.",
+        "examples": [
+          {
+            "arabic": "قلم رصاص",
+            "english": "Pencil",
+            "transliteration": "qalam rṣāṣ"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Vocabulary: Eraser"
+        },
+        "text": "The word for \"eraser\" is \"محّاية\". It is a feminine noun, often ending with \"ة\".",
+        "examples": [
+          {
+            "arabic": "محّاية",
+            "english": "Eraser",
+            "transliteration": "maḥḥāyeh"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هادا كرسي.",
+        "english": "This is a chair.",
+        "transliteration": "Hada kursi."
+      },
+      "context": "Stating what a masculine object is."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هادي محّاية.",
+        "english": "This is an eraser.",
+        "transliteration": "Hadi maḥḥāyeh."
+      },
+      "context": "Stating what a feminine object is."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شو هادا؟ هادا قلم رصاص.",
+        "english": "What is this? This is a pencil.",
+        "transliteration": "Shu hada? Hada qalam rṣāṣ."
+      },
+      "context": "Asking and answering about a masculine compound noun."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'chair'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "كرسي",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "طاولة",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "شنطة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "The Arabic word for 'chair' is 'كرسي'.",
+      "hint": {
+        "transliteration": "kursi",
+        "arabic": "كرسي"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'eraser'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "قلم",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "محّاية",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كتاب",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "The Arabic word for 'eraser' is 'محّاية'.",
+      "hint": {
+        "transliteration": "maḥḥāyeh",
+        "arabic": "محّاية"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which of these is a masculine noun?",
+      "options": [
+        {
+          "id": "a",
+          "text": "محّاية",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شنطة",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "كرسي",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'كرسي' is a masculine noun.",
+      "hint": {
+        "transliteration": "kursi",
+        "arabic": "كرسي"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Replying with 'Yes'"
+        },
+        "text": "To say \"yes\" in Levantine Arabic, you can use either \"آه\" or \"أيوا\". Both are very common and interchangeable in most contexts.",
+        "examples": [
+          {
+            "arabic": "آه",
+            "english": "Yes",
+            "transliteration": "āh"
+          },
+          {
+            "arabic": "أيوا",
+            "english": "Yes",
+            "transliteration": "aywa"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Replying with 'No'"
+        },
+        "text": "To say \"no\" in Levantine Arabic, you use \"لأ\". This is a straightforward negation.",
+        "examples": [
+          {
+            "arabic": "لأ",
+            "english": "No",
+            "transliteration": "laʾ"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking simple Yes/No questions"
+        },
+        "text": "To ask a yes/no question like \"Is this a book?\" or \"Is this a table?\", you simply state the phrase with a rising intonation at the end. The words \"هادا\" (hada) for masculine and \"هادي\" (hadi) for feminine are used to mean \"this is\".",
+        "examples": [
+          {
+            "arabic": "هادا كتاب؟",
+            "english": "Is this a book?",
+            "transliteration": "Hada kitāb?"
+          },
+          {
+            "arabic": "هادي طاولة؟",
+            "english": "Is this a table?",
+            "transliteration": "Hadi ṭāwleh?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هادا قلم؟ آه، هادا قلم.",
+        "english": "Is this a pen? Yes, this is a pen.",
+        "transliteration": "Hada qalam? Āh, hada qalam."
+      },
+      "context": "Practicing a yes/no question and an affirmative answer."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هادي شنطة؟ لأ، هادي محّاية.",
+        "english": "Is this a bag? No, this is an eraser.",
+        "transliteration": "Hadi shanṭa? Laʾ, hadi maḥḥāyeh."
+      },
+      "context": "Practicing a yes/no question and a negative answer with correction."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'Yes' in Levantine Arabic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "لأ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "آه",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "شو",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'آه' is one way to say 'yes'. 'أيوا' is another.",
+      "hint": {
+        "transliteration": "āh",
+        "arabic": "آه"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'No' in Levantine Arabic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أيوا",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "لأ",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "هادا",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'لأ' is the word for 'no'.",
+      "hint": {
+        "transliteration": "laʾ",
+        "arabic": "لأ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which response means 'Yes, this is a chair'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "لأ، هادا كرسي.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "آه، هادا كرسي.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "شو هادا؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'آه، هادا كرسي' is the correct affirmative response.",
+      "hint": {
+        "transliteration": "Āh, hada kursi.",
+        "arabic": "آه، هادا كرسي."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Adjective: Big"
+        },
+        "text": "The adjective for \"big\" is \"كبير\" for masculine nouns and \"كبيرة\" for feminine nouns. Adjectives in Arabic typically follow the noun they describe and must agree in gender.",
+        "examples": [
+          {
+            "arabic": "كتاب كبير",
+            "english": "A big book (masculine)",
+            "transliteration": "kitāb kabīr"
+          },
+          {
+            "arabic": "طاولة كبيرة",
+            "english": "A big table (feminine)",
+            "transliteration": "ṭāwleh kabīreh"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Adjective: Small"
+        },
+        "text": "The adjective for \"small\" is \"صغير\" for masculine nouns and \"صغيرة\" for feminine nouns. Remember to match the gender of the adjective to the noun.",
+        "examples": [
+          {
+            "arabic": "قلم صغير",
+            "english": "A small pen (masculine)",
+            "transliteration": "qalam ṣaghīr"
+          },
+          {
+            "arabic": "شنطة صغيرة",
+            "english": "A small bag (feminine)",
+            "transliteration": "shanṭa ṣaghīreh"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking about size"
+        },
+        "text": "To ask \"Is it big or small?\" you combine the adjectives with \"أو\" (aw) meaning \"or\". You adjust the adjectives for gender: \"كبير أو صغير؟\" for masculine and \"كبيرة أو صغيرة؟\" for feminine objects.",
+        "examples": [
+          {
+            "arabic": "هادا كتاب، كبير أو صغير؟",
+            "english": "This is a book, big or small?",
+            "transliteration": "Hada kitāb, kabīr aw ṣaghīr?"
+          },
+          {
+            "arabic": "هادي طاولة، كبيرة أو صغيرة؟",
+            "english": "This is a table, big or small?",
+            "transliteration": "Hadi ṭāwleh, kabīreh aw ṣaghīreh?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هادا كتاب كبير.",
+        "english": "This is a big book.",
+        "transliteration": "Hada kitāb kabīr."
+      },
+      "context": "Describing a masculine object with its size."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هادي شنطة صغيرة.",
+        "english": "This is a small bag.",
+        "transliteration": "Hadi shanṭa ṣaghīreh."
+      },
+      "context": "Describing a feminine object with its size."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الكرسي كبير أو صغير؟",
+        "english": "Is the chair big or small?",
+        "transliteration": "Al-kursi kabīr aw ṣaghīr?"
+      },
+      "context": "Asking about the size of a masculine object."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'a big table'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "طاولة كبير",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "طاولة كبيرة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كتاب كبير",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Since 'طاولة' (table) is feminine, the adjective 'big' must also be feminine: 'كبيرة'.",
+      "hint": {
+        "transliteration": "ṭāwleh kabīreh",
+        "arabic": "طاولة كبيرة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase describes 'a small pen'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "قلم كبير",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "قلم صغيرة",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "قلم صغير",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'قلم' (pen) is masculine, so 'small' must be masculine: 'صغير'.",
+      "hint": {
+        "transliteration": "qalam ṣaghīr",
+        "arabic": "قلم صغير"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: هادي طاولة ___.",
+      "options": [
+        {
+          "id": "a",
+          "text": "كبير",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "صغير",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "كبيرة",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'طاولة' is feminine, so the adjective describing it must also be feminine, 'كبيرة'.",
+      "hint": {
+        "transliteration": "kabīreh",
+        "arabic": "كبيرة"
+      }
+    }
+  ]
+}

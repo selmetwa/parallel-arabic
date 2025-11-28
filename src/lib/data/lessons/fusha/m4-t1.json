@@ -1,0 +1,879 @@
+{
+  "topicId": "m4-t1",
+  "title": "Talking About Money and Asking for Prices",
+  "dialect": "fusha",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Money: نقود",
+          "arabic": "النقود"
+        },
+        "text": "The most general term for money in Arabic is 'نقود'. It is a plural noun, but often used to refer to money in general. You will hear this word often in everyday situations.",
+        "examples": [
+          {
+            "arabic": "أحتاجُ نُقوداً.",
+            "english": "I need money.",
+            "transliteration": "Ahṭāju nuqūdan."
+          },
+          {
+            "arabic": "هل لديكَ نُقود؟",
+            "english": "Do you (m) have money?",
+            "transliteration": "Hal ladayka nuqūd?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Currency: عملة",
+          "arabic": "العملة"
+        },
+        "text": "When you want to refer to a specific type of money, like a dollar, euro, or dinar, the term 'عملة' is used. It means 'currency'.",
+        "examples": [
+          {
+            "arabic": "ما هيَ عُملةُ بلدكَ؟",
+            "english": "What is your country's currency?",
+            "transliteration": "Mā hiya 'umlatu baladika?"
+          },
+          {
+            "arabic": "هذهِ عُملةٌ نادرة.",
+            "english": "This is a rare currency.",
+            "transliteration": "Hādhihi 'umlatun nādirah."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'How Much?': كم الثمن؟ / بكم؟",
+          "arabic": "كم الثمن؟ / بكم؟"
+        },
+        "text": "These are the two most common ways to ask 'How much is it?' or 'What is the price?' 'كم الثمن؟' literally means 'How much is the price?' while 'بكم؟' means 'For how much?'. Both are widely understood.",
+        "examples": [
+          {
+            "arabic": "كم الثمن؟",
+            "english": "How much is it?",
+            "transliteration": "Kam ath-thaman?"
+          },
+          {
+            "arabic": "بكم هذا؟",
+            "english": "How much is this (m)?",
+            "transliteration": "Bikam hādhā?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أحتاجُ نُقوداً لأشتري عُملة.",
+        "english": "I need money to buy currency.",
+        "transliteration": "Ahṭāju nuqūdan li-ashtarī 'umlah."
+      },
+      "context": "Combining 'money' and 'currency' with the verb 'to buy'."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بكم هذهِ العُملة؟",
+        "english": "How much is this currency?",
+        "transliteration": "Bikam hādhihi al-'umlah?"
+      },
+      "context": "Asking the price of a specific currency."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'money'?",
+      "options": [
+        {
+          "id": "optionA",
+          "text": "نُقود",
+          "isCorrect": true
+        },
+        {
+          "id": "optionB",
+          "text": "عُملة",
+          "isCorrect": false
+        },
+        {
+          "id": "optionC",
+          "text": "قلم",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "optionA",
+      "explanation": "'نُقود' is the general term for money.",
+      "hint": {
+        "transliteration": "Nuqūd",
+        "arabic": "نُقود"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'How much?'",
+      "options": [
+        {
+          "id": "optionA",
+          "text": "ما هذا؟",
+          "isCorrect": false
+        },
+        {
+          "id": "optionB",
+          "text": "بكم؟",
+          "isCorrect": true
+        },
+        {
+          "id": "optionC",
+          "text": "أين؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "optionB",
+      "explanation": "'بكم؟' is a common way to ask about the price.",
+      "hint": {
+        "transliteration": "Bikam?",
+        "arabic": "بكم؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'currency'?",
+      "options": [
+        {
+          "id": "optionA",
+          "text": "عُملة",
+          "isCorrect": true
+        },
+        {
+          "id": "optionB",
+          "text": "نُقود",
+          "isCorrect": false
+        },
+        {
+          "id": "optionC",
+          "text": "طعام",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "optionA",
+      "explanation": "'عُملة' specifically refers to a unit of currency.",
+      "hint": {
+        "transliteration": "'Umlah",
+        "arabic": "عُملة"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "The Dinar: دينار",
+          "arabic": "الدينار"
+        },
+        "text": "The Dinar is a common currency unit in several Arab countries, including Kuwait, Bahrain, Jordan, Iraq, and Algeria. It is a masculine noun.",
+        "examples": [
+          {
+            "arabic": "هذا دينارٌ كويتيٌّ.",
+            "english": "This is a Kuwaiti Dinar.",
+            "transliteration": "Hādhā dīnārun kuwaytīyun."
+          },
+          {
+            "arabic": "أريدُ عشرةَ دنانير.",
+            "english": "I want ten Dinars.",
+            "transliteration": "Urīdu 'asharata danānīr."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "The Dirham: درهم",
+          "arabic": "الدرهم"
+        },
+        "text": "The Dirham is the currency used in countries like the United Arab Emirates (UAE) and Morocco. It is also a masculine noun.",
+        "examples": [
+          {
+            "arabic": "كم سعرُ هذا بالدرهم؟",
+            "english": "How much is this (m) in Dirhams?",
+            "transliteration": "Kam si'ru hādhā bid-dirham?"
+          },
+          {
+            "arabic": "معي خمسةُ دراهم.",
+            "english": "I have five Dirhams.",
+            "transliteration": "Ma'ī khamsatu darāhim."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "The Riyal: ريال",
+          "arabic": "الريال"
+        },
+        "text": "The Riyal is the official currency in Saudi Arabia, Qatar, and Yemen. It is a masculine noun.",
+        "examples": [
+          {
+            "arabic": "هذا يُكلّفُ مئةَ ريال.",
+            "english": "This costs one hundred Riyals.",
+            "transliteration": "Hādhā yukallifu mi'ata riyāl."
+          },
+          {
+            "arabic": "هل تقبلُ الريالَ السعوديَّ؟",
+            "english": "Do you accept Saudi Riyals?",
+            "transliteration": "Hal taqbalu ar-riyāla as-sa'ūdiyya?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أحتاجُ عشرةَ دنانير.",
+        "english": "I need ten Dinars.",
+        "transliteration": "Ahṭāju 'asharata danānīr."
+      },
+      "context": "Expressing a need for a specific amount of Dinar currency."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "كم سعرُ هذهِ العُملة بالدرهم؟",
+        "english": "How much is this currency in Dirhams?",
+        "transliteration": "Kam si'ru hādhihi al-'umlah bid-dirham?"
+      },
+      "context": "Asking the price of an item using the Dirham currency."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أريدُ أن أدفعَ بالريال.",
+        "english": "I want to pay in Riyals.",
+        "transliteration": "Urīdu an adfa'a bir-riyāl."
+      },
+      "context": "Stating your preferred method of payment using Riyals."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'Dinar'?",
+      "options": [
+        {
+          "id": "optionA",
+          "text": "دينار",
+          "isCorrect": true
+        },
+        {
+          "id": "optionB",
+          "text": "درهم",
+          "isCorrect": false
+        },
+        {
+          "id": "optionC",
+          "text": "ريال",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "optionA",
+      "explanation": "'دينار' is the Arabic term for Dinar currency.",
+      "hint": {
+        "transliteration": "Dīnār",
+        "arabic": "دينار"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which currency is commonly used in Saudi Arabia?",
+      "options": [
+        {
+          "id": "optionA",
+          "text": "ريال",
+          "isCorrect": true
+        },
+        {
+          "id": "optionB",
+          "text": "دينار",
+          "isCorrect": false
+        },
+        {
+          "id": "optionC",
+          "text": "درهم",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "optionA",
+      "explanation": "The Riyal is the currency of Saudi Arabia.",
+      "hint": {
+        "transliteration": "Riyāl",
+        "arabic": "ريال"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "If you are in the UAE, what currency would you most likely use?",
+      "options": [
+        {
+          "id": "optionA",
+          "text": "دينار",
+          "isCorrect": false
+        },
+        {
+          "id": "optionB",
+          "text": "درهم",
+          "isCorrect": true
+        },
+        {
+          "id": "optionC",
+          "text": "ريال",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "optionB",
+      "explanation": "The Dirham is the currency of the UAE.",
+      "hint": {
+        "transliteration": "Dirham",
+        "arabic": "درهم"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Numbers for Prices (1-10)",
+          "arabic": "الأرقام للأسعار (١-١٠)"
+        },
+        "text": "Understanding basic numbers is crucial for prices. Here are 'one', 'two', and 'ten' as examples. Remember that numbers agree in gender with the noun they quantify (for numbers 3-10, it's inverse agreement).",
+        "examples": [
+          {
+            "arabic": "واحد",
+            "english": "one (m)",
+            "transliteration": "Wāḥid"
+          },
+          {
+            "arabic": "اثنان",
+            "english": "two (m)",
+            "transliteration": "Ithnān"
+          },
+          {
+            "arabic": "عشرة",
+            "english": "ten (m)",
+            "transliteration": "'Asharah"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "I want: أريدُ",
+          "arabic": "أريدُ"
+        },
+        "text": "The verb 'أريدُ' means 'I want'. It is essential for expressing your desire to purchase something. It is followed by the object you want, or by 'أنْ' (an) + a verb in the subjunctive mood.",
+        "examples": [
+          {
+            "arabic": "أريدُ هذا.",
+            "english": "I want this.",
+            "transliteration": "Urīdu hādhā."
+          },
+          {
+            "arabic": "أريدُ ماءً.",
+            "english": "I want water.",
+            "transliteration": "Urīdu mā'an."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Price: سعر",
+          "arabic": "السعر"
+        },
+        "text": "Another term for 'price' is 'سعر'. You can use it interchangeably with 'ثمن' (thaman) in many contexts when asking about costs.",
+        "examples": [
+          {
+            "arabic": "ما هوَ سِعرُ التفاح؟",
+            "english": "What is the price of the apples?",
+            "transliteration": "Mā huwa si'ru at-tuffāḥ?"
+          },
+          {
+            "arabic": "السِّعرُ جيد.",
+            "english": "The price is good.",
+            "transliteration": "As-si'ru jayyid."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أريدُ هذا، كم سعرهُ؟",
+        "english": "I want this, what is its price?",
+        "transliteration": "Urīdu hādhā, kam si'ruhu?"
+      },
+      "context": "Combining 'I want' with asking the price of an item."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "السِّعرُ عشرةُ دنانير.",
+        "english": "The price is ten Dinars.",
+        "transliteration": "As-si'ru 'asharatu danānīr."
+      },
+      "context": "Stating a price using 'ten' and 'Dinars'."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'price'?",
+      "options": [
+        {
+          "id": "optionA",
+          "text": "نُقود",
+          "isCorrect": false
+        },
+        {
+          "id": "optionB",
+          "text": "سِعر",
+          "isCorrect": true
+        },
+        {
+          "id": "optionC",
+          "text": "عُملة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "optionB",
+      "explanation": "'سِعر' means price.",
+      "hint": {
+        "transliteration": "Si'r",
+        "arabic": "سِعر"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'I want'?",
+      "options": [
+        {
+          "id": "optionA",
+          "text": "ليس عندي",
+          "isCorrect": false
+        },
+        {
+          "id": "optionB",
+          "text": "عندي",
+          "isCorrect": false
+        },
+        {
+          "id": "optionC",
+          "text": "أريدُ",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "optionC",
+      "explanation": "'أريدُ' is the first person singular form for 'I want'.",
+      "hint": {
+        "transliteration": "Urīdu",
+        "arabic": "أريدُ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which number is 'one' (masculine)?",
+      "options": [
+        {
+          "id": "optionA",
+          "text": "اثنان",
+          "isCorrect": false
+        },
+        {
+          "id": "optionB",
+          "text": "واحد",
+          "isCorrect": true
+        },
+        {
+          "id": "optionC",
+          "text": "عشرة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "optionB",
+      "explanation": "'واحد' is the masculine form of the number one.",
+      "hint": {
+        "transliteration": "Wāḥid",
+        "arabic": "واحد"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "This (Masculine & Feminine): هذا / هذه",
+          "arabic": "هذا / هذه"
+        },
+        "text": "These are demonstrative pronouns for 'this'. 'هذا' (hādhā) is used for masculine nouns, while 'هذهِ' (hādhihi) is used for feminine nouns. It's important to match the gender.",
+        "examples": [
+          {
+            "arabic": "هذا كِتاب.",
+            "english": "This is a book (m).",
+            "transliteration": "Hādhā kitāb."
+          },
+          {
+            "arabic": "هذهِ سيارة.",
+            "english": "This is a car (f).",
+            "transliteration": "Hādhihi sayyārah."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "That (Masculine & Feminine): ذلك / تلك",
+          "arabic": "ذلك / تلك"
+        },
+        "text": "Similar to 'this', 'that' also has masculine and feminine forms. 'ذلكَ' (dhālika) is for masculine nouns, and 'تلكَ' (tilka) is for feminine nouns.",
+        "examples": [
+          {
+            "arabic": "ذلكَ بيت.",
+            "english": "That is a house (m).",
+            "transliteration": "Dhālika bayt."
+          },
+          {
+            "arabic": "تلكَ شجرة.",
+            "english": "That is a tree (f).",
+            "transliteration": "Tilka shajarah."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for a Specific Price: كم سعر هذا؟",
+          "arabic": "كم سعر هذا؟"
+        },
+        "text": "To ask the price of a specific item, you combine 'كم سعر' (how much price) with the appropriate demonstrative pronoun ('هذا' for masculine, 'هذهِ' for feminine) or the name of the item.",
+        "examples": [
+          {
+            "arabic": "كم سعرُ هذا القميص؟",
+            "english": "How much is this shirt (m)?",
+            "transliteration": "Kam si'ru hādhā al-qamīṣ?"
+          },
+          {
+            "arabic": "كم سعرُ تلكَ الساعة؟",
+            "english": "How much is that watch (f)?",
+            "transliteration": "Kam si'ru tilka as-sā'ah?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "كم سعرُ هذا الهاتف؟",
+        "english": "How much is this phone (m)?",
+        "transliteration": "Kam si'ru hādhā al-hātif?"
+      },
+      "context": "Asking the price of a masculine item like a phone."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أريدُ تلكَ الحقيبة.",
+        "english": "I want that bag (f).",
+        "transliteration": "Urīdu tilka al-ḥaqībah."
+      },
+      "context": "Expressing desire for a feminine item that is further away."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هذا الكتابُ سعرهُ خمسةُ ريالات.",
+        "english": "This book's (m) price is five Riyals.",
+        "transliteration": "Hādhā al-kitābu si'ruhu khamsatu riyālāt."
+      },
+      "context": "Stating the price of a masculine item."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'How much is this (masculine)?'",
+      "options": [
+        {
+          "id": "optionA",
+          "text": "كم سعرُ هذهِ؟",
+          "isCorrect": false
+        },
+        {
+          "id": "optionB",
+          "text": "كم سعرُ هذا؟",
+          "isCorrect": true
+        },
+        {
+          "id": "optionC",
+          "text": "كم أنتَ؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "optionB",
+      "explanation": "'كم سعرُ هذا؟' is used for masculine items.",
+      "hint": {
+        "transliteration": "Kam si'ru hādhā?",
+        "arabic": "كم سعرُ هذا؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the feminine form of 'this'?",
+      "options": [
+        {
+          "id": "optionA",
+          "text": "ذلكَ",
+          "isCorrect": false
+        },
+        {
+          "id": "optionB",
+          "text": "هذا",
+          "isCorrect": false
+        },
+        {
+          "id": "optionC",
+          "text": "هذهِ",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "optionC",
+      "explanation": "'هذهِ' is used for feminine nouns.",
+      "hint": {
+        "transliteration": "Hādhihi",
+        "arabic": "هذهِ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'that' (feminine)?",
+      "options": [
+        {
+          "id": "optionA",
+          "text": "ذلكَ",
+          "isCorrect": false
+        },
+        {
+          "id": "optionB",
+          "text": "تلكَ",
+          "isCorrect": true
+        },
+        {
+          "id": "optionC",
+          "text": "هذا",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "optionB",
+      "explanation": "'تلكَ' is the feminine demonstrative pronoun for 'that'.",
+      "hint": {
+        "transliteration": "Tilka",
+        "arabic": "تلكَ"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expensive: غالٍ",
+          "arabic": "غالٍ"
+        },
+        "text": "To describe something as expensive, you use the adjective 'غالٍ'. Note that in its indefinite form, the 'ي' at the end is often omitted in writing, indicated by two kasra marks (tanwīn al-kasr) under the 'ل'.",
+        "examples": [
+          {
+            "arabic": "هذا غالٍ جداً.",
+            "english": "This is very expensive.",
+            "transliteration": "Hādhā ghālin jiddan."
+          },
+          {
+            "arabic": "السِّعرُ غالٍ.",
+            "english": "The price is expensive.",
+            "transliteration": "As-si'ru ghālin."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Cheap: رخيص",
+          "arabic": "رخيص"
+        },
+        "text": "The opposite of expensive is 'رخيص', meaning 'cheap' or 'inexpensive'. This is a common adjective to describe prices or items.",
+        "examples": [
+          {
+            "arabic": "هذا رخيصٌ.",
+            "english": "This is cheap.",
+            "transliteration": "Hādhā rakhīṣun."
+          },
+          {
+            "arabic": "السِّعرُ رخيص.",
+            "english": "The price is cheap.",
+            "transliteration": "As-si'ru rakhīṣ."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Can you reduce the price?: هل يمكنكَ تخفيض السِّعر؟",
+          "arabic": "هل يمكنكَ تخفيض السِّعر؟"
+        },
+        "text": "This is a polite and direct way to ask for a discount or to negotiate the price. 'تخفيض' means 'reduction' or 'lowering'. For a female, it would be 'هل يمكنكِ تخفيض السِّعر؟'.",
+        "examples": [
+          {
+            "arabic": "هذا غالٍ جداً، هل يمكنكَ تخفيض السِّعر؟",
+            "english": "This is very expensive, can you (m) reduce the price?",
+            "transliteration": "Hādhā ghālin jiddan, hal yumkinuka takhfeeḍ as-si'r?"
+          },
+          {
+            "arabic": "أريدُ شراءَ هذا، هل يمكنكِ تخفيض السِّعر قليلاً؟",
+            "english": "I want to buy this, can you (f) reduce the price a little?",
+            "transliteration": "Urīdu shirā'a hādhā, hal yumkinuki takhfeeḍ as-si'r qalīlan?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هذا غالٍ جداً.",
+        "english": "This is very expensive.",
+        "transliteration": "Hādhā ghālin jiddan."
+      },
+      "context": "A direct statement about an item's high price."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أريدُ شيئاً رخيصاً.",
+        "english": "I want something cheap.",
+        "transliteration": "Urīdu shay'an rakhīṣan."
+      },
+      "context": "Expressing a preference for an inexpensive item."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "السِّعرُ غالٍ، هل يمكنكَ تخفيض السِّعر؟",
+        "english": "The price is expensive, can you (m) reduce the price?",
+        "transliteration": "As-si'ru ghālin, hal yumkinuka takhfeeḍ as-si'r?"
+      },
+      "context": "Combining 'expensive' with a request for a price reduction."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'expensive'?",
+      "options": [
+        {
+          "id": "optionA",
+          "text": "غالٍ",
+          "isCorrect": true
+        },
+        {
+          "id": "optionB",
+          "text": "رخيص",
+          "isCorrect": false
+        },
+        {
+          "id": "optionC",
+          "text": "جيد",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "optionA",
+      "explanation": "'غالٍ' means expensive.",
+      "hint": {
+        "transliteration": "Ghālin",
+        "arabic": "غالٍ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'cheap'?",
+      "options": [
+        {
+          "id": "optionA",
+          "text": "رخيص",
+          "isCorrect": true
+        },
+        {
+          "id": "optionB",
+          "text": "غالٍ",
+          "isCorrect": false
+        },
+        {
+          "id": "optionC",
+          "text": "كبير",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "optionA",
+      "explanation": "'رخيص' means cheap.",
+      "hint": {
+        "transliteration": "Rakhīṣ",
+        "arabic": "رخيص"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase asks 'Can you (masculine) reduce the price?'",
+      "options": [
+        {
+          "id": "optionA",
+          "text": "ماذا تريد؟",
+          "isCorrect": false
+        },
+        {
+          "id": "optionB",
+          "text": "كم السعر؟",
+          "isCorrect": false
+        },
+        {
+          "id": "optionC",
+          "text": "هل يمكنكَ تخفيض السِّعر؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "optionC",
+      "explanation": "This phrase is used for asking for a price reduction to a male.",
+      "hint": {
+        "transliteration": "Hal yumkinuka takhfeeḍ as-si'r?",
+        "arabic": "هل يمكنكَ تخفيض السِّعر؟"
+      }
+    }
+  ]
+}

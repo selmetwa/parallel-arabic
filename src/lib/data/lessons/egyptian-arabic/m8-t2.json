@@ -1,0 +1,832 @@
+{
+  "topicId": "m8-t2",
+  "title": "Language for Visiting and Invitations (Egyptian Arabic)",
+  "dialect": "egyptian-arabic",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Welcome to our guests"
+        },
+        "text": "When guests arrive, or you want to make someone feel welcome, the most common phrase in Egyptian Arabic is 'أهلاً وسهلاً'. It literally means 'family and ease', implying you are among family and can feel at ease. It's used for both formal and informal situations.",
+        "examples": [
+          {
+            "arabic": "أهلاً وسهلاً بيكم في بيتنا.",
+            "english": "Welcome to our home.",
+            "transliteration": "Ahlan wa sahlan beekum fi baytna."
+          },
+          {
+            "arabic": "يا أهلاً وسهلاً، اتفضلوا.",
+            "english": "Welcome, please come in.",
+            "transliteration": "Ya ahlan wa sahlan, etfaddalu."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Informal Invitation: 'Are you free?'"
+        },
+        "text": "For an informal invitation, you might ask if someone is free using 'فاضي' (for male) or 'فاضية' (for female). This is a casual way to check availability before making a more direct invitation.",
+        "examples": [
+          {
+            "arabic": "إنتَ فاضي النهاردة؟",
+            "english": "Are you (male) free today?",
+            "transliteration": "Enta faaḍi ennaharda?"
+          },
+          {
+            "arabic": "إنتِ فاضية بكرة؟",
+            "english": "Are you (female) free tomorrow?",
+            "transliteration": "Enti faaḍya bokra?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Extending a Formal Invitation"
+        },
+        "text": "To extend a more formal invitation, you can use phrases that express your desire to invite someone or honor you with their presence. 'عايزين نعزمك' (for male) or 'عايزين نعزمِك' (for female) means 'we'd like to invite you'. 'يا ريت تشرفونا' is a very polite way to say 'please honor us with your presence' (plural/formal singular).",
+        "examples": [
+          {
+            "arabic": "عايزين نعزمك على الغداء.",
+            "english": "We'd like to invite you (male) for lunch.",
+            "transliteration": "Ayzin na'zemak 'ala el-ghada."
+          },
+          {
+            "arabic": "يا ريت تشرفونا بكرة في الحفلة.",
+            "english": "Please honor us with your presence tomorrow at the party.",
+            "transliteration": "Ya reit teshrafuna bokra fel-hafla."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أهلاً وسهلاً بيك، إنتَ فاضي النهاردة؟",
+        "english": "Welcome (male), are you free today?",
+        "transliteration": "Ahlan wa sahlan beek, enta faaḍi ennaharda?"
+      },
+      "context": "Greeting and checking availability."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "يا ريت تشرفونا، عايزين نعزمكوا على العشاء.",
+        "english": "Please honor us with your presence, we'd like to invite you (plural) for dinner.",
+        "transliteration": "Ya reit teshrafuna, ayzin na'zemku 'ala el-'asha."
+      },
+      "context": "Extending a formal invitation."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the most common phrase to welcome guests in Egyptian Arabic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "صباح الخير",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أهلاً وسهلاً",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "إزيك",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'أهلاً وسهلاً' is the standard welcome phrase.",
+      "hint": {
+        "transliteration": "Ahlan wa sahlan",
+        "arabic": "أهلاً وسهلاً"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence (to a female): 'Are you ___ tomorrow?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "فاضي",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مشغول",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "فاضية",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "For a female, 'free' is 'فاضية'.",
+      "hint": {
+        "transliteration": "faaḍya",
+        "arabic": "فاضية"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'We'd like to invite you (male) for dinner?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "أنا عايز أعزمك على العشاء",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "عايزين نعزمك على العشاء",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مش هتعزمنا على العشاء؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'عايزين نعزمك' means 'we'd like to invite you (male)'.",
+      "hint": {
+        "transliteration": "Ayzin na'zemak 'ala el-'asha",
+        "arabic": "عايزين نعزمك على العشاء"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Accepting an Invitation Enthusiastically"
+        },
+        "text": "When you want to accept an invitation and show your excitement, you can use phrases like 'يا ريت! أكيد هاجي/هاجي' (I'd love to! I'll definitely come - male/female). 'مبسوط/مبسوطة جداً' (very happy - male/female) also expresses joy.",
+        "examples": [
+          {
+            "arabic": "يا ريت! أكيد هاجي الحفلة.",
+            "english": "I'd love to! I'll definitely come to the party.",
+            "transliteration": "Ya reit! Akīd hāgi el-ḥafla."
+          },
+          {
+            "arabic": "مبسوطة جداً بالعزومة دي.",
+            "english": "I'm (female) very happy about this invitation.",
+            "transliteration": "Mabsūṭa giddan bel-'azūma di."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Politely Declining an Invitation"
+        },
+        "text": "If you cannot attend, it's important to decline politely. 'معلش مش هعرف أجي' (Sorry, I won't be able to come) is a common way. You can also give a brief reason like 'عندي معاد تاني' (I have another appointment) or 'مش فاضي/فاضية' (I'm not free - male/female).",
+        "examples": [
+          {
+            "arabic": "معلش مش هعرف أجي بكرة.",
+            "english": "Sorry, I won't be able to come tomorrow.",
+            "transliteration": "Ma'lesh mesh ha'raf āgi bokra."
+          },
+          {
+            "arabic": "شكراً على العزومة، بس عندي معاد تاني.",
+            "english": "Thanks for the invitation, but I have another appointment.",
+            "transliteration": "Shokran 'ala el-'azūma, bas 'andi ma'ād tāni."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing Gratitude for the Invitation"
+        },
+        "text": "Always thank your host for the invitation. 'شكراً على العزومة' (Thanks for the invitation) is standard. You can also add 'كلك ذوق' (You're very kind/tasteful), which is a lovely compliment implying their good manners and generosity.",
+        "examples": [
+          {
+            "arabic": "شكراً على العزومة الجميلة دي.",
+            "english": "Thanks for this lovely invitation.",
+            "transliteration": "Shokran 'ala el-'azūma el-gamīla di."
+          },
+          {
+            "arabic": "كلك ذوق إنك عزمتني.",
+            "english": "You're very kind for inviting me.",
+            "transliteration": "Kollak zō' innak 'azamteni."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "يا ريت! أنا مبسوطة جداً بالعزومة دي.",
+        "english": "I'd love to! I'm (female) very happy about this invitation.",
+        "transliteration": "Ya reit! Ana mabsūṭa giddan bel-'azūma di."
+      },
+      "context": "Enthusiastically accepting an invitation."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "معلش مش هعرف أجي النهاردة، عندي معاد تاني. شكراً على العزومة، كلك ذوق.",
+        "english": "Sorry, I won't be able to come today, I have another appointment. Thanks for the invitation, you're very kind.",
+        "transliteration": "Ma'lesh mesh ha'raf āgi ennaharda, 'andi ma'ād tāni. Shokran 'ala el-'azūma, kollak zō'."
+      },
+      "context": "Politely declining while expressing gratitude."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would a female say 'I'm very happy about the invitation'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أنا مبسوط جداً بالعزومة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أنا مبسوطة جداً بالعزومة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أنا فرحان بالعزومة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'مبسوطة' is the feminine form for 'happy'.",
+      "hint": {
+        "transliteration": "Mabsūṭa giddan bel-'azūma",
+        "arabic": "مبسوطة جداً بالعزومة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the polite declining phrase: '___ مش هعرف أجي.'",
+      "options": [
+        {
+          "id": "a",
+          "text": "متأسف",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "معلش",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أكيد",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'معلش' is a common expression for 'sorry' or 'excuse me'.",
+      "hint": {
+        "transliteration": "Ma'lesh",
+        "arabic": "معلش"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is a polite compliment to thank a host for their kindness?",
+      "options": [
+        {
+          "id": "a",
+          "text": "شكراً على أكلك",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كلك ذوق",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "هتيجي تاني؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'كلك ذوق' is a lovely compliment meaning 'you're very kind/tasteful'.",
+      "hint": {
+        "transliteration": "Kollak zō'",
+        "arabic": "كلك ذوق"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking What to Bring"
+        },
+        "text": "As a guest, it's polite to offer to bring something. The phrase 'أجيب معايا إيه؟' (What should I bring with me?) is frequently used.",
+        "examples": [
+          {
+            "arabic": "يا جماعة، أجيب معايا إيه لما أجي؟",
+            "english": "Guys, what should I bring with me when I come?",
+            "transliteration": "Ya gama'a, agīb ma'āya ēh lamma āgi?"
+          },
+          {
+            "arabic": "لو تحبوا، ممكن أجيب معايا حاجة.",
+            "english": "If you'd like, I can bring something with me.",
+            "transliteration": "Law teḥebbū, mumkin agīb ma'āya ḥāga."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Offering Help to the Host"
+        },
+        "text": "Another polite gesture is to offer help to your host. 'أساعدك في حاجة؟' (Can I help you with anything - male host) or 'أساعدِك في حاجة؟' (female host) is a good way to offer. If you want to be more direct, you can ask 'أعمل إيه؟' (What can I do?).",
+        "examples": [
+          {
+            "arabic": "إيه الأخبار؟ أساعدك في حاجة في المطبخ؟",
+            "english": "How are things? Can I help you (male) with anything in the kitchen?",
+            "transliteration": "Ēh el-akhbār? Asa'edak fi ḥāga fel-maṭbakh?"
+          },
+          {
+            "arabic": "أنا موجودة، لو محتاجة حاجة قوليلي.",
+            "english": "I'm (female) here, if you (female) need anything, tell me.",
+            "transliteration": "Ana mawgūda, law meḥtāga ḥāga 'ūlīli."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Host Insisting Guests Bring Nothing"
+        },
+        "text": "Often, a host will insist that guests bring nothing. Common responses are 'لا أبداً، كل حاجة موجودة' (Not at all, everything is available) or 'مش عايزة تتعب/تتعبي نفسك' (I don't want you to tire yourself - male/female guest).",
+        "examples": [
+          {
+            "arabic": "لا أبداً، ما تجيبش معاك حاجة.",
+            "english": "Not at all, don't bring anything with you (male).",
+            "transliteration": "La abadan, ma tegībsh ma'āk ḥāga."
+          },
+          {
+            "arabic": "مش عايزة تتعبي نفسك، كل حاجة جاهزة.",
+            "english": "I don't want you (female) to tire yourself, everything is ready.",
+            "transliteration": "Mesh 'ayza tet'abi nafsik, kol ḥāga gahza."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أجيب معايا إيه؟ عايز أساعدك في حاجة؟",
+        "english": "What should I bring with me? Do you want me to help you (male) with anything?",
+        "transliteration": "Agīb ma'āya ēh? 'Ayiz asa'edak fi ḥāga?"
+      },
+      "context": "Offering to bring something and help the host."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "لا أبداً، مش عايزة تتعب نفسك. كل حاجة موجودة.",
+        "english": "Not at all, I don't want you (male) to tire yourself. Everything is available.",
+        "transliteration": "La abadan, mesh 'ayza tet'ab nafsak. Kol ḥāga mawgūda."
+      },
+      "context": "Host politely declining an offer of help/bringing something."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the correct way to ask 'What should I bring with me?' (as a guest)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "هتجيب إيه؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أجيب معايا إيه؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أنا هجيب إيه؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'أجيب معايا إيه؟' is the natural way to ask what to bring.",
+      "hint": {
+        "transliteration": "Agīb ma'āya ēh?",
+        "arabic": "أجيب معايا إيه؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence (to a female host): 'Can I ___ you with anything?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "تساعد",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أساعدكِ",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "تساعدني",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'أساعدِك' means 'I help you (female)'.",
+      "hint": {
+        "transliteration": "Asa'edek",
+        "arabic": "أساعدكِ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would a host tell a male guest 'Don't tire yourself'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "مش عايزة تتعبي نفسك",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مش عايزة تتعب نفسك",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أتعب نفسك؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'تتعب' is for male, 'تتعبي' is for female.",
+      "hint": {
+        "transliteration": "Mesh 'ayza tet'ab nafsak",
+        "arabic": "مش عايزة تتعب نفسك"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Complimenting the Food"
+        },
+        "text": "Complimenting the food is always appreciated. 'الأكل جميل جداً' (The food is very delicious) is a good start. Adding 'تسلم إيديك/إيديكي' (Bless your hands - male/female host) is a common and heartfelt compliment for the cook.",
+        "examples": [
+          {
+            "arabic": "الأكل جميل جداً، تسلم إيديكي يا طنط.",
+            "english": "The food is very delicious, bless your hands, Auntie (female).",
+            "transliteration": "El-akl gamīl giddan, teslam ʾīdīki ya ṭanṭ."
+          },
+          {
+            "arabic": "كل حاجة حلوة أوي، بجد تسلم إيديك.",
+            "english": "Everything is very nice, truly bless your hands (male).",
+            "transliteration": "Kol ḥāga ḥelwa awi, begad teslam ʾīdīk."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Complimenting the Home and Hospitality"
+        },
+        "text": "Guests can compliment the host's home or hospitality. 'بيتكم حلو أوي' (Your home is very nice) is a common compliment. You can also praise their 'كرم ضيافتكوا' (your generosity/hospitality - plural/formal).",
+        "examples": [
+          {
+            "arabic": "بيتكم جميل أوي ما شاء الله.",
+            "english": "Your home is very beautiful, Masha'Allah.",
+            "transliteration": "Baytkum gamīl awi ma sha'a Allah."
+          },
+          {
+            "arabic": "شكراً على كرم ضيافتكوا.",
+            "english": "Thank you for your hospitality.",
+            "transliteration": "Shokran 'ala karam ḍiyāfetku."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for More / Offering More"
+        },
+        "text": "If you want more food/drink, you can say 'ممكن آخد حتة كمان؟' (Can I have another piece?). When offering food, hosts often use 'تفضلوا' (Please, help yourselves - plural/formal) or 'بالهنا والشفا' (To your health and healing - after eating).",
+        "examples": [
+          {
+            "arabic": "الأكل حلو أوي، ممكن آخد حتة كمان من الكيك؟",
+            "english": "The food is very good, can I have another piece of the cake?",
+            "transliteration": "El-akl ḥelw awi, mumkin ākhod ḥetta kaman men el-keik?"
+          },
+          {
+            "arabic": "تفضلوا كُلوا كويس، بالهنا والشفا.",
+            "english": "Please, eat well, to your health and healing.",
+            "transliteration": "Tafaḍḍalu kollu kwayes, bel-hana wel-shefa."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الأكل جميل جداً يا مدام، تسلم إيديكي! بيتكم حلو أوي.",
+        "english": "The food is very delicious, Madam, bless your hands! Your home is very nice.",
+        "transliteration": "El-akl gamīl giddan ya madam, teslam ʾīdīki! Baytkum ḥelw awi."
+      },
+      "context": "Complimenting the food and the home to a female host."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ممكن آخد قهوة كمان؟ شكراً على كرم ضيافتكوا.",
+        "english": "Can I have another coffee? Thank you for your hospitality.",
+        "transliteration": "Mumkin ākhod ahwa kaman? Shokran 'ala karam ḍiyāfetku."
+      },
+      "context": "Asking for more and thanking for hospitality."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you compliment a female cook by saying 'Bless your hands'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "تسلم إيديك",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "تسلم إيديكي",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "تسلم إيدي",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'إيديكي' is the feminine form for 'your hands'.",
+      "hint": {
+        "transliteration": "Teslam ʾīdīki",
+        "arabic": "تسلم إيديكي"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the compliment: 'Your home is very ___.'",
+      "options": [
+        {
+          "id": "a",
+          "text": "كبير",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "حلو أوي",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "صغير",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'حلو أوي' means 'very nice/beautiful'.",
+      "hint": {
+        "transliteration": "ḥelw awi",
+        "arabic": "حلو أوي"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What phrase is used by hosts to encourage guests to eat and enjoy their food?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ياكلوا كويس",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بالهنا والشفا",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "هتاكل إيه؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'بالهنا والشفا' is a blessing for health and enjoyment of food.",
+      "hint": {
+        "transliteration": "Bel-hana wel-shefa",
+        "arabic": "بالهنا والشفا"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing Enjoyment of the Visit"
+        },
+        "text": "Before leaving, it's polite to express how much you enjoyed the visit. 'انبسطت جداً بالزيارة' (I really enjoyed the visit) is a common phrase. You can also say 'يوم جميل' (a beautiful day) to sum up your experience.",
+        "examples": [
+          {
+            "arabic": "انبسطت جداً بالزيارة النهاردة.",
+            "english": "I really enjoyed the visit today.",
+            "transliteration": "Enbaṣṭet giddan bel-ziyāra ennaharda."
+          },
+          {
+            "arabic": "بجد كان يوم جميل معاكم.",
+            "english": "Truly, it was a beautiful day with you (plural).",
+            "transliteration": "Begad kān yom gamīl ma'ākum."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Thanking Upon Departure"
+        },
+        "text": "When leaving, thank your host generally. 'شكراً على كل حاجة' (Thanks for everything) is very versatile. The standard farewell is 'مع السلامة' (Goodbye).",
+        "examples": [
+          {
+            "arabic": "شكراً على كل حاجة يا جماعة، مع السلامة.",
+            "english": "Thanks for everything, guys, goodbye.",
+            "transliteration": "Shokran 'ala kol ḥāga ya gama'a, ma' es-salāma."
+          },
+          {
+            "arabic": "استأذن أنا بقى، مع السلامة.",
+            "english": "I'll take my leave now, goodbye.",
+            "transliteration": "Esta'zen ana ba'a, ma' es-salāma."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Inviting for a Return Visit"
+        },
+        "text": "It's customary for the guest to invite the host back. 'لازم تيجوا عندنا' (You must come visit us - plural/formal) is a warm invitation. 'نبقى نشوفكوا قريب' (We'll see you soon - plural/formal) is also a nice way to express desire for future gatherings.",
+        "examples": [
+          {
+            "arabic": "لازم تيجوا عندنا على العشاء قريب.",
+            "english": "You must come visit us for dinner soon.",
+            "transliteration": "Lāzem tīgu 'andena 'ala el-'asha 'arayyeb."
+          },
+          {
+            "arabic": "كان يوم جميل، نبقى نشوفكوا قريب إن شاء الله.",
+            "english": "It was a beautiful day, we'll see you soon, God willing.",
+            "transliteration": "Kān yom gamīl, neb'a neshūfku 'arayyeb in sha'a Allah."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "انبسطت جداً بالزيارة دي، شكراً على كل حاجة.",
+        "english": "I really enjoyed this visit, thanks for everything.",
+        "transliteration": "Enbaṣṭet giddan bel-ziyāra di, shokran 'ala kol ḥāga."
+      },
+      "context": "Expressing enjoyment and gratitude upon departure."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "مع السلامة، ولازم تيجوا عندنا قريب.",
+        "english": "Goodbye, and you must come visit us soon.",
+        "transliteration": "Ma' es-salāma, we lāzem tīgu 'andena 'arayyeb."
+      },
+      "context": "Farewell and inviting for a return visit."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'I really enjoyed the visit'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ما انبسطتش بالزيارة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "انبسطت جداً بالزيارة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "الزيارة كانت مملة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'انبسطت جداً بالزيارة' means 'I really enjoyed the visit'.",
+      "hint": {
+        "transliteration": "Enbaṣṭet giddan bel-ziyāra",
+        "arabic": "انبسطت جداً بالزيارة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the farewell: 'Thanks for everything, ___.'",
+      "options": [
+        {
+          "id": "a",
+          "text": "أهلاً وسهلاً",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مع السلامة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كيف الحال",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'مع السلامة' is the standard farewell.",
+      "hint": {
+        "transliteration": "Ma' es-salāma",
+        "arabic": "مع السلامة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is a common phrase to invite hosts for a return visit?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ممكن تيجوا تاني؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "لازم تيجوا عندنا",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "يارب متجيش تاني",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'لازم تيجوا عندنا' is a warm and common invitation to visit back.",
+      "hint": {
+        "transliteration": "Lāzem tīgu 'andena",
+        "arabic": "لازم تيجوا عندنا"
+      }
+    }
+  ]
+}

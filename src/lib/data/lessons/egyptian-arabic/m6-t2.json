@@ -1,0 +1,863 @@
+{
+  "topicId": "m6-t2",
+  "title": "Asking About Places and Services",
+  "dialect": "egyptian-arabic",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Where is...?'"
+        },
+        "text": "The most common way to ask for the location of something in Egyptian Arabic is by using the word 'فين' (feen) followed by the place you're looking for.",
+        "examples": [
+          {
+            "arabic": "فين البنك؟",
+            "english": "Where is the bank?",
+            "transliteration": "Feen el-bank?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "The Bank"
+        },
+        "text": "Learn the Egyptian Arabic word for 'bank'. It's a common place you might need to find.",
+        "examples": [
+          {
+            "arabic": "البنك",
+            "english": "The bank",
+            "transliteration": "El-bank"
+          },
+          {
+            "arabic": "أنا عايز أروح البنك.",
+            "english": "I want to go to the bank.",
+            "transliteration": "Ana ʿaayiz arūḥ el-bank."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "The Hospital"
+        },
+        "text": "It's important to know how to ask for a 'hospital' in case of an emergency.",
+        "examples": [
+          {
+            "arabic": "المستشفى",
+            "english": "The hospital",
+            "transliteration": "El-mostashfa"
+          },
+          {
+            "arabic": "فيه مستشفى قريبة؟",
+            "english": "Is there a hospital nearby?",
+            "transliteration": "Fee mostashfa qarība?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "فين المستشفى؟",
+        "english": "Where is the hospital?",
+        "transliteration": "Feen el-mostashfa?"
+      },
+      "context": "Asking for the location of the hospital."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا عايز أروح البنك.",
+        "english": "I want to go to the bank.",
+        "transliteration": "Ana ʿaayiz arūḥ el-bank."
+      },
+      "context": "Expressing a desire to go to the bank."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'Where is the bank?' in Egyptian Arabic?",
+      "options": [
+        {
+          "id": "a1",
+          "text": "إزاي البنك؟",
+          "isCorrect": false
+        },
+        {
+          "id": "a2",
+          "text": "فين البنك؟",
+          "isCorrect": true
+        },
+        {
+          "id": "a3",
+          "text": "ليه البنك؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a2",
+      "explanation": "To ask 'Where is...?', you use 'فين' (feen) followed by the place.",
+      "hint": {
+        "transliteration": "feen el-bank?",
+        "arabic": "فين البنك؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Egyptian Arabic word for 'hospital'?",
+      "options": [
+        {
+          "id": "b1",
+          "text": "المطعم",
+          "isCorrect": false
+        },
+        {
+          "id": "b2",
+          "text": "الصيدلية",
+          "isCorrect": false
+        },
+        {
+          "id": "b3",
+          "text": "المستشفى",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "b3",
+      "explanation": "The word for hospital is 'المستشفى' (el-mostashfa).",
+      "hint": {
+        "transliteration": "el-mostashfa",
+        "arabic": "المستشفى"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'Where is ___?' (referring to the bank).",
+      "options": [
+        {
+          "id": "c1",
+          "text": "القهوة",
+          "isCorrect": false
+        },
+        {
+          "id": "c2",
+          "text": "البنك",
+          "isCorrect": true
+        },
+        {
+          "id": "c3",
+          "text": "الصيدلية",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "c2",
+      "explanation": "The word for bank is 'البنك' (el-bank).",
+      "hint": {
+        "transliteration": "el-bank",
+        "arabic": "البنك"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "The Pharmacy"
+        },
+        "text": "You might need to find a pharmacy for medicine or other health products.",
+        "examples": [
+          {
+            "arabic": "الصيدلية",
+            "english": "The pharmacy",
+            "transliteration": "Es-saydaliya"
+          },
+          {
+            "arabic": "فين أقرب صيدلية؟",
+            "english": "Where is the nearest pharmacy?",
+            "transliteration": "Feen aqrab saydaliya?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "The Restaurant"
+        },
+        "text": "When you're hungry, you'll want to find a 'restaurant'.",
+        "examples": [
+          {
+            "arabic": "المطعم",
+            "english": "The restaurant",
+            "transliteration": "El-mat'am"
+          },
+          {
+            "arabic": "عايزين نروح مطعم كويس.",
+            "english": "We want to go to a good restaurant.",
+            "transliteration": "ʿAyzeen narūḥ mat'am kwayyis."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "The Cafe"
+        },
+        "text": "For a coffee or a quick break, you'll look for a 'cafe'. Both 'القهوة' and 'الكافيه' are commonly used.",
+        "examples": [
+          {
+            "arabic": "القهوة / الكافيه",
+            "english": "The cafe",
+            "transliteration": "El-qahwa / El-kafeh"
+          },
+          {
+            "arabic": "ممكن نقعد في القهوة دي؟",
+            "english": "Can we sit at this cafe?",
+            "transliteration": "Momkin naqʿod fil-qahwa di?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "فين المطعم؟",
+        "english": "Where is the restaurant?",
+        "transliteration": "Feen el-mat'am?"
+      },
+      "context": "Asking for directions to a restaurant."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "محتاج أروح الصيدلية.",
+        "english": "I need to go to the pharmacy.",
+        "transliteration": "Maḥtāg arūḥ es-saydaliya."
+      },
+      "context": "Indicating a need to visit the pharmacy."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "خلينا نروح الكافيه.",
+        "english": "Let's go to the cafe.",
+        "transliteration": "Khallīna narūḥ el-kafeh."
+      },
+      "context": "Suggesting a trip to a cafe."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is 'pharmacy' in Egyptian Arabic?",
+      "options": [
+        {
+          "id": "d1",
+          "text": "المستشفى",
+          "isCorrect": false
+        },
+        {
+          "id": "d2",
+          "text": "المطعم",
+          "isCorrect": false
+        },
+        {
+          "id": "d3",
+          "text": "الصيدلية",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "d3",
+      "explanation": "The word for pharmacy is 'الصيدلية' (es-saydaliya).",
+      "hint": {
+        "transliteration": "es-saydaliya",
+        "arabic": "الصيدلية"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I want to go to the ___.' (restaurant)",
+      "options": [
+        {
+          "id": "e1",
+          "text": "البنك",
+          "isCorrect": false
+        },
+        {
+          "id": "e2",
+          "text": "المطعم",
+          "isCorrect": true
+        },
+        {
+          "id": "e3",
+          "text": "الصيدلية",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "e2",
+      "explanation": "The word for restaurant is 'المطعم' (el-mat'am).",
+      "hint": {
+        "transliteration": "el-mat'am",
+        "arabic": "المطعم"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word can mean 'cafe' in Egyptian Arabic?",
+      "options": [
+        {
+          "id": "f1",
+          "text": "الشارع",
+          "isCorrect": false
+        },
+        {
+          "id": "f2",
+          "text": "القهوة",
+          "isCorrect": true
+        },
+        {
+          "id": "f3",
+          "text": "السوق",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "f2",
+      "explanation": "'القهوة' (el-qahwa) is commonly used for cafe, as is 'الكافيه'.",
+      "hint": {
+        "transliteration": "el-qahwa",
+        "arabic": "القهوة"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Bus Station"
+        },
+        "text": "If you plan to use public transport, knowing 'bus station' is essential.",
+        "examples": [
+          {
+            "arabic": "محطة الأتوبيس",
+            "english": "The bus station",
+            "transliteration": "Maḥattit el-otobees"
+          },
+          {
+            "arabic": "محطة الأتوبيس فين؟",
+            "english": "Where is the bus station?",
+            "transliteration": "Maḥattit el-otobees feen?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Train Station"
+        },
+        "text": "For longer distances, you might need to find the 'train station'.",
+        "examples": [
+          {
+            "arabic": "محطة القطر",
+            "english": "The train station",
+            "transliteration": "Maḥattit el-atr"
+          },
+          {
+            "arabic": "عايز أروح محطة القطر.",
+            "english": "I want to go to the train station.",
+            "transliteration": "ʿAayiz arūḥ maḥattit el-atr."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Metro Station"
+        },
+        "text": "In cities like Cairo, the metro is a fast way to get around. Here's how to ask for its station.",
+        "examples": [
+          {
+            "arabic": "محطة المترو",
+            "english": "The metro station",
+            "transliteration": "Maḥattit el-metro"
+          },
+          {
+            "arabic": "أقرب محطة مترو فين؟",
+            "english": "Where is the nearest metro station?",
+            "transliteration": "Aqrab maḥattit metro feen?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "محطة الأتوبيس قريبة من هنا؟",
+        "english": "Is the bus station near here?",
+        "transliteration": "Maḥattit el-otobees qarība min hena?"
+      },
+      "context": "Inquiring about the proximity of the bus station."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "عايز تذكرة لمحطة القطر.",
+        "english": "I want a ticket for the train station.",
+        "transliteration": "ʿAayiz tazkara le-maḥattit el-atr."
+      },
+      "context": "Requesting a ticket to the train station."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "فين أقرب محطة مترو؟",
+        "english": "Where is the nearest metro station?",
+        "transliteration": "Feen aqrab maḥattit metro?"
+      },
+      "context": "Asking for the closest metro station."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Egyptian Arabic for 'bus station'?",
+      "options": [
+        {
+          "id": "g1",
+          "text": "محطة القطر",
+          "isCorrect": false
+        },
+        {
+          "id": "g2",
+          "text": "محطة الأتوبيس",
+          "isCorrect": true
+        },
+        {
+          "id": "g3",
+          "text": "محطة المترو",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "g2",
+      "explanation": "The term for bus station is 'محطة الأتوبيس' (maḥattit el-otobees).",
+      "hint": {
+        "transliteration": "maḥattit el-otobees",
+        "arabic": "محطة الأتوبيس"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I want to go to the ___.' (train station)",
+      "options": [
+        {
+          "id": "h1",
+          "text": "محطة الأتوبيس",
+          "isCorrect": false
+        },
+        {
+          "id": "h2",
+          "text": "محطة القطر",
+          "isCorrect": true
+        },
+        {
+          "id": "h3",
+          "text": "المطعم",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "h2",
+      "explanation": "'محطة القطر' (maḥattit el-atr) means train station.",
+      "hint": {
+        "transliteration": "maḥattit el-atr",
+        "arabic": "محطة القطر"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'metro station'?",
+      "options": [
+        {
+          "id": "i1",
+          "text": "قسم الشرطة",
+          "isCorrect": false
+        },
+        {
+          "id": "i2",
+          "text": "مكتب البريد",
+          "isCorrect": false
+        },
+        {
+          "id": "i3",
+          "text": "محطة المترو",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "i3",
+      "explanation": "'محطة المترو' (maḥattit el-metro) refers to the metro station.",
+      "hint": {
+        "transliteration": "maḥattit el-metro",
+        "arabic": "محطة المترو"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Post Office"
+        },
+        "text": "For sending mail or packages, you'll need the 'post office'.",
+        "examples": [
+          {
+            "arabic": "مكتب البريد",
+            "english": "The post office",
+            "transliteration": "Maktab el-bareed"
+          },
+          {
+            "arabic": "فين مكتب البريد؟",
+            "english": "Where is the post office?",
+            "transliteration": "Feen maktab el-bareed?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Police Station"
+        },
+        "text": "In case of an emergency or if you need to report something, you'll ask for the 'police station'.",
+        "examples": [
+          {
+            "arabic": "قسم الشرطة",
+            "english": "The police station",
+            "transliteration": "Qism esh-shorta"
+          },
+          {
+            "arabic": "فين أقرب قسم شرطة؟",
+            "english": "Where is the nearest police station?",
+            "transliteration": "Feen aqrab qism esh-shorta?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "ATM"
+        },
+        "text": "To withdraw cash, you'll need to find an 'ATM'. You can say 'ATM' or the full Arabic term.",
+        "examples": [
+          {
+            "arabic": "ماكينة الصراف الآلي / ATM",
+            "english": "ATM",
+            "transliteration": "Makeenit es-sarrāf el-ālee / ATM"
+          },
+          {
+            "arabic": "فيه ATM هنا؟",
+            "english": "Is there an ATM here?",
+            "transliteration": "Fee ATM hena?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "محتاج أروح مكتب البريد.",
+        "english": "I need to go to the post office.",
+        "transliteration": "Maḥtāg arūḥ maktab el-bareed."
+      },
+      "context": "Expressing the need to visit the post office."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "فين أقرب قسم شرطة؟",
+        "english": "Where is the nearest police station?",
+        "transliteration": "Feen aqrab qism esh-shorta?"
+      },
+      "context": "Asking for the closest police station."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "فيه ATM هنا؟",
+        "english": "Is there an ATM here?",
+        "transliteration": "Fee ATM hena?"
+      },
+      "context": "Inquiring about the availability of an ATM."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Egyptian Arabic for 'post office'?",
+      "options": [
+        {
+          "id": "j1",
+          "text": "محطة القطر",
+          "isCorrect": false
+        },
+        {
+          "id": "j2",
+          "text": "المطعم",
+          "isCorrect": false
+        },
+        {
+          "id": "j3",
+          "text": "مكتب البريد",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "j3",
+      "explanation": "'مكتب البريد' (maktab el-bareed) means post office.",
+      "hint": {
+        "transliteration": "maktab el-bareed",
+        "arabic": "مكتب البريد"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'Where is the nearest ___?' (police station)",
+      "options": [
+        {
+          "id": "k1",
+          "text": "البنك",
+          "isCorrect": false
+        },
+        {
+          "id": "k2",
+          "text": "قسم الشرطة",
+          "isCorrect": true
+        },
+        {
+          "id": "k3",
+          "text": "الصيدلية",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "k2",
+      "explanation": "'قسم الشرطة' (qism esh-shorta) means police station.",
+      "hint": {
+        "transliteration": "qism esh-shorta",
+        "arabic": "قسم الشرطة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'Is there an ATM here?'",
+      "options": [
+        {
+          "id": "l1",
+          "text": "فين الصيدلية؟",
+          "isCorrect": false
+        },
+        {
+          "id": "l2",
+          "text": "هل عايز مطعم؟",
+          "isCorrect": false
+        },
+        {
+          "id": "l3",
+          "text": "فيه ATM هنا؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "l3",
+      "explanation": "To ask 'Is there...?' use 'فيه...' (fee...).",
+      "hint": {
+        "transliteration": "fee ATM hena?",
+        "arabic": "فيه ATM هنا؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Doctor"
+        },
+        "text": "If you feel unwell, you will need to ask for a 'doctor'.",
+        "examples": [
+          {
+            "arabic": "دكتور",
+            "english": "Doctor",
+            "transliteration": "Doktor"
+          },
+          {
+            "arabic": "عايز أشوف دكتور.",
+            "english": "I want to see a doctor.",
+            "transliteration": "ʿAayiz ashūf doktor."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Internet"
+        },
+        "text": "In today's world, finding internet access is often a priority. You can ask directly 'Is there internet?'.",
+        "examples": [
+          {
+            "arabic": "إنترنت",
+            "english": "Internet",
+            "transliteration": "Internet"
+          },
+          {
+            "arabic": "فيه إنترنت؟",
+            "english": "Is there internet?",
+            "transliteration": "Fee internet?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Taxi"
+        },
+        "text": "To get around quickly, you might need a 'taxi'.",
+        "examples": [
+          {
+            "arabic": "تاكسي",
+            "english": "Taxi",
+            "transliteration": "Taxi"
+          },
+          {
+            "arabic": "عايز تاكسي لو سمحت.",
+            "english": "I want a taxi, please.",
+            "transliteration": "ʿAayiz taxi law samaḥt."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "فيه دكتور هنا؟",
+        "english": "Is there a doctor here?",
+        "transliteration": "Fee doktor hena?"
+      },
+      "context": "Asking if a doctor is available nearby."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "لو سمحت، فيه إنترنت؟",
+        "english": "Excuse me, is there internet?",
+        "transliteration": "Law samaḥt, fee internet?"
+      },
+      "context": "Politely asking for internet access."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا محتاج تاكسي للمطار.",
+        "english": "I need a taxi to the airport.",
+        "transliteration": "Ana maḥtāg taxi lel-maṭār."
+      },
+      "context": "Stating the need for a taxi to a specific destination."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Egyptian Arabic word for 'doctor'?",
+      "options": [
+        {
+          "id": "m1",
+          "text": "مهندس",
+          "isCorrect": false
+        },
+        {
+          "id": "m2",
+          "text": "دكتور",
+          "isCorrect": true
+        },
+        {
+          "id": "m3",
+          "text": "معلم",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "m2",
+      "explanation": "The word for doctor is 'دكتور' (doktor).",
+      "hint": {
+        "transliteration": "doktor",
+        "arabic": "دكتور"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'Is there ___?' (internet)",
+      "options": [
+        {
+          "id": "n1",
+          "text": "بنك",
+          "isCorrect": false
+        },
+        {
+          "id": "n2",
+          "text": "إنترنت",
+          "isCorrect": true
+        },
+        {
+          "id": "n3",
+          "text": "مطعم",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "n2",
+      "explanation": "The word for internet is 'إنترنت' (internet).",
+      "hint": {
+        "transliteration": "internet",
+        "arabic": "إنترنت"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'I want a taxi, please' in Egyptian Arabic?",
+      "options": [
+        {
+          "id": "o1",
+          "text": "فين التاكسي؟",
+          "isCorrect": false
+        },
+        {
+          "id": "o2",
+          "text": "عايز تاكسي لو سمحت.",
+          "isCorrect": true
+        },
+        {
+          "id": "o3",
+          "text": "أنا مش عايز تاكسي.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "o2",
+      "explanation": "'عايز تاكسي لو سمحت' (ʿaayiz taxi law samaḥt) is the correct phrase.",
+      "hint": {
+        "transliteration": "ʿaayiz taxi law samaḥt",
+        "arabic": "عايز تاكسي لو سمحت."
+      }
+    }
+  ]
+}

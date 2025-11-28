@@ -1,0 +1,886 @@
+{
+  "topicId": "m5-t1",
+  "title": "Asking About the Location of Things (فين؟)",
+  "dialect": "egyptian-arabic",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Introducing 'Where is/are?' (فين؟)",
+          "arabic": "تقديم 'أين؟' (فين؟)"
+        },
+        "text": "The most common way to ask 'Where is...?' or 'Where are...?' in Egyptian Arabic is by using the word 'فين؟'. Unlike English, you don't always need an explicit verb 'is' or 'are' in the sentence. You simply place 'فين؟' before or after the noun you're asking about.",
+        "examples": [
+          {
+            "arabic": "فين الكِتَاب؟",
+            "english": "Where is the book?",
+            "transliteration": "Feen el-ketāb?",
+            "diacriticalNotes": "The word 'الكِتَاب' (el-ketāb) refers to 'the book'."
+          },
+          {
+            "arabic": "القَهْوَة فين؟",
+            "english": "Where is the coffee?",
+            "transliteration": "El-ʾahwa feen?",
+            "diacriticalNotes": "The word 'القَهْوَة' (el-ʾahwa) means 'the coffee'."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Basic Nouns: Objects",
+          "arabic": "أسماء أساسية: أشياء"
+        },
+        "text": "Let's learn some basic object nouns that we can ask about. Remember, 'ال' (el) is the definite article 'the'.",
+        "examples": [
+          {
+            "arabic": "كِتَاب",
+            "english": "book",
+            "transliteration": "ketāb"
+          },
+          {
+            "arabic": "قَلَم",
+            "english": "pen/pencil",
+            "transliteration": "ʾalam"
+          },
+          {
+            "arabic": "شَنطة",
+            "english": "bag",
+            "transliteration": "shanta"
+          },
+          {
+            "arabic": "مِفْتَاح",
+            "english": "key",
+            "transliteration": "moftāḥ"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Combining 'فين' with Nouns",
+          "arabic": "دمج 'فين' مع الأسماء"
+        },
+        "text": "Now, let's put 'فين؟' together with the nouns we just learned to form simple questions.",
+        "examples": [
+          {
+            "arabic": "فين القَلَم؟",
+            "english": "Where is the pen?",
+            "transliteration": "Feen el-ʾalam?"
+          },
+          {
+            "arabic": "فين الشَنطة؟",
+            "english": "Where is the bag?",
+            "transliteration": "Feen esh-shanta?"
+          },
+          {
+            "arabic": "المِفْتَاح فين؟",
+            "english": "Where is the key?",
+            "transliteration": "El-moftāḥ feen?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "فين الكِتَاب بتاعي؟",
+        "english": "Where is my book?",
+        "transliteration": "Feen el-ketāb betāʿī?"
+      },
+      "context": "Using 'بتَاعي' (betāʿī) for 'my'."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "القَلَم ده فين؟",
+        "english": "Where is this pen?",
+        "transliteration": "El-ʾalam da feen?"
+      },
+      "context": "Using 'ده' (da) for 'this' (masculine)."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'Where is the key?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "فين الشَنطة؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "فين المِفْتَاح؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "فين الكِتَاب؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "To ask 'Where is the key?', you use 'فين' followed by 'المِفْتَاح'.",
+      "hint": {
+        "transliteration": "Feen el-moftāḥ?",
+        "arabic": "فين المِفْتَاح؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the question: '___ القَلَم؟' (Where is the pen?)",
+      "options": [
+        {
+          "id": "a",
+          "text": "مين",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "إزاي",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "فين",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "The word 'فين' (feen) is used to ask 'Where?'.",
+      "hint": {
+        "transliteration": "Feen el-ʾalam?",
+        "arabic": "فين القَلَم؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Egyptian Arabic word for 'book'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "مِفْتَاح",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شَنطة",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "كِتَاب",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'كِتَاب' (ketāb) means 'book'.",
+      "hint": {
+        "transliteration": "ketāb",
+        "arabic": "كِتَاب"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Preposition: 'in' or 'inside' (في)",
+          "arabic": "حرف الجر: 'في'"
+        },
+        "text": "To say something is 'in' or 'inside' something else, we use the preposition 'في' (fī).",
+        "examples": [
+          {
+            "arabic": "الكِتَاب في الشَنطة.",
+            "english": "The book is in the bag.",
+            "transliteration": "El-ketāb fī esh-shanta."
+          },
+          {
+            "arabic": "القَلَم في جَيْبَك.",
+            "english": "The pen is in your pocket.",
+            "transliteration": "El-ʾalam fī gēbak.",
+            "diacriticalNotes": "جَيْبَك (gēbak) - your pocket (masculine). The 'ـَ' (fatḥa) on ب indicates a male addressee."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Preposition: 'on' or 'on top of' (على)",
+          "arabic": "حرف الجر: 'على'"
+        },
+        "text": "To say something is 'on' or 'on top of' another object, we use the preposition 'على' (ʿala).",
+        "examples": [
+          {
+            "arabic": "المِفْتَاح على التَّرَابِيزَة.",
+            "english": "The key is on the table.",
+            "transliteration": "El-moftāḥ ʿala et-tarabēza."
+          },
+          {
+            "arabic": "القَهْوَة على المَكْتَب.",
+            "english": "The coffee is on the desk.",
+            "transliteration": "El-ʾahwa ʿala el-maktab."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Basic Nouns: Places/Surfaces",
+          "arabic": "أسماء أساسية: أماكن/أسطح"
+        },
+        "text": "Here are some common nouns for places and surfaces to use with 'في' and 'على'.",
+        "examples": [
+          {
+            "arabic": "تَرَابِيزَة",
+            "english": "table",
+            "transliteration": "tarabēza"
+          },
+          {
+            "arabic": "كُرْسِي",
+            "english": "chair",
+            "transliteration": "korsī"
+          },
+          {
+            "arabic": "مَكْتَب",
+            "english": "desk/office",
+            "transliteration": "maktab"
+          },
+          {
+            "arabic": "أَرْض",
+            "english": "floor/ground",
+            "transliteration": "arḍ"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الشَنطة في العَرَبِيَّة.",
+        "english": "The bag is in the car.",
+        "transliteration": "Esh-shanta fī el-ʿarabīya."
+      },
+      "context": "Using 'العَرَبِيَّة' (el-ʿarabīya) for 'the car'."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "القَلَم على المَكْتَب.",
+        "english": "The pen is on the desk.",
+        "transliteration": "El-ʾalam ʿala el-maktab."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'الكِتَاب ___ الشَنطة.' (The book is ___ the bag.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "على",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "في",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "جنب",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'في' (fī) means 'in' or 'inside'.",
+      "hint": {
+        "transliteration": "fī",
+        "arabic": "في"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'table'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "كُرْسِي",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مَكْتَب",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "تَرَابِيزَة",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'تَرَابِيزَة' (tarabēza) is the Egyptian Arabic word for 'table'.",
+      "hint": {
+        "transliteration": "tarabēza",
+        "arabic": "تَرَابِيزَة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'The key is on the desk'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "المِفْتَاح في المَكْتَب.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "المِفْتَاح على المَكْتَب.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "فين المِفْتَاح؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'على' (ʿala) means 'on'.",
+      "hint": {
+        "transliteration": "El-moftāḥ ʿala el-maktab.",
+        "arabic": "المِفْتَاح على المَكْتَب."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Preposition: 'under' (تحت)",
+          "arabic": "حرف الجر: 'تحت'"
+        },
+        "text": "To say something is 'under' another object, we use the preposition 'تحت' (taḥt).",
+        "examples": [
+          {
+            "arabic": "القِطَّة تحت التَّرَابِيزَة.",
+            "english": "The cat is under the table.",
+            "transliteration": "El-ʾoṭṭa taḥt et-tarabēza."
+          },
+          {
+            "arabic": "الكِتَاب تحت المِخَدَّة.",
+            "english": "The book is under the pillow.",
+            "transliteration": "El-ketāb taḥt el-makhadda."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Preposition: 'next to' / 'beside' (جنب)",
+          "arabic": "حرف الجر: 'جنب'"
+        },
+        "text": "To say something is 'next to' or 'beside' another object, we use the preposition 'جنب' (gamb).",
+        "examples": [
+          {
+            "arabic": "الكُرْسِي جنب الشِّبَّاك.",
+            "english": "The chair is next to the window.",
+            "transliteration": "El-korsī gamb esh-shibbāk."
+          },
+          {
+            "arabic": "الشَنطة جنب البَاب.",
+            "english": "The bag is next to the door.",
+            "transliteration": "Esh-shanta gamb el-bāb."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Basic Nouns: Animals and Home Features",
+          "arabic": "أسماء أساسية: حيوانات ومميزات المنزل"
+        },
+        "text": "Let's add more nouns to our vocabulary, including some common animals and parts of a room.",
+        "examples": [
+          {
+            "arabic": "كَلْب",
+            "english": "dog",
+            "transliteration": "kalb"
+          },
+          {
+            "arabic": "قِطَّة",
+            "english": "cat",
+            "transliteration": "ʾoṭṭa"
+          },
+          {
+            "arabic": "شِبَّاك",
+            "english": "window",
+            "transliteration": "shibbāk"
+          },
+          {
+            "arabic": "بَاب",
+            "english": "door",
+            "transliteration": "bāb"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الكَلْب تحت الكُرْسِي.",
+        "english": "The dog is under the chair.",
+        "transliteration": "El-kalb taḥt el-korsī."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "القِطَّة جنب الشِّبَّاك.",
+        "english": "The cat is next to the window.",
+        "transliteration": "El-ʾoṭṭa gamb esh-shibbāk."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'dog'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "قِطَّة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كَلْب",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بَاب",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'كَلْب' (kalb) means 'dog'.",
+      "hint": {
+        "transliteration": "kalb",
+        "arabic": "كَلْب"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'الكُرْسِي ___ البَاب.' (The chair is ___ the door.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "في",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "تحت",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "جنب",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'جنب' (gamb) means 'next to' or 'beside'.",
+      "hint": {
+        "transliteration": "gamb",
+        "arabic": "جنب"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'The cat is under the table'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "القِطَّة على التَّرَابِيزَة.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "القِطَّة في التَّرَابِيزَة.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "القِطَّة تحت التَّرَابِيزَة.",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'تحت' (taḥt) means 'under'.",
+      "hint": {
+        "transliteration": "El-ʾoṭṭa taḥt et-tarabēza.",
+        "arabic": "القِطَّة تحت التَّرَابِيزَة."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Preposition: 'in front of' (قدام)",
+          "arabic": "حرف الجر: 'قدام'"
+        },
+        "text": "To express that something is 'in front of' another object or place, we use the preposition 'قدام' (ʾoddām).",
+        "examples": [
+          {
+            "arabic": "العَرَبِيَّة قدام البَيْت.",
+            "english": "The car is in front of the house.",
+            "transliteration": "El-ʿarabīya ʾoddām el-bēt."
+          },
+          {
+            "arabic": "الكُرْسِي قدام المَكْتَب.",
+            "english": "The chair is in front of the desk.",
+            "transliteration": "El-korsī ʾoddām el-maktab."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Preposition: 'behind' (ورا)",
+          "arabic": "حرف الجر: 'ورا'"
+        },
+        "text": "To say something is 'behind' another object or place, we use the preposition 'ورا' (wara).",
+        "examples": [
+          {
+            "arabic": "القِطَّة ورا الشَّجَرَة.",
+            "english": "The cat is behind the tree.",
+            "transliteration": "El-ʾoṭṭa wara esh-shagara."
+          },
+          {
+            "arabic": "البَيْت ورا الجَامِع.",
+            "english": "The house is behind the mosque.",
+            "transliteration": "El-bēt wara el-gāmeʿ."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Preposition: 'between' (بين)",
+          "arabic": "حرف الجر: 'بين'"
+        },
+        "text": "To say something is 'between' two other objects or places, we use the preposition 'بين' (bēn). You'll typically follow it with two nouns connected by 'و' (we - 'and').",
+        "examples": [
+          {
+            "arabic": "الكِتَاب بين القَلَمِين.",
+            "english": "The book is between the two pens.",
+            "transliteration": "El-ketāb bēn el-ʾalamēn."
+          },
+          {
+            "arabic": "القَهْوَة بين الموبايل والمِفْتَاح.",
+            "english": "The coffee is between the mobile phone and the key.",
+            "transliteration": "El-ʾahwa bēn el-mobāyl w el-moftāḥ."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "المَحَطَّة قدام البَنْك.",
+        "english": "The station is in front of the bank.",
+        "transliteration": "El-maḥaṭṭa ʾoddām el-bank."
+      },
+      "context": "Using 'المَحَطَّة' (el-maḥaṭṭa) for 'the station' and 'البَنْك' (el-bank) for 'the bank'."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "المَسْجِد ورا الكِنِيسَة.",
+        "english": "The mosque is behind the church.",
+        "transliteration": "El-masged wara el-kenīsa."
+      },
+      "context": "Using 'المَسْجِد' (el-masged) for 'the mosque' and 'الكِنِيسَة' (el-kenīsa) for 'the church'."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'القِطَّة ___ الشَّجَرَة.' (The cat is ___ the tree.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "قدام",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ورا",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بين",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'ورا' (wara) means 'behind'.",
+      "hint": {
+        "transliteration": "wara",
+        "arabic": "ورا"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'The car is in front of the house'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "العَرَبِيَّة ورا البَيْت.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "العَرَبِيَّة قدام البَيْت.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "العَرَبِيَّة جنب البَيْت.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'قدام' (ʾoddām) means 'in front of'.",
+      "hint": {
+        "transliteration": "El-ʿarabīya ʾoddām el-bēt.",
+        "arabic": "العَرَبِيَّة قدام البَيْت."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'الموبايل ___ القَلَم والكِتَاب.' (The mobile phone is ___ the pen and the book.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "قدام",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "في",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "بين",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'بين' (bēn) means 'between', used when something is located between two other items.",
+      "hint": {
+        "transliteration": "bēn",
+        "arabic": "بين"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking about people's location (هو/هي)",
+          "arabic": "السؤال عن مكان الأشخاص (هو/هي)"
+        },
+        "text": "You can also ask about the location of people using 'فين؟'. When referring to people, you might use 'هو' (howa - he) or 'هي' (heya - she) if you don't use their name.",
+        "examples": [
+          {
+            "arabic": "فين أَحْمَد؟ هو في البَيْت.",
+            "english": "Where is Ahmed? He is at home.",
+            "transliteration": "Feen ʾaḥmad? Howa fī el-bēt."
+          },
+          {
+            "arabic": "سَارَة فين؟ هي في الشُغْل.",
+            "english": "Where is Sara? She is at work.",
+            "transliteration": "Sāra feen? Heya fī esh-shoghl."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Preposition: 'around' (حوالين)",
+          "arabic": "حرف الجر: 'حوالين'"
+        },
+        "text": "To say something is 'around' a place or object, we use the preposition 'حوالين' (ḥawalēn).",
+        "examples": [
+          {
+            "arabic": "النَّاس حوالين المَيْدَان.",
+            "english": "The people are around the square.",
+            "transliteration": "En-nās ḥawalēn el-mēdān."
+          },
+          {
+            "arabic": "المَحَلَّات حوالين السُّوق.",
+            "english": "The shops are around the market.",
+            "transliteration": "El-maḥallāt ḥawalēn es-sūʾ."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Preposition: 'near/close to' (قريب من)",
+          "arabic": "حرف الجر: 'قريب من'"
+        },
+        "text": "To say something is 'near' or 'close to' another object or place, we use 'قريب من' (ʾarayyeb men). 'قريب' changes to 'قَرِيبَة' (ʾarayyeba) for feminine nouns and 'قَرِيبِين' (ʾarayyebīn) for plural.",
+        "examples": [
+          {
+            "arabic": "أنا قَرِيب من البَيْت.",
+            "english": "I am near the house. (masculine speaker)",
+            "transliteration": "ʾAna ʾarayyeb men el-bēt."
+          },
+          {
+            "arabic": "المَدْرَسَة قَرِيبَة من المَحَطَّة.",
+            "english": "The school is near the station. (school is feminine)",
+            "transliteration": "El-madrasa ʾarayyeba men el-maḥaṭṭa."
+          },
+          {
+            "arabic": "هُما قَرِيبِين من هِنا.",
+            "english": "They are close to here.",
+            "transliteration": "Homa ʾarayyebīn men hena."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "فين عَلِي؟ هو قَرِيب من الجَامِع.",
+        "english": "Where is Ali? He is near the mosque.",
+        "transliteration": "Feen ʿAlī? Howa ʾarayyeb men el-gāmeʿ."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "المَطْعَم حوالين الفُنْدُق.",
+        "english": "The restaurant is around the hotel.",
+        "transliteration": "El-maṭʿam ḥawalēn el-fondok."
+      },
+      "context": "Using 'المَطْعَم' (el-maṭʿam) for 'the restaurant' and 'الفُنْدُق' (el-fondok) for 'the hotel'."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which sentence means 'She is at work'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "هو في الشُغْل.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "هي في الشُغْل.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أنا في الشُغْل.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'هي' (heya) means 'she', and 'في الشُغْل' (fī esh-shoghl) means 'at work'.",
+      "hint": {
+        "transliteration": "Heya fī esh-shoghl.",
+        "arabic": "هي في الشُغْل."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'النَّاس ___ السُّوق.' (The people are ___ the market.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "جنب",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ورا",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "حوالين",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'حوالين' (ḥawalēn) means 'around'.",
+      "hint": {
+        "transliteration": "ḥawalēn",
+        "arabic": "حوالين"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'The school is near the station' (school is feminine)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "المَدْرَسَة قَرِيب من المَحَطَّة.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "المَدْرَسَة قَرِيبَة من المَحَطَّة.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "المَدْرَسَة حوالين المَحَطَّة.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Since 'المَدْرَسَة' (el-madrasa) is feminine, 'قَرِيب' becomes 'قَرِيبَة' (ʾarayyeba).",
+      "hint": {
+        "transliteration": "El-madrasa ʾarayyeba men el-maḥaṭṭa.",
+        "arabic": "المَدْرَسَة قَرِيبَة من المَحَطَّة."
+      }
+    }
+  ]
+}

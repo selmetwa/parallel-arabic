@@ -1,0 +1,861 @@
+{
+  "topicId": "m3-t1",
+  "title": "Asking About Numbers & Documents (Egyptian Arabic)",
+  "dialect": "egyptian-arabic",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "The Word 'Number'",
+          "arabic": "كلمة 'رقم'"
+        },
+        "text": "The fundamental word for 'number' in Egyptian Arabic is 'رقم'. It's a masculine noun.",
+        "examples": [
+          {
+            "arabic": "رقم",
+            "english": "number",
+            "transliteration": "raqam"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'How many/much?'",
+          "arabic": "كيف تسأل 'كم؟'"
+        },
+        "text": "To inquire about quantity or a number, you use the question word 'كام؟' (kām?). It translates to 'how many?' or 'how much?'.",
+        "examples": [
+          {
+            "arabic": "كام؟",
+            "english": "How many/much?",
+            "transliteration": "kām?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'What is the number?'",
+          "arabic": "كيف تسأل 'ما هو الرقم؟'"
+        },
+        "text": "To ask 'What is the number?' you can say 'الرقم كام؟' (ir-raqam kām?) or simply 'رقم كام؟' (raqam kām?). The 'ال' (il) is the definite article 'the'.",
+        "examples": [
+          {
+            "arabic": "الرقم كام؟",
+            "english": "What is the number?",
+            "transliteration": "ir-raqam kām?"
+          },
+          {
+            "arabic": "رقم كام؟",
+            "english": "What number?",
+            "transliteration": "raqam kām?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الرقم كام؟",
+        "english": "What is the number?",
+        "transliteration": "ir-raqam kām?"
+      },
+      "context": "A direct question asking for a number."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ده رقم.",
+        "english": "This is a number.",
+        "transliteration": "dah raqam."
+      },
+      "context": "A simple statement recognizing something as a number."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'number'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "كام",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "رقم",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "إيه",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "B",
+      "explanation": "The word 'رقم' (raqam) means 'number'.",
+      "hint": {
+        "transliteration": "raqam",
+        "arabic": "رقم"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'How many/much?' in Egyptian Arabic?",
+      "options": [
+        {
+          "id": "A",
+          "text": "مين",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "إمتى",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "كام",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "C",
+      "explanation": "'كام' (kām?) is used to ask 'how many/much?'.",
+      "hint": {
+        "transliteration": "kām?",
+        "arabic": "كام؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the phrase: 'What is the number?' (The number ___)",
+      "options": [
+        {
+          "id": "A",
+          "text": "مين",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "كام",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "فين",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "B",
+      "explanation": "To ask 'What is the number?', you say 'الرقم كام؟'.",
+      "hint": {
+        "transliteration": "kām",
+        "arabic": "كام"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Vocabulary: Phone",
+          "arabic": "مفردات: تليفون"
+        },
+        "text": "The word for 'phone' or 'telephone' in Egyptian Arabic is 'تليفون'. It's a loanword from English.",
+        "examples": [
+          {
+            "arabic": "تليفون",
+            "english": "phone / telephone",
+            "transliteration": "telefoon"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for a Phone Number",
+          "arabic": "كيف تسأل عن رقم التليفون"
+        },
+        "text": "To ask for someone's phone number, you combine 'رقم' with 'تليفون' and the possessive suffix '-ك' (ak/ik for male/female) for 'your'. So, 'رقم تليفونك كام؟' (raqam telefoonak kām?) means 'What is your phone number?' (to a male). For a female, it's 'رقم تليفونكِ كام؟' (raqam telefoonik kām?).",
+        "examples": [
+          {
+            "arabic": "رقم تليفونكَ كام؟",
+            "english": "What is your phone number? (male)",
+            "transliteration": "raqam telefoonak kām?",
+            "diacriticalNotes": "The kasra on 'كَ' (ak) changes to 'كِ' (ik) for a female."
+          },
+          {
+            "arabic": "رقم تليفونكِ كام؟",
+            "english": "What is your phone number? (female)",
+            "transliteration": "raqam telefoonik kām?",
+            "diacriticalNotes": "The kasra on 'كِ' (ik) changes to 'كَ' (ak) for a male."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Vocabulary: Passport & ID Card",
+          "arabic": "مفردات: باسبور وبطاقة"
+        },
+        "text": "When traveling, you'll need to know words for important documents like 'passport' (باسبور) and 'ID card' (بطاقة). 'باسبور' is a loanword. 'بطاقة' is the general word for card, commonly used for ID.",
+        "examples": [
+          {
+            "arabic": "باسبور",
+            "english": "passport",
+            "transliteration": "basboor"
+          },
+          {
+            "arabic": "بطاقة",
+            "english": "ID card / card",
+            "transliteration": "baṭaqa"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "رقم تليفونك كام؟",
+        "english": "What is your phone number? (to male)",
+        "transliteration": "raqam telefoonak kām?"
+      },
+      "context": "Asking for a phone number."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "فين الباسبور؟",
+        "english": "Where is the passport?",
+        "transliteration": "fēn il-basboor?"
+      },
+      "context": "Asking the location of a passport (using 'فين' - where, which is a new word but useful for context)."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'phone'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "رقم",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "بطاقة",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "تليفون",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "C",
+      "explanation": "'تليفون' (telefoon) means 'phone' or 'telephone'.",
+      "hint": {
+        "transliteration": "telefoon",
+        "arabic": "تليفون"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase asks 'What is your phone number?' (to a male)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "كام تليفونك؟",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "رقم تليفونكَ كام؟",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "إيه تليفونكَ؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "B",
+      "explanation": "'رقم تليفونكَ كام؟' is the correct way to ask 'What is your phone number?' to a male.",
+      "hint": {
+        "transliteration": "raqam telefoonak kām?",
+        "arabic": "رقم تليفونكَ كام؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'passport'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "بطاقة",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "باسبور",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "عنوان",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "B",
+      "explanation": "'باسبور' (basboor) is the word for 'passport'.",
+      "hint": {
+        "transliteration": "basboor",
+        "arabic": "باسبور"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Being Polite: 'Please'",
+          "arabic": "كن مؤدباً: 'من فضلك'"
+        },
+        "text": "To be polite when asking for information, use 'من فضلك' (min faḍlak) for a male or 'من فضلكِ' (min faḍlik) for a female, meaning 'please'.",
+        "examples": [
+          {
+            "arabic": "من فضلكَ",
+            "english": "please (to male)",
+            "transliteration": "min faḍlak",
+            "diacriticalNotes": "The fatḥa on 'كَ' (ak) changes to kasra 'كِ' (ik) for a female."
+          },
+          {
+            "arabic": "من فضلكِ",
+            "english": "please (to female)",
+            "transliteration": "min faḍlik",
+            "diacriticalNotes": "The kasra on 'كِ' (ik) changes to fatḥa 'كَ' (ak) for a male."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Saying 'My number is...'",
+          "arabic": "كيف تقول 'رقمي هو...'"
+        },
+        "text": "To provide your number, you can say 'رقمي هو...' (raqamī howa...) meaning 'My number is...'. The '-ي' (ī) suffix means 'my'.",
+        "examples": [
+          {
+            "arabic": "رقمي هو...",
+            "english": "My number is...",
+            "transliteration": "raqamī howa..."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Numbers 0-5",
+          "arabic": "الأرقام من ٠ إلى ٥"
+        },
+        "text": "Here are the numbers from zero to five in Egyptian Arabic:",
+        "examples": [
+          {
+            "arabic": "صفر",
+            "english": "zero",
+            "transliteration": "ṣifr"
+          },
+          {
+            "arabic": "واحد",
+            "english": "one",
+            "transliteration": "wāḥid"
+          },
+          {
+            "arabic": "اتنين",
+            "english": "two",
+            "transliteration": "itnēn"
+          },
+          {
+            "arabic": "تلاتة",
+            "english": "three",
+            "transliteration": "talāta"
+          },
+          {
+            "arabic": "أربعة",
+            "english": "four",
+            "transliteration": "arbaʿa"
+          },
+          {
+            "arabic": "خمسة",
+            "english": "five",
+            "transliteration": "ḫamsa"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "من فضلكَ، الرقم كام؟",
+        "english": "Please (to male), what is the number?",
+        "transliteration": "min faḍlak, ir-raqam kām?"
+      },
+      "context": "Politely asking for a number."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "رقمي هو واحد اتنين تلاتة.",
+        "english": "My number is one two three.",
+        "transliteration": "raqamī howa wāḥid itnēn talāta."
+      },
+      "context": "Stating a simple number sequence."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'please' to a female?",
+      "options": [
+        {
+          "id": "A",
+          "text": "من فضلك",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "من فضلكِ",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "من فضلكَ",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "B",
+      "explanation": "Use 'من فضلكِ' (min faḍlik) when speaking to a female.",
+      "hint": {
+        "transliteration": "min faḍlik",
+        "arabic": "من فضلكِ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'My number is...'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "رقمكَ هو...",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "رقمي هو...",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "رقمها هو...",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "B",
+      "explanation": "The suffix '-ي' (ī) indicates 'my', so 'رقمي هو...' means 'My number is...'.",
+      "hint": {
+        "transliteration": "raqamī howa...",
+        "arabic": "رقمي هو..."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the number 'three' in Egyptian Arabic?",
+      "options": [
+        {
+          "id": "A",
+          "text": "واحد",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "تلاتة",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "خمسة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "B",
+      "explanation": "'تلاتة' (talāta) is the Egyptian Arabic word for 'three'.",
+      "hint": {
+        "transliteration": "talāta",
+        "arabic": "تلاتة"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Numbers 6-10",
+          "arabic": "الأرقام من ٦ إلى ١٠"
+        },
+        "text": "Let's continue with the numbers from six to ten:",
+        "examples": [
+          {
+            "arabic": "ستة",
+            "english": "six",
+            "transliteration": "sitta"
+          },
+          {
+            "arabic": "سبعة",
+            "english": "seven",
+            "transliteration": "sabʿa"
+          },
+          {
+            "arabic": "تمانية",
+            "english": "eight",
+            "transliteration": "tamanya"
+          },
+          {
+            "arabic": "تسعة",
+            "english": "nine",
+            "transliteration": "tisʿa"
+          },
+          {
+            "arabic": "عشرة",
+            "english": "ten",
+            "transliteration": "ʿašara"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Vocabulary: Address & Email",
+          "arabic": "مفردات: عنوان وإيميل"
+        },
+        "text": "Beyond numbers, you might need to ask for an 'address' (عنوان) or 'email' (ايميل). 'عنوان' is a common Arabic word, while 'ايميل' is a direct loanword.",
+        "examples": [
+          {
+            "arabic": "عنوان",
+            "english": "address",
+            "transliteration": "ʿunwān"
+          },
+          {
+            "arabic": "ايميل",
+            "english": "email",
+            "transliteration": "ēmel"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for Address or Email",
+          "arabic": "كيف تسأل عن العنوان أو الإيميل"
+        },
+        "text": "To ask for an address or email, you can use 'إيه؟' (ēh?), meaning 'what?'. For example, 'عنوانك إيه؟' (ʿunwānak ēh?) means 'What is your address?' (to a male). For a female, it's 'عنوانكِ إيه؟' (ʿunwānik ēh?). The same pattern applies to 'إيميلك إيه؟'.",
+        "examples": [
+          {
+            "arabic": "عنوانكَ إيه؟",
+            "english": "What is your address? (male)",
+            "transliteration": "ʿunwānak ēh?",
+            "diacriticalNotes": "The fatḥa on 'كَ' (ak) changes to kasra 'كِ' (ik) for a female."
+          },
+          {
+            "arabic": "ايميلكَ إيه؟",
+            "english": "What is your email? (male)",
+            "transliteration": "ēmelak ēh?",
+            "diacriticalNotes": "The fatḥa on 'كَ' (ak) changes to kasra 'كِ' (ik) for a female."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ايميلكِ إيه يا منى؟",
+        "english": "What is your email, Mona? (to female)",
+        "transliteration": "ēmelik ēh ya Mona?"
+      },
+      "context": "Asking a female for her email address."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "رقم تليفوني سبعة تمانية تسعة.",
+        "english": "My phone number is seven eight nine.",
+        "transliteration": "raqam telefoony sabʿa tamanya tisʿa."
+      },
+      "context": "Stating a phone number using new numbers."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the number 'seven' in Egyptian Arabic?",
+      "options": [
+        {
+          "id": "A",
+          "text": "ستة",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "تمانية",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "سبعة",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "C",
+      "explanation": "'سبعة' (sabʿa) is the Egyptian Arabic word for 'seven'.",
+      "hint": {
+        "transliteration": "sabʿa",
+        "arabic": "سبعة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'address'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "ايميل",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "عنوان",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "باسبور",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "B",
+      "explanation": "'عنوان' (ʿunwān) means 'address'.",
+      "hint": {
+        "transliteration": "ʿunwān",
+        "arabic": "عنوان"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'What is your email?' (to a male)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "ايميلكَ إيه؟",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "عنوانكَ إيه؟",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "ايميلكِ إيه؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "A",
+      "explanation": "'ايميلكَ إيه؟' (ēmelak ēh?) is used to ask a male for his email.",
+      "hint": {
+        "transliteration": "ēmelak ēh?",
+        "arabic": "ايميلكَ إيه؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for Passport or ID Number",
+          "arabic": "كيف تسأل عن رقم الباسبور أو البطاقة"
+        },
+        "text": "To ask for a passport number, you'd say 'رقم باسبوركَ كام؟' (raqam basboorak kām?) for a male or 'رقم باسبورِك كام؟' (raqam basboorik kām?) for a female. Similarly for an ID card: 'رقم بطاقتكَ كام؟' (raqam baṭaʾtak kām?) for a male and 'رقم بطاقتِك كام؟' (raqam baṭaʾtik kām?) for a female.",
+        "examples": [
+          {
+            "arabic": "رقم باسبوركَ كام؟",
+            "english": "What is your passport number? (male)",
+            "transliteration": "raqam basboorak kām?",
+            "diacriticalNotes": "The fatḥa on 'كَ' (ak) changes to kasra 'كِ' (ik) for a female."
+          },
+          {
+            "arabic": "رقم بطاقتِك كام؟",
+            "english": "What is your ID number? (female)",
+            "transliteration": "raqam baṭaʾtik kām?",
+            "diacriticalNotes": "The kasra on 'كِ' (ik) changes to fatḥa 'كَ' (ak) for a male."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Combining Politeness with Questions",
+          "arabic": "جمع الأدب مع الأسئلة"
+        },
+        "text": "Always remember to add 'من فضلك' (please) to make your requests more polite. For example, 'من فضلك، رقم تليفونكَ كام؟' (min faḍlak, raqam telefoonak kām?) means 'Please, what is your phone number?' (to a male).",
+        "examples": [
+          {
+            "arabic": "من فضلكِ، عنوانِك إيه؟",
+            "english": "Please (to female), what is your address?",
+            "transliteration": "min faḍlik, ʿunwānik ēh?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for 'Your Number' in general",
+          "arabic": "كيف تسأل عن 'رقمك' بشكل عام"
+        },
+        "text": "If the context is clear, you can simply ask 'رقمكَ كام؟' (raqamak kām?) for a male or 'رقمِك كام؟' (raqamik kām?) for a female, which translates to 'What is your number?' (implying phone, room, etc., based on context).",
+        "examples": [
+          {
+            "arabic": "من فضلكَ، رقمكَ كام؟",
+            "english": "Please (to male), what is your number?",
+            "transliteration": "min faḍlak, raqamak kām?",
+            "diacriticalNotes": "The fatḥa on 'كَ' (ak) changes to kasra 'كِ' (ik) for a female."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "من فضلكِ، رقم باسبوركِ كام؟",
+        "english": "Please (to female), what is your passport number?",
+        "transliteration": "min faḍlik, raqam basboorik kām?"
+      },
+      "context": "Politely asking a female for her passport number."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "رقمي هو عشرة.",
+        "english": "My number is ten.",
+        "transliteration": "raqamī howa ʿašara."
+      },
+      "context": "Stating the number ten."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'What is your ID number?' (to a female)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "رقم بطاقتِك كام؟",
+          "isCorrect": true
+        },
+        {
+          "id": "B",
+          "text": "رقم باسبورِك كام؟",
+          "isCorrect": false
+        },
+        {
+          "id": "C",
+          "text": "رقم تليفونِك كام؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "A",
+      "explanation": "'رقم بطاقتِك كام؟' is how you ask a female for her ID number.",
+      "hint": {
+        "transliteration": "raqam baṭaʾtik kām?",
+        "arabic": "رقم بطاقتِك كام؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase politely asks for a male's address?",
+      "options": [
+        {
+          "id": "A",
+          "text": "عنوانكِ إيه؟",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "من فضلكَ، عنوانكَ إيه؟",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "ايميلكَ إيه؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "B",
+      "explanation": "To politely ask a male for his address, use 'من فضلكَ، عنوانكَ إيه؟'.",
+      "hint": {
+        "transliteration": "min faḍlak, ʿunwānak ēh?",
+        "arabic": "من فضلكَ، عنوانكَ إيه؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the polite question (to a female): 'Please, what is your number?' (من فضلكِ، رقمِك ___؟)",
+      "options": [
+        {
+          "id": "A",
+          "text": "فين",
+          "isCorrect": false
+        },
+        {
+          "id": "B",
+          "text": "كام",
+          "isCorrect": true
+        },
+        {
+          "id": "C",
+          "text": "إيه",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "B",
+      "explanation": "To ask 'What is your number?', you use 'كام؟'. So the phrase is 'من فضلكِ، رقمِك كام؟'.",
+      "hint": {
+        "transliteration": "kām?",
+        "arabic": "كام؟"
+      }
+    }
+  ]
+}

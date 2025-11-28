@@ -1,0 +1,847 @@
+{
+  "topicId": "m2-t1",
+  "title": "Identifying and Asking About Classroom Objects",
+  "dialect": "fusha",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Introduction to Asking 'What is this?' (Masculine)",
+          "arabic": "مقدمة: السؤال 'ما هذا؟'"
+        },
+        "text": "To ask 'What is this?' about a masculine object in Arabic, we use the phrase 'ما هذا؟'. 'ما' means 'what', and 'هذا' is the masculine demonstrative pronoun for 'this'.",
+        "examples": [
+          {
+            "arabic": "ما هذا؟",
+            "english": "What is this?",
+            "transliteration": "Maa haadhā?"
+          }
+        ],
+        "audioText": "ما هذا؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Vocabulary: Book (Masculine)",
+          "arabic": "مفردات: كتاب"
+        },
+        "text": "Let's learn our first classroom object: 'book'. In Arabic, 'book' is 'كتاب', which is a masculine noun. When answering 'What is this?', we combine 'هذا' with the noun.",
+        "examples": [
+          {
+            "arabic": "كتاب",
+            "english": "Book",
+            "transliteration": "kitāb"
+          },
+          {
+            "arabic": "هذا كتاب.",
+            "english": "This is a book.",
+            "transliteration": "Haadhā kitāb."
+          }
+        ],
+        "audioText": "كتاب. هذا كتاب."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Vocabulary: Pen (Masculine)",
+          "arabic": "مفردات: قلم"
+        },
+        "text": "Another common classroom item is a 'pen'. In Arabic, 'pen' is 'قلم', also a masculine noun. We use 'هذا' with it to identify it.",
+        "examples": [
+          {
+            "arabic": "قلم",
+            "english": "Pen",
+            "transliteration": "qalam"
+          },
+          {
+            "arabic": "هذا قلم.",
+            "english": "This is a pen.",
+            "transliteration": "Haadhā qalam."
+          }
+        ],
+        "audioText": "قلم. هذا قلم."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ما هذا؟ هذا كتاب.",
+        "english": "What is this? This is a book.",
+        "transliteration": "Maa haadhā? Haadhā kitāb."
+      },
+      "context": "Asking and answering about a masculine object (book)."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هذا قلم.",
+        "english": "This is a pen.",
+        "transliteration": "Haadhā qalam."
+      },
+      "context": "Identifying a pen."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'What is this?' (for a masculine object)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ما هذه؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ما هذا؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "ما ذلك؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "Maa haadhā?",
+        "arabic": "ما هذا؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: This is a ___ (book).",
+      "options": [
+        {
+          "id": "a",
+          "text": "قلم",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كتاب",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "حقيبة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "kitāb",
+        "arabic": "كتاب"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'pen'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "كتاب",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "قلم",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "حقيبة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "qalam",
+        "arabic": "قلم"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Introduction to Asking 'What is this?' (Feminine)",
+          "arabic": "مقدمة: السؤال 'ما هذه؟'"
+        },
+        "text": "To ask 'What is this?' about a feminine object, we use 'ما هذه؟'. The demonstrative pronoun 'هذه' is for 'this' (feminine). Most feminine nouns end with a 'تاء مربوطة' (ة).",
+        "examples": [
+          {
+            "arabic": "ما هذه؟",
+            "english": "What is this? (feminine)",
+            "transliteration": "Maa hādhihi?"
+          }
+        ],
+        "audioText": "ما هذه؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Vocabulary: Bag (Feminine)",
+          "arabic": "مفردات: حقيبة"
+        },
+        "text": "A 'bag' is a common classroom item. In Arabic, 'bag' is 'حقيبة'. Notice the 'ة' at the end, which marks it as feminine. Therefore, we use 'هذه' with it.",
+        "examples": [
+          {
+            "arabic": "حقيبة",
+            "english": "Bag",
+            "transliteration": "haqeebah"
+          },
+          {
+            "arabic": "هذه حقيبة.",
+            "english": "This is a bag.",
+            "transliteration": "Hādhihi haqeebah."
+          }
+        ],
+        "audioText": "حقيبة. هذه حقيبة."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Vocabulary: Table (Feminine)",
+          "arabic": "مفردات: طاولة"
+        },
+        "text": "Another feminine noun for a classroom object is 'table'. In Arabic, 'table' is 'طاولة'. Again, the 'ة' indicates it's feminine.",
+        "examples": [
+          {
+            "arabic": "طاولة",
+            "english": "Table",
+            "transliteration": "ṭāwilah"
+          },
+          {
+            "arabic": "هذه طاولة.",
+            "english": "This is a table.",
+            "transliteration": "Hādhihi ṭāwilah."
+          }
+        ],
+        "audioText": "طاولة. هذه طاولة."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ما هذه؟ هذه حقيبة.",
+        "english": "What is this? This is a bag.",
+        "transliteration": "Maa hādhihi? Hādhihi haqeebah."
+      },
+      "context": "Asking and answering about a feminine object (bag)."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هذه طاولة.",
+        "english": "This is a table.",
+        "transliteration": "Hādhihi ṭāwilah."
+      },
+      "context": "Identifying a table."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'What is this?' (for a feminine object)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ما هذا؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ما تلك؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "ما هذه؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "Maa hādhihi?",
+        "arabic": "ما هذه؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: This is a ___ (table).",
+      "options": [
+        {
+          "id": "a",
+          "text": "كتاب",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "طاولة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "قلم",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "ṭāwilah",
+        "arabic": "طاولة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'bag'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "قلم",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كتاب",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "حقيبة",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "haqeebah",
+        "arabic": "حقيبة"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Introduction to Asking 'What is that?' (Masculine)",
+          "arabic": "مقدمة: السؤال 'ما ذلك؟'"
+        },
+        "text": "When asking about a masculine object that is further away, we use 'ما ذلك؟'. 'ذلك' is the masculine demonstrative pronoun for 'that'.",
+        "examples": [
+          {
+            "arabic": "ما ذلك؟",
+            "english": "What is that? (masculine)",
+            "transliteration": "Maa dhālika?"
+          }
+        ],
+        "audioText": "ما ذلك؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Vocabulary: Chair (Masculine)",
+          "arabic": "مفردات: كرسي"
+        },
+        "text": "'Chair' is 'كرسي' in Arabic. It's a masculine noun. We can use 'ذلك' to refer to a chair that is not close to us.",
+        "examples": [
+          {
+            "arabic": "كرسي",
+            "english": "Chair",
+            "transliteration": "kursī"
+          },
+          {
+            "arabic": "ذلك كرسي.",
+            "english": "That is a chair.",
+            "transliteration": "Dhālika kursī."
+          }
+        ],
+        "audioText": "كرسي. ذلك كرسي."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Introduction to Asking 'What is that?' (Feminine)",
+          "arabic": "مقدمة: السؤال 'ما تلك؟'"
+        },
+        "text": "For a feminine object that is further away, we use 'ما تلك؟'. 'تلك' is the feminine demonstrative pronoun for 'that'. Remember that feminine nouns often end in 'ة'.",
+        "examples": [
+          {
+            "arabic": "ما تلك؟",
+            "english": "What is that? (feminine)",
+            "transliteration": "Maa tilka?"
+          }
+        ],
+        "audioText": "ما تلك؟"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ما ذلك؟ ذلك كرسي.",
+        "english": "What is that? That is a chair.",
+        "transliteration": "Maa dhālika? Dhālika kursī."
+      },
+      "context": "Asking and answering about a masculine object (chair) that is far."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ما تلك؟",
+        "english": "What is that? (feminine)",
+        "transliteration": "Maa tilka?"
+      },
+      "context": "Asking about a feminine object that is far."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'What is that?' (for a masculine object)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ما هذا؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ما ذلك؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "ما هذه؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "Maa dhālika?",
+        "arabic": "ما ذلك؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: That is a ___ (chair).",
+      "options": [
+        {
+          "id": "a",
+          "text": "كتاب",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كرسي",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "حقيبة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "kursī",
+        "arabic": "كرسي"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which demonstrative pronoun means 'that' (for a feminine object)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "هذا",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ذلك",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "تلك",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "tilka",
+        "arabic": "تلك"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Vocabulary: Board (Feminine)",
+          "arabic": "مفردات: سبورة"
+        },
+        "text": "The 'board' in a classroom is 'سبورة' in Arabic, a feminine noun. We use 'تلك' to refer to a board that is further away.",
+        "examples": [
+          {
+            "arabic": "سبورة",
+            "english": "Board",
+            "transliteration": "saboorah"
+          },
+          {
+            "arabic": "تلك سبورة.",
+            "english": "That is a board.",
+            "transliteration": "Tilka saboorah."
+          }
+        ],
+        "audioText": "سبورة. تلك سبورة."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Vocabulary: Eraser (Feminine)",
+          "arabic": "مفردات: ممحاة"
+        },
+        "text": "An 'eraser' is 'ممحاة' in Arabic, also a feminine noun. When it's nearby, we say 'هذه ممحاة'. If it's further away, we say 'تلك ممحاة'.",
+        "examples": [
+          {
+            "arabic": "ممحاة",
+            "english": "Eraser",
+            "transliteration": "mimḥāh"
+          },
+          {
+            "arabic": "هذه ممحاة.",
+            "english": "This is an eraser.",
+            "transliteration": "Hādhihi mimḥāh."
+          }
+        ],
+        "audioText": "ممحاة. هذه ممحاة."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Vocabulary: Notebook (Masculine)",
+          "arabic": "مفردات: دفتر"
+        },
+        "text": "A 'notebook' is 'دفتر' in Arabic, a masculine noun. Remember to use 'هذا' for 'this' and 'ذلك' for 'that' with masculine nouns.",
+        "examples": [
+          {
+            "arabic": "دفتر",
+            "english": "Notebook",
+            "transliteration": "daftar"
+          },
+          {
+            "arabic": "هذا دفتر.",
+            "english": "This is a notebook.",
+            "transliteration": "Haadhā daftar."
+          }
+        ],
+        "audioText": "دفتر. هذا دفتر."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "تلك سبورة.",
+        "english": "That is a board.",
+        "transliteration": "Tilka saboorah."
+      },
+      "context": "Identifying a feminine object (board) that is far."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هذه ممحاة وهذا دفتر.",
+        "english": "This is an eraser and this is a notebook.",
+        "transliteration": "Hādhihi mimḥāh wa haadhā daftar."
+      },
+      "context": "Identifying both a feminine (eraser) and a masculine (notebook) object nearby."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'board'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "كتاب",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "سبورة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كرسي",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "saboorah",
+        "arabic": "سبورة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: That is an ___ (eraser).",
+      "options": [
+        {
+          "id": "a",
+          "text": "دفتر",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ممحاة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "قلم",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "mimḥāh",
+        "arabic": "ممحاة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'notebook'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "كتاب",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "حقيبة",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "دفتر",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "daftar",
+        "arabic": "دفتر"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Is this a...?' (Masculine) with 'هل'",
+          "arabic": "السؤال 'هل هذا...؟' (لمذكر)"
+        },
+        "text": "To ask a yes/no question like 'Is this a book?', we use 'هل' at the beginning of the sentence. 'هل' means 'is/are/do/does'.",
+        "examples": [
+          {
+            "arabic": "هل هذا كتاب؟",
+            "english": "Is this a book?",
+            "transliteration": "Hal haadhā kitāb?"
+          },
+          {
+            "arabic": "نعم، هذا كتاب.",
+            "english": "Yes, this is a book.",
+            "transliteration": "Naʿam, haadhā kitāb."
+          },
+          {
+            "arabic": "لا، هذا ليس كتاباً.",
+            "english": "No, this is not a book.",
+            "transliteration": "Lā, haadhā laysa kitāban."
+          }
+        ],
+        "audioText": "هل هذا كتاب؟ نعم، هذا كتاب. لا، هذا ليس كتاباً."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Is this a...?' (Feminine) with 'هل'",
+          "arabic": "السؤال 'هل هذه...؟' (لمؤنث)"
+        },
+        "text": "Similarly, for feminine objects, we use 'هل هذه' for yes/no questions. Remember to use 'ليست' for negation with feminine nouns.",
+        "examples": [
+          {
+            "arabic": "هل هذه حقيبة؟",
+            "english": "Is this a bag?",
+            "transliteration": "Hal hādhihi haqeebah?"
+          },
+          {
+            "arabic": "نعم، هذه حقيبة.",
+            "english": "Yes, this is a bag.",
+            "transliteration": "Naʿam, hādhihi haqeebah."
+          },
+          {
+            "arabic": "لا، هذه ليست حقيبةً.",
+            "english": "No, this is not a bag.",
+            "transliteration": "Lā, hādhihi laysat haqeebatan."
+          }
+        ],
+        "audioText": "هل هذه حقيبة؟ نعم، هذه حقيبة. لا، هذه ليست حقيبةً."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Is that a...?' (Masculine/Feminine) with 'هل'",
+          "arabic": "السؤال 'هل ذلك/تلك...؟'"
+        },
+        "text": "We can also use 'هل' with 'ذلك' and 'تلك' to ask about objects further away. The answers follow the same 'نعم' or 'لا' structure.",
+        "examples": [
+          {
+            "arabic": "هل ذلك قلم؟",
+            "english": "Is that a pen?",
+            "transliteration": "Hal dhālika qalam?"
+          },
+          {
+            "arabic": "نعم، ذلك قلم.",
+            "english": "Yes, that is a pen.",
+            "transliteration": "Naʿam, dhālika qalam."
+          },
+          {
+            "arabic": "هل تلك سبورة؟",
+            "english": "Is that a board?",
+            "transliteration": "Hal tilka saboorah?"
+          },
+          {
+            "arabic": "لا، تلك ليست سبورةً.",
+            "english": "No, that is not a board.",
+            "transliteration": "Lā, tilka laysat sabooratan."
+          }
+        ],
+        "audioText": "هل ذلك قلم؟ نعم، ذلك قلم. هل تلك سبورة؟ لا، تلك ليست سبورةً."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هل هذا دفتر؟ نعم، هذا دفتر.",
+        "english": "Is this a notebook? Yes, this is a notebook.",
+        "transliteration": "Hal haadhā daftar? Naʿam, haadhā daftar."
+      },
+      "context": "Asking and confirming about a masculine object nearby."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هل تلك ممحاة؟ لا، تلك ليست ممحاةً.",
+        "english": "Is that an eraser? No, that is not an eraser.",
+        "transliteration": "Hal tilka mimḥāh? Lā, tilka laysat mimḥāh."
+      },
+      "context": "Asking and negating about a feminine object far away."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word is used to ask a 'yes/no' question in Arabic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ما",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "هل",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "نعم",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "hal",
+        "arabic": "هل"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the positive answer: Is this a pen? Yes, ___ is a pen.",
+      "options": [
+        {
+          "id": "a",
+          "text": "ذلك",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "هذا",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "تلك",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "haadhā",
+        "arabic": "هذا"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'No, this is not a bag.'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "نعم، هذه حقيبة.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "لا، هذه ليست حقيبةً.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "لا، هذا ليس حقيبة.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "Lā, hādhihi laysat haqeebatan.",
+        "arabic": "لا، هذه ليست حقيبةً."
+      }
+    }
+  ]
+}

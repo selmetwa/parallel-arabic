@@ -1,0 +1,991 @@
+{
+  "topicId": "m4-t2",
+  "title": "At the Supermarket (Levantine Arabic)",
+  "dialect": "levantine",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Greeting and Entering the Supermarket",
+          "arabic": "تحية ودخول السوبرماركت"
+        },
+        "text": "When you enter a supermarket, it's common to greet people. You might also need to politely get someone's attention if you need help.",
+        "examples": [
+          {
+            "arabic": "مرحباً!",
+            "english": "Hello!",
+            "transliteration": "Marhaba!"
+          },
+          {
+            "arabic": "لو سمحت!",
+            "english": "Excuse me / Please!",
+            "transliteration": "Law samaḥt!"
+          },
+          {
+            "arabic": "السوبرماركت",
+            "english": "The supermarket",
+            "transliteration": "As-soopermārket"
+          }
+        ],
+        "audioText": "مرحباً! لو سمحت! السوبرماركت"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for Item Location",
+          "arabic": "السؤال عن مكان الأغراض"
+        },
+        "text": "To find specific items, you'll need to ask 'Where can I find...?' or 'Where is the...?'",
+        "examples": [
+          {
+            "arabic": "وين بلاقي...؟",
+            "english": "Where can I find...?",
+            "transliteration": "Wēn ballāʾi...?"
+          },
+          {
+            "arabic": "قسم الخضرة",
+            "english": "The vegetable section",
+            "transliteration": "Qism il-khoḍra"
+          },
+          {
+            "arabic": "وين قسم الحليب؟",
+            "english": "Where is the milk section?",
+            "transliteration": "Wēn qism il-ḥalīb?"
+          }
+        ],
+        "audioText": "وين بلاقي؟ قسم الخضرة. وين قسم الحليب؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Common Vegetables",
+          "arabic": "خضروات شائعة"
+        },
+        "text": "Familiarize yourself with the names of common vegetables you might buy.",
+        "examples": [
+          {
+            "arabic": "بندورة",
+            "english": "Tomatoes",
+            "transliteration": "Banadūra"
+          },
+          {
+            "arabic": "خيار",
+            "english": "Cucumbers",
+            "transliteration": "Khiyār"
+          },
+          {
+            "arabic": "بطاطا",
+            "english": "Potatoes",
+            "transliteration": "Baṭāṭa"
+          },
+          {
+            "arabic": "خضرة",
+            "english": "Vegetables",
+            "transliteration": "Khoḍra"
+          }
+        ],
+        "audioText": "بندورة، خيار، بطاطا، خضرة"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "لو سمحت، وين بلاقي البندورة؟",
+        "english": "Excuse me, where can I find the tomatoes?",
+        "transliteration": "Law samaḥt, wēn ballāʾi il-banadūra?"
+      },
+      "context": "Asking for the location of a specific vegetable."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "مرحباً، وين قسم الخضرة؟",
+        "english": "Hello, where is the vegetable section?",
+        "transliteration": "Marhaba, wēn qism il-khoḍra?"
+      },
+      "context": "Greeting and asking for a section."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'Excuse me / Please!'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "مرحباً",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "لو سمحت",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "شكراً",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«لو سمحت» is used to politely get someone's attention or make a request. «مرحباً» means 'Hello' and «شكراً» means 'Thank you'.",
+      "hint": {
+        "transliteration": "Law samaḥt",
+        "arabic": "لو سمحت"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'Tomatoes'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "خيار",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بطاطا",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "بندورة",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "«بندورة» means 'tomatoes'. «خيار» means 'cucumbers' and «بطاطا» means 'potatoes'.",
+      "hint": {
+        "transliteration": "Banadūra",
+        "arabic": "بندورة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'Where can I find ___?' (the vegetable section)",
+      "options": [
+        {
+          "id": "a",
+          "text": "قسم الفواكه",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "قسم الخضرة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "قسم الألبان",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«قسم الخضرة» means 'the vegetable section'.",
+      "hint": {
+        "transliteration": "Qism il-khoḍra",
+        "arabic": "قسم الخضرة"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Common Fruits",
+          "arabic": "فواكه شائعة"
+        },
+        "text": "Just like vegetables, knowing fruit names will be helpful for your shopping list.",
+        "examples": [
+          {
+            "arabic": "تفاح",
+            "english": "Apples",
+            "transliteration": "Tuffāḥ"
+          },
+          {
+            "arabic": "موز",
+            "english": "Bananas",
+            "transliteration": "Mōz"
+          },
+          {
+            "arabic": "برتقال",
+            "english": "Oranges",
+            "transliteration": "Burtuqāl"
+          },
+          {
+            "arabic": "فواكه",
+            "english": "Fruits",
+            "transliteration": "Fawākih"
+          }
+        ],
+        "audioText": "تفاح، موز، برتقال، فواكه"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Dairy Products and Eggs",
+          "arabic": "ألبان وبيض"
+        },
+        "text": "The dairy section typically includes milk, yogurt, cheese, and eggs.",
+        "examples": [
+          {
+            "arabic": "حليب",
+            "english": "Milk",
+            "transliteration": "Ḥalīb"
+          },
+          {
+            "arabic": "لبن",
+            "english": "Yogurt / Laban",
+            "transliteration": "Laban"
+          },
+          {
+            "arabic": "بيض",
+            "english": "Eggs",
+            "transliteration": "Bayḍ"
+          },
+          {
+            "arabic": "جبنة",
+            "english": "Cheese",
+            "transliteration": "Jibneh"
+          }
+        ],
+        "audioText": "حليب، لبن، بيض، جبنة"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Meat and Poultry",
+          "arabic": "لحوم ودواجن"
+        },
+        "text": "For the meat counter, these are essential words.",
+        "examples": [
+          {
+            "arabic": "لحمة",
+            "english": "Meat (red meat)",
+            "transliteration": "Laḥme"
+          },
+          {
+            "arabic": "دجاج",
+            "english": "Chicken",
+            "transliteration": "Dajāj"
+          },
+          {
+            "arabic": "سمك",
+            "english": "Fish",
+            "transliteration": "Samak"
+          },
+          {
+            "arabic": "صدر دجاج",
+            "english": "Chicken breast",
+            "transliteration": "Ṣidr dajāj"
+          }
+        ],
+        "audioText": "لحمة، دجاج، سمك، صدر دجاج"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بدي كيلو تفاح وكيلو موز.",
+        "english": "I want a kilo of apples and a kilo of bananas.",
+        "transliteration": "Bidī kīlo tuffāḥ w kīlo mōz."
+      },
+      "context": "Ordering quantities of fruits."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "وين بلاقي قسم اللحمة؟",
+        "english": "Where can I find the meat section?",
+        "transliteration": "Wēn ballāʾi qism il-laḥme?"
+      },
+      "context": "Asking for the location of the meat section."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "لو سمحت، بدي علبة حليب وبيض.",
+        "english": "Excuse me, I want a carton of milk and eggs.",
+        "transliteration": "Law samaḥt, bidī ʿilbet ḥalīb w bayḍ."
+      },
+      "context": "Politely requesting milk and eggs."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'Chicken'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "سمك",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "لحمة",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "دجاج",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "«دجاج» means 'chicken'. «سمك» is 'fish' and «لحمة» is 'meat'.",
+      "hint": {
+        "transliteration": "Dajāj",
+        "arabic": "دجاج"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'Milk'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "لبن",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "جبنة",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "حليب",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "«حليب» means 'milk'. «لبن» is 'yogurt' and «جبنة» is 'cheese'.",
+      "hint": {
+        "transliteration": "Ḥalīb",
+        "arabic": "حليب"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I want some ___.' (apples and oranges)",
+      "options": [
+        {
+          "id": "a",
+          "text": "بندورة وخيار",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "تفاح وبرتقال",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "حليب وبيض",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«تفاح وبرتقال» means 'apples and oranges'.",
+      "hint": {
+        "transliteration": "Tuffāḥ w burtuqāl",
+        "arabic": "تفاح وبرتقال"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Bread and Bakery Items",
+          "arabic": "خبز ومعجنات"
+        },
+        "text": "The bakery section offers various types of bread and sometimes pastries.",
+        "examples": [
+          {
+            "arabic": "خبز",
+            "english": "Bread",
+            "transliteration": "Khubz"
+          },
+          {
+            "arabic": "خبز عربي",
+            "english": "Pita bread",
+            "transliteration": "Khubz ʿarabī"
+          },
+          {
+            "arabic": "رغيف",
+            "english": "A loaf (of bread)",
+            "transliteration": "Raghīf"
+          },
+          {
+            "arabic": "كعك",
+            "english": "Biscuits / Ka'ak",
+            "transliteration": "Kaʿik"
+          }
+        ],
+        "audioText": "خبز، خبز عربي، رغيف، كعك"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Pantry Staples",
+          "arabic": "مواد تموينية أساسية"
+        },
+        "text": "These are essential items often found in the dry goods or pantry section.",
+        "examples": [
+          {
+            "arabic": "رز",
+            "english": "Rice",
+            "transliteration": "Ruzz"
+          },
+          {
+            "arabic": "سكر",
+            "english": "Sugar",
+            "transliteration": "Sukkar"
+          },
+          {
+            "arabic": "زيت",
+            "english": "Oil",
+            "transliteration": "Zayt"
+          },
+          {
+            "arabic": "عدس",
+            "english": "Lentils",
+            "transliteration": "ʿAdas"
+          }
+        ],
+        "audioText": "رز، سكر، زيت، عدس"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Drinks",
+          "arabic": "مشروبات"
+        },
+        "text": "Common drinks you might look for in the supermarket.",
+        "examples": [
+          {
+            "arabic": "مي",
+            "english": "Water",
+            "transliteration": "Mayy"
+          },
+          {
+            "arabic": "عصير",
+            "english": "Juice",
+            "transliteration": "ʿAṣīr"
+          },
+          {
+            "arabic": "قهوة",
+            "english": "Coffee",
+            "transliteration": "Qahwe"
+          },
+          {
+            "arabic": "شاي",
+            "english": "Tea",
+            "transliteration": "Shāy"
+          }
+        ],
+        "audioText": "مي، عصير، قهوة، شاي"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بدي رغيف خبز وكيس رز.",
+        "english": "I want a loaf of bread and a bag of rice.",
+        "transliteration": "Bidī raghīf khubz w kīs ruzz."
+      },
+      "context": "Requesting a loaf of bread and a bag of rice."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "لو سمحت، في عندكم عصير برتقال؟",
+        "english": "Excuse me, do you have orange juice?",
+        "transliteration": "Law samaḥt, fī ʿandkom ʿaṣīr burtuqāl?"
+      },
+      "context": "Politely asking for the availability of orange juice."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'Water'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "عصير",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مي",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "قهوة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«مي» means 'water'. «عصير» is 'juice' and «قهوة» is 'coffee'.",
+      "hint": {
+        "transliteration": "Mayy",
+        "arabic": "مي"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'Bread'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "رز",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "خبز",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "سكر",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«خبز» means 'bread'. «رز» is 'rice' and «سكر» is 'sugar'.",
+      "hint": {
+        "transliteration": "Khubz",
+        "arabic": "خبز"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the phrase: 'I need ___ and oil.' (sugar)",
+      "options": [
+        {
+          "id": "a",
+          "text": "رز",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "سكر",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "عدس",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«سكر» means 'sugar'. The sentence would be «بدي سكر وزيت».",
+      "hint": {
+        "transliteration": "Sukkar",
+        "arabic": "سكر"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking About Quantity",
+          "arabic": "السؤال عن الكمية"
+        },
+        "text": "When buying items by weight or count, you'll need to ask or state the quantity.",
+        "examples": [
+          {
+            "arabic": "قديش بدك؟",
+            "english": "How much do you want? (masc.)",
+            "transliteration": "ʾAddēsh biddak?"
+          },
+          {
+            "arabic": "قديش بدكِ؟",
+            "english": "How much do you want? (fem.)",
+            "transliteration": "ʾAddēsh biddik?"
+          },
+          {
+            "arabic": "كيلو",
+            "english": "Kilo",
+            "transliteration": "Kīlo"
+          },
+          {
+            "arabic": "نص كيلو",
+            "english": "Half a kilo",
+            "transliteration": "Nuṣṣ kīlo"
+          }
+        ],
+        "audioText": "قديش بدك؟ قديش بدكِ؟ كيلو، نص كيلو"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking About Price",
+          "arabic": "السؤال عن السعر"
+        },
+        "text": "To know how much an item costs, use these phrases.",
+        "examples": [
+          {
+            "arabic": "قديش حقّه؟",
+            "english": "How much does it cost? (masc.)",
+            "transliteration": "ʾAddēsh ḥaʾʾo?"
+          },
+          {
+            "arabic": "قديش حقّا؟",
+            "english": "How much does it cost? (fem.)",
+            "transliteration": "ʾAddēsh ḥaʾʾa?"
+          },
+          {
+            "arabic": "غالي",
+            "english": "Expensive",
+            "transliteration": "Ghālī"
+          },
+          {
+            "arabic": "رخيص",
+            "english": "Cheap",
+            "transliteration": "Rakhīṣ"
+          }
+        ],
+        "audioText": "قديش حقّه؟ قديش حقّا؟ غالي، رخيص"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing Needs and Preferences",
+          "arabic": "التعبير عن الاحتياجات والتفضيلات"
+        },
+        "text": "To state what you want or your opinion on an item.",
+        "examples": [
+          {
+            "arabic": "بدي...",
+            "english": "I want...",
+            "transliteration": "Bidī..."
+          },
+          {
+            "arabic": "هاد منيح",
+            "english": "This is good (masc.)",
+            "transliteration": "Hād mnīḥ"
+          },
+          {
+            "arabic": "هاي منيحة",
+            "english": "This is good (fem.)",
+            "transliteration": "Hāy mnīḥa"
+          },
+          {
+            "arabic": "هاد مو منيح",
+            "english": "This is not good (masc.)",
+            "transliteration": "Hād mū mnīḥ"
+          }
+        ],
+        "audioText": "بدي... هاد منيح، هاي منيحة، هاد مو منيح"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "قديش بدكِ موز؟ بدي كيلو.",
+        "english": "How much bananas do you (fem.) want? I want a kilo.",
+        "transliteration": "ʾAddēsh biddik mōz? Bidī kīlo."
+      },
+      "context": "Asking a female customer about quantity and responding."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "قديش حقّ التفاح؟ هاد غالي.",
+        "english": "How much do the apples cost? This is expensive.",
+        "transliteration": "ʾAddēsh ḥaʾʾ it-tuffāḥ? Hād ghālī."
+      },
+      "context": "Asking about the price of apples and commenting on it."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'How much do you want?' to a male?",
+      "options": [
+        {
+          "id": "a",
+          "text": "قديش بدكِ؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "قديش بدك؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "قديش حقّه؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«قديش بدك؟» (biddak) is for a male. «قديش بدكِ؟» (biddik) is for a female. «قديش حقّه؟» means 'How much does it cost?'.",
+      "hint": {
+        "transliteration": "ʾAddēsh biddak?",
+        "arabic": "قديش بدك؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the word for 'Expensive'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "رخيص",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "منيح",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "غالي",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "«غالي» means 'expensive'. «رخيص» is 'cheap' and «منيح» is 'good'.",
+      "hint": {
+        "transliteration": "Ghālī",
+        "arabic": "غالي"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: '___ this is good.' (I want)",
+      "options": [
+        {
+          "id": "a",
+          "text": "وين",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بدي",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "شكراً",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«بدي» means 'I want'. The sentence would be «بدي هاد منيح» (I want this good one).",
+      "hint": {
+        "transliteration": "Bidī",
+        "arabic": "بدي"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "At the Checkout",
+          "arabic": "عند الكاشير"
+        },
+        "text": "When you are ready to pay, you will interact with the cashier.",
+        "examples": [
+          {
+            "arabic": "الحساب لو سمحت.",
+            "english": "The bill/total please.",
+            "transliteration": "Il-ḥisāb law samaḥt."
+          },
+          {
+            "arabic": "بطاقة ولا كاش؟",
+            "english": "Card or cash?",
+            "transliteration": "Biṭāʾa walla kāsh?"
+          },
+          {
+            "arabic": "كاش",
+            "english": "Cash",
+            "transliteration": "Kāsh"
+          },
+          {
+            "arabic": "بطاقة",
+            "english": "Card",
+            "transliteration": "Biṭāʾa"
+          }
+        ],
+        "audioText": "الحساب لو سمحت. بطاقة ولا كاش؟ كاش، بطاقة."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Payment and Thanking",
+          "arabic": "الدفع والشكر"
+        },
+        "text": "After paying, it's polite to thank the cashier.",
+        "examples": [
+          {
+            "arabic": "تفضل.",
+            "english": "Here you go. / Please (offering something).",
+            "transliteration": "Tfaḍḍal."
+          },
+          {
+            "arabic": "شكراً.",
+            "english": "Thank you.",
+            "transliteration": "Shukran."
+          },
+          {
+            "arabic": "شكراً كتير.",
+            "english": "Thank you very much.",
+            "transliteration": "Shukran ktīr."
+          }
+        ],
+        "audioText": "تفضل. شكراً. شكراً كتير."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Farewell",
+          "arabic": "الوداع"
+        },
+        "text": "A common way to say goodbye when leaving.",
+        "examples": [
+          {
+            "arabic": "مع السلامة!",
+            "english": "Goodbye! (lit. With safety)",
+            "transliteration": "Maʿ is-salāme!"
+          }
+        ],
+        "audioText": "مع السلامة!"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الحساب لو سمحت، بدي ادفع كاش.",
+        "english": "The bill please, I want to pay cash.",
+        "transliteration": "Il-ḥisāb law samaḥt, bidī adfaʿ kāsh."
+      },
+      "context": "Asking for the bill and stating preference for cash payment."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "تفضل، شكراً كتير. مع السلامة!",
+        "english": "Here you go, thank you very much. Goodbye!",
+        "transliteration": "Tfaḍḍal, shukran ktīr. Maʿ is-salāme!"
+      },
+      "context": "Handing over payment, expressing gratitude, and saying goodbye."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What phrase should you say when asking for the total bill?",
+      "options": [
+        {
+          "id": "a",
+          "text": "مع السلامة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شكراً كتير",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "الحساب لو سمحت",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "«الحساب لو سمحت» means 'The bill please'. «مع السلامة» is 'Goodbye' and «شكراً كتير» is 'Thank you very much'.",
+      "hint": {
+        "transliteration": "Il-ḥisāb law samaḥt",
+        "arabic": "الحساب لو سمحت"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "If the cashier asks 'Card or cash?', how do you say 'Cash'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بطاقة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كاش",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "تفضل",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«كاش» means 'cash'. «بطاقة» means 'card' and «تفضل» means 'Here you go'.",
+      "hint": {
+        "transliteration": "Kāsh",
+        "arabic": "كاش"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the farewell: '___!' (Goodbye!)",
+      "options": [
+        {
+          "id": "a",
+          "text": "شكراً",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مرحباً",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "مع السلامة",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "«مع السلامة» is the common way to say 'Goodbye!'.",
+      "hint": {
+        "transliteration": "Maʿ is-salāme",
+        "arabic": "مع السلامة"
+      }
+    }
+  ]
+}

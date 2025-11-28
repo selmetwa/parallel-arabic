@@ -1,0 +1,813 @@
+{
+  "topicId": "m10-t1",
+  "title": "Asking for Travel Services",
+  "dialect": "fusha",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Polite Requests: 'Could I please...?'"
+        },
+        "text": "When asking for a service, it's polite to start with a phrase like 'Could I please get/have...' This phrase is 'هل يمكنني الحصول على...؟' (Hal yumkinuni al-husul 'ala...?).",
+        "examples": [
+          {
+            "arabic": "هل يمكنني الحصول على تذكرة؟",
+            "english": "Could I please have a ticket?",
+            "transliteration": "Hal yumkinuni al-husul 'ala tadhkirah?"
+          },
+          {
+            "arabic": "هل يمكنني الحصول على مساعدة؟",
+            "english": "Could I please get help?",
+            "transliteration": "Hal yumkinuni al-husul 'ala musa'adah?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for a Taxi"
+        },
+        "text": "To ask for a taxi, you can simply say 'I need a taxi.' or 'I want a taxi.' The word for taxi is 'سيارة أجرة' (sayyārat ajra) or just 'تاكسي' (taxi).",
+        "examples": [
+          {
+            "arabic": "أحتاج سيارة أجرة.",
+            "english": "I need a taxi.",
+            "transliteration": "Ahtaju sayyārat ajra."
+          },
+          {
+            "arabic": "أريد تاكسي.",
+            "english": "I want a taxi.",
+            "transliteration": "Uridu taxi."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Specifying Your Destination: 'To [Place], please.'"
+        },
+        "text": "After requesting a taxi, you'll need to tell the driver where you want to go. Use 'إلى' (ila) meaning 'to', followed by the destination, and 'من فضلكَ' (min faḍlik) for a male or 'من فضلكِ' (min faḍliki) for a female, meaning 'please'.",
+        "examples": [
+          {
+            "arabic": "إلى الفندق، من فضلكَ.",
+            "english": "To the hotel, please (to a male).",
+            "transliteration": "Ila al-funduq, min faḍlika."
+          },
+          {
+            "arabic": "إلى المطار، من فضلكِ.",
+            "english": "To the airport, please (to a female).",
+            "transliteration": "Ila al-matar, min faḍliki."
+          },
+          {
+            "arabic": "أريد الذهاب إلى المتحف.",
+            "english": "I want to go to the museum.",
+            "transliteration": "Uridu al-dhahab ila al-matḥaf."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أحتاج تاكسي إلى المطار، من فضلكَ.",
+        "english": "I need a taxi to the airport, please (to a male).",
+        "transliteration": "Ahtaju taxi ila al-matar, min faḍlika."
+      },
+      "context": "Combining a taxi request with a destination."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هل يمكنني الحصول على سيارة أجرة إلى الفندق؟",
+        "english": "Could I please get a taxi to the hotel?",
+        "transliteration": "Hal yumkinuni al-husul 'ala sayyārat ajra ila al-funduq?"
+      },
+      "context": "Using the polite request with a taxi service."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you politely ask 'Could I please have...?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "أريد...",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "هل يمكنني الحصول على...؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أين...؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'هل يمكنني الحصول على...؟' is the polite way to ask 'Could I please have...?'",
+      "hint": {
+        "transliteration": "Hal yumkinuni al-husul 'ala...?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I need ___.' (taxi)",
+      "options": [
+        {
+          "id": "a",
+          "text": "المطار",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "سيارة أجرة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "تذكرة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'سيارة أجرة' means taxi.",
+      "hint": {
+        "transliteration": "sayyārat ajra",
+        "arabic": "سيارة أجرة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'To the hotel, please' (addressing a male)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "إلى الفندق، من فضلكِ.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "إلى الفندق، من فضلكَ.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أحتاج فندق.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'من فضلكَ' (min faḍlika) is used when addressing a male. 'من فضلكِ' (min faḍliki) is for a female.",
+      "hint": {
+        "transliteration": "Ila al-funduq, min faḍlika",
+        "arabic": "إلى الفندق، من فضلكَ."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for the Price: 'How much is it to...?'"
+        },
+        "text": "It's important to ask for the price before starting your journey. Use 'بكم' (bikam) for 'how much'.",
+        "examples": [
+          {
+            "arabic": "بكم إلى وسط المدينة؟",
+            "english": "How much is it to downtown?",
+            "transliteration": "Bikam ila wasaṭ al-madīnah?"
+          },
+          {
+            "arabic": "كم سعر التذكرة؟",
+            "english": "How much is the ticket price?",
+            "transliteration": "Kam si'r al-tadhkirah?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for Duration: 'How long does it take?'"
+        },
+        "text": "To inquire about the duration of a trip, you can ask 'كم يستغرق من الوقت؟' (Kam yastaghriq min al-waqt?), meaning 'How long does it take from the time?'.",
+        "examples": [
+          {
+            "arabic": "كم يستغرق من الوقت إلى المتحف؟",
+            "english": "How long does it take to the museum?",
+            "transliteration": "Kam yastaghriq min al-waqt ila al-matḥaf?"
+          },
+          {
+            "arabic": "هل هذه رحلة طويلة؟",
+            "english": "Is this a long trip?",
+            "transliteration": "Hal hadhihi riḥlah ṭawīlah?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Confirming Agreement: 'Okay, let's go.'"
+        },
+        "text": "Once you've agreed on the destination and price, you can confirm with 'حسناً، لنذهب.' (Ḥasanan, li-nadhhab.) meaning 'Okay, let's go.' or 'تمام' (tamām) for 'okay/fine'.",
+        "examples": [
+          {
+            "arabic": "حسناً، لنذهب إلى السوق.",
+            "english": "Okay, let's go to the market.",
+            "transliteration": "Ḥasanan, li-nadhhab ila as-suq."
+          },
+          {
+            "arabic": "تمام، شكراً.",
+            "english": "Okay, thank you.",
+            "transliteration": "Tamām, shukran."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بكم يستغرق الوقت إلى وسط المدينة؟",
+        "english": "How much does it cost, and how long does it take to downtown?",
+        "transliteration": "Bikam yastaghriq al-waqt ila wasaṭ al-madīnah?"
+      },
+      "context": "Combining price and duration inquiries."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "حسناً، بكم إلى المطار؟",
+        "english": "Okay, how much is it to the airport?",
+        "transliteration": "Ḥasanan, bikam ila al-matar?"
+      },
+      "context": "Confirming understanding then asking for price."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic for 'How much is it to...?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "أين إلى...؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بكم إلى...؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "متى إلى...؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'بكم' (bikam) is used to ask 'how much'.",
+      "hint": {
+        "transliteration": "Bikam ila...?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'How long does it take ___ the museum?' (to)",
+      "options": [
+        {
+          "id": "a",
+          "text": "عن",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "على",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "إلى",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'إلى' (ila) means 'to'.",
+      "hint": {
+        "transliteration": "ila",
+        "arabic": "إلى"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase confirms agreement and means 'Okay, let's go.'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "لا، شكراً.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "حسناً، لنذهب.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أين نحن؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'حسناً، لنذهب.' is a common way to say 'Okay, let's go.'",
+      "hint": {
+        "transliteration": "Ḥasanan, li-nadhhab."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Finding the Train Station: 'Where is the train station?'"
+        },
+        "text": "To find the train station, ask 'أين محطة القطار؟' (Ayna maḥaṭṭat al-qiṭār?). 'محطة' means station and 'قطار' means train.",
+        "examples": [
+          {
+            "arabic": "أين محطة القطار الرئيسية؟",
+            "english": "Where is the main train station?",
+            "transliteration": "Ayna maḥaṭṭat al-qiṭār ar-ra'īsiyah?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Booking Train Tickets: 'I want to reserve a train ticket.'"
+        },
+        "text": "When you're at the station, you'll need to say 'أريد حجز تذكرة قطار.' (Uridu ḥajz tadhkirat qiṭār.) 'حجز' means to reserve/book, and 'تذكرة' means ticket.",
+        "examples": [
+          {
+            "arabic": "أريد حجز تذكرة قطار إلى الإسكندرية.",
+            "english": "I want to reserve a train ticket to Alexandria.",
+            "transliteration": "Uridu ḥajz tadhkirat qiṭār ila al-Iskandariyah."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Specifying Ticket Type: 'One-way' or 'Round trip'"
+        },
+        "text": "You'll need to specify if you need a one-way or round-trip ticket. 'ذهاب فقط' (dhahab faqaṭ) means 'one-way' (go only), and 'ذهاب وعودة' (dhahab wa 'awdah) means 'round trip' (go and return).",
+        "examples": [
+          {
+            "arabic": "تذكرة ذهاب فقط.",
+            "english": "A one-way ticket.",
+            "transliteration": "Tadhkirat dhahab faqaṭ."
+          },
+          {
+            "arabic": "تذكرة ذهاب وعودة.",
+            "english": "A round-trip ticket.",
+            "transliteration": "Tadhkirat dhahab wa 'awdah."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أين محطة القطار؟ أريد حجز تذكرة ذهاب وعودة.",
+        "english": "Where is the train station? I want to book a round-trip ticket.",
+        "transliteration": "Ayna maḥaṭṭat al-qiṭār? Uridu ḥajz tadhkirat dhahab wa 'awdah."
+      },
+      "context": "Asking for station location then booking a specific ticket type."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هل يمكنني الحصول على تذكرة قطار ذهاب فقط إلى القاهرة؟",
+        "english": "Could I please get a one-way train ticket to Cairo?",
+        "transliteration": "Hal yumkinuni al-husul 'ala tadhkirat qiṭār dhahab faqaṭ ila al-Qahirah?"
+      },
+      "context": "Politely requesting a one-way train ticket to a specific city."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic phrase for 'Where is the train station?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "أين محطة الحافلات؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أين محطة القطار؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كم سعر القطار؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'أين محطة القطار؟' is the correct phrase for 'Where is the train station?'",
+      "hint": {
+        "transliteration": "Ayna maḥaṭṭat al-qiṭār?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I want to ___ a train ticket.' (reserve)",
+      "options": [
+        {
+          "id": "a",
+          "text": "أبيع",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أذهب",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "أحجز",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'أحجز' (aḥjiz) means 'I reserve/book'.",
+      "hint": {
+        "transliteration": "aḥjiz",
+        "arabic": "أحجز"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which Arabic phrase means 'a round-trip ticket'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "تذكرة ذهاب فقط.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "تذكرة ذهاب وعودة.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "تذكرة واحدة.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'ذهاب وعودة' literally means 'going and returning', which translates to 'round trip'.",
+      "hint": {
+        "transliteration": "Tadhkirat dhahab wa 'awdah."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for Departure Time: 'When does the train leave?'"
+        },
+        "text": "To find out when the train departs, ask 'متى يغادر القطار؟' (Mata yughādir al-qiṭār?). 'متى' means when, and 'يغادر' means to depart/leave.",
+        "examples": [
+          {
+            "arabic": "متى يغادر القطار الأول؟",
+            "english": "When does the first train leave?",
+            "transliteration": "Mata yughādir al-qiṭār al-awwal?"
+          },
+          {
+            "arabic": "متى موعد المغادرة؟",
+            "english": "When is the departure time?",
+            "transliteration": "Mata maw'id al-mughādarah?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking About Seat Class: 'Do you have first/second class?'"
+        },
+        "text": "You might want to choose your seat class. 'هل لديكم درجة أولى/ثانية؟' (Hal ladaykum darajah ūla/thāniyah?) means 'Do you have first/second class?'. 'درجة' means class/grade.",
+        "examples": [
+          {
+            "arabic": "أريد تذكرة درجة أولى.",
+            "english": "I want a first-class ticket.",
+            "transliteration": "Uridu tadhkirat darajah ūla."
+          },
+          {
+            "arabic": "هل توجد درجة ثانية؟",
+            "english": "Is there a second class?",
+            "transliteration": "Hal tujadu darajah thāniyah?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Confirming Ticket Price: 'How much is the ticket?'"
+        },
+        "text": "After selecting the type of ticket and class, you can confirm the price with 'كم سعر التذكرة؟' (Kam si'r al-tadhkirah?). 'سعر' means price.",
+        "examples": [
+          {
+            "arabic": "كم سعر تذكرة الدرجة الأولى؟",
+            "english": "How much is the first-class ticket price?",
+            "transliteration": "Kam si'r tadhkirat ad-darajah al-ūla?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "متى يغادر القطار إلى الإسكندرية، وكم سعر تذكرة الدرجة الثانية؟",
+        "english": "When does the train to Alexandria leave, and how much is a second-class ticket?",
+        "transliteration": "Mata yughādir al-qiṭār ila al-Iskandariyah, wa kam si'r tadhkirat ad-darajah ath-thāniyah?"
+      },
+      "context": "Asking about departure time and price for a specific class ticket."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هل لديكم تذكرة درجة أولى؟",
+        "english": "Do you have a first-class ticket?",
+        "transliteration": "Hal ladaykum tadhkirat darajah ūla?"
+      },
+      "context": "Inquiring about the availability of a specific ticket class."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'When does the train leave?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "أين القطار؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "متى يغادر القطار؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "ماذا يفعل القطار؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'متى يغادر القطار؟' correctly asks about the train's departure time.",
+      "hint": {
+        "transliteration": "Mata yughādir al-qiṭār?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the phrase: 'Do you have ___ first/second?' (class)",
+      "options": [
+        {
+          "id": "a",
+          "text": "مكان",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "درجة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "وقت",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'درجة' (darajah) means 'class' or 'grade'.",
+      "hint": {
+        "transliteration": "darajah",
+        "arabic": "درجة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic for 'How much is the ticket price?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "أين التذكرة؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "متى التذكرة؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "كم سعر التذكرة؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'كم سعر التذكرة؟' is the correct way to ask about the ticket price.",
+      "hint": {
+        "transliteration": "Kam si'r al-tadhkirah?"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "General Request: 'I would like to...'"
+        },
+        "text": "A general polite way to state what you want is 'أود أن...' (Awaddu an...), meaning 'I would like to...'. This can be followed by a verb.",
+        "examples": [
+          {
+            "arabic": "أود أن أسافر.",
+            "english": "I would like to travel.",
+            "transliteration": "Awaddu an usāfir."
+          },
+          {
+            "arabic": "أود أن أحجز مقعداً.",
+            "english": "I would like to book a seat.",
+            "transliteration": "Awaddu an aḥjiz maq'adan."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for Help/Information: 'Could you help me?' / 'Can you tell me...?'"
+        },
+        "text": "If you need assistance or information, you can ask 'هل يمكنكَ مساعدتي؟' (Hal yumkinuka musa'adatī?) for a male, or 'هل يمكنكِ مساعدتي؟' (Hal yumkinuki musa'adatī?) for a female. Or, 'هل يمكنك إخباري...؟' (Hal yumkinuka ikhbārī...?) to ask 'Can you tell me...?'",
+        "examples": [
+          {
+            "arabic": "هل يمكنكَ مساعدتي في العثور على محطة الحافلات؟",
+            "english": "Could you help me find the bus station (to a male)?",
+            "transliteration": "Hal yumkinuka musa'adatī fi al-'uthūr 'ala maḥaṭṭat al-ḥafilāt?"
+          },
+          {
+            "arabic": "هل يمكنكِ إخباري متى يفتح البنك؟",
+            "english": "Can you tell me when the bank opens (to a female)?",
+            "transliteration": "Hal yumkinuki ikhbārī mata yaftaḥ al-bank?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing Gratitude: 'Thank you very much.'"
+        },
+        "text": "Always remember to thank people for their help. 'شكراً جزيلاً.' (Shukran jazīlan.) means 'Thank you very much.' You can also use 'عفواً' (Afwan) for 'you're welcome'.",
+        "examples": [
+          {
+            "arabic": "شكراً جزيلاً لمساعدتك.",
+            "english": "Thank you very much for your help.",
+            "transliteration": "Shukran jazīlan li-musa'adatika."
+          },
+          {
+            "arabic": "شكراً، عفواً.",
+            "english": "Thank you, you're welcome.",
+            "transliteration": "Shukran, 'afwan."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أود أن أسأل: هل يمكنكِ مساعدتي؟",
+        "english": "I would like to ask: Can you help me (to a female)?",
+        "transliteration": "Awaddu an as'al: Hal yumkinuki musa'adatī?"
+      },
+      "context": "Combining a polite introduction with a request for help."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شكراً جزيلاً على المعلومة.",
+        "english": "Thank you very much for the information.",
+        "transliteration": "Shukran jazīlan 'ala al-ma'lūmah."
+      },
+      "context": "Expressing gratitude after receiving information."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the general polite phrase for 'I would like to...?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "أريد...",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أود أن...",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أذهب إلى...",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'أود أن...' is a polite way to express 'I would like to...'.",
+      "hint": {
+        "transliteration": "Awaddu an..."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'Could you ___ me?' (help, addressing a male)",
+      "options": [
+        {
+          "id": "a",
+          "text": "تساعدكَ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مساعدتي",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "إخباري",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'مساعدتي' means 'my help' or 'to help me'. The question implies 'Could you [provide] my help?'.",
+      "hint": {
+        "transliteration": "musa'adatī",
+        "arabic": "مساعدتي"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'Thank you very much.'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "لا شكراً.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شكراً جزيلاً.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أهلاً وسهلاً.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'شكراً جزيلاً.' is the standard phrase for 'Thank you very much.'",
+      "hint": {
+        "transliteration": "Shukran jazīlan."
+      }
+    }
+  ]
+}

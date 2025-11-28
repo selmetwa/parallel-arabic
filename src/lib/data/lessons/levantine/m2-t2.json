@@ -1,0 +1,882 @@
+{
+  "topicId": "m2-t2",
+  "title": "Asking About Personal and Office Objects (Levantine Arabic)",
+  "dialect": "levantine",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'What is this?' (Masculine and Feminine)"
+        },
+        "text": "To ask 'What is this?' in Levantine Arabic, we use different forms depending on whether the object is masculine or feminine. 'شو' (shoo) means 'what'.",
+        "examples": [
+          {
+            "arabic": "شو هاد؟",
+            "english": "What is this? (masculine)",
+            "transliteration": "Shoo haad?"
+          },
+          {
+            "arabic": "شو هادي؟",
+            "english": "What is this? (feminine)",
+            "transliteration": "Shoo haadi?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Common Masculine Personal Objects"
+        },
+        "text": "Here are some common personal objects that are grammatically masculine in Arabic. We use 'هاد' (haad) for 'this' when referring to them.",
+        "examples": [
+          {
+            "arabic": "موبايل",
+            "english": "Mobile phone",
+            "transliteration": "Mobayl"
+          },
+          {
+            "arabic": "كتاب",
+            "english": "Book",
+            "transliteration": "Ktaab"
+          },
+          {
+            "arabic": "قَلَم",
+            "english": "Pen",
+            "transliteration": "Qalam"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Common Feminine Personal Objects"
+        },
+        "text": "Here are some common personal objects that are grammatically feminine in Arabic. We use 'هادي' (haadi) for 'this' when referring to them. Feminine nouns often end with a 'ة' (ta marbuta).",
+        "examples": [
+          {
+            "arabic": "شنطة",
+            "english": "Bag",
+            "transliteration": "Shanṭa"
+          },
+          {
+            "arabic": "ساعة",
+            "english": "Watch/Clock",
+            "transliteration": "Saa'a"
+          },
+          {
+            "arabic": "ورقة",
+            "english": "Paper (sheet)",
+            "transliteration": "Wara'a"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شو هاد؟ هاد موبايل.",
+        "english": "What is this? This is a mobile phone.",
+        "transliteration": "Shoo haad? Haad mobayl."
+      },
+      "context": "A simple question and answer about a masculine object."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شو هادي؟ هادي شنطة.",
+        "english": "What is this? This is a bag.",
+        "transliteration": "Shoo haadi? Haadi shanṭa."
+      },
+      "context": "A simple question and answer about a feminine object."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which of these is a masculine object?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ساعة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كتاب",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "ورقة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "كتاب (ktaab) is a masculine noun. ساعة (saa'a) and ورقة (wara'a) are feminine.",
+      "hint": {
+        "transliteration": "Ktaab",
+        "arabic": "كتاب"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: ___ هادي؟ (What is this? - feminine)",
+      "options": [
+        {
+          "id": "a",
+          "text": "وين",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "لمين",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "شو",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "To ask 'What is this?', we use 'شو' (shoo).",
+      "hint": {
+        "transliteration": "Shoo",
+        "arabic": "شو"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'This is a pen.'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "هادي قَلَم.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "هاد قَلَم.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "شو قَلَم؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "قَلَم (qalam) is masculine, so we use 'هاد' (haad).",
+      "hint": {
+        "transliteration": "Haad qalam",
+        "arabic": "هاد قَلَم"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Whose is this?' (Masculine and Feminine)"
+        },
+        "text": "To ask 'Whose is this?' in Levantine Arabic, we use 'لمين' (lameen) which means 'whose' or 'to whom'.",
+        "examples": [
+          {
+            "arabic": "لمين هاد الموبايل؟",
+            "english": "Whose mobile phone is this? (masculine)",
+            "transliteration": "Lameen haad il-mobayl?"
+          },
+          {
+            "arabic": "لمين هادي الشنطة؟",
+            "english": "Whose bag is this? (feminine)",
+            "transliteration": "Lameen haadi ish-shanṭa?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Saying 'It's mine' or 'It's yours'"
+        },
+        "text": "We can specify possession using 'إلـ' (il-) followed by a suffix. This indicates 'belonging to'.",
+        "examples": [
+          {
+            "arabic": "إلي",
+            "english": "Mine",
+            "transliteration": "Illi"
+          },
+          {
+            "arabic": "إلكَ",
+            "english": "Yours (masculine singular)",
+            "transliteration": "Illak"
+          },
+          {
+            "arabic": "إلكِ",
+            "english": "Yours (feminine singular)",
+            "transliteration": "Illik"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Using Possessive Suffixes with Nouns"
+        },
+        "text": "You can also attach possessive suffixes directly to nouns to indicate ownership, similar to 'my', 'your', 'his', 'her'.",
+        "examples": [
+          {
+            "arabic": "كتابي",
+            "english": "My book",
+            "transliteration": "Ktaabi"
+          },
+          {
+            "arabic": "موبايلَك",
+            "english": "Your (masculine) mobile phone",
+            "transliteration": "Mobaylak"
+          },
+          {
+            "arabic": "شنطتِك",
+            "english": "Your (feminine) bag",
+            "transliteration": "Shanṭtik"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "لمين هاد القَلَم؟ هاد إلي.",
+        "english": "Whose pen is this? This is mine.",
+        "transliteration": "Lameen haad il-qalam? Haad illi."
+      },
+      "context": "Asking about possession and stating it's yours."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هادي ساعتِك؟ أه، هادي ساعتي.",
+        "english": "Is this your (feminine) watch? Yes, this is my watch.",
+        "transliteration": "Haadi saa'ttik? Eh, haadi saa'ti."
+      },
+      "context": "Asking a feminine person about their watch and confirming."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'Whose book is this? (addressing a masculine object)'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "لمين هادي الكتاب؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شو هاد الكتاب؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "لمين هاد الكتاب؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "كتاب (ktaab) is masculine, so use 'هاد'. 'لمين' is for 'whose'.",
+      "hint": {
+        "transliteration": "Lameen haad il-ktaab?",
+        "arabic": "لمين هاد الكتاب؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: هادي شنطتِ__؟ (Is this your (feminine) bag?)",
+      "options": [
+        {
+          "id": "a",
+          "text": "كَ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ي",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "كِ",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "For 'your' (feminine), the suffix is 'ـِك' (ik).",
+      "hint": {
+        "transliteration": "Haadi shanṭtik?",
+        "arabic": "هادي شنطتِك؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "If someone asks 'لمين هاد؟' (Whose is this? - masculine), how would you say 'It's mine.'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "هاد إلكَ.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "هاد إلي.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "هاد إلكِ.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'إلي' (illi) means 'mine'.",
+      "hint": {
+        "transliteration": "Haad illi",
+        "arabic": "هاد إلي"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Where is the...?'"
+        },
+        "text": "To ask about the location of an object, we use 'وين' (wayn) which means 'where'. We combine it with 'الـ' (il-), the definite article 'the'.",
+        "examples": [
+          {
+            "arabic": "وين الموبايل؟",
+            "english": "Where is the mobile phone?",
+            "transliteration": "Wayn il-mobayl?"
+          },
+          {
+            "arabic": "وين الشنطة؟",
+            "english": "Where is the bag?",
+            "transliteration": "Wayn ish-shanṭa?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Common Masculine Office Objects"
+        },
+        "text": "Here are some common office objects that are grammatically masculine.",
+        "examples": [
+          {
+            "arabic": "كمبيوتر",
+            "english": "Computer",
+            "transliteration": "Kombyooter"
+          },
+          {
+            "arabic": "مكتب",
+            "english": "Desk / Office",
+            "transliteration": "Maktab"
+          },
+          {
+            "arabic": "كرسي",
+            "english": "Chair",
+            "transliteration": "Kursee"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Common Feminine Office Objects"
+        },
+        "text": "Here are some common office objects that are grammatically feminine. Most end in 'ة' (ta marbuta).",
+        "examples": [
+          {
+            "arabic": "طابعة",
+            "english": "Printer",
+            "transliteration": "Ṭaab'a"
+          },
+          {
+            "arabic": "خزانة",
+            "english": "Cabinet / Wardrobe",
+            "transliteration": "Khazaaneh"
+          },
+          {
+            "arabic": "آلة حاسبة",
+            "english": "Calculator",
+            "transliteration": "Aaleh ḥaasbeh"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "وين الكمبيوتر؟ الكمبيوتر على المكتب.",
+        "english": "Where is the computer? The computer is on the desk.",
+        "transliteration": "Wayn il-kombyooter? Il-kombyooter 'ala il-maktab."
+      },
+      "context": "Asking about the location of a masculine office item and stating its position."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "وين الطابعة؟ الطابعة جنب الخزانة.",
+        "english": "Where is the printer? The printer is next to the cabinet.",
+        "transliteration": "Wayn iṭ-ṭaab'a? Iṭ-ṭaab'a jannab il-khazaaneh."
+      },
+      "context": "Asking about the location of a feminine office item."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'desk'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "كرسي",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كمبيوتر",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "مكتب",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "مكتب (maktab) means desk or office.",
+      "hint": {
+        "transliteration": "Maktab",
+        "arabic": "مكتب"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: ___ الطابعة؟ (Where is the printer?)",
+      "options": [
+        {
+          "id": "a",
+          "text": "شو",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "لمين",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "وين",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'وين' (wayn) means 'where'.",
+      "hint": {
+        "transliteration": "Wayn",
+        "arabic": "وين"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'This is a chair.'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "هاد كرسي.",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "هادي كرسي.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "شو كرسي؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "كرسي (kursee) is a masculine noun, so we use 'هاد'.",
+      "hint": {
+        "transliteration": "Haad kursee",
+        "arabic": "هاد كرسي"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Do you have...?'"
+        },
+        "text": "To ask if someone possesses an item, we use 'عندَك' (ʻindak) for masculine singular and 'عندِك' (ʻindik) for feminine singular, which means 'do you have?'.",
+        "examples": [
+          {
+            "arabic": "عندَكَ قَلَم؟",
+            "english": "Do you (masculine) have a pen?",
+            "transliteration": "ʻindak qalam?"
+          },
+          {
+            "arabic": "عندِك ساعة؟",
+            "english": "Do you (feminine) have a watch?",
+            "transliteration": "ʻindik saa'a?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Responding 'Yes, I have' / 'No, I don't have'"
+        },
+        "text": "To answer a 'do you have?' question, you can use these common phrases.",
+        "examples": [
+          {
+            "arabic": "أه، عندي",
+            "english": "Yes, I have",
+            "transliteration": "Eh, ʻindi"
+          },
+          {
+            "arabic": "لأ، ما عندي",
+            "english": "No, I don't have",
+            "transliteration": "Laʼ, ma ʻindi"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "More Office Vocabulary"
+        },
+        "text": "Let's learn a few more useful office items.",
+        "examples": [
+          {
+            "arabic": "دفتر",
+            "english": "Notebook",
+            "transliteration": "Daftar"
+          },
+          {
+            "arabic": "مقص",
+            "english": "Scissors",
+            "transliteration": "Maqasṣ"
+          },
+          {
+            "arabic": "قَلَم رصاص",
+            "english": "Pencil",
+            "transliteration": "Qalam rṣaaṣ"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "عندَكَ دفتر؟ أه، عندي دفتر.",
+        "english": "Do you (masculine) have a notebook? Yes, I have a notebook.",
+        "transliteration": "ʻindak daftar? Eh, ʻindi daftar."
+      },
+      "context": "A masculine person being asked if they have a notebook and confirming."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "عندِك مقص؟ لأ، ما عندي مقص.",
+        "english": "Do you (feminine) have scissors? No, I don't have scissors.",
+        "transliteration": "ʻindik maqasṣ? Laʼ, ma ʻindi maqasṣ."
+      },
+      "context": "A feminine person being asked if they have scissors and denying."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'Do you (masculine) have a pen?'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "عندِك قَلَم؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "عندَكَ قَلَم؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "شو قَلَم؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "For masculine 'you', we use 'عندَكَ' (ʻindak).",
+      "hint": {
+        "transliteration": "ʻindak qalam?",
+        "arabic": "عندَكَ قَلَم؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: لأ، ما ___ (No, I don't have).",
+      "options": [
+        {
+          "id": "a",
+          "text": "عندي",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "عندَك",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "عنده",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "'عندي' (ʻindi) means 'I have'. 'ما عندي' means 'I don't have'.",
+      "hint": {
+        "transliteration": "ʻindi",
+        "arabic": "عندي"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'scissors'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "دفتر",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "قَلَم رصاص",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "مقص",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "مقص (maqasṣ) means scissors.",
+      "hint": {
+        "transliteration": "Maqasṣ",
+        "arabic": "مقص"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Plural Forms of Objects"
+        },
+        "text": "Many nouns have irregular plural forms, but some follow patterns. Here are some examples of plurals for words we've learned.",
+        "examples": [
+          {
+            "arabic": "موبايلات",
+            "english": "Mobile phones",
+            "transliteration": "Mobaylaat"
+          },
+          {
+            "arabic": "كتب",
+            "english": "Books",
+            "transliteration": "Kutub"
+          },
+          {
+            "arabic": "أقلام",
+            "english": "Pens",
+            "transliteration": "Aqlaam"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'What are these?' and Responding"
+        },
+        "text": "For plural objects, we use 'هادول' (haadool) for 'these'. The question and answer structure is similar to singular forms.",
+        "examples": [
+          {
+            "arabic": "شو هادول؟",
+            "english": "What are these?",
+            "transliteration": "Shoo haadool?"
+          },
+          {
+            "arabic": "هادول مفاتيح.",
+            "english": "These are keys.",
+            "transliteration": "Haadool mafaateeh."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Describing Objects: 'New' and 'Old'"
+        },
+        "text": "You can describe objects using adjectives like 'new' or 'old'. Remember to match the gender of the adjective with the noun.",
+        "examples": [
+          {
+            "arabic": "جديد",
+            "english": "New (masculine)",
+            "transliteration": "Jdeed"
+          },
+          {
+            "arabic": "جديدة",
+            "english": "New (feminine)",
+            "transliteration": "Jdeedeh"
+          },
+          {
+            "arabic": "قديم",
+            "english": "Old (masculine)",
+            "transliteration": "Qadeem"
+          },
+          {
+            "arabic": "قديمة",
+            "english": "Old (feminine)",
+            "transliteration": "Qadeemeh"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شو هادول؟ هادول كتب جديدة.",
+        "english": "What are these? These are new books.",
+        "transliteration": "Shoo haadool? Haadool kutub jdeedeh."
+      },
+      "context": "Asking about plural objects and describing them as new."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "لمين هادول الأقلام؟ هادول أقلامي.",
+        "english": "Whose pens are these? These are my pens.",
+        "transliteration": "Lameen haadool il-aqlaam? Haadool aqlaami."
+      },
+      "context": "Asking about the ownership of plural pens and stating they are mine."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'These are old bags.'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "هادول شنط قديم.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "هادول شنط قديمة.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "هاد شنط قديم.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "For plural nouns like 'شنط' (shunaṭ), the adjective 'old' becomes 'قديمة' (qadeemeh) in Levantine, treated as a feminine singular. 'هادول' (haadool) is for 'these'.",
+      "hint": {
+        "transliteration": "Haadool shunaṭ qadeemeh",
+        "arabic": "هادول شنط قديمة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: وين الـ___؟ (Where are the books?)",
+      "options": [
+        {
+          "id": "a",
+          "text": "كتاب",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كتب",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كاتب",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "The plural of كتاب (ktaab) 'book' is كتب (kutub) 'books'.",
+      "hint": {
+        "transliteration": "kutub",
+        "arabic": "كتب"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase correctly asks 'What are these?'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "شو هاد؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شو هادي؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "شو هادول؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'شو هادول؟' (Shoo haadool?) is used to ask 'What are these?' for plural objects.",
+      "hint": {
+        "transliteration": "Shoo haadool?",
+        "arabic": "شو هادول؟"
+      }
+    }
+  ]
+}

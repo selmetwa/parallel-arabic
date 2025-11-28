@@ -1,0 +1,917 @@
+{
+  "topicId": "m10-t2",
+  "title": "Ordering Food at a Restaurant in Darija",
+  "dialect": "darija",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Greeting the Waiter/Waitress",
+          "arabic": "تحية النادل/النّادلة"
+        },
+        "text": "When you enter a restaurant, you'll first need to greet the staff. In Darija, a common polite greeting is 'Salam 3alikom' (Peace be upon you). You can then use '3afak' (please) when asking for something.",
+        "examples": [
+          {
+            "arabic": "سلام عليكم.",
+            "english": "Hello / Peace be upon you.",
+            "transliteration": "Salam 3alikom."
+          },
+          {
+            "arabic": "عافاك.",
+            "english": "Please.",
+            "transliteration": "3afak."
+          }
+        ],
+        "audioText": "سلام عليكم. عافاك."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for a Table",
+          "arabic": "طلب طاولة"
+        },
+        "text": "After greeting, you'll likely need to ask for a table. The word for table is 'tabla'. To ask for one, you can say 'Bghit tabla 3afak' (I want a table, please) or 'Kayna chi tabla khawya?' (Is there an empty table?).",
+        "examples": [
+          {
+            "arabic": "بغيت طبلة عافاك.",
+            "english": "I want a table, please.",
+            "transliteration": "Bghit tabla 3afak."
+          },
+          {
+            "arabic": "كايْنَة شي طبلة خاوْيَة؟",
+            "english": "Is there an empty table?",
+            "transliteration": "Kayna chi tabla khawya?"
+          }
+        ],
+        "audioText": "بغيت طبلة عافاك. كاينة شي طبلة خاوية؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Calling the Waiter",
+          "arabic": "النداء على النادل"
+        },
+        "text": "If you need to get the waiter's attention, you can use 'Serveur!' (Waiter!) or 'Khoya!' (My brother!, for a male waiter) or 'Khti!' (My sister!, for a female waitress). These are common and polite ways to call someone over.",
+        "examples": [
+          {
+            "arabic": "سيرفور!",
+            "english": "Waiter!",
+            "transliteration": "Serveur!"
+          },
+          {
+            "arabic": "خويا عافاك.",
+            "english": "Brother, please (excuse me/waiter).",
+            "transliteration": "Khoya 3afak."
+          }
+        ],
+        "audioText": "سيرفور! خويا عافاك."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "سلام عليكم، بغيت طبلة عافاك.",
+        "english": "Hello, I want a table please.",
+        "transliteration": "Salam 3alikom, bghit tabla 3afak."
+      },
+      "context": "A common phrase to use when entering a restaurant and asking for a seat."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "خويا، كاينة شي طبلة خاوية؟",
+        "english": "Brother (waiter), is there an empty table?",
+        "transliteration": "Khoya, kayna chi tabla khawya?"
+      },
+      "context": "Asking politely if a table is available."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "سيرفور، عافاك.",
+        "english": "Waiter, please (excuse me).",
+        "transliteration": "Serveur, 3afak."
+      },
+      "context": "Calling the waiter's attention."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you politely greet someone in Darija?",
+      "options": [
+        {
+          "id": "a",
+          "text": "صباح الخير",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "سلام عليكم",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مساء الخير",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "The most common and polite general greeting in Darija is 'Salam 3alikom'.",
+      "hint": {
+        "transliteration": "Salam 3alikom",
+        "arabic": "سلام عليكم"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I want a ___ please.' (بغيت ___ عافاك.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "كرسي",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "طبلة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "باب",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "The word for 'table' in Darija is 'tabla'.",
+      "hint": {
+        "transliteration": "tabla",
+        "arabic": "طبلة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word is used to call a male waiter's attention in a friendly way?",
+      "options": [
+        {
+          "id": "a",
+          "text": "صديقي",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "خويا",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "ولدي",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'Khoya' (my brother) is a common friendly way to call a male waiter.",
+      "hint": {
+        "transliteration": "Khoya",
+        "arabic": "خويا"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for the Menu",
+          "arabic": "طلب قائمة الطعام"
+        },
+        "text": "Once seated, you'll need the menu to choose your food. In Darija, 'menu' is commonly referred to as 'Ménu' (borrowed from French) or sometimes 'Carte'. You can say '3afak l-ménu' (Please, the menu).",
+        "examples": [
+          {
+            "arabic": "عافاك الموني.",
+            "english": "Please, the menu.",
+            "transliteration": "3afak l-ménu."
+          },
+          {
+            "arabic": "واش ممكن تعطيني الموني؟",
+            "english": "Can you give me the menu?",
+            "transliteration": "Wash momkin ta3tini l-ménu?"
+          }
+        ],
+        "audioText": "عافاك الموني. واش ممكن تعطيني الموني؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for Recommendations",
+          "arabic": "طلب اقتراحات"
+        },
+        "text": "If you're unsure what to order, you can ask the waiter for recommendations. You can say 'Ach kayn bnīn?' (What's delicious?) or 'Ach katnṣeḥni?' (What do you recommend? - to a male) / 'Ach katnṣeḥīnī?' (What do you recommend? - to a female).",
+        "examples": [
+          {
+            "arabic": "أش كاين بنين؟",
+            "english": "What's delicious?",
+            "transliteration": "Ach kayn bnīn?"
+          },
+          {
+            "arabic": "أش كَتْنْصَحْنِي؟",
+            "english": "What do you recommend? (to male)",
+            "transliteration": "Ach katnṣeḥni?"
+          },
+          {
+            "arabic": "أش كَتْنْصَحِينِي؟",
+            "english": "What do you recommend? (to female)",
+            "transliteration": "Ach katnṣeḥini?"
+          }
+        ],
+        "audioText": "أش كاين بنين؟ أش كتنصحني؟ أش كتنصحيني؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing Preferences / Dietary Needs",
+          "arabic": "التعبير عن التفضيلات/الاحتياجات الغذائية"
+        },
+        "text": "It's useful to know how to express if you don't eat certain things. 'Ma kanākoulch...' (I don't eat...) or 'Ma kanbghich...' (I don't like...). For example, 'Ma kanākoulch l-ḥam' (I don't eat meat).",
+        "examples": [
+          {
+            "arabic": "ما كناكلش الحوت.",
+            "english": "I don't eat fish.",
+            "transliteration": "Ma kanākoulch l-ḥout."
+          },
+          {
+            "arabic": "ما كنبغيش الحار.",
+            "english": "I don't like spicy food.",
+            "transliteration": "Ma kanbghich l-ḥār."
+          }
+        ],
+        "audioText": "ما كناكلش الحوت. ما كنبغيش الحار."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "عافاك، الموني.",
+        "english": "Please, the menu.",
+        "transliteration": "3afak, l-ménu."
+      },
+      "context": "Politely asking for the menu after being seated."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أش كاين بنين هنا؟",
+        "english": "What's delicious here?",
+        "transliteration": "Ach kayn bnīn hna?"
+      },
+      "context": "Asking the waiter for a delicious recommendation."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا ما كناكلش اللحم، أش كَتْنْصَحِينِي؟",
+        "english": "I don't eat meat, what do you recommend? (to female)",
+        "transliteration": "Ana ma kanākoulch l-lḥam, ach katnṣeḥini?"
+      },
+      "context": "Expressing a dietary restriction and asking for a recommendation from a female waiter."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask for the menu in Darija?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بغيت الما",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "عافاك الموني",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "فين الحمام",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'3afak l-ménu' means 'Please, the menu'.",
+      "hint": {
+        "transliteration": "3afak l-ménu",
+        "arabic": "عافاك الموني"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'What is ___ here?' (أش كاين ___ هنا؟)",
+      "options": [
+        {
+          "id": "a",
+          "text": "غالي",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بنين",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "خايب",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'Bnīn' means delicious, asking for recommendations.",
+      "hint": {
+        "transliteration": "bnīn",
+        "arabic": "بنين"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would a male customer say 'I don't eat fish'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ما كنبغيش الحوت",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ما كناكلش الحوت",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كنبغي الحوت",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'Ma kanākoulch l-ḥout' means 'I don't eat fish'. 'Ma kanbghich' means 'I don't like'.",
+      "hint": {
+        "transliteration": "Ma kanākoulch l-ḥout",
+        "arabic": "ما كناكلش الحوت"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Ordering a Main Dish",
+          "arabic": "طلب طبق رئيسي"
+        },
+        "text": "To order, you can use 'Bghit...' (I want...) followed by the name of the dish. For example, 'Bghit ṭajin d-dajaj' (I want chicken tagine). If ordering for multiple people, you might say 'Jūj ṭajin d-l-ḥam' (Two meat tagines).",
+        "examples": [
+          {
+            "arabic": "بغيت طاجين الدجاج.",
+            "english": "I want chicken tagine.",
+            "transliteration": "Bghit ṭajin d-dajaj."
+          },
+          {
+            "arabic": "جوج طاجين اللحم عافاك.",
+            "english": "Two meat tagines, please.",
+            "transliteration": "Jūj ṭajin l-lḥam 3afak."
+          }
+        ],
+        "audioText": "بغيت طاجين الدجاج. جوج طاجين اللحم عافاك."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking About Ingredients",
+          "arabic": "السؤال عن المكونات"
+        },
+        "text": "If you have allergies or just want to know what's in a dish, you can ask 'Ach fih...?' (What does... contain?) or 'Wash fih...?' (Does it contain...?). For example, 'Ach fih had ṭajin?' (What does this tagine contain?)",
+        "examples": [
+          {
+            "arabic": "أش فيه هاد الطاجين؟",
+            "english": "What does this tagine contain?",
+            "transliteration": "Ach fih had ṭajin?"
+          },
+          {
+            "arabic": "واش فيه البصل؟",
+            "english": "Does it contain onion?",
+            "transliteration": "Wash fih l-bṣal?"
+          }
+        ],
+        "audioText": "أش فيه هاد الطاجين؟ واش فيه البصل؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Common Food Items",
+          "arabic": "أصناف الطعام الشائعة"
+        },
+        "text": "Here are some common Moroccan food items you might encounter: 'Kusksu' (Couscous), 'Harira' (Soup), 'Makla' (Food in general), 'Khobz' (Bread).",
+        "examples": [
+          {
+            "arabic": "كسكسو",
+            "english": "Couscous",
+            "transliteration": "Kusksu"
+          },
+          {
+            "arabic": "حريرة",
+            "english": "Harira (soup)",
+            "transliteration": "Harira"
+          },
+          {
+            "arabic": "خبز",
+            "english": "Bread",
+            "transliteration": "Khobz"
+          }
+        ],
+        "audioText": "كسكسو. حريرة. خبز."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بغيت كسكسو الدجاج عافاك.",
+        "english": "I want chicken couscous, please.",
+        "transliteration": "Bghit kusksu d-dajaj 3afak."
+      },
+      "context": "Ordering a specific dish, chicken couscous."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "واش فيه الحوت هاد الطاجين؟",
+        "english": "Does this tagine contain fish?",
+        "transliteration": "Wash fih l-ḥout had ṭajin?"
+      },
+      "context": "Asking about ingredients in a tagine."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "جوج حريرة و خبز عافاك.",
+        "english": "Two Harira soups and bread, please.",
+        "transliteration": "Jūj Harira w khobz 3afak."
+      },
+      "context": "Ordering multiple items for the table."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you order 'chicken tagine'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بغيت طاجين الحوت",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بغيت طاجين الدجاج",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بغيت طاجين اللحم",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'Ṭajin d-dajaj' means chicken tagine.",
+      "hint": {
+        "transliteration": "Bghit ṭajin d-dajaj",
+        "arabic": "بغيت طاجين الدجاج"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'What does this ___ contain?' (أش فيه هاد ال___؟) (Referring to a stew or dish)",
+      "options": [
+        {
+          "id": "a",
+          "text": "كرسي",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "طاجين",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "باب",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'Ṭajin' is a common Moroccan stew or dish.",
+      "hint": {
+        "transliteration": "ṭajin",
+        "arabic": "طاجين"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Darija word for 'bread'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "الما",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الحوت",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "خبز",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'Khobz' means bread in Darija.",
+      "hint": {
+        "transliteration": "Khobz",
+        "arabic": "خبز"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Ordering Drinks",
+          "arabic": "طلب المشروبات"
+        },
+        "text": "Drinks are an essential part of any meal. 'Ma' (water) is commonly ordered. You can ask for 'Ma dial ṣ-ṣḥḥa' (Bottled water) or 'Atay' (Tea). 'Café' (Coffee) is also common. Remember to use '3afak' (please).",
+        "examples": [
+          {
+            "arabic": "بغيت ما ديال الصحة عافاك.",
+            "english": "I want bottled water, please.",
+            "transliteration": "Bghit ma dial ṣ-ṣḥḥa 3afak."
+          },
+          {
+            "arabic": "جوج أتاي، عافاك.",
+            "english": "Two teas, please.",
+            "transliteration": "Jūj atay, 3afak."
+          }
+        ],
+        "audioText": "بغيت ما ديال الصحة عافاك. جوج أتاي، عافاك."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Ordering Side Dishes",
+          "arabic": "طلب الأطباق الجانبية"
+        },
+        "text": "You might want to order side dishes like salads or fries. 'Chlada' (salad) and 'Batata mqlīya' (fries) are common. You can use the 'Bghit...' (I want...) structure again.",
+        "examples": [
+          {
+            "arabic": "بغيت شلاضة مغربية.",
+            "english": "I want a Moroccan salad.",
+            "transliteration": "Bghit chlada maghribiya."
+          },
+          {
+            "arabic": "واش عندكم بطاطا مقلية؟",
+            "english": "Do you have fries?",
+            "transliteration": "Wash 3andkom baṭaṭa mqlīya?"
+          }
+        ],
+        "audioText": "بغيت شلاضة مغربية. واش عندكم بطاطا مقلية؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Special Requests",
+          "arabic": "طلبات خاصة"
+        },
+        "text": "For special requests, you can use 'Mūmkin...?' (Is it possible...?) or 'Bghit... bla...' (I want... without...). For example, 'Mūmkin bla ḥār?' (Is it possible without chili/spicy?).",
+        "examples": [
+          {
+            "arabic": "ممكن بلا حار؟",
+            "english": "Is it possible without spicy?",
+            "transliteration": "Mūmkin bla ḥār?"
+          },
+          {
+            "arabic": "بغيت الما بارد.",
+            "english": "I want cold water.",
+            "transliteration": "Bghit l-ma bārd."
+          }
+        ],
+        "audioText": "ممكن بلا حار؟ بغيت الما بارد."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بغيت ما ديال الصحة و شلاضة عافاك.",
+        "english": "I want bottled water and salad, please.",
+        "transliteration": "Bghit ma dial ṣ-ṣḥḥa w chlada 3afak."
+      },
+      "context": "Ordering a drink and a side dish."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "واش ممكن أتاي يكون بلا سكر؟",
+        "english": "Is it possible for the tea to be without sugar?",
+        "transliteration": "Wash mūmkin atay ykoun bla s-sukkar?"
+      },
+      "context": "Making a special request for a drink."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بغيت بطاطا مقلية.",
+        "english": "I want fries.",
+        "transliteration": "Bghit baṭaṭa mqlīya."
+      },
+      "context": "Ordering a common side dish."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask for bottled water?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بغيت الما ديال الروبيني",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بغيت ما ديال الصحة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بغيت الحليب",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'Ma dial ṣ-ṣḥḥa' means bottled water.",
+      "hint": {
+        "transliteration": "Ma dial ṣ-ṣḥḥa",
+        "arabic": "ما ديال الصحة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I want a Moroccan ___.' (بغيت ___ مغربية.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "دجاج",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شلاضة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "عصير",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'Chlada' means salad.",
+      "hint": {
+        "transliteration": "chlada",
+        "arabic": "شلاضة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What phrase would you use to ask for something 'without spicy'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بغيت الحار",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ممكن بلا حار؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "الحار بنين",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'Mūmkin bla ḥār?' means 'Is it possible without spicy?'.",
+      "hint": {
+        "transliteration": "Mūmkin bla ḥār?",
+        "arabic": "ممكن بلا حار؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for the Bill",
+          "arabic": "طلب الفاتورة"
+        },
+        "text": "Once you've finished your meal, you'll need to ask for the bill. In Darija, you can say '3afak l-ḥsab' (Please, the bill) or 'L'factura 3afak' (The bill, please, using the French loanword).",
+        "examples": [
+          {
+            "arabic": "عافاك الحساب.",
+            "english": "Please, the bill.",
+            "transliteration": "3afak l-ḥsab."
+          },
+          {
+            "arabic": "الفاكتورة عافاك.",
+            "english": "The bill, please.",
+            "transliteration": "L'factura 3afak."
+          }
+        ],
+        "audioText": "عافاك الحساب. الفاكتورة عافاك."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Paying for the Meal",
+          "arabic": "الدفع مقابل الوجبة"
+        },
+        "text": "You might want to confirm if you can pay by card. 'Wash momkin nkhalleṣ b-l-karta?' (Can I pay by card?). Cash is 'Flous'.",
+        "examples": [
+          {
+            "arabic": "واش ممكن نخلص بالكرطة؟",
+            "english": "Can I pay by card?",
+            "transliteration": "Wash momkin nkhalleṣ b-l-karta?"
+          },
+          {
+            "arabic": "غادي نخلص بالفلوس.",
+            "english": "I will pay with cash.",
+            "transliteration": "Ghadī nkhalleṣ b-l-flous."
+          }
+        ],
+        "audioText": "واش ممكن نخلص بالكرطة؟ غادي نخلص بالفلوس."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing Satisfaction",
+          "arabic": "التعبير عن الرضا"
+        },
+        "text": "If you enjoyed the meal, it's nice to say so. 'Makla bnina!' (Delicious food!) or 'Chokran bzaf!' (Thank you very much!).",
+        "examples": [
+          {
+            "arabic": "الماكلة بنينة!",
+            "english": "The food is delicious!",
+            "transliteration": "L-makla bnina!"
+          },
+          {
+            "arabic": "شكراً بزاف على الماكلة.",
+            "english": "Thank you very much for the food.",
+            "transliteration": "Chokran bzaf 3la l-makla."
+          }
+        ],
+        "audioText": "الماكلة بنينة! شكراً بزاف على الماكلة."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "عافاك الحساب، واش ممكن نخلص بالكرطة؟",
+        "english": "Please, the bill. Can I pay by card?",
+        "transliteration": "3afak l-ḥsab, wash momkin nkhalleṣ b-l-karta?"
+      },
+      "context": "Asking for the bill and payment method."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الماكلة بنينة بزاف، شكراً!",
+        "english": "The food is very delicious, thank you!",
+        "transliteration": "L-makla bnina bzaf, chokran!"
+      },
+      "context": "Expressing strong satisfaction with the meal."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "غادي نخلص بالفلوس.",
+        "english": "I will pay with cash.",
+        "transliteration": "Ghadī nkhalleṣ b-l-flous."
+      },
+      "context": "Informing the waiter about the payment method."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is a common way to ask for the bill in Darija?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بغيت الموني",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "عافاك الحساب",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بغيت ناكل",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'3afak l-ḥsab' is the polite way to ask for the bill.",
+      "hint": {
+        "transliteration": "3afak l-ḥsab",
+        "arabic": "عافاك الحساب"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'The food is ___!' (الماكلة ___!)",
+      "options": [
+        {
+          "id": "a",
+          "text": "خايبة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بنينة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "عادية",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'Bnina' means delicious, expressing satisfaction with the food.",
+      "hint": {
+        "transliteration": "bnina",
+        "arabic": "بنينة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask if you can pay by card?",
+      "options": [
+        {
+          "id": "a",
+          "text": "واش ممكن نخلص بالفلوس؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "واش ممكن نخلص بالكرطة؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "واش ممكن نخلص بالذهب؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'Wash momkin nkhalleṣ b-l-karta?' means 'Can I pay by card?'.",
+      "hint": {
+        "transliteration": "Wash momkin nkhalleṣ b-l-karta?",
+        "arabic": "واش ممكن نخلص بالكرطة؟"
+      }
+    }
+  ]
+}

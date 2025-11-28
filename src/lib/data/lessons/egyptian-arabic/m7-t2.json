@@ -1,0 +1,899 @@
+{
+  "topicId": "m7-t2",
+  "title": "Talking about daily programs and habits",
+  "dialect": "egyptian-arabic",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking about daily routines",
+          "arabic": "السؤال عن الروتين اليومي"
+        },
+        "text": "To ask someone about their daily routine in Egyptian Arabic, you can use phrases like 'What do you do every day?' We'll learn the key words for 'what' and 'every day' and the verb 'to do'.",
+        "examples": [
+          {
+            "arabic": "إيه بتعمل كل يوم؟",
+            "english": "What do you do every day? (to a male)",
+            "transliteration": "ʾEih bteʿmel koll yōm?",
+            "diacriticalNotes": "بتعمل (bteʿmel) - The 'ت' indicates the second person singular, masculine. The lack of an 'ي' suffix denotes masculine singular."
+          },
+          {
+            "arabic": "إيه بتعملي كل يوم؟",
+            "english": "What do you do every day? (to a female)",
+            "transliteration": "ʾEih bteʿmeli koll yōm?",
+            "diacriticalNotes": "بتعملي (bteʿmeli) - The 'ي' suffix indicates the second person singular, feminine."
+          },
+          {
+            "arabic": "إيه؟",
+            "english": "What?",
+            "transliteration": "ʾEih?"
+          },
+          {
+            "arabic": "كل يوم",
+            "english": "Every day",
+            "transliteration": "koll yōm"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Morning Activities: Waking Up and Eating Breakfast",
+          "arabic": "أنشطة الصباح: الاستيقاظ وتناول الإفطار"
+        },
+        "text": "Let's learn how to talk about starting your day: waking up and having breakfast. We'll introduce the verbs 'I wake up' and 'I eat breakfast' and the word for 'morning'.",
+        "examples": [
+          {
+            "arabic": "أنا بصحى",
+            "english": "I wake up",
+            "transliteration": "ʾAna baṣḥa"
+          },
+          {
+            "arabic": "أنا بافطر",
+            "english": "I eat breakfast",
+            "transliteration": "ʾAna bafṭar"
+          },
+          {
+            "arabic": "الصبح",
+            "english": "The morning",
+            "transliteration": "eṣ-ṣobḥ"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Basic Time Expressions",
+          "arabic": "تعبيرات الوقت الأساسية"
+        },
+        "text": "To describe your routine, you need to know how to specify when things happen. Here are some basic time expressions, including 'early' and 'late'.",
+        "examples": [
+          {
+            "arabic": "الساعة سبعة",
+            "english": "At seven o'clock",
+            "transliteration": "es-sāʿa sabʿa"
+          },
+          {
+            "arabic": "بدري",
+            "english": "Early",
+            "transliteration": "badri"
+          },
+          {
+            "arabic": "متأخر",
+            "english": "Late",
+            "transliteration": "metaʾakhkhar"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "إيه بتعمل الصبح بدري كل يوم؟",
+        "english": "What do you do early in the morning every day? (to a male)",
+        "transliteration": "ʾEih bteʿmel eṣ-ṣobḥ badri koll yōm?"
+      },
+      "context": "Asking a male about his early morning routine."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا بصحى متأخر وبافطر الساعة عشرة.",
+        "english": "I wake up late and eat breakfast at ten o'clock.",
+        "transliteration": "ʾAna baṣḥa metaʾakhkhar w bafṭar es-sāʿa ʿashara."
+      },
+      "context": "Describing a personal morning routine."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'What do you do every day?' to a female?",
+      "options": [
+        {
+          "id": "a",
+          "text": "إيه بتعمل كل يوم؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "إيه بتعملي كل يوم؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "إيه بيعمل كل يوم؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "The 'ي' suffix (ـي) is used to address a female in the second person singular in Egyptian Arabic verbs.",
+      "hint": {
+        "transliteration": "ʾEih bteʿmeli koll yōm?",
+        "arabic": "إيه بتعملي كل يوم؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I wake up ___ and eat breakfast.' (Use 'early')",
+      "options": [
+        {
+          "id": "a",
+          "text": "متأخر",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بدري",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بالليل",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'بدري' (badri) means 'early'.",
+      "hint": {
+        "transliteration": "badri",
+        "arabic": "بدري"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'the morning'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بالليل",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بعد الظهر",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "الصبح",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'الصبح' (eṣ-ṣobḥ) means 'the morning'.",
+      "hint": {
+        "transliteration": "eṣ-ṣobḥ",
+        "arabic": "الصبح"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Work and Study Activities",
+          "arabic": "أنشطة العمل والدراسة"
+        },
+        "text": "After breakfast, many people go to work or university. Learn how to say 'I go to work', 'I go to university', 'I work', and 'I study'.",
+        "examples": [
+          {
+            "arabic": "أنا باروح الشغل",
+            "english": "I go to work",
+            "transliteration": "ʾAna barūḥ eš-šoġl"
+          },
+          {
+            "arabic": "أنا باروح الجامعة",
+            "english": "I go to university",
+            "transliteration": "ʾAna barūḥ el-gāmʿa"
+          },
+          {
+            "arabic": "أنا بشتغل",
+            "english": "I work",
+            "transliteration": "ʾAna bašteġal"
+          },
+          {
+            "arabic": "أنا بذاكر",
+            "english": "I study",
+            "transliteration": "ʾAna bazāker"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Daily Meals and Drinks",
+          "arabic": "الوجبات والمشروبات اليومية"
+        },
+        "text": "Continuing our daily routine, let's cover lunch and drinking. 'I eat lunch' and 'I drink' are essential verbs for talking about your day.",
+        "examples": [
+          {
+            "arabic": "أنا باتغدى",
+            "english": "I eat lunch",
+            "transliteration": "ʾAna batġadda"
+          },
+          {
+            "arabic": "أنا باشرب",
+            "english": "I drink",
+            "transliteration": "ʾAna bašrab"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Basic Adverbs of Frequency",
+          "arabic": "ظروف التكرار الأساسية"
+        },
+        "text": "To describe habits, we use adverbs of frequency. Learn how to say 'usually', 'always', and 'sometimes'.",
+        "examples": [
+          {
+            "arabic": "عادةً",
+            "english": "Usually",
+            "transliteration": "ʿādatan"
+          },
+          {
+            "arabic": "دايماً",
+            "english": "Always",
+            "transliteration": "dāyeman"
+          },
+          {
+            "arabic": "ساعات",
+            "english": "Sometimes",
+            "transliteration": "sāʿāt"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا دايماً باروح الشغل الساعة تسعة.",
+        "english": "I always go to work at nine o'clock.",
+        "transliteration": "ʾAna dāyeman barūḥ eš-šoġl es-sāʿa tesʿa."
+      },
+      "context": "Describing a regular work schedule."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هي عادةً باتغدى الساعة اتنين وباشرب شاي.",
+        "english": "She usually eats lunch at two o'clock and drinks tea.",
+        "transliteration": "Heyya ʿādatan batġadda es-sāʿa etnēn w bashrab shāy."
+      },
+      "context": "Describing someone else's lunch habit."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic verb for 'I work'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بذاكر",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بشتغل",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بصحي",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'بشتغل' (bašteġal) means 'I work'.",
+      "hint": {
+        "transliteration": "bašteġal",
+        "arabic": "بشتغل"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I ___ university.' (Use 'go to')",
+      "options": [
+        {
+          "id": "a",
+          "text": "بذاكر",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "باتغدى",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "باروح الجامعة",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'باروح الجامعة' (barūḥ el-gāmʿa) means 'I go to university'.",
+      "hint": {
+        "transliteration": "barūḥ el-gāmʿa",
+        "arabic": "باروح الجامعة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'usually'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "دايماً",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ساعات",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "عادةً",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'عادةً' (ʿādatan) means 'usually'.",
+      "hint": {
+        "transliteration": "ʿādatan",
+        "arabic": "عادةً"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Evening Activities: Going Home and Watching TV",
+          "arabic": "أنشطة المساء: العودة للمنزل ومشاهدة التلفزيون"
+        },
+        "text": "As the day winds down, people usually head home and relax. Learn how to say 'I go home' and 'I watch TV', along with the expression for 'at night'.",
+        "examples": [
+          {
+            "arabic": "أنا باروح البيت",
+            "english": "I go home",
+            "transliteration": "ʾAna barūḥ el-bēt"
+          },
+          {
+            "arabic": "أنا باتفرج على التلفزيون",
+            "english": "I watch TV",
+            "transliteration": "ʾAna batfarrağ ʿala t-televizyōn"
+          },
+          {
+            "arabic": "بالليل",
+            "english": "At night",
+            "transliteration": "bel-lēl"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Personal Care and Chores",
+          "arabic": "العناية الشخصية والأعمال المنزلية"
+        },
+        "text": "Before or after dinner, you might take care of personal hygiene or do some cleaning. Here are the verbs for 'I shower' and 'I clean'.",
+        "examples": [
+          {
+            "arabic": "أنا باستحمى",
+            "english": "I shower",
+            "transliteration": "ʾAna bastaḥamma"
+          },
+          {
+            "arabic": "أنا بانضّف البيت",
+            "english": "I clean the house",
+            "transliteration": "ʾAna banaḍḍaf el-bēt"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Sequencing Events: Before, After, Then",
+          "arabic": "ترتيب الأحداث: قبل، بعد، وبعدين"
+        },
+        "text": "To describe a sequence of events in your daily routine, you'll need words like 'before', 'after', and 'then'.",
+        "examples": [
+          {
+            "arabic": "قبل",
+            "english": "Before",
+            "transliteration": "ʾabl"
+          },
+          {
+            "arabic": "بعد",
+            "english": "After",
+            "transliteration": "baʿd"
+          },
+          {
+            "arabic": "وبعدين",
+            "english": "And then",
+            "transliteration": "w baʿdēn"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بعد الشغل، أنا باروح البيت وبعدين باتفرج على التلفزيون بالليل.",
+        "english": "After work, I go home and then I watch TV at night.",
+        "transliteration": "Baʿd eš-šoġl, ʾana barūḥ el-bēt w baʿdēn batfarrağ ʿala t-televizyōn bel-lēl."
+      },
+      "context": "Describing the transition from work to evening relaxation."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "قبل ما أنام، أنا باستحمى.",
+        "english": "Before I sleep, I shower.",
+        "transliteration": "ʾAbl ma anām, ʾana bastaḥamma."
+      },
+      "context": "Describing a personal hygiene routine before bed."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'I go home' in Arabic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "باروح الشغل",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "باروح البيت",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "باشرب شاي",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'باروح البيت' (barūḥ el-bēt) means 'I go home'.",
+      "hint": {
+        "transliteration": "barūḥ el-bēt",
+        "arabic": "باروح البيت"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I watch ___.' (Use 'TV')",
+      "options": [
+        {
+          "id": "a",
+          "text": "البيت",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "التلفزيون",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "الشغل",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'التلفزيون' (et-televizyōn) means 'TV'.",
+      "hint": {
+        "transliteration": "et-televizyōn",
+        "arabic": "التلفزيون"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'After'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "قبل",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بالليل",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "بعد",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'بعد' (baʿd) means 'after'.",
+      "hint": {
+        "transliteration": "baʿd",
+        "arabic": "بعد"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Hobbies and Free Time Activities",
+          "arabic": "الهوايات وأنشطة وقت الفراغ"
+        },
+        "text": "What do you do in your free time? Learn how to express common hobbies like 'I read' and 'I exercise', and the phrase for 'free time'.",
+        "examples": [
+          {
+            "arabic": "أنا باقرا",
+            "english": "I read",
+            "transliteration": "ʾAna baʾra"
+          },
+          {
+            "arabic": "أنا باتمرّن",
+            "english": "I exercise",
+            "transliteration": "ʾAna batmarran"
+          },
+          {
+            "arabic": "وقت فراغ",
+            "english": "Free time",
+            "transliteration": "waʾt farāġ"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Evening Meal: Eating Dinner",
+          "arabic": "وجبة المساء: تناول العشاء"
+        },
+        "text": "We've covered breakfast and lunch, now for the last meal of the day. Learn how to say 'I eat dinner'.",
+        "examples": [
+          {
+            "arabic": "أنا باتعشى",
+            "english": "I eat dinner",
+            "transliteration": "ʾAna bataʿašša"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "End of Day: Sleeping",
+          "arabic": "نهاية اليوم: النوم"
+        },
+        "text": "After a long day, it's time to rest. The final activity in our daily routine is sleeping. Learn how to say 'I sleep'.",
+        "examples": [
+          {
+            "arabic": "أنا بانام",
+            "english": "I sleep",
+            "transliteration": "ʾAna banām"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "في وقت فراغي، أنا باقرا أو باتمرّن.",
+        "english": "In my free time, I read or exercise.",
+        "transliteration": "Fi waʾt farāġi, ʾana baʾra aw batmarran."
+      },
+      "context": "Describing leisure activities."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا باتعشى الساعة سبعة وبعدين بانام الساعة عشرة.",
+        "english": "I eat dinner at seven o'clock and then I sleep at ten o'clock.",
+        "transliteration": "ʾAna bataʿašša es-sāʿa sabʿa w baʿdēn banām es-sāʿa ʿashara."
+      },
+      "context": "Describing evening routine leading to sleep."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic verb for 'I read'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "باتعشى",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "باقرا",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بانام",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'باقرا' (baʾra) means 'I read'.",
+      "hint": {
+        "transliteration": "baʾra",
+        "arabic": "باقرا"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I ___ at ten o'clock.' (Use 'sleep')",
+      "options": [
+        {
+          "id": "a",
+          "text": "باتمرّن",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "باتعشى",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "بانام",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'بانام' (banām) means 'I sleep'.",
+      "hint": {
+        "transliteration": "banām",
+        "arabic": "بانام"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'free time'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "كل يوم",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "وقت فراغ",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "الساعة سبعة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'وقت فراغ' (waʾt farāġ) means 'free time'.",
+      "hint": {
+        "transliteration": "waʾt farāġ",
+        "arabic": "وقت فراغ"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing Habits: 'I usually...'",
+          "arabic": "التعبير عن العادات: أنا عادةً..."
+        },
+        "text": "Combine 'I' with 'usually' to express your regular habits. This structure is very common in Egyptian Arabic.",
+        "examples": [
+          {
+            "arabic": "أنا عادةً بصحى بدري.",
+            "english": "I usually wake up early.",
+            "transliteration": "ʾAna ʿādatan baṣḥa badri."
+          },
+          {
+            "arabic": "هي عادةً بتذاكر بالليل.",
+            "english": "She usually studies at night.",
+            "transliteration": "Heyya ʿādatan betzāker bel-lēl."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Weekend Activities",
+          "arabic": "أنشطة عطلة نهاية الأسبوع"
+        },
+        "text": "Daily routines often change on the weekend. Learn how to talk about typical weekend activities like 'going out' and 'visiting family'.",
+        "examples": [
+          {
+            "arabic": "في الويك إند",
+            "english": "On the weekend",
+            "transliteration": "fi l-week end"
+          },
+          {
+            "arabic": "أنا باخرج",
+            "english": "I go out",
+            "transliteration": "ʾAna bakhroğ"
+          },
+          {
+            "arabic": "أنا بازور أهلي",
+            "english": "I visit my family",
+            "transliteration": "ʾAna bazōr ʾahli"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking About Others' Routines (Gender Distinction)",
+          "arabic": "السؤال عن روتين الآخرين (التمييز بين الجنسين)"
+        },
+        "text": "Let's review how to ask about someone else's daily routine, paying attention to the male and female forms, and a common informal way to ask 'How's your day?'.",
+        "examples": [
+          {
+            "arabic": "إيه بتعمل كل يوم؟",
+            "english": "What do you do every day? (to a male)",
+            "transliteration": "ʾEih bteʿmel koll yōm?"
+          },
+          {
+            "arabic": "إيه بتعملي كل يوم؟",
+            "english": "What do you do every day? (to a female)",
+            "transliteration": "ʾEih bteʿmeli koll yōm?"
+          },
+          {
+            "arabic": "يومك عامل إزاي؟",
+            "english": "How's your day? (informal, to both male/female)",
+            "transliteration": "Yōmak ʿāmel ez-zayy?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "في الويك إند، أنا عادةً باخرج مع صحابي.",
+        "english": "On the weekend, I usually go out with my friends.",
+        "transliteration": "Fi l-week end, ʾana ʿādatan bakhroğ maʿa ṣaḥābi."
+      },
+      "context": "Describing a typical weekend activity."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "إيه بتعملي في وقت فراغك يا منى؟",
+        "english": "What do you do in your free time, Mona? (to a female)",
+        "transliteration": "ʾEih bteʿmeli fi waʾt farāġek ya Mona?"
+      },
+      "context": "Asking a female friend about her hobbies."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'On the weekend'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "كل يوم",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "في الويك إند",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بالليل",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'في الويك إند' (fi l-week end) is a common way to say 'on the weekend' in Egyptian Arabic.",
+      "hint": {
+        "transliteration": "fi l-week end",
+        "arabic": "في الويك إند"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I usually ___ early.' (Use 'wake up')",
+      "options": [
+        {
+          "id": "a",
+          "text": "باتعشى",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بصحى",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بنام",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'بصحى' (baṣḥa) means 'I wake up'.",
+      "hint": {
+        "transliteration": "baṣḥa",
+        "arabic": "بصحى"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase asks 'How's your day?' (informal)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "إيه بتعمل كل يوم؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أنا عادةً باخرج.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "يومك عامل إزاي؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'يومك عامل إزاي؟' (Yōmak ʿāmel ez-zayy?) is an informal way to ask 'How's your day?' in Egyptian Arabic.",
+      "hint": {
+        "transliteration": "Yōmak ʿāmel ez-zayy?",
+        "arabic": "يومك عامل إزاي؟"
+      }
+    }
+  ]
+}

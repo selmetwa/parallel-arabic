@@ -1,0 +1,789 @@
+{
+  "topicId": "m6-t2",
+  "title": "Asking About Places and Services",
+  "dialect": "darija",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Where is...?'"
+        },
+        "text": "To ask where something is in Egyptian Arabic, you use the word 'فين' (feen). It's a versatile question word.",
+        "examples": [
+          {
+            "arabic": "فين البنك؟",
+            "english": "Where is the bank?",
+            "transliteration": "Feen el-bank?"
+          },
+          {
+            "arabic": "فين أقرب مستشفى؟",
+            "english": "Where is the nearest hospital?",
+            "transliteration": "Feen aqrab mostashfa?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing 'I want / I need'"
+        },
+        "text": "To express 'I want' or 'I need', Egyptians use 'أنا عايز' for males and 'أنا عايزة' for females. The pronunciation subtly changes at the end.",
+        "examples": [
+          {
+            "arabic": "أنا عايز قهوة.",
+            "english": "I want coffee. (male speaker)",
+            "transliteration": "Ana ʿaayez 'ahwa."
+          },
+          {
+            "arabic": "أنا عايزة أروح المستشفى.",
+            "english": "I want to go to the hospital. (female speaker)",
+            "transliteration": "Ana ʿayza arooḥ el-mostashfa."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "'Here' and 'There'"
+        },
+        "text": "When someone gives you directions, they might use 'هنا' for 'here' and 'هناك' for 'there'.",
+        "examples": [
+          {
+            "arabic": "المطعم هنا.",
+            "english": "The restaurant is here.",
+            "transliteration": "El-maṭʿam hena."
+          },
+          {
+            "arabic": "السوبر ماركت هناك.",
+            "english": "The supermarket is there.",
+            "transliteration": "Es-supermarket henāk."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا عايز فين؟",
+        "english": "Where do I want?",
+        "transliteration": "Ana ʿaayez feen?"
+      },
+      "context": "A slightly confused way to ask where you want to go. More naturally: 'أنا عايز أروح فين؟' (Ana ʿaayez arooḥ feen? - Where do I want to go?)"
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا عايزة بنك هنا.",
+        "english": "I want a bank here. (female speaker)",
+        "transliteration": "Ana ʿayza bank hena."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'Where is the nearest hospital?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "أنا عايزة مستشفى؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "فين أقرب مستشفى؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مستشفى هنا؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'فين أقرب مستشفى؟' directly translates to 'Where is the nearest hospital?'.",
+      "hint": {
+        "transliteration": "Feen aqrab mostashfa?",
+        "arabic": "فين أقرب مستشفى؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "If you are a male speaker, how do you say 'I want a coffee here'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أنا عايزة قهوة هنا.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أنا عايز قهوة هنا.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "فين قهوة هنا؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "For a male speaker, 'I want' is 'أنا عايز'. 'قهوة' is coffee and 'هنا' is here.",
+      "hint": {
+        "transliteration": "Ana ʿaayez 'ahwa hena.",
+        "arabic": "أنا عايز قهوة هنا."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'The bank is ___' (there).",
+      "options": [
+        {
+          "id": "a",
+          "text": "هنا",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "فين",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "هناك",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'هناك' means 'there'.",
+      "hint": {
+        "transliteration": "El-bank henāk.",
+        "arabic": "البنك هناك."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "City Place: Bank"
+        },
+        "text": "The word for 'bank' in Egyptian Arabic is 'بنك'. It's very similar to English.",
+        "examples": [
+          {
+            "arabic": "فين البنك؟",
+            "english": "Where is the bank?",
+            "transliteration": "Feen el-bank?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Public Service: Hospital"
+        },
+        "text": "'Hospital' is 'مستشفى'. This is an important word for emergencies.",
+        "examples": [
+          {
+            "arabic": "أنا عايزة أروح المستشفى.",
+            "english": "I want to go to the hospital. (female speaker)",
+            "transliteration": "Ana ʿayza arooḥ el-mostashfa."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Public Service: Pharmacy"
+        },
+        "text": "If you need medication, you'll look for a 'صيدلية' (pharmacy).",
+        "examples": [
+          {
+            "arabic": "فين أقرب صيدلية؟",
+            "english": "Where is the nearest pharmacy?",
+            "transliteration": "Feen aqrab saydaliya?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا عايز بنك جنب المستشفى.",
+        "english": "I want a bank next to the hospital. (male speaker)",
+        "transliteration": "Ana ʿaayez bank gamb el-mostashfa."
+      },
+      "context": "Using 'gamb' (next to) for additional context."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الصيدلية هناك، مش هنا.",
+        "english": "The pharmacy is there, not here.",
+        "transliteration": "Es-saydaliya henāk, mish hena."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'bank'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "مستشفى",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بنك",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "صيدلية",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'بنك' is the Arabic word for bank.",
+      "hint": {
+        "transliteration": "bank",
+        "arabic": "بنك"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'Where is the nearest ___?' (pharmacy)",
+      "options": [
+        {
+          "id": "a",
+          "text": "مستشفى",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "صيدلية",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بنك",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'صيدلية' means pharmacy.",
+      "hint": {
+        "transliteration": "Feen aqrab saydaliya?",
+        "arabic": "فين أقرب صيدلية؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'hospital'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بنك",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "صيدلية",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "مستشفى",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'مستشفى' is the word for hospital.",
+      "hint": {
+        "transliteration": "mostashfa",
+        "arabic": "مستشفى"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Food Place: Restaurant"
+        },
+        "text": "To find a place to eat, you'll need the word for 'restaurant': 'مطعم'.",
+        "examples": [
+          {
+            "arabic": "فين أقرب مطعم؟",
+            "english": "Where is the nearest restaurant?",
+            "transliteration": "Feen aqrab maṭʿam?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Drink Place: Café"
+        },
+        "text": "For a traditional coffee shop or café, use 'قهوة'. For a more modern café, you might also hear 'كافيه'.",
+        "examples": [
+          {
+            "arabic": "أنا عايز أروح قهوة.",
+            "english": "I want to go to a café. (male speaker)",
+            "transliteration": "Ana ʿaayez arooḥ 'ahwa."
+          },
+          {
+            "arabic": "الكافيه هناك.",
+            "english": "The café is there.",
+            "transliteration": "El-kafeeh henāk."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Shopping: Supermarket"
+        },
+        "text": "For groceries and general shopping, the word is 'سوبر ماركت', which is a direct borrowing from English.",
+        "examples": [
+          {
+            "arabic": "فين السوبر ماركت؟",
+            "english": "Where is the supermarket?",
+            "transliteration": "Feen es-supermarket?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا عايزة مطعم هنا، مش سوبر ماركت.",
+        "english": "I want a restaurant here, not a supermarket. (female speaker)",
+        "transliteration": "Ana ʿayza maṭʿam hena, mish supermarket."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "فين الكافيه اللي جنب الصيدلية؟",
+        "english": "Where is the cafe next to the pharmacy?",
+        "transliteration": "Feen el-kafeeh illi gamb es-saydaliya?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'restaurant'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "قهوة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "سوبر ماركت",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "مطعم",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'مطعم' means restaurant.",
+      "hint": {
+        "transliteration": "maṭʿam",
+        "arabic": "مطعم"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I want to go to the ___' (supermarket, male speaker).",
+      "options": [
+        {
+          "id": "a",
+          "text": "مطعم",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "سوبر ماركت",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "قهوة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'سوبر ماركت' is supermarket. The full sentence would be 'أنا عايز أروح السوبر ماركت'.",
+      "hint": {
+        "transliteration": "Ana ʿaayez arooḥ es-supermarket.",
+        "arabic": "سوبر ماركت"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word refers to a traditional 'café' or 'coffee shop'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "مطعم",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "صيدلية",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "قهوة",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'قهوة' means coffee and can refer to a traditional coffee shop.",
+      "hint": {
+        "transliteration": "'ahwa",
+        "arabic": "قهوة"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Public Service: Police Station"
+        },
+        "text": "In case of emergency or official matters, you might need to find a 'قسم شرطة' (police station).",
+        "examples": [
+          {
+            "arabic": "فين أقرب قسم شرطة؟",
+            "english": "Where is the nearest police station?",
+            "transliteration": "Feen aqrab 'esm shorṭa?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Transportation: Bus Stop"
+        },
+        "text": "To catch a bus, you'll look for a 'موقف أتوبيس' (bus stop).",
+        "examples": [
+          {
+            "arabic": "فين موقف الأتوبيس؟",
+            "english": "Where is the bus stop?",
+            "transliteration": "Feen maw'af el-otobees?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Transportation: Taxi / Metro Station"
+        },
+        "text": "For private transport, you can ask for a 'تاكسي'. For public underground transport, it's 'محطة مترو' (metro station).",
+        "examples": [
+          {
+            "arabic": "أنا عايز تاكسي.",
+            "english": "I want a taxi. (male speaker)",
+            "transliteration": "Ana ʿaayez taksi."
+          },
+          {
+            "arabic": "فين محطة المترو؟",
+            "english": "Where is the metro station?",
+            "transliteration": "Feen maḥattit el-metro?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا عايزة تاكسي أروح بيه قسم الشرطة.",
+        "english": "I want a taxi to go to the police station. (female speaker)",
+        "transliteration": "Ana ʿayza taksi arooḥ beeh 'esm esh-shorṭa."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هل محطة المترو هناك ولا هنا؟",
+        "english": "Is the metro station there or here?",
+        "transliteration": "Hal maḥattit el-metro henāk walla hena?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'Where is the bus stop?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "فين محطة المترو؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "فين موقف الأتوبيس؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "فين قسم الشرطة؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'موقف أتوبيس' means bus stop.",
+      "hint": {
+        "transliteration": "Feen maw'af el-otobees?",
+        "arabic": "فين موقف الأتوبيس؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I need a ___' (taxi, female speaker).",
+      "options": [
+        {
+          "id": "a",
+          "text": "مترو",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "تاكسي",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أتوبيس",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'تاكسي' is taxi. The full sentence would be 'أنا عايزة تاكسي'.",
+      "hint": {
+        "transliteration": "Ana ʿayza taksi.",
+        "arabic": "تاكسي"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which of these means 'police station'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "موقف أتوبيس",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "قسم شرطة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "محطة مترو",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'قسم شرطة' means police station.",
+      "hint": {
+        "transliteration": "'esm shorṭa",
+        "arabic": "قسم شرطة"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Is there...?'"
+        },
+        "text": "To ask if something exists or is available, you can use 'فيه...؟' (fee...?). This is very common.",
+        "examples": [
+          {
+            "arabic": "فيه صيدلية قريبة من هنا؟",
+            "english": "Is there a pharmacy near here?",
+            "transliteration": "Fee saydaliya qareeba min hena?"
+          },
+          {
+            "arabic": "فيه تاكسي؟",
+            "english": "Is there a taxi?",
+            "transliteration": "Fee taksi?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'How can I go to...?'"
+        },
+        "text": "For specific directions to a place, use 'إزاي أروح لـ...؟' (ezayy arooḥ li...?). 'إزاي' means 'how', 'أروح' means 'I go', and 'لـ' is 'to'.",
+        "examples": [
+          {
+            "arabic": "إزاي أروح للمستشفى؟",
+            "english": "How can I go to the hospital?",
+            "transliteration": "Ezayy arooḥ lel-mostashfa?"
+          },
+          {
+            "arabic": "إزاي أروح للسوبر ماركت؟",
+            "english": "How can I go to the supermarket?",
+            "transliteration": "Ezayy arooḥ les-supermarket?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for Help: 'Can you help me?'"
+        },
+        "text": "If you are lost or need assistance, you can politely ask 'ممكن تساعدني؟' (momken tesa'edni?) for a male, or 'ممكن تساعديني؟' (momken tesa'edeeni?) for a female. 'ممكن' means 'possible' or 'can I/you'.",
+        "examples": [
+          {
+            "arabic": "لو سمحت، ممكن تساعدني؟",
+            "english": "Excuse me (if you please), can you help me? (asking a male)",
+            "transliteration": "Law samaḥt, momken tesa'edni?"
+          },
+          {
+            "arabic": "ممكن تساعديني ألاقي البنك؟",
+            "english": "Can you help me find the bank? (asking a female)",
+            "transliteration": "Momken tesa'edeeni ala'i el-bank?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "إزاي أروح لأقرب قهوة؟ ممكن تساعدني؟",
+        "english": "How can I go to the nearest cafe? Can you help me? (asking a male)",
+        "transliteration": "Ezayy arooḥ li-aqrab 'ahwa? Momken tesa'edni?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "فيه مطعم كويس جنب محطة المترو؟",
+        "english": "Is there a good restaurant next to the metro station?",
+        "transliteration": "Fee maṭʿam kwayyes gamb maḥattit el-metro?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'Is there a taxi?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "فين التاكسي؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أنا عايز تاكسي.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "فيه تاكسي؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'فيه...؟' is used to ask if something exists or is available.",
+      "hint": {
+        "transliteration": "Fee taksi?",
+        "arabic": "فيه تاكسي؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'How can I go ___ the bank?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "فين",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "لـ",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "هنا",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'لـ' (li) means 'to' when asking for directions with 'إزاي أروح'.",
+      "hint": {
+        "transliteration": "Ezayy arooḥ lel-bank?",
+        "arabic": "إزاي أروح للبنك؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you politely ask a female for help, saying 'Can you help me?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "ممكن تساعدني؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ممكن تساعديني؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أنا عايز مساعدة.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'ممكن تساعديني؟' is the feminine form for 'can you help me?'.",
+      "hint": {
+        "transliteration": "Momken tesa'edeeni?",
+        "arabic": "ممكن تساعديني؟"
+      }
+    }
+  ]
+}
