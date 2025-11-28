@@ -1,6 +1,9 @@
 import { createBrowserClient, createServerClient, isBrowser } from '@supabase/ssr'
 import { PUBLIC_SUPABASE_PUBLISHABLE_KEY, PUBLIC_SUPABASE_URL } from '$env/static/public'
 import type { LayoutLoad } from './$types'
+import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+
+injectSpeedInsights();
 
 export const load: LayoutLoad = async ({ data, depends, fetch }) => {
   try {
