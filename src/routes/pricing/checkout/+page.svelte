@@ -49,8 +49,32 @@
     // goto("/pricing/error");
   });
 </script>
-<div class="flex justify-center min-h-screen py-4">
-  <div class="border border-tile-500 w-2/3 bg-tile-300">
-    <div id="checkout"></div>
+
+<section class="min-h-screen bg-tile-300 py-12 sm:py-16">
+  <div class="max-w-4xl mx-auto px-4 sm:px-8">
+    <!-- Header -->
+    <header class="text-center mb-12">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-300 leading-tight mb-6">
+        Complete Your Subscription
+      </h1>
+      <p class="text-lg sm:text-xl text-text-200 leading-relaxed max-w-2xl mx-auto">
+        Secure checkout powered by Stripe. Your payment information is encrypted and secure.
+      </p>
+    </header>
+
+    <!-- Checkout Container -->
+    <div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-xl p-6 sm:p-8">
+      <div id="checkout" class="min-h-[500px]"></div>
+    </div>
+
+    <!-- Security Notice -->
+    <div class="mt-8 text-center">
+      <p class="text-sm text-text-200 flex items-center justify-center gap-2">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+        </svg>
+        Your payment is secured by Stripe. We never store your card details.
+      </p>
+    </div>
   </div>
-</div>
+</section>
