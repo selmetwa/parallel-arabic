@@ -20,7 +20,9 @@
     "sync:subscriptions": "vite-node scripts/sync-stripe-subscriptions.ts",
     "sync:subscriptions:dry": "vite-node scripts/sync-stripe-subscriptions.ts --dry-run",
     "populate:words": "vite-node scripts/populate-words.ts",
-    "populate:words:dry": "vite-node scripts/populate-words.ts --dry-run"
+    "populate:words:dry": "vite-node scripts/populate-words.ts --dry-run",
+    "upload:lessons": "vite-node scripts/upload-lessons-to-storage.ts",
+    "upload:lessons:dry": "vite-node scripts/upload-lessons-to-storage.ts --dry-run"
   },
   "devDependencies": {
     "@flydotio/dockerfile": "^0.5.4",
