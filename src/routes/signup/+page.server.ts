@@ -1,6 +1,7 @@
 import { redirect } from '@sveltejs/kit'
 import type { Actions } from './$types'
 import { syncSupabaseUserWithDB } from '$lib/helpers/supabase-auth-helpers'
+import { sendWelcomeEmail } from '$lib/server/email'
 
 export const load = async ({ locals: { safeGetSession } }) => {
   const { session } = await safeGetSession()
@@ -41,6 +42,14 @@ export const actions: Actions = {
         isNewUser = !existingUser && selectError?.code === 'PGRST116'
         
         await syncSupabaseUserWithDB(data.user, supabase)
+        
+        // Send welcome email to new users (non-blocking)
+        if (isNewUser && email) {
+          sendWelcomeEmail(email).catch(error => {
+            console.error('Failed to send welcome email:', error)
+            // Don't block signup if email fails
+          })
+        }
       } catch (syncError) {
         console.error('Failed to sync user to database:', syncError)
         // Note: We don't return an error here because the auth was successful

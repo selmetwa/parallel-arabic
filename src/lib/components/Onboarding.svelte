@@ -102,39 +102,14 @@
         throw new Error(data.error || 'Failed to save onboarding data');
       }
 
-      // Success - advance to suggestions step
-      step = 4;
-      isSubmitting = false;
+      // Success - redirect to structured lessons page
+      // The redirect will naturally close the modal by navigating away
+      await goto(`/lessons/structured/${targetDialect}`, { replaceState: true });
     } catch (e) {
       error = e instanceof Error ? e.message : 'Something went wrong';
       isSubmitting = false;
     }
   }
-
-  function finishOnboarding() {
-    handleCloseModal();
-    // Remove the newSignup query parameter from URL
-    const url = new URL(window.location.href);
-    url.searchParams.delete('newSignup');
-    goto(url.pathname + url.search, { replaceState: true, noScroll: true });
-  }
-
-  // Determine if user is beginner (A1, A2) or intermediate+ (B1, B2, C1, C2)
-  let isBeginner = $derived(proficiencyLevel === 'A1' || proficiencyLevel === 'A2');
-  
-  // Suggestions based on proficiency level
-  let suggestions = $derived(isBeginner 
-    ? [
-        { icon: '🔤', title: 'Arabic Alphabet', desc: 'Master the script and pronunciation', href: '/alphabet' },
-        { icon: '📚', title: 'Lessons', desc: 'Structured learning path for beginners', href: '/lessons' },
-        { icon: '🧠', title: 'Spaced Repetition', desc: 'Build your vocabulary systematically', href: '/review' }
-      ]
-    : [
-        { icon: '📚', title: 'Lessons', desc: 'Continue your structured learning', href: '/lessons' },
-        { icon: '🧠', title: 'Spaced Repetition', desc: 'Review and master vocabulary', href: '/review' },
-        { icon: '📖', title: 'Stories', desc: 'Read engaging stories with audio', href: '/stories' },
-        { icon: '📝', title: 'Sentence Practice', desc: 'Generate and practice sentences', href: '/sentences' }
-      ]);
 </script>
 
 {#if isOpen}
@@ -271,7 +246,7 @@
       <div class="h-2 bg-tile-500 w-full">
         <div 
           class="h-full bg-text-300 transition-all duration-500 ease-out"
-          style="width: {step === 4 ? 100 : ((step + 1) / 5) * 100}%"
+          style="width: {((step + 1) / 4) * 100}%"
         ></div>
       </div>
 
@@ -376,31 +351,6 @@
             </div>
           {/if}
 
-          <!-- Step 4: Suggestions -->
-          {#if step === 4}
-            <div class="flex flex-col gap-8" in:fade={{ duration: 300 }}>
-              <div class="text-center mb-6">
-                <div class="text-6xl mb-6">🎯</div>
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-300 mb-4">Get Started!</h2>
-                <p class="text-text-200 text-xl sm:text-2xl">Here are some great places to start your Arabic learning journey</p>
-              </div>
-              <div class="grid grid-cols-1 sm:grid-cols-2 {suggestions.length === 3 ? 'lg:grid-cols-3' : 'lg:grid-cols-2'} gap-6 p-3">
-                {#each suggestions as suggestion}
-                  <a
-                    href={suggestion.href}
-                    class="flex flex-col items-center gap-4 p-8 rounded-lg border-2 transition-all duration-200 bg-tile-400 border-tile-600 hover:bg-tile-500 hover:border-tile-500 hover:scale-105 hover:shadow-xl"
-                  >
-                    <span class="text-5xl">{suggestion.icon}</span>
-                    <div class="text-center w-full">
-                      <span class="font-bold text-xl sm:text-2xl text-text-300 block mb-2">{suggestion.title}</span>
-                      <span class="text-base sm:text-lg text-text-200">{suggestion.desc}</span>
-                    </div>
-                  </a>
-                {/each}
-              </div>
-            </div>
-          {/if}
-
           <!-- Error Message -->
           {#if error}
             <div class="bg-tile-500 border-2 border-red-500 rounded-lg p-4 text-red-200 text-lg mt-6 max-w-2xl mx-auto">
@@ -410,7 +360,7 @@
 
           <!-- Navigation Buttons -->
           <div class="flex gap-4 mt-12 pt-8 border-t border-tile-600 max-w-2xl mx-auto w-full">
-            {#if step > 0 && step < 4}
+            {#if step > 0 && step < 3}
               <Button type="button" onClick={prevStep} className="!w-auto !px-8 !py-3 !text-lg">
                 Back
               </Button>
@@ -445,15 +395,7 @@
                 className="!w-auto !px-10 !py-3 !text-lg"
                 disabled={isSubmitting || !proficiencyLevel}
               >
-                {isSubmitting ? 'Saving...' : 'Next'}
-              </Button>
-            {:else if step === 4}
-              <Button 
-                type="button" 
-                onClick={finishOnboarding} 
-                className="!w-auto !px-10 !py-3 !text-lg"
-              >
-                Get Started
+                {isSubmitting ? 'Saving...' : 'Complete Setup'}
               </Button>
             {/if}
           </div>
