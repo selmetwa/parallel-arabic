@@ -1,0 +1,811 @@
+{
+  "topicId": "m4-t1",
+  "title": "Talking About Money and Asking for Prices (Levantine)",
+  "dialect": "levantine",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Money (General Term)"
+        },
+        "text": "In Levantine Arabic, the most common word for 'money' is مَصاري (maSaari). You might also hear نُقود (nuqood), which is more formal.",
+        "examples": [
+          {
+            "arabic": "مَصاري",
+            "english": "Money",
+            "transliteration": "maSaari"
+          },
+          {
+            "arabic": "نُقود",
+            "english": "Money (formal)",
+            "transliteration": "nuqood"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Currency Units"
+        },
+        "text": "The main currency unit in many Levantine countries is the 'Lira' (لِيرَة), pronounced 'leera'. Another common currency is the 'Dinar' (دِينار), pronounced 'deenaar'.",
+        "examples": [
+          {
+            "arabic": "لِيرَة",
+            "english": "Lira",
+            "transliteration": "leera"
+          },
+          {
+            "arabic": "دِينار",
+            "english": "Dinar",
+            "transliteration": "deenaar"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'How much money?'"
+        },
+        "text": "To ask 'How much money?' in general, you use كَمّ مَصاري؟ (kam maSaari?). كَمّ means 'how much/many'.",
+        "examples": [
+          {
+            "arabic": "كَمّ مَصاري؟",
+            "english": "How much money?",
+            "transliteration": "kam maSaari?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "معي مَصاري قليلة.",
+        "english": "I have little money.",
+        "transliteration": "ma'i maSaari qaleeleh."
+      },
+      "context": "Using the general term for money."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "عندي عشر لِيرات.",
+        "english": "I have ten Liras.",
+        "transliteration": "'andi 'ashar leeraat."
+      },
+      "context": "Specifying a currency amount."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the most common Levantine word for 'money'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "مَصاري",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "نُقود",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "سِعر",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "مَصاري (maSaari) is the most common word for money in Levantine Arabic.",
+      "hint": {
+        "transliteration": "maSaari",
+        "arabic": "مَصاري"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'How much ___?' (referring to money)",
+      "options": [
+        {
+          "id": "a",
+          "text": "مَصاري",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "لِيرة",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "دِينار",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "To ask 'How much money?', you use 'كم مصاري؟'.",
+      "hint": {
+        "transliteration": "maSaari",
+        "arabic": "مَصاري"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which of these is a common currency unit in the Levant?",
+      "options": [
+        {
+          "id": "a",
+          "text": "قِرْش",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "لِيرَة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "جُنَيْه",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "لِيرَة (leera) is a common currency unit in many Levantine countries.",
+      "hint": {
+        "transliteration": "leera",
+        "arabic": "لِيرَة"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'How much is this?' (for male objects)"
+        },
+        "text": "To ask 'How much is this?' for a masculine noun, use قَدِّيش هاد؟ (addaysh haad?). قَدِّيش means 'how much/how many', and هاد is 'this' (masculine).",
+        "examples": [
+          {
+            "arabic": "قَدِّيش هاد؟",
+            "english": "How much is this? (masc.)",
+            "transliteration": "addaysh haad?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'How much is this?' (for female objects)"
+        },
+        "text": "For a feminine noun, you'd ask قَدِّيش هادِي؟ (addaysh haadi?). هادِي is 'this' (feminine).",
+        "examples": [
+          {
+            "arabic": "قَدِّيش هادِي؟",
+            "english": "How much is this? (fem.)",
+            "transliteration": "addaysh haadi?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "The Word 'Price'"
+        },
+        "text": "The word for 'price' is سِعر (se'er). You can use it when talking about the cost of something.",
+        "examples": [
+          {
+            "arabic": "سِعر",
+            "english": "Price",
+            "transliteration": "se'er"
+          },
+          {
+            "arabic": "ما هو السِّعر؟",
+            "english": "What is the price? (more formal)",
+            "transliteration": "ma huwwa as-se'er?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "قَدِّيش سِعر هاد الكِتاب؟",
+        "english": "How much is the price of this book?",
+        "transliteration": "addaysh se'er haad el-kitaab?"
+      },
+      "context": "Asking the price for a masculine item."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "قَدِّيش هادِي الشَّنْتَة؟",
+        "english": "How much is this bag?",
+        "transliteration": "addaysh haadi sh-shanteh?"
+      },
+      "context": "Asking the price for a feminine item."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'How much is this?' when referring to a male item like 'كتاب' (book)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "قَدِّيش هادِي؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "قَدِّيش هاد؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كَمّ مَصاري؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "For a masculine object, use هاد (haad).",
+      "hint": {
+        "transliteration": "addaysh haad?",
+        "arabic": "قَدِّيش هاد؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Levantine word for 'price'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "مَصاري",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "لِيرَة",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "سِعر",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "The word for price is سِعر (se'er).",
+      "hint": {
+        "transliteration": "se'er",
+        "arabic": "سِعر"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the question: 'How much is this ___?' (referring to a feminine item like 'سيارة' - car)",
+      "options": [
+        {
+          "id": "a",
+          "text": "هادِي",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "هاد",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "هادُو",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "For a feminine object, use هادِي (haadi).",
+      "hint": {
+        "transliteration": "haadi",
+        "arabic": "هادِي"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Basic Numbers for Prices (1-3)"
+        },
+        "text": "When stating prices, you'll often use numbers. Let's learn one, two, and three: وَاحِد (waaḥed - one, masc.), وِحْدَة (weḥdeh - one, fem.), تْنَيْن (etnayn - two), تْلاتة (tlaate - three).",
+        "examples": [
+          {
+            "arabic": "وَاحِد / وِحْدَة",
+            "english": "One",
+            "transliteration": "waaḥed / weḥdeh"
+          },
+          {
+            "arabic": "تْنَيْن",
+            "english": "Two",
+            "transliteration": "etnayn"
+          },
+          {
+            "arabic": "تْلاتة",
+            "english": "Three",
+            "transliteration": "tlaate"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Smallest Currency Unit: Piaster/Qirsh"
+        },
+        "text": "The smallest unit of currency in many Levantine countries is the 'Piaster' or 'Qirsh'. The singular is قِرْش (qirsh), and the plural is قُروش (qroosh).",
+        "examples": [
+          {
+            "arabic": "قِرْش",
+            "english": "Piaster/Qirsh (singular)",
+            "transliteration": "qirsh"
+          },
+          {
+            "arabic": "قُروش",
+            "english": "Piasters/Qirsh (plural)",
+            "transliteration": "qroosh"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Stating a Full Price"
+        },
+        "text": "To state a full price, you'd combine numbers, the main currency, and the smaller unit. For example: خَمْس لِيرات وخَمْس قُروش (khams leeraat w khams qroosh - five Liras and five Piasters).",
+        "examples": [
+          {
+            "arabic": "خَمْس لِيرات وخَمْس قُروش",
+            "english": "Five Liras and five Piasters",
+            "transliteration": "khams leeraat w khams qroosh"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الكِتاب سِعرو تلات لِيرات.",
+        "english": "The book's price is three Liras.",
+        "transliteration": "el-kitaab se'ro tlaate leeraat."
+      },
+      "context": "Using a number and currency unit."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "عندي قِرْش واحد.",
+        "english": "I have one Piaster.",
+        "transliteration": "'andi qirsh waaḥed."
+      },
+      "context": "Using the smallest currency unit."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "قَدِّيش هاد؟ عشر لِيرات وعشرين قِرْش.",
+        "english": "How much is this? Ten Liras and twenty Piasters.",
+        "transliteration": "addaysh haad? 'ashar leeraat w 'eshreen qirsh."
+      },
+      "context": "Asking and answering a full price with both units."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'one' (masculine)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "تْنَيْن",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "وَاحِد",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "تْلاتة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "وَاحِد (waaḥed) means one (masculine).",
+      "hint": {
+        "transliteration": "waaḥed",
+        "arabic": "وَاحِد"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the plural of 'قِرْش' (qirsh - piaster)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أَقْراش",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "قُروش",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "قِرْشات",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "The plural of قِرْش (qirsh) is قُروش (qroosh).",
+      "hint": {
+        "transliteration": "qroosh",
+        "arabic": "قُروش"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the price: 'Two Liras and five ___'.",
+      "options": [
+        {
+          "id": "a",
+          "text": "مَصاري",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "لِيرات",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "قُروش",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "The smallest currency unit is the qirsh, its plural is qroosh (قُروش).",
+      "hint": {
+        "transliteration": "qroosh",
+        "arabic": "قُروش"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Saying 'It costs...' / 'Its price is...'"
+        },
+        "text": "To say 'It costs...' or 'Its price is...', you use سِعْرو (se'ro) for masculine objects and سِعْرها (se'erha) for feminine objects. The 'o' and 'ha' are possessive suffixes for 'its'.",
+        "examples": [
+          {
+            "arabic": "سِعْرو خَمْس لِيرات.",
+            "english": "Its price is five Liras (masc.).",
+            "transliteration": "se'ro khams leeraat."
+          },
+          {
+            "arabic": "سِعْرها خَمْس لِيرات.",
+            "english": "Its price is five Liras (fem.).",
+            "transliteration": "se'erha khams leeraat."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "The Word 'Discount'"
+        },
+        "text": "The word for 'discount' is خَصْم (khaSm). You might also hear تَنْزِيلات (tanzeelaat) which means 'sales' or 'discounts'.",
+        "examples": [
+          {
+            "arabic": "خَصْم",
+            "english": "Discount",
+            "transliteration": "khaSm"
+          },
+          {
+            "arabic": "تَنْزِيلات",
+            "english": "Sales / Discounts",
+            "transliteration": "tanzeelaat"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Is there a discount?'"
+        },
+        "text": "To ask if there's a discount, you can say: فِي خَصْم؟ (fee khaSm?). فِي means 'there is/are' or 'is there/are there?'",
+        "examples": [
+          {
+            "arabic": "فِي خَصْم؟",
+            "english": "Is there a discount?",
+            "transliteration": "fee khaSm?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "سِعْرها غالي، في خَصْم؟",
+        "english": "Its price is expensive, is there a discount?",
+        "transliteration": "se'erha ghaali, fee khaSm?"
+      },
+      "context": "Combining price statement with discount inquiry."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "سِعْرو عشر دَنانير.",
+        "english": "Its price is ten Dinars (masc.).",
+        "transliteration": "se'ro 'ashar danaaneer."
+      },
+      "context": "Stating the price of a masculine item."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'Its price is...' for a feminine item?",
+      "options": [
+        {
+          "id": "a",
+          "text": "سِعْرو",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "سِعْرها",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "سِعر",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "سِعْرها (se'erha) is used for 'its price' when referring to a feminine object.",
+      "hint": {
+        "transliteration": "se'erha",
+        "arabic": "سِعْرها"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'discount'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "مَصاري",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "خَصْم",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "لِيرَة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "خَصْم (khaSm) means discount.",
+      "hint": {
+        "transliteration": "khaSm",
+        "arabic": "خَصْم"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the question: '___ there a discount?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "كم",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "في",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "وين",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "فِي (fee) means 'there is/are' or 'is there/are there?'",
+      "hint": {
+        "transliteration": "fee",
+        "arabic": "فِي"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing 'I want to pay'"
+        },
+        "text": "To say 'I want to pay', you use بَدّي أَدْفَع (beddi adfa'). بَدّي means 'I want' and أَدْفَع means 'to pay'.",
+        "examples": [
+          {
+            "arabic": "بَدّي أَدْفَع",
+            "english": "I want to pay.",
+            "transliteration": "beddi adfa'"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "The Word 'Receipt'"
+        },
+        "text": "The word for 'receipt' or 'bill' is فاتورَة (fatoora). You'd ask for it after making a purchase.",
+        "examples": [
+          {
+            "arabic": "فاتورَة",
+            "english": "Receipt / Bill",
+            "transliteration": "fatoora"
+          },
+          {
+            "arabic": "ممكن الفاتورَة، إذا سَمَحْت؟",
+            "english": "Could I have the receipt, please?",
+            "transliteration": "mumkin el-fatoora, iza samaḥt?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for 'Change'"
+        },
+        "text": "If you're expecting change, you can refer to it as باقي المَصاري (baaqi el-maSaari), literally 'the rest of the money'.",
+        "examples": [
+          {
+            "arabic": "باقي المَصاري",
+            "english": "The change / Rest of the money",
+            "transliteration": "baaqi el-maSaari"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بَدّي أَدْفَع، ممكن الفاتورَة؟",
+        "english": "I want to pay, may I have the receipt?",
+        "transliteration": "beddi adfa', mumkin el-fatoora?"
+      },
+      "context": "Requesting to pay and for a receipt."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "وين باقي المَصاري؟",
+        "english": "Where is the change?",
+        "transliteration": "wayn baaqi el-maSaari?"
+      },
+      "context": "Asking for the change."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'I want to pay'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بَدّي آكُل",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بَدّي أَروح",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "بَدّي أَدْفَع",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "بَدّي أَدْفَع (beddi adfa') means 'I want to pay'.",
+      "hint": {
+        "transliteration": "beddi adfa'",
+        "arabic": "بَدّي أَدْفَع"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'receipt'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "مَصاري",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "فاتورَة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "سِعر",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "فاتورَة (fatoora) means receipt or bill.",
+      "hint": {
+        "transliteration": "fatoora",
+        "arabic": "فاتورَة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the phrase: 'the ___ of the money' (meaning change)",
+      "options": [
+        {
+          "id": "a",
+          "text": "كل",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "باقي",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "نص",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "باقي المَصاري (baaqi el-maSaari) means the rest of the money, or change.",
+      "hint": {
+        "transliteration": "baaqi",
+        "arabic": "باقي"
+      }
+    }
+  ]
+}

@@ -1,0 +1,842 @@
+{
+  "topicId": "m3-t2",
+  "title": "Asking about Times and Appointments",
+  "dialect": "levantine",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'What time is it?'"
+        },
+        "text": "The most common way to ask 'What time is it?' in Levantine Arabic is to use 'شو الساعة؟' or 'قديش الساعة؟'. Both are widely understood and used interchangeably.",
+        "examples": [
+          {
+            "arabic": "شو الساعة؟",
+            "english": "What time is it?",
+            "transliteration": "Shu as-saa'a?"
+          },
+          {
+            "arabic": "قديش الساعة؟",
+            "english": "What time is it? (literally: How much is the hour?)",
+            "transliteration": "Qaddēsh as-saa'a?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Telling Basic Hours (1-12)"
+        },
+        "text": "To tell the time, you usually start with 'الساعة...' (as-saa'a...), meaning 'The time is...' or 'It is...', followed by the number of the hour. Note that 'واحد' (waḥad) changes to 'وحدة' (waḥdeh) when referring to 'one o'clock' in feminine form for 'الساعة'.",
+        "examples": [
+          {
+            "arabic": "الساعة وحدة.",
+            "english": "It is one o'clock.",
+            "transliteration": "As-saa'a waḥdeh."
+          },
+          {
+            "arabic": "الساعة تْنَين.",
+            "english": "It is two o'clock.",
+            "transliteration": "As-saa'a tnen."
+          },
+          {
+            "arabic": "الساعة خَمسة.",
+            "english": "It is five o'clock.",
+            "transliteration": "As-saa'a khamse."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "'O'clock' / Exactly on the Hour"
+        },
+        "text": "To specify that it's exactly on the hour, you can add 'بالزبط' (biz-zabt) or 'تماماً' (tamāman) after the hour. 'بالزبط' is more common in spoken Levantine.",
+        "examples": [
+          {
+            "arabic": "الساعة ستة بالزبط.",
+            "english": "It is six o'clock sharp.",
+            "transliteration": "As-saa'a sitteh biz-zabt."
+          },
+          {
+            "arabic": "الساعة تسعة تماماً.",
+            "english": "It is nine o'clock exactly.",
+            "transliteration": "As-saa'a tis'a tamāman."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شو الساعة بالزبط؟",
+        "english": "What time is it exactly?",
+        "transliteration": "Shu as-saa'a biz-zabt?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الساعة وحدة تماماً.",
+        "english": "It is exactly one o'clock.",
+        "transliteration": "As-saa'a waḥdeh tamāman."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'What time is it?' in Levantine Arabic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "كيف الحال؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "وين الساعة؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "قديش الساعة؟",
+          "isCorrect": true
+        },
+        {
+          "id": "d",
+          "text": "شو اسمك؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "To ask 'What time is it?', you use 'قديش الساعة؟' or 'شو الساعة؟'.",
+      "hint": {
+        "transliteration": "Qaddēsh as-saa'a?",
+        "arabic": "قديش الساعة؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: It is three o'clock. (الساعة ___)",
+      "options": [
+        {
+          "id": "a",
+          "text": "وحدة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "تلاتة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "خمسة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "The number three is 'تلاتة'.",
+      "hint": {
+        "transliteration": "tlateh",
+        "arabic": "تلاتة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'exactly' or 'sharp' when telling time?",
+      "options": [
+        {
+          "id": "a",
+          "text": "هلا",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بالزبط",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بعدين",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "قبل",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'بالزبط' means 'exactly' or 'sharp'.",
+      "hint": {
+        "transliteration": "biz-zabt",
+        "arabic": "بالزبط"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Half Past (ونص)"
+        },
+        "text": "To express 'half past' the hour (e.g., 3:30), you say the hour followed by 'ونص' (w nuṣṣ), meaning 'and a half'.",
+        "examples": [
+          {
+            "arabic": "الساعة وحدة ونص.",
+            "english": "It is one thirty (half past one).",
+            "transliteration": "As-saa'a waḥdeh w nuṣṣ."
+          },
+          {
+            "arabic": "الساعة سبعة ونص.",
+            "english": "It is seven thirty (half past seven).",
+            "transliteration": "As-saa'a sab'a w nuṣṣ."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "A Quarter Past (وربع)"
+        },
+        "text": "To express 'a quarter past' the hour (e.g., 4:15), you say the hour followed by 'وربع' (w rubu'), meaning 'and a quarter'.",
+        "examples": [
+          {
+            "arabic": "الساعة تلاتة وربع.",
+            "english": "It is three fifteen (a quarter past three).",
+            "transliteration": "As-saa'a tlateh w rubu'."
+          },
+          {
+            "arabic": "الساعة تمانة وربع.",
+            "english": "It is eight fifteen (a quarter past eight).",
+            "transliteration": "As-saa'a tmāneh w rubu'."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "A Quarter To (إلا ربع)"
+        },
+        "text": "To express 'a quarter to' the hour (e.g., 5:45), you say the *next* hour followed by 'إلا ربع' (illa rubu'), meaning 'except a quarter'.",
+        "examples": [
+          {
+            "arabic": "الساعة أربعة إلا ربع.",
+            "english": "It is three forty-five (a quarter to four).",
+            "transliteration": "As-saa'a arba'a illa rubu'."
+          },
+          {
+            "arabic": "الساعة عشرة إلا ربع.",
+            "english": "It is nine forty-five (a quarter to ten).",
+            "transliteration": "As-saa'a 'ashra illa rubu'."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "قديش الساعة هلا؟ الساعة خمسة ونص.",
+        "english": "What time is it now? It's five thirty.",
+        "transliteration": "Qaddēsh as-saa'a halla'? As-saa'a khamse w nuṣṣ."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الموعد الساعة سبعة إلا ربع.",
+        "english": "The appointment is at quarter to seven.",
+        "transliteration": "Al-maw'id as-saa'a sab'a illa rubu'."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'It is two thirty' in Levantine Arabic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "الساعة تْنَين وربع.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الساعة تْنَين ونص.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "الساعة تْنَين إلا ربع.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'ونص' means 'half past'.",
+      "hint": {
+        "transliteration": "As-saa'a tnen w nuṣṣ",
+        "arabic": "الساعة تْنَين ونص."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: It is six forty-five. (الساعة سبعة ___)",
+      "options": [
+        {
+          "id": "a",
+          "text": "ونص",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "وربع",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "إلا ربع",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'إلا ربع' means 'a quarter to'.",
+      "hint": {
+        "transliteration": "illa rubu'",
+        "arabic": "إلا ربع"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What does 'وربع' mean in the context of telling time?",
+      "options": [
+        {
+          "id": "a",
+          "text": "half past",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "a quarter to",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "a quarter past",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'وربع' means 'and a quarter' or 'a quarter past'.",
+      "hint": {
+        "transliteration": "w rubu'",
+        "arabic": "وربع"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Adding Specific Minutes (1-29)"
+        },
+        "text": "For minutes from 1 to 29, you say the hour followed by 'و' (w, 'and') and the number of minutes (دقيقة - daqīqa for singular, دقايق - daqāyiq for plural).",
+        "examples": [
+          {
+            "arabic": "الساعة وحدة و خمس دقايق.",
+            "english": "It is one five.",
+            "transliteration": "As-saa'a waḥdeh w khamas daqāyiq."
+          },
+          {
+            "arabic": "الساعة تسعة و عشرين دقيقة.",
+            "english": "It is nine twenty.",
+            "transliteration": "As-saa'a tis'a w 'ishrīn daqīqa."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Subtracting Specific Minutes (31-59)"
+        },
+        "text": "For minutes from 31 to 59, you say the *next* hour followed by 'إلا' (illa, 'except' or 'to') and the number of minutes remaining until the next hour.",
+        "examples": [
+          {
+            "arabic": "الساعة تلاتة إلا عشر دقايق.",
+            "english": "It is two fifty (ten to three).",
+            "transliteration": "As-saa'a tlateh illa 'ashar daqāyiq."
+          },
+          {
+            "arabic": "الساعة سبعة إلا خمس وعشرين دقيقة.",
+            "english": "It is six thirty-five (twenty-five to seven).",
+            "transliteration": "As-saa'a sab'a illa khamas w 'ishrīn daqīqa."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Time of Day Markers"
+        },
+        "text": "To clarify AM/PM or general time of day, you can add words like 'صباحاً' (ṣabāḥan - in the morning), 'بعد الظهر' (ba'd iḍ-ḍuhur - afternoon), 'المسا' (il-masa - evening), or 'ليلاً' (laylan - at night).",
+        "examples": [
+          {
+            "arabic": "الساعة تسعة صباحاً.",
+            "english": "It is nine AM (nine in the morning).",
+            "transliteration": "As-saa'a tis'a ṣabāḥan."
+          },
+          {
+            "arabic": "الساعة أربعة المسا.",
+            "english": "It is four PM (four in the evening).",
+            "transliteration": "As-saa'a arba'a il-masa."
+          },
+          {
+            "arabic": "الساعة تْنَين بعد الظهر.",
+            "english": "It is two PM (two in the afternoon).",
+            "transliteration": "As-saa'a tnen ba'd iḍ-ḍuhur."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الموعد الساعة عشرة وعشرين دقيقة صباحاً.",
+        "english": "The appointment is at ten twenty AM.",
+        "transliteration": "Al-maw'id as-saa'a 'ashra w 'ishrīn daqīqa ṣabāḥan."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شو الساعة؟ الساعة وحدة إلا خمس دقايق المسا.",
+        "english": "What time is it? It's twelve fifty-five PM (five to one in the evening).",
+        "transliteration": "Shu as-saa'a? As-saa'a waḥdeh illa khamas daqāyiq il-masa."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'It is seven ten' in Levantine Arabic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "الساعة سبعة إلا عشر دقايق.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الساعة سبعة وعشر دقايق.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "الساعة سبعة ونص.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "For minutes 1-29, use 'و' (and) + minutes.",
+      "hint": {
+        "transliteration": "As-saa'a sab'a w 'ashar daqāyiq",
+        "arabic": "الساعة سبعة وعشر دقايق."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: It is four fifty. (الساعة خمسة ___ عشر دقايق)",
+      "options": [
+        {
+          "id": "a",
+          "text": "و",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "إلا",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مع",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "For minutes 31-59, use 'إلا' (except/to) + remaining minutes.",
+      "hint": {
+        "transliteration": "illa",
+        "arabic": "إلا"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word indicates 'in the morning'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "المسا",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "صباحاً",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بعد الظهر",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'صباحاً' means 'in the morning' or 'AM'.",
+      "hint": {
+        "transliteration": "ṣabāḥan",
+        "arabic": "صباحاً"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'When is the appointment?'"
+        },
+        "text": "To ask about the time of an appointment, you can use 'إيمتى الموعد؟' (ēmta l-maw'id?) or 'متى الموعد؟' (mata l-maw'id?). 'إيمتى' is more common in spoken Levantine.",
+        "examples": [
+          {
+            "arabic": "إيمتى الموعد؟",
+            "english": "When is the appointment?",
+            "transliteration": "Ēmta l-maw'id?"
+          },
+          {
+            "arabic": "متى الموعد تبعك؟",
+            "english": "When is your appointment?",
+            "transliteration": "Mata l-maw'id taba'ak?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Stating the Appointment Time"
+        },
+        "text": "To state the appointment time, you say 'الموعد الساعة...' (al-maw'id as-saa'a...), followed by the time, using the time-telling structures you've learned.",
+        "examples": [
+          {
+            "arabic": "الموعد الساعة تسعة الصبح.",
+            "english": "The appointment is at nine AM.",
+            "transliteration": "Al-maw'id as-saa'a tis'a iṣ-ṣubḥ."
+          },
+          {
+            "arabic": "الموعد الساعة أربعة ونص بعد الظهر.",
+            "english": "The appointment is at four thirty PM.",
+            "transliteration": "Al-maw'id as-saa'a arba'a w nuṣṣ ba'd iḍ-ḍuhur."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Do you have an appointment?'"
+        },
+        "text": "To ask if someone has an appointment, you can say 'عندَك موعد؟' (indak maw'id?) for a male, or 'عندِك موعد؟' (indik maw'id?) for a female. The 'k' sound changes based on gender, indicated by diacritics.",
+        "examples": [
+          {
+            "arabic": "عندَك موعد؟ (to a male)",
+            "english": "Do you have an appointment?",
+            "transliteration": "Indak maw'id?"
+          },
+          {
+            "arabic": "عندِك موعد؟ (to a female)",
+            "english": "Do you have an appointment?",
+            "transliteration": "Indik maw'id?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "إيمتى موعد الدكتور؟",
+        "english": "When is the doctor's appointment?",
+        "transliteration": "Ēmta maw'id id-duktōr?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "عندي موعد الساعة وحدة ونص المسا.",
+        "english": "I have an appointment at one thirty PM.",
+        "transliteration": "Indi maw'id as-saa'a waḥdeh w nuṣṣ il-masa."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which is the most common Levantine way to ask 'When is the appointment?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "شو اسم الموعد؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "إيمتى الموعد؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كم موعد يوجد؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'إيمتى الموعد؟' is the common way to ask 'When is the appointment?' in Levantine.",
+      "hint": {
+        "transliteration": "Ēmta l-maw'id?",
+        "arabic": "إيمتى الموعد؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence (to a female): Do you have an appointment? (___ موعد؟)",
+      "options": [
+        {
+          "id": "a",
+          "text": "عندَك",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "عندِك",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "عندي",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "For a female, 'you have' is 'عندِك'.",
+      "hint": {
+        "transliteration": "Indik",
+        "arabic": "عندِك"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would you state: 'The appointment is at eight o'clock in the evening'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "الموعد الساعة تمانة صباحاً.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الموعد الساعة تمانة المسا.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "الموعد تمانة بالزبط.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'المسا' means 'in the evening'.",
+      "hint": {
+        "transliteration": "Al-maw'id as-saa'a tmāneh il-masa",
+        "arabic": "الموعد الساعة تمانة المسا."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Requesting to Schedule an Appointment"
+        },
+        "text": "To politely ask to schedule an appointment, you can use 'فيك نحدّد موعد؟' (fīk nḥaddid maw'id?) for a male, or 'فيكِ نحدّد موعد؟' (fīki nḥaddid maw'id?) for a female. Or, more generally, 'ممكن نحدّد موعد؟' (mumkin nḥaddid maw'id?).",
+        "examples": [
+          {
+            "arabic": "فيك نحدّد موعد بكرة؟ (to a male)",
+            "english": "Can we schedule an appointment tomorrow?",
+            "transliteration": "Fīk nḥaddid maw'id bukra?"
+          },
+          {
+            "arabic": "ممكن نحدّد موعد جديد؟",
+            "english": "Is it possible to schedule a new appointment?",
+            "transliteration": "Mumkin nḥaddid maw'id jadīd?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for Availability (Day/Time)"
+        },
+        "text": "To ask what day or time suits someone, you can say 'أي يوم/وقت بيناسبَك؟' (ay yōm/waqt bināsibak?) for a male, or 'أي يوم/وقت بيناسبِك؟' (ay yōm/waqt bināsibik?) for a female.",
+        "examples": [
+          {
+            "arabic": "أي وقت بيناسبَك؟ (to a male)",
+            "english": "What time suits you?",
+            "transliteration": "Ay waqt bināsibak?"
+          },
+          {
+            "arabic": "أي يوم بيناسبِك؟ (to a female)",
+            "english": "What day suits you?",
+            "transliteration": "Ay yōm bināsibik?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Confirming an Appointment"
+        },
+        "text": "To confirm an appointment, you can use simple affirmations like 'تمام' (tamām - okay/perfect), 'أكيد' (akīd - certainly/sure), or 'هيك منيح' (hēk mnīḥ - that's good).",
+        "examples": [
+          {
+            "arabic": "الموعد بكرة الساعة عشرة. تمام؟",
+            "english": "The appointment is tomorrow at ten. Okay?",
+            "transliteration": "Al-maw'id bukra as-saa'a 'ashra. Tamām?"
+          },
+          {
+            "arabic": "أكيد، بيناسبني هل الوقت.",
+            "english": "Certainly, this time suits me.",
+            "transliteration": "Akīd, bināsibni hal-waqt."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "فيكِ نحدّد موعد جديد إله؟",
+        "english": "Can we schedule a new appointment for him (to a female)?",
+        "transliteration": "Fīki nḥaddid maw'id jadīd ilo?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أي يوم بيناسبك عشان الموعد؟",
+        "english": "What day suits you for the appointment?",
+        "transliteration": "Ay yōm bināsibak 'ashān il-maw'id?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'Can we schedule an appointment?' (to a male)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "وين الموعد؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "فيك نحدّد موعد؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مين حدّد الموعد؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'فيك نحدّد موعد؟' is used to ask to schedule an appointment (to a male).",
+      "hint": {
+        "transliteration": "Fīk nḥaddid maw'id?",
+        "arabic": "فيك نحدّد موعد؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence (to a female): What day suits you? (أي يوم ___؟)",
+      "options": [
+        {
+          "id": "a",
+          "text": "بيناسبَك",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بيناسبِك",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بيناسبني",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "For a female, 'suits you' is 'بيناسبِك'.",
+      "hint": {
+        "transliteration": "bināsibik",
+        "arabic": "بيناسبِك"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word can be used to confirm an appointment?",
+      "options": [
+        {
+          "id": "a",
+          "text": "لا",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بعدين",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "أكيد",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'أكيد' means 'certainly' and is used for confirmation.",
+      "hint": {
+        "transliteration": "akīd",
+        "arabic": "أكيد"
+      }
+    }
+  ]
+}

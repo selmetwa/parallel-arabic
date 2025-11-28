@@ -1,0 +1,839 @@
+{
+  "topicId": "m1-t1",
+  "title": "Greetings and Apologies in Darija",
+  "dialect": "darija",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "General Greeting: Hello / Peace be upon you"
+        },
+        "text": "The most common and respectful greeting in Darija, suitable for any time of day and any situation, is 'As-salamu alaykum'. It literally means 'Peace be upon you'. The standard response is 'Wa alaykum as-salam', meaning 'And upon you be peace'.",
+        "examples": [
+          {
+            "arabic": "السَّلَامُ عَلَيْكُمْ",
+            "english": "Hello / Peace be upon you (greeting)",
+            "transliteration": "As-salamu alaykum"
+          },
+          {
+            "arabic": "وَعَلَيْكُمُ السَّلَامْ",
+            "english": "And upon you be peace (response)",
+            "transliteration": "Wa alaykum as-salam"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Morning Greeting: Good Morning"
+        },
+        "text": "To greet someone specifically in the morning, you can say 'Sabah lkhir'. The common response is 'Sabah nnoor', which literally means 'morning of light'.",
+        "examples": [
+          {
+            "arabic": "صَبَاح الْخِيرْ",
+            "english": "Good morning",
+            "transliteration": "Sabah lkhir"
+          },
+          {
+            "arabic": "صَبَاح النُّورْ",
+            "english": "Morning of light (response to 'good morning')",
+            "transliteration": "Sabah nnoor"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Evening Greeting: Good Evening"
+        },
+        "text": "Similarly, for an evening greeting, you say 'Massa lkhir'. The response follows the same pattern as the morning greeting: 'Massa nnoor'.",
+        "examples": [
+          {
+            "arabic": "مَسَاء الْخِيرْ",
+            "english": "Good evening",
+            "transliteration": "Massa lkhir"
+          },
+          {
+            "arabic": "مَسَاء النُّورْ",
+            "english": "Evening of light (response to 'good evening')",
+            "transliteration": "Massa nnoor"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "السَّلَامُ عَلَيْكُمْ، صَبَاح الْخِيرْ.",
+        "english": "Hello, good morning.",
+        "transliteration": "As-salamu alaykum, sabah lkhir."
+      },
+      "context": "A general and morning greeting combined."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "وَعَلَيْكُمُ السَّلَامْ، مَسَاء النُّورْ.",
+        "english": "And upon you be peace, good evening (response).",
+        "transliteration": "Wa alaykum as-salam, massa nnoor."
+      },
+      "context": "Responding to a general and evening greeting."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the most common general greeting in Darija?",
+      "options": [
+        {
+          "id": "a",
+          "text": "صَبَاح الْخِيرْ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "السَّلَامُ عَلَيْكُمْ",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مَسَاء الْخِيرْ",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "السَّلَامُ عَلَيْكُمْ is the universal greeting.",
+      "hint": {
+        "transliteration": "As-salamu alaykum",
+        "arabic": "السَّلَامُ عَلَيْكُمْ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you respond to 'صَبَاح الْخِيرْ'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "وَعَلَيْكُمُ السَّلَامْ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "صَبَاح النُّورْ",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مَسَاء النُّورْ",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "The standard response to 'Sabah lkhir' is 'Sabah nnoor'.",
+      "hint": {
+        "transliteration": "Sabah nnoor",
+        "arabic": "صَبَاح النُّورْ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Select the correct phrase for 'Good evening'.",
+      "options": [
+        {
+          "id": "a",
+          "text": "صَبَاح الْخِيرْ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مَسَاء الْخِيرْ",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "صَبَاح النُّورْ",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'Massa lkhir' means Good evening.",
+      "hint": {
+        "transliteration": "Massa lkhir",
+        "arabic": "مَسَاء الْخِيرْ"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'How are you?' (to a male)"
+        },
+        "text": "When asking a male 'How are you?', you can use 'Kif dayer?' or the more general 'Lbas?' which means 'Are you well?'. 'Lbas?' is widely used for both genders.",
+        "examples": [
+          {
+            "arabic": "كِيفْ دَايَرْ؟",
+            "english": "How are you? (to a male)",
+            "transliteration": "Kif dayer?"
+          },
+          {
+            "arabic": "لَبَاسْ؟",
+            "english": "Are you well? / How are you? (to male or female)",
+            "transliteration": "Lbas?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'How are you?' (to a female)"
+        },
+        "text": "To ask a female 'How are you?', the phrase changes slightly to 'Kif dayra?'. 'Lbas?' remains the same for females as it is gender-neutral.",
+        "examples": [
+          {
+            "arabic": "كِيفْ دَايْرَة؟",
+            "english": "How are you? (to a female)",
+            "transliteration": "Kif dayra?"
+          },
+          {
+            "arabic": "لَبَاسْ؟",
+            "english": "Are you well? / How are you? (to male or female)",
+            "transliteration": "Lbas?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Responding to 'How are you?'"
+        },
+        "text": "Common responses to 'How are you?' include 'Bikhir, lhamdoulillah' (I'm good, thanks to God), 'Ghayya' (Great/Fine), or 'Kolshi mzyan' (Everything is good/well).",
+        "examples": [
+          {
+            "arabic": "بْخِيرْ، الْحَمْدُ لِلَّهْ.",
+            "english": "I'm good, thanks to God.",
+            "transliteration": "Bikhir, lhamdoulillah."
+          },
+          {
+            "arabic": "غَايَة.",
+            "english": "Great / Fine.",
+            "transliteration": "Ghayya."
+          },
+          {
+            "arabic": "كُلْشِي مْزْيَانْ.",
+            "english": "Everything is good / well.",
+            "transliteration": "Kolshi mzyan."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "السَّلَامُ عَلَيْكُمْ، كِيفْ دَايَرْ؟",
+        "english": "Hello, how are you? (to a male)",
+        "transliteration": "As-salamu alaykum, kif dayer?"
+      },
+      "context": "Greeting a male and asking about his well-being."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "صَبَاح الْخِيرْ، كِيفْ دَايْرَة؟",
+        "english": "Good morning, how are you? (to a female)",
+        "transliteration": "Sabah lkhir, kif dayra?"
+      },
+      "context": "Greeting a female in the morning and asking about her well-being."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "لَبَاسْ؟ بْخِيرْ الْحَمْدُ لِلَّهْ.",
+        "english": "Are you well? I'm good, thanks to God.",
+        "transliteration": "Lbas? Bikhir, lhamdoulillah."
+      },
+      "context": "A common exchange about well-being."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would you ask 'How are you?' to a male friend?",
+      "options": [
+        {
+          "id": "a",
+          "text": "كِيفْ دَايْرَة؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كِيفْ دَايَرْ؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "صَبَاح النُّورْ",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'Kif dayer?' is used for a male.",
+      "hint": {
+        "transliteration": "Kif dayer?",
+        "arabic": "كِيفْ دَايَرْ؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase is used to ask 'How are you?' to a female?",
+      "options": [
+        {
+          "id": "a",
+          "text": "كِيفْ دَايَرْ؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "لَبَاسْ؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مَسَاء الْخِيرْ",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'Lbas?' is a gender-neutral way to ask 'Are you well?'. 'كِيفْ دَايْرَة؟' is also correct, but not an option here.",
+      "hint": {
+        "transliteration": "Lbas?",
+        "arabic": "لَبَاسْ؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is a common response meaning 'I'm good, thanks to God'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "غَايَة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كُلْشِي مْزْيَانْ",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "بْخِيرْ الْحَمْدُ لِلَّهْ",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'Bikhir, lhamdoulillah' is the full phrase for 'I'm good, thanks to God'.",
+      "hint": {
+        "transliteration": "Bikhir, lhamdoulillah",
+        "arabic": "بْخِيرْ الْحَمْدُ لِلَّهْ"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Welcome"
+        },
+        "text": "'Marhaba' is used to welcome someone. It's a friendly and versatile greeting.",
+        "examples": [
+          {
+            "arabic": "مَرْحَبَا",
+            "english": "Welcome",
+            "transliteration": "Marhaba"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Goodbye"
+        },
+        "text": "The most common way to say goodbye in Darija is 'Bsslama'. It can be used in most situations.",
+        "examples": [
+          {
+            "arabic": "بْسْلَامَة",
+            "english": "Goodbye / Go in peace",
+            "transliteration": "Bsslama"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "See you later"
+        },
+        "text": "To express 'See you later', you can say 'Nshufk mn ba'd'. This is used when you expect to see the person again soon.",
+        "examples": [
+          {
+            "arabic": "نْشُوفْكَ مِنْ بْعْدْ",
+            "english": "See you later (to a male)",
+            "transliteration": "Nshufk mn ba'd"
+          },
+          {
+            "arabic": "نْشُوفْكِ مِنْ بْعْدْ",
+            "english": "See you later (to a female)",
+            "transliteration": "Nshufki mn ba'd",
+            "diacriticalNotes": "The kasra (ِ) on the 'ك' indicates addressing a female."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "مَرْحَبَا بْكُمْ فِ الْمَغْرِبْ.",
+        "english": "Welcome to Morocco (plural).",
+        "transliteration": "Marhaba bikum fi l-Maghrib."
+      },
+      "context": "Welcoming people to a place."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بْسْلَامَة، نْشُوفْكَ مِنْ بْعْدْ.",
+        "english": "Goodbye, see you later (to male).",
+        "transliteration": "Bsslama, nshufk mn ba'd."
+      },
+      "context": "Saying goodbye and indicating a future meeting."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "مَرْحَبَا بِكِ، كِيفْ دَايْرَة؟",
+        "english": "Welcome (to female), how are you?",
+        "transliteration": "Marhaba biki, kif dayra?"
+      },
+      "context": "Welcoming a female and asking about her well-being."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Darija word for 'Welcome'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "مَسَاء الْخِيرْ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بْسْلَامَة",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "مَرْحَبَا",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'Marhaba' means welcome.",
+      "hint": {
+        "transliteration": "Marhaba",
+        "arabic": "مَرْحَبَا"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'Goodbye' in Darija?",
+      "options": [
+        {
+          "id": "a",
+          "text": "نْشُوفْكَ مِنْ بْعْدْ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بْسْلَامَة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كُلْشِي مْزْيَانْ",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'Bsslama' is the common way to say goodbye.",
+      "hint": {
+        "transliteration": "Bsslama",
+        "arabic": "بْسْلَامَة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'See you later' (to a male)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "نْشُوفْكِ مِنْ بْعْدْ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "نْشُوفْكَ مِنْ بْعْدْ",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مَرْحَبَا",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "The 'كَ' (ka) with fatha indicates addressing a male.",
+      "hint": {
+        "transliteration": "Nshufk mn ba'd",
+        "arabic": "نْشُوفْكَ مِنْ بْعْدْ"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Sorry / Excuse me (to a male)"
+        },
+        "text": "To say 'Sorry' or 'Excuse me' to a male, you use 'Smeh li'. This can be used for minor apologies or to get someone's attention.",
+        "examples": [
+          {
+            "arabic": "سْمَحْ لِي",
+            "english": "Sorry / Excuse me (to a male)",
+            "transliteration": "Smeh li"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Sorry / Excuse me (to a female)"
+        },
+        "text": "When apologizing or asking for attention from a female, the verb changes to 'Smhi li'.",
+        "examples": [
+          {
+            "arabic": "سْمْحِي لِي",
+            "english": "Sorry / Excuse me (to a female)",
+            "transliteration": "Smhi li"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Excuse me / Please (general polite address)"
+        },
+        "text": "'Afak' is a very useful and polite word meaning 'please' or 'excuse me'. It's gender-neutral and can be used to ask for something or get attention politely. 'Smeh li' can also be used for 'excuse me' in a 'passing through' context.",
+        "examples": [
+          {
+            "arabic": "عْفَاكْ",
+            "english": "Excuse me / Please",
+            "transliteration": "Afak"
+          },
+          {
+            "arabic": "سْمَحْ لِي، عْفَاكْ.",
+            "english": "Excuse me, please (to a male).",
+            "transliteration": "Smeh li, afak."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "سْمَحْ لِي، مَعَنْدِيشْ الْوَقْتْ.",
+        "english": "Sorry (to male), I don't have time.",
+        "transliteration": "Smeh li, ma'andish lwqt."
+      },
+      "context": "Apologizing to a male for not having time."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "سْمْحِي لِي، مَشِيْتْشْ.",
+        "english": "Sorry (to female), I didn't go.",
+        "transliteration": "Smhi li, mashitsh."
+      },
+      "context": "Apologizing to a female for not going somewhere."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "عْفَاكْ، وَاشْ يُمْكِنْ لِي نْدُوزْ؟",
+        "english": "Excuse me, may I pass?",
+        "transliteration": "Afak, wash yumkin li ndooz?"
+      },
+      "context": "Politely asking permission to pass through a crowded area."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'Sorry' to a male in Darija?",
+      "options": [
+        {
+          "id": "a",
+          "text": "سْمْحِي لِي",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "عْفَاكْ",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "سْمَحْ لِي",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'Smeh li' is the masculine form for 'Sorry/Excuse me'.",
+      "hint": {
+        "transliteration": "Smeh li",
+        "arabic": "سْمَحْ لِي"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "To apologize to a female, you would say:",
+      "options": [
+        {
+          "id": "a",
+          "text": "سْمْحِي لِي",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "سْمَحْ لِي",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "مَرْحَبَا",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "'Smhi li' is the feminine form for 'Sorry/Excuse me'.",
+      "hint": {
+        "transliteration": "Smhi li",
+        "arabic": "سْمْحِي لِي"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word can be used for 'Excuse me' or 'Please' in a polite general context?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بْسْلَامَة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "عْفَاكْ",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كُلْشِي مْزْيَانْ",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'Afak' is a versatile word for politeness.",
+      "hint": {
+        "transliteration": "Afak",
+        "arabic": "عْفَاكْ"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "It's okay / No problem"
+        },
+        "text": "When someone apologizes to you, a common response to reassure them is 'Mashi mushkil', meaning 'No problem' or 'It's okay'.",
+        "examples": [
+          {
+            "arabic": "مَاشِي مُشْكِلْ",
+            "english": "No problem / It's okay",
+            "transliteration": "Mashi mushkil"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "I am sorry (stronger apology, male)"
+        },
+        "text": "For a stronger or more formal apology, a male would say 'Ana asif'. This is used when expressing deeper regret.",
+        "examples": [
+          {
+            "arabic": "أَنَا آسِفْ",
+            "english": "I am sorry (male)",
+            "transliteration": "Ana asif"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "I am sorry (stronger apology, female)"
+        },
+        "text": "Similarly, a female expressing a stronger apology would say 'Ana asifa'.",
+        "examples": [
+          {
+            "arabic": "أَنَا آسِفَة",
+            "english": "I am sorry (female)",
+            "transliteration": "Ana asifa"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "سْمَحْ لِي، أَخِي. مَاشِي مُشْكِلْ.",
+        "english": "Sorry, my brother. No problem.",
+        "transliteration": "Smeh li, akhi. Mashi mushkil."
+      },
+      "context": "An apology from a male and the reassuring response."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أَنَا آسِفَة عَلَى التَّأْخِيرْ.",
+        "english": "I am sorry (female) for the delay.",
+        "transliteration": "Ana asifa 'ala t-ta'khir."
+      },
+      "context": "A female expressing regret for being late."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "مَاشِي مُشْكِلْ، أَنَا آسِفْ أَيْضًا.",
+        "english": "No problem, I am sorry (male) too.",
+        "transliteration": "Mashi mushkil, ana asif aydan."
+      },
+      "context": "Someone saying 'no problem' and then apologizing themselves (male)."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'No problem' in Darija?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أَنَا آسِفْ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مَاشِي مُشْكِلْ",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "سْمْحِي لِي",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'Mashi mushkil' means 'No problem'.",
+      "hint": {
+        "transliteration": "Mashi mushkil",
+        "arabic": "مَاشِي مُشْكِلْ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Choose the phrase for 'I am sorry' when spoken by a male.",
+      "options": [
+        {
+          "id": "a",
+          "text": "أَنَا آسِفَة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أَنَا آسِفْ",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "سْمَحْ لِي",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'Ana asif' is the masculine form for 'I am sorry'.",
+      "hint": {
+        "transliteration": "Ana asif",
+        "arabic": "أَنَا آسِفْ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would a female express 'I am sorry' (stronger form)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أَنَا آسِفَة",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "أَنَا آسِفْ",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "مَاشِي مُشْكِلْ",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "'Ana asifa' is the feminine form for 'I am sorry'.",
+      "hint": {
+        "transliteration": "Ana asifa",
+        "arabic": "أَنَا آسِفَة"
+      }
+    }
+  ]
+}

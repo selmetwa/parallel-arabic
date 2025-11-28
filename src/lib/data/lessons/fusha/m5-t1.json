@@ -1,0 +1,905 @@
+{
+  "topicId": "m5-t1",
+  "title": "Asking About the Location of Things",
+  "dialect": "fusha",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "The Question Word: Where?",
+          "arabic": "أين؟"
+        },
+        "text": "To inquire about the location of an object, we use the interrogative pronoun أين؟ (Ayna?). This word always comes at the beginning of the question.",
+        "examples": [
+          {
+            "arabic": "أينَ الكتاب؟",
+            "english": "Where is the book?",
+            "transliteration": "Ayna al-kitāb?",
+            "diacriticalNotes": "Note the fathah on the final 'ن' in أينَ when asking a question."
+          },
+          {
+            "arabic": "أينَ المفتاح؟",
+            "english": "Where is the key?",
+            "transliteration": "Ayna al-miftāḥ?",
+            "diacriticalNotes": "Note the fathah on the final 'ن' in أينَ when asking a question."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Masculine 'It Is': هو",
+          "arabic": "هو"
+        },
+        "text": "When referring to the location of a masculine singular item, we use the pronoun هو (Huwa), which means 'he' or 'it'. Remember to identify the gender of the noun.",
+        "examples": [
+          {
+            "arabic": "الكتاب هو...",
+            "english": "The book, it is...",
+            "transliteration": "Al-kitāb huwa...",
+            "diacriticalNotes": "Note the dammah on the final 'و' in هو."
+          },
+          {
+            "arabic": "القلم هو...",
+            "english": "The pen, it is...",
+            "transliteration": "Al-qalam huwa...",
+            "diacriticalNotes": "Note the dammah on the final 'و' in هو."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Feminine 'It Is': هي",
+          "arabic": "هي"
+        },
+        "text": "For feminine singular items, the pronoun used is هي (Hiya), meaning 'she' or 'it'. Feminine nouns often end with a taa’ marbutah (ة / ـة).",
+        "examples": [
+          {
+            "arabic": "السيارة هي...",
+            "english": "The car, it is...",
+            "transliteration": "As-sayyārah hiya...",
+            "diacriticalNotes": "Note the fathah on the final 'ي' in هي."
+          },
+          {
+            "arabic": "الطاولة هي...",
+            "english": "The table, it is...",
+            "transliteration": "At-ṭāwilah hiya...",
+            "diacriticalNotes": "Note the fathah on the final 'ي' in هي."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أينَ القلم؟",
+        "english": "Where is the pen?",
+        "transliteration": "Ayna al-qalam?"
+      },
+      "context": "Asking about the location of a masculine object."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أينَ السيارة؟",
+        "english": "Where is the car?",
+        "transliteration": "Ayna as-sayyārah?"
+      },
+      "context": "Asking about the location of a feminine object."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'where'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ماذا",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "متى",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "أين",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "أين (Ayna) is the Arabic word for 'where'.",
+      "hint": {
+        "transliteration": "Ayna",
+        "arabic": "أين"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'it is' for a masculine noun like 'كتاب' (book)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "هي",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "هو",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أنا",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "هو (Huwa) is the masculine singular pronoun, meaning 'he' or 'it'.",
+      "hint": {
+        "transliteration": "Huwa",
+        "arabic": "هو"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'it is' for a feminine noun like 'طاولة' (table)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "هو",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "نحن",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "هي",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "هي (Hiya) is the feminine singular pronoun, meaning 'she' or 'it'.",
+      "hint": {
+        "transliteration": "Hiya",
+        "arabic": "هي"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Here and There: هنا وهناك",
+          "arabic": "هنا وهناك"
+        },
+        "text": "To give a general location, use هنا (Hunā) for 'here' and هناك (Hunāka) for 'there'.",
+        "examples": [
+          {
+            "arabic": "الكتاب هنا.",
+            "english": "The book is here.",
+            "transliteration": "Al-kitāb hunā."
+          },
+          {
+            "arabic": "السيارة هناك.",
+            "english": "The car is there.",
+            "transliteration": "As-sayyārah hunāka."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "In/Inside: في",
+          "arabic": "في"
+        },
+        "text": "The preposition في (Fī) means 'in' or 'inside'. It is used to describe an object contained within another.",
+        "examples": [
+          {
+            "arabic": "المفتاح في الحقيبة.",
+            "english": "The key is in the bag.",
+            "transliteration": "Al-miftāḥ fī al-ḥaqībah."
+          },
+          {
+            "arabic": "القلم في الصندوق.",
+            "english": "The pen is in the box.",
+            "transliteration": "Al-qalam fī aṣ-ṣundūq."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "On/On Top Of: على",
+          "arabic": "على"
+        },
+        "text": "To say something is 'on' or 'on top of' a surface, use the preposition على (ʿAlā).",
+        "examples": [
+          {
+            "arabic": "القلم على الطاولة.",
+            "english": "The pen is on the table.",
+            "transliteration": "Al-qalam ʿalā aṭ-ṭāwilah."
+          },
+          {
+            "arabic": "الكتاب على الكرسي.",
+            "english": "The book is on the chair.",
+            "transliteration": "Al-kitāb ʿalā al-kursī."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أينَ المفتاح؟ هو في الحقيبة.",
+        "english": "Where is the key? It is in the bag.",
+        "transliteration": "Ayna al-miftāḥ? Huwa fī al-ḥaqībah."
+      },
+      "context": "Combining 'where', 'it is' (masculine), and 'in'."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "السيارة هناكَ، على الطريق.",
+        "english": "The car is there, on the road.",
+        "transliteration": "As-sayyārah hunāka, ʿalā aṭ-ṭarīq."
+      },
+      "context": "Using 'there' and 'on' with a feminine noun."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الكتاب هنا، على المكتب.",
+        "english": "The book is here, on the desk.",
+        "transliteration": "Al-kitāb hunā, ʿalā al-maktab."
+      },
+      "context": "Using 'here' and 'on' with a masculine noun."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: القلم ___ الطاولة. (The pen is ___ the table.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "في",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "على",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "هنا",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "على (ʿAlā) means 'on' or 'on top of'.",
+      "hint": {
+        "transliteration": "ʿalā",
+        "arabic": "على"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'here'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "هناك",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أين",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "هنا",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "هنا (Hunā) means 'here'.",
+      "hint": {
+        "transliteration": "Hunā",
+        "arabic": "هنا"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Choose the correct preposition for 'The book is in the bag.'",
+      "options": [
+        {
+          "id": "a",
+          "text": "على",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "في",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "تحت",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "في (Fī) means 'in' or 'inside'.",
+      "hint": {
+        "transliteration": "fī",
+        "arabic": "في"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Under: تحت",
+          "arabic": "تحت"
+        },
+        "text": "To describe an object located 'under' another, use the preposition تحت (Taḥta).",
+        "examples": [
+          {
+            "arabic": "القطة تحتَ الطاولة.",
+            "english": "The cat is under the table.",
+            "transliteration": "Al-qiṭṭah taḥta aṭ-ṭāwilah.",
+            "diacriticalNotes": "Note the fathah on the final 'ت' of تحتَ when followed by a noun."
+          },
+          {
+            "arabic": "الحذاء تحتَ السرير.",
+            "english": "The shoe is under the bed.",
+            "transliteration": "Al-ḥidhāʾ taḥta as-sarīr.",
+            "diacriticalNotes": "Note the fathah on the final 'ت' of تحتَ when followed by a noun."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Next To/Beside: بجانب",
+          "arabic": "بجانب"
+        },
+        "text": "The phrase بجانب (Bijānib) means 'next to' or 'beside'. It's commonly used to indicate proximity.",
+        "examples": [
+          {
+            "arabic": "المكتب بجانب النافذة.",
+            "english": "The desk is next to the window.",
+            "transliteration": "Al-maktab bijānib an-nāfidhah."
+          },
+          {
+            "arabic": "البيت بجانب المسجد.",
+            "english": "The house is next to the mosque.",
+            "transliteration": "Al-bayt bijānib al-masjid."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "In Front Of: أمام",
+          "arabic": "أمام"
+        },
+        "text": "To say something is 'in front of' another, use the preposition أمام (Amāma).",
+        "examples": [
+          {
+            "arabic": "السيارة أمامَ البيت.",
+            "english": "The car is in front of the house.",
+            "transliteration": "As-sayyārah amāma al-bayt.",
+            "diacriticalNotes": "Note the fathah on the final 'م' of أمامَ when followed by a noun."
+          },
+          {
+            "arabic": "السبورة أمامَ الطلاب.",
+            "english": "The whiteboard is in front of the students.",
+            "transliteration": "As-sabbūrah amāma aṭ-ṭullāb.",
+            "diacriticalNotes": "Note the fathah on the final 'م' of أمامَ when followed by a noun."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أينَ القطة؟ هي تحتَ الكرسي.",
+        "english": "Where is the cat? It is under the chair.",
+        "transliteration": "Ayna al-qiṭṭah? Hiya taḥta al-kursī."
+      },
+      "context": "Asking about a feminine noun and stating its location 'under'."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "القلم بجانب الكتاب.",
+        "english": "The pen is next to the book.",
+        "transliteration": "Al-qalam bijānib al-kitāb."
+      },
+      "context": "Describing the location of a masculine noun 'next to' another."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "المعلم أمامَ الفصل.",
+        "english": "The teacher is in front of the class.",
+        "transliteration": "Al-muʿallim amāma al-faṣl."
+      },
+      "context": "Stating the location of the teacher 'in front of' the class."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: الكرسي ___ الطاولة. (The chair is ___ the table.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "فوق",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أمام",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "تحت",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "تحت (Taḥta) means 'under'.",
+      "hint": {
+        "transliteration": "taḥta",
+        "arabic": "تحت"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'next to' or 'beside'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "في",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بجانب",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "على",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "بجانب (Bijānib) means 'next to' or 'beside'.",
+      "hint": {
+        "transliteration": "bijānib",
+        "arabic": "بجانب"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Choose the correct preposition for 'The car is in front of the house.'",
+      "options": [
+        {
+          "id": "a",
+          "text": "خلف",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أمام",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بين",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "أمام (Amāma) means 'in front of'.",
+      "hint": {
+        "transliteration": "amāma",
+        "arabic": "أمام"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Behind: خلف",
+          "arabic": "خلف"
+        },
+        "text": "To indicate an object is 'behind' another, use the preposition خلف (Khalfa).",
+        "examples": [
+          {
+            "arabic": "المسجد خلفَ البنك.",
+            "english": "The mosque is behind the bank.",
+            "transliteration": "Al-masjid khalfa al-bank.",
+            "diacriticalNotes": "Note the fathah on the final 'ف' of خلفَ when followed by a noun."
+          },
+          {
+            "arabic": "الشجرة خلفَ البيت.",
+            "english": "The tree is behind the house.",
+            "transliteration": "Ash-shajarah khalfa al-bayt.",
+            "diacriticalNotes": "Note the fathah on the final 'ف' of خلفَ when followed by a noun."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Above: فوق",
+          "arabic": "فوق"
+        },
+        "text": "The preposition فوق (Fawqa) means 'above'. It describes something higher than another object, not necessarily touching it (unlike على, which implies direct contact).",
+        "examples": [
+          {
+            "arabic": "الطيور فوقَ الشجرة.",
+            "english": "The birds are above the tree.",
+            "transliteration": "Aṭ-ṭuyūr fawqa ash-shajarah.",
+            "diacriticalNotes": "Note the fathah on the final 'ق' of فوقَ when followed by a noun."
+          },
+          {
+            "arabic": "السقف فوقَ الرأس.",
+            "english": "The ceiling is above the head.",
+            "transliteration": "As-saqf fawqa ar-raʾs.",
+            "diacriticalNotes": "Note the fathah on the final 'ق' of فوقَ when followed by a noun."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Between: بين",
+          "arabic": "بين"
+        },
+        "text": "To state that an object is positioned 'between' two other things, use the preposition بين (Bayna).",
+        "examples": [
+          {
+            "arabic": "المكتب بينَ الكرسي والطاولة.",
+            "english": "The desk is between the chair and the table.",
+            "transliteration": "Al-maktab bayna al-kursī wa aṭ-ṭāwilah.",
+            "diacriticalNotes": "Note the fathah on the final 'ن' of بينَ when followed by a noun."
+          },
+          {
+            "arabic": "الكتاب بينَ القلمين.",
+            "english": "The book is between the two pens.",
+            "transliteration": "Al-kitāb bayna al-qalamayn.",
+            "diacriticalNotes": "Note the fathah on the final 'ن' of بينَ when followed by a noun."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الحديقة خلفَ المدرسة.",
+        "english": "The garden is behind the school.",
+        "transliteration": "Al-ḥadīqah khalfa al-madrasah."
+      },
+      "context": "Stating the location of a feminine noun 'behind' another."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الطائرة تحلق فوقَ المدينة.",
+        "english": "The airplane flies above the city.",
+        "transliteration": "Aṭ-ṭāʾirah tuḥalliq fawqa al-madīnah."
+      },
+      "context": "Describing the airplane's location 'above' the city."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "المطعم بينَ البنك والمكتبة.",
+        "english": "The restaurant is between the bank and the library.",
+        "transliteration": "Al-maṭʿam bayna al-bank wa al-maktabah."
+      },
+      "context": "Describing the restaurant's location 'between' two places."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: الحديقة ___ المنزل. (The garden is ___ the house.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "أمام",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "خلف",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "على",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "خلف (Khalfa) means 'behind'.",
+      "hint": {
+        "transliteration": "khalfa",
+        "arabic": "خلف"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'above' (not necessarily touching)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "تحت",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "فوق",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بجانب",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "فوق (Fawqa) means 'above'.",
+      "hint": {
+        "transliteration": "fawqa",
+        "arabic": "فوق"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Choose the correct preposition for 'The shop is between the two buildings.'",
+      "options": [
+        {
+          "id": "a",
+          "text": "فوق",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بين",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "خلف",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "بين (Bayna) means 'between'.",
+      "hint": {
+        "transliteration": "bayna",
+        "arabic": "بين"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Left Of: على يسار",
+          "arabic": "على يسار"
+        },
+        "text": "To express that something is 'to the left of' another object, use the phrase على يسار (ʿAlā yasār).",
+        "examples": [
+          {
+            "arabic": "الباب على يسارِ النافذة.",
+            "english": "The door is to the left of the window.",
+            "transliteration": "Al-bāb ʿalā yasāri an-nāfidhah.",
+            "diacriticalNotes": "Note the kasrah on the final 'ر' of يسارِ when followed by a noun."
+          },
+          {
+            "arabic": "المكتبة على يسارِ المسجد.",
+            "english": "The library is to the left of the mosque.",
+            "transliteration": "Al-maktabah ʿalā yasāri al-masjid.",
+            "diacriticalNotes": "Note the kasrah on the final 'ر' of يسارِ when followed by a noun."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Right Of: على يمين",
+          "arabic": "على يمين"
+        },
+        "text": "Similarly, to say something is 'to the right of' another object, use the phrase على يمين (ʿAlā yamīn).",
+        "examples": [
+          {
+            "arabic": "الكرسي على يمينِ الطاولة.",
+            "english": "The chair is to the right of the table.",
+            "transliteration": "Al-kursī ʿalā yamīni aṭ-ṭāwilah.",
+            "diacriticalNotes": "Note the kasrah on the final 'ن' of يمينِ when followed by a noun."
+          },
+          {
+            "arabic": "المتجر على يمينِ البنك.",
+            "english": "The shop is to the right of the bank.",
+            "transliteration": "Al-matjar ʿalā yamīni al-bank.",
+            "diacriticalNotes": "Note the kasrah on the final 'ن' of يمينِ when followed by a noun."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Reviewing Location Phrases",
+          "arabic": "مراجعة عبارات تحديد المكان"
+        },
+        "text": "Now you know how to ask 'أين؟' (Where?) and use various prepositions like في (in), على (on), تحت (under), بجانب (next to), أمام (in front of), خلف (behind), فوق (above), بين (between), على يسار (to the left of), and على يمين (to the right of) to accurately describe where things are. Keep practicing to master these essential phrases!",
+        "examples": [
+          {
+            "arabic": "أينَ هاتفي؟ هو على يمينِ الحاسوب.",
+            "english": "Where is my phone? It's to the right of the computer.",
+            "transliteration": "Ayna hātifī? Huwa ʿalā yamīni al-ḥāsūb.",
+            "diacriticalNotes": "Note the kasrah on the final 'ن' of يمينِ."
+          },
+          {
+            "arabic": "الحقيبة تحتَ الكرسي بجانبِ الطاولة.",
+            "english": "The bag is under the chair next to the table.",
+            "transliteration": "Al-ḥaqībah taḥta al-kursī bijānibi aṭ-ṭāwilah.",
+            "diacriticalNotes": "Note the fathah on the final 'ت' of تحتَ and the kasrah on the final 'ب' of بجانبِ."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الباب على يسارِ المدخل.",
+        "english": "The door is to the left of the entrance.",
+        "transliteration": "Al-bāb ʿalā yasāri al-madkhal."
+      },
+      "context": "Using 'to the left of' with a masculine noun."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "السيارة على يمينِ الشجرة الكبيرة.",
+        "english": "The car is to the right of the big tree.",
+        "transliteration": "As-sayyārah ʿalā yamīni ash-shajarah al-kabīrah."
+      },
+      "context": "Using 'to the right of' with a feminine noun."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أينَ المطعم؟ هو بينَ البنك وعلى يسارِ المكتبة.",
+        "english": "Where is the restaurant? It's between the bank and to the left of the library.",
+        "transliteration": "Ayna al-maṭʿam? Huwa bayna al-bank wa ʿalā yasāri al-maktabah."
+      },
+      "context": "Combining multiple location prepositions in one sentence."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: المصباح ___ الطاولة. (The lamp is ___ the table.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "على يمين",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "على يسار",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "خلف",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "على يسار (ʿAlā yasār) means 'to the left of'.",
+      "hint": {
+        "transliteration": "ʿalā yasār",
+        "arabic": "على يسار"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'to the right of'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أمام",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "على يمين",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "تحت",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "على يمين (ʿAlā yamīn) means 'to the right of'.",
+      "hint": {
+        "transliteration": "ʿalā yamīn",
+        "arabic": "على يمين"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Complete the sentence: 'الكتاب ___ القلمين.' (The book is ___ the two pens.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "على",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بين",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "هناك",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "بين (Bayna) means 'between'.",
+      "hint": {
+        "transliteration": "bayna",
+        "arabic": "بين"
+      }
+    }
+  ]
+}

@@ -1,0 +1,944 @@
+{
+  "topicId": "m2-t1",
+  "title": "Identifying and Asking About Classroom Objects (Egyptian Arabic)",
+  "dialect": "egyptian-arabic",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Introduction: Asking 'What is this?' (Masculine)"
+        },
+        "text": "To ask 'What is this?' about a masculine object in Egyptian Arabic, you say: 'إيه ده؟'. Let's learn a common classroom object: 'book'.",
+        "examples": [
+          {
+            "arabic": "إيه دَه؟",
+            "english": "What is this? (masculine)",
+            "transliteration": "ʾēh da?"
+          },
+          {
+            "arabic": "كتاب",
+            "english": "Book",
+            "transliteration": "ketāb"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'What is this?' (Feminine)"
+        },
+        "text": "For a feminine object, the question changes slightly to 'إيه دي؟'. Let's learn a feminine classroom object: 'eraser'.",
+        "examples": [
+          {
+            "arabic": "إيه دِي؟",
+            "english": "What is this? (feminine)",
+            "transliteration": "ʾēh dī?"
+          },
+          {
+            "arabic": "أستيكة",
+            "english": "Eraser",
+            "transliteration": "astēka"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "More Classroom Objects: Pen and Pencil"
+        },
+        "text": "Here are two more essential items: 'pen' and 'pencil'. Notice their gender.",
+        "examples": [
+          {
+            "arabic": "قلم",
+            "english": "Pen (masculine)",
+            "transliteration": "ʾalam"
+          },
+          {
+            "arabic": "قلم رصاص",
+            "english": "Pencil (masculine)",
+            "transliteration": "ʾalam roṣāṣ"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "إيه دَه؟ دَه قلم.",
+        "english": "What is this? This is a pen.",
+        "transliteration": "ʾēh da? Da ʾalam."
+      },
+      "context": "Asking and identifying a masculine object."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "إيه دِي؟ دِي أستيكة.",
+        "english": "What is this? This is an eraser.",
+        "transliteration": "ʾēh dī? Dī astēka."
+      },
+      "context": "Asking and identifying a feminine object."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'What is this?' for a masculine object?",
+      "options": [
+        {
+          "id": "a",
+          "text": "إيه دِي؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "إيه دَه؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "إزيك؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "ʾēh da?",
+        "arabic": "إيه دَه؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'book'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أستيكة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "قلم",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "كتاب",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "ketāb",
+        "arabic": "كتاب"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Egyptian Arabic word for 'pencil'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "كتاب",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "قلم رصاص",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أستيكة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "ʾalam roṣāṣ",
+        "arabic": "قلم رصاص"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Identifying Objects: 'This is...' (Masculine)"
+        },
+        "text": "To say 'This is...' for a masculine object, you use 'دَه'. It's the same word as in the question 'إيه دَه؟'.",
+        "examples": [
+          {
+            "arabic": "دَه كتاب.",
+            "english": "This is a book.",
+            "transliteration": "Da ketāb."
+          },
+          {
+            "arabic": "دَه قلم.",
+            "english": "This is a pen.",
+            "transliteration": "Da ʾalam."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Identifying Objects: 'This is...' (Feminine)"
+        },
+        "text": "For a feminine object, you use 'دِي'. Again, it's the same word as in the question 'إيه دِي؟'.",
+        "examples": [
+          {
+            "arabic": "دِي أستيكة.",
+            "english": "This is an eraser.",
+            "transliteration": "Dī astēka."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "New Classroom Objects: Chair and Table/Desk"
+        },
+        "text": "Let's expand our vocabulary with 'chair' and 'table' or 'desk'.",
+        "examples": [
+          {
+            "arabic": "كرسي",
+            "english": "Chair (masculine)",
+            "transliteration": "koursī"
+          },
+          {
+            "arabic": "ترابيزة",
+            "english": "Table/Desk (feminine)",
+            "transliteration": "tarabēza"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "إيه دَه؟ دَه كرسي.",
+        "english": "What is this? This is a chair.",
+        "transliteration": "ʾĒh da? Da koursī."
+      },
+      "context": "Identifying a masculine classroom object."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "إيه دِي؟ دِي ترابيزة.",
+        "english": "What is this? This is a table.",
+        "transliteration": "ʾĒh dī? Dī tarabēza."
+      },
+      "context": "Identifying a feminine classroom object."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'This is a chair.'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "دِي كرسي.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "دَه كرسي.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "دَه ترابيزة.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "Da koursī.",
+        "arabic": "دَه كرسي."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word is 'table' or 'desk' (feminine)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "كرسي",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "قلم",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "ترابيزة",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "tarabēza",
+        "arabic": "ترابيزة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: إيه دِي؟ ___ أستيكة.",
+      "options": [
+        {
+          "id": "a",
+          "text": "دَه",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "دِي",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أنا",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "Dī",
+        "arabic": "دِي"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "More Classroom Items: Board and Door"
+        },
+        "text": "Let's learn how to say 'board' and 'door'. Pay attention to their gender.",
+        "examples": [
+          {
+            "arabic": "سبورة",
+            "english": "Board (feminine)",
+            "transliteration": "sabbūra"
+          },
+          {
+            "arabic": "باب",
+            "english": "Door (masculine)",
+            "transliteration": "bāb"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "School Essentials: Bag and Ruler"
+        },
+        "text": "Two more crucial items for school: 'bag' and 'ruler'. Both are feminine.",
+        "examples": [
+          {
+            "arabic": "شنطة",
+            "english": "Bag (feminine)",
+            "transliteration": "shanṭa"
+          },
+          {
+            "arabic": "مسطرة",
+            "english": "Ruler (feminine)",
+            "transliteration": "masṭara"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "The Notebook"
+        },
+        "text": "Another common item for taking notes: 'notebook'. This is a masculine word in Egyptian Arabic.",
+        "examples": [
+          {
+            "arabic": "كشكول",
+            "english": "Notebook (masculine)",
+            "transliteration": "kashkūl"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "دِي سبورة كبيرة.",
+        "english": "This is a big board.",
+        "transliteration": "Dī sabbūra kebīra."
+      },
+      "context": "Describing a feminine object."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "دَه باب جديد.",
+        "english": "This is a new door.",
+        "transliteration": "Da bāb gedīd."
+      },
+      "context": "Describing a masculine object."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word is 'board'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "باب",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "سبورة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كرسي",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "sabbūra",
+        "arabic": "سبورة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'bag'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "كشكول",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مسطرة",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "شنطة",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "shanṭa",
+        "arabic": "شنطة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: دَه ___.",
+      "options": [
+        {
+          "id": "a",
+          "text": "شنطة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مسطرة",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "كشكول",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "kashkūl",
+        "arabic": "كشكول"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Do you have?' (to a male)"
+        },
+        "text": "To ask a male 'Do you have...?', you say 'معاكَ؟'. The 'ك' at the end changes based on gender.",
+        "examples": [
+          {
+            "arabic": "معاكَ قلم؟",
+            "english": "Do you have a pen? (to male)",
+            "transliteration": "maʿāk ʾalam?"
+          },
+          {
+            "arabic": "معاكَ كتاب؟",
+            "english": "Do you have a book? (to male)",
+            "transliteration": "maʿāk ketāb?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Do you have?' (to a female)"
+        },
+        "text": "To ask a female 'Do you have...?', you say 'معاكي؟'. Notice the different ending sound for the 'ك'.",
+        "examples": [
+          {
+            "arabic": "معاكي أستيكة؟",
+            "english": "Do you have an eraser? (to female)",
+            "transliteration": "maʿākī astēka?"
+          },
+          {
+            "arabic": "معاكي شنطة؟",
+            "english": "Do you have a bag? (to female)",
+            "transliteration": "maʿākī shanṭa?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "More Objects: Window and Light"
+        },
+        "text": "Let's learn two more classroom environment words: 'window' and 'light'.",
+        "examples": [
+          {
+            "arabic": "شباك",
+            "english": "Window (masculine)",
+            "transliteration": "shibbāk"
+          },
+          {
+            "arabic": "نور",
+            "english": "Light (masculine)",
+            "transliteration": "nūr"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "معاكَ كشكول؟",
+        "english": "Do you have a notebook? (to male)",
+        "transliteration": "maʿāk kashkūl?"
+      },
+      "context": "Asking a male if he has a notebook."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "معاكي مسطرة؟",
+        "english": "Do you have a ruler? (to female)",
+        "transliteration": "maʿākī masṭara?"
+      },
+      "context": "Asking a female if she has a ruler."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask a male 'Do you have a pen?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "معاكي قلم؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "معاكَ قلم؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "إيه دَه؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "maʿāk ʾalam?",
+        "arabic": "معاكَ قلم؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'window'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "باب",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "نور",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "شباك",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "shibbāk",
+        "arabic": "شباك"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence (to a female): ___ شنطة؟",
+      "options": [
+        {
+          "id": "a",
+          "text": "معاكَ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "معاكي",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "إيه",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "maʿākī",
+        "arabic": "معاكي"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "More Objects: Sharpener and Computer"
+        },
+        "text": "Let's add 'sharpener' and 'computer' to our vocabulary.",
+        "examples": [
+          {
+            "arabic": "براية",
+            "english": "Sharpener (feminine)",
+            "transliteration": "barrāya"
+          },
+          {
+            "arabic": "كمبيوتر",
+            "english": "Computer (masculine)",
+            "transliteration": "kompyūtar"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'What's in the...?'"
+        },
+        "text": "To ask about the contents of something, like a bag, you say: 'إيه اللي في الـ...؟' (ʾēh illī fī el-...).",
+        "examples": [
+          {
+            "arabic": "إيه اللي في الشنطة؟",
+            "english": "What's in the bag?",
+            "transliteration": "ʾēh illī fī ash-shanṭa?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Responding to 'What's in the...?'"
+        },
+        "text": "You can respond by listing items, using 'فيه' (fīh) meaning 'there is/are' or 'in it'.",
+        "examples": [
+          {
+            "arabic": "فيه كتاب وقلم.",
+            "english": "There is a book and a pen.",
+            "transliteration": "Fīh ketāb w ʾalam."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "إيه اللي في الشنطة؟ فيه براية وقلم.",
+        "english": "What's in the bag? There's a sharpener and a pen.",
+        "transliteration": "ʾĒh illī fī ash-shanṭa? Fīh barrāya w ʾalam."
+      },
+      "context": "Asking about bag contents and responding."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "معاكَ كمبيوتر؟",
+        "english": "Do you have a computer? (to male)",
+        "transliteration": "maʿāk kompyūtar?"
+      },
+      "context": "Asking a male if he has a computer."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'sharpener'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أستيكة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "براية",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مسطرة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "barrāya",
+        "arabic": "براية"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'What's in the bag?'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "معاكَ شنطة؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "إيه دَه؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "إيه اللي في الشنطة؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "ʾēh illī fī ash-shanṭa?",
+        "arabic": "إيه اللي في الشنطة؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: إيه دَه؟ دَه ___.",
+      "options": [
+        {
+          "id": "a",
+          "text": "أستيكة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كمبيوتر",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مسطرة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "kompyūtar",
+        "arabic": "كمبيوتر"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Review: Asking and Identifying (Masculine)"
+        },
+        "text": "Let's review asking 'What is this?' and identifying masculine objects.",
+        "examples": [
+          {
+            "arabic": "طالب: إيه دَه؟\nمدرس: دَه شباك.",
+            "english": "Student: What is this?\nTeacher: This is a window.",
+            "transliteration": "Ṭālib: ʾĒh da?\nModarris: Da shibbāk."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Review: Asking and Identifying (Feminine)"
+        },
+        "text": "Now, let's practice with feminine objects.",
+        "examples": [
+          {
+            "arabic": "طالبة: إيه دِي؟\nمدرسة: دِي ترابيزة.",
+            "english": "Student: What is this?\nTeacher: This is a table.",
+            "transliteration": "Ṭālba: ʾĒh dī?\nModarrisa: Dī tarabēza."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Putting It All Together: A Classroom Interaction"
+        },
+        "text": "Let's combine what we've learned in a small conversation.",
+        "examples": [
+          {
+            "arabic": "أحمد: صباح الخير يا سارة. معاكي قلم؟\nسارة: صباح النور يا أحمد. آه، معايا قلم. إيه اللي في شنطتك؟\nأحمد: فيه كتاب وكشكول.",
+            "english": "Ahmed: Good morning, Sara. Do you have a pen?\nSara: Good morning, Ahmed. Yes, I have a pen. What's in your bag?\nAhmed: There's a book and a notebook.",
+            "transliteration": "ʾAḥmad: Sabāḥ el-khēr ya Sāra. Maʿākī ʾalam?\nSāra: Sabāḥ en-nūr ya ʾAḥmad. ʾĀh, maʿāya ʾalam. ʾĒh illī fī shanṭitek?\nʾAḥmad: Fīh ketāb w kashkūl."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "إيه دِي؟ دِي سبورة.",
+        "english": "What is this? This is a board.",
+        "transliteration": "ʾĒh dī? Dī sabbūra."
+      },
+      "context": "Identifying a feminine object."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "معاكَ كتاب وقلم رصاص؟",
+        "english": "Do you have a book and a pencil? (to male)",
+        "transliteration": "maʿāk ketāb w ʾalam roṣāṣ?"
+      },
+      "context": "Asking a male about multiple items."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "If you point to a door (باب) and ask 'What is this?', what would you say?",
+      "options": [
+        {
+          "id": "a",
+          "text": "إيه دِي؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "إيه دَه؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "إيه اللي فيه؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "ʾēh da?",
+        "arabic": "إيه دَه؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would a female student ask 'Do you have a ruler?' to a male teacher?",
+      "options": [
+        {
+          "id": "a",
+          "text": "معاكي مسطرة؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "معاكَ مسطرة؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "إيه دِي؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "maʿāk masṭara?",
+        "arabic": "معاكَ مسطرة؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: إيه اللي في الـ___؟",
+      "options": [
+        {
+          "id": "a",
+          "text": "كرسي",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ترابيزة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "باب",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "tarabēza",
+        "arabic": "ترابيزة"
+      }
+    }
+  ]
+}

@@ -1,0 +1,997 @@
+{
+  "topicId": "m7-t2",
+  "title": "Talking about daily programs and habits (Darija)",
+  "dialect": "darija",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Daily Routine and Basic Actions"
+        },
+        "text": "Let's learn how to ask and answer about your daily activities in Darija. We'll start with the phrase for 'daily program' and some fundamental verbs like 'to do', 'to wake up', and 'to sleep'.",
+        "examples": [
+          {
+            "arabic": "البرنامج اليومي",
+            "english": "Daily program / daily schedule",
+            "transliteration": "l-barnāmaj l-yawmi"
+          },
+          {
+            "arabic": "اش كدير؟",
+            "english": "What do you do? (masc.)",
+            "transliteration": "ash kaddir?"
+          },
+          {
+            "arabic": "اش كديري؟",
+            "english": "What do you do? (fem.)",
+            "transliteration": "ash kaddiri?"
+          },
+          {
+            "arabic": "كندير",
+            "english": "I do / I make",
+            "transliteration": "kandir"
+          },
+          {
+            "arabic": "كنفيق",
+            "english": "I wake up",
+            "transliteration": "kanfiq"
+          },
+          {
+            "arabic": "كننعس",
+            "english": "I sleep",
+            "transliteration": "kann'as"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Morning Activities"
+        },
+        "text": "Here are common phrases to talk about things you do in the morning.",
+        "examples": [
+          {
+            "arabic": "فالصباح",
+            "english": "In the morning",
+            "transliteration": "f-ṣ-ṣbaḥ"
+          },
+          {
+            "arabic": "كنفطر",
+            "english": "I eat breakfast",
+            "transliteration": "kanfṭar"
+          },
+          {
+            "arabic": "كنمشي للخدمة",
+            "english": "I go to work",
+            "transliteration": "kanmshi l-khadma"
+          },
+          {
+            "arabic": "كنمشي للمدرسة",
+            "english": "I go to school",
+            "transliteration": "kanmshi l-l-madrasa"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Times of Day"
+        },
+        "text": "Learning these basic time expressions will help you specify when actions happen in your day.",
+        "examples": [
+          {
+            "arabic": "الصباح",
+            "english": "Morning",
+            "transliteration": "ṣ-ṣbaḥ"
+          },
+          {
+            "arabic": "العشية",
+            "english": "Afternoon / Evening",
+            "transliteration": "l-Ɛashiyya"
+          },
+          {
+            "arabic": "الليل",
+            "english": "Night",
+            "transliteration": "l-lîl"
+          },
+          {
+            "arabic": "فاش من وقت؟",
+            "english": "At what time?",
+            "transliteration": "fāsh mn waqt?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "اش كدير فالصباح؟",
+        "english": "What do you do in the morning? (masc.)",
+        "transliteration": "ash kaddir f-ṣ-ṣbaḥ?"
+      },
+      "context": "Asking about someone's morning routine."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "كل نهار كنفيق بكري و كنفطر.",
+        "english": "Every day I wake up early and eat breakfast.",
+        "transliteration": "kull nhar kanfiq bakri w kanfṭar."
+      },
+      "context": "Describing a regular morning habit."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "كنمشي للمدرسة فالصباح.",
+        "english": "I go to school in the morning.",
+        "transliteration": "kanmshi l-l-madrasa f-ṣ-ṣbaḥ."
+      },
+      "context": "Stating a morning activity."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'What do you do?' to a female in Darija?",
+      "options": [
+        {
+          "id": "a",
+          "text": "اش كدير؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "اش كديري؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "فين كتمشي؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "To ask a female 'What do you do?', you add the 'i' suffix to the verb, making it 'اش كديري؟'.",
+      "hint": {
+        "transliteration": "ash kaddiri?",
+        "arabic": "اش كديري؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I eat breakfast ___ morning.'",
+      "options": [
+        {
+          "id": "a",
+          "text": "فالليل",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "فالصباح",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "فالعشية",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'فالصباح' means 'in the morning'.",
+      "hint": {
+        "transliteration": "f-ṣ-ṣbaḥ",
+        "arabic": "فالصباح"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'I wake up'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "كننعس",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كنمشي",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "كنفيق",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'كنفيق' is the Darija verb for 'I wake up'.",
+      "hint": {
+        "transliteration": "kanfiq",
+        "arabic": "كنفيق"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Mid-day Activities"
+        },
+        "text": "Let's explore common activities performed around noon and during the working/studying hours of the day.",
+        "examples": [
+          {
+            "arabic": "فالظهر",
+            "english": "At noon / around lunchtime",
+            "transliteration": "f-ḍ-ḍhur"
+          },
+          {
+            "arabic": "كنتغدى",
+            "english": "I eat lunch",
+            "transliteration": "kantgħadda"
+          },
+          {
+            "arabic": "كنخدم",
+            "english": "I work",
+            "transliteration": "kankhdam"
+          },
+          {
+            "arabic": "كنقرا",
+            "english": "I study / I read",
+            "transliteration": "kanqra"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Evening Activities"
+        },
+        "text": "These are some typical activities people do in the evening after work or school.",
+        "examples": [
+          {
+            "arabic": "كنتعشى",
+            "english": "I eat dinner",
+            "transliteration": "kantƐashsha"
+          },
+          {
+            "arabic": "كنتفرج فالتلفازة",
+            "english": "I watch TV",
+            "transliteration": "kantfarraj f-t-tlfāza"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Free Time Activities"
+        },
+        "text": "Discussing how you spend your free time is a great way to expand your vocabulary about daily habits. 'كنقرا' can also mean 'I read' in a leisure context.",
+        "examples": [
+          {
+            "arabic": "كنخرج",
+            "english": "I go out",
+            "transliteration": "kankhraj"
+          },
+          {
+            "arabic": "كنتلاقى مع صحابي",
+            "english": "I meet my friends",
+            "transliteration": "kantlaqa mƐa ṣḥābi"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "فالظهر كنتغدى مع عائلتي.",
+        "english": "At noon, I eat lunch with my family.",
+        "transliteration": "f-ḍ-ḍhur kantgħadda mƐa Ɛā'ilti."
+      },
+      "context": "Describing a lunchtime habit."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "فالعشية كنخدم ومن بعد كنتفرج فالتلفازة.",
+        "english": "In the evening, I work and then I watch TV.",
+        "transliteration": "f-l-Ɛashiyya kankhdam w mn baƐd kantfarraj f-t-tlfāza."
+      },
+      "context": "Combining work and leisure activities in the evening."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "كنتلاقى مع صحابي فالليل.",
+        "english": "I meet my friends at night.",
+        "transliteration": "kantlaqa mƐa ṣḥābi f-l-lîl."
+      },
+      "context": "Talking about socializing in the evening."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Darija phrase for 'I eat lunch'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "كنفطر",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كنتعشى",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "كنتغدى",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'كنتغدى' means 'I eat lunch'.",
+      "hint": {
+        "transliteration": "kantgħadda",
+        "arabic": "كنتغدى"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Choose the correct word to complete the sentence: 'I ___ in the evening.' (كنتفرج فالتلفازة)",
+      "options": [
+        {
+          "id": "a",
+          "text": "كنخدم",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كنتفرج",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كنفيق",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'كنتفرج' means 'I watch'. The full phrase 'كنتفرج فالتلفازة' means 'I watch TV'.",
+      "hint": {
+        "transliteration": "kantfarraj",
+        "arabic": "كنتفرج"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'I meet my friends'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "كنمشي للخدمة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كنتلاقى مع صحابي",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كنخرج",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'كنتلاقى مع صحابي' means 'I meet my friends'.",
+      "hint": {
+        "transliteration": "kantlaqa mƐa ṣḥābi",
+        "arabic": "كنتلاقى مع صحابي"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Adverbs of Frequency"
+        },
+        "text": "These adverbs help you describe how often you perform an action, making your descriptions of habits more precise.",
+        "examples": [
+          {
+            "arabic": "دائماً",
+            "english": "Always",
+            "transliteration": "dā'iman"
+          },
+          {
+            "arabic": "غالباً",
+            "english": "Usually / Often",
+            "transliteration": "ghāliban"
+          },
+          {
+            "arabic": "مرات",
+            "english": "Sometimes",
+            "transliteration": "marrāt"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "'Every' - Kull"
+        },
+        "text": "The word 'كُلّ' (kull) means 'every' or 'all', and is used to express regularity over periods of time.",
+        "examples": [
+          {
+            "arabic": "كُلّ نهار",
+            "english": "Every day",
+            "transliteration": "kull nhar"
+          },
+          {
+            "arabic": "كُلّ سيمانة",
+            "english": "Every week",
+            "transliteration": "kull simāna"
+          },
+          {
+            "arabic": "كُلّ شهر",
+            "english": "Every month",
+            "transliteration": "kull sh'har"
+          },
+          {
+            "arabic": "كُلّ عام",
+            "english": "Every year",
+            "transliteration": "kull Ɛām"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking About Habits"
+        },
+        "text": "Here's how to formulate questions about someone's routine and habits using the frequency adverbs you've just learned.",
+        "examples": [
+          {
+            "arabic": "واش دائما كـ...؟",
+            "english": "Do you always...?",
+            "transliteration": "wāsh dā'iman k-...?"
+          },
+          {
+            "arabic": "اش كدير غالباً فالصباح؟",
+            "english": "What do you usually do in the morning? (masc.)",
+            "transliteration": "ash kaddir ghāliban f-ṣ-ṣbaḥ?"
+          },
+          {
+            "arabic": "اش كديري غالباً فالعشية؟",
+            "english": "What do you usually do in the evening? (fem.)",
+            "transliteration": "ash kaddiri ghāliban f-l-Ɛashiyya?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "واش دائما كتفيق بكري؟",
+        "english": "Do you always wake up early?",
+        "transliteration": "wāsh dā'iman katfiq bakri?"
+      },
+      "context": "Asking about a consistent habit."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "غالباً كنخدم كُلّ نهار.",
+        "english": "I usually work every day.",
+        "transliteration": "ghāliban kankhdam kull nhar."
+      },
+      "context": "Describing a frequent activity."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "مرات كنقرا فالليل.",
+        "english": "Sometimes I read at night.",
+        "transliteration": "marrāt kanqra f-l-lîl."
+      },
+      "context": "Describing an occasional activity."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'sometimes'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "دائماً",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "غالباً",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "مرات",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'مرات' means 'sometimes'.",
+      "hint": {
+        "transliteration": "marrāt",
+        "arabic": "مرات"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I go to work ___ day.' (كنمشي للخدمة ___ نهار)",
+      "options": [
+        {
+          "id": "a",
+          "text": "كُلّ",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "غالباً",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "مرات",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "'كُلّ نهار' means 'every day'.",
+      "hint": {
+        "transliteration": "kull",
+        "arabic": "كُلّ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'Do you always...?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "اش كدير غالباً؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "واش دائما كـ...؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "فاش من وقت كـ...؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'واش دائما كـ...؟' is used to ask 'Do you always...?'",
+      "hint": {
+        "transliteration": "wāsh dā'iman k-...?",
+        "arabic": "واش دائما كـ...؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Telling Time - Hours"
+        },
+        "text": "Let's learn how to state the hour in Darija. Unlike formal Arabic, spoken Darija often uses simpler numerical forms for hours.",
+        "examples": [
+          {
+            "arabic": "الواحدة / الوحدة",
+            "english": "One o'clock",
+            "transliteration": "l-wāḥida / l-waḥda"
+          },
+          {
+            "arabic": "الجوج",
+            "english": "Two o'clock",
+            "transliteration": "j-jūj"
+          },
+          {
+            "arabic": "التلتة",
+            "english": "Three o'clock",
+            "transliteration": "t-tlta"
+          },
+          {
+            "arabic": "التمنية",
+            "english": "Eight o'clock",
+            "transliteration": "t-tmnya"
+          },
+          {
+            "arabic": "التناش",
+            "english": "Twelve o'clock",
+            "transliteration": "t-tnâsh"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Telling Time - Minutes and Parts of an Hour"
+        },
+        "text": "To be more specific, you can add minutes or common fractions like a quarter or a half to the hour.",
+        "examples": [
+          {
+            "arabic": "و الربع",
+            "english": "and a quarter (past)",
+            "transliteration": "w r-rubƐ"
+          },
+          {
+            "arabic": "و النصّ",
+            "english": "and a half (past)",
+            "transliteration": "w n-nṣṣ"
+          },
+          {
+            "arabic": "قلّ الربع",
+            "english": "quarter to",
+            "transliteration": "qall r-rubƐ"
+          },
+          {
+            "arabic": "قلّ خمسة",
+            "english": "five to (literally: minus five)",
+            "transliteration": "qall khamsa"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "From... To..."
+        },
+        "text": "This structure is essential for describing the duration of your activities or when your schedule starts and ends.",
+        "examples": [
+          {
+            "arabic": "من... حتّى لـ...",
+            "english": "From... until...",
+            "transliteration": "mn... ḥatta l-..."
+          },
+          {
+            "arabic": "كنخدم من التمنية حتّى للخمسة.",
+            "english": "I work from eight until five.",
+            "transliteration": "kankhdam mn t-tmnya ḥatta l-l-khamsa."
+          },
+          {
+            "arabic": "كنقرا من العشرة و النصّ حتّى للجوج.",
+            "english": "I study from ten thirty until two.",
+            "transliteration": "kanqra mn l-Ɛashra w n-nṣṣ ḥatta l-j-jūj."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "كنفيق مع السبعة و الربع.",
+        "english": "I wake up at a quarter past seven.",
+        "transliteration": "kanfiq mƐa s-sbƐa w r-rubƐ."
+      },
+      "context": "Stating the exact time of waking up."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الخدمة ديالي من التمنية حتّى للخمسة.",
+        "english": "My work is from eight until five.",
+        "transliteration": "l-khadma dyāli mn t-tmnya ḥatta l-l-khamsa."
+      },
+      "context": "Describing work hours."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "كنتعشى مع التسعود قلّ الربع.",
+        "english": "I eat dinner at a quarter to nine.",
+        "transliteration": "kantƐashsha mƐa t-tsƐūd qall r-rubƐ."
+      },
+      "context": "Stating dinner time."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is 'three o'clock' in Darija?",
+      "options": [
+        {
+          "id": "a",
+          "text": "الجوج",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "التلتة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "الخمسة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'التلتة' means 'three o'clock'.",
+      "hint": {
+        "transliteration": "t-tlta",
+        "arabic": "التلتة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the phrase: '...and a half' (و ___)",
+      "options": [
+        {
+          "id": "a",
+          "text": "النصّ",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "الربع",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "خمسة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "'و النصّ' means 'and a half'.",
+      "hint": {
+        "transliteration": "w n-nṣṣ",
+        "arabic": "و النصّ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'From eight until five'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "فالتمنية حتّى فالخمسة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "من التمنية حتّى للخمسة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "من التمنية و الخمسة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'من... حتّى لـ...' is the correct structure for 'from... until...'.",
+      "hint": {
+        "transliteration": "mn t-tmnya ḥatta l-l-khamsa",
+        "arabic": "من التمنية حتّى للخمسة"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing Likes and Dislikes"
+        },
+        "text": "To add more depth to your daily conversations, learn how to express what you like or don't like to do. The verb 'كيعجبني' (kayƐajabni) literally means 'it pleases me'.",
+        "examples": [
+          {
+            "arabic": "كيعجبني",
+            "english": "I like (it pleases me)",
+            "transliteration": "kayƐajabni"
+          },
+          {
+            "arabic": "ما كيعجبنيش",
+            "english": "I don't like (it doesn't please me)",
+            "transliteration": "ma kayƐajabnish"
+          },
+          {
+            "arabic": "باش ندير",
+            "english": "to do (in order to do)",
+            "transliteration": "bāsh ndir"
+          },
+          {
+            "arabic": "كيعجبني نقرا",
+            "english": "I like to read",
+            "transliteration": "kayƐajabni nanqra"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking and Giving Reasons"
+        },
+        "text": "Understanding 'why' and giving 'because' explanations is crucial for natural conversation about choices and habits.",
+        "examples": [
+          {
+            "arabic": "علاش؟",
+            "english": "Why?",
+            "transliteration": "Ɛlāsh?"
+          },
+          {
+            "arabic": "حيت",
+            "english": "Because",
+            "transliteration": "ḥît"
+          },
+          {
+            "arabic": "حيت كانبغي",
+            "english": "Because I love/like",
+            "transliteration": "ḥît kanbghī"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Describing Your Schedule"
+        },
+        "text": "Now you can put everything together to comprehensively describe your daily program and habits, including specific timings and reasons.",
+        "examples": [
+          {
+            "arabic": "البرنامج اليومي ديالي هو...",
+            "english": "My daily program is...",
+            "transliteration": "l-barnāmaj l-yawmi dyāli huwa..."
+          },
+          {
+            "arabic": "عادة كندير هادشي من بعد الخدمة.",
+            "english": "Usually I do this after work.",
+            "transliteration": "Ɛāda kandir hādshī mn baƐd l-khadma."
+          },
+          {
+            "arabic": "كيعجبني نفيق بكري حيت كانبغي الهدوء.",
+            "english": "I like to wake up early because I love quietness.",
+            "transliteration": "kayƐajabni nanfiq bakri ḥît kanbghī l-hudū'."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "كيعجبني نخرج مع صحابي فالعشية.",
+        "english": "I like to go out with my friends in the evening.",
+        "transliteration": "kayƐajabni nakhraj mƐa ṣḥābi f-l-Ɛashiyya."
+      },
+      "context": "Expressing a preference for an evening activity."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "علاش كتقرا كُلّ نهار؟ حيت كانبغي نتعلم.",
+        "english": "Why do you study every day? Because I like to learn.",
+        "transliteration": "Ɛlāsh katqra kull nhar? ḥît kanbghī nattƐallam."
+      },
+      "context": "Asking and giving a reason for a daily habit."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ما كيعجبنيش ننعس معطل، كنفيق بكري.",
+        "english": "I don't like to sleep late, I wake up early.",
+        "transliteration": "ma kayƐajabnish nannƐas mƐaṭṭal, kanfiq bakri."
+      },
+      "context": "Expressing a dislike and an alternative habit."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'I like to read'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ما كيعجبنيش نقرا",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كيعجبني نقرا",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كنقرا دائماً",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'كيعجبني نقرا' means 'I like to read'.",
+      "hint": {
+        "transliteration": "kayƐajabni nanqra",
+        "arabic": "كيعجبني نقرا"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Choose the correct word: 'I go to work early ___ I love my job.' (كنمشي للخدمة بكري ___ كانبغي خدمتي.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "علاش",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "حيت",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "دائماً",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'حيت' means 'because'.",
+      "hint": {
+        "transliteration": "ḥît",
+        "arabic": "حيت"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Darija phrase for 'My daily program is...'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "البرنامج الأسبوعي ديالي هو...",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "البرنامج اليومي ديالي هو...",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "اش كدير يومياً؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'البرنامج اليومي ديالي هو...' directly translates to 'My daily program is...'.",
+      "hint": {
+        "transliteration": "l-barnāmaj l-yawmi dyāli huwa...",
+        "arabic": "البرنامج اليومي ديالي هو..."
+      }
+    }
+  ]
+}

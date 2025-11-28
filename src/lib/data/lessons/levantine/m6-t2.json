@@ -1,0 +1,854 @@
+{
+  "topicId": "m6-t2",
+  "title": "Asking About Places and Services (Levantine)",
+  "dialect": "levantine",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Where is?'",
+          "arabic": "السؤال عن 'وين؟'"
+        },
+        "text": "The most common way to ask 'Where is?' in Levantine Arabic is using \"وين؟\" (Wēn?). It's simple and direct, used for both people and objects, but here we focus on places.",
+        "examples": [
+          {
+            "arabic": "وين البنك؟",
+            "english": "Where is the bank?",
+            "transliteration": "Wēn il-bank?"
+          },
+          {
+            "arabic": "وين المطعم؟",
+            "english": "Where is the restaurant?",
+            "transliteration": "Wēn il-maṭʿam?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing 'I want...'",
+          "arabic": "التعبير عن 'أنا بدي...'"
+        },
+        "text": "To express 'I want' in Levantine, you use \"بدي\" (Biddī). This is a versatile verb used to indicate a desire for an object, a place, or an action.",
+        "examples": [
+          {
+            "arabic": "بدي قهوة.",
+            "english": "I want coffee/a cafe.",
+            "transliteration": "Biddī qahwe."
+          },
+          {
+            "arabic": "بدي مطعم.",
+            "english": "I want a restaurant.",
+            "transliteration": "Biddī maṭʿam."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Naming a 'Place'",
+          "arabic": "تسمية 'محل' أو 'مكان'"
+        },
+        "text": "The word for 'place' or 'location' is \"محل\" (Maḥall) or \"مكان\" (Makān). \"محل\" is very common in Levantine when referring to a specific shop or establishment.",
+        "examples": [
+          {
+            "arabic": "هاد محل جديد.",
+            "english": "This is a new place/shop.",
+            "transliteration": "Hād maḥall jdīd."
+          },
+          {
+            "arabic": "في مكان هون؟",
+            "english": "Is there a place here?",
+            "transliteration": "Fī makān hōn?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "وين المحل؟",
+        "english": "Where is the place/shop?",
+        "transliteration": "Wēn il-maḥall?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بدي محل منيح.",
+        "english": "I want a good place/shop.",
+        "transliteration": "Biddī maḥall mnīḥ."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Levantine Arabic word for 'Where?'",
+      "options": [
+        {
+          "id": "a1",
+          "text": "وين؟",
+          "isCorrect": true
+        },
+        {
+          "id": "a2",
+          "text": "مين؟",
+          "isCorrect": false
+        },
+        {
+          "id": "a3",
+          "text": "شو؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a1",
+      "hint": {
+        "transliteration": "Wēn?",
+        "arabic": "وين؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I want ___' (meaning 'I want a place/shop')",
+      "options": [
+        {
+          "id": "b1",
+          "text": "محل",
+          "isCorrect": true
+        },
+        {
+          "id": "b2",
+          "text": "بيت",
+          "isCorrect": false
+        },
+        {
+          "id": "b3",
+          "text": "شغل",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b1",
+      "hint": {
+        "transliteration": "Maḥall",
+        "arabic": "محل"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'I want' in Levantine Arabic?",
+      "options": [
+        {
+          "id": "c1",
+          "text": "أريد",
+          "isCorrect": false
+        },
+        {
+          "id": "c2",
+          "text": "بدي",
+          "isCorrect": true
+        },
+        {
+          "id": "c3",
+          "text": "أذهب",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "c2",
+      "hint": {
+        "transliteration": "Biddī",
+        "arabic": "بدي"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Restaurant",
+          "arabic": "مطعم"
+        },
+        "text": "The word for 'restaurant' is \"مطعم\" (Maṭʿam). This is a common and essential word for finding food.",
+        "examples": [
+          {
+            "arabic": "وين المطعم؟",
+            "english": "Where is the restaurant?",
+            "transliteration": "Wēn il-maṭʿam?"
+          },
+          {
+            "arabic": "بدي مطعم أكل لبناني.",
+            "english": "I want a Lebanese food restaurant.",
+            "transliteration": "Biddī maṭʿam akil libnānī."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Cafe",
+          "arabic": "قهوة / كافيه"
+        },
+        "text": "For 'cafe,' you can use \"قهوة\" (Qahwe) or \"كافيه\" (Kāfīh). \"قهوة\" literally means coffee but often refers to a cafe, especially traditional ones. \"كافيه\" is more modern.",
+        "examples": [
+          {
+            "arabic": "في قهوة قريبة؟",
+            "english": "Is there a cafe nearby?",
+            "transliteration": "Fī qahwe qarībe?"
+          },
+          {
+            "arabic": "بدي كافيه هادي.",
+            "english": "I want a quiet cafe.",
+            "transliteration": "Biddī kāfīh hādī."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Supermarket",
+          "arabic": "سوبر ماركت"
+        },
+        "text": "'Supermarket' is usually \"سوبر ماركت\" (Sūbar Mārakit). For a smaller, local grocery store, you might hear \"دكانة\" (Dukkāne). We will focus on \"سوبر ماركت\".",
+        "examples": [
+          {
+            "arabic": "وين السوبر ماركت؟",
+            "english": "Where is the supermarket?",
+            "transliteration": "Wēn is-sūbar mārakit?"
+          },
+          {
+            "arabic": "بدي أروح ع السوبر ماركت.",
+            "english": "I want to go to the supermarket.",
+            "transliteration": "Biddī arūḥ ʿas-sūbar mārakit."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "وين أقرب سوبر ماركت؟",
+        "english": "Where is the nearest supermarket?",
+        "transliteration": "Wēn aqrab sūbar mārakit?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بدي قهوة حلوة.",
+        "english": "I want a nice cafe.",
+        "transliteration": "Biddī qahwe ḥilwe."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "المطعم هاد كتير منيح.",
+        "english": "This restaurant is very good.",
+        "transliteration": "Il-maṭʿam hād ktīr mnīḥ."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'Where is the restaurant?' in Levantine Arabic?",
+      "options": [
+        {
+          "id": "d1",
+          "text": "وين المطعم؟",
+          "isCorrect": true
+        },
+        {
+          "id": "d2",
+          "text": "مين المطعم؟",
+          "isCorrect": false
+        },
+        {
+          "id": "d3",
+          "text": "كيف المطعم؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "d1",
+      "hint": {
+        "transliteration": "Wēn il-maṭʿam?",
+        "arabic": "وين المطعم؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I want to go to the ___' (referring to a supermarket)",
+      "options": [
+        {
+          "id": "e1",
+          "text": "سوبر ماركت",
+          "isCorrect": true
+        },
+        {
+          "id": "e2",
+          "text": "مستشفى",
+          "isCorrect": false
+        },
+        {
+          "id": "e3",
+          "text": "بنك",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "e1",
+      "hint": {
+        "transliteration": "Sūbar mārakit",
+        "arabic": "سوبر ماركت"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word can mean 'cafe' in Levantine Arabic?",
+      "options": [
+        {
+          "id": "f1",
+          "text": "مكتبة",
+          "isCorrect": false
+        },
+        {
+          "id": "f2",
+          "text": "قهوة",
+          "isCorrect": true
+        },
+        {
+          "id": "f3",
+          "text": "متحف",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "f2",
+      "hint": {
+        "transliteration": "Qahwe",
+        "arabic": "قهوة"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Pharmacy",
+          "arabic": "صيدلية"
+        },
+        "text": "The word for 'pharmacy' is \"صيدلية\" (Ṣaydaliyye). It's a crucial place for health-related needs.",
+        "examples": [
+          {
+            "arabic": "وين أقرب صيدلية؟",
+            "english": "Where is the nearest pharmacy?",
+            "transliteration": "Wēn aqrab ṣaydaliyye?"
+          },
+          {
+            "arabic": "بدي أروح ع الصيدلية.",
+            "english": "I want to go to the pharmacy.",
+            "transliteration": "Biddī arūḥ ʿaṣ-ṣaydaliyye."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Bank",
+          "arabic": "بنك"
+        },
+        "text": "The word for 'bank' is \"بنك\" (Bank). This word is often directly borrowed and commonly used.",
+        "examples": [
+          {
+            "arabic": "في بنك هون قريب؟",
+            "english": "Is there a bank near here?",
+            "transliteration": "Fī bank hōn qarīb?"
+          },
+          {
+            "arabic": "وين البنك الوطني؟",
+            "english": "Where is the National Bank?",
+            "transliteration": "Wēn il-bank il-waṭanī?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Hospital",
+          "arabic": "مستشفى"
+        },
+        "text": "The word for 'hospital' is \"مستشفى\" (Mustashfa).",
+        "examples": [
+          {
+            "arabic": "المستشفى بعيد عن هون؟",
+            "english": "Is the hospital far from here?",
+            "transliteration": "Il-mustashfa baʿīd ʿan hōn?"
+          },
+          {
+            "arabic": "بدي مستشفى كبير.",
+            "english": "I want a big hospital.",
+            "transliteration": "Biddī mustashfa kbīr."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "وين أقرب بنك؟",
+        "english": "Where is the nearest bank?",
+        "transliteration": "Wēn aqrab bank?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بدي أروح على الصيدلية.",
+        "english": "I want to go to the pharmacy.",
+        "transliteration": "Biddī arūḥ ʿaṣ-ṣaydaliyye."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "المستشفى هون كبير.",
+        "english": "The hospital here is big.",
+        "transliteration": "Il-mustashfa hōn kbīr."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Levantine Arabic word for 'pharmacy'?",
+      "options": [
+        {
+          "id": "g1",
+          "text": "مكتبة",
+          "isCorrect": false
+        },
+        {
+          "id": "g2",
+          "text": "صيدلية",
+          "isCorrect": true
+        },
+        {
+          "id": "g3",
+          "text": "مدرسة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "g2",
+      "hint": {
+        "transliteration": "Ṣaydaliyye",
+        "arabic": "صيدلية"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'Is there a ___ near here?' (referring to a bank)",
+      "options": [
+        {
+          "id": "h1",
+          "text": "بنك",
+          "isCorrect": true
+        },
+        {
+          "id": "h2",
+          "text": "مخبز",
+          "isCorrect": false
+        },
+        {
+          "id": "h3",
+          "text": "مقهى",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "h1",
+      "hint": {
+        "transliteration": "Bank",
+        "arabic": "بنك"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'hospital' in Levantine Arabic?",
+      "options": [
+        {
+          "id": "i1",
+          "text": "فندق",
+          "isCorrect": false
+        },
+        {
+          "id": "i2",
+          "text": "مستشفى",
+          "isCorrect": true
+        },
+        {
+          "id": "i3",
+          "text": "جامعة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "i2",
+      "hint": {
+        "transliteration": "Mustashfa",
+        "arabic": "مستشفى"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Bus Stop",
+          "arabic": "موقف باص"
+        },
+        "text": "The word for 'bus stop' is \"موقف باص\" (Mawqaf Bāṣ). \"موقف\" means stop or station.",
+        "examples": [
+          {
+            "arabic": "وين موقف الباص؟",
+            "english": "Where is the bus stop?",
+            "transliteration": "Wēn mawqaf il-bāṣ?"
+          },
+          {
+            "arabic": "بدي أروح على موقف الباص.",
+            "english": "I want to go to the bus stop.",
+            "transliteration": "Biddī arūḥ ʿala mawqaf il-bāṣ."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Taxi",
+          "arabic": "تاكسي"
+        },
+        "text": "'Taxi' is \"تاكسي\" (Tāksī). You can also say \"سيارة أجرة\" (Sayyārit ujra) but \"تاكسي\" is much more common.",
+        "examples": [
+          {
+            "arabic": "بدي تاكسي للمطار.",
+            "english": "I want a taxi to the airport.",
+            "transliteration": "Biddī tāksī lil-maṭār."
+          },
+          {
+            "arabic": "في تاكسي هون؟",
+            "english": "Is there a taxi here?",
+            "transliteration": "Fī tāksī hōn?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Police Station",
+          "arabic": "مخفر / مركز الشرطة"
+        },
+        "text": "'Police station' can be \"مخفر\" (Makhfar) or \"مركز الشرطة\" (Markaz ash-Shurṭa). \"مخفر\" is quite common in Levantine.",
+        "examples": [
+          {
+            "arabic": "وين أقرب مخفر؟",
+            "english": "Where is the nearest police station?",
+            "transliteration": "Wēn aqrab makhfar?"
+          },
+          {
+            "arabic": "بدي أروح ع المخفر.",
+            "english": "I want to go to the police station.",
+            "transliteration": "Biddī arūḥ ʿal-makhfar."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "وين موقف الباص للمركز؟",
+        "english": "Where is the bus stop for the center?",
+        "transliteration": "Wēn mawqaf il-bāṣ lil-markaz?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بدي تاكسي بسرعة.",
+        "english": "I want a taxi quickly.",
+        "transliteration": "Biddī tāksī bi-surʿa."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "في مخفر قريب من هون؟",
+        "english": "Is there a police station near here?",
+        "transliteration": "Fī makhfar qarīb min hōn?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Levantine Arabic phrase for 'bus stop'?",
+      "options": [
+        {
+          "id": "j1",
+          "text": "محطة قطار",
+          "isCorrect": false
+        },
+        {
+          "id": "j2",
+          "text": "موقف باص",
+          "isCorrect": true
+        },
+        {
+          "id": "j3",
+          "text": "مطار",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "j2",
+      "hint": {
+        "transliteration": "Mawqaf bāṣ",
+        "arabic": "موقف باص"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I need a ___ to go home.' (referring to a taxi)",
+      "options": [
+        {
+          "id": "k1",
+          "text": "باس",
+          "isCorrect": false
+        },
+        {
+          "id": "k2",
+          "text": "قطار",
+          "isCorrect": false
+        },
+        {
+          "id": "k3",
+          "text": "تاكسي",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "k3",
+      "hint": {
+        "transliteration": "Tāksī",
+        "arabic": "تاكسي"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word can mean 'police station' in Levantine Arabic?",
+      "options": [
+        {
+          "id": "l1",
+          "text": "مكتب بريد",
+          "isCorrect": false
+        },
+        {
+          "id": "l2",
+          "text": "مخفر",
+          "isCorrect": true
+        },
+        {
+          "id": "l3",
+          "text": "بلدية",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "l2",
+      "hint": {
+        "transliteration": "Makhfar",
+        "arabic": "مخفر"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'How do I get to...?'",
+          "arabic": "كيف بوصل لـ...؟"
+        },
+        "text": "To ask 'How do I get to...?' in Levantine, you say \"كيف بوصل لـ...؟\" (Kīf bōṣal la...?). This is essential for getting directions.",
+        "examples": [
+          {
+            "arabic": "كيف بوصل للمستشفى؟",
+            "english": "How do I get to the hospital?",
+            "transliteration": "Kīf bōṣal lil-mustashfa?"
+          },
+          {
+            "arabic": "كيف بوصل ع البنك؟",
+            "english": "How do I get to the bank?",
+            "transliteration": "Kīf bōṣal ʿal-bank?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Is there...?'",
+          "arabic": "في...؟"
+        },
+        "text": "To ask 'Is there...?' or 'Are there...?' in Levantine, you use \"في...؟\" (Fī...?). It's a very common way to inquire about the existence of something.",
+        "examples": [
+          {
+            "arabic": "في صيدلية قريبة؟",
+            "english": "Is there a pharmacy nearby?",
+            "transliteration": "Fī ṣaydaliyye qarībe?"
+          },
+          {
+            "arabic": "في تاكسي فاضي؟",
+            "english": "Is there an empty taxi?",
+            "transliteration": "Fī tāksī fāḍī?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for 'Help' or 'Service'",
+          "arabic": "مساعدة / خدمة"
+        },
+        "text": "'Help' is \"مساعدة\" (Musāʿade), and 'service' is \"خدمة\" (Khidme). You might need to ask for one of these if you're in a tricky situation or need assistance.",
+        "examples": [
+          {
+            "arabic": "بدي مساعدة.",
+            "english": "I need help.",
+            "transliteration": "Biddī musāʿade."
+          },
+          {
+            "arabic": "في خدمة توصيل؟",
+            "english": "Is there a delivery service?",
+            "transliteration": "Fī khidmet tawṣīl?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "كيف بوصل على السوبر ماركت؟",
+        "english": "How do I get to the supermarket?",
+        "transliteration": "Kīf bōṣal ʿaṣ-ṣūbar mārakit?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "في خدمة توصيل لهون؟",
+        "english": "Is there a delivery service here?",
+        "transliteration": "Fī khidmet tawṣīl la-hōn?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بدي مساعدة لأوصل للمطعم.",
+        "english": "I need help to get to the restaurant.",
+        "transliteration": "Biddī musāʿade la-awṣal lil-maṭʿam."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'How do I get to the bank?' in Levantine Arabic?",
+      "options": [
+        {
+          "id": "m1",
+          "text": "مين البنك؟",
+          "isCorrect": false
+        },
+        {
+          "id": "m2",
+          "text": "كيف بوصل ع البنك؟",
+          "isCorrect": true
+        },
+        {
+          "id": "m3",
+          "text": "وين البنك؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "m2",
+      "hint": {
+        "transliteration": "Kīf bōṣal ʿal-bank?",
+        "arabic": "كيف بوصل ع البنك؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: '___ a pharmacy near here?' (meaning 'Is there a pharmacy...?')",
+      "options": [
+        {
+          "id": "n1",
+          "text": "مين",
+          "isCorrect": false
+        },
+        {
+          "id": "n2",
+          "text": "في",
+          "isCorrect": true
+        },
+        {
+          "id": "n3",
+          "text": "شو",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "n2",
+      "hint": {
+        "transliteration": "Fī",
+        "arabic": "في"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which Levantine Arabic word means 'help'?",
+      "options": [
+        {
+          "id": "o1",
+          "text": "طعام",
+          "isCorrect": false
+        },
+        {
+          "id": "o2",
+          "text": "مساعدة",
+          "isCorrect": true
+        },
+        {
+          "id": "o3",
+          "text": "شراب",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "o2",
+      "hint": {
+        "transliteration": "Musāʿade",
+        "arabic": "مساعدة"
+      }
+    }
+  ]
+}

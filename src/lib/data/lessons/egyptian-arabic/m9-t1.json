@@ -1,0 +1,832 @@
+{
+  "topicId": "m9-t1",
+  "title": "Social Etiquette: Offering, Apologies, and Gifts",
+  "dialect": "egyptian-arabic",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Offering Something: 'Please' (Informal)"
+        },
+        "text": "In Egyptian Arabic, when you want to offer something like food, a drink, or even a seat, you use 'اتفضل' (itfaḍḍal) for a male and 'اتفضلي' (itfaḍḍali) for a female. This word literally means 'please' or 'go ahead'.",
+        "examples": [
+          {
+            "arabic": "اتفضل القهوة.",
+            "english": "Please, have the coffee. (to a male)",
+            "transliteration": "Itfaḍḍal el-ʾahwa."
+          },
+          {
+            "arabic": "اتفضلي اقعدي.",
+            "english": "Please, sit down. (to a female)",
+            "transliteration": "Itfaḍḍali oʾʿodi."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Responding to an Offer: 'Thank You'"
+        },
+        "text": "When someone offers you something, a polite response is 'شكراً' (shokran) meaning 'thank you'. You can also add 'تسلم إيدك' (teslam īdak) which literally means 'may your hand be safe', a common way to thank someone for their effort or generosity.",
+        "examples": [
+          {
+            "arabic": "شكراً يا حبيبتي.",
+            "english": "Thank you, my dear. (to a female)",
+            "transliteration": "Shokran ya ḥabībti."
+          },
+          {
+            "arabic": "تسلم إيدك على الأكل الحلو ده.",
+            "english": "Thank you for this delicious food. (lit. 'May your hand be safe')",
+            "transliteration": "Teslam īdak ʿala l-ʾakl el-ḥelw da."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Inviting Someone Over or to an Event"
+        },
+        "text": "To invite someone, you can use 'عازمك' (ʿāzmuk) for a male or 'عازماكي' (ʿāzmāki) for a female, meaning 'I'm inviting you'. For a more general invitation or welcome, you can say 'تشرفنا' (tasharrafna) which means 'we are honored' (to have you).",
+        "examples": [
+          {
+            "arabic": "أنا عازمك على العشا بكرة.",
+            "english": "I'm inviting you (male) for dinner tomorrow.",
+            "transliteration": "Ana ʿāzmuk ʿala l-ʿasha bokra."
+          },
+          {
+            "arabic": "تشرفنا بزيارتك لينا.",
+            "english": "We are honored by your visit to us.",
+            "transliteration": "Tasharrafna bi-ziyārtak līna."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "اتفضل اشرب شاي.",
+        "english": "Please, have some tea. (to a male)",
+        "transliteration": "Itfaḍḍal ishrab shāy."
+      },
+      "context": "Offering a drink"
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شكراً، أنا عازماكي على الغداء.",
+        "english": "Thank you, I'm inviting you (female) for lunch.",
+        "transliteration": "Shokran, ana ʿāzmāki ʿala l-ghadaʾ."
+      },
+      "context": "Responding to an offer and then inviting"
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the polite way to offer a seat to a female?",
+      "options": [
+        {
+          "id": "a",
+          "text": "اتفضل اقعد",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "اتفضلي اقعدي",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "شكراً",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'اتفضلي اقعدي' is used to politely offer a seat to a female. 'اتفضل اقعد' is for a male, and 'شكراً' means 'thank you'.",
+      "hint": {
+        "transliteration": "Itfaḍḍali oʾʿodi",
+        "arabic": "اتفضلي اقعدي"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: ___ على الهدية الجميلة.",
+      "options": [
+        {
+          "id": "a",
+          "text": "آسف",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "عازمك",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "شكراً",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "To thank someone for a beautiful gift, you say 'شكراً'.",
+      "hint": {
+        "transliteration": "Shokran",
+        "arabic": "شكراً"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'I'm inviting you (male) to my house'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أنا عازمك على بيتي",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "أنا عازماكي على بيتي",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "شكراً على بيتي",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "'عازمك' is for inviting a male. 'عازماكي' is for a female.",
+      "hint": {
+        "transliteration": "Ana ʿāzmuk ʿala bēti",
+        "arabic": "أنا عازمك على بيتي"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Accepting an Invitation: 'I Agree' / 'With Pleasure'"
+        },
+        "text": "To accept an invitation, you can use 'موافق' (mawāfeʾ) for a male or 'موافقة' (mawāfeʾa) for a female, meaning 'I agree' or 'I accept'. A very polite and enthusiastic way to accept is 'بكل سرور' (bi-kull surūr), meaning 'with all pleasure'.",
+        "examples": [
+          {
+            "arabic": "أنا موافق أجِي بكرة.",
+            "english": "I (male) agree to come tomorrow.",
+            "transliteration": "Ana mawāfeʾ agī bokra."
+          },
+          {
+            "arabic": "بكل سرور! أنا جايه.",
+            "english": "With pleasure! I (female) am coming.",
+            "transliteration": "Bi-kull surūr! Ana gayya."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Politely Declining an Invitation: 'Sorry, I can't'"
+        },
+        "text": "If you need to decline, use 'معلش مش هقدر' (maʿalesh mesh haʾdar), meaning 'Sorry, I won't be able to'. You can soften it further by saying 'مرة تانية إن شاء الله' (marra tanya in shāʾ Allāh), meaning 'Another time, God willing'.",
+        "examples": [
+          {
+            "arabic": "معلش مش هقدر أجي النهاردة.",
+            "english": "Sorry, I won't be able to come today.",
+            "transliteration": "Maʿalesh mesh haʾdar agī in-nahārda."
+          },
+          {
+            "arabic": "مرة تانية إن شاء الله.",
+            "english": "Another time, God willing.",
+            "transliteration": "Marra tanya in shāʾ Allāh."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking About Availability: 'Are You Free?'"
+        },
+        "text": "To ask if someone is free or available, you use 'فاضي' (fāḍī) for a male and 'فاضية' (fāḍya) for a female. You can also ask 'إيه رأيك؟' (eih raʾyak?) to suggest an idea and ask 'what do you think?'.",
+        "examples": [
+          {
+            "arabic": "إنت فاضي بكرة؟",
+            "english": "Are you (male) free tomorrow?",
+            "transliteration": "Inta fāḍī bokra?"
+          },
+          {
+            "arabic": "إيه رأيك نروح السينما؟",
+            "english": "What do you think about us going to the cinema?",
+            "transliteration": "Eih raʾyak nirūḥ is-sīnima?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا موافقة، فاضية النهاردة بالليل.",
+        "english": "I (female) accept, I'm free tonight.",
+        "transliteration": "Ana mawāfeʾa, fāḍya in-nahārda bi l-leil."
+      },
+      "context": "Accepting an invitation and stating availability"
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "معلش مش هقدر، مش فاضي بكرة.",
+        "english": "Sorry, I can't, I'm not free tomorrow. (male)",
+        "transliteration": "Maʿalesh mesh haʾdar, mesh fāḍī bokra."
+      },
+      "context": "Politely declining an invitation due to unavailability"
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the polite way for a female to accept an invitation?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أنا موافق",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أنا موافقة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مش هقدر",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'أنا موافقة' is used by a female to accept. 'أنا موافق' is for a male, and 'مش هقدر' means 'I can't'.",
+      "hint": {
+        "transliteration": "Ana mawāfeʾa",
+        "arabic": "أنا موافقة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: ___ أجي الحفلة، عندي شغل.",
+      "options": [
+        {
+          "id": "a",
+          "text": "بكل سرور",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "معلش مش هقدر",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أنا فاضي",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'معلش مش هقدر' is used to politely decline an invitation.",
+      "hint": {
+        "transliteration": "Maʿalesh mesh haʾdar",
+        "arabic": "معلش مش هقدر"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would you ask a female friend if she is free tomorrow?",
+      "options": [
+        {
+          "id": "a",
+          "text": "إنت فاضي بكرة؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "إنتِ فاضية بكرة؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "إيه رأيك بكرة؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'فاضية' is the feminine form of 'free/available'. 'إنتِ' is for a female.",
+      "hint": {
+        "transliteration": "Inti fāḍya bokra?",
+        "arabic": "إنتِ فاضية بكرة؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Apologizing: 'I'm Sorry'"
+        },
+        "text": "The most common way to apologize is 'آسف' (āsef) for a male and 'آسفة' (āsefa) for a female. A slightly more formal or emphatic apology is 'متأسف' (metaʾassef) for a male or 'متأسفة' (metaʾassefa) for a female.",
+        "examples": [
+          {
+            "arabic": "أنا آسف على التأخير.",
+            "english": "I'm sorry for the delay. (male)",
+            "transliteration": "Ana āsef ʿala t-taʾkhīr."
+          },
+          {
+            "arabic": "أنا متأسفة جداً.",
+            "english": "I'm very sorry. (female)",
+            "transliteration": "Ana metaʾassefa giddan."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing General Regret or Empathy: 'Ma'alesh'"
+        },
+        "text": "'معلش' (maʿalesh) is a versatile Egyptian phrase. It can mean 'never mind', 'it's okay', or 'sorry' when expressing empathy or regret for a minor inconvenience, or even 'excuse me'. It's less of a formal apology and more of a softening phrase.",
+        "examples": [
+          {
+            "arabic": "معلش، حصل خير.",
+            "english": "Never mind, it's okay (what happened was good).",
+            "transliteration": "Maʿalesh, ḥaṣal kheir."
+          },
+          {
+            "arabic": "معلش، ممكن تعيد السؤال؟",
+            "english": "Excuse me, can you repeat the question?",
+            "transliteration": "Maʿalesh, mumkin tiʿīd is-suʾāl?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for Forgiveness (More Seriously)"
+        },
+        "text": "For a more serious apology, especially when you need someone to actively forgive you, you can say 'سامحني' (sāmeḥnī) for a male or 'سامحيني' (sāmeḥīnī) for a female, meaning 'forgive me'.",
+        "examples": [
+          {
+            "arabic": "أرجوك سامحني على غلطتي.",
+            "english": "Please forgive me (male) for my mistake.",
+            "transliteration": "Argūk sāmeḥnī ʿala ghalṭeti."
+          },
+          {
+            "arabic": "سامحيني، مكنتش أقصد.",
+            "english": "Forgive me (female), I didn't mean it.",
+            "transliteration": "Sāmeḥīnī, makuntish aqṣod."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا آسف جداً، سامحني.",
+        "english": "I'm very sorry, forgive me (male).",
+        "transliteration": "Ana āsef giddan, sāmeḥnī."
+      },
+      "context": "A serious apology from a male"
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "معلش يا حبيبتي، أنا متأسفة إني نسيت عيد ميلادك.",
+        "english": "Sorry, my dear (female), I apologize for forgetting your birthday. (female speaker)",
+        "transliteration": "Maʿalesh ya ḥabībti, ana metaʾassefa inni nisīt ʿīd mīlādik."
+      },
+      "context": "Apologizing to a female friend with empathy"
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would a female apologize for a mistake?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أنا آسف",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أنا آسفة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "سامحني",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'آسفة' is the feminine form for 'I'm sorry'.",
+      "hint": {
+        "transliteration": "Ana āsefa",
+        "arabic": "أنا آسفة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: ___ على اللي حصل.",
+      "options": [
+        {
+          "id": "a",
+          "text": "شكراً",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "معلش",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "اتفضل",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'معلش' is used to express regret or minimize a past event.",
+      "hint": {
+        "transliteration": "Maʿalesh",
+        "arabic": "معلش"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "If you are a male and want to seriously ask a female to forgive you, what do you say?",
+      "options": [
+        {
+          "id": "a",
+          "text": "سامحني",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "سامحيني",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "آسف",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'سامحيني' is the feminine imperative form for 'forgive me'. The speaker's gender doesn't change the form of the verb when addressing a female.",
+      "hint": {
+        "transliteration": "Sāmeḥīnī",
+        "arabic": "سامحيني"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Accepting an Apology: 'Don't Worry About It'"
+        },
+        "text": "When someone apologizes, a common and reassuring way to accept their apology is 'ولا يهمك' (wala yihimmak) for a male or 'ولا يهمكِ' (wala yihimmik) for a female. It means 'don't worry about it' or 'it doesn't matter to me'.",
+        "examples": [
+          {
+            "arabic": "ولا يهمك، مفيش أي مشكلة.",
+            "english": "Don't worry about it (to a male), there's no problem at all.",
+            "transliteration": "Wala yihimmak, mafish ayy moshkela."
+          },
+          {
+            "arabic": "ولا يهمكِ، حصل خير.",
+            "english": "Don't worry about it (to a female), it's all good now (what happened was good).",
+            "transliteration": "Wala yihimmik, ḥaṣal kheir."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Minimizing the Issue: 'No Problem' / 'It's Fine'"
+        },
+        "text": "To further minimize the issue and reassure the apologizer, you can say 'مفيش مشكلة' (mafīsh moshkela), meaning 'no problem'. Another common phrase is 'حصل خير' (ḥaṣal kheir), which translates to 'good came out of it' or 'it's all fine now'.",
+        "examples": [
+          {
+            "arabic": "مفيش مشكلة، أنا فاهم.",
+            "english": "No problem, I understand. (male)",
+            "transliteration": "Mafīsh moshkela, ana fāhim."
+          },
+          {
+            "arabic": "يلا، حصل خير وبلاش نزعل.",
+            "english": "Come on, it's all good now, let's not be upset.",
+            "transliteration": "Yalla, ḥaṣal kheir w balāsh nizʿal."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Reassuring the Apologizer: 'Don't Worry'"
+        },
+        "text": "To tell someone not to worry, you use 'متقلقش' (matʾallaʾsh) for a male and 'متقلقيش' (matʾallaʾīsh) for a female. This helps to alleviate their concern after an apology.",
+        "examples": [
+          {
+            "arabic": "متقلقش، كل حاجة هتكون تمام.",
+            "english": "Don't worry (male), everything will be fine.",
+            "transliteration": "Matʾallaʾsh, kull ḥāga hatkūn tamām."
+          },
+          {
+            "arabic": "متقلقيش، الموضوع بسيط.",
+            "english": "Don't worry (female), it's a simple matter.",
+            "transliteration": "Matʾallaʾīsh, el-mawḍūʿ basīṭ."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ولا يهمك، متقلقش.",
+        "english": "Don't worry about it (to a male), don't worry.",
+        "transliteration": "Wala yihimmak, matʾallaʾsh."
+      },
+      "context": "Accepting an apology and reassuring a male"
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "حصل خير يا حبيبتي، مفيش مشكلة.",
+        "english": "It's all good, my dear (female), no problem.",
+        "transliteration": "Ḥaṣal kheir ya ḥabībti, mafish moshkela."
+      },
+      "context": "Minimizing an issue and reassuring a female"
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would you tell a female 'Don't worry about it'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ولا يهمك",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ولا يهمكِ",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "متقلقش",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'ولا يهمكِ' is used when addressing a female. Note the kasra on the ك.",
+      "hint": {
+        "transliteration": "Wala yihimmik",
+        "arabic": "ولا يهمكِ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "If someone apologizes, you can reassure them by saying '___' (no problem).",
+      "options": [
+        {
+          "id": "a",
+          "text": "شكراً",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مفيش مشكلة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "آسف",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'مفيش مشكلة' means 'no problem' and is a common way to accept an apology.",
+      "hint": {
+        "transliteration": "Mafish moshkela",
+        "arabic": "مفيش مشكلة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What phrase is used to reassure a male who is apologizing by telling him 'Don't worry'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "متقلقيش",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "متقلقش",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "حصل خير",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'متقلقش' is the form for addressing a male. 'متقلقيش' is for a female.",
+      "hint": {
+        "transliteration": "Matʾallaʾsh",
+        "arabic": "متقلقش"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for Gift Preferences: 'What Do You Wish For?'"
+        },
+        "text": "When you want to buy a gift and aren't sure what to get, you can politely ask 'إيه اللي نفسك فيه؟' (eih illi nafsak fīh?) for a male, or 'إيه اللي نفسكِ فيه؟' (eih illi nafsik fīh?) for a female. This means 'What do you wish for?' or 'What do you have your heart set on?'. Another way is 'تحب أجيب لك إيه؟' (tiḥibb agīb lak eih?) for a male, or 'تحبي أجيب لكِ إيه؟' (tiḥibbī agīb lik eih?) for a female, meaning 'What would you like me to get you?'",
+        "examples": [
+          {
+            "arabic": "إيه اللي نفسك فيه في عيد ميلادك؟",
+            "english": "What do you wish for (male) for your birthday?",
+            "transliteration": "Eih illi nafsak fīh fī ʿīd mīlādak?"
+          },
+          {
+            "arabic": "تحبي أجيب لكِ إيه للبيت الجديد؟",
+            "english": "What would you (female) like me to get you for the new house?",
+            "transliteration": "Tiḥibbī agīb lik el-bēt el-gidīd?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Suggesting Simple Gift Ideas: 'Something Small'"
+        },
+        "text": "Sometimes people insist 'don't bother', but you still want to get something. You can suggest 'هدية بسيطة' (hediyya basīṭa) meaning 'a simple gift', or 'حاجة شخصية' (ḥāga shakhṣiyya) meaning 'something personal'.",
+        "examples": [
+          {
+            "arabic": "أنا عايز أجيب لك هدية بسيطة.",
+            "english": "I want to get you (male) a simple gift.",
+            "transliteration": "Ana ʿāyez agīb lak hediyya basīṭa."
+          },
+          {
+            "arabic": "إيه رأيك في حاجة شخصية؟",
+            "english": "What do you think about something personal?",
+            "transliteration": "Eih raʾyak fī ḥāga shakhṣiyya?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Polite Responses to Gift Questions: 'Anything from you is sweet'"
+        },
+        "text": "A very polite and humble way to respond when someone asks what gift you want is 'أي حاجة منك حلوة' (ayy ḥāga minnak ḥelwa) for a male giver, or 'أي حاجة منكِ حلوة' (ayy ḥāga minnik ḥelwa) for a female giver. It means 'anything from you is sweet/nice'. Another phrase is 'مش لازم تتعب نفسك' (mesh lāzem titʿab nafsak) for a male, or 'مش لازم تتعبي نفسكِ' (mesh lāzem titʿabī nafsik) for a female, meaning 'you don't have to trouble yourself'.",
+        "examples": [
+          {
+            "arabic": "أي حاجة منك حلوة يا خالد.",
+            "english": "Anything from you (male) is sweet, Khaled.",
+            "transliteration": "Ayy ḥāga minnak ḥelwa ya Khāled."
+          },
+          {
+            "arabic": "شكراً يا سلمى، مش لازم تتعبي نفسكِ.",
+            "english": "Thank you, Salma, you (female) don't have to trouble yourself.",
+            "transliteration": "Shokran ya Salma, mesh lāzem titʿabī nafsik."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "إيه اللي نفسكِ فيه للبيت الجديد؟",
+        "english": "What do you wish for (female) for the new house?",
+        "transliteration": "Eih illi nafsik fīh lil-bēt il-gidīd?"
+      },
+      "context": "Asking about a gift preference for a new home (to a female)"
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أي حاجة منكِ حلوة يا حبيبتي، مش لازم تتعبي نفسكِ.",
+        "english": "Anything from you (female) is sweet, my dear (female), you don't have to trouble yourself.",
+        "transliteration": "Ayy ḥāga minnik ḥelwa ya ḥabībti, mesh lāzem titʿabī nafsik."
+      },
+      "context": "Politely declining a gift suggestion from a female"
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask a male friend 'What do you wish for?' regarding a gift?",
+      "options": [
+        {
+          "id": "a",
+          "text": "إيه اللي نفسك فيه؟",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "إيه اللي نفسكِ فيه؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "أي حاجة منك حلوة؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "'نفسك' is the correct form for addressing a male. 'نفسكِ' is for a female.",
+      "hint": {
+        "transliteration": "Eih illi nafsak fīh?",
+        "arabic": "إيه اللي نفسك فيه؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "If someone asks what gift you want, a polite response is '___' (anything from you is sweet).",
+      "options": [
+        {
+          "id": "a",
+          "text": "شكراً",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مش هقدر",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "أي حاجة منك حلوة",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'أي حاجة منك حلوة' is a common and polite response to deflect a gift question.",
+      "hint": {
+        "transliteration": "Ayy ḥāga minnak ḥelwa",
+        "arabic": "أي حاجة منك حلوة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would a female politely tell a male 'you don't have to trouble yourself' regarding a gift?",
+      "options": [
+        {
+          "id": "a",
+          "text": "مش لازم تتعب نفسك",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "مش لازم تتعبي نفسكِ",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "تحب أجيب لك إيه؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "When telling a male 'you don't have to trouble yourself', the phrase is 'مش لازم تتعب نفسك'. The female speaker uses the masculine form because she is addressing a male.",
+      "hint": {
+        "transliteration": "Mesh lāzem titʿab nafsak",
+        "arabic": "مش لازم تتعب نفسك"
+      }
+    }
+  ]
+}

@@ -1,0 +1,892 @@
+{
+  "topicId": "m3-t2",
+  "title": "Asking about Times and Appointments in Egyptian Arabic",
+  "dialect": "egyptian-arabic",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Introduction to Time: The Word 'Saa'a'",
+          "arabic": "مقدمة عن الوقت: كلمة 'ساعة'"
+        },
+        "text": "In Egyptian Arabic, the word for 'hour' or 'clock/watch' is 'ساعة' (saa'a). It's a foundational word when discussing time.",
+        "examples": [
+          {
+            "arabic": "الساعة كام؟",
+            "english": "What time is it?",
+            "transliteration": "Es-saa'a kam?"
+          },
+          {
+            "arabic": "عندي ساعة جديدة.",
+            "english": "I have a new watch.",
+            "transliteration": "A'andi saa'a gedida."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'What time is it?'",
+          "arabic": "السؤال عن 'الساعة كام؟'"
+        },
+        "text": "The most common way to ask 'What time is it?' is 'الساعة كام؟' (Es-saa'a kam?). This literally means 'The hour how many?' and is used universally.",
+        "examples": [
+          {
+            "arabic": "لو سمحت، الساعة كام دلوقتي؟",
+            "english": "Excuse me, what time is it now?",
+            "transliteration": "Law samaḥt, es-saa'a kam delwa'ti?"
+          },
+          {
+            "arabic": "الساعة كام يا أحمد؟",
+            "english": "What time is it, Ahmed?",
+            "transliteration": "Es-saa'a kam ya Ahmed?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Basic Hour Pronunciation (1-12)",
+          "arabic": "نطق الساعات الأساسية (1-12)"
+        },
+        "text": "To tell the hour, you use 'الساعة' followed by the number. For 1 o'clock, it's 'الساعة واحدة' (es-saa'a waḥda). For 2 o'clock, it's 'الساعة اتنين' (es-saa'a etnein), and so on.",
+        "examples": [
+          {
+            "arabic": "الساعة واحدة.",
+            "english": "It's one o'clock.",
+            "transliteration": "Es-saa'a waḥda."
+          },
+          {
+            "arabic": "الساعة خمسة.",
+            "english": "It's five o'clock.",
+            "transliteration": "Es-saa'a khamsa."
+          },
+          {
+            "arabic": "الساعة اتناشر.",
+            "english": "It's twelve o'clock.",
+            "transliteration": "Es-saa'a etnāshar."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "لو سمحت، الساعة كام دلوقتي؟",
+        "english": "Excuse me, what time is it now?",
+        "transliteration": "Law samaḥt, es-saa'a kam delwa'ti?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الساعة واحدة.",
+        "english": "It's one o'clock.",
+        "transliteration": "Es-saa'a waḥda."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "عندي ساعة جديدة.",
+        "english": "I have a new watch.",
+        "transliteration": "A'andi saa'a gedida."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'hour' or 'clock' in Egyptian Arabic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "نهار",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ساعة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "وقت",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'ساعة' (saa'a) means hour or clock/watch.",
+      "hint": {
+        "transliteration": "Saa'a",
+        "arabic": "ساعة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'What time is it?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "إمتى الوقت؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الساعة كام؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كم ساعة؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'الساعة كام؟' (Es-saa'a kam?) is the standard way to ask for the time.",
+      "hint": {
+        "transliteration": "Es-saa'a kam?",
+        "arabic": "الساعة كام؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: It's five o'clock. (الساعة ___)",
+      "options": [
+        {
+          "id": "a",
+          "text": "واحدة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "تلاتة",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "خمسة",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "Five o'clock is 'الساعة خمسة' (Es-saa'a khamsa).",
+      "hint": {
+        "transliteration": "Khamsa",
+        "arabic": "خمسة"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Using 'و' (wa) for 'and/past'",
+          "arabic": "استخدام 'و' (و) بمعنى 'و/بعد'"
+        },
+        "text": "To express minutes 'past' the hour, you use 'و' (wa), meaning 'and'. For example, 'الساعة خمسة وربع' means 'It's five and a quarter' (5:15).",
+        "examples": [
+          {
+            "arabic": "الساعة سبعة وخمسة.",
+            "english": "It's seven o'clock and five minutes (7:05).",
+            "transliteration": "Es-saa'a sab'a we khamsa."
+          },
+          {
+            "arabic": "الساعة تسعة وعشرة.",
+            "english": "It's nine o'clock and ten minutes (9:10).",
+            "transliteration": "Es-saa'a tes'a we 'ashara."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Common Time Phrases: 'Quarter' and 'Half'",
+          "arabic": "عبارات الوقت الشائعة: 'ربع' و 'نص'"
+        },
+        "text": "Instead of saying 'fifteen minutes' or 'thirty minutes', Egyptians commonly use 'ربع' (rub') for a quarter (15 minutes) and 'نص' (noṣṣ) for half (30 minutes).",
+        "examples": [
+          {
+            "arabic": "الساعة تلاتة وربع.",
+            "english": "It's three fifteen (3:15).",
+            "transliteration": "Es-saa'a talata we rub'."
+          },
+          {
+            "arabic": "الساعة ستة ونص.",
+            "english": "It's six thirty (6:30).",
+            "transliteration": "Es-saa'a setta we noṣṣ."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Using 'إلا' (ella) for 'to/minus'",
+          "arabic": "استخدام 'إلا' (إلا) بمعنى 'إلا/ناقص'"
+        },
+        "text": "To express minutes 'to' the next hour (e.g., 5:45 is 'a quarter to six'), you use 'إلا' (ella), meaning 'except' or 'minus'.",
+        "examples": [
+          {
+            "arabic": "الساعة سبعة إلا ربع.",
+            "english": "It's a quarter to seven (6:45).",
+            "transliteration": "Es-saa'a sab'a ella rub'."
+          },
+          {
+            "arabic": "الساعة تسعة إلا عشرة.",
+            "english": "It's ten to nine (8:50).",
+            "transliteration": "Es-saa'a tes'a ella 'ashara."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الساعة اربعة وربع.",
+        "english": "It's a quarter past four (4:15).",
+        "transliteration": "Es-saa'a arba'a we rub'."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الساعة واحدة ونص.",
+        "english": "It's half past one (1:30).",
+        "transliteration": "Es-saa'a waḥda we noṣṣ."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الساعة خمسة إلا عشرة.",
+        "english": "It's ten to five (4:50).",
+        "transliteration": "Es-saa'a khamsa ella 'ashara."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'It's two thirty'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "الساعة اتنين وربع",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الساعة اتنين ونص",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "الساعة اتنين إلا نص",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'ونص' (we noṣṣ) means 'and a half'.",
+      "hint": {
+        "transliteration": "Es-saa'a etnein we noṣṣ",
+        "arabic": "الساعة اتنين ونص"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'a quarter to nine'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "الساعة تسعة وربع",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الساعة تمانية وربع",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "الساعة تسعة إلا ربع",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'إلا ربع' (ella rub') means 'a quarter to'.",
+      "hint": {
+        "transliteration": "Es-saa'a tes'a ella rub'",
+        "arabic": "الساعة تسعة إلا ربع"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: It's six fifteen. (الساعة ستة ___)",
+      "options": [
+        {
+          "id": "a",
+          "text": "ونص",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "إلا ربع",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "وربع",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'وربع' (we rub') means 'and a quarter'.",
+      "hint": {
+        "transliteration": "We rub'",
+        "arabic": "وربع"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Specifying Time of Day: Morning (الصبح)",
+          "arabic": "تحديد وقت اليوم: الصبح"
+        },
+        "text": "To clarify if a time is in the morning, you can add 'الصبح' (eṣ-ṣobḥ) after the hour. This covers from dawn until noon.",
+        "examples": [
+          {
+            "arabic": "الساعة سبعة الصبح.",
+            "english": "It's seven AM (seven in the morning).",
+            "transliteration": "Es-saa'a sab'a eṣ-ṣobḥ."
+          },
+          {
+            "arabic": "المعاد الساعة تسعة الصبح.",
+            "english": "The appointment is at nine AM.",
+            "transliteration": "El-ma'ad es-saa'a tes'a eṣ-ṣobḥ."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Specifying Time of Day: Noon (الضهر) & Afternoon/Evening (بعد الضهر/بليل)",
+          "arabic": "تحديد وقت اليوم: الضهر و بعد الضهر/بليل"
+        },
+        "text": "For noon, use 'الضهر' (eḍ-ḍohr). For afternoon/early evening, use 'بعد الضهر' (ba'd eḍ-ḍohr). For night, use 'بليل' (billeil). Egyptians often use the 12-hour clock, so specifying AM/PM is important for clarity.",
+        "examples": [
+          {
+            "arabic": "الساعة اتناشر الضهر.",
+            "english": "It's twelve PM (noon).",
+            "transliteration": "Es-saa'a etnāshar eḍ-ḍohr."
+          },
+          {
+            "arabic": "هنقابل الساعة خمسة بعد الضهر.",
+            "english": "We will meet at five PM (afternoon).",
+            "transliteration": "Hanqābel es-saa'a khamsa ba'd eḍ-ḍohr."
+          },
+          {
+            "arabic": "الفيلم الساعة تسعة بليل.",
+            "english": "The movie is at nine PM (at night).",
+            "transliteration": "El-film es-saa'a tes'a billeil."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Other Time Phrases: Exactly, Around, Anytime",
+          "arabic": "عبارات وقت أخرى: بالظبط، حوالي، أي وقت"
+        },
+        "text": "To be more precise or flexible, you can use additional adverbs. 'بالظبط' (bel-ẓabṭ) means 'exactly'. 'حوالي' (ḥawali) means 'around/approximately'. 'أي وقت' (ay wa't) means 'any time'.",
+        "examples": [
+          {
+            "arabic": "المعاد الساعة سبعة بالظبط.",
+            "english": "The appointment is at seven exactly.",
+            "transliteration": "El-ma'ad es-saa'a sab'a bel-ẓabṭ."
+          },
+          {
+            "arabic": "أجي حوالي الساعة ستة.",
+            "english": "I'll come around six o'clock.",
+            "transliteration": "Agy ḥawali es-saa'a setta."
+          },
+          {
+            "arabic": "ممكن تيجي أي وقت.",
+            "english": "You can come anytime.",
+            "transliteration": "Momken teegy ay wa't."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الساعة تمانية الصبح بالظبط.",
+        "english": "It's exactly eight AM.",
+        "transliteration": "Es-saa'a tamanya eṣ-ṣobḥ bel-ẓabṭ."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الاجتماع حوالي الساعة اتنين بعد الضهر.",
+        "english": "The meeting is around two PM (afternoon).",
+        "transliteration": "El-egtemā' ḥawali es-saa'a etnein ba'd eḍ-ḍohr."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ممكن نتكلم أي وقت بليل.",
+        "english": "We can talk anytime at night.",
+        "transliteration": "Momken netkallem ay wa't billeil."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'seven AM'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "الساعة سبعة بليل",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الساعة سبعة الصبح",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "الساعة سبعة بعد الضهر",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'الصبح' (eṣ-ṣobḥ) means 'in the morning'.",
+      "hint": {
+        "transliteration": "Es-saa'a sab'a eṣ-ṣobḥ",
+        "arabic": "الساعة سبعة الصبح"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'around three o'clock'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "الساعة تلاتة بالظبط",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الساعة تلاتة بليل",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "حوالي الساعة تلاتة",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'حوالي' (ḥawali) means 'around' or 'approximately'.",
+      "hint": {
+        "transliteration": "Ḥawali es-saa'a talata",
+        "arabic": "حوالي الساعة تلاتة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: The meeting is at nine PM. (الاجتماع الساعة تسعة ___)",
+      "options": [
+        {
+          "id": "a",
+          "text": "الصبح",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بالظبط",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "بليل",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'بليل' (billeil) means 'at night'.",
+      "hint": {
+        "transliteration": "Billeil",
+        "arabic": "بليل"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "The Word for 'Appointment': 'Ma'ad'",
+          "arabic": "كلمة 'معاد'"
+        },
+        "text": "The word for 'appointment' or 'deadline' in Egyptian Arabic is 'معاد' (ma'ad). It's a masculine noun.",
+        "examples": [
+          {
+            "arabic": "عندي معاد مهم.",
+            "english": "I have an important appointment.",
+            "transliteration": "A'andi ma'ad mohem."
+          },
+          {
+            "arabic": "إمتى معادنا؟",
+            "english": "When is our appointment?",
+            "transliteration": "Emta ma'adna?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'When is the appointment?'",
+          "arabic": "السؤال 'المعاد إمتى؟'"
+        },
+        "text": "To ask about the time of an appointment, you can say 'المعاد إمتى؟' (El-ma'ad emta?). 'إمتى?' (emta?) means 'when?'.",
+        "examples": [
+          {
+            "arabic": "المعاد إمتى بكرة؟",
+            "english": "When is the appointment tomorrow?",
+            "transliteration": "El-ma'ad emta bokra?"
+          },
+          {
+            "arabic": "إمتى معاد الدكتور؟",
+            "english": "When is the doctor's appointment?",
+            "transliteration": "Emta ma'ad el-doktor?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Are you Free? (فاضي/فاضية)",
+          "arabic": "هل أنت فاضي؟ (فاضي/فاضية)"
+        },
+        "text": "To ask if someone is free or available, you use 'فاضي' (faḍi) for a male and 'فاضية' (faḍya) for a female. This is crucial for scheduling.",
+        "examples": [
+          {
+            "arabic": "إنتَ فاضي بكرة الصبح؟",
+            "english": "Are you (m) free tomorrow morning?",
+            "transliteration": "Enta faḍi bokra eṣ-ṣobḥ?"
+          },
+          {
+            "arabic": "إنتِ فاضية بعد الضهر؟",
+            "english": "Are you (f) free in the afternoon?",
+            "transliteration": "Enti faḍya ba'd eḍ-ḍohr?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "عندي معاد بكرة الصبح.",
+        "english": "I have an appointment tomorrow morning.",
+        "transliteration": "A'andi ma'ad bokra eṣ-ṣobḥ."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "إنتَ فاضي دلوقتي؟",
+        "english": "Are you (m) free now?",
+        "transliteration": "Enta faḍi delwa'ti?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "المعاد الساعة عشرة بليل، إنتِ فاضية؟",
+        "english": "The appointment is at ten PM, are you (f) free?",
+        "transliteration": "El-ma'ad es-saa'a 'ashara billeil, enti faḍya?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Egyptian Arabic word for 'appointment'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "وقت",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ساعة",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "معاد",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'معاد' (ma'ad) means appointment.",
+      "hint": {
+        "transliteration": "Ma'ad",
+        "arabic": "معاد"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would you ask a female if she is free?",
+      "options": [
+        {
+          "id": "a",
+          "text": "إنتَ فاضي؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "إنتِ فاضية؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "إنتِ فاضي؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'فاضية' (faḍya) is used for a female.",
+      "hint": {
+        "transliteration": "Enti faḍya?",
+        "arabic": "إنتِ فاضية؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: When is the appointment? (الـ ___ إمتى؟)",
+      "options": [
+        {
+          "id": "a",
+          "text": "وقت",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ساعة",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "معاد",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "The word for appointment is 'معاد'.",
+      "hint": {
+        "transliteration": "Ma'ad",
+        "arabic": "معاد"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Suggesting a Time: 'إيه رأيك في...؟'",
+          "arabic": "اقتراح وقت: 'إيه رأيك في...؟'"
+        },
+        "text": "To suggest a time for an appointment, you can use 'إيه رأيك في...؟' (eih ra'yak fy...?) which means 'What do you think about...?'",
+        "examples": [
+          {
+            "arabic": "إيه رأيك في معاد الساعة خمسة بعد الضهر؟",
+            "english": "What do you think about an appointment at five PM?",
+            "transliteration": "Eih ra'yak fy ma'ad es-saa'a khamsa ba'd eḍ-ḍohr?"
+          },
+          {
+            "arabic": "إيه رأيك في يوم الاتنين الصبح؟",
+            "english": "What do you think about Monday morning?",
+            "transliteration": "Eih ra'yak fy yōm el-etnēn eṣ-ṣobḥ?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Confirming an Appointment: 'تأكيد' and 'تمام'",
+          "arabic": "تأكيد المعاد: 'تأكيد' و 'تمام'"
+        },
+        "text": "To confirm an appointment, you can use 'نأكد المعاد؟' (na'akked el-ma'ad?) meaning 'Shall we confirm the appointment?'. A simple 'تمام' (tamam) means 'okay' or 'confirmed'.",
+        "examples": [
+          {
+            "arabic": "نأكد معاد بكرة الساعة عشرة الصبح؟",
+            "english": "Shall we confirm tomorrow's appointment at ten AM?",
+            "transliteration": "Na'akked ma'ad bokra es-saa'a 'ashara eṣ-ṣobḥ?"
+          },
+          {
+            "arabic": "تمام، المعاد الساعة تلاتة.",
+            "english": "Okay, the appointment is at three o'clock.",
+            "transliteration": "Tamam, el-ma'ad es-saa'a talata."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Rescheduling and Cancelling: 'نغير' and 'نلغي'",
+          "arabic": "إعادة جدولة وإلغاء: 'نغير' و 'نلغي'"
+        },
+        "text": "If you need to change or cancel, use 'نغير المعاد' (neghayyer el-ma'ad) for 'to change/reschedule the appointment' or 'نلغي المعاد' (nelghy el-ma'ad) for 'to cancel the appointment'.",
+        "examples": [
+          {
+            "arabic": "ممكن نغير المعاد ليوم تاني؟",
+            "english": "Can we change the appointment to another day?",
+            "transliteration": "Momken neghayyer el-ma'ad le yōm tany?"
+          },
+          {
+            "arabic": "مضطرين نلغي المعاد للأسف.",
+            "english": "Unfortunately, we have to cancel the appointment.",
+            "transliteration": "Moḍṭarrīn nelghy el-ma'ad lel-asaf."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "إيه رأيك في معاد الساعة تمانية بليل؟",
+        "english": "What do you think about an appointment at eight PM?",
+        "transliteration": "Eih ra'yak fy ma'ad es-saa'a tamanya billeil?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "نأكد المعاد ده؟",
+        "english": "Shall we confirm this appointment?",
+        "transliteration": "Na'akked el-ma'ad da?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هغير المعاد ليوم التلات.",
+        "english": "I will reschedule the appointment to Tuesday.",
+        "transliteration": "Haghayyer el-ma'ad le yōm el-talat."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'What do you think about...?' when suggesting a time?",
+      "options": [
+        {
+          "id": "a",
+          "text": "إمتى معاد؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "إيه رأيك في...؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "هل فاضي؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'إيه رأيك في...؟' (eih ra'yak fy...?) is used to suggest something.",
+      "hint": {
+        "transliteration": "Eih ra'yak fy...?",
+        "arabic": "إيه رأيك في...؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'to reschedule the appointment'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "نأكد المعاد",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "نلغي المعاد",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "نغير المعاد",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'نغير المعاد' (neghayyer el-ma'ad) means to change or reschedule the appointment.",
+      "hint": {
+        "transliteration": "Neghayyer el-ma'ad",
+        "arabic": "نغير المعاد"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: Shall we ___ the appointment? (نأكد الـ ___؟)",
+      "options": [
+        {
+          "id": "a",
+          "text": "وقت",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ساعة",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "معاد",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'معاد' (ma'ad) is the word for appointment.",
+      "hint": {
+        "transliteration": "Ma'ad",
+        "arabic": "معاد"
+      }
+    }
+  ]
+}

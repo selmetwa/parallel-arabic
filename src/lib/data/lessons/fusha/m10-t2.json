@@ -1,0 +1,909 @@
+{
+  "topicId": "m10-t2",
+  "title": "Ordering Food at a Restaurant",
+  "dialect": "fusha",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Greeting the Waiter",
+          "arabic": "تحية النادل"
+        },
+        "text": "When you enter a restaurant, you might greet the staff. Common greetings include \"مرحباً\" (Marhaban - Hello) or \"أهلاً وسهلاً\" (Ahlan wa sahlan - Welcome). These phrases are universally polite.",
+        "examples": [
+          {
+            "arabic": "مرحباً!",
+            "english": "Hello!",
+            "transliteration": "Marhaban!"
+          },
+          {
+            "arabic": "أهلاً وسهلاً.",
+            "english": "Welcome.",
+            "transliteration": "Ahlan wa sahlan."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Requesting a Table",
+          "arabic": "طلب طاولة"
+        },
+        "text": "To ask for a table, you can use phrases like \"طاولة لـ...\" (ṭāwila li... - A table for...). You then specify the number of people. \"شخص\" (shakhṣ) is for one person, \"شخصين\" (shakhṣayn) for two, and \"أشخاص\" (ashkhāṣ) for three or more.",
+        "examples": [
+          {
+            "arabic": "طاولة لشخصين من فضلك.",
+            "english": "A table for two, please.",
+            "transliteration": "Ṭāwila li-shakhṣayn min faḍlik."
+          },
+          {
+            "arabic": "هل لديكم طاولة شاغرة لأربعة أشخاص؟",
+            "english": "Do you have a vacant table for four people?",
+            "transliteration": "Hal ladaykum ṭāwila shāghira li-arba'at ashkhāṣ?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Using Polite Phrases",
+          "arabic": "استخدام عبارات مهذبة"
+        },
+        "text": "Politeness is key in any interaction. Use \"من فضلكَ\" (min faḍlika - please, to a male) or \"من فضلكِ\" (min faḍliki - please, to a female) when making requests. Alternatively, you can use \"لو سمحتَ\" (law samaḥta - excuse me/please, to a male) or \"لو سمحتِ\" (law samaḥti - excuse me/please, to a female).",
+        "examples": [
+          {
+            "arabic": "الماء من فضلكَ.",
+            "english": "The water, please.",
+            "transliteration": "Al-mā' min faḍlika.",
+            "diacriticalNotes": "The kasra (ِ) on 'k' indicates addressing a female, while fatḥa (َ) indicates addressing a male."
+          },
+          {
+            "arabic": "القائمة لو سمحتِ.",
+            "english": "The menu, please.",
+            "transliteration": "Al-qā'ima law samaḥti.",
+            "diacriticalNotes": "The kasra (ِ) on 't' indicates addressing a female, while fatḥa (َ) indicates addressing a male."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أهلاً وسهلاً! هل لديكم طاولة لثلاثة أشخاص؟",
+        "english": "Welcome! Do you have a table for three people?",
+        "transliteration": "Ahlan wa sahlan! Hal ladaykum ṭāwila li-thalāthat ashkhāṣ?"
+      },
+      "context": "Greeting the restaurant staff and asking for a table for three people."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "طاولة لشخص واحد من فضلكَ.",
+        "english": "A table for one person, please.",
+        "transliteration": "Ṭāwila li-shakhṣ wāḥid min faḍlika."
+      },
+      "context": "Requesting a table for a single diner politely (addressing a male)."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'Hello' in Arabic in a restaurant context?",
+      "options": [
+        {
+          "id": "a",
+          "text": "صباح الخير",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مساء الخير",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "مرحباً",
+          "isCorrect": true
+        },
+        {
+          "id": "d",
+          "text": "كيف حالك؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'مرحباً' is a general greeting suitable for any time of day.",
+      "hint": {
+        "transliteration": "Marhaban",
+        "arabic": "مرحباً"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'Do you have a table for two people, ___?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "من فضلكَ",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "شكراً",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "نعم",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "'من فضلكَ' (min faḍlika) means 'please' when addressing a male. You would adjust the ending for a female.",
+      "hint": {
+        "transliteration": "min faḍlika",
+        "arabic": "من فضلكَ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'table'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "قائمة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "طاولة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كرسي",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "طبق",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'طاولة' is the direct translation for table.",
+      "hint": {
+        "transliteration": "ṭāwila",
+        "arabic": "طاولة"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Requesting the Menu",
+          "arabic": "طلب قائمة الطعام"
+        },
+        "text": "To see what food and drinks are available, you'll need the menu. Use \"قائمة الطعام\" (qā'imat aṭ-ṭa'ām - the food menu) or simply \"القائمة\" (al-qā'ima - the menu). Remember to add a polite phrase.",
+        "examples": [
+          {
+            "arabic": "القائمة من فضلكَ.",
+            "english": "The menu, please.",
+            "transliteration": "Al-qā'ima min faḍlika."
+          },
+          {
+            "arabic": "هل يمكنني رؤية قائمة الطعام؟",
+            "english": "May I see the food menu?",
+            "transliteration": "Hal yumkinunī ru'yat qā'imat aṭ-ṭa'ām?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Ready to Order",
+          "arabic": "الاستعداد للطلب"
+        },
+        "text": "When you've looked through the menu and are ready to place your order, you can signal this to the waiter. Phrases like \"أود أن أطلب\" (awaddu an aṭlub - I would like to order) or \"أرغب في طلب\" (arghabu fī ṭalab - I wish to order) are polite ways to express your intent.",
+        "examples": [
+          {
+            "arabic": "أنا جاهز لأطلب الآن.",
+            "english": "I am ready to order now.",
+            "transliteration": "Anā jāhiz li-aṭlub al-ān."
+          },
+          {
+            "arabic": "أود أن أطلب الشاي من فضلكِ.",
+            "english": "I would like to order tea, please.",
+            "transliteration": "Awaddu an aṭlub ash-shāy min faḍliki."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Ordering Beverages",
+          "arabic": "طلب المشروبات"
+        },
+        "text": "Start with drinks. Common choices include \"ماء\" (mā' - water), \"عصير\" (ʿaṣīr - juice), \"شاي\" (shāy - tea), and \"قهوة\" (qahwa - coffee). You can specify the type of juice (e.g., \"عصير برتقال\" - orange juice) or how many cups/glasses.",
+        "examples": [
+          {
+            "arabic": "كوب ماء من فضلك.",
+            "english": "A glass of water, please.",
+            "transliteration": "Kūb mā' min faḍlik."
+          },
+          {
+            "arabic": "أريد عصير برتقال وقهوة.",
+            "english": "I want orange juice and coffee.",
+            "transliteration": "Urīd ʿaṣīr burtuqāl wa qahwa."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هل يمكنني رؤية القائمة، لو سمحتَ؟",
+        "english": "May I see the menu, please?",
+        "transliteration": "Hal yumkinunī ru'yat al-qā'ima, law samaḥta?"
+      },
+      "context": "Politly asking for the menu, addressing a male waiter."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أود أن أطلب الماء والشاي.",
+        "english": "I would like to order water and tea.",
+        "transliteration": "Awaddu an aṭlub al-mā' wash-shāy."
+      },
+      "context": "Expressing a desire to order specific drinks."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic phrase for 'the menu'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "الحساب",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الماء",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "القائمة",
+          "isCorrect": true
+        },
+        {
+          "id": "d",
+          "text": "الكرسي",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'القائمة' (Al-qā'ima) means 'the menu'.",
+      "hint": {
+        "transliteration": "Al-qā'ima",
+        "arabic": "القائمة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I would like to ___ coffee.'",
+      "options": [
+        {
+          "id": "a",
+          "text": "أطلب",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "أشرب",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "أرى",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "The verb 'أطلب' (aṭlub) means 'to order'. The sentence 'أود أن أطلب القهوة' means 'I would like to order coffee'.",
+      "hint": {
+        "transliteration": "aṭlub",
+        "arabic": "أطلب"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which of these is 'juice' in Arabic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "شاي",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "قهوة",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "عصير",
+          "isCorrect": true
+        },
+        {
+          "id": "d",
+          "text": "حليب",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'عصير' (ʿaṣīr) is the Arabic word for juice.",
+      "hint": {
+        "transliteration": "ʿaṣīr",
+        "arabic": "عصير"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Inquiring About Main Dishes",
+          "arabic": "الاستفسار عن الأطباق الرئيسية"
+        },
+        "text": "To ask what main dishes are available, you can say \"ماذا لديكم اليوم؟\" (mādhā ladaykum al-yawm? - What do you have today?) or \"ما هي أطباقكم الرئيسية؟\" (mā hiya aṭbāqukum ar-ra'īsiyya? - What are your main dishes?). To ask about a specific item on the menu, use \"ما هذا؟\" (mā hādhā? - What is this?).",
+        "examples": [
+          {
+            "arabic": "ماذا لديكم من أطباق رئيسية؟",
+            "english": "What main dishes do you have?",
+            "transliteration": "Mādhā ladaykum min aṭbāq ra'īsiyya?"
+          },
+          {
+            "arabic": "ما هذا الطبق؟",
+            "english": "What is this dish?",
+            "transliteration": "Mā hādhā aṭ-ṭabaq?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Popular Main Courses",
+          "arabic": "أطباق رئيسية مشهورة"
+        },
+        "text": "Some common main course ingredients you might encounter are \"دجاج\" (dajāj - chicken), \"لحم\" (laḥm - meat/beef), and \"سمك\" (samak - fish). These are frequently served with sides like \"أرز\" (aruzz - rice) or \"خبز\" (khubz - bread).",
+        "examples": [
+          {
+            "arabic": "أرغب في طبق دجاج مع أرز.",
+            "english": "I would like a chicken dish with rice.",
+            "transliteration": "Arghabu fī ṭabaq dajāj maʿa aruzz."
+          },
+          {
+            "arabic": "هل لديكم سمك مشوي؟",
+            "english": "Do you have grilled fish?",
+            "transliteration": "Hal ladaykum samak mashwī?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Specifying Quantity and Size",
+          "arabic": "تحديد الكمية والحجم"
+        },
+        "text": "When ordering, you might need to specify the quantity, such as \"واحد\" (wāḥid - one) or \"اثنان\" (ithnān - two). You can also describe the size of a dish or portion, using adjectives like \"كبير\" (kabīr - large) or \"صغير\" (ṣaghīr - small).",
+        "examples": [
+          {
+            "arabic": "أريد طبق لحم كبير.",
+            "english": "I want a large meat dish.",
+            "transliteration": "Urīd ṭabaq laḥm kabīr."
+          },
+          {
+            "arabic": "خبز صغير من فضلك.",
+            "english": "Small bread, please.",
+            "transliteration": "Khubz ṣaghīr min faḍlik."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ما هي أطباق الدجاج لديكم؟",
+        "english": "What chicken dishes do you have?",
+        "transliteration": "Mā hiya aṭbāq ad-dajāj ladaykum?"
+      },
+      "context": "Asking the waiter about the specific chicken dishes available."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أرغب في سمك مع أرز، وطبق سلطة صغير.",
+        "english": "I would like fish with rice, and a small salad dish.",
+        "transliteration": "Arghabu fī samak maʿa aruzz, wa ṭabaq salata ṣaghīr."
+      },
+      "context": "Ordering a main course with a side, specifying the size of the salad."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'What do you have today?' to inquire about available dishes?",
+      "options": [
+        {
+          "id": "a",
+          "text": "هل هذا كل شيء؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ماذا لديكم اليوم؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "ما هي الفاتورة؟",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "متى تفتحون؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'ماذا لديكم اليوم؟' (Mādhā ladaykum al-yawm?) directly translates to 'What do you have today?'",
+      "hint": {
+        "transliteration": "Mādhā ladaykum al-yawm?",
+        "arabic": "ماذا لديكم اليوم؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I want a ___ dish.' (referring to chicken)",
+      "options": [
+        {
+          "id": "a",
+          "text": "دجاج",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "لحم",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "سمك",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "'دجاج' (dajāj) means chicken.",
+      "hint": {
+        "transliteration": "dajāj",
+        "arabic": "دجاج"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'large'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "صغير",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "واحد",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "كبير",
+          "isCorrect": true
+        },
+        {
+          "id": "d",
+          "text": "اثنان",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'كبير' (kabīr) means large.",
+      "hint": {
+        "transliteration": "kabīr",
+        "arabic": "كبير"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Inquiring About Ingredients",
+          "arabic": "الاستفسار عن المكونات"
+        },
+        "text": "If you have dietary concerns, it's important to ask about ingredients. Use \"هل يوجد ___ في هذا الطبق؟\" (hal yūjadu ___ fī hādhā aṭ-ṭabaq? - Is there ___ in this dish?) or make a request with \"بدون ___ من فضلك\" (bi-dūn ___ min faḍlik - without ___ please).",
+        "examples": [
+          {
+            "arabic": "هل يوجد بصل في السلطة؟",
+            "english": "Is there onion in the salad?",
+            "transliteration": "Hal yūjadu baṣal fī as-salata?"
+          },
+          {
+            "arabic": "أريد الدجاج بدون بهارات حارة.",
+            "english": "I want the chicken without spicy spices.",
+            "transliteration": "Urīd ad-dajāj bi-dūn bahārāt ḥārra."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Mentioning Allergies or Dietary Preferences",
+          "arabic": "ذكر الحساسية أو التفضيلات الغذائية"
+        },
+        "text": "Inform the staff about any allergies: \"لدي حساسية من ___\" (ladayya ḥasāsiyya min ___ - I have an allergy to ___). If you are vegetarian, you can say \"أنا نباتي\" (anā nabātī - I am vegetarian, male) or \"أنا نباتية\" (anā nabātiyya - I am vegetarian, female).",
+        "examples": [
+          {
+            "arabic": "لدي حساسية من المكسرات.",
+            "english": "I have an allergy to nuts.",
+            "transliteration": "Ladayya ḥasāsiyya min al-mukassarāt."
+          },
+          {
+            "arabic": "أنا نباتية، هل لديكم خيارات نباتية؟",
+            "english": "I am vegetarian (female), do you have vegetarian options?",
+            "transliteration": "Anā nabātiyya, hal ladaykum khiyārāt nabātiyya?",
+            "diacriticalNotes": "The tā' marbūṭa (ة) and kasra (ِ) at the end of 'نباتية' indicate the feminine form."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Confirming Your Order",
+          "arabic": "تأكيد الطلب"
+        },
+        "text": "After you've placed your order, the waiter might ask \"هل هذا كل شيء؟\" (hal hādhā kullu shay'? - Is that all?). You can confirm with \"نعم، هذا كل شيء\" (naʿam, hādhā kullu shay' - Yes, that's all) or add more items with \"لا، أريد أيضاً...\" (lā, urīd ayḍan... - No, I also want...).",
+        "examples": [
+          {
+            "arabic": "نعم، هذا كل شيء، شكراً.",
+            "english": "Yes, that's all, thank you.",
+            "transliteration": "Naʿam, hādhā kullu shay', shukran."
+          },
+          {
+            "arabic": "لا، أريد أيضاً كوب عصير.",
+            "english": "No, I also want a glass of juice.",
+            "transliteration": "Lā, urīd ayḍan kūb ʿaṣīr."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هل يوجد حليب في هذا الطبق؟ لدي حساسية.",
+        "english": "Is there milk in this dish? I have an allergy.",
+        "transliteration": "Hal yūjadu ḥalīb fī hādhā aṭ-ṭabaq? Ladayya ḥasāsiyya."
+      },
+      "context": "Asking about an ingredient due to a milk allergy."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا نباتي، أرغب في طبق خضروات بدون لحم.",
+        "english": "I am vegetarian (male), I would like a vegetable dish without meat.",
+        "transliteration": "Anā nabātī, arghabu fī ṭabaq khuḍrawāt bi-dūn laḥm."
+      },
+      "context": "Stating dietary preference and requesting a specific dish without meat."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'without' in Arabic when ordering food?",
+      "options": [
+        {
+          "id": "a",
+          "text": "مع",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بدون",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "نعم",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "لا",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'بدون' (bi-dūn) means 'without'.",
+      "hint": {
+        "transliteration": "bi-dūn",
+        "arabic": "بدون"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I have an allergy ___ nuts.'",
+      "options": [
+        {
+          "id": "a",
+          "text": "من",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "إلى",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "في",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "The phrase 'حساسية من' (ḥasāsiyya min) means 'allergy to' or 'allergy from'.",
+      "hint": {
+        "transliteration": "min",
+        "arabic": "من"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the correct response if the waiter asks 'Is that all?' and you confirm it is?",
+      "options": [
+        {
+          "id": "a",
+          "text": "لا، شكراً",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "نعم، هذا كل شيء",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أريد المزيد",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "حسناً",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'نعم، هذا كل شيء' (Naʿam, hādhā kullu shay') means 'Yes, that's all'.",
+      "hint": {
+        "transliteration": "Naʿam, hādhā kullu shay'",
+        "arabic": "نعم، هذا كل شيء"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Requesting the Bill",
+          "arabic": "طلب الفاتورة"
+        },
+        "text": "After your meal, you'll need to ask for the bill. The word for bill is \"الفاتورة\" (al-fātūra). You can say \"الفاتورة من فضلك\" (al-fātūra min faḍlik - The bill, please) or use a full sentence.",
+        "examples": [
+          {
+            "arabic": "هل يمكنني الحصول على الفاتورة؟",
+            "english": "May I have the bill?",
+            "transliteration": "Hal yumkinunī al-ḥuṣūl ʿalā al-fātūra?"
+          },
+          {
+            "arabic": "الفاتورة لو سمحتَ.",
+            "english": "The bill, please.",
+            "transliteration": "Al-fātūra law samaḥta."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Payment Methods",
+          "arabic": "طرق الدفع"
+        },
+        "text": "When paying, you might ask \"كيف أدفع؟\" (kayfa adfaʿ? - How do I pay?). Common methods are \"نقداً\" (naqdan - cash) or \"بالبطاقة\" (bil-biṭāqa - by card). Confirm if they accept your preferred method.",
+        "examples": [
+          {
+            "arabic": "سأدفع نقداً.",
+            "english": "I will pay cash.",
+            "transliteration": "Sa-adfaʿ naqdan."
+          },
+          {
+            "arabic": "هل تقبلون الدفع بالبطاقة؟",
+            "english": "Do you accept card payment?",
+            "transliteration": "Hal taqbalūn ad-dafʿ bil-biṭāqa?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing Gratitude and Leaving",
+          "arabic": "التعبير عن الشكر والمغادرة"
+        },
+        "text": "It's always polite to express your thanks before leaving. \"شكراً جزيلاً\" (shukran jazīlan - Thank you very much) is a common phrase. You can also say \"مع السلامة\" (maʿa as-salāma - Goodbye) as you depart.",
+        "examples": [
+          {
+            "arabic": "شكراً على الخدمة الممتازة.",
+            "english": "Thank you for the excellent service.",
+            "transliteration": "Shukran ʿalā al-khidma al-mumtāza."
+          },
+          {
+            "arabic": "مع السلامة، إلى اللقاء.",
+            "english": "Goodbye, see you later.",
+            "transliteration": "Maʿa as-salāma, ilā al-liqā'."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الفاتورة من فضلك، سأدفع بالبطاقة.",
+        "english": "The bill, please, I will pay by card.",
+        "transliteration": "Al-fātūra min faḍlik, sa-adfaʿ bil-biṭāqa."
+      },
+      "context": "Requesting the bill and informing about the payment method."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شكراً جزيلاً، مع السلامة.",
+        "english": "Thank you very much, goodbye.",
+        "transliteration": "Shukran jazīlan, maʿa as-salāma."
+      },
+      "context": "Thanking the staff and bidding farewell."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هل يمكنني الدفع نقداً؟",
+        "english": "Can I pay cash?",
+        "transliteration": "Hal yumkinunī ad-dafʿ naqdan?"
+      },
+      "context": "Inquiring if cash payment is accepted."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you politely ask for 'the bill'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "القائمة من فضلك",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الماء من فضلك",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "الفاتورة من فضلك",
+          "isCorrect": true
+        },
+        {
+          "id": "d",
+          "text": "شكراً جزيلاً",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'الفاتورة من فضلك' (Al-fātūra min faḍlik) is the correct and polite way to ask for the bill.",
+      "hint": {
+        "transliteration": "Al-fātūra min faḍlik",
+        "arabic": "الفاتورة من فضلك"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I will pay ___ cash.'",
+      "options": [
+        {
+          "id": "a",
+          "text": "نقداً",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "بالبطاقة",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "قريباً",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "'نقداً' (naqdan) means 'cash' (as an adverb for payment).",
+      "hint": {
+        "transliteration": "naqdan",
+        "arabic": "نقداً"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is a common way to say 'Thank you very much' in Arabic after a meal?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أهلاً وسهلاً",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مع السلامة",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "شكراً جزيلاً",
+          "isCorrect": true
+        },
+        {
+          "id": "d",
+          "text": "صباح الخير",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'شكراً جزيلاً' (Shukran jazīlan) is the phrase for 'Thank you very much'.",
+      "hint": {
+        "transliteration": "Shukran jazīlan",
+        "arabic": "شكراً جزيلاً"
+      }
+    }
+  ]
+}

@@ -1,0 +1,839 @@
+{
+  "topicId": "m2-t2",
+  "title": "Asking about personal and office objects (Egyptian Arabic)",
+  "dialect": "egyptian-arabic",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Introduction: Asking 'What is this?' (Masculine)",
+          "arabic": "مقدمة: السؤال 'إيه ده؟' (للمذكر)"
+        },
+        "text": "To ask 'What is this?' about a masculine object in Egyptian Arabic, you use the phrase إيه ده؟ (ʾēh da?). This is a fundamental question for identifying things around you.",
+        "examples": [
+          {
+            "arabic": "إيه ده؟",
+            "english": "What is this? (masculine)",
+            "transliteration": "ʾēh da?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'What is this?' (Feminine)",
+          "arabic": "السؤال 'إيه دي؟' (للمؤنث)"
+        },
+        "text": "For feminine objects, the question changes slightly to إيه دي؟ (ʾēh dī?). Remember that nouns in Arabic are either masculine or feminine, and this affects the demonstrative pronoun used.",
+        "examples": [
+          {
+            "arabic": "إيه دي؟",
+            "english": "What is this? (feminine)",
+            "transliteration": "ʾēh dī?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Basic Personal Objects (Masculine)",
+          "arabic": "أشياء شخصية أساسية (مذكر)"
+        },
+        "text": "Let's learn some common masculine personal objects. Pay attention to how they are pronounced.",
+        "examples": [
+          {
+            "arabic": "كتاب",
+            "english": "book",
+            "transliteration": "kitāb"
+          },
+          {
+            "arabic": "قلم",
+            "english": "pen",
+            "transliteration": "ʾalam"
+          },
+          {
+            "arabic": "موبايل",
+            "english": "mobile phone",
+            "transliteration": "mobāyl"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "إيه ده؟ ده كتاب.",
+        "english": "What is this? This is a book.",
+        "transliteration": "ʾēh da? Da kitāb."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "إيه ده؟ ده قلم.",
+        "english": "What is this? This is a pen.",
+        "transliteration": "ʾēh da? Da ʾalam."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'What is this?' for a masculine object?",
+      "options": [
+        {
+          "id": "a",
+          "text": "إيه دي؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "إيه ده؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مين ده؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "إيه ده؟ is used to ask 'What is this?' for a masculine object. إيه دي؟ is for feminine.",
+      "hint": {
+        "transliteration": "ʾēh da?",
+        "arabic": "إيه ده؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'pen' in Egyptian Arabic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "كتاب",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "قلم",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "موبايل",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "قلم (ʾalam) means 'pen'.",
+      "hint": {
+        "transliteration": "ʾalam",
+        "arabic": "قلم"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: إيه ___؟ (asking about a feminine object)",
+      "options": [
+        {
+          "id": "a",
+          "text": "ده",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "دي",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "دول",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "For feminine objects, we use دي (dī).",
+      "hint": {
+        "transliteration": "dī",
+        "arabic": "دي"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Basic Personal Objects (Feminine)",
+          "arabic": "أشياء شخصية أساسية (مؤنث)"
+        },
+        "text": "Now, let's learn some common feminine personal objects. Many feminine nouns end with a 'ة' (tāʾ marbūṭa) sound, which is often pronounced as 'a' or 'ah' in Egyptian Arabic.",
+        "examples": [
+          {
+            "arabic": "شنطة",
+            "english": "bag",
+            "transliteration": "shanṭa"
+          },
+          {
+            "arabic": "ساعة",
+            "english": "watch / clock",
+            "transliteration": "sāʿa"
+          },
+          {
+            "arabic": "نضارة",
+            "english": "glasses",
+            "transliteration": "naḍḍāra"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Whose is this?' (Masculine)",
+          "arabic": "السؤال 'ده بتاع مين؟' (للمذكر)"
+        },
+        "text": "To ask about the owner of a masculine object, you say ده بتاع مين؟ (da bitāʿ mīn?). 'بتاع' (bitāʿ) means 'of' or 'belonging to' for masculine nouns.",
+        "examples": [
+          {
+            "arabic": "ده بتاع مين؟",
+            "english": "Whose is this? (masculine)",
+            "transliteration": "da bitāʿ mīn?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Whose is this?' (Feminine)",
+          "arabic": "السؤال 'دي بتاعت مين؟' (للمؤنث)"
+        },
+        "text": "For feminine objects, the phrase becomes دي بتاعت مين؟ (dī bitāʿit mīn?). Notice the 'ت' (t) sound added to 'بتاع' (bitāʿ) making it 'بتاعت' (bitāʿit) to match the feminine noun.",
+        "examples": [
+          {
+            "arabic": "دي بتاعت مين؟",
+            "english": "Whose is this? (feminine)",
+            "transliteration": "dī bitāʿit mīn?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "دي شنطة. دي بتاعت مين؟",
+        "english": "This is a bag. Whose is this?",
+        "transliteration": "dī shanṭa. Dī bitāʿit mīn?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ده موبايل. ده بتاع مين؟",
+        "english": "This is a mobile phone. Whose is this?",
+        "transliteration": "da mobāyl. Da bitāʿ mīn?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'bag' in Egyptian Arabic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ساعة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "قلم",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "شنطة",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "شنطة (shanṭa) means 'bag'.",
+      "hint": {
+        "transliteration": "shanṭa",
+        "arabic": "شنطة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'Whose is this?' for a feminine object like 'ساعة' (watch)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ده بتاع مين؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "دي بتاعت مين؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "إيه دي؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "For feminine objects, use دي بتاعت مين؟ (dī bitāʿit mīn?).",
+      "hint": {
+        "transliteration": "dī bitāʿit mīn?",
+        "arabic": "دي بتاعت مين؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: ده ___ مين؟ (asking 'Whose is this?' for a masculine object)",
+      "options": [
+        {
+          "id": "a",
+          "text": "بتاعت",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بتاع",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "دي",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "For masculine objects, we use بتاع (bitāʿ).",
+      "hint": {
+        "transliteration": "bitāʿ",
+        "arabic": "بتاع"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Common Office Objects (Masculine)",
+          "arabic": "أشياء مكتبية شائعة (مذكر)"
+        },
+        "text": "Now, let's learn some common masculine objects you might find in an office.",
+        "examples": [
+          {
+            "arabic": "مكتب",
+            "english": "desk / office",
+            "transliteration": "maktab"
+          },
+          {
+            "arabic": "كرسي",
+            "english": "chair",
+            "transliteration": "kursī"
+          },
+          {
+            "arabic": "كمبيوتر",
+            "english": "computer",
+            "transliteration": "kombyūtar"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Common Office Objects (Feminine)",
+          "arabic": "أشياء مكتبية شائعة (مؤنث)"
+        },
+        "text": "Here are some common feminine office objects. Remember the 'ة' (tāʾ marbūṭa) for many feminine nouns.",
+        "examples": [
+          {
+            "arabic": "ورقة",
+            "english": "paper",
+            "transliteration": "waraʾa"
+          },
+          {
+            "arabic": "مسطرة",
+            "english": "ruler",
+            "transliteration": "masṭara"
+          },
+          {
+            "arabic": "لمبة",
+            "english": "lamp / light bulb",
+            "transliteration": "lamba"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing Simple Possession: 'Mine'",
+          "arabic": "التعبير عن الملكية البسيطة: 'ملكي'"
+        },
+        "text": "To say 'This is mine', you add the suffix '-ي' (ī) to 'بتاع' (bitāʿ) or 'بتاعت' (bitāʿit).",
+        "examples": [
+          {
+            "arabic": "ده بتاعي",
+            "english": "This is mine (masculine object)",
+            "transliteration": "da bitāʿī"
+          },
+          {
+            "arabic": "دي بتاعتي",
+            "english": "This is mine (feminine object)",
+            "transliteration": "dī bitāʿitī"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "إيه ده؟ ده كرسي. ده بتاعي.",
+        "english": "What is this? This is a chair. This is mine.",
+        "transliteration": "ʾēh da? Da kursī. Da bitāʿī."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "إيه دي؟ دي ورقة. دي بتاعتي.",
+        "english": "What is this? This is a paper. This is mine.",
+        "transliteration": "ʾēh dī? Dī waraʾa. Dī bitāʿitī."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'desk' or 'office'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "كرسي",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مكتب",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كمبيوتر",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "مكتب (maktab) means 'desk' or 'office'.",
+      "hint": {
+        "transliteration": "maktab",
+        "arabic": "مكتب"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'ruler' in Egyptian Arabic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ورقة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مسطرة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "لمبة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "مسطرة (masṭara) means 'ruler'.",
+      "hint": {
+        "transliteration": "masṭara",
+        "arabic": "مسطرة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: دي ___ (This is mine, for a feminine object).",
+      "options": [
+        {
+          "id": "a",
+          "text": "بتاعي",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بتاعتي",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بتاع مين",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "For feminine objects, 'mine' is بتاعتي (bitāʿitī).",
+      "hint": {
+        "transliteration": "bitāʿitī",
+        "arabic": "بتاعتي"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "More Office Objects (Masculine)",
+          "arabic": "المزيد من الأشياء المكتبية (مذكر)"
+        },
+        "text": "Expanding our office vocabulary with more masculine nouns.",
+        "examples": [
+          {
+            "arabic": "تليفون",
+            "english": "telephone",
+            "transliteration": "tilīfōn"
+          },
+          {
+            "arabic": "فاكس",
+            "english": "fax machine",
+            "transliteration": "faks"
+          },
+          {
+            "arabic": "كمبيوتر",
+            "english": "computer",
+            "transliteration": "kombyūtar"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "More Office Objects (Feminine)",
+          "arabic": "المزيد من الأشياء المكتبية (مؤنث)"
+        },
+        "text": "And here are some additional feminine office supplies.",
+        "examples": [
+          {
+            "arabic": "طباعة",
+            "english": "printer",
+            "transliteration": "ṭabbāʿa"
+          },
+          {
+            "arabic": "دباسة",
+            "english": "stapler",
+            "transliteration": "dabbāsa"
+          },
+          {
+            "arabic": "نوتة",
+            "english": "notebook",
+            "transliteration": "nōta"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Do you have...?' (Male/Female)",
+          "arabic": "السؤال 'عندك...؟' (للمذكر والمؤنث)"
+        },
+        "text": "To ask 'Do you have...?', you use 'عندك' (ʿandak) for a male and 'عندِك' (ʿandik) for a female. Pay attention to the diacritic on the last letter.",
+        "examples": [
+          {
+            "arabic": "عندَك قلم؟",
+            "english": "Do you (male) have a pen?",
+            "transliteration": "ʿandak ʾalam?",
+            "diacriticalNotes": "Note the فتحة (fatḥa) on the ك (k) for male."
+          },
+          {
+            "arabic": "عندِك شنطة؟",
+            "english": "Do you (female) have a bag?",
+            "transliteration": "ʿandik shanṭa?",
+            "diacriticalNotes": "Note the كسرة (kasra) on the ك (k) for female."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "عندَك تليفون؟",
+        "english": "Do you (male) have a telephone?",
+        "transliteration": "ʿandak tilīfōn?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "عندِك دباسة؟",
+        "english": "Do you (female) have a stapler?",
+        "transliteration": "ʿandik dabbāsa?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'printer' in Egyptian Arabic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "كمبيوتر",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "طباعة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "فاكس",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "طباعة (ṭabbāʿa) means 'printer'.",
+      "hint": {
+        "transliteration": "ṭabbāʿa",
+        "arabic": "طباعة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase asks 'Do you (male) have a computer?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "عندِك كمبيوتر؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "عندَك كمبيوتر؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "فين كمبيوتر؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "عندَك (ʿandak) is used when addressing a male. The فتحة (fatḥa) on the ك (k) indicates masculine.",
+      "hint": {
+        "transliteration": "ʿandak kombyūtar?",
+        "arabic": "عندَك كمبيوتر؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: ___ نوتة؟ (asking 'Do you (female) have a notebook?')",
+      "options": [
+        {
+          "id": "a",
+          "text": "عندَك",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "عندِك",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "إيه",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "عندِك (ʿandik) is used when addressing a female. The كسرة (kasra) on the ك (k) indicates feminine.",
+      "hint": {
+        "transliteration": "ʿandik",
+        "arabic": "عندِك"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Answering 'Yes, I have'",
+          "arabic": "الإجابة 'أيوه، عندي'"
+        },
+        "text": "To answer positively to 'Do you have...?', simply say 'أيوه، عندي' (ʾayyūwa, ʿandī).",
+        "examples": [
+          {
+            "arabic": "عندَك قلم؟ أيوه، عندي.",
+            "english": "Do you (male) have a pen? Yes, I have.",
+            "transliteration": "ʿandak ʾalam? ʾAyyūwa, ʿandī."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Answering 'No, I don't have'",
+          "arabic": "الإجابة 'لأ، معنديش'"
+        },
+        "text": "To answer negatively, use 'لأ، معنديش' (laʾ, maʿandīš). 'لأ' (laʾ) means 'no', and 'معنديش' (maʿandīš) means 'I don't have'.",
+        "examples": [
+          {
+            "arabic": "عندِك نوتة؟ لأ، معنديش.",
+            "english": "Do you (female) have a notebook? No, I don't have.",
+            "transliteration": "ʿandik nōta? Laʾ, maʿandīš."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Polite Request: 'Can I have...?' or 'Please'",
+          "arabic": "طلب مهذب: 'ممكن...؟' أو 'لو سمحت'"
+        },
+        "text": "To politely ask for an item, you can use 'ممكن' (mumkin - Is it possible/May I have?) or 'لو سمحت' (law samaḥt - if you please/excuse me).",
+        "examples": [
+          {
+            "arabic": "ممكن قلم؟",
+            "english": "May I have a pen? / Can I have a pen?",
+            "transliteration": "mumkin ʾalam?"
+          },
+          {
+            "arabic": "لو سمحت، نوتة.",
+            "english": "Please, a notebook.",
+            "transliteration": "law samaḥt, nōta."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "عندَك كتاب؟ أيوه، عندي.",
+        "english": "Do you (male) have a book? Yes, I have.",
+        "transliteration": "ʿandak kitāb? ʾAyyūwa, ʿandī."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "عندِك شنطة؟ لأ، معنديش. ممكن شنطة؟",
+        "english": "Do you (female) have a bag? No, I don't. May I have a bag?",
+        "transliteration": "ʿandik shanṭa? Laʾ, maʿandīš. Mumkin shanṭa?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the correct way to say 'Yes, I have'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "لأ، عندي",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أيوه، عندي",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أيوه، معنديش",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "أيوه، عندي (ʾayyūwa, ʿandī) means 'Yes, I have'.",
+      "hint": {
+        "transliteration": "ʾayyūwa, ʿandī",
+        "arabic": "أيوه، عندي"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you politely ask for a pen using 'ممكن'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "إيه قلم؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ممكن قلم؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "قلم بتاعي؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "ممكن قلم؟ (mumkin ʾalam?) is a polite way to ask for a pen.",
+      "hint": {
+        "transliteration": "mumkin ʾalam?",
+        "arabic": "ممكن قلم؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: لأ، ___ (No, I don't have).",
+      "options": [
+        {
+          "id": "a",
+          "text": "عندي",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "معنديش",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بتاعي",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "معنديش (maʿandīš) means 'I don't have'.",
+      "hint": {
+        "transliteration": "maʿandīš",
+        "arabic": "معنديش"
+      }
+    }
+  ]
+}

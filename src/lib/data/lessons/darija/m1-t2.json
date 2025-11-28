@@ -1,0 +1,904 @@
+{
+  "topicId": "m1-t2",
+  "title": "Introducing Yourself and Nationalities (Darija)",
+  "dialect": "darija",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Basic Greetings",
+          "arabic": "تحية أساسية"
+        },
+        "text": "Let's start with basic greetings in Moroccan Darija. The most common greeting is 'As-salamu alaykum'. You can also use 'Labas?' to ask 'How are you?' or 'Are you good?'.",
+        "examples": [
+          {
+            "arabic": "السلام عليكم",
+            "english": "Hello / Peace be upon you",
+            "transliteration": "As-salamu alaykum"
+          },
+          {
+            "arabic": "وعليكم السلام",
+            "english": "And upon you be peace (response)",
+            "transliteration": "Wa alaykum as-salam"
+          },
+          {
+            "arabic": "لاباس؟",
+            "english": "How are you? / Are you good?",
+            "transliteration": "Labas?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'How are you?' (Male/Female)",
+          "arabic": "كيف حالك؟ (مذكر/مؤنث)"
+        },
+        "text": "To ask 'How are you?' more specifically, you can use 'Ki dayer?' for a male and 'Ki dayra?' for a female. The response is usually 'Labas, alhamdulillah' (Good, thank God).",
+        "examples": [
+          {
+            "arabic": "كي داير؟",
+            "english": "How are you? (to a male)",
+            "transliteration": "Ki dayer?"
+          },
+          {
+            "arabic": "كي دايرة؟",
+            "english": "How are you? (to a female)",
+            "transliteration": "Ki dayra?"
+          },
+          {
+            "arabic": "لاباس، الحمد لله.",
+            "english": "Good, thank God.",
+            "transliteration": "Labas, alhamdulillah."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Stating Your Name",
+          "arabic": "قول اسمك"
+        },
+        "text": "To say 'My name is...', you use 'Smiti...' followed by your name. This phrase is gender-neutral.",
+        "examples": [
+          {
+            "arabic": "سميتي أحمد.",
+            "english": "My name is Ahmed.",
+            "transliteration": "Smiti Ahmed."
+          },
+          {
+            "arabic": "سميتي فاطمة.",
+            "english": "My name is Fatima.",
+            "transliteration": "Smiti Fatima."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "السلام عليكم، سميتي سارة.",
+        "english": "Hello, my name is Sara.",
+        "transliteration": "As-salamu alaykum, smiti Sara."
+      },
+      "context": "A common way to introduce yourself with a greeting."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "لاباس، الحمد لله.",
+        "english": "Good, thank God.",
+        "transliteration": "Labas, alhamdulillah."
+      },
+      "context": "A standard response to 'How are you?'."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the most common greeting in Moroccan Darija?",
+      "options": [
+        {
+          "id": "a1",
+          "text": "صباح الخير",
+          "isCorrect": false
+        },
+        {
+          "id": "a2",
+          "text": "السلام عليكم",
+          "isCorrect": true
+        },
+        {
+          "id": "a3",
+          "text": "مساء الخير",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a2",
+      "explanation": "The most common and widely used greeting is 'As-salamu alaykum'.",
+      "hint": {
+        "transliteration": "As-salamu alaykum",
+        "arabic": "السلام عليكم"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the phrase: My name is [blank].",
+      "options": [
+        {
+          "id": "b1",
+          "text": "سميتي",
+          "isCorrect": true
+        },
+        {
+          "id": "b2",
+          "text": "سميتك",
+          "isCorrect": false
+        },
+        {
+          "id": "b3",
+          "text": "سميته",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b1",
+      "explanation": "'Smiti' means 'My name is'.",
+      "hint": {
+        "transliteration": "Smiti",
+        "arabic": "سميتي"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'How are you?' to a female in Darija?",
+      "options": [
+        {
+          "id": "c1",
+          "text": "كي داير؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c2",
+          "text": "كي دايرة؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c3",
+          "text": "شنو خبارك؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "c2",
+      "explanation": "'Ki dayra?' is used for females, while 'Ki dayer?' is for males.",
+      "hint": {
+        "transliteration": "Ki dayra?",
+        "arabic": "كي دايرة؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking Someone's Name",
+          "arabic": "سؤال عن اسم شخص"
+        },
+        "text": "To ask 'What is your name?' you use 'Shno smitek?' This phrase is also gender-neutral.",
+        "examples": [
+          {
+            "arabic": "شنو سميتك؟",
+            "english": "What is your name?",
+            "transliteration": "Shno smitek?"
+          },
+          {
+            "arabic": "شنو سميتك؟ سميتي مريم.",
+            "english": "What is your name? My name is Mariam.",
+            "transliteration": "Shno smitek? Smiti Mariam."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Where are you from?'",
+          "arabic": "من أين أنت؟"
+        },
+        "text": "To ask 'Where are you from?' you say 'Mennin nta?' for a male and 'Mennin nti?' for a female. 'Mennin' means 'from where'.",
+        "examples": [
+          {
+            "arabic": "منين نتا؟",
+            "english": "Where are you from? (to a male)",
+            "transliteration": "Mennin nta?"
+          },
+          {
+            "arabic": "منين نتِ؟",
+            "english": "Where are you from? (to a female)",
+            "transliteration": "Mennin nti?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Stating 'I am from...'",
+          "arabic": "أنا من..."
+        },
+        "text": "To state your origin, you use 'Ana men...' followed by the country or city. 'Ana' means 'I', and 'men' means 'from'. This phrase is gender-neutral.",
+        "examples": [
+          {
+            "arabic": "أنا من المغرب.",
+            "english": "I am from Morocco.",
+            "transliteration": "Ana men l-Maghrib."
+          },
+          {
+            "arabic": "أنا من كندا.",
+            "english": "I am from Canada.",
+            "transliteration": "Ana men Canada."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شنو سميتك؟ أنا سميتي يوسف.",
+        "english": "What is your name? My name is Youssef.",
+        "transliteration": "Shno smitek? Ana smiti Youssef."
+      },
+      "context": "Asking and answering about one's name."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "منين نتا؟ أنا من إنجلترا.",
+        "english": "Where are you from? (to a male) I am from England.",
+        "transliteration": "Mennin nta? Ana men Ingilterra."
+      },
+      "context": "Asking a male about his origin and stating it."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'What is your name?' in Darija?",
+      "options": [
+        {
+          "id": "d1",
+          "text": "فين سميتك؟",
+          "isCorrect": false
+        },
+        {
+          "id": "d2",
+          "text": "شكون نتا؟",
+          "isCorrect": false
+        },
+        {
+          "id": "d3",
+          "text": "شنو سميتك؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "d3",
+      "explanation": "'Shno smitek?' is the direct way to ask 'What is your name?'.",
+      "hint": {
+        "transliteration": "Shno smitek?",
+        "arabic": "شنو سميتك؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the question: Where are you from? (addressing a female) منين ___؟",
+      "options": [
+        {
+          "id": "e1",
+          "text": "نتا",
+          "isCorrect": false
+        },
+        {
+          "id": "e2",
+          "text": "نتِ",
+          "isCorrect": true
+        },
+        {
+          "id": "e3",
+          "text": "هوما",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "e2",
+      "explanation": "'Nti' (نتِ) is used for 'you' (female), while 'nta' (نتا) is for 'you' (male).",
+      "hint": {
+        "transliteration": "nti",
+        "arabic": "نتِ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would a person from Germany say 'I am from Germany'?",
+      "options": [
+        {
+          "id": "f1",
+          "text": "أنا من المغرب.",
+          "isCorrect": false
+        },
+        {
+          "id": "f2",
+          "text": "أنا من ألمانيا.",
+          "isCorrect": true
+        },
+        {
+          "id": "f3",
+          "text": "أنا من مصر.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "f2",
+      "explanation": "'Ana men Almania' means 'I am from Germany'.",
+      "hint": {
+        "transliteration": "Ana men Almania.",
+        "arabic": "أنا من ألمانيا."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Common Countries",
+          "arabic": "بلدان شائعة"
+        },
+        "text": "Here are some common countries you might talk about when discussing origin.",
+        "examples": [
+          {
+            "arabic": "المغرب",
+            "english": "Morocco",
+            "transliteration": "l-Maghrib"
+          },
+          {
+            "arabic": "مصر",
+            "english": "Egypt",
+            "transliteration": "Masr"
+          },
+          {
+            "arabic": "فرنسا",
+            "english": "France",
+            "transliteration": "Fransa"
+          },
+          {
+            "arabic": "إسبانيا",
+            "english": "Spain",
+            "transliteration": "Isbanya"
+          },
+          {
+            "arabic": "كندا",
+            "english": "Canada",
+            "transliteration": "Canada"
+          },
+          {
+            "arabic": "الولايات المتحدة",
+            "english": "United States",
+            "transliteration": "l-Wilayat l-Muttahida"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Introducing Nationalities (Masculine)",
+          "arabic": "تقديم الجنسيات (مذكر)"
+        },
+        "text": "Nationalities in Arabic change based on gender. Here are some masculine forms.",
+        "examples": [
+          {
+            "arabic": "مغربي",
+            "english": "Moroccan (male)",
+            "transliteration": "Maghrebi"
+          },
+          {
+            "arabic": "مصري",
+            "english": "Egyptian (male)",
+            "transliteration": "Masri"
+          },
+          {
+            "arabic": "فرنسي",
+            "english": "French (male)",
+            "transliteration": "Fransi"
+          },
+          {
+            "arabic": "كندي",
+            "english": "Canadian (male)",
+            "transliteration": "Kanadi"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Introducing Nationalities (Feminine)",
+          "arabic": "تقديم الجنسيات (مؤنث)"
+        },
+        "text": "Here are the feminine forms of the nationalities. Notice the addition of the 'taa marbouta' (ـة) sound at the end.",
+        "examples": [
+          {
+            "arabic": "مغربية",
+            "english": "Moroccan (female)",
+            "transliteration": "Maghrebiya"
+          },
+          {
+            "arabic": "مصرية",
+            "english": "Egyptian (female)",
+            "transliteration": "Masriya"
+          },
+          {
+            "arabic": "فرنسية",
+            "english": "French (female)",
+            "transliteration": "Fransiya"
+          },
+          {
+            "arabic": "كندية",
+            "english": "Canadian (female)",
+            "transliteration": "Kanadiya"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا مغربي من المغرب.",
+        "english": "I am Moroccan (male) from Morocco.",
+        "transliteration": "Ana Maghrebi men l-Maghrib."
+      },
+      "context": "Stating nationality and origin for a male."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هي فرنسية من فرنسا.",
+        "english": "She is French (female) from France.",
+        "transliteration": "Hiya Fransiya men Fransa."
+      },
+      "context": "Stating someone else's nationality and origin (female)."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Darija word for 'Egypt'?",
+      "options": [
+        {
+          "id": "g1",
+          "text": "المغرب",
+          "isCorrect": false
+        },
+        {
+          "id": "g2",
+          "text": "مصر",
+          "isCorrect": true
+        },
+        {
+          "id": "g3",
+          "text": "فرنسا",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "g2",
+      "explanation": "'Masr' is the Darija word for 'Egypt'.",
+      "hint": {
+        "transliteration": "Masr",
+        "arabic": "مصر"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Choose the correct nationality for 'Moroccan' (male).",
+      "options": [
+        {
+          "id": "h1",
+          "text": "مغربية",
+          "isCorrect": false
+        },
+        {
+          "id": "h2",
+          "text": "مغربي",
+          "isCorrect": true
+        },
+        {
+          "id": "h3",
+          "text": "مغاربة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "h2",
+      "explanation": "'Maghrebi' is the masculine form for Moroccan.",
+      "hint": {
+        "transliteration": "Maghrebi",
+        "arabic": "مغربي"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'She is Canadian.' (هي ___.)",
+      "options": [
+        {
+          "id": "i1",
+          "text": "كندي",
+          "isCorrect": false
+        },
+        {
+          "id": "i2",
+          "text": "كندية",
+          "isCorrect": true
+        },
+        {
+          "id": "i3",
+          "text": "كنديون",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "i2",
+      "explanation": "'Kanadiya' is the feminine form for Canadian.",
+      "hint": {
+        "transliteration": "Kanadiya",
+        "arabic": "كندية"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Stating 'I am (nationality)'",
+          "arabic": "أنا (الجنسية)"
+        },
+        "text": "You can state your nationality directly using 'Ana' followed by the appropriate gendered nationality. Remember 'Ana' is 'I'.",
+        "examples": [
+          {
+            "arabic": "أنا أمريكي.",
+            "english": "I am American (male).",
+            "transliteration": "Ana Amriki."
+          },
+          {
+            "arabic": "أنا إسبانية.",
+            "english": "I am Spanish (female).",
+            "transliteration": "Ana Isbaniya."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Putting it all together (Male)",
+          "arabic": "وضع الكل معا (مذكر)"
+        },
+        "text": "Let's combine what we've learned to introduce a male.",
+        "examples": [
+          {
+            "arabic": "السلام عليكم، سميتي علي، أنا من المغرب، أنا مغربي.",
+            "english": "Hello, my name is Ali, I am from Morocco, I am Moroccan (male).",
+            "transliteration": "As-salamu alaykum, smiti Ali, ana men l-Maghrib, ana Maghrebi."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Putting it all together (Female)",
+          "arabic": "وضع الكل معا (مؤنث)"
+        },
+        "text": "Now, let's combine it for a female introduction.",
+        "examples": [
+          {
+            "arabic": "السلام عليكم، سميتي خديجة، أنا من مصر، أنا مصرية.",
+            "english": "Hello, my name is Khadija, I am from Egypt, I am Egyptian (female).",
+            "transliteration": "As-salamu alaykum, smiti Khadija, ana men Masr, ana Masriya."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "سميتي عمر، أنا من كندا، أنا كندي.",
+        "english": "My name is Omar, I am from Canada, I am Canadian (male).",
+        "transliteration": "Smiti Omar, ana men Canada, ana Kanadi."
+      },
+      "context": "A male introducing himself fully."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "سميتي لبنى، أنا من إسبانيا، أنا إسبانية.",
+        "english": "My name is Lubna, I am from Spain, I am Spanish (female).",
+        "transliteration": "Smiti Lubna, ana men Isbanya, ana Isbaniya."
+      },
+      "context": "A female introducing herself fully."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would a female from the USA introduce her nationality?",
+      "options": [
+        {
+          "id": "j1",
+          "text": "أنا أمريكي.",
+          "isCorrect": false
+        },
+        {
+          "id": "j2",
+          "text": "أنا أمريكية.",
+          "isCorrect": true
+        },
+        {
+          "id": "j3",
+          "text": "أنا من أمريكا.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "j2",
+      "explanation": "'Amrikiya' is the feminine form for American.",
+      "hint": {
+        "transliteration": "Ana Amrikiya.",
+        "arabic": "أنا أمريكية."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the introduction for a male: السلام عليكم، سميتي حسن، أنا من فرنسا، أنا ___.",
+      "options": [
+        {
+          "id": "k1",
+          "text": "فرنسية",
+          "isCorrect": false
+        },
+        {
+          "id": "k2",
+          "text": "فرنسي",
+          "isCorrect": true
+        },
+        {
+          "id": "k3",
+          "text": "فرنسا",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "k2",
+      "explanation": "Since Hassan is a male, the masculine form 'Fransi' is used.",
+      "hint": {
+        "transliteration": "fransi",
+        "arabic": "فرنسي"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which sentence correctly introduces a female named Amina from Egypt, who is Egyptian?",
+      "options": [
+        {
+          "id": "l1",
+          "text": "سميتي أمينة، أنا من مصر، أنا مصري.",
+          "isCorrect": false
+        },
+        {
+          "id": "l2",
+          "text": "سميتي أمينة، أنا من مصر، أنا مصرية.",
+          "isCorrect": true
+        },
+        {
+          "id": "l3",
+          "text": "أنا أمينة، هي من مصر، هي مصرية.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "l2",
+      "explanation": "The feminine form 'Masriya' should be used for Amina.",
+      "hint": {
+        "transliteration": "Smiti Amina, ana men Masr, ana Masriya.",
+        "arabic": "سميتي أمينة، أنا من مصر، أنا مصرية."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking about Nationality",
+          "arabic": "سؤال عن الجنسية"
+        },
+        "text": "To ask 'What is your nationality?', you say 'Shno jinsiyetek?' This phrase is also gender-neutral.",
+        "examples": [
+          {
+            "arabic": "شنو جنسيتك؟",
+            "english": "What is your nationality?",
+            "transliteration": "Shno jinsiyetek?"
+          },
+          {
+            "arabic": "شنو جنسيتك؟ أنا مغربي.",
+            "english": "What is your nationality? I am Moroccan (male).",
+            "transliteration": "Shno jinsiyetek? Ana Maghrebi."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking about Age",
+          "arabic": "سؤال عن العمر"
+        },
+        "text": "To ask 'How old are you?', you use 'Shhal f 3omrek?' This literally means 'How much in your age?'. This phrase is also gender-neutral.",
+        "examples": [
+          {
+            "arabic": "شحال ف عمرك؟",
+            "english": "How old are you?",
+            "transliteration": "Shhal f 3omrek?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Stating Your Age",
+          "arabic": "ذكر العمر"
+        },
+        "text": "To state your age, you say 'F 3omri...' followed by the number and '3am' (years). 'F 3omri' means 'In my age'.",
+        "examples": [
+          {
+            "arabic": "ف عمري عشرين عام.",
+            "english": "I am twenty years old.",
+            "transliteration": "F 3omri 3ashrin 3am."
+          },
+          {
+            "arabic": "ف عمري تلاتين عام.",
+            "english": "I am thirty years old.",
+            "transliteration": "F 3omri tlatin 3am."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شنو جنسيتك؟ أنا مصرية.",
+        "english": "What is your nationality? I am Egyptian (female).",
+        "transliteration": "Shno jinsiyetek? Ana Masriya."
+      },
+      "context": "Asking and stating nationality for a female."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شحال ف عمرك؟ ف عمري خمسة وعشرين عام.",
+        "english": "How old are you? I am twenty-five years old.",
+        "transliteration": "Shhal f 3omrek? F 3omri khamsa w 3ashrin 3am."
+      },
+      "context": "Asking and stating one's age."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'What is your nationality?' in Darija?",
+      "options": [
+        {
+          "id": "m1",
+          "text": "فين جنسيتك؟",
+          "isCorrect": false
+        },
+        {
+          "id": "m2",
+          "text": "شكون جنسيتك؟",
+          "isCorrect": false
+        },
+        {
+          "id": "m3",
+          "text": "شنو جنسيتك؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "m3",
+      "explanation": "'Shno jinsiyetek?' is the correct phrase to ask about nationality.",
+      "hint": {
+        "transliteration": "Shno jinsiyetek?",
+        "arabic": "شنو جنسيتك؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the question: How old are you? (شحال ___؟)",
+      "options": [
+        {
+          "id": "n1",
+          "text": "اسمك",
+          "isCorrect": false
+        },
+        {
+          "id": "n2",
+          "text": "ف عمرك",
+          "isCorrect": true
+        },
+        {
+          "id": "n3",
+          "text": "جنسيتك",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "n2",
+      "explanation": "'F 3omrek' means 'in your age', completing the phrase for 'How old are you?'.",
+      "hint": {
+        "transliteration": "f 3omrek",
+        "arabic": "ف عمرك"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "If someone is 40 years old, how would they say 'I am forty years old'?",
+      "options": [
+        {
+          "id": "o1",
+          "text": "ف عمري عشرين عام.",
+          "isCorrect": false
+        },
+        {
+          "id": "o2",
+          "text": "ف عمري أربعين عام.",
+          "isCorrect": true
+        },
+        {
+          "id": "o3",
+          "text": "ف عمري خمسين عام.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "o2",
+      "explanation": "'Arba3in' is forty in Darija.",
+      "hint": {
+        "transliteration": "F 3omri arba3in 3am.",
+        "arabic": "ف عمري أربعين عام."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Saying Goodbye",
+          "arabic": "توديع"
+        },
+        "text": "To conclude a conversation, you can use 'Bslama', which means 'Goodbye'. A common response is also 'Bslama' or 'Lay hawn' (May God help).",
+        "examples": [
+          {
+            "arabic": "بسلامة.",
+            "english": "Goodbye.",
+            "transliteration": "Bslama."
+          },
+          {
+            "arabic": "بسلامة، تلاقاو من بعد.",
+            "english": "Goodbye, see you later.",
+            "transliteration": "Bslama, tlaqaw men ba3d."
+          }
+        ]
+      }
+    }
+  ]
+}

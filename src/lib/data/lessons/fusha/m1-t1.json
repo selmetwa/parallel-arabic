@@ -1,0 +1,843 @@
+{
+  "topicId": "m1-t1",
+  "title": "Greetings and Apologies (Fusha)",
+  "dialect": "fusha",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "General Greeting: Hello / Peace be upon you"
+        },
+        "text": "The most common and formal greeting in Arabic is 'As-salamu alaykum', meaning 'Peace be upon you'. It's used universally across different times of day.",
+        "examples": [
+          {
+            "arabic": "السلام عليكم",
+            "english": "Peace be upon you / Hello",
+            "transliteration": "As-salamu alaykum"
+          },
+          {
+            "arabic": "وعليكم السلام",
+            "english": "And upon you be peace (Reply)",
+            "transliteration": "Wa alaykum as-salam"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Morning Greeting: Good morning"
+        },
+        "text": "To greet someone in the morning, use 'Sabah al-khayr'. The common reply is 'Sabah an-nur', meaning 'Morning of light'.",
+        "examples": [
+          {
+            "arabic": "صباح الخير",
+            "english": "Good morning",
+            "transliteration": "Sabah al-khayr"
+          },
+          {
+            "arabic": "صباح النور",
+            "english": "Morning of light (Reply)",
+            "transliteration": "Sabah an-nur"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Evening Greeting: Good evening"
+        },
+        "text": "When greeting someone in the evening, you say 'Masa' al-khayr'. The reply is 'Masa' an-nur', similar to the morning greeting.",
+        "examples": [
+          {
+            "arabic": "مساء الخير",
+            "english": "Good evening",
+            "transliteration": "Masa' al-khayr"
+          },
+          {
+            "arabic": "مساء النور",
+            "english": "Evening of light (Reply)",
+            "transliteration": "Masa' an-nur"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "السلام عليكم يا أخي.",
+        "english": "Hello, my brother.",
+        "transliteration": "As-salamu alaykum ya akhi."
+      },
+      "context": "Greeting a brother in the morning."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "صباح الخير يا معلمتي، صباح النور.",
+        "english": "Good morning, my teacher (f.), good morning (reply).",
+        "transliteration": "Sabah al-khayr ya mu'allimati, sabah an-nur."
+      },
+      "context": "A student greets their female teacher."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the common Arabic phrase for 'Hello'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "صباح الخير",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مساء النور",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "السلام عليكم",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "«السلام عليكم» is the universal Arabic greeting, meaning 'Peace be upon you'.",
+      "hint": {
+        "transliteration": "As-salamu alaykum",
+        "arabic": "السلام عليكم"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you reply to 'Sabah al-khayr' (Good morning)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "وعليكم السلام",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "صباح النور",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مساء الخير",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "The standard reply to «صباح الخير» is «صباح النور» (Morning of light).",
+      "hint": {
+        "transliteration": "Sabah an-nur",
+        "arabic": "صباح النور"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the evening greeting: مساء الـ___",
+      "options": [
+        {
+          "id": "a",
+          "text": "نور",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "خير",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "سلام",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "The reply to «مساء الخير» is «مساء النور» (Evening of light).",
+      "hint": {
+        "transliteration": "nur",
+        "arabic": "نور"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'How are you?' (to a male)"
+        },
+        "text": "To ask a male 'How are you?', you use 'Kayfa haluk?'. Notice the 'ka' sound at the end.",
+        "examples": [
+          {
+            "arabic": "كيف حالكَ؟",
+            "english": "How are you? (to a male)",
+            "transliteration": "Kayfa haluk?",
+            "diacriticalNotes": "The fatḥa (َ) on the ك indicates a male recipient."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'How are you?' (to a female)"
+        },
+        "text": "To ask a female 'How are you?', you use 'Kayfa haluki?'. Notice the 'ki' sound at the end, indicated by the kasra.",
+        "examples": [
+          {
+            "arabic": "كيف حالكِ؟",
+            "english": "How are you? (to a female)",
+            "transliteration": "Kayfa haluki?",
+            "diacriticalNotes": "The kasra (ِ) on the ك indicates a female recipient."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Replying 'I'm fine, thanks'"
+        },
+        "text": "A common and simple way to say 'I'm fine' is 'Ana bikhayr'. To add 'thanks', say 'shukran'.",
+        "examples": [
+          {
+            "arabic": "أنا بخير",
+            "english": "I'm fine",
+            "transliteration": "Ana bikhayr"
+          },
+          {
+            "arabic": "شكراً",
+            "english": "Thanks",
+            "transliteration": "Shukran"
+          },
+          {
+            "arabic": "أنا بخير، شكراً.",
+            "english": "I'm fine, thanks.",
+            "transliteration": "Ana bikhayr, shukran."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "صباح الخير يا أبي، كيف حالكَ؟",
+        "english": "Good morning, my father, how are you? (to m.)",
+        "transliteration": "Sabah al-khayr ya abi, kayfa haluk?"
+      },
+      "context": "A child asks their father how he is."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "كيف حالكِ يا صديقتي؟ أنا بخير، شكراً.",
+        "english": "How are you, my friend (f.)? I'm fine, thanks.",
+        "transliteration": "Kayfa haluki ya sadiqiati? Ana bikhayr, shukran."
+      },
+      "context": "Two female friends greeting each other."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'How are you?' to a male friend?",
+      "options": [
+        {
+          "id": "a",
+          "text": "كيف حالكِ؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كيف حالكَ؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أنا بخير؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«كيف حالكَ؟» with a fatḥa on the kāf is used to ask a male 'How are you?'.",
+      "hint": {
+        "transliteration": "Kayfa haluk?",
+        "arabic": "كيف حالكَ؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the correct way to say 'Thanks' in Arabic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "مساء الخير",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شكراً",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "صباح النور",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«شكراً» means 'Thanks' or 'Thank you'.",
+      "hint": {
+        "transliteration": "Shukran",
+        "arabic": "شكراً"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Fill in the blank: أنا ___، شكراً.",
+      "options": [
+        {
+          "id": "a",
+          "text": "بخير",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "حالك",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "السلام",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "The phrase «أنا بخير، شكراً» means 'I'm fine, thanks'.",
+      "hint": {
+        "transliteration": "bikhayr",
+        "arabic": "بخير"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Welcome: Ahlan wa sahlan"
+        },
+        "text": "'Ahlan wa sahlan' is a general welcome. The reply changes based on the gender of the person you're welcoming.",
+        "examples": [
+          {
+            "arabic": "أهلاً وسهلاً",
+            "english": "Welcome",
+            "transliteration": "Ahlan wa sahlan"
+          },
+          {
+            "arabic": "أهلاً بكَ",
+            "english": "Welcome to you (to a male)",
+            "transliteration": "Ahlan bika",
+            "diacriticalNotes": "The fatḥa (َ) on the ك indicates a male recipient."
+          },
+          {
+            "arabic": "أهلاً بكِ",
+            "english": "Welcome to you (to a female)",
+            "transliteration": "Ahlan biki",
+            "diacriticalNotes": "The kasra (ِ) on the ك indicates a female recipient."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Pleased to meet you: Tasharrafna"
+        },
+        "text": "'Tasharrafna' is a polite way to express pleasure at meeting someone. The common reply signifies the pleasure is mutual.",
+        "examples": [
+          {
+            "arabic": "تشرفنا",
+            "english": "Pleased to meet you",
+            "transliteration": "Tasharrafna"
+          },
+          {
+            "arabic": "الشرف لي",
+            "english": "The pleasure is mine (Reply)",
+            "transliteration": "Ash-sharaf li"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Formal Goodbye: Ila al-liqa' and Ma'a as-salamah"
+        },
+        "text": "'Ila al-liqa'' means 'Until we meet again' and is a common formal goodbye. The reply 'Ma'a as-salamah' means 'Go with safety'.",
+        "examples": [
+          {
+            "arabic": "إلى اللقاء",
+            "english": "Goodbye / Until we meet again",
+            "transliteration": "Ila al-liqa'"
+          },
+          {
+            "arabic": "مع السلامة",
+            "english": "Go with safety / Goodbye (Reply)",
+            "transliteration": "Ma'a as-salamah"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أهلاً وسهلاً بكِ في منزلنا.",
+        "english": "Welcome (to f.) to our home.",
+        "transliteration": "Ahlan wa sahlan biki fi manzilina."
+      },
+      "context": "Welcoming a female guest."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "تشرفنا بلقائكَ يا سيد أحمد. الشرف لي.",
+        "english": "Pleased to meet you (to m.), Mr. Ahmed. The pleasure is mine.",
+        "transliteration": "Tasharrafna biliqa'ika ya Sayyid Ahmad. Ash-sharaf li."
+      },
+      "context": "A formal introduction between two men."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the general Arabic phrase for 'Welcome'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أهلاً بكَ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أهلاً وسهلاً",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مع السلامة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«أهلاً وسهلاً» is the general welcoming phrase.",
+      "hint": {
+        "transliteration": "Ahlan wa sahlan",
+        "arabic": "أهلاً وسهلاً"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you reply to 'Tasharrafna' (Pleased to meet you)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أهلاً وسهلاً",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "إلى اللقاء",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "الشرف لي",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "The reply to «تشرفنا» is «الشرف لي», meaning 'The pleasure is mine'.",
+      "hint": {
+        "transliteration": "Ash-sharaf li",
+        "arabic": "الشرف لي"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the formal goodbye: إلى الـ___",
+      "options": [
+        {
+          "id": "a",
+          "text": "خير",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "لقاء",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "سلام",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«إلى اللقاء» means 'Goodbye' or 'Until we meet again'.",
+      "hint": {
+        "transliteration": "liqa'",
+        "arabic": "لقاء"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "General Apology: I'm sorry"
+        },
+        "text": "To apologize, use 'Asif' for a male speaker and 'Asifah' for a female speaker. This is a general apology.",
+        "examples": [
+          {
+            "arabic": "آسف",
+            "english": "I'm sorry (male speaker)",
+            "transliteration": "Asif"
+          },
+          {
+            "arabic": "آسفة",
+            "english": "I'm sorry (female speaker)",
+            "transliteration": "Asifah"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Excuse me / Pardon me"
+        },
+        "text": "'Afwan' can mean 'Excuse me' (to pass or get attention) or 'You're welcome'. For 'Excuse me' specifically to get attention or permission, you can also use 'Law samahta' (to male) or 'Law samahti' (to female).",
+        "examples": [
+          {
+            "arabic": "عفواً",
+            "english": "Excuse me / Pardon me / You're welcome",
+            "transliteration": "Afwan"
+          },
+          {
+            "arabic": "لو سمحتَ؟",
+            "english": "Excuse me? (to a male)",
+            "transliteration": "Law samahta?",
+            "diacriticalNotes": "The fatḥa (َ) on the ت indicates addressing a male."
+          },
+          {
+            "arabic": "لو سمحتِ؟",
+            "english": "Excuse me? (to a female)",
+            "transliteration": "Law samahti?",
+            "diacriticalNotes": "The kasra (ِ) on the ت indicates addressing a female."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "No problem / You're welcome"
+        },
+        "text": "'La mushkilah' means 'No problem'. 'Afwan' can also be used as 'You're welcome' in response to 'Shukran'.",
+        "examples": [
+          {
+            "arabic": "لا مشكلة",
+            "english": "No problem",
+            "transliteration": "La mushkilah"
+          },
+          {
+            "arabic": "عفواً",
+            "english": "You're welcome (in reply to thanks)",
+            "transliteration": "Afwan"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "آسف، لقد نسيت كتابي.",
+        "english": "I'm sorry (m. speaker), I forgot my book.",
+        "transliteration": "Asif, laqad nasitu kitabi."
+      },
+      "context": "A male apologizing for forgetting something."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "لو سمحتِ، هل يمكنكِ مساعدتي؟ لا مشكلة.",
+        "english": "Excuse me (to f.), can you help me? No problem.",
+        "transliteration": "Law samahti, hal yumkinuki musa'adati? La mushkilah."
+      },
+      "context": "Asking for help and receiving an affirmative response."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How does a female speaker say 'I'm sorry'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "آسف",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "آسفة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "لا مشكلة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«آسفة» is used by a female speaker to say 'I'm sorry'.",
+      "hint": {
+        "transliteration": "Asifah",
+        "arabic": "آسفة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'Excuse me' when trying to get someone's attention?",
+      "options": [
+        {
+          "id": "a",
+          "text": "شكراً",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "عفواً",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أهلاً",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«عفواً» can be used to mean 'Excuse me' or 'Pardon me'.",
+      "hint": {
+        "transliteration": "Afwan",
+        "arabic": "عفواً"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the phrase for 'No problem': لا ___",
+      "options": [
+        {
+          "id": "a",
+          "text": "نور",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "خير",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "مشكلة",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "«لا مشكلة» means 'No problem'.",
+      "hint": {
+        "transliteration": "mushkilah",
+        "arabic": "مشكلة"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Forgive me"
+        },
+        "text": "'Samihni' (to a male) or 'Samihini' (to a female) are more direct ways to ask for forgiveness.",
+        "examples": [
+          {
+            "arabic": "سامحني",
+            "english": "Forgive me (addressing a male)",
+            "transliteration": "Samihni"
+          },
+          {
+            "arabic": "سامحيني",
+            "english": "Forgive me (addressing a female)",
+            "transliteration": "Samihini"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "My deepest apologies"
+        },
+        "text": "For a more formal or earnest apology, you can say 'A'tadhir bishiddah', which means 'I apologize intensely' or 'My deepest apologies'.",
+        "examples": [
+          {
+            "arabic": "اعتذر بشدة",
+            "english": "I apologize intensely / My deepest apologies",
+            "transliteration": "A'tadhir bishiddah"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "It's not your fault / Don't worry"
+        },
+        "text": "To reassure someone after an apology, you can say 'La ba's' (It's okay/No harm) or 'La taqlaq' (Don't worry - to male) / 'La taqlaqi' (Don't worry - to female).",
+        "examples": [
+          {
+            "arabic": "لا بأس",
+            "english": "It's okay / No harm / No problem",
+            "transliteration": "La ba's"
+          },
+          {
+            "arabic": "لا تقلق",
+            "english": "Don't worry (to a male)",
+            "transliteration": "La taqlaq"
+          },
+          {
+            "arabic": "لا تقلقي",
+            "english": "Don't worry (to a female)",
+            "transliteration": "La taqlaqi"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "سامحني، لم أقصد ذلك.",
+        "english": "Forgive me (to m.), I didn't mean that.",
+        "transliteration": "Samihni, lam aqsid dhalik."
+      },
+      "context": "Apologizing and clarifying intentions."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "اعتذر بشدة عن التأخير. لا بأس.",
+        "english": "My deepest apologies for the delay. It's okay.",
+        "transliteration": "A'tadhir bishiddah anit-ta'khir. La ba's."
+      },
+      "context": "Apologizing formally for being late and receiving reassurance."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask a female to 'Forgive me'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "سامحني",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "سامحيني",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "اعتذر",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«سامحيني» is used when asking a female to forgive you.",
+      "hint": {
+        "transliteration": "Samihini",
+        "arabic": "سامحيني"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is a more intense way to apologize in Arabic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "آسف",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "لا بأس",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "اعتذر بشدة",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "«اعتذر بشدة» means 'I apologize intensely' or 'My deepest apologies'.",
+      "hint": {
+        "transliteration": "A'tadhir bishiddah",
+        "arabic": "اعتذر بشدة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the reassuring phrase: لا ___",
+      "options": [
+        {
+          "id": "a",
+          "text": "تقلقي",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بأس",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مشكلة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«لا بأس» means 'It's okay' or 'No problem'.",
+      "hint": {
+        "transliteration": "ba's",
+        "arabic": "بأس"
+      }
+    }
+  ]
+}
