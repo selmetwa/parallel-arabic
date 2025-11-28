@@ -1,0 +1,832 @@
+{
+  "topicId": "m10-t2",
+  "title": "Ordering food at a restaurant",
+  "dialect": "levantine",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Greeting the Server"
+        },
+        "text": "When you enter a restaurant, it's polite to greet the server. You can use 'مرحباً' (Hello) at any time of day, or more specific greetings like 'مساء الخير' (Good evening).",
+        "examples": [
+          {
+            "arabic": "مرحباً!",
+            "english": "Hello!",
+            "transliteration": "Marhaban!"
+          },
+          {
+            "arabic": "مساء الخير.",
+            "english": "Good evening.",
+            "transliteration": "Masa' al-khair."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for a Table"
+        },
+        "text": "After greeting, you'll likely need to ask for a table. Specify the number of people. 'طاولة' means table. 'لـ' means 'for'. 'شخصين' for two people, 'أربعة' for four.",
+        "examples": [
+          {
+            "arabic": "طاولة لشخصين لو سمحت.",
+            "english": "A table for two, please. (to a male)",
+            "transliteration": "Ṭāwleh la shakhṣayn law samaḥt."
+          },
+          {
+            "arabic": "طاولة لأربعة لو سمحتي.",
+            "english": "A table for four, please. (to a female)",
+            "transliteration": "Ṭāwleh larba'a law samaḥti."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for the Menu"
+        },
+        "text": "Once seated, you'll want to see the menu. 'المنيو' is a common loanword for menu. 'ممكن آخد...' means 'Can I have...'. Remember to use 'لو سمحت' (to male) or 'لو سمحتي' (to female) for 'please'.",
+        "examples": [
+          {
+            "arabic": "ممكن آخد المنيو لو سمحت؟",
+            "english": "Can I have the menu, please? (to a male)",
+            "transliteration": "Mumkin ākhud il-menyu law samaḥt?"
+          },
+          {
+            "arabic": "ممكن آخد المنيو لو سمحتي؟",
+            "english": "Can I have the menu, please? (to a female)",
+            "transliteration": "Mumkin ākhud il-menyu law samaḥti?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "مساء الخير، طاولة لشخصين لو سمحت.",
+        "english": "Good evening, a table for two, please.",
+        "transliteration": "Masa' al-khair, ṭāwleh la shakhṣayn law samaḥt."
+      },
+      "context": "A common greeting and request upon entering a restaurant."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "مرحباً، ممكن آخد المنيو لو سمحتي؟",
+        "english": "Hello, can I have the menu, please? (to a female)",
+        "transliteration": "Marhaban, mumkin ākhud il-menyu law samaḥti?"
+      },
+      "context": "Asking for the menu after being seated."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'Hello' in Levantine Arabic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "صباح الخير",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مرحباً",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مع السلامة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'مرحباً' is a general greeting for 'Hello'. 'صباح الخير' means 'Good morning', and 'مع السلامة' means 'Goodbye'.",
+      "hint": {
+        "transliteration": "Marhaban",
+        "arabic": "مرحباً"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'A table for four, please.' (to a male) - طاولة ل___ لو سمحت.",
+      "options": [
+        {
+          "id": "a",
+          "text": "شخص",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "اثنين",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "أربعة",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'أربعة' means four. 'شخص' means one person, and 'اثنين' means two (used in other contexts, but 'شخصين' is more common for 'two people').",
+      "hint": {
+        "transliteration": "arba'a",
+        "arabic": "أربعة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "You want to ask for the menu from a female server. What's the correct phrase?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ممكن آخد المنيو لو سمحت؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بدي المنيو لو سمحت.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "ممكن آخد المنيو لو سمحتي؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "To address a female, you use 'لو سمحتي'. 'لو سمحت' is for a male. 'بدي المنيو' is less polite than 'ممكن آخد المنيو'.",
+      "hint": {
+        "transliteration": "Mumkin ākhud il-menyu law samaḥti?",
+        "arabic": "ممكن آخد المنيو لو سمحتي؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Ordering a Drink"
+        },
+        "text": "Before ordering food, you might want a drink. 'بدي' means 'I want'. 'مي' for water, 'عصير برتقال' for orange juice. Specify 'لو سمحت/ي' (please).",
+        "examples": [
+          {
+            "arabic": "بدي عصير برتقال لو سمحت.",
+            "english": "I want orange juice, please. (to a male)",
+            "transliteration": "Biddi 'aṣīr burtuqāl law samaḥt."
+          },
+          {
+            "arabic": "بدي مي لو سمحتي.",
+            "english": "I want water, please. (to a female)",
+            "transliteration": "Biddi mayy law samaḥti."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for Recommendations"
+        },
+        "text": "If you're unsure what to order, you can ask the server for recommendations. 'شو بتنصَح؟' (What do you recommend?) is for a male, and 'شو بتنصَحي؟' is for a female. The difference is the 'ي' sound at the end for the female form.",
+        "examples": [
+          {
+            "arabic": "شو بتنصَح؟",
+            "english": "What do you recommend? (to a male)",
+            "transliteration": "Shū bitnaṣṣaḥ?"
+          },
+          {
+            "arabic": "شو بتنصَحي؟",
+            "english": "What do you recommend? (to a female)",
+            "transliteration": "Shū bitnaṣṣaḥī?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Common Food Categories"
+        },
+        "text": "Familiarize yourself with common food categories on a menu. 'مقبلات' for appetizers, 'طبق رئيسي' for the main course, 'سلطة' for salad, and 'شوربة' for soup.",
+        "examples": [
+          {
+            "arabic": "في عندكم مقبلات؟",
+            "english": "Do you have appetizers?",
+            "transliteration": "Fī 'indkum muqabbalāt?"
+          },
+          {
+            "arabic": "بدي طبق رئيسي.",
+            "english": "I want a main course.",
+            "transliteration": "Biddi ṭabaq ra'īsī."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بدي مي، وشو بتنصَحني من الأطباق الرئيسية؟",
+        "english": "I want water, and what do you recommend from the main dishes? (assuming server is male)",
+        "transliteration": "Biddi mayy, w shū bitnaṣṣaḥnī min il-aṭbāq ir-ra'īsiyye?"
+      },
+      "context": "Ordering a drink and then asking for a recommendation for a main dish."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شو بتنصَحي من المقبلات؟",
+        "english": "What do you recommend from the appetizers? (to a female server)",
+        "transliteration": "Shū bitnaṣṣaḥī min il-muqabbalāt?"
+      },
+      "context": "Asking a female server for an appetizer recommendation."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'What do you recommend?' to a male server?",
+      "options": [
+        {
+          "id": "a",
+          "text": "شو بتنصَحي؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شو بدك؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "شو بتنصَح؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'شو بتنصَح؟' is the correct form for asking a male 'What do you recommend?'. 'شو بتنصَحي؟' is for a female, and 'شو بدك؟' means 'What do you want?'.",
+      "hint": {
+        "transliteration": "Shū bitnaṣṣaḥ?",
+        "arabic": "شو بتنصَح؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I want orange juice, please.' (to a male) - بدي عصير ___ لو سمحت.",
+      "options": [
+        {
+          "id": "a",
+          "text": "تفاح",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ليمون",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "برتقال",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'برتقال' means orange. 'تفاح' means apple, and 'ليمون' means lemon.",
+      "hint": {
+        "transliteration": "burtuqāl",
+        "arabic": "برتقال"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'Appetizers'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "شوربة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مقبلات",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "سلطة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'مقبلات' translates to appetizers. 'شوربة' is soup, and 'سلطة' is salad.",
+      "hint": {
+        "transliteration": "Muqabbalāt",
+        "arabic": "مقبلات"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Ordering a Main Dish"
+        },
+        "text": "When you're ready for your main course, you can say 'بدي صحن...' (I want a plate of...). You can substitute 'منسف' (Mansaf, a traditional Jordanian dish) or 'فتوش' (Fattoush, a Lebanese salad) with any other dish name from the menu.",
+        "examples": [
+          {
+            "arabic": "بدي صحن منسف.",
+            "english": "I want a plate of Mansaf.",
+            "transliteration": "Biddi saḥn mansaf."
+          },
+          {
+            "arabic": "بدي فتوش لو سمحتي.",
+            "english": "I want Fattoush, please. (to a female)",
+            "transliteration": "Biddi fattūsh law samaḥti."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking About Ingredients"
+        },
+        "text": "If you have dietary preferences or simply want to know what's in a dish, you can ask 'فيو لحمة/دجاج؟' (Does it have meat/chicken?). 'فيو' means 'does it have' (masculine singular).",
+        "examples": [
+          {
+            "arabic": "هل المنسف فيو لحمة؟",
+            "english": "Does the Mansaf have meat?",
+            "transliteration": "Hal il-mansaf fīhō laḥme?"
+          },
+          {
+            "arabic": "فيو دجاج هاد الصحن؟",
+            "english": "Does this dish have chicken?",
+            "transliteration": "Fīhō djāj hād iṣ-ṣaḥn?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Customizations and Allergies"
+        },
+        "text": "For special requests, use 'بدون' (without). For allergies, say 'أنا عندي حساسية على...' (I have an allergy to...). For example, 'بدون بصل' (without onions) or 'حساسية على المكسرات' (allergy to nuts).",
+        "examples": [
+          {
+            "arabic": "بدي الصحن بدون بصل.",
+            "english": "I want the dish without onions.",
+            "transliteration": "Biddi iṣ-ṣaḥn bidūn baṣal."
+          },
+          {
+            "arabic": "أنا عندي حساسية على الفستق.",
+            "english": "I have an allergy to peanuts.",
+            "transliteration": "Ana 'indī ḥasāsiyye 'ala l-fustuq."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بدي صحن فتوش، بس بدون بصل لو سمحت.",
+        "english": "I want a plate of Fattoush, but without onions please. (to a male)",
+        "transliteration": "Biddi saḥn fattūsh, bass bidūn baṣal law samaḥt."
+      },
+      "context": "Ordering a dish with a specific customization."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هل عندكم أكل بدون لحمة؟ أنا عندي حساسية على اللحمة.",
+        "english": "Do you have food without meat? I have an allergy to meat.",
+        "transliteration": "Hal 'indkum akil bidūn laḥme? Ana 'indī ḥasāsiyye 'ala l-laḥme."
+      },
+      "context": "Asking about vegetarian options due to a meat allergy."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'without onions'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "مع بصل",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بدون بصل",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "فيو بصل",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'بدون' means 'without', and 'بصل' means 'onions'. 'مع بصل' means 'with onions', and 'فيو بصل' means 'it has onions'.",
+      "hint": {
+        "transliteration": "bidūn baṣal",
+        "arabic": "بدون بصل"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I want a plate of Mansaf.' - بدي صحن ___.",
+      "options": [
+        {
+          "id": "a",
+          "text": "سلطة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "منسف",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "شوربة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'منسف' is a common Levantine main dish. 'سلطة' is salad and 'شوربة' is soup.",
+      "hint": {
+        "transliteration": "mansaf",
+        "arabic": "منسف"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would you say 'I have an allergy to...'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أنا ما بحب...",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أنا عندي حساسية على...",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أنا ما بدي...",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'أنا عندي حساسية على...' is the correct way to express having an allergy. 'أنا ما بحب...' means 'I don't like...', and 'أنا ما بدي...' means 'I don't want...'.",
+      "hint": {
+        "transliteration": "Ana 'indī ḥasāsiyye 'ala...",
+        "arabic": "أنا عندي حساسية على..."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for More Items"
+        },
+        "text": "During your meal, you might need extra items. Use 'ممكن...' (Can I have...) followed by the item. 'خبز زيادة' means more bread, and 'محارم' means napkins.",
+        "examples": [
+          {
+            "arabic": "ممكن خبز زيادة لو سمحت؟",
+            "english": "Can I have more bread, please? (to a male)",
+            "transliteration": "Mumkin khubz ziyāde law samaḥt?"
+          },
+          {
+            "arabic": "ممكن محارم لو سمحتي؟",
+            "english": "Can I have napkins, please? (to a female)",
+            "transliteration": "Mumkin maḥārim law samaḥti?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Ordering Dessert"
+        },
+        "text": "After the main meal, you might want dessert. 'بدي قطعة كنافة' (I want a piece of Knafeh, a popular Levantine dessert) or 'بدي بوظة' (I want ice cream).",
+        "examples": [
+          {
+            "arabic": "بدي قطعة كنافة.",
+            "english": "I want a piece of Knafeh.",
+            "transliteration": "Biddi qiṭ'at kunāfe."
+          },
+          {
+            "arabic": "ممكن آخد بوظة؟",
+            "english": "Can I have ice cream?",
+            "transliteration": "Mumkin ākhud būẓa?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Complimenting the Food"
+        },
+        "text": "If you enjoyed your meal, a polite compliment is always appreciated. 'الأكل طيب كتير' (The food is very good) or 'الطبخ زاكي كتير' (The cooking is very delicious - common in Jordan/Palestine).",
+        "examples": [
+          {
+            "arabic": "الأكل طيب كتير، شكراً.",
+            "english": "The food is very good, thank you.",
+            "transliteration": "Al-akl ṭayyib ktīr, shukran."
+          },
+          {
+            "arabic": "الطبخ زاكي كتير!",
+            "english": "The cooking is very delicious!",
+            "transliteration": "Aṭ-ṭabkh zākī ktīr!"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الأكل طيب كتير، ممكن قطعة كنافة لو سمحت؟",
+        "english": "The food is very good, can I have a piece of Knafeh, please? (to a male)",
+        "transliteration": "Al-akl ṭayyib ktīr, mumkin qiṭ'at kunāfe law samaḥt?"
+      },
+      "context": "Complimenting the food and then ordering dessert."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ممكن محارم زيادة؟ الطبخ زاكي كتير!",
+        "english": "Can I have extra napkins? The cooking is very delicious!",
+        "transliteration": "Mumkin maḥārim ziyāde? Aṭ-ṭabkh zākī ktīr!"
+      },
+      "context": "Asking for more napkins and complimenting the food."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask for 'more bread'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بدي خبز",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ممكن خبز زيادة؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "خلص الخبز",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'ممكن خبز زيادة؟' is the polite way to ask for more bread. 'بدي خبز' means 'I want bread', and 'خلص الخبز' means 'the bread is finished'.",
+      "hint": {
+        "transliteration": "Mumkin khubz ziyāde?",
+        "arabic": "ممكن خبز زيادة؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I want ice cream.' - بدي ___.",
+      "options": [
+        {
+          "id": "a",
+          "text": "كيك",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "قهوة",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "بوظة",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'بوظة' is the Levantine word for ice cream. 'كيك' is cake and 'قهوة' is coffee.",
+      "hint": {
+        "transliteration": "būẓa",
+        "arabic": "بوظة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase expresses 'The food is very good'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "الأكل مو طيب",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الأكل طيب كتير",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "الأكل غالي",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'الأكل طيب كتير' means 'The food is very good'. 'الأكل مو طيب' means 'The food is not good', and 'الأكل غالي' means 'The food is expensive'.",
+      "hint": {
+        "transliteration": "Al-akl ṭayyib ktīr",
+        "arabic": "الأكل طيب كتير"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for the Bill"
+        },
+        "text": "When you're ready to leave, you'll need to ask for the bill. 'الحساب لو سمحت' (The bill, please) is the standard phrase.",
+        "examples": [
+          {
+            "arabic": "الحساب لو سمحت.",
+            "english": "The bill, please. (to a male)",
+            "transliteration": "Al-ḥisāb law samaḥt."
+          },
+          {
+            "arabic": "ممكن الحساب لو سمحتي؟",
+            "english": "Can I have the bill, please? (to a female)",
+            "transliteration": "Mumkin al-ḥisāb law samaḥti?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Paying for the Meal"
+        },
+        "text": "When paying, you might specify your preferred method. 'كاش' for cash, or 'بالبطاقة' for by card. The server might also ask you 'كيف بتحب تدفع؟' (How would you like to pay?)",
+        "examples": [
+          {
+            "arabic": "كاش.",
+            "english": "Cash.",
+            "transliteration": "Kāsh."
+          },
+          {
+            "arabic": "بالبطاقة لو سمحت.",
+            "english": "By card, please. (to a male)",
+            "transliteration": "Bil-biṭāqa law samaḥt."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Saying Goodbye and Thank You"
+        },
+        "text": "Before leaving, it's polite to thank the staff and say goodbye. 'شكراً' (Thank you) and 'مع السلامة' (Goodbye) are appropriate.",
+        "examples": [
+          {
+            "arabic": "شكراً جزيلاً، مع السلامة.",
+            "english": "Thank you very much, goodbye.",
+            "transliteration": "Shukran jazīlan, ma'a s-salāme."
+          },
+          {
+            "arabic": "كان الأكل طيب، شكراً ومع السلامة.",
+            "english": "The food was good, thank you and goodbye.",
+            "transliteration": "Kān al-akl ṭayyib, shukran w ma'a s-salāme."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الحساب لو سمحت، بدي أدفع كاش.",
+        "english": "The bill please, I want to pay cash.",
+        "transliteration": "Al-ḥisāb law samaḥt, biddi adfa' kāsh."
+      },
+      "context": "Asking for the bill and specifying payment method."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شكراً جزيلاً، مع السلامة.",
+        "english": "Thank you very much, goodbye.",
+        "transliteration": "Shukran jazīlan, ma'a s-salāme."
+      },
+      "context": "Expressing gratitude and saying farewell after the meal."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask for 'the bill'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بدي أكل",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الحساب لو سمحت",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "شو في عندك؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'الحساب لو سمحت' is the correct way to ask for the bill. 'بدي أكل' means 'I want food', and 'شو في عندك؟' means 'What do you have?'.",
+      "hint": {
+        "transliteration": "Al-ḥisāb law samaḥt",
+        "arabic": "الحساب لو سمحت"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I want to pay by card.' - بدي أدفع بال___.",
+      "options": [
+        {
+          "id": "a",
+          "text": "ورقة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بطاقة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "يد",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'بطاقة' means card. 'ورقة' means paper, and 'يد' means hand.",
+      "hint": {
+        "transliteration": "biṭāqa",
+        "arabic": "بطاقة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the polite way to say 'Goodbye'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أهلاً وسهلاً",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مع السلامة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "صباح الخير",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'مع السلامة' means 'Goodbye'. 'أهلاً وسهلاً' means 'Welcome', and 'صباح الخير' means 'Good morning'.",
+      "hint": {
+        "transliteration": "Ma'a s-salāme",
+        "arabic": "مع السلامة"
+      }
+    }
+  ]
+}

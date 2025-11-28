@@ -1,0 +1,847 @@
+{
+  "topicId": "m5-t2",
+  "title": "Asking about the location of things (Part 2)",
+  "dialect": "levantine",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Giving Directions: Right"
+        },
+        "text": "To tell someone to go or turn right, you can use the word يمين (yameen). This is a fundamental direction.",
+        "examples": [
+          {
+            "arabic": "روح يمين.",
+            "english": "Go right.",
+            "transliteration": "RooH yameen."
+          },
+          {
+            "arabic": "لف يمين.",
+            "english": "Turn right.",
+            "transliteration": "Liff yameen."
+          }
+        ],
+        "audioText": "To tell someone to go or turn right, you can use the word يمين (yameen). This is a fundamental direction."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Giving Directions: Left"
+        },
+        "text": "Similarly, to direct someone to go or turn left, you use شمال (shmaal).",
+        "examples": [
+          {
+            "arabic": "روح شمال.",
+            "english": "Go left.",
+            "transliteration": "RooH shmaal."
+          },
+          {
+            "arabic": "لف شمال.",
+            "english": "Turn left.",
+            "transliteration": "Liff shmaal."
+          }
+        ],
+        "audioText": "Similarly, to direct someone to go or turn left, you use شمال (shmaal)."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Giving Directions: Straight"
+        },
+        "text": "To indicate going straight, you say دُغري (dughri). You can combine this with 'keep going' using ضَل (Dall).",
+        "examples": [
+          {
+            "arabic": "ضَل دُغري.",
+            "english": "Keep straight.",
+            "transliteration": "Dall dughri."
+          },
+          {
+            "arabic": "روح دُغري.",
+            "english": "Go straight.",
+            "transliteration": "RooH dughri."
+          }
+        ],
+        "audioText": "To indicate going straight, you say دُغري (dughri). You can combine this with 'keep going' using ضَل (Dall)."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "لف يمين عند أول زاوية.",
+        "english": "Turn right at the first corner.",
+        "transliteration": "Liff yameen 3and awwal zaawiye."
+      },
+      "context": "Combining directions with a landmark."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "روح دُغري بعدين لف شمال.",
+        "english": "Go straight then turn left.",
+        "transliteration": "RooH dughri ba3dein liff shmaal."
+      },
+      "context": "Sequencing directions."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'right'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "شمال",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "يمين",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "دُغري",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "يمين means 'right'.",
+      "hint": {
+        "transliteration": "yameen",
+        "arabic": "يمين"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the instruction: 'Go ___' (meaning 'Go left').",
+      "options": [
+        {
+          "id": "a",
+          "text": "يمين",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شمال",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "دُغري",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "To say 'Go left', you use روح شمال.",
+      "hint": {
+        "transliteration": "shmaal",
+        "arabic": "شمال"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'Keep straight'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "لف يمين",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "روح شمال",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "ضَل دُغري",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "ضَل دُغري means 'Keep straight'.",
+      "hint": {
+        "transliteration": "Dall dughri",
+        "arabic": "ضَل دُغري"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for Directions: How to get to...?"
+        },
+        "text": "To ask for directions to a place, you can use the phrase كيف أوصَل لـ...؟ (keef awsAl la...?), which means 'How do I get to...?'.",
+        "examples": [
+          {
+            "arabic": "كيف أوصَل للمستشفى؟",
+            "english": "How do I get to the hospital?",
+            "transliteration": "Keef awsAl lil-mustashfa?"
+          },
+          {
+            "arabic": "كيف أوصَل للمتحف؟",
+            "english": "How do I get to the museum?",
+            "transliteration": "Keef awsAl lil-matHaf?"
+          }
+        ],
+        "audioText": "To ask for directions to a place, you can use the phrase كيف أوصَل لـ...؟ (keef awsAl la...?), which means 'How do I get to...?'. "
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Relative Position: Far from"
+        },
+        "text": "To describe something as being far from another location, use بعيد عن (ba3eed 3an). بعيد is masculine, بعيدة (ba3eede) is feminine.",
+        "examples": [
+          {
+            "arabic": "السوق بعيد عن بيتي.",
+            "english": "The market is far from my house.",
+            "transliteration": "Is-soo2 ba3eed 3an beyti."
+          },
+          {
+            "arabic": "المحطة بعيدة عن هون.",
+            "english": "The station is far from here.",
+            "transliteration": "Il-maHaTTa ba3eede 3an hoon."
+          }
+        ],
+        "audioText": "To describe something as being far from another location, use بعيد عن (ba3eed 3an). بعيد is masculine, بعيدة (ba3eede) is feminine."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Relative Position: Close to"
+        },
+        "text": "Conversely, to say something is close to another location, use قريب من (2areeb min). قريب is masculine, قريبة (2areebe) is feminine.",
+        "examples": [
+          {
+            "arabic": "البنك قريب من هون.",
+            "english": "The bank is close from here.",
+            "transliteration": "Il-bank 2areeb min hoon."
+          },
+          {
+            "arabic": "المدرسة قريبة من الجامع.",
+            "english": "The school is close to the mosque.",
+            "transliteration": "Il-madrasa 2areebe min il-jaame3."
+          }
+        ],
+        "audioText": "Conversely, to say something is close to another location, use قريب من (2areeb min). قريب is masculine, قريبة (2areebe) is feminine."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "كيف أوصَل للسوق؟ هل هو قريب من هون؟",
+        "english": "How do I get to the market? Is it close from here?",
+        "transliteration": "Keef awsAl lis-soo2? Hal huwwe 2areeb min hoon?"
+      },
+      "context": "Asking for directions and distance."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "المطعم بعيد عن الفندق بس قريب من الشاطئ.",
+        "english": "The restaurant is far from the hotel but close to the beach.",
+        "transliteration": "Il-maT3am ba3eed 3an il-fundu2 bas 2areeb min ish-shaTe2."
+      },
+      "context": "Describing relative distances of a place."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would you ask, 'How do I get to the park?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "وين الحديقة؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كيف أوصَل للحديقة؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "هل الحديقة هون؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "كيف أوصَل لـ...؟ is the phrase for 'How do I get to...?'.",
+      "hint": {
+        "transliteration": "keef awsAl lil-Hadee2a",
+        "arabic": "كيف أوصَل للحديقة؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'The school is ___ from the library.' (far, feminine)",
+      "options": [
+        {
+          "id": "a",
+          "text": "قريب",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بعيد",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "بعيدة",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "المدرسة is feminine, so we use the feminine form بعيدة.",
+      "hint": {
+        "transliteration": "ba3eede",
+        "arabic": "بعيدة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'close to' (masculine form)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بعيد عن",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "قريب من",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "جنب",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "قريب من means 'close to' (masculine form).",
+      "hint": {
+        "transliteration": "2areeb min",
+        "arabic": "قريب من"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Relative Position: Between"
+        },
+        "text": "To describe something located between two other things, use بين (bayn).",
+        "examples": [
+          {
+            "arabic": "المحل بين البنك والمكتبة.",
+            "english": "The shop is between the bank and the library.",
+            "transliteration": "Il-maHall bayn il-bank wil-maktaba."
+          },
+          {
+            "arabic": "القلم بين الكتب.",
+            "english": "The pen is between the books.",
+            "transliteration": "Il-2alam bayn il-kutub."
+          }
+        ],
+        "audioText": "To describe something located between two other things, use بين (bayn)."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Relative Position: Opposite / Across from"
+        },
+        "text": "To indicate something is opposite or across from another, use قبال (2baal).",
+        "examples": [
+          {
+            "arabic": "بيتي قبال الجامع.",
+            "english": "My house is across from the mosque.",
+            "transliteration": "Beyti 2baal il-jaame3."
+          },
+          {
+            "arabic": "المطعم قبال الفندق.",
+            "english": "The restaurant is opposite the hotel.",
+            "transliteration": "Il-maT3am 2baal il-fundu2."
+          }
+        ],
+        "audioText": "To indicate something is opposite or across from another, use قبال (2baal)."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Landmark: Traffic Light"
+        },
+        "text": "A common landmark used in directions is the traffic light. In Levantine, it's إشارة ضوئية (ishaarit Dawiyye). You might hear 'عند الإشارة...' (3and il-ishaara...) meaning 'at the traffic light...'.",
+        "examples": [
+          {
+            "arabic": "عند الإشارة الضوئية لف يمين.",
+            "english": "At the traffic light, turn right.",
+            "transliteration": "3and il-ishaarit Dawiyye liff yameen."
+          },
+          {
+            "arabic": "في إشارة ضوئية كبيرة قدامك.",
+            "english": "There's a big traffic light in front of you.",
+            "transliteration": "Fi ishaarit Dawiyye kbeere 2uddaamak."
+          }
+        ],
+        "audioText": "A common landmark used in directions is the traffic light. In Levantine, it's إشارة ضوئية (ishaarit Dawiyye). You might hear 'عند الإشارة...' (3and il-ishaara...) meaning 'at the traffic light...'."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "البنك بين المكتبة والصيدلية، قبال الإشارة الضوئية.",
+        "english": "The bank is between the library and the pharmacy, across from the traffic light.",
+        "transliteration": "Il-bank bayn il-maktaba was-saydaliyye, 2baal il-ishaarit Dawiyye."
+      },
+      "context": "Using multiple relative positions and a landmark."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "لف شمال عند الإشارة الضوئية الأولى.",
+        "english": "Turn left at the first traffic light.",
+        "transliteration": "Liff shmaal 3and il-ishaarit Dawiyye l-awwala."
+      },
+      "context": "Giving directions with a specific landmark."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "The restaurant is ___ the cinema and the mall. (between)",
+      "options": [
+        {
+          "id": "a",
+          "text": "قبال",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بين",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "جنب",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "بين means 'between'.",
+      "hint": {
+        "transliteration": "bayn",
+        "arabic": "بين"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'traffic light'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "شارع",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "دوّار",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "إشارة ضوئية",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "إشارة ضوئية means 'traffic light'.",
+      "hint": {
+        "transliteration": "ishaarit Dawiyye",
+        "arabic": "إشارة ضوئية"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "My office is ___ the park. (across from)",
+      "options": [
+        {
+          "id": "a",
+          "text": "بين",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "قبال",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "على",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "قبال means 'across from' or 'opposite'.",
+      "hint": {
+        "transliteration": "2baal",
+        "arabic": "قبال"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Landmark: Roundabout"
+        },
+        "text": "Another common road feature is the roundabout, called دوّار (dawwaar). Directions often involve taking a specific 'exit' (مخرج - makhraj) at a roundabout.",
+        "examples": [
+          {
+            "arabic": "عند الدوّار، خُذ تالت مخرج.",
+            "english": "At the roundabout, take the third exit.",
+            "transliteration": "3and id-dawwaar, khuðh taalit makhraj."
+          },
+          {
+            "arabic": "في دوّار كبير بعد الشارع هاد.",
+            "english": "There's a big roundabout after this street.",
+            "transliteration": "Fi dawwaar kbeer ba3d ish-shaare3 haad."
+          }
+        ],
+        "audioText": "Another common road feature is the roundabout, called دوّار (dawwaar). Directions often involve taking a specific 'exit' (مخرج - makhraj) at a roundabout."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for Direction: In which direction?"
+        },
+        "text": "To ask for the general direction of a place, you can say في أي اتّجاه؟ (fi ayy ittijaah?), meaning 'In which direction?'.",
+        "examples": [
+          {
+            "arabic": "في أي اتّجاه الجامعة؟",
+            "english": "In which direction is the university?",
+            "transliteration": "Fi ayy ittijaah il-jaam3a?"
+          },
+          {
+            "arabic": "ممكن تحكيلي في أي اتّجاه السوق؟",
+            "english": "Can you tell me in which direction the market is?",
+            "transliteration": "Mumkin taHkeeli fi ayy ittijaah is-soo2?"
+          }
+        ],
+        "audioText": "To ask for the general direction of a place, you can say في أي اتّجاه؟ (fi ayy ittijaah?), meaning 'In which direction?'."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Stating Location: On the Right / On the Left"
+        },
+        "text": "When giving directions, you often specify if something is 'on the right' or 'on the left'. Use على اليمين (3ala el yameen) and على الشمال (3ala esh-shmaal).",
+        "examples": [
+          {
+            "arabic": "المطعم على اليمين.",
+            "english": "The restaurant is on the right.",
+            "transliteration": "Il-maT3am 3ala el yameen."
+          },
+          {
+            "arabic": "المكتبة على الشمال بعد الدوّار.",
+            "english": "The library is on the left after the roundabout.",
+            "transliteration": "Il-maktaba 3ala esh-shmaal ba3d id-dawwaar."
+          }
+        ],
+        "audioText": "When giving directions, you often specify if something is 'on the right' or 'on the left'. Use على اليمين (3ala el yameen) and على الشمال (3ala esh-shmaal)."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "المحطة على اليمين بعد الدوّار التاني.",
+        "english": "The station is on the right after the second roundabout.",
+        "transliteration": "Il-maHaTTa 3ala el yameen ba3d id-dawwaar it-taani."
+      },
+      "context": "Using landmarks and specific side in directions."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "عفواً، في أي اتّجاه البنك؟",
+        "english": "Excuse me, in which direction is the bank?",
+        "transliteration": "3afwan, fi ayy ittijaah il-bank?"
+      },
+      "context": "Politely asking for general direction."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'roundabout'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "شارع",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "إشارة",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "دوّار",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "دوّار means 'roundabout'.",
+      "hint": {
+        "transliteration": "dawwaar",
+        "arabic": "دوّار"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "The supermarket is ___ the left. (on)",
+      "options": [
+        {
+          "id": "a",
+          "text": "من",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "على",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "في",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "على means 'on'. So, على الشمال means 'on the left'.",
+      "hint": {
+        "transliteration": "3ala",
+        "arabic": "على"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'In which direction is the post office?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "وين مكتب البريد؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "في أي اتّجاه مكتب البريد؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كيف أوصَل لمكتب البريد؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "في أي اتّجاه؟ is used to ask for the general direction.",
+      "hint": {
+        "transliteration": "fi ayy ittijaah maktab il-bareed",
+        "arabic": "في أي اتّجاه مكتب البريد؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking if Someone Knows a Location"
+        },
+        "text": "A polite way to ask if someone knows where a place is, without directly asking for directions, is بتعرف وين الـ...؟ (bta3ref weyn il...?) for a male, and بتعرفي وين الـ...؟ (bta3rfi weyn il...?) for a female.",
+        "examples": [
+          {
+            "arabic": "عفواً، بتعرف وين المحطة؟",
+            "english": "Excuse me (to m.), do you know where the station is?",
+            "transliteration": "3afwan, bta3ref weyn il-maHaTTa?"
+          },
+          {
+            "arabic": "لو سمحتي، بتعرفي وين المكتبة؟",
+            "english": "Excuse me (to f.), do you know where the library is?",
+            "transliteration": "Law samaHti, bta3rfi weyn il-maktaba?"
+          }
+        ],
+        "audioText": "A polite way to ask if someone knows where a place is, without directly asking for directions, is بتعرف وين الـ...؟ (bta3ref weyn il...?) for a male, and بتعرفي وين الـ...؟ (bta3rfi weyn il...?) for a female."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Confirming Understanding: Understood / Clear?"
+        },
+        "text": "After giving or receiving directions, it's helpful to confirm understanding. You can ask مفهوم؟ (mafhoom?), meaning 'Understood?', or واضح؟ (waaDeH?), meaning 'Clear?'.",
+        "examples": [
+          {
+            "arabic": "هي هي، مفهوم؟",
+            "english": "That's it, understood?",
+            "transliteration": "Hayy hee, mafhoom?"
+          },
+          {
+            "arabic": "كل شي واضح؟",
+            "english": "Is everything clear?",
+            "transliteration": "Kill shi waaDeH?"
+          }
+        ],
+        "audioText": "After giving or receiving directions, it's helpful to confirm understanding. You can ask مفهوم؟ (mafhoom?), meaning 'Understood?', or واضح؟ (waaDeH?), meaning 'Clear?'."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for Repetition"
+        },
+        "text": "If you didn't quite catch the directions, you can politely ask for a repetition using ممكن تعيد؟ (mumkin t3eed?), meaning 'Can you repeat?' (addressing a male). For a female, it's ممكن تعيدي؟ (mumkin t3eedi?).",
+        "examples": [
+          {
+            "arabic": "آسف، ممكن تعيد؟",
+            "english": "Sorry, can you repeat? (to m.)",
+            "transliteration": "Aasif, mumkin t3eed?"
+          },
+          {
+            "arabic": "ما فهمت، ممكن تعيدي؟",
+            "english": "I didn't understand, can you repeat? (to f.)",
+            "transliteration": "Ma fhimt, mumkin t3eedi?"
+          }
+        ],
+        "audioText": "If you didn't quite catch the directions, you can politely ask for a repetition using ممكن تعيد؟ (mumkin t3eed?), meaning 'Can you repeat?' (addressing a male). For a female, it's ممكن تعيدي؟ (mumkin t3eedi?)."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "لو سمحت، بتعرف وين الصيدلية؟ ممكن تعيد إذا ما فهمت.",
+        "english": "Excuse me (to m.), do you know where the pharmacy is? Can you repeat if I don't understand?",
+        "transliteration": "Law samaHt, bta3ref weyn is-saydaliyye? Mumkin t3eed ida ma fhimt."
+      },
+      "context": "Combining asking for location with asking for repetition."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "عفواً، كل شي واضح؟",
+        "english": "Excuse me, is everything clear?",
+        "transliteration": "3afwan, kill shi waaDeH?"
+      },
+      "context": "Confirming understanding after giving information."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would you ask a male, 'Do you know where the hospital is?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "بتعرفي وين المستشفى؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بتعرف وين المستشفى؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كيف أوصَل للمستشفى؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "بتعرف وين الـ...? (bta3ref weyn il...?) is used for a male. The verb ending changes for female.",
+      "hint": {
+        "transliteration": "bta3ref weyn il-mustashfa",
+        "arabic": "بتعرف وين المستشفى؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the phrase: 'Is everything ___?' (clear)",
+      "options": [
+        {
+          "id": "a",
+          "text": "مفهوم",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "واضح",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بعيد",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "واضح (waaDeH) means 'clear'.",
+      "hint": {
+        "transliteration": "waaDeH",
+        "arabic": "واضح"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you politely ask a female to 'repeat'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ممكن تعيد؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ممكن تعيدي؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "ممكن تروح؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "The feminine form of 'repeat' in this context is تعيدي.",
+      "hint": {
+        "transliteration": "mumkin t3eedi",
+        "arabic": "ممكن تعيدي؟"
+      }
+    }
+  ]
+}

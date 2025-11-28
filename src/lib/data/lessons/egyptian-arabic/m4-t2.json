@@ -1,0 +1,968 @@
+{
+  "topicId": "m4-t2",
+  "title": "At the Supermarket",
+  "dialect": "egyptian-arabic",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Entering the Supermarket: Basic Vocabulary"
+        },
+        "text": "When you enter a supermarket in Egypt, you'll need to know a few basic words for the place itself and your shopping tools.",
+        "examples": [
+          {
+            "arabic": "سوبر ماركت",
+            "english": "Supermarket",
+            "transliteration": "Sooper market"
+          },
+          {
+            "arabic": "عربية تسوق",
+            "english": "Shopping cart",
+            "transliteration": "ʿarabiyyet tasawwoq"
+          },
+          {
+            "arabic": "سلة",
+            "english": "Basket",
+            "transliteration": "salla"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'What do you want?'"
+        },
+        "text": "This is a common question you might hear from a shop assistant, or use yourself to ask what someone is looking for. Pay attention to the gender distinction.",
+        "examples": [
+          {
+            "arabic": "عايز إيه؟",
+            "english": "What do you want? (to a male)",
+            "transliteration": "ʿayiz ʾeih?",
+            "diacriticalNotes": "Note the subtle difference for male vs. female: عايز (ʿayiz) for male."
+          },
+          {
+            "arabic": "عايزة إيه؟",
+            "english": "What do you want? (to a female)",
+            "transliteration": "ʿayza ʾeih?",
+            "diacriticalNotes": "Note the subtle difference for male vs. female: عايزة (ʿayza) for female."
+          },
+          {
+            "arabic": "أنا عايز",
+            "english": "I want (male)",
+            "transliteration": "ʾana ʿayiz"
+          },
+          {
+            "arabic": "أنا عايزة",
+            "english": "I want (female)",
+            "transliteration": "ʾana ʿayza"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Where is...?'"
+        },
+        "text": "To find items in a supermarket, you'll frequently need to ask where a specific section or product is. The word for 'where' is 'فين'.",
+        "examples": [
+          {
+            "arabic": "فين قسم الخضار؟",
+            "english": "Where is the vegetable section?",
+            "transliteration": "Fein ʾism el-khoḍar?"
+          },
+          {
+            "arabic": "فين الأرز؟",
+            "english": "Where is the rice?",
+            "transliteration": "Fein el-ʾorz?"
+          },
+          {
+            "arabic": "فين؟",
+            "english": "Where?",
+            "transliteration": "Fein?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا عايزة عربية تسوق كبيرة.",
+        "english": "I want a big shopping cart.",
+        "transliteration": "ʾAna ʿayza ʿarabiyyet tasawwoq kebira."
+      },
+      "context": "A female shopper asking for a shopping cart."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "فين السوبر ماركت؟",
+        "english": "Where is the supermarket?",
+        "transliteration": "Fein el-sooper market?"
+      },
+      "context": "Asking for directions to a supermarket."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'What do you want?' if you are speaking to a male?",
+      "options": [
+        {
+          "id": "a",
+          "text": "عايزة إيه؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "عايز إيه؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "فين إيه؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "ʿayiz ʾeih?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'Where is the ___?' (Supermarket)",
+      "options": [
+        {
+          "id": "a",
+          "text": "سلة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "سوبر ماركت",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "عايز",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "sooper market",
+        "arabic": "سوبر ماركت"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'basket'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "عربية تسوق",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "سوبر ماركت",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "سلة",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "salla"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "The Produce Section (Vegetables and Fruits)"
+        },
+        "text": "The produce section is called 'قسم الخضار والفاكهة'. Here are some common items you'll find.",
+        "examples": [
+          {
+            "arabic": "قسم الخضار والفاكهة",
+            "english": "Produce section (vegetables and fruits)",
+            "transliteration": "ʾism el-khoḍar wel-fakiha"
+          },
+          {
+            "arabic": "خضار",
+            "english": "Vegetables",
+            "transliteration": "khoḍar"
+          },
+          {
+            "arabic": "فاكهة",
+            "english": "Fruits",
+            "transliteration": "fakiha"
+          },
+          {
+            "arabic": "طماطم",
+            "english": "Tomatoes",
+            "transliteration": "ṭamaṭim"
+          },
+          {
+            "arabic": "تفاح",
+            "english": "Apples",
+            "transliteration": "toffaḥ"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "The Dairy Section"
+        },
+        "text": "The dairy section is where you'll find milk, yogurt, and cheese. It's usually called 'قسم الألبان'.",
+        "examples": [
+          {
+            "arabic": "قسم الألبان",
+            "english": "Dairy section",
+            "transliteration": "ʾism el-ʾalban"
+          },
+          {
+            "arabic": "لبن",
+            "english": "Milk",
+            "transliteration": "laban"
+          },
+          {
+            "arabic": "زبادي",
+            "english": "Yogurt",
+            "transliteration": "zabadi"
+          },
+          {
+            "arabic": "جبنة",
+            "english": "Cheese",
+            "transliteration": "gebna"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "The Bakery"
+        },
+        "text": "The bakery section, or 'المخبز', is a popular stop for fresh bread and pastries.",
+        "examples": [
+          {
+            "arabic": "المخبز",
+            "english": "Bakery",
+            "transliteration": "el-makhbaz"
+          },
+          {
+            "arabic": "عيش",
+            "english": "Bread",
+            "transliteration": "ʿeish"
+          },
+          {
+            "arabic": "باتيه",
+            "english": "Patty/Pastry",
+            "transliteration": "pateeh"
+          },
+          {
+            "arabic": "عيش بلدي",
+            "english": "Local/Baladi bread",
+            "transliteration": "ʿeish baladi"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا عايزة لبن و جبنة من قسم الألبان.",
+        "english": "I want milk and cheese from the dairy section.",
+        "transliteration": "ʾAna ʿayza laban we gebna min ʾism el-ʾalban."
+      },
+      "context": "A female shopper requesting dairy products."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "فين المخبز؟ أنا عايز عيش.",
+        "english": "Where is the bakery? I want bread.",
+        "transliteration": "Fein el-makhbaz? ʾAna ʿayiz ʿeish."
+      },
+      "context": "A male shopper asking for the bakery to buy bread."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'vegetables'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "فاكهة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "خضار",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "لبن",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "khoḍar"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I want ___ from the bakery.' (bread)",
+      "options": [
+        {
+          "id": "a",
+          "text": "تفاح",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "زبادي",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "عيش",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "ʿeish",
+        "arabic": "عيش"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which section would you go to for 'جبنة' (cheese)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "قسم الخضار والفاكهة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "المخبز",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "قسم الألبان",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "ʾism el-ʾalban"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for Quantity: 'How much/many?'"
+        },
+        "text": "To ask about the quantity of an item, you will use 'كام؟' (How much/many?).",
+        "examples": [
+          {
+            "arabic": "كام؟",
+            "english": "How much/many?",
+            "transliteration": "Kam?"
+          },
+          {
+            "arabic": "عايز كام كيلو تفاح؟",
+            "english": "How many kilos of apples do you want? (male)",
+            "transliteration": "ʿAyiz kam kilo toffaḥ?"
+          },
+          {
+            "arabic": "عايزة كام رغيف عيش؟",
+            "english": "How many loaves of bread do you want? (female)",
+            "transliteration": "ʿAyza kam reghīf ʿeish?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Units of Measurement"
+        },
+        "text": "You'll often need to specify units when buying groceries. Here are some common ones.",
+        "examples": [
+          {
+            "arabic": "كيلو",
+            "english": "Kilo",
+            "transliteration": "kilo"
+          },
+          {
+            "arabic": "واحدة",
+            "english": "One (female singular unit/piece)",
+            "transliteration": "waḥda"
+          },
+          {
+            "arabic": "قطعة",
+            "english": "Piece",
+            "transliteration": "qiṭʿa"
+          },
+          {
+            "arabic": "علبة",
+            "english": "Can/Box/Container",
+            "transliteration": "ʿelba"
+          },
+          {
+            "arabic": "زجاجة",
+            "english": "Bottle",
+            "transliteration": "zogaga"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Describing Quality and Size"
+        },
+        "text": "You might want to ask for items with specific qualities, like freshness or ripeness, or specify size.",
+        "examples": [
+          {
+            "arabic": "طازة",
+            "english": "Fresh",
+            "transliteration": "ṭaza"
+          },
+          {
+            "arabic": "مستوي",
+            "english": "Ripe (male/masculine noun)",
+            "transliteration": "mestawi",
+            "diacriticalNotes": "Note the masculine form ending in يْ (i)."
+          },
+          {
+            "arabic": "مستوية",
+            "english": "Ripe (female/feminine noun)",
+            "transliteration": "mestawiya",
+            "diacriticalNotes": "Note the feminine form ending in يَة (iya)."
+          },
+          {
+            "arabic": "كبير",
+            "english": "Big (male/masculine noun)",
+            "transliteration": "kebīr"
+          },
+          {
+            "arabic": "صغير",
+            "english": "Small (male/masculine noun)",
+            "transliteration": "ṣaghīr"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا عايزة كيلو تفاح طازة.",
+        "english": "I want a kilo of fresh apples.",
+        "transliteration": "ʾAna ʿayza kilo toffaḥ ṭaza."
+      },
+      "context": "A female shopper asking for fresh apples."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "كام زجاجة مياه عايز؟",
+        "english": "How many bottles of water do you want? (male)",
+        "transliteration": "Kam zogaga mayyah ʿayiz?"
+      },
+      "context": "A shop assistant asking a male customer about water bottles."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the correct way to ask 'How much/many?'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "إيه؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "فين؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "كام؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "Kam?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I want one ___ of milk.' (bottle)",
+      "options": [
+        {
+          "id": "a",
+          "text": "كيلو",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "زجاجة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "علبة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "zogaga",
+        "arabic": "زجاجة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which adjective means 'fresh'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "مستوي",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "طازة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كبير",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "ṭaza"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Meat and Poultry"
+        },
+        "text": "The meat and poultry section will have various cuts and types. Knowing these terms will help you ask for exactly what you need.",
+        "examples": [
+          {
+            "arabic": "لحمة",
+            "english": "Meat (general)",
+            "transliteration": "laḥma"
+          },
+          {
+            "arabic": "فراخ",
+            "english": "Chicken",
+            "transliteration": "farakh"
+          },
+          {
+            "arabic": "لحمة مفرومة",
+            "english": "Minced meat",
+            "transliteration": "laḥma mafrouma"
+          },
+          {
+            "arabic": "فرخة كاملة",
+            "english": "Whole chicken",
+            "transliteration": "farkha kamla"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Grains and Pantry Items"
+        },
+        "text": "The pantry section has staples like rice, pasta, oil, and sugar.",
+        "examples": [
+          {
+            "arabic": "رز",
+            "english": "Rice",
+            "transliteration": "rozz"
+          },
+          {
+            "arabic": "مكرونة",
+            "english": "Pasta",
+            "transliteration": "makarona"
+          },
+          {
+            "arabic": "زيت",
+            "english": "Oil",
+            "transliteration": "zeit"
+          },
+          {
+            "arabic": "سكر",
+            "english": "Sugar",
+            "transliteration": "sokkar"
+          },
+          {
+            "arabic": "كيس رز",
+            "english": "Bag of rice",
+            "transliteration": "kīs rozz"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Beverages"
+        },
+        "text": "Quench your thirst with these common beverage options.",
+        "examples": [
+          {
+            "arabic": "مياه",
+            "english": "Water",
+            "transliteration": "mayyah"
+          },
+          {
+            "arabic": "عصير",
+            "english": "Juice",
+            "transliteration": "ʿaṣīr"
+          },
+          {
+            "arabic": "شاي",
+            "english": "Tea",
+            "transliteration": "shay"
+          },
+          {
+            "arabic": "قهوة",
+            "english": "Coffee",
+            "transliteration": "ʾahwa"
+          },
+          {
+            "arabic": "عصير برتقال",
+            "english": "Orange juice",
+            "transliteration": "ʿaṣīr burtuʾān"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "عايز كيس رز و علبة مكرونة لو سمحت.",
+        "english": "I want a bag of rice and a box of pasta, please. (male)",
+        "transliteration": "ʿAyiz kīs rozz we ʿelbet makarona law samaḥt."
+      },
+      "context": "A male customer asking for rice and pasta."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "مفيش مياه هنا؟",
+        "english": "Is there no water here?",
+        "transliteration": "Mafīsh mayyah hena?"
+      },
+      "context": "A customer looking for water and asking a staff member."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'chicken'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "لحمة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "فراخ",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "رز",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "farakh"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I want a bottle of ___.' (oil)",
+      "options": [
+        {
+          "id": "a",
+          "text": "عصير",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "زيت",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "سكر",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "zeit",
+        "arabic": "زيت"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which of these is a beverage?",
+      "options": [
+        {
+          "id": "a",
+          "text": "مكرونة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "قهوة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "لحمة مفرومة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "ʾahwa"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for the Price"
+        },
+        "text": "Once you've found what you need, you'll want to know the price. The phrase for 'How much is...?' is 'بكام...؟'.",
+        "examples": [
+          {
+            "arabic": "بكام...؟",
+            "english": "How much is...?",
+            "transliteration": "Be kam...?"
+          },
+          {
+            "arabic": "الطماطم بكام الكيلو؟",
+            "english": "How much is a kilo of tomatoes?",
+            "transliteration": "Eṭ-ṭamaṭim be kam el-kilo?"
+          },
+          {
+            "arabic": "العيش ده بكام؟",
+            "english": "How much is this bread?",
+            "transliteration": "El-ʿeish dah be kam?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "The Total Bill"
+        },
+        "text": "At the checkout, you'll need to ask for the total. 'الحساب كام؟' is the common phrase.",
+        "examples": [
+          {
+            "arabic": "الحساب كام؟",
+            "english": "What's the total bill?",
+            "transliteration": "El-ḥesab kam?"
+          },
+          {
+            "arabic": "الحساب كام كله؟",
+            "english": "What's the total bill for everything?",
+            "transliteration": "El-ḥesab kam kollo?"
+          },
+          {
+            "arabic": "الإجمالي",
+            "english": "The total (formal)",
+            "transliteration": "el-ʾegmali"
+          },
+          {
+            "arabic": "ميتين جنيه",
+            "english": "200 EGP",
+            "transliteration": "mitēin genēh"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Paying and Saying Goodbye"
+        },
+        "text": "When you hand over money or leave the store, these phrases are useful.",
+        "examples": [
+          {
+            "arabic": "اتفضل",
+            "english": "Here you go (to a male)",
+            "transliteration": "Etfaḍḍal",
+            "diacriticalNotes": "Used when giving something to a male. Note the masculine form."
+          },
+          {
+            "arabic": "اتفضلي",
+            "english": "Here you go (to a female)",
+            "transliteration": "Etfaḍḍali",
+            "diacriticalNotes": "Used when giving something to a female. Note the feminine form."
+          },
+          {
+            "arabic": "شكراً",
+            "english": "Thank you",
+            "transliteration": "Shokran"
+          },
+          {
+            "arabic": "مع السلامة",
+            "english": "Goodbye",
+            "transliteration": "Maʿ es-salama"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الحساب كام يا أستاذ؟",
+        "english": "What's the total bill, sir?",
+        "transliteration": "El-ḥesab kam ya ʾostaz?"
+      },
+      "context": "Asking the cashier for the total bill."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بكام عصير البرتقال ده؟ شكراً مع السلامة.",
+        "english": "How much is this orange juice? Thank you, goodbye.",
+        "transliteration": "Be kam ʿaṣīr el-burtuʾān dah? Shokran, maʿ es-salama."
+      },
+      "context": "Asking price, then thanking and saying goodbye."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'How much is this?'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "فين ده؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كام ده؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "بكام ده؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "Be kam dah?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the phrase: 'What's the ___?' (total bill)",
+      "options": [
+        {
+          "id": "a",
+          "text": "سوبر ماركت",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الحساب كام؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "عايز إيه؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "El-ḥesab kam?",
+        "arabic": "الحساب كام؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'Thank you'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "مع السلامة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "اتفضل",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "شكراً",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "Shokran"
+      }
+    }
+  ]
+}

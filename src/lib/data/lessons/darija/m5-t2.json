@@ -1,0 +1,854 @@
+{
+  "topicId": "m5-t2",
+  "title": "Asking about the location of things (Part 2): Advanced location questions and directions",
+  "dialect": "darija",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'How do I get to...?' (كيفاش نوصل لـ...؟)"
+        },
+        "text": "This is a common and very useful phrase when you need directions to a specific place. It literally means 'How do I arrive at...?'.",
+        "examples": [
+          {
+            "arabic": "كيفاش نوصل لـ المحطة؟",
+            "english": "How do I get to the station?",
+            "transliteration": "Kifash nwssel l-el mahatta?"
+          },
+          {
+            "arabic": "كيفاش نوصل لـ المطار؟",
+            "english": "How do I get to the airport?",
+            "transliteration": "Kifash nwssel l-el matar?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Understanding 'Go' (سير) and 'Turn' (دور)"
+        },
+        "text": "These are essential verbs for giving and receiving directions. 'سير' means 'go' and 'دور' means 'turn'. They are often used in the imperative form.",
+        "examples": [
+          {
+            "arabic": "سير نيشان.",
+            "english": "Go straight.",
+            "transliteration": "Sir nishan."
+          },
+          {
+            "arabic": "دور على اليمين.",
+            "english": "Turn right.",
+            "transliteration": "Dor 'ala l-yamin."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Common Direction: Straight Ahead (نيشان / طوالى)"
+        },
+        "text": "When someone tells you to go straight, they will often use 'نيشان' or sometimes 'طوالى'. Both are widely understood.",
+        "examples": [
+          {
+            "arabic": "سير نيشان حتى للقنت.",
+            "english": "Go straight until the corner.",
+            "transliteration": "Sir nishan hatta l-el qent."
+          },
+          {
+            "arabic": "بقا غادي طوالى.",
+            "english": "Keep going straight.",
+            "transliteration": "Bqa ghadi twali."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "كيفاش نوصل لـ البوسطة؟",
+        "english": "How do I get to the post office?",
+        "transliteration": "Kifash nwssel l-el bosta?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "سير طوالى من هنا.",
+        "english": "Go straight from here.",
+        "transliteration": "Sir twali men hna."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'How do I get to the hospital?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "فين المستشفى؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كيفاش نوصل لـ المستشفى؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "المستشفى هنا؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«كيفاش نوصل لـ» is used to ask for directions to a place.",
+      "hint": {
+        "transliteration": "Kifash nwssel l-el mostashfa?",
+        "arabic": "كيفاش نوصل لـ المستشفى؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'Go ___' (straight ahead)",
+      "options": [
+        {
+          "id": "a",
+          "text": "نيشان",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "اليمين",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "اليسار",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "«نيشان» means straight ahead.",
+      "hint": {
+        "transliteration": "Sir nishan.",
+        "arabic": "سير نيشان."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What does 'دور' mean in directions?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Go",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "Stop",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "Turn",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "«دور» is the imperative verb for 'turn'.",
+      "hint": {
+        "transliteration": "Dor",
+        "arabic": "دور"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Turning Left and Right (على اليسار / على اليمين)"
+        },
+        "text": "To specify the direction of a turn, you'll use 'على اليسار' for left and 'على اليمين' for right.",
+        "examples": [
+          {
+            "arabic": "دور على اليمين من بعد الضو الأحمر.",
+            "english": "Turn right after the traffic light.",
+            "transliteration": "Dor 'ala l-yamin men ba'd eddḅaw el ahmar."
+          },
+          {
+            "arabic": "من هنا دور على اليسار.",
+            "english": "From here turn left.",
+            "transliteration": "Men hna dor 'ala l-yasar."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Near and Far (قريب / بعيد)"
+        },
+        "text": "These adjectives describe distance. 'قريب' means near/close and 'بعيد' means far. They can be used with 'من' (men - from). Note the feminine forms: قريبة (qriba) and بعيدة (b'ida).",
+        "examples": [
+          {
+            "arabic": "واش المطعم قريب من هنا؟",
+            "english": "Is the restaurant near here?",
+            "transliteration": "Wash el mat'am qrib men hna?"
+          },
+          {
+            "arabic": "المحطة بعيدة بزاف.",
+            "english": "The station is very far.",
+            "transliteration": "El mahatta b'ida bzaf."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking About Distance (واش بعيد؟ / شحال بعيد؟)"
+        },
+        "text": "You can inquire about the distance of a place by asking 'واش بعيد؟' (Is it far?) or 'شحال بعيد؟' (How far is it?).",
+        "examples": [
+          {
+            "arabic": "واش البوسطة بعيدة من هنا؟",
+            "english": "Is the post office far from here?",
+            "transliteration": "Wash el bosta b'ida men hna?"
+          },
+          {
+            "arabic": "شحال بعيد المستشفى؟",
+            "english": "How far is the hospital?",
+            "transliteration": "ShHal b'id el mostashfa?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "المسجد قريب من السوق.",
+        "english": "The mosque is near the market.",
+        "transliteration": "El mesjîd qrib men es-souq."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شحال بعيد الفندق؟",
+        "english": "How far is the hotel?",
+        "transliteration": "ShHal b'id el fondeq?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "دور على اليسار عند الضو الأحمر.",
+        "english": "Turn left at the traffic light.",
+        "transliteration": "Dor 'ala l-yasar 'and eddḅaw el ahmar."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'Turn right'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "دور على اليسار",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "دور على اليمين",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "سير نيشان",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«على اليمين» means to the right.",
+      "hint": {
+        "transliteration": "Dor 'ala l-yamin",
+        "arabic": "دور على اليمين"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'Is the restaurant ___ from here?' (near)",
+      "options": [
+        {
+          "id": "a",
+          "text": "بعيد",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "قريب",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كاين",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«قريب» means near or close.",
+      "hint": {
+        "transliteration": "Wash el mat'am qrib men hna?",
+        "arabic": "واش المطعم قريب من هنا؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would you ask 'How far is the school?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "فين المدرسة؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "واش المدرسة هنا؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "شحال بعيدة المدرسة؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "«شحال بعيدة؟» is used to ask 'How far is it?'. Note the feminine form for 'المدرسة'.",
+      "hint": {
+        "transliteration": "ShHal b'ida el madrasa?",
+        "arabic": "شحال بعيدة المدرسة؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Relative Locations: In Front Of, Behind (قدام / ورا)"
+        },
+        "text": "These prepositions are crucial for describing objects' positions relative to others. 'قدام' means in front of, and 'ورا' means behind.",
+        "examples": [
+          {
+            "arabic": "البنك قدام المسجد.",
+            "english": "The bank is in front of the mosque.",
+            "transliteration": "El bank qeddam el mesjîd."
+          },
+          {
+            "arabic": "السيارة ورا الشجرة.",
+            "english": "The car is behind the tree.",
+            "transliteration": "Es-siyara wera sh-shajra."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Relative Locations: Next To, Beside (جنب / حدا)"
+        },
+        "text": "To say something is next to or beside another, you can use 'جنب' or 'حدا'. Both are common in Darija.",
+        "examples": [
+          {
+            "arabic": "القصر جنب البحر.",
+            "english": "The palace is next to the sea.",
+            "transliteration": "El qasr jenb el baHr."
+          },
+          {
+            "arabic": "القهوة حدا الصيدلية.",
+            "english": "The cafe is next to the pharmacy.",
+            "transliteration": "El qehwa Hda s-saydaliya."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Passing By / Going Through (دوز على / عبر)"
+        },
+        "text": "When giving directions, you might need to say 'pass by' a certain landmark or 'go through' an area. 'دوز على' means pass by, and 'عبر' means cross/go through.",
+        "examples": [
+          {
+            "arabic": "دوز على المخبزة.",
+            "english": "Pass by the bakery.",
+            "transliteration": "Douz 'ala l-makhbaza."
+          },
+          {
+            "arabic": "دوز على السوق.",
+            "english": "Pass through the market.",
+            "transliteration": "Douz 'ala s-souq."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "المستشفى قدام المحطة.",
+        "english": "The hospital is in front of the station.",
+        "transliteration": "El mostashfa qeddam el mahatta."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الصيدلية حدا البوسطة.",
+        "english": "The pharmacy is next to the post office.",
+        "transliteration": "Es-saydaliya Hda l-bosta."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "دوز على البنك.",
+        "english": "Pass by the bank.",
+        "transliteration": "Douz 'ala l-bank."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'behind'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "قدام",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ورا",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "جنب",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«ورا» means behind.",
+      "hint": {
+        "transliteration": "Wera",
+        "arabic": "ورا"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'The cafe is ___ the bakery.' (next to)",
+      "options": [
+        {
+          "id": "a",
+          "text": "قدام",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "حدا",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "ورا",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«حدا» means next to or beside.",
+      "hint": {
+        "transliteration": "El qehwa Hda l-makhbaza.",
+        "arabic": "القهوة حدا المخبزة."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would you tell someone to 'Pass by the market'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "سير السوق",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "دوز على السوق",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "فين السوق؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«دوز على» is the phrase for 'pass by'.",
+      "hint": {
+        "transliteration": "Douz 'ala s-souq",
+        "arabic": "دوز على السوق"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "At the Corner / At the Roundabout (فالقنت / فالروبوان)"
+        },
+        "text": "These phrases are very useful for navigation in cities. 'فالقنت' means 'at the corner', and 'فالروبوان' means 'at the roundabout'.",
+        "examples": [
+          {
+            "arabic": "المكتبة فالقنت ديال الشارع.",
+            "english": "The library is at the corner of the street.",
+            "transliteration": "El maktaba fel qent dyal esh-shari'."
+          },
+          {
+            "arabic": "دور على اليسار فالروبوان الأول.",
+            "english": "Turn left at the first roundabout.",
+            "transliteration": "Dor 'ala l-yasar fel roubwan el awwel."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "The Best Way / The Easiest Way (أحسن طريق / أسهل طريق)"
+        },
+        "text": "When you want to ask for the most convenient route, you can use 'أحسن طريق' (best way) or 'أسهل طريق' (easiest way).",
+        "examples": [
+          {
+            "arabic": "أشنو هي أحسن طريق لـ المركز؟",
+            "english": "What is the best way to the center?",
+            "transliteration": "Ashnu hiya aHsen triq l-el markaz?"
+          },
+          {
+            "arabic": "بين ليا أسهل طريق.",
+            "english": "Show me the easiest way.",
+            "transliteration": "Biyyen liya ashal triq."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Understanding Traffic Lights (الضو الأحمر / إشارة المرور)"
+        },
+        "text": "Traffic lights are important landmarks. 'الضو الأحمر' (eddaw el ahmar) literally means 'the red light', and it's commonly used. 'إشارة المرور' (isharat el morour) is the more formal term.",
+        "examples": [
+          {
+            "arabic": "وقف عند الضو الأحمر.",
+            "english": "Stop at the traffic light.",
+            "transliteration": "Wqef 'and eddḅaw el ahmar."
+          },
+          {
+            "arabic": "من بعد إشارة المرور، دور يمين.",
+            "english": "After the traffic light, turn right.",
+            "transliteration": "Men ba'd isharat el morour, dor yamin."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الصالون فالقنت ديال الشارع.",
+        "english": "The salon is at the corner of the street.",
+        "transliteration": "Es-salon fel qent dyal esh-shari'."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أشنو هي أسهل طريق لـ المقهى؟",
+        "english": "What is the easiest way to the cafe?",
+        "transliteration": "Ashnu hiya ashal triq l-el maqha?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "دور على اليمين فالروبوان.",
+        "english": "Turn right at the roundabout.",
+        "transliteration": "Dor 'ala l-yamin fel roubwan."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'at the corner'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "فالوسط",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "فالقنت",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "فوق",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«فالقنت» means at the corner.",
+      "hint": {
+        "transliteration": "Fel qent",
+        "arabic": "فالقنت"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'What is the ___ way to the museum?' (best)",
+      "options": [
+        {
+          "id": "a",
+          "text": "أسهل",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أحسن",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بعيد",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«أحسن» means best.",
+      "hint": {
+        "transliteration": "Ashnu hiya aHsen triq l-el matHaf?",
+        "arabic": "أشنو هي أحسن طريق لـ المتحف؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the common Darija term for 'traffic light'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "الضو الأبيض",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "إشارة السير",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "الضو الأحمر",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "«الضو الأحمر» literally means 'the red light' and is commonly used for traffic lights.",
+      "hint": {
+        "transliteration": "Eddaw el ahmar",
+        "arabic": "الضو الأحمر"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Combining Directions: 'Go straight, then turn...' (سير نيشان، ومن بعد دور...)"
+        },
+        "text": "You'll often need to give multiple directions in sequence. Use 'ومن بعد' (and then/after that) to link instructions.",
+        "examples": [
+          {
+            "arabic": "سير نيشان، ومن بعد دور على اليمين.",
+            "english": "Go straight, and then turn right.",
+            "transliteration": "Sir nishan, w men ba'd dor 'ala l-yamin."
+          },
+          {
+            "arabic": "دوز على البوسطة، ومن بعد دور على اليسار.",
+            "english": "Pass by the post office, and then turn left.",
+            "transliteration": "Douz 'ala l-bosta, w men ba'd dor 'ala l-yasar."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for Specific Landmarks (واش كاين شي معلمة؟)"
+        },
+        "text": "When you're lost or trying to clarify directions, you might ask 'واش كاين شي معلمة قريبة؟' (Is there any nearby landmark?) or 'أشنو كاين تماك؟' (What is there over there?).",
+        "examples": [
+          {
+            "arabic": "واش كاين شي فندق قريب من هنا؟",
+            "english": "Is there any hotel near here?",
+            "transliteration": "Wash kayn shi fondeq qrib men hna?"
+          },
+          {
+            "arabic": "أشنو كاين حدا هاد البلاصة؟",
+            "english": "What is next to this place?",
+            "transliteration": "Ashnu kayn Hda had el blasa?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Confirming Understanding (واش فهمتي؟ / عاود عفاك)"
+        },
+        "text": "It's good practice to confirm understanding or ask someone to repeat directions. 'واش فهمتي؟' (Did you understand? - masculine) / 'واش فهمتِ؟' (Did you understand? - feminine) and 'عاود عفاك' (Repeat please) are useful.",
+        "examples": [
+          {
+            "arabic": "سير نيشان، ومن بعد دور على اليمين. واش فهمتي؟",
+            "english": "Go straight, then turn right. Did you understand?",
+            "transliteration": "Sir nishan, w men ba'd dor 'ala l-yamin. Wash fhemtî?"
+          },
+          {
+            "arabic": "عاود عفاك، ما سمعتش مزيان.",
+            "english": "Repeat please, I didn't hear well.",
+            "transliteration": "'Awwed 'afak, ma sme'tsh mzyan."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "سير نيشان، ومن بعد دوز على المكتبة.",
+        "english": "Go straight, and then pass by the library.",
+        "transliteration": "Sir nishan, w men ba'd douz 'ala l-maktaba."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "واش كاين شي مقهى حدا المركز؟",
+        "english": "Is there any cafe next to the center?",
+        "transliteration": "Wash kayn shi maqha Hda l-markaz?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "عاود عفاك كيفاش نوصل لـ المسجد؟",
+        "english": "Repeat please, how do I get to the mosque?",
+        "transliteration": "'Awwed 'afak kifash nwssel l-el mesjîd?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase is used to link sequential directions, meaning 'and then'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أو",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "من بعد",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "قبل",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«من بعد» means 'after' or 'and then' in this context.",
+      "hint": {
+        "transliteration": "W men ba'd",
+        "arabic": "ومن بعد"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the question: 'Is there any ___ near here?' (landmark)",
+      "options": [
+        {
+          "id": "a",
+          "text": "مقهى",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "معلمة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "شجرة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«معلمة» refers to a landmark.",
+      "hint": {
+        "transliteration": "Wash kayn shi ma'lama qriba men hna?",
+        "arabic": "واش كاين شي معلمة قريبة من هنا؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'Did you understand?' (to a male)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "واش فهمتِ؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "واش فهمتي؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "واش تفهم؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "«واش فهمتي؟» is used to ask a male 'Did you understand?'.",
+      "hint": {
+        "transliteration": "Wash fhemtî?",
+        "arabic": "واش فهمتي؟"
+      }
+    }
+  ]
+}

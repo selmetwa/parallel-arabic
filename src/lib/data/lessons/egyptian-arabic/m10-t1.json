@@ -1,0 +1,902 @@
+{
+  "topicId": "m10-t1",
+  "title": "Asking for Services (Travel & Transportation)",
+  "dialect": "egyptian-arabic",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Polite Greetings and Initiating a Request"
+        },
+        "text": "When asking for a service, always start with a polite greeting. In Egyptian Arabic, common greetings include 'صباح الخير' (good morning), 'مساء الخير' (good evening), and the more general 'السلام عليكم'. After greeting, you can use a polite opening like 'من فضلك' (please) to indicate you're about to make a request. Note that 'من فضلكَ' is for a male and 'من فضلكِ' is for a female, although often the 'kasra' or 'fatha' is not distinctly pronounced in casual speech, the underlying form implies it.",
+        "examples": [
+          {
+            "arabic": "صباح الخير.",
+            "english": "Good morning.",
+            "transliteration": "Sabah el-kheir."
+          },
+          {
+            "arabic": "مساء الخير.",
+            "english": "Good evening.",
+            "transliteration": "Masa' el-kheir."
+          },
+          {
+            "arabic": "السلام عليكم.",
+            "english": "Peace be upon you (general greeting).",
+            "transliteration": "As-salamu alaykum."
+          },
+          {
+            "arabic": "من فضلكَ...",
+            "english": "Please... (to a male)",
+            "transliteration": "Min fadlak..."
+          },
+          {
+            "arabic": "من فضلكِ...",
+            "english": "Please... (to a female)",
+            "transliteration": "Min fadlik..."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing 'I want...'"
+        },
+        "text": "To express 'I want...', you use 'أنا عايز' for a male speaker or 'أنا عايزة' for a female speaker. This is a fundamental phrase for requesting anything.",
+        "examples": [
+          {
+            "arabic": "أنا عايز...",
+            "english": "I want... (male speaker)",
+            "transliteration": "Ana ʿayez..."
+          },
+          {
+            "arabic": "أنا عايزة...",
+            "english": "I want... (female speaker)",
+            "transliteration": "Ana ʿayza..."
+          },
+          {
+            "arabic": "أنا عايز تاكسي.",
+            "english": "I want a taxi. (male speaker)",
+            "transliteration": "Ana ʿayez taxi."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Do you have...?' or 'Is there...?'"
+        },
+        "text": "To inquire about the availability of a service or item, you can use 'فيه عندكم...؟' (Do you have...?) or 'فيه...؟' (Is there...?). The word 'خدمة' (khedma) means 'service'.",
+        "examples": [
+          {
+            "arabic": "من فضلك، فيه تاكسي؟",
+            "english": "Excuse me, is there a taxi?",
+            "transliteration": "Min fadlak, feh taxi?"
+          },
+          {
+            "arabic": "فيه عندكم حجز قطارات؟",
+            "english": "Do you have train reservations?",
+            "transliteration": "Feh ʿandokom ḥagz qaṭarat?"
+          },
+          {
+            "arabic": "أنا عايز خدمة.",
+            "english": "I want a service. (male speaker)",
+            "transliteration": "Ana ʿayez khedma."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "صباح الخير، أنا عايز تاكسي من فضلكَ.",
+        "english": "Good morning, I want a taxi please. (speaking to a male)",
+        "transliteration": "Sabah el-kheir, ana ʿayez taxi min fadlak."
+      },
+      "context": "A male speaker requesting a taxi politely in the morning from a male."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "مساء الخير، فيه عندكم حجز أتوبيس؟",
+        "english": "Good evening, do you have bus reservations?",
+        "transliteration": "Masa' el-kheir, feh ʿandokom ḥagz otobus?"
+      },
+      "context": "A polite inquiry about bus reservations in the evening."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would a female say 'I want a taxi'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أنا عايز تاكسي",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أنا عايزة تاكسي",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أنت عايز تاكسي",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "Ana ʿayza taxi",
+        "arabic": "أنا عايزة تاكسي"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the greeting for 'Good morning': ___ الخير.",
+      "options": [
+        {
+          "id": "a",
+          "text": "مساء",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "صباح",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أهلاً",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "Sabah",
+        "arabic": "صباح"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'Do you have...?' (for services)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "من فضلك",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أنا عايز",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "فيه عندكم؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "Feh ʿandokom?",
+        "arabic": "فيه عندكم؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for a Taxi / Ride"
+        },
+        "text": "When you need a ride, the most common word is 'تاكسي' (taxi). You might also hear 'عربية أجرة' (ʿarabeyya ʾogra) which literally means 'rented car' or 'taxi'. To hail one, you can simply say 'تاكسي!' or approach a taxi and ask.",
+        "examples": [
+          {
+            "arabic": "تاكسي!",
+            "english": "Taxi!",
+            "transliteration": "Taxi!"
+          },
+          {
+            "arabic": "محتاج تاكسي.",
+            "english": "I need a taxi. (male speaker)",
+            "transliteration": "Meḥtag taxi."
+          },
+          {
+            "arabic": "عربية أجرة.",
+            "english": "Taxi / Rented car.",
+            "transliteration": "ʿArabeyya ʾogra."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Specifying Destination: 'I want to go to...'"
+        },
+        "text": "Once you've got a taxi, the driver will often ask 'على فين؟' (Where to?). You respond using 'أنا عايز أروح...' (male speaker) or 'أنا عايزة أروح...' (female speaker), followed by your destination. 'على' (ʿala) means 'to' or 'towards'.",
+        "examples": [
+          {
+            "arabic": "على فين؟",
+            "english": "Where to?",
+            "transliteration": "ʿAla feen?"
+          },
+          {
+            "arabic": "أنا عايز أروح الفندق.",
+            "english": "I want to go to the hotel. (male speaker)",
+            "transliteration": "Ana ʿayez arouḥ el-fundoʾ."
+          },
+          {
+            "arabic": "أنا عايزة أروح محطة القطر.",
+            "english": "I want to go to the train station. (female speaker)",
+            "transliteration": "Ana ʿayza arouḥ maḥaṭṭet el-ʾaṭr."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking about the Cost"
+        },
+        "text": "It's always a good idea to ask about the price before starting your journey, especially with taxis. Use 'بكام...؟' (How much...?). You can add 'المشوار' (el-meshwar) meaning 'the trip' to clarify.",
+        "examples": [
+          {
+            "arabic": "بكام المشوار؟",
+            "english": "How much is the trip?",
+            "transliteration": "Bekam el-meshwar?"
+          },
+          {
+            "arabic": "دي بكام؟",
+            "english": "How much is this? (for a feminine item)",
+            "transliteration": "Di bekam?"
+          },
+          {
+            "arabic": "من فضلكَ، بكام أروح وسط البلد؟",
+            "english": "Please (to male), how much to go to downtown?",
+            "transliteration": "Min fadlak, bekam arouḥ wasaṭ el-balad?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "صباح الخير، على فين؟ أنا عايز أروح المطار، بكام المشوار؟",
+        "english": "Good morning, where to? I want to go to the airport, how much is the trip? (male speaker)",
+        "transliteration": "Sabah el-kheir, ʿala feen? Ana ʿayez arouḥ el-maṭar, bekam el-meshwar?"
+      },
+      "context": "A male speaker asking a taxi driver about the destination and cost."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا عايزة عربية أجرة أروح بيها المتحف، بكام؟",
+        "english": "I want a taxi to go to the museum with, how much? (female speaker)",
+        "transliteration": "Ana ʿayza ʿarabeyya ʾogra arouḥ biha el-matḥaf, bekam?"
+      },
+      "context": "A female speaker asking for a taxi to a specific destination and inquiring about the price."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the common Egyptian Arabic word for 'taxi'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أوتوبيس",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "قطر",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "تاكسي",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "Taxi",
+        "arabic": "تاكسي"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the phrase 'Where to?': على ___؟",
+      "options": [
+        {
+          "id": "a",
+          "text": "مين",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "فين",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "إمتى",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "Feen",
+        "arabic": "فين"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'How much is the trip?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "إزاي المشوار؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بكام المشوار؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "فين المشوار؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "Bekam el-meshwar?",
+        "arabic": "بكام المشوار؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Train and Bus Terminology"
+        },
+        "text": "For longer distances or public transport, you'll need to know the words for train and bus. 'قطر' (ʾaṭr) is train and 'أتوبيس' (otobus) is bus. 'محطة' (maḥaṭṭa) means station.",
+        "examples": [
+          {
+            "arabic": "محطة القطر.",
+            "english": "Train station.",
+            "transliteration": "Maḥaṭṭet el-ʾaṭr."
+          },
+          {
+            "arabic": "أتوبيس.",
+            "english": "Bus.",
+            "transliteration": "Otobus."
+          },
+          {
+            "arabic": "أنا عايز أروح محطة الأتوبيس.",
+            "english": "I want to go to the bus station. (male speaker)",
+            "transliteration": "Ana ʿayez arouḥ maḥaṭṭet el-otobus."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Booking and Tickets: 'Reservation' and 'Ticket'"
+        },
+        "text": "When arranging travel, you'll need a 'حجز' (ḥagz) which is a reservation or booking, and a 'تذكرة' (tazkara) which is a ticket. You can specify a ticket 'لـ' (li-) meaning 'for'.",
+        "examples": [
+          {
+            "arabic": "أنا عايز حجز.",
+            "english": "I want a reservation. (male speaker)",
+            "transliteration": "Ana ʿayez ḥagz."
+          },
+          {
+            "arabic": "تذكرة لأسوان.",
+            "english": "A ticket to Aswan.",
+            "transliteration": "Tazkara li-Aswan."
+          },
+          {
+            "arabic": "ممكن أحجز تذكرة؟",
+            "english": "Can I reserve a ticket?",
+            "transliteration": "Mumkin aḥgiz tazkara?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "One Way vs. Round Trip"
+        },
+        "text": "When buying a ticket, you'll be asked if it's 'ذهاب فقط' (zahab faqaṭ) for one way, or 'ذهاب وعودة' (zahab w ʿawda) for a round trip. 'فقط' (faqaṭ) means 'only', and 'عودة' (ʿawda) means 'return'.",
+        "examples": [
+          {
+            "arabic": "تذكرة ذهاب فقط.",
+            "english": "One way ticket.",
+            "transliteration": "Tazkara zahab faqaṭ."
+          },
+          {
+            "arabic": "ذهاب وعودة من فضلكَ.",
+            "english": "Round trip please. (to a male)",
+            "transliteration": "Zahab w ʿawda min fadlak."
+          },
+          {
+            "arabic": "أنا عايزة تذكرة ذهاب وعودة للقاهرة.",
+            "english": "I want a round trip ticket to Cairo. (female speaker)",
+            "transliteration": "Ana ʿayza tazkara zahab w ʿawda lel-Qahira."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "مساء الخير، عايزة أحجز تذكرة قطر لأسوان، ذهاب وعودة من فضلكِ.",
+        "english": "Good evening, I want to reserve a train ticket to Aswan, round trip please. (female speaker, to a female)",
+        "transliteration": "Masa' el-kheir, ʿayza aḥgiz tazkara ʾaṭr li-Aswan, zahab w ʿawda min fadlik."
+      },
+      "context": "A female speaker at a train station requesting a round-trip ticket from a female."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "صباح الخير، فيه أتوبيسات للمنصورة؟ أنا عايز تذكرة ذهاب فقط.",
+        "english": "Good morning, are there buses to Mansoura? I want a one-way ticket. (male speaker)",
+        "transliteration": "Sabah el-kheir, feh otobusat lel-Manṣoura? Ana ʿayez tazkara zahab faqaṭ."
+      },
+      "context": "A male speaker inquiring about buses and requesting a one-way ticket."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'train'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أتوبيس",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "قطر",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "تاكسي",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "ʾAṭr",
+        "arabic": "قطر"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the phrase for 'train station': محطة ال___.",
+      "options": [
+        {
+          "id": "a",
+          "text": "شارع",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "قطر",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بيت",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "ʾAṭr",
+        "arabic": "قطر"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'round trip'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ذهاب فقط",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "تذكرة واحدة",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "ذهاب وعودة",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "Zahab w ʿawda",
+        "arabic": "ذهاب وعودة"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking about Time and Date"
+        },
+        "text": "When booking, you'll need to specify when. 'النهاردة' (en-naharda) means today, and 'بكرة' (bokra) means tomorrow. To ask 'at what time?', you can say 'الساعة كام؟' (es-saʿa kam?).",
+        "examples": [
+          {
+            "arabic": "النهاردة.",
+            "english": "Today.",
+            "transliteration": "En-naharda."
+          },
+          {
+            "arabic": "بكرة الصبح.",
+            "english": "Tomorrow morning.",
+            "transliteration": "Bokra es-sobh."
+          },
+          {
+            "arabic": "القطر الساعة كام؟",
+            "english": "What time is the train?",
+            "transliteration": "El-ʾaṭr es-saʿa kam?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Specifying Morning/Evening/Night"
+        },
+        "text": "To be more precise about the time of day, you can use 'الصبح' (es-sobh) for morning, 'بعد الضهر' (baʿd ed-dohr) for afternoon, 'بالليل' (bel-leil) for evening/night.",
+        "examples": [
+          {
+            "arabic": "عايز تذكرة الصبح.",
+            "english": "I want a morning ticket. (male speaker)",
+            "transliteration": "ʿAyzez tazkara es-sobh."
+          },
+          {
+            "arabic": "بالليل مناسب.",
+            "english": "Evening is suitable.",
+            "transliteration": "Bel-leil monaseb."
+          },
+          {
+            "arabic": "الأتوبيس بعد الضهر.",
+            "english": "The bus is in the afternoon.",
+            "transliteration": "El-otobus baʿd ed-dohr."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Specifying Number of People"
+        },
+        "text": "You'll need to state how many tickets or seats you need. 'لشخص واحد' (le-shakhs waḥed) for one person, 'لشخصين' (le-shakhsein) for two people. For more, use the number followed by 'أفراد' (ʾafrad) or 'أشخاص' (ʾashkhaṣ).",
+        "examples": [
+          {
+            "arabic": "تذكرة لشخص واحد.",
+            "english": "One ticket for one person.",
+            "transliteration": "Tazkara le-shakhs waḥed."
+          },
+          {
+            "arabic": "أنا عايز حجز لشخصين.",
+            "english": "I want a reservation for two people. (male speaker)",
+            "transliteration": "Ana ʿayez ḥagz le-shakhsein."
+          },
+          {
+            "arabic": "لخمسة أفراد.",
+            "english": "For five people.",
+            "transliteration": "Le-khamsa ʾafrad."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا عايزة تذكرتين قطر لبكرة الصبح، لشخصين.",
+        "english": "I want two train tickets for tomorrow morning, for two people. (female speaker)",
+        "transliteration": "Ana ʿayza tazkartein ʾaṭr le-bokra es-sobh, le-shakhsein."
+      },
+      "context": "A female speaker requesting train tickets for specific time and number of people."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "من فضلكَ، الأتوبيس النهاردة بالليل، الساعة كام؟",
+        "english": "Please (to male), the bus today in the evening, what time is it?",
+        "transliteration": "Min fadlak, el-otobus en-naharda bel-leil, es-saʿa kam?"
+      },
+      "context": "A polite inquiry about the time of an evening bus today, addressed to a male."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'today'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بكرة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "النهاردة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أمس",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "En-naharda",
+        "arabic": "النهاردة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the phrase 'for one person': ل___ واحد.",
+      "options": [
+        {
+          "id": "a",
+          "text": "ناس",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شخص",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أفراد",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "Shakhs",
+        "arabic": "شخص"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'What time is it?' or 'What time...?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "فين الساعة؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "إزاي الساعة؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "الساعة كام؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "Es-saʿa kam?",
+        "arabic": "الساعة كام؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Confirming Information"
+        },
+        "text": "After a service provider gives you information, you might want to confirm it. You can say 'مظبوط؟' (mazbooṭ?), meaning 'Is that correct/accurate?'. You can also re-state the information as a question.",
+        "examples": [
+          {
+            "arabic": "القطر الساعة سبعة، مظبوط؟",
+            "english": "The train is at seven, correct?",
+            "transliteration": "El-ʾaṭr es-saʿa sabʿa, mazbooṭ?"
+          },
+          {
+            "arabic": "أنا رايح وسط البلد، تمام؟",
+            "english": "I'm going downtown, okay?",
+            "transliteration": "Ana rayeh wasaṭ el-balad, tamam?"
+          },
+          {
+            "arabic": "ده الحجز بتاعي؟",
+            "english": "Is this my reservation?",
+            "transliteration": "Da el-ḥagz betaʿi?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Saying 'Thank you' and 'Sorry'"
+        },
+        "text": "Politeness goes a long way. 'شكراً' (shokran) means thank you. If you need to apologize for bothering someone or for a misunderstanding, you can say 'آسف' (ʾasef) for a male speaker or 'آسفة' (ʾasfa) for a female speaker.",
+        "examples": [
+          {
+            "arabic": "شكراً جزيلاً.",
+            "english": "Thank you very much.",
+            "transliteration": "Shokran gazilan."
+          },
+          {
+            "arabic": "آسف، ممكن تعيد؟",
+            "english": "Sorry, could you repeat? (male speaker)",
+            "transliteration": "ʾAsef, mumkin teʿeed?"
+          },
+          {
+            "arabic": "آسفة، أنا مش فاهمة.",
+            "english": "Sorry, I don't understand. (female speaker)",
+            "transliteration": "ʾAsfa, ana mesh fahma."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Concluding a Service Request"
+        },
+        "text": "When you're done, it's good practice to offer a polite closing. 'مع السلامة' (maʿa s-salama) means 'goodbye' (literally 'with safety'). 'شكراً' can also serve as a final polite closing.",
+        "examples": [
+          {
+            "arabic": "شكراً، مع السلامة.",
+            "english": "Thank you, goodbye.",
+            "transliteration": "Shokran, maʿa s-salama."
+          },
+          {
+            "arabic": "شكراً على المساعدة.",
+            "english": "Thank you for the help.",
+            "transliteration": "Shokran ʿala el-mosaʿada."
+          },
+          {
+            "arabic": "تمام، مع السلامة.",
+            "english": "Okay, goodbye.",
+            "transliteration": "Tamam, maʿa s-salama."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الأتوبيس بكرة الساعة تسعة الصبح، مظبوط؟ شكراً جزيلاً.",
+        "english": "The bus is tomorrow at 9 AM, correct? Thank you very much.",
+        "transliteration": "El-otobus bokra es-saʿa tesʿa es-sobh, mazbooṭ? Shokran gazilan."
+      },
+      "context": "Confirming bus details and expressing gratitude."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "آسفة، أنا عايزة تاكسي للمطار النهاردة، مع السلامة.",
+        "english": "Sorry, I want a taxi for the airport today, goodbye. (female speaker)",
+        "transliteration": "ʾAsfa, ana ʿayza taxi lel-maṭar en-naharda, maʿa s-salama."
+      },
+      "context": "A female speaker apologizing (perhaps for a previous misunderstanding) and requesting a taxi, then bidding farewell."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'Is that correct?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "فين ده؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مظبوط؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "ليه ده؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "Mazbooṭ?",
+        "arabic": "مظبوط؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the phrase 'Thank you very much': شكراً ___.",
+      "options": [
+        {
+          "id": "a",
+          "text": "ليك",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "جزيلاً",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أهلاً",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "Gazilan",
+        "arabic": "جزيلاً"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase is a polite way to say 'goodbye'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أهلاً وسهلاً",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مع السلامة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "إزيك؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "Maʿa s-salama",
+        "arabic": "مع السلامة"
+      }
+    }
+  ]
+}

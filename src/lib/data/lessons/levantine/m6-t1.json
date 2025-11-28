@@ -1,0 +1,891 @@
+{
+  "topicId": "m6-t1",
+  "title": "Asking about Directions",
+  "dialect": "levantine",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Starting Politely: 'Excuse Me'"
+        },
+        "text": "To ask for directions, it's polite to start with 'Excuse me'. The phrase changes slightly depending on whether you're speaking to a male or a female. Pay attention to the diacritical marks on the last letter for pronunciation.",
+        "examples": [
+          {
+            "arabic": "لو سمحتَ",
+            "english": "Excuse me (to a male)",
+            "transliteration": "Law samaḥta",
+            "diacriticalNotes": "The 'ت' has a fatḥa (َ) for male."
+          },
+          {
+            "arabic": "لو سمحتِ",
+            "english": "Excuse me (to a female)",
+            "transliteration": "Law samaḥti",
+            "diacriticalNotes": "The 'ت' has a kasra (ِ) for female."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Where is...?'"
+        },
+        "text": "After a polite opening, you can ask 'Where is...?' using 'وين الـ...؟' This is a very common and versatile phrase in Levantine Arabic.",
+        "examples": [
+          {
+            "arabic": "وين الـ...؟",
+            "english": "Where is the...?",
+            "transliteration": "Wayn il-...?"
+          },
+          {
+            "arabic": "وين المطعم؟",
+            "english": "Where is the restaurant?",
+            "transliteration": "Wayn il-maṭʕam?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Common Places/Landmarks (Part 1)"
+        },
+        "text": "Here are some basic places you might need to ask for.",
+        "examples": [
+          {
+            "arabic": "المطعم",
+            "english": "The restaurant",
+            "transliteration": "Il-maṭʕam"
+          },
+          {
+            "arabic": "البنك",
+            "english": "The bank",
+            "transliteration": "Il-bank"
+          },
+          {
+            "arabic": "الصيدلية",
+            "english": "The pharmacy",
+            "transliteration": "Iṣ-ṣaydaliyye"
+          },
+          {
+            "arabic": "المستشفى",
+            "english": "The hospital",
+            "transliteration": "Il-mustashfa"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "لو سمحتَ، وين البنك؟",
+        "english": "Excuse me (to a male), where is the bank?",
+        "transliteration": "Law samaḥta, wayn il-bank?"
+      },
+      "context": "A polite way to ask a man for directions to the bank."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "لو سمحتِ، وين الصيدلية؟",
+        "english": "Excuse me (to a female), where is the pharmacy?",
+        "transliteration": "Law samaḥti, wayn iṣ-ṣaydaliyye?"
+      },
+      "context": "A polite way to ask a woman for directions to the pharmacy."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'Excuse me' when addressing a female?",
+      "options": [
+        {
+          "id": "a",
+          "text": "لو سمحتَ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "لو سمحتِ",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "شكراً",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "To address a female politely, you use 'لو سمحتِ' (Law samaḥti), with a kasra on the 'ت'.",
+      "hint": {
+        "transliteration": "Law samaḥti",
+        "arabic": "لو سمحتِ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic phrase for 'Where is the restaurant?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "وين المطعم؟",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "كيف حالك؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "شو اسمك؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "'وين الـ...؟' is used to ask 'Where is the...?' and 'مطعم' means restaurant.",
+      "hint": {
+        "transliteration": "Wayn il-maṭʕam?",
+        "arabic": "وين المطعم؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which of these words means 'the hospital'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "البنك",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "المطعم",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "المستشفى",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'المستشفى' (Il-mustashfa) means the hospital.",
+      "hint": {
+        "transliteration": "Il-mustashfa",
+        "arabic": "المستشفى"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Go Straight"
+        },
+        "text": "One of the most common directions is 'go straight'. In Levantine Arabic, you'll hear 'روح دغري'. 'روح' (rūḥ) is the imperative verb 'go', and 'دغري' (dighri) means straight.",
+        "examples": [
+          {
+            "arabic": "روح دغري",
+            "english": "Go straight (to a male)",
+            "transliteration": "Rūḥ dighri"
+          },
+          {
+            "arabic": "روحي دغري",
+            "english": "Go straight (to a female)",
+            "transliteration": "Rūḥi dighri"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Turn Right"
+        },
+        "text": "To say 'turn right', the verb 'لفّ' (liff) is used. It means to turn. Remember to differentiate between male and female forms for 'turn'.",
+        "examples": [
+          {
+            "arabic": "لفّ يمين",
+            "english": "Turn right (to a male)",
+            "transliteration": "Liff yamīn"
+          },
+          {
+            "arabic": "لفّي يمين",
+            "english": "Turn right (to a female)",
+            "transliteration": "Liffi yamīn"
+          },
+          {
+            "arabic": "يمين",
+            "english": "Right",
+            "transliteration": "Yamīn"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Turn Left"
+        },
+        "text": "Similar to 'turn right', for 'turn left' you use 'لفّ'. The word for 'left' has two common variations in Levantine: 'شمال' (shimāl) or 'يسار' (yasār). Both are understood.",
+        "examples": [
+          {
+            "arabic": "لفّ شمال",
+            "english": "Turn left (to a male)",
+            "transliteration": "Liff shimāl"
+          },
+          {
+            "arabic": "لفّي يسار",
+            "english": "Turn left (to a female)",
+            "transliteration": "Liffi yasār"
+          },
+          {
+            "arabic": "شمال / يسار",
+            "english": "Left",
+            "transliteration": "Shimāl / Yasār"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "لو سمحتَ، روح دغري وبعدين لفّ يمين.",
+        "english": "Excuse me (to a male), go straight and then turn right.",
+        "transliteration": "Law samaḥta, rūḥ dighri w baʕdēn liff yamīn."
+      },
+      "context": "Combining initial politeness with simple directions."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "وين المطعم؟ روحي دغري بعدين لفّي شمال.",
+        "english": "Where is the restaurant? Go straight (to a female) then turn left.",
+        "transliteration": "Wayn il-maṭʕam? Rūḥi dighri baʕdēn liffi shimāl."
+      },
+      "context": "Asking for a place and giving directions to a female."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the correct way to tell a male to 'go straight'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "روحي دغري",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "روح دغري",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "لفّ يمين",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'روح دغري' (Rūḥ dighri) is the command for 'go straight' to a male.",
+      "hint": {
+        "transliteration": "Rūḥ dighri",
+        "arabic": "روح دغري"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'turn right' (to a female)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "لفّ يمين",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "لفّي يمين",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "لفّ شمال",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'لفّي يمين' (Liffi yamīn) is the command for 'turn right' to a female.",
+      "hint": {
+        "transliteration": "Liffi yamīn",
+        "arabic": "لفّي يمين"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Select the Levantine word for 'left'.",
+      "options": [
+        {
+          "id": "a",
+          "text": "يمين",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "فوق",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "شمال",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'شمال' (Shimāl) is a common Levantine word for 'left'. 'يسار' (Yasār) is also correct.",
+      "hint": {
+        "transliteration": "Shimāl",
+        "arabic": "شمال"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Next To / Beside"
+        },
+        "text": "To describe the location of something relative to another, you can use 'جنب' (janb) which means 'next to' or 'beside'.",
+        "examples": [
+          {
+            "arabic": "جنب البنك",
+            "english": "Next to the bank",
+            "transliteration": "Janb il-bank"
+          },
+          {
+            "arabic": "المطعم جنب الصيدلية.",
+            "english": "The restaurant is next to the pharmacy.",
+            "transliteration": "Il-maṭʕam janb iṣ-ṣaydaliyye."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Opposite / Across From"
+        },
+        "text": "When something is directly across from another, use 'قبال' (iqbāl). This is a widely used term in Levantine Arabic.",
+        "examples": [
+          {
+            "arabic": "قبال المستشفى",
+            "english": "Opposite the hospital",
+            "transliteration": "Iqbāl il-mustashfa"
+          },
+          {
+            "arabic": "البنك قبال المطعم.",
+            "english": "The bank is opposite the restaurant.",
+            "transliteration": "Il-bank iqbāl il-maṭʕam."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "In Front Of / Behind"
+        },
+        "text": "These prepositions are essential for giving more precise directions. 'قدام' (quddām) means 'in front of' and 'ورا' (wara) means 'behind'.",
+        "examples": [
+          {
+            "arabic": "قدام البنك",
+            "english": "In front of the bank",
+            "transliteration": "Quddām il-bank"
+          },
+          {
+            "arabic": "ورا الصيدلية",
+            "english": "Behind the pharmacy",
+            "transliteration": "Wara ṣ-ṣaydaliyye"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الصيدلية جنب المستشفى.",
+        "english": "The pharmacy is next to the hospital.",
+        "transliteration": "Iṣ-ṣaydaliyye janb il-mustashfa."
+      },
+      "context": "Describing the relative location of two places."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "المطعم قبال البنك ورا المستشفى.",
+        "english": "The restaurant is opposite the bank, behind the hospital.",
+        "transliteration": "Il-maṭʕam iqbāl il-bank wara il-mustashfa."
+      },
+      "context": "Combining multiple relative location descriptions."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'next to'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "قبال",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "جنب",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "ورا",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'جنب' (Janb) means next to or beside.",
+      "hint": {
+        "transliteration": "Janb",
+        "arabic": "جنب"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'opposite the restaurant'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "جنب المطعم",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "قبال المطعم",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "ورا المطعم",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'قبال' (Iqbāl) means opposite. So 'قبال المطعم' means opposite the restaurant.",
+      "hint": {
+        "transliteration": "Iqbāl il-maṭʕam",
+        "arabic": "قبال المطعم"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "If something is 'behind the bank', which word would you use for 'behind'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "قدام",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ورا",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "يمين",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'ورا' (Wara) means behind.",
+      "hint": {
+        "transliteration": "Wara",
+        "arabic": "ورا"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Far / Near"
+        },
+        "text": "When asking for directions, you might want to know if the destination is far or near. These adjectives are important.",
+        "examples": [
+          {
+            "arabic": "بعيد",
+            "english": "Far (masculine)",
+            "transliteration": "Baʕīd"
+          },
+          {
+            "arabic": "بعيدة",
+            "english": "Far (feminine)",
+            "transliteration": "Baʕīde"
+          },
+          {
+            "arabic": "قريب",
+            "english": "Near (masculine)",
+            "transliteration": "Qarīb"
+          },
+          {
+            "arabic": "قريبة",
+            "english": "Near (feminine)",
+            "transliteration": "Qarībe"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Is it far?' / 'Is it near?'"
+        },
+        "text": "You can ask about the distance by adding a question particle or just using intonation. Remember to match the gender of the place/noun if specified, or use the masculine form as a general default.",
+        "examples": [
+          {
+            "arabic": "هو بعيد؟",
+            "english": "Is it far? (for a masculine noun like 'il-bank')",
+            "transliteration": "Hu baʕīd?"
+          },
+          {
+            "arabic": "هي قريبة؟",
+            "english": "Is it near? (for a feminine noun like 'iṣ-ṣaydaliyye')",
+            "transliteration": "Hi qarībe?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Here / There"
+        },
+        "text": "To refer to locations, use 'هون' (hōn) for 'here' and 'هناك' (hunāk) or 'هنيك' (hnīk) for 'there'. 'هون' is very common in Levantine.",
+        "examples": [
+          {
+            "arabic": "هون",
+            "english": "Here",
+            "transliteration": "Hōn"
+          },
+          {
+            "arabic": "هنيك",
+            "english": "There",
+            "transliteration": "Hnīk"
+          },
+          {
+            "arabic": "المستشفى هون.",
+            "english": "The hospital is here.",
+            "transliteration": "Il-mustashfa hōn."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "وين المطعم؟ هو بعيد؟",
+        "english": "Where is the restaurant? Is it far?",
+        "transliteration": "Wayn il-maṭʕam? Hu baʕīd?"
+      },
+      "context": "Asking for a place and then inquiring about its distance."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "البنك قريب، هو هون.",
+        "english": "The bank is near, it is here.",
+        "transliteration": "Il-bank qarīb, hu hōn."
+      },
+      "context": "Confirming a location's proximity."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'near' (for a feminine noun)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "قريب",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "قريبة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بعيدة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'قريبة' (Qarībe) is the feminine form of 'near'.",
+      "hint": {
+        "transliteration": "Qarībe",
+        "arabic": "قريبة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'Is the pharmacy far?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "هو بعيد؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "هي بعيدة؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "هي قريبة؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Since 'الصيدلية' (iṣ-ṣaydaliyye) is feminine, you use 'هي بعيدة؟' (Hi baʕīde?).",
+      "hint": {
+        "transliteration": "Hi baʕīde?",
+        "arabic": "هي بعيدة؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the most common Levantine word for 'here'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "هناك",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "هون",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "وين",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'هون' (Hōn) is the most common word for 'here' in Levantine.",
+      "hint": {
+        "transliteration": "Hōn",
+        "arabic": "هون"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "More Common Landmarks (Part 2)"
+        },
+        "text": "Beyond basic buildings, you'll encounter these common navigational markers.",
+        "examples": [
+          {
+            "arabic": "الإشارة",
+            "english": "The traffic light",
+            "transliteration": "Il-ishāra"
+          },
+          {
+            "arabic": "الدوار",
+            "english": "The roundabout / square",
+            "transliteration": "Id-dawwār"
+          },
+          {
+            "arabic": "الجسر",
+            "english": "The bridge",
+            "transliteration": "Il-jisr"
+          },
+          {
+            "arabic": "الشارع",
+            "english": "The street",
+            "transliteration": "Ish-shāreʕ"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Following Instructions: 'Cross' / 'Pass'"
+        },
+        "text": "When given directions, you might hear verbs like 'اقطع' (iqṭaʕ) for 'cross' or 'مرق' (muroq) for 'pass by'. These are common imperatives.",
+        "examples": [
+          {
+            "arabic": "اقطع الشارع",
+            "english": "Cross the street (to a male)",
+            "transliteration": "Iqṭaʕ ish-shāreʕ"
+          },
+          {
+            "arabic": "اقطعي الدوار",
+            "english": "Cross the roundabout (to a female)",
+            "transliteration": "Iqṭaʕi id-dawwār"
+          },
+          {
+            "arabic": "مرق جنب الإشارة",
+            "english": "Pass by the traffic light (to a male)",
+            "transliteration": "Muroq janb il-ishāra"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Thanking Someone"
+        },
+        "text": "After receiving help, it's customary to thank the person. 'شكراً' is universal, but 'يعطيك العافية' is a very common and warm Levantine way to say 'thank you', literally meaning 'May He give you health'.",
+        "examples": [
+          {
+            "arabic": "شكراً",
+            "english": "Thank you",
+            "transliteration": "Shukran"
+          },
+          {
+            "arabic": "يعطيكَ العافية",
+            "english": "Thank you (to a male, very common in Levantine)",
+            "transliteration": "Yaʕṭīk el-ʕāfye",
+            "diacriticalNotes": "The 'كَ' has a fatḥa (َ) for male."
+          },
+          {
+            "arabic": "يعطيكِ العافية",
+            "english": "Thank you (to a female, very common in Levantine)",
+            "transliteration": "Yaʕṭīki el-ʕāfye",
+            "diacriticalNotes": "The 'كِ' has a kasra (ِ) for female."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "روح دغري، اقطع الإشارة بعدين لفّ يمين. شكراً!",
+        "english": "Go straight (to a male), cross the traffic light then turn right. Thank you!",
+        "transliteration": "Rūḥ dighri, iqṭaʕ il-ishāra baʕdēn liff yamīn. Shukran!"
+      },
+      "context": "A full direction sequence followed by a thank you."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "لو سمحتِ، وين البنك؟ روحي دغري مرقِي الدوار، يعطيكِ العافية!",
+        "english": "Excuse me (to a female), where is the bank? Go straight (to a female), pass the roundabout. Thank you (to a female)!",
+        "transliteration": "Law samaḥti, wayn il-bank? Rūḥi dighri muroqi id-dawwār, yaʕṭīki el-ʕāfye!"
+      },
+      "context": "A more complex direction given to a female, ending with a Levantine thank you."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What does 'الإشارة' mean?",
+      "options": [
+        {
+          "id": "a",
+          "text": "المستشفى",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الدوار",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "إشارة ضوئية",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'الإشارة' (Il-ishāra) is the common short form for 'traffic light' (إشارة ضوئية).",
+      "hint": {
+        "transliteration": "Ishāra ḍaw'iyye",
+        "arabic": "إشارة ضوئية"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you tell a female to 'cross the street'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "اقطع الشارع",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "اقطعي الشارع",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "لفّي الشارع",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'اقطعي الشارع' (Iqṭaʕi ish-shāreʕ) is the feminine command for 'cross the street'.",
+      "hint": {
+        "transliteration": "Iqṭaʕi ish-shāreʕ",
+        "arabic": "اقطعي الشارع"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is a common Levantine way to say 'Thank you' to a male?",
+      "options": [
+        {
+          "id": "a",
+          "text": "شكراً",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كيف حالك؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "يعطيكَ العافية",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'يعطيكَ العافية' (Yaʕṭīk el-ʕāfye) is a very common and polite way to thank a male in Levantine.",
+      "hint": {
+        "transliteration": "Yaʕṭīk el-ʕāfye",
+        "arabic": "يعطيكَ العافية"
+      }
+    }
+  ]
+}

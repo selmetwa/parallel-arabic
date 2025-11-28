@@ -1,0 +1,922 @@
+{
+  "topicId": "m8-t2",
+  "title": "Language for Visiting and Invitations",
+  "dialect": "fusha",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Arriving and Greeting"
+        },
+        "text": "When you arrive at someone's home, it's polite to offer a general greeting. These phrases are universally understood and respectful.",
+        "examples": [
+          {
+            "arabic": "السلام عليكم",
+            "english": "Peace be upon you",
+            "transliteration": "As-salamu alaykum"
+          },
+          {
+            "arabic": "مرحباً",
+            "english": "Hello / Welcome",
+            "transliteration": "Marhaban"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking How Someone Is"
+        },
+        "text": "After the initial greeting, it's customary to ask about the host's well-being. The form changes slightly based on the gender of the person you are addressing.",
+        "examples": [
+          {
+            "arabic": "كيف حالكَ؟",
+            "english": "How are you? (to a male)",
+            "transliteration": "Kayfa ḥālak?"
+          },
+          {
+            "arabic": "كيف حالكِ؟",
+            "english": "How are you? (to a female)",
+            "transliteration": "Kayfa ḥālik?"
+          },
+          {
+            "arabic": "كيف حالكم؟",
+            "english": "How are you all? (to a group)",
+            "transliteration": "Kayfa ḥālakum?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing Joy"
+        },
+        "text": "Show your pleasure at being there or seeing the person. This demonstrates appreciation for their invitation or presence.",
+        "examples": [
+          {
+            "arabic": "سعيد بلقائكَ",
+            "english": "Happy to meet you (to a male)",
+            "transliteration": "Sa'īd biliqā'ik"
+          },
+          {
+            "arabic": "سعيد بلقائكِ",
+            "english": "Happy to meet you (to a female)",
+            "transliteration": "Sa'īd biliqā'iki"
+          },
+          {
+            "arabic": "تشرفنا",
+            "english": "We are honored",
+            "transliteration": "Tasharrafnā"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "السلام عليكم، كيف حالكَ يا صديقي؟",
+        "english": "Peace be upon you, how are you, my friend (male)?",
+        "transliteration": "As-salāmu alaykum, kayfa ḥālak ya ṣadīqī?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "مرحباً، تشرفنا برؤيتكِ.",
+        "english": "Hello, we are honored to see you (female).",
+        "transliteration": "Marḥaban, tasharrafnā biru'yatik."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the general Islamic greeting upon arrival?",
+      "options": [
+        {
+          "id": "a",
+          "text": "صباح الخير",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مساء الخير",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "السلام عليكم",
+          "isCorrect": true
+        },
+        {
+          "id": "d",
+          "text": "إلى اللقاء",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "The most common and respectful Islamic greeting upon arrival is 'As-salamu alaykum'.",
+      "hint": {
+        "transliteration": "As-salamu alaykum",
+        "arabic": "السلام عليكم"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would you ask a female host 'How are you?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "كيف حالكَ؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كيف حالكِ؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كيف أنتم؟",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "ما اسمك؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "The ending 'كِ' (ki) is used for addressing a female, while 'كَ' (ka) is for a male.",
+      "hint": {
+        "transliteration": "Kayfa ḥālik?",
+        "arabic": "كيف حالكِ؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase expresses 'We are honored'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "شكراً لكَ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أهلاً وسهلاً",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "تشرفنا",
+          "isCorrect": true
+        },
+        {
+          "id": "d",
+          "text": "عفواً",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'Tasharrafnā' is a polite way to say you are honored to meet or see someone.",
+      "hint": {
+        "transliteration": "Tasharrafnā",
+        "arabic": "تشرفنا"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Accepting an Invitation"
+        },
+        "text": "When invited, it's polite to accept with enthusiasm if you plan to attend. This shows appreciation for the host's gesture.",
+        "examples": [
+          {
+            "arabic": "بالتأكيد، سأكون سعيداً بالحضور.",
+            "english": "Certainly, I will be happy to attend. (said by a male)",
+            "transliteration": "Bil-ta'kīd, sa'akūnu sa'īdan bil-ḥuḍūr."
+          },
+          {
+            "arabic": "بالتأكيد، سأكون سعيدة بالحضور.",
+            "english": "Certainly, I will be happy to attend. (said by a female)",
+            "transliteration": "Bil-ta'kīd, sa'akūnu sa'īdatan bil-ḥuḍūr."
+          },
+          {
+            "arabic": "يشرفني حضور دعوتكم.",
+            "english": "I am honored to attend your invitation.",
+            "transliteration": "Yusharrifunī ḥuḍūr da'watikum."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Declining an Invitation Politely"
+        },
+        "text": "If you cannot attend, decline politely, express regret, and give a brief reason if appropriate. Always thank the inviter first.",
+        "examples": [
+          {
+            "arabic": "آسف جداً، لا أستطيع الحضور هذه المرة.",
+            "english": "I'm very sorry, I cannot attend this time.",
+            "transliteration": "Āsif jiddan, lā astaṭī'u al-ḥuḍūr hādhihi al-marra."
+          },
+          {
+            "arabic": "شكراً على دعوتكم الكريمة، ولكن للأسف لدي موعد آخر.",
+            "english": "Thank you for your kind invitation, but unfortunately, I have another appointment.",
+            "transliteration": "Shukran 'alā da'watikum al-karīmah, wa lākin lil-asaf ladayya maw'id ākhar."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Thanking for Invitation or Hospitality"
+        },
+        "text": "Always express gratitude for the invitation or for the host's hospitality. This is a fundamental aspect of Arabic etiquette.",
+        "examples": [
+          {
+            "arabic": "شكراً جزيلاً على دعوتكم الرائعة.",
+            "english": "Thank you very much for your wonderful invitation.",
+            "transliteration": "Shukran jazīlan 'alā da'watikum ar-rā'i'ah."
+          },
+          {
+            "arabic": "أشكركم على حسن الضيافة.",
+            "english": "I thank you for your good hospitality.",
+            "transliteration": "Ashkurukum 'alā ḥusn aḍ-ḍiyāfah."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بالتأكيد سأكون سعيدة بالحضور، شكراً على دعوتكم.",
+        "english": "Certainly, I will be happy to attend (female), thank you for your invitation.",
+        "transliteration": "Bil-ta'kīd sa'akūnu sa'īdatan bil-ḥuḍūr, shukran 'alā da'watikum."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "آسف جداً، لا أستطيع المجيء هذه المرة بسبب سفر طارئ.",
+        "english": "I'm very sorry, I cannot come this time due to urgent travel.",
+        "transliteration": "Āsif jiddan, lā astaṭī'u al-majī' hādhihi al-marra bisabab safar ṭāri'."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would a male say 'I will be happy to attend'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "سأكون سعيداً بالحضور",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "سأكون سعيدة بالحضور",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "لا أستطيع الحضور",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "شكراً على دعوتكم",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "The word 'سعيداً' (sa'īdan) with the 'اً' ending is used by a male, while 'سعيدةً' (sa'īdatan) with 'ةً' is for a female.",
+      "hint": {
+        "transliteration": "Sa'akūnu sa'īdan bil-ḥuḍūr",
+        "arabic": "سأكون سعيداً بالحضور"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase expresses polite regret for not being able to attend?",
+      "options": [
+        {
+          "id": "a",
+          "text": "سآتي بالتأكيد",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "يشرفني حضور دعوتكم",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "آسف جداً، لا أستطيع الحضور",
+          "isCorrect": true
+        },
+        {
+          "id": "d",
+          "text": "متى الموعد؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'Āsif jiddan, lā astaṭī'u al-ḥuḍūr' means 'I'm very sorry, I cannot attend' and is a polite way to decline.",
+      "hint": {
+        "transliteration": "Āsif jiddan, lā astaṭī'u al-ḥuḍūr",
+        "arabic": "آسف جداً، لا أستطيع الحضور"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you thank someone for their good hospitality?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بالتوفيق",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "إلى اللقاء",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "أشكركم على حسن الضيافة",
+          "isCorrect": true
+        },
+        {
+          "id": "d",
+          "text": "عذراً",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'Ashkurukum 'alā ḥusn aḍ-ḍiyāfah' is the standard phrase for expressing thanks for good hospitality.",
+      "hint": {
+        "transliteration": "Ashkurukum 'alā ḥusn aḍ-ḍiyāfah",
+        "arabic": "أشكركم على حسن الضيافة"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Offering Help"
+        },
+        "text": "It's thoughtful to offer assistance to your host, especially if they appear busy. This shows consideration and good manners.",
+        "examples": [
+          {
+            "arabic": "هل يمكنني المساعدة في أي شيء؟",
+            "english": "Can I help with anything?",
+            "transliteration": "Hal yumkinunī al-musā'adah fī ayyi shay'?"
+          },
+          {
+            "arabic": "دعني أساعدكَ.",
+            "english": "Let me help you. (to a male)",
+            "transliteration": "Da'nī usā'idak."
+          },
+          {
+            "arabic": "دعني أساعدكِ.",
+            "english": "Let me help you. (to a female)",
+            "transliteration": "Da'nī usā'idik."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Giving Compliments"
+        },
+        "text": "Complimenting the host's efforts, home, or food is a sign of appreciation and makes them feel valued.",
+        "examples": [
+          {
+            "arabic": "منزلكم جميل جداً.",
+            "english": "Your home is very beautiful.",
+            "transliteration": "Manzilukum jamīlun jiddan."
+          },
+          {
+            "arabic": "الطعام لذيذ حقاً، سلمت يداكِ!",
+            "english": "The food is truly delicious, may your hands be blessed! (said to a female cook)",
+            "transliteration": "Aṭ-ṭa'ām ladhīdhun ḥaqqan, salimat yadāk!"
+          },
+          {
+            "arabic": "استمتعت كثيراً بالجو اللطيف.",
+            "english": "I enjoyed the pleasant atmosphere very much.",
+            "transliteration": "Istamta'tu kathīran bil-jaww al-laṭīf."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for Permission"
+        },
+        "text": "If you need to do something specific, like use a facility or fetch something, it's polite to ask for permission rather than assuming.",
+        "examples": [
+          {
+            "arabic": "هل تسمح لي باستخدام الحمام؟",
+            "english": "May I use the restroom? (addressing a male)",
+            "transliteration": "Hal tasmaḥ lī bi-istikhdām al-ḥammām?"
+          },
+          {
+            "arabic": "بعد إذنكِ، أريد أن أُحضر شيئاً من سيارتي.",
+            "english": "With your permission (female), I want to get something from my car.",
+            "transliteration": "Ba'da idhnik, urīdu an uḥḍira shay'an min sayyāratī."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هل يمكنني المساعدة في إعداد المائدة؟",
+        "english": "Can I help set the table?",
+        "transliteration": "Hal yumkinunī al-musā'adah fī i'dād al-mā'idah?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "منزلكم جميل جداً والطعام لذيذ.",
+        "english": "Your home is very beautiful and the food is delicious.",
+        "transliteration": "Manzilukum jamīlun jiddan waṭ-ṭa'ām ladhīdh."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would you offer help to someone?",
+      "options": [
+        {
+          "id": "a",
+          "text": "هل أنت مشغول؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "هل تحتاج إلى شيء؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "هل يمكنني المساعدة في أي شيء؟",
+          "isCorrect": true
+        },
+        {
+          "id": "d",
+          "text": "ماذا تفعل؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'Hal yumkinunī al-musā'adah fī ayyi shay'?' is the direct way to offer help.",
+      "hint": {
+        "transliteration": "Hal yumkinunī al-musā'adah fī ayyi shay'?",
+        "arabic": "هل يمكنني المساعدة في أي شيء؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase can you use to compliment food cooked by a female?",
+      "options": [
+        {
+          "id": "a",
+          "text": "الطعام لذيذ حقاً، سلمت يداكَ!",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الطعام لذيذ حقاً، سلمت يداكِ!",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "الطعام سيء",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "أنا جائع",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "The 'كِ' (ki) ending in 'يداكِ' indicates addressing a female, while 'كَ' (ka) is for a male. 'سلمت يداكِ' is a common compliment for a female cook.",
+      "hint": {
+        "transliteration": "Aṭ-ṭa'ām ladhīdhun ḥaqqan, salimat yadāk!",
+        "arabic": "الطعام لذيذ حقاً، سلمت يداكِ!"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you politely ask a male for permission to use the restroom?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أين الحمام؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أريد الذهاب إلى الحمام.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "هل تسمح لي باستخدام الحمام؟",
+          "isCorrect": true
+        },
+        {
+          "id": "d",
+          "text": "هل لديك حمام؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'Hal tasmaḥ lī bi-istikhdām al-ḥammām?' is a polite and indirect way to ask for permission to use the restroom.",
+      "hint": {
+        "transliteration": "Hal tasmaḥ lī bi-istikhdām al-ḥammām?",
+        "arabic": "هل تسمح لي باستخدام الحمام؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing Enjoyment and Gratitude When Leaving"
+        },
+        "text": "Before leaving, reiterate your thanks and express how much you enjoyed your visit. This leaves a positive lasting impression.",
+        "examples": [
+          {
+            "arabic": "لقد استمتعتُ كثيراً بزيارتي لكم.",
+            "english": "I enjoyed my visit with you very much.",
+            "transliteration": "Laqad istamta'tu kathīran biziyāratī lakum."
+          },
+          {
+            "arabic": "شكراً لكم على كل شيء، كانت أمسية رائعة.",
+            "english": "Thank you for everything, it was a wonderful evening.",
+            "transliteration": "Shukran lakum 'alā kulli shay', kānat umsiyah rā'i'ah."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Bidding Farewell"
+        },
+        "text": "Use appropriate farewell phrases as you depart. These are common ways to say goodbye in Arabic.",
+        "examples": [
+          {
+            "arabic": "مع السلامة.",
+            "english": "Goodbye / With peace.",
+            "transliteration": "Ma'a as-salāmah."
+          },
+          {
+            "arabic": "إلى اللقاء قريباً.",
+            "english": "See you soon.",
+            "transliteration": "Ilā al-liqā' qarīban."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Extending a Future Invitation"
+        },
+        "text": "It's customary to invite your hosts to visit you in return or suggest another meeting. This maintains social connections and expresses your desire to reciprocate.",
+        "examples": [
+          {
+            "arabic": "أتمنى أن تزورونا قريباً.",
+            "english": "I hope you visit us soon.",
+            "transliteration": "Atamannā an tazūrūnā qarīban."
+          },
+          {
+            "arabic": "نتطلع لرؤيتكم مرة أخرى.",
+            "english": "We look forward to seeing you again.",
+            "transliteration": "Nataṭalla'u liru'yatikum marratan ukhrā."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "لقد استمتعتُ كثيراً بهذه الأمسية، شكراً لكم!",
+        "english": "I very much enjoyed this evening, thank you!",
+        "transliteration": "Laqad istamta'tu kathīran bihādhihi al-umsiyah, shukran lakum!"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "مع السلامة، أتمنى أن نراكم قريباً.",
+        "english": "Goodbye, I hope we see you soon.",
+        "transliteration": "Ma'a as-salāmah, atamannā an narākum qarīban."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you express that you enjoyed your visit very much?",
+      "options": [
+        {
+          "id": "a",
+          "text": "لم أستمتع",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "لقد استمتعتُ كثيراً بزيارتي لكم",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "زيارة قصيرة",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "الوقت كان طويلاً",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'Laqad istamta'tu kathīran biziyāratī lakum' is the correct and polite way to express strong enjoyment of a visit.",
+      "hint": {
+        "transliteration": "Laqad istamta'tu kathīran biziyāratī lakum",
+        "arabic": "لقد استمتعتُ كثيراً بزيارتي لكم"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is a common farewell phrase?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أهلاً بك",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شكراً",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "مع السلامة",
+          "isCorrect": true
+        },
+        {
+          "id": "d",
+          "text": "كيف حالك؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'Ma'a as-salāmah' is the most common and versatile farewell in Arabic.",
+      "hint": {
+        "transliteration": "Ma'a as-salāmah",
+        "arabic": "مع السلامة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'I hope you visit us soon'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "لا أريد أن تزورنا",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أتمنى أن تزورونا قريباً",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "سنزوركم لاحقاً",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "زوروا غيرنا",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'Atamannā an tazūrūnā qarīban' directly translates to 'I hope you visit us soon' and is a warm way to invite return visits.",
+      "hint": {
+        "transliteration": "Atamannā an tazūrūnā qarīban",
+        "arabic": "أتمنى أن تزورونا قريباً"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Extending a Formal Invitation"
+        },
+        "text": "When you want to invite someone to your home or an event, use clear and polite phrasing. It's often phrased as 'we would like to invite you.'",
+        "examples": [
+          {
+            "arabic": "نود دعوتكم إلى العشاء في منزلنا.",
+            "english": "We would like to invite you to dinner at our home.",
+            "transliteration": "Nawaddu da'watakum ilā al-'ashā' fī manzilina."
+          },
+          {
+            "arabic": "هل تقبل دعوتنا لتناول الغداء؟",
+            "english": "Would you accept our invitation for lunch? (addressing a male)",
+            "transliteration": "Hal taqbalu da'watanā li-tanāwul al-ghadā'?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Suggesting Details for an Invitation"
+        },
+        "text": "Once the invitation is extended, it's essential to provide specifics for the invitation so guests can plan their attendance. This includes dates and times.",
+        "examples": [
+          {
+            "arabic": "ما رأيكم في يوم الجمعة المقبل؟",
+            "english": "What do you think about next Friday?",
+            "transliteration": "Mā ra'yukum fī yawm al-jumu'ah al-muqbil?"
+          },
+          {
+            "arabic": "هل يناسبكم الساعة السابعة مساءً؟",
+            "english": "Does 7 PM suit you?",
+            "transliteration": "Hal yunāsibukum as-sā'ah as-sābi'ah masā'an?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Confirming Invitation Details"
+        },
+        "text": "It's helpful to confirm if the guest will attend, especially for planning purposes. This allows you to finalize arrangements and headcount.",
+        "examples": [
+          {
+            "arabic": "هل يمكنكم تأكيد حضوركم؟",
+            "english": "Can you confirm your attendance?",
+            "transliteration": "Hal yumkinukum ta'kīd ḥuḍūrikum?"
+          },
+          {
+            "arabic": "نرجو الرد لتأكيد الحضور.",
+            "english": "Please respond to confirm attendance.",
+            "transliteration": "Narjū ar-radd li-ta'kīd al-ḥuḍūr."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "نود دعوتكم إلى حفل شاي يوم السبت المقبل.",
+        "english": "We would like to invite you to a tea party next Saturday.",
+        "transliteration": "Nawaddu da'watakum ilā ḥafl shāy yawm as-sabt al-muqbil."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هل يناسبكم الساعة الخامسة؟ نرجو الرد لتأكيد الحضور.",
+        "english": "Does 5 o'clock suit you? Please respond to confirm attendance.",
+        "transliteration": "Hal yunāsibukum as-sā'ah al-khāmisah? Narjū ar-radd li-ta'kīd al-ḥuḍūr."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you formally invite someone to dinner at your home?",
+      "options": [
+        {
+          "id": "a",
+          "text": "هيا بنا نذهب للعشاء",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "نود دعوتكم إلى العشاء في منزلنا",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "هل أنت جائع؟",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "تعال إلى بيتي",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'Nawaddu da'watakum ilā al-'ashā' fī manzilina' is a polite and formal way to extend an invitation.",
+      "hint": {
+        "transliteration": "Nawaddu da'watakum ilā al-'ashā' fī manzilina",
+        "arabic": "نود دعوتكم إلى العشاء في منزلنا"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase asks if next Friday suits the guest?",
+      "options": [
+        {
+          "id": "a",
+          "text": "متى سنلتقي؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ما رأيكم في يوم الجمعة المقبل؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "يوم السبت أفضل",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "لا يمكنني في الجمعة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'Mā ra'yukum fī yawm al-jumu'ah al-muqbil?' is a direct yet polite way to inquire about availability for a specific day.",
+      "hint": {
+        "transliteration": "Mā ra'yukum fī yawm al-jumu'ah al-muqbil?",
+        "arabic": "ما رأيكم في يوم الجمعة المقبل؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What do you say to ask guests to confirm their attendance?",
+      "options": [
+        {
+          "id": "a",
+          "text": "هل ستأتون؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "هل يمكنكم تأكيد حضوركم؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "متى ستذهبون؟",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "هل لديكم عمل؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'Hal yumkinukum ta'kīd ḥuḍūrikum?' is a standard phrase used to request confirmation of attendance.",
+      "hint": {
+        "transliteration": "Hal yumkinukum ta'kīd ḥuḍūrikum?",
+        "arabic": "هل يمكنكم تأكيد حضوركم؟"
+      }
+    }
+  ]
+}

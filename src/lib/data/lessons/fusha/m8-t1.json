@@ -1,0 +1,862 @@
+{
+  "topicId": "m8-t1",
+  "title": "Talking About Jobs: Professions and Workplace Vocabulary",
+  "dialect": "fusha",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Introduction to 'Job' and 'Work'",
+          "arabic": "مقدمة عن 'وظيفة' و 'عمل'"
+        },
+        "text": "In Arabic, common words for 'job' or 'work' are 'وظيفة' (waẓīfah) which typically means 'job' or 'position', and 'عمل' (ʿamal) which can mean 'work' or 'deed'. 'مهنة' (mihnah) also refers to 'profession'. For this lesson, we will focus on 'وظيفة' and 'عمل'.",
+        "examples": [
+          {
+            "arabic": "ما هي وظيفتكَ؟",
+            "english": "What is your job? (masc.)",
+            "transliteration": "Mā hiya waẓīfatuka?"
+          },
+          {
+            "arabic": "ما هو عملُكَ؟",
+            "english": "What is your work? (masc.)",
+            "transliteration": "Mā huwa ʿamaluka?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'What is your job?'",
+          "arabic": "كيف تسأل: 'ما وظيفتك؟'"
+        },
+        "text": "To ask someone about their job, you can use 'ما وظيفتكَ؟' (Mā waẓīfatuka?) for a male or 'ما وظيفتكِ؟' (Mā waẓīfatuki?) for a female. Another common way to ask 'What do you do?' or 'What do you work as?' is 'ماذا تعملُ؟' (Mādhā taʿmalu?) for a male and 'ماذا تعملينَ؟' (Mādhā taʿmalīna?) for a female.",
+        "examples": [
+          {
+            "arabic": "ما وظيفتكَ؟",
+            "english": "What is your job? (to a male)",
+            "transliteration": "Mā waẓīfatuka?"
+          },
+          {
+            "arabic": "ما وظيفتكِ؟",
+            "english": "What is your job? (to a female)",
+            "transliteration": "Mā waẓīfatuki?"
+          },
+          {
+            "arabic": "ماذا تعملُ؟",
+            "english": "What do you do? (to a male)",
+            "transliteration": "Mādhā taʿmalu?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Answering 'I am a...'",
+          "arabic": "الإجابة: 'أنا ...'"
+        },
+        "text": "When answering about your job, you say 'أنا' (anā) meaning 'I am', followed by your profession. Remember that many professions have masculine and feminine forms in Arabic. For example, 'أنا طالبٌ' (anā ṭālibun - I am a student, male) vs. 'أنا طالبةٌ' (anā ṭālibatun - I am a student, female).",
+        "examples": [
+          {
+            "arabic": "أنا طالبٌ.",
+            "english": "I am a student. (male)",
+            "transliteration": "Anā ṭālibun."
+          },
+          {
+            "arabic": "أنا طالبةٌ.",
+            "english": "I am a student. (female)",
+            "transliteration": "Anā ṭālibatun."
+          },
+          {
+            "arabic": "أنا أعملُ في شركة.",
+            "english": "I work in a company.",
+            "transliteration": "Anā aʿmalu fī sharikah."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ما وظيفتكِ يا أختي؟",
+        "english": "What is your job, my sister?",
+        "transliteration": "Mā waẓīfatuki yā ukhtī?"
+      },
+      "context": "Asking a female about her job."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا أعملُ كمهندس.",
+        "english": "I work as an engineer. (male)",
+        "transliteration": "Anā aʿmalu ka-muhandis."
+      },
+      "context": "A man describing his profession."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'What is your job?' to a male?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ما وظيفتكِ؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ما وظيفتكَ؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أين تعملين؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "To ask a male 'What is your job?', use 'ما وظيفتكَ؟' with a fatḥa (ـَ) on the ك. For a female, it would be 'ما وظيفتكِ؟' with a kasra (ـِ).",
+      "hint": {
+        "transliteration": "Mā waẓīfatuka?",
+        "arabic": "ما وظيفتكَ؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I am a student.' (female) - أنا ___.",
+      "options": [
+        {
+          "id": "a",
+          "text": "طالبٌ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "طالبةٌ",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مهندسٌ",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "For a female student, the word is 'طالبةٌ' (ṭālibatun), ending with ة.",
+      "hint": {
+        "transliteration": "ṭālibatun",
+        "arabic": "طالبةٌ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'work' or 'deed'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "وظيفة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "عمل",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أستاذ",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'عمل' (ʿamal) means 'work' or 'deed', while 'وظيفة' (waẓīfah) means 'job' or 'position'.",
+      "hint": {
+        "transliteration": "ʿamal",
+        "arabic": "عمل"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Profession: Doctor (طبيب/طبيبة)",
+          "arabic": "مهنة: طبيب/طبيبة"
+        },
+        "text": "The Arabic word for 'doctor' is 'طبيب' (ṭabīb) for a male and 'طبيبة' (ṭabībah) for a female. Notice the addition of the feminine 'ة' (tāʾ marbūṭah) at the end for the female form.",
+        "examples": [
+          {
+            "arabic": "هو طبيبٌ ماهرٌ.",
+            "english": "He is a skilled doctor.",
+            "transliteration": "Huwa ṭabībun māhirun."
+          },
+          {
+            "arabic": "هي طبيبةٌ في المستشفى.",
+            "english": "She is a doctor in the hospital.",
+            "transliteration": "Hiya ṭabībatun fī al-mustashfā."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Profession: Engineer (مهندس/مهندسة)",
+          "arabic": "مهنة: مهندس/مهندسة"
+        },
+        "text": "'Engineer' in Arabic is 'مهندس' (muhandis) for a male and 'مهندسة' (muhandisah) for a female. This follows the common pattern of adding 'ة' for the feminine form of professions.",
+        "examples": [
+          {
+            "arabic": "أخي مهندسٌ معماريٌ.",
+            "english": "My brother is an architectural engineer.",
+            "transliteration": "Akhī muhandisun miʿmāriyun."
+          },
+          {
+            "arabic": "أختي مهندسةٌ برمجيات.",
+            "english": "My sister is a software engineer.",
+            "transliteration": "Ukhtī muhandisatun barmajiyāt."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Profession: Teacher (معلم/معلمة)",
+          "arabic": "مهنة: معلم/معلمة"
+        },
+        "text": "The word for 'teacher' is 'معلم' (muʿallim) for a male and 'معلمة' (muʿallimah) for a female. These words come from the root verb 'علم' (ʿalima), meaning 'to know' or 'to teach'.",
+        "examples": [
+          {
+            "arabic": "أستاذي معلمٌ ممتازٌ.",
+            "english": "My teacher (male) is excellent.",
+            "transliteration": "Ustādhī muʿallimun mumtāzun."
+          },
+          {
+            "arabic": "هي معلمةٌ لغة عربية.",
+            "english": "She is an Arabic language teacher.",
+            "transliteration": "Hiya muʿallimatun lughah ʿarabīyah."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أبي طبيبٌ، وأمي معلمةٌ.",
+        "english": "My father is a doctor, and my mother is a teacher.",
+        "transliteration": "Abī ṭabībun, wa ummī muʿallimatun."
+      },
+      "context": "Describing parents' professions."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هل أنتَ مهندسٌ؟",
+        "english": "Are you an engineer? (to a male)",
+        "transliteration": "Hal anta muhandisun?"
+      },
+      "context": "Asking a male if he is an engineer."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'female doctor'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "طبيب",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "طبيبة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "معلمة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'طبيبة' (ṭabībah) is the feminine form for 'doctor'. 'طبيب' is masculine.",
+      "hint": {
+        "transliteration": "ṭabībah",
+        "arabic": "طبيبة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'She is a good ___.' (female teacher) - هي ___ جيدة.",
+      "options": [
+        {
+          "id": "a",
+          "text": "معلم",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "معلمة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مهندس",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "The feminine form for 'teacher' is 'معلمة' (muʿallimah).",
+      "hint": {
+        "transliteration": "muʿallimah",
+        "arabic": "معلمة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which of these words is the masculine form for 'engineer'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "مهندسة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مهندس",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "طالب",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'مهندس' (muhandis) is the masculine form. 'مهندسة' is feminine.",
+      "hint": {
+        "transliteration": "muhandis",
+        "arabic": "مهندس"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Profession: Student (طالب/طالبة)",
+          "arabic": "مهنة: طالب/طالبة"
+        },
+        "text": "The word for 'student' is 'طالب' (ṭālib) for a male and 'طالبة' (ṭālibah) for a female. This is a very common word, especially if you are studying Arabic.",
+        "examples": [
+          {
+            "arabic": "أنا طالبٌ في الجامعة.",
+            "english": "I am a student at the university. (male)",
+            "transliteration": "Anā ṭālibun fī al-jāmiʿah."
+          },
+          {
+            "arabic": "هي طالبةٌ مجتهدةٌ.",
+            "english": "She is a diligent student.",
+            "transliteration": "Hiya ṭālibatun mujtahidatun."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Profession: Manager (مدير/مديرة)",
+          "arabic": "مهنة: مدير/مديرة"
+        },
+        "text": "For 'manager', the masculine form is 'مدير' (mudīr) and the feminine form is 'مديرة' (mudīrah). This comes from the verb 'أدار' (adāra), meaning 'to manage' or 'to direct'.",
+        "examples": [
+          {
+            "arabic": "هو مديرٌ ناجحٌ.",
+            "english": "He is a successful manager.",
+            "transliteration": "Huwa mudīrun nājiḥun."
+          },
+          {
+            "arabic": "مديرةُ الشركة ذكيةٌ.",
+            "english": "The company's manager (female) is smart.",
+            "transliteration": "Mudīratu ash-sharika dhakīyatun."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Profession: Journalist (صحفي/صحفية)",
+          "arabic": "مهنة: صحفي/صحفية"
+        },
+        "text": "A 'journalist' is 'صحفي' (ṣaḥafī) for a male and 'صحفية' (ṣaḥafīyah) for a female. This word is related to 'صحيفة' (ṣaḥīfah) which means 'newspaper' or 'journal'.",
+        "examples": [
+          {
+            "arabic": "أخي صحفيٌ مشهورٌ.",
+            "english": "My brother is a famous journalist.",
+            "transliteration": "Akhī ṣaḥafīyun mashhūrun."
+          },
+          {
+            "arabic": "هي صحفيةٌ تعملُ في قناة إخبارية.",
+            "english": "She is a journalist who works for a news channel.",
+            "transliteration": "Hiya ṣaḥafīyatun taʿmalu fī qanāt ikhbārīyah."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هل أنتِ طالبةٌ؟",
+        "english": "Are you a student? (to a female)",
+        "transliteration": "Hal anti ṭālibatun?"
+      },
+      "context": "Asking a female if she is a student."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أختي مديرةٌ، وأخي صحفيٌ.",
+        "english": "My sister is a manager, and my brother is a journalist.",
+        "transliteration": "Ukhtī mudīratun, wa akhī ṣaḥafīyun."
+      },
+      "context": "Describing siblings' professions."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'female student'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "طالب",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "طالبة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مدير",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'طالبة' (ṭālibah) is the feminine form for 'student'. 'طالب' is masculine.",
+      "hint": {
+        "transliteration": "ṭālibah",
+        "arabic": "طالبة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'He is a successful ___.' (male manager) - هو ___ ناجح.",
+      "options": [
+        {
+          "id": "a",
+          "text": "مديرة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مدير",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "صحفية",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "The masculine form for 'manager' is 'مدير' (mudīr).",
+      "hint": {
+        "transliteration": "mudīr",
+        "arabic": "مدير"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word refers to a 'female journalist'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "صحفي",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "صحفية",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "معلمة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'صحفية' (ṣaḥafīyah) is the feminine form for 'journalist'.",
+      "hint": {
+        "transliteration": "ṣaḥafīyah",
+        "arabic": "صحفية"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Workplace: Office (مكتب)",
+          "arabic": "مكان العمل: مكتب"
+        },
+        "text": "The word for 'office' is 'مكتب' (maktab). This is a common place of work for many professions. The plural is 'مكاتب' (makātib).",
+        "examples": [
+          {
+            "arabic": "أعملُ في مكتبٍ كبيرٍ.",
+            "english": "I work in a big office.",
+            "transliteration": "Aʿmalu fī maktabin kabīrin."
+          },
+          {
+            "arabic": "هذا مكتبي الجديد.",
+            "english": "This is my new office.",
+            "transliteration": "Hādhā maktabī al-jadīd."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Workplace: Hospital (مستشفى)",
+          "arabic": "مكان العمل: مستشفى"
+        },
+        "text": "The word for 'hospital' is 'مستشفى' (mustashfā). This is where doctors and nurses work. It is an important public institution.",
+        "examples": [
+          {
+            "arabic": "هي تعملُ طبيبةً في المستشفى.",
+            "english": "She works as a doctor in the hospital.",
+            "transliteration": "Hiya taʿmalu ṭabībatan fī al-mustashfā."
+          },
+          {
+            "arabic": "زارَ المريضُ المستشفى.",
+            "english": "The patient visited the hospital.",
+            "transliteration": "Zāra al-marīḍu al-mustashfā."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Workplace: School (مدرسة)",
+          "arabic": "مكان العمل: مدرسة"
+        },
+        "text": "The word for 'school' is 'مدرسة' (madrasah). This is where teachers teach and students learn. The plural is 'مدارس' (madāris).",
+        "examples": [
+          {
+            "arabic": "معلمةٌ تعملُ في مدرسةٍ ابتدائيةٍ.",
+            "english": "A teacher (female) works in an elementary school.",
+            "transliteration": "Muʿallimatun taʿmalu fī madrasatin ibtidāʾīyah."
+          },
+          {
+            "arabic": "أذهبُ إلى المدرسة كل يوم.",
+            "english": "I go to school every day.",
+            "transliteration": "Adhhabu ilā al-madrasati kulla yawm."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أين تعملُ؟ أعملُ في مكتب.",
+        "english": "Where do you work? I work in an office.",
+        "transliteration": "Ayna taʿmalu? Aʿmalu fī maktab."
+      },
+      "context": "Asking and answering about one's workplace."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "طبيبتي تعملُ في مستشفى المدينة.",
+        "english": "My doctor (female) works in the city hospital.",
+        "transliteration": "Ṭabībatī taʿmalu fī mustashfā al-madīnah."
+      },
+      "context": "Describing where a specific doctor works."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'office'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "مستشفى",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مدرسة",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "مكتب",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'مكتب' (maktab) means 'office'.",
+      "hint": {
+        "transliteration": "maktab",
+        "arabic": "مكتب"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'She works as a doctor in the ___.' - هي تعملُ طبيبةً في ال___.",
+      "options": [
+        {
+          "id": "a",
+          "text": "مكتب",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مستشفى",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مدرسة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Doctors typically work in a 'مستشفى' (mustashfā).",
+      "hint": {
+        "transliteration": "mustashfā",
+        "arabic": "مستشفى"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'school'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "جامعة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مدرسة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "شركة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'مدرسة' (madrasah) means 'school'.",
+      "hint": {
+        "transliteration": "madrasah",
+        "arabic": "مدرسة"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Workplace: Company (شركة)",
+          "arabic": "مكان العمل: شركة"
+        },
+        "text": "The word for 'company' or 'firm' is 'شركة' (sharika). Many professionals, especially engineers, managers, and journalists, work in companies.",
+        "examples": [
+          {
+            "arabic": "أعملُ في شركةٍ كبيرةٍ.",
+            "english": "I work in a big company.",
+            "transliteration": "Aʿmalu fī sharikatin kabīratin."
+          },
+          {
+            "arabic": "هو مديرُ شركةٍ عالميةٍ.",
+            "english": "He is the manager of an international company.",
+            "transliteration": "Huwa mudīru sharikatin ʿālamīyatin."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Workplace: University (جامعة)",
+          "arabic": "مكان العمل: جامعة"
+        },
+        "text": "The word for 'university' is 'جامعة' (jāmiʿah). Students typically attend universities, and professors (أستاذ/أستاذة - ustādh/ustādhah) work there.",
+        "examples": [
+          {
+            "arabic": "هي تدرسُ في جامعةٍ مرموقةٍ.",
+            "english": "She studies at a prestigious university.",
+            "transliteration": "Hiya tadrusu fī jāmiʿatin marmūqatin."
+          },
+          {
+            "arabic": "أنا طالبٌ في جامعة القاهرة.",
+            "english": "I am a student at Cairo University.",
+            "transliteration": "Anā ṭālibun fī jāmiʿat il-Qāhirah."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Where do you work?'",
+          "arabic": "السؤال: 'أين تعمل؟'"
+        },
+        "text": "To ask 'Where do you work?', you use 'أين تعملُ؟' (Ayna taʿmalu?) for a male and 'أين تعملينَ؟' (Ayna taʿmalīna?) for a female. The answer typically starts with 'أنا أعملُ في...' (Anā aʿmalu fī...) meaning 'I work in...'.",
+        "examples": [
+          {
+            "arabic": "أين تعملُ؟",
+            "english": "Where do you work? (to a male)",
+            "transliteration": "Ayna taʿmalu?"
+          },
+          {
+            "arabic": "أين تعملينَ؟",
+            "english": "Where do you work? (to a female)",
+            "transliteration": "Ayna taʿmalīna?"
+          },
+          {
+            "arabic": "أنا أعملُ في شركة.",
+            "english": "I work in a company.",
+            "transliteration": "Anā aʿmalu fī sharikah."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أين تعملُ يا أخي؟ أعملُ في شركة بترول.",
+        "english": "Where do you work, my brother? I work in an oil company.",
+        "transliteration": "Ayna taʿmalu yā akhī? Aʿmalu fī sharikati bitrūl."
+      },
+      "context": "A man asking and answering about his workplace."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "طالبةٌ تدرسُ في الجامعة.",
+        "english": "A female student studies at the university.",
+        "transliteration": "Ṭālibatun tadrusu fī al-jāmiʿah."
+      },
+      "context": "Describing where a female student studies."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'company'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "مكتب",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شركة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مستشفى",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'شركة' (sharika) means 'company'.",
+      "hint": {
+        "transliteration": "sharika",
+        "arabic": "شركة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I am a student at the ___.' (university) - أنا طالبٌ في ال___.",
+      "options": [
+        {
+          "id": "a",
+          "text": "مدرسة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "جامعة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مكتب",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Students at a higher level study at a 'جامعة' (jāmiʿah).",
+      "hint": {
+        "transliteration": "jāmiʿah",
+        "arabic": "جامعة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'Where do you work?' to a female?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أين تعملُ؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أين تعملينَ؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "ماذا تعملُ؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "To ask a female 'Where do you work?', use 'أين تعملينَ؟' with the 'ـينَ' (īna) suffix.",
+      "hint": {
+        "transliteration": "Ayna taʿmalīna?",
+        "arabic": "أين تعملينَ؟"
+      }
+    }
+  ]
+}

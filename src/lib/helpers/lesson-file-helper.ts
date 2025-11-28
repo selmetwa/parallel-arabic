@@ -1,8 +1,13 @@
 import fs from 'fs/promises';
 import path from 'path';
+import { fileURLToPath } from 'url';
 import { type GeneratedLesson } from '$lib/schemas/curriculum-schema';
 
-const LESSONS_DIR = path.join(process.cwd(), 'src/lib/data/lessons');
+// Resolve lessons directory relative to this file's location
+// This works in both development and production (Vercel)
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const LESSONS_DIR = path.resolve(__dirname, '../../data/lessons');
 
 /**
  * Normalizes dialect name for use in file paths
@@ -110,10 +115,9 @@ export async function checkExistingLessons(topicIds: string[]): Promise<Record<s
         const entries = await fs.readdir(LESSONS_DIR, { withFileTypes: true });
         dialectDirs = entries.filter(e => e.isDirectory()).map(e => e.name);
     } catch (error) {
-        // Directory might not exist yet or is empty
+        // Directory might not exist - on Vercel filesystem is read-only
+        // If directory doesn't exist, just return empty results (no lessons exist)
         if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
-            // Create directory if it doesn't exist
-            await fs.mkdir(LESSONS_DIR, { recursive: true });
             dialectDirs = [];
         } else {
             throw error;

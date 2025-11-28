@@ -1,0 +1,917 @@
+{
+  "topicId": "m10-t2",
+  "title": "Ordering Food at a Restaurant in Egyptian Arabic",
+  "dialect": "egyptian-arabic",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Greeting the Waiter",
+          "arabic": "تحية الجرسون"
+        },
+        "text": "When you enter a restaurant, you'll usually be greeted by a waiter. Here are some basic greetings and ways to get their attention.",
+        "examples": [
+          {
+            "arabic": "مساء الخير.",
+            "english": "Good evening.",
+            "transliteration": "Masa' el-kheir."
+          },
+          {
+            "arabic": "صباح الخير.",
+            "english": "Good morning.",
+            "transliteration": "Sabah el-kheir."
+          },
+          {
+            "arabic": "لو سمحت.",
+            "english": "Excuse me / Please (to get attention).",
+            "transliteration": "Law samaḥt."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for a Table",
+          "arabic": "طلب ترابيزة"
+        },
+        "text": "Once you've greeted the waiter, you'll need to ask for a table. You'll specify the number of people. 'Person' is 'شخص' (shakhs), plural is 'أشخاص' (ashkhas) or 'أفراد' (afrad), but for small numbers, 'شخصين' (shakhsayn) for two people is common.",
+        "examples": [
+          {
+            "arabic": "ترابيزة لكام شخص؟",
+            "english": "A table for how many people?",
+            "transliteration": "Tarabiza le-kam shakhs?"
+          },
+          {
+            "arabic": "ترابيزة لشخصين.",
+            "english": "A table for two people.",
+            "transliteration": "Tarabiza le-shakhsayn."
+          },
+          {
+            "arabic": "ترابيزة لأربع أشخاص.",
+            "english": "A table for four people.",
+            "transliteration": "Tarabiza le-arba3 ashkhāṣ."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "The Waiter and Menu",
+          "arabic": "الجرسون والقائمة"
+        },
+        "text": "The person serving you is called 'جرسون' (garson) or 'ويتر' (waiter). After being seated, you'll typically ask for the menu. 'Menu' is either 'المنيو' (el-menyu) or 'القائمة' (el-qa'ema).",
+        "examples": [
+          {
+            "arabic": "ممكن المنيو لو سمحت؟",
+            "english": "Can I have the menu, please?",
+            "transliteration": "Momken el-menyu law samaḥt?"
+          },
+          {
+            "arabic": "فين الجرسون؟",
+            "english": "Where is the waiter?",
+            "transliteration": "Fayn el-garson?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "صباح الخير، ترابيزة لشخصين لو سمحت.",
+        "english": "Good morning, a table for two people, please.",
+        "transliteration": "Sabah el-kheir, tarabiza le-shakhsayn law samaḥt."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "لو سمحت يا جرسون، ممكن المنيو؟",
+        "english": "Excuse me, waiter, can I have the menu?",
+        "transliteration": "Law samaḥt ya garson, momken el-menyu?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'Good evening' in Egyptian Arabic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "صباح الخير",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مساء الخير",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "لو سمحت",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'مساء الخير' means 'Good evening'. 'صباح الخير' is 'Good morning' and 'لو سمحت' is 'Excuse me/Please'.",
+      "hint": {
+        "transliteration": "Masa' el-kheir",
+        "arabic": "مساء الخير"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'waiter' in Egyptian Arabic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "شخص",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ترابيزة",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "جرسون",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'جرسون' (garson) is the word for 'waiter'. 'شخص' means 'person' and 'ترابيزة' means 'table'.",
+      "hint": {
+        "transliteration": "Garson",
+        "arabic": "جرسون"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'A table for two ___.' (ترابيزة لـ ___)",
+      "options": [
+        {
+          "id": "a",
+          "text": "شخص",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شخصين",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أشخاص",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'شخصين' (shakhsayn) specifically means 'two people'. 'شخص' is one person, and 'أشخاص' is multiple people (plural).",
+      "hint": {
+        "transliteration": "Shakhsayn",
+        "arabic": "شخصين"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing What You Want",
+          "arabic": "التعبير عن الرغبة"
+        },
+        "text": "To tell the waiter what you want to order, you'll use 'أنا عايز' (ana 3ayez) for males or 'أنا عايزة' (ana 3ayza) for females, meaning 'I want'.",
+        "examples": [
+          {
+            "arabic": "أنا عايز أطلب.",
+            "english": "I want to order. (male speaker)",
+            "transliteration": "Ana 3ayez aṭlob."
+          },
+          {
+            "arabic": "أنا عايزة أطلب.",
+            "english": "I want to order. (female speaker)",
+            "transliteration": "Ana 3ayza aṭlob."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for Recommendations",
+          "arabic": "طلب ترشيحات"
+        },
+        "text": "If you're unsure what to order, you can ask the waiter for a recommendation. 'ترشح' (tarashaḥ) means 'recommend'.",
+        "examples": [
+          {
+            "arabic": "إيه ترشحلي؟",
+            "english": "What do you recommend for me?",
+            "transliteration": "Eih tarashaḥli?"
+          },
+          {
+            "arabic": "عندكم إيه حلو؟",
+            "english": "What's good here? / What do you have that's nice?",
+            "transliteration": "3andoko eih ḥelw?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Basic Food Categories",
+          "arabic": "أصناف الأكل الأساسية"
+        },
+        "text": "Familiarize yourself with common food categories on the menu.",
+        "examples": [
+          {
+            "arabic": "مقبلات",
+            "english": "Appetizers",
+            "transliteration": "Moqabbelāt"
+          },
+          {
+            "arabic": "طبق رئيسي",
+            "english": "Main course",
+            "transliteration": "Ṭabaq ra'eesy"
+          },
+          {
+            "arabic": "مشروبات",
+            "english": "Drinks",
+            "transliteration": "Mashrūbāt"
+          },
+          {
+            "arabic": "حلويات",
+            "english": "Desserts",
+            "transliteration": "Ḥalawiyāt"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا عايز أطلب طبق رئيسي ومشروب لو سمحت.",
+        "english": "I want to order a main course and a drink, please. (male speaker)",
+        "transliteration": "Ana 3ayez aṭlob ṭabaq ra'eesy we mashroob law samaḥt."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "إيه ترشحولي من المقبلات؟",
+        "english": "What do you recommend for me from the appetizers?",
+        "transliteration": "Eih tarashaḥouli men el-moqabbelāt?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How does a female speaker say 'I want to order'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أنا عايز أطلب",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أنا عايزة أطلب",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أنا أطلب",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "For a female speaker, 'I want' is 'أنا عايزة' (ana 3ayza). 'أنا عايز' is for male speakers.",
+      "hint": {
+        "transliteration": "Ana 3ayza aṭlob",
+        "arabic": "أنا عايزة أطلب"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which of these is a 'main course'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "مشروبات",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "حلويات",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "طبق رئيسي",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'طبق رئيسي' (ṭabaq ra'eesy) means 'main course'. 'مشروبات' are drinks and 'حلويات' are desserts.",
+      "hint": {
+        "transliteration": "Ṭabaq ra'eesy",
+        "arabic": "طبق رئيسي"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the phrase: 'What do you ___ for me?' (إيه ___ لي؟)",
+      "options": [
+        {
+          "id": "a",
+          "text": "تاكل",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "تشرب",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "ترشح",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'ترشح' (tarashaḥ) means 'recommend'. So 'إيه ترشحلي؟' means 'What do you recommend for me?'",
+      "hint": {
+        "transliteration": "Tarashaḥ",
+        "arabic": "ترشح"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Ordering Specific Dishes",
+          "arabic": "طلب أطباق محددة"
+        },
+        "text": "When ordering a specific dish, you can say 'هاخد' (hakhod) meaning 'I'll take' or simply state the dish name after 'أنا عايز/ة'.",
+        "examples": [
+          {
+            "arabic": "هاخد فراخ مشوية.",
+            "english": "I'll take grilled chicken.",
+            "transliteration": "Hakhod farākh mashwiyya."
+          },
+          {
+            "arabic": "أنا عايز كفتة.",
+            "english": "I want kofta. (male speaker)",
+            "transliteration": "Ana 3ayez kofta."
+          },
+          {
+            "arabic": "أنا عايزة سمك.",
+            "english": "I want fish. (female speaker)",
+            "transliteration": "Ana 3ayza samak."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Common Food Items",
+          "arabic": "أصناف أكل شائعة"
+        },
+        "text": "Some popular food items you might find on a menu:",
+        "examples": [
+          {
+            "arabic": "لحمة",
+            "english": "Meat (beef)",
+            "transliteration": "Laḥma"
+          },
+          {
+            "arabic": "فراخ",
+            "english": "Chicken",
+            "transliteration": "Farākh"
+          },
+          {
+            "arabic": "أرز",
+            "english": "Rice",
+            "transliteration": "Oroz"
+          },
+          {
+            "arabic": "سلطة",
+            "english": "Salad",
+            "transliteration": "Salata"
+          },
+          {
+            "arabic": "شوربة",
+            "english": "Soup",
+            "transliteration": "Shorba"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Special Requests and Modifiers",
+          "arabic": "طلبات خاصة وتعديلات"
+        },
+        "text": "You might want to specify how you'd like your food or if you have any dietary preferences. 'من غير' (men gheir) means 'without'.",
+        "examples": [
+          {
+            "arabic": "من غير شطة.",
+            "english": "Without chili/spice.",
+            "transliteration": "Men gheir shaṭṭa."
+          },
+          {
+            "arabic": "ممكن من غير بصل؟",
+            "english": "Can it be without onions?",
+            "transliteration": "Momken men gheir baṣal?"
+          },
+          {
+            "arabic": "إيه مكوناته؟",
+            "english": "What are its ingredients?",
+            "transliteration": "Eih mokawwenātoh?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا عايزة شوربة فراخ من غير شطة.",
+        "english": "I want chicken soup without chili. (female speaker)",
+        "transliteration": "Ana 3ayza shorbet farākh men gheir shaṭṭa."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هاخد أرز وسلطة مع اللحمة.",
+        "english": "I'll take rice and salad with the meat.",
+        "transliteration": "Hakhod oroz we salata ma3 el-laḥma."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'I'll take' when ordering food?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أنا عايز",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "هاخد",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "هاكل",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'هاخد' (hakhod) is commonly used for 'I'll take' when ordering. 'أنا عايز' is 'I want' and 'هاكل' is 'I'll eat'.",
+      "hint": {
+        "transliteration": "Hakhod",
+        "arabic": "هاخد"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which of these is 'chicken'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "لحمة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "فراخ",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "سمك",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'فراخ' (farākh) means 'chicken'. 'لحمة' is meat and 'سمك' is fish.",
+      "hint": {
+        "transliteration": "Farākh",
+        "arabic": "فراخ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the phrase: '___ chili/spice.' (___ شطة)",
+      "options": [
+        {
+          "id": "a",
+          "text": "مع",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "في",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "من غير",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'من غير' (men gheir) means 'without'. 'مع' means 'with' and 'في' means 'in'.",
+      "hint": {
+        "transliteration": "Men gheir",
+        "arabic": "من غير"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Ordering Drinks",
+          "arabic": "طلب المشروبات"
+        },
+        "text": "Ordering drinks is straightforward. You can specify quantity using numbers. 'واحد' (waḥed) for one (masculine), 'واحدة' (waḥda) for one (feminine).",
+        "examples": [
+          {
+            "arabic": "واحد مياه معدنية.",
+            "english": "One mineral water. (male count)",
+            "transliteration": "Waḥed mayya ma3daniyya."
+          },
+          {
+            "arabic": "كوباية عصير برتقال.",
+            "english": "A glass of orange juice.",
+            "transliteration": "Kobāyet 3aṣīr burtu'āl."
+          },
+          {
+            "arabic": "اتنين شاي من فضلك.",
+            "english": "Two teas, please.",
+            "transliteration": "Etnein shāy men faḍlak."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "More Drink Vocabulary",
+          "arabic": "مفردات مشروبات إضافية"
+        },
+        "text": "Beyond water and juice, here are other common drinks:",
+        "examples": [
+          {
+            "arabic": "مياه",
+            "english": "Water",
+            "transliteration": "Mayya"
+          },
+          {
+            "arabic": "عصير",
+            "english": "Juice",
+            "transliteration": "3aṣīr"
+          },
+          {
+            "arabic": "شاي",
+            "english": "Tea",
+            "transliteration": "Shāy"
+          },
+          {
+            "arabic": "قهوة",
+            "english": "Coffee",
+            "transliteration": "Qahwa"
+          },
+          {
+            "arabic": "بيبسي",
+            "english": "Pepsi",
+            "transliteration": "Pepsi"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Drink Modifications",
+          "arabic": "تعديلات المشروبات"
+        },
+        "text": "You can also specify how you'd like your drink prepared, similar to food. 'بتلج' (be-talj) means 'with ice', 'من غير تلج' (men gheir talj) means 'without ice'.",
+        "examples": [
+          {
+            "arabic": "عصير ليمون بتلج.",
+            "english": "Lemon juice with ice.",
+            "transliteration": "3aṣīr lamoun be-talj."
+          },
+          {
+            "arabic": "قهوة سادة.",
+            "english": "Plain coffee (no sugar/milk).",
+            "transliteration": "Qahwa sāda."
+          },
+          {
+            "arabic": "شاي من غير سكر.",
+            "english": "Tea without sugar.",
+            "transliteration": "Shāy men gheir sokkar."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "لو سمحت، أنا عايزة واحد بيبسي بتلج.",
+        "english": "Excuse me, I want one Pepsi with ice. (female speaker)",
+        "transliteration": "Law samaḥt, ana 3ayza waḥed Pepsi be-talj."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ممكن اتنين شاي من غير سكر؟",
+        "english": "Can I have two teas without sugar?",
+        "transliteration": "Momken etnein shāy men gheir sokkar?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'water'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "عصير",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مياه",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "شاي",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'مياه' (mayya) means 'water'. 'عصير' is juice and 'شاي' is tea.",
+      "hint": {
+        "transliteration": "Mayya",
+        "arabic": "مياه"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'with ice'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "من غير تلج",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بتلج",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "تلج بس",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'بتلج' (be-talj) means 'with ice'. 'من غير تلج' means 'without ice'.",
+      "hint": {
+        "transliteration": "Be-talj",
+        "arabic": "بتلج"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the phrase: 'Coffee ___.' (قهوة ___ - meaning plain/black)",
+      "options": [
+        {
+          "id": "a",
+          "text": "بتلج",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "سادة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "حلوة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'قهوة سادة' (qahwa sāda) means plain coffee (without sugar or milk).",
+      "hint": {
+        "transliteration": "Sāda",
+        "arabic": "سادة"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for the Bill",
+          "arabic": "طلب الحساب"
+        },
+        "text": "When you're ready to leave, you'll need to ask for the bill. 'الحساب' (el-ḥesāb) means 'the bill' or 'the check'.",
+        "examples": [
+          {
+            "arabic": "الحساب لو سمحت.",
+            "english": "The bill, please.",
+            "transliteration": "El-ḥesāb law samaḥt."
+          },
+          {
+            "arabic": "ممكن الحساب؟",
+            "english": "Can I have the bill?",
+            "transliteration": "Momken el-ḥesāb?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Paying for the Meal",
+          "arabic": "دفع قيمة الوجبة"
+        },
+        "text": "You can pay with cash or a card. You might ask if they accept cards.",
+        "examples": [
+          {
+            "arabic": "هدفع كاش.",
+            "english": "I'll pay with cash.",
+            "transliteration": "Hadfa3 kash."
+          },
+          {
+            "arabic": "بتقبلوا فيزا؟",
+            "english": "Do you accept Visa/cards?",
+            "transliteration": "Betqabalo Viza?"
+          },
+          {
+            "arabic": "ادفع إزاي؟",
+            "english": "How do I pay?",
+            "transliteration": "Adfa3 ezzay?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Concluding Phrases",
+          "arabic": "عبارات ختامية"
+        },
+        "text": "Before you leave, it's polite to thank the staff. 'شكراً' (shokran) means 'thank you'. Sometimes, a tip ('بقشيش' - baqsheesh) is given.",
+        "examples": [
+          {
+            "arabic": "شكراً جزيلاً.",
+            "english": "Thank you very much.",
+            "transliteration": "Shokran gazeelan."
+          },
+          {
+            "arabic": "مع السلامة.",
+            "english": "Goodbye. (literally: With peace)",
+            "transliteration": "Ma3 es-salāma."
+          },
+          {
+            "arabic": "الأكل كان لذيذ.",
+            "english": "The food was delicious.",
+            "transliteration": "El-akl kan ladheez."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ممكن الحساب لو سمحت؟ هدفع كاش.",
+        "english": "Can I have the bill, please? I'll pay with cash.",
+        "transliteration": "Momken el-ḥesāb law samaḥt? Hadfa3 kash."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شكراً جزيلاً، الأكل كان لذيذ. مع السلامة.",
+        "english": "Thank you very much, the food was delicious. Goodbye.",
+        "transliteration": "Shokran gazeelan, el-akl kan ladheez. Ma3 es-salāma."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the correct way to ask for 'the bill'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "الأكل لو سمحت",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الحساب لو سمحت",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "المنيو لو سمحت",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'الحساب لو سمحت' (El-ḥesāb law samaḥt) is the standard way to ask for the bill. 'الأكل' means 'food' and 'المنيو' is 'menu'.",
+      "hint": {
+        "transliteration": "El-ḥesāb law samaḥt",
+        "arabic": "الحساب لو سمحت"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'I'll pay with cash'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "هدفع فيزا",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "هدفع كاش",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "هاخد كاش",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'هدفع كاش' (Hadfa3 kash) means 'I'll pay with cash'. 'هدفع فيزا' means 'I'll pay with card', and 'هاخد كاش' means 'I'll take cash'.",
+      "hint": {
+        "transliteration": "Hadfa3 kash",
+        "arabic": "هدفع كاش"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the farewell: 'Thank you very much. ___.' (شكراً جزيلاً. ___)",
+      "options": [
+        {
+          "id": "a",
+          "text": "أهلاً",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مع السلامة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "اتفضل",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'مع السلامة' (Ma3 es-salāma) is a common farewell. 'أهلاً' means 'welcome' and 'اتفضل' means 'please/go ahead'.",
+      "hint": {
+        "transliteration": "Ma3 es-salāma",
+        "arabic": "مع السلامة"
+      }
+    }
+  ]
+}

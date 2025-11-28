@@ -1,0 +1,833 @@
+{
+  "topicId": "m5-t1",
+  "title": "Asking About the Location of Things (وين؟)",
+  "dialect": "levantine",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Introducing 'Where?' (وين؟)"
+        },
+        "text": "To ask 'Where?' in Levantine Arabic, we use the word 'وين؟'. This is a fundamental question word when inquiring about location.",
+        "examples": [
+          {
+            "arabic": "وين؟",
+            "english": "Where?",
+            "transliteration": "Wayn?"
+          }
+        ],
+        "audioText": "وين؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Common Objects: Book and Pen"
+        },
+        "text": "Let's learn some common objects to ask about their location. Today we start with 'book' and 'pen'.",
+        "examples": [
+          {
+            "arabic": "كتاب",
+            "english": "Book",
+            "transliteration": "ktaab"
+          },
+          {
+            "arabic": "قلم",
+            "english": "Pen",
+            "transliteration": "qalam"
+          }
+        ],
+        "audioText": "كتاب، قلم"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Where is the...?'"
+        },
+        "text": "To ask 'Where is the [object]?', you simply combine 'وين؟' with the object. The definite article 'الـ' (al-) for 'the' is implicitly understood or attached to the object.",
+        "examples": [
+          {
+            "arabic": "وين الكتاب؟",
+            "english": "Where is the book?",
+            "transliteration": "Wayn el-ktaab?"
+          },
+          {
+            "arabic": "وين القلم؟",
+            "english": "Where is the pen?",
+            "transliteration": "Wayn el-qalam?"
+          }
+        ],
+        "audioText": "وين الكتاب؟ وين القلم؟"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "وين قَلَمي؟",
+        "english": "Where is my pen?",
+        "transliteration": "Wayn qalami?"
+      },
+      "context": "Asking about a personal item."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "وين كتابك؟",
+        "english": "Where is your book? (masculine)",
+        "transliteration": "Wayn ktaabak?"
+      },
+      "context": "Asking about someone else's item."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Levantine Arabic word for 'Where?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "كيف؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "وين؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "شو؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'وين؟' is used to ask 'Where?'",
+      "hint": {
+        "transliteration": "Wayn?",
+        "arabic": "وين؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: ___ القلم؟ (Where is the pen?)",
+      "options": [
+        {
+          "id": "a",
+          "text": "شو",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كيف",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "وين",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "To ask 'Where is the pen?', you use 'وين؟'.",
+      "hint": {
+        "transliteration": "Wayn",
+        "arabic": "وين"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'Where is the book?' in Levantine Arabic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "شو الكتاب؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "وين الكتاب؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كيف الكتاب؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'وين الكتاب؟' means 'Where is the book?'.",
+      "hint": {
+        "transliteration": "Wayn el-ktaab?",
+        "arabic": "وين الكتاب؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Preposition: 'On' / 'Upon' (على)"
+        },
+        "text": "The preposition 'على' is used to say 'on' or 'upon'. It indicates that something is resting directly on a surface.",
+        "examples": [
+          {
+            "arabic": "على",
+            "english": "On / Upon",
+            "transliteration": "3ala"
+          }
+        ],
+        "audioText": "على"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Preposition: 'In' / 'At' (في)"
+        },
+        "text": "The preposition 'في' is used to say 'in' or 'at'. It indicates that something is inside or located at a general place.",
+        "examples": [
+          {
+            "arabic": "في",
+            "english": "In / At",
+            "transliteration": "fi"
+          }
+        ],
+        "audioText": "في"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Preposition: 'Under' (تحت)"
+        },
+        "text": "The preposition 'تحت' is used to say 'under' or 'below'. It indicates that something is situated beneath another object.",
+        "examples": [
+          {
+            "arabic": "تحت",
+            "english": "Under",
+            "transliteration": "taḥt"
+          }
+        ],
+        "audioText": "تحت"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "القلم على الطاولة.",
+        "english": "The pen is on the table.",
+        "transliteration": "El-qalam 3ala ṭ-ṭaawle."
+      },
+      "context": "Using 'على' with common objects."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الكتاب في الشنطة.",
+        "english": "The book is in the bag.",
+        "transliteration": "El-ktaab fi sh-shanṭa."
+      },
+      "context": "Using 'في' for an object inside another."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "التلفون تحت الكرسي.",
+        "english": "The phone is under the chair.",
+        "transliteration": "Et-telefon taḥt el-kursi."
+      },
+      "context": "Using 'تحت' for an object below another."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which preposition means 'on' or 'upon'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "في",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "تحت",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "على",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'على' means 'on' or 'upon'.",
+      "hint": {
+        "transliteration": "3ala",
+        "arabic": "على"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: الكتاب ___ الطاولة. (The book is on the table.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "في",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "على",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "تحت",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "To say 'on the table', use 'على'.",
+      "hint": {
+        "transliteration": "3ala",
+        "arabic": "على"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'The pen is in the bag.'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "القلم تحت الشنطة.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "القلم على الشنطة.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "القلم في الشنطة.",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'القلم في الشنطة.' means 'The pen is in the bag.'.",
+      "hint": {
+        "transliteration": "El-qalam fi sh-shanṭa.",
+        "arabic": "القلم في الشنطة."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Preposition: 'Next to' / 'Beside' (جنب)"
+        },
+        "text": "To describe something as being 'next to' or 'beside' another object, use the word 'جنب'.",
+        "examples": [
+          {
+            "arabic": "جنب",
+            "english": "Next to / Beside",
+            "transliteration": "janb"
+          }
+        ],
+        "audioText": "جنب"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Preposition: 'Above' / 'Over' (فوق)"
+        },
+        "text": "The word 'فوق' means 'above' or 'over'. It suggests a position higher than something else, but not necessarily touching it (unlike 'على').",
+        "examples": [
+          {
+            "arabic": "فوق",
+            "english": "Above / Over",
+            "transliteration": "fawq"
+          }
+        ],
+        "audioText": "فوق"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Preposition: 'In front of' (قدّام)"
+        },
+        "text": "To say 'in front of', use 'قدّام'. This preposition describes a position facing or ahead of another object.",
+        "examples": [
+          {
+            "arabic": "قدّام",
+            "english": "In front of",
+            "transliteration": "qiddam"
+          }
+        ],
+        "audioText": "قدّام"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الكرسي جنب الطاولة.",
+        "english": "The chair is next to the table.",
+        "transliteration": "El-kursi janb eṭ-ṭaawle."
+      },
+      "context": "Describing the position of furniture."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "القلم فوق الكتاب.",
+        "english": "The pen is above the book.",
+        "transliteration": "El-qalam fawq el-ktaab."
+      },
+      "context": "Indicating a higher position."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الشنطة قدّام الباب.",
+        "english": "The bag is in front of the door.",
+        "transliteration": "Esh-shanṭa qiddam el-baab."
+      },
+      "context": "Describing an object's position relative to an entrance."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'next to' or 'beside'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "فوق",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "جنب",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "قدّام",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'جنب' means 'next to' or 'beside'.",
+      "hint": {
+        "transliteration": "janb",
+        "arabic": "جنب"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: الكرسي ___ الطاولة. (The chair is in front of the table.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "تحت",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "على",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "قدّام",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "To say 'in front of the table', use 'قدّام'.",
+      "hint": {
+        "transliteration": "qiddam",
+        "arabic": "قدّام"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'The book is above the chair.'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "الكتاب جنب الكرسي.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الكتاب فوق الكرسي.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "الكتاب تحت الكرسي.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'الكتاب فوق الكرسي.' means 'The book is above the chair.'.",
+      "hint": {
+        "transliteration": "El-ktaab fawq el-kursi.",
+        "arabic": "الكتاب فوق الكرسي."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Preposition: 'Behind' (وراء)"
+        },
+        "text": "The preposition 'وراء' means 'behind'. It indicates that something is at the back of another object.",
+        "examples": [
+          {
+            "arabic": "وراء",
+            "english": "Behind",
+            "transliteration": "wara"
+          }
+        ],
+        "audioText": "وراء"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Preposition: 'Between' (بين)"
+        },
+        "text": "To say 'between', use 'بين'. This preposition is used to describe an object situated in the space separating two other objects.",
+        "examples": [
+          {
+            "arabic": "بين",
+            "english": "Between",
+            "transliteration": "bayn"
+          }
+        ],
+        "audioText": "بين"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Preposition: 'By the side of' / 'Next to' (حدّ)"
+        },
+        "text": "Another way to say 'next to' or 'by the side of' (similar to 'جنب' but often implying a closer proximity or immediate vicinity) is 'حدّ'.",
+        "examples": [
+          {
+            "arabic": "حدّ",
+            "english": "By the side of / Next to",
+            "transliteration": "ḥadd"
+          }
+        ],
+        "audioText": "حدّ"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "المفتاح وراء الكتاب.",
+        "english": "The key is behind the book.",
+        "transliteration": "El-miftaaḥ wara el-ktaab."
+      },
+      "context": "Locating a small item."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "القلم بين الكتاب والشنطة.",
+        "english": "The pen is between the book and the bag.",
+        "transliteration": "El-qalam bayn el-ktaab wesh-shanṭa."
+      },
+      "context": "Describing an object's position relative to two others."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الكرسي حدّ الطاولة.",
+        "english": "The chair is by the side of the table.",
+        "transliteration": "El-kursi ḥadd eṭ-ṭaawle."
+      },
+      "context": "Using an alternative for 'next to'."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which preposition means 'behind'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بين",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "حدّ",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "وراء",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'وراء' means 'behind'.",
+      "hint": {
+        "transliteration": "wara",
+        "arabic": "وراء"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: الكتاب ___ الطاولة والكرسي. (The book is between the table and the chair.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "على",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بين",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "فوق",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "To say 'between' two objects, use 'بين'.",
+      "hint": {
+        "transliteration": "bayn",
+        "arabic": "بين"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'The phone is next to the bed.' (using 'حدّ')?",
+      "options": [
+        {
+          "id": "a",
+          "text": "التلفون فوق التخت.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "التلفون حدّ التخت.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "التلفون وراء التخت.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'التلفون حدّ التخت.' means 'The phone is next to the bed.'.",
+      "hint": {
+        "transliteration": "Et-telefon ḥadd et-takht.",
+        "arabic": "التلفون حدّ التخت."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking about a Person's Location"
+        },
+        "text": "You can also ask about a person's location using 'وين؟'. Just add their name or a pronoun after 'وين؟'.",
+        "examples": [
+          {
+            "arabic": "وين أحمد؟",
+            "english": "Where is Ahmad?",
+            "transliteration": "Wayn Aḥmad?"
+          },
+          {
+            "arabic": "وين هي؟",
+            "english": "Where is she?",
+            "transliteration": "Wayn hiye?"
+          }
+        ],
+        "audioText": "وين أحمد؟ وين هي؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Location Adverb: 'Here' (هون)"
+        },
+        "text": "To state that something or someone is 'here', use the adverb 'هون'.",
+        "examples": [
+          {
+            "arabic": "هون",
+            "english": "Here",
+            "transliteration": "hon"
+          },
+          {
+            "arabic": "الكتاب هون.",
+            "english": "The book is here.",
+            "transliteration": "El-ktaab hon."
+          }
+        ],
+        "audioText": "هون. الكتاب هون."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Location Adverb: 'There' (هناك)"
+        },
+        "text": "To state that something or someone is 'there', use the adverb 'هناك'.",
+        "examples": [
+          {
+            "arabic": "هناك",
+            "english": "There",
+            "transliteration": "honaak"
+          },
+          {
+            "arabic": "القلم هناك.",
+            "english": "The pen is there.",
+            "transliteration": "El-qalam honaak."
+          }
+        ],
+        "audioText": "هناك. القلم هناك."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "وين سارة؟ هي هون.",
+        "english": "Where is Sarah? She is here.",
+        "transliteration": "Wayn Saara? Hiye hon."
+      },
+      "context": "Asking about a person and responding."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "وين مفتاح السيارة؟ هو هناك.",
+        "english": "Where is the car key? It is there.",
+        "transliteration": "Wayn miftaaḥ es-sayyaara? Huwwe honaak."
+      },
+      "context": "Asking about an object and responding."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "وين القلم؟ القلم على الطاولة هون.",
+        "english": "Where is the pen? The pen is on the table here.",
+        "transliteration": "Wayn el-qalam? El-qalam 3ala ṭ-ṭaawle hon."
+      },
+      "context": "Combining a preposition with a location adverb."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'Where is Layla?'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "كيف ليلى؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شو ليلى؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "وين ليلى؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'وين ليلى؟' is the correct way to ask 'Where is Layla?'.",
+      "hint": {
+        "transliteration": "Wayn Layla?",
+        "arabic": "وين ليلى؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: الكتاب ___ (The book is here.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "هناك",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "هون",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "وين",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'هون' means 'here'.",
+      "hint": {
+        "transliteration": "hon",
+        "arabic": "هون"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the correct response to 'وين المفتاح؟' (Where is the key?) if it's there?",
+      "options": [
+        {
+          "id": "a",
+          "text": "المفتاح هون.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "المفتاح هناك.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "المفتاح في.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'هناك' means 'there'.",
+      "hint": {
+        "transliteration": "El-miftaaḥ honaak.",
+        "arabic": "المفتاح هناك."
+      }
+    }
+  ]
+}

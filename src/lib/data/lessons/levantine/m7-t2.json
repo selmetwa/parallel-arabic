@@ -1,0 +1,882 @@
+{
+  "topicId": "m7-t2",
+  "title": "Talking about daily programs and habits",
+  "dialect": "levantine",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Waking Up"
+        },
+        "text": "To talk about waking up, you can use the verbs بفيق (bfi') or بصحى (bsahha) in Levantine Arabic. Both mean 'I wake up' or 'I get up'.",
+        "examples": [
+          {
+            "arabic": "أنا بفيق بكير كل يوم.",
+            "english": "I wake up early every day.",
+            "transliteration": "Ana bfi' bakkeer kull yōm."
+          },
+          {
+            "arabic": "هي بتصحى متأخر.",
+            "english": "She wakes up late.",
+            "transliteration": "Hiyye btsaḥha mta'akhkher."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Eating Meals"
+        },
+        "text": "Here are common verbs for eating breakfast, lunch, and dinner. These are conjugated forms for 'I'.",
+        "examples": [
+          {
+            "arabic": "أنا بفطر الساعة 7.",
+            "english": "I have breakfast at 7 o'clock.",
+            "transliteration": "Ana baftor is-saa'a sab'a."
+          },
+          {
+            "arabic": "نحنا منتغدى بالبيت.",
+            "english": "We have lunch at home.",
+            "transliteration": "Niḥna mintghadda bil-bait."
+          },
+          {
+            "arabic": "هم بيتعشوا مع عيلتهم.",
+            "english": "They have dinner with their family.",
+            "transliteration": "Humma byit'ashshu ma' 'aylathom."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Going to Work or School"
+        },
+        "text": "To say 'I go to work' or 'I go to school', use the verb بروح (barooḥ - I go) followed by the preposition عَ (a' - to/at) and the place.",
+        "examples": [
+          {
+            "arabic": "أنا بروح ع الشغل الصبح.",
+            "english": "I go to work in the morning.",
+            "transliteration": "Ana barooḥ a'sh-shughl iṣ-ṣubḥ."
+          },
+          {
+            "arabic": "هي بتروح ع المدرسة بالباص.",
+            "english": "She goes to school by bus.",
+            "transliteration": "Hiyye batrooḥ a'l-madrasa bil-bass."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا بفيق بكير وبفطر.",
+        "english": "I wake up early and have breakfast.",
+        "transliteration": "Ana bfi' bakkeer w baftor."
+      },
+      "context": "Using 'I wake up' and 'I have breakfast'."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هو بروح ع الشغل كل يوم.",
+        "english": "He goes to work every day.",
+        "transliteration": "Huwa barooḥ a'sh-shughl kull yōm."
+      },
+      "context": "Using 'he goes' and 'to work'."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Levantine Arabic phrase for 'I wake up (male speaker)'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أنا بنام",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أنا بفيق",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أنا بروح",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "أنا باكل",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Both بفيق and بصحى mean 'I wake up'.",
+      "hint": {
+        "transliteration": "Ana bfi'"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'breakfast'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "الغدا",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الشغل",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "الفطور",
+          "isCorrect": true
+        },
+        {
+          "id": "d",
+          "text": "العشا",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "الفطور (il-fatoor) is breakfast.",
+      "hint": {
+        "transliteration": "il-fatoor"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: هي ___ ع المدرسة.",
+      "options": [
+        {
+          "id": "a",
+          "text": "بفيق",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بتروح",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بفطر",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "For 'she goes', the verb is بتروح (batrooḥ).",
+      "hint": {
+        "transliteration": "batrooḥ"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Finishing Work or School"
+        },
+        "text": "To express that you 'finish work' or 'finish school', you use the verb بخلّص (bkḫallis - I finish).",
+        "examples": [
+          {
+            "arabic": "أنا بخلّص شغل الساعة خمسة.",
+            "english": "I finish work at 5 o'clock.",
+            "transliteration": "Ana bkḫallis shughl is-saa'a khamse."
+          },
+          {
+            "arabic": "هي بتخلّص مدرسة الظهر.",
+            "english": "She finishes school at noon.",
+            "transliteration": "Hiyye btkḫallis madrasa iḍ-ḍuhr."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Coming Home"
+        },
+        "text": "To say 'I return home' or 'I come home', use the verb برجع (barja' - I return) with عالبيت (a'l-bait - to home).",
+        "examples": [
+          {
+            "arabic": "أنا برجع عالبيت بعد الشغل.",
+            "english": "I return home after work.",
+            "transliteration": "Ana barja' a'l-bait ba'd ish-shughl."
+          },
+          {
+            "arabic": "هو بيرجع عالبيت المسا.",
+            "english": "He returns home in the evening.",
+            "transliteration": "Huwa beerja' a'l-bait il-masa."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Relaxing and Watching TV"
+        },
+        "text": "To talk about relaxing, use برتاح (bartaḥ - I relax). For watching TV, use بحضر تلفزيون (baḥḍar tilifizyoun - I watch TV).",
+        "examples": [
+          {
+            "arabic": "أنا برتاح شوي قبل العشا.",
+            "english": "I relax a bit before dinner.",
+            "transliteration": "Ana bartaḥ shway qabl il-'asha."
+          },
+          {
+            "arabic": "هي بتحضر تلفزيون بالليل.",
+            "english": "She watches TV at night.",
+            "transliteration": "Hiyye btaḥḍar tilifizyoun bil-lail."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا بخلّص شغل وبرجع عالبيت.",
+        "english": "I finish work and return home.",
+        "transliteration": "Ana bkḫallis shughl w barja' a'l-bait."
+      },
+      "context": "Combining 'finish work' and 'return home'."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هي بترتاح وبتحضر تلفزيون المسا.",
+        "english": "She relaxes and watches TV in the evening.",
+        "transliteration": "Hiyye btartaḥ w btaḥḍar tilifizyoun il-masa."
+      },
+      "context": "Describing evening activities for a female."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Levantine Arabic verb for 'I finish'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بروح",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بخلّص",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "برتاح",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "برجع",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "بخلّص (bkḫallis) means 'I finish'.",
+      "hint": {
+        "transliteration": "bkḫallis"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'home'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "المدرسة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الشغل",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "التلفزيون",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "البيت",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "d",
+      "explanation": "البيت (il-bait) means 'home'.",
+      "hint": {
+        "transliteration": "il-bait"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: هو ___ تلفزيون بالليل.",
+      "options": [
+        {
+          "id": "a",
+          "text": "بيفيق",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بيحضر",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بيرجع",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "بيحضر (beeḥḍar) means 'he watches'.",
+      "hint": {
+        "transliteration": "beeḥḍar"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Showering and Sleeping"
+        },
+        "text": "Two more essential daily activities are showering and sleeping. Use بتحمم (bataḥammam - I shower) and بنام (banām - I sleep).",
+        "examples": [
+          {
+            "arabic": "أنا بتحمم كل يوم الصبح.",
+            "english": "I shower every morning.",
+            "transliteration": "Ana bataḥammam kull yōm iṣ-ṣubḥ."
+          },
+          {
+            "arabic": "هو بينام الساعة عشرة.",
+            "english": "He sleeps at 10 o'clock.",
+            "transliteration": "Huwa benām is-saa'a 'ashara."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing Frequency: Always and Usually"
+        },
+        "text": "To describe how often you do something, use دايماً (dayman - always) and عادةً ('aadatan - usually). These words usually come before the verb.",
+        "examples": [
+          {
+            "arabic": "أنا دايماً بفيق بكير.",
+            "english": "I always wake up early.",
+            "transliteration": "Ana dayman bfi' bakkeer."
+          },
+          {
+            "arabic": "هي عادةً بتطبخ الغدا.",
+            "english": "She usually cooks lunch.",
+            "transliteration": "Hiyye 'aadatan btitbokh il-ghada."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing Frequency: Sometimes and Never"
+        },
+        "text": "For other frequencies, use أحياناً (aḥyānan - sometimes) and أبداً (abadan - never). Note that أبداً often requires a negative verb (ما verb).",
+        "examples": [
+          {
+            "arabic": "أنا أحياناً بروح ع النادي.",
+            "english": "I sometimes go to the gym.",
+            "transliteration": "Ana aḥyānan barooḥ a'n-naadi."
+          },
+          {
+            "arabic": "هو أبداً ما بياكل لحمة.",
+            "english": "He never eats meat.",
+            "transliteration": "Huwa abadan ma byaakul laḥme."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا دايماً بتحمم الصبح.",
+        "english": "I always shower in the morning.",
+        "transliteration": "Ana dayman bataḥammam iṣ-ṣubḥ."
+      },
+      "context": "Using 'always' with 'I shower'."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هو عادةً بينام بكير، بس أحياناً بيحضر تلفزيون.",
+        "english": "He usually sleeps early, but sometimes watches TV.",
+        "transliteration": "Huwa 'aadatan benām bakkeer, bas aḥyānan beeḥḍar tilifizyoun."
+      },
+      "context": "Combining 'usually', 'sometimes', and different verbs."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Levantine Arabic verb for 'I sleep'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بصحى",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بنام",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بفطر",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "برتاح",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "بنام (banām) means 'I sleep'.",
+      "hint": {
+        "transliteration": "banām"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'always'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أحياناً",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "عادةً",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "أبداً",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "دايماً",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "d",
+      "explanation": "دايماً (dayman) means 'always'.",
+      "hint": {
+        "transliteration": "dayman"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: هو ___ ما بياكل لحمة.",
+      "options": [
+        {
+          "id": "a",
+          "text": "دايماً",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أحياناً",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "أبداً",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "أبداً (abadan) is used for 'never', often with a negative verb.",
+      "hint": {
+        "transliteration": "abadan"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking about Daily Habits"
+        },
+        "text": "To ask someone 'What do you do every day?', you use: شو بتعمل (shoo bte'mal) for a male, and شو بتعملي (shoo bte'mali) for a female, followed by كل يوم (kull yōm - every day).",
+        "examples": [
+          {
+            "arabic": "شو بتعملَ كل يوم الصبح؟",
+            "english": "What do you do every morning? (to male)",
+            "transliteration": "Shoo bte'mal kull yōm iṣ-ṣubḥ?"
+          },
+          {
+            "arabic": "شو بتعملِ كل يوم المسا؟",
+            "english": "What do you do every evening? (to female)",
+            "transliteration": "Shoo bte'mali kull yōm il-masa?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Time Expressions: Morning, Afternoon, Evening"
+        },
+        "text": "Here are common phrases to specify parts of the day in Levantine Arabic.",
+        "examples": [
+          {
+            "arabic": "أنا بشتغل الصبح.",
+            "english": "I work in the morning.",
+            "transliteration": "Ana bashtaghil iṣ-ṣubḥ."
+          },
+          {
+            "arabic": "هو بروح ع النادي بعد الظهر.",
+            "english": "He goes to the gym in the afternoon.",
+            "transliteration": "Huwa barooḥ a'n-naadi ba'd iḍ-ḍuhr."
+          },
+          {
+            "arabic": "نحنا بنطلع المسا.",
+            "english": "We go out in the evening.",
+            "transliteration": "Niḥna binṭla' il-masa."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Time Expressions: Night, Before, After"
+        },
+        "text": "More useful time expressions for daily routines.",
+        "examples": [
+          {
+            "arabic": "بالليل أنا بقرا كتاب.",
+            "english": "At night I read a book.",
+            "transliteration": "Bil-lail ana baqra kitaab."
+          },
+          {
+            "arabic": "قبل ما أنام، بشرب حليب.",
+            "english": "Before I sleep, I drink milk.",
+            "transliteration": "Qabl ma anām, bashrab ḥaleeb."
+          },
+          {
+            "arabic": "بعد الغدا، بنطلع نتمشى.",
+            "english": "After lunch, we go for a walk.",
+            "transliteration": "Ba'd il-ghada, binṭla' natmasha."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شو بتعملِ كل يوم الصبح؟",
+        "english": "What do you do every morning? (to a female)",
+        "transliteration": "Shoo bte'mali kull yōm iṣ-ṣubḥ?"
+      },
+      "context": "Asking a female about her morning routine."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "قبل ما بروح ع الشغل، بفطر.",
+        "english": "Before I go to work, I have breakfast.",
+        "transliteration": "Qabl ma barooḥ a'sh-shughl, baftor."
+      },
+      "context": "Using 'before' with daily activities."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Levantine Arabic phrase for 'What do you do? (to a female)'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "شو بتعمل؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شو بتعملي؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مين بتعمل؟",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "شو بعمل؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "بتعملي (bte'mali) is used for a female.",
+      "hint": {
+        "transliteration": "Shoo bte'mali?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'in the morning'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بعد الظهر",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "المسا",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "الصبح",
+          "isCorrect": true
+        },
+        {
+          "id": "d",
+          "text": "بالليل",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "الصبح (iṣ-ṣubḥ) means 'in the morning'.",
+      "hint": {
+        "transliteration": "iṣ-ṣubḥ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: أنا بروح ع الشغل ___ الغدا.",
+      "options": [
+        {
+          "id": "a",
+          "text": "بعد",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "قبل",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بالليل",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Usually one goes to work before lunch, so 'before' (قبل - qabl) is appropriate.",
+      "hint": {
+        "transliteration": "qabl"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing Frequency: Every Day, Every Week"
+        },
+        "text": "To talk about activities that happen regularly, use كل يوم (kull yōm - every day) and كل أسبوع (kull usbū' - every week).",
+        "examples": [
+          {
+            "arabic": "أنا بروح ع الشغل كل يوم.",
+            "english": "I go to work every day.",
+            "transliteration": "Ana barooḥ a'sh-shughl kull yōm."
+          },
+          {
+            "arabic": "هي بتزور أهلها كل أسبوع.",
+            "english": "She visits her family every week.",
+            "transliteration": "Hiyye btzoor ahlaha kull usbū'."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing Your Daily Routine"
+        },
+        "text": "To refer to your daily schedule or routine, you can use برنامجي اليومي (barnāmejī l-yawmī - my daily program) or روتيني اليومي (rōtīnī l-yawmī - my daily routine).",
+        "examples": [
+          {
+            "arabic": "برنامجي اليومي كتير مشغول.",
+            "english": "My daily program is very busy.",
+            "transliteration": "Barnāmejī l-yawmī kteer mashghool."
+          },
+          {
+            "arabic": "بحب روتيني اليومي.",
+            "english": "I like my daily routine.",
+            "transliteration": "Baḥibb rōtīnī l-yawmī."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing Likes and Dislikes"
+        },
+        "text": "To say 'I like to do something', use بحب (baḥibb - I like) followed by a verb. To say 'I don't like to do something', use ما بحب (ma baḥibb - I don't like) followed by a verb.",
+        "examples": [
+          {
+            "arabic": "أنا بحب أقرأ كتاب قبل ما أنام.",
+            "english": "I like to read a book before I sleep.",
+            "transliteration": "Ana baḥibb aqra kitaab qabl ma anām."
+          },
+          {
+            "arabic": "هي ما بتحب تعمل رياضة الصبح.",
+            "english": "She doesn't like to do sports in the morning.",
+            "transliteration": "Hiyye ma btḥibb te'mal riyāḍa iṣ-ṣubḥ."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا بحب روتيني اليومي.",
+        "english": "I like my daily routine.",
+        "transliteration": "Ana baḥibb rōtīnī l-yawmī."
+      },
+      "context": "Expressing fondness for one's routine."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هي ما بتحب تفيق بكير كل يوم.",
+        "english": "She doesn't like to wake up early every day.",
+        "transliteration": "Hiyye ma btḥibb tfi' bakkeer kull yōm."
+      },
+      "context": "Expressing a dislike for an activity and using 'every day'."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Levantine Arabic phrase for 'every day'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "كل أسبوع",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كل سنة",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "كل يوم",
+          "isCorrect": true
+        },
+        {
+          "id": "d",
+          "text": "كل شهر",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "كل يوم (kull yōm) means 'every day'.",
+      "hint": {
+        "transliteration": "kull yōm"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'I like'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ما بحب",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بحب",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بفيق",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "بنام",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "بحب (baḥibb) means 'I like'.",
+      "hint": {
+        "transliteration": "baḥibb"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: هو ___ يقرا كتب.",
+      "options": [
+        {
+          "id": "a",
+          "text": "ما بحب",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بحب",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بيفيق",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "بحب (baḥibb) is the correct verb for 'he likes' when followed by another verb (يقرا - yeqra, to read).",
+      "hint": {
+        "transliteration": "byiḥibb"
+      }
+    }
+  ]
+}

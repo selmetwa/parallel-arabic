@@ -1,0 +1,887 @@
+{
+  "topicId": "m6-t1",
+  "title": "Asking About Directions in Darija",
+  "dialect": "darija",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Politeness: Excuse Me / Hello",
+          "arabic": "سمح ليا / السلام عليكم"
+        },
+        "text": "Before asking for directions, it's polite to get someone's attention or greet them. 'Excuse me' is essential when approaching a stranger. In Darija, the phrase 'Smeḥ liya' is used for a male, and 'Smeḥi liya' for a female. You can also start with a general greeting like 'Salam alikoum'.",
+        "examples": [
+          {
+            "arabic": "سمح ليا، خويا.",
+            "english": "Excuse me, brother (to a male).",
+            "transliteration": "Smeḥ liya, khouya."
+          },
+          {
+            "arabic": "سمحِي ليا، أختي.",
+            "english": "Excuse me, sister (to a female).",
+            "transliteration": "Smeḥi liya, okhti."
+          },
+          {
+            "arabic": "السلام عليكم.",
+            "english": "Hello / Peace be upon you.",
+            "transliteration": "As-salamu alaykum."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Where is...?' (Masculine Nouns)",
+          "arabic": "فين كاين...؟"
+        },
+        "text": "To ask 'Where is...?' for a masculine noun, use 'Fen kayn...?'. This is one of the most fundamental phrases for asking directions. Pay attention to the gender of the place you're asking about.",
+        "examples": [
+          {
+            "arabic": "فين كاين البنك؟",
+            "english": "Where is the bank?",
+            "transliteration": "Fen kayn l-bank?"
+          },
+          {
+            "arabic": "فين كاين الريسطو؟",
+            "english": "Where is the restaurant?",
+            "transliteration": "Fen kayn r-ristoran?"
+          },
+          {
+            "arabic": "فين كاين السوق؟",
+            "english": "Where is the market?",
+            "transliteration": "Fen kayn s-souq?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Where is...?' (Feminine Nouns)",
+          "arabic": "فين كايْنة...؟"
+        },
+        "text": "For feminine nouns, the phrase changes slightly to 'Fen kaynā...?'. Many feminine nouns in Darija end with a 'ة' (ta marbuta). Remember to use the correct form to sound natural.",
+        "examples": [
+          {
+            "arabic": "فين كايْنة المحطة؟",
+            "english": "Where is the station?",
+            "transliteration": "Fen kaynā l-maḥaṭṭa?"
+          },
+          {
+            "arabic": "فين كايْنة البوسطة؟",
+            "english": "Where is the post office?",
+            "transliteration": "Fen kaynā l-boṣṭa?"
+          },
+          {
+            "arabic": "فين كايْنة الساحة؟",
+            "english": "Where is the square?",
+            "transliteration": "Fen kaynā s-sāḥa?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "سمح ليا، فين كاين المسجد؟",
+        "english": "Excuse me (to a male), where is the mosque?",
+        "transliteration": "Smeḥ liya, fen kayn l-masjid?"
+      },
+      "context": "Asking politely for the location of a masculine place."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "السلام عليكم، فين كايْنة المدرسة؟",
+        "english": "Hello, where is the school?",
+        "transliteration": "As-salamu alaykum, fen kaynā l-madrasa?"
+      },
+      "context": "A polite greeting followed by asking for a feminine place."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you politely ask 'Excuse me' to a female?",
+      "options": [
+        {
+          "id": "optionA",
+          "text": "سمح ليا",
+          "isCorrect": false
+        },
+        {
+          "id": "optionB",
+          "text": "سمحي ليا",
+          "isCorrect": true
+        },
+        {
+          "id": "optionC",
+          "text": "فين كاين؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "optionB",
+      "explanation": "To say 'Excuse me' to a female, you add the 'i' sound at the end of the verb, making it 'Smeḥi liya'.",
+      "hint": {
+        "transliteration": "Smeḥi liya"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase asks 'Where is the market?' (Note: 'Market' - السوق - is masculine in Darija)?",
+      "options": [
+        {
+          "id": "optionA",
+          "text": "فين كايْنة السوق؟",
+          "isCorrect": false
+        },
+        {
+          "id": "optionB",
+          "text": "فين كاين السوق؟",
+          "isCorrect": true
+        },
+        {
+          "id": "optionC",
+          "text": "فين السوق؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "optionB",
+      "explanation": "Since 'السوق' (s-souq) is masculine, you use 'فين كاين' (fen kayn).",
+      "hint": {
+        "transliteration": "Fen kayn s-souq?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'Where is the school?' (School - المدرسة - is feminine). فين ___ المدرسة؟",
+      "options": [
+        {
+          "id": "optionA",
+          "text": "كاين",
+          "isCorrect": false
+        },
+        {
+          "id": "optionB",
+          "text": "كايْنة",
+          "isCorrect": true
+        },
+        {
+          "id": "optionC",
+          "text": "كان",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "optionB",
+      "explanation": "For feminine nouns like 'المدرسة' (l-madrasa), you use 'كايْنة' (kaynā).",
+      "hint": {
+        "transliteration": "kaynā",
+        "arabic": "كايْنة"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Giving Directions: 'Go' (Imperative)",
+          "arabic": "سير / سيري"
+        },
+        "text": "When receiving directions, you'll often hear the imperative form of 'to go'. For a male, it's 'Sir' (سير), and for a female, it's 'Siri' (سيري). These are crucial for understanding instructions.",
+        "examples": [
+          {
+            "arabic": "سير نيشان.",
+            "english": "Go straight (to a male).",
+            "transliteration": "Sir nīshan."
+          },
+          {
+            "arabic": "سيري لليمين.",
+            "english": "Go right (to a female).",
+            "transliteration": "Sīri l-yameen."
+          },
+          {
+            "arabic": "سير شوية.",
+            "english": "Go a little bit (to a male).",
+            "transliteration": "Sir shwiya."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Basic Directions: Straight, Right, Left",
+          "arabic": "نيشان، لليمين، لليسار"
+        },
+        "text": "These are the most fundamental direction words you'll need to know. 'Nishan' means straight, 'l-yameen' means to the right, and 'l-yasar' means to the left. They are often used with 'Sir' or 'Siri'.",
+        "examples": [
+          {
+            "arabic": "سير نيشان.",
+            "english": "Go straight.",
+            "transliteration": "Sir nīshan."
+          },
+          {
+            "arabic": "دور لليمين.",
+            "english": "Turn right.",
+            "transliteration": "Dour l-yameen."
+          },
+          {
+            "arabic": "دور لليسار.",
+            "english": "Turn left.",
+            "transliteration": "Dour l-yasar."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Prepositions: Next To, In Front Of, Behind",
+          "arabic": "حدا, قدام, ورا"
+        },
+        "text": "These prepositions help locate places relative to other landmarks. 'Ḥdā' means next to, 'qddām' means in front of, and 'warā' means behind.",
+        "examples": [
+          {
+            "arabic": "البوسطة حدا البنك.",
+            "english": "The post office is next to the bank.",
+            "transliteration": "L-boṣṭa ḥdā l-bank."
+          },
+          {
+            "arabic": "المسجد قدام الريسطو.",
+            "english": "The mosque is in front of the restaurant.",
+            "transliteration": "L-masjid qddām r-ristoran."
+          },
+          {
+            "arabic": "السوق ورا المحطة.",
+            "english": "The market is behind the station.",
+            "transliteration": "S-souq warā l-maḥaṭṭa."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "سيري نيشان و دوري لليمين.",
+        "english": "Go straight (f) and turn right.",
+        "transliteration": "Sīri nīshan w douri l-yameen."
+      },
+      "context": "Instructions for a female to go straight and turn right."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "البنك حدا السوق، قدام البوسطة.",
+        "english": "The bank is next to the market, in front of the post office.",
+        "transliteration": "L-bank ḥdā s-souq, qddām l-boṣṭa."
+      },
+      "context": "Describing a location using prepositions."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you tell a male to 'Go straight'?",
+      "options": [
+        {
+          "id": "optionA",
+          "text": "سيري نيشان",
+          "isCorrect": false
+        },
+        {
+          "id": "optionB",
+          "text": "سير نيشان",
+          "isCorrect": true
+        },
+        {
+          "id": "optionC",
+          "text": "سير",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "optionB",
+      "explanation": "For a male, use 'سير' (Sir). 'نيشان' (nīshan) means straight.",
+      "hint": {
+        "transliteration": "Sir nīshan"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Darija word for 'Left'?",
+      "options": [
+        {
+          "id": "optionA",
+          "text": "لليمين",
+          "isCorrect": false
+        },
+        {
+          "id": "optionB",
+          "text": "نيشان",
+          "isCorrect": false
+        },
+        {
+          "id": "optionC",
+          "text": "لليسار",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "optionC",
+      "explanation": "The word for 'left' is 'لليسار' (l-yasar).",
+      "hint": {
+        "transliteration": "l-yasar"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'The restaurant is ___ the bank.' (Use 'in front of'). الريسطو ___ البنك.",
+      "options": [
+        {
+          "id": "optionA",
+          "text": "حدا",
+          "isCorrect": false
+        },
+        {
+          "id": "optionB",
+          "text": "ورا",
+          "isCorrect": false
+        },
+        {
+          "id": "optionC",
+          "text": "قدام",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "optionC",
+      "explanation": "'قدام' (qddām) means 'in front of'.",
+      "hint": {
+        "transliteration": "qddām",
+        "arabic": "قدام"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "More Verbs: Cross, Turn (Imperative)",
+          "arabic": "قطع، دور"
+        },
+        "text": "In addition to 'Sir/Siri', you'll hear other action verbs. 'Qṭaʿ' (قطع) means 'cross' (for a male), and 'Qṭaʿi' (قطعي) for a female. 'Dur' (دور) means 'turn' (for a male), and 'Douri' (دوري) for a female.",
+        "examples": [
+          {
+            "arabic": "قطع الزنقة.",
+            "english": "Cross the street (to a male).",
+            "transliteration": "Qṭaʿ z-zanqa."
+          },
+          {
+            "arabic": "قطعي الطريق.",
+            "english": "Cross the road (to a female).",
+            "transliteration": "Qṭaʿi ṭ-ṭriq."
+          },
+          {
+            "arabic": "دور لليمين.",
+            "english": "Turn right (to a male).",
+            "transliteration": "Dur l-yameen."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Location Markers: At the Corner, Opposite",
+          "arabic": "ف القنت, مقابل"
+        },
+        "text": "To be more precise, 'f l-qent' (ف القنت) means 'at the corner'. 'Mqābil' (مقابل) means 'opposite'. These phrases help describe locations more accurately.",
+        "examples": [
+          {
+            "arabic": "الريسطو ف القنت.",
+            "english": "The restaurant is at the corner.",
+            "transliteration": "R-ristoran f l-qent."
+          },
+          {
+            "arabic": "البوسطة مقابل البنك.",
+            "english": "The post office is opposite the bank.",
+            "transliteration": "L-boṣṭa mqābil l-bank."
+          },
+          {
+            "arabic": "كاين واحد المحل ف القنت.",
+            "english": "There's a shop at the corner.",
+            "transliteration": "Kayn waḥed l-maḥall f l-qent."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Landmarks: Road, Street, Square",
+          "arabic": "طريق, زنقة, ساحة"
+        },
+        "text": "You'll often hear these words when given directions. 'Ṭrīq' (طريق) refers to a main road or path. 'Zanqa' (زنقة) is a street or alley. 'Sāḥa' (ساحة) is a public square.",
+        "examples": [
+          {
+            "arabic": "سير ف هاد الطريق.",
+            "english": "Go on this road.",
+            "transliteration": "Sir f had ṭ-ṭrīq."
+          },
+          {
+            "arabic": "القهوة فديك الزنقة.",
+            "english": "The cafe is on that street.",
+            "transliteration": "L-qahwa f dik z-zanqa."
+          },
+          {
+            "arabic": "الساحة الكبيرة.",
+            "english": "The big square.",
+            "transliteration": "S-sāḥa l-kbira."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "قطع الطريق و دور لليسار ف القنت.",
+        "english": "Cross the road (m) and turn left at the corner.",
+        "transliteration": "Qṭaʿ ṭ-ṭrīq w dur l-yasar f l-qent."
+      },
+      "context": "Giving a male detailed instructions involving crossing and turning at a landmark."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "المسجد مقابل البنك ف ديك الزنقة.",
+        "english": "The mosque is opposite the bank on that street.",
+        "transliteration": "L-masjid mqābil l-bank f dik z-zanqa."
+      },
+      "context": "Describing the location of a mosque using a preposition and a landmark."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Darija word for 'street'?",
+      "options": [
+        {
+          "id": "optionA",
+          "text": "طريق",
+          "isCorrect": false
+        },
+        {
+          "id": "optionB",
+          "text": "زنقة",
+          "isCorrect": true
+        },
+        {
+          "id": "optionC",
+          "text": "ساحة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "optionB",
+      "explanation": "'زنقة' (zanqa) means 'street' or 'alley'.",
+      "hint": {
+        "transliteration": "zanqa"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you tell a female to 'Cross the road'?",
+      "options": [
+        {
+          "id": "optionA",
+          "text": "قطع الطريق",
+          "isCorrect": false
+        },
+        {
+          "id": "optionB",
+          "text": "قطعي الطريق",
+          "isCorrect": true
+        },
+        {
+          "id": "optionC",
+          "text": "سيري الطريق",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "optionB",
+      "explanation": "For a female, the imperative of 'cross' is 'قطعي' (Qṭaʿi).",
+      "hint": {
+        "transliteration": "Qṭaʿi ṭ-ṭrīq"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'The bank is ___ the mosque.' (Use 'opposite'). البنك ___ المسجد.",
+      "options": [
+        {
+          "id": "optionA",
+          "text": "حدا",
+          "isCorrect": false
+        },
+        {
+          "id": "optionB",
+          "text": "مقابل",
+          "isCorrect": true
+        },
+        {
+          "id": "optionC",
+          "text": "ورا",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "optionB",
+      "explanation": "'مقابل' (mqābil) means 'opposite'.",
+      "hint": {
+        "transliteration": "mqābil",
+        "arabic": "مقابل"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for Repetition: 'Can you repeat?'",
+          "arabic": "واش ممكن تعاود؟"
+        },
+        "text": "If you don't understand the directions, it's perfectly fine to ask for repetition. 'Wash mumkin tʿāwud?' (واش ممكن تعاود؟) is for a male, and 'Wash mumkin tʿāwudī?' (واش ممكن تعاودي؟) is for a female. Adding 'b shwiya' (بشوية - slowly) can also be helpful.",
+        "examples": [
+          {
+            "arabic": "سمح ليا، واش ممكن تعاود؟",
+            "english": "Excuse me (m), can you repeat?",
+            "transliteration": "Smeḥ liya, wash mumkin tʿāwud?"
+          },
+          {
+            "arabic": "واش ممكن تعاودي بشوية؟",
+            "english": "Can you repeat slowly (f)?",
+            "transliteration": "Wash mumkin tʿāwudī b shwiya?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking About Distance: 'Is it far/near?'",
+          "arabic": "واش بعيد/قريب؟"
+        },
+        "text": "To gauge the distance, you can ask 'Wash bʿīd?' (واش بعيد؟ - Is it far?) or 'Wash qrīb?' (واش قريب؟ - Is it near?). These are simple and direct questions.",
+        "examples": [
+          {
+            "arabic": "واش بعيد من هنا؟",
+            "english": "Is it far from here?",
+            "transliteration": "Wash bʿīd mn hna?"
+          },
+          {
+            "arabic": "واش قريب للسوق؟",
+            "english": "Is it near the market?",
+            "transliteration": "Wash qrīb l s-souq?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Directly Asking: 'How do I get to...?'",
+          "arabic": "كيفاش نوصل لـ...؟"
+        },
+        "text": "This is a direct and common way to ask for directions to a specific place. 'Kīfāsh nwṣal l-...?' means 'How do I get to...?'",
+        "examples": [
+          {
+            "arabic": "كيفاش نوصل لـ l-maḥaṭṭa؟",
+            "english": "How do I get to the station?",
+            "transliteration": "Kīfāsh nwṣal l-l-maḥaṭṭa?"
+          },
+          {
+            "arabic": "كيفاش نوصل لـ s-souq؟",
+            "english": "How do I get to the market?",
+            "transliteration": "Kīfāsh nwṣal l-s-souq?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "كيفاش نوصل لـ l-bank؟ واش بعيد؟",
+        "english": "How do I get to the bank? Is it far?",
+        "transliteration": "Kīfāsh nwṣal l-l-bank? Wash bʿīd?"
+      },
+      "context": "Asking for directions and then inquiring about the distance."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "سمحِي ليا، واش ممكن تعاودي، كيفاش نوصل لـ l-boṣṭa؟",
+        "english": "Excuse me (f), can you repeat, how do I get to the post office?",
+        "transliteration": "Smeḥi liya, wash mumkin tʿāwudī, kīfāsh nwṣal l-l-boṣṭa?"
+      },
+      "context": "Politely asking a female to repeat directions to a specific place."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'Is it far?'",
+      "options": [
+        {
+          "id": "optionA",
+          "text": "واش قريب؟",
+          "isCorrect": false
+        },
+        {
+          "id": "optionB",
+          "text": "واش بعيد؟",
+          "isCorrect": true
+        },
+        {
+          "id": "optionC",
+          "text": "فين هو؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "optionB",
+      "explanation": "'واش بعيد؟' (Wash bʿīd?) is used to ask 'Is it far?'.",
+      "hint": {
+        "transliteration": "Wash bʿīd?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask a female 'Can you repeat?'",
+      "options": [
+        {
+          "id": "optionA",
+          "text": "واش ممكن تعاود؟",
+          "isCorrect": false
+        },
+        {
+          "id": "optionB",
+          "text": "واش ممكن تعاودي؟",
+          "isCorrect": true
+        },
+        {
+          "id": "optionC",
+          "text": "عاودي!",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "optionB",
+      "explanation": "For a female, use 'واش ممكن تعاودي؟' (Wash mumkin tʿāwudī?).",
+      "hint": {
+        "transliteration": "Wash mumkin tʿāwudī?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'How do I get ___ the square?' كيفاش نوصل ___ الساحة؟",
+      "options": [
+        {
+          "id": "optionA",
+          "text": "من",
+          "isCorrect": false
+        },
+        {
+          "id": "optionB",
+          "text": "لـ",
+          "isCorrect": true
+        },
+        {
+          "id": "optionC",
+          "text": "في",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "optionB",
+      "explanation": "'لـ' (l-) means 'to' when asking how to get somewhere.",
+      "hint": {
+        "transliteration": "l-",
+        "arabic": "لـ"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing Gratitude: Thank You",
+          "arabic": "شكرا"
+        },
+        "text": "Always remember to thank the person who helped you. 'Shukran' (شكرا) means 'Thank you'. You can add 'bzzaf' (بزاف) for 'very much'.",
+        "examples": [
+          {
+            "arabic": "شكرا بزاف!",
+            "english": "Thank you very much!",
+            "transliteration": "Shukran bzzaf!"
+          },
+          {
+            "arabic": "شكرا على المساعدة.",
+            "english": "Thank you for the help.",
+            "transliteration": "Shukran ʿalā l-musaʿada."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Understanding Sequence: First, Second",
+          "arabic": "الأول، الثانية"
+        },
+        "text": "When receiving complex directions, you might hear ordinal numbers like 'awwal' (أول - first) or 'thaniya' (ثانية - second). Pay attention to whether the noun is masculine or feminine.",
+        "examples": [
+          {
+            "arabic": "دور ف أول زنقة.",
+            "english": "Turn at the first street.",
+            "transliteration": "Dur f awwal zanqa."
+          },
+          {
+            "arabic": "قطع الثانية ديال الدورة.",
+            "english": "Take the second turn.",
+            "transliteration": "Qṭaʿi th-thaniya dyal d-dawra."
+          },
+          {
+            "arabic": "الشارع الأول على اليمين.",
+            "english": "The first street on the right.",
+            "transliteration": "Sh-shariʿ l-awwal ʿala l-yameen."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Understanding 'You will find it'",
+          "arabic": "غاتلقاه / غاتلقايها"
+        },
+        "text": "A common way to conclude directions is to tell you that you will find it. For a masculine object, it's 'Gha-t-lqah' (غاتلقاه). For a feminine object, it's 'Gha-t-lqayha' (غاتلقايها). This means 'you will find it' (future tense).",
+        "examples": [
+          {
+            "arabic": "سير نيشان، غاتلقاه على يدك لليمين.",
+            "english": "Go straight, you will find it (m. obj) on your right.",
+            "transliteration": "Sir nīshan, gha-t-lqah ʿalā yddak l-yameen."
+          },
+          {
+            "arabic": "دوري لليسار، غاتلقايها قدامك.",
+            "english": "Turn left (f), you will find it (f. obj) in front of you.",
+            "transliteration": "Douri l-yasar, gha-t-lqayha qddāmak."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شكرا بزاف! سير ف أول طريق، غاتلقاه.",
+        "english": "Thank you very much! Go on the first road, you will find it (m. obj).",
+        "transliteration": "Shukran bzzaf! Sir f awwal ṭrīq, gha-t-lqah."
+      },
+      "context": "Thanking someone and understanding a direction with 'first' and 'you will find it'."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "قطعي الثانية ديال الزنقة، غاتلقايها قدامك.",
+        "english": "Cross the second street (f), you will find it (f. obj) in front of you.",
+        "transliteration": "Qṭaʿi th-thaniya dyal z-zanqa, gha-t-lqayha qddāmak."
+      },
+      "context": "Understanding instructions for a female involving a sequential turn and finding a feminine object."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'Thank you very much'?",
+      "options": [
+        {
+          "id": "optionA",
+          "text": "شكرا",
+          "isCorrect": false
+        },
+        {
+          "id": "optionB",
+          "text": "شكرا بزاف",
+          "isCorrect": true
+        },
+        {
+          "id": "optionC",
+          "text": "شكرا ليك",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "optionB",
+      "explanation": "'شكرا بزاف' (Shukran bzzaf) means 'Thank you very much'.",
+      "hint": {
+        "transliteration": "Shukran bzzaf"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'the first street'?",
+      "options": [
+        {
+          "id": "optionA",
+          "text": "الزنقة الثانية",
+          "isCorrect": false
+        },
+        {
+          "id": "optionB",
+          "text": "أول طريق",
+          "isCorrect": false
+        },
+        {
+          "id": "optionC",
+          "text": "أول زنقة",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "optionC",
+      "explanation": "'أول زنقة' (awwal zanqa) means 'the first street'. 'أول طريق' means 'the first road'.",
+      "hint": {
+        "transliteration": "awwal zanqa"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'Go straight, ___ on your right.' (Assume a masculine object). سير نيشان، ___ على يدك لليمين.",
+      "options": [
+        {
+          "id": "optionA",
+          "text": "غاتلقايها",
+          "isCorrect": false
+        },
+        {
+          "id": "optionB",
+          "text": "غاتلقاه",
+          "isCorrect": true
+        },
+        {
+          "id": "optionC",
+          "text": "تلقاه",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "optionB",
+      "explanation": "For a masculine object, 'you will find it' is 'غاتلقاه' (gha-t-lqah).",
+      "hint": {
+        "transliteration": "gha-t-lqah",
+        "arabic": "غاتلقاه"
+      }
+    }
+  ]
+}

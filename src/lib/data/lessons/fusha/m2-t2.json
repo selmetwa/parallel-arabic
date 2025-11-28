@@ -1,0 +1,953 @@
+{
+  "topicId": "m2-t2",
+  "title": "Asking About Personal and Office Objects",
+  "dialect": "fusha",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "What is this? (Masculine)"
+        },
+        "text": "To ask about a single masculine object that is near you, use the phrase 'ما هذا؟'. The word 'هذا' (hādhā) means 'this' (masculine).",
+        "examples": [
+          {
+            "arabic": "ما هذا؟",
+            "english": "What is this?",
+            "transliteration": "Mā hādhā?"
+          },
+          {
+            "arabic": "هذا قَلَم.",
+            "english": "This is a pen.",
+            "transliteration": "Hādhā qalam."
+          }
+        ],
+        "audioText": "ما هذا؟ هذا قلم."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "What is this? (Feminine)"
+        },
+        "text": "To ask about a single feminine object that is near you, use the phrase 'ما هذه؟'. The word 'هذه' (hādhihi) means 'this' (feminine). Notice the difference in the demonstrative pronoun based on gender.",
+        "examples": [
+          {
+            "arabic": "ما هذه؟",
+            "english": "What is this?",
+            "transliteration": "Mā hādhihi?"
+          },
+          {
+            "arabic": "هذه حَقِيبَة.",
+            "english": "This is a bag.",
+            "transliteration": "Hādhihi ḥaqībah."
+          }
+        ],
+        "audioText": "ما هذه؟ هذه حقيبة."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Common Personal Objects (Part 1)"
+        },
+        "text": "Let's learn some common personal items. Pay attention to whether they are masculine or feminine, as this affects the demonstrative pronoun you use.",
+        "examples": [
+          {
+            "arabic": "قَلَم",
+            "english": "pen",
+            "transliteration": "qalam"
+          },
+          {
+            "arabic": "كِتاب",
+            "english": "book",
+            "transliteration": "kitāb"
+          },
+          {
+            "arabic": "حَقِيبَة",
+            "english": "bag",
+            "transliteration": "ḥaqībah"
+          },
+          {
+            "arabic": "نَظّارَة",
+            "english": "glasses",
+            "transliteration": "naẓẓārah"
+          }
+        ],
+        "audioText": "قَلَم، كِتاب، حَقِيبَة، نَظّارَة."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ما هذا؟ هذا كِتاب.",
+        "english": "What is this? This is a book.",
+        "transliteration": "Mā hādhā? Hādhā kitāb."
+      },
+      "context": "Asking about a masculine object (book) and answering."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ما هذه؟ هذه نَظّارَة.",
+        "english": "What is this? These are glasses.",
+        "transliteration": "Mā hādhihi? Hādhihi naẓẓārah."
+      },
+      "context": "Asking about a feminine object (glasses) and answering."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which of these means 'What is this?' (masculine)?",
+      "options": [
+        {
+          "id": "opt_1_a",
+          "text": "ما هذا؟",
+          "isCorrect": true
+        },
+        {
+          "id": "opt_1_b",
+          "text": "ما هذه؟",
+          "isCorrect": false
+        },
+        {
+          "id": "opt_1_c",
+          "text": "من هذا؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "opt_1_a",
+      "explanation": "'ما هذا؟' is used for 'What is this?' when referring to a masculine object.",
+      "hint": {
+        "transliteration": "Mā hādhā?",
+        "arabic": "ما هذا؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'pen'?",
+      "options": [
+        {
+          "id": "opt_2_a",
+          "text": "كِتاب",
+          "isCorrect": false
+        },
+        {
+          "id": "opt_2_b",
+          "text": "قَلَم",
+          "isCorrect": true
+        },
+        {
+          "id": "opt_2_c",
+          "text": "حَقِيبَة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "opt_2_b",
+      "explanation": "'قَلَم' (qalam) means pen.",
+      "hint": {
+        "transliteration": "qalam",
+        "arabic": "قَلَم"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'ما ___؟' (referring to a bag)",
+      "options": [
+        {
+          "id": "opt_3_a",
+          "text": "هذا",
+          "isCorrect": false
+        },
+        {
+          "id": "opt_3_b",
+          "text": "هذه",
+          "isCorrect": true
+        },
+        {
+          "id": "opt_3_c",
+          "text": "ذلك",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "opt_3_b",
+      "explanation": "Since 'حقيبة' (bag) is feminine, we use 'هذه' (hādhihi) for 'this'.",
+      "hint": {
+        "transliteration": "hādhihi",
+        "arabic": "هذه"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "What is that? (Masculine)"
+        },
+        "text": "To ask about a single masculine object that is further away from you, use the phrase 'ما ذلك؟'. The word 'ذلك' (dhālika) means 'that' (masculine).",
+        "examples": [
+          {
+            "arabic": "ما ذلك؟",
+            "english": "What is that?",
+            "transliteration": "Mā dhālika?"
+          },
+          {
+            "arabic": "ذلك مِفتاح.",
+            "english": "That is a key.",
+            "transliteration": "Dhālika miftāḥ."
+          }
+        ],
+        "audioText": "ما ذلك؟ ذلك مفتاح."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "What is that? (Feminine)"
+        },
+        "text": "To ask about a single feminine object that is further away from you, use the phrase 'ما تلك؟'. The word 'تلك' (tilka) means 'that' (feminine).",
+        "examples": [
+          {
+            "arabic": "ما تلك؟",
+            "english": "What is that?",
+            "transliteration": "Mā tilka?"
+          },
+          {
+            "arabic": "تلك ساعَة.",
+            "english": "That is a watch.",
+            "transliteration": "Tilka sāʿah."
+          }
+        ],
+        "audioText": "ما تلك؟ تلك ساعة."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "More Personal Objects (Part 2)"
+        },
+        "text": "Let's expand our vocabulary with more everyday personal items. Remember to identify their gender.",
+        "examples": [
+          {
+            "arabic": "مِفتاح",
+            "english": "key",
+            "transliteration": "miftāḥ"
+          },
+          {
+            "arabic": "هاتِف",
+            "english": "phone",
+            "transliteration": "hātif"
+          },
+          {
+            "arabic": "مِحْفَظَة",
+            "english": "wallet",
+            "transliteration": "miḥfaẓah"
+          },
+          {
+            "arabic": "ساعَة",
+            "english": "watch / clock",
+            "transliteration": "sāʿah"
+          }
+        ],
+        "audioText": "مِفتاح، هاتِف، مِحْفَظَة، ساعَة."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ما ذلك؟ ذلك هاتِف.",
+        "english": "What is that? That is a phone.",
+        "transliteration": "Mā dhālika? Dhālika hātif."
+      },
+      "context": "Asking about a masculine object (phone) further away and answering."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ما تلك؟ تلك مِحْفَظَة.",
+        "english": "What is that? That is a wallet.",
+        "transliteration": "Mā tilka? Tilka miḥfaẓah."
+      },
+      "context": "Asking about a feminine object (wallet) further away and answering."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هذا مِفتاح وتلك ساعَة.",
+        "english": "This is a key and that is a watch.",
+        "transliteration": "Hādhā miftāḥ wa tilka sāʿah."
+      },
+      "context": "Combining 'this' and 'that' for different genders."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which of these means 'What is that?' (feminine)?",
+      "options": [
+        {
+          "id": "opt_4_a",
+          "text": "ما هذا؟",
+          "isCorrect": false
+        },
+        {
+          "id": "opt_4_b",
+          "text": "ما ذلك؟",
+          "isCorrect": false
+        },
+        {
+          "id": "opt_4_c",
+          "text": "ما تلك؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "opt_4_c",
+      "explanation": "'ما تلك؟' is used for 'What is that?' when referring to a feminine object.",
+      "hint": {
+        "transliteration": "Mā tilka?",
+        "arabic": "ما تلك؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'key'?",
+      "options": [
+        {
+          "id": "opt_5_a",
+          "text": "قَلَم",
+          "isCorrect": false
+        },
+        {
+          "id": "opt_5_b",
+          "text": "مِفتاح",
+          "isCorrect": true
+        },
+        {
+          "id": "opt_5_c",
+          "text": "هاتِف",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "opt_5_b",
+      "explanation": "'مِفتاح' (miftāḥ) means key.",
+      "hint": {
+        "transliteration": "miftāḥ",
+        "arabic": "مِفتاح"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'تلك ___.' (That is a watch.)",
+      "options": [
+        {
+          "id": "opt_6_a",
+          "text": "قَلَم",
+          "isCorrect": false
+        },
+        {
+          "id": "opt_6_b",
+          "text": "كِتاب",
+          "isCorrect": false
+        },
+        {
+          "id": "opt_6_c",
+          "text": "ساعَة",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "opt_6_c",
+      "explanation": "'ساعَة' (sāʿah) is a feminine noun for watch, which matches 'تلك' (tilka).",
+      "hint": {
+        "transliteration": "sāʿah",
+        "arabic": "ساعَة"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Basic Office Furniture"
+        },
+        "text": "Now, let's learn some fundamental furniture items you would find in an office.",
+        "examples": [
+          {
+            "arabic": "مِكتَب",
+            "english": "desk / office",
+            "transliteration": "maktab"
+          },
+          {
+            "arabic": "كُرسي",
+            "english": "chair",
+            "transliteration": "kursī"
+          },
+          {
+            "arabic": "طاوِلَة",
+            "english": "table",
+            "transliteration": "ṭāwilah"
+          }
+        ],
+        "audioText": "مِكتَب، كُرسي، طاوِلَة."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Office Technology"
+        },
+        "text": "These are common technological devices used in an office setting.",
+        "examples": [
+          {
+            "arabic": "حاسوب",
+            "english": "computer",
+            "transliteration": "ḥāsūb"
+          },
+          {
+            "arabic": "شاشَة",
+            "english": "screen",
+            "transliteration": "shāshah"
+          },
+          {
+            "arabic": "طابِعَة",
+            "english": "printer",
+            "transliteration": "ṭābiʿah"
+          }
+        ],
+        "audioText": "حاسوب، شاشَة، طابِعَة."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Office Supplies (Part 1)"
+        },
+        "text": "Here are some basic office supplies that are frequently used.",
+        "examples": [
+          {
+            "arabic": "وَرَق",
+            "english": "paper",
+            "transliteration": "waraq"
+          },
+          {
+            "arabic": "مِلَفّ",
+            "english": "file / folder",
+            "transliteration": "milaff"
+          },
+          {
+            "arabic": "دَبّاسَة",
+            "english": "stapler",
+            "transliteration": "dabbāsah"
+          }
+        ],
+        "audioText": "وَرَق، مِلَفّ، دَبّاسَة."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ما ذلك؟ ذلك حاسوب على مِكتَب.",
+        "english": "What is that? That is a computer on a desk.",
+        "transliteration": "Mā dhālika? Dhālika ḥāsūb ʿalā maktab."
+      },
+      "context": "Asking about a computer (masculine) on a desk (masculine)."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هذه طابِعَة وهذا وَرَق.",
+        "english": "This is a printer and this is paper.",
+        "transliteration": "Hādhihi ṭābiʿah wa hādhā waraq."
+      },
+      "context": "Stating the presence of a feminine printer and masculine paper."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هذا كُرسي وتلك طاوِلَة.",
+        "english": "This is a chair and that is a table.",
+        "transliteration": "Hādhā kursī wa tilka ṭāwilah."
+      },
+      "context": "Identifying a chair (masculine) and a table (feminine)."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'computer'?",
+      "options": [
+        {
+          "id": "opt_7_a",
+          "text": "مِكتَب",
+          "isCorrect": false
+        },
+        {
+          "id": "opt_7_b",
+          "text": "طابِعَة",
+          "isCorrect": false
+        },
+        {
+          "id": "opt_7_c",
+          "text": "حاسوب",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "opt_7_c",
+      "explanation": "'حاسوب' (ḥāsūb) is the Arabic word for computer.",
+      "hint": {
+        "transliteration": "ḥāsūb",
+        "arabic": "حاسوب"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'chair'?",
+      "options": [
+        {
+          "id": "opt_8_a",
+          "text": "كُرسي",
+          "isCorrect": true
+        },
+        {
+          "id": "opt_8_b",
+          "text": "طاوِلَة",
+          "isCorrect": false
+        },
+        {
+          "id": "opt_8_c",
+          "text": "مِلَفّ",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "opt_8_a",
+      "explanation": "'كُرسي' (kursī) is the Arabic word for chair.",
+      "hint": {
+        "transliteration": "kursī",
+        "arabic": "كُرسي"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'هذا ___.' (This is paper.)",
+      "options": [
+        {
+          "id": "opt_9_a",
+          "text": "دَبّاسَة",
+          "isCorrect": false
+        },
+        {
+          "id": "opt_9_b",
+          "text": "وَرَق",
+          "isCorrect": true
+        },
+        {
+          "id": "opt_9_c",
+          "text": "شاشَة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "opt_9_b",
+      "explanation": "'وَرَق' (waraq) is a masculine noun for paper, fitting 'هذا'.",
+      "hint": {
+        "transliteration": "waraq",
+        "arabic": "وَرَق"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Office Supplies (Part 2)"
+        },
+        "text": "More stationery items commonly found in offices or for study.",
+        "examples": [
+          {
+            "arabic": "مِسطَرَة",
+            "english": "ruler",
+            "transliteration": "misṭarah"
+          },
+          {
+            "arabic": "مِمْحاة",
+            "english": "eraser",
+            "transliteration": "mimḥāh"
+          },
+          {
+            "arabic": "قَلَم رَصاص",
+            "english": "pencil",
+            "transliteration": "qalam raṣāṣ"
+          }
+        ],
+        "audioText": "مِسطَرَة، مِمْحاة، قَلَم رَصاص."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Office Supplies (Part 3)"
+        },
+        "text": "A few more essential items for your workspace.",
+        "examples": [
+          {
+            "arabic": "دَفْتَر",
+            "english": "notebook",
+            "transliteration": "daftar"
+          },
+          {
+            "arabic": "مِقصّ",
+            "english": "scissors",
+            "transliteration": "miqaṣṣ"
+          },
+          {
+            "arabic": "لَوْحَة",
+            "english": "board / tablet",
+            "transliteration": "lawḥah"
+          }
+        ],
+        "audioText": "دَفْتَر، مِقصّ، لَوْحَة."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking and Answering about Objects"
+        },
+        "text": "Let's combine our question words and vocabulary to form complete questions and answers.",
+        "examples": [
+          {
+            "arabic": "ما هذا؟ هذا قَلَم رَصاص.",
+            "english": "What is this? This is a pencil.",
+            "transliteration": "Mā hādhā? Hādhā qalam raṣāṣ."
+          },
+          {
+            "arabic": "ما تلك؟ تلك مِسطَرَة.",
+            "english": "What is that? That is a ruler.",
+            "transliteration": "Mā tilka? Tilka misṭarah."
+          },
+          {
+            "arabic": "ما هذه؟ هذه مِمْحاة.",
+            "english": "What is this? This is an eraser.",
+            "transliteration": "Mā hādhihi? Hādhihi mimḥāh."
+          }
+        ],
+        "audioText": "ما هذا؟ هذا قَلَم رَصاص. ما تلك؟ تلك مِسطَرَة. ما هذه؟ هذه مِمْحاة."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هذا دَفْتَر ومِقصّ.",
+        "english": "This is a notebook and scissors.",
+        "transliteration": "Hādhā daftar wa miqaṣṣ."
+      },
+      "context": "Identifying a notebook (masculine) and scissors (masculine)."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ما ذلك؟ ذلك قَلَم رَصاص.",
+        "english": "What is that? That is a pencil.",
+        "transliteration": "Mā dhālika? Dhālika qalam raṣāṣ."
+      },
+      "context": "Asking about a pencil (masculine) further away and answering."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هذه مِسطَرَة وتلك مِمْحاة.",
+        "english": "This is a ruler and that is an eraser.",
+        "transliteration": "Hādhihi misṭarah wa tilka mimḥāh."
+      },
+      "context": "Identifying a ruler (feminine) and an eraser (feminine)."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'ruler'?",
+      "options": [
+        {
+          "id": "opt_10_a",
+          "text": "دَفْتَر",
+          "isCorrect": false
+        },
+        {
+          "id": "opt_10_b",
+          "text": "مِسطَرَة",
+          "isCorrect": true
+        },
+        {
+          "id": "opt_10_c",
+          "text": "مِقصّ",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "opt_10_b",
+      "explanation": "'مِسطَرَة' (misṭarah) is the Arabic word for ruler, which is feminine.",
+      "hint": {
+        "transliteration": "misṭarah",
+        "arabic": "مِسطَرَة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'notebook'?",
+      "options": [
+        {
+          "id": "opt_11_a",
+          "text": "لَوْحَة",
+          "isCorrect": false
+        },
+        {
+          "id": "opt_11_b",
+          "text": "دَفْتَر",
+          "isCorrect": true
+        },
+        {
+          "id": "opt_11_c",
+          "text": "قَلَم رَصاص",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "opt_11_b",
+      "explanation": "'دَفْتَر' (daftar) is the Arabic word for notebook.",
+      "hint": {
+        "transliteration": "daftar",
+        "arabic": "دَفْتَر"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'ما هذه؟ هذه ___.' (This is an eraser.)",
+      "options": [
+        {
+          "id": "opt_12_a",
+          "text": "مِفتاح",
+          "isCorrect": false
+        },
+        {
+          "id": "opt_12_b",
+          "text": "مِمْحاة",
+          "isCorrect": true
+        },
+        {
+          "id": "opt_12_c",
+          "text": "هاتِف",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "opt_12_b",
+      "explanation": "'مِمْحاة' (mimḥāh) is a feminine noun for eraser, matching 'هذه'.",
+      "hint": {
+        "transliteration": "mimḥāh",
+        "arabic": "مِمْحاة"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Possessive Pronouns: My (Masculine Object)"
+        },
+        "text": "To express 'my' ownership for a masculine object, simply add the suffix '-ي' (ī) to the end of the noun. For example, 'قَلَم' (pen) becomes 'قَلَمي' (my pen).",
+        "examples": [
+          {
+            "arabic": "قَلَم → قَلَمي",
+            "english": "pen → my pen",
+            "transliteration": "qalam → qalamī"
+          },
+          {
+            "arabic": "كِتاب → كِتابي",
+            "english": "book → my book",
+            "transliteration": "kitāb → kitābī"
+          },
+          {
+            "arabic": "هذا قَلَمي.",
+            "english": "This is my pen.",
+            "transliteration": "Hādhā qalamī."
+          }
+        ],
+        "audioText": "قَلَم، قَلَمي. كِتاب، كِتابي. هذا قَلَمي."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Possessive Pronouns: My (Feminine Object)"
+        },
+        "text": "For feminine objects ending in 'ـة' (tāʾ marbūṭah), the 'ـة' changes to 'ـتـ' (tāʾ) before adding the possessive suffix 'ـي' (ī). For example, 'حَقِيبَة' (bag) becomes 'حَقِيبَتِي' (my bag).",
+        "examples": [
+          {
+            "arabic": "حَقِيبَة → حَقِيبَتِي",
+            "english": "bag → my bag",
+            "transliteration": "ḥaqībah → ḥaqībatī"
+          },
+          {
+            "arabic": "ساعَة → ساعَتِي",
+            "english": "watch → my watch",
+            "transliteration": "sāʿah → sāʿatī"
+          },
+          {
+            "arabic": "هذه حَقِيبَتِي.",
+            "english": "This is my bag.",
+            "transliteration": "Hādhihi ḥaqībatī."
+          }
+        ],
+        "audioText": "حَقِيبَة، حَقِيبَتِي. ساعَة، ساعَتِي. هذه حَقِيبَتِي."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Review: Asking and Stating Possession"
+        },
+        "text": "Let's put everything together. Practice asking about objects and stating that they belong to you.",
+        "examples": [
+          {
+            "arabic": "ما هذا؟ هذا كِتابي.",
+            "english": "What is this? This is my book.",
+            "transliteration": "Mā hādhā? Hādhā kitābī."
+          },
+          {
+            "arabic": "ما هذه؟ هذه ساعَتِي.",
+            "english": "What is this? This is my watch.",
+            "transliteration": "Mā hādhihi? Hādhihi sāʿatī."
+          },
+          {
+            "arabic": "ما ذلك؟ ذلك هاتِفي.",
+            "english": "What is that? That is my phone.",
+            "transliteration": "Mā dhālika? Dhālika hātifī."
+          },
+          {
+            "arabic": "ما تلك؟ تلك حَقِيبَتِي.",
+            "english": "What is that? That is my bag.",
+            "transliteration": "Mā tilka? Tilka ḥaqībatī."
+          }
+        ],
+        "audioText": "ما هذا؟ هذا كِتابي. ما هذه؟ هذه ساعَتِي. ما ذلك؟ ذلك هاتِفي. ما تلك؟ تلك حَقِيبَتِي."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هذا قَلَمي على مِكتَبي.",
+        "english": "This is my pen on my desk.",
+        "transliteration": "Hādhā qalamī ʿalā maktabī."
+      },
+      "context": "Combining possessive pronouns for both pen and desk."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "تلك حَقِيبَتِي.",
+        "english": "That is my bag.",
+        "transliteration": "Tilka ḥaqībatī."
+      },
+      "context": "Stating possession for a feminine object further away."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هذا هاتِفي.",
+        "english": "This is my phone.",
+        "transliteration": "Hādhā hātifī."
+      },
+      "context": "Stating possession for a masculine object."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'my book'?",
+      "options": [
+        {
+          "id": "opt_13_a",
+          "text": "كِتاب",
+          "isCorrect": false
+        },
+        {
+          "id": "opt_13_b",
+          "text": "كِتابي",
+          "isCorrect": true
+        },
+        {
+          "id": "opt_13_c",
+          "text": "كِتابها",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "opt_13_b",
+      "explanation": "To say 'my book' (masculine noun 'كتاب'), you add the suffix '-ي' (ī), making it 'كتابي'.",
+      "hint": {
+        "transliteration": "kitābī",
+        "arabic": "كِتابي"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'my bag'?",
+      "options": [
+        {
+          "id": "opt_14_a",
+          "text": "حَقِيبَة",
+          "isCorrect": false
+        },
+        {
+          "id": "opt_14_b",
+          "text": "حَقِيبَتِي",
+          "isCorrect": true
+        },
+        {
+          "id": "opt_14_c",
+          "text": "حَقِيبَته",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "opt_14_b",
+      "explanation": "For feminine nouns ending in 'ـة' like 'حقيبة', it changes to 'ـتـ' before adding 'ـي', making it 'حَقِيبَتِي'.",
+      "hint": {
+        "transliteration": "ḥaqībatī",
+        "arabic": "حَقِيبَتِي"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'هذه ___.' (This is my watch.)",
+      "options": [
+        {
+          "id": "opt_15_a",
+          "text": "ساعَة",
+          "isCorrect": false
+        },
+        {
+          "id": "opt_15_b",
+          "text": "ساعَتِي",
+          "isCorrect": true
+        },
+        {
+          "id": "opt_15_c",
+          "text": "ساعَتك",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "opt_15_b",
+      "explanation": "'ساعَتِي' (sāʿatī) means 'my watch'. 'ساعة' is feminine, so 'ـة' becomes 'ـتـ' before adding 'ـي'.",
+      "hint": {
+        "transliteration": "sāʿatī",
+        "arabic": "ساعَتِي"
+      }
+    }
+  ]
+}
