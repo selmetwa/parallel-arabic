@@ -1,0 +1,880 @@
+{
+  "topicId": "m4-t2",
+  "title": "At the Supermarket",
+  "dialect": "darija",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Welcome to the Supermarket"
+        },
+        "text": "When you enter a supermarket in Egypt, you might hear or say greetings. Let's learn the basic phrase for 'supermarket' and a common greeting.",
+        "examples": [
+          {
+            "arabic": "سوبر ماركت",
+            "english": "Supermarket",
+            "transliteration": "Super market"
+          },
+          {
+            "arabic": "أهلاً وسهلاً",
+            "english": "Welcome",
+            "transliteration": "Ahlan wa sahlan"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Where is...?'"
+        },
+        "text": "To find items, you'll need to ask where things are. The word 'where' is simple and very useful.",
+        "examples": [
+          {
+            "arabic": "فين؟",
+            "english": "Where?",
+            "transliteration": "Feen?"
+          },
+          {
+            "arabic": "فين قسم الفاكهة؟",
+            "english": "Where is the fruit section?",
+            "transliteration": "Feen qism el-fākha?"
+          },
+          {
+            "arabic": "فين قسم الخضار؟",
+            "english": "Where is the vegetable section?",
+            "transliteration": "Feen qism el-khoḍār?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing 'I want...'"
+        },
+        "text": "To ask for an item, you say 'I want'. This phrase changes slightly based on your gender. Note the subtle difference in pronunciation for male vs. female.",
+        "examples": [
+          {
+            "arabic": "أنا عايز",
+            "english": "I want (male)",
+            "transliteration": "Ana ʿayez"
+          },
+          {
+            "arabic": "أنا عايزة",
+            "english": "I want (female)",
+            "transliteration": "Ana ʿayza"
+          },
+          {
+            "arabic": "أنا عايز خبز",
+            "english": "I want bread (male)",
+            "transliteration": "Ana ʿayez khobz"
+          },
+          {
+            "arabic": "أنا عايزة لبن",
+            "english": "I want milk (female)",
+            "transliteration": "Ana ʿayza laban"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أهلاً وسهلاً في السوبر ماركت.",
+        "english": "Welcome to the supermarket.",
+        "transliteration": "Ahlan wa sahlan fil super market."
+      },
+      "context": "A welcoming phrase at the entrance."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "فين قسم الخضار؟ أنا عايزة طماطم.",
+        "english": "Where is the vegetable section? I want tomatoes (female).",
+        "transliteration": "Feen qism el-khoḍār? Ana ʿayza ṭamāṭem."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'Where is...?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "أهلاً وسهلاً",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "فين؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أنا عايز",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'فين؟' is used to ask 'where?'.",
+      "hint": {
+        "transliteration": "Feen?",
+        "arabic": "فين؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How does a female say 'I want'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أنا عايز",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أنا عايزة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أهلاً",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'أنا عايزة' is used by a female to say 'I want'.",
+      "hint": {
+        "transliteration": "Ana ʿayza",
+        "arabic": "أنا عايزة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: ___ وسهلاً في السوبر ماركت.",
+      "options": [
+        {
+          "id": "a",
+          "text": "أهلاً",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "فين",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "أنا",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "To say 'Welcome to the supermarket', you use 'أهلاً وسهلاً'.",
+      "hint": {
+        "transliteration": "Ahlan",
+        "arabic": "أهلاً"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Fruits and Vegetables"
+        },
+        "text": "Fruits and vegetables are a staple. Knowing their names will help you shop efficiently.",
+        "examples": [
+          {
+            "arabic": "فاكهة",
+            "english": "Fruit",
+            "transliteration": "Fākha"
+          },
+          {
+            "arabic": "خضار",
+            "english": "Vegetables",
+            "transliteration": "Khoḍār"
+          },
+          {
+            "arabic": "طماطم",
+            "english": "Tomatoes",
+            "transliteration": "Ṭamāṭem"
+          },
+          {
+            "arabic": "تفاح",
+            "english": "Apples",
+            "transliteration": "Tuffāḥ"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'How much?' (for quantity/price)"
+        },
+        "text": "The word 'كام؟' (kām?) is versatile and means both 'how many/much?' and 'what's the price?'. Context usually makes it clear.",
+        "examples": [
+          {
+            "arabic": "كام؟",
+            "english": "How much? / How many?",
+            "transliteration": "Kām?"
+          },
+          {
+            "arabic": "كيلو الطماطم بكام؟",
+            "english": "How much is a kilo of tomatoes?",
+            "transliteration": "Kīlo eṭ-ṭamāṭem bi-kām?"
+          },
+          {
+            "arabic": "عايز كام كيلو تفاح؟",
+            "english": "How many kilos of apples do you want? (male)",
+            "transliteration": "ʿAyez kām kīlo tuffāḥ?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Specifying Quantity"
+        },
+        "text": "When buying items by weight, you'll need phrases for 'kilo' or 'half a kilo'.",
+        "examples": [
+          {
+            "arabic": "كيلو",
+            "english": "Kilo",
+            "transliteration": "Kīlo"
+          },
+          {
+            "arabic": "نص كيلو",
+            "english": "Half a kilo",
+            "transliteration": "Noṣṣ kīlo"
+          },
+          {
+            "arabic": "عايز كيلو تفاح",
+            "english": "I want a kilo of apples (male)",
+            "transliteration": "ʿAyez kīlo tuffāḥ"
+          },
+          {
+            "arabic": "عايزة نص كيلو طماطم",
+            "english": "I want half a kilo of tomatoes (female)",
+            "transliteration": "ʿAyza noṣṣ kīlo ṭamāṭem"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا عايز كيلو طماطم ونص كيلو تفاح.",
+        "english": "I want a kilo of tomatoes and half a kilo of apples (male).",
+        "transliteration": "Ana ʿayez kīlo ṭamāṭem w noṣṣ kīlo tuffāḥ."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "كيلو الفاكهة بكام؟",
+        "english": "How much is a kilo of fruit?",
+        "transliteration": "Kīlo el-fākha bi-kām?"
+      },
+      "context": "Asking the price per kilo of fruit."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'vegetables'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "فاكهة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "خضار",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "طماطم",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'خضار' means vegetables.",
+      "hint": {
+        "transliteration": "Khoḍār",
+        "arabic": "خضار"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: عايز ___ تفاح.",
+      "options": [
+        {
+          "id": "a",
+          "text": "فاكهة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كيلو",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بكام",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "To specify a quantity like 'a kilo', use 'كيلو'.",
+      "hint": {
+        "transliteration": "Kīlo",
+        "arabic": "كيلو"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'How much?' (for quantity or price)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أهلاً",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "فين",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "كام؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'كام؟' is used for 'how much?' or 'how many?'.",
+      "hint": {
+        "transliteration": "Kām?",
+        "arabic": "كام؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Dairy Products"
+        },
+        "text": "The dairy section (منتجات الألبان) is another common stop. Let's learn some key terms.",
+        "examples": [
+          {
+            "arabic": "منتجات الألبان",
+            "english": "Dairy products",
+            "transliteration": "Montagāt el-albān"
+          },
+          {
+            "arabic": "جبنة",
+            "english": "Cheese",
+            "transliteration": "Gebna"
+          },
+          {
+            "arabic": "زبادي",
+            "english": "Yogurt",
+            "transliteration": "Zabādi"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Do you have...?'"
+        },
+        "text": "To inquire if an item is available, you can use 'فيه عندكو...؟'. This is a polite way to check stock.",
+        "examples": [
+          {
+            "arabic": "فيه عندكو...؟",
+            "english": "Do you have...?",
+            "transliteration": "Fīh ʿandoko...?"
+          },
+          {
+            "arabic": "فيه عندكو جبنة؟",
+            "english": "Do you have cheese?",
+            "transliteration": "Fīh ʿandoko gebna?"
+          },
+          {
+            "arabic": "فيه عندكو لبن طازج؟",
+            "english": "Do you have fresh milk?",
+            "transliteration": "Fīh ʿandoko laban ṭāzeg?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "What is the price of...?"
+        },
+        "text": "A more direct way to ask for the price of a specific item is 'سعر الـ... كام؟'.",
+        "examples": [
+          {
+            "arabic": "سعر الـ... كام؟",
+            "english": "What is the price of...?",
+            "transliteration": "Seʿr el-... kām?"
+          },
+          {
+            "arabic": "سعر الجبنة كام؟",
+            "english": "What is the price of the cheese?",
+            "transliteration": "Seʿr el-gebna kām?"
+          },
+          {
+            "arabic": "سعر الزبادي كام؟",
+            "english": "What is the price of the yogurt?",
+            "transliteration": "Seʿr ez-zabādi kām?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "فين قسم منتجات الألبان؟ عايزة جبنة وزبادي.",
+        "english": "Where is the dairy products section? I want cheese and yogurt (female).",
+        "transliteration": "Feen qism montagāt el-albān? ʿAyza gebna w zabādi."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "فيه عندكو لبن؟ سعر اللبن كام؟",
+        "english": "Do you have milk? What is the price of the milk?",
+        "transliteration": "Fīh ʿandoko laban? Seʿr el-laban kām?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'Do you have...?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "أنا عايز",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "فيه عندكو...؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كام؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'فيه عندكو...؟' is used to ask about availability.",
+      "hint": {
+        "transliteration": "Fīh ʿandoko...?",
+        "arabic": "فيه عندكو...؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: ___ الجبنة كام؟",
+      "options": [
+        {
+          "id": "a",
+          "text": "قسم",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "زبادي",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "سعر الـ",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "To ask 'What is the price of...?', use 'سعر الـ... كام؟'.",
+      "hint": {
+        "transliteration": "Seʿr el-",
+        "arabic": "سعر الـ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'cheese'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "لبن",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "جبنة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "زبادي",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'جبنة' means cheese.",
+      "hint": {
+        "transliteration": "Gebna",
+        "arabic": "جبنة"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "The Checkout Counter"
+        },
+        "text": "After gathering your items, you head to the checkout counter. This is called 'الكاشير' or 'الحساب'.",
+        "examples": [
+          {
+            "arabic": "الكاشير",
+            "english": "The cashier / checkout",
+            "transliteration": "El-kashīr"
+          },
+          {
+            "arabic": "الحساب",
+            "english": "The bill / total",
+            "transliteration": "El-ḥesāb"
+          },
+          {
+            "arabic": "أنا رايح الكاشير",
+            "english": "I'm going to the cashier (male)",
+            "transliteration": "Ana rāyeḥ el-kashīr"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for the Total Price"
+        },
+        "text": "Once at the cashier, you'll want to know the total amount to pay. You can simply ask 'الحساب كام؟'.",
+        "examples": [
+          {
+            "arabic": "الحساب كام؟",
+            "english": "How much is the bill? / What's the total?",
+            "transliteration": "El-ḥesāb kām?"
+          },
+          {
+            "arabic": "ممكن أعرف الحساب كام؟",
+            "english": "Can I know the total? (polite)",
+            "transliteration": "Momken aʿraf el-ḥesāb kām?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "I will pay with..."
+        },
+        "text": "Specify your payment method. Cash and card are common options.",
+        "examples": [
+          {
+            "arabic": "هدفع كاش",
+            "english": "I will pay with cash",
+            "transliteration": "Hadfaʿ kāsh"
+          },
+          {
+            "arabic": "هدفع بالفيزا",
+            "english": "I will pay with Visa (card)",
+            "transliteration": "Hadfaʿ bel-fīza"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الحساب كام؟ هدفع كاش.",
+        "english": "What's the total? I will pay with cash.",
+        "transliteration": "El-ḥesāb kām? Hadfaʿ kāsh."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا رايحة الكاشير عشان أدفع بالفيزا.",
+        "english": "I'm going to the cashier to pay with Visa (female).",
+        "transliteration": "Ana rāyeḥa el-kashīr ʿashān adfaʿ bel-fīza."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'cashier' or 'checkout'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "الحساب",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الكاشير",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بالفيزا",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'الكاشير' refers to the cashier or checkout counter.",
+      "hint": {
+        "transliteration": "El-kashīr",
+        "arabic": "الكاشير"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'What's the total?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "هدفع كاش",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الحساب كام؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أنا رايح",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'الحساب كام؟' is how you ask for the total bill.",
+      "hint": {
+        "transliteration": "El-ḥesāb kām?",
+        "arabic": "الحساب كام؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: هدفع ___.",
+      "options": [
+        {
+          "id": "a",
+          "text": "الفاكهة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بالفيزا",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "فين",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "To say 'I will pay with Visa', you say 'هدفع بالفيزا'.",
+      "hint": {
+        "transliteration": "Bel-fīza",
+        "arabic": "بالفيزا"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Thank You and You're Welcome"
+        },
+        "text": "Politeness goes a long way. Always remember to say 'thank you' and know how to respond to it.",
+        "examples": [
+          {
+            "arabic": "شكراً",
+            "english": "Thank you",
+            "transliteration": "Shokran"
+          },
+          {
+            "arabic": "عفواً",
+            "english": "You're welcome",
+            "transliteration": "ʿAfwan"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Everything is Fine / Okay"
+        },
+        "text": "When asked if you need anything else or if everything is okay, these responses are useful.",
+        "examples": [
+          {
+            "arabic": "تمام",
+            "english": "Okay / Fine / Alright",
+            "transliteration": "Tamām"
+          },
+          {
+            "arabic": "حاضر",
+            "english": "Okay / Will do (obediently)",
+            "transliteration": "Ḥāḍer"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Goodbye"
+        },
+        "text": "A common way to say goodbye in Egypt, which literally means 'with peace'.",
+        "examples": [
+          {
+            "arabic": "مع السلامة",
+            "english": "Goodbye / Go in peace",
+            "transliteration": "Maʿa s-salāma"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شكراً جزيلاً. تمام، مع السلامة.",
+        "english": "Thank you very much. Okay, goodbye.",
+        "transliteration": "Shokran gazīlan. Tamām, maʿa s-salāma."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "عفواً، كل حاجة تمام؟",
+        "english": "You're welcome, is everything alright?",
+        "transliteration": "ʿAfwan, kol ḥāga tamām?"
+      },
+      "context": "A cashier responding to 'thank you' and asking if the customer is satisfied."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'Thank you'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "عفواً",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شكراً",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "تمام",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'شكراً' is the Arabic word for 'thank you'.",
+      "hint": {
+        "transliteration": "Shokran",
+        "arabic": "شكراً"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'Goodbye'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "حاضر",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مع السلامة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "تمام",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'مع السلامة' is a common way to say goodbye.",
+      "hint": {
+        "transliteration": "Maʿa s-salāma",
+        "arabic": "مع السلامة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the conversation: 'شكراً!' - '___'",
+      "options": [
+        {
+          "id": "a",
+          "text": "أهلاً",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "عفواً",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "فين؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "The typical response to 'شكراً' (thank you) is 'عفواً' (you're welcome).",
+      "hint": {
+        "transliteration": "ʿAfwan",
+        "arabic": "عفواً"
+      }
+    }
+  ]
+}

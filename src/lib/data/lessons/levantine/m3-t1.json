@@ -1,0 +1,1003 @@
+{
+  "topicId": "m3-t1",
+  "title": "Asking about numbers, telephone, passport, etc.",
+  "dialect": "levantine",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Numbers Zero to Five",
+          "arabic": "الأرقام من صفر لخمسة"
+        },
+        "text": "Let's start by learning the numbers from zero to five in Levantine Arabic. These are fundamental for daily conversations.",
+        "examples": [
+          {
+            "arabic": "صفر",
+            "english": "zero",
+            "transliteration": "sifer"
+          },
+          {
+            "arabic": "واحد",
+            "english": "one",
+            "transliteration": "waaḥed"
+          },
+          {
+            "arabic": "تنين",
+            "english": "two",
+            "transliteration": "tneen"
+          },
+          {
+            "arabic": "تلاتة",
+            "english": "three",
+            "transliteration": "tlaate"
+          },
+          {
+            "arabic": "أربعة",
+            "english": "four",
+            "transliteration": "arba'a"
+          },
+          {
+            "arabic": "خمسة",
+            "english": "five",
+            "transliteration": "khamse"
+          }
+        ],
+        "audioText": "صفر، واحد، تنين، تلاتة، أربعة، خمسة."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Numbers Six to Ten",
+          "arabic": "الأرقام من ستة لعشرة"
+        },
+        "text": "Now, let's learn the numbers from six to ten. Practice saying them aloud to get comfortable with their pronunciation.",
+        "examples": [
+          {
+            "arabic": "ستة",
+            "english": "six",
+            "transliteration": "sette"
+          },
+          {
+            "arabic": "سبعة",
+            "english": "seven",
+            "transliteration": "sab'a"
+          },
+          {
+            "arabic": "تمنية",
+            "english": "eight",
+            "transliteration": "tmanye"
+          },
+          {
+            "arabic": "تسعة",
+            "english": "nine",
+            "transliteration": "tes'a"
+          },
+          {
+            "arabic": "عشرة",
+            "english": "ten",
+            "transliteration": "'ashara"
+          }
+        ],
+        "audioText": "ستة، سبعة، تمنية، تسعة، عشرة."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking \"How many?\"",
+          "arabic": "السؤال عن الكمية (قَدّيش؟)"
+        },
+        "text": "To ask \"How many?\" or \"How much?\" in Levantine Arabic, we use the word \"قَدّيش؟\". This is a very useful question.",
+        "examples": [
+          {
+            "arabic": "قَدّيش؟",
+            "english": "How many? / How much?",
+            "transliteration": "addish?"
+          },
+          {
+            "arabic": "قَدّيش عمركَ؟",
+            "english": "How old are you? (m.)",
+            "transliteration": "addish 'omrak?"
+          },
+          {
+            "arabic": "قَدّيش عمركِ؟",
+            "english": "How old are you? (f.)",
+            "transliteration": "addish 'omrik?"
+          },
+          {
+            "arabic": "قَدّيش معك مصاري؟",
+            "english": "How much money do you have?",
+            "transliteration": "addish ma'ak/ik masari?"
+          }
+        ],
+        "audioText": "قَدّيش؟ قَدّيش عمركَ؟ قَدّيش عمركِ؟ قَدّيش معك مصاري؟"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "قَدّيش عمركِ؟",
+        "english": "How old are you? (f.)",
+        "transliteration": "addish 'omrik?"
+      },
+      "context": "Asking a female about her age."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "معي خمسة ليرات.",
+        "english": "I have five pounds (lira).",
+        "transliteration": "ma'i khamse leeraat."
+      },
+      "context": "Using a number in a sentence."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'four'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "تلاتة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أربعة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "واحد",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'أربعة' means four.",
+      "hint": {
+        "transliteration": "arba'a",
+        "arabic": "أربعة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'How many?' or 'How much?'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أهلاً",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شكراً",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "قَدّيش؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'قَدّيش؟' is used to ask 'How many?' or 'How much?'.",
+      "hint": {
+        "transliteration": "addish?",
+        "arabic": "قَدّيش؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "If you want to say 'eight' in Arabic, which word would you use?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ستة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "تسعة",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "تمنية",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'تمنية' is the Levantine Arabic word for eight.",
+      "hint": {
+        "transliteration": "tmanye",
+        "arabic": "تمنية"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Numbers Eleven to Twenty",
+          "arabic": "الأرقام من إحداش لعشرين"
+        },
+        "text": "Let's expand our number vocabulary to include numbers from eleven to twenty. These numbers follow a similar pattern.",
+        "examples": [
+          {
+            "arabic": "إحداش",
+            "english": "eleven",
+            "transliteration": "iḥdash"
+          },
+          {
+            "arabic": "اتناش",
+            "english": "twelve",
+            "transliteration": "itnash"
+          },
+          {
+            "arabic": "تلتاش",
+            "english": "thirteen",
+            "transliteration": "taltash"
+          },
+          {
+            "arabic": "أربعتاش",
+            "english": "fourteen",
+            "transliteration": "arba'tash"
+          },
+          {
+            "arabic": "خمسطاش",
+            "english": "fifteen",
+            "transliteration": "khamstash"
+          },
+          {
+            "arabic": "ستاش",
+            "english": "sixteen",
+            "transliteration": "sittash"
+          },
+          {
+            "arabic": "سبعتاش",
+            "english": "seventeen",
+            "transliteration": "sab'atash"
+          },
+          {
+            "arabic": "تمنتاش",
+            "english": "eighteen",
+            "transliteration": "tmintash"
+          },
+          {
+            "arabic": "تسعتاش",
+            "english": "nineteen",
+            "transliteration": "tis'atash"
+          },
+          {
+            "arabic": "عشرين",
+            "english": "twenty",
+            "transliteration": "'ishreen"
+          }
+        ],
+        "audioText": "إحداش، اتناش، تلتاش، أربعتاش، خمسطاش، ستاش، سبعتاش، تمنتاش، تسعتاش، عشرين."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "\"Your number\" (رقمك)",
+          "arabic": "رقمَك / رقمِك"
+        },
+        "text": "The word for \"number\" is \"رقم\". To say \"your number\", we add the possessive suffix. Use \"رقمكَ\" for male and \"رقمكِ\" for female. Notice the slight difference in the last vowel sound.",
+        "examples": [
+          {
+            "arabic": "رقم",
+            "english": "number",
+            "transliteration": "raqm"
+          },
+          {
+            "arabic": "رقمَك",
+            "english": "your number (m.)",
+            "transliteration": "raqmak",
+            "diacriticalNotes": "The 'kaf' has a fatḥa for masculine."
+          },
+          {
+            "arabic": "رقمِك",
+            "english": "your number (f.)",
+            "transliteration": "raqmik",
+            "diacriticalNotes": "The 'kaf' has a kasra for feminine."
+          }
+        ],
+        "audioText": "رقم. رقمَك. رقمِك."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for Phone Number",
+          "arabic": "كيف تسأل عن رقم التليفون؟"
+        },
+        "text": "To ask someone for their phone number, you can say \"شو رقم تليفونكَ؟\" for a male or \"شو رقم تليفونكِ؟\" for a female. \"تليفون\" means telephone.",
+        "examples": [
+          {
+            "arabic": "تليفون",
+            "english": "telephone / phone",
+            "transliteration": "telephon"
+          },
+          {
+            "arabic": "شو رقم تليفونكَ؟",
+            "english": "What is your phone number? (m.)",
+            "transliteration": "shu raqm telephonak?"
+          },
+          {
+            "arabic": "شو رقم تليفونكِ؟",
+            "english": "What is your phone number? (f.)",
+            "transliteration": "shu raqm telephonik?"
+          }
+        ],
+        "audioText": "تليفون. شو رقم تليفونكَ؟ شو رقم تليفونكِ؟"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "عندي عشرين دينار.",
+        "english": "I have twenty dinars.",
+        "transliteration": "'andi 'ishreen deenar."
+      },
+      "context": "Using the number twenty in a simple statement."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شو رقم تليفونكَ يا أحمد؟",
+        "english": "What is your phone number, Ahmed?",
+        "transliteration": "shu raqm telephonak ya Ahmed?"
+      },
+      "context": "Asking a male (Ahmed) for his phone number."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'fifteen' in Levantine Arabic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "خمسة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "خمسطاش",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "عشرين",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'خمسطاش' means fifteen.",
+      "hint": {
+        "transliteration": "khamstash",
+        "arabic": "خمسطاش"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'number'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "تليفون",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "رقم",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "اسم",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'رقم' is the Arabic word for number.",
+      "hint": {
+        "transliteration": "raqm",
+        "arabic": "رقم"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: شو ___ تليفونكِ؟ (What is your phone number? - f.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "عمر",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "رقم",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "اسم",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "To ask for a phone number, you use 'رقم'.",
+      "hint": {
+        "transliteration": "raqm",
+        "arabic": "رقم"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Passport",
+          "arabic": "جواز سفر"
+        },
+        "text": "When traveling internationally, your most important document is your \"جواز سفر\", which means passport. It literally translates to 'travel permit'.",
+        "examples": [
+          {
+            "arabic": "جواز",
+            "english": "permit / license",
+            "transliteration": "jawaz"
+          },
+          {
+            "arabic": "سفر",
+            "english": "travel",
+            "transliteration": "safar"
+          },
+          {
+            "arabic": "جواز سفر",
+            "english": "passport",
+            "transliteration": "jawaz safar"
+          }
+        ],
+        "audioText": "جواز. سفر. جواز سفر."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "ID Card",
+          "arabic": "هوية"
+        },
+        "text": "An \"هوية\" is an identification card, typically a national ID card. It's often required for local identification.",
+        "examples": [
+          {
+            "arabic": "هوية",
+            "english": "identity / ID card",
+            "transliteration": "hawiyya"
+          },
+          {
+            "arabic": "معي هوية",
+            "english": "I have an ID card.",
+            "transliteration": "ma'i hawiyya"
+          }
+        ],
+        "audioText": "هوية. معي هوية."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Visa",
+          "arabic": "فيزا"
+        },
+        "text": "Many countries require a \"فيزا\" for entry, which means visa. This is a common word, similar to English.",
+        "examples": [
+          {
+            "arabic": "فيزا",
+            "english": "visa",
+            "transliteration": "feeza"
+          },
+          {
+            "arabic": "بدي فيزا",
+            "english": "I need a visa.",
+            "transliteration": "beddi feeza"
+          }
+        ],
+        "audioText": "فيزا. بدي فيزا."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "لازم يكون معك جواز سفر.",
+        "english": "You must have a passport.",
+        "transliteration": "lazem ykoon ma'ak jawaz safar."
+      },
+      "context": "Emphasizing the necessity of a passport."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بدي أقدم على فيزا جديدة.",
+        "english": "I want to apply for a new visa.",
+        "transliteration": "beddi aqaddem 'ala feeza jdeede."
+      },
+      "context": "Stating a need for a new visa."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'passport'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "هوية",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "فيزا",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "جواز سفر",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'جواز سفر' means passport.",
+      "hint": {
+        "transliteration": "jawaz safar",
+        "arabic": "جواز سفر"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word refers to an 'ID card'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "تليفون",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "هوية",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "عنوان",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'هوية' means ID card.",
+      "hint": {
+        "transliteration": "hawiyya",
+        "arabic": "هوية"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: أنا بحاجة لـ ___ لدخول البلد. (I need a ___ to enter the country.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "فيزا",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "تليفون",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "عشرة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "To enter a country, you often need a 'فيزا' (visa).",
+      "hint": {
+        "transliteration": "feeza",
+        "arabic": "فيزا"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Passport Number",
+          "arabic": "رقم جواز السفر"
+        },
+        "text": "To specifically refer to the number on a passport, we combine \"number\" (رقم) and \"the passport\" (جواز السفر). The definite article \"الـ\" (al-) connects them.",
+        "examples": [
+          {
+            "arabic": "رقم",
+            "english": "number",
+            "transliteration": "raqm"
+          },
+          {
+            "arabic": "جواز السفر",
+            "english": "the passport",
+            "transliteration": "jawaz is-safar"
+          },
+          {
+            "arabic": "رقم جواز السفر",
+            "english": "passport number",
+            "transliteration": "raqm jawaz is-safar"
+          }
+        ],
+        "audioText": "رقم. جواز السفر. رقم جواز السفر."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "ID Number",
+          "arabic": "رقم الهوية"
+        },
+        "text": "Similarly, for an ID number, we say \"رقم الهوية\". Notice how 'the' (الـ) is used to link 'number' and 'ID'.",
+        "examples": [
+          {
+            "arabic": "هوية",
+            "english": "ID card",
+            "transliteration": "hawiyya"
+          },
+          {
+            "arabic": "رقم الهوية",
+            "english": "ID number",
+            "transliteration": "raqm il-hawiyya"
+          },
+          {
+            "arabic": "شو رقم هويتَك؟",
+            "english": "What is your ID number? (m.)",
+            "transliteration": "shu raqm hawiyyatak?"
+          },
+          {
+            "arabic": "شو رقم هويتكِ؟",
+            "english": "What is your ID number? (f.)",
+            "transliteration": "shu raqm hawiyyatik?"
+          }
+        ],
+        "audioText": "هوية. رقم الهوية. شو رقم هويتَك؟ شو رقم هويتكِ؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "\"My number is...\"",
+          "arabic": "رقمي هو..."
+        },
+        "text": "To provide your own number, you say \"رقمي هو...\" followed by the number. \"رقمي\" means \"my number\".",
+        "examples": [
+          {
+            "arabic": "رقمي",
+            "english": "my number",
+            "transliteration": "raqmi"
+          },
+          {
+            "arabic": "رقمي هو خمسة تسعة تمنية صفر.",
+            "english": "My number is 5980.",
+            "transliteration": "raqmi huwwa khamse tis'a tmanye sifer."
+          },
+          {
+            "arabic": "رقم جواز سفري هو...",
+            "english": "My passport number is...",
+            "transliteration": "raqm jawaz safari huwwa..."
+          }
+        ],
+        "audioText": "رقمي. رقمي هو خمسة تسعة تمنية صفر. رقم جواز سفري هو..."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شو رقم جواز سفرَك؟",
+        "english": "What is your passport number? (m.)",
+        "transliteration": "shu raqm jawaz safarak?"
+      },
+      "context": "Asking a male for his passport number."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "رقم هويتي هو واحد تلاتة سبعة اتنين.",
+        "english": "My ID number is 1372.",
+        "transliteration": "raqm hawiyyati huwwa waaḥed tlaate sab'a tneen."
+      },
+      "context": "Stating your own ID number."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'passport number' in Arabic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "رقم التليفون",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "رقم جواز السفر",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "رقم الهوية",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'رقم جواز السفر' means passport number.",
+      "hint": {
+        "transliteration": "raqm jawaz is-safar",
+        "arabic": "رقم جواز السفر"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'my number'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "رقمَك",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "رقمي",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "رقمها",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'رقمي' uses the 'ي' suffix to indicate 'my'.",
+      "hint": {
+        "transliteration": "raqmi",
+        "arabic": "رقمي"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the phrase: رقم ___ (ID number)",
+      "options": [
+        {
+          "id": "a",
+          "text": "التليفون",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "السفر",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "الهوية",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "The full phrase for 'ID number' is 'رقم الهوية'.",
+      "hint": {
+        "transliteration": "il-hawiyya",
+        "arabic": "الهوية"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Email",
+          "arabic": "إيميل"
+        },
+        "text": "\"إيميل\" is the common word for email in Levantine Arabic, directly borrowed from English. It's used in similar contexts.",
+        "examples": [
+          {
+            "arabic": "إيميل",
+            "english": "email",
+            "transliteration": "e-mail"
+          },
+          {
+            "arabic": "شو إيميلكَ؟",
+            "english": "What is your email? (m.)",
+            "transliteration": "shu e-mailak?"
+          },
+          {
+            "arabic": "شو إيميلكِ؟",
+            "english": "What is your email? (f.)",
+            "transliteration": "shu e-mailik?"
+          }
+        ],
+        "audioText": "إيميل. شو إيميلكَ؟ شو إيميلكِ؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Address",
+          "arabic": "عنوان"
+        },
+        "text": "The word \"عنوان\" refers to an address, whether a residential address or an email address.",
+        "examples": [
+          {
+            "arabic": "عنوان",
+            "english": "address",
+            "transliteration": "unwaan"
+          },
+          {
+            "arabic": "شو عنوانكَ؟",
+            "english": "What is your address? (m.)",
+            "transliteration": "shu 'unwanak?"
+          },
+          {
+            "arabic": "شو عنوانكِ؟",
+            "english": "What is your address? (f.)",
+            "transliteration": "shu 'unwanik?"
+          }
+        ],
+        "audioText": "عنوان. شو عنوانكَ؟ شو عنوانكِ؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Polite Request for a Number",
+          "arabic": "كيف تطلب رقم بلطف؟"
+        },
+        "text": "To politely ask someone to give you a number (phone, passport, etc.), you can say \"ممكن تعطيني رقم...؟\" This means \"Can you give me the number of...?\"",
+        "examples": [
+          {
+            "arabic": "ممكن تعطيني رقم تليفونكَ؟",
+            "english": "Can you give me your phone number? (m.)",
+            "transliteration": "mumkin ta'teeni raqm telephonak?"
+          },
+          {
+            "arabic": "ممكن تعطيني رقم جواز السفر؟",
+            "english": "Can you give me the passport number?",
+            "transliteration": "mumkin ta'teeni raqm jawaz is-safar?"
+          }
+        ],
+        "audioText": "ممكن تعطيني رقم تليفونكَ؟ ممكن تعطيني رقم جواز السفر؟"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شو إيميلكِ يا ليلى؟",
+        "english": "What is your email, Laila? (f.)",
+        "transliteration": "shu e-mailik ya Laila?"
+      },
+      "context": "Asking a female (Laila) for her email address."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ممكن تعطيني عنوانَك لو سمحت؟",
+        "english": "Can you give me your address, please? (m.)",
+        "transliteration": "mumkin ta'teeni 'unwanak law samaḥt?"
+      },
+      "context": "Politely asking a male for his address."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "رقمي هو إحداش تسعتاش خمسة.",
+        "english": "My number is 11, 19, 5.",
+        "transliteration": "raqmi huwwa iḥdash tis'atash khamse."
+      },
+      "context": "Stating a number using multiple learned numbers."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'email'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "تليفون",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "إيميل",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "عنوان",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'إيميل' is the word for email.",
+      "hint": {
+        "transliteration": "e-mail",
+        "arabic": "إيميل"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase is a polite way to ask 'Can you give me...?' (to a male)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "شو اسمكَ؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ممكن تعطيني؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "قَدّيش؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'ممكن تعطيني؟' is a polite way to ask for something.",
+      "hint": {
+        "transliteration": "mumkin ta'teeni?",
+        "arabic": "ممكن تعطيني؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: شو ___ بيتكَ؟ (What is your home address? - m.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "رقم",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "عنوان",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "تليفون",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'عنوان' is the word for address.",
+      "hint": {
+        "transliteration": "unwaan",
+        "arabic": "عنوان"
+      }
+    }
+  ]
+}

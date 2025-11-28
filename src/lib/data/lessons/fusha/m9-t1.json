@@ -1,0 +1,967 @@
+{
+  "topicId": "m9-t1",
+  "title": "Social Interactions: Offering, Inviting, Apologies, Gifts",
+  "dialect": "fusha",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Offering Food or Drink"
+        },
+        "text": "Learn how to politely offer food or drink. The phrase \"تَفَضَّل/تَفَضَّلي\" (tafaḍḍal/tafaḍḍalī) is very common, meaning \"please, go ahead\" or \"help yourself\".",
+        "examples": [
+          {
+            "arabic": "تَفَضَّل بَعْضَ القَهْوَة.",
+            "english": "Please, have some coffee. (to a male)",
+            "transliteration": "Tafaḍḍal baʿḍa al-qahwah."
+          },
+          {
+            "arabic": "تَفَضَّلي بَعْضَ العَصِير.",
+            "english": "Please, have some juice. (to a female)",
+            "transliteration": "Tafaḍḍalī baʿḍa al-ʿaṣīr."
+          },
+          {
+            "arabic": "هَلْ تُرِيدُ شَيْئاً لِتَشْرَبَهُ؟",
+            "english": "Do you want something to drink? (to a male)",
+            "transliteration": "Hal turīdu shay'an litashrabahu?"
+          },
+          {
+            "arabic": "هَلْ تُرِيدِينَ شَيْئاً لِتَأْكُلِيهِ؟",
+            "english": "Do you want something to eat? (to a female)",
+            "transliteration": "Hal turīdīna shay'an lita'kulīhi?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Inviting Someone"
+        },
+        "text": "Use phrases to invite someone to an event, a meal, or a place.",
+        "examples": [
+          {
+            "arabic": "هَلْ تُرِيدُ أنْ تَأْتِيَ مَعِي؟",
+            "english": "Do you want to come with me? (to a male)",
+            "transliteration": "Hal turīdu an ta'tiya maʿī?"
+          },
+          {
+            "arabic": "أَدْعُوكَ لِحَفْلَةِ عِيدِ مِيلادِي.",
+            "english": "I invite you to my birthday party. (to a male)",
+            "transliteration": "Adʿūka liḥaflati ʿīdi mīlādī."
+          },
+          {
+            "arabic": "يَسُرُّنِي أنْ تَنْضَمَّ إلينا.",
+            "english": "I would be pleased if you join us. (to a male)",
+            "transliteration": "Yasurrunī an tanḍamma ilaynā."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Accepting or Declining"
+        },
+        "text": "Learn polite ways to accept or decline an offer or invitation.",
+        "examples": [
+          {
+            "arabic": "شُكْراً جَزِيلاً، هذا لَطِيفٌ مِنْكَ.",
+            "english": "Thank you very much, that's kind of you. (Accepting from a male)",
+            "transliteration": "Shukran jazīlan, hādhā laṭīfun minka."
+          },
+          {
+            "arabic": "بِكُلِّ سُرُور!",
+            "english": "With pleasure!",
+            "transliteration": "Bi-kulli surūr!"
+          },
+          {
+            "arabic": "آسِف، لا أستطيع.",
+            "english": "Sorry, I cannot. (Male speaker)",
+            "transliteration": "Āsif, lā astaṭīʿ."
+          },
+          {
+            "arabic": "لَا أَتَمَكَّنُ مِنْ ذلك الآن، شُكْراً.",
+            "english": "I can't do that now, thank you.",
+            "transliteration": "Lā atamakkanu min dhālika al-ān, shukran."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "تَفَضَّل، هَلْ تُرِيدُ قَهْوَةً أَمْ شايًا؟",
+        "english": "Please, would you like coffee or tea? (to a male)",
+        "transliteration": "Tafaḍḍal, hal turīdu qahwatan am shāyan?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أَدْعُوكِ لِتَناوُلِ العَشاءِ مَعَنا اللَّيْلَة.",
+        "english": "I invite you (fem) to have dinner with us tonight.",
+        "transliteration": "Adʿūki litanāwuli al-ʿashā'i maʿanā al-laylah."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would you politely offer tea to a male friend?",
+      "options": [
+        {
+          "id": "a",
+          "text": "تَفَضَّلي شايًا.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "هَلْ تُرِيدِينَ شَيْئًا؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "تَفَضَّل شايًا.",
+          "isCorrect": true
+        },
+        {
+          "id": "d",
+          "text": "شُكْراً جَزِيلاً.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "tafaḍḍal shāyan",
+        "arabic": "تَفَضَّل شايًا"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I would be pleased ___ join us.' (Male recipient)",
+      "options": [
+        {
+          "id": "a",
+          "text": "تَنْضَمَّ",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "تَنْضَمِّي",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "تَنْضَمُّوا",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "تَنْضَمُّ",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "hint": {
+        "transliteration": "tanḍamma",
+        "arabic": "تَنْضَمَّ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase politely declines an invitation (male speaker)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بِكُلِّ سُرُور!",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شُكْراً جَزِيلاً.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "آسِف، لا أستطيع.",
+          "isCorrect": true
+        },
+        {
+          "id": "d",
+          "text": "تَفَضَّل.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "āsif, lā astaṭīʿ",
+        "arabic": "آسِف، لا أستطيع"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing an Apology"
+        },
+        "text": "Learn common phrases to apologize. \"آسِف/آسِفَة\" (āsif/āsifah) is a basic way to say \"sorry\".",
+        "examples": [
+          {
+            "arabic": "أَنَا آسِفٌ جِدّاً لِلتَّأْخِير.",
+            "english": "I am very sorry for the delay. (Male speaker)",
+            "transliteration": "Anā āsifun jiddan lil-ta'khīr."
+          },
+          {
+            "arabic": "أَنَا آسِفَةٌ لِأَنِّي أَزْعَجْتُكَ.",
+            "english": "I am sorry for bothering you. (Female speaker to a male)",
+            "transliteration": "Anā āsifatun li'annī azʿajtuka."
+          },
+          {
+            "arabic": "اعْتَذِرُ عَمَّا حَدَثَ.",
+            "english": "I apologize for what happened.",
+            "transliteration": "Iʿtadhiru ʿammā ḥadatha."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Accepting an Apology"
+        },
+        "text": "Respond to an apology with grace and understanding.",
+        "examples": [
+          {
+            "arabic": "لَا مُشْكِلَةَ أَبَداً.",
+            "english": "No problem at all.",
+            "transliteration": "Lā mushkilata abadan."
+          },
+          {
+            "arabic": "لَا دَاعِيَ لِلِاعْتِذارِ.",
+            "english": "No need to apologize.",
+            "transliteration": "Lā dāʿiya lil-iʿtidhār."
+          },
+          {
+            "arabic": "قَدْ حَدَثَ وَانْتَهَى الْأَمْرُ.",
+            "english": "It happened and it's over.",
+            "transliteration": "Qad ḥadatha wa-intahá al-amr."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Reassuring the Apologizer"
+        },
+        "text": "Further reassure someone that their apology is accepted and everything is fine.",
+        "examples": [
+          {
+            "arabic": "كُلُّ شَيْءٍ بِخَيْرٍ.",
+            "english": "Everything is fine.",
+            "transliteration": "Kullu shay'in bi-khayr."
+          },
+          {
+            "arabic": "لَا تَقْلَقْ أَبَداً.",
+            "english": "Don't worry at all. (to a male)",
+            "transliteration": "Lā taqlaq abadan."
+          },
+          {
+            "arabic": "لَا يُهِمُّ، لَا تُفَكِّرْ فِي الأَمْرِ.",
+            "english": "It doesn't matter, don't think about it. (to a male)",
+            "transliteration": "Lā yuhimmu, lā tufakkir fī al-amr."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أَنَا آسِفٌ جِدّاً، لَقَدْ نَسِيتُ مَوْعِدَنا.",
+        "english": "I am very sorry, I forgot our appointment. (Male speaker)",
+        "transliteration": "Anā āsifun jiddan, laqad nasītu mawʿidanā."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "لَا دَاعِيَ لِلِاعْتِذارِ، كُلُّ شَيْءٍ بِخَيْرٍ.",
+        "english": "No need to apologize, everything is fine.",
+        "transliteration": "Lā dāʿiya lil-iʿtidhār, kullu shay'in bi-khayr."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would a female say 'I am very sorry for bothering you' (to a male)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أَنَا آسِفٌ لِأَنِّي أَزْعَجْتُكَ.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أَنَا آسِفَةٌ لِأَنِّي أَزْعَجْتُكَ.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "اعْتَذِرُ عَمَّا حَدَثَ.",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "لَا مُشْكِلَةَ أَبَداً.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "anā āsifatun li'annī azʿajtuka",
+        "arabic": "أَنَا آسِفَةٌ لِأَنِّي أَزْعَجْتُكَ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the phrase: 'No problem ___.'",
+      "options": [
+        {
+          "id": "a",
+          "text": "جَزِيلاً",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أَبَداً",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "سُرُورٍ",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "شَيْئاً",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "abadan",
+        "arabic": "أَبَداً"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase reassures a male not to worry at all?",
+      "options": [
+        {
+          "id": "a",
+          "text": "اعْتَذِرُ عَمَّا حَدَثَ.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "لَا تَقْلَقْ أَبَداً.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أَنَا آسِفٌ.",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "مرحباً.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "lā taqlaq abadan",
+        "arabic": "لَا تَقْلَقْ أَبَداً"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking Gift Preferences"
+        },
+        "text": "When buying a gift, it's polite to discreetly ask about someone's preferences or needs.",
+        "examples": [
+          {
+            "arabic": "هَلْ تُفَضِّلُ شَيْئاً مُعَيَّناً؟",
+            "english": "Do you prefer something specific? (to a male)",
+            "transliteration": "Hal tufaḍḍilu shay'an muʿayyanan?"
+          },
+          {
+            "arabic": "مَا الذي يُعْجِبُكَ عادةً؟",
+            "english": "What do you usually like? (to a male)",
+            "transliteration": "Mā alladhī yuʿjibuka ʿādatan?"
+          },
+          {
+            "arabic": "هَلْ هُنَاكَ شَيْءٌ تَحْتاجهُ؟",
+            "english": "Is there anything you need? (to a male)",
+            "transliteration": "Hal hunāka shay'un taḥtājuhu?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Suggesting Gift Ideas"
+        },
+        "text": "Sometimes you might suggest a gift idea to someone else or offer options.",
+        "examples": [
+          {
+            "arabic": "رُبَّمَا هَدِيَّةٌ لِلكِتَابَةِ جَيِّدَةٌ.",
+            "english": "Perhaps a gift for writing would be good.",
+            "transliteration": "Rubbamā hadiyyatun lil-kitābah jayyidah."
+          },
+          {
+            "arabic": "مَا رَأْيُكَ فِي كِتابٍ؟",
+            "english": "What do you think about a book? (to a male)",
+            "transliteration": "Mā ra'yuka fī kitābin?"
+          },
+          {
+            "arabic": "أَعْتَقِدُ أَنَّهَا سَتُحِبُّ الزُّهُورَ.",
+            "english": "I think she will like flowers.",
+            "transliteration": "Aʿtaqidu annahā satuḥibbu az-zuhūr."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Presenting a Gift"
+        },
+        "text": "Common phrases used when giving a gift.",
+        "examples": [
+          {
+            "arabic": "هَذِهِ هَدِيَّةٌ بَسِيطَةٌ لَكَ.",
+            "english": "This is a small gift for you. (to a male)",
+            "transliteration": "Hādhihi hadiyyatun basīṭatun laka."
+          },
+          {
+            "arabic": "أتَمَنَّى أنْ تُعْجِبَكَ.",
+            "english": "I hope you like it. (to a male)",
+            "transliteration": "Atamannā an tuʿjibaka."
+          },
+          {
+            "arabic": "كُلُّ عامٍ وأنْتَ بِخَيْرٍ!",
+            "english": "Happy new year/Every year may you be well! (Common greeting for occasions)",
+            "transliteration": "Kullu ʿāmin wa-anta bi-khayrin!"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هَلْ تُفَضِّلِينَ هَدِيَّةً لِلمَنْزِلِ أَمْ لِلْعَمَلِ؟",
+        "english": "Do you (fem) prefer a gift for the home or for work?",
+        "transliteration": "Hal tufaḍḍilīna hadiyyatan lil-manzili am lil-ʿamal?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هَذِهِ هَدِيَّةٌ بَسِيطَةٌ لَكَ، أتَمَنَّى أنْ تُعْجِبَكَ.",
+        "english": "This is a small gift for you (masc), I hope you like it.",
+        "transliteration": "Hādhihi hadiyyatun basīṭatun laka, atamannā an tuʿjibaka."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask a female if she prefers something specific?",
+      "options": [
+        {
+          "id": "a",
+          "text": "هَلْ تُفَضِّلُ شَيْئاً مُعَيَّناً؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "هَلْ تُفَضِّلِينَ شَيْئاً مُعَيَّناً؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مَا الذي يُعْجِبُكَ عادةً؟",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "هَلْ هُنَاكَ شَيْءٌ تَحْتاجهُ؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "hal tufaḍḍilīna shay'an muʿayyanan?",
+        "arabic": "هَلْ تُفَضِّلِينَ شَيْئاً مُعَيَّناً؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'What do you think about ___?' (suggesting a book, to a male)",
+      "options": [
+        {
+          "id": "a",
+          "text": "قَهْوَةٍ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كِتابٍ",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "حَفْلَةٍ",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "طَعامٍ",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "kitābin",
+        "arabic": "كِتابٍ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'I hope you like it' (when giving a gift to a female)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أتَمَنَّى أنْ تُعْجِبَكَ.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أتَمَنَّى أنْ تُعْجِبَكِ.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كُلُّ عامٍ وأنْتَ بِخَيْرٍ!",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "هَذِهِ هَدِيَّةٌ بَسِيطَةٌ لَكَ.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "atamannā an tuʿjibaki",
+        "arabic": "أتَمَنَّى أنْ تُعْجِبَكِ"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Polite Refusal"
+        },
+        "text": "When declining an offer or invitation, it's good to be polite and express regret.",
+        "examples": [
+          {
+            "arabic": "شُكْراً جَزِيلاً، ولكن لا أستطيع حالياً.",
+            "english": "Thank you very much, but I can't at the moment.",
+            "transliteration": "Shukran jazīlan, walākin lā astaṭīʿu ḥāliyan."
+          },
+          {
+            "arabic": "أُقَدِّرُ دَعْوَتَكَ، لكنني مشغولٌ للأسف.",
+            "english": "I appreciate your invitation, but I am busy unfortunately. (Male speaker)",
+            "transliteration": "Uqaddiru daʿwataka, lākinnanī mashghūlun lil-asaf."
+          },
+          {
+            "arabic": "رُبَّمَا مَرَّةً أُخْرَى؟",
+            "english": "Perhaps another time?",
+            "transliteration": "Rubbamā marratan ukhrā?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "General Courtesy"
+        },
+        "text": "Essential polite phrases for daily interactions.",
+        "examples": [
+          {
+            "arabic": "مِنْ فَضْلِكَ/مِنْ فَضْلِكِ.",
+            "english": "Please. (to a male/female)",
+            "transliteration": "Min faḍlika/Min faḍliki."
+          },
+          {
+            "arabic": "شُكْراً لَكَ/لَكِ.",
+            "english": "Thank you. (to a male/female)",
+            "transliteration": "Shukran laka/laki."
+          },
+          {
+            "arabic": "عَفْواً.",
+            "english": "You're welcome / Excuse me.",
+            "transliteration": "ʿAfwan."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Formal Gratitude"
+        },
+        "text": "More formal ways to express thanks, often used in professional or more respectful contexts.",
+        "examples": [
+          {
+            "arabic": "أَشْكُرُكَ جَزِيلَ الشُّكْرِ.",
+            "english": "I thank you very much. (to a male)",
+            "transliteration": "Ashkuruka jazīla ash-shukr."
+          },
+          {
+            "arabic": "لَكَ مِنِّي خَالِصُ الشُّكْرِ وَالِامْتِنَانِ.",
+            "english": "You have my sincere thanks and gratitude. (to a male)",
+            "transliteration": "Laka minnī khāliṣu ash-shukri wal-imtinān."
+          },
+          {
+            "arabic": "أَنَا مُمْتَنٌّ لَكَ عَلَى مُسَاعَدَتِكَ.",
+            "english": "I am grateful to you for your help. (Male speaker to a male)",
+            "transliteration": "Anā mumtannun laka ʿalā musāʿadatika."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أُقَدِّرُ دَعْوَتَكِ، لكنني مشغولةٌ للأسف.",
+        "english": "I appreciate your (fem) invitation, but I am busy unfortunately. (Female speaker)",
+        "transliteration": "Uqaddiru daʿwatiki, lākinnanī mashghūlatun lil-asaf."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شُكْراً جَزِيلاً لَكَ، مِن فضلك، هل يمكنك مساعدتي؟",
+        "english": "Thank you very much (to a male), please, can you help me?",
+        "transliteration": "Shukran jazīlan laka, min faḍlika, hal yumkinuka musāʿadatī?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would a male politely decline an offer, suggesting another time?",
+      "options": [
+        {
+          "id": "a",
+          "text": "شُكْراً جَزِيلاً، هذا لَطِيفٌ مِنْكَ.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "رُبَّمَا مَرَّةً أُخْرَى؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بِكُلِّ سُرُور!",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "لَا مُشْكِلَةَ أَبَداً.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "rubbamā marratan ukhrā?",
+        "arabic": "رُبَّمَا مَرَّةً أُخْرَى؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the phrase: 'Thank you ___ (male recipient).'",
+      "options": [
+        {
+          "id": "a",
+          "text": "لَكِ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "لَهُ",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "لَكَ",
+          "isCorrect": true
+        },
+        {
+          "id": "d",
+          "text": "لَهَا",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "laka",
+        "arabic": "لَكَ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'I am grateful to you (female) for your help' (female speaker)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أَنَا مُمْتَنٌّ لَكِ عَلَى مُسَاعَدَتِكَ.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أَنَا مُمْتَنٌّ لَكَ عَلَى مُسَاعَدَتِكَ.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "أَنَا مُمْتَنَّةٌ لَكِ عَلَى مُسَاعَدَتِكِ.",
+          "isCorrect": true
+        },
+        {
+          "id": "d",
+          "text": "أَنَا مُمْتَنَّةٌ لَكَ عَلَى مُسَاعَدَتِكَ.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "anā mumtannah laki ʿalā musāʿadatiki",
+        "arabic": "أَنَا مُمْتَنَّةٌ لَكِ عَلَى مُسَاعَدَتِكِ"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Combining Invitations and Offers"
+        },
+        "text": "Learn to extend an invitation while also offering hospitality.",
+        "examples": [
+          {
+            "arabic": "أَدْعُوكَ لِزِيَارَتِنَا، وسَنُقَدِّمُ لَكَ العَشاءَ.",
+            "english": "I invite you to visit us, and we will offer you dinner. (to a male)",
+            "transliteration": "Adʿūka liziyāratinā, wa-sanuqaddimu laka al-ʿashā'."
+          },
+          {
+            "arabic": "تَفَضَّلوا إلى بَيْتِنَا، هُنَاكَ مَكانٌ لِلْجَمِيعِ.",
+            "english": "Please come to our house, there is space for everyone. (to multiple people)",
+            "transliteration": "Tafaḍḍalū ilā baytinā, hunāka makānun lil-jamīʿ."
+          },
+          {
+            "arabic": "هَلْ تُرِيدُ أنْ نَذْهَبَ مَعاً إلى المَتْجَرِ وأَدْفَعُ أنا؟",
+            "english": "Do you want us to go to the store together and I pay? (to a male)",
+            "transliteration": "Hal turīdu an nadhhaba maʿan ilā al-matjari wa adfaʿu anā?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Polite Disagreement/Declining with Explanation"
+        },
+        "text": "How to politely disagree or decline something while providing a brief reason.",
+        "examples": [
+          {
+            "arabic": "أَتَفَهَّمُ وَجْهَةَ نَظَرِكَ، لكِنَّنِي أُفَضِّلُ شَيْئاً آخَرَ.",
+            "english": "I understand your point of view, but I prefer something else. (to a male)",
+            "transliteration": "Atafahhamu wajhata naẓarika, lākinnanī ufaḍḍilu shay'an ākhar."
+          },
+          {
+            "arabic": "لَا أَعْتَقِدُ أَنَّ هَذَا مُناسِبٌ لِي الآن، شُكْراً.",
+            "english": "I don't think this is suitable for me now, thank you.",
+            "transliteration": "Lā aʿtaqidu anna hādhā munāsibun lī al-ān, shukran."
+          },
+          {
+            "arabic": "لَا يُمْكِنُنِي الحُضُورُ لِأَنَّ لَدَيَّ مَوْعِدًا سَابِقًا.",
+            "english": "I cannot attend because I have a prior appointment.",
+            "transliteration": "Lā yumkinunī al-ḥuḍūru li'anna ladayya mawʿidan sābiqan."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "General Good Wishes"
+        },
+        "text": "Common phrases to express good wishes for various occasions.",
+        "examples": [
+          {
+            "arabic": "أَتَمَنَّى لَكَ كُلَّ خَيْرٍ.",
+            "english": "I wish you all the best. (to a male)",
+            "transliteration": "Atamannā laka kulla khayr."
+          },
+          {
+            "arabic": "عِيدُ مِيلادٍ سَعِيدٌ!",
+            "english": "Happy Birthday!",
+            "transliteration": "ʿĪdu mīlādin saʿīd!"
+          },
+          {
+            "arabic": "مُبَارَكٌ عَلَيْكَ!",
+            "english": "Congratulations/Blessed upon you! (to a male - for events/achievements)",
+            "transliteration": "Mubārakun ʿalayka!"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أَدْعُوكِ لِزِيَارَتِنَا في العَطْلَةِ، هَلْ تُرِيدِينَ القُدُومَ؟",
+        "english": "I invite you (fem) to visit us during the holiday, do you want to come?",
+        "transliteration": "Adʿūki liziyāratinā fī al-ʿaṭlah, hal turīdīna al-qudūm?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أَتَفَهَّمُ، لكِنَّنِي لَا أستطيع المجيء اليوم.",
+        "english": "I understand, but I cannot come today. (Male speaker)",
+        "transliteration": "Atafahhamu, lākinnanī lā astaṭīʿu al-majī' al-yawm."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would you invite friends to your house, ensuring there's space for all?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أَدْعُوكَ لِزِيَارَتِنَا.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "تَفَضَّلوا إلى بَيْتِنَا، هُنَاكَ مَكانٌ لِلْجَمِيعِ.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "هَلْ تُرِيدُ أنْ نَذْهَبَ مَعاً؟",
+          "isCorrect": false
+        },
+        {
+          "id": "d",
+          "text": "سَنُقَدِّمُ لَكَ العَشاءَ.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "tafaḍḍalū ilā baytinā, hunāka makānun lil-jamīʿ.",
+        "arabic": "تَفَضَّلوا إلى بَيْتِنَا، هُنَاكَ مَكانٌ لِلْجَمِيعِ."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I cannot attend because I have a ___ appointment.'",
+      "options": [
+        {
+          "id": "a",
+          "text": "جَدِيدًا",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كَبِيرًا",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "سَابِقًا",
+          "isCorrect": true
+        },
+        {
+          "id": "d",
+          "text": "طَوِيلًا",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "sābiqan",
+        "arabic": "سَابِقًا"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the general good wish for 'Happy Birthday'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أتَمَنَّى لَكَ كُلَّ خَيْرٍ.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مُبَارَكٌ عَلَيْكَ!",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "عِيدُ مِيلادٍ سَعِيدٌ!",
+          "isCorrect": true
+        },
+        {
+          "id": "d",
+          "text": "شُكْراً جَزِيلاً.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "ʿīdu mīlādin saʿīd!",
+        "arabic": "عِيدُ مِيلادٍ سَعِيدٌ!"
+      }
+    }
+  ]
+}

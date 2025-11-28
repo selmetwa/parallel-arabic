@@ -1,0 +1,902 @@
+{
+  "topicId": "m4-t1",
+  "title": "Talking About Money and Asking for Prices in Darija",
+  "dialect": "darija",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Introduction to 'Money'",
+          "arabic": "مقدمة عن 'المال'"
+        },
+        "text": "In Moroccan Darija, the most common word for 'money' is 'l-flous'. It's a plural noun, so it's always used in this form. You'll hear this word frequently in everyday transactions.",
+        "examples": [
+          {
+            "arabic": "الفلوس",
+            "english": "Money",
+            "transliteration": "l-flous"
+          },
+          {
+            "arabic": "عندي الفلوس",
+            "english": "I have money",
+            "transliteration": "3andi l-flous"
+          }
+        ],
+        "audioText": "l-flous"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Moroccan Currency: Dirham",
+          "arabic": "العملة المغربية: الدرهم"
+        },
+        "text": "The official currency of Morocco is the Dirham. It's often abbreviated as 'DH' or 'MAD'. When asking or stating prices, you will primarily use 'derham'.",
+        "examples": [
+          {
+            "arabic": "درهم",
+            "english": "Dirham",
+            "transliteration": "derham"
+          },
+          {
+            "arabic": "عشرين درهم",
+            "english": "Twenty Dirhams",
+            "transliteration": "3ashrin derham"
+          }
+        ],
+        "audioText": "derham"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Small Change: Santim",
+          "arabic": "العملة الصغيرة: سنتيم"
+        },
+        "text": "For smaller denominations, people often use 'santim' (centime). There are 100 santimat in 1 Dirham. Sometimes, people might refer to 'fraṅk' (franc) which also equals 1 santim.",
+        "examples": [
+          {
+            "arabic": "سنتيم",
+            "english": "Centime",
+            "transliteration": "santim"
+          },
+          {
+            "arabic": "خمسين سنتيم",
+            "english": "Fifty centimes",
+            "transliteration": "khamsin santim"
+          }
+        ],
+        "audioText": "santim"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "عندي الفلوس باش نشري هادشي.",
+        "english": "I have money to buy this.",
+        "transliteration": "3andi l-flous bash nshri hadshi."
+      },
+      "context": "Using 'l-flous' in a complete sentence."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هادا كيدير ثلاثين درهم وخمسين سنتيم.",
+        "english": "This costs thirty Dirhams and fifty centimes.",
+        "transliteration": "hada kaydir tlathin derham u khamsin santim."
+      },
+      "context": "Stating a price using Dirham and Santim."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Darija word for 'money'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "الدرهم",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الفلوس",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "السنتيم",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "الفلوس (l-flous) is the general term for money in Darija.",
+      "hint": {
+        "transliteration": "l-flous",
+        "arabic": "الفلوس"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'Dirham' in Darija?",
+      "options": [
+        {
+          "id": "a",
+          "text": "الفلوس",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "درهم",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "سنتيم",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "درهم (derham) is the name of the Moroccan currency.",
+      "hint": {
+        "transliteration": "derham",
+        "arabic": "درهم"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which of these means 'I have money'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ما عنديش الفلوس",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "عندي الفلوس",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بغيت الفلوس",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "عندي (3andi) means 'I have'.",
+      "hint": {
+        "transliteration": "3andi l-flous",
+        "arabic": "عندي الفلوس"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'How much?'",
+          "arabic": "السؤال عن 'بكم؟'"
+        },
+        "text": "The most common way to ask 'How much?' or 'What's the price?' in Darija is with the word 'shḥal?'. This single word is versatile and can be used on its own.",
+        "examples": [
+          {
+            "arabic": "شحال؟",
+            "english": "How much?",
+            "transliteration": "shḥal?"
+          }
+        ],
+        "audioText": "shḥal?"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'How much is this?'",
+          "arabic": "السؤال عن 'بكم هذا؟'"
+        },
+        "text": "To ask 'How much is this?' when pointing to an item, you'd combine 'shḥal?' with the demonstrative pronoun 'hada' (this, masculine) or 'hadi' (this, feminine).",
+        "examples": [
+          {
+            "arabic": "شحال هادا؟",
+            "english": "How much is this? (masc.)",
+            "transliteration": "shḥal hada?"
+          },
+          {
+            "arabic": "شحال هادي؟",
+            "english": "How much is this? (fem.)",
+            "transliteration": "shḥal hadi?"
+          }
+        ],
+        "audioText": "shḥal hada?"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for the price of a specific item",
+          "arabic": "السؤال عن سعر سلعة محددة"
+        },
+        "text": "If you want to ask about a specific item by name, you simply place the item's name after 'shḥal'. For example, 'shḥal l-khubz?' (How much is the bread?).",
+        "examples": [
+          {
+            "arabic": "شحال التفاح؟",
+            "english": "How much are the apples?",
+            "transliteration": "shḥal t-teffaḥ?"
+          },
+          {
+            "arabic": "شحال هاد الصاك؟",
+            "english": "How much is this bag?",
+            "transliteration": "shḥal had ṣ-ṣak?"
+          }
+        ],
+        "audioText": "shḥal t-teffaḥ?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شحال هادي؟ بغيت نشريها.",
+        "english": "How much is this (f.)? I want to buy it.",
+        "transliteration": "shḥal hadi? bghit nshriha."
+      },
+      "context": "Asking for the price of a feminine item."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شحال البطاطا؟",
+        "english": "How much are the potatoes?",
+        "transliteration": "shḥal l-baṭaṭa?"
+      },
+      "context": "Asking for the price of a named item."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the general way to ask 'How much?' in Darija?",
+      "options": [
+        {
+          "id": "a",
+          "text": "شحال؟",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "فين؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "كيفاش؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "شحال؟ (shḥal?) is the direct translation for 'How much?'.",
+      "hint": {
+        "transliteration": "shḥal?",
+        "arabic": "شحال؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "You are pointing at a masculine item. How do you ask 'How much is this?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "شحال هادي؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شحال هادو؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "شحال هادا؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "هادا (hada) is used for 'this' masculine singular.",
+      "hint": {
+        "transliteration": "shḥal hada?",
+        "arabic": "شحال هادا؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would you ask 'How much is the coffee?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "شكون القهوة؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شحال القهوة؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "فوقاش القهوة؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Just place the item's name (القهوة - l-qahwa) after شحال (shḥal).",
+      "hint": {
+        "transliteration": "shḥal l-qahwa?",
+        "arabic": "شحال القهوة؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Numbers 1-5 for Prices",
+          "arabic": "الأرقام ١-٥ للأسعار"
+        },
+        "text": "When responding to prices, knowing basic numbers is crucial. Here are numbers 1 to 5.",
+        "examples": [
+          {
+            "arabic": "واحد",
+            "english": "One",
+            "transliteration": "waḥd"
+          },
+          {
+            "arabic": "جوج",
+            "english": "Two",
+            "transliteration": "juj"
+          },
+          {
+            "arabic": "تلاتة",
+            "english": "Three",
+            "transliteration": "tlata"
+          },
+          {
+            "arabic": "ربعة",
+            "english": "Four",
+            "transliteration": "reb3a"
+          },
+          {
+            "arabic": "خمسة",
+            "english": "Five",
+            "transliteration": "khamsa"
+          }
+        ],
+        "audioText": "waḥd, juj, tlata, reb3a, khamsa"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Numbers 6-10 for Prices",
+          "arabic": "الأرقام ٦-١٠ للأسعار"
+        },
+        "text": "Continuing with essential numbers, here are 6 to 10.",
+        "examples": [
+          {
+            "arabic": "ستة",
+            "english": "Six",
+            "transliteration": "setta"
+          },
+          {
+            "arabic": "سبعة",
+            "english": "Seven",
+            "transliteration": "seb3a"
+          },
+          {
+            "arabic": "تمنية",
+            "english": "Eight",
+            "transliteration": "tmenya"
+          },
+          {
+            "arabic": "تسعود",
+            "english": "Nine",
+            "transliteration": "tes3oud"
+          },
+          {
+            "arabic": "عشرة",
+            "english": "Ten",
+            "transliteration": "3ashra"
+          }
+        ],
+        "audioText": "setta, seb3a, tmenya, tes3oud, 3ashra"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Responding with Prices (Number + Dirham)",
+          "arabic": "الإجابة بالأسعار (رقم + درهم)"
+        },
+        "text": "Once you know the numbers, responding to 'shḥal?' is straightforward. You say the number followed by 'derham' (or 'drahəm' for plural, but 'derham' is common). If it's less than a Dirham, use 'santim'.",
+        "examples": [
+          {
+            "arabic": "خمسة دراهم",
+            "english": "Five Dirhams",
+            "transliteration": "khamsat drahəm"
+          },
+          {
+            "arabic": "ثمانين سنتيم",
+            "english": "Eighty centimes",
+            "transliteration": "tmanin santim"
+          }
+        ],
+        "audioText": "khamsat drahəm"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هادي عشرة دراهم.",
+        "english": "This is ten Dirhams.",
+        "transliteration": "hadi 3ashrat drahəm."
+      },
+      "context": "Stating the price of an item."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الخضرا بجوج دراهم.",
+        "english": "The vegetables are two Dirhams.",
+        "transliteration": "l-khḍra b-juj drahəm."
+      },
+      "context": "Stating the price of a group of items."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is 'three' in Darija?",
+      "options": [
+        {
+          "id": "a",
+          "text": "جوج",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "تلاتة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "خمسة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "تلاتة (tlata) means 'three'.",
+      "hint": {
+        "transliteration": "tlata",
+        "arabic": "تلاتة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'seven Dirhams'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "سبعة دراهم",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "سبعة فلوس",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "سبعة سنتيم",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "سبعة (seb3a) for seven, followed by دراهم (drahəm) for Dirhams.",
+      "hint": {
+        "transliteration": "seb3at drahəm",
+        "arabic": "سبعة دراهم"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "If something costs 'four centimes', how would you say that?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ربعة دراهم",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ربعة سنتيم",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "ربعة فلوس",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "ربعة (reb3a) for four, followed by سنتيم (santim) for centimes.",
+      "hint": {
+        "transliteration": "reb3a santim",
+        "arabic": "ربعة سنتيم"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Describing something as 'Expensive'",
+          "arabic": "وصف شيء بـ 'غالي'"
+        },
+        "text": "When you think a price is high, you can say 'ghali' for masculine items or 'ghalya' for feminine items. Remember, Darija often makes adjectives agree in gender.",
+        "examples": [
+          {
+            "arabic": "غالي",
+            "english": "Expensive (masc.)",
+            "transliteration": "ghali"
+          },
+          {
+            "arabic": "غالية",
+            "english": "Expensive (fem.)",
+            "transliteration": "ghalya"
+          },
+          {
+            "arabic": "هادا غالي.",
+            "english": "This is expensive (masc.).",
+            "transliteration": "hada ghali."
+          }
+        ],
+        "audioText": "ghali, ghalya"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Describing something as 'Cheap'",
+          "arabic": "وصف شيء بـ 'رخيص'"
+        },
+        "text": "If you find something's price low or reasonable, use 'rkhiṣ' for masculine items or 'rkhiṣa' for feminine items.",
+        "examples": [
+          {
+            "arabic": "رخيص",
+            "english": "Cheap (masc.)",
+            "transliteration": "rkhiṣ"
+          },
+          {
+            "arabic": "رخيصة",
+            "english": "Cheap (fem.)",
+            "transliteration": "rkhiṣa"
+          },
+          {
+            "arabic": "هادي رخيصة.",
+            "english": "This is cheap (fem.).",
+            "transliteration": "hadi rkhiṣa."
+          }
+        ],
+        "audioText": "rkhiṣ, rkhiṣa"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "'Too Expensive' and Asking for a Discount",
+          "arabic": "'غالي بزاف' وطلب تخفيض"
+        },
+        "text": "To emphasize that something is 'too expensive', add 'bezzerf' (too much/very) after the adjective. You can also directly ask for a discount: 'wach kayn shi takhfiḍ?' (Is there a discount?) or 'nqaṣ shwiya' (Reduce a little).",
+        "examples": [
+          {
+            "arabic": "غالي بزاف!",
+            "english": "Too expensive!",
+            "transliteration": "ghali bezzerf!"
+          },
+          {
+            "arabic": "واش كاين شي تخفيض؟",
+            "english": "Is there a discount?",
+            "transliteration": "wash kayn shi takhfiḍ?"
+          },
+          {
+            "arabic": "نقص شوية.",
+            "english": "Reduce a little (price).",
+            "transliteration": "nqaṣ shwiya."
+          }
+        ],
+        "audioText": "ghali bezzerf!"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هادا غالي بزاف عليا.",
+        "english": "This is too expensive for me.",
+        "transliteration": "hada ghali bezzerf 3liya."
+      },
+      "context": "Expressing that an item's price is prohibitive."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هاد الحوايج رخاص، واش كاين شي تخفيض؟",
+        "english": "These clothes are cheap, is there a discount?",
+        "transliteration": "had l-ḥwayj rkhaṣ, wash kayn shi takhfiḍ?"
+      },
+      "context": "Using 'cheap' and asking for a discount."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'expensive' for a masculine item?",
+      "options": [
+        {
+          "id": "a",
+          "text": "رخيص",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "غالي",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "جميل",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "غالي (ghali) is for masculine 'expensive'.",
+      "hint": {
+        "transliteration": "ghali",
+        "arabic": "غالي"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Darija phrase for 'Is there a discount?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "واش بغيتي تخفيض؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "واش كاين شي تخفيض؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "واش عندك تخفيض؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "واش كاين شي تخفيض؟ (wash kayn shi takhfiḍ?) is the correct way to ask about a discount.",
+      "hint": {
+        "transliteration": "wash kayn shi takhfiḍ?",
+        "arabic": "واش كاين شي تخفيض؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'cheap' for a feminine item?",
+      "options": [
+        {
+          "id": "a",
+          "text": "رخيص",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "غالية",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "رخيصة",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "رخيصة (rkhiṣa) is for feminine 'cheap'.",
+      "hint": {
+        "transliteration": "rkhiṣa",
+        "arabic": "رخيصة"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing 'I want to buy'",
+          "arabic": "التعبير عن 'أريد أن أشتري'"
+        },
+        "text": "When you're ready to make a purchase, use 'bghit' (I want) followed by 'nshri' (to buy). You can also add the item's name.",
+        "examples": [
+          {
+            "arabic": "بغيت نشري",
+            "english": "I want to buy",
+            "transliteration": "bghit nshri"
+          },
+          {
+            "arabic": "بغيت نشري هاد التليفون.",
+            "english": "I want to buy this phone.",
+            "transliteration": "bghit nshri had t-tilifoun."
+          }
+        ],
+        "audioText": "bghit nshri"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "'I'll take it' (Making a decision)",
+          "arabic": "'سآخذه' (اتخاذ قرار)"
+        },
+        "text": "Once you've decided to buy, you can say 'nakhdha' (I'll take it, feminine) or 'nakhdhu' (I'll take it, masculine). The 'ha' or 'hu' refers to the item.",
+        "examples": [
+          {
+            "arabic": "ناخدها.",
+            "english": "I'll take it (fem.).",
+            "transliteration": "nakhdha."
+          },
+          {
+            "arabic": "ناخدو.",
+            "english": "I'll take it (masc.).",
+            "transliteration": "nakhdhu."
+          }
+        ],
+        "audioText": "nakhdha"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for 'Change'",
+          "arabic": "طلب 'الصرف'"
+        },
+        "text": "After paying, if you're expecting change, you can ask 'wash 3andk ṣ-ṣarf?' (Do you have change?). 'Ṣ-ṣarf' refers to the loose change.",
+        "examples": [
+          {
+            "arabic": "واش عندك الصرف؟",
+            "english": "Do you have change?",
+            "transliteration": "wash 3andk ṣ-ṣarf?"
+          },
+          {
+            "arabic": "بغيت الصرف.",
+            "english": "I want change.",
+            "transliteration": "bghit ṣ-ṣarf."
+          }
+        ],
+        "audioText": "wash 3andk ṣ-ṣarf?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بغيت نشري هاد الكسوة، ناخدها.",
+        "english": "I want to buy this dress, I'll take it.",
+        "transliteration": "bghit nshri had l-keswa, nakhdha."
+      },
+      "context": "Expressing desire to buy and then confirming the purchase of a feminine item."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "عندي خمسين درهم، واش عندك الصرف؟",
+        "english": "I have fifty Dirhams, do you have change?",
+        "transliteration": "3andi khamsin derham, wash 3andk ṣ-ṣarf?"
+      },
+      "context": "Stating payment amount and asking for change."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'I want to buy'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بغيت نمشي",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بغيت نشري",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بغيت ناكل",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "بغيت (bghit) is 'I want', and نشري (nshri) is 'to buy'.",
+      "hint": {
+        "transliteration": "bghit nshri",
+        "arabic": "بغيت نشري"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "If you decide to buy a masculine item, how do you say 'I'll take it'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ناخدها",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ناخدو",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "ما ناخدش",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "ناخدو (nakhdhu) is used for masculine items.",
+      "hint": {
+        "transliteration": "nakhdhu",
+        "arabic": "ناخدو"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Darija word for 'change' (money)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "الفلوس",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الصرف",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "الدرهم",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "الصرف (ṣ-ṣarf) specifically refers to loose change.",
+      "hint": {
+        "transliteration": "ṣ-ṣarf",
+        "arabic": "الصرف"
+      }
+    }
+  ]
+}

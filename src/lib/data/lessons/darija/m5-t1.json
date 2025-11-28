@@ -1,0 +1,887 @@
+{
+  "topicId": "m5-t1",
+  "title": "Asking about the location of things",
+  "dialect": "darija",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Introducing 'Where?' - فين؟",
+          "arabic": "فين؟"
+        },
+        "text": "To ask 'Where?' in Moroccan Darija, we use the word 'فين'. It's a fundamental question word for inquiring about location.",
+        "examples": [
+          {
+            "arabic": "فين؟",
+            "english": "Where?",
+            "transliteration": "Fīn?"
+          },
+          {
+            "arabic": "فين هو؟",
+            "english": "Where is he/it? (masc.)",
+            "transliteration": "Fīn hūwa?"
+          },
+          {
+            "arabic": "فين هي؟",
+            "english": "Where is she/it? (fem.)",
+            "transliteration": "Fīn hiyya?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Where is the...?' - Basic Structure",
+          "arabic": "فين الـ...؟"
+        },
+        "text": "To ask 'Where is the [object]?', you simply place the object after 'فين'. The definite article 'الـ' (el-) is usually attached to the noun.",
+        "examples": [
+          {
+            "arabic": "فين الكتاب؟",
+            "english": "Where is the book?",
+            "transliteration": "Fīn el-ktāb?"
+          },
+          {
+            "arabic": "فين السيارة؟",
+            "english": "Where is the car?",
+            "transliteration": "Fīn es-siyāra?"
+          },
+          {
+            "arabic": "فين الحمام؟",
+            "english": "Where is the bathroom?",
+            "transliteration": "Fīn el-ḥammām?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "The Verb 'To Be' (for location): كاين/كاينا",
+          "arabic": "كاين/كاينا"
+        },
+        "text": "In Darija, when asking or stating location, we often use 'كاين' (kāyn) for masculine singular and 'كاينا' (kāyna) for feminine singular, meaning 'is present' or 'is located'.",
+        "examples": [
+          {
+            "arabic": "فين كاين الستيلو؟",
+            "english": "Where is the pen? (pen is masculine)",
+            "transliteration": "Fīn kāyn es-stīlo?"
+          },
+          {
+            "arabic": "فين كاينا المحفظة؟",
+            "english": "Where is the bag? (bag is feminine)",
+            "transliteration": "Fīn kāyna el-maḥfaḍa?"
+          },
+          {
+            "arabic": "الكتاب كاين هنا.",
+            "english": "The book is here. (masc.)",
+            "transliteration": "El-ktāb kāyn hna."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "فين كاين الدار؟",
+        "english": "Where is the house?",
+        "transliteration": "Fīn kāyn ed-dār?"
+      },
+      "context": "Asking about the location of a house (ed-dār is masculine in this context in Darija)."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "فين كاينا الساعة؟",
+        "english": "Where is the watch?",
+        "transliteration": "Fīn kāyna es-sāʿa?"
+      },
+      "context": "Asking about the location of a watch (es-sāʿa is feminine)."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Darija word for 'where'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "كيفاش؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شكون؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "فين؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'فين' is the correct word for 'where' in Darija.",
+      "hint": {
+        "transliteration": "Fīn?",
+        "arabic": "فين؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'Where is the pen?' (The word 'pen' is 'الستيلو' - masculine in Darija)",
+      "options": [
+        {
+          "id": "a",
+          "text": "فين كاينا الستيلو؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "فين كاين الستيلو؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كيفاش الستيلو؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Since 'الستيلو' (the pen) is masculine, we use 'كاين'.",
+      "hint": {
+        "transliteration": "Fīn kāyn es-stīlo?",
+        "arabic": "فين كاين الستيلو؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'is/are' for a feminine object like 'الساعة' (the watch)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "كاين",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كاينا",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كان",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'كاينا' is used for feminine singular objects.",
+      "hint": {
+        "transliteration": "Kāyna",
+        "arabic": "كاينا"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Preposition 'On/Above' - فوق",
+          "arabic": "فوق"
+        },
+        "text": "The preposition 'فوق' (fūq) means 'on' or 'above'. It's used to describe something being on the surface of another object or directly above it.",
+        "examples": [
+          {
+            "arabic": "الكتاب فوق الطبلة.",
+            "english": "The book is on the table.",
+            "transliteration": "El-ktāb fūq eṭ-ṭbla."
+          },
+          {
+            "arabic": "الكرة فوق الصندوق.",
+            "english": "The ball is on the box.",
+            "transliteration": "El-kora fūq eṣ-ṣendūq."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Preposition 'Under' - تحت",
+          "arabic": "تحت"
+        },
+        "text": "The preposition 'تحت' (taḥt) means 'under' or 'below'. It's the opposite of 'فوق' and indicates something is beneath another object.",
+        "examples": [
+          {
+            "arabic": "القط تحت الكرسي.",
+            "english": "The cat is under the chair.",
+            "transliteration": "El-qaṭṭ taḥt el-korsi."
+          },
+          {
+            "arabic": "الستيلو تحت البيرو.",
+            "english": "The pen is under the desk.",
+            "transliteration": "Es-stīlo taḥt el-bīro."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Preposition 'In/At' - فـ",
+          "arabic": "فـ"
+        },
+        "text": "The preposition 'فـ' (fī) means 'in' or 'at'. It indicates something is inside an enclosure or at a specific location.",
+        "examples": [
+          {
+            "arabic": "القهوة فـ الكاس.",
+            "english": "The coffee is in the cup.",
+            "transliteration": "El-qahwa fī el-kās."
+          },
+          {
+            "arabic": "أنا فـ الدار.",
+            "english": "I am at home.",
+            "transliteration": "Ana fī ed-dār."
+          },
+          {
+            "arabic": "المفاتح فـ المحفظة.",
+            "english": "The keys are in the bag.",
+            "transliteration": "El-mfāteḥ fī el-maḥfaḍa."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الما كاين فـ الكاس.",
+        "english": "The water is in the glass.",
+        "transliteration": "El-mā kāyn fī el-kās."
+      },
+      "context": "Stating the location of water in a glass."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الكرة تحت الطبلة.",
+        "english": "The ball is under the table.",
+        "transliteration": "El-kora taḥt eṭ-ṭbla."
+      },
+      "context": "Describing the ball's location relative to the table."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'The book is on the desk.' (Desk is 'البيــرو' - masculine)",
+      "options": [
+        {
+          "id": "a",
+          "text": "الكتاب تحت البيرو.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الكتاب فـ البيرو.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "الكتاب فوق البيرو.",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'فوق' means 'on' or 'above'.",
+      "hint": {
+        "transliteration": "El-ktāb fūq el-bīro.",
+        "arabic": "الكتاب فوق البيرو."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which preposition means 'under'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "فوق",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "تحت",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "فـ",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'تحت' translates to 'under'.",
+      "hint": {
+        "transliteration": "Taḥt",
+        "arabic": "تحت"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Complete the sentence: 'The keys are ___ the bag.' (The word 'keys' is 'المفاتح' and 'bag' is 'المحفظة' - feminine) ",
+      "options": [
+        {
+          "id": "a",
+          "text": "فوق المحفظة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "تحت المحفظة",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "فـ المحفظة",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'فـ' is used to indicate something is 'in' or 'inside' the bag.",
+      "hint": {
+        "transliteration": "fī el-maḥfaḍa",
+        "arabic": "فـ المحفظة"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Preposition 'In Front Of' - قدام",
+          "arabic": "قدام"
+        },
+        "text": "The preposition 'قدام' (giddām) means 'in front of'. It indicates that something is directly ahead or facing another object.",
+        "examples": [
+          {
+            "arabic": "السيارة قدام الدار.",
+            "english": "The car is in front of the house.",
+            "transliteration": "Es-siyāra giddām ed-dār."
+          },
+          {
+            "arabic": "أنا جالس قدام الباب.",
+            "english": "I am sitting in front of the door.",
+            "transliteration": "Ana jāles giddām el-bāb."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Preposition 'Behind' - مورَا",
+          "arabic": "مورَا"
+        },
+        "text": "The preposition 'مورَا' (mōrā) means 'behind'. It indicates that something is at the back of another object. This is the opposite of 'قدام'.",
+        "examples": [
+          {
+            "arabic": "الشجرة مورَا الحيط.",
+            "english": "The tree is behind the wall.",
+            "transliteration": "Esh-shajra mōrā el-ḥīṭ."
+          },
+          {
+            "arabic": "الكلب مورَا الباب.",
+            "english": "The dog is behind the door.",
+            "transliteration": "El-kelb mōrā el-bāb."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Preposition 'Next To / Beside' - حدَا",
+          "arabic": "حدَا"
+        },
+        "text": "The preposition 'حدَا' (ḥdā) means 'next to' or 'beside'. It describes something being adjacent to another object.",
+        "examples": [
+          {
+            "arabic": "الطبلة حدَا النافذة.",
+            "english": "The table is next to the window.",
+            "transliteration": "Eṭ-ṭbla ḥdā en-nāfda."
+          },
+          {
+            "arabic": "السرير حدَا الحيط.",
+            "english": "The bed is next to the wall.",
+            "transliteration": "Es-srīr ḥdā el-ḥīṭ."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "البيــرو قدام النافذة.",
+        "english": "The desk is in front of the window.",
+        "transliteration": "El-bīro giddām en-nāfda."
+      },
+      "context": "Describing the desk's position relative to the window."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الكتاب مورَا السرير.",
+        "english": "The book is behind the bed.",
+        "transliteration": "El-ktāb mōrā es-srīr."
+      },
+      "context": "Stating the book's location behind the bed."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which preposition means 'in front of'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "مورَا",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "قدام",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "تحت",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'قدام' means 'in front of'.",
+      "hint": {
+        "transliteration": "Giddām",
+        "arabic": "قدام"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'The cat is next to the window.' (Cat is 'القطّ' - masculine, window is 'النافذة' - feminine)",
+      "options": [
+        {
+          "id": "a",
+          "text": "القطّ مورَا النافذة.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "القطّ حدَا النافذة.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "القطّ فوق النافذة.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'حدَا' is the correct preposition for 'next to'.",
+      "hint": {
+        "transliteration": "El-qaṭṭ ḥdā en-nāfda.",
+        "arabic": "القطّ حدَا النافذة."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Complete the sentence: 'My car is ___ the house.' (My car is 'السيارة ديالي' and 'house' is 'الدار')",
+      "options": [
+        {
+          "id": "a",
+          "text": "السيارة ديالي قدام الدار.",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "السيارة ديالي حدَا الدار.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "السيارة ديالي فوق الدار.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Assuming the car is parked in front of the house, 'قدام' is the most suitable preposition.",
+      "hint": {
+        "transliteration": "Es-siyāra diyāli giddām ed-dār.",
+        "arabic": "السيارة ديالي قدام الدار."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Preposition 'Between' - بين",
+          "arabic": "بين"
+        },
+        "text": "The preposition 'بين' (bīn) means 'between'. It is used to describe an object situated in the middle of two other objects or places.",
+        "examples": [
+          {
+            "arabic": "الطبلة بين الكراسا.",
+            "english": "The table is between the chairs.",
+            "transliteration": "Eṭ-ṭbla bīn el-krāsa."
+          },
+          {
+            "arabic": "الخزانة بين الحيوط.",
+            "english": "The closet is between the walls.",
+            "transliteration": "El-khzāna bīn el-ḥyūṭ."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Preposition 'On the Right' - على اليمين",
+          "arabic": "على اليمين"
+        },
+        "text": "To say 'on the right', we use 'على اليمين' (ʿalā l-ymīn). This indicates a direction or position to the right side.",
+        "examples": [
+          {
+            "arabic": "التلفاز على اليمين.",
+            "english": "The TV is on the right.",
+            "transliteration": "Et-telfāz ʿalā l-ymīn."
+          },
+          {
+            "arabic": "الباب على اليمين ديالك.",
+            "english": "The door is on your right.",
+            "transliteration": "El-bāb ʿalā l-ymīn diyālek."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Preposition 'On the Left' - على اليسار",
+          "arabic": "على اليسار"
+        },
+        "text": "To say 'on the left', we use 'على اليسار' (ʿalā l-yessār). This indicates a direction or position to the left side, the opposite of 'على اليمين'.",
+        "examples": [
+          {
+            "arabic": "الثلاجة على اليسار.",
+            "english": "The fridge is on the left.",
+            "transliteration": "Et-tlāja ʿalā l-yessār."
+          },
+          {
+            "arabic": "الغرفة على اليسار.",
+            "english": "The room is on the left.",
+            "transliteration": "El-ġorfa ʿalā l-yessār."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الكرسي كاين بين الطوابل.",
+        "english": "The chair is between the tables.",
+        "transliteration": "El-korsi kāyn bīn eṭ-ṭwābel."
+      },
+      "context": "Stating the chair's position between multiple tables."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الباب ديال الغرفة على اليمين.",
+        "english": "The room's door is on the right.",
+        "transliteration": "El-bāb diyāl el-ġorfa ʿalā l-ymīn."
+      },
+      "context": "Describing the location of a specific door."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'The fridge is on the left.' (Fridge is 'الثلاجة' - feminine)",
+      "options": [
+        {
+          "id": "a",
+          "text": "الثلاجة على اليمين.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الثلاجة على اليسار.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "الثلاجة بين الباب.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'على اليسار' means 'on the left'.",
+      "hint": {
+        "transliteration": "Et-tlāja ʿalā l-yessār.",
+        "arabic": "الثلاجة على اليسار."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which preposition means 'between'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "فوق",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بين",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "حدَا",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'بين' is the preposition for 'between'.",
+      "hint": {
+        "transliteration": "Bīn",
+        "arabic": "بين"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would you ask: 'Where is the TV?' (TV is 'التلفاز' - masculine)",
+      "options": [
+        {
+          "id": "a",
+          "text": "فين كاينا التلفاز؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "فين التلفاز على اليمين؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "فين كاين التلفاز؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "To ask 'Where is the TV?', use 'فين كاين' for the masculine noun 'التلفاز'.",
+      "hint": {
+        "transliteration": "Fīn kāyn et-telfāz?",
+        "arabic": "فين كاين التلفاز؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking about People's Location",
+          "arabic": "فين (الشخص) كاين/كاينا؟"
+        },
+        "text": "The same structure with 'فين' and 'كاين/كاينا' applies when asking about the location of people. Remember to use 'كاين' for masculine individuals and 'كاينا' for feminine individuals.",
+        "examples": [
+          {
+            "arabic": "فين كاين الأب؟",
+            "english": "Where is the father?",
+            "transliteration": "Fīn kāyn el-ab?"
+          },
+          {
+            "arabic": "فين كاينا الأم؟",
+            "english": "Where is the mother?",
+            "transliteration": "Fīn kāyna el-omm?"
+          },
+          {
+            "arabic": "فين كاين الطفل؟",
+            "english": "Where is the child? (masc.)",
+            "transliteration": "Fīn kāyn eṭ-ṭfel?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Combining Prepositions and Objects",
+          "arabic": "دمج حروف الجر مع الأشياء"
+        },
+        "text": "You can combine the prepositions with the definite article 'الـ' and an object to form more specific location descriptions. For example, 'on the table' is 'فوق الطبلة'.",
+        "examples": [
+          {
+            "arabic": "القلم فوق الطبلة.",
+            "english": "The pen is on the table.",
+            "transliteration": "El-qalam fūq eṭ-ṭbla."
+          },
+          {
+            "arabic": "المفاتح فـ المحفظة.",
+            "english": "The keys are in the bag.",
+            "transliteration": "El-mfāteḥ fī el-maḥfaḍa."
+          },
+          {
+            "arabic": "هو كاين قدام الباب.",
+            "english": "He is in front of the door.",
+            "transliteration": "Hūwa kāyn giddām el-bāb."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Practical Dialogue and Review",
+          "arabic": "حوار عملي ومراجعة"
+        },
+        "text": "Let's review with a short dialogue combining what you've learned to ask and answer about locations.",
+        "examples": [
+          {
+            "arabic": "فين كاين التيليفون؟",
+            "english": "Where is the phone?",
+            "transliteration": "Fīn kāyn et-tīlīfōn?"
+          },
+          {
+            "arabic": "التيليفون كاين فوق البيرو.",
+            "english": "The phone is on the desk.",
+            "transliteration": "Et-tīlīfōn kāyn fūq el-bīro."
+          },
+          {
+            "arabic": "فين كاينا القهوة؟",
+            "english": "Where is the coffee?",
+            "transliteration": "Fīn kāyna el-qahwa?"
+          },
+          {
+            "arabic": "القهوة كاينا فـ الكوزينة.",
+            "english": "The coffee is in the kitchen. (kitchen is 'الكوزينة' - fem.)",
+            "transliteration": "El-qahwa kāyna fī el-kūzīna."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "فين كاين الأخ ديالك؟",
+        "english": "Where is your brother? (Brother is 'الأخ' - masc.)",
+        "transliteration": "Fīn kāyn el-akh diyālek?"
+      },
+      "context": "Asking about the location of a male sibling."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هي كاينا فـ الدار.",
+        "english": "She is at home.",
+        "transliteration": "Hiyya kāyna fī ed-dār."
+      },
+      "context": "Stating a female's location."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'Where is the mother?' (Mother is 'الأم' - feminine)",
+      "options": [
+        {
+          "id": "a",
+          "text": "فين كاين الأم؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "فين كاينا الأم؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "فين الأم؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Since 'الأم' (the mother) is feminine, we use 'كاينا'.",
+      "hint": {
+        "transliteration": "Fīn kāyna el-omm?",
+        "arabic": "فين كاينا الأم؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Translate: 'The phone is on the table.' (Phone is 'التيليفون' - masc., table is 'الطبلة' - fem.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "التيليفون كاين تحت الطبلة.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "التيليفون كاين فوق الطبلة.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "التيليفون كاينا فـ الطبلة.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'كاين' for the masculine phone, 'فوق' for 'on', and 'الطبلة' for table.",
+      "hint": {
+        "transliteration": "Et-tīlīfōn kāyn fūq eṭ-ṭbla.",
+        "arabic": "التيليفون كاين فوق الطبلة."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which sentence correctly asks about the location of a feminine object like 'الساروت' (the key)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "فين الساروت كاين؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "فين كاين الساروت؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "فين كاينا الساروت؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "Although 'الساروت' looks masculine with the 'ت', it is treated as feminine in Moroccan Darija, thus requiring 'كاينا'. This is a common exception.",
+      "hint": {
+        "transliteration": "Fīn kāyna es-sārūt?",
+        "arabic": "فين كاينا الساروت؟"
+      }
+    }
+  ]
+}

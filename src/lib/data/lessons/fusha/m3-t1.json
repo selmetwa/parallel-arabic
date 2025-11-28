@@ -1,0 +1,924 @@
+{
+  "topicId": "m3-t1",
+  "title": "Asking About Numbers, Telephone, and Travel Documents",
+  "dialect": "fusha",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Basic Question: 'What is your number?'",
+          "arabic": "السؤال الأساسي: 'ما رقمك؟'"
+        },
+        "text": "To ask someone for their number in a general sense, you can use the phrase 'ما رقمك؟'. The ending '-كَ' is for a male, and '-كِ' is for a female. It's polite and direct.",
+        "examples": [
+          {
+            "arabic": "ما رقمكَ؟",
+            "english": "What is your (male) number?",
+            "transliteration": "Ma raqmuka?",
+            "diacriticalNotes": "Note the فتحة on the ك for male."
+          },
+          {
+            "arabic": "ما رقمكِ؟",
+            "english": "What is your (female) number?",
+            "transliteration": "Ma raqmuki?",
+            "diacriticalNotes": "Note the كسرة on the ك for female."
+          },
+          {
+            "arabic": "رقم",
+            "english": "number",
+            "transliteration": "raqm"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Numbers 0-3",
+          "arabic": "الأرقام ٠-٣"
+        },
+        "text": "Let's learn the first few essential numbers. Mastering these will help you articulate and understand numerical information.",
+        "examples": [
+          {
+            "arabic": "صفر",
+            "english": "zero",
+            "transliteration": "sifr"
+          },
+          {
+            "arabic": "واحد",
+            "english": "one",
+            "transliteration": "waḥid"
+          },
+          {
+            "arabic": "اثنان",
+            "english": "two",
+            "transliteration": "ithnan"
+          },
+          {
+            "arabic": "ثلاثة",
+            "english": "three",
+            "transliteration": "thalathah"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Numbers 4-6",
+          "arabic": "الأرقام ٤-٦"
+        },
+        "text": "Continue expanding your numerical vocabulary with the next set of numbers. Practice their pronunciation.",
+        "examples": [
+          {
+            "arabic": "أربعة",
+            "english": "four",
+            "transliteration": "arba'ah"
+          },
+          {
+            "arabic": "خمسة",
+            "english": "five",
+            "transliteration": "khamsah"
+          },
+          {
+            "arabic": "ستة",
+            "english": "six",
+            "transliteration": "sittah"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ما رقمكَ؟ هل هو اثنان؟",
+        "english": "What is your (male) number? Is it two?",
+        "transliteration": "Ma raqmuka? Hal huwa ithnan?"
+      },
+      "context": "Asking a male about his number and guessing."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "واحد، اثنان، ثلاثة، أربعة.",
+        "english": "One, two, three, four.",
+        "transliteration": "Wahid, ithnan, thalathah, arba'ah."
+      },
+      "context": "Counting the first four numbers."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'What is your number?' to a female?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ما رقمكَ؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ما رقمكِ؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "ما رقمها؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "To ask a female 'What is your number?', you use the possessive pronoun '-كِ' (ki) at the end of 'رقم' (number).",
+      "hint": {
+        "transliteration": "Ma raqmuki?",
+        "arabic": "ما رقمكِ؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which of these numbers means 'zero'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "واحد",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "اثنان",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "صفر",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "The Arabic word for 'zero' is 'صفر'.",
+      "hint": {
+        "transliteration": "sifr",
+        "arabic": "صفر"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Select the Arabic word for 'five'.",
+      "options": [
+        {
+          "id": "a",
+          "text": "أربعة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "خمسة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "ستة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "The Arabic word for 'five' is 'خمسة'.",
+      "hint": {
+        "transliteration": "khamsah",
+        "arabic": "خمسة"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Numbers 7-9",
+          "arabic": "الأرقام ٧-٩"
+        },
+        "text": "Let's complete the single-digit numbers. These are frequently used in phone numbers and identification.",
+        "examples": [
+          {
+            "arabic": "سبعة",
+            "english": "seven",
+            "transliteration": "sab'ah"
+          },
+          {
+            "arabic": "ثمانية",
+            "english": "eight",
+            "transliteration": "thamaniyah"
+          },
+          {
+            "arabic": "تسعة",
+            "english": "nine",
+            "transliteration": "tis'ah"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for 'Phone Number'",
+          "arabic": "السؤال عن 'رقم الهاتف'"
+        },
+        "text": "To specifically ask for a phone number, you use the word 'هاتف' (phone) or 'جوال' (mobile). The most common phrase is 'ما رقم هاتفك؟'.",
+        "examples": [
+          {
+            "arabic": "هاتف",
+            "english": "phone",
+            "transliteration": "hatif"
+          },
+          {
+            "arabic": "جوال",
+            "english": "mobile phone",
+            "transliteration": "jawwal"
+          },
+          {
+            "arabic": "ما رقم هاتفكَ؟",
+            "english": "What is your (male) phone number?",
+            "transliteration": "Ma raqm hatifika?"
+          },
+          {
+            "arabic": "ما رقم هاتفكِ؟",
+            "english": "What is your (female) phone number?",
+            "transliteration": "Ma raqm hatifiki?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Stating 'My number is...'",
+          "arabic": "قول 'رقمي هو...'"
+        },
+        "text": "When providing your number, you can say 'رقمي هو...' (My number is...) followed by the digits. 'رقمي' means 'my number' and 'هو' means 'is' (for masculine singular).",
+        "examples": [
+          {
+            "arabic": "رقمي هو...",
+            "english": "My number is...",
+            "transliteration": "Raqmi huwa..."
+          },
+          {
+            "arabic": "رقمي هو سبعة ثمانية تسعة.",
+            "english": "My number is seven eight nine.",
+            "transliteration": "Raqmi huwa sab'ah thamaniyah tis'ah."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ما رقم هاتفكَ؟ رقمي هو صفر تسعة ثمانية.",
+        "english": "What is your (male) phone number? My number is zero nine eight.",
+        "transliteration": "Ma raqm hatifika? Raqmi huwa sifr tis'ah thamaniyah."
+      },
+      "context": "Asking a male for his phone number and responding with a sample number."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هل رقم هاتفكِ سبعة ستة خمسة؟",
+        "english": "Is your (female) phone number seven six five?",
+        "transliteration": "Hal raqm hatifiki sab'ah sittah khamsah?"
+      },
+      "context": "Confirming a female's phone number."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'nine'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "سبعة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ثمانية",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "تسعة",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'تسعة' means 'nine'.",
+      "hint": {
+        "transliteration": "tis'ah",
+        "arabic": "تسعة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'What is your phone number?' to a male?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ما رقم هاتفكِ؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ما رقمك؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "ما رقم هاتفكَ؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "For a male, use '-كَ' (ka) and specify 'هاتف' (phone).",
+      "hint": {
+        "transliteration": "Ma raqm hatifika?",
+        "arabic": "ما رقم هاتفكَ؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would you say 'My number is three two one'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "رقمي هو ثلاثة اثنان واحد.",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "هاتفي هو ثلاثة اثنان واحد.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "ما رقمي هو ثلاثة اثنان واحد.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "'رقمي هو' means 'My number is'.",
+      "hint": {
+        "transliteration": "Raqmi huwa thalathah ithnan waḥid.",
+        "arabic": "رقمي هو ثلاثة اثنان واحد."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for 'Passport Number'",
+          "arabic": "السؤال عن 'رقم جواز السفر'"
+        },
+        "text": "When traveling, you often need to provide your passport number. The Arabic for 'passport' is 'جواز السفر'.",
+        "examples": [
+          {
+            "arabic": "جواز السفر",
+            "english": "passport",
+            "transliteration": "jawaz as-safar"
+          },
+          {
+            "arabic": "ما رقم جواز سفركَ؟",
+            "english": "What is your (male) passport number?",
+            "transliteration": "Ma raqm jawaz safarika?"
+          },
+          {
+            "arabic": "ما رقم جواز سفركِ؟",
+            "english": "What is your (female) passport number?",
+            "transliteration": "Ma raqm jawaz safariki?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for 'ID Card Number'",
+          "arabic": "السؤال عن 'رقم بطاقة الهوية'"
+        },
+        "text": "For identification purposes, you might be asked for your ID card number. 'بطاقة الهوية' means 'ID card'.",
+        "examples": [
+          {
+            "arabic": "بطاقة الهوية",
+            "english": "ID card",
+            "transliteration": "bitaqat al-hawiyah"
+          },
+          {
+            "arabic": "ما رقم بطاقة هويتكَ؟",
+            "english": "What is your (male) ID card number?",
+            "transliteration": "Ma raqm bitaqat hawiyatika?"
+          },
+          {
+            "arabic": "ما رقم بطاقة هويتكِ؟",
+            "english": "What is your (female) ID card number?",
+            "transliteration": "Ma raqm bitaqat hawiyatiki?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for 'Visa Number'",
+          "arabic": "السؤال عن 'رقم التأشيرة'"
+        },
+        "text": "If you have a visa, you may need to provide its number. The Arabic word for 'visa' is 'تأشيرة'.",
+        "examples": [
+          {
+            "arabic": "تأشيرة",
+            "english": "visa",
+            "transliteration": "ta'shirah"
+          },
+          {
+            "arabic": "ما رقم تأشيرتكَ؟",
+            "english": "What is your (male) visa number?",
+            "transliteration": "Ma raqm ta'shiratika?"
+          },
+          {
+            "arabic": "ما رقم تأشيرتكِ؟",
+            "english": "What is your (female) visa number?",
+            "transliteration": "Ma raqm ta'shiratiki?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ما رقم جواز سفركَ؟",
+        "english": "What is your (male) passport number?",
+        "transliteration": "Ma raqm jawaz safarika?"
+      },
+      "context": "A common question at immigration."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "رقم بطاقة هويتي هو سبعة أربعة ثلاثة.",
+        "english": "My ID card number is seven four three.",
+        "transliteration": "Raqm bitaqat hawiyati huwa sab'ah arba'ah thalathah."
+      },
+      "context": "Stating one's ID card number."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'passport'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "هاتف",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "جواز السفر",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بطاقة الهوية",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'جواز السفر' is the Arabic term for 'passport'.",
+      "hint": {
+        "transliteration": "jawaz as-safar",
+        "arabic": "جواز السفر"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'What is your ID card number?' to a female?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ما رقم بطاقة هويتكَ؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ما رقم تأشيرتكِ؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "ما رقم بطاقة هويتكِ؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "Use 'بطاقة هويتكِ' to refer to a female's ID card.",
+      "hint": {
+        "transliteration": "Ma raqm bitaqat hawiyatiki?",
+        "arabic": "ما رقم بطاقة هويتكِ؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means 'visa'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "تأشيرة",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "جوال",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "رقم",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "The Arabic word for 'visa' is 'تأشيرة'.",
+      "hint": {
+        "transliteration": "ta'shirah",
+        "arabic": "تأشيرة"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Numbers 10-12",
+          "arabic": "الأرقام ١٠-١٢"
+        },
+        "text": "Let's learn numbers beyond single digits, starting with ten, eleven, and twelve. These are crucial for dates, times, and larger numbers.",
+        "examples": [
+          {
+            "arabic": "عشرة",
+            "english": "ten",
+            "transliteration": "asharah"
+          },
+          {
+            "arabic": "أحد عشر",
+            "english": "eleven",
+            "transliteration": "aḥada ashar"
+          },
+          {
+            "arabic": "اثنا عشر",
+            "english": "twelve",
+            "transliteration": "ithna ashar"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Formal Request: 'May I have...'",
+          "arabic": "طلب رسمي: 'هل لي أن أحصل على...'"
+        },
+        "text": "For a more formal or polite way to ask for information, you can use the phrase 'هل لي أن أحصل على...' (May I have...).",
+        "examples": [
+          {
+            "arabic": "هل لي أن أحصل على رقم هاتفكَ؟",
+            "english": "May I have your (male) phone number?",
+            "transliteration": "Hal li an aḥṣula 'ala raqm hatifika?"
+          },
+          {
+            "arabic": "هل لي أن أحصل على جواز سفركِ؟",
+            "english": "May I have your (female) passport?",
+            "transliteration": "Hal li an aḥṣula 'ala jawaz safariki?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Giving Numbers Clearly (Digit by Digit)",
+          "arabic": "قول الأرقام بوضوح (رقم برقم)"
+        },
+        "text": "When reciting a number like a phone number or ID number, you usually say each digit individually. For example, for '0123', you would say 'صفر واحد اثنان ثلاثة'.",
+        "examples": [
+          {
+            "arabic": "قل صفر واحد اثنان ثلاثة.",
+            "english": "Say zero one two three.",
+            "transliteration": "Qul sifr waḥid ithnan thalathah."
+          },
+          {
+            "arabic": "رقم جواز سفري هو: واحد اثنان ثلاثة صفر أربعة خمسة.",
+            "english": "My passport number is: one two three zero four five.",
+            "transliteration": "Raqm jawaz safari huwa: waḥid ithnan thalathah sifr arba'ah khamsah."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هل لي أن أحصل على رقم بطاقة هويتكِ؟",
+        "english": "May I have your (female) ID card number?",
+        "transliteration": "Hal li an aḥṣula 'ala raqm bitaqat hawiyatiki?"
+      },
+      "context": "Formally requesting an ID card number from a female."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "عشرة، أحد عشر، اثنا عشر.",
+        "english": "Ten, eleven, twelve.",
+        "transliteration": "Asharah, aḥada ashar, ithna ashar."
+      },
+      "context": "Counting from ten to twelve."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which of these numbers means 'eleven'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "عشرة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أحد عشر",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "اثنا عشر",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'أحد عشر' is the Arabic word for 'eleven'.",
+      "hint": {
+        "transliteration": "aḥada ashar",
+        "arabic": "أحد عشر"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you politely ask 'May I have your passport?' to a male?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ما رقم جواز سفركَ؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "هل لي أن أحصل على جواز سفركَ؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "جواز سفركَ؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'هل لي أن أحصل على...' is a polite way to ask 'May I have...'.",
+      "hint": {
+        "transliteration": "Hal li an aḥṣula 'ala jawaz safarika?",
+        "arabic": "هل لي أن أحصل على جواز سفركَ؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would you state the number 'four five six' digit by digit?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أربعة خمسة ستة.",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "ستة خمسة أربعة.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "أربعة وخمسة وستة.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "Digits are stated individually: أربعة (four), خمسة (five), ستة (six).",
+      "hint": {
+        "transliteration": "arba'ah khamsah sittah",
+        "arabic": "أربعة خمسة ستة."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for 'Expiry Date'",
+          "arabic": "السؤال عن 'تاريخ انتهاء الصلاحية'"
+        },
+        "text": "When dealing with documents like passports or visas, you might be asked for their expiry date. 'تاريخ انتهاء الصلاحية' means 'expiry date'.",
+        "examples": [
+          {
+            "arabic": "تاريخ",
+            "english": "date",
+            "transliteration": "tarikh"
+          },
+          {
+            "arabic": "انتهاء الصلاحية",
+            "english": "expiry",
+            "transliteration": "intiha' as-ṣalaḥiyah"
+          },
+          {
+            "arabic": "ما تاريخ انتهاء صلاحية جواز سفركَ؟",
+            "english": "What is the expiry date of your (male) passport?",
+            "transliteration": "Ma tarikh intiha' ṣalaḥiyat jawaz safarika?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Where is...?' for documents",
+          "arabic": "السؤال 'أين...؟' عن الوثائق"
+        },
+        "text": "To inquire about the location of a document, use 'أين...؟' (Where is...?). This is useful when you need someone to present a document.",
+        "examples": [
+          {
+            "arabic": "أين",
+            "english": "where",
+            "transliteration": "ayna"
+          },
+          {
+            "arabic": "أين جواز سفركَ؟",
+            "english": "Where is your (male) passport?",
+            "transliteration": "Ayna jawaz safarika?"
+          },
+          {
+            "arabic": "أين بطاقة هويتكِ؟",
+            "english": "Where is your (female) ID card?",
+            "transliteration": "Ayna bitaqat hawiyatiki?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Do you have...?' and 'Please'",
+          "arabic": "السؤال 'هل لديك...؟' و 'من فضلك'"
+        },
+        "text": "To ask if someone possesses something, use 'هل لديك...؟' (Do you have...?). Adding 'من فضلك' (please) makes your request polite.",
+        "examples": [
+          {
+            "arabic": "هل لديكَ؟",
+            "english": "Do you (male) have?",
+            "transliteration": "Hal ladayka?"
+          },
+          {
+            "arabic": "هل لديكِ؟",
+            "english": "Do you (female) have?",
+            "transliteration": "Hal ladayki?"
+          },
+          {
+            "arabic": "من فضلك",
+            "english": "please",
+            "transliteration": "min faḍlika"
+          },
+          {
+            "arabic": "هل لديكَ جواز سفركَ من فضلك؟",
+            "english": "Do you (male) have your passport, please?",
+            "transliteration": "Hal ladayka jawaz safarika min faḍlika?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ما تاريخ انتهاء صلاحية تأشيرتكَ؟",
+        "english": "What is the expiry date of your (male) visa?",
+        "transliteration": "Ma tarikh intiha' ṣalaḥiyat ta'shiratika?"
+      },
+      "context": "Asking a male about his visa's expiry date."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أين بطاقة هويتكِ من فضلك؟",
+        "english": "Where is your (female) ID card, please?",
+        "transliteration": "Ayna bitaqat hawiyatiki min faḍlik?"
+      },
+      "context": "Politely asking a female for the location of her ID card."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic phrase for 'expiry date'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "تاريخ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "انتهاء الصلاحية",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "رقم",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'انتهاء الصلاحية' translates to 'expiry date'.",
+      "hint": {
+        "transliteration": "intiha' as-ṣalaḥiyah",
+        "arabic": "انتهاء الصلاحية"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'Where is your passport?' to a female?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ما رقم جواز سفركِ؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أين جواز سفركِ؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "هل لديكِ جواز سفركِ؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'أين' means 'where', and 'جواز سفركِ' refers to a female's passport.",
+      "hint": {
+        "transliteration": "Ayna jawaz safariki?",
+        "arabic": "أين جواز سفركِ؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would you politely ask a male 'Do you have your ID card, please?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "أين بطاقة هويتكَ من فضلك؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "هل لديكَ بطاقة هويتكَ من فضلك؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "ما رقم بطاقة هويتكَ؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'هل لديكَ...؟' asks 'Do you (male) have...?', and 'من فضلك' adds politeness.",
+      "hint": {
+        "transliteration": "Hal ladayka bitaqat hawiyatika min faḍlika?",
+        "arabic": "هل لديكَ بطاقة هويتكَ من فضلك؟"
+      }
+    }
+  ]
+}

@@ -1,0 +1,795 @@
+{
+  "topicId": "m1-t2",
+  "title": "Introducing Yourself and Nationalities",
+  "dialect": "fusha",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Greetings: Hello"
+        },
+        "text": "The most common and universal greeting in Arabic is 'As-salamu alaykum'. It means 'Peace be upon you'. It can be used at any time of day.",
+        "examples": [
+          {
+            "arabic": "السلام عليكم",
+            "english": "Hello / Peace be upon you",
+            "transliteration": "As-salamu alaykum"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Greetings: Good morning"
+        },
+        "text": "To greet someone specifically in the morning, you can use 'Sabah al-khayr'. The response is 'Sabah an-noor'.",
+        "examples": [
+          {
+            "arabic": "صباح الخير",
+            "english": "Good morning",
+            "transliteration": "Sabah al-khayr"
+          },
+          {
+            "arabic": "صباح النور",
+            "english": "Good morning (response, lit. Morning of light)",
+            "transliteration": "Sabah an-noor"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Greetings: Good evening"
+        },
+        "text": "Similarly, for the evening, use 'Masa' al-khayr'. The response is 'Masa' an-noor'.",
+        "examples": [
+          {
+            "arabic": "مساء الخير",
+            "english": "Good evening",
+            "transliteration": "Masa' al-khayr"
+          },
+          {
+            "arabic": "مساء النور",
+            "english": "Good evening (response, lit. Evening of light)",
+            "transliteration": "Masa' an-noor"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "السلام عليكم يا أحمد.",
+        "english": "Hello, Ahmed.",
+        "transliteration": "As-salamu alaykum ya Ahmed."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "صباح الخير يا سارة.",
+        "english": "Good morning, Sara.",
+        "transliteration": "Sabah al-khayr ya Sara."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'Good evening'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "صباح الخير",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مساء الخير",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "السلام عليكم",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'مساء الخير' means 'Good evening'.",
+      "hint": {
+        "transliteration": "Masa' al-khayr",
+        "arabic": "مساء الخير"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the common response to 'صباح الخير'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "مساء النور",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "صباح النور",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "السلام عليكم",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "The response to 'Sabah al-khayr' (Good morning) is 'Sabah an-noor'.",
+      "hint": {
+        "transliteration": "Sabah an-noor",
+        "arabic": "صباح النور"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Choose the universal Arabic greeting that can be used at any time.",
+      "options": [
+        {
+          "id": "a",
+          "text": "مساء الخير",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "صباح الخير",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "السلام عليكم",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'As-salamu alaykum' is the universal greeting.",
+      "hint": {
+        "transliteration": "As-salamu alaykum",
+        "arabic": "السلام عليكم"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'What is your name?' (male)"
+        },
+        "text": "To ask a male 'What is your name?', you use 'Ma ismuka?'. Note the 'fatḥa' (كَ) on the final letter indicating masculine gender.",
+        "examples": [
+          {
+            "arabic": "ما اسمكَ؟",
+            "english": "What is your name? (to a male)",
+            "transliteration": "Ma ismuká?",
+            "diacriticalNotes": "The 'fatḥa' on كَ indicates male."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'What is your name?' (female)"
+        },
+        "text": "To ask a female 'What is your name?', you use 'Ma ismuki?'. Note the 'kasra' (كِ) on the final letter indicating feminine gender.",
+        "examples": [
+          {
+            "arabic": "ما اسمكِ؟",
+            "english": "What is your name? (to a female)",
+            "transliteration": "Ma ismuki?",
+            "diacriticalNotes": "The 'kasra' on كِ indicates female."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Stating 'My name is...'"
+        },
+        "text": "To state your name, you say 'Ismi...' followed by your name. The 'ي' (ya) at the end means 'my'.",
+        "examples": [
+          {
+            "arabic": "اسمي أحمد.",
+            "english": "My name is Ahmed.",
+            "transliteration": "Ismi Ahmed."
+          },
+          {
+            "arabic": "اسمي سارة.",
+            "english": "My name is Sara.",
+            "transliteration": "Ismi Sara."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ما اسمكَ يا علي؟",
+        "english": "What is your name, Ali? (to a male)",
+        "transliteration": "Ma ismuka ya Ali?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "اسمي ليلى. ما اسمكِ؟",
+        "english": "My name is Layla. What is your name? (to a female)",
+        "transliteration": "Ismi Layla. Ma ismuki?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask a male 'What is your name?'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ما اسمكِ؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ما اسمكَ؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "اسمي...",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "The 'fatḥa' on كَ indicates a question to a male.",
+      "hint": {
+        "transliteration": "Ma ismuká?",
+        "arabic": "ما اسمكَ؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask a female 'What is your name?'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ما اسمكَ؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "اسمي...",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "ما اسمكِ؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "The 'kasra' on كِ indicates a question to a female.",
+      "hint": {
+        "transliteration": "Ma ismuki?",
+        "arabic": "ما اسمكِ؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: My name is [blank] (for someone named Omar).",
+      "options": [
+        {
+          "id": "a",
+          "text": "اسمي عمر",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "اسمكِ عمر",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "اسمي مريم",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "'اسمي' means 'my name is'.",
+      "hint": {
+        "transliteration": "Ismi Omar",
+        "arabic": "اسمي عمر"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'How are you?' (male)"
+        },
+        "text": "To ask a male 'How are you?', you say 'Kayfa haluka?'. Again, notice the 'fatḥa' on the final 'kaf' (كَ).",
+        "examples": [
+          {
+            "arabic": "كيف حالكَ؟",
+            "english": "How are you? (to a male)",
+            "transliteration": "Kayfa ḥaluká?",
+            "diacriticalNotes": "The 'fatḥa' on كَ indicates male."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'How are you?' (female)"
+        },
+        "text": "To ask a female 'How are you?', you say 'Kayfa haluki?'. Notice the 'kasra' on the final 'kaf' (كِ).",
+        "examples": [
+          {
+            "arabic": "كيف حالكِ؟",
+            "english": "How are you? (to a female)",
+            "transliteration": "Kayfa ḥaluki?",
+            "diacriticalNotes": "The 'kasra' on كِ indicates female."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Responding 'I am fine, thank God'"
+        },
+        "text": "The standard and polite way to respond to 'How are you?' is 'Ana bikhayr, alhamdulillah'. This means 'I am fine, thank God'.",
+        "examples": [
+          {
+            "arabic": "أنا بخير، الحمد لله.",
+            "english": "I am fine, thank God.",
+            "transliteration": "Ana bikhayr, alhamdulillah."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "صباح الخير يا رامي، كيف حالكَ؟",
+        "english": "Good morning, Rami, how are you? (to a male)",
+        "transliteration": "Sabah al-khayr ya Rami, kayfa haluka?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا بخير، الحمد لله. ما اسمكِ يا فتاة؟",
+        "english": "I am fine, thank God. What is your name, girl? (asking a female)",
+        "transliteration": "Ana bikhayr, alhamdulillah. Ma ismuki ya fatat?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask a female 'How are you?'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "كيف حالكَ؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أنا بخير",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "كيف حالكِ؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "The 'kasra' on كِ indicates a question to a female.",
+      "hint": {
+        "transliteration": "Kayfa ḥaluki?",
+        "arabic": "كيف حالكِ؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the correct response to 'كيف حالكِ؟'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "مساء الخير",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أنا بخير، الحمد لله.",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "ما اسمكَ؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'Ana bikhayr, alhamdulillah' is the standard response for 'I am fine, thank God'.",
+      "hint": {
+        "transliteration": "Ana bikhayr, alhamdulillah",
+        "arabic": "أنا بخير، الحمد لله."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "If you ask a male 'كيف حالكَ؟', what would be an appropriate response?",
+      "options": [
+        {
+          "id": "a",
+          "text": "صباح النور",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "اسمي أحمد",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "أنا بخير، الحمد لله.",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'Ana bikhayr, alhamdulillah' is the standard response for 'I am fine, thank God'.",
+      "hint": {
+        "transliteration": "Ana bikhayr, alhamdulillah",
+        "arabic": "أنا بخير، الحمد لله."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'And you?' (male)"
+        },
+        "text": "After someone asks you how you are, you can ask them back 'And you?' using 'Wa anta?' for a male. The 'fatḥa' on the final letter indicates masculine.",
+        "examples": [
+          {
+            "arabic": "وأنتَ؟",
+            "english": "And you? (to a male)",
+            "transliteration": "Wa antá?",
+            "diacriticalNotes": "The 'fatḥa' on تَ indicates male."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'And you?' (female)"
+        },
+        "text": "To ask a female 'And you?', you say 'Wa anti?'. The 'kasra' on the final letter indicates feminine.",
+        "examples": [
+          {
+            "arabic": "وأنتِ؟",
+            "english": "And you? (to a female)",
+            "transliteration": "Wa anti?",
+            "diacriticalNotes": "The 'kasra' on تِ indicates female."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Where are you from?' (male)"
+        },
+        "text": "To ask a male 'Where are you from?', you use 'Min ayna anta?'. 'Min' means 'from', 'ayna' means 'where', and 'anta' means 'you' (masculine).",
+        "examples": [
+          {
+            "arabic": "من أينَ أنتَ؟",
+            "english": "Where are you from? (to a male)",
+            "transliteration": "Min ayna antá?",
+            "diacriticalNotes": "The 'fatḥa' on تَ indicates male."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا بخير، الحمد لله. وأنتَ يا سامي؟",
+        "english": "I am fine, thank God. And you, Sami? (to a male)",
+        "transliteration": "Ana bikhayr, alhamdulillah. Wa anta ya Sami?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "من أينَ أنتِ يا مها؟",
+        "english": "Where are you from, Maha? (to a female)",
+        "transliteration": "Min ayna anti ya Maha?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask a female 'And you?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "وأنتَ؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "وأنتِ؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أنا بخير",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "The 'kasra' on تِ indicates asking a female.",
+      "hint": {
+        "transliteration": "Wa anti?",
+        "arabic": "وأنتِ؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the correct way to ask a male 'Where are you from?'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "من أينَ أنتِ؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أنا من...",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "من أينَ أنتَ؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'Min ayna anta?' is used to ask a male 'Where are you from?'.",
+      "hint": {
+        "transliteration": "Min ayna antá?",
+        "arabic": "من أينَ أنتَ؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the phrase: 'And you?' (addressed to a male).",
+      "options": [
+        {
+          "id": "a",
+          "text": "وأنتَ",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "وأنتِ",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "كيف حالكَ؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "'وأنتَ' is used for a male.",
+      "hint": {
+        "transliteration": "Wa antá",
+        "arabic": "وأنتَ"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Where are you from?' (female) and stating origin"
+        },
+        "text": "To ask a female 'Where are you from?', you use 'Min ayna anti?'. To respond, you say 'Ana min...' followed by your country.",
+        "examples": [
+          {
+            "arabic": "من أينَ أنتِ؟",
+            "english": "Where are you from? (to a female)",
+            "transliteration": "Min ayna anti?",
+            "diacriticalNotes": "The 'kasra' on تِ indicates female."
+          },
+          {
+            "arabic": "أنا من مصر.",
+            "english": "I am from Egypt.",
+            "transliteration": "Ana min Misr."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Nationalities (Masculine)"
+        },
+        "text": "Nationalities in Arabic change based on gender. For a male, typically a 'يّ' (ya) is added to the end of the country's name or root.",
+        "examples": [
+          {
+            "arabic": "مصر ⬅ مصريّ",
+            "english": "Egypt ⬅ Egyptian (male)",
+            "transliteration": "Misr ⬅ Masriyy"
+          },
+          {
+            "arabic": "سوريا ⬅ سوريّ",
+            "english": "Syria ⬅ Syrian (male)",
+            "transliteration": "Suriya ⬅ Suriyy"
+          },
+          {
+            "arabic": "الأردن ⬅ أردنيّ",
+            "english": "Jordan ⬅ Jordanian (male)",
+            "transliteration": "Al-Urdun ⬅ Urduniyy"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Nationalities (Feminine)"
+        },
+        "text": "For a female, a 'ـة' (ta marbuta) is added to the masculine nationality form. This makes the sound 'iyya'.",
+        "examples": [
+          {
+            "arabic": "مصريّة",
+            "english": "Egyptian (female)",
+            "transliteration": "Masriyya"
+          },
+          {
+            "arabic": "سوريّة",
+            "english": "Syrian (female)",
+            "transliteration": "Suriyya"
+          },
+          {
+            "arabic": "أردنيّة",
+            "english": "Jordanian (female)",
+            "transliteration": "Urduniyya"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا من الأردن، أنا أردنيّ.",
+        "english": "I am from Jordan, I am Jordanian (male).",
+        "transliteration": "Ana min Al-Urdun, ana Urduniyy."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هي من سوريا، هي سوريّة.",
+        "english": "She is from Syria, she is Syrian (female).",
+        "transliteration": "Hiya min Suriya, hiya Suriyya."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "If a female says 'أنا من مصر', what is her nationality?",
+      "options": [
+        {
+          "id": "a",
+          "text": "مصريّ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مصرية",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "سورية",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'مصرية' is the feminine form for Egyptian.",
+      "hint": {
+        "transliteration": "Masriyya",
+        "arabic": "مصرية"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would a male from Syria describe his nationality?",
+      "options": [
+        {
+          "id": "a",
+          "text": "سوريّة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مصريّ",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "سوريّ",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'سوريّ' is the masculine form for Syrian.",
+      "hint": {
+        "transliteration": "Suriyy",
+        "arabic": "سوريّ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: I am from Jordan. I am ___ (male).",
+      "options": [
+        {
+          "id": "a",
+          "text": "أردنيّة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أردنيّ",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "سوريّ",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'أردنيّ' is the masculine form for Jordanian.",
+      "hint": {
+        "transliteration": "Urduniyy",
+        "arabic": "أردنيّ"
+      }
+    }
+  ]
+}

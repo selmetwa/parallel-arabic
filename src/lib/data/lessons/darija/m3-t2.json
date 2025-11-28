@@ -1,0 +1,892 @@
+{
+  "topicId": "m3-t2",
+  "title": "Asking about times and appointments",
+  "dialect": "darija",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'What time is it?'"
+        },
+        "text": "To ask about the current time in Darija, you use the phrase 'شحال فالساعة؟'. This literally translates to 'How much in the hour?' but is understood as 'What time is it?'.",
+        "examples": [
+          {
+            "arabic": "شحال فالساعة؟",
+            "english": "What time is it?",
+            "transliteration": "ShHal fess-sa'a?"
+          },
+          {
+            "arabic": "شحال فالساعة دابا؟",
+            "english": "What time is it now?",
+            "transliteration": "ShHal fess-sa'a daba?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Telling the Hour: 1 to 6 o'clock"
+        },
+        "text": "When telling time, you typically say 'الساعة' (ess-sa'a) followed by the hour. Here are the hours from 1 to 6:",
+        "examples": [
+          {
+            "arabic": "الساعة الوحدة",
+            "english": "One o'clock",
+            "transliteration": "Ess-sa'a l-weHda"
+          },
+          {
+            "arabic": "الساعة الجوج",
+            "english": "Two o'clock",
+            "transliteration": "Ess-sa'a j-jūj"
+          },
+          {
+            "arabic": "الساعة التلاتة",
+            "english": "Three o'clock",
+            "transliteration": "Ess-sa'a t-tlāta"
+          },
+          {
+            "arabic": "الساعة الربعة",
+            "english": "Four o'clock",
+            "transliteration": "Ess-sa'a r-reb'a"
+          },
+          {
+            "arabic": "الساعة الخمسة",
+            "english": "Five o'clock",
+            "transliteration": "Ess-sa'a l-khemsa"
+          },
+          {
+            "arabic": "الساعة الستة",
+            "english": "Six o'clock",
+            "transliteration": "Ess-sa'a s-setta"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Telling the Hour: 7 to 12 o'clock"
+        },
+        "text": "Continuing with the hours, here are 7 to 12:",
+        "examples": [
+          {
+            "arabic": "الساعة السبعة",
+            "english": "Seven o'clock",
+            "transliteration": "Ess-sa'a s-seb'a"
+          },
+          {
+            "arabic": "الساعة التمانية",
+            "english": "Eight o'clock",
+            "transliteration": "Ess-sa'a t-tmenya"
+          },
+          {
+            "arabic": "الساعة التسعود",
+            "english": "Nine o'clock",
+            "transliteration": "Ess-sa'a t-tes'ūd"
+          },
+          {
+            "arabic": "الساعة العشرة",
+            "english": "Ten o'clock",
+            "transliteration": "Ess-sa'a l-'ashra"
+          },
+          {
+            "arabic": "الساعة الحداش",
+            "english": "Eleven o'clock",
+            "transliteration": "Ess-sa'a l-Hdash"
+          },
+          {
+            "arabic": "الساعة التناش",
+            "english": "Twelve o'clock",
+            "transliteration": "Ess-sa'a t-tnash"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شحال فالساعة الاجتماع؟",
+        "english": "What time is the meeting?",
+        "transliteration": "ShHal fess-sa'a l-ijtimā'?"
+      },
+      "context": "Asking about the time of an event."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الموعد مع الساعة الربعة.",
+        "english": "The appointment is at four o'clock.",
+        "transliteration": "El-maw'id m'a ess-sa'a r-reb'a."
+      },
+      "context": "Stating an appointment time."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'What time is it?' in Darija?",
+      "options": [
+        {
+          "id": "a1",
+          "text": "كيف داير؟",
+          "isCorrect": false
+        },
+        {
+          "id": "a2",
+          "text": "شحال فالساعة؟",
+          "isCorrect": true
+        },
+        {
+          "id": "a3",
+          "text": "شنو هادشي؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a2",
+      "explanation": "The correct phrase to ask 'What time is it?' in Darija is 'شحال فالساعة؟'.",
+      "hint": {
+        "transliteration": "ShHal fess-sa'a?",
+        "arabic": "شحال فالساعة؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: The lesson is at ___ three o'clock.",
+      "options": [
+        {
+          "id": "b1",
+          "text": "الساعة الجوج",
+          "isCorrect": false
+        },
+        {
+          "id": "b2",
+          "text": "الساعة التلاتة",
+          "isCorrect": true
+        },
+        {
+          "id": "b3",
+          "text": "الساعة الربعة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b2",
+      "explanation": "To say 'three o'clock', you use 'الساعة التلاتة'.",
+      "hint": {
+        "transliteration": "Ess-sa'a t-tlāta",
+        "arabic": "الساعة التلاتة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which Arabic number phrase means 'nine o'clock'?",
+      "options": [
+        {
+          "id": "c1",
+          "text": "الساعة السبعة",
+          "isCorrect": false
+        },
+        {
+          "id": "c2",
+          "text": "الساعة التمانية",
+          "isCorrect": false
+        },
+        {
+          "id": "c3",
+          "text": "الساعة التسعود",
+          "isCorrect": true
+        },
+        {
+          "id": "c4",
+          "text": "الساعة العشرة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "c3",
+      "explanation": "'الساعة التسعود' means 'nine o'clock'.",
+      "hint": {
+        "transliteration": "Ess-sa'a t-tes'ūd",
+        "arabic": "الساعة التسعود"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Adding 'and a half' and 'and a quarter'"
+        },
+        "text": "To specify half past or a quarter past the hour, you add 'ونص' (w noss) for half and 'وربع' (w rob') for a quarter after the hour.",
+        "examples": [
+          {
+            "arabic": "الساعة الجوج ونص",
+            "english": "Half past two (2:30)",
+            "transliteration": "Ess-sa'a j-jūj w noss"
+          },
+          {
+            "arabic": "الساعة الخمسة وربع",
+            "english": "Quarter past five (5:15)",
+            "transliteration": "Ess-sa'a l-khemsa w rob'"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Adding 'to a quarter' and 'minutes past/to'"
+        },
+        "text": "For a quarter to the hour, use 'إلا ربع' (illa rob'). For specific minutes, 'ودقيقة/ودقايق' (w dqiqa/w dqayeq) means 'and X minutes' and 'إلا دقيقة/إلا دقايق' (illa dqiqa/illa dqayeq) means 'X minutes to'. 'دقيقة' is singular, 'دقايق' is plural.",
+        "examples": [
+          {
+            "arabic": "الساعة السبعة إلا ربع",
+            "english": "A quarter to seven (6:45)",
+            "transliteration": "Ess-sa'a s-seb'a illa rob'"
+          },
+          {
+            "arabic": "الساعة العشرة وعشرين دقيقة",
+            "english": "Ten twenty (10:20)",
+            "transliteration": "Ess-sa'a l-'ashra w 'ashrin dqiqa"
+          },
+          {
+            "arabic": "الساعة الحداش إلا خمسة دقايق",
+            "english": "Five minutes to eleven (10:55)",
+            "transliteration": "Ess-sa'a l-Hdash illa khemsa dqayeq"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Time of Day: Morning, Afternoon, Evening"
+        },
+        "text": "To specify the time of day, you can add words like 'الصباح' (es-sbah) for morning, 'العشية' (el-'ashiya) for afternoon, and 'الليل' (el-lil) for evening/night.",
+        "examples": [
+          {
+            "arabic": "الساعة السبعة د الصباح",
+            "english": "Seven in the morning (7 AM)",
+            "transliteration": "Ess-sa'a s-seb'a d es-sbah"
+          },
+          {
+            "arabic": "الجوج د العشية",
+            "english": "Two in the afternoon (2 PM)",
+            "transliteration": "J-jūj d el-'ashiya"
+          },
+          {
+            "arabic": "العشرة د الليل",
+            "english": "Ten at night (10 PM)",
+            "transliteration": "El-'ashra d el-lil"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الماتش مع التلاتة ونص د العشية.",
+        "english": "The match is at half past three in the afternoon.",
+        "transliteration": "El-mātch m'a t-tlāta w noss d el-'ashiya."
+      },
+      "context": "Stating a specific time for an event, including time of day."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "خاصني نكون ف تمانْية إلا ربع د الصباح.",
+        "english": "I need to be there at a quarter to eight in the morning.",
+        "transliteration": "Khāssni nkūn f tmenya illa rob' d es-sbah."
+      },
+      "context": "Expressing a required arrival time."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'Half past four' in Darija?",
+      "options": [
+        {
+          "id": "d1",
+          "text": "الساعة الربعة وربع",
+          "isCorrect": false
+        },
+        {
+          "id": "d2",
+          "text": "الساعة الربعة ونص",
+          "isCorrect": true
+        },
+        {
+          "id": "d3",
+          "text": "الساعة الخمسة إلا نص",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "d2",
+      "explanation": "'ونص' means 'and a half', so 'الساعة الربعة ونص' is 'half past four'.",
+      "hint": {
+        "transliteration": "Ess-sa'a r-reb'a w noss",
+        "arabic": "الساعة الربعة ونص"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: It's six forty-five, so it's a quarter to ___.",
+      "options": [
+        {
+          "id": "e1",
+          "text": "الخمسة",
+          "isCorrect": false
+        },
+        {
+          "id": "e2",
+          "text": "الستة",
+          "isCorrect": false
+        },
+        {
+          "id": "e3",
+          "text": "السابعة",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "e3",
+      "explanation": "6:45 is 'a quarter to seven', which is 'الساعة السبعة إلا ربع'.",
+      "hint": {
+        "transliteration": "Es-seb'a",
+        "arabic": "السابعة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase correctly means 'nine in the evening'?",
+      "options": [
+        {
+          "id": "f1",
+          "text": "التسعود د الصباح",
+          "isCorrect": false
+        },
+        {
+          "id": "f2",
+          "text": "التسعود د العشية",
+          "isCorrect": false
+        },
+        {
+          "id": "f3",
+          "text": "التسعود د الليل",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "f3",
+      "explanation": "'د الليل' specifies 'in the evening/at night'.",
+      "hint": {
+        "transliteration": "Et-tes'ūd d el-lil",
+        "arabic": "التسعود د الليل"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "The Word for 'Appointment'"
+        },
+        "text": "The word for 'appointment' in Darija is 'موعد' (maw'id). It's a masculine noun.",
+        "examples": [
+          {
+            "arabic": "عندي موعد مع الطبيب.",
+            "english": "I have an appointment with the doctor.",
+            "transliteration": "'Andi maw'id m'a t-tbib."
+          },
+          {
+            "arabic": "واش عندك شي موعد؟",
+            "english": "Do you have an appointment?",
+            "transliteration": "Wash 'andek shi maw'id?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'When?'"
+        },
+        "text": "To ask 'When?' in Darija, you can use 'إيمتا؟' (imta?) or 'وقتاش؟' (weqtash?). Both are common.",
+        "examples": [
+          {
+            "arabic": "إيمتا الموعد؟",
+            "english": "When is the appointment?",
+            "transliteration": "Imta l-maw'id?"
+          },
+          {
+            "arabic": "وقتاش غادين نمشيو؟",
+            "english": "When are we going to go?",
+            "transliteration": "Weqtash ghādin nemshiw?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking if Someone is Free"
+        },
+        "text": "To ask if someone is free or available, you use 'واش مسالي؟' (wash msali?) for a male and 'واش مسالية؟' (wash msaliya?) for a female. You can also ask 'واش عندك الوقت؟' (wash 'andek l-weqt?) meaning 'Do you have time?'",
+        "examples": [
+          {
+            "arabic": "واش نتا مسالي غدا؟",
+            "english": "Are you (male) free tomorrow?",
+            "transliteration": "Wash nta msālī ghadda?"
+          },
+          {
+            "arabic": "واش نتي مسالية اليوم؟",
+            "english": "Are you (female) free today?",
+            "transliteration": "Wash nti msālīya l-yūm?"
+          },
+          {
+            "arabic": "واش عندك الوقت لعشية؟",
+            "english": "Do you have time this afternoon?",
+            "transliteration": "Wash 'andek l-weqt l-'ashiya?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "إيمتا الموعد ديالنا؟",
+        "english": "When is our appointment?",
+        "transliteration": "Imta l-maw'id dyālna?"
+      },
+      "context": "Asking about a shared appointment time."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "واش مسالي نهار التلاتة؟",
+        "english": "Are you free on Tuesday?",
+        "transliteration": "Wash msālī nhār t-tlāta?"
+      },
+      "context": "Checking availability for a specific day."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Darija word for 'appointment'?",
+      "options": [
+        {
+          "id": "g1",
+          "text": "وقت",
+          "isCorrect": false
+        },
+        {
+          "id": "g2",
+          "text": "موعد",
+          "isCorrect": true
+        },
+        {
+          "id": "g3",
+          "text": "ساعة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "g2",
+      "explanation": "'موعد' means 'appointment'.",
+      "hint": {
+        "transliteration": "maw'id",
+        "arabic": "موعد"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the question: '___ is the meeting?' (When)",
+      "options": [
+        {
+          "id": "h1",
+          "text": "كيفاش",
+          "isCorrect": false
+        },
+        {
+          "id": "h2",
+          "text": "فين",
+          "isCorrect": false
+        },
+        {
+          "id": "h3",
+          "text": "إيمتا",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "h3",
+      "explanation": "'إيمتا؟' or 'وقتاش؟' are used to ask 'When?'.",
+      "hint": {
+        "transliteration": "imta?",
+        "arabic": "إيمتا؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask a female 'Are you free today?'",
+      "options": [
+        {
+          "id": "i1",
+          "text": "واش نتا مسالي اليوم؟",
+          "isCorrect": false
+        },
+        {
+          "id": "i2",
+          "text": "واش نتي مسالية اليوم؟",
+          "isCorrect": true
+        },
+        {
+          "id": "i3",
+          "text": "واش عندك الوقت اليوم؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "i2",
+      "explanation": "For a female, you use 'نتي' and 'مسالية'. 'واش عندك الوقت اليوم؟' is also correct but specifically asks about 'time'.",
+      "hint": {
+        "transliteration": "Wash nti msāliya l-yūm?",
+        "arabic": "واش نتي مسالية اليوم؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Suggesting a Time: 'How about...?'"
+        },
+        "text": "To suggest a time or ask someone's opinion on a proposed time, you can use 'كيف جاك...؟' (kif jā-k...?) which means 'How did it seem to you...?' or 'What do you think of...?', or more directly 'واش كاين...' (wash kāin...) which means 'Is there...?' or 'Is it possible...?'.",
+        "examples": [
+          {
+            "arabic": "كيف جاتك الساعة الخمسة؟",
+            "english": "How about five o'clock?",
+            "transliteration": "Kif jātek ess-sa'a l-khemsa?"
+          },
+          {
+            "arabic": "واش كاين الموعد مع الربعة؟",
+            "english": "How about an appointment at four?",
+            "transliteration": "Wash kāin l-maw'id m'a r-reb'a?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'Is it convenient/possible?'"
+        },
+        "text": "To ask if a time is convenient or suitable, you can say 'واش مناسب؟' (wash mnāseb?) for masculine or 'واش مناسبة؟' (wash mnāseba?) for feminine. For 'Is it possible?', use 'واش ممكن؟' (wash mumkin?).",
+        "examples": [
+          {
+            "arabic": "واش هاد الوقت مناسب ليك؟",
+            "english": "Is this time convenient for you (m.)?",
+            "transliteration": "Wash hād l-weqt mnāseb līk?"
+          },
+          {
+            "arabic": "واش ممكن نتلاقاو غدا؟",
+            "english": "Is it possible for us to meet tomorrow?",
+            "transliteration": "Wash mumkin n-tlāqāw ghadda?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Confirming an Appointment"
+        },
+        "text": "To confirm, you can use simple affirmations like 'صافي' (safi) meaning 'okay/done/agreed', 'واخا' (wākha) meaning 'okay', or 'مزيان' (mzyān) meaning 'good/fine'. You can also say 'تمام' (tamām) for 'perfect'.",
+        "examples": [
+          {
+            "arabic": "صافي، نشوفوك ديك الساعة.",
+            "english": "Okay, see you then.",
+            "transliteration": "Sāfi, n-shūfūk dik ess-sa'a."
+          },
+          {
+            "arabic": "واخا، غادي نكون تما.",
+            "english": "Okay, I'll be there.",
+            "transliteration": "Wākha, ghādi nkūn tamma."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "كيف جاتك الستة د العشية؟",
+        "english": "How about six in the evening?",
+        "transliteration": "Kif jātek es-setta d el-'ashiya?"
+      },
+      "context": "Proposing a specific evening time."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "واش هاد الموعد مناسب ليك؟ صافي.",
+        "english": "Is this appointment convenient for you? Okay, agreed.",
+        "transliteration": "Wash hād el-maw'id mnāseb līk? Sāfi."
+      },
+      "context": "Confirming convenience and then agreeing."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase is used to suggest a time, like 'How about seven o'clock?'",
+      "options": [
+        {
+          "id": "j1",
+          "text": "فين الساعة السبعة؟",
+          "isCorrect": false
+        },
+        {
+          "id": "j2",
+          "text": "كيف جاتك الساعة السبعة؟",
+          "isCorrect": true
+        },
+        {
+          "id": "j3",
+          "text": "شكون الساعة السبعة؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "j2",
+      "explanation": "'كيف جاتك...؟' is used to suggest and ask opinion on a time.",
+      "hint": {
+        "transliteration": "Kif jātek ess-sa'a s-seb'a?",
+        "arabic": "كيف جاتك الساعة السبعة؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the question: 'Is it ___ for us to meet on Friday?' (possible)",
+      "options": [
+        {
+          "id": "k1",
+          "text": "مناسب",
+          "isCorrect": false
+        },
+        {
+          "id": "k2",
+          "text": "ضروري",
+          "isCorrect": false
+        },
+        {
+          "id": "k3",
+          "text": "ممكن",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "k3",
+      "explanation": "'ممكن' means 'possible'.",
+      "hint": {
+        "transliteration": "mumkin",
+        "arabic": "ممكن"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word is a common way to confirm or say 'Okay, agreed' in Darija?",
+      "options": [
+        {
+          "id": "l1",
+          "text": "لاش",
+          "isCorrect": false
+        },
+        {
+          "id": "l2",
+          "text": "صافي",
+          "isCorrect": true
+        },
+        {
+          "id": "l3",
+          "text": "غير",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "l2",
+      "explanation": "'صافي' is a versatile word for agreement or completion.",
+      "hint": {
+        "transliteration": "safi",
+        "arabic": "صافي"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Changing an Appointment"
+        },
+        "text": "If you need to change an appointment, you can use the verb 'نبدلو' (n-beddlu) meaning 'we change'. You can say 'بغيت نبدّل الموعد' (bgheet n-beddel el-maw'id) for 'I want to change the appointment'.",
+        "examples": [
+          {
+            "arabic": "واش ممكن نبدلو الموعد؟",
+            "english": "Is it possible to change the appointment?",
+            "transliteration": "Wash mumkin n-beddlu l-maw'id?"
+          },
+          {
+            "arabic": "بغيت نبدل موعدي.",
+            "english": "I want to change my appointment.",
+            "transliteration": "Bgheet n-beddel maw'idi."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Proposing 'Another Time'"
+        },
+        "text": "To suggest meeting at 'another time', you can use the phrase 'وقت آخر' (weqt ākhar).",
+        "examples": [
+          {
+            "arabic": "واش نشوفوك ف وقت آخر؟",
+            "english": "Shall we see you at another time?",
+            "transliteration": "Wash n-shūfūk f weqt ākhar?"
+          },
+          {
+            "arabic": "معنديش الوقت اليوم، واش ممكن وقت آخر؟",
+            "english": "I don't have time today, is another time possible?",
+            "transliteration": "Mā'andish l-weqt l-yūm, wash mumkin weqt ākhar?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Saying 'See you then' and 'Thank you'"
+        },
+        "text": "To conclude a scheduling conversation, you can say 'نتلاقاو ديك الساعة' (n-tlāqāw dik ess-sa'a) for 'See you then' or 'شوفوك ديك الساعة' (shūfūk dik ess-sa'a). And always, 'شكرا' (shukran) for 'Thank you'.",
+        "examples": [
+          {
+            "arabic": "صافي، نتلاقاو ديك الساعة.",
+            "english": "Okay, see you then.",
+            "transliteration": "Sāfi, n-tlāqāw dik ess-sa'a."
+          },
+          {
+            "arabic": "شكرا على وقتك.",
+            "english": "Thank you for your time.",
+            "transliteration": "Shukran 'ala weqtek."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بغيت نبدل الموعد لغدا.",
+        "english": "I want to change the appointment to tomorrow.",
+        "transliteration": "Bgheet n-beddel el-maw'id l-ghadda."
+      },
+      "context": "Stating a desire to reschedule."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شكرا على وقتك، نتلاقاو ديك الساعة.",
+        "english": "Thank you for your time, see you then.",
+        "transliteration": "Shukran 'ala weqtek, n-tlāqāw dik ess-sa'a."
+      },
+      "context": "Politely ending a conversation about scheduling."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which verb is used when you want to 'change' an appointment?",
+      "options": [
+        {
+          "id": "m1",
+          "text": "نمشي",
+          "isCorrect": false
+        },
+        {
+          "id": "m2",
+          "text": "نبدل",
+          "isCorrect": true
+        },
+        {
+          "id": "m3",
+          "text": "نشوف",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "m2",
+      "explanation": "'نبدل' means 'to change'.",
+      "hint": {
+        "transliteration": "n-beddel",
+        "arabic": "نبدل"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the phrase: 'I need to find ___ time.' (another)",
+      "options": [
+        {
+          "id": "n1",
+          "text": "اليوم",
+          "isCorrect": false
+        },
+        {
+          "id": "n2",
+          "text": "أمس",
+          "isCorrect": false
+        },
+        {
+          "id": "n3",
+          "text": "آخر",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "n3",
+      "explanation": "'وقت آخر' means 'another time'.",
+      "hint": {
+        "transliteration": "ākhar",
+        "arabic": "آخر"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Darija phrase for 'See you then'?",
+      "options": [
+        {
+          "id": "o1",
+          "text": "نهار سعيد",
+          "isCorrect": false
+        },
+        {
+          "id": "o2",
+          "text": "نتلاقاو ديك الساعة",
+          "isCorrect": true
+        },
+        {
+          "id": "o3",
+          "text": "مع السلامة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "o2",
+      "explanation": "'نتلاقاو ديك الساعة' is the common way to say 'See you then' in Darija.",
+      "hint": {
+        "transliteration": "n-tlāqāw dik ess-sa'a",
+        "arabic": "نتلاقاو ديك الساعة"
+      }
+    }
+  ]
+}

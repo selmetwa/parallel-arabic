@@ -1,0 +1,836 @@
+{
+  "topicId": "m4-t1",
+  "title": "Talking About Money and Asking for Prices in Egyptian Arabic",
+  "dialect": "egyptian-arabic",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Introduction to Money Vocabulary",
+          "arabic": "مقدمة لمفردات الفلوس"
+        },
+        "text": "Let's start by learning some basic words related to money in Egyptian Arabic. The most common word for 'money' in general is فلوس (filoos).",
+        "examples": [
+          {
+            "arabic": "فلوس",
+            "english": "Money",
+            "transliteration": "filoos"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "The Egyptian Pound: 'Geneih'",
+          "arabic": "الجنيه المصري: «جنيه»"
+        },
+        "text": "The official currency of Egypt is the Egyptian Pound. In Egyptian Arabic, it's called جنيه.",
+        "examples": [
+          {
+            "arabic": "جنيه",
+            "english": "Egyptian Pound",
+            "transliteration": "geneih"
+          },
+          {
+            "arabic": "واحد جنيه",
+            "english": "One pound",
+            "transliteration": "waaḥed geneih"
+          },
+          {
+            "arabic": "عشرة جنيهات",
+            "english": "Ten pounds",
+            "transliteration": "ʿashara geneihaat"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Fractions of a Pound: 'Ersh'",
+          "arabic": "أجزاء الجنيه: «قرش»"
+        },
+        "text": "One Egyptian Pound is divided into 100 piasters. A piaster is called قرش. While often used in smaller denominations, you might still hear it, especially for exact prices.",
+        "examples": [
+          {
+            "arabic": "قرش",
+            "english": "Piaster",
+            "transliteration": "ersh"
+          },
+          {
+            "arabic": "خمسين قرش",
+            "english": "Fifty piasters (half a pound)",
+            "transliteration": "khamsīn ersh"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "معايا فلوس كتير.",
+        "english": "I have a lot of money.",
+        "transliteration": "maʿāya filoos kitīr."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ده سعره عشرة جنيهات.",
+        "english": "Its price is ten pounds.",
+        "transliteration": "da saʿroh ʿashara geneihaat."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Egyptian Arabic word for 'money' in general?",
+      "options": [
+        {
+          "id": "a",
+          "text": "جنيه",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "قرش",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "فلوس",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "The word فلوس (filoos) is the general term for money.",
+      "hint": {
+        "transliteration": "filoos",
+        "arabic": "فلوس"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'Egyptian Pound'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "دولار",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "جنيه",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "يورو",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "The Egyptian Pound is called جنيه (geneih).",
+      "hint": {
+        "transliteration": "geneih",
+        "arabic": "جنيه"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: One pound is 100 ___.",
+      "options": [
+        {
+          "id": "a",
+          "text": "جنيه",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "فلوس",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "قرش",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "One pound equals 100 piasters, or 100 قرش (ersh).",
+      "hint": {
+        "transliteration": "ersh",
+        "arabic": "قرش"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'How much?' for a singular item",
+          "arabic": "كيف تسأل «بكام؟» لشيء مفرد"
+        },
+        "text": "To ask 'How much?' for a single item, use the phrase بكام ده؟ (bi-kam da?) for masculine items, or بكام دي؟ (bi-kam di?) for feminine items. Remember that 'ده' and 'دي' mean 'this'.",
+        "examples": [
+          {
+            "arabic": "بكام ده؟",
+            "english": "How much is this? (masc.)",
+            "transliteration": "bi-kam da?"
+          },
+          {
+            "arabic": "بكام دي؟",
+            "english": "How much is this? (fem.)",
+            "transliteration": "bi-kam di?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'How much?' for plural items",
+          "arabic": "كيف تسأل «بكام؟» لأشياء جمع"
+        },
+        "text": "When asking about the price of multiple items, use بكام دول؟ (bi-kam dool?). 'دول' means 'these' (plural).",
+        "examples": [
+          {
+            "arabic": "بكام دول؟",
+            "english": "How much are these?",
+            "transliteration": "bi-kam dool?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "The word for 'price'",
+          "arabic": "كلمة «سعر» أو «تمن» (ثمن)"
+        },
+        "text": "The word for 'price' is سعر (saʿr) or تمن (taman). You can use it in a sentence like 'what is its price?'",
+        "examples": [
+          {
+            "arabic": "كام سعره؟",
+            "english": "How much is its price? (masc.)",
+            "transliteration": "kam saʿroh?"
+          },
+          {
+            "arabic": "كام تمنها؟",
+            "english": "How much is its price? (fem.)",
+            "transliteration": "kam tamanha?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بكام الكتاب ده؟",
+        "english": "How much is this book? (book is masculine)",
+        "transliteration": "bi-kam el-ketaab da?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بكام الساعة دي؟",
+        "english": "How much is this watch? (watch is feminine)",
+        "transliteration": "bi-kam es-saaʿa di?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "كام سعر الفاكهة دي؟",
+        "english": "What is the price of this fruit? (fruit is feminine)",
+        "transliteration": "kam saʿr el-fak'ha di?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'How much is this?' for a masculine item?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بكام دي؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بكام ده؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بكام دول؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "For a masculine singular item, you use بكام ده؟ (bi-kam da?).",
+      "hint": {
+        "transliteration": "bi-kam da?",
+        "arabic": "بكام ده؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase asks 'How much are these?' for plural items?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بكام ده؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بكام دي؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "بكام دول؟",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "For plural items, the correct phrase is بكام دول؟ (bi-kam dool?).",
+      "hint": {
+        "transliteration": "bi-kam dool?",
+        "arabic": "بكام دول؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: ___ سعر الفستان ده؟ (What is the price of this dress?)",
+      "options": [
+        {
+          "id": "a",
+          "text": "إزاي",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مين",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "كام",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "To ask 'how much' or 'what is' the price, you use كام (kam).",
+      "hint": {
+        "transliteration": "kam",
+        "arabic": "كام"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Responding to Prices: 'Expensive'",
+          "arabic": "الرد على الأسعار: «غالي»"
+        },
+        "text": "After asking the price, you might want to express if you think something is expensive. The word for 'expensive' is غالي for masculine items and غالية for feminine items.",
+        "examples": [
+          {
+            "arabic": "ده غالي أوي!",
+            "english": "This is very expensive! (masc.)",
+            "transliteration": "da ghāli ʾawī!"
+          },
+          {
+            "arabic": "دي غالية شوية.",
+            "english": "This is a little expensive. (fem.)",
+            "transliteration": "di ghālya shwaya."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Responding to Prices: 'Cheap'",
+          "arabic": "الرد على الأسعار: «رخيص»"
+        },
+        "text": "Conversely, if something is affordable, you can say it's 'cheap'. The word is رخيص for masculine and رخيصة for feminine.",
+        "examples": [
+          {
+            "arabic": "ده رخيص جدًا.",
+            "english": "This is very cheap. (masc.)",
+            "transliteration": "da rakhīs giddan."
+          },
+          {
+            "arabic": "دي رخيصة خالص.",
+            "english": "This is very cheap. (fem.)",
+            "transliteration": "di rakhīṣa khāliṣ."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "No Bargaining: 'Fixed Price'",
+          "arabic": "لا مساومة: «سعر ثابت»"
+        },
+        "text": "In some shops, especially supermarkets or larger stores, prices are fixed. You might hear the phrase سعر ثابت to indicate that bargaining is not possible.",
+        "examples": [
+          {
+            "arabic": "ده سعر ثابت.",
+            "english": "This is a fixed price.",
+            "transliteration": "da saʿr thabet."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "القميص ده غالي.",
+        "english": "This shirt is expensive. (shirt is masculine)",
+        "transliteration": "el-qamīṣ da ghāli."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الشنطة دي رخيصة.",
+        "english": "This bag is cheap. (bag is feminine)",
+        "transliteration": "esh-shanṭa di rakhīṣa."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "لا يا فندم، ده سعر ثابت.",
+        "english": "No sir/madam, this is a fixed price.",
+        "transliteration": "la ya fanadam, da saʿr thabet."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'expensive' for a feminine item?",
+      "options": [
+        {
+          "id": "a",
+          "text": "غالي",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "غالية",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "رخيص",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "The feminine form of 'expensive' is غالية (ghālya).",
+      "hint": {
+        "transliteration": "ghālya",
+        "arabic": "غالية"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the masculine form of 'cheap'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "رخيصة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "غالي",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "رخيص",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "The masculine form of 'cheap' is رخيص (rakhīs).",
+      "hint": {
+        "transliteration": "rakhīs",
+        "arabic": "رخيص"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "If a shop doesn't allow bargaining, they might say 'ده ___'.",
+      "options": [
+        {
+          "id": "a",
+          "text": "غالي",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "سعر ثابت",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "رخيص",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "سعر ثابت (saʿr thabet) means 'fixed price'.",
+      "hint": {
+        "transliteration": "saʿr thabet",
+        "arabic": "سعر ثابت"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for a Discount: 'Khasm'",
+          "arabic": "طلب خصم: «خصم»"
+        },
+        "text": "Bargaining is common in many markets in Egypt. You can ask for a 'discount' using the word خصم. A common phrase is 'ممكن تعملي خصم؟' (Momken taʿameli khasm?) for a female seller or 'ممكن تعمل خصم؟' (Momken taʿmel khasm?) for a male seller, meaning 'Can you make a discount?'",
+        "examples": [
+          {
+            "arabic": "خصم",
+            "english": "Discount",
+            "transliteration": "khasm"
+          },
+          {
+            "arabic": "ممكن تعمل خصم؟",
+            "english": "Can you make a discount? (to male)",
+            "transliteration": "momken taʿmel khasm?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking to Lower the Price: 'Tanzīl'",
+          "arabic": "طلب تخفيض السعر: «تنزيل»"
+        },
+        "text": "Another way to ask for a lower price is to use phrases like 'ممكن تنزل شوية؟' (Momken tenazzal shwaya?) meaning 'Can you lower it a little?' or 'قلل السعر شوية' (qallil es-saʿr shwaya) meaning 'Lower the price a little'.",
+        "examples": [
+          {
+            "arabic": "ممكن تنزل شوية؟",
+            "english": "Can you lower it a little?",
+            "transliteration": "momken tenazzal shwaya?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Polite Bargaining Phrases",
+          "arabic": "عبارات المساومة المهذبة"
+        },
+        "text": "To be polite while bargaining, you can add 'لو سمحت' (law samaḥt) meaning 'please' (to a male) or 'لو سمحتي' (law samaḥti) (to a female).",
+        "examples": [
+          {
+            "arabic": "ده سعره غالي، ممكن تعمل خصم لو سمحت؟",
+            "english": "This price is expensive, can you make a discount please? (to male)",
+            "transliteration": "da saʿroh ghāli, momken taʿmel khasm law samaḥt?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "عايز خصم على التيشرت ده.",
+        "english": "I want a discount on this t-shirt.",
+        "transliteration": "ʿayez khasm ʿalā et-tīshērt da."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "لو سمحت، ممكن تنزل السعر؟",
+        "english": "Please (to male), can you lower the price?",
+        "transliteration": "law samaḥt, momken tenazzal es-saʿr?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Egyptian Arabic word for 'discount'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "سعر",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "فلوس",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "خصم",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "The word for 'discount' is خصم (khasm).",
+      "hint": {
+        "transliteration": "khasm",
+        "arabic": "خصم"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you politely ask a male seller to lower the price?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ممكن تنزل شوية؟",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "ممكن تشتري ده؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "ممكن تاكل ده؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "ممكن تنزل شوية؟ (Momken tenazzal shwaya?) means 'Can you lower it a little?'",
+      "hint": {
+        "transliteration": "momken tenazzal shwaya?",
+        "arabic": "ممكن تنزل شوية؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the polite request to a female seller: 'ممكن تعملي خصم ___؟' (Can you make a discount please?)",
+      "options": [
+        {
+          "id": "a",
+          "text": "لو سمحت",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "لو سمحتي",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "لو سمحتم",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "To politely address a female, you use لو سمحتي (law samaḥti).",
+      "hint": {
+        "transliteration": "law samaḥti",
+        "arabic": "لو سمحتي"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Paying with Cash: 'Cash'",
+          "arabic": "الدفع كاش: «كاش»"
+        },
+        "text": "When it comes to payment, 'cash' is a widely used term, often directly adopted from English. In Egyptian Arabic, you'd say كاش.",
+        "examples": [
+          {
+            "arabic": "هدفع كاش.",
+            "english": "I will pay cash.",
+            "transliteration": "hadfaʿ cash."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Paying with Card: 'Card' / 'Visa'",
+          "arabic": "الدفع بالفيزا/الكارت: «فيزا» / «كارت»"
+        },
+        "text": "For card payments, people generally use the English word 'card' (كارت) or 'Visa' (فيزا) to refer to any credit or debit card. You might ask 'في دفع بالفيزا؟' (Fi dafʿ bi-l-visa?) - 'Is there payment by Visa?'",
+        "examples": [
+          {
+            "arabic": "في دفع بالفيزا؟",
+            "english": "Is there payment by card/Visa?",
+            "transliteration": "fi dafʿ bi-l-visa?"
+          },
+          {
+            "arabic": "هدفع بالكارت.",
+            "english": "I will pay by card.",
+            "transliteration": "hadfaʿ bi-l-kart."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for a Receipt: 'Fatoora'",
+          "arabic": "طلب فاتورة: «فاتورة»"
+        },
+        "text": "After a purchase, you might need a receipt. The word for 'receipt' or 'invoice' is فاتورة. You can ask for one by saying 'ممكن فاتورة لو سمحت؟' (Momken fatoora law samaḥt?) - 'A receipt please?'",
+        "examples": [
+          {
+            "arabic": "فاتورة",
+            "english": "Receipt / Invoice",
+            "transliteration": "fatoora"
+          },
+          {
+            "arabic": "ممكن فاتورة لو سمحتي؟",
+            "english": "A receipt please? (to female)",
+            "transliteration": "momken fatoora law samaḥti?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "عايز أدفع كاش.",
+        "english": "I want to pay cash.",
+        "transliteration": "ʿayez adfaʿ cash."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بتدفعوا بالكارت؟",
+        "english": "Do you accept card payment? (plural/polite)",
+        "transliteration": "betdafʿu bi-l-kart?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "لو سمحت، ممكن فاتورة؟",
+        "english": "Please (to male), can I have a receipt?",
+        "transliteration": "law samaḥt, momken fatoora?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'cash' in Egyptian Arabic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "جنيه",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كاش",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "فلوس",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "The word for 'cash' is كاش (cash).",
+      "hint": {
+        "transliteration": "cash",
+        "arabic": "كاش"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word is commonly used to refer to a credit/debit card?",
+      "options": [
+        {
+          "id": "a",
+          "text": "خصم",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "فيزا",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "سعر",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "فيزا (visa) is commonly used for card payments.",
+      "hint": {
+        "transliteration": "visa",
+        "arabic": "فيزا"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the request for a receipt to a male: 'ممكن ___ لو سمحت؟'",
+      "options": [
+        {
+          "id": "a",
+          "text": "فلوس",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "فاتورة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "خصم",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "The word for 'receipt' is فاتورة (fatoora).",
+      "hint": {
+        "transliteration": "fatoora",
+        "arabic": "فاتورة"
+      }
+    }
+  ]
+}

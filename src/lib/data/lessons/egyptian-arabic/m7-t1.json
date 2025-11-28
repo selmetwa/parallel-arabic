@@ -1,0 +1,834 @@
+{
+  "topicId": "m7-t1",
+  "title": "Talking about Habits and Routines",
+  "dialect": "egyptian-arabic",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "The Present Tense for Habits"
+        },
+        "text": "In Egyptian Arabic, we use the present tense to talk about actions that happen regularly, our daily routines, and general habits. This is similar to how \"I do\" or \"I am doing\" works in English, but for habits, it always implies regularity.",
+        "examples": [
+          {
+            "arabic": "أنا آكل",
+            "english": "I eat",
+            "transliteration": "Ana ākol"
+          },
+          {
+            "arabic": "أنا أذهب",
+            "english": "I go",
+            "transliteration": "Ana azhab"
+          },
+          {
+            "arabic": "أنا أنام",
+            "english": "I sleep",
+            "transliteration": "Ana anām"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "To Get Up / To Wake Up (أصحى)"
+        },
+        "text": "The verb \"أصحى\" (asˤḥa) means \"I wake up\" or \"I get up\". This is a common part of anyone's morning routine.",
+        "examples": [
+          {
+            "arabic": "أنا أصحى الساعة سبعة الصبح.",
+            "english": "I wake up at 7 AM.",
+            "transliteration": "Ana asˤḥa as-sāʿa sabʿa es-ṣubḥ."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "To Eat Breakfast (أفطر)"
+        },
+        "text": "After waking up, many people \"أفطر\" (afṭar), which means \"I eat breakfast\". The word for breakfast itself is \"فطار\" (fiṭār).",
+        "examples": [
+          {
+            "arabic": "أنا أفطر كل يوم.",
+            "english": "I eat breakfast every day.",
+            "transliteration": "Ana afṭar kull yōm."
+          },
+          {
+            "arabic": "الفطار جاهز.",
+            "english": "Breakfast is ready.",
+            "transliteration": "El-fiṭār gāhiz."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا أصحى بدري.",
+        "english": "I wake up early.",
+        "transliteration": "Ana asˤḥa badrī."
+      },
+      "context": "Common phrase to describe waking up early."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا أفطر الساعة تسعة.",
+        "english": "I eat breakfast at nine o'clock.",
+        "transliteration": "Ana afṭar as-sāʿa tisʿa."
+      },
+      "context": "Stating the time of breakfast."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Egyptian Arabic verb for \"I wake up\"?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أنام",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أفطر",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "أصحى",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "asˤḥa",
+        "arabic": "أصحى"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: \"I eat ___ every day.\" (Fill in 'breakfast')",
+      "options": [
+        {
+          "id": "a",
+          "text": "غدا",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "فطار",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "عشا",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "fiṭār",
+        "arabic": "فطار"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which sentence means \"I wake up at 7 AM\"?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أنا أنام الساعة سبعة الصبح.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أنا أفطر الساعة سبعة الصبح.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "أنا أصحى الساعة سبعة الصبح.",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "Ana asˤḥa as-sāʿa sabʿa es-ṣubḥ.",
+        "arabic": "أنا أصحى الساعة سبعة الصبح."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "To Go (أروح)"
+        },
+        "text": "The verb \"أروح\" (arūḥ) means \"I go\". It's used for going to places like work, school, or home.",
+        "examples": [
+          {
+            "arabic": "أنا أروح الشغل كل يوم.",
+            "english": "I go to work every day.",
+            "transliteration": "Ana arūḥ esh-shoġl kull yōm."
+          },
+          {
+            "arabic": "أنا أروح المدرسة.",
+            "english": "I go to school.",
+            "transliteration": "Ana arūḥ el-madrasa."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "To Return / To Come Back (أرجع)"
+        },
+        "text": "\"أرجع\" (argaʿ) means \"I return\" or \"I come back\". It's often used when coming back from work, school, or an outing.",
+        "examples": [
+          {
+            "arabic": "أنا أرجع البيت متأخر.",
+            "english": "I return home late.",
+            "transliteration": "Ana argaʿ el-bēt mitʾakhkhar."
+          },
+          {
+            "arabic": "أرجع من الشغل الساعة خمسة.",
+            "english": "I come back from work at 5 o'clock.",
+            "transliteration": "Argaʿ men esh-shoġl as-sāʿa khamsa."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Every Day (كل يوم)"
+        },
+        "text": "To express that something happens daily, we use the phrase \"كل يوم\" (kull yōm). It's crucial for describing routines.",
+        "examples": [
+          {
+            "arabic": "أنا أروح الشغل كل يوم.",
+            "english": "I go to work every day.",
+            "transliteration": "Ana arūḥ esh-shoġl kull yōm."
+          },
+          {
+            "arabic": "أنا أصحى بدري كل يوم.",
+            "english": "I wake up early every day.",
+            "transliteration": "Ana asˤḥa badrī kull yōm."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا أروح المدرسة كل يوم.",
+        "english": "I go to school every day.",
+        "transliteration": "Ana arūḥ el-madrasa kull yōm."
+      },
+      "context": "A common daily routine."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا أرجع البيت بدري.",
+        "english": "I return home early.",
+        "transliteration": "Ana argaʿ el-bēt badrī."
+      },
+      "context": "Describing the time of returning home."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic phrase for \"I go to work\"?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أنا أرجع الشغل",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أنا أروح الشغل",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أنا أفطر الشغل",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "Ana arūḥ esh-shoġl",
+        "arabic": "أنا أروح الشغل"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: \"I return from work ___.\" (Fill in 'at 5 o'clock')",
+      "options": [
+        {
+          "id": "a",
+          "text": "الساعة خمسة",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "الساعة سبعة",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "الساعة تسعة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "hint": {
+        "transliteration": "as-sāʿa khamsa",
+        "arabic": "الساعة خمسة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means \"every day\"?",
+      "options": [
+        {
+          "id": "a",
+          "text": "كل مرة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كل أسبوع",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "كل يوم",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "kull yōm",
+        "arabic": "كل يوم"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "To Watch (أتفرج)"
+        },
+        "text": "The verb \"أتفرج\" (atfarraɡ) means \"I watch\". It's commonly used for watching TV, movies, or sports.",
+        "examples": [
+          {
+            "arabic": "أنا أتفرج على التليفزيون.",
+            "english": "I watch TV.",
+            "transliteration": "Ana atfarraɡ ʿala at-tilifizyōn."
+          },
+          {
+            "arabic": "أنا أتفرج على فيلم كل ليلة.",
+            "english": "I watch a movie every night.",
+            "transliteration": "Ana atfarraɡ ʿala film kull lēla."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "To Eat Dinner (أتعشى)"
+        },
+        "text": "\"أتعشى\" (atʿashsha) means \"I eat dinner\". The word for dinner is \"عشا\" (ʿasha).",
+        "examples": [
+          {
+            "arabic": "أنا أتعشى الساعة ثمانية.",
+            "english": "I eat dinner at 8 o'clock.",
+            "transliteration": "Ana atʿashsha as-sāʿa tamanya."
+          },
+          {
+            "arabic": "العشا جاهز.",
+            "english": "Dinner is ready.",
+            "transliteration": "El-ʿasha gāhiz."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "To Sleep (أنام)"
+        },
+        "text": "The verb \"أنام\" (anām) means \"I sleep\". It's the final part of a typical daily routine.",
+        "examples": [
+          {
+            "arabic": "أنا أنام بدري كل يوم.",
+            "english": "I sleep early every day.",
+            "transliteration": "Ana anām badrī kull yōm."
+          },
+          {
+            "arabic": "أنا أنام الساعة عشرة بالليل.",
+            "english": "I sleep at 10 PM.",
+            "transliteration": "Ana anām as-sāʿa ʿashara bil-lēl."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا أتفرج على فيلم.",
+        "english": "I watch a movie.",
+        "transliteration": "Ana atfarraɡ ʿala film."
+      },
+      "context": "A common evening activity."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا أتعشى مع عيلتي.",
+        "english": "I eat dinner with my family.",
+        "transliteration": "Ana atʿashsha maʿa ʿēlti."
+      },
+      "context": "Describing who you have dinner with."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا أنام متأخر في الويك إند.",
+        "english": "I sleep late on the weekend.",
+        "transliteration": "Ana anām mitʾakhkhar fil-week end."
+      },
+      "context": "A specific habit for weekends."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Egyptian Arabic verb for \"I watch\"?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أقرأ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أتفرج",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "ألعب",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "atfarraɡ",
+        "arabic": "أتفرج"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: \"I eat dinner ___.\" (Fill in 'at 8 o'clock')",
+      "options": [
+        {
+          "id": "a",
+          "text": "الساعة سبعة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "الساعة ثمانية",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "الساعة تسعة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "as-sāʿa tamanya",
+        "arabic": "الساعة ثمانية"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which sentence means \"I sleep early every day\"?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أنا أنام بدري كل يوم.",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "أنا أتفرج بدري كل يوم.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "أنا أتعشى بدري كل يوم.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "hint": {
+        "transliteration": "Ana anām badrī kull yōm.",
+        "arabic": "أنا أنام بدري كل يوم."
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "To Read (أقرأ)"
+        },
+        "text": "The verb \"أقرأ\" (aqraʾ) means \"I read\". It can refer to reading books, newspapers, or anything else.",
+        "examples": [
+          {
+            "arabic": "أنا أقرأ كتاب قبل ما أنام.",
+            "english": "I read a book before I sleep.",
+            "transliteration": "Ana aqraʾ kitāb qabl ma anām."
+          },
+          {
+            "arabic": "أنا أقرأ الجرنال كل يوم الصبح.",
+            "english": "I read the newspaper every morning.",
+            "transliteration": "Ana aqraʾ el-gurnāl kull yōm es-ṣubḥ."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "To Exercise / To Play Sports (ألعب رياضة)"
+        },
+        "text": "To say \"I exercise\" or \"I play sports\", we use \"ألعب رياضة\" (alʿab riyāḍa). \"ألعب\" (alʿab) means \"I play\", and \"رياضة\" (riyāḍa) means \"sport/exercise\".",
+        "examples": [
+          {
+            "arabic": "أنا ألعب رياضة مرتين في الأسبوع.",
+            "english": "I exercise twice a week.",
+            "transliteration": "Ana alʿab riyāḍa marratēn fil-usbūʿ."
+          },
+          {
+            "arabic": "أنا بحب ألعب رياضة.",
+            "english": "I like to exercise.",
+            "transliteration": "Ana baḥibb alʿab riyāḍa."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking about Routines (Male)"
+        },
+        "text": "To ask a male \"What do you do every day?\", you say: \"بتعمل إيه كل يوم؟\" (bteʿmel ēh kull yōm?). Notice the 'ت' prefix and the masculine form of the verb.",
+        "examples": [
+          {
+            "arabic": "بتعمل إيه كل يوم؟",
+            "english": "What do you do every day? (to a male)",
+            "transliteration": "Bteʿmel ēh kull yōm?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا أقرأ كتاب.",
+        "english": "I read a book.",
+        "transliteration": "Ana aqraʾ kitāb."
+      },
+      "context": "A common leisure activity."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا ألعب رياضة في الجيم.",
+        "english": "I exercise at the gym.",
+        "transliteration": "Ana alʿab riyāḍa fil-gīm."
+      },
+      "context": "Specifying where one exercises."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بتعمل إيه كل يوم يا أحمد؟",
+        "english": "What do you do every day, Ahmed?",
+        "transliteration": "Bteʿmel ēh kull yōm ya Aḥmad?"
+      },
+      "context": "Asking a male friend about his routine."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Egyptian Arabic verb for \"I read\"?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أتفرج",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أقرأ",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "ألعب",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "aqraʾ",
+        "arabic": "أقرأ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the phrase: \"I ___ sports.\" (Fill in 'play')",
+      "options": [
+        {
+          "id": "a",
+          "text": "أقرأ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "ألعب",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أنام",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "alʿab",
+        "arabic": "ألعب"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask a male \"What do you do every day?\"",
+      "options": [
+        {
+          "id": "a",
+          "text": "بتعملي إيه كل يوم؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بتعمل إيه كل يوم؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بتعملوا إيه كل يوم؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "Bteʿmel ēh kull yōm?",
+        "arabic": "بتعمل إيه كل يوم؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking about Routines (Female)"
+        },
+        "text": "To ask a female \"What do you do every day?\", you say: \"بتعملي إيه كل يوم؟\" (bteʿmelī ēh kull yōm?). Notice the 'ت' prefix and 'ـي' suffix for feminine singular present tense.",
+        "examples": [
+          {
+            "arabic": "بتعملي إيه كل يوم؟",
+            "english": "What do you do every day? (to a female)",
+            "transliteration": "Bteʿmelī ēh kull yōm?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Frequency Adverb: Usually (عادةً)"
+        },
+        "text": "To express that an action happens \"usually\" or \"normally\", use the adverb \"عادةً\" (ʿādātan). It can be placed at the beginning or after the verb.",
+        "examples": [
+          {
+            "arabic": "عادةً، أنا أصحى بدري.",
+            "english": "Usually, I wake up early.",
+            "transliteration": "ʿĀdātan, ana asˤḥa badrī."
+          },
+          {
+            "arabic": "أنا عادةً أروح الشغل بالأتوبيس.",
+            "english": "I usually go to work by bus.",
+            "transliteration": "Ana ʿādātan arūḥ esh-shoġl bil-otōbīs."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Frequency Adverb: Sometimes (أحيانًا)"
+        },
+        "text": "To express that an action happens \"sometimes\", use the adverb \"أحيانًا\" (aḥyānan). Like \"عادةً\", it can be placed flexibly in the sentence.",
+        "examples": [
+          {
+            "arabic": "أحيانًا، أنا أنام متأخر.",
+            "english": "Sometimes, I sleep late.",
+            "transliteration": "Aḥyānan, ana anām mitʾakhkhar."
+          },
+          {
+            "arabic": "أنا أحيانًا ألعب رياضة في الجنينة.",
+            "english": "I sometimes exercise in the garden.",
+            "transliteration": "Ana aḥyānan alʿab riyāḍa fil-ginēna."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بتعملي إيه كل يوم يا منى؟",
+        "english": "What do you do every day, Mona?",
+        "transliteration": "Bteʿmelī ēh kull yōm ya Mona?"
+      },
+      "context": "Asking a female friend about her routine."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا عادةً أروح الشغل الساعة ٩ الصبح.",
+        "english": "I usually go to work at 9 AM.",
+        "transliteration": "Ana ʿādātan arūḥ esh-shoġl as-sāʿa tisʿa es-ṣubḥ."
+      },
+      "context": "Describing a usual work routine."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أحيانًا أنا أصحى متأخر في الويك إند.",
+        "english": "Sometimes I wake up late on the weekend.",
+        "transliteration": "Aḥyānan ana asˤḥa mitʾakhkhar fil-week end."
+      },
+      "context": "Describing an occasional weekend habit."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask a female \"What do you do every day?\"",
+      "options": [
+        {
+          "id": "a",
+          "text": "بتعمل إيه كل يوم؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بتعملي إيه كل يوم؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بتعملوا إيه كل يوم؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "hint": {
+        "transliteration": "Bteʿmelī ēh kull yōm?",
+        "arabic": "بتعملي إيه كل يوم؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: \"___, I wake up early.\" (Fill in 'Usually')",
+      "options": [
+        {
+          "id": "a",
+          "text": "أحيانًا",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أبدًا",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "عادةً",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "ʿādātan",
+        "arabic": "عادةً"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which word means \"sometimes\"?",
+      "options": [
+        {
+          "id": "a",
+          "text": "غالبًا",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "دايماً",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "أحيانًا",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "hint": {
+        "transliteration": "aḥyānan",
+        "arabic": "أحيانًا"
+      }
+    }
+  ]
+}

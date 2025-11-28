@@ -1,0 +1,892 @@
+{
+  "topicId": "m8-t2",
+  "title": "Language for Visiting and Invitations",
+  "dialect": "levantine",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Greetings upon Arrival",
+          "arabic": "تحيات الوصول"
+        },
+        "text": "When you arrive at someone's home, it's customary to start with a warm greeting. The most common phrase in Levantine Arabic for welcoming a guest is 'Ahlan wa sahlan', which means 'Welcome'.",
+        "examples": [
+          {
+            "arabic": "أهلاً وسهلاً!",
+            "english": "Welcome!",
+            "transliteration": "Ahlan wa sahlan!"
+          },
+          {
+            "arabic": "أهلاً وسهلاً في بيتي.",
+            "english": "Welcome to my home.",
+            "transliteration": "Ahlan wa sahlan fi bayti."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking 'How are you?' (Levantine)",
+          "arabic": "السؤال عن الحال"
+        },
+        "text": "After the initial greeting, it's polite to ask about the host's well-being. The phrase 'How are you?' changes slightly based on gender in Levantine Arabic.",
+        "examples": [
+          {
+            "arabic": "كيفَك؟",
+            "english": "How are you? (to a male)",
+            "transliteration": "Kīfak?"
+          },
+          {
+            "arabic": "كيفِك؟",
+            "english": "How are you? (to a female)",
+            "transliteration": "Kīfik?"
+          },
+          {
+            "arabic": "كيفكُن؟",
+            "english": "How are you all? (to a group)",
+            "transliteration": "Kīfkoun?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Responding to 'How are you?'",
+          "arabic": "الإجابة على السؤال عن الحال"
+        },
+        "text": "When asked 'How are you?', there are several common ways to respond in Levantine Arabic, indicating you are well or fine.",
+        "examples": [
+          {
+            "arabic": "منيح، شكراً.",
+            "english": "Good, thank you. (male)",
+            "transliteration": "Mnīḥ, shukran."
+          },
+          {
+            "arabic": "منيحة، شكراً.",
+            "english": "Good, thank you. (female)",
+            "transliteration": "Mnīḥa, shukran."
+          },
+          {
+            "arabic": "تمام، الحمد لله.",
+            "english": "Fine, praise be to God.",
+            "transliteration": "Tamām, el-ḥamdulillah."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أهلاً وسهلاً يا أحمد، كيفَك؟",
+        "english": "Welcome, Ahmed, how are you?",
+        "transliteration": "Ahlan wa sahlan ya Aḥmad, kīfak?"
+      },
+      "context": "A host welcoming a male guest."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "منيحة، شكراً، كيفكُن إنتو؟",
+        "english": "Good, thank you, how are you all?",
+        "transliteration": "Mnīḥa, shukran, kīfkoun intu?"
+      },
+      "context": "A female guest responding and asking about the group."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you welcome a guest to your home in Levantine Arabic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "صباح الخير",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "أهلاً وسهلاً",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "مع السلامة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'Ahlan wa sahlan' is the standard welcome.",
+      "hint": {
+        "transliteration": "Ahlan wa sahlan",
+        "arabic": "أهلاً وسهلاً"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would a male say 'I'm good, thank you' in Levantine?",
+      "options": [
+        {
+          "id": "a",
+          "text": "منيحة، شكراً",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "منيح، شكراً",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "تمام، مع السلامة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "The masculine form for 'good' is 'mnīḥ'.",
+      "hint": {
+        "transliteration": "Mnīḥ, shukran",
+        "arabic": "منيح، شكراً"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'Welcome to my ___' (to a female). 'أهلاً وسهلاً في بيتي، كيفِك؟ أنا ___، شكراً.'",
+      "options": [
+        {
+          "id": "a",
+          "text": "منيح",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "منيحة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "كيفَك",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Since the question refers to a female (كيفِك), the response 'I am good' should be in the feminine form 'mnīḥa'.",
+      "hint": {
+        "transliteration": "mnīḥa",
+        "arabic": "منيحة"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Thanking for the Invitation/Visit",
+          "arabic": "الشكر على الدعوة/الزيارة"
+        },
+        "text": "It's important to express gratitude to your host for inviting you or for their hospitality during your visit.",
+        "examples": [
+          {
+            "arabic": "شكراً على الدعوة.",
+            "english": "Thank you for the invitation.",
+            "transliteration": "Shukran ʿala d-daʿwe."
+          },
+          {
+            "arabic": "شكراً على الزيارة الحلوي.",
+            "english": "Thank you for the nice visit. (host to guest)",
+            "transliteration": "Shukran ʿala z-ziyāra l-ḥilwe."
+          },
+          {
+            "arabic": "بيت عامِر فيكُن.",
+            "english": "May your house always be full/prosperous with you all. (guest to host)",
+            "transliteration": "Bayt ʿāmir fīkun."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing Happiness to be There",
+          "arabic": "التعبير عن السعادة بالوجود"
+        },
+        "text": "As a guest, you can show your appreciation by expressing how happy you are to be visiting or to be with your hosts.",
+        "examples": [
+          {
+            "arabic": "مبسوط إني هون.",
+            "english": "I'm happy to be here. (male)",
+            "transliteration": "Mabsūṭ inni hōn."
+          },
+          {
+            "arabic": "مبسوطة كتير بشوفتكُن.",
+            "english": "I'm very happy to see you all. (female)",
+            "transliteration": "Mabsūṭa ktīr bshawfitkun."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking / Stating Purpose of Visit",
+          "arabic": "السؤال عن / ذكر سبب الزيارة"
+        },
+        "text": "The host might ask what brings you, or you might want to state your purpose for visiting if it's not purely social. 'Shu jabak/jabik?' literally means 'What brought you?'",
+        "examples": [
+          {
+            "arabic": "شو جابَك اليوم؟",
+            "english": "What brought you today? (to a male)",
+            "transliteration": "Shu jābak l-yōm?"
+          },
+          {
+            "arabic": "شو جابِك لعندنا؟",
+            "english": "What brought you to us? (to a female)",
+            "transliteration": "Shu jābik la ʿandna?"
+          },
+          {
+            "arabic": "أنا جيت لأزوركن.",
+            "english": "I came to visit you all. (male or female)",
+            "transliteration": "Ana jīt laʾazūrkum."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "مبسوطة كتير إني هون، شكراً على الدعوة.",
+        "english": "I'm very happy to be here, thank you for the invitation. (female)",
+        "transliteration": "Mabsūṭa ktīr inni hōn, shukran ʿala d-daʿwe."
+      },
+      "context": "A female guest expressing happiness and gratitude."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أهلاً وسهلاً يا منى، شو جابِك اليوم؟",
+        "english": "Welcome, Mona, what brought you today?",
+        "transliteration": "Ahlan wa sahlan ya Mona, shu jābik l-yōm?"
+      },
+      "context": "A host welcoming a female guest and asking her purpose."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How does a male guest say 'I'm happy to be here'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "مبسوطة إني هون",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مبسوط إني هون",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "شكراً على الزيارة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "The masculine form for 'happy' is 'mabsūṭ'.",
+      "hint": {
+        "transliteration": "Mabsūṭ inni hōn",
+        "arabic": "مبسوط إني هون"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What does a guest say to thank the host for their house's hospitality?",
+      "options": [
+        {
+          "id": "a",
+          "text": "شكراً على الدعوة",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شو جابَك؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "بيت عامِر فيكُن",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'Bayt ʿāmir fīkun' is a common polite phrase to wish prosperity to the host's home.",
+      "hint": {
+        "transliteration": "Bayt ʿāmir fīkun",
+        "arabic": "بيت عامِر فيكُن"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Fill in the blank: 'Thank you for the invitation.' '___ على الدعوة.'",
+      "options": [
+        {
+          "id": "a",
+          "text": "أهلاً",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "منيح",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "شكراً",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'Shukran' means 'Thank you'.",
+      "hint": {
+        "transliteration": "Shukran",
+        "arabic": "شكراً"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Offering Food or Drink",
+          "arabic": "تقديم الطعام أو الشراب"
+        },
+        "text": "As a host, it's customary to offer your guests food or drink. 'Tfaddal' (male) or 'Tfaddali' (female) is a versatile word meaning 'Please' or 'Go ahead'.",
+        "examples": [
+          {
+            "arabic": "تَفَضَّل قهوة؟",
+            "english": "Would you like some coffee? (to a male)",
+            "transliteration": "Tfaddal qahwe?"
+          },
+          {
+            "arabic": "تَفَضَّلي عصير.",
+            "english": "Please have some juice. (to a female)",
+            "transliteration": "Tfaddali ʿaṣīr."
+          },
+          {
+            "arabic": "تَفَضَّلوا كُلوا.",
+            "english": "Please eat. (to a group)",
+            "transliteration": "Tfaddalu kulu."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Accepting an Offer",
+          "arabic": "قبول العرض"
+        },
+        "text": "When offered something, you can politely accept. 'Biddi' means 'I want' or 'I would like'.",
+        "examples": [
+          {
+            "arabic": "إيه، بدي قهوة، شكراً.",
+            "english": "Yes, I'd like coffee, thank you.",
+            "transliteration": "Ēh, biddi qahwe, shukran."
+          },
+          {
+            "arabic": "أي، بدي مي.",
+            "english": "Yes, I'd like water.",
+            "transliteration": "Ay, biddi mayy."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Politely Declining an Offer",
+          "arabic": "رفض العرض بلباقة"
+        },
+        "text": "If you don't wish to accept an offer, you can politely decline using 'La'', meaning 'No', followed by 'shukran' and 'ma biddi' (I don't want).",
+        "examples": [
+          {
+            "arabic": "لا، شكراً، ما بدي.",
+            "english": "No, thank you, I don't want.",
+            "transliteration": "Laʾ, shukran, ma biddi."
+          },
+          {
+            "arabic": "صحتين، بس ما بدي.",
+            "english": "Thank you (lit. 'two healths' - common response when declining food/drink), but I don't want.",
+            "transliteration": "Ṣaḥtēn, bas ma biddi."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "تَفَضَّلوا قهوة، أو تفَضَّلوا عصير؟",
+        "english": "Please have coffee, or please have juice? (to a group)",
+        "transliteration": "Tfaddalu qahwe, aw tfaddalu ʿaṣīr?"
+      },
+      "context": "A host offering drinks to multiple guests."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "لا، شكراً، ما بدي قهوة. بدي مي بس.",
+        "english": "No, thank you, I don't want coffee. I just want water.",
+        "transliteration": "Laʾ, shukran, ma biddi qahwe. Biddi mayy bas."
+      },
+      "context": "A guest politely declining coffee and asking for water."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you offer coffee to a female guest?",
+      "options": [
+        {
+          "id": "a",
+          "text": "تَفَضَّل قهوة؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "تَفَضَّلي قهوة؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بدي قهوة.",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'Tfaddali' is the feminine form of 'Please/Go ahead'.",
+      "hint": {
+        "transliteration": "Tfaddali qahwe?",
+        "arabic": "تَفَضَّلي قهوة؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the best way to politely decline an offer for food?",
+      "options": [
+        {
+          "id": "a",
+          "text": "إيه، بدي.",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شكراً، صحتين.",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "لا، شكراً، ما بدي.",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'La', shukran, ma biddi' is the direct and polite way to decline.",
+      "hint": {
+        "transliteration": "Laʾ, shukran, ma biddi",
+        "arabic": "لا، شكراً، ما بدي"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'Yes, I want water.' '___، بدي مي.'",
+      "options": [
+        {
+          "id": "a",
+          "text": "لا",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "منيح",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "إيه",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'Ēh' (or 'Ay') means 'Yes' in Levantine.",
+      "hint": {
+        "transliteration": "Ēh",
+        "arabic": "إيه"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Complimenting the Host/Home",
+          "arabic": "مدح المضيف/المنزل"
+        },
+        "text": "It's a nice gesture to compliment your host's home, their hospitality, or the food they prepared. 'Yeslamu iideek' is a common way to thank someone for their effort.",
+        "examples": [
+          {
+            "arabic": "بيتَك دايماً عامِر.",
+            "english": "May your house always be prosperous. (to a male)",
+            "transliteration": "Baytak dayman ʿāmir."
+          },
+          {
+            "arabic": "يسلَموا إيديكِ على الأكل الطيب.",
+            "english": "May your hands be safe (thank you) for the delicious food. (to a female)",
+            "transliteration": "Yeslamu ʾīḍayki ʿala l-ʾakl iṭ-ṭayyib."
+          },
+          {
+            "arabic": "بيتكُن كتير حلو.",
+            "english": "Your house is very beautiful. (to a group)",
+            "transliteration": "Baytkun ktīr ḥilu."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Offering Help",
+          "arabic": "تقديم المساعدة"
+        },
+        "text": "As a guest, especially in an informal setting, you might offer to help with tasks like clearing the table or serving. This shows politeness and consideration.",
+        "examples": [
+          {
+            "arabic": "بدي ساعدك؟",
+            "english": "Do you want me to help you? (to a male)",
+            "transliteration": "Biddi saʿidak?"
+          },
+          {
+            "arabic": "فيني ساعدِك بشي؟",
+            "english": "Can I help you with anything? (to a female)",
+            "transliteration": "Fīni saʿidik bishī?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking Permission to Leave",
+          "arabic": "طلب الإذن بالمغادرة"
+        },
+        "text": "When it's time to leave, it's polite to inform your hosts and ask for permission, especially if it's an extended visit. 'Nista'zin' means 'We ask for permission'.",
+        "examples": [
+          {
+            "arabic": "بدنا نمشي هلّأ.",
+            "english": "We want to leave now.",
+            "transliteration": "Biddna namshi hallāʾ."
+          },
+          {
+            "arabic": "إذا سمحتوا، بدنا نِستأذِن.",
+            "english": "If you permit, we'd like to ask permission (to leave).",
+            "transliteration": "ʾIza samaḥtu, biddna nistaʾzin."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بيتِك دايماً عامِر يا ريما، يسلَموا إيديكِ على كل شي.",
+        "english": "May your house always be prosperous, Rima, thank you for everything. (to female)",
+        "transliteration": "Baytik dayman ʿāmir ya Rīma, yeslamu ʾīḍayki ʿala kull shī."
+      },
+      "context": "A guest complimenting the hostess and thanking her."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بدنا نمشي هلّأ، فيني ساعدكُن بشي قبل ما نروح؟",
+        "english": "We want to leave now, can I help you all with anything before we go?",
+        "transliteration": "Biddna namshi hallāʾ, fīni saʿidkun bishī qabl ma nrūḥ?"
+      },
+      "context": "A guest expressing intention to leave and offering help."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you compliment a male host's home, wishing it prosperity?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بيتكُن كتير حلو",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بيتَك دايماً عامِر",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "يسلَموا إيديكِ",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'Baytak dayman ʿāmir' is the appropriate masculine compliment for the host's home.",
+      "hint": {
+        "transliteration": "Baytak dayman ʿāmir",
+        "arabic": "بيتَك دايماً عامِر"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What phrase means 'Can I help you with anything?' (to a female)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بدنا نمشي",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "فيني ساعدِك بشي؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بدي ساعدك؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'Fīni saʿidik bishī?' is the correct feminine form for offering help with 'anything'.",
+      "hint": {
+        "transliteration": "Fīni saʿidik bishī?",
+        "arabic": "فيني ساعدِك بشي؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'We want to ___ now.' 'بدنا ___ هلّأ.'",
+      "options": [
+        {
+          "id": "a",
+          "text": "ناكل",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "نشرب",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "نمشي",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'Namshi' means 'to walk/leave'.",
+      "hint": {
+        "transliteration": "namshi",
+        "arabic": "نمشي"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Inviting Someone",
+          "arabic": "دعوة شخص ما"
+        },
+        "text": "When you want to invite someone to your home or an event, you use specific verbs meaning 'to invite'.",
+        "examples": [
+          {
+            "arabic": "بَدعيك على العشا.",
+            "english": "I invite you (male) for dinner.",
+            "transliteration": "Badʿīk ʿala l-ʿasha."
+          },
+          {
+            "arabic": "بَدعيكي على بيتي.",
+            "english": "I invite you (female) to my house.",
+            "transliteration": "Badʿīki ʿala bayti."
+          },
+          {
+            "arabic": "بَدعي كُل الرفقة.",
+            "english": "I'm inviting all the friends.",
+            "transliteration": "Badʿī kull ir-rifqa."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Suggesting a Future Visit",
+          "arabic": "اقتراح زيارة مستقبلية"
+        },
+        "text": "At the end of a visit or conversation, it's polite to suggest meeting again or having another visit in the future.",
+        "examples": [
+          {
+            "arabic": "إن شاء الله منشوفَك مرة تانية.",
+            "english": "God willing, we'll see you (male) another time.",
+            "transliteration": "ʾIn shāʾ Allāh mnshūfak marra tānye."
+          },
+          {
+            "arabic": "لازم تجي تزورنا عن قريب.",
+            "english": "You (male) must come visit us soon.",
+            "transliteration": "Lāzim tījī tzūṛna ʿan qarīb."
+          },
+          {
+            "arabic": "بدنا نزوركن قريباً.",
+            "english": "We want to visit you all soon.",
+            "transliteration": "Biddna nzūrkum qarīban."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Saying Goodbye",
+          "arabic": "توديع الضيوف/المضيفين"
+        },
+        "text": "The most common way to say goodbye in Arabic, including Levantine, is 'Maʿ es-salāme', meaning 'With peace'. You can also use a shorter, more informal 'Salam'.",
+        "examples": [
+          {
+            "arabic": "مع السلامة.",
+            "english": "Goodbye.",
+            "transliteration": "Maʿ es-salāme."
+          },
+          {
+            "arabic": "سلام، بشوفك بكرا.",
+            "english": "Bye, see you (male) tomorrow.",
+            "transliteration": "Salām, bashūfak bukra."
+          },
+          {
+            "arabic": "الله يسلمك.",
+            "english": "God keep you safe. (response to 'Maʿ es-salāme')",
+            "transliteration": "Allāh ysallmak. (male) / Allāh ysallmik. (female)"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بَدعيكي على العشا ببيتي الأسبوع الجاي، إن شاء الله منشوفِك.",
+        "english": "I invite you (female) for dinner at my house next week, God willing we'll see you.",
+        "transliteration": "Badʿīki ʿala l-ʿasha bbayti l-ʾusbūʿ ij-jāy, ʾin shāʾ Allāh mnshūfik."
+      },
+      "context": "A person inviting a female friend and hoping to see her."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شكراً كتير على كل شي، مع السلامة.",
+        "english": "Thank you very much for everything, goodbye.",
+        "transliteration": "Shukran ktīr ʿala kull shī, maʿ es-salāme."
+      },
+      "context": "A guest thanking the host and saying goodbye."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'I invite you (male) for dinner'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بَدعيكي على العشا",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بَدعيك على العشا",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بدي عشا",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'Badʿīk' is the masculine form of 'I invite you'.",
+      "hint": {
+        "transliteration": "Badʿīk ʿala l-ʿasha",
+        "arabic": "بَدعيك على العشا"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is a common response to 'Maʿ es-salāme' (Goodbye) when addressed to a male?",
+      "options": [
+        {
+          "id": "a",
+          "text": "الله يسلمك",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "أهلاً وسهلاً",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "كيفِك؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "'Allāh ysallmak' (male) is the standard response, meaning 'May God keep you safe'.",
+      "hint": {
+        "transliteration": "Allāh ysallmak",
+        "arabic": "الله يسلمك"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'God willing, we'll see you (female) another time.' 'إن شاء الله ___ مرة تانية.'",
+      "options": [
+        {
+          "id": "a",
+          "text": "منشوفَك",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "منشوفِك",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بَدعيك",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'Mnshūfik' is the feminine form for 'we'll see you'.",
+      "hint": {
+        "transliteration": "mnshūfik",
+        "arabic": "منشوفِك"
+      }
+    }
+  ]
+}

@@ -1,0 +1,866 @@
+{
+  "topicId": "m10-t1",
+  "title": "Asking for Travel & Transportation Services in Darija",
+  "dialect": "darija",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Basic Greetings",
+          "arabic": "تحيات أساسية"
+        },
+        "text": "Starting a conversation politely is key in Moroccan Darija. Learn these common greetings to initiate your requests.",
+        "examples": [
+          {
+            "arabic": "السلام عليكم",
+            "english": "Hello / Peace be upon you",
+            "transliteration": "As-salamu alaykum"
+          },
+          {
+            "arabic": "كي داير؟",
+            "english": "How are you? (to male)",
+            "transliteration": "Ki dayr?"
+          },
+          {
+            "arabic": "كي دايرة؟",
+            "english": "How are you? (to female)",
+            "transliteration": "Ki dayra?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing \"I want\"",
+          "arabic": "التعبير عن 'أريد'"
+        },
+        "text": "The phrase 'بغيت' (bghit) is essential for stating your needs or intentions, such as wanting a service or to go somewhere.",
+        "examples": [
+          {
+            "arabic": "بغيت",
+            "english": "I want",
+            "transliteration": "Bghit"
+          },
+          {
+            "arabic": "بغيت نمشي لـ...",
+            "english": "I want to go to...",
+            "transliteration": "Bghit nmshi l..."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking \"Do you have?\"",
+          "arabic": "السؤال 'هل لديك؟'"
+        },
+        "text": "To inquire about the availability of a service or an item, use 'واش عندك؟'.",
+        "examples": [
+          {
+            "arabic": "واش عندك؟",
+            "english": "Do you have? (singular)",
+            "transliteration": "Wach 3andk?"
+          },
+          {
+            "arabic": "واش عندكم؟",
+            "english": "Do you have? (plural/formal)",
+            "transliteration": "Wach 3andkom?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "السلام عليكم، بغيت نمشي لـ...",
+        "english": "Hello, I want to go to...",
+        "transliteration": "As-salamu alaykum, bghit nmshi l..."
+      },
+      "context": "A polite way to start a request for a destination."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "كي داير؟ واش عندك شي طاكسي؟",
+        "english": "How are you? Do you have a taxi?",
+        "transliteration": "Ki dayr? Wach 3andk shi taxi?"
+      },
+      "context": "Asking a taxi driver or a local if a taxi is available."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'I want'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بغيت",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "السلام عليكم",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "كي داير",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "hint": {
+        "transliteration": "Bghit",
+        "arabic": "بغيت"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the greeting: ___, بغيت نمشي للمحطة. (___, I want to go to the station.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "السلام عليكم",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "شنو هادا",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "كيفاش",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "hint": {
+        "transliteration": "As-salamu alaykum",
+        "arabic": "السلام عليكم"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'Do you have?' (singular)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "واش عندك؟",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "واش عندكم؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "واش بغيتي؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "hint": {
+        "transliteration": "Wach 3andk?",
+        "arabic": "واش عندك؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Requesting a Taxi",
+          "arabic": "طلب سيارة أجرة"
+        },
+        "text": "To specifically ask for a taxi, you can use one of these phrases.",
+        "examples": [
+          {
+            "arabic": "بغيت طاكسي",
+            "english": "I want a taxi",
+            "transliteration": "Bghit taxi"
+          },
+          {
+            "arabic": "واش كاين شي طاكسي هنا؟",
+            "english": "Is there a taxi here?",
+            "transliteration": "Wach kayn shi taxi hna?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Giving Your Destination",
+          "arabic": "ذكر وجهتك"
+        },
+        "text": "Once you have a taxi, you'll need to tell the driver where you want to go. Here are common destinations.",
+        "examples": [
+          {
+            "arabic": "بغيت نمشي لـ[اسم المكان]",
+            "english": "I want to go to [place name]",
+            "transliteration": "Bghit nmshi l-[esm l-makan]"
+          },
+          {
+            "arabic": "المحطة",
+            "english": "The station",
+            "transliteration": "L-maḥaṭṭa"
+          },
+          {
+            "arabic": "المطار",
+            "english": "The airport",
+            "transliteration": "L-maṭar"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Enquiring about the Price",
+          "arabic": "الاستفسار عن السعر"
+        },
+        "text": "Always confirm the price before starting your journey to avoid any surprises.",
+        "examples": [
+          {
+            "arabic": "شحال الثمن؟",
+            "english": "How much is the price?",
+            "transliteration": "Shḥāl taman?"
+          },
+          {
+            "arabic": "شحال؟",
+            "english": "How much?",
+            "transliteration": "Shḥāl?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بغيت طاكسي للمطار.",
+        "english": "I want a taxi to the airport.",
+        "transliteration": "Bghit taxi l-l-maṭar."
+      },
+      "context": "Requesting a taxi specifically for the airport."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شحال الثمن باش نمشي للمحطة؟",
+        "english": "How much is the price to go to the station?",
+        "transliteration": "Shḥāl taman bash nmshi l-l-maḥaṭṭa?"
+      },
+      "context": "Asking the cost of a trip to the station."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask for a taxi?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بغيت طاكسي",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "بغيت المطار",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "بغيت المحطة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "hint": {
+        "transliteration": "Bghit taxi",
+        "arabic": "بغيت طاكسي"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: بغيت نمشي لـ___. (I want to go to the ___.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "المطار",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "الثمن",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "بغيت",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "hint": {
+        "transliteration": "L-maṭar",
+        "arabic": "المطار"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic phrase for 'How much is the price?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "شحال الثمن؟",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "واش عندك؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "بغيت نمشي",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "hint": {
+        "transliteration": "Shḥāl taman?",
+        "arabic": "شحال الثمن؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Requesting a Ticket",
+          "arabic": "طلب تذكرة"
+        },
+        "text": "When purchasing a ticket for a train, bus, or other transport, use these phrases.",
+        "examples": [
+          {
+            "arabic": "بغيت ورقة",
+            "english": "I want a ticket (general)",
+            "transliteration": "Bghit werqa"
+          },
+          {
+            "arabic": "بغيت تيكيت",
+            "english": "I want a ticket (loanword, common)",
+            "transliteration": "Bghit ticket"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Specifying Where and When",
+          "arabic": "تحديد الوجهة والوقت"
+        },
+        "text": "Provide the necessary details for your reservation: your destination and the desired time.",
+        "examples": [
+          {
+            "arabic": "لـ[اسم المكان]",
+            "english": "To [place name]",
+            "transliteration": "L-[esm l-makan]"
+          },
+          {
+            "arabic": "إمتى؟",
+            "english": "When?",
+            "transliteration": "Imta?"
+          },
+          {
+            "arabic": "لـ[اسم المكان] إمتى؟",
+            "english": "To [place name] when?",
+            "transliteration": "L-[esm l-makan] imta?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for a Return Ticket",
+          "arabic": "طلب تذكرة ذهاب وعودة"
+        },
+        "text": "If your journey requires a round trip, you can use these expressions.",
+        "examples": [
+          {
+            "arabic": "ورقة ديال الرجوع",
+            "english": "A return ticket (lit. ticket of return)",
+            "transliteration": "Werqa dyal r-rujou3"
+          },
+          {
+            "arabic": "تيكيت ذهاب وإياب",
+            "english": "Round trip ticket (more formal loanword)",
+            "transliteration": "Ticket dhāb w iyāb"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بغيت تيكيت للمحطة، إمتى كاين؟",
+        "english": "I want a ticket to the station, when is it available?",
+        "transliteration": "Bghit ticket l-l-maḥaṭṭa, imta kayn?"
+      },
+      "context": "Asking for a train/bus ticket to the station and its availability."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شحال الثمن ديال ورقة ديال الرجوع لـفاس؟",
+        "english": "How much is the price for a return ticket to Fes?",
+        "transliteration": "Shḥāl taman dyal werqa dyal r-rujou3 l-Fès?"
+      },
+      "context": "Enquiring about the price of a round trip ticket to Fes."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'I want a ticket'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "بغيت ورقة",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "بغيت طاكسي",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "بغيت الثمن",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "hint": {
+        "transliteration": "Bghit werqa",
+        "arabic": "بغيت ورقة"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the question: لـ[اسم المدينة] ___؟ (To [city name] ___?)",
+      "options": [
+        {
+          "id": "a",
+          "text": "إمتى",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "شحال",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "كي داير",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "hint": {
+        "transliteration": "Imta",
+        "arabic": "إمتى"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask for a return ticket?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ورقة ديال الرجوع",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "ورقة للمطار",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "ورقة وحدة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "hint": {
+        "transliteration": "Werqa dyal r-rujou3",
+        "arabic": "ورقة ديال الرجوع"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Inquiring about Time",
+          "arabic": "الاستفسار عن الوقت"
+        },
+        "text": "Knowing how to ask about time is crucial for travel planning and scheduling services.",
+        "examples": [
+          {
+            "arabic": "إمتى؟",
+            "english": "When?",
+            "transliteration": "Imta?"
+          },
+          {
+            "arabic": "فاش من وقت؟",
+            "english": "At what time?",
+            "transliteration": "Fash mn waqt?"
+          },
+          {
+            "arabic": "أشمن ساعة؟",
+            "english": "Which hour/time?",
+            "transliteration": "Ashmen sa3a?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Essential Numbers (1-3)",
+          "arabic": "أرقام أساسية (1-3)"
+        },
+        "text": "Learn these basic numbers to specify quantities for tickets or people.",
+        "examples": [
+          {
+            "arabic": "واحد",
+            "english": "One",
+            "transliteration": "Waḥd"
+          },
+          {
+            "arabic": "جوج",
+            "english": "Two",
+            "transliteration": "Jouj"
+          },
+          {
+            "arabic": "تلاتة",
+            "english": "Three",
+            "transliteration": "Tlata"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking \"How many?\"",
+          "arabic": "السؤال 'كم العدد؟'"
+        },
+        "text": "To ask about the number of people or items you need, use 'شحال من...'.",
+        "examples": [
+          {
+            "arabic": "شحال من واحد؟",
+            "english": "How many people? (lit. how many of one)",
+            "transliteration": "Shḥāl mn waḥd?"
+          },
+          {
+            "arabic": "شحال من تيكيت؟",
+            "english": "How many tickets?",
+            "transliteration": "Shḥāl mn ticket?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "بغيت جوج تيكيتات، إمتى غادي يكونو واجدين؟",
+        "english": "I want two tickets, when will they be ready?",
+        "transliteration": "Bghit jouj tickets, imta ghadi ykunu wajdin?"
+      },
+      "context": "Asking for two tickets and their availability time."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شحال من واحد غادي يمشي للمحطة فاش من وقت؟",
+        "english": "How many people are going to the station and at what time?",
+        "transliteration": "Shḥāl mn waḥd ghadi yamshi l-l-maḥaṭṭa fash mn waqt?"
+      },
+      "context": "Inquiring about the number of travelers and their departure time."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic phrase for 'When?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "إمتى؟",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "شحال؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "فين؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "hint": {
+        "transliteration": "Imta?",
+        "arabic": "إمتى؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the phrase: بغيت ___ تيكيتات. (I want ___ tickets.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "جوج",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "الثمن",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "ورقة",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "hint": {
+        "transliteration": "Jouj",
+        "arabic": "جوج"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'How many people?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "شحال من واحد؟",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "شحال من تيكيت؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "شحال الثمن؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "hint": {
+        "transliteration": "Shḥāl mn waḥd?",
+        "arabic": "شحال من واحد؟"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Saying \"Please\"",
+          "arabic": "قول 'من فضلك'"
+        },
+        "text": "Adding 'عافاك' (3afak) to your requests makes them more polite and respectful.",
+        "examples": [
+          {
+            "arabic": "عافاك",
+            "english": "Please (singular male/female)",
+            "transliteration": "3afak"
+          },
+          {
+            "arabic": "عفاكم",
+            "english": "Please (plural/formal)",
+            "transliteration": "3afakom"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing Gratitude",
+          "arabic": "التعبير عن الشكر"
+        },
+        "text": "Always show appreciation. 'شكراً' is a simple yet powerful way to do so.",
+        "examples": [
+          {
+            "arabic": "شكراً",
+            "english": "Thank you",
+            "transliteration": "Shukran"
+          },
+          {
+            "arabic": "شكراً بزاف",
+            "english": "Thank you very much",
+            "transliteration": "Shukran bzaf"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking for Help",
+          "arabic": "طلب المساعدة"
+        },
+        "text": "If you find yourself needing assistance, these phrases will be very useful.",
+        "examples": [
+          {
+            "arabic": "واش تقدر تعاوني؟",
+            "english": "Can you help me? (to male)",
+            "transliteration": "Wach t9der t3awni?"
+          },
+          {
+            "arabic": "واش تقدري تعاونيني؟",
+            "english": "Can you help me? (to female)",
+            "transliteration": "Wach t9dri t3awnini?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "عافاك، بغيت نمشي للمطار.",
+        "english": "Please, I want to go to the airport.",
+        "transliteration": "3afak, bghit nmshi l-l-maṭar."
+      },
+      "context": "A polite request to go to the airport."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "شكراً بزاف على المساعدة!",
+        "english": "Thank you very much for the help!",
+        "transliteration": "Shukran bzaf 3la l-musa3ada!"
+      },
+      "context": "Expressing sincere thanks after receiving help."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "واش تقدرو تعاونوني؟ بغيت تيكيت لـمراكش.",
+        "english": "Can you (plural/formal) help me? I want a ticket to Marrakech.",
+        "transliteration": "Wach t9dru t3awnuni? Bghit ticket l-Marrakech."
+      },
+      "context": "Asking for help from multiple people or formally requesting assistance for a ticket."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the polite way to say 'Please' (singular)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "عافاك",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "شكراً",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "شحال",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "hint": {
+        "transliteration": "3afak",
+        "arabic": "عافاك"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: ___ بزاف! (___ very much!)",
+      "options": [
+        {
+          "id": "a",
+          "text": "شكراً",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "إمتى",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "بغيت",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "hint": {
+        "transliteration": "Shukran",
+        "arabic": "شكراً"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask 'Can you help me?' (to a male)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "واش تقدر تعاوني؟",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "واش تقدري تعاونيني؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "واش بغيتي؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "hint": {
+        "transliteration": "Wach t9der t3awni?",
+        "arabic": "واش تقدر تعاوني؟"
+      }
+    }
+  ]
+}

@@ -1,0 +1,938 @@
+{
+  "topicId": "m7-t1",
+  "title": "Talking about Habits and Routines",
+  "dialect": "fusha",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Introduction to Present Tense for Habits"
+        },
+        "text": "The present tense in Arabic (الفعل المضارع - Al-Fi'l Al-Mudari') is used to describe actions happening now, but also for habits, routines, and general truths. In this lesson, we will focus on using the present tense to talk about daily habits and routines.",
+        "examples": [
+          {
+            "arabic": "الفعل المضارع",
+            "english": "Present tense verb",
+            "transliteration": "Al-Fi'l Al-Mudari'"
+          },
+          {
+            "arabic": "كل يوم",
+            "english": "Every day",
+            "transliteration": "kull yawm"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "\"I do\" (أنا أفعل)"
+        },
+        "text": "The basic pattern for 'I do' in the present tense for most verbs starts with an 'أ' (alif). For the verb 'فَعَلَ' (fa'ala - to do), the present tense for 'I' (أنا - ana) is 'أَفْعَلُ'. Notice the diacritics indicating the pronunciation.",
+        "examples": [
+          {
+            "arabic": "أنا أَفعَلُ هذا كل يوم.",
+            "english": "I do this every day.",
+            "transliteration": "Ana af'alu hadha kull yawm."
+          },
+          {
+            "arabic": "أنا أَفعَلُ واجبي.",
+            "english": "I do my homework.",
+            "transliteration": "Ana af'alu wajibi."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "First Daily Verbs: Wake up, Eat, Drink"
+        },
+        "text": "Let's learn some essential verbs for describing daily routines. These verbs are presented in the 'he' form, from which other conjugations are derived.",
+        "examples": [
+          {
+            "arabic": "يَستَيقِظُ",
+            "english": "to wake up (he wakes up)",
+            "transliteration": "yastayqidḥu"
+          },
+          {
+            "arabic": "يَأكُلُ",
+            "english": "to eat (he eats)",
+            "transliteration": "ya'kulu"
+          },
+          {
+            "arabic": "يَشرَبُ",
+            "english": "to drink (he drinks)",
+            "transliteration": "yashrabu"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا أَفعَلُ ذلك كل يوم.",
+        "english": "I do that every day.",
+        "transliteration": "Ana af'alu dhalika kull yawm."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا أَستَيقِظُ مبكراً.",
+        "english": "I wake up early.",
+        "transliteration": "Ana astayqidḥu mubakkiran."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which Arabic phrase means 'every day'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "كل يوم",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "اليوم",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "أمس",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "hint": {
+        "transliteration": "kull yawm",
+        "arabic": "كل يوم"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: أنا ____ ذلك. (I do that.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "أَفْعَلُ",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "يَفعَلُ",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "تَفعَلُ",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "hint": {
+        "transliteration": "af'alu",
+        "arabic": "أَفْعَلُ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic verb for 'to wake up' (in the 'he' form)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "يَستَيقِظُ",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "يَنامُ",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "يَجلِسُ",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "hint": {
+        "transliteration": "yastayqidḥu",
+        "arabic": "يَستَيقِظُ"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Conjugating Verbs: I, He, She"
+        },
+        "text": "Let's see how `يَستَيقِظُ` (to wake up) and `يَأكُلُ` (to eat) change for 'I' (أنا), 'he' (هو), and 'she' (هي). Pay attention to the initial letter and the diacritics.",
+        "examples": [
+          {
+            "arabic": "أنا أَستَيقِظُ",
+            "english": "I wake up",
+            "transliteration": "Ana astayqidḥu"
+          },
+          {
+            "arabic": "هو يَستَيقِظُ",
+            "english": "He wakes up",
+            "transliteration": "Huwa yastayqidḥu"
+          },
+          {
+            "arabic": "هي تَستَيقِظُ",
+            "english": "She wakes up",
+            "transliteration": "Hiya tastayqidḥu"
+          },
+          {
+            "arabic": "أنا آكُلُ",
+            "english": "I eat",
+            "transliteration": "Ana akulu"
+          },
+          {
+            "arabic": "هو يَأكُلُ",
+            "english": "He eats",
+            "transliteration": "Huwa ya'kulu"
+          },
+          {
+            "arabic": "هي تَأكُلُ",
+            "english": "She eats",
+            "transliteration": "Hiya ta'kulu"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "More Verbs: Go, Work, Study"
+        },
+        "text": "Here are more common verbs to help you describe a wider range of daily activities.",
+        "examples": [
+          {
+            "arabic": "يَذهَبُ",
+            "english": "to go (he goes)",
+            "transliteration": "yadhhabu"
+          },
+          {
+            "arabic": "يَعمَلُ",
+            "english": "to work (he works)",
+            "transliteration": "ya'malu"
+          },
+          {
+            "arabic": "يَدرُسُ",
+            "english": "to study (he studies)",
+            "transliteration": "yadrusu"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Time Expressions: Morning, Evening, Night"
+        },
+        "text": "These phrases allow you to specify when an action takes place within the day.",
+        "examples": [
+          {
+            "arabic": "في الصباح",
+            "english": "in the morning",
+            "transliteration": "fi al-ṣabaḥ"
+          },
+          {
+            "arabic": "في المساء",
+            "english": "in the evening",
+            "transliteration": "fi al-masa'"
+          },
+          {
+            "arabic": "في الليل",
+            "english": "at night",
+            "transliteration": "fi al-layl"
+          },
+          {
+            "arabic": "أَستَيقِظُ في الصباح.",
+            "english": "I wake up in the morning.",
+            "transliteration": "Astayqidḥu fi al-ṣabaḥ."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هو يَذهَبُ إلى العمل كل يوم.",
+        "english": "He goes to work every day.",
+        "transliteration": "Huwa yadhhabu ila al-'amal kull yawm."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هي تَدرُسُ في المساء.",
+        "english": "She studies in the evening.",
+        "transliteration": "Hiya tadrusu fi al-masa'."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا آكُلُ الفطور في الصباح.",
+        "english": "I eat breakfast in the morning.",
+        "transliteration": "Ana akulu al-futur fi al-ṣabaḥ."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'she goes'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "تَذهَبُ",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "يَذهَبُ",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "أَذهَبُ",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "hint": {
+        "transliteration": "tadhhabu",
+        "arabic": "تَذهَبُ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: هو يَعمَلُ ___ المكتب. (He works ___ the office.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "في",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "إلى",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "من",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "hint": {
+        "transliteration": "fi",
+        "arabic": "في"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What does 'في الليل' mean?",
+      "options": [
+        {
+          "id": "a",
+          "text": "في الليل",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "في الصباح",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "في المساء",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "'في الليل' means 'at night'.",
+      "hint": {
+        "transliteration": "fi al-layl",
+        "arabic": "في الليل"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Conjugating Verbs: Go, Work"
+        },
+        "text": "Let's practice conjugating `يَذهَبُ` (to go) and `يَعمَلُ` (to work) for 'I' (أنا), 'he' (هو), and 'she' (هي).",
+        "examples": [
+          {
+            "arabic": "أنا أَذهَبُ",
+            "english": "I go",
+            "transliteration": "Ana adhhhabu"
+          },
+          {
+            "arabic": "هو يَذهَبُ",
+            "english": "He goes",
+            "transliteration": "Huwa yadhhabu"
+          },
+          {
+            "arabic": "هي تَذهَبُ",
+            "english": "She goes",
+            "transliteration": "Hiya tadhhabu"
+          },
+          {
+            "arabic": "أنا أَعمَلُ",
+            "english": "I work",
+            "transliteration": "Ana a'malu"
+          },
+          {
+            "arabic": "هو يَعمَلُ",
+            "english": "He works",
+            "transliteration": "Huwa ya'malu"
+          },
+          {
+            "arabic": "هي تَعمَلُ",
+            "english": "She works",
+            "transliteration": "Hiya ta'malu"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Adverbs of Frequency"
+        },
+        "text": "Use these adverbs to describe how often an action happens. They usually come before the verb in Arabic.",
+        "examples": [
+          {
+            "arabic": "دائماً",
+            "english": "always",
+            "transliteration": "da'iman"
+          },
+          {
+            "arabic": "عادةً",
+            "english": "usually",
+            "transliteration": "'aadatan"
+          },
+          {
+            "arabic": "أحياناً",
+            "english": "sometimes",
+            "transliteration": "aḥyaanan"
+          },
+          {
+            "arabic": "أنا دائماً أَستَيقِظُ مبكراً.",
+            "english": "I always wake up early.",
+            "transliteration": "Ana da'iman astayqidḥu mubakkiran."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Negation: \"Not doing\" with `لا`"
+        },
+        "text": "To say that someone 'does not' do something, simply place `لا` (la - not) immediately before the present tense verb.",
+        "examples": [
+          {
+            "arabic": "أنا لا أَعمَلُ اليوم.",
+            "english": "I don't work today.",
+            "transliteration": "Ana la a'malu al-yawm."
+          },
+          {
+            "arabic": "هو لا يَأكُلُ اللحم.",
+            "english": "He doesn't eat meat.",
+            "transliteration": "Huwa la ya'kulu al-laḥm."
+          },
+          {
+            "arabic": "هي لا تَذهَبُ إلى النادي.",
+            "english": "She doesn't go to the club.",
+            "transliteration": "Hiya la tadhhabu ila al-nadi."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا لا أَذهَبُ إلى العمل يوم الجمعة.",
+        "english": "I don't go to work on Friday.",
+        "transliteration": "Ana la adhhhabu ila al-'amal yawm al-Jum'ah."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هي دائماً تَدرُسُ بجد.",
+        "english": "She always studies hard.",
+        "transliteration": "Hiya da'iman tadrusu bi-jidd."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هو عادةً يَأكُلُ في المطعم.",
+        "english": "He usually eats in the restaurant.",
+        "transliteration": "Huwa 'aadatan ya'kulu fi al-mat'am."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would you say 'I always go'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أنا دائماً أَذهَبُ",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "أنا أَذهَبُ دائماً",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "أنا لا أَذهَبُ",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "hint": {
+        "transliteration": "Ana da'iman adhhhabu",
+        "arabic": "أنا دائماً أَذهَبُ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: هي ___ تَشرَبُ القهوة. (She usually drinks coffee.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "عادةً",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "دائماً",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "أحياناً",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "hint": {
+        "transliteration": "'aadatan",
+        "arabic": "عادةً"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the negative form of 'هو يَدرُسُ' (he studies)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "هو لا يَدرُسُ",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "هو لم يَدرُس",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "هو لن يَدرُس",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "hint": {
+        "transliteration": "Huwa la yadrusu",
+        "arabic": "هو لا يَدرُسُ"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "More Activities: Watch, Read, Sleep"
+        },
+        "text": "Expand your vocabulary with more common daily actions. These are presented in the 'he' form.",
+        "examples": [
+          {
+            "arabic": "يُشاهِدُ",
+            "english": "to watch (he watches)",
+            "transliteration": "yushahid"
+          },
+          {
+            "arabic": "يَقرَأُ",
+            "english": "to read (he reads)",
+            "transliteration": "yaqra'"
+          },
+          {
+            "arabic": "يَنامُ",
+            "english": "to sleep (he sleeps)",
+            "transliteration": "yanam"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Conjugating Verbs: Watch, Sleep"
+        },
+        "text": "Practice conjugating `يُشاهِدُ` (to watch) and `يَنامُ` (to sleep) for 'I' (أنا), 'he' (هو), and 'she' (هي).",
+        "examples": [
+          {
+            "arabic": "أنا أُشاهِدُ",
+            "english": "I watch",
+            "transliteration": "Ana ushahidu"
+          },
+          {
+            "arabic": "هو يُشاهِدُ",
+            "english": "He watches",
+            "transliteration": "Huwa yushahidu"
+          },
+          {
+            "arabic": "هي تُشاهِدُ",
+            "english": "She watches",
+            "transliteration": "Hiya tushahidu"
+          },
+          {
+            "arabic": "أنا أَنامُ",
+            "english": "I sleep",
+            "transliteration": "Ana anamu"
+          },
+          {
+            "arabic": "هو يَنامُ",
+            "english": "He sleeps",
+            "transliteration": "Huwa yanamu"
+          },
+          {
+            "arabic": "هي تَنامُ",
+            "english": "She sleeps",
+            "transliteration": "Hiya tanamu"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking Questions: \"What do you do?\" and \"When?\""
+        },
+        "text": "To inquire about someone's routine, you can use these question words with the appropriate verb conjugation. Notice the difference in 'you' (تَفعلُ for male, تَفعلينَ for female).",
+        "examples": [
+          {
+            "arabic": "ماذا تَفعَلُ كل صباح؟",
+            "english": "What do you do every morning? (to male)",
+            "transliteration": "Madha taf'alu kull ṣabaḥ?"
+          },
+          {
+            "arabic": "ماذا تَفعَلينَ في المساء؟",
+            "english": "What do you do in the evening? (to female)",
+            "transliteration": "Madha taf'aleena fi al-masa'?"
+          },
+          {
+            "arabic": "متى تَستَيقِظُ؟",
+            "english": "When do you wake up? (to male)",
+            "transliteration": "Mata tastayqidḥu?"
+          },
+          {
+            "arabic": "متى تَستَيقِظينَ؟",
+            "english": "When do you wake up? (to female)",
+            "transliteration": "Mata tastayqidḥeena?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ماذا تَفعَلُ بعد العمل؟",
+        "english": "What do you do after work? (to male)",
+        "transliteration": "Madha taf'alu ba'd al-'amal?"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هي تُشاهِدُ فيلماً في المساء.",
+        "english": "She watches a movie in the evening.",
+        "transliteration": "Hiya tushahidu filman fi al-masa'."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا أَنامُ مبكراً كل ليلة.",
+        "english": "I sleep early every night.",
+        "transliteration": "Ana anamu mubakkiran kull laylah."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask a female 'What do you do?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "ماذا تَفعَلينَ؟",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "ماذا تَفعَلُ؟",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "ماذا يَفعَلُ؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "hint": {
+        "transliteration": "Madha taf'aleena?",
+        "arabic": "ماذا تَفعَلينَ؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: هو ___ كتاباً كل يوم. (He ___ a book every day.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "يَقرَأُ",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "يُشاهِدُ",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "يَكتُبُ",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "hint": {
+        "transliteration": "yaqra'",
+        "arabic": "يَقرَأُ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'to sleep' (he sleeps)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "يَنامُ",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "يَجلِسُ",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "يَستَيقِظُ",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "hint": {
+        "transliteration": "yanamu",
+        "arabic": "يَنامُ"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Describing Your Day"
+        },
+        "text": "Now you can combine different verbs, time expressions, and adverbs of frequency to describe a full daily routine. Use `ثم` (thumma - then) to link actions in a sequence.",
+        "examples": [
+          {
+            "arabic": "أنا أَستَيقِظُ في السادسة صباحاً، ثم آكُلُ الفطور، ثم أَذهَبُ إلى العمل.",
+            "english": "I wake up at six AM, then eat breakfast, then go to work.",
+            "transliteration": "Ana astayqidḥu fi as-sadisah ṣabaḥan, thumma akulu al-futur, thumma adhhhabu ila al-'amal."
+          },
+          {
+            "arabic": "هي تَدرُسُ في الصباح، ثم تَتَناوَلُ الغداء، ثم تَنامُ قليلاً.",
+            "english": "She studies in the morning, then eats lunch, then sleeps a little.",
+            "transliteration": "Hiya tadrusu fi al-ṣabaḥ, thumma tatanawalu al-ghada', thumma tanamu qaleelan."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing Preferences: `أُحِبُّ أَن`"
+        },
+        "text": "To express what you like to do, use `أُحِبُّ أَن` (uḥibbu an - I like to) followed by the present tense verb. The particle `أَن` typically puts the verb in the subjunctive mood (ending in fatḥa for most verbs in this context).",
+        "examples": [
+          {
+            "arabic": "أُحِبُّ أَن أَقرَأَ الكُتُبَ.",
+            "english": "I like to read books.",
+            "transliteration": "Uḥibbu an aqra'a al-kutuba."
+          },
+          {
+            "arabic": "لا أُحِبُّ أَن أَستَيقِظَ مبكراً.",
+            "english": "I don't like to wake up early.",
+            "transliteration": "La uḥibbu an astayqidḥa mubakkiran."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Summary and Next Steps"
+        },
+        "text": "Congratulations! You've learned how to use the present tense to talk about daily habits and routines, conjugate verbs for 'I', 'he', and 'she', use time expressions and adverbs of frequency, and ask questions about routines. You can also express what you like or don't like to do. Keep practicing by describing your own day and the routines of others. The more you use these phrases, the more natural they will become. Good luck!"
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أُحِبُّ أَن أَنامَ مبكراً.",
+        "english": "I like to sleep early.",
+        "transliteration": "Uḥibbu an anama mubakkiran."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هو يَستَيقِظُ في السابعة ثم يَذهَبُ إلى العمل.",
+        "english": "He wakes up at seven, then goes to work.",
+        "transliteration": "Huwa yastayqidḥu fi as-sabi'ah thumma yadhhabu ila al-'amal."
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هي لا تُحِبُّ أَن تُشاهِدَ التلفاز في المساء.",
+        "english": "She doesn't like to watch TV in the evening.",
+        "transliteration": "Hiya la tuḥibbu an tushahida at-tilfaz fi al-masa'."
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'I like to study'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أُحِبُّ أَن أَدرُسَ",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "أَدرُسُ أَن أُحِبُّ",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "أُحِبُّ أَدرُسُ",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "hint": {
+        "transliteration": "Uḥibbu an adrusa",
+        "arabic": "أُحِبُّ أَن أَدرُسَ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: أنا أَستَيقِظُ، ___ آكُلُ الفطور. (I wake up, ___ I eat breakfast.)",
+      "options": [
+        {
+          "id": "a",
+          "text": "ثم",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "أو",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "لكن",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "hint": {
+        "transliteration": "thumma",
+        "arabic": "ثم"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'I don't like to work'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "لا أُحِبُّ أَن أَعمَلَ",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "أُحِبُّ أَن لا أَعمَلَ",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "لا أُحِبُّ أَعمَلُ",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "hint": {
+        "transliteration": "La uḥibbu an a'mala",
+        "arabic": "لا أُحِبُّ أَن أَعمَلَ"
+      }
+    }
+  ]
+}

@@ -1,0 +1,907 @@
+{
+  "topicId": "m9-t1",
+  "title": "Social Interactions: Offering, Inviting, Apologizing, Gifting",
+  "dialect": "darija",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Basic Offers: Do you want...?",
+          "arabic": "عروض بسيطة: واش بغيتي؟"
+        },
+        "text": "In Darija, to make a basic offer or ask if someone wants something, you often use forms of the verb 'بغى' (bgha - to want). The most common phrase is 'واش بغيتي؟' (Wash bghiti?) which is versatile for both male and female singular. For a more direct 'Are you wanting (now)?', you can use 'باغي؟' (baghi?) for a male and 'باغية؟' (baghya?) for a female. For a group, use 'واش بغيتوا؟' (Wash bghitou?).",
+        "examples": [
+          {
+            "arabic": "واش بغيتي قهوة؟",
+            "english": "Do you want coffee? (singular, m/f)",
+            "transliteration": "Wash bghiti qahwa?"
+          },
+          {
+            "arabic": "واش باغي شي حاجة؟",
+            "english": "Are you wanting something? (to a male)",
+            "transliteration": "Wash baghi shi ḥaja?"
+          },
+          {
+            "arabic": "واش باغية شي مساعدة؟",
+            "english": "Are you wanting some help? (to a female)",
+            "transliteration": "Wash baghya shi musa'ada?"
+          },
+          {
+            "arabic": "واش بغيتوا تجلسوا؟",
+            "english": "Do you want to sit? (to a group)",
+            "transliteration": "Wash bghitou tglsou?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Formal Invitations: I invite you...",
+          "arabic": "دعوات رسمية: كنعرض عليك"
+        },
+        "text": "To formally invite someone in Darija, you can use the phrase 'كنْعْرضْ عليكْ' (kan3rd 3lik). This phrase is used for both male and female singular. For inviting a group, you use 'كنْعْرضْ عليكمْ' (kan3rd 3likom). It literally means 'I offer to you' or 'I invite you'.",
+        "examples": [
+          {
+            "arabic": "كنْعْرضْ عليكْ لْغْدا غدا.",
+            "english": "I invite you to lunch tomorrow. (to a male/female)",
+            "transliteration": "Kan3rd 3lik l'lghda ghdā."
+          },
+          {
+            "arabic": "كنْعْرضْ عليكمْ لْحْفلَة.",
+            "english": "I invite you (all) to the party.",
+            "transliteration": "Kan3rd 3likom l'lḥafla."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Offering Food or Drink: Have some!",
+          "arabic": "تقديم الطعام والشراب: كل/شرب!"
+        },
+        "text": "When offering food or drink, you can use the imperative verbs 'كُلْ' (kul - eat) and 'شْرَبْ' (shreb - drink). Remember to adjust for gender and number: 'كُلِي' (kuli) and 'شْرْبِي' (shrebi) for a female, and 'كُلُوا' (kulou) and 'شْرْبُوا' (shrebu) for a group. These are direct and polite ways to encourage someone to partake.",
+        "examples": [
+          {
+            "arabic": "كُلْ هادْ الطَّاجينْ.",
+            "english": "Eat this tagine. (to a male)",
+            "transliteration": "Kul had ṭ-ṭajin."
+          },
+          {
+            "arabic": "شْرْبِي العصيرْ.",
+            "english": "Drink the juice. (to a female)",
+            "transliteration": "Shrebi l-'aṣīr."
+          },
+          {
+            "arabic": "كُلُوا شوية دْ الحلوى.",
+            "english": "Eat some sweets. (to a group)",
+            "transliteration": "Kulou shwiya d l-ḥalwa."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "واش باغي شي عصير؟",
+        "english": "Do you want some juice? (to a male)",
+        "transliteration": "Wash baghi shi 'aṣīr?"
+      },
+      "context": "Asking a male if he wants juice."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "كنْعْرضْ عليكمْ للقهوة.",
+        "english": "I invite you (all) for coffee.",
+        "transliteration": "Kan3rd 3likom l'lqahwa."
+      },
+      "context": "Inviting a group for coffee."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'Do you want?' when addressing a female?",
+      "options": [
+        {
+          "id": "a",
+          "text": "واش باغي؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "واش باغية؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "واش بغيتوا؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'واش باغية؟' is used for asking a female if she wants something. 'واش باغي؟' is for a male, and 'واش بغيتوا؟' is for a group.",
+      "hint": {
+        "transliteration": "Wash baghya?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: '___ (I invite you, to a female) to my house.'",
+      "options": [
+        {
+          "id": "a",
+          "text": "كنْعْرضْ عليكِ",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "كنْعْرضْ عليكَ",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "كنْعرضْ عليكم",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "The phrase 'كنْعْرضْ عليكِ' is used when inviting a female. Although 'عليك' is often written the same for m/f in Darija, in this context, the intent is for a female.",
+      "hint": {
+        "transliteration": "Kan3rd 3lik"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you tell a group of people to 'Drink some'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "شْرَبْ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شْرْبِي",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "شْرْبُوا",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'شْرْبُوا' is the plural imperative form of 'to drink'.",
+      "hint": {
+        "transliteration": "Shrebu"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Accepting Offers and Invitations: Yes, thank you",
+          "arabic": "قبول العروض والدعوات: إيه، شكراً"
+        },
+        "text": "To accept an offer or invitation politely in Darija, you can simply say 'إيه، شكراً' (Ih, shukran - Yes, thank you) or 'واخا، شكراً' (Wakha, shukran - Okay, thank you). If you want to express more enthusiasm, you can add 'بكل فرح' (Bi koul farh - With pleasure).",
+        "examples": [
+          {
+            "arabic": "إيه، شكراً، غادي نجي.",
+            "english": "Yes, thank you, I will come.",
+            "transliteration": "Ih, shukran, ghadi nji."
+          },
+          {
+            "arabic": "واخا، شكراً على الدعوة.",
+            "english": "Okay, thank you for the invitation.",
+            "transliteration": "Wakha, shukran 'ala d-da'wa."
+          },
+          {
+            "arabic": "بكل فرح، بغيت هادْ الشِّي.",
+            "english": "With pleasure, I'd like this.",
+            "transliteration": "Bi koul farh, bghit had shshi."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Declining Politely: No, thank you",
+          "arabic": "الرفض بلطف: لا، شكراً"
+        },
+        "text": "Declining an offer or invitation politely is crucial. The most common phrase is 'لا، شكراً' (La, shukran - No, thank you). You can add 'بَارك الله وفيكْ' (Barak Allahu fik - May God bless you) to express gratitude, which is very polite. If you want to suggest another time, say 'مرة أخرى إن شاء الله' (Marra okhra insha'allah - Another time, God willing).",
+        "examples": [
+          {
+            "arabic": "لا، شكراً، بَارك الله وفيكْ.",
+            "english": "No, thank you, may God bless you.",
+            "transliteration": "La, shukran, barak Allahu fik."
+          },
+          {
+            "arabic": "لا، شكراً، أنا شْبعْتْ.",
+            "english": "No, thank you, I'm full.",
+            "transliteration": "La, shukran, ana shba't."
+          },
+          {
+            "arabic": "مرة أخرى إن شاء الله.",
+            "english": "Another time, God willing.",
+            "transliteration": "Marra okhra insha'allah."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Insisting on an Offer/Invitation: You must!",
+          "arabic": "الإصرار على العرض/الدعوة: خاصك تجي!"
+        },
+        "text": "Moroccan culture often involves insisting when making an offer or invitation. Phrases like 'بْشْحَالْ ما كُلِّيتيشْ!' (Bshhal ma kllitish! - 'You haven't eaten in ages!', often used humorously to insist on food) are common. More directly, to insist someone come, you say 'خَصَّكْ تجي!' (Khassek tji! - You must come!) for a singular male/female, and 'خَصَّكُمْ تجيوا!' (Khassekoum tjiw! - You must come!) for a group. 'مْسْتْحيلْ!' (Moustahil! - Impossible!) can also be used playfully to insist on refusal.",
+        "examples": [
+          {
+            "arabic": "بْشْحَالْ ما كُلِّيتيشْ! كُلْ شوية.",
+            "english": "You haven't eaten in ages! Eat a little. (to a male)",
+            "transliteration": "Bshhal ma kllitish! Kul shwiya."
+          },
+          {
+            "arabic": "خَصَّكْ تجي عندنا للعْشا.",
+            "english": "You must come to our place for dinner. (to a female)",
+            "transliteration": "Khassek tji 'andna l'l3sha."
+          },
+          {
+            "arabic": "مْسْتْحيلْ ما تجيوشْ.",
+            "english": "It's impossible for you (all) not to come.",
+            "transliteration": "Moustahil ma tjiwoch."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "إيه، شكراً، بكل فرح.",
+        "english": "Yes, thank you, with pleasure.",
+        "transliteration": "Ih, shukran, bi koul farh."
+      },
+      "context": "Accepting an invitation enthusiastically."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "لا، شكراً، خصّني نمشي دابا.",
+        "english": "No, thank you, I have to go now.",
+        "transliteration": "La, shukran, khaṣṣni nemshi daba."
+      },
+      "context": "Politly declining and giving a reason."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is a polite way to accept an invitation?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ما بغيتش",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "إيه، شكراً",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "لا، شكراً",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'إيه، شكراً' is a simple and polite way to accept.",
+      "hint": {
+        "transliteration": "Ih, shukran"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Choose the best polite phrase to decline an offer: 'No, thank you, ___.'",
+      "options": [
+        {
+          "id": "a",
+          "text": "بَارك الله وفيكَ",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "بكل فرح",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "واش باغي؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "'بَارك الله وفيكَ' is a very polite way to express gratitude when declining.",
+      "hint": {
+        "transliteration": "Barak Allahu fik"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'You must come!' (to a group of people)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "خَصَّكْ تجي!",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "خَصَّكُمْ تجيوا!",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "ما تجيوش",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'خَصَّكُمْ تجيوا!' uses the plural form of 'you' and the plural imperative for 'to come'.",
+      "hint": {
+        "transliteration": "Khassekoum tjiw!"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Common Apology Phrases: I'm sorry",
+          "arabic": "عبارات الاعتذار الشائعة: اسمح لي"
+        },
+        "text": "To apologize in Darija, you use forms of 'سمح' (smaḥ - to forgive/excuse). For a male, say 'سْمَحْ لِي' (Smeḥ li). For a female, say 'سْمْحِي لِي' (Smḥi li). For a group, it's 'سْمْحُوا لِي' (Smḥou li). These translate to 'Excuse me' or 'I'm sorry'. 'عْفَاكْ' (3fak - please/excuse me) can also be used for minor apologies or requests.",
+        "examples": [
+          {
+            "arabic": "سْمَحْ لِي، تعطلتْ.",
+            "english": "I'm sorry, I'm late. (to a male)",
+            "transliteration": "Smeḥ li, ta'ṭṭalt."
+          },
+          {
+            "arabic": "سْمْحِي لِي على الخطأ.",
+            "english": "I'm sorry for the mistake. (to a female)",
+            "transliteration": "Smḥi li 'ala l-khaṭa'."
+          },
+          {
+            "arabic": "عْفَاكْ، واش يمكن لي ندوز؟",
+            "english": "Excuse me, may I pass?",
+            "transliteration": "3fak, wash ymken li ndouz?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Accepting an Apology: It's okay/No problem",
+          "arabic": "قبول الاعتذار: ماشي مشكل"
+        },
+        "text": "When someone apologizes, you can respond with 'ماشي مشكل' (Machi mochkil - No problem). Another common phrase is 'لاباس' (Labas - It's okay/Fine), which can also mean 'how are you?'. For more serious apologies, 'الله يسامحْ' (Allah ysameḥ - May God forgive) is a respectful response.",
+        "examples": [
+          {
+            "arabic": "ماشي مشكل، نسا داكْ الشِّي.",
+            "english": "No problem, forget about it. (to a male)",
+            "transliteration": "Machi mochkil, nsa dak shshi."
+          },
+          {
+            "arabic": "لاباس، ما كاينْ والو.",
+            "english": "It's okay, there's nothing (to worry about).",
+            "transliteration": "Labas, ma kayn walou."
+          },
+          {
+            "arabic": "الله يسامحْ، كُلِّنا كنْغْلطوا.",
+            "english": "May God forgive, we all make mistakes.",
+            "transliteration": "Allah ysameḥ, kullina kan-ghlṭou."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Reassuring After an Apology: Don't worry about it",
+          "arabic": "تطمين بعد الاعتذار: ما تخافش"
+        },
+        "text": "To reassure someone after they've apologized, you can say 'مَتْخافْشْ' (Matkhafsh - Don't worry) for a male, or 'مَتْخافِيشْ' (Matkhafîsh) for a female. A common and very idiomatic phrase is 'مَدِّيرْشْ فْ بَالَكْ' (Maddirch f balek - Don't put it in your mind) for a male, and 'مَدِّيرِيشْ فْ بَالَكْ' (Maddîrîsh f balek) for a female.",
+        "examples": [
+          {
+            "arabic": "مَتْخافْشْ، كُلّْشي دازْ بخيرْ.",
+            "english": "Don't worry, everything went well. (to a male)",
+            "transliteration": "Matkhafsh, kullshi daz bkhir."
+          },
+          {
+            "arabic": "مَدِّيرِيشْ فْ بَالَكْ، هادْ الشِّي عادي.",
+            "english": "Don't worry about it, this is normal. (to a female)",
+            "transliteration": "Maddîrîsh f balek, had shshi 'adi."
+          },
+          {
+            "arabic": "صافي، نسى الموضوعْ.",
+            "english": "Alright, forget the subject. (to a male)",
+            "transliteration": "Ṣafi, nsa l-mawḍou'."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "سْمْحِي لِي على التأخيرْ.",
+        "english": "I'm sorry for the delay. (to a female)",
+        "transliteration": "Smḥi li 'ala t-ta'khir."
+      },
+      "context": "A female apologizing for being late."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "ماشي مشكل، مَتْخافْشْ.",
+        "english": "No problem, don't worry. (to a male)",
+        "transliteration": "Machi mochkil, matkhafsh."
+      },
+      "context": "Reassuring a male after his apology."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How would a female apologize to someone?",
+      "options": [
+        {
+          "id": "a",
+          "text": "سْمَحْ لِي",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "سْمْحِي لِي",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "سْمْحُوا لِي",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'سْمْحِي لِي' is the correct form for a female to apologize.",
+      "hint": {
+        "transliteration": "Smḥi li"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the phrase for accepting an apology: '___ (No problem), it's okay.'",
+      "options": [
+        {
+          "id": "a",
+          "text": "ماشي مشكل",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "مَتْخافْشْ",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "سْمْحِي لِي",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "'ماشي مشكل' is a common and versatile way to accept an apology.",
+      "hint": {
+        "transliteration": "Machi mochkil"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is a common way to reassure someone (female) after they apologize?",
+      "options": [
+        {
+          "id": "a",
+          "text": "مَدِّيرْشْ فْ بَالَكْ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "مَتْخافِيشْ",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "سْمَحْ لِي",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'مَتْخافِيشْ' is the female form of 'don't worry'. 'مَدِّيرْشْ فْ بَالَكْ' is for a male.",
+      "hint": {
+        "transliteration": "Matkhafîsh"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking About Gift Preferences: What do you like?",
+          "arabic": "السؤال عن تفضيلات الهدايا: آش كاتبغي؟"
+        },
+        "text": "When thinking about a gift, you might want to subtly ask about preferences. 'آش بْغِيتي؟' (Ash bghiti?) means 'What do you want?' and can be used for both genders. For a more general 'What do you like/prefer?', use 'آش كاتبغي؟' (Ash katbghi?) for singular (m/f) and 'آش كاتبغيو؟' (Ash katbghiw?) for plural.",
+        "examples": [
+          {
+            "arabic": "آش بْغِيتي لْعيدْ ميلادَكْ؟",
+            "english": "What do you want for your birthday? (to a male/female)",
+            "transliteration": "Ash bghiti l'3id miladek?"
+          },
+          {
+            "arabic": "آش كاتبغي ديال الْكْتُبْ؟",
+            "english": "What kind of books do you like? (to a male/female)",
+            "transliteration": "Ash katbghi dyal l-ktub?"
+          },
+          {
+            "arabic": "آش كاتبغيو كَهْدية؟",
+            "english": "What do you (all) like as a gift?",
+            "transliteration": "Ash katbghiw ka-hadiya?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Suggesting a Gift Idea: How about...?",
+          "arabic": "اقتراح فكرة هدية: آش بان ليك فـ...؟"
+        },
+        "text": "To suggest a gift idea, a common phrase is 'آش بَانْ لِكْ فـ...؟' (Ash ban lik f...? - What do you think of...?). This can be used for both male and female singular. You can also use 'شْنُو رَايَكْ فـ...؟' (Shnou ra'yak f...? - What's your opinion on...?) for a male, or 'شْنُو رَايْكِ فـ...؟' (Shnou ra'y ki f...?) for a female.",
+        "examples": [
+          {
+            "arabic": "آش بَانْ لِكْ فْ كْتابْ؟",
+            "english": "What do you think of a book?",
+            "transliteration": "Ash ban lik f ktab?"
+          },
+          {
+            "arabic": "شْنُو رَايَكْ فْ ساعة جديدة لِيهْ؟",
+            "english": "What's your opinion on a new watch for him? (to a male)",
+            "transliteration": "Shnou ra'yak f sa'a jdida lih?"
+          },
+          {
+            "arabic": "شْنُو رَايْكِ فْ شي عْطرْ ليها؟",
+            "english": "What's your opinion on some perfume for her? (to a female)",
+            "transliteration": "Shnou ra'y ki f shi 'aṭr liha?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Presenting a Gift: This is for you",
+          "arabic": "تقديم الهدية: هاد الشي ليك"
+        },
+        "text": "When giving a gift, you can say 'هادْ الشِّي لِيكْ' (Had shshi lik - This thing is for you). If the gift is a feminine noun, you might say 'هادِي لِيكْ' (Hadi lik - This (f) is for you). If it's a masculine noun, 'هادا لِيكْ' (Hada lik - This (m) is for you). You can also simply say 'مَرْحْبَا' (Marhaba - Here you go/Welcome) as you hand over the gift.",
+        "examples": [
+          {
+            "arabic": "هادْ الشِّي لِيكْ، كنْتْمَنّى يَعْجْبَكْ.",
+            "english": "This is for you, I hope you like it. (neutral gift)",
+            "transliteration": "Had shshi lik, kantmanna ya'jbek."
+          },
+          {
+            "arabic": "هادِي لِيكْ، حيتْ كاتبغي الورود.",
+            "english": "This (bouquet) is for you, because you like roses. (feminine gift, e.g. وْرْدة)",
+            "transliteration": "Hadi lik, ḥit katbghi l-wuroud."
+          },
+          {
+            "arabic": "هادا لِيكْ، بْصِّحْتَكْ.",
+            "english": "This (phone) is for you, to your health! (masculine gift, e.g. تِّليفون)",
+            "transliteration": "Hada lik, bṣṣiḥtek."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "آش كاتبغي فْ الألوانْ؟",
+        "english": "What colors do you like? (to a female)",
+        "transliteration": "Ash katbghi f l-alwan?"
+      },
+      "context": "Asking a female about her preferred colors for a gift."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "آش بَانْ لِكْ فْ شي قميجة جديدة؟",
+        "english": "What do you think of a new shirt?",
+        "transliteration": "Ash ban lik f shi qamija jdida?"
+      },
+      "context": "Suggesting a shirt as a gift."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask a female 'What do you like?' (general preference)?",
+      "options": [
+        {
+          "id": "a",
+          "text": "آش باغي؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "آش كاتبغي؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "آش بغيتو؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'آش كاتبغي؟' is used for 'what do you like/prefer?' for both male and female singular. 'آش باغي؟' is for male 'what are you wanting now?'.",
+      "hint": {
+        "transliteration": "Ash katbghi?"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: '___ (What's your opinion) about this book?' (to a male)",
+      "options": [
+        {
+          "id": "a",
+          "text": "شْنُو رَايَكْ",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "آش بغيتي",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "هادي",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "'شْنُو رَايَكْ' is used to ask for a male's opinion.",
+      "hint": {
+        "transliteration": "Shnou ra'yak"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "You are giving a wallet (صاك - masculine noun) as a gift to a friend. How do you say 'This is for you'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "هادِي لِيكْ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "هادْ الشِّي لِيكْ",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "هادا لِيكْ",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "'هادا لِيكْ' is used when referring to a masculine object like 'صاك' (saq - wallet/bag). 'هادْ الشِّي لِيكْ' is general, and 'هادِي لِيكْ' is for feminine objects.",
+      "hint": {
+        "transliteration": "Hada lik"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Expressing Gratitude for a Gift: Thank you very much",
+          "arabic": "التعبير عن الشكر على هدية: شكراً بزاف"
+        },
+        "text": "When receiving a gift, it's customary to express strong gratitude. 'شكراً بْزَّافْ' (Shukran bzaf - Thank you very much) is very common. You can also use 'الله يْخَلِّيكْ' (Allah ikhellik - May God keep you), which is a deeply felt expression of thanks. To show how happy you are, you can say 'فرحتيني بْزَّافْ' (Farraḥtini bzaf - You made me very happy) (for both male/female giver).",
+        "examples": [
+          {
+            "arabic": "شكراً بْزَّافْ على الهدية الزوينة.",
+            "english": "Thank you very much for the beautiful gift.",
+            "transliteration": "Shukran bzaf 'ala l-hadiya z-zwina."
+          },
+          {
+            "arabic": "الله يْخَلِّيكْ، عْجْبَنِي بْزَّافْ.",
+            "english": "May God keep you, I liked it very much. (for a masculine gift)",
+            "transliteration": "Allah ikhellik, 'ajbni bzaf."
+          },
+          {
+            "arabic": "فرحتيني بْزَّافْ بهادْ المفاجأة.",
+            "english": "You made me very happy with this surprise.",
+            "transliteration": "Farraḥtini bzaf b-had l-moufaja'a."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Responding to Gratitude: You're welcome",
+          "arabic": "الرد على الشكر: لا شكر على واجب"
+        },
+        "text": "When someone thanks you for a gift, there are several ways to respond. 'لا شُكْرَ على وَاجِبْ' (La shukra 'ala wajib - No thanks for a duty) is a more formal, humble response. 'مَرْحْبَا' (Marhaba - You're welcome) is common and friendly. Additionally, 'بْصِّحْتَكْ' (Bssehtek - To your health) is frequently used when someone receives something new, implying 'enjoy it in good health'.",
+        "examples": [
+          {
+            "arabic": "لا شُكْرَ على وَاجِبْ.",
+            "english": "You're welcome. (formal)",
+            "transliteration": "La shukra 'ala wajib."
+          },
+          {
+            "arabic": "مَرْحْبَا، بْصِّحْتَكْ.",
+            "english": "You're welcome, enjoy it in good health.",
+            "transliteration": "Marhaba, bṣṣiḥtek."
+          },
+          {
+            "arabic": "غيرْ قْبَلْها مني.",
+            "english": "Just accept it from me. (informal, modest)",
+            "transliteration": "Ghir qbalha minni."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Complimenting a Gift: It's beautiful/I love it",
+          "arabic": "مدح الهدية: زوين/زوينة"
+        },
+        "text": "To compliment a gift, use 'زْوِينْ' (Zwin - beautiful/nice) for masculine nouns and 'زْوِينَة' (Zwina) for feminine nouns. To express that you like it, use 'عْجْبَنِي' ('ajbni - I liked it) for masculine objects and 'عْجْبَاتْنِي' ('ajbatni) for feminine objects. You can add 'بْزَّافْ' (bzaf - very much) for emphasis. 'هادْ الشِّي رائعْ' (Had shshi ra'i3 - This is wonderful) is a general compliment.",
+        "examples": [
+          {
+            "arabic": "القميجة زْوِينَة بْزَّافْ، عْجْبَاتْنِي.",
+            "english": "The shirt is very beautiful, I liked it. (shirt is feminine - قميجة)",
+            "transliteration": "L-qamija zwina bzaf, 'ajbatni."
+          },
+          {
+            "arabic": "هادْ الكتابْ زْوِينْ، عْجْبَنِي بْزَّافْ.",
+            "english": "This book is beautiful, I liked it very much. (book is masculine - كتاب)",
+            "transliteration": "Had l-ktab zwin, 'ajbni bzaf."
+          },
+          {
+            "arabic": "هادْ الشِّي رائعْ، شكراً بْزَّافْ.",
+            "english": "This is wonderful, thank you very much.",
+            "transliteration": "Had shshi ra'i3, shukran bzaf."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "الله يْخَلِّيكْ، الهدية فْ بْلاصْتْها.",
+        "english": "May God keep you, the gift is perfect (in its place).",
+        "transliteration": "Allah ikhellik, l-hadiya f blastha."
+      },
+      "context": "Expressing deep gratitude and satisfaction with a gift."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "مَرْحْبَا، بْصِّحْتَكْ بالتيليفونْ الجديد.",
+        "english": "You're welcome, enjoy your new phone in good health.",
+        "transliteration": "Marhaba, bṣṣiḥtek b-t-tilifon l-jdīd."
+      },
+      "context": "Responding to thanks for a new phone."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is a common way to say 'Thank you very much' for a gift?",
+      "options": [
+        {
+          "id": "a",
+          "text": "مَرْحْبَا",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شكراً بْزَّافْ",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "لا شُكْرَ على وَاجِبْ",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "'شكراً بْزَّافْ' is the most direct and common way to say 'thank you very much'.",
+      "hint": {
+        "transliteration": "Shukran bzaf"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the response to 'Thank you for the gift': '___ (You're welcome).'",
+      "options": [
+        {
+          "id": "a",
+          "text": "مَرْحْبَا",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "عْجْبَنِي",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "فرحتيني",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "'مَرْحْبَا' is a friendly and common way to say 'you're welcome'.",
+      "hint": {
+        "transliteration": "Marhaba"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "You received a new watch (ساعة - feminine noun) and want to say 'It's beautiful!' How do you say it?",
+      "options": [
+        {
+          "id": "a",
+          "text": "زْوِينْ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "زْوِينَة",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "هادْ الشِّي رائعْ",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "Since 'ساعة' (sa'a - watch) is a feminine noun, you use the feminine adjective 'زْوِينَة' (zwina).",
+      "hint": {
+        "transliteration": "Zwina"
+      }
+    }
+  ]
+}

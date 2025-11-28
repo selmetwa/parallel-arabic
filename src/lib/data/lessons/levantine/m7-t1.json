@@ -1,0 +1,939 @@
+{
+  "topicId": "m7-t1",
+  "title": "Talking about Habits and Routines (Levantine Arabic)",
+  "dialect": "levantine",
+  "steps": [
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Introduction to Present Tense for Habits"
+        },
+        "text": "In Levantine Arabic, to talk about habitual actions or routines, we use the present tense. A key characteristic of the present tense for 'he/she/they do' is the prefix 'بـ' (b-) attached to the verb stem. This 'بـ' indicates a continuous, habitual, or future action.",
+        "examples": [
+          {
+            "arabic": "أنا بَصحى",
+            "english": "I wake up (habitually)",
+            "transliteration": "Ana baṣḥa"
+          },
+          {
+            "arabic": "هو بيشرب",
+            "english": "He drinks (habitually)",
+            "transliteration": "Huwa biyishrab"
+          },
+          {
+            "arabic": "هي بتنام",
+            "english": "She sleeps (habitually)",
+            "transliteration": "Hiya bitnām"
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Verb: To Wake Up (Male/Female)"
+        },
+        "text": "Let's learn one of the first verbs for daily routines: 'to wake up'. Remember to add the 'بـ' prefix for habitual actions. The verb stem changes slightly for male and female.",
+        "examples": [
+          {
+            "arabic": "هُوَّ بِصحى",
+            "english": "He wakes up",
+            "transliteration": "Huwwa biṣḥa",
+            "diacriticalNotes": "بِ for male"
+          },
+          {
+            "arabic": "هِيِّ بتصحى",
+            "english": "She wakes up",
+            "transliteration": "Hiyye bitṣḥa",
+            "diacriticalNotes": "بت for female"
+          },
+          {
+            "arabic": "أنا بَصحى بكير كل يوم.",
+            "english": "I wake up early every day.",
+            "transliteration": "Ana baṣḥa bkīr kull yōm."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Verb: To Get Up / To Rise (Male/Female)"
+        },
+        "text": "After waking up, you 'get up' or 'rise'. This is another essential verb for your morning routine. The root is 'قام' (qām).",
+        "examples": [
+          {
+            "arabic": "هُوَّ بِقوم",
+            "english": "He gets up",
+            "transliteration": "Huwwa biqūm",
+            "diacriticalNotes": "بِ for male"
+          },
+          {
+            "arabic": "هِيِّ بتقوم",
+            "english": "She gets up",
+            "transliteration": "Hiyye bitqūm",
+            "diacriticalNotes": "بت for female"
+          },
+          {
+            "arabic": "أنا بَقوم من السرير.",
+            "english": "I get up from bed.",
+            "transliteration": "Ana baqūm min is-srīr."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هو بِصحى بكير.",
+        "english": "He wakes up early.",
+        "transliteration": "Huwwa biṣḥa bkīr."
+      },
+      "context": "Using 'he wakes up' with an adverb."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هي بتقوم كل يوم الساعة سبعة.",
+        "english": "She gets up every day at seven o'clock.",
+        "transliteration": "Hiyye bitqūm kull yōm is-sāʿa sabʿa."
+      },
+      "context": "Combining 'she gets up' with time and frequency."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which sentence means 'He wakes up'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "هي بتصحى",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "هو بِصحى",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أنا بقوم",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "هُوَّ بِصحى is the correct form for 'he wakes up' in Levantine.",
+      "hint": {
+        "transliteration": "Huwwa biṣḥa",
+        "arabic": "هو بِصحى"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'She gets up' in Levantine Arabic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "هو بيقوم",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "هي بتقوم",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أنا بَصحى",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "هِيِّ بتقوم is the correct form for 'she gets up' in Levantine.",
+      "hint": {
+        "transliteration": "Hiyye bitqūm",
+        "arabic": "هي بتقوم"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I ___ up every day.' (I wake up)",
+      "options": [
+        {
+          "id": "a",
+          "text": "بتقوم",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بَصحى",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بيصحى",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "For 'I' (أنا), the verb 'to wake up' is بَصحى (baṣḥa).",
+      "hint": {
+        "transliteration": "baṣḥa",
+        "arabic": "بَصحى"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Verb: To Eat Breakfast (Male/Female)"
+        },
+        "text": "Another common daily routine is 'eating breakfast'. The verb for this is 'فَطَر' (faṭar) in the past tense, but in the present habitual form, it changes with the 'بـ' prefix.",
+        "examples": [
+          {
+            "arabic": "هُوَّ بِفطَر",
+            "english": "He eats breakfast",
+            "transliteration": "Huwwa bīfṭar",
+            "diacriticalNotes": "بِ for male"
+          },
+          {
+            "arabic": "هِيِّ بتِفطَر",
+            "english": "She eats breakfast",
+            "transliteration": "Hiyye bitfiṭar",
+            "diacriticalNotes": "بتِ for female"
+          },
+          {
+            "arabic": "أنا بِفطر كل يوم بيض.",
+            "english": "I eat eggs for breakfast every day.",
+            "transliteration": "Ana bīfṭar kull yōm bēḍ."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Verb: To Go (Male/Female)"
+        },
+        "text": "The verb 'to go' is fundamental for talking about movement to work, school, or other places. The root is 'راح' (rāḥ).",
+        "examples": [
+          {
+            "arabic": "هُوَّ بِروح",
+            "english": "He goes",
+            "transliteration": "Huwwa birūḥ",
+            "diacriticalNotes": "بِ for male"
+          },
+          {
+            "arabic": "هِيِّ بتروح",
+            "english": "She goes",
+            "transliteration": "Hiyye bitrūḥ",
+            "diacriticalNotes": "بت for female"
+          },
+          {
+            "arabic": "أنا بِروح عالشغل كل يوم.",
+            "english": "I go to work every day.",
+            "transliteration": "Ana birūḥ ʿash-shughl kull yōm."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Basic Time Expressions"
+        },
+        "text": "To describe your routine, you'll need time expressions. Here are a few common ones for morning and general frequency.",
+        "examples": [
+          {
+            "arabic": "في الصبح",
+            "english": "In the morning",
+            "transliteration": "fī ṣ-ṣubḥ"
+          },
+          {
+            "arabic": "الصبح بكير",
+            "english": "Early morning",
+            "transliteration": "iṣ-ṣubḥ bkīr"
+          },
+          {
+            "arabic": "كل يوم",
+            "english": "Every day",
+            "transliteration": "kull yōm"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هي بتفطر في الصبح.",
+        "english": "She eats breakfast in the morning.",
+        "transliteration": "Hiyye bitfiṭar fī ṣ-ṣubḥ."
+      },
+      "context": "Combining 'she eats breakfast' with a time expression."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هو بِروح عالشغل كل يوم.",
+        "english": "He goes to work every day.",
+        "transliteration": "Huwwa birūḥ ʿash-shughl kull yōm."
+      },
+      "context": "Using 'he goes' with a destination and frequency."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'In the morning' in Levantine Arabic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "كل يوم",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "في الصبح",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "الصبح بكير",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "فِي الصبح means 'in the morning'.",
+      "hint": {
+        "transliteration": "fī ṣ-ṣubḥ",
+        "arabic": "في الصبح"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the correct Levantine Arabic for 'She eats breakfast'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "هو بيفطر",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "هي بتفطر",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أنا بروح",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "هِيِّ بِتفطر is the correct form for 'she eats breakfast'.",
+      "hint": {
+        "transliteration": "Hiyye bitfiṭar",
+        "arabic": "هي بتفطر"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I ___ to school every day.' (I go)",
+      "options": [
+        {
+          "id": "a",
+          "text": "بروح",
+          "isCorrect": true
+        },
+        {
+          "id": "b",
+          "text": "بتروح",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "بيفطر",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "a",
+      "explanation": "For 'I' (أنا), the verb 'to go' is بروح (birūḥ).",
+      "hint": {
+        "transliteration": "birūḥ",
+        "arabic": "بروح"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Verb: To Come Back / To Return (Male/Female)"
+        },
+        "text": "After going out, you usually 'come back' home or to another place. The verb for this is 'رجع' (rajaʿ).",
+        "examples": [
+          {
+            "arabic": "هُوَّ بيرجع",
+            "english": "He comes back",
+            "transliteration": "Huwwa bīrjaʿ",
+            "diacriticalNotes": "بِ for male"
+          },
+          {
+            "arabic": "هِيِّ بترجع",
+            "english": "She comes back",
+            "transliteration": "Hiyye bitirjaʿ",
+            "diacriticalNotes": "بتِ for female"
+          },
+          {
+            "arabic": "أنا برجع عالبيت بعد الشغل.",
+            "english": "I come back home after work.",
+            "transliteration": "Ana bīrjaʿ ʿal-bēt baʿd ish-shughl."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Verb: To Eat Lunch (Male/Female)"
+        },
+        "text": "Another meal in the daily routine is lunch. The verb 'to eat lunch' is derived from 'غَدَى' (ghada).",
+        "examples": [
+          {
+            "arabic": "هُوَّ بيتغدى",
+            "english": "He eats lunch",
+            "transliteration": "Huwwa bītaghadda",
+            "diacriticalNotes": "بِ for male"
+          },
+          {
+            "arabic": "هِيِّ بتتغدى",
+            "english": "She eats lunch",
+            "transliteration": "Hiyye bititghadda",
+            "diacriticalNotes": "بتِ for female"
+          },
+          {
+            "arabic": "أنا بتغدى مع أهلي.",
+            "english": "I eat lunch with my family.",
+            "transliteration": "Ana bītaghadda maʿ ahli."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Verbs: To Work / To Study (Male/Female)"
+        },
+        "text": "Many people either work or study as part of their daily routine. Let's learn these two important verbs.",
+        "examples": [
+          {
+            "arabic": "هُوَّ بيشتغل",
+            "english": "He works",
+            "transliteration": "Huwwa bīshitghil",
+            "diacriticalNotes": "بِ for male"
+          },
+          {
+            "arabic": "هِيِّ بتشتغل",
+            "english": "She works",
+            "transliteration": "Hiyye bitishtighil",
+            "diacriticalNotes": "بتِ for female"
+          },
+          {
+            "arabic": "هُوَّ بيدرس",
+            "english": "He studies",
+            "transliteration": "Huwwa bīdrus",
+            "diacriticalNotes": "بِ for male"
+          },
+          {
+            "arabic": "هِيِّ بتدرس",
+            "english": "She studies",
+            "transliteration": "Hiyye bitidrus",
+            "diacriticalNotes": "بتِ for female"
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هي بترجع عالبيت بعد ما تدرس.",
+        "english": "She comes back home after she studies.",
+        "transliteration": "Hiyye bitirjaʿ ʿal-bēt baʿd ma tidrus."
+      },
+      "context": "Combining 'she comes back' with 'she studies'."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هو بيتغدى مع زملائه في الشغل.",
+        "english": "He eats lunch with his colleagues at work.",
+        "transliteration": "Huwwa bītaghadda maʿ zumalāʾu fī sh-shughl."
+      },
+      "context": "Using 'he eats lunch' with additional context."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which phrase means 'She comes back'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "هو بيرجع",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "هي بترجع",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أنا بشتغل",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "هِيِّ بترجع is the correct form for 'she comes back'.",
+      "hint": {
+        "transliteration": "Hiyye bitirjaʿ",
+        "arabic": "هي بترجع"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you say 'He works' in Levantine Arabic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "هو بيدرس",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "هي بتشتغل",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "هو بيشتغل",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "هُوَّ بيشتغل is the correct form for 'he works'.",
+      "hint": {
+        "transliteration": "Huwwa bīshitghil",
+        "arabic": "هو بيشتغل"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'She ___ at the university.' (She studies)",
+      "options": [
+        {
+          "id": "a",
+          "text": "بتشتغل",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بتدرس",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بتتغدى",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "بتدرس (bitidrus) is the correct verb for 'she studies'.",
+      "hint": {
+        "transliteration": "bitidrus",
+        "arabic": "بتدرس"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Verb: To Watch (Male/Female)"
+        },
+        "text": "In the evening, people often 'watch' TV, movies, or other content. The verb 'to watch' is 'حَضَر' (ḥaḍar).",
+        "examples": [
+          {
+            "arabic": "هُوَّ بيحضر",
+            "english": "He watches",
+            "transliteration": "Huwwa biyḥḍar",
+            "diacriticalNotes": "بِ for male"
+          },
+          {
+            "arabic": "هِيِّ بتحضر",
+            "english": "She watches",
+            "transliteration": "Hiyye bitiḥḍar",
+            "diacriticalNotes": "بتِ for female"
+          },
+          {
+            "arabic": "أنا بحضر مسلسل كل ليلة.",
+            "english": "I watch a series every night.",
+            "transliteration": "Ana baḥḍar musalsal kull lēla."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Verb: To Read (Male/Female)"
+        },
+        "text": "Another common activity, especially in the evening or during free time, is 'to read'. The verb for this is 'قَرَأ' (qaraʾ).",
+        "examples": [
+          {
+            "arabic": "هُوَّ بيقرأ",
+            "english": "He reads",
+            "transliteration": "Huwwa biyiqraʾ",
+            "diacriticalNotes": "بِ for male"
+          },
+          {
+            "arabic": "هِيِّ بتقرأ",
+            "english": "She reads",
+            "transliteration": "Hiyye bitiqraʾ",
+            "diacriticalNotes": "بتِ for female"
+          },
+          {
+            "arabic": "أنا بقرا كتاب قبل ما أنام.",
+            "english": "I read a book before I sleep.",
+            "transliteration": "Ana baqra kitāb qabl ma anām."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Verb: To Sleep (Male/Female)"
+        },
+        "text": "Concluding the day, everyone needs to 'sleep'. The verb for this is 'نام' (nām).",
+        "examples": [
+          {
+            "arabic": "هُوَّ بينام",
+            "english": "He sleeps",
+            "transliteration": "Huwwa binām",
+            "diacriticalNotes": "بِ for male"
+          },
+          {
+            "arabic": "هِيِّ بتنام",
+            "english": "She sleeps",
+            "transliteration": "Hiyye bitnām",
+            "diacriticalNotes": "بت for female"
+          },
+          {
+            "arabic": "أنا بنام بكير بالليل.",
+            "english": "I sleep early at night.",
+            "transliteration": "Ana binām bkīr bil-lēl."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هو بيحضر الأخبار كل يوم.",
+        "english": "He watches the news every day.",
+        "transliteration": "Huwwa biyḥḍar il-akhbār kull yōm."
+      },
+      "context": "Using 'he watches' with a common evening activity."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هي بتقرأ كتاب قبل ما تنام.",
+        "english": "She reads a book before she sleeps.",
+        "transliteration": "Hiyye bitiqraʾ kitāb qabl ma tinām."
+      },
+      "context": "Combining 'she reads' and 'she sleeps'."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Levantine Arabic for 'He sleeps'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "هي بتنام",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "هو بينام",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أنا بقرا",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "هُوَّ بينام is the correct form for 'he sleeps'.",
+      "hint": {
+        "transliteration": "Huwwa binām",
+        "arabic": "هو بينام"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "Which sentence means 'She reads'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "هو بيقرأ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "هي بتقرأ",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "هي بتحضر",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "هِيِّ بتقرأ is the correct form for 'she reads'.",
+      "hint": {
+        "transliteration": "Hiyye bitiqraʾ",
+        "arabic": "هي بتقرأ"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I ___ a movie every weekend.' (I watch)",
+      "options": [
+        {
+          "id": "a",
+          "text": "بتقرأ",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "بحضر",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "بتنام",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "بحضر (baḥḍar) is the correct verb for 'I watch'.",
+      "hint": {
+        "transliteration": "baḥḍar",
+        "arabic": "بحضر"
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Frequency Adverbs: Always / Sometimes"
+        },
+        "text": "To describe how often you do something, you can use frequency adverbs. These are placed before the verb in Levantine Arabic.",
+        "examples": [
+          {
+            "arabic": "دايماً",
+            "english": "Always",
+            "transliteration": "dāymaṉ"
+          },
+          {
+            "arabic": "أحياناً",
+            "english": "Sometimes",
+            "transliteration": "aḥyānāṉ"
+          },
+          {
+            "arabic": "أنا دايماً بشرب قهوة الصبح.",
+            "english": "I always drink coffee in the morning.",
+            "transliteration": "Ana dāymaṉ bashrab qahwe ṣ-ṣubḥ."
+          },
+          {
+            "arabic": "هو أحياناً بروح عالنادي.",
+            "english": "He sometimes goes to the gym.",
+            "transliteration": "Huwwa aḥyānāṉ birūḥ ʿan-nādi."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Asking About Routines: 'What do you do?'"
+        },
+        "text": "To ask someone about their daily routine or habits, you can use the question 'What do you do every day?'. Remember the 'بـ' prefix for habitual actions.",
+        "examples": [
+          {
+            "arabic": "شو بتعمل كل يوم؟",
+            "english": "What do you (male) do every day?",
+            "transliteration": "Shū btiʿmil kull yōm?"
+          },
+          {
+            "arabic": "شو بتعملي كل يوم؟",
+            "english": "What do you (female) do every day?",
+            "transliteration": "Shū btiʿmili kull yōm?"
+          },
+          {
+            "arabic": "أنا بعمل رياضة كل يوم.",
+            "english": "I do exercise every day.",
+            "transliteration": "Ana baʿmil riyāḍa kull yōm."
+          }
+        ]
+      }
+    },
+    {
+      "type": "content",
+      "content": {
+        "title": {
+          "english": "Connecting Routine Sentences: 'And', 'Then'"
+        },
+        "text": "To describe a sequence of actions in your routine, you can use connecting words like 'و' (and) and 'بعدين' (then).",
+        "examples": [
+          {
+            "arabic": "و",
+            "english": "And",
+            "transliteration": "wa"
+          },
+          {
+            "arabic": "بعدين",
+            "english": "Then / Afterwards",
+            "transliteration": "baʿdēn"
+          },
+          {
+            "arabic": "أنا بصحى، وبفطر، وبعدين بروح عالشغل.",
+            "english": "I wake up, and I eat breakfast, and then I go to work.",
+            "transliteration": "Ana baṣḥa, wa bīfṭar, wa baʿdēn birūḥ ʿash-shughl."
+          }
+        ]
+      }
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "هي دايماً بتدرس بعد الغدا.",
+        "english": "She always studies after lunch.",
+        "transliteration": "Hiyye dāymaṉ bitidrus baʿd il-ghada."
+      },
+      "context": "Using 'always' with 'she studies' and a time reference."
+    },
+    {
+      "type": "practice-sentence",
+      "sentence": {
+        "arabic": "أنا أحياناً بقرا كتاب، وبعدين بنام.",
+        "english": "I sometimes read a book, and then I sleep.",
+        "transliteration": "Ana aḥyānāṉ baqra kitāb, wa baʿdēn binām."
+      },
+      "context": "Combining 'sometimes', 'read', 'then', and 'sleep'."
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "What is the Arabic word for 'Always'?",
+      "options": [
+        {
+          "id": "a",
+          "text": "أحياناً",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "كل يوم",
+          "isCorrect": false
+        },
+        {
+          "id": "c",
+          "text": "دايماً",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswerId": "c",
+      "explanation": "دايماً (dāymaṉ) means 'always'.",
+      "hint": {
+        "transliteration": "dāymaṉ",
+        "arabic": "دايماً"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "multiple-choice",
+      "question": "How do you ask a female 'What do you do every day?'",
+      "options": [
+        {
+          "id": "a",
+          "text": "شو بتعمل كل يوم؟",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "شو بتعملي كل يوم؟",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "شو بتعملوا كل يوم؟",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "شو بتعملي كل يوم؟ (Shū btiʿmili kull yōm?) is used to ask a female.",
+      "hint": {
+        "transliteration": "Shū btiʿmili kull yōm?",
+        "arabic": "شو بتعملي كل يوم؟"
+      }
+    },
+    {
+      "type": "exercise",
+      "exerciseType": "fill-in-blank",
+      "question": "Complete the sentence: 'I wake up, ___ I eat breakfast.' (and)",
+      "options": [
+        {
+          "id": "a",
+          "text": "بعدين",
+          "isCorrect": false
+        },
+        {
+          "id": "b",
+          "text": "و",
+          "isCorrect": true
+        },
+        {
+          "id": "c",
+          "text": "أو",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswerId": "b",
+      "explanation": "و (wa) means 'and'. The example sentence provided uses 'و' to connect waking up and eating breakfast.",
+      "hint": {
+        "transliteration": "wa",
+        "arabic": "و"
+      }
+    }
+  ]
+}
