@@ -1,19 +1,22 @@
 import nodemailer from 'nodemailer';
 import { env } from '$env/dynamic/private';
 
-const transporter = nodemailer.createTransport({
-  host:env.SMTP_HOST,
-  port: Number(process.env.SMTP_PORT),
-  secure: true, // true for 465, false for other ports
-  auth: {
-    user:env.SMTP_USER,
-    pass:env.SMTP_PASSWORD,
-  },
-});
+function getTransporter() {
+  return nodemailer.createTransport({
+    host: env.SMTP_HOST,
+    port: Number(env.SMTP_PORT),
+    secure: true, // true for 465, false for other ports
+    auth: {
+      user: env.SMTP_USER,
+      pass: env.SMTP_PASSWORD,
+    },
+  });
+}
 
 async function sendEmail(resetUrl: string, email: string) {
+  const transporter = getTransporter();
   const info = await transporter.sendMail({
-    from:env.SMTP_FROM_EMAIL,
+    from: env.SMTP_FROM_EMAIL,
     to: email,
     subject: "Parallel Arabic - Password Reset Request",
     text: `
@@ -217,6 +220,7 @@ Founder, Parallel Arabic
 	`;
 	
 	try {
+		const transporter = getTransporter();
 		const info = await transporter.sendMail({
 			from: env.SMTP_FROM_EMAIL,
 			to: email,
