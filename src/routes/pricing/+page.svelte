@@ -80,6 +80,10 @@
                          <ul class="flex flex-col gap-4 text-text-200">
                             <li class="flex items-start gap-3">
                                 <div class="shrink-0 mt-1"><Checkmark /></div>
+                                <span><strong class="text-text-300">Structured lessons:</strong> Comprehensive learning paths organized by modules and topics for all dialects</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="shrink-0 mt-1"><Checkmark /></div>
                                 <span><strong class="text-text-300">Multiple Arabic dialects:</strong> Egyptian, Levantine, Moroccan & Fusha</span>
                             </li>
                              <li class="flex items-start gap-3">

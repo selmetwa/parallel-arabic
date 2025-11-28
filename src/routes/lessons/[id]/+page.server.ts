@@ -51,7 +51,9 @@ export const load: PageServerLoad = async ({ params, parent, locals }) => {
 			...lesson,
 			dialect_name: dialectNames[lesson.dialect] || lesson.dialect
 		},
-		checkSessionStorage: false
+		checkSessionStorage: false,
+		session,
+		user
 	};
 };
 

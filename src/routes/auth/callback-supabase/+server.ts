@@ -2,6 +2,7 @@ import { redirect } from '@sveltejs/kit'
 import { supabase } from '$lib/supabaseClient'
 import type { RequestHandler } from './$types'
 import { syncSupabaseUserWithDB } from '$lib/helpers/supabase-auth-helpers'
+import { sendWelcomeEmail } from '$lib/server/email'
 
 export const GET: RequestHandler = async ({ url }) => {
   const code = url.searchParams.get('code')
@@ -38,6 +39,14 @@ export const GET: RequestHandler = async ({ url }) => {
         // Sync user data with your existing database
         try {
           await syncSupabaseUserWithDB(data.user, supabase)
+          
+          // Send welcome email to new users (non-blocking)
+          if (isNewUser && data.user.email) {
+            sendWelcomeEmail(data.user.email).catch(error => {
+              console.error('Failed to send welcome email:', error)
+              // Don't block authentication if email fails
+            })
+          }
         } catch (syncError) {
           console.error('Failed to sync user to database:', syncError)
           // Continue with login even if sync fails - can be retried later
