@@ -1,10 +1,9 @@
 <script lang="ts">
-	import { run } from 'svelte/legacy';
-
 	import { type Letter } from '$lib/types';
 	import Button from '$lib/components/Button.svelte';
-  import Canvas from './Canvas.svelte';
+	import Canvas from './Canvas.svelte';
 	import Audio from '$lib/components/Audio.svelte';
+	
 	interface Props {
 		letter: Letter;
 	}
@@ -13,11 +12,14 @@
 
 	let showHint = $state(false);
 	let showAnswer = $state(false);
+	let svgData = $state('');
 
-	run(() => {
+	// Reset when letter changes
+	$effect(() => {
 		if (letter.isolated) {
 			showHint = false;
 			showAnswer = false;
+			svgData = '';
 		}
 	});
 
@@ -25,27 +27,24 @@
 		showHint = !showHint;
 	}
 
-  let svgData = $state('');
-	
-
 	async function toggleAnswer() {
-    if (showAnswer === false) {
-      showAnswer = true;
-      const response = await fetch(`/letters/${letter.key}.svg`);
-      let svgText = await response.text();
-      const fillColor = 'var(--text2)';
-      svgData = svgText.replace(/fill="[^"]*"/g, `fill="${fillColor}"`);
-    } else {
-      showAnswer = false;
-      svgData = '';
-    }
+		if (showAnswer === false) {
+			showAnswer = true;
+			const response = await fetch(`/letters/${letter.key}.svg`);
+			let svgText = await response.text();
+			const fillColor = 'var(--text2)';
+			svgData = svgText.replace(/fill="[^"]*"/g, `fill="${fillColor}"`);
+		} else {
+			showAnswer = false;
+			svgData = '';
+		}
 	}
 </script>
 
 <div class="flex flex-col sm:flex-row sm:justify-between">
 	<div class="flex flex-col gap-1">
 		<h2 class="text-text-200">Listen to the audio and write the letter</h2>
-    <Audio src={`/letters/audios/${letter.key}.mp3`}></Audio>
+		<Audio src={`/letters/audios/${letter.key}.mp3`}></Audio>
 	</div>
 	<div class="mt-12">
 		<div>
@@ -62,9 +61,9 @@
 	</div>
 </div>
 {#if showAnswer}
-  <div class="flex items-center justify-center mx-auto">
-    {@html svgData}
-  </div>
+	<div class="flex items-center justify-center mx-auto">
+		{@html svgData}
+	</div>
 {/if}
 
 <Canvas {letter} size={20} />
