@@ -1,11 +1,11 @@
 <script lang="ts">
-	import { run } from 'svelte/legacy';
 	import { letters } from '$lib/constants/alphabet';
 	import cn from 'classnames';
 	import { hue, theme } from '$lib/store/store';
 	import { onMount } from 'svelte';
 	import { updateKeyboardStyle } from '$lib/helpers/update-keyboard-style';
 	import { goto } from '$app/navigation';
+	import { browser } from '$app/environment';
 
 	let page = $state(0);
 	const totalPages = 2;
@@ -29,18 +29,20 @@
 
 	onMount(() => {
 		updateKeyboardStyle();
-	});
-
-	run(() => {
-		hue.subscribe(() => {
+		
+		// Subscribe to theme changes only on client
+		const unsubHue = hue.subscribe(() => {
 			updateKeyboardStyle();
 		});
-	});
-
-	run(() => {
-		theme.subscribe(() => {
+		
+		const unsubTheme = theme.subscribe(() => {
 			updateKeyboardStyle();
 		});
+		
+		return () => {
+			unsubHue();
+			unsubTheme();
+		};
 	});
 
 	const lettersToRender = letters;

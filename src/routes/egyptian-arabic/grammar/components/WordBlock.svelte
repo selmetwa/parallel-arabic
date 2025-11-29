@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { run } from 'svelte/legacy';
-
 	import cn from 'classnames';
 	import { onMount } from 'svelte';
 	import { conjugation_cases, conjugations } from '../constants';
@@ -205,7 +203,7 @@
 
 	let verbArray: Array<string> = $state([]);
 
-	run(() => {
+	$effect(() => {
 		if (conjugationIndex || verbToConjugate.egyptianArabic) {
 			conjugatedVerbArray = conjugate(verbToConjugate);
 			attemptTemp = [];
