@@ -65,6 +65,86 @@ function normalizeColumnName(name: string): string | null {
   return null;
 }
 
+/**
+ * Checks if text contains Arabic characters
+ */
+function containsArabic(text: string): boolean {
+  return /[\u0600-\u06FF]/.test(text);
+}
+
+/**
+ * Detects if the file is structured CSV (has headers with column names) or unstructured text
+ */
+function isStructuredCSV(text: string): boolean {
+  const lines = text.split('\n').filter(line => line.trim());
+  if (lines.length === 0) return false;
+  
+  const firstLine = lines[0].toLowerCase();
+  // Check if first line looks like CSV headers (contains common column name patterns)
+  const hasCSVHeaders = /(arabic|english|transliteration|dialect|translation|meaning)/.test(firstLine) ||
+                        firstLine.split(',').length >= 2; // Multiple comma-separated values
+  
+  // Also check if it has multiple columns (commas with quoted or unquoted values)
+  const hasMultipleColumns = firstLine.includes(',') && 
+                            (firstLine.split(',').length >= 2);
+  
+  return hasCSVHeaders || hasMultipleColumns;
+}
+
+/**
+ * Parses unstructured text file - extracts lines that contain Arabic characters
+ * Lines without Arabic are ignored
+ */
+function parseUnstructuredText(text: string): Array<Record<string, string>> {
+  const lines = text.split('\n').map(line => line.trim()).filter(line => line.length > 0);
+  const rows: Array<Record<string, string>> = [];
+  
+  for (const line of lines) {
+    // Skip lines that don't contain Arabic characters
+    if (!containsArabic(line)) {
+      continue;
+    }
+    
+    // Try to detect if line has multiple parts (e.g., "word1, word2" or "word1 | word2")
+    const parts = line.split(/[,|;]/).map(p => p.trim()).filter(p => p.length > 0);
+    
+    if (parts.length > 1) {
+      // Multiple parts - try to identify which is Arabic, English, transliteration
+      let arabic = '';
+      let english = '';
+      let transliteration = '';
+      
+      for (const part of parts) {
+        if (containsArabic(part)) {
+          arabic = part;
+        } else if (isTransliteration(part)) {
+          transliteration = part;
+        } else {
+          english = part;
+        }
+      }
+      
+      // If we found Arabic, create a row
+      if (arabic) {
+        rows.push({
+          arabic: arabic,
+          english: english || '',
+          transliteration: transliteration || ''
+        });
+      }
+    } else {
+      // Single part - assume it's Arabic (since we already checked it contains Arabic)
+      rows.push({
+        arabic: line,
+        english: '',
+        transliteration: ''
+      });
+    }
+  }
+  
+  return rows;
+}
+
 function parseCSV(csvText: string): Array<Record<string, string>> {
   const lines = csvText.split('\n').filter(line => line.trim());
   if (lines.length === 0) return [];
@@ -454,18 +534,33 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     const normalizedUserDialect = normalizeDialect(userDialect);
     
     // Read file content
-    const csvText = await file.text();
+    const fileText = await file.text();
     
-    // Parse CSV
-    const rows = parseCSV(csvText);
+    // Detect if file is structured CSV or unstructured text
+    const isStructured = isStructuredCSV(fileText);
+    
+    // Parse based on file type
+    let rows: Array<Record<string, string>> = [];
+    if (isStructured) {
+      rows = parseCSV(fileText);
+    } else {
+      // Unstructured text - extract lines with Arabic
+      rows = parseUnstructuredText(fileText);
+    }
     
     if (rows.length === 0) {
-      return json({ error: 'No valid rows found in CSV file' }, { status: 400 });
+      if (isStructured) {
+        return json({ error: 'No valid rows found in CSV file' }, { status: 400 });
+      } else {
+        return json({ error: 'No lines with Arabic text found. Please ensure your text file contains Arabic characters.' }, { status: 400 });
+      }
     }
     
     const totalRows = rows.length;
     
     // Create a readable stream for Server-Sent Events
+    // Capture isStructured in closure for use inside stream
+    const fileIsStructured = isStructured;
     const stream = new ReadableStream({
       async start(controller) {
         const encoder = new TextEncoder();
@@ -510,7 +605,10 @@ export const POST: RequestHandler = async ({ request, locals }) => {
           completedWords.push(completed);
         }
               // Send progress update
-              sendProgress(i + 1, totalRows);
+              const message = fileIsStructured 
+                ? `${i + 1}/${totalRows} words processed`
+                : `${i + 1}/${totalRows} lines with Arabic processed`;
+              sendProgress(i + 1, totalRows, message);
       } catch (err) {
         console.error('Error completing word:', err);
               // Still send progress even if word failed

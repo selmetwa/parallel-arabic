@@ -1,12 +1,15 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
+	import { goto } from '$app/navigation';
 	import type { PageData } from './$types';
 	import InlineAudioButton from '$lib/components/InlineAudioButton.svelte';
 	import InteractiveExercise from '$lib/components/dialect-shared/lesson/InteractiveExercise.svelte';
 	import ReviewCarousel from '$lib/components/dialect-shared/lesson/ReviewCarousel.svelte';
 	import PronunciationTestModal from '$lib/components/dialect-shared/lesson/PronunciationTestModal.svelte';
+	import LessonPlayer from '$lib/components/LessonPlayer.svelte';
 	import type { Dialect } from '$lib/types/index';
+	import type { GeneratedLesson } from '$lib/schemas/curriculum-schema';
 
 	let { data } = $props<{ data: PageData }>();
 	
@@ -14,7 +17,14 @@
 	let loading = $state(false);
 	let error = $state<string | null>(data.error || null);
 	
-	// Sub-lesson navigation state
+	// Check if this is a step-based lesson (new format) or subLessons-based (old format)
+	const lessonBody = lesson?.lesson_body || lesson;
+	const isStepBasedLesson = $derived(lessonBody?.steps && Array.isArray(lessonBody.steps) && lessonBody.steps.length > 0);
+	
+	// For step-based lessons, show LessonPlayer
+	let showLessonPlayer = $state(false);
+	
+	// Sub-lesson navigation state (for old format)
 	let currentSubLessonIndex = $state(0);
 	let showSubLessonIndex = $state(true);
 	
@@ -23,6 +33,13 @@
 	let pronunciationText = $state('');
 	let pronunciationTransliteration = $state('');
 	let pronunciationEnglish = $state('');
+	
+	// Auto-show LessonPlayer for step-based lessons
+	$effect(() => {
+		if (isStepBasedLesson && !showLessonPlayer) {
+			showLessonPlayer = true;
+		}
+	});
 
 	function openPronunciationTest(text: string, transliteration?: string, english?: string) {
 		pronunciationText = text;
@@ -46,19 +63,41 @@
 			error = data.error || 'Lesson not found.';
 		}
 		
-		// Set wider width for lesson page
-		const root = document.documentElement;
-		const originalWidth = getComputedStyle(root).getPropertyValue('--layout-width');
-		root.style.setProperty('--layout-width', '1600px');
-		
-		// Restore original width on unmount
-		return () => {
-			root.style.setProperty('--layout-width', originalWidth);
-		};
+		// Only set wider width for old format lessons
+		if (!isStepBasedLesson) {
+			const root = document.documentElement;
+			const originalWidth = getComputedStyle(root).getPropertyValue('--layout-width');
+			root.style.setProperty('--layout-width', '1600px');
+			
+			// Restore original width on unmount
+			return () => {
+				root.style.setProperty('--layout-width', originalWidth);
+			};
+		}
 	});
-
-	// Get lesson body (the actual lesson content)
-	const lessonBody = lesson?.lesson_body || lesson;
+	
+	// Handle closing the LessonPlayer
+	function handleLessonPlayerClose() {
+		showLessonPlayer = false;
+		goto('/lessons');
+	}
+	
+	// Handle lesson completion
+	async function handleLessonComplete() {
+		// For user-generated lessons, just close and go back to lessons list
+		goto('/lessons');
+	}
+	
+	// Convert lesson body to GeneratedLesson format for LessonPlayer
+	function getStepBasedLesson(): GeneratedLesson | null {
+		if (!lessonBody || !lessonBody.steps) return null;
+		return {
+			topicId: lessonBody.topicId || lesson?.id || '',
+			title: lessonBody.title || lesson?.title || 'Lesson',
+			dialect: lessonBody.dialect || lesson?.dialect || 'egyptian-arabic',
+			steps: lessonBody.steps
+		};
+	}
 	
 	// Get dialect for audio (convert database dialect to Dialect type)
 	const dialect = (lesson?.dialect || lessonBody?.dialect || 'egyptian-arabic') as Dialect;
@@ -129,10 +168,22 @@
 
 <svelte:head>
 	<title>
-		{lessonBody?.title?.english || 'Lesson'} - Parallel Arabic
+		{isStepBasedLesson ? (lessonBody?.title || 'Lesson') : (lessonBody?.title?.english || 'Lesson')} - Parallel Arabic
 	</title>
 </svelte:head>
 
+<!-- Step-based Lesson Player (new format) -->
+{#if isStepBasedLesson && showLessonPlayer}
+	{@const stepLesson = getStepBasedLesson()}
+	{#if stepLesson}
+		<LessonPlayer 
+			lesson={stepLesson}
+			onClose={handleLessonPlayerClose}
+			onLessonComplete={handleLessonComplete}
+		/>
+	{/if}
+{:else}
+<!-- Old format lesson UI -->
 <div class="min-h-screen bg-tile-100">
 	{#if error}
 		<div class="px-3 py-12 sm:px-8 mx-auto" style="max-width: var(--layout-width, 1600px);">
@@ -726,4 +777,4 @@
 	english={pronunciationEnglish}
 	{dialect}
 />
-
+{/if}

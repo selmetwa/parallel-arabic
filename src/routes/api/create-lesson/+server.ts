@@ -3,7 +3,7 @@ import type { RequestHandler } from './$types';
 import { env } from '$env/dynamic/private';
 import { GoogleGenAI } from '@google/genai';
 import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
-import { createLessonSchema, type LessonSchema } from '$lib/utils/gemini-schemas';
+import { createLessonSchema, type GeneratedLesson } from '$lib/schemas/curriculum-schema';
 import { v4 as uuidv4 } from 'uuid';
 import { generateContentWithRetry } from '$lib/utils/gemini-api-retry';
 import { supabase } from '$lib/supabaseClient';
@@ -51,39 +51,59 @@ function writeDebugLog(lessonId: string, logData: Record<string, unknown>) {
 }
 
 /**
- * Extract KEY VOCAB words (about 10) from lesson review section and save them to the user's review deck
+ * Extract KEY VOCAB words from lesson content steps and save them to the user's review deck
  */
 async function saveLessonWordsAndSentences(
-	lesson: LessonSchema,
+	lesson: GeneratedLesson,
 	userId: string,
 	dialect: string
 ): Promise<void> {
-	// Only extract KEY VOCAB words from review section (about 10 words)
+	// Extract words from content step examples
 	const keyVocabWords: Array<{
 		arabic: string;
 		english: string;
 		transliteration: string;
 	}> = [];
 
-	// Extract only the review words (KEY VOCAB words)
-	if (lesson.review?.words && Array.isArray(lesson.review.words)) {
-		for (const word of lesson.review.words) {
-			if (word.arabic && word.english && word.transliteration) {
+	// Extract words from content step examples
+	for (const step of lesson.steps) {
+		if (step.type === 'content' && step.content.examples) {
+			for (const example of step.content.examples) {
+				if (example.arabic && example.english && example.transliteration) {
 				keyVocabWords.push({
-					arabic: word.arabic.trim(),
-					english: word.english.trim(),
-					transliteration: word.transliteration.trim()
+						arabic: example.arabic.trim(),
+						english: example.english.trim(),
+						transliteration: example.transliteration.trim()
+					});
+				}
+			}
+		}
+		// Also extract from practice sentences
+		if (step.type === 'practice-sentence' && step.sentence) {
+			if (step.sentence.arabic && step.sentence.english && step.sentence.transliteration) {
+				keyVocabWords.push({
+					arabic: step.sentence.arabic.trim(),
+					english: step.sentence.english.trim(),
+					transliteration: step.sentence.transliteration.trim()
 				});
 			}
 		}
 	}
 
 	if (keyVocabWords.length === 0) {
-		console.log('No KEY VOCAB words found in lesson review section');
+		console.log('No KEY VOCAB words found in lesson content');
 		return;
 	}
 
-	const uniqueArray = keyVocabWords;
+	// Remove duplicates based on Arabic text
+	const seen = new Set<string>();
+	const uniqueArray = keyVocabWords.filter(word => {
+		if (seen.has(word.arabic)) {
+			return false;
+		}
+		seen.add(word.arabic);
+		return true;
+	});
 
 	// Save words/sentences using the same logic as save-sentences endpoint
 	const now = Date.now();
@@ -324,15 +344,21 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		advanced: 'Advanced level - Use advanced vocabulary with sophisticated sentence structures. Include complex grammar concepts and nuanced language usage.'
 	};
 
+	// Calculate step counts based on subLessonCount
+	const contentStepsPerSection = 3;
+	const totalContentSteps = subLessonCount * contentStepsPerSection;
+	const practiceSentencesPerSection = 2;
+	const exercisesPerSection = 3;
+	const totalPracticeSentences = subLessonCount * practiceSentencesPerSection;
+	const totalExercises = subLessonCount * exercisesPerSection;
+	const totalSteps = totalContentSteps + totalPracticeSentences + totalExercises;
+
 	const question = `
-	You are an expert Arabic language teacher creating comprehensive lessons for students learning ${config.name}.
+	You are an expert Arabic language teacher creating comprehensive, step-based lessons for students learning ${config.name}.
 	
 	CRITICAL REQUIREMENTS:
-	- Generate a complete lesson with exactly ${subLessonCount} sub-lessons
-	- Each sub-lesson must have at least 1 exercise
-	- Include exactly 10 review words and 5 review sentences that incorporate those words
-	- The review sentences must use the review words naturally
-	- Include a comprehensive quiz at the end with 5-8 questions testing the entire lesson
+	- Generate a complete lesson with exactly ${totalSteps} steps (approximately ${totalContentSteps} content steps, ${totalPracticeSentences} practice sentences, and ${totalExercises} exercises)
+	- The lesson follows a STEP-BY-STEP format where users progress through one step at a time
 	- All content must be in ${config.name}: ${config.description}
 	
 	LESSON TOPIC: ${topic || 'General Arabic language learning'}
@@ -345,239 +371,110 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 	
 	${vocabularyWordsSection}
 	
-	${learningTopics.includes('verb conjugation') ? `
-	CRITICAL VERB CONJUGATION REQUIREMENTS (This is particularly difficult in Arabic - be VERY thorough):
-	- Verb conjugation is one of the most challenging aspects of Arabic learning
-	- You MUST provide comprehensive, systematic coverage of verb conjugation
-	- CRITICAL: ALWAYS include the UNCONJUGATED verb (infinitive/base form) FIRST before showing any conjugations
-	  * Show the base form in Arabic, English, and transliteration
-	  * Format: "Base verb: [Arabic] ([English]) - [transliteration]"
-	  * This gives students essential context to understand how the verb conjugates
-	  * Example: "Base verb: كتب (to write) - katab" before showing "I write", "you write", etc.
-	- For EACH verb you introduce, provide conjugation examples for:
-	  * ALL tenses: Present tense, Past tense, Future tense
-	  * ALL persons with gender distinctions:
-	    - First person singular (I/ana)
-	    - Second person singular masculine (you m/enta/inta)
-	    - Second person singular feminine (you f/enti/inti)
-	    - Third person singular masculine (he/howa/huwa)
-	    - Third person singular feminine (she/heya/hiya)
-	    - First person plural (we/e7na/na7nu)
-	    - Second person plural (you plural/entum/intum)
-	    - Third person plural masculine (they m/homma/hum)
-	    - Third person plural feminine (they f/homma/hunna)
-	- Create conjugation tables in the grammar focus section showing systematic patterns
-	  * Always start each table with the base/unconjugated form
-	  * Show: "Base verb → Conjugated form" to help students understand the relationship
-	- Include multiple example verbs (at least 3-5 different verbs) fully conjugated
-	- Show how conjugation changes based on:
-	  * Tense (present vs past vs future)
-	  * Person (first, second, third)
-	  * Gender (masculine vs feminine in second and third person)
-	  * Number (singular vs plural)
-	- Include exercises specifically designed to test verb conjugation:
-	  * Fill-in-blank exercises with different persons and tenses (MUST include options array)
-	  * Multiple-choice questions asking students to identify correct conjugations
-	  * Matching exercises pairing pronouns with correct verb forms
-	  * DO NOT use translation exercises
-	- In quiz section, include multiple questions testing verb conjugation across different forms
-	- Provide clear explanations of conjugation patterns and rules
-	- Include common irregular verbs and their conjugation patterns
-	- Show negative forms and question forms with conjugated verbs
-	` : ''}
-	
 	LESSON STRUCTURE REQUIREMENTS:
-	1. Create a comprehensive lesson with:
-	   - A clear title in Arabic, English, and transliteration
-	   - A description explaining what the lesson covers
-	   - Learning objectives (what students will learn)
-	   - Estimated duration in minutes
-	   - Key takeaways (main points to remember)
+	The lesson must follow this EXACT step-based structure:
 	
-	2. Create exactly ${subLessonCount} sub-lessons, each with:
-	   - A unique title in Arabic, English, and transliteration
-	   - Content section with:
-	     * At least 5-10 phrases/vocabulary items with Arabic, English, and transliteration
-	     * Optional grammar explanations
-	   - EXERCISES: Each sub-lesson MUST have 2-3 exercises (aim for 3 when possible)
-	     * Exercise types: multiple-choice, fill-in-blank, or matching (DO NOT use translation exercises)
-	     * Vary exercise types within each sub-lesson
-	     * If verb conjugation is a focus topic, include at least one exercise specifically testing conjugation
-	     * Exercises should be comprehensive and test different aspects of the sub-lesson content
-	     * Make exercises progressively challenging within each sub-lesson
-	     * CRITICAL: Fill-in-blank exercises MUST include an "options" array with multiple choice options for each blank
-	     * Fill-in-blank exercises should have at least 3-4 options per blank, with only one correct answer per blank
+	1. Create exactly ${totalSteps} instructional steps organized in sections:
+	   - Every ${contentStepsPerSection} content steps should be followed by:
+	     a. ${practiceSentencesPerSection} practice sentences (type: "practice-sentence") that use vocabulary from the previous content steps
+	     b. ${exercisesPerSection} practice exercises (type: "exercise") - Quiz questions
 	
-	3. Include a review section with:
-	   - Exactly 10 review words (Arabic, English, transliteration)
-	   - Exactly 5 review sentences that naturally incorporate the review words
+	2. CONTENT STEPS (type: "content"):
+	   - Each content step teaches a specific concept, phrase, or vocabulary
+	   - Must have a title with both English and optional Arabic
+	   - Must have explanatory text describing the concept
+	   - Must include 2-4 example phrases - EACH example MUST have ALL THREE fields: arabic, english, AND transliteration
+	   - Do NOT include "Base verb" or other single-field entries as examples - put those in the text field instead
 	
-	4. Add optional but valuable content:
-	   - Grammar focus: specific grammar rules covered with examples
-	     * If verb conjugation is covered, MUST include a comprehensive conjugation table
-	     * Conjugation tables should show ALL persons (I, you m/f, he, she, we, you plural, they m/f) for ALL tenses (present, past, future)
-	     * Include multiple example verbs showing different conjugation patterns
-	     * Provide clear explanations of gender distinctions and how they affect conjugation
-	   - Cultural notes: cultural context related to the lesson
-	   - Pronunciation tips: notes for difficult sounds with examples
-	   - Common mistakes: errors to avoid with corrections
-	     * If verb conjugation is covered, include common conjugation mistakes students make
-	   - Related lessons: suggestions for related topics
-	   - Difficulty tags: appropriate tags like "vocabulary-heavy", "grammar-focused", etc.
-	   - Audio practice indicators: whether speaking/listening practice is included
-	   - Quiz: A comprehensive quiz at the end with 8-12 questions testing the entire lesson content
-	     * If verb conjugation is covered, include multiple quiz questions testing different conjugation forms
-	     * Quiz should test all major concepts covered in the lesson
+	3. PRACTICE SENTENCE STEPS (type: "practice-sentence"):
+	   - Provide a sentence for the student to practice
+	   - Must include Arabic, English, and transliteration
+	   - Optionally include context explaining the sentence usage
 	
-	5. Ensure all Arabic text uses ${config.name} dialect/variety
+	4. EXERCISE STEPS (type: "exercise"):
+	   - Types: "multiple-choice", "fill-in-blank", or "matching" (DO NOT use "translation")
+	   - CRITICAL: The "question" field MUST be in English ONLY. Do NOT include Arabic text in the question.
+	   - CRITICAL: All option texts MUST be in Arabic script (NOT transliteration, NOT English)
+	   - Must include an "options" array with 3-4 options (each with id, text in Arabic, isCorrect)
+	   - Must include "correctAnswerId" matching one option id
+	   - MUST include a "hint" object with "transliteration" (required) and optional "arabic"
+
+	${learningTopics.includes('verb conjugation') ? `
+	VERB CONJUGATION REQUIREMENTS:
+	- Include conjugation examples for all persons (I, you m/f, he, she, we, you plural, they m/f)
+	- Show all tenses: present, past, future
+	- Include exercises specifically testing verb conjugation
+	` : ''}
 	
 	IMPORTANT FORMATTING:
 	- All transliterations must use only the English alphabet (no special characters)
 	- All Arabic text must be in ${config.name}
 	- Exercises should be practical and help reinforce the lesson content
-	- Review words should be key vocabulary from the lesson
-	- Review sentences should demonstrate natural usage of the review words
-	
-	CRITICAL JSON STRUCTURE REQUIREMENT:
-	- Return the lesson data DIRECTLY at the root level, NOT wrapped in a "lesson" object
-	- The JSON must start with: { "id": "...", "title": {...}, "level": "...", ...
-	- DO NOT wrap it like: { "lesson": { "title": {...}, ... } }
-	- Use camelCase for all field names (NOT snake_case)
-	- The "level" field MUST be lowercase: "beginner", "intermediate", or "advanced" (NOT "Beginner" or "BEGINNER")
-	- The "description" field MUST be an object: { "english": "...", "arabic": "..." } (NOT a string)
+	- Use diacritical marks (tashkeel/harakat) SPARINGLY - only when needed for pronunciation clarity
 	
 	EXACT JSON SCHEMA STRUCTURE (follow this exactly):
 	{
-		"id": "string (required)",
+		"topicId": "string (required) - unique identifier for this lesson",
+		"title": "string (required) - lesson title in English",
+		"dialect": "${dialect}" (required),
+		"steps": [
+			// CONTENT STEP EXAMPLE:
+			{
+				"type": "content",
+				"content": {
 		"title": {
-			"arabic": "string (required)",
-			"english": "string (required)",
-			"transliteration": "string (required)"
-		},
-		"level": "beginner" | "intermediate" | "advanced" (lowercase, required),
-		"description": {
 			"english": "string (required)",
 			"arabic": "string (optional)"
 		},
-		"learningObjectives": ["array of strings (optional)"],
-		"estimatedDuration": number (optional, in minutes),
-		"prerequisites": ["array of strings (optional)"],
-		"subLessons": [
-			{
-				"id": "string (required)",
-				"title": {
-					"arabic": "string",
-					"english": "string",
-					"transliteration": "string"
-				},
-				"content": {
-					"title": { "arabic": "string", "english": "string", "transliteration": "string" },
-					"phrases": [
+					"text": "string (required) - explanatory text about the lesson content. Include base verbs and grammar notes here.",
+					"examples": [
 						{
-							"arabic": "string",
-							"english": "string",
-							"transliteration": "string"
+							"arabic": "أنا باحب القهوة",
+							"english": "I like coffee",
+							"transliteration": "Ana ba7eb el ahwa"
 						}
-					],
-					"explanations": [{"english": "string"}] (optional)
-				},
-				"exercises": [
-					{
-						"id": "string",
-						"type": "multiple-choice" | "fill-in-blank" | "matching" (DO NOT use "translation"),
-						"question": {
-							"english": "string",
-							"arabic": "string (optional)"
-						},
-						"options": [{"arabic": "string", "english": "string", "transliteration": "string", "isCorrect": boolean}] (REQUIRED for fill-in-blank and multiple-choice exercises),
-						"correctAnswer": "string or array of strings",
-						"hint": {"english": "string", "arabic": "string", "transliteration": "string"} (optional)
-					}
-				] (REQUIRED - must have 2-3 exercises per sub-lesson, aim for 3 when possible. Vary exercise types. Fill-in-blank exercises MUST have options array.)
-			}
-		] (REQUIRED - must have at least ${subLessonCount} sub-lessons),
-		"review": {
-			"words": [
-				{"arabic": "string", "english": "string", "transliteration": "string"}
-			] (EXACTLY 10 words required),
-			"sentences": [
-				{"arabic": "string", "english": "string", "transliteration": "string"}
-			] (EXACTLY 5 sentences required)
-		} (REQUIRED),
-		"summary": {"english": "string", "arabic": "string (optional)"} (optional),
-		"keyTakeaways": ["array of strings"] (optional),
-		"grammarFocus": [
-			{
-				"title": "string",
-				"english": "string",
-				"arabic": "string (optional)",
-				"examples": [
-					{"arabic": "string", "english": "string", "transliteration": "string"}
-				] (optional - if included, examples MUST be objects with arabic, english, transliteration, NOT strings)
-			}
-		] (optional - if verb conjugation is covered, MUST include comprehensive conjugation tables showing all persons and tenses),
-		"culturalNotes": [{"title": "string (optional)", "english": "string", "arabic": "string (optional)"}] (optional),
-		"pronunciationTips": [
-			{
-				"sound": "string",
-				"transliteration": "string (optional)",
-				"description": "string",
-				"examples": [
-					{"arabic": "string", "transliteration": "string", "english": "string"}
-				] (optional - if included, examples MUST be objects with arabic, transliteration, english, NOT strings)
-			}
-		] (optional),
-		"commonMistakes": [
-			{
-				"mistake": "string",
-				"correct": "string",
-				"explanation": "string",
-				"examples": [
-					{
-						"incorrect": {"arabic": "string", "english": "string", "transliteration": "string"},
-						"correct": {"arabic": "string", "english": "string", "transliteration": "string"}
-					}
-				] (optional - if included, examples MUST have both incorrect and correct objects with arabic, english, transliteration)
-			}
-		] (optional),
-		"relatedLessons": [{"id": "string (optional)", "title": "string", "reason": "string (optional)"}] (optional),
-		"difficultyTags": ["vocabulary-heavy", "grammar-focused", "conversation-focused", "reading-focused", "writing-focused", "listening-focused", "speaking-focused", "beginner-friendly", "challenging", "interactive"] (optional - ONLY use these exact values),
-		"audioPractice": {"hasSpeakingPractice": boolean, "hasListeningPractice": boolean, "audioFilesCount": number, "notes": "string"} (optional),
-		"quiz": {
-			"title": "string (optional)",
-			"description": "string (optional)",
-			"questions": [
-				{
-					"id": "string",
-					"type": "multiple-choice" | "fill-in-blank" | "matching" (DO NOT use "translation"),
-					"question": {"english": "string", "arabic": "string (optional)"},
-					"options": [{"arabic": "string", "english": "string", "transliteration": "string", "isCorrect": boolean}] (REQUIRED for fill-in-blank and multiple-choice exercises),
-					"correctAnswer": "string or array of strings",
-					"hint": {"english": "string", "arabic": "string", "transliteration": "string"} (optional)
+					]
 				}
-			] (REQUIRED - 8-12 questions testing the entire lesson. If verb conjugation is covered, include multiple questions testing different conjugation forms. Fill-in-blank questions MUST have options array.)
-		} (REQUIRED - must include a comprehensive quiz)
+			},
+			// PRACTICE SENTENCE STEP EXAMPLE:
+			{
+				"type": "practice-sentence",
+				"sentence": {
+					"arabic": "string (required)",
+					"english": "string (required)",
+					"transliteration": "string (required)"
+				},
+				"context": "string (optional) - explanation of when to use this sentence"
+			},
+			// EXERCISE STEP EXAMPLE:
+			{
+				"type": "exercise",
+				"exerciseType": "multiple-choice" | "fill-in-blank" | "matching",
+				"question": "string (required) - MUST be in English",
+				"options": [
+					{
+						"id": "string (required) - unique option id like 'opt1', 'opt2'",
+						"text": "string (required) - MUST be in Arabic script",
+						"isCorrect": boolean (required)
+					}
+				],
+				"correctAnswerId": "string (required) - must match one option's id",
+				"hint": {
+					"transliteration": "string (required) - phonetic spelling of correct answer",
+					"arabic": "string (optional) - Arabic text of correct answer"
+				}
+			}
+		]
 	}
 	
-	CRITICAL FIELD NAME REQUIREMENTS:
-	- Use "subLessons" (camelCase), NOT "sub_lessons" (snake_case)
-	- Use "learningObjectives" (camelCase), NOT "learning_objectives"
-	- Use "estimatedDuration" (camelCase), NOT "estimated_duration_minutes"
-	- Use "keyTakeaways" (camelCase), NOT "key_takeaways"
-	- Use "grammarFocus" (camelCase), NOT "grammar_focus"
-	- Use "culturalNotes" (camelCase), NOT "cultural_notes"
-	- Use "pronunciationTips" (camelCase), NOT "pronunciation_tips"
-	- Use "commonMistakes" (camelCase), NOT "common_mistakes"
-	- Use "relatedLessons" (camelCase), NOT "related_lessons"
-	- Use "difficultyTags" (camelCase), NOT "difficulty_tags"
-	- Use "audioPractice" (camelCase), NOT "audio_practice"
-	
-	CRITICAL VALIDATION REQUIREMENTS:
-	- difficultyTags: ONLY use these exact values: "vocabulary-heavy", "grammar-focused", "conversation-focused", "reading-focused", "writing-focused", "listening-focused", "speaking-focused", "beginner-friendly", "challenging", "interactive"
-	- grammarFocus examples: If you include examples, each MUST be an object with "arabic", "english", "transliteration" fields. DO NOT use strings like "Male: Kwayyes (Good)"
-	- pronunciationTips examples: If you include examples, each MUST be an object with "arabic", "transliteration", "english" fields. DO NOT use strings like "Kheir (Goodness)"
-	- commonMistakes examples: If you include examples, each example MUST have both "incorrect" and "correct" objects, each with "arabic", "english", and "transliteration" fields
-	- If examples don't have the correct structure, omit the examples array entirely (it's optional)
+	CRITICAL REQUIREMENTS:
+	- Return the lesson data DIRECTLY at the root level
+	- The JSON must start with: { "topicId": "...", "title": "...", "dialect": "...", "steps": [...] }
+	- Include exactly ${totalSteps} steps total
+	- Alternate between content steps, practice sentences, and exercises as described
+	- Output ONLY valid JSON - no markdown code blocks, no extra text, no comments
+	- CRITICAL: Every example in content steps MUST have ALL THREE fields: "arabic", "english", AND "transliteration"
+	- Do NOT put base verb forms or grammar labels as examples - include those in the "text" field instead
 	
 	Generate the lesson in JSON format matching this exact schema structure.
 	`;
@@ -634,10 +531,22 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 				throw error;
 			}
 			
-			// Check if response is wrapped in a "lesson" object and unwrap it
+			// Strip markdown code blocks if present
+			let cleanedContent = lessonContent;
+			if (cleanedContent.startsWith('```json')) {
+				cleanedContent = cleanedContent.slice(7); // Remove ```json
+			} else if (cleanedContent.startsWith('```')) {
+				cleanedContent = cleanedContent.slice(3); // Remove ```
+			}
+			if (cleanedContent.endsWith('```')) {
+				cleanedContent = cleanedContent.slice(0, -3); // Remove trailing ```
+			}
+			cleanedContent = cleanedContent.trim();
+			
+			// Parse the JSON response
 			let parsedContent: unknown;
 			try {
-				parsedContent = JSON.parse(lessonContent);
+				parsedContent = JSON.parse(cleanedContent);
 				writeDebugLog(lessonId, {
 					stage: 'parse_attempt',
 					method: 'direct_json_parse',
@@ -654,7 +563,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 				});
 				// If direct parse fails, try the parser utility
 				try {
-					parsedContent = parseJsonFromGeminiResponse(lessonContent, lessonSchema.zodSchema);
+					parsedContent = parseJsonFromGeminiResponse(cleanedContent, lessonSchema.zodSchema);
 					writeDebugLog(lessonId, {
 						stage: 'parse_attempt',
 						method: 'parseJsonFromGeminiResponse',
@@ -685,42 +594,16 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 				}
 			}
 			
-			// Normalize common schema mismatches
+			// Normalize common schema mismatches for step-based schema
 			if (parsedContent && typeof parsedContent === 'object' && parsedContent !== null) {
 				const content = parsedContent as Record<string, unknown>;
 				const beforeNormalization = JSON.stringify(content).substring(0, 2000);
-				// Normalize level to lowercase
-				if (content.level && typeof content.level === 'string') {
-					const oldLevel = content.level;
-					content.level = content.level.toLowerCase();
-					if (oldLevel !== content.level) {
-						normalizationSteps.push(`Normalized level: "${oldLevel}" -> "${content.level}"`);
-					}
-				}
-				
-				// Normalize description from string to object if needed
-				if (typeof content.description === 'string') {
-					normalizationSteps.push('Converted description from string to object');
-					content.description = {
-						english: content.description
-						// arabic is optional, so we don't include it if not provided
-					};
-				}
 				
 				// Normalize snake_case field names to camelCase
 				const fieldMappings: Record<string, string> = {
-					'sub_lessons': 'subLessons',
-					'learning_objectives': 'learningObjectives',
-					'estimated_duration': 'estimatedDuration',
-					'estimated_duration_minutes': 'estimatedDuration',
-					'key_takeaways': 'keyTakeaways',
-					'grammar_focus': 'grammarFocus',
-					'cultural_notes': 'culturalNotes',
-					'pronunciation_tips': 'pronunciationTips',
-					'common_mistakes': 'commonMistakes',
-					'related_lessons': 'relatedLessons',
-					'difficulty_tags': 'difficultyTags',
-					'audio_practice': 'audioPractice'
+					'topic_id': 'topicId',
+					'exercise_type': 'exerciseType',
+					'correct_answer_id': 'correctAnswerId'
 				};
 				
 				for (const [snakeCase, camelCase] of Object.entries(fieldMappings)) {
@@ -731,56 +614,29 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 					}
 				}
 				
-				// Normalize subLessons array if it's named differently
-				if (content.sub_lessons && !content.subLessons) {
-					content.subLessons = content.sub_lessons;
-					delete content.sub_lessons;
-				}
-				
-				// Filter invalid difficultyTags enum values
-				if (content.difficultyTags && Array.isArray(content.difficultyTags)) {
-					const validTags = [
-						"vocabulary-heavy",
-						"grammar-focused",
-						"conversation-focused",
-						"reading-focused",
-						"writing-focused",
-						"listening-focused",
-						"speaking-focused",
-						"beginner-friendly",
-						"challenging",
-						"interactive"
-					];
-					const invalidTags = content.difficultyTags.filter((tag: unknown) => 
-						typeof tag !== 'string' || !validTags.includes(tag)
-					);
-					content.difficultyTags = content.difficultyTags.filter((tag: unknown) => 
-						typeof tag === 'string' && validTags.includes(tag)
-					);
-					if (invalidTags.length > 0) {
-						normalizationSteps.push(`Filtered invalid difficultyTags: ${JSON.stringify(invalidTags)}`);
-					}
-					// If all tags were invalid, set to empty array (optional field)
-					if (Array.isArray(content.difficultyTags) && content.difficultyTags.length === 0) {
-						normalizationSteps.push('Removed difficultyTags (all invalid)');
-						delete content.difficultyTags;
-					}
-				}
-				
-				// Fix grammarFocus examples structure
-				if (content.grammarFocus && Array.isArray(content.grammarFocus)) {
-					content.grammarFocus = content.grammarFocus.map((rule: unknown) => {
-						const ruleObj = rule as Record<string, unknown>;
-						if (ruleObj.examples && Array.isArray(ruleObj.examples)) {
-							// Check if examples are strings (invalid) or objects (valid)
-							const hasInvalidExamples = ruleObj.examples.some((ex: unknown) => typeof ex === 'string');
-							if (hasInvalidExamples) {
-								// Remove invalid string examples (optional field)
-								normalizationSteps.push(`Removed invalid grammarFocus examples (were strings, expected objects)`);
-								delete ruleObj.examples;
-							} else {
-								// Filter out invalid object examples
-								const validExamples = ruleObj.examples.filter((ex: unknown) => {
+				// Normalize steps array if needed
+				if (content.steps && Array.isArray(content.steps)) {
+					content.steps = content.steps.map((step: unknown) => {
+						const stepObj = step as Record<string, unknown>;
+						
+						// Normalize exercise step fields
+						if (stepObj.type === 'exercise') {
+							if (stepObj.exercise_type && !stepObj.exerciseType) {
+								stepObj.exerciseType = stepObj.exercise_type;
+								delete stepObj.exercise_type;
+							}
+							if (stepObj.correct_answer_id && !stepObj.correctAnswerId) {
+								stepObj.correctAnswerId = stepObj.correct_answer_id;
+								delete stepObj.correct_answer_id;
+							}
+						}
+						
+						// Normalize content step examples - filter out invalid ones
+						if (stepObj.type === 'content' && stepObj.content) {
+							const contentObj = stepObj.content as Record<string, unknown>;
+							if (contentObj.examples && Array.isArray(contentObj.examples)) {
+								// Filter out examples that don't have all required fields
+								const validExamples = contentObj.examples.filter((ex: unknown) => {
 									if (!ex || typeof ex !== 'object' || ex === null) return false;
 									const exObj = ex as Record<string, unknown>;
 									return (
@@ -789,97 +645,17 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 										typeof exObj.transliteration === 'string'
 									);
 								});
-								if (validExamples.length === 0) {
-									delete ruleObj.examples;
-								} else {
-									ruleObj.examples = validExamples;
+								
+								if (validExamples.length !== contentObj.examples.length) {
+									normalizationSteps.push(`Filtered invalid examples in content step: ${contentObj.examples.length - validExamples.length} removed`);
 								}
+								
+								contentObj.examples = validExamples;
 							}
 						}
-						return ruleObj;
+						
+						return stepObj;
 					});
-				}
-				
-				// Fix pronunciationTips examples structure
-				if (content.pronunciationTips && Array.isArray(content.pronunciationTips)) {
-					content.pronunciationTips = content.pronunciationTips.map((tip: unknown) => {
-						const tipObj = tip as Record<string, unknown>;
-						if (tipObj.examples && Array.isArray(tipObj.examples)) {
-							// Check if examples are strings (invalid) or objects (valid)
-							const hasInvalidExamples = tipObj.examples.some((ex: unknown) => typeof ex === 'string');
-							if (hasInvalidExamples) {
-								// Remove invalid string examples (optional field)
-								normalizationSteps.push(`Removed invalid pronunciationTips examples (were strings, expected objects)`);
-								delete tipObj.examples;
-							} else {
-								// Filter out invalid object examples
-								const validExamples = tipObj.examples.filter((ex: unknown) => {
-									if (!ex || typeof ex !== 'object' || ex === null) return false;
-									const exObj = ex as Record<string, unknown>;
-									return (
-										typeof exObj.arabic === 'string' &&
-										typeof exObj.english === 'string' &&
-										typeof exObj.transliteration === 'string'
-									);
-								});
-								if (validExamples.length === 0) {
-									delete tipObj.examples;
-								} else {
-									tipObj.examples = validExamples;
-								}
-							}
-						}
-						return tipObj;
-					});
-				}
-				
-				// Fix commonMistakes examples structure
-				if (content.commonMistakes && Array.isArray(content.commonMistakes)) {
-					let examplesFixed = 0;
-					let examplesRemoved = 0;
-					content.commonMistakes = content.commonMistakes.map((mistake: unknown) => {
-						const mistakeObj = mistake as Record<string, unknown>;
-						if (mistakeObj.examples && Array.isArray(mistakeObj.examples)) {
-							const originalCount = mistakeObj.examples.length;
-							// Filter out invalid examples that don't have correct structure
-							const validExamples = mistakeObj.examples.filter((ex: unknown) => {
-								if (!ex || typeof ex !== 'object' || ex === null) return false;
-								const exObj = ex as Record<string, unknown>;
-								const incorrect = exObj.incorrect;
-								const correct = exObj.correct;
-								
-								if (!incorrect || typeof incorrect !== 'object' || incorrect === null) return false;
-								if (!correct || typeof correct !== 'object' || correct === null) return false;
-								
-								const incorrectObj = incorrect as Record<string, unknown>;
-								const correctObj = correct as Record<string, unknown>;
-								
-								return (
-									typeof incorrectObj.arabic === 'string' &&
-									typeof incorrectObj.english === 'string' &&
-									typeof incorrectObj.transliteration === 'string' &&
-									typeof correctObj.arabic === 'string' &&
-									typeof correctObj.english === 'string' &&
-									typeof correctObj.transliteration === 'string'
-								);
-							});
-							
-							// If no valid examples, remove the examples array (it's optional)
-							if (validExamples.length === 0) {
-								delete mistakeObj.examples;
-								examplesRemoved += originalCount;
-							} else {
-								mistakeObj.examples = validExamples;
-								if (validExamples.length < originalCount) {
-									examplesFixed += originalCount - validExamples.length;
-								}
-							}
-						}
-						return mistakeObj;
-					});
-					if (examplesFixed > 0 || examplesRemoved > 0) {
-						normalizationSteps.push(`Fixed commonMistakes examples: ${examplesFixed} fixed, ${examplesRemoved} removed`);
-					}
 				}
 				
 				parsedContent = content;
@@ -894,8 +670,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 			}
 			
 			// Validate the normalized lesson content directly with Zod
-			// parsedContent is already a parsed object, so we validate it directly
-			let parsedLesson;
+			let parsedLesson: GeneratedLesson;
 			try {
 				// Validate the already-parsed and normalized object directly with Zod
 				parsedLesson = lessonSchema.zodSchema.parse(parsedContent);
@@ -904,7 +679,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 					stage: 'validation',
 					success: true,
 					parsedLessonPreview: JSON.stringify(parsedLesson).substring(0, 2000),
-					subLessonsCount: parsedLesson?.subLessons?.length || 0
+					stepsCount: parsedLesson?.steps?.length || 0
 				});
 			} catch (validationErr) {
 				const baseErrorDetails = validationErr instanceof Error ? {
@@ -916,83 +691,51 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 					type: typeof validationErr
 				};
 				
-				// Try to extract Zod error details - ZodError has an 'issues' property
-				let zodErrors: unknown = null;
+				// Try to extract Zod error details
 				let zodIssues: unknown = null;
-				let fullErrorObject: Record<string, unknown> | null = null;
-				
-				if (validationErr && typeof validationErr === 'object') {
-					// Check for ZodError structure (has 'issues' property)
-					if ('issues' in validationErr) {
+				if (validationErr && typeof validationErr === 'object' && 'issues' in validationErr) {
 						zodIssues = (validationErr as { issues: unknown }).issues;
-					}
-					// Also check for 'errors' property (some wrappers use this)
-					if ('errors' in validationErr) {
-						zodErrors = (validationErr as { errors: unknown }).errors;
-					}
-					// Try to get all enumerable properties
-					try {
-						const allProps = Object.getOwnPropertyNames(validationErr);
-						fullErrorObject = {};
-						for (const prop of allProps) {
-							try {
-								fullErrorObject[prop] = (validationErr as Record<string, unknown>)[prop];
-							} catch {
-								// Skip if can't access
-							}
-						}
-					} catch {
-						// Ignore if can't extract
-					}
 				}
-				
-				const errorDetails = {
-					...baseErrorDetails,
-					...(fullErrorObject && { fullErrorObject })
-				};
 				
 				writeDebugLog(lessonId, {
 					stage: 'validation',
 					success: false,
-					error: errorDetails,
+					error: baseErrorDetails,
 					zodIssues: zodIssues ? JSON.stringify(zodIssues, null, 2) : null,
-					zodErrors: zodErrors ? JSON.stringify(zodErrors, null, 2) : null,
-					parsedContentPreview: JSON.stringify(parsedContent).substring(0, 5000),
-					fullParsedContent: parsedContent,
-					parsedContentString: typeof parsedContent === 'string' ? parsedContent : JSON.stringify(parsedContent, null, 2)
+					parsedContentPreview: JSON.stringify(parsedContent).substring(0, 5000)
 				});
 				
 				throw validationErr;
 			}
 			
-			if (!parsedLesson || !parsedLesson.subLessons || parsedLesson.subLessons.length === 0) {
-				const error = new Error('Invalid lesson structure: missing subLessons');
+			if (!parsedLesson || !parsedLesson.steps || parsedLesson.steps.length === 0) {
+				const error = new Error('Invalid lesson structure: missing steps');
 				writeDebugLog(lessonId, {
 					stage: 'structure_validation',
 					success: false,
 					error: error.message,
-					hasSubLessons: !!parsedLesson?.subLessons,
-					subLessonsCount: parsedLesson?.subLessons?.length || 0,
+					hasSteps: !!parsedLesson?.steps,
+					stepsCount: parsedLesson?.steps?.length || 0,
 					parsedLessonPreview: JSON.stringify(parsedLesson).substring(0, 5000)
 				});
 				throw error;
 			}
 
 			// Ensure lesson has an ID
-			if (!parsedLesson.id) {
-				parsedLesson.id = lessonId;
+			if (!parsedLesson.topicId) {
+				parsedLesson.topicId = lessonId;
 			}
 
 			// Log success
 			writeDebugLog(lessonId, {
 				stage: 'success',
-				lessonId: parsedLesson.id,
+				lessonId: parsedLesson.topicId,
 				title: parsedLesson.title,
-				level: parsedLesson.level,
-				subLessonsCount: parsedLesson.subLessons.length,
-				hasReview: !!parsedLesson.review,
-				reviewWordsCount: parsedLesson.review?.words?.length || 0,
-				reviewSentencesCount: parsedLesson.review?.sentences?.length || 0
+				dialect: parsedLesson.dialect,
+				stepsCount: parsedLesson.steps.length,
+				contentSteps: parsedLesson.steps.filter(s => s.type === 'content').length,
+				exerciseSteps: parsedLesson.steps.filter(s => s.type === 'exercise').length,
+				practiceSteps: parsedLesson.steps.filter(s => s.type === 'practice-sentence').length
 			});
 
 			// Upload lesson JSON to Supabase Storage
@@ -1013,14 +756,14 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 				.insert({
 					id: lessonId,
 					user_id: userId,
-					title: parsedLesson.title?.english || null,
-					title_arabic: parsedLesson.title?.arabic || null,
-					description: parsedLesson.description?.english || null,
-					level: parsedLesson.level,
+					title: parsedLesson.title || null,
+					title_arabic: null, // Step-based lessons don't have separate Arabic title
+					description: null, // Step-based lessons don't have description at root level
+					level: level, // Use the level from the request
 					dialect: dialect,
 					lesson_body: storageResult.fileKey!, // Store file key instead of JSON
-					sub_lesson_count: parsedLesson.subLessons?.length || null,
-					estimated_duration: parsedLesson.estimatedDuration || null,
+					sub_lesson_count: parsedLesson.steps?.length || null, // Store step count
+					estimated_duration: null,
 					created_at: new Date().toISOString()
 				});
 

@@ -98,7 +98,7 @@
     try {
       if (importMode === 'csv') {
         if (!csvFile) {
-          throw new Error('Please select a CSV file');
+          throw new Error('Please select a CSV or TXT file');
         }
         
         const formData = new FormData();
@@ -264,7 +264,7 @@
               selectableFor="csv"
               isSelected={importMode === 'csv'}
               value="csv"
-              text="Upload CSV File"
+              text="Upload File"
             />
           </div>
         </div>
@@ -272,9 +272,10 @@
         {#if importMode === 'csv'}
           <!-- CSV Upload Section -->
           <div class="flex flex-col gap-4">
-            <h2 class="text-2xl font-bold text-text-300">Upload CSV File</h2>
+            <h2 class="text-2xl font-bold text-text-300">Upload CSV or TXT File</h2>
             <p class="text-text-200 text-sm">
               Upload a CSV file with columns: arabic, english, transliteration (optional).
+              Or upload an unstructured TXT file with Arabic text (one word or phrase per line).
               Missing fields will be automatically generated using AI.
             </p>
             
@@ -333,7 +334,7 @@
                     </div>
                   </div>
                   <div>
-                    <p class="text-lg font-bold text-text-300 mb-1">Drop CSV file here</p>
+                    <p class="text-lg font-bold text-text-300 mb-1">Drop CSV or TXT file here</p>
                     <p class="text-sm text-text-200">or click anywhere to browse</p>
                   </div>
                   <div class="text-xs text-text-200 opacity-70">
@@ -357,11 +358,18 @@
             {/if}
             
             <div class="bg-tile-300/50 border border-tile-500 rounded-lg p-4 text-sm text-text-200">
-              <p class="font-medium text-text-300 mb-2">CSV Format:</p>
+              <p class="font-medium text-text-300 mb-2">File Format:</p>
+              <p class="font-medium text-text-300 mb-1">For CSV files:</p>
               <p class="mb-1">• Required columns: <strong>arabic</strong> or <strong>english</strong></p>
               <p class="mb-1">• Optional columns: <strong>transliteration</strong></p>
               <p class="mb-1">• Column name variations are automatically detected</p>
-              <p>• Missing fields will be generated using AI</p>
+              <p class="mb-3">• Missing fields will be generated using AI</p>
+              
+              <p class="font-medium text-text-300 mb-1">For TXT files:</p>
+              <p class="mb-1">• One word or phrase per line</p>
+              <p class="mb-1">• <strong class="text-red-400">Important:</strong> Lines without Arabic characters will be ignored</p>
+              <p class="mb-1">• You can include English or transliteration on the same line (separated by comma, pipe, or semicolon)</p>
+              <p>• Missing fields (English, transliteration) will be generated using AI</p>
             </div>
           </div>
         {:else}
@@ -444,7 +452,7 @@
               Importing...
               {/if}
             {:else}
-              {importMode === 'csv' ? 'Import from CSV' : 'Import Words'}
+              {importMode === 'csv' ? 'Import from File' : 'Import Words'}
             {/if}
           </Button>
           
