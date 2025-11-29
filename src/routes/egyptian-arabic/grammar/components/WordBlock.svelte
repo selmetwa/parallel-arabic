@@ -49,7 +49,10 @@
 
 	let isCorrect = $state(false);
   let keyboardValue = $state('');
-  let keyboard = $state('virtual')
+  let keyboard = $state<'virtual' | 'physical'>('virtual')
+  
+  // Detect mobile on mount and default to native keyboard
+  const isMobile = () => typeof window !== 'undefined' && window.innerWidth < 768;
 	let conjugatedVerbArray: Array<ConjugatedVerb> = $state([]);
 
 	$effect(() => {
@@ -172,24 +175,32 @@
 	}
 
 	onMount(() => {
+		// Default to native keyboard on mobile
+		if (isMobile()) {
+			keyboard = 'physical';
+		}
+		
 		conjugatedVerbArray = conjugate(verbToConjugate);
 
-		const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
+		const keyboardEl = document.querySelector('arabic-keyboard') as Keyboard | null;
 		updateKeyboardStyle();
 
-		document.addEventListener('keydown', () => {
-			const value = keyboard && keyboard.getTextAreaValue();
+		// Only process virtual keyboard events when virtual keyboard is active
+		const handleVirtualKeyboard = () => {
+			if (keyboard !== 'virtual') return;
+			const value = keyboardEl && keyboardEl.getTextAreaValue();
 			if (typeof value === 'string') {
 				compareMyInput(value);
 			}
-		});
+		};
 
-		document.addEventListener('click', () => {
-			const value = keyboard && keyboard.getTextAreaValue();
-			if (typeof value === 'string') {
-				compareMyInput(value);
-			}
-		});
+		document.addEventListener('keydown', handleVirtualKeyboard);
+		document.addEventListener('click', handleVirtualKeyboard);
+		
+		return () => {
+			document.removeEventListener('keydown', handleVirtualKeyboard);
+			document.removeEventListener('click', handleVirtualKeyboard);
+		};
 	});
 
 	let verbArray: Array<string> = $state([]);
@@ -283,9 +294,12 @@
 </div>
 
 <div class="mb-6 px-3 py-4">
-	<div class="mb-3 flex items-center justify-between">
-		<button onclick={toggleKeyboard} class="text-sm text-text-300 underline">
-			{keyboard === 'virtual' ? 'Use native keyboard' : 'Use builtin keyboard'}
+	<div class="mb-3 flex items-center justify-between gap-2">
+		<button 
+			onclick={toggleKeyboard}
+			class="flex items-center gap-2 px-3 py-1.5 text-sm text-text-300 bg-tile-400 hover:bg-tile-500 border border-tile-500 rounded-lg transition-colors"
+		>
+			<span>{keyboard === 'virtual' ? '📱 Use native keyboard' : '⌨️ Use virtual keyboard'}</span>
 		</button>
 	</div>
 	
@@ -294,10 +308,11 @@
 	</div>
 	
 	<textarea
-		value={keyboardValue}
+		bind:value={keyboardValue}
 		oninput={onRegularKeyboard}
-		placeholder="Type your answer here..."
-		class={cn('block min-h-32 w-full border bg-tile-300 p-3 text-text-300', {
+		placeholder="اكتب هنا..."
+		dir="rtl"
+		class={cn('block min-h-40 w-full text-2xl sm:text-3xl font-arabic text-text-300 bg-tile-200 border-2 border-tile-500 rounded-xl p-4 focus:border-tile-700 focus:outline-none focus:ring-2 focus:ring-tile-600/50 transition-all placeholder:text-text-100', {
 			hidden: keyboard === 'virtual'
 		})}
 	></textarea>

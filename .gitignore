@@ -19,3 +19,9 @@ data/audio
 src/lib/constants/blessed-emails.ts
 notes.txt
 .vercel
+/ios
+ios/App/Pods/
+ios/App/App/public/
+ios/App/App/capacitor.config.json
+android/app/src/main/assets/public/
+android/app/src/main/res/xml/config.xml

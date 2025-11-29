@@ -1,14 +1,12 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { currentDialect } from '$lib/store/store';
-  import RadioButton from '$lib/components/RadioButton.svelte';
   import RecordButton from '$lib/components/RecordButton.svelte';
   import AudioLoading from '$lib/components/AudioLoading.svelte';
   import Sentence from '$lib/components/dialect-shared/story/components/Sentence.svelte';
   import AudioButton from '$lib/components/AudioButton.svelte';
   import PaywallModal from '$lib/components/PaywallModal.svelte';
   import DialectComparisonModal from '$lib/components/dialect-shared/sentences/DialectComparisonModal.svelte';
-  import Button from '$lib/components/Button.svelte';
   import { type Dialect } from '$lib/types/index';
   import type { DialectComparisonSchema } from '$lib/utils/gemini-schemas';
   import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
@@ -29,12 +27,10 @@
   onMount(() => {
     currentDialect.set('');
     
-    // Set full width layout like video route
     const root = document.documentElement;
     const originalWidth = getComputedStyle(root).getPropertyValue('--layout-width');
     root.style.setProperty('--layout-width', '2400px');
     
-    // Restore original width on unmount
     return () => {
       root.style.setProperty('--layout-width', originalWidth);
     };
@@ -46,8 +42,8 @@
     arabic?: string;
     english?: string;
     transliteration?: string;
-    feedback?: string; // Grammar feedback for user messages
-    originalLanguage?: 'ar' | 'en'; // Store the original language for user messages
+    feedback?: string;
+    originalLanguage?: 'ar' | 'en';
     timestamp: Date;
     showArabic?: boolean;
     showEnglish?: boolean;
@@ -56,14 +52,14 @@
   };
 
   const dialectOptions = [
-    { value: 'egyptian-arabic', label: 'Egyptian Arabic' },
-    { value: 'fusha', label: 'Modern Standard Arabic (Fusha)' },
-    { value: 'levantine', label: 'Levantine Arabic' },
+    { value: 'egyptian-arabic', label: 'Egyptian Arabic', emoji: '🇪🇬' },
+    { value: 'fusha', label: 'Modern Standard Arabic', emoji: '📚' },
+    { value: 'levantine', label: 'Levantine Arabic', emoji: '🇱🇧' },
   ];
 
   let selectedDialect = $state<Dialect>(getDefaultDialect(data.user) as Dialect);
   let recording = $state(false);
-  let recordingLanguage = $state<'ar' | 'en'>('ar'); // Track which language mode is active
+  let recordingLanguage = $state<'ar' | 'en'>('ar');
   let mediaRecorder: MediaRecorder | null = $state(null);
   let audioChunks: Blob[] = $state([]);
   let conversation: ConversationMessage[] = $state([]);
@@ -117,15 +113,12 @@
     isComparisonModalOpen = false;
   }
 
-  function setDialect(e: Event) {
-    const target = e.target as HTMLInputElement;
-    selectedDialect = target.value as Dialect;
-    // Clear conversation when dialect changes
+  function setDialect(dialect: string) {
+    selectedDialect = dialect as Dialect;
     conversation = [];
   }
 
   async function startRecording(language: 'ar' | 'en') {
-    // Check subscription before allowing recording
     if (!hasActiveSubscription) {
       openPaywallModal();
       return;
@@ -144,7 +137,6 @@
 
       mediaRecorder.onstop = async () => {
         await processRecording();
-        // Stop all tracks to release microphone
         stream.getTracks().forEach(track => track.stop());
       };
 
@@ -176,9 +168,8 @@
       const file = new File([blob], 'recording.webm', { type: 'audio/webm' });
       const formData = new FormData();
       formData.append('audio', file);
-      formData.append('language', recordingLanguage); // Pass the language parameter
+      formData.append('language', recordingLanguage);
 
-      // Transcribe audio
       const transcriptionResponse = await fetch('/api/speech-to-text', {
         method: 'POST',
         body: formData
@@ -195,7 +186,6 @@
         throw new Error('No text transcribed');
       }
 
-      // Translate and transliterate the user message
       const translateResponse = await fetch('/api/translate-user-message', {
         method: 'POST',
         headers: {
@@ -218,7 +208,6 @@
       isGettingResponse = true;
       scrollToBottom();
 
-      // Add user message to conversation with all three versions
       const userMsg: ConversationMessage = {
         id: Date.now().toString(),
         type: 'user',
@@ -236,16 +225,12 @@
       conversation = [...conversation, userMsg];
       scrollToBottom();
       
-      // Scroll again after a short delay to ensure loading state is visible
       setTimeout(() => scrollToBottom(), 100);
 
-      // Get conversation history for context
-      // Use the original transcribed message for user messages, Arabic for tutor messages
       const conversationHistory = conversation
         .filter(msg => msg.type === 'user' || msg.type === 'tutor')
         .map(msg => {
           if (msg.type === 'user') {
-            // For user messages, use the appropriate field based on the original language
             return {
               role: 'user' as const,
               content: msg.originalLanguage === 'ar' ? (msg.arabic || '') : (msg.english || '')
@@ -257,16 +242,15 @@
             };
           }
         })
-        .slice(-10); // Last 10 messages
+        .slice(-10);
 
-      // Get tutor response - use the original transcribed message
       const tutorResponse = await fetch('/api/tutor-chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          message: userMessage, // Use original transcribed text
+          message: userMessage,
           dialect: selectedDialect,
           conversation: conversationHistory
         })
@@ -278,7 +262,6 @@
 
       const tutorData = await tutorResponse.json();
 
-      // Add tutor response to conversation
       const tutorMsg: ConversationMessage = {
         id: (Date.now() + 1).toString(),
         type: 'tutor',
@@ -293,10 +276,8 @@
       conversation = [...conversation, tutorMsg];
       scrollToBottom();
       
-      // Scroll again after a short delay to ensure tutor message is visible
       setTimeout(() => scrollToBottom(), 100);
 
-      // Auto-play tutor audio response
       if (tutorData.arabic) {
         setTimeout(async () => {
           await playTutorAudio(tutorData.arabic, selectedDialect);
@@ -325,17 +306,14 @@
   }
 
   function toggleRecording(language: 'ar' | 'en') {
-    // Check subscription before allowing recording
     if (!hasActiveSubscription && !recording) {
       openPaywallModal();
       return;
     }
 
     if (recording) {
-      // If already recording, stop it
       stopRecording();
     } else {
-      // Start recording with the specified language
       startRecording(language);
     }
   }
@@ -344,7 +322,6 @@
     conversation = [];
   }
 
-  // Function to play tutor audio programmatically
   async function playTutorAudio(text: string, dialect: Dialect) {
     try {
       const res = await fetch('/api/text-to-speech', {
@@ -364,7 +341,6 @@
       const audio = new Audio(audioUrl);
       audio.play();
       
-      // Clean up URL after playback
       audio.addEventListener('ended', () => {
         URL.revokeObjectURL(audioUrl);
       });
@@ -395,363 +371,460 @@
   currentDialect={selectedDialect}
 />
 
-<section class="w-full">
-  <div class="px-3 mt-6 sm:px-8 mb-6">
-    <div class="text-left mb-6">
-      <h1 class="text-3xl sm:text-4xl text-text-300 font-bold mb-1 tracking-tight">
-        Arabic Tutor
-      </h1>
-      <p class="text-text-200 text-lg sm:text-xl leading-snug">
-        Practice speaking Arabic with an AI tutor. Choose your dialect and have a conversation! Use the "Speak Arabic" button for Arabic conversation, or "Ask in English" to ask questions like "how do I say X?".
-      </p>
-      {#if !hasActiveSubscription}
-        <div class="mt-4 p-4 bg-tile-400 border border-tile-600 rounded-lg">
-          <p class="text-text-200 text-base">
-            <strong>Subscriber Only Feature:</strong> This feature requires an active subscription. 
-            <button onclick={openPaywallModal} class="underline text-text-300 hover:text-text-200 transition-colors">
-              Subscribe to unlock
-            </button>
+<section class="min-h-screen bg-tile-300">
+  <!-- Hero Section -->
+  <header class="py-8 sm:py-12 bg-tile-200 border-b border-tile-600">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+        <div class="max-w-2xl">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-5xl">🎓</span>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-300 leading-tight">
+              AI Arabic Tutor
+            </h1>
+          </div>
+          <p class="text-lg sm:text-xl text-text-200 leading-relaxed">
+            Practice speaking Arabic with an AI tutor. Have real conversations in your chosen dialect with instant feedback and translations.
           </p>
         </div>
-      {/if}
-    </div>
-
-    <!-- Dialect Selection -->
-    <div class="mb-6">
-      <h2 class="text-lg font-bold text-text-300 mb-3">Select Arabic Dialect</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
-        {#each dialectOptions as dialectOption}
-          <RadioButton
-            className="!text-base !font-medium"
-            wrapperClass="!p-3 border-2 border-tile-600 hover:border-tile-500 transition-colors duration-300"
-            onClick={setDialect}
-            selectableFor={dialectOption.value}
-            isSelected={selectedDialect === dialectOption.value}
-            value={dialectOption.value}
-            text={dialectOption.label}
-          />
-        {/each}
-      </div>
-    </div>
-  </div>
-
-  <!-- Recording Controls - Sticky -->
-  <div class="sticky top-0 z-50 bg-tile-200 border-b border-tile-600 shadow-lg mb-6">
-    <div class="px-3 sm:px-8 py-4">
-      <div class="flex items-center gap-4 mb-4">
-      <!-- Arabic Recording Button -->
-      <div class="flex flex-col items-center gap-2">
-        <button
-          onclick={() => toggleRecording('ar')}
-          disabled={isProcessing || (!hasActiveSubscription && !recording)}
-          class="flex items-center justify-center w-16 h-16 rounded-full bg-tile-400 border-2 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed {recording && recordingLanguage === 'ar' ? 'border-blue-500 bg-blue-500/20' : 'border-tile-600 hover:bg-tile-500 hover:border-tile-500'}"
-          aria-label={recording && recordingLanguage === 'ar' ? 'Stop recording Arabic' : 'Start recording Arabic'}
-        >
-          {#if recording && recordingLanguage === 'ar'}
-            <AudioLoading />
-          {:else}
-            <RecordButton />
-          {/if}
-        </button>
-        <span class="text-sm text-text-200 font-medium">Speak Arabic</span>
-      </div>
-
-      <!-- English Recording Button -->
-      <div class="flex flex-col items-center gap-2">
-        <button
-          onclick={() => toggleRecording('en')}
-          disabled={isProcessing || (!hasActiveSubscription && !recording)}
-          class="flex items-center justify-center w-16 h-16 rounded-full bg-tile-400 border-2 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed {recording && recordingLanguage === 'en' ? 'border-blue-500 bg-blue-500/20' : 'border-tile-600 hover:bg-tile-500 hover:border-tile-500'}"
-          aria-label={recording && recordingLanguage === 'en' ? 'Stop recording English' : 'Start recording English'}
-        >
-          {#if recording && recordingLanguage === 'en'}
-            <AudioLoading />
-          {:else}
-            <RecordButton />
-          {/if}
-        </button>
-        <span class="text-sm text-text-200 font-medium">Ask in English</span>
-      </div>
-
-      <div class="flex-1"></div>
-
-      {#if conversation.length > 0}
-        <button
-          onclick={clearConversation}
-          class="px-4 py-2 bg-tile-400 border border-tile-600 text-text-300 hover:bg-tile-500 transition-colors text-sm"
-        >
-          Clear Conversation
-        </button>
-      {/if}
-      </div>
-      
-      <div class="mt-2">
-        {#if recording}
-          <p class="text-text-300 font-medium">
-            Recording {recordingLanguage === 'ar' ? 'Arabic' : 'English'}... Click the same button again to stop
-          </p>
-        {:else if !hasActiveSubscription}
-          <p class="text-text-200">
-            <strong>Subscriber Only:</strong> This feature requires an active subscription. 
-            <button onclick={openPaywallModal} class="underline text-text-300 hover:text-text-200 transition-colors">
-              Subscribe to unlock
+        
+        {#if !hasActiveSubscription}
+          <div class="bg-tile-400 border-2 border-amber-500/50 rounded-lg p-6 shadow-lg lg:max-w-sm">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-2xl">⭐</span>
+              <h3 class="text-lg font-bold text-text-300">Premium Feature</h3>
+            </div>
+            <p class="text-text-200 mb-4">
+              Subscribe to unlock unlimited conversations with your AI tutor.
+            </p>
+            <button 
+              onclick={openPaywallModal} 
+              class="w-full px-6 py-3 bg-amber-600 text-white font-semibold rounded-lg hover:bg-amber-700 transition-colors shadow-md"
+            >
+              Unlock Now →
             </button>
-          </p>
-        {:else}
-          <p class="text-text-200">Choose a button above to start speaking. Use "Speak Arabic" for Arabic conversation, or "Ask in English" to ask questions in English.</p>
+          </div>
         {/if}
       </div>
     </div>
-  </div>
+  </header>
 
-  <!-- Conversation Transcript -->
-  <div class="w-full px-3 sm:px-8">
-    <div
-      bind:this={transcriptContainer}
-      class="bg-tile-300 border border-tile-500 rounded-lg p-4 min-h-[400px] max-h-[600px] overflow-y-auto"
-    >
-    {#if conversation.length === 0 && !isTranscribing && !isGettingResponse}
-      <div class="flex items-center justify-center h-full min-h-[400px]">
-        <p class="text-text-200 text-center">
-          Start a conversation by clicking one of the recording buttons above.<br/>
-          <span class="text-sm mt-2 block">Use "Speak Arabic" for Arabic conversation, or "Ask in English" to ask questions like "how do I say hello?"</span>
-        </p>
+  <div class="flex flex-col lg:flex-row">
+    <!-- Left Sidebar: Controls -->
+    <div class="lg:w-80 xl:w-96 p-4 sm:p-6 bg-tile-300 lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto border-r border-tile-600">
+      
+      <!-- Dialect Selection Card -->
+      <div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden mb-6">
+        <div class="p-4 border-b border-tile-600">
+          <h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
+            <span>🌍</span> Select Dialect
+          </h3>
+        </div>
+        <div class="p-4 space-y-2">
+          {#each dialectOptions as dialectOption}
+            <button
+              type="button"
+              onclick={() => setDialect(dialectOption.value)}
+              class="w-full flex items-center gap-3 p-3 rounded-lg border-2 transition-all duration-200 text-left {selectedDialect === dialectOption.value ? 'bg-tile-500 border-tile-400 shadow-md' : 'bg-tile-300 border-tile-600 hover:bg-tile-300/70 hover:border-tile-500'}"
+            >
+              <span class="text-xl">{dialectOption.emoji}</span>
+              <span class="font-semibold text-text-300 text-sm">{dialectOption.label}</span>
+            </button>
+          {/each}
+        </div>
       </div>
-    {:else}
-      <div class="space-y-4">
-        {#each conversation as message (message.id)}
-          {#if message.type === 'user'}
-            <!-- User Message -->
-            <div class="flex flex-col gap-2 border-b border-tile-600 pb-4 bg-tile-400 rounded-lg p-4">
-              <div class="flex items-center justify-between mb-2">
-                <p class="text-sm text-text-200 font-medium">You</p>
-                <div class="flex gap-2 flex-wrap">
-                  <button
-                    onclick={() => toggleMessageVisibility(message.id, 'showArabic')}
-                    class="text-xs px-2 py-1 rounded border border-tile-600 bg-tile-300 hover:bg-tile-500 text-text-300 transition-colors {message.showArabic !== false ? 'bg-tile-600 text-text-200' : ''}"
-                  >
-                    Arabic
-                  </button>
-                  <button
-                    onclick={() => toggleMessageVisibility(message.id, 'showEnglish')}
-                    class="text-xs px-2 py-1 rounded border border-tile-600 bg-tile-300 hover:bg-tile-500 text-text-300 transition-colors {message.showEnglish !== false ? 'bg-tile-600 text-text-200' : ''}"
-                  >
-                    English
-                  </button>
-                  <button
-                    onclick={() => toggleMessageVisibility(message.id, 'showTransliteration')}
-                    class="text-xs px-2 py-1 rounded border border-tile-600 bg-tile-300 hover:bg-tile-500 text-text-300 transition-colors {message.showTransliteration !== false ? 'bg-tile-600 text-text-200' : ''}"
-                  >
-                    Transliteration
-                  </button>
-                  {#if message.feedback && message.feedback.trim() !== ''}
-                    <button
-                      onclick={() => toggleMessageVisibility(message.id, 'showFeedback')}
-                      class="text-xs px-2 py-1 rounded border border-tile-600 bg-tile-300 hover:bg-tile-500 text-text-300 transition-colors {message.showFeedback !== false ? 'bg-tile-600 text-text-200' : ''}"
-                    >
-                      💡 Feedback
-                    </button>
-                  {/if}
+
+      <!-- Recording Controls Card -->
+      <div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden mb-6">
+        <div class="p-4 border-b border-tile-600">
+          <h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
+            <span>🎙️</span> Start Speaking
+          </h3>
+        </div>
+        <div class="p-4">
+          <div class="grid grid-cols-2 gap-4 mb-4">
+            <!-- Arabic Recording Button -->
+            <button
+              onclick={() => toggleRecording('ar')}
+              disabled={isProcessing || (!hasActiveSubscription && !recording)}
+              class="flex flex-col items-center gap-3 p-4 rounded-xl border-2 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed {recording && recordingLanguage === 'ar' ? 'border-sky-500 bg-sky-500/20 shadow-lg' : 'border-tile-600 bg-tile-300 hover:bg-tile-500 hover:border-tile-500'}"
+              aria-label={recording && recordingLanguage === 'ar' ? 'Stop recording Arabic' : 'Start recording Arabic'}
+            >
+              <div class="w-14 h-14 flex items-center justify-center rounded-full {recording && recordingLanguage === 'ar' ? 'bg-sky-500/30' : 'bg-tile-500'}">
+                {#if recording && recordingLanguage === 'ar'}
+                  <AudioLoading />
+                {:else}
+                  <RecordButton />
+                {/if}
+              </div>
+              <span class="text-sm font-semibold text-text-300">Speak Arabic</span>
+              <span class="text-xs text-text-200">For conversation</span>
+            </button>
+
+            <!-- English Recording Button -->
+            <button
+              onclick={() => toggleRecording('en')}
+              disabled={isProcessing || (!hasActiveSubscription && !recording)}
+              class="flex flex-col items-center gap-3 p-4 rounded-xl border-2 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed {recording && recordingLanguage === 'en' ? 'border-emerald-500 bg-emerald-500/20 shadow-lg' : 'border-tile-600 bg-tile-300 hover:bg-tile-500 hover:border-tile-500'}"
+              aria-label={recording && recordingLanguage === 'en' ? 'Stop recording English' : 'Start recording English'}
+            >
+              <div class="w-14 h-14 flex items-center justify-center rounded-full {recording && recordingLanguage === 'en' ? 'bg-emerald-500/30' : 'bg-tile-500'}">
+                {#if recording && recordingLanguage === 'en'}
+                  <AudioLoading />
+                {:else}
+                  <RecordButton />
+                {/if}
+              </div>
+              <span class="text-sm font-semibold text-text-300">Ask in English</span>
+              <span class="text-xs text-text-200">For questions</span>
+            </button>
+          </div>
+
+          <!-- Status Message -->
+          <div class="p-3 bg-tile-300 rounded-lg border border-tile-500">
+            {#if recording}
+              <div class="flex items-center gap-2">
+                <div class="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+                <p class="text-sm font-medium text-text-300">
+                  Recording {recordingLanguage === 'ar' ? 'Arabic' : 'English'}...
+                </p>
+              </div>
+              <p class="text-xs text-text-200 mt-1">Click the button again to stop</p>
+            {:else if !hasActiveSubscription}
+              <p class="text-sm text-text-200">
+                🔒 Subscribe to start conversations
+              </p>
+            {:else}
+              <p class="text-sm text-text-200">
+                💡 Click a button above to start speaking
+              </p>
+            {/if}
+          </div>
+        </div>
+      </div>
+
+      <!-- Actions Card -->
+      {#if conversation.length > 0}
+        <div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
+          <div class="p-4">
+            <button
+              onclick={clearConversation}
+              class="w-full flex items-center justify-center gap-2 px-4 py-3 bg-rose-600 text-white font-semibold rounded-lg hover:bg-rose-700 transition-colors"
+            >
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+              </svg>
+              Clear Conversation
+            </button>
+          </div>
+        </div>
+      {/if}
+
+      <!-- Tips Card -->
+      <div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden mt-6">
+        <div class="p-4 border-b border-tile-600">
+          <h3 class="text-sm font-bold text-text-300 flex items-center gap-2">
+            <span>💡</span> Tips
+          </h3>
+        </div>
+        <div class="p-4 space-y-2 text-sm text-text-200">
+          <p>• Use <strong class="text-text-300">"Speak Arabic"</strong> for conversation practice</p>
+          <p>• Use <strong class="text-text-300">"Ask in English"</strong> to ask "How do I say...?"</p>
+          <p>• Click any word in responses for definitions</p>
+          <p>• Toggle visibility buttons to hide/show translations</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Chat Area -->
+    <div class="flex-1 p-4 sm:p-6 bg-tile-200 min-h-screen">
+      <div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden h-full">
+        <div class="p-4 border-b border-tile-600 sticky top-0 bg-tile-400 z-10">
+          <div class="flex items-center justify-between">
+            <h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
+              <span>💬</span> Conversation
+            </h3>
+            {#if conversation.length > 0}
+              <span class="px-3 py-1 bg-tile-500 rounded-full text-sm font-medium text-text-300">
+                {conversation.length} message{conversation.length !== 1 ? 's' : ''}
+              </span>
+            {/if}
+          </div>
+        </div>
+        
+        <div
+          bind:this={transcriptContainer}
+          class="p-4 min-h-[500px] max-h-[calc(100vh-200px)] overflow-y-auto"
+        >
+          {#if conversation.length === 0 && !isTranscribing && !isGettingResponse}
+            <div class="flex flex-col items-center justify-center h-full min-h-[400px] text-center">
+              <div class="text-6xl mb-6">👋</div>
+              <h3 class="text-xl font-bold text-text-300 mb-3">Start a Conversation</h3>
+              <p class="text-text-200 max-w-md leading-relaxed">
+                Click one of the recording buttons to begin speaking with your AI tutor. 
+                Your conversation will appear here.
+              </p>
+              <div class="mt-6 grid grid-cols-2 gap-4 max-w-sm">
+                <div class="p-4 bg-tile-300 rounded-lg border border-tile-500 text-center">
+                  <span class="text-2xl block mb-2">🗣️</span>
+                  <span class="text-sm font-medium text-text-300">Speak Arabic</span>
+                  <p class="text-xs text-text-200 mt-1">Practice conversation</p>
+                </div>
+                <div class="p-4 bg-tile-300 rounded-lg border border-tile-500 text-center">
+                  <span class="text-2xl block mb-2">❓</span>
+                  <span class="text-sm font-medium text-text-300">Ask in English</span>
+                  <p class="text-xs text-text-200 mt-1">Get help & translations</p>
                 </div>
               </div>
-              {#if message.arabic && message.english && message.transliteration}
-                {#if message.showArabic !== false}
-                  <Sentence
-                    sentence={{
-                      arabic: { text: message.arabic || '' },
-                      english: { text: message.english || '' },
-                      transliteration: { text: message.transliteration || '' }
-                    }}
-                    setActiveWord={() => {}}
-                    type="arabic"
-                    index={0}
-                    mode="SentenceView"
-                    dialect={selectedDialect}
-                    intersecting={true}
-                    classname="!border-0 !py-2 !px-0"
-                  />
-                {/if}
-                {#if message.showEnglish !== false}
-                  <Sentence
-                    sentence={{
-                      arabic: { text: message.arabic || '' },
-                      english: { text: message.english || '' },
-                      transliteration: { text: message.transliteration || '' }
-                    }}
-                    setActiveWord={() => {}}
-                    type="english"
-                    index={0}
-                    mode="SentenceView"
-                    dialect={selectedDialect}
-                    intersecting={true}
-                    classname="!border-0 !py-2 !px-0"
-                  />
-                {/if}
-                {#if message.showTransliteration !== false}
-                  <Sentence
-                    sentence={{
-                      arabic: { text: message.arabic || '' },
-                      english: { text: message.english || '' },
-                      transliteration: { text: message.transliteration || '' }
-                    }}
-                    setActiveWord={() => {}}
-                    type="transliteration"
-                    index={0}
-                    mode="SentenceView"
-                    dialect={selectedDialect}
-                    intersecting={true}
-                    classname="!border-0 !py-2 !px-0"
-                  />
-                {/if}
-                {#if message.feedback && message.feedback.trim() !== '' && message.showFeedback !== false}
-                  <div class="mt-3 p-4 bg-tile-500 border border-tile-600 rounded-lg">
-                    <p class="text-sm font-semibold text-text-200 mb-2">💡 Grammar Feedback:</p>
-                    {#if message.arabic && message.transliteration}
-                      <div class="mb-3 space-y-1">
-                        <p class="text-lg text-text-300" dir="rtl">{message.arabic}</p>
-                        <p class="text-base text-text-200 italic">{message.transliteration}</p>
-                      </div>
-                    {/if}
-                    <p class="text-base text-text-300 whitespace-pre-wrap leading-relaxed">{message.feedback}</p>
-                  </div>
-                {/if}
-              {:else}
-                {@const containsArabic = /[\u0600-\u06FF]/.test(message.arabic || '')}
-                <p class="text-2xl text-text-300" dir={containsArabic ? 'rtl' : 'ltr'}>{message.arabic}</p>
-                {#if message.feedback && message.feedback.trim() !== '' && message.showFeedback !== false}
-                  <div class="mt-3 p-4 bg-tile-500 border border-tile-600 rounded-lg">
-                    <p class="text-sm font-semibold text-text-200 mb-2">💡 Grammar Feedback:</p>
-                    {#if message.arabic && message.transliteration}
-                      <div class="mb-3 space-y-1">
-                        <p class="text-lg text-text-300" dir="rtl">{message.arabic}</p>
-                        <p class="text-base text-text-200 italic">{message.transliteration}</p>
-                      </div>
-                    {/if}
-                    <p class="text-base text-text-300 whitespace-pre-wrap leading-relaxed">{message.feedback}</p>
-                  </div>
-                {/if}
-              {/if}
             </div>
           {:else}
-            <!-- Tutor Message -->
-            <div class="flex flex-col gap-2 border-b border-tile-600 pb-4 bg-tile-300 rounded-lg p-4">
-              <div class="flex items-center justify-between mb-2">
-                <p class="text-sm text-text-200 font-medium">Tutor</p>
-                <div class="flex items-center gap-2">
-                  <div class="flex gap-2">
-                    <button
-                      onclick={() => toggleMessageVisibility(message.id, 'showArabic')}
-                      class="text-xs px-2 py-1 rounded border border-tile-600 bg-tile-400 hover:bg-tile-500 text-text-300 transition-colors {message.showArabic !== false ? 'bg-tile-600 text-text-200' : ''}"
-                    >
-                      Arabic
-                    </button>
-                    <button
-                      onclick={() => toggleMessageVisibility(message.id, 'showEnglish')}
-                      class="text-xs px-2 py-1 rounded border border-tile-600 bg-tile-400 hover:bg-tile-500 text-text-300 transition-colors {message.showEnglish !== false ? 'bg-tile-600 text-text-200' : ''}"
-                    >
-                      English
-                    </button>
-                    <button
-                      onclick={() => toggleMessageVisibility(message.id, 'showTransliteration')}
-                      class="text-xs px-2 py-1 rounded border border-tile-600 bg-tile-400 hover:bg-tile-500 text-text-300 transition-colors {message.showTransliteration !== false ? 'bg-tile-600 text-text-200' : ''}"
-                    >
-                      Transliteration
-                    </button>
-                  </div>
-                  <div class="flex gap-2">
-                    {#if message.arabic}
-                      <AudioButton text={message.arabic} dialect={selectedDialect}>
-                        🔊 Play Audio
-                      </AudioButton>
-                      <Button onClick={() => compareDialects(message.arabic || '', message.english, message.transliteration)} type="button">
-                        Compare Dialects
-                      </Button>
+            <div class="space-y-4">
+              {#each conversation as message (message.id)}
+                {#if message.type === 'user'}
+                  <!-- User Message -->
+                  <div class="bg-sky-500/10 border-2 border-sky-500/30 rounded-xl p-4">
+                    <div class="flex items-center justify-between mb-3">
+                      <div class="flex items-center gap-2">
+                        <span class="w-8 h-8 bg-sky-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
+                          You
+                        </span>
+                        <span class="text-sm text-text-200">
+                          {message.originalLanguage === 'ar' ? 'Spoke Arabic' : 'Asked in English'}
+                        </span>
+                      </div>
+                      <div class="flex gap-1.5 flex-wrap">
+                        <button
+                          onclick={() => toggleMessageVisibility(message.id, 'showArabic')}
+                          class="text-xs px-2 py-1 rounded-md font-medium transition-colors {message.showArabic !== false ? 'bg-sky-600 text-white' : 'bg-tile-500 text-text-300 hover:bg-tile-600'}"
+                        >
+                          العربية
+                        </button>
+                        <button
+                          onclick={() => toggleMessageVisibility(message.id, 'showEnglish')}
+                          class="text-xs px-2 py-1 rounded-md font-medium transition-colors {message.showEnglish !== false ? 'bg-sky-600 text-white' : 'bg-tile-500 text-text-300 hover:bg-tile-600'}"
+                        >
+                          English
+                        </button>
+                        <button
+                          onclick={() => toggleMessageVisibility(message.id, 'showTransliteration')}
+                          class="text-xs px-2 py-1 rounded-md font-medium transition-colors {message.showTransliteration !== false ? 'bg-sky-600 text-white' : 'bg-tile-500 text-text-300 hover:bg-tile-600'}"
+                        >
+                          Franco
+                        </button>
+                        {#if message.feedback && message.feedback.trim() !== ''}
+                          <button
+                            onclick={() => toggleMessageVisibility(message.id, 'showFeedback')}
+                            class="text-xs px-2 py-1 rounded-md font-medium transition-colors {message.showFeedback !== false ? 'bg-amber-600 text-white' : 'bg-tile-500 text-text-300 hover:bg-tile-600'}"
+                          >
+                            💡 Tips
+                          </button>
+                        {/if}
+                      </div>
+                    </div>
+                    
+                    {#if message.arabic && message.english && message.transliteration}
+                      <div class="space-y-2">
+                        {#if message.showArabic !== false}
+                          <Sentence
+                            sentence={{
+                              arabic: { text: message.arabic || '' },
+                              english: { text: message.english || '' },
+                              transliteration: { text: message.transliteration || '' }
+                            }}
+                            setActiveWord={() => {}}
+                            type="arabic"
+                            index={0}
+                            mode="SentenceView"
+                            dialect={selectedDialect}
+                            intersecting={true}
+                            classname="!border-0 !py-1 !px-0"
+                          />
+                        {/if}
+                        {#if message.showEnglish !== false}
+                          <Sentence
+                            sentence={{
+                              arabic: { text: message.arabic || '' },
+                              english: { text: message.english || '' },
+                              transliteration: { text: message.transliteration || '' }
+                            }}
+                            setActiveWord={() => {}}
+                            type="english"
+                            index={0}
+                            mode="SentenceView"
+                            dialect={selectedDialect}
+                            intersecting={true}
+                            classname="!border-0 !py-1 !px-0"
+                          />
+                        {/if}
+                        {#if message.showTransliteration !== false}
+                          <Sentence
+                            sentence={{
+                              arabic: { text: message.arabic || '' },
+                              english: { text: message.english || '' },
+                              transliteration: { text: message.transliteration || '' }
+                            }}
+                            setActiveWord={() => {}}
+                            type="transliteration"
+                            index={0}
+                            mode="SentenceView"
+                            dialect={selectedDialect}
+                            intersecting={true}
+                            classname="!border-0 !py-1 !px-0"
+                          />
+                        {/if}
+                      </div>
+                      {#if message.feedback && message.feedback.trim() !== '' && message.showFeedback !== false}
+                        <div class="mt-4 p-4 bg-amber-500/10 border border-amber-500/30 rounded-lg">
+                          <p class="text-sm font-bold text-amber-300 mb-2 flex items-center gap-2">
+                            <span>💡</span> Grammar Feedback
+                          </p>
+                          <p class="text-text-300 whitespace-pre-wrap leading-relaxed">{message.feedback}</p>
+                        </div>
+                      {/if}
+                    {:else}
+                      {@const containsArabic = /[\u0600-\u06FF]/.test(message.arabic || '')}
+                      <p class="text-xl text-text-300" dir={containsArabic ? 'rtl' : 'ltr'}>{message.arabic}</p>
                     {/if}
                   </div>
+                {:else}
+                  <!-- Tutor Message -->
+                  <div class="bg-tile-300 border-2 border-tile-500 rounded-xl p-4">
+                    <div class="flex items-center justify-between mb-3">
+                      <div class="flex items-center gap-2">
+                        <span class="w-8 h-8 bg-emerald-600 rounded-full flex items-center justify-center text-lg">
+                          🎓
+                        </span>
+                        <span class="text-sm font-semibold text-text-300">Tutor</span>
+                      </div>
+                      <div class="flex items-center gap-2 flex-wrap">
+                        <div class="flex gap-1.5">
+                          <button
+                            onclick={() => toggleMessageVisibility(message.id, 'showArabic')}
+                            class="text-xs px-2 py-1 rounded-md font-medium transition-colors {message.showArabic !== false ? 'bg-emerald-600 text-white' : 'bg-tile-500 text-text-300 hover:bg-tile-600'}"
+                          >
+                            العربية
+                          </button>
+                          <button
+                            onclick={() => toggleMessageVisibility(message.id, 'showEnglish')}
+                            class="text-xs px-2 py-1 rounded-md font-medium transition-colors {message.showEnglish !== false ? 'bg-emerald-600 text-white' : 'bg-tile-500 text-text-300 hover:bg-tile-600'}"
+                          >
+                            English
+                          </button>
+                          <button
+                            onclick={() => toggleMessageVisibility(message.id, 'showTransliteration')}
+                            class="text-xs px-2 py-1 rounded-md font-medium transition-colors {message.showTransliteration !== false ? 'bg-emerald-600 text-white' : 'bg-tile-500 text-text-300 hover:bg-tile-600'}"
+                          >
+                            Franco
+                          </button>
+                        </div>
+                        {#if message.arabic}
+                          <div class="flex gap-1.5">
+                            <AudioButton text={message.arabic} dialect={selectedDialect} className="!p-2 !rounded-lg bg-tile-500 hover:bg-tile-600" />
+                            <button 
+                              onclick={() => compareDialects(message.arabic || '', message.english, message.transliteration)}
+                              class="text-xs px-3 py-2 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+                            >
+                              Compare
+                            </button>
+                          </div>
+                        {/if}
+                      </div>
+                    </div>
+                    
+                    <div class="space-y-2">
+                      {#if message.showArabic !== false}
+                        <Sentence
+                          sentence={{
+                            arabic: { text: message.arabic || '' },
+                            english: { text: message.english || '' },
+                            transliteration: { text: message.transliteration || '' }
+                          }}
+                          setActiveWord={() => {}}
+                          type="arabic"
+                          index={0}
+                          mode="SentenceView"
+                          dialect={selectedDialect}
+                          intersecting={true}
+                          classname="!border-0 !py-1 !px-0"
+                        />
+                      {/if}
+                      {#if message.showEnglish !== false}
+                        <Sentence
+                          sentence={{
+                            arabic: { text: message.arabic || '' },
+                            english: { text: message.english || '' },
+                            transliteration: { text: message.transliteration || '' }
+                          }}
+                          setActiveWord={() => {}}
+                          type="english"
+                          index={0}
+                          mode="SentenceView"
+                          dialect={selectedDialect}
+                          intersecting={true}
+                          classname="!border-0 !py-1 !px-0"
+                        />
+                      {/if}
+                      {#if message.showTransliteration !== false}
+                        <Sentence
+                          sentence={{
+                            arabic: { text: message.arabic || '' },
+                            english: { text: message.english || '' },
+                            transliteration: { text: message.transliteration || '' }
+                          }}
+                          setActiveWord={() => {}}
+                          type="transliteration"
+                          index={0}
+                          mode="SentenceView"
+                          dialect={selectedDialect}
+                          intersecting={true}
+                          classname="!border-0 !py-1 !px-0"
+                        />
+                      {/if}
+                    </div>
+                  </div>
+                {/if}
+              {/each}
+              
+              <!-- Loading States -->
+              {#if isTranscribing}
+                <div class="bg-sky-500/10 border-2 border-sky-500/30 rounded-xl p-6 animate-pulse">
+                  <div class="flex items-center gap-3">
+                    <div class="flex gap-1">
+                      <div class="w-3 h-3 bg-sky-500 rounded-full animate-bounce"></div>
+                      <div class="w-3 h-3 bg-sky-500 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+                      <div class="w-3 h-3 bg-sky-500 rounded-full animate-bounce" style="animation-delay: 0.4s"></div>
+                    </div>
+                    <div>
+                      <p class="text-lg font-semibold text-text-300">
+                        Processing your {recordingLanguage === 'ar' ? 'Arabic' : 'English'}...
+                      </p>
+                      <p class="text-text-200 text-sm">Transcribing and translating</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              {#if message.showArabic !== false}
-                <Sentence
-                  sentence={{
-                    arabic: { text: message.arabic || '' },
-                    english: { text: message.english || '' },
-                    transliteration: { text: message.transliteration || '' }
-                  }}
-                  setActiveWord={() => {}}
-                  type="arabic"
-                  index={0}
-                  mode="SentenceView"
-                  dialect={selectedDialect}
-                  intersecting={true}
-                  classname="!border-0 !py-2 !px-0"
-                />
               {/if}
-              {#if message.showEnglish !== false}
-                <Sentence
-                  sentence={{
-                    arabic: { text: message.arabic || '' },
-                    english: { text: message.english || '' },
-                    transliteration: { text: message.transliteration || '' }
-                  }}
-                  setActiveWord={() => {}}
-                  type="english"
-                  index={0}
-                  mode="SentenceView"
-                  dialect={selectedDialect}
-                  intersecting={true}
-                  classname="!border-0 !py-2 !px-0"
-                />
-              {/if}
-              {#if message.showTransliteration !== false}
-                <Sentence
-                  sentence={{
-                    arabic: { text: message.arabic || '' },
-                    english: { text: message.english || '' },
-                    transliteration: { text: message.transliteration || '' }
-                  }}
-                  setActiveWord={() => {}}
-                  type="transliteration"
-                  index={0}
-                  mode="SentenceView"
-                  dialect={selectedDialect}
-                  intersecting={true}
-                  classname="!border-0 !py-2 !px-0"
-                />
+              
+              {#if isGettingResponse}
+                <div class="bg-tile-300 border-2 border-tile-500 rounded-xl p-6 animate-pulse">
+                  <div class="flex items-center gap-3">
+                    <div class="flex gap-1">
+                      <div class="w-3 h-3 bg-emerald-500 rounded-full animate-bounce"></div>
+                      <div class="w-3 h-3 bg-emerald-500 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+                      <div class="w-3 h-3 bg-emerald-500 rounded-full animate-bounce" style="animation-delay: 0.4s"></div>
+                    </div>
+                    <div>
+                      <p class="text-lg font-semibold text-text-300">
+                        Tutor is thinking...
+                      </p>
+                      <p class="text-text-200 text-sm">Preparing your personalized response</p>
+                    </div>
+                  </div>
+                </div>
               {/if}
             </div>
           {/if}
-        {/each}
-        
-        <!-- Loading States within Chat -->
-        {#if isTranscribing}
-          <div class="flex flex-col gap-2 border-b border-tile-600 pb-4 bg-tile-400 rounded-lg p-6 animate-pulse">
-            <div class="flex items-center gap-3">
-              <div class="w-3 h-3 bg-blue-500 rounded-full animate-bounce"></div>
-              <div class="w-3 h-3 bg-blue-500 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
-              <div class="w-3 h-3 bg-blue-500 rounded-full animate-bounce" style="animation-delay: 0.4s"></div>
-              <p class="text-lg font-semibold text-text-300 ml-2">
-                Transcribing your {recordingLanguage === 'ar' ? 'Arabic' : 'English'} message...
-              </p>
-            </div>
-            <p class="text-text-200 text-sm ml-11">Processing your audio and generating translations, feedback, and suggestions</p>
-          </div>
-        {/if}
-        
-        {#if isGettingResponse}
-          <div class="flex flex-col gap-2 border-b border-tile-600 pb-4 bg-tile-300 rounded-lg p-6 animate-pulse">
-            <div class="flex items-center gap-3">
-              <div class="w-3 h-3 bg-green-500 rounded-full animate-bounce"></div>
-              <div class="w-3 h-3 bg-green-500 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
-              <div class="w-3 h-3 bg-green-500 rounded-full animate-bounce" style="animation-delay: 0.4s"></div>
-              <p class="text-lg font-semibold text-text-300 ml-2">
-                Tutor is thinking...
-              </p>
-            </div>
-            <p class="text-text-200 text-sm ml-11">Getting your personalized response</p>
-          </div>
-        {/if}
+        </div>
       </div>
-    {/if}
+    </div>
   </div>
 </section>
-

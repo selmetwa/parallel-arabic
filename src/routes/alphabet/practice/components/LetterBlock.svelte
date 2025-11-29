@@ -19,7 +19,10 @@
 	let showAnswer = $state(false);
 	let isInfoModalOpen = $state(false);
 	let keyboardValue = $state('');
-	let keyboard = $state('virtual');
+	let keyboard = $state<'virtual' | 'physical'>('virtual');
+	
+	// Detect mobile on mount and default to native keyboard
+	const isMobile = () => typeof window !== 'undefined' && window.innerWidth < 768;
 
 	$effect(() => {
 		if (letter.isolated) {
@@ -74,23 +77,26 @@
 	}
 
 	onMount(() => {
-		const keyboard = document.querySelector('arabic-keyboard') as Keyboard | null;
+		// Default to native keyboard on mobile
+		if (isMobile()) {
+			keyboard = 'physical';
+		}
+		
+		const keyboardEl = document.querySelector('arabic-keyboard') as Keyboard | null;
 
 		updateKeyboardStyle();
 
-		keyboard?.addEventListener('keydown', () => {
-			const value = keyboard && keyboard.getTextAreaValue();
+		// Only process virtual keyboard events when virtual keyboard is active
+		const handleVirtualKeyboard = () => {
+			if (keyboard !== 'virtual') return;
+			const value = keyboardEl && keyboardEl.getTextAreaValue();
 			if (typeof value === 'string') {
 				compareMyInput(value);
 			}
-		});
+		};
 
-		keyboard?.addEventListener('click', () => {
-			const value = keyboard && keyboard.getTextAreaValue();
-			if (typeof value === 'string') {
-				compareMyInput(value);
-			}
-		});
+		keyboardEl?.addEventListener('keydown', handleVirtualKeyboard);
+		keyboardEl?.addEventListener('click', handleVirtualKeyboard);
 	});
 
 	function openInfoModal() {
@@ -156,20 +162,32 @@
 	<Modal isOpen={isInfoModalOpen} handleCloseModal={closeInfoModal} height="70%" width="80%">
 		<KeyboardDocumentation></KeyboardDocumentation>
 	</Modal>
-	<div>
-		<button onclick={toggleKeyboard}>
-			{keyboard === 'virtual' ? 'Use native keyboard' : 'Use builtin keyboard'}
-		</button>
+	<div class="mt-4">
+		<div class="mb-3 flex items-center justify-between gap-2">
+			<button 
+				onclick={toggleKeyboard}
+				class="flex items-center gap-2 px-3 py-1.5 text-sm text-text-300 bg-tile-400 hover:bg-tile-500 border border-tile-500 rounded-lg transition-colors"
+			>
+				<span>{keyboard === 'virtual' ? '📱 Use native keyboard' : '⌨️ Use virtual keyboard'}</span>
+			</button>
+			{#if keyboard === 'virtual'}
+				<button 
+					class="text-sm text-text-200 hover:text-text-300 underline transition-colors" 
+					onclick={openInfoModal}
+				>
+					How does this work?
+				</button>
+			{/if}
+		</div>
 		<div class={cn('block', { hidden: keyboard !== 'virtual' })}>
 			<arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
-			<button class="mt-3 text-text-300 underline" onclick={openInfoModal}
-				>How does this keyboard work?</button
-			>
 		</div>
 		<textarea
-			value={keyboardValue}
+			bind:value={keyboardValue}
 			oninput={onRegularKeyboard}
-			class={cn('block min-h-32 w-full bg-tile-400 text-text-300', {
+			placeholder="اكتب هنا..."
+			dir="rtl"
+			class={cn('block min-h-40 w-full text-2xl sm:text-3xl font-arabic text-text-300 bg-tile-200 border-2 border-tile-500 rounded-xl p-4 focus:border-tile-700 focus:outline-none focus:ring-2 focus:ring-tile-600/50 transition-all placeholder:text-text-100', {
 				hidden: keyboard === 'virtual'
 			})}
 		></textarea>
