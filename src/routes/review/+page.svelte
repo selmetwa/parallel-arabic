@@ -903,18 +903,8 @@
           </div>
         {/if}
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-          <!-- Structured Lessons -->
-          <button 
-            class="flex flex-col items-center text-center p-8 rounded-xl border-2 border-tile-600 bg-tile-400/50 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group"
-            onclick={() => goto('/lessons/structured')}
-          >
-            <div class="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">📚</div>
-            <h3 class="text-2xl font-bold text-text-300 mb-3">Structured Lessons</h3>
-            <p class="text-text-200 leading-relaxed">
-              Follow comprehensive learning paths organized by modules and topics. Progress through structured lessons for systematic learning.
-            </p>
-          </button>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+
 
           <!-- Generate Words -->
           <button 
@@ -985,14 +975,8 @@
         <!-- Mini Generation Options -->
         <div class="border-t border-tile-500 pt-8">
           <h3 class="text-xl font-bold text-text-300 text-center mb-6">Want to add more practice material?</h3>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <button 
-              class="flex items-center justify-center gap-3 p-4 rounded-xl border-2 border-tile-600 bg-tile-400/30 hover:bg-tile-400/60 transition-all duration-300"
-              onclick={() => goto('/lessons/structured')}
-            >
-              <span class="text-2xl">📚</span>
-              <span class="font-bold text-text-300">Structured Lessons</span>
-            </button>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
             <button 
               class="flex items-center justify-center gap-3 p-4 rounded-xl border-2 border-tile-600 bg-tile-400/30 hover:bg-tile-400/60 transition-all duration-300"
               onclick={() => showGenerateWords = true}
@@ -1059,14 +1043,7 @@
         <!-- Mini Generation Options -->
         <div class="border-t border-tile-500 pt-8">
           <h3 class="text-xl font-bold text-text-300 text-center mb-6">Want to add more practice material?</h3>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <button 
-              class="flex items-center justify-center gap-3 p-4 rounded-xl border-2 border-tile-600 bg-tile-400/30 hover:bg-tile-400/60 transition-all duration-300"
-              onclick={() => goto('/lessons/structured')}
-            >
-              <span class="text-2xl">📚</span>
-              <span class="font-bold text-text-300">Structured Lessons</span>
-            </button>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <button 
               class="flex items-center justify-center gap-3 p-4 rounded-xl border-2 border-tile-600 bg-tile-400/30 hover:bg-tile-400/60 transition-all duration-300"
               onclick={() => showGenerateWords = true}
