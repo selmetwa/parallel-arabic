@@ -19,6 +19,12 @@
   import { dev } from '$app/environment';
   import { injectAnalytics } from '@vercel/analytics/sveltekit';
 
+  // Helper to detect if running in Capacitor native app
+  const isNativeApp = () => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    return !!(window as unknown as { Capacitor?: { isNativePlatform?: () => boolean } }).Capacitor?.isNativePlatform?.();
+  };
+
 
   let { data, children } = $props();
   $inspect(data)
@@ -41,14 +47,19 @@
 	let { session, supabase } = $derived(data)
 	
 	onMount(async () => {
+		console.log('🚀 App onMount started');
+		console.log('🔍 Is native app:', isNativeApp());
+		
 		root = document.documentElement;
 		doc = document.firstElementChild || null;
 		
-    // Inject analytics
-    injectAnalytics({ mode: dev ? 'development' : 'production' });
+    // Only inject Vercel analytics when NOT in native app
+    if (!isNativeApp()) {
+      injectAnalytics({ mode: dev ? 'development' : 'production' });
+    }
 
-		// Register PWA service worker
-		if (pwaInfo) {
+		// Register PWA service worker - skip in native app
+		if (pwaInfo && !isNativeApp()) {
 			const { registerSW } = await import('virtual:pwa-register');
 			registerSW({
 				immediate: true,
@@ -61,12 +72,27 @@
 			});
 		}
 		
+		// Hide splash screen once app is ready (Capacitor only)
+		if (isNativeApp()) {
+			try {
+				const { SplashScreen } = await import('@capacitor/splash-screen');
+				await SplashScreen.hide();
+				console.log('✅ Splash screen hidden');
+			} catch (e) {
+				console.error('Failed to hide splash:', e);
+			}
+		}
+
+		console.log('🚀 App onMount - about to setup auth listener');
+		
 		// Listen to auth changes and invalidate layout when session changes
 		const { data: authData } = supabase.auth.onAuthStateChange((event: string, newSession: any) => {
 			if (newSession?.expires_at !== session?.expires_at) {
 				invalidate('supabase:auth')
 			}
 		})
+		
+		console.log('✅ App fully loaded');
 		
 		return () => authData.subscription.unsubscribe()
 	});
