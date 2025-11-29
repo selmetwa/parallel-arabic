@@ -99,6 +99,7 @@
       const data = await response.json();
 
       if (!response.ok) {
+        await goto(`/lessons/structured/${targetDialect}`, { replaceState: true });
         throw new Error(data.error || 'Failed to save onboarding data');
       }
 
@@ -108,6 +109,10 @@
     } catch (e) {
       error = e instanceof Error ? e.message : 'Something went wrong';
       isSubmitting = false;
+    } finally {
+      isSubmitting = false;
+      await goto(`/lessons/structured/${targetDialect}`, { replaceState: true });
+      handleCloseModal();
     }
   }
 </script>

@@ -12,8 +12,8 @@
   let { isOpen = false, handleCloseModal = () => {} }: Props = $props();
 </script>
 
-<Modal isOpen={isOpen} handleCloseModal={handleCloseModal} width="max(70%, 600px)" height="fit-content">
-  <div class="flex flex-col h-full bg-tile-400 rounded-lg overflow-hidden">
+<Modal isOpen={isOpen} handleCloseModal={handleCloseModal} width="min(90%, 600px)" height="fit-content">
+  <div class="flex flex-col bg-tile-400 rounded-lg overflow-hidden">
     <!-- Header -->
     <div class="bg-tile-500 border-b border-tile-600 p-6 text-center">
         <h2 class="text-2xl font-bold text-text-300 mb-2">Unlock Full Access</h2>
@@ -22,7 +22,7 @@
     </div>
 
     <!-- Content -->
-    <div class="p-6 flex-grow overflow-y-auto">
+    <div class="p-6 overflow-y-auto max-h-[50vh]">
         <ul class="flex flex-col gap-3 text-text-200">
             <li class="flex items-start gap-3 bg-tile-300/50 p-3 rounded-lg border border-tile-500">
                 <div class="shrink-0 mt-1"><Checkmark /></div>
