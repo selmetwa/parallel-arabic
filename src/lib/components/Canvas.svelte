@@ -1,101 +1,94 @@
 <script>
-  import { run } from 'svelte/legacy';
+	import { getStroke } from 'perfect-freehand';
 
-  import { writable } from 'svelte/store';
-  import { getStroke } from 'perfect-freehand';
+	let { letter, size } = $props();
 
-  let { letter, size } = $props();
+	let points = $state([[]]);
+	let pathData = $state([]);
 
-  
-  const points = writable([[]]);
+	function getSvgPathFromStroke(stroke) {
+		if (!stroke.length) return "";
 
-  export function getSvgPathFromStroke(stroke) {
-    if (!stroke.length) return "";
+		const d = stroke.reduce(
+			(acc, [x0, y0], i, arr) => {
+				const [x1, y1] = arr[(i + 1) % arr.length];
+				acc.push(x0, y0, (x0 + x1) / 2, (y0 + y1) / 2);
+				return acc;
+			},
+			["M", ...stroke[0], "Q"]
+		);
 
-    const d = stroke.reduce(
-      (acc, [x0, y0], i, arr) => {
-        const [x1, y1] = arr[(i + 1) % arr.length];
-        acc.push(x0, y0, (x0 + x1) / 2, (y0 + y1) / 2);
-        return acc;
-      },
-      ["M", ...stroke[0], "Q"]
-    );
+		d.push("Z");
+		return d.join(" ");
+	}
 
-    d.push("Z");
-    return d.join(" ");
-  }
+	function handlePointerDown(e) {
+		e.target.setPointerCapture(e.pointerId);
+		const rect = e.target.getBoundingClientRect();
+		points = [...points, [[e.clientX - rect.left, e.clientY - rect.top, e.pressure]]];
+	}
 
-  function handlePointerDown(e) {
-    e.target.setPointerCapture(e.pointerId);
-    const rect = e.target.getBoundingClientRect();
-    points.update(points => {
-      points.push([[e.clientX - rect.left, e.clientY - rect.top, e.pressure]]);
-      return points;
-    });
-  }
+	function handlePointerMove(e) {
+		if (e.buttons !== 1) return;
+		const rect = e.target.getBoundingClientRect();
+		const lastIndex = points.length - 1;
+		points[lastIndex] = [...points[lastIndex], [e.clientX - rect.left, e.clientY - rect.top, e.pressure]];
+	}
 
-  function handlePointerMove(e) {
-    if (e.buttons !== 1) return;
-    const rect = e.target.getBoundingClientRect();
-    points.update(points => {
-      points[points.length - 1].push([e.clientX - rect.left, e.clientY - rect.top, e.pressure]);
-      return points;
-    });
-  }
+	function clear() {
+		points = [[]];
+	}
 
-  let pathData = $state([]);
+	// Clear when letter changes
+	$effect(() => {
+		if (letter) {
+			clear();
+		}
+	});
 
-
-  function clear() {
-    points.set([[]]);
-  }
-  $effect(() => {
-    if (letter) {
-      clear()
-    }
-  });
-  $effect(() => {
-    pathData = $points.map(strokePoints => {
-      const stroke = getStroke(strokePoints, {
-        size: size,
-        thinning: 0.5,
-        smoothing: 0.2,
-        streamline: 0.2,
-        simulatePressure: true,
-        start: {
-          taper: 0,
-          easing: (t) => 1 - Math.cos((t * Math.PI) / 2),
-        },
-        end: {
-          taper: 0,
-          easing: (t) => 1 - Math.cos((t * Math.PI) / 2),
-        },
-      });
-      return getSvgPathFromStroke(stroke);
-    });
-  });
+	// Update path data when points change
+	$effect(() => {
+		pathData = points.map(strokePoints => {
+			const stroke = getStroke(strokePoints, {
+				size: size,
+				thinning: 0.5,
+				smoothing: 0.2,
+				streamline: 0.2,
+				simulatePressure: true,
+				start: {
+					taper: 0,
+					easing: (t) => 1 - Math.cos((t * Math.PI) / 2),
+				},
+				end: {
+					taper: 0,
+					easing: (t) => 1 - Math.cos((t * Math.PI) / 2),
+				},
+			});
+			return getSvgPathFromStroke(stroke);
+		});
+	});
 </script>
 
 <div class="wrapper">
-  <button onclick={clear} class="text-text-200 underline mb-2">Clear</button>
-  <svg onpointerdown={handlePointerDown} onpointermove={handlePointerMove} style="touch-action: none;">
-    {#each pathData as path, i (i)}
-      <path d={path} />
-    {/each}
-  </svg>
+	<button onclick={clear} class="text-text-200 underline mb-2">Clear</button>
+	<svg onpointerdown={handlePointerDown} onpointermove={handlePointerMove} style="touch-action: none;">
+		{#each pathData as path, i (i)}
+			<path d={path} />
+		{/each}
+	</svg>
 </div>
 
 <style>
-  .wrapper {
-    user-select: none;
-  }
+	.wrapper {
+		user-select: none;
+	}
 
-  svg {
-    width: 100%;
-    height: 500px;
-    border: 2px solid var(--tile6);
-    fill: var(--text3);
-    background-color: var(--tile4);
-    touch-action: none;
-  }
+	svg {
+		width: 100%;
+		height: 500px;
+		border: 2px solid var(--tile6);
+		fill: var(--text3);
+		background-color: var(--tile4);
+		touch-action: none;
+	}
 </style>
