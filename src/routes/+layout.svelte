@@ -191,6 +191,7 @@
         {handleOpenDrawer} 
         session={data.session}
         userEmail={data?.user?.email ?? ""}
+        targetDialect={data.targetDialect}
       />
 			<DialectNavigation />
         {@render children()}

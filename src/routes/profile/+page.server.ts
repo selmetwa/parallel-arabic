@@ -95,5 +95,53 @@ export const actions: Actions = {
 	logout: async () => {
 		// Redirect to the main logout endpoint for consistency
 		throw redirect(302, '/auth/logout');
+	},
+	updateTargetDialect: async ({ request, locals: { safeGetSession } }) => {
+		const { session, user } = await safeGetSession();
+		
+		if (!session || !user) {
+			return {
+				success: false,
+				error: 'You must be logged in to update your dialect'
+			};
+		}
+
+		const formData = await request.formData();
+		const targetDialect = formData.get('target_dialect') as string;
+
+		// Validate dialect
+		const validDialects = ['egyptian-arabic', 'fusha', 'levantine', 'darija'];
+		if (!targetDialect || !validDialects.includes(targetDialect)) {
+			return {
+				success: false,
+				error: 'Invalid dialect selected'
+			};
+		}
+
+		try {
+			const { error: updateError } = await supabase
+				.from('user')
+				.update({ target_dialect: targetDialect })
+				.eq('id', user.id);
+
+			if (updateError) {
+				console.error('Error updating target_dialect:', updateError);
+				return {
+					success: false,
+					error: 'Failed to update dialect'
+				};
+			}
+
+			return {
+				success: true,
+				targetDialect
+			};
+		} catch (e) {
+			console.error('Exception updating target_dialect:', e);
+			return {
+				success: false,
+				error: 'Something went wrong'
+			};
+		}
 	}
 };

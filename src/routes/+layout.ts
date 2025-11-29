@@ -60,12 +60,13 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
       data: { user },
     } = await supabase.auth.getUser()
 
-    // Preserve showOnboarding from server data
+    // Preserve showOnboarding and targetDialect from server data
     return { 
       session, 
       supabase, 
       user,
-      showOnboarding: data.showOnboarding ?? false
+      showOnboarding: data.showOnboarding ?? false,
+      targetDialect: data.targetDialect ?? null
     }
   } catch (error) {
     console.error('❌ [+layout.ts] Error in client layout load:', error)
@@ -82,7 +83,8 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
         session: null, 
         supabase: fallbackSupabase, 
         user: null,
-        showOnboarding: data.showOnboarding ?? false
+        showOnboarding: data.showOnboarding ?? false,
+        targetDialect: data.targetDialect ?? null
       }
     } catch (fallbackError) {
       console.error('❌ [+layout.ts] Fallback also failed:', fallbackError)

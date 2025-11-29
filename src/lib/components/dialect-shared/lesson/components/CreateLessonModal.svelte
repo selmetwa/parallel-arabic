@@ -268,19 +268,19 @@
 			// Set user-friendly error messages based on error type
 			if (errorMsg.includes('Failed to parse JSON')) {
 				generationError = 'AI Response Format Error';
-				errorDetails = 'The AI generated content in an unexpected format. This is usually temporary. Please try again, and if the issue persists, try adjusting your topic or reducing the sub-lesson count.';
+				errorDetails = 'The AI generated content in an unexpected format. This is usually temporary. Please try again, and if the issue persists, try adjusting your topic or selecting a shorter lesson length.';
 			} else if (errorMsg.includes('fetch') || errorMsg.includes('network')) {
 				generationError = 'Connection Error';
 				errorDetails = 'Unable to reach the server. Please check your internet connection and try again.';
 			} else if (errorMsg.includes('timeout') || errorMsg.includes('time out')) {
 				generationError = 'Request Timeout';
-				errorDetails = 'The generation took too long. Try creating a simpler lesson or reducing the number of sub-lessons.';
+				errorDetails = 'The generation took too long. Try creating a simpler lesson or selecting a shorter lesson length.';
 			} else if (errorMsg.includes('rate limit') || errorMsg.includes('quota')) {
 				generationError = 'Service Limit Reached';
 				errorDetails = 'Too many requests in a short time. Please wait a moment and try again.';
 			} else {
 				generationError = 'Generation Failed';
-				errorDetails = errorMsg || 'An unexpected error occurred. Please try again. If the problem persists, try simplifying your request or reducing the sub-lesson count.';
+				errorDetails = errorMsg || 'An unexpected error occurred. Please try again. If the problem persists, try simplifying your request or selecting a shorter lesson length.';
 			}
 			
 			// Show error toast
@@ -328,10 +328,10 @@
 	];
 
 	const subLessonCountOptions = [
-		{ value: 2, label: '2 sub-lessons (Quick)' },
-		{ value: 3, label: '3 sub-lessons (Standard)' },
-		{ value: 4, label: '4 sub-lessons (Comprehensive)' },
-		{ value: 5, label: '5 sub-lessons (In-depth)' }
+		{ value: 2, label: 'Quick (~16 steps)' },
+		{ value: 3, label: 'Standard (~24 steps)' },
+		{ value: 4, label: 'Comprehensive (~32 steps)' },
+		{ value: 5, label: 'In-depth (~40 steps)' }
 	];
 </script>
 
@@ -493,7 +493,7 @@
 						</div>
 					</div>
 
-					<!-- Sub-lesson Count (keep for review words mode) -->
+					<!-- Lesson Length (keep for review words mode) -->
 					<div class="flex flex-col gap-2">
 						<label class="text-sm font-bold text-text-300">Lesson Length</label>
 						<div class="flex flex-col gap-2">
@@ -559,7 +559,7 @@
 							</div>
 						</div>
 
-						<!-- Sub-lesson Count Selection -->
+						<!-- Lesson Length Selection -->
 						<div class="flex flex-col gap-2">
 							<label class="text-sm font-bold text-text-300">Lesson Length</label>
 							<div class="flex flex-col gap-2">
