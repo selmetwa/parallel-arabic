@@ -31,6 +31,8 @@
   let deletingIds = $state<Set<string>>(new Set());
   let filterStatus = $state<'all' | 'learning' | 'due' | 'scheduled' | 'mastered'>('all');
   let searchQuery = $state('');
+  let sortBy = $state<'repetitions' | 'nextDue' | 'recentlyAdded'>('recentlyAdded');
+  let sortOrder = $state<'asc' | 'desc'>('desc');
 
   onMount(() => {
     loadWords();
@@ -92,7 +94,7 @@
   function getStatusColor(status: ReviewWord['status']): string {
     switch (status) {
       case 'learning':
-        return 'bg-blue-500/20 text-blue-300 border-blue-500/50';
+        return 'bg-blue-500/40 text-blue-100 border-blue-400';
       case 'due':
         return 'bg-red-500/20 text-red-300 border-red-500/50';
       case 'scheduled':
@@ -132,8 +134,47 @@
       );
     }
 
-    return filtered;
+    // Sort the filtered words
+    const sorted = [...filtered].sort((a, b) => {
+      let comparison = 0;
+      
+      switch (sortBy) {
+        case 'repetitions':
+          comparison = a.repetitions - b.repetitions;
+          break;
+        case 'nextDue':
+          // Sort by next review date (null values go to end)
+          if (a.nextReviewDate === null && b.nextReviewDate === null) {
+            comparison = 0;
+          } else if (a.nextReviewDate === null) {
+            comparison = 1; // null goes to end
+          } else if (b.nextReviewDate === null) {
+            comparison = -1; // null goes to end
+          } else {
+            comparison = a.nextReviewDate - b.nextReviewDate;
+          }
+          break;
+        case 'recentlyAdded':
+          comparison = a.createdAt - b.createdAt;
+          break;
+      }
+      
+      // Apply sort order
+      return sortOrder === 'asc' ? comparison : -comparison;
+    });
+
+    return sorted;
   });
+
+  function handleSort(newSortBy: 'repetitions' | 'nextDue' | 'recentlyAdded') {
+    // If clicking the same sort, toggle order; otherwise set new sort and default to desc
+    if (sortBy === newSortBy) {
+      sortOrder = sortOrder === 'asc' ? 'desc' : 'asc';
+    } else {
+      sortBy = newSortBy;
+      sortOrder = 'desc';
+    }
+  }
 
   const statusCounts = $derived.by(() => {
     return {
@@ -154,71 +195,69 @@
     </header>
 
     <!-- Filters and Search -->
-    <div class="mb-6 flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
-      <div class="flex flex-wrap gap-2">
-        <button
-          onclick={() => filterStatus = 'all'}
-          class={cn(
-            "px-4 py-2 rounded-lg border transition-colors",
-            filterStatus === 'all'
-              ? "bg-tile-600 text-text-100 border-tile-500"
-              : "bg-tile-300 text-text-200 border-tile-500 hover:bg-tile-400"
-          )}
-        >
-          All ({statusCounts.all})
-        </button>
-        <button
-          onclick={() => filterStatus = 'learning'}
-          class={cn(
-            "px-4 py-2 rounded-lg border transition-colors",
-            filterStatus === 'learning'
-              ? "bg-blue-500/30 text-blue-200 border-blue-500/50"
-              : "bg-tile-300 text-text-200 border-tile-500 hover:bg-tile-400"
-          )}
-        >
-          Learning ({statusCounts.learning})
-        </button>
-        <button
-          onclick={() => filterStatus = 'due'}
-          class={cn(
-            "px-4 py-2 rounded-lg border transition-colors",
-            filterStatus === 'due'
-              ? "bg-red-500/30 text-red-200 border-red-500/50"
-              : "bg-tile-300 text-text-200 border-tile-500 hover:bg-tile-400"
-          )}
-        >
-          Due ({statusCounts.due})
-        </button>
-        <button
-          onclick={() => filterStatus = 'scheduled'}
-          class={cn(
-            "px-4 py-2 rounded-lg border transition-colors",
-            filterStatus === 'scheduled'
-              ? "bg-yellow-500/30 text-yellow-200 border-yellow-500/50"
-              : "bg-tile-300 text-text-200 border-tile-500 hover:bg-tile-400"
-          )}
-        >
-          Scheduled ({statusCounts.scheduled})
-        </button>
-        <button
-          onclick={() => filterStatus = 'mastered'}
-          class={cn(
-            "px-4 py-2 rounded-lg border transition-colors",
-            filterStatus === 'mastered'
-              ? "bg-green-500/30 text-green-200 border-green-500/50"
-              : "bg-tile-300 text-text-200 border-tile-500 hover:bg-tile-400"
-          )}
-        >
-          Mastered ({statusCounts.mastered})
-        </button>
+    <div class="mb-6 flex flex-col gap-4">
+      <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
+        <div class="flex flex-wrap gap-2">
+          <button
+            onclick={() => filterStatus = 'all'}
+            class={cn(
+              "px-4 py-2 rounded-lg border transition-colors",
+              filterStatus === 'all'
+                ? "bg-tile-600 text-text-100 border-tile-500"
+                : "bg-tile-300 text-text-200 border-tile-500 hover:bg-tile-400"
+            )}
+          >
+            All ({statusCounts.all}) in review
+          </button>
+        </div>
+
+        <input
+          type="text"
+          placeholder="Search words..."
+          bind:value={searchQuery}
+          class="px-4 py-2 rounded-lg border border-tile-500 bg-tile-300 text-text-100 placeholder-text-200 focus:outline-none focus:ring-2 focus:ring-tile-500"
+        />
       </div>
 
-      <input
-        type="text"
-        placeholder="Search words..."
-        bind:value={searchQuery}
-        class="px-4 py-2 rounded-lg border border-tile-500 bg-tile-300 text-text-100 placeholder-text-200 focus:outline-none focus:ring-2 focus:ring-tile-500"
-      />
+      <!-- Sort Controls -->
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="text-text-200 text-sm font-medium">Sort by:</span>
+        <div class="flex flex-wrap gap-2">
+          <button
+            onclick={() => handleSort('recentlyAdded')}
+            class={cn(
+              "px-3 py-1.5 rounded-lg border text-sm transition-colors",
+              sortBy === 'recentlyAdded'
+                ? "bg-tile-600 text-text-100 border-tile-500"
+                : "bg-tile-300 text-text-200 border-tile-500 hover:bg-tile-400"
+            )}
+          >
+            Recently Added {sortBy === 'recentlyAdded' ? (sortOrder === 'desc' ? '↓' : '↑') : ''}
+          </button>
+          <button
+            onclick={() => handleSort('repetitions')}
+            class={cn(
+              "px-3 py-1.5 rounded-lg border text-sm transition-colors",
+              sortBy === 'repetitions'
+                ? "bg-tile-600 text-text-100 border-tile-500"
+                : "bg-tile-300 text-text-200 border-tile-500 hover:bg-tile-400"
+            )}
+          >
+            Repetitions {sortBy === 'repetitions' ? (sortOrder === 'desc' ? '↓' : '↑') : ''}
+          </button>
+          <button
+            onclick={() => handleSort('nextDue')}
+            class={cn(
+              "px-3 py-1.5 rounded-lg border text-sm transition-colors",
+              sortBy === 'nextDue'
+                ? "bg-tile-600 text-text-100 border-tile-500"
+                : "bg-tile-300 text-text-200 border-tile-500 hover:bg-tile-400"
+            )}
+          >
+            Next Due {sortBy === 'nextDue' ? (sortOrder === 'desc' ? '↓' : '↑') : ''}
+          </button>
+        </div>
+      </div>
     </div>
 
     <!-- Loading State -->
@@ -256,8 +295,34 @@
                 <th class="px-4 py-3 text-left text-text-100 font-semibold">Transliteration</th>
                 <th class="px-4 py-3 text-left text-text-100 font-semibold">Dialect</th>
                 <th class="px-4 py-3 text-left text-text-100 font-semibold">Status</th>
-                <th class="px-4 py-3 text-left text-text-100 font-semibold">Repetitions</th>
-                <th class="px-4 py-3 text-left text-text-100 font-semibold">Next Review</th>
+                <th 
+                  class="px-4 py-3 text-left text-text-100 font-semibold cursor-pointer hover:bg-tile-500 transition-colors"
+                  onclick={() => handleSort('repetitions')}
+                  role="button"
+                  tabindex="0"
+                  onkeydown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      handleSort('repetitions');
+                    }
+                  }}
+                >
+                  Repetitions {sortBy === 'repetitions' ? (sortOrder === 'desc' ? '↓' : '↑') : ''}
+                </th>
+                <th 
+                  class="px-4 py-3 text-left text-text-100 font-semibold cursor-pointer hover:bg-tile-500 transition-colors"
+                  onclick={() => handleSort('nextDue')}
+                  role="button"
+                  tabindex="0"
+                  onkeydown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      handleSort('nextDue');
+                    }
+                  }}
+                >
+                  Next Review {sortBy === 'nextDue' ? (sortOrder === 'desc' ? '↓' : '↑') : ''}
+                </th>
                 <th class="px-4 py-3 text-left text-text-100 font-semibold">Actions</th>
               </tr>
             </thead>
@@ -294,10 +359,10 @@
                       onclick={() => deleteWord(word.id)}
                       disabled={deletingIds.has(word.id)}
                       class={cn(
-                        "px-3 py-1 rounded text-sm transition-colors",
+                        "px-3 py-1 rounded text-sm font-medium transition-colors",
                         deletingIds.has(word.id)
                           ? "bg-tile-500 text-text-200 cursor-not-allowed"
-                          : "bg-red-500/20 text-red-300 hover:bg-red-500/30 border border-red-500/50"
+                          : "bg-red-500/40 text-red-100 hover:bg-red-500/50 border border-red-400"
                       )}
                     >
                       {deletingIds.has(word.id) ? 'Removing...' : 'Remove'}

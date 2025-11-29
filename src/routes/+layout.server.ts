@@ -12,7 +12,8 @@ export const load: LayoutServerLoad = async ({ locals: { safeGetSession }, cooki
         cookies: cookies.getAll(),
         isSubscribed: false,
         dbUser: null,
-        showOnboarding: false
+        showOnboarding: false,
+        targetDialect: null
       };
     }
 
@@ -34,20 +35,22 @@ export const load: LayoutServerLoad = async ({ locals: { safeGetSession }, cooki
       user: user,  // Database user for backward compatibility
       cookies: cookies.getAll(),
       isSubscribed: isSubscribed,
-      showOnboarding: showOnboarding
+      showOnboarding: showOnboarding,
+      targetDialect: user?.target_dialect || null
     };
   } catch (error) {
     console.error('❌ [+layout.server.ts] Error in layout load:', error)
     console.error('❌ [+layout.server.ts] Error stack:', error instanceof Error ? error.stack : 'No stack trace')
     
     // Return minimal safe data to prevent complete failure
-    return {
-      session: null,
-      user: null,
-      cookies: cookies.getAll(),
-      isSubscribed: false,
-      dbUser: null,
-      showOnboarding: false
-    };
+      return {
+        session: null,
+        user: null,
+        cookies: cookies.getAll(),
+        isSubscribed: false,
+        dbUser: null,
+        showOnboarding: false,
+        targetDialect: null
+      };
   }
 };
