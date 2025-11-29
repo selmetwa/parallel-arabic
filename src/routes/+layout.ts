@@ -1,24 +1,28 @@
 import { createBrowserClient, createServerClient, isBrowser } from '@supabase/ssr'
 import { PUBLIC_SUPABASE_PUBLISHABLE_KEY, PUBLIC_SUPABASE_URL } from '$env/static/public'
 import type { LayoutLoad } from './$types'
-import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+import { browser } from '$app/environment';
 
-export const prerender = false; // Default to not prerender
-export const ssr = false;
+export const prerender = false; // Dynamic pages need auth
+export const ssr = true;        // Enable SSR for faster initial load
 
 // Helper to detect if running in Capacitor native app
 const isNativeApp = () => {
-  if (typeof window === 'undefined') return false;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  if (!browser) return false;
   return !!(window as unknown as { Capacitor?: { isNativePlatform?: () => boolean } }).Capacitor?.isNativePlatform?.();
 };
 
-// Only inject Vercel Speed Insights when NOT in native app
-if (typeof window !== 'undefined' && !isNativeApp()) {
-  injectSpeedInsights();
-}
+// Track if Speed Insights has been injected
+let speedInsightsInjected = false;
 
 export const load: LayoutLoad = async ({ data, depends, fetch }) => {
+  // Inject Speed Insights once on client, not in native app
+  if (browser && !speedInsightsInjected && !isNativeApp()) {
+    const { injectSpeedInsights } = await import('@vercel/speed-insights/sveltekit');
+    injectSpeedInsights();
+    speedInsightsInjected = true;
+  }
+
   try {
     /**
      * Declare a dependency so the layout can be invalidated, for example, on
