@@ -7,11 +7,42 @@
   <meta name="description" content="Language learning platform for Egyptian Arabic">
   <meta name="keywords" content="Arabic, Egyptian Arabic, Learn Arabic">
   <meta name="author" content="Sherif Elmetwally">
-  <script type="module" src="https://cdn.jsdelivr.net/npm/arabic-virtual-keyboard@0.2.8/+esm"></script>
-  <script src="https://bundle.run/pixelmatch@5.2.1"></script>
-  <script src="https://cdn.skypack.dev/lottie-web"></script>
-  <script defer id="site-behaviour-script" data-secret="e25ce093-4111-4e8b-9dc0-f6b715e69c3a" src="https://sitebehaviour-cdn.fra1.cdn.digitaloceanspaces.com/index.min.js">
+  
+  <!-- Debug: Log when head starts loading -->
+  <script>console.log('🔵 HTML head loading...');</script>
+  
+  <!-- External scripts - loaded async to not block app startup -->
+  <script>
+    // Only load CDN scripts if not in Capacitor native app
+    if (!window.Capacitor?.isNativePlatform?.()) {
+      // Arabic virtual keyboard
+      var s1 = document.createElement('script');
+      s1.type = 'module';
+      s1.src = 'https://cdn.jsdelivr.net/npm/arabic-virtual-keyboard@0.2.8/+esm';
+      document.head.appendChild(s1);
+      
+      // Pixelmatch
+      var s2 = document.createElement('script');
+      s2.src = 'https://bundle.run/pixelmatch@5.2.1';
+      s2.async = true;
+      document.head.appendChild(s2);
+      
+      // Lottie
+      var s3 = document.createElement('script');
+      s3.src = 'https://cdn.skypack.dev/lottie-web';
+      s3.async = true;
+      document.head.appendChild(s3);
+      
+      // Site behaviour (analytics)
+      var s4 = document.createElement('script');
+      s4.defer = true;
+      s4.id = 'site-behaviour-script';
+      s4.dataset.secret = 'e25ce093-4111-4e8b-9dc0-f6b715e69c3a';
+      s4.src = 'https://sitebehaviour-cdn.fra1.cdn.digitaloceanspaces.com/index.min.js';
+      document.head.appendChild(s4);
+    }
   </script>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap" rel="stylesheet">

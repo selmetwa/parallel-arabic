@@ -45,7 +45,10 @@
 
 	let attempt: Attempt[] = $state([]);
 	let attemptTemp: Attempt[] = $state([]);
-	let keyboard = $state('virtual');
+	let keyboard = $state<'virtual' | 'physical'>('virtual');
+	
+	// Detect mobile on mount and default to native keyboard
+	const isMobile = () => typeof window !== 'undefined' && window.innerWidth < 768;
 	let isCorrect = $state(false);
 	let isInfoModalOpen = $state(false);
 	let showHint = $state(false);
@@ -170,7 +173,8 @@
 	}
 
 	function checkInput() {
-		if (!keyboardElement) return;
+		// Only check virtual keyboard when it's active
+		if (keyboard !== 'virtual' || !keyboardElement) return;
 		const value = keyboardElement.getTextAreaValue();
 		if (typeof value === 'string') {
 			compareMyInput(value);
@@ -178,6 +182,11 @@
 	}
 
 	onMount(() => {
+		// Default to native keyboard on mobile
+		if (isMobile()) {
+			keyboard = 'physical';
+		}
+		
 		// Find the keyboard element within this component's container
 		if (keyboardContainer) {
 			keyboardElement = keyboardContainer.querySelector('arabic-keyboard') as Keyboard | null;
@@ -476,17 +485,60 @@
 		</p>
 	</div>
 	
-	<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2 mb-6">
-		<Button onClick={() => (showHint = !showHint)} type="button">
-			{showHint ? 'Hide' : 'Show'} Hint
-		</Button>
-		<Button onClick={() => (showAnswer = !showAnswer)} type="button">
-			{showAnswer ? 'Hide' : 'Show'} Answer
-		</Button>
-		<AudioButton text={sentence.arabic} dialect={dialect}>Listen</AudioButton>
-		<Button onClick={compareDialects} type="button">
-			Compare Dialects
-		</Button>
+	<div class="flex flex-wrap items-center justify-center gap-2 mb-6 p-3 bg-tile-400 rounded-xl border border-tile-500">
+		<!-- Toggle buttons group -->
+		<div class="flex gap-1.5">
+			<button 
+				onclick={() => (showHint = !showHint)} 
+				class="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold rounded-lg transition-all duration-200 {showHint ? 'bg-amber-600 text-white shadow-md' : 'bg-tile-500 text-text-300 hover:bg-tile-600 border border-tile-600'}"
+			>
+				<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+				</svg>
+				<span>{showHint ? 'Hide' : 'Show'} Hint</span>
+			</button>
+			<button 
+				onclick={() => (showAnswer = !showAnswer)} 
+				class="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold rounded-lg transition-all duration-200 {showAnswer ? 'bg-amber-600 text-white shadow-md' : 'bg-tile-500 text-text-300 hover:bg-tile-600 border border-tile-600'}"
+			>
+				<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+				</svg>
+				<span>{showAnswer ? 'Hide' : 'Show'} Answer</span>
+			</button>
+		</div>
+		
+		<!-- Divider -->
+		<div class="hidden sm:block w-px h-8 bg-tile-600"></div>
+		
+		<!-- Audio button -->
+		<button 
+			onclick={() => {
+				const audioBtn = document.querySelector('.sentence-audio-btn') as HTMLButtonElement;
+				audioBtn?.click();
+			}}
+			class="flex items-center gap-1.5 px-4 py-2 text-sm font-semibold bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition-all duration-200 shadow-sm hover:shadow-md"
+		>
+			<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+				<path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.617.793L4.383 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.383l4-3.617a1 1 0 011.617.793zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"/>
+			</svg>
+			<span>Listen</span>
+		</button>
+		<AudioButton text={sentence.arabic} dialect={dialect} className="sentence-audio-btn hidden" />
+		
+		<!-- Compare button -->
+		<button 
+			onclick={compareDialects}
+			class="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-all duration-200 shadow-sm hover:shadow-md"
+		>
+			<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+			</svg>
+			<span>Compare</span>
+		</button>
+		
+		<!-- Save button -->
 		<SaveButton
 			objectToSave={{
 				arabic: sentence.arabic,
@@ -495,7 +547,17 @@
 			}}
 			type="Sentence"
 		/>
-		<Button onClick={resetSentences} type="button">Reset</Button>
+		
+		<!-- Reset button -->
+		<button 
+			onclick={resetSentences}
+			class="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold bg-rose-600 text-white rounded-lg hover:bg-rose-700 transition-all duration-200 shadow-sm hover:shadow-md"
+		>
+			<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+			</svg>
+			<span>Reset</span>
+		</button>
 	</div>
 	
 	<div class="text-center mb-6">
@@ -588,13 +650,19 @@
 	</Modal>
 	
 	<div class="mb-6 p-4" bind:this={keyboardContainer}>
-		<div class="mb-3 flex items-center justify-between">
-			<button onclick={toggleKeyboard} class="text-sm text-text-300 underline">
-				{keyboard === 'virtual' ? 'Use native keyboard' : 'Use builtin keyboard'}
+		<div class="mb-3 flex items-center justify-between gap-2">
+			<button 
+				onclick={toggleKeyboard} 
+				class="flex items-center gap-2 px-3 py-1.5 text-sm text-text-300 bg-tile-400 hover:bg-tile-500 border border-tile-500 rounded-lg transition-colors"
+			>
+				<span>{keyboard === 'virtual' ? '📱 Use native keyboard' : '⌨️ Use virtual keyboard'}</span>
 			</button>
 			{#if keyboard === 'virtual'}
-				<button class="text-sm text-text-300 underline" onclick={openInfoModal}>
-					How does this keyboard work?
+				<button 
+					class="text-sm text-text-200 hover:text-text-300 underline transition-colors" 
+					onclick={openInfoModal}
+				>
+					How does this work?
 				</button>
 			{/if}
 		</div>
@@ -605,9 +673,10 @@
 		
 		<textarea
 			oninput={onRegularKeyboard}
-			value={keyboardValue}
-			placeholder="Type your answer here..."
-			class={cn('block min-h-32 w-full rounded border bg-tile-300 p-3 text-text-300', {
+			bind:value={keyboardValue}
+			placeholder="اكتب هنا..."
+			dir="rtl"
+			class={cn('block min-h-40 w-full text-2xl sm:text-3xl font-arabic text-text-300 bg-tile-200 border-2 border-tile-500 rounded-xl p-4 focus:border-tile-700 focus:outline-none focus:ring-2 focus:ring-tile-600/50 transition-all placeholder:text-text-100', {
 				hidden: keyboard === 'virtual'
 			})}
 		></textarea>

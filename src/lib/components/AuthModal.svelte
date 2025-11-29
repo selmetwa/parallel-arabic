@@ -15,8 +15,8 @@
   }
 </script>
 
-<Modal isOpen={isOpen} handleCloseModal={handleCloseModal} width="max(70%, 500px)" height="fit-content">
-  <div class="flex flex-col h-full bg-tile-400 rounded-lg overflow-hidden">
+<Modal isOpen={isOpen} handleCloseModal={handleCloseModal} width="min(90%, 500px)" height="fit-content">
+  <div class="flex flex-col bg-tile-400 rounded-lg overflow-hidden">
     <!-- Header -->
     <div class="bg-tile-500 border-b border-tile-600 p-6 text-center">
         <h2 class="text-2xl font-bold text-text-300 mb-2">Login Required</h2>
@@ -24,7 +24,7 @@
     </div>
 
     <!-- Content -->
-    <div class="p-6 flex-grow overflow-y-auto">
+    <div class="p-6 overflow-y-auto">
         <div class="text-center space-y-4">
             <div class="text-6xl mb-4">🔒</div>
             <p class="text-lg text-text-200">

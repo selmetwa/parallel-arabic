@@ -3,7 +3,20 @@ import { PUBLIC_SUPABASE_PUBLISHABLE_KEY, PUBLIC_SUPABASE_URL } from '$env/stati
 import type { LayoutLoad } from './$types'
 import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 
-injectSpeedInsights();
+export const prerender = false; // Default to not prerender
+export const ssr = false;
+
+// Helper to detect if running in Capacitor native app
+const isNativeApp = () => {
+  if (typeof window === 'undefined') return false;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return !!(window as unknown as { Capacitor?: { isNativePlatform?: () => boolean } }).Capacitor?.isNativePlatform?.();
+};
+
+// Only inject Vercel Speed Insights when NOT in native app
+if (typeof window !== 'undefined' && !isNativeApp()) {
+  injectSpeedInsights();
+}
 
 export const load: LayoutLoad = async ({ data, depends, fetch }) => {
   try {
