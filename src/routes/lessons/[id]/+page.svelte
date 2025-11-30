@@ -166,11 +166,7 @@
 	});
 </script>
 
-<svelte:head>
-	<title>
-		{isStepBasedLesson ? (lessonBody?.title || 'Lesson') : (lessonBody?.title?.english || 'Lesson')} - Parallel Arabic
-	</title>
-</svelte:head>
+<!-- SEO meta tags are now handled by +layout.svelte -->
 
 <!-- Step-based Lesson Player (new format) -->
 {#if isStepBasedLesson && showLessonPlayer}

@@ -18,6 +18,7 @@
   import { pwaInfo } from 'virtual:pwa-info';
   import { dev } from '$app/environment';
   import { injectAnalytics } from '@vercel/analytics/sveltekit';
+  import { getPageMeta, generateStructuredData } from '$lib/utils/seo';
 
   // Helper to detect if running in Capacitor native app
   const isNativeApp = () => {
@@ -131,10 +132,148 @@
 
 	// PWA manifest link
 	const webManifest = $derived(pwaInfo ? pwaInfo.webManifest.linkTag : '');
+
+	// Determine current page for SEO
+	const currentPage = $derived.by(() => {
+		const path = $page.url.pathname;
+		
+		// Extract page identifier from path
+		if (path === '/') return 'home';
+		if (path.startsWith('/lessons/')) {
+			// Check if it's a specific lesson or dialect lessons page
+			const parts = path.split('/').filter(p => p);
+			if (parts.length === 2 && parts[0] === 'lessons') {
+				// /lessons/[id] - specific lesson
+				return 'lesson';
+			}
+			// /lessons/[dialect] or /lessons/structured/[dialect]
+			return 'lessons';
+		}
+		if (path.startsWith('/stories/')) {
+			const parts = path.split('/').filter(p => p);
+			if (parts.length === 2 && parts[0] === 'stories') {
+				// /stories/[id] - specific story
+				return 'story';
+			}
+			// /stories/[dialect]
+			return 'stories';
+		}
+		if (path === '/review/import') return 'import';
+		if (path === '/review' || path.startsWith('/review/')) return 'review';
+		if (path === '/tutor') return 'tutor';
+		if (path === '/stories') return 'stories';
+		if (path === '/lessons') return 'lessons';
+		if (path.startsWith('/alphabet')) return 'alphabet';
+		if (path === '/videos') return 'videos';
+		if (path === '/about') return 'about';
+		if (path === '/faq') return 'faq';
+		
+		return 'home';
+	});
+
+	// Get page-specific data from page store
+	const pageData = $derived.by(() => {
+		// Try to get data from the page store if available
+		// This will be populated by individual page load functions
+		try {
+			return $page.data || {};
+		} catch {
+			return {};
+		}
+	});
+
+	// Generate SEO meta tags
+	const seoMeta = $derived.by(() => {
+		const pageType = currentPage;
+		const data = pageData;
+		
+		// Extract dialect from path if available
+		let pathParts: string[] = [];
+		try {
+			pathParts = $page.url.pathname.split('/').filter(p => p);
+		} catch {
+			pathParts = [];
+		}
+		
+		const dialect = pathParts.find(p => 
+			['egyptian-arabic', 'levantine', 'darija', 'fusha'].includes(p)
+		);
+		
+		// For lesson pages, try to get lesson data
+		if (pageType === 'lesson' && data?.lesson) {
+			return getPageMeta(pageType, {
+				title: data.lesson.title || data.lesson.title_arabic,
+				description: data.lesson.description,
+				id: data.lesson.id,
+				dialect: data.lesson.dialect || dialect
+			});
+		}
+		
+		// For story pages, try to get story data
+		if (pageType === 'story' && data?.story) {
+			return getPageMeta(pageType, {
+				title: data.story.title,
+				description: data.story.description,
+				id: data.story.id,
+				dialect: data.story.dialect || dialect
+			});
+		}
+		
+		return getPageMeta(pageType, { ...data, dialect });
+	});
+
+	// Generate structured data
+	const structuredData = $derived.by(() => {
+		const pageType = currentPage;
+		const data = pageData;
+		
+		// For lesson pages, use lesson data
+		if (pageType === 'lesson' && data?.lesson) {
+			return generateStructuredData(pageType, {
+				title: data.lesson.title || data.lesson.title_arabic,
+				description: data.lesson.description,
+				level: data.lesson.level
+			});
+		}
+		
+		// For story pages, use story data
+		if (pageType === 'story' && data?.story) {
+			return generateStructuredData(pageType, {
+				title: data.story.title,
+				description: data.story.description
+			});
+		}
+		
+		return generateStructuredData(pageType, data);
+	});
 </script>
 
 <svelte:head>
-	<title>Parallel Arabic</title>
+	<title>{seoMeta.title}</title>
+	<meta name="description" content={seoMeta.description} />
+	
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content={seoMeta.type || 'website'} />
+	<meta property="og:url" content={seoMeta.url || 'https://www.parallel-arabic.com'} />
+	<meta property="og:title" content={seoMeta.title} />
+	<meta property="og:description" content={seoMeta.description} />
+	<meta property="og:image" content={seoMeta.image || 'https://www.parallel-arabic.com/images/banner.png'} />
+	<meta property="og:site_name" content="Parallel Arabic" />
+	
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:url" content={seoMeta.url || 'https://www.parallel-arabic.com'} />
+	<meta name="twitter:title" content={seoMeta.title} />
+	<meta name="twitter:description" content={seoMeta.description} />
+	<meta name="twitter:image" content={seoMeta.image || 'https://www.parallel-arabic.com/images/banner.png'} />
+	
+	<!-- Additional SEO -->
+	<meta name="robots" content="index, follow" />
+	<link rel="canonical" href={seoMeta.url || 'https://www.parallel-arabic.com'} />
+	
+	<!-- Structured Data (JSON-LD) -->
+	{@html `<script type="application/ld+json">${JSON.stringify(structuredData)}</script>`}
+	
 	{@html webManifest}
 </svelte:head>
 
