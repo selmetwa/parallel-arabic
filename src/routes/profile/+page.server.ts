@@ -92,10 +92,6 @@ export const load = async ({ locals, parent }) => {
 };
 
 export const actions: Actions = {
-	logout: async () => {
-		// Redirect to the main logout endpoint for consistency
-		throw redirect(302, '/auth/logout');
-	},
 	updateTargetDialect: async ({ request, locals: { safeGetSession } }) => {
 		const { session, user } = await safeGetSession();
 		
