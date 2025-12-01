@@ -92,19 +92,19 @@
         <span>📊</span>
         <span>Your Statistics</span>
       </h2>
-      <div class="space-y-6">
-        <!-- All-Time Stats -->
-        <div class="bg-tile-400 border-2 border-tile-600 rounded-xl p-6 sm:p-8 shadow-lg">
-          <AllTimeStats user={data.user} />
-        </div>
+  <div class="space-y-6">
+    <!-- All-Time Stats -->
+    <div class="bg-tile-400 border-2 border-tile-600 rounded-xl p-6 sm:p-8 shadow-lg">
+      <AllTimeStats user={data.user} />
+    </div>
 
         <!-- Review Words Stats -->
-        <ReviewWordsStats wordStats={data.wordStats} />
+    <ReviewWordsStats wordStats={data.wordStats} />
 
-        <!-- Activity Graph -->
+    <!-- Activity Graph -->
         <div class="bg-tile-300 border border-tile-500 rounded-xl p-6">
           <h3 class="text-lg font-semibold text-text-300 mb-4">Activity Graph</h3>
-          <ContributionGraph />
+    <ContributionGraph />
         </div>
       </div>
     </section>
@@ -130,8 +130,8 @@
                 <p class="text-text-300 text-lg">
                   <span class={data.hasActiveSubscription ? "text-green-400 font-semibold" : "text-text-200"}>
                     {data.hasActiveSubscription ? '✓ Active' : 'Not active'}
-                  </span>
-                </p>
+            </span>
+          </p>
               </div>
             </div>
           </div>
@@ -158,9 +158,13 @@
                       await update();
                       await invalidateAll();
                       dialectUpdateSuccess = 'Dialect updated successfully!';
-                    } else if (result.type === 'failure' || result.data?.error) {
+                    } else if (result.type === 'failure') {
                       await update();
-                      dialectUpdateError = result.data?.error || 'Failed to update dialect';
+                      const errorMsg = result.data?.error;
+                      dialectUpdateError = typeof errorMsg === 'string' ? errorMsg : 'Failed to update dialect';
+                    } else if (result.type === 'error') {
+                      await update();
+                      dialectUpdateError = result.error?.toString() || 'Failed to update dialect';
                     } else {
                       await update();
                     }
@@ -190,35 +194,59 @@
                 <div class="bg-red-500/20 border border-red-400 text-red-300 px-4 py-2 rounded-lg text-sm">
                   {dialectUpdateError}
                 </div>
-              {/if}
+        {/if}
             </div>
 
             {#if data.learningReason || data.proficiencyLevel}
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-                {#if data.learningReason}
+        {#if data.learningReason}
                   <div>
                     <label class="block text-sm font-medium text-text-200 mb-1">Learning Reason</label>
                     <p class="text-text-300">{data.learningReason}</p>
                   </div>
-                {/if}
-                {#if data.proficiencyLevel}
+        {/if}
+        {#if data.proficiencyLevel}
                   <div>
                     <label class="block text-sm font-medium text-text-200 mb-1">Proficiency Level</label>
                     <p class="text-text-300">{data.proficiencyLevel}</p>
                   </div>
                 {/if}
               </div>
-            {/if}
-          </div>
-
+        {/if}
+      </div>
+      
           <!-- Account Actions -->
           <div class="border-t border-tile-500 pt-4">
             <h3 class="text-lg font-semibold text-text-300 mb-3">Account Actions</h3>
-            <form method="POST" action="?/logout" use:enhance>
-              <Button type="submit" className="bg-red-600 hover:bg-red-700">
-                Sign Out
-              </Button>
-            </form>
+            <Button 
+              type="button"
+              onClick={async () => {
+                console.log('🔍 [profile] Logout button clicked');
+                
+                try {
+                  const response = await fetch('/auth/logout', {
+                    method: 'POST',
+                    credentials: 'include' // Include cookies
+                  });
+                  
+                  console.log('🔍 [profile] Logout response status:', response.status);
+                  console.log('🔍 [profile] Logout response URL:', response.url);
+                  
+                  // Invalidate all data and navigate to home
+                  console.log('✅ [profile] Logout successful, navigating to home');
+                  await invalidateAll();
+                  await goto('/', { invalidateAll: true });
+                } catch (error) {
+                  console.error('❌ [profile] Error during logout:', error);
+                  // Even on error, try to navigate home
+                  await invalidateAll();
+                  await goto('/', { invalidateAll: true });
+                }
+              }}
+              className="bg-red-600 hover:bg-red-700"
+            >
+              Sign Out
+            </Button>
           </div>
         </div>
       </div>
@@ -234,24 +262,24 @@
         <!-- Generated Stories -->
         <div class="bg-tile-300 border border-tile-500 rounded-xl p-6 shadow-sm">
           <h3 class="text-lg font-semibold text-text-300 mb-4">Generated Stories</h3>
-          {#if data.userGeneratedStories && data.userGeneratedStories.length > 0}
+      {#if data.userGeneratedStories && data.userGeneratedStories.length > 0}
             <div class="space-y-3">
-              {#each data.userGeneratedStories as story}
+          {#each data.userGeneratedStories as story}
                 <div class="bg-tile-400 p-4 rounded-lg border border-tile-600 hover:border-tile-500 transition-colors">
                   <p class="text-text-300 font-medium mb-1">{story.story_body.title.english}</p>
-                  <p class="text-text-200 text-sm">{story.dialect} • {new Date(story.created_at).toLocaleDateString()}</p>
-                </div>
-              {/each}
+              <p class="text-text-200 text-sm">{story.dialect} • {new Date(story.created_at).toLocaleDateString()}</p>
             </div>
-          {:else}
+          {/each}
+        </div>
+      {:else}
             <div class="text-center py-8">
               <p class="text-text-200 mb-3">No generated stories yet</p>
               <a href="/stories" class="text-blue-400 hover:text-blue-300 underline font-medium">
                 Create your first story →
               </a>
             </div>
-          {/if}
-        </div>
+      {/if}
+    </div>
 
         <!-- Review Deck Management -->
         <div class="bg-tile-300 border border-tile-500 rounded-xl p-6 shadow-sm">
@@ -279,57 +307,57 @@
               <span>Danger Zone</span>
             </h4>
             <p class="text-text-200 text-sm mb-4">Clear all words from your review deck. This action cannot be undone.</p>
-            
-            {#if clearError}
+          
+          {#if clearError}
               <div class="bg-red-500/20 border border-red-400 text-red-300 px-4 py-3 rounded-lg mb-4">
                 <p class="font-semibold mb-1">Error</p>
                 <p class="text-sm">{clearError}</p>
-              </div>
-            {/if}
+            </div>
+          {/if}
 
-            {#if clearSuccess}
+          {#if clearSuccess}
               <div class="bg-green-500/20 border border-green-400 text-green-300 px-4 py-3 rounded-lg mb-4">
                 <p class="font-semibold mb-1">Success!</p>
                 <p class="text-sm">{clearSuccess}</p>
-              </div>
-            {/if}
+            </div>
+          {/if}
 
-            {#if showClearConfirm}
+          {#if showClearConfirm}
               <div class="bg-yellow-500/20 border border-yellow-400 text-yellow-300 px-4 py-3 rounded-lg mb-4">
-                <p class="font-semibold mb-2">⚠️ Confirm Action</p>
+              <p class="font-semibold mb-2">⚠️ Confirm Action</p>
                 <p class="text-sm mb-4">Are you sure you want to delete all words from your review deck? This action cannot be undone.</p>
-                <div class="flex gap-2">
-                  <Button 
-                    onClick={clearAllWords} 
-                    type="button" 
-                    disabled={isClearingWords}
+              <div class="flex gap-2">
+                <Button 
+                  onClick={clearAllWords} 
+                  type="button" 
+                  disabled={isClearingWords}
                     className="bg-red-600 hover:bg-red-700 flex-1"
-                  >
+                >
                     {isClearingWords ? 'Clearing...' : 'Yes, Clear All'}
-                  </Button>
-                  <Button 
-                    onClick={cancelClear} 
-                    type="button"
-                    disabled={isClearingWords}
+                </Button>
+                <Button 
+                  onClick={cancelClear} 
+                  type="button"
+                  disabled={isClearingWords}
                     className="flex-1"
-                  >
-                    Cancel
-                  </Button>
-                </div>
+                >
+                  Cancel
+                </Button>
               </div>
-            {:else}
-              <Button 
-                onClick={clearAllWords} 
-                type="button"
-                disabled={isClearingWords}
+            </div>
+          {:else}
+            <Button 
+              onClick={clearAllWords} 
+              type="button"
+              disabled={isClearingWords}
                 className="bg-red-600 hover:bg-red-700 w-full"
-              >
-                Clear All Review Words
-              </Button>
-            {/if}
-          </div>
+            >
+              Clear All Review Words
+            </Button>
+          {/if}
         </div>
       </div>
+    </div>
     </section>
   </div>
 </div>
