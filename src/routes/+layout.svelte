@@ -326,7 +326,8 @@
 			</div>
 		</aside>
 		<main class="relative !min-h-full shrink-0 border-x border-tile-600 bg-tile-200 pb-36 sm:pb-24 h-fit">
-			<Navigation 
+			<Navigation
+				user={data.user} 
         {handleOpenDrawer} 
         session={data.session}
         userEmail={data?.user?.email ?? ""}

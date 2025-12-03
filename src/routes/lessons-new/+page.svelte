@@ -121,7 +121,8 @@
 
 {#if activeLesson}
     <LessonPlayer 
-        lesson={activeLesson} 
+        lesson={activeLesson}
+        user={data?.user}
         onClose={() => activeLesson = null}
         onLessonComplete={async (nextLessonId) => {
             if (nextLessonId) {

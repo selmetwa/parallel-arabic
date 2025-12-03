@@ -14,10 +14,9 @@ const contentStepSchema = z.object({
     type: z.literal('content'),
     content: z.object({
         title: z.object({
-            english: z.string(),
-            arabic: z.string().optional()
+            english: z.string() // Lesson section title. MUST be in English only (no Arabic script).
         }),
-        text: z.string(), // Explanatory text about the lesson content
+        text: z.string(), // Explanatory text about the lesson content. MUST be in English only (no Arabic script).
         examples: z.array(textWithTranslationSchema).optional(), // Examples should use diacritical marks SPARINGLY - only when needed for pronunciation clarity
         audioText: z.string().optional() // Text to be spoken (if we generate audio later)
     })

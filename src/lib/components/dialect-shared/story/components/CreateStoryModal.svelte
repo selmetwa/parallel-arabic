@@ -32,7 +32,7 @@
 	let option = $state('a1');
 	let isLoading = $state(false);
 	let storyType = $state('story');
-	let sentenceCount = $state(25);
+	let sentenceCount = $state(10);
 	let selectedLearningTopics = $state<string[]>([]);
 	let vocabularyWords = $state('');
 	let vocabularyInputMode = $state('text'); // 'text' or 'file'
@@ -526,9 +526,9 @@
 	];
 
 	const sentenceOptions = [
-		{ value: 15, label: '15 sentences (Short)' },
-		{ value: 25, label: '25 sentences (Medium)' },
-		{ value: 35, label: '35 sentences (Long)' }
+		{ value: 5, label: '5 sentences (Short)' },
+		{ value: 10, label: '10 sentences (Medium)' },
+		{ value: 15, label: '15 sentences (Long)' }
 	];
 
 	const difficultyOptions = [

@@ -29,47 +29,48 @@ interface ParsedStory {
 
 // No longer need local directory helper - using Supabase storage
 
-export async function generateStoryAudio(storyId: string, dialect: string): Promise<{ success: boolean; audioPath?: string; fileName?: string; playbackRate?: number; error?: string }> {
+// Helper function to extract Arabic text from story body
+function extractArabicTextFromStoryBody(storyBody: ParsedStory | unknown): string {
+	// Type guard to check if storyBody has the expected structure
+	if (!storyBody || typeof storyBody !== 'object') {
+		return '';
+	}
+
+	const body = storyBody as Record<string, unknown>;
+	if (!body.sentences || !Array.isArray(body.sentences)) {
+		return '';
+	}
+
+	// Extract only the Arabic text from all sentences
+	const arabicTexts = body.sentences
+		.filter((sentence: unknown) => {
+			if (!sentence || typeof sentence !== 'object') return false;
+			const sent = sentence as Record<string, unknown>;
+			return sent.arabic && typeof sent.arabic === 'object' && sent.arabic !== null && 'text' in sent.arabic;
+		})
+		.map((sentence: unknown) => {
+			const sent = sentence as { arabic: { text: string } };
+			return sent.arabic.text.trim();
+		})
+		.filter((text: string) => text.length > 0);
+
+	if (arabicTexts.length === 0) {
+		return '';
+	}
+
+	// Join all Arabic sentences with a pause between them
+	return arabicTexts.join('. ');
+}
+
+// Generate audio from story body directly (for when story is already loaded)
+export async function generateStoryAudioFromBody(storyId: string, dialect: string, storyBody: ParsedStory | unknown): Promise<{ success: boolean; audioPath?: string; fileName?: string; playbackRate?: number; error?: string }> {
 	try {
-		// Fetch the story from the database (metadata)
-		const { data: story, error: storyError } = await supabase
-			.from('generated_story')
-			.select('*')
-			.eq('id', storyId)
-			.single();
+		// Extract Arabic text from the story body
+		const fullArabicText = extractArabicTextFromStoryBody(storyBody);
 
-		if (storyError || !story) {
-			console.error('Story fetch error:', storyError);
-			return { success: false, error: 'Story not found' };
-		}
-
-		// Download the story content from storage
-		const storyContentResult = await downloadStoryFromStorage(story.story_body);
-		
-		if (!storyContentResult.success || !storyContentResult.data) {
-			console.error('Failed to download story from storage:', storyContentResult.error);
-			return { success: false, error: 'Failed to load story content' };
-		}
-
-		// Parse the story content
-		const parsedStory: ParsedStory = storyContentResult.data as ParsedStory;
-		
-		if (!parsedStory.sentences || !Array.isArray(parsedStory.sentences)) {
-			return { success: false, error: 'Invalid story format' };
-		}
-
-		// Extract only the Arabic text from all sentences
-		const arabicTexts = parsedStory.sentences
-			.filter((sentence: StorySentence) => sentence.arabic && sentence.arabic.text)
-			.map((sentence: StorySentence) => sentence.arabic.text.trim())
-			.filter((text: string) => text.length > 0);
-
-		if (arabicTexts.length === 0) {
+		if (!fullArabicText) {
 			return { success: false, error: 'No Arabic content found in story' };
 		}
-
-		// Join all Arabic sentences with a pause between them
-		const fullArabicText = arabicTexts.join('. ');
 
 		// Get voice configuration for the dialect
 		const voiceConfig = getVoiceConfig(dialect || 'egyptian-arabic');
@@ -123,6 +124,40 @@ export async function generateStoryAudio(storyId: string, dialect: string): Prom
 			audioPath: audioUrlResult.success ? audioUrlResult.url! : audioUploadResult.publicUrl!, // Use signed URL if available, fallback to public
 			fileName: audioUploadResult.fileKey!,
 		};
+
+	} catch (err) {
+		console.error('Audio generation error:', err);
+		return { success: false, error: 'Failed to generate audio' };
+	}
+}
+
+export async function generateStoryAudio(storyId: string, dialect: string): Promise<{ success: boolean; audioPath?: string; fileName?: string; playbackRate?: number; error?: string }> {
+	try {
+		// Fetch the story from the database (metadata)
+		const { data: story, error: storyError } = await supabase
+			.from('generated_story')
+			.select('*')
+			.eq('id', storyId)
+			.single();
+
+		if (storyError || !story) {
+			console.error('Story fetch error:', storyError);
+			return { success: false, error: 'Story not found' };
+		}
+
+		// Download the story content from storage
+		const storyContentResult = await downloadStoryFromStorage(story.story_body);
+		
+		if (!storyContentResult.success || !storyContentResult.data) {
+			console.error('Failed to download story from storage:', storyContentResult.error);
+			return { success: false, error: 'Failed to load story content' };
+		}
+
+		// Parse the story content
+		const parsedStory: ParsedStory = storyContentResult.data as ParsedStory;
+		
+		// Use the helper function to generate audio
+		return await generateStoryAudioFromBody(storyId, dialect, parsedStory);
 
 	} catch (err) {
 		console.error('Audio generation error:', err);

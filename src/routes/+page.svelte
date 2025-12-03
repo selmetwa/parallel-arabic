@@ -1,7 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { currentDialect } from '$lib/store/store';
-  import MinimalStats from '$lib/components/MinimalStats.svelte';
   import type { PageData } from './$types';
 
   let { data }: { data: PageData } = $props();
@@ -12,15 +11,38 @@
 </script>
 
 <section class="px-4 mt-12 sm:px-8 max-w-7xl mx-auto mb-20">
-  <!-- Minimal Stats Section -->
-  <div class="mb-12">
-    <MinimalStats user={data.user} />
-  </div>
+  <!-- Review CTA Section -->
+  {#if data.user}
+    <div class="mb-6">
+      <a 
+        href="/review" 
+        class="block bg-gradient-to-r from-blue-500 to-blue-600 border-2 border-blue-700 rounded-lg p-3 sm:p-4 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 text-center group"
+      >
+        {#if data.cappedReviewCount > 0}
+          <div class="text-3xl mb-2">📚</div>
+          <h2 class="text-lg sm:text-xl font-bold text-white mb-1 group-hover:text-blue-50 transition-colors">
+            You have {data.cappedReviewCount} word{data.cappedReviewCount !== 1 ? 's' : ''} to review
+          </h2>
+          <p class="text-blue-100 text-xs sm:text-sm">
+            Keep your vocabulary fresh with spaced repetition
+          </p>
+        {:else}
+          <div class="text-3xl mb-2">💾</div>
+          <h2 class="text-lg sm:text-xl font-bold text-white mb-1 group-hover:text-blue-50 transition-colors">
+            Start Building Your Vocabulary
+          </h2>
+          <p class="text-blue-100 text-xs sm:text-sm">
+            Add words to your review deck to practice with spaced repetition
+          </p>
+        {/if}
+      </a>
+    </div>
+  {/if}
 
   <!-- Getting Started -->
   <div class="mb-16">
     <div class="flex items-center gap-4 mb-6">
-      <h2 class="text-2xl sm:text-3xl text-text-300 font-bold">Start Here</h2>
+      <h2 class="text-2xl sm:text-3xl text-text-300 font-bold">Building blocks</h2>
       <div class="h-0.5 bg-tile-500 flex-1 opacity-50 rounded-full"></div>
     </div>
     
