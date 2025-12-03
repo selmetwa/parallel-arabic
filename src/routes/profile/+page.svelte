@@ -16,6 +16,8 @@
   
   let dialectUpdateSuccess = $state<string | null>(null);
   let dialectUpdateError = $state<string | null>(null);
+  let reviewLimitUpdateSuccess = $state<string | null>(null);
+  let reviewLimitUpdateError = $state<string | null>(null);
 
   const dialectFlags: Record<string, string> = {
     'egyptian-arabic': '🇪🇬',
@@ -213,6 +215,62 @@
                 {/if}
               </div>
         {/if}
+
+            <!-- Daily Review Limit -->
+            <div class="space-y-3 border-t border-tile-500 pt-4">
+              <label for="daily_review_limit" class="block text-sm font-medium text-text-200">
+                Daily Review Limit
+              </label>
+              <p class="text-xs text-text-200 mb-3">Set how many words you want to review per day (default: 20)</p>
+              <form 
+                method="POST" 
+                action="?/updateDailyReviewLimit" 
+                use:enhance={() => {
+                  reviewLimitUpdateSuccess = null;
+                  reviewLimitUpdateError = null;
+                  return async ({ result, update }) => {
+                    if (result.type === 'success' && result.data?.success) {
+                      await invalidate('supabase:auth');
+                      await invalidate('/');
+                      await update();
+                      await invalidateAll();
+                      reviewLimitUpdateSuccess = 'Daily review limit updated successfully!';
+                    } else if (result.type === 'failure') {
+                      await update();
+                      const errorMsg = result.data?.error;
+                      reviewLimitUpdateError = typeof errorMsg === 'string' ? errorMsg : 'Failed to update daily review limit';
+                    } else if (result.type === 'error') {
+                      await update();
+                      reviewLimitUpdateError = result.error?.toString() || 'Failed to update daily review limit';
+                    } else {
+                      await update();
+                    }
+                  };
+                }}
+                class="flex flex-col sm:flex-row items-start sm:items-center gap-3"
+              >
+                <input
+                  type="number"
+                  id="daily_review_limit"
+                  name="daily_review_limit"
+                  min="1"
+                  max="1000"
+                  value={data.dailyReviewLimit}
+                  class="w-full sm:w-32 bg-tile-400 border border-tile-600 text-text-300 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-tile-500 text-base"
+                />
+                <Button type="submit">Update Limit</Button>
+              </form>
+              {#if reviewLimitUpdateSuccess}
+                <div class="bg-green-500/20 border border-green-400 text-green-300 px-4 py-2 rounded-lg text-sm">
+                  {reviewLimitUpdateSuccess}
+                </div>
+              {/if}
+              {#if reviewLimitUpdateError}
+                <div class="bg-red-500/20 border border-red-400 text-red-300 px-4 py-2 rounded-lg text-sm">
+                  {reviewLimitUpdateError}
+                </div>
+              {/if}
+            </div>
       </div>
       
           <!-- Account Actions -->

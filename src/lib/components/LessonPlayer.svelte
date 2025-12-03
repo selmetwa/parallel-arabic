@@ -14,16 +14,21 @@
     import { curriculum } from '$lib/data/curriculum';
     import cn from 'classnames';
 
-    let { lesson, onClose, onLessonComplete } = $props<{ 
+    let { lesson, onClose, onLessonComplete, user } = $props<{ 
         lesson: GeneratedLesson, 
         onClose: () => void,
-        onLessonComplete?: (nextLessonId?: string) => void | Promise<void>
+        onLessonComplete?: (nextLessonId?: string) => void | Promise<void>,
+        user?: { id: string } | null
     }>();
 
     let currentStepIndex = $state(0);
     let currentStep = $derived(lesson.steps[currentStepIndex]);
     let totalSteps = $derived(lesson.steps.length);
     let progress = $derived(((currentStepIndex + 1) / totalSteps) * 100);
+    
+    // For alphabet lessons, use 'egyptian-arabic' for text-to-speech
+    const isAlphabetLesson = $derived(lesson.topicId?.startsWith('m-alphabet-') || lesson.dialect === 'alphabet');
+    const ttsDialect = $derived(isAlphabetLesson ? 'egyptian-arabic' : (lesson.dialect as Dialect));
     
     // Exercise State
     let selectedOptionId = $state<string | null>(null);
@@ -54,6 +59,10 @@
     
     // Lesson Completion State
     let showCongratulations = $state(false);
+    
+    // Save sentence state
+    let isSavingSentence = $state(false);
+    let sentenceSaveStatus = $state<'idle' | 'saving' | 'saved' | 'error'>('idle');
 
     // Reset state when step changes
     $effect(() => {
@@ -73,8 +82,51 @@
             definition = '';
             targetWord = '';
             targetArabicWord = '';
+            // Reset save status
+            sentenceSaveStatus = 'idle';
         }
     });
+    
+    // Save practice sentence to review deck
+    async function savePracticeSentence(sentence: { arabic: string; english: string; transliteration: string }) {
+        if (!user?.id) {
+            sentenceSaveStatus = 'error';
+            return;
+        }
+        
+        sentenceSaveStatus = 'saving';
+        isSavingSentence = true;
+        
+        try {
+            const response = await fetch('/api/save-sentences', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    sentences: [sentence],
+                    dialect: lesson.dialect
+                })
+            });
+            
+            const result = await response.json();
+            
+            if (response.ok && result.success) {
+                sentenceSaveStatus = 'saved';
+                // Reset to idle after 2 seconds
+                setTimeout(() => {
+                    sentenceSaveStatus = 'idle';
+                }, 2000);
+            } else {
+                sentenceSaveStatus = 'error';
+            }
+        } catch (error) {
+            console.error('Error saving sentence:', error);
+            sentenceSaveStatus = 'error';
+        } finally {
+            isSavingSentence = false;
+        }
+    }
     
     // Function to check if text contains Arabic characters
     function containsArabic(text: string): boolean {
@@ -270,7 +322,7 @@
                 // Extract Arabic text from the option
                 const arabicText = extractArabicText(selectedOption.text);
                 if (arabicText) {
-                    speakArabic(arabicText, lesson.dialect).catch(error => {
+                    speakArabic(arabicText, ttsDialect).catch(error => {
                         console.error('Failed to play audio:', error);
                     });
                 }
@@ -644,7 +696,7 @@
                                                                             <span class="text-xl sm:text-2xl font-bold text-tile-700 font-arabic" dir="rtl">{conj.arabic}</span>
                                                                             <AudioButton 
                                                                                 text={conj.arabic}
-                                                                                dialect={lesson.dialect as any}
+                                                                                dialect={ttsDialect}
                                                                                 className="text-tile-700 hover:text-text-300 shrink-0"
                                                                             />
                                                                         </div>
@@ -677,7 +729,7 @@
                                                     <div class="flex items-center gap-2">
                                                         <AudioButton 
                                                             text={example.arabic}
-                                                            dialect={lesson.dialect as any}
+                                                            dialect={ttsDialect}
                                                             className="text-tile-700 hover:text-text-300"
                                                         />
                                                         <BookmarkButton
@@ -768,13 +820,34 @@
                                 </div>
                                 
                                 <!-- Action buttons -->
-                                <div class="flex gap-3 justify-center pt-2">
-                                    <AudioButton text={step.sentence.arabic} dialect={lesson.dialect as Dialect}>
+                                <div class="flex gap-3 justify-center pt-2 flex-wrap">
+                                    <AudioButton text={step.sentence.arabic} dialect={ttsDialect}>
                                         🔊 Listen
                                     </AudioButton>
                                     <Button onClick={() => compareDialects(step.sentence)} type="button">
                                         🌍 Compare Dialects
                                     </Button>
+                                    {#if user?.id}
+                                        <Button 
+                                            onClick={() => savePracticeSentence(step.sentence)} 
+                                            type="button"
+                                            disabled={isSavingSentence || sentenceSaveStatus === 'saved'}
+                                            class={cn({
+                                                'opacity-50 cursor-not-allowed': isSavingSentence || sentenceSaveStatus === 'saved',
+                                                'bg-green-600 hover:bg-green-700 border-green-700': sentenceSaveStatus === 'saved'
+                                            })}
+                                        >
+                                            {#if sentenceSaveStatus === 'saving'}
+                                                💾 Saving...
+                                            {:else if sentenceSaveStatus === 'saved'}
+                                                ✓ Saved to Review
+                                            {:else if sentenceSaveStatus === 'error'}
+                                                ✗ Error
+                                            {:else}
+                                                💾 Save to Review
+                                            {/if}
+                                        </Button>
+                                    {/if}
                                 </div>
                             </div>
                         </div>
@@ -823,7 +896,7 @@
                                                     {#if arabicToPlay}
                                                         <AudioButton 
                                                             text={arabicToPlay}
-                                                            dialect={lesson.dialect as Dialect}
+                                                            dialect={ttsDialect}
                                                             className="text-tile-700 hover:text-text-300 shrink-0"
                                                         />
                                                     {/if}

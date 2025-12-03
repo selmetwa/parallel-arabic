@@ -1,6 +1,7 @@
 import { StripeService } from "$lib/services/stripe.service";
 import { redirect, fail } from "@sveltejs/kit";
 import type { Actions } from "./$types";
+import { supabase } from "$lib/supabaseClient";
 
 import type { PageServerLoad } from "./$types";
 
@@ -15,12 +16,65 @@ export const load: PageServerLoad = async ({ parent }) => {
   // Get all user data from layout (no additional DB queries needed!)
   const { session, isSubscribed, user } = await parent();
 
+  let wordsDueForReviewCount = 0;
+  let totalSavedWordsCount = 0;
+  let dailyReviewLimit = 20;
+
+  // Fetch review word counts if user is logged in
+  if (user?.id) {
+    const userId = user.id;
+    const now = Date.now();
+
+    try {
+      // Get user's daily review limit
+      const { data: userData, error: userError } = await supabase
+        .from('user')
+        .select('daily_review_limit')
+        .eq('id', userId)
+        .single();
+
+      if (!userError && userData?.daily_review_limit) {
+        dailyReviewLimit = userData.daily_review_limit;
+      }
+
+      // Get total count of saved words
+      const { count: totalCount, error: countError } = await supabase
+        .from('saved_word')
+        .select('*', { count: 'exact', head: true })
+        .eq('user_id', userId);
+
+      if (!countError && totalCount !== null) {
+        totalSavedWordsCount = totalCount;
+      }
+
+      // Get count of words due for review
+      const { count: dueCount, error: dueError } = await supabase
+        .from('saved_word')
+        .select('*', { count: 'exact', head: true })
+        .eq('user_id', userId)
+        .eq('forgotten_in_session', false)
+        .or(`is_learning.eq.true,next_review_date.is.null,next_review_date.lte.${now}`);
+
+      if (!dueError && dueCount !== null) {
+        wordsDueForReviewCount = dueCount;
+      }
+    } catch (error) {
+      console.error('Error fetching word counts:', error);
+    }
+  }
+
+  // Calculate capped count based on daily review limit
+  const cappedReviewCount = Math.min(wordsDueForReviewCount, dailyReviewLimit);
+
   return {
     session,  // Use from layout!
     isSubscribed,  // Use from layout!
     subscriptionId: user?.subscriber_id,  // Use from layout!
     subscriptionEndDate: user?.subscription_end_date,  // Use from layout!
     user, // Include full user object for stats
+    wordsDueForReviewCount,
+    cappedReviewCount, // Capped to daily limit
+    totalSavedWordsCount
   };
 };
 

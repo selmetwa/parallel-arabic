@@ -174,6 +174,7 @@
 	{#if stepLesson}
 		<LessonPlayer 
 			lesson={stepLesson}
+			user={data.user}
 			onClose={handleLessonPlayerClose}
 			onLessonComplete={handleLessonComplete}
 		/>

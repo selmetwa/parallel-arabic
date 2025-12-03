@@ -9,8 +9,9 @@
 	import Checkmark from '$lib/components/Checkmark.svelte';
 	import { Mode, type KeyWord } from '$lib/types/index';
 	import type { PageData } from './$types';
-	import AudioButton from '$lib/components/AudioButton.svelte';
+  import AudioButton from '$lib/components/AudioButton.svelte';
   import StoryAudioButton from '$lib/components/StoryAudioButton.svelte';
+  import InlineAudioButton from '$lib/components/InlineAudioButton.svelte';
 
   interface Props { 
     data: PageData;
@@ -80,6 +81,56 @@
 
 	let mode = $state(Mode.SingleText);
 	const sentences = $derived(story?.sentences || []);
+	const keyVocab = $derived(story?.keyVocab || []);
+	const quiz = $derived(story?.quiz || null);
+	let currentPlayingSentenceIndex = $state<number | null>(null);
+
+	function handleSentenceChange(index: number | null) {
+		currentPlayingSentenceIndex = index;
+		// Scroll to the highlighted sentence
+		if (index !== null) {
+			setTimeout(() => {
+				const element = document.querySelector(`[data-sentence-index="${index}"]`) as HTMLElement;
+				if (element) {
+					element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+				}
+			}, 100);
+		}
+	}
+
+	
+	// Quiz state management
+	let quizStates = $state<Record<number, {
+		selectedOptionId: string | null;
+		isAnswered: boolean;
+		isCorrect: boolean;
+		showHint: boolean;
+	}>>({});
+	
+	// Initialize quiz states when quiz changes
+	$effect(() => {
+		if (quiz && quiz.questions) {
+			const newStates: Record<number, {
+				selectedOptionId: string | null;
+				isAnswered: boolean;
+				isCorrect: boolean;
+				showHint: boolean;
+			}> = {};
+			quiz.questions.forEach((_: unknown, index: number) => {
+				if (!(index in quizStates)) {
+					newStates[index] = {
+						selectedOptionId: null,
+						isAnswered: false,
+						isCorrect: false,
+						showHint: false
+					};
+				}
+			});
+			if (Object.keys(newStates).length > 0) {
+				quizStates = { ...quizStates, ...newStates };
+			}
+		}
+	});
 
   let activeWordObj = $state({
 		english: '',
@@ -252,13 +303,13 @@
     <div class="flex flex-col items-start justify-between sm:flex-row sm:items-center">
       <div class="flex w-fit gap-2">
           {#if mode === Mode.SentanceView && sentences[index]}
-          <AudioButton text={sentences[index].arabic.text} dialect={storyDialect as any}>
-            Play Audio
-          </AudioButton>
+            <AudioButton text={sentences[index].arabic.text} dialect={storyDialect as any} />
           {/if}
-          {#if data.story?.[0] && (data.story[0] as any).id}
-          <StoryAudioButton storyId={(data.story[0] as any).id} dialect={storyDialect as any} audioPath={(data.story[0] as any).audio_url} />
-          {/if}
+          <StoryAudioButton 
+            dialect={storyDialect as any} 
+            sentences={sentences}
+            onSentenceChange={handleSentenceChange}
+          />
       </div>
       <fieldset class="flex w-full place-content-end">
         <legend class="sr-only">Select Mode</legend>
@@ -295,8 +346,13 @@
 {/if}
 
 {#if mode === Mode.SentanceView && sentences.length > 0 && sentences[index]}
+  {@const isCurrentlyPlaying = currentPlayingSentenceIndex === index}
   <section
-    class="grid grid-cols-1 grid-rows-4 divide-x divide-tile-600 bg-tile-300 sm:grid-cols-2 sm:grid-rows-2"
+    data-sentence-index={index}
+    class={cn(
+      "grid grid-cols-1 grid-rows-4 divide-x divide-tile-600 sm:grid-cols-2 sm:grid-rows-2 transition-all duration-300",
+      isCurrentlyPlaying ? 'bg-tile-500 border-2 border-tile-700 shadow-lg' : 'bg-tile-300'
+    )}
   >
     <Sentence
     isGenerated={true}
@@ -463,12 +519,15 @@
     </p>
   </div>
 {:else if sentences.length > 0}
-  {#each sentences as sentence}
+  {#each sentences as sentence, sentenceIndex}
+    {@const isCurrentlyPlaying = currentPlayingSentenceIndex === sentenceIndex}
     <section
+      data-sentence-index={sentenceIndex}
       class={cn(
-        'divide-tile-600 bg-tile-300 sm:grid',
+        'divide-tile-600 sm:grid transition-all duration-300',
         { 'grid-cols-1 grid-rows-1': mode === Mode.SingleText },
-        { 'flex flex-col-reverse divide-x sm:grid-cols-2 sm:grid-rows-1': mode === Mode.BiText }
+        { 'flex flex-col-reverse divide-x sm:grid-cols-2 sm:grid-rows-1': mode === Mode.BiText },
+        isCurrentlyPlaying ? 'bg-tile-500 border-2 border-tile-700 shadow-lg' : 'bg-tile-300'
       )}
     >
       {#if mode === Mode.BiText}
@@ -493,4 +552,174 @@
       />
     </section>
   {/each}
+{/if}
+
+<!-- Key Vocabulary Section -->
+{#if keyVocab && keyVocab.length > 0}
+  <section class="px-4 py-8 sm:px-8 max-w-4xl mx-auto border-t border-tile-600 mt-8">
+    <div class="flex items-center justify-between mb-6">
+      <h2 class="text-3xl font-bold text-text-300">📚 Key Vocabulary</h2>
+      {#if data.user?.id}
+        <button
+          type="button"
+          onclick={async () => {
+            try {
+              const response = await fetch('/api/save-sentences', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  sentences: keyVocab,
+                  dialect: storyDialect
+                })
+              });
+              const result = await response.json();
+              if (result.success) {
+                alert(`Saved ${result.saved} word${result.saved !== 1 ? 's' : ''} to your review deck!`);
+              }
+            } catch (error) {
+              console.error('Error saving vocabulary:', error);
+            }
+          }}
+          class="px-4 py-2 bg-tile-500 text-text-300 rounded-lg border-2 border-tile-600 hover:bg-tile-600 transition-colors font-semibold text-sm"
+        >
+          💾 Save All to Review
+        </button>
+      {/if}
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {#each keyVocab as word}
+        <div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-4 hover:bg-tile-500 transition-colors">
+          <div class="flex items-start justify-between gap-2 mb-2">
+            <p class="text-2xl font-bold text-text-300 flex-1" dir="rtl">{word.arabic}</p>
+            <InlineAudioButton text={word.arabic} dialect={storyDialect as any} />
+          </div>
+          <p class="text-text-200 font-semibold mb-1">{word.english}</p>
+          <p class="text-text-200 italic text-sm">{word.transliteration}</p>
+        </div>
+      {/each}
+    </div>
+  </section>
+{/if}
+
+<!-- Quiz Section -->
+{#if quiz && quiz.questions && quiz.questions.length > 0}
+  <section class="px-4 py-8 sm:px-8 max-w-4xl mx-auto border-t border-tile-600 mt-8">
+    <h2 class="text-3xl font-bold text-text-300 mb-6 text-center">❓ Quiz</h2>
+    <p class="text-text-200 text-center mb-8">Test your understanding of the story</p>
+    
+    <div class="space-y-8">
+      {#each quiz.questions as question, qIndex}
+        {@const questionState = quizStates[qIndex] || {
+          selectedOptionId: null,
+          isAnswered: false,
+          isCorrect: false,
+          showHint: false
+        }}
+        
+        <div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6">
+          <div class="flex items-start justify-between mb-4">
+            <h3 class="text-xl font-bold text-text-300 flex-1">
+              Question {qIndex + 1}: {question.question}
+            </h3>
+            {#if questionState.isAnswered && questionState.isCorrect}
+              <span class="text-2xl">✅</span>
+            {:else if questionState.isAnswered && !questionState.isCorrect}
+              <span class="text-2xl">❌</span>
+            {/if}
+          </div>
+          
+          <div class="space-y-3">
+            {#each question.options as option}
+              {@const isSelected = questionState.selectedOptionId === option.id}
+              {@const isCorrectOption = option.isCorrect}
+              {@const showSuccess = questionState.isAnswered && isCorrectOption}
+              {@const showError = questionState.isAnswered && isSelected && !isCorrectOption}
+              {@const isArabicOption = question.optionLanguage === 'arabic' || !question.optionLanguage}
+              {@const isEnglishOption = question.optionLanguage === 'english'}
+              
+              <button
+                type="button"
+                onclick={() => {
+                  if (questionState.isAnswered) return;
+                  quizStates[qIndex] = {
+                    selectedOptionId: option.id,
+                    isAnswered: true,
+                    isCorrect: isCorrectOption,
+                    showHint: questionState.showHint
+                  };
+                  quizStates = { ...quizStates };
+                }}
+                disabled={questionState.isAnswered}
+                class="w-full flex items-center justify-between gap-3 p-4 rounded-lg border-2 transition-all
+                  {isArabicOption ? 'text-right' : 'text-left'}
+                  {isSelected ? 'border-tile-700 bg-tile-500' : 'border-tile-600 bg-tile-300 hover:bg-tile-400'}
+                  {showSuccess ? '!border-green-600 !bg-green-100' : ''}
+                  {showError ? '!border-red-600 !bg-red-100' : ''}
+                  {questionState.isAnswered ? 'opacity-75 cursor-not-allowed' : 'cursor-pointer'}
+                "
+              >
+                <div class="flex-1">
+                  <p class="text-xl font-semibold text-text-300 mb-1" dir={isArabicOption ? 'rtl' : 'ltr'}>
+                    {option.text}
+                  </p>
+                </div>
+                <div class="flex items-center gap-2 flex-shrink-0">
+                  {#if isArabicOption}
+                    <InlineAudioButton text={option.text} dialect={storyDialect as any} />
+                  {/if}
+                  {#if showSuccess}
+                    <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                  {:else if showError}
+                    <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+                    </svg>
+                  {/if}
+                </div>
+              </button>
+            {/each}
+          </div>
+          
+          {#if questionState.isAnswered && question.hint}
+            <div class="mt-4 p-4 bg-tile-500 rounded-lg border border-tile-600">
+              <div class="flex items-center justify-between mb-2">
+                <p class="text-sm font-bold text-text-300">💡 Hint</p>
+                <button
+                  type="button"
+                  onclick={() => {
+                    quizStates[qIndex] = {
+                      ...questionState,
+                      showHint: !questionState.showHint
+                    };
+                    quizStates = { ...quizStates };
+                  }}
+                  class="text-xs text-tile-700 hover:text-text-300 font-semibold underline"
+                >
+                  {questionState.showHint ? 'Hide' : 'Show'} hint
+                </button>
+              </div>
+              {#if questionState.showHint}
+                {#if question.optionLanguage === 'english'}
+                  {#if question.hint.arabic}
+                    <p class="text-text-300 text-lg mb-2" dir="rtl">{question.hint.arabic}</p>
+                  {/if}
+                  {#if question.hint.transliteration}
+                    <p class="text-text-200 italic">{question.hint.transliteration}</p>
+                  {/if}
+                {:else}
+                  {#if question.hint.transliteration}
+                    <p class="text-text-200 italic">{question.hint.transliteration}</p>
+                  {/if}
+                  {#if question.hint.arabic}
+                    <p class="text-text-300 text-lg mt-2" dir="rtl">{question.hint.arabic}</p>
+                  {/if}
+                {/if}
+              {/if}
+            </div>
+          {/if}
+        </div>
+      {/each}
+    </div>
+  </section>
 {/if}

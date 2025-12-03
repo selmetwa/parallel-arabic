@@ -1,17 +1,23 @@
 import { error, json } from '@sveltejs/kit';
 import type { RequestHandler } from '@sveltejs/kit';
-import { generateStoryAudio } from '../../../lib/server/audio-generation';
+import { generateStoryAudio, generateStoryAudioFromBody } from '../../../lib/server/audio-generation';
 
 export const POST: RequestHandler = async ({ request }) => {
 	try {
 		const data = await request.json();
-		const { storyId, dialect } = data;
+		const { storyId, dialect, storyBody } = data;
 
 		if (!storyId) {
 			return error(400, { message: 'Story ID is required' });
 		}
 
-		const result = await generateStoryAudio(storyId, dialect);
+		// If storyBody is provided, use it directly; otherwise fetch from storage
+		let result;
+		if (storyBody) {
+			result = await generateStoryAudioFromBody(storyId, dialect, storyBody);
+		} else {
+			result = await generateStoryAudio(storyId, dialect);
+		}
 
 		if (result.success) {
 			return json({

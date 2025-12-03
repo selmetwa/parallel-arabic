@@ -6,9 +6,13 @@
     session: any;
     userEmail: string;
     targetDialect?: string | null;
+    user?: {
+      current_streak?: number | null;
+      longest_streak?: number | null;
+    } | null;
   }
 
-  let { handleOpenDrawer, session, targetDialect }: Props = $props();
+  let { handleOpenDrawer, session, targetDialect, user }: Props = $props();
 
   // Map dialect values to flags (default to Egyptian)
   const dialectFlags: Record<string, string> = {
@@ -29,6 +33,10 @@
   const learningDialect = $derived(targetDialect || 'egyptian-arabic');
   const flag = $derived(dialectFlags[learningDialect] || '🇪🇬');
   const displayName = $derived(dialectDisplayNames[learningDialect] || 'Egyptian Arabic');
+  
+  // Streak counter
+  const currentStreak = $derived(user?.current_streak ?? 0);
+  const longestStreak = $derived(user?.longest_streak ?? 0);
 </script>
 
 <nav class="w-full border-b border-tile-600 py-4 bg-tile-300 relative">
@@ -43,6 +51,15 @@
             <li class="flex items-center gap-2">
               <span class="text-2xl">{flag}</span>
               <span class="text-text-200 text-sm">Learning {displayName}</span>
+              {#if currentStreak > 0}
+                <span class="text-2xl">🔥</span>
+                <span class="text-text-200 text-sm font-semibold">
+                  {currentStreak}
+                  {#if longestStreak > currentStreak}
+                    <span class="text-text-300 opacity-75">/ {longestStreak}</span>
+                  {/if}
+                </span>
+              {/if}
             </li>
           {:else}
             <li><a class="text-text-300 text-sm sm:text-base underline" href="/login">Login</a></li>
