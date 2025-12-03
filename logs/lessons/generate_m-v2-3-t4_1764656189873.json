@@ -1,9 +1,0 @@
-{
-  "timestamp": "2025-12-02T06:16:29.873Z",
-  "topicId": "m-v2-3-t4",
-  "stage": "error",
-  "errorType": "Error",
-  "errorMessage": "Failed to parse JSON from Gemini response: ```json\n{\n  \"topicId\": \"egyptian-arabic-level3-past-tense\",\n  \"title\": {\n    \"english\": \"Past Tense\",\n    \"arabic\": \"الماضي\"\n  },\n  \"dialect\": \"egyptian-arabic\",\n  \"steps\": [\n    {\n      \"type\": \"cont...",
-  "errorStack": "Error: Failed to parse JSON from Gemini response: ```json\n{\n  \"topicId\": \"egyptian-arabic-level3-past-tense\",\n  \"title\": {\n    \"english\": \"Past Tense\",\n    \"arabic\": \"الماضي\"\n  },\n  \"dialect\": \"egyptian-arabic\",\n  \"steps\": [\n    {\n      \"type\": \"cont...\n    at Module.parseJsonFromGeminiResponse (/Users/sherifelmetwally/Desktop/parallel-arabic/src/lib/utils/gemini-json-parser.ts:326:13)\n    at generateSingleLesson (/Users/sherifelmetwally/Desktop/parallel-arabic/src/routes/generate-lesson-batch/+server.ts:163:46)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async POST (/Users/sherifelmetwally/Desktop/parallel-arabic/src/routes/generate-lesson-batch/+server.ts:246:20)\n    at async Module.render_endpoint (/Users/sherifelmetwally/Desktop/parallel-arabic/node_modules/@sveltejs/kit/src/runtime/server/endpoint.js:49:18)\n    at async resolve (/Users/sherifelmetwally/Desktop/parallel-arabic/node_modules/@sveltejs/kit/src/runtime/server/respond.js:462:17)\n    at async Module.respond (/Users/sherifelmetwally/Desktop/parallel-arabic/node_modules/@sveltejs/kit/src/runtime/server/respond.js:338:20)\n    at async file:///Users/sherifelmetwally/Desktop/parallel-arabic/node_modules/@sveltejs/kit/src/exports/vite/dev/index.js:524:22",
-  "duration": 43297
-}
