@@ -1,21 +1,32 @@
 import { supabase } from '$lib/supabaseClient';
 import { StripeService } from '$lib/services/stripe.service';
 
+// Whitelist of emails that have access to all lessons regardless of subscription
+const WHITELISTED_EMAILS = [
+  'selmetwa@gmail.com',
+  'sherifliketheclash@gmail.com'
+];
+
 export const getUserHasActiveSubscription = async (userId: string | null) => {
   // Fast path for no user
   if (!userId) {
     return false;
   }
 
-  // Only fetch the subscriber_id field to identify which Stripe subscription to check
+  // Fetch user email and subscriber_id to check whitelist and subscription
   const { data: user, error } = await supabase
     .from('user')
-    .select('subscriber_id')
+    .select('subscriber_id, email')
     .eq('id', userId)
     .single();
 
   if (error && error.code !== 'PGRST116') {
     console.error('Error fetching user subscription ID:', error);
+  }
+
+  // Check if user is whitelisted
+  if (user?.email && WHITELISTED_EMAILS.includes(user.email.toLowerCase())) {
+    return true;
   }
 
   if (!user || !user.subscriber_id) {
