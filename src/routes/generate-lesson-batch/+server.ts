@@ -49,31 +49,23 @@ async function generateSingleLesson(
 	dialect: string,
 	ai: GoogleGenAI,
 	lessonSchema: ReturnType<typeof createLessonSchema>
-): Promise<{ success: boolean; skipped?: boolean; lesson?: any; error?: string; duration: number }> {
+): Promise<{ success: boolean; skipped?: boolean; lesson?: unknown; error?: string; duration: number }> {
 	const startTime = Date.now();
 	
 	try {
-		// Check if lesson already exists for this dialect
-		const existingLesson = await loadLesson(topicId, dialect);
-		if (existingLesson) {
-			console.log(`[Batch Generator] Lesson ${topicId} already exists for dialect ${dialect}, skipping...`);
-			return {
-				success: true,
-				skipped: true,
-				lesson: existingLesson,
-				duration: Date.now() - startTime
-			};
-		}
-		
 		// Find topic details
 		let topicTitle = '';
 		let topicDescription = '';
+		let moduleId = '';
+		let moduleTitle = '';
 		
 		for (const module of curriculum) {
 			const found = module.topics.find(t => t.id === topicId);
 			if (found) {
 				topicTitle = found.title;
 				topicDescription = found.description;
+				moduleId = module.id;
+				moduleTitle = module.title;
 				break;
 			}
 		}
@@ -85,33 +77,75 @@ async function generateSingleLesson(
 				duration: Date.now() - startTime
 			};
 		}
+		
+		// Force alphabet lessons to use fusha dialect
+		const isAlphabetModule = moduleId === 'module-alphabet';
+		const effectiveDialect = isAlphabetModule ? 'fusha' : dialect;
+		
+		// Check if lesson already exists for this dialect
+		const existingLesson = await loadLesson(topicId, effectiveDialect);
+		if (existingLesson) {
+			console.log(`[Batch Generator] Lesson ${topicId} already exists for dialect ${effectiveDialect}, skipping...`);
+			return {
+				success: true,
+				skipped: true,
+				lesson: existingLesson,
+				duration: Date.now() - startTime
+			};
+		}
 
 		const schemaString = JSON.stringify(lessonSchema.jsonSchema, null, 2);
+
+		// Build base prompt with module-specific instructions
+		let moduleSpecificInstructions = '';
+		
+		if (isAlphabetModule) {
+			moduleSpecificInstructions = `
+    SPECIAL INSTRUCTIONS FOR ALPHABET LESSON:
+    - Focus on letter recognition, pronunciation, and writing
+    - Include visual descriptions of letter shapes and forms (isolated, initial, medial, final)
+    - Emphasize proper pronunciation with transliteration
+    - Include handwriting practice guidance
+    - For letter lessons, show the letter in all its forms with examples
+    - For vowel/diacritic lessons, explain their function and pronunciation
+    - Practice sentences should use the letters/vowels being taught
+    - CRITICAL FOR EXERCISES: ONLY use "multiple-choice" type exercises for alphabet lessons
+    - Exercises MUST focus on simple questions about letter sounds, letter positions (isolated, initial, medial, final), and letter recognition
+    - Keep questions simple and focused on practical letter knowledge: "What sound does this letter make?", "Which form is this letter in?", "Which letter makes this sound?"
+    - DO NOT create open-ended factual questions like "Is Arabic written from right to left?" or similar general knowledge questions
+    - DO NOT use "matching" or "fill-in-blank" exercise types for alphabet lessons - ONLY "multiple-choice"
+    - Use MSA (Fusha) pronunciation standards even if dialect is specified, as alphabet is universal
+    `;
+		}
 
 		const prompt = `
     Create a structured Arabic lesson for the topic: "${topicTitle}".
     Description: "${topicDescription}"
-    Dialect: "${dialect}" (e.g., Egyptian Arabic, Levantine, MSA).
+    Module: "${moduleTitle}"
+    Dialect: "${effectiveDialect}" (e.g., Egyptian Arabic, Levantine, MSA).
+    ${moduleSpecificInstructions}
     
     The lesson must follow this EXACT structure:
-    1.  It must have exactly 15 instructional/content steps.
-    2.  After every 3 content steps, insert:
+    1.  It must have exactly 8 instructional/content steps.
+    2.  CRITICAL: Include ONLY the most important and essential content for this topic. Focus on core concepts, key vocabulary, and fundamental skills. Avoid redundant or less critical information.
+    3.  After every 3 content steps, insert:
         a. 2-3 practice sentences (type: "practice-sentence") that use vocabulary from the previous 3 content steps
         b. 3 practice exercises (type: "exercise") - Quiz questions
-    3.  Total steps should be roughly 15 content + 10-15 practice sentences + 15 exercises = 40-45 steps.
+    4.  Total steps should be roughly 8 content + 3 practice sentences + 3 exercises = 14 steps.
     
     CRITICAL: You MUST follow this JSON Schema exactly:
     
     ${schemaString}
     
     IMPORTANT RULES:
-    - Content steps MUST have type: "content" and a "content" object with "title" (object with "english" and optional "arabic"), "text" (string), and optional "examples" (array)
+    - Content steps MUST have type: "content" and a "content" object with "title" (object with "english" ONLY, no Arabic script), "text" (string in English ONLY), and optional "examples" (array)
     - CRITICAL: Use diacritical marks (tashkeel/harakat) SPARINGLY in Arabic text - only when needed for pronunciation clarity. Include marks when: distinguishing gender (male vs female), clarifying ambiguous words, or teaching specific pronunciation patterns. Do NOT add marks to every word - use them strategically.
     - When teaching gender distinctions (male vs female) or other pronunciation differences, include diacritical marks ONLY on the distinguishing letters. DO NOT explain what the marks mean - students can reference the diacritics guide modal.
     - Example: When teaching "إزيك؟" (to male) vs "إزيك؟" (to female), include diacritical marks ONLY on the last letter: "إزيكَ؟" (male - with فتحة) vs "إزيكِ؟" (female - with كسرة). Don't mark every letter.
     - Practice sentence steps MUST have type: "practice-sentence" and a "sentence" object with "arabic", "english", and "transliteration" strings. Include an optional "context" field to explain the sentence.
     - Practice sentences should use vocabulary and phrases taught in the previous 3 content steps. Make them practical and contextual.
     - Exercise steps MUST have type: "exercise", "exerciseType" (one of: "multiple-choice", "fill-in-blank", "matching"), "question" (string), "options" (array of objects with "id", "text", "isCorrect"), "correctAnswerId" (string matching one of the option IDs), and a REQUIRED "hint" object
+    ${isAlphabetModule ? `- CRITICAL FOR ALPHABET LESSONS: Exercise type MUST be "multiple-choice" only. Focus on simple questions about letter sounds and positions (isolated, initial, medial, final). Do NOT use "matching" or "fill-in-blank" for alphabet lessons.` : ''}
     - CRITICAL: The "question" field MUST be in English ONLY. Do NOT include Arabic text in the question. Students read the question in English and select the correct Arabic answer from the options.
     - CRITICAL: All option texts in exercises MUST be in Arabic script (NOT transliteration, NOT English). Students practice reading and recognizing Arabic.
     - Example CORRECT format: Question: "What is the Arabic phrase for 'Hello'?" (English) → Options: ["السلام عليكم", "صباح الخير", "مساء الخير"] (Arabic)
@@ -149,7 +183,7 @@ async function generateSingleLesson(
 			};
 		}
 
-		let lessonData = parseJsonFromGeminiResponse(responseText, lessonSchema.zodSchema);
+		const lessonData = parseJsonFromGeminiResponse(responseText, lessonSchema.zodSchema);
 		
 		if (!lessonData) {
 			return {
@@ -161,7 +195,7 @@ async function generateSingleLesson(
 
 		// Inject the ID and Dialect to be safe
 		lessonData.topicId = topicId;
-		lessonData.dialect = dialect;
+		lessonData.dialect = effectiveDialect;
 
 		await saveLesson(lessonData);
 

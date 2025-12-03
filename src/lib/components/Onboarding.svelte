@@ -71,14 +71,20 @@
     setTimeout(() => nextStep(), 300);
   }
 
-  function selectLevel(id: string) {
+  async function selectLevel(id: string) {
     proficiencyLevel = id;
-    // Don't auto-advance - user must click Complete Setup button
+    // Auto-submit and redirect after selection
+    setTimeout(() => handleSubmit(), 300);
   }
 
   async function handleSubmit() {
     if (!targetDialect || !learningReason || !proficiencyLevel) {
       error = 'Please complete all steps';
+      return;
+    }
+
+    // Prevent double submission
+    if (isSubmitting) {
       return;
     }
 
@@ -394,14 +400,12 @@
                 Next
               </Button>
             {:else if step === 3}
-              <Button 
-                type="button" 
-                onClick={handleSubmit} 
-                className="!w-auto !px-10 !py-3 !text-lg"
-                disabled={isSubmitting || !proficiencyLevel}
-              >
-                {isSubmitting ? 'Saving...' : 'Complete Setup'}
-              </Button>
+              {#if isSubmitting}
+                <div class="flex items-center gap-3 text-text-300">
+                  <div class="w-5 h-5 border-2 border-text-300 border-t-transparent rounded-full animate-spin"></div>
+                  <span class="text-lg">Saving...</span>
+                </div>
+              {/if}
             {/if}
           </div>
         </div>

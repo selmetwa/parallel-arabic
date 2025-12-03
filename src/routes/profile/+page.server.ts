@@ -23,10 +23,10 @@ export const load = async ({ locals, parent }) => {
     userGeneratedStories = storiesResult.stories || [];
   }
 
-  // Fetch user's onboarding data (target_dialect, learning_reason, proficiency_level)
+  // Fetch user's onboarding data (target_dialect, learning_reason, proficiency_level, daily_review_limit)
   const { data: userData, error: userError } = await supabase
     .from('user')
-    .select('target_dialect, learning_reason, proficiency_level, onboarding_completed')
+    .select('target_dialect, learning_reason, proficiency_level, onboarding_completed, daily_review_limit')
     .eq('id', userId)
     .single();
 
@@ -86,6 +86,7 @@ export const load = async ({ locals, parent }) => {
     learningReason: userData?.learning_reason || null,
     proficiencyLevel: userData?.proficiency_level || null,
     onboardingCompleted: userData?.onboarding_completed || false,
+    dailyReviewLimit: userData?.daily_review_limit ?? 20,
     wordStats,
     user // Include user for stats component
 	};
@@ -134,6 +135,54 @@ export const actions: Actions = {
 			};
 		} catch (e) {
 			console.error('Exception updating target_dialect:', e);
+			return {
+				success: false,
+				error: 'Something went wrong'
+			};
+		}
+	},
+	updateDailyReviewLimit: async ({ request, locals: { safeGetSession } }) => {
+		const { session, user } = await safeGetSession();
+		
+		if (!session || !user) {
+			return {
+				success: false,
+				error: 'You must be logged in to update your daily review limit'
+			};
+		}
+
+		const formData = await request.formData();
+		const dailyReviewLimit = formData.get('daily_review_limit') as string;
+		const limit = parseInt(dailyReviewLimit, 10);
+
+		// Validate limit (between 1 and 1000)
+		if (!dailyReviewLimit || isNaN(limit) || limit < 1 || limit > 1000) {
+			return {
+				success: false,
+				error: 'Daily review limit must be between 1 and 1000'
+			};
+		}
+
+		try {
+			const { error: updateError } = await supabase
+				.from('user')
+				.update({ daily_review_limit: limit })
+				.eq('id', user.id);
+
+			if (updateError) {
+				console.error('Error updating daily_review_limit:', updateError);
+				return {
+					success: false,
+					error: 'Failed to update daily review limit'
+				};
+			}
+
+			return {
+				success: true,
+				dailyReviewLimit: limit
+			};
+		} catch (e) {
+			console.error('Exception updating daily_review_limit:', e);
 			return {
 				success: false,
 				error: 'Something went wrong'

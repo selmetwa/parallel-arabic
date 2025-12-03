@@ -27,6 +27,7 @@
 		let index = 0;
 		let previousCompleted = true; // First lesson is always available if it exists
 		const isSubscribed = data.isSubscribed || data.hasActiveSubscription;
+		const isWhitelisted = data.isWhitelisted || false;
 		
 		for (const module of data.curriculum) {
 			for (const topic of module.topics) {
@@ -42,6 +43,14 @@
 				if (!exists) {
 					// Lesson doesn't exist yet
 					status = 'locked';
+				} else if (isWhitelisted) {
+					// Whitelisted users: all existing lessons are unlocked
+					if (isCompleted) {
+						status = 'completed';
+					} else {
+						status = 'active';
+					}
+					previousCompleted = true; // Always allow next lessons for whitelisted users
 				} else if (!isFirstLesson && !isSubscribed) {
 					// All lessons except the first one require subscription
 					status = 'locked';
@@ -70,7 +79,7 @@
 					level: 'Beginner',
 					dialect: data.dialect,
 					status: status,
-					isPaywalled: !isFirstLesson && !isSubscribed,
+					isPaywalled: !isFirstLesson && !isSubscribed && !isWhitelisted,
 					x: xOffset,
 					y: index * 140 // Step Height 140
 				});
@@ -191,7 +200,8 @@
 
 {#if activeLesson}
     <LessonPlayer 
-        lesson={activeLesson} 
+        lesson={activeLesson}
+        user={data.user}
         onClose={async () => {
             // Close the lesson player first
             activeLesson = null;

@@ -1,5 +1,11 @@
 import type { LayoutServerLoad } from './$types'
 
+// Whitelist of emails that have access to all lessons regardless of subscription
+const WHITELISTED_EMAILS = [
+  'selmetwa@gmail.com',
+  'sherifliketheclash@gmail.com'
+];
+
 export const load: LayoutServerLoad = async ({ locals: { safeGetSession }, cookies, url }) => {
   try {
     const { session, user } = await safeGetSession()
@@ -17,9 +23,13 @@ export const load: LayoutServerLoad = async ({ locals: { safeGetSession }, cooki
       };
     }
 
+    // Check if user is whitelisted first
+    const isWhitelisted = user?.email && WHITELISTED_EMAILS.includes(user.email.toLowerCase());
+    
     // Compute subscription status inline (no extra DB query)
     const subscriptionEndDate = user?.subscription_end_date ? new Date(user.subscription_end_date) : null;
     const isSubscribed = !!(                         
+      isWhitelisted ||                                  // Whitelist check
       user?.is_subscriber ||                           // Primary check: boolean field
       (subscriptionEndDate && new Date() < subscriptionEndDate) // Date check
     );

@@ -292,7 +292,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 	const description = (data as GenerationData).description;
 	const dialect = (data as GenerationData).dialect || 'darija';
 	const storyType = (data as GenerationData).storyType || 'story'; // 'story' or 'conversation'
-	const sentenceCount = (data as GenerationData).sentenceCount || 25; // Default to 25 sentences
+	const sentenceCount = (data as GenerationData).sentenceCount || 10; // Default to 10 sentences
 	const learningTopics = (data as GenerationData).learningTopics || []; // Array of selected learning topics
 	const vocabularyWords = (data as GenerationData).vocabularyWords || ''; // Vocabulary words to feature
 	const option = (data as GenerationData).option;
@@ -594,6 +594,16 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 
     ${commonWordsSection}
 
+    REQUIRED SECTIONS:
+    1. keyVocab: Extract 5-15 key vocabulary words from the story. These should be important words that appear in the story and are worth learning. Each word should have: arabic, english, transliteration.
+    2. quiz: Create a short multiple-choice quiz with 3-5 questions based on the story content. Each question should:
+       - Have a question in English
+       - CRITICAL: If the question asks for the English meaning/translation of an Arabic word/phrase, the options MUST be in English. If the question asks for the Arabic translation of an English word/phrase, the options MUST be in Arabic.
+       - Include 2-4 options (only one correct) - language depends on question type as above
+       - Include an "optionLanguage" field: "english" if options are in English, "arabic" if options are in Arabic
+       - Include a hint with transliteration (if Arabic option) or English explanation (if English option)
+       - Test comprehension of the story, vocabulary, or grammar concepts from the story
+
     Can you make sure that the output looks like the below object in JSON format:
 
     Generation timestamp: ${timestamp}
@@ -601,9 +611,31 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     REMEMBER: You must generate exactly ${sentenceCount} sentences in the sentences array.
 
     {
-      title: {arabic: string, english: string},;
-      description: {arabic: string, english: string};
-      sentences: [];
+      title: {arabic: string, english: string},
+      description: {arabic: string, english: string},
+      sentences: [],
+      keyVocab: [
+        {arabic: string, english: string, transliteration: string},
+        ...
+      ],
+      quiz: {
+        questions: [
+          {
+            question: string (in English),
+            options: [
+              {id: string (unique ID like "opt1", "opt2", etc), text: string (in Arabic OR English depending on question type), isCorrect: boolean},
+              ...
+            ],
+            correctAnswerId: string (must match one option's id),
+            optionLanguage: "arabic" | "english" (required - indicates language of options),
+            hint: {
+              transliteration: string (optional - if Arabic option),
+              arabic: string (optional)
+            }
+          },
+          ...
+        ]
+      }
     }
     where each sentence looks like 
 

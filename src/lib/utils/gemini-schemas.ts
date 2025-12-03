@@ -68,10 +68,33 @@ export function createStorySchema(isConversation: boolean = false) {
 		english: z.string()
 	});
 
+	// Quiz question schema for story quizzes
+	// Options can be in Arabic OR English depending on the question type
+	const quizOptionSchema = z.object({
+		id: z.string(), // Unique ID for the option
+		text: z.string(), // Option text - can be Arabic OR English depending on question type
+		isCorrect: z.boolean()
+	});
+
+	const quizQuestionSchema = z.object({
+		question: z.string(), // Question in English
+		options: z.array(quizOptionSchema).min(2).max(4), // 2-4 options
+		correctAnswerId: z.string(), // ID of the correct option (must match one option's id)
+		optionLanguage: z.enum(['arabic', 'english']).optional(), // Language of options: 'arabic' if asking for Arabic translation, 'english' if asking for English meaning
+		hint: z.object({
+			transliteration: z.string().optional(), // Transliteration of correct answer (if Arabic option)
+			arabic: z.string().optional() // Optional Arabic hint
+		})
+	});
+
 	const schema = z.object({
 		title: titleSchema,
 		description: descriptionSchema,
-		sentences: z.array(createSentenceSchema(isConversation)).min(1)
+		sentences: z.array(createSentenceSchema(isConversation)).min(1),
+		keyVocab: z.array(textWithTranslationSchema).min(5).max(15).optional(), // Key vocabulary from the story (5-15 words)
+		quiz: z.object({
+			questions: z.array(quizQuestionSchema).min(3).max(5) // Short quiz with 3-5 questions
+		}).optional()
 	});
 
 	return {
