@@ -291,12 +291,19 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		
 		reviewWordsSection = `
 		
-		CRITICAL: You MUST use ALL of the following words in your content. These are words the user is actively learning, and including them reinforces their memory. Use each word at least once. If you cannot naturally include all words, prioritize using as many as possible, but make the content feel natural.
+		REVIEW WORDS TO INCORPORATE: The following are words the user is actively learning. You should incorporate some of these words naturally throughout your ${contentType}, but you do NOT need to include every single word. Quality and naturalness are more important than quantity.
 		
-		REQUIRED WORDS TO INCLUDE:
+		IMPORTANT GUIDELINES:
+		- Select a reasonable subset of words that fit naturally into your ${contentType}
+		- Prioritize natural, comprehensible sentences over cramming in all words
+		- It's better to use fewer words well than to force all words and create awkward, incomprehensible sentences
+		- Aim to include words that work well together contextually
+		- If including all words would make the content unnatural or hard to understand, use only those that fit naturally
+		
+		AVAILABLE REVIEW WORDS (choose a subset that fits naturally):
 		${wordsList}
 		
-		The user is learning these specific words. Seeing them in context will help reinforce their learning through spaced repetition. Make sure to use these words naturally throughout your ${contentType}.`;
+		Remember: The goal is to create natural, readable content that helps reinforce learning. Including 5-10 words naturally is better than forcing 20+ words into awkward sentences.`;
 	}
 
 	// Build vocabulary words section (only if not using review words only)

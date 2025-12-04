@@ -80,7 +80,7 @@
   }
 </script>
 
-<div class="px-4 sm:px-8 lg:px-12 xl:px-20 pt-4 sm:pt-8 pb-12 max-w-7xl mx-auto">
+<div class="px-3 mt-6 sm:px-8 max-w-7xl mx-auto">
   <!-- Header -->
   <div class="mb-8">
     <h1 class="text-4xl font-bold text-text-300 mb-2">Profile</h1>
