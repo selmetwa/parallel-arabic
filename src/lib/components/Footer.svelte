@@ -1,4 +1,4 @@
-<footer class="absolute bottom-0 w-full p-6 bg-tile-500 border-t border-tile-600">
+<footer class="w-full p-6 bg-tile-500 border-t border-tile-600 mt-auto">
   <ul class="underline flex flex-row gap-2 text-text-300 text-sm sm:text-base items-center flex-wrap">
     <li><a href="/about">About</a></li>
     <li><a href="/mobile-app">Mobile App</a></li>

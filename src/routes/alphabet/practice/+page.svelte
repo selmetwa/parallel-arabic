@@ -1,7 +1,7 @@
-<section class="min-h-screen bg-tile-300">
+<section class="min-h-screen bg-tile-200">
 	<!-- Header -->
 	<header class="border-b border-tile-600">
-		<div class="max-w-7xl mx-auto px-4 sm:px-8 py-4">
+		<div class="max-w-7xl mx-auto px-3 sm:px-8 py-4">
 			<a href="/alphabet" class="flex items-center gap-2 text-text-200 hover:text-text-300 transition-colors w-fit">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
 					<path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />

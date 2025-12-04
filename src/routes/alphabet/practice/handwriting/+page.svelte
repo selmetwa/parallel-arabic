@@ -32,10 +32,10 @@
 	}
 </script>
 
-<section class="min-h-screen bg-tile-300">
+<section class="min-h-screen bg-tile-200">
 	<!-- Header with Navigation -->
-	<header class="border-b border-tile-600 sticky top-0 bg-tile-300 z-10">
-		<div class="max-w-6xl mx-auto px-4 sm:px-8 py-4">
+	<header class="border-b border-tile-600 sticky top-0 bg-tile-200 z-10">
+		<div class="max-w-6xl mx-auto px-3 sm:px-8 py-4">
 			<div class="flex items-center justify-between">
 				<a href="/alphabet/practice" class="flex items-center gap-2 text-text-200 hover:text-text-300 transition-colors">
 					<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -70,7 +70,7 @@
 
 	<!-- Main Content -->
 	<div class="py-6 sm:py-10">
-		<div class="max-w-4xl mx-auto px-4 sm:px-8">
+		<div class="max-w-4xl mx-auto px-3 sm:px-8">
 			<!-- Current Letter Info -->
 			<div class="mb-6 text-center">
 				<h1 class="text-2xl sm:text-3xl font-bold text-text-300 mb-2">
@@ -100,7 +100,7 @@
 
 	<!-- Bottom Navigation -->
 	<footer class="border-t border-tile-600 sticky bottom-0 bg-tile-300">
-		<div class="max-w-4xl mx-auto px-4 sm:px-8 py-4">
+		<div class="max-w-4xl mx-auto px-3 sm:px-8 py-4">
 			<div class="flex items-center justify-between">
 				<div>
 					{#if index > 0}

@@ -57,10 +57,10 @@
 	}
 </script>
 
-<section class="min-h-screen bg-tile-300">
+<section class="min-h-screen bg-tile-200">
 	<!-- Hero Section -->
-	<header class="py-12 sm:py-16 bg-tile-200 border-b border-tile-600">
-		<div class="max-w-7xl mx-auto px-4 sm:px-8">
+	<header class="py-12 sm:py-16 border-b border-tile-600">
+		<div class="max-w-7xl mx-auto px-3 sm:px-8">
 			<div class="text-center max-w-3xl mx-auto">
 				<div class="text-6xl mb-6">🎬</div>
 				<h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-300 leading-tight mb-6">
@@ -77,7 +77,7 @@
 
 	<!-- Search and Filter Section -->
 	<section class="py-8 bg-tile-300 border-b border-tile-600">
-		<div class="max-w-7xl mx-auto px-4 sm:px-8">
+		<div class="max-w-7xl mx-auto px-3 sm:px-8">
 			<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg">
 				<!-- Search Bar -->
 				<div class="relative mb-6">
@@ -135,7 +135,7 @@
 
 	<!-- Videos Grid Section -->
 	<section class="py-12 sm:py-16">
-		<div class="max-w-7xl mx-auto px-4 sm:px-8">
+		<div class="max-w-7xl mx-auto px-3 sm:px-8">
 			{#if data.videos.length === 0}
 				<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-12 shadow-lg text-center">
 					<div class="text-6xl mb-4">📹</div>
@@ -214,7 +214,7 @@
 
 	<!-- Features Section -->
 	<section class="py-12 sm:py-16 bg-tile-200 border-t border-tile-600">
-		<div class="max-w-7xl mx-auto px-4 sm:px-8">
+		<div class="max-w-7xl mx-auto px-3 sm:px-8">
 			<h2 class="text-2xl sm:text-3xl font-bold text-text-300 text-center mb-8">Why Learn with Videos?</h2>
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 				<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg text-center">

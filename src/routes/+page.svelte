@@ -2,6 +2,9 @@
   import { onMount } from 'svelte';
   import { currentDialect } from '$lib/store/store';
   import type { PageData } from './$types';
+  import Card from '$lib/components/Card.svelte';
+  import ContinueCard from '$lib/components/ContinueCard.svelte';
+  import SectionHeader from '$lib/components/SectionHeader.svelte';
 
   let { data }: { data: PageData } = $props();
 
@@ -10,126 +13,111 @@
   });
 </script>
 
-<section class="px-4 mt-12 sm:px-8 max-w-7xl mx-auto mb-20">
-  <!-- Review CTA Section -->
+<section class="px-3 mt-6 sm:px-8 max-w-7xl mx-auto">
+  <!-- Continue Card - Top Section -->
   {#if data.user}
-    <div class="mb-6">
-      <a 
-        href="/review" 
-        class="block bg-gradient-to-r from-blue-500 to-blue-600 border-2 border-blue-700 rounded-lg p-3 sm:p-4 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 text-center group"
-      >
-        {#if data.cappedReviewCount > 0}
-          <div class="text-3xl mb-2">📚</div>
-          <h2 class="text-lg sm:text-xl font-bold text-white mb-1 group-hover:text-blue-50 transition-colors">
-            You have {data.cappedReviewCount} word{data.cappedReviewCount !== 1 ? 's' : ''} to review
-          </h2>
-          <p class="text-blue-100 text-xs sm:text-sm">
-            Keep your vocabulary fresh with spaced repetition
-          </p>
-        {:else}
-          <div class="text-3xl mb-2">💾</div>
-          <h2 class="text-lg sm:text-xl font-bold text-white mb-1 group-hover:text-blue-50 transition-colors">
-            Start Building Your Vocabulary
-          </h2>
-          <p class="text-blue-100 text-xs sm:text-sm">
-            Add words to your review deck to practice with spaced repetition
-          </p>
-        {/if}
-      </a>
+    <div class="mb-8">
+      {#if data.cappedReviewCount > 0}
+        <ContinueCard
+          href="/review"
+          icon="📚"
+          title="You have {data.cappedReviewCount} word{data.cappedReviewCount !== 1 ? 's' : ''} to review"
+          subtitle="Keep your vocabulary fresh with spaced repetition"
+          variant="blue"
+        />
+      {:else}
+        <ContinueCard
+          href="/review"
+          icon="💾"
+          title="Start Building Your Vocabulary"
+          subtitle="Add words to your review deck to practice with spaced repetition"
+          variant="blue"
+        />
+      {/if}
     </div>
   {/if}
 
-  <!-- Getting Started -->
-  <div class="mb-16">
-    <div class="flex items-center gap-4 mb-6">
-      <h2 class="text-2xl sm:text-3xl text-text-300 font-bold">Building blocks</h2>
-      <div class="h-0.5 bg-tile-500 flex-1 opacity-50 rounded-full"></div>
+  <!-- Learn Section -->
+  <div class="mb-12">
+    <SectionHeader title="Learn" />
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <Card
+        href="/alphabet"
+        icon="✍️"
+        title="Alphabet"
+        description="Master the script. Learn the 28 letters, their forms, and how to connect them."
+      />
+
+      <Card
+        href="/lessons"
+        icon="📚"
+        title="Lessons"
+        description="Structured path. Comprehensive lessons with exercises and pronunciation practice."
+      />
+      <Card
+        href="/review"
+        icon="🧠"
+        title="Review"
+        description="Never forget a word. Smart spaced repetition for your personal vocabulary."
+      />
+
+      <Card
+        href="/vocabulary"
+        icon="📖"
+        title="Vocabulary"
+        description="Build your vocabulary with flashcards and spaced repetition."
+      />
     </div>
-    
+  </div>
+
+  <!-- Practice Section -->
+  <div class="mb-12">
+    <SectionHeader title="Practice" />
+
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <a href="/alphabet" class="group flex flex-col bg-tile-400 border-2 border-tile-600 rounded-lg p-8 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1">
-        <div class="text-4xl mb-4">✍️</div>
-        <h3 class="text-2xl font-bold text-text-300 mb-2 group-hover:text-text-200 transition-colors">Arabic Alphabet</h3>
-        <p class="text-text-200 text-base leading-relaxed opacity-90 group-hover:opacity-100">
-          Master the script. Learn the 28 letters, their forms, and how to connect them.
-        </p>
-      </a>
 
-      <a href="/lessons" class="group flex flex-col bg-tile-400 border-2 border-tile-600 rounded-lg p-8 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1">
-        <div class="text-4xl mb-4">📚</div>
-        <h3 class="text-2xl font-bold text-text-300 mb-2 group-hover:text-text-200 transition-colors">Lessons</h3>
-        <p class="text-text-200 text-base leading-relaxed opacity-90 group-hover:opacity-100">
-          Structured path. Comprehensive lessons with exercises and pronunciation practice.
-        </p>
-      </a>
-
-      <a href="/review" class="group flex flex-col bg-tile-400 border-2 border-tile-600 rounded-lg p-8 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1">
-        <div class="text-4xl mb-4">🧠</div>
-        <h3 class="text-2xl font-bold text-text-300 mb-2 group-hover:text-text-200 transition-colors">Vocabulary Review</h3>
-        <p class="text-text-200 text-base leading-relaxed opacity-90 group-hover:opacity-100">
-          Never forget a word. Smart spaced repetition for your personal vocabulary.
-        </p>
-      </a>
+      <Card
+        href="/stories"
+        icon="📖"
+        title="Stories"
+        description="Read short stories with instant definitions, audio, and parallel translations."
+      />
+      <Card
+        href="/speak"
+        icon="🎙️"
+        title="Speak"
+        description="Improve pronunciation with AI feedback on your spoken sentences."
+      />
+      <Card
+      href="/sentences"
+      icon="📝"
+      title="Sentences"
+      description="Drill sentence structures and grammar patterns in context."
+    />
     </div>
   </div>
 
-  <!-- Immersion & Content -->
-  <div class="mb-16">
-    <div class="flex items-center gap-4 mb-6">
-      <h2 class="text-2xl sm:text-3xl text-text-300 font-bold">Immersion & Content</h2>
-      <div class="h-0.5 bg-tile-500 flex-1 opacity-50 rounded-full"></div>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <a href="/stories" class="group flex flex-col bg-tile-400 border-2 border-tile-600 rounded-lg p-8 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1">
-        <div class="text-4xl mb-4">📖</div>
-        <h3 class="text-2xl font-bold text-text-300 mb-2 group-hover:text-text-200 transition-colors">Stories</h3>
-        <p class="text-text-200 text-base leading-relaxed opacity-90 group-hover:opacity-100">
-          Read short stories with instant definitions, audio, and parallel translations.
-        </p>
-      </a>
-
-      <a href="/videos" class="group flex flex-col bg-tile-400 border-2 border-tile-600 rounded-lg p-8 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1">
-        <div class="text-4xl mb-4">📺</div>
-        <h3 class="text-2xl font-bold text-text-300 mb-2 group-hover:text-text-200 transition-colors">Videos</h3>
-        <p class="text-text-200 text-base leading-relaxed opacity-90 group-hover:opacity-100">
-          Watch authentic content with interactive transcripts and dialect-specific translations.
-        </p>
-      </a>
-    </div>
-  </div>
-
-  <!-- Interactive Practice -->
+  <!-- Explore Section -->
   <div>
-    <div class="flex items-center gap-4 mb-6">
-      <h2 class="text-2xl sm:text-3xl text-text-300 font-bold">Interactive Practice</h2>
-      <div class="h-0.5 bg-tile-500 flex-1 opacity-50 rounded-full"></div>
-    </div>
+    <SectionHeader title="Explore" />
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <a href="/speak" class="group flex flex-col bg-tile-400 border-2 border-tile-600 rounded-lg p-8 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1">
-        <div class="text-4xl mb-4">🎙️</div>
-        <h3 class="text-2xl font-bold text-text-300 mb-2 group-hover:text-text-200 transition-colors">Speak</h3>
-        <p class="text-text-200 text-base leading-relaxed opacity-90 group-hover:opacity-100">
-          Improve pronunciation with AI feedback on your spoken sentences.
-        </p>
-      </a>
 
-      <a href="/tutor" class="group flex flex-col bg-tile-400 border-2 border-tile-600 rounded-lg p-8 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1">
-        <div class="text-4xl mb-4">💬</div>
-        <h3 class="text-2xl font-bold text-text-300 mb-2 group-hover:text-text-200 transition-colors">AI Tutor</h3>
-        <p class="text-text-200 text-base leading-relaxed opacity-90 group-hover:opacity-100">
-          Practice conversation in any dialect with an intelligent AI tutor.
-        </p>
-      </a>
 
-      <a href="/sentences" class="group flex flex-col bg-tile-400 border-2 border-tile-600 rounded-lg p-8 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1">
-        <div class="text-4xl mb-4">📝</div>
-        <h3 class="text-2xl font-bold text-text-300 mb-2 group-hover:text-text-200 transition-colors">Sentences</h3>
-        <p class="text-text-200 text-base leading-relaxed opacity-90 group-hover:opacity-100">
-          Drill sentence structures and grammar patterns in context.
-        </p>
-      </a>
+      <Card
+        href="/videos"
+        icon="📺"
+        title="Videos"
+        description="Watch authentic content with interactive transcripts and dialect-specific translations."
+      />
+
+      <Card
+        href="/tutor"
+        icon="💬"
+        title="Tutor"
+        description="Practice conversation in any dialect with an intelligent AI tutor."
+      />
     </div>
   </div>
 </section>
