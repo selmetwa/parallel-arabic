@@ -60,7 +60,7 @@
 				</div>
 				<ol class="list-decimal list-inside space-y-3 text-text-200">
 					<li>Open <strong class="text-text-300">Safari</strong> browser on your iPhone or iPad</li>
-					<li>Navigate to <strong class="text-text-300">parallelarabic.com</strong></li>
+					<li>Navigate to <strong class="text-text-300">parallel-arabic.com</strong></li>
 					<li>Tap the <strong class="text-text-300">Share</strong> button (square with arrow pointing up) at the bottom of the screen</li>
 					<li>Scroll down and tap <strong class="text-text-300">"Add to Home Screen"</strong></li>
 					<li>Customize the name if desired, then tap <strong class="text-text-300">"Add"</strong> in the top right</li>
@@ -76,7 +76,7 @@
 				</div>
 				<ol class="list-decimal list-inside space-y-3 text-text-200">
 					<li>Open <strong class="text-text-300">Chrome</strong> browser on your Android device</li>
-					<li>Navigate to <strong class="text-text-300">parallelarabic.com</strong></li>
+					<li>Navigate to <strong class="text-text-300">parallel-arabic.com</strong></li>
 					<li>Tap the <strong class="text-text-300">menu</strong> button (three dots) in the top right corner</li>
 					<li>Tap <strong class="text-text-300">"Install app"</strong> or <strong class="text-text-300">"Add to Home screen"</strong></li>
 					<li>Confirm by tapping <strong class="text-text-300">"Install"</strong> in the popup</li>
@@ -92,7 +92,7 @@
 				</div>
 				<ol class="list-decimal list-inside space-y-3 text-text-200">
 					<li>Open <strong class="text-text-300">Chrome</strong> or <strong class="text-text-300">Edge</strong> browser</li>
-					<li>Navigate to <strong class="text-text-300">parallelarabic.com</strong></li>
+					<li>Navigate to <strong class="text-text-300">parallel-arabic.com</strong></li>
 					<li>Look for the <strong class="text-text-300">install icon</strong> in the address bar (usually a "+" or download icon)</li>
 					<li>Click the install icon and select <strong class="text-text-300">"Install"</strong></li>
 					<li>Alternatively, click the menu (three dots) → <strong class="text-text-300">"Install Parallel Arabic"</strong></li>
