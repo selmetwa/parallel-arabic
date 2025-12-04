@@ -94,6 +94,12 @@ export function getPageMeta(page: string, data?: any): PageMeta {
       description: 'Find answers to common questions about Parallel Arabic, including why to learn Arabic dialects, how the platform works, subscription details, and learning tips.',
       url: `${baseUrl}/faq`,
       type: 'website'
+    },
+    vocabulary: {
+      title: 'Arabic Vocabulary Explorer - 20,000+ Words | Parallel Arabic',
+      description: 'Browse and learn from our comprehensive Arabic vocabulary database with over 20,000 words across Egyptian, Levantine, Moroccan Darija, and Modern Standard Arabic. Search, filter, and save words to your review deck.',
+      url: `${baseUrl}/vocabulary`,
+      type: 'website'
     }
   };
 
