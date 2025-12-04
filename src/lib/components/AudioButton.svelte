@@ -86,7 +86,7 @@
 <button
 	type="button"
 	onclick={speakArabic}
-	class="inline-flex shrink-0 items-center justify-center p-1 rounded hover:bg-tile-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed {className}"
+	class="inline-flex shrink-0 items-center justify-center p-1 rounded md:hover:bg-tile-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed {className}"
 	disabled={isLoading}
 	aria-label="Play audio"
 >

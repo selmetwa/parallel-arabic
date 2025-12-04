@@ -178,12 +178,19 @@ export const POST: RequestHandler = async ({ request }) => {
     
     reviewWordsSection = `
     
-    CRITICAL: You MUST use ALL of the following words in your sentences. These are words the user is actively learning, and including them reinforces their memory. Use each word at least once. If you cannot naturally include all words, prioritize using as many as possible, but make the sentences feel natural.
+    REVIEW WORDS TO INCORPORATE: The following are words the user is actively learning. You should incorporate some of these words naturally throughout your sentences, but you do NOT need to include every single word. Quality and naturalness are more important than quantity.
     
-    REQUIRED WORDS TO INCLUDE:
+    IMPORTANT GUIDELINES:
+    - Select a reasonable subset of words that fit naturally into your sentences
+    - Prioritize natural, comprehensible sentences over cramming in all words
+    - It's better to use fewer words well than to force all words and create awkward, incomprehensible sentences
+    - Distribute the words across different sentences rather than cramming many into one sentence
+    - If including all words would make sentences unnatural or hard to understand, use only those that fit naturally
+    
+    AVAILABLE REVIEW WORDS (choose a subset that fits naturally):
     ${wordsList}
     
-    The user is learning these specific words. Seeing them in context will help reinforce their learning through spaced repetition. Make sure to use these words naturally throughout your sentences.`;
+    Remember: The goal is to create natural, readable sentences that help reinforce learning. Including a few words naturally per sentence is better than forcing many words into awkward, incomprehensible sentences.`;
   }
 
   // Build vocabulary words section (only if not using review words only)

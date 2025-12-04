@@ -418,7 +418,7 @@
 {/if}
 
 {#if isError}
-	<div class="px-4 mt-12 sm:px-8 max-w-3xl mx-auto">
+	<div class="px-3 mt-6 sm:px-8 max-w-3xl mx-auto">
 		<div class="flex flex-col items-center gap-4 border-2 border-red-200 bg-red-50/50 p-6 text-text-200 shadow-lg rounded-xl">
 			<div class="text-center">
 				<p class="text-2xl text-red-700 font-bold mb-2">
@@ -439,7 +439,7 @@
 {/if}
 
 {#if !isLoading && sentences.length === 0 && !hasReachedLimit}
-	<section class="px-4 mt-12 sm:px-8 max-w-7xl mx-auto mb-20">
+	<section class="px-3 mt-6 sm:px-8 max-w-7xl mx-auto">
 		<div class="text-left mb-12">
 			<h1 class="text-4xl sm:text-5xl text-text-300 font-bold mb-4 tracking-tight">Sentence Practice</h1>
 			<p class="text-text-200 text-lg sm:text-xl leading-relaxed opacity-90 max-w-3xl">

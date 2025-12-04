@@ -4,15 +4,16 @@
 	import DialectNavigation from '$lib/components/DialectNavigation.svelte';
 	import Drawer from '$lib/components/Drawer.svelte';
 	import Onboarding from '$lib/components/Onboarding.svelte';
+	import Sidebar from '$lib/components/Sidebar.svelte';
+	import BottomNavigation from '$lib/components/BottomNavigation.svelte';
 	import { onMount } from 'svelte';
 	import { theme } from '$lib/store/store';
-	import Svg from '$lib/components/Svg.svelte';
 	import Button from '$lib/components/Button.svelte';
   import Footer from "$lib/components/Footer.svelte";
   import RadioButton from '$lib/components/RadioButton.svelte';
   import ChatWidget from '$lib/components/ChatWidget.svelte';
   import { Toaster } from 'svelte-sonner';
-  
+
   import { invalidate, goto } from '$app/navigation'
   import { page } from '$app/stores'
   import { pwaInfo } from 'virtual:pwa-info';
@@ -289,63 +290,64 @@
       </header>
 
 		<form oninput={onTheme} class="flex flex-col gap-2 mt-8 px-3">
-      <RadioButton 
+      <RadioButton
         selectableFor="light"
         onClick={onTheme}
-        value="light" 
+        value="light"
         isSelected={themeValue === 'light'}
         text="Light"
         className="text-lg"
         />
-        <RadioButton 
+        <RadioButton
         selectableFor="dim"
         onClick={onTheme}
-        value="dim" 
+        value="dim"
         isSelected={themeValue === 'dim'}
-        text="Dim" 
+        text="Dim"
         className="text-lg"
         />
-        <RadioButton 
+        <RadioButton
         onClick={onTheme}
         className="text-lg"
         selectableFor="dark"
-        value="dark" 
+        value="dark"
         isSelected={themeValue === 'Dark'}
-        text="Dark" 
+        text="Dark"
         />
 		</form>
   </div>
 	</Drawer>
-	<div class="flex flex-row h-full">
-		<aside class="flex flex-1 justify-center overflow-hidden py-12">
-			<div class="flex flex-col gap-5">
-				<Svg />
-				<Svg />
-				<Svg />
-				<Svg />
-			</div>
-		</aside>
-		<main class="relative !min-h-full shrink-0 border-x border-tile-600 bg-tile-200 pb-36 sm:pb-24 h-fit">
+
+	<!-- Desktop Sidebar -->
+	<Sidebar session={session} />
+
+	<!-- Main Content Area -->
+	<main class="flex flex-col bg-tile-200 pb-20 lg:pb-0 lg:ml-64 min-h-screen">
+		<!-- Top Navigation - Only visible on mobile -->
+		<div class="lg:hidden">
 			<Navigation
-				user={data.user} 
-        {handleOpenDrawer} 
-        session={data.session}
-        userEmail={data?.user?.email ?? ""}
-        targetDialect={data.targetDialect}
-      />
-			<DialectNavigation />
-        {@render children()}
-      <Footer />
-    </main>
-		<aside class="flex flex-1 justify-center overflow-hidden py-12">
-			<div class="flex flex-col gap-5">
-				<Svg />
-				<Svg />
-				<Svg />
-				<Svg />
-			</div>
-		</aside>
-	</div>
+				user={data.user}
+				{handleOpenDrawer}
+				session={data.session}
+				userEmail={data?.user?.email ?? ""}
+				targetDialect={data.targetDialect}
+			/>
+		</div>
+
+		<!-- Dialect Navigation - Visible on all screen sizes -->
+		<DialectNavigation />
+
+		<!-- Page Content -->
+		<div class="flex-1 pb-10">
+			{@render children()}
+		</div>
+
+		<!-- Footer -->
+		<Footer />
+	</main>
+
+	<!-- Bottom Navigation - Mobile only -->
+	<BottomNavigation />
 
   <!-- Chat Widget - only shows on desktop -->
   <ChatWidget />
@@ -361,10 +363,4 @@
 
   <!-- Onboarding Modal - Shows automatically for new users -->
   <Onboarding isOpen={showOnboarding} handleCloseModal={handleCloseOnboarding} />
-
-  <style>
-    main {
-      width: min(var(--layout-width), 100%);
-    }
-  </style>
 
