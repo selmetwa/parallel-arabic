@@ -1,7 +1,7 @@
-<section class="min-h-screen bg-tile-300">
+<section class="min-h-screen bg-tile-200">
 	<!-- Hero Section -->
 	<header class="border-b border-tile-600">
-		<div class="max-w-7xl mx-auto px-4 sm:px-8 py-12 sm:py-16">
+		<div class="max-w-7xl mx-auto px-3 sm:px-8 py-12 sm:py-16">
 			<div class="text-center max-w-3xl mx-auto">
 				<div class="inline-flex items-center gap-2 px-4 py-2 bg-tile-400 border border-tile-600 rounded-full text-sm text-text-200 mb-6">
 					<span>🔤</span>
@@ -19,7 +19,7 @@
 
 	<!-- Learning Paths -->
 	<section class="py-12 sm:py-16">
-		<div class="max-w-5xl mx-auto px-4 sm:px-8">
+		<div class="max-w-5xl mx-auto px-3 sm:px-8">
 			<h2 class="text-2xl sm:text-3xl font-bold text-text-300 text-center mb-10">Choose Your Path</h2>
 			
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -94,7 +94,7 @@
 
 	<!-- Why Learn Section -->
 	<section class="py-12 sm:py-16 bg-tile-200 border-y border-tile-600">
-		<div class="max-w-7xl mx-auto px-4 sm:px-8">
+		<div class="max-w-7xl mx-auto px-3 sm:px-8">
 			<h2 class="text-2xl sm:text-3xl font-bold text-text-300 text-center mb-10">Why Master the Arabic Alphabet?</h2>
 			
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -127,7 +127,7 @@
 
 	<!-- Quick Facts -->
 	<section class="py-12 sm:py-16">
-		<div class="max-w-4xl mx-auto px-4 sm:px-8">
+		<div class="max-w-4xl mx-auto px-3 sm:px-8">
 			<div class="bg-tile-500 border-2 border-tile-600 rounded-lg p-8 shadow-lg">
 				<h2 class="text-2xl font-bold text-text-300 mb-6 text-center">Quick Facts About Arabic Script</h2>
 				<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">

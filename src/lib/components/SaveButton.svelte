@@ -70,10 +70,10 @@
     <p class="font-semibold text-text-300 text-xl">{error}</p>
   </div>
 {/if}
-<button 
+<button
   onclick={!isLoading ? saveWord : undefined}
   disabled={isLoading}
-  class="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-all duration-200 shadow-sm hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
+  class="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold bg-emerald-600 text-white rounded-lg md:hover:bg-emerald-700 transition-all duration-200 shadow-sm md:hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
 >
   {#if isLoading}
     <svg class="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">

@@ -371,10 +371,10 @@
   currentDialect={selectedDialect}
 />
 
-<section class="min-h-screen bg-tile-300">
+<section class="min-h-screen bg-tile-200">
   <!-- Hero Section -->
-  <header class="py-8 sm:py-12 bg-tile-200 border-b border-tile-600">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+  <header class="py-8 sm:py-12 border-b border-tile-600">
+    <div class="max-w-7xl mx-auto px-3 sm:px-8">
       <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
         <div class="max-w-2xl">
           <div class="flex items-center gap-3 mb-4">
