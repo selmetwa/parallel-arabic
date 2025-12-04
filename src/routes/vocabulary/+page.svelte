@@ -192,7 +192,7 @@
       Vocabulary Explorer
     </h1>
     <p class="text-text-200 text-lg sm:text-xl leading-snug">
-      Browse and learn from our comprehensive vocabulary database across all dialects.
+      Browse and learn from our comprehensive vocabulary with over 20,000 words across all dialects.
     </p>
   </div>
 

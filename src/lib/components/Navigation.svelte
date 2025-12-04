@@ -41,11 +41,6 @@
 
 <nav class="w-full border-b border-tile-600 py-4 bg-tile-300 relative">
     <menu class="w-full flex gap-4 px-4 items-center flex-wrap">
-        <li><a class="text-text-300 text-sm sm:text-base underline" href="/">Home</a></li>
-        {#if session}
-          <li><a class="text-text-300 text-sm sm:text-base underline" href="/review">Review</a></li>
-          <li><a class="text-text-300 text-sm sm:text-base underline" href="/profile">Profile</a></li>
-        {/if}
         <menu class="ml-auto flex flex-row gap-4 items-center">
           {#if session}
             <li class="flex items-center gap-2">
