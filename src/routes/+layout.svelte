@@ -6,9 +6,9 @@
 	import Onboarding from '$lib/components/Onboarding.svelte';
 	import Sidebar from '$lib/components/Sidebar.svelte';
 	import BottomNavigation from '$lib/components/BottomNavigation.svelte';
-	import { onMount } from 'svelte';
-	import { theme } from '$lib/store/store';
-	import Button from '$lib/components/Button.svelte';
+  import { onMount } from 'svelte';
+  import { theme, sidebarCollapsed } from '$lib/store/store';
+  import Button from '$lib/components/Button.svelte';
   import Footer from "$lib/components/Footer.svelte";
   import RadioButton from '$lib/components/RadioButton.svelte';
   import ChatWidget from '$lib/components/ChatWidget.svelte';
@@ -166,6 +166,7 @@
 		if (path === '/lessons') return 'lessons';
 		if (path.startsWith('/alphabet')) return 'alphabet';
 		if (path === '/videos') return 'videos';
+		if (path === '/vocabulary') return 'vocabulary';
 		if (path === '/about') return 'about';
 		if (path === '/faq') return 'faq';
 		
@@ -281,7 +282,7 @@
 	<Drawer {isOpen} {handleCloseDrawer}>
     <div>
       <header class="items-center border-b-2 border-tile-600 py-4 px-3 flex flex-row justify-between">
-        <h1 class="text-xl font-bold text-text-300">Settings</h1>
+        <h1 class="text-xl font-bold text-text-300">Color theme</h1>
         <div class="w-fit">
           <Button onClick={handleCloseDrawer} type="button">
             Close
@@ -319,10 +320,25 @@
 	</Drawer>
 
 	<!-- Desktop Sidebar -->
-	<Sidebar session={session} />
+	<Sidebar session={session} {handleOpenDrawer} />
+
+	<!-- Expand Sidebar Button (shown when collapsed) -->
+	{#if $sidebarCollapsed}
+		<button
+			type="button"
+			onclick={() => sidebarCollapsed.set(false)}
+			class="hidden lg:flex fixed top-4 left-4 z-50 p-3 bg-tile-500 hover:bg-tile-600 border-2 border-tile-600 rounded-lg shadow-lg transition-all duration-300 text-text-300"
+			aria-label="Expand sidebar"
+			title="Expand sidebar"
+		>
+			<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+			</svg>
+		</button>
+	{/if}
 
 	<!-- Main Content Area -->
-	<main class="flex flex-col bg-tile-200 pb-20 lg:pb-0 lg:ml-64 min-h-screen">
+	<main class="flex flex-col bg-tile-200 pb-20 lg:pb-0 min-h-screen transition-all duration-300 {$sidebarCollapsed ? 'lg:ml-0' : 'lg:ml-64'}">
 		<!-- Top Navigation - Only visible on mobile -->
 		<div class="lg:hidden">
 			<Navigation
