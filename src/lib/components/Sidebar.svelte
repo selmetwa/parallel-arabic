@@ -1,5 +1,8 @@
 <script lang="ts">
   import { page } from '$app/stores';
+  import { onMount } from 'svelte';
+  import { sidebarCollapsed } from '$lib/store/store';
+  import Button from './Button.svelte';
 
   interface NavItem {
     label: string;
@@ -14,9 +17,34 @@
 
   interface Props {
     session: any;
+    handleOpenDrawer?: () => void;
   }
 
-  let { session }: Props = $props();
+  let { session, handleOpenDrawer }: Props = $props();
+
+  // Load collapsed state from localStorage on mount
+  onMount(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('sidebar-collapsed');
+      if (saved === 'true') {
+        sidebarCollapsed.set(true);
+      }
+    }
+  });
+
+  // Sync localStorage with store changes
+  $effect(() => {
+    const unsubscribe = sidebarCollapsed.subscribe((value) => {
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('sidebar-collapsed', value.toString());
+      }
+    });
+    return unsubscribe;
+  });
+
+  function toggleSidebar() {
+    sidebarCollapsed.update(collapsed => !collapsed);
+  }
 
   const navSections = $derived.by(() => {
     const baseSections: NavSection[] = [
@@ -77,11 +105,24 @@
   }
 </script>
 
-<aside class="hidden lg:flex flex-col w-64 bg-tile-300 border-r-2 border-tile-600 h-screen fixed top-0 left-0 overflow-y-auto z-40">
-  <div class="p-6">
-    <a href="/" class="flex items-center gap-3 mb-8">
-      <h1 class="text-xl font-bold text-text-300">Parallel Arabic</h1>
-    </a>
+<aside class="hidden lg:flex flex-col bg-tile-300 border-r-2 border-tile-600 h-screen fixed top-0 left-0 overflow-hidden z-40 transition-all duration-300 {$sidebarCollapsed ? 'w-0 opacity-0' : 'w-64 opacity-100'}">
+  <div class="p-6 {$sidebarCollapsed ? 'hidden' : ''}">
+    <div class="flex items-center justify-between mb-8">
+      <a href="/" class="flex items-center gap-3">
+        <h1 class="text-xl font-bold text-text-300">Parallel Arabic</h1>
+      </a>
+      <button
+        type="button"
+        onclick={toggleSidebar}
+        class="p-2 rounded-lg hover:bg-tile-400 transition-colors text-text-300"
+        aria-label="Collapse sidebar"
+        title="Collapse sidebar"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
 
     <nav class="flex flex-col gap-2">
       {#each navSections as section}
@@ -122,6 +163,15 @@
         </div>
       {/each}
     </nav>
+
+    <!-- Theme Toggle -->
+    {#if handleOpenDrawer}
+      <div class="mt-6 pt-6 border-t border-tile-600">
+        <Button onClick={handleOpenDrawer} type="button" className="w-full">
+          Theme
+        </Button>
+      </div>
+    {/if}
   </div>
 </aside>
 

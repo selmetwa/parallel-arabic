@@ -66,7 +66,7 @@
         href="/vocabulary"
         icon="📖"
         title="Vocabulary"
-        description="Build your vocabulary with flashcards and spaced repetition."
+        description="Discover over 20,000 words across all dialects."
       />
     </div>
   </div>

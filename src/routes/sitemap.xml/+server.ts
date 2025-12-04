@@ -12,6 +12,7 @@ const staticPages = [
   { url: '/tutor', priority: 0.8, changefreq: 'monthly' },
   { url: '/alphabet/learn', priority: 0.7, changefreq: 'monthly' },
   { url: '/videos', priority: 0.8, changefreq: 'weekly' },
+  { url: '/vocabulary', priority: 0.9, changefreq: 'weekly' },
   { url: '/review/import', priority: 0.6, changefreq: 'monthly' },
 ];
 
