@@ -2,15 +2,15 @@
 	<!-- Hero Section -->
 	<header class="border-b border-tile-600">
 		<div class="max-w-7xl mx-auto px-3 sm:px-8 py-12 sm:py-16">
-			<div class="text-center max-w-3xl mx-auto">
+			<div class="text-left max-w-3xl">
 				<div class="inline-flex items-center gap-2 px-4 py-2 bg-tile-400 border border-tile-600 rounded-full text-sm text-text-200 mb-6">
 					<span>🔤</span>
 					<span>Foundation Skills</span>
 				</div>
-				<h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-300 leading-tight mb-6">
+				<h1 class="text-3xl sm:text-4xl text-text-300 font-bold mb-2 tracking-tight">
 					Master the Arabic Alphabet
 				</h1>
-				<p class="text-lg sm:text-xl text-text-200 leading-relaxed">
+				<p class="text-text-200 text-lg sm:text-xl leading-snug">
 					Learn all 28 letters of the Arabic alphabet with interactive lessons, audio pronunciation, and hands-on practice. Build a solid foundation for your Arabic journey.
 				</p>
 			</div>
@@ -20,8 +20,8 @@
 	<!-- Learning Paths -->
 	<section class="py-12 sm:py-16">
 		<div class="max-w-5xl mx-auto px-3 sm:px-8">
-			<h2 class="text-2xl sm:text-3xl font-bold text-text-300 text-center mb-10">Choose Your Path</h2>
-			
+			<h2 class="text-2xl sm:text-3xl font-bold text-text-300 text-left mb-10">Choose Your Path</h2>
+
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 				<!-- Learn Card -->
 				<a href="/alphabet/learn" class="group">
@@ -95,10 +95,10 @@
 	<!-- Why Learn Section -->
 	<section class="py-12 sm:py-16 bg-tile-200 border-y border-tile-600">
 		<div class="max-w-7xl mx-auto px-3 sm:px-8">
-			<h2 class="text-2xl sm:text-3xl font-bold text-text-300 text-center mb-10">Why Master the Arabic Alphabet?</h2>
-			
+			<h2 class="text-2xl sm:text-3xl font-bold text-text-300 text-left mb-10">Why Master the Arabic Alphabet?</h2>
+
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-				<article class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg text-center">
+				<article class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg text-left">
 					<div class="text-4xl mb-4">🚀</div>
 					<h3 class="text-xl font-bold text-text-300 mb-3">Foundation for Fluency</h3>
 					<p class="text-text-200 leading-relaxed">
@@ -106,7 +106,7 @@
 					</p>
 				</article>
 
-				<article class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg text-center">
+				<article class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg text-left">
 					<div class="text-4xl mb-4">🧠</div>
 					<h3 class="text-xl font-bold text-text-300 mb-3">Pattern Recognition</h3>
 					<p class="text-text-200 leading-relaxed">
@@ -114,7 +114,7 @@
 					</p>
 				</article>
 
-				<article class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg text-center">
+				<article class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg text-left">
 					<div class="text-4xl mb-4">🎯</div>
 					<h3 class="text-xl font-bold text-text-300 mb-3">Unlock All Dialects</h3>
 					<p class="text-text-200 leading-relaxed">

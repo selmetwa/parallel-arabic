@@ -117,11 +117,11 @@
 		}
 	});
 
-	function toggleLearningTopic(topic: string) {
-		if (selectedLearningTopics.includes(topic)) {
-			selectedLearningTopics = selectedLearningTopics.filter((t: string) => t !== topic);
+	function toggleLearningTopic(topicValue: string) {
+		if (selectedLearningTopics.includes(topicValue)) {
+			selectedLearningTopics = selectedLearningTopics.filter((t: string) => t !== topicValue);
 		} else {
-			selectedLearningTopics = [...selectedLearningTopics, topic];
+			selectedLearningTopics = [...selectedLearningTopics, topicValue];
 		}
 	}
 
@@ -378,30 +378,30 @@
 	let hasReachedLimit = $derived(!data.isSubscribed && sentencesViewed >= 5);
 
 	const dialectOptions = [
-		{ value: 'egyptian-arabic', label: 'Egyptian Arabic' },
-		{ value: 'fusha', label: 'Modern Standard Arabic (Fusha)' },
-		{ value: 'levantine', label: 'Levantine Arabic' },
-		{ value: 'darija', label: 'Moroccan Arabic (Darija)' },
+		{ value: 'egyptian-arabic', label: 'Egyptian Arabic', emoji: '🇪🇬' },
+		{ value: 'fusha', label: 'Modern Standard Arabic', emoji: '📚' },
+		{ value: 'levantine', label: 'Levantine Arabic', emoji: '🇱🇧' },
+		{ value: 'darija', label: 'Moroccan Darija', emoji: '🇲🇦' },
 	];
 
 	const learningTopicOptions = [
-		'verb conjugation',
-		'noun plurals',
-		'past tense',
-		'present tense',
-		'infinitive',
-		'numbers',
-		'future tense',
-		'possessive suffixes'
+		{ label: 'Verb Conjugation', value: 'verb conjugation', emoji: '🔄' },
+		{ label: 'Noun Plurals', value: 'noun plurals', emoji: '📝' },
+		{ label: 'Past Tense', value: 'past tense', emoji: '⏪' },
+		{ label: 'Present Tense', value: 'present tense', emoji: '▶️' },
+		{ label: 'Infinitive', value: 'infinitive', emoji: '∞' },
+		{ label: 'Numbers', value: 'numbers', emoji: '🔢' },
+		{ label: 'Future Tense', value: 'future tense', emoji: '⏩' },
+		{ label: 'Possessive Suffixes', value: 'possessive suffixes', emoji: '👤' }
 	];
 
 	const difficultyOptions = [
-		{ value: 'a1', label: 'A1 (Beginner)' },
-		{ value: 'a2', label: 'A2 (Elementary)' },
-		{ value: 'b1', label: 'B1 (Intermediate)' },
-		{ value: 'b2', label: 'B2 (Upper Intermediate)' },
-		{ value: 'c1', label: 'C1 (Advanced)' },
-		{ value: 'c2', label: 'C2 (Proficient)' }
+		{ value: 'a1', label: 'A1', sublabel: 'Beginner', color: 'bg-green-600' },
+		{ value: 'a2', label: 'A2', sublabel: 'Elementary', color: 'bg-green-500' },
+		{ value: 'b1', label: 'B1', sublabel: 'Intermediate', color: 'bg-yellow-500' },
+		{ value: 'b2', label: 'B2', sublabel: 'Upper Int.', color: 'bg-orange-500' },
+		{ value: 'c1', label: 'C1', sublabel: 'Advanced', color: 'bg-red-500' },
+		{ value: 'c2', label: 'C2', sublabel: 'Proficient', color: 'bg-red-600' }
 	];
 
 </script>
@@ -439,306 +439,365 @@
 {/if}
 
 {#if !isLoading && sentences.length === 0 && !hasReachedLimit}
-	<section class="px-3 mt-6 sm:px-8 max-w-7xl mx-auto">
-		<div class="text-left mb-12">
-			<h1 class="text-4xl sm:text-5xl text-text-300 font-bold mb-4 tracking-tight">Sentence Practice</h1>
-			<p class="text-text-200 text-lg sm:text-xl leading-relaxed opacity-90 max-w-3xl">
+	<!-- Generation Form -->
+	<header class="py-6 sm:py-6 bg-tile-200 border-b border-tile-600 px-6 sm:px-12">
+		<div class=" text-left">
+			<h1 class="text-3xl sm:text-4xl text-text-300 font-bold mb-2 tracking-tight">
+				Sentence Practice
+			</h1>
+			<p class="text-text-200 text-lg sm:text-xl leading-snug max-w-2xl">
 				Drill grammar patterns and vocabulary in context with unlimited AI-generated sentences.
 			</p>
 		</div>
+	</header>
 
-		<div class="max-w-3xl mx-auto border border-tile-500 bg-tile-400/30 shadow-xl rounded-xl overflow-hidden">
-			<div class="bg-tile-400 p-6 border-b border-tile-500">
-				<h2 class="text-xl font-bold text-text-300">Configure Practice Session</h2>
-				<p class="text-text-200 text-sm mt-1">Customize your sentences to match your learning goals.</p>
-			</div>
-			
-			<form class="flex flex-col gap-8 p-6 sm:p-8" onsubmit={generateSentences}>
-				<!-- Review Words Only Toggle -->
-				<div class="flex flex-col gap-3 bg-tile-400/30 p-4 rounded-xl border border-tile-500/50">
-					<div class="flex items-center justify-between">
-						<div class="flex flex-col gap-1">
-							<p class="text-sm font-bold text-text-300">Use Review Words Only</p>
-							<p class="text-xs text-text-200 opacity-80">
-								Generate content using words you're already learning. This reinforces your memory by seeing words in new contexts, improving retention through spaced repetition.
-							</p>
-						</div>
-						<div class="relative flex items-center">
-							<input
-								type="checkbox"
-								id="useReviewWordsOnly"
-								bind:checked={useReviewWordsOnly}
-								class="peer w-5 h-5 cursor-pointer appearance-none rounded border border-tile-600 bg-tile-200 checked:bg-tile-600 checked:border-tile-600 focus:ring-offset-0 focus:ring-1 focus:ring-tile-500 transition-all"
-							/>
-							<svg class="absolute w-3 h-3 text-white pointer-events-none opacity-0 peer-checked:opacity-100 left-1 top-1 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+	<section class="py-8 sm:py-8">
+		<div class=" px-6 sm:px-12">
+			<form class="space-y-8" onsubmit={generateSentences}>
+				<!-- Review Words Toggle Card -->
+				<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
+					<div class="p-6">
+						<div class="flex items-start justify-between gap-4">
+							<div class="flex-1">
+								<div class="flex items-center gap-2 mb-2">
+									<span class="text-2xl">🔄</span>
+									<h3 class="text-lg font-bold text-text-300">Use Your Review Words</h3>
+								</div>
+								<p class="text-sm text-text-200 leading-relaxed">
+									Generate sentences using words from your review deck. This reinforces vocabulary through contextual practice.
+								</p>
+							</div>
+							<label class="relative inline-flex items-center cursor-pointer">
+								<input type="checkbox" bind:checked={useReviewWordsOnly} class="sr-only peer" />
+								<div class="w-14 h-8 bg-tile-500 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-white after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-emerald-600"></div>
+							</label>
 						</div>
 					</div>
 				</div>
 
 				{#if useReviewWordsOnly}
-					<!-- Review Words Only Mode -->
+					<!-- Review Words Mode -->
+					
 					<!-- Dialect Selection -->
-					<div class="flex flex-col gap-3">
-						<h3 class="text-sm font-bold text-text-300 uppercase tracking-wider opacity-80">Select Dialect</h3>
-						<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-							{#each dialectOptions as dialectOption}
-								<RadioButton
-									className="!text-base !font-medium"
-									wrapperClass="!p-3 !rounded-lg hover:bg-tile-400/50 transition-colors duration-200"
-									onClick={setDialect}
-									selectableFor={dialectOption.value}
-									isSelected={selectedDialect === dialectOption.value}
-									value={dialectOption.value}
-									text={dialectOption.label}
-								/>
-							{/each}
+					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
+						<div class="p-4 border-b border-tile-600">
+							<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
+								<span>🌍</span> Select Dialect
+							</h3>
+						</div>
+						<div class="p-6">
+							<div class="grid grid-cols-2 gap-3">
+								{#each dialectOptions as dialectOption}
+									<button
+										type="button"
+										onclick={() => selectedDialect = dialectOption.value}
+										class="flex items-center gap-3 p-4 rounded-lg border-2 transition-all duration-200 text-left {selectedDialect === dialectOption.value ? 'bg-tile-500 border-tile-400 shadow-md' : 'bg-tile-300 border-tile-600 hover:bg-tile-300/70 hover:border-tile-500'}"
+									>
+										<span class="text-2xl">{dialectOption.emoji}</span>
+										<span class="font-semibold text-text-300">{dialectOption.label}</span>
+									</button>
+								{/each}
+							</div>
 						</div>
 					</div>
 
-					<!-- Review Words Source Selection -->
-					<div class="flex flex-col gap-2">
-						<label class="text-sm font-bold text-text-300">Word Source</label>
-						<div class="flex gap-4">
-							<RadioButton
-								className="!text-sm !font-medium"
-								wrapperClass="!p-3 !rounded-lg flex-1 hover:bg-tile-400/50 transition-colors"
-								onClick={(e) => { reviewWordsSource = e.target.value as 'all' | 'due-for-review'; }}
-								selectableFor="all"
-								isSelected={reviewWordsSource === 'all'}
-								value="all"
-								text="All Saved Words"
-							/>
-							<RadioButton
-								className="!text-sm !font-medium"
-								wrapperClass="!p-3 !rounded-lg flex-1 hover:bg-tile-400/50 transition-colors"
-								onClick={(e) => { reviewWordsSource = e.target.value as 'all' | 'due-for-review'; }}
-								selectableFor="due-for-review"
-								isSelected={reviewWordsSource === 'due-for-review'}
-								value="due-for-review"
-								text="Words Due for Review"
-							/>
+					<!-- Word Source Selection -->
+					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
+						<div class="p-4 border-b border-tile-600">
+							<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
+								<span>📚</span> Word Source
+							</h3>
+						</div>
+						<div class="p-6">
+							<div class="grid grid-cols-2 gap-3">
+								<button
+									type="button"
+									onclick={() => reviewWordsSource = 'all'}
+									class="p-4 rounded-lg border-2 transition-all duration-200 text-center {reviewWordsSource === 'all' ? 'bg-tile-500 border-tile-400 shadow-md' : 'bg-tile-300 border-tile-600 hover:bg-tile-300/70'}"
+								>
+									<span class="block text-2xl mb-2">📖</span>
+									<span class="font-semibold text-text-300">All Saved Words</span>
+								</button>
+								<button
+									type="button"
+									onclick={() => reviewWordsSource = 'due-for-review'}
+									class="p-4 rounded-lg border-2 transition-all duration-200 text-center {reviewWordsSource === 'due-for-review' ? 'bg-tile-500 border-tile-400 shadow-md' : 'bg-tile-300 border-tile-600 hover:bg-tile-300/70'}"
+								>
+									<span class="block text-2xl mb-2">⏰</span>
+									<span class="font-semibold text-text-300">Due for Review</span>
+								</button>
+							</div>
+							
+							{#if isLoadingReviewWords}
+								<div class="mt-4 p-4 bg-tile-300 rounded-lg text-center">
+									<p class="text-text-200">Loading your words...</p>
+								</div>
+							{:else if reviewWordsError}
+								<div class="mt-4 p-4 bg-rose-500/10 border border-rose-500/30 rounded-lg">
+									<p class="text-rose-300 text-sm">{reviewWordsError}</p>
+								</div>
+							{:else if reviewWords.length > 0}
+								<div class="mt-4 p-4 bg-emerald-500/10 border border-emerald-500/30 rounded-lg">
+									<p class="text-emerald-300 font-medium">
+										✓ {reviewWords.length} word{reviewWords.length !== 1 ? 's' : ''} ready for practice
+									</p>
+								</div>
+							{/if}
 						</div>
 					</div>
-
-					<!-- Word Count Display -->
-					{#if isLoadingReviewWords}
-						<div class="text-sm text-text-200">Loading words...</div>
-					{:else if reviewWordsError}
-						<div class="p-3 bg-red-50/50 border border-red-200 rounded-lg">
-							<p class="text-sm text-red-600">{reviewWordsError}</p>
-						</div>
-					{:else if reviewWords.length > 0}
-						<div class="p-3 bg-tile-300 border border-tile-500 rounded-lg">
-							<p class="text-sm font-medium text-text-300">
-								{reviewWords.length} word{reviewWords.length !== 1 ? 's' : ''} will be used in your sentences
-							</p>
-						</div>
-					{/if}
 
 					<!-- Difficulty Selection -->
-					<div class="border-t border-tile-500/50 pt-6">
-						<h3 class="text-sm font-bold text-text-300 uppercase tracking-wider opacity-80 mb-3">Difficulty Level</h3>
-						<div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-							{#each difficultyOptions as difficultyOption}
-								<RadioButton
-									className="!text-sm !font-medium"
-									wrapperClass="!p-2.5 !rounded-lg hover:bg-tile-400/50 transition-colors duration-200"
-									onClick={setOption}
-									selectableFor={difficultyOption.value}
-									isSelected={option === difficultyOption.value}
-									value={difficultyOption.value}
-									text={difficultyOption.label}
-								/>
-							{/each}
+					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
+						<div class="p-4 border-b border-tile-600">
+							<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
+								<span>📊</span> Difficulty Level
+							</h3>
+						</div>
+						<div class="p-6">
+							<div class="grid grid-cols-3 sm:grid-cols-6 gap-2">
+								{#each difficultyOptions as diff}
+									<button
+										type="button"
+										onclick={() => option = diff.value}
+										class="p-3 rounded-lg border-2 transition-all duration-200 text-center {option === diff.value ? 'border-white/50 shadow-lg scale-105' : 'border-transparent opacity-70 hover:opacity-100'} {diff.color}"
+									>
+										<span class="block text-lg font-bold text-white">{diff.label}</span>
+										<span class="block text-xs text-white/80">{diff.sublabel}</span>
+									</button>
+								{/each}
+							</div>
 						</div>
 					</div>
 
+					<!-- Submit Button -->
 					<div class="pt-4">
-						<Button 
-							type="submit" 
-							className="w-full !py-4 !text-lg !rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all"
-							disabled={reviewWords.length === 0 || isLoadingReviewWords}
-						>
-							Generate Sentences
-						</Button>
-					</div>
-				{:else}
-					<!-- Original Generation Mode -->
-					<!-- Dialect Selection -->
-					<div class="flex flex-col gap-3">
-						<h3 class="text-sm font-bold text-text-300 uppercase tracking-wider opacity-80">Select Dialect</h3>
-						<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-							{#each dialectOptions as dialectOption}
-								<RadioButton
-									className="!text-base !font-medium"
-									wrapperClass="!p-3 !rounded-lg hover:bg-tile-400/50 transition-colors duration-200"
-									onClick={setDialect}
-									selectableFor={dialectOption.value}
-									isSelected={selectedDialect === dialectOption.value}
-									value={dialectOption.value}
-									text={dialectOption.label}
-								/>
-							{/each}
-						</div>
-					</div>
-					
-					<div class="border-t border-tile-500/50 pt-6">
-						<h3 class="text-sm font-bold text-text-300 uppercase tracking-wider opacity-80 mb-3">Difficulty Level</h3>
-						<div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-							{#each difficultyOptions as difficultyOption}
-								<RadioButton
-									className="!text-sm !font-medium"
-									wrapperClass="!p-2.5 !rounded-lg hover:bg-tile-400/50 transition-colors duration-200"
-									onClick={setOption}
-									selectableFor={difficultyOption.value}
-									isSelected={option === difficultyOption.value}
-									value={difficultyOption.value}
-									text={difficultyOption.label}
-								/>
-							{/each}
-						</div>
-					</div>
-
-					<!-- Learning Topics Selection -->
-					<div class="border-t border-tile-500/50 pt-6">
-						<h3 class="text-sm font-bold text-text-300 uppercase tracking-wider opacity-80 mb-1">Grammar Focus <span class="text-text-200 text-xs font-normal normal-case opacity-70 ml-1">(Optional)</span></h3>
-						<p class="text-xs text-text-200 mb-3">Select topics to emphasize in your sentences.</p>
-						<div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-							{#each learningTopicOptions as topic}
-								<button
-									type="button"
-									class="text-left px-3 py-2 rounded-lg border text-xs font-medium transition-all duration-200
-										{selectedLearningTopics.includes(topic) 
-											? 'bg-tile-500 border-tile-600 text-text-300 shadow-sm' 
-											: 'bg-tile-300 border-tile-500 text-text-200 hover:border-tile-600 hover:text-text-300'}"
-									onclick={() => toggleLearningTopic(topic)}
+						{#if !data.session}
+							<Tooltip text="An account is required to access this feature">
+								<button 
+									type="submit" 
+									disabled={true}
+									class="w-full py-4 text-xl font-bold bg-tile-500 text-text-200 rounded-lg opacity-50 cursor-not-allowed"
 								>
-									<div class="flex items-center gap-2">
-										<div class="w-3 h-3 rounded-full border border-current flex items-center justify-center text-[8px]">
-											{#if selectedLearningTopics.includes(topic)}✓{/if}
-										</div>
-										{topic}
-									</div>
+									Generate Sentences
 								</button>
-							{/each}
-						</div>
-						{#if selectedLearningTopics.length > 0}
-							<div class="mt-3 flex items-center justify-between text-xs text-text-200 bg-tile-300/50 p-2 rounded-lg border border-tile-500/30">
-								<span>Selected: <span class="text-text-300 font-medium">{selectedLearningTopics.join(', ')}</span></span>
-								<button
-									type="button"
-									class="ml-2 text-text-300 hover:underline font-medium"
-									onclick={() => selectedLearningTopics = []}
-								>
-									Clear all
-								</button>
-							</div>
-						{/if}
-					</div>
-
-					<!-- Vocabulary Words Input -->
-					<div class="border-t border-tile-500/50 pt-6">
-						<div class="flex justify-between items-center mb-3">
-							<h3 class="text-sm font-bold text-text-300 uppercase tracking-wider opacity-80">Custom Vocabulary <span class="text-text-200 text-xs font-normal normal-case opacity-70 ml-1">(Optional)</span></h3>
-							
-							<!-- Input Mode Toggle -->
-							<div class="flex bg-tile-300 rounded-lg p-1 border border-tile-500">
-								<button
-									type="button"
-									class="px-3 py-1 text-xs font-medium rounded-md transition-all {vocabularyInputMode === 'text' ? 'bg-tile-500 text-text-300 shadow-sm' : 'text-text-200 hover:text-text-300'}"
-									onclick={() => { vocabularyInputMode = 'text'; vocabularyFile = null; fileError = ''; }}
-								>
-									Text
-								</button>
-								<button
-									type="button"
-									class="px-3 py-1 text-xs font-medium rounded-md transition-all {vocabularyInputMode === 'file' ? 'bg-tile-500 text-text-300 shadow-sm' : 'text-text-200 hover:text-text-300'}"
-									onclick={() => { vocabularyInputMode = 'file'; vocabularyWords = ''; }}
-								>
-									Upload
-								</button>
-							</div>
-						</div>
-					
-					<div class="rounded-xl bg-tile-300/50 p-4 border border-tile-500/50">
-						{#if vocabularyInputMode === 'text'}
-							<textarea
-								bind:value={vocabularyWords}
-								rows="2"
-								class="w-full rounded-lg border border-tile-500 bg-tile-300 p-3 text-sm text-text-300 placeholder:text-text-200/50 focus:border-tile-600 focus:ring-1 focus:ring-tile-600 resize-none"
-								placeholder="Enter vocabulary words separated by commas (e.g., بيت, مدرسة, طعام, سيارة)"
-							></textarea>
-							<p class="text-xs text-text-200 mt-2 opacity-80">
-								Tip: You can enter words in Arabic, English, or transliteration.
+							</Tooltip>
+							<p class="text-center text-text-200 mt-4">
+								<a href="/login" class="text-sky-400 hover:text-sky-300 font-semibold">Log in</a> or <a href="/signup" class="text-sky-400 hover:text-sky-300 font-semibold">sign up</a> to start practicing
 							</p>
 						{:else}
-							<div class="relative">
-								<input
-									type="file"
-									accept=".txt,.csv"
-									onchange={handleFileChange}
-									class="block w-full text-sm text-text-200 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-tile-500 file:text-text-300 hover:file:bg-tile-600 cursor-pointer"
-								/>
-								<p class="text-xs text-text-200 mt-2 opacity-80">
-									Supports TXT and CSV files (max 150KB).
-								</p>
-								{#if vocabularyFile}
-									<p class="mt-2 text-xs text-green-600 font-medium flex items-center gap-1">
-										✓ File loaded: {vocabularyFile.name} ({Math.round(vocabularyFile.size / 1024)}KB)
-									</p>
-								{/if}
-								{#if fileError}
-									<p class="mt-2 text-xs text-red-500 font-medium flex items-center gap-1">
-										⚠ {fileError}
-									</p>
-								{/if}
-							</div>
+							<button 
+								type="submit" 
+								disabled={useReviewWordsOnly && (reviewWords.length === 0 || isLoadingReviewWords)}
+								class="w-full py-4 text-xl font-bold bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+							>
+								📝 Generate Sentences
+							</button>
 						{/if}
 					</div>
-				</div>
 
-				<!-- Practice Mode (only show in original mode) -->
-				<div class="border-t border-tile-500/50 pt-6">
-					<h3 class="text-sm font-bold text-text-300 uppercase tracking-wider opacity-80 mb-3">Practice Mode</h3>
-					<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-						<RadioButton
-							className="!text-base !font-medium"
-							wrapperClass="!p-3 !rounded-lg hover:bg-tile-400/50 transition-colors duration-200"
-							onClick={setMode}
-							selectableFor="write"
-							isSelected={mode === 'write'}
-							value="write"
-							text="✍️ Practice Writing"
-						/>
-						<RadioButton
-							className="!text-base !font-medium"
-							wrapperClass="!p-3 !rounded-lg hover:bg-tile-400/50 transition-colors duration-200"
-							onClick={setMode}
-							selectableFor="quiz"
-							isSelected={mode === 'quiz'}
-							value="quiz"
-							text="🧩 Multiple Choice Quiz"
-						/>
+				{:else}
+					<!-- Standard Generation Mode -->
+					
+					<!-- Dialect Selection -->
+					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
+						<div class="p-4 border-b border-tile-600">
+							<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
+								<span>🌍</span> Select Dialect
+							</h3>
+						</div>
+						<div class="p-6">
+							<div class="grid grid-cols-2 gap-3">
+								{#each dialectOptions as dialectOption}
+									<button
+										type="button"
+										onclick={() => selectedDialect = dialectOption.value}
+										class="flex items-center gap-3 p-4 rounded-lg border-2 transition-all duration-200 text-left {selectedDialect === dialectOption.value ? 'bg-tile-500 border-tile-400 shadow-md' : 'bg-tile-300 border-tile-600 hover:bg-tile-300/70 hover:border-tile-500'}"
+									>
+										<span class="text-2xl">{dialectOption.emoji}</span>
+										<span class="font-semibold text-text-300">{dialectOption.label}</span>
+									</button>
+								{/each}
+							</div>
+						</div>
 					</div>
-				</div>
-				
-				<div class="pt-2">
-					{#if !data.session}
-						<Tooltip text="An account is required to access this feature">
-							<Button 
+
+					<!-- Difficulty Selection -->
+					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
+						<div class="p-4 border-b border-tile-600">
+							<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
+								<span>📊</span> Difficulty Level
+							</h3>
+						</div>
+						<div class="p-6">
+							<div class="grid grid-cols-3 sm:grid-cols-6 gap-2">
+								{#each difficultyOptions as diff}
+									<button
+										type="button"
+										onclick={() => option = diff.value}
+										class="p-3 rounded-lg border-2 transition-all duration-200 text-center {option === diff.value ? 'border-white/50 shadow-lg scale-105' : 'border-transparent opacity-70 hover:opacity-100'} {diff.color}"
+									>
+										<span class="block text-lg font-bold text-white">{diff.label}</span>
+										<span class="block text-xs text-white/80">{diff.sublabel}</span>
+									</button>
+								{/each}
+							</div>
+						</div>
+					</div>
+
+					<!-- Learning Topics -->
+					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
+						<div class="p-4 border-b border-tile-600">
+							<div class="flex items-center justify-between">
+								<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
+									<span>🎯</span> Focus Topics
+									<span class="text-sm font-normal text-text-200">(optional)</span>
+								</h3>
+								{#if selectedLearningTopics.length > 0}
+									<button
+										type="button"
+										onclick={() => selectedLearningTopics = []}
+										class="text-xs text-rose-400 hover:text-rose-300 font-semibold"
+									>
+										Clear all
+									</button>
+								{/if}
+							</div>
+						</div>
+						<div class="p-6">
+							<div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+								{#each learningTopicOptions as topic}
+									<button
+										type="button"
+										onclick={() => toggleLearningTopic(topic.value)}
+										class="flex items-center gap-2 p-3 rounded-lg border-2 transition-all duration-200 text-left {selectedLearningTopics.includes(topic.value) ? 'bg-sky-600 border-sky-500 text-white' : 'bg-tile-300 border-tile-600 text-text-300 hover:bg-tile-300/70'}"
+									>
+										<span>{topic.emoji}</span>
+										<span class="text-sm font-medium">{topic.label}</span>
+									</button>
+								{/each}
+							</div>
+						</div>
+					</div>
+
+					<!-- Vocabulary Input -->
+					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
+						<div class="p-4 border-b border-tile-600">
+							<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
+								<span>📝</span> Custom Vocabulary
+								<span class="text-sm font-normal text-text-200">(optional)</span>
+							</h3>
+						</div>
+						<div class="p-6">
+							<!-- Input Mode Toggle -->
+							<div class="flex p-1 bg-tile-300 rounded-lg w-fit mb-4 border border-tile-600">
+								<button
+									type="button"
+									onclick={() => { vocabularyInputMode = 'text'; vocabularyFile = null; fileError = ''; }}
+									class="px-4 py-2 text-sm rounded-md transition-all duration-200 font-semibold {vocabularyInputMode === 'text' ? 'bg-tile-500 text-text-300 shadow-sm' : 'text-text-200 hover:text-text-300'}"
+								>
+									✍️ Text
+								</button>
+								<button
+									type="button"
+									onclick={() => { vocabularyInputMode = 'file'; vocabularyWords = ''; }}
+									class="px-4 py-2 text-sm rounded-md transition-all duration-200 font-semibold {vocabularyInputMode === 'file' ? 'bg-tile-500 text-text-300 shadow-sm' : 'text-text-200 hover:text-text-300'}"
+								>
+									📂 File
+								</button>
+							</div>
+
+							{#if vocabularyInputMode === 'text'}
+								<textarea
+									bind:value={vocabularyWords}
+									rows="3"
+									class="w-full rounded-lg border-2 border-tile-600 bg-tile-300 py-3 px-4 text-text-300 resize-none focus:border-tile-500 focus:ring-0 transition-colors text-lg placeholder:text-text-200/50"
+									placeholder="Enter words separated by commas (e.g., بيت, مدرسة, طعام)"
+								></textarea>
+							{:else}
+								<div class="p-8 border-2 border-dashed border-tile-600 rounded-lg bg-tile-300/50 text-center hover:bg-tile-300 transition-colors relative group cursor-pointer">
+									<input
+										type="file"
+										accept=".txt,.csv"
+										onchange={handleFileChange}
+										class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
+									/>
+									<div class="flex flex-col items-center justify-center gap-2">
+										<span class="text-4xl group-hover:scale-110 transition-transform duration-300">📄</span>
+										<p class="text-lg font-bold text-text-300">Drop your file here</p>
+										<p class="text-sm text-text-200">or click to browse</p>
+										<span class="text-xs text-text-200 bg-tile-400 px-3 py-1 rounded-full mt-2">TXT or CSV (max 150KB)</span>
+									</div>
+								</div>
+								{#if vocabularyFile}
+									<div class="mt-3 p-3 bg-emerald-500/10 border border-emerald-500/30 rounded-lg flex items-center gap-2 text-emerald-300">
+										<span>✓</span>
+										<span class="font-medium">{vocabularyFile.name}</span>
+										<span class="text-sm opacity-70">({Math.round(vocabularyFile.size / 1024)}KB)</span>
+									</div>
+								{/if}
+								{#if fileError}
+									<div class="mt-3 p-3 bg-rose-500/10 border border-rose-500/30 rounded-lg flex items-center gap-2 text-rose-300">
+										<span>⚠️</span>
+										<span>{fileError}</span>
+									</div>
+								{/if}
+							{/if}
+						</div>
+					</div>
+
+					<!-- Practice Mode -->
+					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
+						<div class="p-4 border-b border-tile-600">
+							<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
+								<span>✍️</span> Practice Mode
+							</h3>
+						</div>
+						<div class="p-6">
+							<div class="grid grid-cols-2 gap-3">
+								<button
+									type="button"
+									onclick={() => mode = 'write'}
+									class="p-4 rounded-lg border-2 transition-all duration-200 text-center {mode === 'write' ? 'bg-tile-500 border-tile-400 shadow-md' : 'bg-tile-300 border-tile-600 hover:bg-tile-300/70'}"
+								>
+									<span class="block text-2xl mb-2">✍️</span>
+									<span class="font-semibold text-text-300">Practice Writing</span>
+								</button>
+								<button
+									type="button"
+									onclick={() => mode = 'quiz'}
+									class="p-4 rounded-lg border-2 transition-all duration-200 text-center {mode === 'quiz' ? 'bg-tile-500 border-tile-400 shadow-md' : 'bg-tile-300 border-tile-600 hover:bg-tile-300/70'}"
+								>
+									<span class="block text-2xl mb-2">🧩</span>
+									<span class="font-semibold text-text-300">Multiple Choice Quiz</span>
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- Submit Button -->
+					<div class="pt-4">
+						{#if !data.session}
+							<Tooltip text="An account is required to access this feature">
+								<button 
+									type="submit" 
+									disabled={true}
+									class="w-full py-4 text-xl font-bold bg-tile-500 text-text-200 rounded-lg opacity-50 cursor-not-allowed"
+								>
+									Generate Sentences
+								</button>
+							</Tooltip>
+							<p class="text-center text-text-200 mt-4">
+								<a href="/login" class="text-sky-400 hover:text-sky-300 font-semibold">Log in</a> or <a href="/signup" class="text-sky-400 hover:text-sky-300 font-semibold">sign up</a> to start practicing
+							</p>
+						{:else}
+							<button 
 								type="submit" 
-								disabled={true}
-								className="w-full py-3 text-base font-bold shadow-md opacity-50 cursor-not-allowed"
+								class="w-full py-4 text-xl font-bold bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
 							>
-								Generate Sentences
-							</Button>
-						</Tooltip>
-					{:else}
-						<Button type="submit" className="w-full py-3 text-base font-bold shadow-md hover:shadow-lg transition-all">
-							Generate Sentences
-						</Button>
-					{/if}
-				</div>
+								📝 Generate Sentences
+							</button>
+						{/if}
+					</div>
 				{/if}
 			</form>
 		</div>

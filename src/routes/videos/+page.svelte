@@ -61,13 +61,13 @@
 	<!-- Hero Section -->
 	<header class="py-12 sm:py-16 border-b border-tile-600">
 		<div class="max-w-7xl mx-auto px-3 sm:px-8">
-			<div class="text-center max-w-3xl mx-auto">
+			<div class="text-left max-w-3xl">
 				<div class="text-6xl mb-6">🎬</div>
-				<h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-300 leading-tight mb-6">
+				<h1 class="text-3xl sm:text-4xl text-text-300 font-bold mb-2 tracking-tight">
 					Interactive Arabic Videos
 				</h1>
-				<p class="text-lg sm:text-xl text-text-200 leading-relaxed mb-8">
-					Watch native Arabic content with synchronized transcripts, translations, and transliterations. 
+				<p class="text-text-200 text-lg sm:text-xl leading-snug mb-8">
+					Watch native Arabic content with synchronized transcripts, translations, and transliterations.
 					Click any word for instant definitions.
 				</p>
 				<VideoUploadModal {data} />
@@ -215,9 +215,9 @@
 	<!-- Features Section -->
 	<section class="py-12 sm:py-16 bg-tile-200 border-t border-tile-600">
 		<div class="max-w-7xl mx-auto px-3 sm:px-8">
-			<h2 class="text-2xl sm:text-3xl font-bold text-text-300 text-center mb-8">Why Learn with Videos?</h2>
+			<h2 class="text-2xl sm:text-3xl font-bold text-text-300 text-left mb-8">Why Learn with Videos?</h2>
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-				<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg text-center">
+				<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg text-left">
 					<div class="text-4xl mb-4">📝</div>
 					<h3 class="text-xl font-bold text-text-300 mb-3">Synced Transcripts</h3>
 					<p class="text-text-200 leading-relaxed">
@@ -225,7 +225,7 @@
 					</p>
 				</div>
 
-				<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg text-center">
+				<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg text-left">
 					<div class="text-4xl mb-4">📖</div>
 					<h3 class="text-xl font-bold text-text-300 mb-3">Instant Definitions</h3>
 					<p class="text-text-200 leading-relaxed">
@@ -233,7 +233,7 @@
 					</p>
 				</div>
 
-				<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg text-center">
+				<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg text-left">
 					<div class="text-4xl mb-4">🌍</div>
 					<h3 class="text-xl font-bold text-text-300 mb-3">Multiple Dialects</h3>
 					<p class="text-text-200 leading-relaxed">
