@@ -837,9 +837,9 @@
 
 <div class="min-h-screen bg-tile-300 py-12">
   <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
-    <header class="mb-12 text-center">
-      <h1 class="text-4xl sm:text-5xl font-bold text-text-300 tracking-tight mb-4">Review Words</h1>
-      <p class="text-lg sm:text-xl text-text-200 max-w-2xl mx-auto">
+    <header class="mb-12 text-left">
+      <h1 class="text-3xl sm:text-4xl text-text-300 font-bold mb-2 tracking-tight">Review Words</h1>
+      <p class="text-text-200 text-lg sm:text-xl leading-snug max-w-2xl mb-4">
         Practice your saved words with spaced repetition
       </p>
     </header>

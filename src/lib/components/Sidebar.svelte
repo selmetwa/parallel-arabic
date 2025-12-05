@@ -3,6 +3,7 @@
   import { onMount } from 'svelte';
   import { sidebarCollapsed } from '$lib/store/store';
   import Button from './Button.svelte';
+  import Logo from './Logo.svelte';
 
   interface NavItem {
     label: string;
@@ -108,13 +109,13 @@
 <aside class="hidden lg:flex flex-col bg-tile-300 border-r-2 border-tile-600 h-screen fixed top-0 left-0 overflow-hidden z-40 transition-all duration-300 {$sidebarCollapsed ? 'w-0 opacity-0' : 'w-64 opacity-100'}">
   <div class="p-6 {$sidebarCollapsed ? 'hidden' : ''}">
     <div class="flex items-center justify-between mb-8">
-      <a href="/" class="flex items-center gap-3">
-        <h1 class="text-xl font-bold text-text-300">Parallel Arabic</h1>
+      <a href="/" class="flex items-center logo-container flex-1 min-w-0">
+        <h1 class="text-xl font-bold">Parallel Arabic</h1>
       </a>
       <button
         type="button"
         onclick={toggleSidebar}
-        class="p-2 rounded-lg hover:bg-tile-400 transition-colors text-text-300"
+        class="p-2 rounded-lg hover:bg-tile-400 transition-colors text-text-300 flex-shrink-0 ml-2"
         aria-label="Collapse sidebar"
         title="Collapse sidebar"
       >
@@ -192,5 +193,13 @@
   aside::-webkit-scrollbar-thumb {
     background: var(--tile-600);
     border-radius: 3px;
+  }
+
+  .logo-container {
+    transition: transform 0.2s ease;
+  }
+
+  .logo-container:hover {
+    transform: scale(1.02);
   }
 </style>

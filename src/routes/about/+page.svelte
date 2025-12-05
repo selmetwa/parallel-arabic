@@ -3,11 +3,11 @@
 	<header>
 		<div class="max-w-7xl mx-auto px-4 sm:px-8 py-12 sm:py-16">
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-				<div class="text-center lg:text-left">
-					<h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-300 leading-tight mb-6">
+				<div class="text-left">
+					<h1 class="text-3xl sm:text-4xl text-text-300 font-bold mb-2 tracking-tight">
 						Master Arabic Dialects<br class="hidden sm:block" /> Through Real Practice
 					</h1>
-					<p class="text-lg sm:text-xl text-text-200 leading-relaxed mb-4">
+					<p class="text-text-200 text-lg sm:text-xl leading-snug mb-4">
 						The only platform that combines <strong class="text-text-300">stories, videos, conversations, sentences, live-chat tutoring, spaced repetition, and personalized lessons</strong>—all in one place. No more switching between apps or struggling to find graded content.
 					</p>
 					<p class="text-base sm:text-lg text-text-200 mb-8">
@@ -32,7 +32,7 @@
 		<div class="max-w-7xl mx-auto px-4 sm:px-8">
 			<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-8 shadow-lg">
 				<div class="flex flex-col md:flex-row items-center gap-6">
-					<div class="flex-1 text-center md:text-left">
+					<div class="flex-1 text-left">
 						<h2 class="text-2xl sm:text-3xl font-bold text-text-300 mb-4">
 							📱 Available as a Mobile App
 						</h2>
@@ -62,7 +62,7 @@
 		<div class="max-w-7xl mx-auto px-4 sm:px-8">
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 				<!-- On-Demand Definitions -->
-				<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg text-center">
+				<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg text-left">
 					<div class="text-4xl mb-4">📖</div>
 					<h3 class="text-xl font-bold text-text-300 mb-3">On-Demand Definitions</h3>
 					<p class="text-text-200 leading-relaxed">
@@ -71,7 +71,7 @@
 				</div>
 
 				<!-- Parallel Text -->
-				<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg text-center">
+				<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg text-left">
 					<div class="text-4xl mb-4">🔤</div>
 					<h3 class="text-xl font-bold text-text-300 mb-3">Arabic, English & Transliteration</h3>
 					<p class="text-text-200 leading-relaxed">
@@ -80,7 +80,7 @@
 				</div>
 
 				<!-- Native Voices -->
-				<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg text-center">
+				<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg text-left">
 					<div class="text-4xl mb-4">🎙️</div>
 					<h3 class="text-xl font-bold text-text-300 mb-3">Real Dialect-Specific Voices</h3>
 					<p class="text-text-200 leading-relaxed">
@@ -94,7 +94,7 @@
 	<!-- Testimonials Section -->
 	<section class="py-12 sm:py-16">
 		<div class="max-w-7xl mx-auto px-4 sm:px-8">
-			<h2 class="text-2xl sm:text-3xl font-bold text-text-300 text-center mb-8">What Our Users Say</h2>
+			<h2 class="text-2xl sm:text-3xl font-bold text-text-300 text-left mb-8">What Our Users Say</h2>
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-3">
 				<article class="bg-tile-400 border-2 border-tile-600 p-4 shadow-lg flex flex-col h-full">
 					<p class="text-text-300 text-base leading-relaxed flex-grow">

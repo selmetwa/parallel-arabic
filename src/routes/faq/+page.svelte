@@ -111,9 +111,9 @@
 <div class="min-h-screen bg-tile-200 py-8 px-4 sm:px-8">
   <div class="max-w-4xl mx-auto">
     <!-- Header -->
-    <header class="text-center mb-12">
-      <h1 class="text-4xl sm:text-5xl font-bold text-text-300 mb-4">Frequently Asked Questions</h1>
-      <p class="text-text-200 text-lg">Everything you need to know about Parallel Arabic</p>
+    <header class="text-left mb-12">
+      <h1 class="text-3xl sm:text-4xl text-text-300 font-bold mb-2 tracking-tight">Frequently Asked Questions</h1>
+      <p class="text-text-200 text-lg sm:text-xl leading-snug">Everything you need to know about Parallel Arabic</p>
     </header>
 
     <!-- FAQ Accordion -->
@@ -169,7 +169,7 @@
     </div>
 
     <!-- Contact Section -->
-    <div class="mt-12 bg-tile-400 border-2 border-tile-600 rounded-xl p-8 text-center">
+    <div class="mt-12 bg-tile-400 border-2 border-tile-600 rounded-xl p-8 text-left">
       <h2 class="text-2xl font-bold text-text-300 mb-4">Still Have Questions?</h2>
       <p class="text-text-200 mb-6">
         Can't find the answer you're looking for? Feel free to reach out to us.
