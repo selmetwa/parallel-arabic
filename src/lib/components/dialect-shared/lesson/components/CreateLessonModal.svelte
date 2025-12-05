@@ -295,11 +295,11 @@
 		level = event.target.value as 'beginner' | 'intermediate' | 'advanced';
 	}
 
-	function toggleLearningTopic(topic: string) {
-		if (selectedLearningTopics.includes(topic)) {
-			selectedLearningTopics = selectedLearningTopics.filter((t: string) => t !== topic);
+	function toggleLearningTopic(topicValue: string) {
+		if (selectedLearningTopics.includes(topicValue)) {
+			selectedLearningTopics = selectedLearningTopics.filter((t: string) => t !== topicValue);
 		} else {
-			selectedLearningTopics = [...selectedLearningTopics, topic];
+			selectedLearningTopics = [...selectedLearningTopics, topicValue];
 		}
 	}
 
@@ -311,14 +311,14 @@
 	};
 
 	const learningTopicOptions = [
-		'verb conjugation',
-		'noun plurals',
-		'past tense',
-		'present tense',
-		'infinitive',
-		'numbers',
-		'future tense',
-		'possessive suffixes'
+		{ label: 'Verb Conjugation', value: 'verb conjugation', emoji: '🔄' },
+		{ label: 'Noun Plurals', value: 'noun plurals', emoji: '📝' },
+		{ label: 'Past Tense', value: 'past tense', emoji: '⏪' },
+		{ label: 'Present Tense', value: 'present tense', emoji: '▶️' },
+		{ label: 'Infinitive', value: 'infinitive', emoji: '∞' },
+		{ label: 'Numbers', value: 'numbers', emoji: '🔢' },
+		{ label: 'Future Tense', value: 'future tense', emoji: '⏩' },
+		{ label: 'Possessive Suffixes', value: 'possessive suffixes', emoji: '👤' }
 	];
 
 	const levelOptions = [
@@ -407,261 +407,306 @@
 			{/if}
 			
 			<form onsubmit={handleSubmit} class="flex flex-col gap-6">
-				<!-- Review Words Only Toggle - Prominent Feature -->
-				<div class="flex flex-col gap-4 bg-gradient-to-br from-tile-400/40 to-tile-500/30 p-5 rounded-xl border-2 border-tile-600/60 shadow-lg">
-					<div class="flex items-start justify-between gap-4">
-						<div class="flex flex-col gap-2 flex-1">
-							<div class="flex items-center gap-2">
-								<span class="text-2xl">🎯</span>
-								<p class="text-base font-bold text-text-300">Use Review Words Only</p>
+				<!-- Review Words Toggle Card -->
+				<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
+					<div class="p-6">
+						<div class="flex items-start justify-between gap-4">
+							<div class="flex-1">
+								<div class="flex items-center gap-2 mb-2">
+									<span class="text-2xl">🔄</span>
+									<h3 class="text-lg font-bold text-text-300">Use Your Review Words</h3>
+								</div>
+								<p class="text-sm text-text-200 leading-relaxed">
+									Generate lessons using words from your review deck. This reinforces vocabulary through contextual practice.
+								</p>
 							</div>
-							<p class="text-sm text-text-200 leading-relaxed">
-								<strong class="text-text-300">Context-Based Learning:</strong> Generate content using words you're already learning. This reinforces your memory by seeing words in new contexts, improving retention through spaced repetition. Experience your vocabulary in authentic, meaningful sentences that help you learn faster.
-							</p>
-						</div>
-						<div class="relative flex items-center flex-shrink-0">
-							<input
-								type="checkbox"
-								id="useReviewWordsOnly"
-								bind:checked={useReviewWordsOnly}
-								class="peer w-6 h-6 cursor-pointer appearance-none rounded border-2 border-tile-600 bg-tile-200 checked:bg-tile-600 checked:border-tile-600 focus:ring-offset-0 focus:ring-2 focus:ring-tile-500 transition-all"
-							/>
-							<svg class="absolute w-4 h-4 text-white pointer-events-none opacity-0 peer-checked:opacity-100 left-1 top-1 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+							<label class="relative inline-flex items-center cursor-pointer">
+								<input type="checkbox" bind:checked={useReviewWordsOnly} class="sr-only peer" />
+								<div class="w-14 h-8 bg-tile-500 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-white after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-emerald-600"></div>
+							</label>
 						</div>
 					</div>
 				</div>
 
 				{#if useReviewWordsOnly}
-					<!-- Review Words Only Mode -->
-					<div class="flex flex-col gap-4 bg-tile-400/30 p-4 rounded-xl border border-tile-500/50">
-						<!-- Review Words Source Selection -->
-						<div class="flex flex-col gap-2">
-							<label class="text-sm font-bold text-text-300">Word Source</label>
-							<div class="flex gap-4">
-								<RadioButton
-									className="!text-sm !font-medium"
-									wrapperClass="!p-3 !rounded-lg flex-1 hover:bg-tile-400/50 transition-colors"
-									onClick={(e) => { reviewWordsSource = e.target.value as 'all' | 'due-for-review'; }}
-									selectableFor="all"
-									isSelected={reviewWordsSource === 'all'}
-									value="all"
-									text="All Saved Words"
-								/>
-								<RadioButton
-									className="!text-sm !font-medium"
-									wrapperClass="!p-3 !rounded-lg flex-1 hover:bg-tile-400/50 transition-colors"
-									onClick={(e) => { reviewWordsSource = e.target.value as 'all' | 'due-for-review'; }}
-									selectableFor="due-for-review"
-									isSelected={reviewWordsSource === 'due-for-review'}
-									value="due-for-review"
-									text="Words Due for Review"
-								/>
-							</div>
+					<!-- Review Words Mode -->
+					
+					<!-- Word Source Selection -->
+					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
+						<div class="p-4 border-b border-tile-600">
+							<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
+								<span>📚</span> Word Source
+							</h3>
 						</div>
-
-						<!-- Word Count Display -->
-						{#if isLoadingReviewWords}
-							<div class="text-sm text-text-200">Loading words...</div>
-						{:else if reviewWordsError}
-							<div class="p-3 bg-red-50/50 border border-red-200 rounded-lg">
-								<p class="text-sm text-red-600">{reviewWordsError}</p>
+						<div class="p-6">
+							<div class="grid grid-cols-2 gap-3">
+								<button
+									type="button"
+									onclick={() => reviewWordsSource = 'all'}
+									class="p-4 rounded-lg border-2 transition-all duration-200 text-center {reviewWordsSource === 'all' ? 'bg-tile-500 border-tile-400 shadow-md' : 'bg-tile-300 border-tile-600 hover:bg-tile-300/70'}"
+								>
+									<span class="block text-2xl mb-2">📖</span>
+									<span class="font-semibold text-text-300">All Saved Words</span>
+								</button>
+								<button
+									type="button"
+									onclick={() => reviewWordsSource = 'due-for-review'}
+									class="p-4 rounded-lg border-2 transition-all duration-200 text-center {reviewWordsSource === 'due-for-review' ? 'bg-tile-500 border-tile-400 shadow-md' : 'bg-tile-300 border-tile-600 hover:bg-tile-300/70'}"
+								>
+									<span class="block text-2xl mb-2">⏰</span>
+									<span class="font-semibold text-text-300">Due for Review</span>
+								</button>
 							</div>
-						{:else if reviewWords.length > 0}
-							<div class="p-3 bg-tile-300 border border-tile-500 rounded-lg">
-								<p class="text-sm font-medium text-text-300">
-									{reviewWords.length} word{reviewWords.length !== 1 ? 's' : ''} will be used in your lesson
-								</p>
-							</div>
-						{/if}
-					</div>
-
-					<!-- Difficulty Level (keep for review words mode) -->
-					<div class="flex flex-col gap-2">
-						<label class="text-sm font-bold text-text-300">Difficulty Level</label>
-						<div class="flex flex-col gap-2">
-							{#each levelOptions as levelOption}
-								<RadioButton
-									className="!text-sm !font-medium"
-									wrapperClass="!p-2.5 !rounded-lg hover:bg-tile-400/50 transition-colors"
-									onClick={setLevel}
-									selectableFor={levelOption.value}
-									isSelected={level === levelOption.value}
-									value={levelOption.value}
-									text={levelOption.label}
-								/>
-							{/each}
+							
+							{#if isLoadingReviewWords}
+								<div class="mt-4 p-4 bg-tile-300 rounded-lg text-center">
+									<p class="text-text-200">Loading your words...</p>
+								</div>
+							{:else if reviewWordsError}
+								<div class="mt-4 p-4 bg-rose-500/10 border border-rose-500/30 rounded-lg">
+									<p class="text-rose-300 text-sm">{reviewWordsError}</p>
+								</div>
+							{:else if reviewWords.length > 0}
+								<div class="mt-4 p-4 bg-emerald-500/10 border border-emerald-500/30 rounded-lg">
+									<p class="text-emerald-300 font-medium">
+										✓ {reviewWords.length} word{reviewWords.length !== 1 ? 's' : ''} ready for practice
+									</p>
+								</div>
+							{/if}
 						</div>
 					</div>
 
-					<!-- Lesson Length (keep for review words mode) -->
-					<div class="flex flex-col gap-2">
-						<label class="text-sm font-bold text-text-300">Lesson Length</label>
-						<div class="flex flex-col gap-2">
-							{#each subLessonCountOptions as option}
-								<RadioButton
-									className="!text-sm"
-									wrapperClass="!p-2.5 !rounded-lg hover:bg-tile-400/50 transition-colors"
-									onClick={(e) => subLessonCount = parseInt(e.target.value)}
-									selectableFor={option.value.toString()}
-									isSelected={subLessonCount === option.value}
-									value={option.value.toString()}
-									text={option.label}
-								/>
-							{/each}
+					<!-- Difficulty Level -->
+					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
+						<div class="p-4 border-b border-tile-600">
+							<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
+								<span>📊</span> Difficulty Level
+							</h3>
+						</div>
+						<div class="p-6">
+							<div class="grid grid-cols-3 gap-3">
+								{#each levelOptions as levelOption}
+									<button
+										type="button"
+										onclick={() => level = levelOption.value as 'beginner' | 'intermediate' | 'advanced'}
+										class="p-4 rounded-lg border-2 transition-all duration-200 text-center {level === levelOption.value ? 'bg-tile-500 border-tile-400 shadow-md' : 'bg-tile-300 border-tile-600 hover:bg-tile-300/70'}"
+									>
+										<span class="font-semibold text-text-300">{levelOption.label}</span>
+									</button>
+								{/each}
+							</div>
 						</div>
 					</div>
 
-					<div class="pt-2">
+					<!-- Lesson Length -->
+					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
+						<div class="p-4 border-b border-tile-600">
+							<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
+								<span>📏</span> Lesson Length
+							</h3>
+						</div>
+						<div class="p-6">
+							<div class="grid grid-cols-2 gap-3">
+								{#each subLessonCountOptions as option}
+									<button
+										type="button"
+										onclick={() => subLessonCount = option.value}
+										class="p-4 rounded-lg border-2 transition-all duration-200 text-center {subLessonCount === option.value ? 'bg-tile-500 border-tile-400 shadow-md' : 'bg-tile-300 border-tile-600 hover:bg-tile-300/70'}"
+									>
+										<span class="font-semibold text-text-300">{option.label}</span>
+									</button>
+								{/each}
+							</div>
+						</div>
+					</div>
+
+					<!-- Submit Button -->
+					<div class="pt-4">
 						<Button 
 							type="submit" 
-							className="w-full py-3 text-base font-bold shadow-md hover:shadow-lg transition-all"
+							className="w-full py-4 text-xl font-bold shadow-lg hover:shadow-xl transition-all"
 							disabled={reviewWords.length === 0 || isLoadingReviewWords}
 						>
-							Create Lesson
+							📚 Create Lesson
 						</Button>
 					</div>
 				{:else}
-					<!-- Original Generation Mode -->
+					<!-- Standard Generation Mode -->
+					
 					<!-- Topic Input -->
-					<div class="flex flex-col gap-2">
-						<label for="topic" class="text-sm font-bold text-text-300">
-							Lesson Topic
-						</label>
-						<textarea
-							name="topic"
-							bind:value={topic}
-							id="topic"
-							rows="3"
-							class="w-full rounded-lg border border-tile-500 bg-tile-300 p-3 text-text-300 placeholder:text-text-200/50 focus:border-tile-600 focus:ring-1 focus:ring-tile-600 resize-none transition-all"
-							placeholder="e.g., Ordering coffee at a cafe, Meeting new friends, Weekend plans..."
-						></textarea>
-						<p class="text-xs text-text-200 opacity-80">
-							Describe the main theme or situation you want to practice.
-						</p>
+					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
+						<div class="p-4 border-b border-tile-600">
+							<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
+								<span>📖</span> Lesson Topic
+							</h3>
+						</div>
+						<div class="p-6">
+							<textarea
+								name="topic"
+								bind:value={topic}
+								id="topic"
+								rows="3"
+								class="w-full rounded-lg border-2 border-tile-600 bg-tile-300 py-3 px-4 text-text-300 placeholder:text-text-200/50 focus:border-tile-500 focus:ring-0 resize-none transition-colors text-lg"
+								placeholder="e.g., Ordering coffee at a cafe, Meeting new friends, Weekend plans..."
+							></textarea>
+							<p class="text-xs text-text-200 mt-2 opacity-80">
+								Describe the main theme or situation you want to practice.
+							</p>
+						</div>
 					</div>
 
+					<!-- Level and Length Selection -->
 					<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
 						<!-- Level Selection -->
-						<div class="flex flex-col gap-2">
-							<label class="text-sm font-bold text-text-300">Difficulty Level</label>
-							<div class="flex flex-col gap-2">
-								{#each levelOptions as levelOption}
-									<RadioButton
-										className="!text-sm !font-medium"
-										wrapperClass="!p-2.5 !rounded-lg hover:bg-tile-400/50 transition-colors"
-										onClick={setLevel}
-										selectableFor={levelOption.value}
-										isSelected={level === levelOption.value}
-										value={levelOption.value}
-										text={levelOption.label}
-									/>
-								{/each}
+						<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
+							<div class="p-4 border-b border-tile-600">
+								<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
+									<span>📊</span> Difficulty Level
+								</h3>
+							</div>
+							<div class="p-6">
+								<div class="flex flex-col gap-3">
+									{#each levelOptions as levelOption}
+										<button
+											type="button"
+											onclick={() => level = levelOption.value as 'beginner' | 'intermediate' | 'advanced'}
+											class="p-4 rounded-lg border-2 transition-all duration-200 text-left {level === levelOption.value ? 'bg-tile-500 border-tile-400 shadow-md' : 'bg-tile-300 border-tile-600 hover:bg-tile-300/70'}"
+										>
+											<span class="font-semibold text-text-300">{levelOption.label}</span>
+										</button>
+									{/each}
+								</div>
 							</div>
 						</div>
 
 						<!-- Lesson Length Selection -->
-						<div class="flex flex-col gap-2">
-							<label class="text-sm font-bold text-text-300">Lesson Length</label>
-							<div class="flex flex-col gap-2">
-								{#each subLessonCountOptions as option}
-									<RadioButton
-										className="!text-sm"
-										wrapperClass="!p-2.5 !rounded-lg hover:bg-tile-400/50 transition-colors"
-										onClick={(e) => subLessonCount = parseInt(e.target.value)}
-										selectableFor={option.value.toString()}
-										isSelected={subLessonCount === option.value}
-										value={option.value.toString()}
-										text={option.label}
-									/>
-								{/each}
+						<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
+							<div class="p-4 border-b border-tile-600">
+								<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
+									<span>📏</span> Lesson Length
+								</h3>
+							</div>
+							<div class="p-6">
+								<div class="flex flex-col gap-3">
+									{#each subLessonCountOptions as option}
+										<button
+											type="button"
+											onclick={() => subLessonCount = option.value}
+											class="p-4 rounded-lg border-2 transition-all duration-200 text-left {subLessonCount === option.value ? 'bg-tile-500 border-tile-400 shadow-md' : 'bg-tile-300 border-tile-600 hover:bg-tile-300/70'}"
+										>
+											<span class="font-semibold text-text-300">{option.label}</span>
+										</button>
+									{/each}
+								</div>
 							</div>
 						</div>
 					</div>
 
 					<!-- Learning Topics Selection -->
-					<div class="flex flex-col gap-2">
-						<label class="text-sm font-bold text-text-300">
-							Grammar Focus <span class="font-normal text-text-200 text-xs ml-1">(Optional)</span>
-						</label>
-						<div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-							{#each learningTopicOptions as topicOption}
-								<button
-									type="button"
-									class="text-left px-3 py-2 rounded-lg border text-xs font-medium transition-all duration-200
-										{selectedLearningTopics.includes(topicOption) 
-											? 'bg-tile-500 border-tile-600 text-text-300 shadow-sm' 
-											: 'bg-tile-300 border-tile-500 text-text-200 hover:border-tile-600 hover:text-text-300'}"
-									onclick={() => toggleLearningTopic(topicOption)}
-								>
-									<div class="flex items-center gap-2">
-										<div class="w-3 h-3 rounded-full border border-current flex items-center justify-center text-[8px]">
-											{#if selectedLearningTopics.includes(topicOption)}✓{/if}
-										</div>
-										{topicOption}
-									</div>
-								</button>
-							{/each}
+					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
+						<div class="p-4 border-b border-tile-600">
+							<div class="flex items-center justify-between">
+								<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
+									<span>🎯</span> Focus Topics
+									<span class="text-sm font-normal text-text-200">(optional)</span>
+								</h3>
+								{#if selectedLearningTopics.length > 0}
+									<button
+										type="button"
+										onclick={() => selectedLearningTopics = []}
+										class="text-xs text-rose-400 hover:text-rose-300 font-semibold"
+									>
+										Clear all
+									</button>
+								{/if}
+							</div>
+						</div>
+						<div class="p-6">
+							<div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+								{#each learningTopicOptions as topic}
+									<button
+										type="button"
+										onclick={() => toggleLearningTopic(topic.value)}
+										class="flex items-center gap-2 p-3 rounded-lg border-2 transition-all duration-200 text-left {selectedLearningTopics.includes(topic.value) ? 'bg-sky-600 border-sky-500 text-white' : 'bg-tile-300 border-tile-600 text-text-300 hover:bg-tile-300/70'}"
+									>
+										<span>{topic.emoji}</span>
+										<span class="text-sm font-medium">{topic.label}</span>
+									</button>
+								{/each}
+							</div>
 						</div>
 					</div>
 
 					<!-- Vocabulary Words Input -->
-					<div class="flex flex-col gap-3 rounded-xl bg-tile-400/30 p-4 border border-tile-500/50">
-						<div class="flex justify-between items-center">
-							<label class="text-sm font-bold text-text-300">
-								Custom Vocabulary <span class="font-normal text-text-200 text-xs ml-1">(Optional)</span>
-							</label>
-							
+					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
+						<div class="p-4 border-b border-tile-600">
+							<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
+								<span>📝</span> Custom Vocabulary
+								<span class="text-sm font-normal text-text-200">(optional)</span>
+							</h3>
+						</div>
+						<div class="p-6">
 							<!-- Input Mode Toggle -->
-							<div class="flex bg-tile-300 rounded-lg p-1 border border-tile-500">
+							<div class="flex p-1 bg-tile-300 rounded-lg w-fit mb-4 border border-tile-600">
 								<button
 									type="button"
-									class="px-3 py-1 text-xs font-medium rounded-md transition-all {vocabularyInputMode === 'text' ? 'bg-tile-500 text-text-300 shadow-sm' : 'text-text-200 hover:text-text-300'}"
 									onclick={() => { vocabularyInputMode = 'text'; vocabularyFile = null; fileError = ''; }}
+									class="px-4 py-2 text-sm rounded-md transition-all duration-200 font-semibold {vocabularyInputMode === 'text' ? 'bg-tile-500 text-text-300 shadow-sm' : 'text-text-200 hover:text-text-300'}"
 								>
-									Text
+									✍️ Text
 								</button>
 								<button
 									type="button"
-									class="px-3 py-1 text-xs font-medium rounded-md transition-all {vocabularyInputMode === 'file' ? 'bg-tile-500 text-text-300 shadow-sm' : 'text-text-200 hover:text-text-300'}"
 									onclick={() => { vocabularyInputMode = 'file'; vocabularyWords = ''; }}
+									class="px-4 py-2 text-sm rounded-md transition-all duration-200 font-semibold {vocabularyInputMode === 'file' ? 'bg-tile-500 text-text-300 shadow-sm' : 'text-text-200 hover:text-text-300'}"
 								>
-									File Upload
+									📂 File
 								</button>
 							</div>
-						</div>
-						
-						{#if vocabularyInputMode === 'text'}
-							<textarea
-								bind:value={vocabularyWords}
-								rows="2"
-								class="w-full rounded-lg border border-tile-500 bg-tile-300 p-3 text-sm text-text-300 placeholder:text-text-200/50 focus:border-tile-600 focus:ring-1 focus:ring-tile-600 resize-none"
-								placeholder="e.g., house, car, food (comma separated)"
-							></textarea>
-						{:else}
-							<div class="relative">
-								<input
-									type="file"
-									accept=".txt,.csv"
-									onchange={handleFileChange}
-									class="block w-full text-sm text-text-200 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-tile-500 file:text-text-300 hover:file:bg-tile-600 cursor-pointer"
-								/>
+
+							{#if vocabularyInputMode === 'text'}
+								<textarea
+									bind:value={vocabularyWords}
+									rows="3"
+									class="w-full rounded-lg border-2 border-tile-600 bg-tile-300 py-3 px-4 text-text-300 resize-none focus:border-tile-500 focus:ring-0 transition-colors text-lg placeholder:text-text-200/50"
+									placeholder="Enter words separated by commas (e.g., بيت, مدرسة, طعام)"
+								></textarea>
+							{:else}
+								<div class="p-8 border-2 border-dashed border-tile-600 rounded-lg bg-tile-300/50 text-center hover:bg-tile-300 transition-colors relative group cursor-pointer">
+									<input
+										type="file"
+										accept=".txt,.csv"
+										onchange={handleFileChange}
+										class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
+									/>
+									<div class="flex flex-col items-center justify-center gap-2">
+										<span class="text-4xl group-hover:scale-110 transition-transform duration-300">📄</span>
+										<p class="text-lg font-bold text-text-300">Drop your file here</p>
+										<p class="text-sm text-text-200">or click to browse</p>
+										<span class="text-xs text-text-200 bg-tile-400 px-3 py-1 rounded-full mt-2">TXT or CSV (max 150KB)</span>
+									</div>
+								</div>
 								{#if vocabularyFile}
-									<p class="mt-2 text-xs text-green-600 font-medium flex items-center gap-1">
-										✓ {vocabularyFile.name}
-									</p>
+									<div class="mt-3 p-3 bg-emerald-500/10 border border-emerald-500/30 rounded-lg flex items-center gap-2 text-emerald-300">
+										<span>✓</span>
+										<span class="font-medium">{vocabularyFile.name}</span>
+										<span class="text-sm opacity-70">({Math.round(vocabularyFile.size / 1024)}KB)</span>
+									</div>
 								{/if}
 								{#if fileError}
-									<p class="mt-2 text-xs text-red-500 font-medium flex items-center gap-1">
-										⚠ {fileError}
-									</p>
+									<div class="mt-3 p-3 bg-rose-500/10 border border-rose-500/30 rounded-lg flex items-center gap-2 text-rose-300">
+										<span>⚠️</span>
+										<span>{fileError}</span>
+									</div>
 								{/if}
-							</div>
-						{/if}
+							{/if}
+						</div>
 					</div>
 
-					<div class="pt-2">
-						<Button type="submit" className="w-full py-3 text-base font-bold shadow-md hover:shadow-lg transition-all">
-							Create Lesson
+					<!-- Submit Button -->
+					<div class="pt-4">
+						<Button type="submit" className="w-full py-4 text-xl font-bold bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+							📚 Create Lesson
 						</Button>
 					</div>
 				{/if}

@@ -347,7 +347,7 @@
 />
 
 <div class="bg-tile-400/50 border-2 border-tile-600 rounded-xl shadow-lg p-8 sm:p-10">
-  <div class="text-center mb-6">
+  <div class="text-left mb-6">
     <!-- Dialect Badge -->
     <div class="mb-4">
       <span class="inline-block px-3 py-1 bg-tile-500 text-text-300 rounded-full text-sm font-semibold">
@@ -408,14 +408,21 @@
       {#if showHint}
         <p class="text-xl text-text-200 mb-2">({word.transliteration})</p>
       {/if}
-      <div class="flex flex-row justify-center gap-2 mt-4 flex-row">
-        <Button onClick={() => (showHint = !showHint)} type="button">
-          {showHint ? 'Hide' : 'Show'} Hint
-        </Button>
-        <Button onClick={toggleAnswer} type="button">Show Answer</Button>
-        <AudioButton text={word.arabic} dialect={word.dialect as Dialect} audioUrl={word.audioUrl}>
-          Listen
-        </AudioButton>
+      <div class="flex flex-col items-center gap-3 mt-4">
+        <p class="text-sm text-text-200 text-center mb-2">
+          Try to recall the meaning, then reveal the translation to check your answer
+        </p>
+        <div class="flex flex-row justify-center gap-2">
+          <Button onClick={() => (showHint = !showHint)} type="button">
+            {showHint ? 'Hide' : 'Show'} Hint
+          </Button>
+          <Button onClick={toggleAnswer} type="button" className="!bg-blue-600 !hover:bg-blue-700 !border-blue-700 !text-white">
+            Reveal Translation
+          </Button>
+          <AudioButton text={word.arabic} dialect={word.dialect as Dialect} audioUrl={word.audioUrl}>
+            Listen
+          </AudioButton>
+        </div>
       </div>
     {:else}
       <div class="space-y-4">
@@ -525,7 +532,7 @@
             Listen
           </AudioButton>
           <Button onClick={compareDialects} type="button">Compare Dialects</Button>
-          <Button onClick={toggleAnswer} type="button">Hide Answer</Button>
+          <Button onClick={toggleAnswer} type="button">Hide Translation</Button>
         </div>
       </div>
     {/if}
@@ -533,7 +540,7 @@
 
   {#if showAnswer}
     <div class="border-t border-tile-500 pt-6 mt-6">
-      <p class="text-center text-text-200 mb-4 font-semibold">How well did you remember this word?</p>
+      <p class="text-left text-text-200 mb-4 font-semibold">How well did you remember this word?</p>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
         <button
           type="button"
@@ -565,7 +572,7 @@
         >
           <div class="text-2xl mb-2">😓</div>
           <div>Hard</div>
-          <div class="text-sm font-normal mt-1">Forgot or struggled</div>
+          <div class="text-sm font-normal mt-1">Struggled</div>
         </button>
       </div>
       {#if onForgot}
@@ -585,11 +592,29 @@
   {/if}
 
   {#if word.repetitions > 0}
-    <div class="mt-6 pt-4 border-t border-tile-500 text-center text-sm text-text-200">
-      <p>Reviewed {word.repetitions} time{word.repetitions !== 1 ? 's' : ''}</p>
-      {#if word.intervalDays > 0}
-        <p>Next review in {word.intervalDays} day{word.intervalDays !== 1 ? 's' : ''}</p>
-      {/if}
+    <div class="mt-6 pt-4 border-t border-tile-500">
+      <div class="bg-tile-300/50 rounded-lg p-4 text-left">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="text-lg">📊</span>
+          <p class="text-sm font-semibold text-text-300">Spaced Repetition Stats</p>
+        </div>
+        <div class="space-y-1 text-sm text-text-200">
+          <p>Reviewed <span class="font-semibold text-text-300">{word.repetitions}</span> time{word.repetitions !== 1 ? 's' : ''}</p>
+          {#if word.intervalDays > 0}
+            <p>Next review in <span class="font-semibold text-text-300">{word.intervalDays}</span> day{word.intervalDays !== 1 ? 's' : ''}</p>
+          {:else if word.isLearning}
+            <p class="text-blue-400 font-medium">Currently learning - will appear more frequently</p>
+          {/if}
+        </div>
+      </div>
+    </div>
+  {:else if word.isLearning}
+    <div class="mt-6 pt-4 border-t border-tile-500">
+      <div class="bg-blue-50/50 border border-blue-200 rounded-lg p-4 text-left">
+        <p class="text-sm text-text-200">
+          <span class="font-semibold text-text-300">New word</span> - This word will appear more frequently until you've mastered it
+        </p>
+      </div>
     </div>
   {/if}
 </div>

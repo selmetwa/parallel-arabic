@@ -68,10 +68,10 @@
 	}
 
 	const dialectOptions = [
-		{ value: 'egyptian-arabic', label: 'Egyptian Arabic' },
-		{ value: 'fusha', label: 'Modern Standard Arabic' },
-		{ value: 'levantine', label: 'Levantine Arabic' },
-		{ value: 'darija', label: 'Moroccan Darija' },
+		{ value: 'egyptian-arabic', label: 'Egyptian Arabic', emoji: '🇪🇬' },
+		{ value: 'fusha', label: 'Modern Standard Arabic', emoji: '📚' },
+		{ value: 'levantine', label: 'Levantine Arabic', emoji: '🇱🇧' },
+		{ value: 'darija', label: 'Moroccan Darija', emoji: '🇲🇦' },
 	];
 
 	const filterDialectOptions = [
@@ -152,33 +152,33 @@
 
 <section class="px-3 mt-6 sm:px-8 max-w-7xl mx-auto">
 	<div class="text-left mb-12">
-		<h1 class="text-4xl sm:text-5xl text-text-300 font-bold mb-4 tracking-tight">Stories</h1>
-		<p class="text-text-200 text-lg sm:text-xl leading-relaxed opacity-90 max-w-3xl">Improve your Arabic reading and listening comprehension skills with stories from all dialects.</p>
+		<h1 class="text-3xl sm:text-4xl text-text-300 font-bold mb-2 tracking-tight">Stories</h1>
+		<p class="text-text-200 text-lg sm:text-xl leading-snug max-w-3xl">Improve your Arabic reading and listening comprehension skills with stories from all dialects.</p>
 		
 		<!-- Dialect Selection for Story Creation -->
-		<div class="mt-8 p-6 bg-tile-400/50 border border-tile-500 rounded-xl inline-block">
-			<h3 class="text-lg font-bold text-text-300 mb-4">Create a New Story</h3>
-			<div class="flex flex-col sm:flex-row gap-4 items-start sm:items-end">
-				<div class="flex flex-col gap-2">
-					<label for="dialect-select" class="text-sm text-text-200 font-medium">Choose dialect:</label>
-					<div class="relative">
-						<select 
-							id="dialect-select"
-							bind:value={selectedDialect}
-							class="appearance-none pl-4 pr-10 py-2.5 border border-tile-500 bg-tile-300 text-text-300 rounded-lg focus:outline-none focus:border-tile-600 focus:ring-1 focus:ring-tile-600 min-w-[200px] cursor-pointer"
-						>
-							{#each dialectOptions as option}
-								<option value={option.value}>{option.label}</option>
-							{/each}
-						</select>
-						<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-text-300">
-							<svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-							</svg>
-						</div>
+		<div class="mt-8 bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden max-w-2xl">
+			<div class="p-4 border-b border-tile-600">
+				<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
+					<span>✨</span> Create a New Story
+				</h3>
+			</div>
+			<div class="p-6">
+				<div class="mb-6">
+					<label for="dialect-select" class="block text-sm font-medium text-text-200 mb-3">Choose dialect:</label>
+					<div class="grid grid-cols-2 gap-3">
+						{#each dialectOptions as dialectOption}
+							<button
+								type="button"
+								onclick={() => selectedDialect = dialectOption.value}
+								class="flex items-center gap-3 p-4 rounded-lg border-2 transition-all duration-200 text-left {selectedDialect === dialectOption.value ? 'bg-tile-500 border-tile-400 shadow-md' : 'bg-tile-300 border-tile-600 hover:bg-tile-300/70 hover:border-tile-500'}"
+							>
+								<span class="text-2xl">{dialectOption.emoji}</span>
+								<span class="font-semibold text-text-300">{dialectOption.label}</span>
+							</button>
+						{/each}
 					</div>
 				</div>
-				<div class="flex-shrink-0">
+				<div class="flex justify-end">
 					<CreateStoryModal dialect={selectedDialect as any} data={data}></CreateStoryModal>
 				</div>
 			</div>
