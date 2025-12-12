@@ -2,6 +2,7 @@ import { redirect } from '@sveltejs/kit'
 import type { Actions } from './$types'
 import { syncSupabaseUserWithDB } from '$lib/helpers/supabase-auth-helpers'
 import { sendWelcomeEmail } from '$lib/server/email'
+import { ADMIN_ID } from '$env/static/private'
 
 export const load = async ({ locals: { safeGetSession } }) => {
   const { session } = await safeGetSession()
@@ -43,12 +44,18 @@ export const actions: Actions = {
         
         await syncSupabaseUserWithDB(data.user, supabase)
         
-        // Send welcome email to new users (non-blocking)
+        // Send welcome email to new users (admin only, non-blocking)
+        // Only send if the new user is an admin (for testing) or if admin triggers it
         if (isNewUser && email) {
-          sendWelcomeEmail(email).catch(error => {
-            console.error('Failed to send welcome email:', error)
-            // Don't block signup if email fails
-          })
+          // Check if the new user is admin, or if we're in an admin context
+          // For now, only allow if admin ID matches (admin creating their own account)
+          const newUserId = data.user?.id;
+          if (ADMIN_ID && newUserId && ADMIN_ID === newUserId) {
+            sendWelcomeEmail(email, newUserId).catch(error => {
+              console.error('Failed to send welcome email:', error)
+              // Don't block signup if email fails
+            })
+          }
         }
       } catch (syncError) {
         console.error('Failed to sync user to database:', syncError)

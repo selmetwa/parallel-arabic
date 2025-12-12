@@ -2,20 +2,11 @@ import { redirect } from '@sveltejs/kit';
 import type { PageServerLoad, Actions } from './$types';
 import { supabase } from '$lib/supabaseClient';
 import { ADMIN_ID } from '$env/static/private';
-import nodemailer from 'nodemailer';
+import { getTransporter } from '$lib/server/email';
 import { env } from '$env/dynamic/private';
 
-const transporter = nodemailer.createTransport({
-  host: env.SMTP_HOST,
-  port: Number(env.SMTP_PORT),
-  secure: true,
-  auth: {
-    user: env.SMTP_USER,
-    pass: env.SMTP_PASSWORD,
-  },
-});
-
 export const load: PageServerLoad = async ({ locals }) => {
+	// @ts-expect-error - auth property exists on locals at runtime
 	const session = await locals.auth.validate();
 
   if (!session) {
@@ -51,6 +42,7 @@ export const load: PageServerLoad = async ({ locals }) => {
 
 export const actions: Actions = {
   sendEmail: async ({ request, locals }) => {
+    // @ts-expect-error - auth property exists on locals at runtime
     const session = await locals.auth.validate();
 
     if (!session?.sessionId) {
@@ -115,7 +107,8 @@ export const actions: Actions = {
         };
       }
 
-      // Send emails
+      // Send emails using centralized transporter
+      const transporter = getTransporter();
       const emailPromises = recipients.map(email => 
         transporter.sendMail({
           from: env.SMTP_FROM_EMAIL,

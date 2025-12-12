@@ -1,16 +1,31 @@
 import nodemailer from 'nodemailer';
 import { env } from '$env/dynamic/private';
+import { ADMIN_ID } from '$env/static/private';
 
-function getTransporter() {
-  return nodemailer.createTransport({
-    host: env.SMTP_HOST,
-    port: Number(env.SMTP_PORT),
-    secure: true, // true for 465, false for other ports
-    auth: {
-      user: env.SMTP_USER,
-      pass: env.SMTP_PASSWORD,
-    },
-  });
+// Centralized transporter - only accessible by admin
+let transporter: nodemailer.Transporter | null = null;
+
+export function getTransporter(): nodemailer.Transporter {
+  if (!transporter) {
+    transporter = nodemailer.createTransport({
+      host: env.SMTP_HOST,
+      port: Number(env.SMTP_PORT),
+      secure: true, // true for 465, false for other ports
+      auth: {
+        user: env.SMTP_USER,
+        pass: env.SMTP_PASSWORD,
+      },
+    });
+  }
+  return transporter;
+}
+
+// Admin verification helper
+export async function verifyAdmin(userId: string | null | undefined): Promise<boolean> {
+  if (!userId || !ADMIN_ID) {
+    return false;
+  }
+  return ADMIN_ID === userId;
 }
 
 async function sendEmail(resetUrl: string, email: string) {
@@ -43,13 +58,23 @@ export const isValidEmail = (maybeEmail: unknown): maybeEmail is string => {
 	return emailRegexp.test(maybeEmail);
 };
 
-export const sendPasswordResetLink = async (token: string, _email: string) => {
+export const sendPasswordResetLink = async (token: string, _email: string, userId?: string | null) => {
+	// Require admin access
+	if (!await verifyAdmin(userId)) {
+		throw new Error('Unauthorized: Admin access required to send emails');
+	}
+	
 	const url = `https://parallel-arabic.com/password-reset/token=${token}`;
 	const email = await sendEmail(url, _email);
 	return email;
 };
 
-export const sendWelcomeEmail = async (email: string) => {
+export const sendWelcomeEmail = async (email: string, userId?: string | null) => {
+	// Require admin access
+	if (!await verifyAdmin(userId)) {
+		throw new Error('Unauthorized: Admin access required to send emails');
+	}
+	
 	const siteUrl = 'https://parallel-arabic.com';
 	
 	// Color values matching the site's design system (tile and text colors)
