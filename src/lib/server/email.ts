@@ -29,6 +29,7 @@ export async function verifyAdmin(userId: string | null | undefined): Promise<bo
 }
 
 async function sendEmail(resetUrl: string, email: string) {
+  throw new Error("EMAIL_DISABLED");
   const transporter = getTransporter();
   const info = await transporter.sendMail({
     from: env.SMTP_FROM_EMAIL,
@@ -245,6 +246,7 @@ Founder, Parallel Arabic
 	`;
 	
 	try {
+		throw new Error("EMAIL_DISABLED");
 		const transporter = getTransporter();
 		const info = await transporter.sendMail({
 			from: env.SMTP_FROM_EMAIL,
