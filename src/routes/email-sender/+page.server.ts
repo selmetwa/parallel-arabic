@@ -108,6 +108,7 @@ export const actions: Actions = {
       }
 
       // Send emails using centralized transporter
+      throw new Error("EMAIL_DISABLED");
       const transporter = getTransporter();
       const emailPromises = recipients.map(email => 
         transporter.sendMail({
