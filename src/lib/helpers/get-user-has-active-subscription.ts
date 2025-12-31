@@ -1,12 +1,12 @@
 import { supabase } from '$lib/supabaseClient';
 import { StripeService } from '$lib/services/stripe.service';
+import { isEmailWhitelisted } from './subscription';
 
-// Whitelist of emails that have access to all lessons regardless of subscription
-const WHITELISTED_EMAILS = [
-  'selmetwa@gmail.com',
-  'sherifliketheclash@gmail.com'
-];
-
+/**
+ * Check if a user has an active subscription by querying Stripe directly
+ * Use this when you need an authoritative check (e.g., before allowing premium content access)
+ * For fast UI checks, use checkUserSubscription() from ./subscription.ts instead
+ */
 export const getUserHasActiveSubscription = async (userId: string | null) => {
   // Fast path for no user
   if (!userId) {
@@ -24,8 +24,8 @@ export const getUserHasActiveSubscription = async (userId: string | null) => {
     console.error('Error fetching user subscription ID:', error);
   }
 
-  // Check if user is whitelisted
-  if (user?.email && WHITELISTED_EMAILS.includes(user.email.toLowerCase())) {
+  // Check if user is whitelisted (using shared whitelist)
+  if (isEmailWhitelisted(user?.email)) {
     return true;
   }
 

@@ -155,7 +155,7 @@
   ]
 
   let { data } = $props();
-
+  console.log({ data })
   let isModalOpen = $state(false);
   
 
