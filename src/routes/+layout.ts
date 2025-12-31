@@ -66,7 +66,8 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
       supabase, 
       user,
       showOnboarding: data.showOnboarding ?? false,
-      targetDialect: data.targetDialect ?? null
+      targetDialect: data.targetDialect ?? null,
+      isSubscribed: data.isSubscribed
     }
   } catch (error) {
     console.error('❌ [+layout.ts] Error in client layout load:', error)
@@ -84,7 +85,8 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
         supabase: fallbackSupabase, 
         user: null,
         showOnboarding: data.showOnboarding ?? false,
-        targetDialect: data.targetDialect ?? null
+        targetDialect: data.targetDialect ?? null,
+        isSubscribed: data.isSubscribed
       }
     } catch (fallbackError) {
       console.error('❌ [+layout.ts] Fallback also failed:', fallbackError)

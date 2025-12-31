@@ -66,7 +66,7 @@ export const POST: RequestHandler = async ({ request }) => {
         subscriptionEndDate = Math.floor(thirtyDaysFromNow.getTime() / 1000);
       }
 
-      const { data: result, error: updateError } = await supabase
+      const { error: updateError } = await supabase
         .from('user')
         .update({
           is_subscriber: true,
@@ -82,12 +82,46 @@ export const POST: RequestHandler = async ({ request }) => {
     }
   }
 
+  // Handle subscription deletion (when subscription period ends after cancellation)
+  async function handleSubscriptionDeleted(subscriptionId: string) {
+    const { data: userToUpdate, error: fetchError } = await supabase
+      .from('user')
+      .select('*')
+      .eq('subscriber_id', subscriptionId)
+      .single();
+
+    if (fetchError && fetchError.code !== 'PGRST116') {
+      console.error('Error fetching user for subscription deletion:', fetchError);
+      return;
+    }
+
+    if (userToUpdate) {
+      const { error: updateError } = await supabase
+        .from('user')
+        .update({
+          is_subscriber: false,
+          subscriber_id: null,
+          subscription_end_date: null
+        })
+        .eq('subscriber_id', subscriptionId);
+
+      if (updateError) {
+        console.error('Error updating user after subscription deletion:', updateError);
+      } else {
+        console.log(`Subscription ended for user ${userToUpdate.id}, is_subscriber set to false`);
+      }
+    }
+  }
+
 	// Handle the event
 	switch (event.type) {
 		case 'customer.subscription.updated':
-      updateSubscription(event.data.object.id)
+      updateSubscription(event.data.object.id);
 			break;
-		// Add other cases for different event types as needed
+    case 'customer.subscription.deleted':
+      // Fires when the subscription period ends (after cancel_at_period_end was set)
+      handleSubscriptionDeleted(event.data.object.id);
+      break;
 		default:
 	}
 
