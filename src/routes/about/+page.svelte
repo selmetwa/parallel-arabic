@@ -333,7 +333,7 @@
             </div>
           </div>
         </div>
-        <!-- Videos - Hidden, not ready yet
+        <!-- Videos -->
          <div class="bg-tile-500 border-2 border-tile-600 shadow-lg overflow-hidden">
           <div class="flex flex-col sm:flex-row">
             <div class="sm:w-2/5 h-48 sm:h-auto bg-tile-300 border-r-0 sm:border-r-2 border-b-2 sm:border-b-0 border-tile-600 flex items-center justify-center p-4">
@@ -354,7 +354,6 @@
             </div>
           </div>
          </div>
-        -->
 			</div>
 
 			<!-- Additional Practice Tools -->

@@ -1,11 +1,20 @@
 import { supabase } from '$lib/supabaseClient';
 import { downloadStoryFromStorage, getAudioUrl } from './storage-helpers';
+import { getCached, setCached, CACHE_KEYS, CACHE_TTL } from '$lib/server/redis';
 
 /**
  * Get a story by ID with full JSON content from storage
+ * Uses Redis caching for improved performance
  */
 export async function getStoryById(storyId: string): Promise<{ success: boolean; story?: object; error?: string }> {
   try {
+    // Check Redis cache first
+    const cacheKey = CACHE_KEYS.STORY_SINGLE(storyId);
+    const cached = await getCached<object>(cacheKey);
+    if (cached) {
+      return { success: true, story: cached };
+    }
+
     // First, get the story metadata from database
     const { data: storyMetadata, error: dbError } = await supabase
       .from('generated_story')
@@ -41,6 +50,9 @@ export async function getStoryById(storyId: string): Promise<{ success: boolean;
       story_body: storageResult.data, // Replace file key with actual JSON content
       audio_url: audioUrl // Add audio URL if available
     };
+
+    // Cache the result
+    await setCached(cacheKey, fullStory, CACHE_TTL.STORY_SINGLE);
 
     return { success: true, story: fullStory };
   } catch (error) {
@@ -111,9 +123,20 @@ export async function getStoriesByUser(userId: string): Promise<{ success: boole
 
 /**
  * Get all stories from all dialects with full JSON content from storage
+ * Uses Redis caching for improved performance
  */
 export async function getAllStories(limit?: number): Promise<{ success: boolean; stories?: object[]; error?: string }> {
   try {
+    // Only cache if no limit (full list)
+    const cacheKey = limit ? null : CACHE_KEYS.STORIES_ALL;
+    
+    if (cacheKey) {
+      const cached = await getCached<object[]>(cacheKey);
+      if (cached) {
+        return { success: true, stories: cached };
+      }
+    }
+
     let query = supabase
       .from('generated_story')
       .select('*')
@@ -167,6 +190,11 @@ export async function getAllStories(limit?: number): Promise<{ success: boolean;
       })
     );
 
+    // Cache the result (only if no limit)
+    if (cacheKey) {
+      await setCached(cacheKey, storiesWithContent, CACHE_TTL.STORIES_ALL);
+    }
+
     return { success: true, stories: storiesWithContent };
   } catch (error) {
     return { success: false, error: (error as Error).message };
@@ -175,9 +203,20 @@ export async function getAllStories(limit?: number): Promise<{ success: boolean;
 
 /**
  * Get stories by dialect with full JSON content from storage
+ * Uses Redis caching for improved performance
  */
 export async function getStoriesByDialect(dialect: string, limit?: number): Promise<{ success: boolean; stories?: object[]; error?: string }> {
   try {
+    // Only cache if no limit (full list for dialect)
+    const cacheKey = limit ? null : CACHE_KEYS.STORIES_DIALECT(dialect);
+    
+    if (cacheKey) {
+      const cached = await getCached<object[]>(cacheKey);
+      if (cached) {
+        return { success: true, stories: cached };
+      }
+    }
+
     let query = supabase
       .from('generated_story')
       .select('*')
@@ -231,6 +270,11 @@ export async function getStoriesByDialect(dialect: string, limit?: number): Prom
         };
       })
     );
+
+    // Cache the result (only if no limit)
+    if (cacheKey) {
+      await setCached(cacheKey, storiesWithContent, CACHE_TTL.STORIES_DIALECT);
+    }
 
     console.log(`✅ Retrieved ${storiesWithContent.length} ${dialect} stories`);
     return { success: true, stories: storiesWithContent };

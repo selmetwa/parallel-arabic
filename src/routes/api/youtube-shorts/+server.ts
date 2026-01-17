@@ -17,8 +17,16 @@ const DIALECT_SEARCH_CONFIG: Record<string, { searchTerms: string[]; channelIds?
 			'Egyptian dialect lesson',
 			'ArabicPod101 Egyptian'
 		],
-		// Popular Arabic learning channels (optional - add channel IDs here if you find good ones)
-		channelIds: []
+		// Curated Egyptian Arabic learning channels
+		channelIds: [
+			'UCKKXkVhetveWBhmbYYY6tMw', // Speak Like An Egyptian
+			'UCnKn_OpBA2c1qBWEBr_e-qg', 
+			'UCkwOyylAOUEwfvYPnps6yzg',
+			'UCZ7UQg54PpQjnOTj2QgHU4g',
+			'UCMBR4-IMxWaSOk_6HMBOmsw',
+			'UCjbhe1RW9q8keU0EpqEgeeg',
+			'UCPqO0VTjG3O6BZXa2bMoA1A'
+		]
 	},
 	'levantine': {
 		searchTerms: [
@@ -151,7 +159,7 @@ function parseDuration(duration: string): number {
 }
 
 /**
- * Fetch shorts from YouTube API using multiple search strategies
+ * Fetch shorts from YouTube API - prioritizes curated channels, falls back to search
  */
 async function fetchFromYouTube(dialect: string, pageToken?: string): Promise<{ shorts: YouTubeShort[]; nextPageToken: string | null }> {
 	const YOUTUBE_API_KEY = env.YOUTUBE_API_KEY;
@@ -165,104 +173,177 @@ async function fetchFromYouTube(dialect: string, pageToken?: string): Promise<{ 
 		throw new Error(`Invalid dialect: ${dialect}`);
 	}
 
-	// Use multiple search terms to get diverse, quality results
-	const searchTermsToUse = pageToken 
-		? [config.searchTerms[Math.floor(Math.random() * config.searchTerms.length)]]
-		: config.searchTerms.slice(0, 3); // Use first 3 terms for initial load
-
 	const allShorts: YouTubeShort[] = [];
 	const seenIds = new Set<string>();
 	let lastPageToken: string | null = null;
 
-	for (const searchQuery of searchTermsToUse) {
-		try {
-			const searchParams = new URLSearchParams({
-				part: 'snippet',
-				q: searchQuery + ' #shorts',
-				type: 'video',
-				videoDuration: 'short',
-				maxResults: '15',
-				key: YOUTUBE_API_KEY,
-				order: 'relevance',
-				relevanceLanguage: 'ar',
-				safeSearch: 'strict',
-				videoCategoryId: '27' // Education category
-			});
+	// PRIORITY 1: Fetch from curated channels first
+	if (config.channelIds && config.channelIds.length > 0 && !pageToken) {
+		console.log(`Fetching from ${config.channelIds.length} curated channels for ${dialect}`);
+		
+		for (const channelId of config.channelIds) {
+			try {
+				// Search for shorts from this specific channel
+				const searchParams = new URLSearchParams({
+					part: 'snippet',
+					channelId: channelId,
+					type: 'video',
+					videoDuration: 'short',
+					maxResults: '10',
+					key: YOUTUBE_API_KEY,
+					order: 'date' // Get recent content
+				});
 
-			if (pageToken) {
-				searchParams.set('pageToken', pageToken);
-			}
+				const searchResponse = await fetch(`${YOUTUBE_API_BASE}/search?${searchParams}`);
 
-			const searchResponse = await fetch(`${YOUTUBE_API_BASE}/search?${searchParams}`);
-
-			if (!searchResponse.ok) {
-				console.error(`YouTube Search API error for query "${searchQuery}"`);
-				continue;
-			}
-
-			const searchData = await searchResponse.json();
-			lastPageToken = searchData.nextPageToken || null;
-			
-			if (!searchData.items || searchData.items.length === 0) {
-				continue;
-			}
-
-			// Get video IDs for detailed info (exclude already seen)
-			const videoIds = searchData.items
-				.map((item: any) => item.id?.videoId)
-				.filter((id: string) => id && !seenIds.has(id))
-				.join(',');
-
-			if (!videoIds) continue;
-
-			// Get video details
-			const detailsParams = new URLSearchParams({
-				part: 'contentDetails,snippet',
-				id: videoIds,
-				key: YOUTUBE_API_KEY
-			});
-
-			const detailsResponse = await fetch(`${YOUTUBE_API_BASE}/videos?${detailsParams}`);
-
-			if (!detailsResponse.ok) {
-				continue;
-			}
-
-			const detailsData = await detailsResponse.json();
-
-			// Filter for actual Shorts (< 60 seconds) and quality content
-			const shorts: YouTubeShort[] = detailsData.items
-				.filter((video: any) => {
-					const duration = parseDuration(video.contentDetails?.duration || '');
-					const title = (video.snippet?.title || '').toLowerCase();
-					
-					// Filter out likely non-educational content
-					const badKeywords = ['مقلب', 'prank', 'challenge', 'تحدي', 'reaction', 'ردة فعل'];
-					const hasBadKeyword = badKeywords.some(kw => title.includes(kw));
-					
-					return duration > 0 && duration <= 60 && !hasBadKeyword;
-				})
-				.map((video: any) => ({
-					id: video.id,
-					title: video.snippet?.title || 'Untitled',
-					channelTitle: video.snippet?.channelTitle || 'Unknown Channel',
-					thumbnail: video.snippet?.thumbnails?.maxres?.url ||
-					           video.snippet?.thumbnails?.high?.url ||
-					           video.snippet?.thumbnails?.medium?.url ||
-					           video.snippet?.thumbnails?.default?.url ||
-					           `https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`,
-					publishedAt: video.snippet?.publishedAt || new Date().toISOString()
-				}));
-
-			// Add to results, tracking seen IDs
-			for (const short of shorts) {
-				if (!seenIds.has(short.id)) {
-					seenIds.add(short.id);
-					allShorts.push(short);
+				if (!searchResponse.ok) {
+					console.error(`YouTube API error for channel ${channelId}`);
+					continue;
 				}
+
+				const searchData = await searchResponse.json();
+				
+				if (!searchData.items || searchData.items.length === 0) {
+					continue;
+				}
+
+				// Get video IDs for detailed info
+				const videoIds = searchData.items
+					.map((item: any) => item.id?.videoId)
+					.filter((id: string) => id && !seenIds.has(id))
+					.join(',');
+
+				if (!videoIds) continue;
+
+				// Get video details to verify duration
+				const detailsParams = new URLSearchParams({
+					part: 'contentDetails,snippet',
+					id: videoIds,
+					key: YOUTUBE_API_KEY
+				});
+
+				const detailsResponse = await fetch(`${YOUTUBE_API_BASE}/videos?${detailsParams}`);
+
+				if (!detailsResponse.ok) continue;
+
+				const detailsData = await detailsResponse.json();
+
+				// Filter for actual Shorts (< 60 seconds)
+				for (const video of detailsData.items) {
+					const duration = parseDuration(video.contentDetails?.duration || '');
+					if (duration > 0 && duration <= 60 && !seenIds.has(video.id)) {
+						seenIds.add(video.id);
+						allShorts.push({
+							id: video.id,
+							title: video.snippet?.title || 'Untitled',
+							channelTitle: video.snippet?.channelTitle || 'Unknown Channel',
+							thumbnail: video.snippet?.thumbnails?.maxres?.url ||
+							           video.snippet?.thumbnails?.high?.url ||
+							           video.snippet?.thumbnails?.medium?.url ||
+							           `https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`,
+							publishedAt: video.snippet?.publishedAt || new Date().toISOString()
+						});
+					}
+				}
+			} catch (err) {
+				console.error(`Error fetching from channel ${channelId}:`, err);
 			}
-		} catch (err) {
-			console.error(`Error fetching for query "${searchQuery}":`, err);
+		}
+		
+		console.log(`Found ${allShorts.length} shorts from curated channels`);
+	}
+
+	// PRIORITY 2: If we don't have enough from curated channels, use search
+	if (allShorts.length < 10) {
+		const searchTermsToUse = pageToken 
+			? [config.searchTerms[Math.floor(Math.random() * config.searchTerms.length)]]
+			: config.searchTerms.slice(0, 3);
+
+		for (const searchQuery of searchTermsToUse) {
+			try {
+				const searchParams = new URLSearchParams({
+					part: 'snippet',
+					q: searchQuery + ' #shorts',
+					type: 'video',
+					videoDuration: 'short',
+					maxResults: '15',
+					key: YOUTUBE_API_KEY,
+					order: 'relevance',
+					relevanceLanguage: 'ar',
+					safeSearch: 'strict',
+					videoCategoryId: '27' // Education category
+				});
+
+				if (pageToken) {
+					searchParams.set('pageToken', pageToken);
+				}
+
+				const searchResponse = await fetch(`${YOUTUBE_API_BASE}/search?${searchParams}`);
+
+				if (!searchResponse.ok) {
+					console.error(`YouTube Search API error for query "${searchQuery}"`);
+					continue;
+				}
+
+				const searchData = await searchResponse.json();
+				lastPageToken = searchData.nextPageToken || null;
+				
+				if (!searchData.items || searchData.items.length === 0) {
+					continue;
+				}
+
+				const videoIds = searchData.items
+					.map((item: any) => item.id?.videoId)
+					.filter((id: string) => id && !seenIds.has(id))
+					.join(',');
+
+				if (!videoIds) continue;
+
+				const detailsParams = new URLSearchParams({
+					part: 'contentDetails,snippet',
+					id: videoIds,
+					key: YOUTUBE_API_KEY
+				});
+
+				const detailsResponse = await fetch(`${YOUTUBE_API_BASE}/videos?${detailsParams}`);
+
+				if (!detailsResponse.ok) continue;
+
+				const detailsData = await detailsResponse.json();
+
+				// Filter for actual Shorts (< 60 seconds) and quality content
+				const shorts: YouTubeShort[] = detailsData.items
+					.filter((video: any) => {
+						const duration = parseDuration(video.contentDetails?.duration || '');
+						const title = (video.snippet?.title || '').toLowerCase();
+						
+						// Filter out likely non-educational content
+						const badKeywords = ['مقلب', 'prank', 'challenge', 'تحدي', 'reaction', 'ردة فعل'];
+						const hasBadKeyword = badKeywords.some(kw => title.includes(kw));
+						
+						return duration > 0 && duration <= 60 && !hasBadKeyword;
+					})
+					.map((video: any) => ({
+						id: video.id,
+						title: video.snippet?.title || 'Untitled',
+						channelTitle: video.snippet?.channelTitle || 'Unknown Channel',
+						thumbnail: video.snippet?.thumbnails?.maxres?.url ||
+						           video.snippet?.thumbnails?.high?.url ||
+						           video.snippet?.thumbnails?.medium?.url ||
+						           video.snippet?.thumbnails?.default?.url ||
+						           `https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`,
+						publishedAt: video.snippet?.publishedAt || new Date().toISOString()
+					}));
+
+				for (const short of shorts) {
+					if (!seenIds.has(short.id)) {
+						seenIds.add(short.id);
+						allShorts.push(short);
+					}
+				}
+			} catch (err) {
+				console.error(`Error fetching for query "${searchQuery}":`, err);
+			}
 		}
 	}
 
