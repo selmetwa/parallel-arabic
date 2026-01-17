@@ -1,6 +1,7 @@
 <script lang="ts">
   import { enhance } from '$app/forms'
   import Button from './Button.svelte'
+  import { clearUserLocalStorage } from '$lib/helpers/clear-user-data'
 
   interface Props {
     session: any
@@ -19,6 +20,8 @@
       action="/auth/logout"
       use:enhance={() => {
         loading = true;
+        // Clear user-specific localStorage data before logout
+        clearUserLocalStorage();
         return async ({ update }) => {
           loading = false;
           console.log({update})

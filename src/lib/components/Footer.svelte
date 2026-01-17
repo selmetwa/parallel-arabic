@@ -3,7 +3,7 @@
   import Tooltip from './Tooltip.svelte';
 </script>
 
-<footer class="w-full bg-tile-500 border-t border-tile-600 mt-auto">
+<footer class="w-full bg-tile-500 border-t border-tile-600 mt-auto relative z-0">
   <div class="max-w-7xl mx-auto px-6 py-12">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
       <div class="space-y-4">

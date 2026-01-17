@@ -63,13 +63,12 @@
         items: [
           { label: 'Sentences', href: '/sentences', icon: '📝' },
           { label: 'Stories', href: '/stories', icon: '📖' },
-          { label: 'Speak', href: '/speak', icon: '🎙️' }
         ]
       },
       {
         title: 'Explore',
         items: [
-          { label: 'Videos', href: '/videos', icon: '📺' },
+          // { label: 'Videos', href: '/videos', icon: '📺' }, // Hidden - not ready yet
           { label: 'Tutor', href: '/tutor', icon: '💬' }
         ]
       },

@@ -130,17 +130,66 @@
       showAnswer = false;
       showHint = false;
       selectedDifficulty = null;
+      isFlipping = false;
       clearSelection();
       clearArabicSelection();
     }
   });
 
-  function toggleAnswer() {
+  let isFlipping = $state(false);
+  let flipCardInner: HTMLDivElement | null = null;
+  let frontFace: HTMLDivElement | null = null;
+  let backFace: HTMLDivElement | null = null;
+  let cardMinHeight = $state(0);
+
+  // Calculate and set min-height based on content
+  $effect(() => {
+    // Recalculate when word changes or when UI state changes
+    // Dependencies: word, showHint, selectedWords, selectedArabicWords, showAnswer
+    if (frontFace && backFace && word) {
+      // Use requestAnimationFrame to ensure DOM is updated
+      requestAnimationFrame(() => {
+        if (frontFace && backFace) {
+          const frontHeight = frontFace.scrollHeight;
+          const backHeight = backFace.scrollHeight;
+          const maxHeight = Math.max(frontHeight, backHeight);
+          cardMinHeight = maxHeight;
+        }
+      });
+    }
+    // Access state variables to make them dependencies
+    void showHint;
+    void selectedWords;
+    void selectedArabicWords;
+    void showAnswer;
+  });
+
+  function handleCardClick(event: MouseEvent) {
+    if (isFlipping) return;
+    toggleFlip();
+  }
+
+  function handleCardKeydown(event: KeyboardEvent) {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      toggleFlip();
+    }
+  }
+
+  function toggleFlip() {
+    if (isFlipping) return;
+
+    isFlipping = true;
     showAnswer = !showAnswer;
+
     if (!showAnswer) {
       clearSelection();
       clearArabicSelection();
     }
+
+    setTimeout(() => {
+      isFlipping = false;
+    }, 600);
   }
 
   // Word selection functions for drag-to-highlight
@@ -346,20 +395,36 @@
   currentDialect={word.dialect as Dialect}
 />
 
-<div class="bg-tile-400/50 border-2 border-tile-600 rounded-xl shadow-lg p-8 sm:p-10">
-  <div class="text-left mb-6">
-    <!-- Dialect Badge -->
-    <div class="mb-4">
-      <span class="inline-block px-3 py-1 bg-tile-500 text-text-300 rounded-full text-sm font-semibold">
-        {dialectName[word.dialect] || word.dialect}
-      </span>
-    </div>
-    
-    {#if !showAnswer}
+<div
+  class="flip-card bg-tile-400/50 border-2 border-tile-600 rounded-xl shadow-lg"
+  onclick={handleCardClick}
+  onkeydown={handleCardKeydown}
+  role="button"
+  tabindex="0"
+  aria-label={showAnswer ? "Hide translation" : "Reveal translation"}
+  aria-pressed={showAnswer}
+>
+  <div
+    bind:this={flipCardInner}
+    class={cn("flip-card-inner p-8 sm:p-10", {
+      "flipped": showAnswer,
+      "is-animating": isFlipping
+    })}
+    style={cardMinHeight > 0 ? `min-height: ${cardMinHeight}px` : ''}
+  >
+    <!-- Front Face -->
+    <div class="flip-card-front" bind:this={frontFace}>
+      <div class="text-left mb-6">
+        <!-- Dialect Badge -->
+        <div class="mb-4">
+          <span class="inline-block px-3 py-1 bg-tile-500 text-text-300 rounded-full text-sm font-semibold">
+            {dialectName[word.dialect] || word.dialect}
+          </span>
+        </div>
       <div class="flex flex-col items-center justify-center gap-3 mb-4">
         <!-- Arabic word selection controls -->
         {#if selectedArabicWords.length > 0}
-          <div class="flex gap-2 mb-2">
+          <div class="flex gap-2 mb-2" onclick={(e) => e.stopPropagation()}>
             <button
               onclick={() => askChatGTP(selectedArabicWords.join(' '))}
               class="px-3 py-1 bg-tile-400 text-text-300 rounded border border-tile-600 hover:bg-tile-500 hover:border-tile-500 transition-colors"
@@ -386,7 +451,10 @@
             <span
               onmousedown={(e) => handleArabicWordMouseDown(index, e)}
               onmouseenter={() => handleArabicWordMouseEnter(index)}
-              onclick={() => askChatGTP(arabicWord)}
+              onclick={(e) => {
+                e.stopPropagation();
+                askChatGTP(arabicWord);
+              }}
               onkeydown={(e) => {
                 if (e.key === 'Enter' || e.key === ' ') {
                   e.preventDefault();
@@ -405,26 +473,34 @@
           {/each}
         </div>
       </div>
-      {#if showHint}
-        <p class="text-xl text-text-200 mb-2">({word.transliteration})</p>
-      {/if}
-      <div class="flex flex-col items-center gap-3 mt-4">
-        <p class="text-sm text-text-200 text-center mb-2">
-          Try to recall the meaning, then reveal the translation to check your answer
-        </p>
-        <div class="flex flex-row justify-center gap-2">
-          <Button onClick={() => (showHint = !showHint)} type="button">
-            {showHint ? 'Hide' : 'Show'} Hint
-          </Button>
-          <Button onClick={toggleAnswer} type="button" className="!bg-blue-600 !hover:bg-blue-700 !border-blue-700 !text-white">
-            Reveal Translation
-          </Button>
-          <AudioButton text={word.arabic} dialect={word.dialect as Dialect} audioUrl={word.audioUrl}>
-            Listen
-          </AudioButton>
+        {#if showHint}
+          <p class="text-xl text-text-200 mb-2">({word.transliteration})</p>
+        {/if}
+        <div class="flex flex-col items-center gap-3 mt-4">
+          <div class="flex flex-row justify-center gap-2" onclick={(e) => e.stopPropagation()}>
+            <Button onClick={() => (showHint = !showHint)} type="button">
+              {showHint ? 'Hide' : 'Show'} Hint
+            </Button>
+            <AudioButton text={word.arabic} dialect={word.dialect as Dialect} audioUrl={word.audioUrl}>
+              Listen
+            </AudioButton>
+          </div>
+          <p class="text-xs text-text-200 text-center mt-4 opacity-60">
+            Click anywhere to reveal translation
+          </p>
         </div>
       </div>
-    {:else}
+    </div>
+
+    <!-- Back Face -->
+    <div class="flip-card-back" bind:this={backFace}>
+      <div class="text-left mb-6">
+        <!-- Dialect Badge -->
+        <div class="mb-4">
+          <span class="inline-block px-3 py-1 bg-tile-500 text-text-300 rounded-full text-sm font-semibold">
+            {dialectName[word.dialect] || word.dialect}
+          </span>
+        </div>
       <div class="space-y-4">
         <div class="flex flex-col items-center justify-center gap-3">
           <!-- Arabic word selection controls -->
@@ -456,7 +532,10 @@
               <span
                 onmousedown={(e) => handleArabicWordMouseDown(index, e)}
                 onmouseenter={() => handleArabicWordMouseEnter(index)}
-                onclick={() => askChatGTP(arabicWord)}
+                onclick={(e) => {
+                  e.stopPropagation();
+                  askChatGTP(arabicWord);
+                }}
                 onkeydown={(e) => {
                   if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault();
@@ -475,11 +554,11 @@
             {/each}
           </div>
         </div>
-        
+
         <div class="flex flex-col items-center justify-center gap-3">
           <!-- Selection controls -->
           {#if selectedWords.length > 0}
-            <div class="flex gap-2 mb-2">
+            <div class="flex gap-2 mb-2" onclick={(e) => e.stopPropagation()}>
               <button
                 onclick={() => askChatGTP(selectedWords)}
                 class="px-3 py-1 bg-tile-400 text-text-300 rounded border border-tile-600 hover:bg-tile-500 hover:border-tile-500 transition-colors"
@@ -505,7 +584,10 @@
               <span
                 onmousedown={(e) => handleWordMouseDown(index, e)}
                 onmouseenter={() => handleWordMouseEnter(index)}
-                onclick={() => askChatGTP(englishWord)}
+                onclick={(e) => {
+                  e.stopPropagation();
+                  askChatGTP(englishWord);
+                }}
                 onkeydown={(e) => {
                   if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault();
@@ -527,69 +609,67 @@
           {/if}
         </div>
         
-        <div class="flex justify-center gap-2 mt-4 flex-row flex-wrap">
+        <div class="flex justify-center gap-2 mt-4 flex-row flex-wrap" onclick={(e) => e.stopPropagation()}>
           <AudioButton text={word.arabic} dialect={word.dialect as Dialect} audioUrl={word.audioUrl}>
             Listen
           </AudioButton>
           <Button onClick={compareDialects} type="button">Compare Dialects</Button>
-          <Button onClick={toggleAnswer} type="button">Hide Translation</Button>
         </div>
       </div>
-    {/if}
-  </div>
 
-  {#if showAnswer}
-    <div class="border-t border-tile-500 pt-6 mt-6">
-      <p class="text-left text-text-200 mb-4 font-semibold">How well did you remember this word?</p>
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
-        <button
-          type="button"
-          onclick={() => handleDifficultyClick(1)}
-          disabled={selectedDifficulty !== null}
-          class="border-2 border-green-500 bg-green-100 hover:bg-green-200 text-text-300 py-4 px-6 rounded-lg font-semibold text-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          <div class="text-2xl mb-2">😊</div>
-          <div>Easy</div>
-          <div class="text-sm font-normal mt-1">Remembered easily</div>
-        </button>
-        
-        <button
-          type="button"
-          onclick={() => handleDifficultyClick(2)}
-          disabled={selectedDifficulty !== null}
-          class="border-2 border-yellow-500 bg-yellow-100 hover:bg-yellow-200 text-text-300 py-4 px-6 rounded-lg font-semibold text-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          <div class="text-2xl mb-2">🤔</div>
-          <div>Medium</div>
-          <div class="text-sm font-normal mt-1">Remembered with effort</div>
-        </button>
-        
-        <button
-          type="button"
-          onclick={() => handleDifficultyClick(3)}
-          disabled={selectedDifficulty !== null}
-          class="border-2 border-red-500 bg-red-100 hover:bg-red-200 text-text-300 py-4 px-6 rounded-lg font-semibold text-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          <div class="text-2xl mb-2">😓</div>
-          <div>Hard</div>
-          <div class="text-sm font-normal mt-1">Struggled</div>
-        </button>
-      </div>
-      {#if onForgot}
-        <div class="flex justify-center mt-4">
+      <div class="border-t border-tile-500 pt-6 mt-6" onclick={(e) => e.stopPropagation()}>
+        <p class="text-left text-text-200 mb-4 font-semibold">How well did you remember this word?</p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
           <button
             type="button"
-            onclick={handleForgot}
+            onclick={() => handleDifficultyClick(1)}
             disabled={selectedDifficulty !== null}
-            class="border-2 border-orange-500 bg-orange-100 hover:bg-orange-200 text-text-300 py-3 px-8 rounded-lg font-semibold text-base transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+            class="border-2 border-green-500 bg-green-100 hover:bg-green-200 text-text-300 py-4 px-6 rounded-lg font-semibold text-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            <span class="text-xl">❌</span>
-            <span>Forgot - Review Again</span>
+            <div class="text-2xl mb-2">😊</div>
+            <div>Easy</div>
+            <div class="text-sm font-normal mt-1">Remembered easily</div>
+          </button>
+
+          <button
+            type="button"
+            onclick={() => handleDifficultyClick(2)}
+            disabled={selectedDifficulty !== null}
+            class="border-2 border-yellow-500 bg-yellow-100 hover:bg-yellow-200 text-text-300 py-4 px-6 rounded-lg font-semibold text-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            <div class="text-2xl mb-2">🤔</div>
+            <div>Medium</div>
+            <div class="text-sm font-normal mt-1">Remembered with effort</div>
+          </button>
+
+          <button
+            type="button"
+            onclick={() => handleDifficultyClick(3)}
+            disabled={selectedDifficulty !== null}
+            class="border-2 border-red-500 bg-red-100 hover:bg-red-200 text-text-300 py-4 px-6 rounded-lg font-semibold text-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            <div class="text-2xl mb-2">😓</div>
+            <div>Hard</div>
+            <div class="text-sm font-normal mt-1">Struggled</div>
           </button>
         </div>
-      {/if}
+        {#if onForgot}
+          <div class="flex justify-center mt-4">
+            <button
+              type="button"
+              onclick={handleForgot}
+              disabled={selectedDifficulty !== null}
+              class="border-2 border-orange-500 bg-orange-100 hover:bg-orange-200 text-text-300 py-3 px-8 rounded-lg font-semibold text-base transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+            >
+              <span class="text-xl">❌</span>
+              <span>Forgot - Review Again</span>
+            </button>
+          </div>
+        {/if}
+      </div>
     </div>
-  {/if}
+  </div>
+</div>
 
   {#if word.repetitions > 0}
     <div class="mt-6 pt-4 border-t border-tile-500">
@@ -619,3 +699,44 @@
   {/if}
 </div>
 
+<style>
+  .flip-card {
+    perspective: 1000px;
+    cursor: pointer;
+    overflow: visible;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    transition: transform 0.6s, min-height 0.3s ease;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card-inner.flipped {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    width: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .flip-card-front {
+    position: relative;
+  }
+
+  .flip-card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-inner.is-animating {
+    pointer-events: none;
+  }
+</style>

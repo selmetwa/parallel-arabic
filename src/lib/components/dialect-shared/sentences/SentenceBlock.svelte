@@ -3,6 +3,7 @@
 	 * SentenceBlock Component
 	 * 
 	 * Features:
+	 * - Two practice modes: Typing and Sentence Reordering
 	 * - Single word click for individual definitions
 	 * - Multi-word selection by dragging across words
 	 * - Visual feedback for selected words with blue highlighting
@@ -12,6 +13,7 @@
 	import { type Keyboard, type Dialect } from '$lib/types/index';
 	import { updateKeyboardStyle } from '$lib/helpers/update-keyboard-style';
 	import { hue, theme } from '$lib/store/store';
+	import { userPreferences, togglePreference } from '$lib/stores/userPreferences';
 	import { getBrowserInfo } from '$lib/helpers/get-browser-info';
 	import KeyboardDocumentation from '$lib/components/KeyboardDocumentation.svelte';
 	import Modal from '$lib/components/Modal.svelte';
@@ -43,6 +45,10 @@
 		correct: boolean;
 	};
 
+	// Practice Mode State - defaults to reorder (beginner-friendly)
+	type PracticeMode = 'typing' | 'reorder';
+	let practiceMode = $state<PracticeMode>('reorder');
+
 	let attempt: Attempt[] = $state([]);
 	let attemptTemp: Attempt[] = $state([]);
 	let keyboard = $state<'virtual' | 'physical'>('virtual');
@@ -51,9 +57,30 @@
 	const isMobile = () => typeof window !== 'undefined' && window.innerWidth < 768;
 	let isCorrect = $state(false);
 	let isInfoModalOpen = $state(false);
-	let showHint = $state(false);
-	let showAnswer = $state(false);
+	// Display preferences - synced with user preferences store
+	let showHint = $state(false);  // Transliteration
+	let showAnswer = $state(false);  // Arabic answer
 	let isDefinitionModalOpen = $state(false);
+	
+	// Initialize from user preferences
+	$effect(() => {
+		const unsubscribe = userPreferences.subscribe(prefs => {
+			showHint = prefs.showTransliteration;
+			showAnswer = prefs.showArabic;
+		});
+		return unsubscribe;
+	});
+	
+	// Toggle handlers that persist preferences
+	async function handleToggleHint() {
+		showHint = !showHint;
+		await togglePreference('showTransliteration');
+	}
+	
+	async function handleToggleAnswer() {
+		showAnswer = !showAnswer;
+		await togglePreference('showArabic');
+	}
 	let isLoadingDefinition = $state(false);
 	let definition = $state('');
 	let targetWord = $state('');
@@ -65,6 +92,35 @@
 	let comparisonData = $state<DialectComparisonSchema | null>(null);
 	let isComparing = $state(false);
 	let comparisonError = $state<string | null>(null);
+	
+	// Sentence Reordering Mode State
+	let shuffledArabicWords = $state<string[]>([]);
+	let selectedReorderWords = $state<string[]>([]);
+	let reorderChecked = $state(false);
+	let reorderCorrect = $state(false);
+	
+	// Shuffle array utility function
+	function shuffleArray<T>(array: T[]): T[] {
+		const _arr = [...array];
+		for (let i = _arr.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[_arr[i], _arr[j]] = [_arr[j], _arr[i]];
+		}
+		return _arr;
+	}
+	
+	// Initialize shuffled words for reordering mode
+	function initializeShuffledWords() {
+		const words = sentence.arabic.split(' ').filter(w => w.trim());
+		// Keep shuffling until order is different from original (if more than 1 word)
+		let shuffled = shuffleArray(words);
+		if (words.length > 1) {
+			while (shuffled.join(' ') === words.join(' ')) {
+				shuffled = shuffleArray(words);
+			}
+		}
+		shuffledArabicWords = shuffled;
+	}
 
 	async function compareDialects() {
 		isComparing = true;
@@ -373,6 +429,72 @@
 	function toggleKeyboard() {
 		keyboard = keyboard === 'virtual' ? 'physical' : 'virtual';
 	}
+
+	// Sentence Reordering Mode Functions
+	function handleReorderWordClick(word: string, index: number) {
+		if (reorderChecked) return;
+		
+		// Add word to selected order
+		selectedReorderWords = [...selectedReorderWords, word];
+		
+		// Remove from shuffled list
+		shuffledArabicWords = shuffledArabicWords.filter((_, i) => i !== index);
+	}
+	
+	function removeLastReorderWord() {
+		if (selectedReorderWords.length === 0 || reorderChecked) return;
+		
+		const lastWord = selectedReorderWords[selectedReorderWords.length - 1];
+		selectedReorderWords = selectedReorderWords.slice(0, -1);
+		shuffledArabicWords = [...shuffledArabicWords, lastWord];
+	}
+	
+	function clearReorderSelection() {
+		if (reorderChecked) return;
+		initializeShuffledWords();
+		selectedReorderWords = [];
+	}
+	
+	function checkReorderAnswer() {
+		const userAnswer = selectedReorderWords.join(' ');
+		const correctAnswer = sentence.arabic;
+		
+		// Use normalization for comparison
+		const normalizedUser = normalizeArabicText(userAnswer);
+		const normalizedCorrect = normalizeArabicText(correctAnswer);
+		
+		reorderCorrect = normalizedUser === normalizedCorrect;
+		reorderChecked = true;
+		isCorrect = reorderCorrect;
+	}
+	
+	function resetReorder() {
+		initializeShuffledWords();
+		selectedReorderWords = [];
+		reorderChecked = false;
+		reorderCorrect = false;
+		isCorrect = false;
+	}
+	
+	// Reset mode-specific state when mode changes
+	function handleModeChange(newMode: PracticeMode) {
+		practiceMode = newMode;
+		isCorrect = false;
+		
+		// Reset typing mode state
+		attemptTemp = [];
+		attempt = [];
+		keyboardValue = '';
+		
+		// Reset reorder mode state
+		if (newMode === 'reorder') {
+			initializeShuffledWords();
+		}
+		selectedReorderWords = [];
+		reorderChecked = false;
+		reorderCorrect = false;
+	}
+
 	$effect(() => {
 		hue.subscribe(() => {
 			// Update all keyboards when hue changes
@@ -405,6 +527,12 @@
 			isSelecting = false;
 			selectionStartIndex = -1;
 			selectionEndIndex = -1;
+			
+			// Reset sentence reordering state
+			initializeShuffledWords();
+			selectedReorderWords = [];
+			reorderChecked = false;
+			reorderCorrect = false;
 
 			if (typeof document !== 'undefined') {
 				// Find the keyboard element within this component's container
@@ -432,9 +560,11 @@
 	// Update keyboard element reference when keyboard type changes or container is ready
 	$effect(() => {
 		if (keyboardContainer && keyboard === 'virtual') {
+			// Capture the container reference for the setTimeout closure
+			const container = keyboardContainer;
 			// Use setTimeout to ensure DOM is updated
 			setTimeout(() => {
-				keyboardElement = keyboardContainer.querySelector('arabic-keyboard') as Keyboard | null;
+				keyboardElement = container.querySelector('arabic-keyboard') as Keyboard | null;
 				if (keyboardElement) {
 					updateKeyboardStyle(keyboardElement);
 				}
@@ -470,27 +600,71 @@
 
 {#if sentence}
 	{#if isCorrect}
-		<div class="mb-4 bg-green-100 py-3 px-4 text-center border-2 border-green-100">
-			<p class="text-lg font-bold text-text-300">{sentence.arabic} is Correct</p>
+		<div class="mb-4 bg-green-100 py-3 px-4 text-center border-2 border-green-100 rounded-lg">
+			<p class="text-lg font-bold text-text-300">
+				{#if practiceMode === 'typing'}
+					{sentence.arabic} is Correct!
+				{:else}
+					Sentence arranged correctly!
+				{/if}
+			</p>
 		</div>
 	{/if}
 	
 	<InfoDisclaimer></InfoDisclaimer>
 	
-	<!-- Multi-word selection instructions -->
+	<!-- Practice Mode Selector -->
+	<div class="mb-6 p-4 bg-tile-400 rounded-xl border border-tile-500">
+		<p class="text-sm font-semibold text-text-200 mb-3 text-center">Choose Practice Mode</p>
+		<div class="flex flex-wrap justify-center gap-2">
+			<button
+				onclick={() => handleModeChange('typing')}
+				class={cn(
+					"flex items-center gap-2 px-4 py-2.5 rounded-lg font-semibold transition-all duration-200 border-2",
+					practiceMode === 'typing' 
+						? "bg-emerald-600 text-white border-emerald-500 shadow-lg" 
+						: "bg-tile-300 text-text-300 border-tile-500 hover:bg-tile-500 hover:border-tile-600"
+				)}
+			>
+				<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+				</svg>
+				<span>Typing</span>
+			</button>
+			<button
+				onclick={() => handleModeChange('reorder')}
+				class={cn(
+					"flex items-center gap-2 px-4 py-2.5 rounded-lg font-semibold transition-all duration-200 border-2",
+					practiceMode === 'reorder' 
+						? "bg-violet-600 text-white border-violet-500 shadow-lg" 
+						: "bg-tile-300 text-text-300 border-tile-500 hover:bg-tile-500 hover:border-tile-600"
+				)}
+			>
+				<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+				</svg>
+				<span>Sentence Reorder</span>
+			</button>
+		</div>
+	</div>
+	
+	<!-- Multi-word selection instructions (only for typing mode) -->
+	{#if practiceMode === 'typing'}
 	<div class="mb-4 p-3 bg-tile-400 border-l-4 border-tile-500 rounded-r hover:bg-tile-500 transition-colors duration-300">
 		<p class="text-sm text-text-300">
 			<strong>💡 Tip:</strong> Click individual words for definitions, or 
 			<strong>click and drag across multiple words</strong> to select a phrase and get its definition!
 		</p>
 	</div>
+	{/if}
 	
 	<div class="flex flex-wrap items-center justify-center gap-2 mb-6 p-3 bg-tile-400 rounded-xl border border-tile-500">
 		<!-- Toggle buttons group -->
 		<div class="flex gap-1.5">
 			<button 
-				onclick={() => (showHint = !showHint)} 
+				onclick={handleToggleHint} 
 				class="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold rounded-lg transition-all duration-200 {showHint ? 'bg-amber-600 text-white shadow-md' : 'bg-tile-500 text-text-300 hover:bg-tile-600 border border-tile-600'}"
+				title="Your preference will be saved"
 			>
 				<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
@@ -498,8 +672,9 @@
 				<span>{showHint ? 'Hide' : 'Show'} Hint</span>
 			</button>
 			<button 
-				onclick={() => (showAnswer = !showAnswer)} 
+				onclick={handleToggleAnswer} 
 				class="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold rounded-lg transition-all duration-200 {showAnswer ? 'bg-amber-600 text-white shadow-md' : 'bg-tile-500 text-text-300 hover:bg-tile-600 border border-tile-600'}"
+				title="Your preference will be saved"
 			>
 				<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
@@ -560,6 +735,8 @@
 		</button>
 	</div>
 	
+	<!-- ==================== TYPING MODE ==================== -->
+	{#if practiceMode === 'typing'}
 	<div class="text-center mb-6">
 		<div class="flex flex-col items-center justify-center gap-3">
 			<!-- Selection controls -->
@@ -580,6 +757,7 @@
 				</div>
 			{/if}
 			
+				<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 			<div 
 				class="flex w-fit flex-row flex-wrap text-3xl sm:text-4xl font-bold text-text-300 select-none"
 				onmouseup={handleWordMouseUp}
@@ -681,4 +859,116 @@
 			})}
 		></textarea>
 	</div>
+	{/if}
+	
+	<!-- ==================== SENTENCE REORDERING MODE ==================== -->
+	{#if practiceMode === 'reorder'}
+		<div class="mb-6">
+			<!-- English sentence display -->
+			<div class="text-center mb-6">
+				<h3 class="text-2xl sm:text-3xl font-bold text-text-300 mb-2">{sentence.english}</h3>
+				{#if showHint}
+					<p class="text-lg text-text-200">({sentence.transliteration})</p>
+				{/if}
+				{#if showAnswer}
+					<p class="text-xl text-text-300" dir="rtl">({sentence.arabic})</p>
+				{/if}
+			</div>
+			
+			<!-- Instructions -->
+			<div class="mb-4 p-3 bg-tile-400 border-l-4 border-violet-500 rounded-r">
+				<p class="text-sm text-text-300">
+					<strong>Instructions:</strong> Click the Arabic words in the correct order to form the sentence. 
+					Use the hints if you need help!
+				</p>
+			</div>
+			
+			<!-- Your answer area -->
+			<div class="mb-4 p-4 bg-tile-300 rounded-xl border-2 border-tile-500 min-h-[80px]">
+				<h4 class="text-sm font-bold text-text-200 mb-3">Your Answer:</h4>
+				{#if selectedReorderWords.length > 0}
+					<div class="flex flex-wrap gap-2 justify-center" dir="rtl">
+						{#each selectedReorderWords as word, index}
+							<span 
+								class={cn(
+									"px-4 py-2.5 text-xl font-semibold rounded-lg border-2",
+									reorderChecked 
+										? (reorderCorrect ? "bg-green-100 border-green-400 text-green-800" : "bg-red-100 border-red-400 text-red-800")
+										: "bg-violet-100 border-violet-400 text-violet-800"
+								)}
+							>
+								{word}
+							</span>
+						{/each}
+					</div>
+				{:else}
+					<p class="text-text-200 text-center italic">Click words below to build your sentence...</p>
+				{/if}
+			</div>
+			
+			<!-- Action buttons -->
+			{#if !reorderChecked}
+				<div class="flex justify-center gap-3 mb-4">
+					<button
+						onclick={removeLastReorderWord}
+						disabled={selectedReorderWords.length === 0}
+						class="px-4 py-2 bg-tile-500 text-text-300 font-semibold rounded-lg hover:bg-tile-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+					>
+						← Undo Last
+					</button>
+					<button
+						onclick={clearReorderSelection}
+						disabled={selectedReorderWords.length === 0}
+						class="px-4 py-2 bg-tile-500 text-text-300 font-semibold rounded-lg hover:bg-tile-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+					>
+						Clear All
+					</button>
+					<button
+						onclick={checkReorderAnswer}
+						disabled={shuffledArabicWords.length > 0}
+						class="px-6 py-2 bg-violet-600 text-white font-semibold rounded-lg hover:bg-violet-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+					>
+						Check Answer
+					</button>
+				</div>
+			{/if}
+			
+			<!-- Available words -->
+			{#if !reorderChecked && shuffledArabicWords.length > 0}
+				<div class="p-4 bg-tile-300 rounded-xl border border-tile-500">
+					<h4 class="text-sm font-bold text-text-200 mb-3">Available Words (Click to add):</h4>
+					<div class="flex flex-wrap gap-2 justify-center" dir="rtl">
+						{#each shuffledArabicWords as word, index}
+							<button
+								onclick={() => handleReorderWordClick(word, index)}
+								class="px-4 py-2.5 text-xl font-semibold bg-tile-400 border-2 border-tile-500 text-text-300 rounded-lg hover:bg-violet-100 hover:border-violet-400 hover:text-violet-800 transition-all duration-200"
+							>
+								{word}
+							</button>
+						{/each}
+					</div>
+				</div>
+			{/if}
+			
+			<!-- Results -->
+			{#if reorderChecked}
+				<div class="mt-4 p-4 rounded-xl border-2 {reorderCorrect ? 'bg-green-50 border-green-300' : 'bg-red-50 border-red-300'}">
+					{#if reorderCorrect}
+						<p class="text-lg font-bold text-green-700">🎉 Perfect! You arranged the sentence correctly!</p>
+					{:else}
+						<p class="text-lg font-bold text-red-700 mb-2">❌ Not quite right. Here's the correct order:</p>
+						<p class="text-xl font-semibold text-text-300" dir="rtl">{sentence.arabic}</p>
+					{/if}
+				</div>
+				<div class="mt-4 text-center">
+					<button
+						onclick={resetReorder}
+						class="px-6 py-2.5 bg-violet-600 text-white font-semibold rounded-lg hover:bg-violet-700 transition-colors"
+					>
+						Try Again
+					</button>
+				</div>
+			{/if}
+		</div>
+	{/if}
 {/if}
