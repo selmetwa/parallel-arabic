@@ -157,7 +157,6 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-      <!-- Hidden - Videos features not ready yet
       <Card
         href="/videos-new"
         icon="🎬"
@@ -171,7 +170,6 @@
         title="Videos"
         description="Watch authentic content with interactive transcripts and dialect-specific translations."
       />
-      -->
 
       <Card
         href="/tutor"

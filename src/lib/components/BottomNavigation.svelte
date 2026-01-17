@@ -25,7 +25,7 @@
       label: 'Explore',
       href: '/stories',
       icon: '📖',
-      paths: ['/stories', '/tutor'] // '/videos' hidden - not ready yet
+      paths: ['/stories', '/videos', '/videos-new', '/tutor']
     },
     {
       label: 'Profile',
