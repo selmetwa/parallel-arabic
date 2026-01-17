@@ -212,7 +212,7 @@ export const POST = async ({ request }) => {
         console.log('[Lesson Generator] Calling Gemini API with structured output...');
         
         const response = await generateContentWithRetry(ai, {
-            model: "gemini-2.5-flash",
+            model: "gemini-3-flash-preview",
             contents: prompt,
             // @ts-expect-error - generationConfig is valid but types may be outdated
             generationConfig: {
