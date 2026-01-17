@@ -17,6 +17,11 @@
   let proficiencyLevel = $state('');
   let isSubmitting = $state(false);
   let error = $state('');
+  
+  // Display preferences
+  let showArabic = $state(true);
+  let showTransliteration = $state(true);
+  let showEnglish = $state(true);
 
   const dialects = [
     { id: 'egyptian-arabic', label: 'Egyptian', emoji: '🇪🇬', description: 'The most widely understood Arabic dialect, spoken by over 100 million people' },
@@ -53,6 +58,7 @@
     if (step === 1 && !targetDialect) return;
     if (step === 2 && !learningReason) return;
     if (step === 3 && !proficiencyLevel) return;
+    // Step 4 (display preferences) can always proceed
     step += 1;
   }
 
@@ -71,10 +77,10 @@
     setTimeout(() => nextStep(), 300);
   }
 
-  async function selectLevel(id: string) {
+  function selectLevel(id: string) {
     proficiencyLevel = id;
-    // Auto-submit and redirect after selection
-    setTimeout(() => handleSubmit(), 300);
+    // Proceed to display preferences step
+    setTimeout(() => nextStep(), 300);
   }
 
   async function handleSubmit() {
@@ -98,7 +104,10 @@
         body: JSON.stringify({
           target_dialect: targetDialect,
           learning_reason: learningReason,
-          proficiency_level: proficiencyLevel
+          proficiency_level: proficiencyLevel,
+          show_arabic: showArabic,
+          show_transliteration: showTransliteration,
+          show_english: showEnglish
         })
       });
 
@@ -257,7 +266,7 @@
       <div class="h-2 bg-tile-500 w-full">
         <div 
           class="h-full bg-text-300 transition-all duration-500 ease-out"
-          style="width: {((step + 1) / 4) * 100}%"
+          style="width: {((step + 1) / 5) * 100}%"
         ></div>
       </div>
 
@@ -362,6 +371,87 @@
             </div>
           {/if}
 
+          <!-- Step 4: Display Preferences -->
+          {#if step === 4}
+            <div class="flex flex-col gap-8" in:fade={{ duration: 300 }}>
+              <div class="text-center mb-6">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-300 mb-4">Customize Your Learning View</h2>
+                <p class="text-text-200 text-xl sm:text-2xl">Choose what to show when learning. You can change these anytime!</p>
+              </div>
+              
+              <!-- Preview Card -->
+              <div class="max-w-2xl mx-auto w-full p-6 bg-tile-400 rounded-xl border-2 border-tile-600">
+                <p class="text-sm text-text-200 mb-4 text-center">Preview</p>
+                <div class="text-center space-y-3">
+                  {#if showEnglish}
+                    <p class="text-2xl sm:text-3xl text-text-300 font-bold transition-all duration-300">Hello, how are you?</p>
+                  {/if}
+                  {#if showTransliteration}
+                    <p class="text-lg sm:text-xl text-text-200 italic transition-all duration-300">ahlan, izzayak?</p>
+                  {/if}
+                  {#if showArabic}
+                    <p class="text-2xl sm:text-3xl text-text-300 font-bold font-arabic transition-all duration-300" dir="rtl">أهلاً، إزيك؟</p>
+                  {/if}
+                  {#if !showEnglish && !showTransliteration && !showArabic}
+                    <p class="text-lg text-text-200 italic">Select at least one option to see content</p>
+                  {/if}
+                </div>
+              </div>
+              
+              <!-- Toggle Options -->
+              <div class="max-w-2xl mx-auto w-full grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <button
+                  class="flex flex-col items-center gap-3 p-6 rounded-lg border-2 transition-all duration-200
+                    {showArabic 
+                      ? 'bg-tile-500 border-text-300 shadow-lg' 
+                      : 'bg-tile-400 border-tile-600 hover:bg-tile-500 hover:border-tile-500'}"
+                  onclick={() => showArabic = !showArabic}
+                >
+                  <span class="text-4xl">🔤</span>
+                  <span class="font-bold text-lg text-text-300">Arabic Text</span>
+                  <span class="text-sm text-text-200">Show Arabic script</span>
+                  <div class="w-12 h-6 rounded-full transition-colors duration-200 {showArabic ? 'bg-green-500' : 'bg-tile-600'}">
+                    <div class="w-5 h-5 mt-0.5 rounded-full bg-white shadow transition-transform duration-200 {showArabic ? 'translate-x-6' : 'translate-x-0.5'}"></div>
+                  </div>
+                </button>
+                
+                <button
+                  class="flex flex-col items-center gap-3 p-6 rounded-lg border-2 transition-all duration-200
+                    {showTransliteration 
+                      ? 'bg-tile-500 border-text-300 shadow-lg' 
+                      : 'bg-tile-400 border-tile-600 hover:bg-tile-500 hover:border-tile-500'}"
+                  onclick={() => showTransliteration = !showTransliteration}
+                >
+                  <span class="text-4xl">📝</span>
+                  <span class="font-bold text-lg text-text-300">Transliteration</span>
+                  <span class="text-sm text-text-200">Latin letters guide</span>
+                  <div class="w-12 h-6 rounded-full transition-colors duration-200 {showTransliteration ? 'bg-green-500' : 'bg-tile-600'}">
+                    <div class="w-5 h-5 mt-0.5 rounded-full bg-white shadow transition-transform duration-200 {showTransliteration ? 'translate-x-6' : 'translate-x-0.5'}"></div>
+                  </div>
+                </button>
+                
+                <button
+                  class="flex flex-col items-center gap-3 p-6 rounded-lg border-2 transition-all duration-200
+                    {showEnglish 
+                      ? 'bg-tile-500 border-text-300 shadow-lg' 
+                      : 'bg-tile-400 border-tile-600 hover:bg-tile-500 hover:border-tile-500'}"
+                  onclick={() => showEnglish = !showEnglish}
+                >
+                  <span class="text-4xl">🇬🇧</span>
+                  <span class="font-bold text-lg text-text-300">English</span>
+                  <span class="text-sm text-text-200">Show translation</span>
+                  <div class="w-12 h-6 rounded-full transition-colors duration-200 {showEnglish ? 'bg-green-500' : 'bg-tile-600'}">
+                    <div class="w-5 h-5 mt-0.5 rounded-full bg-white shadow transition-transform duration-200 {showEnglish ? 'translate-x-6' : 'translate-x-0.5'}"></div>
+                  </div>
+                </button>
+              </div>
+              
+              <p class="text-center text-text-200 text-sm">
+                💡 Tip: You can always change these settings later from any lesson page
+              </p>
+            </div>
+          {/if}
+
           <!-- Error Message -->
           {#if error}
             <div class="bg-tile-500 border-2 border-red-500 rounded-lg p-4 text-red-200 text-lg mt-6 max-w-2xl mx-auto">
@@ -371,7 +461,7 @@
 
           <!-- Navigation Buttons -->
           <div class="flex gap-4 mt-12 pt-8 border-t border-tile-600 max-w-2xl mx-auto w-full">
-            {#if step > 0 && step < 3}
+            {#if step > 0 && step < 4}
               <Button type="button" onClick={prevStep} className="!w-auto !px-8 !py-3 !text-lg">
                 Back
               </Button>
@@ -400,11 +490,24 @@
                 Next
               </Button>
             {:else if step === 3}
+              <!-- This step auto-advances after selection -->
+            {:else if step === 4}
+              <Button type="button" onClick={prevStep} className="!w-auto !px-8 !py-3 !text-lg bg-tile-500 hover:bg-tile-600 border-tile-600">
+                Back
+              </Button>
               {#if isSubmitting}
                 <div class="flex items-center gap-3 text-text-300">
                   <div class="w-5 h-5 border-2 border-text-300 border-t-transparent rounded-full animate-spin"></div>
                   <span class="text-lg">Saving...</span>
                 </div>
+              {:else}
+                <Button 
+                  type="button" 
+                  onClick={handleSubmit} 
+                  className="!w-auto !px-10 !py-3 !text-lg"
+                >
+                  Start Learning! 🚀
+                </Button>
               {/if}
             {/if}
           </div>

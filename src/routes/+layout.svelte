@@ -8,6 +8,7 @@
 	import BottomNavigation from '$lib/components/BottomNavigation.svelte';
   import { onMount } from 'svelte';
   import { theme, sidebarCollapsed } from '$lib/store/store';
+  import { initializePreferences } from '$lib/stores/userPreferences';
   import Button from '$lib/components/Button.svelte';
   import Footer from "$lib/components/Footer.svelte";
   import RadioButton from '$lib/components/RadioButton.svelte';
@@ -40,6 +41,11 @@
 		// Update showOnboarding when server data changes
 		// The server already checks: newSignup=true AND !onboarding_completed
 		showOnboarding = data.showOnboarding || false;
+	});
+	
+	$effect(() => {
+		// Initialize user preferences from server data
+		initializePreferences(data.user);
 	});
 
 	let root: HTMLElement | null;

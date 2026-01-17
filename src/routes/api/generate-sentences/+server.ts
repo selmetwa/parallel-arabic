@@ -342,7 +342,7 @@ IMPORTANT:
 3. Do NOT include any explanations or other text.`;
 
     const response = await generateContentWithRetry(ai, {
-      model: "gemini-2.5-flash",
+      model: "gemini-3-flash-preview",
       contents: enhancedQuestion,
       // @ts-expect-error - generationConfig is valid but types may be outdated
       generationConfig: {

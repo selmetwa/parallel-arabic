@@ -204,7 +204,7 @@
 						</div>
 						
 						<h3 class="text-2xl font-bold text-text-300 mb-3 group-hover:text-text-200 transition-colors leading-tight">
-							{value.story.title.english} / {value.story.title.arabic}
+							{value.story.title.english}
 						</h3>
 
 						<p class="text-text-200 text-base leading-relaxed opacity-90 group-hover:opacity-100 mb-4 line-clamp-3 flex-grow">
@@ -228,7 +228,7 @@
 						</div>
 						
 						<h3 class="text-2xl font-bold text-text-300 mb-3 group-hover:text-text-200 transition-colors leading-tight">
-							{value.story.title.english} / {value.story.title.arabic}
+							{value.story.title.english}
 						</h3>
 
 						<p class="text-text-200 text-base leading-relaxed opacity-90 group-hover:opacity-100 mb-4 line-clamp-3 flex-grow">

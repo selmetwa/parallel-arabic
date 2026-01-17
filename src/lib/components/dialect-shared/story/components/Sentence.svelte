@@ -448,7 +448,7 @@
 		{#if isArabic}
 			{#each words.reverse() as word, index}
 				<button
-					class={cn("transition-all rounded-lg px-3 py-2 text-5xl duration-300 cursor-pointer", {
+					class={cn("transition-all rounded-lg px-3 py-2 text-3xl md:text-5xl duration-300 cursor-pointer", {
 						"bg-blue-200 border-2 border-blue-400 shadow-md": isWordSelected(index),
 						"border-2 border-transparent hover:bg-tile-500 hover:border-tile-600 hover:shadow-md": !isWordSelected(index)
 					})}
@@ -473,7 +473,7 @@
 		{:else}
 			{#each words as word, index}
 				<button
-					class={cn("transition-all rounded-lg px-3 py-2 text-4xl duration-300 cursor-pointer", {
+					class={cn("transition-all rounded-lg px-3 py-2 text-2xl md:text-4xl duration-300 cursor-pointer", {
 						"bg-blue-200 border-2 border-blue-400 shadow-md": isWordSelected(index),
 						"border-2 border-transparent hover:bg-tile-500 hover:border-tile-600 hover:shadow-md": !isWordSelected(index)
 					})}

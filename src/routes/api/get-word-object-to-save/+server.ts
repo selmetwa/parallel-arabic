@@ -28,7 +28,7 @@ IMPORTANT:
 2. Do NOT wrap the response in markdown code blocks (no \`\`\`json ... \`\`\`).`;
 
     const response = await generateContentWithRetry(ai, {
-      model: "gemini-2.5-flash",
+      model: "gemini-3-flash-preview",
       contents: enhancedQuestion,
       generationConfig: {
         responseMimeType: 'application/json'

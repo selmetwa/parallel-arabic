@@ -327,19 +327,48 @@ function getJsonErrorContext(text: string, error: Error): string {
 }
 
 /**
+ * Sanitizes JSON by escaping control characters that break JSON.parse
+ * Handles literal newlines, tabs, carriage returns, and other control characters
+ */
+function sanitizeControlCharacters(text: string): string {
+	console.log('[JSON Sanitize] Sanitizing control characters...');
+
+	// Replace literal control characters with their escaped equivalents
+	// We need to be careful to only replace these inside quoted strings, not in the JSON structure itself
+	let sanitized = text;
+
+	// Replace literal newlines with \n (but only in string values)
+	// This regex finds quoted strings and replaces newlines within them
+	sanitized = sanitized.replace(/"([^"\\]*(\\.[^"\\]*)*)"/g, (match) => {
+		return match
+			.replace(/\n/g, '\\n')
+			.replace(/\r/g, '\\r')
+			.replace(/\t/g, '\\t')
+			// Remove or escape other control characters (0x00-0x1F except those above)
+			.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '');
+	});
+
+	console.log('[JSON Sanitize] Control characters sanitized');
+	return sanitized;
+}
+
+/**
  * Attempts to repair common JSON formatting issues
- * Handles: trailing commas, unescaped newlines, etc.
+ * Handles: trailing commas, unescaped newlines, control characters, etc.
  */
 function attemptJsonRepair(text: string): string {
 	console.log('[JSON Repair] Attempting to repair JSON...');
 	let repaired = text;
-	
+
+	// First, sanitize control characters
+	repaired = sanitizeControlCharacters(repaired);
+
 	// Remove trailing commas before closing braces/brackets
 	// This is a common issue with LLM-generated JSON
 	repaired = repaired.replace(/,(\s*[}\]])/g, '$1');
-	
+
 	console.log('[JSON Repair] Removed trailing commas');
-	
+
 	return repaired;
 }
 
@@ -402,7 +431,9 @@ export function parseJsonFromGeminiResponse<T = unknown>(
 	// Strategy 2: Standard approach - direct JSON.parse + zodSchema.parse
 	console.log('[Gemini JSON Parser] Attempting JSON.parse...');
 	try {
-		const parsed = JSON.parse(textToParse);
+		// Sanitize control characters before parsing
+		const sanitized = sanitizeControlCharacters(textToParse);
+		const parsed = JSON.parse(sanitized);
 		console.log('[Gemini JSON Parser] Parse successful, validating with Zod...');
 		console.log('[Gemini JSON Parser] Parsed type:', Array.isArray(parsed) ? 'array' : typeof parsed);
 		
