@@ -3,7 +3,7 @@ import { getLessonById } from '$lib/helpers/lesson-helpers';
 import { trackActivitySimple } from '$lib/helpers/track-activity';
 import type { PageServerLoad } from './$types';
 
-export const load: PageServerLoad = async ({ params, parent, locals }) => {
+export const load: PageServerLoad = async ({ params, parent, locals, setHeaders }) => {
 	const { session, user } = await parent();
 	const lessonId = params.id;
 
@@ -44,6 +44,12 @@ export const load: PageServerLoad = async ({ params, parent, locals }) => {
 		'fusha': 'Modern Standard Arabic',
 		'levantine': 'Levantine Arabic',
 	};
+
+	// Set cache headers - lesson content rarely changes
+	// Cache for 30 min in browser, 2 hours on CDN
+	setHeaders({
+		'Cache-Control': 'public, max-age=1800, s-maxage=7200, stale-while-revalidate=3600'
+	});
 
 	return {
 		lessonId,

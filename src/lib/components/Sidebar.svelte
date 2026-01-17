@@ -68,7 +68,8 @@
       {
         title: 'Explore',
         items: [
-          // { label: 'Videos', href: '/videos', icon: '📺' }, // Hidden - not ready yet
+          { label: 'Videos', href: '/videos', icon: '📺' },
+          { label: 'Shorts', href: '/videos-new', icon: '🎬' },
           { label: 'Tutor', href: '/tutor', icon: '💬' }
         ]
       },

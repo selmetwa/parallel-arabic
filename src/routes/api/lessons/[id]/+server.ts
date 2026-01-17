@@ -1,7 +1,7 @@
 import { json } from '@sveltejs/kit';
 import { loadLesson } from '$lib/helpers/lesson-file-helper';
 
-export const GET = async ({ params, url }) => {
+export const GET = async ({ params, url, setHeaders }) => {
     const { id } = params;
     let dialect = url.searchParams.get('dialect') || undefined;
     
@@ -32,6 +32,12 @@ export const GET = async ({ params, url }) => {
         if (dialect === 'alphabet' || dialect === 'grammar') {
             lesson = { ...lesson, dialect: dialect };
         }
+
+        // Set cache headers - lessons rarely change
+        // Cache for 1 hour in browser, 24 hours on CDN, stale-while-revalidate for 1 day
+        setHeaders({
+            'Cache-Control': 'public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400'
+        });
 
         return json(lesson);
     } catch (error) {

@@ -1,11 +1,20 @@
 import { supabase } from '$lib/supabaseClient';
 import { downloadLessonFromStorage } from './storage-helpers';
+import { getCached, setCached, CACHE_KEYS, CACHE_TTL } from '$lib/server/redis';
 
 /**
  * Get a lesson by ID with full JSON content from storage
+ * Uses Redis caching for improved performance
  */
 export async function getLessonById(lessonId: string): Promise<{ success: boolean; lesson?: object; error?: string }> {
 	try {
+		// Check Redis cache first
+		const cacheKey = CACHE_KEYS.LESSON_SINGLE(lessonId);
+		const cached = await getCached<object>(cacheKey);
+		if (cached) {
+			return { success: true, lesson: cached };
+		}
+
 		// First, get the lesson metadata from database
 		const { data: lessonMetadata, error: dbError } = await supabase
 			.from('generated_lesson')
@@ -31,6 +40,9 @@ export async function getLessonById(lessonId: string): Promise<{ success: boolea
 			...lessonMetadata,
 			lesson_body: storageResult.data // Replace file key with actual JSON content
 		};
+
+		// Cache the result
+		await setCached(cacheKey, fullLesson, CACHE_TTL.LESSON_SINGLE);
 
 		return { success: true, lesson: fullLesson };
 	} catch (error) {
@@ -90,9 +102,20 @@ export async function getLessonsByUser(userId: string): Promise<{ success: boole
 
 /**
  * Get all lessons from all dialects with full JSON content from storage
+ * Uses Redis caching for improved performance
  */
 export async function getAllLessons(limit?: number): Promise<{ success: boolean; lessons?: object[]; error?: string }> {
 	try {
+		// Only cache if no limit (full list)
+		const cacheKey = limit ? null : CACHE_KEYS.LESSONS_ALL;
+		
+		if (cacheKey) {
+			const cached = await getCached<object[]>(cacheKey);
+			if (cached) {
+				return { success: true, lessons: cached };
+			}
+		}
+
 		let query = supabase
 			.from('generated_lesson')
 			.select('*')
@@ -140,6 +163,11 @@ export async function getAllLessons(limit?: number): Promise<{ success: boolean;
 			})
 		);
 
+		// Cache the result (only if no limit)
+		if (cacheKey) {
+			await setCached(cacheKey, lessonsWithContent, CACHE_TTL.LESSONS_ALL);
+		}
+
 		return { success: true, lessons: lessonsWithContent };
 	} catch (error) {
 		return { success: false, error: (error as Error).message };
@@ -148,9 +176,20 @@ export async function getAllLessons(limit?: number): Promise<{ success: boolean;
 
 /**
  * Get lessons by dialect with full JSON content from storage
+ * Uses Redis caching for improved performance
  */
 export async function getLessonsByDialect(dialect: string, limit?: number): Promise<{ success: boolean; lessons?: object[]; error?: string }> {
 	try {
+		// Only cache if no limit (full list for dialect)
+		const cacheKey = limit ? null : CACHE_KEYS.LESSONS_DIALECT(dialect);
+		
+		if (cacheKey) {
+			const cached = await getCached<object[]>(cacheKey);
+			if (cached) {
+				return { success: true, lessons: cached };
+			}
+		}
+
 		let query = supabase
 			.from('generated_lesson')
 			.select('*')
@@ -198,6 +237,11 @@ export async function getLessonsByDialect(dialect: string, limit?: number): Prom
 				};
 			})
 		);
+
+		// Cache the result (only if no limit)
+		if (cacheKey) {
+			await setCached(cacheKey, lessonsWithContent, CACHE_TTL.LESSONS_DIALECT);
+		}
 
 		console.log(`✅ Retrieved ${lessonsWithContent.length} ${dialect} lessons`);
 		return { success: true, lessons: lessonsWithContent };

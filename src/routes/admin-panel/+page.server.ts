@@ -51,11 +51,13 @@ export const load: PageServerLoad = async ({ locals }) => {
       total_stories_viewed,
       total_lessons_viewed,
       total_saved_words,
+      total_shorts_viewed,
       reviews_this_week,
       sentences_viewed_this_week,
       stories_viewed_this_week,
       lessons_viewed_this_week,
-      saved_words_this_week
+      saved_words_this_week,
+      shorts_viewed_this_week
     `);
 
   if (usersError) {

@@ -1,7 +1,7 @@
 import { stories } from '$lib/constants/stories/index';
 import { trackActivitySimple } from '$lib/helpers/track-activity';
 
-export const load = async ({ params, parent, locals }) => {
+export const load = async ({ params, parent, locals, setHeaders }) => {
   // Get subscription status from layout (no DB query needed!)
   const { isSubscribed, user } = await parent();
   
@@ -11,6 +11,12 @@ export const load = async ({ params, parent, locals }) => {
       console.error('Error tracking story view:', err);
     });
   }
+
+  // Set cache headers - these hardcoded stories never change
+  // Cache for 1 hour in browser, 24 hours on CDN
+  setHeaders({
+    'Cache-Control': 'public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400'
+  });
   
   return {
     isPaywalled: stories[params.story].isPaywalled,
