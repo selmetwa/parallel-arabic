@@ -13,6 +13,7 @@ import { saveUploadedAudioFile } from '$lib/utils/audio-utils';
 import { uploadStoryToStorage } from '$lib/helpers/storage-helpers';
 import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
 import { createStorySchema, createSentenceSegmentationSchema } from '$lib/utils/gemini-schemas';
+import { invalidateStoryCaches } from '$lib/server/redis';
 
 interface GenerationData {
 	description: string;
@@ -280,6 +281,9 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 
 			// Note: We don't generate audio for transcription mode since we already have the original audio
 			// The original audio file would need to be saved separately for playback
+
+			// Invalidate Redis cache for stories
+			await invalidateStoryCaches(storyId, dialect);
 
 			return json({ storyId: storyId });
 		} catch (e) {
@@ -732,6 +736,9 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 				// Don't fail the story creation if audio generation fails
 				console.warn('Audio generation error (continuing):', audioError);
 			}
+
+			// Invalidate Redis cache for stories
+			await invalidateStoryCaches(storyId, dialect);
 
 			return json({ storyId: storyId });
 		} catch (e) {

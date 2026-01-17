@@ -8,6 +8,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { generateContentWithRetry } from '$lib/utils/gemini-api-retry';
 import { supabase } from '$lib/supabaseClient';
 import { uploadLessonToStorage } from '$lib/helpers/storage-helpers';
+import { invalidateLessonCaches } from '$lib/server/redis';
 import fs from 'fs';
 import path from 'path';
 
@@ -790,6 +791,9 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 					error: saveError instanceof Error ? saveError.message : String(saveError)
 				});
 			}
+
+			// Invalidate Redis cache for lessons
+			await invalidateLessonCaches(lessonId, dialect);
 
 			// Return the lesson ID (client can fetch full lesson from database)
 			return json({ 

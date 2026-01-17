@@ -22,11 +22,13 @@
 		total_stories_viewed?: number | null;
 		total_lessons_viewed?: number | null;
 		total_saved_words?: number | null;
+		total_shorts_viewed?: number | null;
 		reviews_this_week?: number | null;
 		sentences_viewed_this_week?: number | null;
 		stories_viewed_this_week?: number | null;
 		lessons_viewed_this_week?: number | null;
 		saved_words_this_week?: number | null;
+		shorts_viewed_this_week?: number | null;
 	};
 
 	// Calculate engagement metrics
@@ -66,11 +68,12 @@
 		totalReviews: users.reduce((sum, u) => sum + (u.total_reviews || 0), 0),
 		totalStories: users.reduce((sum, u) => sum + (u.total_stories_viewed || 0), 0),
 		totalLessons: users.reduce((sum, u) => sum + (u.total_lessons_viewed || 0), 0),
+		totalShorts: users.reduce((sum, u) => sum + (u.total_shorts_viewed || 0), 0),
 		activeStreaks: users.filter(u => (u.current_streak || 0) > 0).length,
 		avgStreak: users.length > 0 
 			? (users.reduce((sum, u) => sum + (u.current_streak || 0), 0) / users.length).toFixed(1)
 			: '0',
-		weeklyActivity: users.reduce((sum, u) => sum + (u.reviews_this_week || 0) + (u.lessons_viewed_this_week || 0) + (u.stories_viewed_this_week || 0), 0)
+		weeklyActivity: users.reduce((sum, u) => sum + (u.reviews_this_week || 0) + (u.lessons_viewed_this_week || 0) + (u.stories_viewed_this_week || 0) + (u.shorts_viewed_this_week || 0), 0)
 	};
 
 	const subscriptionRate = ((stats.subscribers / stats.totalUsers) * 100).toFixed(1);
@@ -164,6 +167,19 @@
 				</div>
 				<div class="w-12 h-12 bg-tile-500 rounded-lg flex items-center justify-center">
 					<span class="text-2xl">🎓</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="bg-tile-300 border-2 border-tile-600 p-6 rounded-lg">
+			<div class="flex items-center justify-between">
+				<div>
+					<p class="text-text-200 text-sm font-medium">Total Shorts</p>
+					<p class="text-3xl font-bold text-text-300">{stats.totalShorts.toLocaleString()}</p>
+					<p class="text-text-200 text-xs">Watched</p>
+				</div>
+				<div class="w-12 h-12 bg-tile-500 rounded-lg flex items-center justify-center">
+					<span class="text-2xl">🎬</span>
 				</div>
 			</div>
 		</div>
@@ -341,6 +357,7 @@
 						<th class="px-4 py-3 text-right text-sm font-medium text-text-300">Reviews</th>
 						<th class="px-4 py-3 text-right text-sm font-medium text-text-300">Stories</th>
 						<th class="px-4 py-3 text-right text-sm font-medium text-text-300">Lessons</th>
+						<th class="px-4 py-3 text-right text-sm font-medium text-text-300">Shorts</th>
 						<th class="px-4 py-3 text-right text-sm font-medium text-text-300">Saved Words</th>
 						<th class="px-4 py-3 text-left text-sm font-medium text-text-300">Auth</th>
 						<th class="px-4 py-3 text-left text-sm font-medium text-text-300">Subscription End</th>
@@ -372,6 +389,9 @@
 								{typedUser.total_lessons_viewed ?? 0}
 							</td>
 							<td class="px-4 py-3 text-right text-sm text-text-300 font-medium">
+								{typedUser.total_shorts_viewed ?? 0}
+							</td>
+							<td class="px-4 py-3 text-right text-sm text-text-300 font-medium">
 								{typedUser.savedWords.length ?? 0}
 							</td>
 							<td class="px-4 py-3 text-sm text-text-300">
@@ -390,7 +410,7 @@
 					{/each}
 					{#if subscribers.length === 0}
 						<tr>
-							<td colspan="8" class="px-4 py-8 text-center text-text-200">
+							<td colspan="9" class="px-4 py-8 text-center text-text-200">
 								No active subscribers yet
 							</td>
 						</tr>
@@ -417,6 +437,7 @@
 						<th class="px-4 py-3 text-right text-sm font-medium text-text-300">Reviews</th>
 						<th class="px-4 py-3 text-right text-sm font-medium text-text-300">Stories</th>
 						<th class="px-4 py-3 text-right text-sm font-medium text-text-300">Lessons</th>
+						<th class="px-4 py-3 text-right text-sm font-medium text-text-300">Shorts</th>
 						<th class="px-4 py-3 text-right text-sm font-medium text-text-300">Saved Words</th>
 						<th class="px-4 py-3 text-left text-sm font-medium text-text-300">Auth</th>
 						<th class="px-4 py-3 text-left text-sm font-medium text-text-300">Subscription</th>
@@ -457,6 +478,9 @@
 							</td>
 							<td class="px-4 py-3 text-right text-sm text-text-300 font-medium">
 								{typedUser.total_lessons_viewed ?? 0}
+							</td>
+							<td class="px-4 py-3 text-right text-sm text-text-300 font-medium">
+								{typedUser.total_shorts_viewed ?? 0}
 							</td>
 							<td class="px-4 py-3 text-right text-sm text-text-300 font-medium">
 								{typedUser.savedWords.length ?? 0}

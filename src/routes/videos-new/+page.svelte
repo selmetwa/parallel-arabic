@@ -21,6 +21,17 @@
 	let viewTracked = $state<Set<string>>(new Set());
 	let viewTimer: ReturnType<typeof setTimeout> | null = null;
 
+	// Paywall state
+	let totalViewsInSession = $state(0);
+	let showPaywall = $state(data.hasReachedLimit || false);
+	const isSubscribed = data.isSubscribed;
+	const freeLimit = data.freeLimit;
+	
+	// Derived: remaining free views (accounting for session views)
+	let remainingFreeViews = $derived(
+		isSubscribed ? Infinity : Math.max(0, freeLimit - (data.totalShortsViewed + totalViewsInSession))
+	);
+
 	// Only Egyptian for now - more dialects coming soon
 	const dialectOptions = [
 		{ value: 'egyptian-arabic', label: 'Egyptian', emoji: '🇪🇬', color: 'bg-blue-600', available: true },
@@ -77,6 +88,9 @@
 			clearTimeout(viewTimer);
 		}
 		
+		// Don't start timer if paywall is shown
+		if (showPaywall) return;
+		
 		const currentShort = shorts[currentIndex];
 		if (!currentShort || viewTracked.has(currentShort.id)) return;
 		
@@ -87,11 +101,21 @@
 				
 				// Track the view
 				try {
-					await fetch('/api/track-short-view', {
+					const response = await fetch('/api/track-short-view', {
 						method: 'POST',
 						headers: { 'Content-Type': 'application/json' },
 						body: JSON.stringify({ count: 1 })
 					});
+					
+					const result = await response.json();
+					
+					// Update session view count
+					totalViewsInSession++;
+					
+					// Check if limit reached
+					if (!isSubscribed && result.limitReached) {
+						showPaywall = true;
+					}
 				} catch (err) {
 					console.error('Failed to track view:', err);
 				}
@@ -404,6 +428,90 @@
 			<span>Next</span>
 		</div>
 	</div>
+
+	<!-- Remaining views indicator (for free users) -->
+	{#if !isSubscribed && remainingFreeViews > 0 && remainingFreeViews <= 3}
+		<div class="absolute top-36 left-1/2 -translate-x-1/2 z-30">
+			<div class="bg-amber-500/90 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg flex items-center gap-2">
+				<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+					<path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+				</svg>
+				{remainingFreeViews} free {remainingFreeViews === 1 ? 'video' : 'videos'} left
+			</div>
+		</div>
+	{/if}
+
+	<!-- Paywall Modal -->
+	{#if showPaywall}
+		<div class="absolute inset-0 z-50 bg-black/95 backdrop-blur-sm flex items-center justify-center p-6">
+			<div class="max-w-md w-full bg-gradient-to-br from-tile-400 to-tile-500 rounded-2xl p-8 text-center border-2 border-tile-600 shadow-2xl">
+				<!-- Icon -->
+				<div class="w-20 h-20 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+					<svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+					</svg>
+				</div>
+				
+				<!-- Title -->
+				<h2 class="text-2xl font-bold text-text-300 mb-3">
+					You've Watched All Your Free Shorts!
+				</h2>
+				
+				<!-- Subtitle -->
+				<p class="text-text-200 mb-6">
+					You've watched <span class="font-bold text-amber-400">{freeLimit} shorts</span>. 
+					Subscribe to unlock unlimited access to Arabic learning content.
+				</p>
+				
+				<!-- Features list -->
+				<div class="bg-tile-300/50 rounded-lg p-4 mb-6 text-left">
+					<p class="text-sm font-semibold text-text-300 mb-3">With a subscription you get:</p>
+					<ul class="space-y-2 text-sm text-text-200">
+						<li class="flex items-center gap-2">
+							<svg class="w-5 h-5 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+							</svg>
+							Unlimited Arabic Shorts
+						</li>
+						<li class="flex items-center gap-2">
+							<svg class="w-5 h-5 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+							</svg>
+							AI-powered conversations
+						</li>
+						<li class="flex items-center gap-2">
+							<svg class="w-5 h-5 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+							</svg>
+							Unlimited lessons & stories
+						</li>
+						<li class="flex items-center gap-2">
+							<svg class="w-5 h-5 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+							</svg>
+							Progress tracking & analytics
+						</li>
+					</ul>
+				</div>
+				
+				<!-- CTA Buttons -->
+				<div class="space-y-3">
+					<a 
+						href="/pricing"
+						class="block w-full py-3 px-6 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold rounded-lg hover:from-amber-600 hover:to-orange-600 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+					>
+						View Subscription Plans
+					</a>
+					<a 
+						href="/"
+						class="block w-full py-3 px-6 bg-tile-600 text-text-200 font-medium rounded-lg hover:bg-tile-700 transition-all"
+					>
+						Back to Home
+					</a>
+				</div>
+			</div>
+		</div>
+	{/if}
 </div>
 
 <style>

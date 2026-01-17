@@ -1,7 +1,11 @@
 import { type GeneratedLesson } from '$lib/schemas/curriculum-schema';
 import { supabase } from '$lib/supabaseClient';
+import { getCached, setCached, deleteCached, deleteCachedByPattern } from '$lib/server/redis';
 
 const STRUCTURED_LESSONS_BUCKET = 'structured_lesson';
+
+// Cache TTL for structured lessons (these rarely change)
+const STRUCTURED_LESSON_TTL = 86400; // 24 hours
 
 /**
  * Normalizes dialect name for use in storage paths
@@ -14,6 +18,7 @@ function normalizeDialect(dialect: string): string {
 /**
  * Saves a generated lesson to Supabase storage.
  * File structure: {dialect}/{topicId}.json
+ * Invalidates relevant caches after saving.
  */
 export async function saveLesson(lesson: GeneratedLesson): Promise<void> {
     if (!lesson.dialect || !lesson.topicId) {
@@ -34,14 +39,33 @@ export async function saveLesson(lesson: GeneratedLesson): Promise<void> {
     if (error) {
         throw new Error(`Failed to save lesson to storage: ${error.message}`);
     }
+
+    // Invalidate caches for this lesson
+    await deleteCached(`structured_lesson:${normalizedDialect}:${lesson.topicId}`);
+    await deleteCached(`structured_lesson:any:${lesson.topicId}`);
+    await deleteCached('structured_lessons:existence_map');
 }
 
 /**
  * Loads a lesson by topic ID and optional dialect from Supabase storage.
  * If dialect is not provided, searches across all dialects.
  * Returns null if the file doesn't exist.
+ * Uses Redis caching for improved performance (24h TTL).
  */
 export async function loadLesson(topicId: string, dialect?: string): Promise<GeneratedLesson | null> {
+    // Create cache key
+    const cacheKey = dialect 
+        ? `structured_lesson:${normalizeDialect(dialect)}:${topicId}`
+        : `structured_lesson:any:${topicId}`;
+    
+    // Check cache first
+    const cached = await getCached<GeneratedLesson>(cacheKey);
+    if (cached) {
+        return cached;
+    }
+
+    let lesson: GeneratedLesson | null = null;
+
     if (dialect) {
         const normalizedDialect = normalizeDialect(dialect);
         const storagePath = `${normalizedDialect}/${topicId}.json`;
@@ -55,7 +79,7 @@ export async function loadLesson(topicId: string, dialect?: string): Promise<Gen
         }
         
         const jsonText = await data.text();
-        return JSON.parse(jsonText) as GeneratedLesson;
+        lesson = JSON.parse(jsonText) as GeneratedLesson;
     } else {
         // If no dialect specified, try all dialects in storage
         const dialects = ['egyptian-arabic', 'levantine', 'darija', 'fusha'];
@@ -69,12 +93,18 @@ export async function loadLesson(topicId: string, dialect?: string): Promise<Gen
             
             if (!error && data) {
                 const jsonText = await data.text();
-                return JSON.parse(jsonText) as GeneratedLesson;
+                lesson = JSON.parse(jsonText) as GeneratedLesson;
+                break;
             }
         }
-        
-        return null;
     }
+
+    // Cache the result if found
+    if (lesson) {
+        await setCached(cacheKey, lesson, STRUCTURED_LESSON_TTL);
+    }
+
+    return lesson;
 }
 
 /**
@@ -82,15 +112,26 @@ export async function loadLesson(topicId: string, dialect?: string): Promise<Gen
  * Reads from Supabase storage.
  * Returns a map of topicId -> { exists: boolean, dialects?: string[] }
  * If a lesson exists in multiple dialects, dialects array contains all dialects where it exists.
+ * Uses Redis caching for the full lesson existence map (1 hour TTL).
  */
 export async function checkExistingLessons(topicIds: string[]): Promise<Record<string, { exists: boolean; dialects?: string[] }>> {
-    const existing: Record<string, { exists: boolean; dialects?: string[] }> = {};
+    // Cache the full existence map (not per topic, as we usually need them all)
+    const cacheKey = 'structured_lessons:existence_map';
     
-    // Initialize all topic IDs as not existing
-    for (const id of topicIds) {
-        existing[id] = { exists: false };
+    // Try to get cached existence map
+    const cachedMap = await getCached<Record<string, { exists: boolean; dialects?: string[] }>>(cacheKey);
+    
+    if (cachedMap) {
+        // Return only the requested topic IDs from the cached map
+        const result: Record<string, { exists: boolean; dialects?: string[] }> = {};
+        for (const id of topicIds) {
+            result[id] = cachedMap[id] || { exists: false };
+        }
+        return result;
     }
-    
+
+    // Build the full existence map
+    const allExisting: Record<string, { exists: boolean; dialects?: string[] }> = {};
     const dialects = ['egyptian-arabic', 'levantine', 'darija', 'fusha'];
     
     for (const dialect of dialects) {
@@ -114,15 +155,13 @@ export async function checkExistingLessons(topicIds: string[]): Promise<Record<s
                 for (const file of files) {
                     if (file.name.endsWith('.json')) {
                         const topicId = file.name.replace('.json', '');
-                        if (topicIds.includes(topicId)) {
-                            if (!existing[topicId].exists) {
-                                existing[topicId] = { exists: true, dialects: [] };
-                            }
-                            if (!existing[topicId].dialects) {
-                                existing[topicId].dialects = [];
-                            }
-                            existing[topicId].dialects!.push(normalizedDialect);
+                        if (!allExisting[topicId]) {
+                            allExisting[topicId] = { exists: true, dialects: [] };
                         }
+                        if (!allExisting[topicId].dialects) {
+                            allExisting[topicId].dialects = [];
+                        }
+                        allExisting[topicId].dialects!.push(normalizedDialect);
                     }
                 }
             }
@@ -132,5 +171,14 @@ export async function checkExistingLessons(topicIds: string[]): Promise<Record<s
         }
     }
     
-    return existing;
+    // Cache the full map for 1 hour
+    await setCached(cacheKey, allExisting, 3600);
+    
+    // Return only the requested topic IDs
+    const result: Record<string, { exists: boolean; dialects?: string[] }> = {};
+    for (const id of topicIds) {
+        result[id] = allExisting[id] || { exists: false };
+    }
+    
+    return result;
 }

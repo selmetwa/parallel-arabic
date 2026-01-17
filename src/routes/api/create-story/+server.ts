@@ -12,6 +12,7 @@ import { generateContentWithRetry } from '$lib/utils/gemini-api-retry';
 import { getSpeakerNames } from '$lib/utils/voice-config';
 import { generateStoryAudio } from '../../../lib/server/audio-generation';
 import { uploadStoryToStorage } from '$lib/helpers/storage-helpers';
+import { invalidateStoryCaches } from '$lib/server/redis';
 
 interface GenerationData {
 	description: string;
@@ -516,6 +517,9 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 				// Don't fail the story creation if audio generation fails
 				console.warn('Audio generation error (continuing):', audioError);
 			}
+
+		// Invalidate Redis cache for stories
+		await invalidateStoryCaches(storyId, dialect);
 
 		return json({ storyId: storyId });
 	} catch (e) {
