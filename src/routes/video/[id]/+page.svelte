@@ -266,9 +266,9 @@
 	<!-- Main Content: Side-by-side Video and Sentences -->
 	<div class="flex flex-col lg:flex-row">
 		<!-- Left Column: Fixed Video Player -->
-		<div class="lg:w-2/5 xl:w-1/3 p-4 sm:p-6 bg-tile-300 lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto">
+		<div class="lg:w-2/5 xl:w-1/3 p-4 sm:p-6 bg-tile-300 lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto relative z-10">
 			<!-- Video Player Card -->
-			<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden mb-6">
+			<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden mb-6 relative z-10">
 				<div class="p-4 border-b border-tile-600">
 					<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
 						<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -278,7 +278,7 @@
 					</h3>
 				</div>
 				{#if data.video.url}
-					<div class="aspect-video">
+					<div class="aspect-video relative z-10">
 						<div id="youtube-player" class="w-full h-full"></div>
 					</div>
 				{:else}

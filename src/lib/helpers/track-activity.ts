@@ -44,7 +44,7 @@ function calculateStreak(lastActivityDate: number | null, currentStreak: number)
   }
 }
 
-export type ActivityType = 'review' | 'sentence' | 'story' | 'lesson' | 'saved_word';
+export type ActivityType = 'review' | 'sentence' | 'story' | 'lesson' | 'saved_word' | 'short';
 
 /**
  * Track user activity and update daily/weekly/overall stats and streaks
@@ -91,6 +91,7 @@ export async function trackActivity(
         stories_viewed: activityType === 'story' ? count : 0,
         lessons_viewed: activityType === 'lesson' ? count : 0,
         saved_words_count: activityType === 'saved_word' ? count : 0,
+        shorts_viewed: activityType === 'short' ? count : 0,
         created_at: now,
         updated_at: now
       }, {
@@ -106,7 +107,8 @@ export async function trackActivity(
         sentence: 'sentences_viewed',
         story: 'stories_viewed',
         lesson: 'lessons_viewed',
-        saved_word: 'saved_words_count'
+        saved_word: 'saved_words_count',
+        short: 'shorts_viewed'
       }[activityType];
 
       const { error: incrementError } = await supabase.rpc('increment_daily_activity', {
@@ -142,6 +144,7 @@ export async function trackActivity(
     // Field mappings
     const totalField = activityType === 'review' ? 'total_reviews' 
       : activityType === 'saved_word' ? 'total_saved_words'
+      : activityType === 'short' ? 'total_shorts_viewed'
       : `total_${activityType}s_viewed`;
 
     // Update user stats
@@ -161,6 +164,7 @@ export async function trackActivity(
       updateData.stories_viewed_this_week = activityType === 'story' ? count : 0;
       updateData.lessons_viewed_this_week = activityType === 'lesson' ? count : 0;
       updateData.saved_words_this_week = activityType === 'saved_word' ? count : 0;
+      updateData.shorts_viewed_this_week = activityType === 'short' ? count : 0;
     } else {
       // Increment weekly stats
       const weekField = {
@@ -168,7 +172,8 @@ export async function trackActivity(
         sentence: 'sentences_viewed_this_week',
         story: 'stories_viewed_this_week',
         lesson: 'lessons_viewed_this_week',
-        saved_word: 'saved_words_this_week'
+        saved_word: 'saved_words_this_week',
+        short: 'shorts_viewed_this_week'
       }[activityType];
 
       updateData[weekField] = (user[weekField] || 0) + count;
@@ -207,7 +212,7 @@ export async function trackActivitySimple(
     // Get current user data
     const { data: user, error: userError } = await supabase
       .from('user')
-      .select('current_streak, longest_streak, last_activity_date, week_start_date, total_reviews, total_sentences_viewed, total_stories_viewed, total_lessons_viewed, total_saved_words, reviews_this_week, sentences_viewed_this_week, stories_viewed_this_week, lessons_viewed_this_week, saved_words_this_week')
+      .select('current_streak, longest_streak, last_activity_date, week_start_date, total_reviews, total_sentences_viewed, total_stories_viewed, total_lessons_viewed, total_saved_words, total_shorts_viewed, reviews_this_week, sentences_viewed_this_week, stories_viewed_this_week, lessons_viewed_this_week, saved_words_this_week, shorts_viewed_this_week')
       .eq('id', userId)
       .single();
 
@@ -229,7 +234,8 @@ export async function trackActivitySimple(
       sentence: { daily: 'sentences_viewed', total: 'total_sentences_viewed', weekly: 'sentences_viewed_this_week' },
       story: { daily: 'stories_viewed', total: 'total_stories_viewed', weekly: 'stories_viewed_this_week' },
       lesson: { daily: 'lessons_viewed', total: 'total_lessons_viewed', weekly: 'lessons_viewed_this_week' },
-      saved_word: { daily: 'saved_words_count', total: 'total_saved_words', weekly: 'saved_words_this_week' }
+      saved_word: { daily: 'saved_words_count', total: 'total_saved_words', weekly: 'saved_words_this_week' },
+      short: { daily: 'shorts_viewed', total: 'total_shorts_viewed', weekly: 'shorts_viewed_this_week' }
     };
 
     const fields = fieldMap[activityType];
@@ -270,6 +276,7 @@ export async function trackActivitySimple(
         stories_viewed: 0,
         lessons_viewed: 0,
         saved_words_count: 0,
+        shorts_viewed: 0,
         created_at: now,
         updated_at: now
       };
@@ -318,6 +325,7 @@ export async function trackActivitySimple(
       updateData.stories_viewed_this_week = activityType === 'story' ? count : 0;
       updateData.lessons_viewed_this_week = activityType === 'lesson' ? count : 0;
       updateData.saved_words_this_week = activityType === 'saved_word' ? count : 0;
+      updateData.shorts_viewed_this_week = activityType === 'short' ? count : 0;
     } else {
       // Increment weekly stats
       updateData[fields.weekly] = (user[fields.weekly] || 0) + count;

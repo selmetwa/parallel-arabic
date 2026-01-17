@@ -163,7 +163,7 @@ async function generateSingleLesson(
     `;
 
 		const response = await generateContentWithRetry(ai, {
-			model: "gemini-2.5-flash",
+			model: "gemini-3-flash-preview",
 			contents: prompt,
 			// @ts-expect-error - generationConfig is valid but types may be outdated
 			generationConfig: {

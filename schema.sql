@@ -121,6 +121,18 @@ CREATE TABLE public.user (
   lessons_viewed_this_week integer DEFAULT 0,
   saved_words_this_week integer DEFAULT 0,
   week_start_date bigint,
+  daily_review_limit integer DEFAULT 20,
+  show_arabic boolean DEFAULT true,
+  show_transliteration boolean DEFAULT true,
+  show_english boolean DEFAULT true,
+  preferred_font_size text DEFAULT 'medium'::text CHECK (preferred_font_size = ANY (ARRAY['small'::text, 'medium'::text, 'large'::text])),
+  last_content_type text CHECK (last_content_type = ANY (ARRAY['sentences'::text, 'lessons'::text, 'stories'::text, 'vocabulary'::text, 'alphabet'::text, 'review'::text])),
+  last_content_id text,
+  last_content_position integer DEFAULT 0,
+  last_content_dialect text CHECK (last_content_dialect = ANY (ARRAY['egyptian-arabic'::text, 'fusha'::text, 'levantine'::text, 'darija'::text])),
+  last_content_accessed_at bigint,
+  total_shorts_viewed integer DEFAULT 0,
+  shorts_viewed_this_week integer DEFAULT 0,
   CONSTRAINT user_pkey PRIMARY KEY (id)
 );
 CREATE TABLE public.user_daily_activity (
@@ -134,6 +146,7 @@ CREATE TABLE public.user_daily_activity (
   saved_words_count integer DEFAULT 0,
   created_at bigint NOT NULL,
   updated_at bigint NOT NULL,
+  shorts_viewed integer DEFAULT 0,
   CONSTRAINT user_daily_activity_pkey PRIMARY KEY (id),
   CONSTRAINT user_daily_activity_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.user(id)
 );
@@ -194,4 +207,14 @@ CREATE TABLE public.word_review (
   CONSTRAINT word_review_pkey PRIMARY KEY (id),
   CONSTRAINT word_review_saved_word_id_fkey FOREIGN KEY (saved_word_id) REFERENCES public.saved_word(id),
   CONSTRAINT word_review_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.user(id)
+);
+CREATE TABLE public.youtube_shorts_cache (
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  dialect text NOT NULL,
+  search_query text NOT NULL,
+  response jsonb NOT NULL,
+  next_page_token text,
+  created_at timestamp with time zone DEFAULT now(),
+  expires_at timestamp with time zone DEFAULT (now() + '06:00:00'::interval),
+  CONSTRAINT youtube_shorts_cache_pkey PRIMARY KEY (id)
 );

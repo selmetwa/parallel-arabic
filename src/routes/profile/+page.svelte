@@ -6,6 +6,7 @@
   import AllTimeStats from '$lib/components/AllTimeStats.svelte';
   import type { PageData } from './$types';
   import { goto, invalidateAll, invalidate } from '$app/navigation';
+  import { clearUserLocalStorage } from '$lib/helpers/clear-user-data';
 
   let { data }: { data: PageData } = $props();
 
@@ -280,6 +281,9 @@
               type="button"
               onClick={async () => {
                 console.log('🔍 [profile] Logout button clicked');
+                
+                // Clear user-specific localStorage data
+                clearUserLocalStorage();
                 
                 try {
                   const response = await fetch('/auth/logout', {
