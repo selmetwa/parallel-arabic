@@ -149,29 +149,6 @@
 		}
 	}
 
-	let touchStartY = 0;
-	let touchStartTime = 0;
-	
-	function handleTouchStart(e: TouchEvent) {
-		touchStartY = e.touches[0].clientY;
-		touchStartTime = Date.now();
-	}
-
-	function handleTouchEnd(e: TouchEvent) {
-		const touchEndY = e.changedTouches[0].clientY;
-		const diff = touchStartY - touchEndY;
-		const timeDiff = Date.now() - touchStartTime;
-		
-		// Only register swipe if it's fast enough and long enough
-		if (timeDiff < 500 && Math.abs(diff) > 50) {
-			if (diff > 0) {
-				scrollToIndex(currentIndex + 1);
-			} else {
-				scrollToIndex(currentIndex - 1);
-			}
-		}
-	}
-
 	function refresh() {
 		fetchShorts(selectedDialect, true);
 	}
@@ -179,8 +156,16 @@
 	onMount(() => {
 		window.addEventListener('keydown', handleKeydown);
 		startViewTimer();
+		
+		// Prevent pull-to-refresh and overscroll on mobile for this page
+		document.body.style.overflow = 'hidden';
+		document.body.style.overscrollBehavior = 'none';
+		
 		return () => {
 			window.removeEventListener('keydown', handleKeydown);
+			// Restore body styles
+			document.body.style.overflow = '';
+			document.body.style.overscrollBehavior = '';
 		};
 	});
 
@@ -188,6 +173,9 @@
 		if (viewTimer) {
 			clearTimeout(viewTimer);
 		}
+		// Ensure body styles are restored
+		document.body.style.overflow = '';
+		document.body.style.overscrollBehavior = '';
 	});
 </script>
 
@@ -212,7 +200,7 @@
 				</a>
 				<div>
 					<h1 class="text-white font-bold text-lg">Arabic Shorts</h1>
-					<p class="text-white/60 text-xs">Swipe to learn</p>
+					<p class="text-white/60 text-xs">Tap to navigate</p>
 				</div>
 			</div>
 			
@@ -261,10 +249,8 @@
 	<div 
 		class="flex-1 relative overflow-hidden"
 		onwheel={handleWheel}
-		ontouchstart={handleTouchStart}
-		ontouchend={handleTouchEnd}
 		role="application"
-		aria-label="Video feed - use arrow keys or swipe to navigate"
+		aria-label="Video feed - use arrow keys to navigate"
 	>
 		{#if isLoading && shorts.length === 0}
 			<!-- Loading state -->
@@ -301,18 +287,20 @@
 		{:else}
 			<!-- Video slides -->
 			{#each shorts as short, index}
+				{@const isCurrentSlide = index === currentIndex}
+				{@const baseTransform = isCurrentSlide ? 0 : (index < currentIndex ? -100 : 100)}
 				<div 
 					class={cn(
-						"absolute inset-0 transition-transform duration-300 ease-out will-change-transform",
-						index === currentIndex ? "translate-y-0 z-10" :
-						index < currentIndex ? "-translate-y-full z-0" : "translate-y-full z-0"
+						"absolute inset-0 will-change-transform transition-transform duration-300 ease-out",
+						isCurrentSlide ? "z-10" : "z-0"
 					)}
+					style="transform: translateY({baseTransform}%)"
 				>
 					<!-- Only load iframe for current and adjacent videos -->
 					{#if Math.abs(index - currentIndex) <= 1}
 						<iframe
 							src={`https://www.youtube.com/embed/${short.id}?autoplay=${index === currentIndex ? 1 : 0}&loop=1&playlist=${short.id}&controls=1&modestbranding=1&rel=0&playsinline=1`}
-							class="absolute inset-0 w-full h-full"
+							class="absolute inset-0 w-full h-full pointer-events-auto"
 							frameborder="0"
 							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 							allowfullscreen
@@ -330,13 +318,13 @@
 					{/if}
 					
 					<!-- Video info overlay -->
-					<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-6 pb-24 pointer-events-none">
+					<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-4 pb-36 sm:p-6 sm:pb-24 pointer-events-none">
 						<div class="max-w-lg mx-auto">
-							<p class="text-white font-semibold text-lg line-clamp-2 mb-2 drop-shadow-lg">
+							<p class="text-white font-semibold text-base sm:text-lg line-clamp-2 mb-1 sm:mb-2 drop-shadow-lg">
 								{short.title}
 							</p>
-							<p class="text-white/70 text-sm flex items-center gap-2">
-								<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+							<p class="text-white/70 text-xs sm:text-sm flex items-center gap-2">
+								<svg class="w-3 h-3 sm:w-4 sm:h-4" fill="currentColor" viewBox="0 0 20 20">
 									<path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
 								</svg>
 								{short.channelTitle}
@@ -355,6 +343,7 @@
 					{/if}
 				</div>
 			{/each}
+
 		{/if}
 
 		<!-- Loading overlay when fetching more -->
@@ -386,29 +375,29 @@
 
 	<!-- Bottom navigation -->
 	{#if shorts.length > 0}
-		<div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-4">
+		<div class="absolute left-1/2 -translate-x-1/2 z-20 flex items-center gap-3 sm:gap-4 bottom-safe">
 			<button
 				onclick={() => scrollToIndex(currentIndex - 1)}
 				disabled={currentIndex === 0}
-				class="w-14 h-14 rounded-full bg-white/15 backdrop-blur flex items-center justify-center text-white disabled:opacity-30 hover:bg-white/25 transition-all active:scale-95"
+				class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/15 backdrop-blur flex items-center justify-center text-white disabled:opacity-30 hover:bg-white/25 transition-all active:scale-95"
 				aria-label="Previous video"
 			>
-				<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<svg class="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
 				</svg>
 			</button>
 			
-			<div class="px-4 py-2 bg-white/15 backdrop-blur rounded-full text-white text-sm font-medium">
+			<div class="px-3 py-1.5 sm:px-4 sm:py-2 bg-white/15 backdrop-blur rounded-full text-white text-xs sm:text-sm font-medium">
 				{currentIndex + 1} / {shorts.length}
 			</div>
 			
 			<button
 				onclick={() => scrollToIndex(currentIndex + 1)}
 				disabled={currentIndex === shorts.length - 1}
-				class="w-14 h-14 rounded-full bg-white/15 backdrop-blur flex items-center justify-center text-white disabled:opacity-30 hover:bg-white/25 transition-all active:scale-95"
+				class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/15 backdrop-blur flex items-center justify-center text-white disabled:opacity-30 hover:bg-white/25 transition-all active:scale-95"
 				aria-label="Next video"
 			>
-				<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<svg class="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 				</svg>
 			</button>
@@ -526,12 +515,24 @@
 	.line-clamp-2 {
 		display: -webkit-box;
 		-webkit-line-clamp: 2;
+		line-clamp: 2;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
 	}
 	
 	.border-3 {
 		border-width: 3px;
+	}
+
+	/* Safe area bottom positioning for mobile devices */
+	.bottom-safe {
+		bottom: max(5rem, env(safe-area-inset-bottom, 0px) + 4.5rem);
+	}
+
+	@media (min-width: 640px) {
+		.bottom-safe {
+			bottom: 1.5rem;
+		}
 	}
 </style>
 
