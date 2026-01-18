@@ -173,40 +173,50 @@
 
 	<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
 		<!-- Structured Lessons Card -->
-		<a 
+		<a
 			href="/lessons/structured"
-			class="group flex flex-col bg-gradient-to-br from-tile-400 to-tile-500 border-2 border-tile-600 rounded-2xl p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:border-tile-400"
+			class="group relative overflow-hidden flex flex-col bg-gradient-to-br from-tile-400 to-tile-500 border-2 border-tile-600 rounded-2xl p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:border-tile-400 active:scale-95"
 		>
-			<div class="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">📚</div>
-			<h2 class="text-3xl font-bold text-text-300 mb-4 group-hover:text-text-200 transition-colors">
+			<!-- Shine effect on hover -->
+			<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+				<div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+			</div>
+
+			<div class="text-6xl mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 relative z-10">📚</div>
+			<h2 class="text-3xl font-bold text-text-300 mb-4 group-hover:text-text-200 transition-colors relative z-10">
 				Structured Lessons
 			</h2>
-			<p class="text-text-200 text-lg leading-relaxed mb-6 flex-grow">
+			<p class="text-text-200 text-lg leading-relaxed mb-6 flex-grow relative z-10">
 				Follow a structured curriculum path organized by modules and topics. Progress through lessons in a logical sequence designed for systematic learning.
 			</p>
-			<div class="flex items-center gap-2 text-tile-700 font-semibold group-hover:gap-4 transition-all">
+			<div class="flex items-center gap-2 text-tile-700 font-semibold group-hover:gap-4 transition-all relative z-10">
 				<span>Explore Curriculum</span>
-				<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
 				</svg>
 			</div>
 		</a>
 
 		<!-- Customizable Lessons Card -->
-		<a 
+		<a
 			href="/lessons/custom"
-			class="group flex flex-col bg-gradient-to-br from-purple-400 to-purple-500 border-2 border-purple-600 rounded-2xl p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:border-purple-400"
+			class="group relative overflow-hidden flex flex-col bg-gradient-to-br from-purple-400 to-purple-500 border-2 border-purple-600 rounded-2xl p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:border-purple-400 active:scale-95"
 		>
-			<div class="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">🎨</div>
-			<h2 class="text-3xl font-bold text-white mb-4 group-hover:text-purple-100 transition-colors">
+			<!-- Shine effect on hover -->
+			<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+				<div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+			</div>
+
+			<div class="text-6xl mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 relative z-10">🎨</div>
+			<h2 class="text-3xl font-bold text-white mb-4 group-hover:text-purple-100 transition-colors relative z-10">
 				Customizable Lessons
 			</h2>
-			<p class="text-white text-lg leading-relaxed mb-6 flex-grow opacity-95">
+			<p class="text-white text-lg leading-relaxed mb-6 flex-grow opacity-95 relative z-10">
 				Create and explore custom AI-generated lessons. Search, filter, and browse lessons tailored to your specific interests and learning goals.
 			</p>
-			<div class="flex items-center gap-2 text-purple-900 font-semibold group-hover:gap-4 transition-all">
+			<div class="flex items-center gap-2 text-purple-900 font-semibold group-hover:gap-4 transition-all relative z-10">
 				<span>Browse Lessons</span>
-				<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
 				</svg>
 			</div>

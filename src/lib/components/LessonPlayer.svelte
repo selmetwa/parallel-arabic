@@ -656,7 +656,7 @@
                             <div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg text-center">
                                 <h2 class="text-2xl sm:text-3xl font-bold text-text-300 mb-2">{currentStep.content.title.english}</h2>
                                 {#if currentStep.content.title.arabic}
-                                    <h3 class="text-4xl sm:text-5xl text-tile-700 font-arabic" dir="rtl">{currentStep.content.title.arabic}</h3>
+                                    <h3 class="text-4xl sm:text-5xl text-text-300 font-arabic" dir="rtl">{currentStep.content.title.arabic}</h3>
                                 {/if}
                             </div>
                             
@@ -693,11 +693,11 @@
                                                                     <td class="border-2 border-tile-600 px-3 py-3 text-text-200 font-semibold text-sm whitespace-nowrap">{conj.person}</td>
                                                                     <td class="border-2 border-tile-600 px-3 py-3 text-center">
                                                                         <div class="flex items-center justify-center gap-2 flex-wrap">
-                                                                            <span class="text-xl sm:text-2xl font-bold text-tile-700 font-arabic" dir="rtl">{conj.arabic}</span>
+                                                                            <span class="text-xl sm:text-2xl font-bold text-text-300 font-arabic" dir="rtl">{conj.arabic}</span>
                                                                             <AudioButton 
                                                                                 text={conj.arabic}
                                                                                 dialect={ttsDialect}
-                                                                                className="text-tile-700 hover:text-text-300 shrink-0"
+                                                                                className="text-text-200 hover:text-text-300 shrink-0"
                                                                             />
                                                                         </div>
                                                                     </td>
@@ -723,15 +723,15 @@
                                                         <p class="text-lg font-bold text-text-300">{example.english}</p>
                                                         <p class="text-sm text-text-200 italic">{example.transliteration}</p>
                                                         {#if example.diacriticalNotes}
-                                                            <p class="text-xs text-tile-700 font-medium mt-2">📝 {example.diacriticalNotes}</p>
+                                                            <p class="text-xs text-text-200 font-medium mt-2">📝 {example.diacriticalNotes}</p>
                                                         {/if}
                                                     </div>
                                                     <div class="flex items-center gap-2">
-                                                        <AudioButton 
-                                                            text={example.arabic}
-                                                            dialect={ttsDialect}
-                                                            className="text-tile-700 hover:text-text-300"
-                                                        />
+<AudioButton 
+                                                                            text={example.arabic}
+                                                                            dialect={ttsDialect}
+                                                                            className="text-text-200 hover:text-text-300"
+                                                                        />
                                                         <BookmarkButton
                                                             arabic={example.arabic}
                                                             english={example.english}
@@ -741,7 +741,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="bg-tile-300 p-4 rounded-lg border border-tile-500">
-                                                    <p class="text-3xl sm:text-4xl font-bold text-tile-700 text-center" dir="rtl">{example.arabic}</p>
+                                                    <p class="text-3xl sm:text-4xl font-bold text-text-300 text-center" dir="rtl">{example.arabic}</p>
                                                 </div>
                                             </div>
                                         {/each}
@@ -815,7 +815,7 @@
                                 
                                 <!-- Arabic sentence -->
                                 <div class="bg-tile-400 p-6 rounded-lg border-2 border-tile-600 text-center space-y-3">
-                                    <p class="text-3xl sm:text-4xl font-bold text-tile-700 leading-relaxed" dir="rtl">{step.sentence.arabic}</p>
+                                    <p class="text-3xl sm:text-4xl font-bold text-text-300 leading-relaxed" dir="rtl">{step.sentence.arabic}</p>
                                     <p class="text-base text-text-200 italic">{step.sentence.transliteration}</p>
                                 </div>
                                 
@@ -872,7 +872,7 @@
                                         <div class="space-y-2">
                                             {#each parseQuestionWithRTL(currentStep.question) as part}
                                                 {#if part.isArabic}
-                                                    <div dir="rtl" class="font-arabic text-right text-tile-700 text-2xl sm:text-3xl">{part.text}</div>
+                                                    <div dir="rtl" class="font-arabic text-right text-text-300 text-2xl sm:text-3xl">{part.text}</div>
                                                 {:else}
                                                     <div>{part.text}</div>
                                                 {/if}
@@ -897,19 +897,19 @@
                                                         <AudioButton 
                                                             text={arabicToPlay}
                                                             dialect={ttsDialect}
-                                                            className="text-tile-700 hover:text-text-300 shrink-0"
+                                                            className="text-text-200 hover:text-text-300 shrink-0"
                                                         />
                                                     {/if}
                                                 </div>
                                                 <p class="text-lg text-text-200 italic">{currentStep.hint.transliteration}</p>
                                                 {#if currentStep.hint.arabic}
-                                                    <p class="text-2xl text-tile-700 mt-2 font-arabic" dir="rtl">{currentStep.hint.arabic}</p>
+                                                    <p class="text-2xl text-text-300 mt-2 font-arabic" dir="rtl">{currentStep.hint.arabic}</p>
                                                 {/if}
                                             </div>
                                         {:else}
                                             <button
                                                 onclick={() => showHint = true}
-                                                class="text-sm text-tile-700 hover:text-text-300 font-semibold underline"
+                                                class="text-sm text-text-200 hover:text-text-300 font-semibold underline"
                                             >
                                                 💡 Show hint
                                             </button>
@@ -941,7 +941,7 @@
                                             <span class="text-lg font-medium text-text-300 leading-relaxed">
                                                 {#each parseQuestionWithRTL(option.text) as part}
                                                     {#if part.isArabic}
-                                                        <span dir="rtl" class="font-arabic inline-block text-tile-700 text-2xl sm:text-3xl leading-relaxed">{part.text}</span>
+                                                        <span dir="rtl" class="font-arabic inline-block text-text-300 text-2xl sm:text-3xl leading-relaxed">{part.text}</span>
                                                     {:else}
                                                         {part.text}
                                                     {/if}
