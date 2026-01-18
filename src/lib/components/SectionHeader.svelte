@@ -8,6 +8,6 @@
 </script>
 
 <div class="flex items-center gap-4 mb-6 {className}">
-  <h2 class="text-2xl sm:text-3xl text-text-300 font-bold">{title}</h2>
-  <div class="h-0.5 bg-tile-500 flex-1 opacity-50 rounded-full"></div>
+  <h2 class="text-2xl sm:text-3xl text-text-300 font-bold tracking-tight">{title}</h2>
+  <div class="h-1 bg-gradient-to-r from-tile-500 to-transparent flex-1 rounded-full shadow-sm"></div>
 </div>

@@ -355,54 +355,6 @@
           </div>
          </div>
 			</div>
-
-			<!-- Additional Practice Tools -->
-			<div class="mt-12">
-				<h3 class="text-xl sm:text-2xl font-bold text-text-300 text-center mb-8">More Practice Tools</h3>
-				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-					<!-- Speaking Practice -->
-					<a href="/speak" class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1 flex flex-col">
-						<div class="text-4xl mb-4">🎤</div>
-						<h4 class="text-lg font-bold text-text-300 mb-2">Speaking Practice</h4>
-						<p class="text-text-200 text-sm leading-relaxed">AI pronunciation assessment with real-time feedback</p>
-					</a>
-
-					<!-- Sentence Practice -->
-					<a href="/sentences" class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1 flex flex-col">
-						<div class="text-4xl mb-4">📝</div>
-						<h4 class="text-lg font-bold text-text-300 mb-2">Sentence Practice</h4>
-						<p class="text-text-200 text-sm leading-relaxed">Unlimited AI-generated sentences for reading and writing</p>
-					</a>
-
-					<!-- Verb Conjugation -->
-					<a href="/egyptian-arabic/grammar" class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1 flex flex-col">
-						<div class="text-4xl mb-4">📋</div>
-						<h4 class="text-lg font-bold text-text-300 mb-2">Verb Conjugation</h4>
-						<p class="text-text-200 text-sm leading-relaxed">Master conjugations with real-time spell checking</p>
-					</a>
-
-					<!-- Writing Practice -->
-					<a href="/egyptian-arabic/write" class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1 flex flex-col">
-						<div class="text-4xl mb-4">✍️</div>
-						<h4 class="text-lg font-bold text-text-300 mb-2">Writing Practice</h4>
-						<p class="text-text-200 text-sm leading-relaxed">Practice with 20,000+ words using our virtual keyboard</p>
-					</a>
-
-					<!-- Vocabulary -->
-					<a href="/egyptian-arabic/vocab" class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1 flex flex-col">
-						<div class="text-4xl mb-4">📚</div>
-						<h4 class="text-lg font-bold text-text-300 mb-2">Vocabulary Quizzes</h4>
-						<p class="text-text-200 text-sm leading-relaxed">Interactive quizzes with 20,000+ words</p>
-					</a>
-
-					<!-- Alphabet -->
-					<a href="/alphabet" class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1 flex flex-col">
-						<div class="text-4xl mb-4">🔤</div>
-						<h4 class="text-lg font-bold text-text-300 mb-2">Alphabet Mastery</h4>
-						<p class="text-text-200 text-sm leading-relaxed">Master Arabic script with typing and drawing practice</p>
-					</a>
-				</div>
-			</div>
 		</div>
 	</section>
 </section>
