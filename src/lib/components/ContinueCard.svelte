@@ -29,10 +29,15 @@
 
 <a
   {href}
-  class="block {variantClasses[variant]} border-2 rounded-xl {compact ? 'p-3 sm:p-4' : 'p-4 sm:p-6'} shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
+  class="block relative overflow-hidden {variantClasses[variant]} border-2 rounded-2xl {compact ? 'p-3 sm:p-4' : 'p-4 sm:p-6'} shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group active:scale-95"
 >
-  <div class="flex items-center gap-3 sm:gap-4">
-    <div class="{compact ? 'text-2xl sm:text-3xl' : 'text-3xl sm:text-4xl'} group-hover:scale-110 transition-transform">{icon}</div>
+  <!-- Shine effect on hover -->
+  <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+    <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+  </div>
+
+  <div class="flex items-center gap-3 sm:gap-4 relative z-10">
+    <div class="{compact ? 'text-2xl sm:text-3xl' : 'text-3xl sm:text-4xl'} transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">{icon}</div>
     <div class="flex-1 text-left">
       <h2 class="{compact ? 'text-base sm:text-lg' : 'text-lg sm:text-xl'} font-bold text-white mb-0.5 group-hover:text-opacity-90 transition-colors">
         {title}

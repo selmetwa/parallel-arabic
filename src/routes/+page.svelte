@@ -42,10 +42,10 @@
       <!-- Dismiss button -->
       <button
         onclick={dismissBanner}
-        class="absolute -top-2 -right-2 z-10 w-7 h-7 bg-tile-400 hover:bg-tile-500 border border-tile-600 rounded-full flex items-center justify-center text-text-200 hover:text-text-300 transition-all shadow-sm"
+        class="absolute -top-2 -right-2 z-10 w-8 h-8 bg-gradient-to-br from-tile-400 to-tile-300 hover:from-tile-500 hover:to-tile-400 border-2 border-tile-600 rounded-full flex items-center justify-center text-text-200 hover:text-text-300 transition-all duration-200 shadow-md hover:shadow-lg active:scale-95"
         aria-label="Dismiss suggestions"
       >
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-4 h-4 transform hover:rotate-90 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
@@ -135,12 +135,6 @@
         icon="📖"
         title="Stories"
         description="Read short stories with instant definitions, audio, and parallel translations."
-      />
-      <Card
-        href="/speak"
-        icon="🎙️"
-        title="Speak"
-        description="Improve pronunciation with AI feedback on your spoken sentences."
       />
       <Card
       href="/sentences"

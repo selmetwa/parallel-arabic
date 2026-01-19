@@ -635,8 +635,8 @@
     </header>
 
     <!-- Content Area -->
-    <div class="flex-1 overflow-y-auto p-4 sm:p-8 flex items-start justify-center">
-        <div class="w-full max-w-2xl py-6 flex flex-col">
+    <div class="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 flex items-start justify-center">
+        <div class="w-full max-w-2xl lg:max-w-5xl py-4 lg:py-6 flex flex-col">
             
             {#key currentStepIndex}
                 <div in:fly={{ x: 50, duration: 300, delay: 100 }} class="flex-1 flex flex-col">
@@ -644,108 +644,119 @@
                     {#if currentStep.type === 'content'}
                         {@const parsedContent = parseConjugationTables(currentStep.content.text)}
                         <!-- Content Step -->
-                        <div class="space-y-6">
-                            <!-- Step Badge -->
+                        <div class="space-y-4 lg:space-y-6">
+                            <!-- Step Badge + Title -->
                             <div class="text-center">
-                                <span class="inline-block text-xs font-bold uppercase tracking-wider text-text-300 bg-tile-500 border-2 border-tile-600 px-4 py-2 rounded-lg shadow-md">
+                                <span class="inline-block text-xs font-bold uppercase tracking-wider text-text-300 bg-tile-500 border-2 border-tile-600 px-4 py-2 rounded-lg shadow-md mb-3">
                                     📚 Learn
                                 </span>
+                                <div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-4 lg:p-6 shadow-lg">
+                                    <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold text-text-300 mb-2">{currentStep.content.title.english}</h2>
+                                    {#if currentStep.content.title.arabic}
+                                        <h3 class="text-3xl sm:text-4xl lg:text-5xl text-text-300 font-arabic" dir="rtl">{currentStep.content.title.arabic}</h3>
+                                    {/if}
+                                </div>
                             </div>
-                            
-                            <!-- Title Card -->
-                            <div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg text-center">
-                                <h2 class="text-2xl sm:text-3xl font-bold text-text-300 mb-2">{currentStep.content.title.english}</h2>
-                                {#if currentStep.content.title.arabic}
-                                    <h3 class="text-4xl sm:text-5xl text-tile-700 font-arabic" dir="rtl">{currentStep.content.title.arabic}</h3>
-                                {/if}
-                            </div>
-                            
-                            <!-- Content Card -->
-                            <div class="bg-tile-500 border-2 border-tile-600 rounded-lg p-6 shadow-lg">
-                                {#if parsedContent.remainingText}
-                                    <div class="text-lg text-text-200 leading-relaxed mb-6 whitespace-pre-line">{parsedContent.remainingText}</div>
-                                {/if}
-                                
-                                {#if parsedContent.tables.length > 0}
-                                    <div class="space-y-6 mb-6">
-                                        {#each parsedContent.tables as table}
-                                            <div class="bg-tile-400 p-5 rounded-lg border-2 border-tile-600">
-                                                <div class="mb-4 pb-3 border-b-2 border-tile-600">
-                                                    <h4 class="text-lg font-bold text-text-300 mb-1">Base verb: <span dir="rtl" class="font-arabic">{table.baseVerb}</span></h4>
-                                                    <p class="text-sm text-text-200">
-                                                        <span class="font-semibold">{table.baseEnglish}</span> - <span class="italic">{table.baseTransliteration}</span>
-                                                    </p>
-                                                </div>
-                                                
-                                                <div class="overflow-x-auto -mx-2">
-                                                    <table class="w-full border-collapse min-w-full">
-                                                        <thead>
-                                                            <tr class="bg-tile-600">
-                                                                <th class="border-2 border-tile-700 px-3 py-2 text-left text-xs sm:text-sm font-bold text-text-300 whitespace-nowrap">Person</th>
-                                                                <th class="border-2 border-tile-700 px-3 py-2 text-center text-xs sm:text-sm font-bold text-text-300">Arabic</th>
-                                                                <th class="border-2 border-tile-700 px-3 py-2 text-left text-xs sm:text-sm font-bold text-text-300">Transliteration</th>
-                                                                <th class="border-2 border-tile-700 px-3 py-2 text-left text-xs sm:text-sm font-bold text-text-300">English</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            {#each table.conjugations as conj}
-                                                                <tr class="hover:bg-tile-500 transition-colors">
-                                                                    <td class="border-2 border-tile-600 px-3 py-3 text-text-200 font-semibold text-sm whitespace-nowrap">{conj.person}</td>
-                                                                    <td class="border-2 border-tile-600 px-3 py-3 text-center">
-                                                                        <div class="flex items-center justify-center gap-2 flex-wrap">
-                                                                            <span class="text-xl sm:text-2xl font-bold text-tile-700 font-arabic" dir="rtl">{conj.arabic}</span>
-                                                                            <AudioButton 
-                                                                                text={conj.arabic}
-                                                                                dialect={ttsDialect}
-                                                                                className="text-tile-700 hover:text-text-300 shrink-0"
-                                                                            />
-                                                                        </div>
-                                                                    </td>
-                                                                    <td class="border-2 border-tile-600 px-3 py-3 text-text-200 italic text-sm">{conj.transliteration}</td>
-                                                                    <td class="border-2 border-tile-600 px-3 py-3 text-text-200 text-sm">{conj.english}</td>
+
+                            <!-- Two-column layout on desktop -->
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
+                                <!-- Left: Content + Tables -->
+                                <div class="bg-tile-500 border-2 border-tile-600 rounded-lg p-4 lg:p-6 shadow-lg space-y-4">
+                                    {#if parsedContent.remainingText}
+                                        <div class="text-base lg:text-lg text-text-200 leading-relaxed whitespace-pre-line">{parsedContent.remainingText}</div>
+                                    {/if}
+
+                                    {#if parsedContent.tables.length > 0}
+                                        <div class="space-y-4">
+                                            {#each parsedContent.tables as table}
+                                                <div class="bg-tile-400 p-4 rounded-lg border-2 border-tile-600">
+                                                    <div class="mb-3 pb-2 border-b-2 border-tile-600">
+                                                        <h4 class="text-base font-bold text-text-300 mb-1">Base verb: <span dir="rtl" class="font-arabic">{table.baseVerb}</span></h4>
+                                                        <p class="text-sm text-text-200">
+                                                            <span class="font-semibold">{table.baseEnglish}</span> - <span class="italic">{table.baseTransliteration}</span>
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="overflow-x-auto -mx-2">
+                                                        <table class="w-full border-collapse min-w-full text-sm">
+                                                            <thead>
+                                                                <tr class="bg-tile-600">
+                                                                    <th class="border-2 border-tile-700 px-2 py-1.5 text-left text-xs font-bold text-text-300 whitespace-nowrap">Person</th>
+                                                                    <th class="border-2 border-tile-700 px-2 py-1.5 text-center text-xs font-bold text-text-300">Arabic</th>
+                                                                    <th class="border-2 border-tile-700 px-2 py-1.5 text-left text-xs font-bold text-text-300">Translit.</th>
+                                                                    <th class="border-2 border-tile-700 px-2 py-1.5 text-left text-xs font-bold text-text-300">English</th>
                                                                 </tr>
-                                                            {/each}
-                                                        </tbody>
-                                                    </table>
+                                                            </thead>
+                                                            <tbody>
+                                                                {#each table.conjugations as conj}
+                                                                    <tr class="hover:bg-tile-500 transition-colors">
+                                                                        <td class="border-2 border-tile-600 px-2 py-2 text-text-200 font-semibold text-xs whitespace-nowrap">{conj.person}</td>
+                                                                        <td class="border-2 border-tile-600 px-2 py-2 text-center">
+                                                                            <div class="flex items-center justify-center gap-1.5 flex-wrap">
+                                                                                <span class="text-lg lg:text-xl font-bold text-text-300 font-arabic" dir="rtl">{conj.arabic}</span>
+                                                                                <AudioButton
+                                                                                    text={conj.arabic}
+                                                                                    dialect={ttsDialect}
+                                                                                    className="text-text-200 hover:text-text-300 shrink-0"
+                                                                                />
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="border-2 border-tile-600 px-2 py-2 text-text-200 italic text-xs">{conj.transliteration}</td>
+                                                                        <td class="border-2 border-tile-600 px-2 py-2 text-text-200 text-xs">{conj.english}</td>
+                                                                    </tr>
+                                                                {/each}
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        {/each}
-                                    </div>
-                                {/if}
-                                
+                                            {/each}
+                                        </div>
+                                    {/if}
+
+                                    {#if !parsedContent.remainingText && parsedContent.tables.length === 0}
+                                        <p class="text-text-200 text-center py-4">No additional content for this step.</p>
+                                    {/if}
+                                </div>
+
+                                <!-- Right: Examples -->
                                 {#if currentStep.content.examples && currentStep.content.examples.length > 0}
-                                    <div class="space-y-4">
-                                        <h4 class="text-sm font-bold uppercase tracking-wider text-text-300 border-b-2 border-tile-600 pb-2">Examples</h4>
-                                        {#each currentStep.content.examples as example}
-                                            <div class="bg-tile-400 p-5 rounded-lg border-2 border-tile-600 flex flex-col gap-4">
-                                                <div class="flex items-start justify-between gap-4">
-                                                    <div class="flex-1 space-y-1">
-                                                        <p class="text-lg font-bold text-text-300">{example.english}</p>
-                                                        <p class="text-sm text-text-200 italic">{example.transliteration}</p>
-                                                        {#if example.diacriticalNotes}
-                                                            <p class="text-xs text-tile-700 font-medium mt-2">📝 {example.diacriticalNotes}</p>
-                                                        {/if}
+                                    <div class="bg-tile-500 border-2 border-tile-600 rounded-lg p-4 lg:p-6 shadow-lg">
+                                        <h4 class="text-sm font-bold uppercase tracking-wider text-text-300 border-b-2 border-tile-600 pb-2 mb-4">Examples</h4>
+                                        <div class="space-y-3 lg:space-y-4 max-h-[60vh] lg:max-h-none overflow-y-auto lg:overflow-visible">
+                                            {#each currentStep.content.examples as example}
+                                                <div class="bg-tile-400 p-3 lg:p-4 rounded-lg border-2 border-tile-600 flex flex-col gap-3">
+                                                    <div class="flex items-start justify-between gap-3">
+                                                        <div class="flex-1 space-y-1">
+                                                            <p class="text-base lg:text-lg font-bold text-text-300">{example.english}</p>
+                                                            <p class="text-sm text-text-200 italic">{example.transliteration}</p>
+                                                            {#if example.diacriticalNotes}
+                                                                <p class="text-xs text-text-200 font-medium mt-1">📝 {example.diacriticalNotes}</p>
+                                                            {/if}
+                                                        </div>
+                                                        <div class="flex items-center gap-1.5">
+                                                            <AudioButton
+                                                                text={example.arabic}
+                                                                dialect={ttsDialect}
+                                                                className="text-text-200 hover:text-text-300"
+                                                            />
+                                                            <BookmarkButton
+                                                                arabic={example.arabic}
+                                                                english={example.english}
+                                                                transliteration={example.transliteration}
+                                                                dialect={lesson.dialect}
+                                                            />
+                                                        </div>
                                                     </div>
-                                                    <div class="flex items-center gap-2">
-                                                        <AudioButton 
-                                                            text={example.arabic}
-                                                            dialect={ttsDialect}
-                                                            className="text-tile-700 hover:text-text-300"
-                                                        />
-                                                        <BookmarkButton
-                                                            arabic={example.arabic}
-                                                            english={example.english}
-                                                            transliteration={example.transliteration}
-                                                            dialect={lesson.dialect}
-                                                        />
+                                                    <div class="bg-tile-300 p-3 rounded-lg border border-tile-500">
+                                                        <p class="text-2xl lg:text-3xl font-bold text-text-300 text-center" dir="rtl">{example.arabic}</p>
                                                     </div>
                                                 </div>
-                                                <div class="bg-tile-300 p-4 rounded-lg border border-tile-500">
-                                                    <p class="text-3xl sm:text-4xl font-bold text-tile-700 text-center" dir="rtl">{example.arabic}</p>
-                                                </div>
-                                            </div>
-                                        {/each}
+                                            {/each}
+                                        </div>
                                     </div>
+                                {:else}
+                                    <!-- No examples - content takes full width on desktop -->
+                                    <div class="hidden lg:block"></div>
                                 {/if}
                             </div>
                         </div>
@@ -753,213 +764,220 @@
                     {:else if currentStep.type === 'practice-sentence'}
                         <!-- Practice Sentence Step -->
                         {@const step = currentStep as PracticeSentenceStep}
-                        <div class="flex-1 flex flex-col justify-center space-y-6">
+                        <div class="flex-1 flex flex-col justify-center space-y-4 lg:space-y-6">
                             <!-- Step Badge -->
                             <div class="text-center">
                                 <span class="inline-block text-xs font-bold uppercase tracking-wider text-text-300 bg-tile-500 border-2 border-tile-600 px-4 py-2 rounded-lg shadow-md">
                                     🗣️ Practice Sentence
                                 </span>
                                 {#if step.context}
-                                    <p class="text-sm text-text-200 italic mt-3">{step.context}</p>
+                                    <p class="text-sm text-text-200 italic mt-2">{step.context}</p>
                                 {/if}
                             </div>
-                            
+
                             <!-- Selection controls -->
                             {#if selectedWords.length > 0}
                                 <div class="flex gap-2 justify-center">
                                     <button
                                         onclick={() => askChatGPT(selectedWords, step.sentence)}
-                                        class="px-4 py-2 bg-tile-500 text-text-300 rounded-lg border-2 border-tile-600 hover:bg-tile-600 transition-colors font-semibold text-sm"
+                                        class="px-3 py-1.5 bg-tile-500 text-text-300 rounded-lg border-2 border-tile-600 hover:bg-tile-600 transition-colors font-semibold text-sm"
                                     >
                                         📖 Define "{selectedWords.join(' ')}"
                                     </button>
                                     <button
                                         onclick={clearSelection}
-                                        class="px-4 py-2 bg-tile-400 text-text-200 rounded-lg border-2 border-tile-600 hover:bg-tile-500 hover:text-text-300 transition-colors font-semibold text-sm"
+                                        class="px-3 py-1.5 bg-tile-400 text-text-200 rounded-lg border-2 border-tile-600 hover:bg-tile-500 hover:text-text-300 transition-colors font-semibold text-sm"
                                     >
                                         ✕ Clear
                                     </button>
                                 </div>
                             {/if}
-                            
-                            <!-- Main Content Card -->
-                            <div class="bg-tile-500 border-2 border-tile-600 rounded-lg p-6 shadow-lg space-y-6">
-                                <!-- English sentence with word selection -->
-                                <div 
-                                    class="flex w-fit mx-auto flex-row flex-wrap justify-center text-xl sm:text-2xl font-bold text-text-300 select-none"
-                                    onmouseup={handleWordMouseUp}
-                                    role="application"
-                                    aria-label="Word selection area for definitions"
-                                >
-                                    {#each step.sentence.english.split(' ') as word, index}
-                                        <span
-                                            onmousedown={(e) => handleWordMouseDown(index, e)}
-                                            onmouseenter={() => handleWordMouseEnter(index)}
-                                            onclick={() => askChatGPT(word, step.sentence)}
-                                            onkeydown={(e) => {
-                                                if (e.key === 'Enter' || e.key === ' ') {
-                                                    e.preventDefault();
-                                                    askChatGPT(word, step.sentence);
-                                                }
-                                            }}
-                                            role="button"
-                                            tabindex="0"
-                                            aria-label={`Get definition for: ${word}`}
-                                            class={cn("px-2 py-1 m-1 text-xl sm:text-2xl duration-200 cursor-pointer rounded-lg border-2", {
-                                                "bg-blue-100 border-blue-500 text-blue-700": isWordSelected(index),
-                                                "hover:bg-tile-400 border-transparent hover:border-tile-600": !isWordSelected(index)
-                                            })}
-                                        >{word}</span>
-                                    {/each}
+
+                            <!-- Two-column layout on desktop -->
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
+                                <!-- Left: English sentence with word selection -->
+                                <div class="bg-tile-500 border-2 border-tile-600 rounded-lg p-4 lg:p-6 shadow-lg flex flex-col justify-center">
+                                    <h4 class="text-xs font-bold uppercase tracking-wider text-text-200 mb-3">English</h4>
+                                    <div
+                                        class="flex w-fit flex-row flex-wrap text-lg sm:text-xl lg:text-2xl font-bold text-text-300 select-none"
+                                        onmouseup={handleWordMouseUp}
+                                        role="application"
+                                        aria-label="Word selection area for definitions"
+                                    >
+                                        {#each step.sentence.english.split(' ') as word, index}
+                                            <span
+                                                onmousedown={(e) => handleWordMouseDown(index, e)}
+                                                onmouseenter={() => handleWordMouseEnter(index)}
+                                                onclick={() => askChatGPT(word, step.sentence)}
+                                                onkeydown={(e) => {
+                                                    if (e.key === 'Enter' || e.key === ' ') {
+                                                        e.preventDefault();
+                                                        askChatGPT(word, step.sentence);
+                                                    }
+                                                }}
+                                                role="button"
+                                                tabindex="0"
+                                                aria-label={`Get definition for: ${word}`}
+                                                class={cn("px-1.5 py-0.5 m-0.5 duration-200 cursor-pointer rounded-lg border-2", {
+                                                    "bg-blue-100 border-blue-500 text-blue-700": isWordSelected(index),
+                                                    "hover:bg-tile-400 border-transparent hover:border-tile-600": !isWordSelected(index)
+                                                })}
+                                            >{word}</span>
+                                        {/each}
+                                    </div>
                                 </div>
-                                
-                                <!-- Arabic sentence -->
-                                <div class="bg-tile-400 p-6 rounded-lg border-2 border-tile-600 text-center space-y-3">
-                                    <p class="text-3xl sm:text-4xl font-bold text-tile-700 leading-relaxed" dir="rtl">{step.sentence.arabic}</p>
-                                    <p class="text-base text-text-200 italic">{step.sentence.transliteration}</p>
+
+                                <!-- Right: Arabic sentence -->
+                                <div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-4 lg:p-6 shadow-lg flex flex-col justify-center">
+                                    <h4 class="text-xs font-bold uppercase tracking-wider text-text-200 mb-3">Arabic</h4>
+                                    <p class="text-2xl sm:text-3xl lg:text-4xl font-bold text-text-300 leading-relaxed" dir="rtl">{step.sentence.arabic}</p>
+                                    <p class="text-sm text-text-200 italic mt-2">{step.sentence.transliteration}</p>
                                 </div>
-                                
-                                <!-- Action buttons -->
-                                <div class="flex gap-3 justify-center pt-2 flex-wrap">
-                                    <AudioButton text={step.sentence.arabic} dialect={ttsDialect}>
-                                        🔊 Listen
-                                    </AudioButton>
-                                    <Button onClick={() => compareDialects(step.sentence)} type="button">
-                                        🌍 Compare Dialects
+                            </div>
+
+                            <!-- Action buttons -->
+                            <div class="flex gap-2 lg:gap-3 justify-center flex-wrap">
+                                <AudioButton text={step.sentence.arabic} dialect={ttsDialect}>
+                                    🔊 Listen
+                                </AudioButton>
+                                <Button onClick={() => compareDialects(step.sentence)} type="button">
+                                    🌍 Compare Dialects
+                                </Button>
+                                {#if user?.id}
+                                    <Button
+                                        onClick={() => savePracticeSentence(step.sentence)}
+                                        type="button"
+                                        disabled={isSavingSentence || sentenceSaveStatus === 'saved'}
+                                        class={cn({
+                                            'opacity-50 cursor-not-allowed': isSavingSentence || sentenceSaveStatus === 'saved',
+                                            'bg-green-600 hover:bg-green-700 border-green-700': sentenceSaveStatus === 'saved'
+                                        })}
+                                    >
+                                        {#if sentenceSaveStatus === 'saving'}
+                                            💾 Saving...
+                                        {:else if sentenceSaveStatus === 'saved'}
+                                            ✓ Saved to Review
+                                        {:else if sentenceSaveStatus === 'error'}
+                                            ✗ Error
+                                        {:else}
+                                            💾 Save to Review
+                                        {/if}
                                     </Button>
-                                    {#if user?.id}
-                                        <Button 
-                                            onClick={() => savePracticeSentence(step.sentence)} 
-                                            type="button"
-                                            disabled={isSavingSentence || sentenceSaveStatus === 'saved'}
-                                            class={cn({
-                                                'opacity-50 cursor-not-allowed': isSavingSentence || sentenceSaveStatus === 'saved',
-                                                'bg-green-600 hover:bg-green-700 border-green-700': sentenceSaveStatus === 'saved'
-                                            })}
-                                        >
-                                            {#if sentenceSaveStatus === 'saving'}
-                                                💾 Saving...
-                                            {:else if sentenceSaveStatus === 'saved'}
-                                                ✓ Saved to Review
-                                            {:else if sentenceSaveStatus === 'error'}
-                                                ✗ Error
-                                            {:else}
-                                                💾 Save to Review
-                                            {/if}
-                                        </Button>
-                                    {/if}
-                                </div>
+                                {/if}
                             </div>
                         </div>
                         
                     {:else if currentStep.type === 'exercise'}
                         <!-- Exercise Step -->
-                        <div class="flex-1 flex flex-col justify-center space-y-6">
+                        <div class="flex-1 flex flex-col justify-center space-y-4 lg:space-y-6">
                             <!-- Step Badge -->
                             <div class="text-center">
                                 <span class="inline-block text-xs font-bold uppercase tracking-wider text-text-300 bg-tile-500 border-2 border-tile-600 px-4 py-2 rounded-lg shadow-md">
-                                    {currentStep.exerciseType === 'multiple-choice' ? '❓ Quiz' : 
+                                    {currentStep.exerciseType === 'multiple-choice' ? '❓ Quiz' :
                                      currentStep.exerciseType === 'fill-in-blank' ? '✏️ Fill in the blank' : '🔗 Match'}
                                 </span>
                             </div>
-                            
-                            <!-- Question Card -->
-                            <div class="bg-tile-500 border-2 border-tile-600 rounded-lg p-6 shadow-lg">
-                                <h2 class="text-xl sm:text-2xl font-bold text-text-300 leading-relaxed">
-                                    {#if isEntirelyArabic(currentStep.question)}
-                                        <span dir="rtl" class="font-arabic block text-right text-2xl sm:text-3xl">{currentStep.question}</span>
-                                    {:else if containsArabic(currentStep.question)}
-                                        <div class="space-y-2">
-                                            {#each parseQuestionWithRTL(currentStep.question) as part}
-                                                {#if part.isArabic}
-                                                    <div dir="rtl" class="font-arabic text-right text-tile-700 text-2xl sm:text-3xl">{part.text}</div>
-                                                {:else}
-                                                    <div>{part.text}</div>
-                                                {/if}
-                                            {/each}
-                                        </div>
-                                    {:else}
-                                        {currentStep.question}
-                                    {/if}
-                                </h2>
-                                
-                                <!-- Hint Display -->
-                                {#if currentStep.hint}
-                                    {@const step = currentStep as ExerciseStep}
-                                    {@const correctAnswer = step.options.find(opt => opt.id === step.correctAnswerId)}
-                                    {@const arabicToPlay = currentStep.hint.arabic || correctAnswer?.text || ''}
-                                    <div class="mt-4">
-                                        {#if showHint}
-                                            <div class="bg-tile-400 p-4 rounded-lg border-2 border-tile-600">
-                                                <div class="flex items-start justify-between gap-3 mb-2">
-                                                    <p class="text-sm font-bold text-text-300">💡 Hint:</p>
-                                                    {#if arabicToPlay}
-                                                        <AudioButton 
-                                                            text={arabicToPlay}
-                                                            dialect={ttsDialect}
-                                                            className="text-tile-700 hover:text-text-300 shrink-0"
-                                                        />
-                                                    {/if}
-                                                </div>
-                                                <p class="text-lg text-text-200 italic">{currentStep.hint.transliteration}</p>
-                                                {#if currentStep.hint.arabic}
-                                                    <p class="text-2xl text-tile-700 mt-2 font-arabic" dir="rtl">{currentStep.hint.arabic}</p>
-                                                {/if}
-                                            </div>
-                                        {:else}
-                                            <button
-                                                onclick={() => showHint = true}
-                                                class="text-sm text-tile-700 hover:text-text-300 font-semibold underline"
-                                            >
-                                                💡 Show hint
-                                            </button>
-                                        {/if}
-                                    </div>
-                                {/if}
-                            </div>
 
-                            <!-- Options -->
-                            <div class="space-y-3">
-                                {#each currentStep.options as option}
-                                    {@const isSelected = selectedOptionId === option.id}
-                                    {@const showSuccess = isAnswerChecked && option.id === currentStep.correctAnswerId}
-                                    {@const showError = isAnswerChecked && isSelected && !showSuccess}
-                                    
-                                    <button
-                                        class="w-full p-5 rounded-lg border-2 transition-all duration-200 flex items-center justify-between group shadow-md
-                                        {isEntirelyArabic(option.text) ? 'text-right' : 'text-left'}
-                                        {isSelected ? 'border-tile-700 bg-tile-500' : 'border-tile-600 bg-tile-400 hover:bg-tile-500 hover:border-tile-700'}
-                                        {showSuccess ? '!border-green-600 !bg-green-100' : ''}
-                                        {showError ? '!border-red-600 !bg-red-100' : ''}
-                                        "
-                                        onclick={() => handleOptionSelect(option.id)}
-                                        disabled={isAnswerChecked && isCorrect}
-                                    >
-                                        {#if isEntirelyArabic(option.text)}
-                                            <span class="text-2xl sm:text-3xl font-medium text-text-300 font-arabic leading-relaxed" dir="rtl">{option.text}</span>
-                                        {:else if containsArabic(option.text)}
-                                            <span class="text-lg font-medium text-text-300 leading-relaxed">
-                                                {#each parseQuestionWithRTL(option.text) as part}
+                            <!-- Two-column layout on desktop -->
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-start">
+                                <!-- Left: Question Card -->
+                                <div class="bg-tile-500 border-2 border-tile-600 rounded-lg p-4 lg:p-6 shadow-lg">
+                                    <h2 class="text-lg sm:text-xl lg:text-2xl font-bold text-text-300 leading-relaxed">
+                                        {#if isEntirelyArabic(currentStep.question)}
+                                            <span dir="rtl" class="font-arabic block text-right text-xl sm:text-2xl lg:text-3xl">{currentStep.question}</span>
+                                        {:else if containsArabic(currentStep.question)}
+                                            <div class="space-y-2">
+                                                {#each parseQuestionWithRTL(currentStep.question) as part}
                                                     {#if part.isArabic}
-                                                        <span dir="rtl" class="font-arabic inline-block text-tile-700 text-2xl sm:text-3xl leading-relaxed">{part.text}</span>
+                                                        <div dir="rtl" class="font-arabic text-right text-text-300 text-xl sm:text-2xl lg:text-3xl">{part.text}</div>
                                                     {:else}
-                                                        {part.text}
+                                                        <div>{part.text}</div>
                                                     {/if}
                                                 {/each}
-                                            </span>
+                                            </div>
                                         {:else}
-                                            <span class="text-lg font-medium text-text-300 leading-relaxed">{option.text}</span>
+                                            {currentStep.question}
                                         {/if}
-                                        
-                                        {#if showSuccess}
-                                            <span class="text-green-600 text-2xl font-bold">✓</span>
-                                        {:else if showError}
-                                            <span class="text-red-600 text-2xl font-bold">✕</span>
-                                        {:else}
-                                            <div class="w-6 h-6 rounded-full border-2 border-tile-600 group-hover:border-tile-700 {isSelected ? 'border-tile-700 bg-tile-700' : 'bg-tile-300'}"></div>
-                                        {/if}
-                                    </button>
-                                {/each}
+                                    </h2>
+
+                                    <!-- Hint Display -->
+                                    {#if currentStep.hint}
+                                        {@const step = currentStep as ExerciseStep}
+                                        {@const correctAnswer = step.options.find(opt => opt.id === step.correctAnswerId)}
+                                        {@const arabicToPlay = currentStep.hint.arabic || correctAnswer?.text || ''}
+                                        <div class="mt-4">
+                                            {#if showHint}
+                                                <div class="bg-tile-400 p-3 lg:p-4 rounded-lg border-2 border-tile-600">
+                                                    <div class="flex items-start justify-between gap-3 mb-2">
+                                                        <p class="text-sm font-bold text-text-300">💡 Hint:</p>
+                                                        {#if arabicToPlay}
+                                                            <AudioButton
+                                                                text={arabicToPlay}
+                                                                dialect={ttsDialect}
+                                                                className="text-text-200 hover:text-text-300 shrink-0"
+                                                            />
+                                                        {/if}
+                                                    </div>
+                                                    <p class="text-base lg:text-lg text-text-200 italic">{currentStep.hint.transliteration}</p>
+                                                    {#if currentStep.hint.arabic}
+                                                        <p class="text-xl lg:text-2xl text-text-300 mt-2 font-arabic" dir="rtl">{currentStep.hint.arabic}</p>
+                                                    {/if}
+                                                </div>
+                                            {:else}
+                                                <button
+                                                    onclick={() => showHint = true}
+                                                    class="text-sm text-text-200 hover:text-text-300 font-semibold underline"
+                                                >
+                                                    💡 Show hint
+                                                </button>
+                                            {/if}
+                                        </div>
+                                    {/if}
+                                </div>
+
+                                <!-- Right: Options -->
+                                <div class="space-y-2 lg:space-y-3">
+                                    {#each currentStep.options as option}
+                                        {@const isSelected = selectedOptionId === option.id}
+                                        {@const showSuccess = isAnswerChecked && option.id === currentStep.correctAnswerId}
+                                        {@const showError = isAnswerChecked && isSelected && !showSuccess}
+
+                                        <button
+                                            class="w-full p-3 lg:p-4 rounded-lg border-2 transition-all duration-200 flex items-center justify-between group shadow-md
+                                            {isEntirelyArabic(option.text) ? 'text-right' : 'text-left'}
+                                            {isSelected ? 'border-tile-700 bg-tile-500' : 'border-tile-600 bg-tile-400 hover:bg-tile-500 hover:border-tile-700'}
+                                            {showSuccess ? '!border-green-600 !bg-green-100' : ''}
+                                            {showError ? '!border-red-600 !bg-red-100' : ''}
+                                            "
+                                            onclick={() => handleOptionSelect(option.id)}
+                                            disabled={isAnswerChecked && isCorrect}
+                                        >
+                                            {#if isEntirelyArabic(option.text)}
+                                                <span class="text-xl sm:text-2xl lg:text-3xl font-medium text-text-300 font-arabic leading-relaxed" dir="rtl">{option.text}</span>
+                                            {:else if containsArabic(option.text)}
+                                                <span class="text-base lg:text-lg font-medium text-text-300 leading-relaxed">
+                                                    {#each parseQuestionWithRTL(option.text) as part}
+                                                        {#if part.isArabic}
+                                                            <span dir="rtl" class="font-arabic inline-block text-text-300 text-xl sm:text-2xl lg:text-3xl leading-relaxed">{part.text}</span>
+                                                        {:else}
+                                                            {part.text}
+                                                        {/if}
+                                                    {/each}
+                                                </span>
+                                            {:else}
+                                                <span class="text-base lg:text-lg font-medium text-text-300 leading-relaxed">{option.text}</span>
+                                            {/if}
+
+                                            {#if showSuccess}
+                                                <span class="text-green-600 text-xl lg:text-2xl font-bold">✓</span>
+                                            {:else if showError}
+                                                <span class="text-red-600 text-xl lg:text-2xl font-bold">✕</span>
+                                            {:else}
+                                                <div class="w-5 h-5 lg:w-6 lg:h-6 rounded-full border-2 border-tile-600 group-hover:border-tile-700 {isSelected ? 'border-tile-700 bg-tile-700' : 'bg-tile-300'}"></div>
+                                            {/if}
+                                        </button>
+                                    {/each}
+                                </div>
                             </div>
                         </div>
                     {/if}
@@ -1057,8 +1075,8 @@
     {/if}
 
     <!-- Footer -->
-    <footer class="bg-tile-400 border-t-2 border-tile-600 p-4 sm:p-6 shadow-lg">
-        <div class="max-w-2xl mx-auto flex items-center justify-between gap-4">
+    <footer class="bg-tile-400 border-t-2 border-tile-600 p-3 sm:p-4 lg:p-6 shadow-lg">
+        <div class="max-w-2xl lg:max-w-5xl mx-auto flex items-center justify-between gap-3 lg:gap-4">
             {#if currentStep.type === 'exercise'}
                  <div class="flex-1">
                     {#if isAnswerChecked}
@@ -1069,51 +1087,51 @@
                  </div>
                  
                  {#if !isAnswerChecked}
-                    <button 
-                        class="w-full sm:w-auto px-10 py-4 text-lg font-bold bg-tile-500 border-2 border-tile-600 text-text-300 rounded-lg hover:bg-tile-600 transition-colors shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
+                    <button
+                        class="w-full sm:w-auto px-6 lg:px-10 py-3 lg:py-4 text-base lg:text-lg font-bold bg-tile-500 border-2 border-tile-600 text-text-300 rounded-lg hover:bg-tile-600 transition-colors shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
                         onclick={checkAnswer}
                         disabled={!selectedOptionId}
                     >
                         Check Answer
                     </button>
                  {:else}
-                    <button 
-                        class="w-full sm:w-auto px-10 py-4 text-lg font-bold rounded-lg transition-colors shadow-md disabled:opacity-50 disabled:cursor-not-allowed
+                    <button
+                        class="w-full sm:w-auto px-6 lg:px-10 py-3 lg:py-4 text-base lg:text-lg font-bold rounded-lg transition-colors shadow-md disabled:opacity-50 disabled:cursor-not-allowed
                         {isCorrect ? 'bg-green-600 border-2 border-green-700 text-white hover:bg-green-700' : 'bg-tile-500 border-2 border-tile-600 text-text-300'}"
                         onclick={nextStep}
-                        disabled={!isCorrect} 
+                        disabled={!isCorrect}
                     >
                         Next →
                     </button>
                  {/if}
             {:else if currentStep.type === 'practice-sentence'}
                 <!-- Practice Sentence Navigation -->
-                <button 
-                    class="text-text-200 font-bold hover:text-text-300 px-6 py-3 rounded-lg bg-tile-500 border-2 border-tile-600 hover:bg-tile-600 transition-colors disabled:opacity-0"
+                <button
+                    class="text-text-200 font-bold hover:text-text-300 px-4 lg:px-6 py-2 lg:py-3 rounded-lg bg-tile-500 border-2 border-tile-600 hover:bg-tile-600 transition-colors disabled:opacity-0 text-sm lg:text-base"
                     onclick={prevStep}
                     disabled={currentStepIndex === 0}
                 >
                     ← Back
                 </button>
-                
-                <button 
-                    class="w-full sm:w-auto px-10 py-4 text-lg font-bold bg-tile-600 border-2 border-tile-700 text-text-300 rounded-lg hover:bg-tile-700 transition-colors shadow-md"
+
+                <button
+                    class="w-full sm:w-auto px-6 lg:px-10 py-3 lg:py-4 text-base lg:text-lg font-bold bg-tile-600 border-2 border-tile-700 text-text-300 rounded-lg hover:bg-tile-700 transition-colors shadow-md"
                     onclick={nextStep}
                 >
                     Continue →
                 </button>
             {:else}
                 <!-- Content Step Navigation -->
-                <button 
-                    class="text-text-200 font-bold hover:text-text-300 px-6 py-3 rounded-lg bg-tile-500 border-2 border-tile-600 hover:bg-tile-600 transition-colors disabled:opacity-0"
+                <button
+                    class="text-text-200 font-bold hover:text-text-300 px-4 lg:px-6 py-2 lg:py-3 rounded-lg bg-tile-500 border-2 border-tile-600 hover:bg-tile-600 transition-colors disabled:opacity-0 text-sm lg:text-base"
                     onclick={prevStep}
                     disabled={currentStepIndex === 0}
                 >
                     ← Back
                 </button>
-                
-                <button 
-                    class="w-full sm:w-auto px-10 py-4 text-lg font-bold bg-tile-600 border-2 border-tile-700 text-text-300 rounded-lg hover:bg-tile-700 transition-colors shadow-md"
+
+                <button
+                    class="w-full sm:w-auto px-6 lg:px-10 py-3 lg:py-4 text-base lg:text-lg font-bold bg-tile-600 border-2 border-tile-700 text-text-300 rounded-lg hover:bg-tile-700 transition-colors shadow-md"
                     onclick={nextStep}
                 >
                     {currentStepIndex === totalSteps - 1 ? '🎉 Finish' : 'Continue →'}

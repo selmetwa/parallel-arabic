@@ -19,6 +19,15 @@ export const textWithTranslationSchema = z.object({
 export type TextWithTranslation = z.infer<typeof textWithTranslationSchema>;
 
 /**
+ * Schema for word-level alignment (maps each Arabic word to its English and transliteration)
+ */
+const wordAlignmentSchema = z.object({
+	arabic: z.string(),
+	english: z.string(),
+	transliteration: z.string()
+});
+
+/**
  * Schema for a sentence in a story (can include speaker for conversations)
  */
 function createSentenceSchema(includeSpeaker: boolean = false) {
@@ -34,6 +43,9 @@ function createSentenceSchema(includeSpeaker: boolean = false) {
 		text: z.string()
 	});
 
+	// Word-level alignments are optional for backwards compatibility
+	const wordAlignmentsSchema = z.array(wordAlignmentSchema).optional();
+
 	if (includeSpeaker) {
 		const speakerSchema = z.object({
 			name: z.string()
@@ -43,14 +55,16 @@ function createSentenceSchema(includeSpeaker: boolean = false) {
 			arabic: arabicSchema,
 			english: englishSchema,
 			transliteration: transliterationSchema,
-			speaker: speakerSchema
+			speaker: speakerSchema,
+			wordAlignments: wordAlignmentsSchema
 		});
 	}
 
 	return z.object({
 		arabic: arabicSchema,
 		english: englishSchema,
-		transliteration: transliterationSchema
+		transliteration: transliterationSchema,
+		wordAlignments: wordAlignmentsSchema
 	});
 }
 
