@@ -22,6 +22,10 @@ export function clearUserLocalStorage(): void {
       if (key.startsWith('sentences_')) {
         keysToRemove.push(key);
       }
+      // Clear speak sentences data (all variations)
+      if (key.startsWith('speak_sentence')) {
+        keysToRemove.push(key);
+      }
       // Clear any review-related data
       if (key.startsWith('review_')) {
         keysToRemove.push(key);
