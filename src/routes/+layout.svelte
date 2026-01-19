@@ -1,26 +1,31 @@
 <script lang="ts">
 	import '../app.css';
+	// Critical components - needed for initial render
 	import Navigation from '$lib/components/Navigation.svelte';
 	import DialectNavigation from '$lib/components/DialectNavigation.svelte';
-	import Drawer from '$lib/components/Drawer.svelte';
-	import Onboarding from '$lib/components/Onboarding.svelte';
 	import Sidebar from '$lib/components/Sidebar.svelte';
 	import BottomNavigation from '$lib/components/BottomNavigation.svelte';
-  import { onMount } from 'svelte';
-  import { theme, sidebarCollapsed } from '$lib/store/store';
-  import { initializePreferences } from '$lib/stores/userPreferences';
-  import Button from '$lib/components/Button.svelte';
-  import Footer from "$lib/components/Footer.svelte";
-  import RadioButton from '$lib/components/RadioButton.svelte';
-  import ChatWidget from '$lib/components/ChatWidget.svelte';
-  import { Toaster } from 'svelte-sonner';
+	import Footer from "$lib/components/Footer.svelte";
+	
+	import { onMount } from 'svelte';
+	import { theme, sidebarCollapsed } from '$lib/store/store';
+	import { initializePreferences } from '$lib/stores/userPreferences';
+	import { invalidate, goto } from '$app/navigation'
+	import { page } from '$app/stores'
+	import { pwaInfo } from 'virtual:pwa-info';
+	import { dev, browser } from '$app/environment';
+	import { injectAnalytics } from '@vercel/analytics/sveltekit';
+	import { getPageMeta, generateStructuredData } from '$lib/utils/seo';
 
-  import { invalidate, goto } from '$app/navigation'
-  import { page } from '$app/stores'
-  import { pwaInfo } from 'virtual:pwa-info';
-  import { dev } from '$app/environment';
-  import { injectAnalytics } from '@vercel/analytics/sveltekit';
-  import { getPageMeta, generateStructuredData } from '$lib/utils/seo';
+	// Lazy loaded components - not needed for initial paint
+	// These are loaded after the page renders to improve FCP/LCP
+	let Drawer: typeof import('$lib/components/Drawer.svelte').default | null = $state(null);
+	let Button: typeof import('$lib/components/Button.svelte').default | null = $state(null);
+	let RadioButton: typeof import('$lib/components/RadioButton.svelte').default | null = $state(null);
+	let ChatWidget: typeof import('$lib/components/ChatWidget.svelte').default | null = $state(null);
+	let Toaster: typeof import('svelte-sonner').Toaster | null = $state(null);
+	let Onboarding: typeof import('$lib/components/Onboarding.svelte').default | null = $state(null);
+	let lazyComponentsLoaded = $state(false);
 
   // Helper to detect if running in Capacitor native app
   const isNativeApp = () => {
@@ -30,7 +35,6 @@
 
 
   let { data, children } = $props();
-  $inspect(data)
 	let isOpen = $state(false);
 	
 	// Use showOnboarding from server data (which already checks URL and onboarding status)
@@ -55,16 +59,34 @@
 	let { session, supabase } = $derived(data)
 	
 	onMount(async () => {
-		console.log('🚀 App onMount started');
-		console.log('🔍 Is native app:', isNativeApp());
-		
 		root = document.documentElement;
 		doc = document.firstElementChild || null;
 		
-    // Only inject Vercel analytics when NOT in native app
-    if (!isNativeApp()) {
-      injectAnalytics({ mode: dev ? 'development' : 'production' });
-    }
+		// Lazy load non-critical components after initial paint
+		// This improves FCP/LCP by ~230KB off the critical path
+		if (browser) {
+			const [drawerMod, buttonMod, radioMod, chatMod, toasterMod, onboardingMod] = await Promise.all([
+				import('$lib/components/Drawer.svelte'),
+				import('$lib/components/Button.svelte'),
+				import('$lib/components/RadioButton.svelte'),
+				import('$lib/components/ChatWidget.svelte'),
+				import('svelte-sonner'),
+				import('$lib/components/Onboarding.svelte')
+			]);
+			
+			Drawer = drawerMod.default;
+			Button = buttonMod.default;
+			RadioButton = radioMod.default;
+			ChatWidget = chatMod.default;
+			Toaster = toasterMod.Toaster;
+			Onboarding = onboardingMod.default;
+			lazyComponentsLoaded = true;
+		}
+		
+		// Only inject Vercel analytics when NOT in native app
+		if (!isNativeApp()) {
+			injectAnalytics({ mode: dev ? 'development' : 'production' });
+		}
 
 		// Register PWA service worker - skip in native app
 		if (pwaInfo && !isNativeApp()) {
@@ -72,10 +94,10 @@
 			registerSW({
 				immediate: true,
 				onRegistered(r) {
-					console.log(`SW Registered: ${r}`);
+					if (dev) console.log(`SW Registered: ${r}`);
 				},
 				onRegisterError(error) {
-					console.log('SW registration error', error);
+					if (dev) console.log('SW registration error', error);
 				}
 			});
 		}
@@ -85,13 +107,10 @@
 			try {
 				const { SplashScreen } = await import('@capacitor/splash-screen');
 				await SplashScreen.hide();
-				console.log('✅ Splash screen hidden');
 			} catch (e) {
 				console.error('Failed to hide splash:', e);
 			}
 		}
-
-		console.log('🚀 App onMount - about to setup auth listener');
 		
 		// Listen to auth changes and invalidate layout when session changes
 		const { data: authData } = supabase.auth.onAuthStateChange((event: string, newSession: any) => {
@@ -99,8 +118,6 @@
 				invalidate('supabase:auth')
 			}
 		})
-		
-		console.log('✅ App fully loaded');
 		
 		return () => authData.subscription.unsubscribe()
 	});
@@ -285,45 +302,51 @@
 	{@html webManifest}
 </svelte:head>
 
-	<Drawer {isOpen} {handleCloseDrawer}>
-    <div>
-      <header class="items-center border-b-2 border-tile-600 py-4 px-3 flex flex-row justify-between">
-        <h1 class="text-xl font-bold text-text-300">Color theme</h1>
-        <div class="w-fit">
-          <Button onClick={handleCloseDrawer} type="button">
-            Close
-          </Button>
-        </div>
-      </header>
+	<!-- Drawer - lazy loaded -->
+	{#if Drawer && Button && RadioButton}
+		<svelte:component this={Drawer} {isOpen} {handleCloseDrawer}>
+			<div>
+				<header class="items-center border-b-2 border-tile-600 py-4 px-3 flex flex-row justify-between">
+					<h1 class="text-xl font-bold text-text-300">Color theme</h1>
+					<div class="w-fit">
+						<svelte:component this={Button} onClick={handleCloseDrawer} type="button">
+							Close
+						</svelte:component>
+					</div>
+				</header>
 
-		<form oninput={onTheme} class="flex flex-col gap-2 mt-8 px-3">
-      <RadioButton
-        selectableFor="light"
-        onClick={onTheme}
-        value="light"
-        isSelected={themeValue === 'light'}
-        text="Light"
-        className="text-lg"
-        />
-        <RadioButton
-        selectableFor="dim"
-        onClick={onTheme}
-        value="dim"
-        isSelected={themeValue === 'dim'}
-        text="Dim"
-        className="text-lg"
-        />
-        <RadioButton
-        onClick={onTheme}
-        className="text-lg"
-        selectableFor="dark"
-        value="dark"
-        isSelected={themeValue === 'Dark'}
-        text="Dark"
-        />
-		</form>
-  </div>
-	</Drawer>
+				<form oninput={onTheme} class="flex flex-col gap-2 mt-8 px-3">
+					<svelte:component 
+						this={RadioButton}
+						selectableFor="light"
+						onClick={onTheme}
+						value="light"
+						isSelected={themeValue === 'light'}
+						text="Light"
+						className="text-lg"
+					/>
+					<svelte:component 
+						this={RadioButton}
+						selectableFor="dim"
+						onClick={onTheme}
+						value="dim"
+						isSelected={themeValue === 'dim'}
+						text="Dim"
+						className="text-lg"
+					/>
+					<svelte:component 
+						this={RadioButton}
+						onClick={onTheme}
+						className="text-lg"
+						selectableFor="dark"
+						value="dark"
+						isSelected={themeValue === 'Dark'}
+						text="Dark"
+					/>
+				</form>
+			</div>
+		</svelte:component>
+	{/if}
 
 	<!-- Desktop Sidebar -->
 	<Sidebar session={session} {handleOpenDrawer} />
@@ -371,18 +394,25 @@
 	<!-- Bottom Navigation - Mobile only -->
 	<BottomNavigation />
 
-  <!-- Chat Widget - only shows on desktop -->
-  <ChatWidget />
+  <!-- Chat Widget - lazy loaded, only shows on desktop -->
+  {#if ChatWidget}
+    <svelte:component this={ChatWidget} />
+  {/if}
 
-  <!-- Toast notifications -->
-  <Toaster 
-    position="bottom-right" 
-    richColors={true}
-    closeButton={true}
-    visibleToasts={5}
-    expand={false}
-  />
+  <!-- Toast notifications - lazy loaded -->
+  {#if Toaster}
+    <svelte:component 
+      this={Toaster} 
+      position="bottom-right" 
+      richColors={true}
+      closeButton={true}
+      visibleToasts={5}
+      expand={false}
+    />
+  {/if}
 
-  <!-- Onboarding Modal - Shows automatically for new users -->
-  <Onboarding isOpen={showOnboarding} handleCloseModal={handleCloseOnboarding} />
+  <!-- Onboarding Modal - lazy loaded, shows automatically for new users -->
+  {#if Onboarding && showOnboarding}
+    <svelte:component this={Onboarding} isOpen={showOnboarding} handleCloseModal={handleCloseOnboarding} />
+  {/if}
 
