@@ -160,36 +160,12 @@
   */
 
 
-/* ReadexPro font faces */
-
-@font-face {
-  font-family: 'ReadexPro';
-  src: url('/fonts/ReadexPro-ExtraLight.ttf') format('truetype');
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'ReadexPro';
-  src: url('/fonts/ReadexPro-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
+/* ReadexPro font faces - Optimized to 2 weights for faster loading */
 
 @font-face {
   font-family: 'ReadexPro';
   src: url('/fonts/ReadexPro-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'ReadexPro';
-  src: url('/fonts/ReadexPro-Medium.ttf') format('truetype');
-  font-weight: 500;
+  font-weight: 100 500; /* Light to Medium weights use Regular */
   font-style: normal;
   font-display: swap;
 }
@@ -197,15 +173,7 @@
 @font-face {
   font-family: 'ReadexPro';
   src: url('/fonts/ReadexPro-SemiBold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'ReadexPro';
-  src: url('/fonts/ReadexPro-bold.ttf') format('truetype');
-  font-weight: 700;
+  font-weight: 600 900; /* SemiBold to Black weights use SemiBold */
   font-style: normal;
   font-display: swap;
 }
