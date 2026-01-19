@@ -651,9 +651,18 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     where each sentence looks like 
 
         arabic: {text: string},
-        english: { text: string},
+        english: {text: string},
         transliteration: {text: string},
         ${storyType === 'conversation' ? 'speaker: {name: string},' : ''}
+        wordAlignments: [
+          {arabic: string, english: string, transliteration: string},
+          ...
+        ]
+
+    IMPORTANT: For each sentence, you MUST provide word-by-word alignments in the wordAlignments array.
+    Each Arabic word should map to its English meaning and transliteration.
+    If one Arabic word translates to multiple English words, combine them (e.g., "I am" for واحد Arabic word).
+    The wordAlignments array should have one entry per Arabic word in the sentence.
   `;
 
 	try {

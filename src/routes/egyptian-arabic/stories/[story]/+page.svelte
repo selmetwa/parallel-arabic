@@ -1,20 +1,16 @@
 <script lang="ts">
 	import cn from 'classnames';
-	// import Sentence from './components/Sentence.svelte';
-	// import WordModal from './components/WordModal.svelte';
-  import Sentence from '$lib/components/dialect-shared/story/components/Sentence.svelte';
-  import WordModal from '$lib/components/dialect-shared/story/components/WordModal.svelte';
-	import IntersectionObserver from '$lib/components/IntersectionObserver.svelte';
-	import RadioButton from '$lib/components/RadioButton.svelte';
+	import Sentence from '$lib/components/dialect-shared/story/components/Sentence.svelte';
+	import WordModal from '$lib/components/dialect-shared/story/components/WordModal.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import { getWordObjectToSave } from '$lib/helpers/get-word-object-to-save';
 	import Checkmark from '$lib/components/Checkmark.svelte';
 	import { PUBLIC_PRICE_ID } from '$env/static/public';
 	import Audio from '$lib/components/Audio.svelte';
-	// import { Mode, type KeyWord } from './types';
-  import { Mode, type KeyWord } from '$lib/types/index';
+	import AudioButton from '$lib/components/AudioButton.svelte';
+	import { Mode, type KeyWord } from '$lib/types/index';
 
-  let { data, activeWordObj = $bindable({
+	let { data, activeWordObj = $bindable({
 		english: '',
 		arabic: '',
 		transliterated: '',
@@ -25,11 +21,14 @@
 
 	const isPaywalled = data.isPaywalled;
 
-	let mode = $state(Mode.SingleText);
+	// Display mode and toggles
+	let mode = $state(Mode.Condensed);
+	let showEnglish = $state(true);
+	let showTransliteration = $state(true);
+
 	const sentences = data.sentences;
 
 	let timer: ReturnType<typeof setTimeout> | null = null;
-	let index = $state(0);
 	let isLoading = $state(false);
 	let isModalOpen = $state(false);
 	let response = $state('');
@@ -44,24 +43,11 @@
 			return null;
 		}
 	});
-	
+
 	interface Props {
 		data: any;
 		activeWordObj?: KeyWord;
 	}
-
-	$effect(() => {
-		if (index) {
-			activeWordObj = {
-				english: '',
-				arabic: '',
-				transliterated: '',
-				description: '',
-				isLoading: false,
-				type: ''
-			};
-		}
-	});
 
 	function closeModal() {
 		timer = setTimeout(() => {
@@ -77,38 +63,12 @@
 		isModalOpen = false;
 	}
 
-	function next() {
-		if (index < sentences.length - 1) {
-			index += 1;
-		}
-	}
-
-	function previous() {
-		if (index > 0) {
-			index -= 1;
-		}
-	}
-
-	const modeOptions = [
-		{ value: Mode.SingleText, text: 'Arabic' },
-		{ value: Mode.BiText, text: 'English & Arabic' },
-		{ value: Mode.SentanceView, text: 'English, Arabic, and Transliteration' }
-	];
-
-	function updateMode(event: Event) {
-		mode = (event.target as HTMLInputElement).value as Mode;
-	}
-
 	function setActiveWord(word: KeyWord) {
 		if (timer) {
 			clearTimeout(timer);
 		}
 		activeWordObj = word;
-
-		if (mode !== Mode.SentanceView) {
-			isModalOpen = true;
-			return;
-		}
+		isModalOpen = true;
 	}
 
 	const saveWord = async () => {
@@ -117,7 +77,7 @@
 		const type = activeWordObj.type;
 
 		const result = await getWordObjectToSave(wordToSave, type);
-		
+
 		if (result.error) {
 			error = result.error;
 			response = '';
@@ -152,20 +112,20 @@
 		});
 
 		isLoading = false;
-		const data = await res.json();
+		const fetchData = await res.json();
 
 		if (
 			[
 				'You have already saved this',
 				'You must have an account do that',
 				'Something went wrong'
-			].includes(data.message)
+			].includes(fetchData.message)
 		) {
-			error = data.message;
+			error = fetchData.message;
 			response = '';
 		} else {
 			error = '';
-			response = data.message;
+			response = fetchData.message;
 		}
 
 		setTimeout(() => {
@@ -192,72 +152,59 @@
 			<!-- Title Section -->
 			<div class="py-6 text-center">
 				<h1 class="text-3xl sm:text-4xl font-bold text-text-300 tracking-tight">
-					<span class="block text-xl sm:text-2xl text-text-200 mb-1">
+					<span class="block text-xl sm:text-2xl text-text-200 mb-1" dir="rtl">
 						{data.title.arabic}
 					</span>
 					<span class="block">
 						{data.title.english}
 					</span>
 				</h1>
+				<p class="mt-2 text-sm text-text-200">{sentences.length} sentences</p>
 			</div>
-			
+
 			<!-- Controls Section -->
-			<div class="pb-6 grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+			<div class="pb-6 space-y-4">
 				<!-- Audio Controls -->
-				<div class="bg-tile-300 border border-tile-500 px-4 py-4 shadow-lg">
-					<div class="flex justify-between items-center mb-3">
-						<h3 class="text-sm font-semibold text-text-200 tracking-wide">Audio</h3>
-						{#if mode === Mode.SentanceView}
-							<div class="flex items-center gap-3">
-								{#if index > 0}
-									<Button onClick={previous} type="button">Previous</Button>
-								{/if}
-                <div class="flex flex-row items-center gap-3">
-                  <span class="text-text-300 font-semibold">
-                    {index + 1}
-                  </span>
-                  <span>/</span>
-                  <span class="text-text-300 font-semibold">
-                    {sentences.length}
-                  </span>
-                </div>
-								{#if index < sentences.length - 1}
-									<Button onClick={next} type="button">Next</Button>
-								{/if}
-							</div>
-						{/if}
+				{#if data.audio}
+					<div class="bg-tile-300 border border-tile-500 px-4 py-4 shadow-lg rounded-lg">
+						<h3 class="text-sm font-semibold text-text-200 tracking-wide mb-3">Story Audio</h3>
+						<Audio src={data.audio}></Audio>
 					</div>
-					{#if data.audio}
-						{#if mode === Mode.SentanceView}
-							<Audio src={sentences[index].arabic.audio}></Audio>
-						{:else}
-							<Audio src={data.audio}></Audio>
-						{/if}
-					{:else}
-						<div class="flex items-center justify-center py-4">
-							<p class="text-text-300 text-sm">No audio available</p>
-						</div>
-					{/if}
-				</div>
-				
-				<!-- Mode Selection -->
-				<div class="bg-tile-300 border border-tile-500 px-4 py-4 shadow-lg">
-					<fieldset>
-						<legend class="text-sm font-semibold text-text-200 mb-3 tracking-wide">Reading Mode</legend>
-						<div class="space-y-2">
-							{#each modeOptions as option}
-								<RadioButton
-									wrapperClass="!p-2 w-full"
-									className="text-sm !p-2 font-medium w-full text-left"
-									selectableFor={option.value}
-									value={option.value}
-									text={option.text}
-									isSelected={option.value === mode}
-									onClick={updateMode}
+				{/if}
+
+				<!-- Display Toggles -->
+				<div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center sm:justify-end">
+					<div class="flex items-center gap-6 py-2 px-4 bg-tile-500/50 rounded-lg">
+						<span class="text-sm text-text-200 font-medium">Show:</span>
+
+						<!-- English Toggle -->
+						<label class="flex items-center gap-2 cursor-pointer">
+							<div class="relative">
+								<input
+									type="checkbox"
+									bind:checked={showEnglish}
+									class="sr-only peer"
 								/>
-							{/each}
-						</div>
-					</fieldset>
+								<div class="w-10 h-5 bg-tile-600 rounded-full peer peer-checked:bg-blue-500 transition-colors"></div>
+								<div class="absolute left-0.5 top-0.5 w-4 h-4 bg-white rounded-full transition-transform peer-checked:translate-x-5"></div>
+							</div>
+							<span class="text-sm text-text-300">English</span>
+						</label>
+
+						<!-- Transliteration Toggle -->
+						<label class="flex items-center gap-2 cursor-pointer">
+							<div class="relative">
+								<input
+									type="checkbox"
+									bind:checked={showTransliteration}
+									class="sr-only peer"
+								/>
+								<div class="w-10 h-5 bg-tile-600 rounded-full peer peer-checked:bg-blue-500 transition-colors"></div>
+								<div class="absolute left-0.5 top-0.5 w-4 h-4 bg-white rounded-full transition-transform peer-checked:translate-x-5"></div>
+							</div>
+							<span class="text-sm text-text-300">Transliteration</span>
+						</label>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -271,210 +218,203 @@
 		</div>
 	{/if}
 
-	{#if mode === Mode.SentanceView}
-		<section
-			class="grid grid-cols-1 grid-rows-4 divide-x divide-tile-600 bg-tile-300 sm:grid-cols-2 sm:grid-rows-2"
-		>
-			<Sentence
-				{index}
-				sentence={sentences[index]}
-				{setActiveWord}
-				type="english"
-				classname="row-[2] sm:row-[1] sm:col-[1]"
-				{mode}
-				dialect="egyptian-arabic"
-			/>
-			<Sentence
-				{index}
-				classname="row-[1] sm:row-[1] sm:col-[2]"
-				sentence={sentences[index]}
-				{setActiveWord}
-				type="arabic"
-				{mode}
-				dialect="egyptian-arabic"
-			/>
-			<div
-				class="col-[1] row-[4] flex flex-col items-center justify-center border-b border-tile-600 px-5 py-10 text-text-300 sm:row-[2]"
-			>
-				{#if activeWordObj.description || activeWordObj.isLoading}
-					<div class="flex flex-col items-center p-4 w-full">
-						<p class="text-4xl text-text-300 mb-4" dir={activeWordObj.type === 'arabic' ? 'rtl' : 'ltr'}>
-							{activeWordObj.type === 'transliteration' ? activeWordObj.transliterated : 
-							 activeWordObj.type === 'english' ? activeWordObj.english : 
-							 activeWordObj.arabic || activeWordObj.transliterated || activeWordObj.english}
-						</p>
-						
-						{#if activeWordObj.description && !activeWordObj.isLoading}
-							<div class="bg-tile-300 border border-tile-500 p-4 rounded mb-4 w-full">
-								<h4 class="text-sm font-bold text-text-200 mb-2">Definition</h4>
-								{#if parsedDescription}
-									<!-- Arabic and Transliteration from definition -->
-									{#if parsedDescription.arabic || parsedDescription.transliteration}
-										<div class="mb-3 pb-3 border-b border-tile-400">
-											{#if parsedDescription.arabic}
-												<p class="text-2xl text-text-300 font-bold mb-1" dir="rtl">{parsedDescription.arabic}</p>
-											{/if}
-											{#if parsedDescription.transliteration}
-												<p class="text-lg text-text-200 italic">{parsedDescription.transliteration}</p>
-											{/if}
-										</div>
-									{/if}
-									
-									<p class="text-text-300 leading-relaxed mb-2">{parsedDescription.definition}</p>
-									
-									{#if parsedDescription.contextualMeaning}
-										<p class="text-text-200 text-sm mt-2 italic">Context: {parsedDescription.contextualMeaning}</p>
-									{/if}
+	<!-- Condensed View: Word-by-word display with optional alignments -->
+		<!-- Condensed View: Transliteration stacked above Arabic, English as sentence subtitle -->
+		<div class="space-y-6 px-4 py-6">
+			{#each sentences as sentence, sentenceIndex}
+				{@const arabicWords = sentence.arabic?.text?.split(' ') || []}
 
-									{#if parsedDescription.breakdown && parsedDescription.breakdown.length > 0}
-										<div class="mt-3 pt-3 border-t border-tile-400">
-											<p class="text-sm font-bold text-text-200 mb-2">Breakdown:</p>
-											<div class="space-y-2">
-												{#each parsedDescription.breakdown as item}
-													<div class="flex flex-col text-sm">
-														<div class="flex items-baseline gap-2">
-															<span class="font-bold text-text-300" dir="rtl">{item.arabic}</span>
-															<span class="text-text-200">({item.word})</span>
-														</div>
-														<div class="text-text-200 ml-2">
-															<span class="italic">{item.transliteration}</span>
-															<span> - {item.meaning}</span>
-														</div>
-													</div>
-												{/each}
-											</div>
-										</div>
-									{/if}
-								{:else}
-									<p class="text-text-300 leading-relaxed">{activeWordObj.description}</p>
-								{/if}
-							</div>
-						{/if}
-
-						{#if activeWordObj.isLoading}
-							<div role="status">
-								<svg
-									aria-hidden="true"
-									class="my-3 h-12 w-12 animate-spin fill-tile-500 text-text-200 dark:text-text-200"
-									viewBox="0 0 100 101"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path
-										d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
-										fill="currentColor"
-									/>
-									<path
-										d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
-										fill="currentFill"
-									/>
-								</svg>
-								<span class="sr-only">Loading...</span>
-							</div>
-						{/if}
-						<div class="mt-2 flex w-full flex-row items-center gap-2">
-							<Button type="button" onClick={saveWord}>
-								{#if isLoading}
-									<span class="mx-auto flex w-fit flex-row items-center gap-2 text-center">
-										<div role="status">
-											<svg
-												aria-hidden="true"
-												class="h-[24px] w-[24px] animate-spin fill-tile-300 text-text-200 dark:text-text-200"
-												viewBox="0 0 100 101"
-												fill="none"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path
-													d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
-													fill="currentColor"
-												/>
-												<path
-													d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
-													fill="currentFill"
-												/>
-											</svg>
-											<span class="sr-only">Loading...</span>
-										</div>
-										Saving
-									</span>
-								{:else if response && !error}
-									<span class="mx-auto flex w-fit flex-row items-center gap-2 text-center">
-										<Checkmark></Checkmark>
-										Saved
-									</span>
-								{:else}
-									Save Word
-								{/if}
-							</Button>
+				<section
+					data-sentence-index={sentenceIndex}
+					class="bg-tile-400 border-2 border-tile-600 rounded-xl p-6 transition-all duration-300"
+				>
+					<!-- Speaker label -->
+					{#if sentence.arabic?.speaker}
+						<div class="mb-3">
+							<p class="text-sm font-semibold text-text-300">{sentence.arabic.speaker}</p>
 						</div>
-					</div>
-				{:else}
-					<h3 class="text-xl font-semibold">No Active Word</h3>
-					<p class="text-lg">Click on a word to get a full definition.</p>
-				{/if}
-			</div>
-			<Sentence
-				{index}
-				classname="row-[3] sm:row-[2] sm:col-[2]"
-				sentence={sentences[index]}
-				{setActiveWord}
-				type="transliteration"
-				{mode}
-				dialect="egyptian-arabic"
-			/>
-		</section>
-		{#if mode !== Mode.SentanceView}
-			<div class="flex flex-col items-center gap-2 py-6">
-				<div class="flex w-fit flex-row items-center gap-3">
-					{#if index > 0}
-						<Button onClick={previous} type="button">Previous</Button>
 					{/if}
-					<span class="text-text-300 font-semibold">
-						{index + 1} / {sentences.length}
-					</span>
-					{#if index < sentences.length - 1}
-						<Button onClick={next} type="button">Next</Button>
-					{/if}
-				</div>
-			</div>
-		{/if}
-	{:else}
-		{#each sentences as sentence}
-			<IntersectionObserver top={100} bottom={100} preventRefetch={true} let:intersecting let:shouldLoad>
-				{#if shouldLoad}
-					<section
-						class={cn(
-							'divide-tile-600 bg-tile-300 sm:grid',
-							{ 'grid-cols-1 grid-rows-1': mode === Mode.SingleText },
-							{ 'flex flex-col-reverse divide-x sm:grid-cols-2 sm:grid-rows-1': mode === Mode.BiText }
-						)}
-					>
-						{#if mode === Mode.BiText}
+
+					<!-- English translation with drag-to-select (if showEnglish is true) -->
+					{#if showEnglish}
+						<div class="mb-4 pb-3 border-b border-tile-600">
 							<Sentence
 								{sentence}
 								{setActiveWord}
 								type="english"
-								index={sentences.indexOf(sentence)}
+								index={sentenceIndex}
 								{mode}
 								dialect="egyptian-arabic"
-								{intersecting}
+								classname="!bg-transparent !border-0 !shadow-none !p-0"
+								innerClassname="justify-center"
+								size="sm"
 							/>
+						</div>
+					{/if}
+
+					<!-- Word-aligned display (when wordAlignments available) OR fallback -->
+					{#if sentence.wordAlignments?.length}
+						<!-- Word-by-word aligned display -->
+						<div class="flex flex-wrap gap-3 sm:gap-4 justify-center" dir="rtl">
+							{#each sentence.wordAlignments as wordAlign, wordIndex}
+								<button
+									class="flex flex-col items-center px-2 py-2 sm:px-3 sm:py-3 rounded-lg hover:bg-tile-500 hover:shadow-md transition-all duration-200 cursor-pointer group border-2 border-transparent hover:border-tile-600"
+									onclick={async (e) => {
+										e.stopPropagation();
+										const cleanWord = wordAlign.arabic.replace(/[،,]/g, '');
+
+										setActiveWord({
+											english: '',
+											arabic: '',
+											transliterated: '',
+											description: '',
+											isLoading: true,
+											type: ''
+										});
+
+										isModalOpen = true;
+
+										try {
+											const res = await fetch('/api/definition-sentence', {
+												method: 'POST',
+												headers: { 'Content-Type': 'application/json' },
+												body: JSON.stringify({
+													word: cleanWord,
+													type: 'arabic',
+													sentence: {
+														arabic: sentence.arabic.text,
+														english: sentence.english.text,
+														transliteration: sentence.transliteration.text
+													},
+													dialect: 'egyptian-arabic'
+												})
+											});
+
+											const data = await res.json();
+
+											setActiveWord({
+												english: wordAlign.english,
+												arabic: cleanWord,
+												transliterated: wordAlign.transliteration,
+												description: data.message?.message?.content || '',
+												isLoading: false,
+												type: 'arabic'
+											});
+										} catch (err) {
+											console.error('Error fetching definition:', err);
+											setActiveWord({
+												english: wordAlign.english,
+												arabic: cleanWord,
+												transliterated: wordAlign.transliteration,
+												description: '',
+												isLoading: false,
+												type: 'arabic'
+											});
+										}
+									}}
+								>
+									<!-- Transliteration (top) -->
+									{#if showTransliteration}
+										<span class="text-xs sm:text-sm text-text-200 italic mb-0.5 opacity-75 group-hover:opacity-100 transition-opacity">
+											{wordAlign.transliteration}
+										</span>
+									{/if}
+									<!-- English (middle) -->
+									{#if showEnglish}
+										<span class="text-xs sm:text-sm text-text-200 mb-1 opacity-90 group-hover:opacity-100 transition-opacity">
+											{wordAlign.english}
+										</span>
+									{/if}
+									<!-- Arabic (bottom, largest) -->
+									<span class="text-xl sm:text-2xl md:text-3xl font-semibold text-text-300">
+										{wordAlign.arabic}
+									</span>
+								</button>
+							{/each}
+						</div>
+					{:else}
+						<!-- Fallback: Sentence-level display for older stories without word alignments -->
+						{#if showTransliteration}
+							<p class="text-base sm:text-lg text-text-200 italic text-center mb-3 leading-relaxed">
+								{sentence.transliteration?.text || ''}
+							</p>
 						{/if}
-						<Sentence
-							{sentence}
-							type="arabic"
-							{setActiveWord}
-							{mode}
-							index={sentences.indexOf(sentence)}
-							dialect="egyptian-arabic"
-							{intersecting}
-						/>
-					</section>
-				{:else}
-					<!-- Placeholder to maintain layout while sentence is not in view -->
-					<div class="min-h-[200px] bg-tile-300 border-b border-tile-600"></div>
-				{/if}
-			</IntersectionObserver>
-		{/each}
-	{/if}
+
+						<!-- Arabic words - clickable for definitions -->
+						<div class="flex flex-wrap gap-2 sm:gap-3 justify-center" dir="rtl">
+							{#each arabicWords as arabicWord, wordIndex}
+								<button
+									class="px-2 py-1 sm:px-3 sm:py-2 rounded-lg hover:bg-tile-500 hover:shadow-md transition-all duration-200 cursor-pointer group border-2 border-transparent hover:border-tile-600 text-xl sm:text-2xl md:text-3xl font-semibold text-text-300"
+									onclick={async (e) => {
+										e.stopPropagation();
+										const cleanWord = arabicWord.replace(/[،,]/g, '');
+
+										setActiveWord({
+											english: '',
+											arabic: '',
+											transliterated: '',
+											description: '',
+											isLoading: true,
+											type: ''
+										});
+
+										isModalOpen = true;
+
+										try {
+											const res = await fetch('/api/definition-sentence', {
+												method: 'POST',
+												headers: { 'Content-Type': 'application/json' },
+												body: JSON.stringify({
+													word: cleanWord,
+													type: 'arabic',
+													sentence: {
+														arabic: sentence.arabic.text,
+														english: sentence.english.text,
+														transliteration: sentence.transliteration.text
+													},
+													dialect: 'egyptian-arabic'
+												})
+											});
+
+											const data = await res.json();
+
+											setActiveWord({
+												english: '',
+												arabic: cleanWord,
+												transliterated: '',
+												description: data.message?.message?.content || '',
+												isLoading: false,
+												type: 'arabic'
+											});
+										} catch (err) {
+											console.error('Error fetching definition:', err);
+											setActiveWord({
+												english: '',
+												arabic: cleanWord,
+												transliterated: '',
+												description: '',
+												isLoading: false,
+												type: 'arabic'
+											});
+										}
+									}}
+								>
+									{arabicWord}
+								</button>
+							{/each}
+						</div>
+					{/if}
+
+					<!-- Footer with sentence number and audio -->
+					<div class="mt-4 pt-3 border-t border-tile-600 flex items-center justify-between">
+						<span class="text-xs text-text-200">Sentence {sentenceIndex + 1} of {sentences.length}</span>
+						{#if sentence.arabic?.audio}
+							<Audio src={sentence.arabic.audio}></Audio>
+						{:else}
+							<AudioButton text={sentence.arabic.text} dialect="egyptian-arabic" />
+						{/if}
+					</div>
+				</section>
+			{/each}
+		</div>
 {/if}

@@ -1,33 +1,43 @@
-import { getAllStories } from '$lib/helpers/story-helpers';
+import { getStoriesPaginated } from '$lib/helpers/story-helpers';
+import { BLOCKED_STORY_IDS } from '$lib/constants/stories/blocked';
+
+const PAGE_SIZE = 12;
 
 export const load = async ({ parent }) => {
   // Get session and subscription status from layout
   const { session, isSubscribed, user } = await parent();
-  
-  // Fetch all generated stories in one efficient query
-  const storiesResult = await getAllStories();
-  
-  let allUserGeneratedStories: object[] = [];
-  
+
+  // Fetch initial page of stories with pagination
+  const storiesResult = await getStoriesPaginated(null, PAGE_SIZE);
+
+  let initialStories: object[] = [];
+  let nextCursor: string | null = null;
+  let hasMore = false;
+
   if (storiesResult.success && storiesResult.stories) {
-    // Add dialect display names to each story
-    allUserGeneratedStories = storiesResult.stories.map((story: object) => {
-      const storyWithDialect = story as { dialect: string };
-      return {
-        ...story,
-        dialect_name: getDialectDisplayName(storyWithDialect.dialect)
-      };
-    });
+    // Filter blocked stories and add dialect display names
+    initialStories = storiesResult.stories
+      .filter((story: any) => !BLOCKED_STORY_IDS.includes(story.id))
+      .map((story: object) => {
+        const storyWithDialect = story as { dialect: string };
+        return {
+          ...story,
+          dialect_name: getDialectDisplayName(storyWithDialect.dialect)
+        };
+      });
+    nextCursor = storiesResult.nextCursor || null;
+    hasMore = storiesResult.hasMore || false;
   } else if (!storiesResult.success) {
     console.error('Error fetching stories:', storiesResult.error);
   }
 
-  // Stories are already sorted by created_at desc from the query
   return {
     session,
     isSubscribed,
-    hasActiveSubscription: isSubscribed, // Keep for backward compatibility
-    user_generated_stories: allUserGeneratedStories,
+    hasActiveSubscription: isSubscribed,
+    user_generated_stories: initialStories,
+    nextCursor,
+    hasMore,
     user
   };
 };

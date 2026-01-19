@@ -23,12 +23,13 @@
 		setActiveWord: (word: any) => void;
 		type?: string;
 		classname?: string;
-    innerClassname?: string;
+		innerClassname?: string;
 		index: any;
 		mode: any;
 		isGenerated?: boolean;
 		dialect: Dialect;
 		intersecting?: boolean;
+		size?: 'sm' | 'md' | 'lg';
 	}
 
 	let {
@@ -41,8 +42,25 @@
 		mode,
 		isGenerated,
 		dialect,
-		intersecting = true
+		intersecting = true,
+		size = 'lg'
 	}: Props = $props();
+
+	// Text size classes based on size prop
+	const sizeClasses = {
+		sm: {
+			arabic: 'text-lg md:text-xl',
+			other: 'text-base md:text-lg'
+		},
+		md: {
+			arabic: 'text-xl md:text-2xl',
+			other: 'text-lg md:text-xl'
+		},
+		lg: {
+			arabic: 'text-3xl md:text-5xl',
+			other: 'text-2xl md:text-4xl'
+		}
+	};
 
 	let _sentence = $derived((sentence && type && (type in sentence)) ? sentence[type as keyof TWholeSentence] : { speaker: '', text: '' });
 	let isLoading = $state(false);
@@ -50,6 +68,7 @@
 	let response = $state('');
 
 	let isArabic = $derived(type === 'arabic');
+	let textSizeClass = $derived(isArabic ? sizeClasses[size].arabic : sizeClasses[size].other);
 	let words = $derived(_sentence?.text ? (isArabic ? _sentence.text.split(' ').reverse() : _sentence.text.split(' ')) : []);
 
 	// Cache for storing word definitions
@@ -448,7 +467,7 @@
 		{#if isArabic}
 			{#each words.reverse() as word, index}
 				<button
-					class={cn("transition-all rounded-lg px-3 py-2 text-3xl md:text-5xl duration-300 cursor-pointer", {
+					class={cn("transition-all rounded-lg px-3 py-2 duration-300 cursor-pointer", textSizeClass, {
 						"bg-blue-200 border-2 border-blue-400 shadow-md": isWordSelected(index),
 						"border-2 border-transparent hover:bg-tile-500 hover:border-tile-600 hover:shadow-md": !isWordSelected(index)
 					})}
@@ -473,7 +492,7 @@
 		{:else}
 			{#each words as word, index}
 				<button
-					class={cn("transition-all rounded-lg px-3 py-2 text-2xl md:text-4xl duration-300 cursor-pointer", {
+					class={cn("transition-all rounded-lg px-3 py-2 duration-300 cursor-pointer", textSizeClass, {
 						"bg-blue-200 border-2 border-blue-400 shadow-md": isWordSelected(index),
 						"border-2 border-transparent hover:bg-tile-500 hover:border-tile-600 hover:shadow-md": !isWordSelected(index)
 					})}

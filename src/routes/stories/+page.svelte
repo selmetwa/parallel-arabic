@@ -15,13 +15,20 @@
 	let filterDifficulty = $state<string>('all');
 	let sortBy = $state<'newest' | 'oldest' | 'difficulty' | 'title'>('newest');
 
+	// Pagination state
+	let allLoadedStories = $state<any[]>([]);
+	let nextCursor = $state<string | null>(data.nextCursor || null);
+	let hasMore = $state(data.hasMore || false);
+	let isLoadingMore = $state(false);
+	let loadMoreTrigger: HTMLDivElement | null = $state(null);
+
 	// Function to filter out incomplete sentences
 	function filterValidSentences(sentences: any[]) {
 		if (!Array.isArray(sentences)) return [];
-		return sentences.filter(sentence => 
-			sentence && 
-			sentence.arabic?.text && 
-			sentence.english?.text && 
+		return sentences.filter(sentence =>
+			sentence &&
+			sentence.arabic?.text &&
+			sentence.english?.text &&
 			sentence.transliteration?.text &&
 			typeof sentence.arabic.text === 'string' &&
 			typeof sentence.english.text === 'string' &&
@@ -32,31 +39,146 @@
 		);
 	}
 
-	let userGeneratedStories = $derived.by(() => {
-		const output = []
+	// Transform initial server data
+	function transformStory(story: any) {
+		const storyBody = story.story_body;
+		const validSentences = filterValidSentences(storyBody?.sentences || []);
+		return {
+			id: story.id,
+			title: `${storyBody?.title?.english || ''} / ${storyBody?.title?.arabic || ''}`,
+			description: story.description,
+			createdAt: story.created_at,
+			difficulty: story.difficulty,
+			dialect: story.dialect,
+			dialectName: story.dialect_name,
+			length: validSentences.length
+		};
+	}
 
-		for (const story of data.user_generated_stories) {
-			const storyBody = story.story_body
+	// Initialize with server data
+	$effect(() => {
+		if (data.user_generated_stories && allLoadedStories.length === 0) {
+			allLoadedStories = data.user_generated_stories
+				.filter((story: any) => !BLOCKED_STORY_IDS.includes(story.id))
+				.map(transformStory);
+		}
+	});
 
-			if (BLOCKED_STORY_IDS.includes(story.id)) {
-				continue
+	// Fetch more stories from the API
+	async function loadMoreStories() {
+		if (isLoadingMore || !hasMore || !nextCursor) return;
+
+		isLoadingMore = true;
+
+		try {
+			const params = new URLSearchParams({
+				cursor: nextCursor,
+				pageSize: '12'
+			});
+
+			if (filterDialect !== 'all') {
+				params.set('dialect', filterDialect);
+			}
+			if (filterDifficulty !== 'all') {
+				params.set('difficulty', filterDifficulty);
 			}
 
-			// Filter valid sentences and get the count
-			const validSentences = filterValidSentences(storyBody?.sentences || []);
+			const res = await fetch(`/api/stories?${params}`);
+			const result = await res.json();
 
-			output.push({
-				id: story.id,
-				title: `${storyBody?.title?.english || ''} / ${storyBody?.title?.arabic || ''}`,
-				description: story.description,
-				createdAt: story.created_at,
-				difficulty: story.difficulty,
-				dialect: story.dialect,
-				dialectName: story.dialect_name,
-				length: validSentences.length
-			})
+			if (result.stories) {
+				allLoadedStories = [...allLoadedStories, ...result.stories];
+				nextCursor = result.nextCursor;
+				hasMore = result.hasMore;
+			}
+		} catch (error) {
+			console.error('Error loading more stories:', error);
+		} finally {
+			isLoadingMore = false;
 		}
-		return output
+	}
+
+	// Reset and reload when filters change (except sorting which is client-side)
+	async function resetAndReload() {
+		isLoadingMore = true;
+		allLoadedStories = [];
+		nextCursor = null;
+		hasMore = false;
+
+		try {
+			const params = new URLSearchParams({ pageSize: '12' });
+
+			if (filterDialect !== 'all') {
+				params.set('dialect', filterDialect);
+			}
+			if (filterDifficulty !== 'all') {
+				params.set('difficulty', filterDifficulty);
+			}
+
+			const res = await fetch(`/api/stories?${params}`);
+			const result = await res.json();
+
+			if (result.stories) {
+				allLoadedStories = result.stories;
+				nextCursor = result.nextCursor;
+				hasMore = result.hasMore;
+			}
+		} catch (error) {
+			console.error('Error reloading stories:', error);
+		} finally {
+			isLoadingMore = false;
+		}
+	}
+
+	// Handler for filter changes - called from select elements
+	function handleFilterChange() {
+		resetAndReload();
+	}
+
+	// Setup IntersectionObserver for infinite scroll
+	let observer: IntersectionObserver | null = null;
+
+	$effect(() => {
+		// Cleanup previous observer
+		if (observer) {
+			observer.disconnect();
+			observer = null;
+		}
+
+		if (!loadMoreTrigger) return;
+
+		observer = new IntersectionObserver(
+			(entries) => {
+				if (entries[0].isIntersecting && hasMore && !isLoadingMore) {
+					loadMoreStories();
+				}
+			},
+			{ rootMargin: '200px' }
+		);
+
+		observer.observe(loadMoreTrigger);
+
+		return () => {
+			if (observer) {
+				observer.disconnect();
+			}
+		};
+	});
+
+	// Derived: client-side filtering and sorting of loaded stories
+	let userGeneratedStories = $derived.by(() => {
+		let filtered = [...allLoadedStories];
+
+		// Client-side search filter
+		if (searchQuery.trim()) {
+			const query = searchQuery.toLowerCase();
+			filtered = filtered.filter(story =>
+				story.title?.toLowerCase().includes(query) ||
+				story.description?.toLowerCase().includes(query)
+			);
+		}
+
+		return filtered;
 	})
 
 	function openPaywallModal() {
@@ -93,32 +215,12 @@
 		'advanced': 3,
 	};
 
-	// Filter and sort user-generated stories
+	// Filter (search) and sort user-generated stories
+	// Note: dialect/difficulty filtering happens server-side, only search and sorting here
 	const filteredAndSortedStories = $derived.by(() => {
 		let filtered = [...userGeneratedStories];
 
-		// Filter by search query
-		if (searchQuery.trim()) {
-			const query = searchQuery.toLowerCase();
-			filtered = filtered.filter(story =>
-				story.title?.toLowerCase().includes(query) ||
-				story.description?.toLowerCase().includes(query)
-			);
-		}
-
-		// Filter by dialect
-		if (filterDialect !== 'all') {
-			filtered = filtered.filter(story => story.dialect === filterDialect);
-		}
-
-		// Filter by difficulty
-		if (filterDifficulty !== 'all') {
-			filtered = filtered.filter(story => 
-				story.difficulty?.toLowerCase() === filterDifficulty.toLowerCase()
-			);
-		}
-
-		// Sort
+		// Sort (client-side sorting of loaded stories)
 		if (sortBy === 'newest') {
 			filtered.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
 		} else if (sortBy === 'oldest') {
@@ -279,6 +381,7 @@
 					<select
 						id="dialect-filter-stories"
 						bind:value={filterDialect}
+						onchange={handleFilterChange}
 						class="w-full px-4 py-2.5 border border-tile-500 bg-tile-300 text-text-300 rounded-lg focus:outline-none focus:border-tile-600 focus:ring-1 focus:ring-tile-600 cursor-pointer"
 					>
 						{#each filterDialectOptions as option}
@@ -293,6 +396,7 @@
 					<select
 						id="difficulty-filter-stories"
 						bind:value={filterDifficulty}
+						onchange={handleFilterChange}
 						class="w-full px-4 py-2.5 border border-tile-500 bg-tile-300 text-text-300 rounded-lg focus:outline-none focus:border-tile-600 focus:ring-1 focus:ring-tile-600 cursor-pointer"
 					>
 						{#each difficultyOptions as option}
@@ -319,17 +423,21 @@
 
 			<!-- Results Count -->
 			<div class="text-sm text-text-200">
-				Showing {filteredAndSortedStories.length} of {userGeneratedStories.length} stories
+				{#if hasMore}
+					Showing {filteredAndSortedStories.length}+ stories
+				{:else}
+					Showing {filteredAndSortedStories.length} stories
+				{/if}
 			</div>
 		</div>
-		
-		{#if userGeneratedStories.length === 0}
+
+		{#if allLoadedStories.length === 0 && !isLoadingMore}
 			<div class="text-center py-16 bg-tile-400/30 border-2 border-dashed border-tile-500 rounded-xl">
 				<div class="text-6xl mb-4 opacity-50">✍️</div>
 				<p class="text-text-200 text-xl mb-2">No community stories yet</p>
 				<p class="text-text-200 text-base opacity-70">Be the first to create one!</p>
 			</div>
-		{:else if filteredAndSortedStories.length === 0}
+		{:else if filteredAndSortedStories.length === 0 && !isLoadingMore}
 			<div class="text-center py-12">
 				<p class="text-xl text-text-200">No stories found matching your criteria.</p>
 				<p class="text-text-200 mt-2">Try adjusting your search or filters.</p>
@@ -351,13 +459,13 @@
 								{/if}
 							</div>
 						</div>
-						
+
 						<h3 class="text-2xl font-bold text-text-300 mb-3 group-hover:text-text-200 transition-colors leading-tight line-clamp-2">
 							{story.title}
 						</h3>
-						
+
 						<div class="flex-grow"></div>
-						
+
 						<div class="flex items-center gap-4 pt-4 border-t border-tile-500/50 mt-4 text-sm text-text-200 font-medium opacity-80">
 							<div class="flex items-center gap-1.5">
 								<span>📝</span>
@@ -366,6 +474,28 @@
 						</div>
 					</a>
 				{/each}
+			</div>
+
+			<!-- Infinite Scroll Trigger -->
+			<div bind:this={loadMoreTrigger} class="py-8 flex justify-center">
+				{#if isLoadingMore}
+					<div class="flex items-center gap-3 text-text-200">
+						<svg class="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+							<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+							<path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+						</svg>
+						<span>Loading more stories...</span>
+					</div>
+				{:else if hasMore}
+					<button
+						onclick={loadMoreStories}
+						class="px-6 py-3 bg-tile-500 hover:bg-tile-600 text-text-300 rounded-lg transition-colors font-medium"
+					>
+						Load More Stories
+					</button>
+				{:else if allLoadedStories.length > 0}
+					<p class="text-text-200 text-sm">You've reached the end</p>
+				{/if}
 			</div>
 		{/if}
 	</div>

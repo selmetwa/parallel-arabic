@@ -202,6 +202,112 @@ export async function getAllStories(limit?: number): Promise<{ success: boolean;
 }
 
 /**
+ * Paginated story result type
+ */
+export type PaginatedStoriesResult = {
+  success: boolean;
+  stories?: object[];
+  nextCursor?: string | null;
+  hasMore?: boolean;
+  error?: string;
+};
+
+/**
+ * Get stories with cursor-based pagination using createdAt timestamp
+ * Returns stories created before the cursor timestamp
+ */
+export async function getStoriesPaginated(
+  cursor?: string | null,
+  pageSize: number = 12,
+  filters?: {
+    dialect?: string;
+    difficulty?: string;
+    search?: string;
+  }
+): Promise<PaginatedStoriesResult> {
+  try {
+    let query = supabase
+      .from('generated_story')
+      .select('*')
+      .order('created_at', { ascending: false })
+      .limit(pageSize + 1); // Fetch one extra to check if there are more
+
+    // Apply cursor filter (fetch stories created before the cursor)
+    if (cursor) {
+      query = query.lt('created_at', cursor);
+    }
+
+    // Apply optional filters
+    if (filters?.dialect && filters.dialect !== 'all') {
+      query = query.eq('dialect', filters.dialect);
+    }
+
+    if (filters?.difficulty && filters.difficulty !== 'all') {
+      query = query.ilike('difficulty', filters.difficulty);
+    }
+
+    const { data: storiesMetadata, error: dbError } = await query;
+
+    if (dbError) {
+      console.error('Error fetching paginated stories:', dbError);
+      return { success: false, error: 'Failed to fetch stories' };
+    }
+
+    if (!storiesMetadata || storiesMetadata.length === 0) {
+      return { success: true, stories: [], nextCursor: null, hasMore: false };
+    }
+
+    // Check if there are more stories
+    const hasMore = storiesMetadata.length > pageSize;
+    const storiesToProcess = hasMore ? storiesMetadata.slice(0, pageSize) : storiesMetadata;
+
+    // Download story content and get audio URLs for each story in parallel
+    const storiesWithContent = await Promise.all(
+      storiesToProcess.map(async (storyMeta) => {
+        const storageResult = await downloadStoryFromStorage(storyMeta.story_body);
+
+        let audioUrl = null;
+        if (storyMeta.audio_file_key) {
+          const audioResult = await getAudioUrl(storyMeta.audio_file_key);
+          if (audioResult.success) {
+            audioUrl = audioResult.url;
+          }
+        }
+
+        if (!storageResult.success) {
+          console.warn(`Failed to load content for story ${storyMeta.id}:`, storageResult.error);
+          return {
+            ...storyMeta,
+            story_body: null,
+            content_error: storageResult.error,
+            audio_url: audioUrl
+          };
+        }
+
+        return {
+          ...storyMeta,
+          story_body: storageResult.data,
+          audio_url: audioUrl
+        };
+      })
+    );
+
+    // The next cursor is the created_at of the last story in the current page
+    const nextCursor = hasMore ? storiesToProcess[storiesToProcess.length - 1].created_at : null;
+
+    return {
+      success: true,
+      stories: storiesWithContent,
+      nextCursor,
+      hasMore
+    };
+  } catch (error) {
+    console.error('Error in getStoriesPaginated:', error);
+    return { success: false, error: (error as Error).message };
+  }
+}
+
+/**
  * Get stories by dialect with full JSON content from storage
  * Uses Redis caching for improved performance
  */
