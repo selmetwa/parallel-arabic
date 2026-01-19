@@ -7,9 +7,7 @@
   <div class="max-w-7xl mx-auto px-6 py-12">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
       <div class="space-y-4">
-        <div class="transform transition-transform duration-200 hover:scale-105">
-          <Logo />
-        </div>
+        <h2 class="text-text-100 font-semibold text-lg mb-3 tracking-wide">Parallel Arabic</h2>
         <p class="text-text-300 text-sm leading-relaxed max-w-xs">
           Open source language learning platform for Arabic and her dialects.
         </p>
