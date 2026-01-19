@@ -31,6 +31,7 @@
           <li><a href="/support" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Support</a></li>
           <li><a href="/faq" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">FAQ</a></li>
           <li><a href="https://github.com/selmetwa/parallel-arabic" target="_blank" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Source Code</a></li>
+          <li><a href="/sitemap.xml" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Sitemap</a></li>
         </ul>
       </div>
     </div>
