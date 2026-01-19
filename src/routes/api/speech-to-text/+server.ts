@@ -1,5 +1,3 @@
-
-
 import { json } from "@sveltejs/kit";
 import fs from "fs";
 import path from "path";
@@ -16,6 +14,7 @@ export async function POST({ request }) {
   const formData = await request.formData();
   const file = formData.get("audio") as File;
   const language = formData.get("language") as string | null; // "ar" or "en"
+  const expectedText = formData.get("expectedText") as string | null; // Optional: for sentence practice mode
 
   if (!file) {
     return json({ error: "No file uploaded" }, { status: 400 });
@@ -107,7 +106,13 @@ async function processAudio(
     _formData.append("file", new Blob([new Uint8Array(audioBuffer)], { type: audioMimeType }), audioFileName);
     _formData.append("model_id", "scribe_v1");
     _formData.append("language_code", languageCode);
-    
+    // Disable audio event tagging to avoid misinterpreting speech as music/noise
+    _formData.append("tag_audio_events", "false");
+    // Disable speaker diarization for single-speaker recordings
+    _formData.append("diarize", "false");
+
+    console.log(`Transcribing audio: language=${languageCode}, size=${audioBuffer.length} bytes`);
+
     const apiResponse = await fetch("https://api.elevenlabs.io/v1/speech-to-text", {
       method: "POST",
       headers: {

@@ -878,9 +878,9 @@
       <div class="max-w-5xl mx-auto space-y-12">
         {#if totalSavedWordsCount === 0}
           <!-- No words at all - first time user -->
-          <div class="bg-tile-400/50 border-2 border-tile-600 rounded-xl p-8 sm:p-12 text-center shadow-lg">
-            <div class="text-6xl mb-6">📚</div>
-            <h2 class="text-3xl sm:text-4xl font-bold text-text-300 mb-4">
+          <div class="bg-tile-400/50 border-2 border-tile-600 rounded-xl p-8 sm:p-12 text-center shadow-lg transform transition-all duration-300 hover:shadow-xl">
+            <div class="text-6xl mb-6 animate-bounce-subtle">📚</div>
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-text-300 to-text-200 bg-clip-text" style="-webkit-background-clip: text; -webkit-text-fill-color: transparent;">
               Build Your Review Deck
             </h2>
             <p class="text-xl text-text-200 mb-8 max-w-2xl mx-auto leading-relaxed">
@@ -889,9 +889,9 @@
           </div>
         {:else}
           <!-- Session complete - user has words but reviewed them all -->
-          <div class="bg-tile-400/50 border-2 border-tile-600 rounded-xl p-8 sm:p-12 text-center shadow-lg">
-            <div class="text-6xl mb-6">🎉</div>
-            <h2 class="text-3xl sm:text-4xl font-bold text-text-300 mb-4">
+          <div class="bg-tile-400/50 border-2 border-tile-600 rounded-xl p-8 sm:p-12 text-center shadow-lg transform transition-all duration-300 hover:shadow-xl">
+            <div class="text-6xl mb-6 animate-bounce-subtle">🎉</div>
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-text-300 to-text-200 bg-clip-text" style="-webkit-background-clip: text; -webkit-text-fill-color: transparent;">
               Session Complete!
             </h2>
             <p class="text-xl text-text-200 mb-8 max-w-2xl mx-auto leading-relaxed">
@@ -907,37 +907,52 @@
 
 
           <!-- Generate Words -->
-          <button 
-            class="flex flex-col items-center text-center p-8 rounded-xl border-2 border-tile-600 bg-tile-400/50 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group"
+          <button
+            class="group relative overflow-hidden flex flex-col items-center text-center p-8 rounded-xl border-2 border-tile-600 bg-gradient-to-br from-tile-400/50 to-tile-400/30 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer"
             onclick={() => { showGenerateWords = true; showGenerateSentences = false; }}
           >
-            <div class="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">📝</div>
-            <h3 class="text-2xl font-bold text-text-300 mb-3">Generate Words</h3>
-            <p class="text-text-200 leading-relaxed">
+            <!-- Background pattern -->
+            <div class="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity">
+              <div class="absolute inset-0" style="background-image: repeating-linear-gradient(45deg, var(--tile6) 0, var(--tile6) 1px, transparent 0, transparent 50%); background-size: 10px 10px;"></div>
+            </div>
+
+            <div class="text-5xl mb-6 transform group-hover:scale-125 group-hover:rotate-12 transition-transform duration-300 relative z-10">📝</div>
+            <h3 class="text-2xl font-bold text-text-300 mb-3 relative z-10">Generate Words</h3>
+            <p class="text-text-200 leading-relaxed relative z-10">
               Create custom vocabulary lists tailored to your level and interests. Perfect for beginners.
             </p>
           </button>
 
           <!-- Generate Sentences -->
-          <button 
-            class="flex flex-col items-center text-center p-8 rounded-xl border-2 border-tile-600 bg-tile-400/50 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group"
+          <button
+            class="group relative overflow-hidden flex flex-col items-center text-center p-8 rounded-xl border-2 border-tile-600 bg-gradient-to-br from-tile-400/50 to-tile-400/30 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer"
             onclick={() => { showGenerateSentences = true; showGenerateWords = false; }}
           >
-            <div class="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">✍️</div>
-            <h3 class="text-2xl font-bold text-text-300 mb-3">Generate Sentences</h3>
-            <p class="text-text-200 leading-relaxed">
+            <!-- Background pattern -->
+            <div class="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity">
+              <div class="absolute inset-0" style="background-image: repeating-linear-gradient(45deg, var(--tile6) 0, var(--tile6) 1px, transparent 0, transparent 50%); background-size: 10px 10px;"></div>
+            </div>
+
+            <div class="text-5xl mb-6 transform group-hover:scale-125 group-hover:rotate-12 transition-transform duration-300 relative z-10">✍️</div>
+            <h3 class="text-2xl font-bold text-text-300 mb-3 relative z-10">Generate Sentences</h3>
+            <p class="text-text-200 leading-relaxed relative z-10">
               Practice with AI-generated sentences focusing on specific grammar topics or vocabulary.
             </p>
           </button>
 
           <!-- Import Words -->
-          <button 
-            class="flex flex-col items-center text-center p-8 rounded-xl border-2 border-tile-600 bg-tile-400/50 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group"
+          <button
+            class="group relative overflow-hidden flex flex-col items-center text-center p-8 rounded-xl border-2 border-tile-600 bg-gradient-to-br from-tile-400/50 to-tile-400/30 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer"
             onclick={() => goto('/review/import')}
           >
-            <div class="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">📥</div>
-            <h3 class="text-2xl font-bold text-text-300 mb-3">Import Words</h3>
-            <p class="text-text-200 leading-relaxed">
+            <!-- Background pattern -->
+            <div class="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity">
+              <div class="absolute inset-0" style="background-image: repeating-linear-gradient(45deg, var(--tile6) 0, var(--tile6) 1px, transparent 0, transparent 50%); background-size: 10px 10px;"></div>
+            </div>
+
+            <div class="text-5xl mb-6 transform group-hover:scale-125 group-hover:rotate-12 transition-transform duration-300 relative z-10">📥</div>
+            <h3 class="text-2xl font-bold text-text-300 mb-3 relative z-10">Import Words</h3>
+            <p class="text-text-200 leading-relaxed relative z-10">
               Bulk import words from our library of over 20,000 terms or upload your own list.
             </p>
           </button>
@@ -955,12 +970,16 @@
           </div>
         </div>
         
-        <div class="w-full bg-tile-400 rounded-full h-3 mb-8 overflow-hidden border border-tile-500">
-          <div 
-            class="bg-tile-600 h-full rounded-full transition-all duration-500 ease-out relative overflow-hidden"
+        <div class="w-full bg-tile-400/60 rounded-full h-4 mb-8 shadow-inner border border-tile-500">
+          <div
+            class="bg-gradient-to-r from-tile-600 to-tile-700 h-full rounded-full relative transition-all duration-500 ease-out overflow-hidden"
             style="width: {((forgottenWordIndex + 1) / forgottenWords.length) * 100}%"
           >
-            <div class="absolute inset-0 bg-white/20 animate-[shimmer_2s_infinite]"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-white/0 to-white/20"></div>
+            <div class="absolute inset-0 bg-white/20 animate-shimmer"></div>
+            <div class="absolute right-2 top-1/2 -translate-y-1/2 text-xs font-bold text-white/90">
+              {Math.round(((forgottenWordIndex + 1) / forgottenWords.length) * 100)}%
+            </div>
           </div>
         </div>
 
@@ -975,24 +994,24 @@
         <!-- Mini Generation Options -->
         <div class="border-t border-tile-500 pt-8">
           <h3 class="text-xl font-bold text-text-300 text-center mb-6">Want to add more practice material?</h3>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
 
-            <button 
-              class="flex items-center justify-center gap-3 p-4 rounded-xl border-2 border-tile-600 bg-tile-400/30 hover:bg-tile-400/60 transition-all duration-300"
+            <button
+              class="flex items-center justify-center gap-3 p-5 sm:p-4 rounded-xl border-2 border-tile-600 bg-tile-400/30 hover:bg-tile-400/60 active:scale-95 transition-all duration-200 min-h-[64px]"
               onclick={() => showGenerateWords = true}
             >
               <span class="text-2xl">📝</span>
               <span class="font-bold text-text-300">Generate Words</span>
             </button>
-            <button 
-              class="flex items-center justify-center gap-3 p-4 rounded-xl border-2 border-tile-600 bg-tile-400/30 hover:bg-tile-400/60 transition-all duration-300"
+            <button
+              class="flex items-center justify-center gap-3 p-5 sm:p-4 rounded-xl border-2 border-tile-600 bg-tile-400/30 hover:bg-tile-400/60 active:scale-95 transition-all duration-200 min-h-[64px]"
               onclick={() => showGenerateSentences = true}
             >
               <span class="text-2xl">✍️</span>
               <span class="font-bold text-text-300">Generate Sentences</span>
             </button>
-            <button 
-              class="flex items-center justify-center gap-3 p-4 rounded-xl border-2 border-tile-600 bg-tile-400/30 hover:bg-tile-400/60 transition-all duration-300"
+            <button
+              class="flex items-center justify-center gap-3 p-5 sm:p-4 rounded-xl border-2 border-tile-600 bg-tile-400/30 hover:bg-tile-400/60 active:scale-95 transition-all duration-200 min-h-[64px]"
               onclick={() => goto('/review/import')}
             >
               <span class="text-2xl">📥</span>
@@ -1019,15 +1038,19 @@
           </div>
         </div>
         
-        <div class="w-full bg-tile-400 rounded-full h-3 mb-8 overflow-hidden border border-tile-500">
+        <div class="w-full bg-tile-400/60 rounded-full h-4 mb-8 shadow-inner border border-tile-500">
           {#if true}
             {@const totalWords = words.length + forgottenWords.length}
             {@const currentPosition = currentIndex >= words.length ? words.length + forgottenWordIndex + 1 : currentIndex + 1}
-            <div 
-              class="bg-tile-600 h-full rounded-full transition-all duration-500 ease-out relative overflow-hidden"
+            <div
+              class="bg-gradient-to-r from-tile-600 to-tile-700 h-full rounded-full relative transition-all duration-500 ease-out overflow-hidden"
               style="width: {(currentPosition / totalWords) * 100}%"
             >
-              <div class="absolute inset-0 bg-white/20 animate-[shimmer_2s_infinite]"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-white/0 to-white/20"></div>
+              <div class="absolute inset-0 bg-white/20 animate-shimmer"></div>
+              <div class="absolute right-2 top-1/2 -translate-y-1/2 text-xs font-bold text-white/90">
+                {Math.round((currentPosition / totalWords) * 100)}%
+              </div>
             </div>
           {/if}
         </div>
@@ -1043,23 +1066,23 @@
         <!-- Mini Generation Options -->
         <div class="border-t border-tile-500 pt-8">
           <h3 class="text-xl font-bold text-text-300 text-center mb-6">Want to add more practice material?</h3>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <button 
-              class="flex items-center justify-center gap-3 p-4 rounded-xl border-2 border-tile-600 bg-tile-400/30 hover:bg-tile-400/60 transition-all duration-300"
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+            <button
+              class="flex items-center justify-center gap-3 p-5 sm:p-4 rounded-xl border-2 border-tile-600 bg-tile-400/30 hover:bg-tile-400/60 active:scale-95 transition-all duration-200 min-h-[64px]"
               onclick={() => showGenerateWords = true}
             >
               <span class="text-2xl">📝</span>
               <span class="font-bold text-text-300">Generate Words</span>
             </button>
-            <button 
-              class="flex items-center justify-center gap-3 p-4 rounded-xl border-2 border-tile-600 bg-tile-400/30 hover:bg-tile-400/60 transition-all duration-300"
+            <button
+              class="flex items-center justify-center gap-3 p-5 sm:p-4 rounded-xl border-2 border-tile-600 bg-tile-400/30 hover:bg-tile-400/60 active:scale-95 transition-all duration-200 min-h-[64px]"
               onclick={() => showGenerateSentences = true}
             >
               <span class="text-2xl">✍️</span>
               <span class="font-bold text-text-300">Generate Sentences</span>
             </button>
-            <button 
-              class="flex items-center justify-center gap-3 p-4 rounded-xl border-2 border-tile-600 bg-tile-400/30 hover:bg-tile-400/60 transition-all duration-300"
+            <button
+              class="flex items-center justify-center gap-3 p-5 sm:p-4 rounded-xl border-2 border-tile-600 bg-tile-400/30 hover:bg-tile-400/60 active:scale-95 transition-all duration-200 min-h-[64px]"
               onclick={() => goto('/review/import')}
             >
               <span class="text-2xl">📥</span>
@@ -1483,24 +1506,35 @@
     <!-- Generation Loading Modal -->
     {#if showGenerationModal && !generationComplete}
       <Modal isOpen={showGenerationModal} handleCloseModal={() => { showGenerationModal = false; }} width="600px">
-        <div class="p-8 text-center">
-          <AlphabetCycle className="w-24 h-24 mb-6 mx-auto" />
-          <h2 class="text-3xl font-bold text-text-300 mb-4">
-            Generating {generationType === 'sentences' ? 'Sentences' : 'Words'}...
-          </h2>
-          <p class="text-xl text-text-200 mb-8 leading-relaxed">
-            {generationType === 'sentences' 
-              ? `Creating personalized practice sentences in ${dialectOptions.find(d => d.value === selectedDialect)?.label}. This usually takes about 30-60 seconds.`
-              : `Curating a list of ${dialectOptions.find(d => d.value === selectedDialect)?.label} words based on your preferences. Almost there!`}
-          </p>
-          <div class="bg-tile-300 border border-tile-500 rounded-xl p-4 text-left">
-            <div class="flex items-start gap-3">
-              <span class="text-2xl">💡</span>
-              <div>
-                <p class="font-bold text-text-300 text-sm mb-1">Pro Tip</p>
-                <p class="text-text-200 text-sm">
-                  You can close this modal and continue using the app. We'll notify you when your {generationType === 'sentences' ? 'sentences' : 'words'} are ready!
-                </p>
+        <div class="p-8 text-center relative">
+          <!-- Animated background -->
+          <div class="absolute inset-0 bg-gradient-to-br from-tile-200 to-tile-300 opacity-50 rounded-xl"></div>
+
+          <div class="relative z-10">
+            <!-- Enhanced spinner -->
+            <div class="w-24 h-24 mx-auto mb-6 relative">
+              <div class="absolute inset-0 border-4 border-tile-400 rounded-full"></div>
+              <div class="absolute inset-0 border-4 border-tile-600 rounded-full border-t-transparent animate-spin"></div>
+              <div class="absolute inset-2 bg-tile-300 rounded-full flex items-center justify-center text-3xl">✨</div>
+            </div>
+
+            <h2 class="text-3xl font-bold text-text-300 mb-4 animate-pulse">
+              Generating {generationType === 'sentences' ? 'Sentences' : 'Words'}...
+            </h2>
+            <p class="text-xl text-text-200 mb-8 leading-relaxed">
+              {generationType === 'sentences'
+                ? `Creating personalized practice sentences in ${dialectOptions.find(d => d.value === selectedDialect)?.label}. This usually takes about 30-60 seconds.`
+                : `Curating a list of ${dialectOptions.find(d => d.value === selectedDialect)?.label} words based on your preferences. Almost there!`}
+            </p>
+            <div class="bg-gradient-to-br from-tile-300/50 to-tile-400/30 border border-tile-500 rounded-xl p-4 text-left shadow-inner">
+              <div class="flex items-start gap-3">
+                <span class="text-2xl">💡</span>
+                <div>
+                  <p class="font-bold text-text-300 text-sm mb-1">Pro Tip</p>
+                  <p class="text-text-200 text-sm">
+                    You can close this modal and continue using the app. We'll notify you when your {generationType === 'sentences' ? 'sentences' : 'words'} are ready!
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -1546,28 +1580,28 @@
             </div>
           </div>
           
-          <div class="max-h-[500px] overflow-y-auto space-y-3 mb-6">
+          <div class="max-h-[500px] overflow-y-auto space-y-3 mb-6 scrollbar-thin">
             {#each generatedItems as item, index}
-              <div 
-                class="p-4 rounded-xl border-2 transition-all cursor-pointer {selectedItems.has(index) ? 'border-tile-600 bg-tile-400/50' : 'border-tile-500 bg-tile-300/30 hover:bg-tile-400/30'}"
+              <div
+                class="p-4 rounded-xl border-2 transition-all duration-200 cursor-pointer transform hover:scale-[1.01] {selectedItems.has(index) ? 'border-tile-600 bg-gradient-to-br from-tile-400/70 to-tile-400/50 shadow-md' : 'border-tile-500 bg-tile-300/30 hover:bg-tile-400/40 hover:shadow-sm'}"
                 onclick={() => toggleItemSelection(index)}
                 onkeydown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleItemSelection(index); } }}
                 role="button"
                 tabindex="0"
               >
                 <div class="flex items-start gap-4">
-                  <div class="relative flex-shrink-0 mt-1">
+                  <div class="relative flex-shrink-0 mt-1 group">
                     <input
                       type="checkbox"
                       checked={selectedItems.has(index)}
                       onchange={() => toggleItemSelection(index)}
-                      class="w-5 h-5 cursor-pointer rounded border-2 border-tile-600 bg-tile-200 checked:bg-tile-600 checked:border-tile-600 focus:ring-2 focus:ring-tile-500 transition-all"
+                      class="w-6 h-6 cursor-pointer rounded-md border-2 border-tile-600 bg-tile-200 checked:bg-gradient-to-br checked:from-tile-600 checked:to-tile-700 checked:border-tile-700 transition-all duration-200 group-hover:scale-110"
                     />
                   </div>
                   <div class="flex-1 space-y-2">
-                    <div class="text-2xl font-bold text-text-300">{item.arabic}</div>
-                    <div class="text-lg text-text-200">{item.english}</div>
-                    <div class="text-sm text-text-200 italic">{item.transliteration}</div>
+                    <div class="text-2xl sm:text-3xl font-bold text-text-300 leading-tight">{item.arabic}</div>
+                    <div class="text-base sm:text-lg text-text-200">{item.english}</div>
+                    <div class="text-sm text-text-200/80 italic font-light">{item.transliteration}</div>
                   </div>
                 </div>
               </div>

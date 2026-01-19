@@ -106,20 +106,20 @@
   }
 </script>
 
-<aside class="hidden lg:flex flex-col bg-tile-300 border-r-2 border-tile-600 h-screen fixed top-0 left-0 overflow-hidden z-40 transition-all duration-300 {$sidebarCollapsed ? 'w-0 opacity-0' : 'w-64 opacity-100'}">
+<aside class="hidden lg:flex flex-col bg-gradient-to-b from-tile-300 to-tile-200 border-r-2 border-tile-600 h-screen fixed top-0 left-0 overflow-hidden z-40 transition-all duration-300 shadow-xl {$sidebarCollapsed ? 'w-0 opacity-0' : 'w-64 opacity-100'}">
   <div class="p-6 {$sidebarCollapsed ? 'hidden' : ''}">
     <div class="flex items-center justify-between mb-8">
-      <a href="/" class="flex items-center logo-container flex-1 min-w-0">
-        <h1 class="text-xl font-bold">Parallel Arabic</h1>
+      <a href="/" class="flex items-center logo-container flex-1 min-w-0 group">
+        <h1 class="text-xl font-bold text-text-300 group-hover:text-text-100 transition-all duration-200">Parallel Arabic</h1>
       </a>
       <button
         type="button"
         onclick={toggleSidebar}
-        class="p-2 rounded-lg hover:bg-tile-400 transition-colors text-text-300 flex-shrink-0 ml-2"
+        class="p-2 rounded-xl hover:bg-tile-400/50 active:scale-95 transition-all duration-200 text-text-300 hover:text-text-100 flex-shrink-0 ml-2 shadow-sm hover:shadow-md"
         aria-label="Collapse sidebar"
         title="Collapse sidebar"
       >
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-5 h-5 transform transition-transform duration-200 hover:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
         </svg>
       </button>
@@ -131,11 +131,11 @@
           <button
             type="button"
             onclick={() => toggleSection(section.title)}
-            class="w-full flex items-center justify-between px-3 py-2 rounded-lg md:hover:bg-tile-400 transition-colors text-text-200 font-semibold text-sm uppercase tracking-wide"
+            class="w-full flex items-center justify-between px-3 py-2 rounded-xl hover:bg-tile-400/50 active:scale-98 transition-all duration-200 text-text-200 hover:text-text-300 font-semibold text-sm uppercase tracking-wide shadow-sm hover:shadow-md"
           >
             <span>{section.title}</span>
             <span
-              class="transition-transform duration-200 text-xs"
+              class="transition-transform duration-300 text-xs"
               style="transform: {expandedSections.has(section.title) ? 'rotate(180deg)' : 'rotate(0deg)'}"
             >
               ▼
@@ -147,15 +147,9 @@
               {#each section.items as item}
                 <a
                   href={item.href}
-                  class="flex items-center gap-3 px-4 py-2.5 rounded-lg transition-all duration-200 text-text-200"
-                  class:bg-tile-500={isActive(item.href)}
-                  class:border-l-4={isActive(item.href)}
-                  class:border-blue-500={isActive(item.href)}
-                  class:text-text-300={isActive(item.href)}
-                  class:font-semibold={isActive(item.href)}
-                  class:md:hover:bg-tile-400={!isActive(item.href)}
+                  class="group flex items-center gap-3 px-4 py-2.5 rounded-xl transition-all duration-200 text-text-200 hover:text-text-300 {isActive(item.href) ? 'bg-gradient-to-r from-tile-500 to-tile-400 border-l-4 border-blue-500 text-text-300 font-semibold shadow-md' : 'hover:bg-tile-400/50 hover:-translate-x-0.5 hover:shadow-sm'}"
                 >
-                  <span class="text-xl">{item.icon}</span>
+                  <span class="text-xl transform transition-transform duration-200 {isActive(item.href) ? 'scale-110' : 'group-hover:scale-105'}">{item.icon}</span>
                   <span>{item.label}</span>
                 </a>
               {/each}
@@ -167,8 +161,8 @@
 
     <!-- Theme Toggle -->
     {#if handleOpenDrawer}
-      <div class="mt-6 pt-6 border-t border-tile-600">
-        <Button onClick={handleOpenDrawer} type="button" className="w-full">
+      <div class="mt-auto pt-6 border-t border-tile-600">
+        <Button onClick={handleOpenDrawer} type="button" className="w-full shadow-md hover:shadow-lg">
           Theme
         </Button>
       </div>

@@ -32,33 +32,109 @@
 		</div>
 	</header>
 
-	<!-- Problem-Solution Section -->
-	<section class="py-12 sm:py-16 bg-tile-200 border-y border-tile-600">
-		<div class="max-w-4xl mx-auto px-4 sm:px-8">
-			<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-8 shadow-lg">
-				<h2 class="text-2xl sm:text-3xl font-bold text-text-300 mb-6 text-center">Tired of...?</h2>
-				<div class="space-y-4 mb-8">
-					<div class="flex items-start gap-3">
-						<span class="text-2xl flex-shrink-0">❌</span>
-						<p class="text-text-200 text-base sm:text-lg">Apps that only teach Modern Standard Arabic (not the dialects people actually speak)</p>
-					</div>
-					<div class="flex items-start gap-3">
-						<span class="text-2xl flex-shrink-0">❌</span>
-						<p class="text-text-200 text-base sm:text-lg">Switching between 5 different apps for stories, vocab, grammar, and pronunciation practice</p>
-					</div>
-					<div class="flex items-start gap-3">
-						<span class="text-2xl flex-shrink-0">❌</span>
-						<p class="text-text-200 text-base sm:text-lg">Textbooks with no audio, no real pronunciation, and outdated content</p>
-					</div>
-					<div class="flex items-start gap-3">
-						<span class="text-2xl flex-shrink-0">❌</span>
-						<p class="text-text-200 text-base sm:text-lg">Searching endlessly for graded content that matches your level</p>
+	<!-- How It Works Section -->
+	<section class="py-12 sm:py-20 bg-tile-200 border-y border-tile-600">
+		<div class="max-w-5xl mx-auto px-4 sm:px-8">
+			<h2 class="text-2xl sm:text-3xl font-bold text-text-300 mb-4 text-center">How Parallel Arabic Works</h2>
+			<p class="text-center text-text-200 text-base sm:text-lg mb-12 max-w-2xl mx-auto">
+				A proven path from complete beginner to confident speaker
+			</p>
+			
+			<div class="space-y-8">
+				<!-- Step 1 -->
+				<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 sm:p-8 shadow-lg">
+					<div class="flex items-start gap-4 sm:gap-6">
+						<div class="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-tile-600 rounded-full flex items-center justify-center">
+							<span class="text-xl sm:text-2xl font-bold text-text-300">1</span>
+						</div>
+						<div class="flex-1">
+							<p class="text-xs text-text-200 uppercase tracking-wide mb-1">Skip this step if you're not a beginner!</p>
+							<h3 class="text-xl sm:text-2xl font-bold text-text-300 mb-3">Master the foundations first</h3>
+							<p class="text-text-200 text-sm sm:text-base mb-4 italic">
+								Arabic script looks intimidating, and you're unsure where to even begin with a language that reads right-to-left…
+							</p>
+							<p class="text-text-300 text-base sm:text-lg leading-relaxed">
+								<strong>Start with the Arabic alphabet and handwriting practice, then work through structured lessons</strong> that teach the most essential vocabulary and grammar patterns. Import common words directly into your review deck. This foundation prepares you for real Arabic content in Step 2.
+							</p>
+						</div>
 					</div>
 				</div>
-				<div class="text-center pt-6 border-t border-tile-500">
-					<p class="text-xl sm:text-2xl font-semibold text-text-300 mb-4">We built Parallel Arabic to solve exactly this.</p>
-					<p class="text-text-200 text-base sm:text-lg">All dialects. All tools. One platform. Forever free access to get you started.</p>
+
+				<!-- Step 2 -->
+				<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 sm:p-8 shadow-lg">
+					<div class="flex items-start gap-4 sm:gap-6">
+						<div class="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-tile-600 rounded-full flex items-center justify-center">
+							<span class="text-xl sm:text-2xl font-bold text-text-300">2</span>
+						</div>
+						<div class="flex-1">
+							<p class="text-xs text-text-200 uppercase tracking-wide mb-1">Immerse yourself in authentic Arabic</p>
+							<h3 class="text-xl sm:text-2xl font-bold text-text-300 mb-3">Read and listen to real native content</h3>
+							<p class="text-text-200 text-sm sm:text-base mb-4 italic">
+								Textbook Arabic feels disconnected from how people actually speak. You want to understand real conversations, not just formal phrases…
+							</p>
+							<p class="text-text-300 text-base sm:text-lg leading-relaxed">
+								<strong>Dive into stories and dialogues written in Egyptian, Levantine, Moroccan Darija, or Modern Standard Arabic.</strong> Tap any word to instantly see its meaning, transliteration, and pronunciation. Every sentence comes with native audio so you hear exactly how it's spoken.
+							</p>
+						</div>
+					</div>
 				</div>
+
+				<!-- Step 3 -->
+				<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 sm:p-8 shadow-lg">
+					<div class="flex items-start gap-4 sm:gap-6">
+						<div class="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-tile-600 rounded-full flex items-center justify-center">
+							<span class="text-xl sm:text-2xl font-bold text-text-300">3</span>
+						</div>
+						<div class="flex-1">
+							<p class="text-xs text-text-200 uppercase tracking-wide mb-1">Your content, your way</p>
+							<h3 class="text-xl sm:text-2xl font-bold text-text-300 mb-3">Create personalized learning materials</h3>
+							<p class="text-text-200 text-sm sm:text-base mb-4 italic">
+								Generic language apps bore you. The same repetitive exercises, the same irrelevant topics…
+							</p>
+							<p class="text-text-300 text-base sm:text-lg leading-relaxed mb-4">
+								<strong>Save any word from stories directly to your flashcard deck. Then use AI to generate custom lessons, stories, and practice sentences</strong> on topics that actually interest you. Want to learn vocabulary about Egyptian street food? Soccer conversations in Levantine? Generate it instantly.
+							</p>
+							<div class="bg-tile-500 rounded-lg p-4 border border-tile-600">
+								<p class="text-sm text-text-200 font-medium mb-2">Your saved words include:</p>
+								<ul class="text-sm text-text-200 space-y-1">
+									<li class="flex items-center gap-2"><span>✓</span> Arabic script with transliteration</li>
+									<li class="flex items-center gap-2"><span>✓</span> Native audio pronunciation</li>
+									<li class="flex items-center gap-2"><span>✓</span> English translation and context</li>
+									<li class="flex items-center gap-2"><span>✓</span> AI-generated example sentences</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Step 4 -->
+				<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 sm:p-8 shadow-lg">
+					<div class="flex items-start gap-4 sm:gap-6">
+						<div class="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-tile-600 rounded-full flex items-center justify-center">
+							<span class="text-xl sm:text-2xl font-bold text-text-300">4</span>
+						</div>
+						<div class="flex-1">
+							<p class="text-xs text-text-200 uppercase tracking-wide mb-1">Lock it in forever</p>
+							<h3 class="text-xl sm:text-2xl font-bold text-text-300 mb-3">Remember everything you learn</h3>
+							<p class="text-text-200 text-sm sm:text-base mb-4 italic">
+								You've studied Arabic before but the words just don't stick. A week later, you've forgotten everything…
+							</p>
+							<p class="text-text-300 text-base sm:text-lg leading-relaxed">
+								<strong>Review your saved vocabulary with spaced repetition</strong>—the scientifically-proven method that times your reviews perfectly. But here's the magic: <strong>the AI generates fresh stories and practice sentences using your review words</strong>, so you see them in new contexts every time. Real reinforcement, not mindless repetition.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- CTA -->
+			<div class="text-center mt-12">
+				<a
+					href="/signup"
+					class="inline-block px-8 py-4 text-lg font-semibold bg-tile-500 border-2 border-tile-600 text-text-300 hover:bg-tile-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+				>
+					Start Your Journey Free →
+				</a>
 			</div>
 		</div>
 	</section>
@@ -253,156 +329,4 @@
 		</div>
 	</section>
 
-	<!-- Features Section -->
-	<section class="py-12 sm:py-16">
-		<div class="max-w-7xl mx-auto px-4 sm:px-8">
-			<h2 class="text-2xl sm:text-3xl font-bold text-text-300 text-center mb-4">Everything You Need to Master Arabic</h2>
-			<p class="text-center text-text-200 text-base sm:text-lg mb-12 max-w-3xl mx-auto">
-				From complete beginners to advanced learners—practice reading, writing, speaking, and listening across all Arabic dialects.
-			</p>
-
-			<!-- Top Features -->
-			<div class="grid grid-cols-1 gap-8 mb-12">
-				<!-- Conversations Feature -->
-				<div class="bg-tile-500 border-2 border-tile-600 shadow-lg overflow-hidden">
-					<div class="flex flex-col sm:flex-row">
-						<div class="sm:w-2/5 h-48 sm:h-auto bg-tile-300 border-r-0 sm:border-r-2 border-b-2 sm:border-b-0 border-tile-600 flex items-center justify-center p-4">
-							<img src="/images/banner.png" alt="Conversations" class="max-w-full max-h-full object-contain" />
-						</div>
-						<div class="sm:w-3/5 p-6 flex flex-col justify-between">
-							<div>
-								<h3 class="text-xl font-bold text-text-300 mb-3">Real Conversations</h3>
-								<p class="text-base text-text-200 leading-relaxed mb-3">
-									Practical Arabic conversations recorded by native speakers with full transcripts and translations.
-								</p>
-								<p class="text-base text-text-200 leading-relaxed mb-4">
-									AI-generated definitions for every word to accelerate your practice.
-								</p>
-							</div>
-							<a
-								href="/stories"
-								class="inline-block px-6 py-3 text-base font-semibold bg-tile-600 border-2 border-tile-600 text-text-300 hover:bg-tile-700 transition-colors duration-300 shadow-md w-fit"
-							>
-								Practice Conversations
-							</a>
-						</div>
-					</div>
-				</div>
-
-        <!-- Tutor-->
-
-        <div class="bg-tile-500 border-2 border-tile-600 shadow-lg overflow-hidden">
-          <div class="flex flex-col sm:flex-row">
-            <div class="sm:w-2/5 h-64 sm:h-auto bg-tile-300 border-r-0 sm:border-r-2 border-b-2 sm:border-b-0 border-tile-600 flex items-center justify-center p-4">
-              <img src="/images/tutor.png" alt="Tutor" class="max-w-full max-h-full object-contain" />
-            </div>
-            <div class="sm:w-3/5 p-6 flex flex-col justify-between">
-              <div>
-                <h3 class="text-xl font-bold text-text-300 mb-3">Tutor</h3>
-   
-                <p class="text-base text-text-200 leading-relaxed mb-4">
-                  Practice speaking Arabic with an AI tutor. Choose your dialect and have a conversation, get real-time feedback! Use the "Speak Arabic" button for Arabic conversation, or "Ask in English" to ask questions like "how do I say X?".
-                </p>
-              </div>
-              <a href="/tutor" class="inline-block px-6 py-3 text-base font-semibold bg-tile-600 border-2 border-tile-600 text-text-300 hover:bg-tile-700 transition-colors duration-300 shadow-md w-fit">
-                Practice with Tutor
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Spaced Repetition-->
-        <div class="bg-tile-500 border-2 border-tile-600 shadow-lg overflow-hidden">
-          <div class="flex flex-col sm:flex-row">
-            <div class="sm:w-2/5 h-48 sm:h-auto bg-tile-300 border-r-0 sm:border-r-2 border-b-2 sm:border-b-0 border-tile-600 flex items-center justify-center p-4">
-              <img src="/images/spaced-repetition.png" alt="Spaced Repetition" class="max-w-full max-h-full object-contain" />
-            </div>
-            <div class="sm:w-3/5 p-6 flex flex-col justify-between">
-              <div>
-                <h3 class="text-xl font-bold text-text-300 mb-3">Spaced Repetition</h3>
-                <p class="text-base text-text-200 leading-relaxed mb-3">
-                  Practice with spaced repetition to remember words and sentences.
-                </p>
-                <p class="text-base text-text-200 leading-relaxed mb-4">
-                  Generate your own content, or import words from over 20,000 vocab words.
-                </p>
-              </div>
-              <a href="/review" class="inline-block px-6 py-3 text-base font-semibold bg-tile-600 border-2 border-tile-600 text-text-300 hover:bg-tile-700 transition-colors duration-300 shadow-md w-fit">
-                Practice with Spaced Repetition
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- Videos -->
-         <div class="bg-tile-500 border-2 border-tile-600 shadow-lg overflow-hidden">
-          <div class="flex flex-col sm:flex-row">
-            <div class="sm:w-2/5 h-48 sm:h-auto bg-tile-300 border-r-0 sm:border-r-2 border-b-2 sm:border-b-0 border-tile-600 flex items-center justify-center p-4">
-              <img src="/images/videos.png" alt="Videos" class="max-w-full max-h-full object-contain" />
-            </div>
-            <div class="sm:w-3/5 p-6 flex flex-col justify-between">
-              <div>
-                <h3 class="text-xl font-bold text-text-300 mb-3">Videos</h3>
-                <p class="text-base text-text-200 leading-relaxed mb-3">
-                  Interactive Arabic videos with transcripts, translations, and transliterations from all dialects.
-                </p>
-                <p class="text-base text-text-200 leading-relaxed mb-4">
-                  Watch and learn from YouTube videos with transcripts, translations, and transliterations.
-                </p>
-              </div>
-              <a href="/videos" class="inline-block px-6 py-3 text-base font-semibold bg-tile-600 border-2 border-tile-600 text-text-300 hover:bg-tile-700 transition-colors duration-300 shadow-md w-fit">
-                Practice Videos</a>
-            </div>
-          </div>
-         </div>
-			</div>
-
-			<!-- Additional Practice Tools -->
-			<div class="mt-12">
-				<h3 class="text-xl sm:text-2xl font-bold text-text-300 text-center mb-8">More Practice Tools</h3>
-				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-					<!-- Speaking Practice -->
-					<a href="/speak" class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1 flex flex-col">
-						<div class="text-4xl mb-4">🎤</div>
-						<h4 class="text-lg font-bold text-text-300 mb-2">Speaking Practice</h4>
-						<p class="text-text-200 text-sm leading-relaxed">AI pronunciation assessment with real-time feedback</p>
-					</a>
-
-					<!-- Sentence Practice -->
-					<a href="/sentences" class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1 flex flex-col">
-						<div class="text-4xl mb-4">📝</div>
-						<h4 class="text-lg font-bold text-text-300 mb-2">Sentence Practice</h4>
-						<p class="text-text-200 text-sm leading-relaxed">Unlimited AI-generated sentences for reading and writing</p>
-					</a>
-
-					<!-- Verb Conjugation -->
-					<a href="/egyptian-arabic/grammar" class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1 flex flex-col">
-						<div class="text-4xl mb-4">📋</div>
-						<h4 class="text-lg font-bold text-text-300 mb-2">Verb Conjugation</h4>
-						<p class="text-text-200 text-sm leading-relaxed">Master conjugations with real-time spell checking</p>
-					</a>
-
-					<!-- Writing Practice -->
-					<a href="/egyptian-arabic/write" class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1 flex flex-col">
-						<div class="text-4xl mb-4">✍️</div>
-						<h4 class="text-lg font-bold text-text-300 mb-2">Writing Practice</h4>
-						<p class="text-text-200 text-sm leading-relaxed">Practice with 20,000+ words using our virtual keyboard</p>
-					</a>
-
-					<!-- Vocabulary -->
-					<a href="/egyptian-arabic/vocab" class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1 flex flex-col">
-						<div class="text-4xl mb-4">📚</div>
-						<h4 class="text-lg font-bold text-text-300 mb-2">Vocabulary Quizzes</h4>
-						<p class="text-text-200 text-sm leading-relaxed">Interactive quizzes with 20,000+ words</p>
-					</a>
-
-					<!-- Alphabet -->
-					<a href="/alphabet" class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1 flex flex-col">
-						<div class="text-4xl mb-4">🔤</div>
-						<h4 class="text-lg font-bold text-text-300 mb-2">Alphabet Mastery</h4>
-						<p class="text-text-200 text-sm leading-relaxed">Master Arabic script with typing and drawing practice</p>
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
 </section>

@@ -396,7 +396,7 @@
 />
 
 <div
-  class="flip-card bg-tile-400/50 border-2 border-tile-600 rounded-xl shadow-lg"
+  class="flip-card p-4 sm:p-6 bg-gradient-to-br from-tile-400/60 to-tile-400/40 border-2 border-tile-600 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300"
   onclick={handleCardClick}
   onkeydown={handleCardKeydown}
   role="button"
@@ -406,11 +406,11 @@
 >
   <div
     bind:this={flipCardInner}
-    class={cn("flip-card-inner p-8 sm:p-10", {
+    class={cn("flip-card-inner p-4 sm:p-6", {
       "flipped": showAnswer,
       "is-animating": isFlipping
     })}
-    style={cardMinHeight > 0 ? `min-height: ${cardMinHeight}px` : ''}
+    style={showAnswer && cardMinHeight > 0 ? `min-height: ${cardMinHeight}px` : ''}
   >
     <!-- Front Face -->
     <div class="flip-card-front" bind:this={frontFace}>
@@ -464,9 +464,9 @@
               role="button"
               tabindex="0"
               aria-label={`Get definition for: ${arabicWord}`}
-              class={cn("p-1 text-4xl sm:text-5xl duration-300 cursor-pointer border-2", {
-                "bg-blue-200 border-blue-400": isArabicWordSelected(index),
-                "hover:opacity-80 border-transparent hover:border-tile-600": !isArabicWordSelected(index)
+              class={cn("p-1 text-4xl sm:text-5xl duration-300 cursor-pointer border-2 rounded-lg transition-all", {
+                "bg-gradient-to-br from-blue-200 to-blue-300 border-blue-500 shadow-lg scale-110 animate-pulse-subtle": isArabicWordSelected(index),
+                "hover:bg-tile-400/50 border-transparent hover:border-tile-600 hover:scale-105": !isArabicWordSelected(index)
               })}
               dir="rtl"
             >{arabicWord}</span>
@@ -624,33 +624,36 @@
             type="button"
             onclick={() => handleDifficultyClick(1)}
             disabled={selectedDifficulty !== null}
-            class="border-2 border-green-500 bg-green-100 hover:bg-green-200 text-text-300 py-4 px-6 rounded-lg font-semibold text-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+            class="group relative overflow-hidden border-2 border-green-500 bg-gradient-to-br from-green-50 to-green-100 hover:from-green-100 hover:to-green-200 active:scale-95 py-5 px-6 rounded-xl font-semibold text-lg transition-all duration-200 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            <div class="text-2xl mb-2">😊</div>
-            <div>Easy</div>
-            <div class="text-sm font-normal mt-1">Remembered easily</div>
+            <span class="absolute inset-0 bg-white/40 scale-0 group-active:scale-100 group-active:opacity-0 transition-all duration-500 rounded-xl"></span>
+            <div class="text-3xl mb-2 transform group-hover:scale-110 transition-transform duration-300">😊</div>
+            <div class="relative z-10">Easy</div>
+            <div class="text-sm font-normal mt-1 text-green-700">Remembered easily</div>
           </button>
 
           <button
             type="button"
             onclick={() => handleDifficultyClick(2)}
             disabled={selectedDifficulty !== null}
-            class="border-2 border-yellow-500 bg-yellow-100 hover:bg-yellow-200 text-text-300 py-4 px-6 rounded-lg font-semibold text-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+            class="group relative overflow-hidden border-2 border-yellow-500 bg-gradient-to-br from-yellow-50 to-yellow-100 hover:from-yellow-100 hover:to-yellow-200 active:scale-95 py-5 px-6 rounded-xl font-semibold text-lg transition-all duration-200 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            <div class="text-2xl mb-2">🤔</div>
-            <div>Medium</div>
-            <div class="text-sm font-normal mt-1">Remembered with effort</div>
+            <span class="absolute inset-0 bg-white/40 scale-0 group-active:scale-100 group-active:opacity-0 transition-all duration-500 rounded-xl"></span>
+            <div class="text-3xl mb-2 transform group-hover:scale-110 transition-transform duration-300">🤔</div>
+            <div class="relative z-10">Medium</div>
+            <div class="text-sm font-normal mt-1 text-yellow-700">Remembered with effort</div>
           </button>
 
           <button
             type="button"
             onclick={() => handleDifficultyClick(3)}
             disabled={selectedDifficulty !== null}
-            class="border-2 border-red-500 bg-red-100 hover:bg-red-200 text-text-300 py-4 px-6 rounded-lg font-semibold text-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+            class="group relative overflow-hidden border-2 border-red-500 bg-gradient-to-br from-red-50 to-red-100 hover:from-red-100 hover:to-red-200 active:scale-95 py-5 px-6 rounded-xl font-semibold text-lg transition-all duration-200 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            <div class="text-2xl mb-2">😓</div>
-            <div>Hard</div>
-            <div class="text-sm font-normal mt-1">Struggled</div>
+            <span class="absolute inset-0 bg-white/40 scale-0 group-active:scale-100 group-active:opacity-0 transition-all duration-500 rounded-xl"></span>
+            <div class="text-3xl mb-2 transform group-hover:scale-110 transition-transform duration-300">😓</div>
+            <div class="relative z-10">Hard</div>
+            <div class="text-sm font-normal mt-1 text-red-700">Struggled</div>
           </button>
         </div>
         {#if onForgot}
@@ -659,10 +662,11 @@
               type="button"
               onclick={handleForgot}
               disabled={selectedDifficulty !== null}
-              class="border-2 border-orange-500 bg-orange-100 hover:bg-orange-200 text-text-300 py-3 px-8 rounded-lg font-semibold text-base transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+              class="group relative overflow-hidden border-2 border-orange-500 bg-gradient-to-br from-orange-50 to-orange-100 hover:from-orange-100 hover:to-orange-200 text-text-300 py-3 px-8 rounded-xl font-semibold text-base transition-all duration-200 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 active:scale-95"
             >
-              <span class="text-xl">❌</span>
-              <span>Forgot - Review Again</span>
+              <span class="absolute inset-0 bg-white/40 scale-0 group-active:scale-100 group-active:opacity-0 transition-all duration-500 rounded-xl"></span>
+              <span class="text-xl transform group-hover:scale-110 transition-transform duration-300">❌</span>
+              <span class="relative z-10">Forgot - Review Again</span>
             </button>
           </div>
         {/if}
@@ -673,27 +677,38 @@
 
   {#if word.repetitions > 0}
     <div class="mt-6 pt-4 border-t border-tile-500">
-      <div class="bg-tile-300/50 rounded-lg p-4 text-left">
-        <div class="flex items-center gap-2 mb-2">
-          <span class="text-lg">📊</span>
-          <p class="text-sm font-semibold text-text-300">Spaced Repetition Stats</p>
+      <div class="bg-gradient-to-br from-tile-300/30 to-tile-300/60 rounded-xl p-5 border border-tile-500/30 shadow-inner">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-10 h-10 rounded-full bg-tile-400 flex items-center justify-center text-xl shadow-md">📊</div>
+          <p class="text-base font-bold text-text-300">Your Progress</p>
         </div>
-        <div class="space-y-1 text-sm text-text-200">
-          <p>Reviewed <span class="font-semibold text-text-300">{word.repetitions}</span> time{word.repetitions !== 1 ? 's' : ''}</p>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-tile-400/40 rounded-lg p-3">
+            <p class="text-xs text-text-200 mb-1">Reviews</p>
+            <p class="text-2xl font-bold text-text-300">{word.repetitions}</p>
+          </div>
           {#if word.intervalDays > 0}
-            <p>Next review in <span class="font-semibold text-text-300">{word.intervalDays}</span> day{word.intervalDays !== 1 ? 's' : ''}</p>
+            <div class="bg-tile-400/40 rounded-lg p-3">
+              <p class="text-xs text-text-200 mb-1">Next in</p>
+              <p class="text-2xl font-bold text-text-300">{word.intervalDays}d</p>
+            </div>
           {:else if word.isLearning}
-            <p class="text-blue-400 font-medium">Currently learning - will appear more frequently</p>
+            <div class="bg-blue-100/50 rounded-lg p-3 col-span-2">
+              <p class="text-xs text-blue-600 font-medium">Currently learning - will appear more frequently</p>
+            </div>
           {/if}
         </div>
       </div>
     </div>
   {:else if word.isLearning}
     <div class="mt-6 pt-4 border-t border-tile-500">
-      <div class="bg-blue-50/50 border border-blue-200 rounded-lg p-4 text-left">
-        <p class="text-sm text-text-200">
-          <span class="font-semibold text-text-300">New word</span> - This word will appear more frequently until you've mastered it
-        </p>
+      <div class="bg-gradient-to-br from-blue-50/50 to-blue-100/30 border-2 border-blue-200 rounded-xl p-4 text-left shadow-sm">
+        <div class="flex items-center gap-2">
+          <span class="text-xl">✨</span>
+          <p class="text-sm text-text-200">
+            <span class="font-semibold text-text-300">New word</span> - This word will appear more frequently until you've mastered it
+          </p>
+        </div>
       </div>
     </div>
   {/if}
@@ -734,9 +749,5 @@
     left: 0;
     right: 0;
     transform: rotateY(180deg);
-  }
-
-  .flip-card-inner.is-animating {
-    pointer-events: none;
   }
 </style>

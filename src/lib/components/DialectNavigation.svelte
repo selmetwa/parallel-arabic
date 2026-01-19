@@ -38,7 +38,7 @@
       { href: '/egyptian-arabic/grammar', label: 'Grammar' },
       { href: '/egyptian-arabic/write', label: 'Writing' },
       { href: '/egyptian-arabic/vocab', label: 'Vocabulary' },
-      { href: '/egyptian-arabic/anki-decks', label: 'Anki Decks' }
+      { href: '/anki-decks', label: 'Anki Decks' }
     ],
     'fusha': [
       // { href: '/fusha/stories', label: 'Stories' },
@@ -46,20 +46,23 @@
       // { href: '/fusha/sentences', label: 'Sentences' },
       { href: '/fusha/write', label: 'Writing' },
       { href: '/fusha/vocab', label: 'Vocabulary' },
+      { href: '/anki-decks', label: 'Anki Decks' }
     ],
     'levantine': [
       // { href: '/levantine/stories', label: 'Stories' },
       // { href: '/levantine/speak', label: 'Speaking' },
       // { href: '/levantine/sentences', label: 'Sentences' },
       { href: '/levantine/write', label: 'Writing' },
-      { href: '/levantine/vocab', label: 'Vocabulary' }
+      { href: '/levantine/vocab', label: 'Vocabulary' },
+      { href: '/anki-decks', label: 'Anki Decks' }
     ],
     'darija': [
       // { href: '/darija/stories', label: 'Stories' },
       // { href: '/darija/speak', label: 'Speaking' },
       // { href: '/darija/sentences', label: 'Sentences' },
       { href: '/darija/write', label: 'Writing' },
-      { href: '/darija/vocab', label: 'Vocabulary' }
+      { href: '/darija/vocab', label: 'Vocabulary' },
+      { href: '/anki-decks', label: 'Anki Decks' }
     ],
   };
 

@@ -24,13 +24,18 @@
 
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 				<!-- Learn Card -->
-				<a href="/alphabet/learn" class="group">
-					<article class="h-full bg-tile-500 border-2 border-tile-600 rounded-lg p-8 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-tile-500">
-						<div class="flex flex-col h-full">
-							<div class="w-16 h-16 bg-tile-400 border-2 border-tile-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-								<span class="text-3xl">📚</span>
+				<a href="/alphabet/learn" class="group block">
+					<article class="h-full bg-gradient-to-br from-tile-500 to-tile-400 border-2 border-tile-600 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:border-tile-500 relative overflow-hidden">
+						<!-- Animated background pattern -->
+						<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+							<div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent"></div>
+						</div>
+
+						<div class="flex flex-col h-full relative z-10">
+							<div class="w-20 h-20 bg-gradient-to-br from-tile-400 to-tile-300 border-2 border-tile-600 rounded-2xl flex items-center justify-center mb-6 shadow-md group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+								<span class="text-4xl">📚</span>
 							</div>
-							<h3 class="text-2xl font-bold text-text-300 mb-3">Learn Letters</h3>
+							<h3 class="text-2xl sm:text-3xl font-bold text-text-300 mb-3 group-hover:text-text-100 transition-colors">Learn Letters</h3>
 							<p class="text-text-200 leading-relaxed mb-4 flex-grow">
 								Discover all 28 Arabic letters with their names, sounds, and different forms. Interactive lessons with native audio pronunciation.
 							</p>
@@ -57,13 +62,18 @@
 				</a>
 
 				<!-- Practice Card -->
-				<a href="/alphabet/practice" class="group">
-					<article class="h-full bg-tile-500 border-2 border-tile-600 rounded-lg p-8 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-tile-500">
-						<div class="flex flex-col h-full">
-							<div class="w-16 h-16 bg-tile-400 border-2 border-tile-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-								<span class="text-3xl">✍️</span>
+				<a href="/alphabet/practice" class="group block">
+					<article class="h-full bg-gradient-to-br from-tile-500 to-tile-400 border-2 border-tile-600 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:border-tile-500 relative overflow-hidden">
+						<!-- Animated background pattern -->
+						<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+							<div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent"></div>
+						</div>
+
+						<div class="flex flex-col h-full relative z-10">
+							<div class="w-20 h-20 bg-gradient-to-br from-tile-400 to-tile-300 border-2 border-tile-600 rounded-2xl flex items-center justify-center mb-6 shadow-md group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+								<span class="text-4xl">✍️</span>
 							</div>
-							<h3 class="text-2xl font-bold text-text-300 mb-3">Practice Writing</h3>
+							<h3 class="text-2xl sm:text-3xl font-bold text-text-300 mb-3 group-hover:text-text-100 transition-colors">Practice Writing</h3>
 							<p class="text-text-200 leading-relaxed mb-4 flex-grow">
 								Reinforce your learning with guided writing exercises. Type with a virtual keyboard or draw letters freehand.
 							</p>
@@ -128,43 +138,45 @@
 	<!-- Quick Facts -->
 	<section class="py-12 sm:py-16">
 		<div class="max-w-4xl mx-auto px-3 sm:px-8">
-			<div class="bg-tile-500 border-2 border-tile-600 rounded-lg p-8 shadow-lg">
-				<h2 class="text-2xl font-bold text-text-300 mb-6 text-center">Quick Facts About Arabic Script</h2>
+			<div class="bg-gradient-to-br from-tile-500 to-tile-400 border-2 border-tile-600 rounded-2xl p-8 shadow-xl">
+				<h2 class="text-2xl font-bold text-text-300 mb-6 text-center bg-gradient-to-r from-text-300 to-text-200 bg-clip-text" style="-webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+					Quick Facts About Arabic Script
+				</h2>
 				<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-					<div class="flex items-start gap-4">
-						<div class="w-10 h-10 bg-tile-400 border border-tile-600 rounded-lg flex items-center justify-center flex-shrink-0">
-							<span class="text-lg">28</span>
+					<div class="flex items-start gap-4 group">
+						<div class="w-14 h-14 bg-gradient-to-br from-tile-400 to-tile-300 border-2 border-tile-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md group-hover:shadow-lg group-hover:scale-110 group-hover:-rotate-6 transition-all duration-300">
+							<span class="text-2xl font-bold text-text-300">28</span>
 						</div>
 						<div>
-							<h4 class="font-bold text-text-300 mb-1">Letters in the Alphabet</h4>
-							<p class="text-text-200 text-sm">All consonants, vowels shown with diacritics</p>
+							<h4 class="font-bold text-text-300 mb-1 text-lg">Letters in the Alphabet</h4>
+							<p class="text-text-200 text-sm leading-relaxed">All consonants, vowels shown with diacritics</p>
 						</div>
 					</div>
-					<div class="flex items-start gap-4">
-						<div class="w-10 h-10 bg-tile-400 border border-tile-600 rounded-lg flex items-center justify-center flex-shrink-0">
-							<span class="text-lg">→←</span>
+					<div class="flex items-start gap-4 group">
+						<div class="w-14 h-14 bg-gradient-to-br from-tile-400 to-tile-300 border-2 border-tile-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md group-hover:shadow-lg group-hover:scale-110 group-hover:-rotate-6 transition-all duration-300">
+							<span class="text-2xl">→←</span>
 						</div>
 						<div>
-							<h4 class="font-bold text-text-300 mb-1">Written Right-to-Left</h4>
-							<p class="text-text-200 text-sm">Like Hebrew and Persian scripts</p>
+							<h4 class="font-bold text-text-300 mb-1 text-lg">Written Right-to-Left</h4>
+							<p class="text-text-200 text-sm leading-relaxed">Like Hebrew and Persian scripts</p>
 						</div>
 					</div>
-					<div class="flex items-start gap-4">
-						<div class="w-10 h-10 bg-tile-400 border border-tile-600 rounded-lg flex items-center justify-center flex-shrink-0">
-							<span class="text-lg">4</span>
+					<div class="flex items-start gap-4 group">
+						<div class="w-14 h-14 bg-gradient-to-br from-tile-400 to-tile-300 border-2 border-tile-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md group-hover:shadow-lg group-hover:scale-110 group-hover:-rotate-6 transition-all duration-300">
+							<span class="text-2xl font-bold text-text-300">4</span>
 						</div>
 						<div>
-							<h4 class="font-bold text-text-300 mb-1">Forms per Letter</h4>
-							<p class="text-text-200 text-sm">Isolated, initial, medial, and final</p>
+							<h4 class="font-bold text-text-300 mb-1 text-lg">Forms per Letter</h4>
+							<p class="text-text-200 text-sm leading-relaxed">Isolated, initial, medial, and final</p>
 						</div>
 					</div>
-					<div class="flex items-start gap-4">
-						<div class="w-10 h-10 bg-tile-400 border border-tile-600 rounded-lg flex items-center justify-center flex-shrink-0">
-							<span class="text-lg">6</span>
+					<div class="flex items-start gap-4 group">
+						<div class="w-14 h-14 bg-gradient-to-br from-tile-400 to-tile-300 border-2 border-tile-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md group-hover:shadow-lg group-hover:scale-110 group-hover:-rotate-6 transition-all duration-300">
+							<span class="text-2xl font-bold text-text-300">6</span>
 						</div>
 						<div>
-							<h4 class="font-bold text-text-300 mb-1">Non-Connecting Letters</h4>
-							<p class="text-text-200 text-sm">ا د ذ ر ز و only connect from the right</p>
+							<h4 class="font-bold text-text-300 mb-1 text-lg">Non-Connecting Letters</h4>
+							<p class="text-text-200 text-sm leading-relaxed">ا د ذ ر ز و only connect from the right</p>
 						</div>
 					</div>
 				</div>

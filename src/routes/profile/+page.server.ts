@@ -3,6 +3,7 @@ import type { Actions } from './$types';
 import { supabase } from '$lib/supabaseClient';
 import { getUserHasActiveSubscription } from '$lib/helpers/get-user-has-active-subscription.js';
 import { getStoriesByUser } from '$lib/helpers/story-helpers';
+import { StripeService } from '$lib/services/stripe.service';
 
 export const load = async ({ locals, parent }) => {
 	const { session, user } = await parent();
@@ -23,15 +24,41 @@ export const load = async ({ locals, parent }) => {
     userGeneratedStories = storiesResult.stories || [];
   }
 
-  // Fetch user's onboarding data (target_dialect, learning_reason, proficiency_level, daily_review_limit)
+  // Fetch user's onboarding data and subscription info
   const { data: userData, error: userError } = await supabase
     .from('user')
-    .select('target_dialect, learning_reason, proficiency_level, onboarding_completed, daily_review_limit')
+    .select('target_dialect, learning_reason, proficiency_level, onboarding_completed, daily_review_limit, subscriber_id, subscription_end_date')
     .eq('id', userId)
     .single();
 
   if (userError && userError.code !== 'PGRST116') {
     console.error('Error fetching user onboarding data:', userError);
+  }
+
+  // Fetch subscription details from Stripe if user has a subscriber_id
+  let subscriptionDetails: {
+    cancelAtPeriodEnd: boolean;
+    currentPeriodEnd: number | null;
+    status: string | null;
+  } = {
+    cancelAtPeriodEnd: false,
+    currentPeriodEnd: null,
+    status: null
+  };
+
+  if (userData?.subscriber_id) {
+    try {
+      const subscription = await StripeService.getSubscription(userData.subscriber_id);
+      if (subscription) {
+        subscriptionDetails = {
+          cancelAtPeriodEnd: subscription.cancel_at_period_end,
+          currentPeriodEnd: subscription.current_period_end,
+          status: subscription.status
+        };
+      }
+    } catch (error) {
+      console.error('Error fetching subscription from Stripe:', error);
+    }
   }
 
   // Fetch word statistics by dialect
@@ -88,7 +115,8 @@ export const load = async ({ locals, parent }) => {
     onboardingCompleted: userData?.onboarding_completed || false,
     dailyReviewLimit: userData?.daily_review_limit ?? 20,
     wordStats,
-    user // Include user for stats component
+    user, // Include user for stats component
+    subscriptionDetails
 	};
 };
 
