@@ -63,6 +63,7 @@
         items: [
           { label: 'Sentences', href: '/sentences', icon: '📝' },
           { label: 'Stories', href: '/stories', icon: '📖' },
+          { label: 'Speak', href: '/speak', icon: '🎤' },
         ]
       },
       {
