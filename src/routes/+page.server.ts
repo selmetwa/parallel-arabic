@@ -5,6 +5,14 @@ import { supabase } from "$lib/supabaseClient";
 
 import type { PageServerLoad } from "./$types";
 
+// ISR configuration for edge caching (Vercel)
+// Cache the logged-out landing page at the edge for 5 minutes
+export const config = {
+  isr: {
+    expiration: 300, // 5 minute cache
+  },
+};
+
 export interface ActivitySuggestion {
   id: string;
   href: string;
@@ -26,6 +34,26 @@ export const load: PageServerLoad = async ({ parent }) => {
   // Get all user data from layout (no additional DB queries needed!)
   const { session, isSubscribed, user } = await parent();
 
+  // For logged-out users, return static data immediately (cached at edge)
+  // This avoids expensive DB queries and enables ISR caching
+  if (!user) {
+    return {
+      session: null,
+      isSubscribed: false,
+      subscriptionId: null,
+      subscriptionEndDate: null,
+      user: null,
+      wordsDueForReviewCount: 0,
+      cappedReviewCount: 0,
+      totalSavedWordsCount: 0,
+      totalSentencesViewed: 0,
+      totalStoriesViewed: 0,
+      totalShortsViewed: 0,
+      currentStreak: 0,
+      suggestions: [],
+    };
+  }
+
   let wordsDueForReviewCount = 0;
   let totalSavedWordsCount = 0;
   
@@ -37,7 +65,7 @@ export const load: PageServerLoad = async ({ parent }) => {
   const totalShortsViewed = user?.total_shorts_viewed || 0;
   const currentStreak = user?.current_streak || 0;
 
-  // Fetch review word counts if user is logged in
+  // Fetch review word counts for logged-in users
   if (user?.id) {
     const userId = user.id;
     const now = Date.now();

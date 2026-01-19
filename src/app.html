@@ -19,6 +19,9 @@
   <link rel="preload" href="/fonts/ReadexPro-Regular.ttf" as="font" type="font/truetype" crossorigin>
   <link rel="preload" href="/fonts/ReadexPro-SemiBold.ttf" as="font" type="font/truetype" crossorigin>
 
+  <!-- Preload LCP image for faster largest contentful paint -->
+  <link rel="preload" href="/images/banner.png" as="image" fetchpriority="high">
+
   <!-- Load Google Font with lower priority (non-blocking) -->
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap"></noscript>
@@ -32,9 +35,6 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="Parallel Arabic" />
   <link rel="apple-touch-icon" href="/icons/icon.png" />
-
-  <script defer data-website-id="dfid_llUL02gpewcvzR8hGDuhO" data-domain="www.parallel-arabic.com" src="https://datafa.st/js/script.js">
-  </script>
 
   <!-- Manifest link will be injected by the plugin via +layout.svelte -->
   %sveltekit.head%
@@ -77,6 +77,14 @@
         s4.dataset.secret = 'e25ce093-4111-4e8b-9dc0-f6b715e69c3a';
         s4.src = 'https://sitebehaviour-cdn.fra1.cdn.digitaloceanspaces.com/index.min.js';
         document.head.appendChild(s4);
+
+        // Datafast analytics (moved from head for better LCP)
+        var s5 = document.createElement('script');
+        s5.defer = true;
+        s5.dataset.websiteId = 'dfid_llUL02gpewcvzR8hGDuhO';
+        s5.dataset.domain = 'www.parallel-arabic.com';
+        s5.src = 'https://datafa.st/js/script.js';
+        document.head.appendChild(s5);
       };
 
       if ('requestIdleCallback' in window) {
