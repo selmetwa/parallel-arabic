@@ -424,6 +424,11 @@ export const GET: RequestHandler = async ({ url }) => {
 		return json({ error: 'Invalid dialect' }, { status: 400 });
 	}
 
+	// Cache headers for CDN/browser caching
+	const cacheHeaders = {
+		'Cache-Control': 'public, max-age=300, stale-while-revalidate=600'
+	};
+
 	try {
 		// Check cache first (unless skipCache is true)
 		if (!skipCache) {
@@ -434,7 +439,7 @@ export const GET: RequestHandler = async ({ url }) => {
 					nextPageToken: cached.nextPageToken,
 					dialect,
 					cached: true
-				});
+				}, { headers: cacheHeaders });
 			}
 		}
 
@@ -451,7 +456,7 @@ export const GET: RequestHandler = async ({ url }) => {
 			nextPageToken,
 			dialect,
 			cached: false
-		});
+		}, { headers: cacheHeaders });
 
 	} catch (error) {
 		console.error('Error fetching YouTube shorts:', error);
