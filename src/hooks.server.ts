@@ -2,6 +2,10 @@ import { createServerClient } from '@supabase/ssr'
 import { type Handle } from '@sveltejs/kit'
 import { sequence } from '@sveltejs/kit/hooks'
 import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_PUBLISHABLE_KEY } from '$env/static/public'
+import { dev } from '$app/environment'
+
+// Only log in development mode to avoid production overhead
+const DEBUG = dev
 
 const supabase: Handle = async ({ event, resolve }) => {
   /**
@@ -31,36 +35,26 @@ const supabase: Handle = async ({ event, resolve }) => {
    * JWT before returning the session.
    */
   event.locals.safeGetSession = async () => {
-    console.log('🔍 [hooks.server.ts] safeGetSession started')
-    
     try {
-      console.log('🔍 [hooks.server.ts] Getting session from Supabase...')
       const {
         data: { session },
       } = await event.locals.supabase.auth.getSession()
       
       if (!session) {
-        console.log('🔍 [hooks.server.ts] No session found')
         return { session: null, user: null }
       }
 
-      console.log('🔍 [hooks.server.ts] Session found, getting user...')
       const {
         data: { user },
         error,
       } = await event.locals.supabase.auth.getUser()
       
       if (error) {
-        console.error('❌ [hooks.server.ts] Error fetching user from auth:', error)
+        if (DEBUG) console.error('❌ [hooks.server.ts] Error fetching user from auth:', error)
         // JWT validation has failed
         await event.locals.supabase.auth.signOut()
         return { session: null, user: null }
       }
-
-      console.log('🔍 [hooks.server.ts] Auth user found, querying database user...', { 
-        authUserId: user?.id,
-        authUserEmail: user?.email 
-      })
       
       // query the user from the database
       const { 
@@ -69,18 +63,20 @@ const supabase: Handle = async ({ event, resolve }) => {
       } = await event.locals.supabase.from('user').select('*').eq('supabase_auth_id', user?.id).single()
       
       if (realUserError) {
-        console.error('❌ [hooks.server.ts] Error fetching user from database:', realUserError)
-        console.error('❌ [hooks.server.ts] Database query details:', { 
-          supabase_auth_id: user?.id,
-          errorCode: realUserError.code,
-          errorMessage: realUserError.message 
-        })
+        if (DEBUG) {
+          console.error('❌ [hooks.server.ts] Error fetching user from database:', realUserError)
+          console.error('❌ [hooks.server.ts] Database query details:', { 
+            supabase_auth_id: user?.id,
+            errorCode: realUserError.code,
+            errorMessage: realUserError.message 
+          })
+        }
         await event.locals.supabase.auth.signOut()
         return { session: null, user: null }
       }
 
       if (!realUser) {
-        console.error('❌ [hooks.server.ts] User not found in database for auth ID:', user?.id)
+        if (DEBUG) console.error('❌ [hooks.server.ts] User not found in database for auth ID:', user?.id)
         await event.locals.supabase.auth.signOut()
         return { session: null, user: null }
       }
@@ -88,8 +84,10 @@ const supabase: Handle = async ({ event, resolve }) => {
       return { session, user: realUser }
       
     } catch (error) {
-      console.error('❌ [hooks.server.ts] Unexpected error in safeGetSession:', error)
-      console.error('❌ [hooks.server.ts] Error stack:', error instanceof Error ? error.stack : 'No stack trace')
+      if (DEBUG) {
+        console.error('❌ [hooks.server.ts] Unexpected error in safeGetSession:', error)
+        console.error('❌ [hooks.server.ts] Error stack:', error instanceof Error ? error.stack : 'No stack trace')
+      }
       return { session: null, user: null }
     }
   }
