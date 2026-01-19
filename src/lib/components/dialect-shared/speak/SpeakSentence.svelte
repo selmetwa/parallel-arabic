@@ -2,8 +2,6 @@
   import levenshtein from 'fast-levenshtein';
   import Button from '$lib/components/Button.svelte';
   import AudioLoading from '$lib/components/AudioLoading.svelte';
-  import RecordButton from '$lib/components/RecordButton.svelte';
-  import Similarity from '$lib/components/Similarity.svelte';
   import AudioButton from '$lib/components/AudioButton.svelte';
   import DefinitionModal from '$lib/components/dialect-shared/sentences/DefinitionModal.svelte';
   import DialectComparisonModal from '$lib/components/dialect-shared/sentences/DialectComparisonModal.svelte';
@@ -25,6 +23,7 @@
 	let definition = $state('');
   let targetWord = $state('');
   let audioURL = $state('');
+  let isTranscribing = $state(false);
 
   // Dialect Comparison State
   let isComparisonModalOpen = $state(false);
@@ -79,6 +78,7 @@
       definition = '';
       targetWord = '';
       audioURL = '';
+      isTranscribing = false;
     }
   });
 
@@ -96,19 +96,29 @@
       const blob = new Blob(audioChunks, { type: "audio/webm" });
       audioURL = URL.createObjectURL(blob);
       audioChunks = []; // Clear for next recording
+      isTranscribing = true;
 
-      // Create a File object to send to the backend
-      const file = new File([blob], "recording.webm", { type: "audio/webm" });
-      const formData = new FormData();
-      formData.append("audio", file);
+      try {
+        // Create a File object to send to the backend
+        const file = new File([blob], "recording.webm", { type: "audio/webm" });
+        const formData = new FormData();
+        formData.append("audio", file);
+        formData.append("dialect", dialect); // Send dialect for Chirp 3
+        formData.append("language", "ar");
 
-      const response = await fetch("/api/speech-to-text", {
-        method: "POST",
-        body: formData,
-      });
+        const response = await fetch("/api/speech-to-text", {
+          method: "POST",
+          body: formData,
+        });
 
-      const data = await response.json();
-      transcribedText = data.text;
+        const data = await response.json();
+        transcribedText = data.text || "";
+      } catch (error) {
+        console.error('Speech-to-text error:', error);
+        transcribedText = "";
+      } finally {
+        isTranscribing = false;
+      }
     };
 
     mediaRecorder.start();
@@ -171,6 +181,14 @@
     }
   }
 
+  function toggleRecording() {
+    if (recording) {
+      stopRecording();
+    } else {
+      startRecording();
+    }
+  }
+
   $effect(() => {
     if (transcribedText) {
       const transcribedTextWithoutPeriods = transcribedText.replace(/\./g, '');
@@ -180,6 +198,15 @@
       similarity = _similarity;
     }
   });
+
+  // Get feedback text based on similarity
+  function getFeedback(score: number): { text: string; emoji: string; color: string } {
+    if (score >= 90) return { text: "Excellent!", emoji: "🎉", color: "text-green-500" };
+    if (score >= 75) return { text: "Great job!", emoji: "👏", color: "text-emerald-500" };
+    if (score >= 60) return { text: "Good effort!", emoji: "👍", color: "text-yellow-500" };
+    if (score >= 40) return { text: "Keep practicing!", emoji: "💪", color: "text-orange-500" };
+    return { text: "Try again!", emoji: "🔄", color: "text-red-500" };
+  }
 </script>
 
 <DefinitionModal
@@ -229,26 +256,12 @@
     </Button>
 	</div>
 
-  <!-- Recording Area -->
-	<div class="bg-tile-400/30 border-2 border-tile-600 flex flex-col gap-8 items-center px-6 py-16 shadow-lg rounded-xl min-h-[400px] h-full relative overflow-hidden">
-		{#if !recording}
-			<button class="absolute top-6 right-6 z-10 transition-transform hover:scale-110" onclick={startRecording} disabled={recording} aria-label="Start Recording">
-				<RecordButton />
-			</button>
-		{:else}
-			<button class="absolute top-6 right-6 z-10 transition-transform hover:scale-110" onclick={stopRecording} disabled={!recording} aria-label="Stop Recording">
-				<AudioLoading />
-			</button>
-		{/if}
-
-		{#if similarity > 0}
-			<div class="absolute left-6 top-6 z-10 scale-90 origin-top-left">
-				<Similarity score={similarity} />
-			</div>
-		{/if}
+  <!-- Main Content Area -->
+	<div class="bg-tile-400/30 border-2 border-tile-600 flex flex-col items-center px-6 py-12 shadow-lg rounded-xl min-h-[500px]">
 		
-		<div class="text-center w-full max-w-4xl mx-auto flex flex-col items-center justify-center flex-1 gap-8">
-			<h3 class="text-4xl sm:text-5xl md:text-6xl text-text-300 font-bold leading-relaxed flex flex-wrap justify-center gap-x-2 gap-y-1">
+		<!-- Sentence to speak -->
+		<div class="text-center w-full max-w-4xl mx-auto flex flex-col items-center gap-6 mb-10">
+			<h3 class="text-3xl sm:text-4xl md:text-5xl text-text-300 font-bold leading-relaxed flex flex-wrap justify-center gap-x-2 gap-y-1">
 				{#each sentence.english.split(' ') as word}
 					<button
 						onclick={() => askChatGTP(word)}
@@ -258,27 +271,108 @@
 				{/each}
 			</h3>
 			
-			<div class="flex flex-col gap-4 items-center w-full transition-all duration-300 min-h-[6rem]">
+			<div class="flex flex-col gap-3 items-center w-full transition-all duration-300 min-h-[4rem]">
 				{#if showHint}
-					<p class="text-2xl text-text-200 font-medium italic bg-tile-300/50 px-6 py-2 rounded-full border border-tile-500/30 animate-in fade-in slide-in-from-bottom-2">
+					<p class="text-xl sm:text-2xl text-text-200 font-medium italic bg-tile-300/50 px-6 py-2 rounded-full border border-tile-500/30 animate-in fade-in slide-in-from-bottom-2">
 						{sentence.transliteration}
 					</p>
 				{/if}
 
 				{#if showAnswer}
-					<p class="text-4xl sm:text-5xl text-text-300 font-bold font-arabic mt-2 animate-in fade-in slide-in-from-bottom-2" dir="rtl">
+					<p class="text-3xl sm:text-4xl text-text-300 font-bold font-arabic animate-in fade-in slide-in-from-bottom-2" dir="rtl">
 						{sentence.arabic}
 					</p>
 				{/if}
 			</div>
 		</div>
-		
-		{#if transcribedText}
-			<div class="w-full max-w-3xl px-6 py-6 bg-tile-300/50 border border-tile-500/50 rounded-xl mt-8 animate-in slide-in-from-bottom-4">
-        <p class="text-sm text-text-200 mb-2 uppercase tracking-wider font-bold text-center">You said:</p>
-				<p class="text-3xl sm:text-4xl text-center text-text-300 font-arabic" dir="rtl">
-					{transcribedText}
-				</p>
+
+		<!-- Big Record Button -->
+		<button
+			onclick={toggleRecording}
+			disabled={isTranscribing}
+			class="group flex flex-col items-center gap-4 p-8 rounded-3xl border-4 transition-all duration-300 transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed {recording ? 'bg-red-500/20 border-red-500 shadow-lg shadow-red-500/30' : 'bg-tile-300/50 border-tile-500 hover:border-tile-600 hover:bg-tile-400/50'}"
+		>
+			<div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full flex items-center justify-center transition-all duration-300 {recording ? 'bg-red-500 animate-pulse' : 'bg-gradient-to-br from-red-400 to-red-600 group-hover:from-red-500 group-hover:to-red-700'}">
+				{#if recording}
+					<AudioLoading />
+				{:else}
+					<svg class="w-12 h-12 sm:w-14 sm:h-14 text-white" fill="currentColor" viewBox="0 0 24 24">
+						<path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+						<path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+					</svg>
+				{/if}
+			</div>
+			<span class="text-xl sm:text-2xl font-bold {recording ? 'text-red-500' : 'text-text-300'}">
+				{#if isTranscribing}
+					Processing...
+				{:else if recording}
+					Tap to Stop
+				{:else}
+					Tap to Speak
+				{/if}
+			</span>
+			<span class="text-sm text-text-200">
+				{#if recording}
+					Recording your voice...
+				{:else}
+					Say the sentence in Arabic
+				{/if}
+			</span>
+		</button>
+
+		<!-- Result Section -->
+		{#if isTranscribing}
+			<div class="w-full max-w-2xl mt-10 px-6 py-8 bg-tile-300/50 border-2 border-tile-500/50 rounded-2xl animate-in slide-in-from-bottom-4">
+				<div class="flex flex-col items-center gap-4">
+					<div class="w-12 h-12 border-4 border-tile-500 border-t-tile-700 rounded-full animate-spin"></div>
+					<p class="text-lg text-text-200 font-medium">Analyzing your speech...</p>
+				</div>
+			</div>
+		{:else if transcribedText}
+			{@const feedback = getFeedback(similarity)}
+			<div class="w-full max-w-2xl mt-10 animate-in slide-in-from-bottom-4">
+				<!-- Score Card -->
+				<div class="px-6 py-8 bg-tile-300/50 border-2 border-tile-500/50 rounded-2xl">
+					<!-- Score Display -->
+					<div class="flex items-center justify-center gap-4 mb-6">
+						<span class="text-5xl">{feedback.emoji}</span>
+						<div class="text-center">
+							<p class="text-4xl sm:text-5xl font-bold {feedback.color}">{Math.round(similarity)}%</p>
+							<p class="text-lg font-semibold {feedback.color}">{feedback.text}</p>
+						</div>
+					</div>
+
+					<!-- What you said -->
+					<div class="border-t border-tile-500/30 pt-6">
+						<p class="text-sm text-text-200 mb-3 uppercase tracking-wider font-bold text-center">You said:</p>
+						<p class="text-2xl sm:text-3xl text-center text-text-300 font-arabic leading-relaxed" dir="rtl">
+							{transcribedText}
+						</p>
+					</div>
+
+					<!-- Expected (if answer is shown) -->
+					{#if showAnswer}
+						<div class="border-t border-tile-500/30 pt-6 mt-6">
+							<p class="text-sm text-text-200 mb-3 uppercase tracking-wider font-bold text-center">Expected:</p>
+							<p class="text-2xl sm:text-3xl text-center text-text-300 font-arabic leading-relaxed" dir="rtl">
+								{sentence.arabic}
+							</p>
+						</div>
+					{/if}
+
+					<!-- Try Again Button -->
+					<div class="mt-8 flex justify-center">
+						<button
+							onclick={() => { transcribedText = ""; similarity = 0; }}
+							class="px-8 py-3 bg-tile-500 hover:bg-tile-600 text-text-300 font-semibold rounded-xl transition-colors flex items-center gap-2"
+						>
+							<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+							</svg>
+							Try Again
+						</button>
+					</div>
+				</div>
 			</div>
 		{/if}
 	</div>

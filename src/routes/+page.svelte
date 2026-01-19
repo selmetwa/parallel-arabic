@@ -137,11 +137,17 @@
         description="Read short stories with instant definitions, audio, and parallel translations."
       />
       <Card
-      href="/sentences"
-      icon="📝"
-      title="Sentences"
-      description="Drill sentence structures and grammar patterns in context."
-    />
+        href="/sentences"
+        icon="📝"
+        title="Sentences"
+        description="Drill sentence structures and grammar patterns in context."
+      />
+      <Card
+        href="/speak"
+        icon="🎤"
+        title="Speak"
+        description="Practice pronunciation by speaking sentences and get instant feedback."
+      />
     </div>
   </div>
 

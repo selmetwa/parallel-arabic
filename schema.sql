@@ -88,6 +88,43 @@ CREATE TABLE public.structured_lesson_progress (
   CONSTRAINT structured_lesson_progress_pkey PRIMARY KEY (id),
   CONSTRAINT structured_lesson_progress_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.user(id)
 );
+CREATE TABLE public.tutor_conversation (
+  id text NOT NULL,
+  user_id text NOT NULL,
+  dialect text NOT NULL,
+  created_at bigint NOT NULL,
+  ended_at bigint,
+  summary text,
+  topics_discussed ARRAY,
+  new_vocabulary ARRAY,
+  CONSTRAINT tutor_conversation_pkey PRIMARY KEY (id),
+  CONSTRAINT tutor_conversation_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.user(id)
+);
+CREATE TABLE public.tutor_learning_insight (
+  id text NOT NULL,
+  user_id text NOT NULL,
+  dialect text NOT NULL,
+  insight_type text NOT NULL CHECK (insight_type = ANY (ARRAY['weakness'::text, 'strength'::text, 'topic_interest'::text, 'vocabulary_gap'::text])),
+  content text NOT NULL,
+  confidence real DEFAULT 0.5,
+  occurrences integer DEFAULT 1,
+  last_observed_at bigint NOT NULL,
+  created_at bigint NOT NULL,
+  CONSTRAINT tutor_learning_insight_pkey PRIMARY KEY (id),
+  CONSTRAINT tutor_learning_insight_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.user(id)
+);
+CREATE TABLE public.tutor_message (
+  id text NOT NULL,
+  conversation_id text NOT NULL,
+  role text NOT NULL CHECK (role = ANY (ARRAY['user'::text, 'tutor'::text])),
+  arabic text,
+  english text,
+  transliteration text,
+  feedback text,
+  created_at bigint NOT NULL,
+  CONSTRAINT tutor_message_pkey PRIMARY KEY (id),
+  CONSTRAINT tutor_message_conversation_id_fkey FOREIGN KEY (conversation_id) REFERENCES public.tutor_conversation(id)
+);
 CREATE TABLE public.user (
   id text NOT NULL,
   email text NOT NULL UNIQUE,
