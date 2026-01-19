@@ -10,11 +10,33 @@ Disallow: /pricing/
 
 # Allow important public pages
 Allow: /about
-Allow: /lessons
-Allow: /stories
-Allow: /tutor
-Allow: /videos
+Allow: /faq
+Allow: /support
+Allow: /mobile-app
+Allow: /keyboard
+Allow: /anki-decks
+
+# Hub pages (mobile navigation)
+Allow: /learn
+Allow: /practice
+Allow: /explore
+
+# Learning content
 Allow: /alphabet/
+Allow: /lessons
+Allow: /vocabulary
+Allow: /stories
+Allow: /sentences
+Allow: /speak
+Allow: /videos
+Allow: /videos-new
+Allow: /tutor
+
+# Dialect pages
+Allow: /egyptian-arabic/
+Allow: /fusha/
+Allow: /levantine/
+Allow: /darija/
 
 Sitemap: https://www.parallel-arabic.com/sitemap.xml
 
