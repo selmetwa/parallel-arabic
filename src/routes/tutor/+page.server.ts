@@ -12,9 +12,58 @@ interface PracticeSentence {
   dialect: string;
 }
 
+interface LearningInsight {
+  insight_type: string;
+  content: string;
+  occurrences: number;
+}
+
+interface RecentConversation {
+  id: string;
+  dialect: string;
+  created_at: number;
+  summary: string | null;
+  topics_discussed: string[] | null;
+}
+
 export const load: PageServerLoad = async ({ parent }) => {
   // Get session and subscription info from parent layout
   const { session, isSubscribed, user } = await parent();
+  
+  // Fetch learning insights and recent conversations if user is logged in
+  let learningInsights: LearningInsight[] = [];
+  let recentConversations: RecentConversation[] = [];
+  
+  if (user?.id) {
+    try {
+      // Fetch in parallel for speed
+      const [insightsResult, conversationsResult] = await Promise.all([
+        supabase
+          .from('tutor_learning_insight')
+          .select('insight_type, content, occurrences')
+          .eq('user_id', user.id)
+          .order('occurrences', { ascending: false })
+          .limit(10),
+        supabase
+          .from('tutor_conversation')
+          .select('id, dialect, created_at, summary, topics_discussed')
+          .eq('user_id', user.id)
+          .not('summary', 'is', null)
+          .order('created_at', { ascending: false })
+          .limit(5)
+      ]);
+      
+      if (!insightsResult.error && insightsResult.data) {
+        learningInsights = insightsResult.data;
+      }
+      
+      if (!conversationsResult.error && conversationsResult.data) {
+        recentConversations = conversationsResult.data;
+      }
+    } catch (e) {
+      console.error('Error fetching tutor memory:', e);
+    }
+  }
 
   // Fetch some sentences for practice mode from recent stories
   let practiceSentences: PracticeSentence[] = [];
@@ -81,7 +130,9 @@ export const load: PageServerLoad = async ({ parent }) => {
     isSubscribed,
     hasActiveSubscription: isSubscribed,
     user,
-    practiceSentences
+    practiceSentences,
+    learningInsights,
+    recentConversations
   };
 };
 
