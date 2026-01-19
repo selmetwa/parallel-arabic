@@ -137,12 +137,6 @@
         description="Read short stories with instant definitions, audio, and parallel translations."
       />
       <Card
-        href="/speak"
-        icon="🎙️"
-        title="Speak"
-        description="Improve pronunciation with AI feedback on your spoken sentences."
-      />
-      <Card
       href="/sentences"
       icon="📝"
       title="Sentences"

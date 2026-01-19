@@ -57,6 +57,10 @@
     { value: 'levantine', label: 'Levantine Arabic', emoji: '🇱🇧' },
   ];
 
+  // Mode: 'conversation' or 'practice'
+  type TutorMode = 'conversation' | 'practice';
+  let mode = $state<TutorMode>('conversation');
+
   let selectedDialect = $state<Dialect>(getDefaultDialect(data.user) as Dialect);
   let recording = $state(false);
   let recordingLanguage = $state<'ar' | 'en'>('ar');
@@ -67,6 +71,195 @@
   let isTranscribing = $state(false);
   let isGettingResponse = $state(false);
   let transcriptContainer: HTMLDivElement | null = $state(null);
+
+  // Practice mode state
+  interface PracticeSentence {
+    id: string;
+    storyId: number;
+    storyTitle: string;
+    arabic: string;
+    english: string;
+    transliteration: string;
+    dialect: string;
+  }
+
+  interface PracticeResult {
+    transcribedText: string;
+    expectedText: string;
+    similarity: number;
+    feedback: string;
+  }
+
+  let practiceIndex = $state(0);
+  let practiceResult = $state<PracticeResult | null>(null);
+  let isPracticeRecording = $state(false);
+  let isPracticeProcessing = $state(false);
+
+  // Filter practice sentences by selected dialect
+  let filteredPracticeSentences = $derived(
+    (data.practiceSentences || []).filter((s: PracticeSentence) => s.dialect === selectedDialect)
+  );
+
+  let currentPracticeSentence = $derived(
+    filteredPracticeSentences[practiceIndex] || null
+  );
+
+  function nextPracticeSentence() {
+    if (practiceIndex < filteredPracticeSentences.length - 1) {
+      practiceIndex++;
+      practiceResult = null;
+    }
+  }
+
+  function prevPracticeSentence() {
+    if (practiceIndex > 0) {
+      practiceIndex--;
+      practiceResult = null;
+    }
+  }
+
+  function shufflePracticeSentences() {
+    practiceIndex = Math.floor(Math.random() * filteredPracticeSentences.length);
+    practiceResult = null;
+  }
+
+  // Calculate text similarity (simple word-level comparison)
+  function calculateSimilarity(transcribed: string, expected: string): number {
+    const normalizeArabic = (text: string) => {
+      return text
+        .replace(/[\u064B-\u0652]/g, '') // Remove tashkeel/diacritics
+        .replace(/[،.؟!,?]/g, '') // Remove punctuation
+        .trim()
+        .toLowerCase();
+    };
+
+    const t = normalizeArabic(transcribed);
+    const e = normalizeArabic(expected);
+
+    if (t === e) return 100;
+    if (!t || !e) return 0;
+
+    const tWords = t.split(/\s+/);
+    const eWords = e.split(/\s+/);
+
+    let matchCount = 0;
+    for (const word of tWords) {
+      if (eWords.includes(word)) {
+        matchCount++;
+      }
+    }
+
+    return Math.round((matchCount / Math.max(tWords.length, eWords.length)) * 100);
+  }
+
+  async function startPracticeRecording() {
+    if (!hasActiveSubscription) {
+      openPaywallModal();
+      return;
+    }
+
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      mediaRecorder = new MediaRecorder(stream);
+
+      mediaRecorder.ondataavailable = (event: BlobEvent) => {
+        if (event.data.size > 0) {
+          audioChunks.push(event.data);
+        }
+      };
+
+      mediaRecorder.onstop = async () => {
+        await processPracticeRecording();
+        stream.getTracks().forEach(track => track.stop());
+      };
+
+      mediaRecorder.start();
+      isPracticeRecording = true;
+      audioChunks = [];
+      practiceResult = null;
+    } catch (error) {
+      console.error('Error starting practice recording:', error);
+      alert('Failed to access microphone. Please check your permissions.');
+    }
+  }
+
+  function stopPracticeRecording() {
+    if (mediaRecorder && mediaRecorder.state !== 'inactive') {
+      mediaRecorder.stop();
+      isPracticeRecording = false;
+    }
+  }
+
+  async function processPracticeRecording() {
+    if (audioChunks.length === 0 || !currentPracticeSentence) return;
+
+    isPracticeProcessing = true;
+
+    try {
+      const blob = new Blob(audioChunks, { type: 'audio/webm' });
+      const file = new File([blob], 'recording.webm', { type: 'audio/webm' });
+      const formData = new FormData();
+      formData.append('audio', file);
+      formData.append('language', 'ar'); // Always Arabic for practice
+      formData.append('expectedText', currentPracticeSentence.arabic);
+
+      const transcriptionResponse = await fetch('/api/speech-to-text', {
+        method: 'POST',
+        body: formData
+      });
+
+      if (!transcriptionResponse.ok) {
+        throw new Error('Transcription failed');
+      }
+
+      const transcriptionData = await transcriptionResponse.json();
+      const transcribedText = transcriptionData.text?.trim() || '';
+
+      if (!transcribedText) {
+        throw new Error('No speech detected. Please try speaking more clearly.');
+      }
+
+      const similarity = calculateSimilarity(transcribedText, currentPracticeSentence.arabic);
+
+      let feedback = '';
+      if (similarity >= 90) {
+        feedback = 'Excellent! Your pronunciation was very close to the original.';
+      } else if (similarity >= 70) {
+        feedback = 'Good job! Most words were recognized correctly.';
+      } else if (similarity >= 50) {
+        feedback = 'Keep practicing! Try listening to the sentence again and focus on each word.';
+      } else {
+        feedback = 'Try again. Listen carefully to the pronunciation and speak more slowly.';
+      }
+
+      practiceResult = {
+        transcribedText,
+        expectedText: currentPracticeSentence.arabic,
+        similarity,
+        feedback
+      };
+
+    } catch (error) {
+      console.error('Error processing practice recording:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Failed to process your recording';
+      practiceResult = {
+        transcribedText: '',
+        expectedText: currentPracticeSentence?.arabic || '',
+        similarity: 0,
+        feedback: errorMessage
+      };
+    } finally {
+      isPracticeProcessing = false;
+    }
+  }
+
+  function togglePracticeRecording() {
+    if (isPracticeRecording) {
+      stopPracticeRecording();
+    } else {
+      startPracticeRecording();
+    }
+  }
 
   // Dialect Comparison State
   let isComparisonModalOpen = $state(false);
@@ -384,8 +577,35 @@
             </h1>
           </div>
           <p class="text-lg sm:text-xl text-text-200 leading-relaxed">
-            Practice speaking Arabic with an AI tutor. Have real conversations in your chosen dialect with instant feedback and translations.
+            {#if mode === 'conversation'}
+              Practice speaking Arabic with an AI tutor. Have real conversations in your chosen dialect with instant feedback.
+            {:else}
+              Practice sentences from stories. Listen, repeat, and compare your pronunciation.
+            {/if}
           </p>
+
+          <!-- Mode Toggle -->
+          <div class="mt-6 flex gap-2">
+            <button
+              onclick={() => mode = 'conversation'}
+              class="px-5 py-2.5 rounded-lg font-semibold transition-all duration-200 {mode === 'conversation' ? 'bg-emerald-600 text-white shadow-lg' : 'bg-tile-400 text-text-200 hover:bg-tile-500 border-2 border-tile-600'}"
+            >
+              <span class="flex items-center gap-2">
+                <span>💬</span> Conversation
+              </span>
+            </button>
+            <button
+              onclick={() => { mode = 'practice'; practiceResult = null; }}
+              class="px-5 py-2.5 rounded-lg font-semibold transition-all duration-200 {mode === 'practice' ? 'bg-sky-600 text-white shadow-lg' : 'bg-tile-400 text-text-200 hover:bg-tile-500 border-2 border-tile-600'}"
+            >
+              <span class="flex items-center gap-2">
+                <span>📖</span> Sentence Practice
+                {#if filteredPracticeSentences.length > 0}
+                  <span class="text-xs opacity-75">({filteredPracticeSentences.length})</span>
+                {/if}
+              </span>
+            </button>
+          </div>
         </div>
         
         {#if !hasActiveSubscription}
@@ -434,77 +654,152 @@
         </div>
       </div>
 
-      <!-- Recording Controls Card -->
-      <div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden mb-6">
-        <div class="p-4 border-b border-tile-600">
-          <h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
-            <span>🎙️</span> Start Speaking
-          </h3>
-        </div>
-        <div class="p-4">
-          <div class="grid grid-cols-2 gap-4 mb-4">
-            <!-- Arabic Recording Button -->
-            <button
-              onclick={() => toggleRecording('ar')}
-              disabled={isProcessing || (!hasActiveSubscription && !recording)}
-              class="flex flex-col items-center gap-3 p-4 rounded-xl border-2 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed {recording && recordingLanguage === 'ar' ? 'border-sky-500 bg-sky-500/20 shadow-lg' : 'border-tile-600 bg-tile-300 hover:bg-tile-500 hover:border-tile-500'}"
-              aria-label={recording && recordingLanguage === 'ar' ? 'Stop recording Arabic' : 'Start recording Arabic'}
-            >
-              <div class="w-14 h-14 flex items-center justify-center rounded-full {recording && recordingLanguage === 'ar' ? 'bg-sky-500/30' : 'bg-tile-500'}">
-                {#if recording && recordingLanguage === 'ar'}
-                  <AudioLoading />
-                {:else}
-                  <RecordButton />
-                {/if}
-              </div>
-              <span class="text-sm font-semibold text-text-300">Speak Arabic</span>
-              <span class="text-xs text-text-200">For conversation</span>
-            </button>
-
-            <!-- English Recording Button -->
-            <button
-              onclick={() => toggleRecording('en')}
-              disabled={isProcessing || (!hasActiveSubscription && !recording)}
-              class="flex flex-col items-center gap-3 p-4 rounded-xl border-2 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed {recording && recordingLanguage === 'en' ? 'border-emerald-500 bg-emerald-500/20 shadow-lg' : 'border-tile-600 bg-tile-300 hover:bg-tile-500 hover:border-tile-500'}"
-              aria-label={recording && recordingLanguage === 'en' ? 'Stop recording English' : 'Start recording English'}
-            >
-              <div class="w-14 h-14 flex items-center justify-center rounded-full {recording && recordingLanguage === 'en' ? 'bg-emerald-500/30' : 'bg-tile-500'}">
-                {#if recording && recordingLanguage === 'en'}
-                  <AudioLoading />
-                {:else}
-                  <RecordButton />
-                {/if}
-              </div>
-              <span class="text-sm font-semibold text-text-300">Ask in English</span>
-              <span class="text-xs text-text-200">For questions</span>
-            </button>
+      <!-- Recording Controls Card - Conversation Mode -->
+      {#if mode === 'conversation'}
+        <div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden mb-6">
+          <div class="p-4 border-b border-tile-600">
+            <h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
+              <span>🎙️</span> Start Speaking
+            </h3>
           </div>
+          <div class="p-4">
+            <div class="grid grid-cols-2 gap-4 mb-4">
+              <!-- Arabic Recording Button -->
+              <button
+                onclick={() => toggleRecording('ar')}
+                disabled={isProcessing || (!hasActiveSubscription && !recording)}
+                class="flex flex-col items-center gap-3 p-4 rounded-xl border-2 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed {recording && recordingLanguage === 'ar' ? 'border-sky-500 bg-sky-500/20 shadow-lg' : 'border-tile-600 bg-tile-300 hover:bg-tile-500 hover:border-tile-500'}"
+                aria-label={recording && recordingLanguage === 'ar' ? 'Stop recording Arabic' : 'Start recording Arabic'}
+              >
+                <div class="w-14 h-14 flex items-center justify-center rounded-full {recording && recordingLanguage === 'ar' ? 'bg-sky-500/30' : 'bg-tile-500'}">
+                  {#if recording && recordingLanguage === 'ar'}
+                    <AudioLoading />
+                  {:else}
+                    <RecordButton />
+                  {/if}
+                </div>
+                <span class="text-sm font-semibold text-text-300">Speak Arabic</span>
+                <span class="text-xs text-text-200">For conversation</span>
+              </button>
 
-          <!-- Status Message -->
-          <div class="p-3 bg-tile-300 rounded-lg border border-tile-500">
-            {#if recording}
-              <div class="flex items-center gap-2">
-                <div class="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-                <p class="text-sm font-medium text-text-300">
-                  Recording {recordingLanguage === 'ar' ? 'Arabic' : 'English'}...
+              <!-- English Recording Button -->
+              <button
+                onclick={() => toggleRecording('en')}
+                disabled={isProcessing || (!hasActiveSubscription && !recording)}
+                class="flex flex-col items-center gap-3 p-4 rounded-xl border-2 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed {recording && recordingLanguage === 'en' ? 'border-emerald-500 bg-emerald-500/20 shadow-lg' : 'border-tile-600 bg-tile-300 hover:bg-tile-500 hover:border-tile-500'}"
+                aria-label={recording && recordingLanguage === 'en' ? 'Stop recording English' : 'Start recording English'}
+              >
+                <div class="w-14 h-14 flex items-center justify-center rounded-full {recording && recordingLanguage === 'en' ? 'bg-emerald-500/30' : 'bg-tile-500'}">
+                  {#if recording && recordingLanguage === 'en'}
+                    <AudioLoading />
+                  {:else}
+                    <RecordButton />
+                  {/if}
+                </div>
+                <span class="text-sm font-semibold text-text-300">Ask in English</span>
+                <span class="text-xs text-text-200">For questions</span>
+              </button>
+            </div>
+
+            <!-- Status Message -->
+            <div class="p-3 bg-tile-300 rounded-lg border border-tile-500">
+              {#if recording}
+                <div class="flex items-center gap-2">
+                  <div class="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+                  <p class="text-sm font-medium text-text-300">
+                    Recording {recordingLanguage === 'ar' ? 'Arabic' : 'English'}...
+                  </p>
+                </div>
+                <p class="text-xs text-text-200 mt-1">Click the button again to stop</p>
+              {:else if !hasActiveSubscription}
+                <p class="text-sm text-text-200">
+                  🔒 Subscribe to start conversations
                 </p>
+              {:else}
+                <p class="text-sm text-text-200">
+                  💡 Click a button above to start speaking
+                </p>
+              {/if}
+            </div>
+          </div>
+        </div>
+      {:else}
+        <!-- Practice Mode Controls -->
+        <div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden mb-6">
+          <div class="p-4 border-b border-tile-600">
+            <h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
+              <span>📖</span> Practice Controls
+            </h3>
+          </div>
+          <div class="p-4 space-y-4">
+            <!-- Navigation -->
+            <div class="flex items-center justify-between gap-2">
+              <button
+                onclick={prevPracticeSentence}
+                disabled={practiceIndex === 0}
+                class="px-3 py-2 bg-tile-500 hover:bg-tile-600 text-text-300 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              >
+                ← Prev
+              </button>
+              <span class="text-sm text-text-200">
+                {practiceIndex + 1} / {filteredPracticeSentences.length}
+              </span>
+              <button
+                onclick={nextPracticeSentence}
+                disabled={practiceIndex >= filteredPracticeSentences.length - 1}
+                class="px-3 py-2 bg-tile-500 hover:bg-tile-600 text-text-300 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              >
+                Next →
+              </button>
+            </div>
+
+            <button
+              onclick={shufflePracticeSentences}
+              class="w-full px-4 py-2 bg-tile-500 hover:bg-tile-600 text-text-300 rounded-lg transition-colors flex items-center justify-center gap-2"
+            >
+              <span>🎲</span> Random Sentence
+            </button>
+
+            <!-- Record Practice Button -->
+            <button
+              onclick={togglePracticeRecording}
+              disabled={isPracticeProcessing || !currentPracticeSentence || (!hasActiveSubscription && !isPracticeRecording)}
+              class="w-full flex flex-col items-center gap-3 p-6 rounded-xl border-2 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed {isPracticeRecording ? 'border-red-500 bg-red-500/20 shadow-lg' : 'border-sky-500 bg-sky-500/10 hover:bg-sky-500/20'}"
+            >
+              <div class="w-16 h-16 flex items-center justify-center rounded-full {isPracticeRecording ? 'bg-red-500/30' : 'bg-sky-500/30'}">
+                {#if isPracticeRecording}
+                  <AudioLoading />
+                {:else if isPracticeProcessing}
+                  <svg class="animate-spin h-8 w-8 text-sky-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                {:else}
+                  <RecordButton />
+                {/if}
               </div>
-              <p class="text-xs text-text-200 mt-1">Click the button again to stop</p>
-            {:else if !hasActiveSubscription}
-              <p class="text-sm text-text-200">
-                🔒 Subscribe to start conversations
-              </p>
-            {:else}
-              <p class="text-sm text-text-200">
-                💡 Click a button above to start speaking
+              <span class="text-lg font-semibold text-text-300">
+                {#if isPracticeRecording}
+                  Tap to Stop
+                {:else if isPracticeProcessing}
+                  Processing...
+                {:else}
+                  Record Your Voice
+                {/if}
+              </span>
+            </button>
+
+            {#if !hasActiveSubscription}
+              <p class="text-sm text-text-200 text-center">
+                🔒 Subscribe to practice sentences
               </p>
             {/if}
           </div>
         </div>
-      </div>
+      {/if}
 
-      <!-- Actions Card -->
-      {#if conversation.length > 0}
+      <!-- Actions Card - Conversation Mode -->
+      {#if mode === 'conversation' && conversation.length > 0}
         <div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
           <div class="p-4">
             <button
@@ -528,29 +823,150 @@
           </h3>
         </div>
         <div class="p-4 space-y-2 text-sm text-text-200">
-          <p>• Use <strong class="text-text-300">"Speak Arabic"</strong> for conversation practice</p>
-          <p>• Use <strong class="text-text-300">"Ask in English"</strong> to ask "How do I say...?"</p>
-          <p>• Click any word in responses for definitions</p>
-          <p>• Toggle visibility buttons to hide/show translations</p>
+          {#if mode === 'conversation'}
+            <p>• Use <strong class="text-text-300">"Speak Arabic"</strong> for conversation practice</p>
+            <p>• Use <strong class="text-text-300">"Ask in English"</strong> to ask "How do I say...?"</p>
+            <p>• Click any word in responses for definitions</p>
+            <p>• Toggle visibility buttons to hide/show translations</p>
+          {:else}
+            <p>• First, <strong class="text-text-300">listen</strong> to the sentence using the speaker button</p>
+            <p>• Then <strong class="text-text-300">record yourself</strong> saying the sentence</p>
+            <p>• Compare your pronunciation with the original</p>
+            <p>• Use the navigation to try different sentences</p>
+          {/if}
         </div>
       </div>
     </div>
 
-    <!-- Main Chat Area -->
+    <!-- Main Content Area -->
     <div class="flex-1 p-4 sm:p-6 bg-tile-200 min-h-screen">
-      <div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden h-full">
-        <div class="p-4 border-b border-tile-600 sticky top-0 bg-tile-400 z-10">
-          <div class="flex items-center justify-between">
-            <h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
-              <span>💬</span> Conversation
-            </h3>
-            {#if conversation.length > 0}
-              <span class="px-3 py-1 bg-tile-500 rounded-full text-sm font-medium text-text-300">
-                {conversation.length} message{conversation.length !== 1 ? 's' : ''}
-              </span>
+      {#if mode === 'practice'}
+        <!-- Practice Mode Content -->
+        <div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
+          <div class="p-4 border-b border-tile-600">
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
+                <span>📖</span> Sentence Practice
+              </h3>
+              {#if currentPracticeSentence}
+                <span class="px-3 py-1 bg-tile-500 rounded-full text-xs font-medium text-text-200">
+                  From: {currentPracticeSentence.storyTitle}
+                </span>
+              {/if}
+            </div>
+          </div>
+
+          <div class="p-6">
+            {#if filteredPracticeSentences.length === 0}
+              <div class="text-center py-12">
+                <div class="text-6xl mb-4">📚</div>
+                <h3 class="text-xl font-bold text-text-300 mb-2">No Practice Sentences Available</h3>
+                <p class="text-text-200 max-w-md mx-auto">
+                  There are no sentences available for {selectedDialect === 'egyptian-arabic' ? 'Egyptian Arabic' : selectedDialect === 'fusha' ? 'Modern Standard Arabic' : 'Levantine Arabic'} yet.
+                </p>
+                <p class="text-text-200 mt-2">
+                  Try creating some stories first, or switch to a different dialect.
+                </p>
+              </div>
+            {:else if currentPracticeSentence}
+              <!-- Current Sentence Card -->
+              <div class="space-y-6">
+                <!-- Arabic Sentence -->
+                <div class="bg-tile-300 border-2 border-tile-500 rounded-xl p-6">
+                  <div class="flex items-start justify-between gap-4 mb-4">
+                    <span class="text-sm font-medium text-text-200">Listen & Repeat</span>
+                    <AudioButton text={currentPracticeSentence.arabic} dialect={selectedDialect} className="!p-3 !rounded-xl bg-sky-500 hover:bg-sky-600 text-white" />
+                  </div>
+                  <p class="text-2xl sm:text-3xl font-bold text-text-300 leading-relaxed" dir="rtl">
+                    {currentPracticeSentence.arabic}
+                  </p>
+                </div>
+
+                <!-- Transliteration -->
+                <div class="bg-tile-300 border border-tile-500 rounded-lg p-4">
+                  <span class="text-xs font-medium text-text-200 block mb-2">Transliteration</span>
+                  <p class="text-lg text-text-300 italic">
+                    {currentPracticeSentence.transliteration}
+                  </p>
+                </div>
+
+                <!-- English Translation -->
+                <div class="bg-tile-300 border border-tile-500 rounded-lg p-4">
+                  <span class="text-xs font-medium text-text-200 block mb-2">English</span>
+                  <p class="text-lg text-text-300">
+                    {currentPracticeSentence.english}
+                  </p>
+                </div>
+
+                <!-- Practice Result -->
+                {#if practiceResult}
+                  <div class="bg-tile-300 border-2 rounded-xl p-6 {practiceResult.similarity >= 70 ? 'border-emerald-500' : practiceResult.similarity >= 50 ? 'border-amber-500' : 'border-rose-500'}">
+                    <div class="flex items-center justify-between mb-4">
+                      <span class="text-lg font-bold text-text-300">Your Result</span>
+                      <span class="text-2xl font-bold {practiceResult.similarity >= 70 ? 'text-emerald-500' : practiceResult.similarity >= 50 ? 'text-amber-500' : 'text-rose-500'}">
+                        {practiceResult.similarity}%
+                      </span>
+                    </div>
+
+                    {#if practiceResult.transcribedText}
+                      <div class="mb-4">
+                        <span class="text-xs font-medium text-text-200 block mb-2">What we heard:</span>
+                        <p class="text-lg text-text-300" dir="rtl">{practiceResult.transcribedText}</p>
+                      </div>
+                    {/if}
+
+                    <div class="p-4 rounded-lg {practiceResult.similarity >= 70 ? 'bg-emerald-500/10' : practiceResult.similarity >= 50 ? 'bg-amber-500/10' : 'bg-rose-500/10'}">
+                      <p class="text-text-300">{practiceResult.feedback}</p>
+                    </div>
+
+                    <button
+                      onclick={() => practiceResult = null}
+                      class="mt-4 w-full px-4 py-2 bg-tile-500 hover:bg-tile-600 text-text-300 rounded-lg transition-colors"
+                    >
+                      Try Again
+                    </button>
+                  </div>
+                {/if}
+
+                <!-- Recording Status -->
+                {#if isPracticeRecording}
+                  <div class="bg-red-500/10 border-2 border-red-500/30 rounded-xl p-6 text-center animate-pulse">
+                    <div class="flex items-center justify-center gap-3 mb-2">
+                      <div class="w-4 h-4 bg-red-500 rounded-full animate-pulse"></div>
+                      <span class="text-xl font-bold text-text-300">Recording...</span>
+                    </div>
+                    <p class="text-text-200">Speak the sentence clearly, then tap to stop</p>
+                  </div>
+                {:else if isPracticeProcessing}
+                  <div class="bg-sky-500/10 border-2 border-sky-500/30 rounded-xl p-6 text-center">
+                    <div class="flex items-center justify-center gap-3">
+                      <svg class="animate-spin h-6 w-6 text-sky-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      <span class="text-xl font-bold text-text-300">Processing your recording...</span>
+                    </div>
+                  </div>
+                {/if}
+              </div>
             {/if}
           </div>
         </div>
+      {:else}
+        <!-- Conversation Mode Content -->
+        <div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden h-full">
+          <div class="p-4 border-b border-tile-600 sticky top-0 bg-tile-400 z-10">
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
+                <span>💬</span> Conversation
+              </h3>
+              {#if conversation.length > 0}
+                <span class="px-3 py-1 bg-tile-500 rounded-full text-sm font-medium text-text-300">
+                  {conversation.length} message{conversation.length !== 1 ? 's' : ''}
+                </span>
+              {/if}
+            </div>
+          </div>
         
         <div
           bind:this={transcriptContainer}
@@ -825,6 +1241,7 @@
           {/if}
         </div>
       </div>
+      {/if}
     </div>
   </div>
 </section>

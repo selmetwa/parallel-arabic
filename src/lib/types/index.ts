@@ -58,9 +58,8 @@ export type DialectName = {
 }
 
 export enum Mode {
-  SingleText = 'SingleText',
-  BiText = 'BiText',
-  SentanceView = 'SentanceView'
+  Condensed = 'Condensed',
+  Classic = 'Classic'
 }
 
 export type KeyWord = {

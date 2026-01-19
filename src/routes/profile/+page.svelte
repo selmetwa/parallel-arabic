@@ -20,6 +20,12 @@
   let reviewLimitUpdateSuccess = $state<string | null>(null);
   let reviewLimitUpdateError = $state<string | null>(null);
   
+  // Subscription cancellation state
+  let isCancelling = $state(false);
+  let cancelError = $state<string | null>(null);
+  let cancelSuccess = $state<string | null>(null);
+  let showCancelConfirm = $state(false);
+  
   // Expandable sections
   let showSettings = $state(true);
   let showContent = $state(true);
@@ -120,6 +126,60 @@
       await invalidateAll();
       await goto('/', { invalidateAll: true });
     }
+  }
+  
+  async function cancelSubscription() {
+    if (!showCancelConfirm) {
+      showCancelConfirm = true;
+      return;
+    }
+
+    isCancelling = true;
+    cancelError = null;
+    cancelSuccess = null;
+
+    try {
+      const response = await fetch('/api/cancel-subscription', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to cancel subscription');
+      }
+
+      cancelSuccess = 'Your subscription has been cancelled. You will retain access until the end of your billing period.';
+      showCancelConfirm = false;
+      
+      // Refresh data after 2 seconds
+      setTimeout(async () => {
+        await invalidateAll();
+      }, 2000);
+    } catch (error) {
+      cancelError = error instanceof Error ? error.message : 'Failed to cancel subscription';
+      showCancelConfirm = false;
+    } finally {
+      isCancelling = false;
+    }
+  }
+
+  function cancelCancelSubscription() {
+    showCancelConfirm = false;
+    cancelError = null;
+  }
+  
+  // Format date helper
+  function formatDate(timestamp: number | null): string {
+    if (!timestamp) return 'Unknown';
+    return new Date(timestamp * 1000).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
   }
 </script>
 
@@ -392,6 +452,84 @@
               </Button>
             </div>
           </div>
+          
+          <!-- Subscription Management (only for subscribers) -->
+          {#if data.hasActiveSubscription}
+            <div class="p-6 bg-tile-500/20">
+              <h3 class="text-base font-bold text-text-300 mb-4 uppercase tracking-wide">Subscription</h3>
+              
+              <div class="space-y-4">
+                <!-- Subscription Status -->
+                <div class="bg-tile-400 border border-tile-600 rounded-lg p-4">
+                  <div class="flex items-center gap-3 mb-3">
+                    <span class="text-2xl">💳</span>
+                    <div>
+                      <p class="text-text-300 font-semibold">Premium Subscription</p>
+                      {#if data.subscriptionDetails?.cancelAtPeriodEnd}
+                        <p class="text-sm text-yellow-400">
+                          ⚠️ Cancelling - Access until {formatDate(data.subscriptionDetails.currentPeriodEnd)}
+                        </p>
+                      {:else}
+                        <p class="text-sm text-text-200">
+                          Next billing: {formatDate(data.subscriptionDetails?.currentPeriodEnd)}
+                        </p>
+                      {/if}
+                    </div>
+                  </div>
+                  
+                  {#if cancelError}
+                    <div class="bg-red-500/20 border border-red-400 text-red-300 px-3 py-2 rounded-lg mb-3 text-sm" transition:fade>
+                      {cancelError}
+                    </div>
+                  {/if}
+
+                  {#if cancelSuccess}
+                    <div class="bg-green-500/20 border border-green-400 text-green-300 px-3 py-2 rounded-lg mb-3 text-sm" transition:fade>
+                      {cancelSuccess}
+                    </div>
+                  {/if}
+                  
+                  {#if !data.subscriptionDetails?.cancelAtPeriodEnd}
+                    {#if showCancelConfirm}
+                      <div class="space-y-3 mt-4 p-4 bg-red-900/20 border border-red-800/50 rounded-lg">
+                        <p class="text-yellow-300 text-sm font-medium">⚠️ Are you sure you want to cancel?</p>
+                        <p class="text-text-200 text-xs">You'll retain access to premium features until {formatDate(data.subscriptionDetails?.currentPeriodEnd)}.</p>
+                        <div class="flex gap-2">
+                          <Button 
+                            onClick={cancelSubscription} 
+                            type="button" 
+                            disabled={isCancelling}
+                            className="bg-red-600 hover:bg-red-700 flex-1 text-sm"
+                          >
+                            {isCancelling ? 'Cancelling...' : 'Yes, Cancel Subscription'}
+                          </Button>
+                          <Button 
+                            onClick={cancelCancelSubscription} 
+                            type="button"
+                            disabled={isCancelling}
+                            className="flex-1 text-sm"
+                          >
+                            Keep Subscription
+                          </Button>
+                        </div>
+                      </div>
+                    {:else}
+                      <button 
+                        onclick={cancelSubscription}
+                        class="text-sm text-red-400 hover:text-red-300 underline transition-colors"
+                      >
+                        Cancel subscription
+                      </button>
+                    {/if}
+                  {:else}
+                    <p class="text-sm text-text-200 mt-2">
+                      Your subscription is set to cancel. You can continue using premium features until your access expires.
+                    </p>
+                  {/if}
+                </div>
+              </div>
+            </div>
+          {/if}
         </div>
       {/if}
     </section>
