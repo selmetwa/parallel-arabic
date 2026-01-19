@@ -285,63 +285,74 @@
 				</button>
 			</div>
 		{:else}
-			<!-- Video slides -->
+			<!-- Video slides - VIRTUALIZED: Only render current, previous, and next -->
 			{#each shorts as short, index}
-				{@const isCurrentSlide = index === currentIndex}
-				{@const baseTransform = isCurrentSlide ? 0 : (index < currentIndex ? -100 : 100)}
-				<div 
-					class={cn(
-						"absolute inset-0 will-change-transform transition-transform duration-300 ease-out",
-						isCurrentSlide ? "z-10" : "z-0"
-					)}
-					style="transform: translateY({baseTransform}%)"
-				>
-					<!-- Only load iframe for current and adjacent videos -->
-					{#if Math.abs(index - currentIndex) <= 1}
-						<iframe
-							src={`https://www.youtube.com/embed/${short.id}?autoplay=${index === currentIndex ? 1 : 0}&loop=1&playlist=${short.id}&controls=1&modestbranding=1&rel=0&playsinline=1`}
-							class="absolute inset-0 w-full h-full pointer-events-auto"
-							frameborder="0"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-							title={short.title}
-						></iframe>
-					{:else}
-						<!-- Placeholder thumbnail for non-adjacent videos -->
-						<div class="absolute inset-0 bg-gray-900 flex items-center justify-center">
-							<img 
-								src={short.thumbnail} 
-								alt={short.title}
-								class="w-full h-full object-cover opacity-50"
-							/>
+				{#if Math.abs(index - currentIndex) <= 1}
+					{@const isCurrentSlide = index === currentIndex}
+					{@const baseTransform = isCurrentSlide ? 0 : (index < currentIndex ? -100 : 100)}
+					<div 
+						class={cn(
+							"absolute inset-0 transition-transform duration-300 ease-out",
+							isCurrentSlide ? "z-10" : "z-0"
+						)}
+						style="transform: translateY({baseTransform}%)"
+					>
+						<!-- Only load iframe for CURRENT video to prevent mobile OOM crashes -->
+						{#if isCurrentSlide}
+							<iframe
+								src={`https://www.youtube.com/embed/${short.id}?autoplay=1&loop=1&playlist=${short.id}&controls=1&modestbranding=1&rel=0&playsinline=1`}
+								class="absolute inset-0 w-full h-full pointer-events-auto"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen
+								title={short.title}
+							></iframe>
+						{:else}
+							<!-- Thumbnail placeholder for adjacent videos -->
+							<div class="absolute inset-0 bg-gray-900 flex items-center justify-center">
+								<img 
+									src={short.thumbnail} 
+									alt={short.title}
+									class="w-full h-full object-cover opacity-50"
+									loading="lazy"
+								/>
+								<!-- Play button overlay -->
+								<div class="absolute inset-0 flex items-center justify-center">
+									<div class="w-16 h-16 bg-white/20 backdrop-blur rounded-full flex items-center justify-center">
+										<svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+											<path d="M8 5v14l11-7z"/>
+										</svg>
+									</div>
+								</div>
+							</div>
+						{/if}
+						
+						<!-- Video info overlay -->
+						<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-4 pb-36 sm:p-6 sm:pb-24 pointer-events-none">
+							<div class="max-w-lg mx-auto">
+								<p class="text-white font-semibold text-base sm:text-lg line-clamp-2 mb-1 sm:mb-2 drop-shadow-lg">
+									{short.title}
+								</p>
+								<p class="text-white/70 text-xs sm:text-sm flex items-center gap-2">
+									<svg class="w-3 h-3 sm:w-4 sm:h-4" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+									</svg>
+									{short.channelTitle}
+								</p>
+							</div>
 						</div>
-					{/if}
-					
-					<!-- Video info overlay -->
-					<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-4 pb-36 sm:p-6 sm:pb-24 pointer-events-none">
-						<div class="max-w-lg mx-auto">
-							<p class="text-white font-semibold text-base sm:text-lg line-clamp-2 mb-1 sm:mb-2 drop-shadow-lg">
-								{short.title}
-							</p>
-							<p class="text-white/70 text-xs sm:text-sm flex items-center gap-2">
-								<svg class="w-3 h-3 sm:w-4 sm:h-4" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+						
+						<!-- Viewed indicator -->
+						{#if viewTracked.has(short.id)}
+							<div class="absolute top-24 right-4 bg-green-500/80 text-white text-xs px-2 py-1 rounded-full flex items-center gap-1">
+								<svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
 								</svg>
-								{short.channelTitle}
-							</p>
-						</div>
+								<span>Watched</span>
+							</div>
+						{/if}
 					</div>
-					
-					<!-- Viewed indicator -->
-					{#if viewTracked.has(short.id)}
-						<div class="absolute top-24 right-4 bg-green-500/80 text-white text-xs px-2 py-1 rounded-full flex items-center gap-1">
-							<svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-							</svg>
-							<span>Watched</span>
-						</div>
-					{/if}
-				</div>
+				{/if}
 			{/each}
 
 		{/if}

@@ -3,18 +3,93 @@
   import { currentDialect } from '$lib/store/store';
   import RecordButton from '$lib/components/RecordButton.svelte';
   import AudioLoading from '$lib/components/AudioLoading.svelte';
-  import Sentence from '$lib/components/dialect-shared/story/components/Sentence.svelte';
   import AudioButton from '$lib/components/AudioButton.svelte';
   import PaywallModal from '$lib/components/PaywallModal.svelte';
   import DialectComparisonModal from '$lib/components/dialect-shared/sentences/DialectComparisonModal.svelte';
+  import DefinitionModal from '$lib/components/dialect-shared/sentences/DefinitionModal.svelte';
+  import ConversationSummaryModal from '$lib/components/ConversationSummaryModal.svelte';
   import { type Dialect } from '$lib/types/index';
   import type { DialectComparisonSchema } from '$lib/utils/gemini-schemas';
   import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
 
   let { data } = $props();
 
+  // Definition modal state
+  let isDefinitionModalOpen = $state(false);
+  let activeWord = $state<{
+    english: string;
+    arabic: string;
+    transliterated: string;
+    description: string;
+    isLoading: boolean;
+    type: string;
+  } | null>(null);
+
+  function setActiveWord(word: any) {
+    activeWord = word;
+    isDefinitionModalOpen = true;
+  }
+
+  function closeDefinitionModal() {
+    isDefinitionModalOpen = false;
+    activeWord = null;
+  }
+
+  async function handleWordClick(word: string, type: 'arabic' | 'english' | 'transliteration', message: ConversationMessage) {
+    const cleanWord = word.replace(/[،,]/g, '');
+    
+    setActiveWord({
+      english: '',
+      arabic: '',
+      transliterated: '',
+      description: '',
+      isLoading: true,
+      type: ''
+    });
+
+    try {
+      const res = await fetch('/api/definition-sentence', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          word: cleanWord,
+          type: type,
+          sentence: {
+            arabic: message.arabic || '',
+            english: message.english || '',
+            transliteration: message.transliteration || ''
+          },
+          dialect: selectedDialect
+        })
+      });
+
+      const data = await res.json();
+
+      setActiveWord({
+        english: type === 'english' ? cleanWord : '',
+        arabic: type === 'arabic' ? cleanWord : '',
+        transliterated: type === 'transliteration' ? cleanWord : '',
+        description: data.message?.message?.content || data.message?.content || '',
+        isLoading: false,
+        type: type
+      });
+    } catch (err) {
+      console.error('Error fetching definition:', err);
+      setActiveWord({
+        english: type === 'english' ? cleanWord : '',
+        arabic: type === 'arabic' ? cleanWord : '',
+        transliterated: type === 'transliteration' ? cleanWord : '',
+        description: 'Failed to get definition. Please try again.',
+        isLoading: false,
+        type: type
+      });
+    }
+  }
+
   let isModalOpen = $state(false);
   let hasActiveSubscription = $derived(data.hasActiveSubscription);
+  let learningInsights = $derived(data.learningInsights || []);
+  let recentConversations = $derived(data.recentConversations || []);
 
   function openPaywallModal() {
     isModalOpen = true;
@@ -67,7 +142,34 @@
   let mediaRecorder: MediaRecorder | null = $state(null);
   let audioChunks: Blob[] = $state([]);
   let conversation: ConversationMessage[] = $state([]);
+  let conversationId: string | null = $state(null); // Track conversation ID for memory
+  let isSavingConversation = $state(false); // Track when saving/summarizing
   let isProcessing = $state(false);
+  
+  // Summary modal state
+  interface VocabularyWord {
+    arabic: string;
+    english: string;
+    transliteration: string;
+    selected: boolean;
+  }
+  interface SummaryInsight {
+    type: 'weakness' | 'strength' | 'topic_interest' | 'vocabulary_gap';
+    content: string;
+  }
+  let showSummaryModal = $state(false);
+  let summaryData = $state<{
+    summary: string;
+    topics: string[];
+    vocabulary: VocabularyWord[];
+    insights: SummaryInsight[];
+  }>({
+    summary: '',
+    topics: [],
+    vocabulary: [],
+    insights: []
+  });
+  let isSavingSession = $state(false);
   let isTranscribing = $state(false);
   let isGettingResponse = $state(false);
   let transcriptContainer: HTMLDivElement | null = $state(null);
@@ -201,6 +303,7 @@
       const formData = new FormData();
       formData.append('audio', file);
       formData.append('language', 'ar'); // Always Arabic for practice
+      formData.append('dialect', selectedDialect); // Send dialect for Chirp 3
       formData.append('expectedText', currentPracticeSentence.arabic);
 
       const transcriptionResponse = await fetch('/api/speech-to-text', {
@@ -306,9 +409,26 @@
     isComparisonModalOpen = false;
   }
 
-  function setDialect(dialect: string) {
+  async function setDialect(dialect: string) {
+    // Summarize current conversation before switching dialects
+    if (conversationId && conversation.length >= 4) {
+      try {
+        await fetch('/api/tutor-summarize', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ 
+            conversationId,
+            dialect: selectedDialect 
+          })
+        });
+      } catch (e) {
+        console.error('Failed to summarize conversation:', e);
+      }
+    }
+    
     selectedDialect = dialect as Dialect;
     conversation = [];
+    conversationId = null; // Reset for new dialect
   }
 
   async function startRecording(language: 'ar' | 'en') {
@@ -362,6 +482,7 @@
       const formData = new FormData();
       formData.append('audio', file);
       formData.append('language', recordingLanguage);
+      formData.append('dialect', selectedDialect); // Send dialect for Chirp 3
 
       const transcriptionResponse = await fetch('/api/speech-to-text', {
         method: 'POST',
@@ -445,7 +566,8 @@
         body: JSON.stringify({
           message: userMessage,
           dialect: selectedDialect,
-          conversation: conversationHistory
+          conversation: conversationHistory,
+          conversationId: conversationId // Pass conversation ID for memory
         })
       });
 
@@ -454,6 +576,11 @@
       }
 
       const tutorData = await tutorResponse.json();
+      
+      // Store conversation ID for memory persistence
+      if (tutorData.conversationId && !conversationId) {
+        conversationId = tutorData.conversationId;
+      }
 
       const tutorMsg: ConversationMessage = {
         id: (Date.now() + 1).toString(),
@@ -511,8 +638,122 @@
     }
   }
 
-  function clearConversation() {
+  async function clearConversation() {
+    // Show summary if we have any messages at all
+    if (conversation.length >= 2) {
+      isSavingConversation = true;
+      
+      // Extract vocabulary directly from local conversation (more reliable!)
+      const localVocabulary: VocabularyWord[] = [];
+      for (const msg of conversation) {
+        if (msg.type === 'tutor' && msg.arabic && msg.english && msg.transliteration) {
+          localVocabulary.push({
+            arabic: msg.arabic,
+            english: msg.english,
+            transliteration: msg.transliteration,
+            selected: true
+          });
+        }
+      }
+      
+      // Build conversation text for AI summary
+      const conversationText = conversation.map(msg => {
+        const role = msg.type === 'user' ? 'Student' : 'Tutor';
+        return `${role}: ${msg.arabic || ''} (${msg.english || ''})`;
+      }).join('\n');
+      
+      try {
+        // Call summarize API for topics/insights only if we have a conversationId
+        let aiSummary = '';
+        let aiTopics: string[] = [];
+        let aiInsights: SummaryInsight[] = [];
+        
+        if (conversationId) {
+          const response = await fetch('/api/tutor-summarize', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ 
+              conversationId,
+              dialect: selectedDialect 
+            })
+          });
+          
+          if (response.ok) {
+            const data = await response.json();
+            aiSummary = data.summary || '';
+            aiTopics = data.topics || [];
+            aiInsights = data.insights || [];
+          }
+        }
+        
+        // Use local vocabulary (guaranteed correct) + AI summary/topics
+        summaryData = {
+          summary: aiSummary || `Practiced ${selectedDialect === 'egyptian-arabic' ? 'Egyptian Arabic' : selectedDialect === 'fusha' ? 'Modern Standard Arabic' : 'Arabic'} conversation`,
+          topics: aiTopics.length > 0 ? aiTopics : ['conversation practice'],
+          vocabulary: localVocabulary,
+          insights: aiInsights
+        };
+        showSummaryModal = true;
+        
+      } catch (e) {
+        console.error('Failed to summarize conversation:', e);
+        // Still show modal with local data
+        summaryData = {
+          summary: 'Conversation practice session',
+          topics: ['conversation practice'],
+          vocabulary: localVocabulary,
+          insights: []
+        };
+        showSummaryModal = true;
+      } finally {
+        isSavingConversation = false;
+      }
+    } else {
+      // Less than 2 messages, just clear
+      actuallyCloseConversation();
+    }
+  }
+  
+  function actuallyCloseConversation() {
     conversation = [];
+    conversationId = null;
+    showSummaryModal = false;
+    summaryData = { summary: '', topics: [], vocabulary: [], insights: [] };
+  }
+  
+  function closeSummaryModal() {
+    showSummaryModal = false;
+    actuallyCloseConversation();
+  }
+  
+  async function saveSummaryAndWords(selectedWords: VocabularyWord[]) {
+    isSavingSession = true;
+    try {
+      const response = await fetch('/api/tutor-save-session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          conversationId,
+          dialect: selectedDialect,
+          summary: summaryData.summary,
+          topics: summaryData.topics,
+          arabicWords: summaryData.vocabulary.map(v => v.arabic),
+          selectedWords: selectedWords,
+          insights: summaryData.insights
+        })
+      });
+      
+      if (response.ok) {
+        const result = await response.json();
+        console.log('Session saved:', result);
+        // Could show a toast notification here
+      }
+    } catch (e) {
+      console.error('Failed to save session:', e);
+    } finally {
+      isSavingSession = false;
+      actuallyCloseConversation();
+    }
   }
 
   async function playTutorAudio(text: string, dialect: Dialect) {
@@ -552,6 +793,24 @@
 </script>
 
 <PaywallModal isOpen={isModalOpen} handleCloseModal={handleCloseModal}></PaywallModal>
+
+<DefinitionModal
+  activeWordObj={activeWord || { english: '', isLoading: false, description: '' }}
+  isModalOpen={isDefinitionModalOpen}
+  closeModal={closeDefinitionModal}
+  dialect={selectedDialect}
+/>
+
+<ConversationSummaryModal
+  isOpen={showSummaryModal}
+  summary={summaryData.summary}
+  topics={summaryData.topics}
+  vocabulary={summaryData.vocabulary}
+  dialect={selectedDialect}
+  onClose={closeSummaryModal}
+  onSave={saveSummaryAndWords}
+  isSaving={isSavingSession}
+/>
 
 <DialectComparisonModal
   isOpen={isComparisonModalOpen}
@@ -801,16 +1060,36 @@
       <!-- Actions Card - Conversation Mode -->
       {#if mode === 'conversation' && conversation.length > 0}
         <div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
-          <div class="p-4">
+          <div class="p-4 border-b border-tile-600">
+            <h3 class="text-sm font-bold text-text-300 flex items-center gap-2">
+              <span>💾</span> Save Session
+            </h3>
+          </div>
+          <div class="p-4 space-y-3">
+            <p class="text-xs text-text-200 leading-relaxed">
+              End this conversation to save it to your learning profile. Your tutor will remember what you discussed and use it to personalize future sessions.
+            </p>
             <button
               onclick={clearConversation}
-              class="w-full flex items-center justify-center gap-2 px-4 py-3 bg-rose-600 text-white font-semibold rounded-lg hover:bg-rose-700 transition-colors"
+              disabled={isSavingConversation}
+              class="w-full flex items-center justify-center gap-2 px-4 py-3 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-colors disabled:opacity-70 disabled:cursor-wait"
             >
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-              </svg>
-              Clear Conversation
+              {#if isSavingConversation}
+                <svg class="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Saving & Analyzing...
+              {:else}
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                End & Save Conversation
+              {/if}
             </button>
+            <p class="text-[10px] text-text-200/70 text-center">
+              {conversation.length} messages will be analyzed for learning insights
+            </p>
           </div>
         </div>
       {/if}
@@ -836,6 +1115,97 @@
           {/if}
         </div>
       </div>
+      
+      <!-- Learning Memory Card - Only show if there's data -->
+      {#if (learningInsights.length > 0 || recentConversations.length > 0) && mode === 'conversation'}
+        <div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden mt-6">
+          <div class="p-4 border-b border-tile-600">
+            <h3 class="text-sm font-bold text-text-300 flex items-center gap-2">
+              <span>🧠</span> Your Learning Profile
+            </h3>
+          </div>
+          <div class="p-4 space-y-4">
+            <!-- User Profile Summary -->
+            {#if data.user}
+              <div class="text-xs text-text-200 space-y-1">
+                {#if data.user.proficiency_level}
+                  <p><span class="font-semibold text-text-300">Level:</span> {data.user.proficiency_level}</p>
+                {/if}
+                {#if data.user.current_streak > 0}
+                  <p><span class="font-semibold text-text-300">🔥 Streak:</span> {data.user.current_streak} days</p>
+                {/if}
+              </div>
+            {/if}
+            
+            <!-- Areas to Improve -->
+            {#if learningInsights.filter(i => i.insight_type === 'weakness').length > 0}
+              <div>
+                <p class="text-xs font-semibold text-amber-400 mb-1.5">Areas to Focus On:</p>
+                <ul class="text-xs text-text-200 space-y-1">
+                  {#each learningInsights.filter(i => i.insight_type === 'weakness').slice(0, 3) as insight}
+                    <li class="flex items-start gap-1.5">
+                      <span class="text-amber-400">•</span>
+                      <span>{insight.content}</span>
+                    </li>
+                  {/each}
+                </ul>
+              </div>
+            {/if}
+            
+            <!-- Strengths -->
+            {#if learningInsights.filter(i => i.insight_type === 'strength').length > 0}
+              <div>
+                <p class="text-xs font-semibold text-emerald-400 mb-1.5">Your Strengths:</p>
+                <ul class="text-xs text-text-200 space-y-1">
+                  {#each learningInsights.filter(i => i.insight_type === 'strength').slice(0, 3) as insight}
+                    <li class="flex items-start gap-1.5">
+                      <span class="text-emerald-400">✓</span>
+                      <span>{insight.content}</span>
+                    </li>
+                  {/each}
+                </ul>
+              </div>
+            {/if}
+            
+            <!-- Topics of Interest -->
+            {#if learningInsights.filter(i => i.insight_type === 'topic_interest').length > 0}
+              <div>
+                <p class="text-xs font-semibold text-sky-400 mb-1.5">Topics You Like:</p>
+                <div class="flex flex-wrap gap-1">
+                  {#each learningInsights.filter(i => i.insight_type === 'topic_interest').slice(0, 5) as insight}
+                    <span class="px-2 py-0.5 bg-sky-500/20 text-sky-300 text-xs rounded-full">
+                      {insight.content}
+                    </span>
+                  {/each}
+                </div>
+              </div>
+            {/if}
+            
+            <!-- Recent Sessions -->
+            {#if recentConversations.length > 0}
+              <div>
+                <p class="text-xs font-semibold text-text-300 mb-1.5">Recent Sessions:</p>
+                <div class="space-y-2">
+                  {#each recentConversations.slice(0, 3) as conv}
+                    <div class="text-xs bg-tile-300/50 rounded-lg p-2 border border-tile-500/50">
+                      <p class="text-text-200 line-clamp-2">{conv.summary || 'Conversation with tutor'}</p>
+                      {#if conv.topics_discussed && conv.topics_discussed.length > 0}
+                        <div class="flex flex-wrap gap-1 mt-1">
+                          {#each conv.topics_discussed.slice(0, 3) as topic}
+                            <span class="px-1.5 py-0.5 bg-tile-500/50 text-text-300 text-[10px] rounded">
+                              {topic}
+                            </span>
+                          {/each}
+                        </div>
+                      {/if}
+                    </div>
+                  {/each}
+                </div>
+              </div>
+            {/if}
+          </div>
+        </div>
+      {/if}
     </div>
 
     <!-- Main Content Area -->
@@ -1039,56 +1409,46 @@
                     </div>
                     
                     {#if message.arabic && message.english && message.transliteration}
-                      <div class="space-y-2">
-                        {#if message.showArabic !== false}
-                          <Sentence
-                            sentence={{
-                              arabic: { text: message.arabic || '' },
-                              english: { text: message.english || '' },
-                              transliteration: { text: message.transliteration || '' }
-                            }}
-                            setActiveWord={() => {}}
-                            type="arabic"
-                            index={0}
-                            mode="SentenceView"
-                            dialect={selectedDialect}
-                            intersecting={true}
-                            classname="!border-0 !py-1 !px-0"
-                          />
-                        {/if}
+                      <!-- Stories-style sentence card -->
+                      <div class="bg-tile-400 border-2 border-tile-600 rounded-xl p-4 sm:p-6">
+                        <!-- English translation at top -->
                         {#if message.showEnglish !== false}
-                          <Sentence
-                            sentence={{
-                              arabic: { text: message.arabic || '' },
-                              english: { text: message.english || '' },
-                              transliteration: { text: message.transliteration || '' }
-                            }}
-                            setActiveWord={() => {}}
-                            type="english"
-                            index={0}
-                            mode="SentenceView"
-                            dialect={selectedDialect}
-                            intersecting={true}
-                            classname="!border-0 !py-1 !px-0"
-                          />
+                          <div class="mb-4 pb-3 border-b border-tile-600">
+                            <div class="flex flex-wrap gap-1.5 justify-center">
+                              {#each (message.english || '').split(' ') as word}
+                                <button
+                                  onclick={() => handleWordClick(word, 'english', message)}
+                                  class="px-2 py-1 text-base sm:text-lg text-text-200 rounded-lg border-2 border-transparent hover:bg-tile-500 hover:border-tile-600 hover:shadow-md transition-all duration-200 cursor-pointer"
+                                >
+                                  {word}
+                                </button>
+                              {/each}
+                            </div>
+                          </div>
                         {/if}
+
+                        <!-- Transliteration -->
                         {#if message.showTransliteration !== false}
-                          <Sentence
-                            sentence={{
-                              arabic: { text: message.arabic || '' },
-                              english: { text: message.english || '' },
-                              transliteration: { text: message.transliteration || '' }
-                            }}
-                            setActiveWord={() => {}}
-                            type="transliteration"
-                            index={0}
-                            mode="SentenceView"
-                            dialect={selectedDialect}
-                            intersecting={true}
-                            classname="!border-0 !py-1 !px-0"
-                          />
+                          <p class="text-base sm:text-lg text-text-200 italic text-center mb-4 leading-relaxed">
+                            {message.transliteration}
+                          </p>
+                        {/if}
+
+                        <!-- Arabic words - clickable for definitions -->
+                        {#if message.showArabic !== false}
+                          <div class="flex flex-wrap gap-2 sm:gap-3 justify-center" dir="rtl">
+                            {#each (message.arabic || '').split(' ') as arabicWord}
+                              <button
+                                onclick={() => handleWordClick(arabicWord, 'arabic', message)}
+                                class="px-2 py-1 sm:px-3 sm:py-2 rounded-lg hover:bg-tile-500 hover:shadow-md transition-all duration-200 cursor-pointer border-2 border-transparent hover:border-tile-600 text-xl sm:text-2xl md:text-3xl font-semibold text-text-300"
+                              >
+                                {arabicWord}
+                              </button>
+                            {/each}
+                          </div>
                         {/if}
                       </div>
+                      
                       {#if message.feedback && message.feedback.trim() !== '' && message.showFeedback !== false}
                         <div class="mt-4 p-4 bg-amber-500/10 border border-amber-500/30 rounded-lg">
                           <p class="text-sm font-bold text-amber-300 mb-2 flex items-center gap-2">
@@ -1147,57 +1507,46 @@
                       </div>
                     </div>
                     
-                    <div class="space-y-2">
-                      {#if message.showArabic !== false}
-                        <Sentence
-                          sentence={{
-                            arabic: { text: message.arabic || '' },
-                            english: { text: message.english || '' },
-                            transliteration: { text: message.transliteration || '' }
-                          }}
-                          setActiveWord={() => {}}
-                          type="arabic"
-                          index={0}
-                          mode="SentenceView"
-                          dialect={selectedDialect}
-                          intersecting={true}
-                          classname="!border-0 !py-1 !px-0"
-                        />
-                      {/if}
-                      {#if message.showEnglish !== false}
-                        <Sentence
-                          sentence={{
-                            arabic: { text: message.arabic || '' },
-                            english: { text: message.english || '' },
-                            transliteration: { text: message.transliteration || '' }
-                          }}
-                          setActiveWord={() => {}}
-                          type="english"
-                          index={0}
-                          mode="SentenceView"
-                          dialect={selectedDialect}
-                          intersecting={true}
-                          classname="!border-0 !py-1 !px-0"
-                        />
-                      {/if}
-                      {#if message.showTransliteration !== false}
-                        <Sentence
-                          sentence={{
-                            arabic: { text: message.arabic || '' },
-                            english: { text: message.english || '' },
-                            transliteration: { text: message.transliteration || '' }
-                          }}
-                          setActiveWord={() => {}}
-                          type="transliteration"
-                          index={0}
-                          mode="SentenceView"
-                          dialect={selectedDialect}
-                          intersecting={true}
-                          classname="!border-0 !py-1 !px-0"
-                        />
-                      {/if}
+                    <!-- Stories-style sentence card for tutor -->
+                      <div class="bg-tile-400 border-2 border-tile-600 rounded-xl p-4 sm:p-6">
+                        <!-- English translation at top -->
+                        {#if message.showEnglish !== false}
+                          <div class="mb-4 pb-3 border-b border-tile-600">
+                            <div class="flex flex-wrap gap-1.5 justify-center">
+                              {#each (message.english || '').split(' ') as word}
+                                <button
+                                  onclick={() => handleWordClick(word, 'english', message)}
+                                  class="px-2 py-1 text-base sm:text-lg text-text-200 rounded-lg border-2 border-transparent hover:bg-tile-500 hover:border-tile-600 hover:shadow-md transition-all duration-200 cursor-pointer"
+                                >
+                                  {word}
+                                </button>
+                              {/each}
+                            </div>
+                          </div>
+                        {/if}
+
+                        <!-- Transliteration -->
+                        {#if message.showTransliteration !== false}
+                          <p class="text-base sm:text-lg text-text-200 italic text-center mb-4 leading-relaxed">
+                            {message.transliteration}
+                          </p>
+                        {/if}
+
+                        <!-- Arabic words - clickable for definitions -->
+                        {#if message.showArabic !== false}
+                          <div class="flex flex-wrap gap-2 sm:gap-3 justify-center" dir="rtl">
+                            {#each (message.arabic || '').split(' ') as arabicWord}
+                              <button
+                                onclick={() => handleWordClick(arabicWord, 'arabic', message)}
+                                class="px-2 py-1 sm:px-3 sm:py-2 rounded-lg hover:bg-tile-500 hover:shadow-md transition-all duration-200 cursor-pointer border-2 border-transparent hover:border-tile-600 text-xl sm:text-2xl md:text-3xl font-semibold text-text-300"
+                              >
+                                {arabicWord}
+                              </button>
+                            {/each}
+                          </div>
+                        {/if}
+                      </div>
                     </div>
-                  </div>
                 {/if}
               {/each}
               
