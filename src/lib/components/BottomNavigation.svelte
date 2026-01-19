@@ -11,21 +11,21 @@
   const navItems: NavItem[] = [
     {
       label: 'Learn',
-      href: '/lessons',
+      href: '/learn',
       icon: '📚',
-      paths: ['/alphabet', '/lessons', '/sentences', '/vocabulary']
+      paths: ['/learn', '/alphabet', '/lessons', '/review', '/vocabulary']
     },
     {
-      label: 'Review',
-      href: '/review',
-      icon: '🧠',
-      paths: ['/review']
+      label: 'Practice',
+      href: '/practice',
+      icon: '📝',
+      paths: ['/practice', '/stories', '/sentences', '/speak']
     },
     {
       label: 'Explore',
-      href: '/stories',
-      icon: '📖',
-      paths: ['/stories', '/videos', '/videos-new', '/tutor']
+      href: '/explore',
+      icon: '🌍',
+      paths: ['/explore', '/videos', '/videos-new', '/tutor']
     },
     {
       label: 'Profile',
