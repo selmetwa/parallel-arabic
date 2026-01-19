@@ -1,27 +1,87 @@
 import { json } from "@sveltejs/kit";
+import { env } from '$env/dynamic/private';
 import fs from "fs";
 import path from "path";
-import { env } from '$env/dynamic/private';
 import ffmpeg from "fluent-ffmpeg";
 
-const ELEVENLABS_API_KEY = env.ELEVENLABS_API_KEY;
+// Map your dialects to Chirp 3 language codes
+const dialectToLanguageCode: Record<string, string> = {
+  'egyptian-arabic': 'ar-EG',
+  'levantine': 'ar-LB',
+  'fusha': 'ar-SA',
+  'darija': 'ar-MA',
+  'khaleeji': 'ar-AE',
+  'ar': 'ar-EG', // Default Arabic to Egyptian
+  'en': 'en-US'
+};
 
-if (!ELEVENLABS_API_KEY) {
-	throw new Error('Missing ELEVENLABS_API_KEY in environment variables');
+const PROJECT_ID = env.GOOGLE_CLOUD_PROJECT || 'gen-lang-client-0898024045';
+const REGION = 'us'; // Chirp 3 is available in us, eu, asia-northeast1, asia-southeast1
+
+// Get access token from service account credentials
+async function getAccessToken(): Promise<string> {
+  const credentialsJson = env.GOOGLE_APPLICATION_CREDENTIALS_JSON;
+  
+  if (!credentialsJson) {
+    throw new Error('GOOGLE_APPLICATION_CREDENTIALS_JSON not set');
+  }
+  
+  let credentials;
+  try {
+    // Handle different ways the JSON might be stored in env vars:
+    // 1. Some platforms escape newlines as literal \n in the string
+    // 2. Some preserve actual newlines which break JSON parsing
+    // Replace literal escaped newlines in private_key with actual newlines
+    const fixedJson = credentialsJson
+      .replace(/\\\\n/g, '\\n') // Handle double-escaped newlines
+      .replace(/\r?\n/g, '\\n'); // Handle actual newlines in the string
+    
+    credentials = JSON.parse(fixedJson);
+    
+    // Also fix the private_key if it has escaped newlines stored as text
+    if (credentials.private_key && typeof credentials.private_key === 'string') {
+      credentials.private_key = credentials.private_key.replace(/\\n/g, '\n');
+    }
+  } catch (parseError) {
+    console.error('Failed to parse GOOGLE_APPLICATION_CREDENTIALS_JSON:', parseError);
+    console.error('First 100 chars of JSON:', credentialsJson.substring(0, 100));
+    throw new Error(`Failed to parse Google credentials: ${parseError instanceof Error ? parseError.message : 'Unknown error'}`);
+  }
+  
+  // Create JWT for service account authentication
+  const { GoogleAuth } = await import('google-auth-library');
+  const auth = new GoogleAuth({
+    credentials,
+    scopes: ['https://www.googleapis.com/auth/cloud-platform'],
+  });
+  
+  const client = await auth.getClient();
+  const tokenResponse = await client.getAccessToken();
+  
+  if (!tokenResponse.token) {
+    throw new Error('Failed to get access token');
+  }
+  
+  return tokenResponse.token;
 }
 
 export async function POST({ request }) {
   const formData = await request.formData();
   const file = formData.get("audio") as File;
   const language = formData.get("language") as string | null; // "ar" or "en"
-  const expectedText = formData.get("expectedText") as string | null; // Optional: for sentence practice mode
+  const dialect = formData.get("dialect") as string | null; // e.g., "egyptian-arabic"
 
   if (!file) {
     return json({ error: "No file uploaded" }, { status: 400 });
   }
 
-  // Default to Arabic if no language specified (for backward compatibility)
-  const languageCode = language === "en" ? "en" : "ar";
+  // Determine language code - prefer dialect, fall back to language param
+  let languageCode = 'ar-EG'; // Default to Egyptian Arabic
+  if (dialect && dialectToLanguageCode[dialect]) {
+    languageCode = dialectToLanguageCode[dialect];
+  } else if (language && dialectToLanguageCode[language]) {
+    languageCode = dialectToLanguageCode[language];
+  }
 
   // Validate audio file size (minimum 1KB to avoid empty files)
   const arrayBuffer = await file.arrayBuffer();
@@ -29,31 +89,22 @@ export async function POST({ request }) {
     return json({ error: "Audio file is too small. Please ensure you recorded audio." }, { status: 400 });
   }
 
-  // Use /tmp directory for Vercel compatibility (writable in serverless environments)
-  const tmpDir = '/tmp';
+  // Use /tmp directory for Vercel compatibility
+  const tmpDir = fs.existsSync('/tmp') ? '/tmp' : path.join(process.cwd(), "tmp");
   if (!fs.existsSync(tmpDir)) {
-    // Fallback to process.cwd()/tmp for local development
-    const fallbackTmpDir = path.join(process.cwd(), "tmp");
-    if (!fs.existsSync(fallbackTmpDir)) {
-      fs.mkdirSync(fallbackTmpDir, { recursive: true });
-    }
-    const filePath = path.join(fallbackTmpDir, `audio_${Date.now()}_${file.name}`);
-    const buffer = Buffer.from(arrayBuffer);
-    fs.writeFileSync(filePath, new Uint8Array(arrayBuffer));
-    
-    return await processAudio(filePath, buffer, file.type, file.name, languageCode, fallbackTmpDir);
+    fs.mkdirSync(tmpDir, { recursive: true });
   }
 
   const filePath = path.join(tmpDir, `audio_${Date.now()}_${file.name}`);
   const buffer = Buffer.from(arrayBuffer);
   fs.writeFileSync(filePath, new Uint8Array(arrayBuffer));
 
-  console.log(`File saved: ${filePath}, transcribing in ${languageCode}`);
+  console.log(`File saved: ${filePath}, transcribing in ${languageCode} using Chirp 3`);
 
-  return await processAudio(filePath, buffer, file.type, file.name, languageCode, tmpDir);
+  return await processAudioWithChirp3(filePath, buffer, file.type, file.name, languageCode, tmpDir);
 }
 
-async function processAudio(
+async function processAudioWithChirp3(
   filePath: string,
   buffer: Buffer,
   originalMimeType: string,
@@ -61,30 +112,26 @@ async function processAudio(
   languageCode: string,
   tmpDir: string
 ) {
-  // Convert WebM to MP3 if needed (ElevenLabs may not support WebM)
   let audioBuffer = buffer;
-  let audioMimeType = originalMimeType;
-  let audioFileName = originalFileName;
   let tempConvertedPath: string | null = null;
   const tempOriginalPath: string | null = filePath;
 
   try {
+    // Convert WebM to FLAC for better quality with Chirp 3
     if (originalMimeType === 'audio/webm' || originalFileName.endsWith('.webm')) {
-      console.log('Converting WebM to MP3 for ElevenLabs compatibility...');
-      const convertedPath = path.join(tmpDir, `converted_${Date.now()}.mp3`);
+      console.log('Converting WebM to FLAC for Chirp 3...');
+      const convertedPath = path.join(tmpDir, `converted_${Date.now()}.flac`);
       tempConvertedPath = convertedPath;
       
       try {
         await new Promise<void>((resolve, reject) => {
           ffmpeg(filePath)
-            .toFormat('mp3')
-            .audioCodec('libmp3lame')
-            .audioBitrate(128)
+            .toFormat('flac')
+            .audioChannels(1) // Mono for speech
+            .audioFrequency(16000) // 16kHz is optimal for speech
             .on('end', () => {
-              console.log('WebM to MP3 conversion completed');
+              console.log('WebM to FLAC conversion completed');
               audioBuffer = fs.readFileSync(convertedPath);
-              audioMimeType = 'audio/mpeg';
-              audioFileName = convertedPath.split(path.sep).pop() || 'converted.mp3';
               resolve();
             })
             .on('error', (err) => {
@@ -94,91 +141,78 @@ async function processAudio(
             .save(convertedPath);
         });
       } catch (ffmpegError) {
-        console.error('FFmpeg conversion failed, trying to send WebM directly:', ffmpegError);
-        // If FFmpeg fails, try sending WebM directly - ElevenLabs might support it now
-        audioBuffer = buffer;
-        audioMimeType = originalMimeType;
-        audioFileName = originalFileName;
+        console.error('FFmpeg conversion failed, trying with original format:', ffmpegError);
+        // Continue with original buffer
       }
     }
 
-    const _formData = new FormData();
-    _formData.append("file", new Blob([new Uint8Array(audioBuffer)], { type: audioMimeType }), audioFileName);
-    _formData.append("model_id", "scribe_v1");
-    _formData.append("language_code", languageCode);
-    // Disable audio event tagging to avoid misinterpreting speech as music/noise
-    _formData.append("tag_audio_events", "false");
-    // Disable speaker diarization for single-speaker recordings
-    _formData.append("diarize", "false");
+    // Get access token for Google Cloud API
+    const accessToken = await getAccessToken();
+    
+    // Prepare the audio content as base64
+    const audioContent = audioBuffer.toString('base64');
 
-    console.log(`Transcribing audio: language=${languageCode}, size=${audioBuffer.length} bytes`);
+    console.log(`Transcribing with Chirp 3: language=${languageCode}, size=${audioBuffer.length} bytes`);
 
-    const apiResponse = await fetch("https://api.elevenlabs.io/v1/speech-to-text", {
-      method: "POST",
-      headers: {
-        "xi-api-key": ELEVENLABS_API_KEY
+    // Use Speech-to-Text V2 REST API with Chirp 3
+    const apiUrl = `https://${REGION}-speech.googleapis.com/v2/projects/${PROJECT_ID}/locations/${REGION}/recognizers/_:recognize`;
+    
+    const requestBody = {
+      config: {
+        autoDecodingConfig: {},
+        languageCodes: [languageCode],
+        model: 'chirp_3',
       },
-      body: _formData,
+      content: audioContent,
+    };
+
+    const response = await fetch(apiUrl, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${accessToken}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(requestBody),
     });
 
-    if (!apiResponse.ok) {
-      const errorText = await apiResponse.text();
-      let errorMessage = `Transcription failed: ${apiResponse.statusText}`;
-      try {
-        const errorJson = JSON.parse(errorText);
-        errorMessage = `Transcription failed: ${errorJson.detail?.message || errorJson.message || errorJson.detail || apiResponse.statusText}`;
-      } catch {
-        errorMessage = `Transcription failed: ${apiResponse.statusText} - ${errorText}`;
-      }
-      console.error('ElevenLabs API error:', {
-        status: apiResponse.status,
-        statusText: apiResponse.statusText,
-        errorBody: errorText
-      });
-      throw new Error(errorMessage);
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error('Chirp 3 API error:', response.status, errorText);
+      throw new Error(`Chirp 3 API error: ${response.status} - ${errorText}`);
     }
 
-    const _data = await apiResponse.json();
-    
-    // Log the full response for debugging
-    console.log('ElevenLabs API response:', {
-      hasText: !!_data.text,
-      textLength: _data.text?.length || 0,
-      responseKeys: Object.keys(_data),
-      fullResponse: JSON.stringify(_data)
+    const data = await response.json();
+
+    // Extract transcript
+    const transcript = data.results
+      ?.map((result: { alternatives?: Array<{ transcript?: string }> }) => 
+        result.alternatives?.[0]?.transcript
+      )
+      .filter(Boolean)
+      .join(' ')
+      .trim() || '';
+
+    // Log response for debugging
+    console.log('Chirp 3 transcription result:', {
+      hasText: !!transcript,
+      textLength: transcript.length,
+      text: transcript.substring(0, 100) + (transcript.length > 100 ? '...' : '')
     });
-    
-    const transcribedText = _data.text?.trim();
-    
-    if (transcribedText && transcribedText.length > 0) {
-      console.log(`Transcription successful with language: ${languageCode}`, { text: transcribedText });
-      
+
+    if (transcript && transcript.length > 0) {
       // Clean up temporary files
       cleanupFiles(tempOriginalPath, tempConvertedPath);
       
-      return json({ text: transcribedText });
+      return json({ 
+        text: transcript,
+        languageCode: languageCode
+      });
     } else {
-      // Provide more helpful error message
-      const errorDetails = {
-        responseReceived: !!_data,
-        responseKeys: _data ? Object.keys(_data) : [],
-        rawText: _data?.text,
-        languageCode,
-        audioFileName: audioFileName,
-        audioSize: audioBuffer.length
-      };
-      
-      console.error('Empty transcription result:', errorDetails);
-      
-      // Check if audio might be too short or silent
-      if (audioBuffer.length < 1000) {
-        throw new Error("Audio file is too short or empty. Please record at least 1 second of audio.");
-      }
-      
       throw new Error("No speech detected in audio. Please ensure the audio contains clear speech and try again.");
     }
+
   } catch (error) {
-    console.error(`Transcription error with ${languageCode}:`, error);
+    console.error(`Chirp 3 transcription error:`, error);
     console.error('Error details:', {
       errorType: error instanceof Error ? error.constructor.name : typeof error,
       errorMessage: error instanceof Error ? error.message : String(error),
@@ -190,14 +224,12 @@ async function processAudio(
     // Clean up temporary files on error
     cleanupFiles(tempOriginalPath, tempConvertedPath);
     
-    // Return more detailed error message
     const errorMessage = error instanceof Error ? error.message : "Failed to transcribe";
     return json({ error: errorMessage }, { status: 500 });
   }
 }
 
 function cleanupFiles(originalPath: string | null, convertedPath: string | null) {
-  // Clean up original file
   if (originalPath && fs.existsSync(originalPath)) {
     try {
       fs.unlinkSync(originalPath);
@@ -206,7 +238,6 @@ function cleanupFiles(originalPath: string | null, convertedPath: string | null)
     }
   }
   
-  // Clean up converted file if it exists
   if (convertedPath && fs.existsSync(convertedPath)) {
     try {
       fs.unlinkSync(convertedPath);
