@@ -7,22 +7,22 @@
   <meta name="description" content="Learn Arabic dialects (Egyptian, Levantine, Moroccan Darija, Modern Standard Arabic) through interactive lessons, stories, vocabulary practice, and AI-powered conversation tutoring.">
   <meta name="keywords" content="Arabic, Egyptian Arabic, Levantine Arabic, Moroccan Darija, Modern Standard Arabic, Learn Arabic, Arabic lessons, Arabic stories, Arabic vocabulary, Arabic tutor, Arabic dialects">
   <meta name="author" content="Sherif Elmetwally">
-  
+
   <!-- Preconnect to critical third-party origins (must be early in head) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="preconnect" href="https://cdn.skypack.dev">
   <link rel="dns-prefetch" href="https://bundle.run">
-  
+
   <!-- Preload critical fonts for faster FCP/LCP -->
   <link rel="preload" href="/fonts/ReadexPro-Regular.ttf" as="font" type="font/truetype" crossorigin>
   <link rel="preload" href="/fonts/ReadexPro-SemiBold.ttf" as="font" type="font/truetype" crossorigin>
-  
+
   <!-- Load Google Font with lower priority (non-blocking) -->
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap"></noscript>
-  
+
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- PWA meta tags -->
@@ -33,20 +33,23 @@
   <meta name="apple-mobile-web-app-title" content="Parallel Arabic" />
   <link rel="apple-touch-icon" href="/icons/icon.png" />
 
+  <script defer data-website-id="dfid_llUL02gpewcvzR8hGDuhO" data-domain="www.parallel-arabic.com" src="https://datafa.st/js/script.js">
+  </script>
+
   <!-- Manifest link will be injected by the plugin via +layout.svelte -->
   %sveltekit.head%
 </head>
 
 <body data-sveltekit-preload-data="hover">
   <div style="display: contents">%sveltekit.body%</div>
-  
+
   <!-- Non-critical scripts loaded after page content -->
   <script>
     // Defer loading of non-critical CDN scripts until after page load
     window.addEventListener('load', function() {
       // Skip in Capacitor native app
-      if (window.Capacitor?.isNativePlatform?.()) return;
-      
+      if (window.Capacitor ? .isNativePlatform ? .()) return;
+
       // Use requestIdleCallback for lowest priority, with timeout fallback
       var loadScripts = function() {
         // Arabic virtual keyboard
@@ -54,19 +57,19 @@
         s1.type = 'module';
         s1.src = 'https://cdn.jsdelivr.net/npm/arabic-virtual-keyboard@0.2.8/+esm';
         document.head.appendChild(s1);
-        
+
         // Pixelmatch
         var s2 = document.createElement('script');
         s2.src = 'https://bundle.run/pixelmatch@5.2.1';
         s2.async = true;
         document.head.appendChild(s2);
-        
+
         // Lottie
         var s3 = document.createElement('script');
         s3.src = 'https://cdn.skypack.dev/lottie-web';
         s3.async = true;
         document.head.appendChild(s3);
-        
+
         // Site behaviour (analytics)
         var s4 = document.createElement('script');
         s4.defer = true;
@@ -75,9 +78,11 @@
         s4.src = 'https://sitebehaviour-cdn.fra1.cdn.digitaloceanspaces.com/index.min.js';
         document.head.appendChild(s4);
       };
-      
+
       if ('requestIdleCallback' in window) {
-        requestIdleCallback(loadScripts, { timeout: 2000 });
+        requestIdleCallback(loadScripts, {
+          timeout: 2000
+        });
       } else {
         setTimeout(loadScripts, 100);
       }
