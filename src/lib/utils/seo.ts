@@ -151,6 +151,66 @@ export function generateStructuredData(page: string, data?: any) {
     "softwareVersion": "1.0"
   };
 
+  // Organization schema for brand identity
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Parallel Arabic",
+    "url": baseUrl,
+    "logo": `${baseUrl}/icons/icon.png`,
+    "description": "Learn Arabic dialects through interactive lessons, stories, and AI-powered conversation practice",
+    "foundingDate": "2024",
+    "sameAs": [
+      "https://twitter.com/parallelarabic",
+      "https://instagram.com/parallelarabic"
+    ]
+  };
+
+  // FAQ schema for rich snippets
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What Arabic dialects can I learn on Parallel Arabic?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Parallel Arabic supports Egyptian Arabic, Levantine Arabic (Syrian/Lebanese), Moroccan Darija, and Modern Standard Arabic (MSA/Fusha). Each dialect has dedicated lessons, stories, and vocabulary."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Parallel Arabic free to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Parallel Arabic offers a free tier with access to basic lessons, stories, and vocabulary practice. Premium features like AI tutoring and unlimited content are available with a subscription."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the AI Arabic tutor work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our AI tutor provides conversational practice in your chosen Arabic dialect. It remembers your learning progress, corrects grammar mistakes, and adapts to your skill level for personalized practice."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I practice Arabic pronunciation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! The Speak feature uses speech recognition to evaluate your Arabic pronunciation. You'll get instant feedback comparing your speech to native pronunciation."
+        }
+      }
+    ]
+  };
+
+  // Home page returns multiple schemas for rich results
+  if (page === 'home') {
+    return [baseStructuredData, organizationSchema, faqSchema];
+  }
+
   // Add page-specific structured data
   if (page === 'lesson' && data?.title) {
     return {
@@ -185,6 +245,11 @@ export function generateStructuredData(page: string, data?: any) {
       },
       "inLanguage": "ar"
     };
+  }
+
+  // FAQ page gets dedicated FAQ schema
+  if (page === 'faq') {
+    return faqSchema;
   }
 
   return baseStructuredData;

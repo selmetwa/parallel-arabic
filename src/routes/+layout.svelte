@@ -296,8 +296,14 @@
 	<meta name="robots" content="index, follow" />
 	<link rel="canonical" href={seoMeta.url || 'https://www.parallel-arabic.com'} />
 	
-	<!-- Structured Data (JSON-LD) -->
-	{@html `<script type="application/ld+json">${JSON.stringify(structuredData)}</script>`}
+	<!-- Structured Data (JSON-LD) - supports single schema or array of schemas -->
+	{#if Array.isArray(structuredData)}
+		{#each structuredData as schema}
+			{@html `<script type="application/ld+json">${JSON.stringify(schema)}</script>`}
+		{/each}
+	{:else}
+		{@html `<script type="application/ld+json">${JSON.stringify(structuredData)}</script>`}
+	{/if}
 	
 	{@html webManifest}
 </svelte:head>
