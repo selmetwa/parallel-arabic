@@ -458,17 +458,17 @@ export type DialectComparisonSchema = z.infer<ReturnType<typeof createDialectCom
  */
 export function createWordDefinitionSchema() {
 	const schema = z.object({
-		arabic: z.string(),
-		transliteration: z.string(),
-		definition: z.string(),
+		arabic: z.string().describe('The Arabic word or phrase being defined'),
+		transliteration: z.string().describe('Latin character transliteration of the Arabic'),
+		definition: z.string().describe('Clear English definition of the word/phrase'),
 		breakdown: z.array(z.object({
-			word: z.string(),
-			arabic: z.string(),
-			transliteration: z.string(),
-			meaning: z.string(),
-			context: z.string().optional()
-		})),
-		contextualMeaning: z.string()
+			arabic: z.string().describe('The Arabic word'),
+			englishLabel: z.string().describe('Short English label for this word (1-3 words)'),
+			transliteration: z.string().describe('Transliteration of this word'),
+			meaning: z.string().describe('English meaning of this word'),
+			context: z.string().optional().describe('Optional usage context')
+		})).describe('Word-by-word breakdown for multi-word phrases. Empty array for single words.'),
+		contextualMeaning: z.string().describe('How this word/phrase is used in the specific sentence context')
 	});
 
 	return {
