@@ -19,7 +19,7 @@
       label: 'Practice',
       href: '/practice',
       icon: '📝',
-      paths: ['/practice', '/stories', '/sentences', '/speak']
+      paths: ['/practice', '/stories', '/sentences', '/speak', '/learn/game']
     },
     {
       label: 'Explore',

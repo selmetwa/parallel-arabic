@@ -478,3 +478,37 @@ export function createWordDefinitionSchema() {
 }
 
 export type WordDefinitionSchema = z.infer<ReturnType<typeof createWordDefinitionSchema>['zodSchema']>;
+
+/**
+ * Schema for game sentences (fill-in-the-blank style)
+ * Each sentence has a blank word and multiple choice options
+ */
+export function createGameSentencesSchema() {
+	const gameSentenceSchema = z.object({
+		// Full sentence in Arabic (with the blank word included)
+		arabic: z.string(),
+		// Full sentence in English
+		english: z.string(),
+		// Transliteration of full sentence
+		transliteration: z.string(),
+		// The word that should be blanked out (in Arabic)
+		blankWord: z.string(),
+		// English translation of the blank word
+		blankWordEnglish: z.string(),
+		// Transliteration of the blank word
+		blankWordTransliteration: z.string(),
+		// 3 wrong options for multiple choice (in Arabic)
+		wrongOptions: z.array(z.string()).length(3)
+	});
+
+	const schema = z.object({
+		sentences: z.array(gameSentenceSchema).min(1)
+	});
+
+	return {
+		zodSchema: schema,
+		jsonSchema: zodToJsonSchema(schema)
+	};
+}
+
+export type GameSentencesSchema = z.infer<ReturnType<typeof createGameSentencesSchema>['zodSchema']>;

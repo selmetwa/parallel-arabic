@@ -39,5 +39,12 @@
       title="Vocabulary"
       description="Discover over 20,000 words across all dialects."
     />
+
+    <Card
+      href="/learn/game"
+      icon="🎮"
+      title="Game"
+      description="Practice vocabulary through interactive games. Multiple choice, listening, and speaking modes."
+    />
   </div>
 </section>

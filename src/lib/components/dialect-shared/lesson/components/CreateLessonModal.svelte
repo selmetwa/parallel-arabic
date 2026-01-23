@@ -468,7 +468,7 @@
 								</div>
 							{:else if reviewWords.length > 0}
 								<div class="mt-4 p-4 bg-emerald-500/10 border border-emerald-500/30 rounded-lg">
-									<p class="text-emerald-300 font-medium">
+									<p class="text-emerald-600 font-medium">
 										✓ {reviewWords.length} word{reviewWords.length !== 1 ? 's' : ''} ready for practice
 									</p>
 								</div>
@@ -687,7 +687,7 @@
 									</div>
 								</div>
 								{#if vocabularyFile}
-									<div class="mt-3 p-3 bg-emerald-500/10 border border-emerald-500/30 rounded-lg flex items-center gap-2 text-emerald-300">
+									<div class="mt-3 p-3 bg-emerald-500/10 border border-emerald-500/30 rounded-lg flex items-center gap-2 text-emerald-600">
 										<span>✓</span>
 										<span class="font-medium">{vocabularyFile.name}</span>
 										<span class="text-sm opacity-70">({Math.round(vocabularyFile.size / 1024)}KB)</span>
