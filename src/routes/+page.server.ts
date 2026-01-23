@@ -28,7 +28,8 @@ export const load: PageServerLoad = async ({ parent }) => {
 
   let wordsDueForReviewCount = 0;
   let totalSavedWordsCount = 0;
-  
+  let inProgressGame: { id: string; dialect: string; category: string; game_mode: string; current_index: number; total_questions: number; score: number } | null = null;
+
   // Use user data from parent() - already fetched in hooks.server.ts!
   // This eliminates a duplicate database query (~100-150ms saved)
   const dailyReviewLimit = user?.daily_review_limit || 20;
@@ -37,14 +38,14 @@ export const load: PageServerLoad = async ({ parent }) => {
   const totalShortsViewed = user?.total_shorts_viewed || 0;
   const currentStreak = user?.current_streak || 0;
 
-  // Fetch review word counts if user is logged in
+  // Fetch review word counts and in-progress games if user is logged in
   if (user?.id) {
     const userId = user.id;
     const now = Date.now();
 
     try {
-      // Run both count queries in PARALLEL instead of sequential (~50-100ms saved)
-      const [totalResult, dueResult] = await Promise.all([
+      // Run all count queries in PARALLEL instead of sequential (~50-100ms saved)
+      const [totalResult, dueResult, gameResult] = await Promise.all([
         supabase
           .from('saved_word')
           .select('*', { count: 'exact', head: true })
@@ -54,7 +55,15 @@ export const load: PageServerLoad = async ({ parent }) => {
           .select('*', { count: 'exact', head: true })
           .eq('user_id', userId)
           .eq('forgotten_in_session', false)
-          .or(`is_learning.eq.true,next_review_date.is.null,next_review_date.lte.${now}`)
+          .or(`is_learning.eq.true,next_review_date.is.null,next_review_date.lte.${now}`),
+        supabase
+          .from('game_progress')
+          .select('id, dialect, category, game_mode, current_index, total_questions, score')
+          .eq('user_id', userId)
+          .eq('status', 'in_progress')
+          .order('last_played_at', { ascending: false })
+          .limit(1)
+          .single()
       ]);
 
       if (!totalResult.error && totalResult.count !== null) {
@@ -62,6 +71,9 @@ export const load: PageServerLoad = async ({ parent }) => {
       }
       if (!dueResult.error && dueResult.count !== null) {
         wordsDueForReviewCount = dueResult.count;
+      }
+      if (!gameResult.error && gameResult.data) {
+        inProgressGame = gameResult.data;
       }
     } catch (error) {
       console.error('Error fetching word counts:', error);
@@ -113,18 +125,36 @@ export const load: PageServerLoad = async ({ parent }) => {
     priority: totalStoriesViewed === 0 ? 7 : 4
   });
 
-  // Priority 4: Watch shorts (new feature!)
-  suggestions.push({
-    id: 'shorts',
-    href: '/videos-new',
-    icon: '🎬',
-    title: totalShortsViewed === 0 ? 'Watch Arabic Shorts' : 'More Arabic Shorts',
-    subtitle: totalShortsViewed === 0 
-      ? 'Learn through bite-sized video content in your dialect'
-      : `${totalShortsViewed} shorts watched – swipe for more!`,
-    variant: 'rose',
-    priority: totalShortsViewed === 0 ? 9 : 6 // High priority if new feature
-  });
+  // Priority 4: Play game (or continue in-progress game)
+  if (inProgressGame) {
+    // Build continue game URL with resume params
+    const continueParams = new URLSearchParams({
+      dialect: inProgressGame.dialect,
+      mode: inProgressGame.game_mode,
+      category: inProgressGame.category,
+      resumeId: inProgressGame.id
+    });
+
+    suggestions.push({
+      id: 'game',
+      href: `/learn/game`,
+      icon: '🎮',
+      title: `Continue your game`,
+      subtitle: `${inProgressGame.current_index}/${inProgressGame.total_questions} complete – score: ${inProgressGame.score}`,
+      variant: 'rose',
+      priority: 9 // High priority for in-progress games
+    });
+  } else {
+    suggestions.push({
+      id: 'game',
+      href: '/learn/game',
+      icon: '🎮',
+      title: 'Play vocabulary game',
+      subtitle: 'Practice words through interactive multiple choice, listening & speaking',
+      variant: 'rose',
+      priority: 6
+    });
+  }
 
   // Priority 5: Build vocabulary (if no saved words)
   if (totalSavedWordsCount === 0) {

@@ -61,6 +61,7 @@
       {
         title: 'Practice',
         items: [
+          { label: 'Game', href: '/learn/game', icon: '🎮' },
           { label: 'Sentences', href: '/sentences', icon: '📝' },
           { label: 'Stories', href: '/stories', icon: '📖' },
           { label: 'Speak', href: '/speak', icon: '🎤' },
