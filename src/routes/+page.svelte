@@ -128,8 +128,13 @@
   <div class="mb-12">
     <SectionHeader title="Practice" />
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <Card
+        href="/learn/game"
+        icon="🎮"
+        title="Game"
+        description="Practice vocabulary through interactive games. Multiple choice, listening, and speaking modes."
+      />
       <Card
         href="/stories"
         icon="📖"

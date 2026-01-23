@@ -1155,11 +1155,11 @@
             <!-- Strengths -->
             {#if learningInsights.filter(i => i.insight_type === 'strength').length > 0}
               <div>
-                <p class="text-xs font-semibold text-emerald-400 mb-1.5">Your Strengths:</p>
+                <p class="text-xs font-semibold text-emerald-600 mb-1.5">Your Strengths:</p>
                 <ul class="text-xs text-text-200 space-y-1">
                   {#each learningInsights.filter(i => i.insight_type === 'strength').slice(0, 3) as insight}
                     <li class="flex items-start gap-1.5">
-                      <span class="text-emerald-400">✓</span>
+                      <span class="text-emerald-600">✓</span>
                       <span>{insight.content}</span>
                     </li>
                   {/each}

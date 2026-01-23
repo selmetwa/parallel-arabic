@@ -191,7 +191,7 @@
                   <div class="flex flex-col text-sm">
                     <div class="flex items-baseline gap-2">
                       <span class="font-bold text-text-300" dir="rtl">{item.arabic}</span>
-                      <span class="text-text-200">({item.word})</span>
+                      <span class="text-text-200">({item.englishLabel || item.word})</span>
                     </div>
                     <div class="text-text-200 ml-2">
                       <span class="italic">{item.transliteration}</span>
