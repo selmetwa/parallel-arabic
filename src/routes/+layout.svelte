@@ -2,7 +2,6 @@
 	import '../app.css';
 	// Critical components - needed for initial render
 	import Navigation from '$lib/components/Navigation.svelte';
-	import DialectNavigation from '$lib/components/DialectNavigation.svelte';
 	import Sidebar from '$lib/components/Sidebar.svelte';
 	import BottomNavigation from '$lib/components/BottomNavigation.svelte';
 	import Footer from "$lib/components/Footer.svelte";
@@ -378,9 +377,6 @@
 				targetDialect={data.targetDialect}
 			/>
 		</div>
-
-		<!-- Dialect Navigation - Visible on all screen sizes -->
-		<DialectNavigation />
 
 		<!-- Page Content -->
 		<div class="flex-1 pb-10">

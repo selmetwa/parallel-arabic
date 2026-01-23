@@ -8,6 +8,24 @@ CREATE TABLE public.email_verification_token (
   CONSTRAINT email_verification_token_pkey PRIMARY KEY (id),
   CONSTRAINT email_verification_token_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.user(id)
 );
+CREATE TABLE public.game_progress (
+  id text NOT NULL,
+  user_id text NOT NULL,
+  dialect text NOT NULL CHECK (dialect = ANY (ARRAY['egyptian-arabic'::text, 'fusha'::text, 'levantine'::text, 'darija'::text])),
+  category text NOT NULL,
+  game_mode text NOT NULL CHECK (game_mode = ANY (ARRAY['multiple-choice'::text, 'listening'::text, 'speaking'::text])),
+  current_index integer NOT NULL DEFAULT 0,
+  total_questions integer NOT NULL,
+  score integer NOT NULL DEFAULT 0,
+  words_to_review jsonb DEFAULT '[]'::jsonb,
+  question_order jsonb NOT NULL,
+  status text NOT NULL DEFAULT 'in_progress'::text CHECK (status = ANY (ARRAY['in_progress'::text, 'completed'::text])),
+  started_at bigint NOT NULL DEFAULT (EXTRACT(epoch FROM now()) * (1000)::numeric),
+  last_played_at bigint NOT NULL DEFAULT (EXTRACT(epoch FROM now()) * (1000)::numeric),
+  completed_at bigint,
+  CONSTRAINT game_progress_pkey PRIMARY KEY (id),
+  CONSTRAINT game_progress_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.user(id)
+);
 CREATE TABLE public.generated_lesson (
   id text NOT NULL,
   user_id text NOT NULL,

@@ -2,7 +2,7 @@
   import { onMount } from "svelte";
   import cn from 'classnames';
 	import Sentence from '$lib/components/dialect-shared/story/components/Sentence.svelte';
-	import WordModal from '$lib/components/dialect-shared/story/components/WordModal.svelte';
+	import DefinitionModal from '$lib/components/dialect-shared/sentences/DefinitionModal.svelte';
 	import RadioButton from '$lib/components/RadioButton.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import { getWordObjectToSave } from '$lib/helpers/get-word-object-to-save';
@@ -274,7 +274,7 @@
 	};
 </script>
 
-<WordModal {activeWordObj} {isModalOpen} {closeModal} dialect={storyDialect as any}></WordModal>
+<DefinitionModal {activeWordObj} {isModalOpen} {closeModal} dialect={storyDialect as any}></DefinitionModal>
 
 <!-- Sticky Controls Bar -->
 {#if isHeaderSticky && sentences.length > 0}

@@ -32,14 +32,7 @@ const staticPages = [
   { path: '/tutor', priority: '0.8', changefreq: 'weekly' },
 
   // Dialect landing pages - Egyptian Arabic
-  { path: '/egyptian-arabic', priority: '0.9', changefreq: 'weekly' },
-  { path: '/egyptian-arabic/grammar', priority: '0.8', changefreq: 'monthly' },
-  { path: '/egyptian-arabic/grammar/verb-conjugation', priority: '0.7', changefreq: 'monthly' },
-  { path: '/egyptian-arabic/grammar/verb-conjugation-flashcards', priority: '0.7', changefreq: 'monthly' },
-  { path: '/egyptian-arabic/vocab', priority: '0.8', changefreq: 'weekly' },
-  { path: '/egyptian-arabic/write', priority: '0.8', changefreq: 'weekly' },
   { path: '/egyptian-arabic/stories', priority: '0.8', changefreq: 'weekly' },
-  { path: '/egyptian-arabic/anki-decks', priority: '0.7', changefreq: 'monthly' },
 
   // Dialect landing pages - Fusha (MSA)
   { path: '/fusha', priority: '0.9', changefreq: 'weekly' },

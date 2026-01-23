@@ -17,31 +17,25 @@ export const POST: RequestHandler = async ({ request }) => {
 
   try {
     const { jsonSchema } = createWordDefinitionSchema();
-    
-    const enhancedQuestion = `You are an expert Arabic language teacher specializing in dialectal Arabic. Your task is to provide clear, structured definitions for Arabic words and phrases.
+
+    const enhancedQuestion = `You are an expert Arabic language teacher specializing in dialectal Arabic.
 
 ${data.question}
 
-REQUIREMENTS:
-1. Provide the Arabic script (in the "arabic" field) of the exact word/phrase being defined.
-2. Provide the transliteration (in the "transliteration" field) using only Latin characters.
-3. Give a concise, clear English definition (in the "definition" field) that explains what the word/phrase means.
-4. If the word/phrase consists of multiple words, provide a breakdown array where each item includes:
-   - The Arabic script of that word
-   - The transliteration of that word
-   - The meaning of that word
-   - Optional context if needed
-5. Explain the contextual meaning (in the "contextualMeaning" field) - how this word/phrase is used in the specific sentence context provided.
-
-CRITICAL FORMATTING REQUIREMENTS:
-- You MUST return a valid JSON object exactly matching this schema:
-${JSON.stringify(jsonSchema, null, 2)}
-- Return PURE JSON only - no markdown code blocks, no explanations, no additional text.
-- Do NOT wrap the response in \`\`\`json ... \`\`\` code fences.
-- The response must be valid JSON that can be parsed directly by JSON.parse().`;
+Provide a structured definition with:
+- arabic: The exact Arabic word/phrase being defined
+- transliteration: Latin character transliteration
+- definition: Clear, concise English definition
+- breakdown: For multi-word phrases only, provide word-by-word breakdown with:
+  - arabic: The Arabic word
+  - englishLabel: Short English label (1-3 words)
+  - transliteration: Transliteration
+  - meaning: English meaning
+  Use an empty array [] for single words.
+- contextualMeaning: How this word/phrase is used in the given sentence context`;
 
     const response = await generateContentWithRetry(ai, {
-      model: "gemini-3-flash-preview",
+      model: "gemini-2.0-flash",
       contents: enhancedQuestion,
       // @ts-expect-error - generationConfig is valid but types may be outdated
       generationConfig: {
