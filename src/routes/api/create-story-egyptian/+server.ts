@@ -454,28 +454,6 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 	const randomApproach = approaches[Math.floor(Math.random() * approaches.length)];
 	const timestamp = new Date().toISOString();
 
-	// Build dialect-specific examples section
-	let examplesSection = '';
-	if (config.examples.length > 0) {
-		examplesSection = `
-		Here is an example of a conversation in ${config.name} to give you an idea of the dialect:
-		${config.examples.map((exampleSet: Array<{ arabic: { speaker?: string; text: string }; transliteration: { text: string }; english: { text: string } }>) => 
-			exampleSet.map((sentence: { arabic: { speaker?: string; text: string }; transliteration: { text: string }; english: { text: string } }) => 
-				`${sentence.arabic.speaker || 'Speaker'}: ${sentence.arabic.text} (${sentence.transliteration.text}) - "${sentence.english.text}"`
-			).join('\n')
-		).join('\n')}`;
-	}
-
-	// Build common words section
-	let commonWordsSection = '';
-	if (config.commonWords.length > 0) {
-		commonWordsSection = `
-		Here are some of the most common words in ${config.name}:
-		${config.commonWords.map((word: { word: string; franco?: string; en: string }) => 
-			`${word.word} (${word.franco || 'N/A'}) means "${word.en}"`
-		).join('. ')}`;
-	}
-
 	// Build learning topics section
 	let learningTopicsSection = '';
 	if (learningTopics.length > 0) {
@@ -618,10 +596,6 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 
     Can you make sure that the transliterations don't use anything other than the english alphabet.
 
-    ${examplesSection}
-
-    ${commonWordsSection}
-
     REQUIRED SECTIONS:
     1. keyVocab: Extract 5-15 key vocabulary words from the story. These should be important words that appear in the story and are worth learning. Each word should have: arabic, english, transliteration.
     2. quiz: Create a short multiple-choice quiz with 3-5 questions based on the story content. Each question should:
@@ -689,8 +663,8 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 			contents: question,
 			// @ts-expect-error - generationConfig is valid but types may be outdated
 			generationConfig: {
-				temperature: 0.9,
-				maxOutputTokens: 8000, // Increase token limit for stories
+				temperature: 0.8,
+				maxOutputTokens: 5000, // Optimized token limit for stories
 				responseMimeType: 'application/json',
 				responseJsonSchema: storySchema.jsonSchema
 			}

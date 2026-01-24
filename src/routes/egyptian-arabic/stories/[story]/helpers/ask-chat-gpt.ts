@@ -7,24 +7,70 @@ type TFullSentence = {
 export const askChatGTP = async (word: string, type: string, fullSentence: TFullSentence) => {
   let question = '';
 
-  const a = `Please use the following text to get the definition: ${fullSentence.arabic} ${fullSentence.transliteration} ${fullSentence.english}`;
   if (type === 'arabic') {
-    question = `What does ${word} mean in Egyptian Arabic? ${a} `;
+    question = `What does ${word} mean in Egyptian Arabic? Considering the following sentences:
+		Arabic: "${fullSentence.arabic}"
+		English: "${fullSentence.english}"
+		Transliteration: "${fullSentence.transliteration}"
+
+		Please provide a definition based on the context.`;
   } else if (type === 'english') {
-    question = `What is the word for ${word} in Egyptian Arabic? ${a}`;
+    question = `What is the word for "${word}" in Egyptian Arabic? Considering the following sentences:
+		Arabic: "${fullSentence.arabic}"
+		English: "${fullSentence.english}"
+		Transliteration: "${fullSentence.transliteration}"
+
+		Please provide the Arabic word/phrase and its definition based on the context.`;
   } else {
-    question = `What does ${word} mean in Egyptian Arabic? ${a}`;
+    question = `What does ${word} mean in Egyptian Arabic? Considering the following sentences:
+		Arabic: "${fullSentence.arabic}"
+		English: "${fullSentence.english}"
+		Transliteration: "${fullSentence.transliteration}"
+
+		Please provide a definition based on the context.`;
   }
 
-  const res = await fetch('/api/open-ai', {
-    method: 'POST',
-    headers: { accept: 'application/json' },
-    body: JSON.stringify({
-      question: question
-    })
-  });
+  try {
+    const res = await fetch('/api/definition-sentence', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        question: question
+      })
+    });
 
-  const data = await res.json();
+    if (!res.ok) {
+      console.error('Definition API error:', res.status);
+      return {
+        message: {
+          message: {
+            content: 'Failed to load definition. Please try again.'
+          }
+        }
+      };
+    }
 
-  return data;
+    const data = await res.json();
+
+    // Return in the same format as before for backward compatibility
+    return {
+      message: {
+        message: {
+          content: data.message?.content || 'No definition available'
+        }
+      }
+    };
+  } catch (error) {
+    console.error('Error fetching definition:', error);
+    return {
+      message: {
+        message: {
+          content: 'Error loading definition. Please try again.'
+        }
+      }
+    };
+  }
 }
