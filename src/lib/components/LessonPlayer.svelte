@@ -390,12 +390,19 @@
             });
             
             const data = await res.json();
-            
+
             try {
-                const parsed = JSON.parse(data.message.content);
+                let content = data.message?.content || '';
+
+                // Strip markdown code blocks if present
+                if (content.includes('```')) {
+                    content = content.replace(/```json\s*/gi, '').replace(/```\s*/g, '').trim();
+                }
+
+                const parsed = JSON.parse(content);
                 definition = JSON.stringify(parsed);
             } catch (e) {
-                definition = data.message.content;
+                definition = data.message?.content || 'No definition available';
             }
         } catch (error) {
             console.error('Error fetching definition:', error);

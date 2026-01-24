@@ -346,13 +346,20 @@
       // Store the structured JSON response as a string so the UI can parse it
       // The response should already be valid JSON from the API
       try {
+        let content = data.message?.content || '';
+
+        // Strip markdown code blocks if present
+        if (content.includes('```')) {
+          content = content.replace(/```json\s*/gi, '').replace(/```\s*/g, '').trim();
+        }
+
         // Verify it's valid JSON and store it as a string for the UI components
-        const parsed = JSON.parse(data.message.content);
+        const parsed = JSON.parse(content);
         // Store the entire parsed object as JSON string for the UI to parse
         definition = JSON.stringify(parsed);
       } catch (e) {
         // Fallback for plain text responses (shouldn't happen with structured output)
-        definition = data.message.content;
+        definition = data.message?.content || 'No definition available';
       }
     } catch (error) {
       console.error('Error fetching definition:', error);
