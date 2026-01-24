@@ -157,8 +157,7 @@
 		isComparisonModalOpen = false;
 	}
 	
-	// Ref to the keyboard element for this component instance
-	let keyboardElement: Keyboard | null = $state(null);
+	// Ref to the keyboard container for this component instance
 	let keyboardContainer: HTMLDivElement | null = $state(null);
 	
 	// Multi-word selection state
@@ -220,7 +219,13 @@
 		// Use the strict normalized versions for final correctness check
 		if (areArraysEqual(myInputArr, arabicArr) && value.trim().length > 0) {
 			isCorrect = true;
-			keyboardElement && keyboardElement.resetValue();
+			// Reset virtual keyboard if it exists and is active
+			if (keyboard === 'virtual' && practiceMode === 'typing' && keyboardContainer) {
+				const keyboardEl = keyboardContainer.querySelector('arabic-keyboard') as Keyboard | null;
+				if (keyboardEl && typeof keyboardEl.resetValue === 'function') {
+					keyboardEl.resetValue();
+				}
+			}
 		} else if (value.trim().length === 0 && !isCorrect) {
 			// Reset isCorrect when input is cleared, but only if it wasn't already correct
 			// (prevents resetting after successful answer when keyboard is cleared)
@@ -230,8 +235,13 @@
 
 	function checkInput() {
 		// Only check virtual keyboard when it's active
-		if (keyboard !== 'virtual' || !keyboardElement) return;
-		const value = keyboardElement.getTextAreaValue();
+		if (keyboard !== 'virtual' || practiceMode !== 'typing') return;
+		
+		// Get the keyboard element fresh each time to ensure it exists
+		const keyboardEl = keyboardContainer?.querySelector('arabic-keyboard') as Keyboard | null;
+		if (!keyboardEl || typeof keyboardEl.getTextAreaValue !== 'function') return;
+		
+		const value = keyboardEl.getTextAreaValue();
 		if (typeof value === 'string') {
 			compareMyInput(value);
 		}
@@ -243,17 +253,8 @@
 			keyboard = 'physical';
 		}
 		
-		// Find the keyboard element within this component's container
-		if (keyboardContainer) {
-			keyboardElement = keyboardContainer.querySelector('arabic-keyboard') as Keyboard | null;
-		}
-		
-		// Update styles for all keyboards (or specific one if available)
-		if (keyboardElement) {
-			updateKeyboardStyle(keyboardElement);
-		} else {
-			updateKeyboardStyle();
-		}
+		// Update keyboard styles
+		updateKeyboardStyle();
 
 		// Track sentence view
 		fetch('/api/track-sentence-view', {
@@ -341,43 +342,72 @@
 	async function askChatGTP(words: string | string[]) {
 		const wordsArray = Array.isArray(words) ? words : [words];
 		targetWord = wordsArray.join(' ');
-		
+
 		// Map English words to Arabic equivalent and filter for Arabic characters only
 		targetArabicWord = mapEnglishToArabic(wordsArray);
-		
+
 		isLoadingDefinition = true;
 		openDefinitionModal();
-		
+
 		const wordText = wordsArray.length === 1 ? wordsArray[0] : `the phrase "${wordsArray.join(' ')}"`;
 		const question = `What does ${wordText} mean in ${dialectName[dialect]}? Considering the following sentences:
 		Arabic: "${sentence.arabic}"
 		English: "${sentence.english}"
 		Transliteration: "${sentence.transliteration}"
-		
+
 		Please provide a definition based on the context.`;
 
-		const res = await fetch('/api/definition-sentence', {
-			method: 'POST',
-			headers: { accept: 'application/json' },
-			body: JSON.stringify({
-				question: question
-			})
-		});
-
-		const data = await res.json();
-
-		// Store the structured JSON response as a string so the UI can parse it
-		// The response should already be valid JSON from the API
 		try {
-			// Verify it's valid JSON and store it as a string for the UI components
-			const parsed = JSON.parse(data.message.content);
-			// Store the entire parsed object as JSON string for the UI to parse
-			definition = JSON.stringify(parsed);
-		} catch (e) {
-			// Fallback for plain text responses (shouldn't happen with structured output)
-			definition = data.message.content;
+			const res = await fetch('/api/definition-sentence', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+					'Accept': 'application/json'
+				},
+				body: JSON.stringify({
+					question: question
+				})
+			});
+
+			if (!res.ok) {
+				console.error('Definition API error:', res.status);
+				definition = 'Failed to load definition. Please try again.';
+				isLoadingDefinition = false;
+				return;
+			}
+
+			const data = await res.json();
+
+			// Handle nested response structure: data.message.message.content or data.message.content
+			let content = data.message?.message?.content || data.message?.content || '';
+
+			if (!content) {
+				console.error('No content found in response:', data);
+				definition = 'No definition available';
+				isLoadingDefinition = false;
+				return;
+			}
+
+			// Strip markdown code blocks if present
+			if (content.includes('```')) {
+				content = content.replace(/```json\s*/gi, '').replace(/```\s*/g, '').trim();
+			}
+
+			// Verify it's valid JSON by trying to parse it
+			try {
+				JSON.parse(content);
+				// If parsing succeeds, store the content as-is (it's already a JSON string)
+				// DefinitionModal will parse it when rendering
+				definition = content;
+			} catch (e) {
+				console.error('Error: content is not valid JSON:', e, 'Content:', content);
+				definition = content || 'No definition available';
+			}
+		} catch (error) {
+			console.error('Error fetching definition:', error);
+			definition = 'Error loading definition. Please try again.';
 		}
-		
+
 		isLoadingDefinition = false;
 	}
 
@@ -535,21 +565,27 @@
 			reorderCorrect = false;
 
 			if (typeof document !== 'undefined') {
-				// Find the keyboard element within this component's container
-				if (keyboardContainer) {
-					keyboardElement = keyboardContainer.querySelector('arabic-keyboard') as Keyboard | null;
-				}
-				keyboardElement && keyboardElement.resetValue();
-				
-				// Update keyboard styles when sentence changes
-				// Use setTimeout to ensure DOM is ready
-				setTimeout(() => {
-					if (keyboardElement) {
-						updateKeyboardStyle(keyboardElement);
-					} else {
+				// Reset virtual keyboard if it exists and is active
+				if (keyboard === 'virtual' && practiceMode === 'typing' && keyboardContainer) {
+					const container = keyboardContainer; // Capture for closure
+					setTimeout(() => {
+						const keyboardEl = container.querySelector('arabic-keyboard') as Keyboard | null;
+						if (keyboardEl && typeof keyboardEl.resetValue === 'function') {
+							keyboardEl.resetValue();
+						}
+						// Update keyboard styles
+						if (keyboardEl) {
+							updateKeyboardStyle(keyboardEl);
+						} else {
+							updateKeyboardStyle();
+						}
+					}, 0);
+				} else {
+					// Update keyboard styles even if not virtual
+					setTimeout(() => {
 						updateKeyboardStyle();
-					}
-				}, 0);
+					}, 0);
+				}
 			}
 		}
 	});
@@ -557,22 +593,29 @@
 		attempt = attemptTemp;
 	});
 	
-	// Update keyboard element reference when keyboard type changes or container is ready
+	// Update keyboard styles when keyboard type changes or container is ready
 	$effect(() => {
-		if (keyboardContainer && keyboard === 'virtual') {
+		if (keyboardContainer && keyboard === 'virtual' && practiceMode === 'typing') {
 			// Capture the container reference for the setTimeout closure
 			const container = keyboardContainer;
 			// Use setTimeout to ensure DOM is updated
 			setTimeout(() => {
-				keyboardElement = container.querySelector('arabic-keyboard') as Keyboard | null;
-				if (keyboardElement) {
-					updateKeyboardStyle(keyboardElement);
+				const keyboardEl = container.querySelector('arabic-keyboard') as Keyboard | null;
+				if (keyboardEl) {
+					updateKeyboardStyle(keyboardEl);
+				} else {
+					updateKeyboardStyle();
 				}
 			}, 0);
 		} else {
-			keyboardElement = null;
+			// Update styles even when keyboard is not virtual
+			setTimeout(() => {
+				updateKeyboardStyle();
+			}, 0);
 		}
 	});
+
+  $inspect(keyboard)
 </script>
 
 <DefinitionModal

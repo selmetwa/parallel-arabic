@@ -182,7 +182,14 @@
 	let parsedDescription = $derived.by(() => {
 		if (!activeWordObj.description) return null;
 		try {
-			return JSON.parse(activeWordObj.description);
+			let content = activeWordObj.description;
+
+			// Strip markdown code blocks if present
+			if (content.includes('```')) {
+				content = content.replace(/```json\s*/gi, '').replace(/```\s*/g, '').trim();
+			}
+
+			return JSON.parse(content);
 		} catch {
 			return null;
 		}

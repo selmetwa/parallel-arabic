@@ -123,20 +123,6 @@ export const POST: RequestHandler = async ({ request }) => {
   
   const timestamp = new Date().toISOString();
 
-  // Build word list section if available
-  let wordListSection = '';
-  if (config.wordList.length > 0) {
-    wordListSection = `
-    ${config.commonWordsInstruction}
-     ${config.wordList.map((word: { word: string; franco?: string; en: string }) => 
-      `${word.word} (${word.franco || 'no-transliteration'}) means "${word.en}"`
-    ).join('. ')}
-    
-    ${config.wordListInstruction}`;
-  } else {
-    wordListSection = config.wordListInstruction;
-  }
-
   // Build learning topics section
   let learningTopicsSection = '';
   if (learningTopics.length > 0) {
@@ -249,8 +235,6 @@ export const POST: RequestHandler = async ({ request }) => {
     - Past experiences and future plans
 
     IMPORTANT: Be creative and avoid repetitive patterns. Use varied sentence structures, different vocabulary combinations, and diverse scenarios. NO MORE THAN 2 SENTENCES should be about the same topic area.
-
-    ${wordListSection}
 
     Now can you please include the english translation for each sentence.
 
