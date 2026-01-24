@@ -1,7 +1,7 @@
 <script lang="ts">
 	import cn from 'classnames';
 	import Sentence from '$lib/components/dialect-shared/story/components/Sentence.svelte';
-	import WordModal from '$lib/components/dialect-shared/story/components/WordModal.svelte';
+	import DefinitionModal from '$lib/components/dialect-shared/sentences/DefinitionModal.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import { getWordObjectToSave } from '$lib/helpers/get-word-object-to-save';
 	import Checkmark from '$lib/components/Checkmark.svelte';
@@ -38,7 +38,14 @@
 	let parsedDescription = $derived.by(() => {
 		if (!activeWordObj.description) return null;
 		try {
-			return JSON.parse(activeWordObj.description);
+			let content = activeWordObj.description;
+
+			// Strip markdown code blocks if present
+			if (content.includes('```')) {
+				content = content.replace(/```json\s*/gi, '').replace(/```\s*/g, '').trim();
+			}
+
+			return JSON.parse(content);
 		} catch {
 			return null;
 		}
@@ -146,7 +153,7 @@
 		</form>
 	</div>
 {:else}
-	<WordModal {activeWordObj} {isModalOpen} {closeModal} dialect="egyptian-arabic"></WordModal>
+	<DefinitionModal {activeWordObj} {isModalOpen} {closeModal} dialect="egyptian-arabic"></DefinitionModal>
 	<header class="border-b border-tile-600 bg-tile-400">
 		<div class="max-w-5xl mx-auto px-3 sm:px-8">
 			<!-- Title Section -->

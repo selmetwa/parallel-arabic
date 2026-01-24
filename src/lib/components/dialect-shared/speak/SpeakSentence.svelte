@@ -8,8 +8,19 @@
   import SaveButton from '$lib/components/SaveButton.svelte';
   import { type Dialect } from '$lib/types/index';
   import type { DialectComparisonSchema } from '$lib/utils/gemini-schemas';
+  import { filterArabicCharacters } from '$lib/utils/arabic-normalization';
 
-  let { sentence, resetSentences, dialect } = $props();
+  interface Props {
+    sentence: {
+      arabic: string;
+      english: string;
+      transliteration: string;
+    };
+    resetSentences: () => void;
+    dialect: Dialect;
+  }
+
+  let { sentence, resetSentences, dialect }: Props = $props();
 
   let recording = $state(false);
   let mediaRecorder: MediaRecorder | null = $state(null);
@@ -22,6 +33,7 @@
 	let isLoadingDefinition = $state(false);
 	let definition = $state('');
   let targetWord = $state('');
+  let targetArabicWord = $state('');
   let audioURL = $state('');
   let isTranscribing = $state(false);
 
@@ -77,6 +89,7 @@
       isLoadingDefinition = false;
       definition = '';
       targetWord = '';
+      targetArabicWord = '';
       audioURL = '';
       isTranscribing = false;
     }
@@ -132,45 +145,90 @@
 	function closeDefinitionModal() {
 		isDefinitionModalOpen = false;
 		definition = '';
+		targetWord = '';
+		targetArabicWord = '';
 	}
 
   const dialectName: Record<Dialect, string> = {
     fusha: 'Modern Standard Arabic',
     levantine: 'Levantine Arabic',
     darija: 'Moroccan Darija',
-    'egyptian-arabic': 'Egyptian Arabic'
+    'egyptian-arabic': 'Egyptian Arabic',
+    iraqi: 'Iraqi Arabic',
+    khaleeji: 'Khaleeji Arabic'
+  }
+
+  // Function to map English words to corresponding Arabic words
+  function mapEnglishToArabic(englishWord: string): string {
+    const allEnglishWords = sentence.english.split(' ');
+    const allArabicWords = sentence.arabic.split(' ');
+
+    // Find the index of the English word
+    const index = allEnglishWords.findIndex((w: string) =>
+      w.toLowerCase() === englishWord.toLowerCase()
+    );
+
+    if (index !== -1 && allArabicWords[index]) {
+      return filterArabicCharacters(allArabicWords[index]);
+    }
+
+    // Fallback: return the whole Arabic sentence filtered
+    return filterArabicCharacters(sentence.arabic);
   }
 
   async function askChatGTP(word: string) {
 		targetWord = word;
+		targetArabicWord = mapEnglishToArabic(word);
 		isLoadingDefinition = true;
 		openDefinitionModal();
 		const question = `What does ${word} mean in ${dialectName[dialect as Dialect]}? Considering the following sentences:
 		Arabic: "${sentence.arabic}"
 		English: "${sentence.english}"
 		Transliteration: "${sentence.transliteration}"
-		
+
 		Please provide a definition based on the context.`;
-		
-		const res = await fetch('/api/definition-sentence', {
-			method: 'POST',
-			headers: { accept: 'application/json' },
-			body: JSON.stringify({
-				question: question
-			})
-		});
 
-		const data = await res.json();
-
-		// Store the structured JSON response as a string so the UI can parse it
 		try {
-			const parsed = JSON.parse(data.message.content);
-			definition = JSON.stringify(parsed);
-		} catch (e) {
-			// Fallback for plain text responses (shouldn't happen with structured output)
-			definition = data.message.content;
+			const res = await fetch('/api/definition-sentence', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+					'Accept': 'application/json'
+				},
+				body: JSON.stringify({
+					question: question
+				})
+			});
+
+			if (!res.ok) {
+				console.error('Definition API error:', res.status);
+				definition = 'Failed to load definition. Please try again.';
+				isLoadingDefinition = false;
+				return;
+			}
+
+			const data = await res.json();
+
+			// Store the structured JSON response as a string so the UI can parse it
+			try {
+				let content = data.message?.content || '';
+
+				// Strip markdown code blocks if present
+				if (content.includes('```')) {
+					content = content.replace(/```json\s*/gi, '').replace(/```\s*/g, '').trim();
+				}
+
+				const parsed = JSON.parse(content);
+				definition = JSON.stringify(parsed);
+			} catch (e) {
+				// Fallback for plain text responses (shouldn't happen with structured output)
+				definition = data.message?.content || 'No definition available';
+			}
+		} catch (error) {
+			console.error('Error fetching definition:', error);
+			definition = 'Error loading definition. Please try again.';
 		}
-		
+
 		isLoadingDefinition = false;
 	}
 
@@ -212,11 +270,13 @@
 <DefinitionModal
 	activeWordObj={{
 		english: targetWord,
+		arabic: targetArabicWord,
 		isLoading: isLoadingDefinition,
 		description: definition,
 	}}
 	isModalOpen={isDefinitionModalOpen}
 	closeModal={closeDefinitionModal}
+	dialect={dialect as Dialect}
 ></DefinitionModal>
 
 <DialectComparisonModal
