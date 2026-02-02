@@ -2,15 +2,17 @@
   import Button from "$lib/components/Button.svelte";
   import Checkmark from "$lib/components/Checkmark.svelte";
   import { supabase } from '$lib/supabaseClient';
-  
+  import classNames from "classnames";
+
   /**
    * @typedef {Object} Props
    * @property {any} [objectToSave]
    * @property {string} [type]
+   * @property {string} className
    */
 
   /** @type {Props} */
-  let { objectToSave = {}, type = 'Word' } = $props();
+  let { objectToSave = {}, type = 'Word', className } = $props();
 
   let response = $state('');
   let isLoading = $state(false);
@@ -73,7 +75,7 @@
 <button
   onclick={!isLoading ? saveWord : undefined}
   disabled={isLoading}
-  class="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold bg-emerald-600 text-white rounded-lg md:hover:bg-emerald-700 transition-all duration-200 shadow-sm md:hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
+  class={classNames(className, "py-2 px-4 font-semibold rounded-xl flex items-center gap-1.5 font-semibold bg-emerald-600 text-white rounded-lg md:hover:bg-emerald-700 transition-all duration-200 shadow-sm md:hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed")}
 >
   {#if isLoading}
     <svg class="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
