@@ -6,6 +6,7 @@
   import DialectComparisonModal from './DialectComparisonModal.svelte';
   import { type Dialect } from '$lib/types/index';
   import type { DialectComparisonSchema } from '$lib/utils/gemini-schemas';
+  import AlphabetCycle from "$lib/components/AlphabetCycle.svelte";
 
   type Props = {
     activeWordObj: {
@@ -99,9 +100,9 @@
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-              text: activeWordObj.arabic,
+              text: parsedDescription.arabic ?? parsedDescription.transliteration,
               currentDialect: dialect,
-              transliteration: activeWordObj.transliterated || activeWordObj.transliteration
+              transliteration: parsedDescription.transliteration ?? (activeWordObj.transliterated || activeWordObj.transliteration)
             })
         });
 
@@ -121,13 +122,16 @@
   function closeComparisonModal() {
     isComparisonModalOpen = false;
   }
+  $inspect(parsedDescription)
+
+  $inspect(activeWordObj)
 </script>
 
 <DialectComparisonModal
     isOpen={isComparisonModalOpen}
     closeModal={closeComparisonModal}
-    originalText={activeWordObj.arabic}
-    originalEnglish={activeWordObj.english}
+    originalText={parsedDescription?.arabic || activeWordObj.arabic}
+    originalEnglish={parsedDescription?.definition || activeWordObj.english}
     {comparisonData}
     isLoading={isComparing}
     error={comparisonError}
@@ -141,9 +145,11 @@
     {#if activeWordObj.isLoading}
       <div role="status" class="flex flex-col items-center py-12">
         <div class="relative">
-          <div class="w-16 h-16 border-4 border-tile-500 border-t-emerald-500 rounded-full animate-spin"></div>
+          <AlphabetCycle />
         </div>
-        <p class="mt-4 text-lg text-text-200 animate-pulse">Finding definition...</p>
+        <p class="mt-4 text-lg text-text-200 animate-pulse">
+          أنا بفكر / Ana bafakkar / I'm thinking
+        </p>
       </div>
 
     <!-- Error State -->
@@ -285,18 +291,14 @@
         <!-- Compare Button -->
         <div class="flex-1">
           <Button onClick={compareDialects} type="button">
-            <span class="flex items-center justify-center gap-2">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
-              </svg>
               Compare Dialects
-            </span>
           </Button>
         </div>
 
         <!-- Save Button -->
         <div class="flex-1">
           <SaveButton
+            className=''
             objectToSave={{
               arabic: parsedDescription?.arabic || activeWordObj.arabic,
               english: parsedDescription?.definition || activeWordObj.english,
