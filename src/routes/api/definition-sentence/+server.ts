@@ -78,10 +78,27 @@ Provide a structured definition with:
   - transliteration: Transliteration
   - meaning: English meaning
   Use an empty array [] for single words.
-- contextualMeaning: How this word/phrase is used in the given sentence context`;
+- contextualMeaning: How this word/phrase is used in the given sentence context
+
+MAKE SURE THAT THE RESPONSE IS JSON FORMAT USING THE FOLOWING STRUCTURE
+
+	const schema = z.object({
+		arabic: z.string().describe('The Arabic word or phrase being defined'),
+		transliteration: z.string().describe('Latin character transliteration of the Arabic'),
+		definition: z.string().describe('Clear English definition of the word/phrase'),
+		breakdown: z.array(z.object({
+			arabic: z.string().describe('The Arabic word'),
+			englishLabel: z.string().describe('Short English label for this word (1-3 words)'),
+			transliteration: z.string().describe('Transliteration of this word'),
+			meaning: z.string().describe('English meaning of this word'),
+			context: z.string().optional().describe('Optional usage context')
+		})).describe('Word-by-word breakdown for multi-word phrases. Empty array for single words.'),
+		contextualMeaning: z.string().describe('How this word/phrase is used in the specific sentence context')
+	});
+`;
 
     const response = await generateContentWithRetry(ai, {
-      model: "gemini-2.0-flash",
+      model: "gemini-3-flash-preview",
       contents: enhancedQuestion,
       // @ts-expect-error - generationConfig is valid but types may be outdated
       generationConfig: {
@@ -92,14 +109,10 @@ Provide a structured definition with:
 
     // Get the text content from the response
     let responseText = response.text;
-
     if (!responseText) {
       console.error('Empty response from Gemini API');
       return error(500, { message: 'Empty response from AI' });
     }
-
-    // Clean up the response to extract only the JSON
-    // Sometimes Gemini adds markdown code blocks or extra text after the JSON
 
     // Strip markdown code blocks if present
     if (responseText.includes('```')) {
@@ -109,8 +122,7 @@ Provide a structured definition with:
         .trim();
     }
 
-    // Extract just the JSON object (in case there's extra text after it)
-    // Look for the first { and find the matching }
+    // Extract just the JSON object if there's extra text before/after
     const jsonStartIndex = responseText.indexOf('{');
     if (jsonStartIndex !== -1) {
       let braceCount = 0;
@@ -128,20 +140,75 @@ Provide a structured definition with:
       responseText = responseText.substring(jsonStartIndex, jsonEndIndex);
     }
 
-    // Validate it's proper JSON
+    let normalizedObject: {
+      arabic: string;
+      transliteration: string;
+      definition: string;
+      breakdown: Array<{ arabic: string; englishLabel?: string; word?: string; transliteration: string; meaning: string }>;
+      contextualMeaning?: string;
+    };
+
     try {
-      JSON.parse(responseText);
-    } catch (parseErr) {
-      console.error('Failed to parse Gemini response as JSON:', responseText);
-      return error(500, { message: 'Invalid response format from AI' });
+      const parsed = JSON.parse(responseText);
+      normalizedObject = {
+        arabic: typeof parsed.arabic === 'string' ? parsed.arabic : '',
+        transliteration: typeof parsed.transliteration === 'string' ? parsed.transliteration : '',
+        definition: typeof parsed.definition === 'string' ? parsed.definition : '',
+        breakdown: Array.isArray(parsed.breakdown) ? parsed.breakdown : [],
+        ...(parsed.contextualMeaning != null && parsed.contextualMeaning !== '' && { contextualMeaning: String(parsed.contextualMeaning) })
+      };
+    } catch {
+      // Fallback: parse markdown-style list (e.g. *   **arabic:** مطعم)
+      const knownKeys = ['arabic', 'transliteration', 'definition', 'breakdown', 'contextualmeaning'];
+      const bulletRegex = /^[*-]\s*\*\*(\w+)\*\*:\s*(.*)/;
+      const lines = responseText.split(/\r?\n/);
+      const result: Record<string, string> = {};
+      let currentKey: string | null = null;
+
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        const match = line.match(bulletRegex);
+        if (match) {
+          const key = match[1].toLowerCase().replace(/\s+/g, '');
+          const value = match[2].trim();
+          if (knownKeys.includes(key)) {
+            currentKey = key === 'contextualmeaning' ? 'contextualMeaning' : key;
+            result[currentKey] = value;
+          }
+        } else if (currentKey === 'contextualMeaning' && result.contextualMeaning != null) {
+          result.contextualMeaning += (result.contextualMeaning ? '\n' : '') + line;
+        }
+      }
+
+      let breakdown: Array<{ arabic: string; englishLabel?: string; word?: string; transliteration: string; meaning: string }> = [];
+      const rawBreakdown = result.breakdown?.trim() ?? '';
+      if (rawBreakdown === '[]' || rawBreakdown === '') {
+        breakdown = [];
+      } else if (rawBreakdown.startsWith('[')) {
+        try {
+          const parsedBreakdown = JSON.parse(rawBreakdown);
+          breakdown = Array.isArray(parsedBreakdown) ? parsedBreakdown : [];
+        } catch {
+          breakdown = [];
+        }
+      }
+
+      normalizedObject = {
+        arabic: result.arabic ?? '',
+        transliteration: result.transliteration ?? '',
+        definition: result.definition ?? '',
+        breakdown,
+        ...(result.contextualMeaning != null && result.contextualMeaning !== '' && { contextualMeaning: result.contextualMeaning })
+      };
     }
 
-    // Return in a format compatible with both old and new consumers
+    const contentString = JSON.stringify(normalizedObject);
+
     return json({
       message: {
-        content: responseText,
+        content: contentString,
         message: {
-          content: responseText
+          content: contentString
         }
       }
     });

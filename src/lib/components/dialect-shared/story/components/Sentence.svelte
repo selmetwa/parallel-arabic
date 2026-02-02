@@ -217,9 +217,9 @@
 			wordCache.set(cacheKey, message);
 
 			setActiveWord({
-				english: type === 'english' ? removeArabicComma(word) : '',
-				arabic: type === 'arabic' ? removeArabicComma(word) : '',
-				transliterated: type === 'transliteration' ? removeArabicComma(word) : '',
+				english: removeArabicComma(word),
+				arabic: removeArabicComma(word),
+				transliterated: removeArabicComma(word),
 				description: message,
 				isLoading: false,
 				type: type
@@ -258,9 +258,9 @@
 		const message = res.message.message.content;
 
 		setActiveWord({
-			english: type === 'english' ? targetWord : '',
-			arabic: type === 'arabic' ? targetArabicWord : '',
-			transliterated: type === 'transliteration' ? targetWord : '',
+			english: targetWord,
+			arabic: targetArabicWord,
+			transliterated:targetWord,
 			description: message,
 			isLoading: false,
 			type: type

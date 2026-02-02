@@ -141,6 +141,7 @@
 		}, 3000);
 	};
 
+$inspect(activeWordObj)
 </script>
 
 {#if isPaywalled && !data.hasActiveSubscription}
