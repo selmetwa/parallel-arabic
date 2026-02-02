@@ -48,7 +48,7 @@
     // Defer loading of non-critical CDN scripts until after page load
     window.addEventListener('load', function() {
       // Skip in Capacitor native app
-      if (window.Capacitor ? .isNativePlatform ? .()) return;
+      if (window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform()) return
 
       // Use requestIdleCallback for lowest priority, with timeout fallback
       var loadScripts = function() {

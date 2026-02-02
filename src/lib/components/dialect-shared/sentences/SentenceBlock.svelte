@@ -377,6 +377,7 @@
 			}
 
 			const data = await res.json();
+      console.log({ data })
 
 			// Handle nested response structure: data.message.message.content or data.message.content
 			let content = data.message?.message?.content || data.message?.content || '';
@@ -616,6 +617,8 @@
 	});
 
   $inspect(keyboard)
+
+  $inspect(targetArabicWord)
 </script>
 
 <DefinitionModal
