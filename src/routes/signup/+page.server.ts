@@ -50,7 +50,7 @@ export const actions: Actions = {
           // Check if the new user is admin, or if we're in an admin context
           // For now, only allow if admin ID matches (admin creating their own account)
           const newUserId = data.user?.id;
-          if (ADMIN_ID && newUserId && ADMIN_ID === newUserId) {
+          if (ADMIN_ID && newUserId) {
             sendWelcomeEmail(email, newUserId).catch(error => {
               console.error('Failed to send welcome email:', error)
               // Don't block signup if email fails
