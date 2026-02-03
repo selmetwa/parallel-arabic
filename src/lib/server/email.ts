@@ -1,24 +1,25 @@
-import nodemailer from 'nodemailer';
+import FormData from 'form-data';
+import Mailgun from 'mailgun.js';
 import { env } from '$env/dynamic/private';
 import { ADMIN_ID } from '$env/static/private';
 
-// Centralized transporter - only accessible by admin
-let transporter: nodemailer.Transporter | null = null;
+// Centralized Mailgun client - only accessible by admin
+let mailgunClient: ReturnType<InstanceType<typeof Mailgun>['client']> | null = null;
 
-export function getTransporter(): nodemailer.Transporter {
-  if (!transporter) {
-    transporter = nodemailer.createTransport({
-      host: env.SMTP_HOST,
-      port: Number(env.SMTP_PORT),
-      secure: true, // true for 465, false for other ports
-      auth: {
-        user: env.SMTP_USER,
-        pass: env.SMTP_PASSWORD,
-      },
+export function getMailgunClient() {
+  if (!mailgunClient) {
+    const mailgun = new Mailgun(FormData);
+    mailgunClient = mailgun.client({
+      username: 'api',
+      key: env.MAILGUN_KEY || '',
+      url: env.MAILGUN_BASE_URL || 'https://api.mailgun.net',
     });
   }
-  return transporter;
+  return mailgunClient;
 }
+
+const MAILGUN_DOMAIN = 'parallel-arabic.com';
+const FROM_EMAIL = 'Sherif from Parallel Arabic <postmaster@parallel-arabic.com>';
 
 // Admin verification helper
 export async function verifyAdmin(userId: string | null | undefined): Promise<boolean> {
@@ -28,28 +29,27 @@ export async function verifyAdmin(userId: string | null | undefined): Promise<bo
   return ADMIN_ID === userId;
 }
 
-async function sendEmail(resetUrl: string, email: string) {
-  throw new Error("EMAIL_DISABLED");
-  const transporter = getTransporter();
-  const info = await transporter.sendMail({
-    from: env.SMTP_FROM_EMAIL,
-    to: email,
-    subject: "Parallel Arabic - Password Reset Request",
+async function sendPasswordResetEmail(resetUrl: string, email: string) {
+  const mg = getMailgunClient();
+  const data = await mg.messages.create(MAILGUN_DOMAIN, {
+    from: FROM_EMAIL,
+    to: [email],
+    subject: 'Parallel Arabic - Password Reset Request',
     text: `
-    Hey! Its Sherif from Parallel Arabic.
-    I received a request to reset your password.
-    If you did not request a password reset, please ignore this email.
-    Click this link to reset your password: ${resetUrl}
-    `,
+Hey! Its Sherif from Parallel Arabic.
+I received a request to reset your password.
+If you did not request a password reset, please ignore this email.
+Click this link to reset your password: ${resetUrl}
+    `.trim(),
     html: `
-    <p>Hey! Its Sherif from Parallel Arabic.</p>
-    <p>I received a request to reset your password.</p>
-    <p>If you did not request a password reset, please ignore this email.</p>
-    <p>Click <a href="${resetUrl}">this link</a> to reset your password.</p>
-    `,
+<p>Hey! Its Sherif from Parallel Arabic.</p>
+<p>I received a request to reset your password.</p>
+<p>If you did not request a password reset, please ignore this email.</p>
+<p>Click <a href="${resetUrl}">this link</a> to reset your password.</p>
+    `.trim(),
   });
 
-  return info;
+  return data;
 }
 
 export const isValidEmail = (maybeEmail: unknown): maybeEmail is string => {
@@ -59,22 +59,44 @@ export const isValidEmail = (maybeEmail: unknown): maybeEmail is string => {
 	return emailRegexp.test(maybeEmail);
 };
 
+// Generic email sending function for admin email sender
+export const sendEmail = async (
+  to: string,
+  subject: string,
+  text: string,
+  html?: string
+) => {
+  const mg = getMailgunClient();
+  console.log({ mg })
+
+  const data = await mg.messages.create(MAILGUN_DOMAIN, {
+    from: FROM_EMAIL,
+    to: [to],
+    subject,
+    text,
+    html: html || text.replace(/\n/g, '<br>'),
+  });
+
+  console.log({ data })
+  return data;
+};
+
 export const sendPasswordResetLink = async (token: string, _email: string, userId?: string | null) => {
 	// Require admin access
-	if (!await verifyAdmin(userId)) {
-		throw new Error('Unauthorized: Admin access required to send emails');
-	}
-	
+	// if (!await verifyAdmin(userId)) {
+	// 	throw new Error('Unauthorized: Admin access required to send emails');
+	// }
+
 	const url = `https://parallel-arabic.com/password-reset/token=${token}`;
-	const email = await sendEmail(url, _email);
-	return email;
+	const result = await sendPasswordResetEmail(url, _email);
+	return result;
 };
 
 export const sendWelcomeEmail = async (email: string, userId?: string | null) => {
 	// Require admin access
-	if (!await verifyAdmin(userId)) {
-		throw new Error('Unauthorized: Admin access required to send emails');
-	}
+	// if (!await verifyAdmin(userId)) {
+	// 	throw new Error('Unauthorized: Admin access required to send emails');
+	// }
 	
 	const siteUrl = 'https://parallel-arabic.com';
 	
@@ -112,71 +134,6 @@ export const sendWelcomeEmail = async (email: string, userId?: string | null) =>
 									<p style="font-size: 16px; color: #001a33; margin-bottom: 20px; line-height: 1.6;">
 										Thank you for joining Parallel Arabic! We're excited to help you on your journey to mastering Arabic dialects.
 									</p>
-									
-									<p style="font-size: 16px; color: #001a33; margin-bottom: 30px; line-height: 1.6;">
-										Here's what you can explore with your free account:
-									</p>
-									
-									<!-- Free Features Card -->
-									<table role="presentation" style="width: 100%; background-color: #b8c4d0; border: 2px solid #8898a8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
-										<tr>
-											<td style="padding: 25px;">
-												<h2 style="color: #001a33; margin-top: 0; font-size: 22px; font-weight: bold; margin-bottom: 15px;">✨ Free Features</h2>
-												<ul style="list-style: none; padding: 0; margin: 0;">
-													<li style="padding: 10px 0; border-bottom: 1px solid #8898a8; color: #4d5c66;">
-														<strong style="color: #001a33;">📖 Stories & Conversations:</strong> Access to one conversation with native audio
-													</li>
-													<li style="padding: 10px 0; border-bottom: 1px solid #8898a8; color: #4d5c66;">
-														<strong style="color: #001a33;">🤖 AI Practice:</strong> 5 AI-generated practice sentences across multiple dialects
-													</li>
-													<li style="padding: 10px 0; border-bottom: 1px solid #8898a8; color: #4d5c66;">
-														<strong style="color: #001a33;">🎙️ Speaking Practice:</strong> Basic pronunciation feedback
-													</li>
-													<li style="padding: 10px 0; border-bottom: 1px solid #8898a8; color: #4d5c66;">
-														<strong style="color: #001a33;">✍️ Verb Conjugation:</strong> Practice with one verb
-													</li>
-													<li style="padding: 10px 0; border-bottom: 1px solid #8898a8; color: #4d5c66;">
-														<strong style="color: #001a33;">📚 Vocabulary:</strong> Access to 156 words for writing and quizzes
-													</li>
-													<li style="padding: 10px 0; border-bottom: 1px solid #8898a8; color: #4d5c66;">
-														<strong style="color: #001a33;">🔤 Alphabet:</strong> Complete Arabic alphabet learning with native pronunciation
-													</li>
-													<li style="padding: 10px 0; color: #4d5c66;">
-														<strong style="color: #001a33;">💾 Wordbank:</strong> Save keywords and phrases to your personal collection
-													</li>
-												</ul>
-											</td>
-										</tr>
-									</table>
-									
-									<!-- Premium Features Card -->
-									<table role="presentation" style="width: 100%; background-color: #98a8b8; border: 2px solid #8898a8; border-radius: 8px; margin-bottom: 20px; overflow: hidden;">
-										<tr>
-											<td style="padding: 25px;">
-												<h2 style="color: #001a33; margin-top: 0; font-size: 22px; font-weight: bold; margin-bottom: 15px;">🚀 Unlock Premium Features</h2>
-												<p style="color: #001a33; margin-bottom: 15px; font-size: 16px; line-height: 1.6;">
-													Upgrade to Premium for just <strong>$10/month</strong> and get:
-												</p>
-												<ul style="list-style: none; padding: 0; margin: 0; font-size: 15px;">
-													<li style="padding: 8px 0; color: #4d5c66;">📚 <strong style="color: #001a33;">Structured Lessons:</strong> Comprehensive learning paths for all dialects</li>
-													<li style="padding: 8px 0; color: #4d5c66;">🌍 <strong style="color: #001a33;">Multiple Dialects:</strong> Egyptian, Levantine, Moroccan & Fusha</li>
-													<li style="padding: 8px 0; color: #4d5c66;">💬 <strong style="color: #001a33;">AI Tutor:</strong> Real-time conversation practice with feedback</li>
-													<li style="padding: 8px 0; color: #4d5c66;">🧠 <strong style="color: #001a33;">Spaced Repetition:</strong> Master 20,000+ vocabulary words</li>
-													<li style="padding: 8px 0; color: #4d5c66;">📺 <strong style="color: #001a33;">Interactive Videos:</strong> YouTube videos with transcripts & translations</li>
-													<li style="padding: 8px 0; color: #4d5c66;">📖 <strong style="color: #001a33;">All Stories:</strong> Unlimited conversations with native audio</li>
-													<li style="padding: 8px 0; color: #4d5c66;">🤖 <strong style="color: #001a33;">Unlimited AI Practice:</strong> Generate unlimited practice sentences</li>
-													<li style="padding: 8px 0; color: #4d5c66;">🎙️ <strong style="color: #001a33;">Advanced Speaking:</strong> Real-time pronunciation feedback</li>
-													<li style="padding: 8px 0; color: #4d5c66;">✍️ <strong style="color: #001a33;">All Verbs:</strong> Complete verb conjugation practice</li>
-													<li style="padding: 8px 0; color: #4d5c66;">📦 <strong style="color: #001a33;">Anki Decks:</strong> Custom flashcard exports</li>
-												</ul>
-												<div style="margin-top: 20px; text-align: center;">
-													<a href="${siteUrl}/pricing" style="display: inline-block; background-color: #98a8b8; color: #001a33; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 16px; border: 2px solid #8898a8;">
-														View Pricing →
-													</a>
-												</div>
-											</td>
-										</tr>
-									</table>
 									
 									<!-- CTA Button -->
 									<table role="presentation" style="width: 100%; margin-top: 30px;">
@@ -246,17 +203,16 @@ Founder, Parallel Arabic
 	`;
 	
 	try {
-		throw new Error("EMAIL_DISABLED");
-		const transporter = getTransporter();
-		const info = await transporter.sendMail({
-			from: env.SMTP_FROM_EMAIL,
-			to: email,
-			subject: '🎉 Welcome to Parallel Arabic!',
+		const mg = getMailgunClient();
+		const data = await mg.messages.create(MAILGUN_DOMAIN, {
+			from: FROM_EMAIL,
+			to: [email],
+			subject: 'Welcome to Parallel Arabic!',
 			text: text,
 			html: html,
 		});
-		
-		return info;
+
+		return data;
 	} catch (error) {
 		console.error('Error sending welcome email:', error);
 		throw error;
