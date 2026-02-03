@@ -2,8 +2,7 @@ import { redirect } from '@sveltejs/kit';
 import type { PageServerLoad, Actions } from './$types';
 import { supabase } from '$lib/supabaseClient';
 import { ADMIN_ID } from '$env/static/private';
-import { getTransporter } from '$lib/server/email';
-import { env } from '$env/dynamic/private';
+import { sendEmail } from '$lib/server/email';
 
 export const load: PageServerLoad = async ({ locals }) => {
 	// @ts-expect-error - auth property exists on locals at runtime
@@ -107,17 +106,10 @@ export const actions: Actions = {
         };
       }
 
-      // Send emails using centralized transporter
-      throw new Error("EMAIL_DISABLED");
-      const transporter = getTransporter();
-      const emailPromises = recipients.map(email => 
-        transporter.sendMail({
-          from: env.SMTP_FROM_EMAIL,
-          to: email,
-          subject: subject,
-          text: message,
-          html: message.replace(/\n/g, '<br>'),
-        })
+      console.log({ recipients })
+      // Send emails using Mailgun
+      const emailPromises = recipients.map(email =>
+        sendEmail(email, subject, message)
       );
 
       await Promise.all(emailPromises);

@@ -30,12 +30,10 @@ export const GET: RequestHandler = async ({ url, locals: { supabase } }) => {
         // Only send if the new user is an admin
         if (isNewUser && data.user.email && data.user.id) {
           const newUserId = data.user.id;
-          if (ADMIN_ID && ADMIN_ID === newUserId) {
             sendWelcomeEmail(data.user.email, newUserId).catch(error => {
               console.error('Failed to send welcome email:', error)
               // Don't block authentication if email fails
             })
-          }
         }
       } catch (syncError) {
         console.error('❌ Failed to sync user to database:', syncError)
