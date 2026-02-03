@@ -14,9 +14,9 @@ export const load: PageServerLoad = async ({ locals }) => {
 
   const userId = session && session.user?.id || null;
   
-  // if (ADMIN_ID !== userId) {
-  //   throw redirect(302, '/')
-  // }
+  if (ADMIN_ID !== userId) {
+    throw redirect(302, '/')
+  }
 
   // Get all users with basic info
   const { data: users, error } = await supabase
@@ -50,9 +50,9 @@ export const actions: Actions = {
 
     const userId = session && session.user.id || null;
     
-    // if (ADMIN_ID !== userId) {
-    //   throw redirect(302, '/')
-    // }
+    if (ADMIN_ID !== userId) {
+      throw redirect(302, '/')
+    }
 
     const data = await request.formData();
     const recipientType = data.get('recipientType') as string;
