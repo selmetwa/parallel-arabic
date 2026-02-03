@@ -17,8 +17,7 @@
 		return 0;
 	}
 
-	function handleSubmit(event) {
-    console.log({ event })
+	function handleSubmit() {
 		isLoading = true;
 		return async ({ update }: { update: () => Promise<void> }) => {
 			await update();
