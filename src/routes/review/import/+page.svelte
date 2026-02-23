@@ -5,6 +5,7 @@
   import type { PageData } from './$types';
   import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
   import { toast } from 'svelte-sonner';
+  import { importJobStore, startImportJob } from '$lib/stores/import-job';
 
   interface Props {
     data: PageData;
@@ -20,24 +21,29 @@
   let importMode = $state<'category' | 'csv'>('category');
   let csvFile = $state<File | null>(null);
   let csvFileError = $state('');
-  
-  // Initialize selected category based on dialect
+  let showImportModal = $state(false);
+
   $effect(() => {
     const sections = data.sections[selectedDialect] || [];
     if (sections.length > 0) {
-      // If no category selected or current category doesn't exist in new dialect, reset it
       const currentCategoryExists = sections.some(s => s.path === selectedCategory);
       if (!selectedCategory || !currentCategoryExists) {
-        // Prefer 'most_common' if available, otherwise use first section
         const mostCommon = sections.find(s => s.path === 'most_common');
         selectedCategory = mostCommon ? 'most_common' : sections[0].path;
       }
     }
   });
+
   let importLimit = $state(50);
   let isImporting = $state(false);
-  let importProgress = $state<{ current: number; total: number } | null>(null);
   let importResult = $state<{ success: boolean; imported: number; skipped: number; message?: string } | null>(null);
+
+  const jobState = $derived($importJobStore);
+  const importProgress = $derived(
+    jobState.status === 'processing' && jobState.total > 0
+      ? { current: jobState.processedCount, total: jobState.total }
+      : null
+  );
 
   const dialectOptions: Array<{ value: Dialect; label: string }> = [
     { value: 'egyptian-arabic', label: 'Egyptian Arabic' },
@@ -52,7 +58,6 @@
 
   function setDialect(event: any) {
     selectedDialect = event.target.value as Dialect;
-    // Category will be reset by the effect when dialect changes
   }
 
   function setCategory(event: any) {
@@ -62,28 +67,26 @@
   function handleCSVFileSelect(event: Event) {
     const target = event.target as HTMLInputElement;
     const file = target.files?.[0];
-    
+
     csvFileError = '';
-    
+
     if (file) {
-      // Check file size (500KB limit)
-      const maxSize = 500 * 1024; // 500KB
+      const maxSize = 500 * 1024;
       if (file.size > maxSize) {
         csvFileError = 'File size must be less than 500KB';
         csvFile = null;
         return;
       }
-      
-      // Check file type
+
       const allowedTypes = ['text/csv', 'text/plain', 'application/csv'];
       const fileExtension = file.name.toLowerCase().split('.').pop();
-      
+
       if (!allowedTypes.includes(file.type) && !['csv', 'txt'].includes(fileExtension || '')) {
         csvFileError = 'Only CSV and TXT files are allowed';
         csvFile = null;
         return;
       }
-      
+
       csvFile = file;
     } else {
       csvFile = null;
@@ -93,19 +96,17 @@
   async function importWords() {
     isImporting = true;
     importResult = null;
-    importProgress = null;
 
     try {
       if (importMode === 'csv') {
         if (!csvFile) {
           throw new Error('Please select a CSV or TXT file');
         }
-        
+
         const formData = new FormData();
         formData.append('file', csvFile);
         formData.append('dialect', csvDialect);
-        
-        // Use EventSource-like approach with fetch and ReadableStream
+
         const response = await fetch('/api/import-words-csv', {
           method: 'POST',
           body: formData
@@ -116,73 +117,15 @@
           throw new Error(errorData.error || 'Failed to import words');
         }
 
-        // Handle Server-Sent Events stream
-        const reader = response.body?.getReader();
-        const decoder = new TextDecoder();
-        
-        if (!reader) {
-          throw new Error('Failed to read response stream');
-        }
+        const { job_id, total } = await response.json();
 
-        let buffer = '';
-
-        while (true) {
-          const { done, value } = await reader.read();
-          
-          if (done) break;
-          
-          buffer += decoder.decode(value, { stream: true });
-          const lines = buffer.split('\n');
-          buffer = lines.pop() || ''; // Keep incomplete line in buffer
-          
-          for (const line of lines) {
-            if (line.startsWith('data: ')) {
-              try {
-                const data = JSON.parse(line.slice(6));
-                
-                if (data.type === 'progress') {
-                  // Update progress state for UI (progress bar), but don't show toast
-                  importProgress = { current: data.current, total: data.total };
-                } else if (data.type === 'success') {
-                  importResult = {
-                    success: true,
-                    imported: data.imported || 0,
-                    skipped: data.skipped || 0,
-                    message: data.message
-                  };
-                  
-                  // Show success toast only when done
-                  setTimeout(() => {
-                    toast.success(data.message || 'Words imported successfully!', {
-                      description: data.imported > 0 
-                        ? `${data.imported} word${data.imported !== 1 ? 's' : ''} added to your review deck`
-                        : 'All words were already in your deck',
-                      action: data.imported > 0 ? {
-                        label: 'Start Reviewing',
-                        onClick: () => goto('/review')
-                      } : undefined,
-                      duration: 5000
-                    });
-                  }, 100);
-                  
-                  // Reset CSV file on success
-                  csvFile = null;
-                } else if (data.type === 'error') {
-                  throw new Error(data.error || 'Failed to import words');
-                }
-              } catch (parseError) {
-                console.error('Error parsing SSE data:', parseError);
-              }
-            }
-          }
-        }
+        csvFile = null;
+        showImportModal = true;
+        startImportJob(job_id, total);
       } else {
-        // Category import (non-streaming)
         const response = await fetch('/api/import-words', {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             dialect: selectedDialect,
             category: selectedCategory,
@@ -190,22 +133,21 @@
           })
         });
 
-      const result = await response.json();
+        const result = await response.json();
 
-      if (!response.ok) {
-        throw new Error(result.error || 'Failed to import words');
-      }
+        if (!response.ok) {
+          throw new Error(result.error || 'Failed to import words');
+        }
 
-      importResult = {
-        success: true,
-        imported: result.imported || 0,
-        skipped: result.skipped || 0,
-        message: result.message
-      };
-      
-        // Show success toast
+        importResult = {
+          success: true,
+          imported: result.imported || 0,
+          skipped: result.skipped || 0,
+          message: result.message
+        };
+
         toast.success(result.message || 'Words imported successfully!', {
-          description: result.imported > 0 
+          description: result.imported > 0
             ? `${result.imported} word${result.imported !== 1 ? 's' : ''} added to your review deck`
             : 'All words were already in your deck',
           action: result.imported > 0 ? {
@@ -222,13 +164,12 @@
         skipped: 0,
         message: error instanceof Error ? error.message : 'Failed to import words'
       };
-      
+
       toast.error('Import failed', {
         description: error instanceof Error ? error.message : 'Failed to import words'
       });
     } finally {
       isImporting = false;
-      importProgress = null;
     }
   }
 </script>
@@ -446,33 +387,14 @@
             className="w-full !py-4 !text-lg !rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all"
           >
             {#if isImporting}
-              {#if importProgress}
-                Importing {importProgress.current}/{importProgress.total}...
-              {:else}
-              Importing...
-              {/if}
+              Uploading...
             {:else}
               {importMode === 'csv' ? 'Import from File' : 'Import Words'}
             {/if}
           </Button>
-          
-          {#if importProgress && importMode === 'csv'}
-            <div class="mt-4">
-              <div class="flex items-center justify-between mb-2">
-                <span class="text-sm font-medium text-text-300">Progress</span>
-                <span class="text-sm text-text-200">{importProgress.current}/{importProgress.total}</span>
-              </div>
-              <div class="w-full bg-tile-400 rounded-full h-2.5">
-                <div 
-                  class="bg-tile-600 h-2.5 rounded-full transition-all duration-300"
-                  style="width: {(importProgress.current / importProgress.total) * 100}%"
-                ></div>
-              </div>
-            </div>
-          {/if}
         </div>
 
-        <!-- Result Message -->
+        <!-- Result Message (category imports only) -->
         {#if importResult}
           <div class="mt-6 p-6 rounded-xl border-2 {importResult.success ? 'bg-green-100 border-green-400' : 'bg-red-100 border-red-400'}">
             {#if importResult.success}
@@ -534,3 +456,112 @@
     </div>
   </div>
 </div>
+
+<!-- Import Progress Modal -->
+{#if showImportModal}
+  <div class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
+    <div class="bg-tile-300 border-2 border-tile-600 rounded-2xl shadow-2xl p-8 max-w-md w-full mx-4">
+      {#if jobState.status === 'processing'}
+        <div class="text-center space-y-6">
+          <div class="w-16 h-16 mx-auto rounded-full bg-tile-400/50 flex items-center justify-center">
+            <svg class="w-8 h-8 text-tile-600 animate-spin" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-text-300 mb-2">Importing your words</h3>
+            <p class="text-text-200 text-sm">
+              Feel free to continue using the app. We'll notify you when it's done.
+            </p>
+          </div>
+
+          {#if importProgress}
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-sm font-medium text-text-300">Progress</span>
+                <span class="text-sm text-text-200">{importProgress.current}/{importProgress.total}</span>
+              </div>
+              <div class="w-full bg-tile-400 rounded-full h-3">
+                <div
+                  class="bg-tile-600 h-3 rounded-full transition-all duration-500"
+                  style="width: {(importProgress.current / importProgress.total) * 100}%"
+                ></div>
+              </div>
+              <p class="text-xs text-text-200 mt-2">
+                {jobState.importedCount} imported, {jobState.skippedCount} skipped
+              </p>
+            </div>
+          {/if}
+
+          <button
+            type="button"
+            onclick={() => { showImportModal = false; }}
+            class="w-full py-3 px-4 bg-tile-400 text-text-300 rounded-xl hover:bg-tile-500 transition-colors font-medium border border-tile-500 hover:border-tile-600"
+          >
+            Continue Using App
+          </button>
+        </div>
+      {:else if jobState.status === 'completed'}
+        <div class="text-center space-y-6">
+          <div class="w-16 h-16 mx-auto rounded-full bg-green-100/20 flex items-center justify-center text-green-500">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-text-300 mb-2">Import Complete!</h3>
+            <p class="text-text-200">
+              {jobState.importedCount} word{jobState.importedCount !== 1 ? 's' : ''} imported
+              {#if jobState.skippedCount > 0}
+                , {jobState.skippedCount} already in your deck
+              {/if}
+            </p>
+          </div>
+          <div class="space-y-3">
+            {#if jobState.importedCount > 0}
+              <Button
+                onClick={() => { showImportModal = false; goto('/review'); }}
+                type="button"
+                className="w-full !py-3 !text-lg !rounded-xl"
+              >
+                Start Reviewing
+              </Button>
+            {/if}
+            <button
+              type="button"
+              onclick={() => { showImportModal = false; }}
+              class="w-full py-3 px-4 bg-tile-400 text-text-300 rounded-xl hover:bg-tile-500 transition-colors font-medium border border-tile-500 hover:border-tile-600"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      {:else if jobState.status === 'failed'}
+        <div class="text-center space-y-6">
+          <div class="w-16 h-16 mx-auto rounded-full bg-red-100/20 flex items-center justify-center text-red-500">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-text-300 mb-2">Import Failed</h3>
+            <p class="text-text-200 text-sm">{jobState.error || 'An unexpected error occurred'}</p>
+            {#if jobState.importedCount > 0}
+              <p class="text-text-200 text-sm mt-2">
+                {jobState.importedCount} word{jobState.importedCount !== 1 ? 's' : ''} were imported before the error.
+              </p>
+            {/if}
+          </div>
+          <button
+            type="button"
+            onclick={() => { showImportModal = false; }}
+            class="w-full py-3 px-4 bg-tile-400 text-text-300 rounded-xl hover:bg-tile-500 transition-colors font-medium border border-tile-500 hover:border-tile-600"
+          >
+            Close
+          </button>
+        </div>
+      {/if}
+    </div>
+  </div>
+{/if}
