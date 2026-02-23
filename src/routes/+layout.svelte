@@ -15,6 +15,9 @@
 	import { dev, browser } from '$app/environment';
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';
 	import { getPageMeta, generateStructuredData } from '$lib/utils/seo';
+	import { importJobStore, resumeImportJobIfNeeded, onImportComplete, onImportError } from '$lib/stores/import-job';
+	import { get } from 'svelte/store';
+	import { showWordImportSuccessToast, showWordImportErrorToast, showWordImportToast } from '$lib/helpers/toast-helpers';
 
 	// Lazy loaded components - not needed for initial paint
 	// These are loaded after the page renders to improve FCP/LCP
@@ -82,6 +85,31 @@
 			lazyComponentsLoaded = true;
 		}
 		
+		// Resume any in-progress word import job and wire up toast callbacks
+		let importToastId: string | number | null = null;
+
+		const unsubImportJob = importJobStore.subscribe((state) => {
+			if (state.status === 'processing' && !importToastId && lazyComponentsLoaded) {
+				importToastId = showWordImportToast();
+			}
+		});
+
+		onImportComplete((state) => {
+			if (importToastId) {
+				showWordImportSuccessToast(importToastId, state.importedCount, state.skippedCount);
+			}
+			importToastId = null;
+		});
+
+		onImportError((state) => {
+			if (importToastId) {
+				showWordImportErrorToast(importToastId, state.error || 'Import failed');
+			}
+			importToastId = null;
+		});
+
+		resumeImportJobIfNeeded().catch(() => {});
+
 		// Only inject Vercel analytics when NOT in native app
 		if (!isNativeApp()) {
 			injectAnalytics({ mode: dev ? 'development' : 'production' });
@@ -118,7 +146,10 @@
 			}
 		})
 		
-		return () => authData.subscription.unsubscribe()
+		return () => {
+			authData.subscription.unsubscribe();
+			unsubImportJob();
+		}
 	});
 
 	function handleCloseDrawer() {

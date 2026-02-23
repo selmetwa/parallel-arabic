@@ -247,6 +247,31 @@ CREATE TABLE public.word (
   updated_at bigint NOT NULL DEFAULT EXTRACT(epoch FROM now()),
   CONSTRAINT word_pkey PRIMARY KEY (id)
 );
+CREATE TABLE public.word_import_item (
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  job_id uuid NOT NULL,
+  status text NOT NULL DEFAULT 'pending'::text,
+  row_data jsonb NOT NULL,
+  error_message text,
+  created_at timestamp with time zone DEFAULT now(),
+  CONSTRAINT word_import_item_pkey PRIMARY KEY (id),
+  CONSTRAINT word_import_item_job_id_fkey FOREIGN KEY (job_id) REFERENCES public.word_import_job(id)
+);
+CREATE TABLE public.word_import_job (
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  user_id text NOT NULL,
+  status text NOT NULL DEFAULT 'pending'::text,
+  dialect text NOT NULL,
+  file_name text,
+  total_items integer NOT NULL DEFAULT 0,
+  processed_count integer NOT NULL DEFAULT 0,
+  imported_count integer NOT NULL DEFAULT 0,
+  skipped_count integer NOT NULL DEFAULT 0,
+  failed_count integer NOT NULL DEFAULT 0,
+  created_at timestamp with time zone DEFAULT now(),
+  updated_at timestamp with time zone DEFAULT now(),
+  CONSTRAINT word_import_job_pkey PRIMARY KEY (id)
+);
 CREATE TABLE public.word_review (
   id text NOT NULL,
   saved_word_id text NOT NULL,
