@@ -334,6 +334,58 @@ export function showLessonSuccessToast(toastId: string | number, lessonId: strin
 }
 
 /**
+ * Toast helper for word import loading state
+ */
+export function showWordImportToast() {
+  const toastId = toast.loading('Importing words...', {
+    description: 'You can continue using the app — we\'ll notify you when it\'s done',
+    duration: Infinity
+  });
+  return toastId;
+}
+
+/**
+ * Toast helper for successful word import
+ */
+export function showWordImportSuccessToast(toastId: string | number, imported: number, skipped: number) {
+  toast.dismiss(toastId);
+
+  setTimeout(() => {
+    const message = imported > 0
+      ? `Successfully imported ${imported} word${imported !== 1 ? 's' : ''}`
+      : 'All words were already in your deck';
+    const description = skipped > 0
+      ? `${skipped} word${skipped !== 1 ? 's' : ''} already in your deck`
+      : undefined;
+
+    toast.success(message, {
+      description,
+      action: imported > 0 ? {
+        label: 'Start Reviewing',
+        onClick: () => {
+          goto('/review');
+        }
+      } : undefined,
+      duration: Infinity
+    });
+  }, 100);
+}
+
+/**
+ * Toast helper for word import errors
+ */
+export function showWordImportErrorToast(toastId: string | number, error: string) {
+  toast.dismiss(toastId);
+
+  setTimeout(() => {
+    toast.error('Word import failed', {
+      description: error || 'An unexpected error occurred',
+      duration: Infinity
+    });
+  }, 100);
+}
+
+/**
  * Get display name for dialect
  */
 function getDialectDisplayName(dialect: string): string {
