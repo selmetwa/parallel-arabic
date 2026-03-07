@@ -19,7 +19,7 @@ export const getVoiceConfig = (dialect: string) => {
       };
     case 'levantine':
       return {
-        voice: 'Sara - Kind & Expressive',
+        voice: 'Salma - Positive, Professional and Warm',
         voice2: 'Audrey', // Placeholder - second voice for conversations
         speed: 0.9,
         stability: 0.9,
@@ -27,7 +27,7 @@ export const getVoiceConfig = (dialect: string) => {
       };
     case 'darija':
       return {
-        voice: 'Ghizlane - Moroccan Darija Dialect',
+        voice: 'Jawad - Natural and Conversational',
         voice2: 'Youssef', // Placeholder - second voice for conversations
         speed: 0.9,
         stability: 0.9,
