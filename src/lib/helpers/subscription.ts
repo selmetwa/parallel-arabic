@@ -1,13 +1,16 @@
+import { WHITELISTED_EMAILS as WHITELISTED_EMAILS_FROM_ENV  } from '$env/static/private';
+
 /**
  * Shared subscription utilities
  * Single source of truth for subscription checking logic
  */
 
 // Consolidated whitelist of emails that have access regardless of subscription
-export const WHITELISTED_EMAILS = [
-  'anguszeng.az@gmail.com',
-];
 
+const WHITELISTED_EMAILS = (WHITELISTED_EMAILS_FROM_ENV ?? '')
+  .split(',')
+  .map(e => e.trim().toLowerCase())
+  .filter(Boolean);
 /**
  * User object type for subscription checking
  * Works with both Supabase auth user and database user objects
