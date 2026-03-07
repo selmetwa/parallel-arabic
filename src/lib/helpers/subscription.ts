@@ -1,4 +1,4 @@
-import { env } from '$env/static/private';
+import { WHITELISTED_EMAILS as WHITELISTED_EMAILS_FROM_ENV  } from '$env/static/private';
 
 /**
  * Shared subscription utilities
@@ -7,7 +7,7 @@ import { env } from '$env/static/private';
 
 // Consolidated whitelist of emails that have access regardless of subscription
 
-const WHITELISTED_EMAILS = (env.WHITELISTED_EMAILS ?? '')
+const WHITELISTED_EMAILS = (WHITELISTED_EMAILS_FROM_ENV ?? '')
   .split(',')
   .map(e => e.trim().toLowerCase())
   .filter(Boolean);
