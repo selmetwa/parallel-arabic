@@ -1,4 +1,4 @@
-import { env } from '$env/dynamic/private';
+import { env } from '$env/static/private';
 
 /**
  * Shared subscription utilities
