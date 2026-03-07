@@ -2,10 +2,12 @@
   import { goto } from '$app/navigation';
   import { onMount } from 'svelte';
   import { Howl } from 'howler';
+  import levenshtein from 'fast-levenshtein';
   import AudioButton from '$lib/components/AudioButton.svelte';
   import SaveButton from '$lib/components/SaveButton.svelte';
   import PaywallModal from '$lib/components/PaywallModal.svelte';
   import type { Dialect } from '$lib/types/index';
+  import { normalizeArabicText } from '$lib/utils/arabic-normalization';
 
   // Free tier limit (5 turns for non-subscribers)
   const FREE_TURN_LIMIT = 5;
@@ -70,9 +72,13 @@
 
   // Speaking mode state
   let isRecording = $state(false);
+  let isProcessing = $state(false);
   let spokenText = $state('');
   let pronunciationScore = $state<number | null>(null);
-  let speechRecognition: any = null;
+  let mediaRecorder: MediaRecorder | null = null;
+  let audioChunks: Blob[] = [];
+  let activeStream: MediaStream | null = null;
+  let recordedAudioUrl = $state<string | null>(null);
   let speakingAttempts = $state(0);
   let showSpeakingFeedback = $state(false);
 
@@ -126,10 +132,6 @@
 
         isLoading = false;
 
-        // Setup speech recognition for speaking mode
-        if (data.gameParams.mode === 'speaking') {
-          setupSpeechRecognition();
-        }
         return;
       } catch (e) {
         console.error('Error resuming game:', e);
@@ -152,11 +154,6 @@
       if (data.user && !data.gameParams.useCustom && questions.length > 0) {
         await saveInitialProgress();
       }
-    }
-
-    // Setup speech recognition for speaking mode
-    if (data.gameParams.mode === 'speaking' && typeof window !== 'undefined') {
-      setupSpeechRecognition();
     }
 
     isLoading = false;
@@ -406,83 +403,8 @@
     });
   }
 
-  function setupSpeechRecognition() {
-    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-    if (!SpeechRecognition) {
-      console.warn('Speech recognition not supported');
-      return;
-    }
-
-    speechRecognition = new SpeechRecognition();
-    speechRecognition.lang = 'ar';
-    speechRecognition.continuous = false;
-    speechRecognition.interimResults = false;
-
-    speechRecognition.onresult = (event: any) => {
-      const result = event.results[0][0];
-      spokenText = result.transcript;
-      const confidence = result.confidence;
-
-      // Calculate pronunciation score based on similarity and confidence
-      // For sentences, compare against full sentence; for words, compare against the word
-      const targetText = currentQuestion.sentence
-        ? currentQuestion.sentence.arabic
-        : currentQuestion.word?.arabic_word || '';
-      const similarity = calculateSimilarity(spokenText, targetText);
-      pronunciationScore = Math.round(similarity * confidence * 100);
-
-      isRecording = false;
-      speakingAttempts++;
-      showSpeakingFeedback = true;
-
-      // Consider it correct if score >= 60 (or 50 for sentences since they're longer)
-      const threshold = currentQuestion.sentence ? 50 : 60;
-      if (pronunciationScore >= threshold) {
-        handleCorrectAnswer();
-      }
-      // If incorrect, show feedback but allow retry (don't call handleWrongAnswer yet)
-    };
-
-    speechRecognition.onerror = (event: any) => {
-      console.error('Speech recognition error:', event.error);
-      isRecording = false;
-      spokenText = 'Could not recognize speech. Please try again.';
-    };
-
-    speechRecognition.onend = () => {
-      isRecording = false;
-    };
-  }
-
-  function calculateSimilarity(str1: string, str2: string): number {
-    // Simple similarity calculation (Levenshtein-based ratio)
-    const s1 = str1.trim();
-    const s2 = str2.trim();
-
-    if (s1 === s2) return 1;
-    if (s1.length === 0 || s2.length === 0) return 0;
-
-    const track = Array(s2.length + 1).fill(null).map(() =>
-      Array(s1.length + 1).fill(null)
-    );
-
-    for (let i = 0; i <= s1.length; i++) track[0][i] = i;
-    for (let j = 0; j <= s2.length; j++) track[j][0] = j;
-
-    for (let j = 1; j <= s2.length; j++) {
-      for (let i = 1; i <= s1.length; i++) {
-        const indicator = s1[i - 1] === s2[j - 1] ? 0 : 1;
-        track[j][i] = Math.min(
-          track[j][i - 1] + 1,
-          track[j - 1][i] + 1,
-          track[j - 1][i - 1] + indicator
-        );
-      }
-    }
-
-    const distance = track[s2.length][s1.length];
-    const maxLength = Math.max(s1.length, s2.length);
-    return 1 - distance / maxLength;
+  function checkMediaRecorderSupport(): boolean {
+    return !!(navigator.mediaDevices?.getUserMedia);
   }
 
   async function playAudio(text: string, dialect: string, audioUrl?: string | null) {
@@ -578,21 +500,109 @@
     }
   }
 
-  function startRecording() {
-    if (!speechRecognition) {
-      spokenText = 'Speech recognition is not available in your browser.';
+  async function startRecording() {
+    if (!checkMediaRecorderSupport()) {
+      spokenText = 'Audio recording is not supported in your browser.';
       return;
     }
 
     spokenText = '';
     pronunciationScore = null;
-    isRecording = true;
-    speechRecognition.start();
+    showSpeakingFeedback = false;
+
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      activeStream = stream;
+      audioChunks = [];
+
+      mediaRecorder = new MediaRecorder(stream);
+
+      mediaRecorder.ondataavailable = (e) => {
+        if (e.data.size > 0) {
+          audioChunks.push(e.data);
+        }
+      };
+
+      mediaRecorder.onstop = async () => {
+        activeStream?.getTracks().forEach(t => t.stop());
+        activeStream = null;
+
+        const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+        audioChunks = [];
+
+        if (audioBlob.size < 1000) {
+          spokenText = 'Recording was too short. Please try again.';
+          return;
+        }
+
+        if (recordedAudioUrl) URL.revokeObjectURL(recordedAudioUrl);
+        recordedAudioUrl = URL.createObjectURL(audioBlob);
+
+        await submitAudio(audioBlob);
+      };
+
+      mediaRecorder.start();
+      isRecording = true;
+    } catch (e) {
+      console.error('Failed to start recording:', e);
+      isRecording = false;
+      if (e instanceof DOMException && e.name === 'NotAllowedError') {
+        spokenText = 'Microphone access denied. Please allow microphone access and try again.';
+      } else {
+        spokenText = 'Failed to start recording. Please try again.';
+      }
+    }
   }
 
   function stopRecording() {
-    if (speechRecognition && isRecording) {
-      speechRecognition.stop();
+    if (mediaRecorder && isRecording) {
+      mediaRecorder.stop();
+      isRecording = false;
+    }
+  }
+
+  async function submitAudio(blob: Blob) {
+    isProcessing = true;
+
+    try {
+      const formData = new FormData();
+      formData.append('audio', blob, 'recording.webm');
+      formData.append('dialect', data.gameParams.dialect);
+
+      const res = await fetch('/api/speech-to-text', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (!res.ok) {
+        const errorData = await res.json();
+        throw new Error(errorData.error || 'Transcription failed');
+      }
+
+      const result = await res.json();
+      spokenText = result.text || '';
+
+      const targetText = currentQuestion.sentence
+        ? currentQuestion.sentence.arabic
+        : currentQuestion.word?.arabic_word || '';
+      const normalizedSpoken = normalizeArabicText(spokenText.replace(/\./g, ''));
+      const normalizedTarget = normalizeArabicText(targetText);
+      const distance = levenshtein.get(normalizedTarget, normalizedSpoken);
+      const maxLength = Math.max(normalizedTarget.length, normalizedSpoken.length);
+      pronunciationScore = maxLength > 0 ? Math.round((1 - distance / maxLength) * 100) : 0;
+
+      speakingAttempts++;
+      showSpeakingFeedback = true;
+
+      const threshold = currentQuestion.sentence ? 50 : 60;
+      if (pronunciationScore >= threshold) {
+        handleCorrectAnswer();
+      }
+    } catch (e) {
+      console.error('Speech-to-text error:', e);
+      spokenText = e instanceof Error ? e.message : 'Failed to analyze speech. Please try again.';
+    } finally {
+      isProcessing = false;
     }
   }
 
@@ -600,6 +610,10 @@
     spokenText = '';
     pronunciationScore = null;
     showSpeakingFeedback = false;
+    if (recordedAudioUrl) {
+      URL.revokeObjectURL(recordedAudioUrl);
+      recordedAudioUrl = null;
+    }
   }
 
   function skipSpeakingWord() {
@@ -637,6 +651,10 @@
       pronunciationScore = null;
       speakingAttempts = 0;
       showSpeakingFeedback = false;
+      if (recordedAudioUrl) {
+        URL.revokeObjectURL(recordedAudioUrl);
+        recordedAudioUrl = null;
+      }
 
       // Save progress after each question
       if (!data.gameParams.useCustom) {
@@ -1095,7 +1113,21 @@
                     </svg>
                     <p class="text-yellow-500 font-bold">Keep practicing!</p>
                   </div>
-                  <p class="text-text-200 text-sm mb-1">You said: <span class="font-semibold text-text-300">{spokenText}</span></p>
+                  <div class="flex items-center justify-center gap-2 text-sm mb-1">
+                    <span class="text-text-200">You said:</span>
+                    <span class="font-semibold text-text-300">{spokenText}</span>
+                    {#if recordedAudioUrl}
+                      <button
+                        onclick={() => new Audio(recordedAudioUrl!).play()}
+                        class="text-blue-400 md:hover:text-blue-500 transition-colors"
+                        aria-label="Play your recording"
+                      >
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                        </svg>
+                      </button>
+                    {/if}
+                  </div>
                   <p class="text-text-200 text-sm">Score: <span class="font-semibold text-yellow-500">{pronunciationScore}%</span> (need {currentQuestion.sentence ? '50' : '60'}% to pass)</p>
                   <p class="text-text-100 text-xs mt-2">Attempt {speakingAttempts}</p>
                 </div>
@@ -1113,6 +1145,13 @@
                   >
                     Skip
                   </button>
+                </div>
+              {:else if isProcessing}
+                <div class="flex flex-col items-center">
+                  <div class="w-24 h-24 mx-auto rounded-full flex items-center justify-center bg-tile-500 shadow-lg">
+                    <div class="animate-spin w-10 h-10 border-4 border-blue-500 border-t-transparent rounded-full"></div>
+                  </div>
+                  <p class="text-text-200 text-sm mt-4">Analyzing pronunciation...</p>
                 </div>
               {:else}
                 <!-- Recording Button -->
@@ -1136,7 +1175,7 @@
                 </button>
 
                 <p class="text-text-200 text-sm mt-4">
-                  {isRecording ? 'Listening... Click to stop' : 'Click to start speaking'}
+                  {isRecording ? 'Recording... Click to stop' : 'Click to start speaking'}
                 </p>
               {/if}
             {/if}
@@ -1154,7 +1193,20 @@
                 <div>
                   <p class="text-emerald-500 font-bold text-lg">Correct!</p>
                   {#if pronunciationScore !== null}
-                    <p class="text-emerald-600 text-sm">Pronunciation score: {pronunciationScore}%</p>
+                    <div class="flex items-center gap-2">
+                      <p class="text-emerald-600 text-sm">Pronunciation score: {pronunciationScore}%</p>
+                      {#if recordedAudioUrl}
+                        <button
+                          onclick={() => new Audio(recordedAudioUrl!).play()}
+                          class="text-emerald-500 md:hover:text-emerald-400 transition-colors"
+                          aria-label="Play your recording"
+                        >
+                          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                          </svg>
+                        </button>
+                      {/if}
+                    </div>
                   {/if}
                 </div>
               {:else}
@@ -1171,7 +1223,20 @@
                     </p>
                   {/if}
                   {#if pronunciationScore !== null}
-                    <p class="text-red-400 text-sm">Pronunciation score: {pronunciationScore}%</p>
+                    <div class="flex items-center gap-2">
+                      <p class="text-red-400 text-sm">Pronunciation score: {pronunciationScore}%</p>
+                      {#if recordedAudioUrl}
+                        <button
+                          onclick={() => new Audio(recordedAudioUrl!).play()}
+                          class="text-red-400 md:hover:text-red-300 transition-colors"
+                          aria-label="Play your recording"
+                        >
+                          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                          </svg>
+                        </button>
+                      {/if}
+                    </div>
                   {/if}
                 </div>
               {/if}
