@@ -155,7 +155,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
     For each sentence:
     1. Create a complete, natural sentence in Arabic
-    2. Choose ONE word from the sentence to be the "blank" word (this should be a key vocabulary word, not a common function word)
+    2. Choose ONE word from the sentence to be the "blank" word — the blankWord MUST be copied EXACTLY as it appears in the Arabic sentence (same spelling, same form — do NOT use a different conjugation or variant)
     3. Provide the English translation and transliteration
     4. Generate exactly 3 WRONG options that:
        - Are the same part of speech as the correct word
@@ -165,6 +165,7 @@ export const POST: RequestHandler = async ({ request }) => {
     IMPORTANT REQUIREMENTS:
     - No diacritics in Arabic text (no harakat like فَتْحة or ضَمَّة)
     - Transliterations should only use English alphabet
+    - The blankWord field MUST be an exact substring of the arabic field — copy the word directly from the sentence
     - The blank word should be a meaningful vocabulary word (nouns, verbs, adjectives) not articles or prepositions
     - Wrong options should be plausible but clearly incorrect
     - Make sentences practical and useful for language learners
@@ -220,7 +221,7 @@ export const POST: RequestHandler = async ({ request }) => {
         return null;
       }
 
-      return {
+      const cleaned = {
         arabic: cleanText(sentence.arabic, 'arabic'),
         english: cleanText(sentence.english, 'english'),
         transliteration: cleanText(sentence.transliteration, 'transliteration'),
@@ -229,6 +230,35 @@ export const POST: RequestHandler = async ({ request }) => {
         blankWordTransliteration: cleanText(sentence.blankWordTransliteration, 'transliteration'),
         wrongOptions: (sentence.wrongOptions || []).map((opt: string) => cleanText(opt, 'arabic')).filter(Boolean)
       };
+
+      // Verify blankWord actually exists in the sentence
+      if (!cleaned.arabic.includes(cleaned.blankWord)) {
+        // Try to find the matching word via normalized comparison
+        const sentenceWords = cleaned.arabic.split(' ');
+        const normalizedBlank = normalizeArabicText(cleaned.blankWord);
+        const match = sentenceWords.find(w => normalizeArabicText(w) === normalizedBlank);
+        if (match) {
+          cleaned.blankWord = match;
+        } else {
+          console.warn('Discarding sentence — blankWord not found in sentence:', {
+            sentence: cleaned.arabic,
+            blankWord: cleaned.blankWord
+          });
+          return null;
+        }
+      }
+
+      // Remove wrong options that match the correct answer
+      const normalizedCorrect = normalizeArabicText(cleaned.blankWord);
+      const seenOptions = new Set<string>([normalizedCorrect]);
+      cleaned.wrongOptions = cleaned.wrongOptions.filter((opt: string) => {
+        const normalized = normalizeArabicText(opt);
+        if (seenOptions.has(normalized)) return false;
+        seenOptions.add(normalized);
+        return true;
+      });
+
+      return cleaned;
     }).filter((s: any) => s && s.wrongOptions && s.wrongOptions.length >= 3);
 
     if (sentences.length === 0) {
