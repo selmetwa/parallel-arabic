@@ -196,7 +196,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
   }
 
   let question = `
-    Give me 20 individual words in ${config.name} dialect.
+    Give me 10 individual words in ${config.name} dialect.
 
     ${wordTypesSection}
 
@@ -224,7 +224,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     - Each word object must have: "arabic", "english", "transliteration"
     - Example format: {"words": [{"arabic": "بيت", "english": "house", "transliteration": "bayt"}, ...]}
 
-    Please generate exactly 10 words.
+    Generate exactly 10 words.
   `;
 
   try {
