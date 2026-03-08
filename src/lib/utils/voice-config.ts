@@ -27,7 +27,7 @@ export const getVoiceConfig = (dialect: string) => {
       };
     case 'darija':
       return {
-        voice: 'Jawad - Natural and Conversational',
+        voice: 'GHIZLANE - Moroccan Darija (Dialect)',
         voice2: 'Youssef', // Placeholder - second voice for conversations
         speed: 0.9,
         stability: 0.9,
