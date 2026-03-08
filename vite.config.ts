@@ -1,9 +1,15 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vitest/config';
 import { SvelteKitPWA } from '@vite-pwa/sveltekit';
+import { sentrySvelteKit } from '@sentry/sveltekit';
 
 export default defineConfig({
 	plugins: [
+		sentrySvelteKit({
+			org: process.env.SENTRY_ORG,
+			project: process.env.SENTRY_PROJECT,
+			authToken: process.env.SENTRY_AUTH_TOKEN
+		}),
 		sveltekit(),
 		SvelteKitPWA({
 			strategies: 'generateSW',
@@ -112,7 +118,7 @@ export default defineConfig({
 	],
 	server: {
 		watch: {
-			usePolling: true,
+			usePolling: true
 		},
 		host: true
 	},

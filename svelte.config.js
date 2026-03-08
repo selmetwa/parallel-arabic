@@ -31,24 +31,26 @@ const isCapacitor = process.env.CAPACITOR === 'true';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-  kit: {
-    adapter: isCapacitor 
-      ? adapterStatic({
-          pages: 'build',
-          assets: 'build',
-          fallback: 'index.html', // SPA fallback for client-side routing
-          precompress: false,
-          strict: false // Allow non-prerendered routes
-        })
-      : adapterVercel(),
-    csrf: {
-      checkOrigin: false,
-    },
-    serviceWorker: {
-      register: false
-    }
-  },
-  preprocess: [vitePreprocess({})]
+	kit: {
+		adapter: isCapacitor
+			? adapterStatic({
+					pages: 'build',
+					assets: 'build',
+					fallback: 'index.html', // SPA fallback for client-side routing
+					precompress: false,
+					strict: false // Allow non-prerendered routes
+				})
+			: adapterVercel(),
+
+		csrf: {
+			checkOrigin: false
+		},
+
+		serviceWorker: {
+			register: false
+		}
+	},
+	preprocess: [vitePreprocess({})]
 };
 
 export default config;
