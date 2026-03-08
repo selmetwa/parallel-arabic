@@ -48,16 +48,6 @@ const config = {
 
 		serviceWorker: {
 			register: false
-		},
-
-		experimental: {
-			tracing: {
-				server: true
-			},
-
-			instrumentation: {
-				server: true
-			}
 		}
 	},
 	preprocess: [vitePreprocess({})]
