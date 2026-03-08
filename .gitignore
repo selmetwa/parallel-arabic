@@ -27,3 +27,5 @@ android/app/src/main/assets/public/
 android/app/src/main/res/xml/config.xml
 .env*.local
 .env.production
+# Sentry Config File
+.env.sentry-build-plugin
