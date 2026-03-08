@@ -95,7 +95,7 @@ CREATE TABLE public.structured_lesson_progress (
   id text NOT NULL,
   user_id text NOT NULL,
   topic_id text NOT NULL,
-  dialect text NOT NULL CHECK (dialect = ANY (ARRAY['egyptian-arabic'::text, 'fusha'::text, 'levantine'::text, 'darija'::text])),
+  dialect text NOT NULL CHECK (dialect = ANY (ARRAY['egyptian-arabic'::text, 'fusha'::text, 'levantine'::text, 'darija'::text, 'alphabet'::text])),
   status text NOT NULL DEFAULT 'not_started'::text CHECK (status = ANY (ARRAY['not_started'::text, 'in_progress'::text, 'completed'::text])),
   started_at bigint,
   completed_at bigint,
