@@ -12,7 +12,7 @@
    */
 
   /** @type {Props} */
-  let { objectToSave = {}, type = 'Word', className } = $props();
+  let { objectToSave = {}, type = 'Word', className = '' } = $props();
 
   let response = $state('');
   let isLoading = $state(false);

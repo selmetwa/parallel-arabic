@@ -70,7 +70,7 @@
 			class="group flex flex-col bg-gradient-to-br from-green-400 to-green-500 border-2 border-green-600 rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:border-green-400"
 		>
 			<div class="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">🇲🇦</div>
-			<h2 class="text-2xl font-bold text-white mb-3 group-hover:text-green-100 transition-colors">
+			<h2 class="text-2xl font-bold text-white mb-3 group-hover:text-green-700 transition-colors">
 				Moroccan Darija
 			</h2>
 			<p class="text-white text-base leading-relaxed mb-4 flex-grow opacity-95">

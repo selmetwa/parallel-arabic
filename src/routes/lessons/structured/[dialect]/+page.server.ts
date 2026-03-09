@@ -1,12 +1,7 @@
 import { curriculum } from '$lib/data/curriculum';
 import { checkExistingLessons } from '$lib/helpers/lesson-file-helper';
 import { supabase } from '$lib/supabaseClient';
-
-// Whitelist of emails that have all lessons unlocked
-const WHITELISTED_EMAILS = [
-	'selmetwa@gmail.com',
-	'sherifliketheclash@gmail.com'
-];
+import { isEmailWhitelisted } from '$lib/helpers/subscription';
 
 // Normalize dialect name for file paths (matches lesson-file-helper logic)
 function normalizeDialect(dialect: string): string {
@@ -18,7 +13,7 @@ export const load = async ({ params, parent }) => {
 	const { dialect } = params;
 	
 	// Check if user is whitelisted
-	const isWhitelisted = user?.email && WHITELISTED_EMAILS.includes(user.email.toLowerCase());
+	const isWhitelisted = isEmailWhitelisted(user?.email);
 
 	// Map URL-friendly names to actual dialect names
 	const dialectMap: Record<string, string> = {
