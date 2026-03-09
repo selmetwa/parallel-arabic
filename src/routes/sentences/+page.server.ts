@@ -2,10 +2,10 @@ import type { PageServerLoad } from "./$types";
 import { supabase } from '$lib/supabaseClient';
 
 export const load: PageServerLoad = async ({ locals, parent }) => {
-  // Get session and subscription info from parent layout
-  const { session, isSubscribed, user } = await parent();
+  // Get subscription info from parent layout
+  const { isSubscribed, user } = await parent();
 
-  const userId = session && session.user.id || null;
+  const userId = user?.id ?? null;
 
   const { data: userData, error } = await supabase
     .from('user')

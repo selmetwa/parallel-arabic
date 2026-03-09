@@ -1100,7 +1100,8 @@
             <h2 class="text-2xl font-bold text-text-300 flex items-center gap-3">
               <span class="text-3xl">✍️</span> Generate Sentences
             </h2>
-            <button 
+            <button
+              aria-label="Close"
               class="p-2 hover:bg-tile-400 rounded-lg transition-colors text-text-200 hover:text-text-300"
               onclick={() => { showGenerateSentences = false; generateError = null; generateSuccess = null; }}
             >
@@ -1165,7 +1166,7 @@
                   <div class="flex flex-col gap-4 bg-tile-400/30 p-4 rounded-xl border border-tile-500/50">
                     <!-- Dialect Selection -->
                     <div class="space-y-3">
-                      <label class="block text-lg font-bold text-text-300">Select Dialect</label>
+                      <p class="block text-lg font-bold text-text-300">Select Dialect</p>
                       <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         {#each dialectOptions as dialectOption}
                           <RadioButton
@@ -1183,7 +1184,7 @@
 
                     <!-- Review Words Source Selection -->
                     <div class="flex flex-col gap-2">
-                      <label class="text-sm font-bold text-text-300">Word Source</label>
+                      <p class="text-sm font-bold text-text-300">Word Source</p>
                       <div class="flex gap-4">
                         <RadioButton
                           className="!text-sm !font-medium"
@@ -1223,7 +1224,7 @@
 
                     <!-- Difficulty Selection -->
                     <div class="space-y-3">
-                      <label class="block text-lg font-bold text-text-300">Difficulty Level</label>
+                      <p class="block text-lg font-bold text-text-300">Difficulty Level</p>
                       <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
                         {#each difficultyOptions as option}
                           <RadioButton
@@ -1253,7 +1254,7 @@
                   <!-- Original Generation Mode -->
                   <!-- Dialect Selection -->
                   <div class="space-y-3">
-                    <label class="block text-lg font-bold text-text-300">Select Dialect</label>
+                    <p class="block text-lg font-bold text-text-300">Select Dialect</p>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {#each dialectOptions as dialectOption}
                         <RadioButton
@@ -1271,7 +1272,7 @@
 
                   <!-- Difficulty Selection -->
                   <div class="space-y-3">
-                    <label class="block text-lg font-bold text-text-300">Difficulty Level</label>
+                    <p class="block text-lg font-bold text-text-300">Difficulty Level</p>
                     <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
                       {#each difficultyOptions as option}
                         <RadioButton
@@ -1289,7 +1290,7 @@
 
                   <!-- Learning Topics -->
                   <div class="space-y-3">
-                    <label class="block text-lg font-bold text-text-300">Focus Topics <span class="text-sm font-normal text-text-200 ml-2">(Optional)</span></label>
+                    <p class="block text-lg font-bold text-text-300">Focus Topics <span class="text-sm font-normal text-text-200 ml-2">(Optional)</span></p>
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
                       {#each learningTopicOptions as topic}
                         <button
@@ -1310,7 +1311,7 @@
 
                   <!-- Vocabulary Input -->
                   <div class="space-y-3 bg-tile-400/30 p-6 rounded-xl border border-tile-500">
-                    <label class="block text-lg font-bold text-text-300">Include Vocabulary <span class="text-sm font-normal text-text-200 ml-2">(Optional)</span></label>
+                    <p class="block text-lg font-bold text-text-300">Include Vocabulary <span class="text-sm font-normal text-text-200 ml-2">(Optional)</span></p>
                     <p class="text-sm text-text-200 mb-4">Enter specific words you want to practice in context.</p>
                     
                     <div class="flex gap-2 mb-4">
@@ -1383,7 +1384,8 @@
             <h2 class="text-2xl font-bold text-text-300 flex items-center gap-3">
               <span class="text-3xl">📝</span> Generate Words
             </h2>
-            <button 
+            <button
+              aria-label="Close"
               class="p-2 hover:bg-tile-400 rounded-lg transition-colors text-text-200 hover:text-text-300"
               onclick={() => { showGenerateWords = false; wordGenerateError = null; wordGenerateSuccess = null; }}
             >
@@ -1424,7 +1426,7 @@
 
                 <!-- Dialect Selection -->
                 <div class="space-y-3">
-                  <label class="block text-lg font-bold text-text-300">Select Dialect</label>
+                  <p class="block text-lg font-bold text-text-300">Select Dialect</p>
                   <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {#each dialectOptions as dialectOption}
                       <RadioButton
@@ -1442,7 +1444,7 @@
 
                 <!-- Difficulty Selection -->
                 <div class="space-y-3">
-                  <label class="block text-lg font-bold text-text-300">Difficulty Level</label>
+                  <p class="block text-lg font-bold text-text-300">Difficulty Level</p>
                   <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
                     {#each difficultyOptions as option}
                       <RadioButton
@@ -1460,7 +1462,7 @@
 
                 <!-- Word Types -->
                 <div class="space-y-3">
-                  <label class="block text-lg font-bold text-text-300">Word Categories <span class="text-sm font-normal text-text-200 ml-2">(Optional)</span></label>
+                  <p class="block text-lg font-bold text-text-300">Word Categories <span class="text-sm font-normal text-text-200 ml-2">(Optional)</span></p>
                   <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
                     {#each wordTypeOptions as wordType}
                       <button
@@ -1481,9 +1483,10 @@
 
                 <!-- Custom Request -->
                 <div class="space-y-3 bg-tile-400/30 p-6 rounded-xl border border-tile-500">
-                  <label class="block text-lg font-bold text-text-300">Custom Topic <span class="text-sm font-normal text-text-200 ml-2">(Optional)</span></label>
+                  <label for="custom-word-request" class="block text-lg font-bold text-text-300">Custom Topic <span class="text-sm font-normal text-text-200 ml-2">(Optional)</span></label>
                   <p class="text-sm text-text-200 mb-4">Be specific! e.g., "kitchen utensils", "office slang", "terms for getting directions".</p>
                   <textarea
+                    id="custom-word-request"
                     bind:value={customWordRequest}
                     rows="3"
                     class="w-full rounded-lg border-2 border-tile-500 bg-tile-200 p-3 text-text-300 focus:border-tile-600 focus:ring-0 transition-colors"
@@ -1550,7 +1553,8 @@
             <h2 class="text-3xl font-bold text-text-300">
               Select {generationType === 'sentences' ? 'Sentences' : 'Words'} to Import
             </h2>
-            <button 
+            <button
+              aria-label="Close"
               class="p-2 hover:bg-tile-400 rounded-lg transition-colors text-text-200 hover:text-text-300"
               onclick={closeGenerationModal}
             >

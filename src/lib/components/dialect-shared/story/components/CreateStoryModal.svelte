@@ -821,7 +821,7 @@
 							{#if audioFile}
 								<div class="space-y-4">
 									<div class="flex items-center justify-center">
-										<div class="w-16 h-16 rounded-full bg-green-100/20 flex items-center justify-center text-green-500">
+										<div class="w-16 h-16 rounded-full bg-green-100/20 flex items-center justify-center text-green-700">
 											<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 											</svg>
@@ -949,7 +949,7 @@
 							{#if audioFile}
 								<div class="space-y-4">
 									<div class="flex items-center justify-center">
-										<div class="w-16 h-16 rounded-full bg-green-100/20 flex items-center justify-center text-green-500">
+										<div class="w-16 h-16 rounded-full bg-green-100/20 flex items-center justify-center text-green-700">
 											<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 											</svg>

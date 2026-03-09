@@ -1,4 +1,4 @@
-import { WHITELISTED_EMAILS as WHITELISTED_EMAILS_FROM_ENV  } from '$env/static/private';
+import { WHITELISTED_EMAILS as WHITELISTED_EMAILS_RAW } from '$lib/config/whitelisted-emails';
 
 /**
  * Shared subscription utilities
@@ -6,11 +6,7 @@ import { WHITELISTED_EMAILS as WHITELISTED_EMAILS_FROM_ENV  } from '$env/static/
  */
 
 // Consolidated whitelist of emails that have access regardless of subscription
-
-const WHITELISTED_EMAILS = (WHITELISTED_EMAILS_FROM_ENV ?? '')
-  .split(',')
-  .map(e => e.trim().toLowerCase())
-  .filter(Boolean);
+const WHITELISTED_EMAILS = WHITELISTED_EMAILS_RAW.map(e => e.toLowerCase());
 /**
  * User object type for subscription checking
  * Works with both Supabase auth user and database user objects
