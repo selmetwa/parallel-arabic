@@ -9,18 +9,16 @@ export const load: PageServerLoad = async ({ locals, parent }) => {
     throw redirect(302, '/login');
   }
 
-  const userId = user && user.id || null;
+  const userId = user?.id ?? null;
   console.log({ userId })
   const { data: savedWords, error } = await supabase
   .from('saved_word')
   .select('*')
   .eq('user_id', userId);
 
-  console.log({ savedWords, error })
-
 	return {
 		userId: userId,
-		email:(session && session.user.email) || null,
+		email: user?.email ?? null,
     savedWords
 	};
 };

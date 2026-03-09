@@ -148,7 +148,7 @@
 							Each letter takes a different form depending on whether it has an independent, initial, medial, or final position in a word.
 						</p>
 						<p class="text-base text-text-200 leading-relaxed mb-4 opacity-80">
-							<span class="text-green-400 font-medium">Highlighted letters</span> (ا - ز ـ ر ـ ذ ـ د ـ و) have only two forms: Independent and Final. They don't connect to the left.
+							<span class="text-green-700 font-medium">Highlighted letters</span> (ا - ز ـ ر ـ ذ ـ د ـ و) have only two forms: Independent and Final. They don't connect to the left.
 						</p>
 						<div class="inline-flex items-center gap-2 px-4 py-2 bg-tile-400 border border-tile-600 rounded-lg text-sm text-text-200">
 							<span>💡</span>

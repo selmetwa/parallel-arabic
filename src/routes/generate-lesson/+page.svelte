@@ -365,7 +365,7 @@
                     
                     <details class="bg-white p-4 rounded-lg border border-gray-200">
                         <summary class="cursor-pointer font-medium">View Raw JSON</summary>
-                        <pre class="mt-4 overflow-x-auto text-xs bg-gray-900 text-green-400 p-4 rounded-lg">
+                        <pre class="mt-4 overflow-x-auto text-xs bg-gray-900 text-green-700 p-4 rounded-lg">
                             {JSON.stringify(result, null, 2)}
                         </pre>
                     </details>

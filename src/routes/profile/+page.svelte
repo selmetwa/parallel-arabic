@@ -7,6 +7,7 @@
   import { goto, invalidateAll, invalidate } from '$app/navigation';
   import { clearUserLocalStorage } from '$lib/helpers/clear-user-data';
   import { slide, fade } from 'svelte/transition';
+  import { WHITELISTED_EMAILS } from '$lib/config/whitelisted-emails';
 
   let { data }: { data: PageData } = $props();
 
@@ -193,20 +194,25 @@
           <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-tile-400 border-4 border-tile-300 shadow-xl flex items-center justify-center">
             <span class="text-4xl sm:text-5xl font-bold text-text-300">{userInitials()}</span>
           </div>
-          {#if data.hasActiveSubscription}
+          {#if data.hasActiveSubscription }
             <div class="absolute -bottom-1 -right-1 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow-lg">
               PRO
             </div>
           {/if}
+
         </div>
-        
+
         <!-- User Info -->
         <div class="flex-1 text-center sm:text-left">
           <h1 class="text-2xl sm:text-3xl font-bold text-text-300 mb-1">
             {data.user?.email?.split('@')[0] || 'Learner'}
           </h1>
           <p class="text-text-200 text-sm mb-4">{data.user?.email}</p>
-          
+          {#if WHITELISTED_EMAILS.includes(data.user.email)}
+          <p class="text-xs text-text-100 uppercase tracking-wide">
+            Whitelisted!
+          </p>
+        {/if}
           <!-- Dialect Badge -->
           <div class="inline-flex items-center gap-2 bg-tile-400/80 backdrop-blur px-4 py-2 rounded-full border border-tile-500">
             <span class="text-xl">{dialectFlags[currentDialect] || '🌍'}</span>
@@ -351,7 +357,7 @@
                   <Button type="submit" className="px-6">Save</Button>
                 </form>
                 {#if dialectUpdateSuccess}
-                  <div class="mt-2 text-green-400 text-sm font-medium" transition:fade>✓ {dialectUpdateSuccess}</div>
+                  <div class="mt-2 text-green-700 text-sm font-medium" transition:fade>✓ {dialectUpdateSuccess}</div>
                 {/if}
                 {#if dialectUpdateError}
                   <div class="mt-2 text-red-400 text-sm font-medium" transition:fade>✗ {dialectUpdateError}</div>
@@ -404,7 +410,7 @@
                   <Button type="submit" className="px-6">Save</Button>
                 </form>
                 {#if reviewLimitUpdateSuccess}
-                  <div class="mt-2 text-green-400 text-sm font-medium" transition:fade>✓ {reviewLimitUpdateSuccess}</div>
+                  <div class="mt-2 text-green-700 text-sm font-medium" transition:fade>✓ {reviewLimitUpdateSuccess}</div>
                 {/if}
                 {#if reviewLimitUpdateError}
                   <div class="mt-2 text-red-400 text-sm font-medium" transition:fade>✗ {reviewLimitUpdateError}</div>
@@ -438,10 +444,15 @@
                 <p class="text-text-300 font-medium">{data.user?.email}</p>
                 <p class="text-sm text-text-200">
                   Status: 
-                  <span class={data.hasActiveSubscription ? "text-green-400 font-semibold" : "text-text-200"}>
+                  <span class={data.hasActiveSubscription ? "text-green-700 font-semibold" : "text-text-200"}>
                     {data.hasActiveSubscription ? '✓ Premium Active' : 'Free Plan'}
                   </span>
                 </p>
+                {#if WHITELISTED_EMAILS.includes(data.user.email)}
+                <p class="text-xs text-text-200 uppercase tracking-wide">
+                  Whitelisted by Sherif (selmetwa@gmail.com)!
+                </p>
+              {/if}
               </div>
               <Button 
                 type="button"
@@ -454,7 +465,7 @@
           </div>
           
           <!-- Subscription Management (only for subscribers) -->
-          {#if data.hasActiveSubscription}
+          {#if data.hasActiveSubscription && !WHITELISTED_EMAILS.includes(data.user.email)}
             <div class="p-6 bg-tile-500/20">
               <h3 class="text-base font-bold text-text-300 mb-4 uppercase tracking-wide">Subscription</h3>
               
@@ -484,7 +495,7 @@
                   {/if}
 
                   {#if cancelSuccess}
-                    <div class="bg-green-500/20 border border-green-400 text-green-300 px-3 py-2 rounded-lg mb-3 text-sm" transition:fade>
+                    <div class="bg-green-500/20 border border-green-400 text-green-700 px-3 py-2 rounded-lg mb-3 text-sm" transition:fade>
                       {cancelSuccess}
                     </div>
                   {/if}
@@ -626,7 +637,7 @@
                     {/if}
 
                     {#if clearSuccess}
-                      <div class="bg-green-500/20 border border-green-400 text-green-300 px-3 py-2 rounded-lg mb-3 text-sm">
+                      <div class="bg-green-500/20 border border-green-400 text-green-700 px-3 py-2 rounded-lg mb-3 text-sm">
                         {clearSuccess}
                       </div>
                     {/if}

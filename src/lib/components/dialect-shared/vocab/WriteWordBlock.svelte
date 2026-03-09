@@ -488,7 +488,7 @@
 							.map(
 								({ letter, correct }) =>
 									`<span class="${cn('text-3xl', {
-										'text-green-500': correct,
+										'text-green-700': correct,
 										'text-red-500': !correct
 									})}">&zwj;&zwj;${letter}&zwj;&zwj;</span>`
 							)
@@ -500,7 +500,7 @@
 							.map(
 								({ letter, correct }) =>
 									`<span class="${cn('text-3xl', {
-										'text-green-500': correct,
+										'text-green-700': correct,
 										'text-red-500': !correct
 									})}">${letter}</span>`
 							)

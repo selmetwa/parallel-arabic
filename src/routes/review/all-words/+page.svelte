@@ -100,7 +100,7 @@
       case 'scheduled':
         return 'bg-yellow-500/20 text-yellow-300 border-yellow-500/50';
       case 'mastered':
-        return 'bg-green-500/20 text-green-300 border-green-500/50';
+        return 'bg-green-500/20 text-green-700 border-green-500/50';
       default:
         return 'bg-tile-600 text-text-200 border-tile-500';
     }
