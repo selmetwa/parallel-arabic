@@ -57,15 +57,15 @@
 							
 							<ul class="space-y-2 text-text-200 mb-6 text-sm">
 								<li class="flex items-center gap-2">
-									<span class="text-green-400">✓</span>
+									<span class="text-green-700">✓</span>
 									<span>Virtual Arabic keyboard</span>
 								</li>
 								<li class="flex items-center gap-2">
-									<span class="text-green-400">✓</span>
+									<span class="text-green-700">✓</span>
 									<span>Audio pronunciation feedback</span>
 								</li>
 								<li class="flex items-center gap-2">
-									<span class="text-green-400">✓</span>
+									<span class="text-green-700">✓</span>
 									<span>Progress through all 28 letters</span>
 								</li>
 							</ul>
@@ -105,15 +105,15 @@
 							
 							<ul class="space-y-2 text-text-200 mb-6 text-sm">
 								<li class="flex items-center gap-2">
-									<span class="text-green-400">✓</span>
+									<span class="text-green-700">✓</span>
 									<span>Digital drawing canvas</span>
 								</li>
 								<li class="flex items-center gap-2">
-									<span class="text-green-400">✓</span>
+									<span class="text-green-700">✓</span>
 									<span>Letter guides & templates</span>
 								</li>
 								<li class="flex items-center gap-2">
-									<span class="text-green-400">✓</span>
+									<span class="text-green-700">✓</span>
 									<span>Practice letter formation</span>
 								</li>
 							</ul>

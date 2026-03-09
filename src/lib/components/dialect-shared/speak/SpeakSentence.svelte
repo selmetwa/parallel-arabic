@@ -259,7 +259,7 @@
 
   // Get feedback text based on similarity
   function getFeedback(score: number): { text: string; emoji: string; color: string } {
-    if (score >= 90) return { text: "Excellent!", emoji: "🎉", color: "text-green-500" };
+    if (score >= 90) return { text: "Excellent!", emoji: "🎉", color: "text-green-700" };
     if (score >= 75) return { text: "Great job!", emoji: "👏", color: "text-emerald-500" };
     if (score >= 60) return { text: "Good effort!", emoji: "👍", color: "text-yellow-500" };
     if (score >= 40) return { text: "Keep practicing!", emoji: "💪", color: "text-orange-500" };

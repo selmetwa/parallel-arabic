@@ -10,10 +10,10 @@
 	 * - "Define" button appears when words are selected
 	 * - "Clear Selection" button to reset selection
 	 */
+	import { get } from 'svelte/store';
 	import { type Keyboard, type Dialect } from '$lib/types/index';
 	import { updateKeyboardStyle } from '$lib/helpers/update-keyboard-style';
 	import { hue, theme } from '$lib/store/store';
-	import { userPreferences, togglePreference } from '$lib/stores/userPreferences';
 	import { getBrowserInfo } from '$lib/helpers/get-browser-info';
 	import KeyboardDocumentation from '$lib/components/KeyboardDocumentation.svelte';
 	import Modal from '$lib/components/Modal.svelte';
@@ -57,29 +57,16 @@
 	const isMobile = () => typeof window !== 'undefined' && window.innerWidth < 768;
 	let isCorrect = $state(false);
 	let isInfoModalOpen = $state(false);
-	// Display preferences - synced with user preferences store
 	let showHint = $state(false);  // Transliteration
 	let showAnswer = $state(false);  // Arabic answer
 	let isDefinitionModalOpen = $state(false);
-	
-	// Initialize from user preferences
-	$effect(() => {
-		const unsubscribe = userPreferences.subscribe(prefs => {
-			showHint = prefs.showTransliteration;
-			showAnswer = prefs.showArabic;
-		});
-		return unsubscribe;
-	});
-	
-	// Toggle handlers that persist preferences
+
 	async function handleToggleHint() {
 		showHint = !showHint;
-		await togglePreference('showTransliteration');
 	}
 	
 	async function handleToggleAnswer() {
 		showAnswer = !showAnswer;
-		await togglePreference('showArabic');
 	}
 	let isLoadingDefinition = $state(false);
 	let definition = $state('');
@@ -847,7 +834,7 @@
 						.map(
 							({ letter, correct }) =>
 								`<span class="${cn('text-2xl sm:text-3xl', {
-									'text-green-500': correct,
+									'text-green-700': correct,
 									'text-red-500': !correct
 								})}">&zwj;&zwj;${letter}&zwj;&zwj;</span>`
 						)
@@ -859,7 +846,7 @@
 						.map(
 							({ letter, correct }) =>
 								`<span class="${cn('text-2xl sm:text-3xl', {
-									'text-green-500': correct,
+									'text-green-700': correct,
 									'text-red-500': !correct
 								})}">${letter}</span>`
 						)

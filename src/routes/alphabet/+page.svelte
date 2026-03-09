@@ -41,15 +41,15 @@
 							</p>
 							<ul class="space-y-2 text-text-200 mb-6">
 								<li class="flex items-center gap-2">
-									<span class="text-green-400">✓</span>
+									<span class="text-green-700">✓</span>
 									<span>All 28 letters with audio</span>
 								</li>
 								<li class="flex items-center gap-2">
-									<span class="text-green-400">✓</span>
+									<span class="text-green-700">✓</span>
 									<span>Letter forms & connections</span>
 								</li>
 								<li class="flex items-center gap-2">
-									<span class="text-green-400">✓</span>
+									<span class="text-green-700">✓</span>
 									<span>Right-to-left writing system</span>
 								</li>
 							</ul>
@@ -79,15 +79,15 @@
 							</p>
 							<ul class="space-y-2 text-text-200 mb-6">
 								<li class="flex items-center gap-2">
-									<span class="text-green-400">✓</span>
+									<span class="text-green-700">✓</span>
 									<span>Virtual Arabic keyboard</span>
 								</li>
 								<li class="flex items-center gap-2">
-									<span class="text-green-400">✓</span>
+									<span class="text-green-700">✓</span>
 									<span>Freehand drawing canvas</span>
 								</li>
 								<li class="flex items-center gap-2">
-									<span class="text-green-400">✓</span>
+									<span class="text-green-700">✓</span>
 									<span>Instant feedback</span>
 								</li>
 							</ul>

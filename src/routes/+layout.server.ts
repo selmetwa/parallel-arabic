@@ -1,9 +1,9 @@
 import type { LayoutServerLoad } from './$types'
 import { checkUserSubscription } from '$lib/helpers/subscription'
 
-export const load: LayoutServerLoad = async ({ locals: { safeGetSession }, cookies, url }) => {
+export const load: LayoutServerLoad = async ({ locals, cookies, url }) => {
   try {
-    const { session, user } = await safeGetSession()
+    const { session, user } = locals
     
     // Fast path: no user = no subscription
     if (!user) {
