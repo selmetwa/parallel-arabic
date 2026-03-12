@@ -608,6 +608,63 @@
   $inspect(targetArabicWord)
 </script>
 
+{#snippet englishWordDisplay()}
+	<div class="flex flex-col items-center justify-center gap-3">
+		{#if selectedWords.length > 0}
+			<div class="flex gap-2 mb-2">
+				<button
+					onclick={() => askChatGTP(selectedWords)}
+					class="px-3 py-1 bg-tile-400 text-text-300 rounded border border-tile-600 hover:bg-tile-500 hover:border-tile-500 transition-colors"
+				>
+					Define "{selectedWords.join(' ')}"
+				</button>
+				<button
+					onclick={clearSelection}
+					class="px-3 py-1 bg-tile-400 text-text-300 rounded border border-tile-600 hover:bg-tile-500 hover:border-tile-500 transition-colors"
+				>
+					Clear Selection
+				</button>
+			</div>
+		{/if}
+		
+		<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+		<div 
+			class="flex w-fit flex-row flex-wrap text-3xl sm:text-4xl font-bold text-text-300 select-none"
+			onmouseup={handleWordMouseUp}
+			role="application"
+			aria-label="Word selection area for definitions"
+		>
+			{#each sentence.english.split(' ') as word, index}
+				<span
+					onmousedown={(e) => handleWordMouseDown(index, e)}
+					onmouseenter={() => handleWordMouseEnter(index)}
+					onclick={() => askChatGTP(word)}
+					onkeydown={(e) => {
+						if (e.key === 'Enter' || e.key === ' ') {
+							e.preventDefault();
+							askChatGTP(word);
+						}
+					}}
+					role="button"
+					tabindex="0"
+					aria-label={`Get definition for: ${word}`}
+					class={cn("p-1 text-3xl sm:text-4xl duration-300 cursor-pointer border-2", {
+						"bg-blue-200 border-blue-400": isWordSelected(index),
+						"hover:bg-tile-500 border-transparent hover:border-tile-600": !isWordSelected(index)
+					})}
+					>{word}</span
+				>
+			{/each}
+		</div>
+		{#if showHint}
+			<p class="text-xl text-text-200">({sentence.transliteration})</p>
+		{/if}
+		{#if showAnswer}
+			<p class="text-2xl text-text-300">({sentence.arabic})</p>
+		{/if}
+	</div>
+{/snippet}
+
 <DefinitionModal
 	activeWordObj={{
 		english: targetWord,
@@ -681,15 +738,13 @@
 		</div>
 	</div>
 	
-	<!-- Multi-word selection instructions (only for typing mode) -->
-	{#if practiceMode === 'typing'}
+	<!-- Multi-word selection instructions -->
 	<div class="mb-4 p-3 bg-tile-400 border-l-4 border-tile-500 rounded-r hover:bg-tile-500 transition-colors duration-300">
 		<p class="text-sm text-text-300">
 			<strong>💡 Tip:</strong> Click individual words for definitions, or 
 			<strong>click and drag across multiple words</strong> to select a phrase and get its definition!
 		</p>
 	</div>
-	{/if}
 	
 	<div class="flex flex-wrap items-center justify-center gap-2 mb-6 p-3 bg-tile-400 rounded-xl border border-tile-500">
 		<!-- Toggle buttons group -->
@@ -771,61 +826,7 @@
 	<!-- ==================== TYPING MODE ==================== -->
 	{#if practiceMode === 'typing'}
 	<div class="text-center mb-6">
-		<div class="flex flex-col items-center justify-center gap-3">
-			<!-- Selection controls -->
-			{#if selectedWords.length > 0}
-				<div class="flex gap-2 mb-2">
-					<button
-						onclick={() => askChatGTP(selectedWords)}
-						class="px-3 py-1 bg-tile-400 text-text-300 rounded border border-tile-600 hover:bg-tile-500 hover:border-tile-500 transition-colors"
-					>
-						Define "{selectedWords.join(' ')}"
-					</button>
-					<button
-						onclick={clearSelection}
-						class="px-3 py-1 bg-tile-400 text-text-300 rounded border border-tile-600 hover:bg-tile-500 hover:border-tile-500 transition-colors"
-					>
-						Clear Selection
-					</button>
-				</div>
-			{/if}
-			
-				<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
-			<div 
-				class="flex w-fit flex-row flex-wrap text-3xl sm:text-4xl font-bold text-text-300 select-none"
-				onmouseup={handleWordMouseUp}
-				role="application"
-				aria-label="Word selection area for definitions"
-			>
-				{#each sentence.english.split(' ') as word, index}
-					<span
-						onmousedown={(e) => handleWordMouseDown(index, e)}
-						onmouseenter={() => handleWordMouseEnter(index)}
-						onclick={() => askChatGTP(word)}
-						onkeydown={(e) => {
-							if (e.key === 'Enter' || e.key === ' ') {
-								e.preventDefault();
-								askChatGTP(word);
-							}
-						}}
-						role="button"
-						tabindex="0"
-						aria-label={`Get definition for: ${word}`}
-						class={cn("p-1 text-3xl sm:text-4xl duration-300 cursor-pointer border-2", {
-							"bg-blue-200 border-blue-400": isWordSelected(index),
-							"hover:bg-tile-500 border-transparent hover:border-tile-600": !isWordSelected(index)
-						})}
-						>{word}</span
-					>
-				{/each}
-			</div>
-			{#if showHint}
-				<p class="text-xl text-text-200">({sentence.transliteration})</p>
-			{/if}
-			{#if showAnswer}
-				<p class="text-2xl text-text-300">({sentence.arabic})</p>
-			{/if}
-		</div>
+		{@render englishWordDisplay()}
 		
 		<div class="mt-4">
 			{#if isSafari}
@@ -897,15 +898,9 @@
 	<!-- ==================== SENTENCE REORDERING MODE ==================== -->
 	{#if practiceMode === 'reorder'}
 		<div class="mb-6">
-			<!-- English sentence display -->
+			<!-- English sentence display with drag-and-define -->
 			<div class="text-center mb-6">
-				<h3 class="text-2xl sm:text-3xl font-bold text-text-300 mb-2">{sentence.english}</h3>
-				{#if showHint}
-					<p class="text-lg text-text-200">({sentence.transliteration})</p>
-				{/if}
-				{#if showAnswer}
-					<p class="text-xl text-text-300" dir="rtl">({sentence.arabic})</p>
-				{/if}
+				{@render englishWordDisplay()}
 			</div>
 			
 			<!-- Instructions -->
