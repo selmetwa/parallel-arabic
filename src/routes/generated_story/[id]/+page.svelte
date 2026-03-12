@@ -10,6 +10,7 @@
 	import { Mode, type KeyWord } from '$lib/types/index';
 	import type { PageData } from './$types';
   import AudioButton from '$lib/components/AudioButton.svelte';
+  import ArabicWordDisplay from '$lib/components/dialect-shared/story/components/ArabicWordDisplay.svelte';
   import StoryAudioButton from '$lib/components/StoryAudioButton.svelte';
   import InlineAudioButton from '$lib/components/InlineAudioButton.svelte';
   import { goto } from '$app/navigation';
@@ -110,6 +111,34 @@
 	let mode = $state(Mode.Condensed);
 	let showEnglish = $state(true);
 	let showTransliteration = $state(true);
+
+	// Per-sentence overrides (null = follow global)
+	let sentenceOverrides = $state<Record<number, { english: boolean; transliteration: boolean }>>({});
+
+	function getSentenceEnglish(i: number) {
+		return sentenceOverrides[i]?.english ?? showEnglish;
+	}
+	function getSentenceTransliteration(i: number) {
+		return sentenceOverrides[i]?.transliteration ?? showTransliteration;
+	}
+	function toggleSentenceEnglish(i: number) {
+		sentenceOverrides = {
+			...sentenceOverrides,
+			[i]: {
+				english: !(sentenceOverrides[i]?.english ?? showEnglish),
+				transliteration: sentenceOverrides[i]?.transliteration ?? showTransliteration
+			}
+		};
+	}
+	function toggleSentenceTransliteration(i: number) {
+		sentenceOverrides = {
+			...sentenceOverrides,
+			[i]: {
+				english: sentenceOverrides[i]?.english ?? showEnglish,
+				transliteration: !(sentenceOverrides[i]?.transliteration ?? showTransliteration)
+			}
+		};
+	}
 
 	const sentences = $derived(story?.sentences || []);
 	const keyVocab = $derived(story?.keyVocab || []);
@@ -434,7 +463,8 @@
   <div class="space-y-6 px-4 py-6">
     {#each sentences as sentence, sentenceIndex}
       {@const isCurrentlyPlaying = currentPlayingSentenceIndex === sentenceIndex}
-      {@const arabicWords = sentence.arabic?.text?.split(' ') || []}
+      {@const sentenceEnglish = getSentenceEnglish(sentenceIndex)}
+      {@const sentenceTransliteration = getSentenceTransliteration(sentenceIndex)}
 
       <section
         data-sentence-index={sentenceIndex}
@@ -450,8 +480,8 @@
           </div>
         {/if}
 
-        <!-- English translation with drag-to-select (if showEnglish is true) -->
-        {#if showEnglish}
+        <!-- English translation with drag-to-select -->
+        {#if sentenceEnglish}
           <div class="mb-4 pb-3 border-b border-tile-600">
             <Sentence
               {sentence}
@@ -468,163 +498,37 @@
           </div>
         {/if}
 
-        <!-- Word-aligned display (when wordAlignments available) OR fallback -->
-        {#if sentence.wordAlignments?.length}
-          <!-- Word-by-word aligned display -->
-          <div class="flex flex-wrap gap-3 sm:gap-4 justify-center" dir="rtl">
-            {#each sentence.wordAlignments as wordAlign, wordIndex}
-              <button
-                class="flex flex-col items-center px-2 py-2 sm:px-3 sm:py-3 rounded-lg hover:bg-tile-500 hover:shadow-md transition-all duration-200 cursor-pointer group border-2 border-transparent hover:border-tile-600"
-                onclick={async (e) => {
-                  e.stopPropagation();
-                  const cleanWord = wordAlign.arabic.replace(/[،,]/g, '');
-
-                  setActiveWord({
-                    english: '',
-                    arabic: '',
-                    transliterated: '',
-                    description: '',
-                    isLoading: true,
-                    type: ''
-                  });
-
-                  isModalOpen = true;
-
-                  try {
-                    const res = await fetch('/api/definition-sentence', {
-                      method: 'POST',
-                      headers: { 'Content-Type': 'application/json' },
-                      body: JSON.stringify({
-                        word: cleanWord,
-                        type: 'arabic',
-                        sentence: {
-                          arabic: sentence.arabic.text,
-                          english: sentence.english.text,
-                          transliteration: sentence.transliteration.text
-                        },
-                        dialect: storyDialect
-                      })
-                    });
-
-                    const data = await res.json();
-
-                    setActiveWord({
-                      english: wordAlign.english,
-                      arabic: cleanWord,
-                      transliterated: wordAlign.transliteration,
-                      description: data.message?.message?.content || '',
-                      isLoading: false,
-                      type: 'arabic'
-                    });
-                  } catch (err) {
-                    console.error('Error fetching definition:', err);
-                    setActiveWord({
-                      english: wordAlign.english,
-                      arabic: cleanWord,
-                      transliterated: wordAlign.transliteration,
-                      description: '',
-                      isLoading: false,
-                      type: 'arabic'
-                    });
-                  }
-                }}
-              >
-                <!-- Transliteration (top) -->
-                {#if showTransliteration}
-                  <span class="text-xs sm:text-sm text-text-200 italic mb-0.5 opacity-75 group-hover:opacity-100 transition-opacity">
-                    {wordAlign.transliteration}
-                  </span>
-                {/if}
-                <!-- English (middle) -->
-                {#if showEnglish}
-                  <span class="text-xs sm:text-sm text-text-200 mb-1 opacity-90 group-hover:opacity-100 transition-opacity">
-                    {wordAlign.english}
-                  </span>
-                {/if}
-                <!-- Arabic (bottom, largest) -->
-                <span class="text-xl sm:text-2xl md:text-3xl font-semibold text-text-300">
-                  {wordAlign.arabic}
-                </span>
-              </button>
-            {/each}
-          </div>
-        {:else}
-          <!-- Fallback: Sentence-level display for older stories without word alignments -->
-          {#if showTransliteration}
-            <p class="text-base sm:text-lg text-text-200 italic text-center mb-3 leading-relaxed">
-              {sentence.transliteration?.text || ''}
-            </p>
-          {/if}
-
-          <!-- Arabic words - clickable for definitions -->
-          <div class="flex flex-wrap gap-2 sm:gap-3 justify-center" dir="rtl">
-            {#each arabicWords as arabicWord, wordIndex}
-              <button
-                class="px-2 py-1 sm:px-3 sm:py-2 rounded-lg hover:bg-tile-500 hover:shadow-md transition-all duration-200 cursor-pointer group border-2 border-transparent hover:border-tile-600 text-xl sm:text-2xl md:text-3xl font-semibold text-text-300"
-                onclick={async (e) => {
-                  e.stopPropagation();
-                  const cleanWord = arabicWord.replace(/[،,]/g, '');
-
-                  setActiveWord({
-                    english: '',
-                    arabic: '',
-                    transliterated: '',
-                    description: '',
-                    isLoading: true,
-                    type: ''
-                  });
-
-                  isModalOpen = true;
-
-                  try {
-                    const res = await fetch('/api/definition-sentence', {
-                      method: 'POST',
-                      headers: { 'Content-Type': 'application/json' },
-                      body: JSON.stringify({
-                        word: cleanWord,
-                        type: 'arabic',
-                        sentence: {
-                          arabic: sentence.arabic.text,
-                          english: sentence.english.text,
-                          transliteration: sentence.transliteration.text
-                        },
-                        dialect: storyDialect
-                      })
-                    });
-
-                    const data = await res.json();
-
-                    setActiveWord({
-                      english: '',
-                      arabic: cleanWord,
-                      transliterated: '',
-                      description: data.message?.message?.content || '',
-                      isLoading: false,
-                      type: 'arabic'
-                    });
-                  } catch (err) {
-                    console.error('Error fetching definition:', err);
-                    setActiveWord({
-                      english: '',
-                      arabic: cleanWord,
-                      transliterated: '',
-                      description: '',
-                      isLoading: false,
-                      type: 'arabic'
-                    });
-                  }
-                }}
-              >
-                {arabicWord}
-              </button>
-            {/each}
-          </div>
+        <!-- Arabic word display with drag-and-define -->
+        {#if !sentence.wordAlignments?.length && sentenceTransliteration}
+          <p class="text-base sm:text-lg text-text-200 italic text-center mb-3 leading-relaxed">
+            {sentence.transliteration?.text || ''}
+          </p>
         {/if}
 
-        <!-- Footer with sentence number and audio -->
+        <ArabicWordDisplay
+          {sentence}
+          {setActiveWord}
+          dialect={storyDialect as any}
+          showEnglish={sentenceEnglish}
+          showTransliteration={sentenceTransliteration}
+        />
+
+        <!-- Footer with sentence number, per-sentence toggles, and audio -->
         <div class="mt-4 pt-3 border-t border-tile-600 flex items-center justify-between">
           <span class="text-xs text-text-200">Sentence {sentenceIndex + 1} of {sentences.length}</span>
-          <AudioButton text={sentence.arabic.text} dialect={storyDialect as any} />
+          <div class="flex items-center gap-3">
+            <button
+              onclick={() => toggleSentenceEnglish(sentenceIndex)}
+              title={sentenceEnglish ? 'Hide English' : 'Show English'}
+              class={cn("text-xs transition-opacity", sentenceEnglish ? "opacity-40 hover:opacity-70" : "opacity-20 hover:opacity-50 line-through")}
+            >EN</button>
+            <button
+              onclick={() => toggleSentenceTransliteration(sentenceIndex)}
+              title={sentenceTransliteration ? 'Hide transliteration' : 'Show transliteration'}
+              class={cn("text-xs transition-opacity", sentenceTransliteration ? "opacity-40 hover:opacity-70" : "opacity-20 hover:opacity-50 line-through")}
+            >Trans</button>
+            <AudioButton text={sentence.arabic.text} dialect={storyDialect as any} />
+          </div>
         </div>
       </section>
     {/each}
