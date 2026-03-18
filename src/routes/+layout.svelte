@@ -8,6 +8,8 @@
 
 	import { onMount } from 'svelte';
 	import { theme, sidebarCollapsed } from '$lib/store/store';
+	import { userXp, userLevel } from '$lib/store/xp-store';
+	import XpBar from '$lib/components/XpBar.svelte';
 	import { invalidate, goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { pwaInfo } from 'virtual:pwa-info';
@@ -57,6 +59,12 @@
 		// Update showOnboarding when server data changes
 		// The server already checks: newSignup=true AND !onboarding_completed
 		showOnboarding = data.showOnboarding || false;
+	});
+
+	$effect(() => {
+		$inspect(data);
+		userXp.set(data.userXp ?? 0);
+		userLevel.set(data.userLevel ?? 1);
 	});
 
 	let root: HTMLElement | null;
@@ -384,6 +392,9 @@
 	</svelte:component>
 {/if}
 
+<!-- XP Progress Bar - fixed at top -->
+<XpBar loggedIn={!!data.session} initialXp={data.userXp ?? 0} initialLevel={data.userLevel ?? 1} />
+
 <!-- Desktop Sidebar -->
 <Sidebar {session} {handleOpenDrawer} />
 
@@ -392,7 +403,7 @@
 	<button
 		type="button"
 		onclick={() => sidebarCollapsed.set(false)}
-		class="fixed left-4 top-4 z-50 hidden rounded-lg border-2 border-tile-600 bg-tile-500 p-3 text-text-300 shadow-lg transition-all duration-300 hover:bg-tile-600 lg:flex"
+		class="fixed left-4 z-50 hidden rounded-lg border-2 border-tile-600 bg-tile-500 p-3 text-text-300 shadow-lg transition-all duration-300 hover:bg-tile-600 lg:flex {data.session ? 'top-10' : 'top-4'}"
 		aria-label="Expand sidebar"
 		title="Expand sidebar"
 	>
@@ -411,7 +422,7 @@
 <main
 	class="flex min-h-screen flex-col bg-tile-200 pb-20 transition-all duration-300 lg:pb-0 {$sidebarCollapsed
 		? 'lg:ml-0'
-		: 'lg:ml-64'}"
+		: 'lg:ml-64'} {data.session ? 'pt-8' : ''}"
 >
 	<!-- Top Navigation - Only visible on mobile -->
 	<div class="lg:hidden">
