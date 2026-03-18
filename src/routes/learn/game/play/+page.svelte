@@ -8,6 +8,8 @@
   import PaywallModal from '$lib/components/PaywallModal.svelte';
   import type { Dialect } from '$lib/types/index';
   import { normalizeArabicText } from '$lib/utils/arabic-normalization';
+  import { userXp, userLevel } from '$lib/store/xp-store';
+  import { showXpToast } from '$lib/helpers/toast-helpers';
 
   // Free tier limit (5 turns for non-subscribers)
   const FREE_TURN_LIMIT = 5;
@@ -465,6 +467,24 @@
     }
   }
 
+  async function awardGameXp() {
+    try {
+      const res = await fetch('/api/award-xp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ eventType: 'game_correct' })
+      });
+      const result = await res.json();
+      if (result.success) {
+        userXp.set(result.newTotalXp);
+        if (result.leveledUp) userLevel.set(result.newLevel);
+        showXpToast(result.xpAwarded, result.leveledUp, result.newLevel, result.newLevelTitle);
+      }
+    } catch {
+      // silently ignore — XP is non-critical
+    }
+  }
+
   function selectAnswer(answer: string) {
     if (showResult) return;
 
@@ -474,6 +494,7 @@
 
     if (isCorrect) {
       score++;
+      awardGameXp();
     } else {
       // Add to review list if wrong
       if (currentQuestion.sentence) {
@@ -488,6 +509,7 @@
     showResult = true;
     isCorrect = true;
     score++;
+    awardGameXp();
   }
 
   function handleWrongAnswer() {

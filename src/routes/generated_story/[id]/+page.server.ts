@@ -28,9 +28,22 @@ export const load = async ({ params, locals, setHeaders }) => {
 
   const story = storyResult.story;
 
-  return { 
+  // Check if user has already completed this story (for XP dedup UI)
+  let storyCompleted = false;
+  if (userId) {
+    const { data: completion } = await locals.supabase
+      .from('user_story_completion')
+      .select('id')
+      .eq('user_id', userId)
+      .eq('story_id', story.id)
+      .maybeSingle();
+    storyCompleted = !!completion;
+  }
+
+  return {
     userId,
     story: [story], // Wrap in array to match existing format
-    storyData: story // Also provide unwrapped for easier access
-  }
+    storyData: story, // Also provide unwrapped for easier access
+    storyCompleted
+  };
 };

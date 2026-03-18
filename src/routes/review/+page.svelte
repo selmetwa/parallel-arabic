@@ -6,6 +6,9 @@
   import Modal from '$lib/components/Modal.svelte';
   import type { PageData } from './$types';
   import { goto } from '$app/navigation';
+  import { userXp, userLevel } from '$lib/store/xp-store';
+  import { showXpToast } from '$lib/helpers/toast-helpers';
+  import { LEVEL_TIERS } from '$lib/helpers/xp-levels';
   import AlphabetCycle from '$lib/components/AlphabetCycle.svelte';
   import { PUBLIC_PRICE_ID } from '$env/static/public';
   import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
@@ -38,6 +41,28 @@
   let error = $state<string | null>(null);
   let sessionComplete = $state(false);
   let reviewedCount = $state(0);
+  let reviewCycleXpAwarded = $state(false);
+
+  $effect(() => {
+    if (sessionComplete && !reviewCycleXpAwarded && reviewedCount > 0) {
+      reviewCycleXpAwarded = true;
+      fetch('/api/award-xp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ eventType: 'review_cycle' })
+      })
+        .then((r) => r.json())
+        .then((data) => {
+          if (data.success) {
+            userXp.set(data.newTotalXp);
+            if (data.leveledUp) userLevel.set(data.newLevel);
+            const title = LEVEL_TIERS.find((t) => t.level === data.newLevel)?.title;
+            showXpToast(data.xpAwarded, data.leveledUp, data.newLevel, title);
+          }
+        })
+        .catch(() => {});
+    }
+  });
   let reviewedWordIds = $state<Set<string>>(new Set());
   let totalReviewCount = $state<number | null>(null);
   let hasActiveSubscription = $state(false);
@@ -338,6 +363,33 @@
 
       reviewedCount++;
       reviewedWordIds.add(word.id);
+      console.log({ difficulty });
+      if (difficulty >= 1) {
+        fetch('/api/award-xp', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ eventType: 'review_correct' })
+        })
+          .then((r) => r.json())
+          .then((xpData) => {
+            if (xpData.success) {
+              userXp.set(xpData.newTotalXp);
+                userXp.set(xpData.newTotalXp);
+              if (xpData.leveledUp) userLevel.set(xpData.newLevel);
+              const title = LEVEL_TIERS.find((t) => t.level === xpData.newLevel)?.title;
+              showXpToast(xpData.xpAwarded, xpData.leveledUp, xpData.newLevel, title);
+              // if (xpData.leveledUp) {
+              //   userLevel.set(xpData.newLevel);
+              //   const title = LEVEL_TIERS.find((t) => t.level === xpData.newLevel)?.title;
+              //   showXpToast(xpData.xpAwarded, xpData.leveledUp, xpData.newLevel, title);
+              // } else {
+              //   const title = LEVEL_TIERS.find((t) => t.level === xpData.previousLevel)?.title;
+              //   showXpToast(result.xpAwarded, result.leveledUp, result.newLevel, title);
+              // }
+            }
+          })
+          .catch(() => {});
+      }
       
       // If reviewing forgotten word, remove it from forgotten words array
       if (isReviewingForgotten) {
@@ -400,6 +452,7 @@
     sessionComplete = false;
     forgottenWords = [];
     forgottenWordIndex = 0;
+    reviewCycleXpAwarded = false;
     clearProgress();
     
     // Clear forgotten words in database

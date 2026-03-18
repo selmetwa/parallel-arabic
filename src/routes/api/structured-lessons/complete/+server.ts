@@ -2,6 +2,7 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { v4 as uuidv4 } from 'uuid';
 import { trackActivitySimple } from '$lib/helpers/track-activity';
+import { awardXp } from '$lib/helpers/award-xp';
 
 export const POST: RequestHandler = async ({ request, locals }) => {
 	const { supabase, safeGetSession } = locals;
@@ -72,15 +73,18 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 			}
 		}
 
-		// Track activity for streaks and stats (only if this is a new completion)
+		let xpResult = null;
+
+		// Track activity and award XP (only if this is a new completion)
 		if (!wasAlreadyCompleted) {
 			trackActivitySimple(user.id, 'lesson', 1).catch(err => {
 				console.error('Error tracking lesson activity:', err);
-				// Don't fail the request if activity tracking fails
 			});
+
+			xpResult = await awardXp(user.id, 'lesson_complete', supabase);
 		}
 
-		return json({ success: true });
+		return json({ success: true, xpResult });
 	} catch (error) {
 		console.error('Error in complete lesson endpoint:', error);
 		return json({ success: false, error: 'Internal server error' }, { status: 500 });

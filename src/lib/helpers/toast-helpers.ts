@@ -386,6 +386,22 @@ export function showWordImportErrorToast(toastId: string | number, error: string
 }
 
 /**
+ * Toast helper for XP earned
+ */
+export function showXpToast(xpAwarded: number, leveledUp: boolean, newLevel?: number, newLevelTitle?: string) {
+	if (leveledUp && newLevel && newLevelTitle) {
+		toast.success(`Level Up! Lv.${newLevel}: ${newLevelTitle}`, {
+			description: `+${xpAwarded} XP earned`,
+			duration: 4000
+		});
+	} else {
+		toast.success(`+${xpAwarded} XP`, {
+			duration: 1500
+		});
+	}
+}
+
+/**
  * Get display name for dialect
  */
 function getDialectDisplayName(dialect: string): string {

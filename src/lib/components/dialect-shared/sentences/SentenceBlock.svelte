@@ -14,6 +14,9 @@
 	import { type Keyboard, type Dialect } from '$lib/types/index';
 	import { updateKeyboardStyle } from '$lib/helpers/update-keyboard-style';
 	import { hue, theme } from '$lib/store/store';
+	import { userXp, userLevel } from '$lib/store/xp-store';
+	import { showXpToast } from '$lib/helpers/toast-helpers';
+	import { LEVEL_TIERS } from '$lib/helpers/xp-levels';
 	import { getBrowserInfo } from '$lib/helpers/get-browser-info';
 	import KeyboardDocumentation from '$lib/components/KeyboardDocumentation.svelte';
 	import Modal from '$lib/components/Modal.svelte';
@@ -56,6 +59,37 @@
 	// Detect mobile on mount and default to native keyboard
 	const isMobile = () => typeof window !== 'undefined' && window.innerWidth < 768;
 	let isCorrect = $state(false);
+	let xpAwardedThisSentence = $state(false);
+
+	$effect(() => {
+		if (isCorrect && !xpAwardedThisSentence) {
+			xpAwardedThisSentence = true;
+			fetch('/api/award-xp', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ eventType: 'sentence_correct' })
+			})
+				.then((r) => r.json())
+				.then((data) => {
+					if (data.success) {
+						userXp.set(data.newTotalXp);
+						if (data.leveledUp) userLevel.set(data.newLevel);
+						const title = LEVEL_TIERS.find((t) => t.level === data.newLevel)?.title;
+						showXpToast(data.xpAwarded, data.leveledUp, data.newLevel, title);
+					}
+				})
+				.catch(() => {});
+		}
+	});
+
+	$effect(() => {
+		// Reset XP guard and correct state when sentence changes
+		if (sentence.arabic) {
+			xpAwardedThisSentence = false;
+			isCorrect = false;
+		}
+	});
+
 	let isInfoModalOpen = $state(false);
 	let showHint = $state(false);  // Transliteration
 	let showAnswer = $state(false);  // Arabic answer

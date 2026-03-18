@@ -108,7 +108,7 @@
   }
 </script>
 
-<aside class="hidden lg:flex flex-col bg-gradient-to-b from-tile-300 to-tile-200 border-r-2 border-tile-600 h-screen fixed top-0 left-0 overflow-hidden z-40 transition-all duration-300 shadow-xl {$sidebarCollapsed ? 'w-0 opacity-0' : 'w-64 opacity-100'}">
+<aside class="hidden lg:flex flex-col bg-gradient-to-b from-tile-300 to-tile-200 border-r-2 border-tile-600 fixed top-8 left-0 bottom-0 overflow-hidden z-40 transition-all duration-300 shadow-xl {$sidebarCollapsed ? 'w-0 opacity-0' : 'w-64 opacity-100'}">
   <div class="p-6 {$sidebarCollapsed ? 'hidden' : ''}">
     <div class="flex items-center justify-between mb-8">
       <a href="/" class="flex items-center logo-container flex-1 min-w-0 group">

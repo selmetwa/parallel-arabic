@@ -188,6 +188,8 @@ CREATE TABLE public.user (
   last_content_accessed_at bigint,
   total_shorts_viewed integer DEFAULT 0,
   shorts_viewed_this_week integer DEFAULT 0,
+  total_xp integer NOT NULL DEFAULT 0,
+  current_level integer NOT NULL DEFAULT 1,
   CONSTRAINT user_pkey PRIMARY KEY (id)
 );
 CREATE TABLE public.user_daily_activity (
@@ -219,6 +221,15 @@ CREATE TABLE public.user_session (
   idle_expires bigint NOT NULL,
   CONSTRAINT user_session_pkey PRIMARY KEY (id),
   CONSTRAINT user_session_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.user(id)
+);
+CREATE TABLE public.user_story_completion (
+  id text NOT NULL,
+  user_id text NOT NULL,
+  story_id text NOT NULL,
+  completed_at bigint NOT NULL,
+  created_at bigint NOT NULL,
+  CONSTRAINT user_story_completion_pkey PRIMARY KEY (id),
+  CONSTRAINT user_story_completion_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.user(id)
 );
 CREATE TABLE public.video (
   id text NOT NULL,
