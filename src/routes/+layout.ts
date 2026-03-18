@@ -62,7 +62,9 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
       user,
       showOnboarding: data.showOnboarding ?? false,
       targetDialect: data.targetDialect ?? null,
-      isSubscribed: data.isSubscribed
+      isSubscribed: data.isSubscribed,
+      userXp: data.userXp ?? 0,
+      userLevel: data.userLevel ?? 1
     }
   } catch (error) {
     console.error('❌ [+layout.ts] Error in client layout load:', error)

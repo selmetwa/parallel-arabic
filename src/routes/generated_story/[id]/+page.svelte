@@ -2,6 +2,9 @@
   import { onMount } from "svelte";
   import cn from 'classnames';
 	import Sentence from '$lib/components/dialect-shared/story/components/Sentence.svelte';
+  import { userXp, userLevel } from '$lib/store/xp-store';
+  import { showXpToast } from '$lib/helpers/toast-helpers';
+  import { LEVEL_TIERS } from '$lib/helpers/xp-levels';
 	import DefinitionModal from '$lib/components/dialect-shared/sentences/DefinitionModal.svelte';
 	import RadioButton from '$lib/components/RadioButton.svelte';
 	import Button from '$lib/components/Button.svelte';
@@ -159,6 +162,36 @@
 	}
 
 	
+	let storyXpAwarded = $state((data as any).storyCompleted ?? false);
+	let isAwardingStoryXp = $state(false);
+
+	async function handleMarkStoryDone() {
+		if (storyXpAwarded || isAwardingStoryXp) return;
+		isAwardingStoryXp = true;
+		const storyId = (data as any).storyData?.id;
+		try {
+			const res = await fetch('/api/award-xp', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ eventType: 'story_complete', storyId })
+			});
+			const result = await res.json();
+			if (result.success) {
+				storyXpAwarded = true;
+				userXp.set(result.newTotalXp);
+				if (result.leveledUp) userLevel.set(result.newLevel);
+				const title = LEVEL_TIERS.find((t) => t.level === result.newLevel)?.title;
+				showXpToast(result.xpAwarded, result.leveledUp, result.newLevel, title);
+			} else if (result.alreadyCompleted) {
+				storyXpAwarded = true;
+			}
+		} catch {
+			// non-critical
+		} finally {
+			isAwardingStoryXp = false;
+		}
+	}
+
 	// Quiz state management
 	let quizStates = $state<Record<number, {
 		selectedOptionId: string | null;
@@ -683,6 +716,22 @@
               - Keep practicing!
             {/if}
           </p>
+          <button
+            onclick={handleMarkStoryDone}
+            disabled={storyXpAwarded || isAwardingStoryXp}
+            class="mt-4 inline-flex items-center gap-2 rounded-lg px-6 py-2.5 text-sm font-semibold transition-all duration-200
+              {storyXpAwarded
+                ? 'cursor-default bg-green-100 text-green-700 border-2 border-green-300'
+                : 'bg-tile-500 text-text-300 border-2 border-tile-600 hover:bg-tile-600 active-scale'}"
+          >
+            {#if storyXpAwarded}
+              Story Complete +15 XP
+            {:else if isAwardingStoryXp}
+              Saving...
+            {:else}
+              Mark as Done
+            {/if}
+          </button>
         </div>
       {/if}
     </div>

@@ -9,6 +9,8 @@
 	let isModalOpen = $state(false);
 	let selectedDialect = $state(getDefaultDialect(data.user));
 
+	let completedStoryIds = $derived(new Set<string>(data.completedStoryIds ?? []));
+
 	// Search and filter state
 	let searchQuery = $state('');
 	let filterDialect = $state<string>('all');
@@ -445,7 +447,16 @@
 		{:else}
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 				{#each filteredAndSortedStories as story}
-					<a href={`/generated_story/${story.id}`} class="group flex flex-col bg-tile-400 border-2 border-tile-600 rounded-xl p-8 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1">
+					{@const isCompleted = completedStoryIds.has(story.id)}
+					<a href={`/generated_story/${story.id}`} class="group relative flex flex-col bg-tile-400 border-2 rounded-xl p-8 shadow-lg hover:bg-tile-500 transition-all duration-300 hover:-translate-y-1 {isCompleted ? 'border-green-500/50 hover:border-green-500/80' : 'border-tile-600 hover:border-tile-500'}">
+						{#if isCompleted}
+							<div class="absolute right-3 top-3 flex items-center gap-1 rounded-full border border-green-500/40 bg-green-500/15 px-2 py-0.5 text-xs font-semibold text-green-600">
+								<svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+								</svg>
+								Done
+							</div>
+						{/if}
 						<div class="flex justify-between items-start mb-4">
 							<div class="text-4xl">✨</div>
 							<div class="flex flex-col gap-1 items-end">

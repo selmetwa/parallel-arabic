@@ -3,6 +3,9 @@
 	import { type sentenceObjectGroup, type sentenceObjectItem } from '$lib/types/index';
 	import RadioButton from '$lib/components/RadioButton.svelte';
   import SaveButton from '$lib/components/SaveButton.svelte';
+	import { userXp, userLevel } from '$lib/store/xp-store';
+	import { showXpToast } from '$lib/helpers/toast-helpers';
+	import { LEVEL_TIERS } from '$lib/helpers/xp-levels';
 
 	interface Props {
 		index?: number;
@@ -14,6 +17,28 @@
 
 	let isCorrect = $state(false);
 	let isIncorrect = $state(false);
+	let xpAwardedThisQuestion = $state(false);
+
+	$effect(() => {
+		if (isCorrect && !xpAwardedThisQuestion) {
+			xpAwardedThisQuestion = true;
+			fetch('/api/award-xp', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ eventType: 'sentence_correct' })
+			})
+				.then((r) => r.json())
+				.then((data) => {
+					if (data.success) {
+						userXp.set(data.newTotalXp);
+						if (data.leveledUp) userLevel.set(data.newLevel);
+						const title = LEVEL_TIERS.find((t) => t.level === data.newLevel)?.title;
+						showXpToast(data.xpAwarded, data.leveledUp, data.newLevel, title);
+					}
+				})
+				.catch(() => {});
+		}
+	});
 	let showHint = $state(false);
 	let showAnswer = $state(false);
 	let selectedObj = $state({} as sentenceObjectItem);
@@ -79,12 +104,13 @@
 
 	$effect(() => {
 		if (sentenceObj) {
-	      selectedObj = {} as sentenceObjectItem;
-				showHint = false;
-				selected = null;
-				isCorrect = false;
-				isIncorrect = false;	
-      }
+			selectedObj = {} as sentenceObjectItem;
+			showHint = false;
+			selected = null;
+			isCorrect = false;
+			isIncorrect = false;
+			xpAwardedThisQuestion = false;
+		}
 	});
 </script>
 
