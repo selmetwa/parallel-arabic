@@ -27,13 +27,16 @@ export const load: LayoutServerLoad = async ({ locals, cookies, url }) => {
     const isNewSignup = url.searchParams.get('newSignup') === 'true'
     const showOnboarding = isNewSignup && !user.onboarding_completed
 
+    console.log({ user })
     return {
       session,
       user: user,  // Database user for backward compatibility
       cookies: cookies.getAll(),
       isSubscribed: isSubscribed,
       showOnboarding: showOnboarding,
-      targetDialect: user?.target_dialect || null
+      targetDialect: user?.target_dialect || null,
+      userXp: user?.total_xp ?? 0,
+      userLevel: user?.current_level ?? 1
     };
   } catch (error) {
     console.error('❌ [+layout.server.ts] Error in layout load:', error)

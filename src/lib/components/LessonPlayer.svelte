@@ -4,6 +4,9 @@
     import type { z } from 'zod';
     import type { Dialect } from '$lib/types/index';
     import Button from '$lib/components/Button.svelte';
+    import { userXp, userLevel } from '$lib/store/xp-store';
+    import { showXpToast } from '$lib/helpers/toast-helpers';
+    import { LEVEL_TIERS } from '$lib/helpers/xp-levels';
     import AudioButton from '$lib/components/AudioButton.svelte';
     import BookmarkButton from '$lib/components/BookmarkButton.svelte';
     import DefinitionModal from '$lib/components/dialect-shared/sentences/DefinitionModal.svelte';
@@ -209,7 +212,15 @@
                     })
                 });
                 
-                if (!response.ok) {
+                if (response.ok) {
+                    const data = await response.json().catch(() => null);
+                    if (data?.xpResult?.success) {
+                        userXp.set(data.xpResult.newTotalXp);
+                        if (data.xpResult.leveledUp) userLevel.set(data.xpResult.newLevel);
+                        const title = LEVEL_TIERS.find(t => t.level === data.xpResult.newLevel)?.title;
+                        showXpToast(data.xpResult.xpAwarded, data.xpResult.leveledUp, data.xpResult.newLevel, title);
+                    }
+                } else {
                     console.error('Failed to mark lesson as completed');
                 }
             } catch (e) {
@@ -217,7 +228,7 @@
                 // Continue anyway - not critical
             }
         }
-        
+
         // Call onLessonComplete callback which will handle navigation and data refresh
         if (onLessonComplete) {
             // Find next lesson ID from curriculum (though we won't use it for now)
@@ -231,7 +242,7 @@
     
     async function handleCloseAfterCompletion() {
         showCongratulations = false;
-        
+
         // Mark lesson as completed if user is logged in
         if (lesson.topicId && lesson.dialect) {
             try {
@@ -243,8 +254,16 @@
                         dialect: lesson.dialect
                     })
                 });
-                
-                if (!response.ok) {
+
+                if (response.ok) {
+                    const data = await response.json().catch(() => null);
+                    if (data?.xpResult?.success) {
+                        userXp.set(data.xpResult.newTotalXp);
+                        if (data.xpResult.leveledUp) userLevel.set(data.xpResult.newLevel);
+                        const title = LEVEL_TIERS.find(t => t.level === data.xpResult.newLevel)?.title;
+                        showXpToast(data.xpResult.xpAwarded, data.xpResult.leveledUp, data.xpResult.newLevel, title);
+                    }
+                } else {
                     console.error('Failed to mark lesson as completed');
                 }
             } catch (e) {

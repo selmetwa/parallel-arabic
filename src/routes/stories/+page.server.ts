@@ -3,7 +3,7 @@ import { BLOCKED_STORY_IDS } from '$lib/constants/stories/blocked';
 
 const PAGE_SIZE = 12;
 
-export const load = async ({ parent }) => {
+export const load = async ({ parent, locals }) => {
   // Get session and subscription status from layout
   const { session, isSubscribed, user } = await parent();
 
@@ -31,6 +31,16 @@ export const load = async ({ parent }) => {
     console.error('Error fetching stories:', storiesResult.error);
   }
 
+  // Fetch completed story IDs for the logged-in user
+  let completedStoryIds: string[] = [];
+  if (user?.id) {
+    const { data: completions } = await locals.supabase
+      .from('user_story_completion')
+      .select('story_id')
+      .eq('user_id', user.id);
+    completedStoryIds = completions?.map((c: any) => c.story_id) ?? [];
+  }
+
   return {
     session,
     isSubscribed,
@@ -38,7 +48,8 @@ export const load = async ({ parent }) => {
     user_generated_stories: initialStories,
     nextCursor,
     hasMore,
-    user
+    user,
+    completedStoryIds
   };
 };
 
