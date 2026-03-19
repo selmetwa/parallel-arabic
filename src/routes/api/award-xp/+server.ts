@@ -3,7 +3,7 @@ import type { RequestHandler } from './$types';
 import { awardXp } from '$lib/helpers/award-xp';
 import type { XpEventType } from '$lib/helpers/xp-levels';
 
-const VALID_EVENT_TYPES: XpEventType[] = ['review_cycle', 'review_correct', 'sentence_correct', 'story_complete', 'game_correct'];
+const VALID_EVENT_TYPES: XpEventType[] = ['review_cycle', 'review_correct', 'sentence_correct', 'story_complete', 'game_correct', 'challenge_bonus'];
 
 export const POST: RequestHandler = async ({ request, locals }) => {
 	const { supabase, safeGetSession } = locals;

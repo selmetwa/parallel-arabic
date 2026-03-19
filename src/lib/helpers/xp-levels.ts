@@ -1,4 +1,4 @@
-export type XpEventType = 'review_cycle' | 'review_correct' | 'sentence_correct' | 'story_complete' | 'lesson_complete' | 'game_correct';
+export type XpEventType = 'review_cycle' | 'review_correct' | 'sentence_correct' | 'story_complete' | 'lesson_complete' | 'game_correct' | 'challenge_bonus';
 
 export const XP_AWARDS: Record<XpEventType, number> = {
 	review_cycle: 10,
@@ -6,7 +6,8 @@ export const XP_AWARDS: Record<XpEventType, number> = {
 	sentence_correct: 5,
 	story_complete: 15,
 	lesson_complete: 25,
-	game_correct: 1
+	game_correct: 1,
+	challenge_bonus: 10
 };
 
 export const LEVEL_TIERS = [
