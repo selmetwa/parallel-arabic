@@ -2,9 +2,10 @@ import { error } from '@sveltejs/kit';
 import { getStoryById } from '$lib/helpers/story-helpers';
 import { trackActivitySimple } from '$lib/helpers/track-activity';
 
-export const load = async ({ params, locals, setHeaders }) => {
+export const load = async ({ params, url, locals, setHeaders }) => {
   const session = await locals.auth.validate();
   const userId = session && session.user.id || null;
+  const challengeId = url.searchParams.get('challenge') ?? null;
   
   const storyResult = await getStoryById(params.id);
 
@@ -44,6 +45,7 @@ export const load = async ({ params, locals, setHeaders }) => {
     userId,
     story: [story], // Wrap in array to match existing format
     storyData: story, // Also provide unwrapped for easier access
-    storyCompleted
+    storyCompleted,
+    challengeId
   };
 };
