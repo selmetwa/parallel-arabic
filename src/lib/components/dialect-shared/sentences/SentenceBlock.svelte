@@ -724,7 +724,7 @@
 
 {#if sentence}
 	{#if isCorrect}
-		<div class="mb-4 bg-green-100 py-3 px-4 text-center border-2 border-green-100 rounded-lg">
+		<div class="mb-4 bg-green-100 py-3 px-4 text-center border-2 border-green-100 rounded-lg flex items-center justify-between gap-4">
 			<p class="text-lg font-bold text-text-300">
 				{#if practiceMode === 'typing'}
 					{sentence.arabic} is Correct!
@@ -732,6 +732,15 @@
 					Sentence arranged correctly!
 				{/if}
 			</p>
+			<button
+				onclick={resetSentences}
+				class="flex items-center gap-1.5 px-4 py-2 text-sm font-semibold bg-green-600 text-white rounded-lg hover:bg-green-700 transition-all duration-200 shadow-sm hover:shadow-md whitespace-nowrap"
+			>
+				Next
+				<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+				</svg>
+			</button>
 		</div>
 	{/if}
 	

@@ -6,16 +6,20 @@
   import Card from '$lib/components/Card.svelte';
   import ContinueCard from '$lib/components/ContinueCard.svelte';
   import SectionHeader from '$lib/components/SectionHeader.svelte';
+  import BakerLoader from '$lib/components/BakerLoader.svelte';
 
   let { data }: { data: PageData } = $props();
 
   // Banner dismiss state
   let bannerDismissed = $state(false);
-  
+  let challengeGenerating = $state(false);
+  let generatedChallengeHref = $state<string | null>(null);
+
   const suggestions = data.suggestions || [];
-  // Separate review suggestion from others
+  // Separate challenge, review, and other suggestions
+  const dailyChallengeSuggestion = suggestions.find(s => s.id === 'daily-challenge');
   const reviewSuggestion = suggestions.find(s => s.id === 'review');
-  const otherSuggestions = suggestions.filter(s => s.id !== 'review').slice(0, 3);
+  const otherSuggestions = suggestions.filter(s => s.id !== 'review' && s.id !== 'daily-challenge').slice(0, 3);
 
   function dismissBanner() {
     bannerDismissed = true;
@@ -27,17 +31,39 @@
 
   onMount(() => {
     currentDialect.set('');
-    
+
     // Check if banner was dismissed this session
     if (browser) {
       bannerDismissed = sessionStorage.getItem('homeBannerDismissed') === 'true';
+    }
+
+    // Lazy-generate a daily challenge if needed and user is logged in
+    if (browser && data.shouldGenerateChallenge && data.user) {
+      challengeGenerating = true;
+      fetch('/api/daily-challenge', { method: 'POST' })
+        .then(r => r.json())
+        .then(result => {
+          if (result.success && result.challengeId) {
+            // Redirect to fetch the challenge type to build the correct href
+            return fetch('/api/daily-challenge').then(r => r.json()).then(r => {
+              if (r.challenge) {
+                const c = r.challenge;
+                generatedChallengeHref = c.challenge_type === 'story' && c.story_id
+                  ? `/generated_story/${c.story_id}?challenge=${c.id}`
+                  : `/challenge/${c.id}`;
+              }
+            });
+          }
+        })
+        .catch(() => { /* non-critical */ })
+        .finally(() => { challengeGenerating = false; });
     }
   });
 </script>
 
 <section class="px-3 mt-6 sm:px-8 max-w-7xl mx-auto">
   <!-- Activity Suggestions -->
-  {#if data.user && !bannerDismissed && (reviewSuggestion || otherSuggestions.length > 0)}
+  {#if data.user && !bannerDismissed && (dailyChallengeSuggestion || reviewSuggestion || otherSuggestions.length > 0 || challengeGenerating || generatedChallengeHref)}
     <div class="mb-8 relative">
       <!-- Dismiss button -->
       <button
@@ -49,18 +75,43 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
-      
+
+      <!-- Daily challenge card (highest priority) -->
+      {#if dailyChallengeSuggestion}
+        <ContinueCard
+          href={dailyChallengeSuggestion.href}
+          icon={dailyChallengeSuggestion.icon}
+          title={dailyChallengeSuggestion.title}
+          subtitle={dailyChallengeSuggestion.subtitle}
+          variant={dailyChallengeSuggestion.variant}
+        />
+      {:else if generatedChallengeHref}
+        <ContinueCard
+          href={generatedChallengeHref}
+          icon="⭐"
+          title="Daily Challenge"
+          subtitle="Complete today's challenge for +10 bonus XP"
+          variant="amber"
+        />
+      {:else if challengeGenerating}
+        <div class="bg-tile-300 border border-tile-500 rounded-xl flex items-center justify-center py-2">
+          <BakerLoader />
+        </div>
+      {/if}
+
       <!-- Main review suggestion (if has words to review) -->
       {#if reviewSuggestion}
-        <ContinueCard
-          href={reviewSuggestion.href}
-          icon={reviewSuggestion.icon}
-          title={reviewSuggestion.title}
-          subtitle={reviewSuggestion.subtitle}
-          variant={reviewSuggestion.variant}
-        />
+        <div class={dailyChallengeSuggestion || generatedChallengeHref || challengeGenerating ? 'mt-3' : ''}>
+          <ContinueCard
+            href={reviewSuggestion.href}
+            icon={reviewSuggestion.icon}
+            title={reviewSuggestion.title}
+            subtitle={reviewSuggestion.subtitle}
+            variant={reviewSuggestion.variant}
+          />
+        </div>
       {/if}
-      
+
       <!-- Other activity suggestions -->
       {#if otherSuggestions.length > 0}
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 mt-3">

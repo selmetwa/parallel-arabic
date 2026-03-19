@@ -169,6 +169,7 @@
 		if (storyXpAwarded || isAwardingStoryXp) return;
 		isAwardingStoryXp = true;
 		const storyId = (data as any).storyData?.id;
+		const challengeId = (data as any).challengeId ?? null;
 		try {
 			const res = await fetch('/api/award-xp', {
 				method: 'POST',
@@ -178,10 +179,34 @@
 			const result = await res.json();
 			if (result.success) {
 				storyXpAwarded = true;
-				userXp.set(result.newTotalXp);
-				if (result.leveledUp) userLevel.set(result.newLevel);
-				const title = LEVEL_TIERS.find((t) => t.level === result.newLevel)?.title;
-				showXpToast(result.xpAwarded, result.leveledUp, result.newLevel, title);
+				let totalXpAwarded = result.xpAwarded;
+				let finalTotalXp = result.newTotalXp;
+				let finalLevel = result.newLevel;
+				let didLevelUp = result.leveledUp;
+
+				// If this is a daily challenge, award the bonus XP
+				if (challengeId) {
+					try {
+						const bonusRes = await fetch(`/api/daily-challenge/${challengeId}/complete`, {
+							method: 'POST',
+							headers: { 'Content-Type': 'application/json' }
+						});
+						const bonusResult = await bonusRes.json();
+						if (bonusResult.success) {
+							totalXpAwarded += bonusResult.xpAwarded;
+							finalTotalXp = bonusResult.newTotalXp;
+							finalLevel = bonusResult.newLevel;
+							didLevelUp = didLevelUp || bonusResult.leveledUp;
+						}
+					} catch {
+						// bonus XP failure is non-critical
+					}
+				}
+
+				userXp.set(finalTotalXp);
+				if (didLevelUp) userLevel.set(finalLevel);
+				const title = LEVEL_TIERS.find((t) => t.level === finalLevel)?.title;
+				showXpToast(totalXpAwarded, didLevelUp, finalLevel, title);
 			} else if (result.alreadyCompleted) {
 				storyXpAwarded = true;
 			}
