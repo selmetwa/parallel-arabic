@@ -29,6 +29,8 @@ export const load: PageServerLoad = async ({ parent }) => {
   let wordsDueForReviewCount = 0;
   let totalSavedWordsCount = 0;
   let inProgressGame: { id: string; dialect: string; category: string; game_mode: string; current_index: number; total_questions: number; score: number } | null = null;
+  let dailyChallenge: { id: string; challenge_type: string; story_id: string | null; completed: boolean; bonus_xp: number } | null = null;
+  let shouldGenerateChallenge = false;
 
   // Use user data from parent() - already fetched in hooks.server.ts!
   // This eliminates a duplicate database query (~100-150ms saved)
@@ -43,9 +45,12 @@ export const load: PageServerLoad = async ({ parent }) => {
     const userId = user.id;
     const now = Date.now();
 
+    const todayDate = new Date();
+    const todayMidnight = Date.UTC(todayDate.getUTCFullYear(), todayDate.getUTCMonth(), todayDate.getUTCDate());
+
     try {
       // Run all count queries in PARALLEL instead of sequential (~50-100ms saved)
-      const [totalResult, dueResult, gameResult] = await Promise.all([
+      const [totalResult, dueResult, gameResult, challengeResult] = await Promise.all([
         supabase
           .from('saved_word')
           .select('*', { count: 'exact', head: true })
@@ -63,7 +68,13 @@ export const load: PageServerLoad = async ({ parent }) => {
           .eq('status', 'in_progress')
           .order('last_played_at', { ascending: false })
           .limit(1)
-          .single()
+          .single(),
+        supabase
+          .from('daily_challenge')
+          .select('id, challenge_type, story_id, completed, bonus_xp')
+          .eq('user_id', userId)
+          .eq('challenge_date', todayMidnight)
+          .maybeSingle()
       ]);
 
       if (!totalResult.error && totalResult.count !== null) {
@@ -75,6 +86,12 @@ export const load: PageServerLoad = async ({ parent }) => {
       if (!gameResult.error && gameResult.data) {
         inProgressGame = gameResult.data;
       }
+      if (!challengeResult.error && challengeResult.data) {
+        dailyChallenge = challengeResult.data;
+      } else if (!challengeResult.error && !challengeResult.data) {
+        // No challenge yet today — trigger lazy generation on the client
+        shouldGenerateChallenge = true;
+      }
     } catch (error) {
       console.error('Error fetching word counts:', error);
     }
@@ -85,6 +102,22 @@ export const load: PageServerLoad = async ({ parent }) => {
 
   // Build dynamic activity suggestions based on user's stats
   const suggestions: ActivitySuggestion[] = [];
+
+  // Priority 0: Daily challenge (highest priority — shown above everything else)
+  if (dailyChallenge && !dailyChallenge.completed) {
+    const challengeHref = dailyChallenge.challenge_type === 'story' && dailyChallenge.story_id
+      ? `/generated_story/${dailyChallenge.story_id}?challenge=${dailyChallenge.id}`
+      : `/challenge/${dailyChallenge.id}`;
+    suggestions.push({
+      id: 'daily-challenge',
+      href: challengeHref,
+      icon: '⭐',
+      title: 'Daily Challenge',
+      subtitle: `Complete today's ${dailyChallenge.challenge_type === 'story' ? '5-sentence story' : '3-sentence'} challenge for +${dailyChallenge.bonus_xp} bonus XP`,
+      variant: 'amber',
+      priority: 11
+    });
+  }
 
   // Priority 1: Words due for review (highest priority if they have words)
   if (cappedReviewCount > 0) {
@@ -185,7 +218,8 @@ export const load: PageServerLoad = async ({ parent }) => {
     totalStoriesViewed,
     totalShortsViewed,
     currentStreak,
-    suggestions
+    suggestions,
+    shouldGenerateChallenge
   };
 };
 
