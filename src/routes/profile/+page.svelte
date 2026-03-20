@@ -3,6 +3,7 @@
   import Button from '$lib/components/Button.svelte';
   import ContributionGraph from '$lib/components/ContributionGraph.svelte';
   import ReviewWordsStats from './components/ReviewWordsStats.svelte';
+  import Achievements from './components/Achievements.svelte';
   import type { PageData } from './$types';
   import { goto, invalidateAll, invalidate } from '$app/navigation';
   import { clearUserLocalStorage } from '$lib/helpers/clear-user-data';
@@ -275,6 +276,11 @@
         </div>
       </div>
       
+    <!-- Achievements Section -->
+     <div class="py-4">
+      <Achievements achievements={data.achievements} />
+
+     </div>
       <!-- Review Words Stats -->
       <ReviewWordsStats wordStats={data.wordStats} />
       
@@ -287,6 +293,7 @@
         <ContributionGraph />
       </div>
     </section>
+
 
     <!-- Settings Section -->
     <section>
