@@ -112,8 +112,8 @@
 
 	// Display mode and toggles
 	let mode = $state(Mode.Condensed);
-	let showEnglish = $state(true);
-	let showTransliteration = $state(true);
+	let showEnglish = $state(false);
+	let showTransliteration = $state(false);
 
 	// Per-sentence overrides (null = follow global)
 	let sentenceOverrides = $state<Record<number, { english: boolean; transliteration: boolean }>>({});

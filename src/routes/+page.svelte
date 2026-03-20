@@ -179,7 +179,7 @@
   <div class="mb-12">
     <SectionHeader title="Practice" />
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <Card
         href="/learn/game"
         icon="🎮"
@@ -198,12 +198,12 @@
         title="Sentences"
         description="Drill sentence structures and grammar patterns in context."
       />
-      <Card
+      <!-- <Card
         href="/speak"
         icon="🎤"
         title="Speak"
         description="Practice pronunciation by speaking sentences and get instant feedback."
-      />
+      /> -->
     </div>
   </div>
 

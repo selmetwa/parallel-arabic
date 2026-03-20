@@ -1,6 +1,24 @@
 -- WARNING: This schema is for context only and is not meant to be run.
 -- Table order and constraints may not be valid for execution.
 
+CREATE TABLE public.daily_challenge (
+  id text NOT NULL,
+  user_id text NOT NULL,
+  challenge_date bigint NOT NULL,
+  challenge_type text NOT NULL CHECK (challenge_type = ANY (ARRAY['story'::text, 'sentence'::text])),
+  dialect text NOT NULL,
+  story_id text,
+  sentences jsonb,
+  used_word_ids jsonb,
+  bonus_xp integer NOT NULL DEFAULT 10,
+  completed boolean DEFAULT false,
+  completed_at bigint,
+  xp_awarded boolean DEFAULT false,
+  created_at bigint NOT NULL,
+  CONSTRAINT daily_challenge_pkey PRIMARY KEY (id),
+  CONSTRAINT daily_challenge_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.user(id),
+  CONSTRAINT daily_challenge_story_fkey FOREIGN KEY (story_id) REFERENCES public.generated_story(id)
+);
 CREATE TABLE public.email_verification_token (
   id character varying NOT NULL,
   user_id character varying NOT NULL,
@@ -190,6 +208,7 @@ CREATE TABLE public.user (
   shorts_viewed_this_week integer DEFAULT 0,
   total_xp integer NOT NULL DEFAULT 0,
   current_level integer NOT NULL DEFAULT 1,
+  email_notifications_enabled boolean NOT NULL DEFAULT true,
   CONSTRAINT user_pkey PRIMARY KEY (id)
 );
 CREATE TABLE public.user_daily_activity (

@@ -64,17 +64,17 @@
           { label: 'Game', href: '/learn/game', icon: '🎮' },
           { label: 'Sentences', href: '/sentences', icon: '📝' },
           { label: 'Stories', href: '/stories', icon: '📖' },
-          { label: 'Speak', href: '/speak', icon: '🎤' },
+          // { label: 'Speak', href: '/speak', icon: '🎤' },
         ]
       },
-      {
-        title: 'Explore',
-        items: [
-          // { label: 'Videos', href: '/videos', icon: '📺' },
-          // { label: 'Shorts', href: '/videos-new', icon: '🎬' },
-          { label: 'Tutor', href: '/tutor', icon: '💬' }
-        ]
-      },
+      // {
+      //   title: 'Explore',
+      //   items: [
+      //     // { label: 'Videos', href: '/videos', icon: '📺' },
+      //     // { label: 'Shorts', href: '/videos-new', icon: '🎬' },
+      //     { label: 'Tutor', href: '/tutor', icon: '💬' }
+      //   ]
+      // },
       {
         title: 'General',
         items: [
