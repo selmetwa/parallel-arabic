@@ -16,7 +16,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
   try {
     const response = await generateContentWithRetry(ai, {
-      model: "gemini-3-flash-preview",
+      model: "gemini-3.1-pro-preview",
       contents: data.question
     });
   

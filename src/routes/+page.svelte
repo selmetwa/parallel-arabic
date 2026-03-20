@@ -208,10 +208,10 @@
   </div>
 
   <!-- Explore Section -->
-  <div>
-    <SectionHeader title="Explore" />
+  <!-- <div> -->
+    <!-- <SectionHeader title="Explore" /> -->
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
       <Card
         href="/videos-new"
@@ -233,6 +233,6 @@
         title="Tutor"
         description="Practice conversation in any dialect with an intelligent AI tutor."
       />
-    </div>
-  </div>
+    </div> -->
+  <!-- </div> -->
 </section>

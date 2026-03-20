@@ -434,7 +434,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 	try {
 		const storySchema = createStorySchema(storyType === 'conversation');
 		const response = await generateContentWithRetry(ai, {
-			model: 'gemini-3-flash-preview',
+			model: 'gemini-3.1-pro-preview',
 			contents: question,
 			// @ts-expect-error - generationConfig is valid but types may be outdated
 			generationConfig: {

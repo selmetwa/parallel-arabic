@@ -8,33 +8,72 @@
     paths: string[]; // Additional paths that should activate this nav item
   }
 
+  // const navItems: NavItem[] = [
+  //   {
+  //     label: 'Learn',
+  //     href: '/learn',
+  //     icon: '📚',
+  //     paths: ['/learn', '/alphabet', '/lessons', '/review', '/vocabulary']
+  //   },
+  //   {
+  //     label: 'Practice',
+  //     href: '/practice',
+  //     icon: '📝',
+  //     paths: ['/practice', '/stories', '/sentences', '/speak', '/learn/game']
+  //   },
+  //   // {
+  //   //   label: 'Explore',
+  //   //   href: '/explore',
+  //   //   icon: '🌍',
+  //   //   // paths: ['/explore', '/videos', '/videos-new', '/tutor']
+  //   //   paths: ['/explore', '/tutor']
+  //   // },
+  //   {
+  //     label: 'Profile',
+  //     href: '/profile',
+  //     icon: '👤',
+  //     paths: ['/profile', '/settings']
+  //   }
+  // ];
+
   const navItems: NavItem[] = [
     {
-      label: 'Learn',
-      href: '/learn',
+      label: 'Review',
+      href: '/review',
+      icon: '🧠',
+      paths: ['/review']
+    },
+    {
+      label: 'Lessons',
+      href: '/lessons',
       icon: '📚',
-      paths: ['/learn', '/alphabet', '/lessons', '/review', '/vocabulary']
+      paths: ['/lessons']
     },
     {
-      label: 'Practice',
-      href: '/practice',
+      label: 'Sentences',
+      href: '/sentences',
       icon: '📝',
-      paths: ['/practice', '/stories', '/sentences', '/speak', '/learn/game']
+      paths: ['/sentences']
     },
     {
-      label: 'Explore',
-      href: '/explore',
-      icon: '🌍',
-      paths: ['/explore', '/videos', '/videos-new', '/tutor']
+      label: 'Stories',
+      href: '/stories',
+      icon: '📖',
+      paths: ['/stories']
+    },
+    {
+      label: 'Game',
+      href: '/learn/game',
+      icon: '🎮',
+      paths: ['/learn/game']
     },
     {
       label: 'Profile',
       href: '/profile',
       icon: '👤',
-      paths: ['/profile', '/settings']
+      paths: ['/profile']
     }
   ];
-
   function isActive(item: NavItem): boolean {
     const currentPath = $page.url.pathname;
     return item.paths.some(path => currentPath.startsWith(path));
