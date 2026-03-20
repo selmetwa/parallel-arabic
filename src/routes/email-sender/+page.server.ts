@@ -2,7 +2,7 @@ import { redirect } from '@sveltejs/kit';
 import type { PageServerLoad, Actions } from './$types';
 import { supabase } from '$lib/supabaseClient';
 import { ADMIN_ID } from '$env/static/private';
-import { sendEmail } from '$lib/server/email';
+import { sendEmail, sendStreakReminderEmail } from '$lib/server/email';
 
 export const load: PageServerLoad = async ({ locals }) => {
 	// @ts-expect-error - auth property exists on locals at runtime
@@ -125,6 +125,40 @@ export const actions: Actions = {
         success: false,
         error: 'Failed to send email. Please try again.'
       };
+    }
+  },
+
+  sendStreakReminder: async ({ request, locals }) => {
+    // @ts-expect-error - auth property exists on locals at runtime
+    const session = await locals.auth.validate();
+
+    if (!session?.sessionId) {
+      throw redirect(302, '/login');
+    }
+
+    const userId = session && session.user.id || null;
+
+    if (ADMIN_ID !== userId) {
+      throw redirect(302, '/');
+    }
+
+    const data = await request.formData();
+    const email = data.get('streakEmail') as string;
+    const streakCount = parseInt(data.get('streakCount') as string, 10);
+
+    if (!email) {
+      return { success: false, error: 'Email is required' };
+    }
+    if (isNaN(streakCount) || streakCount < 1) {
+      return { success: false, error: 'Streak count must be a positive number' };
+    }
+
+    try {
+      await sendStreakReminderEmail(email, streakCount, 'test-user');
+      return { success: true, message: `Streak reminder sent to ${email}` };
+    } catch (error) {
+      console.error('Streak reminder error:', error);
+      return { success: false, error: 'Failed to send streak reminder email.' };
     }
   }
 };

@@ -4,12 +4,13 @@ import { sections } from '$lib/constants/sections';
 import { darijaSections } from '$lib/constants/darija-sections';
 import { levantineSections } from '$lib/constants/levantine-sections';
 import { fushaSections } from '$lib/constants/fusha-sections';
+import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
 
 export const load: PageServerLoad = async ({ url, parent }) => {
-  const { isSubscribed } = await parent();
+  const { isSubscribed, user } = await parent();
 
   // Get query parameters for filtering
-  const dialectFilter = url.searchParams.get('dialect') || 'all';
+  const dialectFilter = url.searchParams.get('dialect') || getDefaultDialect(user);
   const categoryFilter = url.searchParams.get('category') || 'all';
   const searchQuery = url.searchParams.get('search') || '';
 

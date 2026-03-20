@@ -10,7 +10,7 @@
   let { isOpen = false, handleCloseDrawer = () => {}, children } = $props();
 </script>
 
-<div class="{`drawer ${isOpen ? 'open' : ''} bg-tile-300 border border-l border-tile-400`}">
+<div class="{`drawer ${isOpen ? 'open' : ''} bg-tile-300 border border-l border-tile-400 z-[100]`}">
   <!-- Your drawer content goes here -->
   {@render children?.()}
 </div>
@@ -30,7 +30,7 @@
     top: 0;
     right: calc(var(--width) * -1); /* Start off-screen */
     height: 100%;
-    z-index: 10;
+    z-index: 100;
     border-left: 4px solid var(--tile6);
     transition: right 0.3s ease-in-out;
   }

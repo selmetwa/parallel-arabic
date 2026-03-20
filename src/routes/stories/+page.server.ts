@@ -1,5 +1,6 @@
 import { getStoriesPaginated } from '$lib/helpers/story-helpers';
 import { BLOCKED_STORY_IDS } from '$lib/constants/stories/blocked';
+import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
 
 const PAGE_SIZE = 12;
 
@@ -7,8 +8,11 @@ export const load = async ({ parent, locals }) => {
   // Get session and subscription status from layout
   const { session, isSubscribed, user } = await parent();
 
-  // Fetch initial page of stories with pagination
-  const storiesResult = await getStoriesPaginated(null, PAGE_SIZE);
+  // Default filter to the user's target dialect (or egyptian-arabic)
+  const initialDialect = getDefaultDialect(user);
+
+  // Fetch initial page of stories with pagination, filtered by user's dialect
+  const storiesResult = await getStoriesPaginated(null, PAGE_SIZE, { dialect: initialDialect });
 
   let initialStories: object[] = [];
   let nextCursor: string | null = null;
@@ -49,7 +53,8 @@ export const load = async ({ parent, locals }) => {
     nextCursor,
     hasMore,
     user,
-    completedStoryIds
+    completedStoryIds,
+    initialDialect
   };
 };
 
