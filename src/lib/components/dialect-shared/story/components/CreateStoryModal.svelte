@@ -739,7 +739,7 @@
 				{:else}
 					<!-- Original Generation Mode -->
 				<!-- Creation Mode Selection -->
-				<div class="flex flex-col gap-3 bg-tile-400/30 p-4 rounded-xl border border-tile-500/50">
+				<!-- <div class="flex flex-col gap-3 bg-tile-400/30 p-4 rounded-xl border border-tile-500/50">
 					<p class="text-sm font-bold text-text-300">Choose Creation Method</p>
 					<div class="flex gap-4">
 						<RadioButton
@@ -768,7 +768,7 @@
 							Transcribe an existing Arabic audio file into an interactive lesson.
 						{/if}
 					</p>
-				</div>
+				</div> -->
 
 				{#if creationMode === 'upload' && !useReviewWordsOnly}
 					<!-- Audio Upload Section -->

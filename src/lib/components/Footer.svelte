@@ -40,6 +40,7 @@
           <li><a href="/videos-new" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Videos</a></li>
           <li><a href="/videos" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Shorts</a></li>
           <li><a href="/tutor" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Tutor</a></li>
+          <li><a href="/speak" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Speak</a></li>
         </ul>
       </div>
     </div>

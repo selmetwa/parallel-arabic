@@ -9,6 +9,9 @@
 	let subject = $state('');
 	let message = $state('');
 	let isLoading = $state(false);
+	let streakEmail = $state('');
+	let streakCount = $state(7);
+	let isStreakLoading = $state(false);
 
 	function getRecipientCount() {
 		if (recipientType === 'all') return data.userCount;
@@ -203,6 +206,58 @@
 					{/if}
 				</button>
 			</div>
+		</form>
+	</div>
+
+	<!-- Streak Reminder Test -->
+	<div class="bg-tile-300 border-2 border-tile-600 rounded-lg overflow-hidden">
+		<div class="p-6 border-b border-tile-600">
+			<h2 class="text-2xl font-bold text-text-300">Test Streak Reminder</h2>
+			<p class="text-text-200 mt-1">Send a test streak reminder email using the real template</p>
+		</div>
+		<form
+			method="POST"
+			action="?/sendStreakReminder"
+			use:enhance={() => {
+				isStreakLoading = true;
+				return async ({ update }) => {
+					await update();
+					isStreakLoading = false;
+				};
+			}}
+			class="p-6 flex flex-col sm:flex-row gap-4 items-end"
+		>
+			<div class="flex-1 space-y-2">
+				<label for="streakEmail" class="block text-sm font-medium text-text-300">Recipient Email</label>
+				<input
+					type="email"
+					id="streakEmail"
+					name="streakEmail"
+					bind:value={streakEmail}
+					placeholder="you@example.com"
+					required
+					class="w-full px-3 py-2 bg-tile-400 border border-tile-600 rounded-md text-text-300 placeholder-text-200 focus:outline-none focus:ring-2 focus:ring-brand"
+				/>
+			</div>
+			<div class="space-y-2">
+				<label for="streakCount" class="block text-sm font-medium text-text-300">Streak Count</label>
+				<input
+					type="number"
+					id="streakCount"
+					name="streakCount"
+					bind:value={streakCount}
+					min="1"
+					required
+					class="w-24 px-3 py-2 bg-tile-400 border border-tile-600 rounded-md text-text-300 focus:outline-none focus:ring-2 focus:ring-brand"
+				/>
+			</div>
+			<button
+				type="submit"
+				disabled={isStreakLoading || !streakEmail.trim()}
+				class="px-6 py-2 bg-brand text-white font-medium rounded-md hover:bg-brand/90 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+			>
+				{isStreakLoading ? 'Sending...' : 'Send Test 🔥'}
+			</button>
 		</form>
 	</div>
 

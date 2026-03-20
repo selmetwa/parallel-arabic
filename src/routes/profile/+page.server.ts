@@ -28,7 +28,7 @@ export const load = async ({ locals, parent }) => {
   // Fetch user's onboarding data and subscription info
   const { data: userData, error: userError } = await supabase
     .from('user')
-    .select('target_dialect, learning_reason, proficiency_level, onboarding_completed, daily_review_limit, subscriber_id, subscription_end_date')
+    .select('target_dialect, learning_reason, proficiency_level, onboarding_completed, daily_review_limit, subscriber_id, subscription_end_date, email_notifications_enabled')
     .eq('id', userId)
     .single();
 
@@ -162,6 +162,7 @@ export const load = async ({ locals, parent }) => {
     proficiencyLevel: userData?.proficiency_level || null,
     onboardingCompleted: userData?.onboarding_completed || false,
     dailyReviewLimit: userData?.daily_review_limit ?? 20,
+    emailNotificationsEnabled: userData?.email_notifications_enabled ?? true,
     wordStats,
     user, // Include user for stats component
     subscriptionDetails,
@@ -212,6 +213,45 @@ export const actions: Actions = {
 			};
 		} catch (e) {
 			console.error('Exception updating target_dialect:', e);
+			return {
+				success: false,
+				error: 'Something went wrong'
+			};
+		}
+	},
+	updateEmailNotifications: async ({ request, locals: { safeGetSession } }) => {
+		const { session, user } = await safeGetSession();
+
+		if (!session || !user) {
+			return {
+				success: false,
+				error: 'You must be logged in to update notification settings'
+			};
+		}
+
+		const formData = await request.formData();
+		const enabled = formData.get('email_notifications_enabled') === 'true';
+
+		try {
+			const { error: updateError } = await supabase
+				.from('user')
+				.update({ email_notifications_enabled: enabled })
+				.eq('id', user.id);
+
+			if (updateError) {
+				console.error('Error updating email_notifications_enabled:', updateError);
+				return {
+					success: false,
+					error: 'Failed to update notification settings'
+				};
+			}
+
+			return {
+				success: true,
+				emailNotificationsEnabled: enabled
+			};
+		} catch (e) {
+			console.error('Exception updating email_notifications_enabled:', e);
 			return {
 				success: false,
 				error: 'Something went wrong'
