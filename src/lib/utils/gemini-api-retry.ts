@@ -21,7 +21,7 @@ const DEFAULT_OPTIONS: Required<RetryOptions> = {
 	maxDelayMs: 16000, // Max 16 seconds delay
 	backoffMultiplier: 2, // Double the delay each time
 	retryableStatusCodes: [503, 500, 502, 504, 429], // Service Unavailable, Internal Server Error, Bad Gateway, Gateway Timeout, Too Many Requests
-	fallbackModels: ['gemini-2.5-flash', 'gemini-2.0-flash'] // Fallback models to use if all retries fail
+	fallbackModels: ['gemini-3-flash-preview','gemini-2.5-flash', 'gemini-2.0-flash'] // Fallback models to use if all retries fail
 };
 
 /**

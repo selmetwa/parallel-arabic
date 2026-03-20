@@ -5,7 +5,7 @@
 
 <footer class="w-full bg-gradient-to-b from-tile-500 to-tile-400 border-t-2 border-tile-600 mt-auto relative z-0 shadow-2xl">
   <div class="max-w-7xl mx-auto px-6 py-12">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
       <div class="space-y-4">
         <h2 class="text-text-100 font-semibold text-lg mb-3 tracking-wide">Parallel Arabic</h2>
         <p class="text-text-300 text-sm leading-relaxed max-w-xs">
@@ -32,6 +32,14 @@
           <li><a href="/faq" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">FAQ</a></li>
           <li><a href="https://github.com/selmetwa/parallel-arabic" target="_blank" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Source Code</a></li>
           <li><a href="/sitemap.xml" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Sitemap</a></li>
+        </ul>
+      </div>
+      <div class="space-y-4">
+        <h3 class="text-text-100 font-semibold text-base mb-3 tracking-wide">Experimental</h3>
+        <ul class="space-y-2 text-text-300 text-sm">
+          <li><a href="/videos-new" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Videos</a></li>
+          <li><a href="/videos" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Shorts</a></li>
+          <li><a href="/tutor" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Tutor</a></li>
         </ul>
       </div>
     </div>

@@ -1,8 +1,20 @@
 import { toast } from 'svelte-sonner';
 import { goto } from '$app/navigation';
+import { speakArabic } from '$lib/helpers/speak-arabic';
 
 // Global toast tracking for better cleanup
 let currentVideoProcessingToastId: string | number | null = null;
+
+const PRAISE_PHRASES = ['جامد', 'شاطر', 'برافو', 'كويس أوي', 'حلو أوي', 'ممتاز'];
+let lastPraisedAt = 0;
+
+function playXpPraise() {
+  const now = Date.now();
+  if (now - lastPraisedAt < 2500) return;
+  lastPraisedAt = now;
+  const phrase = PRAISE_PHRASES[Math.floor(Math.random() * PRAISE_PHRASES.length)];
+  speakArabic(phrase, 'egyptian-arabic').catch(() => {});
+}
 
 /**
  * Toast helper for sentence generation
@@ -389,6 +401,7 @@ export function showWordImportErrorToast(toastId: string | number, error: string
  * Toast helper for XP earned
  */
 export function showXpToast(xpAwarded: number, leveledUp: boolean, newLevel?: number, newLevelTitle?: string) {
+	playXpPraise();
 	if (leveledUp && newLevel && newLevelTitle) {
 		toast.success(`Level Up! Lv.${newLevel}: ${newLevelTitle}`, {
 			description: `+${xpAwarded} XP earned`,

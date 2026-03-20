@@ -1,5 +1,20 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import AchievementBadge from '../profile/components/AchievementBadge.svelte';
+	import { ACHIEVEMENT_DEFINITIONS, TIER_META } from '$lib/config/achievements';
+	import type { AchievementCategory } from '$lib/config/achievements';
+
+	const CATEGORIES: AchievementCategory[] = ['sentences', 'stories', 'lessons', 'reviews', 'games', 'streak'];
+	const TIERS = ['bronze', 'silver', 'gold', 'diamond'] as const;
+
+	const categoryLabels: Record<AchievementCategory, string> = {
+		sentences: '📝 Sentences',
+		stories:   '📖 Stories',
+		lessons:   '🎓 Lessons',
+		reviews:   '🧠 Reviews',
+		games:     '🎮 Games',
+		streak:    '🔥 Streak',
+	};
 
 	let { data }: { data: PageData } = $props();
 
@@ -499,6 +514,39 @@
 					{/each}
 				</tbody>
 			</table>
+		</div>
+	</div>
+
+	<!-- Achievement Previewer -->
+	<div class="bg-tile-300 border-2 border-tile-600 rounded-lg p-6">
+		<h2 class="text-2xl font-bold text-text-300 mb-6">🏆 Achievement Previewer</h2>
+		<div class="space-y-6">
+			{#each CATEGORIES as category}
+				{@const defs = ACHIEVEMENT_DEFINITIONS.filter(d => d.category === category)}
+				<div class="flex items-center gap-6">
+					<span class="w-32 shrink-0 text-sm font-semibold text-text-200">{categoryLabels[category]}</span>
+					<div class="flex gap-4">
+						{#each TIERS as tier}
+							{@const def = defs.find(d => d.tier === tier)}
+							{#if def}
+								<div class="text-center">
+									<div class="w-16 h-16">
+										<AchievementBadge
+											category={category}
+											tier={tier}
+											earned={true}
+											name={def.name}
+											description={def.name}
+										/>
+									</div>
+									<p class="text-xs text-text-200 mt-1">{TIER_META[tier].label}</p>
+									<p class="text-xs text-text-300 font-medium">{def.threshold}</p>
+								</div>
+							{/if}
+						{/each}
+					</div>
+				</div>
+			{/each}
 		</div>
 	</div>
 </div>

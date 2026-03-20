@@ -32,7 +32,7 @@ export async function callGeminiWithSchema<T>(
 	options: GeminiCallOptions = {}
 ): Promise<T> {
 	const {
-		model = 'gemini-3-flash-preview',
+		model = 'gemini-3.1-pro-preview',
 		temperature = 0.7,
 		topP,
 		maxOutputTokens
