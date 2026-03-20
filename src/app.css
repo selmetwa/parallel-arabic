@@ -168,6 +168,10 @@
   font-weight: 100 500; /* Light to Medium weights use Regular */
   font-style: normal;
   font-display: swap;
+  unicode-range: U+0000-U+00FF, U+0100-U+024F, U+0250-U+02AF, U+0300-U+036F,
+    U+0370-U+03FF, U+0400-U+04FF, U+0600-U+06FF, U+0750-U+077F,
+    U+2000-U+206F, U+2070-U+209F, U+20A0-U+20CF, U+2100-U+214F,
+    U+FB50-U+FDFF, U+FE70-U+FEFF;
 }
 
 @font-face {
@@ -176,6 +180,10 @@
   font-weight: 600 900; /* SemiBold to Black weights use SemiBold */
   font-style: normal;
   font-display: swap;
+  unicode-range: U+0000-U+00FF, U+0100-U+024F, U+0250-U+02AF, U+0300-U+036F,
+    U+0370-U+03FF, U+0400-U+04FF, U+0600-U+06FF, U+0750-U+077F,
+    U+2000-U+206F, U+2070-U+209F, U+20A0-U+20CF, U+2100-U+214F,
+    U+FB50-U+FDFF, U+FE70-U+FEFF;
 }
 
 body {
