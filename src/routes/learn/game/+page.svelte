@@ -4,6 +4,7 @@
   import AuthModal from '$lib/components/AuthModal.svelte';
   import type { Dialect } from '$lib/types/index';
   import { fetchUserReviewWords } from '$lib/helpers/fetch-review-words';
+  import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
 
   let { data } = $props();
 
@@ -83,7 +84,7 @@
   }
 
   // Game setup state
-  let selectedDialect = $state<Dialect>('egyptian-arabic');
+  let selectedDialect = $state<Dialect>(getDefaultDialect(data.user) as Dialect);
   let selectedCategory = $state('verbs');
   let selectedMode = $state<'multiple-choice' | 'listening' | 'speaking'>('multiple-choice');
   let useCustomWords = $state(false);
@@ -320,26 +321,9 @@
   {/if}
 
   <div class="space-y-8">
-    <!-- Dialect Selection -->
-    <div class="bg-tile-400 border-2 border-tile-600 rounded-xl p-6">
-      <h2 class="text-xl font-bold text-text-300 mb-4">1. Select Dialect</h2>
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-        {#each data.dialects as dialect}
-          <button
-            onclick={() => selectedDialect = dialect as Dialect}
-            class="px-4 py-3 rounded-lg font-semibold transition-all text-sm {selectedDialect === dialect
-              ? 'bg-blue-500 text-white shadow-lg'
-              : 'bg-tile-300 text-text-200 md:hover:bg-tile-500 border-2 border-tile-600'}"
-          >
-            {getDialectLabel(dialect)}
-          </button>
-        {/each}
-      </div>
-    </div>
-
     <!-- Word Source Selection -->
     <div class="bg-tile-400 border-2 border-tile-600 rounded-xl p-6">
-      <h2 class="text-xl font-bold text-text-300 mb-4">2. Word Source</h2>
+      <h2 class="text-xl font-bold text-text-300 mb-4">1. Word Source</h2>
 
       <div class="flex gap-4 mb-4">
         <button
@@ -559,7 +543,7 @@
 
     <!-- Game Mode Selection -->
     <div class="bg-tile-400 border-2 border-tile-600 rounded-xl p-6">
-      <h2 class="text-xl font-bold text-text-300 mb-4">3. Game Mode</h2>
+      <h2 class="text-xl font-bold text-text-300 mb-4">2. Game Mode</h2>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
         {#each ['multiple-choice', 'listening', 'speaking'] as mode}
           <button

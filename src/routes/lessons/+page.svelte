@@ -1,12 +1,13 @@
 <script lang="ts">
 	import PaywallModal from '$lib/components/PaywallModal.svelte';
+	import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
 
 	let { data } = $props();
 	let isModalOpen = $state(false);
 
 	// Search and filter state
 	let searchQuery = $state('');
-	let filterDialect = $state<string>('all');
+	let filterDialect = $state<string>(getDefaultDialect(data.user));
 	let filterLevel = $state<string>('all');
 	let sortBy = $state<'newest' | 'oldest' | 'level' | 'title'>('newest');
 

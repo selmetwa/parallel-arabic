@@ -478,29 +478,6 @@
 				{#if useReviewWordsOnly}
 					<!-- Review Words Mode -->
 					
-					<!-- Dialect Selection -->
-					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
-						<div class="p-4 border-b border-tile-600">
-							<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
-								<span>🌍</span> Select Dialect
-							</h3>
-						</div>
-						<div class="p-6">
-							<div class="grid grid-cols-2 gap-3">
-								{#each dialectOptions as dialectOption}
-									<button
-										type="button"
-										onclick={() => selectedDialect = dialectOption.value}
-										class="flex items-center gap-3 p-4 rounded-lg border-2 transition-all duration-200 text-left {selectedDialect === dialectOption.value ? 'bg-tile-500 border-tile-400 shadow-md' : 'bg-tile-300 border-tile-600 hover:bg-tile-300/70 hover:border-tile-500'}"
-									>
-										<span class="text-2xl">{dialectOption.emoji}</span>
-										<span class="font-semibold text-text-300">{dialectOption.label}</span>
-									</button>
-								{/each}
-							</div>
-						</div>
-					</div>
-
 					<!-- Word Source Selection -->
 					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
 						<div class="p-4 border-b border-tile-600">
@@ -598,29 +575,6 @@
 				{:else}
 					<!-- Standard Generation Mode -->
 					
-					<!-- Dialect Selection -->
-					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
-						<div class="p-4 border-b border-tile-600">
-							<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
-								<span>🌍</span> Select Dialect
-							</h3>
-						</div>
-						<div class="p-6">
-							<div class="grid grid-cols-2 gap-3">
-								{#each dialectOptions as dialectOption}
-									<button
-										type="button"
-										onclick={() => selectedDialect = dialectOption.value}
-										class="flex items-center gap-3 p-4 rounded-lg border-2 transition-all duration-200 text-left {selectedDialect === dialectOption.value ? 'bg-tile-500 border-tile-400 shadow-md' : 'bg-tile-300 border-tile-600 hover:bg-tile-300/70 hover:border-tile-500'}"
-									>
-										<span class="text-2xl">{dialectOption.emoji}</span>
-										<span class="font-semibold text-text-300">{dialectOption.label}</span>
-									</button>
-								{/each}
-							</div>
-						</div>
-					</div>
-
 					<!-- Difficulty Selection -->
 					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
 						<div class="p-4 border-b border-tile-600">

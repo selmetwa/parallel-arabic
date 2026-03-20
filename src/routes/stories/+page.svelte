@@ -13,7 +13,7 @@
 
 	// Search and filter state
 	let searchQuery = $state('');
-	let filterDialect = $state<string>('all');
+	let filterDialect = $state<string>(data.initialDialect);
 	let filterDifficulty = $state<string>('all');
 	let sortBy = $state<'newest' | 'oldest' | 'difficulty' | 'title'>('newest');
 
@@ -203,6 +203,9 @@
 		...dialectOptions
 	];
 
+	// Show featured (Egyptian Arabic) stories only when the filter matches
+	let showFeaturedStories = $derived(filterDialect === 'all' || filterDialect === 'egyptian-arabic');
+
 	const difficultyOptions = [
 		{ value: 'all', label: 'All Difficulties' },
 		{ value: 'beginner', label: 'Beginner' },
@@ -256,105 +259,21 @@
 
 <section class="px-3 mt-6 sm:px-8 max-w-7xl mx-auto">
 	<div class="text-left mb-12">
-		<h1 class="text-3xl sm:text-4xl text-text-300 font-bold mb-2 tracking-tight">Stories</h1>
-		<p class="text-text-200 text-lg sm:text-xl leading-snug max-w-3xl">Improve your Arabic reading and listening comprehension skills with stories from all dialects.</p>
-		
-		<!-- Dialect Selection for Story Creation -->
-		<div class="mt-8 bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden max-w-2xl">
-			<div class="p-4 border-b border-tile-600">
-				<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
-					<span>✨</span> Create a New Story
-				</h3>
+		<div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+			<div>
+				<h1 class="text-3xl sm:text-4xl text-text-300 font-bold mb-2 tracking-tight">Stories</h1>
+				<p class="text-text-200 text-lg sm:text-xl leading-snug max-w-3xl">Improve your Arabic reading and listening comprehension skills with stories from all dialects.</p>
 			</div>
-			<div class="p-6">
-				<div class="mb-6">
-					<label for="dialect-select" class="block text-sm font-medium text-text-200 mb-3">Choose dialect:</label>
-					<div class="grid grid-cols-2 gap-3">
-						{#each dialectOptions as dialectOption}
-							<button
-								type="button"
-								onclick={() => selectedDialect = dialectOption.value}
-								class="flex items-center gap-3 p-4 rounded-lg border-2 transition-all duration-200 text-left {selectedDialect === dialectOption.value ? 'bg-tile-500 border-tile-400 shadow-md' : 'bg-tile-300 border-tile-600 hover:bg-tile-300/70 hover:border-tile-500'}"
-							>
-								<span class="text-2xl">{dialectOption.emoji}</span>
-								<span class="font-semibold text-text-300">{dialectOption.label}</span>
-							</button>
-						{/each}
-					</div>
-				</div>
-				<div class="flex justify-end">
-					<CreateStoryModal dialect={selectedDialect as any} data={data}></CreateStoryModal>
-				</div>
+			<div class="shrink-0">
+				<CreateStoryModal dialect={selectedDialect as any} data={data}></CreateStoryModal>
 			</div>
 		</div>
 	</div>
 	
-	<!-- Static Stories Section -->
-	<div class="mb-16">
-		<div class="flex items-center gap-4 mb-8">
-			<h2 class="text-2xl sm:text-3xl text-text-300 font-bold">Featured Stories</h2>
-			<div class="h-0.5 bg-tile-500 flex-1 opacity-50 rounded-full"></div>
-		</div>
-		
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-			{#each Object.entries(stories) as [key, value]}
-				{#if value.isPaywalled && !data.hasActiveSubscription}
-					<button onclick={openPaywallModal} class="group flex flex-col bg-tile-400 border-2 border-tile-600 rounded-xl p-8 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1 text-left w-full h-full">
-						<div class="flex justify-between items-start mb-4">
-							<div class="text-4xl">🔒</div>
-							<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium rounded-full bg-tile-500 text-text-300">
-								Egyptian Arabic
-							</span>
-						</div>
-						
-						<h3 class="text-2xl font-bold text-text-300 mb-3 group-hover:text-text-200 transition-colors leading-tight">
-							{value.story.title.english}
-						</h3>
-
-						<p class="text-text-200 text-base leading-relaxed opacity-90 group-hover:opacity-100 mb-4 line-clamp-3 flex-grow">
-							{value.description}
-						</p>
-						
-						<div class="flex items-center gap-4 pt-4 border-t border-tile-500/50 mt-auto text-sm text-text-200 font-medium opacity-80">
-							<div class="flex items-center gap-1.5">
-								<span>📝</span>
-								<span>{value.story.sentences.length} Sentences</span>
-							</div>
-						</div>
-					</button>
-				{:else}
-					<a href={`/egyptian-arabic/stories/${key}`} class="group flex flex-col bg-tile-400 border-2 border-tile-600 rounded-xl p-8 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1">
-						<div class="flex justify-between items-start mb-4">
-							<div class="text-4xl">📖</div>
-							<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium rounded-full bg-tile-500 text-text-300">
-								Egyptian Arabic
-							</span>
-						</div>
-						
-						<h3 class="text-2xl font-bold text-text-300 mb-3 group-hover:text-text-200 transition-colors leading-tight">
-							{value.story.title.english}
-						</h3>
-
-						<p class="text-text-200 text-base leading-relaxed opacity-90 group-hover:opacity-100 mb-4 line-clamp-3 flex-grow">
-							{value.description}
-						</p>
-						
-						<div class="flex items-center gap-4 pt-4 border-t border-tile-500/50 mt-auto text-sm text-text-200 font-medium opacity-80">
-							<div class="flex items-center gap-1.5">
-								<span>📝</span>
-								<span>{value.story.sentences.length} Sentences</span>
-							</div>
-						</div>
-					</a>
-				{/if}
-			{/each}
-		</div>
-	</div>
-	
-	<!-- User Generated Stories -->
+	<!-- All Stories -->
 	<div>
 		<div class="flex items-center gap-4 mb-8">
-			<h2 class="text-2xl sm:text-3xl text-text-300 font-bold">Community Stories</h2>
+			<h2 class="text-2xl sm:text-3xl text-text-300 font-bold">Stories</h2>
 			<div class="h-0.5 bg-tile-500 flex-1 opacity-50 rounded-full"></div>
 		</div>
 
@@ -433,19 +352,72 @@
 			</div>
 		</div>
 
-		{#if allLoadedStories.length === 0 && !isLoadingMore}
+		{#if allLoadedStories.length === 0 && !showFeaturedStories && !isLoadingMore}
 			<div class="text-center py-16 bg-tile-400/30 border-2 border-dashed border-tile-500 rounded-xl">
 				<div class="text-6xl mb-4 opacity-50">✍️</div>
-				<p class="text-text-200 text-xl mb-2">No community stories yet</p>
+				<p class="text-text-200 text-xl mb-2">No stories yet</p>
 				<p class="text-text-200 text-base opacity-70">Be the first to create one!</p>
 			</div>
-		{:else if filteredAndSortedStories.length === 0 && !isLoadingMore}
+		{:else if filteredAndSortedStories.length === 0 && !showFeaturedStories && !isLoadingMore}
 			<div class="text-center py-12">
 				<p class="text-xl text-text-200">No stories found matching your criteria.</p>
 				<p class="text-text-200 mt-2">Try adjusting your search or filters.</p>
 			</div>
 		{:else}
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+				{#if showFeaturedStories}
+					{#each Object.entries(stories) as [key, value]}
+						{#if value.isPaywalled && !data.hasActiveSubscription}
+							<button onclick={openPaywallModal} class="group flex flex-col bg-tile-400 border-2 border-tile-600 rounded-xl p-8 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1 text-left w-full h-full">
+								<div class="flex justify-between items-start mb-4">
+									<div class="text-4xl">🔒</div>
+									<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium rounded-full bg-tile-500 text-text-300">
+										Egyptian Arabic
+									</span>
+								</div>
+
+								<h3 class="text-2xl font-bold text-text-300 mb-3 group-hover:text-text-200 transition-colors leading-tight">
+									{value.story.title.english}
+								</h3>
+
+								<p class="text-text-200 text-base leading-relaxed opacity-90 group-hover:opacity-100 mb-4 line-clamp-3 flex-grow">
+									{value.description}
+								</p>
+
+								<div class="flex items-center gap-4 pt-4 border-t border-tile-500/50 mt-auto text-sm text-text-200 font-medium opacity-80">
+									<div class="flex items-center gap-1.5">
+										<span>📝</span>
+										<span>{value.story.sentences.length} Sentences</span>
+									</div>
+								</div>
+							</button>
+						{:else}
+							<a href={`/egyptian-arabic/stories/${key}`} class="group flex flex-col bg-tile-400 border-2 border-tile-600 rounded-xl p-8 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1">
+								<div class="flex justify-between items-start mb-4">
+									<div class="text-4xl">📖</div>
+									<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium rounded-full bg-tile-500 text-text-300">
+										Egyptian Arabic
+									</span>
+								</div>
+
+								<h3 class="text-2xl font-bold text-text-300 mb-3 group-hover:text-text-200 transition-colors leading-tight">
+									{value.story.title.english}
+								</h3>
+
+								<p class="text-text-200 text-base leading-relaxed opacity-90 group-hover:opacity-100 mb-4 line-clamp-3 flex-grow">
+									{value.description}
+								</p>
+
+								<div class="flex items-center gap-4 pt-4 border-t border-tile-500/50 mt-auto text-sm text-text-200 font-medium opacity-80">
+									<div class="flex items-center gap-1.5">
+										<span>📝</span>
+										<span>{value.story.sentences.length} Sentences</span>
+									</div>
+								</div>
+							</a>
+						{/if}
+					{/each}
+				{/if}
 				{#each filteredAndSortedStories as story}
 					{@const isCompleted = completedStoryIds.has(story.id)}
 					<a href={`/generated_story/${story.id}`} class="group relative flex flex-col bg-tile-400 border-2 rounded-xl p-8 shadow-lg hover:bg-tile-500 transition-all duration-300 hover:-translate-y-1 {isCompleted ? 'border-green-500/50 hover:border-green-500/80' : 'border-tile-600 hover:border-tile-500'}">

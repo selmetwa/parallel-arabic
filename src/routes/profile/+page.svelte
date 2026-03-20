@@ -21,6 +21,8 @@
   let dialectUpdateError = $state<string | null>(null);
   let reviewLimitUpdateSuccess = $state<string | null>(null);
   let reviewLimitUpdateError = $state<string | null>(null);
+  let emailNotificationsSuccess = $state<string | null>(null);
+  let emailNotificationsError = $state<string | null>(null);
   
   // Subscription cancellation state
   let isCancelling = $state(false);
@@ -421,6 +423,55 @@
                 {/if}
                 {#if reviewLimitUpdateError}
                   <div class="mt-2 text-red-400 text-sm font-medium" transition:fade>✗ {reviewLimitUpdateError}</div>
+                {/if}
+              </div>
+
+              <!-- Email Notifications -->
+              <div>
+                <label class="block text-sm font-medium text-text-200 mb-1">
+                  Streak reminder emails
+                </label>
+                <p class="text-xs text-text-200 mb-2 opacity-80">Receive an email when you're about to lose your streak</p>
+                <form
+                  method="POST"
+                  action="?/updateEmailNotifications"
+                  use:enhance={() => {
+                    emailNotificationsSuccess = null;
+                    emailNotificationsError = null;
+                    return async ({ result, update }) => {
+                      if (result.type === 'success' && result.data?.success) {
+                        await update();
+                        emailNotificationsSuccess = 'Notification settings updated!';
+                        setTimeout(() => emailNotificationsSuccess = null, 3000);
+                      } else if (result.type === 'failure') {
+                        await update();
+                        const errorMsg = result.data?.error;
+                        emailNotificationsError = typeof errorMsg === 'string' ? errorMsg : 'Failed to update';
+                      } else if (result.type === 'error') {
+                        await update();
+                        emailNotificationsError = result.error?.toString() || 'Failed to update';
+                      } else {
+                        await update();
+                      }
+                    };
+                  }}
+                  class="flex items-center gap-3"
+                >
+                  <input type="hidden" name="email_notifications_enabled" value={data.emailNotificationsEnabled ? 'false' : 'true'} />
+                  <button
+                    type="submit"
+                    class="relative inline-flex h-6 w-11 items-center rounded-full border-2 border-tile-600 transition-colors focus:outline-none focus:ring-2 focus:ring-tile-600 {data.emailNotificationsEnabled ? 'bg-green-600' : 'bg-tile-500'}"
+                    aria-label="Toggle streak reminder emails"
+                  >
+                    <span class="inline-block h-4 w-4 transform rounded-full bg-white shadow transition-transform {data.emailNotificationsEnabled ? 'translate-x-5' : 'translate-x-1'}"></span>
+                  </button>
+                  <span class="text-sm text-text-300">{data.emailNotificationsEnabled ? 'Enabled' : 'Disabled'}</span>
+                </form>
+                {#if emailNotificationsSuccess}
+                  <div class="mt-2 text-green-700 text-sm font-medium" transition:fade>✓ {emailNotificationsSuccess}</div>
+                {/if}
+                {#if emailNotificationsError}
+                  <div class="mt-2 text-red-400 text-sm font-medium" transition:fade>✗ {emailNotificationsError}</div>
                 {/if}
               </div>
 
