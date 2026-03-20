@@ -84,9 +84,9 @@ export const load: PageServerLoad = async ({ locals }) => {
 
    const users = usersWithSavedWords;
 
-  if (ADMIN_ID !== userId) {
-    throw redirect(302, '/')
-  }
+  // if (ADMIN_ID !== userId) {
+  //   throw redirect(302, '/')
+  // }
 
 	return {
 		user,

@@ -248,7 +248,7 @@ IMPORTANT:
 3. Do NOT include any explanations or other text.`;
 
 	const response = await generateContentWithRetry(ai, {
-		model: 'gemini-3-flash-preview',
+		model: 'gemini-3.1-pro-preview',
 		contents: prompt,
 		// @ts-expect-error - generationConfig is valid but types may be outdated
 		generationConfig: {
@@ -370,7 +370,7 @@ IMPORTANT:
 3. Do NOT include any explanations or other text.`;
 
 	const response = await generateContentWithRetry(ai, {
-		model: 'gemini-3-flash-preview',
+		model: 'gemini-3.1-pro-preview',
 		contents: prompt,
 		// @ts-expect-error - generationConfig is valid but types may be outdated
 		generationConfig: {

@@ -75,7 +75,7 @@ Return your response as a JSON object with this structure:
 	try {
 		const formattedVideoSchema = createFormattedVideoSchema();
 		const response = await generateContentWithRetry(ai, {
-			model: 'gemini-3-flash-preview',
+			model: 'gemini-3.1-pro-preview',
 			contents: fullPrompt,
 			// @ts-expect-error - generationConfig is valid but types may be outdated
 			generationConfig: {
