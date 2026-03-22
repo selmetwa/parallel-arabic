@@ -11,9 +11,10 @@
 		index?: number;
 		sentences: sentenceObjectItem[];
     resetSentences: () => void;
+    next: () => void;
 	}
 
-	let { index = 0, sentences, resetSentences }: Props = $props();
+	let { index = 0, sentences, resetSentences, next }: Props = $props();
 
 	let isCorrect = $state(false);
 	let isIncorrect = $state(false);

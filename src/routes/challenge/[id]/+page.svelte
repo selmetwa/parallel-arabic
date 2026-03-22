@@ -116,6 +116,7 @@
 			<SentenceBlock
 				sentence={sentences[currentIndex]}
 				resetSentences={advanceSentence}
+				next={advanceSentence}
 				{dialect}
 			/>
 		{/key}
