@@ -833,13 +833,23 @@
 		<main class="flex-grow bg-tile-300">
 			{#if mode === 'write'}
 				<section class="px-4 sm:px-8 max-w-7xl mx-auto py-8">
-					<SentenceBlock {sentence} {resetSentences} dialect={selectedDialect as Dialect} />
+					<SentenceBlock 
+					{sentence} 
+					{resetSentences} 
+					dialect={selectedDialect as Dialect} 
+					next={next}
+					 />
 				</section>
 			{/if}
 
 			{#if mode === 'quiz'}
 				<section class="px-4 sm:px-8 max-w-7xl mx-auto py-8">
-					<SentenceQuiz {sentences} {index} {resetSentences} />
+					<SentenceQuiz 
+					{sentences}
+					 {index} 
+					 {resetSentences} 
+					 {next}
+					 />
 				</section>
 			{/if}
 		</main>
