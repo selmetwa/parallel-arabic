@@ -1,0 +1,318 @@
+{
+  "slug": "wafi",
+  "arabic": "وافِق",
+  "transliteration": "wafiʔ",
+  "english": "to accept",
+  "wordId": "c8d9d50f-2043-4a51-8f39-978aad659374",
+  "rootLetters": "و ف ق",
+  "verbClass": "sound",
+  "notes": "Form III verb. Although the first root letter is a waw (weak), it behaves as a regular consonant, so it follows standard sound verb conjugation patterns.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "وافقت",
+          "transliteration": "wafiqt",
+          "english": "I accepted"
+        },
+        {
+          "person": "enta",
+          "arabic": "وافقت",
+          "transliteration": "wafiqt",
+          "english": "you (m) accepted"
+        },
+        {
+          "person": "enti",
+          "arabic": "وافقتي",
+          "transliteration": "wafiqti",
+          "english": "you (f) accepted"
+        },
+        {
+          "person": "howa",
+          "arabic": "وافق",
+          "transliteration": "wafaq",
+          "english": "he accepted"
+        },
+        {
+          "person": "heya",
+          "arabic": "وافقت",
+          "transliteration": "wafqit",
+          "english": "she accepted"
+        },
+        {
+          "person": "ehna",
+          "arabic": "وافقنا",
+          "transliteration": "wafiqna",
+          "english": "we accepted"
+        },
+        {
+          "person": "entu",
+          "arabic": "وافقتوا",
+          "transliteration": "wafiqtu",
+          "english": "you (pl) accepted"
+        },
+        {
+          "person": "homma",
+          "arabic": "وافقوا",
+          "transliteration": "wafqu",
+          "english": "they accepted"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما وافقتش",
+          "transliteration": "ma wafiqtish",
+          "english": "I did not accept"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما وافقتش",
+          "transliteration": "ma wafiqtish",
+          "english": "you (m) did not accept"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما وافقتيش",
+          "transliteration": "ma wafiqtiish",
+          "english": "you (f) did not accept"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما وافقش",
+          "transliteration": "ma wafaqsh",
+          "english": "he did not accept"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما وافقتش",
+          "transliteration": "ma wafqitsh",
+          "english": "she did not accept"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما وافقناش",
+          "transliteration": "ma wafiqnash",
+          "english": "we did not accept"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما وافقتوش",
+          "transliteration": "ma wafiqtuush",
+          "english": "you (pl) did not accept"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما وافقوش",
+          "transliteration": "ma wafquush",
+          "english": "they did not accept"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بوافق",
+          "transliteration": "bawafiq",
+          "english": "I accept"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتوافق",
+          "transliteration": "btiwafiq",
+          "english": "you (m) accept"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتوافقي",
+          "transliteration": "btiwafqi",
+          "english": "you (f) accept"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيوافق",
+          "transliteration": "biyiwafiq",
+          "english": "he accepts"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتوافق",
+          "transliteration": "btiwafiq",
+          "english": "she accepts"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنوافق",
+          "transliteration": "bniwafiq",
+          "english": "we accept"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتوافقوا",
+          "transliteration": "btiwafqu",
+          "english": "you (pl) accept"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيوافقوا",
+          "transliteration": "biyiwafqu",
+          "english": "they accept"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مابوافقش",
+          "transliteration": "mabawafiqsh",
+          "english": "I do not accept"
+        },
+        {
+          "person": "enta",
+          "arabic": "مابتوافقش",
+          "transliteration": "mabtiwafiqsh",
+          "english": "you (m) do not accept"
+        },
+        {
+          "person": "enti",
+          "arabic": "مابتوافقيش",
+          "transliteration": "mabtiwafqiish",
+          "english": "you (f) do not accept"
+        },
+        {
+          "person": "howa",
+          "arabic": "مابيوافقش",
+          "transliteration": "mabiyiwafiqsh",
+          "english": "he does not accept"
+        },
+        {
+          "person": "heya",
+          "arabic": "مابتوافقش",
+          "transliteration": "mabtiwafiqsh",
+          "english": "she does not accept"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مابنوافقش",
+          "transliteration": "mabniwafiqsh",
+          "english": "we do not accept"
+        },
+        {
+          "person": "entu",
+          "arabic": "مابتوافقوش",
+          "transliteration": "mabtiwafquush",
+          "english": "you (pl) do not accept"
+        },
+        {
+          "person": "homma",
+          "arabic": "مابيوافقوش",
+          "transliteration": "mabiyiwafquush",
+          "english": "they do not accept"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "هوافق",
+          "transliteration": "hawafiq",
+          "english": "I will accept"
+        },
+        {
+          "person": "enta",
+          "arabic": "هتوافق",
+          "transliteration": "hatiwafiq",
+          "english": "you (m) will accept"
+        },
+        {
+          "person": "enti",
+          "arabic": "هتوافقي",
+          "transliteration": "hatiwafqi",
+          "english": "you (f) will accept"
+        },
+        {
+          "person": "howa",
+          "arabic": "هيوافق",
+          "transliteration": "hayiwafiq",
+          "english": "he will accept"
+        },
+        {
+          "person": "heya",
+          "arabic": "هتوافق",
+          "transliteration": "hatiwafiq",
+          "english": "she will accept"
+        },
+        {
+          "person": "ehna",
+          "arabic": "هنوافق",
+          "transliteration": "haniwafiq",
+          "english": "we will accept"
+        },
+        {
+          "person": "entu",
+          "arabic": "هتوافقوا",
+          "transliteration": "hatiwafqu",
+          "english": "you (pl) will accept"
+        },
+        {
+          "person": "homma",
+          "arabic": "هيوافقوا",
+          "transliteration": "hayiwafqu",
+          "english": "they will accept"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مش هوافق",
+          "transliteration": "mish hawafiq",
+          "english": "I will not accept"
+        },
+        {
+          "person": "enta",
+          "arabic": "مش هتوافق",
+          "transliteration": "mish hatiwafiq",
+          "english": "you (m) will not accept"
+        },
+        {
+          "person": "enti",
+          "arabic": "مش هتوافقي",
+          "transliteration": "mish hatiwafqi",
+          "english": "you (f) will not accept"
+        },
+        {
+          "person": "howa",
+          "arabic": "مش هيوافق",
+          "transliteration": "mish hayiwafiq",
+          "english": "he will not accept"
+        },
+        {
+          "person": "heya",
+          "arabic": "مش هتوافق",
+          "transliteration": "mish hatiwafiq",
+          "english": "she will not accept"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مش هنوافق",
+          "transliteration": "mish haniwafiq",
+          "english": "we will not accept"
+        },
+        {
+          "person": "entu",
+          "arabic": "مش هتوافقوا",
+          "transliteration": "mish hatiwafqu",
+          "english": "you (pl) will not accept"
+        },
+        {
+          "person": "homma",
+          "arabic": "مش هيوافقوا",
+          "transliteration": "mish hayiwafqu",
+          "english": "they will not accept"
+        }
+      ]
+    }
+  }
+}

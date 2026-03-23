@@ -1,0 +1,318 @@
+{
+  "slug": "i3taraf",
+  "arabic": "اِعْترف",
+  "transliteration": "i3taraf",
+  "english": "to admit",
+  "wordId": "73e80d74-0a61-47cc-94da-bc832f6877e7",
+  "rootLetters": "ع ر ف",
+  "verbClass": "sound",
+  "notes": "Form VIII sound verb. Vowels in the final syllable often drop when a vowel-initial suffix is added (e.g., i3taraf + it -> i3tarfit).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "اعترفت",
+          "transliteration": "i3taraft",
+          "english": "I admitted"
+        },
+        {
+          "person": "enta",
+          "arabic": "اعترفت",
+          "transliteration": "i3taraft",
+          "english": "you (m) admitted"
+        },
+        {
+          "person": "enti",
+          "arabic": "اعترفتي",
+          "transliteration": "i3tarafti",
+          "english": "you (f) admitted"
+        },
+        {
+          "person": "howa",
+          "arabic": "اعترف",
+          "transliteration": "i3taraf",
+          "english": "he admitted"
+        },
+        {
+          "person": "heya",
+          "arabic": "اعترفت",
+          "transliteration": "i3tarfit",
+          "english": "she admitted"
+        },
+        {
+          "person": "ehna",
+          "arabic": "اعترفنا",
+          "transliteration": "i3tarafna",
+          "english": "we admitted"
+        },
+        {
+          "person": "entu",
+          "arabic": "اعترفتوا",
+          "transliteration": "i3taraftu",
+          "english": "you (pl) admitted"
+        },
+        {
+          "person": "homma",
+          "arabic": "اعترفوا",
+          "transliteration": "i3tarfu",
+          "english": "they admitted"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما اعترفتش",
+          "transliteration": "ma i3taraftish",
+          "english": "I did not admit"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما اعترفتش",
+          "transliteration": "ma i3taraftish",
+          "english": "you (m) did not admit"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما اعترفتيش",
+          "transliteration": "ma i3taraftiish",
+          "english": "you (f) did not admit"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما اعترفش",
+          "transliteration": "ma i3tarafsh",
+          "english": "he did not admit"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما اعترفتش",
+          "transliteration": "ma i3tarfitsh",
+          "english": "she did not admit"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما اعترفناش",
+          "transliteration": "ma i3tarafnaash",
+          "english": "we did not admit"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما اعترفتوش",
+          "transliteration": "ma i3taraftuush",
+          "english": "you (pl) did not admit"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما اعترفوش",
+          "transliteration": "ma i3tarfuush",
+          "english": "they did not admit"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بعترف",
+          "transliteration": "ba3tirif",
+          "english": "I admit"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتعترف",
+          "transliteration": "bti3tirif",
+          "english": "you (m) admit"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتعترفي",
+          "transliteration": "bti3tirfi",
+          "english": "you (f) admit"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيعترف",
+          "transliteration": "biyi3tirif",
+          "english": "he admits"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتعترف",
+          "transliteration": "bti3tirif",
+          "english": "she admits"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنعترف",
+          "transliteration": "bni3tirif",
+          "english": "we admit"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتعترفوا",
+          "transliteration": "bti3tirfu",
+          "english": "you (pl) admit"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيعترفوا",
+          "transliteration": "biyi3tirfu",
+          "english": "they admit"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما بعترفش",
+          "transliteration": "ma ba3tirifsh",
+          "english": "I do not admit"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتعترفش",
+          "transliteration": "ma bti3tirifsh",
+          "english": "you (m) do not admit"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتعترفيش",
+          "transliteration": "ma bti3tirfiish",
+          "english": "you (f) do not admit"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيعترفش",
+          "transliteration": "ma biyi3tirifsh",
+          "english": "he does not admit"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتعترفش",
+          "transliteration": "ma bti3tirifsh",
+          "english": "she does not admit"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما بنعترفش",
+          "transliteration": "ma bni3tirifsh",
+          "english": "we do not admit"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتعترفوش",
+          "transliteration": "ma bti3tirfuush",
+          "english": "you (pl) do not admit"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيعترفوش",
+          "transliteration": "ma biyi3tirfuush",
+          "english": "they do not admit"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "هعترف",
+          "transliteration": "ha3tirif",
+          "english": "I will admit"
+        },
+        {
+          "person": "enta",
+          "arabic": "هتعترف",
+          "transliteration": "hati3tirif",
+          "english": "you (m) will admit"
+        },
+        {
+          "person": "enti",
+          "arabic": "هتعترفي",
+          "transliteration": "hati3tirfi",
+          "english": "you (f) will admit"
+        },
+        {
+          "person": "howa",
+          "arabic": "هيعترف",
+          "transliteration": "hayi3tirif",
+          "english": "he will admit"
+        },
+        {
+          "person": "heya",
+          "arabic": "هتعترف",
+          "transliteration": "hati3tirif",
+          "english": "she will admit"
+        },
+        {
+          "person": "ehna",
+          "arabic": "هنعترف",
+          "transliteration": "hani3tirif",
+          "english": "we will admit"
+        },
+        {
+          "person": "entu",
+          "arabic": "هتعترفوا",
+          "transliteration": "hati3tirfu",
+          "english": "you (pl) will admit"
+        },
+        {
+          "person": "homma",
+          "arabic": "هيعترفوا",
+          "transliteration": "hayi3tirfu",
+          "english": "they will admit"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مش هعترف",
+          "transliteration": "mish ha3tirif",
+          "english": "I will not admit"
+        },
+        {
+          "person": "enta",
+          "arabic": "مش هتعترف",
+          "transliteration": "mish hati3tirif",
+          "english": "you (m) will not admit"
+        },
+        {
+          "person": "enti",
+          "arabic": "مش هتعترفي",
+          "transliteration": "mish hati3tirfi",
+          "english": "you (f) will not admit"
+        },
+        {
+          "person": "howa",
+          "arabic": "مش هيعترف",
+          "transliteration": "mish hayi3tirif",
+          "english": "he will not admit"
+        },
+        {
+          "person": "heya",
+          "arabic": "مش هتعترف",
+          "transliteration": "mish hati3tirif",
+          "english": "she will not admit"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مش هنعترف",
+          "transliteration": "mish hani3tirif",
+          "english": "we will not admit"
+        },
+        {
+          "person": "entu",
+          "arabic": "مش هتعترفوا",
+          "transliteration": "mish hati3tirfu",
+          "english": "you (pl) will not admit"
+        },
+        {
+          "person": "homma",
+          "arabic": "مش هيعترفوا",
+          "transliteration": "mish hayi3tirfu",
+          "english": "they will not admit"
+        }
+      ]
+    }
+  }
+}

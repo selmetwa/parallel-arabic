@@ -1,5 +1,6 @@
 import type { RequestHandler } from './$types';
 import { supabase } from '$lib/supabaseClient';
+import verbIndex from '$lib/data/verb-conjugations/egyptian-arabic/index.json';
 
 const BASE_URL = 'https://www.parallel-arabic.com';
 
@@ -33,6 +34,7 @@ const staticPages = [
 
   // Dialect landing pages - Egyptian Arabic
   { path: '/egyptian-arabic/stories', priority: '0.8', changefreq: 'weekly' },
+  { path: '/egyptian-arabic/conjugations', priority: '0.9', changefreq: 'monthly' },
 
   // Dialect landing pages - Fusha (MSA)
   { path: '/fusha', priority: '0.9', changefreq: 'weekly' },
@@ -90,6 +92,16 @@ export const GET: RequestHandler = async () => {
     <loc>${BASE_URL}${page.path}</loc>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
+  </url>`);
+  }
+
+  // Add verb conjugation pages (static JSON, no DB needed)
+  for (const verb of verbIndex.verbs) {
+    urls.push(`
+  <url>
+    <loc>${BASE_URL}/egyptian-arabic/conjugations/${escapeXml(verb.slug)}</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>`);
   }
 

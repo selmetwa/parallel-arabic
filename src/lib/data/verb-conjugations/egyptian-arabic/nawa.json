@@ -1,0 +1,318 @@
+{
+  "slug": "nawa",
+  "arabic": "نَوى",
+  "transliteration": "nawa",
+  "english": "to intend to",
+  "wordId": "92216ecd-b995-49e7-97c9-47a14cacd08d",
+  "rootLetters": "ن و ي",
+  "verbClass": "defective",
+  "notes": "A defective verb (naqis) where the final weak root letter behaves as 'i' or 'y' in most conjugations, and drops or merges in plural forms.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "نويت",
+          "transliteration": "naweyt",
+          "english": "I intended to"
+        },
+        {
+          "person": "enta",
+          "arabic": "نويت",
+          "transliteration": "naweyt",
+          "english": "you (m) intended to"
+        },
+        {
+          "person": "enti",
+          "arabic": "نويتي",
+          "transliteration": "naweyti",
+          "english": "you (f) intended to"
+        },
+        {
+          "person": "howa",
+          "arabic": "نوى",
+          "transliteration": "nawa",
+          "english": "he intended to"
+        },
+        {
+          "person": "heya",
+          "arabic": "نوت",
+          "transliteration": "nawit",
+          "english": "she intended to"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نوينا",
+          "transliteration": "naweyna",
+          "english": "we intended to"
+        },
+        {
+          "person": "entu",
+          "arabic": "نويتوا",
+          "transliteration": "naweytu",
+          "english": "you (pl) intended to"
+        },
+        {
+          "person": "homma",
+          "arabic": "نووا",
+          "transliteration": "nawu",
+          "english": "they intended to"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما نويتش",
+          "transliteration": "ma naweytish",
+          "english": "I did not intend to"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما نويتش",
+          "transliteration": "ma naweytish",
+          "english": "you (m) did not intend to"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما نويتيش",
+          "transliteration": "ma naweytiish",
+          "english": "you (f) did not intend to"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما نواش",
+          "transliteration": "ma nawash",
+          "english": "he did not intend to"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما نوتش",
+          "transliteration": "ma nawitsh",
+          "english": "she did not intend to"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما نويناش",
+          "transliteration": "ma naweynash",
+          "english": "we did not intend to"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما نويتوش",
+          "transliteration": "ma naweytuush",
+          "english": "you (pl) did not intend to"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما نووش",
+          "transliteration": "ma nawush",
+          "english": "they did not intend to"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بانوي",
+          "transliteration": "banwi",
+          "english": "I intend to"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتنوي",
+          "transliteration": "btinwi",
+          "english": "you (m) intend to"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتنوي",
+          "transliteration": "btinwi",
+          "english": "you (f) intend to"
+        },
+        {
+          "person": "howa",
+          "arabic": "بينوي",
+          "transliteration": "biyinwi",
+          "english": "he intends to"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتنوي",
+          "transliteration": "btinwi",
+          "english": "she intends to"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بننوي",
+          "transliteration": "bninwi",
+          "english": "we intend to"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتنووا",
+          "transliteration": "btinwu",
+          "english": "you (pl) intend to"
+        },
+        {
+          "person": "homma",
+          "arabic": "بينووا",
+          "transliteration": "biyinwu",
+          "english": "they intend to"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما بانويش",
+          "transliteration": "mabanwish",
+          "english": "I do not intend to"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتنويش",
+          "transliteration": "mabtinwish",
+          "english": "you (m) do not intend to"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتنويش",
+          "transliteration": "mabtinwiish",
+          "english": "you (f) do not intend to"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بينويش",
+          "transliteration": "mabiyinwish",
+          "english": "he does not intend to"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتنويش",
+          "transliteration": "mabtinwish",
+          "english": "she does not intend to"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما بننويش",
+          "transliteration": "mabninwish",
+          "english": "we do not intend to"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتنووش",
+          "transliteration": "mabtinwuush",
+          "english": "you (pl) do not intend to"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بينووش",
+          "transliteration": "mabiyinwuush",
+          "english": "they do not intend to"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "هانوي",
+          "transliteration": "haanwi",
+          "english": "I will intend to"
+        },
+        {
+          "person": "enta",
+          "arabic": "هتنوي",
+          "transliteration": "hatinwi",
+          "english": "you (m) will intend to"
+        },
+        {
+          "person": "enti",
+          "arabic": "هتنوي",
+          "transliteration": "hatinwi",
+          "english": "you (f) will intend to"
+        },
+        {
+          "person": "howa",
+          "arabic": "هينوي",
+          "transliteration": "hayinwi",
+          "english": "he will intend to"
+        },
+        {
+          "person": "heya",
+          "arabic": "هتنوي",
+          "transliteration": "hatinwi",
+          "english": "she will intend to"
+        },
+        {
+          "person": "ehna",
+          "arabic": "هننوي",
+          "transliteration": "haninwi",
+          "english": "we will intend to"
+        },
+        {
+          "person": "entu",
+          "arabic": "هتنووا",
+          "transliteration": "hatinwu",
+          "english": "you (pl) will intend to"
+        },
+        {
+          "person": "homma",
+          "arabic": "هينووا",
+          "transliteration": "hayinwu",
+          "english": "they will intend to"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مش هانوي",
+          "transliteration": "mish haanwi",
+          "english": "I will not intend to"
+        },
+        {
+          "person": "enta",
+          "arabic": "مش هتنوي",
+          "transliteration": "mish hatinwi",
+          "english": "you (m) will not intend to"
+        },
+        {
+          "person": "enti",
+          "arabic": "مش هتنوي",
+          "transliteration": "mish hatinwi",
+          "english": "you (f) will not intend to"
+        },
+        {
+          "person": "howa",
+          "arabic": "مش هينوي",
+          "transliteration": "mish hayinwi",
+          "english": "he will not intend to"
+        },
+        {
+          "person": "heya",
+          "arabic": "مش هتنوي",
+          "transliteration": "mish hatinwi",
+          "english": "she will not intend to"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مش هننوي",
+          "transliteration": "mish haninwi",
+          "english": "we will not intend to"
+        },
+        {
+          "person": "entu",
+          "arabic": "مش هتنووا",
+          "transliteration": "mish hatinwu",
+          "english": "you (pl) will not intend to"
+        },
+        {
+          "person": "homma",
+          "arabic": "مش هينووا",
+          "transliteration": "mish hayinwu",
+          "english": "they will not intend to"
+        }
+      ]
+    }
+  }
+}

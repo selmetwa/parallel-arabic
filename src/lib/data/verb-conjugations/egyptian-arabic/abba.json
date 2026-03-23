@@ -1,0 +1,318 @@
+{
+  "slug": "abba",
+  "arabic": "ظبّط",
+  "transliteration": "ʐabbaʈ",
+  "english": "to adjust",
+  "wordId": "3ae7d8be-502a-4d62-a4a9-c4f8ab6af4b3",
+  "rootLetters": "ظ ب ط",
+  "verbClass": "sound",
+  "notes": "Form II verb with a doubled middle radical, perfectly regular in its conjugation pattern.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "ظبطت",
+          "transliteration": "zabbatt",
+          "english": "I adjusted"
+        },
+        {
+          "person": "enta",
+          "arabic": "ظبطت",
+          "transliteration": "zabbatt",
+          "english": "you (m) adjusted"
+        },
+        {
+          "person": "enti",
+          "arabic": "ظبطتي",
+          "transliteration": "zabbatti",
+          "english": "you (f) adjusted"
+        },
+        {
+          "person": "howa",
+          "arabic": "ظبط",
+          "transliteration": "zabbat",
+          "english": "he adjusted"
+        },
+        {
+          "person": "heya",
+          "arabic": "ظبطت",
+          "transliteration": "zabbatit",
+          "english": "she adjusted"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ظبطنا",
+          "transliteration": "zabbatna",
+          "english": "we adjusted"
+        },
+        {
+          "person": "entu",
+          "arabic": "ظبطتوا",
+          "transliteration": "zabbattu",
+          "english": "you (pl) adjusted"
+        },
+        {
+          "person": "homma",
+          "arabic": "ظبطوا",
+          "transliteration": "zabbatu",
+          "english": "they adjusted"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مظبطتش",
+          "transliteration": "ma zabbattish",
+          "english": "I didn't adjust"
+        },
+        {
+          "person": "enta",
+          "arabic": "مظبطتش",
+          "transliteration": "ma zabbattish",
+          "english": "you (m) didn't adjust"
+        },
+        {
+          "person": "enti",
+          "arabic": "مظبطتيش",
+          "transliteration": "ma zabbattish",
+          "english": "you (f) didn't adjust"
+        },
+        {
+          "person": "howa",
+          "arabic": "مظبطش",
+          "transliteration": "ma zabbatsh",
+          "english": "he didn't adjust"
+        },
+        {
+          "person": "heya",
+          "arabic": "مظبطتش",
+          "transliteration": "ma zabbatitsh",
+          "english": "she didn't adjust"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مظبطناش",
+          "transliteration": "ma zabbatnash",
+          "english": "we didn't adjust"
+        },
+        {
+          "person": "entu",
+          "arabic": "مظبطتوش",
+          "transliteration": "ma zabbattush",
+          "english": "you (pl) didn't adjust"
+        },
+        {
+          "person": "homma",
+          "arabic": "مظبطوش",
+          "transliteration": "ma zabbatush",
+          "english": "they didn't adjust"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بظبط",
+          "transliteration": "bazabbat",
+          "english": "I adjust"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتظبط",
+          "transliteration": "bitzabbat",
+          "english": "you (m) adjust"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتظبطي",
+          "transliteration": "bitzabbati",
+          "english": "you (f) adjust"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيظبط",
+          "transliteration": "biyzabbat",
+          "english": "he adjusts"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتظبط",
+          "transliteration": "bitzabbat",
+          "english": "she adjusts"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنظبط",
+          "transliteration": "binzabbat",
+          "english": "we adjust"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتظبطوا",
+          "transliteration": "bitzabbatu",
+          "english": "you (pl) adjust"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيظبطوا",
+          "transliteration": "biyzabbatu",
+          "english": "they adjust"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مبظبطش",
+          "transliteration": "mabazabbatsh",
+          "english": "I don't adjust"
+        },
+        {
+          "person": "enta",
+          "arabic": "مبتظبطش",
+          "transliteration": "mabitzabbatsh",
+          "english": "you (m) don't adjust"
+        },
+        {
+          "person": "enti",
+          "arabic": "مبتظبطيش",
+          "transliteration": "mabitzabbatish",
+          "english": "you (f) don't adjust"
+        },
+        {
+          "person": "howa",
+          "arabic": "مبيظبطش",
+          "transliteration": "mabiyzabbatsh",
+          "english": "he doesn't adjust"
+        },
+        {
+          "person": "heya",
+          "arabic": "مبتظبطش",
+          "transliteration": "mabitzabbatsh",
+          "english": "she doesn't adjust"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مبنظبطش",
+          "transliteration": "mabinzabbatsh",
+          "english": "we don't adjust"
+        },
+        {
+          "person": "entu",
+          "arabic": "مبتظبطوش",
+          "transliteration": "mabitzabbatush",
+          "english": "you (pl) don't adjust"
+        },
+        {
+          "person": "homma",
+          "arabic": "مبيظبطوش",
+          "transliteration": "mabiyzabbatush",
+          "english": "they don't adjust"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "هظبط",
+          "transliteration": "hazabbat",
+          "english": "I will adjust"
+        },
+        {
+          "person": "enta",
+          "arabic": "هتظبط",
+          "transliteration": "hatzabbat",
+          "english": "you (m) will adjust"
+        },
+        {
+          "person": "enti",
+          "arabic": "هتظبطي",
+          "transliteration": "hatzabbati",
+          "english": "you (f) will adjust"
+        },
+        {
+          "person": "howa",
+          "arabic": "هيظبط",
+          "transliteration": "hayzabbat",
+          "english": "he will adjust"
+        },
+        {
+          "person": "heya",
+          "arabic": "هتظبط",
+          "transliteration": "hatzabbat",
+          "english": "she will adjust"
+        },
+        {
+          "person": "ehna",
+          "arabic": "هنظبط",
+          "transliteration": "hanzabbat",
+          "english": "we will adjust"
+        },
+        {
+          "person": "entu",
+          "arabic": "هتظبطوا",
+          "transliteration": "hatzabbatu",
+          "english": "you (pl) will adjust"
+        },
+        {
+          "person": "homma",
+          "arabic": "هيظبطوا",
+          "transliteration": "hayzabbatu",
+          "english": "they will adjust"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مش هظبط",
+          "transliteration": "mish hazabbat",
+          "english": "I won't adjust"
+        },
+        {
+          "person": "enta",
+          "arabic": "مش هتظبط",
+          "transliteration": "mish hatzabbat",
+          "english": "you (m) won't adjust"
+        },
+        {
+          "person": "enti",
+          "arabic": "مش هتظبطي",
+          "transliteration": "mish hatzabbati",
+          "english": "you (f) won't adjust"
+        },
+        {
+          "person": "howa",
+          "arabic": "مش هيظبط",
+          "transliteration": "mish hayzabbat",
+          "english": "he won't adjust"
+        },
+        {
+          "person": "heya",
+          "arabic": "مش هتظبط",
+          "transliteration": "mish hatzabbat",
+          "english": "she won't adjust"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مش هنظبط",
+          "transliteration": "mish hanzabbat",
+          "english": "we won't adjust"
+        },
+        {
+          "person": "entu",
+          "arabic": "مش هتظبطوا",
+          "transliteration": "mish hatzabbatu",
+          "english": "you (pl) won't adjust"
+        },
+        {
+          "person": "homma",
+          "arabic": "مش هيظبطوا",
+          "transliteration": "mish hayzabbatu",
+          "english": "they won't adjust"
+        }
+      ]
+    }
+  }
+}

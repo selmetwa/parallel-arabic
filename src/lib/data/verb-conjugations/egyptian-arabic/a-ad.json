@@ -1,0 +1,318 @@
+{
+  "slug": "a-ad",
+  "arabic": "قصد",
+  "transliteration": "ʔaȿad",
+  "english": "to mean",
+  "wordId": "d83d9456-3cb4-4c55-8a24-0a1e362a5d38",
+  "rootLetters": "ق ص د",
+  "verbClass": "sound",
+  "notes": "The letter Qaf (ق) is commonly pronounced as a glottal stop in Egyptian Arabic, which is reflected here by the 'a' vowel onset in transliteration.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "قصدت",
+          "transliteration": "asadt",
+          "english": "I meant"
+        },
+        {
+          "person": "enta",
+          "arabic": "قصدت",
+          "transliteration": "asadt",
+          "english": "you (m) meant"
+        },
+        {
+          "person": "enti",
+          "arabic": "قصدتي",
+          "transliteration": "asadti",
+          "english": "you (f) meant"
+        },
+        {
+          "person": "howa",
+          "arabic": "قصد",
+          "transliteration": "asad",
+          "english": "he meant"
+        },
+        {
+          "person": "heya",
+          "arabic": "قصدت",
+          "transliteration": "asadit",
+          "english": "she meant"
+        },
+        {
+          "person": "ehna",
+          "arabic": "قصدنا",
+          "transliteration": "asadna",
+          "english": "we meant"
+        },
+        {
+          "person": "entu",
+          "arabic": "قصدتوا",
+          "transliteration": "asadtu",
+          "english": "you (pl) meant"
+        },
+        {
+          "person": "homma",
+          "arabic": "قصدوا",
+          "transliteration": "asadu",
+          "english": "they meant"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ماقصدتش",
+          "transliteration": "ma asadtish",
+          "english": "I didn't mean"
+        },
+        {
+          "person": "enta",
+          "arabic": "ماقصدتش",
+          "transliteration": "ma asadtish",
+          "english": "you (m) didn't mean"
+        },
+        {
+          "person": "enti",
+          "arabic": "ماقصدتيش",
+          "transliteration": "ma asadtish",
+          "english": "you (f) didn't mean"
+        },
+        {
+          "person": "howa",
+          "arabic": "ماقصدش",
+          "transliteration": "ma asadsh",
+          "english": "he didn't mean"
+        },
+        {
+          "person": "heya",
+          "arabic": "ماقصدتش",
+          "transliteration": "ma asaditsh",
+          "english": "she didn't mean"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ماقصدناش",
+          "transliteration": "ma asadnash",
+          "english": "we didn't mean"
+        },
+        {
+          "person": "entu",
+          "arabic": "ماقصدتوش",
+          "transliteration": "ma asadtush",
+          "english": "you (pl) didn't mean"
+        },
+        {
+          "person": "homma",
+          "arabic": "ماقصدوش",
+          "transliteration": "ma asadush",
+          "english": "they didn't mean"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بقصد",
+          "transliteration": "baasud",
+          "english": "I mean"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتقصد",
+          "transliteration": "btaasud",
+          "english": "you (m) mean"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتقصدي",
+          "transliteration": "btaasudi",
+          "english": "you (f) mean"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيقصد",
+          "transliteration": "biyaasud",
+          "english": "he means"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتقصد",
+          "transliteration": "btaasud",
+          "english": "she means"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنقصد",
+          "transliteration": "bnaasud",
+          "english": "we mean"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتقصدوا",
+          "transliteration": "btaasudu",
+          "english": "you (pl) mean"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيقصدوا",
+          "transliteration": "biyaasudu",
+          "english": "they mean"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مابقصدش",
+          "transliteration": "mabaasudsh",
+          "english": "I don't mean"
+        },
+        {
+          "person": "enta",
+          "arabic": "مابتقصدش",
+          "transliteration": "mabtaasudsh",
+          "english": "you (m) don't mean"
+        },
+        {
+          "person": "enti",
+          "arabic": "مابتقصديش",
+          "transliteration": "mabtaasudish",
+          "english": "you (f) don't mean"
+        },
+        {
+          "person": "howa",
+          "arabic": "مابيقصدش",
+          "transliteration": "mabiyaasudsh",
+          "english": "he doesn't mean"
+        },
+        {
+          "person": "heya",
+          "arabic": "مابتقصدش",
+          "transliteration": "mabtaasudsh",
+          "english": "she doesn't mean"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مابنقصدش",
+          "transliteration": "mabnaasudsh",
+          "english": "we don't mean"
+        },
+        {
+          "person": "entu",
+          "arabic": "مابتقصدوش",
+          "transliteration": "mabtaasudush",
+          "english": "you (pl) don't mean"
+        },
+        {
+          "person": "homma",
+          "arabic": "مابيقصدوش",
+          "transliteration": "mabiyaasudush",
+          "english": "they don't mean"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "هقصد",
+          "transliteration": "haasud",
+          "english": "I will mean"
+        },
+        {
+          "person": "enta",
+          "arabic": "هتقصد",
+          "transliteration": "hataasud",
+          "english": "you (m) will mean"
+        },
+        {
+          "person": "enti",
+          "arabic": "هتقصدي",
+          "transliteration": "hataasudi",
+          "english": "you (f) will mean"
+        },
+        {
+          "person": "howa",
+          "arabic": "هيقصد",
+          "transliteration": "hayaasud",
+          "english": "he will mean"
+        },
+        {
+          "person": "heya",
+          "arabic": "هتقصد",
+          "transliteration": "hataasud",
+          "english": "she will mean"
+        },
+        {
+          "person": "ehna",
+          "arabic": "هنقصد",
+          "transliteration": "hanaasud",
+          "english": "we will mean"
+        },
+        {
+          "person": "entu",
+          "arabic": "هتقصدوا",
+          "transliteration": "hataasudu",
+          "english": "you (pl) will mean"
+        },
+        {
+          "person": "homma",
+          "arabic": "هيقصدوا",
+          "transliteration": "hayaasudu",
+          "english": "they will mean"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مش هقصد",
+          "transliteration": "mish haasud",
+          "english": "I won't mean"
+        },
+        {
+          "person": "enta",
+          "arabic": "مش هتقصد",
+          "transliteration": "mish hataasud",
+          "english": "you (m) won't mean"
+        },
+        {
+          "person": "enti",
+          "arabic": "مش هتقصدي",
+          "transliteration": "mish hataasudi",
+          "english": "you (f) won't mean"
+        },
+        {
+          "person": "howa",
+          "arabic": "مش هيقصد",
+          "transliteration": "mish hayaasud",
+          "english": "he won't mean"
+        },
+        {
+          "person": "heya",
+          "arabic": "مش هتقصد",
+          "transliteration": "mish hataasud",
+          "english": "she won't mean"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مش هنقصد",
+          "transliteration": "mish hanaasud",
+          "english": "we won't mean"
+        },
+        {
+          "person": "entu",
+          "arabic": "مش هتقصدوا",
+          "transliteration": "mish hataasudu",
+          "english": "you (pl) won't mean"
+        },
+        {
+          "person": "homma",
+          "arabic": "مش هيقصدوا",
+          "transliteration": "mish hayaasudu",
+          "english": "they won't mean"
+        }
+      ]
+    }
+  }
+}

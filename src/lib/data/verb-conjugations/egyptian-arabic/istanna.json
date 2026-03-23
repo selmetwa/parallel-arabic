@@ -1,0 +1,318 @@
+{
+  "slug": "istanna",
+  "arabic": "اِسْتنّى",
+  "transliteration": "istanna",
+  "english": "to stay",
+  "wordId": "ac55f31c-3af8-4bec-bf84-6b0dd0c8dd95",
+  "rootLetters": "أ ن ي",
+  "verbClass": "defective",
+  "notes": "A Form X defective verb. The final 'a' becomes 'ei' before consonant suffixes in the past tense. While meaning 'to stay', it is transitive when meaning 'to wait for', which allows it to take object pronouns.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "استنيت",
+          "transliteration": "istanneit",
+          "english": "I stayed"
+        },
+        {
+          "person": "enta",
+          "arabic": "استنيت",
+          "transliteration": "istanneit",
+          "english": "you (m) stayed"
+        },
+        {
+          "person": "enti",
+          "arabic": "استنيتي",
+          "transliteration": "istanneiti",
+          "english": "you (f) stayed"
+        },
+        {
+          "person": "howa",
+          "arabic": "استنى",
+          "transliteration": "istanna",
+          "english": "he stayed"
+        },
+        {
+          "person": "heya",
+          "arabic": "استنت",
+          "transliteration": "istannit",
+          "english": "she stayed"
+        },
+        {
+          "person": "ehna",
+          "arabic": "استنينا",
+          "transliteration": "istanneina",
+          "english": "we stayed"
+        },
+        {
+          "person": "entu",
+          "arabic": "استنيتوا",
+          "transliteration": "istanneitu",
+          "english": "you (pl) stayed"
+        },
+        {
+          "person": "homma",
+          "arabic": "استنوا",
+          "transliteration": "istannu",
+          "english": "they stayed"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ماستنيتش",
+          "transliteration": "mastanneitsh",
+          "english": "I didn't stay"
+        },
+        {
+          "person": "enta",
+          "arabic": "ماستنيتش",
+          "transliteration": "mastanneitsh",
+          "english": "you (m) didn't stay"
+        },
+        {
+          "person": "enti",
+          "arabic": "ماستنيتيش",
+          "transliteration": "mastanneitish",
+          "english": "you (f) didn't stay"
+        },
+        {
+          "person": "howa",
+          "arabic": "ماستناش",
+          "transliteration": "mastannash",
+          "english": "he didn't stay"
+        },
+        {
+          "person": "heya",
+          "arabic": "ماستنتش",
+          "transliteration": "mastannitsh",
+          "english": "she didn't stay"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ماستنيناش",
+          "transliteration": "mastanneinash",
+          "english": "we didn't stay"
+        },
+        {
+          "person": "entu",
+          "arabic": "ماستنيتوش",
+          "transliteration": "mastanneitush",
+          "english": "you (pl) didn't stay"
+        },
+        {
+          "person": "homma",
+          "arabic": "ماستنوش",
+          "transliteration": "mastannush",
+          "english": "they didn't stay"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "باستنى",
+          "transliteration": "bastanna",
+          "english": "I stay"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتستنى",
+          "transliteration": "btistanna",
+          "english": "you (m) stay"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتستني",
+          "transliteration": "btistanni",
+          "english": "you (f) stay"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيستنى",
+          "transliteration": "biyistanna",
+          "english": "he stays"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتستنى",
+          "transliteration": "btistanna",
+          "english": "she stays"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنستنى",
+          "transliteration": "bnistanna",
+          "english": "we stay"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتستنوا",
+          "transliteration": "btistannu",
+          "english": "you (pl) stay"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيستنوا",
+          "transliteration": "biyistannu",
+          "english": "they stay"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ماباستناش",
+          "transliteration": "mabastannash",
+          "english": "I don't stay"
+        },
+        {
+          "person": "enta",
+          "arabic": "مابتستناش",
+          "transliteration": "mabtistannash",
+          "english": "you (m) don't stay"
+        },
+        {
+          "person": "enti",
+          "arabic": "مابتستنيش",
+          "transliteration": "mabtistannish",
+          "english": "you (f) don't stay"
+        },
+        {
+          "person": "howa",
+          "arabic": "مابيستناش",
+          "transliteration": "mabiyistannash",
+          "english": "he doesn't stay"
+        },
+        {
+          "person": "heya",
+          "arabic": "مابتستناش",
+          "transliteration": "mabtistannash",
+          "english": "she doesn't stay"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مابنستناش",
+          "transliteration": "mabnistannash",
+          "english": "we don't stay"
+        },
+        {
+          "person": "entu",
+          "arabic": "مابتستنوش",
+          "transliteration": "mabtistannush",
+          "english": "you (pl) don't stay"
+        },
+        {
+          "person": "homma",
+          "arabic": "مابيستنوش",
+          "transliteration": "mabiyistannush",
+          "english": "they don't stay"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "هاستنى",
+          "transliteration": "hastanna",
+          "english": "I will stay"
+        },
+        {
+          "person": "enta",
+          "arabic": "هاتستنى",
+          "transliteration": "hatistanna",
+          "english": "you (m) will stay"
+        },
+        {
+          "person": "enti",
+          "arabic": "هاتستني",
+          "transliteration": "hatistanni",
+          "english": "you (f) will stay"
+        },
+        {
+          "person": "howa",
+          "arabic": "هايستنى",
+          "transliteration": "hayistanna",
+          "english": "he will stay"
+        },
+        {
+          "person": "heya",
+          "arabic": "هاتستنى",
+          "transliteration": "hatistanna",
+          "english": "she will stay"
+        },
+        {
+          "person": "ehna",
+          "arabic": "هانستنى",
+          "transliteration": "hanistanna",
+          "english": "we will stay"
+        },
+        {
+          "person": "entu",
+          "arabic": "هاتستنوا",
+          "transliteration": "hatistannu",
+          "english": "you (pl) will stay"
+        },
+        {
+          "person": "homma",
+          "arabic": "هايستنوا",
+          "transliteration": "hayistannu",
+          "english": "they will stay"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مش هاستنى",
+          "transliteration": "mish hastanna",
+          "english": "I won't stay"
+        },
+        {
+          "person": "enta",
+          "arabic": "مش هاتستنى",
+          "transliteration": "mish hatistanna",
+          "english": "you (m) won't stay"
+        },
+        {
+          "person": "enti",
+          "arabic": "مش هاتستني",
+          "transliteration": "mish hatistanni",
+          "english": "you (f) won't stay"
+        },
+        {
+          "person": "howa",
+          "arabic": "مش هايستنى",
+          "transliteration": "mish hayistanna",
+          "english": "he won't stay"
+        },
+        {
+          "person": "heya",
+          "arabic": "مش هاتستنى",
+          "transliteration": "mish hatistanna",
+          "english": "she won't stay"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مش هانستنى",
+          "transliteration": "mish hanistanna",
+          "english": "we won't stay"
+        },
+        {
+          "person": "entu",
+          "arabic": "مش هاتستنوا",
+          "transliteration": "mish hatistannu",
+          "english": "you (pl) won't stay"
+        },
+        {
+          "person": "homma",
+          "arabic": "مش هايستنوا",
+          "transliteration": "mish hayistannu",
+          "english": "they won't stay"
+        }
+      ]
+    }
+  }
+}

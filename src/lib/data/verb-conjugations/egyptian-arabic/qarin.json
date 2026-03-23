@@ -1,0 +1,318 @@
+{
+  "slug": "qarin",
+  "arabic": "قارِن",
+  "transliteration": "qarin",
+  "english": "to compare",
+  "wordId": "7e64fe0a-dea5-4a85-99da-19c23001c88b",
+  "rootLetters": "ق ر ن",
+  "verbClass": "sound",
+  "notes": "Form III verb. The past stem changes its internal vowel slightly based on the suffix (e.g., 'qaran' for 3rd person vs 'qarin-' for 1st/2nd person).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "قارنت",
+          "transliteration": "qarint",
+          "english": "I compared"
+        },
+        {
+          "person": "enta",
+          "arabic": "قارنت",
+          "transliteration": "qarint",
+          "english": "you (m) compared"
+        },
+        {
+          "person": "enti",
+          "arabic": "قارنتي",
+          "transliteration": "qarinti",
+          "english": "you (f) compared"
+        },
+        {
+          "person": "howa",
+          "arabic": "قارن",
+          "transliteration": "qaran",
+          "english": "he compared"
+        },
+        {
+          "person": "heya",
+          "arabic": "قارنت",
+          "transliteration": "qaranit",
+          "english": "she compared"
+        },
+        {
+          "person": "ehna",
+          "arabic": "قارنّا",
+          "transliteration": "qarinna",
+          "english": "we compared"
+        },
+        {
+          "person": "entu",
+          "arabic": "قارنتوا",
+          "transliteration": "qarintu",
+          "english": "you (pl) compared"
+        },
+        {
+          "person": "homma",
+          "arabic": "قارنوا",
+          "transliteration": "qaranu",
+          "english": "they compared"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما قارنتش",
+          "transliteration": "ma qarintish",
+          "english": "I didn't compare"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما قارنتش",
+          "transliteration": "ma qarintish",
+          "english": "you (m) didn't compare"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما قارنتيش",
+          "transliteration": "ma qarintiish",
+          "english": "you (f) didn't compare"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما قارنش",
+          "transliteration": "ma qaransh",
+          "english": "he didn't compare"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما قارنتش",
+          "transliteration": "ma qaranitsh",
+          "english": "she didn't compare"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما قارنّاش",
+          "transliteration": "ma qarinnash",
+          "english": "we didn't compare"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما قارنتوش",
+          "transliteration": "ma qarintuush",
+          "english": "you (pl) didn't compare"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما قارنوش",
+          "transliteration": "ma qaranuush",
+          "english": "they didn't compare"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بقارن",
+          "transliteration": "baqarin",
+          "english": "I compare"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتقارن",
+          "transliteration": "bitqarin",
+          "english": "you (m) compare"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتقارني",
+          "transliteration": "bitqarini",
+          "english": "you (f) compare"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيقارن",
+          "transliteration": "biyiqarin",
+          "english": "he compares"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتقارن",
+          "transliteration": "bitqarin",
+          "english": "she compares"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنقارن",
+          "transliteration": "binqarin",
+          "english": "we compare"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتقارنوا",
+          "transliteration": "bitqarinu",
+          "english": "you (pl) compare"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيقارنوا",
+          "transliteration": "biyiqarinu",
+          "english": "they compare"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ماباقارنش",
+          "transliteration": "mabaqarinsh",
+          "english": "I don't compare"
+        },
+        {
+          "person": "enta",
+          "arabic": "مابتقارنش",
+          "transliteration": "mabitqarinsh",
+          "english": "you (m) don't compare"
+        },
+        {
+          "person": "enti",
+          "arabic": "مابتقارنيش",
+          "transliteration": "mabitqariniish",
+          "english": "you (f) don't compare"
+        },
+        {
+          "person": "howa",
+          "arabic": "مابيقارنش",
+          "transliteration": "mabiyiqarinsh",
+          "english": "he doesn't compare"
+        },
+        {
+          "person": "heya",
+          "arabic": "مابتقارنش",
+          "transliteration": "mabitqarinsh",
+          "english": "she doesn't compare"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مابنقارنش",
+          "transliteration": "mabinqarinsh",
+          "english": "we don't compare"
+        },
+        {
+          "person": "entu",
+          "arabic": "مابتقارنوش",
+          "transliteration": "mabitqarinuush",
+          "english": "you (pl) don't compare"
+        },
+        {
+          "person": "homma",
+          "arabic": "مابيقارنوش",
+          "transliteration": "mabiyiqarinuush",
+          "english": "they don't compare"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "هقارن",
+          "transliteration": "haqarin",
+          "english": "I will compare"
+        },
+        {
+          "person": "enta",
+          "arabic": "هتقارن",
+          "transliteration": "hatqarin",
+          "english": "you (m) will compare"
+        },
+        {
+          "person": "enti",
+          "arabic": "هتقارني",
+          "transliteration": "hatqarini",
+          "english": "you (f) will compare"
+        },
+        {
+          "person": "howa",
+          "arabic": "هيقارن",
+          "transliteration": "hayiqarin",
+          "english": "he will compare"
+        },
+        {
+          "person": "heya",
+          "arabic": "هتقارن",
+          "transliteration": "hatqarin",
+          "english": "she will compare"
+        },
+        {
+          "person": "ehna",
+          "arabic": "هنقارن",
+          "transliteration": "hanqarin",
+          "english": "we will compare"
+        },
+        {
+          "person": "entu",
+          "arabic": "هتقارنوا",
+          "transliteration": "hatqarinu",
+          "english": "you (pl) will compare"
+        },
+        {
+          "person": "homma",
+          "arabic": "هيقارنوا",
+          "transliteration": "hayiqarinu",
+          "english": "they will compare"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مش هقارن",
+          "transliteration": "mish haqarin",
+          "english": "I won't compare"
+        },
+        {
+          "person": "enta",
+          "arabic": "مش هتقارن",
+          "transliteration": "mish hatqarin",
+          "english": "you (m) won't compare"
+        },
+        {
+          "person": "enti",
+          "arabic": "مش هتقارني",
+          "transliteration": "mish hatqarini",
+          "english": "you (f) won't compare"
+        },
+        {
+          "person": "howa",
+          "arabic": "مش هيقارن",
+          "transliteration": "mish hayiqarin",
+          "english": "he won't compare"
+        },
+        {
+          "person": "heya",
+          "arabic": "مش هتقارن",
+          "transliteration": "mish hatqarin",
+          "english": "she won't compare"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مش هنقارن",
+          "transliteration": "mish hanqarin",
+          "english": "we won't compare"
+        },
+        {
+          "person": "entu",
+          "arabic": "مش هتقارنوا",
+          "transliteration": "mish hatqarinu",
+          "english": "you (pl) won't compare"
+        },
+        {
+          "person": "homma",
+          "arabic": "مش هيقارنوا",
+          "transliteration": "mish hayiqarinu",
+          "english": "they won't compare"
+        }
+      ]
+    }
+  }
+}
