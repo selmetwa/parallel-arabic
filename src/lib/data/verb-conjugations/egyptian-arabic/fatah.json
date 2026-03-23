@@ -1,0 +1,318 @@
+{
+  "slug": "fatah",
+  "arabic": "فتح",
+  "transliteration": "fatah",
+  "english": "to open",
+  "wordId": "7414e44a-a82d-4e84-8ba2-2f45403873a9",
+  "rootLetters": "ف ت ح",
+  "verbClass": "sound",
+  "notes": "A standard Form I sound verb in Egyptian Arabic with an 'a' vowel in the imperfect stem (yifta7).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "فتحت",
+          "transliteration": "fata7t",
+          "english": "I opened"
+        },
+        {
+          "person": "enta",
+          "arabic": "فتحت",
+          "transliteration": "fata7t",
+          "english": "you (m) opened"
+        },
+        {
+          "person": "enti",
+          "arabic": "فتحتي",
+          "transliteration": "fata7ti",
+          "english": "you (f) opened"
+        },
+        {
+          "person": "howa",
+          "arabic": "فتح",
+          "transliteration": "fata7",
+          "english": "he opened"
+        },
+        {
+          "person": "heya",
+          "arabic": "فتحت",
+          "transliteration": "fat7it",
+          "english": "she opened"
+        },
+        {
+          "person": "ehna",
+          "arabic": "فتحنا",
+          "transliteration": "fata7na",
+          "english": "we opened"
+        },
+        {
+          "person": "entu",
+          "arabic": "فتحتوا",
+          "transliteration": "fata7tu",
+          "english": "you (pl) opened"
+        },
+        {
+          "person": "homma",
+          "arabic": "فتحوا",
+          "transliteration": "fata7u",
+          "english": "they opened"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما فتحتش",
+          "transliteration": "ma fata7tish",
+          "english": "I did not open"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما فتحتش",
+          "transliteration": "ma fata7tish",
+          "english": "you (m) did not open"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما فتحتيش",
+          "transliteration": "ma fata7tiish",
+          "english": "you (f) did not open"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما فتحش",
+          "transliteration": "ma fata7sh",
+          "english": "he did not open"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما فتحتش",
+          "transliteration": "ma fat7itsh",
+          "english": "she did not open"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما فتحناش",
+          "transliteration": "ma fata7naash",
+          "english": "we did not open"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما فتحتوش",
+          "transliteration": "ma fata7tuush",
+          "english": "you (pl) did not open"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما فتحوش",
+          "transliteration": "ma fata7uush",
+          "english": "they did not open"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بفتح",
+          "transliteration": "bafta7",
+          "english": "I open"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتفتح",
+          "transliteration": "btifta7",
+          "english": "you (m) open"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتفتحي",
+          "transliteration": "btifta7i",
+          "english": "you (f) open"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيفتح",
+          "transliteration": "biyifta7",
+          "english": "he opens"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتفتح",
+          "transliteration": "btifta7",
+          "english": "she opens"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنفتح",
+          "transliteration": "bnifta7",
+          "english": "we open"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتفتحوا",
+          "transliteration": "btifta7u",
+          "english": "you (pl) open"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيفتحوا",
+          "transliteration": "biyifta7u",
+          "english": "they open"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مابفتحش",
+          "transliteration": "mabafta7sh",
+          "english": "I do not open"
+        },
+        {
+          "person": "enta",
+          "arabic": "مابتفتحش",
+          "transliteration": "mabtifta7sh",
+          "english": "you (m) do not open"
+        },
+        {
+          "person": "enti",
+          "arabic": "مابتفتحيش",
+          "transliteration": "mabtifta7iish",
+          "english": "you (f) do not open"
+        },
+        {
+          "person": "howa",
+          "arabic": "مابيفتحش",
+          "transliteration": "mabiyifta7sh",
+          "english": "he does not open"
+        },
+        {
+          "person": "heya",
+          "arabic": "مابتفتحش",
+          "transliteration": "mabtifta7sh",
+          "english": "she does not open"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مابنفتحش",
+          "transliteration": "mabnifta7sh",
+          "english": "we do not open"
+        },
+        {
+          "person": "entu",
+          "arabic": "مابتفتحوش",
+          "transliteration": "mabtifta7uush",
+          "english": "you (pl) do not open"
+        },
+        {
+          "person": "homma",
+          "arabic": "مابيفتحوش",
+          "transliteration": "mabiyifta7uush",
+          "english": "they do not open"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "هفتح",
+          "transliteration": "haafta7",
+          "english": "I will open"
+        },
+        {
+          "person": "enta",
+          "arabic": "هتفتح",
+          "transliteration": "hatifta7",
+          "english": "you (m) will open"
+        },
+        {
+          "person": "enti",
+          "arabic": "هتفتحي",
+          "transliteration": "hatifta7i",
+          "english": "you (f) will open"
+        },
+        {
+          "person": "howa",
+          "arabic": "هيفتح",
+          "transliteration": "hayifta7",
+          "english": "he will open"
+        },
+        {
+          "person": "heya",
+          "arabic": "هتفتح",
+          "transliteration": "hatifta7",
+          "english": "she will open"
+        },
+        {
+          "person": "ehna",
+          "arabic": "هنفتح",
+          "transliteration": "hanifta7",
+          "english": "we will open"
+        },
+        {
+          "person": "entu",
+          "arabic": "هتفتحوا",
+          "transliteration": "hatifta7u",
+          "english": "you (pl) will open"
+        },
+        {
+          "person": "homma",
+          "arabic": "هيفتحوا",
+          "transliteration": "hayifta7u",
+          "english": "they will open"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مش هفتح",
+          "transliteration": "mish haafta7",
+          "english": "I will not open"
+        },
+        {
+          "person": "enta",
+          "arabic": "مش هتفتح",
+          "transliteration": "mish hatifta7",
+          "english": "you (m) will not open"
+        },
+        {
+          "person": "enti",
+          "arabic": "مش هتفتحي",
+          "transliteration": "mish hatifta7i",
+          "english": "you (f) will not open"
+        },
+        {
+          "person": "howa",
+          "arabic": "مش هيفتح",
+          "transliteration": "mish hayifta7",
+          "english": "he will not open"
+        },
+        {
+          "person": "heya",
+          "arabic": "مش هتفتح",
+          "transliteration": "mish hatifta7",
+          "english": "she will not open"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مش هنفتح",
+          "transliteration": "mish hanifta7",
+          "english": "we will not open"
+        },
+        {
+          "person": "entu",
+          "arabic": "مش هتفتحوا",
+          "transliteration": "mish hatifta7u",
+          "english": "you (pl) will not open"
+        },
+        {
+          "person": "homma",
+          "arabic": "مش هيفتحوا",
+          "transliteration": "mish hayifta7u",
+          "english": "they will not open"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,318 @@
+{
+  "slug": "ahar",
+  "arabic": "ظهر",
+  "transliteration": "ʐahar",
+  "english": "to appear",
+  "wordId": "cb551eca-db91-4cbf-ba05-3b65ed885d80",
+  "rootLetters": "ظ ه ر",
+  "verbClass": "sound",
+  "notes": "Form I sound verb; as it is generally intransitive, direct object suffixes are rarely used in practice but follow the standard suffix attachment rules.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "ظهرت",
+          "transliteration": "zahart",
+          "english": "I appeared"
+        },
+        {
+          "person": "enta",
+          "arabic": "ظهرت",
+          "transliteration": "zahart",
+          "english": "you (m) appeared"
+        },
+        {
+          "person": "enti",
+          "arabic": "ظهرتي",
+          "transliteration": "zaharti",
+          "english": "you (f) appeared"
+        },
+        {
+          "person": "howa",
+          "arabic": "ظهر",
+          "transliteration": "zahar",
+          "english": "he appeared"
+        },
+        {
+          "person": "heya",
+          "arabic": "ظهرت",
+          "transliteration": "zahrit",
+          "english": "she appeared"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ظهرنا",
+          "transliteration": "zaharna",
+          "english": "we appeared"
+        },
+        {
+          "person": "entu",
+          "arabic": "ظهرتوا",
+          "transliteration": "zahartu",
+          "english": "you (pl) appeared"
+        },
+        {
+          "person": "homma",
+          "arabic": "ظهروا",
+          "transliteration": "zaharu",
+          "english": "they appeared"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما ظهرتش",
+          "transliteration": "ma zahartish",
+          "english": "I didn't appear"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما ظهرتش",
+          "transliteration": "ma zahartish",
+          "english": "you (m) didn't appear"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما ظهرتيش",
+          "transliteration": "ma zahartiish",
+          "english": "you (f) didn't appear"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما ظهرش",
+          "transliteration": "ma zaharsh",
+          "english": "he didn't appear"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما ظهرتش",
+          "transliteration": "ma zahritsh",
+          "english": "she didn't appear"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما ظهرناش",
+          "transliteration": "ma zaharnash",
+          "english": "we didn't appear"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما ظهرتوش",
+          "transliteration": "ma zahartuush",
+          "english": "you (pl) didn't appear"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما ظهروش",
+          "transliteration": "ma zaharuush",
+          "english": "they didn't appear"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بظهر",
+          "transliteration": "bazhar",
+          "english": "I appear"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتظهر",
+          "transliteration": "btizhar",
+          "english": "you (m) appear"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتظهري",
+          "transliteration": "btizhari",
+          "english": "you (f) appear"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيظهر",
+          "transliteration": "biyizhar",
+          "english": "he appears"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتظهر",
+          "transliteration": "btizhar",
+          "english": "she appears"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنظهر",
+          "transliteration": "bnizhar",
+          "english": "we appear"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتظهروا",
+          "transliteration": "btizharu",
+          "english": "you (pl) appear"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيظهروا",
+          "transliteration": "biyizharu",
+          "english": "they appear"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مابظهرش",
+          "transliteration": "mabazharsh",
+          "english": "I don't appear"
+        },
+        {
+          "person": "enta",
+          "arabic": "مابتظهرش",
+          "transliteration": "mabtizharsh",
+          "english": "you (m) don't appear"
+        },
+        {
+          "person": "enti",
+          "arabic": "مابتظهريش",
+          "transliteration": "mabtizhariish",
+          "english": "you (f) don't appear"
+        },
+        {
+          "person": "howa",
+          "arabic": "مابيظهرش",
+          "transliteration": "mabiyizharsh",
+          "english": "he doesn't appear"
+        },
+        {
+          "person": "heya",
+          "arabic": "مابتظهرش",
+          "transliteration": "mabtizharsh",
+          "english": "she doesn't appear"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مابنظهرش",
+          "transliteration": "mabnizharsh",
+          "english": "we don't appear"
+        },
+        {
+          "person": "entu",
+          "arabic": "مابتظهروش",
+          "transliteration": "mabtizharuush",
+          "english": "you (pl) don't appear"
+        },
+        {
+          "person": "homma",
+          "arabic": "مابيظهروش",
+          "transliteration": "mabiyizharuush",
+          "english": "they don't appear"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "هظهر",
+          "transliteration": "hazhar",
+          "english": "I will appear"
+        },
+        {
+          "person": "enta",
+          "arabic": "هتظهر",
+          "transliteration": "hatizhar",
+          "english": "you (m) will appear"
+        },
+        {
+          "person": "enti",
+          "arabic": "هتظهري",
+          "transliteration": "hatizhari",
+          "english": "you (f) will appear"
+        },
+        {
+          "person": "howa",
+          "arabic": "هيظهر",
+          "transliteration": "hayizhar",
+          "english": "he will appear"
+        },
+        {
+          "person": "heya",
+          "arabic": "هتظهر",
+          "transliteration": "hatizhar",
+          "english": "she will appear"
+        },
+        {
+          "person": "ehna",
+          "arabic": "هنظهر",
+          "transliteration": "hanizhar",
+          "english": "we will appear"
+        },
+        {
+          "person": "entu",
+          "arabic": "هتظهروا",
+          "transliteration": "hatizharu",
+          "english": "you (pl) will appear"
+        },
+        {
+          "person": "homma",
+          "arabic": "هيظهروا",
+          "transliteration": "hayizharu",
+          "english": "they will appear"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مش هظهر",
+          "transliteration": "mish hazhar",
+          "english": "I won't appear"
+        },
+        {
+          "person": "enta",
+          "arabic": "مش هتظهر",
+          "transliteration": "mish hatizhar",
+          "english": "you (m) won't appear"
+        },
+        {
+          "person": "enti",
+          "arabic": "مش هتظهري",
+          "transliteration": "mish hatizhari",
+          "english": "you (f) won't appear"
+        },
+        {
+          "person": "howa",
+          "arabic": "مش هيظهر",
+          "transliteration": "mish hayizhar",
+          "english": "he won't appear"
+        },
+        {
+          "person": "heya",
+          "arabic": "مش هتظهر",
+          "transliteration": "mish hatizhar",
+          "english": "she won't appear"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مش هنظهر",
+          "transliteration": "mish hanizhar",
+          "english": "we won't appear"
+        },
+        {
+          "person": "entu",
+          "arabic": "مش هتظهروا",
+          "transliteration": "mish hatizharu",
+          "english": "you (pl) won't appear"
+        },
+        {
+          "person": "homma",
+          "arabic": "مش هيظهروا",
+          "transliteration": "mish hayizharu",
+          "english": "they won't appear"
+        }
+      ]
+    }
+  }
+}

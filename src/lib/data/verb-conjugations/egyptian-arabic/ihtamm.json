@@ -1,0 +1,318 @@
+{
+  "slug": "ihtamm",
+  "arabic": "اِهْتمّ",
+  "transliteration": "ihtamm",
+  "english": "to care",
+  "wordId": "49e4a10e-497c-46c1-8049-a816de4cbdb1",
+  "rootLetters": "ه م م",
+  "verbClass": "doubled",
+  "notes": "This is a Form VIII doubled verb. Because it is intransitive, it takes objects using the preposition ب (bi), so the object pronouns are shown attached to 'bi' rather than directly to the verb.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "اهتميت",
+          "transliteration": "ihtammayt",
+          "english": "I cared"
+        },
+        {
+          "person": "enta",
+          "arabic": "اهتميت",
+          "transliteration": "ihtammayt",
+          "english": "you (m) cared"
+        },
+        {
+          "person": "enti",
+          "arabic": "اهتميتي",
+          "transliteration": "ihtammayti",
+          "english": "you (f) cared"
+        },
+        {
+          "person": "howa",
+          "arabic": "اهتم",
+          "transliteration": "ihtamm",
+          "english": "he cared"
+        },
+        {
+          "person": "heya",
+          "arabic": "اهتمت",
+          "transliteration": "ihtammit",
+          "english": "she cared"
+        },
+        {
+          "person": "ehna",
+          "arabic": "اهتمينا",
+          "transliteration": "ihtammayna",
+          "english": "we cared"
+        },
+        {
+          "person": "entu",
+          "arabic": "اهتميتوا",
+          "transliteration": "ihtammaytu",
+          "english": "you (pl) cared"
+        },
+        {
+          "person": "homma",
+          "arabic": "اهتموا",
+          "transliteration": "ihtammu",
+          "english": "they cared"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما اهتميتش",
+          "transliteration": "mahtammaytish",
+          "english": "I didn't care"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما اهتميتش",
+          "transliteration": "mahtammaytish",
+          "english": "you (m) didn't care"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما اهتميتيش",
+          "transliteration": "mahtammaytiish",
+          "english": "you (f) didn't care"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما اهتمش",
+          "transliteration": "mahtammish",
+          "english": "he didn't care"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما اهتمتش",
+          "transliteration": "mahtammitsh",
+          "english": "she didn't care"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما اهتميناش",
+          "transliteration": "mahtammaynash",
+          "english": "we didn't care"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما اهتميتوش",
+          "transliteration": "mahtammaytush",
+          "english": "you (pl) didn't care"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما اهتموش",
+          "transliteration": "mahtammush",
+          "english": "they didn't care"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بهتم",
+          "transliteration": "bahtamm",
+          "english": "I care"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتهتم",
+          "transliteration": "btihtamm",
+          "english": "you (m) care"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتهتمي",
+          "transliteration": "btihtammi",
+          "english": "you (f) care"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيهتم",
+          "transliteration": "biyihtamm",
+          "english": "he cares"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتهتم",
+          "transliteration": "btihtamm",
+          "english": "she cares"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنهتم",
+          "transliteration": "bnihtamm",
+          "english": "we care"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتهتموا",
+          "transliteration": "btihtammu",
+          "english": "you (pl) care"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيهتموا",
+          "transliteration": "biyihtammu",
+          "english": "they care"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مابهتمش",
+          "transliteration": "mabahtammish",
+          "english": "I don't care"
+        },
+        {
+          "person": "enta",
+          "arabic": "مابتهتمش",
+          "transliteration": "mabtihtammish",
+          "english": "you (m) don't care"
+        },
+        {
+          "person": "enti",
+          "arabic": "مابتهتميش",
+          "transliteration": "mabtihtammiish",
+          "english": "you (f) don't care"
+        },
+        {
+          "person": "howa",
+          "arabic": "مابيهتمش",
+          "transliteration": "mabiyihtammish",
+          "english": "he doesn't care"
+        },
+        {
+          "person": "heya",
+          "arabic": "مابتهتمش",
+          "transliteration": "mabtihtammish",
+          "english": "she doesn't care"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مابنهتمش",
+          "transliteration": "mabnihtammish",
+          "english": "we don't care"
+        },
+        {
+          "person": "entu",
+          "arabic": "مابتهتموش",
+          "transliteration": "mabtihtammuush",
+          "english": "you (pl) don't care"
+        },
+        {
+          "person": "homma",
+          "arabic": "مابيهتموش",
+          "transliteration": "mabiyihtammuush",
+          "english": "they don't care"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "هاهتم",
+          "transliteration": "hahtamm",
+          "english": "I will care"
+        },
+        {
+          "person": "enta",
+          "arabic": "هتهتم",
+          "transliteration": "hatihtamm",
+          "english": "you (m) will care"
+        },
+        {
+          "person": "enti",
+          "arabic": "هتهتمي",
+          "transliteration": "hatihtammi",
+          "english": "you (f) will care"
+        },
+        {
+          "person": "howa",
+          "arabic": "هيهتم",
+          "transliteration": "hayihtamm",
+          "english": "he will care"
+        },
+        {
+          "person": "heya",
+          "arabic": "هتهتم",
+          "transliteration": "hatihtamm",
+          "english": "she will care"
+        },
+        {
+          "person": "ehna",
+          "arabic": "هنهتم",
+          "transliteration": "hanihtamm",
+          "english": "we will care"
+        },
+        {
+          "person": "entu",
+          "arabic": "هتهتموا",
+          "transliteration": "hatihtammu",
+          "english": "you (pl) will care"
+        },
+        {
+          "person": "homma",
+          "arabic": "هيهتموا",
+          "transliteration": "hayihtammu",
+          "english": "they will care"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مش هاهتم",
+          "transliteration": "mish hahtamm",
+          "english": "I won't care"
+        },
+        {
+          "person": "enta",
+          "arabic": "مش هتهتم",
+          "transliteration": "mish hatihtamm",
+          "english": "you (m) won't care"
+        },
+        {
+          "person": "enti",
+          "arabic": "مش هتهتمي",
+          "transliteration": "mish hatihtammi",
+          "english": "you (f) won't care"
+        },
+        {
+          "person": "howa",
+          "arabic": "مش هيهتم",
+          "transliteration": "mish hayihtamm",
+          "english": "he won't care"
+        },
+        {
+          "person": "heya",
+          "arabic": "مش هتهتم",
+          "transliteration": "mish hatihtamm",
+          "english": "she won't care"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مش هنهتم",
+          "transliteration": "mish hanihtamm",
+          "english": "we won't care"
+        },
+        {
+          "person": "entu",
+          "arabic": "مش هتهتموا",
+          "transliteration": "mish hatihtammu",
+          "english": "you (pl) won't care"
+        },
+        {
+          "person": "homma",
+          "arabic": "مش هيهتموا",
+          "transliteration": "mish hayihtammu",
+          "english": "they won't care"
+        }
+      ]
+    }
+  }
+}

@@ -70,3 +70,66 @@ export type KeyWord = {
   isLoading: boolean;
   type: string;
 }
+
+// Verb conjugation types
+export type VerbPerson = 'ana' | 'enta' | 'enti' | 'howa' | 'heya' | 'ehna' | 'entu' | 'homma';
+export type VerbTense = 'past' | 'present' | 'future';
+export type VerbForm = 'affirmative' | 'negative';
+export type VerbClass = 'sound' | 'hollow' | 'defective' | 'irregular' | 'doubled';
+export type ObjectPronounTarget = 'me' | 'you_m' | 'you_f' | 'him_it' | 'her_it' | 'us' | 'you_pl' | 'them';
+
+export interface ConjugationEntry {
+  person: VerbPerson;
+  arabic: string;
+  transliteration: string;
+  english: string;
+}
+
+export interface ObjectPronounEntry {
+  object: ObjectPronounTarget;
+  suffix: string;
+  arabic: string;
+  transliteration: string;
+  english: string;
+}
+
+export interface VerbConjugationData {
+  slug: string;
+  arabic: string;
+  transliteration: string;
+  english: string;
+  rootLetters: string;
+  verbClass: VerbClass;
+  notes: string;
+  conjugations: {
+    past: {
+      affirmative: ConjugationEntry[];
+      negative: ConjugationEntry[];
+    };
+    present: {
+      affirmative: ConjugationEntry[];
+      negative: ConjugationEntry[];
+    };
+    future: {
+      affirmative: ConjugationEntry[];
+      negative: ConjugationEntry[];
+    };
+  };
+  objectPronouns: ObjectPronounEntry[];
+}
+
+export interface VerbIndexEntry {
+  slug: string;
+  arabic: string;
+  transliteration: string;
+  english: string;
+  wordId: string;
+  rootLetters: string;
+  verbClass: VerbClass;
+}
+
+export interface VerbConjugationIndex {
+  dialect: string;
+  generatedAt: string;
+  verbs: VerbIndexEntry[];
+}

@@ -21,6 +21,7 @@ import { dirname, join } from 'path';
 // Load environment variables
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+dotenv.config({ path: join(__dirname, '..', '.env.local') });
 dotenv.config({ path: join(__dirname, '..', '.env') });
 
 const STRIPE_SECRET = process.env.STRIPE_SECRET;

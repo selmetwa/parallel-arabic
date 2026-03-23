@@ -1,0 +1,318 @@
+{
+  "slug": "ihtaram",
+  "arabic": "اِحْترم",
+  "transliteration": "ihtaram",
+  "english": "to behave",
+  "wordId": "b1ce08b3-007b-4ec4-9c15-7d6acd502ead",
+  "rootLetters": "ح ر م",
+  "verbClass": "sound",
+  "notes": "Form VIII sound verb. While its primary direct meaning is 'to respect', it is widely used (often with the reflexive 'nafsak') to mean 'to behave'.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "احترمت",
+          "transliteration": "i7taramt",
+          "english": "I behaved"
+        },
+        {
+          "person": "enta",
+          "arabic": "احترمت",
+          "transliteration": "i7taramt",
+          "english": "you (m) behaved"
+        },
+        {
+          "person": "enti",
+          "arabic": "احترمتي",
+          "transliteration": "i7taramti",
+          "english": "you (f) behaved"
+        },
+        {
+          "person": "howa",
+          "arabic": "احترم",
+          "transliteration": "i7taram",
+          "english": "he behaved"
+        },
+        {
+          "person": "heya",
+          "arabic": "احترمت",
+          "transliteration": "i7taramit",
+          "english": "she behaved"
+        },
+        {
+          "person": "ehna",
+          "arabic": "احترمنا",
+          "transliteration": "i7taramna",
+          "english": "we behaved"
+        },
+        {
+          "person": "entu",
+          "arabic": "احترمتوا",
+          "transliteration": "i7taramtu",
+          "english": "you (pl) behaved"
+        },
+        {
+          "person": "homma",
+          "arabic": "احترموا",
+          "transliteration": "i7taramu",
+          "english": "they behaved"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ماحترمتش",
+          "transliteration": "ma7taramtish",
+          "english": "I did not behave"
+        },
+        {
+          "person": "enta",
+          "arabic": "ماحترمتش",
+          "transliteration": "ma7taramtish",
+          "english": "you (m) did not behave"
+        },
+        {
+          "person": "enti",
+          "arabic": "ماحترمتيش",
+          "transliteration": "ma7taramtiish",
+          "english": "you (f) did not behave"
+        },
+        {
+          "person": "howa",
+          "arabic": "ماحترمش",
+          "transliteration": "ma7taramsh",
+          "english": "he did not behave"
+        },
+        {
+          "person": "heya",
+          "arabic": "ماحترمتش",
+          "transliteration": "ma7taramitsh",
+          "english": "she did not behave"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ماحترمناش",
+          "transliteration": "ma7taramnash",
+          "english": "we did not behave"
+        },
+        {
+          "person": "entu",
+          "arabic": "ماحترمتوش",
+          "transliteration": "ma7taramtuush",
+          "english": "you (pl) did not behave"
+        },
+        {
+          "person": "homma",
+          "arabic": "ماحترموش",
+          "transliteration": "ma7taramuush",
+          "english": "they did not behave"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بحترم",
+          "transliteration": "ba7tirim",
+          "english": "I behave"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتحترم",
+          "transliteration": "bti7tirim",
+          "english": "you (m) behave"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتحترمي",
+          "transliteration": "bti7tirmi",
+          "english": "you (f) behave"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيحترم",
+          "transliteration": "biyi7tirim",
+          "english": "he behaves"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتحترم",
+          "transliteration": "bti7tirim",
+          "english": "she behaves"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنحترم",
+          "transliteration": "bni7tirim",
+          "english": "we behave"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتحترموا",
+          "transliteration": "bti7tirmu",
+          "english": "you (pl) behave"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيحترموا",
+          "transliteration": "biyi7tirmu",
+          "english": "they behave"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مبحترمش",
+          "transliteration": "maba7tirimsh",
+          "english": "I do not behave"
+        },
+        {
+          "person": "enta",
+          "arabic": "مبتحترمش",
+          "transliteration": "mabti7tirimsh",
+          "english": "you (m) do not behave"
+        },
+        {
+          "person": "enti",
+          "arabic": "مبتحترميش",
+          "transliteration": "mabti7tirmiish",
+          "english": "you (f) do not behave"
+        },
+        {
+          "person": "howa",
+          "arabic": "مبيحترمش",
+          "transliteration": "mabiyi7tirimsh",
+          "english": "he does not behave"
+        },
+        {
+          "person": "heya",
+          "arabic": "مبتحترمش",
+          "transliteration": "mabti7tirimsh",
+          "english": "she does not behave"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مبنحترمش",
+          "transliteration": "mabni7tirimsh",
+          "english": "we do not behave"
+        },
+        {
+          "person": "entu",
+          "arabic": "مبتحترموش",
+          "transliteration": "mabti7tirmuush",
+          "english": "you (pl) do not behave"
+        },
+        {
+          "person": "homma",
+          "arabic": "مبيحترموش",
+          "transliteration": "mabiyi7tirmuush",
+          "english": "they do not behave"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "هحترم",
+          "transliteration": "ha7tirim",
+          "english": "I will behave"
+        },
+        {
+          "person": "enta",
+          "arabic": "هتحترم",
+          "transliteration": "hati7tirim",
+          "english": "you (m) will behave"
+        },
+        {
+          "person": "enti",
+          "arabic": "هتحترمي",
+          "transliteration": "hati7tirmi",
+          "english": "you (f) will behave"
+        },
+        {
+          "person": "howa",
+          "arabic": "هيحترم",
+          "transliteration": "hayi7tirim",
+          "english": "he will behave"
+        },
+        {
+          "person": "heya",
+          "arabic": "هتحترم",
+          "transliteration": "hati7tirim",
+          "english": "she will behave"
+        },
+        {
+          "person": "ehna",
+          "arabic": "هنحترم",
+          "transliteration": "hani7tirim",
+          "english": "we will behave"
+        },
+        {
+          "person": "entu",
+          "arabic": "هتحترموا",
+          "transliteration": "hati7tirmu",
+          "english": "you (pl) will behave"
+        },
+        {
+          "person": "homma",
+          "arabic": "هيحترموا",
+          "transliteration": "hayi7tirmu",
+          "english": "they will behave"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مش هحترم",
+          "transliteration": "mish ha7tirim",
+          "english": "I will not behave"
+        },
+        {
+          "person": "enta",
+          "arabic": "مش هتحترم",
+          "transliteration": "mish hati7tirim",
+          "english": "you (m) will not behave"
+        },
+        {
+          "person": "enti",
+          "arabic": "مش هتحترمي",
+          "transliteration": "mish hati7tirmi",
+          "english": "you (f) will not behave"
+        },
+        {
+          "person": "howa",
+          "arabic": "مش هيحترم",
+          "transliteration": "mish hayi7tirim",
+          "english": "he will not behave"
+        },
+        {
+          "person": "heya",
+          "arabic": "مش هتحترم",
+          "transliteration": "mish hati7tirim",
+          "english": "she will not behave"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مش هنحترم",
+          "transliteration": "mish hani7tirim",
+          "english": "we will not behave"
+        },
+        {
+          "person": "entu",
+          "arabic": "مش هتحترموا",
+          "transliteration": "mish hati7tirmu",
+          "english": "you (pl) will not behave"
+        },
+        {
+          "person": "homma",
+          "arabic": "مش هيحترموا",
+          "transliteration": "mish hayi7tirmu",
+          "english": "they will not behave"
+        }
+      ]
+    }
+  }
+}

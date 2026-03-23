@@ -512,3 +512,49 @@ export function createGameSentencesSchema() {
 }
 
 export type GameSentencesSchema = z.infer<ReturnType<typeof createGameSentencesSchema>['zodSchema']>;
+
+/**
+ * Schema for verb conjugation generation
+ * Generates past/present/future conjugations (8 persons × 3 tenses × 2 forms)
+ * plus object pronoun suffixes for a single verb
+ */
+export function createVerbConjugationSchema() {
+	const conjugationEntrySchema = z.object({
+		person: z.enum(['ana', 'enta', 'enti', 'howa', 'heya', 'ehna', 'entu', 'homma']),
+		arabic: z.string(),
+		transliteration: z.string(),
+		english: z.string()
+	});
+
+	const conjugationSetSchema = z.object({
+		affirmative: z.array(conjugationEntrySchema).length(8),
+		negative: z.array(conjugationEntrySchema).length(8)
+	});
+
+	const objectPronounEntrySchema = z.object({
+		object: z.enum(['me', 'you_m', 'you_f', 'him_it', 'her_it', 'us', 'you_pl', 'them']),
+		suffix: z.string(),
+		arabic: z.string(),
+		transliteration: z.string(),
+		english: z.string()
+	});
+
+	const schema = z.object({
+		rootLetters: z.string(),
+		verbClass: z.enum(['sound', 'hollow', 'defective', 'irregular', 'doubled']),
+		notes: z.string(),
+		conjugations: z.object({
+			past: conjugationSetSchema,
+			present: conjugationSetSchema,
+			future: conjugationSetSchema
+		}),
+		objectPronouns: z.array(objectPronounEntrySchema).length(8)
+	});
+
+	return {
+		zodSchema: schema,
+		jsonSchema: zodToJsonSchema(schema)
+	};
+}
+
+export type VerbConjugationSchema = z.infer<ReturnType<typeof createVerbConjugationSchema>['zodSchema']>;

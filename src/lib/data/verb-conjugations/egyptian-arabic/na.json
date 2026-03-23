@@ -1,0 +1,318 @@
+{
+  "slug": "na",
+  "arabic": "نطّ",
+  "transliteration": "naʈʈ",
+  "english": "to jump",
+  "wordId": "ef2d6e73-6402-4e08-aeec-cc91b8ab7c2a",
+  "rootLetters": "ن ط ط",
+  "verbClass": "doubled",
+  "notes": "As a doubled (geminate) verb, an 'ei' is inserted before consonant-initial suffixes in the past tense (e.g., natteit), and the stem vowel changes to 'o' in the imperfect tenses.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "نطيت",
+          "transliteration": "natteit",
+          "english": "I jumped"
+        },
+        {
+          "person": "enta",
+          "arabic": "نطيت",
+          "transliteration": "natteit",
+          "english": "you (m) jumped"
+        },
+        {
+          "person": "enti",
+          "arabic": "نطيتي",
+          "transliteration": "natteiti",
+          "english": "you (f) jumped"
+        },
+        {
+          "person": "howa",
+          "arabic": "نط",
+          "transliteration": "natt",
+          "english": "he jumped"
+        },
+        {
+          "person": "heya",
+          "arabic": "نطت",
+          "transliteration": "nattit",
+          "english": "she jumped"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نطينا",
+          "transliteration": "natteina",
+          "english": "we jumped"
+        },
+        {
+          "person": "entu",
+          "arabic": "نطيتوا",
+          "transliteration": "natteitu",
+          "english": "you (pl) jumped"
+        },
+        {
+          "person": "homma",
+          "arabic": "نطوا",
+          "transliteration": "nattu",
+          "english": "they jumped"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما نطيتش",
+          "transliteration": "ma natteitsh",
+          "english": "I did not jump"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما نطيتش",
+          "transliteration": "ma natteitsh",
+          "english": "you (m) did not jump"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما نطيتيش",
+          "transliteration": "ma natteitish",
+          "english": "you (f) did not jump"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما نطش",
+          "transliteration": "ma nattish",
+          "english": "he did not jump"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما نطتش",
+          "transliteration": "ma nattitsh",
+          "english": "she did not jump"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما نطيناش",
+          "transliteration": "ma natteinash",
+          "english": "we did not jump"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما نطيتوش",
+          "transliteration": "ma natteitush",
+          "english": "you (pl) did not jump"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما نطوش",
+          "transliteration": "ma nattush",
+          "english": "they did not jump"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بنط",
+          "transliteration": "banott",
+          "english": "I jump"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتنط",
+          "transliteration": "bitnott",
+          "english": "you (m) jump"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتنطي",
+          "transliteration": "bitnotti",
+          "english": "you (f) jump"
+        },
+        {
+          "person": "howa",
+          "arabic": "بينط",
+          "transliteration": "biynott",
+          "english": "he jumps"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتنط",
+          "transliteration": "bitnott",
+          "english": "she jumps"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بننط",
+          "transliteration": "binnott",
+          "english": "we jump"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتنطوا",
+          "transliteration": "bitnottu",
+          "english": "you (pl) jump"
+        },
+        {
+          "person": "homma",
+          "arabic": "بينطوا",
+          "transliteration": "biynottu",
+          "english": "they jump"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما بنطش",
+          "transliteration": "ma banottish",
+          "english": "I do not jump"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتنطش",
+          "transliteration": "ma bitnottish",
+          "english": "you (m) do not jump"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتنطيش",
+          "transliteration": "ma bitnottiish",
+          "english": "you (f) do not jump"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بينطش",
+          "transliteration": "ma biynottish",
+          "english": "he does not jump"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتنطش",
+          "transliteration": "ma bitnottish",
+          "english": "she does not jump"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما بننطش",
+          "transliteration": "ma binnottish",
+          "english": "we do not jump"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتنطوش",
+          "transliteration": "ma bitnottuush",
+          "english": "you (pl) do not jump"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بينطوش",
+          "transliteration": "ma biynottuush",
+          "english": "they do not jump"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "هانط",
+          "transliteration": "hanott",
+          "english": "I will jump"
+        },
+        {
+          "person": "enta",
+          "arabic": "هاتنط",
+          "transliteration": "hatnott",
+          "english": "you (m) will jump"
+        },
+        {
+          "person": "enti",
+          "arabic": "هاتنطي",
+          "transliteration": "hatnotti",
+          "english": "you (f) will jump"
+        },
+        {
+          "person": "howa",
+          "arabic": "هاينط",
+          "transliteration": "haynott",
+          "english": "he will jump"
+        },
+        {
+          "person": "heya",
+          "arabic": "هاتنط",
+          "transliteration": "hatnott",
+          "english": "she will jump"
+        },
+        {
+          "person": "ehna",
+          "arabic": "هاننط",
+          "transliteration": "hannott",
+          "english": "we will jump"
+        },
+        {
+          "person": "entu",
+          "arabic": "هاتنطوا",
+          "transliteration": "hatnottu",
+          "english": "you (pl) will jump"
+        },
+        {
+          "person": "homma",
+          "arabic": "هاينطوا",
+          "transliteration": "haynottu",
+          "english": "they will jump"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مش هانط",
+          "transliteration": "mish hanott",
+          "english": "I will not jump"
+        },
+        {
+          "person": "enta",
+          "arabic": "مش هاتنط",
+          "transliteration": "mish hatnott",
+          "english": "you (m) will not jump"
+        },
+        {
+          "person": "enti",
+          "arabic": "مش هاتنطي",
+          "transliteration": "mish hatnotti",
+          "english": "you (f) will not jump"
+        },
+        {
+          "person": "howa",
+          "arabic": "مش هاينط",
+          "transliteration": "mish haynott",
+          "english": "he will not jump"
+        },
+        {
+          "person": "heya",
+          "arabic": "مش هاتنط",
+          "transliteration": "mish hatnott",
+          "english": "she will not jump"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مش هاننط",
+          "transliteration": "mish hannott",
+          "english": "we will not jump"
+        },
+        {
+          "person": "entu",
+          "arabic": "مش هاتنطوا",
+          "transliteration": "mish hatnottu",
+          "english": "you (pl) will not jump"
+        },
+        {
+          "person": "homma",
+          "arabic": "مش هاينطوا",
+          "transliteration": "mish haynottu",
+          "english": "they will not jump"
+        }
+      ]
+    }
+  }
+}

@@ -179,7 +179,7 @@
   <div class="mb-12">
     <SectionHeader title="Practice" />
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       <Card
         href="/learn/game"
         icon="🎮"
@@ -197,6 +197,12 @@
         icon="📝"
         title="Sentences"
         description="Drill sentence structures and grammar patterns in context."
+      />
+      <Card
+        href="/egyptian-arabic/conjugations"
+        icon="🔤"
+        title="Verb Conjugations"
+        description="Practice verb conjugations in Egyptian Arabic."
       />
       <!-- <Card
         href="/speak"
