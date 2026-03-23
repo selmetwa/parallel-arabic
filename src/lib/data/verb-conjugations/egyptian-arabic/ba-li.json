@@ -1,0 +1,318 @@
+{
+  "slug": "ba-li",
+  "arabic": "بصّ لِـ",
+  "transliteration": "baȿȿə li-",
+  "english": "to look",
+  "wordId": "e6e00828-930d-4c3f-8a47-76de117a5cda",
+  "rootLetters": "ب ص ص",
+  "verbClass": "doubled",
+  "notes": "This is a doubled (geminate) verb. Since it is intransitive and takes the preposition 'li' (to/at), the object pronouns are attached to the preposition base 'li' (e.g., bassili, bassilak).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بصيت",
+          "transliteration": "bassiit",
+          "english": "I looked"
+        },
+        {
+          "person": "enta",
+          "arabic": "بصيت",
+          "transliteration": "bassiit",
+          "english": "you (m) looked"
+        },
+        {
+          "person": "enti",
+          "arabic": "بصيتي",
+          "transliteration": "bassiiti",
+          "english": "you (f) looked"
+        },
+        {
+          "person": "howa",
+          "arabic": "بص",
+          "transliteration": "bass",
+          "english": "he looked"
+        },
+        {
+          "person": "heya",
+          "arabic": "بصت",
+          "transliteration": "bassit",
+          "english": "she looked"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بصينا",
+          "transliteration": "bassiina",
+          "english": "we looked"
+        },
+        {
+          "person": "entu",
+          "arabic": "بصيتوا",
+          "transliteration": "bassiitu",
+          "english": "you (pl) looked"
+        },
+        {
+          "person": "homma",
+          "arabic": "بصوا",
+          "transliteration": "bassu",
+          "english": "they looked"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مابصيتش",
+          "transliteration": "mabassiitsh",
+          "english": "I didn't look"
+        },
+        {
+          "person": "enta",
+          "arabic": "مابصيتش",
+          "transliteration": "mabassiitsh",
+          "english": "you (m) didn't look"
+        },
+        {
+          "person": "enti",
+          "arabic": "مابصيتيش",
+          "transliteration": "mabassiitiish",
+          "english": "you (f) didn't look"
+        },
+        {
+          "person": "howa",
+          "arabic": "مابصش",
+          "transliteration": "mabassish",
+          "english": "he didn't look"
+        },
+        {
+          "person": "heya",
+          "arabic": "مابصتش",
+          "transliteration": "mabassitsh",
+          "english": "she didn't look"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مابصيناش",
+          "transliteration": "mabassiinash",
+          "english": "we didn't look"
+        },
+        {
+          "person": "entu",
+          "arabic": "مابصيتوش",
+          "transliteration": "mabassiituush",
+          "english": "you (pl) didn't look"
+        },
+        {
+          "person": "homma",
+          "arabic": "مابصوش",
+          "transliteration": "mabassuush",
+          "english": "they didn't look"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "ببص",
+          "transliteration": "babuss",
+          "english": "I look"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتبص",
+          "transliteration": "bitbuss",
+          "english": "you (m) look"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتبصي",
+          "transliteration": "bitbussi",
+          "english": "you (f) look"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيبص",
+          "transliteration": "biyibuss",
+          "english": "he looks"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتبص",
+          "transliteration": "bitbuss",
+          "english": "she looks"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنبص",
+          "transliteration": "bnibuss",
+          "english": "we look"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتبصوا",
+          "transliteration": "bitbussu",
+          "english": "you (pl) look"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيبصوا",
+          "transliteration": "biyibussu",
+          "english": "they look"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ماببصش",
+          "transliteration": "mababussish",
+          "english": "I don't look"
+        },
+        {
+          "person": "enta",
+          "arabic": "مابتبصش",
+          "transliteration": "mabitbussish",
+          "english": "you (m) don't look"
+        },
+        {
+          "person": "enti",
+          "arabic": "مابتبصيش",
+          "transliteration": "mabitbussiish",
+          "english": "you (f) don't look"
+        },
+        {
+          "person": "howa",
+          "arabic": "مابيبصش",
+          "transliteration": "mabiyibussish",
+          "english": "he doesn't look"
+        },
+        {
+          "person": "heya",
+          "arabic": "مابتبصش",
+          "transliteration": "mabitbussish",
+          "english": "she doesn't look"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مابنبصش",
+          "transliteration": "mabinbussish",
+          "english": "we don't look"
+        },
+        {
+          "person": "entu",
+          "arabic": "مابتبصوش",
+          "transliteration": "mabitbussuush",
+          "english": "you (pl) don't look"
+        },
+        {
+          "person": "homma",
+          "arabic": "مابيبصوش",
+          "transliteration": "mabiyibussuush",
+          "english": "they don't look"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "هبص",
+          "transliteration": "habuss",
+          "english": "I will look"
+        },
+        {
+          "person": "enta",
+          "arabic": "هتبص",
+          "transliteration": "hatbuss",
+          "english": "you (m) will look"
+        },
+        {
+          "person": "enti",
+          "arabic": "هتبصي",
+          "transliteration": "hatbussi",
+          "english": "you (f) will look"
+        },
+        {
+          "person": "howa",
+          "arabic": "هيبص",
+          "transliteration": "haybuss",
+          "english": "he will look"
+        },
+        {
+          "person": "heya",
+          "arabic": "هتبص",
+          "transliteration": "hatbuss",
+          "english": "she will look"
+        },
+        {
+          "person": "ehna",
+          "arabic": "هنبص",
+          "transliteration": "hanbuss",
+          "english": "we will look"
+        },
+        {
+          "person": "entu",
+          "arabic": "هتبصوا",
+          "transliteration": "hatbussu",
+          "english": "you (pl) will look"
+        },
+        {
+          "person": "homma",
+          "arabic": "هيبصوا",
+          "transliteration": "haybussu",
+          "english": "they will look"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مش هبص",
+          "transliteration": "mish habuss",
+          "english": "I won't look"
+        },
+        {
+          "person": "enta",
+          "arabic": "مش هتبص",
+          "transliteration": "mish hatbuss",
+          "english": "you (m) won't look"
+        },
+        {
+          "person": "enti",
+          "arabic": "مش هتبصي",
+          "transliteration": "mish hatbussi",
+          "english": "you (f) won't look"
+        },
+        {
+          "person": "howa",
+          "arabic": "مش هيبص",
+          "transliteration": "mish haybuss",
+          "english": "he won't look"
+        },
+        {
+          "person": "heya",
+          "arabic": "مش هتبص",
+          "transliteration": "mish hatbuss",
+          "english": "she won't look"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مش هنبص",
+          "transliteration": "mish hanbuss",
+          "english": "we won't look"
+        },
+        {
+          "person": "entu",
+          "arabic": "مش هتبصوا",
+          "transliteration": "mish hatbussu",
+          "english": "you (pl) won't look"
+        },
+        {
+          "person": "homma",
+          "arabic": "مش هيبصوا",
+          "transliteration": "mish haybussu",
+          "english": "they won't look"
+        }
+      ]
+    }
+  }
+}

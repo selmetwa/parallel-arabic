@@ -1,0 +1,318 @@
+{
+  "slug": "gih",
+  "arabic": "جِهْ",
+  "transliteration": "gih",
+  "english": "to come",
+  "wordId": "dd3184f1-1eb3-4bcf-8815-6d58a90c58df",
+  "rootLetters": "ج ي ء",
+  "verbClass": "irregular",
+  "notes": "This is a highly irregular verb; its past stem changes drastically depending on the pronoun (geet, gih, gat, gum), and the 'howa' past negative form uniquely becomes 'magash'. It takes direct object suffixes to mean 'came to [someone]'.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "جيت",
+          "transliteration": "geet",
+          "english": "I came"
+        },
+        {
+          "person": "enta",
+          "arabic": "جيت",
+          "transliteration": "geet",
+          "english": "you (m) came"
+        },
+        {
+          "person": "enti",
+          "arabic": "جيتي",
+          "transliteration": "geeti",
+          "english": "you (f) came"
+        },
+        {
+          "person": "howa",
+          "arabic": "جه",
+          "transliteration": "gih",
+          "english": "he came"
+        },
+        {
+          "person": "heya",
+          "arabic": "جت",
+          "transliteration": "gat",
+          "english": "she came"
+        },
+        {
+          "person": "ehna",
+          "arabic": "جينا",
+          "transliteration": "geena",
+          "english": "we came"
+        },
+        {
+          "person": "entu",
+          "arabic": "جيتوا",
+          "transliteration": "geetu",
+          "english": "you (pl) came"
+        },
+        {
+          "person": "homma",
+          "arabic": "جم",
+          "transliteration": "gum",
+          "english": "they came"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ماجيتش",
+          "transliteration": "mageetsh",
+          "english": "I did not come"
+        },
+        {
+          "person": "enta",
+          "arabic": "ماجيتش",
+          "transliteration": "mageetsh",
+          "english": "you (m) did not come"
+        },
+        {
+          "person": "enti",
+          "arabic": "ماجيتيش",
+          "transliteration": "mageetiish",
+          "english": "you (f) did not come"
+        },
+        {
+          "person": "howa",
+          "arabic": "ماجاش",
+          "transliteration": "magash",
+          "english": "he did not come"
+        },
+        {
+          "person": "heya",
+          "arabic": "ماجاتش",
+          "transliteration": "magatsh",
+          "english": "she did not come"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ماجيناش",
+          "transliteration": "mageenash",
+          "english": "we did not come"
+        },
+        {
+          "person": "entu",
+          "arabic": "ماجيتوش",
+          "transliteration": "mageetush",
+          "english": "you (pl) did not come"
+        },
+        {
+          "person": "homma",
+          "arabic": "ماجوش",
+          "transliteration": "magush",
+          "english": "they did not come"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "باجي",
+          "transliteration": "baagi",
+          "english": "I come"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتيجي",
+          "transliteration": "bteegi",
+          "english": "you (m) come"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتيجي",
+          "transliteration": "bteegi",
+          "english": "you (f) come"
+        },
+        {
+          "person": "howa",
+          "arabic": "بييجي",
+          "transliteration": "biyiigi",
+          "english": "he comes"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتيجي",
+          "transliteration": "bteegi",
+          "english": "she comes"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنيجي",
+          "transliteration": "bneegi",
+          "english": "we come"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتيجوا",
+          "transliteration": "bteegu",
+          "english": "you (pl) come"
+        },
+        {
+          "person": "homma",
+          "arabic": "بييجوا",
+          "transliteration": "biyiigu",
+          "english": "they come"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ماباجيش",
+          "transliteration": "mabaagish",
+          "english": "I do not come"
+        },
+        {
+          "person": "enta",
+          "arabic": "مابتيجيش",
+          "transliteration": "mabteegish",
+          "english": "you (m) do not come"
+        },
+        {
+          "person": "enti",
+          "arabic": "مابتيجيش",
+          "transliteration": "mabteegiish",
+          "english": "you (f) do not come"
+        },
+        {
+          "person": "howa",
+          "arabic": "مابيجيش",
+          "transliteration": "mabiyiigish",
+          "english": "he does not come"
+        },
+        {
+          "person": "heya",
+          "arabic": "مابتيجيش",
+          "transliteration": "mabteegish",
+          "english": "she does not come"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مابنيجيش",
+          "transliteration": "mabneegish",
+          "english": "we do not come"
+        },
+        {
+          "person": "entu",
+          "arabic": "مابتيجوش",
+          "transliteration": "mabteeguush",
+          "english": "you (pl) do not come"
+        },
+        {
+          "person": "homma",
+          "arabic": "مابييجوش",
+          "transliteration": "mabiyiiguush",
+          "english": "they do not come"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "هاجي",
+          "transliteration": "haagi",
+          "english": "I will come"
+        },
+        {
+          "person": "enta",
+          "arabic": "هاتيجي",
+          "transliteration": "hateegi",
+          "english": "you (m) will come"
+        },
+        {
+          "person": "enti",
+          "arabic": "هاتيجي",
+          "transliteration": "hateegi",
+          "english": "you (f) will come"
+        },
+        {
+          "person": "howa",
+          "arabic": "هييجي",
+          "transliteration": "hayiigi",
+          "english": "he will come"
+        },
+        {
+          "person": "heya",
+          "arabic": "هاتيجي",
+          "transliteration": "hateegi",
+          "english": "she will come"
+        },
+        {
+          "person": "ehna",
+          "arabic": "هانيجي",
+          "transliteration": "haneegi",
+          "english": "we will come"
+        },
+        {
+          "person": "entu",
+          "arabic": "هاتيجوا",
+          "transliteration": "hateegu",
+          "english": "you (pl) will come"
+        },
+        {
+          "person": "homma",
+          "arabic": "هييجوا",
+          "transliteration": "hayiigu",
+          "english": "they will come"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مش هاجي",
+          "transliteration": "mish haagi",
+          "english": "I will not come"
+        },
+        {
+          "person": "enta",
+          "arabic": "مش هاتيجي",
+          "transliteration": "mish hateegi",
+          "english": "you (m) will not come"
+        },
+        {
+          "person": "enti",
+          "arabic": "مش هاتيجي",
+          "transliteration": "mish hateegi",
+          "english": "you (f) will not come"
+        },
+        {
+          "person": "howa",
+          "arabic": "مش هييجي",
+          "transliteration": "mish hayiigi",
+          "english": "he will not come"
+        },
+        {
+          "person": "heya",
+          "arabic": "مش هاتيجي",
+          "transliteration": "mish hateegi",
+          "english": "she will not come"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مش هانيجي",
+          "transliteration": "mish haneegi",
+          "english": "we will not come"
+        },
+        {
+          "person": "entu",
+          "arabic": "مش هاتيجوا",
+          "transliteration": "mish hateegu",
+          "english": "you (pl) will not come"
+        },
+        {
+          "person": "homma",
+          "arabic": "مش هييجوا",
+          "transliteration": "mish hayiigu",
+          "english": "they will not come"
+        }
+      ]
+    }
+  }
+}

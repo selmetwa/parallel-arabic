@@ -23,6 +23,8 @@
 		"populate:words:dry": "vite-node scripts/populate-words.ts --dry-run",
 		"upload:lessons": "vite-node scripts/upload-lessons-to-storage.ts",
 		"upload:lessons:dry": "vite-node scripts/upload-lessons-to-storage.ts --dry-run",
+		"generate:conjugations": "vite-node scripts/generate-verb-conjugations.ts",
+		"generate:conjugations:dry": "vite-node scripts/generate-verb-conjugations.ts -- --dry-run",
 		"build:capacitor": "CAPACITOR=true vite build",
 		"cap:sync": "npm run build:capacitor && npx cap sync",
 		"cap:ios": "npm run cap:sync && npx cap open ios",
