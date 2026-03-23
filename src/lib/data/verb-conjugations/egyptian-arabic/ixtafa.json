@@ -1,0 +1,318 @@
+{
+  "slug": "ixtafa",
+  "arabic": "اِخْتفى",
+  "transliteration": "ixtafa",
+  "english": "to disappear",
+  "wordId": "065fd2c5-f9b9-4fd3-8d5f-5fa81a800a29",
+  "rootLetters": "خ ف ي",
+  "verbClass": "defective",
+  "notes": "This is a Form VIII defective verb. It is inherently intransitive ('to disappear'), but morphological object suffixes are provided here to fully satisfy the conjugation structure.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "اختفيت",
+          "transliteration": "ikhtafeet",
+          "english": "I disappeared"
+        },
+        {
+          "person": "enta",
+          "arabic": "اختفيت",
+          "transliteration": "ikhtafeet",
+          "english": "you (m) disappeared"
+        },
+        {
+          "person": "enti",
+          "arabic": "اختفيتي",
+          "transliteration": "ikhtafeeti",
+          "english": "you (f) disappeared"
+        },
+        {
+          "person": "howa",
+          "arabic": "اختفى",
+          "transliteration": "ikhtafa",
+          "english": "he disappeared"
+        },
+        {
+          "person": "heya",
+          "arabic": "اختفت",
+          "transliteration": "ikhtafit",
+          "english": "she disappeared"
+        },
+        {
+          "person": "ehna",
+          "arabic": "اختفينا",
+          "transliteration": "ikhtafeena",
+          "english": "we disappeared"
+        },
+        {
+          "person": "entu",
+          "arabic": "اختفيتوا",
+          "transliteration": "ikhtafeetu",
+          "english": "you (pl) disappeared"
+        },
+        {
+          "person": "homma",
+          "arabic": "اختفوا",
+          "transliteration": "ikhtafu",
+          "english": "they disappeared"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما اختفيتش",
+          "transliteration": "ma ikhtafeetish",
+          "english": "I didn't disappear"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما اختفيتش",
+          "transliteration": "ma ikhtafeetish",
+          "english": "you (m) didn't disappear"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما اختفيتيش",
+          "transliteration": "ma ikhtafeetiish",
+          "english": "you (f) didn't disappear"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما اختفاش",
+          "transliteration": "ma ikhtafash",
+          "english": "he didn't disappear"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما اختفتش",
+          "transliteration": "ma ikhtafitsh",
+          "english": "she didn't disappear"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما اختفيناش",
+          "transliteration": "ma ikhtafeenash",
+          "english": "we didn't disappear"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما اختفيتوش",
+          "transliteration": "ma ikhtafeetush",
+          "english": "you (pl) didn't disappear"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما اختفوش",
+          "transliteration": "ma ikhtafush",
+          "english": "they didn't disappear"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بختفي",
+          "transliteration": "bakhtifi",
+          "english": "I disappear"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتختفي",
+          "transliteration": "bitikhtifi",
+          "english": "you (m) disappear"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتختفي",
+          "transliteration": "bitikhtifi",
+          "english": "you (f) disappear"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيختفي",
+          "transliteration": "biyikhtifi",
+          "english": "he disappears"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتختفي",
+          "transliteration": "bitikhtifi",
+          "english": "she disappears"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنختفي",
+          "transliteration": "binikhtifi",
+          "english": "we disappear"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتختفوا",
+          "transliteration": "bitikhtifu",
+          "english": "you (pl) disappear"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيختفوا",
+          "transliteration": "biyikhtifu",
+          "english": "they disappear"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مابختفيش",
+          "transliteration": "mabakhtifiish",
+          "english": "I don't disappear"
+        },
+        {
+          "person": "enta",
+          "arabic": "مابتختفيش",
+          "transliteration": "mabtikhtifiish",
+          "english": "you (m) don't disappear"
+        },
+        {
+          "person": "enti",
+          "arabic": "مابتختفيش",
+          "transliteration": "mabtikhtifiish",
+          "english": "you (f) don't disappear"
+        },
+        {
+          "person": "howa",
+          "arabic": "مابيختفيش",
+          "transliteration": "mabiyikhtifiish",
+          "english": "he doesn't disappear"
+        },
+        {
+          "person": "heya",
+          "arabic": "مابتختفيش",
+          "transliteration": "mabtikhtifiish",
+          "english": "she doesn't disappear"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مابنختفيش",
+          "transliteration": "mabnikhtifiish",
+          "english": "we don't disappear"
+        },
+        {
+          "person": "entu",
+          "arabic": "مابتختفوش",
+          "transliteration": "mabtikhtifuush",
+          "english": "you (pl) don't disappear"
+        },
+        {
+          "person": "homma",
+          "arabic": "مابيختفوش",
+          "transliteration": "mabiyikhtifuush",
+          "english": "they don't disappear"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "هختفي",
+          "transliteration": "hakhtifi",
+          "english": "I will disappear"
+        },
+        {
+          "person": "enta",
+          "arabic": "هتختفي",
+          "transliteration": "hatikhtifi",
+          "english": "you (m) will disappear"
+        },
+        {
+          "person": "enti",
+          "arabic": "هتختفي",
+          "transliteration": "hatikhtifi",
+          "english": "you (f) will disappear"
+        },
+        {
+          "person": "howa",
+          "arabic": "هيختفي",
+          "transliteration": "hayikhtifi",
+          "english": "he will disappear"
+        },
+        {
+          "person": "heya",
+          "arabic": "هتختفي",
+          "transliteration": "hatikhtifi",
+          "english": "she will disappear"
+        },
+        {
+          "person": "ehna",
+          "arabic": "هنختفي",
+          "transliteration": "hanikhtifi",
+          "english": "we will disappear"
+        },
+        {
+          "person": "entu",
+          "arabic": "هتختفوا",
+          "transliteration": "hatikhtifu",
+          "english": "you (pl) will disappear"
+        },
+        {
+          "person": "homma",
+          "arabic": "هيختفوا",
+          "transliteration": "hayikhtifu",
+          "english": "they will disappear"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مش هختفي",
+          "transliteration": "mish hakhtifi",
+          "english": "I won't disappear"
+        },
+        {
+          "person": "enta",
+          "arabic": "مش هتختفي",
+          "transliteration": "mish hatikhtifi",
+          "english": "you (m) won't disappear"
+        },
+        {
+          "person": "enti",
+          "arabic": "مش هتختفي",
+          "transliteration": "mish hatikhtifi",
+          "english": "you (f) won't disappear"
+        },
+        {
+          "person": "howa",
+          "arabic": "مش هيختفي",
+          "transliteration": "mish hayikhtifi",
+          "english": "he won't disappear"
+        },
+        {
+          "person": "heya",
+          "arabic": "مش هتختفي",
+          "transliteration": "mish hatikhtifi",
+          "english": "she won't disappear"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مش هنختفي",
+          "transliteration": "mish hanikhtifi",
+          "english": "we won't disappear"
+        },
+        {
+          "person": "entu",
+          "arabic": "مش هتختفوا",
+          "transliteration": "mish hatikhtifu",
+          "english": "you (pl) won't disappear"
+        },
+        {
+          "person": "homma",
+          "arabic": "مش هيختفوا",
+          "transliteration": "mish hayikhtifu",
+          "english": "they won't disappear"
+        }
+      ]
+    }
+  }
+}

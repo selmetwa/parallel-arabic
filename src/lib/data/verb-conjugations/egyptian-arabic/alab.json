@@ -1,0 +1,318 @@
+{
+  "slug": "alab",
+  "arabic": "طلب",
+  "transliteration": "ʈalab",
+  "english": "to demand",
+  "wordId": "abc0ac80-ee29-4f7f-bae6-33bea340048f",
+  "rootLetters": "ط ل ب",
+  "verbClass": "sound",
+  "notes": "Form I sound verb with an o-o pattern in the imperfect stem (batlob/yotlob).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "طلبت",
+          "transliteration": "talabt",
+          "english": "I demanded"
+        },
+        {
+          "person": "enta",
+          "arabic": "طلبت",
+          "transliteration": "talabt",
+          "english": "you (m) demanded"
+        },
+        {
+          "person": "enti",
+          "arabic": "طلبتي",
+          "transliteration": "talabti",
+          "english": "you (f) demanded"
+        },
+        {
+          "person": "howa",
+          "arabic": "طلب",
+          "transliteration": "talab",
+          "english": "he demanded"
+        },
+        {
+          "person": "heya",
+          "arabic": "طلبت",
+          "transliteration": "talabit",
+          "english": "she demanded"
+        },
+        {
+          "person": "ehna",
+          "arabic": "طلبنا",
+          "transliteration": "talabna",
+          "english": "we demanded"
+        },
+        {
+          "person": "entu",
+          "arabic": "طلبتوا",
+          "transliteration": "talabtu",
+          "english": "you (pl) demanded"
+        },
+        {
+          "person": "homma",
+          "arabic": "طلبوا",
+          "transliteration": "talabu",
+          "english": "they demanded"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما طلبتش",
+          "transliteration": "ma talabtish",
+          "english": "I did not demand"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما طلبتش",
+          "transliteration": "ma talabtish",
+          "english": "you (m) did not demand"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما طلبتيش",
+          "transliteration": "ma talabtiish",
+          "english": "you (f) did not demand"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما طلبش",
+          "transliteration": "ma talabsh",
+          "english": "he did not demand"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما طلبتش",
+          "transliteration": "ma talabitsh",
+          "english": "she did not demand"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما طلبناش",
+          "transliteration": "ma talabnash",
+          "english": "we did not demand"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما طلبتوش",
+          "transliteration": "ma talabtush",
+          "english": "you (pl) did not demand"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما طلبوش",
+          "transliteration": "ma talabush",
+          "english": "they did not demand"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بطلب",
+          "transliteration": "batlob",
+          "english": "I demand"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتطلب",
+          "transliteration": "btotlob",
+          "english": "you (m) demand"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتطلبي",
+          "transliteration": "btotlobi",
+          "english": "you (f) demand"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيطلب",
+          "transliteration": "biyotlob",
+          "english": "he demands"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتطلب",
+          "transliteration": "btotlob",
+          "english": "she demands"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنطلب",
+          "transliteration": "bnotlob",
+          "english": "we demand"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتطلبوا",
+          "transliteration": "btotlobu",
+          "english": "you (pl) demand"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيطلبوا",
+          "transliteration": "biyotlobu",
+          "english": "they demand"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما بطلبش",
+          "transliteration": "mabatlobsh",
+          "english": "I do not demand"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتطلبش",
+          "transliteration": "mabtotlobsh",
+          "english": "you (m) do not demand"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتطلبيش",
+          "transliteration": "mabtotlobiish",
+          "english": "you (f) do not demand"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيطلبش",
+          "transliteration": "mabiyotlobsh",
+          "english": "he does not demand"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتطلبش",
+          "transliteration": "mabtotlobsh",
+          "english": "she does not demand"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما بنطلبش",
+          "transliteration": "mabnotlobsh",
+          "english": "we do not demand"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتطلبوش",
+          "transliteration": "mabtotlobuush",
+          "english": "you (pl) do not demand"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيطلبوش",
+          "transliteration": "mabiyotlobuush",
+          "english": "they do not demand"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "هطلب",
+          "transliteration": "hatlob",
+          "english": "I will demand"
+        },
+        {
+          "person": "enta",
+          "arabic": "هتطلب",
+          "transliteration": "hatotlob",
+          "english": "you (m) will demand"
+        },
+        {
+          "person": "enti",
+          "arabic": "هتطلبي",
+          "transliteration": "hatotlobi",
+          "english": "you (f) will demand"
+        },
+        {
+          "person": "howa",
+          "arabic": "هيطلب",
+          "transliteration": "hayotlob",
+          "english": "he will demand"
+        },
+        {
+          "person": "heya",
+          "arabic": "هتطلب",
+          "transliteration": "hatotlob",
+          "english": "she will demand"
+        },
+        {
+          "person": "ehna",
+          "arabic": "هنطلب",
+          "transliteration": "hanotlob",
+          "english": "we will demand"
+        },
+        {
+          "person": "entu",
+          "arabic": "هتطلبوا",
+          "transliteration": "hatotlobu",
+          "english": "you (pl) will demand"
+        },
+        {
+          "person": "homma",
+          "arabic": "هيطلبوا",
+          "transliteration": "hayotlobu",
+          "english": "they will demand"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مش هطلب",
+          "transliteration": "mish hatlob",
+          "english": "I will not demand"
+        },
+        {
+          "person": "enta",
+          "arabic": "مش هتطلب",
+          "transliteration": "mish hatotlob",
+          "english": "you (m) will not demand"
+        },
+        {
+          "person": "enti",
+          "arabic": "مش هتطلبي",
+          "transliteration": "mish hatotlobi",
+          "english": "you (f) will not demand"
+        },
+        {
+          "person": "howa",
+          "arabic": "مش هيطلب",
+          "transliteration": "mish hayotlob",
+          "english": "he will not demand"
+        },
+        {
+          "person": "heya",
+          "arabic": "مش هتطلب",
+          "transliteration": "mish hatotlob",
+          "english": "she will not demand"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مش هنطلب",
+          "transliteration": "mish hanotlob",
+          "english": "we will not demand"
+        },
+        {
+          "person": "entu",
+          "arabic": "مش هتطلبوا",
+          "transliteration": "mish hatotlobu",
+          "english": "you (pl) will not demand"
+        },
+        {
+          "person": "homma",
+          "arabic": "مش هيطلبوا",
+          "transliteration": "mish hayotlobu",
+          "english": "they will not demand"
+        }
+      ]
+    }
+  }
+}

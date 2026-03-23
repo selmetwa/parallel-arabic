@@ -1,0 +1,318 @@
+{
+  "slug": "sa-al",
+  "arabic": "سأل",
+  "transliteration": "saʔal",
+  "english": "to ask",
+  "wordId": "fd9f7e8c-7b55-478a-8027-84d76e4fc13a",
+  "rootLetters": "س أ ل",
+  "verbClass": "sound",
+  "notes": "Although the root contains a hamza, this verb conjugates regularly like a sound verb in Egyptian Arabic.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سألت",
+          "transliteration": "sa'alt",
+          "english": "I asked"
+        },
+        {
+          "person": "enta",
+          "arabic": "سألت",
+          "transliteration": "sa'alt",
+          "english": "you (m) asked"
+        },
+        {
+          "person": "enti",
+          "arabic": "سألتي",
+          "transliteration": "sa'alti",
+          "english": "you (f) asked"
+        },
+        {
+          "person": "howa",
+          "arabic": "سأل",
+          "transliteration": "sa'al",
+          "english": "he asked"
+        },
+        {
+          "person": "heya",
+          "arabic": "سألت",
+          "transliteration": "sa'alit",
+          "english": "she asked"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سألنا",
+          "transliteration": "sa'alna",
+          "english": "we asked"
+        },
+        {
+          "person": "entu",
+          "arabic": "سألتوا",
+          "transliteration": "sa'altu",
+          "english": "you (pl) asked"
+        },
+        {
+          "person": "homma",
+          "arabic": "سألوا",
+          "transliteration": "sa'alu",
+          "english": "they asked"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما سألتش",
+          "transliteration": "ma sa'altish",
+          "english": "I didn't ask"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما سألتش",
+          "transliteration": "ma sa'altish",
+          "english": "you (m) didn't ask"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما سألتيش",
+          "transliteration": "ma sa'altiish",
+          "english": "you (f) didn't ask"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما سألش",
+          "transliteration": "ma sa'alsh",
+          "english": "he didn't ask"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما سألتش",
+          "transliteration": "ma sa'alitsh",
+          "english": "she didn't ask"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما سألناش",
+          "transliteration": "ma sa'alnash",
+          "english": "we didn't ask"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما سألتوش",
+          "transliteration": "ma sa'altuush",
+          "english": "you (pl) didn't ask"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما سألوش",
+          "transliteration": "ma sa'aluush",
+          "english": "they didn't ask"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بسأل",
+          "transliteration": "bas'al",
+          "english": "I ask"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتسأل",
+          "transliteration": "btis'al",
+          "english": "you (m) ask"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتسألي",
+          "transliteration": "btis'ali",
+          "english": "you (f) ask"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيسأل",
+          "transliteration": "biyis'al",
+          "english": "he asks"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتسأل",
+          "transliteration": "btis'al",
+          "english": "she asks"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنسأل",
+          "transliteration": "bnis'al",
+          "english": "we ask"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتسألوا",
+          "transliteration": "btis'alu",
+          "english": "you (pl) ask"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيسألوا",
+          "transliteration": "biyis'alu",
+          "english": "they ask"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مابسألش",
+          "transliteration": "mabas'alsh",
+          "english": "I don't ask"
+        },
+        {
+          "person": "enta",
+          "arabic": "مابتسألش",
+          "transliteration": "mabtis'alsh",
+          "english": "you (m) don't ask"
+        },
+        {
+          "person": "enti",
+          "arabic": "مابتسأليش",
+          "transliteration": "mabtis'aliish",
+          "english": "you (f) don't ask"
+        },
+        {
+          "person": "howa",
+          "arabic": "مابيسألش",
+          "transliteration": "mabiyis'alsh",
+          "english": "he doesn't ask"
+        },
+        {
+          "person": "heya",
+          "arabic": "مابتسألش",
+          "transliteration": "mabtis'alsh",
+          "english": "she doesn't ask"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مابنسألش",
+          "transliteration": "mabnis'alsh",
+          "english": "we don't ask"
+        },
+        {
+          "person": "entu",
+          "arabic": "مابتسألوش",
+          "transliteration": "mabtis'aluush",
+          "english": "you (pl) don't ask"
+        },
+        {
+          "person": "homma",
+          "arabic": "مابيسألوش",
+          "transliteration": "mabiyis'aluush",
+          "english": "they don't ask"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "هسأل",
+          "transliteration": "haas'al",
+          "english": "I will ask"
+        },
+        {
+          "person": "enta",
+          "arabic": "هتسأل",
+          "transliteration": "hatis'al",
+          "english": "you (m) will ask"
+        },
+        {
+          "person": "enti",
+          "arabic": "هتسألي",
+          "transliteration": "hatis'ali",
+          "english": "you (f) will ask"
+        },
+        {
+          "person": "howa",
+          "arabic": "هيسأل",
+          "transliteration": "hayis'al",
+          "english": "he will ask"
+        },
+        {
+          "person": "heya",
+          "arabic": "هتسأل",
+          "transliteration": "hatis'al",
+          "english": "she will ask"
+        },
+        {
+          "person": "ehna",
+          "arabic": "هنسأل",
+          "transliteration": "hanis'al",
+          "english": "we will ask"
+        },
+        {
+          "person": "entu",
+          "arabic": "هتسألوا",
+          "transliteration": "hatis'alu",
+          "english": "you (pl) will ask"
+        },
+        {
+          "person": "homma",
+          "arabic": "هيسألوا",
+          "transliteration": "hayis'alu",
+          "english": "they will ask"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مش هسأل",
+          "transliteration": "mish haas'al",
+          "english": "I won't ask"
+        },
+        {
+          "person": "enta",
+          "arabic": "مش هتسأل",
+          "transliteration": "mish hatis'al",
+          "english": "you (m) won't ask"
+        },
+        {
+          "person": "enti",
+          "arabic": "مش هتسألي",
+          "transliteration": "mish hatis'ali",
+          "english": "you (f) won't ask"
+        },
+        {
+          "person": "howa",
+          "arabic": "مش هيسأل",
+          "transliteration": "mish hayis'al",
+          "english": "he won't ask"
+        },
+        {
+          "person": "heya",
+          "arabic": "مش هتسأل",
+          "transliteration": "mish hatis'al",
+          "english": "she won't ask"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مش هنسأل",
+          "transliteration": "mish hanis'al",
+          "english": "we won't ask"
+        },
+        {
+          "person": "entu",
+          "arabic": "مش هتسألوا",
+          "transliteration": "mish hatis'alu",
+          "english": "you (pl) won't ask"
+        },
+        {
+          "person": "homma",
+          "arabic": "مش هيسألوا",
+          "transliteration": "mish hayis'alu",
+          "english": "they won't ask"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,318 @@
+{
+  "slug": "idda",
+  "arabic": "إدّى",
+  "transliteration": "ʔidda",
+  "english": "to give",
+  "wordId": "f21e42c0-e095-4ac6-b064-47bcf83aaf75",
+  "rootLetters": "أ د ي",
+  "verbClass": "defective",
+  "notes": "This verb is defective (ending in a vowel). When adding suffixes, the final weak letter typically transforms into an 'ee' sound (romanized as 'e' or 'ey') in the past tense, while it drops or merges in the present/future.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "إديت",
+          "transliteration": "iddet",
+          "english": "I gave"
+        },
+        {
+          "person": "enta",
+          "arabic": "إديت",
+          "transliteration": "iddet",
+          "english": "you (m) gave"
+        },
+        {
+          "person": "enti",
+          "arabic": "إديتي",
+          "transliteration": "iddeti",
+          "english": "you (f) gave"
+        },
+        {
+          "person": "howa",
+          "arabic": "إدى",
+          "transliteration": "idda",
+          "english": "he gave"
+        },
+        {
+          "person": "heya",
+          "arabic": "إدت",
+          "transliteration": "iddit",
+          "english": "she gave"
+        },
+        {
+          "person": "ehna",
+          "arabic": "إدينا",
+          "transliteration": "iddena",
+          "english": "we gave"
+        },
+        {
+          "person": "entu",
+          "arabic": "إديتوا",
+          "transliteration": "iddetu",
+          "english": "you (pl) gave"
+        },
+        {
+          "person": "homma",
+          "arabic": "إدوا",
+          "transliteration": "iddu",
+          "english": "they gave"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما إديتش",
+          "transliteration": "ma iddetsh",
+          "english": "I did not give"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما إديتش",
+          "transliteration": "ma iddetsh",
+          "english": "you (m) did not give"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما إديتيش",
+          "transliteration": "ma iddetish",
+          "english": "you (f) did not give"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما إداش",
+          "transliteration": "ma iddash",
+          "english": "he did not give"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما إدتش",
+          "transliteration": "ma idditsh",
+          "english": "she did not give"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما إديناش",
+          "transliteration": "ma iddenash",
+          "english": "we did not give"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما إديتوش",
+          "transliteration": "ma iddetush",
+          "english": "you (pl) did not give"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما إدوش",
+          "transliteration": "ma iddush",
+          "english": "they did not give"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بدي",
+          "transliteration": "baddi",
+          "english": "I give"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتدي",
+          "transliteration": "btiddi",
+          "english": "you (m) give"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتدي",
+          "transliteration": "btiddi",
+          "english": "you (f) give"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيدي",
+          "transliteration": "biyiddi",
+          "english": "he gives"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتدي",
+          "transliteration": "btiddi",
+          "english": "she gives"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بندي",
+          "transliteration": "bniddi",
+          "english": "we give"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتدوا",
+          "transliteration": "btiddu",
+          "english": "you (pl) give"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيدوا",
+          "transliteration": "biyiddu",
+          "english": "they give"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مابديش",
+          "transliteration": "mabaddish",
+          "english": "I do not give"
+        },
+        {
+          "person": "enta",
+          "arabic": "مابتديش",
+          "transliteration": "mabtiddish",
+          "english": "you (m) do not give"
+        },
+        {
+          "person": "enti",
+          "arabic": "مابتديش",
+          "transliteration": "mabtiddish",
+          "english": "you (f) do not give"
+        },
+        {
+          "person": "howa",
+          "arabic": "مابيديش",
+          "transliteration": "mabiyiddish",
+          "english": "he does not give"
+        },
+        {
+          "person": "heya",
+          "arabic": "مابتديش",
+          "transliteration": "mabtiddish",
+          "english": "she does not give"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مابنديش",
+          "transliteration": "mabniddish",
+          "english": "we do not give"
+        },
+        {
+          "person": "entu",
+          "arabic": "مابتادوش",
+          "transliteration": "mabtiddush",
+          "english": "you (pl) do not give"
+        },
+        {
+          "person": "homma",
+          "arabic": "مابيدوش",
+          "transliteration": "mabiyiddush",
+          "english": "they do not give"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "هادي",
+          "transliteration": "haddi",
+          "english": "I will give"
+        },
+        {
+          "person": "enta",
+          "arabic": "هتدي",
+          "transliteration": "hatiddi",
+          "english": "you (m) will give"
+        },
+        {
+          "person": "enti",
+          "arabic": "هتدي",
+          "transliteration": "hatiddi",
+          "english": "you (f) will give"
+        },
+        {
+          "person": "howa",
+          "arabic": "هيدي",
+          "transliteration": "hayiddi",
+          "english": "he will give"
+        },
+        {
+          "person": "heya",
+          "arabic": "هتدي",
+          "transliteration": "hatiddi",
+          "english": "she will give"
+        },
+        {
+          "person": "ehna",
+          "arabic": "هندي",
+          "transliteration": "haniddi",
+          "english": "we will give"
+        },
+        {
+          "person": "entu",
+          "arabic": "هتدوا",
+          "transliteration": "hatiddu",
+          "english": "you (pl) will give"
+        },
+        {
+          "person": "homma",
+          "arabic": "هيدوا",
+          "transliteration": "hayiddu",
+          "english": "they will give"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مش هادي",
+          "transliteration": "mish haddi",
+          "english": "I will not give"
+        },
+        {
+          "person": "enta",
+          "arabic": "مش هتدي",
+          "transliteration": "mish hatiddi",
+          "english": "you (m) will not give"
+        },
+        {
+          "person": "enti",
+          "arabic": "مش هتدي",
+          "transliteration": "mish hatiddi",
+          "english": "you (f) will not give"
+        },
+        {
+          "person": "howa",
+          "arabic": "مش هيدي",
+          "transliteration": "mish hayiddi",
+          "english": "he will not give"
+        },
+        {
+          "person": "heya",
+          "arabic": "مش هتدي",
+          "transliteration": "mish hatiddi",
+          "english": "she will not give"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مش هندي",
+          "transliteration": "mish haniddi",
+          "english": "we will not give"
+        },
+        {
+          "person": "entu",
+          "arabic": "مش هتدوا",
+          "transliteration": "mish hatiddu",
+          "english": "you (pl) will not give"
+        },
+        {
+          "person": "homma",
+          "arabic": "مش هيدوا",
+          "transliteration": "mish hayiddu",
+          "english": "they will not give"
+        }
+      ]
+    }
+  }
+}
