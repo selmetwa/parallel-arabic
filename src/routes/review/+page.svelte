@@ -71,6 +71,7 @@
   let totalSavedWordsCount = $state(0);
   let forgottenWords = $state<ReviewWord[]>([]);
   let forgottenWordIndex = $state(0);
+  let showGraduationModal = $state(false);
   
   // Sentence generation state
   let showGenerateSentences = $state(false);
@@ -892,10 +893,79 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
     <header class="mb-12 text-left">
       <h1 class="text-3xl sm:text-4xl text-text-300 font-bold mb-2 tracking-tight">Review Words</h1>
-      <p class="text-text-200 text-lg sm:text-xl leading-snug max-w-2xl mb-4">
+      <p class="text-text-200 text-lg sm:text-xl leading-snug max-w-2xl mb-4 flex items-center gap-2">
         Practice your saved words with spaced repetition
+        <button
+          onclick={() => (showGraduationModal = true)}
+          class="w-5 h-5 rounded-full bg-tile-500 hover:bg-tile-600 text-text-200 hover:text-text-300 text-xs font-bold transition-colors flex items-center justify-center leading-none shrink-0"
+          aria-label="How graduation works"
+        >?</button>
       </p>
     </header>
+
+    <!-- Graduation Info Modal -->
+    {#if showGraduationModal}
+      <div role="dialog" aria-modal="true" aria-labelledby="grad-modal-title" class="fixed inset-0 z-50 flex items-center justify-center p-4">
+        <button class="absolute inset-0 bg-black/60 backdrop-blur-sm cursor-default" onclick={() => (showGraduationModal = false)} aria-label="Close modal" tabindex="-1"></button>
+        <div class="relative z-10 bg-tile-400 border border-tile-600 rounded-2xl shadow-2xl w-full max-w-md p-6">
+          <div class="flex items-center justify-between mb-5">
+            <h2 id="grad-modal-title" class="text-base font-bold text-text-300">How graduation works</h2>
+            <button onclick={() => (showGraduationModal = false)} class="w-8 h-8 rounded-full bg-tile-600 hover:bg-tile-500 text-text-200 hover:text-text-300 transition-colors flex items-center justify-center text-lg leading-none" aria-label="Close modal">×</button>
+          </div>
+          <div class="space-y-4 text-sm text-text-200">
+            <div class="space-y-2">
+              <div class="flex items-start gap-3">
+                <span class="mt-0.5 w-2.5 h-2.5 rounded-full bg-amber-400 shrink-0"></span>
+                <p><span class="font-semibold text-text-300">Learning</span> — words you're actively building memory for, reviewed frequently until they stick.</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="mt-0.5 w-2.5 h-2.5 rounded-full bg-blue-400 shrink-0"></span>
+                <p><span class="font-semibold text-text-300">Due</span> — words ready to review today: all learning words plus any scheduled ones whose date has arrived.</p>
+              </div>
+            </div>
+            <div class="border-t border-tile-600"></div>
+            <p>A word <span class="font-semibold text-text-300">graduates out of Learning</span> once it reaches a 30-day review interval — roughly 5 "Easy" ratings in a row.</p>
+            <div>
+              <p class="font-semibold text-text-300 mb-2">Interval progression</p>
+              <div class="bg-tile-500 rounded-lg overflow-hidden border border-tile-600">
+                <table class="w-full text-xs">
+                  <thead>
+                    <tr class="border-b border-tile-600">
+                      <th class="text-left px-3 py-2 text-text-200 font-semibold">Review</th>
+                      <th class="text-left px-3 py-2 text-text-200 font-semibold">Next interval</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {#each [
+                      { label: '1st', interval: '1 day' },
+                      { label: '2nd', interval: '3 days' },
+                      { label: '3rd', interval: '~7 days' },
+                      { label: '4th', interval: '~17 days' },
+                      { label: '5th', interval: '~42 days (graduated!)' },
+                    ] as row, i (row.label)}
+                      <tr class={i % 2 === 0 ? 'bg-tile-500' : 'bg-tile-400'}>
+                        <td class="px-3 py-2 text-text-300">{row.label}</td>
+                        <td class="px-3 py-2 text-text-200">{row.interval}</td>
+                      </tr>
+                    {/each}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="flex gap-3 text-xs">
+              <div class="flex-1 bg-green-900/30 border border-green-800/50 rounded-lg p-3">
+                <p class="font-semibold text-green-400 mb-1">Easy</p>
+                <p>Grows the interval faster — you'll see the word less often.</p>
+              </div>
+              <div class="flex-1 bg-red-900/30 border border-red-800/50 rounded-lg p-3">
+                <p class="font-semibold text-red-400 mb-1">Hard</p>
+                <p>Resets the interval — the word comes back sooner.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {/if}
 
     {#if requiresSubscription}
       <div class="max-w-3xl mx-auto bg-yellow-50 border-2 border-yellow-400 rounded-xl p-8 text-center mb-12 shadow-lg">

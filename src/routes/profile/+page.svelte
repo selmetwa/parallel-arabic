@@ -12,6 +12,7 @@
 
   let { data }: { data: PageData } = $props();
 
+  $inspect('asd: ', data);
   let isClearingWords = $state(false);
   let clearError = $state<string | null>(null);
   let clearSuccess = $state<string | null>(null);
