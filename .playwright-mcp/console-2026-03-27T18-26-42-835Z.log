@@ -1,0 +1,8 @@
+[     442ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:5173/map:18
+[     442ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:5173/map:19
+[     474ms] [WARNING] DataFast: Tracking disabled on localhost (use data-allow-localhost='true' to enable) @ https://datafa.st/js/script.js:0
+[     503ms] Unexpected token 'export'
+[     529ms] [WARNING] Avoid using `history.pushState(...)` and `history.replaceState(...)` as these will conflict with SvelteKit's router. Use the `pushState` and `replaceState` imports from `$app/navigation` instead. @ http://localhost:5173/node_modules/@sveltejs/kit/src/runtime/client/client.js?v=8991e3a1:3211
+[     652ms] [WARNING] %c[svelte] hydration_mismatch
+%cHydration failed because the initial UI does not match what was rendered on the server
+https://svelte.dev/e/hydration_mismatch font-weight: bold font-weight: normal @ http://localhost:5173/node_modules/@sveltejs/kit/src/runtime/client/client.js?v=8991e3a1:3211

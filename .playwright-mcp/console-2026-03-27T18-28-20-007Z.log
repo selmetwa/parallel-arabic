@@ -1,0 +1,9 @@
+[     377ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:5173/map:18
+[     377ms] [WARNING] <link rel=preload> has an unsupported `type` value @ http://localhost:5173/map:19
+[     434ms] [WARNING] Avoid using `history.pushState(...)` and `history.replaceState(...)` as these will conflict with SvelteKit's router. Use the `pushState` and `replaceState` imports from `$app/navigation` instead. @ http://localhost:5173/node_modules/@sveltejs/kit/src/runtime/client/client.js?v=8991e3a1:3211
+[     435ms] [WARNING] DataFast: Tracking disabled on localhost (use data-allow-localhost='true' to enable) @ http://localhost:5173/node_modules/@sveltejs/kit/src/runtime/client/client.js?v=8991e3a1:3211
+[     533ms] [WARNING] %c[svelte] hydration_mismatch
+%cHydration failed because the initial UI does not match what was rendered on the server
+https://svelte.dev/e/hydration_mismatch font-weight: bold font-weight: normal @ http://localhost:5173/node_modules/@sveltejs/kit/src/runtime/client/client.js?v=8991e3a1:3211
+[    1047ms] Unexpected token 'export'
+[   14175ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ https://event-store.sitebehaviour.com/tracker/init:0
