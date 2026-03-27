@@ -28,7 +28,7 @@ export const load = async ({ locals, parent }) => {
   // Fetch user's onboarding data and subscription info
   const { data: userData, error: userError } = await supabase
     .from('user')
-    .select('target_dialect, learning_reason, proficiency_level, onboarding_completed, daily_review_limit, subscriber_id, subscription_end_date, email_notifications_enabled')
+    .select('target_dialect, learning_reason, proficiency_level, onboarding_completed, daily_review_limit, subscriber_id, subscription_end_date, email_notifications_enabled, leaderboard_opt_out')
     .eq('id', userId)
     .single();
 
@@ -163,6 +163,7 @@ export const load = async ({ locals, parent }) => {
     onboardingCompleted: userData?.onboarding_completed || false,
     dailyReviewLimit: userData?.daily_review_limit ?? 20,
     emailNotificationsEnabled: userData?.email_notifications_enabled ?? true,
+    leaderboardOptOut: userData?.leaderboard_opt_out ?? false,
     wordStats,
     user, // Include user for stats component
     subscriptionDetails,
@@ -256,6 +257,31 @@ export const actions: Actions = {
 				success: false,
 				error: 'Something went wrong'
 			};
+		}
+	},
+	updateLeaderboardOptOut: async ({ request, locals: { safeGetSession } }) => {
+		const { session, user } = await safeGetSession();
+
+		if (!session || !user) {
+			return { success: false, error: 'You must be logged in to update this setting' };
+		}
+
+		const formData = await request.formData();
+		const optOut = formData.get('leaderboard_opt_out') === 'true';
+
+		try {
+			const { error: updateError } = await supabase
+				.from('user')
+				.update({ leaderboard_opt_out: optOut })
+				.eq('id', user.id);
+
+			if (updateError) {
+				return { success: false, error: 'Failed to update leaderboard setting' };
+			}
+
+			return { success: true, leaderboardOptOut: optOut };
+		} catch {
+			return { success: false, error: 'Something went wrong' };
 		}
 	},
 	updateDailyReviewLimit: async ({ request, locals: { safeGetSession } }) => {

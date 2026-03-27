@@ -23,11 +23,12 @@
 	interface Props {
 		dialect: Dialect;
 		data: any;
+		initialOpen?: boolean;
 	}
 
-	const { data, dialect }: Props = $props();
+	const { data, dialect, initialOpen = false }: Props = $props();
 
-	let isOpen = $state(false);
+	let isOpen = $state(initialOpen);
 	let description = $state('');
 	let option = $state('a1');
 	let isLoading = $state(false);

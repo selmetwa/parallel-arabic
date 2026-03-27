@@ -4,8 +4,10 @@
 	import CreateStoryModal from '$lib/components/dialect-shared/story/components/CreateStoryModal.svelte';
 	import { BLOCKED_STORY_IDS } from '$lib/constants/stories/blocked';
 	import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
+	import { page } from '$app/stores';
 
 	let { data } = $props();
+	let shouldOpenCreate = $derived($page.url.searchParams.get('create') === 'true');
 	let isModalOpen = $state(false);
 	let selectedDialect = $state(getDefaultDialect(data.user));
 
@@ -265,7 +267,7 @@
 				<p class="text-text-200 text-lg sm:text-xl leading-snug max-w-3xl">Improve your Arabic reading and listening comprehension skills with stories from all dialects.</p>
 			</div>
 			<div class="shrink-0">
-				<CreateStoryModal dialect={selectedDialect as any} data={data}></CreateStoryModal>
+				<CreateStoryModal dialect={selectedDialect as any} data={data} initialOpen={shouldOpenCreate}></CreateStoryModal>
 			</div>
 		</div>
 	</div>

@@ -2,6 +2,7 @@ import { StripeService } from "$lib/services/stripe.service";
 import { redirect, fail } from "@sveltejs/kit";
 import type { Actions } from "./$types";
 import { supabase } from "$lib/supabaseClient";
+import type { LeaderboardEntry } from './api/leaderboard/weekly/+server';
 
 import type { PageServerLoad } from "./$types";
 
@@ -31,6 +32,11 @@ export const load: PageServerLoad = async ({ parent }) => {
   let inProgressGame: { id: string; dialect: string; category: string; game_mode: string; current_index: number; total_questions: number; score: number } | null = null;
   let dailyChallenge: { id: string; challenge_type: string; story_id: string | null; completed: boolean; bonus_xp: number } | null = null;
   let shouldGenerateChallenge = false;
+  let wordOfDay: { id: string; arabic: string; transliteration: string; english: string; example_egyptian: string | null; example_levantine: string | null; example_darija: string | null; example_fusha: string | null; audio_url: string | null } | null = null;
+  let wordOfDaySaved = false;
+  let leaderboardTop5: LeaderboardEntry[] = [];
+  let leaderboardCurrentUser: { rank: number; xpThisWeek: number } | null = null;
+  let mapWords: { id: string; arabic: string; english: string; transliteration: string; dialect: string; category: string }[] = [];
 
   // Use user data from parent() - already fetched in hooks.server.ts!
   // This eliminates a duplicate database query (~100-150ms saved)
@@ -40,6 +46,56 @@ export const load: PageServerLoad = async ({ parent }) => {
   const totalShortsViewed = user?.total_shorts_viewed || 0;
   const currentStreak = user?.current_streak || 0;
 
+  // Fetch word of the day + leaderboard top 5 for all visitors (no auth required)
+  const todayStr = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
+  const currentUserId = user?.id ?? null;
+
+  const [wordOfDayResult, leaderboardResult] = await Promise.all([
+    supabase
+      .from('word_of_the_day')
+      .select('id, arabic, transliteration, english, example_egyptian, example_levantine, example_darija, example_fusha, audio_url')
+      .eq('display_date', todayStr)
+      .maybeSingle(),
+    supabase
+      .from('user')
+      .select('id, email, xp_this_week')
+      .eq('leaderboard_opt_out', false)
+      .gt('xp_this_week', 0)
+      .order('xp_this_week', { ascending: false })
+      .limit(5)
+  ]);
+
+  if (!wordOfDayResult.error && wordOfDayResult.data) {
+    wordOfDay = wordOfDayResult.data;
+  }
+
+  if (!leaderboardResult.error && leaderboardResult.data) {
+    leaderboardTop5 = leaderboardResult.data.map((row, i) => ({
+      rank: i + 1,
+      displayName: (row.email ?? '').split('@')[0].slice(0, 14),
+      xpThisWeek: row.xp_this_week ?? 0,
+      isCurrentUser: row.id === currentUserId
+    }));
+
+    // If logged-in user is not in top 5, fetch their rank
+    if (currentUserId && !leaderboardTop5.some(e => e.isCurrentUser)) {
+      const { data: cu } = await supabase
+        .from('user')
+        .select('xp_this_week, leaderboard_opt_out')
+        .eq('id', currentUserId)
+        .single();
+
+      if (cu && !cu.leaderboard_opt_out && (cu.xp_this_week ?? 0) > 0) {
+        const { count } = await supabase
+          .from('user')
+          .select('*', { count: 'exact', head: true })
+          .eq('leaderboard_opt_out', false)
+          .gt('xp_this_week', cu.xp_this_week ?? 0);
+        leaderboardCurrentUser = { rank: (count ?? 0) + 1, xpThisWeek: cu.xp_this_week ?? 0 };
+      }
+    }
+  }
+
   // Fetch review word counts and in-progress games if user is logged in
   if (user?.id) {
     const userId = user.id;
@@ -47,10 +103,11 @@ export const load: PageServerLoad = async ({ parent }) => {
 
     const todayDate = new Date();
     const todayMidnight = Date.UTC(todayDate.getUTCFullYear(), todayDate.getUTCMonth(), todayDate.getUTCDate());
+    const activityDate = todayMidnight;
 
     try {
       // Run all count queries in PARALLEL instead of sequential (~50-100ms saved)
-      const [totalResult, dueResult, gameResult, challengeResult] = await Promise.all([
+      const [totalResult, dueResult, gameResult, challengeResult, activityResult, mapWordsResult] = await Promise.all([
         supabase
           .from('saved_word')
           .select('*', { count: 'exact', head: true })
@@ -74,7 +131,19 @@ export const load: PageServerLoad = async ({ parent }) => {
           .select('id, challenge_type, story_id, completed, bonus_xp')
           .eq('user_id', userId)
           .eq('challenge_date', todayMidnight)
-          .maybeSingle()
+          .maybeSingle(),
+        supabase
+          .from('user_daily_activity')
+          .select('word_of_day_saved')
+          .eq('user_id', userId)
+          .eq('activity_date', activityDate)
+          .maybeSingle(),
+        supabase
+          .from('saved_word')
+          .select('id, arabic_word, english_word, transliterated_word, dialect, word:word_id(category)')
+          .eq('user_id', userId)
+          .order('created_at', { ascending: false })
+          .limit(150)
       ]);
 
       if (!totalResult.error && totalResult.count !== null) {
@@ -91,6 +160,19 @@ export const load: PageServerLoad = async ({ parent }) => {
       } else if (!challengeResult.error && !challengeResult.data) {
         // No challenge yet today — trigger lazy generation on the client
         shouldGenerateChallenge = true;
+      }
+      if (!activityResult.error && activityResult.data) {
+        wordOfDaySaved = activityResult.data.word_of_day_saved ?? false;
+      }
+      if (!mapWordsResult.error && mapWordsResult.data) {
+        mapWords = mapWordsResult.data.map((w: any) => ({
+          id: w.id,
+          arabic: w.arabic_word,
+          english: w.english_word,
+          transliteration: w.transliterated_word,
+          dialect: w.dialect || 'egyptian-arabic',
+          category: (w.word as any)?.category || 'Uncategorized',
+        }));
       }
     } catch (error) {
       console.error('Error fetching word counts:', error);
@@ -219,7 +301,12 @@ export const load: PageServerLoad = async ({ parent }) => {
     totalShortsViewed,
     currentStreak,
     suggestions,
-    shouldGenerateChallenge
+    shouldGenerateChallenge,
+    wordOfDay,
+    wordOfDaySaved,
+    leaderboardTop5,
+    leaderboardCurrentUser,
+    mapWords
   };
 };
 

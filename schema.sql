@@ -209,6 +209,8 @@ CREATE TABLE public.user (
   total_xp integer NOT NULL DEFAULT 0,
   current_level integer NOT NULL DEFAULT 1,
   email_notifications_enabled boolean NOT NULL DEFAULT true,
+  xp_this_week integer NOT NULL DEFAULT 0,
+  leaderboard_opt_out boolean NOT NULL DEFAULT false,
   CONSTRAINT user_pkey PRIMARY KEY (id)
 );
 CREATE TABLE public.user_daily_activity (
@@ -223,6 +225,7 @@ CREATE TABLE public.user_daily_activity (
   created_at bigint NOT NULL,
   updated_at bigint NOT NULL,
   shorts_viewed integer DEFAULT 0,
+  word_of_day_saved boolean DEFAULT false,
   CONSTRAINT user_daily_activity_pkey PRIMARY KEY (id),
   CONSTRAINT user_daily_activity_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.user(id)
 );
@@ -301,6 +304,20 @@ CREATE TABLE public.word_import_job (
   created_at timestamp with time zone DEFAULT now(),
   updated_at timestamp with time zone DEFAULT now(),
   CONSTRAINT word_import_job_pkey PRIMARY KEY (id)
+);
+CREATE TABLE public.word_of_the_day (
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  arabic text NOT NULL,
+  transliteration text NOT NULL,
+  english text NOT NULL,
+  example_egyptian text,
+  example_levantine text,
+  example_darija text,
+  example_fusha text,
+  audio_url text,
+  display_date date NOT NULL UNIQUE,
+  created_at timestamp with time zone DEFAULT now(),
+  CONSTRAINT word_of_the_day_pkey PRIMARY KEY (id)
 );
 CREATE TABLE public.word_review (
   id text NOT NULL,
