@@ -30,20 +30,20 @@
 		<div class="max-w-7xl mx-auto px-4 sm:px-8 py-12 sm:py-16">
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 				<div class="text-left">
-					<h1 class="text-3xl sm:text-5xl text-text-300 font-bold mb-4 tracking-tight leading-xl">
-						 Learn Arabic Dialects Online
+					<h1 class="text-3xl sm:text-5xl text-text-300 font-bold mb-4 tracking-tight leading-[40px] sm:leading-[60px]">
+						Learn what is actually spoken
 					</h1>
-
+					<p class="text-left text-text-200 text-base sm:text-lg mb-4 max-w-2xl mx-auto">
+						Learning Arabic is hard. Most apps teach Fusha — when what you actually want is to have real conversations with Egyptians, Lebanese, or Moroccans.
+					</p>
 					<div class="space-y-3">
 						<a
 							href="/signup"
 							class="inline-block px-8 py-4 text-lg font-semibold bg-tile-500 border-2 border-tile-600 text-text-300 hover:bg-tile-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
 						>
-							Start Free - No Credit Card →
+							Start Now
 						</a>
-						<p class="text-xs text-text-200 opacity-80">
-							Free forever plan • Access stories, vocabulary, and more
-						</p>
+
 					</div>
 				</div>
 				<div class="flex justify-center lg:justify-end">
@@ -56,10 +56,10 @@
 		<!-- Feature Cards Section -->
 		<section class="py-12 sm:py-20 bg-tile-200 border-y border-tile-600">
 			<div class="max-w-6xl mx-auto px-4 sm:px-8">
-				<h2 class="text-2xl sm:text-3xl font-bold text-text-300 mb-4 text-center">Learn what is actually spoken</h2>
+				<!-- <h2 class="text-2xl sm:text-3xl font-bold text-text-300 mb-4 text-center">Learn what is actually spoken</h2>
 				<p class="text-center text-text-200 text-base sm:text-lg mb-4 max-w-2xl mx-auto">
 					Learning Arabic is hard. Most apps teach Fusha — when what you actually want is to have real conversations with Egyptians, Lebanese, or Moroccans.
-				</p>
+				</p> -->
 				<p class="text-center text-text-200 text-base sm:text-lg mb-12 max-w-2xl mx-auto">
 					Parallel Arabic is built around dialects from the ground up. Here’s what that looks like in practice:
 				</p>
@@ -90,9 +90,9 @@
 									Over 20,000 vocabulary words across Egyptian, Levantine, Moroccan Darija, and Modern Standard Arabic — each with native speaker audio.
 								</p>
 							</div>
-							<div class="md:w-1/2 flex-shrink-0">
-								<img src="/images/features/vocab.png" alt="Vocabulary feature" class="w-full h-full object-cover object-top" />
-							</div>
+						<div class="md:w-1/2 flex-shrink-0">
+							<img src="/images/features/vocab.png" alt="Vocabulary feature" class="w-full h-full object-contain object-top" />
+						</div>
 						</div>
 					</div>
 	
