@@ -57,6 +57,7 @@ export const GET: RequestHandler = async ({ request }) => {
         stories_viewed_this_week: 0,
         lessons_viewed_this_week: 0,
         saved_words_this_week: 0,
+        xp_this_week: 0,
         week_start_date: weekStart
       })
       .or(`week_start_date.is.null,week_start_date.lt.${weekStart}`);
