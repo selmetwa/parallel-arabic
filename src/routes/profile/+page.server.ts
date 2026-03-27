@@ -72,10 +72,22 @@ export const load = async ({ locals, parent }) => {
   };
 
   try {
-    const { data: savedWords, error: wordsError } = await supabase
-      .from('saved_word')
-      .select('dialect, is_learning, next_review_date')
-      .eq('user_id', userId);
+    const allSavedWords: any[] = [];
+    let from = 0;
+    const PAGE_SIZE = 1000;
+    while (true) {
+      const { data, error: pageError } = await supabase
+        .from('saved_word')
+        .select('dialect, is_learning, next_review_date')
+        .eq('user_id', userId)
+        .range(from, from + PAGE_SIZE - 1);
+      if (pageError || !data || data.length === 0) break;
+      allSavedWords.push(...data);
+      if (data.length < PAGE_SIZE) break;
+      from += PAGE_SIZE;
+    }
+    const savedWords = allSavedWords;
+    const wordsError = null;
 
     if (!wordsError && savedWords) {
       wordStats.total = savedWords.length;
@@ -299,10 +311,10 @@ export const actions: Actions = {
 		const limit = parseInt(dailyReviewLimit, 10);
 
 		// Validate limit (between 1 and 1000)
-		if (!dailyReviewLimit || isNaN(limit) || limit < 1 || limit > 1000) {
+		if (!dailyReviewLimit || isNaN(limit) || limit < 1 || limit > 100) {
 			return {
 				success: false,
-				error: 'Daily review limit must be between 1 and 1000'
+				error: 'Daily review limit must be between 1 and 100'
 			};
 		}
 
