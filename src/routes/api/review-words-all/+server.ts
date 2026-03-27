@@ -13,34 +13,45 @@ export const GET: RequestHandler = async ({ locals }) => {
   const now = Date.now();
 
   try {
-    // Get all saved words for this user
-    const { data: allWords, error } = await supabase
-      .from('saved_word')
-      .select(`
-        id,
-        arabic_word,
-        english_word,
-        transliterated_word,
-        dialect,
-        ease_factor,
-        interval_days,
-        repetitions,
-        next_review_date,
-        last_review_date,
-        is_learning,
-        mastery_level,
-        created_at,
-        word_id,
-        word:word_id (
-          audio_url
-        )
-      `)
-      .eq('user_id', userId)
-      .order('created_at', { ascending: false });
+    // Get all saved words for this user (paginate past the 1000-row default limit)
+    const allWords: any[] = [];
+    let from = 0;
+    const PAGE_SIZE = 1000;
+    let fetchError = null;
+    while (true) {
+      const { data: page, error: pageError } = await supabase
+        .from('saved_word')
+        .select(`
+          id,
+          arabic_word,
+          english_word,
+          transliterated_word,
+          dialect,
+          ease_factor,
+          interval_days,
+          repetitions,
+          next_review_date,
+          last_review_date,
+          is_learning,
+          mastery_level,
+          created_at,
+          word_id,
+          word:word_id (
+            audio_url
+          )
+        `)
+        .eq('user_id', userId)
+        .order('created_at', { ascending: false })
+        .range(from, from + PAGE_SIZE - 1);
+      if (pageError) { fetchError = pageError; break; }
+      if (!page || page.length === 0) break;
+      allWords.push(...page);
+      if (page.length < PAGE_SIZE) break;
+      from += PAGE_SIZE;
+    }
 
-      console.log('allWords', allWords);
-    if (error) {
-      console.error('Error fetching all review words:', error);
+    if (fetchError) {
+      console.error('Error fetching all review words:', fetchError);
       return json({ error: 'Failed to fetch words' }, { status: 500 });
     }
 

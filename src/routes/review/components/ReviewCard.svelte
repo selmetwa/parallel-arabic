@@ -166,6 +166,8 @@
 
   function handleCardClick(event: MouseEvent) {
     if (isFlipping) return;
+    const target = event.target as HTMLElement;
+    if (target.closest('button, span[role="button"]')) return;
     toggleFlip();
   }
 
@@ -422,10 +424,13 @@
     <!-- Front Face -->
     <div class="flip-card-front" bind:this={frontFace}>
       <div class="text-left mb-6">
-        <!-- Dialect Badge -->
-        <div class="mb-4">
+        <!-- Dialect Badge + Review count -->
+        <div class="mb-4 flex items-center gap-2 flex-wrap">
           <span class="inline-block px-3 py-1 bg-tile-500 text-text-300 rounded-full text-sm font-semibold">
             {dialectName[word.dialect] || word.dialect}
+          </span>
+          <span class="inline-block px-2 py-0.5 bg-tile-600 text-text-200 rounded-full text-xs">
+            {word.repetitions === 0 ? 'First review' : `Reviewed ${word.repetitions}×`}
           </span>
         </div>
       <div class="flex flex-col items-center justify-center gap-3 mb-4">
@@ -626,53 +631,53 @@
 
       <div class="border-t border-tile-500 pt-6 mt-6" onclick={(e) => e.stopPropagation()}>
         <p class="text-left text-text-200 mb-4 font-semibold">How well did you remember this word?</p>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
+        <div class="grid grid-cols-3 gap-2 sm:gap-4 mb-4">
           <button
             type="button"
             onclick={() => handleDifficultyClick(1)}
             disabled={selectedDifficulty !== null}
-            class="group relative overflow-hidden border-2 border-green-500 bg-gradient-to-br from-green-50 to-green-100 hover:from-green-100 hover:to-green-200 active:scale-95 py-5 px-6 rounded-xl font-semibold text-lg transition-all duration-200 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+            class="group relative overflow-hidden border-2 border-green-500 bg-gradient-to-br from-green-50 to-green-100 hover:from-green-100 hover:to-green-200 active:scale-95 py-2 px-1 sm:py-5 sm:px-6 rounded-xl font-semibold text-sm sm:text-lg transition-all duration-200 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <span class="absolute inset-0 bg-white/40 scale-0 group-active:scale-100 group-active:opacity-0 transition-all duration-500 rounded-xl"></span>
-            <div class="text-3xl mb-2 transform group-hover:scale-110 transition-transform duration-300">😊</div>
+            <div class="text-xl sm:text-3xl sm:mb-2 transform group-hover:scale-110 transition-transform duration-300">😊</div>
             <div class="relative z-10">Easy</div>
-            <div class="text-sm font-normal mt-1 text-green-700">Remembered easily</div>
+            <div class="hidden sm:block text-sm font-normal mt-1 text-green-700">Remembered easily</div>
           </button>
 
           <button
             type="button"
             onclick={() => handleDifficultyClick(2)}
             disabled={selectedDifficulty !== null}
-            class="group relative overflow-hidden border-2 border-yellow-500 bg-gradient-to-br from-yellow-50 to-yellow-100 hover:from-yellow-100 hover:to-yellow-200 active:scale-95 py-5 px-6 rounded-xl font-semibold text-lg transition-all duration-200 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+            class="group relative overflow-hidden border-2 border-yellow-500 bg-gradient-to-br from-yellow-50 to-yellow-100 hover:from-yellow-100 hover:to-yellow-200 active:scale-95 py-2 px-1 sm:py-5 sm:px-6 rounded-xl font-semibold text-sm sm:text-lg transition-all duration-200 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <span class="absolute inset-0 bg-white/40 scale-0 group-active:scale-100 group-active:opacity-0 transition-all duration-500 rounded-xl"></span>
-            <div class="text-3xl mb-2 transform group-hover:scale-110 transition-transform duration-300">🤔</div>
+            <div class="text-xl sm:text-3xl sm:mb-2 transform group-hover:scale-110 transition-transform duration-300">🤔</div>
             <div class="relative z-10">Medium</div>
-            <div class="text-sm font-normal mt-1 text-yellow-700">Remembered with effort</div>
+            <div class="hidden sm:block text-sm font-normal mt-1 text-yellow-700">Remembered with effort</div>
           </button>
 
           <button
             type="button"
             onclick={() => handleDifficultyClick(3)}
             disabled={selectedDifficulty !== null}
-            class="group relative overflow-hidden border-2 border-red-500 bg-gradient-to-br from-red-50 to-red-100 hover:from-red-100 hover:to-red-200 active:scale-95 py-5 px-6 rounded-xl font-semibold text-lg transition-all duration-200 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+            class="group relative overflow-hidden border-2 border-red-500 bg-gradient-to-br from-red-50 to-red-100 hover:from-red-100 hover:to-red-200 active:scale-95 py-2 px-1 sm:py-5 sm:px-6 rounded-xl font-semibold text-sm sm:text-lg transition-all duration-200 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <span class="absolute inset-0 bg-white/40 scale-0 group-active:scale-100 group-active:opacity-0 transition-all duration-500 rounded-xl"></span>
-            <div class="text-3xl mb-2 transform group-hover:scale-110 transition-transform duration-300">😓</div>
+            <div class="text-xl sm:text-3xl sm:mb-2 transform group-hover:scale-110 transition-transform duration-300">😓</div>
             <div class="relative z-10">Hard</div>
-            <div class="text-sm font-normal mt-1 text-red-700">Struggled</div>
+            <div class="hidden sm:block text-sm font-normal mt-1 text-red-700">Struggled</div>
           </button>
         </div>
         {#if onForgot}
-          <div class="flex justify-center mt-4">
+          <div class="flex justify-center mt-2 sm:mt-4">
             <button
               type="button"
               onclick={handleForgot}
               disabled={selectedDifficulty !== null}
-              class="group relative overflow-hidden border-2 border-orange-500 bg-gradient-to-br from-orange-50 to-orange-100 hover:from-orange-100 hover:to-orange-200 text-text-300 py-3 px-8 rounded-xl font-semibold text-base transition-all duration-200 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 active:scale-95"
+              class="group relative overflow-hidden border-2 border-orange-500 bg-gradient-to-br from-orange-50 to-orange-100 hover:from-orange-100 hover:to-orange-200 text-text-300 py-2 px-4 sm:py-3 sm:px-8 rounded-xl font-semibold text-sm sm:text-base transition-all duration-200 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 active:scale-95"
             >
               <span class="absolute inset-0 bg-white/40 scale-0 group-active:scale-100 group-active:opacity-0 transition-all duration-500 rounded-xl"></span>
-              <span class="text-xl transform group-hover:scale-110 transition-transform duration-300">❌</span>
+              <span class="text-lg sm:text-xl transform group-hover:scale-110 transition-transform duration-300">❌</span>
               <span class="relative z-10">Forgot - Review Again</span>
             </button>
           </div>
