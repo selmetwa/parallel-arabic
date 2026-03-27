@@ -1,6 +1,14 @@
 import { supabase as defaultSupabase } from '$lib/supabaseClient';
 import { getLevelForXp, XP_AWARDS, type XpEventType } from './xp-levels';
 
+function getWeekStart(): number {
+	const now = new Date();
+	const utc = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
+	const day = utc.getUTCDay();
+	utc.setUTCDate(utc.getUTCDate() - (day === 0 ? 6 : day - 1));
+	return utc.getTime();
+}
+
 export type { XpEventType };
 export { XP_AWARDS, LEVEL_TIERS, getLevelForXp, getProgressToNextLevel } from './xp-levels';
 
@@ -22,7 +30,7 @@ export async function awardXp(userId: string, eventType: XpEventType, client?: a
 
 		const { data: user, error: fetchError } = await supabase
 			.from('user')
-			.select('total_xp, current_level')
+			.select('total_xp, current_level, xp_this_week, week_start_date')
 			.eq('id', userId)
 			.single();
 
@@ -45,9 +53,18 @@ export async function awardXp(userId: string, eventType: XpEventType, client?: a
 		const { level: newLevel } = getLevelForXp(newTotalXp);
 		const leveledUp = newLevel > previousLevel;
 
+		const weekStart = getWeekStart();
+		const isNewWeek = !user.week_start_date || user.week_start_date < weekStart;
+		const newXpThisWeek = isNewWeek ? xpAwarded : (user.xp_this_week ?? 0) + xpAwarded;
+
 		const { error: updateError } = await supabase
 			.from('user')
-			.update({ total_xp: newTotalXp, current_level: newLevel })
+			.update({
+				total_xp: newTotalXp,
+				current_level: newLevel,
+				xp_this_week: newXpThisWeek,
+				...(isNewWeek ? { week_start_date: weekStart } : {})
+			})
 			.eq('id', userId);
 
 		if (updateError) {

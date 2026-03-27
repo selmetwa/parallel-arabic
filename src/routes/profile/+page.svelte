@@ -23,6 +23,8 @@
   let reviewLimitUpdateError = $state<string | null>(null);
   let emailNotificationsSuccess = $state<string | null>(null);
   let emailNotificationsError = $state<string | null>(null);
+  let leaderboardOptOutSuccess = $state<string | null>(null);
+  let leaderboardOptOutError = $state<string | null>(null);
   
   // Subscription cancellation state
   let isCancelling = $state(false);
@@ -472,6 +474,52 @@
                 {/if}
                 {#if emailNotificationsError}
                   <div class="mt-2 text-red-400 text-sm font-medium" transition:fade>✗ {emailNotificationsError}</div>
+                {/if}
+              </div>
+
+              <!-- Leaderboard Privacy -->
+              <div>
+                <label class="block text-sm font-medium text-text-200 mb-1">
+                  Weekly leaderboard
+                </label>
+                <p class="text-xs text-text-200 mb-2 opacity-80">Hide your name from the weekly XP leaderboard (you'll still earn XP)</p>
+                <form
+                  method="POST"
+                  action="?/updateLeaderboardOptOut"
+                  use:enhance={() => {
+                    leaderboardOptOutSuccess = null;
+                    leaderboardOptOutError = null;
+                    return async ({ result, update }) => {
+                      if (result.type === 'success' && result.data?.success) {
+                        await update();
+                        leaderboardOptOutSuccess = 'Leaderboard setting updated!';
+                        setTimeout(() => leaderboardOptOutSuccess = null, 3000);
+                      } else if (result.type === 'failure') {
+                        await update();
+                        const errorMsg = result.data?.error;
+                        leaderboardOptOutError = typeof errorMsg === 'string' ? errorMsg : 'Failed to update';
+                      } else {
+                        await update();
+                      }
+                    };
+                  }}
+                  class="flex items-center gap-3"
+                >
+                  <input type="hidden" name="leaderboard_opt_out" value={data.leaderboardOptOut ? 'false' : 'true'} />
+                  <button
+                    type="submit"
+                    class="relative inline-flex h-6 w-11 items-center rounded-full border-2 border-tile-600 transition-colors focus:outline-none focus:ring-2 focus:ring-tile-600 {!data.leaderboardOptOut ? 'bg-green-600' : 'bg-tile-500'}"
+                    aria-label="Toggle leaderboard visibility"
+                  >
+                    <span class="inline-block h-4 w-4 transform rounded-full bg-white shadow transition-transform {!data.leaderboardOptOut ? 'translate-x-5' : 'translate-x-1'}"></span>
+                  </button>
+                  <span class="text-sm text-text-300">{data.leaderboardOptOut ? 'Hidden (anonymous)' : 'Visible'}</span>
+                </form>
+                {#if leaderboardOptOutSuccess}
+                  <div class="mt-2 text-green-700 text-sm font-medium" transition:fade>✓ {leaderboardOptOutSuccess}</div>
+                {/if}
+                {#if leaderboardOptOutError}
+                  <div class="mt-2 text-red-400 text-sm font-medium" transition:fade>✗ {leaderboardOptOutError}</div>
                 {/if}
               </div>
 
