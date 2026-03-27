@@ -188,7 +188,38 @@
         return parts.length > 0 ? parts : [{ text: question, isArabic: false }];
     }
 
+    function autoSaveStepWords(step: LessonStep) {
+        if (!user?.id) return;
+
+        const words: { arabic: string; english: string; transliterated: string }[] = [];
+
+        if (step.type === 'content' && step.content.examples) {
+            for (const ex of step.content.examples) {
+                if (ex.arabic && ex.english) {
+                    words.push({ arabic: ex.arabic, english: ex.english, transliterated: ex.transliteration });
+                }
+            }
+        } else if (step.type === 'practice-sentence') {
+            const s = step.sentence;
+            if (s.arabic && s.english) {
+                words.push({ arabic: s.arabic, english: s.english, transliterated: s.transliteration });
+            }
+        }
+        // exercise steps: skipped — no reliable English translation
+
+        for (const word of words) {
+            fetch('/api/save-word', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    activeWordObj: { ...word, dialect: lesson.dialect }
+                })
+            }).catch(() => {}); // silently ignore errors and duplicates
+        }
+    }
+
     function nextStep() {
+        autoSaveStepWords(currentStep);
         if (currentStepIndex < totalSteps - 1) {
             currentStepIndex++;
         } else {

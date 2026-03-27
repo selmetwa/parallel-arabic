@@ -7,6 +7,9 @@
   import ContinueCard from '$lib/components/ContinueCard.svelte';
   import SectionHeader from '$lib/components/SectionHeader.svelte';
   import BakerLoader from '$lib/components/BakerLoader.svelte';
+  import WordOfTheDay from '$lib/components/WordOfTheDay.svelte';
+  import Leaderboard from '$lib/components/Leaderboard.svelte';
+  import ArabicMap from '$lib/components/ArabicMap.svelte';
 
   let { data }: { data: PageData } = $props();
 
@@ -138,6 +141,49 @@
         subtitle="Sign in to track your progress and unlock personalized learning"
         variant="purple"
       />
+    </div>
+  {/if}
+
+  <!-- Word of the Day + Leaderboard side by side on wider screens -->
+  {#if data.wordOfDay || data.leaderboardTop5.length > 0}
+    <div class="mb-8 grid grid-cols-1 lg:grid-cols-2 gap-4">
+      {#if data.wordOfDay}
+        <WordOfTheDay
+          word={data.wordOfDay}
+          initialSaved={data.wordOfDaySaved}
+          isLoggedIn={!!data.user}
+        />
+      {/if}
+      {#if data.leaderboardTop5.length > 0}
+        <Leaderboard
+          top10={data.leaderboardTop5}
+          currentUser={data.leaderboardCurrentUser}
+          compact={true}
+        />
+      {/if}
+    </div>
+  {/if}
+
+  <!-- Word Map preview — desktop only, logged in, has saved words -->
+  {#if browser && data.user && data.mapWords.length > 0}
+    <div class="hidden lg:block mb-12">
+      <SectionHeader title="Your Word Map" />
+      <div class="relative rounded-xl overflow-hidden" style="max-height: 340px;">
+        <div style="pointer-events: none;">
+          <ArabicMap words={data.mapWords} preview={true} />
+        </div>
+        <!-- Clickable overlay -->
+        <a
+          href="/map"
+          class="absolute inset-0 z-10 flex items-end justify-end p-4 group"
+          aria-label="View full word map"
+        >
+          <span class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-200 shadow-md group-hover:shadow-lg group-hover:scale-105"
+            style="background: rgba(15,15,25,0.8); color: #eeeeee; border: 1px solid rgba(255,255,255,0.15); backdrop-filter: blur(6px);">
+            View full map →
+          </span>
+        </a>
+      </div>
     </div>
   {/if}
 
