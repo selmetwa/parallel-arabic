@@ -55,7 +55,8 @@
     { title: 'Dialect', subtitle: 'Choose your focus' },
     { title: 'Goals', subtitle: 'Why are you learning?' },
     { title: 'Level', subtitle: 'Where are you now?' },
-    { title: 'Display', subtitle: 'Customize your view' }
+    { title: 'Display', subtitle: 'Customize your view' },
+    { title: 'Start', subtitle: "You're all set!" }
   ];
 
   function nextStep() {
@@ -117,43 +118,32 @@
       const data = await response.json();
 
       if (!response.ok) {
-        await goto(`/lessons/structured/${targetDialect}`, { replaceState: true });
         throw new Error(data.error || 'Failed to save onboarding data');
       }
-
-      await goto(`/lessons/structured/${targetDialect}`, { replaceState: true });
     } catch (e) {
       error = e instanceof Error ? e.message : 'Something went wrong';
       isSubmitting = false;
-    } finally {
-      isSubmitting = false;
-      await goto(`/lessons/structured/${targetDialect}`, { replaceState: true });
-      handleCloseModal();
+      return;
     }
+
+    isSubmitting = false;
+    step = 5;
   }
 
   function getStaggerDelay(index: number) {
     return index * 80;
   }
+
+  async function navigateToFeature(url: string) {
+    handleCloseModal();
+    await goto(url, { replaceState: true });
+  }
 </script>
 
 <style>
-  @keyframes float {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-10px) rotate(2deg); }
-  }
-
-  @keyframes pulse-soft {
-    0%, 100% { opacity: 0.03; }
-    50% { opacity: 0.08; }
-  }
-
-  .float-animation {
-    animation: float 6s ease-in-out infinite;
-  }
-
-  .pulse-bg {
-    animation: pulse-soft 4s ease-in-out infinite;
+  .geometric-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill='none' stroke='currentColor' stroke-width='0.5'%3E%3Cpolygon points='20,4 24,16 36,16 26,24 30,36 20,28 10,36 14,24 4,16 16,16' /%3E%3C/g%3E%3C/svg%3E");
+    background-size: 40px 40px;
   }
 
   .card-hover {
@@ -186,18 +176,9 @@
     class="fixed inset-0 z-50 bg-gradient-to-br from-tile-300 via-tile-400 to-tile-300 overflow-hidden h-dvh"
     transition:fade={{ duration: 300 }}
   >
-    <!-- Animated Background Pattern -->
+    <!-- Background Pattern -->
     <div class="absolute inset-0 pointer-events-none overflow-hidden">
-      <div class="absolute top-10 left-10 w-64 h-64 bg-text-300/5 rounded-full blur-3xl pulse-bg"></div>
-      <div class="absolute bottom-20 right-20 w-96 h-96 bg-text-300/5 rounded-full blur-3xl pulse-bg" style="animation-delay: 2s;"></div>
-      <div class="absolute top-1/2 left-1/4 w-48 h-48 bg-text-300/3 rounded-full blur-2xl pulse-bg" style="animation-delay: 1s;"></div>
-
-      <!-- Floating Arabic Letters -->
-      <div class="absolute top-20 right-[15%] text-6xl text-text-300/5 float-animation font-arabic" style="animation-delay: 0s;">ع</div>
-      <div class="absolute bottom-32 left-[10%] text-7xl text-text-300/5 float-animation font-arabic" style="animation-delay: 1.5s;">م</div>
-      <div class="absolute top-1/3 right-[8%] text-5xl text-text-300/5 float-animation font-arabic" style="animation-delay: 3s;">ر</div>
-      <div class="absolute bottom-1/4 right-[25%] text-6xl text-text-300/5 float-animation font-arabic" style="animation-delay: 2s;">ب</div>
-      <div class="absolute top-[60%] left-[5%] text-5xl text-text-300/5 float-animation font-arabic" style="animation-delay: 0.5s;">ي</div>
+      <div class="geometric-pattern absolute inset-0 text-text-300 opacity-[0.04]"></div>
     </div>
 
     <!-- Main Container -->
@@ -206,7 +187,7 @@
       <div class="px-4 sm:px-8 pt-4 sm:pt-6 pb-2">
         <!-- Step Indicators -->
         <div class="flex items-center justify-center gap-2 sm:gap-3 mb-3">
-          {#each Array(totalSteps) as _, i}
+          {#each Array(totalSteps) as _, i (i)}
             <button
               class="progress-step flex items-center gap-1.5"
               onclick={() => { if (i < step) step = i; }}
@@ -278,7 +259,7 @@
                 class="text-text-200 text-base sm:text-lg max-w-md mb-6 sm:mb-8"
                 in:fly={{ y: 20, duration: 500, delay: 500, easing: cubicOut }}
               >
-                Let's personalize your Arabic learning journey in a few quick steps.
+                Arabic isn't one language — it's Egyptian, Levantine, Moroccan, Modern Standard, and more. Parallel Arabic is built around the variety you actually want to learn. Let's set you up in a few quick steps.
               </p>
 
               <button
@@ -303,10 +284,11 @@
               <div class="text-center mb-6">
                 <h2 class="text-2xl sm:text-3xl font-bold text-text-300 mb-1">Choose Your Dialect</h2>
                 <p class="text-text-200 text-sm sm:text-base">Select the Arabic dialect you want to master</p>
+                <p class="text-text-200/70 text-xs sm:text-sm mt-1">This shapes all your lessons, stories, and vocabulary.</p>
               </div>
 
               <div class="grid grid-cols-2 gap-3 sm:gap-4 max-w-2xl mx-auto">
-                {#each dialects as dialect, i}
+                {#each dialects as dialect, i (dialect.id)}
                   <button
                     class="card-hover p-4 sm:p-5 rounded-2xl border-2 text-left
                       {targetDialect === dialect.id
@@ -344,7 +326,7 @@
               </div>
 
               <div class="grid grid-cols-3 gap-2 sm:gap-3 max-w-xl mx-auto">
-                {#each learningReasons as reason, i}
+                {#each learningReasons as reason, i (reason.id)}
                   <button
                     class="card-hover p-3 sm:p-4 rounded-xl border-2 flex flex-col items-center gap-2
                       {learningReason === reason.id
@@ -377,7 +359,7 @@
               </div>
 
               <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3 max-w-2xl mx-auto">
-                {#each proficiencyLevels as level, i}
+                {#each proficiencyLevels as level, i (level.id)}
                   <button
                     class="card-hover p-3 sm:p-4 rounded-xl border-2 text-left relative overflow-hidden
                       {proficiencyLevel === level.id
@@ -450,7 +432,7 @@
                   { key: 'arabic', label: 'Arabic Script', desc: 'Show Arabic text', icon: '🔤', get: () => showArabic, set: (v: boolean) => showArabic = v },
                   { key: 'translit', label: 'Transliteration', desc: 'Latin letter pronunciation', icon: '📝', get: () => showTransliteration, set: (v: boolean) => showTransliteration = v },
                   { key: 'english', label: 'English', desc: 'Show translations', icon: '🇬🇧', get: () => showEnglish, set: (v: boolean) => showEnglish = v }
-                ] as opt, i}
+                ] as opt, i (opt.key)}
                   <button
                     class="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl border-2 transition-all duration-300
                       {opt.get()
@@ -494,6 +476,83 @@
                     </span>
                   </button>
                 {/if}
+              </div>
+            </div>
+          {/if}
+
+          <!-- Step 5: Feature Showcase -->
+          {#if step === 5}
+            <div in:fly={{ y: 30, duration: 500, easing: cubicOut }}>
+              <div class="text-center mb-5">
+                <h2 class="text-2xl sm:text-3xl font-bold text-text-300 mb-1">You're all set!</h2>
+                <p class="text-lg sm:text-xl font-bold text-text-300/70 mb-2 font-arabic" dir="rtl" lang="ar">!يلّا نبدأ</p>
+                <p class="text-text-200 text-sm sm:text-base">Pick where you'd like to start. You can always come back to any of these.</p>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3 max-w-2xl mx-auto">
+                {#each [
+                  {
+                    icon: '✍️',
+                    title: 'Alphabet',
+                    description: 'Learn to read Arabic script from scratch',
+                    url: '/alphabet',
+                    badge: proficiencyLevel === 'A1' || proficiencyLevel === 'A2' ? 'New to Arabic script?' : null
+                  },
+                  {
+                    icon: '📚',
+                    title: 'Lessons',
+                    description: 'Structured lessons in your dialect',
+                    url: `/lessons/structured/${targetDialect}`,
+                    badge: 'Recommended'
+                  },
+                  {
+                    icon: '📖',
+                    title: 'Stories',
+                    description: 'Read short stories, click any word',
+                    url: '/stories',
+                    badge: null
+                  },
+                  {
+                    icon: '📝',
+                    title: 'Sentences',
+                    description: 'Practice writing & matching sentences',
+                    url: '/sentences',
+                    badge: null
+                  },
+                  {
+                    icon: '🎮',
+                    title: 'Game',
+                    description: 'Reinforce vocabulary with quick games',
+                    url: '/learn/game',
+                    badge: null
+                  },
+                  {
+                    icon: '🤖',
+                    title: 'Tutor',
+                    description: 'Chat with an AI tutor in Arabic',
+                    url: '/tutor',
+                    badge: null
+                  }
+                ] as feature, i (feature.url)}
+                  <button
+                    class="card-hover p-3 sm:p-6 rounded-xl border-2 text-left bg-tile-400/50 border-tile-500 hover:border-text-300/30 hover:bg-tile-400 relative"
+                    onclick={() => navigateToFeature(feature.url)}
+                    in:fly={{ y: 30, duration: 400, delay: getStaggerDelay(i), easing: cubicOut }}
+                  >
+                    {#if feature.badge}
+                      <span class="absolute top-2 right-2 text-[10px] font-semibold px-1.5 py-0.5 rounded-full bg-text-300/10 text-text-300 border border-text-300/20">
+                        {feature.badge}
+                      </span>
+                    {/if}
+                    <div class="flex items-start gap-2 pt-2">
+                      <span class="text-2xl sm:text-3xl flex-shrink-0">{feature.icon}</span>
+                      <div class="flex-1 min-w-0 {feature.badge ? 'pr-12' : ''}">
+                        <span class="font-bold text-sm sm:text-base text-text-300 block">{feature.title}</span>
+                        <span class="text-xs text-text-200 leading-tight">{feature.description}</span>
+                      </div>
+                    </div>
+                  </button>
+                {/each}
               </div>
             </div>
           {/if}
