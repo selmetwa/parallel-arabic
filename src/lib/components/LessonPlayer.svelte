@@ -1132,7 +1132,7 @@
     {/if}
 
     <!-- Footer -->
-    <footer class="bg-tile-400 border-t-2 border-tile-600 p-3 sm:p-4 lg:p-6 shadow-lg">
+    <footer class="bg-tile-400 border-t-2 border-tile-600 p-3 sm:p-4 lg:p-6 shadow-lg ">
         <div class="max-w-2xl lg:max-w-5xl mx-auto flex items-center justify-between gap-3 lg:gap-4">
             {#if currentStep.type === 'exercise'}
                  <div class="flex-1">
