@@ -14,11 +14,18 @@ export const sections = [
     isPaywalled: false
   },
   {
-    name: 'Most common words',
+    name: 'Most common words (1–1000)',
     path: 'most_common',
-    count: 2404,
+    count: 1000,
     isPaywalled: true,
-    useLocalData: true // Special handling - uses local commonWords data
+    useLocalData: true
+  },
+  {
+    name: 'Most common words (1001–2404)',
+    path: 'most_common_2',
+    count: 1404,
+    isPaywalled: true,
+    useLocalData: true
   },
   {
     name: 'Adjectives',

@@ -392,8 +392,10 @@
 	</svelte:component>
 {/if}
 
-<!-- XP Progress Bar - fixed at top -->
-<XpBar loggedIn={!!data.session} initialXp={data.userXp ?? 0} initialLevel={data.userLevel ?? 1} />
+<!-- XP Progress Bar - fixed at top (hidden during onboarding) -->
+{#if !showOnboarding}
+	<XpBar loggedIn={!!data.session} initialXp={data.userXp ?? 0} initialLevel={data.userLevel ?? 1} />
+{/if}
 
 <!-- Desktop Sidebar -->
 <Sidebar {session} {handleOpenDrawer} />

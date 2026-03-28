@@ -1,6 +1,10 @@
 import type { RequestHandler } from './$types';
 import { supabase } from '$lib/supabaseClient';
 import verbIndex from '$lib/data/verb-conjugations/egyptian-arabic/index.json';
+import { sections } from '$lib/constants/sections';
+import { fushaSections } from '$lib/constants/fusha-sections';
+import { levantineSections } from '$lib/constants/levantine-sections';
+import { darijaSections } from '$lib/constants/darija-sections';
 
 const BASE_URL = 'https://www.parallel-arabic.com';
 
@@ -62,6 +66,9 @@ const staticPages = [
   { path: '/keyboard', priority: '0.6', changefreq: 'monthly' },
   { path: '/mobile-app', priority: '0.7', changefreq: 'monthly' },
 
+  // Vocab list hub
+  { path: '/vocab-list', priority: '0.9', changefreq: 'weekly' },
+
   // Info pages
   { path: '/about', priority: '0.5', changefreq: 'monthly' },
   { path: '/faq', priority: '0.5', changefreq: 'monthly' },
@@ -103,6 +110,26 @@ export const GET: RequestHandler = async () => {
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>`);
+  }
+
+  // Add vocab-list pages for all dialects
+  const vocabDialects: { key: string; sections: { path: string }[] }[] = [
+    { key: 'egyptian-arabic', sections },
+    { key: 'fusha', sections: fushaSections },
+    { key: 'levantine', sections: levantineSections },
+    { key: 'darija', sections: darijaSections }
+  ];
+
+  for (const dialect of vocabDialects) {
+    for (const section of dialect.sections) {
+      if (section.path === 'all') continue;
+      urls.push(`
+  <url>
+    <loc>${BASE_URL}/vocab-list/${escapeXml(dialect.key)}/${escapeXml(section.path)}</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`);
+    }
   }
 
   // Fetch dynamic content from database
