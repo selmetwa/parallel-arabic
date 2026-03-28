@@ -10,7 +10,7 @@
 	import { theme, sidebarCollapsed } from '$lib/store/store';
 	import { userXp, userLevel } from '$lib/store/xp-store';
 	import XpBar from '$lib/components/XpBar.svelte';
-	import { invalidate, goto } from '$app/navigation';
+	import { invalidate } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { pwaInfo } from 'virtual:pwa-info';
 	import { dev, browser } from '$app/environment';
@@ -51,14 +51,13 @@
 	let { data, children } = $props();
 	let isOpen = $state(false);
 
-	// Use showOnboarding from server data (which already checks URL and onboarding status)
-	// Update reactively when data or URL changes
+	let onboardingDismissed = $state(false);
 	let showOnboarding = $state(data.showOnboarding || false);
 
 	$effect(() => {
-		// Update showOnboarding when server data changes
-		// The server already checks: newSignup=true AND !onboarding_completed
-		showOnboarding = data.showOnboarding || false;
+		if (!onboardingDismissed) {
+			showOnboarding = data.showOnboarding || false;
+		}
 	});
 
 	$effect(() => {
@@ -176,12 +175,7 @@
 
 	function handleCloseOnboarding() {
 		showOnboarding = false;
-		// Remove the newSignup query parameter from URL
-		const url = new URL(window.location.href);
-		url.searchParams.delete('newSignup');
-		goto(url.pathname + url.search, { replaceState: true, noScroll: true });
-		// Invalidate to refresh the layout data
-		invalidate('supabase:auth');
+		onboardingDismissed = true;
 	}
 
 	const onTheme = (event: Event) => {
