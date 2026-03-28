@@ -3,6 +3,14 @@ import { redirect, fail } from "@sveltejs/kit";
 import type { Actions } from "./$types";
 import { supabase } from "$lib/supabaseClient";
 import type { LeaderboardEntry } from './api/leaderboard/weekly/+server';
+import { getStoriesPaginated } from "$lib/helpers/story-helpers";
+import { BLOCKED_STORY_IDS } from "$lib/constants/stories/blocked";
+
+function proficiencyToDifficulty(level: string | null | undefined): string | null {
+  if (!level) return 'a1';
+  
+  return level.toLowerCase();
+}
 
 import type { PageServerLoad } from "./$types";
 
@@ -179,6 +187,37 @@ export const load: PageServerLoad = async ({ parent }) => {
     }
   }
 
+  // Fetch a single featured/recommended story for logged-in users
+  let featuredStory: { id: string; title: string; dialect: string; dialectName: string; difficulty: string } | null = null;
+  if (user?.id) {
+    const difficulty = proficiencyToDifficulty(user.proficiency_level);
+    const targetDialect = user.target_dialect || 'egyptian-arabic';
+    const recFilters: { dialect?: string; difficulty?: string } = { dialect: targetDialect };
+    if (difficulty) recFilters.difficulty = difficulty;
+
+    const recResult = await getStoriesPaginated(null, 6, recFilters);
+    if (recResult.success && recResult.stories) {
+      const dialectNames: Record<string, string> = {
+        'egyptian-arabic': 'Egyptian Arabic',
+        'levantine': 'Levantine Arabic',
+        'darija': 'Moroccan Darija',
+        'fusha': 'Modern Standard Arabic',
+      };
+      const candidate = recResult.stories.find((s: any) => !BLOCKED_STORY_IDS.includes(s.id));
+      if (candidate) {
+        const s = candidate as any;
+        const storyBody = typeof s.story_body === 'string' ? JSON.parse(s.story_body) : s.story_body;
+        featuredStory = {
+          id: s.id,
+          title: storyBody?.title?.english || s.title || 'Untitled',
+          dialect: s.dialect,
+          dialectName: dialectNames[s.dialect] || s.dialect,
+          difficulty: s.difficulty || '',
+        };
+      }
+    }
+  }
+
   // Calculate capped count based on daily review limit
   const cappedReviewCount = Math.min(wordsDueForReviewCount, dailyReviewLimit);
 
@@ -306,7 +345,8 @@ export const load: PageServerLoad = async ({ parent }) => {
     wordOfDaySaved,
     leaderboardTop5,
     leaderboardCurrentUser,
-    mapWords
+    mapWords,
+    featuredStory,
   };
 };
 
