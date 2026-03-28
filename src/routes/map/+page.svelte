@@ -21,7 +21,7 @@
     <div class="flex flex-col items-center justify-center py-24 text-center">
       <p class="text-text-200 text-lg mb-2">No saved words yet</p>
       <p class="text-text-200 text-sm">
-        Start saving words from your <a href="/lessons" class="underline text-text-300">Lessons</a> and they'll appear here.
+        Start saving words from your around the site and they'll appear here.
       </p>
     </div>
   {:else}

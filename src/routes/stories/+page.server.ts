@@ -1,8 +1,15 @@
-import { getStoriesPaginated } from '$lib/helpers/story-helpers';
+import { getStoriesPaginated, getStoryById } from '$lib/helpers/story-helpers';
 import { BLOCKED_STORY_IDS } from '$lib/constants/stories/blocked';
 import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
 
 const PAGE_SIZE = 12;
+
+function proficiencyToDifficulty(level: string | null | undefined): string | null {
+  if (!level) return null;
+
+  const _level = level.toLowerCase();
+  return _level;  
+}
 
 export const load = async ({ parent, locals }) => {
   // Get session and subscription status from layout
@@ -45,6 +52,54 @@ export const load = async ({ parent, locals }) => {
     completedStoryIds = completions?.map((c: any) => c.story_id) ?? [];
   }
 
+  const completedSet = new Set(completedStoryIds);
+
+  // Fetch resume story: last story accessed that isn't completed
+  let resumeStory: { id: string; title: string } | null = null;
+  if (
+    user?.last_content_type === 'stories' &&
+    user?.last_content_id &&
+    !completedSet.has(user.last_content_id)
+  ) {
+    const result = await getStoryById(user.last_content_id);
+    if (result.success && result.story) {
+      const s = result.story as any;
+      const storyBody = typeof s.story_body === 'string' ? JSON.parse(s.story_body) : s.story_body;
+      resumeStory = {
+        id: user.last_content_id,
+        title: storyBody?.title?.english || s.title || 'Continue Reading'
+      };
+    }
+  }
+
+  // Fetch recommended stories: filtered by dialect + proficiency-mapped difficulty
+  let recommendedStories: object[] = [];
+  const difficulty = proficiencyToDifficulty(user?.proficiency_level ?? 'A1');
+  const targetDialect = user?.target_dialect || 'egyptian-arabic';
+  const recFilters: { dialect?: string; difficulty?: string } = { dialect: targetDialect };
+  if (difficulty) recFilters.difficulty = difficulty;
+
+  const recResult = await getStoriesPaginated(null, 12, recFilters);
+  console.log({ recResult, recFilters })
+  if (recResult.success && recResult.stories) {
+    recommendedStories = recResult.stories
+      .filter((s: any) => !BLOCKED_STORY_IDS.includes(s.id) && !completedSet.has(s.id))
+      .slice(0, 6)
+      .map((story: object) => {
+        const storyWithDialect = story as { dialect: string; story_body: any; id: string; difficulty: string };
+        const storyBody = typeof storyWithDialect.story_body === 'string'
+          ? JSON.parse(storyWithDialect.story_body)
+          : storyWithDialect.story_body;
+        return {
+          id: storyWithDialect.id,
+          title: `${storyBody?.title?.english || ''} / ${storyBody?.title?.arabic || ''}`,
+          dialect: storyWithDialect.dialect,
+          dialectName: getDialectDisplayName(storyWithDialect.dialect),
+          difficulty: storyWithDialect.difficulty,
+        };
+      });
+  }
+
   return {
     session,
     isSubscribed,
@@ -54,7 +109,9 @@ export const load = async ({ parent, locals }) => {
     hasMore,
     user,
     completedStoryIds,
-    initialDialect
+    initialDialect,
+    resumeStory,
+    recommendedStories,
   };
 };
 
@@ -64,6 +121,7 @@ function getDialectDisplayName(dialect: string) {
     'egyptian-arabic': 'Egyptian Arabic',
     'darija': 'Moroccan Darija',
     'fusha': 'Modern Standard Arabic',
+    'levantine': 'Levantine Arabic',
   };
   
   return dialectNames[dialect as keyof typeof dialectNames] || dialect;

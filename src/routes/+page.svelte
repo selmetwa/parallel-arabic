@@ -144,6 +144,37 @@
     </div>
   {/if}
 
+  <!-- Recommended Story Hero Card -->
+  {#if data.featuredStory}
+    <div class="mb-8">
+      <a
+        href={`/generated_story/${data.featuredStory.id}`}
+        class="group flex items-center justify-between bg-tile-400 border-2 border-tile-600 rounded-xl p-6 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1"
+      >
+        <div class="flex flex-col gap-2 min-w-0">
+          <span class="text-xs font-semibold uppercase tracking-widest text-text-200">Recommended Story for You</span>
+          <span class="text-xl sm:text-2xl font-bold text-text-300 group-hover:text-text-200 transition-colors leading-tight">
+            {data.featuredStory.title}
+          </span>
+          <div class="flex items-center gap-2 mt-1 flex-wrap">
+            <span class="inline-flex items-center px-2.5 py-1 text-xs font-medium rounded-full bg-tile-500 text-text-300">
+              {data.featuredStory.dialectName}
+            </span>
+            {#if data.featuredStory.difficulty}
+              <span class="inline-flex items-center px-2.5 py-1 text-xs font-medium rounded-full bg-tile-300 text-text-200 border border-tile-500">
+                {data.featuredStory.difficulty.toUpperCase()}
+              </span>
+            {/if}
+          </div>
+        </div>
+        <div class="shrink-0 ml-6 flex items-center gap-2 text-text-200 group-hover:text-text-300 transition-colors font-medium text-sm">
+          <span>Read Story</span>
+          <span class="text-lg">→</span>
+        </div>
+      </a>
+    </div>
+  {/if}
+
   <!-- Word of the Day + Leaderboard side by side on wider screens -->
   {#if data.wordOfDay || data.leaderboardTop5.length > 0}
     <div class="mb-8 grid grid-cols-1 lg:grid-cols-2 gap-4">
