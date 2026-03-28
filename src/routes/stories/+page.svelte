@@ -255,6 +255,25 @@
 		};
 		return colors[dialect as keyof typeof colors] || 'bg-gray-100 text-gray-800';
 	}
+
+	// Derive recommendation subtitle from user profile
+	let recommendationSubtitle = $derived.by(() => {
+		if (!data.user) return '';
+		const level = data.user.proficiency_level
+			? data.user.proficiency_level.charAt(0).toUpperCase() + data.user.proficiency_level.slice(1)
+			: null;
+		const dialectMap: Record<string, string> = {
+			'egyptian-arabic': 'Egyptian Arabic',
+			'levantine': 'Levantine Arabic',
+			'darija': 'Moroccan Darija',
+			'fusha': 'Modern Standard Arabic',
+		};
+		const dialectLabel = dialectMap[data.user.target_dialect] ?? data.user.target_dialect ?? null;
+		if (level && dialectLabel) return `${level} · ${dialectLabel}`;
+		if (level) return level;
+		if (dialectLabel) return dialectLabel;
+		return '';
+	});
 </script>
 
 <PaywallModal isOpen={isModalOpen} {handleCloseModal}></PaywallModal>
@@ -271,7 +290,116 @@
 			</div>
 		</div>
 	</div>
-	
+
+	<!-- Recommended Story Hero Card -->
+	{#if data.recommendedStories?.length > 0}
+		{@const featuredStory = data.recommendedStories[0]}
+		<div class="mb-6">
+			<a
+				href={`/generated_story/${featuredStory.id}`}
+				class="group flex items-center justify-between bg-tile-400 border-2 border-tile-600 rounded-xl p-6 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1"
+			>
+				<div class="flex flex-col gap-2 min-w-0">
+					<span class="text-xs font-semibold uppercase tracking-widest text-text-200">Recommended Story for You</span>
+					<span class="text-xl sm:text-2xl font-bold text-text-300 group-hover:text-text-200 transition-colors leading-tight line-clamp-2">
+						{featuredStory.title}
+					</span>
+					<div class="flex items-center gap-2 mt-1 flex-wrap">
+						<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium rounded-full {getDialectBadgeColor(featuredStory.dialect)}">
+							{featuredStory.dialectName}
+						</span>
+						{#if featuredStory.difficulty}
+							<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium rounded-full bg-tile-300 text-text-200 border border-tile-500">
+								{featuredStory.difficulty.toUpperCase()}
+							</span>
+						{/if}
+					</div>
+				</div>
+				<div class="shrink-0 ml-6 flex items-center gap-2 text-text-200 group-hover:text-text-300 transition-colors font-medium text-sm">
+					<span>Read Story</span>
+					<span class="text-lg">→</span>
+				</div>
+			</a>
+		</div>
+	{/if}
+
+	<!-- Stats Bar -->
+	{#if data.user}
+		<div class="mb-8 flex items-center bg-tile-400 border border-tile-500 rounded-xl overflow-hidden" style="max-height: 60px;">
+			<div class="flex-1 flex flex-col items-center justify-center py-3 px-4">
+				<span class="text-lg font-bold text-text-300 leading-none">{data.completedStoryIds?.length ?? 0}</span>
+				<span class="text-xs text-text-200 mt-0.5">Stories Done</span>
+			</div>
+			<div class="w-px self-stretch bg-tile-500"></div>
+			<div class="flex-1 flex flex-col items-center justify-center py-3 px-4">
+				<span class="text-lg font-bold text-text-300 leading-none">{data.user.current_streak ?? 0}</span>
+				<span class="text-xs text-text-200 mt-0.5">Day Streak</span>
+			</div>
+			<div class="w-px self-stretch bg-tile-500"></div>
+			<div class="flex-1 flex flex-col items-center justify-center py-3 px-4">
+				<span class="text-lg font-bold text-text-300 leading-none">{data.user.current_level ?? 1}</span>
+				<span class="text-xs text-text-200 mt-0.5">Level</span>
+			</div>
+		</div>
+	{/if}
+
+	<!-- Continue Reading Card -->
+	{#if data.resumeStory}
+		<div class="mb-8">
+			<a
+				href={`/generated_story/${data.resumeStory.id}`}
+				class="group flex items-center justify-between bg-tile-400 border-2 border-tile-600 rounded-xl p-6 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1"
+			>
+				<div class="flex flex-col gap-1 min-w-0">
+					<span class="text-xs font-semibold uppercase tracking-widest text-text-200">Continue Reading</span>
+					<span class="text-xl sm:text-2xl font-bold text-text-300 group-hover:text-text-200 transition-colors leading-tight truncate">
+						{data.resumeStory.title}
+					</span>
+				</div>
+				<div class="shrink-0 ml-6 flex items-center gap-2 text-text-200 group-hover:text-text-300 transition-colors font-medium text-sm">
+					<span>Resume</span>
+					<span class="text-lg">→</span>
+				</div>
+			</a>
+		</div>
+	{/if}
+
+	<!-- Recommended for You -->
+	{#if data.recommendedStories?.length > 0}
+		<div class="mb-12">
+			<div class="flex items-center gap-4 mb-2">
+				<h2 class="text-2xl sm:text-3xl text-text-300 font-bold">Recommended for You</h2>
+				<div class="h-0.5 bg-tile-500 flex-1 opacity-50 rounded-full"></div>
+			</div>
+			{#if recommendationSubtitle}
+				<p class="text-text-200 text-sm mb-6">{recommendationSubtitle}</p>
+			{/if}
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+				{#each data.recommendedStories as story (story.id)}
+					<a href={`/generated_story/${story.id}`} class="group relative flex flex-col bg-tile-400 border-2 border-tile-600 rounded-xl p-8 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1">
+						<div class="flex justify-between items-start mb-4">
+							<div class="text-4xl">✨</div>
+							<div class="flex flex-col gap-1 items-end">
+								<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium rounded-full {getDialectBadgeColor(story.dialect)}">
+									{story.dialectName}
+								</span>
+								{#if story.difficulty}
+									<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium rounded-full bg-tile-300 text-text-200 border border-tile-500">
+										{story.difficulty.toUpperCase()}
+									</span>
+								{/if}
+							</div>
+						</div>
+						<h3 class="text-2xl font-bold text-text-300 mb-3 group-hover:text-text-200 transition-colors leading-tight line-clamp-2">
+							{story.title}
+						</h3>
+						<div class="flex-grow"></div>
+					</a>
+				{/each}
+			</div>
+		</div>
+	{/if}
+
 	<!-- All Stories -->
 	<div>
 		<div class="flex items-center gap-4 mb-8">
@@ -307,7 +435,7 @@
 						onchange={handleFilterChange}
 						class="w-full px-4 py-2.5 border border-tile-500 bg-tile-300 text-text-300 rounded-lg focus:outline-none focus:border-tile-600 focus:ring-1 focus:ring-tile-600 cursor-pointer"
 					>
-						{#each filterDialectOptions as option}
+						{#each filterDialectOptions as option (option.value)}
 							<option value={option.value}>{option.label}</option>
 						{/each}
 					</select>
@@ -322,7 +450,7 @@
 						onchange={handleFilterChange}
 						class="w-full px-4 py-2.5 border border-tile-500 bg-tile-300 text-text-300 rounded-lg focus:outline-none focus:border-tile-600 focus:ring-1 focus:ring-tile-600 cursor-pointer"
 					>
-						{#each difficultyOptions as option}
+						{#each difficultyOptions as option (option.value)}
 							<option value={option.value}>{option.label}</option>
 						{/each}
 					</select>
@@ -368,7 +496,7 @@
 		{:else}
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 				{#if showFeaturedStories}
-					{#each Object.entries(stories) as [key, value]}
+					{#each Object.entries(stories) as [key, value] (key)}
 						{#if value.isPaywalled && !data.hasActiveSubscription}
 							<button onclick={openPaywallModal} class="group flex flex-col bg-tile-400 border-2 border-tile-600 rounded-xl p-8 shadow-lg hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1 text-left w-full h-full">
 								<div class="flex justify-between items-start mb-4">
@@ -420,7 +548,7 @@
 						{/if}
 					{/each}
 				{/if}
-				{#each filteredAndSortedStories as story}
+				{#each filteredAndSortedStories as story (story.id)}
 					{@const isCompleted = completedStoryIds.has(story.id)}
 					<a href={`/generated_story/${story.id}`} class="group relative flex flex-col bg-tile-400 border-2 rounded-xl p-8 shadow-lg hover:bg-tile-500 transition-all duration-300 hover:-translate-y-1 {isCompleted ? 'border-green-500/50 hover:border-green-500/80' : 'border-tile-600 hover:border-tile-500'}">
 						{#if isCompleted}
