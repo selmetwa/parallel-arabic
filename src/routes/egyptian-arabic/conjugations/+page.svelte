@@ -36,7 +36,8 @@
 </script>
 
 <svelte:head>
-  <title>Verb Conjugations | Egyptian Arabic</title>
+  <title>Egyptian Arabic Verb Conjugations — Complete Conjugation Tables</title>
+  <meta name="description" content="Browse full conjugation tables for Egyptian Arabic verbs. Past, present, and future tense with affirmative and negative forms, Arabic script, and transliteration." />
 </svelte:head>
 
 <div class="max-w-5xl mx-auto px-4 py-8">
