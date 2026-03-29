@@ -20,7 +20,7 @@ export interface ActivitySuggestion {
   icon: string;
   title: string;
   subtitle: string;
-  variant: 'blue' | 'green' | 'purple' | 'amber' | 'rose';
+  variant: 'blue' | 'green' | 'purple' | 'amber' | 'rose' | 'teal';
   priority: number;
 }
 
@@ -322,6 +322,21 @@ export const load: PageServerLoad = async ({ parent }) => {
       subtitle: 'Save words to create your personal review deck',
       variant: 'amber',
       priority: 3
+    });
+    const dialectDisplayNames: Record<string, string> = {
+      'egyptian-arabic': 'Egyptian Arabic',
+      'levantine': 'Levantine Arabic',
+      'darija': 'Moroccan Darija',
+      'fusha': 'Modern Standard Arabic',
+    };
+    suggestions.push({
+      id: 'start-lesson',
+      href: `/lessons/structured/${userDialect}`,
+      icon: '📚',
+      title: 'Start a lesson',
+      subtitle: `Begin your first ${dialectDisplayNames[userDialect] ?? userDialect} lesson`,
+      variant: 'teal',
+      priority: 9
     });
   }
 
