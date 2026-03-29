@@ -57,12 +57,14 @@ export const load: PageServerLoad = async ({ parent }) => {
   // Fetch word of the day + leaderboard top 5 for all visitors (no auth required)
   const todayStr = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
   const currentUserId = user?.id ?? null;
+  const userDialect = user?.target_dialect ?? 'egyptian-arabic';
 
   const [wordOfDayResult, leaderboardResult] = await Promise.all([
     supabase
       .from('word_of_the_day')
       .select('id, arabic, transliteration, english, example_egyptian, example_levantine, example_darija, example_fusha, audio_url')
       .eq('display_date', todayStr)
+      .eq('dialect', userDialect)
       .maybeSingle(),
     supabase
       .from('user')
@@ -343,6 +345,7 @@ export const load: PageServerLoad = async ({ parent }) => {
     shouldGenerateChallenge,
     wordOfDay,
     wordOfDaySaved,
+    userDialect,
     leaderboardTop5,
     leaderboardCurrentUser,
     mapWords,

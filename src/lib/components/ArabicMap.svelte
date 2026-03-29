@@ -154,7 +154,11 @@
     const width = Math.max(rect.width, 300);
     const isMobile = width < 640;
     const height = isMobile ? width * 1.1 : width * 0.62;
-    const nodeR = isMobile ? 2.5 : 0.55;
+    // In preview mode the map is zoomed in, so nodeR must be much smaller
+    // to avoid huge blobs. Scale continuously with container width.
+    const nodeR = preview ? Math.max(0.2, width / 1600) : (isMobile ? 2.5 : 0.55);
+    // Collision radius scales with nodeR so spacing between nodes stays proportional
+    const collideR = nodeR * 2;
 
     const svgSel = d3.select(svgEl).attr('width', width).attr('height', height);
 
@@ -314,7 +318,7 @@
     // Run force simulation synchronously
     simulation?.stop();
     simulation = d3.forceSimulation(nodes)
-      .force('collide', d3.forceCollide(nodeR + .5).strength(1).iterations(4))
+      .force('collide', d3.forceCollide(collideR).strength(1).iterations(4))
       .force('x', d3.forceX<MapWord>((d) => dialectCenters[d.dialect]?.[0] ?? width / 2).strength(0.15))
       .force('y', d3.forceY<MapWord>((d) => dialectCenters[d.dialect]?.[1] ?? height / 2).strength(0.15))
       .force('cluster', createClusterForce(0.25))
@@ -364,10 +368,11 @@
     //   .text((d) => (d.english.length > 13 ? d.english.slice(0, 12) + '…' : d.english));
 
     if (preview) {
-      // Zoom in on the Middle East for the homepage preview
-      const geoCenter: [number, number] = [20, 7];
+      // Zoom in on the Middle East for the homepage preview.
+      // Narrower containers need more zoom; wider ones already show more area naturally.
+      const geoCenter: [number, number] = [20, 17];
       const center = projection(geoCenter) ?? [width / 2, height / 2];
-      const k = 4.5;
+      const k = Math.max(5.5, Math.min(6, 1400 / width));
       const tx = width / 2 - k * center[0];
       const ty = height / 2 - k * center[1];
       zoomGroup.attr('transform', `translate(${tx},${ty}) scale(${k})`);
@@ -513,8 +518,8 @@
     </div>
   {/if}
 
-  <!-- Legend -->
-  {#if uniqueCategories.length > 0}
+  <!-- Legend (hidden in preview mode) -->
+  {#if uniqueCategories.length > 0 && !preview}
     <div
       class="absolute bottom-4 right-4 rounded-xl p-3 text-xs"
       style="background: rgba(0,0,0,0.65); backdrop-filter: blur(8px); max-height: 200px; overflow-y: auto;"
@@ -532,8 +537,10 @@
     </div>
   {/if}
 
-  <!-- Hint -->
-  <p class="text-xs mt-2 text-center" style="color: #666666;">
-    Scroll to zoom · Drag to pan · Hover words for details
-  </p>
+  <!-- Hint (hidden in preview mode) -->
+  {#if !preview}
+    <p class="text-xs mt-2 text-center" style="color: #666666;">
+      Scroll to zoom · Drag to pan · Hover words for details
+    </p>
+  {/if}
 </div>

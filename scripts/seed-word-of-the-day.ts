@@ -3,8 +3,8 @@
  * Seed Word of the Day Table
  *
  * Pulls 100 words per dialect from the word table and schedules them as
- * daily featured words. Dialects are interleaved so users see variety each day:
- *   Egyptian → Levantine → Moroccan → Fusha → Egyptian → ...
+ * daily featured words. Each day gets one word per dialect (4 rows/day),
+ * so every user sees a word in their own target dialect every day.
  *
  * Words are selected by preferring those with audio_url, then ordered by
  * frequency desc (most common/useful words first).
@@ -61,14 +61,13 @@ function addDays(date: Date, n: number): Date {
 }
 
 async function fetchWordsForDialect(dialect: string): Promise<{ arabic: string; transliteration: string; english: string; audio_url: string | null }[]> {
-  // Fetch more than we need so we can deduplicate arabic words cleanly
   const { data, error } = await supabase
     .from('word')
     .select('arabic_word, english_word, transliterated_word, audio_url, frequency')
     .eq('dialect', dialect)
-    .order('audio_url', { ascending: false, nullsFirst: false }) // words with audio first
-    .order('frequency', { ascending: false, nullsFirst: false }) // then most frequent
-    .limit(WORDS_PER_DIALECT * 3); // overfetch to allow dedup
+    .order('audio_url', { ascending: false, nullsFirst: false })
+    .order('frequency', { ascending: false, nullsFirst: false })
+    .limit(WORDS_PER_DIALECT * 3);
 
   if (error) {
     console.error(`❌ Error fetching words for ${dialect}:`, error.message);
@@ -80,7 +79,6 @@ async function fetchWordsForDialect(dialect: string): Promise<{ arabic: string; 
     return [];
   }
 
-  // Deduplicate by arabic_word (some dialects may have repeated entries)
   const seen = new Set<string>();
   const unique = data.filter(w => {
     if (seen.has(w.arabic_word)) return false;
@@ -113,13 +111,11 @@ async function getNextStartDate(): Promise<Date> {
   }
 
   if (!data) {
-    // Table is empty — start from today
     const today = new Date();
     today.setUTCHours(0, 0, 0, 0);
     return today;
   }
 
-  // Start the day after the latest entry
   const latest = new Date(data.display_date + 'T00:00:00Z');
   return addDays(latest, 1);
 }
@@ -127,11 +123,9 @@ async function getNextStartDate(): Promise<Date> {
 async function main() {
   console.log(`\n🌟 Word of the Day Seeder${isDryRun ? ' (DRY RUN)' : ''}\n`);
 
-  // 1. Find start date
   const startDate = await getNextStartDate();
   console.log(`📅 Starting from: ${toDateStr(startDate)}\n`);
 
-  // 2. Fetch words for each dialect
   console.log('📥 Fetching words from word table...');
   const wordsByDialect: { arabic: string; transliteration: string; english: string; audio_url: string | null }[][] = [];
 
@@ -140,44 +134,53 @@ async function main() {
     wordsByDialect.push(words);
   }
 
-  // 3. Interleave: Egyptian[0], Levantine[0], Moroccan[0], Fusha[0], Egyptian[1], ...
-  const interleaved: { arabic: string; transliteration: string; english: string; audio_url: string | null; dialect: string }[] = [];
-  const maxWords = Math.max(...wordsByDialect.map(w => w.length));
+  // One word per dialect per day. Total days = min words across all dialects.
+  const numDays = Math.min(...wordsByDialect.map(w => w.length));
+  console.log(`\n📊 Days to schedule: ${numDays} (${numDays * DIALECTS.length} total rows, ${DIALECTS.length} dialects/day)`);
+  console.log(`📅 Date range: ${toDateStr(startDate)} → ${toDateStr(addDays(startDate, numDays - 1))}\n`);
 
-  for (let i = 0; i < maxWords; i++) {
+  // Build rows: for each day, one row per dialect
+  const rows: {
+    arabic: string;
+    transliteration: string;
+    english: string;
+    audio_url: string | null;
+    dialect: string;
+    display_date: string;
+    example_egyptian: null;
+    example_levantine: null;
+    example_darija: null;
+    example_fusha: null;
+  }[] = [];
+
+  for (let i = 0; i < numDays; i++) {
+    const dateStr = toDateStr(addDays(startDate, i));
     for (let d = 0; d < DIALECTS.length; d++) {
-      if (i < wordsByDialect[d].length) {
-        interleaved.push({ ...wordsByDialect[d][i], dialect: DIALECTS[d].label });
-      }
+      rows.push({
+        arabic: wordsByDialect[d][i].arabic,
+        transliteration: wordsByDialect[d][i].transliteration,
+        english: wordsByDialect[d][i].english,
+        audio_url: wordsByDialect[d][i].audio_url,
+        dialect: DIALECTS[d].key,
+        display_date: dateStr,
+        example_egyptian: null,
+        example_levantine: null,
+        example_darija: null,
+        example_fusha: null,
+      });
     }
   }
-
-  console.log(`\n📊 Total words to schedule: ${interleaved.length}`);
-  console.log(`📅 Date range: ${toDateStr(startDate)} → ${toDateStr(addDays(startDate, interleaved.length - 1))}\n`);
-
-  // 4. Build insert rows
-  const rows = interleaved.map((word, i) => ({
-    arabic: word.arabic,
-    transliteration: word.transliteration,
-    english: word.english,
-    audio_url: word.audio_url,
-    display_date: toDateStr(addDays(startDate, i)),
-    example_egyptian: null,
-    example_levantine: null,
-    example_darija: null,
-    example_fusha: null,
-  }));
 
   if (isDryRun) {
     console.log('🔍 Sample entries (first 8):');
     rows.slice(0, 8).forEach(r => {
-      console.log(`  ${r.display_date}  [${interleaved[rows.indexOf(r)].dialect}]  ${r.arabic} — ${r.english}${r.audio_url ? ' 🔊' : ''}`);
+      console.log(`  ${r.display_date}  [${r.dialect}]  ${r.arabic} — ${r.english}${r.audio_url ? ' 🔊' : ''}`);
     });
     console.log(`\n✅ Dry run complete. ${rows.length} entries would be inserted.`);
     return;
   }
 
-  // 5. Insert in batches of 50
+  // Insert in batches of 50
   const BATCH_SIZE = 50;
   let inserted = 0;
   let skipped = 0;
@@ -189,15 +192,14 @@ async function main() {
       .insert(batch);
 
     if (error) {
-      // display_date has a UNIQUE constraint — skip duplicates gracefully
       if (error.code === '23505') {
-        console.warn(`  ⚠️  Batch ${Math.floor(i / BATCH_SIZE) + 1}: some dates already exist, inserting one-by-one...`);
+        console.warn(`  ⚠️  Batch ${Math.floor(i / BATCH_SIZE) + 1}: some entries already exist, inserting one-by-one...`);
         for (const row of batch) {
           const { error: rowError } = await supabase.from('word_of_the_day').insert(row);
           if (rowError?.code === '23505') {
             skipped++;
           } else if (rowError) {
-            console.error(`  ❌ Failed to insert ${row.display_date}:`, rowError.message);
+            console.error(`  ❌ Failed to insert ${row.display_date} [${row.dialect}]:`, rowError.message);
           } else {
             inserted++;
           }
