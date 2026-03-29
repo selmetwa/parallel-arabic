@@ -4,7 +4,7 @@
     icon: string;
     title: string;
     subtitle: string;
-    variant?: 'blue' | 'green' | 'purple' | 'amber' | 'rose';
+    variant?: 'blue' | 'green' | 'purple' | 'amber' | 'rose' | 'teal';
     compact?: boolean;
   }
 
@@ -15,7 +15,8 @@
     green: 'bg-gradient-to-r from-emerald-500 to-emerald-600 border-emerald-700',
     purple: 'bg-gradient-to-r from-purple-500 to-purple-600 border-purple-700',
     amber: 'bg-gradient-to-r from-amber-500 to-amber-600 border-amber-700',
-    rose: 'bg-gradient-to-r from-rose-500 to-rose-600 border-rose-700'
+    rose: 'bg-gradient-to-r from-rose-500 to-rose-600 border-rose-700',
+    teal: 'bg-gradient-to-r from-teal-500 to-teal-600 border-teal-700'
   };
 
   const textColorClasses: Record<string, string> = {
@@ -23,7 +24,8 @@
     green: 'text-emerald-100',
     purple: 'text-purple-100',
     amber: 'text-amber-100',
-    rose: 'text-rose-100'
+    rose: 'text-rose-100',
+    teal: 'text-teal-100'
   };
 </script>
 
