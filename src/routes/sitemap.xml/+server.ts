@@ -36,24 +36,24 @@ const staticPages = [
   { path: '/videos-new', priority: '0.8', changefreq: 'daily' },
   { path: '/tutor', priority: '0.8', changefreq: 'weekly' },
 
-  // Dialect landing pages - Egyptian Arabic
-  { path: '/egyptian-arabic/stories', priority: '0.8', changefreq: 'weekly' },
-  { path: '/egyptian-arabic/conjugations', priority: '0.9', changefreq: 'monthly' },
-
-  // Dialect landing pages - Fusha (MSA)
+  // Dialect landing pages
+  { path: '/egyptian-arabic', priority: '0.9', changefreq: 'weekly' },
+  { path: '/egyptian-arabic/conjugations', priority: '0.8', changefreq: 'monthly' },
   { path: '/fusha', priority: '0.9', changefreq: 'weekly' },
-  { path: '/fusha/vocab', priority: '0.8', changefreq: 'weekly' },
-  { path: '/fusha/write', priority: '0.8', changefreq: 'weekly' },
-
-  // Dialect landing pages - Levantine
   { path: '/levantine', priority: '0.9', changefreq: 'weekly' },
-  { path: '/levantine/vocab', priority: '0.8', changefreq: 'weekly' },
-  { path: '/levantine/write', priority: '0.8', changefreq: 'weekly' },
-
-  // Dialect landing pages - Darija
   { path: '/darija', priority: '0.9', changefreq: 'weekly' },
-  { path: '/darija/vocab', priority: '0.8', changefreq: 'weekly' },
-  { path: '/darija/write', priority: '0.8', changefreq: 'weekly' },
+
+  // Dialect-filtered stories
+  { path: '/stories?dialect=egyptian-arabic', priority: '0.8', changefreq: 'weekly' },
+  { path: '/stories?dialect=darija', priority: '0.8', changefreq: 'weekly' },
+  { path: '/stories?dialect=levantine', priority: '0.8', changefreq: 'weekly' },
+  { path: '/stories?dialect=fusha', priority: '0.8', changefreq: 'weekly' },
+
+  // Dialect-filtered vocabulary
+  { path: '/vocabulary?dialect=egyptian-arabic', priority: '0.8', changefreq: 'weekly' },
+  { path: '/vocabulary?dialect=darija', priority: '0.8', changefreq: 'weekly' },
+  { path: '/vocabulary?dialect=levantine', priority: '0.8', changefreq: 'weekly' },
+  { path: '/vocabulary?dialect=fusha', priority: '0.8', changefreq: 'weekly' },
 
   // Structured lessons by dialect
   { path: '/lessons/structured/egyptian-arabic', priority: '0.8', changefreq: 'weekly' },
@@ -179,16 +179,13 @@ export const GET: RequestHandler = async () => {
 
     if (!storiesError && stories) {
       for (const story of stories) {
-        // Stories are under dialect-specific routes
-        if (story.dialect === 'egyptian-arabic') {
-          urls.push(`
+        urls.push(`
   <url>
-    <loc>${BASE_URL}/egyptian-arabic/stories/${escapeXml(story.id)}</loc>
+    <loc>${BASE_URL}/generated_story/${escapeXml(story.id)}</loc>
     <lastmod>${formatDate(story.created_at)}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>`);
-        }
       }
     }
 

@@ -11,14 +11,19 @@ function proficiencyToDifficulty(level: string | null | undefined): string | nul
   return _level;  
 }
 
-export const load = async ({ parent, locals }) => {
+const VALID_DIALECTS = ['egyptian-arabic', 'darija', 'levantine', 'fusha'];
+
+export const load = async ({ parent, locals, url }) => {
   // Get session and subscription status from layout
   const { session, isSubscribed, user } = await parent();
 
-  // Default filter to the user's target dialect (or egyptian-arabic)
-  const initialDialect = getDefaultDialect(user);
+  // Use dialect query param if present and valid, otherwise fall back to user's target dialect
+  const dialectParam = url.searchParams.get('dialect');
+  const initialDialect = dialectParam && VALID_DIALECTS.includes(dialectParam)
+    ? dialectParam
+    : getDefaultDialect(user);
 
-  // Fetch initial page of stories with pagination, filtered by user's dialect
+  // Fetch initial page of stories with pagination, filtered by dialect
   const storiesResult = await getStoriesPaginated(null, PAGE_SIZE, { dialect: initialDialect });
 
   let initialStories: object[] = [];

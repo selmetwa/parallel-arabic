@@ -1,5 +1,6 @@
-import { redirect } from '@sveltejs/kit';
+import type { PageServerLoad } from './$types';
 
-export function load() {
-	redirect(301, '/egyptian-arabic/stories');
-}
+export const load: PageServerLoad = async ({ parent }) => {
+	const { session, user } = await parent();
+	return { session, user };
+};
