@@ -69,18 +69,10 @@
           // { label: 'Speak', href: '/speak', icon: '🎤' },
         ]
       },
-      // {
-      //   title: 'Explore',
-      //   items: [
-      //     // { label: 'Videos', href: '/videos', icon: '📺' },
-      //     // { label: 'Shorts', href: '/videos-new', icon: '🎬' },
-      //     { label: 'Tutor', href: '/tutor', icon: '💬' }
-      //   ]
-      // },
       {
         title: 'General',
         items: [
-          session 
+          session
             ? { label: 'Profile', href: '/profile', icon: '👤' }
             : { label: 'Login', href: '/login', icon: '🔐' }
         ]
@@ -89,7 +81,7 @@
     return baseSections;
   });
 
-  let expandedSections = $state<Set<string>>(new Set(['Learn', 'Practice', 'Explore', 'General']));
+  let expandedSections = $state<Set<string>>(new Set(['Learn', 'Practice', 'Explore', 'Resources', 'General']));
 
   function toggleSection(title: string) {
     const newExpanded = new Set(expandedSections);

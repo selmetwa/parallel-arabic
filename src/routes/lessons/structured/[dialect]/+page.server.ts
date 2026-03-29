@@ -8,9 +8,14 @@ function normalizeDialect(dialect: string): string {
 	return dialect.toLowerCase().replace(/\s+/g, '-');
 }
 
-export const load = async ({ params, parent }) => {
+export const load = async ({ params, parent, url }) => {
 	const { session, isSubscribed, user } = await parent();
 	const { dialect } = params;
+
+	const autoOpenLessonId = url.searchParams.get('lessonId') ?? null;
+	const autoOpenStep = url.searchParams.has('step')
+		? parseInt(url.searchParams.get('step')!, 10)
+		: null;
 	
 	// Check if user is whitelisted
 	const isWhitelisted = isEmailWhitelisted(user?.email);
@@ -101,7 +106,9 @@ export const load = async ({ params, parent }) => {
 		dialect: dialectName, // Return the actual dialect name (not normalized) for use in API calls
 		existingLessons,
 		userProgress,
-		isWhitelisted: isWhitelisted || false
+		isWhitelisted: isWhitelisted || false,
+		autoOpenLessonId,
+		autoOpenStep
 	};
 };
 
