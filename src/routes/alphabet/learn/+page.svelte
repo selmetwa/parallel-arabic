@@ -219,7 +219,7 @@
 	</div>
 
 	<!-- Bottom Navigation -->
-	<footer class="border-t border-tile-600 sticky bottom-0 bg-gradient-to-b from-tile-300/95 to-tile-300 backdrop-blur-md shadow-lg">
+	<footer class="border-t border-tile-600 sticky bottom-0 bg-gradient-to-b from-tile-300/95 to-tile-300 backdrop-blur-md shadow-lg z-[100]">
 		<div class="max-w-7xl mx-auto px-3 sm:px-8 py-4">
 			<div class="flex items-center justify-between">
 				<div>
