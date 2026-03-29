@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount, onDestroy, untrack, tick } from 'svelte';
+  import { goto } from '$app/navigation';
   import * as d3 from 'd3';
 
   interface MapWord {
@@ -52,23 +53,44 @@
     KWT: 'fusha',
     BHR: 'fusha',
     ARE: 'fusha',
-    IRQ: 'iraqi',
+    IRQ: 'fusha',
   };
 
-  // Dialect → highlighted fill color (low opacity applied via D3)
+  // Dialect → highlighted fill color (used for tooltips/badges — hex required)
   const DIALECT_COLOR: Record<string, string> = {
-    'egyptian-arabic': '#c5a97a',
-    darija: '#5b9e8d',
-    levantine: '#7a9e6a',
-    iraqi: '#8a7ac0',
-    fusha: '#7a9ec0',
+    'egyptian-arabic': '#8fb3c2', // approximates tile4 for badge display
+    darija: '#22c55e',
+    levantine: '#f97316',
+    fusha: '#a855f7',
+  };
+
+  // Dialect → map fill style (CSS vars allowed here — evaluated by the browser)
+  function dialectMapFill(dialect: string, hover = false): string {
+    if (dialect === 'egyptian-arabic') {
+      return hover
+        ? `fill: var(--tile5); stroke: var(--tile6); stroke-width: 2px; cursor: pointer;`
+        : `fill: var(--tile4); stroke: var(--tile6); stroke-width: 1.2px; cursor: pointer;`;
+    }
+    const color = DIALECT_COLOR[dialect];
+    const isClickable = !!DIALECT_ROUTE[dialect];
+    const cursor = isClickable ? ' cursor: pointer;' : '';
+    return hover
+      ? `fill: ${color}; stroke: ${color}; stroke-width: 2px;${cursor}`
+      : `fill: ${color}cc; stroke: ${color}; stroke-width: 1.2px;${cursor}`;
+  }
+
+  // Dialect → landing page route
+  const DIALECT_ROUTE: Record<string, string> = {
+    'egyptian-arabic': '/egyptian-arabic',
+    darija: '/darija',
+    levantine: '/levantine',
+    fusha: '/fusha',
   };
 
   const DIALECT_LABEL: Record<string, string> = {
     'egyptian-arabic': 'Egyptian Arabic',
     darija: 'Darija',
     levantine: 'Levantine',
-    iraqi: 'Iraqi',
     fusha: 'Modern Standard Arabic',
   };
 
@@ -77,7 +99,6 @@
     'egyptian-arabic': [30.8, 26.8],
     levantine: [36.2, 33.9],
     darija: [-5.0, 31.8],
-    iraqi: [43.8, 33.2],
     fusha: [38.0, 25.0],
   };
 
@@ -206,8 +227,7 @@
     }));
     const flatPath = d3.geoPath(); // no projection → renders pre-projected pixel coords as-is
 
-    // Country fills use theme-aware tile CSS vars for good contrast with bright nodes.
-    // Dialect countries get a lighter tile level so they stand out from non-dialect land.
+    // Country fills: dialect regions get a tinted color fill + pointer cursor and are clickable.
     zoomGroup
       .selectAll<SVGPathElement, any>('path.country')
       .data(projectedFeatures)
@@ -216,10 +236,26 @@
       .attr('d', (d) => flatPath(d) ?? '')
       .attr('style', (d) => {
         const dialect = COUNTRY_DIALECT[d.properties.ISO_A3];
-        if (dialect) {
-          return 'fill: var(--tile2); stroke: var(--tile4); stroke-width: 1.2px;';
-        }
+        if (dialect) return dialectMapFill(dialect);
         return 'fill: var(--tile3); stroke: var(--tile5); stroke-width: 0.6px;';
+      })
+      .on('mouseover', function(_event, d) {
+        const dialect = COUNTRY_DIALECT[d.properties.ISO_A3];
+        if (dialect && DIALECT_ROUTE[dialect]) {
+          d3.select(this).attr('style', dialectMapFill(dialect, true));
+        }
+      })
+      .on('mouseout', function(_event, d) {
+        const dialect = COUNTRY_DIALECT[d.properties.ISO_A3];
+        if (dialect) {
+          d3.select(this).attr('style', dialectMapFill(dialect));
+        }
+      })
+      .on('click', (_event, d) => {
+        const dialect = COUNTRY_DIALECT[d.properties.ISO_A3];
+        if (dialect && DIALECT_ROUTE[dialect]) {
+          goto(DIALECT_ROUTE[dialect]);
+        }
       });
 
     // Build dialect bounding boxes by projecting the raw GeoJSON coordinates.

@@ -1,6 +1,6 @@
-import { redirect } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 
-export const load: PageServerLoad = () => {
-  throw redirect(301, '/vocabulary?dialect=darija');
+export const load: PageServerLoad = async ({ parent }) => {
+	const { session, user } = await parent();
+	return { session, user };
 };
