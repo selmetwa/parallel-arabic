@@ -36,7 +36,7 @@
 		return `${days} day${days !== 1 ? 's' : ''} ${hours} hour${hours !== 1 ? 's' : ''}`;
 	});
 
-	const visibleEntries = $derived(compact ? top10.slice(0, 5) : top10);
+	const visibleEntries = $derived(compact ? top10.slice(0, 3) : top10);
 
 	function getRankDisplay(rank: number): string {
 		if (rank === 1) return '🥇';
@@ -46,74 +46,65 @@
 	}
 </script>
 
-<div class="bg-tile-300 border border-tile-500 rounded-2xl p-4 sm:p-6">
-	<!-- Header -->
-	<div class="flex items-start justify-between mb-4">
+{#if compact}
+	<div class="bg-tile-300 border border-tile-500 rounded-2xl p-4 flex flex-col justify-between h-full">
 		<div>
 			<h2 class="text-lg font-bold text-text-300">🏆 Weekly Leaderboard</h2>
-			{#if compact}
-				<p class="text-sm text-text-200 mt-0.5">Resets in: {countdown}</p>
+			{#if currentUser !== null}
+				<p class="text-sm text-text-200 mt-1">
+					You're ranked <span class="text-text-300 font-semibold">#{currentUser.rank}</span> this week
+					with <span class="text-amber-400 font-bold">{currentUser.xpThisWeek} XP</span>
+				</p>
 			{:else}
-				<p class="text-sm text-text-200 mt-0.5">This week resets in: {countdown}</p>
+				<p class="text-sm text-text-200 mt-1">Earn XP this week to get ranked.</p>
 			{/if}
 		</div>
+		<a href="/leaderboard" class="mt-4 text-sm text-text-200 hover:text-text-300 transition-colors">
+			View leaderboard →
+		</a>
 	</div>
-
-	<!-- Empty state -->
-	{#if top10.length === 0}
-		<div class="py-8 text-center text-text-200">
-			Be the first on the leaderboard this week!
-		</div>
-	{:else}
-		<!-- Leaderboard rows -->
-		<div class="flex flex-col gap-1">
-			{#each visibleEntries as entry, i (entry.rank)}
-				<div
-					class={[
-						'flex items-center gap-3 px-3 py-2 rounded-lg',
-						entry.isCurrentUser
-							? 'bg-tile-500 border border-tile-600'
-							: i % 2 === 0
-								? 'bg-tile-400/50'
-								: ''
-					]}
-				>
-					<!-- Rank -->
-					<span class="w-8 shrink-0 font-mono tabular-nums text-sm text-text-200 text-center">
-						{getRankDisplay(entry.rank)}
-					</span>
-
-					<!-- Display name -->
-					<span class="flex-1 text-text-300 text-sm font-medium truncate">
-						{entry.displayName}
-					</span>
-
-					<!-- XP -->
-					<span class="shrink-0 text-amber-400 font-bold text-sm tabular-nums">
-						{entry.xpThisWeek} XP
-					</span>
-				</div>
-			{/each}
+{:else}
+	<div class="bg-tile-300 border border-tile-500 rounded-2xl p-4 sm:p-6">
+		<!-- Header -->
+		<div class="flex items-start justify-between mb-3">
+			<div>
+				<h2 class="text-lg font-bold text-text-300">🏆 Weekly Leaderboard</h2>
+				{#if currentUser !== null}
+					<p class="text-sm text-text-200 mt-0.5">
+						You're ranked <span class="text-text-300 font-semibold">#{currentUser.rank}</span> this week
+						with <span class="text-amber-400 font-bold">{currentUser.xpThisWeek} XP</span>
+					</p>
+				{/if}
+			</div>
 		</div>
 
-		<!-- Compact: link to full leaderboard -->
-		{#if compact}
-			<div class="mt-3 flex justify-end">
-				<a
-					href="/leaderboard"
-					class="text-sm text-text-200 hover:text-text-300 transition-colors"
-				>
-					See full leaderboard →
-				</a>
+		<!-- Empty state -->
+		{#if top10.length === 0}
+			<div class="py-8 text-center text-text-200">
+				Be the first on the leaderboard this week!
+			</div>
+		{:else}
+			<!-- Leaderboard rows -->
+			<div class="flex flex-col gap-1">
+				{#each visibleEntries as entry (entry.rank)}
+					<div
+						class={[
+							'flex items-center gap-3 px-3 py-2 rounded-lg',
+							entry.isCurrentUser ? 'bg-tile-500 border border-tile-600' : ''
+						]}
+					>
+						<span class="w-8 shrink-0 font-mono tabular-nums text-sm text-text-200 text-left">
+							{getRankDisplay(entry.rank)}
+						</span>
+						<span class="flex-1 text-text-300 text-sm font-medium truncate">
+							{entry.displayName}
+						</span>
+						<span class="shrink-0 text-amber-400 font-bold text-sm tabular-nums">
+							{entry.xpThisWeek} XP
+						</span>
+					</div>
+				{/each}
 			</div>
 		{/if}
-
-		<!-- Footer: current user outside top 10 -->
-		{#if currentUser !== null}
-			<div class="mt-4 pt-3 border-t border-tile-500 text-sm text-text-200 text-center">
-				You're ranked <span class="text-text-300 font-semibold">#{currentUser.rank}</span> this week
-				with <span class="text-amber-400 font-bold">{currentUser.xpThisWeek} XP</span>
-			</div>
-		{/if}
-	{/if}
-</div>
+	</div>
+{/if}

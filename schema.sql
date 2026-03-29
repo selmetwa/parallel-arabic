@@ -315,8 +315,9 @@ CREATE TABLE public.word_of_the_day (
   example_darija text,
   example_fusha text,
   audio_url text,
-  display_date date NOT NULL UNIQUE,
+  display_date date NOT NULL,
   created_at timestamp with time zone DEFAULT now(),
+  dialect text NOT NULL DEFAULT 'egyptian-arabic'::text CHECK (dialect = ANY (ARRAY['egyptian-arabic'::text, 'fusha'::text, 'levantine'::text, 'darija'::text])),
   CONSTRAINT word_of_the_day_pkey PRIMARY KEY (id)
 );
 CREATE TABLE public.word_review (
