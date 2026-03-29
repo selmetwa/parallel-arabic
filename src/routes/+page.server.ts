@@ -5,6 +5,7 @@ import { supabase } from "$lib/supabaseClient";
 import type { LeaderboardEntry } from './api/leaderboard/weekly/+server';
 import { getStoriesPaginated } from "$lib/helpers/story-helpers";
 import { BLOCKED_STORY_IDS } from "$lib/constants/stories/blocked";
+import { curriculum } from "$lib/data/curriculum";
 
 function proficiencyToDifficulty(level: string | null | undefined): string | null {
   if (!level) return 'a1';
@@ -45,6 +46,8 @@ export const load: PageServerLoad = async ({ parent }) => {
   let leaderboardTop5: LeaderboardEntry[] = [];
   let leaderboardCurrentUser: { rank: number; xpThisWeek: number } | null = null;
   let mapWords: { id: string; arabic: string; english: string; transliteration: string; dialect: string; category: string }[] = [];
+  let weekActivityDates: number[] = [];
+  let weekStartTimestamp = 0;
 
   // Use user data from parent() - already fetched in hooks.server.ts!
   // This eliminates a duplicate database query (~100-150ms saved)
@@ -114,10 +117,13 @@ export const load: PageServerLoad = async ({ parent }) => {
     const todayDate = new Date();
     const todayMidnight = Date.UTC(todayDate.getUTCFullYear(), todayDate.getUTCMonth(), todayDate.getUTCDate());
     const activityDate = todayMidnight;
+    const dayOfWeek = todayDate.getUTCDay();
+    const daysToMonday = dayOfWeek === 0 ? 6 : dayOfWeek - 1;
+    weekStartTimestamp = todayMidnight - daysToMonday * 86400000;
 
     try {
       // Run all count queries in PARALLEL instead of sequential (~50-100ms saved)
-      const [totalResult, dueResult, gameResult, challengeResult, activityResult, mapWordsResult] = await Promise.all([
+      const [totalResult, dueResult, gameResult, challengeResult, activityResult, mapWordsResult, weekActivityResult] = await Promise.all([
         supabase
           .from('saved_word')
           .select('*', { count: 'exact', head: true })
@@ -153,7 +159,13 @@ export const load: PageServerLoad = async ({ parent }) => {
           .select('id, arabic_word, english_word, transliterated_word, dialect, word:word_id(category)')
           .eq('user_id', userId)
           .order('created_at', { ascending: false })
-          .limit(150)
+          .limit(150),
+        supabase
+          .from('user_daily_activity')
+          .select('activity_date')
+          .eq('user_id', userId)
+          .gte('activity_date', weekStartTimestamp)
+          .lte('activity_date', todayMidnight)
       ]);
 
       if (!totalResult.error && totalResult.count !== null) {
@@ -174,6 +186,9 @@ export const load: PageServerLoad = async ({ parent }) => {
       if (!activityResult.error && activityResult.data) {
         wordOfDaySaved = activityResult.data.word_of_day_saved ?? false;
       }
+      if (!weekActivityResult.error && weekActivityResult.data) {
+        weekActivityDates = weekActivityResult.data.map((r: any) => r.activity_date);
+      }
       if (!mapWordsResult.error && mapWordsResult.data) {
         mapWords = mapWordsResult.data.map((w: any) => ({
           id: w.id,
@@ -186,6 +201,29 @@ export const load: PageServerLoad = async ({ parent }) => {
       }
     } catch (error) {
       console.error('Error fetching word counts:', error);
+    }
+  }
+
+  // Check for in-progress lesson to show resume card on homepage
+  let inProgressLesson: { topicId: string; dialect: string; stepIndex: number; title: string } | null = null;
+
+  if (user?.id && user?.last_content_type === 'lessons' && user?.last_content_id && user?.last_content_dialect) {
+    const { data: lp } = await supabase
+      .from('structured_lesson_progress')
+      .select('status')
+      .eq('user_id', user.id)
+      .eq('topic_id', user.last_content_id)
+      .eq('dialect', user.last_content_dialect)
+      .maybeSingle();
+
+    if (!lp || lp.status === 'in_progress') {
+      const topic = curriculum.flatMap(m => m.topics).find(t => t.id === user.last_content_id);
+      inProgressLesson = {
+        topicId: user.last_content_id,
+        dialect: user.last_content_dialect,
+        stepIndex: user.last_content_position ?? 0,
+        title: topic?.title ?? 'Continue Lesson'
+      };
     }
   }
 
@@ -340,6 +378,19 @@ export const load: PageServerLoad = async ({ parent }) => {
     });
   }
 
+  // In-progress lesson (resume where you left off)
+  if (inProgressLesson) {
+    suggestions.push({
+      id: 'continue-lesson',
+      href: `/lessons/structured/${inProgressLesson.dialect}`,
+      icon: '📖',
+      title: `Continue: ${inProgressLesson.title}`,
+      subtitle: `Step ${inProgressLesson.stepIndex + 1} – pick up where you left off`,
+      variant: 'teal',
+      priority: 9
+    });
+  }
+
   // Sort by priority (higher first)
   suggestions.sort((a, b) => b.priority - a.priority);
 
@@ -365,6 +416,8 @@ export const load: PageServerLoad = async ({ parent }) => {
     leaderboardCurrentUser,
     mapWords,
     featuredStory,
+    weekActivityDates,
+    weekStartTimestamp,
   };
 };
 
