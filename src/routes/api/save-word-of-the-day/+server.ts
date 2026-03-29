@@ -12,7 +12,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
   }
 
   const userId = user.id;
-  const { arabic, english, transliteration } = await request.json();
+  const { arabic, english, transliteration, dialect } = await request.json();
 
   if (!arabic || !english) {
     return json({ message: 'Missing word data' }, { status: 400 });
@@ -54,7 +54,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
         arabic_word: arabic,
         english_word: english,
         transliterated_word: transliteration ?? '',
-        dialect: 'egyptian-arabic',
+        dialect: dialect || 'egyptian-arabic',
         ease_factor: 2.5,
         interval_days: 0,
         repetitions: 0,

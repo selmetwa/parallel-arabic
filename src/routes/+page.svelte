@@ -18,11 +18,11 @@
   let challengeGenerating = $state(false);
   let generatedChallengeHref = $state<string | null>(null);
 
-  const suggestions = data.suggestions || [];
+  const suggestions = $derived(data.suggestions || []);
   // Separate challenge, review, and other suggestions
-  const dailyChallengeSuggestion = suggestions.find(s => s.id === 'daily-challenge');
-  const reviewSuggestion = suggestions.find(s => s.id === 'review');
-  const otherSuggestions = suggestions.filter(s => s.id !== 'review' && s.id !== 'daily-challenge').slice(0, 3);
+  const dailyChallengeSuggestion = $derived(suggestions.find(s => s.id === 'daily-challenge'));
+  const reviewSuggestion = $derived(suggestions.find(s => s.id === 'review'));
+  const otherSuggestions = $derived(suggestions.filter(s => s.id !== 'review' && s.id !== 'daily-challenge').slice(0, 3));
 
   function dismissBanner() {
     bannerDismissed = true;
@@ -102,23 +102,20 @@
         </div>
       {/if}
 
-      <!-- Main review suggestion (if has words to review) -->
-      {#if reviewSuggestion}
-        <div class={dailyChallengeSuggestion || generatedChallengeHref || challengeGenerating ? 'mt-3' : ''}>
-          <ContinueCard
-            href={reviewSuggestion.href}
-            icon={reviewSuggestion.icon}
-            title={reviewSuggestion.title}
-            subtitle={reviewSuggestion.subtitle}
-            variant={reviewSuggestion.variant}
-          />
-        </div>
-      {/if}
-
-      <!-- Other activity suggestions -->
-      {#if otherSuggestions.length > 0}
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 mt-3">
-          {#each otherSuggestions as suggestion}
+      <!-- Review + other suggestions in a single 4-col row -->
+      {#if reviewSuggestion || otherSuggestions.length > 0}
+        <div class={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 ${dailyChallengeSuggestion || generatedChallengeHref || challengeGenerating ? 'mt-3' : ''}`}>
+          {#if reviewSuggestion}
+            <ContinueCard
+              href={reviewSuggestion.href}
+              icon={reviewSuggestion.icon}
+              title={reviewSuggestion.title}
+              subtitle={reviewSuggestion.subtitle}
+              variant={reviewSuggestion.variant}
+              compact={true}
+            />
+          {/if}
+          {#each otherSuggestions as suggestion (suggestion.id)}
             <ContinueCard
               href={suggestion.href}
               icon={suggestion.icon}
@@ -144,77 +141,77 @@
     </div>
   {/if}
 
-  <!-- Recommended Story Hero Card -->
-  {#if data.featuredStory}
-    <div class="mb-8">
-      <a
-        href={`/generated_story/${data.featuredStory.id}`}
-        class="group flex items-center justify-between bg-tile-400 border-2 border-tile-600 rounded-xl p-6 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1"
-      >
-        <div class="flex flex-col gap-2 min-w-0">
-          <span class="text-xs font-semibold uppercase tracking-widest text-text-200">Recommended Story for You</span>
-          <span class="text-xl sm:text-2xl font-bold text-text-300 group-hover:text-text-200 transition-colors leading-tight">
-            {data.featuredStory.title}
-          </span>
-          <div class="flex items-center gap-2 mt-1 flex-wrap">
-            <span class="inline-flex items-center px-2.5 py-1 text-xs font-medium rounded-full bg-tile-500 text-text-300">
-              {data.featuredStory.dialectName}
-            </span>
-            {#if data.featuredStory.difficulty}
-              <span class="inline-flex items-center px-2.5 py-1 text-xs font-medium rounded-full bg-tile-300 text-text-200 border border-tile-500">
-                {data.featuredStory.difficulty.toUpperCase()}
-              </span>
-            {/if}
-          </div>
-        </div>
-        <div class="shrink-0 ml-6 flex items-center gap-2 text-text-200 group-hover:text-text-300 transition-colors font-medium text-sm">
-          <span>Read Story</span>
-          <span class="text-lg">→</span>
-        </div>
-      </a>
-    </div>
-  {/if}
-
-  <!-- Word of the Day + Leaderboard side by side on wider screens -->
-  {#if data.wordOfDay || data.leaderboardTop5.length > 0}
-    <div class="mb-8 grid grid-cols-1 lg:grid-cols-2 gap-4">
+  <!-- Hero row: Word of the Day + Leaderboard + Featured Story + Word Map -->
+  {#if data.wordOfDay || data.leaderboardTop5.length > 0 || data.featuredStory}
+    <div class="mb-8 grid grid-cols-1 lg:grid-cols-4 gap-4">
       {#if data.wordOfDay}
-        <WordOfTheDay
-          word={data.wordOfDay}
-          initialSaved={data.wordOfDaySaved}
-          isLoggedIn={!!data.user}
-        />
+        <div class="lg:h-[220px] overflow-hidden rounded-2xl">
+          <WordOfTheDay
+            word={data.wordOfDay}
+            initialSaved={data.wordOfDaySaved}
+            isLoggedIn={!!data.user}
+            userDialect={data.userDialect}
+          />
+        </div>
       {/if}
       {#if data.leaderboardTop5.length > 0}
-        <Leaderboard
-          top10={data.leaderboardTop5}
-          currentUser={data.leaderboardCurrentUser}
-          compact={true}
-        />
-      {/if}
-    </div>
-  {/if}
-
-  <!-- Word Map preview — desktop only, logged in, has saved words -->
-  {#if browser && data.user && data.mapWords.length > 0}
-    <div class="hidden lg:block mb-12">
-      <SectionHeader title="Your Word Map" />
-      <div class="relative rounded-xl overflow-hidden" style="max-height: 340px;">
-        <div style="pointer-events: none;">
-          <ArabicMap words={data.mapWords} preview={true} />
+        <div class="lg:h-[220px] overflow-hidden rounded-2xl">
+          <Leaderboard
+            top10={data.leaderboardTop5}
+            currentUser={data.leaderboardCurrentUser}
+            compact={true}
+          />
         </div>
-        <!-- Clickable overlay -->
-        <a
-          href="/map"
-          class="absolute inset-0 z-10 flex items-end justify-end p-4 group"
-          aria-label="View full word map"
-        >
-          <span class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-200 shadow-md group-hover:shadow-lg group-hover:scale-105"
-            style="background: rgba(15,15,25,0.8); color: #eeeeee; border: 1px solid rgba(255,255,255,0.15); backdrop-filter: blur(6px);">
-            View full map →
-          </span>
-        </a>
-      </div>
+      {/if}
+      {#if data.featuredStory}
+        <div class="lg:h-[220px]">
+          <a
+            href={`/generated_story/${data.featuredStory.id}`}
+            class="group flex flex-col justify-between h-full bg-tile-400 border-2 border-tile-600 rounded-xl p-5 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1"
+          >
+            <div class="flex flex-col gap-2 min-w-0">
+              <span class="text-xs font-semibold uppercase tracking-widest text-text-200">Recommended Story</span>
+              <span class="text-lg font-bold text-text-300 group-hover:text-text-200 transition-colors leading-snug">
+                {data.featuredStory.title}
+              </span>
+              <div class="flex items-center gap-2 mt-1 flex-wrap">
+                <span class="inline-flex items-center px-2.5 py-1 text-xs font-medium rounded-full bg-tile-500 text-text-300">
+                  {data.featuredStory.dialectName}
+                </span>
+                {#if data.featuredStory.difficulty}
+                  <span class="inline-flex items-center px-2.5 py-1 text-xs font-medium rounded-full bg-tile-300 text-text-200 border border-tile-500">
+                    {data.featuredStory.difficulty.toUpperCase()}
+                  </span>
+                {/if}
+              </div>
+            </div>
+            <div class="mt-4 flex items-center gap-1.5 text-text-200 group-hover:text-text-300 transition-colors font-medium text-sm">
+              <span>Read Story</span>
+              <span>→</span>
+            </div>
+          </a>
+        </div>
+      {/if}
+      {#if browser && data.user && data.mapWords.length > 0}
+        <div class="hidden lg:block lg:h-[220px]">
+          <div class="relative rounded-xl overflow-hidden h-full">
+            <div style="pointer-events: none;">
+              <ArabicMap words={data.mapWords} preview={true} />
+            </div>
+            <div class="absolute inset-x-0 bottom-0 h-12 pointer-events-none" style="background: linear-gradient(to bottom, transparent, #0f0f19);"></div>
+            <a
+              href="/map"
+              class="absolute inset-0 z-10 flex items-end justify-end p-3 group"
+              aria-label="View full word map"
+            >
+              <span class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-200 shadow-md group-hover:shadow-lg group-hover:scale-105"
+                style="background: rgba(15,15,25,0.8); color: #eeeeee; border: 1px solid rgba(255,255,255,0.15); backdrop-filter: blur(6px);">
+                View full map →
+              </span>
+            </a>
+          </div>
+        </div>
+      {/if}
     </div>
   {/if}
 

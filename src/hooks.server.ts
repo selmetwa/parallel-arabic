@@ -1,9 +1,38 @@
 import * as Sentry from '@sentry/sveltekit';
 import { createServerClient } from '@supabase/ssr';
-import { type Handle } from '@sveltejs/kit';
+import { redirect, type Handle } from '@sveltejs/kit';
 import { sequence } from '@sveltejs/kit/hooks';
 import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_PUBLISHABLE_KEY } from '$env/static/public';
 import { dev } from '$app/environment';
+
+const DIALECTS = ['egyptian-arabic', 'darija', 'levantine', 'fusha'];
+
+const redirects: Handle = async ({ event, resolve }) => {
+	const { pathname } = event.url;
+
+	// /[dialect]/vocab or /[dialect]/write → /vocabulary?dialect=<dialect>
+	const vocabWriteMatch = pathname.match(
+		/^\/(egyptian-arabic|darija|levantine|fusha)\/(vocab|write)(?:\/.*)?$/
+	);
+	if (vocabWriteMatch) {
+		redirect(301, `/vocabulary?dialect=${vocabWriteMatch[1]}`);
+	}
+
+	// /[dialect]/generated-stories/[id] → /stories (path mismatch: real route uses /generated_story with underscore)
+	if (pathname.includes('/generated-stories/')) {
+		redirect(301, '/stories');
+	}
+
+	// Dialect-prefixed pages that only exist as global routes
+	if (pathname.endsWith('/anki-decks') && DIALECTS.some((d) => pathname.startsWith(`/${d}/`))) {
+		redirect(301, '/anki-decks');
+	}
+	if (pathname === '/darija/sentences') {
+		redirect(301, '/sentences');
+	}
+
+	return resolve(event);
+};
 
 Sentry.init({
 	dsn: process.env.SENTRY_DSN,
@@ -159,4 +188,4 @@ const auth: Handle = async ({ event, resolve }) => {
 	return resolve(event);
 };
 
-export const handle: Handle = sequence(Sentry.sentryHandle(), supabase, authGuard, auth);
+export const handle: Handle = sequence(Sentry.sentryHandle(), redirects, supabase, authGuard, auth);

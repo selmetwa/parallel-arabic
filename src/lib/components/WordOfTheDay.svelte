@@ -19,9 +19,10 @@
     word: Word;
     initialSaved?: boolean;
     isLoggedIn?: boolean;
+    userDialect?: string | null;
   }
 
-  let { word, initialSaved = false, isLoggedIn = false }: Props = $props();
+  let { word, initialSaved = false, isLoggedIn = false, userDialect = null }: Props = $props();
 
   let isSaved = $state(untrack(() => initialSaved));
   let isLoading = $state(false);
@@ -57,6 +58,7 @@
           arabic: word.arabic,
           english: word.english,
           transliteration: word.transliteration,
+          dialect: userDialect ?? 'egyptian-arabic',
         }),
       });
 
