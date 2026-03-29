@@ -199,9 +199,10 @@
 </script>
 
 {#if activeLesson}
-    <LessonPlayer 
+    <LessonPlayer
         lesson={activeLesson}
         user={data.user}
+        initialStep={data.user?.last_content_id === activeLesson?.topicId ? (data.user?.last_content_position ?? 0) : 0}
         onClose={async () => {
             // Close the lesson player first
             activeLesson = null;

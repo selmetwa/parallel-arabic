@@ -9,6 +9,7 @@
   import WordOfTheDay from '$lib/components/WordOfTheDay.svelte';
   import Leaderboard from '$lib/components/Leaderboard.svelte';
   import ArabicMap from '$lib/components/ArabicMap.svelte';
+  import WeekStrip from '$lib/components/WeekStrip.svelte';
 
   let { data }: { data: PageData } = $props();
 
@@ -64,6 +65,10 @@
 </script>
 
 <section class="px-3 mt-6 sm:px-8 max-w-7xl mx-auto">
+  {#if data.user && data.weekActivityDates}
+    <WeekStrip weekActivityDates={data.weekActivityDates} weekStartTimestamp={data.weekStartTimestamp} />
+  {/if}
+
   <!-- Activity Suggestions -->
   {#if data.user && !bannerDismissed && (dailyChallengeSuggestion || reviewSuggestion || otherSuggestions.length > 0 || generatedChallengeHref)}
     <div class="mb-8 relative">

@@ -17,14 +17,15 @@
     import { curriculum } from '$lib/data/curriculum';
     import cn from 'classnames';
 
-    let { lesson, onClose, onLessonComplete, user } = $props<{ 
-        lesson: GeneratedLesson, 
+    let { lesson, onClose, onLessonComplete, user, initialStep } = $props<{
+        lesson: GeneratedLesson,
         onClose: () => void,
         onLessonComplete?: (nextLessonId?: string) => void | Promise<void>,
-        user?: { id: string } | null
+        user?: { id: string } | null,
+        initialStep?: number
     }>();
 
-    let currentStepIndex = $state(0);
+    let currentStepIndex = $state(initialStep ?? 0);
     let currentStep = $derived(lesson.steps[currentStepIndex]);
     let totalSteps = $derived(lesson.steps.length);
     let progress = $derived(((currentStepIndex + 1) / totalSteps) * 100);
@@ -90,6 +91,21 @@
         }
     });
     
+    // Save lesson progress (step position) when user exits mid-lesson
+    function saveProgress() {
+        if (!user?.id || !lesson.topicId) return;
+        fetch('/api/user-preferences/last-content', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                last_content_type: 'lessons',
+                last_content_id: lesson.topicId,
+                last_content_position: currentStepIndex,
+                last_content_dialect: lesson.dialect
+            })
+        }).catch(() => { /* non-critical */ });
+    }
+
     // Save practice sentence to review deck
     async function savePracticeSentence(sentence: { arabic: string; english: string; transliteration: string }) {
         if (!user?.id) {
@@ -665,7 +681,7 @@
     
     <!-- Header -->
     <header class="bg-tile-400 border-b-2 border-tile-600 px-4 py-4 flex items-center gap-4 shadow-lg z-10">
-        <button onclick={onClose} class="text-text-200 hover:text-text-300 p-2 rounded-lg bg-tile-500 border-2 border-tile-600 hover:bg-tile-600 transition-colors">
+        <button onclick={() => { saveProgress(); onClose(); }} class="text-text-200 hover:text-text-300 p-2 rounded-lg bg-tile-500 border-2 border-tile-600 hover:bg-tile-600 transition-colors">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
