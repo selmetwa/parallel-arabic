@@ -11,12 +11,12 @@ const redirects: Handle = async ({ event, resolve }) => {
 	const { pathname } = event.url;
 
 	// /[dialect]/vocab or /[dialect]/write → /vocabulary?dialect=<dialect>
-	const vocabWriteMatch = pathname.match(
-		/^\/(egyptian-arabic|darija|levantine|fusha)\/(vocab|write)(?:\/.*)?$/
-	);
-	if (vocabWriteMatch) {
-		redirect(301, `/vocabulary?dialect=${vocabWriteMatch[1]}`);
-	}
+	// const vocabWriteMatch = pathname.match(
+	// 	/^\/(egyptian-arabic|darija|levantine|fusha)\/(vocab|write)(?:\/.*)?$/
+	// );
+	// if (vocabWriteMatch) {
+	// 	redirect(301, `/vocabulary?dialect=${vocabWriteMatch[1]}`);
+	// }
 
 	// /[dialect]/generated-stories/[id] → /stories (path mismatch: real route uses /generated_story with underscore)
 	if (pathname.includes('/generated-stories/')) {

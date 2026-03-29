@@ -1,11 +1,11 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
-import { supabase } from '$lib/supabaseClient';
 
 export const POST: RequestHandler = async ({ request, locals }) => {
-  const { sessionId, user } = await locals?.auth?.validate() || {};
+  const { supabase, safeGetSession } = locals;
+  const { session, user } = await safeGetSession();
 
-  if (!sessionId || !user) {
+  if (!session || !user) {
     return json({ error: 'You must be logged in to update last content' }, { status: 401 });
   }
 
