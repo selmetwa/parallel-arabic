@@ -6,7 +6,6 @@
   import Card from '$lib/components/Card.svelte';
   import ContinueCard from '$lib/components/ContinueCard.svelte';
   import SectionHeader from '$lib/components/SectionHeader.svelte';
-  import BakerLoader from '$lib/components/BakerLoader.svelte';
   import WordOfTheDay from '$lib/components/WordOfTheDay.svelte';
   import Leaderboard from '$lib/components/Leaderboard.svelte';
   import ArabicMap from '$lib/components/ArabicMap.svelte';
@@ -22,7 +21,7 @@
   // Separate challenge, review, and other suggestions
   const dailyChallengeSuggestion = $derived(suggestions.find(s => s.id === 'daily-challenge'));
   const reviewSuggestion = $derived(suggestions.find(s => s.id === 'review'));
-  const otherSuggestions = $derived(suggestions.filter(s => s.id !== 'review' && s.id !== 'daily-challenge').slice(0, 3));
+  const otherSuggestions = $derived(suggestions.filter(s => s.id !== 'review' && s.id !== 'daily-challenge').slice(0, 4));
 
   function dismissBanner() {
     bannerDismissed = true;
@@ -66,7 +65,7 @@
 
 <section class="px-3 mt-6 sm:px-8 max-w-7xl mx-auto">
   <!-- Activity Suggestions -->
-  {#if data.user && !bannerDismissed && (dailyChallengeSuggestion || reviewSuggestion || otherSuggestions.length > 0 || challengeGenerating || generatedChallengeHref)}
+  {#if data.user && !bannerDismissed && (dailyChallengeSuggestion || reviewSuggestion || otherSuggestions.length > 0 || generatedChallengeHref)}
     <div class="mb-8 relative">
       <!-- Dismiss button -->
       <button
@@ -96,15 +95,11 @@
           subtitle="Complete today's challenge for +10 bonus XP"
           variant="amber"
         />
-      {:else if challengeGenerating}
-        <div class="bg-tile-300 border border-tile-500 rounded-xl flex items-center justify-center py-2">
-          <BakerLoader />
-        </div>
       {/if}
 
       <!-- Review + other suggestions in a single 4-col row -->
       {#if reviewSuggestion || otherSuggestions.length > 0}
-        <div class={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 ${dailyChallengeSuggestion || generatedChallengeHref || challengeGenerating ? 'mt-3' : ''}`}>
+        <div class={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 ${dailyChallengeSuggestion || generatedChallengeHref ? 'mt-3' : ''}`}>
           {#if reviewSuggestion}
             <ContinueCard
               href={reviewSuggestion.href}
