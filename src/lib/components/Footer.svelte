@@ -20,25 +20,25 @@
           <li><a href="/about" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">About</a></li>
           <li><a href="/pricing" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Pricing</a></li>
           <li><a href="/mobile-app" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Mobile App</a></li>
-          <li><a href="/keyboard" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Virtual Keyboard</a></li>
         </ul>
       </div>
 
       <div class="space-y-4">
         <h3 class="text-text-100 font-semibold text-base mb-3 tracking-wide">Resources</h3>
         <ul class="space-y-2 text-text-300 text-sm">
+          <li><a href="/blog" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Blog</a></li>
           <li><a href="/anki-decks" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Anki Decks</a></li>
           <li><a href="/vocab-list" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Vocab List</a></li>
           <li><a href="/support" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Support</a></li>
           <li><a href="/faq" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">FAQ</a></li>
           <li><a href="https://github.com/selmetwa/parallel-arabic" target="_blank" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Source Code</a></li>
+          <li><a href="/keyboard" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Virtual Keyboard</a></li>
           <li><a href="/sitemap.xml" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Sitemap</a></li>
         </ul>
       </div>
       <div class="space-y-4">
         <h3 class="text-text-100 font-semibold text-base mb-3 tracking-wide">Experimental</h3>
         <ul class="space-y-2 text-text-300 text-sm">
-          <li><a href="/videos-new" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Videos</a></li>
           <li><a href="/videos" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Shorts</a></li>
           <li><a href="/tutor" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Tutor</a></li>
           <li><a href="/speak" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Speak</a></li>

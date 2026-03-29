@@ -382,7 +382,7 @@ export const load: PageServerLoad = async ({ parent }) => {
   if (inProgressLesson) {
     suggestions.push({
       id: 'continue-lesson',
-      href: `/lessons/structured/${inProgressLesson.dialect}`,
+      href: `/lessons/structured/${inProgressLesson.dialect}?lessonId=${encodeURIComponent(inProgressLesson.topicId)}&step=${inProgressLesson.stepIndex}`,
       icon: '📖',
       title: `Continue: ${inProgressLesson.title}`,
       subtitle: `Step ${inProgressLesson.stepIndex + 1} – pick up where you left off`,

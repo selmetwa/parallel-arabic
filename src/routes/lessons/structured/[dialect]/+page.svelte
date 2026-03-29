@@ -5,11 +5,13 @@
     import LessonPlayer from '$lib/components/LessonPlayer.svelte';
     import type { GeneratedLesson } from '$lib/schemas/curriculum-schema';
 	import { invalidateAll } from '$app/navigation';
-	
+	import { onMount } from 'svelte';
+
 	let { data } = $props();
 	let isModalOpen = $state(false);
 	let isAuthModalOpen = $state(false);
     let activeLesson = $state<GeneratedLesson | null>(null);
+	let isAutoOpening = $state(false);
 
 	// Dialect display names
 	const dialectNames: Record<string, string> = {
@@ -196,13 +198,31 @@
             alert('Could not load lesson content. Please try regenerating it.');
         }
     }
+
+	onMount(async () => {
+		if (!data.autoOpenLessonId) return;
+		const targetLesson = lessonPositions.find(l => l.id === data.autoOpenLessonId);
+		if (!targetLesson) return;
+		isAutoOpening = true;
+		try {
+			await handleLessonClick(targetLesson);
+		} finally {
+			isAutoOpening = false;
+		}
+	});
 </script>
 
 {#if activeLesson}
     <LessonPlayer
         lesson={activeLesson}
         user={data.user}
-        initialStep={data.user?.last_content_id === activeLesson?.topicId ? (data.user?.last_content_position ?? 0) : 0}
+        initialStep={
+            data.user?.last_content_id === activeLesson?.topicId
+                ? (data.user?.last_content_position ?? 0)
+                : (activeLesson?.topicId === data.autoOpenLessonId && data.autoOpenStep !== null
+                    ? (data.autoOpenStep ?? 0)
+                    : 0)
+        }
         onClose={async () => {
             // Close the lesson player first
             activeLesson = null;

@@ -1,6 +1,7 @@
 import type { RequestHandler } from './$types';
 import { supabase } from '$lib/supabaseClient';
 import verbIndex from '$lib/data/verb-conjugations/egyptian-arabic/index.json';
+import { blogPosts } from '$lib/constants/blog/index';
 import { sections } from '$lib/constants/sections';
 import { fushaSections } from '$lib/constants/fusha-sections';
 import { levantineSections } from '$lib/constants/levantine-sections';
@@ -73,6 +74,9 @@ const staticPages = [
   { path: '/about', priority: '0.5', changefreq: 'monthly' },
   { path: '/faq', priority: '0.5', changefreq: 'monthly' },
   { path: '/support', priority: '0.5', changefreq: 'monthly' },
+
+  // Blog
+  { path: '/blog', priority: '0.8', changefreq: 'weekly' },
 ];
 
 function escapeXml(str: string): string {
@@ -99,6 +103,17 @@ export const GET: RequestHandler = async () => {
     <loc>${BASE_URL}${page.path}</loc>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
+  </url>`);
+  }
+
+  // Add blog post pages (static TypeScript, no DB needed)
+  for (const post of blogPosts) {
+    urls.push(`
+  <url>
+    <loc>${BASE_URL}/blog/${escapeXml(post.slug)}</loc>
+    <lastmod>${post.updatedAt ?? post.publishedAt}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>`);
   }
 
