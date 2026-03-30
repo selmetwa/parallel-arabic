@@ -87,7 +87,7 @@
   let selectedDialect = $state<Dialect>(getDefaultDialect(data.user) as Dialect);
   let selectedCategory = $state('verbs');
   let selectedMode = $state<'multiple-choice' | 'listening' | 'speaking'>('multiple-choice');
-  let useCustomWords = $state(false);
+  let useCustomWords = $state(true);
   let customTopic = $state('');
   let difficulty = $state('a1');
   let questionCount = $state(10);
@@ -325,24 +325,6 @@
     <div class="bg-tile-400 border-2 border-tile-600 rounded-xl p-6">
       <h2 class="text-xl font-bold text-text-300 mb-4">1. Word Source</h2>
 
-      <div class="flex gap-4 mb-4">
-        <button
-          onclick={() => useCustomWords = false}
-          class="flex-1 px-4 py-3 rounded-lg font-semibold transition-all {!useCustomWords
-            ? 'bg-blue-500 text-white shadow-lg'
-            : 'bg-tile-300 text-text-200 md:hover:bg-tile-500 border-2 border-tile-600'}"
-        >
-          Use Category
-        </button>
-        <button
-          onclick={() => useCustomWords = true}
-          class="flex-1 px-4 py-3 rounded-lg font-semibold transition-all {useCustomWords
-            ? 'bg-blue-500 text-white shadow-lg'
-            : 'bg-tile-300 text-text-200 md:hover:bg-tile-500 border-2 border-tile-600'}"
-        >
-          Generate Custom Words
-        </button>
-      </div>
 
       {#if !useCustomWords}
         <div>

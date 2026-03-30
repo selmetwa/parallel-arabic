@@ -18,7 +18,7 @@
   let selectedDialect = $state<Dialect>(getDefaultDialect(data.user) as Dialect);
   let csvDialect = $state<Dialect>(getDefaultDialect(data.user) as Dialect);
   let selectedCategory = $state('');
-  let importMode = $state<'category' | 'csv'>('category');
+  let importMode = $state<'category' | 'csv'>('csv');
   let csvFile = $state<File | null>(null);
   let csvFileError = $state('');
   let showImportModal = $state(false);
@@ -185,30 +185,6 @@
 
     <div class="bg-tile-400/50 border-2 border-tile-600 rounded-xl shadow-lg p-8 sm:p-10">
       <div class="space-y-8">
-        <!-- Import Mode Selection -->
-        <div class="flex flex-col gap-4">
-          <h2 class="text-2xl font-bold text-text-300">Import Method</h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <RadioButton
-              className="!text-lg !font-medium"
-              wrapperClass="!p-4 border-2 border-tile-600 hover:border-tile-500 transition-colors duration-300 rounded-xl bg-tile-300/50"
-              onClick={(e) => { importMode = e.target.value as 'category' | 'csv'; }}
-              selectableFor="category"
-              isSelected={importMode === 'category'}
-              value="category"
-              text="From Categories"
-            />
-            <RadioButton
-              className="!text-lg !font-medium"
-              wrapperClass="!p-4 border-2 border-tile-600 hover:border-tile-500 transition-colors duration-300 rounded-xl bg-tile-300/50"
-              onClick={(e) => { importMode = e.target.value as 'category' | 'csv'; }}
-              selectableFor="csv"
-              isSelected={importMode === 'csv'}
-              value="csv"
-              text="Upload File"
-            />
-          </div>
-        </div>
 
         {#if importMode === 'csv'}
           <!-- CSV Upload Section -->
