@@ -230,10 +230,7 @@
 		if (path === '/vocabulary') return 'vocabulary';
 		if (path === '/about') return 'about';
 		if (path === '/faq') return 'faq';
-		if (path === '/blog') return 'blog';
-		if (path.startsWith('/blog/')) return 'blogPost';
-
-		return 'home';
+return 'home';
 	});
 
 	// Get page-specific data from page store
@@ -276,15 +273,6 @@
 			});
 		}
 
-		// For blog post pages
-		if (pageType === 'blogPost' && data?.post) {
-			return getPageMeta(pageType, {
-				title: data.post.title,
-				description: data.post.description,
-				slug: data.post.slug,
-			});
-		}
-
 		return getPageMeta(pageType, { ...data, dialect });
 	});
 
@@ -307,18 +295,6 @@
 			return generateStructuredData(pageType, {
 				title: data.story.title,
 				description: data.story.description
-			});
-		}
-
-		// For blog post pages
-		if (pageType === 'blogPost' && data?.post) {
-			return generateStructuredData(pageType, {
-				title: data.post.title,
-				description: data.post.description,
-				publishedAt: data.post.publishedAt,
-				updatedAt: data.post.updatedAt,
-				tags: data.post.tags,
-				slug: data.post.slug,
 			});
 		}
 

@@ -101,20 +101,6 @@ export function getPageMeta(page: string, data?: any): PageMeta {
       url: `${baseUrl}/vocabulary`,
       type: 'website'
     },
-    blog: {
-      title: 'Arabic Learning Blog — Grammar, Vocabulary & Tips | Parallel Arabic',
-      description: 'In-depth guides on Egyptian Arabic grammar, vocabulary, and dialect features. Learn active participles, verb conjugations, and more.',
-      url: `${baseUrl}/blog`,
-      type: 'website'
-    },
-    blogPost: {
-      title: data?.title
-        ? `${data.title} | Parallel Arabic Blog`
-        : 'Arabic Learning Blog | Parallel Arabic',
-      description: data?.description || 'An in-depth guide on Arabic grammar or vocabulary.',
-      url: data?.slug ? `${baseUrl}/blog/${data.slug}` : `${baseUrl}/blog`,
-      type: 'article'
-    }
   };
 
   const meta = pages[page] || {
@@ -198,21 +184,6 @@ export function generateStructuredData(page: string, data?: any) {
         "url": baseUrl
       },
       "inLanguage": "ar"
-    };
-  }
-
-  if (page === 'blogPost' && data?.title) {
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'BlogPosting',
-      headline: data.title,
-      description: data.description,
-      datePublished: data.publishedAt,
-      dateModified: data.updatedAt ?? data.publishedAt,
-      author: { '@type': 'Organization', name: 'Parallel Arabic', url: baseUrl },
-      publisher: { '@type': 'Organization', name: 'Parallel Arabic', url: baseUrl },
-      keywords: data.tags?.join(', '),
-      inLanguage: ['en', 'ar'],
     };
   }
 
