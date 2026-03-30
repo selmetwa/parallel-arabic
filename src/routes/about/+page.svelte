@@ -81,21 +81,6 @@
 						</div>
 					</div>
 	
-					<!-- Vocabulary -->
-					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
-						<div class="flex flex-col md:flex-row">
-							<div class="flex-1 p-6 sm:p-8 flex flex-col justify-center">
-								<h3 class="text-xl sm:text-2xl font-bold text-text-300 mb-3">Vocabulary</h3>
-								<p class="text-text-200 leading-relaxed">
-									Over 20,000 vocabulary words across Egyptian, Levantine, Moroccan Darija, and Modern Standard Arabic — each with native speaker audio.
-								</p>
-							</div>
-						<div class="md:w-1/2 flex-shrink-0">
-							<img src="/images/features/vocab.png" alt="Vocabulary feature" class="w-full h-full object-contain object-top" />
-						</div>
-						</div>
-					</div>
-	
 					<!-- Short Stories -->
 					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
 						<div class="flex flex-col md:flex-row">
@@ -365,10 +350,6 @@
 						<li class="flex items-start gap-3">
 							<span class="text-lg flex-shrink-0">✓</span>
 							<span class="text-text-200">All featured stories with native audio</span>
-						</li>
-						<li class="flex items-start gap-3">
-							<span class="text-lg flex-shrink-0">✓</span>
-							<span class="text-text-200">20,000+ vocabulary words across all dialects</span>
 						</li>
 						<li class="flex items-start gap-3">
 							<span class="text-lg flex-shrink-0">✓</span>

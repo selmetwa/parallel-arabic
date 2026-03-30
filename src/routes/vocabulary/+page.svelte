@@ -192,30 +192,13 @@
       Vocabulary Explorer
     </h1>
     <p class="text-text-200 text-lg sm:text-xl leading-snug">
-      Browse and learn from our comprehensive vocabulary with over 20,000 words across all dialects.
+      Browse and search the most common Egyptian Arabic words.
     </p>
   </div>
 
   <!-- Filters Section -->
   <div class="bg-tile-400 border-2 border-tile-600 p-4 mb-6 rounded-lg">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-      <!-- Dialect Filter -->
-      <div>
-        <label for="dialect" class="block text-sm font-semibold text-text-300 mb-2">
-          Dialect
-        </label>
-        <select
-          id="dialect"
-          bind:value={selectedDialect}
-          class="w-full px-3 py-2 bg-tile-300 border-2 border-tile-600 text-text-300 rounded-lg focus:outline-none focus:border-blue-500"
-        >
-          <option value="all">All Dialects</option>
-          {#each data.dialects as dialect}
-            <option value={dialect}>{getDialectLabel(dialect)}</option>
-          {/each}
-        </select>
-      </div>
-
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
       <!-- Category Filter -->
       <div>
         <label for="category" class="block text-sm font-semibold text-text-300 mb-2">

@@ -1,31 +1,25 @@
 import type { PageServerLoad } from './$types';
 import { supabase } from '$lib/supabaseClient';
 import { sections } from '$lib/constants/sections';
-import { darijaSections } from '$lib/constants/darija-sections';
-import { levantineSections } from '$lib/constants/levantine-sections';
-import { fushaSections } from '$lib/constants/fusha-sections';
-import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
+
+const ALLOWED_CATEGORIES = ['most_common', 'most_common_2'];
 
 export const load: PageServerLoad = async ({ url, parent }) => {
-  const { isSubscribed, user } = await parent();
+  const { isSubscribed } = await parent();
 
-  // Get query parameters for filtering
-  const dialectFilter = url.searchParams.get('dialect') || getDefaultDialect(user);
+  const dialectFilter = 'egyptian-arabic';
   const categoryFilter = url.searchParams.get('category') || 'all';
   const searchQuery = url.searchParams.get('search') || '';
 
-  // Build query
+  // Build query - always restricted to owned categories
   let query = supabase
     .from('word')
     .select('id, arabic_word, english_word, transliterated_word, dialect, category, audio_url, frequency')
+    .eq('dialect', 'egyptian-arabic')
+    .in('category', ALLOWED_CATEGORIES)
     .order('frequency', { ascending: false, nullsFirst: false });
 
-  // Apply filters
-  if (dialectFilter !== 'all') {
-    query = query.eq('dialect', dialectFilter);
-  }
-
-  if (categoryFilter !== 'all') {
+  if (categoryFilter !== 'all' && ALLOWED_CATEGORIES.includes(categoryFilter)) {
     query = query.eq('category', categoryFilter);
   }
 
@@ -33,7 +27,6 @@ export const load: PageServerLoad = async ({ url, parent }) => {
     query = query.or(`english_word.ilike.%${searchQuery}%,arabic_word.ilike.%${searchQuery}%,transliterated_word.ilike.%${searchQuery}%`);
   }
 
-  // Fetch all matching words - we'll use intersection observer for rendering
   const { data: words, error } = await query;
 
   if (error) {
@@ -49,16 +42,11 @@ export const load: PageServerLoad = async ({ url, parent }) => {
     };
   }
 
-  // Get categories based on selected dialect
   const categoriesByDialect = {
-    'egyptian-arabic': sections.map(s => ({ path: s.path, name: s.name })),
-    'levantine': levantineSections.map(s => ({ path: s.path, name: s.name })),
-    'darija': darijaSections.map(s => ({ path: s.path, name: s.name })),
-    'fusha': fushaSections.map(s => ({ path: s.path, name: s.name }))
+    'egyptian-arabic': sections
+      .filter(s => ALLOWED_CATEGORIES.includes(s.path))
+      .map(s => ({ path: s.path, name: s.name }))
   };
-
-  // Define all available dialects
-  const uniqueDialects = ['egyptian-arabic', 'levantine', 'darija', 'fusha'];
 
   return {
     words: words || [],
@@ -67,6 +55,6 @@ export const load: PageServerLoad = async ({ url, parent }) => {
     searchQuery,
     isSubscribed,
     categories: categoriesByDialect,
-    dialects: uniqueDialects
+    dialects: ['egyptian-arabic']
   };
 };

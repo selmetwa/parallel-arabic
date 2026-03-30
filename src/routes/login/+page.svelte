@@ -34,14 +34,13 @@
 
   const features = [
     { icon: '🌍', title: 'Multiple Dialects', desc: 'Egyptian, Levantine, Moroccan & Fusha' },
-    { icon: '📚', title: 'Lessons', desc: 'Customized lessons for all levels' },
-    { icon: '🧠', title: 'Spaced Repetition', desc: '20,000+ vocabulary words' },
+      { icon: '📚', title: 'Lessons', desc: 'Customized lessons for all levels' },
+      { icon: '🧠', title: 'Spaced Repetition', desc: 'Never forget a word again' },
     { icon: '📖', title: 'Stories & Audio', desc: 'Native audio pronunciation' },
     { icon: '💬', title: 'AI Tutor', desc: 'Real-time conversation practice' },
     { icon: '📺', title: 'Interactive Videos', desc: 'YouTube with transcripts' },
     { icon: '🤖', title: 'AI Practice', desc: 'Unlimited generated sentences' },
     { icon: '🎙️', title: 'Speaking', desc: 'Pronunciation feedback' },
-    { icon: '📚', title: 'Vocabulary', desc: '20,000+ words with quizzes' },
     { icon: '✍️', title: 'Verb Mastery', desc: 'Conjugation practice' },
     { icon: '📦', title: 'Anki Decks', desc: 'Custom flashcard exports' },
     { icon: '🔤', title: 'Alphabet', desc: 'Handwriting & pronunciation' },
