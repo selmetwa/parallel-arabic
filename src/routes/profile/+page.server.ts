@@ -296,6 +296,53 @@ export const actions: Actions = {
 			return { success: false, error: 'Something went wrong' };
 		}
 	},
+	updateProficiencyLevel: async ({ request, locals: { safeGetSession } }) => {
+		const { session, user } = await safeGetSession();
+
+		if (!session || !user) {
+			return {
+				success: false,
+				error: 'You must be logged in to update your proficiency level'
+			};
+		}
+
+		const formData = await request.formData();
+		const proficiencyLevel = formData.get('proficiency_level') as string;
+
+		const validLevels = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
+		if (!proficiencyLevel || !validLevels.includes(proficiencyLevel)) {
+			return {
+				success: false,
+				error: 'Invalid proficiency level'
+			};
+		}
+
+		try {
+			const { error: updateError } = await supabase
+				.from('user')
+				.update({ proficiency_level: proficiencyLevel })
+				.eq('id', user.id);
+
+			if (updateError) {
+				console.error('Error updating proficiency_level:', updateError);
+				return {
+					success: false,
+					error: 'Failed to update proficiency level'
+				};
+			}
+
+			return {
+				success: true,
+				proficiencyLevel
+			};
+		} catch (e) {
+			console.error('Exception updating proficiency_level:', e);
+			return {
+				success: false,
+				error: 'Something went wrong'
+			};
+		}
+	},
 	updateDailyReviewLimit: async ({ request, locals: { safeGetSession } }) => {
 		const { session, user } = await safeGetSession();
 		

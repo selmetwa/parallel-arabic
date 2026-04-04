@@ -244,7 +244,7 @@
         href="/vocabulary"
         icon="📖"
         title="Vocabulary"
-        description="Discover over 20,000 words across all dialects."
+        description="Discover words across all dialects."
       />
     </div>
   </div>

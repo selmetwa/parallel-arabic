@@ -5,7 +5,7 @@
 
 <svelte:head>
   <title>Learn Arabic - Alphabet, Lessons, Review & Vocabulary</title>
-  <meta name="description" content="Start learning Arabic with structured lessons, master the alphabet, review vocabulary with spaced repetition, and explore 20,000+ words across dialects." />
+  <meta name="description" content="Start learning Arabic with structured lessons, master the alphabet, review vocabulary with spaced repetition, and explore words across dialects." />
 </svelte:head>
 
 <section class="px-3 py-6 sm:px-8 max-w-7xl mx-auto">
@@ -37,7 +37,7 @@
       href="/vocabulary"
       icon="📖"
       title="Vocabulary"
-      description="Discover over 20,000 words across all dialects."
+      description="Discover words across all dialects."
     />
 
     <Card

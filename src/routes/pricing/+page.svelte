@@ -112,7 +112,7 @@
                             </li>
                              <li class="flex items-start gap-3">
                                 <div class="shrink-0 mt-1"><Checkmark /></div>
-                                <span>Access to <strong class="text-text-300">over 20,000 vocabulary words</strong> with multiple choice quizzes</span>
+                                <span>Access to <strong class="text-text-300">vocabulary words</strong> with multiple choice quizzes</span>
                             </li>
                             <li class="flex items-start gap-3">
                                 <div class="shrink-0 mt-1"><Checkmark /></div>

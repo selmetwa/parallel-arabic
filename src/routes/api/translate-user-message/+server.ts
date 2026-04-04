@@ -69,8 +69,14 @@ Format your response as JSON with this exact structure:
   "arabic": "original Arabic text here (corrected if needed)",
   "english": "English translation here",
   "transliteration": "transliteration here",
-  "feedback": "Detailed grammar feedback here, or empty string if no errors"
-}`;
+  "feedback": "Detailed grammar feedback here, or empty string if no errors",
+  "suggestedSentence": {
+    "arabic": "A single corrected sentence incorporating ONLY objective grammatical fixes (wrong verb conjugation, wrong pronoun-verb agreement, incorrect word form). Leave this field out entirely if there are no objective errors — do NOT generate a suggestion for stylistic or naturalness improvements alone.",
+    "transliteration": "Transliteration of the suggested sentence"
+  }
+}
+
+IMPORTANT: Only include "suggestedSentence" when there is a clear, objective grammar error. If the input is grammatically correct (even if not the most natural phrasing), omit the "suggestedSentence" field entirely.`;
     } else {
       // User spoke English - translate to Arabic and provide transliteration
       systemPrompt = `You are an expert Arabic translator specializing in ${dialectName}. 
@@ -87,7 +93,9 @@ Format your response as JSON with this exact structure:
   "english": "original English text here",
   "transliteration": "transliteration of Arabic here",
   "feedback": "Feedback on the translation or suggestions here (empty string if no issues)"
-}`;
+}
+
+Do not include a suggestedSentence field for English input — the arabic field already contains the correct translation.`;
     }
 
     const fullPrompt = `${systemPrompt}\n\nUser message: ${message}`;
@@ -147,11 +155,12 @@ Format your response as JSON with this exact structure:
     // Note: Nile4 model removed from tutor route to reduce latency
     // Using ChatGPT response directly for faster responses
 
-    return json({ 
+    return json({
       arabic: parsedResponse.arabic,
       english: parsedResponse.english,
       transliteration: parsedResponse.transliteration,
       feedback: parsedResponse.feedback || '',
+      suggestedSentence: parsedResponse.suggestedSentence || null,
       timestamp: new Date().toISOString()
     });
 

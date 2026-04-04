@@ -118,6 +118,7 @@
     english?: string;
     transliteration?: string;
     feedback?: string;
+    suggestedSentence?: { arabic: string; transliteration: string } | null;
     originalLanguage?: 'ar' | 'en';
     timestamp: Date;
     showArabic?: boolean;
@@ -529,6 +530,7 @@
         english: translateData.english,
         transliteration: translateData.transliteration,
         feedback: translateData.feedback || '',
+        suggestedSentence: translateData.suggestedSentence || null,
         originalLanguage: recordingLanguage,
         timestamp: new Date(),
         showArabic: true,
@@ -1455,6 +1457,13 @@
                             <span>💡</span> Grammar Feedback
                           </p>
                           <p class="text-text-300 whitespace-pre-wrap leading-relaxed">{message.feedback}</p>
+                          {#if message.suggestedSentence}
+                            <div class="mt-3 pt-3 border-t border-amber-500/20">
+                              <p class="text-xs text-amber-400 font-semibold mb-1">Try saying</p>
+                              <p class="text-text-100 font-medium">{message.suggestedSentence.arabic}</p>
+                              <p class="text-text-300 text-sm mt-0.5">{message.suggestedSentence.transliteration}</p>
+                            </div>
+                          {/if}
                         </div>
                       {/if}
                     {:else}
