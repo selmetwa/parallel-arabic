@@ -219,7 +219,7 @@
   <div class="mb-12">
     <SectionHeader title="Learn" />
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <Card
         href="/alphabet"
         icon="✍️"
@@ -239,13 +239,6 @@
         title="Review"
         description="Never forget a word. Smart spaced repetition for your personal vocabulary."
       />
-
-      <Card
-        href="/vocabulary"
-        icon="📖"
-        title="Vocabulary"
-        description="Discover words across all dialects."
-      />
     </div>
   </div>
 
@@ -253,7 +246,7 @@
   <div class="mb-12">
     <SectionHeader title="Practice" />
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
       <Card
         href="/learn/game"
         icon="🎮"
@@ -273,17 +266,17 @@
         description="Drill sentence structures and grammar patterns in context."
       />
       <Card
-        href="/egyptian-arabic/conjugations"
-        icon="🔤"
-        title="Verb Conjugations"
-        description="Practice verb conjugations in Egyptian Arabic."
-      />
-      <!-- <Card
         href="/speak"
         icon="🎤"
         title="Speak"
         description="Practice pronunciation by speaking sentences and get instant feedback."
-      /> -->
+      />
+      <Card
+        href="/tutor"
+        icon="💬"
+        title="Tutor"
+        description="Practice conversation in any dialect with an intelligent AI tutor."
+      />
     </div>
   </div>
 

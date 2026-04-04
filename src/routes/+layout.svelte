@@ -22,6 +22,7 @@
 		onImportComplete,
 		onImportError
 	} from '$lib/stores/import-job';
+	import { generateBackgroundSentences } from '$lib/store/sentences-store';
 	import { get } from 'svelte/store';
 	import {
 		showWordImportSuccessToast,
@@ -49,6 +50,7 @@
 	};
 
 	let { data, children } = $props();
+	$inspect(data);
 	let isOpen = $state(false);
 
 	let onboardingDismissed = $state(false);
@@ -122,6 +124,14 @@
 		});
 
 		resumeImportJobIfNeeded().catch(() => {});
+
+		// Pre-generate sentences in the background using the user's dialect and proficiency
+		if (data.targetDialect) {
+			generateBackgroundSentences(
+				data.targetDialect,
+				data.proficiencyLevel ?? null
+			).catch(() => {});
+		}
 
 		// Only inject Vercel analytics when NOT in native app
 		if (!isNativeApp()) {
@@ -417,7 +427,7 @@ return 'home';
 <main
 	class="flex min-h-screen flex-col bg-tile-200 pb-20 transition-all duration-300 lg:pb-0 {$sidebarCollapsed
 		? 'lg:ml-0'
-		: 'lg:ml-64'} {data.session ? 'pt-8' : ''}"
+		: 'lg:ml-64'} {data.session ? 'lg:pt-8' : ''}"
 >
 	<!-- Top Navigation - Only visible on mobile -->
 	<div class="lg:hidden">

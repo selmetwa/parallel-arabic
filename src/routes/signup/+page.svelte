@@ -1,7 +1,10 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
+	import { goto } from '$app/navigation';
 	import Button from '$lib/components/Button.svelte';
 	import type { ActionData } from './$types';
+	import { Browser } from '@capacitor/browser';
+	import { App } from '@capacitor/app';
 
   // Get data and form from props
   let { data, form }: { data: any; form: ActionData } = $props();
@@ -12,20 +15,60 @@
   // Get the supabase client for Google OAuth (still needs to be client-side)
   let { supabase } = $derived(data);
 
+  let appUrlListener: { remove: () => void } | null = null;
+
   async function handleGoogleSignup() {
     loading = true;
 
-    const { error: authError } = await supabase.auth.signInWithOAuth({
+    const isNative = !!(window as any).Capacitor?.isNativePlatform?.();
+
+    const redirectUrl = isNative
+      ? 'com.parallelarabic.app://auth/callback'
+      : `${window.location.origin}/auth/callback`;
+
+    const { data: oauthData, error: authError } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: `${window.location.origin}/auth/callback`
+        redirectTo: redirectUrl,
+        skipBrowserRedirect: isNative
       }
     });
 
-    if (authError) {
-      console.error('Google signup error:', authError.message);
+    if (authError || !oauthData?.url) {
+      console.error('Google signup error:', authError?.message);
       loading = false;
+      return;
     }
+
+    if (isNative) {
+      appUrlListener?.remove();
+
+      await Browser.open({ url: oauthData.url });
+
+      appUrlListener = await App.addListener('appUrlOpen', async ({ url }) => {
+        if (!url.startsWith('com.parallelarabic.app://auth/callback')) return;
+
+        appUrlListener?.remove();
+        appUrlListener = null;
+
+        try {
+          await Browser.close();
+        } catch {
+          // Browser may already be closed by the user
+        }
+
+        const code = new URL(url).searchParams.get('code');
+        if (code) {
+          const { error: sessionError } = await supabase.auth.exchangeCodeForSession(code);
+          if (!sessionError) {
+            await fetch('/api/auth/sync', { method: 'POST' });
+            goto('/');
+          }
+        }
+        loading = false;
+      });
+    }
+    // On web, supabase handles redirect automatically via /auth/callback server route
   }
 
   const features = [

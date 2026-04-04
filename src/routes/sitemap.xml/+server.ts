@@ -1,6 +1,7 @@
 import type { RequestHandler } from './$types';
 import { supabase } from '$lib/supabaseClient';
-import verbIndex from '$lib/data/verb-conjugations/egyptian-arabic/index.json';
+// verb index temporarily disabled — json files removed in reorder branch
+const verbIndex: { verbs: { slug: string }[] } = { verbs: [] };
 const BASE_URL = 'https://www.parallel-arabic.com';
 
 // Static pages with their priorities and change frequencies

@@ -55,7 +55,6 @@
           { label: 'Alphabet', href: '/alphabet', icon: '✍️' },
           { label: 'Lessons', href: '/lessons', icon: '📚' },
           { label: 'Vocab Review', href: '/review', icon: '🧠' },
-          { label: 'Vocabulary', href: '/vocabulary', icon: '📖' },
           { label: 'Word Map', href: '/map', icon: '🗺️' },
         ]
       },
@@ -65,8 +64,8 @@
           { label: 'Game', href: '/learn/game', icon: '🎮' },
           { label: 'Sentences', href: '/sentences', icon: '📝' },
           { label: 'Stories', href: '/stories', icon: '📖' },
-          { label: 'Verb Conjugations', href: '/egyptian-arabic/conjugations', icon: '🔤' },
-          // { label: 'Speak', href: '/speak', icon: '🎤' },
+          { label: 'Speak', href: '/speak', icon: '🎤' },
+          { label: 'Tutor', href: '/tutor', icon: '💬' },
         ]
       },
       {

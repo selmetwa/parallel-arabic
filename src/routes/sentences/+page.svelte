@@ -14,6 +14,8 @@
 	import Tooltip from '$lib/components/Tooltip.svelte';
 	import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
 	import { fetchUserReviewWords } from '$lib/helpers/fetch-review-words';
+	import { backgroundSentencesStore } from '$lib/store/sentences-store';
+	import { get } from 'svelte/store';
 
 	let { data } = $props();
 
@@ -48,22 +50,7 @@
 	}
 
 	let selectedDialect = $state(getDefaultDialect(data.user));
-	let sentences = $state((() => {
-		if (typeof window !== 'undefined') {
-			const savedSentences = localStorage.getItem(`sentences_${selectedDialect}`);
-			if (savedSentences) {
-				try {
-					const parsed = JSON.parse(savedSentences);
-					return filterValidSentences(parsed);
-				} catch (error) {
-					console.error('Error parsing saved sentences from localStorage:', error);
-					// Clear corrupted data
-					localStorage.removeItem(`sentences_${selectedDialect}`);
-				}
-			}
-		}
-		return [];
-	})());
+	let sentences = $state(get(backgroundSentencesStore).sentences);
 
 	let sentence = $derived(sentences[index]);
 	$effect(() => {
@@ -95,25 +82,12 @@
 
 	let sentencesViewed = $state(data.sentencesViewed);
 
-	// Update sentences when dialect changes
+	// Populate from background-generated sentences when they arrive
 	$effect(() => {
-		if (typeof window !== 'undefined') {
-			const savedSentences = localStorage.getItem(`sentences_${selectedDialect}`);
-			if (savedSentences) {
-				try {
-					const parsed = JSON.parse(savedSentences);
-					sentences = filterValidSentences(parsed);
-				} catch (error) {
-					console.error('Error parsing saved sentences from localStorage:', error);
-					sentences = [];
-					// Clear corrupted data
-					localStorage.removeItem(`sentences_${selectedDialect}`);
-				}
-			} else {
-				sentences = [];
-			}
+		const state = $backgroundSentencesStore;
+		if (sentences.length === 0 && state.sentences.length > 0) {
+			sentences = state.sentences;
 			index = 0;
-			updateUrl('sentence', '0');
 		}
 	});
 
@@ -296,8 +270,8 @@
 			
 			const updatedSentences = [...sentences, ...newSentences];
 			sentences = updatedSentences;
-			localStorage.setItem(`sentences_${selectedDialect}`, JSON.stringify(updatedSentences));
-			
+			backgroundSentencesStore.update((s) => ({ ...s, sentences: updatedSentences }));
+
 			// Show success toast
 			showSentenceSuccessToast(toastId, newSentences.length, selectedDialect);
 			
@@ -355,6 +329,9 @@
 
 	function setDialect(event: any) {
 		selectedDialect = event.target.value;
+		sentences = [];
+		index = 0;
+		updateUrl('sentence', '0');
 	}
 
 	function generateSentences(event: any) {
@@ -370,7 +347,7 @@
 	function resetSentences() {
 		sentences = [];
 		index = 0;
-		localStorage.removeItem(`sentences_${selectedDialect}`);
+		backgroundSentencesStore.update((s) => ({ ...s, sentences: [] }));
 		updateUrl('sentence', '0');
 	}
 
