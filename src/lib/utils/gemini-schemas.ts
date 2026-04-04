@@ -190,7 +190,11 @@ export function createTranslationWithFeedbackSchema() {
 		arabic: z.string(),
 		english: z.string(),
 		transliteration: z.string(),
-		feedback: z.string()
+		feedback: z.string(),
+		suggestedSentence: z.object({
+			arabic: z.string(),
+			transliteration: z.string()
+		}).optional()
 	});
 
 	return {
