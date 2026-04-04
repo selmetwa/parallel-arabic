@@ -35,6 +35,7 @@ export const load: LayoutServerLoad = async ({ locals, cookies, url }) => {
       isSubscribed: isSubscribed,
       showOnboarding: showOnboarding,
       targetDialect: user?.target_dialect || null,
+      proficiencyLevel: user?.proficiency_level || null,
       userXp: user?.total_xp ?? 0,
       userLevel: user?.current_level ?? 1
     };

@@ -50,7 +50,7 @@
 
 {#if loggedIn}
 	<div
-		class="fixed left-0 right-0 top-0 z-[60] flex h-8 items-center gap-3 border-b border-tile-600 bg-tile-300 px-4"
+		class="relative w-full lg:fixed lg:left-0 lg:right-0 lg:top-0 z-[60] flex h-8 items-center gap-3 border-b border-tile-600 bg-tile-300 px-4"
 	>
 		<!-- Level indicator — clickable to show XP tooltip -->
 		<button
