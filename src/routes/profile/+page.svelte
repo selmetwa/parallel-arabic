@@ -26,6 +26,8 @@
   let emailNotificationsError = $state<string | null>(null);
   let leaderboardOptOutSuccess = $state<string | null>(null);
   let leaderboardOptOutError = $state<string | null>(null);
+  let proficiencyUpdateSuccess = $state<string | null>(null);
+  let proficiencyUpdateError = $state<string | null>(null);
   
   // Subscription cancellation state
   let isCancelling = $state(false);
@@ -524,7 +526,7 @@
                 {/if}
               </div>
 
-              {#if data.learningReason || data.proficiencyLevel}
+              {#if data.learningReason || data.proficiencyLevel !== undefined}
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-tile-500">
                   {#if data.learningReason}
                     <div>
@@ -532,12 +534,48 @@
                       <p class="text-text-300 font-medium">{data.learningReason}</p>
                     </div>
                   {/if}
-                  {#if data.proficiencyLevel}
-                    <div>
-                      <span class="text-xs text-text-200 uppercase tracking-wide">Proficiency</span>
-                      <p class="text-text-300 font-medium capitalize">{data.proficiencyLevel}</p>
-                    </div>
-                  {/if}
+                  <div>
+                    <label for="proficiency_level" class="block text-xs text-text-200 uppercase tracking-wide mb-1">Proficiency Level</label>
+                    <form
+                      method="POST"
+                      action="?/updateProficiencyLevel"
+                      use:enhance={() => {
+                        proficiencyUpdateSuccess = null;
+                        proficiencyUpdateError = null;
+                        return async ({ result, update }) => {
+                          if (result.type === 'success' && result.data?.success) {
+                            await update();
+                            proficiencyUpdateSuccess = 'Updated!';
+                            setTimeout(() => proficiencyUpdateSuccess = null, 3000);
+                          } else if (result.type === 'failure') {
+                            await update();
+                            const errorMsg = result.data?.error;
+                            proficiencyUpdateError = typeof errorMsg === 'string' ? errorMsg : 'Failed to update';
+                          } else {
+                            await update();
+                          }
+                        };
+                      }}
+                      class="flex flex-row gap-2 items-center"
+                    >
+                      <select
+                        id="proficiency_level"
+                        name="proficiency_level"
+                        class="bg-tile-500 border-2 border-tile-600 text-text-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-tile-600 text-sm font-medium"
+                      >
+                        {#each ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'] as level}
+                          <option value={level} selected={level === data.proficiencyLevel}>{level}</option>
+                        {/each}
+                      </select>
+                      <Button type="submit" className="px-4 py-2 text-sm">Save</Button>
+                    </form>
+                    {#if proficiencyUpdateSuccess}
+                      <div class="mt-1 text-green-700 text-sm font-medium" transition:fade>✓ {proficiencyUpdateSuccess}</div>
+                    {/if}
+                    {#if proficiencyUpdateError}
+                      <div class="mt-1 text-red-400 text-sm font-medium" transition:fade>✗ {proficiencyUpdateError}</div>
+                    {/if}
+                  </div>
                 </div>
               {/if}
             </div>

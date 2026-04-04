@@ -320,89 +320,33 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 
 	const generatedTitle = generateTitle(learningTopics, storyType, dialect);
 
-	// Add variety to story creation prompts
-	const storyStyles = [
-		"Create a unique and engaging story",
-		"Write an original and captivating story", 
-		"Develop a creative and interesting story",
-		"Craft a distinctive and compelling story",
-		"Generate a fresh and imaginative story",
-		"Compose an innovative and varied story",
-		"Build a dynamic and entertaining story",
-		"Design an engaging and original story",
-		"Form a creative and diverse story",
-		"Produce a vibrant and unique story",
-		"Construct an authentic and varied story",
-		"Make a compelling and distinctive story",
-		"Create a rich and immersive story",
-		"Develop an engaging and authentic story",
-		"Write a creative and memorable story"
+	// Structural opening variants — genuinely different, not synonym-swapping
+	const storyOpeningVariants = [
+		"Start in the middle of the action — the protagonist is already dealing with their problem in sentence 1. No setup, no background.",
+		"Open with dialogue — the very first sentence is a character speaking.",
+		"Begin with a specific sensory detail (a smell, a sound, a texture) that immediately grounds the reader in the setting.",
+		"Start with an unexpected or surprising discovery that raises an immediate question in the reader's mind.",
+		"Open with the protagonist making a difficult decision or realizing something has gone wrong."
 	];
 
-	const conversationStyles = [
-		"Create a natural and realistic conversation",
-		"Write an authentic dialogue between characters",
-		"Develop a practical conversation scenario",
-		"Craft a meaningful exchange between people",
-		"Generate a helpful dialogue for language learning",
-		"Compose a realistic interaction",
-		"Build a natural conversation flow",
-		"Design a practical dialogue scenario",
-		"Form an authentic conversational exchange",
-		"Produce a realistic spoken interaction",
-		"Construct a natural dialogue sequence",
-		"Make a practical conversation example",
-		"Create an engaging dialogue scenario",
-		"Develop a realistic conversation practice",
-		"Write a natural conversational exchange"
+	const conversationOpeningVariants = [
+		"Open mid-conversation — the speakers are already in the middle of discussing something.",
+		"Begin with one speaker asking an unusual or unexpected question.",
+		"Start with a misunderstanding or confusion between the two speakers.",
+		"Open with one speaker delivering surprising news.",
+		"Begin with one speaker asking for help with a specific, concrete problem."
 	];
 
-	const narrativeApproaches = [
-		"with realistic dialogue and natural conversations",
-		"focusing on character development and interactions",
-		"emphasizing cultural authenticity and local customs",
-		"including everyday situations and relatable scenarios",
-		"with descriptive settings and vivid details",
-		"featuring diverse characters and perspectives",
-		"incorporating humor and expressions",
-		"highlighting daily life and common experiences",
-		"with engaging plot twists and interesting developments",
-		"focusing on family dynamics and relationships",
-		"including local traditions and cultural elements",
-		"emphasizing problem-solving and decision-making",
-		"with authentic social interactions",
-		"featuring workplace or educational scenarios",
-		"incorporating travel and exploration themes",
-		"highlighting food culture and cooking experiences",
-		"with seasonal or holiday-related themes",
-		"focusing on friendship and community bonds",
-		"including shopping and marketplace interactions",
-		"emphasizing personal growth and learning experiences"
-	];
-
-	const conversationApproaches = [
-		"with natural turn-taking and realistic responses",
-		"including common greetings and polite expressions",
-		"featuring practical everyday interactions",
-		"with authentic cultural communication patterns",
-		"including helpful phrases and expressions",
-		"emphasizing clear pronunciation guidance",
-		"with realistic timing and natural pauses",
-		"featuring multiple speakers and perspectives",
-		"including common questions and answers",
-		"with practical vocabulary in context",
-		"emphasizing natural speech patterns",
-		"including cultural etiquette and manners",
-		"with varied emotional expressions",
-		"featuring problem-solving through dialogue",
-		"including clarifications and repetitions"
-	];
-
-	// Dialect-specific configurations
+	// Dialect-specific configurations with cultural grounding
 	const dialectConfigs = {
 		'egyptian-arabic': {
 			name: 'EGYPTIAN ARABIC',
 			description: 'Please only use words that are commonly used in the Egyptian dialect, not in modern standard Arabic or other dialects.',
+			culturalContext: `Settings: Cairo neighborhoods (Zamalek, Mohandeseen, Maadi, Downtown Cairo, Shubra, Heliopolis, Dokki), Alexandria corniche, local transport (tok tok, microbus, metro, yellow taxi), markets (Khan el-Khalili, Ataba, Wekalet el-Balah), institutions (ahwa/coffeehouse, pharmacy, government office, bank, hospital).
+Currency: Egyptian pounds (جنيه) — use realistic prices (e.g., a cup of tea is 5-10 pounds, taxi ride is 30-80 pounds).
+Food & drink: ful, ta3meya, koshari, feteer, hawawshi, ahwa mazboot/sada/ziyada, karkade, 7Up (classic Egyptian order).
+Character archetypes: taxi driver, bawab (doorman), hanut owner, government employee, university student, housewife, street vendor, pharmacist, mechanic.
+Dialect flavor words: يعني، خالص، أيوه، معلش، يلا، ماشي، بالظبط، طب، إيه ده، مش كده، أهو، عادي`,
 			examples: [
 				stories['at-the-barbers'].story.sentences.slice(0, 5),
 				stories['at-the-fruit-vendor'].story.sentences.slice(0, 5)
@@ -412,30 +356,35 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		'fusha': {
 			name: 'MODERN STANDARD ARABIC (FUSHA)',
 			description: 'Please use formal Modern Standard Arabic as used in news, literature, and official communications. Avoid colloquial expressions.',
-			examples: [], // No pre-built examples for Fusha yet
-			commonWords: [] // No specific word list for Fusha yet
+			culturalContext: `Settings: news studios, universities, conference rooms, official offices, schools, courtrooms, newspapers, international organizations.
+Register: formal written Arabic — use complete verb conjugations, proper case endings where natural, classical connectors (حيث، إذ، بينما، غير أن).
+Character archetypes: journalist, professor, student, government official, diplomat, author, judge, teacher.
+Flavor: include rhetorical questions, formal transitions, and varied sentence lengths to avoid monotony.`,
+			examples: [],
+			commonWords: []
 		},
 		'darija': {
 			name: 'MOROCCAN DARIJA',
 			description: 'Please use Moroccan Darija dialect as spoken in Morocco. Use natural conversational Moroccan Arabic expressions and vocabulary.',
-			examples: [], // No pre-built examples for Darija yet
-			commonWords: [] // No specific word list for Darija yet
+			culturalContext: `Settings: Casablanca neighborhoods (Maarif, Hay Hassani), Marrakech medina and Jemaa el-Fna, Rabat, Fes medina, local hammam, souk, train station (ONCF), café maure.
+Currency: Moroccan dirhams (درهم) — use realistic prices (e.g., mint tea is 5-10 dirhams, taxi is 10-20 dirhams).
+Food & drink: atay (mint tea), msemen, harira, couscous (especially Friday), briouats, sellou, mahia.
+Character archetypes: souk vendor, hammam worker, taxi driver, student, mechanic, café owner, farmer from the countryside visiting the city.
+Dialect flavor: mix of Arabic, Berber, and French loanwords — e.g., الطوموبيل، البوليس، كاطيو، واخا، بغيت، مزيان، باغي، دابا، هاد، واش`,
+			examples: [],
+			commonWords: []
 		},
 	} as const;
 
 	type DialectKey = keyof typeof dialectConfigs;
 	const validDialect = dialect as DialectKey;
 	const config = dialectConfigs[validDialect] || dialectConfigs['darija'];
-	
+
 	const contentType = storyType === 'conversation' ? 'conversation' : 'story';
-	
-	// Random variety elements based on story type
-	const styles = storyType === 'conversation' ? conversationStyles : storyStyles;
-	const approaches = storyType === 'conversation' ? conversationApproaches : narrativeApproaches;
-	
-	const randomStyle = styles[Math.floor(Math.random() * styles.length)];
-	const randomApproach = approaches[Math.floor(Math.random() * approaches.length)];
-	const timestamp = new Date().toISOString();
+
+	// Pick a structurally distinct opening approach
+	const openingVariants = storyType === 'conversation' ? conversationOpeningVariants : storyOpeningVariants;
+	const randomOpeningVariant = openingVariants[Math.floor(Math.random() * openingVariants.length)];
 
 	// Build learning topics section
 	let learningTopicsSection = '';
@@ -538,11 +487,38 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     Here are instructions from the user outlining your goals and how you should respond:
     This GPT will focus on the Arabic language (${config.name}).  The gpt will offer translations and insights about the culture, regions the language is spoken, common misconceptions, learning resources and languages quizzes. The tone of this gpt will be encouraging, and insightful.
 
+    CULTURAL CONTEXT FOR THIS DIALECT:
+    ${config.culturalContext}
+
     CRITICAL REQUIREMENT: You MUST generate exactly ${sentenceCount} sentences. This is non-negotiable. Count your sentences and ensure you have exactly ${sentenceCount}.
 
-    ${randomStyle} - Can you please write a ${contentType} based on ${description} in ${config.name} ${randomApproach}. ${config.description}
+    Please write a ${contentType} based on "${description}" in ${config.name}. ${config.description}
+
+    OPENING APPROACH: ${randomOpeningVariant}
 
     DIFFICULTY LEVEL: ${getDifficultyDescription(option)}
+
+    REQUIRED STORY ELEMENTS (all must be present):
+    - Protagonist: Give them a specific name, age, occupation, and one clear personality trait — not just a generic "person"
+    - Setting: Name a specific place with concrete details (not just "a market" — which market, which neighborhood, what time of day)
+    - Conflict or Goal: The protagonist must want something specific or face a concrete obstacle to overcome
+    - Turning point: Something must change, be decided, or be discovered before the end
+    - Cultural grounding: Include at least 2 specific cultural details (local food, realistic price amounts, place names, social customs)
+
+    FORBIDDEN — Do NOT do any of these:
+    - Open with "One day..." / "There was a man/woman who..." / "كان يا ما كان" / generic scene-setting exposition
+    - Give characters only generic names (Ahmed, Fatima) with no further identity or personality
+    - Write a story where nothing goes wrong or nothing is at stake
+    - Use generic settings without naming the specific place
+    - Write textbook-perfect dialogue with no personality, hesitations, or natural rhythm
+    - Have all characters speak in the same voice and style
+
+    LINGUISTIC AUTHENTICITY:
+    - Include natural fillers and hesitations appropriate to the dialect (see cultural context above)
+    - Give characters distinct speech patterns — not everyone speaks the same way
+    - Use realistic price points and quantities when mentioned
+    - Real spoken Arabic includes some repetition, emphasis, and self-correction — don't sanitize it out
+    - Specificity rule: prefer concrete nouns over generic ones ("a 1983 Peugeot taxi with a cracked windshield" beats "a car")
 
     ${learningTopicsSection}
 
@@ -563,15 +539,13 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     ` : `
     STORY SPECIFIC REQUIREMENTS:
     - Create a narrative with clear beginning, middle, and end
-    - Include descriptive elements and character development
-    - Make it engaging and culturally authentic
+    - Include descriptive elements and distinct character voices
+    - Make it engaging and culturally authentic to the dialect region
     - Use varied sentence structures and vocabulary
     `}
 
     IMPORTANT: Please use generous amounts of verb conjugations and noun plurals as well as possessive suffixes.
     make sure to incorporate present and past tense verbs.
-
-    IMPORTANT: Be creative and original. Avoid repetitive patterns and create unique content with varied vocabulary and sentence structures.
 
     LENGTH REQUIREMENT: Generate exactly ${sentenceCount} sentences - no more, no less. Please count carefully.
 
@@ -590,8 +564,6 @@ export const POST: RequestHandler = async ({ request, locals }) => {
        - Test comprehension of the story, vocabulary, or grammar concepts from the story
 
     Can you make sure that the output looks like the below object in JSON format:
-
-    Generation timestamp: ${timestamp}
 
     REMEMBER: You must generate exactly ${sentenceCount} sentences in the sentences array.
 

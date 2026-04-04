@@ -96,8 +96,8 @@ export function getPageMeta(page: string, data?: any): PageMeta {
       type: 'website'
     },
     vocabulary: {
-      title: 'Arabic Vocabulary Explorer - 20,000+ Words | Parallel Arabic',
-      description: 'Browse and learn from our comprehensive Arabic vocabulary database with over 20,000 words across Egyptian, Levantine, Moroccan Darija, and Modern Standard Arabic. Search, filter, and save words to your review deck.',
+      title: 'Arabic Vocabulary Explorer | Parallel Arabic',
+      description: 'Browse and learn from our comprehensive Arabic vocabulary database across Egyptian, Levantine, Moroccan Darija, and Modern Standard Arabic. Search, filter, and save words to your review deck.',
       url: `${baseUrl}/vocabulary`,
       type: 'website'
     },

@@ -284,7 +284,7 @@ Upgrade to Premium for just $10/month and get:
 - Structured Lessons: Comprehensive learning paths for all dialects
 - Multiple Dialects: Egyptian, Levantine, Moroccan & Fusha
 - AI Tutor: Real-time conversation practice with feedback
-- Spaced Repetition: Master 20,000+ vocabulary words
+- Spaced Repetition: Master vocabulary words
 - Interactive Videos: YouTube videos with transcripts & translations
 - All Stories: Unlimited conversations with native audio
 - Unlimited AI Practice: Generate unlimited practice sentences

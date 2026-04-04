@@ -1076,7 +1076,7 @@
             <div class="text-5xl mb-6 transform group-hover:scale-125 group-hover:rotate-12 transition-transform duration-300 relative z-10">📥</div>
             <h3 class="text-2xl font-bold text-text-300 mb-3 relative z-10">Import Words</h3>
             <p class="text-text-200 leading-relaxed relative z-10">
-              Bulk import words from our library of over 20,000 terms or upload your own list.
+              Bulk import words from our library or upload your own list.
             </p>
           </button>
         </div>
