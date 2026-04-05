@@ -19,12 +19,30 @@ export const POST: RequestHandler = async ({ request, locals }) => {
   const userId = user.id;
 
   try {
-    const formData = await request.formData();
-    const file = formData.get('file') as File;
-    const userDialect = formData.get('dialect') as string;
+    let fileText: string;
+    let userDialect: string;
+    let fileName: string;
 
-    if (!file) {
-      return json({ error: 'No file provided' }, { status: 400 });
+    if (request.headers.get('content-type')?.includes('application/json')) {
+      const body = await request.json();
+      fileText = body.text;
+      userDialect = body.dialect;
+      fileName = 'pasted-text';
+
+      if (!fileText || !fileText.trim()) {
+        return json({ error: 'No text provided' }, { status: 400 });
+      }
+    } else {
+      const formData = await request.formData();
+      const file = formData.get('file') as File;
+      userDialect = formData.get('dialect') as string;
+
+      if (!file) {
+        return json({ error: 'No file provided' }, { status: 400 });
+      }
+
+      fileText = await file.text();
+      fileName = file.name;
     }
 
     if (!userDialect) {
@@ -32,7 +50,6 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     }
 
     const normalizedUserDialect = normalizeDialect(userDialect);
-    const fileText = await file.text();
     const isStructured = isStructuredCSV(fileText);
 
     let rows: Array<Record<string, string>> = [];
@@ -62,7 +79,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
         user_id: userId,
         status: 'pending',
         dialect: normalizedUserDialect,
-        file_name: file.name,
+        file_name: fileName,
         total_items: rowsWithDialect.length
       })
       .select('id')
