@@ -18,7 +18,9 @@
   let selectedDialect = $state<Dialect>(getDefaultDialect(data.user) as Dialect);
   let csvDialect = $state<Dialect>(getDefaultDialect(data.user) as Dialect);
   let selectedCategory = $state('');
-  let importMode = $state<'category' | 'csv'>('csv');
+  let importMode = $state<'category' | 'csv' | 'paste'>('csv');
+  let pasteText = $state('');
+  let pasteDialect = $state<Dialect>(getDefaultDialect(data.user) as Dialect);
   let csvFile = $state<File | null>(null);
   let csvFileError = $state('');
   let showImportModal = $state(false);
@@ -122,6 +124,27 @@
         csvFile = null;
         showImportModal = true;
         startImportJob(job_id, total);
+      } else if (importMode === 'paste') {
+        if (!pasteText.trim()) {
+          throw new Error('Please enter some vocabulary to import');
+        }
+
+        const response = await fetch('/api/import-words-csv', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ text: pasteText, dialect: pasteDialect })
+        });
+
+        if (!response.ok) {
+          const errorData = await response.json().catch(() => ({ error: 'Failed to import words' }));
+          throw new Error(errorData.error || 'Failed to import words');
+        }
+
+        const { job_id, total } = await response.json();
+
+        pasteText = '';
+        showImportModal = true;
+        startImportJob(job_id, total);
       } else {
         const response = await fetch('/api/import-words', {
           method: 'POST',
@@ -179,12 +202,30 @@
     <header class="mb-12 text-center">
       <h1 class="text-4xl sm:text-5xl font-bold text-text-300 tracking-tight mb-4">Import Words</h1>
       <p class="text-lg sm:text-xl text-text-200 max-w-2xl mx-auto">
-        Add words from vocabulary categories to your review deck
+        Add words to your review deck
       </p>
     </header>
 
     <div class="bg-tile-400/50 border-2 border-tile-600 rounded-xl shadow-lg p-8 sm:p-10">
       <div class="space-y-8">
+
+        <!-- Mode Tabs -->
+        <div class="flex rounded-xl border-2 border-tile-600 overflow-hidden">
+          <button
+            type="button"
+            onclick={() => { importMode = 'csv'; }}
+            class="flex-1 py-3 px-4 text-sm font-medium transition-colors {importMode === 'csv' ? 'bg-tile-600 text-text-300' : 'bg-tile-300/50 text-text-200 hover:bg-tile-400/50'}"
+          >
+            Upload File
+          </button>
+          <button
+            type="button"
+            onclick={() => { importMode = 'paste'; }}
+            class="flex-1 py-3 px-4 text-sm font-medium transition-colors border-l border-r border-tile-600 {importMode === 'paste' ? 'bg-tile-600 text-text-300' : 'bg-tile-300/50 text-text-200 hover:bg-tile-400/50'}"
+          >
+            Paste Text
+          </button>
+        </div>
 
         {#if importMode === 'csv'}
           <!-- CSV Upload Section -->
@@ -290,68 +331,47 @@
             </div>
           </div>
         {:else}
-          <!-- Category Selection -->
-          <!-- Dialect Selection -->
-        <div class="flex flex-col gap-4">
-          <h2 class="text-2xl font-bold text-text-300">Select Dialect</h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {#each dialectOptions as option}
-              <RadioButton
-                className="!text-lg !font-medium"
-                wrapperClass="!p-4 border-2 border-tile-600 hover:border-tile-500 transition-colors duration-300 rounded-xl bg-tile-300/50"
-                onClick={setDialect}
-                selectableFor={option.value}
-                isSelected={selectedDialect === option.value}
-                value={option.value}
-                text={option.label}
-              />
-            {/each}
-          </div>
-        </div>
-
-        <!-- Category Selection -->
-        <div class="flex flex-col gap-4">
-          <div>
-            <h2 class="text-2xl font-bold text-text-300">Choose Category</h2>
-            {#if selectedDialect === 'egyptian-arabic'}
-              <p class="text-text-200 text-sm mt-1">Recommended: Most common words</p>
-            {/if}
-          </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-[400px] overflow-y-auto pr-2">
-            {#each currentSections as section}
-              <RadioButton
-                className="!text-base !font-medium"
-                wrapperClass="!p-4 border-2 border-tile-500 bg-tile-400/30 hover:bg-tile-400 hover:border-tile-600 transition-all duration-200 rounded-xl"
-                onClick={setCategory}
-                selectableFor={section.path}
-                isSelected={selectedCategory === section.path}
-                value={section.path}
-                text={`${section.name}${section.isPaywalled ? ' (Premium)' : ''} ${section.count > 0 ? `(${section.count} words)` : ''}`}
-              />
-            {/each}
-          </div>
-        </div>
-
-        <!-- Limit Selection -->
-        <div class="flex flex-col gap-3">
-          <h2 class="text-2xl font-bold text-text-300">Number of Words</h2>
-          <div class="relative">
-            <input
-              type="number"
-              bind:value={importLimit}
-              min="1"
-              max="200"
-              class="w-full bg-tile-300 border-2 border-tile-500 text-text-300 px-5 py-4 rounded-xl focus:outline-none focus:border-tile-600 focus:ring-0 transition-colors text-lg"
-            />
-          </div>
-          <p class="text-text-200 text-sm">Import up to {importLimit} words from this category</p>
-          {#if currentSections.find(s => s.path === selectedCategory)?.count}
-            {@const selectedSection = currentSections.find(s => s.path === selectedCategory)}
-            <p class="text-text-200 text-sm bg-tile-400/30 border border-tile-500 rounded-lg p-3">
-              <span class="font-medium text-text-300">Available:</span> {selectedSection?.count || 0} words in this category
+          <!-- Paste Text Section -->
+          <div class="flex flex-col gap-4">
+            <h2 class="text-2xl font-bold text-text-300">Paste Vocabulary</h2>
+            <p class="text-text-200 text-sm">
+              Paste your vocabulary words below. Any missing fields (Arabic, English, or transliteration) will be automatically generated using AI.
             </p>
-          {/if}
-        </div>
+
+            <!-- Dialect Selection for Paste -->
+            <div class="flex flex-col gap-4">
+              <h3 class="text-xl font-bold text-text-300">Select Dialect</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {#each dialectOptions as option (option.value)}
+                  <RadioButton
+                    className="!text-lg !font-medium"
+                    wrapperClass="!p-4 border-2 border-tile-600 hover:border-tile-500 transition-colors duration-300 rounded-xl bg-tile-300/50"
+                    onClick={(e) => { pasteDialect = e.target.value as Dialect; }}
+                    selectableFor={`paste-${option.value}`}
+                    isSelected={pasteDialect === option.value}
+                    value={option.value}
+                    text={option.label}
+                  />
+                {/each}
+              </div>
+            </div>
+
+            <textarea
+              bind:value={pasteText}
+              rows={10}
+              placeholder="Paste your vocabulary here...&#10;&#10;Examples:&#10;مرحبا&#10;مرحبا | hello | marhaba&#10;hello, مرحبا, marhaba&#10;good morning"
+              class="w-full bg-tile-300 border-2 border-tile-500 text-text-300 px-5 py-4 rounded-xl focus:outline-none focus:border-tile-600 focus:ring-0 transition-colors text-base font-mono resize-y"
+            ></textarea>
+
+            <div class="bg-tile-300/50 border border-tile-500 rounded-lg p-4 text-sm text-text-200">
+              <p class="font-medium text-text-300 mb-2">Supported formats (one entry per line):</p>
+              <p class="mb-1">• <strong>Arabic only</strong> — AI generates English and transliteration</p>
+              <p class="mb-1">• <strong>English only</strong> — AI generates Arabic and transliteration</p>
+              <p class="mb-1">• <strong>arabic | english | transliteration</strong> — all three fields</p>
+              <p class="mb-1">• <strong>arabic, english</strong> — AI generates transliteration</p>
+              <p>• Separators: comma <code class="bg-tile-400/50 px-1 rounded">,</code> pipe <code class="bg-tile-400/50 px-1 rounded">|</code> or semicolon <code class="bg-tile-400/50 px-1 rounded">;</code></p>
+            </div>
+          </div>
         {/if}
 
         <!-- Import Button -->
@@ -359,13 +379,13 @@
           <Button 
             onClick={importWords} 
             type="button" 
-            disabled={isImporting || (importMode === 'csv' && !csvFile) || (importMode === 'category' && !selectedCategory)}
+            disabled={isImporting || (importMode === 'csv' && !csvFile) || (importMode === 'category' && !selectedCategory) || (importMode === 'paste' && !pasteText.trim())}
             className="w-full !py-4 !text-lg !rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all"
           >
             {#if isImporting}
               Uploading...
             {:else}
-              {importMode === 'csv' ? 'Import from File' : 'Import Words'}
+              {importMode === 'csv' ? 'Import from File' : importMode === 'paste' ? 'Import Pasted Words' : 'Import Words'}
             {/if}
           </Button>
         </div>
@@ -408,26 +428,6 @@
             {/if}
           </div>
         {/if}
-      </div>
-    </div>
-
-    <!-- Info Box -->
-    <div class="mt-8 bg-tile-400/30 border-2 border-tile-500 rounded-xl p-6 sm:p-8">
-      <div class="flex items-start gap-3 mb-4">
-        <span class="text-2xl">💡</span>
-        <div>
-          <h3 class="text-xl font-bold text-text-300 mb-2">Tips for Success</h3>
-          <ul class="text-text-200 space-y-3 text-base">
-            {#if selectedDialect === 'egyptian-arabic'}
-              <li class="flex gap-2"><span class="text-text-300">•</span> Start with "Most common words" for the best learning experience</li>
-            {:else}
-              <li class="flex gap-2"><span class="text-text-300">•</span> Choose categories that match your learning goals</li>
-            {/if}
-            <li class="flex gap-2"><span class="text-text-300">•</span> Words you already have saved will be skipped automatically</li>
-            <li class="flex gap-2"><span class="text-text-300">•</span> You can import from multiple categories to build your review deck</li>
-            <li class="flex gap-2"><span class="text-text-300">•</span> Review your words regularly for best results!</li>
-          </ul>
-        </div>
       </div>
     </div>
   </div>
