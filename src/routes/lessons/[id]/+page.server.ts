@@ -1,4 +1,4 @@
-import { error } from '@sveltejs/kit';
+import { error, redirect } from '@sveltejs/kit';
 import { getLessonById } from '$lib/helpers/lesson-helpers';
 import { trackActivitySimple } from '$lib/helpers/track-activity';
 import type { PageServerLoad } from './$types';
@@ -25,18 +25,23 @@ export const load: PageServerLoad = async ({ params, parent, locals, setHeaders 
 		};
 	}
 
+	const lesson = lessonResult.lesson as {
+		is_private?: boolean;
+		user_id?: string;
+		dialect: string;
+		[key: string]: unknown;
+	};
+
+	if (lesson.is_private && (!user || user.id !== lesson.user_id)) {
+		throw redirect(302, '/lessons');
+	}
+
 	// Track lesson view (non-blocking)
 	if (user?.id) {
 		trackActivitySimple(user.id, 'lesson', 1).catch(err => {
 			console.error('Error tracking lesson view:', err);
 		});
 	}
-
-	// Add dialect display name
-	const lesson = lessonResult.lesson as {
-		dialect: string;
-		[key: string]: unknown;
-	};
 
 	const dialectNames: Record<string, string> = {
 		'egyptian-arabic': 'Egyptian Arabic',
@@ -45,11 +50,13 @@ export const load: PageServerLoad = async ({ params, parent, locals, setHeaders 
 		'levantine': 'Levantine Arabic',
 	};
 
-	// Set cache headers - lesson content rarely changes
-	// Cache for 30 min in browser, 2 hours on CDN
-	setHeaders({
-		'Cache-Control': 'public, max-age=1800, s-maxage=7200, stale-while-revalidate=3600'
-	});
+	if (lesson.is_private) {
+		setHeaders({ 'Cache-Control': 'private, no-store' });
+	} else {
+		setHeaders({
+			'Cache-Control': 'public, max-age=1800, s-maxage=7200, stale-while-revalidate=3600'
+		});
+	}
 
 	return {
 		lessonId,
