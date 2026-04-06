@@ -1095,11 +1095,11 @@
         
         <div class="w-full bg-tile-400/60 rounded-full h-4 mb-8 shadow-inner border border-tile-500">
           <div
-            class="bg-gradient-to-r from-tile-600 to-tile-700 h-full rounded-full relative transition-all duration-500 ease-out overflow-hidden"
+            class="bg-gradient-to-r from-tile-600 to-tile-700 h-full rounded-full relative overflow-hidden"
             style="width: {((forgottenWordIndex + 1) / forgottenWords.length) * 100}%"
           >
             <div class="absolute inset-0 bg-gradient-to-t from-white/0 to-white/20"></div>
-            <div class="absolute inset-0 bg-white/20 animate-shimmer"></div>
+            <div class="absolute inset-0 bg-white/20"></div>
             <div class="absolute right-2 top-1/2 -translate-y-1/2 text-xs font-bold text-white/90">
               {Math.round(((forgottenWordIndex + 1) / forgottenWords.length) * 100)}%
             </div>
@@ -1170,7 +1170,7 @@
               style="width: {(currentPosition / totalWords) * 100}%"
             >
               <div class="absolute inset-0 bg-gradient-to-t from-white/0 to-white/20"></div>
-              <div class="absolute inset-0 bg-white/20 animate-shimmer"></div>
+              <div class="absolute inset-0 bg-white/20 "></div>
               <div class="absolute right-2 top-1/2 -translate-y-1/2 text-xs font-bold text-white/90">
                 {Math.round((currentPosition / totalWords) * 100)}%
               </div>

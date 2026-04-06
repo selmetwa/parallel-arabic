@@ -3,6 +3,7 @@
 	import AchievementBadge from '../profile/components/AchievementBadge.svelte';
 	import { ACHIEVEMENT_DEFINITIONS, TIER_META } from '$lib/config/achievements';
 	import type { AchievementCategory } from '$lib/config/achievements';
+	import { enhance } from '$app/forms';
 
 	const CATEGORIES: AchievementCategory[] = ['sentences', 'stories', 'lessons', 'reviews', 'games', 'streak'];
 	const TIERS = ['bronze', 'silver', 'gold', 'diamond'] as const;
@@ -95,6 +96,9 @@
 
 	// Filter subscribers for dedicated table
 	const subscribers = users.filter(user => user.is_subscriber);
+
+	let cacheFlushState = $state<'idle' | 'loading' | 'success' | 'error'>('idle');
+	let cacheFlushError = $state('');
 </script>
 
 <div class="p-6 space-y-8">
@@ -102,6 +106,52 @@
 	<div class="text-center space-y-2">
 		<h1 class="text-4xl font-bold text-text-300">Admin Dashboard</h1>
 		<p class="text-text-200 text-lg">User analytics and engagement metrics</p>
+	</div>
+
+	<!-- Cache Management -->
+	<div class="bg-tile-300 border-2 border-tile-600 p-6 rounded-lg">
+		<div class="flex items-center justify-between">
+			<div>
+				<h2 class="text-lg font-bold text-text-300">Cache Management</h2>
+				<p class="text-text-200 text-sm mt-1">Flush all Redis cache keys (lessons, stories, etc.)</p>
+			</div>
+			<form
+				method="POST"
+				action="?/flushCache"
+				use:enhance={() => {
+					cacheFlushState = 'loading';
+					cacheFlushError = '';
+					return async ({ result }) => {
+						if (result.type === 'success') {
+							cacheFlushState = 'success';
+							setTimeout(() => cacheFlushState = 'idle', 3000);
+						} else {
+							cacheFlushState = 'error';
+							cacheFlushError = (result as any)?.data?.error || 'Unknown error';
+						}
+					};
+				}}
+			>
+				<button
+					type="submit"
+					disabled={cacheFlushState === 'loading'}
+					class="px-4 py-2 rounded-lg font-semibold text-sm transition-all
+						{cacheFlushState === 'success' ? 'bg-green-600 text-white' :
+						 cacheFlushState === 'error' ? 'bg-red-600 text-white' :
+						 'bg-tile-600 text-text-300 hover:bg-tile-500 disabled:opacity-50'}"
+				>
+					{#if cacheFlushState === 'loading'}
+						Flushing...
+					{:else if cacheFlushState === 'success'}
+						✓ Cache Flushed
+					{:else if cacheFlushState === 'error'}
+						Error: {cacheFlushError}
+					{:else}
+						🗑️ Flush Cache
+					{/if}
+				</button>
+			</form>
+		</div>
 	</div>
 
 	<!-- Overview Cards -->

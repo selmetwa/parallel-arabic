@@ -22,6 +22,7 @@ interface LessonGenerationData {
 	useReviewWordsOnly?: boolean;
 	reviewWordsSource?: 'all' | 'due-for-review';
 	reviewWords?: Array<{ arabic: string; english: string; transliteration: string }>;
+	is_private?: boolean;
 }
 
 /**
@@ -213,6 +214,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 	const subLessonCount = data.subLessonCount || 3; // Default to 3 sub-lessons
 	const useReviewWordsOnly = data.useReviewWordsOnly || false;
 	const reviewWords = data.reviewWords || [];
+	const isPrivate = data.is_private === true;
 
 	// Dialect-specific configurations
 	const dialectConfigs = {
@@ -765,7 +767,8 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 					lesson_body: storageResult.fileKey!, // Store file key instead of JSON
 					sub_lesson_count: parsedLesson.steps?.length || null, // Store step count
 					estimated_duration: null,
-					created_at: new Date().toISOString()
+					created_at: new Date().toISOString(),
+					is_private: isPrivate
 				});
 
 			if (insertError) {

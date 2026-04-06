@@ -29,6 +29,8 @@
 	let generationError = $state('');
 	let errorDetails = $state('');
 
+	let isPrivate = $state(false);
+
 	// Review words only mode
 	let useReviewWordsOnly = $state(false);
 	let reviewWordsSource = $state<'all' | 'due-for-review'>('all');
@@ -56,6 +58,7 @@
 			errorDetails = '';
 			subLessonCount = 3;
 			level = 'beginner';
+			isPrivate = false;
 			useReviewWordsOnly = false;
 			reviewWordsSource = 'all';
 			reviewWords = [];
@@ -196,7 +199,8 @@
 			subLessonCount,
 			useReviewWordsOnly,
 			reviewWordsSource,
-			reviewWords
+			reviewWords,
+			isPrivate
 		};
 		
 		// Show loading state and keep modal open
@@ -236,7 +240,8 @@
 					subLessonCount: data.subLessonCount,
 					useReviewWordsOnly: data.useReviewWordsOnly || false,
 					reviewWordsSource: data.reviewWordsSource || 'all',
-					reviewWords: data.reviewWords || []
+					reviewWords: data.reviewWords || [],
+					is_private: data.isPrivate || false
 				})
 			});
 
@@ -520,10 +525,31 @@
 						</div>
 					</div>
 
+					<!-- Private Lesson Toggle -->
+					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
+						<div class="p-6">
+							<div class="flex items-start justify-between gap-4">
+								<div class="flex-1">
+									<div class="flex items-center gap-2 mb-2">
+										<span class="text-2xl">🔒</span>
+										<h3 class="text-lg font-bold text-text-300">Private Lesson</h3>
+									</div>
+									<p class="text-sm text-text-200 leading-relaxed">
+										Only you can see this lesson. It won't appear in the public lesson library.
+									</p>
+								</div>
+								<label class="relative inline-flex items-center cursor-pointer">
+									<input type="checkbox" bind:checked={isPrivate} class="sr-only peer" />
+									<div class="w-14 h-8 bg-tile-500 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-white after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-slate-600"></div>
+								</label>
+							</div>
+						</div>
+					</div>
+
 					<!-- Submit Button -->
 					<div class="pt-4">
-						<Button 
-							type="submit" 
+						<Button
+							type="submit"
 							className="w-full py-4 text-xl font-bold shadow-lg hover:shadow-xl transition-all"
 							disabled={reviewWords.length === 0 || isLoadingReviewWords}
 						>
@@ -700,6 +726,27 @@
 									</div>
 								{/if}
 							{/if}
+						</div>
+					</div>
+
+					<!-- Private Lesson Toggle -->
+					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
+						<div class="p-6">
+							<div class="flex items-start justify-between gap-4">
+								<div class="flex-1">
+									<div class="flex items-center gap-2 mb-2">
+										<span class="text-2xl">🔒</span>
+										<h3 class="text-lg font-bold text-text-300">Private Lesson</h3>
+									</div>
+									<p class="text-sm text-text-200 leading-relaxed">
+										Only you can see this lesson. It won't appear in the public lesson library.
+									</p>
+								</div>
+								<label class="relative inline-flex items-center cursor-pointer">
+									<input type="checkbox" bind:checked={isPrivate} class="sr-only peer" />
+									<div class="w-14 h-8 bg-tile-500 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-white after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-slate-600"></div>
+								</label>
+							</div>
 						</div>
 					</div>
 

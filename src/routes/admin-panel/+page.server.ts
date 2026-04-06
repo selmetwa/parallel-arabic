@@ -1,7 +1,8 @@
-import { redirect } from '@sveltejs/kit';
-import type { PageServerLoad} from './$types';
+import { redirect, fail } from '@sveltejs/kit';
+import type { PageServerLoad, Actions } from './$types';
 import { supabase } from '$lib/supabaseClient';
 import { ADMIN_ID } from '$env/static/private';
+import { getRedisClient } from '$lib/server/redis';
 
 export const load: PageServerLoad = async ({ locals }) => {
 	const session = await locals.auth.validate();
@@ -95,6 +96,26 @@ export const load: PageServerLoad = async ({ locals }) => {
     userCount: users.length,
     subscriberCount: users.filter(u => !!u.is_subscriber).length
 	};
+};
+
+export const actions: Actions = {
+	flushCache: async ({ locals }) => {
+		const session = await locals.auth.validate();
+		if (!session?.sessionId || ADMIN_ID !== session?.user?.id) {
+			return fail(403, { error: 'Unauthorized' });
+		}
+
+		try {
+			const client = await getRedisClient();
+			if (!client) {
+				return fail(500, { error: 'Redis not connected' });
+			}
+			await client.flushAll();
+			return { success: true };
+		} catch (e) {
+			return fail(500, { error: (e as Error).message });
+		}
+	}
 };
 
 

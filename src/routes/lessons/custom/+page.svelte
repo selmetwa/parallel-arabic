@@ -18,56 +18,54 @@
 		return true;
 	}
 
+	// View toggle: 'all' shows public lessons, 'mine' shows user's private lessons
+	let activeView = $state<'all' | 'mine'>('all');
+
 	// Search and filter state
 	let searchQuery = $state('');
 	let filterDialect = $state<string>('all');
 	let filterLevel = $state<string>('all');
 	let sortBy = $state<'newest' | 'oldest' | 'level' | 'title'>('newest');
 
-	let userGeneratedLessons = $derived.by(() => {
-		const output = [];
-
-		for (const lesson of data.user_generated_lessons) {
-			const lessonData = lesson as {
-				id: string;
-				title?: string;
-				title_arabic?: string;
-				description?: string;
-				level: string;
-				dialect: string;
-				dialect_name?: string;
-				created_at: string;
-				sub_lesson_count?: number;
-				estimated_duration?: number;
-				lesson_body?: {
-					title?: { english?: string; arabic?: string };
-					description?: { english?: string };
-					subLessons?: unknown[];
-					estimatedDuration?: number;
-					level?: string;
-				};
+	function mapLesson(lesson: object) {
+		const lessonData = lesson as {
+			id: string;
+			title?: string;
+			title_arabic?: string;
+			description?: string;
+			level: string;
+			dialect: string;
+			dialect_name?: string;
+			created_at: string;
+			sub_lesson_count?: number;
+			estimated_duration?: number;
+			lesson_body?: {
+				title?: { english?: string; arabic?: string };
+				description?: { english?: string };
+				subLessons?: unknown[];
+				estimatedDuration?: number;
+				level?: string;
 			};
+		};
+		const lessonBody = lessonData.lesson_body;
+		const subLessonCount = lessonData.sub_lesson_count ?? lessonBody?.subLessons?.length ?? 0;
+		const estimatedDuration = lessonData.estimated_duration ?? lessonBody?.estimatedDuration ?? null;
+		return {
+			id: lessonData.id,
+			title: lessonBody?.title?.english || lessonData.title || '',
+			description: lessonData.description || lessonBody?.description?.english || '',
+			createdAt: lessonData.created_at,
+			level: lessonData.level || lessonBody?.level || 'beginner',
+			dialect: lessonData.dialect,
+			dialectName: lessonData.dialect_name,
+			subLessonCount,
+			estimatedDuration
+		};
+	}
 
-			const lessonBody = lessonData.lesson_body;
+	let userGeneratedLessons = $derived(data.user_generated_lessons.map(mapLesson));
 
-			// Use database metadata first (faster), fall back to lesson_body JSON if needed
-			const subLessonCount = lessonData.sub_lesson_count ?? lessonBody?.subLessons?.length ?? 0;
-			const estimatedDuration = lessonData.estimated_duration ?? lessonBody?.estimatedDuration ?? null;
-
-			output.push({
-				id: lessonData.id,
-				title: lessonBody?.title?.english || lessonData.title || '',
-				description: lessonData.description || lessonBody?.description?.english || '',
-				createdAt: lessonData.created_at,
-				level: lessonData.level || lessonBody?.level || 'beginner',
-				dialect: lessonData.dialect,
-				dialectName: lessonData.dialect_name,
-				subLessonCount: subLessonCount,
-				estimatedDuration: estimatedDuration
-			});
-		}
-		return output;
-	});
+	let privateLessons = $derived(data.private_lessons.map(mapLesson));
 
 	function openPaywallModal() {
 		isModalOpen = true;
@@ -103,9 +101,12 @@
 		'advanced': 3,
 	};
 
+	// The active lesson list depends on the view
+	const activeLessons = $derived(activeView === 'mine' ? privateLessons : userGeneratedLessons);
+
 	// Filter and sort lessons
 	const filteredAndSortedLessons = $derived.by(() => {
-		let filtered = [...userGeneratedLessons];
+		let filtered = [...activeLessons];
 
 		// Filter by search query
 		if (searchQuery.trim()) {
@@ -229,6 +230,29 @@
 			<div class="h-0.5 bg-tile-500 flex-1 opacity-50 rounded-full"></div>
 		</div>
 
+		<!-- View Toggle -->
+		{#if data.session && data.user}
+			<div class="flex p-1 bg-tile-400 border border-tile-500 rounded-lg w-fit mb-6">
+				<button
+					type="button"
+					onclick={() => activeView = 'all'}
+					class="px-4 py-2 text-sm rounded-md transition-all duration-200 font-semibold {activeView === 'all' ? 'bg-tile-600 text-text-300 shadow-sm' : 'text-text-200 hover:text-text-300'}"
+				>
+					All Lessons
+				</button>
+				<button
+					type="button"
+					onclick={() => activeView = 'mine'}
+					class="px-4 py-2 text-sm rounded-md transition-all duration-200 font-semibold {activeView === 'mine' ? 'bg-tile-600 text-text-300 shadow-sm' : 'text-text-200 hover:text-text-300'}"
+				>
+					🔒 My Private Lessons
+					{#if privateLessons.length > 0}
+						<span class="ml-1 text-xs bg-slate-500 text-white rounded-full px-1.5 py-0.5">{privateLessons.length}</span>
+					{/if}
+				</button>
+			</div>
+		{/if}
+
 		<!-- Search and Filter Controls -->
 		<div class="mb-6 space-y-4">
 			<!-- Search Bar -->
@@ -294,11 +318,18 @@
 
 			<!-- Results Count -->
 			<div class="text-sm text-text-200">
-				Showing {filteredAndSortedLessons.length} of {userGeneratedLessons.length} lessons
+				Showing {filteredAndSortedLessons.length} of {activeLessons.length} lessons
 			</div>
 		</div>
 		
-		{#if userGeneratedLessons.length === 0}
+		{#if activeView === 'mine' && privateLessons.length === 0}
+			<div class="text-center py-16 bg-tile-400/30 border-2 border-dashed border-tile-500 rounded-xl">
+				<div class="text-6xl mb-4 opacity-50">🔒</div>
+				<p class="text-text-200 text-xl mb-2">No private lessons yet</p>
+				<p class="text-text-200 text-base opacity-70 mb-6">Create a lesson with the "Private Lesson" toggle enabled and it will only be visible to you.</p>
+				<CreateLessonModal dialect={selectedDialect as any} data={data}></CreateLessonModal>
+			</div>
+		{:else if activeLessons.length === 0}
 			<div class="text-center py-16 bg-tile-400/30 border-2 border-dashed border-tile-500 rounded-xl">
 				<div class="text-6xl mb-4 opacity-50">📚</div>
 				<p class="text-text-200 text-xl mb-2">No lessons yet</p>

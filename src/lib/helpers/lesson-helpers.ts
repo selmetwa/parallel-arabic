@@ -53,14 +53,20 @@ export async function getLessonById(lessonId: string): Promise<{ success: boolea
 /**
  * Get lessons by user ID with full JSON content from storage
  */
-export async function getLessonsByUser(userId: string): Promise<{ success: boolean; lessons?: object[]; error?: string }> {
+export async function getLessonsByUser(userId: string, options?: { privateOnly?: boolean }): Promise<{ success: boolean; lessons?: object[]; error?: string }> {
 	try {
 		// Get all lesson metadata for the user
-		const { data: lessonsMetadata, error: dbError } = await supabase
+		let query = supabase
 			.from('generated_lesson')
 			.select('*')
 			.eq('user_id', userId)
 			.order('created_at', { ascending: false });
+
+		if (options?.privateOnly) {
+			query = query.eq('is_private', true);
+		}
+
+		const { data: lessonsMetadata, error: dbError } = await query;
 
 		if (dbError) {
 			console.error('Error fetching user lessons:', dbError);
@@ -119,6 +125,7 @@ export async function getAllLessons(limit?: number): Promise<{ success: boolean;
 		let query = supabase
 			.from('generated_lesson')
 			.select('*')
+			.eq('is_private', false)
 			.order('created_at', { ascending: false });
 
 		if (limit) {

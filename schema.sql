@@ -56,6 +56,7 @@ CREATE TABLE public.generated_lesson (
   sub_lesson_count integer,
   estimated_duration integer,
   created_at text NOT NULL,
+  is_private boolean NOT NULL DEFAULT false,
   CONSTRAINT generated_lesson_pkey PRIMARY KEY (id),
   CONSTRAINT generated_lesson_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.user(id)
 );

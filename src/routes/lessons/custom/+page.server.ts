@@ -1,16 +1,19 @@
-import { getAllLessons } from '$lib/helpers/lesson-helpers';
+import { getAllLessons, getLessonsByUser } from '$lib/helpers/lesson-helpers';
 
 export const load = async ({ parent }) => {
 	// Get session and subscription status from layout
 	const { session, isSubscribed, user } = await parent();
-	
-	// Fetch all generated lessons in one efficient query
-	const lessonsResult = await getAllLessons();
-	
+
+	// Fetch public lessons and (if logged in) user's private lessons in parallel
+	const [lessonsResult, privateResult] = await Promise.all([
+		getAllLessons(),
+		user?.id ? getLessonsByUser(user.id, { privateOnly: true }) : Promise.resolve({ success: true, lessons: [] })
+	]);
+
 	let allUserGeneratedLessons: object[] = [];
-	
+	let privateLesson: object[] = [];
+
 	if (lessonsResult.success && lessonsResult.lessons) {
-		// Add dialect display names to each lesson
 		allUserGeneratedLessons = lessonsResult.lessons.map((lesson: object) => {
 			const lessonWithDialect = lesson as { dialect: string };
 			return {
@@ -22,12 +25,22 @@ export const load = async ({ parent }) => {
 		console.error('Error fetching lessons:', lessonsResult.error);
 	}
 
-	// Lessons are already sorted by created_at desc from the query
+	if (privateResult.success && privateResult.lessons) {
+		privateLesson = privateResult.lessons.map((lesson: object) => {
+			const lessonWithDialect = lesson as { dialect: string };
+			return {
+				...lesson,
+				dialect_name: getDialectDisplayName(lessonWithDialect.dialect)
+			};
+		});
+	}
+
 	return {
 		session,
 		isSubscribed,
-		hasActiveSubscription: isSubscribed, // Keep for backward compatibility
+		hasActiveSubscription: isSubscribed,
 		user_generated_lessons: allUserGeneratedLessons,
+		private_lessons: privateLesson,
 		user: user,
 	};
 };
