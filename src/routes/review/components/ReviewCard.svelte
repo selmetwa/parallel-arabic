@@ -3,6 +3,7 @@
   import AudioButton from '$lib/components/AudioButton.svelte';
   import DefinitionModal from '$lib/components/dialect-shared/sentences/DefinitionModal.svelte';
   import DialectComparisonModal from '$lib/components/dialect-shared/sentences/DialectComparisonModal.svelte';
+  import WordStatsModal from './WordStatsModal.svelte';
   import type { Dialect } from '$lib/types';
   import type { DialectComparisonSchema } from '$lib/utils/gemini-schemas';
   import cn from 'classnames';
@@ -51,6 +52,7 @@
   let definition = $state('');
   let targetWord = $state('');
   let targetArabicWord = $state('');
+  let isStatsModalOpen = $state(false);
 
   // Dialect Comparison State
   let isComparisonModalOpen = $state(false);
@@ -90,6 +92,10 @@
 
   function closeComparisonModal() {
     isComparisonModalOpen = false;
+  }
+
+  function closeStatsModal() {
+    isStatsModalOpen = false;
   }
 
   const dialectName: Record<string, string> = {
@@ -164,20 +170,6 @@
     void showAnswer;
   });
 
-  function handleCardClick(event: MouseEvent) {
-    if (isFlipping) return;
-    const target = event.target as HTMLElement;
-    if (target.closest('button, span[role="button"]')) return;
-    toggleFlip();
-  }
-
-  function handleCardKeydown(event: KeyboardEvent) {
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault();
-      toggleFlip();
-    }
-  }
-
   function toggleFlip() {
     if (isFlipping) return;
 
@@ -195,8 +187,7 @@
   }
 
   // Word selection functions for drag-to-highlight
-  function handleWordMouseDown(index: number, event: MouseEvent) {
-    event.preventDefault();
+  function handleWordMouseDown(index: number, _event: MouseEvent) {
     isSelecting = true;
     selectionStartIndex = index;
     selectionEndIndex = index;
@@ -244,7 +235,7 @@
     }
   }
 
-  function handleArabicWordMouseUp() {
+  function handleArabicWordMouseUp(_event: MouseEvent) {
     isSelectingArabic = false;
   }
 
@@ -381,6 +372,12 @@
   }
 </script>
 
+<WordStatsModal
+  isOpen={isStatsModalOpen}
+  closeModal={closeStatsModal}
+  {word}
+/>
+
 <DefinitionModal
   activeWordObj={{
     english: targetWord,
@@ -406,12 +403,6 @@
 
 <div
   class="flip-card p-4 sm:p-6 bg-gradient-to-br from-tile-400/60 to-tile-400/40 border-2 border-tile-600 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300"
-  onclick={handleCardClick}
-  onkeydown={handleCardKeydown}
-  role="button"
-  tabindex="0"
-  aria-label={showAnswer ? "Hide translation" : "Reveal translation"}
-  aria-pressed={showAnswer}
 >
   <div
     bind:this={flipCardInner}
@@ -432,11 +423,19 @@
           <span class="inline-block px-2 py-0.5 bg-tile-600 text-text-200 rounded-full text-xs">
             {word.repetitions === 0 ? 'First review' : `Reviewed ${word.repetitions}×`}
           </span>
+          <button
+            type="button"
+            onclick={() => { isStatsModalOpen = true; }}
+            class="inline-flex items-center px-2 py-0.5 bg-tile-600 text-text-200 rounded-full text-xs hover:bg-tile-500 transition-colors"
+            title="View word statistics"
+          >
+            📊 Stats
+          </button>
         </div>
       <div class="flex flex-col items-center justify-center gap-3 mb-4">
         <!-- Arabic word selection controls -->
         {#if selectedArabicWords.length > 0}
-          <div class="flex gap-2 mb-2" onclick={(e) => e.stopPropagation()}>
+          <div class="flex gap-2 mb-2">
             <button
               onclick={() => askChatGTP(selectedArabicWords.join(' '))}
               class="px-3 py-1 bg-tile-400 text-text-300 rounded border border-tile-600 hover:bg-tile-500 hover:border-tile-500 transition-colors"
@@ -452,28 +451,26 @@
           </div>
         {/if}
         
-        <div 
-          class="flex w-fit flex-row flex-wrap text-4xl sm:text-5xl font-bold text-text-100 select-none"
+        <div
+          class="flex w-fit flex-row flex-wrap text-4xl p-2 sm:text-5xl font-bold text-text-100 select-none"
           onmouseup={handleArabicWordMouseUp}
           aria-label="Arabic word selection area for definitions"
           role="application"
           dir="rtl"
         >
           {#each word.arabic.split(' ') as arabicWord, index}
-            <span
+            <button
+              type="button"
+              data-word-zone
               onmousedown={(e) => handleArabicWordMouseDown(index, e)}
               onmouseenter={() => handleArabicWordMouseEnter(index)}
-              onclick={(e) => {
-                e.stopPropagation();
-                askChatGTP(arabicWord);
-              }}
+              onclick={() => askChatGTP(arabicWord)}
               onkeydown={(e) => {
                 if (e.key === 'Enter' || e.key === ' ') {
                   e.preventDefault();
                   askChatGTP(arabicWord);
                 }
               }}
-              role="button"
               tabindex="0"
               aria-label={`Get definition for: ${arabicWord}`}
               class={cn("p-1 text-4xl sm:text-5xl duration-300 cursor-pointer border-2 rounded-lg transition-all", {
@@ -481,7 +478,7 @@
                 "hover:bg-tile-400/50 border-transparent hover:border-tile-600 hover:scale-105": !isArabicWordSelected(index)
               })}
               dir="rtl"
-            >{arabicWord}</span>
+            >{arabicWord}</button>
           {/each}
         </div>
       </div>
@@ -489,7 +486,7 @@
           <p class="text-xl text-text-200 mb-2">({word.transliteration})</p>
         {/if}
         <div class="flex flex-col items-center gap-3 mt-4">
-          <div class="flex flex-row justify-center gap-2" onclick={(e) => e.stopPropagation()}>
+          <div class="flex flex-row justify-center gap-2">
             <Button onClick={() => (showHint = !showHint)} type="button">
               {showHint ? 'Hide' : 'Show'} Hint
             </Button>
@@ -497,9 +494,13 @@
               Listen
             </AudioButton>
           </div>
-          <p class="text-xs text-text-200 text-center mt-4 opacity-60">
-            Click anywhere to reveal translation
-          </p>
+          <button
+            type="button"
+            onclick={toggleFlip}
+            class="mt-4 px-6 py-3 bg-tile-500 hover:bg-tile-600 text-text-300 font-semibold rounded-xl border-2 border-tile-600 hover:border-tile-500 transition-all duration-200 shadow-md hover:shadow-lg active:scale-95"
+          >
+            Reveal Translation
+          </button>
         </div>
       </div>
     </div>
@@ -533,7 +534,7 @@
             </div>
           {/if}
           
-          <div 
+          <div
             class="flex w-fit flex-row flex-wrap text-4xl sm:text-5xl font-bold text-text-100 select-none"
             onmouseup={handleArabicWordMouseUp}
             aria-label="Arabic word selection area for definitions"
@@ -542,12 +543,10 @@
           >
             {#each word.arabic.split(' ') as arabicWord, index}
               <span
+                data-word-zone
                 onmousedown={(e) => handleArabicWordMouseDown(index, e)}
                 onmouseenter={() => handleArabicWordMouseEnter(index)}
-                onclick={(e) => {
-                  e.stopPropagation();
-                  askChatGTP(arabicWord);
-                }}
+                onclick={() => askChatGTP(arabicWord)}
                 onkeydown={(e) => {
                   if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault();
@@ -570,7 +569,7 @@
         <div class="flex flex-col items-center justify-center gap-3">
           <!-- Selection controls -->
           {#if selectedWords.length > 0}
-            <div class="flex gap-2 mb-2" onclick={(e) => e.stopPropagation()}>
+            <div class="flex gap-2 mb-2">
               <button
                 onclick={() => askChatGTP(selectedWords)}
                 class="px-3 py-1 bg-tile-400 text-text-300 rounded border border-tile-600 hover:bg-tile-500 hover:border-tile-500 transition-colors"
@@ -586,7 +585,7 @@
             </div>
           {/if}
           
-          <div 
+          <div
             class="flex w-fit flex-row flex-wrap text-3xl sm:text-4xl font-bold text-text-300 select-none"
             onmouseup={handleWordMouseUp}
             aria-label="Word selection area for definitions"
@@ -594,12 +593,10 @@
           >
             {#each word.english.split(' ') as englishWord, index}
               <span
+                data-word-zone
                 onmousedown={(e) => handleWordMouseDown(index, e)}
                 onmouseenter={() => handleWordMouseEnter(index)}
-                onclick={(e) => {
-                  e.stopPropagation();
-                  askChatGTP(englishWord);
-                }}
+                onclick={() => askChatGTP(englishWord)}
                 onkeydown={(e) => {
                   if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault();
@@ -621,7 +618,7 @@
           {/if}
         </div>
         
-        <div class="flex justify-center gap-2 mt-4 flex-row flex-wrap" onclick={(e) => e.stopPropagation()}>
+        <div class="flex justify-center gap-2 mt-4 flex-row flex-wrap">
           <AudioButton text={word.arabic} dialect={word.dialect as Dialect} audioUrl={word.audioUrl}>
             Listen
           </AudioButton>
@@ -629,7 +626,7 @@
         </div>
       </div>
 
-      <div class="border-t border-tile-500 pt-6 mt-6" onclick={(e) => e.stopPropagation()}>
+      <div class="border-t border-tile-500 pt-6 mt-6">
         <p class="text-left text-text-200 mb-4 font-semibold">How well did you remember this word?</p>
         <div class="grid grid-cols-3 gap-2 sm:gap-4 mb-4">
           <button
@@ -713,23 +710,13 @@
       </div>
     </div>
   {:else if word.isLearning}
-    <div class="mt-6 pt-4 border-t border-tile-500">
-      <div class="bg-gradient-to-br from-blue-50/50 to-blue-100/30 border-2 border-blue-200 rounded-xl p-4 text-left shadow-sm">
-        <div class="flex items-center gap-2">
-          <span class="text-xl">✨</span>
-          <p class="text-sm text-text-200">
-            <span class="font-semibold text-text-300">New word</span> - This word will appear more frequently until you've mastered it
-          </p>
-        </div>
-      </div>
-    </div>
+
   {/if}
 </div>
 
 <style>
   .flip-card {
     perspective: 1000px;
-    cursor: pointer;
     overflow: visible;
   }
 

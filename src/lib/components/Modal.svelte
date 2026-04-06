@@ -23,8 +23,9 @@
   } = $props();
 </script>
 
-<dialog 
+<dialog
 open={isOpen}
+onclick={(e) => e.stopPropagation()}
 class="{`modal ${isOpen ? 'open' : ''} bg-tile-300 border-4 border-tile-600`}" style="--width: {width}; --height: {height}; --z-index: {zIndex};">
   <!-- Your modal content goes here -->
    <div class="absolute top-0 right-0 p-2">
@@ -33,7 +34,7 @@ class="{`modal ${isOpen ? 'open' : ''} bg-tile-300 border-4 border-tile-600`}" s
   <slot></slot>
 </dialog>
 
-<div class="{`overlay ${isOpen ? 'open' : ''}`}" onclick={handleCloseModal} style="z-index: {zIndex - 1};">
+<div class="{`overlay ${isOpen ? 'open' : ''}`}" onclick={(e) => { e.stopPropagation(); handleCloseModal(); }} style="z-index: {zIndex - 1};">
   <!-- Clicking on the overlay will close the modal -->
 </div>
 
