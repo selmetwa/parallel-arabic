@@ -4,7 +4,7 @@ import { env } from '$env/dynamic/private';
 import { GoogleGenAI } from "@google/genai";
 import { type Dialect } from '$lib/types/index';
 import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
-import { createTranslationResponseSchema } from '$lib/utils/gemini-schemas';
+import { createTranslationWithAlignmentsSchema } from '$lib/utils/gemini-schemas';
 import { generateContentWithRetry, GeminiApiError } from '$lib/utils/gemini-api-retry';
 import { 
   buildLearnerContext, 
@@ -128,8 +128,14 @@ Format your response as JSON with this exact structure:
 {
   "arabic": "your Arabic response here",
   "english": "English translation here",
-  "transliteration": "transliteration here"
-}`;
+  "transliteration": "transliteration here",
+  "wordAlignments": [
+    { "arabic": "first Arabic word", "english": "its literal English meaning", "transliteration": "its transliteration" },
+    { "arabic": "second Arabic word", "english": "its literal English meaning", "transliteration": "its transliteration" }
+  ]
+}
+
+IMPORTANT: wordAlignments must have one entry per Arabic word in your response, in the same order they appear. Provide the literal/gloss English meaning for each word (not the full sentence translation).`;
 
     // Build conversation context
     const conversationContext = conversationHistory.map((msg: ChatMessage) => 
@@ -138,7 +144,7 @@ Format your response as JSON with this exact structure:
     
     const fullPrompt = `${systemPrompt}\n\n${conversationContext ? `Previous conversation:\n${conversationContext}\n\n` : ''}User: ${message}\n\nAssistant:`;
 
-    const translationSchema = createTranslationResponseSchema();
+    const translationSchema = createTranslationWithAlignmentsSchema();
     const response = await generateContentWithRetry(ai, {
       model: "gemini-3-flash-preview",
       contents: fullPrompt,
@@ -199,10 +205,11 @@ Format your response as JSON with this exact structure:
       }
     }
 
-    return json({ 
+    return json({
       arabic: parsedResponse.arabic,
       english: parsedResponse.english,
       transliteration: parsedResponse.transliteration,
+      wordAlignments: parsedResponse.wordAlignments || [],
       conversationId: conversationId || null, // Return for client to track
       timestamp: new Date().toISOString()
     });

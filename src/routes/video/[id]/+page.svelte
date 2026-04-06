@@ -121,11 +121,14 @@
 	}
 
 	function createPlayer() {
-		const videoId = data.video.url.includes('watch?v=') 
+		const videoId = data.video.url.includes('watch?v=')
 			? data.video.url.split('watch?v=')[1].split('&')[0]
 			: data.video.url.split('/').pop();
 
-		player = new (window as any).YT.Player('youtube-player', {
+		const isMobile = window.matchMedia('(max-width: 1023px)').matches;
+		const playerId = isMobile ? 'youtube-player-mobile' : 'youtube-player';
+
+		player = new (window as any).YT.Player(playerId, {
 			height: '100%',
 			width: '100%',
 			videoId: videoId,
@@ -232,28 +235,64 @@
 
 <section class="min-h-screen bg-tile-300">
 	<!-- Header -->
-	<header class="py-8 bg-tile-200 border-b border-tile-600">
+	<header class="sticky top-0 z-20 py-2 lg:py-8 bg-tile-200 border-b border-tile-600">
 		<div class="max-w-7xl mx-auto px-4 sm:px-8">
 			<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-				<div>
-					<a href="/videos" class="inline-flex items-center gap-2 text-text-200 hover:text-text-300 transition-colors mb-4">
+				<div class="w-full">
+					<a href="/videos" class="inline-flex items-center gap-2 text-text-200 hover:text-text-300 transition-colors mb-2 lg:mb-4">
 						<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
 						</svg>
 						Back to Videos
 					</a>
-					<h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-text-300 leading-tight mb-2">
+
+					<!-- Mobile: video player + controls inside header -->
+					<div class="lg:hidden">
+						{#if data.video.url}
+							<div class="aspect-video rounded-lg overflow-hidden bg-tile-500">
+								<div id="youtube-player-mobile" class="w-full h-full"></div>
+							</div>
+						{:else}
+							<div class="aspect-video flex items-center justify-center bg-tile-500 rounded-lg">
+								<p class="text-text-200">No video available.</p>
+							</div>
+						{/if}
+						<div class="flex items-center gap-3 mt-2 flex-wrap">
+							<span class="px-3 py-1 bg-tile-500 rounded-full text-sm font-semibold text-text-300">
+								{currentLineIndex + 1} / {data.video.lines?.length || 0}
+							</span>
+							<label class="flex items-center gap-2 text-text-200 cursor-pointer">
+								<input
+									type="checkbox"
+									bind:checked={showEnglish}
+									class="w-4 h-4 rounded border-tile-500 bg-tile-300 text-tile-700 focus:ring-tile-600"
+								/>
+								<span class="text-sm font-medium">Show English</span>
+							</label>
+							<label class="flex items-center gap-2 text-text-200 cursor-pointer">
+								<input
+									type="checkbox"
+									bind:checked={showTransliteration}
+									class="w-4 h-4 rounded border-tile-500 bg-tile-300 text-tile-700 focus:ring-tile-600"
+								/>
+								<span class="text-sm font-medium">Show Transliteration</span>
+							</label>
+						</div>
+					</div>
+
+					<!-- Desktop: title, subtitle, dialect badge -->
+					<h1 class="hidden lg:block text-2xl sm:text-3xl lg:text-4xl font-bold text-text-300 leading-tight mb-2">
 						{data.video.title?.arabic || 'فيديو'}
 					</h1>
-					<h2 class="text-lg sm:text-xl text-text-200 mb-4">
+					<h2 class="hidden lg:block text-lg sm:text-xl text-text-200 mb-4">
 						{data.video.title?.english || 'Video'}
 					</h2>
-					<span class="inline-flex items-center px-4 py-1.5 text-sm font-bold rounded-full shadow-md {getDialectBadgeColor(data.video.dialect)}">
+					<span class="hidden lg:inline-flex items-center px-4 py-1.5 text-sm font-bold rounded-full shadow-md {getDialectBadgeColor(data.video.dialect)}">
 						{data.video.dialect_name}
 					</span>
 				</div>
 				{#if data.video.description}
-					<div class="lg:max-w-md">
+					<div class="hidden lg:block lg:max-w-md">
 						<p class="text-text-200 leading-relaxed">
 							{data.video.description?.english || data.video.description?.arabic}
 						</p>
@@ -266,7 +305,7 @@
 	<!-- Main Content: Side-by-side Video and Sentences -->
 	<div class="flex flex-col lg:flex-row">
 		<!-- Left Column: Fixed Video Player -->
-		<div class="lg:w-2/5 xl:w-1/3 p-4 sm:p-6 bg-tile-300 lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto relative z-10">
+		<div class="hidden lg:block lg:w-2/5 xl:w-1/3 p-4 sm:p-6 bg-tile-300 lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto relative z-10">
 			<!-- Video Player Card -->
 			<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden mb-6 relative z-10">
 				<div class="p-4 border-b border-tile-600">
@@ -290,16 +329,16 @@
 
 			<!-- Navigation Controls Card -->
 			<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
-				<div class="p-4 border-b border-tile-600">
+				<div class="p-3 sm:p-4 border-b border-tile-600">
 					<div class="flex justify-between items-center">
-						<h3 class="text-lg font-bold text-text-300">Navigation</h3>
+						<h3 class="hidden sm:block text-lg font-bold text-text-300">Navigation</h3>
 						<span class="px-3 py-1 bg-tile-500 rounded-full text-sm font-semibold text-text-300">
 							{currentLineIndex + 1} / {data.video.lines?.length || 0}
 						</span>
 					</div>
 				</div>
-				
-				<div class="p-4 space-y-4">
+
+				<div class="p-3 sm:p-4 space-y-3 sm:space-y-4">
 					<!-- Toggle Options -->
 					<div class="flex flex-wrap gap-4">
 						<label class="flex items-center gap-2 text-text-200 cursor-pointer">
@@ -321,7 +360,7 @@
 					</div>
 					
 					<!-- Navigation Buttons -->
-					<div class="grid grid-cols-2 gap-3">
+					<div class="hidden sm:grid grid-cols-2 gap-3">
 						<button 
 							onclick={previousLine} 
 							disabled={currentLineIndex === 0}
@@ -353,7 +392,7 @@
 								data.video.lines[currentLineIndex].english?.text,
 								data.video.lines[currentLineIndex].transliteration?.text
 							)}
-							class="w-full flex items-center justify-center gap-2 px-4 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors shadow-sm"
+							class="hidden sm:flex w-full items-center justify-center gap-2 px-4 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors shadow-sm"
 						>
 							<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
@@ -368,7 +407,7 @@
 		<!-- Right Column: Scrollable Sentences -->
 		<div class="lg:w-3/5 xl:w-2/3 p-4 sm:p-6 bg-tile-200 min-h-screen">
 			<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
-				<div class="p-4 border-b border-tile-600 sticky top-0 bg-tile-400 z-10">
+				<div class="p-4 border-b border-tile-600 lg:sticky lg:top-0 bg-tile-400 z-10">
 					<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
 						<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -385,7 +424,8 @@
 								{@const transformedSentence = {
 									arabic: { text: line.arabic?.text || '', speaker: '' },
 									english: { text: line.english?.text || '', speaker: '' },
-									transliteration: { text: line.transliteration?.text || '', speaker: '' }
+									transliteration: { text: line.transliteration?.text || '', speaker: '' },
+									wordAlignments: line.wordAlignments || undefined
 								}}
 								
 								<div 
@@ -416,7 +456,7 @@
 										<div class="flex items-start justify-between gap-4">
 											<div class="flex-1 space-y-2">
 												{#if showTransliteration}
-													<Sentence 
+													<Sentence
 														sentence={transformedSentence}
 														type="transliteration"
 														{setActiveWord}
@@ -424,10 +464,11 @@
 														mode="SentenceView"
 														dialect={data.video.dialect}
 														classname="!border-0 !py-1 !px-0"
+														size="md"
 													/>
 												{/if}
-												
-												<Sentence 
+
+												<Sentence
 													sentence={transformedSentence}
 													type="arabic"
 													{setActiveWord}
@@ -436,10 +477,11 @@
 													dialect={data.video.dialect}
 													classname="!border-0 !py-1 !px-0"
 													innerClassname="py-4"
+													size="md"
 												/>
-												
+
 												{#if showEnglish}
-													<Sentence 
+													<Sentence
 														sentence={transformedSentence}
 														type="english"
 														{setActiveWord}
@@ -447,6 +489,7 @@
 														mode="SentenceView"
 														dialect={data.video.dialect}
 														classname="!border-0 !py-1 !px-0"
+														size="md"
 													/>
 												{/if}
 											</div>
