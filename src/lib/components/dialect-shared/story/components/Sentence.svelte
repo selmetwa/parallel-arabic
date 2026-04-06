@@ -19,7 +19,7 @@
 	};
 
 	interface Props {
-		sentence: TWholeSentence;
+		sentence: TWholeSentence & { wordAlignments?: { arabic: string; english: string; transliteration: string }[] };
 		setActiveWord: (word: any) => void;
 		type?: string;
 		classname?: string;
@@ -402,28 +402,54 @@
 		aria-label="Word selection area for definitions"
 	>
 		{#if isArabic}
-			{#each words.reverse() as word, index}
-				<button
-					class={cn("transition-all rounded-lg px-3 py-2 duration-300 cursor-pointer", textSizeClass, {
-						"bg-blue-200 border-2 border-blue-400 shadow-md": isWordSelected(index),
-						"border-2 border-transparent hover:bg-tile-500 hover:border-tile-600 hover:shadow-md": !isWordSelected(index)
-					})}
-					value={word}
-					onclick={assignActiveWord}
-					onmousedown={(e) => handleWordMouseDown(index, e)}
-					onmouseenter={() => handleWordMouseEnter(index)}
-					onkeydown={(e) => {
-						if (e.key === 'Enter' || e.key === ' ') {
-							e.preventDefault();
-							assignActiveWord(e);
-						}
-					}}
-					tabindex="0"
-					aria-label={`Get definition for: ${word}`}
-				>
-					{word}
-				</button>
-			{/each}
+			{#if sentence.wordAlignments?.length}
+				{#each sentence.wordAlignments as wordAlign, wordIndex}
+					<button
+						class={cn("flex flex-col items-center transition-all rounded-lg px-3 py-2 duration-300 cursor-pointer", {
+							"bg-blue-200 border-2 border-blue-400 shadow-md": isWordSelected(wordIndex),
+							"border-2 border-transparent hover:bg-tile-500 hover:border-tile-600 hover:shadow-md": !isWordSelected(wordIndex)
+						})}
+						value={wordAlign.arabic}
+						onclick={assignActiveWord}
+						onmousedown={(e) => handleWordMouseDown(wordIndex, e)}
+						onmouseenter={() => handleWordMouseEnter(wordIndex)}
+						onkeydown={(e) => {
+							if (e.key === 'Enter' || e.key === ' ') {
+								e.preventDefault();
+								assignActiveWord(e);
+							}
+						}}
+						tabindex="0"
+						aria-label={`Get definition for: ${wordAlign.arabic}`}
+					>
+						<span class="text-xs sm:text-sm text-text-200 mb-1 opacity-90">{wordAlign.english}</span>
+						<span class={textSizeClass}>{wordAlign.arabic}</span>
+					</button>
+				{/each}
+			{:else}
+				{#each words.reverse() as word, index}
+					<button
+						class={cn("transition-all rounded-lg px-3 py-2 duration-300 cursor-pointer", textSizeClass, {
+							"bg-blue-200 border-2 border-blue-400 shadow-md": isWordSelected(index),
+							"border-2 border-transparent hover:bg-tile-500 hover:border-tile-600 hover:shadow-md": !isWordSelected(index)
+						})}
+						value={word}
+						onclick={assignActiveWord}
+						onmousedown={(e) => handleWordMouseDown(index, e)}
+						onmouseenter={() => handleWordMouseEnter(index)}
+						onkeydown={(e) => {
+							if (e.key === 'Enter' || e.key === ' ') {
+								e.preventDefault();
+								assignActiveWord(e);
+							}
+						}}
+						tabindex="0"
+						aria-label={`Get definition for: ${word}`}
+					>
+						{word}
+					</button>
+				{/each}
+			{/if}
 		{:else}
 			{#each words as word, index}
 				<button

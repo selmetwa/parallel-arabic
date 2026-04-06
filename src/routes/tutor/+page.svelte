@@ -117,6 +117,7 @@
     arabic?: string;
     english?: string;
     transliteration?: string;
+    wordAlignments?: { arabic: string; english: string; transliteration: string }[];
     feedback?: string;
     suggestedSentence?: { arabic: string; transliteration: string } | null;
     originalLanguage?: 'ar' | 'en';
@@ -174,6 +175,7 @@
   let isTranscribing = $state(false);
   let isGettingResponse = $state(false);
   let transcriptContainer: HTMLDivElement | null = $state(null);
+  let conversationStarted = $derived(conversation.length > 0 || isTranscribing || isGettingResponse);
 
   // Practice mode state
   interface PracticeSentence {
@@ -590,6 +592,7 @@
         arabic: tutorData.arabic,
         english: tutorData.english,
         transliteration: tutorData.transliteration,
+        wordAlignments: tutorData.wordAlignments || [],
         timestamp: new Date(),
         showArabic: true,
         showEnglish: true,
@@ -890,12 +893,62 @@
     </div>
   </header>
 
+  <!-- Mobile sticky mic bar: shown once conversation has started -->
+  {#if mode === 'conversation' && conversationStarted}
+    <div class="fixed bottom-16 left-0 right-0 z-40 bg-tile-400 border-t-2 border-tile-600 shadow-2xl lg:hidden">
+      <div class="max-w-7xl mx-auto px-4 py-3">
+        <div class="grid grid-cols-2 gap-3 mb-2">
+          <!-- Arabic Recording Button -->
+          <button
+            onclick={() => toggleRecording('ar')}
+            disabled={isProcessing || (!hasActiveSubscription && !recording)}
+            class="flex items-center justify-center gap-3 p-3 rounded-xl border-2 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed {recording && recordingLanguage === 'ar' ? 'border-sky-500 bg-sky-500/20 shadow-lg' : 'border-tile-600 bg-tile-300 hover:bg-tile-500'}"
+            aria-label={recording && recordingLanguage === 'ar' ? 'Stop recording Arabic' : 'Start recording Arabic'}
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full {recording && recordingLanguage === 'ar' ? 'bg-sky-500/30' : 'bg-tile-500'}">
+              {#if recording && recordingLanguage === 'ar'}
+                <AudioLoading />
+              {:else}
+                <RecordButton />
+              {/if}
+            </div>
+            <span class="text-sm font-semibold text-text-300">Speak Arabic</span>
+          </button>
+
+          <!-- English Recording Button -->
+          <button
+            onclick={() => toggleRecording('en')}
+            disabled={isProcessing || (!hasActiveSubscription && !recording)}
+            class="flex items-center justify-center gap-3 p-3 rounded-xl border-2 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed {recording && recordingLanguage === 'en' ? 'border-emerald-500 bg-emerald-500/20 shadow-lg' : 'border-tile-600 bg-tile-300 hover:bg-tile-500'}"
+            aria-label={recording && recordingLanguage === 'en' ? 'Stop recording English' : 'Start recording English'}
+          >
+            <div class="w-10 h-10 flex items-center justify-center rounded-full {recording && recordingLanguage === 'en' ? 'bg-emerald-500/30' : 'bg-tile-500'}">
+              {#if recording && recordingLanguage === 'en'}
+                <AudioLoading />
+              {:else}
+                <RecordButton />
+              {/if}
+            </div>
+            <span class="text-sm font-semibold text-text-300">Ask in English</span>
+          </button>
+        </div>
+
+        {#if recording}
+          <div class="flex items-center gap-2 px-1">
+            <div class="w-2.5 h-2.5 bg-red-500 rounded-full animate-pulse"></div>
+            <p class="text-xs font-medium text-text-300">Recording {recordingLanguage === 'ar' ? 'Arabic' : 'English'}… tap again to stop</p>
+          </div>
+        {/if}
+      </div>
+    </div>
+  {/if}
+
   <div class="flex flex-col lg:flex-row">
     <!-- Left Sidebar: Controls -->
     <div class="lg:w-80 xl:w-96 p-4 sm:p-6 bg-tile-300 lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto border-r border-tile-600">
       
       <!-- Dialect Selection Card -->
-      <div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden mb-6">
+      <div class="{conversationStarted && mode === 'conversation' ? 'hidden lg:block' : ''} bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden mb-6">
         <div class="p-4 border-b border-tile-600">
           <h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
             <span>🌍</span> Select Dialect
@@ -917,7 +970,7 @@
 
       <!-- Recording Controls Card - Conversation Mode -->
       {#if mode === 'conversation'}
-        <div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden mb-6">
+        <div class="{conversationStarted ? 'hidden lg:block' : ''} bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden mb-6">
           <div class="p-4 border-b border-tile-600">
             <h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
               <span>🎙️</span> Start Speaking
@@ -1097,7 +1150,7 @@
       {/if}
 
       <!-- Tips Card -->
-      <div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden mt-6">
+      <div class="{conversationStarted && mode === 'conversation' ? 'hidden lg:block' : ''} bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden mt-6">
         <div class="p-4 border-b border-tile-600">
           <h3 class="text-sm font-bold text-text-300 flex items-center gap-2">
             <span>💡</span> Tips
@@ -1120,7 +1173,7 @@
       
       <!-- Learning Memory Card - Only show if there's data -->
       {#if (learningInsights.length > 0 || recentConversations.length > 0) && mode === 'conversation'}
-        <div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden mt-6">
+        <div class="{conversationStarted ? 'hidden lg:block' : ''} bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden mt-6">
           <div class="p-4 border-b border-tile-600">
             <h3 class="text-sm font-bold text-text-300 flex items-center gap-2">
               <span>🧠</span> Your Learning Profile
@@ -1342,7 +1395,7 @@
         
         <div
           bind:this={transcriptContainer}
-          class="p-4 min-h-[500px] max-h-[calc(100vh-200px)] overflow-y-auto"
+          class="p-4 min-h-[500px] max-h-[calc(100vh-200px)] overflow-y-auto {conversationStarted ? 'pb-52 lg:pb-4' : ''}"
         >
           {#if conversation.length === 0 && !isTranscribing && !isGettingResponse}
             <div class="flex flex-col items-center justify-center h-full min-h-[400px] text-center">
@@ -1439,18 +1492,30 @@
                         <!-- Arabic words - clickable for definitions -->
                         {#if message.showArabic !== false}
                           <div class="flex flex-wrap gap-2 sm:gap-3 justify-center" dir="rtl">
-                            {#each (message.arabic || '').split(' ') as arabicWord}
-                              <button
-                                onclick={() => handleWordClick(arabicWord, 'arabic', message)}
-                                class="px-2 py-1 sm:px-3 sm:py-2 rounded-lg hover:bg-tile-500 hover:shadow-md transition-all duration-200 cursor-pointer border-2 border-transparent hover:border-tile-600 text-xl sm:text-2xl md:text-3xl font-semibold text-text-300"
-                              >
-                                {arabicWord}
-                              </button>
-                            {/each}
+                            {#if message.wordAlignments?.length}
+                              {#each message.wordAlignments as wordAlign}
+                                <button
+                                  onclick={() => handleWordClick(wordAlign.arabic, 'arabic', message)}
+                                  class="flex flex-col items-center px-2 py-2 sm:px-3 sm:py-3 rounded-lg hover:bg-tile-500 hover:shadow-md transition-all duration-200 cursor-pointer border-2 border-transparent hover:border-tile-600"
+                                >
+                                  <span class="text-xs sm:text-sm text-text-200 mb-1 opacity-90">{wordAlign.english}</span>
+                                  <span class="text-xl sm:text-2xl md:text-3xl font-semibold text-text-300">{wordAlign.arabic}</span>
+                                </button>
+                              {/each}
+                            {:else}
+                              {#each (message.arabic || '').split(' ') as arabicWord}
+                                <button
+                                  onclick={() => handleWordClick(arabicWord, 'arabic', message)}
+                                  class="px-2 py-1 sm:px-3 sm:py-2 rounded-lg hover:bg-tile-500 hover:shadow-md transition-all duration-200 cursor-pointer border-2 border-transparent hover:border-tile-600 text-xl sm:text-2xl md:text-3xl font-semibold text-text-300"
+                                >
+                                  {arabicWord}
+                                </button>
+                              {/each}
+                            {/if}
                           </div>
                         {/if}
                       </div>
-                      
+
                       {#if message.feedback && message.feedback.trim() !== '' && message.showFeedback !== false}
                         <div class="mt-4 p-4 bg-amber-500/10 border border-amber-500/30 rounded-lg">
                           <p class="text-sm font-bold text-amber-300 mb-2 flex items-center gap-2">
@@ -1544,14 +1609,26 @@
                         <!-- Arabic words - clickable for definitions -->
                         {#if message.showArabic !== false}
                           <div class="flex flex-wrap gap-2 sm:gap-3 justify-center" dir="rtl">
-                            {#each (message.arabic || '').split(' ') as arabicWord}
-                              <button
-                                onclick={() => handleWordClick(arabicWord, 'arabic', message)}
-                                class="px-2 py-1 sm:px-3 sm:py-2 rounded-lg hover:bg-tile-500 hover:shadow-md transition-all duration-200 cursor-pointer border-2 border-transparent hover:border-tile-600 text-xl sm:text-2xl md:text-3xl font-semibold text-text-300"
-                              >
-                                {arabicWord}
-                              </button>
-                            {/each}
+                            {#if message.wordAlignments?.length}
+                              {#each message.wordAlignments as wordAlign}
+                                <button
+                                  onclick={() => handleWordClick(wordAlign.arabic, 'arabic', message)}
+                                  class="flex flex-col items-center px-2 py-2 sm:px-3 sm:py-3 rounded-lg hover:bg-tile-500 hover:shadow-md transition-all duration-200 cursor-pointer border-2 border-transparent hover:border-tile-600"
+                                >
+                                  <span class="text-xs sm:text-sm text-text-200 mb-1 opacity-90">{wordAlign.english}</span>
+                                  <span class="text-xl sm:text-2xl md:text-3xl font-semibold text-text-300">{wordAlign.arabic}</span>
+                                </button>
+                              {/each}
+                            {:else}
+                              {#each (message.arabic || '').split(' ') as arabicWord}
+                                <button
+                                  onclick={() => handleWordClick(arabicWord, 'arabic', message)}
+                                  class="px-2 py-1 sm:px-3 sm:py-2 rounded-lg hover:bg-tile-500 hover:shadow-md transition-all duration-200 cursor-pointer border-2 border-transparent hover:border-tile-600 text-xl sm:text-2xl md:text-3xl font-semibold text-text-300"
+                                >
+                                  {arabicWord}
+                                </button>
+                              {/each}
+                            {/if}
                           </div>
                         {/if}
                       </div>

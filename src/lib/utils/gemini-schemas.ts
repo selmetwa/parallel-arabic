@@ -166,6 +166,22 @@ export function createTranslationResponseSchema() {
 export type TranslationResponseSchema = z.infer<ReturnType<typeof createTranslationResponseSchema>['zodSchema']>;
 
 /**
+ * Schema for tutor chat responses with word-level alignments for interlinear display
+ */
+export function createTranslationWithAlignmentsSchema() {
+	const schema = textWithTranslationSchema.extend({
+		wordAlignments: z.array(wordAlignmentSchema)
+	});
+
+	return {
+		zodSchema: schema,
+		jsonSchema: zodToJsonSchema(schema)
+	};
+}
+
+export type TranslationWithAlignmentsSchema = z.infer<ReturnType<typeof createTranslationWithAlignmentsSchema>['zodSchema']>;
+
+/**
  * Schema for updating translations (used in generate-words)
  */
 export function createTranslationUpdateSchema() {
