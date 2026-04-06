@@ -192,6 +192,115 @@ To manage notification settings, visit: ${profileUrl}
 	}
 };
 
+export const sendDailyChallengeEmail = async (email: string, challengeId: string, dialect: string) => {
+	const siteUrl = 'https://parallel-arabic.com';
+	const challengeUrl = `${siteUrl}/challenge/${challengeId}`;
+	const profileUrl = `${siteUrl}/profile`;
+
+	const dialectLabel: Record<string, string> = {
+		'egyptian-arabic': 'Egyptian Arabic',
+		'levantine': 'Levantine Arabic',
+		'darija': 'Moroccan Darija',
+		'fusha': 'Modern Standard Arabic',
+	};
+	const dialectName = dialectLabel[dialect] ?? 'Arabic';
+
+	const html = `
+		<!DOCTYPE html>
+		<html>
+		<head>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>Your daily Arabic challenge is ready!</title>
+		</head>
+		<body style="font-family: 'ReadexPro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #001a33; background-color: #b8c4d0; margin: 0; padding: 0;">
+			<table role="presentation" style="width: 100%; border-collapse: collapse; background-color: #b8c4d0; padding: 20px;">
+				<tr>
+					<td align="center" style="padding: 20px 0;">
+						<table role="presentation" style="max-width: 600px; width: 100%; background-color: #a8b8c8; border: 2px solid #8898a8; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+							<!-- Header -->
+							<tr>
+								<td style="background-color: #98a8b8; border-bottom: 2px solid #8898a8; padding: 30px; text-align: center;">
+									<h1 style="color: #001a33; margin: 0; font-size: 28px; font-weight: bold;">🎯 Your Daily Challenge is Ready!</h1>
+								</td>
+							</tr>
+
+							<!-- Main Content -->
+							<tr>
+								<td style="padding: 30px; background-color: #a8b8c8;">
+									<p style="font-size: 16px; color: #001a33; margin-bottom: 20px; line-height: 1.6;">
+										Your personalized <strong>${dialectName}</strong> challenge for today just dropped — built around your saved words and matched to your level.
+									</p>
+									<p style="font-size: 16px; color: #001a33; margin-bottom: 20px; line-height: 1.6;">
+										It only takes a few minutes. Give it a go!
+									</p>
+
+									<!-- CTA Button -->
+									<table role="presentation" style="width: 100%; margin-top: 30px;">
+										<tr>
+											<td align="center" style="padding: 0;">
+												<a href="${challengeUrl}" style="display: inline-block; background-color: #98a8b8; color: #001a33; padding: 14px 28px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 16px; border: 2px solid #8898a8;">
+													Take Today's Challenge →
+												</a>
+											</td>
+										</tr>
+									</table>
+
+									<!-- Footer -->
+									<table role="presentation" style="width: 100%; margin-top: 30px; padding-top: 20px; border-top: 1px solid #8898a8;">
+										<tr>
+											<td align="center" style="color: #4d5c66; font-size: 14px; line-height: 1.6;">
+												<p style="margin: 5px 0;">Happy learning,<br><strong style="color: #001a33;">Sherif</strong><br>Founder, Parallel Arabic</p>
+												<p style="margin: 15px 0 5px 0; font-size: 12px;">
+													<a href="${profileUrl}" style="color: #4d5c66;">Manage notification settings</a>
+												</p>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</body>
+		</html>
+	`;
+
+	const text = `
+Your Daily ${dialectName} Challenge is Ready! 🎯
+
+Your personalized challenge for today just dropped — built around your saved words and matched to your level.
+
+It only takes a few minutes. Give it a go!
+
+Take Today's Challenge: ${challengeUrl}
+
+Happy learning,
+Sherif
+Founder, Parallel Arabic
+
+---
+To manage notification settings, visit: ${profileUrl}
+	`.trim();
+
+	try {
+		const mg = getMailgunClient();
+		const data = await mg.messages.create(MAILGUN_DOMAIN, {
+			from: FROM_EMAIL,
+			to: [email],
+			subject: `Your ${dialectName} challenge is ready! 🎯`,
+			text,
+			html,
+		});
+
+		return data;
+	} catch (error) {
+		console.error('Error sending daily challenge email:', error);
+		throw error;
+	}
+};
+
 export const sendWelcomeEmail = async (email: string, userId?: string | null) => {
 	// Require admin access
 	// if (!await verifyAdmin(userId)) {
