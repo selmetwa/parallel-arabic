@@ -2,9 +2,10 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { supabase } from '$lib/supabaseClient';
 import { generateDailyChallenge } from '$lib/server/challenge-generator';
+import { sendDailyChallengeEmail } from '$lib/server/email';
 
 const BATCH_SIZE = parseInt(process.env.CHALLENGE_BATCH_SIZE ?? '15');
-const THREE_DAYS_MS = 3 * 24 * 60 * 60 * 1000;
+const TWO_DAYS_MS = 2 * 24 * 60 * 60 * 1000;
 
 function getTodayMidnight(): number {
 	const now = new Date();
@@ -15,7 +16,7 @@ function getTodayMidnight(): number {
  * GET /api/cron/generate-daily-challenges
  *
  * Vercel cron job that pre-generates daily challenges for users
- * who have been active in the last 3 days.
+ * who have been active in the last 2 days.
  *
  * Schedule: "0 2 * * *" (02:00 UTC daily)
  */
@@ -28,17 +29,17 @@ export const GET: RequestHandler = async ({ request }) => {
 	}
 
 	const todayMidnight = getTodayMidnight();
-	const threeDaysAgo = Date.now() - THREE_DAYS_MS;
+	const twoDaysAgo = Date.now() - TWO_DAYS_MS;
 
 	let generated = 0;
 	let errors = 0;
 
 	try {
-		// Find users active in last 3 days who don't have today's challenge yet
+		// Find users active in last 2 days who don't have today's challenge yet
 		const { data: activeUsers, error: fetchError } = await supabase
 			.from('user')
-			.select('id, target_dialect, proficiency_level')
-			.gte('last_activity_date', threeDaysAgo)
+			.select('id, email, email_notifications_enabled, target_dialect, proficiency_level')
+			.gte('last_activity_date', twoDaysAgo)
 			.not('id', 'in', `(SELECT user_id FROM daily_challenge WHERE challenge_date = ${todayMidnight})`)
 			.limit(BATCH_SIZE);
 
@@ -79,6 +80,13 @@ export const GET: RequestHandler = async ({ request }) => {
 					errors++;
 				} else {
 					generated++;
+					if (userData.email && userData.email_notifications_enabled) {
+						try {
+							await sendDailyChallengeEmail(userData.email, result.challengeId, dialect);
+						} catch (emailErr) {
+							console.error(`Failed to send challenge email to user ${userData.id}:`, emailErr);
+						}
+					}
 				}
 			} catch (e) {
 				console.error(`Unexpected error for user ${userData.id}:`, e);
