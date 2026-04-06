@@ -19,7 +19,7 @@ function getTodayMidnight(): number {
  * who have been active in the last 2 days.
  *
  * Schedule: "0 2 * * *" (02:00 UTC daily)
- */.
+ */
 export const GET: RequestHandler = async ({ request }) => {
 	const authHeader = request.headers.get('authorization');
 	const cronSecret = process.env.CRON_SECRET;
