@@ -14,8 +14,6 @@
 	import Tooltip from '$lib/components/Tooltip.svelte';
 	import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
 	import { fetchUserReviewWords } from '$lib/helpers/fetch-review-words';
-	import { backgroundSentencesStore } from '$lib/store/sentences-store';
-	import { get } from 'svelte/store';
 
 	let { data } = $props();
 
@@ -50,7 +48,7 @@
 	}
 
 	let selectedDialect = $state(getDefaultDialect(data.user));
-	let sentences = $state(get(backgroundSentencesStore).sentences);
+	let sentences = $state<sentenceObjectItem[]>([]);
 
 	let sentence = $derived(sentences[index]);
 	$effect(() => {
@@ -82,14 +80,6 @@
 
 	let sentencesViewed = $state(data.sentencesViewed);
 
-	// Populate from background-generated sentences when they arrive
-	$effect(() => {
-		const state = $backgroundSentencesStore;
-		if (sentences.length === 0 && state.sentences.length > 0) {
-			sentences = state.sentences;
-			index = 0;
-		}
-	});
 
 	function toggleLearningTopic(topicValue: string) {
 		if (selectedLearningTopics.includes(topicValue)) {

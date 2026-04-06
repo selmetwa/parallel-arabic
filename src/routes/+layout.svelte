@@ -22,8 +22,6 @@
 		onImportComplete,
 		onImportError
 	} from '$lib/stores/import-job';
-	import { generateBackgroundSentences } from '$lib/store/sentences-store';
-	import { get } from 'svelte/store';
 	import {
 		showWordImportSuccessToast,
 		showWordImportErrorToast,
@@ -124,14 +122,6 @@
 		});
 
 		resumeImportJobIfNeeded().catch(() => {});
-
-		// Pre-generate sentences in the background using the user's dialect and proficiency
-		if (data.targetDialect) {
-			generateBackgroundSentences(
-				data.targetDialect,
-				data.proficiencyLevel ?? null
-			).catch(() => {});
-		}
 
 		// Only inject Vercel analytics when NOT in native app
 		if (!isNativeApp()) {
