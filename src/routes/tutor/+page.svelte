@@ -503,48 +503,10 @@
         throw new Error('No text transcribed');
       }
 
-      const translateResponse = await fetch('/api/translate-user-message', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          message: userMessage,
-          dialect: selectedDialect,
-          inputLanguage: recordingLanguage
-        })
-      });
-
-      if (!translateResponse.ok) {
-        throw new Error('Failed to translate message');
-      }
-
-      const translateData = await translateResponse.json();
-
       isTranscribing = false;
       isGettingResponse = true;
-      scrollToBottom();
 
-      const userMsg: ConversationMessage = {
-        id: Date.now().toString(),
-        type: 'user',
-        arabic: translateData.arabic,
-        english: translateData.english,
-        transliteration: translateData.transliteration,
-        feedback: translateData.feedback || '',
-        suggestedSentence: translateData.suggestedSentence || null,
-        originalLanguage: recordingLanguage,
-        timestamp: new Date(),
-        showArabic: true,
-        showEnglish: true,
-        showTransliteration: true,
-        showFeedback: true
-      };
-      conversation = [...conversation, userMsg];
-      scrollToBottom();
-      
-      setTimeout(() => scrollToBottom(), 100);
-
+      // Build history before adding the new user message
       const conversationHistory = conversation
         .filter(msg => msg.type === 'user' || msg.type === 'tutor')
         .map(msg => {
@@ -562,24 +524,73 @@
         })
         .slice(-10);
 
-      const tutorResponse = await fetch('/api/tutor-chat', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          message: userMessage,
-          dialect: selectedDialect,
-          conversation: conversationHistory,
-          conversationId: conversationId // Pass conversation ID for memory
+      // Show optimistic user message immediately with raw transcription
+      const optimisticId = Date.now().toString();
+      const optimisticMsg: ConversationMessage = {
+        id: optimisticId,
+        type: 'user',
+        arabic: userMessage,
+        english: '',
+        transliteration: '',
+        wordAlignments: [],
+        feedback: '',
+        suggestedSentence: null,
+        originalLanguage: recordingLanguage,
+        timestamp: new Date(),
+        showArabic: true,
+        showEnglish: true,
+        showTransliteration: true,
+        showFeedback: true
+      };
+      conversation = [...conversation, optimisticMsg];
+      scrollToBottom();
+
+      // Fire translate and tutor-chat in parallel
+      const [translateData, tutorData] = await Promise.all([
+        fetch('/api/translate-user-message', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            message: userMessage,
+            dialect: selectedDialect,
+            inputLanguage: recordingLanguage
+          })
+        }).then(r => {
+          if (!r.ok) throw new Error('Failed to translate message');
+          return r.json();
+        }),
+        fetch('/api/tutor-chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            message: userMessage,
+            dialect: selectedDialect,
+            conversation: conversationHistory,
+            conversationId: conversationId
+          })
+        }).then(r => {
+          if (!r.ok) throw new Error('Failed to get tutor response');
+          return r.json();
         })
-      });
+      ]);
 
-      if (!tutorResponse.ok) {
-        throw new Error('Failed to get tutor response');
-      }
+      // Update optimistic message with full translation data
+      conversation = conversation.map(msg =>
+        msg.id === optimisticId
+          ? {
+              ...msg,
+              arabic: translateData.arabic,
+              english: translateData.english,
+              transliteration: translateData.transliteration,
+              wordAlignments: translateData.wordAlignments || [],
+              feedback: translateData.feedback || '',
+              suggestedSentence: translateData.suggestedSentence || null
+            }
+          : msg
+      );
 
-      const tutorData = await tutorResponse.json();
+      scrollToBottom();
+      setTimeout(() => scrollToBottom(), 100);
       
       // Store conversation ID for memory persistence
       if (tutorData.conversationId && !conversationId) {
@@ -1498,7 +1509,9 @@
                                   onclick={() => handleWordClick(wordAlign.arabic, 'arabic', message)}
                                   class="flex flex-col items-center px-2 py-2 sm:px-3 sm:py-3 rounded-lg hover:bg-tile-500 hover:shadow-md transition-all duration-200 cursor-pointer border-2 border-transparent hover:border-tile-600"
                                 >
-                                  <span class="text-xs sm:text-sm text-text-200 mb-1 opacity-90">{wordAlign.english}</span>
+                                  {#if message.showEnglish !== false}
+                                    <span class="text-xs sm:text-sm text-text-200 mb-1 opacity-90">{wordAlign.english}</span>
+                                  {/if}
                                   <span class="text-xl sm:text-2xl md:text-3xl font-semibold text-text-300">{wordAlign.arabic}</span>
                                 </button>
                               {/each}
@@ -1615,7 +1628,9 @@
                                   onclick={() => handleWordClick(wordAlign.arabic, 'arabic', message)}
                                   class="flex flex-col items-center px-2 py-2 sm:px-3 sm:py-3 rounded-lg hover:bg-tile-500 hover:shadow-md transition-all duration-200 cursor-pointer border-2 border-transparent hover:border-tile-600"
                                 >
-                                  <span class="text-xs sm:text-sm text-text-200 mb-1 opacity-90">{wordAlign.english}</span>
+                                  {#if message.showEnglish !== false}
+                                    <span class="text-xs sm:text-sm text-text-200 mb-1 opacity-90">{wordAlign.english}</span>
+                                  {/if}
                                   <span class="text-xl sm:text-2xl md:text-3xl font-semibold text-text-300">{wordAlign.arabic}</span>
                                 </button>
                               {/each}
