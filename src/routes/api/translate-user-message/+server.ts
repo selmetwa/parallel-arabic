@@ -4,7 +4,7 @@ import { env } from '$env/dynamic/private';
 import { GoogleGenAI } from "@google/genai";
 import { type Dialect } from '$lib/types/index';
 import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
-import { createTranslationWithFeedbackSchema } from '$lib/utils/gemini-schemas';
+import { createTranslationWithFeedbackAndAlignmentsSchema } from '$lib/utils/gemini-schemas';
 import { generateContentWithRetry, GeminiApiError } from '$lib/utils/gemini-api-retry';
 
 const dialectNames: Record<Dialect, string> = {
@@ -70,12 +70,17 @@ Format your response as JSON with this exact structure:
   "english": "English translation here",
   "transliteration": "transliteration here",
   "feedback": "Detailed grammar feedback here, or empty string if no errors",
+  "wordAlignments": [
+    { "arabic": "first Arabic word", "english": "its literal English meaning", "transliteration": "its transliteration" },
+    { "arabic": "second Arabic word", "english": "its literal English meaning", "transliteration": "its transliteration" }
+  ],
   "suggestedSentence": {
     "arabic": "A single corrected sentence incorporating ONLY objective grammatical fixes (wrong verb conjugation, wrong pronoun-verb agreement, incorrect word form). Leave this field out entirely if there are no objective errors — do NOT generate a suggestion for stylistic or naturalness improvements alone.",
     "transliteration": "Transliteration of the suggested sentence"
   }
 }
 
+IMPORTANT: wordAlignments must have one entry per Arabic word in the arabic field, in the same order they appear. Provide the literal/gloss English meaning for each word (not the full sentence translation).
 IMPORTANT: Only include "suggestedSentence" when there is a clear, objective grammar error. If the input is grammatically correct (even if not the most natural phrasing), omit the "suggestedSentence" field entirely.`;
     } else {
       // User spoke English - translate to Arabic and provide transliteration
@@ -92,17 +97,22 @@ Format your response as JSON with this exact structure:
   "arabic": "Arabic translation in ${dialectName}",
   "english": "original English text here",
   "transliteration": "transliteration of Arabic here",
-  "feedback": "Feedback on the translation or suggestions here (empty string if no issues)"
+  "feedback": "Feedback on the translation or suggestions here (empty string if no issues)",
+  "wordAlignments": [
+    { "arabic": "first Arabic word", "english": "its literal English meaning", "transliteration": "its transliteration" },
+    { "arabic": "second Arabic word", "english": "its literal English meaning", "transliteration": "its transliteration" }
+  ]
 }
 
+IMPORTANT: wordAlignments must have one entry per Arabic word in the arabic field, in the same order they appear. Provide the literal/gloss English meaning for each word (not the full sentence translation).
 Do not include a suggestedSentence field for English input — the arabic field already contains the correct translation.`;
     }
 
     const fullPrompt = `${systemPrompt}\n\nUser message: ${message}`;
 
-    const translationWithFeedbackSchema = createTranslationWithFeedbackSchema();
+    const translationWithFeedbackSchema = createTranslationWithFeedbackAndAlignmentsSchema();
     const response = await generateContentWithRetry(ai, {
-      model: "gemini-3.1-pro-preview",
+      model: "gemini-3-flash-preview",
       contents: fullPrompt,
       // @ts-expect-error - generationConfig is valid but types may be outdated
       generationConfig: {
@@ -160,6 +170,7 @@ Do not include a suggestedSentence field for English input — the arabic field 
       english: parsedResponse.english,
       transliteration: parsedResponse.transliteration,
       feedback: parsedResponse.feedback || '',
+      wordAlignments: parsedResponse.wordAlignments || [],
       suggestedSentence: parsedResponse.suggestedSentence || null,
       timestamp: new Date().toISOString()
     });

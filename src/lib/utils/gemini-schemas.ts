@@ -222,6 +222,30 @@ export function createTranslationWithFeedbackSchema() {
 export type TranslationWithFeedbackSchema = z.infer<ReturnType<typeof createTranslationWithFeedbackSchema>['zodSchema']>;
 
 /**
+ * Schema for translate-user-message endpoint with word-level alignments for interlinear display
+ */
+export function createTranslationWithFeedbackAndAlignmentsSchema() {
+	const schema = z.object({
+		arabic: z.string(),
+		english: z.string(),
+		transliteration: z.string(),
+		feedback: z.string(),
+		wordAlignments: z.array(wordAlignmentSchema),
+		suggestedSentence: z.object({
+			arabic: z.string(),
+			transliteration: z.string()
+		}).optional()
+	});
+
+	return {
+		zodSchema: schema,
+		jsonSchema: zodToJsonSchema(schema)
+	};
+}
+
+export type TranslationWithFeedbackAndAlignmentsSchema = z.infer<ReturnType<typeof createTranslationWithFeedbackAndAlignmentsSchema>['zodSchema']>;
+
+/**
  * Schema for YouTube transcript formatting
  */
 export function createFormattedVideoSchema() {
