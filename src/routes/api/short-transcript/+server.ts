@@ -90,7 +90,7 @@ If the original is in Arabic, keep it. If in English, translate to Egyptian Arab
 
 	try {
 		const response = await generateContentWithRetry(ai, {
-			model: 'gemini-2.0-flash',
+			model: 'gemini-2.5-flash',
 			contents: `${systemPrompt}\n\n${userPrompt}`,
 			// @ts-expect-error - generationConfig types may be outdated
 			generationConfig: {
