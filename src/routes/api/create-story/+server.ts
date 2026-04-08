@@ -421,7 +421,7 @@ Dialect flavor words: وش، زين، هيه، عيل، وايد، كذا، لي
 	try {
 		const storySchema = createStorySchema(storyType === 'conversation');
 		const response = await generateContentWithRetry(ai, {
-			model: 'gemini-3.1-pro-preview',
+			model: 'gemini-2.5-flash',
 			contents: question,
 			// @ts-expect-error - generationConfig is valid but types may be outdated
 			generationConfig: {

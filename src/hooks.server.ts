@@ -1,4 +1,4 @@
-import * as Sentry from '@sentry/sveltekit';
+// import * as Sentry from '@sentry/sveltekit';
 import { createServerClient } from '@supabase/ssr';
 import { redirect, type Handle } from '@sveltejs/kit';
 import { sequence } from '@sveltejs/kit/hooks';
@@ -34,15 +34,18 @@ const redirects: Handle = async ({ event, resolve }) => {
 	return resolve(event);
 };
 
-Sentry.init({
-	dsn: process.env.SENTRY_DSN,
-	environment: process.env.SENTRY_ENVIRONMENT,
-	release: process.env.SENTRY_RELEASE,
-	sendDefaultPii: true,
-	tracesSampleRate: 1.0
-});
+// Sentry.init({
+// 	dsn: process.env.SENTRY_DSN,
+// 	environment: process.env.SENTRY_ENVIRONMENT,
+// 	release: process.env.SENTRY_RELEASE,
+// 	sendDefaultPii: true,
+// 	tracesSampleRate: 1.0
+// });
 
-export const handleError = Sentry.handleErrorWithSentry();
+export const handleError = ({ error }: { error: unknown }) => {
+	console.error(error);
+};
+// export const handleError = Sentry.handleErrorWithSentry();
 
 // Only log in development mode to avoid production overhead
 const DEBUG = dev;
@@ -188,4 +191,5 @@ const auth: Handle = async ({ event, resolve }) => {
 	return resolve(event);
 };
 
-export const handle: Handle = sequence(Sentry.sentryHandle(), redirects, supabase, authGuard, auth);
+export const handle: Handle = sequence(redirects, supabase, authGuard, auth);
+// export const handle: Handle = sequence(Sentry.sentryHandle(), redirects, supabase, authGuard, auth);

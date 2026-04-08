@@ -120,7 +120,7 @@ You MUST provide at least 2 topics and at least 1 insight.
 Respond with valid JSON only.`;
 
     const response = await generateContentWithRetry(ai, {
-      model: "gemini-2.0-flash",
+      model: "gemini-2.5-flash",
       contents: systemPrompt,
       // @ts-expect-error - generationConfig is valid but types may be outdated
       generationConfig: {
