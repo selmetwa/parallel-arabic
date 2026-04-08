@@ -1,6 +1,8 @@
 <script lang="ts">
   import { Howl } from 'howler';
   import { type Dialect } from '$lib/types/index';
+  import PaywallModal from '$lib/components/PaywallModal.svelte';
+  import AuthModal from '$lib/components/AuthModal.svelte';
   
   interface Props {
     text: string;
@@ -12,10 +14,25 @@
   let { text, dialect = 'egyptian-arabic', audioUrl, className = '' }: Props = $props();
 
 	let isLoading = $state(false);
+	let paywalled = $state(false);
+	let isPaywallModalOpen = $state(false);
+	let isAuthModalOpen = $state(false);
 	let playbackRate = $state(0.9);
 	let currentSound: Howl | null = null;
 
+	function handleClosePaywallModal() {
+		isPaywallModalOpen = false;
+	}
+
+	function handleCloseAuthModal() {
+		isAuthModalOpen = false;
+	}
+
 	const speakArabic = async () => {
+		if (paywalled) {
+			isPaywallModalOpen = true;
+			return;
+		}
 		isLoading = true;
 		
 		// Stop any currently playing sound
@@ -43,6 +60,20 @@
 				});
 
 				if (!res.ok) {
+					if (res.status === 401) {
+						isAuthModalOpen = true;
+						isLoading = false;
+						return;
+					}
+					if (res.status === 403) {
+						const body = await res.json();
+						if (body.requiresSubscription) {
+							paywalled = true;
+							isPaywallModalOpen = true;
+							isLoading = false;
+							return;
+						}
+					}
 					throw new Error(`TTS request failed: ${res.statusText}`);
 				}
 
@@ -82,6 +113,9 @@
 		}
 	};
 </script>
+
+<PaywallModal isOpen={isPaywallModalOpen} handleCloseModal={handleClosePaywallModal} />
+<AuthModal isOpen={isAuthModalOpen} handleCloseModal={handleCloseAuthModal} />
 
 <button
 	type="button"

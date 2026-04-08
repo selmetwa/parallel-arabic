@@ -20,7 +20,7 @@
     <!-- Header -->
     <div class="bg-tile-500 border-b border-tile-600 p-6 text-center">
         <h2 class="text-2xl font-bold text-text-300 mb-2">Login Required</h2>
-        <p class="text-text-200">Please log in to access lessons</p>
+        <p class="text-text-200">Please log in to access this content</p>
     </div>
 
     <!-- Content -->
@@ -28,7 +28,6 @@
         <div class="text-center space-y-4">
             <div class="text-6xl mb-4">🔒</div>
             <p class="text-lg text-text-200">
-                You need to be logged in to access structured and unstructured lessons. 
                 Create an account or log in to continue your learning journey.
             </p>
         </div>

@@ -243,7 +243,6 @@
 			
 			const updatedSentences = [...sentences, ...newSentences];
 			sentences = updatedSentences;
-			backgroundSentencesStore.update((s) => ({ ...s, sentences: updatedSentences }));
 
 			showSpeakSentenceSuccessToast(toastId, newSentences.length, selectedDialect);
 			
@@ -312,7 +311,6 @@
 	function resetSentences() {
 		sentences = [];
 		index = 0;
-		backgroundSentencesStore.update((s) => ({ ...s, sentences: [] }));
 		updateUrl('speak_sentence', '0');
 	}
 
