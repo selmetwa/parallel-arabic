@@ -212,6 +212,7 @@ CREATE TABLE public.user (
   email_notifications_enabled boolean NOT NULL DEFAULT true,
   xp_this_week integer NOT NULL DEFAULT 0,
   leaderboard_opt_out boolean NOT NULL DEFAULT false,
+  tts_calls_count integer NOT NULL DEFAULT 0,
   CONSTRAINT user_pkey PRIMARY KEY (id)
 );
 CREATE TABLE public.user_daily_activity (
