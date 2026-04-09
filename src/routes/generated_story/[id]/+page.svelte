@@ -162,6 +162,7 @@
 	const sentences = $derived(story?.sentences || []);
 	const keyVocab = $derived(story?.keyVocab || []);
 	const quiz = $derived(story?.quiz || null);
+	const hasTashkeel = $derived(sentences.some((s: any) => s.arabicTashkeel?.text));
 	let currentPlayingSentenceIndex = $state<number | null>(null);
 
 	function handleSentenceChange(index: number | null) {
@@ -412,10 +413,12 @@
             <input type="checkbox" bind:checked={showTransliteration} class="w-4 h-4 rounded" />
             <span class="text-xs text-text-200">Trans</span>
           </label>
+          {#if hasTashkeel}
           <label class="flex items-center gap-1.5 cursor-pointer">
             <input type="checkbox" bind:checked={showTashkeel} class="w-4 h-4 rounded" />
             <span class="text-xs text-text-200">Tashkeel</span>
           </label>
+          {/if}
         </div>
       </div>
 
@@ -508,6 +511,7 @@
         </label>
 
         <!-- Tashkeel Toggle -->
+        {#if hasTashkeel}
         <label class="flex items-center gap-2 cursor-pointer">
           <div class="relative">
             <input
@@ -520,6 +524,7 @@
           </div>
           <span class="text-sm text-text-300">Tashkeel</span>
         </label>
+        {/if}
       </div>
     </div>
   </header>
