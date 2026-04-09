@@ -39,6 +39,7 @@ function cleanText(text: string, type: 'arabic' | 'english' | 'transliteration')
 
 type SentenceType = {
   arabic: string;
+  arabicTashkeel: string;
   english: string;
   transliteration: string;
 };
@@ -277,7 +278,9 @@ export const POST: RequestHandler = async ({ request }) => {
     ${config.description}
 
     Can you make sure that there are no diacratics in the arabic sentences. Nothing like [أَ إِ آ] please. (THIS is very important)
-    
+
+    For the arabicTashkeel field: provide the SAME sentence as arabic but WITH complete tashkeel/diacritics (fatha, kasra, damma, sukun, shadda, tanwin) to help learners with pronunciation. This field MUST contain diacritics.
+
     Can you make sure that you use a mix of subjects, for example (I, you, he, she, we, they).
 
     Can you make sure that you use a mix of past, present, and future tenses.
@@ -295,9 +298,10 @@ export const POST: RequestHandler = async ({ request }) => {
 
     REMEMBER: Maximum 2 sentences per topic area. Ensure diverse themes across all 5 sentences.
 
-    Can you make sure each sentence follows this format 
+    Can you make sure each sentence follows this format
     {
-		  arabic: string;
+		  arabic: string; (no diacritics)
+		  arabicTashkeel: string; (same sentence with full tashkeel diacritics)
 		  english: string;
 		  transliteration: string;
 	  }
@@ -356,22 +360,23 @@ IMPORTANT:
           console.log('Gemini generated', parsedContent.sentences.length, 'sentences');
           
           // Validate we have complete sentences
-          const incompleteSentences = parsedContent.sentences.filter((s: SentenceType) => 
+          const incompleteSentences = parsedContent.sentences.filter((s: SentenceType) =>
             !s.arabic || !s.english || !s.transliteration ||
             s.arabic.trim() === '' || s.english.trim() === '' || s.transliteration.trim() === ''
           );
-          
+
           if (incompleteSentences.length > 0) {
             console.warn(`Found ${incompleteSentences.length} incomplete sentences, filtering them out`);
-            parsedContent.sentences = parsedContent.sentences.filter((s: SentenceType) => 
+            parsedContent.sentences = parsedContent.sentences.filter((s: SentenceType) =>
               s.arabic && s.english && s.transliteration &&
               s.arabic.trim() !== '' && s.english.trim() !== '' && s.transliteration.trim() !== ''
             );
           }
-          
-          // Clean the sentences first
+
+          // Clean the sentences — do NOT normalize arabicTashkeel (it must keep diacritics)
           parsedContent.sentences = parsedContent.sentences.map((sentence: SentenceType) => ({
             arabic: cleanText(sentence.arabic || '', 'arabic'),
+            arabicTashkeel: (sentence.arabicTashkeel || sentence.arabic || '').trim(),
             english: cleanText(sentence.english || '', 'english'),
             transliteration: cleanText(sentence.transliteration || '', 'transliteration')
           }));

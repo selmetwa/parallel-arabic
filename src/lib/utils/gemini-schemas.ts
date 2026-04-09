@@ -35,6 +35,10 @@ function createSentenceSchema(includeSpeaker: boolean = false) {
 		text: z.string()
 	});
 
+	const arabicTashkeelSchema = z.object({
+		text: z.string()
+	});
+
 	const englishSchema = z.object({
 		text: z.string()
 	});
@@ -53,6 +57,7 @@ function createSentenceSchema(includeSpeaker: boolean = false) {
 
 		return z.object({
 			arabic: arabicSchema,
+			arabicTashkeel: arabicTashkeelSchema,
 			english: englishSchema,
 			transliteration: transliterationSchema,
 			speaker: speakerSchema,
@@ -62,6 +67,7 @@ function createSentenceSchema(includeSpeaker: boolean = false) {
 
 	return z.object({
 		arabic: arabicSchema,
+		arabicTashkeel: arabicTashkeelSchema,
 		english: englishSchema,
 		transliteration: transliterationSchema,
 		wordAlignments: wordAlignmentsSchema
@@ -123,8 +129,12 @@ export type StorySchema = z.infer<ReturnType<typeof createStorySchema>['zodSchem
  * Schema for sentence generation endpoints
  */
 export function createSentencesSchema() {
+	const sentenceSchema = textWithTranslationSchema.extend({
+		arabicTashkeel: z.string()
+	});
+
 	const schema = z.object({
-		sentences: z.array(textWithTranslationSchema).min(1)
+		sentences: z.array(sentenceSchema).min(1)
 	});
 
 	return {

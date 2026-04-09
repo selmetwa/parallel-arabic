@@ -42,6 +42,7 @@
 	});
 	let showHint = $state(false);
 	let showAnswer = $state(false);
+	let showTashkeel = $state(false);
 	let selectedObj = $state({} as sentenceObjectItem);
 	let selected = $state(null);
 	
@@ -107,6 +108,7 @@
 		if (sentenceObj) {
 			selectedObj = {} as sentenceObjectItem;
 			showHint = false;
+			showTashkeel = false;
 			selected = null;
 			isCorrect = false;
 			isIncorrect = false;
@@ -139,6 +141,11 @@
 		<Button onClick={() => (showAnswer = !showAnswer)} type="button">
 			{showAnswer ? 'Hide' : 'Show'} Answer
 		</Button>
+		{#if sentenceObj.answer.arabicTashkeel}
+		<Button onClick={() => (showTashkeel = !showTashkeel)} type="button">
+			{showTashkeel ? 'Hide' : 'Show'} Tashkeel
+		</Button>
+		{/if}
 		<SaveButton type="sentence" objectToSave={{
 			arabic: sentenceObj.answer.arabic,
 			english: sentenceObj.answer.english,
@@ -154,7 +161,7 @@
 				<p class="text-xl text-text-200">({sentenceObj.answer.transliteration})</p>
 			{/if}
 			{#if showAnswer}
-				<p class="text-2xl text-text-300">({sentenceObj.answer.arabic})</p>
+				<p class="text-2xl text-text-300" dir="rtl">({showTashkeel && sentenceObj.answer.arabicTashkeel ? sentenceObj.answer.arabicTashkeel : sentenceObj.answer.arabic})</p>
 			{/if}
 		</div>
 	</div>

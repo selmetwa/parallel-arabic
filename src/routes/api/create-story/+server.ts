@@ -403,7 +403,8 @@ Dialect flavor words: وش، زين، هيه، عيل، وايد، كذا، لي
     }
     where each sentence looks like 
 
-        arabic: {text: string},
+        arabic: {text: string}, (no diacritics)
+        arabicTashkeel: {text: string}, (same sentence with full tashkeel diacritics for pronunciation)
         english: {text: string},
         transliteration: {text: string},
         ${storyType === 'conversation' ? 'speaker: {name: string},' : ''}

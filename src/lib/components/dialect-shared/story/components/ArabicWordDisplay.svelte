@@ -11,6 +11,7 @@
 
 	type TSentence = {
 		arabic: { text: string; speaker?: string };
+		arabicTashkeel?: { text: string };
 		english: { text: string };
 		transliteration: { text: string };
 		wordAlignments?: TWordAlignment[];
@@ -22,9 +23,10 @@
 		dialect: Dialect;
 		showEnglish?: boolean;
 		showTransliteration?: boolean;
+		showTashkeel?: boolean;
 	}
 
-	let { sentence, setActiveWord, dialect, showEnglish = true, showTransliteration = true }: Props =
+	let { sentence, setActiveWord, dialect, showEnglish = true, showTransliteration = true, showTashkeel = false }: Props =
 		$props();
 
 	// Word cache for instant re-display on repeated clicks
@@ -38,6 +40,9 @@
 
 	// Derived arabic words for fallback mode
 	let arabicWords = $derived(sentence.arabic?.text?.split(' ') || []);
+
+	// Tashkeel words split from the full tashkeel sentence
+	let tashkeelWords = $derived(sentence.arabicTashkeel?.text?.split(' ') || []);
 
 	// Words used for selection (arabic tokens from whichever mode is active)
 	let wordList = $derived(
@@ -221,6 +226,7 @@
 	{#if sentence.wordAlignments?.length}
 		<!-- Word-aligned display -->
 		{#each sentence.wordAlignments as wordAlign, wordIndex}
+			{@const displayArabic = showTashkeel && tashkeelWords[wordIndex] ? tashkeelWords[wordIndex] : wordAlign.arabic}
 			<button
 				class={cn(
 					'flex flex-col items-center px-2 py-2 sm:px-3 sm:py-3 rounded-lg transition-all duration-200 cursor-pointer group border-2',
@@ -247,13 +253,13 @@
 					</span>
 				{/if}
 				<span class="text-xl sm:text-2xl md:text-3xl font-semibold text-text-300">
-					{wordAlign.arabic}
+					{displayArabic}
 				</span>
 			</button>
 		{/each}
 	{:else}
 		<!-- Fallback: plain Arabic word tokens -->
-		{#each arabicWords as arabicWord, wordIndex}
+		{#each (showTashkeel && tashkeelWords.length ? tashkeelWords : arabicWords) as arabicWord, wordIndex}
 			<button
 				class={cn(
 					'px-2 py-1 sm:px-3 sm:py-2 rounded-lg transition-all duration-200 cursor-pointer border-2 text-xl sm:text-2xl md:text-3xl font-semibold text-text-300',
@@ -261,7 +267,7 @@
 						? 'bg-blue-200 border-blue-400 shadow-md'
 						: 'border-transparent hover:bg-tile-500 hover:shadow-md hover:border-tile-600'
 				)}
-				onclick={() => fetchDefinition(arabicWord.replace(/[،,]/g, ''))}
+				onclick={() => fetchDefinition((arabicWords[wordIndex] || arabicWord).replace(/[،,]/g, ''))}
 				onmousedown={(e) => handleWordMouseDown(wordIndex, e)}
 				onmouseenter={() => handleWordMouseEnter(wordIndex)}
 			>

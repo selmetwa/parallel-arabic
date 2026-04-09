@@ -114,9 +114,10 @@
 	let mode = $state(Mode.Condensed);
 	let showEnglish = $state(false);
 	let showTransliteration = $state(false);
+	let showTashkeel = $state(false);
 
 	// Per-sentence overrides (null = follow global)
-	let sentenceOverrides = $state<Record<number, { english: boolean; transliteration: boolean }>>({});
+	let sentenceOverrides = $state<Record<number, { english: boolean; transliteration: boolean; tashkeel: boolean }>>({});
 
 	function getSentenceEnglish(i: number) {
 		return sentenceOverrides[i]?.english ?? showEnglish;
@@ -124,12 +125,16 @@
 	function getSentenceTransliteration(i: number) {
 		return sentenceOverrides[i]?.transliteration ?? showTransliteration;
 	}
+	function getSentenceTashkeel(i: number) {
+		return sentenceOverrides[i]?.tashkeel ?? showTashkeel;
+	}
 	function toggleSentenceEnglish(i: number) {
 		sentenceOverrides = {
 			...sentenceOverrides,
 			[i]: {
 				english: !(sentenceOverrides[i]?.english ?? showEnglish),
-				transliteration: sentenceOverrides[i]?.transliteration ?? showTransliteration
+				transliteration: sentenceOverrides[i]?.transliteration ?? showTransliteration,
+				tashkeel: sentenceOverrides[i]?.tashkeel ?? showTashkeel
 			}
 		};
 	}
@@ -138,7 +143,18 @@
 			...sentenceOverrides,
 			[i]: {
 				english: sentenceOverrides[i]?.english ?? showEnglish,
-				transliteration: !(sentenceOverrides[i]?.transliteration ?? showTransliteration)
+				transliteration: !(sentenceOverrides[i]?.transliteration ?? showTransliteration),
+				tashkeel: sentenceOverrides[i]?.tashkeel ?? showTashkeel
+			}
+		};
+	}
+	function toggleSentenceTashkeel(i: number) {
+		sentenceOverrides = {
+			...sentenceOverrides,
+			[i]: {
+				english: sentenceOverrides[i]?.english ?? showEnglish,
+				transliteration: sentenceOverrides[i]?.transliteration ?? showTransliteration,
+				tashkeel: !(sentenceOverrides[i]?.tashkeel ?? showTashkeel)
 			}
 		};
 	}
@@ -396,6 +412,10 @@
             <input type="checkbox" bind:checked={showTransliteration} class="w-4 h-4 rounded" />
             <span class="text-xs text-text-200">Trans</span>
           </label>
+          <label class="flex items-center gap-1.5 cursor-pointer">
+            <input type="checkbox" bind:checked={showTashkeel} class="w-4 h-4 rounded" />
+            <span class="text-xs text-text-200">Tashkeel</span>
+          </label>
         </div>
       </div>
 
@@ -486,6 +506,20 @@
           </div>
           <span class="text-sm text-text-300">Transliteration</span>
         </label>
+
+        <!-- Tashkeel Toggle -->
+        <label class="flex items-center gap-2 cursor-pointer">
+          <div class="relative">
+            <input
+              type="checkbox"
+              bind:checked={showTashkeel}
+              class="sr-only peer"
+            />
+            <div class="w-10 h-5 bg-tile-600 rounded-full peer peer-checked:bg-blue-500 transition-colors"></div>
+            <div class="absolute left-0.5 top-0.5 w-4 h-4 bg-white rounded-full transition-transform peer-checked:translate-x-5"></div>
+          </div>
+          <span class="text-sm text-text-300">Tashkeel</span>
+        </label>
       </div>
     </div>
   </header>
@@ -523,6 +557,7 @@
       {@const isCurrentlyPlaying = currentPlayingSentenceIndex === sentenceIndex}
       {@const sentenceEnglish = getSentenceEnglish(sentenceIndex)}
       {@const sentenceTransliteration = getSentenceTransliteration(sentenceIndex)}
+      {@const sentenceTashkeel = getSentenceTashkeel(sentenceIndex)}
 
       <section
         data-sentence-index={sentenceIndex}
@@ -569,6 +604,7 @@
           dialect={storyDialect as any}
           showEnglish={sentenceEnglish}
           showTransliteration={sentenceTransliteration}
+          showTashkeel={sentenceTashkeel}
         />
 
         <!-- Footer with sentence number, per-sentence toggles, and audio -->
@@ -585,6 +621,13 @@
               title={sentenceTransliteration ? 'Hide transliteration' : 'Show transliteration'}
               class={cn("text-xs transition-opacity", sentenceTransliteration ? "opacity-40 hover:opacity-70" : "opacity-20 hover:opacity-50 line-through")}
             >Trans</button>
+            {#if sentence.arabicTashkeel?.text}
+            <button
+              onclick={() => toggleSentenceTashkeel(sentenceIndex)}
+              title={sentenceTashkeel ? 'Hide tashkeel' : 'Show tashkeel'}
+              class={cn("text-xs transition-opacity", sentenceTashkeel ? "opacity-40 hover:opacity-70" : "opacity-20 hover:opacity-50 line-through")}
+            >Tashkeel</button>
+            {/if}
             <AudioButton text={sentence.arabic.text} dialect={storyDialect as any} />
           </div>
         </div>

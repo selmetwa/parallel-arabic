@@ -26,9 +26,10 @@
 	let mode = $state(Mode.Condensed);
 	let showEnglish = $state(true);
 	let showTransliteration = $state(true);
+	let showTashkeel = $state(false);
 
 	// Per-sentence overrides (null = follow global)
-	let sentenceOverrides = $state<Record<number, { english: boolean; transliteration: boolean }>>({});
+	let sentenceOverrides = $state<Record<number, { english: boolean; transliteration: boolean; tashkeel: boolean }>>({});
 
 	function getSentenceEnglish(i: number) {
 		return sentenceOverrides[i]?.english ?? showEnglish;
@@ -36,12 +37,16 @@
 	function getSentenceTransliteration(i: number) {
 		return sentenceOverrides[i]?.transliteration ?? showTransliteration;
 	}
+	function getSentenceTashkeel(i: number) {
+		return sentenceOverrides[i]?.tashkeel ?? showTashkeel;
+	}
 	function toggleSentenceEnglish(i: number) {
 		sentenceOverrides = {
 			...sentenceOverrides,
 			[i]: {
 				english: !(sentenceOverrides[i]?.english ?? showEnglish),
-				transliteration: sentenceOverrides[i]?.transliteration ?? showTransliteration
+				transliteration: sentenceOverrides[i]?.transliteration ?? showTransliteration,
+				tashkeel: sentenceOverrides[i]?.tashkeel ?? showTashkeel
 			}
 		};
 	}
@@ -50,7 +55,18 @@
 			...sentenceOverrides,
 			[i]: {
 				english: sentenceOverrides[i]?.english ?? showEnglish,
-				transliteration: !(sentenceOverrides[i]?.transliteration ?? showTransliteration)
+				transliteration: !(sentenceOverrides[i]?.transliteration ?? showTransliteration),
+				tashkeel: sentenceOverrides[i]?.tashkeel ?? showTashkeel
+			}
+		};
+	}
+	function toggleSentenceTashkeel(i: number) {
+		sentenceOverrides = {
+			...sentenceOverrides,
+			[i]: {
+				english: sentenceOverrides[i]?.english ?? showEnglish,
+				transliteration: sentenceOverrides[i]?.transliteration ?? showTransliteration,
+				tashkeel: !(sentenceOverrides[i]?.tashkeel ?? showTashkeel)
 			}
 		};
 	}
@@ -241,6 +257,20 @@ $inspect(activeWordObj)
 							</div>
 							<span class="text-sm text-text-300">Transliteration</span>
 						</label>
+
+						<!-- Tashkeel Toggle -->
+						<label class="flex items-center gap-2 cursor-pointer">
+							<div class="relative">
+								<input
+									type="checkbox"
+									bind:checked={showTashkeel}
+									class="sr-only peer"
+								/>
+								<div class="w-10 h-5 bg-tile-600 rounded-full peer peer-checked:bg-blue-500 transition-colors"></div>
+								<div class="absolute left-0.5 top-0.5 w-4 h-4 bg-white rounded-full transition-transform peer-checked:translate-x-5"></div>
+							</div>
+							<span class="text-sm text-text-300">Tashkeel</span>
+						</label>
 					</div>
 				</div>
 			</div>
@@ -260,6 +290,7 @@ $inspect(activeWordObj)
 		{#each sentences as sentence, sentenceIndex}
 			{@const sentenceEnglish = getSentenceEnglish(sentenceIndex)}
 			{@const sentenceTransliteration = getSentenceTransliteration(sentenceIndex)}
+			{@const sentenceTashkeel = getSentenceTashkeel(sentenceIndex)}
 
 			<section
 				data-sentence-index={sentenceIndex}
@@ -302,6 +333,7 @@ $inspect(activeWordObj)
 					dialect="egyptian-arabic"
 					showEnglish={sentenceEnglish}
 					showTransliteration={sentenceTransliteration}
+					showTashkeel={sentenceTashkeel}
 				/>
 
 				<!-- Footer with sentence number, per-sentence toggles, and audio -->
@@ -318,6 +350,13 @@ $inspect(activeWordObj)
 							title={sentenceTransliteration ? 'Hide transliteration' : 'Show transliteration'}
 							class={sentenceTransliteration ? "text-xs opacity-40 hover:opacity-70 transition-opacity" : "text-xs opacity-20 hover:opacity-50 line-through transition-opacity"}
 						>Trans</button>
+						{#if sentence.arabicTashkeel?.text}
+						<button
+							onclick={() => toggleSentenceTashkeel(sentenceIndex)}
+							title={sentenceTashkeel ? 'Hide tashkeel' : 'Show tashkeel'}
+							class={sentenceTashkeel ? "text-xs opacity-40 hover:opacity-70 transition-opacity" : "text-xs opacity-20 hover:opacity-50 line-through transition-opacity"}
+						>Tashkeel</button>
+						{/if}
 						{#if sentence.arabic?.audio}
 							<Audio src={sentence.arabic.audio}></Audio>
 						{:else}

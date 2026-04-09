@@ -34,6 +34,7 @@
 	interface Props {
 		sentence: {
 			arabic: string;
+			arabicTashkeel?: string;
 			english: string;
 			transliteration: string;
 		};
@@ -94,6 +95,7 @@
 	let isInfoModalOpen = $state(false);
 	let showHint = $state(false);  // Transliteration
 	let showAnswer = $state(false);  // Arabic answer
+	let showTashkeel = $state(false);  // Arabic with diacritics
 	let isDefinitionModalOpen = $state(false);
 
 	async function handleToggleHint() {
@@ -695,7 +697,7 @@
 			<p class="text-xl text-text-200">({sentence.transliteration})</p>
 		{/if}
 		{#if showAnswer}
-			<p class="text-2xl text-text-300">({sentence.arabic})</p>
+			<p class="text-2xl text-text-300" dir="rtl">({showTashkeel && sentence.arabicTashkeel ? sentence.arabicTashkeel : sentence.arabic})</p>
 		{/if}
 	</div>
 {/snippet}
@@ -803,8 +805,8 @@
 				</svg>
 				<span>{showHint ? 'Hide' : 'Show'} Hint</span>
 			</button>
-			<button 
-				onclick={handleToggleAnswer} 
+			<button
+				onclick={handleToggleAnswer}
 				class="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold rounded-lg transition-all duration-200 {showAnswer ? 'bg-amber-600 text-white shadow-md' : 'bg-tile-500 text-text-300 hover:bg-tile-600 border border-tile-600'}"
 				title="Your preference will be saved"
 			>
@@ -814,6 +816,17 @@
 				</svg>
 				<span>{showAnswer ? 'Hide' : 'Show'} Answer</span>
 			</button>
+			{#if sentence.arabicTashkeel}
+			<button
+				onclick={() => showTashkeel = !showTashkeel}
+				class="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold rounded-lg transition-all duration-200 {showTashkeel ? 'bg-amber-600 text-white shadow-md' : 'bg-tile-500 text-text-300 hover:bg-tile-600 border border-tile-600'}"
+			>
+				<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+				</svg>
+				<span>{showTashkeel ? 'Hide' : 'Show'} Tashkeel</span>
+			</button>
+			{/if}
 		</div>
 		
 		<!-- Divider -->
