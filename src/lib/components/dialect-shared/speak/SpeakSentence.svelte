@@ -13,6 +13,7 @@
   interface Props {
     sentence: {
       arabic: string;
+      arabicTashkeel?: string;
       english: string;
       transliteration: string;
     };
@@ -28,6 +29,7 @@
   let transcribedText = $state("");
   let showHint = $state(false);
   let showAnswer = $state(false);
+  let showTashkeel = $state(false);
   let similarity = $state(0);
 	let isDefinitionModalOpen = $state(false);
 	let isLoadingDefinition = $state(false);
@@ -300,6 +302,11 @@
 		<Button onClick={() => showAnswer = !showAnswer} type="button" className="!py-2 !px-4 !text-sm bg-tile-400 hover:bg-tile-500 text-text-200 border-tile-500">
       {showAnswer ? 'Hide Arabic' : 'Show Arabic'}
     </Button>
+		{#if sentence.arabicTashkeel}
+		<Button onClick={() => showTashkeel = !showTashkeel} type="button" className="!py-2 !px-4 !text-sm bg-tile-400 hover:bg-tile-500 text-text-200 border-tile-500">
+      {showTashkeel ? 'Hide Tashkeel' : 'Show Tashkeel'}
+    </Button>
+		{/if}
 		<Button onClick={compareDialects} type="button" className="!py-2 !px-4 !text-sm bg-tile-400 hover:bg-tile-500 text-text-200 border-tile-500">
       Compare Dialects
     </Button>
@@ -340,7 +347,7 @@
 
 				{#if showAnswer}
 					<p class="text-3xl sm:text-4xl text-text-300 font-bold font-arabic animate-in fade-in slide-in-from-bottom-2" dir="rtl">
-						{sentence.arabic}
+						{showTashkeel && sentence.arabicTashkeel ? sentence.arabicTashkeel : sentence.arabic}
 					</p>
 				{/if}
 			</div>
@@ -415,7 +422,7 @@
 						<div class="border-t border-tile-500/30 pt-6 mt-6">
 							<p class="text-sm text-text-200 mb-3 uppercase tracking-wider font-bold text-center">Expected:</p>
 							<p class="text-2xl sm:text-3xl text-center text-text-300 font-arabic leading-relaxed" dir="rtl">
-								{sentence.arabic}
+								{showTashkeel && sentence.arabicTashkeel ? sentence.arabicTashkeel : sentence.arabic}
 							</p>
 						</div>
 					{/if}

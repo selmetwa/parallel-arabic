@@ -35,6 +35,7 @@ answer: wordObjectItem
 
 export type sentenceObjectItem = {
   arabic: string
+  arabicTashkeel?: string
   english: string
   transliteration: string
 }
