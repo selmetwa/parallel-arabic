@@ -72,6 +72,7 @@
 	}
 
 	const sentences = data.sentences;
+	const hasTashkeel = sentences.some((s: any) => s.arabicTashkeel?.text);
 
 	let timer: ReturnType<typeof setTimeout> | null = null;
 	let isLoading = $state(false);
@@ -257,6 +258,7 @@
 						</label>
 
 						<!-- Tashkeel Toggle -->
+						{#if hasTashkeel}
 						<label class="flex items-center gap-2 cursor-pointer">
 							<div class="relative">
 								<input
@@ -269,6 +271,7 @@
 							</div>
 							<span class="text-sm text-text-300">Tashkeel</span>
 						</label>
+						{/if}
 					</div>
 				</div>
 			</div>
