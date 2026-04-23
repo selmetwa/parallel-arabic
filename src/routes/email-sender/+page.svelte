@@ -16,7 +16,9 @@
 	function getRecipientCount() {
 		if (recipientType === 'all') return data.userCount;
 		if (recipientType === 'subscribers') return data.subscriberCount;
-		if (recipientType === 'custom') return 1;
+		if (recipientType === 'custom') {
+			return customEmail.split(',').map(e => e.trim()).filter(e => e.length > 0).length || 0;
+		}
 		return 0;
 	}
 
@@ -137,11 +139,11 @@
 						>
 						<div class="flex-1 space-y-2">
 							<span class="text-text-300">Custom Email Address</span>
-							<input 
-								type="email" 
+							<input
+								type="text"
 								bind:value={customEmail}
 								name="customEmail"
-								placeholder="Enter email address..."
+								placeholder="Enter email addresses, separated by commas..."
 								disabled={recipientType !== 'custom'}
 								class="w-full px-3 py-2 bg-tile-400 border border-tile-600 rounded-md text-text-300 placeholder-text-200 focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
 							>
