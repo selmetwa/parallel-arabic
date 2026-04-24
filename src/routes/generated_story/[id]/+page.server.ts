@@ -1,14 +1,11 @@
-import { error, redirect } from '@sveltejs/kit';
+import { error } from '@sveltejs/kit';
 import { getStoryById } from '$lib/helpers/story-helpers';
 import { trackActivitySimple } from '$lib/helpers/track-activity';
 
-export const load = async ({ params, url, locals, setHeaders }) => {
+export const load = async ({ params, url, locals, setHeaders, parent }) => {
+  const { isSubscribed } = await parent();
   const session = await locals.auth.validate();
-  if (!session) {
-    redirect(302, '/login');
-  }
-  const userId = session.user.id;
-  const challengeId = url.searchParams.get('challenge') ?? null;
+  const userId = session?.user?.id ?? null;
 
   const storyResult = await getStoryById(params.id);
 
@@ -17,33 +14,35 @@ export const load = async ({ params, url, locals, setHeaders }) => {
     throw error(404, 'Story not found');
   }
 
-  // Track story view (non-blocking)
-  trackActivitySimple(userId, 'story', 1).catch(err => {
-    console.error('Error tracking story view:', err);
-  });
+  if (userId) {
+    trackActivitySimple(userId, 'story', 1).catch(err => {
+      console.error('Error tracking story view:', err);
+    });
+  }
 
-  // Set cache headers - story content rarely changes
-  // Cache for 30 min in browser, 2 hours on CDN
   setHeaders({
     'Cache-Control': 'public, max-age=1800, s-maxage=7200, stale-while-revalidate=3600'
   });
 
   const story = storyResult.story;
 
-  // Check if user has already completed this story (for XP dedup UI)
-  const { data: completion } = await locals.supabase
-    .from('user_story_completion')
-    .select('id')
-    .eq('user_id', userId)
-    .eq('story_id', story.id)
-    .maybeSingle();
-  const storyCompleted = !!completion;
+  let storyCompleted = false;
+  if (userId) {
+    const { data: completion } = await locals.supabase
+      .from('user_story_completion')
+      .select('id')
+      .eq('user_id', userId)
+      .eq('story_id', story.id)
+      .maybeSingle();
+    storyCompleted = !!completion;
+  }
 
   return {
     userId,
-    story: [story], // Wrap in array to match existing format
-    storyData: story, // Also provide unwrapped for easier access
+    isSubscribed: isSubscribed ?? false,
+    story: [story],
+    storyData: story,
     storyCompleted,
-    challengeId
+    challengeId: url.searchParams.get('challenge') ?? null
   };
 };

@@ -23,8 +23,18 @@
   }
 
   let { data }: Props = $props();
-  let story = $state({} as any)
-  let storyDialect = $state('egyptian-arabic') // Default fallback
+  let storyDialect = $derived(
+    (data as any).storyData?.dialect || (data.story?.[0] as any)?.dialect || 'egyptian-arabic'
+  );
+  let story = $derived.by(() => {
+    const rawStory = (data.story?.[0] as any)?.story_body;
+    if (!rawStory) return {} as any;
+    return {
+      ...rawStory,
+      sentences: rawStory.sentences ? filterValidSentences(rawStory.sentences) : []
+    };
+  });
+  let canReadFull = $derived(!!data.isSubscribed);
   let isHeaderSticky = $state(false);
   let headerRef: HTMLElement;
 
@@ -81,21 +91,6 @@
     };
     return colors[dialect as keyof typeof colors] || 'bg-gray-100 text-gray-800';
   }
-
-  // Load story data
-  $effect(() => {
-    if (data.story?.[0] && (data.story[0] as any).story_body) {
-      const parsedStory = (data.story[0] as any).story_body
-      // Get the dialect from the story data
-      storyDialect = (data as any).storyData?.dialect || (data.story[0] as any)?.dialect || 'egyptian-arabic';
-
-      // Filter sentences when loading the story
-      if (parsedStory.sentences) {
-        parsedStory.sentences = filterValidSentences(parsedStory.sentences)
-      }
-      story = parsedStory
-    }
-  });
 
   // Get difficulty badge color
   function getDifficultyBadgeColor(difficulty: string) {
@@ -160,6 +155,7 @@
 	}
 
 	const sentences = $derived(story?.sentences || []);
+	const visibleSentences = $derived(canReadFull ? sentences : sentences.slice(0, 1));
 	const keyVocab = $derived(story?.keyVocab || []);
 	const quiz = $derived(story?.quiz || null);
 	const hasTashkeel = $derived(sentences.some((s: any) => s.arabicTashkeel?.text));
@@ -413,12 +409,6 @@
             <input type="checkbox" bind:checked={showTransliteration} class="w-4 h-4 rounded" />
             <span class="text-xs text-text-200">Trans</span>
           </label>
-          {#if hasTashkeel}
-          <label class="flex items-center gap-1.5 cursor-pointer">
-            <input type="checkbox" bind:checked={showTashkeel} class="w-4 h-4 rounded" />
-            <span class="text-xs text-text-200">Tashkeel</span>
-          </label>
-          {/if}
         </div>
       </div>
 
@@ -472,7 +462,7 @@
         <div class="flex items-center gap-2">
           <StoryAudioButton
             dialect={storyDialect as any}
-            sentences={sentences}
+            sentences={visibleSentences}
             onSentenceChange={handleSentenceChange}
           />
         </div>
@@ -510,21 +500,6 @@
           <span class="text-sm text-text-300">Transliteration</span>
         </label>
 
-        <!-- Tashkeel Toggle -->
-        {#if hasTashkeel}
-        <label class="flex items-center gap-2 cursor-pointer">
-          <div class="relative">
-            <input
-              type="checkbox"
-              bind:checked={showTashkeel}
-              class="sr-only peer"
-            />
-            <div class="w-10 h-5 bg-tile-600 rounded-full peer peer-checked:bg-blue-500 transition-colors"></div>
-            <div class="absolute left-0.5 top-0.5 w-4 h-4 bg-white rounded-full transition-transform peer-checked:translate-x-5"></div>
-          </div>
-          <span class="text-sm text-text-300">Tashkeel</span>
-        </label>
-        {/if}
       </div>
     </div>
   </header>
@@ -558,7 +533,7 @@
 {#if sentences.length > 0}
   <!-- Story sentences with word-aligned display -->
   <div class="space-y-6 px-4 py-6">
-    {#each sentences as sentence, sentenceIndex}
+    {#each visibleSentences as sentence, sentenceIndex}
       {@const isCurrentlyPlaying = currentPlayingSentenceIndex === sentenceIndex}
       {@const sentenceEnglish = getSentenceEnglish(sentenceIndex)}
       {@const sentenceTransliteration = getSentenceTransliteration(sentenceIndex)}
@@ -626,23 +601,44 @@
               title={sentenceTransliteration ? 'Hide transliteration' : 'Show transliteration'}
               class={cn("text-xs transition-opacity", sentenceTransliteration ? "opacity-40 hover:opacity-70" : "opacity-20 hover:opacity-50 line-through")}
             >Trans</button>
-            {#if sentence.arabicTashkeel?.text}
-            <button
-              onclick={() => toggleSentenceTashkeel(sentenceIndex)}
-              title={sentenceTashkeel ? 'Hide tashkeel' : 'Show tashkeel'}
-              class={cn("text-xs transition-opacity", sentenceTashkeel ? "opacity-40 hover:opacity-70" : "opacity-20 hover:opacity-50 line-through")}
-            >Tashkeel</button>
-            {/if}
             <AudioButton text={sentence.arabic.text} dialect={storyDialect as any} />
           </div>
         </div>
       </section>
     {/each}
   </div>
+
+  {#if !canReadFull && sentences.length > 1}
+    <div class="mx-4 mb-8 rounded-2xl border-2 border-tile-600 bg-tile-400 p-8 text-center shadow-lg">
+      <div class="mb-4 text-4xl">📖</div>
+      {#if !data.userId}
+        <h2 class="mb-2 text-2xl font-bold text-text-300">Log in to keep reading</h2>
+        <p class="mb-6 text-text-200">
+          This story has {sentences.length} sentences. Log in or create a free account to read the full story.
+        </p>
+        <div class="flex justify-center gap-3">
+          <a href="/login" class="rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-700">
+            Log in
+          </a>
+          <a href="/signup" class="rounded-lg border border-tile-600 bg-tile-500 px-6 py-3 font-semibold text-text-300 transition-colors hover:bg-tile-600">
+            Sign up free
+          </a>
+        </div>
+      {:else}
+        <h2 class="mb-2 text-2xl font-bold text-text-300">Subscribe to keep reading</h2>
+        <p class="mb-6 text-text-200">
+          This story has {sentences.length} sentences. Subscribe to read the full story, earn XP, and track your progress.
+        </p>
+        <a href="/pricing/checkout" class="rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-700">
+          Subscribe
+        </a>
+      {/if}
+    </div>
+  {/if}
 {/if}
 
 <!-- Key Vocabulary Section -->
-{#if keyVocab && keyVocab.length > 0}
+{#if canReadFull && keyVocab && keyVocab.length > 0}
   <section class="px-4 py-8 sm:px-8 max-w-5xl mx-auto border-t border-tile-600 mt-8">
     <!-- Section Header -->
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
@@ -720,7 +716,7 @@
 {/if}
 
 <!-- Quiz Section -->
-{#if quiz && quiz.questions && quiz.questions.length > 0}
+{#if canReadFull && quiz && quiz.questions && quiz.questions.length > 0}
   {@const answeredCount = Object.values(quizStates).filter(s => s?.isAnswered).length}
   {@const correctCount = Object.values(quizStates).filter(s => s?.isAnswered && s?.isCorrect).length}
   {@const quizProgress = (answeredCount / quiz.questions.length) * 100}

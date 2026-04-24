@@ -79,7 +79,7 @@ export const load = async ({ parent, locals, url }) => {
 
   // Fetch recommended stories: filtered by dialect + proficiency-mapped difficulty
   let recommendedStories: object[] = [];
-  const difficulty = proficiencyToDifficulty(user?.proficiency_level ?? 'A1');
+  const difficulty = user ? proficiencyToDifficulty(user.proficiency_level) : null;
   const targetDialect = user?.target_dialect || 'egyptian-arabic';
   const recFilters: { dialect?: string; difficulty?: string } = { dialect: targetDialect };
   if (difficulty) recFilters.difficulty = difficulty;

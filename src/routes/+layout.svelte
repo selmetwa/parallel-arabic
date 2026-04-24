@@ -15,7 +15,7 @@
 	import { pwaInfo } from 'virtual:pwa-info';
 	import { dev, browser } from '$app/environment';
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';
-	import { getPageMeta, generateStructuredData } from '$lib/utils/seo';
+	import { getPageMeta, generateStructuredData, formatDialectName } from '$lib/utils/seo';
 	import {
 		importJobStore,
 		resumeImportJobIfNeeded,
@@ -220,7 +220,8 @@
 			// /stories/[dialect]
 			return 'stories';
 		}
-		if (path === '/review/import') return 'import';
+		if (path.startsWith('/generated_story/')) return 'generated_story';
+	if (path === '/review/import') return 'import';
 		if (path === '/review' || path.startsWith('/review/')) return 'review';
 		if (path === '/tutor') return 'tutor';
 		if (path === '/stories') return 'stories';
@@ -273,6 +274,25 @@ return 'home';
 			});
 		}
 
+		// For generated story pages
+		if (pageType === 'generated_story' && data?.storyData) {
+			const storyBody = data.storyData.story_body;
+			const englishTitle = storyBody?.title?.english || '';
+			const arabicTitle = storyBody?.title?.arabic || '';
+			const dialectName = formatDialectName(data.storyData.dialect);
+			const difficulty = data.storyData.difficulty || '';
+			const sentenceCount = storyBody?.sentences?.length || 0;
+			return getPageMeta('generated_story', {
+				title: englishTitle
+					? `${englishTitle} / ${arabicTitle} - ${dialectName} Arabic Story`
+					: null,
+				description: englishTitle
+					? `Read "${englishTitle}" (${arabicTitle}), a ${difficulty} ${dialectName} Arabic story with ${sentenceCount} sentences. Practice your Arabic reading comprehension on Parallel Arabic.`
+					: null,
+				id: data.storyData.id
+			});
+		}
+
 		return getPageMeta(pageType, { ...data, dialect });
 	});
 
@@ -295,6 +315,19 @@ return 'home';
 			return generateStructuredData(pageType, {
 				title: data.story.title,
 				description: data.story.description
+			});
+		}
+
+		// For generated story pages
+		if (pageType === 'generated_story' && data?.storyData) {
+			const storyBody = data.storyData.story_body;
+			const englishTitle = storyBody?.title?.english || '';
+			const arabicTitle = storyBody?.title?.arabic || '';
+			const dialectName = formatDialectName(data.storyData.dialect);
+			const difficulty = data.storyData.difficulty || '';
+			return generateStructuredData('generated_story', {
+				title: `${englishTitle} / ${arabicTitle} - ${dialectName} Arabic Story`,
+				description: `A ${difficulty} ${dialectName} Arabic story: ${englishTitle}${arabicTitle ? ` / ${arabicTitle}` : ''}`
 			});
 		}
 

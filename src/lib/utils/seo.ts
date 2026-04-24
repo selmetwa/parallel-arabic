@@ -9,6 +9,16 @@ export interface PageMeta {
 const baseUrl = 'https://www.parallel-arabic.com';
 const defaultImage = `${baseUrl}/images/banner.png`;
 
+export function formatDialectName(dialect: string): string {
+  const dialectMap: Record<string, string> = {
+    'egyptian-arabic': 'Egyptian Arabic',
+    'levantine': 'Levantine Arabic',
+    'darija': 'Moroccan Darija',
+    'fusha': 'Modern Standard Arabic'
+  };
+  return dialectMap[dialect] || dialect;
+}
+
 export function getPageMeta(page: string, data?: any): PageMeta {
   const pages: Record<string, PageMeta> = {
     home: {
@@ -65,6 +75,14 @@ export function getPageMeta(page: string, data?: any): PageMeta {
       url: data?.id ? `${baseUrl}/stories/${data.id}` : `${baseUrl}/stories`,
       type: 'article'
     },
+    generated_story: {
+      title: data?.title
+        ? `${data.title} | Parallel Arabic`
+        : 'Arabic Story | Parallel Arabic',
+      description: data?.description || 'Practice reading Arabic with this story on Parallel Arabic.',
+      url: data?.id ? `${baseUrl}/generated_story/${data.id}` : `${baseUrl}/stories`,
+      type: 'article'
+    },
     tutor: {
       title: 'Arabic Conversation Practice - AI Tutor | Parallel Arabic',
       description: 'Practice Arabic conversation with our AI tutor. Improve your speaking skills in Egyptian, Levantine, Moroccan, and Modern Standard Arabic through interactive dialogue.',
@@ -116,16 +134,6 @@ export function getPageMeta(page: string, data?: any): PageMeta {
   };
 }
 
-function formatDialectName(dialect: string): string {
-  const dialectMap: Record<string, string> = {
-    'egyptian-arabic': 'Egyptian Arabic',
-    'levantine': 'Levantine Arabic',
-    'darija': 'Moroccan Darija',
-    'fusha': 'Modern Standard Arabic'
-  };
-  return dialectMap[dialect] || dialect;
-}
-
 export function generateStructuredData(page: string, data?: any) {
   const baseStructuredData = {
     "@context": "https://schema.org",
@@ -168,7 +176,7 @@ export function generateStructuredData(page: string, data?: any) {
     };
   }
 
-  if (page === 'story' && data?.title) {
+  if ((page === 'story' || page === 'generated_story') && data?.title) {
     return {
       "@context": "https://schema.org",
       "@type": "Article",
