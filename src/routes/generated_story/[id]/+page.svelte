@@ -158,7 +158,22 @@
 	const visibleSentences = $derived(canReadFull ? sentences : sentences.slice(0, 1));
 	const keyVocab = $derived(story?.keyVocab || []);
 	const quiz = $derived(story?.quiz || null);
-	const hasTashkeel = $derived(sentences.some((s: any) => s.arabicTashkeel?.text));
+
+	function stripTashkeel(text: string): string {
+		return text.replace(/[ً-ٟؐ-ؚۖ-ۜ۟-۪ۤۧۨ-ۭ]/g, '');
+	}
+
+	function sentenceHasValidTashkeel(s: any): boolean {
+		if (!s.arabicTashkeel?.text) return false;
+		const tashkeelText = s.arabicTashkeel.text;
+		// Tashkeel text must actually contain diacritical marks
+		if (stripTashkeel(tashkeelText) === tashkeelText) return false;
+		const arabicCount = s.arabic.text.trim().split(/\s+/).filter((w: string) => w.length > 0).length;
+		const tashkeelCount = stripTashkeel(tashkeelText).trim().split(/\s+/).filter((w: string) => w.length > 0).length;
+		return Math.abs(arabicCount - tashkeelCount) <= 1;
+	}
+
+	const hasTashkeel = $derived(sentences.some((s: any) => sentenceHasValidTashkeel(s)));
 	let currentPlayingSentenceIndex = $state<number | null>(null);
 
 	function handleSentenceChange(index: number | null) {
@@ -409,6 +424,12 @@
             <input type="checkbox" bind:checked={showTransliteration} class="w-4 h-4 rounded" />
             <span class="text-xs text-text-200">Trans</span>
           </label>
+          {#if hasTashkeel}
+            <label class="flex items-center gap-1.5 cursor-pointer">
+              <input type="checkbox" bind:checked={showTashkeel} class="w-4 h-4 rounded" />
+              <span class="text-xs text-text-200">Tashkeel</span>
+            </label>
+          {/if}
         </div>
       </div>
 
@@ -499,6 +520,22 @@
           </div>
           <span class="text-sm text-text-300">Transliteration</span>
         </label>
+
+        <!-- Tashkeel Toggle (only if story has tashkeel data) -->
+        {#if hasTashkeel}
+          <label class="flex items-center gap-2 cursor-pointer">
+            <div class="relative">
+              <input
+                type="checkbox"
+                bind:checked={showTashkeel}
+                class="sr-only peer"
+              />
+              <div class="w-10 h-5 bg-tile-600 rounded-full peer peer-checked:bg-blue-500 transition-colors"></div>
+              <div class="absolute left-0.5 top-0.5 w-4 h-4 bg-white rounded-full transition-transform peer-checked:translate-x-5"></div>
+            </div>
+            <span class="text-sm text-text-300">Tashkeel</span>
+          </label>
+        {/if}
 
       </div>
     </div>
@@ -601,6 +638,13 @@
               title={sentenceTransliteration ? 'Hide transliteration' : 'Show transliteration'}
               class={cn("text-xs transition-opacity", sentenceTransliteration ? "opacity-40 hover:opacity-70" : "opacity-20 hover:opacity-50 line-through")}
             >Trans</button>
+            {#if sentenceHasValidTashkeel(sentence)}
+              <button
+                onclick={() => toggleSentenceTashkeel(sentenceIndex)}
+                title={sentenceTashkeel ? 'Hide tashkeel' : 'Show tashkeel'}
+                class={cn("text-xs transition-opacity", sentenceTashkeel ? "opacity-40 hover:opacity-70" : "opacity-20 hover:opacity-50 line-through")}
+              >Tashkeel</button>
+            {/if}
             <AudioButton text={sentence.arabic.text} dialect={storyDialect as any} />
           </div>
         </div>

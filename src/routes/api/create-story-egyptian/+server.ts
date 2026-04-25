@@ -9,6 +9,7 @@ import { commonWords } from '$lib/constants/common-words';
 import { getSpeakerNames } from '$lib/utils/voice-config';
 import { generateStoryAudio } from '../../../lib/server/audio-generation';
 import { generateContentWithRetry } from '$lib/utils/gemini-api-retry';
+import { addTashkeelToSentences } from '$lib/utils/add-tashkeel';
 import { saveUploadedAudioFile } from '$lib/utils/audio-utils';
 import { uploadStoryToStorage } from '$lib/helpers/storage-helpers';
 import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
@@ -674,9 +675,17 @@ Dialect flavor words: وش، زين، هيه، عيل، وايد، كذا، لي
 			if (!parsedStory || !parsedStory.sentences) {
 				throw new Error('Invalid story structure');
 			}
-			
+
 			console.log('Gemini generated story with', parsedStory.sentences.length, 'sentences');
-			
+
+			// Replace arabicTashkeel with a validated dedicated tashkeel pass
+			const arabicTexts = parsedStory.sentences.map((s: { arabic: { text: string } }) => s.arabic.text);
+			const tashkeelTexts = await addTashkeelToSentences(arabicTexts, ai);
+			for (let i = 0; i < parsedStory.sentences.length; i++) {
+				const t = tashkeelTexts[i];
+				if (t !== null) parsedStory.sentences[i].arabicTashkeel = { text: t };
+			}
+
 			console.log('✅ Egyptian Arabic story generated, uploading to storage...');
 			
 			// Upload story JSON to Supabase Storage
