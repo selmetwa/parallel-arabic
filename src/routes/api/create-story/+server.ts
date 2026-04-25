@@ -9,6 +9,7 @@ import { supabase } from '$lib/supabaseClient';
 import { stories } from '$lib/constants/stories/index';
 import { commonWords } from '$lib/constants/common-words';
 import { generateContentWithRetry } from '$lib/utils/gemini-api-retry';
+import { addTashkeelToSentences } from '$lib/utils/add-tashkeel';
 import { getSpeakerNames } from '$lib/utils/voice-config';
 import { generateStoryAudio } from '../../../lib/server/audio-generation';
 import { uploadStoryToStorage } from '$lib/helpers/storage-helpers';
@@ -159,28 +160,6 @@ Dialect flavor: mix of Arabic, Berber, and French loanwords — e.g., الطوم
 			examples: [],
 			commonWords: []
 		},
-		'iraqi': {
-			name: 'IRAQI ARABIC',
-			description: 'Please use Iraqi Arabic dialect as spoken in Iraq. Use natural conversational Iraqi expressions and vocabulary.',
-			culturalContext: `Settings: Baghdad neighborhoods (Karrada, Mansour, Kadhimiya, Sadr City), Basra port area, Erbil bazaar, Tigris riverside, local chai khana (tea house), government ministry, market.
-Currency: Iraqi dinars (دينار) — use realistic prices.
-Food & drink: masgouf (grilled fish), quzi, dolma, samoon bread, chai (tea is central to Iraqi social life), gaimer (clotted cream with bread).
-Character archetypes: chai seller, market vendor, engineer, teacher, taxi driver, farmer from the south, Kurdish visitor from Erbil.
-Dialect flavor words: شلونك، هواية، عدل، چا، لازم، بس، اهواية، گلبي، إيبه، شبيك`,
-			examples: [],
-			commonWords: []
-		},
-		'khaleeji': {
-			name: 'KHALEEJI ARABIC',
-			description: 'Please use Khaleeji Arabic dialect as spoken in the Gulf states (UAE, Saudi Arabia, Kuwait, Bahrain, Qatar, Oman). Use natural conversational Gulf Arabic expressions and vocabulary.',
-			culturalContext: `Settings: Dubai Mall, Abu Dhabi corniche, Riyadh's Olaya district, Kuwait souk, Bahrain's Manama, Muscat's Mutrah souk, desert camping (مخيم), diwaniya (sitting room for men), majlis.
-Currency: use context-appropriate currency (UAE dirhams, Saudi riyals, Kuwaiti dinars).
-Food & drink: kabsa, machboos, harees, luqaimat, gahwa (cardamom coffee — essential to Gulf hospitality), dates (تمر), shawarma.
-Character archetypes: Emirati businessman, Saudi student abroad returning home, Kuwaiti diwaniya host, Omani fisherman, expat worker, mall employee, desert guide.
-Dialect flavor words: وش، زين، هيه، عيل، وايد، كذا، ليش، إيش، حق، بعدين، إن شاء الله، الله يسلمك`,
-			examples: [],
-			commonWords: []
-		}
 	} as const;
 
 	type DialectKey = keyof typeof dialectConfigs;
@@ -446,7 +425,15 @@ Dialect flavor words: وش، زين، هيه، عيل، وايد، كذا، لي
 			if (!parsedStory || !parsedStory.sentences) {
 			throw new Error('Invalid story structure');
 		}
-			
+
+			// Replace arabicTashkeel with a validated dedicated tashkeel pass
+			const arabicTexts = parsedStory.sentences.map((s: { arabic: { text: string } }) => s.arabic.text);
+			const tashkeelTexts = await addTashkeelToSentences(arabicTexts, ai);
+			for (let i = 0; i < parsedStory.sentences.length; i++) {
+				const t = tashkeelTexts[i];
+				if (t !== null) parsedStory.sentences[i].arabicTashkeel = { text: t };
+			}
+
 			// Upload story JSON to Supabase Storage
 			const storageResult = await uploadStoryToStorage(storyId, parsedStory);
 			

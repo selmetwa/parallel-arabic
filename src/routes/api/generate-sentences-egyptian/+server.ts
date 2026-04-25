@@ -7,6 +7,7 @@ import { normalizeArabicText } from '$lib/utils/arabic-normalization';
 import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
 import { createSentencesSchema } from '$lib/utils/gemini-schemas';
 import { generateContentWithRetry, GeminiApiError } from '$lib/utils/gemini-api-retry';
+import { addTashkeelToSentences } from '$lib/utils/add-tashkeel';
 
 
 // Function to clean unwanted characters from text
@@ -326,6 +327,14 @@ export const POST: RequestHandler = async ({ request }) => {
               s.arabic && s.english && s.transliteration &&
               s.arabic.trim() !== '' && s.english.trim() !== '' && s.transliteration.trim() !== ''
             );
+          }
+
+          // Replace arabicTashkeel with a validated dedicated tashkeel pass
+          const arabicTexts = parsedContent.sentences.map((s: SentenceType) => s.arabic);
+          const tashkeelTexts = await addTashkeelToSentences(arabicTexts, ai);
+          for (let i = 0; i < parsedContent.sentences.length; i++) {
+            const t = tashkeelTexts[i];
+            if (t !== null) parsedContent.sentences[i].arabicTashkeel = t;
           }
 
           // Clean the sentences — do NOT normalize arabicTashkeel (it must keep diacritics)

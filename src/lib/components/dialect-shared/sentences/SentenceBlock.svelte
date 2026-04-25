@@ -401,7 +401,6 @@
 			}
 
 			const data = await res.json();
-      console.log({ data })
 
 			// Handle nested response structure: data.message.message.content or data.message.content
 			let content = data.message?.message?.content || data.message?.content || '';
@@ -640,9 +639,6 @@
 		}
 	});
 
-  $inspect(keyboard)
-
-  $inspect(targetArabicWord)
 </script>
 
 {#snippet englishWordDisplay()}
@@ -696,7 +692,7 @@
 		{#if showHint}
 			<p class="text-xl text-text-200">({sentence.transliteration})</p>
 		{/if}
-		{#if showAnswer}
+		{#if showAnswer || showTashkeel}
 			<p class="text-2xl text-text-300" dir="rtl">({showTashkeel && sentence.arabicTashkeel ? sentence.arabicTashkeel : sentence.arabic})</p>
 		{/if}
 	</div>
