@@ -85,7 +85,7 @@ ${arabicSentences.map((s, i) => `${i + 1}. ${s}`).join('\n')}`;
 
 			const originalWordCount = wordCount(stripTashkeel(original));
 			const resultWordCount = wordCount(stripTashkeel(tashkeelText));
-			if (Math.abs(originalWordCount - resultWordCount) > 1) {
+			if (originalWordCount !== resultWordCount) {
 				console.warn(
 					`[addTashkeel] Word count mismatch for sentence ${i}: ${originalWordCount} vs ${resultWordCount}`
 				);
