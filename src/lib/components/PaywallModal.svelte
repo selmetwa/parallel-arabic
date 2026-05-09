@@ -36,7 +36,7 @@
       }
     } catch (err: any) {
       if (err?.code !== 'PURCHASE_CANCELLED') {
-        purchaseError = 'Purchase failed. Please try again.';
+        purchaseError = `[DEBUG] code=${err?.code} message=${err?.message} full=${JSON.stringify(err)}`;
       }
     } finally {
       isPurchasing = false;
