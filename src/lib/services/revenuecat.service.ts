@@ -1,4 +1,4 @@
-import { PUBLIC_REVENUECAT_IOS_API_KEY } from '$env/static/public';
+import { env } from '$env/dynamic/public';
 import type { CustomerInfo, PurchasesPackage } from '@revenuecat/purchases-capacitor';
 
 export const ENTITLEMENT_ID = 'Parallel Arabic Premium';
@@ -11,7 +11,7 @@ export const RevenueCatService = {
     const { Purchases, LOG_LEVEL } = await import('@revenuecat/purchases-capacitor');
     await Purchases.setLogLevel({ level: LOG_LEVEL.WARN });
     await Purchases.configure({
-      apiKey: PUBLIC_REVENUECAT_IOS_API_KEY,
+      apiKey: env.PUBLIC_REVENUECAT_IOS_API_KEY,
       appUserID: userId
     });
     initialized = true;
