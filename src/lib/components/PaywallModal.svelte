@@ -3,13 +3,47 @@
   import Modal from '$lib/components/Modal.svelte';
   import Checkmark from '$lib/components/Checkmark.svelte';
   import Button from '$lib/components/Button.svelte';
+  import { onMount } from 'svelte';
+  import { invalidateAll } from '$app/navigation';
 
   type Props = {
     isOpen: boolean;
     handleCloseModal: () => void;
+    userId?: string;
   }
 
-  let { isOpen = false, handleCloseModal = () => {} }: Props = $props();
+  let { isOpen = false, handleCloseModal = () => {}, userId = '' }: Props = $props();
+
+  let isNative = $state(false);
+  let isPurchasing = $state(false);
+  let purchaseError = $state<string | null>(null);
+
+  onMount(() => {
+    isNative = !!(window as any).Capacitor?.isNativePlatform?.();
+  });
+
+  async function handleApplePurchase() {
+    if (!userId) return;
+    isPurchasing = true;
+    purchaseError = null;
+    try {
+      const { RevenueCatUI } = await import('@revenuecat/purchases-capacitor-ui');
+      const result = await RevenueCatUI.presentPaywall();
+
+      if (result.paywallResult === 'PURCHASED' || result.paywallResult === 'RESTORED') {
+        // Immediately sync to DB
+        await fetch('/api/verify-apple-purchase', { method: 'POST' });
+        await invalidateAll();
+        handleCloseModal();
+      }
+    } catch (err: any) {
+      if (err?.code !== 'PURCHASE_CANCELLED') {
+        purchaseError = 'Purchase failed. Please try again.';
+      }
+    } finally {
+      isPurchasing = false;
+    }
+  }
 </script>
 
 <Modal isOpen={isOpen} handleCloseModal={handleCloseModal} width="min(90%, 600px)" height="fit-content">
@@ -65,12 +99,27 @@
 
     <!-- Footer / Action -->
     <div class="p-6 pt-0">
+      {#if purchaseError}
+        <p class="text-red-400 text-sm mb-3 text-center">{purchaseError}</p>
+      {/if}
+
+      {#if isNative}
+        <Button
+          type="button"
+          onClick={handleApplePurchase}
+          disabled={isPurchasing}
+          className="!py-3 !text-lg w-full shadow-md"
+        >
+          {isPurchasing ? 'Loading...' : 'Subscribe Now'}
+        </Button>
+      {:else}
         <form method="POST" action="/?/subscribe">
-            <input type="hidden" name="price_id" value={PUBLIC_PRICE_ID} />
-            <Button type="submit" className="!py-3 !text-lg w-full shadow-md">
-                Subscribe Now
-            </Button>
+          <input type="hidden" name="price_id" value={PUBLIC_PRICE_ID} />
+          <Button type="submit" className="!py-3 !text-lg w-full shadow-md">
+            Subscribe Now
+          </Button>
         </form>
+      {/if}
     </div>
   </div>
 </Modal>

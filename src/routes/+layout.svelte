@@ -123,6 +123,12 @@
 
 		resumeImportJobIfNeeded().catch(() => {});
 
+		// Initialize RevenueCat in native app when user is logged in
+		if (isNativeApp() && data.user?.id) {
+			const { RevenueCatService } = await import('$lib/services/revenuecat.service');
+			RevenueCatService.initialize(data.user.id).catch(console.error);
+		}
+
 		// Only inject Vercel analytics when NOT in native app
 		if (!isNativeApp()) {
 			injectAnalytics({ mode: dev ? 'development' : 'production' });
