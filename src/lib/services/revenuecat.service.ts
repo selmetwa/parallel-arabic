@@ -9,7 +9,8 @@ export const RevenueCatService = {
   async initialize(userId: string) {
     if (initialized) return;
     const { Purchases, LOG_LEVEL } = await import('@revenuecat/purchases-capacitor');
-    await Purchases.setLogLevel({ level: LOG_LEVEL.WARN });
+    await Purchases.setLogLevel({ level: LOG_LEVEL.DEBUG });
+    console.log('[RC] Initializing with key:', env.PUBLIC_REVENUECAT_IOS_API_KEY?.slice(0, 10));
     await Purchases.configure({
       apiKey: env.PUBLIC_REVENUECAT_IOS_API_KEY,
       appUserID: userId
