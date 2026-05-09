@@ -1,6 +1,6 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import { json } from '@sveltejs/kit';
-import { REVENUECAT_API_KEY } from '$env/static/private';
+import { env } from '$env/dynamic/private';
 import { supabase } from '$lib/supabaseClient';
 
 export const POST: RequestHandler = async ({ request, locals }) => {
@@ -14,7 +14,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
   try {
     const res = await fetch(`https://api.revenuecat.com/v1/subscribers/${userId}`, {
       headers: {
-        Authorization: `Bearer ${REVENUECAT_API_KEY}`,
+        Authorization: `Bearer ${env.REVENUECAT_API_KEY}`,
         'X-Platform': 'ios'
       }
     });

@@ -1,13 +1,13 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import { json } from '@sveltejs/kit';
-import { REVENUECAT_WEBHOOK_SECRET } from '$env/static/private';
+import { env } from '$env/dynamic/private';
 import { supabase } from '$lib/supabaseClient';
 
 export const POST: RequestHandler = async ({ request }) => {
   // Validate shared secret
   const authHeader = request.headers.get('Authorization') ?? '';
   const token = authHeader.replace('Bearer ', '');
-  if (REVENUECAT_WEBHOOK_SECRET && token !== REVENUECAT_WEBHOOK_SECRET) {
+  if (env.REVENUECAT_WEBHOOK_SECRET && token !== env.REVENUECAT_WEBHOOK_SECRET) {
     return json({ error: 'Unauthorized' }, { status: 401 });
   }
 

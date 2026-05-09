@@ -5,7 +5,7 @@ import { getUserHasActiveSubscription } from '$lib/helpers/get-user-has-active-s
 import { getStoriesByUser } from '$lib/helpers/story-helpers';
 import { StripeService } from '$lib/services/stripe.service';
 import { computeAchievements } from '$lib/config/achievements';
-import { REVENUECAT_API_KEY } from '$env/static/private';
+import { env } from '$env/dynamic/private';
 
 export const load = async ({ locals, parent }) => {
 	const { session, user } = await parent();
@@ -73,7 +73,7 @@ export const load = async ({ locals, parent }) => {
     try {
       const res = await fetch(`https://api.revenuecat.com/v1/subscribers/${userId}`, {
         headers: {
-          Authorization: `Bearer ${REVENUECAT_API_KEY}`,
+          Authorization: `Bearer ${env.REVENUECAT_API_KEY}`,
           'X-Platform': 'ios'
         }
       });
