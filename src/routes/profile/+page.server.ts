@@ -5,6 +5,7 @@ import { getUserHasActiveSubscription } from '$lib/helpers/get-user-has-active-s
 import { getStoriesByUser } from '$lib/helpers/story-helpers';
 import { StripeService } from '$lib/services/stripe.service';
 import { computeAchievements } from '$lib/config/achievements';
+import { REVENUECAT_API_KEY } from '$env/static/private';
 
 export const load = async ({ locals, parent }) => {
 	const { session, user } = await parent();
@@ -36,7 +37,15 @@ export const load = async ({ locals, parent }) => {
     console.error('Error fetching user onboarding data:', userError);
   }
 
-  // Fetch subscription details from Stripe if user has a subscriber_id
+  // Determine subscription provider and fetch details
+  const isStripeSubscriber = userData?.subscriber_id?.startsWith('sub_') ?? false;
+  const isAppleSubscriber = !!(userData?.subscriber_id && !isStripeSubscriber);
+  const subscriptionProvider: 'stripe' | 'apple' | null = isStripeSubscriber
+    ? 'stripe'
+    : isAppleSubscriber
+      ? 'apple'
+      : null;
+
   let subscriptionDetails: {
     cancelAtPeriodEnd: boolean;
     currentPeriodEnd: number | null;
@@ -47,7 +56,7 @@ export const load = async ({ locals, parent }) => {
     status: null
   };
 
-  if (userData?.subscriber_id) {
+  if (isStripeSubscriber && userData?.subscriber_id) {
     try {
       const subscription = await StripeService.getSubscription(userData.subscriber_id);
       if (subscription) {
@@ -59,6 +68,29 @@ export const load = async ({ locals, parent }) => {
       }
     } catch (error) {
       console.error('Error fetching subscription from Stripe:', error);
+    }
+  } else if (isAppleSubscriber) {
+    try {
+      const res = await fetch(`https://api.revenuecat.com/v1/subscribers/${userId}`, {
+        headers: {
+          Authorization: `Bearer ${REVENUECAT_API_KEY}`,
+          'X-Platform': 'ios'
+        }
+      });
+      if (res.ok) {
+        const data = await res.json();
+        const entitlement = data?.subscriber?.entitlements?.['Parallel Arabic Premium'];
+        if (entitlement?.expires_date) {
+          const expiresUnix = Math.floor(new Date(entitlement.expires_date).getTime() / 1000);
+          subscriptionDetails = {
+            cancelAtPeriodEnd: !!entitlement.unsubscribe_detected_at,
+            currentPeriodEnd: expiresUnix,
+            status: 'active'
+          };
+        }
+      }
+    } catch (error) {
+      console.error('Error fetching subscription from RevenueCat:', error);
     }
   }
 
@@ -179,6 +211,7 @@ export const load = async ({ locals, parent }) => {
     wordStats,
     user, // Include user for stats component
     subscriptionDetails,
+    subscriptionProvider,
     achievements
 	};
 };

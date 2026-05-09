@@ -180,7 +180,16 @@
     showCancelConfirm = false;
     cancelError = null;
   }
-  
+
+  async function openCustomerCenter() {
+    try {
+      const { RevenueCatUI } = await import('@revenuecat/purchases-capacitor-ui');
+      await RevenueCatUI.presentCustomerCenter();
+    } catch (err) {
+      console.error('Failed to open Customer Center:', err);
+    }
+  }
+
   // Format date helper
   function formatDate(timestamp: number | null): string {
     if (!timestamp) return 'Unknown';
@@ -613,7 +622,7 @@
           {#if data.hasActiveSubscription && !WHITELISTED_EMAILS.includes(data.user.email)}
             <div class="p-6 bg-tile-500/20">
               <h3 class="text-base font-bold text-text-300 mb-4 uppercase tracking-wide">Subscription</h3>
-              
+
               <div class="space-y-4">
                 <!-- Subscription Status -->
                 <div class="bg-tile-400 border border-tile-600 rounded-lg p-4">
@@ -627,60 +636,74 @@
                         </p>
                       {:else}
                         <p class="text-sm text-text-200">
-                          Next billing: {formatDate(data.subscriptionDetails?.currentPeriodEnd)}
+                          {data.subscriptionProvider === 'apple' ? 'Expires' : 'Next billing'}: {formatDate(data.subscriptionDetails?.currentPeriodEnd)}
                         </p>
                       {/if}
                     </div>
                   </div>
-                  
-                  {#if cancelError}
-                    <div class="bg-red-500/20 border border-red-400 text-red-300 px-3 py-2 rounded-lg mb-3 text-sm" transition:fade>
-                      {cancelError}
-                    </div>
-                  {/if}
 
-                  {#if cancelSuccess}
-                    <div class="bg-green-500/20 border border-green-400 text-green-700 px-3 py-2 rounded-lg mb-3 text-sm" transition:fade>
-                      {cancelSuccess}
-                    </div>
-                  {/if}
-                  
-                  {#if !data.subscriptionDetails?.cancelAtPeriodEnd}
-                    {#if showCancelConfirm}
-                      <div class="space-y-3 mt-4 p-4 bg-red-900/20 border border-red-800/50 rounded-lg">
-                        <p class="text-yellow-300 text-sm font-medium">⚠️ Are you sure you want to cancel?</p>
-                        <p class="text-text-200 text-xs">You'll retain access to premium features until {formatDate(data.subscriptionDetails?.currentPeriodEnd)}.</p>
-                        <div class="flex gap-2">
-                          <Button 
-                            onClick={cancelSubscription} 
-                            type="button" 
-                            disabled={isCancelling}
-                            className="bg-red-600 hover:bg-red-700 flex-1 text-sm"
-                          >
-                            {isCancelling ? 'Cancelling...' : 'Yes, Cancel Subscription'}
-                          </Button>
-                          <Button 
-                            onClick={cancelCancelSubscription} 
-                            type="button"
-                            disabled={isCancelling}
-                            className="flex-1 text-sm"
-                          >
-                            Keep Subscription
-                          </Button>
-                        </div>
-                      </div>
-                    {:else}
-                      <button 
-                        onclick={cancelSubscription}
-                        class="text-sm text-red-400 hover:text-red-300 underline transition-colors"
-                      >
-                        Cancel subscription
-                      </button>
-                    {/if}
-                  {:else}
+                  {#if data.subscriptionProvider === 'apple'}
+                    <!-- Apple IAP: managed via iOS Settings -->
                     <p class="text-sm text-text-200 mt-2">
-                      Your subscription is set to cancel. You can continue using premium features until your access expires.
+                      Your subscription is managed through the App Store. To cancel, go to <strong class="text-text-300">Settings → Apple ID → Subscriptions</strong> on your iPhone.
                     </p>
+                    <button
+                      onclick={openCustomerCenter}
+                      class="mt-3 text-sm text-blue-400 hover:text-blue-300 underline transition-colors"
+                    >
+                      Manage subscription
+                    </button>
+                  {:else}
+                    <!-- Stripe: existing cancel flow -->
+                    {#if cancelError}
+                      <div class="bg-red-500/20 border border-red-400 text-red-300 px-3 py-2 rounded-lg mb-3 text-sm" transition:fade>
+                        {cancelError}
+                      </div>
+                    {/if}
+
+                    {#if cancelSuccess}
+                      <div class="bg-green-500/20 border border-green-400 text-green-700 px-3 py-2 rounded-lg mb-3 text-sm" transition:fade>
+                        {cancelSuccess}
+                      </div>
+                    {/if}
+
+                    {#if !data.subscriptionDetails?.cancelAtPeriodEnd}
+                      {#if showCancelConfirm}
+                        <div class="space-y-3 mt-4 p-4 bg-red-900/20 border border-red-800/50 rounded-lg">
+                          <p class="text-yellow-300 text-sm font-medium">⚠️ Are you sure you want to cancel?</p>
+                          <p class="text-text-200 text-xs">You'll retain access to premium features until {formatDate(data.subscriptionDetails?.currentPeriodEnd)}.</p>
+                          <div class="flex gap-2">
+                            <Button
+                              onClick={cancelSubscription}
+                              type="button"
+                              disabled={isCancelling}
+                              className="bg-red-600 hover:bg-red-700 flex-1 text-sm"
+                            >
+                              {isCancelling ? 'Cancelling...' : 'Yes, Cancel Subscription'}
+                            </Button>
+                            <Button
+                              onClick={cancelCancelSubscription}
+                              type="button"
+                              disabled={isCancelling}
+                              className="flex-1 text-sm"
+                            >
+                              Keep Subscription
+                            </Button>
+                          </div>
+                        </div>
+                      {:else}
+                        <button
+                          onclick={cancelSubscription}
+                          class="text-sm text-red-400 hover:text-red-300 underline transition-colors"
+                        >
+                          Cancel subscription
+                        </button>
+                      {/if}
+                    {:else}
+                      <p class="text-sm text-text-200 mt-2">
+                        Your subscription is set to cancel. You can continue using premium features until your access expires.
+                      </p>
+                    {/if}
                   {/if}
                 </div>
               </div>

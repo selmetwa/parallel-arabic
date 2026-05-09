@@ -1,62 +1,58 @@
 import { supabase } from '$lib/supabaseClient';
 import { StripeService } from '$lib/services/stripe.service';
 import { isEmailWhitelisted } from './subscription';
+import { REVENUECAT_API_KEY } from '$env/static/private';
 
-/**
- * Check if a user has an active subscription by querying Stripe directly
- * Use this when you need an authoritative check (e.g., before allowing premium content access)
- * For fast UI checks, use checkUserSubscription() from ./subscription.ts instead
- */
 export const getUserHasActiveSubscription = async (userId: string | null) => {
-  // Fast path for no user
-  if (!userId) {
-    return false;
-  }
+  if (!userId) return false;
 
-  // Fetch user email and subscriber_id to check whitelist and subscription
   const { data: user, error } = await supabase
     .from('user')
-    .select('subscriber_id, email')
+    .select('id, subscriber_id, email, is_subscriber')
     .eq('id', userId)
     .single();
 
   if (error && error.code !== 'PGRST116') {
-    console.error('Error fetching user subscription ID:', error);
+    console.error('Error fetching user subscription:', error);
   }
 
-  // Check if user is whitelisted (using shared whitelist)
-  if (isEmailWhitelisted(user?.email)) {
-    return true;
-  }
+  if (isEmailWhitelisted(user?.email)) return true;
 
-  if (!user || !user.subscriber_id) {
-    return false;
-  }
+  if (!user) return false;
 
-  // Check subscription status directly from Stripe
-  try {
-    const subscription = await StripeService.getSubscription(user.subscriber_id);
-    
-    if (!subscription) {
+  // No subscriber_id — fall back to the DB boolean (covers race between purchase and webhook)
+  if (!user.subscriber_id) return user.is_subscriber ?? false;
+
+  // Stripe subscription IDs always start with "sub_"
+  if (user.subscriber_id.startsWith('sub_')) {
+    try {
+      const subscription = await StripeService.getSubscription(user.subscriber_id);
+      if (!subscription) return false;
+      const activeStatuses = ['active', 'trialing', 'past_due'];
+      if (activeStatuses.includes(subscription.status)) {
+        const now = Math.floor(Date.now() / 1000);
+        return !!(subscription.current_period_end && subscription.current_period_end > now);
+      }
+      return false;
+    } catch {
       return false;
     }
+  }
 
-    // Check if subscription is active
-    // Active statuses: 'active', 'trialing', 'past_due' (past_due might still grant access)
-    // Inactive statuses: 'canceled', 'unpaid', 'incomplete', 'incomplete_expired', 'paused'
-    const activeStatuses = ['active', 'trialing', 'past_due'];
-    if (activeStatuses.includes(subscription.status)) {
-      // Also verify the current period hasn't ended
-      const now = Math.floor(Date.now() / 1000);
-      if (subscription.current_period_end && subscription.current_period_end > now) {
-        return true;
+  // RevenueCat / Apple IAP subscriber
+  try {
+    const res = await fetch(`https://api.revenuecat.com/v1/subscribers/${userId}`, {
+      headers: {
+        Authorization: `Bearer ${REVENUECAT_API_KEY}`,
+        'X-Platform': 'ios'
       }
-    }
-
-    return false;
-  } catch (error) {
-    console.error('Error fetching subscription from Stripe:', error);
-    // Fallback to false if Stripe check fails
-    return false;
+    });
+    if (!res.ok) return user.is_subscriber ?? false;
+    const data = await res.json();
+    const entitlement = data?.subscriber?.entitlements?.['Parallel Arabic Premium'];
+    if (!entitlement?.expires_date) return false;
+    return new Date(entitlement.expires_date) > new Date();
+  } catch {
+    return user.is_subscriber ?? false;
   }
 };
