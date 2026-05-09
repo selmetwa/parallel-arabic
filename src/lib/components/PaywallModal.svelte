@@ -9,10 +9,9 @@
   type Props = {
     isOpen: boolean;
     handleCloseModal: () => void;
-    userId?: string;
   }
 
-  let { isOpen = false, handleCloseModal = () => {}, userId = '' }: Props = $props();
+  let { isOpen = false, handleCloseModal = () => {} }: Props = $props();
 
   let isNative = $state(false);
   let isPurchasing = $state(false);
@@ -23,7 +22,6 @@
   });
 
   async function handleApplePurchase() {
-    if (!userId) return;
     isPurchasing = true;
     purchaseError = null;
     try {
