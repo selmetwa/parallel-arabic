@@ -11,6 +11,7 @@
   import { LEVEL_TIERS } from '$lib/helpers/xp-levels';
   import AlphabetCycle from '$lib/components/AlphabetCycle.svelte';
   import { PUBLIC_PRICE_ID } from '$env/static/public';
+  import SubscribeButton from '$lib/components/SubscribeButton.svelte';
   import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
   import { fetchUserReviewWords } from '$lib/helpers/fetch-review-words';
 
@@ -975,12 +976,9 @@
           You've completed {totalReviewCount} word review{totalReviewCount !== 1 ? 's' : ''}. 
           Subscribe to continue using spaced repetition and unlock unlimited reviews!
         </p>
-        <form method="POST" action="/?/subscribe" class="flex justify-center">
-          <input type="hidden" name="price_id" value={PUBLIC_PRICE_ID} />
-          <Button type="submit" className="!bg-yellow-600 !hover:bg-yellow-700 !border-yellow-700 !text-white !text-lg !px-8 !py-3">
-            Subscribe Now
-          </Button>
-        </form>
+        <div class="flex justify-center">
+          <SubscribeButton className="!bg-yellow-600 !hover:bg-yellow-700 !border-yellow-700 !text-white !text-lg !px-8 !py-3" />
+        </div>
       </div>
     {/if}
 

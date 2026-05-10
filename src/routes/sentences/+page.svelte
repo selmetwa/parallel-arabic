@@ -5,6 +5,7 @@
 	import SentenceQuiz from '$lib/components/dialect-shared/sentences/SentenceQuiz.svelte';
 	import { currentDialect } from '$lib/store/store';
 	import { PUBLIC_PRICE_ID } from '$env/static/public';
+	import SubscribeButton from '$lib/components/SubscribeButton.svelte';
 	import { goto } from '$app/navigation';
 	import { updateUrl } from '$lib/helpers/update-url';
 	import AlphabetCycle from '$lib/components/AlphabetCycle.svelte';
@@ -375,10 +376,7 @@
 	<div class="mx-4 mb-6 mt-12 border border-tile-600 bg-tile-300 py-8 text-center sm:mx-auto max-w-2xl rounded-xl shadow-lg">
 		<h1 class="text-2xl font-bold text-text-300">You have reached your limit of 5 sentences.</h1>
 		<p class="mt-2 text-xl text-text-200">To continue practicing, please subscribe.</p>
-		<form method="POST" action="/?/subscribe" class="mx-auto mt-6 w-fit">
-			<input type="hidden" name="price_id" value={PUBLIC_PRICE_ID} />
-			<Button type="submit">Subscribe</Button>
-		</form>
+		<SubscribeButton className="mx-auto mt-6" />
 	</div>
 {/if}
 

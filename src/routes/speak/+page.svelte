@@ -3,6 +3,7 @@
 	import RadioButton from '$lib/components/RadioButton.svelte';
 	import { currentDialect } from '$lib/store/store';
 	import { PUBLIC_PRICE_ID } from '$env/static/public';
+	import SubscribeButton from '$lib/components/SubscribeButton.svelte';
 	import { goto } from '$app/navigation';
 	import { updateUrl } from '$lib/helpers/update-url';
 	import SpeakSentence from '$lib/components/dialect-shared/speak/SpeakSentence.svelte';
@@ -356,12 +357,7 @@
 					<p class="text-lg text-text-200 mb-8 leading-relaxed">
 						You've practiced 5 sentences today. Subscribe to unlock unlimited speaking practice and accelerate your Arabic learning.
 					</p>
-					<form method="POST" action="/?/subscribe">
-						<input type="hidden" name="price_id" value={PUBLIC_PRICE_ID} />
-						<button type="submit" class="px-8 py-4 text-lg font-semibold bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-							Subscribe Now →
-						</button>
-					</form>
+					<SubscribeButton label="Subscribe Now →" className="!bg-emerald-600 !hover:bg-emerald-700 !border-emerald-700 !text-lg !px-8 !py-4" />
 				</div>
 			</div>
 		</div>
