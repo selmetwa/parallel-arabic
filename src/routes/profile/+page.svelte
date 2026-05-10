@@ -137,6 +137,32 @@
     }
   }
   
+  let showDeleteConfirm = $state(false);
+  let isDeleting = $state(false);
+  let deleteError = $state<string | null>(null);
+
+  async function handleDeleteAccount() {
+    if (!showDeleteConfirm) {
+      showDeleteConfirm = true;
+      return;
+    }
+    isDeleting = true;
+    deleteError = null;
+    try {
+      const res = await fetch('/api/delete-account', { method: 'POST' });
+      if (!res.ok) {
+        const data = await res.json();
+        deleteError = data.error ?? 'Failed to delete account.';
+        isDeleting = false;
+        return;
+      }
+      await goto('/');
+    } catch {
+      deleteError = 'Something went wrong. Please try again.';
+      isDeleting = false;
+    }
+  }
+
   async function cancelSubscription() {
     if (!showCancelConfirm) {
       showCancelConfirm = true;
@@ -608,13 +634,50 @@
                 </p>
               {/if}
               </div>
-              <Button 
+              <Button
                 type="button"
                 onClick={handleLogout}
                 className="bg-red-600 hover:bg-red-700 border-red-700"
               >
                 Sign Out
               </Button>
+            </div>
+
+            <!-- Delete Account -->
+            <div class="mt-6 pt-6 border-t border-tile-600">
+              {#if deleteError}
+                <p class="text-red-400 text-sm mb-3">{deleteError}</p>
+              {/if}
+              {#if showDeleteConfirm}
+                <div class="bg-red-900/20 border border-red-800/50 rounded-lg p-4 space-y-3">
+                  <p class="text-red-400 text-sm font-medium">This will permanently delete your account and all your data. This cannot be undone.</p>
+                  <div class="flex gap-2">
+                    <Button
+                      type="button"
+                      onClick={handleDeleteAccount}
+                      disabled={isDeleting}
+                      className="bg-red-600 hover:bg-red-700 border-red-700 text-sm flex-1"
+                    >
+                      {isDeleting ? 'Deleting...' : 'Yes, Delete My Account'}
+                    </Button>
+                    <Button
+                      type="button"
+                      onClick={() => { showDeleteConfirm = false; deleteError = null; }}
+                      disabled={isDeleting}
+                      className="text-sm flex-1"
+                    >
+                      Cancel
+                    </Button>
+                  </div>
+                </div>
+              {:else}
+                <button
+                  onclick={handleDeleteAccount}
+                  class="text-sm text-red-400 hover:text-red-300 underline transition-colors"
+                >
+                  Delete account
+                </button>
+              {/if}
             </div>
           </div>
           
