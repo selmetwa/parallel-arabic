@@ -126,6 +126,8 @@
 		// Initialize RevenueCat in native app when user is logged in
 		if (isNativeApp() && data.user?.id) {
 			const { RevenueCatService } = await import('$lib/services/revenuecat.service');
+			const { env } = await import('$env/dynamic/public');
+			alert(`[DEBUG] RC key: ${env.PUBLIC_REVENUECAT_IOS_API_KEY?.slice(0, 15)} | user: ${data.user.id?.slice(0, 8)}`);
 			RevenueCatService.initialize(data.user.id).catch(console.error);
 		}
 
