@@ -13,6 +13,8 @@
 	import { Mode, type KeyWord } from '$lib/types/index';
 	import type { PageData } from './$types';
   import AudioButton from '$lib/components/AudioButton.svelte';
+  import PaywallModal from '$lib/components/PaywallModal.svelte';
+  let isPaywallOpen = $state(false);
   import ArabicWordDisplay from '$lib/components/dialect-shared/story/components/ArabicWordDisplay.svelte';
   import StoryAudioButton from '$lib/components/StoryAudioButton.svelte';
   import InlineAudioButton from '$lib/components/InlineAudioButton.svelte';
@@ -673,9 +675,9 @@
         <p class="mb-6 text-text-200">
           This story has {sentences.length} sentences. Subscribe to read the full story, earn XP, and track your progress.
         </p>
-        <a href="/pricing/checkout" class="rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-700">
+        <button onclick={() => isPaywallOpen = true} class="rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-700">
           Subscribe
-        </a>
+        </button>
       {/if}
     </div>
   {/if}
@@ -1015,3 +1017,5 @@
     </div>
   </section>
 {/if}
+
+<PaywallModal isOpen={isPaywallOpen} handleCloseModal={() => isPaywallOpen = false} />

@@ -6,6 +6,7 @@
 	import { getWordObjectToSave } from '$lib/helpers/get-word-object-to-save';
 	import Checkmark from '$lib/components/Checkmark.svelte';
 	import { PUBLIC_PRICE_ID } from '$env/static/public';
+	import SubscribeButton from '$lib/components/SubscribeButton.svelte';
 	import Audio from '$lib/components/Audio.svelte';
 	import AudioButton from '$lib/components/AudioButton.svelte';
 	import ArabicWordDisplay from '$lib/components/dialect-shared/story/components/ArabicWordDisplay.svelte';
@@ -192,10 +193,7 @@
 	<div class="mx-4 mb-6 mt-12 border border-tile-600 bg-tile-300 py-4 text-center sm:mx-36">
 		<h1 class="text-2xl font-bold text-text-300">You are not subscribed.</h1>
 		<p class="mt-2 text-xl text-text-200">To continue practicing, please subscribe.</p>
-		<form method="POST" action="/?/subscribe" class="mx-auto mt-4 w-fit">
-			<input type="hidden" name="price_id" value={PUBLIC_PRICE_ID} />
-			<Button type="submit">Subscribe</Button>
-		</form>
+		<SubscribeButton className="mx-auto mt-4" />
 	</div>
 {:else}
 	<DefinitionModal {activeWordObj} {isModalOpen} {closeModal} dialect="egyptian-arabic"></DefinitionModal>

@@ -1,36 +1,6 @@
 <script lang="ts">
 	import Checkmark from '$lib/components/Checkmark.svelte';
-  import Button from '$lib/components/Button.svelte';
-  import { PUBLIC_PRICE_ID } from '$env/static/public';
-  import { onMount } from 'svelte';
-  import { invalidateAll } from '$app/navigation';
-
-  let isNative = $state(false);
-  let isPurchasing = $state(false);
-  let purchaseError = $state<string | null>(null);
-
-  onMount(() => {
-    isNative = !!(window as any).Capacitor?.isNativePlatform?.();
-  });
-
-  async function handleApplePurchase() {
-    isPurchasing = true;
-    purchaseError = null;
-    try {
-      const { RevenueCatUI } = await import('@revenuecat/purchases-capacitor-ui');
-      const result = await RevenueCatUI.presentPaywall();
-      if (result.paywallResult === 'PURCHASED' || result.paywallResult === 'RESTORED') {
-        await fetch('/api/verify-apple-purchase', { method: 'POST' });
-        await invalidateAll();
-      }
-    } catch (err: any) {
-      if (err?.code !== 'PURCHASE_CANCELLED') {
-        purchaseError = 'Purchase failed. Please try again.';
-      }
-    } finally {
-      isPurchasing = false;
-    }
-  }
+  import SubscribeButton from '$lib/components/SubscribeButton.svelte';
 </script>
 
 <div class="min-h-screen bg-tile-300">
@@ -160,26 +130,9 @@
                                 <span>Access to custom built Anki decks for all dialects</span>
                             </li>
                         </ul>
-                        {#if purchaseError}
-                          <p class="text-red-400 text-sm mt-4 text-center">{purchaseError}</p>
-                        {/if}
-                        {#if isNative}
-                          <Button
-                            type="button"
-                            onClick={handleApplePurchase}
-                            disabled={isPurchasing}
-                            className="!py-3 !text-lg w-full mt-8"
-                          >
-                            {isPurchasing ? 'Loading...' : 'Subscribe Now'}
-                          </Button>
-                        {:else}
-                          <form method="POST" action="/?/subscribe" class="mt-8">
-                            <input type="hidden" name="price_id" value={PUBLIC_PRICE_ID} />
-                            <Button type="submit" className="!py-3 !text-lg w-full">
-                              Subscribe Now
-                            </Button>
-                          </form>
-                        {/if}
+                        <div class="mt-8">
+                          <SubscribeButton className="!py-3 !text-lg w-full" />
+                        </div>
                     </div>
                 </div>
             </div>

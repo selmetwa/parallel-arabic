@@ -3,6 +3,7 @@
 	import Button from '$lib/components/Button.svelte';
 	import { levantineSections } from '$lib/constants/levantine-sections';
 	import { PUBLIC_PRICE_ID } from '$env/static/public';
+	import SubscribeButton from '$lib/components/SubscribeButton.svelte';
   import { updateUrl } from '$lib/helpers/update-url';
   let { data } = $props();
 
@@ -65,10 +66,7 @@
 		<div class="border border-tile-600 bg-tile-300 py-4 px-3 text-center">
 			<h1 class="text-2xl font-bold text-text-300">You are not subscribed.</h1>
 			<p class="mt-2 text-xl text-text-200">To continue practicing, please subscribe.</p>
-			<form method="POST" action="/?/subscribe" class="mx-auto mt-4 w-fit">
-				<input type="hidden" name="price_id" value={PUBLIC_PRICE_ID} />
-				<Button type="submit">Subscribe</Button>
-			</form>
+			<SubscribeButton className="mx-auto mt-4" />
 		</div>
 	</div>
 {:else}
