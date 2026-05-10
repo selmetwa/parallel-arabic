@@ -54,14 +54,15 @@ export const POST: RequestHandler = async ({ request }) => {
   console.log('[RC webhook] original_transaction_id:', original_transaction_id);
 
   if (!app_user_id) {
-    console.error('[RC webhook] Missing app_user_id');
-    return json({ error: 'Missing app_user_id' }, { status: 400 });
+    console.log('[RC webhook] No app_user_id for event type:', type, '— skipping (expected for TRANSFER events)');
+    return json({ received: true });
   }
 
   switch (type) {
     case 'INITIAL_PURCHASE':
     case 'RENEWAL':
-    case 'PRODUCT_CHANGE': {
+    case 'PRODUCT_CHANGE':
+    case 'NON_RENEWING_PURCHASE': {
       const subscriptionEndDate = expiration_at_ms
         ? Math.floor(expiration_at_ms / 1000)
         : Math.floor(Date.now() / 1000) + 30 * 24 * 60 * 60;
@@ -74,7 +75,7 @@ export const POST: RequestHandler = async ({ request }) => {
           subscriber_id: original_transaction_id ?? null,
           subscription_end_date: subscriptionEndDate
         })
-        .eq('id', app_user_id)
+        .eq('supabase_auth_id', app_user_id)
         .select();
 
       console.log('[RC webhook] Update result - data:', JSON.stringify(data));
@@ -89,7 +90,7 @@ export const POST: RequestHandler = async ({ request }) => {
         const { data, error } = await adminSupabase
           .from('user')
           .update({ subscription_end_date: Math.floor(expiration_at_ms / 1000) })
-          .eq('id', app_user_id)
+          .eq('supabase_auth_id', app_user_id)
           .select();
 
         console.log('[RC webhook] Cancellation update - data:', JSON.stringify(data));
@@ -106,7 +107,7 @@ export const POST: RequestHandler = async ({ request }) => {
           subscriber_id: null,
           subscription_end_date: null
         })
-        .eq('id', app_user_id)
+        .eq('supabase_auth_id', app_user_id)
         .select();
 
       console.log('[RC webhook] Expiration update - data:', JSON.stringify(data));
