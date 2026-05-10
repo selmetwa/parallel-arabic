@@ -54,8 +54,8 @@ export const POST: RequestHandler = async ({ request }) => {
   console.log('[RC webhook] original_transaction_id:', original_transaction_id);
 
   if (!app_user_id) {
-    console.error('[RC webhook] Missing app_user_id');
-    return json({ error: 'Missing app_user_id' }, { status: 400 });
+    console.log('[RC webhook] No app_user_id for event type:', type, '— skipping (expected for TRANSFER events)');
+    return json({ received: true });
   }
 
   switch (type) {
