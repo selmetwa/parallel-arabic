@@ -45,7 +45,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
           subscriber_id: transactionId,
           subscription_end_date: expiresDate ? Math.floor(expiresDate.getTime() / 1000) : null
         })
-        .eq('id', userId);
+        .eq('supabase_auth_id', userId);
 
       if (error) console.error('[verify-apple-purchase] DB update error:', error);
     }
