@@ -61,7 +61,8 @@ export const POST: RequestHandler = async ({ request }) => {
   switch (type) {
     case 'INITIAL_PURCHASE':
     case 'RENEWAL':
-    case 'PRODUCT_CHANGE': {
+    case 'PRODUCT_CHANGE':
+    case 'NON_RENEWING_PURCHASE': {
       const subscriptionEndDate = expiration_at_ms
         ? Math.floor(expiration_at_ms / 1000)
         : Math.floor(Date.now() / 1000) + 30 * 24 * 60 * 60;
