@@ -1,9 +1,13 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import { json } from '@sveltejs/kit';
 import { env } from '$env/dynamic/private';
-import { supabase } from '$lib/supabaseClient';
+import { createClient } from '@supabase/supabase-js';
+import { PUBLIC_SUPABASE_URL } from '$env/static/public';
 
 export const POST: RequestHandler = async ({ request }) => {
+  // Use service role to bypass RLS for server-side updates
+  const adminSupabase = createClient(PUBLIC_SUPABASE_URL, env.SUPABASE_SERVICE_ROLE_KEY ?? '');
+
   // Validate shared secret
   const authHeader = request.headers.get('Authorization') ?? '';
   const token = authHeader.replace('Bearer ', '');
@@ -32,7 +36,7 @@ export const POST: RequestHandler = async ({ request }) => {
         ? Math.floor(expiration_at_ms / 1000)
         : Math.floor(Date.now() / 1000) + 30 * 24 * 60 * 60;
 
-      const { error } = await supabase
+      const { error } = await adminSupabase
         .from('user')
         .update({
           is_subscriber: true,
@@ -49,7 +53,7 @@ export const POST: RequestHandler = async ({ request }) => {
     case 'BILLING_ISSUE': {
       // User cancelled or has billing issues — retain access until expiration_at_ms
       if (expiration_at_ms) {
-        const { error } = await supabase
+        const { error } = await adminSupabase
           .from('user')
           .update({ subscription_end_date: Math.floor(expiration_at_ms / 1000) })
           .eq('id', app_user_id);
@@ -60,7 +64,7 @@ export const POST: RequestHandler = async ({ request }) => {
     }
 
     case 'EXPIRATION': {
-      const { error } = await supabase
+      const { error } = await adminSupabase
         .from('user')
         .update({
           is_subscriber: false,
