@@ -58,8 +58,12 @@
         if (code) {
           const { data, error: sessionError } = await supabase.auth.exchangeCodeForSession(code);
           alert(`[DEBUG Apple] exchangeCodeForSession error: ${JSON.stringify(sessionError)} user: ${data?.user?.id?.slice(0,8)}`);
-          if (!sessionError) {
-            const syncRes = await fetch('/api/auth/sync', { method: 'POST' });
+          if (!sessionError && data.session) {
+            const syncRes = await fetch('/api/auth/sync', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ access_token: data.session.access_token })
+            });
             alert(`[DEBUG Apple] sync response: ${syncRes.status}`);
             goto('/');
           }
