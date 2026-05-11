@@ -46,14 +46,20 @@
 
         if (error) throw error;
 
+        // Get the session to pass tokens to server
+        const { data: { session } } = await supabase.auth.getSession();
+        alert(`[DEBUG] session after idToken: access_token=${session?.access_token?.slice(0,20)} refresh=${session?.refresh_token?.slice(0,10)}`);
+
+        if (!session) throw new Error('No session after sign in');
+
         if (givenName || familyName) {
           await supabase.auth.updateUser({
             data: { full_name: `${givenName ?? ''} ${familyName ?? ''}`.trim() }
           });
         }
 
-        // Use full page reload so server picks up the new session from cookies
-        window.location.href = '/';
+        // Pass tokens to server route so it can set proper auth cookies
+        window.location.href = `/auth/apple-callback?access_token=${session.access_token}&refresh_token=${session.refresh_token}`;
       } else {
         const { data: oauthData, error: authError } = await supabase.auth.signInWithOAuth({
           provider: 'apple',
