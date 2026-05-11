@@ -22,15 +22,18 @@
   async function handleAppleLogin() {
     appleLoading = true;
     const isNative = !!(window as any).Capacitor?.isNativePlatform?.();
+    alert(`[DEBUG] Apple login started. isNative=${isNative}`);
 
     try {
       if (isNative) {
         const { SignInWithApple } = await import('@capacitor-community/apple-sign-in');
+        alert('[DEBUG] SignInWithApple imported OK, calling authorize...');
         const result = await SignInWithApple.authorize({
           clientId: 'com.parallelarabic.app',
           redirectURI: 'com.parallelarabic.app://auth/callback',
           scopes: 'email name',
         });
+        alert(`[DEBUG] authorize result: ${JSON.stringify(result?.response)}`);
 
         const { identityToken, givenName, familyName } = result.response;
         if (!identityToken) throw new Error('No identity token');
@@ -39,10 +42,10 @@
           provider: 'apple',
           token: identityToken,
         });
+        alert(`[DEBUG] signInWithIdToken error: ${JSON.stringify(error)}`);
 
         if (error) throw error;
 
-        // Save name if provided (Apple only sends on first sign-in)
         if (givenName || familyName) {
           await supabase.auth.updateUser({
             data: { full_name: `${givenName ?? ''} ${familyName ?? ''}`.trim() }
@@ -52,14 +55,15 @@
         await fetch('/api/auth/sync', { method: 'POST' });
         goto('/');
       } else {
-        // Web: OAuth redirect
         const { data: oauthData, error: authError } = await supabase.auth.signInWithOAuth({
           provider: 'apple',
           options: { redirectTo: `${window.location.origin}/auth/callback` }
         });
+        alert(`[DEBUG] web OAuth result: url=${oauthData?.url} error=${JSON.stringify(authError)}`);
         if (authError || !oauthData?.url) throw authError;
       }
     } catch (err: any) {
+      alert(`[DEBUG] Apple login error: code=${err?.code} message=${err?.message} full=${JSON.stringify(err)}`);
       if (err?.code !== 'SIGN_IN_CANCELLED') {
         console.error('Apple login error:', err);
       }
