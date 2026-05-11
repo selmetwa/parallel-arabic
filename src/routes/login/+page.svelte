@@ -22,54 +22,49 @@
   async function handleAppleLogin() {
     appleLoading = true;
     const isNative = !!(window as any).Capacitor?.isNativePlatform?.();
-    alert(`[DEBUG] Apple login started. isNative=${isNative}`);
 
-    try {
-      if (isNative) {
-        const { SignInWithApple } = await import('@capacitor-community/apple-sign-in');
-        alert('[DEBUG] SignInWithApple imported OK, calling authorize...');
-        const result = await SignInWithApple.authorize({
-          clientId: 'com.parallelarabic.app',
-          redirectURI: 'com.parallelarabic.app://auth/callback',
-          scopes: 'email name',
-        });
-        alert(`[DEBUG] authorize result: ${JSON.stringify(result?.response)}`);
+    const redirectUrl = isNative
+      ? 'com.parallelarabic.app://auth/callback'
+      : `${window.location.origin}/auth/callback`;
 
-        const { identityToken, givenName, familyName } = result.response;
-        if (!identityToken) throw new Error('No identity token');
-
-        const { error } = await supabase.auth.signInWithIdToken({
-          provider: 'apple',
-          token: identityToken,
-        });
-        alert(`[DEBUG] signInWithIdToken error: ${JSON.stringify(error)}`);
-
-        if (error) throw error;
-
-        if (givenName || familyName) {
-          await supabase.auth.updateUser({
-            data: { full_name: `${givenName ?? ''} ${familyName ?? ''}`.trim() }
-          });
-        }
-
-        await fetch('/api/auth/sync', { method: 'POST' });
-        goto('/');
-      } else {
-        const { data: oauthData, error: authError } = await supabase.auth.signInWithOAuth({
-          provider: 'apple',
-          options: { redirectTo: `${window.location.origin}/auth/callback` }
-        });
-        alert(`[DEBUG] web OAuth result: url=${oauthData?.url} error=${JSON.stringify(authError)}`);
-        if (authError || !oauthData?.url) throw authError;
+    const { data: oauthData, error: authError } = await supabase.auth.signInWithOAuth({
+      provider: 'apple',
+      options: {
+        redirectTo: redirectUrl,
+        skipBrowserRedirect: isNative
       }
-    } catch (err: any) {
-      alert(`[DEBUG] Apple login error: code=${err?.code} message=${err?.message} full=${JSON.stringify(err)}`);
-      if (err?.code !== 'SIGN_IN_CANCELLED') {
-        console.error('Apple login error:', err);
-      }
-    } finally {
+    });
+
+    if (authError || !oauthData?.url) {
+      console.error('Apple login error:', authError?.message);
       appleLoading = false;
+      return;
     }
+
+    if (isNative) {
+      appUrlListener?.remove();
+      await Browser.open({ url: oauthData.url });
+
+      appUrlListener = await App.addListener('appUrlOpen', async ({ url }) => {
+        if (!url.startsWith('com.parallelarabic.app://auth/callback')) return;
+
+        appUrlListener?.remove();
+        appUrlListener = null;
+
+        try { await Browser.close(); } catch {}
+
+        const code = new URL(url).searchParams.get('code');
+        if (code) {
+          const { error: sessionError } = await supabase.auth.exchangeCodeForSession(code);
+          if (!sessionError) {
+            await fetch('/api/auth/sync', { method: 'POST' });
+            goto('/');
+          }
+        }
+        appleLoading = false;
+      });
+    }
+    // On web, supabase handles redirect automatically via /auth/callback
   }
 
   async function handleGoogleLogin() {
