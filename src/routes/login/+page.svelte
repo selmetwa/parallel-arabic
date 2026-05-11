@@ -54,10 +54,13 @@
         try { await Browser.close(); } catch {}
 
         const code = new URL(url).searchParams.get('code');
+        alert(`[DEBUG Apple] deep link received, code present: ${!!code}`);
         if (code) {
-          const { error: sessionError } = await supabase.auth.exchangeCodeForSession(code);
+          const { data, error: sessionError } = await supabase.auth.exchangeCodeForSession(code);
+          alert(`[DEBUG Apple] exchangeCodeForSession error: ${JSON.stringify(sessionError)} user: ${data?.user?.id?.slice(0,8)}`);
           if (!sessionError) {
-            await fetch('/api/auth/sync', { method: 'POST' });
+            const syncRes = await fetch('/api/auth/sync', { method: 'POST' });
+            alert(`[DEBUG Apple] sync response: ${syncRes.status}`);
             goto('/');
           }
         }
