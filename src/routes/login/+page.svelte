@@ -17,6 +17,56 @@
   let { supabase } = $derived(data);
 
   let appUrlListener: { remove: () => void } | null = null;
+  let appleLoading = $state(false);
+
+  async function handleAppleLogin() {
+    appleLoading = true;
+    const isNative = !!(window as any).Capacitor?.isNativePlatform?.();
+
+    try {
+      if (isNative) {
+        const { SignInWithApple } = await import('@capacitor-community/apple-sign-in');
+        const result = await SignInWithApple.authorize({
+          clientId: 'com.parallelarabic.app',
+          redirectURI: 'com.parallelarabic.app://auth/callback',
+          scopes: 'email name',
+        });
+
+        const { identityToken, givenName, familyName } = result.response;
+        if (!identityToken) throw new Error('No identity token');
+
+        const { error } = await supabase.auth.signInWithIdToken({
+          provider: 'apple',
+          token: identityToken,
+        });
+
+        if (error) throw error;
+
+        // Save name if provided (Apple only sends on first sign-in)
+        if (givenName || familyName) {
+          await supabase.auth.updateUser({
+            data: { full_name: `${givenName ?? ''} ${familyName ?? ''}`.trim() }
+          });
+        }
+
+        await fetch('/api/auth/sync', { method: 'POST' });
+        goto('/');
+      } else {
+        // Web: OAuth redirect
+        const { data: oauthData, error: authError } = await supabase.auth.signInWithOAuth({
+          provider: 'apple',
+          options: { redirectTo: `${window.location.origin}/auth/callback` }
+        });
+        if (authError || !oauthData?.url) throw authError;
+      }
+    } catch (err: any) {
+      if (err?.code !== 'SIGN_IN_CANCELLED') {
+        console.error('Apple login error:', err);
+      }
+    } finally {
+      appleLoading = false;
+    }
+  }
 
   async function handleGoogleLogin() {
     loading = true;
@@ -157,7 +207,18 @@
       {/if}
 
       {#if !resetMode}
-        <div class="mb-4">
+        <div class="mb-4 flex flex-col gap-3">
+          <button
+            type="button"
+            onclick={handleAppleLogin}
+            disabled={appleLoading}
+            class="w-full transition-all duration-300 flex items-center justify-center gap-3 bg-black text-white px-4 py-3 font-semibold border-2 border-black hover:bg-gray-900 disabled:opacity-50 rounded-lg shadow-md hover:shadow-lg"
+          >
+            <svg width="18" height="18" viewBox="0 0 814 1000" xmlns="http://www.w3.org/2000/svg" fill="white">
+              <path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105-37.5-155.5-127.4C46.5 753.1 1 621.9 1 495.7c0-210.1 137.1-321.4 272-321.4 70.4 0 129.1 46.3 173.6 46.3 42.8 0 109.6-49 188.6-49 30.4 0 108.2 2.6 168.9 80.5zm-234.2-184.7c-6.5 30.4-23.4 60.2-49.7 84.2-31.7 28.3-70.4 50.3-112.5 47.1-1.3-5.2-2-10.4-2-16.3 0-27.7 13-58.1 36.4-82.8 11.7-12.3 26.7-22.7 44.9-30.4 18.2-7.8 35.4-12.4 51.6-13.7.6 4 1.3 8.5 1.3 11.9z"/>
+            </svg>
+            {appleLoading ? 'Redirecting...' : 'Continue with Apple'}
+          </button>
           <button
             type="button"
             onclick={handleGoogleLogin}
