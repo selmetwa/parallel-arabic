@@ -37,9 +37,24 @@ export const POST: RequestHandler = async ({ locals, request }) => {
     if (!accessToken) return json({ error: 'No access token' }, { status: 401 });
 
     const adminSupabase = createClient(PUBLIC_SUPABASE_URL, env.SUPABASE_SERVICE_ROLE_KEY ?? '');
-    const { data: { user }, error } = await adminSupabase.auth.getUser(accessToken);
-    console.log('[sync] getUser error:', error?.message, 'user:', user?.id, 'email:', user?.email);
-    if (error || !user) return json({ error: 'Invalid token', detail: error?.message }, { status: 401 });
+
+    // Decode JWT to get user ID (sub claim) — admin client doesn't validate JWTs via getUser()
+    let userId: string | undefined;
+    try {
+      const payloadB64 = accessToken.split('.')[1];
+      const payload = JSON.parse(Buffer.from(payloadB64, 'base64').toString());
+      userId = payload.sub;
+      console.log('[sync] decoded JWT sub:', userId);
+    } catch (err) {
+      console.error('[sync] JWT decode error:', err);
+      return json({ error: 'Invalid token format' }, { status: 401 });
+    }
+    if (!userId) return json({ error: 'No user ID in token' }, { status: 401 });
+
+    const { data: userResp, error } = await adminSupabase.auth.admin.getUserById(userId);
+    const user = userResp?.user;
+    console.log('[sync] getUserById error:', error?.message, 'user:', user?.id, 'email:', user?.email);
+    if (error || !user) return json({ error: 'User not found', detail: error?.message }, { status: 401 });
 
     try {
       await syncSupabaseUserWithDB(user, adminSupabase);
