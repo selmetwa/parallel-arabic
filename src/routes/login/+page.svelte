@@ -46,26 +46,14 @@
 
         if (error) throw error;
 
-        // Get the session to pass tokens to server
-        const { data: { session } } = await supabase.auth.getSession();
-        alert(`[DEBUG] session after idToken: access_token=${session?.access_token?.slice(0,20)} refresh=${session?.refresh_token?.slice(0,10)}`);
-
-        if (!session) throw new Error('No session after sign in');
-
         if (givenName || familyName) {
           await supabase.auth.updateUser({
             data: { full_name: `${givenName ?? ''} ${familyName ?? ''}`.trim() }
           });
         }
 
-        // POST tokens to server so it can set auth cookies, then reload
-        const res = await fetch('/auth/apple-callback', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ access_token: session.access_token, refresh_token: session.refresh_token })
-        });
-        alert(`[DEBUG] apple-callback response: ${res.status} ${res.url}`);
-        window.location.href = '/';
+        await fetch('/api/auth/sync', { method: 'POST' });
+        goto('/');
       } else {
         const { data: oauthData, error: authError } = await supabase.auth.signInWithOAuth({
           provider: 'apple',
