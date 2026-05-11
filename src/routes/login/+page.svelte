@@ -52,8 +52,8 @@
           });
         }
 
-        await fetch('/api/auth/sync', { method: 'POST' });
-        goto('/');
+        // Use full page reload so server picks up the new session from cookies
+        window.location.href = '/';
       } else {
         const { data: oauthData, error: authError } = await supabase.auth.signInWithOAuth({
           provider: 'apple',
