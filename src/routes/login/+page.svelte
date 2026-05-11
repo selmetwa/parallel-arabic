@@ -58,8 +58,14 @@
           });
         }
 
-        // Pass tokens to server route so it can set proper auth cookies
-        window.location.href = `/auth/apple-callback?access_token=${session.access_token}&refresh_token=${session.refresh_token}`;
+        // POST tokens to server so it can set auth cookies, then reload
+        const res = await fetch('/auth/apple-callback', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ access_token: session.access_token, refresh_token: session.refresh_token })
+        });
+        alert(`[DEBUG] apple-callback response: ${res.status} ${res.url}`);
+        window.location.href = '/';
       } else {
         const { data: oauthData, error: authError } = await supabase.auth.signInWithOAuth({
           provider: 'apple',
