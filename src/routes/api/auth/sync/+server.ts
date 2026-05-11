@@ -59,6 +59,19 @@ export const POST: RequestHandler = async ({ locals, request }) => {
     try {
       await syncSupabaseUserWithDB(user, adminSupabase);
       console.log('[sync] Token flow sync OK');
+
+      // Also set cookies on locals.supabase so subsequent server requests see the session
+      const refreshToken = body?.refresh_token;
+      if (refreshToken) {
+        const { error: setSessionError } = await supabase.auth.setSession({
+          access_token: accessToken,
+          refresh_token: refreshToken
+        });
+        console.log('[sync] setSession on locals.supabase error:', setSessionError?.message);
+      } else {
+        console.log('[sync] No refresh_token in body — cookies not set');
+      }
+
       return json({ ok: true });
     } catch (err) {
       console.error('[sync] Token flow sync error:', err);
