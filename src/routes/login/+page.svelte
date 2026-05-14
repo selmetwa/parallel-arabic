@@ -18,9 +18,11 @@
 
   let appUrlListener: { remove: () => void } | null = null;
   let appleLoading = $state(false);
+  let appleError = $state<string | null>(null);
 
   async function handleAppleLogin() {
     appleLoading = true;
+    appleError = null;
     const isNative = !!(window as any).Capacitor?.isNativePlatform?.();
 
     const redirectUrl = isNative
@@ -37,6 +39,7 @@
 
     if (authError || !oauthData?.url) {
       console.error('Apple login error:', authError?.message);
+      appleError = 'Sign in failed. Please try again.';
       appleLoading = false;
       return;
     }
@@ -54,25 +57,37 @@
         try { await Browser.close(); } catch {}
 
         const code = new URL(url).searchParams.get('code');
-        alert(`[DEBUG Apple] deep link received, code present: ${!!code}`);
-        if (code) {
-          const { data, error: sessionError } = await supabase.auth.exchangeCodeForSession(code);
-          alert(`[DEBUG Apple] exchangeCodeForSession error: ${JSON.stringify(sessionError)} user: ${data?.user?.id?.slice(0,8)}`);
-          if (!sessionError && data.session) {
-            const syncRes = await fetch('/api/auth/sync', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({
-                access_token: data.session.access_token,
-                refresh_token: data.session.refresh_token
-              })
-            });
-            alert(`[DEBUG Apple] sync response: ${syncRes.status}`);
-            // Full reload to pick up server-side session cookies that sync just set
-            window.location.href = '/';
-          }
+        if (!code) {
+          appleError = 'Sign in failed. Please try again.';
+          appleLoading = false;
+          return;
         }
-        appleLoading = false;
+
+        const { data, error: sessionError } = await supabase.auth.exchangeCodeForSession(code);
+        if (sessionError || !data.session) {
+          console.error('Apple exchangeCodeForSession error:', sessionError?.message);
+          appleError = 'Sign in failed. Please try again.';
+          appleLoading = false;
+          return;
+        }
+
+        const syncRes = await fetch('/api/auth/sync', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            access_token: data.session.access_token,
+            refresh_token: data.session.refresh_token
+          })
+        });
+
+        if (!syncRes.ok) {
+          console.error('Apple sync failed:', syncRes.status);
+          appleError = 'Sign in failed. Please try again.';
+          appleLoading = false;
+          return;
+        }
+
+        window.location.href = '/';
       });
     }
     // On web, supabase handles redirect automatically via /auth/callback
@@ -217,6 +232,11 @@
       {/if}
 
       {#if !resetMode}
+        {#if appleError}
+          <div class="mb-4 p-3 bg-red-100 border-2 border-red-400 text-red-700 rounded-lg text-sm">
+            {appleError}
+          </div>
+        {/if}
         <div class="mb-4 flex flex-col gap-3">
           <button
             type="button"
