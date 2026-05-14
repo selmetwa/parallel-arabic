@@ -8,6 +8,27 @@
   import type { DialectComparisonSchema } from '$lib/utils/gemini-schemas';
   import AlphabetCycle from "$lib/components/AlphabetCycle.svelte";
 
+  type DefinitionRoot = {
+    letters: string;
+    coreMeaning: string;
+    transliteration?: string;
+  };
+
+  type ParsedDefinition = {
+    arabic?: string;
+    transliteration?: string;
+    definition?: string;
+    root?: DefinitionRoot | null;
+    breakdown?: Array<{
+      arabic: string;
+      englishLabel?: string;
+      word?: string;
+      transliteration: string;
+      meaning: string;
+    }>;
+    contextualMeaning?: string;
+  };
+
   type Props = {
     activeWordObj: {
       english?: string;
@@ -61,7 +82,7 @@
         content = content.substring(jsonStartIndex, jsonEndIndex);
       }
 
-      return JSON.parse(content);
+      return JSON.parse(content) as ParsedDefinition;
     } catch {
       return null;
     }
@@ -98,9 +119,9 @@
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-              text: parsedDescription.arabic ?? parsedDescription.transliteration,
+              text: parsedDescription?.arabic ?? parsedDescription?.transliteration,
               currentDialect: dialect,
-              transliteration: parsedDescription.transliteration ?? (activeWordObj.transliterated || activeWordObj.transliteration)
+              transliteration: parsedDescription?.transliteration ?? (activeWordObj.transliterated || activeWordObj.transliteration)
             })
         });
 
@@ -120,15 +141,23 @@
   function closeComparisonModal() {
     isComparisonModalOpen = false;
   }
-  $inspect(parsedDescription)
 
-  $inspect(activeWordObj)
+  function hasValidArabicRoot(letters: string): boolean {
+    const arabicLetters = letters.replace(/[\s\-–—ـ]/g, '').split('').filter(c => /[؀-ۿ]/.test(c));
+    return arabicLetters.length === 3 || arabicLetters.length === 4;
+  }
+
+  let rootInfo = $derived(
+    parsedDescription?.root?.letters && hasValidArabicRoot(parsedDescription.root.letters)
+      ? parsedDescription.root
+      : null
+  );
 </script>
 
 <DialectComparisonModal
     isOpen={isComparisonModalOpen}
     closeModal={closeComparisonModal}
-    originalText={parsedDescription?.arabic || activeWordObj.arabic}
+    originalText={parsedDescription?.arabic || activeWordObj.arabic || ''}
     originalEnglish={parsedDescription?.definition || activeWordObj.english}
     {comparisonData}
     isLoading={isComparing}
@@ -212,6 +241,29 @@
         </p>
       </div>
 
+      <!-- Root -->
+      {#if rootInfo}
+        <div class="mb-6 bg-tile-300 border border-tile-500 rounded-xl p-4">
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 bg-sky-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h10M4 17h16" />
+              </svg>
+            </div>
+            <div class="flex-1 min-w-0">
+              <p class="text-sm font-semibold text-text-200 mb-2">Root</p>
+              <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-2">
+                <p class="text-3xl font-bold text-text-300" dir="rtl">{rootInfo.letters}</p>
+                {#if rootInfo.transliteration}
+                  <p class="text-sm text-text-200 italic">{rootInfo.transliteration}</p>
+                {/if}
+              </div>
+              <p class="text-text-300 leading-relaxed">{rootInfo.coreMeaning}</p>
+            </div>
+          </div>
+        </div>
+      {/if}
+
       <!-- Contextual Meaning -->
       {#if parsedDescription.contextualMeaning}
         <div class="mb-6 bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r-lg">
@@ -240,7 +292,7 @@
           </div>
 
           <div class="grid gap-3 pl-10">
-            {#each parsedDescription.breakdown as item, index}
+            {#each parsedDescription.breakdown as item, index (`${item.arabic}-${index}`)}
               <div class="flex items-center gap-4 p-3 bg-tile-300 rounded-xl border border-tile-500 hover:border-tile-600 transition-colors">
                 <!-- Number Badge -->
                 <div class="w-8 h-8 bg-violet-500 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">

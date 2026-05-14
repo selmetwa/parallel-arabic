@@ -190,7 +190,7 @@
 		{:else}
 			{#each words as word}
 				<button
-					class="transitional-all rounded-sm p-1 text-4xl duration-300 hover:bg-tile-500"
+					class="transitional-all rounded-sm p-1 text-base sm:text-lg text-text-200 duration-300 hover:bg-tile-500"
 					value={word}
 					onclick={assignActiveWord}
 				>

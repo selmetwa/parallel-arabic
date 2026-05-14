@@ -5,10 +5,43 @@
 	import { onMount } from 'svelte';
 	import { updateKeyboardStyle } from '$lib/helpers/update-keyboard-style';
 	import { goto } from '$app/navigation';
-	import { browser } from '$app/environment';
+	import { resolve } from '$app/paths';
 
 	let page = $state(0);
 	const totalPages = 2;
+	const formSlots = [
+		{
+			key: 'isolated',
+			label: 'Isolated',
+			context: 'stands alone'
+		},
+		{
+			key: 'start',
+			label: 'Initial',
+			context: 'starts a word'
+		},
+		{
+			key: 'middle',
+			label: 'Medial',
+			context: 'between letters'
+		},
+		{
+			key: 'end',
+			label: 'Final',
+			context: 'ends a word'
+		}
+	] as const;
+
+	type Letter = (typeof letters)[number];
+	type FormKey = (typeof formSlots)[number]['key'];
+
+	function formValue(letter: Letter, key: FormKey) {
+		return letter[key];
+	}
+
+	function hasTwoForms(letter: Letter) {
+		return !letter.start || !letter.middle;
+	}
 
 	function playAudio(letter: string) {
 		const audio = new Audio(`/letters/audios/${letter}.mp3`);
@@ -17,7 +50,7 @@
 
 	function nextPage() {
 		if (page === totalPages - 1) {
-			goto('/alphabet/practice');
+			goto(resolve('/alphabet/practice'));
 			return;
 		}
 		page += 1;
@@ -29,16 +62,16 @@
 
 	onMount(() => {
 		updateKeyboardStyle();
-		
+
 		// Subscribe to theme changes only on client
 		const unsubHue = hue.subscribe(() => {
 			updateKeyboardStyle();
 		});
-		
+
 		const unsubTheme = theme.subscribe(() => {
 			updateKeyboardStyle();
 		});
-		
+
 		return () => {
 			unsubHue();
 			unsubTheme();
@@ -50,31 +83,45 @@
 
 <section class="min-h-screen bg-tile-200">
 	<!-- Header with Navigation -->
-	<header class="border-b border-tile-600 sticky top-0 bg-tile-200 z-10">
-		<div class="max-w-7xl mx-auto px-3 sm:px-8 py-4">
+	<header class="sticky top-0 z-10 border-b border-tile-600 bg-tile-200">
+		<div class="mx-auto max-w-7xl px-3 py-4 sm:px-8">
 			<div class="flex items-center justify-between">
-				<a href="/alphabet" class="flex items-center gap-2 text-text-200 hover:text-text-300 transition-colors">
-					<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-						<path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+				<a
+					href={resolve('/alphabet')}
+					class="flex items-center gap-2 text-text-200 transition-colors hover:text-text-300"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="h-5 w-5"
+						viewBox="0 0 20 20"
+						fill="currentColor"
+					>
+						<path
+							fill-rule="evenodd"
+							d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
+							clip-rule="evenodd"
+						/>
 					</svg>
 					<span class="font-medium">Back to Alphabet</span>
 				</a>
-				
+
 				<div class="flex items-center gap-4">
 					<!-- Progress indicator -->
 					<div class="flex items-center gap-2">
-						{#each Array(totalPages) as _, i}
+						{#each Array(totalPages) as _, i (i)}
 							<button
-								onclick={() => page = i}
+								onclick={() => (page = i)}
 								class={cn(
-									'w-3 h-3 rounded-full transition-all duration-300',
-									page === i ? 'bg-text-300 scale-110' : 'bg-tile-500 border border-tile-600 hover:bg-tile-400'
+									'h-3 w-3 rounded-full transition-all duration-300',
+									page === i
+										? 'scale-110 bg-text-300'
+										: 'border border-tile-600 bg-tile-500 hover:bg-tile-400'
 								)}
 								aria-label="Go to page {i + 1}"
 							></button>
 						{/each}
 					</div>
-					<span class="text-text-200 text-sm hidden sm:block">
+					<span class="hidden text-sm text-text-200 sm:block">
 						Lesson {page + 1} of {totalPages}
 					</span>
 				</div>
@@ -84,48 +131,68 @@
 
 	<!-- Content -->
 	<div class="py-8 sm:py-12">
-		<div class="max-w-7xl mx-auto px-3 sm:px-8">
+		<div class="mx-auto max-w-7xl px-3 sm:px-8">
 			{#if page === 0}
 				<!-- Lesson 1: All Letters -->
 				<div class="mb-8">
-					<div class="max-w-3xl mb-10">
-						<div class="inline-flex items-center gap-2 px-3 py-1.5 bg-tile-400 border border-tile-600 rounded-full text-xs text-text-200 mb-4">
+					<div class="mb-10 max-w-3xl">
+						<div
+							class="mb-4 inline-flex items-center gap-2 rounded-full border border-tile-600 bg-tile-400 px-3 py-1.5 text-xs text-text-200"
+						>
 							<span>Lesson 1</span>
 						</div>
-						<h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-300 leading-tight mb-4">
+						<h1 class="mb-4 text-3xl font-bold leading-tight text-text-300 sm:text-4xl lg:text-5xl">
 							The Arabic alphabet has 28 letters
 						</h1>
-						<p class="text-lg text-text-200 leading-relaxed mb-4">
-							Here they are arranged in order, starting from top right and moving across to the left. Each letter has a name and a unique sound.
+						<p class="mb-4 text-lg leading-relaxed text-text-200">
+							Here they are arranged in order, starting from top right and moving across to the
+							left. Each letter has a name and a unique sound.
 						</p>
-						<div class="inline-flex items-center gap-2 px-4 py-2 bg-tile-400 border border-tile-600 rounded-lg text-sm text-text-200">
+						<div
+							class="inline-flex items-center gap-2 rounded-lg border border-tile-600 bg-tile-400 px-4 py-2 text-sm text-text-200"
+						>
 							<span>💡</span>
 							<span>Click on any letter to hear its pronunciation</span>
 						</div>
 					</div>
-					
-					<div class="bg-gradient-to-br from-tile-400 to-tile-300 border-2 border-tile-600 rounded-2xl p-6 shadow-xl">
-						<div class="grid grid-cols-4 gap-3 sm:grid-cols-5 lg:grid-cols-7 xl:grid-cols-10" dir="rtl">
-							{#each lettersToRender as letter}
-								<div class="flex flex-col items-center justify-center group transform transition-all duration-300 hover:-translate-y-1">
-									<p class="text-xs sm:text-sm font-medium text-text-200 mb-2 group-hover:text-text-300 group-hover:font-semibold transition-all text-center">
+
+					<div
+						class="rounded-2xl border-2 border-tile-600 bg-gradient-to-br from-tile-400 to-tile-300 p-6 shadow-xl"
+					>
+						<div
+							class="grid grid-cols-4 gap-3 sm:grid-cols-5 lg:grid-cols-7 xl:grid-cols-10"
+							dir="rtl"
+						>
+							{#each lettersToRender as letter (letter.key)}
+								<div
+									class="group flex transform flex-col items-center justify-center transition-all duration-300 hover:-translate-y-1"
+								>
+									<p
+										class="mb-2 text-center text-xs font-medium text-text-200 transition-all group-hover:font-semibold group-hover:text-text-300 sm:text-sm"
+									>
 										{letter.name}
 									</p>
 									<button
 										onclick={() => playAudio(letter.key)}
 										value={letter.key}
-										class="relative flex w-full aspect-square cursor-pointer items-center justify-center border-2 border-tile-600 bg-gradient-to-br from-tile-300 to-tile-200 rounded-2xl text-3xl sm:text-4xl lg:text-5xl text-text-300 shadow-md hover:shadow-xl transition-all duration-300 ease-out hover:bg-gradient-to-br hover:from-tile-500 hover:to-tile-400 hover:border-text-200 hover:-translate-y-2 hover:scale-110 active:scale-95 overflow-hidden"
+										class="relative flex aspect-square w-full cursor-pointer items-center justify-center overflow-hidden rounded-2xl border-2 border-tile-600 bg-gradient-to-br from-tile-300 to-tile-200 text-3xl text-text-300 shadow-md transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-110 hover:border-text-200 hover:bg-gradient-to-br hover:from-tile-500 hover:to-tile-400 hover:shadow-xl active:scale-95 sm:text-4xl lg:text-5xl"
 									>
 										<!-- Ripple effect -->
-										<span class="absolute inset-0 bg-white/30 scale-0 group-active:scale-100 group-active:opacity-0 transition-all duration-500 rounded-2xl"></span>
+										<span
+											class="absolute inset-0 scale-0 rounded-2xl bg-white/30 transition-all duration-500 group-active:scale-100 group-active:opacity-0"
+										></span>
 
 										<!-- Letter -->
-										<span class="relative z-10 transform group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300">
+										<span
+											class="relative z-10 transform transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110"
+										>
 											{letter.isolated}
 										</span>
 
 										<!-- Audio indicator -->
-										<div class="absolute top-1 right-1 w-2 h-2 rounded-full bg-green-400 opacity-0 group-hover:opacity-100 animate-pulse transition-opacity"></div>
+										<div
+											class="absolute right-1 top-1 h-2 w-2 animate-pulse rounded-full bg-green-400 opacity-0 transition-opacity group-hover:opacity-100"
+										></div>
 									</button>
 								</div>
 							{/each}
@@ -133,81 +200,136 @@
 					</div>
 				</div>
 			{/if}
-			
+
 			{#if page === 1}
 				<!-- Lesson 2: Letter Forms -->
 				<div class="mb-8">
-					<div class="max-w-4xl mb-10">
-						<div class="inline-flex items-center gap-2 px-3 py-1.5 bg-tile-400 border border-tile-600 rounded-full text-xs text-text-200 mb-4">
+					<div class="mb-8 max-w-4xl">
+						<div
+							class="mb-4 inline-flex items-center gap-2 rounded-full border border-tile-600 bg-tile-400 px-3 py-1.5 text-xs text-text-200"
+						>
 							<span>Lesson 2</span>
 						</div>
-						<h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-300 leading-tight mb-4">
+						<h1 class="mb-4 text-3xl font-bold leading-tight text-text-300 sm:text-4xl lg:text-5xl">
 							Arabic is cursive, written right to left
 						</h1>
-						<p class="text-lg text-text-200 leading-relaxed mb-3">
-							Each letter takes a different form depending on whether it has an independent, initial, medial, or final position in a word.
+						<p class="mb-3 text-lg leading-relaxed text-text-200">
+							Each letter takes a different form depending on whether it has an independent,
+							initial, medial, or final position in a word.
 						</p>
-						<p class="text-base text-text-200 leading-relaxed mb-4 opacity-80">
-							<span class="text-green-700 font-medium">Highlighted letters</span> (ا - ز ـ ر ـ ذ ـ د ـ و) have only two forms: Independent and Final. They don't connect to the left.
-						</p>
-						<div class="inline-flex items-center gap-2 px-4 py-2 bg-tile-400 border border-tile-600 rounded-lg text-sm text-text-200">
-							<span>💡</span>
-							<span>Click on any letter card to hear its pronunciation</span>
+					</div>
+
+					<div class="mb-6 grid gap-3 md:grid-cols-[1.2fr_0.8fr]">
+						<div class="border-2 border-tile-600 bg-tile-400 p-4 shadow-lg sm:p-5">
+							<div class="mb-3 flex items-center justify-between gap-3">
+								<h2 class="text-lg font-bold text-text-300">How to read each row</h2>
+								<span
+									class="rounded-full border border-tile-600 bg-tile-300 px-3 py-1 text-xs font-semibold text-text-200"
+								>
+									Right to left
+								</span>
+							</div>
+							<div class="grid grid-cols-2 gap-2 sm:grid-cols-4">
+								{#each formSlots as slot (slot.key)}
+									<div class="border border-tile-600 bg-tile-300 p-3 text-left">
+										<p class="text-sm font-bold text-text-300">{slot.label}</p>
+										<p class="text-xs leading-snug text-text-200">{slot.context}</p>
+									</div>
+								{/each}
+							</div>
+						</div>
+
+						<div class="border-2 border-green-600/50 bg-green-500/10 p-4 shadow-lg sm:p-5">
+							<h2 class="mb-2 text-lg font-bold text-text-300">Two-form letters</h2>
+							<p class="mb-3 text-sm leading-relaxed text-text-200">
+								ا د ذ ر ز و connect only from the right, so their initial and medial cells are
+								intentionally unavailable.
+							</p>
+							<div class="flex flex-wrap gap-2" dir="rtl" aria-label="Two-form Arabic letters">
+								{#each letters.filter(hasTwoForms) as letter (letter.key)}
+									<span
+										class="flex h-10 w-10 items-center justify-center border border-green-600/40 bg-tile-300 text-2xl font-bold text-text-300"
+									>
+										{letter.isolated}
+									</span>
+								{/each}
+							</div>
 						</div>
 					</div>
-					
-					<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" dir="rtl">
-						{#each letters as letter}
+
+					<div class="grid grid-cols-1 gap-4 lg:grid-cols-2" dir="rtl">
+						{#each letters as letter (letter.key)}
 							<button
 								onclick={() => playAudio(letter.key)}
+								aria-label={`Play pronunciation for ${letter.name}`}
 								class={cn(
-									'group cursor-pointer relative overflow-hidden border-2 rounded-2xl transition-all duration-300 ease-out hover:shadow-2xl hover:-translate-y-2',
-									(!letter.start || !letter.middle)
-										? 'border-green-500/50 bg-gradient-to-br from-green-500/10 to-green-500/5 hover:from-green-500/20 hover:to-green-500/10 hover:border-green-400'
-										: 'border-tile-600 bg-gradient-to-br from-tile-400 to-tile-300 hover:from-tile-500 hover:to-tile-400 hover:border-tile-500'
+									'group relative cursor-pointer overflow-hidden border-2 p-4 text-right shadow-lg transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-text-300 focus:ring-offset-2 focus:ring-offset-tile-200 sm:p-5',
+									hasTwoForms(letter)
+										? 'border-green-600/50 bg-green-500/10 hover:border-green-600 hover:bg-green-500/15'
+										: 'border-tile-600 bg-tile-400 hover:border-tile-500 hover:bg-tile-500'
 								)}
 							>
-								<!-- Shine effect on hover -->
-								<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-									<div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+								<div
+									class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+								>
+									<div
+										class="absolute inset-0 translate-x-[-100%] bg-gradient-to-tr from-transparent via-white/10 to-transparent transition-transform duration-1000 group-hover:translate-x-[100%]"
+									></div>
 								</div>
 
-								<div class="p-5 sm:p-6 relative z-10">
-									<!-- Letter name with badge -->
-									<div class="flex items-center justify-center gap-2 mb-3">
-										<p class="text-sm font-medium text-text-200 group-hover:text-text-300 group-hover:font-semibold transition-all">
-											{letter.name}
-										</p>
-										{#if !letter.start || !letter.middle}
-											<span class="text-xs px-2 py-0.5 rounded-full bg-green-400/20 text-green-600 font-semibold">
-												2 forms
+								<div class="relative z-10 grid gap-4 sm:grid-cols-[7rem_1fr] sm:items-stretch">
+									<div
+										class="border-tile-600/60 flex flex-row-reverse items-center justify-between gap-3 border-b pb-3 sm:flex-col sm:justify-center sm:border-b-0 sm:border-l sm:pb-0 sm:pl-4"
+									>
+										<div class="text-center">
+											<p class="mb-1 text-sm font-semibold text-text-200">{letter.name}</p>
+											<p class="text-5xl font-bold leading-none text-text-300 sm:text-6xl">
+												{letter.isolated}
+											</p>
+										</div>
+										<div class="flex flex-col items-end gap-2 sm:items-center">
+											<span
+												class={cn(
+													'rounded-full border px-3 py-1 text-xs font-semibold',
+													hasTwoForms(letter)
+														? 'border-green-600/40 bg-green-500/15 text-green-700'
+														: 'border-tile-600 bg-tile-300 text-text-200'
+												)}
+											>
+												{hasTwoForms(letter) ? '2 forms' : '4 forms'}
 											</span>
-										{/if}
+											<span class="text-xs font-medium text-text-200 opacity-80">Tap to hear</span>
+										</div>
 									</div>
 
-									<!-- Main letter with enhanced styling -->
-									<p class="text-6xl sm:text-7xl text-center font-bold text-text-300 mb-4 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-										{letter.isolated}
-									</p>
-
-									<!-- Forms grid with better visual separation -->
-									<div class="flex w-full flex-row items-stretch justify-between bg-gradient-to-r from-tile-300/40 via-tile-300/60 to-tile-300/40 rounded-xl border border-tile-500/30 overflow-hidden">
-										<div class="flex flex-col items-center flex-1 py-3">
-											<span class="text-xs text-text-200 mb-1 font-medium">Start</span>
-											<p class={cn('text-2xl sm:text-3xl text-text-300', { 'opacity-30': !letter.start })}>
-												{letter.start || '—'}
-											</p>
-										</div>
-										<div class="flex flex-col items-center flex-1 border-x border-tile-500/30 py-3">
-											<span class="text-xs text-text-200 mb-1 font-medium">Middle</span>
-											<p class={cn('text-2xl sm:text-3xl text-text-300', { 'opacity-30': !letter.middle })}>
-												{letter.middle || '—'}
-											</p>
-										</div>
-										<div class="flex flex-col items-center flex-1 py-3">
-											<span class="text-xs text-text-200 mb-1 font-medium">End</span>
-											<p class="text-2xl sm:text-3xl text-text-300">{letter.end}</p>
-										</div>
+									<div class="grid grid-cols-2 gap-2 sm:grid-cols-4">
+										{#each formSlots as slot (slot.key)}
+											{@const value = formValue(letter, slot.key)}
+											<div
+												class={cn(
+													'flex min-h-28 flex-col justify-between border p-3 text-center',
+													value
+														? 'border-tile-600 bg-tile-300'
+														: 'border-green-600/30 bg-green-500/10'
+												)}
+											>
+												<div>
+													<p class="text-sm font-bold text-text-300">{slot.label}</p>
+													<p class="text-[0.7rem] leading-tight text-text-200">{slot.context}</p>
+												</div>
+												<p
+													class={cn(
+														'py-3 text-4xl font-bold leading-none text-text-300 sm:text-5xl',
+														!value && 'text-2xl text-green-700 opacity-80 sm:text-3xl'
+													)}
+													aria-label={value
+														? `${letter.name} ${slot.label} form`
+														: `${letter.name} has no ${slot.label} form`}
+												>
+													{value || 'n/a'}
+												</p>
+											</div>
+										{/each}
 									</div>
 								</div>
 							</button>
@@ -219,17 +341,28 @@
 	</div>
 
 	<!-- Bottom Navigation -->
-	<footer class="border-t border-tile-600 sticky bottom-0 bg-gradient-to-b from-tile-300/95 to-tile-300 backdrop-blur-md shadow-lg z-[100]">
-		<div class="max-w-7xl mx-auto px-3 sm:px-8 py-4">
+	<footer
+		class="from-tile-300/95 sticky bottom-0 z-[100] border-t border-tile-600 bg-gradient-to-b to-tile-300 shadow-lg backdrop-blur-md"
+	>
+		<div class="mx-auto max-w-7xl px-3 py-4 sm:px-8">
 			<div class="flex items-center justify-between">
 				<div>
 					{#if page > 0}
 						<button
 							onclick={previousPage}
-							class="flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-tile-400 to-tile-300 border-2 border-tile-600 text-text-300 font-semibold rounded-xl shadow-md hover:shadow-lg hover:from-tile-500 hover:to-tile-400 active:scale-95 transition-all duration-200"
+							class="flex items-center gap-2 rounded-xl border-2 border-tile-600 bg-gradient-to-r from-tile-400 to-tile-300 px-5 py-3 font-semibold text-text-300 shadow-md transition-all duration-200 hover:from-tile-500 hover:to-tile-400 hover:shadow-lg active:scale-95"
 						>
-							<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-								<path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-4 w-4"
+								viewBox="0 0 20 20"
+								fill="currentColor"
+							>
+								<path
+									fill-rule="evenodd"
+									d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+									clip-rule="evenodd"
+								/>
 							</svg>
 							<span>Previous</span>
 						</button>
@@ -240,11 +373,20 @@
 
 				<button
 					onclick={nextPage}
-					class="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-tile-600 to-tile-700 border-2 border-tile-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:from-tile-700 hover:to-tile-800 active:scale-95 transform hover:-translate-y-0.5 transition-all duration-200"
+					class="hover:to-tile-800 flex transform items-center gap-2 rounded-xl border-2 border-tile-700 bg-gradient-to-r from-tile-600 to-tile-700 px-6 py-3 font-semibold text-white shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:from-tile-700 hover:shadow-xl active:scale-95"
 				>
 					<span>{page === totalPages - 1 ? 'Start Practicing' : 'Next Lesson'}</span>
-					<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-						<path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="h-4 w-4"
+						viewBox="0 0 20 20"
+						fill="currentColor"
+					>
+						<path
+							fill-rule="evenodd"
+							d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+							clip-rule="evenodd"
+						/>
 					</svg>
 				</button>
 			</div>

@@ -15,6 +15,10 @@ const dialectName: Record<Dialect, string> = {
   khaleeji: 'Khaleeji Arabic'
 }
 
+function countTokens(text: string) {
+  return text.trim().split(/\s+/).filter(Boolean).length;
+}
+
 export const askChatGTP = async (word: string, type: string, fullSentence: TFullSentence, dialect: Dialect) => {
   let question = '';
 
@@ -51,7 +55,8 @@ export const askChatGTP = async (word: string, type: string, fullSentence: TFull
         'Accept': 'application/json'
       },
       body: JSON.stringify({
-        question: question
+        question,
+        isSingleWordDefinition: type === 'arabic' && countTokens(word) === 1
       })
     });
 

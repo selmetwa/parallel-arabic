@@ -44,6 +44,13 @@
 	// Tashkeel words split from the full tashkeel sentence
 	let tashkeelWords = $derived(sentence.arabicTashkeel?.text?.split(' ') || []);
 
+	// Only use tashkeel when word count matches wordAlignments exactly — otherwise index[i] ↔ alignment[i] breaks
+	let tashkeelUsable = $derived(
+		sentence.wordAlignments?.length
+			? tashkeelWords.length === sentence.wordAlignments.length
+			: true
+	);
+
 	// Words used for selection (arabic tokens from whichever mode is active)
 	let wordList = $derived(
 		sentence.wordAlignments?.length
@@ -226,7 +233,7 @@
 	{#if sentence.wordAlignments?.length}
 		<!-- Word-aligned display -->
 		{#each sentence.wordAlignments as wordAlign, wordIndex}
-			{@const displayArabic = showTashkeel && tashkeelWords[wordIndex] ? tashkeelWords[wordIndex] : wordAlign.arabic}
+			{@const displayArabic = showTashkeel && tashkeelUsable && tashkeelWords[wordIndex] ? tashkeelWords[wordIndex] : wordAlign.arabic}
 			<button
 				class={cn(
 					'flex flex-col items-center px-2 py-2 sm:px-3 sm:py-3 rounded-lg transition-all duration-200 cursor-pointer group border-2',

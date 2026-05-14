@@ -114,7 +114,6 @@
             activeLesson = lessonData;
         } catch (e) {
             console.error(e);
-            alert('Could not load lesson content. Please try regenerating it.');
         }
     }
 </script>

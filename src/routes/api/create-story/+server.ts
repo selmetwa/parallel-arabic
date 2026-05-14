@@ -393,9 +393,24 @@ Dialect flavor: mix of Arabic, Berber, and French loanwords — e.g., الطوم
         ]
 
     IMPORTANT: For each sentence, you MUST provide word-by-word alignments in the wordAlignments array.
-    Each Arabic word should map to its English meaning and transliteration.
-    If one Arabic word translates to multiple English words, combine them (e.g., "I am" for واحد Arabic word).
-    The wordAlignments array should have one entry per Arabic word in the sentence.
+    The wordAlignments array must have EXACTLY one entry per Arabic word in the sentence, in the same left-to-right order they appear.
+
+    GLOSS RULES — read carefully:
+    - Provide the LITERAL/GLOSS English meaning of each individual word, NOT a free translation of the full sentence.
+    - Keep each english gloss SHORT: 1–3 words maximum.
+    - For ${config.name} dialect words that have no direct English equivalent, give the closest literal meaning (e.g. بس → "just/only", يعني → "meaning/i.e.", خلاص → "done/enough", مش → "not").
+    - When an Arabic word carries an attached pronoun or preposition (clitic), reflect it concisely (e.g. بيتها → "her house", فيها → "in it", معهم → "with them").
+    - Do NOT write phrase-level translations as the gloss (e.g. كان → "was" ✓, not "there once was" ✗).
+    - Do NOT repeat the full sentence meaning spread across words.
+
+    GOOD vs BAD examples:
+    Arabic: أنا بحب القهوة
+    GOOD: [{arabic:"أنا",english:"I"}, {arabic:"بحب",english:"I love"}, {arabic:"القهوة",english:"the coffee"}]
+    BAD:  [{arabic:"أنا",english:"I am someone who"}, {arabic:"بحب",english:"really enjoys drinking"}, {arabic:"القهوة",english:"a hot beverage"}]
+
+    Arabic: راحت لبيتها
+    GOOD: [{arabic:"راحت",english:"she went"}, {arabic:"لبيتها",english:"to her house"}]
+    BAD:  [{arabic:"راحت",english:"went away far"}, {arabic:"لبيتها",english:"to the place where she lives"}]
   `;
 
 	try {

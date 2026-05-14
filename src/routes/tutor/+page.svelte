@@ -37,6 +37,7 @@
 
   async function handleWordClick(word: string, type: 'arabic' | 'english' | 'transliteration', message: ConversationMessage) {
     const cleanWord = word.replace(/[،,]/g, '');
+    const isSingleWordDefinition = type === 'arabic' && cleanWord.trim().split(/\s+/).filter(Boolean).length === 1;
     
     setActiveWord({
       english: '',
@@ -59,7 +60,8 @@
             english: message.english || '',
             transliteration: message.transliteration || ''
           },
-          dialect: selectedDialect
+          dialect: selectedDialect,
+          isSingleWordDefinition
         })
       });
 
@@ -284,7 +286,6 @@
       practiceResult = null;
     } catch (error) {
       console.error('Error starting practice recording:', error);
-      alert('Failed to access microphone. Please check your permissions.');
     }
   }
 
@@ -462,7 +463,6 @@
     } catch (error) {
       console.error('Error starting recording:', error);
       recording = false;
-      alert('Failed to access microphone. Please check your permissions.');
     }
   }
 
@@ -622,7 +622,6 @@
 
     } catch (error) {
       console.error('Error processing recording:', error);
-      alert('Failed to process your message. Please try again.');
     } finally {
       isProcessing = false;
       isTranscribing = false;

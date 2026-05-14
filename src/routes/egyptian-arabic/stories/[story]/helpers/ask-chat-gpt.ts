@@ -4,6 +4,10 @@ type TFullSentence = {
   transliteration: string;
 }
 
+function countTokens(text: string) {
+  return text.trim().split(/\s+/).filter(Boolean).length;
+}
+
 export const askChatGTP = async (word: string, type: string, fullSentence: TFullSentence) => {
   let question = '';
 
@@ -38,7 +42,8 @@ export const askChatGTP = async (word: string, type: string, fullSentence: TFull
         'Accept': 'application/json'
       },
       body: JSON.stringify({
-        question: question
+        question,
+        isSingleWordDefinition: type === 'arabic' && countTokens(word) === 1
       })
     });
 

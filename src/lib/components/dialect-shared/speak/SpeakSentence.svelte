@@ -178,9 +178,14 @@
     return filterArabicCharacters(sentence.arabic);
   }
 
+  function countTokens(text: string) {
+    return text.trim().split(/\s+/).filter(Boolean).length;
+  }
+
   async function askChatGTP(word: string) {
 		targetWord = word;
 		targetArabicWord = mapEnglishToArabic(word);
+		const isSingleWordDefinition = countTokens(word) === 1 && countTokens(targetArabicWord) === 1;
 		isLoadingDefinition = true;
 		openDefinitionModal();
 		const question = `What does ${word} mean in ${dialectName[dialect as Dialect]}? Considering the following sentences:
@@ -198,7 +203,8 @@
 					'Accept': 'application/json'
 				},
 				body: JSON.stringify({
-					question: question
+					question,
+					isSingleWordDefinition
 				})
 			});
 

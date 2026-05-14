@@ -156,9 +156,9 @@
             const currentIndex = lessonPositions.findIndex(l => l.id === lessonNode.id);
             if (currentIndex > 0) {
                 const previousLesson = lessonPositions[currentIndex - 1];
-                alert(`Please complete "${previousLesson.title}" first before starting this lesson.`);
+                console.warn(`Lesson locked: complete "${previousLesson.title}" first.`);
             } else {
-                alert('This lesson is not available yet.');
+                console.warn('Lesson not available yet.');
             }
             return;
         }
@@ -195,7 +195,6 @@
             };
         } catch (e) {
             console.error(e);
-            alert('Could not load lesson content. Please try regenerating it.');
         }
     }
 

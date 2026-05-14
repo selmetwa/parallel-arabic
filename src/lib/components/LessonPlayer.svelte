@@ -422,11 +422,16 @@
         
         return filterArabicCharacters(sentence.arabic);
     }
+
+    function countTokens(text: string) {
+        return text.trim().split(/\s+/).filter(Boolean).length;
+    }
     
     async function askChatGPT(words: string | string[], sentence: { arabic: string; english: string; transliteration: string }) {
         const wordsArray = Array.isArray(words) ? words : [words];
         targetWord = wordsArray.join(' ');
         targetArabicWord = mapEnglishToArabic(wordsArray, sentence);
+        const isSingleWordDefinition = wordsArray.length === 1 && countTokens(targetArabicWord) === 1;
         
         isLoadingDefinition = true;
         isDefinitionModalOpen = true;
@@ -452,7 +457,7 @@
             const res = await fetch('/api/definition-sentence', {
                 method: 'POST',
                 headers: { accept: 'application/json' },
-                body: JSON.stringify({ question })
+                body: JSON.stringify({ question, isSingleWordDefinition })
             });
             
             const data = await res.json();
@@ -699,7 +704,7 @@
         
         <button
             onclick={() => isDiacriticModalOpen = true}
-            class="text-xs px-4 py-2 rounded-lg bg-tile-500 border-2 border-tile-600 text-text-300 hover:bg-tile-600 transition-colors font-semibold"
+            class="text-xs px-3 py-1.5 rounded-full bg-tile-500 border border-tile-600 text-text-200 hover:text-text-300 hover:bg-tile-600 transition-colors font-semibold"
             title="View diacritical marks guide"
             aria-label="View diacritical marks guide"
         >
@@ -720,10 +725,10 @@
                         <div class="space-y-4 lg:space-y-6">
                             <!-- Step Badge + Title -->
                             <div class="text-center">
-                                <span class="inline-block text-xs font-bold uppercase tracking-wider text-text-300 bg-tile-500 border-2 border-tile-600 px-4 py-2 rounded-lg shadow-md mb-3">
+                                <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-text-300 bg-tile-500 border border-tile-600 px-4 py-1.5 rounded-full shadow-sm mb-4">
                                     📚 Learn
                                 </span>
-                                <div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-4 lg:p-6 shadow-lg">
+                                <div class="bg-tile-400 border border-tile-600 rounded-2xl p-4 lg:p-6 shadow-md">
                                     <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold text-text-300 mb-2">{currentStep.content.title.english}</h2>
                                     {#if currentStep.content.title.arabic}
                                         <h3 class="text-3xl sm:text-4xl lg:text-5xl text-text-300 font-arabic" dir="rtl">{currentStep.content.title.arabic}</h3>
@@ -734,7 +739,7 @@
                             <!-- Two-column layout on desktop -->
                             <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
                                 <!-- Left: Content + Tables -->
-                                <div class="bg-tile-500 border-2 border-tile-600 rounded-lg p-4 lg:p-6 shadow-lg space-y-4">
+                                <div class="bg-tile-500 border border-tile-600 rounded-2xl p-4 lg:p-6 shadow-md space-y-4">
                                     {#if parsedContent.remainingText}
                                         <div class="text-base lg:text-lg text-text-200 leading-relaxed whitespace-pre-line">{parsedContent.remainingText}</div>
                                     {/if}
@@ -793,15 +798,15 @@
 
                                 <!-- Right: Examples -->
                                 {#if currentStep.content.examples && currentStep.content.examples.length > 0}
-                                    <div class="bg-tile-500 border-2 border-tile-600 rounded-lg p-4 lg:p-6 shadow-lg">
-                                        <h4 class="text-sm font-bold uppercase tracking-wider text-text-300 border-b-2 border-tile-600 pb-2 mb-4">Examples</h4>
+                                    <div class="bg-tile-500 border border-tile-600 rounded-2xl p-4 lg:p-6 shadow-md">
+                                        <h4 class="text-xs font-bold uppercase tracking-wider text-text-200 border-b border-tile-600 pb-2 mb-4">Examples</h4>
                                         <div class="space-y-3 lg:space-y-4 max-h-[60vh] lg:max-h-none overflow-y-auto lg:overflow-visible">
                                             {#each currentStep.content.examples as example}
-                                                <div class="bg-tile-400 p-3 lg:p-4 rounded-lg border-2 border-tile-600 flex flex-col gap-3">
+                                                <div class="bg-tile-400 p-3 lg:p-4 rounded-xl border border-tile-600 flex flex-col gap-3">
                                                     <div class="flex items-start justify-between gap-3">
                                                         <div class="flex-1 space-y-1">
-                                                            <p class="text-base lg:text-lg font-bold text-text-300">{example.english}</p>
-                                                            <p class="text-sm text-text-200 italic">{example.transliteration}</p>
+                                                            <p class="text-sm lg:text-base font-medium text-text-200">{example.english}</p>
+                                                            <p class="text-xs text-text-200 italic opacity-75">{example.transliteration}</p>
                                                             {#if example.diacriticalNotes}
                                                                 <p class="text-xs text-text-200 font-medium mt-1">📝 {example.diacriticalNotes}</p>
                                                             {/if}
@@ -840,7 +845,7 @@
                         <div class="flex-1 flex flex-col justify-center space-y-4 lg:space-y-6">
                             <!-- Step Badge -->
                             <div class="text-center">
-                                <span class="inline-block text-xs font-bold uppercase tracking-wider text-text-300 bg-tile-500 border-2 border-tile-600 px-4 py-2 rounded-lg shadow-md">
+                                <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-text-300 bg-tile-500 border border-tile-600 px-4 py-1.5 rounded-full shadow-sm">
                                     🗣️ Practice Sentence
                                 </span>
                                 {#if step.context}
@@ -850,16 +855,16 @@
 
                             <!-- Selection controls -->
                             {#if selectedWords.length > 0}
-                                <div class="flex gap-2 justify-center">
+                                <div class="flex gap-2 justify-center flex-wrap">
                                     <button
                                         onclick={() => askChatGPT(selectedWords, step.sentence)}
-                                        class="px-3 py-1.5 bg-tile-500 text-text-300 rounded-lg border-2 border-tile-600 hover:bg-tile-600 transition-colors font-semibold text-sm"
+                                        class="px-3 py-1.5 bg-tile-500 text-text-300 rounded-lg border border-tile-600 hover:bg-tile-600 transition-colors font-semibold text-sm"
                                     >
                                         📖 Define "{selectedWords.join(' ')}"
                                     </button>
                                     <button
                                         onclick={clearSelection}
-                                        class="px-3 py-1.5 bg-tile-400 text-text-200 rounded-lg border-2 border-tile-600 hover:bg-tile-500 hover:text-text-300 transition-colors font-semibold text-sm"
+                                        class="px-3 py-1.5 bg-tile-400 text-text-200 rounded-lg border border-tile-600 hover:bg-tile-500 hover:text-text-300 transition-colors font-semibold text-sm"
                                     >
                                         ✕ Clear
                                     </button>
@@ -869,10 +874,10 @@
                             <!-- Two-column layout on desktop -->
                             <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
                                 <!-- Left: English sentence with word selection -->
-                                <div class="bg-tile-500 border-2 border-tile-600 rounded-lg p-4 lg:p-6 shadow-lg flex flex-col justify-center">
+                                <div class="bg-tile-500 border border-tile-600 rounded-2xl p-4 lg:p-6 shadow-md flex flex-col justify-center">
                                     <h4 class="text-xs font-bold uppercase tracking-wider text-text-200 mb-3">English</h4>
                                     <div
-                                        class="flex w-fit flex-row flex-wrap text-lg sm:text-xl lg:text-2xl font-bold text-text-300 select-none"
+                                        class="flex w-fit flex-row flex-wrap text-base sm:text-lg font-medium text-text-200 select-none"
                                         onmouseup={handleWordMouseUp}
                                         role="application"
                                         aria-label="Word selection area for definitions"
@@ -901,7 +906,7 @@
                                 </div>
 
                                 <!-- Right: Arabic sentence -->
-                                <div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-4 lg:p-6 shadow-lg flex flex-col justify-center">
+                                <div class="bg-tile-400 border border-tile-600 rounded-2xl p-4 lg:p-6 shadow-md flex flex-col justify-center">
                                     <h4 class="text-xs font-bold uppercase tracking-wider text-text-200 mb-3">Arabic</h4>
                                     <p class="text-2xl sm:text-3xl lg:text-4xl font-bold text-text-300 leading-relaxed" dir="rtl">{step.sentence.arabic}</p>
                                     <p class="text-sm text-text-200 italic mt-2">{step.sentence.transliteration}</p>
@@ -945,7 +950,7 @@
                         <div class="flex-1 flex flex-col justify-center space-y-4 lg:space-y-6">
                             <!-- Step Badge -->
                             <div class="text-center">
-                                <span class="inline-block text-xs font-bold uppercase tracking-wider text-text-300 bg-tile-500 border-2 border-tile-600 px-4 py-2 rounded-lg shadow-md">
+                                <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-text-300 bg-tile-500 border border-tile-600 px-4 py-1.5 rounded-full shadow-sm">
                                     {currentStep.exerciseType === 'multiple-choice' ? '❓ Quiz' :
                                      currentStep.exerciseType === 'fill-in-blank' ? '✏️ Fill in the blank' : '🔗 Match'}
                                 </span>
@@ -954,7 +959,7 @@
                             <!-- Two-column layout on desktop -->
                             <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-start">
                                 <!-- Left: Question Card -->
-                                <div class="bg-tile-500 border-2 border-tile-600 rounded-lg p-4 lg:p-6 shadow-lg">
+                                <div class="bg-tile-500 border border-tile-600 rounded-2xl p-4 lg:p-6 shadow-md">
                                     <h2 class="text-lg sm:text-xl lg:text-2xl font-bold text-text-300 leading-relaxed">
                                         {#if isEntirelyArabic(currentStep.question)}
                                             <span dir="rtl" class="font-arabic block text-right text-xl sm:text-2xl lg:text-3xl">{currentStep.question}</span>
@@ -1016,11 +1021,11 @@
                                         {@const showError = isAnswerChecked && isSelected && !showSuccess}
 
                                         <button
-                                            class="w-full p-3 lg:p-4 rounded-lg border-2 transition-all duration-200 flex items-center justify-between group shadow-md
+                                            class="w-full p-3 lg:p-4 rounded-xl border transition-all duration-200 flex items-center justify-between group shadow-sm
                                             {isEntirelyArabic(option.text) ? 'text-right' : 'text-left'}
                                             {isSelected ? 'border-tile-700 bg-tile-500' : 'border-tile-600 bg-tile-400 hover:bg-tile-500 hover:border-tile-700'}
-                                            {showSuccess ? '!border-green-600 !bg-green-100' : ''}
-                                            {showError ? '!border-red-600 !bg-red-100' : ''}
+                                            {showSuccess ? '!border-green-500 !bg-green-50' : ''}
+                                            {showError ? '!border-red-500 !bg-red-50' : ''}
                                             "
                                             onclick={() => handleOptionSelect(option.id)}
                                             disabled={isAnswerChecked && isCorrect}
@@ -1079,24 +1084,22 @@
                 }
             }}
         >
-            <div 
-                class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-2xl max-w-md w-full p-8 text-center"
+            <div
+                class="bg-tile-400 border border-tile-600 rounded-2xl shadow-2xl max-w-md w-full p-8 text-center"
                 transition:fly={{ y: 50, duration: 300 }}
             >
                 <div class="mb-8">
                     <div class="text-7xl mb-4" aria-hidden="true">🎉</div>
-                    <h2 id="congratulations-title" class="text-3xl font-bold text-text-300 mb-3">Congratulations!</h2>
-                    <p class="text-lg text-text-200">
-                        You've completed
-                    </p>
-                    <p class="text-xl font-bold text-text-300 mt-1">"{lesson.title}"</p>
+                    <h2 id="congratulations-title" class="text-3xl font-bold text-text-300 mb-2">Congratulations!</h2>
+                    <p class="text-base text-text-200">You've completed</p>
+                    <p class="text-lg font-bold text-text-300 mt-1">"{lesson.title}"</p>
                 </div>
-                
+
                 <div class="flex flex-col gap-3">
                     {#if onLessonComplete && findNextLessonId(lesson.topicId)}
                         <button
                             type="button"
-                            class="w-full px-6 py-4 text-lg font-bold bg-green-600 border-2 border-green-700 text-white rounded-lg hover:bg-green-700 transition-colors shadow-lg"
+                            class="w-full px-6 py-3.5 text-base font-bold bg-green-600 border border-green-700 text-white rounded-xl hover:bg-green-700 transition-colors shadow-md"
                             onclick={handleContinueToNext}
                         >
                             Continue to Next Lesson →
@@ -1104,7 +1107,7 @@
                     {/if}
                     <button
                         type="button"
-                        class="w-full px-6 py-4 text-lg font-bold bg-tile-500 border-2 border-tile-600 text-text-300 rounded-lg hover:bg-tile-600 transition-colors"
+                        class="w-full px-6 py-3.5 text-base font-bold bg-tile-500 border border-tile-600 text-text-300 rounded-xl hover:bg-tile-600 transition-colors"
                         onclick={handleCloseAfterCompletion}
                     >
                         Close
@@ -1148,67 +1151,66 @@
     {/if}
 
     <!-- Footer -->
-    <footer class="bg-tile-400 border-t-2 border-tile-600 p-3 sm:p-4 lg:p-6 shadow-lg ">
-        <div class="max-w-2xl lg:max-w-5xl mx-auto flex items-center justify-between gap-3 lg:gap-4">
+    <footer class="bg-tile-400 border-t border-tile-600 p-3 sm:p-4 lg:p-6 shadow-lg">
+        <div class="max-w-2xl lg:max-w-5xl mx-auto">
             {#if currentStep.type === 'exercise'}
-                 <div class="flex-1">
+                <div class="flex flex-col gap-3">
                     {#if isAnswerChecked}
-                        <div class="font-bold text-lg px-4 py-2 rounded-lg {isCorrect ? 'text-green-700 bg-green-100 border-2 border-green-300' : 'text-red-700 bg-red-100 border-2 border-red-300'}" in:slide>
+                        <div class="font-bold text-base px-4 py-2.5 rounded-xl {isCorrect ? 'text-green-700 bg-green-50 border border-green-300' : 'text-red-700 bg-red-50 border border-red-300'}" in:slide>
                             {feedbackMessage}
                         </div>
                     {/if}
-                 </div>
-                 
-                 {#if !isAnswerChecked}
-                    <button
-                        class="w-full sm:w-auto px-6 lg:px-10 py-3 lg:py-4 text-base lg:text-lg font-bold bg-tile-500 border-2 border-tile-600 text-text-300 rounded-lg hover:bg-tile-600 transition-colors shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
-                        onclick={checkAnswer}
-                        disabled={!selectedOptionId}
-                    >
-                        Check Answer
-                    </button>
-                 {:else}
-                    <button
-                        class="w-full sm:w-auto px-6 lg:px-10 py-3 lg:py-4 text-base lg:text-lg font-bold rounded-lg transition-colors shadow-md disabled:opacity-50 disabled:cursor-not-allowed
-                        {isCorrect ? 'bg-green-600 border-2 border-green-700 text-white hover:bg-green-700' : 'bg-tile-500 border-2 border-tile-600 text-text-300'}"
-                        onclick={nextStep}
-                        disabled={!isCorrect}
-                    >
-                        Next →
-                    </button>
-                 {/if}
+                    {#if !isAnswerChecked}
+                        <button
+                            class="w-full py-3 lg:py-4 text-base lg:text-lg font-bold bg-tile-500 border border-tile-600 text-text-300 rounded-xl hover:bg-tile-600 transition-colors shadow-sm disabled:opacity-40 disabled:cursor-not-allowed"
+                            onclick={checkAnswer}
+                            disabled={!selectedOptionId}
+                        >
+                            Check Answer
+                        </button>
+                    {:else}
+                        <button
+                            class="w-full py-3 lg:py-4 text-base lg:text-lg font-bold rounded-xl transition-colors shadow-sm disabled:opacity-40 disabled:cursor-not-allowed
+                            {isCorrect ? 'bg-green-600 border border-green-700 text-white hover:bg-green-700' : 'bg-tile-500 border border-tile-600 text-text-300'}"
+                            onclick={nextStep}
+                            disabled={!isCorrect}
+                        >
+                            Next →
+                        </button>
+                    {/if}
+                </div>
             {:else if currentStep.type === 'practice-sentence'}
-                <!-- Practice Sentence Navigation -->
-                <button
-                    class="text-text-200 font-bold hover:text-text-300 px-4 lg:px-6 py-2 lg:py-3 rounded-lg bg-tile-500 border-2 border-tile-600 hover:bg-tile-600 transition-colors disabled:opacity-0 text-sm lg:text-base"
-                    onclick={prevStep}
-                    disabled={currentStepIndex === 0}
-                >
-                    ← Back
-                </button>
-
-                <button
-                    class="w-full sm:w-auto px-6 lg:px-10 py-3 lg:py-4 text-base lg:text-lg font-bold bg-tile-600 border-2 border-tile-700 text-text-300 rounded-lg hover:bg-tile-700 transition-colors shadow-md"
-                    onclick={nextStep}
-                >
-                    Continue →
-                </button>
+                <div class="flex items-center justify-between gap-3">
+                    <button
+                        class="text-text-200 font-bold hover:text-text-300 px-4 lg:px-6 py-2.5 lg:py-3 rounded-xl bg-tile-500 border border-tile-600 hover:bg-tile-600 transition-colors disabled:opacity-0 text-sm lg:text-base"
+                        onclick={prevStep}
+                        disabled={currentStepIndex === 0}
+                    >
+                        ← Back
+                    </button>
+                    <button
+                        class="flex-1 sm:flex-none px-6 lg:px-10 py-2.5 lg:py-3 text-base lg:text-lg font-bold bg-tile-600 border border-tile-700 text-text-300 rounded-xl hover:bg-tile-700 transition-colors shadow-sm"
+                        onclick={nextStep}
+                    >
+                        Continue →
+                    </button>
+                </div>
             {:else}
-                <!-- Content Step Navigation -->
-                <button
-                    class="text-text-200 font-bold hover:text-text-300 px-4 lg:px-6 py-2 lg:py-3 rounded-lg bg-tile-500 border-2 border-tile-600 hover:bg-tile-600 transition-colors disabled:opacity-0 text-sm lg:text-base"
-                    onclick={prevStep}
-                    disabled={currentStepIndex === 0}
-                >
-                    ← Back
-                </button>
-
-                <button
-                    class="w-full sm:w-auto px-6 lg:px-10 py-3 lg:py-4 text-base lg:text-lg font-bold bg-tile-600 border-2 border-tile-700 text-text-300 rounded-lg hover:bg-tile-700 transition-colors shadow-md"
-                    onclick={nextStep}
-                >
-                    {currentStepIndex === totalSteps - 1 ? '🎉 Finish' : 'Continue →'}
-                </button>
+                <div class="flex items-center justify-between gap-3">
+                    <button
+                        class="text-text-200 font-bold hover:text-text-300 px-4 lg:px-6 py-2.5 lg:py-3 rounded-xl bg-tile-500 border border-tile-600 hover:bg-tile-600 transition-colors disabled:opacity-0 text-sm lg:text-base"
+                        onclick={prevStep}
+                        disabled={currentStepIndex === 0}
+                    >
+                        ← Back
+                    </button>
+                    <button
+                        class="flex-1 sm:flex-none px-6 lg:px-10 py-2.5 lg:py-3 text-base lg:text-lg font-bold bg-tile-600 border border-tile-700 text-text-300 rounded-xl hover:bg-tile-700 transition-colors shadow-sm"
+                        onclick={nextStep}
+                    >
+                        {currentStepIndex === totalSteps - 1 ? '🎉 Finish' : 'Continue →'}
+                    </button>
+                </div>
             {/if}
         </div>
     </footer>

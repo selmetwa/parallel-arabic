@@ -172,7 +172,7 @@
 		if (stripTashkeel(tashkeelText) === tashkeelText) return false;
 		const arabicCount = s.arabic.text.trim().split(/\s+/).filter((w: string) => w.length > 0).length;
 		const tashkeelCount = stripTashkeel(tashkeelText).trim().split(/\s+/).filter((w: string) => w.length > 0).length;
-		return Math.abs(arabicCount - tashkeelCount) <= 1;
+		return arabicCount === tashkeelCount;
 	}
 
 	const hasTashkeel = $derived(sentences.some((s: any) => sentenceHasValidTashkeel(s)));
@@ -492,7 +492,7 @@
       </div>
 
       <!-- Bottom row: Display Toggles -->
-      <div class="flex items-center justify-center gap-6 py-2 px-4 bg-tile-500/50 rounded-lg">
+      <div class="flex items-start sm:items-center justify-center gap-6 py-2 px-4 bg-tile-500/50 rounded-lg flex-col sm:flex-row ">
         <span class="text-sm text-text-200 font-medium">Show:</span>
 
         <!-- English Toggle -->
@@ -714,7 +714,7 @@
               });
               const result = await response.json();
               if (result.success) {
-                alert(`Saved ${result.saved} word${result.saved !== 1 ? 's' : ''} to your review deck!`);
+                // words saved silently
               }
             } catch (error) {
               console.error('Error saving vocabulary:', error);

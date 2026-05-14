@@ -321,15 +321,19 @@
 		definition = '';
 	}
 
-  const dialectName: Record<Dialect, string> = {
-    fusha: 'Modern Standard Arabic',
-    levantine: 'Levantine Arabic',
+	const dialectName: Record<Dialect, string> = {
+		fusha: 'Modern Standard Arabic',
+		levantine: 'Levantine Arabic',
     darija: 'Moroccan Darija',
     'egyptian-arabic': 'Egyptian Arabic',
     iraqi: 'Iraqi Arabic',
     khaleeji: 'Khaleeji Arabic'
-  }
+	}
 
+
+	function countTokens(text: string) {
+		return text.trim().split(/\s+/).filter(Boolean).length;
+	}
 
 	// Function to map English words to corresponding Arabic words
 	function mapEnglishToArabic(englishWords: string[]): string {
@@ -369,6 +373,7 @@
 
 		// Map English words to Arabic equivalent and filter for Arabic characters only
 		targetArabicWord = mapEnglishToArabic(wordsArray);
+		const isSingleWordDefinition = wordsArray.length === 1 && countTokens(targetArabicWord) === 1;
 
 		isLoadingDefinition = true;
 		openDefinitionModal();
@@ -389,7 +394,8 @@
 					'Accept': 'application/json'
 				},
 				body: JSON.stringify({
-					question: question
+					question,
+					isSingleWordDefinition
 				})
 			});
 
@@ -661,8 +667,8 @@
 		{/if}
 		
 		<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
-		<div 
-			class="flex w-fit flex-row flex-wrap text-3xl sm:text-4xl font-bold text-text-300 select-none"
+		<div
+			class="flex w-fit flex-row flex-wrap text-base sm:text-lg font-medium text-text-200 select-none"
 			onmouseup={handleWordMouseUp}
 			role="application"
 			aria-label="Word selection area for definitions"
@@ -681,7 +687,7 @@
 					role="button"
 					tabindex="0"
 					aria-label={`Get definition for: ${word}`}
-					class={cn("p-1 text-3xl sm:text-4xl duration-300 cursor-pointer border-2", {
+					class={cn("p-1 text-base sm:text-lg duration-300 cursor-pointer border-2", {
 						"bg-blue-200 border-blue-400": isWordSelected(index),
 						"hover:bg-tile-500 border-transparent hover:border-tile-600": !isWordSelected(index)
 					})}

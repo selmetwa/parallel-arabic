@@ -297,6 +297,10 @@
     return filterArabicCharacters(word.arabic);
   }
 
+  function countTokens(text: string) {
+    return text.trim().split(/\s+/).filter(Boolean).length;
+  }
+
   async function askChatGTP(words: string | string[]) {
     const wordsArray = Array.isArray(words) ? words : [words];
     const wordsText = wordsArray.join(' ');
@@ -313,6 +317,7 @@
       targetWord = wordsText;
       targetArabicWord = mapEnglishToArabic(wordsArray);
     }
+    const isSingleWordDefinition = wordsArray.length === 1 && countTokens(targetArabicWord) === 1;
     
     isLoadingDefinition = true;
     isDefinitionModalOpen = true;
@@ -330,7 +335,8 @@
         method: 'POST',
         headers: { accept: 'application/json' },
         body: JSON.stringify({
-          question: question
+          question,
+          isSingleWordDefinition
         })
       });
 

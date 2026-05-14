@@ -37,7 +37,6 @@
 
 			const lessonBody = lessonData.lesson_body;
 
-			// Use database metadata first (faster), fall back to lesson_body JSON if needed
 			const subLessonCount = lessonData.sub_lesson_count ?? lessonBody?.subLessons?.length ?? 0;
 			const estimatedDuration = lessonData.estimated_duration ?? lessonBody?.estimatedDuration ?? null;
 
@@ -83,18 +82,15 @@
 		{ value: 'advanced', label: 'Advanced' },
 	];
 
-	// Level order for sorting
 	const levelOrder: Record<string, number> = {
 		'beginner': 1,
 		'intermediate': 2,
 		'advanced': 3,
 	};
 
-	// Filter and sort lessons
 	const filteredAndSortedLessons = $derived.by(() => {
 		let filtered = [...userGeneratedLessons];
 
-		// Filter by search query
 		if (searchQuery.trim()) {
 			const query = searchQuery.toLowerCase();
 			filtered = filtered.filter(lesson =>
@@ -103,19 +99,16 @@
 			);
 		}
 
-		// Filter by dialect
 		if (filterDialect !== 'all') {
 			filtered = filtered.filter(lesson => lesson.dialect === filterDialect);
 		}
 
-		// Filter by level
 		if (filterLevel !== 'all') {
-			filtered = filtered.filter(lesson => 
+			filtered = filtered.filter(lesson =>
 				lesson.level?.toLowerCase() === filterLevel.toLowerCase()
 			);
 		}
 
-		// Sort
 		if (sortBy === 'newest') {
 			filtered.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
 		} else if (sortBy === 'oldest') {
@@ -133,7 +126,6 @@
 		return filtered;
 	});
 
-	// Get dialect badge color
 	function getDialectBadgeColor(dialect: string) {
 		const colors = {
 			'egyptian-arabic': 'bg-tile-500 text-text-300',
@@ -144,7 +136,6 @@
 		return colors[dialect as keyof typeof colors] || 'bg-gray-100 text-gray-800';
 	}
 
-	// Get level badge color
 	function getLevelBadgeColor(level: string) {
 		const colors = {
 			beginner: 'bg-green-100 text-green-800',
@@ -166,61 +157,136 @@
 
 <PaywallModal isOpen={isModalOpen} {handleCloseModal}></PaywallModal>
 
-<section class="px-3 mt-6 sm:px-8 max-w-7xl mx-auto">
-	<div class="text-left mb-12">
-		<h1 class="text-4xl sm:text-5xl text-text-300 font-bold mb-4 tracking-tight">Lessons</h1>
-		<p class="text-text-200 text-lg sm:text-xl leading-relaxed opacity-90 max-w-3xl">Choose your learning path - structured curriculum or customizable lessons.</p>
-	</div>
-
-	<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-		<!-- Structured Lessons Card -->
-		<a
-			href="/lessons/structured"
-			class="group relative overflow-hidden flex flex-col bg-gradient-to-br from-tile-400 to-tile-500 border-2 border-tile-600 rounded-2xl p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:border-tile-400 active:scale-95"
-		>
-			<!-- Shine effect on hover -->
-			<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-				<div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+<section class="min-h-screen bg-tile-200">
+	<!-- Hero -->
+	<header class="border-b border-tile-600">
+		<div class="max-w-7xl mx-auto px-3 sm:px-8 py-12 sm:py-16">
+			<div class="text-left max-w-3xl">
+				<div class="inline-flex items-center gap-2 px-4 py-2 bg-tile-400 border border-tile-600 rounded-full text-sm text-text-200 mb-6">
+					<span>📖</span>
+					<span>Arabic Learning</span>
+				</div>
+				<h1 class="text-3xl sm:text-4xl text-text-300 font-bold mb-2 tracking-tight">
+					Learn Arabic Your Way
+				</h1>
+				<p class="text-text-200 text-lg sm:text-xl leading-snug">
+					Choose your learning path — follow a structured curriculum or create custom AI-powered lessons tailored to your interests.
+				</p>
 			</div>
+		</div>
+	</header>
 
-			<div class="text-6xl mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 relative z-10">📚</div>
-			<h2 class="text-3xl font-bold text-text-300 mb-4 group-hover:text-text-200 transition-colors relative z-10">
-				Structured Lessons
-			</h2>
-			<p class="text-text-200 text-lg leading-relaxed mb-6 flex-grow relative z-10">
-				Follow a structured curriculum path organized by modules and topics. Progress through lessons in a logical sequence designed for systematic learning.
-			</p>
-			<div class="flex items-center gap-2 text-tile-700 font-semibold group-hover:gap-4 transition-all relative z-10">
-				<span>Explore Curriculum</span>
-				<svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-				</svg>
-			</div>
-		</a>
+	<!-- Path Cards -->
+	<section class="py-12 sm:py-16">
+		<div class="max-w-5xl mx-auto px-3 sm:px-8">
+			<h2 class="text-2xl sm:text-3xl font-bold text-text-300 text-left mb-10">Choose Your Path</h2>
 
-		<!-- Customizable Lessons Card -->
-		<a
-			href="/lessons/custom"
-			class="group relative overflow-hidden flex flex-col bg-gradient-to-br from-purple-400 to-purple-500 border-2 border-purple-600 rounded-2xl p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:border-purple-400 active:scale-95"
-		>
-			<!-- Shine effect on hover -->
-			<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-				<div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
-			</div>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+				<!-- Structured Lessons -->
+				<a href="/lessons/structured" class="group block">
+					<article class="h-full bg-gradient-to-br from-tile-500 to-tile-400 border-2 border-tile-600 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:border-tile-500 relative overflow-hidden">
+						<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+							<div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent"></div>
+						</div>
+						<div class="flex flex-col h-full relative z-10">
+							<div class="w-20 h-20 bg-gradient-to-br from-tile-400 to-tile-300 border-2 border-tile-600 rounded-2xl flex items-center justify-center mb-6 shadow-md group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+								<span class="text-4xl">📚</span>
+							</div>
+							<h3 class="text-2xl sm:text-3xl font-bold text-text-300 mb-3 group-hover:text-text-100 transition-colors">Structured Lessons</h3>
+							<p class="text-text-200 leading-relaxed mb-4 flex-grow">
+								Follow a curriculum path organized by modules and topics. Progress through lessons in a logical sequence designed for systematic learning.
+							</p>
+							<ul class="space-y-2 text-text-200 mb-6">
+								<li class="flex items-center gap-2">
+									<span class="text-green-700">✓</span>
+									<span>Curated curriculum modules</span>
+								</li>
+								<li class="flex items-center gap-2">
+									<span class="text-green-700">✓</span>
+									<span>Progressive difficulty</span>
+								</li>
+								<li class="flex items-center gap-2">
+									<span class="text-green-700">✓</span>
+									<span>Track your progress</span>
+								</li>
+							</ul>
+							<div class="flex items-center text-text-300 font-semibold group-hover:gap-3 gap-2 transition-all duration-300">
+								<span>Explore Curriculum</span>
+								<span class="group-hover:translate-x-1 transition-transform duration-300">→</span>
+							</div>
+						</div>
+					</article>
+				</a>
 
-			<div class="text-6xl mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 relative z-10">🎨</div>
-			<h2 class="text-3xl font-bold text-white mb-4 group-hover:text-purple-100 transition-colors relative z-10">
-				Customizable Lessons
-			</h2>
-			<p class="text-white text-lg leading-relaxed mb-6 flex-grow opacity-95 relative z-10">
-				Create and explore custom AI-generated lessons. Search, filter, and browse lessons tailored to your specific interests and learning goals.
-			</p>
-			<div class="flex items-center gap-2 text-purple-900 font-semibold group-hover:gap-4 transition-all relative z-10">
-				<span>Browse Lessons</span>
-				<svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-				</svg>
+				<!-- Customizable Lessons -->
+				<a href="/lessons/custom" class="group block">
+					<article class="h-full bg-gradient-to-br from-purple-500 to-purple-600 border-2 border-purple-700 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:border-purple-400 relative overflow-hidden">
+						<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+							<div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent"></div>
+						</div>
+						<div class="flex flex-col h-full relative z-10">
+							<div class="w-20 h-20 bg-white/20 border-2 border-white/30 rounded-2xl flex items-center justify-center mb-6 shadow-md group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+								<span class="text-4xl">🎨</span>
+							</div>
+							<h3 class="text-2xl sm:text-3xl font-bold text-white mb-3 group-hover:text-purple-100 transition-colors">Customizable Lessons</h3>
+							<p class="text-white/80 leading-relaxed mb-4 flex-grow">
+								Create AI-powered lessons on any topic. Search, filter, and browse lessons tailored to your interests and learning goals.
+							</p>
+							<ul class="space-y-2 text-white/80 mb-6">
+								<li class="flex items-center gap-2">
+									<span class="text-white font-bold">✓</span>
+									<span>AI-generated content</span>
+								</li>
+								<li class="flex items-center gap-2">
+									<span class="text-white font-bold">✓</span>
+									<span>Any topic, any level</span>
+								</li>
+								<li class="flex items-center gap-2">
+									<span class="text-white font-bold">✓</span>
+									<span>All 4 Arabic dialects</span>
+								</li>
+							</ul>
+							<div class="flex items-center text-white font-semibold group-hover:gap-3 gap-2 transition-all duration-300">
+								<span>Browse Lessons</span>
+								<span class="group-hover:translate-x-1 transition-transform duration-300">→</span>
+							</div>
+						</div>
+					</article>
+				</a>
 			</div>
-		</a>
-	</div>
+		</div>
+	</section>
+
+	<!-- What's Included -->
+	<section class="py-12 sm:py-16 border-y border-tile-600">
+		<div class="max-w-7xl mx-auto px-3 sm:px-8">
+			<h2 class="text-2xl sm:text-3xl font-bold text-text-300 text-left mb-10">What's Included in Every Lesson</h2>
+
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+				<article class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg text-left">
+					<div class="text-4xl mb-4">🎯</div>
+					<h3 class="text-xl font-bold text-text-300 mb-3">Interactive Exercises</h3>
+					<p class="text-text-200 leading-relaxed">
+						Test your knowledge with multiple-choice quizzes and fill-in-the-blank exercises after each topic.
+					</p>
+				</article>
+
+				<article class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg text-left">
+					<div class="text-4xl mb-4">🔊</div>
+					<h3 class="text-xl font-bold text-text-300 mb-3">Native Audio</h3>
+					<p class="text-text-200 leading-relaxed">
+						Every Arabic word and sentence includes audio playback so you can hear the correct pronunciation.
+					</p>
+				</article>
+
+				<article class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg text-left">
+					<div class="text-4xl mb-4">🌍</div>
+					<h3 class="text-xl font-bold text-text-300 mb-3">Dialect Comparison</h3>
+					<p class="text-text-200 leading-relaxed">
+						See how expressions vary across Egyptian, Levantine, Moroccan, and Modern Standard Arabic.
+					</p>
+				</article>
+			</div>
+		</div>
+	</section>
 </section>
