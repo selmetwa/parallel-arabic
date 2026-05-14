@@ -14,6 +14,36 @@ const dialectNames: Record<string, string> = {
   khaleeji: 'Khaleeji Arabic'
 };
 
+type DefinitionRoot = {
+  letters: string;
+  coreMeaning: string;
+  transliteration?: string;
+};
+
+function normalizeRoot(root: unknown, allowRoot: boolean): DefinitionRoot | null {
+  if (!allowRoot || root == null || typeof root !== 'object') {
+    return null;
+  }
+
+  const value = root as Record<string, unknown>;
+  const rawLetters = typeof value.letters === 'string' ? value.letters.trim() : '';
+  const coreMeaning = typeof value.coreMeaning === 'string' ? value.coreMeaning.trim() : '';
+  const transliteration = typeof value.transliteration === 'string' ? value.transliteration.trim() : '';
+  const rootLetters = rawLetters.match(/[\u0600-\u06FF]/g) ?? [];
+  const letters = rawLetters.includes(' ') ? rawLetters : rootLetters.join(' ');
+  const rootLetterCount = rootLetters.length;
+
+  if (!letters || !coreMeaning || rootLetterCount < 3 || rootLetterCount > 4) {
+    return null;
+  }
+
+  return {
+    letters,
+    coreMeaning,
+    ...(transliteration && { transliteration })
+  };
+}
+
 export const POST: RequestHandler = async ({ request }) => {
   const apiKey = env['GEMINI_API_KEY'];
   if (!apiKey) {
@@ -33,6 +63,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
   // Build the question from either format
   let question: string;
+  let isSingleWordDefinition = data.isSingleWordDefinition === true;
 
   if (data.question) {
     // Format 1: { question: string }
@@ -41,6 +72,7 @@ export const POST: RequestHandler = async ({ request }) => {
     // Format 2: { word, type, sentence: { arabic, english, transliteration }, dialect }
     const dialectName = dialectNames[data.dialect] || data.dialect || 'Arabic';
     const wordType = data.type || 'arabic';
+    isSingleWordDefinition = data.isSingleWordDefinition === true;
 
     if (wordType === 'english') {
       question = `What is the word for "${data.word}" in ${dialectName}? Considering the following sentences:
@@ -72,6 +104,15 @@ Provide a structured definition with:
 - arabic: The exact Arabic word/phrase being defined
 - transliteration: Latin character transliteration
 - definition: Clear, concise English definition
+- root: ${isSingleWordDefinition
+  ? `Only provide root data if the word genuinely derives from a trilateral (3-letter) or quadriliteral (4-letter) Arabic root. Many common Arabic words do NOT have roots — use null for all of the following:
+  - Particles and conjunctions: لو، إن، هل، لأن، عشان، بس، خلاص، يعني، مش، ما، لا، اللي، إللي
+  - Prepositions: في، على، من، إلى، عن، مع، قبل، بعد، فوق، تحت، جنب
+  - Pronouns: أنا، إنت، هو، هي، إحنا، انتوا، هم، ده، دي، دول
+  - Foreign loanwords: any word borrowed from English, French, Turkish, etc. (e.g. تلفزيون، كمبيوتر، موبايل، أوتوبيس، سيارة، بيرة)
+  - Numbers and quantifiers
+  When the word IS a genuine rooted Arabic word (most verbs, verbal nouns, many adjectives and nouns), provide the root letters formatted with spaces e.g. "ك ت ب", and a short coreMeaning. If you are not confident the root is correct, use null.`
+  : `Use null. Do not provide root data for phrases, sentences, or multi-word selections.`}
 - breakdown: For multi-word phrases only, provide word-by-word breakdown with:
   - arabic: The Arabic word
   - englishLabel: Short English label (1-3 words)
@@ -86,6 +127,11 @@ MAKE SURE THAT THE RESPONSE IS JSON FORMAT USING THE FOLOWING STRUCTURE
 		arabic: z.string().describe('The Arabic word or phrase being defined'),
 		transliteration: z.string().describe('Latin character transliteration of the Arabic'),
 		definition: z.string().describe('Clear English definition of the word/phrase'),
+		root: z.object({
+			letters: z.string().describe('Arabic root letters formatted with spaces, e.g. ك ت ب'),
+			coreMeaning: z.string().describe('Short English explanation of the root meaning'),
+			transliteration: z.string().optional().describe('Optional transliteration of the root letters'),
+		}).nullable().describe('Root information only for genuine rooted Arabic words. Null for particles, prepositions, pronouns, loanwords, or any word without a clear trilateral/quadriliteral root.'),
 		breakdown: z.array(z.object({
 			arabic: z.string().describe('The Arabic word'),
 			englishLabel: z.string().describe('Short English label for this word (1-3 words)'),
@@ -144,6 +190,7 @@ MAKE SURE THAT THE RESPONSE IS JSON FORMAT USING THE FOLOWING STRUCTURE
       arabic: string;
       transliteration: string;
       definition: string;
+      root: DefinitionRoot | null;
       breakdown: Array<{ arabic: string; englishLabel?: string; word?: string; transliteration: string; meaning: string }>;
       contextualMeaning?: string;
     };
@@ -154,6 +201,7 @@ MAKE SURE THAT THE RESPONSE IS JSON FORMAT USING THE FOLOWING STRUCTURE
         arabic: typeof parsed.arabic === 'string' ? parsed.arabic : '',
         transliteration: typeof parsed.transliteration === 'string' ? parsed.transliteration : '',
         definition: typeof parsed.definition === 'string' ? parsed.definition : '',
+          root: normalizeRoot(parsed.root, isSingleWordDefinition),
         breakdown: Array.isArray(parsed.breakdown) ? parsed.breakdown : [],
         ...(parsed.contextualMeaning != null && parsed.contextualMeaning !== '' && { contextualMeaning: String(parsed.contextualMeaning) })
       };
@@ -197,6 +245,7 @@ MAKE SURE THAT THE RESPONSE IS JSON FORMAT USING THE FOLOWING STRUCTURE
         arabic: result.arabic ?? '',
         transliteration: result.transliteration ?? '',
         definition: result.definition ?? '',
+        root: null,
         breakdown,
         ...(result.contextualMeaning != null && result.contextualMeaning !== '' && { contextualMeaning: result.contextualMeaning })
       };

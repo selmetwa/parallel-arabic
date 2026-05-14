@@ -16,10 +16,10 @@ export default defineConfig({
 			workbox: {
 				globPatterns: ['client/**/*.{js,css,ico,png,svg,webp,webmanifest}'],
 				navigateFallback: '/',
-				navigateFallbackDenylist: [/^\/api\//],
+				navigateFallbackDenylist: [/^\/api\//, /^\/.svelte-kit\//],
 				runtimeCaching: [
 					{
-						urlPattern: ({ url }) => url.pathname.startsWith('/'),
+						urlPattern: ({ url }) => url.pathname.startsWith('/') && !url.pathname.startsWith('/.svelte-kit/') && !url.pathname.endsWith('.js') && !url.pathname.endsWith('.ts'),
 						handler: 'NetworkFirst',
 						options: {
 							cacheName: 'pages-cache',

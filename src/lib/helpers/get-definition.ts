@@ -51,7 +51,10 @@ export async function getDefinition(
 				'Content-Type': 'application/json',
 				'Accept': 'application/json'
 			},
-			body: JSON.stringify({ question })
+			body: JSON.stringify({
+				question,
+				isSingleWordDefinition: wordsArray.length === 1
+			})
 		});
 
 		if (!res.ok) {

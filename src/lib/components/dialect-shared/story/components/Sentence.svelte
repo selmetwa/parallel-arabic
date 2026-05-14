@@ -395,8 +395,8 @@
 	{/if}
 	
 	<!-- Words container -->
-	<div 
-		class={cn("flex flex-wrap gap-2 text-text-300 select-none", innerClassname)}
+	<div
+		class={cn("flex flex-wrap gap-2 select-none", isArabic ? "text-text-300" : "text-text-200", innerClassname)}
 		onmouseup={handleWordMouseUp}
 		role="application"
 		aria-label="Word selection area for definitions"

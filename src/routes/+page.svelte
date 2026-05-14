@@ -144,7 +144,7 @@
   <!-- Hero row: Word of the Day + Leaderboard + Featured Story + Word Map -->
   {#if data.wordOfDay || data.leaderboardTop5.length > 0 || data.featuredStory}
     <div class="mb-8 grid grid-cols-1 lg:grid-cols-4 gap-4">
-      {#if data.wordOfDay}
+      <!-- {#if data.wordOfDay}
         <div class="lg:h-[220px] overflow-hidden rounded-2xl">
           <WordOfTheDay
             word={data.wordOfDay}
@@ -153,7 +153,7 @@
             userDialect={data.userDialect}
           />
         </div>
-      {/if}
+      {/if} -->
       {#if data.leaderboardTop5.length > 0}
         <div class="lg:h-[220px] overflow-hidden rounded-2xl">
           <Leaderboard

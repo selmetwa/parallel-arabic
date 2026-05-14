@@ -72,7 +72,6 @@
       recording = true;
     } catch (error) {
       console.error('Error starting recording:', error);
-      alert('Failed to access microphone. Please check your permissions.');
     }
   }
 
