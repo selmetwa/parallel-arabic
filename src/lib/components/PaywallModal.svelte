@@ -65,6 +65,11 @@
     <!-- Footer / Action -->
     <div class="p-6 pt-0">
       <SubscribeButton className="!py-3 !text-lg w-full shadow-md" />
+      <p class="mt-3 text-xs text-text-200 text-center">
+        By subscribing you agree to our
+        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" class="underline">Terms of Use</a>
+        and <a href="/privacy" class="underline">Privacy Policy</a>.
+      </p>
     </div>
   </div>
 </Modal>

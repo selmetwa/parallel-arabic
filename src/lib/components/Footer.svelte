@@ -33,6 +33,7 @@
           <li><a href="/keyboard" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Virtual Keyboard</a></li>
           <li><a href="/sitemap.xml" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Sitemap</a></li>
           <li><a href="/privacy" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Privacy Policy</a></li>
+          <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Terms of Use</a></li>
         </ul>
       </div>
       <div class="space-y-4">
