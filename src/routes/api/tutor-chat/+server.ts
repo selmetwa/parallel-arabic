@@ -170,22 +170,31 @@ IMPORTANT: wordAlignments must have one entry per Arabic word in your response, 
     try {
       parsedResponse = parseJsonFromGeminiResponse(responseContent, translationSchema.zodSchema);
     } catch (parseError) {
-      // Fallback: create a structured response from plain text
-      parsedResponse = {
-        arabic: responseContent,
-        english: responseContent,
-        transliteration: responseContent
-      };
+      // Fallback: try raw JSON.parse without schema validation to salvage fields
+      try {
+        const rawParsed = JSON.parse(responseContent) as Record<string, unknown>;
+        if (rawParsed && typeof rawParsed === 'object' && typeof rawParsed.arabic === 'string') {
+          parsedResponse = rawParsed;
+        } else {
+          throw new Error('Missing arabic field in parsed response');
+        }
+      } catch {
+        console.error('Tutor: failed to parse Gemini response as JSON:', responseContent?.substring(0, 200));
+        throw new Error('Failed to parse AI response');
+      }
+    }
+
+    // Guard: reject if any field still contains raw JSON
+    const looksLikeJson = (s: string) => s.trimStart().startsWith('{') || s.trimStart().startsWith('[');
+    if (looksLikeJson(parsedResponse.arabic) || looksLikeJson(parsedResponse.english)) {
+      console.error('Detected raw JSON in tutor response fields, aborting');
+      throw new Error('AI response contains unparsed JSON');
     }
 
     // Validate the response structure
     if (!parsedResponse.arabic || !parsedResponse.english || !parsedResponse.transliteration) {
-      // If structure is incomplete, use the Arabic text for all fields as fallback
-      parsedResponse = {
-        arabic: parsedResponse.arabic || responseContent,
-        english: parsedResponse.english || responseContent,
-        transliteration: parsedResponse.transliteration || responseContent
-      };
+      console.error('Tutor: incomplete response structure:', JSON.stringify(parsedResponse).substring(0, 200));
+      throw new Error('Incomplete AI response structure');
     }
 
     // Save the tutor's response if we have a conversation
