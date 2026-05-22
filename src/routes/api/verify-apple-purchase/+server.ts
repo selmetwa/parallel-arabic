@@ -20,6 +20,13 @@ export const POST: RequestHandler = async ({ request, locals }) => {
       );
     }
 
+    const key = env.REVENUECAT_API_KEY;
+    console.log('[verify-apple-purchase] key sanity', {
+      prefix: key.slice(0, 4),
+      length: key.length,
+      hasWhitespace: key !== key.trim()
+    });
+
     let res: Response | null = null;
     for (let attempt = 0; attempt < 3; attempt++) {
       res = await fetch(`https://api.revenuecat.com/v1/subscribers/${userId}`, {
