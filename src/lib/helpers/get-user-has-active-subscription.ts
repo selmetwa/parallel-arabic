@@ -43,8 +43,7 @@ export const getUserHasActiveSubscription = async (userId: string | null) => {
   try {
     const res = await fetch(`https://api.revenuecat.com/v1/subscribers/${userId}`, {
       headers: {
-        Authorization: `Bearer ${env.REVENUECAT_API_KEY}`,
-        'X-Platform': 'ios'
+        Authorization: `Bearer ${env.REVENUECAT_API_KEY}`
       }
     });
     if (!res.ok) return user.is_subscriber ?? false;

@@ -49,7 +49,11 @@
         return;
       }
 
-      const verifyRes = await fetch('/api/verify-apple-purchase', { method: 'POST' });
+      const verifyRes = await fetch('/api/verify-apple-purchase', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ customerInfo })
+      });
       const verifyData = await verifyRes.json().catch(() => ({}));
 
       if (!verifyRes.ok) {
@@ -66,8 +70,15 @@
         return;
       }
 
-      await invalidateAll();
       purchaseSuccess = 'Subscription activated. Enjoy Parallel Arabic Premium!';
+
+      // Force a full page reload to guarantee every loader and cached component
+      // sees the new is_subscriber state. invalidateAll() alone is not enough
+      // inside the Capacitor WebView where users cannot pull-to-refresh.
+      await invalidateAll();
+      setTimeout(() => {
+        window.location.reload();
+      }, 1200);
     } catch (err: any) {
       const code = err?.code ?? err?.errorCode;
       const userCancelled =
