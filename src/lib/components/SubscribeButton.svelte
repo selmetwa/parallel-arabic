@@ -17,6 +17,7 @@
   let isNative = $state<boolean | null>(null);
   let isPurchasing = $state(false);
   let purchaseError = $state<string | null>(null);
+  let purchaseSuccess = $state<string | null>(null);
 
   onMount(() => {
     isNative = !!(window as any).Capacitor?.isNativePlatform?.();
@@ -25,6 +26,7 @@
   async function handleApplePurchase() {
     isPurchasing = true;
     purchaseError = null;
+    purchaseSuccess = null;
     try {
       const userId = page.data.user?.id;
       if (!userId) {
@@ -42,10 +44,30 @@
 
       const customerInfo = await RevenueCatService.purchasePackage(pkg);
 
-      if (RevenueCatService.isEntitlementActive(customerInfo)) {
-        await fetch('/api/verify-apple-purchase', { method: 'POST' });
-        await invalidateAll();
+      if (!RevenueCatService.isEntitlementActive(customerInfo)) {
+        purchaseError = 'Payment succeeded but the subscription is not yet active. Please contact support if this persists.';
+        return;
       }
+
+      const verifyRes = await fetch('/api/verify-apple-purchase', { method: 'POST' });
+      const verifyData = await verifyRes.json().catch(() => ({}));
+
+      if (!verifyRes.ok) {
+        purchaseError =
+          verifyData?.error ||
+          'Payment succeeded but we could not save your subscription. Please contact support.';
+        console.error('[SubscribeButton] verify failed:', verifyRes.status, verifyData);
+        return;
+      }
+
+      if (verifyData?.active === false) {
+        purchaseError =
+          'Payment succeeded but your subscription has not propagated yet. It should activate within a minute — refresh the page.';
+        return;
+      }
+
+      await invalidateAll();
+      purchaseSuccess = 'Subscription activated. Enjoy Parallel Arabic Premium!';
     } catch (err: any) {
       const code = err?.code ?? err?.errorCode;
       const userCancelled =
@@ -65,6 +87,9 @@
 
 {#if purchaseError}
   <p class="text-red-400 text-sm mb-2 text-center">{purchaseError}</p>
+{/if}
+{#if purchaseSuccess}
+  <p class="text-green-400 text-sm mb-2 text-center">{purchaseSuccess}</p>
 {/if}
 
 {#if isNative === null}

@@ -12,22 +12,44 @@ export const POST: RequestHandler = async ({ request, locals }) => {
   const userId = session.user.id;
 
   try {
-    const res = await fetch(`https://api.revenuecat.com/v1/subscribers/${userId}`, {
-      headers: {
-        Authorization: `Bearer ${env.REVENUECAT_API_KEY}`,
-        'X-Platform': 'ios'
-      }
-    });
+    if (!env.REVENUECAT_API_KEY) {
+      console.error('[verify-apple-purchase] REVENUECAT_API_KEY env var is not set');
+      return json(
+        { error: 'Server configuration error: subscription verification key is missing.' },
+        { status: 500 }
+      );
+    }
 
-    if (!res.ok) {
-      return json({ error: 'Failed to fetch subscriber info' }, { status: 502 });
+    let res: Response | null = null;
+    for (let attempt = 0; attempt < 3; attempt++) {
+      res = await fetch(`https://api.revenuecat.com/v1/subscribers/${userId}`, {
+        headers: {
+          Authorization: `Bearer ${env.REVENUECAT_API_KEY}`,
+          'X-Platform': 'ios'
+        }
+      });
+      if (res.ok) break;
+      if (res.status === 403 || res.status === 401) break;
+      await new Promise((r) => setTimeout(r, 1500 * (attempt + 1)));
+    }
+
+    if (!res || !res.ok) {
+      const status = res?.status ?? 0;
+      const bodyText = res ? await res.text().catch(() => '') : '';
+      console.error('[verify-apple-purchase] RevenueCat lookup failed', { status, body: bodyText, userId });
+      const message =
+        status === 401 || status === 403
+          ? 'Subscription verification credentials are invalid. Contact support.'
+          : 'Could not reach the subscription provider. Please try again in a moment.';
+      return json({ error: message, status }, { status: 502 });
     }
 
     const data = await res.json();
     const entitlement = data?.subscriber?.entitlements?.['Parallel Arabic Premium'];
 
     if (!entitlement) {
-      return json({ active: false });
+      console.warn('[verify-apple-purchase] No entitlement found for user', { userId });
+      return json({ active: false, reason: 'no_entitlement' });
     }
 
     const expiresDate = entitlement.expires_date ? new Date(entitlement.expires_date) : null;
@@ -47,7 +69,10 @@ export const POST: RequestHandler = async ({ request, locals }) => {
         })
         .eq('supabase_auth_id', userId);
 
-      if (error) console.error('[verify-apple-purchase] DB update error:', error);
+      if (error) {
+        console.error('[verify-apple-purchase] DB update error:', error);
+        return json({ error: 'Could not save subscription status. Please contact support.' }, { status: 500 });
+      }
     }
 
     return json({ active: isActive });
