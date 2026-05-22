@@ -132,9 +132,24 @@
                         </ul>
                         <div class="mt-8">
                           <SubscribeButton className="!py-3 !text-lg w-full" />
+                          <div class="mt-4 text-xs text-text-200 leading-relaxed text-left bg-tile-300 border border-tile-600 rounded-md p-4">
+                            <p class="font-semibold text-text-300 mb-2">Subscription: Parallel Arabic Premium</p>
+                            <ul class="list-disc list-inside mb-3 space-y-1">
+                              <li>Length: 1 month, auto-renewing</li>
+                              <li>Price: $10.00 USD per month</li>
+                            </ul>
+                            <p>
+                              Payment will be charged to your Apple ID account at the confirmation of purchase.
+                              Subscription automatically renews unless auto-renew is turned off at least 24 hours
+                              before the end of the current period. Your account will be charged for renewal
+                              within 24 hours prior to the end of the current period at the same $10.00 USD price.
+                              You can manage your subscription and turn off auto-renewal in your Apple ID
+                              Account Settings after purchase.
+                            </p>
+                          </div>
                           <p class="mt-3 text-xs text-text-200 text-center">
                             By subscribing you agree to our
-                            <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" class="underline">Terms of Use</a>
+                            <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" class="underline">Terms of Use (EULA)</a>
                             and <a href="/privacy" class="underline">Privacy Policy</a>.
                           </p>
                         </div>
