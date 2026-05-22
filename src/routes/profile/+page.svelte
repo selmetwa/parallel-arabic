@@ -651,6 +651,25 @@
               {#if showDeleteConfirm}
                 <div class="bg-red-900/20 border border-red-800/50 rounded-lg p-4 space-y-3">
                   <p class="text-red-400 text-sm font-medium">This will permanently delete your account and all your data. This cannot be undone.</p>
+
+                  {#if data.subscriptionProvider === 'apple' && data.hasActiveSubscription}
+                    <div class="bg-yellow-900/20 border border-yellow-700/50 rounded-md p-3 space-y-2">
+                      <p class="text-yellow-300 text-sm font-medium">
+                        Important: deleting your account does NOT cancel your Apple subscription.
+                      </p>
+                      <p class="text-yellow-200 text-sm">
+                        Apple does not allow apps to cancel subscriptions on your behalf. To stop being charged,
+                        you must cancel in Settings → Apple ID → Subscriptions BEFORE deleting your account.
+                      </p>
+                      <a
+                        href="https://apps.apple.com/account/subscriptions"
+                        class="inline-block text-sm underline text-yellow-300 hover:text-yellow-200"
+                      >
+                        Open Apple Subscriptions
+                      </a>
+                    </div>
+                  {/if}
+
                   <div class="flex gap-2">
                     <Button
                       type="button"

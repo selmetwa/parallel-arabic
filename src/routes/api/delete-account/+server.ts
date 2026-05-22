@@ -32,6 +32,21 @@ export const POST: RequestHandler = async ({ locals }) => {
     } catch (err) {
       console.error('[delete-account] Error cancelling Stripe subscription:', err);
     }
+  } else if (userData?.subscriber_id && env.REVENUECAT_API_KEY) {
+    // Apple IAP subscription: Apple does not allow programmatic cancellation —
+    // the user must cancel in Settings → Subscriptions, and the UI warns them.
+    // Best-effort: remove the RevenueCat subscriber record so RC stops tracking
+    // this user. The Apple subscription itself continues until they cancel.
+    try {
+      await fetch(`https://api.revenuecat.com/v1/subscribers/${supabaseAuthId}`, {
+        method: 'DELETE',
+        headers: {
+          Authorization: `Bearer ${env.REVENUECAT_API_KEY}`
+        }
+      });
+    } catch (err) {
+      console.error('[delete-account] Error deleting RevenueCat subscriber:', err);
+    }
   }
 
   if (userData?.id) {

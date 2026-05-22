@@ -73,8 +73,7 @@ export const load = async ({ locals, parent }) => {
     try {
       const res = await fetch(`https://api.revenuecat.com/v1/subscribers/${userId}`, {
         headers: {
-          Authorization: `Bearer ${env.REVENUECAT_API_KEY}`,
-          'X-Platform': 'ios'
+          Authorization: `Bearer ${env.REVENUECAT_API_KEY}`
         }
       });
       if (res.ok) {
