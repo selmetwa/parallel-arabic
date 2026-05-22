@@ -8,16 +8,31 @@
   const earnedCount = $derived(achievements.filter(a => a.earned).length);
 
   let hoveredId = $state<string | null>(null);
+  let isExpanded = $state(false);
 </script>
 
 <section>
-  <h2 class="text-xl font-bold text-text-300 mb-4 flex items-center gap-2">
+  <button
+    type="button"
+    class="w-full flex items-center gap-2 text-left mb-4 hover:opacity-80 transition-opacity"
+    aria-expanded={isExpanded}
+    aria-controls="achievements-grid"
+    onclick={() => (isExpanded = !isExpanded)}
+  >
     <span class="text-2xl">🏆</span>
-    Achievements
-    <span class="text-sm font-normal text-text-200 ml-1">({earnedCount}/{achievements.length})</span>
-  </h2>
+    <h2 class="text-xl font-bold text-text-300">Achievements</h2>
+    <span class="text-sm font-normal text-text-200">({earnedCount}/{achievements.length})</span>
+    <span
+      class="ml-auto text-text-200 text-lg transition-transform duration-200"
+      style:transform={isExpanded ? 'rotate(180deg)' : 'rotate(0deg)'}
+      aria-hidden="true"
+    >
+      ▾
+    </span>
+  </button>
 
-  <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-3">
+  {#if isExpanded}
+  <div id="achievements-grid" class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-3">
     {#each achievements as achievement (achievement.id)}
       {@const tierMeta = TIER_META[achievement.tier]}
       {@const isHovered = hoveredId === achievement.id}
@@ -93,6 +108,7 @@
       </div>
     {/each}
   </div>
+  {/if}
 </section>
 
 <style>
