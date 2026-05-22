@@ -75,7 +75,7 @@ export const POST: RequestHandler = async ({ request }) => {
           subscriber_id: original_transaction_id ?? null,
           subscription_end_date: subscriptionEndDate
         })
-        .eq('supabase_auth_id', app_user_id)
+        .eq('id', app_user_id)
         .select();
 
       console.log('[RC webhook] Update result - data:', JSON.stringify(data));
@@ -90,7 +90,7 @@ export const POST: RequestHandler = async ({ request }) => {
         const { data, error } = await adminSupabase
           .from('user')
           .update({ subscription_end_date: Math.floor(expiration_at_ms / 1000) })
-          .eq('supabase_auth_id', app_user_id)
+          .eq('id', app_user_id)
           .select();
 
         console.log('[RC webhook] Cancellation update - data:', JSON.stringify(data));
@@ -107,7 +107,7 @@ export const POST: RequestHandler = async ({ request }) => {
           subscriber_id: null,
           subscription_end_date: null
         })
-        .eq('supabase_auth_id', app_user_id)
+        .eq('id', app_user_id)
         .select();
 
       console.log('[RC webhook] Expiration update - data:', JSON.stringify(data));

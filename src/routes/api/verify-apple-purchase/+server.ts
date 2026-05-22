@@ -1,7 +1,8 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import { json } from '@sveltejs/kit';
 import { env } from '$env/dynamic/private';
-import { supabase } from '$lib/supabaseClient';
+import { createClient } from '@supabase/supabase-js';
+import { PUBLIC_SUPABASE_URL } from '$env/static/public';
 
 const ENTITLEMENT_ID = 'Parallel Arabic Premium';
 
@@ -47,7 +48,30 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     return json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  const userId = session.user.id;
+  const supabaseAuthId = session.user.id;
+
+  // The RevenueCat client SDK is initialized with `public.user.id` (the custom
+  // alphanumeric id, not the Supabase auth UUID). Look it up so our RC REST
+  // call queries the same subscriber the SDK created.
+  const adminSupabase = createClient(PUBLIC_SUPABASE_URL, env.SUPABASE_SERVICE_ROLE_KEY ?? '');
+  const { data: dbUser, error: lookupError } = await adminSupabase
+    .from('user')
+    .select('id')
+    .eq('supabase_auth_id', supabaseAuthId)
+    .single();
+
+  if (lookupError || !dbUser?.id) {
+    console.error('[verify-apple-purchase] Could not look up user.id', {
+      supabaseAuthId,
+      error: lookupError
+    });
+    return json(
+      { error: 'Could not find your account. Please contact support.' },
+      { status: 500 }
+    );
+  }
+
+  const rcUserId = dbUser.id;
 
   // Optional client-provided customerInfo from the RevenueCat SDK. This is the
   // freshest source of truth on iOS — it came directly from StoreKit + the RC
@@ -75,7 +99,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 
     // Defense in depth: try RC REST first. If it has the entitlement, trust it.
     for (let attempt = 0; attempt < 2; attempt++) {
-      const res = await fetch(`https://api.revenuecat.com/v1/subscribers/${userId}`, {
+      const res = await fetch(`https://api.revenuecat.com/v1/subscribers/${rcUserId}`, {
         headers: { Authorization: `Bearer ${env.REVENUECAT_API_KEY}` }
       });
       restStatus = res.status;
@@ -110,29 +134,40 @@ export const POST: RequestHandler = async ({ request, locals }) => {
       if (fromClient?.isActive) {
         resolved = fromClient;
         console.log('[verify-apple-purchase] using client customerInfo as fallback', {
-          userId,
+          rcUserId,
           restStatus
         });
       }
     }
 
     if (!resolved?.isActive) {
-      console.warn('[verify-apple-purchase] No active entitlement found', { userId, restStatus });
+      console.warn('[verify-apple-purchase] No active entitlement found', { rcUserId, restStatus });
       return json({ active: false, reason: 'no_entitlement' });
     }
 
-    const { error } = await supabase
+    const { data: updatedRows, error } = await adminSupabase
       .from('user')
       .update({
         is_subscriber: true,
         subscriber_id: resolved.transactionId,
         subscription_end_date: resolved.expiresMs ? Math.floor(resolved.expiresMs / 1000) : null
       })
-      .eq('supabase_auth_id', userId);
+      .eq('id', rcUserId)
+      .select('id');
 
     if (error) {
       console.error('[verify-apple-purchase] DB update error:', error);
       return json({ error: 'Could not save subscription status. Please contact support.' }, { status: 500 });
+    }
+
+    if (!updatedRows || updatedRows.length === 0) {
+      console.error('[verify-apple-purchase] DB update affected 0 rows', {
+        id: rcUserId
+      });
+      return json(
+        { error: 'Could not find your account to save the subscription. Please contact support.' },
+        { status: 500 }
+      );
     }
 
     return json({ active: true, source: resolved.source });
