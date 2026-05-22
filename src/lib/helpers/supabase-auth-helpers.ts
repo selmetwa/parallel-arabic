@@ -37,10 +37,42 @@ export async function syncSupabaseUserWithDB(supabaseUser: SupabaseUser, supabas
 
       return updatedUser
     } else {
+      // No row matched supabase_auth_id. Before inserting, check whether a row
+      // already exists for this email — that happens when a previous auth user
+      // with the same provider identity (Apple, Google) was deleted but the
+      // public.user row was left behind. In that case, re-associate the
+      // existing row with the new supabase_auth_id rather than colliding on
+      // the unique email constraint.
+      const { data: orphanByEmail } = await supabase
+        .from('user')
+        .select('id, supabase_auth_id')
+        .eq('email', supabaseUser.email!)
+        .maybeSingle()
+
+      if (orphanByEmail) {
+        const { data: rebound, error: rebindError } = await supabase
+          .from('user')
+          .update({
+            supabase_auth_id: supabaseUser.id,
+            email_verified: 0,
+            name: supabaseUser.user_metadata?.full_name || null,
+            picture: supabaseUser.user_metadata?.avatar_url || null,
+          })
+          .eq('email', supabaseUser.email!)
+          .select()
+          .single()
+
+        if (rebindError) {
+          throw rebindError
+        }
+
+        return rebound
+      }
+
       // Create new user in our database (new signup)
       // Generate a custom ID for new users to maintain consistency
       const customUserId = Math.random().toString(36).substring(2, 15)
-      
+
       const { data: newUser, error: insertError } = await supabase
         .from('user')
         .insert({
