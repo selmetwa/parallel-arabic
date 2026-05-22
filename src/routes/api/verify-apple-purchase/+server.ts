@@ -31,8 +31,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     for (let attempt = 0; attempt < 3; attempt++) {
       res = await fetch(`https://api.revenuecat.com/v1/subscribers/${userId}`, {
         headers: {
-          Authorization: `Bearer ${env.REVENUECAT_API_KEY}`,
-          'X-Platform': 'ios'
+          Authorization: `Bearer ${env.REVENUECAT_API_KEY}`
         }
       });
       if (res.ok) break;
