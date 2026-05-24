@@ -115,14 +115,20 @@ const supabase: Handle = async ({ event, resolve }) => {
 						errorMessage: realUserError.message
 					});
 				}
-				await event.locals.supabase.auth.signOut();
+				// IMPORTANT: do NOT sign the user out here. This branch fires during
+				// first-time sign-in (auth.users exists but public.user has not been
+				// created yet by /api/auth/sync), and signing out invalidates the
+				// freshly-issued refresh token — breaking the very sync call that
+				// would have created the row. Return null so the UI treats them as
+				// unauthenticated, but keep the Supabase session alive so /api/auth/sync
+				// can finish the work.
 				return { session: null, user: null };
 			}
 
 			if (!realUser) {
 				if (DEBUG)
 					console.error('❌ [hooks.server.ts] User not found in database for auth ID:', user?.id);
-				await event.locals.supabase.auth.signOut();
+				// Same reasoning as above — do not sign out.
 				return { session: null, user: null };
 			}
 

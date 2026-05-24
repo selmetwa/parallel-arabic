@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
 	import { goto } from '$app/navigation';
+	import { onMount } from 'svelte';
 	import Button from '$lib/components/Button.svelte';
 	import type { ActionData } from './$types';
 	import { Browser } from '@capacitor/browser';
@@ -19,6 +20,35 @@
   let appUrlListener: { remove: () => void } | null = null;
   let appleLoading = $state(false);
   let appleError = $state<string | null>(null);
+  let isNativeApp = $state(false);
+  let redirectTimeout: ReturnType<typeof setTimeout> | null = null;
+
+  onMount(() => {
+    isNativeApp = !!(window as any).Capacitor?.isNativePlatform?.();
+  });
+
+  function clearRedirectTimeout() {
+    if (redirectTimeout) {
+      clearTimeout(redirectTimeout);
+      redirectTimeout = null;
+    }
+  }
+
+  function describeAppleError(code: string): string {
+    switch (code) {
+      case 'user_cancelled_authorize':
+      case 'user_denied':
+        return 'Sign-in was cancelled.';
+      case 'invalid_client':
+        return 'Apple sign-in is misconfigured. Please contact support.';
+      case 'invalid_request':
+        return 'Apple sign-in could not be started. Please try again.';
+      case 'access_denied':
+        return 'Apple did not authorize the sign-in. Try a different account or sign-in method.';
+      default:
+        return `Apple sign-in error: ${code}. Please try again or use another method.`;
+    }
+  }
 
   async function handleAppleLogin() {
     appleLoading = true;
@@ -39,7 +69,7 @@
 
     if (authError || !oauthData?.url) {
       console.error('Apple login error:', authError?.message);
-      appleError = 'Sign in failed. Please try again.';
+      appleError = authError?.message || 'Could not start Apple sign-in. Please try again.';
       appleLoading = false;
       return;
     }
@@ -48,17 +78,40 @@
       appUrlListener?.remove();
       await Browser.open({ url: oauthData.url });
 
+      // Safety net: if the in-app browser never returns control to the app
+      // (a known SFSafariViewController bug on some iPadOS versions where
+      // the custom URL scheme redirect doesn't fire `appUrlOpen`), reset
+      // the UI after 60s so the user isn't stuck staring at "Redirecting…".
+      clearRedirectTimeout();
+      redirectTimeout = setTimeout(() => {
+        if (appleLoading) {
+          appleError = 'The browser did not come back. Please try again.';
+          appleLoading = false;
+          appUrlListener?.remove();
+          appUrlListener = null;
+        }
+      }, 60_000);
+
       appUrlListener = await App.addListener('appUrlOpen', async ({ url }) => {
         if (!url.startsWith('com.parallelarabic.app://auth/callback')) return;
 
+        clearRedirectTimeout();
         appUrlListener?.remove();
         appUrlListener = null;
 
         try { await Browser.close(); } catch {}
 
-        const code = new URL(url).searchParams.get('code');
+        const callbackUrl = new URL(url);
+        const callbackError = callbackUrl.searchParams.get('error');
+        if (callbackError) {
+          appleError = describeAppleError(callbackError);
+          appleLoading = false;
+          return;
+        }
+
+        const code = callbackUrl.searchParams.get('code');
         if (!code) {
-          appleError = 'Sign in failed. Please try again.';
+          appleError = 'Apple did not return a sign-in code. Please try again.';
           appleLoading = false;
           return;
         }
@@ -66,7 +119,7 @@
         const { data, error: sessionError } = await supabase.auth.exchangeCodeForSession(code);
         if (sessionError || !data.session) {
           console.error('Apple exchangeCodeForSession error:', sessionError?.message);
-          appleError = 'Sign in failed. Please try again.';
+          appleError = sessionError?.message || 'Could not finalize Apple sign-in. Please try again.';
           appleLoading = false;
           return;
         }
@@ -80,9 +133,16 @@
           })
         });
 
+        let syncBody: { error?: string; code?: string } = {};
+        try {
+          syncBody = await syncRes.json();
+        } catch {
+          /* ignore */
+        }
+
         if (!syncRes.ok) {
-          console.error('Apple sync failed:', syncRes.status);
-          appleError = 'Sign in failed. Please try again.';
+          console.error('Apple sync failed:', syncRes.status, syncBody);
+          appleError = syncBody?.error || `Sign-in could not be saved (status ${syncRes.status}). Please try again.`;
           appleLoading = false;
           return;
         }
@@ -238,17 +298,19 @@
           </div>
         {/if}
         <div class="mb-4 flex flex-col gap-3">
-          <button
-            type="button"
-            onclick={handleAppleLogin}
-            disabled={appleLoading}
-            class="w-full transition-all duration-300 flex items-center justify-center gap-3 bg-black text-white px-4 py-3 font-semibold border-2 border-black hover:bg-gray-900 disabled:opacity-50 rounded-lg shadow-md hover:shadow-lg"
-          >
-            <svg width="18" height="18" viewBox="0 0 814 1000" xmlns="http://www.w3.org/2000/svg" fill="white">
-              <path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105-37.5-155.5-127.4C46.5 753.1 1 621.9 1 495.7c0-210.1 137.1-321.4 272-321.4 70.4 0 129.1 46.3 173.6 46.3 42.8 0 109.6-49 188.6-49 30.4 0 108.2 2.6 168.9 80.5zm-234.2-184.7c-6.5 30.4-23.4 60.2-49.7 84.2-31.7 28.3-70.4 50.3-112.5 47.1-1.3-5.2-2-10.4-2-16.3 0-27.7 13-58.1 36.4-82.8 11.7-12.3 26.7-22.7 44.9-30.4 18.2-7.8 35.4-12.4 51.6-13.7.6 4 1.3 8.5 1.3 11.9z"/>
-            </svg>
-            {appleLoading ? 'Redirecting...' : 'Continue with Apple'}
-          </button>
+          {#if isNativeApp}
+            <button
+              type="button"
+              onclick={handleAppleLogin}
+              disabled={appleLoading}
+              class="w-full transition-all duration-300 flex items-center justify-center gap-3 bg-black text-white px-4 py-3 font-semibold border-2 border-black hover:bg-gray-900 disabled:opacity-50 rounded-lg shadow-md hover:shadow-lg"
+            >
+              <svg width="18" height="18" viewBox="0 0 814 1000" xmlns="http://www.w3.org/2000/svg" fill="white">
+                <path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105-37.5-155.5-127.4C46.5 753.1 1 621.9 1 495.7c0-210.1 137.1-321.4 272-321.4 70.4 0 129.1 46.3 173.6 46.3 42.8 0 109.6-49 188.6-49 30.4 0 108.2 2.6 168.9 80.5zm-234.2-184.7c-6.5 30.4-23.4 60.2-49.7 84.2-31.7 28.3-70.4 50.3-112.5 47.1-1.3-5.2-2-10.4-2-16.3 0-27.7 13-58.1 36.4-82.8 11.7-12.3 26.7-22.7 44.9-30.4 18.2-7.8 35.4-12.4 51.6-13.7.6 4 1.3 8.5 1.3 11.9z"/>
+              </svg>
+              {appleLoading ? 'Redirecting...' : 'Continue with Apple'}
+            </button>
+          {/if}
           <button
             type="button"
             onclick={handleGoogleLogin}
