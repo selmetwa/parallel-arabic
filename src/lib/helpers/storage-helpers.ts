@@ -329,3 +329,32 @@ export async function deleteLessonFromStorage(fileKey: string): Promise<{ succes
     return { success: false, error: (error as Error).message };
   }
 }
+
+/**
+ * Download self-study session JSON from the generated_self_study bucket
+ */
+export async function downloadSelfStudySession(fileKey: string): Promise<{ success: boolean; data?: object; error?: string }> {
+  try {
+    const { data, error } = await supabase.storage
+      .from('generated_self_study')
+      .download(fileKey);
+
+    if (error) {
+      console.error('Self-study download error:', error);
+      return { success: false, error: error.message };
+    }
+
+    if (!data) {
+      return { success: false, error: 'No data returned from storage' };
+    }
+
+    const jsonText = await data.text();
+    const sessionData = JSON.parse(jsonText);
+
+    console.log('✅ Self-study session downloaded from storage:', fileKey);
+    return { success: true, data: sessionData };
+  } catch (error) {
+    console.error('Self-study download failed:', error);
+    return { success: false, error: (error as Error).message };
+  }
+}
