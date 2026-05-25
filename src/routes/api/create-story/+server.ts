@@ -248,23 +248,23 @@ Dialect flavor: mix of Arabic, Berber, and French loanwords — e.g., الطوم
 		}
 	}
 
-	// Map difficulty levels to descriptions
+	// Map difficulty levels to descriptions (includes target words-per-sentence)
 	const getDifficultyDescription = (level: string): string => {
 		switch (level.toLowerCase()) {
 			case 'a1':
-				return 'A1 (Beginner) - Use very basic vocabulary and simple sentence structures';
+				return 'A1 (Beginner) - Use very basic vocabulary and simple sentence structures. Each sentence MUST be around 8 words or fewer.';
 			case 'a2':
-				return 'A2 (Elementary) - Use elementary vocabulary with slightly more complex sentences';
+				return 'A2 (Elementary) - Use elementary vocabulary with slightly more complex sentences. Each sentence MUST be around 10 words or fewer.';
 			case 'b1':
-				return 'B1 (Intermediate) - Use intermediate vocabulary and varied sentence structures';
+				return 'B1 (Intermediate) - Use intermediate vocabulary and varied sentence structures. Each sentence should be around 12 words.';
 			case 'b2':
-				return 'B2 (Upper Intermediate) - Use upper intermediate vocabulary with complex sentence structures';
+				return 'B2 (Upper Intermediate) - Use upper intermediate vocabulary with complex sentence structures. Each sentence should be around 14 words.';
 			case 'c1':
-				return 'C1 (Advanced) - Use advanced vocabulary and sophisticated sentence structures';
+				return 'C1 (Advanced) - Use advanced vocabulary and sophisticated sentence structures. Each sentence should be around 16 words.';
 			case 'c2':
-				return 'C2 (Proficient) - Use proficient-level vocabulary and highly complex sentence structures';
+				return 'C2 (Proficient) - Use proficient-level vocabulary and highly complex sentence structures. Each sentence should be around 20 words.';
 			default:
-				return 'A1 (Beginner) - Use very basic vocabulary and simple sentence structures';
+				return 'A1 (Beginner) - Use very basic vocabulary and simple sentence structures. Each sentence MUST be around 8 words or fewer.';
 		}
 	};
 

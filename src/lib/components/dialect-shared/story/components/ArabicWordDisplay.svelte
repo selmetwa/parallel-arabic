@@ -24,10 +24,18 @@
 		showEnglish?: boolean;
 		showTransliteration?: boolean;
 		showTashkeel?: boolean;
+		savedWords?: Set<string>;
 	}
 
-	let { sentence, setActiveWord, dialect, showEnglish = true, showTransliteration = true, showTashkeel = false }: Props =
+	let { sentence, setActiveWord, dialect, showEnglish = true, showTransliteration = true, showTashkeel = false, savedWords = new Set() }: Props =
 		$props();
+
+	/** Strip punctuation and check if this Arabic word is in the user's saved word list */
+	function isSavedWord(arabic: string): boolean {
+		if (!savedWords.size) return false;
+		const normalized = arabic.replace(/[،,؟!.;:)(؛]/g, '').trim();
+		return savedWords.has(normalized) || savedWords.has(arabic.trim());
+	}
 
 	// Word cache for instant re-display on repeated clicks
 	let wordCache = new Map<string, string>();
@@ -239,7 +247,9 @@
 					'flex flex-col items-center px-2 py-2 sm:px-3 sm:py-3 rounded-lg transition-all duration-200 cursor-pointer group border-2',
 					isWordSelected(wordIndex)
 						? 'bg-blue-200 border-blue-400 shadow-md'
-						: 'border-transparent hover:bg-tile-500 hover:shadow-md hover:border-tile-600'
+						: isSavedWord(wordAlign.arabic)
+							? 'bg-amber-400/10 border-amber-400/40 hover:bg-amber-400/20 hover:border-amber-400 hover:shadow-md'
+							: 'border-transparent hover:bg-tile-500 hover:shadow-md hover:border-tile-600'
 				)}
 				onclick={() => fetchDefinition(wordAlign.arabic.replace(/[،,]/g, ''), wordAlign)}
 				onmousedown={(e) => handleWordMouseDown(wordIndex, e)}
@@ -272,7 +282,9 @@
 					'px-2 py-1 sm:px-3 sm:py-2 rounded-lg transition-all duration-200 cursor-pointer border-2 text-xl sm:text-2xl md:text-3xl font-semibold text-text-300',
 					isWordSelected(wordIndex)
 						? 'bg-blue-200 border-blue-400 shadow-md'
-						: 'border-transparent hover:bg-tile-500 hover:shadow-md hover:border-tile-600'
+						: isSavedWord(arabicWords[wordIndex] || arabicWord)
+							? 'bg-amber-400/10 border-amber-400/40 hover:bg-amber-400/20 hover:border-amber-400 hover:shadow-md'
+							: 'border-transparent hover:bg-tile-500 hover:shadow-md hover:border-tile-600'
 				)}
 				onclick={() => fetchDefinition((arabicWords[wordIndex] || arabicWord).replace(/[،,]/g, ''))}
 				onmousedown={(e) => handleWordMouseDown(wordIndex, e)}

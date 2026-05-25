@@ -111,7 +111,7 @@ export function createStorySchema(isConversation: boolean = false) {
 		title: titleSchema,
 		description: descriptionSchema,
 		sentences: z.array(createSentenceSchema(isConversation)).min(1),
-		keyVocab: z.array(textWithTranslationSchema).min(5).max(15).optional(), // Key vocabulary from the story (5-15 words)
+		keyVocab: z.array(textWithTranslationSchema).min(1).max(30).optional(),
 		quiz: z.object({
 			questions: z.array(quizQuestionSchema).min(3).max(5) // Short quiz with 3-5 questions
 		}).optional()

@@ -15,7 +15,20 @@
   import AudioButton from '$lib/components/AudioButton.svelte';
   import PaywallModal from '$lib/components/PaywallModal.svelte';
   let isPaywallOpen = $state(false);
+  let savedWords = $state<Set<string>>(new Set());
+
+  // Fetch the user's saved words client-side and build a normalised Set for O(1) lookup
+  $effect(() => {
+    const userId = data.userId;
+    if (!userId) return;
+    fetchUserReviewWords(userId, 'all').then((words) => {
+      savedWords = new Set(
+        words.map((w) => w.arabic.replace(/[،,؟!.;:)(؛]/g, '').trim())
+      );
+    });
+  });
   import ArabicWordDisplay from '$lib/components/dialect-shared/story/components/ArabicWordDisplay.svelte';
+  import { fetchUserReviewWords } from '$lib/helpers/fetch-review-words';
   import StoryAudioButton from '$lib/components/StoryAudioButton.svelte';
   import InlineAudioButton from '$lib/components/InlineAudioButton.svelte';
   import { goto } from '$app/navigation';
@@ -624,6 +637,7 @@
           showEnglish={sentenceEnglish}
           showTransliteration={sentenceTransliteration}
           showTashkeel={sentenceTashkeel}
+          {savedWords}
         />
 
         <!-- Footer with sentence number, per-sentence toggles, and audio -->

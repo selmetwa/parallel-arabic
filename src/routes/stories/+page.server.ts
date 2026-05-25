@@ -47,14 +47,26 @@ export const load = async ({ parent, locals, url }) => {
     console.error('Error fetching stories:', storiesResult.error);
   }
 
-  // Fetch completed story IDs for the logged-in user
+  // Fetch completed story IDs and topic-story mappings in parallel
   let completedStoryIds: string[] = [];
+  let topicStoryMap: Record<string, string> = {};
   if (user?.id) {
-    const { data: completions } = await locals.supabase
-      .from('user_story_completion')
-      .select('story_id')
-      .eq('user_id', user.id);
-    completedStoryIds = completions?.map((c: any) => c.story_id) ?? [];
+    const [completionsRes, topicRes] = await Promise.all([
+      locals.supabase
+        .from('user_story_completion')
+        .select('story_id')
+        .eq('user_id', user.id),
+      locals.supabase
+        .from('user_topic_story')
+        .select('topic_id, story_id')
+        .eq('user_id', user.id)
+    ]);
+    completedStoryIds = completionsRes.data?.map((c: any) => c.story_id) ?? [];
+    if (topicRes.data) {
+      for (const m of topicRes.data) {
+        topicStoryMap[m.topic_id] = m.story_id;
+      }
+    }
   }
 
   const completedSet = new Set(completedStoryIds);
@@ -114,6 +126,7 @@ export const load = async ({ parent, locals, url }) => {
     hasMore,
     user,
     completedStoryIds,
+    topicStoryMap,
     initialDialect,
     resumeStory,
     recommendedStories,

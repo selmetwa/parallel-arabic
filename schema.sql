@@ -101,6 +101,20 @@ CREATE TABLE public.saved_word (
   CONSTRAINT saved_word_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.user(id),
   CONSTRAINT fk_saved_word_word_id FOREIGN KEY (word_id) REFERENCES public.word(id)
 );
+CREATE TABLE public.self_study_sessions (
+  id text NOT NULL,
+  user_id text NOT NULL,
+  title text NOT NULL,
+  dialect text NOT NULL,
+  level text NOT NULL DEFAULT 'intermediate'::text,
+  vocab_count integer NOT NULL DEFAULT 0,
+  step_count integer NOT NULL DEFAULT 0,
+  score_percent integer,
+  session_data_key text NOT NULL,
+  created_at bigint NOT NULL,
+  CONSTRAINT self_study_sessions_pkey PRIMARY KEY (id),
+  CONSTRAINT self_study_sessions_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.user(id)
+);
 CREATE TABLE public.stories (
   id character varying NOT NULL,
   title character varying NOT NULL,
@@ -254,6 +268,15 @@ CREATE TABLE public.user_story_completion (
   created_at bigint NOT NULL,
   CONSTRAINT user_story_completion_pkey PRIMARY KEY (id),
   CONSTRAINT user_story_completion_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.user(id)
+);
+CREATE TABLE public.user_topic_story (
+  id text NOT NULL,
+  user_id text NOT NULL,
+  topic_id text NOT NULL,
+  story_id text NOT NULL,
+  created_at bigint NOT NULL,
+  CONSTRAINT user_topic_story_pkey PRIMARY KEY (id),
+  CONSTRAINT user_topic_story_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.user(id)
 );
 CREATE TABLE public.video (
   id text NOT NULL,
