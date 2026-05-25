@@ -41,12 +41,14 @@ export const GET: RequestHandler = async ({ url }) => {
   const dialect = url.searchParams.get('dialect') || undefined;
   const difficulty = url.searchParams.get('difficulty') || undefined;
   const search = url.searchParams.get('search') || undefined;
+  const userId = url.searchParams.get('userId') || undefined;
 
   try {
     const result = await getStoriesPaginated(cursor, pageSize, {
       dialect,
       difficulty,
-      search
+      search,
+      userId
     });
 
     if (!result.success) {

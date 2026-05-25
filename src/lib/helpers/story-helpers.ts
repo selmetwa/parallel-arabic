@@ -223,6 +223,7 @@ export async function getStoriesPaginated(
     dialect?: string;
     difficulty?: string;
     search?: string;
+    userId?: string;
   }
 ): Promise<PaginatedStoriesResult> {
   try {
@@ -244,6 +245,10 @@ export async function getStoriesPaginated(
 
     if (filters?.difficulty && filters.difficulty !== 'all') {
       query = query.ilike('difficulty', filters.difficulty);
+    }
+
+    if (filters?.userId) {
+      query = query.eq('user_id', filters.userId);
     }
 
     const { data: storiesMetadata, error: dbError } = await query;

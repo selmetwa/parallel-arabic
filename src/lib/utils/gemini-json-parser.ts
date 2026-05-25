@@ -436,7 +436,17 @@ export function parseJsonFromGeminiResponse<T = unknown>(
 		const parsed = JSON.parse(sanitized);
 		console.log('[Gemini JSON Parser] Parse successful, validating with Zod...');
 		console.log('[Gemini JSON Parser] Parsed type:', Array.isArray(parsed) ? 'array' : typeof parsed);
-		
+
+		// Truncate oversized arrays that Gemini sometimes returns
+		if (parsed && typeof parsed === 'object') {
+			if (Array.isArray(parsed.keyVocab) && parsed.keyVocab.length > 15) {
+				parsed.keyVocab = parsed.keyVocab.slice(0, 15);
+			}
+			if (parsed.quiz?.questions && Array.isArray(parsed.quiz.questions) && parsed.quiz.questions.length > 5) {
+				parsed.quiz.questions = parsed.quiz.questions.slice(0, 5);
+			}
+		}
+
 		// Try direct validation first
 		try {
 			const validated = zodSchema.parse(parsed);
@@ -470,7 +480,16 @@ export function parseJsonFromGeminiResponse<T = unknown>(
 			const parsed = JSON.parse(repaired);
 			console.log('[Gemini JSON Parser] Repaired parse successful, validating with Zod...');
 			console.log('[Gemini JSON Parser] Parsed type:', Array.isArray(parsed) ? 'array' : typeof parsed);
-			
+
+			if (parsed && typeof parsed === 'object') {
+				if (Array.isArray(parsed.keyVocab) && parsed.keyVocab.length > 15) {
+					parsed.keyVocab = parsed.keyVocab.slice(0, 15);
+				}
+				if (parsed.quiz?.questions && Array.isArray(parsed.quiz.questions) && parsed.quiz.questions.length > 5) {
+					parsed.quiz.questions = parsed.quiz.questions.slice(0, 5);
+				}
+			}
+
 			// Try validation, with normalization if needed
 			try {
 				const validated = zodSchema.parse(parsed);
