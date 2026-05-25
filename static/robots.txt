@@ -8,6 +8,9 @@ Disallow: /login
 Disallow: /signup
 Disallow: /pricing/
 
+# LLM / AI agent discoverability
+Allow: /llms.txt
+
 # Allow important public pages
 Allow: /about
 Allow: /faq
