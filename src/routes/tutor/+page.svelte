@@ -11,6 +11,7 @@
   import { type Dialect } from '$lib/types/index';
   import type { DialectComparisonSchema } from '$lib/utils/gemini-schemas';
   import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
+  import { TUTOR_SCENARIOS, type TutorScenario } from '$lib/constants/tutor-scenarios';
 
   let { data } = $props();
 
@@ -141,6 +142,134 @@
   let mode = $state<TutorMode>('conversation');
 
   let selectedDialect = $state<Dialect>(getDefaultDialect(data.user) as Dialect);
+
+  // Scenario picker state (beginner conversation starters)
+  interface HintData {
+    arabic: string;
+    transliteration: string;
+    english: string;
+  }
+  let activeScenarioContext = $state<TutorScenario | null>(null);
+  let hintsVisible = $state(true);
+  let currentHint = $state<HintData | null>(null);
+  let isLoadingHint = $state(false);
+
+  let scenariosForDialect = $derived(
+    TUTOR_SCENARIOS.filter((s) => s.dialogs[selectedDialect])
+  );
+
+  let activeScenarioDialog = $derived(
+    activeScenarioContext ? activeScenarioContext.dialogs[selectedDialect] ?? null : null
+  );
+
+  function startScenario(scenario: TutorScenario) {
+    const dialog = scenario.dialogs[selectedDialect];
+    if (!dialog) return;
+
+    activeScenarioContext = scenario;
+    hintsVisible = true;
+    currentHint = null;
+
+    // Seed the very first hint from the hardcoded scenario data: the first
+    // student line. After the student records and the AI replies, subsequent
+    // hints are generated dynamically based on the AI's response.
+    const firstStudentLine = dialog.lines.find((l) => l.speaker === 'student');
+    if (firstStudentLine) {
+      currentHint = {
+        arabic: firstStudentLine.arabic,
+        transliteration: firstStudentLine.transliteration,
+        english: firstStudentLine.english
+      };
+    }
+
+    // If the scenario opens with the other party speaking, seed the conversation
+    // with that line so the user has something to respond to.
+    if (dialog.lines[0]?.speaker === 'other') {
+      const opening = dialog.lines[0];
+      const seededMsg: ConversationMessage = {
+        id: 'scenario-seed-' + Date.now(),
+        type: 'tutor',
+        arabic: opening.arabic,
+        english: opening.english,
+        transliteration: opening.transliteration,
+        timestamp: new Date(),
+        showArabic: true,
+        showEnglish: true,
+        showTransliteration: true
+      };
+      conversation = [...conversation, seededMsg];
+      setTimeout(() => {
+        playTutorAudio(opening.arabic, selectedDialect);
+      }, 400);
+    }
+  }
+
+  function exitScenario() {
+    activeScenarioContext = null;
+    currentHint = null;
+    isLoadingHint = false;
+  }
+
+  function toggleHints() {
+    hintsVisible = !hintsVisible;
+  }
+
+  function buildScenarioPrimer(): { role: 'user' | 'assistant'; content: string }[] {
+    if (!activeScenarioContext || !activeScenarioDialog) return [];
+    const role = activeScenarioDialog.otherRoleEnglish;
+    return [
+      {
+        role: 'user',
+        content: `Let's roleplay this scenario: "${activeScenarioContext.title}". You play the role of ${role}. Reply in character, short and natural, in ${selectedDialect}. Keep it beginner-friendly.`
+      },
+      {
+        role: 'assistant',
+        content: `Okay, I'll play ${role}. Go ahead.`
+      }
+    ];
+  }
+
+  async function fetchNextHint() {
+    isLoadingHint = true;
+    try {
+      const history = conversation
+        .filter((m) => m.type === 'user' || m.type === 'tutor')
+        .map((m) => ({
+          role: m.type === 'user' ? ('user' as const) : ('assistant' as const),
+          content: m.arabic || m.english || ''
+        }))
+        .slice(-8);
+
+      const body: Record<string, unknown> = {
+        dialect: selectedDialect,
+        conversation: history,
+        proficiencyLevel: data.user?.proficiency_level || 'A1'
+      };
+      if (activeScenarioContext && activeScenarioDialog) {
+        body.scenarioTitle = activeScenarioContext.title;
+        body.scenarioDescription = activeScenarioContext.description;
+        body.otherRole = activeScenarioDialog.otherRoleEnglish;
+      }
+
+      const res = await fetch('/api/tutor-hint', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+      });
+      if (!res.ok) throw new Error('Failed to fetch hint');
+      const json = await res.json();
+      currentHint = {
+        arabic: json.arabic,
+        transliteration: json.transliteration,
+        english: json.english
+      };
+    } catch (e) {
+      console.error('Failed to load hint:', e);
+      currentHint = null;
+    } finally {
+      isLoadingHint = false;
+    }
+  }
   let recording = $state(false);
   let recordingLanguage = $state<'ar' | 'en'>('ar');
   let mediaRecorder: MediaRecorder | null = $state(null);
@@ -433,6 +562,7 @@
     selectedDialect = dialect as Dialect;
     conversation = [];
     conversationId = null; // Reset for new dialect
+    exitScenario();
   }
 
   async function startRecording(language: 'ar' | 'en') {
@@ -507,7 +637,7 @@
       isGettingResponse = true;
 
       // Build history before adding the new user message
-      const conversationHistory = conversation
+      const recentHistory = conversation
         .filter(msg => msg.type === 'user' || msg.type === 'tutor')
         .map(msg => {
           if (msg.type === 'user') {
@@ -523,6 +653,9 @@
           }
         })
         .slice(-10);
+      // Prepend a roleplay primer if the user is in a guided scenario so the AI
+      // stays in character. The primer is never displayed in the UI.
+      const conversationHistory = [...buildScenarioPrimer(), ...recentHistory];
 
       // Show optimistic user message immediately with raw transcription
       const optimisticId = Date.now().toString();
@@ -611,7 +744,11 @@
       };
       conversation = [...conversation, tutorMsg];
       scrollToBottom();
-      
+
+      // After each tutor reply, generate a suggestion for what to say next.
+      // Calibrated to the student's proficiency level (and scenario, if active).
+      fetchNextHint();
+
       setTimeout(() => scrollToBottom(), 100);
 
       if (tutorData.arabic) {
@@ -734,6 +871,8 @@
     conversationId = null;
     showSummaryModal = false;
     summaryData = { summary: '', topics: [], vocabulary: [], insights: [] };
+    exitScenario();
+    currentHint = null;
   }
   
   function closeSummaryModal() {
@@ -1390,43 +1529,103 @@
       {:else}
         <!-- Conversation Mode Content -->
         <div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden h-full">
-          <div class="p-4 border-b border-tile-600 sticky top-0 bg-tile-400 z-10">
-            <div class="flex items-center justify-between">
+          <div class="border-b border-tile-600 sticky top-0 bg-tile-400 z-10">
+            <div class="p-4 flex items-center justify-between gap-3 flex-wrap">
               <h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
                 <span>💬</span> Conversation
               </h3>
-              {#if conversation.length > 0}
-                <span class="px-3 py-1 bg-tile-500 rounded-full text-sm font-medium text-text-300">
-                  {conversation.length} message{conversation.length !== 1 ? 's' : ''}
-                </span>
-              {/if}
+              <div class="flex items-center gap-2">
+                {#if conversation.length > 0 && !activeScenarioContext}
+                  <button
+                    type="button"
+                    onclick={toggleHints}
+                    class="text-xs px-2.5 py-1 rounded-md font-medium bg-tile-500 hover:bg-tile-600 text-text-300 transition-colors"
+                    aria-pressed={hintsVisible}
+                    title="Toggle reply suggestions"
+                  >
+                    💡 {hintsVisible ? 'Hide hints' : 'Show hints'}
+                  </button>
+                {/if}
+                {#if conversation.length > 0}
+                  <span class="px-3 py-1 bg-tile-500 rounded-full text-sm font-medium text-text-300">
+                    {conversation.length} message{conversation.length !== 1 ? 's' : ''}
+                  </span>
+                {/if}
+              </div>
             </div>
+
+            {#if activeScenarioContext && activeScenarioDialog}
+              <div class="px-4 pb-3 -mt-1 flex items-center justify-between gap-2">
+                <div class="flex items-center gap-2 min-w-0">
+                  <span class="text-xl shrink-0">{activeScenarioContext.emoji}</span>
+                  <div class="min-w-0">
+                    <p class="text-xs font-semibold text-text-300 truncate">
+                      Practicing: {activeScenarioContext.title}
+                    </p>
+                    <p class="text-[11px] text-text-200 truncate">
+                      Tutor is playing: {activeScenarioDialog.otherRoleEnglish}
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-1.5 shrink-0">
+                  <button
+                    type="button"
+                    onclick={toggleHints}
+                    class="text-[11px] px-2 py-1 rounded-md font-medium bg-tile-500 hover:bg-tile-600 text-text-300 transition-colors"
+                    aria-pressed={hintsVisible}
+                  >
+                    {hintsVisible ? 'Hide hints' : 'Show hints'}
+                  </button>
+                  <button
+                    type="button"
+                    onclick={exitScenario}
+                    class="text-[11px] px-2 py-1 rounded-md font-medium bg-tile-500 hover:bg-tile-600 text-text-300 transition-colors"
+                  >
+                    Exit
+                  </button>
+                </div>
+              </div>
+            {/if}
           </div>
         
         <div
           bind:this={transcriptContainer}
           class="p-4 min-h-[500px] max-h-[calc(100vh-200px)] overflow-y-auto {conversationStarted ? 'pb-52 lg:pb-4' : ''}"
         >
-          {#if conversation.length === 0 && !isTranscribing && !isGettingResponse}
-            <div class="flex flex-col items-center justify-center h-full min-h-[400px] text-center">
-              <div class="text-6xl mb-6">👋</div>
-              <h3 class="text-xl font-bold text-text-300 mb-3">Start a Conversation</h3>
+          {#if conversation.length === 0 && !activeScenarioContext && !isTranscribing && !isGettingResponse}
+            <div class="flex flex-col items-center justify-start h-full min-h-[400px] text-center py-6">
+              <div class="text-6xl mb-4">👋</div>
+              <h3 class="text-xl font-bold text-text-300 mb-2">Start a Conversation</h3>
               <p class="text-text-200 max-w-md leading-relaxed">
-                Click one of the recording buttons to begin speaking with your AI tutor. 
-                Your conversation will appear here.
+                Pick a beginner scenario below for guided practice, or use the recording
+                buttons to start free conversation with your AI tutor.
               </p>
-              <div class="mt-6 grid grid-cols-2 gap-4 max-w-sm">
-                <div class="p-4 bg-tile-300 rounded-lg border border-tile-500 text-center">
-                  <span class="text-2xl block mb-2">🗣️</span>
-                  <span class="text-sm font-medium text-text-300">Speak Arabic</span>
-                  <p class="text-xs text-text-200 mt-1">Practice conversation</p>
+
+              {#if scenariosForDialect.length > 0 && !activeScenarioContext}
+                <div class="w-full max-w-4xl mt-8">
+                  <div class="flex items-center justify-between mb-3 px-1">
+                    <h4 class="text-sm font-bold text-text-300 flex items-center gap-2">
+                      <span>🎯</span> Beginner Scenarios
+                    </h4>
+                    <span class="text-xs text-text-200">Tap a card to see example phrases</span>
+                  </div>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-left">
+                    {#each scenariosForDialect as scenario (scenario.id)}
+                      <button
+                        type="button"
+                        onclick={() => startScenario(scenario)}
+                        class="group flex items-start gap-3 p-4 bg-tile-300 rounded-xl border-2 border-tile-500 hover:bg-tile-400 hover:border-tile-600 hover:shadow-lg transition-all duration-200 text-left active:scale-95"
+                      >
+                        <span class="text-3xl shrink-0 transition-transform duration-200 group-hover:scale-110">{scenario.emoji}</span>
+                        <div class="min-w-0">
+                          <p class="text-sm font-semibold text-text-300 mb-1">{scenario.title}</p>
+                          <p class="text-xs text-text-200 leading-snug">{scenario.description}</p>
+                        </div>
+                      </button>
+                    {/each}
+                  </div>
                 </div>
-                <div class="p-4 bg-tile-300 rounded-lg border border-tile-500 text-center">
-                  <span class="text-2xl block mb-2">❓</span>
-                  <span class="text-sm font-medium text-text-300">Ask in English</span>
-                  <p class="text-xs text-text-200 mt-1">Get help & translations</p>
-                </div>
-              </div>
+              {/if}
             </div>
           {:else}
             <div class="space-y-4">
@@ -1649,7 +1848,30 @@
                     </div>
                 {/if}
               {/each}
-              
+
+              <!-- Reply hint: appears below the latest tutor message -->
+              {#if hintsVisible && (currentHint || isLoadingHint)}
+                <div class="flex">
+                  <div class="max-w-[90%] sm:max-w-[80%] bg-sky-500/10 border border-dashed border-sky-500/40 rounded-xl p-3 sm:p-4 ml-1">
+                    <div class="flex items-center justify-between gap-3 mb-1">
+                      <span class="text-[10px] font-bold uppercase tracking-wide text-sky-700">
+                        💡 Hint — try saying
+                      </span>
+                      {#if currentHint && !isLoadingHint}
+                        <AudioButton text={currentHint.arabic} dialect={selectedDialect} className="!p-1.5 !rounded-md bg-tile-500 hover:bg-tile-600" />
+                      {/if}
+                    </div>
+                    {#if isLoadingHint}
+                      <p class="text-xs text-text-200 italic">Thinking of a hint…</p>
+                    {:else if currentHint}
+                      <p class="text-lg sm:text-xl font-semibold text-text-300 leading-snug" dir="rtl">{currentHint.arabic}</p>
+                      <p class="text-xs sm:text-sm text-text-200 italic mt-0.5">{currentHint.transliteration}</p>
+                      <p class="text-xs sm:text-sm text-text-300 mt-0.5">{currentHint.english}</p>
+                    {/if}
+                  </div>
+                </div>
+              {/if}
+
               <!-- Loading States -->
               {#if isTranscribing}
                 <div class="bg-sky-500/10 border-2 border-sky-500/30 rounded-xl p-6 animate-pulse">
