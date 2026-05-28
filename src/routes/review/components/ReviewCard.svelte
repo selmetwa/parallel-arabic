@@ -133,12 +133,18 @@
   // Reset state when word changes
   $effect(() => {
     if (word) {
+      // Suppress the flip-back animation on word change so both faces can't
+      // briefly render together while the rotation is in flight.
+      if (flipCardInner) flipCardInner.style.transition = 'none';
       showAnswer = false;
       showHint = false;
       selectedDifficulty = null;
       isFlipping = false;
       clearSelection();
       clearArabicSelection();
+      requestAnimationFrame(() => {
+        if (flipCardInner) flipCardInner.style.transition = '';
+      });
     }
   });
 
@@ -731,6 +737,7 @@
     width: 100%;
     transition: transform 0.6s, min-height 0.3s ease;
     transform-style: preserve-3d;
+    will-change: transform;
   }
 
   .flip-card-inner.flipped {
@@ -746,6 +753,7 @@
 
   .flip-card-front {
     position: relative;
+    transform: translate3d(0, 0, 0);
   }
 
   .flip-card-back {
@@ -753,6 +761,6 @@
     top: 0;
     left: 0;
     right: 0;
-    transform: rotateY(180deg);
+    transform: rotateY(180deg) translate3d(0, 0, 0);
   }
 </style>
