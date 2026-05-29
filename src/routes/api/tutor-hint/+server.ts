@@ -88,10 +88,9 @@ Respond as JSON with this exact shape:
     const response = await generateContentWithRetry(ai, {
       model: 'gemini-2.5-flash',
       contents: prompt,
-      // @ts-expect-error - generationConfig is valid but types may be outdated
-      generationConfig: {
+      config: {
         temperature: 0.7,
-        maxOutputTokens: 250,
+        maxOutputTokens: 1024,
         responseMimeType: 'application/json',
         responseJsonSchema: schemaJson
       }

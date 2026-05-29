@@ -9,7 +9,6 @@ import { commonWords } from '$lib/constants/common-words';
 import { getSpeakerNames } from '$lib/utils/voice-config';
 import { generateStoryAudio } from '../../../lib/server/audio-generation';
 import { generateContentWithRetry } from '$lib/utils/gemini-api-retry';
-import { addTashkeelToSentences } from '$lib/utils/add-tashkeel';
 import { saveUploadedAudioFile } from '$lib/utils/audio-utils';
 import { uploadStoryToStorage } from '$lib/helpers/storage-helpers';
 import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
@@ -63,10 +62,9 @@ Format as: {"sentences": ["sentence1", "sentence2", ...]}`;
 		const response = await generateContentWithRetry(ai, {
 			model: 'gemini-2.5-flash',
 			contents: prompt,
-			// @ts-expect-error - generationConfig is valid but types may be outdated
-			generationConfig: {
+			config: {
 				temperature: 0.2,
-				maxOutputTokens: 3000,
+				maxOutputTokens: 8192,
 				responseMimeType: 'application/json',
 				responseJsonSchema: segmentationSchema.jsonSchema
 			}
@@ -347,11 +345,6 @@ Currency: Egyptian pounds (جنيه) — use realistic prices (e.g., a cup of te
 Food & drink: ful, ta3meya, koshari, feteer, hawawshi, ahwa mazboot/sada/ziyada, karkade, 7Up (classic Egyptian order).
 Character archetypes: taxi driver, bawab (doorman), hanut owner, government employee, university student, housewife, street vendor, pharmacist, mechanic.
 Dialect flavor words: يعني، خالص، أيوه، معلش، يلا، ماشي، بالظبط، طب، إيه ده، مش كده، أهو، عادي`,
-			examples: [
-				stories['at-the-barbers'].story.sentences.slice(0, 5),
-				stories['at-the-fruit-vendor'].story.sentences.slice(0, 5)
-			],
-			commonWords: commonWords.slice(0, 500)
 		},
 		'fusha': {
 			name: 'MODERN STANDARD ARABIC (FUSHA)',
@@ -650,10 +643,9 @@ Dialect flavor words: وش، زين، هيه، عيل، وايد، كذا، لي
 		const response = await generateContentWithRetry(ai, {
 			model: 'gemini-2.5-flash',
 			contents: question,
-			// @ts-expect-error - generationConfig is valid but types may be outdated
-			generationConfig: {
+			config: {
 				temperature: 0.8,
-				maxOutputTokens: 5000, // Optimized token limit for stories
+				maxOutputTokens: 32768, // High cap so schema-enforced JSON isn't truncated on long stories
 				responseMimeType: 'application/json',
 				responseJsonSchema: storySchema.jsonSchema
 			}
@@ -677,14 +669,6 @@ Dialect flavor words: وش، زين، هيه، عيل، وايد، كذا، لي
 			}
 
 			console.log('Gemini generated story with', parsedStory.sentences.length, 'sentences');
-
-			// Replace arabicTashkeel with a validated dedicated tashkeel pass
-			const arabicTexts = parsedStory.sentences.map((s: { arabic: { text: string } }) => s.arabic.text);
-			const tashkeelTexts = await addTashkeelToSentences(arabicTexts, ai);
-			for (let i = 0; i < parsedStory.sentences.length; i++) {
-				const t = tashkeelTexts[i];
-				if (t !== null) parsedStory.sentences[i].arabicTashkeel = { text: t };
-			}
 
 			console.log('✅ Egyptian Arabic story generated, uploading to storage...');
 			
@@ -720,19 +704,19 @@ Dialect flavor words: وش، زين، هيه، عيل، وايد، كذا، لي
 			}
 
 			// Generate audio for the story in the background
-			try {
-				// Use direct function call instead of HTTP request to avoid routing issues on Fly.io
-				const audioResult = await generateStoryAudio(storyId, dialect);
+			// try {
+			// 	// Use direct function call instead of HTTP request to avoid routing issues on Fly.io
+			// 	const audioResult = await generateStoryAudio(storyId, dialect);
 				
-				if (audioResult.success) {
-					console.log('Audio generated successfully:', audioResult.audioPath);
-				} else {
-					console.warn('Audio generation failed:', audioResult.error);
-				}
-			} catch (audioError) {
-				// Don't fail the story creation if audio generation fails
-				console.warn('Audio generation error (continuing):', audioError);
-			}
+			// 	if (audioResult.success) {
+			// 		console.log('Audio generated successfully:', audioResult.audioPath);
+			// 	} else {
+			// 		console.warn('Audio generation failed:', audioResult.error);
+			// 	}
+			// } catch (audioError) {
+			// 	// Don't fail the story creation if audio generation fails
+			// 	console.warn('Audio generation error (continuing):', audioError);
+			// }
 
 			// Invalidate Redis cache for stories
 			await invalidateStoryCaches(storyId, dialect);

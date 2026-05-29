@@ -146,10 +146,9 @@ MAKE SURE THAT THE RESPONSE IS JSON FORMAT USING THE FOLOWING STRUCTURE
     const response = await generateContentWithRetry(ai, {
       model: "gemini-2.5-flash",
       contents: enhancedQuestion,
-      // @ts-expect-error - generationConfig is valid but types may be outdated
-      generationConfig: {
+      config: {
         responseMimeType: 'application/json',
-        responseSchema: jsonSchema
+        responseJsonSchema: jsonSchema
       }
     });
 

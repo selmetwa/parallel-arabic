@@ -165,10 +165,9 @@ async function generateSingleLesson(
 		const response = await generateContentWithRetry(ai, {
 			model: "gemini-2.5-flash",
 			contents: prompt,
-			// @ts-expect-error - generationConfig is valid but types may be outdated
-			generationConfig: {
+			config: {
 				temperature: 0.7,
-				maxOutputTokens: 16000,
+				maxOutputTokens: 32768,
 				responseMimeType: 'application/json',
 				responseJsonSchema: lessonSchema.jsonSchema
 			}

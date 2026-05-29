@@ -333,11 +333,10 @@ IMPORTANT:
     const response = await generateContentWithRetry(ai, {
       model: "gemini-2.5-flash",
       contents: enhancedQuestion,
-      // @ts-expect-error - generationConfig is valid but types may be outdated
-      generationConfig: {
+      config: {
         temperature: 0.9,
         topP: 0.95,
-        maxOutputTokens: 4000, // Increase token limit to prevent truncation
+        maxOutputTokens: 8192, // Increase token limit to prevent truncation
         responseMimeType: 'application/json',
         responseJsonSchema: sentencesSchema.jsonSchema
       }

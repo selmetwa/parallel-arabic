@@ -370,10 +370,9 @@ export async function completeWordWithGemini(
     const response = await generateContentWithRetry(ai, {
       model: "gemini-2.5-flash",
       contents: prompt,
-      // @ts-expect-error - generationConfig is valid but types may be outdated
-      generationConfig: {
+      config: {
         temperature: 0.3,
-        maxOutputTokens: 500,
+        maxOutputTokens: 1024,
         responseMimeType: 'application/json',
         responseJsonSchema: schema.jsonSchema
       }

@@ -60,9 +60,9 @@ The user may ask about grammar rules, vocabulary, pronunciation, culture, or nee
     const response = await generateContentWithRetry(ai, {
       model: "gemini-2.5-flash",
       contents: fullPrompt,
-      generationConfig: {
+      config: {
         temperature: 0.7,
-        maxOutputTokens: 500,
+        maxOutputTokens: 2048,
         topP: 0.9
       }
     });

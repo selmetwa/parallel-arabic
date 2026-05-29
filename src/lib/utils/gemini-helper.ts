@@ -55,8 +55,7 @@ IMPORTANT:
 	const response = await generateContentWithRetry(ai, {
 		model,
 		contents: enhancedPrompt,
-		// @ts-expect-error - generationConfig is valid but types may be outdated
-		generationConfig: {
+		config: {
 			temperature,
 			...(topP !== undefined && { topP }),
 			...(maxOutputTokens !== undefined && { maxOutputTokens }),

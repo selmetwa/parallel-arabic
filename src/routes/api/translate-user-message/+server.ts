@@ -114,10 +114,9 @@ Do not include a suggestedSentence field for English input — the arabic field 
     const response = await generateContentWithRetry(ai, {
       model: "gemini-2.5-flash",
       contents: fullPrompt,
-      // @ts-expect-error - generationConfig is valid but types may be outdated
-      generationConfig: {
+      config: {
         temperature: 0.3,
-        maxOutputTokens: 300,
+        maxOutputTokens: 2048,
         topP: 0.9,
         responseMimeType: 'application/json',
         responseJsonSchema: translationWithFeedbackSchema.jsonSchema

@@ -92,10 +92,9 @@ If the original is in Arabic, keep it. If in English, translate to Egyptian Arab
 		const response = await generateContentWithRetry(ai, {
 			model: 'gemini-2.5-flash',
 			contents: `${systemPrompt}\n\n${userPrompt}`,
-			// @ts-expect-error - generationConfig types may be outdated
-			generationConfig: {
+			config: {
 				temperature: 0.3,
-				maxOutputTokens: 3000,
+				maxOutputTokens: 8192,
 				responseMimeType: 'application/json'
 			}
 		});

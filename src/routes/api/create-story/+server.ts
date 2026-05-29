@@ -9,7 +9,6 @@ import { supabase } from '$lib/supabaseClient';
 import { stories } from '$lib/constants/stories/index';
 import { commonWords } from '$lib/constants/common-words';
 import { generateContentWithRetry } from '$lib/utils/gemini-api-retry';
-import { addTashkeelToSentences } from '$lib/utils/add-tashkeel';
 import { getSpeakerNames } from '$lib/utils/voice-config';
 import { generateStoryAudio } from '../../../lib/server/audio-generation';
 import { uploadStoryToStorage } from '$lib/helpers/storage-helpers';
@@ -418,10 +417,9 @@ Dialect flavor: mix of Arabic, Berber, and French loanwords — e.g., الطوم
 		const response = await generateContentWithRetry(ai, {
 			model: 'gemini-2.5-flash',
 			contents: question,
-			// @ts-expect-error - generationConfig is valid but types may be outdated
-			generationConfig: {
+			config: {
 				temperature: 0.8,
-				maxOutputTokens: 5000, // Optimized token limit for stories
+				maxOutputTokens: 32768, // High cap so schema-enforced JSON isn't truncated on long stories
 				responseMimeType: 'application/json',
 				responseJsonSchema: storySchema.jsonSchema
 			}
@@ -440,14 +438,6 @@ Dialect flavor: mix of Arabic, Berber, and French loanwords — e.g., الطوم
 			if (!parsedStory || !parsedStory.sentences) {
 			throw new Error('Invalid story structure');
 		}
-
-			// Replace arabicTashkeel with a validated dedicated tashkeel pass
-			const arabicTexts = parsedStory.sentences.map((s: { arabic: { text: string } }) => s.arabic.text);
-			const tashkeelTexts = await addTashkeelToSentences(arabicTexts, ai);
-			for (let i = 0; i < parsedStory.sentences.length; i++) {
-				const t = tashkeelTexts[i];
-				if (t !== null) parsedStory.sentences[i].arabicTashkeel = { text: t };
-			}
 
 			// Upload story JSON to Supabase Storage
 			const storageResult = await uploadStoryToStorage(storyId, parsedStory);

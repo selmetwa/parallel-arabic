@@ -235,10 +235,9 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     const response = await generateContentWithRetry(ai, {
       model: "gemini-2.5-flash",
       contents: fullPrompt,
-      // @ts-expect-error - generationConfig is valid but types may be outdated
-      generationConfig: {
+      config: {
         temperature: 0.7,
-        maxOutputTokens: 2000,
+        maxOutputTokens: 8192,
         responseMimeType: 'application/json',
         responseJsonSchema: wordsSchema.jsonSchema
       }

@@ -98,7 +98,7 @@ export function createStorySchema(isConversation: boolean = false) {
 
 	const quizQuestionSchema = z.object({
 		question: z.string(), // Question in English
-		options: z.array(quizOptionSchema).min(2).max(4), // 2-4 options
+		options: z.array(quizOptionSchema), // 2-4 options (count enforced via prompt)
 		correctAnswerId: z.string(), // ID of the correct option (must match one option's id)
 		optionLanguage: z.enum(['arabic', 'english']).optional(), // Language of options: 'arabic' if asking for Arabic translation, 'english' if asking for English meaning
 		hint: z.object({
@@ -110,10 +110,10 @@ export function createStorySchema(isConversation: boolean = false) {
 	const schema = z.object({
 		title: titleSchema,
 		description: descriptionSchema,
-		sentences: z.array(createSentenceSchema(isConversation)).min(1),
-		keyVocab: z.array(textWithTranslationSchema).min(1).max(30).optional(),
+		sentences: z.array(createSentenceSchema(isConversation)),
+		keyVocab: z.array(textWithTranslationSchema).optional(), // up to ~30 (count enforced via prompt)
 		quiz: z.object({
-			questions: z.array(quizQuestionSchema).min(3).max(5) // Short quiz with 3-5 questions
+			questions: z.array(quizQuestionSchema) // 3-5 questions (count enforced via prompt)
 		}).optional()
 	});
 
@@ -326,7 +326,7 @@ export function createLessonSchema() {
 
 	const lessonContentSchema = z.object({
 		title: titleWithTransliterationSchema,
-		phrases: z.array(textWithTranslationSchema).min(1),
+		phrases: z.array(textWithTranslationSchema),
 		explanations: z.array(explanationSchema).optional()
 	});
 
@@ -370,13 +370,13 @@ export function createLessonSchema() {
 		id: z.string(),
 		title: titleWithTransliterationSchema,
 		content: lessonContentSchema,
-		exercises: z.array(exerciseSchema).min(1)
+		exercises: z.array(exerciseSchema)
 	});
 
 	// Review section schema - words and sentences for spaced repetition
 	const reviewSectionSchema = z.object({
-		words: z.array(textWithTranslationSchema).length(10), // Exactly 10 review words
-		sentences: z.array(textWithTranslationSchema).length(5) // Exactly 5 review sentences that include the review words
+		words: z.array(textWithTranslationSchema), // ~10 review words (count enforced via prompt)
+		sentences: z.array(textWithTranslationSchema) // ~5 review sentences that include the review words (count enforced via prompt)
 	});
 
 	// Grammar rule schema
@@ -428,7 +428,7 @@ export function createLessonSchema() {
 	const quizSchema = z.object({
 		title: z.string().optional(), // Quiz title
 		description: z.string().optional(), // Quiz description
-		questions: z.array(exerciseSchema).min(3).max(10) // 3-10 quiz questions
+		questions: z.array(exerciseSchema) // 3-10 quiz questions (count enforced via prompt)
 	});
 
 	const schema = z.object({
@@ -442,7 +442,7 @@ export function createLessonSchema() {
 		learningObjectives: z.array(z.string()).optional(), // What students will learn
 		estimatedDuration: z.number().optional(), // Duration in minutes
 		prerequisites: z.array(z.string()).optional(), // Required prior knowledge
-		subLessons: z.array(subLessonSchema).min(1),
+		subLessons: z.array(subLessonSchema),
 		review: reviewSectionSchema, // Review words and sentences
 		summary: z.object({
 			arabic: z.string().optional(),
@@ -556,12 +556,12 @@ export function createGameSentencesSchema() {
 		blankWordEnglish: z.string(),
 		// Transliteration of the blank word
 		blankWordTransliteration: z.string(),
-		// 3 wrong options for multiple choice (in Arabic)
-		wrongOptions: z.array(z.string()).length(3)
+		// 3 wrong options for multiple choice (in Arabic) (count enforced via prompt)
+		wrongOptions: z.array(z.string())
 	});
 
 	const schema = z.object({
-		sentences: z.array(gameSentenceSchema).min(1)
+		sentences: z.array(gameSentenceSchema)
 	});
 
 	return {
