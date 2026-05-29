@@ -77,10 +77,9 @@ Return your response as a JSON object with this structure:
 		const response = await generateContentWithRetry(ai, {
 			model: 'gemini-2.5-flash',
 			contents: fullPrompt,
-			// @ts-expect-error - generationConfig is valid but types may be outdated
-			generationConfig: {
+			config: {
 				temperature: 0.7,
-				maxOutputTokens: 10000, // Large token limit for video transcripts
+				maxOutputTokens: 32768, // Large token limit for video transcripts
 				responseMimeType: 'application/json',
 				responseJsonSchema: formattedVideoSchema.jsonSchema
 			}

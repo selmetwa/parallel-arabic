@@ -47,10 +47,9 @@ ${arabicSentences.map((s, i) => `${i + 1}. ${s}`).join('\n')}`;
 		const response = await generateContentWithRetry(ai, {
 			model: 'gemini-2.5-flash',
 			contents: prompt,
-			// @ts-expect-error - generationConfig is valid but types may be outdated
-			generationConfig: {
+			config: {
 				temperature: 0.1,
-				maxOutputTokens: 4000,
+				maxOutputTokens: 8192,
 				responseMimeType: 'application/json',
 				responseJsonSchema: zodToJsonSchema(tashkeelResponseSchema)
 			}

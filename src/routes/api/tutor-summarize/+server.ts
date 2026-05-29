@@ -122,10 +122,9 @@ Respond with valid JSON only.`;
     const response = await generateContentWithRetry(ai, {
       model: "gemini-2.5-flash",
       contents: systemPrompt,
-      // @ts-expect-error - generationConfig is valid but types may be outdated
-      generationConfig: {
+      config: {
         temperature: 0.3,
-        maxOutputTokens: 2000, // Increased for detailed vocabulary extraction
+        maxOutputTokens: 8192, // Increased for detailed vocabulary extraction
         responseMimeType: 'application/json'
       }
     });

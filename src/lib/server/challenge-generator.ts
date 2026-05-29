@@ -250,10 +250,9 @@ IMPORTANT:
 	const response = await generateContentWithRetry(ai, {
 		model: 'gemini-2.5-flash',
 		contents: prompt,
-		// @ts-expect-error - generationConfig is valid but types may be outdated
-		generationConfig: {
+		config: {
 			temperature: 0.8,
-			maxOutputTokens: 5000,
+			maxOutputTokens: 32768, // High cap so schema-enforced JSON isn't truncated
 			responseMimeType: 'application/json',
 			responseJsonSchema: storySchema.jsonSchema
 		}
@@ -372,10 +371,9 @@ IMPORTANT:
 	const response = await generateContentWithRetry(ai, {
 		model: 'gemini-2.5-flash',
 		contents: prompt,
-		// @ts-expect-error - generationConfig is valid but types may be outdated
-		generationConfig: {
+		config: {
 			temperature: 0.9,
-			maxOutputTokens: 2000,
+			maxOutputTokens: 8192,
 			responseMimeType: 'application/json',
 			responseJsonSchema: sentencesSchema.jsonSchema
 		}

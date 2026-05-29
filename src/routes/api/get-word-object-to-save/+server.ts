@@ -30,7 +30,7 @@ IMPORTANT:
     const response = await generateContentWithRetry(ai, {
       model: "gemini-2.5-flash",
       contents: enhancedQuestion,
-      generationConfig: {
+      config: {
         responseMimeType: 'application/json'
       }
     });

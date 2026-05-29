@@ -148,10 +148,9 @@ IMPORTANT: wordAlignments must have one entry per Arabic word in your response, 
     const response = await generateContentWithRetry(ai, {
       model: "gemini-2.5-flash",
       contents: fullPrompt,
-      // @ts-expect-error - generationConfig is valid but types may be outdated
-      generationConfig: {
+      config: {
         temperature: 0.8, // Slightly higher for more natural conversation
-        maxOutputTokens: 600,
+        maxOutputTokens: 2048,
         topP: 0.9,
         responseMimeType: 'application/json',
         responseJsonSchema: translationSchema.jsonSchema
