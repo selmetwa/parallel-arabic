@@ -291,7 +291,7 @@
 
 <section class="px-3 mt-6 sm:px-8 max-w-7xl mx-auto">
 	<!-- Header -->
-	<div class="text-left mb-8">
+	<div class="text-left mb-6">
 		<div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
 			<div>
 				<h1 class="text-3xl sm:text-4xl text-text-300 font-bold mb-2 tracking-tight">
@@ -321,30 +321,28 @@
 
 	<!-- Stats Bar -->
 	{#if data.user}
-		<div class="mb-8 flex items-center bg-tile-400 border border-tile-500 rounded-xl overflow-hidden" style="max-height: 60px;">
-			<div class="flex-1 flex flex-col items-center justify-center py-3 px-4">
-				<span class="text-lg font-bold text-text-300 leading-none">{data.completedStoryIds?.length ?? 0}</span>
-				<span class="text-xs text-text-200 mt-0.5">Stories Done</span>
+		<div class="mb-6 grid grid-cols-3 gap-px bg-tile-500 border border-tile-500 rounded-xl overflow-hidden">
+			<div class="bg-tile-400 px-4 py-3 flex flex-col gap-1">
+				<span class="text-[11px] uppercase tracking-wider text-text-200 font-semibold">Stories done</span>
+				<span class="text-xl font-bold text-text-300 leading-none">{data.completedStoryIds?.length ?? 0}</span>
 			</div>
-			<div class="w-px self-stretch bg-tile-500"></div>
-			<div class="flex-1 flex flex-col items-center justify-center py-3 px-4">
-				<span class="text-lg font-bold text-text-300 leading-none">{data.user.current_streak ?? 0}</span>
-				<span class="text-xs text-text-200 mt-0.5">Day Streak</span>
+			<div class="bg-tile-400 px-4 py-3 flex flex-col gap-1">
+				<span class="text-[11px] uppercase tracking-wider text-text-200 font-semibold">Day streak</span>
+				<span class="text-xl font-bold text-text-300 leading-none">{data.user.current_streak ?? 0}</span>
 			</div>
-			<div class="w-px self-stretch bg-tile-500"></div>
-			<div class="flex-1 flex flex-col items-center justify-center py-3 px-4">
-				<span class="text-lg font-bold text-text-300 leading-none">{data.user.current_level ?? 1}</span>
-				<span class="text-xs text-text-200 mt-0.5">Level</span>
+			<div class="bg-tile-400 px-4 py-3 flex flex-col gap-1">
+				<span class="text-[11px] uppercase tracking-wider text-text-200 font-semibold">Level</span>
+				<span class="text-xl font-bold text-text-300 leading-none">{data.user.current_level ?? 1}</span>
 			</div>
 		</div>
 	{/if}
 
 	<!-- Continue Reading -->
 	{#if data.resumeStory}
-		<div class="mb-8">
+		<div class="mb-6">
 			<a
 				href={`/generated_story/${data.resumeStory.id}`}
-				class="group flex items-center justify-between bg-tile-400 border-2 border-tile-600 rounded-xl p-6 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1"
+				class="group flex items-center justify-between bg-tile-500 border border-amber-400/50 rounded-xl p-4 sm:p-5 shadow-sm hover:bg-tile-600 hover:shadow-lg transition-all duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300"
 			>
 				<div class="flex flex-col gap-1 min-w-0">
 					<span class="text-xs font-semibold uppercase tracking-widest text-text-200">Continue Reading</span>
@@ -366,66 +364,56 @@
 		<button
 			onclick={() => handleCardClick(topic)}
 			disabled={generatingTopicId !== null}
-			class="group/card relative flex flex-col items-center gap-2 rounded-2xl border border-tile-500 px-3 py-5 sm:px-4 sm:py-6 transition-all duration-200 w-full shadow-sm
+			title={topic.name}
+			class="group/card relative flex items-center gap-2.5 rounded-lg border border-tile-500 px-2.5 py-2 transition-all duration-200 w-full text-left shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300 motion-reduce:hover:translate-y-0
 				{locked
 					? 'bg-tile-400/60 hover:bg-tile-400 hover:shadow-md'
 					: state === 'completed'
-						? 'bg-tile-400 border-green-500/40 shadow-green-500/5 hover:shadow-lg hover:shadow-green-500/10 hover:-translate-y-1'
+						? 'bg-tile-400 border-green-500/40 hover:shadow-md hover:-translate-y-0.5'
 						: state === 'in-progress'
-							? 'bg-tile-400 border-tile-600 hover:shadow-lg hover:-translate-y-1'
+							? 'bg-tile-400 border-tile-600 hover:shadow-md hover:-translate-y-0.5'
 							: state === 'generating'
 								? 'bg-tile-500 border-tile-500 cursor-not-allowed'
 								: generatingTopicId !== null
 									? 'bg-tile-400 opacity-50 cursor-not-allowed'
-									: 'bg-tile-400 hover:bg-tile-500 hover:shadow-lg hover:border-tile-600 hover:-translate-y-1'}"
+									: 'bg-tile-400 hover:bg-tile-500 hover:shadow-md hover:border-tile-600 hover:-translate-y-0.5'}"
 		>
-			<!-- Badges -->
-			{#if locked}
-				<div class="absolute right-2.5 top-2.5 flex items-center justify-center w-6 h-6 rounded-full bg-tile-500/80 text-xs">🔒</div>
-			{:else if state === 'completed'}
-				<div class="absolute right-2.5 top-2.5 flex items-center justify-center w-6 h-6 rounded-full bg-green-500/15 border border-green-500/40">
-					<svg class="h-3.5 w-3.5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-					</svg>
-				</div>
-			{:else if state === 'in-progress'}
-				<div class="absolute right-2.5 top-2.5 flex items-center justify-center w-6 h-6 rounded-full bg-tile-500 border border-tile-600">
-					<span class="text-text-200 text-xs font-bold">→</span>
-				</div>
-			{/if}
-
 			<!-- Generating overlay -->
 			{#if state === 'generating'}
-				<div class="absolute inset-0 rounded-2xl bg-tile-400/80 backdrop-blur-sm flex flex-col items-center justify-center gap-2 z-10">
-					<svg class="animate-spin h-6 w-6 text-text-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+				<div class="absolute inset-0 rounded-lg bg-tile-400/95 flex items-center justify-center z-10">
+					<svg class="animate-spin h-4 w-4 text-text-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
 						<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
 						<path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
 					</svg>
-					<span class="text-xs text-text-200 font-medium">Generating...</span>
 				</div>
 			{/if}
 
-			<!-- Emoji with circle background -->
-			<div class="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-tile-300/60 group-hover/card:bg-tile-300 transition-colors
-				{locked ? 'grayscale' : ''}"
-			>
-				<span class="text-2xl sm:text-3xl leading-none">{topic.emoji}</span>
-			</div>
+			<!-- Emoji -->
+			<span class="text-lg sm:text-xl leading-none shrink-0 {locked ? 'grayscale' : ''}">{topic.emoji}</span>
 
 			<!-- Label -->
-			<span class="text-xs sm:text-sm font-semibold text-text-300 text-center leading-tight mt-0.5
-				{locked ? 'opacity-60' : ''}"
-			>
-				{topic.name}
-			</span>
+			<span class="min-w-0 flex-1 text-xs sm:text-sm font-semibold text-text-300 leading-tight truncate {locked ? 'opacity-60' : ''}">{topic.name}</span>
+
+			<!-- Status -->
+			{#if locked}
+				<span class="shrink-0 text-xs opacity-70" aria-hidden="true">🔒</span>
+			{:else if state === 'completed'}
+				<span class="shrink-0 flex items-center justify-center w-5 h-5 rounded-full bg-green-500/15 border border-green-500/40">
+					<svg class="h-3 w-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+					</svg>
+				</span>
+			{:else if state === 'in-progress'}
+				<span class="shrink-0 text-text-200 text-sm font-bold" aria-hidden="true">→</span>
+			{/if}
 		</button>
 	{/snippet}
 
 	<!-- Start Here -->
-	<div class="mb-12">
-		<div class="flex items-center gap-4 mb-6">
-			<h2 class="text-2xl sm:text-3xl text-text-300 font-bold whitespace-nowrap">Start Here</h2>
-			<div class="h-0.5 bg-tile-500 flex-1 opacity-50 rounded-full"></div>
+	<div class="mb-8">
+		<div class="flex items-center gap-3 sm:gap-4 mb-3">
+			<h2 class="text-lg sm:text-xl text-text-300 font-bold tracking-tight whitespace-nowrap">Start Here</h2>
+			<div class="h-px bg-tile-500 flex-1"></div>
 		</div>
 		<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4">
 			{#each START_HERE_TOPICS as topic (topic.id)}
@@ -435,10 +423,10 @@
 	</div>
 
 	<!-- All Topics (collapsed by default) -->
-	<div class="mb-12">
-		<div class="flex items-center gap-4 mb-6">
-			<h2 class="text-2xl sm:text-3xl text-text-300 font-bold whitespace-nowrap">All Topics</h2>
-			<div class="h-0.5 bg-tile-500 flex-1 opacity-50 rounded-full"></div>
+	<div class="mb-8">
+		<div class="flex items-center gap-3 sm:gap-4 mb-3">
+			<h2 class="text-lg sm:text-xl text-text-300 font-bold tracking-tight whitespace-nowrap">All Topics</h2>
+			<div class="h-px bg-tile-500 flex-1"></div>
 			<button
 				onclick={() => (allTopicsExpanded = !allTopicsExpanded)}
 				class="shrink-0 flex items-center gap-1.5 text-sm font-medium text-text-200 hover:text-text-300 transition-colors px-3 py-1.5 rounded-lg border border-tile-500 hover:border-tile-600 bg-tile-400 hover:bg-tile-500"
@@ -451,7 +439,7 @@
 			</button>
 		</div>
 		{#if allTopicsExpanded}
-			<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4">
+			<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2">
 				{#each ALL_TOPICS as topic (topic.id)}
 					{@render topicCard(topic)}
 				{/each}
@@ -460,12 +448,12 @@
 	</div>
 
 	<!-- Create Your Own -->
-	<div class="mb-12">
-		<div class="flex items-center gap-4 mb-6">
-			<h2 class="text-2xl sm:text-3xl text-text-300 font-bold whitespace-nowrap">Create Your Own</h2>
-			<div class="h-0.5 bg-tile-500 flex-1 opacity-50 rounded-full"></div>
+	<div class="mb-8">
+		<div class="flex items-center gap-3 sm:gap-4 mb-3">
+			<h2 class="text-lg sm:text-xl text-text-300 font-bold tracking-tight whitespace-nowrap">Create Your Own</h2>
+			<div class="h-px bg-tile-500 flex-1"></div>
 		</div>
-		<div class="rounded-xl border-2 border-dashed border-tile-500 bg-tile-400/40 p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+		<div class="rounded-xl border border-dashed border-tile-500 bg-tile-300 p-6 flex flex-col sm:flex-row items-center justify-between gap-6">
 			<div>
 				<p class="text-text-300 font-semibold text-lg mb-1">Write your own story</p>
 				<p class="text-text-200 text-sm max-w-md">Choose your dialect, difficulty, grammar focus, and vocabulary</p>
@@ -478,13 +466,13 @@
 
 	<!-- Stories (lazy-loaded when scrolled into view) -->
 	<div bind:this={storiesSectionEl} class="mb-12">
-		<div class="flex items-center gap-4 mb-6">
-			<h2 class="text-2xl sm:text-3xl text-text-300 font-bold whitespace-nowrap">Stories</h2>
-			<div class="h-0.5 bg-tile-500 flex-1 opacity-50 rounded-full"></div>
+		<div class="flex items-center gap-3 sm:gap-4 mb-3">
+			<h2 class="text-lg sm:text-xl text-text-300 font-bold tracking-tight whitespace-nowrap">Stories</h2>
+			<div class="h-px bg-tile-500 flex-1"></div>
 		</div>
 
 		<!-- Filters -->
-		<div class="flex flex-wrap items-end gap-3 mb-6">
+		<div class="flex flex-wrap items-end gap-3 mb-4">
 			<div class="flex-1 min-w-[140px]">
 				<label for="stories-dialect" class="block text-xs font-medium text-text-200 mb-1">Dialect</label>
 				<select
@@ -549,13 +537,13 @@
 				<p class="text-text-200 text-base opacity-70">Be the first to create one!</p>
 			</div>
 		{:else}
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
 				{#each allLoadedStories as story (story.id)}
 					{@const isCompleted = completedStoryIds.has(story.id)}
 					{@const canReadFull = data.hasActiveSubscription}
 					<a
 						href={`/generated_story/${story.id}`}
-						class="group relative flex flex-col bg-tile-400 border-2 rounded-xl p-8 shadow-lg hover:bg-tile-500 transition-all duration-300 hover:-translate-y-1 {isCompleted ? 'border-green-500/50 hover:border-green-500/80' : 'border-tile-600 hover:border-tile-500'}"
+						class="group relative flex flex-col bg-tile-400 border rounded-xl p-4 shadow-sm hover:bg-tile-500 hover:shadow-lg transition-all duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300 {isCompleted ? 'border-green-500/50 hover:border-green-500/80' : 'border-tile-500 hover:border-tile-500'}"
 					>
 						{#if isCompleted}
 							<div class="absolute right-3 top-3 flex items-center gap-1 rounded-full border border-green-500/40 bg-green-500/15 px-2 py-0.5 text-xs font-semibold text-green-600">
@@ -565,8 +553,8 @@
 								Done
 							</div>
 						{/if}
-						<div class="flex justify-between items-start mb-4">
-							<div class="text-4xl">{canReadFull ? '✨' : '🔒'}</div>
+						<div class="flex justify-between items-start mb-3">
+							<div class="text-3xl">{canReadFull ? '✨' : '🔒'}</div>
 							<div class="flex flex-col gap-1 items-end">
 								<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium rounded-full {getDialectBadgeColor(story.dialect)}">
 									{story.dialectName}
@@ -578,11 +566,11 @@
 								{/if}
 							</div>
 						</div>
-						<h3 class="text-xl font-bold text-text-300 mb-3 group-hover:text-text-200 transition-colors leading-tight line-clamp-2">
+						<h3 class="text-base sm:text-lg font-bold text-text-300 mb-2 group-hover:text-text-200 transition-colors leading-tight line-clamp-2">
 							{story.title}
 						</h3>
 						<div class="flex-grow"></div>
-						<div class="flex items-center gap-4 pt-4 border-t border-tile-500/50 mt-4 text-sm text-text-200 font-medium opacity-80">
+						<div class="flex items-center gap-4 pt-3 border-t border-tile-500/50 mt-3 text-sm text-text-200 font-medium opacity-80">
 							<div class="flex items-center gap-1.5">
 								<span>📝</span>
 								<span>{story.length} Sentences</span>

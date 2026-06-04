@@ -159,8 +159,8 @@
 
 <section class="min-h-screen bg-tile-200">
 	<!-- Hero -->
-	<header class="border-b border-tile-600">
-		<div class="max-w-7xl mx-auto px-3 sm:px-8 py-12 sm:py-16">
+	<header class="border-b border-tile-500">
+		<div class="max-w-7xl mx-auto px-3 sm:px-8 py-10 sm:py-12">
 			<div class="text-left max-w-3xl">
 				<div class="inline-flex items-center gap-2 px-4 py-2 bg-tile-400 border border-tile-600 rounded-full text-sm text-text-200 mb-6">
 					<span>📖</span>
@@ -177,79 +177,51 @@
 	</header>
 
 	<!-- Path Cards -->
-	<section class="py-12 sm:py-16">
-		<div class="max-w-5xl mx-auto px-3 sm:px-8">
-			<h2 class="text-2xl sm:text-3xl font-bold text-text-300 text-left mb-10">Choose Your Path</h2>
+	<section class="py-10">
+		<div class="px-3 sm:px-8">
+			<h2 class="text-lg sm:text-xl font-bold text-text-300 text-left mb-6">Choose Your Path</h2>
 
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 				<!-- Structured Lessons -->
-				<a href="/lessons/structured" class="group block">
-					<article class="h-full bg-gradient-to-br from-tile-500 to-tile-400 border-2 border-tile-600 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:border-tile-500 relative overflow-hidden">
-						<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-							<div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent"></div>
+				<a href="/lessons/structured" class="group block rounded-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300">
+					<article class="flex flex-col h-full bg-tile-400 border border-tile-500 rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0">
+						<div class="w-14 h-14 bg-tile-300 border border-tile-500 rounded-xl flex items-center justify-center mb-4">
+							<span class="text-3xl">📚</span>
 						</div>
-						<div class="flex flex-col h-full relative z-10">
-							<div class="w-20 h-20 bg-gradient-to-br from-tile-400 to-tile-300 border-2 border-tile-600 rounded-2xl flex items-center justify-center mb-6 shadow-md group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-								<span class="text-4xl">📚</span>
-							</div>
-							<h3 class="text-2xl sm:text-3xl font-bold text-text-300 mb-3 group-hover:text-text-100 transition-colors">Structured Lessons</h3>
-							<p class="text-text-200 leading-relaxed mb-4 flex-grow">
-								Follow a curriculum path organized by modules and topics. Progress through lessons in a logical sequence designed for systematic learning.
-							</p>
-							<ul class="space-y-2 text-text-200 mb-6">
-								<li class="flex items-center gap-2">
-									<span class="text-green-700">✓</span>
-									<span>Curated curriculum modules</span>
-								</li>
-								<li class="flex items-center gap-2">
-									<span class="text-green-700">✓</span>
-									<span>Progressive difficulty</span>
-								</li>
-								<li class="flex items-center gap-2">
-									<span class="text-green-700">✓</span>
-									<span>Track your progress</span>
-								</li>
-							</ul>
-							<div class="flex items-center text-text-300 font-semibold group-hover:gap-3 gap-2 transition-all duration-300">
-								<span>Explore Curriculum</span>
-								<span class="group-hover:translate-x-1 transition-transform duration-300">→</span>
-							</div>
+						<h3 class="text-xl sm:text-2xl font-bold text-text-300 mb-2">Structured Lessons</h3>
+						<p class="text-text-200 leading-relaxed mb-4 flex-grow">
+							Follow a curriculum path organized by modules and topics. Progress through lessons in a logical sequence designed for systematic learning.
+						</p>
+						<ul class="space-y-2 text-text-200 mb-5 text-sm">
+							<li class="flex items-center gap-2"><span class="text-green-700">✓</span><span>Curated curriculum modules</span></li>
+							<li class="flex items-center gap-2"><span class="text-green-700">✓</span><span>Progressive difficulty</span></li>
+							<li class="flex items-center gap-2"><span class="text-green-700">✓</span><span>Track your progress</span></li>
+						</ul>
+						<div class="flex items-center gap-2 text-text-300 font-semibold">
+							<span>Explore Curriculum</span>
+							<span aria-hidden="true">→</span>
 						</div>
 					</article>
 				</a>
 
-				<!-- Customizable Lessons -->
-				<a href="/lessons/custom" class="group block">
-					<article class="h-full bg-gradient-to-br from-purple-500 to-purple-600 border-2 border-purple-700 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:border-purple-400 relative overflow-hidden">
-						<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-							<div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent"></div>
+				<!-- Customizable Lessons (purple accent) -->
+				<a href="/lessons/custom" class="group block rounded-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300">
+					<article class="flex flex-col h-full bg-tile-400 border border-purple-500/50 rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0">
+						<div class="w-14 h-14 bg-purple-500/15 border border-purple-500/40 rounded-xl flex items-center justify-center mb-4">
+							<span class="text-3xl">🎨</span>
 						</div>
-						<div class="flex flex-col h-full relative z-10">
-							<div class="w-20 h-20 bg-white/20 border-2 border-white/30 rounded-2xl flex items-center justify-center mb-6 shadow-md group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-								<span class="text-4xl">🎨</span>
-							</div>
-							<h3 class="text-2xl sm:text-3xl font-bold text-white mb-3 group-hover:text-purple-100 transition-colors">Customizable Lessons</h3>
-							<p class="text-white/80 leading-relaxed mb-4 flex-grow">
-								Create AI-powered lessons on any topic. Search, filter, and browse lessons tailored to your interests and learning goals.
-							</p>
-							<ul class="space-y-2 text-white/80 mb-6">
-								<li class="flex items-center gap-2">
-									<span class="text-white font-bold">✓</span>
-									<span>AI-generated content</span>
-								</li>
-								<li class="flex items-center gap-2">
-									<span class="text-white font-bold">✓</span>
-									<span>Any topic, any level</span>
-								</li>
-								<li class="flex items-center gap-2">
-									<span class="text-white font-bold">✓</span>
-									<span>All 4 Arabic dialects</span>
-								</li>
-							</ul>
-							<div class="flex items-center text-white font-semibold group-hover:gap-3 gap-2 transition-all duration-300">
-								<span>Browse Lessons</span>
-								<span class="group-hover:translate-x-1 transition-transform duration-300">→</span>
-							</div>
+						<h3 class="text-xl sm:text-2xl font-bold text-text-300 mb-2">Customizable Lessons</h3>
+						<p class="text-text-200 leading-relaxed mb-4 flex-grow">
+							Create AI-powered lessons on any topic. Search, filter, and browse lessons tailored to your interests and learning goals.
+						</p>
+						<ul class="space-y-2 text-text-200 mb-5 text-sm">
+							<li class="flex items-center gap-2"><span class="text-purple-500">✓</span><span>AI-generated content</span></li>
+							<li class="flex items-center gap-2"><span class="text-purple-500">✓</span><span>Any topic, any level</span></li>
+							<li class="flex items-center gap-2"><span class="text-purple-500">✓</span><span>All 4 Arabic dialects</span></li>
+						</ul>
+						<div class="flex items-center gap-2 text-text-300 font-semibold">
+							<span>Browse Lessons</span>
+							<span aria-hidden="true">→</span>
 						</div>
 					</article>
 				</a>
@@ -258,30 +230,30 @@
 	</section>
 
 	<!-- What's Included -->
-	<section class="py-12 sm:py-16 border-y border-tile-600">
+	<section class="py-10 border-y border-tile-500">
 		<div class="max-w-7xl mx-auto px-3 sm:px-8">
-			<h2 class="text-2xl sm:text-3xl font-bold text-text-300 text-left mb-10">What's Included in Every Lesson</h2>
+			<h2 class="text-lg sm:text-xl font-bold text-text-300 text-left mb-6">What's Included in Every Lesson</h2>
 
-			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-				<article class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg text-left">
-					<div class="text-4xl mb-4">🎯</div>
-					<h3 class="text-xl font-bold text-text-300 mb-3">Interactive Exercises</h3>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+				<article class="bg-tile-400 border border-tile-500 rounded-xl p-4 shadow-sm text-left">
+					<div class="text-3xl mb-3">🎯</div>
+					<h3 class="text-lg font-bold text-text-300 mb-2">Interactive Exercises</h3>
 					<p class="text-text-200 leading-relaxed">
 						Test your knowledge with multiple-choice quizzes and fill-in-the-blank exercises after each topic.
 					</p>
 				</article>
 
-				<article class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg text-left">
-					<div class="text-4xl mb-4">🔊</div>
-					<h3 class="text-xl font-bold text-text-300 mb-3">Native Audio</h3>
+				<article class="bg-tile-400 border border-tile-500 rounded-xl p-4 shadow-sm text-left">
+					<div class="text-3xl mb-3">🔊</div>
+					<h3 class="text-lg font-bold text-text-300 mb-2">Native Audio</h3>
 					<p class="text-text-200 leading-relaxed">
 						Every Arabic word and sentence includes audio playback so you can hear the correct pronunciation.
 					</p>
 				</article>
 
-				<article class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg text-left">
-					<div class="text-4xl mb-4">🌍</div>
-					<h3 class="text-xl font-bold text-text-300 mb-3">Dialect Comparison</h3>
+				<article class="bg-tile-400 border border-tile-500 rounded-xl p-4 shadow-sm text-left">
+					<div class="text-3xl mb-3">🌍</div>
+					<h3 class="text-lg font-bold text-text-300 mb-2">Dialect Comparison</h3>
 					<p class="text-text-200 leading-relaxed">
 						See how expressions vary across Egyptian, Levantine, Moroccan, and Modern Standard Arabic.
 					</p>

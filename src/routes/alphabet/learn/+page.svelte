@@ -83,7 +83,7 @@
 
 <section class="min-h-screen bg-tile-200">
 	<!-- Header with Navigation -->
-	<header class="sticky top-0 z-10 border-b border-tile-600 bg-tile-200">
+	<header class="sticky top-0 z-10 border-b border-tile-500 bg-tile-200">
 		<div class="mx-auto max-w-7xl px-3 py-4 sm:px-8">
 			<div class="flex items-center justify-between">
 				<a
@@ -135,21 +135,21 @@
 			{#if page === 0}
 				<!-- Lesson 1: All Letters -->
 				<div class="mb-8">
-					<div class="mb-10 max-w-3xl">
+					<div class="mb-6 max-w-3xl">
 						<div
-							class="mb-4 inline-flex items-center gap-2 rounded-full border border-tile-600 bg-tile-400 px-3 py-1.5 text-xs text-text-200"
+							class="mb-3 inline-flex items-center gap-2 rounded-full border border-tile-500 bg-tile-400 px-3 py-1.5 text-xs text-text-200"
 						>
 							<span>Lesson 1</span>
 						</div>
-						<h1 class="mb-4 text-3xl font-bold leading-tight text-text-300 sm:text-4xl lg:text-5xl">
+						<h1 class="mb-3 text-2xl font-bold leading-tight text-text-300 sm:text-3xl">
 							The Arabic alphabet has 28 letters
 						</h1>
-						<p class="mb-4 text-lg leading-relaxed text-text-200">
+						<p class="mb-4 text-base leading-relaxed text-text-200">
 							Here they are arranged in order, starting from top right and moving across to the
 							left. Each letter has a name and a unique sound.
 						</p>
 						<div
-							class="inline-flex items-center gap-2 rounded-lg border border-tile-600 bg-tile-400 px-4 py-2 text-sm text-text-200"
+							class="inline-flex items-center gap-2 rounded-lg border border-tile-500 bg-tile-400 px-4 py-2 text-sm text-text-200"
 						>
 							<span>💡</span>
 							<span>Click on any letter to hear its pronunciation</span>
@@ -157,7 +157,7 @@
 					</div>
 
 					<div
-						class="rounded-2xl border-2 border-tile-600 bg-gradient-to-br from-tile-400 to-tile-300 p-6 shadow-xl"
+						class="rounded-xl border border-tile-500 bg-tile-300 p-4 shadow-sm"
 					>
 						<div
 							class="grid grid-cols-4 gap-3 sm:grid-cols-5 lg:grid-cols-7 xl:grid-cols-10"
@@ -175,17 +175,10 @@
 									<button
 										onclick={() => playAudio(letter.key)}
 										value={letter.key}
-										class="relative flex aspect-square w-full cursor-pointer items-center justify-center overflow-hidden rounded-2xl border-2 border-tile-600 bg-gradient-to-br from-tile-300 to-tile-200 text-3xl text-text-300 shadow-md transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-110 hover:border-text-200 hover:bg-gradient-to-br hover:from-tile-500 hover:to-tile-400 hover:shadow-xl active:scale-95 sm:text-4xl lg:text-5xl"
+										class="relative flex aspect-square w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl border border-tile-500 bg-tile-200 text-3xl text-text-300 shadow-sm transition-all duration-200 ease-out hover:-translate-y-1 hover:border-text-200 hover:bg-tile-400 hover:shadow-md active:scale-95 sm:text-4xl lg:text-5xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300"
 									>
-										<!-- Ripple effect -->
-										<span
-											class="absolute inset-0 scale-0 rounded-2xl bg-white/30 transition-all duration-500 group-active:scale-100 group-active:opacity-0"
-										></span>
-
 										<!-- Letter -->
-										<span
-											class="relative z-10 transform transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110"
-										>
+										<span class="relative z-10">
 											{letter.isolated}
 										</span>
 
@@ -204,13 +197,13 @@
 			{#if page === 1}
 				<!-- Lesson 2: Letter Forms -->
 				<div class="mb-8">
-					<div class="mb-8 max-w-4xl">
+					<div class="mb-6 max-w-4xl">
 						<div
-							class="mb-4 inline-flex items-center gap-2 rounded-full border border-tile-600 bg-tile-400 px-3 py-1.5 text-xs text-text-200"
+							class="mb-3 inline-flex items-center gap-2 rounded-full border border-tile-500 bg-tile-400 px-3 py-1.5 text-xs text-text-200"
 						>
 							<span>Lesson 2</span>
 						</div>
-						<h1 class="mb-4 text-3xl font-bold leading-tight text-text-300 sm:text-4xl lg:text-5xl">
+						<h1 class="mb-3 text-2xl font-bold leading-tight text-text-300 sm:text-3xl">
 							Arabic is cursive, written right to left
 						</h1>
 						<p class="mb-3 text-lg leading-relaxed text-text-200">
@@ -220,7 +213,7 @@
 					</div>
 
 					<div class="mb-6 grid gap-3 md:grid-cols-[1.2fr_0.8fr]">
-						<div class="border-2 border-tile-600 bg-tile-400 p-4 shadow-lg sm:p-5">
+						<div class="rounded-lg border border-tile-500 bg-tile-400 p-4 shadow-sm sm:p-5">
 							<div class="mb-3 flex items-center justify-between gap-3">
 								<h2 class="text-lg font-bold text-text-300">How to read each row</h2>
 								<span
@@ -239,7 +232,7 @@
 							</div>
 						</div>
 
-						<div class="border-2 border-green-600/50 bg-green-500/10 p-4 shadow-lg sm:p-5">
+						<div class="rounded-lg border border-green-600/50 bg-green-500/10 p-4 shadow-sm sm:p-5">
 							<h2 class="mb-2 text-lg font-bold text-text-300">Two-form letters</h2>
 							<p class="mb-3 text-sm leading-relaxed text-text-200">
 								ا د ذ ر ز و connect only from the right, so their initial and medial cells are
@@ -263,20 +256,12 @@
 								onclick={() => playAudio(letter.key)}
 								aria-label={`Play pronunciation for ${letter.name}`}
 								class={cn(
-									'group relative cursor-pointer overflow-hidden border-2 p-4 text-right shadow-lg transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-text-300 focus:ring-offset-2 focus:ring-offset-tile-200 sm:p-5',
+									'group relative cursor-pointer overflow-hidden rounded-lg border p-4 text-right shadow-sm transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-text-300 focus:ring-offset-2 focus:ring-offset-tile-200 sm:p-5',
 									hasTwoForms(letter)
 										? 'border-green-600/50 bg-green-500/10 hover:border-green-600 hover:bg-green-500/15'
 										: 'border-tile-600 bg-tile-400 hover:border-tile-500 hover:bg-tile-500'
 								)}
 							>
-								<div
-									class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-								>
-									<div
-										class="absolute inset-0 translate-x-[-100%] bg-gradient-to-tr from-transparent via-white/10 to-transparent transition-transform duration-1000 group-hover:translate-x-[100%]"
-									></div>
-								</div>
-
 								<div class="relative z-10 grid gap-4 sm:grid-cols-[7rem_1fr] sm:items-stretch">
 									<div
 										class="border-tile-600/60 flex flex-row-reverse items-center justify-between gap-3 border-b pb-3 sm:flex-col sm:justify-center sm:border-b-0 sm:border-l sm:pb-0 sm:pl-4"
@@ -287,7 +272,7 @@
 												{letter.isolated}
 											</p>
 										</div>
-										<div class="flex flex-col items-end gap-2 sm:items-center">
+										<!-- <div class="flex flex-col items-end gap-2 sm:items-center">
 											<span
 												class={cn(
 													'rounded-full border px-3 py-1 text-xs font-semibold',
@@ -299,7 +284,7 @@
 												{hasTwoForms(letter) ? '2 forms' : '4 forms'}
 											</span>
 											<span class="text-xs font-medium text-text-200 opacity-80">Tap to hear</span>
-										</div>
+										</div> -->
 									</div>
 
 									<div class="grid grid-cols-2 gap-2 sm:grid-cols-4">
@@ -320,7 +305,7 @@
 												<p
 													class={cn(
 														'py-3 text-4xl font-bold leading-none text-text-300 sm:text-5xl',
-														!value && 'text-2xl text-green-700 opacity-80 sm:text-3xl'
+														!value && '!text-xs text-green-700 opacity-80 sm:!text-sm'
 													)}
 													aria-label={value
 														? `${letter.name} ${slot.label} form`
@@ -342,7 +327,7 @@
 
 	<!-- Bottom Navigation -->
 	<footer
-		class="from-tile-300/95 sticky bottom-0 z-[100] border-t border-tile-600 bg-gradient-to-b to-tile-300 shadow-lg backdrop-blur-md"
+		class="sticky bottom-0 z-[100] border-t border-tile-500 bg-tile-300 shadow-sm"
 	>
 		<div class="mx-auto max-w-7xl px-3 py-4 sm:px-8">
 			<div class="flex items-center justify-between">
@@ -350,7 +335,7 @@
 					{#if page > 0}
 						<button
 							onclick={previousPage}
-							class="flex items-center gap-2 rounded-xl border-2 border-tile-600 bg-gradient-to-r from-tile-400 to-tile-300 px-5 py-3 font-semibold text-text-300 shadow-md transition-all duration-200 hover:from-tile-500 hover:to-tile-400 hover:shadow-lg active:scale-95"
+							class="flex items-center gap-2 rounded-full border border-tile-500 bg-tile-400 px-5 py-2.5 font-semibold text-text-300 shadow-sm transition-all duration-200 hover:bg-tile-500 hover:shadow-md active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300"
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -373,7 +358,7 @@
 
 				<button
 					onclick={nextPage}
-					class="hover:to-tile-800 flex transform items-center gap-2 rounded-xl border-2 border-tile-700 bg-gradient-to-r from-tile-600 to-tile-700 px-6 py-3 font-semibold text-white shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:from-tile-700 hover:shadow-xl active:scale-95"
+					class="flex items-center gap-2 rounded-full border border-tile-600 bg-tile-600 px-6 py-2.5 font-semibold text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-tile-700 hover:shadow-md active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300"
 				>
 					<span>{page === totalPages - 1 ? 'Start Practicing' : 'Next Lesson'}</span>
 					<svg

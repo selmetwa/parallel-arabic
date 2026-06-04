@@ -403,23 +403,23 @@
 
 {#if !isLoading && sentences.length === 0 && !hasReachedLimit}
 	<!-- Generation Form -->
-	<header class="py-6 sm:py-6 bg-tile-200 border-b border-tile-600 px-6 sm:px-12">
+	<header class="py-5 bg-tile-200 border-b border-tile-500 px-6 sm:px-12">
 		<div class=" text-left">
-			<h1 class="text-3xl sm:text-4xl text-text-300 font-bold mb-2 tracking-tight">
+			<h1 class="text-2xl sm:text-3xl text-text-300 font-bold mb-1 tracking-tight">
 				Sentence Practice
 			</h1>
-			<p class="text-text-200 text-lg sm:text-xl leading-snug max-w-2xl">
+			<p class="text-text-200 text-base sm:text-lg leading-snug max-w-2xl">
 				Drill grammar patterns and vocabulary in context with unlimited AI-generated sentences.
 			</p>
 		</div>
 	</header>
 
-	<section class="py-8 sm:py-8">
+	<section class="py-6">
 		<div class=" px-6 sm:px-12">
-			<form class="space-y-8" onsubmit={generateSentences}>
+			<form class="space-y-4" onsubmit={generateSentences}>
 				<!-- Review Words Toggle Card -->
-				<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
-					<div class="p-6">
+				<div class="bg-tile-400 border border-tile-500 rounded-xl shadow-sm overflow-hidden">
+					<div class="p-4">
 						<div class="flex items-start justify-between gap-4">
 							<div class="flex-1">
 								<div class="flex items-center gap-2 mb-2">
@@ -442,18 +442,18 @@
 					<!-- Review Words Mode -->
 					
 					<!-- Word Source Selection -->
-					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
-						<div class="p-4 border-b border-tile-600">
+					<div class="bg-tile-400 border border-tile-500 rounded-xl shadow-sm overflow-hidden">
+						<div class="px-4 py-3 border-b border-tile-500">
 							<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
 								<span>📚</span> Word Source
 							</h3>
 						</div>
-						<div class="p-6">
+						<div class="p-4">
 							<div class="grid grid-cols-2 gap-3">
 								<button
 									type="button"
 									onclick={() => reviewWordsSource = 'all'}
-									class="p-4 rounded-lg border-2 transition-all duration-200 text-center {reviewWordsSource === 'all' ? 'bg-tile-500 border-tile-400 shadow-md' : 'bg-tile-300 border-tile-600 hover:bg-tile-300/70'}"
+									class="p-3 rounded-lg border transition-all duration-200 text-center {reviewWordsSource === 'all' ? 'bg-tile-500 border-tile-400 shadow-md' : 'bg-tile-300 border-tile-600 hover:bg-tile-300/70'}"
 								>
 									<span class="block text-2xl mb-2">📖</span>
 									<span class="font-semibold text-text-300">All Saved Words</span>
@@ -461,7 +461,7 @@
 								<button
 									type="button"
 									onclick={() => reviewWordsSource = 'due-for-review'}
-									class="p-4 rounded-lg border-2 transition-all duration-200 text-center {reviewWordsSource === 'due-for-review' ? 'bg-tile-500 border-tile-400 shadow-md' : 'bg-tile-300 border-tile-600 hover:bg-tile-300/70'}"
+									class="p-3 rounded-lg border transition-all duration-200 text-center {reviewWordsSource === 'due-for-review' ? 'bg-tile-500 border-tile-400 shadow-md' : 'bg-tile-300 border-tile-600 hover:bg-tile-300/70'}"
 								>
 									<span class="block text-2xl mb-2">⏰</span>
 									<span class="font-semibold text-text-300">Due for Review</span>
@@ -487,19 +487,19 @@
 					</div>
 
 					<!-- Difficulty Selection -->
-					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
-						<div class="p-4 border-b border-tile-600">
+					<div class="bg-tile-400 border border-tile-500 rounded-xl shadow-sm overflow-hidden">
+						<div class="px-4 py-3 border-b border-tile-500">
 							<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
 								<span>📊</span> Difficulty Level
 							</h3>
 						</div>
-						<div class="p-6">
+						<div class="p-4">
 							<div class="grid grid-cols-3 sm:grid-cols-6 gap-2">
 								{#each difficultyOptions as diff}
 									<button
 										type="button"
 										onclick={() => option = diff.value}
-										class="p-3 rounded-lg border-2 transition-all duration-200 text-center {option === diff.value ? 'border-white/50 shadow-lg scale-105' : 'border-transparent opacity-70 hover:opacity-100'} {diff.color}"
+										class="p-2.5 rounded-lg border transition-all duration-200 text-center {option === diff.value ? 'border-white/50 shadow-md scale-105' : 'border-transparent opacity-70 hover:opacity-100'} {diff.color}"
 									>
 										<span class="block text-lg font-bold text-white">{diff.label}</span>
 										<span class="block text-xs text-white/80">{diff.sublabel}</span>
@@ -510,13 +510,13 @@
 					</div>
 
 					<!-- Submit Button -->
-					<div class="pt-4">
+					<div class="pt-2">
 						{#if !data.session}
 							<Tooltip text="An account is required to access this feature">
 								<button 
 									type="submit" 
 									disabled={true}
-									class="w-full py-4 text-xl font-bold bg-tile-500 text-text-200 rounded-lg opacity-50 cursor-not-allowed"
+									class="w-full py-3 text-lg font-bold bg-tile-500 text-text-200 rounded-lg opacity-50 cursor-not-allowed"
 								>
 									Generate Sentences
 								</button>
@@ -528,7 +528,7 @@
 							<button 
 								type="submit" 
 								disabled={useReviewWordsOnly && (reviewWords.length === 0 || isLoadingReviewWords)}
-								class="w-full py-4 text-xl font-bold bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+								class="w-full py-3 text-lg font-bold bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
 							>
 								📝 Generate Sentences
 							</button>
@@ -539,19 +539,19 @@
 					<!-- Standard Generation Mode -->
 					
 					<!-- Difficulty Selection -->
-					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
-						<div class="p-4 border-b border-tile-600">
+					<div class="bg-tile-400 border border-tile-500 rounded-xl shadow-sm overflow-hidden">
+						<div class="px-4 py-3 border-b border-tile-500">
 							<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
 								<span>📊</span> Difficulty Level
 							</h3>
 						</div>
-						<div class="p-6">
+						<div class="p-4">
 							<div class="grid grid-cols-3 sm:grid-cols-6 gap-2">
 								{#each difficultyOptions as diff}
 									<button
 										type="button"
 										onclick={() => option = diff.value}
-										class="p-3 rounded-lg border-2 transition-all duration-200 text-center {option === diff.value ? 'border-white/50 shadow-lg scale-105' : 'border-transparent opacity-70 hover:opacity-100'} {diff.color}"
+										class="p-2.5 rounded-lg border transition-all duration-200 text-center {option === diff.value ? 'border-white/50 shadow-md scale-105' : 'border-transparent opacity-70 hover:opacity-100'} {diff.color}"
 									>
 										<span class="block text-lg font-bold text-white">{diff.label}</span>
 										<span class="block text-xs text-white/80">{diff.sublabel}</span>
@@ -562,8 +562,8 @@
 					</div>
 
 					<!-- Learning Topics -->
-					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
-						<div class="p-4 border-b border-tile-600">
+					<div class="bg-tile-400 border border-tile-500 rounded-xl shadow-sm overflow-hidden">
+						<div class="px-4 py-3 border-b border-tile-500">
 							<div class="flex items-center justify-between">
 								<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
 									<span>🎯</span> Focus Topics
@@ -580,13 +580,13 @@
 								{/if}
 							</div>
 						</div>
-						<div class="p-6">
+						<div class="p-4">
 							<div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
 								{#each learningTopicOptions as topic}
 									<button
 										type="button"
 										onclick={() => toggleLearningTopic(topic.value)}
-										class="flex items-center gap-2 p-3 rounded-lg border-2 transition-all duration-200 text-left {selectedLearningTopics.includes(topic.value) ? 'bg-sky-600 border-sky-500 text-white' : 'bg-tile-300 border-tile-600 text-text-300 hover:bg-tile-300/70'}"
+										class="flex items-center gap-2 p-2.5 rounded-lg border transition-all duration-200 text-left {selectedLearningTopics.includes(topic.value) ? 'bg-sky-600 border-sky-500 text-white' : 'bg-tile-300 border-tile-600 text-text-300 hover:bg-tile-300/70'}"
 									>
 										<span>{topic.emoji}</span>
 										<span class="text-sm font-medium">{topic.label}</span>
@@ -597,16 +597,16 @@
 					</div>
 
 					<!-- Vocabulary Input -->
-					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
-						<div class="p-4 border-b border-tile-600">
+					<div class="bg-tile-400 border border-tile-500 rounded-xl shadow-sm overflow-hidden">
+						<div class="px-4 py-3 border-b border-tile-500">
 							<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
 								<span>📝</span> Custom Vocabulary
 								<span class="text-sm font-normal text-text-200">(optional)</span>
 							</h3>
 						</div>
-						<div class="p-6">
+						<div class="p-4">
 							<!-- Input Mode Toggle -->
-							<div class="flex p-1 bg-tile-300 rounded-lg w-fit mb-4 border border-tile-600">
+							<div class="flex p-1 bg-tile-300 rounded-lg w-fit mb-3 border border-tile-500">
 								<button
 									type="button"
 									onclick={() => { vocabularyInputMode = 'text'; vocabularyFile = null; fileError = ''; }}
@@ -627,11 +627,11 @@
 								<textarea
 									bind:value={vocabularyWords}
 									rows="3"
-									class="w-full rounded-lg border-2 border-tile-600 bg-tile-300 py-3 px-4 text-text-300 resize-none focus:border-tile-500 focus:ring-0 transition-colors text-lg placeholder:text-text-200/50"
+									class="w-full rounded-lg border border-tile-500 bg-tile-300 py-2.5 px-3.5 text-text-300 resize-none focus:border-tile-600 focus:ring-0 transition-colors text-base placeholder:text-text-200/50"
 									placeholder="Enter words separated by commas (e.g., بيت, مدرسة, طعام)"
 								></textarea>
 							{:else}
-								<div class="p-8 border-2 border-dashed border-tile-600 rounded-lg bg-tile-300/50 text-center hover:bg-tile-300 transition-colors relative group cursor-pointer">
+								<div class="p-5 border border-dashed border-tile-500 rounded-lg bg-tile-300/50 text-center hover:bg-tile-300 transition-colors relative group cursor-pointer">
 									<input
 										type="file"
 										accept=".txt,.csv"
@@ -663,18 +663,18 @@
 					</div>
 
 					<!-- Practice Mode -->
-					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
-						<div class="p-4 border-b border-tile-600">
+					<div class="bg-tile-400 border border-tile-500 rounded-xl shadow-sm overflow-hidden">
+						<div class="px-4 py-3 border-b border-tile-500">
 							<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
 								<span>✍️</span> Practice Mode
 							</h3>
 						</div>
-						<div class="p-6">
+						<div class="p-4">
 							<div class="grid grid-cols-2 gap-3">
 								<button
 									type="button"
 									onclick={() => mode = 'write'}
-									class="p-4 rounded-lg border-2 transition-all duration-200 text-center {mode === 'write' ? 'bg-tile-500 border-tile-400 shadow-md' : 'bg-tile-300 border-tile-600 hover:bg-tile-300/70'}"
+									class="p-3 rounded-lg border transition-all duration-200 text-center {mode ==='write' ? 'bg-tile-500 border-tile-400 shadow-md' : 'bg-tile-300 border-tile-600 hover:bg-tile-300/70'}"
 								>
 									<span class="block text-2xl mb-2">✍️</span>
 									<span class="font-semibold text-text-300">Practice Writing</span>
@@ -682,7 +682,7 @@
 								<button
 									type="button"
 									onclick={() => mode = 'quiz'}
-									class="p-4 rounded-lg border-2 transition-all duration-200 text-center {mode === 'quiz' ? 'bg-tile-500 border-tile-400 shadow-md' : 'bg-tile-300 border-tile-600 hover:bg-tile-300/70'}"
+									class="p-3 rounded-lg border transition-all duration-200 text-center {mode ==='quiz' ? 'bg-tile-500 border-tile-400 shadow-md' : 'bg-tile-300 border-tile-600 hover:bg-tile-300/70'}"
 								>
 									<span class="block text-2xl mb-2">🧩</span>
 									<span class="font-semibold text-text-300">Multiple Choice Quiz</span>
@@ -692,13 +692,13 @@
 					</div>
 
 					<!-- Submit Button -->
-					<div class="pt-4">
+					<div class="pt-2">
 						{#if !data.session}
 							<Tooltip text="An account is required to access this feature">
 								<button 
 									type="submit" 
 									disabled={true}
-									class="w-full py-4 text-xl font-bold bg-tile-500 text-text-200 rounded-lg opacity-50 cursor-not-allowed"
+									class="w-full py-3 text-lg font-bold bg-tile-500 text-text-200 rounded-lg opacity-50 cursor-not-allowed"
 								>
 									Generate Sentences
 								</button>
@@ -709,7 +709,7 @@
 						{:else}
 							<button 
 								type="submit" 
-								class="w-full py-4 text-xl font-bold bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+								class="w-full py-3 text-lg font-bold bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
 							>
 								📝 Generate Sentences
 							</button>

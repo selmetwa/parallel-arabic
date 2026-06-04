@@ -101,36 +101,36 @@
   }
 </script>
 
-<aside class="hidden lg:flex flex-col bg-gradient-to-b from-tile-300 to-tile-200 border-r-2 border-tile-600 fixed left-0 bottom-0 overflow-hidden z-40 transition-all duration-300 shadow-xl {session ? 'top-8' : 'top-0'} {$sidebarCollapsed ? 'w-0 opacity-0' : 'w-64 opacity-100'}">
-  <div class="p-6 {$sidebarCollapsed ? 'hidden' : ''}">
-    <div class="flex items-center justify-between mb-8">
+<aside class="hidden lg:flex flex-col bg-tile-300 border-r border-tile-500 fixed left-0 bottom-0 overflow-hidden z-40 transition-all duration-300 {session ? 'top-8' : 'top-0'} {$sidebarCollapsed ? 'w-0 opacity-0' : 'w-64 opacity-100'}">
+  <div class="p-5 {$sidebarCollapsed ? 'hidden' : ''}">
+    <div class="flex items-center justify-between mb-6">
       <a href="/" class="flex items-center logo-container flex-1 min-w-0 group">
-        <h1 class="text-xl font-bold text-text-300 group-hover:text-text-100 transition-all duration-200">Parallel Arabic</h1>
+        <h1 class="text-xl font-bold text-text-300 tracking-tight transition-colors duration-200">Parallel Arabic</h1>
       </a>
       <button
         type="button"
         onclick={toggleSidebar}
-        class="p-2 rounded-xl hover:bg-tile-400/50 active:scale-95 transition-all duration-200 text-text-300 hover:text-text-100 flex-shrink-0 ml-2 shadow-sm hover:shadow-md"
+        class="p-2 rounded-lg hover:bg-tile-400 active:scale-95 transition-colors duration-200 text-text-200 hover:text-text-300 flex-shrink-0 ml-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300"
         aria-label="Collapse sidebar"
         title="Collapse sidebar"
       >
-        <svg class="w-5 h-5 transform transition-transform duration-200 hover:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
         </svg>
       </button>
     </div>
 
-    <nav class="flex flex-col gap-2">
+    <nav class="flex flex-col gap-1">
       {#each navSections as section}
         <div class="mb-2">
           <button
             type="button"
             onclick={() => toggleSection(section.title)}
-            class="w-full flex items-center justify-between px-3 py-2 rounded-xl hover:bg-tile-400/50 active:scale-98 transition-all duration-200 text-text-200 hover:text-text-300 font-semibold text-sm uppercase tracking-wide shadow-sm hover:shadow-md"
+            class="w-full flex items-center justify-between px-3 py-2 rounded-lg hover:bg-tile-400 active:scale-[0.98] transition-colors duration-200 text-text-200 hover:text-text-300 font-semibold text-xs uppercase tracking-wider focus-visible:outline focus-visible:outline-2 focus-visible:[outline-offset:-2px] focus-visible:outline-text-300"
           >
             <span>{section.title}</span>
             <span
-              class="transition-transform duration-300 text-xs"
+              class="transition-transform duration-300 text-[10px]"
               style="transform: {expandedSections.has(section.title) ? 'rotate(180deg)' : 'rotate(0deg)'}"
             >
               ▼
@@ -138,14 +138,14 @@
           </button>
 
           {#if expandedSections.has(section.title)}
-            <div class="mt-1 flex flex-col gap-1">
+            <div class="mt-1 flex flex-col gap-0.5">
               {#each section.items as item}
                 <a
                   href={item.href}
-                  class="group flex items-center gap-3 px-4 py-2.5 rounded-xl transition-all duration-200 text-text-200 hover:text-text-300 {isActive(item.href) ? 'bg-gradient-to-r from-tile-500 to-tile-400 border-l-4 border-blue-500 text-text-300 font-semibold shadow-md' : 'hover:bg-tile-400/50 hover:-translate-x-0.5 hover:shadow-sm'}"
+                  class="group flex items-center gap-3 px-3 py-2 rounded-lg border-l-2 transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:[outline-offset:-2px] focus-visible:outline-text-300 {isActive(item.href) ? 'bg-tile-400 border-amber-400 text-text-300 font-semibold' : 'border-transparent text-text-200 hover:bg-tile-400 hover:text-text-300'}"
                 >
-                  <span class="text-xl transform transition-transform duration-200 {isActive(item.href) ? 'scale-110' : 'group-hover:scale-105'}">{item.icon}</span>
-                  <span>{item.label}</span>
+                  <span class="text-lg leading-none">{item.icon}</span>
+                  <span class="text-sm">{item.label}</span>
                 </a>
               {/each}
             </div>
@@ -156,8 +156,8 @@
 
     <!-- Theme Toggle -->
     {#if handleOpenDrawer}
-      <div class="mt-auto pt-6 border-t border-tile-600">
-        <Button onClick={handleOpenDrawer} type="button" className="w-full shadow-md hover:shadow-lg">
+      <div class="mt-auto pt-5 border-t border-tile-500">
+        <Button onClick={handleOpenDrawer} type="button" className="w-full">
           Theme
         </Button>
       </div>
