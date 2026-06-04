@@ -980,9 +980,8 @@
           <SubscribeButton className="!bg-yellow-600 !hover:bg-yellow-700 !border-yellow-700 !text-white !text-lg !px-8 !py-3" />
         </div>
       </div>
-    {/if}
 
-    {#if isLoading}
+    {:else if isLoading}
       <div class="flex justify-center items-center py-20">
         <div class="text-center">
           <AlphabetCycle />

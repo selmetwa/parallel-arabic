@@ -2,6 +2,7 @@
   import { goto } from '$app/navigation';
   import SectionHeader from '$lib/components/SectionHeader.svelte';
   import AuthModal from '$lib/components/AuthModal.svelte';
+  import PaywallModal from '$lib/components/PaywallModal.svelte';
   import type { Dialect } from '$lib/types/index';
   import { fetchUserReviewWords } from '$lib/helpers/fetch-review-words';
   import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
@@ -10,7 +11,7 @@
 
   // Auth modal state
   let showAuthModal = $state(false);
-
+  let showPaywallModal = $state(false);
   // In-progress games
   let inProgressGames = $state(data.inProgressGames || []);
   let deletingGameId = $state<string | null>(null);
@@ -204,6 +205,11 @@
       return;
     }
 
+    if (!data.isSubscribed) {
+      showPaywallModal = true;
+      return
+    }
+
     const params = new URLSearchParams();
     params.set('dialect', selectedDialect);
     params.set('mode', selectedMode);
@@ -243,20 +249,20 @@
 <section class="px-3 py-6 sm:px-8 max-w-4xl mx-auto">
   <SectionHeader title="Vocabulary Game" />
 
-  <p class="text-text-200 text-lg mb-8">
+  <p class="text-text-200 text-base mb-6">
     Practice your Arabic vocabulary through interactive games. Choose your dialect, category, and game mode to get started.
   </p>
 
   <!-- In-Progress Games -->
   {#if inProgressGames.length > 0}
-    <div class="mb-8 bg-gradient-to-br from-sky-500/10 to-blue-500/10 border-2 border-sky-500/30 rounded-xl p-6">
+    <div class="mb-6 bg-tile-300 border border-tile-500 rounded-xl p-4">
       <div class="flex items-center gap-3 mb-4">
         <span class="text-2xl">🎮</span>
         <h2 class="text-xl font-bold text-text-300">Continue Playing</h2>
       </div>
       <div class="space-y-3">
         {#each inProgressGames as game}
-          <div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-4 flex flex-col sm:flex-row sm:items-center gap-4">
+          <div class="bg-tile-400 border border-tile-500 rounded-lg p-3 flex flex-col sm:flex-row sm:items-center gap-4">
             <div class="flex items-center gap-3 flex-1 min-w-0">
               <span class="text-2xl">{getDialectEmoji(game.dialect)}</span>
               <div class="flex-1 min-w-0">
@@ -320,10 +326,10 @@
     </div>
   {/if}
 
-  <div class="space-y-8">
+  <div class="space-y-4">
     <!-- Word Source Selection -->
-    <div class="bg-tile-400 border-2 border-tile-600 rounded-xl p-6">
-      <h2 class="text-xl font-bold text-text-300 mb-4">1. Word Source</h2>
+    <div class="bg-tile-400 border border-tile-500 rounded-xl p-4">
+      <h2 class="text-lg font-bold text-text-300 mb-3">1. Word Source</h2>
 
 
       {#if !useCustomWords}
@@ -334,7 +340,7 @@
           <select
             id="category"
             bind:value={selectedCategory}
-            class="w-full px-4 py-3 bg-tile-300 border-2 border-tile-600 text-text-300 rounded-lg focus:outline-none focus:border-blue-500"
+            class="w-full px-3 py-2.5 bg-tile-300 border border-tile-500 text-text-300 rounded-lg focus:outline-none focus:border-blue-500"
           >
             {#each availableCategories as category}
               <option value={category.path}>{category.name} ({category.count} words)</option>
@@ -354,7 +360,7 @@
                 onclick={() => contentType = 'words'}
                 class="flex-1 px-4 py-3 rounded-lg font-semibold transition-all {contentType === 'words'
                   ? 'bg-blue-500 text-white shadow-lg'
-                  : 'bg-tile-300 text-text-200 md:hover:bg-tile-500 border-2 border-tile-600'}"
+                  : 'bg-tile-300 text-text-200 md:hover:bg-tile-500 border border-tile-500'}"
               >
                 Words
               </button>
@@ -362,7 +368,7 @@
                 onclick={() => contentType = 'sentences'}
                 class="flex-1 px-4 py-3 rounded-lg font-semibold transition-all {contentType === 'sentences'
                   ? 'bg-emerald-500 text-white shadow-lg'
-                  : 'bg-tile-300 text-text-200 md:hover:bg-tile-500 border-2 border-tile-600'}"
+                  : 'bg-tile-300 text-text-200 md:hover:bg-tile-500 border border-tile-500'}"
               >
                 Sentences (Recommended)
               </button>
@@ -381,7 +387,7 @@
           {#if contentType === 'sentences'}
             <!-- Review Words Seeding Option -->
             {#if data.user}
-              <div class="p-4 bg-tile-300 border-2 border-tile-600 rounded-lg">
+              <div class="p-4 bg-tile-300 border border-tile-500 rounded-lg">
                 <div class="flex items-center justify-between gap-4">
                   <div>
                     <p class="font-semibold text-text-300">Use Your Review Words</p>
@@ -430,7 +436,7 @@
                 {/if}
               </div>
             {:else}
-              <div class="p-3 bg-tile-300 border-2 border-tile-600 rounded-lg">
+              <div class="p-3 bg-tile-300 border border-tile-500 rounded-lg">
                 <p class="text-text-200 text-sm">
                   <a href="/login" class="text-blue-400 hover:text-blue-300">Log in</a> to use your saved vocabulary words in sentences
                 </p>
@@ -478,7 +484,7 @@
               type="text"
               bind:value={customTopic}
               placeholder={contentType === 'words' ? "e.g., cooking, travel, emotions..." : "e.g., greetings, shopping, at the restaurant..."}
-              class="w-full px-4 py-3 bg-tile-300 border-2 border-tile-600 text-text-300 rounded-lg focus:outline-none focus:border-blue-500"
+              class="w-full px-3 py-2.5 bg-tile-300 border border-tile-500 text-text-300 rounded-lg focus:outline-none focus:border-blue-500"
             />
             <p class="text-text-100 text-sm mt-1">Leave empty for random {contentType}</p>
           </div>
@@ -490,7 +496,7 @@
             <select
               id="difficulty"
               bind:value={difficulty}
-              class="w-full px-4 py-3 bg-tile-300 border-2 border-tile-600 text-text-300 rounded-lg focus:outline-none focus:border-blue-500"
+              class="w-full px-3 py-2.5 bg-tile-300 border border-tile-500 text-text-300 rounded-lg focus:outline-none focus:border-blue-500"
             >
               <option value="a1">A1 - Beginner</option>
               <option value="a2">A2 - Elementary</option>
@@ -512,7 +518,7 @@
                   onclick={() => questionCount = count}
                   class="px-6 py-3 rounded-lg font-semibold transition-all {questionCount === count
                     ? 'bg-blue-500 text-white shadow-lg'
-                    : 'bg-tile-300 text-text-200 md:hover:bg-tile-500 border-2 border-tile-600'}"
+                    : 'bg-tile-300 text-text-200 md:hover:bg-tile-500 border border-tile-500'}"
                 >
                   {count}
                 </button>
@@ -524,17 +530,17 @@
     </div>
 
     <!-- Game Mode Selection -->
-    <div class="bg-tile-400 border-2 border-tile-600 rounded-xl p-6">
-      <h2 class="text-xl font-bold text-text-300 mb-4">2. Game Mode</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+    <div class="bg-tile-400 border border-tile-500 rounded-xl p-4">
+      <h2 class="text-lg font-bold text-text-300 mb-3">2. Game Mode</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
         {#each ['multiple-choice', 'listening', 'speaking'] as mode}
           <button
             onclick={() => selectedMode = mode as typeof selectedMode}
-            class="flex flex-col items-center gap-3 p-6 rounded-xl transition-all {selectedMode === mode
-              ? 'bg-blue-500 text-white shadow-lg'
-              : 'bg-tile-300 text-text-200 md:hover:bg-tile-500 border-2 border-tile-600'}"
+            class="flex flex-col items-center gap-2 p-4 rounded-xl transition-all {selectedMode === mode
+              ? 'bg-blue-500 text-white shadow-md'
+              : 'bg-tile-300 text-text-200 md:hover:bg-tile-500 border border-tile-500'}"
           >
-            <span class="text-4xl">{getModeIcon(mode)}</span>
+            <span class="text-2xl">{getModeIcon(mode)}</span>
             <span class="font-bold text-lg capitalize">{mode.replace('-', ' ')}</span>
             <span class="text-sm text-center opacity-80">{getModeDescription(mode)}</span>
           </button>
@@ -545,7 +551,7 @@
     <!-- Start Game Button -->
     <button
       onclick={startGame}
-      class="w-full py-4 px-8 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white text-xl font-bold rounded-xl md:hover:from-emerald-600 md:hover:to-emerald-700 transition-all shadow-lg md:hover:shadow-xl active:scale-[0.98]"
+      class="w-full py-3 px-8 bg-emerald-600 text-white text-lg font-bold rounded-xl md:hover:bg-emerald-700 transition-all shadow-sm md:hover:shadow-md active:scale-[0.98]"
     >
       Start Game
     </button>
@@ -554,3 +560,5 @@
 
 <!-- Auth Modal for logged out users -->
 <AuthModal isOpen={showAuthModal} handleCloseModal={() => showAuthModal = false} />
+
+<PaywallModal isOpen={showPaywallModal} handleCloseModal={() => showPaywallModal = false} />

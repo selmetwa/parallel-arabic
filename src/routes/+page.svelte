@@ -1,11 +1,10 @@
+<!-- Design · dense editorial control panel · theme-aware (HSL hue-200) · ReadexPro -->
 <script lang="ts">
   import { onMount } from 'svelte';
   import { browser } from '$app/environment';
   import { currentDialect } from '$lib/store/store';
   import type { PageData } from './$types';
-  import Card from '$lib/components/Card.svelte';
   import ContinueCard from '$lib/components/ContinueCard.svelte';
-  import SectionHeader from '$lib/components/SectionHeader.svelte';
   import WordOfTheDay from '$lib/components/WordOfTheDay.svelte';
   import Leaderboard from '$lib/components/Leaderboard.svelte';
   import ArabicMap from '$lib/components/ArabicMap.svelte';
@@ -65,72 +64,125 @@
 </script>
 
 <section class="px-3 mt-6 sm:px-8 max-w-7xl mx-auto">
+
+  <!-- Reusable dense primitives -->
+  {#snippet stat(label: string, value: string | number, unit: string, href: string)}
+    {#if href}
+      <a
+        {href}
+        class="bg-tile-400 px-3 py-2.5 sm:px-4 sm:py-3 flex flex-col gap-1 transition-colors duration-150 hover:bg-tile-500 focus-visible:outline focus-visible:outline-2 focus-visible:[outline-offset:-2px] focus-visible:outline-text-300"
+      >
+        <span class="text-[11px] uppercase tracking-wider text-text-200 font-semibold truncate">{label}</span>
+        <span class="text-xl sm:text-2xl font-bold text-text-300 leading-none">{value}{#if unit}<span class="text-xs font-medium text-text-200 ml-1">{unit}</span>{/if}</span>
+      </a>
+    {:else}
+      <div class="bg-tile-400 px-3 py-2.5 sm:px-4 sm:py-3 flex flex-col gap-1">
+        <span class="text-[11px] uppercase tracking-wider text-text-200 font-semibold truncate">{label}</span>
+        <span class="text-xl sm:text-2xl font-bold text-text-300 leading-none">{value}{#if unit}<span class="text-xs font-medium text-text-200 ml-1">{unit}</span>{/if}</span>
+      </div>
+    {/if}
+  {/snippet}
+
+  {#snippet sectionHead(label: string, sub: string)}
+    <div class="flex items-baseline gap-3 sm:gap-4 mb-3 mt-1">
+      <h2 class="text-lg sm:text-xl font-bold text-text-300 tracking-tight shrink-0">{label}</h2>
+      <div class="h-px flex-1 bg-tile-500"></div>
+      <span class="text-xs text-text-200 shrink-0">{sub}</span>
+    </div>
+  {/snippet}
+
+  {#snippet tile(href: string, icon: string, title: string, desc: string)}
+    <a
+      {href}
+      class="group flex w-full items-start gap-3 bg-tile-400 border border-tile-500 rounded-lg p-3.5 transition-all duration-200 hover:-translate-y-0.5 hover:bg-tile-500 hover:shadow-md motion-reduce:hover:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300"
+    >
+      <span class="text-2xl leading-none shrink-0 mt-0.5">{icon}</span>
+      <span class="min-w-0">
+        <span class="block text-sm font-bold text-text-300">{title}</span>
+        <span class="block text-xs text-text-200 leading-snug mt-0.5">{desc}</span>
+      </span>
+    </a>
+  {/snippet}
+
+  {#snippet heroTile(href: string, icon: string, title: string, desc: string)}
+    <a
+      {href}
+      class="group flex w-full items-center gap-3 sm:gap-4 bg-tile-500 border border-amber-400/60 rounded-lg p-4 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-tile-600 hover:shadow-md motion-reduce:hover:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300"
+    >
+      <span class="text-2xl sm:text-3xl leading-none shrink-0">{icon}</span>
+      <span class="min-w-0 flex-1">
+        <span class="flex items-center gap-2 flex-wrap">
+          <span class="text-sm sm:text-base font-bold text-text-300">{title}</span>
+          <span class="text-[10px] font-bold uppercase tracking-wide text-black bg-amber-400 px-1.5 py-0.5 rounded-full">Bonus XP</span>
+        </span>
+        <span class="block text-xs sm:text-sm text-text-200 leading-snug mt-0.5">{desc}</span>
+      </span>
+      <span class="text-text-200 group-hover:text-text-300 transition-colors shrink-0 text-lg" aria-hidden="true">→</span>
+    </a>
+  {/snippet}
+
   {#if data.user && data.weekActivityDates}
     <WeekStrip weekActivityDates={data.weekActivityDates} weekStartTimestamp={data.weekStartTimestamp} />
   {/if}
 
+  <!-- Stats ribbon — surfaces progress data already loaded by the server -->
+  {#if data.user}
+    <div class="mb-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-px bg-tile-500 border border-tile-500 rounded-xl overflow-hidden">
+      {@render stat('Streak', data.currentStreak ?? 0, (data.currentStreak === 1 ? 'day' : 'days'), '')}
+      {@render stat('Words saved', data.totalSavedWordsCount ?? 0, '', '/review/all-words')}
+      {@render stat('Due to review', data.cappedReviewCount ?? data.wordsDueForReviewCount ?? 0, 'words', '/review')}
+      {#if data.leaderboardCurrentUser}
+        {@render stat('Weekly rank', '#' + data.leaderboardCurrentUser.rank, '', '/leaderboard')}
+        {@render stat('XP this week', data.leaderboardCurrentUser.xpThisWeek, 'xp', '/leaderboard')}
+      {:else}
+        {@render stat('Stories read', data.totalStoriesViewed ?? 0, '', '/stories')}
+        {@render stat('Sentences', data.totalSentencesViewed ?? 0, '', '/sentences')}
+      {/if}
+    </div>
+  {/if}
+
   <!-- Activity Suggestions -->
   {#if data.user && !bannerDismissed && (dailyChallengeSuggestion || reviewSuggestion || otherSuggestions.length > 0 || generatedChallengeHref)}
-    <div class="mb-8 relative">
+    <!-- Elevated panel so the "what to do next" zone stands out from the flat sections below -->
+    <div class="mb-6 relative rounded-2xl border border-tile-500 bg-tile-300 p-3 sm:p-4 shadow-md">
       <!-- Dismiss button -->
       <button
         onclick={dismissBanner}
-        class="absolute -top-2 -right-2 z-10 w-8 h-8 bg-gradient-to-br from-tile-400 to-tile-300 hover:from-tile-500 hover:to-tile-400 border-2 border-tile-600 rounded-full flex items-center justify-center text-text-200 hover:text-text-300 transition-all duration-200 shadow-md hover:shadow-lg active:scale-95"
+        class="absolute top-3 right-3 z-10 w-7 h-7 bg-tile-400 hover:bg-tile-500 border border-tile-500 rounded-full flex items-center justify-center text-text-200 hover:text-text-300 transition-all duration-200 shadow-sm hover:shadow-md active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300"
         aria-label="Dismiss suggestions"
       >
-        <svg class="w-4 h-4 transform hover:rotate-90 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
 
-      <!-- Daily challenge card (highest priority) -->
+      <div class="flex items-center gap-2 mb-3 pr-9">
+        <span class="text-base" aria-hidden="true">⚡</span>
+        <h2 class="text-sm font-bold text-text-300 tracking-tight">Jump back in</h2>
+        <div class="h-px flex-1 bg-tile-500"></div>
+      </div>
+
+      <!-- Daily challenge as a gold hero bar; remaining suggestions stay calm tiles for contrast -->
       {#if dailyChallengeSuggestion}
-        <ContinueCard
-          href={dailyChallengeSuggestion.href}
-          icon={dailyChallengeSuggestion.icon}
-          title={dailyChallengeSuggestion.title}
-          subtitle={dailyChallengeSuggestion.subtitle}
-          variant={dailyChallengeSuggestion.variant}
-        />
+        {@render heroTile(dailyChallengeSuggestion.href, dailyChallengeSuggestion.icon, dailyChallengeSuggestion.title, dailyChallengeSuggestion.subtitle)}
       {:else if generatedChallengeHref}
-        <ContinueCard
-          href={generatedChallengeHref}
-          icon="⭐"
-          title="Daily Challenge"
-          subtitle="Complete today's challenge for +10 bonus XP"
-          variant="amber"
-        />
+        {@render heroTile(generatedChallengeHref, '⭐', 'Daily Challenge', "Complete today's challenge for +10 bonus XP")}
       {/if}
 
-      <!-- Review + other suggestions in a single 4-col row -->
       {#if reviewSuggestion || otherSuggestions.length > 0}
-        <div class={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 ${dailyChallengeSuggestion || generatedChallengeHref ? 'mt-3' : ''}`}>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 {dailyChallengeSuggestion || generatedChallengeHref ? 'mt-3' : ''}">
           {#if reviewSuggestion}
-            <ContinueCard
-              href={reviewSuggestion.href}
-              icon={reviewSuggestion.icon}
-              title={reviewSuggestion.title}
-              subtitle={reviewSuggestion.subtitle}
-              variant={reviewSuggestion.variant}
-              compact={true}
-            />
+            {@render tile(reviewSuggestion.href, reviewSuggestion.icon, reviewSuggestion.title, reviewSuggestion.subtitle)}
           {/if}
           {#each otherSuggestions as suggestion (suggestion.id)}
-            <ContinueCard
-              href={suggestion.href}
-              icon={suggestion.icon}
-              title={suggestion.title}
-              subtitle={suggestion.subtitle}
-              variant={suggestion.variant}
-              compact={true}
-            />
+            {@render tile(suggestion.href, suggestion.icon, suggestion.title, suggestion.subtitle)}
           {/each}
         </div>
       {/if}
     </div>
   {:else if !data.user}
     <!-- Non-logged in user suggestion -->
-    <div class="mb-8">
+    <div class="mb-6">
       <ContinueCard
         href="/login"
         icon="🚀"
@@ -141,21 +193,11 @@
     </div>
   {/if}
 
-  <!-- Hero row: Word of the Day + Leaderboard + Featured Story + Word Map -->
-  {#if data.wordOfDay || data.leaderboardTop5.length > 0 || data.featuredStory}
-    <div class="mb-8 grid grid-cols-1 lg:grid-cols-4 gap-4">
-      <!-- {#if data.wordOfDay}
-        <div class="lg:h-[220px] overflow-hidden rounded-2xl">
-          <WordOfTheDay
-            word={data.wordOfDay}
-            initialSaved={data.wordOfDaySaved}
-            isLoggedIn={!!data.user}
-            userDialect={data.userDialect}
-          />
-        </div>
-      {/if} -->
+  <!-- Discovery row: Leaderboard + Featured Story + Word Map -->
+  <!-- {#if data.wordOfDay || data.leaderboardTop5.length > 0 || data.featuredStory}
+    <div class="mb-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
       {#if data.leaderboardTop5.length > 0}
-        <div class="lg:h-[220px] overflow-hidden rounded-2xl">
+        <div class="lg:h-[180px] overflow-hidden rounded-xl">
           <Leaderboard
             top10={data.leaderboardTop5}
             currentUser={data.leaderboardCurrentUser}
@@ -164,10 +206,10 @@
         </div>
       {/if}
       {#if data.featuredStory}
-        <div class="lg:h-[220px]">
+        <div class="lg:h-[180px]">
           <a
             href={`/generated_story/${data.featuredStory.id}`}
-            class="group flex flex-col justify-between h-full bg-tile-400 border-2 border-tile-600 rounded-xl p-5 hover:bg-tile-500 hover:border-tile-500 transition-all duration-300 hover:-translate-y-1"
+            class="group flex flex-col justify-between h-full bg-tile-400 border border-tile-500 rounded-xl p-4 shadow-sm hover:bg-tile-500 hover:shadow-lg transition-all duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300"
           >
             <div class="flex flex-col gap-2 min-w-0">
               <span class="text-xs font-semibold uppercase tracking-widest text-text-200">Recommended Story</span>
@@ -187,13 +229,13 @@
             </div>
             <div class="mt-4 flex items-center gap-1.5 text-text-200 group-hover:text-text-300 transition-colors font-medium text-sm">
               <span>Read Story</span>
-              <span>→</span>
+              <span aria-hidden="true">→</span>
             </div>
           </a>
         </div>
       {/if}
       {#if browser && data.user && data.mapWords.length > 0}
-        <div class="hidden lg:block lg:h-[220px]">
+        <div class="hidden lg:block lg:h-[180px]">
           <div class="relative rounded-xl overflow-hidden h-full">
             <div style="pointer-events: none;">
               <ArabicMap words={data.mapWords} preview={true} />
@@ -213,99 +255,28 @@
         </div>
       {/if}
     </div>
-  {/if}
+  {/if} -->
 
-  <!-- Learn Section -->
-  <div class="mb-12">
-    <SectionHeader title="Learn" />
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <Card
-        href="/alphabet"
-        icon="✍️"
-        title="Alphabet"
-        description="Master the script. Learn the 28 letters, their forms, and how to connect them."
-      />
-
-      <Card
-        href="/lessons"
-        icon="📚"
-        title="Lessons"
-        description="Structured path. Comprehensive lessons with exercises and pronunciation practice."
-      />
-      <Card
-        href="/review"
-        icon="🧠"
-        title="Review"
-        description="Never forget a word. Smart spaced repetition for your personal vocabulary."
-      />
+  <!-- Learn -->
+  <div class="mb-8">
+    {@render sectionHead('Learn', 'build the foundation')}
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      {@render tile('/alphabet', '✍️', 'Alphabet', 'The 28 letters, their forms, and how they connect.')}
+      {@render tile('/lessons', '📚', 'Lessons', 'A structured path with exercises and pronunciation.')}
+      {@render tile('/review', '🧠', 'Review', 'Spaced repetition that schedules words to stick.')}
     </div>
   </div>
 
-  <!-- Practice Section -->
-  <div class="mb-12">
-    <SectionHeader title="Practice" />
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-      <Card
-        href="/learn/game"
-        icon="🎮"
-        title="Game"
-        description="Practice vocabulary through interactive games. Multiple choice, listening, and speaking modes."
-      />
-      <Card
-        href="/stories"
-        icon="📖"
-        title="Stories"
-        description="Read short stories with instant definitions, audio, and parallel translations."
-      />
-      <Card
-        href="/sentences"
-        icon="📝"
-        title="Sentences"
-        description="Drill sentence structures and grammar patterns in context."
-      />
-      <Card
-        href="/speak"
-        icon="🎤"
-        title="Speak"
-        description="Practice pronunciation by speaking sentences and get instant feedback."
-      />
-      <Card
-        href="/tutor"
-        icon="💬"
-        title="Tutor"
-        description="Practice conversation in any dialect with an intelligent AI tutor."
-      />
+  <!-- Practice -->
+  <div class="mb-8">
+    {@render sectionHead('Practice', 'use what you know')}
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3">
+      {@render tile('/learn/game', '🎮', 'Game', 'Vocab drills: multiple-choice, listening, speaking.')}
+      {@render tile('/stories', '📖', 'Stories', 'Graded reading with tap-to-define and native audio.')}
+      {@render tile('/sentences', '📝', 'Sentences', 'Build sentences; drill grammar in context.')}
+      {@render tile('/conjugations', '🔄', 'Conjugations', 'Drill verb conjugations across dialects by typing or quiz.')}
+      {@render tile('/speak', '🎤', 'Speak', 'Say sentences aloud and get instant feedback.')}
+      {@render tile('/tutor', '💬', 'Tutor', 'Chat with an AI tutor in any dialect.')}
     </div>
   </div>
-
-  <!-- Explore Section -->
-  <!-- <div> -->
-    <!-- <SectionHeader title="Explore" /> -->
-
-    <!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-      <Card
-        href="/videos-new"
-        icon="🎬"
-        title="Arabic Shorts"
-        description="Swipe through bite-sized video content in your target dialect."
-      />
-
-      <Card
-        href="/videos"
-        icon="📺"
-        title="Videos"
-        description="Watch authentic content with interactive transcripts and dialect-specific translations."
-      />
-
-      <Card
-        href="/tutor"
-        icon="💬"
-        title="Tutor"
-        description="Practice conversation in any dialect with an intelligent AI tutor."
-      />
-    </div> -->
-  <!-- </div> -->
 </section>

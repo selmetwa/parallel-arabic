@@ -576,6 +576,8 @@
               >{arabicWord}</span>
             {/each}
           </div>
+          <!-- Transliteration (always visible on the back) -->
+          <p class="text-center text-lg sm:text-xl text-text-200 italic">{word.transliteration}</p>
         </div>
 
         <div class="flex flex-col items-center justify-center gap-3">
@@ -625,16 +627,20 @@
               >{englishWord}</span>
             {/each}
           </div>
-          {#if showHint}
-            <p class="text-xl text-text-200">({word.transliteration})</p>
-          {/if}
         </div>
-        
+
         <div class="flex justify-center gap-2 mt-4 flex-row flex-wrap">
           <AudioButton text={word.arabic} dialect={word.dialect as Dialect} audioUrl={word.audioUrl}>
             Listen
           </AudioButton>
           <Button onClick={compareDialects} type="button">Compare Dialects</Button>
+          <button
+            type="button"
+            onclick={toggleFlip}
+            class="px-4 py-2 bg-tile-500 hover:bg-tile-600 text-text-300 font-semibold rounded-xl border-2 border-tile-600 hover:border-tile-500 transition-all duration-200 active:scale-95"
+          >
+            ↩ Flip back
+          </button>
         </div>
       </div>
 

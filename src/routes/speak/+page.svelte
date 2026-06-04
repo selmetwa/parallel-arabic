@@ -351,7 +351,7 @@
 		<!-- Subscription Limit Reached -->
 		<div class="py-12 sm:py-16">
 			<div class="max-w-2xl mx-auto px-4 sm:px-8">
-				<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-8 sm:p-12 shadow-lg text-center">
+				<div class="bg-tile-400 border border-tile-500 rounded-xl p-8 sm:p-10 shadow-sm text-center">
 					<div class="text-6xl mb-6">🔒</div>
 					<h1 class="text-2xl sm:text-3xl font-bold text-text-300 mb-4">Free Limit Reached</h1>
 					<p class="text-lg text-text-200 mb-8 leading-relaxed">
@@ -366,7 +366,7 @@
 		<!-- Error State -->
 		<div class="py-12 sm:py-16">
 			<div class="max-w-2xl mx-auto px-4 sm:px-8">
-				<div class="bg-tile-400 border-2 border-rose-500/50 rounded-lg p-8 sm:p-12 shadow-lg text-center">
+				<div class="bg-tile-400 border-2 border-rose-500/50 rounded-xl p-8 sm:p-10 shadow-sm text-center">
 					<div class="text-6xl mb-6">⚠️</div>
 					<h1 class="text-2xl sm:text-3xl font-bold text-text-300 mb-4">Generation Failed</h1>
 					<p class="text-lg text-text-200 mb-8 leading-relaxed">
@@ -374,7 +374,7 @@
 					</p>
 					<button
 						onclick={() => { isError = false; errorMessage = ''; }}
-						class="px-8 py-4 text-lg font-semibold bg-tile-500 text-text-300 border-2 border-tile-600 rounded-lg hover:bg-tile-600 transition-all duration-300"
+						class="px-8 py-4 text-lg font-semibold bg-tile-500 text-text-300 border border-tile-500 rounded-lg hover:bg-tile-600 transition-all duration-300"
 					>
 						Try Again
 					</button>
@@ -386,7 +386,7 @@
 		<!-- Loading State -->
 		<div class="py-12 sm:py-16">
 			<div class="max-w-2xl mx-auto px-4 sm:px-8">
-				<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-12 shadow-lg text-center">
+				<div class="bg-tile-400 border border-tile-500 rounded-xl p-10 shadow-sm text-center">
 					<div class="scale-150 mb-8">
 						<AlphabetCycle />
 					</div>
@@ -403,25 +403,27 @@
 
 	{:else if sentences.length === 0 && !hasReachedLimit}
 		<!-- Generation Form -->
-		<header class="py-12 sm:py-16 bg-tile-200 border-b border-tile-600">
-			<div class="max-w-4xl mx-auto px-4 sm:px-8 text-center">
-				<div class="text-6xl mb-6">🎙️</div>
-				<h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-300 leading-tight mb-6">
-					Speaking Practice
-				</h1>
-				<p class="text-lg sm:text-xl text-text-200 leading-relaxed max-w-2xl mx-auto">
-					Practice your Arabic pronunciation with AI-generated sentences. Get real-time feedback on your speaking.
-				</p>
+		<header class="bg-tile-200 border-b border-tile-500">
+			<div class="max-w-4xl mx-auto px-4 sm:px-8 py-6 sm:py-8">
+				<div class="flex items-center gap-3">
+					<span class="text-3xl shrink-0" aria-hidden="true">🎙️</span>
+					<div class="min-w-0">
+						<h1 class="text-2xl sm:text-3xl font-bold text-text-300 tracking-tight">Speaking Practice</h1>
+						<p class="text-text-200 text-sm sm:text-base leading-snug mt-1 max-w-2xl">
+							Practice your Arabic pronunciation with AI-generated sentences and get real-time feedback.
+						</p>
+					</div>
+				</div>
 			</div>
 		</header>
 
-		<section class="py-12 sm:py-16">
+		<section class="py-8">
 			<div class="max-w-4xl mx-auto px-4 sm:px-8">
-				<form class="space-y-8" onsubmit={generateSentences}>
+				<form class="space-y-4" onsubmit={generateSentences}>
 					
 					<!-- Review Words Toggle Card -->
-					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
-						<div class="p-6">
+					<div class="bg-tile-400 border border-tile-500 rounded-xl shadow-sm overflow-hidden">
+						<div class="p-4">
 							<div class="flex items-start justify-between gap-4">
 								<div class="flex-1">
 									<div class="flex items-center gap-2 mb-2">
@@ -444,19 +446,19 @@
 						<!-- Review Words Mode -->
 						
 						<!-- Dialect Selection -->
-						<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
-							<div class="p-4 border-b border-tile-600">
+						<div class="bg-tile-400 border border-tile-500 rounded-xl shadow-sm overflow-hidden">
+							<div class="px-4 py-3 border-b border-tile-500">
 								<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
 									<span>🌍</span> Select Dialect
 								</h3>
 							</div>
-							<div class="p-6">
+							<div class="p-4">
 								<div class="grid grid-cols-2 gap-3">
 									{#each dialectOptions as dialectOption}
 										<button
 											type="button"
 											onclick={() => selectedDialect = dialectOption.value}
-											class="flex items-center gap-3 p-4 rounded-lg border-2 transition-all duration-200 text-left {selectedDialect === dialectOption.value ? 'bg-tile-500 border-tile-400 shadow-md' : 'bg-tile-300 border-tile-600 hover:bg-tile-300/70 hover:border-tile-500'}"
+											class="flex items-center gap-3 p-3 rounded-lg border transition-all duration-200 text-left {selectedDialect === dialectOption.value ? 'bg-tile-500 border-tile-400 shadow-md' : 'bg-tile-300 border-tile-600 hover:bg-tile-300/70 hover:border-tile-500'}"
 										>
 											<span class="text-2xl">{dialectOption.emoji}</span>
 											<span class="font-semibold text-text-300">{dialectOption.label}</span>
@@ -467,18 +469,18 @@
 						</div>
 
 						<!-- Word Source Selection -->
-						<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
-							<div class="p-4 border-b border-tile-600">
+						<div class="bg-tile-400 border border-tile-500 rounded-xl shadow-sm overflow-hidden">
+							<div class="px-4 py-3 border-b border-tile-500">
 								<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
 									<span>📚</span> Word Source
 								</h3>
 							</div>
-							<div class="p-6">
+							<div class="p-4">
 								<div class="grid grid-cols-2 gap-3">
 									<button
 										type="button"
 										onclick={() => reviewWordsSource = 'all'}
-										class="p-4 rounded-lg border-2 transition-all duration-200 text-center {reviewWordsSource === 'all' ? 'bg-tile-500 border-tile-400 shadow-md' : 'bg-tile-300 border-tile-600 hover:bg-tile-300/70'}"
+										class="p-3 rounded-lg border transition-all duration-200 text-center {reviewWordsSource === 'all' ? 'bg-tile-500 border-tile-400 shadow-md' : 'bg-tile-300 border-tile-600 hover:bg-tile-300/70'}"
 									>
 										<span class="block text-2xl mb-2">📖</span>
 										<span class="font-semibold text-text-300">All Saved Words</span>
@@ -486,7 +488,7 @@
 									<button
 										type="button"
 										onclick={() => reviewWordsSource = 'due-for-review'}
-										class="p-4 rounded-lg border-2 transition-all duration-200 text-center {reviewWordsSource === 'due-for-review' ? 'bg-tile-500 border-tile-400 shadow-md' : 'bg-tile-300 border-tile-600 hover:bg-tile-300/70'}"
+										class="p-3 rounded-lg border transition-all duration-200 text-center {reviewWordsSource === 'due-for-review' ? 'bg-tile-500 border-tile-400 shadow-md' : 'bg-tile-300 border-tile-600 hover:bg-tile-300/70'}"
 									>
 										<span class="block text-2xl mb-2">⏰</span>
 										<span class="font-semibold text-text-300">Due for Review</span>
@@ -515,19 +517,19 @@
 						<!-- Standard Generation Mode -->
 						
 						<!-- Dialect Selection -->
-						<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
-							<div class="p-4 border-b border-tile-600">
+						<div class="bg-tile-400 border border-tile-500 rounded-xl shadow-sm overflow-hidden">
+							<div class="px-4 py-3 border-b border-tile-500">
 								<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
 									<span>🌍</span> Select Dialect
 								</h3>
 							</div>
-							<div class="p-6">
+							<div class="p-4">
 								<div class="grid grid-cols-2 gap-3">
 									{#each dialectOptions as dialectOption}
 										<button
 											type="button"
 											onclick={() => selectedDialect = dialectOption.value}
-											class="flex items-center gap-3 p-4 rounded-lg border-2 transition-all duration-200 text-left {selectedDialect === dialectOption.value ? 'bg-tile-500 border-tile-400 shadow-md' : 'bg-tile-300 border-tile-600 hover:bg-tile-300/70 hover:border-tile-500'}"
+											class="flex items-center gap-3 p-3 rounded-lg border transition-all duration-200 text-left {selectedDialect === dialectOption.value ? 'bg-tile-500 border-tile-400 shadow-md' : 'bg-tile-300 border-tile-600 hover:bg-tile-300/70 hover:border-tile-500'}"
 										>
 											<span class="text-2xl">{dialectOption.emoji}</span>
 											<span class="font-semibold text-text-300">{dialectOption.label}</span>
@@ -539,19 +541,19 @@
 					{/if}
 
 					<!-- Difficulty Selection -->
-					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
-						<div class="p-4 border-b border-tile-600">
+					<div class="bg-tile-400 border border-tile-500 rounded-xl shadow-sm overflow-hidden">
+						<div class="px-4 py-3 border-b border-tile-500">
 							<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
 								<span>📊</span> Difficulty Level
 							</h3>
 						</div>
-						<div class="p-6">
+						<div class="p-4">
 							<div class="grid grid-cols-3 sm:grid-cols-6 gap-2">
 								{#each difficultyOptions as diff}
 									<button
 										type="button"
 										onclick={() => option = diff.value}
-										class="p-3 rounded-lg border-2 transition-all duration-200 text-center {option === diff.value ? 'border-white/50 shadow-lg scale-105' : 'border-transparent opacity-70 hover:opacity-100'} {diff.color}"
+										class="p-2.5 rounded-lg border transition-all duration-200 text-center {option === diff.value ? 'border-white/50 shadow-md scale-105' : 'border-transparent opacity-70 hover:opacity-100'} {diff.color}"
 									>
 										<span class="block text-lg font-bold text-white">{diff.label}</span>
 										<span class="block text-xs text-white/80">{diff.sublabel}</span>
@@ -563,8 +565,8 @@
 
 					{#if !useReviewWordsOnly}
 						<!-- Learning Topics -->
-						<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
-							<div class="p-4 border-b border-tile-600">
+						<div class="bg-tile-400 border border-tile-500 rounded-xl shadow-sm overflow-hidden">
+							<div class="px-4 py-3 border-b border-tile-500">
 								<div class="flex items-center justify-between">
 									<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
 										<span>🎯</span> Focus Topics
@@ -581,13 +583,13 @@
 									{/if}
 								</div>
 							</div>
-							<div class="p-6">
+							<div class="p-4">
 								<div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
 									{#each learningTopicOptions as topic}
 										<button
 											type="button"
 											onclick={() => toggleLearningTopic(topic.value)}
-											class="flex items-center gap-2 p-3 rounded-lg border-2 transition-all duration-200 text-left {selectedLearningTopics.includes(topic.value) ? 'bg-sky-600 border-sky-500 text-white' : 'bg-tile-300 border-tile-600 text-text-300 hover:bg-tile-300/70'}"
+											class="flex items-center gap-2 p-2.5 rounded-lg border transition-all duration-200 text-left {selectedLearningTopics.includes(topic.value) ? 'bg-sky-600 border-sky-500 text-white' : 'bg-tile-300 border-tile-600 text-text-300 hover:bg-tile-300/70'}"
 										>
 											<span>{topic.emoji}</span>
 											<span class="text-sm font-medium">{topic.label}</span>
@@ -598,16 +600,16 @@
 						</div>
 
 						<!-- Vocabulary Input -->
-						<div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
-							<div class="p-4 border-b border-tile-600">
+						<div class="bg-tile-400 border border-tile-500 rounded-xl shadow-sm overflow-hidden">
+							<div class="px-4 py-3 border-b border-tile-500">
 								<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
 									<span>📝</span> Custom Vocabulary
 									<span class="text-sm font-normal text-text-200">(optional)</span>
 								</h3>
 							</div>
-							<div class="p-6">
+							<div class="p-4">
 								<!-- Input Mode Toggle -->
-								<div class="flex p-1 bg-tile-300 rounded-lg w-fit mb-4 border border-tile-600">
+								<div class="flex p-1 bg-tile-300 rounded-lg w-fit mb-3 border border-tile-500">
 									<button
 										type="button"
 										onclick={() => { vocabularyInputMode = 'text'; vocabularyFile = null; fileError = ''; }}
@@ -628,11 +630,11 @@
 									<textarea
 										bind:value={vocabularyWords}
 										rows="3"
-										class="w-full rounded-lg border-2 border-tile-600 bg-tile-300 py-3 px-4 text-text-300 resize-none focus:border-tile-500 focus:ring-0 transition-colors text-lg placeholder:text-text-200/50"
+										class="w-full rounded-lg border border-tile-500 bg-tile-300 py-2.5 px-3.5 text-text-300 resize-none focus:border-tile-600 focus:ring-0 transition-colors text-base placeholder:text-text-200/50"
 										placeholder="Enter words separated by commas (e.g., بيت, مدرسة, طعام)"
 									></textarea>
 								{:else}
-									<div class="p-8 border-2 border-dashed border-tile-600 rounded-lg bg-tile-300/50 text-center hover:bg-tile-300 transition-colors relative group cursor-pointer">
+									<div class="p-5 border border-dashed border-tile-500 rounded-lg bg-tile-300/50 text-center hover:bg-tile-300 transition-colors relative group cursor-pointer">
 										<input
 											type="file"
 											accept=".txt,.csv"
@@ -665,13 +667,13 @@
 					{/if}
 
 					<!-- Submit Button -->
-					<div class="pt-4">
+					<div class="pt-2">
 						{#if !data.session}
 							<Tooltip text="An account is required to access this feature">
 								<button 
 									type="submit" 
 									disabled={true}
-									class="w-full py-4 text-xl font-bold bg-tile-500 text-text-200 rounded-lg opacity-50 cursor-not-allowed"
+									class="w-full py-3 text-lg font-bold bg-tile-500 text-text-200 rounded-lg opacity-50 cursor-not-allowed"
 								>
 									Generate Speaking Sentences
 								</button>
@@ -683,7 +685,7 @@
 							<button 
 								type="submit" 
 								disabled={useReviewWordsOnly && (reviewWords.length === 0 || isLoadingReviewWords)}
-								class="w-full py-4 text-xl font-bold bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+								class="w-full py-3 text-lg font-bold bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
 							>
 								🎙️ Generate Speaking Sentences
 							</button>
@@ -694,29 +696,29 @@
 		</section>
 
 		<!-- Features Section -->
-		<section class="py-12 sm:py-16 bg-tile-200 border-t border-tile-600">
+		<section class="py-10 bg-tile-200 border-t border-tile-500">
 			<div class="max-w-4xl mx-auto px-4 sm:px-8">
-				<h2 class="text-2xl sm:text-3xl font-bold text-text-300 text-center mb-8">How It Works</h2>
-				<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg text-center">
-						<div class="text-4xl mb-4">🤖</div>
-						<h3 class="text-xl font-bold text-text-300 mb-3">AI-Generated</h3>
+				<h2 class="text-xl sm:text-2xl font-bold text-text-300 text-center mb-6">How It Works</h2>
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+					<div class="bg-tile-400 border border-tile-500 rounded-xl p-4 shadow-sm text-center">
+						<div class="text-3xl mb-3">🤖</div>
+						<h3 class="text-lg font-bold text-text-300 mb-2">AI-Generated</h3>
 						<p class="text-text-200 leading-relaxed">
 							Personalized sentences based on your level and chosen topics.
 						</p>
 					</div>
 
-					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg text-center">
-						<div class="text-4xl mb-4">🎯</div>
-						<h3 class="text-xl font-bold text-text-300 mb-3">Real-time Feedback</h3>
+					<div class="bg-tile-400 border border-tile-500 rounded-xl p-4 shadow-sm text-center">
+						<div class="text-3xl mb-3">🎯</div>
+						<h3 class="text-lg font-bold text-text-300 mb-2">Real-time Feedback</h3>
 						<p class="text-text-200 leading-relaxed">
 							Instant pronunciation assessment to help you improve.
 						</p>
 					</div>
 
-					<div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-6 shadow-lg text-center">
-						<div class="text-4xl mb-4">📈</div>
-						<h3 class="text-xl font-bold text-text-300 mb-3">Track Progress</h3>
+					<div class="bg-tile-400 border border-tile-500 rounded-xl p-4 shadow-sm text-center">
+						<div class="text-3xl mb-3">📈</div>
+						<h3 class="text-lg font-bold text-text-300 mb-2">Track Progress</h3>
 						<p class="text-text-200 leading-relaxed">
 							Practice at your own pace and watch your skills grow.
 						</p>
@@ -727,7 +729,7 @@
 
 	{:else if sentences.length > 0 && index < sentences.length && !hasReachedLimit}
 		<!-- Practice Mode Header -->
-		<header class="py-4 bg-tile-400 border-b border-tile-600 sticky top-0 z-20 shadow-md">
+		<header class="py-3 bg-tile-400 border-b border-tile-500 sticky top-0 z-20 shadow-sm">
 			<div class="max-w-7xl mx-auto px-4 sm:px-8">
 				<div class="flex items-center justify-between">
 					<div class="w-28">

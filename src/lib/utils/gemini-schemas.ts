@@ -617,3 +617,46 @@ export function createVerbConjugationSchema() {
 }
 
 export type VerbConjugationSchema = z.infer<ReturnType<typeof createVerbConjugationSchema>['zodSchema']>;
+
+/**
+ * Schema for on-demand verb conjugation exercises (any dialect).
+ * Slimmer than createVerbConjugationSchema — no object pronouns — to keep the
+ * response schema simple and fast. Returns the full table (3 tenses × 2 forms ×
+ * 8 persons); the UI filters down to the user's selected tenses/forms/persons.
+ */
+export function createConjugationExerciseSchema() {
+	const conjugationEntrySchema = z.object({
+		person: z.enum(['ana', 'enta', 'enti', 'howa', 'heya', 'ehna', 'entu', 'homma']),
+		arabic: z.string(),
+		transliteration: z.string(),
+		english: z.string()
+	});
+
+	const conjugationSetSchema = z.object({
+		affirmative: z.array(conjugationEntrySchema),
+		negative: z.array(conjugationEntrySchema)
+	});
+
+	const schema = z.object({
+		verb: z.object({
+			arabic: z.string(),
+			transliteration: z.string(),
+			english: z.string()
+		}),
+		rootLetters: z.string(),
+		verbClass: z.enum(['sound', 'hollow', 'defective', 'irregular', 'doubled']),
+		notes: z.string(),
+		conjugations: z.object({
+			past: conjugationSetSchema,
+			present: conjugationSetSchema,
+			future: conjugationSetSchema
+		})
+	});
+
+	return {
+		zodSchema: schema,
+		jsonSchema: zodToJsonSchema(schema)
+	};
+}
+
+export type ConjugationExerciseSchema = z.infer<ReturnType<typeof createConjugationExerciseSchema>['zodSchema']>;

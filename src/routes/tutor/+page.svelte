@@ -11,6 +11,7 @@
   import { type Dialect } from '$lib/types/index';
   import type { DialectComparisonSchema } from '$lib/utils/gemini-schemas';
   import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
+  import { updateKeyboardStyle } from '$lib/helpers/update-keyboard-style';
   import { TUTOR_SCENARIOS, type TutorScenario } from '$lib/constants/tutor-scenarios';
 
   let { data } = $props();
@@ -104,11 +105,17 @@
 
   onMount(() => {
     currentDialect.set('');
-    
+
+    // Default to the native keyboard on mobile; style the virtual one.
+    if (typeof window !== 'undefined' && window.innerWidth < 768) {
+      keyboard = 'physical';
+    }
+    updateKeyboardStyle();
+
     const root = document.documentElement;
     const originalWidth = getComputedStyle(root).getPropertyValue('--layout-width');
     root.style.setProperty('--layout-width', '2400px');
-    
+
     return () => {
       root.style.setProperty('--layout-width', originalWidth);
     };
@@ -634,8 +641,22 @@
       }
 
       isTranscribing = false;
-      isGettingResponse = true;
+      await sendUserMessage(userMessage, recordingLanguage);
+    } catch (error) {
+      console.error('Error processing recording:', error);
+    } finally {
+      isProcessing = false;
+      isTranscribing = false;
+    }
+  }
 
+  // Shared pipeline for a user turn — used by both voice (after transcription)
+  // and typed text. Translates the message, gets the tutor reply, plays audio,
+  // and generates the next hint.
+  async function sendUserMessage(userMessage: string, language: 'ar' | 'en') {
+    isGettingResponse = true;
+
+    try {
       // Build history before adding the new user message
       const recentHistory = conversation
         .filter(msg => msg.type === 'user' || msg.type === 'tutor')
@@ -657,7 +678,7 @@
       // stays in character. The primer is never displayed in the UI.
       const conversationHistory = [...buildScenarioPrimer(), ...recentHistory];
 
-      // Show optimistic user message immediately with raw transcription
+      // Show optimistic user message immediately with the raw input
       const optimisticId = Date.now().toString();
       const optimisticMsg: ConversationMessage = {
         id: optimisticId,
@@ -668,7 +689,7 @@
         wordAlignments: [],
         feedback: '',
         suggestedSentence: null,
-        originalLanguage: recordingLanguage,
+        originalLanguage: language,
         timestamp: new Date(),
         showArabic: true,
         showEnglish: true,
@@ -686,7 +707,7 @@
           body: JSON.stringify({
             message: userMessage,
             dialect: selectedDialect,
-            inputLanguage: recordingLanguage
+            inputLanguage: language
           })
         }).then(r => {
           if (!r.ok) throw new Error('Failed to translate message');
@@ -724,7 +745,7 @@
 
       scrollToBottom();
       setTimeout(() => scrollToBottom(), 100);
-      
+
       // Store conversation ID for memory persistence
       if (tutorData.conversationId && !conversationId) {
         conversationId = tutorData.conversationId;
@@ -756,13 +777,74 @@
           await playTutorAudio(tutorData.arabic, selectedDialect);
         }, 500);
       }
-
     } catch (error) {
-      console.error('Error processing recording:', error);
+      console.error('Error sending message:', error);
+    } finally {
+      isGettingResponse = false;
+    }
+  }
+
+  // ── Typed-message input (virtual Arabic keyboard or native keyboard) ──────
+  let inputMode = $state<'voice' | 'text'>('voice');
+  let keyboard = $state<'virtual' | 'physical'>('virtual');
+  let typedValue = $state('');
+  let typedLanguage = $state<'ar' | 'en'>('ar');
+  let keyboardContainer: HTMLDivElement | null = $state(null);
+
+  function setInputMode(m: 'voice' | 'text') {
+    inputMode = m;
+    if (m === 'text' && keyboard === 'virtual') {
+      requestAnimationFrame(() => updateKeyboardStyle());
+    }
+  }
+
+  function toggleKeyboard() {
+    keyboard = keyboard === 'virtual' ? 'physical' : 'virtual';
+    if (keyboard === 'virtual') {
+      requestAnimationFrame(() => updateKeyboardStyle());
+    }
+  }
+
+  function onRegularKeyboard(e: any) {
+    typedValue = e?.target?.value ?? '';
+  }
+
+  // Read the current text from whichever input is active (the custom
+  // <arabic-keyboard> element exposes getTextAreaValue()/resetValue()).
+  function getTypedValue(): string {
+    if (keyboard === 'virtual' && keyboardContainer) {
+      const el = keyboardContainer.querySelector('arabic-keyboard') as any;
+      if (el && typeof el.getTextAreaValue === 'function') {
+        return el.getTextAreaValue() || '';
+      }
+    }
+    return typedValue;
+  }
+
+  function resetTypedInput() {
+    typedValue = '';
+    if (keyboardContainer) {
+      const el = keyboardContainer.querySelector('arabic-keyboard') as any;
+      if (el && typeof el.resetValue === 'function') {
+        el.resetValue();
+      }
+    }
+  }
+
+  async function sendTypedMessage() {
+    if (!hasActiveSubscription) {
+      openPaywallModal();
+      return;
+    }
+    const text = getTypedValue().trim();
+    if (!text || isProcessing) return;
+
+    isProcessing = true;
+    resetTypedInput();
+    try {
+      await sendUserMessage(text, typedLanguage);
     } finally {
       isProcessing = false;
-      isTranscribing = false;
-      isGettingResponse = false;
     }
   }
 
@@ -1909,6 +1991,73 @@
                 </div>
               {/if}
             </div>
+          {/if}
+        </div>
+
+        <!-- Text composer: type to the tutor (Arabic virtual keyboard or native) -->
+        <div class="border-t-2 border-tile-600 bg-tile-400 p-3 sm:p-4">
+          {#if inputMode === 'text'}
+            <div bind:this={keyboardContainer}>
+              <div class="mb-2 flex items-center justify-between gap-2 flex-wrap">
+                <div class="flex items-center gap-2 flex-wrap">
+                  <button
+                    type="button"
+                    onclick={toggleKeyboard}
+                    class="flex items-center gap-2 px-3 py-1.5 text-sm text-text-300 bg-tile-300 hover:bg-tile-500 border border-tile-600 rounded-lg transition-colors"
+                  >
+                    {keyboard === 'virtual' ? '📱 Use native keyboard' : '⌨️ Use virtual keyboard'}
+                  </button>
+                  <div class="flex rounded-lg border border-tile-600 overflow-hidden text-xs font-semibold">
+                    <button
+                      type="button"
+                      onclick={() => (typedLanguage = 'ar')}
+                      class="px-3 py-1.5 transition-colors {typedLanguage === 'ar' ? 'bg-tile-600 text-text-300' : 'bg-tile-300 text-text-200 hover:bg-tile-400'}"
+                    >عربي</button>
+                    <button
+                      type="button"
+                      onclick={() => (typedLanguage = 'en')}
+                      class="px-3 py-1.5 transition-colors {typedLanguage === 'en' ? 'bg-tile-600 text-text-300' : 'bg-tile-300 text-text-200 hover:bg-tile-400'}"
+                    >EN</button>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  onclick={() => setInputMode('voice')}
+                  class="flex items-center gap-1 text-sm text-text-200 hover:text-text-300 transition-colors"
+                >🎙️ Voice</button>
+              </div>
+
+              <div class="block {keyboard !== 'virtual' ? 'hidden' : ''}">
+                <arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
+              </div>
+
+              <textarea
+                oninput={onRegularKeyboard}
+                bind:value={typedValue}
+                placeholder={typedLanguage === 'ar' ? 'اكتب رسالتك...' : 'Type your message...'}
+                dir={typedLanguage === 'ar' ? 'rtl' : 'ltr'}
+                rows="2"
+                onkeydown={(e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendTypedMessage(); } }}
+                class="block w-full text-lg text-text-300 bg-tile-200 border-2 border-tile-500 rounded-xl p-3 focus:border-tile-700 focus:outline-none focus:ring-2 focus:ring-tile-600/50 transition-all placeholder:text-text-100 {keyboard === 'virtual' ? 'hidden' : ''}"
+              ></textarea>
+
+              <div class="flex justify-end mt-2">
+                <button
+                  type="button"
+                  onclick={sendTypedMessage}
+                  disabled={isProcessing}
+                  class="px-5 py-2.5 bg-emerald-600 text-white font-semibold rounded-xl hover:bg-emerald-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                >Send →</button>
+              </div>
+            </div>
+          {:else}
+            <button
+              type="button"
+              onclick={() => setInputMode('text')}
+              class="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-tile-300 hover:bg-tile-500 border border-tile-600 rounded-lg text-text-300 font-medium transition-colors"
+            >
+              ⌨️ Type a message instead
+            </button>
           {/if}
         </div>
       </div>
