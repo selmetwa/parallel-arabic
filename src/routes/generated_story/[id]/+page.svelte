@@ -126,8 +126,13 @@
 	let showTransliteration = $state(false);
 	let showTashkeel = $state(false);
 
-	// Per-sentence overrides (null = follow global)
-	let sentenceOverrides = $state<Record<number, { english: boolean; transliteration: boolean; tashkeel: boolean }>>({});
+	// Per-sentence overrides, per field (null = follow the global toggle for that field).
+	// Toggling one field must NOT freeze the others, otherwise the top toggles stop
+	// affecting a sentence after any per-sentence button is clicked.
+	type SentenceOverride = { english: boolean | null; transliteration: boolean | null; tashkeel: boolean | null };
+	let sentenceOverrides = $state<Record<number, SentenceOverride>>({});
+
+	const emptyOverride: SentenceOverride = { english: null, transliteration: null, tashkeel: null };
 
 	function getSentenceEnglish(i: number) {
 		return sentenceOverrides[i]?.english ?? showEnglish;
@@ -139,33 +144,24 @@
 		return sentenceOverrides[i]?.tashkeel ?? showTashkeel;
 	}
 	function toggleSentenceEnglish(i: number) {
+		const current = sentenceOverrides[i] ?? emptyOverride;
 		sentenceOverrides = {
 			...sentenceOverrides,
-			[i]: {
-				english: !(sentenceOverrides[i]?.english ?? showEnglish),
-				transliteration: sentenceOverrides[i]?.transliteration ?? showTransliteration,
-				tashkeel: sentenceOverrides[i]?.tashkeel ?? showTashkeel
-			}
+			[i]: { ...current, english: !(current.english ?? showEnglish) }
 		};
 	}
 	function toggleSentenceTransliteration(i: number) {
+		const current = sentenceOverrides[i] ?? emptyOverride;
 		sentenceOverrides = {
 			...sentenceOverrides,
-			[i]: {
-				english: sentenceOverrides[i]?.english ?? showEnglish,
-				transliteration: !(sentenceOverrides[i]?.transliteration ?? showTransliteration),
-				tashkeel: sentenceOverrides[i]?.tashkeel ?? showTashkeel
-			}
+			[i]: { ...current, transliteration: !(current.transliteration ?? showTransliteration) }
 		};
 	}
 	function toggleSentenceTashkeel(i: number) {
+		const current = sentenceOverrides[i] ?? emptyOverride;
 		sentenceOverrides = {
 			...sentenceOverrides,
-			[i]: {
-				english: sentenceOverrides[i]?.english ?? showEnglish,
-				transliteration: sentenceOverrides[i]?.transliteration ?? showTransliteration,
-				tashkeel: !(sentenceOverrides[i]?.tashkeel ?? showTashkeel)
-			}
+			[i]: { ...current, tashkeel: !(current.tashkeel ?? showTashkeel) }
 		};
 	}
 
@@ -764,11 +760,6 @@
 
           <!-- Transliteration -->
           <p class="text-text-200 italic text-sm">{word.transliteration}</p>
-
-          <!-- Hover indicator -->
-          <div class="mt-3 pt-3 border-t border-tile-600 opacity-0 group-hover:opacity-100 transition-opacity">
-            <p class="text-xs text-text-200 text-center">Click on the word in the story for more details</p>
-          </div>
         </div>
       {/each}
     </div>

@@ -274,6 +274,7 @@
       {@render tile('/learn/game', '🎮', 'Game', 'Vocab drills: multiple-choice, listening, speaking.')}
       {@render tile('/stories', '📖', 'Stories', 'Graded reading with tap-to-define and native audio.')}
       {@render tile('/sentences', '📝', 'Sentences', 'Build sentences; drill grammar in context.')}
+      {@render tile('/conjugations', '🔄', 'Conjugations', 'Drill verb conjugations across dialects by typing or quiz.')}
       {@render tile('/speak', '🎤', 'Speak', 'Say sentences aloud and get instant feedback.')}
       {@render tile('/tutor', '💬', 'Tutor', 'Chat with an AI tutor in any dialect.')}
     </div>

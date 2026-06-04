@@ -63,6 +63,7 @@
         items: [
           { label: 'Game', href: '/learn/game', icon: '🎮' },
           { label: 'Sentences', href: '/sentences', icon: '📝' },
+          { label: 'Conjugations', href: '/conjugations', icon: '🔄' },
           { label: 'Stories', href: '/stories', icon: '📖' },
           { label: 'Speak', href: '/speak', icon: '🎤' },
           { label: 'Tutor', href: '/tutor', icon: '💬' },
