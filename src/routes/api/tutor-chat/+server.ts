@@ -56,17 +56,18 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     
     if (userId) {
       try {
-        // Build rich learner context
-        const learnerContext = await buildLearnerContext(userId, dialect);
+        // Build learner context and get/create conversation in parallel
+        const [learnerContext, resolvedId] = await Promise.all([
+          buildLearnerContext(userId, dialect),
+          conversationId ? Promise.resolve(conversationId) : getOrCreateConversation(userId, dialect)
+        ]);
         learnerContextString = formatLearnerContextForPrompt(learnerContext);
-        
-        // Get or create conversation for persistence
-        if (!conversationId) {
-          conversationId = await getOrCreateConversation(userId, dialect);
-        }
-        
-        // Save the user's message
-        await saveMessage(conversationId, 'user', null, message, null, null);
+        conversationId = resolvedId;
+
+        // Save user message without blocking the Gemini call
+        saveMessage(conversationId, 'user', null, message, null, null).catch(e =>
+          console.error('Error saving user message:', e)
+        );
       } catch (contextError) {
         console.error('Error building learner context:', contextError);
         // Continue without context - don't break the chat
@@ -74,7 +75,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     }
 
     // Build conversation history for context
-    const conversationHistory: ChatMessage[] = conversation?.slice(-10) || []; // Last 10 messages for context
+    const conversationHistory: ChatMessage[] = conversation || [];
     
     const dialectName = dialectNames[dialect as Dialect];
     
@@ -196,21 +197,10 @@ IMPORTANT: wordAlignments must have one entry per Arabic word in your response, 
       throw new Error('Incomplete AI response structure');
     }
 
-    // Save the tutor's response if we have a conversation
+    // Save the tutor's response without blocking the API response
     if (userId && conversationId) {
-      try {
-        await saveMessage(
-          conversationId, 
-          'tutor', 
-          parsedResponse.arabic, 
-          parsedResponse.english, 
-          parsedResponse.transliteration, 
-          null
-        );
-      } catch (saveError) {
-        console.error('Error saving tutor message:', saveError);
-        // Don't break the response
-      }
+      saveMessage(conversationId, 'tutor', parsedResponse.arabic, parsedResponse.english, parsedResponse.transliteration, null)
+        .catch(e => console.error('Error saving tutor message:', e));
     }
 
     return json({

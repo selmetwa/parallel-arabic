@@ -83,7 +83,7 @@ Respond as JSON with this exact shape:
   "english": "..."
 }`;
 
-    const schemaJson = zodToJsonSchema(textWithTranslationSchema, 'TextWithTranslation');
+    const schemaJson = zodToJsonSchema(textWithTranslationSchema);
 
     const response = await generateContentWithRetry(ai, {
       model: 'gemini-2.5-flash',

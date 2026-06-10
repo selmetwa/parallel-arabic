@@ -77,47 +77,47 @@ export const load: PageServerLoad = async ({ parent }) => {
       .limit(10);
 
     if (!error && stories) {
-      for (const story of stories) {
-        try {
-          // Download the story content
-          const storageResult = await downloadStoryFromStorage(story.story_body);
+      // Download all stories in parallel instead of sequentially
+      const downloadResults = await Promise.all(
+        stories.map(story =>
+          downloadStoryFromStorage(story.story_body)
+            .then(result => ({ story, result }))
+            .catch(() => ({ story, result: { success: false, data: null } }))
+        )
+      );
 
-          if (storageResult.success && storageResult.data) {
-            const storyData = storageResult.data as {
-              title?: { english?: string; arabic?: string };
-              sentences?: Array<{
-                arabic?: { text?: string };
-                english?: { text?: string };
-                transliteration?: { text?: string };
-              }>;
-            };
+      for (const { story, result } of downloadResults) {
+        if (!result.success || !result.data) continue;
 
-            const storyTitle = storyData.title?.english || 'Untitled';
-            const sentences = storyData.sentences || [];
+        const storyData = result.data as {
+          title?: { english?: string; arabic?: string };
+          sentences?: Array<{
+            arabic?: { text?: string };
+            english?: { text?: string };
+            transliteration?: { text?: string };
+          }>;
+        };
 
-            // Get up to 3 valid sentences per story
-            let count = 0;
-            for (let i = 0; i < sentences.length && count < 3; i++) {
-              const s = sentences[i];
-              if (s?.arabic?.text && s?.english?.text && s?.transliteration?.text) {
-                practiceSentences.push({
-                  id: `${story.id}-${i}`,
-                  storyId: story.id,
-                  storyTitle,
-                  arabic: s.arabic.text,
-                  english: s.english.text,
-                  transliteration: s.transliteration.text,
-                  dialect: story.dialect
-                });
-                count++;
-              }
-            }
+        const storyTitle = storyData.title?.english || 'Untitled';
+        const sentences = storyData.sentences || [];
+
+        let count = 0;
+        for (let i = 0; i < sentences.length && count < 3; i++) {
+          const s = sentences[i];
+          if (s?.arabic?.text && s?.english?.text && s?.transliteration?.text) {
+            practiceSentences.push({
+              id: `${story.id}-${i}`,
+              storyId: story.id,
+              storyTitle,
+              arabic: s.arabic.text,
+              english: s.english.text,
+              transliteration: s.transliteration.text,
+              dialect: story.dialect
+            });
+            count++;
           }
-        } catch (e) {
-          console.error('Error loading story for practice:', e);
         }
 
-        // Limit total sentences
         if (practiceSentences.length >= 20) break;
       }
     }
