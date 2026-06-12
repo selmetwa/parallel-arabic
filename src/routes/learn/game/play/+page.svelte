@@ -1,6 +1,7 @@
 <script lang="ts">
   import { goto } from '$app/navigation';
-  import { onMount } from 'svelte';
+  import { onMount, onDestroy } from 'svelte';
+  import { gameSession } from '$lib/store/generated-content.svelte';
   import { Howl } from 'howler';
   import levenshtein from 'fast-levenshtein';
   import AudioButton from '$lib/components/AudioButton.svelte';
@@ -91,12 +92,53 @@
   let currentQuestion = $derived(questions[currentIndex]);
   let progress = $derived(questions.length > 0 ? ((currentIndex + 1) / questions.length) * 100 : 0);
 
+  // URL search params identify this game setup; captured at mount because the
+  // URL has already changed by the time onDestroy runs during navigation
+  let sessionParamsKey = '';
+
   onMount(async () => {
     await initializeGame();
   });
 
+  // Keep the in-progress game in global state so navigating away doesn't
+  // lose generated questions; cleared when the game is completed
+  onDestroy(() => {
+    if (!gameComplete && questions.length > 0 && sessionParamsKey) {
+      gameSession.snapshot = {
+        paramsKey: sessionParamsKey,
+        questions: $state.snapshot(questions),
+        currentIndex,
+        score,
+        wordsToReview: $state.snapshot(wordsToReview),
+        sentencesToReview: $state.snapshot(sentencesToReview),
+        questionOrder: $state.snapshot(questionOrder),
+        gameProgressId,
+        turnsPlayed
+      };
+    } else if (gameComplete) {
+      gameSession.snapshot = null;
+    }
+  });
+
   async function initializeGame() {
     isLoading = true;
+    sessionParamsKey = window.location.search;
+
+    // Restore an in-memory session from earlier this visit (after navigating away)
+    const saved = gameSession.snapshot;
+    if (saved && saved.paramsKey === sessionParamsKey) {
+      sessionStorage.removeItem('resumeGame');
+      questions = saved.questions as GameQuestion[];
+      currentIndex = saved.currentIndex;
+      score = saved.score;
+      wordsToReview = saved.wordsToReview as Word[];
+      sentencesToReview = saved.sentencesToReview as Sentence[];
+      questionOrder = saved.questionOrder;
+      gameProgressId = saved.gameProgressId;
+      turnsPlayed = saved.turnsPlayed;
+      isLoading = false;
+      return;
+    }
 
     // Check if we're resuming a game (from server-side data or sessionStorage)
     const serverResumeData = data.resumeData;

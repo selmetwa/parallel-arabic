@@ -5,7 +5,7 @@
 	import Tooltip from '$lib/components/Tooltip.svelte';
 	import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
 	import { type Dialect } from '$lib/types/index';
-	import type { ConjugationExerciseSchema } from '$lib/utils/gemini-schemas';
+	import { conjugationPractice as session } from '$lib/store/generated-content.svelte';
 
 	let { data } = $props();
 
@@ -18,9 +18,9 @@
 
 	const exampleVerbs = ['to write', 'to eat', 'to go', 'to drink', 'to study', 'to speak'];
 
-	let selectedDialect = $state(getDefaultDialect(data.user));
-	let verb = $state('');
-	let conjugationData = $state<ConjugationExerciseSchema | null>(null);
+	// Generated exercise lives in global state so it survives navigating away
+	let selectedDialect = $state(session.dialect || getDefaultDialect(data.user));
+	let verb = $state(session.verb);
 
 	let isLoading = $state(false);
 	let isError = $state(false);
@@ -36,7 +36,7 @@
 		isLoading = true;
 		isError = false;
 		errorMessage = '';
-		conjugationData = null;
+		session.exercise = null;
 
 		try {
 			const res = await fetch('/api/generate-conjugations', {
@@ -50,7 +50,9 @@
 				throw new Error(body.message || `Server error: ${res.status}`);
 			}
 
-			conjugationData = (await res.json()) as ConjugationExerciseSchema;
+			session.exercise = await res.json();
+			session.verb = verb.trim();
+			session.dialect = selectedDialect;
 		} catch (error) {
 			console.error('Error generating conjugations:', error);
 			isError = true;
@@ -72,7 +74,8 @@
 	}
 
 	function onNewVerb() {
-		conjugationData = null;
+		session.exercise = null;
+		session.verb = '';
 		verb = '';
 		isError = false;
 		errorMessage = '';
@@ -103,9 +106,9 @@
 			</div>
 		</div>
 	</div>
-{:else if conjugationData}
+{:else if session.exercise}
 	<div class="px-4 sm:px-8 py-8">
-		<ConjugationPractice data={conjugationData} dialect={selectedDialect as Dialect} {onNewVerb} {onAdvance} />
+		<ConjugationPractice data={session.exercise} dialect={selectedDialect as Dialect} {onNewVerb} {onAdvance} />
 	</div>
 {:else}
 	<!-- Generation form -->

@@ -14,6 +14,7 @@
 	import Tooltip from '$lib/components/Tooltip.svelte';
 	import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
 	import { fetchUserReviewWords } from '$lib/helpers/fetch-review-words';
+	import { speakPractice as session } from '$lib/store/generated-content.svelte';
 
 	let { data } = $props();
 
@@ -25,14 +26,13 @@
 		currentDialect.set('');
 	});
 
-	let index = $state((() => {
-		if (typeof window !== 'undefined') {
-			const params = new URLSearchParams(window.location.search);
-			const urlIndex = parseInt(params.get('speak_sentence') ?? '0') || 0;
-			return urlIndex ? urlIndex - 1 : 0;
-		}
-		return 0;
-	})());
+	// Sentences live in global state so they survive navigating away; only
+	// read the index from the URL when there is no session to come back to.
+	if (typeof window !== 'undefined' && session.sentences.length === 0) {
+		const params = new URLSearchParams(window.location.search);
+		const urlIndex = parseInt(params.get('speak_sentence') ?? '0') || 0;
+		session.index = urlIndex ? urlIndex - 1 : 0;
+	}
 
 	// Function to filter out incomplete sentences
 	function filterValidSentences(sentences: any[]): sentenceObjectItem[] {
@@ -47,13 +47,12 @@
 		);
 	}
 
-	let selectedDialect = $state(getDefaultDialect(data.user));
-	let sentences = $state<sentenceObjectItem[]>([]);
+	let selectedDialect = $state(session.dialect || getDefaultDialect(data.user));
 
-	let sentence = $derived(sentences[index]);
+	let sentence = $derived(session.sentences[session.index]);
 	$effect(() => {
-		if (sentences.length > 0) {
-			index = Math.min(index, sentences.length - 1);
+		if (session.sentences.length > 0) {
+			session.index = Math.min(session.index, session.sentences.length - 1);
 		}
 	});
 
@@ -242,8 +241,10 @@
 				throw new Error('No valid sentences were generated. Please try again.');
 			}
 			
-			const updatedSentences = [...sentences, ...newSentences];
-			sentences = updatedSentences;
+			// Write to global state so the result survives navigating away,
+			// even if generation finishes after this page is destroyed
+			session.sentences = [...session.sentences, ...newSentences];
+			session.dialect = selectedDialect;
 
 			showSpeakSentenceSuccessToast(toastId, newSentences.length, selectedDialect);
 			
@@ -271,21 +272,21 @@
 	}
 
 	function next() {
-		if (index === sentences.length - 1) {
+		if (session.index === session.sentences.length - 1) {
 			return;
 		}
 
 		updateSentencesViewed();
-		index = index + 1;
-		updateUrl('speak_sentence', (index+1).toString());
+		session.index = session.index + 1;
+		updateUrl('speak_sentence', (session.index+1).toString());
 	}
 
 	function previous() {
-		if (index === 0) {
+		if (session.index === 0) {
 			return;
 		}
-		index = index - 1;
-		updateUrl('speak_sentence', (index+1).toString());
+		session.index = session.index - 1;
+		updateUrl('speak_sentence', (session.index+1).toString());
 	}
 
 	function setOption(event: any) {
@@ -294,28 +295,28 @@
 
 	function setDialect(event: any) {
 		selectedDialect = event.target.value;
-		sentences = [];
-		index = 0;
+		session.sentences = [];
+		session.index = 0;
 		updateUrl('speak_sentence', '0');
 	}
 
 	function generateSentences(event: any) {
 		event.preventDefault();
-		const copy = [...sentences];
+		const copy = [...session.sentences];
 		generateSentence(option, copy);
 	}
 
 	function loadMoreSentences() {
-		generateSentence(option, sentences);
+		generateSentence(option, [...session.sentences]);
 	}
 
 	function resetSentences() {
-		sentences = [];
-		index = 0;
+		session.sentences = [];
+		session.index = 0;
 		updateUrl('speak_sentence', '0');
 	}
 
-	let isLastSentence = $derived(index === sentences.length - 1);
+	let isLastSentence = $derived(session.index === session.sentences.length - 1);
 	let hasReachedLimit = $derived(!data.isSubscribed && sentencesViewed >= 5);
 
 	const dialectOptions = [
@@ -401,7 +402,7 @@
 			</div>
 		</div>
 
-	{:else if sentences.length === 0 && !hasReachedLimit}
+	{:else if session.sentences.length === 0 && !hasReachedLimit}
 		<!-- Generation Form -->
 		<header class="bg-tile-200 border-b border-tile-500">
 			<div class="max-w-4xl mx-auto px-4 sm:px-8 py-6 sm:py-8">
@@ -727,13 +728,13 @@
 			</div>
 		</section>
 
-	{:else if sentences.length > 0 && index < sentences.length && !hasReachedLimit}
+	{:else if session.sentences.length > 0 && session.index < session.sentences.length && !hasReachedLimit}
 		<!-- Practice Mode Header -->
 		<header class="py-3 bg-tile-400 border-b border-tile-500 sticky top-0 z-20 shadow-sm">
 			<div class="max-w-7xl mx-auto px-4 sm:px-8">
 				<div class="flex items-center justify-between">
 					<div class="w-28">
-						{#if index > 0}
+						{#if session.index > 0}
 							<button 
 								onclick={previous} 
 								class="flex items-center gap-1 px-4 py-2 bg-tile-500 text-text-300 font-semibold rounded-lg hover:bg-tile-600 transition-colors border border-tile-600"
@@ -749,7 +750,7 @@
 					<div class="flex flex-col items-center">
 						<div class="flex items-center gap-3">
 							<span class="px-3 py-1 bg-tile-500 rounded-full text-sm font-bold text-text-300">
-								{index + 1} / {sentences.length}
+								{session.index + 1} / {session.sentences.length}
 							</span>
 						</div>
 						<span class="text-xs text-text-200 mt-1">
@@ -758,7 +759,7 @@
 					</div>
 					
 					<div class="w-28 flex justify-end gap-2">
-						{#if index < sentences.length - 1}
+						{#if session.index < session.sentences.length - 1}
 							<button 
 								onclick={next} 
 								class="flex items-center gap-1 px-4 py-2 bg-tile-500 text-text-300 font-semibold rounded-lg hover:bg-tile-600 transition-colors border border-tile-600"
