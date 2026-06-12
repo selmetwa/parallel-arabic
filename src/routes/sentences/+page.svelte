@@ -15,6 +15,7 @@
 	import Tooltip from '$lib/components/Tooltip.svelte';
 	import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
 	import { fetchUserReviewWords } from '$lib/helpers/fetch-review-words';
+	import { sentencePractice as session } from '$lib/store/generated-content.svelte';
 
 	let { data } = $props();
 
@@ -26,14 +27,13 @@
 		currentDialect.set('');
 	});
 
-	let index = $state((() => {
-		if (typeof window !== 'undefined') {
-			const params = new URLSearchParams(window.location.search);
-			const urlIndex = parseInt(params.get('sentence') ?? '0') || 0;
-			return urlIndex ? urlIndex - 1 : 0;
-		}
-		return 0;
-	})());
+	// Sentences live in global state so they survive navigating away; only
+	// read the index from the URL when there is no session to come back to.
+	if (typeof window !== 'undefined' && session.sentences.length === 0) {
+		const params = new URLSearchParams(window.location.search);
+		const urlIndex = parseInt(params.get('sentence') ?? '0') || 0;
+		session.index = urlIndex ? urlIndex - 1 : 0;
+	}
 
 	// Function to filter out incomplete sentences
 	function filterValidSentences(sentences: any[]): sentenceObjectItem[] {
@@ -48,13 +48,12 @@
 		);
 	}
 
-	let selectedDialect = $state(getDefaultDialect(data.user));
-	let sentences = $state<sentenceObjectItem[]>([]);
+	let selectedDialect = $state(session.dialect || getDefaultDialect(data.user));
 
-	let sentence = $derived(sentences[index]);
+	let sentence = $derived(session.sentences[session.index]);
 	$effect(() => {
-		if (sentences.length > 0) {
-			index = Math.min(index, sentences.length - 1);
+		if (session.sentences.length > 0) {
+			session.index = Math.min(session.index, session.sentences.length - 1);
 		}
 	});
 
@@ -259,8 +258,10 @@
 				throw new Error('No valid sentences were generated. Please try again.');
 			}
 			
-			const updatedSentences = [...sentences, ...newSentences];
-			sentences = updatedSentences;
+			// Write to global state so the result survives navigating away,
+			// even if generation finishes after this page is destroyed
+			session.sentences = [...session.sentences, ...newSentences];
+			session.dialect = selectedDialect;
 
 			// Show success toast
 			showSentenceSuccessToast(toastId, newSentences.length, selectedDialect);
@@ -290,21 +291,21 @@
 	}
 
 	function next() {
-		if (index === sentences.length - 1) {
+		if (session.index === session.sentences.length - 1) {
 			return;
 		}
 
 		updateSentencesViewed();
-		index = index + 1;
-		updateUrl('sentence', (index+1).toString());
+		session.index = session.index + 1;
+		updateUrl('sentence', (session.index+1).toString());
 	}
 
 	function previous() {
-		if (index === 0) {
+		if (session.index === 0) {
 			return;
 		}
-		index = index - 1;
-		updateUrl('sentence', (index+1).toString());
+		session.index = session.index - 1;
+		updateUrl('sentence', (session.index+1).toString());
 	}
 
 	function setMode(event: any) {
@@ -319,28 +320,28 @@
 
 	function setDialect(event: any) {
 		selectedDialect = event.target.value;
-		sentences = [];
-		index = 0;
+		session.sentences = [];
+		session.index = 0;
 		updateUrl('sentence', '0');
 	}
 
 	function generateSentences(event: any) {
 		event.preventDefault();
-		const copy = [...sentences];
+		const copy = [...session.sentences];
 		generateSentence(option, copy);
 	}
 
 	function loadMoreSentences() {
-		generateSentence(option, sentences);
+		generateSentence(option, [...session.sentences]);
 	}
 
 	function resetSentences() {
-		sentences = [];
-		index = 0;
+		session.sentences = [];
+		session.index = 0;
 		updateUrl('sentence', '0');
 	}
 
-	let isLastSentence = $derived(index === sentences.length - 1);
+	let isLastSentence = $derived(session.index === session.sentences.length - 1);
 	let hasReachedLimit = $derived(!data.isSubscribed && sentencesViewed >= 5);
 
 	const dialectOptions = [
@@ -401,7 +402,7 @@
 	</div>
 {/if}
 
-{#if !isLoading && sentences.length === 0 && !hasReachedLimit}
+{#if !isLoading && session.sentences.length === 0 && !hasReachedLimit}
 	<!-- Generation Form -->
 	<header class="py-5 bg-tile-200 border-b border-tile-500 px-6 sm:px-12">
 		<div class=" text-left">
@@ -748,26 +749,26 @@
 			</div>
 		</div>
 	</div>
-{:else if sentences.length > 0 && index < sentences.length && !hasReachedLimit}
+{:else if session.sentences.length > 0 && session.index < session.sentences.length && !hasReachedLimit}
 	<div class="min-h-screen flex flex-col">
 		<header class="sticky top-0 z-10 border-b border-tile-600 bg-tile-400/95 backdrop-blur-sm shadow-md">
 			<div class="max-w-7xl mx-auto px-4 sm:px-8 py-4">
 				<div class="flex w-full items-center justify-between">
 					<div class="w-24">
-						{#if index > 0}
+						{#if session.index > 0}
 							<Button onClick={previous} type="button" className="!py-1.5 !px-3 text-sm shadow-sm">Previous</Button>
 						{/if}
 					</div>
 					<div class="text-center">
 						<h1 class="text-lg font-bold text-text-300 flex items-center gap-2 justify-center">
-							<span>Sentence {index + 1}</span>
+							<span>Sentence {session.index + 1}</span>
 							<span class="text-text-200 font-normal">of</span>
-							<span>{sentences.length}</span>
+							<span>{session.sentences.length}</span>
 						</h1>
 						<p class="text-xs text-text-200 font-medium uppercase tracking-wider mt-0.5">{dialectOptions.find(d => d.value === selectedDialect)?.label}</p>
 					</div>
 					<div class="w-24 flex justify-end gap-2">
-						{#if index < sentences.length - 1}
+						{#if session.index < session.sentences.length - 1}
 							<Button onClick={next} type="button" className="!py-1.5 !px-3 text-sm shadow-sm">Next</Button>
 						{/if}
 						{#if isLastSentence && !isLoading}
@@ -807,10 +808,10 @@
 
 			{#if mode === 'quiz'}
 				<section class="px-4 sm:px-8 max-w-7xl mx-auto py-8">
-					<SentenceQuiz 
-					{sentences}
-					 {index} 
-					 {resetSentences} 
+					<SentenceQuiz
+					sentences={session.sentences}
+					 index={session.index}
+					 {resetSentences}
 					 {next}
 					 />
 				</section>
