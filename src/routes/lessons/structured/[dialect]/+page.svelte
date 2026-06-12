@@ -45,14 +45,14 @@
 				if (!exists) {
 					// Lesson doesn't exist yet
 					status = 'locked';
-				} else if (isWhitelisted) {
-					// Whitelisted users: all existing lessons are unlocked
+				} else if (isWhitelisted || isSubscribed) {
+					// Whitelisted and subscribed users: all existing lessons are unlocked
 					if (isCompleted) {
 						status = 'completed';
 					} else {
 						status = 'active';
 					}
-					previousCompleted = true; // Always allow next lessons for whitelisted users
+					previousCompleted = true; // Always allow next lessons for whitelisted/subscribed users
 				} else if (!isFirstLesson && !isSubscribed) {
 					// All lessons except the first one require subscription
 					status = 'locked';
