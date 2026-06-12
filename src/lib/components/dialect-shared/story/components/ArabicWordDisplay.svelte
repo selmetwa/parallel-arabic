@@ -2,6 +2,7 @@
 	import cn from 'classnames';
 	import { askChatGTP } from '../helpers/ask-chat-gpt';
 	import { type Dialect } from '$lib/types/index';
+	import { trackEvent } from '$lib/analytics';
 
 	type TWordAlignment = {
 		arabic: string;
@@ -107,6 +108,7 @@
 	}
 
 	async function fetchDefinition(arabicWord: string, wordAlign?: TWordAlignment) {
+		trackEvent('story_word_definition_requested', { word_arabic: arabicWord, dialect, is_saved_word: isSavedWord(arabicWord) });
 		const cacheKey = `${arabicWord}-arabic-${dialect}`;
 		const cached = wordCache.get(cacheKey);
 

@@ -30,6 +30,7 @@
 	import AudioButton from '$lib/components/AudioButton.svelte';
 	import { normalizeArabicText, normalizeArabicTextLight, filterArabicCharacters } from '$lib/utils/arabic-normalization';
 	import type { DialectComparisonSchema } from '$lib/utils/gemini-schemas';
+	import { trackEvent } from '$lib/analytics';
 
 	interface Props {
 		sentence: {
@@ -66,6 +67,7 @@
 	$effect(() => {
 		if (isCorrect && !xpAwardedThisSentence) {
 			xpAwardedThisSentence = true;
+			trackEvent('sentences_typing_completed_correct', { dialect });
 			fetch('/api/award-xp', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
@@ -100,10 +102,12 @@
 
 	async function handleToggleHint() {
 		showHint = !showHint;
+		trackEvent('sentences_hint_toggled', { visible: showHint });
 	}
-	
+
 	async function handleToggleAnswer() {
 		showAnswer = !showAnswer;
+		trackEvent('sentences_answer_toggled', { visible: showAnswer });
 	}
 	let isLoadingDefinition = $state(false);
 	let definition = $state('');
@@ -147,6 +151,7 @@
 	}
 
 	async function compareDialects() {
+		trackEvent('sentences_dialect_comparison_opened', { dialect });
 		isComparing = true;
 		isComparisonModalOpen = true;
 		comparisonData = null;
@@ -374,6 +379,7 @@
 		// Map English words to Arabic equivalent and filter for Arabic characters only
 		targetArabicWord = mapEnglishToArabic(wordsArray);
 		const isSingleWordDefinition = wordsArray.length === 1 && countTokens(targetArabicWord) === 1;
+		trackEvent('sentences_definition_requested', { single_word: isSingleWordDefinition, dialect });
 
 		isLoadingDefinition = true;
 		openDefinitionModal();
@@ -511,6 +517,7 @@
 	
 	function clearReorderSelection() {
 		if (reorderChecked) return;
+		trackEvent('sentences_reorder_cleared', { dialect });
 		initializeShuffledWords();
 		selectedReorderWords = [];
 	}
@@ -518,26 +525,29 @@
 	function checkReorderAnswer() {
 		const userAnswer = selectedReorderWords.join(' ');
 		const correctAnswer = sentence.arabic;
-		
+
 		// Use normalization for comparison
 		const normalizedUser = normalizeArabicText(userAnswer);
 		const normalizedCorrect = normalizeArabicText(correctAnswer);
-		
+
 		reorderCorrect = normalizedUser === normalizedCorrect;
 		reorderChecked = true;
 		isCorrect = reorderCorrect;
+		trackEvent('sentences_reorder_submitted', { correct: reorderCorrect, dialect });
 	}
-	
+
 	function resetReorder() {
+		trackEvent('sentences_reorder_retry', { dialect });
 		initializeShuffledWords();
 		selectedReorderWords = [];
 		reorderChecked = false;
 		reorderCorrect = false;
 		isCorrect = false;
 	}
-	
+
 	// Reset mode-specific state when mode changes
 	function handleModeChange(newMode: PracticeMode) {
+		trackEvent('sentences_practice_mode_changed', { practice_mode: newMode });
 		practiceMode = newMode;
 		isCorrect = false;
 		
@@ -820,7 +830,7 @@
 			</button>
 			{#if sentence.arabicTashkeel}
 			<button
-				onclick={() => showTashkeel = !showTashkeel}
+				onclick={() => { showTashkeel = !showTashkeel; trackEvent('sentences_tashkeel_toggled', { visible: showTashkeel }); }}
 				class="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold rounded-lg transition-all duration-200 {showTashkeel ? 'bg-amber-600 text-white shadow-md' : 'bg-tile-500 text-text-300 hover:bg-tile-600 border border-tile-600'}"
 			>
 				<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -837,6 +847,7 @@
 		<!-- Audio button -->
 		<button 
 			onclick={() => {
+				trackEvent('sentences_audio_played', { dialect });
 				const audioBtn = document.querySelector('.sentence-audio-btn') as HTMLButtonElement;
 				audioBtn?.click();
 			}}

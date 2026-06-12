@@ -12,6 +12,7 @@
   import type { DialectComparisonSchema } from '$lib/utils/gemini-schemas';
   import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
   import { updateKeyboardStyle } from '$lib/helpers/update-keyboard-style';
+  import { trackEvent } from '$lib/analytics';
   import { TUTOR_SCENARIOS, type TutorScenario } from '$lib/constants/tutor-scenarios';
 
   let { data } = $props();
@@ -40,7 +41,8 @@
   async function handleWordClick(word: string, type: 'arabic' | 'english' | 'transliteration', message: ConversationMessage) {
     const cleanWord = word.replace(/[،,]/g, '');
     const isSingleWordDefinition = type === 'arabic' && cleanWord.trim().split(/\s+/).filter(Boolean).length === 1;
-    
+    trackEvent('tutor_word_definition_requested', { word: cleanWord, type, dialect: selectedDialect });
+
     setActiveWord({
       english: '',
       arabic: '',
@@ -163,6 +165,7 @@
 
   function toggleAutoPlay() {
     autoPlayAudio = !autoPlayAudio;
+    trackEvent('tutor_autoplay_toggled', { enabled: autoPlayAudio });
     if (typeof localStorage !== 'undefined') {
       localStorage.setItem('tutor-autoplay', autoPlayAudio ? 'on' : 'off');
     }
@@ -180,6 +183,7 @@
     const dialog = scenario.dialogs[selectedDialect];
     if (!dialog) return;
 
+    trackEvent('tutor_scenario_started', { scenario_id: scenario.id, dialect: selectedDialect });
     activeScenarioContext = scenario;
     hintsVisible = true;
     currentHint = null;
@@ -218,6 +222,7 @@
   }
 
   function exitScenario() {
+    trackEvent('tutor_scenario_exited', { scenario_id: activeScenarioContext?.id, dialect: selectedDialect });
     activeScenarioContext = null;
     currentHint = null;
     isLoadingHint = false;
@@ -225,6 +230,7 @@
 
   function toggleHints() {
     hintsVisible = !hintsVisible;
+    trackEvent('tutor_hints_toggled', { visible: hintsVisible });
     // Hints aren't fetched while hidden, so catch up when they're shown again.
     if (hintsVisible && !currentHint && !isLoadingHint && conversation.some((m) => m.type === 'tutor')) {
       fetchNextHint();
@@ -364,6 +370,7 @@
     if (practiceIndex < filteredPracticeSentences.length - 1) {
       practiceIndex++;
       practiceResult = null;
+      trackEvent('tutor_practice_navigated', { direction: 'next' });
     }
   }
 
@@ -371,12 +378,14 @@
     if (practiceIndex > 0) {
       practiceIndex--;
       practiceResult = null;
+      trackEvent('tutor_practice_navigated', { direction: 'previous' });
     }
   }
 
   function shufflePracticeSentences() {
     practiceIndex = Math.floor(Math.random() * filteredPracticeSentences.length);
     practiceResult = null;
+    trackEvent('tutor_practice_sentence_shuffled');
   }
 
   // Calculate text similarity (simple word-level comparison)
@@ -433,6 +442,7 @@
       isPracticeRecording = true;
       audioChunks = [];
       practiceResult = null;
+      trackEvent('tutor_practice_recording_started', { dialect: selectedDialect });
     } catch (error) {
       console.error('Error starting practice recording:', error);
     }
@@ -494,6 +504,7 @@
         similarity,
         feedback
       };
+      trackEvent('tutor_practice_submitted', { similarity, correct: similarity >= 70, dialect: selectedDialect });
 
     } catch (error) {
       console.error('Error processing practice recording:', error);
@@ -526,6 +537,7 @@
   let comparisonError = $state<string | null>(null);
 
   async function compareDialects(text: string, english?: string, transliteration?: string) {
+    trackEvent('tutor_dialect_comparison_opened', { dialect: selectedDialect });
     isComparing = true;
     isComparisonModalOpen = true;
     comparisonData = null;
@@ -579,6 +591,7 @@
       }
     }
     
+    trackEvent('tutor_dialect_changed', { dialect });
     selectedDialect = dialect as Dialect;
     conversation = [];
     conversationId = null; // Reset for new dialect
@@ -619,6 +632,7 @@
       audioChunks = [];
       recordingSeconds = 0;
       recordingTimer = setInterval(() => recordingSeconds++, 1000);
+      trackEvent('tutor_message_sent', { method: 'voice', language, dialect: selectedDialect });
     } catch (error) {
       console.error('Error starting recording:', error);
       recording = false;
@@ -896,6 +910,7 @@
 
     isProcessing = true;
     resetTypedInput();
+    trackEvent('tutor_message_sent', { method: 'text', language: inputLanguage, dialect: selectedDialect });
     try {
       await sendUserMessage(text, inputLanguage);
     } finally {
@@ -906,6 +921,7 @@
   // Pre-fill the composer with the current hint so the user can send or tweak it.
   function useHintInComposer() {
     if (!currentHint) return;
+    trackEvent('tutor_hint_used', { dialect: selectedDialect });
     inputMode = 'text';
     keyboard = 'physical';
     inputLanguage = 'ar';
@@ -1037,12 +1053,14 @@
 
   function discardConversation() {
     if (confirm('Discard this conversation without saving?')) {
+      trackEvent('tutor_conversation_discarded', { message_count: conversation.length, dialect: selectedDialect });
       actuallyCloseConversation();
     }
   }
   
   async function saveSummaryAndWords(selectedWords: VocabularyWord[]) {
     isSavingSession = true;
+    trackEvent('tutor_conversation_ended_saved', { dialect: selectedDialect, saved_words_count: selectedWords.length });
     try {
       const response = await fetch('/api/tutor-save-session', {
         method: 'POST',
@@ -1072,6 +1090,7 @@
   }
 
   async function playTutorAudio(text: string, dialect: Dialect, messageId?: string) {
+    trackEvent('tutor_audio_played', { dialect, auto_play: autoPlayAudio });
     try {
       const res = await fetch('/api/text-to-speech', {
         method: 'POST',

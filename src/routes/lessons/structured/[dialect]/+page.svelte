@@ -6,6 +6,7 @@
     import type { GeneratedLesson } from '$lib/schemas/curriculum-schema';
 	import { invalidateAll } from '$app/navigation';
 	import { onMount } from 'svelte';
+	import { trackEvent } from '$lib/analytics';
 
 	let { data } = $props();
 	let isModalOpen = $state(false);
@@ -141,6 +142,7 @@
     async function handleLessonClick(lessonNode: any) {
         // Check authentication first
         if (!data.user || !data.session) {
+            trackEvent('lessons_auth_required', { lesson_id: lessonNode.id, dialect: lessonNode.dialect });
             isAuthModalOpen = true;
             return;
         }
@@ -148,6 +150,7 @@
         if (lessonNode.status === 'locked') {
             // Check if it's paywalled
             if (lessonNode.isPaywalled) {
+                trackEvent('lessons_paywall_triggered', { lesson_id: lessonNode.id, dialect: lessonNode.dialect });
                 isModalOpen = true;
                 return;
             }
@@ -164,6 +167,12 @@
         }
         
         try {
+            trackEvent('lessons_lesson_opened', {
+                lesson_id: lessonNode.id,
+                dialect: lessonNode.dialect,
+                lesson_title: lessonNode.title
+            });
+
             // Mark lesson as started if user is logged in
             if (data.user) {
                 try {
@@ -229,6 +238,10 @@
             await invalidateAll();
         }}
         onLessonComplete={async (nextLessonId) => {
+            trackEvent('lessons_lesson_completed', {
+                lesson_id: activeLesson?.topicId,
+                dialect: activeLesson?.dialect
+            });
             // Close the lesson player first (completion already marked in LessonPlayer)
             activeLesson = null;
             

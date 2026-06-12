@@ -9,6 +9,7 @@
 	import { showStoryCreationToast, showStorySuccessToast, showTranscriptionToast, showTranscriptionSuccessToast, showErrorToast } from '$lib/helpers/toast-helpers';
 	import PaywallModal from '$lib/components/PaywallModal.svelte';
 	import { fetchUserReviewWords } from '$lib/helpers/fetch-review-words';
+	import { trackEvent } from '$lib/analytics';
 
 	let isPaywallModalOpen = $state(false);
 
@@ -63,6 +64,7 @@
 			goto('/signup');
 		}
 		isOpen = true;
+		trackEvent('stories_create_modal_opened', { dialect });
 	}
 
 	function closeModal() {
@@ -322,6 +324,16 @@
 			reviewWords
 		};
 		
+		trackEvent('stories_generation_started', {
+			dialect,
+			story_type: storyType,
+			difficulty: option,
+			sentence_count: sentenceCount,
+			creation_mode: creationMode,
+			use_review_words: useReviewWordsOnly,
+			source: 'create_modal'
+		});
+
 		// Show loading state and keep modal open
 		isLoading = true;
 		isTranscribing = creationMode === 'upload';
@@ -393,6 +405,7 @@
 				}
 
 				// Success! Show success toast with link (no auto-redirect)
+				trackEvent('stories_generation_succeeded', { story_id: storyResult.storyId, dialect: data.dialect, creation_mode: 'upload' });
 				showTranscriptionSuccessToast(processingToastId, storyResult.storyId);
 				
 				// Reset loading states and close modal so user can see the success
@@ -445,6 +458,7 @@
 				}
 
 				// Success! Show success toast with link (no auto-redirect)
+				trackEvent('stories_generation_succeeded', { story_id: chatgptres.storyId, dialect: data.dialect, creation_mode: 'generate' });
 				showStorySuccessToast(processingToastId, data.storyType, chatgptres.storyId);
 				
 				// Reset loading states and close modal so user can see the success
@@ -481,8 +495,9 @@
 			}
 			
 			// Show error toast
+			trackEvent('stories_generation_failed', { error_category: generationError, dialect, creation_mode: creationMode });
 			showErrorToast(processingToastId, generationError, errorDetails);
-			
+
 			// Reset loading states but keep modal open so user can see error and try again
 			isLoading = false;
 			isTranscribing = false;

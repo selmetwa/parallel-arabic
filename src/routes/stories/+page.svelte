@@ -8,6 +8,7 @@
 	import { START_HERE_TOPICS, ALL_TOPICS } from '$lib/constants/story-topics';
 	import type { StoryTopic } from '$lib/constants/story-topics';
 	import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
+	import { trackEvent } from '$lib/analytics';
 
 	let { data } = $props();
 
@@ -115,6 +116,7 @@
 	async function loadMoreStories() {
 		if (isLoadingStories || !hasMore || !nextCursor) return;
 		isLoadingStories = true;
+		trackEvent('stories_load_more', { loaded_count: allLoadedStories.length });
 		try {
 			const res = await fetch(`/api/stories?${buildStoryParams({ cursor: nextCursor })}`);
 			const result = await res.json();
@@ -167,6 +169,12 @@
 		generatingTopicName = topic.name;
 		isGeneratingModalOpen = true;
 		generationError = null;
+		trackEvent('stories_generation_started', {
+			topic_id: topic.id,
+			topic_name: topic.name,
+			dialect: data.user?.target_dialect ?? 'egyptian-arabic',
+			source: 'topic_card'
+		});
 		try {
 			const reviewWords = await fetchUserReviewWords(data.user.id, 'due-for-review');
 			const vocabularyWords = reviewWords
@@ -199,6 +207,7 @@
 			if (!res.ok) throw new Error(result.error || 'Failed to generate story');
 
 			const storyId: string = result.storyId;
+			trackEvent('stories_generation_succeeded', { story_id: storyId, topic_id: topic.id, dialect: data.user?.target_dialect ?? 'egyptian-arabic' });
 			topicStoryMap = { ...topicStoryMap, [topic.id]: storyId };
 			// Persist mapping in DB (fire-and-forget — navigation happens immediately)
 			fetch('/api/topic-story', {
@@ -211,6 +220,7 @@
 		} catch (err) {
 			isGeneratingModalOpen = false;
 			generationError = err instanceof Error ? err.message : 'Something went wrong. Please try again.';
+			trackEvent('stories_generation_failed', { topic_id: topic.id, dialect: data.user?.target_dialect ?? 'egyptian-arabic' });
 		} finally {
 			generatingTopicId = null;
 		}
@@ -221,6 +231,7 @@
 	}
 
 	function handleCardClick(topic: StoryTopic) {
+		trackEvent('stories_topic_card_clicked', { topic_id: topic.id, topic_name: topic.name, story_state: getTopicState(topic) });
 		if (!data.user) {
 			goto('/login');
 			return;
@@ -342,6 +353,7 @@
 		<div class="mb-6">
 			<a
 				href={`/generated_story/${data.resumeStory.id}`}
+				onclick={() => trackEvent('stories_story_resumed', { story_id: data.resumeStory?.id })}
 				class="group flex items-center justify-between bg-tile-500 border border-amber-400/50 rounded-xl p-4 sm:p-5 shadow-sm hover:bg-tile-600 hover:shadow-lg transition-all duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300"
 			>
 				<div class="flex flex-col gap-1 min-w-0">
@@ -478,7 +490,7 @@
 				<select
 					id="stories-dialect"
 					bind:value={filterDialect}
-					onchange={() => resetStories()}
+					onchange={() => { trackEvent('stories_filter_applied', { filter_type: 'dialect', value: filterDialect }); resetStories(); }}
 					class="w-full px-3 py-2 text-sm border border-tile-500 bg-tile-300 text-text-300 rounded-lg focus:outline-none focus:border-tile-600 focus:ring-1 focus:ring-tile-600"
 				>
 					<option value="all">All Dialects</option>
@@ -493,7 +505,7 @@
 				<select
 					id="stories-difficulty"
 					bind:value={filterDifficulty}
-					onchange={() => resetStories()}
+					onchange={() => { trackEvent('stories_filter_applied', { filter_type: 'difficulty', value: filterDifficulty }); resetStories(); }}
 					class="w-full px-3 py-2 text-sm border border-tile-500 bg-tile-300 text-text-300 rounded-lg focus:outline-none focus:border-tile-600 focus:ring-1 focus:ring-tile-600"
 				>
 					<option value="all">All Levels</option>
@@ -507,7 +519,7 @@
 			</div>
 			{#if data.user}
 				<button
-					onclick={() => { filterByMe = !filterByMe; resetStories(); }}
+					onclick={() => { filterByMe = !filterByMe; trackEvent('stories_filter_applied', { filter_type: 'by_me', value: filterByMe }); resetStories(); }}
 					class="px-4 py-2 text-sm font-medium rounded-lg border transition-colors
 						{filterByMe
 							? 'bg-tile-600 border-tile-600 text-text-300'
@@ -543,6 +555,7 @@
 					{@const canReadFull = data.hasActiveSubscription}
 					<a
 						href={`/generated_story/${story.id}`}
+						onclick={() => trackEvent('stories_story_opened', { story_id: story.id, dialect: story.dialect, difficulty: story.difficulty, is_completed: isCompleted })}
 						class="group relative flex flex-col bg-tile-400 border rounded-xl p-4 shadow-sm hover:bg-tile-500 hover:shadow-lg transition-all duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300 {isCompleted ? 'border-green-500/50 hover:border-green-500/80' : 'border-tile-500 hover:border-tile-500'}"
 					>
 						{#if isCompleted}

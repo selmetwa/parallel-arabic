@@ -32,6 +32,7 @@
   import StoryAudioButton from '$lib/components/StoryAudioButton.svelte';
   import InlineAudioButton from '$lib/components/InlineAudioButton.svelte';
   import { goto } from '$app/navigation';
+  import { trackEvent } from '$lib/analytics';
 
   interface Props {
     data: PageData;
@@ -61,6 +62,12 @@
   }
 
   onMount(() => {
+    trackEvent('story_viewed', {
+      story_id: (data as any).storyData?.id,
+      dialect: storyDialect,
+      difficulty: (data as any).storyData?.difficulty,
+      sentence_count: story?.sentences?.length ?? 0
+    });
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   });
@@ -218,6 +225,12 @@
 			const result = await res.json();
 			if (result.success) {
 				storyXpAwarded = true;
+				trackEvent('story_completed', {
+					story_id: storyId,
+					xp_awarded: result.xpAwarded,
+					leveled_up: result.leveledUp,
+					is_daily_challenge: !!challengeId
+				});
 				let totalXpAwarded = result.xpAwarded;
 				let finalTotalXp = result.newTotalXp;
 				let finalLevel = result.newLevel;
@@ -510,6 +523,7 @@
             <input
               type="checkbox"
               bind:checked={showEnglish}
+              onchange={() => trackEvent('story_display_toggled', { setting_name: 'english', enabled: showEnglish })}
               class="sr-only peer"
             />
             <div class="w-10 h-5 bg-tile-600 rounded-full peer peer-checked:bg-blue-500 transition-colors"></div>
@@ -524,6 +538,7 @@
             <input
               type="checkbox"
               bind:checked={showTransliteration}
+              onchange={() => trackEvent('story_display_toggled', { setting_name: 'transliteration', enabled: showTransliteration })}
               class="sr-only peer"
             />
             <div class="w-10 h-5 bg-tile-600 rounded-full peer peer-checked:bg-blue-500 transition-colors"></div>
@@ -539,6 +554,7 @@
               <input
                 type="checkbox"
                 bind:checked={showTashkeel}
+                onchange={() => trackEvent('story_display_toggled', { setting_name: 'tashkeel', enabled: showTashkeel })}
                 class="sr-only peer"
               />
               <div class="w-10 h-5 bg-tile-600 rounded-full peer peer-checked:bg-blue-500 transition-colors"></div>
@@ -917,6 +933,7 @@
                     showHint: questionState.showHint
                   };
                   quizStates = { ...quizStates };
+                  trackEvent('story_quiz_answer_submitted', { story_id: (data as any).storyData?.id, question_index: qIndex, is_correct: isCorrectOption });
                 }}
                 disabled={questionState.isAnswered}
                 class={cn(
@@ -981,6 +998,7 @@
                     showHint: !questionState.showHint
                   };
                   quizStates = { ...quizStates };
+                  if (quizStates[qIndex].showHint) trackEvent('story_quiz_hint_viewed', { story_id: (data as any).storyData?.id, question_index: qIndex });
                 }}
                 class="flex items-center gap-2 text-sm text-text-200 hover:text-text-300 transition-colors"
               >

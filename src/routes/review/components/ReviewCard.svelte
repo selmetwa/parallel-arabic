@@ -8,6 +8,7 @@
   import type { DialectComparisonSchema } from '$lib/utils/gemini-schemas';
   import cn from 'classnames';
   import { filterArabicCharacters } from '$lib/utils/arabic-normalization';
+  import { trackEvent } from '$lib/analytics';
 
   interface ReviewWord {
     id: string;
@@ -61,6 +62,7 @@
   let comparisonError = $state<string | null>(null);
 
   async function compareDialects() {
+    trackEvent('review_card_dialect_comparison_requested', { word_id: word.id, dialect: word.dialect });
     isComparing = true;
     isComparisonModalOpen = true;
     comparisonData = null;
@@ -181,6 +183,7 @@
 
     isFlipping = true;
     showAnswer = !showAnswer;
+    trackEvent('review_card_flipped', { word_id: word.id, revealed: showAnswer });
 
     if (!showAnswer) {
       clearSelection();
@@ -327,7 +330,8 @@
     
     isLoadingDefinition = true;
     isDefinitionModalOpen = true;
-    
+    trackEvent('review_card_definition_requested', { word_id: word.id, selected_text: wordsText, single_word: isSingleWordDefinition });
+
     const wordText = wordsArray.length === 1 ? wordsArray[0] : `the phrase "${wordsText}"`;
     const question = `What does ${wordText} mean in ${dialectName[word.dialect] || word.dialect}? Considering the following sentences:
 		Arabic: "${word.arabic}"
@@ -437,7 +441,7 @@
           </span>
           <button
             type="button"
-            onclick={() => { isStatsModalOpen = true; }}
+            onclick={() => { isStatsModalOpen = true; trackEvent('review_card_stats_opened', { word_id: word.id }); }}
             class="inline-flex items-center px-2 py-0.5 bg-tile-600 text-text-200 rounded-full text-xs hover:bg-tile-500 transition-colors"
             title="View word statistics"
           >
@@ -499,7 +503,7 @@
         {/if}
         <div class="flex flex-col items-center gap-3 mt-4">
           <div class="flex flex-row justify-center gap-2">
-            <Button onClick={() => (showHint = !showHint)} type="button">
+            <Button onClick={() => { showHint = !showHint; trackEvent('review_card_hint_toggled', { word_id: word.id, visible: showHint }); }} type="button">
               {showHint ? 'Hide' : 'Show'} Hint
             </Button>
             <AudioButton text={word.arabic} dialect={word.dialect as Dialect} audioUrl={word.audioUrl}>

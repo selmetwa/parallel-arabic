@@ -1,6 +1,7 @@
 <script lang="ts">
 	import PaywallModal from '$lib/components/PaywallModal.svelte';
 	import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
+	import { trackEvent } from '$lib/analytics';
 
 	let { data } = $props();
 	let isModalOpen = $state(false);
@@ -183,7 +184,7 @@
 
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 				<!-- Structured Lessons -->
-				<a href="/lessons/structured" class="group block rounded-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300">
+				<a href="/lessons/structured" onclick={() => trackEvent('lessons_path_selected', { path: 'structured' })} class="group block rounded-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300">
 					<article class="flex flex-col h-full bg-tile-400 border border-tile-500 rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0">
 						<div class="w-14 h-14 bg-tile-300 border border-tile-500 rounded-xl flex items-center justify-center mb-4">
 							<span class="text-3xl">📚</span>
@@ -205,7 +206,7 @@
 				</a>
 
 				<!-- Customizable Lessons (purple accent) -->
-				<a href="/lessons/custom" class="group block rounded-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300">
+				<a href="/lessons/custom" onclick={() => trackEvent('lessons_path_selected', { path: 'custom' })} class="group block rounded-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300">
 					<article class="flex flex-col h-full bg-tile-400 border border-purple-500/50 rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0">
 						<div class="w-14 h-14 bg-purple-500/15 border border-purple-500/40 rounded-xl flex items-center justify-center mb-4">
 							<span class="text-3xl">🎨</span>

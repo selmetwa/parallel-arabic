@@ -11,6 +11,7 @@
 	import AudioButton from '$lib/components/AudioButton.svelte';
 	import ArabicWordDisplay from '$lib/components/dialect-shared/story/components/ArabicWordDisplay.svelte';
 	import { Mode, type KeyWord } from '$lib/types/index';
+	import { trackEvent } from '$lib/analytics';
 
 	let { data, activeWordObj = $bindable({
 		english: '',
@@ -233,6 +234,7 @@
 								<input
 									type="checkbox"
 									bind:checked={showEnglish}
+									onchange={() => trackEvent('stories_display_toggled', { setting_name: 'english', enabled: showEnglish, story_type: 'static' })}
 									class="sr-only peer"
 								/>
 								<div class="w-10 h-5 bg-tile-600 rounded-full peer peer-checked:bg-blue-500 transition-colors"></div>
@@ -247,6 +249,7 @@
 								<input
 									type="checkbox"
 									bind:checked={showTransliteration}
+									onchange={() => trackEvent('stories_display_toggled', { setting_name: 'transliteration', enabled: showTransliteration, story_type: 'static' })}
 									class="sr-only peer"
 								/>
 								<div class="w-10 h-5 bg-tile-600 rounded-full peer peer-checked:bg-blue-500 transition-colors"></div>
@@ -262,6 +265,7 @@
 								<input
 									type="checkbox"
 									bind:checked={showTashkeel}
+									onchange={() => trackEvent('stories_display_toggled', { setting_name: 'tashkeel', enabled: showTashkeel, story_type: 'static' })}
 									class="sr-only peer"
 								/>
 								<div class="w-10 h-5 bg-tile-600 rounded-full peer peer-checked:bg-blue-500 transition-colors"></div>
