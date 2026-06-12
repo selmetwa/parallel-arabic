@@ -1,6 +1,7 @@
 // Modules and libraries
 import { StripeService } from '$lib/services/stripe.service';
 import { redirect } from '@sveltejs/kit';
+import { getPostHogClient } from '$lib/server/posthog';
 
 // Types and variables
 import type { PageServerLoad } from './$types';
@@ -21,13 +22,13 @@ export const load: PageServerLoad = async ({ url, locals }) => {
 
 	const stripeSessionId = url.searchParams.get('session_id');
 	if (stripeSessionId == null) {
-    console.log('❌ No stripe session ID found');
+		console.log('❌ No stripe session ID found');
 		redirect(302, '/pricing/error');
 	}
 
 	const stripeSession = await StripeService.getSession(stripeSessionId);
 	if (stripeSession?.payment_status != 'paid') {
-    console.log('❌ Stripe session payment status is not paid');
+		console.log('❌ Stripe session payment status is not paid');
 		redirect(302, '/pricing/error');
 	}
 
@@ -49,10 +50,10 @@ export const load: PageServerLoad = async ({ url, locals }) => {
 	}
 
 	const subscriberId = String(stripeSession.subscription ?? '');
-	
+
 	// Get the actual subscription details from Stripe instead of hardcoding 30 days
 	let subscriptionEndDate: number;
-	
+
 	if (subscriberId) {
 		try {
 			const subscription = await StripeService.getSubscription(subscriberId);
@@ -87,7 +88,7 @@ export const load: PageServerLoad = async ({ url, locals }) => {
 			.update({
 				is_subscriber: true,
 				subscriber_id: subscriberId,
-				subscription_end_date: subscriptionEndDate  // Keep as Unix timestamp (bigint)
+				subscription_end_date: subscriptionEndDate // Keep as Unix timestamp (bigint)
 			})
 			.eq('id', userId)
 			.select();
@@ -97,7 +98,20 @@ export const load: PageServerLoad = async ({ url, locals }) => {
 			redirect(302, '/pricing/error');
 		}
 
-    console.log('Result:', updatedUser);
+		console.log('Result:', updatedUser);
+
+		if (userId) {
+			const posthog = getPostHogClient();
+			posthog.capture({
+				distinctId: String(userId),
+				event: 'subscription_started',
+				properties: {
+					subscription_id: subscriberId,
+					subscription_end_date: subscriptionEndDate
+				}
+			});
+			await posthog.flush();
+		}
 
 		return {
 			session: authSession,

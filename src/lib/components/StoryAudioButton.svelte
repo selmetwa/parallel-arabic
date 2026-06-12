@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Howl } from 'howler';
   import type { Dialect } from '$lib/types/index';
+  import { trackEvent } from '$lib/analytics';
 
   interface StorySentence {
     arabic: { text: string };
@@ -153,6 +154,9 @@
   }
 
   function toggleStoryAudio() {
+    if (!isPlaying) {
+      trackEvent('story_audio_played', { story_id: storyId, dialect, playback_rate: playbackRate });
+    }
     // If currently playing, pause
     if (isPlaying && currentSound && currentSound.playing()) {
       currentSound.pause();

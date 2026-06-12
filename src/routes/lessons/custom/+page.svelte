@@ -2,6 +2,7 @@
 	import PaywallModal from '$lib/components/PaywallModal.svelte';
 	import AuthModal from '$lib/components/AuthModal.svelte';
 	import CreateLessonModal from '$lib/components/dialect-shared/lesson/components/CreateLessonModal.svelte';
+	import { trackEvent } from '$lib/analytics';
 
 	let { data } = $props();
 	let isModalOpen = $state(false);
@@ -12,9 +13,11 @@
 		// Check authentication before navigating
 		if (!data.session || !data.user) {
 			e.preventDefault();
+			trackEvent('lessons_auth_required', { lesson_id: lessonId });
 			isAuthModalOpen = true;
 			return false;
 		}
+		trackEvent('lessons_custom_accessed', { lesson_id: lessonId, view: activeView });
 		return true;
 	}
 
@@ -232,14 +235,14 @@
 			<div class="flex p-1 bg-tile-400 border border-tile-500 rounded-lg w-fit mb-4">
 				<button
 					type="button"
-					onclick={() => activeView = 'all'}
+					onclick={() => { activeView = 'all'; trackEvent('lessons_custom_view_toggled', { view: 'all', lessons_count: userGeneratedLessons.length }); }}
 					class="px-4 py-2 text-sm rounded-md transition-all duration-200 font-semibold {activeView === 'all' ? 'bg-tile-600 text-text-300 shadow-sm' : 'text-text-200 hover:text-text-300'}"
 				>
 					All Lessons
 				</button>
 				<button
 					type="button"
-					onclick={() => activeView = 'mine'}
+					onclick={() => { activeView = 'mine'; trackEvent('lessons_custom_view_toggled', { view: 'mine', lessons_count: privateLessons.length }); }}
 					class="px-4 py-2 text-sm rounded-md transition-all duration-200 font-semibold {activeView === 'mine' ? 'bg-tile-600 text-text-300 shadow-sm' : 'text-text-200 hover:text-text-300'}"
 				>
 					🔒 My Private Lessons
@@ -259,6 +262,7 @@
 						type="text"
 						placeholder="Search lessons by title or description..."
 						bind:value={searchQuery}
+						onchange={() => searchQuery.trim() && trackEvent('lessons_custom_searched', { query: searchQuery, results_count: filteredAndSortedLessons.length })}
 						class="w-full pl-10 pr-4 py-2.5 text-sm border border-tile-500 bg-tile-300 text-text-300 rounded-lg focus:outline-none focus:border-tile-600 focus:ring-1 focus:ring-tile-600"
 					/>
 					<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -274,6 +278,7 @@
 					<select
 						id="dialect-filter-lessons"
 						bind:value={filterDialect}
+						onchange={() => trackEvent('lessons_custom_filter_changed', { filter_type: 'dialect', value: filterDialect, results_count: filteredAndSortedLessons.length })}
 						class="w-full px-3 py-2 text-sm border border-tile-500 bg-tile-300 text-text-300 rounded-lg focus:outline-none focus:border-tile-600 focus:ring-1 focus:ring-tile-600 cursor-pointer"
 					>
 						{#each filterDialectOptions as option}
@@ -288,6 +293,7 @@
 					<select
 						id="level-filter-lessons"
 						bind:value={filterLevel}
+						onchange={() => trackEvent('lessons_custom_filter_changed', { filter_type: 'level', value: filterLevel, results_count: filteredAndSortedLessons.length })}
 						class="w-full px-3 py-2 text-sm border border-tile-500 bg-tile-300 text-text-300 rounded-lg focus:outline-none focus:border-tile-600 focus:ring-1 focus:ring-tile-600 cursor-pointer"
 					>
 						{#each levelOptions as option}
@@ -302,6 +308,7 @@
 					<select
 						id="sort-filter-lessons"
 						bind:value={sortBy}
+						onchange={() => trackEvent('lessons_custom_sorted', { sort_by: sortBy })}
 						class="w-full px-3 py-2 text-sm border border-tile-500 bg-tile-300 text-text-300 rounded-lg focus:outline-none focus:border-tile-600 focus:ring-1 focus:ring-tile-600 cursor-pointer"
 					>
 						<option value="newest">Newest First</option>

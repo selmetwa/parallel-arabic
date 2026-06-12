@@ -16,6 +16,7 @@
 	import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
 	import { fetchUserReviewWords } from '$lib/helpers/fetch-review-words';
 	import { sentencePractice as session } from '$lib/store/generated-content.svelte';
+	import { trackEvent } from '$lib/analytics';
 
 	let { data } = $props();
 
@@ -87,6 +88,7 @@
 		} else {
 			selectedLearningTopics = [...selectedLearningTopics, topicValue];
 		}
+		trackEvent('sentences_learning_topic_toggled', { topic: topicValue, selected: selectedLearningTopics.includes(topicValue) });
 	}
 
 	async function loadReviewWords() {
@@ -149,6 +151,7 @@
 			}
 			
 			vocabularyFile = file;
+			trackEvent('sentences_vocab_file_uploaded', { file_size_kb: Math.round(file.size / 1024) });
 		} else {
 			vocabularyFile = null;
 		}
@@ -188,6 +191,12 @@
 		isLoading = true;
 		isError = false;
 		errorMessage = '';
+		trackEvent('sentences_generation_started', {
+			difficulty: option,
+			dialect: selectedDialect,
+			vocabulary_source: useReviewWordsOnly ? 'review_words' : vocabularyInputMode,
+			learning_topics: selectedLearningTopics
+		});
 		
 		// Show processing toast
 		const toastId = showSentenceGenerationToast(selectedDialect, 5);
@@ -265,6 +274,7 @@
 
 			// Show success toast
 			showSentenceSuccessToast(toastId, newSentences.length, selectedDialect);
+			trackEvent('sentences_generation_completed', { sentence_count: newSentences.length, dialect: selectedDialect });
 			
 		} catch (error) {
 			console.error('Error generating sentences:', error);
@@ -298,6 +308,7 @@
 		updateSentencesViewed();
 		session.index = session.index + 1;
 		updateUrl('sentence', (session.index+1).toString());
+		trackEvent('sentences_navigated', { direction: 'next', index: session.index });
 	}
 
 	function previous() {
@@ -306,12 +317,14 @@
 		}
 		session.index = session.index - 1;
 		updateUrl('sentence', (session.index+1).toString());
+		trackEvent('sentences_navigated', { direction: 'previous', index: session.index });
 	}
 
 	function setMode(event: any) {
 		const newMode = event.target.value || 'write';
 		mode = newMode;
 		updateUrl('mode', newMode);
+		trackEvent('sentences_practice_mode_selected', { mode: newMode });
 	}
 
 	function setOption(event: any) {
@@ -332,10 +345,12 @@
 	}
 
 	function loadMoreSentences() {
+		trackEvent('sentences_load_more_requested', { dialect: selectedDialect, difficulty: option });
 		generateSentence(option, [...session.sentences]);
 	}
 
 	function resetSentences() {
+		trackEvent('sentences_reset', { dialect: selectedDialect });
 		session.sentences = [];
 		session.index = 0;
 		updateUrl('sentence', '0');

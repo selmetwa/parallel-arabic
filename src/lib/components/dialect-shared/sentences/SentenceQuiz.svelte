@@ -6,6 +6,7 @@
 	import { userXp, userLevel } from '$lib/store/xp-store';
 	import { showXpToast } from '$lib/helpers/toast-helpers';
 	import { LEVEL_TIERS } from '$lib/helpers/xp-levels';
+	import { trackEvent } from '$lib/analytics';
 
 	interface Props {
 		index?: number;
@@ -102,6 +103,7 @@
 			isIncorrect = true;
 			isCorrect = false;
 		}
+		trackEvent('sentences_quiz_answer_selected', { correct: isCorrect });
 	}
 
 	$effect(() => {

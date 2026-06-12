@@ -5,6 +5,7 @@
   import { toast } from 'svelte-sonner';
   import cn from 'classnames';
   import type { Dialect } from '$lib/types';
+  import { trackEvent } from '$lib/analytics';
 
   interface ReviewWord {
     id: string;
@@ -82,6 +83,8 @@
       }
 
       // Remove word from local state
+      const deleted = words.find(w => w.id === wordId);
+      trackEvent('review_word_deleted', { word_id: wordId, status_before_delete: deleted?.status, dialect: deleted?.dialect });
       words = words.filter(w => w.id !== wordId);
       toast.success('Word removed successfully');
     } catch (err) {
@@ -174,6 +177,7 @@
       sortBy = newSortBy;
       sortOrder = 'desc';
     }
+    trackEvent('review_all_words_sorted', { sort_by: sortBy, sort_order: sortOrder });
   }
 
   const statusCounts = $derived.by(() => {
@@ -199,7 +203,7 @@
       <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
         <div class="flex flex-wrap gap-2">
           <button
-            onclick={() => filterStatus = 'all'}
+            onclick={() => { filterStatus = 'all'; trackEvent('review_all_words_filtered', { filter_status: 'all', results_count: filteredWords.length }); }}
             class={cn(
               "px-4 py-2 rounded-lg border transition-colors",
               filterStatus === 'all'
@@ -215,6 +219,7 @@
           type="text"
           placeholder="Search words..."
           bind:value={searchQuery}
+          onchange={() => searchQuery.trim() && trackEvent('review_all_words_searched', { query: searchQuery, results_count: filteredWords.length })}
           class="px-4 py-2 rounded-lg border border-tile-500 bg-tile-300 text-text-100 placeholder-text-200 focus:outline-none focus:ring-2 focus:ring-tile-500"
         />
       </div>

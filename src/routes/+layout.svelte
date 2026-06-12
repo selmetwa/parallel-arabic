@@ -15,6 +15,7 @@
 	import { pwaInfo } from 'virtual:pwa-info';
 	import { dev, browser } from '$app/environment';
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';
+	import posthog from 'posthog-js';
 	import { getPageMeta, generateStructuredData, formatDialectName } from '$lib/utils/seo';
 	import {
 		importJobStore,
@@ -158,11 +159,26 @@
 			}
 		}
 
+		// Identify user in PostHog when session is available
+		if (data.user?.id) {
+			posthog.identify(data.user.id, { email: data.user.email });
+		}
+
 		// Listen to auth changes and invalidate layout when session changes
 		const { data: authData } = supabase.auth.onAuthStateChange((event: string, newSession: any) => {
-			console.log('[auth state change]', event, 'session:', !!newSession, 'expires_at:', newSession?.expires_at);
+			console.log(
+				'[auth state change]',
+				event,
+				'session:',
+				!!newSession,
+				'expires_at:',
+				newSession?.expires_at
+			);
 			if (newSession?.expires_at !== session?.expires_at) {
 				invalidate('supabase:auth');
+			}
+			if (event === 'SIGNED_OUT') {
+				posthog.reset();
 			}
 		});
 
@@ -228,7 +244,7 @@
 			return 'stories';
 		}
 		if (path.startsWith('/generated_story/')) return 'generated_story';
-	if (path === '/review/import') return 'import';
+		if (path === '/review/import') return 'import';
 		if (path === '/review' || path.startsWith('/review/')) return 'review';
 		if (path === '/tutor') return 'tutor';
 		if (path === '/stories') return 'stories';
@@ -238,7 +254,7 @@
 		if (path === '/vocabulary') return 'vocabulary';
 		if (path === '/about') return 'about';
 		if (path === '/faq') return 'faq';
-return 'home';
+		return 'home';
 	});
 
 	// Get page-specific data from page store
@@ -334,7 +350,9 @@ return 'home';
 			const difficulty = data.storyData.difficulty || '';
 			return generateStructuredData('generated_story', {
 				title: `${englishTitle} / ${arabicTitle} - ${dialectName} Arabic Story`,
-				description: `A ${difficulty} ${dialectName} Arabic story: ${englishTitle}${arabicTitle ? ` / ${arabicTitle}` : ''}`
+				description: `A ${difficulty} ${dialectName} Arabic story: ${englishTitle}${
+					arabicTitle ? ` / ${arabicTitle}` : ''
+				}`
 			});
 		}
 
@@ -427,7 +445,11 @@ return 'home';
 
 <!-- XP Progress Bar - fixed at top (hidden during onboarding) -->
 {#if !showOnboarding}
-	<XpBar loggedIn={!!data.session} initialXp={data.userXp ?? 0} initialLevel={data.userLevel ?? 1} />
+	<XpBar
+		loggedIn={!!data.session}
+		initialXp={data.userXp ?? 0}
+		initialLevel={data.userLevel ?? 1}
+	/>
 {/if}
 
 <!-- Desktop Sidebar -->
@@ -438,7 +460,9 @@ return 'home';
 	<button
 		type="button"
 		onclick={() => sidebarCollapsed.set(false)}
-		class="fixed left-4 z-50 hidden rounded-lg border-2 border-tile-600 bg-tile-500 p-3 text-text-300 shadow-lg transition-all duration-300 hover:bg-tile-600 lg:flex {data.session ? 'top-10' : 'top-4'}"
+		class="fixed left-4 z-50 hidden rounded-lg border-2 border-tile-600 bg-tile-500 p-3 text-text-300 shadow-lg transition-all duration-300 hover:bg-tile-600 lg:flex {data.session
+			? 'top-10'
+			: 'top-4'}"
 		aria-label="Expand sidebar"
 		title="Expand sidebar"
 	>

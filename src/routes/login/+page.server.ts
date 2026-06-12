@@ -1,50 +1,61 @@
-import { redirect } from '@sveltejs/kit'
-import type { Actions } from './$types'
+import { redirect } from '@sveltejs/kit';
+import type { Actions } from './$types';
+import { getPostHogClient } from '$lib/server/posthog';
 
 export const load = async ({ locals: { safeGetSession } }) => {
-  const { session } = await safeGetSession()
+	const { session } = await safeGetSession();
 
-  // If already logged in, redirect to home
-  if (session) {
-    redirect(303, '/')
-  }
+	// If already logged in, redirect to home
+	if (session) {
+		redirect(303, '/');
+	}
 
-  return {}
-}
+	return {};
+};
 
 export const actions: Actions = {
-  login: async ({ request, locals: { supabase } }) => {
-    const formData = await request.formData()
-    const email = formData.get('email') as string
-    const password = formData.get('password') as string
+	login: async ({ request, locals: { supabase } }) => {
+		const formData = await request.formData();
+		const email = formData.get('email') as string;
+		const password = formData.get('password') as string;
 
-    const { data, error } = await supabase.auth.signInWithPassword({ email, password })
+		const { data, error } = await supabase.auth.signInWithPassword({ email, password });
 
-    if (error) {
-      return {
-        error: error.message
-      }
-    }
+		if (error) {
+			return {
+				error: error.message
+			};
+		}
 
-    redirect(303, '/')
-  },
+		if (data.user) {
+			const posthog = getPostHogClient();
+			posthog.capture({
+				distinctId: data.user.id,
+				event: 'user_logged_in',
+				properties: { method: 'email' }
+			});
+			await posthog.flush();
+		}
 
-  resetPassword: async ({ request, locals: { supabase }, url }) => {
-    const formData = await request.formData()
-    const email = formData.get('email') as string
+		redirect(303, '/');
+	},
 
-    const { error } = await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: `${url.origin}/auth/reset-password`
-    })
+	resetPassword: async ({ request, locals: { supabase }, url }) => {
+		const formData = await request.formData();
+		const email = formData.get('email') as string;
 
-    if (error) {
-      return {
-        error: error.message
-      }
-    }
+		const { error } = await supabase.auth.resetPasswordForEmail(email, {
+			redirectTo: `${url.origin}/auth/reset-password`
+		});
 
-    return {
-      message: 'Check your email for the password reset link!'
-    }
-  }
-}
+		if (error) {
+			return {
+				error: error.message
+			};
+		}
+
+		return {
+			message: 'Check your email for the password reset link!'
+		};
+	}
+};

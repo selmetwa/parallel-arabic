@@ -1,6 +1,7 @@
 <script lang="ts">
 	import InlineAudioButton from '$lib/components/InlineAudioButton.svelte';
 	import type { Dialect } from '$lib/types/index';
+	import { trackEvent } from '$lib/analytics';
 
 	interface Exercise {
 		id: string;
@@ -72,6 +73,7 @@
 		);
 		isCorrect = selectedOption?.isCorrect || false;
 		showResult = true;
+		trackEvent('lessons_exercise_submitted', { exercise_type: 'multiple-choice', is_correct: isCorrect, dialect });
 	}
 
 
@@ -134,6 +136,7 @@
 		isCorrect = allCorrect;
 		showResult = true;
 		allMatched = true;
+		trackEvent('lessons_exercise_submitted', { exercise_type: 'matching', is_correct: isCorrect, dialect });
 	}
 
 	function handleFillInBlank(blankIndex: number, optionValue: string) {
@@ -172,6 +175,7 @@
 		
 		isCorrect = allCorrect;
 		showResult = true;
+		trackEvent('lessons_exercise_submitted', { exercise_type: 'fill-in-blank', is_correct: isCorrect, dialect });
 	}
 
 	function resetExercise() {

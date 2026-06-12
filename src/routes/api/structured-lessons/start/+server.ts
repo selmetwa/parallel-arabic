@@ -1,12 +1,13 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { v4 as uuidv4 } from 'uuid';
+import { getPostHogClient } from '$lib/server/posthog';
 
 export const POST: RequestHandler = async ({ request, locals }) => {
 	const { supabase, safeGetSession } = locals;
-	
+
 	const { session, user } = await safeGetSession();
-	
+
 	if (!session || !user) {
 		return json({ success: false, error: 'Unauthorized' }, { status: 401 });
 	}
@@ -49,20 +50,18 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 			}
 		} else {
 			// Create new record
-			const { error: insertError } = await supabase
-				.from('structured_lesson_progress')
-				.insert({
-					id: uuidv4(),
-					user_id: user.id,
-					topic_id: topicId,
-					dialect: dialect,
-					status: 'in_progress',
-					started_at: now,
-					last_accessed_at: now,
-					progress_percentage: 0,
-					created_at: now,
-					updated_at: now
-				});
+			const { error: insertError } = await supabase.from('structured_lesson_progress').insert({
+				id: uuidv4(),
+				user_id: user.id,
+				topic_id: topicId,
+				dialect: dialect,
+				status: 'in_progress',
+				started_at: now,
+				last_accessed_at: now,
+				progress_percentage: 0,
+				created_at: now,
+				updated_at: now
+			});
 
 			if (insertError) {
 				console.error('Error creating lesson progress:', insertError);
@@ -70,10 +69,17 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 			}
 		}
 
+		const posthog = getPostHogClient();
+		posthog.capture({
+			distinctId: user.id,
+			event: 'lesson_started',
+			properties: { topic_id: topicId, dialect }
+		});
+		await posthog.flush();
+
 		return json({ success: true });
 	} catch (error) {
 		console.error('Error in start lesson endpoint:', error);
 		return json({ success: false, error: 'Internal server error' }, { status: 500 });
 	}
 };
-

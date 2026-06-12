@@ -42,6 +42,10 @@ const config = {
 				})
 			: adapterVercel({ runtime: 'nodejs20.x' }),
 
+		paths: {
+			relative: false
+		},
+
 		csrf: {
 			checkOrigin: false
 		},

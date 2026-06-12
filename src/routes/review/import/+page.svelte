@@ -6,6 +6,7 @@
   import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
   import { toast } from 'svelte-sonner';
   import { importJobStore, startImportJob } from '$lib/stores/import-job';
+  import { trackEvent } from '$lib/analytics';
 
   interface Props {
     data: PageData;
@@ -98,6 +99,11 @@
   async function importWords() {
     isImporting = true;
     importResult = null;
+    trackEvent('review_import_started', {
+      import_mode: importMode,
+      dialect: importMode === 'csv' ? csvDialect : importMode === 'paste' ? pasteDialect : selectedDialect,
+      category: importMode === 'category' ? selectedCategory : undefined
+    });
 
     try {
       if (importMode === 'csv') {
@@ -169,6 +175,13 @@
           message: result.message
         };
 
+        trackEvent('review_import_completed', {
+          import_mode: 'category',
+          dialect: selectedDialect,
+          imported_count: result.imported || 0,
+          skipped_count: result.skipped || 0
+        });
+
         toast.success(result.message || 'Words imported successfully!', {
           description: result.imported > 0
             ? `${result.imported} word${result.imported !== 1 ? 's' : ''} added to your review deck`
@@ -213,14 +226,14 @@
         <div class="flex rounded-xl border-2 border-tile-600 overflow-hidden">
           <button
             type="button"
-            onclick={() => { importMode = 'csv'; }}
+            onclick={() => { importMode = 'csv'; trackEvent('review_import_mode_selected', { mode: 'csv' }); }}
             class="flex-1 py-3 px-4 text-sm font-medium transition-colors {importMode === 'csv' ? 'bg-tile-600 text-text-300' : 'bg-tile-300/50 text-text-200 hover:bg-tile-400/50'}"
           >
             Upload File
           </button>
           <button
             type="button"
-            onclick={() => { importMode = 'paste'; }}
+            onclick={() => { importMode = 'paste'; trackEvent('review_import_mode_selected', { mode: 'paste' }); }}
             class="flex-1 py-3 px-4 text-sm font-medium transition-colors border-l border-r border-tile-600 {importMode === 'paste' ? 'bg-tile-600 text-text-300' : 'bg-tile-300/50 text-text-200 hover:bg-tile-400/50'}"
           >
             Paste Text

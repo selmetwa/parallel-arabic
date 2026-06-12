@@ -14,6 +14,7 @@
   import SubscribeButton from '$lib/components/SubscribeButton.svelte';
   import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
   import { fetchUserReviewWords } from '$lib/helpers/fetch-review-words';
+  import { trackEvent } from '$lib/analytics';
 
   interface Props {
     data: PageData;
@@ -47,6 +48,7 @@
   $effect(() => {
     if (sessionComplete && !reviewCycleXpAwarded && reviewedCount > 0) {
       reviewCycleXpAwarded = true;
+      trackEvent('review_session_completed', { total_reviewed: reviewedCount, forgotten_count: forgottenWords.length });
       fetch('/api/award-xp', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -152,7 +154,12 @@
 
       savedCount = saveResult.saved;
       generationComplete = true;
-      
+      trackEvent('review_generated_items_saved', {
+        type: generationType,
+        count: saveResult.saved,
+        dialect: selectedDialect
+      });
+
       // Clear selections and close modal
       selectedItems = new Set();
       generatedItems = [];
@@ -365,6 +372,7 @@
 
       reviewedCount++;
       reviewedWordIds.add(word.id);
+      trackEvent('review_word_answered', { word_id: word.id, difficulty, correct: difficulty >= 1, dialect: word.dialect });
       console.log({ difficulty });
       if (difficulty >= 1) {
         fetch('/api/award-xp', {
@@ -448,6 +456,7 @@
   }
 
   async function startNewSession() {
+    trackEvent('review_session_new_started', { previous_reviewed_count: reviewedCount });
     currentIndex = 0;
     reviewedCount = 0;
     reviewedWordIds = new Set();
@@ -497,6 +506,7 @@
           console.error('Error marking word as forgotten:', error);
         }
         
+        trackEvent('review_word_marked_forgotten', { word_id: word.id, dialect: word.dialect });
         forgottenWords.push({ ...word });
         reviewedWordIds.add(word.id);
         reviewedCount++;
@@ -635,6 +645,12 @@
       return;
     }
 
+    trackEvent('review_sentences_generation_started', {
+      dialect: selectedDialect,
+      difficulty: difficultyOption,
+      vocabulary_source: useReviewWordsOnly ? 'review_words' : vocabularyInputMode,
+      learning_topics: selectedLearningTopics
+    });
     isGeneratingSentences = true;
     generateError = null;
     generateSuccess = null;
@@ -818,6 +834,11 @@
   }
 
   async function generateAndSaveWords() {
+    trackEvent('review_words_generation_started', {
+      dialect: selectedDialect,
+      difficulty: difficultyOption,
+      word_types: selectedWordTypes
+    });
     isGeneratingWords = true;
     wordGenerateError = null;
     wordGenerateSuccess = null;
@@ -897,7 +918,7 @@
       <p class="text-text-200 text-lg sm:text-xl leading-snug max-w-2xl mb-4 flex items-center gap-2">
         Practice your saved words with spaced repetition
         <button
-          onclick={() => (showGraduationModal = true)}
+          onclick={() => { showGraduationModal = true; trackEvent('review_graduation_info_opened'); }}
           class="w-5 h-5 rounded-full bg-tile-500 hover:bg-tile-600 text-text-200 hover:text-text-300 text-xs font-bold transition-colors flex items-center justify-center leading-none shrink-0"
           aria-label="How graduation works"
         >?</button>
@@ -1029,7 +1050,7 @@
           <!-- Generate Words -->
           <button
             class="group relative overflow-hidden flex flex-col items-center text-center p-8 rounded-xl border-2 border-tile-600 bg-gradient-to-br from-tile-400/50 to-tile-400/30 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer"
-            onclick={() => { showGenerateWords = true; showGenerateSentences = false; }}
+            onclick={() => { showGenerateWords = true; showGenerateSentences = false; trackEvent('review_generate_words_opened'); }}
           >
             <!-- Background pattern -->
             <div class="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity">
@@ -1046,7 +1067,7 @@
           <!-- Generate Sentences -->
           <button
             class="group relative overflow-hidden flex flex-col items-center text-center p-8 rounded-xl border-2 border-tile-600 bg-gradient-to-br from-tile-400/50 to-tile-400/30 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer"
-            onclick={() => { showGenerateSentences = true; showGenerateWords = false; }}
+            onclick={() => { showGenerateSentences = true; showGenerateWords = false; trackEvent('review_generate_sentences_opened'); }}
           >
             <!-- Background pattern -->
             <div class="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity">

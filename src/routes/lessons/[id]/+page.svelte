@@ -10,6 +10,7 @@
 	import LessonPlayer from '$lib/components/LessonPlayer.svelte';
 	import type { Dialect } from '$lib/types/index';
 	import type { GeneratedLesson } from '$lib/schemas/curriculum-schema';
+	import { trackEvent } from '$lib/analytics';
 
 	let { data } = $props<{ data: PageData }>();
 	
@@ -42,6 +43,7 @@
 	});
 
 	function openPronunciationTest(text: string, transliteration?: string, english?: string) {
+		trackEvent('lessons_pronunciation_test_opened', { lesson_id: lesson?.id, arabic_text: text });
 		pronunciationText = text;
 		pronunciationTransliteration = transliteration || '';
 		pronunciationEnglish = english || '';
@@ -134,6 +136,7 @@
 	// Navigation functions
 	function goToSubLesson(index: number) {
 		if (lessonBody?.subLessons && index >= 0 && index < lessonBody.subLessons.length) {
+			trackEvent('lessons_sub_lesson_selected', { lesson_id: lesson?.id, sub_lesson_index: index });
 			currentSubLessonIndex = index;
 			// Scroll to top of sub-lesson area
 			const subLessonElement = document.getElementById(`sub-lesson-${index}`);
@@ -491,6 +494,7 @@
 									<button
 										type="button"
 										onclick={() => {
+											trackEvent('lessons_continue_to_review_clicked', { lesson_id: lesson?.id });
 											const reviewSection = document.getElementById('review-section');
 											if (reviewSection) {
 												reviewSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
