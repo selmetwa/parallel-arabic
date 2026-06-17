@@ -171,7 +171,7 @@
 					Learn Arabic Your Way
 				</h1>
 				<p class="text-text-200 text-lg sm:text-xl leading-snug">
-					Choose your learning path — follow a structured curriculum or create custom AI-powered lessons tailored to your interests.
+					Choose your learning path — follow a structured curriculum or create custom lessons tailored to your interests.
 				</p>
 			</div>
 		</div>
@@ -213,10 +213,10 @@
 						</div>
 						<h3 class="text-xl sm:text-2xl font-bold text-text-300 mb-2">Customizable Lessons</h3>
 						<p class="text-text-200 leading-relaxed mb-4 flex-grow">
-							Create AI-powered lessons on any topic. Search, filter, and browse lessons tailored to your interests and learning goals.
+							Create custom lessons on any topic. Search, filter, and browse lessons tailored to your interests and learning goals.
 						</p>
 						<ul class="space-y-2 text-text-200 mb-5 text-sm">
-							<li class="flex items-center gap-2"><span class="text-purple-500">✓</span><span>AI-generated content</span></li>
+							<li class="flex items-center gap-2"><span class="text-purple-500">✓</span><span>Custom content</span></li>
 							<li class="flex items-center gap-2"><span class="text-purple-500">✓</span><span>Any topic, any level</span></li>
 							<li class="flex items-center gap-2"><span class="text-purple-500">✓</span><span>All 4 Arabic dialects</span></li>
 						</ul>

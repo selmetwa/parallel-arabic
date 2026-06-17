@@ -215,7 +215,7 @@
     { icon: '📖', title: 'Stories & Audio', desc: 'Native audio pronunciation' },
     { icon: '💬', title: 'AI Tutor', desc: 'Real-time conversation practice' },
     { icon: '📺', title: 'Interactive Videos', desc: 'YouTube with transcripts' },
-    { icon: '🤖', title: 'AI Practice', desc: 'Unlimited generated sentences' },
+    { icon: '✨', title: 'Sentence Mining', desc: 'Unlimited practice sentences' },
     { icon: '🎙️', title: 'Speaking', desc: 'Pronunciation feedback' },
     { icon: '✍️', title: 'Verb Mastery', desc: 'Conjugation practice' },
     { icon: '📦', title: 'Anki Decks', desc: 'Custom flashcard exports' },

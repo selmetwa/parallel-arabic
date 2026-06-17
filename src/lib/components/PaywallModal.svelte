@@ -49,7 +49,7 @@
             </li>
             <li class="flex items-start gap-3">
                 <div class="shrink-0 mt-1"><Checkmark /></div>
-                <span><strong class="text-text-300">Unlimited AI-generated practice sentences</strong> for all skill levels</span>
+                <span><strong class="text-text-300">Unlimited sentence mining</strong> for all skill levels</span>
             </li>
             <li class="flex items-start gap-3">
                 <div class="shrink-0 mt-1"><Checkmark /></div>

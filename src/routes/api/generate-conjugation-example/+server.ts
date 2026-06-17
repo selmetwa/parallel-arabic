@@ -59,7 +59,7 @@ Return PURE JSON only. No markdown code blocks. No explanations.`;
 		return json(parsed);
 	} catch (e) {
 		if (e instanceof GeminiApiError && e.is503) {
-			return error(503, { message: 'The AI model is currently overloaded. Please try again.' });
+			return error(503, { message: 'Our service is currently busy. Please try again.' });
 		}
 		console.error('Error generating conjugation example:', e);
 		const message = e instanceof Error ? e.message : 'Failed to generate example sentence.';

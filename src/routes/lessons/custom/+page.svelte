@@ -194,7 +194,7 @@
 				Back to Lessons
 			</a>
 			<h1 class="text-2xl sm:text-3xl text-text-300 font-bold mb-2 tracking-tight">Customizable Lessons</h1>
-			<p class="text-text-200 text-base sm:text-lg leading-relaxed">Create and explore custom AI-generated lessons from all dialects.</p>
+			<p class="text-text-200 text-base sm:text-lg leading-relaxed">Create and explore custom lessons from all dialects.</p>
 		</div>
 
 		<!-- Compact create control (moved onto the title row) -->

@@ -158,7 +158,7 @@
 				<article class="md:col-span-1 lg:col-span-2 min-w-0 flex flex-col bg-tile-400 border border-tile-500 rounded-xl p-6 sm:p-7 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg motion-reduce:hover:translate-y-0">
 					<h3 class="text-xl sm:text-2xl font-bold text-text-300 mb-3">Lessons</h3>
 					<p class="text-text-200 leading-relaxed">
-						Explore 50+ structured lessons per dialect covering vocabulary, grammar, and phrases — or use AI to generate lessons on any topic you're interested in.
+						Explore 50+ structured lessons per dialect covering vocabulary, grammar, and phrases — or create custom lessons on any topic you're interested in.
 					</p>
 					<img
 						src="/images/features/lessons.png"
@@ -279,7 +279,7 @@
 						Generic language apps bore you. The same repetitive exercises, the same irrelevant topics…
 					</p>
 					<p class="text-text-300 text-base sm:text-lg leading-relaxed mb-5">
-						<strong>Use AI to generate custom stories and practice sentences built around the words you're actually studying.</strong> Want to practice Egyptian street food vocab? Levantine soccer slang? Generate it instantly. Your words, your context — not someone else's curriculum.
+						<strong>Create custom stories and practice sentences built around the words you're actually studying.</strong> Want to practice Egyptian street food vocab? Levantine soccer slang? Generate it instantly. Your words, your context — not someone else's curriculum.
 					</p>
 					<div class="border-t border-tile-500 pt-4">
 						<p class="text-sm text-text-200 font-medium mb-3">Your saved words include:</p>
@@ -323,7 +323,7 @@
 			<div class="max-w-2xl mb-10 sm:mb-12">
 				<h2 class="text-2xl sm:text-4xl font-bold text-text-300 tracking-tight mb-3">Choose your path</h2>
 				<p class="text-text-200 text-base sm:text-lg leading-relaxed">
-					Start learning for free, forever. Upgrade anytime for unlimited AI-generated content and advanced features.
+					Start learning for free, forever. Upgrade anytime for unlimited custom content and advanced features.
 				</p>
 			</div>
 
@@ -365,7 +365,7 @@
 
 					<ul class="space-y-3 mb-8 flex-grow">
 						<li class="flex items-start gap-3"><span class="text-lg flex-shrink-0" aria-hidden="true">✓</span><span class="text-text-200"><strong class="text-text-300">Everything in Free</strong></span></li>
-						<li class="flex items-start gap-3"><span class="text-lg flex-shrink-0" aria-hidden="true">✓</span><span class="text-text-200"><strong class="text-text-300">Unlimited AI-generated stories</strong> (create custom content)</span></li>
+						<li class="flex items-start gap-3"><span class="text-lg flex-shrink-0" aria-hidden="true">✓</span><span class="text-text-200"><strong class="text-text-300">Unlimited custom stories</strong> (create your own content)</span></li>
 						<li class="flex items-start gap-3"><span class="text-lg flex-shrink-0" aria-hidden="true">✓</span><span class="text-text-200"><strong class="text-text-300">Unlimited AI tutor conversations</strong> with real-time feedback</span></li>
 						<li class="flex items-start gap-3"><span class="text-lg flex-shrink-0" aria-hidden="true">✓</span><span class="text-text-200"><strong class="text-text-300">Advanced spaced repetition</strong> with Anki export</span></li>
 						<li class="flex items-start gap-3"><span class="text-lg flex-shrink-0" aria-hidden="true">✓</span><span class="text-text-200"><strong class="text-text-300">Pronunciation assessment</strong> for speaking practice</span></li>

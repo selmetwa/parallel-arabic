@@ -247,7 +247,7 @@
             <p class="text-text-200 text-sm">
               Upload a CSV file with columns: arabic, english, transliteration (optional).
               Or upload an unstructured TXT file with Arabic text (one word or phrase per line).
-              Missing fields will be automatically generated using AI.
+              Missing fields will be filled in automatically.
             </p>
             
             <!-- Dialect Selection for CSV -->
@@ -334,13 +334,13 @@
               <p class="mb-1">• Required columns: <strong>arabic</strong> or <strong>english</strong></p>
               <p class="mb-1">• Optional columns: <strong>transliteration</strong></p>
               <p class="mb-1">• Column name variations are automatically detected</p>
-              <p class="mb-3">• Missing fields will be generated using AI</p>
+              <p class="mb-3">• Missing fields will be filled in automatically</p>
               
               <p class="font-medium text-text-300 mb-1">For TXT files:</p>
               <p class="mb-1">• One word or phrase per line</p>
               <p class="mb-1">• <strong class="text-red-400">Important:</strong> Lines without Arabic characters will be ignored</p>
               <p class="mb-1">• You can include English or transliteration on the same line (separated by comma, pipe, or semicolon)</p>
-              <p>• Missing fields (English, transliteration) will be generated using AI</p>
+              <p>• Missing fields (English, transliteration) will be filled in automatically</p>
             </div>
           </div>
         {:else}
@@ -348,7 +348,7 @@
           <div class="flex flex-col gap-4">
             <h2 class="text-2xl font-bold text-text-300">Paste Vocabulary</h2>
             <p class="text-text-200 text-sm">
-              Paste your vocabulary words below. Any missing fields (Arabic, English, or transliteration) will be automatically generated using AI.
+              Paste your vocabulary words below. Any missing fields (Arabic, English, or transliteration) will be filled in automatically.
             </p>
 
             <!-- Dialect Selection for Paste -->
@@ -378,10 +378,10 @@
 
             <div class="bg-tile-300/50 border border-tile-500 rounded-lg p-4 text-sm text-text-200">
               <p class="font-medium text-text-300 mb-2">Supported formats (one entry per line):</p>
-              <p class="mb-1">• <strong>Arabic only</strong> — AI generates English and transliteration</p>
-              <p class="mb-1">• <strong>English only</strong> — AI generates Arabic and transliteration</p>
+              <p class="mb-1">• <strong>Arabic only</strong> — English and transliteration filled in for you</p>
+              <p class="mb-1">• <strong>English only</strong> — Arabic and transliteration filled in for you</p>
               <p class="mb-1">• <strong>arabic | english | transliteration</strong> — all three fields</p>
-              <p class="mb-1">• <strong>arabic, english</strong> — AI generates transliteration</p>
+              <p class="mb-1">• <strong>arabic, english</strong> — transliteration filled in for you</p>
               <p>• Separators: comma <code class="bg-tile-400/50 px-1 rounded">,</code> pipe <code class="bg-tile-400/50 px-1 rounded">|</code> or semicolon <code class="bg-tile-400/50 px-1 rounded">;</code></p>
             </div>
           </div>

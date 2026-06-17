@@ -381,7 +381,7 @@ Thank you for joining Parallel Arabic! We're excited to help you on your journey
 
 FREE FEATURES:
 - Stories & Conversations: Access to one conversation with native audio
-- AI Practice: 5 AI-generated practice sentences across multiple dialects
+- Sentence Mining: 5 practice sentences across multiple dialects
 - Speaking Practice: Basic pronunciation feedback
 - Verb Conjugation: Practice with one verb
 - Vocabulary: Access to 156 words for writing and quizzes
@@ -396,7 +396,7 @@ Upgrade to Premium for just $10/month and get:
 - Spaced Repetition: Master vocabulary words
 - Interactive Videos: YouTube videos with transcripts & translations
 - All Stories: Unlimited conversations with native audio
-- Unlimited AI Practice: Generate unlimited practice sentences
+- Unlimited Sentence Mining: Practice with unlimited custom sentences
 - Advanced Speaking: Real-time pronunciation feedback
 - All Verbs: Complete verb conjugation practice
 - Anki Decks: Custom flashcard exports

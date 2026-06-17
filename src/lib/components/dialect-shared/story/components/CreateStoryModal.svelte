@@ -473,8 +473,8 @@
 			
 			// Set user-friendly error messages based on error type
 			if (errorMsg.includes('Failed to parse JSON')) {
-				generationError = 'AI Response Format Error';
-				errorDetails = 'The AI generated content in an unexpected format. This is usually temporary. Please try again, and if the issue persists, try adjusting your prompt or reducing the content length.';
+				generationError = 'Content Format Error';
+				errorDetails = 'We hit an unexpected format while creating your content. This is usually temporary. Please try again, and if the issue persists, try adjusting your prompt or reducing the content length.';
 			} else if (errorMsg.includes('transcribe')) {
 				generationError = 'Transcription Failed';
 				errorDetails = errorMsg.includes('Audio file too large') 
@@ -575,7 +575,7 @@
 						{/if}
 					</h2>
 					<p class="text-text-200 text-lg">
-						Using specialized AI to create custom content just for you.
+						Crafting custom content just for you.
 						<span class="block mt-2 text-sm opacity-75">
 							{#if dialect === 'darija' || dialect === 'egyptian-arabic'}
 								This usually takes about 1-2 minutes.
@@ -765,7 +765,7 @@
 							selectableFor="generate"
 							isSelected={creationMode === 'generate'}
 							value="generate"
-							text="✨ AI Generate"
+							text="✨ Create"
 						/>
 						<RadioButton
 							className="!text-base !font-medium"

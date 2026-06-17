@@ -84,7 +84,7 @@ The user may ask about grammar rules, vocabulary, pronunciation, culture, or nee
     // Check if it's a 503 error (model overloaded)
     if (e instanceof GeminiApiError && e.is503) {
       return error(503, { 
-        message: 'The AI model is currently overloaded. Please try again in a few moments. We\'re working to handle the high demand.' 
+        message: 'Our service is experiencing high demand. Please try again in a few moments.' 
       });
     }
     

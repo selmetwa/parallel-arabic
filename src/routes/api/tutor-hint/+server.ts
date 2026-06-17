@@ -111,7 +111,7 @@ Respond as JSON with this exact shape:
   } catch (e) {
     console.error('Tutor hint error:', e);
     if (e instanceof GeminiApiError && e.is503) {
-      return error(503, { message: 'The AI model is currently overloaded. Please try again.' });
+      return error(503, { message: 'Our service is currently busy. Please try again.' });
     }
     return error(500, { message: 'Failed to generate hint.' });
   }

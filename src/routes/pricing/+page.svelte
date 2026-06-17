@@ -8,7 +8,7 @@
          <div class="max-w-4xl mx-auto">
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-text-300 mb-6 tracking-tight">Pricing</h1>
             <p class="text-xl text-text-200 max-w-2xl mx-auto leading-relaxed">
-                Master multiple Arabic dialects with AI-powered learning. All for the price of one lesson on
+                Master multiple Arabic dialects with personalized learning. All for the price of one lesson on
                 <a class="underline text-text-300 hover:text-tile-500 transition-colors" target="_blank" href="https://www.italki.com/en/teachers/arabic?from%5B0%5D=EG&speaks%5B0%5D=english">Italki</a> per month.
             </p>
         </div>
@@ -31,7 +31,7 @@
                             </li>
                             <li class="flex items-start gap-3">
                                 <div class="shrink-0 mt-1"><Checkmark /></div>
-                                <span>5 AI-generated practice sentences across multiple dialects <span class="text-text-200 text-sm italic">*requires account</span></span>
+                                <span>5 practice sentences across multiple dialects <span class="text-text-200 text-sm italic">*requires account</span></span>
                             </li>
                             <li class="flex items-start gap-3">
                                 <div class="shrink-0 mt-1"><Checkmark /></div>
@@ -103,7 +103,7 @@
                             </li>
                             <li class="flex items-start gap-3">
                                 <div class="shrink-0 mt-1"><Checkmark /></div>
-                                <span><strong class="text-text-300">Unlimited AI-generated practice sentences</strong> for all skill levels</span>
+                                <span><strong class="text-text-300">Unlimited sentence mining</strong> for all skill levels</span>
                             </li>
                              <li class="flex items-start gap-3">
                                 <div class="shrink-0 mt-1"><Checkmark /></div>
