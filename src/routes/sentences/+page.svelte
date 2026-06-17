@@ -425,7 +425,7 @@
 				Sentence Practice
 			</h1>
 			<p class="text-text-200 text-base sm:text-lg leading-snug max-w-2xl">
-				Drill grammar patterns and vocabulary in context with unlimited AI-generated sentences.
+				Drill grammar patterns and vocabulary in context with unlimited custom practice sentences.
 			</p>
 		</div>
 	</header>

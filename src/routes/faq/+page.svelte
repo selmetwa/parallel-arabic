@@ -15,7 +15,7 @@
         '🎥 Videos: Watch Arabic learning videos with interactive sentence breakdowns and vocabulary practice.',
         '💬 Sentence Generation: Generate unlimited practice sentences using your saved vocabulary words for personalized learning.',
         '📚 Guided Lessons: Follow structured learning paths with step-by-step lessons tailored to your chosen dialect and level.',
-        '🎯 Context-Based Learning: Our AI uses your saved words to generate unlimited personalized learning materials - lessons, stories, and practice exercises - all tailored to the vocabulary you\'re actively learning. This means every piece of content reinforces the words you\'ve already saved, making your learning more efficient and effective.'
+        '🎯 Context-Based Learning: Parallel Arabic uses your saved words to create unlimited personalized learning materials - lessons, stories, and practice exercises - all tailored to the vocabulary you\'re actively learning. This means every piece of content reinforces the words you\'ve already saved, making your learning more efficient and effective.'
       ]
     },
     {
@@ -30,7 +30,7 @@
       id: 'why-pay',
       question: 'Why Pay for Parallel Arabic?',
       answer: [
-        'To cover server costs, AI credits, and the creation of learning materials from professional Arabic teachers, including conversations and sentence-by-sentence audio.',
+        'To cover server costs and the creation of learning materials from professional Arabic teachers, including conversations and sentence-by-sentence audio.',
         'You are paying to support an independent designer & developer who is passionate about this project. 100% of your subscription dues goes towards the active development of Parallel Arabic.',
         'If you really want to use the platform but cannot afford it at this time, just email me at selmetwa@gmail.com'
       ]
@@ -70,7 +70,7 @@
     {
       id: 'offline',
       question: 'Can I Use Parallel Arabic Offline?',
-      answer: 'Parallel Arabic is a web application that requires an internet connection. However, once loaded, many features work offline thanks to Progressive Web App (PWA) capabilities. For the best experience, we recommend using it with an internet connection to access all features including AI-powered content.'
+      answer: 'Parallel Arabic is a web application that requires an internet connection. However, once loaded, many features work offline thanks to Progressive Web App (PWA) capabilities. For the best experience, we recommend using it with an internet connection to access all features including personalized content.'
     }
   ];
 

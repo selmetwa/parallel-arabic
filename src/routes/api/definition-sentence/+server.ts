@@ -156,7 +156,7 @@ MAKE SURE THAT THE RESPONSE IS JSON FORMAT USING THE FOLOWING STRUCTURE
     let responseText = response.text;
     if (!responseText) {
       console.error('Empty response from Gemini API');
-      return error(500, { message: 'Empty response from AI' });
+      return error(500, { message: 'No content was returned. Please try again.' });
     }
 
     // Strip markdown code blocks if present

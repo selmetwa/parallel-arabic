@@ -79,7 +79,7 @@
 			<li>
 				<h2 class="text-xl font-semibold text-text-200">Sentence Practice</h2>
 				<p class="text-md text-text-200">
-					Practice reading comprehension and writing skills with AI generated short sentences.
+					Practice reading comprehension and writing skills with custom short sentences.
 				</p>
 			</li>
 			<li>

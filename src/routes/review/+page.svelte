@@ -1077,7 +1077,7 @@
             <div class="text-5xl mb-6 transform group-hover:scale-125 group-hover:rotate-12 transition-transform duration-300 relative z-10">✍️</div>
             <h3 class="text-2xl font-bold text-text-300 mb-3 relative z-10">Generate Sentences</h3>
             <p class="text-text-200 leading-relaxed relative z-10">
-              Practice with AI-generated sentences focusing on specific grammar topics or vocabulary.
+              Practice with custom practice sentences focusing on specific grammar topics or vocabulary.
             </p>
           </button>
 

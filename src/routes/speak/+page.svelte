@@ -411,7 +411,7 @@
 					<div class="min-w-0">
 						<h1 class="text-2xl sm:text-3xl font-bold text-text-300 tracking-tight">Speaking Practice</h1>
 						<p class="text-text-200 text-sm sm:text-base leading-snug mt-1 max-w-2xl">
-							Practice your Arabic pronunciation with AI-generated sentences and get real-time feedback.
+							Practice your Arabic pronunciation with custom practice sentences and get real-time feedback.
 						</p>
 					</div>
 				</div>
@@ -702,8 +702,8 @@
 				<h2 class="text-xl sm:text-2xl font-bold text-text-300 text-center mb-6">How It Works</h2>
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
 					<div class="bg-tile-400 border border-tile-500 rounded-xl p-4 shadow-sm text-center">
-						<div class="text-3xl mb-3">🤖</div>
-						<h3 class="text-lg font-bold text-text-300 mb-2">AI-Generated</h3>
+						<div class="text-3xl mb-3">✨</div>
+						<h3 class="text-lg font-bold text-text-300 mb-2">Sentence Mining</h3>
 						<p class="text-text-200 leading-relaxed">
 							Personalized sentences based on your level and chosen topics.
 						</p>

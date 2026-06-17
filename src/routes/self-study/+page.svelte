@@ -140,7 +140,7 @@
                         rows="16"
                         class="w-full bg-tile-400 border-2 border-tile-600 rounded-xl p-4 text-base text-text-300 placeholder-text-200 focus:outline-none focus:border-blue-400 transition-colors resize-none font-mono leading-relaxed"
                     ></textarea>
-                    <p class="text-xs text-text-200">Any format works — the AI parses it.</p>
+                    <p class="text-xs text-text-200">Any format works — we'll handle the formatting.</p>
                 </div>
                 <div class="flex flex-col gap-2">
                     <label class="text-sm font-bold text-text-300" for="grammar-notes">

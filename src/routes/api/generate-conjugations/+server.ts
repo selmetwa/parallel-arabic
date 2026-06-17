@@ -118,7 +118,7 @@ Return PURE JSON only. No markdown code blocks. No explanations.`;
 	} catch (e) {
 		if (e instanceof GeminiApiError && e.is503) {
 			return error(503, {
-				message: 'The AI model is currently overloaded. Please try again in a few moments.'
+				message: 'Our service is experiencing high demand. Please try again in a few moments.'
 			});
 		}
 		console.error('Error generating conjugations:', e);

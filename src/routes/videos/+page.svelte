@@ -229,7 +229,7 @@
 					<div class="text-4xl mb-4">📖</div>
 					<h3 class="text-xl font-bold text-text-300 mb-3">Instant Definitions</h3>
 					<p class="text-text-200 leading-relaxed">
-						Click any word in the transcript to get AI-powered definitions and explanations instantly.
+						Click any word in the transcript to get instant definitions and explanations.
 					</p>
 				</div>
 
