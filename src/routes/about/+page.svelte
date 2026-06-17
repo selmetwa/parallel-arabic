@@ -3,6 +3,8 @@
 <script>
 	import { slide } from 'svelte/transition';
 
+	/** @typedef {{ t: string; b?: boolean }} QuoteSegment */
+
 	/** @type {number | null} */
 	let openIndex = $state(null);
 
@@ -10,6 +12,46 @@
 	function toggle(i) {
 		openIndex = openIndex === i ? null : i;
 	}
+
+	// Testimonials — each is an array of text segments; `b: true` renders bold.
+	const testimonials = [
+		[
+			{ t: 'After only a day, I love Parallel Arabic.', b: true },
+			{ t: ' As a language teacher — I teach French at a huge public high school in Southern California — and an absolute language nut who speaks seven other languages besides Arabic, I can tell how much thought went into this.' }
+		],
+		[
+			{ t: 'Wow this is perfect for what I need currently. The stories section in particular is a great idea as ' },
+			{ t: "I can't find any graded stories for practice.", b: true },
+			{ t: ' Thank you so much for this :)' }
+		],
+		[
+			{ t: 'This is great! As someone outgrowing Duolingo this is perfect.', b: true }
+		],
+		[
+			{ t: 'I love it! This is something I have been ' },
+			{ t: 'searching for ages', b: true },
+			{ t: ' :) thank you so much' }
+		],
+		[
+			{ t: "Have tried many of the 'apps' and " },
+			{ t: 'this is the closest one to doing what I want!', b: true },
+			{ t: " Very useful and comprehensive app, everything's very useful — I love the interlinear format for the stories." }
+		],
+		[
+			{ t: "Even though I'm a beginner, " },
+			{ t: "your AI is the best I've tried among all the apps!", b: true },
+			{ t: ' The others are always weird in their answers and pronounce the words weirdly.' }
+		],
+		[
+			{ t: 'Stories UI is really good!', b: true },
+			{ t: ' The large, readable font, easy switching of transliteration and English, and interactive click-to-define are all really excellent.' }
+		],
+		[
+			{ t: 'I really like the website and find it very useful. For me ' },
+			{ t: "it's better than a lot of other platforms", b: true },
+			{ t: " — it's well thought out and has a lot of features." }
+		]
+	];
 
 	const faqs = [
 		{
@@ -60,6 +102,31 @@
 			</div>
 		</div>
 	</header>
+
+	{#snippet quoteCard(/** @type {QuoteSegment[]} */ segments, /** @type {boolean} */ hidden)}
+		<figure
+			class="flex-shrink-0 w-[280px] sm:w-[320px] bg-tile-400 rounded-xl p-5 sm:p-6 shadow-sm"
+			aria-hidden={hidden}
+		>
+			<span class="block text-4xl leading-none text-text-200 mb-2" aria-hidden="true">“</span>
+			<blockquote class="text-text-300 text-base leading-relaxed"
+				>{#each segments as seg, i (i)}{#if seg.b}<strong class="text-text-200">{seg.t}</strong>{:else}{seg.t}{/if}{/each}</blockquote
+			>
+		</figure>
+	{/snippet}
+
+	<!-- Testimonials — infinite horizontal marquee -->
+	<section class="py-10 sm:py-14 bg-tile-200 border-y border-tile-500 overflow-hidden">
+		<div class="max-w-6xl mx-auto px-4 sm:px-8 mb-6 sm:mb-8">
+			<h2 class="text-2xl sm:text-4xl font-bold text-text-300 tracking-tight">What our users say</h2>
+		</div>
+		<div class="marquee">
+			<div class="marquee__track">
+				{#each testimonials as t, i (i)}{@render quoteCard(t, false)}{/each}
+				{#each testimonials as t, i (i)}{@render quoteCard(t, true)}{/each}
+			</div>
+		</div>
+	</section>
 
 	<!-- Features — irregular bento grid (was 8 identical full-width cards) -->
 	<section class="py-14 sm:py-20 bg-tile-200 border-t border-tile-500">
@@ -250,35 +317,6 @@
 		</div>
 	</section>
 
-	<!-- Testimonials — offset quotes (was 3 equal bordered cards) -->
-	<section class="py-14 sm:py-20 bg-tile-200 border-y border-tile-500">
-		<div class="max-w-6xl mx-auto px-4 sm:px-8">
-			<h2 class="text-2xl sm:text-4xl font-bold text-text-300 tracking-tight mb-10">What our learners say</h2>
-			<div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 items-start">
-				<figure class="bg-tile-400 rounded-xl p-6 sm:p-7 shadow-sm">
-					<span class="block text-4xl leading-none text-text-200 mb-2" aria-hidden="true">“</span>
-					<blockquote class="text-text-300 text-base leading-relaxed">
-						Wow this is perfect for what I need currently. The stories section in particular is a great idea as <strong class="text-text-200">I can't find any graded stories for practice</strong>. Thank you so much for this :)
-					</blockquote>
-				</figure>
-
-				<figure class="bg-tile-400 rounded-xl p-6 sm:p-7 shadow-sm md:mt-8">
-					<span class="block text-4xl leading-none text-text-200 mb-2" aria-hidden="true">“</span>
-					<blockquote class="text-text-300 text-base leading-relaxed">
-						<strong class="text-text-200">This is great! As someone outgrowing Duolingo this is perfect.</strong>
-					</blockquote>
-				</figure>
-
-				<figure class="bg-tile-400 rounded-xl p-6 sm:p-7 shadow-sm md:mt-4">
-					<span class="block text-4xl leading-none text-text-200 mb-2" aria-hidden="true">“</span>
-					<blockquote class="text-text-300 text-base leading-relaxed">
-						I love it! This is something I have been <strong class="text-text-200">searching for ages</strong> :) thank you so much
-					</blockquote>
-				</figure>
-			</div>
-		</div>
-	</section>
-
 	<!-- Pricing — softened (was heavy bordered cards) -->
 	<section class="py-14 sm:py-20 bg-tile-300">
 		<div class="max-w-5xl mx-auto px-4 sm:px-8">
@@ -371,3 +409,46 @@
 		</div>
 	</section>
 </div>
+
+<style>
+	.marquee {
+		display: flex;
+		overflow: hidden;
+		-webkit-mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+		mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+	}
+
+	.marquee__track {
+		display: flex;
+		align-items: stretch;
+		gap: 1rem;
+		width: max-content;
+		padding: 0 0.5rem;
+		animation: marquee-scroll 55s linear infinite;
+	}
+
+	.marquee:hover .marquee__track,
+	.marquee:focus-within .marquee__track {
+		animation-play-state: paused;
+	}
+
+	@keyframes marquee-scroll {
+		from {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(-50%);
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.marquee {
+			-webkit-mask-image: none;
+			mask-image: none;
+			overflow-x: auto;
+		}
+		.marquee__track {
+			animation: none;
+		}
+	}
+</style>

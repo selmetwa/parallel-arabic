@@ -51,12 +51,18 @@
 		correct: boolean;
 	};
 
-	// Practice Mode State - defaults to reorder (beginner-friendly)
-	type PracticeMode = 'typing' | 'reorder';
-	let practiceMode = $state<PracticeMode>('reorder');
+	// Practice Mode State - defaults to trace (guided writing)
+	type PracticeMode = 'typing' | 'reorder' | 'trace';
+	let practiceMode = $state<PracticeMode>('trace');
+
+	// Modes that use the keyboard (virtual or native) for free-form input
+	let usesKeyboard = $derived(practiceMode === 'typing' || practiceMode === 'trace');
 
 	let attempt: Attempt[] = $state([]);
 	let attemptTemp: Attempt[] = $state([]);
+
+	// Trace mode: the live input, used to "fill in" the dimmed target answer
+	let traceInput = $state('');
 	let keyboard = $state<'virtual' | 'physical'>('virtual');
 	
 	// Detect mobile on mount and default to native keyboard
@@ -211,6 +217,9 @@
 	}
 
 	function compareMyInput(value: string) {
+		// Drive trace-mode "fill in" feedback from the same input
+		traceInput = value;
+
 		// Use strict normalization for final comparison
 		const normalizedInput = normalizeArabicText(value.trim());
 		const normalizedTarget = normalizeArabicText(sentence.arabic.trim());
@@ -249,7 +258,7 @@
 		if (areArraysEqual(myInputArr, arabicArr) && value.trim().length > 0) {
 			isCorrect = true;
 			// Reset virtual keyboard if it exists and is active
-			if (keyboard === 'virtual' && practiceMode === 'typing' && keyboardContainer) {
+			if (keyboard === 'virtual' && usesKeyboard && keyboardContainer) {
 				const keyboardEl = keyboardContainer.querySelector('arabic-keyboard') as Keyboard | null;
 				if (keyboardEl && typeof keyboardEl.resetValue === 'function') {
 					keyboardEl.resetValue();
@@ -264,7 +273,7 @@
 
 	function checkInput() {
 		// Only check virtual keyboard when it's active
-		if (keyboard !== 'virtual' || practiceMode !== 'typing') return;
+		if (keyboard !== 'virtual' || !usesKeyboard) return;
 		
 		// Get the keyboard element fresh each time to ensure it exists
 		const keyboardEl = keyboardContainer?.querySelector('arabic-keyboard') as Keyboard | null;
@@ -308,6 +317,38 @@
 	});
 
 	const isSafari = getBrowserInfo();
+
+	// Trace mode: map each target character to a fill-in state based on input.
+	// 'pending' = not yet reached (dimmed), 'correct' = filled in, 'incorrect' = red.
+	let traceChars = $derived.by(() => {
+		const target = sentence.arabic.trim();
+		const lightTarget = normalizeArabicTextLight(target).split('');
+		const lightInput = normalizeArabicTextLight(traceInput.trim()).split('');
+
+		return target.split('').map((char, i) => {
+			let state: 'pending' | 'correct' | 'incorrect';
+			if (i >= lightInput.length) {
+				state = 'pending';
+			} else {
+				state = lightInput[i] === lightTarget[i] ? 'correct' : 'incorrect';
+			}
+			return { char, state };
+		});
+	});
+
+	let traceHtml = $derived(
+		traceChars
+			.map(({ char, state }) => {
+				const cls = cn('text-2xl sm:text-3xl transition-opacity duration-150', {
+					'text-text-300': state === 'correct',
+					'text-red-500': state === 'incorrect',
+					'text-text-300 opacity-40': state === 'pending'
+				});
+				const content = isSafari ? `&zwj;&zwj;${char}&zwj;&zwj;` : char;
+				return `<span class="${cls}">${content}</span>`;
+			})
+			.join('')
+	);
 
 	function openInfoModal() {
 		isInfoModalOpen = true;
@@ -551,11 +592,12 @@
 		practiceMode = newMode;
 		isCorrect = false;
 		
-		// Reset typing mode state
+		// Reset typing/trace mode state
 		attemptTemp = [];
 		attempt = [];
 		keyboardValue = '';
-		
+		traceInput = '';
+
 		// Reset reorder mode state
 		if (newMode === 'reorder') {
 			initializeShuffledWords();
@@ -591,7 +633,8 @@
 			targetWord = '';
 			targetArabicWord = '';
 			keyboardValue = '';
-			
+			traceInput = '';
+
 			// Clear selection state
 			selectedWords = [];
 			isSelecting = false;
@@ -606,7 +649,7 @@
 
 			if (typeof document !== 'undefined') {
 				// Reset virtual keyboard if it exists and is active
-				if (keyboard === 'virtual' && practiceMode === 'typing' && keyboardContainer) {
+				if (keyboard === 'virtual' && usesKeyboard && keyboardContainer) {
 					const container = keyboardContainer; // Capture for closure
 					setTimeout(() => {
 						const keyboardEl = container.querySelector('arabic-keyboard') as Keyboard | null;
@@ -635,7 +678,7 @@
 	
 	// Update keyboard styles when keyboard type changes or container is ready
 	$effect(() => {
-		if (keyboardContainer && keyboard === 'virtual' && practiceMode === 'typing') {
+		if (keyboardContainer && keyboard === 'virtual' && usesKeyboard) {
 			// Capture the container reference for the setTimeout closure
 			const container = keyboardContainer;
 			// Use setTimeout to ensure DOM is updated
@@ -741,7 +784,7 @@
 	{#if isCorrect}
 		<div class="mb-4 bg-green-100 py-3 px-4 text-center border-2 border-green-100 rounded-lg flex items-center justify-between gap-4">
 			<p class="text-lg font-bold text-text-300">
-				{#if practiceMode === 'typing'}
+				{#if usesKeyboard}
 					{sentence.arabic} is Correct!
 				{:else}
 					Sentence arranged correctly!
@@ -780,6 +823,20 @@
 				<span>Typing</span>
 			</button>
 			<button
+				onclick={() => handleModeChange('trace')}
+				class={cn(
+					"flex items-center gap-2 px-4 py-2.5 rounded-lg font-semibold transition-all duration-200 border-2",
+					practiceMode === 'trace'
+						? "bg-sky-600 text-white border-sky-500 shadow-lg"
+						: "bg-tile-300 text-text-300 border-tile-500 hover:bg-tile-500 hover:border-tile-600"
+				)}
+			>
+				<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke-dasharray="3 3" d="M4 20h16M4 20l4-12 4 8 4-12 4 16"></path>
+				</svg>
+				<span>Trace</span>
+			</button>
+			<button
 				onclick={() => handleModeChange('reorder')}
 				class={cn(
 					"flex items-center gap-2 px-4 py-2.5 rounded-lg font-semibold transition-all duration-200 border-2",
@@ -794,14 +851,6 @@
 				<span>Sentence Reorder</span>
 			</button>
 		</div>
-	</div>
-	
-	<!-- Multi-word selection instructions -->
-	<div class="mb-4 p-3 bg-tile-400 border-l-4 border-tile-500 rounded-r hover:bg-tile-500 transition-colors duration-300">
-		<p class="text-sm text-text-300">
-			<strong>💡 Tip:</strong> Click individual words for definitions, or 
-			<strong>click and drag across multiple words</strong> to select a phrase and get its definition!
-		</p>
 	</div>
 	
 	<div class="flex flex-wrap items-center justify-center gap-2 mb-6 p-3 bg-tile-400 rounded-xl border border-tile-500">
@@ -893,11 +942,17 @@
 		</button>
 	</div>
 	
-	<!-- ==================== TYPING MODE ==================== -->
-	{#if practiceMode === 'typing'}
+	<!-- ==================== TYPING / TRACE MODE ==================== -->
+	{#if usesKeyboard}
 	<div class="text-center mb-6">
 		{@render englishWordDisplay()}
-		
+
+		{#if practiceMode === 'trace'}
+			<!-- Trace mode: dimmed answer that fills in as you type -->
+			<div class="mt-4" dir="rtl">
+				<span class="font-arabic leading-loose">{@html traceHtml}</span>
+			</div>
+		{:else}
 		<div class="mt-4">
 			{#if isSafari}
 				<span class="text-2xl sm:text-3xl">
@@ -925,6 +980,7 @@
 				</span>
 			{/if}
 		</div>
+		{/if}
 	</div>
 
 	<Modal isOpen={isInfoModalOpen} handleCloseModal={closeInfoModal} height="70%" width="80%">

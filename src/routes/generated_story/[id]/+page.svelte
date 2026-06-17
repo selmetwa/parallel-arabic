@@ -617,24 +617,6 @@
           </div>
         {/if}
 
-        <!-- English translation with drag-to-select -->
-        {#if sentenceEnglish}
-          <div class="mb-4 pb-3 border-b border-tile-600">
-            <Sentence
-              {sentence}
-              {setActiveWord}
-              type="english"
-              index={sentenceIndex}
-              {mode}
-              isGenerated={true}
-              dialect={storyDialect as any}
-              classname="!bg-transparent !border-0 !shadow-none !p-0"
-              innerClassname="justify-center"
-              size="sm"
-            />
-          </div>
-        {/if}
-
         <!-- Arabic word display with drag-and-define -->
         {#if !sentence.wordAlignments?.length && sentenceTransliteration}
           <p class="text-base sm:text-lg text-text-200 italic text-center mb-3 leading-relaxed">
