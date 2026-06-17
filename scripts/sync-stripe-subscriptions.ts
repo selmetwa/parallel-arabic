@@ -48,7 +48,7 @@ interface SyncResult {
   userId: string;
   email: string;
   subscriberId: string;
-  status: 'updated' | 'skipped' | 'error' | 'not_found';
+  status: 'updated' | 'skipped' | 'error' | 'not_found' | 'skipped_non_stripe';
   changes: {
     is_subscriber?: { old: boolean; new: boolean };
     subscription_end_date?: { old: number | null; new: number | null };
@@ -190,10 +190,29 @@ async function syncAllSubscriptions(dryRun: boolean = false, specificUserId?: st
     let skipped = 0;
     let errors = 0;
     let notFound = 0;
+    let skippedNonStripe = 0;
 
     // Process each user
     for (const user of users) {
       if (!user.subscriber_id) continue;
+
+      // Only Stripe subscriptions are handled here. Stripe subscription IDs
+      // always start with "sub_"; anything else (e.g. Apple/RevenueCat) is
+      // skipped so we don't call stripe.subscriptions.retrieve() on an ID
+      // Stripe doesn't recognize.
+      if (!user.subscriber_id.startsWith('sub_')) {
+        console.log(`Skipping non-Stripe subscriber: ${user.email || user.id} (${user.subscriber_id})`);
+        console.log('');
+        skippedNonStripe++;
+        results.push({
+          userId: user.id,
+          subscriberId: user.subscriber_id,
+          email: user.email || '',
+          status: 'skipped_non_stripe',
+          changes: {}
+        });
+        continue;
+      }
 
       console.log(`Processing user: ${user.email || user.id} (${user.subscriber_id})`);
 
@@ -251,6 +270,7 @@ async function syncAllSubscriptions(dryRun: boolean = false, specificUserId?: st
     console.log(`   ⏭️  Skipped: ${skipped}`);
     console.log(`   ❌ Errors: ${errors}`);
     console.log(`   ⚠️  Not found: ${notFound}`);
+    console.log(`   🍎 Skipped (non-Stripe): ${skippedNonStripe}`);
     console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
 
     if (dryRun && updated > 0) {

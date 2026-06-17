@@ -1,0 +1,108 @@
+@startuml parallel-arabic-architecture
+title Parallel-Arabic — High-Level Architecture
+
+skinparam componentStyle rectangle
+skinparam shadowing false
+skinparam defaultTextAlignment center
+skinparam rectangle {
+  BorderColor #555555
+}
+
+' ---------- CLIENTS ----------
+package "Client Layer" {
+  [Web App\n(SvelteKit + Svelte 5 UI)] as Web
+  [Mobile App\n(Capacitor iOS / Android)] as Mobile
+}
+
+' ---------- APPLICATION ----------
+package "Parallel-Arabic Application (SvelteKit)" {
+  [hooks.server.ts\n(auth guard, PostHog proxy, redirects)] as Hooks
+  [Route Pages\n(lessons, stories, tutor, speak,\nvocab, games, leaderboard)] as Pages
+  [API Routes /api/*\n(content gen, TTS/STT, payments,\nauth sync, webhooks)] as API
+  [Cron Jobs\n(daily challenges, weekly reset,\nstreak reminders)] as Cron
+  [Server libs\n(audio-generation, email,\nredis, challenge-generator)] as ServerLib
+}
+
+' ---------- HOSTING ----------
+package "Deployment / Hosting" {
+  node "Vercel\n(primary host + cron scheduler)" as Vercel
+  node "Fly.io\n(Docker / adapter-node alt host)" as Fly
+}
+
+' ---------- THIRD PARTY ----------
+package "Data & Infra (3rd party)" {
+  database "Supabase\nPostgres DB · Auth · Storage" as Supabase
+  database "Redis\n(caching)" as Redis
+}
+
+package "AI / Speech (3rd party)" {
+  cloud "Google Gemini\n(text generation)" as Gemini
+  cloud "ElevenLabs\n(TTS + Conversational AI tutor)" as Eleven
+  cloud "Google Cloud Speech\n(speech-to-text)" as GSpeech
+}
+
+package "Payments / Auth providers (3rd party)" {
+  cloud "Stripe\n(web subscriptions + webhook)" as Stripe
+  cloud "RevenueCat\n(mobile IAP + webhook)" as RevenueCat
+  cloud "Google OAuth" as GoogleOAuth
+  cloud "Apple Sign-In / IAP" as Apple
+}
+
+package "Comms · Analytics · Content (3rd party)" {
+  cloud "Mailgun\n(transactional email)" as Mailgun
+  cloud "PostHog\n(product analytics, proxied)" as PostHog
+  cloud "Vercel Analytics\n+ Speed Insights" as VercelAna
+  cloud "Sentry\n(error monitoring — configured, disabled)" as Sentry
+  cloud "YouTube\n(transcript / shorts ingestion)" as YouTube
+}
+
+' ---------- CLIENT -> APP ----------
+Web --> Hooks
+Mobile --> Hooks
+Mobile --> RevenueCat
+Mobile --> Apple
+
+' ---------- APP INTERNAL ----------
+Hooks --> Pages
+Hooks --> API
+Pages --> API
+Vercel ..> Cron : schedules
+Cron --> API
+
+' ---------- HOSTING ----------
+Web .. Vercel
+API .. Vercel
+API .. Fly
+
+' ---------- DATA ----------
+Hooks --> Supabase
+API --> Supabase
+ServerLib --> Supabase
+API --> Redis
+ServerLib --> Redis
+
+' ---------- AI / SPEECH ----------
+API --> Gemini
+ServerLib --> Gemini
+ServerLib --> Eleven
+API --> Eleven
+API --> GSpeech
+
+' ---------- PAYMENTS / AUTH ----------
+API --> Stripe
+API --> RevenueCat
+Hooks --> GoogleOAuth
+API --> GoogleOAuth
+API --> Apple
+Stripe ..> API : webhook
+RevenueCat ..> API : webhook
+
+' ---------- COMMS / ANALYTICS / CONTENT ----------
+ServerLib --> Mailgun
+Web --> PostHog
+Hooks --> PostHog
+Web --> VercelAna
+API ..> Sentry : on error (disabled)
+API --> YouTube
+
+@enduml
