@@ -1,3 +1,4 @@
+import { redirect } from '@sveltejs/kit';
 import { curriculum } from '$lib/data/curriculum';
 import { checkExistingLessons } from '$lib/helpers/lesson-file-helper';
 import { supabase } from '$lib/supabaseClient';
@@ -9,27 +10,33 @@ function normalizeDialect(dialect: string): string {
 }
 
 export const load = async ({ params, parent, url }) => {
-	const { session, isSubscribed, user } = await parent();
 	const { dialect } = params;
+
+	// The alphabet module now lives at /alphabet-new.
+	if (dialect.toLowerCase() === 'alphabet') {
+		redirect(307, '/alphabet-new');
+	}
+
+	const { session, isSubscribed, user } = await parent();
 
 	const autoOpenLessonId = url.searchParams.get('lessonId') ?? null;
 	const autoOpenStep = url.searchParams.has('step')
 		? parseInt(url.searchParams.get('step')!, 10)
 		: null;
-	
+
 	// Check if user is whitelisted
 	const isWhitelisted = isEmailWhitelisted(user?.email);
 
 	// Map URL-friendly names to actual dialect names
 	const dialectMap: Record<string, string> = {
-		'darija': 'darija',
-		'msa': 'fusha',
-		'fusha': 'fusha',
-		'levantine': 'levantine',
-		'egyptian': 'egyptian-arabic',
+		darija: 'darija',
+		msa: 'fusha',
+		fusha: 'fusha',
+		levantine: 'levantine',
+		egyptian: 'egyptian-arabic',
 		'egyptian-arabic': 'egyptian-arabic',
-		'alphabet': 'alphabet',
-		'grammar': 'grammar'
+		alphabet: 'alphabet',
+		grammar: 'grammar'
 	};
 
 	const dialectName = dialectMap[dialect.toLowerCase()] || dialect.toLowerCase();
@@ -38,20 +45,22 @@ export const load = async ({ params, parent, url }) => {
 	// Filter curriculum based on dialect/module type
 	let filteredCurriculum = curriculum;
 	if (dialectName === 'alphabet') {
-		filteredCurriculum = curriculum.filter(m => m.id === 'module-alphabet');
+		filteredCurriculum = curriculum.filter((m) => m.id === 'module-alphabet');
 	} else if (dialectName === 'grammar') {
-		filteredCurriculum = curriculum.filter(m => m.id === 'module-grammar');
+		filteredCurriculum = curriculum.filter((m) => m.id === 'module-grammar');
 	} else {
 		// For dialects, exclude alphabet and grammar modules
-		filteredCurriculum = curriculum.filter(m => m.id !== 'module-alphabet' && m.id !== 'module-grammar');
+		filteredCurriculum = curriculum.filter(
+			(m) => m.id !== 'module-alphabet' && m.id !== 'module-grammar'
+		);
 	}
 
 	// Flatten filtered curriculum to get relevant topic IDs
-	const allTopicIds = filteredCurriculum.flatMap(m => m.topics.map(t => t.id));
-	
+	const allTopicIds = filteredCurriculum.flatMap((m) => m.topics.map((t) => t.id));
+
 	// Check which lessons exist
 	const existingLessonsAll = await checkExistingLessons(allTopicIds);
-	
+
 	// Filter to only show lessons that exist for this dialect/module
 	// Note: checkExistingLessons returns directory names which are already normalized
 	const existingLessons: Record<string, { exists: boolean; dialects?: string[] }> = {};
@@ -111,4 +120,3 @@ export const load = async ({ params, parent, url }) => {
 		autoOpenStep
 	};
 };
-

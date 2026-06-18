@@ -4,6 +4,7 @@ export interface PageMeta {
   image?: string;
   url?: string;
   type?: 'website' | 'article';
+  noindex?: boolean;
 }
 
 const baseUrl = 'https://www.parallel-arabic.com';
@@ -119,6 +120,31 @@ export function getPageMeta(page: string, data?: any): PageMeta {
       url: `${baseUrl}/vocabulary`,
       type: 'website'
     },
+    dialect: {
+      title: `Learn ${formatDialectName(data?.dialect ?? '')} Online - Lessons, Stories & Vocabulary | Parallel Arabic`,
+      description: `Learn ${formatDialectName(data?.dialect ?? '')} with interactive lessons, graded stories, a vocabulary explorer, and AI conversation practice. Start understanding and speaking ${formatDialectName(data?.dialect ?? '')} on Parallel Arabic.`,
+      url: `${baseUrl}/${data?.dialect ?? ''}`,
+      type: 'website'
+    },
+    blog: {
+      title: 'Blog | Parallel Arabic',
+      description: 'Notes on learning Arabic: pronunciation, dialects, and the small things that make Egyptian Arabic click.',
+      url: `${baseUrl}/blog`,
+      type: 'website'
+    },
+    blogPost: {
+      title: data?.title ? `${data.title} | Parallel Arabic` : 'Blog | Parallel Arabic',
+      description: data?.description || 'Notes on learning Arabic from Parallel Arabic.',
+      url: data?.url || `${baseUrl}/blog`,
+      type: 'article'
+    },
+    'alphabet-new': {
+      title: 'The Arabic Alphabet, the Egyptian Way | Parallel Arabic',
+      description: 'An interactive Arabic alphabet guide with the sounds you actually hear in Egyptian Arabic, including the articulation groups and connecting forms.',
+      url: `${baseUrl}/alphabet-new`,
+      type: 'website',
+      noindex: true
+    },
   };
 
   const meta = pages[page] || {
@@ -192,6 +218,33 @@ export function generateStructuredData(page: string, data?: any) {
         "url": baseUrl
       },
       "inLanguage": "ar"
+    };
+  }
+
+  if (page === 'blogPost' && data?.title) {
+    return {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": data.title,
+      "description": data.description || "",
+      "datePublished": data.date,
+      "dateModified": data.date,
+      "author": {
+        "@type": "Person",
+        "name": "Sherif Elmetwally"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Parallel Arabic",
+        "url": baseUrl,
+        "logo": {
+          "@type": "ImageObject",
+          "url": defaultImage
+        }
+      },
+      "mainEntityOfPage": data.url || `${baseUrl}/blog`,
+      "image": defaultImage,
+      "inLanguage": "en"
     };
   }
 

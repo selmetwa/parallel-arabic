@@ -249,11 +249,15 @@
 		if (path === '/tutor') return 'tutor';
 		if (path === '/stories') return 'stories';
 		if (path === '/lessons') return 'lessons';
+		if (path === '/alphabet-new') return 'alphabet-new';
 		if (path.startsWith('/alphabet')) return 'alphabet';
 		if (path === '/videos') return 'videos';
 		if (path === '/vocabulary') return 'vocabulary';
 		if (path === '/about') return 'about';
 		if (path === '/faq') return 'faq';
+		if (path === '/blog') return 'blog';
+		if (path.startsWith('/blog/')) return 'blogPost';
+		if (['/egyptian-arabic', '/fusha', '/levantine', '/darija'].includes(path)) return 'dialect';
 		return 'home';
 	});
 
@@ -316,6 +320,15 @@
 			});
 		}
 
+		// For blog post pages, use the post SEO data from the page load
+		if (pageType === 'blogPost' && data?.blogPost) {
+			return getPageMeta('blogPost', {
+				title: data.blogPost.title,
+				description: data.blogPost.description,
+				url: data.blogPost.url
+			});
+		}
+
 		return getPageMeta(pageType, { ...data, dialect });
 	});
 
@@ -356,6 +369,11 @@
 			});
 		}
 
+		// For blog post pages, emit BlogPosting structured data
+		if (pageType === 'blogPost' && data?.blogPost) {
+			return generateStructuredData('blogPost', data.blogPost);
+		}
+
 		return generateStructuredData(pageType, data);
 	});
 </script>
@@ -386,7 +404,7 @@
 	/>
 
 	<!-- Additional SEO -->
-	<meta name="robots" content="index, follow" />
+	<meta name="robots" content={seoMeta.noindex ? 'noindex, follow' : 'index, follow'} />
 	<link rel="canonical" href={seoMeta.url || 'https://www.parallel-arabic.com'} />
 
 	<!-- Structured Data (JSON-LD) -->
