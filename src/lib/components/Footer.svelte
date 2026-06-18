@@ -18,6 +18,7 @@
         <ul class="space-y-2 text-text-300 text-sm">
           <li><a href="/" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Home</a></li>
           <li><a href="/about" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">About</a></li>
+          <li><a href="/blog" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Blog</a></li>
           <li><a href="/pricing" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Pricing</a></li>
           <li><a href="/mobile-app" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Mobile App</a></li>
         </ul>

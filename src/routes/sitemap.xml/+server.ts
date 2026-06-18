@@ -1,5 +1,6 @@
 import type { RequestHandler } from './$types';
 import { supabase } from '$lib/supabaseClient';
+import { blogPosts } from '$lib/constants/blog-posts';
 // verb index temporarily disabled — json files removed in reorder branch
 const verbIndex: { verbs: { slug: string }[] } = { verbs: [] };
 const BASE_URL = 'https://www.parallel-arabic.com';
@@ -39,15 +40,6 @@ const staticPages = [
   { path: '/levantine', priority: '0.9', changefreq: 'weekly' },
   { path: '/darija', priority: '0.9', changefreq: 'weekly' },
 
-  // Dialect-filtered stories
-  { path: '/stories?dialect=egyptian-arabic', priority: '0.8', changefreq: 'weekly' },
-  { path: '/stories?dialect=darija', priority: '0.8', changefreq: 'weekly' },
-  { path: '/stories?dialect=levantine', priority: '0.8', changefreq: 'weekly' },
-  { path: '/stories?dialect=fusha', priority: '0.8', changefreq: 'weekly' },
-
-  // Dialect-filtered vocabulary
-  { path: '/vocabulary?dialect=egyptian-arabic', priority: '0.8', changefreq: 'weekly' },
-
   // Structured lessons by dialect
   { path: '/lessons/structured/egyptian-arabic', priority: '0.8', changefreq: 'weekly' },
   { path: '/lessons/structured/fusha', priority: '0.8', changefreq: 'weekly' },
@@ -63,6 +55,9 @@ const staticPages = [
   { path: '/about', priority: '0.5', changefreq: 'monthly' },
   { path: '/faq', priority: '0.5', changefreq: 'monthly' },
   { path: '/support', priority: '0.5', changefreq: 'monthly' },
+
+  // Blog
+  { path: '/blog', priority: '0.6', changefreq: 'weekly' },
 
 ];
 
@@ -90,6 +85,17 @@ export const GET: RequestHandler = async () => {
     <loc>${BASE_URL}${page.path}</loc>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
+  </url>`);
+  }
+
+  // Add blog posts
+  for (const post of blogPosts) {
+    urls.push(`
+  <url>
+    <loc>${BASE_URL}/blog/${escapeXml(post.slug)}</loc>
+    <lastmod>${formatDate(post.date)}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>`);
   }
 
