@@ -5,6 +5,11 @@ export const theme = writable('light');
 export const currentDialect = writable('');
 export const sidebarCollapsed = writable(false); // 'egyptian-arabic', 'fusha', 'levantine', 'darija', 'iraqi', 'khaleeji', or ''
 
+// Tutor conversation persistence (kept in memory so the chat survives navigation)
+export const tutorConversation = writable<any[]>([]);
+export const tutorConversationId = writable<string | null>(null);
+export const tutorSelectedDialect = writable<string | null>(null);
+
 // Egyptian Arabic stores
 export const egyptianSentencesInStore = writable([]);
 export const egyptianSentenceIndexInStore = writable(0);

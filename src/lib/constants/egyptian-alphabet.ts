@@ -11,6 +11,12 @@ export type EgyptianLetter = {
   englishSound: string;
   egyptianSound: string;
   exampleArabic: string;
+  // Curated Egyptian-Colloquial respelling fed to TTS so the "EG" voice button
+  // pronounces the word the Egyptian way (ج→گ "g", ق→hamza, ث→T/S, ذ→Z/D …).
+  // Only set where the Egyptian reading differs from the MSA spelling; the MSA
+  // button always uses `exampleArabic`. Verify each by ear — the ج→گ ("g") ones
+  // are the least certain since Arabic has no native hard-G letter.
+  exampleArabicEgyptian?: string;
   exampleFranco: string;
   meaning: string;
   notes: string;
@@ -61,6 +67,7 @@ export const egyptianLetters: EgyptianLetter[] = [
     englishSound: 'TH',
     egyptianSound: 'S/T',
     exampleArabic: 'ثوم ثانية',
+    exampleArabicEgyptian: 'توم سانية', // Tom (ث→T), sanya (ث→S)
     exampleFranco: 'Tom / sanyah',
     meaning: 'garlic / second',
     notes: 'Usually T or S in Egyptian',
@@ -73,6 +80,7 @@ export const egyptianLetters: EgyptianLetter[] = [
     englishSound: 'J',
     egyptianSound: 'G',
     exampleArabic: 'جمل',
+    exampleArabicEgyptian: 'گمل', // gamal — گ (gaf) to force the hard G
     exampleFranco: 'jamal',
     meaning: 'camel',
     notes: 'Egyptian G sound',
@@ -121,6 +129,7 @@ export const egyptianLetters: EgyptianLetter[] = [
     englishSound: 'TH',
     egyptianSound: 'Z',
     exampleArabic: 'ذرة',
+    exampleArabicEgyptian: 'درة', // dorra — ذ→D here
     exampleFranco: 'dorra',
     meaning: 'corn',
     notes: 'Usually Z, can shift to D',
@@ -265,6 +274,7 @@ export const egyptianLetters: EgyptianLetter[] = [
     englishSound: 'Q',
     egyptianSound: 'A/Q',
     exampleArabic: 'قلب قرية',
+    exampleArabicEgyptian: 'ألب قرية', // alb (ق→hamza), qaryah (ق kept — lexical)
     exampleFranco: 'alb / qaryah',
     meaning: 'heart / village',
     notes: 'Often becomes a hamza (glottal stop)',
@@ -391,7 +401,10 @@ export const sixKickingLetters = ['alif', 'waw', 'dal', 'dhal', 'ra', 'zay'];
 export type EgyptianNote = {
   title: string;
   summary: string;
-  rows: { arabic: string; egyptian: string }[];
+  // `arabic` is the MSA spelling (MSA voice button). `egyptianArabic` is the
+  // curated respelling for the Egyptian voice button; omit it to keep the MSA
+  // spelling (e.g. words where the ق is kept).
+  rows: { arabic: string; egyptian: string; egyptianArabic?: string }[];
 };
 
 export const egyptianNotes: EgyptianNote[] = [
@@ -399,9 +412,9 @@ export const egyptianNotes: EgyptianNote[] = [
     title: 'ج = G',
     summary: "Always a hard G in Egyptian — never 'J' unless you're speaking MSA.",
     rows: [
-      { arabic: 'جميل', egyptian: 'gameel — beautiful' },
-      { arabic: 'جمل', egyptian: 'gamal — camel' },
-      { arabic: 'جديد', egyptian: 'gedeed — new' }
+      { arabic: 'جميل', egyptian: 'gameel — beautiful', egyptianArabic: 'گميل' },
+      { arabic: 'جمل', egyptian: 'gamal — camel', egyptianArabic: 'گمل' },
+      { arabic: 'جديد', egyptian: 'gedeed — new', egyptianArabic: 'گديد' }
     ]
   },
   {
@@ -409,35 +422,35 @@ export const egyptianNotes: EgyptianNote[] = [
     summary:
       'In everyday Egyptian it usually becomes a hamza (glottal stop), but educated speakers keep the Q in many words.',
     rows: [
-      { arabic: 'قلب', egyptian: 'alb — heart' },
-      { arabic: 'قرآن', egyptian: "Qor'an — Quran" },
-      { arabic: 'قرار', egyptian: 'Qarar — decision' }
+      { arabic: 'قلب', egyptian: 'alb — heart', egyptianArabic: 'ألب' },
+      { arabic: 'قرآن', egyptian: "Qor'an — Quran" }, // ق kept — keep MSA spelling
+      { arabic: 'قرار', egyptian: 'Qarar — decision' } // ق kept — keep MSA spelling
     ]
   },
   {
     title: 'ث = usually T or S',
     summary: 'The English "th" sound is rare in Egyptian; it shifts to T or S.',
     rows: [
-      { arabic: 'ثوم', egyptian: 'Tom — garlic' },
-      { arabic: 'ثلاثة', egyptian: 'Talata — three' },
-      { arabic: 'ثانوية', egyptian: 'Sanaweya — secondary' }
+      { arabic: 'ثوم', egyptian: 'Tom — garlic', egyptianArabic: 'توم' },
+      { arabic: 'ثلاثة', egyptian: 'Talata — three', egyptianArabic: 'تلاتة' },
+      { arabic: 'ثانوية', egyptian: 'Sanaweya — secondary', egyptianArabic: 'سانوية' }
     ]
   },
   {
     title: 'ذ = usually Z or D',
     summary: 'The English "th" (as in this) shifts to Z, occasionally D.',
     rows: [
-      { arabic: 'ذرة', egyptian: 'Dorra — corn' },
-      { arabic: 'ذهب', egyptian: 'Dahab — gold' },
-      { arabic: 'إذاعة', egyptian: 'eza3a — radio channel' }
+      { arabic: 'ذرة', egyptian: 'Dorra — corn', egyptianArabic: 'درة' },
+      { arabic: 'ذهب', egyptian: 'Dahab — gold', egyptianArabic: 'دهب' },
+      { arabic: 'إذاعة', egyptian: 'eza3a — radio channel', egyptianArabic: 'إزاعة' }
     ]
   },
   {
     title: 'ظ = usually Z',
     summary: 'Pronounced as a hard/emphatic Z.',
     rows: [
-      { arabic: 'ظرف', egyptian: 'Zarf — envelope' },
-      { arabic: 'ظابط', egyptian: 'Zabet — officer' }
+      { arabic: 'ظرف', egyptian: 'Zarf — envelope', egyptianArabic: 'زرف' },
+      { arabic: 'ظابط', egyptian: 'Zabet — officer', egyptianArabic: 'زابط' }
     ]
   }
 ];

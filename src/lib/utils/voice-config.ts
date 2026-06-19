@@ -11,7 +11,7 @@ export const getVoiceConfig = (dialect: string) => {
       };
     case 'egyptian-arabic':
       return {
-        voice: 'Haytham - Conversation',
+        voice: 'Fattah',
         voice2: 'Haytham - Conversation',
         speed: 0.9,
         stability: 0.9,

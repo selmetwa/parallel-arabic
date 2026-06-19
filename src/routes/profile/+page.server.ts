@@ -389,7 +389,7 @@ export const actions: Actions = {
 		const dailyReviewLimit = formData.get('daily_review_limit') as string;
 		const limit = parseInt(dailyReviewLimit, 10);
 
-		// Validate limit (between 1 and 1000)
+		// Validate limit (between 1 and 100)
 		if (!dailyReviewLimit || isNaN(limit) || limit < 1 || limit > 100) {
 			return {
 				success: false,

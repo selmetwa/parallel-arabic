@@ -64,7 +64,7 @@
 		},
 		{
 			q: 'How is this different from Duolingo?',
-			a: "Duolingo teaches Modern Standard Arabic through fixed, gamified exercises. Parallel Arabic focuses on spoken dialects and lets you generate learning material around your own saved words — so you’re practicing vocabulary that’s actually relevant to you, in the dialect you want to speak."
+			a: "Duolingo teaches Modern Standard Arabic through fixed, gamified exercises. Parallel Arabic focuses on spoken dialects and lets you generate learning material around your own saved words, so you’re practicing vocabulary that’s actually relevant to you, in the dialect you want to speak."
 		},
 		{
 			q: 'Is there a mobile app?',
@@ -83,7 +83,7 @@
 						Learn what is actually spoken
 					</h1>
 					<p class="text-text-200 text-lg sm:text-xl leading-relaxed max-w-xl mb-8">
-						Learning Arabic is hard. Most apps teach Fusha — when what you actually want is to have real conversations with Egyptians, Lebanese, or Moroccans.
+						Learning Arabic is hard. Most apps teach Fusha, but what you actually want is to have real conversations with Egyptians, Lebanese, or Moroccans.
 					</p>
 					<a
 						href="/signup"
@@ -136,7 +136,7 @@
 					Built around dialects, from the ground up
 				</h2>
 				<p class="text-text-200 text-base sm:text-lg leading-relaxed">
-					Here’s what that looks like in practice — seven ways to read, practice, and remember the Arabic you actually want to speak.
+					Here’s what that looks like in practice: seven ways to read, practice, and remember the Arabic you actually want to speak.
 				</p>
 			</div>
 
@@ -145,7 +145,7 @@
 				<article class="md:col-span-2 lg:col-span-4 min-w-0 flex flex-col bg-tile-400 border border-tile-500 rounded-xl p-6 sm:p-7 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg motion-reduce:hover:translate-y-0">
 					<h3 class="text-xl sm:text-2xl font-bold text-text-300 mb-3">Short Stories</h3>
 					<p class="text-text-200 leading-relaxed">
-						Practice reading Arabic in context. Click any word to instantly see its translation, transliteration, and pronunciation. Generate your own stories on any topic — Egyptian street food, Levantine pop culture, whatever interests you.
+						Practice reading Arabic in context. Click any word to instantly see its translation, transliteration, and pronunciation. Generate your own stories on any topic, whether that’s Egyptian street food or Levantine pop culture.
 					</p>
 					<img
 						src="/images/features/stories.png"
@@ -158,7 +158,7 @@
 				<article class="md:col-span-1 lg:col-span-2 min-w-0 flex flex-col bg-tile-400 border border-tile-500 rounded-xl p-6 sm:p-7 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg motion-reduce:hover:translate-y-0">
 					<h3 class="text-xl sm:text-2xl font-bold text-text-300 mb-3">Lessons</h3>
 					<p class="text-text-200 leading-relaxed">
-						Explore 50+ structured lessons per dialect covering vocabulary, grammar, and phrases — or create custom lessons on any topic you're interested in.
+						Work through 50+ structured lessons per dialect covering vocabulary, grammar, and phrases, or create custom lessons on any topic you're interested in.
 					</p>
 					<img
 						src="/images/features/lessons.png"
@@ -174,8 +174,8 @@
 						See your saved words used naturally in sentences. Two practice modes:
 					</p>
 					<ul class="text-text-200 space-y-2 text-sm">
-						<li class="flex items-start gap-2"><span class="text-text-300 font-semibold flex-shrink-0">Writing —</span> Type out Arabic sentences using a custom virtual Arabic keyboard, or your device's native keyboard.</li>
-						<li class="flex items-start gap-2"><span class="text-text-300 font-semibold flex-shrink-0">Matching —</span> Drag and drop Arabic words into the correct order to form a sentence.</li>
+						<li class="flex items-start gap-2"><span class="text-text-300 font-semibold flex-shrink-0">Writing:</span> Type out Arabic sentences using a custom virtual Arabic keyboard, or your device's native keyboard.</li>
+						<li class="flex items-start gap-2"><span class="text-text-300 font-semibold flex-shrink-0">Matching:</span> Drag and drop Arabic words into the correct order to form a sentence.</li>
 					</ul>
 					<img
 						src="/images/features/sentence-writing.png"
@@ -188,7 +188,7 @@
 				<article class="md:col-span-1 lg:col-span-3 min-w-0 flex flex-col bg-tile-400 border border-tile-500 rounded-xl p-6 sm:p-7 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg motion-reduce:hover:translate-y-0">
 					<h3 class="text-xl sm:text-2xl font-bold text-text-300 mb-3">Spaced Repetition</h3>
 					<p class="text-text-200 leading-relaxed">
-						Review your saved words on a schedule proven to build long-term retention — and each session pulls from the words you’ve actually saved.
+						Review your saved words on a schedule that’s proven to build long-term retention. Each session pulls from the words you’ve actually saved.
 					</p>
 					<img
 						src="/images/features/reviews.png"
@@ -219,7 +219,7 @@
 						<div>
 							<h3 class="text-xl sm:text-2xl font-bold text-text-300 mb-3">Compare Dialects</h3>
 							<p class="text-text-200 leading-relaxed">
-								See how the same word or phrase differs across Egyptian, Levantine, Darija, and Modern Standard Arabic — side by side. Useful for anyone learning multiple dialects or curious about regional differences.
+								See how the same word or phrase differs across Egyptian, Levantine, Darija, and Modern Standard Arabic, side by side. Useful if you’re learning more than one dialect, or just curious about regional differences.
 							</p>
 						</div>
 						<img
@@ -279,7 +279,7 @@
 						Generic language apps bore you. The same repetitive exercises, the same irrelevant topics…
 					</p>
 					<p class="text-text-300 text-base sm:text-lg leading-relaxed mb-5">
-						<strong>Create custom stories and practice sentences built around the words you're actually studying.</strong> Want to practice Egyptian street food vocab? Levantine soccer slang? Generate it instantly. Your words, your context — not someone else's curriculum.
+						<strong>Create custom stories and practice sentences built around the words you're actually studying.</strong> Want to practice Egyptian street food vocab? Levantine soccer slang? Generate it instantly. You study your words in your context, not someone else's curriculum.
 					</p>
 					<div class="border-t border-tile-500 pt-4">
 						<p class="text-sm text-text-200 font-medium mb-3">Your saved words include:</p>
@@ -301,7 +301,7 @@
 						You've studied Arabic before but the words just don't stick. A week later, you've forgotten everything…
 					</p>
 					<p class="text-text-300 text-base sm:text-lg leading-relaxed">
-						<strong>Review your saved words with spaced repetition</strong> — the method that schedules reviews at exactly the right time. Unlike a plain flashcard app, <strong>each session generates fresh stories and practice sentences using your saved words</strong>, so you encounter them in different contexts rather than the same card over and over.
+						<strong>Review your saved words with spaced repetition</strong>, which schedules each review at exactly the right time. Unlike a plain flashcard app, <strong>every session generates fresh stories and practice sentences from your saved words</strong>, so you meet them in new contexts instead of staring at the same card over and over.
 					</p>
 				</li>
 			</ol>

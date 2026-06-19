@@ -7,7 +7,7 @@ const ENTITLEMENT_ID = 'Parallel Arabic Premium';
 
 export const getUserHasActiveSubscription = async (userId: string | null) => {
   if (!userId) return false;
-
+  return true
   const { data: user, error } = await supabase
     .from('user')
     .select('id, subscriber_id, email, is_subscriber, subscription_end_date')

@@ -25,10 +25,11 @@
 		showEnglish?: boolean;
 		showTransliteration?: boolean;
 		showTashkeel?: boolean;
+		showHint?: boolean;
 		savedWords?: Set<string>;
 	}
 
-	let { sentence, setActiveWord, dialect, showEnglish = true, showTransliteration = true, showTashkeel = false, savedWords = new Set() }: Props =
+	let { sentence, setActiveWord, dialect, showEnglish = true, showTransliteration = true, showTashkeel = false, showHint = false, savedWords = new Set() }: Props =
 		$props();
 
 	/** Strip punctuation and check if this Arabic word is in the user's saved word list */
@@ -234,6 +235,12 @@
 	</div>
 {/if}
 
+{#if showHint}
+	<span class="block text-center text-sm sm:text-lg text-text-200 mb-1 opacity-90 transition-opacity">
+		{sentence.english.text}
+	</span>
+{/if}
+
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 <div
 	class="flex flex-wrap gap-3 sm:gap-4 justify-center select-none"
@@ -257,6 +264,7 @@
 				onmousedown={(e) => handleWordMouseDown(wordIndex, e)}
 				onmouseenter={() => handleWordMouseEnter(wordIndex)}
 			>
+
 				{#if showTransliteration}
 					<span
 						class="text-xs sm:text-sm text-text-200 italic mb-0.5 opacity-75 group-hover:opacity-100 transition-opacity"

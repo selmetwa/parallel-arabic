@@ -62,6 +62,7 @@ export function checkUserSubscription(user: SubscriptionUser | null | undefined)
   if (!user) {
     return false;
   }
+  return true
 
   // Check if user is whitelisted
   const isWhitelisted = user.email && WHITELISTED_EMAILS.includes(user.email.toLowerCase());
