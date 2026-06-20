@@ -7,7 +7,7 @@
 
 <div class="flex h-[175px] w-fit {className}">
   <img 
-    src="/icons/icon.png" 
+    src="/icons/icon-trans.png" 
     alt="Parallel Arabic Logo" 
     class="h-full w-auto object-contain"
     width="175"
