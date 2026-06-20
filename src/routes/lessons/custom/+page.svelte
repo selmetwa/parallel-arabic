@@ -154,21 +154,21 @@
 	function getDialectBadgeColor(dialect: string) {
 		const colors = {
 			'egyptian-arabic': 'bg-tile-500 text-text-300',
-			'levantine': 'bg-orange-100 text-orange-800',
-			'darija': 'bg-green-100 text-green-800',
-			'fusha': 'bg-purple-100 text-purple-800',
+			'levantine': 'bg-amber-500/15 text-amber-500 border border-amber-500/25',
+			'darija': 'bg-emerald-500/15 text-emerald-600 border border-emerald-500/25',
+			'fusha': 'bg-purple-500/15 text-purple-400 border border-purple-500/25',
 		};
-		return colors[dialect as keyof typeof colors] || 'bg-gray-100 text-gray-800';
+		return colors[dialect as keyof typeof colors] || 'bg-tile-500 text-text-200';
 	}
 
 	// Get level badge color
 	function getLevelBadgeColor(level: string) {
 		const colors = {
-			beginner: 'bg-green-100 text-green-800',
-			intermediate: 'bg-yellow-100 text-yellow-800',
-			advanced: 'bg-red-100 text-red-800',
+			beginner: 'bg-emerald-500/15 text-emerald-600 border border-emerald-500/25',
+			intermediate: 'bg-amber-500/15 text-amber-500 border border-amber-500/25',
+			advanced: 'bg-red-500/15 text-red-500 border border-red-500/25',
 		};
-		return colors[level as keyof typeof colors] || 'bg-gray-100 text-gray-800';
+		return colors[level as keyof typeof colors] || 'bg-tile-500 text-text-200';
 	}
 
 	function getDialectLabel(dialect: string, originalName?: string) {
@@ -349,31 +349,39 @@
 					<a
 						href={`/lessons/${lesson.id}`}
 						onclick={(e) => handleLessonClick(e, lesson.id)}
-						class="group flex flex-col bg-tile-400 border border-tile-500 rounded-xl p-4 shadow-sm hover:bg-tile-500 hover:shadow-lg transition-all duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300"
+						class="group relative overflow-hidden flex flex-col bg-tile-400 border border-tile-500 rounded-xl p-4 hover:bg-tile-500 hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 motion-reduce:hover:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300"
 					>
-						<div class="flex justify-between items-start mb-3">
-							<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium rounded-full {getDialectBadgeColor(lesson.dialect)}">
+						<!-- Subtle dialect watermark -->
+						<!-- <span class="absolute bottom-1 right-2 text-[4rem] font-bold text-text-300 opacity-[0.04] leading-none pointer-events-none select-none" dir="rtl" aria-hidden="true">
+							{lesson.dialect === 'egyptian-arabic' ? 'مصر' : lesson.dialect === 'levantine' ? 'شام' : lesson.dialect === 'darija' ? 'مغرب' : 'فصحى'}
+						</span> -->
+
+						<!-- Badge row -->
+						<div class="relative flex justify-between items-start mb-3">
+							<span class="inline-flex items-center px-2 py-0.5 text-[11px] font-semibold rounded-full {getDialectBadgeColor(lesson.dialect)}">
 								{getDialectLabel(lesson.dialect, lesson.dialectName)}
 							</span>
-							<span class="inline-flex items-center px-2.5 py-1 text-xs font-medium rounded-full {getLevelBadgeColor(lesson.level)}">
+							<span class="inline-flex items-center px-2 py-0.5 text-[11px] font-semibold rounded-full {getLevelBadgeColor(lesson.level)}">
 								{capitalizeFirst(lesson.level)}
 							</span>
 						</div>
-						
-						<h3 class="text-base sm:text-lg font-bold text-text-300 mb-2 group-hover:text-text-200 transition-colors leading-tight flex-grow">
+
+						<!-- Title -->
+						<h3 class="relative text-sm font-bold text-text-300 mb-2 leading-snug flex-grow line-clamp-2">
 							{lesson.title}
 						</h3>
 
-						<div class="flex items-center gap-4 pt-3 border-t border-tile-500/50 mt-auto text-sm text-text-200 font-medium opacity-80">
-							<div class="flex items-center gap-1.5">
-								<span>📄</span>
-								<span>{lesson.subLessonCount} {lesson.subLessonCount === 1 ? 'Sub-lesson' : 'Sub-lessons'}</span>
-							</div>
+						<!-- Meta -->
+						<div class="relative flex items-center gap-3 pt-3 border-t border-tile-500/40 mt-auto text-xs text-text-200">
+							<span class="flex items-center gap-1">
+								<span aria-hidden="true">📄</span>
+								{lesson.subLessonCount} {lesson.subLessonCount === 1 ? 'lesson' : 'lessons'}
+							</span>
 							{#if lesson.estimatedDuration}
-								<div class="flex items-center gap-1.5">
-									<span>⏱️</span>
-									<span>~{lesson.estimatedDuration}m</span>
-								</div>
+								<span class="flex items-center gap-1">
+									<span aria-hidden="true">⏱</span>
+									~{lesson.estimatedDuration}m
+								</span>
 							{/if}
 						</div>
 					</a>

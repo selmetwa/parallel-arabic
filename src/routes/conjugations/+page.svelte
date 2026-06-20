@@ -112,12 +112,16 @@
 	</div>
 {:else}
 	<!-- Generation form -->
-	<header class="py-5 bg-tile-200 border-b border-tile-500 px-6 sm:px-12">
-		<div class="text-left">
-			<h1 class="text-2xl sm:text-3xl text-text-300 font-bold mb-1 tracking-tight">Verb Conjugation Practice</h1>
-			<p class="text-text-200 text-base sm:text-lg leading-snug max-w-2xl">
-				Pick a dialect and a verb, then drill every tense, form, and pronoun by typing or quiz.
-			</p>
+	<header class="py-6 bg-tile-200 border-b border-tile-500 px-6 sm:px-12">
+		<div class="flex items-start gap-4">
+			<span class="text-4xl font-bold text-brand opacity-70 leading-none mt-1 shrink-0 select-none" aria-hidden="true" dir="rtl">فعل</span>
+			<div>
+				<p class="text-[0.65rem] font-bold uppercase tracking-[0.15em] text-text-200 border-l-2 border-brand pl-2 mb-2">Practice Tool</p>
+				<h1 class="text-2xl sm:text-3xl text-text-300 font-bold tracking-tight">Verb Conjugation Practice</h1>
+				<p class="text-text-200 text-sm sm:text-base leading-snug max-w-2xl mt-1">
+					Pick a dialect and a verb, then drill every tense, form, and pronoun by typing or quiz.
+				</p>
+			</div>
 		</div>
 	</header>
 
@@ -132,11 +136,11 @@
 
 			<form class="space-y-4" onsubmit={generate}>
 				<!-- Dialect -->
-				<div class="bg-tile-400 border border-tile-500 rounded-xl shadow-sm overflow-hidden">
-					<div class="px-4 py-3 border-b border-tile-500">
-						<h3 class="text-lg font-bold text-text-300 flex items-center gap-2"><span>🗣️</span> Dialect</h3>
+				<div class="bg-tile-300 border border-tile-400 rounded-xl overflow-hidden">
+					<div class="px-4 pt-4 pb-1">
+						<h3 class="text-xs font-bold uppercase tracking-[0.12em] text-text-200 border-l-2 border-brand pl-2">Dialect</h3>
 					</div>
-					<div class="p-4">
+					<div class="p-4 pt-2">
 						<div class="grid grid-cols-2 gap-2">
 							{#each dialectOptions as d (d.value)}
 								<button
@@ -153,11 +157,11 @@
 				</div>
 
 				<!-- Verb -->
-				<div class="bg-tile-400 border border-tile-500 rounded-xl shadow-sm overflow-hidden">
-					<div class="px-4 py-3 border-b border-tile-500">
-						<h3 class="text-lg font-bold text-text-300 flex items-center gap-2"><span>🔤</span> English Verb</h3>
+				<div class="bg-tile-300 border border-tile-400 rounded-xl overflow-hidden">
+					<div class="px-4 pt-4 pb-1">
+						<h3 class="text-xs font-bold uppercase tracking-[0.12em] text-text-200 border-l-2 border-brand pl-2">English Verb</h3>
 					</div>
-					<div class="p-4">
+					<div class="p-4 pt-2">
 						<input
 							type="text"
 							bind:value={verb}

@@ -79,14 +79,14 @@
 
 	function nextCard() {
 		if (cardIndex < mergedLetters.length - 1) {
-			cardDirection = 1;
+			cardDirection = -1;
 			cardIndex += 1;
 		}
 	}
 
 	function prevCard() {
 		if (cardIndex > 0) {
-			cardDirection = -1;
+			cardDirection = 1;
 			cardIndex -= 1;
 		}
 	}
@@ -99,14 +99,16 @@
 		if (pointerStartX === null) return;
 		const dx = event.clientX - pointerStartX;
 		pointerStartX = null;
-		if (dx < -50) nextCard();
-		else if (dx > 50) prevCard();
+		// RTL: swipe right (→) advances to next letter, swipe left (←) goes back
+		if (dx > 50) nextCard();
+		else if (dx < -50) prevCard();
 	}
 
 	function onLesson1Keydown(event: KeyboardEvent) {
 		if (page !== 0 || lesson1View !== 'cards') return;
-		if (event.key === 'ArrowRight') nextCard();
-		else if (event.key === 'ArrowLeft') prevCard();
+		// RTL: left arrow advances (next), right arrow goes back (prev)
+		if (event.key === 'ArrowLeft') nextCard();
+		else if (event.key === 'ArrowRight') prevCard();
 	}
 
 	let selectedArticulation = $state<Articulation>('throat');
@@ -391,7 +393,7 @@
 									</div>
 
 									<p class="text-xs text-text-200">
-										Tap the letter to hear it · swipe or use ← → to move
+										Tap the letter to hear it · swipe right→left or use → ← to move
 									</p>
 								</div>
 							{/key}
@@ -401,9 +403,9 @@
 						<div class="mt-4 flex items-center justify-center gap-6">
 							<button
 								type="button"
-								onclick={prevCard}
-								disabled={cardIndex === 0}
-								aria-label="Previous letter"
+								onclick={nextCard}
+								disabled={cardIndex === mergedLetters.length - 1}
+								aria-label="Next letter"
 								class="flex h-12 w-12 items-center justify-center rounded-full border border-tile-500 bg-tile-400 text-2xl font-bold text-text-300 shadow-sm transition-all hover:bg-tile-500 active:scale-95 disabled:cursor-not-allowed disabled:opacity-40"
 							>
 								‹
@@ -413,9 +415,9 @@
 							</span>
 							<button
 								type="button"
-								onclick={nextCard}
-								disabled={cardIndex === mergedLetters.length - 1}
-								aria-label="Next letter"
+								onclick={prevCard}
+								disabled={cardIndex === 0}
+								aria-label="Previous letter"
 								class="flex h-12 w-12 items-center justify-center rounded-full border border-tile-500 bg-tile-400 text-2xl font-bold text-text-300 shadow-sm transition-all hover:bg-tile-500 active:scale-95 disabled:cursor-not-allowed disabled:opacity-40"
 							>
 								›
