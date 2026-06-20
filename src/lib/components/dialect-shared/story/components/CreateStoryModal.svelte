@@ -41,6 +41,11 @@
 	let vocabularyFile = $state<File | null>(null);
 	let fileError = $state('');
 
+	$inspect({
+		storyType,
+		difficulty: option,
+		sentenceCount
+	})
 	// New audio upload states
 	let creationMode = $state<'generate' | 'upload'>('generate');
 	let audioFile = $state<File | null>(null);
