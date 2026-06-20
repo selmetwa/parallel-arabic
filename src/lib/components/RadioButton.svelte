@@ -23,8 +23,6 @@
 </script>
 
 <label
-  for={selectableFor}
-  aria-labelledby={selectableFor}
   class={cn(
     "border-2 border-tile-600 flex gap-3 flex-row items-center border w-full p-4 text-base sm:cursor-pointer relative bg-tile-300 hover:bg-tile-500 transition-all duration-300",
     { "!bg-tile-600 !border-tile-600": isSelected },
@@ -35,13 +33,12 @@
   <input
     onclick={onClick}
     value={value}
-    id={selectableFor}
     checked={!!isSelected}
     type="radio"
     class="w-4 h-4 accent-tile-600 flex-shrink-0"
   />
   <span class={cn(
     "text-text-300 text-3xl font-normal select-none flex-1",
-    className,    
+    className,
     )}>{text}</span>
 </label>
