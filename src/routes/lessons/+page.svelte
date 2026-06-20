@@ -158,108 +158,121 @@
 
 <PaywallModal isOpen={isModalOpen} {handleCloseModal}></PaywallModal>
 
-<section class="min-h-screen bg-tile-200">
-	<!-- Hero -->
-	<header class="border-b border-tile-500">
-		<div class="max-w-7xl mx-auto px-3 sm:px-8 py-10 sm:py-12">
-			<div class="text-left max-w-3xl">
-				<div class="inline-flex items-center gap-2 px-4 py-2 bg-tile-400 border border-tile-600 rounded-full text-sm text-text-200 mb-6">
-					<span>📖</span>
-					<span>Arabic Learning</span>
-				</div>
-				<h1 class="text-3xl sm:text-4xl text-text-300 font-bold mb-2 tracking-tight">
-					Learn Arabic Your Way
-				</h1>
-				<p class="text-text-200 text-lg sm:text-xl leading-snug">
-					Choose your learning path — follow a structured curriculum or create custom lessons tailored to your interests.
-				</p>
-			</div>
-		</div>
+<section class="min-h-screen">
+
+	<!-- Compact page header -->
+	<header class="max-w-5xl mx-auto px-4 sm:px-8 pt-10 pb-8 border-b border-tile-500">
+		<h1 class="text-4xl sm:text-5xl font-black text-text-300 tracking-tight leading-none">Lessons</h1>
+		<p class="mt-3 text-text-200 text-base sm:text-lg max-w-lg leading-relaxed">
+			A structured curriculum or custom lessons on any topic — in four Arabic dialects.
+		</p>
 	</header>
 
-	<!-- Path Cards -->
-	<section class="py-10">
-		<div class="px-3 sm:px-8">
-			<h2 class="text-lg sm:text-xl font-bold text-text-300 text-left mb-6">Choose Your Path</h2>
+	<!-- Path cards -->
+	<div class="max-w-5xl mx-auto px-4 sm:px-8 py-8">
+		<p class="text-[10px] uppercase tracking-[0.2em] text-text-200 font-semibold mb-4">Choose your path</p>
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-				<!-- Structured Lessons -->
-				<a href="/lessons/structured" onclick={() => trackEvent('lessons_path_selected', { path: 'structured' })} class="group block rounded-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300">
-					<article class="flex flex-col h-full bg-tile-400 border border-tile-500 rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0">
-						<div class="w-14 h-14 bg-tile-300 border border-tile-500 rounded-xl flex items-center justify-center mb-4">
-							<span class="text-3xl">📚</span>
-						</div>
-						<h3 class="text-xl sm:text-2xl font-bold text-text-300 mb-2">Structured Lessons</h3>
-						<p class="text-text-200 leading-relaxed mb-4 flex-grow">
-							Follow a curriculum path organized by modules and topics. Progress through lessons in a logical sequence designed for systematic learning.
-						</p>
-						<ul class="space-y-2 text-text-200 mb-5 text-sm">
-							<li class="flex items-center gap-2"><span class="text-green-700">✓</span><span>Curated curriculum modules</span></li>
-							<li class="flex items-center gap-2"><span class="text-green-700">✓</span><span>Progressive difficulty</span></li>
-							<li class="flex items-center gap-2"><span class="text-green-700">✓</span><span>Track your progress</span></li>
-						</ul>
-						<div class="flex items-center gap-2 text-text-300 font-semibold">
-							<span>Explore Curriculum</span>
-							<span aria-hidden="true">→</span>
-						</div>
-					</article>
-				</a>
+			<!-- STRUCTURED card -->
+			<a
+				href="/lessons/structured"
+				onclick={() => trackEvent('lessons_path_selected', { path: 'structured' })}
+				class="group relative overflow-hidden flex flex-col bg-tile-400 border border-tile-500 border-l-4 border-l-[--brand] rounded-2xl p-6 sm:p-8 min-h-[280px] transition-all duration-200 hover:bg-tile-500 hover:-translate-y-1 hover:shadow-lg motion-reduce:hover:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300"
+			>
+				<!-- Arabic watermark background -->
+				<!-- <span class="absolute bottom-2 right-3 text-[9rem] font-bold text-text-300 opacity-[0.04] leading-none pointer-events-none select-none" dir="rtl" aria-hidden="true">منهج</span> -->
 
-				<!-- Customizable Lessons (purple accent) -->
-				<a href="/lessons/custom" onclick={() => trackEvent('lessons_path_selected', { path: 'custom' })} class="group block rounded-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300">
-					<article class="flex flex-col h-full bg-tile-400 border border-purple-500/50 rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0">
-						<div class="w-14 h-14 bg-purple-500/15 border border-purple-500/40 rounded-xl flex items-center justify-center mb-4">
-							<span class="text-3xl">🎨</span>
-						</div>
-						<h3 class="text-xl sm:text-2xl font-bold text-text-300 mb-2">Customizable Lessons</h3>
-						<p class="text-text-200 leading-relaxed mb-4 flex-grow">
-							Create custom lessons on any topic. Search, filter, and browse lessons tailored to your interests and learning goals.
-						</p>
-						<ul class="space-y-2 text-text-200 mb-5 text-sm">
-							<li class="flex items-center gap-2"><span class="text-purple-500">✓</span><span>Custom content</span></li>
-							<li class="flex items-center gap-2"><span class="text-purple-500">✓</span><span>Any topic, any level</span></li>
-							<li class="flex items-center gap-2"><span class="text-purple-500">✓</span><span>All 4 Arabic dialects</span></li>
-						</ul>
-						<div class="flex items-center gap-2 text-text-300 font-semibold">
-							<span>Browse Lessons</span>
-							<span aria-hidden="true">→</span>
-						</div>
-					</article>
-				</a>
+				<!-- Top row -->
+				<div class="flex items-center gap-2 mb-6">
+					<span class="text-[10px] uppercase tracking-[0.18em] font-bold text-text-200">Structured</span>
+					<span class="text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full bg-[color-mix(in_srgb,var(--brand)_12%,transparent)] text-[var(--brand)] border border-[color-mix(in_srgb,var(--brand)_25%,transparent)]">Curriculum</span>
+				</div>
+
+				<!-- Content -->
+				<div class="flex-1">
+					<h2 class="text-2xl sm:text-3xl font-bold text-text-300 mb-3 leading-tight">Structured Path</h2>
+					<p class="text-text-200 text-sm leading-relaxed max-w-[38ch]">A curated sequence from alphabet to fluency. Progress through modules designed for systematic learning.</p>
+				</div>
+
+				<!-- Dialect flags row -->
+				<div class="flex items-center gap-2 mt-5 mb-4">
+					<span class="text-xl" title="Egyptian Arabic">🇪🇬</span>
+					<span class="text-xl" title="Moroccan Darija">🇲🇦</span>
+					<span class="text-xl" title="Levantine Arabic">🇱🇧</span>
+					<span class="text-xl" title="Modern Standard Arabic">📖</span>
+					<span class="text-xs text-text-200 ml-1">4 dialects</span>
+				</div>
+
+				<!-- CTA -->
+				<div class="flex items-center gap-2 text-sm font-bold text-text-300 group-hover:gap-3 transition-all duration-200">
+					<span>Explore curriculum</span>
+					<span aria-hidden="true">→</span>
+				</div>
+			</a>
+
+			<!-- CUSTOM card -->
+			<a
+				href="/lessons/custom"
+				onclick={() => trackEvent('lessons_path_selected', { path: 'custom' })}
+				class="group relative overflow-hidden flex flex-col bg-tile-400 border border-purple-500/30 rounded-2xl p-6 sm:p-8 min-h-[280px] transition-all duration-200 hover:bg-tile-500 hover:-translate-y-1 hover:shadow-lg motion-reduce:hover:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300"
+			>
+				<!-- Arabic watermark -->
+				<!-- <span class="absolute bottom-2 right-3 text-[9rem] font-bold text-purple-400 opacity-[0.06] leading-none pointer-events-none select-none" dir="rtl" aria-hidden="true">إنشاء</span> -->
+
+				<!-- Top row -->
+				<div class="flex items-center gap-2 mb-6">
+					<span class="text-[10px] uppercase tracking-[0.18em] font-bold text-text-200">Custom</span>
+					<span class="text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/25">Any topic</span>
+				</div>
+
+				<!-- Content -->
+				<div class="flex-1">
+					<h2 class="text-2xl sm:text-3xl font-bold text-text-300 mb-3 leading-tight">Custom Lessons</h2>
+					<p class="text-text-200 text-sm leading-relaxed max-w-[38ch]">Create lessons on any topic — food, travel, culture, business. Search, filter, and browse the community library.</p>
+				</div>
+
+				<!-- Feature tags -->
+				<div class="flex flex-wrap gap-2 mt-5 mb-4">
+					<span class="text-[11px] px-2 py-0.5 rounded-full bg-tile-500 border border-tile-600 text-text-200">Any level</span>
+					<span class="text-[11px] px-2 py-0.5 rounded-full bg-tile-500 border border-tile-600 text-text-200">4 dialects</span>
+					<span class="text-[11px] px-2 py-0.5 rounded-full bg-tile-500 border border-tile-600 text-text-200">Community library</span>
+				</div>
+
+				<!-- CTA -->
+				<div class="flex items-center gap-2 text-sm font-bold text-text-300 group-hover:gap-3 transition-all duration-200">
+					<span>Browse lessons</span>
+					<span aria-hidden="true">→</span>
+				</div>
+			</a>
+
+		</div>
+	</div>
+
+	<!-- What's in every lesson: compact horizontal strip -->
+	<!-- <div class="max-w-5xl mx-auto px-4 sm:px-8 pb-12">
+		<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+			<div class="bg-tile-400 border border-tile-500 rounded-xl p-4 flex items-start gap-3">
+				<span class="text-2xl shrink-0" aria-hidden="true">🎯</span>
+				<div>
+					<h3 class="text-sm font-bold text-text-300">Interactive exercises</h3>
+					<p class="text-xs text-text-200 mt-0.5 leading-relaxed">Multiple-choice and fill-in-the-blank after each topic.</p>
+				</div>
+			</div>
+			<div class="bg-tile-400 border border-tile-500 rounded-xl p-4 flex items-start gap-3">
+				<span class="text-2xl shrink-0" aria-hidden="true">🔊</span>
+				<div>
+					<h3 class="text-sm font-bold text-text-300">Native audio</h3>
+					<p class="text-xs text-text-200 mt-0.5 leading-relaxed">Every word and sentence includes audio playback.</p>
+				</div>
+			</div>
+			<div class="bg-tile-400 border border-tile-500 rounded-xl p-4 flex items-start gap-3">
+				<span class="text-2xl shrink-0" aria-hidden="true">🌍</span>
+				<div>
+					<h3 class="text-sm font-bold text-text-300">Dialect comparison</h3>
+					<p class="text-xs text-text-200 mt-0.5 leading-relaxed">See how expressions vary across all 4 dialects.</p>
+				</div>
 			</div>
 		</div>
-	</section>
+	</div> -->
 
-	<!-- What's Included -->
-	<section class="py-10 border-y border-tile-500">
-		<div class="max-w-7xl mx-auto px-3 sm:px-8">
-			<h2 class="text-lg sm:text-xl font-bold text-text-300 text-left mb-6">What's Included in Every Lesson</h2>
-
-			<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-				<article class="bg-tile-400 border border-tile-500 rounded-xl p-4 shadow-sm text-left">
-					<div class="text-3xl mb-3">🎯</div>
-					<h3 class="text-lg font-bold text-text-300 mb-2">Interactive Exercises</h3>
-					<p class="text-text-200 leading-relaxed">
-						Test your knowledge with multiple-choice quizzes and fill-in-the-blank exercises after each topic.
-					</p>
-				</article>
-
-				<article class="bg-tile-400 border border-tile-500 rounded-xl p-4 shadow-sm text-left">
-					<div class="text-3xl mb-3">🔊</div>
-					<h3 class="text-lg font-bold text-text-300 mb-2">Native Audio</h3>
-					<p class="text-text-200 leading-relaxed">
-						Every Arabic word and sentence includes audio playback so you can hear the correct pronunciation.
-					</p>
-				</article>
-
-				<article class="bg-tile-400 border border-tile-500 rounded-xl p-4 shadow-sm text-left">
-					<div class="text-3xl mb-3">🌍</div>
-					<h3 class="text-lg font-bold text-text-300 mb-2">Dialect Comparison</h3>
-					<p class="text-text-200 leading-relaxed">
-						See how expressions vary across Egyptian, Levantine, Moroccan, and Modern Standard Arabic.
-					</p>
-				</article>
-			</div>
-		</div>
-	</section>
 </section>

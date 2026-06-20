@@ -11,6 +11,14 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'writing-arabic-in-english',
+    title: 'Writing Arabic in English',
+    description:
+      'How I built a phonetic Arabic keyboard that maps English keys to Arabic sounds, and the problems I had to solve to get there: a cursive script, throat letters, hamza, and diacritics.',
+    date: '2026-06-19',
+    readingTime: '12 min read'
+  },
+  {
     slug: 'egyptian-arabic-alphabet',
     title: 'The Arabic alphabet, the Egyptian way',
     description:

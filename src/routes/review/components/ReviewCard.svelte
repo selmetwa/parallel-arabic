@@ -418,7 +418,7 @@
 />
 
 <div
-  class="flip-card p-4 sm:p-6 bg-gradient-to-br from-tile-400/60 to-tile-400/40 border-2 border-tile-600 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300"
+  class="flip-card p-4 sm:p-6 bg-gradient-to-br from-tile-400/60 to-tile-400/40 border-2 border-tile-600 rounded-2xl shadow-xl duration-300"
 >
   <div
     bind:this={flipCardInner}
@@ -658,7 +658,7 @@
             class="group relative overflow-hidden border-2 border-green-500 bg-gradient-to-br from-green-50 to-green-100 hover:from-green-100 hover:to-green-200 active:scale-95 py-2 px-1 sm:py-5 sm:px-6 rounded-xl font-semibold text-sm sm:text-lg transition-all duration-200 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <span class="absolute inset-0 bg-white/40 scale-0 group-active:scale-100 group-active:opacity-0 transition-all duration-500 rounded-xl"></span>
-            <div class="text-xl sm:text-3xl sm:mb-2 transform group-hover:scale-110 transition-transform duration-300">😊</div>
+            <!-- <div class="text-xl sm:text-3xl sm:mb-2 transform group-hover:scale-110 transition-transform duration-300">😊</div> -->
             <div class="relative z-10">Easy</div>
             <div class="hidden sm:block text-sm font-normal mt-1 text-green-700">Remembered easily</div>
           </button>
@@ -670,7 +670,7 @@
             class="group relative overflow-hidden border-2 border-yellow-500 bg-gradient-to-br from-yellow-50 to-yellow-100 hover:from-yellow-100 hover:to-yellow-200 active:scale-95 py-2 px-1 sm:py-5 sm:px-6 rounded-xl font-semibold text-sm sm:text-lg transition-all duration-200 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <span class="absolute inset-0 bg-white/40 scale-0 group-active:scale-100 group-active:opacity-0 transition-all duration-500 rounded-xl"></span>
-            <div class="text-xl sm:text-3xl sm:mb-2 transform group-hover:scale-110 transition-transform duration-300">🤔</div>
+            <!-- <div class="text-xl sm:text-3xl sm:mb-2 transform group-hover:scale-110 transition-transform duration-300">🤔</div> -->
             <div class="relative z-10">Medium</div>
             <div class="hidden sm:block text-sm font-normal mt-1 text-yellow-700">Remembered with effort</div>
           </button>
@@ -682,7 +682,7 @@
             class="group relative overflow-hidden border-2 border-red-500 bg-gradient-to-br from-red-50 to-red-100 hover:from-red-100 hover:to-red-200 active:scale-95 py-2 px-1 sm:py-5 sm:px-6 rounded-xl font-semibold text-sm sm:text-lg transition-all duration-200 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <span class="absolute inset-0 bg-white/40 scale-0 group-active:scale-100 group-active:opacity-0 transition-all duration-500 rounded-xl"></span>
-            <div class="text-xl sm:text-3xl sm:mb-2 transform group-hover:scale-110 transition-transform duration-300">😓</div>
+            <!-- <div class="text-xl sm:text-3xl sm:mb-2 transform group-hover:scale-110 transition-transform duration-300">😓</div> -->
             <div class="relative z-10">Hard</div>
             <div class="hidden sm:block text-sm font-normal mt-1 text-red-700">Struggled</div>
           </button>
@@ -696,7 +696,7 @@
               class="group relative overflow-hidden border-2 border-orange-500 bg-gradient-to-br from-orange-50 to-orange-100 hover:from-orange-100 hover:to-orange-200 text-text-300 py-2 px-4 sm:py-3 sm:px-8 rounded-xl font-semibold text-sm sm:text-base transition-all duration-200 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 active:scale-95"
             >
               <span class="absolute inset-0 bg-white/40 scale-0 group-active:scale-100 group-active:opacity-0 transition-all duration-500 rounded-xl"></span>
-              <span class="text-lg sm:text-xl transform group-hover:scale-110 transition-transform duration-300">❌</span>
+              <!-- <span class="text-lg sm:text-xl transform group-hover:scale-110 transition-transform duration-300">❌</span> -->
               <span class="relative z-10">Forgot - Review Again</span>
             </button>
           </div>

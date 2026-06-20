@@ -30,44 +30,54 @@
   }
 </script>
 
-<section class="px-4 py-8">
-  <header class="flex flex-row gap-2 items-center justify-between mt-8 mb-4">
+<section class="max-w-3xl mx-auto px-4 py-8">
+  <a href="/profile" class="inline-flex items-center gap-1 text-sm font-medium text-brand underline mb-6">
+    ← Back to profile
+  </a>
+
+  <header class="flex flex-col sm:flex-row gap-3 sm:items-center justify-between mb-6">
     <div>
-      <h2 class="text-xl text-text-300 font-semibold">Saved Words</h2>
-      <p class="text-text-200">Export saved words as a CSV and import into an Anki deck.</p>
+      <h2 class="text-2xl text-text-300 font-bold">Saved Words</h2>
+      <p class="text-text-200 mt-1">Export your saved words as a CSV and import them into an Anki deck.</p>
     </div>
-    <div class="w-fit">
-    <Button onClick={downloadCsv} type="button">Download CSV</Button>
-    </div>
+    {#if data.savedWords.length > 0}
+      <div class="w-fit shrink-0">
+        <Button onClick={downloadCsv} type="button">Download CSV</Button>
+      </div>
+    {/if}
   </header>
 
-	<table>
-		<thead>
-			<tr>
-				<th>Arabic</th>
-				<th>English</th>
-				<th>Transliterated</th>
-			</tr>
-		</thead>
-		<tbody>
-      {#if data.savedWords.length === 0}
-        <p class="mt-2">No saved words</p>
-      {/if}
-			{#each data.savedWords as word}
-				<tr>
-					<td>{word.arabic_word}</td>
-					<td>{word.english_word}</td>
-					<td>{word.transliterated_word}</td>
-				</tr>
-			{/each}
-		</tbody>
-	</table>
+  {#if data.savedWords.length === 0}
+    <div class="bg-tile-400 border-2 border-tile-600 rounded-2xl p-10 text-center">
+      <div class="text-4xl mb-3 opacity-50">🗂️</div>
+      <p class="text-text-200">No saved words yet.</p>
+    </div>
+  {:else}
+    <div class="overflow-x-auto rounded-2xl border-2 border-tile-600">
+      <table>
+        <thead>
+          <tr>
+            <th>Arabic</th>
+            <th>English</th>
+            <th>Transliterated</th>
+          </tr>
+        </thead>
+        <tbody>
+          {#each data.savedWords as word (word.id ?? word.arabic_word + word.english_word)}
+            <tr>
+              <td class="arabic">{word.arabic_word}</td>
+              <td>{word.english_word}</td>
+              <td>{word.transliterated_word}</td>
+            </tr>
+          {/each}
+        </tbody>
+      </table>
+    </div>
+  {/if}
 </section>
-
 
 <style>
 	table {
-		font-family: arial, sans-serif;
 		border-collapse: collapse;
 		width: 100%;
 	}
@@ -75,16 +85,29 @@
 	th {
     border: 1px solid var(--tile6);
 		text-align: left;
-		padding: 8px;
+		padding: 0.625rem 0.75rem;
 	}
+  th {
+    background-color: var(--tile5);
+    color: var(--text1);
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    position: sticky;
+    top: 0;
+  }
   tr {
     background-color: var(--tile3);
-    color: var(--text2);
+    color: var(--text1);
   }
-  tr:nth-child(even) {
-    background-color: var(--tile2);
+  tbody tr:nth-child(even) {
+    background-color: var(--tile4);
   }
   td {
-    font-size: 20px;
+    font-size: 1rem;
+  }
+  td.arabic {
+    font-size: 1.375rem;
   }
 </style>

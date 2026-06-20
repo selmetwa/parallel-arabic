@@ -2,10 +2,24 @@
   import { onMount } from 'svelte';
   import Button from '$lib/components/Button.svelte';
   import AudioButton from '$lib/components/AudioButton.svelte';
+  import GenerateWordsModal from '$lib/components/review/GenerateWordsModal.svelte';
+  import GenerateSentencesModal from '$lib/components/review/GenerateSentencesModal.svelte';
+  import ImportWordsModal from '$lib/components/review/ImportWordsModal.svelte';
   import { toast } from 'svelte-sonner';
   import cn from 'classnames';
   import type { Dialect } from '$lib/types';
+  import type { PageData } from './$types';
   import { trackEvent } from '$lib/analytics';
+
+  interface Props {
+    data: PageData;
+  }
+
+  let { data }: Props = $props();
+
+  let showGenerateWords = $state(false);
+  let showGenerateSentences = $state(false);
+  let showImport = $state(false);
 
   interface ReviewWord {
     id: string;
@@ -193,9 +207,31 @@
 
 <div class="min-h-screen bg-tile-200 py-8 px-4">
   <div class="max-w-7xl mx-auto">
-    <header class="mb-6">
-      <h1 class="text-3xl font-bold text-text-300 mb-2">All Review Words</h1>
-      <p class="text-text-200">View and manage all your words in review</p>
+    <header class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+      <div>
+        <h1 class="text-3xl font-bold text-text-300 mb-2">All Review Words</h1>
+        <p class="text-text-200">View and manage all your words in review</p>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <button
+          onclick={() => { showGenerateWords = true; trackEvent('review_generate_words_opened', { source: 'all_words' }); }}
+          class="flex items-center gap-2 px-4 py-2 rounded-lg border-2 border-tile-600 bg-tile-300 text-text-300 font-semibold hover:bg-tile-400 active:scale-95 transition-all"
+        >
+          <span>📝</span> Generate Words
+        </button>
+        <button
+          onclick={() => { showGenerateSentences = true; trackEvent('review_generate_sentences_opened', { source: 'all_words' }); }}
+          class="flex items-center gap-2 px-4 py-2 rounded-lg border-2 border-tile-600 bg-tile-300 text-text-300 font-semibold hover:bg-tile-400 active:scale-95 transition-all"
+        >
+          <span>✍️</span> Generate Sentences
+        </button>
+        <button
+          onclick={() => { showImport = true; trackEvent('review_import_opened', { source: 'all_words' }); }}
+          class="flex items-center gap-2 px-4 py-2 rounded-lg border-2 border-tile-600 bg-tile-300 text-text-300 font-semibold hover:bg-tile-400 active:scale-95 transition-all"
+        >
+          <span>📥</span> Import Words
+        </button>
+      </div>
     </header>
 
     <!-- Filters and Search -->
@@ -367,7 +403,7 @@
                         "px-3 py-1 rounded text-sm font-medium transition-colors",
                         deletingIds.has(word.id)
                           ? "bg-tile-500 text-text-200 cursor-not-allowed"
-                          : "bg-red-500/40 text-red-100 hover:bg-red-500/50 border border-red-400"
+                          : "bg-red-500/10 text-red-500 hover:bg-red-500/50 border border-red-400"
                       )}
                     >
                       {deletingIds.has(word.id) ? 'Removing...' : 'Remove'}
@@ -386,6 +422,10 @@
     {/if}
   </div>
 </div>
+
+<GenerateWordsModal bind:open={showGenerateWords} user={data.user} onCompleted={loadWords} />
+<GenerateSentencesModal bind:open={showGenerateSentences} user={data.user} onCompleted={loadWords} />
+<ImportWordsModal bind:open={showImport} user={data.user} onImported={loadWords} />
 
 <style>
   table {

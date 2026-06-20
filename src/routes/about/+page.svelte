@@ -1,9 +1,22 @@
-<!-- Hallmark · genre: playful · macrostructure: Bento Grid · theme: project (HSL hue-200, theme-aware) · enrichment: none · nav/footer: layout-owned (skipped) -->
-<!-- Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V4 -->
 <script>
+	import { resolve } from '$app/paths';
 	import { slide } from 'svelte/transition';
 
+	/** @typedef {{ title: string; img: string; fullImg?: string; descriptions: string[]; learnMoreLink?: string }} Card */
 	/** @typedef {{ t: string; b?: boolean }} QuoteSegment */
+
+	/** @type {Card | null} */
+	let lightbox = $state(null);
+
+	/** @param {Card} card */
+	function openLightbox(card) {
+		lightbox = card;
+	}
+
+	function closeLightbox() {
+		lightbox = null;
+	}
+
 
 	/** @type {number | null} */
 	let openIndex = $state(null);
@@ -13,44 +26,124 @@
 		openIndex = openIndex === i ? null : i;
 	}
 
-	// Testimonials — each is an array of text segments; `b: true` renders bold.
-	const testimonials = [
-		[
-			{ t: 'After only a day, I love Parallel Arabic.', b: true },
-			{ t: ' As a language teacher — I teach French at a huge public high school in Southern California — and an absolute language nut who speaks seven other languages besides Arabic, I can tell how much thought went into this.' }
-		],
-		[
-			{ t: 'Wow this is perfect for what I need currently. The stories section in particular is a great idea as ' },
-			{ t: "I can't find any graded stories for practice.", b: true },
-			{ t: ' Thank you so much for this :)' }
-		],
-		[
-			{ t: 'This is great! As someone outgrowing Duolingo this is perfect.', b: true }
-		],
-		[
-			{ t: 'I love it! This is something I have been ' },
-			{ t: 'searching for ages', b: true },
-			{ t: ' :) thank you so much' }
-		],
-		[
-			{ t: "Have tried many of the 'apps' and " },
-			{ t: 'this is the closest one to doing what I want!', b: true },
-			{ t: " Very useful and comprehensive app, everything's very useful — I love the interlinear format for the stories." }
-		],
-		[
-			{ t: "Even though I'm a beginner, " },
-			{ t: "your AI is the best I've tried among all the apps!", b: true },
-			{ t: ' The others are always weird in their answers and pronounce the words weirdly.' }
-		],
-		[
-			{ t: 'Stories UI is really good!', b: true },
-			{ t: ' The large, readable font, easy switching of transliteration and English, and interactive click-to-define are all really excellent.' }
-		],
-		[
-			{ t: 'I really like the website and find it very useful. For me ' },
-			{ t: "it's better than a lot of other platforms", b: true },
-			{ t: " — it's well thought out and has a lot of features." }
-		]
+	/** @param {KeyboardEvent} event */
+	function handleKeydown(event) {
+		if (event.key === 'Escape') closeLightbox();
+	}
+
+	const cards = [
+		{
+			title: 'Alphabet',
+			img: '/images/marketing-alphabet.png',
+			fullImg: '/images/features-large/alphabet.png',
+			descriptions: ['Learn the Arabic Alphabet with interactive exercises'],
+			learnMoreLink: '/alphabet-new'
+		},
+		{
+			title: 'Tutor',
+			img: '/images/marketing-conversation.png',
+			fullImg: '/images/features-large/tutor.png',
+			descriptions: [
+				'Practice speaking with an AI tutor',
+				'Get real-time grammar feedback, and use practice situations to improve your speaking skills'
+			],
+			learnMoreLink: '/tutor'
+		},
+		{
+			title: 'Short Stories',
+			img: '/images/marketing-sentence-reader.png',
+			fullImg: '/images/features-large/stories.png',
+			descriptions: [
+				'Read short stories in arabic alongside the english translation and transliteration of the text'
+			],
+			learnMoreLink: '/stories'
+		},
+		{
+			title: 'Spaced Repetition System',
+			img: '/images/marketing-spaced-recall.png',
+			fullImg: '/images/features-large/repitition.png',
+			descriptions: ['Spaced repetition for your saved words']
+		},
+		{
+			title: 'Writing Practice',
+			img: '/images/marketing-writing-practice.png',
+			fullImg: '/images/features-large/sentences.png',
+			descriptions: [
+				'Practice arabic sentences with instant feedback in one of three modes',
+				"Writing: Type out Arabic sentences using a custom virtual Arabic keyboard, or your device's native keyboard.",
+				'Matching: Drag and drop Arabic words into the correct order to form a sentence.',
+				'Tracing: Same as writing, but with the letters laid out for you'
+			],
+			learnMoreLink: '/sentences'
+		},
+		{
+			title: 'Lessons',
+			img: '/images/marketing-learning-path.png',
+			fullImg: '/images/features-large/lessons.png',
+			descriptions: [
+				'Learn Arabic with structured lessons, from A1 - C2',
+				'Use structured lessons or create your own'
+			],
+			learnMoreLink: '/lessons'
+		},
+		{
+			title: 'Speaking',
+			img: '/images/marketing-speaking.png',
+			fullImg: '/images/features-large/speak.png',
+			descriptions: [
+				'Practice speaking generated Arabic sentences with instant pronunciation feedback'
+			],
+			learnMoreLink: '/speak'
+		},
+		{
+			title: 'Game',
+			img: '/images/marketing-multiple-choice.png',
+			fullImg: '/images/features-large/game.png',
+			descriptions: [
+				'Play games to learn Arabic, like fill in the blank, multiple choice, and more'
+			],
+			learnMoreLink: '/learn/game'
+		},
+		{
+			title: 'Import Words',
+			img: '/images/marketing-import-words.png',
+			fullImg: '/images/features-large/import.png',
+			descriptions: [
+				'Bring your own words and import them into the app to learn them in context',
+				'Paste text or upload .csv files'
+			]
+		},
+		{
+			title: 'Vocabulary Table',
+			img: '/images/marketing-vocabulary-table.png',
+			fullImg: '/images/features-large/all-words.png',
+			descriptions: [
+				'Keep track of all of your saved words in a table, and then easily import when creating lessons, stories, and practice exercises to learn them in context; not in isolation'
+			],
+			learnMoreLink: '/review/all-words'
+		},
+		{
+			title: 'Conjugation Drills',
+			img: '/images/marketing-conjugation-drill.png',
+			fullImg: '/images/features-large/verb-conjugations.png',
+			descriptions: ['Practice Arabic verb conjugation with drills and quizzes'],
+			learnMoreLink: '/conjugations'
+		},
+		{
+			title: 'Dialect Comparison',
+			img: '/images/marketing-dialect-comparison.png',
+			fullImg: '/images/features-large/dialect-compare.png',
+			descriptions: ['Compare how a word or phrase is said across different Arabic dialects side by side']
+		},
+		{
+			title: 'On demand definitions',
+			img: '/images/marketing-word-detail.png',
+			fullImg: '/images/features-large/definition-modal.png',
+			descriptions: [
+				'Tap any word to see its definition, transliteration, and example usage',
+				'Save words straight to your review deck'
+			]
+		}
 	];
 
 	const faqs = [
@@ -64,62 +157,170 @@
 		},
 		{
 			q: 'How is this different from Duolingo?',
-			a: "Duolingo teaches Modern Standard Arabic through fixed, gamified exercises. Parallel Arabic focuses on spoken dialects and lets you generate learning material around your own saved words — so you’re practicing vocabulary that’s actually relevant to you, in the dialect you want to speak."
+			a: "Duolingo teaches Modern Standard Arabic through fixed, gamified exercises. Parallel Arabic focuses on spoken dialects and lets you generate learning material around your own saved words, so you’re practicing vocabulary that’s actually relevant to you, in the dialect you want to speak."
 		},
 		{
 			q: 'Is there a mobile app?',
 			a: 'Yes.... and no Parallel Arabic is a PWA (Progressive Web App) and can be installed as an app on your home screen on iOS and Android. Native IOS and Android apps are coming soon.'
 		}
 	];
+
+	const testimonials = [
+		[
+			{ t: 'After only a day, I love Parallel Arabic.', b: true },
+			{
+				t: ' As a language teacher — I teach French at a huge public high school in Southern California — and an absolute language nut who speaks seven other languages besides Arabic, I can tell how much thought went into this.'
+			}
+		],
+		[
+			{
+				t: 'Wow this is perfect for what I need currently. The stories section in particular is a great idea as '
+			},
+			{ t: "I can't find any graded stories for practice.", b: true },
+			{ t: ' Thank you so much for this :)' }
+		],
+		[{ t: 'This is great! As someone outgrowing Duolingo this is perfect.', b: true }],
+		[
+			{ t: 'I love it! This is something I have been ' },
+			{ t: 'searching for ages', b: true },
+			{ t: ' :) thank you so much' }
+		],
+		[
+			{ t: "Have tried many of the 'apps' and " },
+			{ t: 'this is the closest one to doing what I want!', b: true },
+			{
+				t: " Very useful and comprehensive app, everything's very useful — I love the interlinear format for the stories."
+			}
+		],
+		[
+			{ t: "Even though I'm a beginner, " },
+			{ t: "your AI is the best I've tried among all the apps!", b: true },
+			{ t: ' The others are always weird in their answers and pronounce the words weirdly.' }
+		],
+		[
+			{ t: 'Stories UI is really good!', b: true },
+			{
+				t: ' The large, readable font, easy switching of transliteration and English, and interactive click-to-define are all really excellent.'
+			}
+		],
+		[
+			{ t: 'I really like the website and find it very useful. For me ' },
+			{ t: "it's better than a lot of other platforms", b: true },
+			{ t: " — it's well thought out and has a lot of features." }
+		]
+	];
 </script>
 
-<div class="min-h-screen bg-tile-300">
-	<!-- Hero — left-biased, asymmetric (was centered two-column) -->
-	<header>
-		<div class="max-w-6xl mx-auto px-4 sm:px-8 py-14 sm:py-24">
-			<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-				<div class="lg:col-span-7">
-					<h1 class="text-4xl sm:text-6xl font-bold text-text-300 tracking-tight leading-[1.08] mb-6">
-						Learn what is actually spoken
-					</h1>
-					<p class="text-text-200 text-lg sm:text-xl leading-relaxed max-w-xl mb-8">
-						Learning Arabic is hard. Most apps teach Fusha — when what you actually want is to have real conversations with Egyptians, Lebanese, or Moroccans.
-					</p>
-					<a
-						href="/signup"
-						class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-base font-semibold bg-tile-500 border-2 border-tile-600 text-text-300 transition-all duration-200 hover:bg-tile-600 hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300"
-					>
-						Start now <span aria-hidden="true">→</span>
-					</a>
-				</div>
-				<div class="lg:col-span-5">
-					<img
-						src="/images/features/map.png"
-						class="w-full h-auto rounded-2xl"
-						alt="Parallel Arabic vocabulary map"
-					/>
-				</div>
+<svelte:window onkeydown={handleKeydown} />
+
+<div class="min-h-screen bg-tile-200">
+	<main
+		class="mx-auto flex w-full max-w-5xl flex-col gap-10 px-4 py-10 sm:gap-16 sm:px-6 sm:py-16 lg:px-8"
+	>
+		<!-- Hero -->
+		<header class="flex flex-col items-center gap-3 text-center sm:gap-4">
+			<div
+				class="h-20 w-20 rounded-2xl border border-tile-500 bg-tile-300 sm:h-32 sm:w-32 sm:rounded-3xl"
+			>
+				<img
+					src="/icons/icon-trans.png"
+					alt="Parallel Arabic Logo"
+					class="h-full w-auto object-contain p-2"
+					fetchpriority="high"
+				/>
 			</div>
-		</div>
-	</header>
+			<h1 class="text-2xl font-bold text-text-300 sm:text-4xl">Parallel Arabic</h1>
+			<h2 class="text-base font-medium text-text-200 sm:text-2xl">
+				Learn and practice Arabic Dialects
+			</h2>
+			<a
+				href={resolve('/signup')}
+				class="mt-2 inline-flex items-center gap-2 rounded-full border-2 border-tile-600 bg-tile-500 px-7 py-3.5 text-base font-semibold text-text-300 transition-all duration-200 hover:-translate-y-0.5 hover:bg-tile-600 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300"
+			>
+				Start now <span aria-hidden="true">→</span>
+			</a>
+		</header>
+
+		<!-- Feature Cards — CSS columns masonry -->
+		<section class="columns-1 gap-4 sm:columns-2 sm:gap-6">
+			{#each cards as card (card.title)}
+				<article
+					class="mb-4 flex w-full break-inside-avoid flex-col overflow-hidden rounded-xl border border-tile-500 bg-tile-300 sm:mb-6"
+				>
+					<button
+						type="button"
+						onclick={() => openLightbox(card)}
+						class="group relative block w-full cursor-zoom-in border-b border-tile-500"
+						aria-label={`View ${card.title} screenshot larger`}
+					>
+						<img
+							src={card.img}
+							alt={card.title}
+							class="h-auto w-full transition-transform duration-300 group-hover:scale-[1.02]"
+						/>
+						<span
+							class="pointer-events-none absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/10"
+						></span>
+						<span
+							class="pointer-events-none absolute bottom-3 right-3 flex items-center gap-1 rounded-full bg-black/60 px-2.5 py-1 text-xs font-medium text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="14"
+								height="14"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"
+								></line><line x1="11" y1="8" x2="11" y2="14"></line><line
+									x1="8"
+									y1="11"
+									x2="14"
+									y2="11"
+								></line></svg
+							>
+							Expand
+						</span>
+					</button>
+					<div class="flex-1 space-y-2 px-4 py-4">
+						<p class="text-base font-semibold text-text-300 sm:text-lg">{card.title}</p>
+						<div class="space-y-1.5">
+							{#each card.descriptions as description, i (i)}
+								<p class="text-sm leading-relaxed text-text-200 sm:text-base">{description}</p>
+							{/each}
+						</div>
+					</div>
+					{#if card.learnMoreLink}
+						<a
+							href={resolve(/** @type {any} */ (card.learnMoreLink))}
+							class="px-4 pb-4 text-sm text-blue-600 underline transition-colors hover:text-blue-700 sm:text-base"
+							>Learn more</a
+						>
+					{/if}
+				</article>
+			{/each}
+		</section>
+	</main>
 
 	{#snippet quoteCard(/** @type {QuoteSegment[]} */ segments, /** @type {boolean} */ hidden)}
 		<figure
-			class="flex-shrink-0 w-[280px] sm:w-[320px] bg-tile-400 rounded-xl p-5 sm:p-6 shadow-sm"
+			class="w-[280px] flex-shrink-0 rounded-xl bg-tile-400 p-5 shadow-sm sm:w-[320px] sm:p-6"
 			aria-hidden={hidden}
 		>
-			<span class="block text-4xl leading-none text-text-200 mb-2" aria-hidden="true">“</span>
-			<blockquote class="text-text-300 text-base leading-relaxed"
-				>{#each segments as seg, i (i)}{#if seg.b}<strong class="text-text-200">{seg.t}</strong>{:else}{seg.t}{/if}{/each}</blockquote
-			>
+			<span class="mb-2 block text-4xl leading-none text-text-200" aria-hidden="true">“</span>
+			<blockquote class="text-base leading-relaxed text-text-300">
+				{#each segments as seg, i (i)}{#if seg.b}<strong class="text-text-200">{seg.t}</strong
+						>{:else}{seg.t}{/if}{/each}
+			</blockquote>
 		</figure>
 	{/snippet}
 
-	<!-- Testimonials — infinite horizontal marquee -->
-	<section class="py-10 sm:py-14 bg-tile-200 border-y border-tile-500 overflow-hidden">
-		<div class="max-w-6xl mx-auto px-4 sm:px-8 mb-6 sm:mb-8">
-			<h2 class="text-2xl sm:text-4xl font-bold text-text-300 tracking-tight">What our users say</h2>
-		</div>
+	<section class="overflow-hidden border-y border-tile-500 bg-tile-200 py-10 sm:py-14">
+			<h2 class="mx-auto text-center text-2xl sm:text-4xl font-bold text-text-300 tracking-tight mb-8 sm:mb-10">What our users say</h2>
+
 		<div class="marquee">
 			<div class="marquee__track">
 				{#each testimonials as t, i (i)}{@render quoteCard(t, false)}{/each}
@@ -128,260 +329,6 @@
 		</div>
 	</section>
 
-	<!-- Features — irregular bento grid (was 8 identical full-width cards) -->
-	<section class="py-14 sm:py-20 bg-tile-200 border-t border-tile-500">
-		<div class="max-w-6xl mx-auto px-4 sm:px-8">
-			<div class="max-w-2xl mb-10 sm:mb-12">
-				<h2 class="text-2xl sm:text-4xl font-bold text-text-300 tracking-tight mb-3">
-					Built around dialects, from the ground up
-				</h2>
-				<p class="text-text-200 text-base sm:text-lg leading-relaxed">
-					Here’s what that looks like in practice — seven ways to read, practice, and remember the Arabic you actually want to speak.
-				</p>
-			</div>
-
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 sm:gap-5">
-				<!-- Short Stories (flagship) -->
-				<article class="md:col-span-2 lg:col-span-4 min-w-0 flex flex-col bg-tile-400 border border-tile-500 rounded-xl p-6 sm:p-7 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg motion-reduce:hover:translate-y-0">
-					<h3 class="text-xl sm:text-2xl font-bold text-text-300 mb-3">Short Stories</h3>
-					<p class="text-text-200 leading-relaxed">
-						Practice reading Arabic in context. Click any word to instantly see its translation, transliteration, and pronunciation. Generate your own stories on any topic — Egyptian street food, Levantine pop culture, whatever interests you.
-					</p>
-					<img
-						src="/images/features/stories.png"
-						alt="Short Stories feature"
-						class="w-full h-auto rounded-lg mt-5 border border-tile-500"
-					/>
-				</article>
-
-				<!-- Lessons -->
-				<article class="md:col-span-1 lg:col-span-2 min-w-0 flex flex-col bg-tile-400 border border-tile-500 rounded-xl p-6 sm:p-7 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg motion-reduce:hover:translate-y-0">
-					<h3 class="text-xl sm:text-2xl font-bold text-text-300 mb-3">Lessons</h3>
-					<p class="text-text-200 leading-relaxed">
-						Explore 50+ structured lessons per dialect covering vocabulary, grammar, and phrases — or create custom lessons on any topic you're interested in.
-					</p>
-					<img
-						src="/images/features/lessons.png"
-						alt="Lessons feature"
-						class="w-full h-auto rounded-lg mt-5 border border-tile-500"
-					/>
-				</article>
-
-				<!-- Sentence Practice -->
-				<article class="md:col-span-1 lg:col-span-3 min-w-0 flex flex-col bg-tile-400 border border-tile-500 rounded-xl p-6 sm:p-7 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg motion-reduce:hover:translate-y-0">
-					<h3 class="text-xl sm:text-2xl font-bold text-text-300 mb-3">Sentence Practice</h3>
-					<p class="text-text-200 leading-relaxed mb-4">
-						See your saved words used naturally in sentences. Two practice modes:
-					</p>
-					<ul class="text-text-200 space-y-2 text-sm">
-						<li class="flex items-start gap-2"><span class="text-text-300 font-semibold flex-shrink-0">Writing —</span> Type out Arabic sentences using a custom virtual Arabic keyboard, or your device's native keyboard.</li>
-						<li class="flex items-start gap-2"><span class="text-text-300 font-semibold flex-shrink-0">Matching —</span> Drag and drop Arabic words into the correct order to form a sentence.</li>
-					</ul>
-					<img
-						src="/images/features/sentence-writing.png"
-						alt="Sentence writing practice"
-						class="w-full h-auto rounded-lg mt-5 border border-tile-500"
-					/>
-				</article>
-
-				<!-- Spaced Repetition -->
-				<article class="md:col-span-1 lg:col-span-3 min-w-0 flex flex-col bg-tile-400 border border-tile-500 rounded-xl p-6 sm:p-7 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg motion-reduce:hover:translate-y-0">
-					<h3 class="text-xl sm:text-2xl font-bold text-text-300 mb-3">Spaced Repetition</h3>
-					<p class="text-text-200 leading-relaxed">
-						Review your saved words on a schedule proven to build long-term retention — and each session pulls from the words you’ve actually saved.
-					</p>
-					<img
-						src="/images/features/reviews.png"
-						alt="Spaced repetition reviews"
-						class="w-full h-auto rounded-lg mt-5 border border-tile-500"
-					/>
-				</article>
-
-				<!-- Vocabulary Map (text-only — quieter band) -->
-				<article class="md:col-span-1 lg:col-span-2 min-w-0 flex flex-col bg-tile-400 border border-tile-500 rounded-xl p-6 sm:p-7 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg motion-reduce:hover:translate-y-0">
-					<h3 class="text-xl sm:text-2xl font-bold text-text-300 mb-3">Vocabulary Map</h3>
-					<p class="text-text-200 leading-relaxed">
-						Save words and watch your Arabic vocabulary grow visually over time. See at a glance how much you know across all four dialects.
-					</p>
-				</article>
-
-				<!-- Click to Define (text-only) -->
-				<article class="md:col-span-1 lg:col-span-2 min-w-0 flex flex-col bg-tile-400 border border-tile-500 rounded-xl p-6 sm:p-7 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg motion-reduce:hover:translate-y-0">
-					<h3 class="text-xl sm:text-2xl font-bold text-text-300 mb-3">Click to Define</h3>
-					<p class="text-text-200 leading-relaxed">
-						Click on any word anywhere in the app for a detailed breakdown: meaning, transliteration, dialect variant, native audio, and example usage.
-					</p>
-				</article>
-
-				<!-- Compare Dialects (full-width closer) -->
-				<article class="md:col-span-2 lg:col-span-6 min-w-0 bg-tile-400 border border-tile-500 rounded-xl p-6 sm:p-8 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg motion-reduce:hover:translate-y-0">
-					<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-center">
-						<div>
-							<h3 class="text-xl sm:text-2xl font-bold text-text-300 mb-3">Compare Dialects</h3>
-							<p class="text-text-200 leading-relaxed">
-								See how the same word or phrase differs across Egyptian, Levantine, Darija, and Modern Standard Arabic — side by side. Useful for anyone learning multiple dialects or curious about regional differences.
-							</p>
-						</div>
-						<img
-							src="/images/features/compare-dialects.png"
-							alt="Compare dialects"
-							class="w-full h-auto rounded-lg border border-tile-500"
-						/>
-					</div>
-				</article>
-			</div>
-		</div>
-	</section>
-
-	<!-- How It Works — numbered spine (was 4 identical heavy cards) -->
-	<section class="py-14 sm:py-20 bg-tile-300">
-		<div class="max-w-3xl mx-auto px-4 sm:px-8">
-			<div class="mb-10 sm:mb-14">
-				<h2 class="text-2xl sm:text-4xl font-bold text-text-300 tracking-tight mb-3">How Parallel Arabic works</h2>
-				<p class="text-text-200 text-base sm:text-lg leading-relaxed">
-					A simple loop: learn words, see them in context, make them stick.
-				</p>
-			</div>
-
-			<ol class="relative border-l-2 border-tile-500 ml-5 sm:ml-6 space-y-12 sm:space-y-14">
-				<!-- Step 1 -->
-				<li class="relative pl-8 sm:pl-12">
-					<span class="absolute -left-[1.15rem] sm:-left-[1.4rem] top-0 flex items-center justify-center w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-tile-500 border-2 border-tile-600 text-text-300 font-bold text-base sm:text-lg">1</span>
-					<p class="text-xs text-text-200 uppercase tracking-[0.14em] mb-1">Skip this step if you're not a beginner!</p>
-					<h3 class="text-xl sm:text-2xl font-bold text-text-300 mb-3">Master the foundations first</h3>
-					<p class="text-text-200 text-sm sm:text-base mb-3 italic">
-						Arabic script looks intimidating, and you're unsure where to even begin with a language that reads right-to-left…
-					</p>
-					<p class="text-text-300 text-base sm:text-lg leading-relaxed">
-						<strong>Start with the Arabic alphabet and structured lessons</strong> that introduce essential vocabulary and grammar patterns across all four dialects. Every word you learn gets saved to your personal deck, ready for review and practice.
-					</p>
-				</li>
-
-				<!-- Step 2 -->
-				<li class="relative pl-8 sm:pl-12">
-					<span class="absolute -left-[1.15rem] sm:-left-[1.4rem] top-0 flex items-center justify-center w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-tile-500 border-2 border-tile-600 text-text-300 font-bold text-base sm:text-lg">2</span>
-					<p class="text-xs text-text-200 uppercase tracking-[0.14em] mb-1">Immerse yourself in authentic Arabic</p>
-					<h3 class="text-xl sm:text-2xl font-bold text-text-300 mb-3">Read stories, tap any word</h3>
-					<p class="text-text-200 text-sm sm:text-base mb-3 italic">
-						Textbook Arabic feels disconnected from how people actually speak. You want to understand real conversations, not just formal phrases…
-					</p>
-					<p class="text-text-300 text-base sm:text-lg leading-relaxed">
-						<strong>Dive into stories written in Egyptian, Levantine, Moroccan Darija, or Modern Standard Arabic.</strong> Tap any word to instantly see its meaning, transliteration, and pronunciation. Every sentence comes with native audio. Save words directly to your deck as you go.
-					</p>
-				</li>
-
-				<!-- Step 3 -->
-				<li class="relative pl-8 sm:pl-12">
-					<span class="absolute -left-[1.15rem] sm:-left-[1.4rem] top-0 flex items-center justify-center w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-tile-500 border-2 border-tile-600 text-text-300 font-bold text-base sm:text-lg">3</span>
-					<p class="text-xs text-text-200 uppercase tracking-[0.14em] mb-1">Your content, your way</p>
-					<h3 class="text-xl sm:text-2xl font-bold text-text-300 mb-3">Generate content from your own words</h3>
-					<p class="text-text-200 text-sm sm:text-base mb-3 italic">
-						Generic language apps bore you. The same repetitive exercises, the same irrelevant topics…
-					</p>
-					<p class="text-text-300 text-base sm:text-lg leading-relaxed mb-5">
-						<strong>Create custom stories and practice sentences built around the words you're actually studying.</strong> Want to practice Egyptian street food vocab? Levantine soccer slang? Generate it instantly. Your words, your context — not someone else's curriculum.
-					</p>
-					<div class="border-t border-tile-500 pt-4">
-						<p class="text-sm text-text-200 font-medium mb-3">Your saved words include:</p>
-						<ul class="text-sm text-text-200 grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-6">
-							<li class="flex items-center gap-2"><span aria-hidden="true">✓</span> Arabic script with transliteration</li>
-							<li class="flex items-center gap-2"><span aria-hidden="true">✓</span> Native audio pronunciation</li>
-							<li class="flex items-center gap-2"><span aria-hidden="true">✓</span> English translation and context</li>
-							<li class="flex items-center gap-2"><span aria-hidden="true">✓</span> Example sentences in your chosen dialect</li>
-						</ul>
-					</div>
-				</li>
-
-				<!-- Step 4 -->
-				<li class="relative pl-8 sm:pl-12">
-					<span class="absolute -left-[1.15rem] sm:-left-[1.4rem] top-0 flex items-center justify-center w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-tile-500 border-2 border-tile-600 text-text-300 font-bold text-base sm:text-lg">4</span>
-					<p class="text-xs text-text-200 uppercase tracking-[0.14em] mb-1">Make it stick</p>
-					<h3 class="text-xl sm:text-2xl font-bold text-text-300 mb-3">Review your words with spaced repetition</h3>
-					<p class="text-text-200 text-sm sm:text-base mb-3 italic">
-						You've studied Arabic before but the words just don't stick. A week later, you've forgotten everything…
-					</p>
-					<p class="text-text-300 text-base sm:text-lg leading-relaxed">
-						<strong>Review your saved words with spaced repetition</strong> — the method that schedules reviews at exactly the right time. Unlike a plain flashcard app, <strong>each session generates fresh stories and practice sentences using your saved words</strong>, so you encounter them in different contexts rather than the same card over and over.
-					</p>
-				</li>
-			</ol>
-
-			<div class="mt-12 pl-8 sm:pl-12 ml-5 sm:ml-6">
-				<a
-					href="/signup"
-					class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-base font-semibold bg-tile-500 border-2 border-tile-600 text-text-300 transition-all duration-200 hover:bg-tile-600 hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300"
-				>
-					Start learning free <span aria-hidden="true">→</span>
-				</a>
-			</div>
-		</div>
-	</section>
-
-	<!-- Pricing — softened (was heavy bordered cards) -->
-	<section class="py-14 sm:py-20 bg-tile-300">
-		<div class="max-w-5xl mx-auto px-4 sm:px-8">
-			<div class="max-w-2xl mb-10 sm:mb-12">
-				<h2 class="text-2xl sm:text-4xl font-bold text-text-300 tracking-tight mb-3">Choose your path</h2>
-				<p class="text-text-200 text-base sm:text-lg leading-relaxed">
-					Start learning for free, forever. Upgrade anytime for unlimited custom content and advanced features.
-				</p>
-			</div>
-
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 items-start">
-				<!-- Free Plan -->
-				<div class="bg-tile-400 rounded-2xl p-7 sm:p-8 shadow-sm flex flex-col">
-					<div class="mb-6">
-						<h3 class="text-2xl font-bold text-text-300 mb-1">Free Forever</h3>
-						<p class="text-text-200 text-sm">Everything you need to get started</p>
-					</div>
-
-					<ul class="space-y-3 mb-8 flex-grow">
-						<li class="flex items-start gap-3"><span class="text-lg flex-shrink-0" aria-hidden="true">✓</span><span class="text-text-200">All featured stories with native audio</span></li>
-						<li class="flex items-start gap-3"><span class="text-lg flex-shrink-0" aria-hidden="true">✓</span><span class="text-text-200">Interactive sentence practice</span></li>
-						<li class="flex items-start gap-3"><span class="text-lg flex-shrink-0" aria-hidden="true">✓</span><span class="text-text-200">Complete alphabet lessons</span></li>
-						<li class="flex items-start gap-3"><span class="text-lg flex-shrink-0" aria-hidden="true">✓</span><span class="text-text-200">Verb conjugation practice</span></li>
-						<li class="flex items-start gap-3"><span class="text-lg flex-shrink-0" aria-hidden="true">✓</span><span class="text-text-200">Basic spaced repetition</span></li>
-					</ul>
-
-					<a
-						href="/signup"
-						class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-base font-semibold bg-tile-500 border-2 border-tile-600 text-text-300 transition-all duration-200 hover:bg-tile-600 hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300"
-					>
-						Start free <span aria-hidden="true">→</span>
-					</a>
-					<p class="text-center text-xs text-text-200 mt-3">No credit card required</p>
-				</div>
-
-				<!-- Premium Plan -->
-				<div class="bg-tile-500 rounded-2xl p-7 sm:p-8 shadow-md flex flex-col relative ring-2 ring-tile-600">
-					<div class="absolute -top-3 left-7">
-						<span class="bg-tile-600 text-text-300 text-xs font-bold px-4 py-1 rounded-full shadow-sm">MOST POPULAR</span>
-					</div>
-
-					<div class="mb-6">
-						<h3 class="text-2xl font-bold text-text-300 mb-1">Premium</h3>
-						<p class="text-text-200 text-sm">Go deeper, faster</p>
-					</div>
-
-					<ul class="space-y-3 mb-8 flex-grow">
-						<li class="flex items-start gap-3"><span class="text-lg flex-shrink-0" aria-hidden="true">✓</span><span class="text-text-200"><strong class="text-text-300">Everything in Free</strong></span></li>
-						<li class="flex items-start gap-3"><span class="text-lg flex-shrink-0" aria-hidden="true">✓</span><span class="text-text-200"><strong class="text-text-300">Unlimited custom stories</strong> (create your own content)</span></li>
-						<li class="flex items-start gap-3"><span class="text-lg flex-shrink-0" aria-hidden="true">✓</span><span class="text-text-200"><strong class="text-text-300">Unlimited AI tutor conversations</strong> with real-time feedback</span></li>
-						<li class="flex items-start gap-3"><span class="text-lg flex-shrink-0" aria-hidden="true">✓</span><span class="text-text-200"><strong class="text-text-300">Advanced spaced repetition</strong> with Anki export</span></li>
-						<li class="flex items-start gap-3"><span class="text-lg flex-shrink-0" aria-hidden="true">✓</span><span class="text-text-200"><strong class="text-text-300">Pronunciation assessment</strong> for speaking practice</span></li>
-						<li class="flex items-start gap-3"><span class="text-lg flex-shrink-0" aria-hidden="true">✓</span><span class="text-text-200">Priority support</span></li>
-					</ul>
-
-					<a
-						href="/pricing"
-						class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-base font-semibold bg-tile-600 border-2 border-tile-600 text-text-300 transition-all duration-200 hover:bg-tile-700 hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300"
-					>
-						See pricing <span aria-hidden="true">→</span>
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
 
 	<!-- FAQ — smooth accordion (logic preserved) -->
 	<section class="py-14 sm:py-20 bg-tile-200 border-t border-tile-500">
@@ -410,12 +357,57 @@
 	</section>
 </div>
 
+{#if lightbox}
+	<div
+		class="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4"
+		role="dialog"
+		aria-modal="true"
+		aria-label={`${lightbox.title} screenshot`}
+	>
+		<button
+			type="button"
+			onclick={closeLightbox}
+			class="absolute inset-0 cursor-zoom-out bg-black/85 backdrop-blur-sm"
+			aria-label="Close image preview"
+			tabindex="-1"
+		></button>
+
+		<div class="relative z-10 flex h-full w-full flex-col items-center justify-center gap-3">
+			<button
+				type="button"
+				onclick={closeLightbox}
+				class="absolute right-0 top-0 z-20 grid h-10 w-10 place-items-center rounded-full border border-tile-500 bg-tile-300 text-text-300 shadow-lg transition-colors hover:bg-tile-400"
+				aria-label="Close image preview"
+			>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="20"
+					height="20"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"
+					></line></svg
+				>
+			</button>
+
+			<img
+				src={lightbox.fullImg ?? lightbox.img}
+				alt={lightbox.title}
+				class="max-h-[92vh] w-auto max-w-[96vw] rounded-xl border border-tile-500 shadow-2xl"
+			/>
+			<p class="text-sm font-medium text-white/90">{lightbox.title}</p>
+		</div>
+	</div>
+{/if}
+
 <style>
 	.marquee {
 		display: flex;
 		overflow: hidden;
-		-webkit-mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
-		mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
 	}
 
 	.marquee__track {

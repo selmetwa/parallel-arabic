@@ -22,8 +22,20 @@
 		'levantine': 'Levantine Arabic'
 	};
 
+	// A small calligraphic accent per dialect for the header
+	const dialectGlyphs: Record<string, string> = {
+		'egyptian-arabic': 'مصر',
+		'darija': 'المغرب',
+		'fusha': 'الفصحى',
+		'levantine': 'الشام'
+	};
+
 	const dialectName = dialectNames[data.dialect] || data.dialect;
-	
+	const dialectGlyph = dialectGlyphs[data.dialect] || 'العربية';
+
+	const STEP_HEIGHT = 140;
+	const AMPLITUDE = 100;
+
 	// Transform curriculum into a flat list of lesson nodes for the path
 	let lessonPositions = $derived.by(() => {
 		const nodes = [];
@@ -31,7 +43,7 @@
 		let previousCompleted = true; // First lesson is always available if it exists
 		const isSubscribed = data.isSubscribed || data.hasActiveSubscription;
 		const isWhitelisted = data.isWhitelisted || false;
-		
+
 		for (const module of data.curriculum) {
 			for (const topic of module.topics) {
 				const lessonInfo = data.existingLessons[topic.id];
@@ -39,10 +51,10 @@
 				const progress = data.userProgress?.[topic.id];
 				const isCompleted = progress?.status === 'completed';
 				const isFirstLesson = index === 0;
-				
+
 				// Determine status logic
 				let status: 'completed' | 'active' | 'locked' = 'locked';
-				
+
 				if (!exists) {
 					// Lesson doesn't exist yet
 					status = 'locked';
@@ -72,8 +84,8 @@
 				}
 
 				// Sine wave pattern for X offset
-				const xOffset = Math.sin(index * 0.8) * 100; // Amplitude 100
-				
+				const xOffset = Math.sin(index * 0.8) * AMPLITUDE;
+
 				nodes.push({
 					id: topic.id,
 					title: topic.title,
@@ -84,7 +96,7 @@
 					status: status,
 					isPaywalled: !isFirstLesson && !isSubscribed && !isWhitelisted,
 					x: xOffset,
-					y: index * 140 // Step Height 140
+					y: index * STEP_HEIGHT
 				});
 				index++;
 			}
@@ -92,53 +104,53 @@
 		return nodes;
 	});
 
-    // Calculate SVG Path
-    let pathD = $derived.by(() => {
-        if (lessonPositions.length === 0) return { d: '', goalX: 0, goalY: 0 };
+	// Progress summary for the header meter
+	let completedCount = $derived(lessonPositions.filter((l) => l.status === 'completed').length);
+	let totalCount = $derived(lessonPositions.length);
+	let progressPct = $derived(totalCount ? Math.round((completedCount / totalCount) * 100) : 0);
 
-        const first = lessonPositions[0];
-        let d = `M ${first.x} ${first.y}`;
-        const STEP_HEIGHT = 140;
-        const AMPLITUDE = 100;
-        
-        for (let i = 0; i < lessonPositions.length - 1; i++) {
-            const current = lessonPositions[i];
-            const next = lessonPositions[i + 1];
-            
-            const cp1x = current.x;
-            const cp1y = current.y + STEP_HEIGHT * 0.5;
-            
-            const cp2x = next.x;
-            const cp2y = next.y - STEP_HEIGHT * 0.5;
-            
-            d += ` C ${cp1x} ${cp1y}, ${cp2x} ${cp2y}, ${next.x} ${next.y}`;
-        }
-        
-        // Add line to goal
-        const last = lessonPositions[lessonPositions.length - 1];
-        const goalY = last.y + STEP_HEIGHT;
-        const goalX = Math.sin(lessonPositions.length * 0.8) * AMPLITUDE;
-        
-        const cp1x = last.x;
-        const cp1y = last.y + STEP_HEIGHT * 0.5;
-        const cp2x = goalX;
-        const cp2y = goalY - STEP_HEIGHT * 0.5;
-        
-        d += ` C ${cp1x} ${cp1y}, ${cp2x} ${cp2y}, ${goalX} ${goalY}`;
+	// The "you are here" lesson — its incoming trail gets the gold beacon dots.
+	let activeIndex = $derived(lessonPositions.findIndex((l) => l.status === 'active'));
 
-        return { d, goalX, goalY };
-    });
+	// Goal node sits one step past the final lesson.
+	let goal = $derived.by(() => {
+		if (lessonPositions.length === 0) return { x: 0, y: 0 };
+		const last = lessonPositions[lessonPositions.length - 1];
+		return {
+			x: Math.sin(lessonPositions.length * 0.8) * AMPLITUDE,
+			y: last.y + STEP_HEIGHT
+		};
+	});
+
+	// Build the trail as individual cubic segments so each one can reflect progress.
+	let segments = $derived.by(() => {
+		const segs: { d: string; done: boolean; next: boolean }[] = [];
+		for (let i = 0; i < lessonPositions.length - 1; i++) {
+			const cur = lessonPositions[i];
+			const next = lessonPositions[i + 1];
+			const d = `M ${cur.x} ${cur.y} C ${cur.x} ${cur.y + STEP_HEIGHT * 0.5}, ${next.x} ${next.y - STEP_HEIGHT * 0.5}, ${next.x} ${next.y}`;
+			segs.push({ d, done: cur.status === 'completed', next: i + 1 === activeIndex });
+		}
+		if (lessonPositions.length > 0) {
+			const last = lessonPositions[lessonPositions.length - 1];
+			const d = `M ${last.x} ${last.y} C ${last.x} ${last.y + STEP_HEIGHT * 0.5}, ${goal.x} ${goal.y - STEP_HEIGHT * 0.5}, ${goal.x} ${goal.y}`;
+			segs.push({ d, done: last.status === 'completed', next: false });
+		}
+		return segs;
+	});
 
 	function handleCloseModal() {
 		isModalOpen = false;
 	}
 
-	function getDialectColor(status: string) {
-        if (status === 'locked') return 'bg-gray-400 border-gray-600';
-        if (status === 'completed') return 'bg-green-500 border-green-700';
-		return 'bg-tile-500 border-tile-700'; // Active
+	function nodeClasses(status: string) {
+		if (status === 'completed')
+			return 'bg-amber-400 text-amber-950 border-b-[6px] border-amber-600 shadow-[0_10px_24px_-10px_rgba(217,119,6,0.8)] hover:-translate-y-0.5 active:translate-y-1 active:border-b-2 cursor-pointer';
+		if (status === 'active')
+			return 'bg-brand text-white border-b-[6px] border-black/30 shadow-lg shadow-black/25 hover:-translate-y-0.5 active:translate-y-1 active:border-b-2 cursor-pointer';
+		return 'bg-tile-300 text-text-200 border-b-[6px] border-tile-400 cursor-pointer';
 	}
-    
+
     async function handleLessonClick(lessonNode: any) {
         // Check authentication first
         if (!data.user || !data.session) {
@@ -154,7 +166,7 @@
                 isModalOpen = true;
                 return;
             }
-            
+
             // Find the previous lesson that needs to be completed
             const currentIndex = lessonPositions.findIndex(l => l.id === lessonNode.id);
             if (currentIndex > 0) {
@@ -165,7 +177,7 @@
             }
             return;
         }
-        
+
         try {
             trackEvent('lessons_lesson_opened', {
                 lesson_id: lessonNode.id,
@@ -195,7 +207,7 @@
             const response = await fetch(`/api/lessons/${lessonNode.id}${dialect}`);
             if (!response.ok) throw new Error('Failed to load lesson');
             const lessonData = await response.json();
-            
+
             // Ensure topicId and dialect are set for completion tracking
             activeLesson = {
                 ...lessonData,
@@ -244,11 +256,11 @@
             });
             // Close the lesson player first (completion already marked in LessonPlayer)
             activeLesson = null;
-            
+
             // Refetch data to show updated completion status
             // This will reload the page data including userProgress
             await invalidateAll();
-            
+
             // User is now back on the structured lessons page with updated data
             // The next lesson should now be unlocked if it exists
         }}
@@ -258,113 +270,198 @@
 <PaywallModal isOpen={isModalOpen} {handleCloseModal}></PaywallModal>
 <AuthModal isOpen={isAuthModalOpen} handleCloseModal={() => isAuthModalOpen = false}></AuthModal>
 
-<div class="min-h-screen bg-tile-100 overflow-x-hidden relative font-sans pb-20">
-	<!-- Background decorative elements -->
-	<div class="fixed top-0 left-0 w-full h-full opacity-10 pointer-events-none select-none z-0">
-		<div class="absolute top-10 left-10 text-9xl text-tile-500">ا</div>
-		<div class="absolute bottom-20 right-20 text-9xl text-tile-500">ب</div>
-		<div class="absolute top-1/2 left-1/3 text-8xl text-tile-500">ج</div>
+<div class="relative min-h-screen overflow-x-hidden bg-tile-100 pb-24 font-sans">
+	<!-- Atmosphere: brand glow + drifting calligraphy field -->
+	<div class="pointer-events-none fixed inset-0 z-0 select-none overflow-hidden">
+		<div
+			class="absolute -top-40 left-1/2 h-[36rem] w-[36rem] -translate-x-1/2 rounded-full opacity-30 blur-3xl"
+			style="background: radial-gradient(circle, var(--brand) 0%, transparent 70%);"
+		></div>
+		<div class="absolute inset-0 opacity-[0.06] text-tile-600">
+			<span class="absolute left-[6%] top-[8%] text-[7rem] -rotate-12">ا</span>
+			<span class="absolute right-[8%] top-[18%] text-[9rem] rotate-6">ب</span>
+			<span class="absolute left-[14%] top-[42%] text-[8rem] rotate-3">ج</span>
+			<span class="absolute right-[12%] top-[55%] text-[10rem] -rotate-6">م</span>
+			<span class="absolute left-[8%] top-[72%] text-[8rem] -rotate-3">ع</span>
+			<span class="absolute right-[16%] bottom-[6%] text-[7rem] rotate-12">س</span>
+		</div>
 	</div>
 
-	<div class="relative z-10 max-w-2xl mx-auto px-4 py-8 flex flex-col items-center">
-		<header class="mb-12 text-center">
-			<div class="mb-4">
-				<a href="/lessons/structured" class="text-tile-600 hover:text-tile-700 text-sm font-medium flex items-center gap-2 justify-center">
-					<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+	<div class="relative z-10 mx-auto flex max-w-2xl flex-col items-center px-4 py-8">
+		<header class="rise mb-10 flex w-full flex-col items-center text-center">
+			<div class="mb-5 w-full text-left">
+				<a
+					href="/lessons/structured"
+					class="inline-flex items-center gap-2 text-sm font-medium text-text-200 transition-colors hover:text-text-300"
+				>
+					<svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
 					</svg>
 					Back to Structured Lessons
 				</a>
 			</div>
-			<h1 class="text-3xl sm:text-4xl font-bold text-text-300 mb-2">{dialectName} Learning Path</h1>
-			<p class="text-text-200">Your journey to fluency in {dialectName}</p>
+
+			<span
+				class="mb-3 text-4xl font-bold leading-none text-brand opacity-90 sm:text-5xl"
+				dir="rtl"
+				aria-hidden="true"
+			>
+				{dialectGlyph}
+			</span>
+			<h1 class="text-3xl font-bold tracking-tight text-text-300 sm:text-4xl">
+				{dialectName}
+			</h1>
+			<p class="mt-1.5 text-sm uppercase tracking-[0.25em] text-text-200">Learning Path</p>
+
+			{#if totalCount > 0}
+				<div class="mt-6 w-full max-w-xs">
+					<div class="mb-2 flex items-center justify-between text-xs font-semibold text-text-200">
+						<span>{completedCount} of {totalCount} lessons</span>
+						<span class="text-brand">{progressPct}%</span>
+					</div>
+					<div class="h-2.5 w-full overflow-hidden rounded-full bg-tile-300 shadow-inner">
+						<div
+							class="h-full rounded-full bg-brand transition-[width] duration-700 ease-out"
+							style="width: {progressPct}%"
+						></div>
+					</div>
+				</div>
+			{/if}
 		</header>
 
 		<!-- Path Container -->
-		<div class="relative w-full max-w-xs sm:max-w-sm mx-auto mt-20" style="height: {pathD.goalY + 150}px;">
-			
-            <!-- SVG Line Layer -->
-            <svg 
-                class="absolute top-0 left-1/2 -translate-x-1/2 overflow-visible pointer-events-none"
+		<div
+			class="relative mx-auto mt-12 w-full max-w-xs sm:max-w-sm"
+			style="height: {goal.y + 170}px;"
+		>
+            <!-- SVG Trail Layer -->
+            <svg
+                class="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 overflow-visible"
                 width="400"
-                height={pathD.goalY + 150}
-                viewBox="-200 0 400 {pathD.goalY + 150}"
+                height={goal.y + 170}
+                viewBox="-200 0 400 {goal.y + 170}"
                 style="z-index: 0;"
             >
-                <!-- Background line -->
-                <path d={pathD.d} stroke="#cbd5e1" stroke-width="16" fill="none" stroke-linecap="round" stroke-linejoin="round" class="drop-shadow-sm" />
-                <!-- Dashed overlay -->
-                <path d={pathD.d} stroke="#fbbf24" stroke-width="8" fill="none" stroke-linecap="round" stroke-dasharray="20 20" class="opacity-60 animate-[dash_60s_linear_infinite]">
-                    <style>
-                        @keyframes dash {
-                            to {
-                                stroke-dashoffset: -1000;
-                            }
-                        }
-                    </style>
-                </path>
+                <!-- Carved base groove -->
+                {#each segments as seg (seg.d)}
+                    <path
+                        d={seg.d}
+                        class="stroke-tile-300"
+                        stroke-width="18"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+                {/each}
+
+                <!-- Progress overlay: inked where done, gold dots where it's your next step, muted ahead -->
+                {#each segments as seg (seg.d)}
+                    {#if seg.done}
+                        <path
+                            d={seg.d}
+                            class="stroke-brand"
+                            stroke-width="10"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    {:else if seg.next}
+                        <path
+                            d={seg.d}
+                            class="trail-flow stroke-amber-400"
+                            stroke-width="7"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-dasharray="1 20"
+                        />
+                    {:else}
+                        <path
+                            d={seg.d}
+                            class="stroke-tile-400 opacity-70"
+                            stroke-width="6"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-dasharray="1 20"
+                        />
+                    {/if}
+                {/each}
             </svg>
 
 			<!-- Nodes Layer -->
-			{#each lessonPositions as lesson, i}
-				{@const labelSideClass = lesson.x > 0 ? 'right-full mr-4' : 'left-full ml-4'}
-				<div 
-					class="absolute left-1/2 -translate-x-1/2 flex flex-col items-center justify-center w-24 z-10"
+			{#each lessonPositions as lesson, i (lesson.id)}
+				{@const labelSideClass = lesson.x > 0 ? 'right-full mr-5' : 'left-full ml-5'}
+				<div
+					class="absolute left-1/2 z-10 flex w-24 -translate-x-1/2 flex-col items-center justify-center"
 					style="transform: translate(calc(-50% + {lesson.x}px), {lesson.y}px);"
 				>
-                    <!-- Module Label (show only on first topic of module?) -->
+					<div
+						class="rise group/node flex flex-col items-center"
+						style="animation-delay: {Math.min(i, 12) * 55}ms;"
+					>
+                    <!-- Chapter divider — first topic of each module -->
                     {#if i === 0 || lessonPositions[i-1].moduleTitle !== lesson.moduleTitle}
-                        <div class="absolute -top-16 w-40 text-center bg-tile-200 text-tile-800 text-xs font-bold py-1 px-2 rounded-full shadow-sm border border-tile-300">
-                            {lesson.moduleTitle}
+                        <div class="absolute -top-14 flex w-56 items-center justify-center gap-2">
+                            <span class="h-px flex-1 bg-tile-400"></span>
+                            <span class="whitespace-nowrap text-[0.65rem] font-bold uppercase tracking-[0.15em] text-text-200">
+                                {lesson.moduleTitle}
+                            </span>
+                            <span class="h-px flex-1 bg-tile-400"></span>
                         </div>
                     {/if}
 
-					<!-- Tooltip/Label -->
-					<div class="absolute top-1/2 -translate-y-1/2 {labelSideClass} w-48 bg-white p-3 rounded-xl shadow-lg border-2 border-tile-200 hidden sm:block transition-opacity hover:opacity-100 z-20">
-						<h3 class="font-bold text-text-300 text-sm line-clamp-2">{lesson.title}</h3>
-						<p class="text-[10px] text-text-200 mt-1 leading-tight opacity-70">{lesson.description}</p>
-                         <div class="absolute top-1/2 -translate-y-1/2 {lesson.x > 0 ? '-right-1.5' : '-left-1.5'} w-3 h-3 bg-white border-t-2 border-r-2 border-tile-200 rotate-45"></div>
+					<!-- Desktop tooltip: always shown for the active step, on hover otherwise -->
+					<div
+						class="absolute top-1/2 hidden w-48 -translate-y-1/2 rounded-xl border border-tile-400 bg-tile-200/95 p-3 shadow-lg backdrop-blur-sm transition-opacity duration-200 sm:block z-20 {labelSideClass} {lesson.status === 'active' ? 'opacity-100' : 'opacity-0 group-hover/node:opacity-100 group-focus-within/node:opacity-100'}"
+					>
+						<div class="mb-0.5 text-[0.6rem] font-bold uppercase tracking-wider text-text-200 opacity-70">
+							Lesson {i + 1}
+						</div>
+						<h3 class="line-clamp-2 text-sm font-bold text-text-300">{lesson.title}</h3>
+						<p class="mt-1 text-[10px] leading-tight text-text-200 opacity-80">{lesson.description}</p>
+                         <div class="absolute top-1/2 h-3 w-3 -translate-y-1/2 rotate-45 border-t border-r border-tile-400 bg-tile-200 {lesson.x > 0 ? '-right-1.5' : '-left-1.5'}"></div>
 					</div>
 
 					<!-- Node Button -->
-					<button 
-						class="
-							w-24 h-24 rounded-full flex items-center justify-center text-3xl shadow-[0_6px_0_0_rgba(0,0,0,0.2)]
-							border-b-8 active:border-b-0 active:translate-y-2 active:shadow-none transition-all
-							cursor-pointer
-							{getDialectColor(lesson.status)}
-							text-white
-                            hover:brightness-110
-                            relative
-						"
-                        onclick={() => handleLessonClick(lesson)}
-					>
-						{#if lesson.status === 'completed'}
-							<span class="text-4xl drop-shadow-md">✓</span>
-						{:else if lesson.status === 'locked'}
-							<span class="opacity-50 text-2xl drop-shadow-md">🔒</span>
-						{:else}
-							<span class="text-4xl animate-pulse drop-shadow-md">★</span>
-						{/if}
+					<div class="relative">
+						<button
+							class="relative flex h-20 w-20 items-center justify-center rounded-full transition-all duration-200 hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:h-24 sm:w-24 {nodeClasses(lesson.status)} {lesson.status === 'active' ? 'ring-2 ring-brand/40 ring-offset-2 ring-offset-tile-100' : ''}"
+							onclick={() => handleLessonClick(lesson)}
+							aria-label={lesson.title}
+						>
+							{#if lesson.status === 'completed'}
+								<svg class="h-9 w-9 drop-shadow-sm sm:h-10 sm:w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M5 13l4 4L19 7" />
+								</svg>
+							{:else if lesson.status === 'locked'}
+								<svg class="h-7 w-7 opacity-60" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+									<path d="M12 1a5 5 0 00-5 5v3H6a2 2 0 00-2 2v9a2 2 0 002 2h12a2 2 0 002-2v-9a2 2 0 00-2-2h-1V6a5 5 0 00-5-5zm3 8H9V6a3 3 0 016 0v3z" />
+								</svg>
+							{:else}
+								<span class="text-2xl font-extrabold drop-shadow-sm sm:text-3xl">{i + 1}</span>
+							{/if}
+						</button>
 
                         <!-- Mobile-only label below -->
-                        <div class="sm:hidden absolute top-full mt-3 w-32 bg-white/90 backdrop-blur-sm p-2 rounded-lg shadow-sm border border-tile-200 text-center z-30">
-                            <span class="text-xs font-bold text-text-300 block truncate">{lesson.title}</span>
+                        <div class="absolute top-full left-1/2 mt-3 w-32 -translate-x-1/2 rounded-lg border border-tile-300 bg-tile-200/90 p-2 text-center shadow-sm backdrop-blur-sm sm:hidden z-30">
+                            <span class="block truncate text-xs font-bold text-text-300">{lesson.title}</span>
                         </div>
-					</button>
+					</div>
+					</div>
 				</div>
 			{/each}
-            
+
             <!-- Goal Node -->
-            <div 
-                class="absolute left-1/2 -translate-x-1/2 flex flex-col items-center justify-center w-28 z-10"
-                style="transform: translate(calc(-50% + {pathD.goalX}px), {pathD.goalY}px);"
+            <div
+                class="absolute left-1/2 z-10 flex w-28 -translate-x-1/2 flex-col items-center justify-center"
+                style="transform: translate(calc(-50% + {goal.x}px), {goal.y}px);"
             >
-                <div class="w-28 h-28 rounded-full bg-yellow-400 border-b-8 border-yellow-600 flex items-center justify-center shadow-[0_8px_0_0_rgba(0,0,0,0.2)] hover:scale-110 transition-transform cursor-pointer">
-                    <span class="text-5xl drop-shadow-md">🏆</span>
+                <div class="relative">
+                    <div class="flex h-24 w-24 items-center justify-center rounded-full border-b-[6px] border-amber-600 bg-gradient-to-b from-amber-300 to-amber-500 shadow-[0_12px_30px_-10px_rgba(217,119,6,0.85)] transition-transform hover:scale-105 sm:h-28 sm:w-28">
+                        <span class="text-5xl drop-shadow-md">🏆</span>
+                    </div>
                 </div>
-                <div class="absolute top-full mt-4 bg-yellow-100 px-4 py-1 rounded-full border border-yellow-300 shadow-sm">
-                    <span class="text-xs font-bold text-yellow-800 uppercase tracking-wider">Goal</span>
+                <div class="mt-4 rounded-full border border-amber-500/40 bg-amber-400/15 px-4 py-1">
+                    <span class="text-xs font-bold uppercase tracking-[0.15em] text-amber-700">Fluency</span>
                 </div>
             </div>
 
@@ -372,3 +469,32 @@
 	</div>
 </div>
 
+<style>
+	@keyframes flow {
+		to {
+			stroke-dashoffset: -1000;
+		}
+	}
+	@keyframes rise {
+		from {
+			opacity: 0;
+			transform: translateY(18px) scale(0.92);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0) scale(1);
+		}
+	}
+	.trail-flow {
+		animation: flow 24s linear infinite;
+	}
+	.rise {
+		animation: rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.trail-flow,
+		.rise {
+			animation: none;
+		}
+	}
+</style>

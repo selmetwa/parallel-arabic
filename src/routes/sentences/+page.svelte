@@ -419,38 +419,33 @@
 
 {#if !isLoading && session.sentences.length === 0 && !hasReachedLimit}
 	<!-- Generation Form -->
-	<header class="py-5 bg-tile-200 border-b border-tile-500 px-6 sm:px-12">
-		<div class=" text-left">
-			<h1 class="text-2xl sm:text-3xl text-text-300 font-bold mb-1 tracking-tight">
-				Sentence Practice
-			</h1>
-			<p class="text-text-200 text-base sm:text-lg leading-snug max-w-2xl">
-				Drill grammar patterns and vocabulary in context with unlimited custom practice sentences.
-			</p>
+	<header class="py-6 bg-tile-200 border-b border-tile-500 px-6 sm:px-12">
+		<div class="flex items-start gap-4">
+			<span class="text-4xl font-bold text-brand opacity-70 leading-none mt-1 shrink-0 select-none" aria-hidden="true" dir="rtl">جملة</span>
+			<div>
+				<p class="text-[0.65rem] font-bold uppercase tracking-[0.15em] text-text-200 border-l-2 border-brand pl-2 mb-2">Practice Tool</p>
+				<h1 class="text-2xl sm:text-3xl text-text-300 font-bold tracking-tight">Sentence Practice</h1>
+				<p class="text-text-200 text-sm sm:text-base leading-snug max-w-2xl mt-1">
+					Drill grammar patterns and vocabulary in context with unlimited custom practice sentences.
+				</p>
+			</div>
 		</div>
 	</header>
 
 	<section class="py-6">
 		<div class=" px-6 sm:px-12">
 			<form class="space-y-4" onsubmit={generateSentences}>
-				<!-- Review Words Toggle Card -->
-				<div class="bg-tile-400 border border-tile-500 rounded-xl shadow-sm overflow-hidden">
-					<div class="p-4">
-						<div class="flex items-start justify-between gap-4">
-							<div class="flex-1">
-								<div class="flex items-center gap-2 mb-2">
-									<span class="text-2xl">🔄</span>
-									<h3 class="text-lg font-bold text-text-300">Use Your Review Words</h3>
-								</div>
-								<p class="text-sm text-text-200 leading-relaxed">
-									Generate sentences using words from your review deck. This reinforces vocabulary through contextual practice.
-								</p>
-							</div>
-							<label class="relative inline-flex items-center cursor-pointer">
-								<input type="checkbox" bind:checked={useReviewWordsOnly} class="sr-only peer" />
-								<div class="w-14 h-8 bg-tile-500 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-white after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-emerald-600"></div>
-							</label>
+				<!-- Review Words Toggle -->
+				<div class="bg-tile-300 border border-tile-400 rounded-xl p-4">
+					<div class="flex items-center justify-between gap-4">
+						<div class="flex-1 min-w-0">
+							<p class="text-sm font-bold text-text-300">Use Your Review Words</p>
+							<p class="text-xs text-text-200 leading-relaxed mt-0.5">Generate sentences from your saved vocabulary deck.</p>
 						</div>
+						<label class="relative inline-flex items-center cursor-pointer shrink-0">
+							<input type="checkbox" bind:checked={useReviewWordsOnly} class="sr-only peer" />
+							<div class="w-11 h-6 bg-tile-500 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-brand"></div>
+						</label>
 					</div>
 				</div>
 
@@ -458,11 +453,9 @@
 					<!-- Review Words Mode -->
 					
 					<!-- Word Source Selection -->
-					<div class="bg-tile-400 border border-tile-500 rounded-xl shadow-sm overflow-hidden">
-						<div class="px-4 py-3 border-b border-tile-500">
-							<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
-								<span>📚</span> Word Source
-							</h3>
+					<div class="bg-tile-300 border border-tile-400 rounded-xl overflow-hidden">
+						<div class="px-4 pt-4 pb-1">
+							<h3 class="text-xs font-bold uppercase tracking-[0.12em] text-text-200 border-l-2 border-brand pl-2">Word Source</h3>
 						</div>
 						<div class="p-4">
 							<div class="grid grid-cols-2 gap-3">
@@ -503,22 +496,20 @@
 					</div>
 
 					<!-- Difficulty Selection -->
-					<div class="bg-tile-400 border border-tile-500 rounded-xl shadow-sm overflow-hidden">
-						<div class="px-4 py-3 border-b border-tile-500">
-							<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
-								<span>📊</span> Difficulty Level
-							</h3>
+					<div class="bg-tile-300 border border-tile-400 rounded-xl overflow-hidden">
+						<div class="px-4 pt-4 pb-1">
+							<h3 class="text-xs font-bold uppercase tracking-[0.12em] text-text-200 border-l-2 border-brand pl-2">Difficulty Level</h3>
 						</div>
-						<div class="p-4">
+						<div class="p-4 pt-2">
 							<div class="grid grid-cols-3 sm:grid-cols-6 gap-2">
 								{#each difficultyOptions as diff}
 									<button
 										type="button"
 										onclick={() => option = diff.value}
-										class="p-2.5 rounded-lg border transition-all duration-200 text-center {option === diff.value ? 'border-white/50 shadow-md scale-105' : 'border-transparent opacity-70 hover:opacity-100'} {diff.color}"
+										class="p-2.5 rounded-xl border-2 transition-all duration-200 text-center cursor-pointer select-none {option === diff.value ? 'bg-tile-500 border-tile-600 shadow-sm -translate-y-0.5' : 'bg-tile-300 border-tile-400 hover:bg-tile-400'}"
 									>
-										<span class="block text-lg font-bold text-white">{diff.label}</span>
-										<span class="block text-xs text-white/80">{diff.sublabel}</span>
+										<span class="block text-base font-bold text-text-300">{diff.label}</span>
+										<span class="block text-[11px] text-text-200 mt-0.5">{diff.sublabel}</span>
 									</button>
 								{/each}
 							</div>
@@ -555,22 +546,20 @@
 					<!-- Standard Generation Mode -->
 					
 					<!-- Difficulty Selection -->
-					<div class="bg-tile-400 border border-tile-500 rounded-xl shadow-sm overflow-hidden">
-						<div class="px-4 py-3 border-b border-tile-500">
-							<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
-								<span>📊</span> Difficulty Level
-							</h3>
+					<div class="bg-tile-300 border border-tile-400 rounded-xl overflow-hidden">
+						<div class="px-4 pt-4 pb-1">
+							<h3 class="text-xs font-bold uppercase tracking-[0.12em] text-text-200 border-l-2 border-brand pl-2">Difficulty Level</h3>
 						</div>
-						<div class="p-4">
+						<div class="p-4 pt-2">
 							<div class="grid grid-cols-3 sm:grid-cols-6 gap-2">
 								{#each difficultyOptions as diff}
 									<button
 										type="button"
 										onclick={() => option = diff.value}
-										class="p-2.5 rounded-lg border transition-all duration-200 text-center {option === diff.value ? 'border-white/50 shadow-md scale-105' : 'border-transparent opacity-70 hover:opacity-100'} {diff.color}"
+										class="p-2.5 rounded-xl border-2 transition-all duration-200 text-center cursor-pointer select-none {option === diff.value ? 'bg-tile-500 border-tile-600 shadow-sm -translate-y-0.5' : 'bg-tile-300 border-tile-400 hover:bg-tile-400'}"
 									>
-										<span class="block text-lg font-bold text-white">{diff.label}</span>
-										<span class="block text-xs text-white/80">{diff.sublabel}</span>
+										<span class="block text-base font-bold text-text-300">{diff.label}</span>
+										<span class="block text-[11px] text-text-200 mt-0.5">{diff.sublabel}</span>
 									</button>
 								{/each}
 							</div>
@@ -578,13 +567,10 @@
 					</div>
 
 					<!-- Learning Topics -->
-					<div class="bg-tile-400 border border-tile-500 rounded-xl shadow-sm overflow-hidden">
-						<div class="px-4 py-3 border-b border-tile-500">
+					<div class="bg-tile-300 border border-tile-400 rounded-xl overflow-hidden">
+						<div class="px-4 pt-4 pb-1">
 							<div class="flex items-center justify-between">
-								<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
-									<span>🎯</span> Focus Topics
-									<span class="text-sm font-normal text-text-200">(optional)</span>
-								</h3>
+								<h3 class="text-xs font-bold uppercase tracking-[0.12em] text-text-200 border-l-2 border-brand pl-2">Focus Topics <span class="font-normal normal-case tracking-normal">(optional)</span></h3>
 								{#if selectedLearningTopics.length > 0}
 									<button
 										type="button"
@@ -613,12 +599,9 @@
 					</div>
 
 					<!-- Vocabulary Input -->
-					<div class="bg-tile-400 border border-tile-500 rounded-xl shadow-sm overflow-hidden">
-						<div class="px-4 py-3 border-b border-tile-500">
-							<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
-								<span>📝</span> Custom Vocabulary
-								<span class="text-sm font-normal text-text-200">(optional)</span>
-							</h3>
+					<div class="bg-tile-300 border border-tile-400 rounded-xl overflow-hidden">
+						<div class="px-4 pt-4 pb-1">
+							<h3 class="text-xs font-bold uppercase tracking-[0.12em] text-text-200 border-l-2 border-brand pl-2">Custom Vocabulary <span class="font-normal normal-case tracking-normal">(optional)</span></h3>
 						</div>
 						<div class="p-4">
 							<!-- Input Mode Toggle -->
@@ -679,11 +662,9 @@
 					</div>
 
 					<!-- Practice Mode -->
-					<div class="bg-tile-400 border border-tile-500 rounded-xl shadow-sm overflow-hidden">
-						<div class="px-4 py-3 border-b border-tile-500">
-							<h3 class="text-lg font-bold text-text-300 flex items-center gap-2">
-								<span>✍️</span> Practice Mode
-							</h3>
+					<div class="bg-tile-300 border border-tile-400 rounded-xl overflow-hidden">
+						<div class="px-4 pt-4 pb-1">
+							<h3 class="text-xs font-bold uppercase tracking-[0.12em] text-text-200 border-l-2 border-brand pl-2">Practice Mode</h3>
 						</div>
 						<div class="p-4">
 							<div class="grid grid-cols-2 gap-3">

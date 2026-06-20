@@ -1,14 +1,16 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { currentDialect } from '$lib/store/store';
+  import { get } from 'svelte/store';
+  import { currentDialect, tutorConversation, tutorConversationId, tutorSelectedDialect } from '$lib/store/store';
   import RecordButton from '$lib/components/RecordButton.svelte';
   import AudioLoading from '$lib/components/AudioLoading.svelte';
   import AudioButton from '$lib/components/AudioButton.svelte';
+  import MessageBubble from '$lib/components/tutor/ConversationMessage.svelte';
   import PaywallModal from '$lib/components/PaywallModal.svelte';
   import DialectComparisonModal from '$lib/components/dialect-shared/sentences/DialectComparisonModal.svelte';
   import DefinitionModal from '$lib/components/dialect-shared/sentences/DefinitionModal.svelte';
   import ConversationSummaryModal from '$lib/components/ConversationSummaryModal.svelte';
-  import { type Dialect } from '$lib/types/index';
+  import { type Dialect, type ConversationMessage } from '$lib/types/index';
   import type { DialectComparisonSchema } from '$lib/utils/gemini-schemas';
   import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
   import { updateKeyboardStyle } from '$lib/helpers/update-keyboard-style';
@@ -117,21 +119,6 @@
     autoPlayAudio = localStorage.getItem('tutor-autoplay') !== 'off';
   });
 
-  type ConversationMessage = {
-    id: string;
-    type: 'user' | 'tutor';
-    arabic?: string;
-    english?: string;
-    transliteration?: string;
-    wordAlignments?: { arabic: string; english: string; transliteration: string }[];
-    feedback?: string;
-    suggestedSentence?: { arabic: string; transliteration: string } | null;
-    originalLanguage?: 'ar' | 'en';
-    timestamp: Date;
-    showFeedback?: boolean;
-    showBreakdown?: boolean;
-  };
-
   const dialectOptions = [
     { value: 'egyptian-arabic', label: 'Egyptian Arabic', short: 'Egyptian', emoji: '🇪🇬' },
     { value: 'fusha', label: 'Modern Standard Arabic', short: 'MSA', emoji: '📚' },
@@ -142,7 +129,9 @@
   type TutorMode = 'conversation' | 'practice';
   let mode = $state<TutorMode>('conversation');
 
-  let selectedDialect = $state<Dialect>(getDefaultDialect(data.user) as Dialect);
+  let selectedDialect = $state<Dialect>(
+    (get(tutorSelectedDialect) as Dialect) || (getDefaultDialect(data.user) as Dialect)
+  );
 
   // Scenario picker state (beginner conversation starters)
   interface HintData {
@@ -155,10 +144,11 @@
   let currentHint = $state<HintData | null>(null);
   let isLoadingHint = $state(false);
 
-  // Global transcript display toggles (apply to every message)
-  let displayArabic = $state(true);
-  let displayEnglish = $state(true);
-  let displayTransliteration = $state(true);
+  // Global transcript display toggles. These are the defaults each message follows
+  // until it is individually toggled (see ConversationMessage's local overrides).
+  let displayEnglish = $state(false);
+  let displayTransliteration = $state(false);
+  let displayHint = $state(false);
   let autoPlayAudio = $state(true);
   let playingMessageId = $state<string | null>(null);
   let chatError = $state<{ message: string; retry: (() => void) | null } | null>(null);
@@ -300,8 +290,16 @@
   let discardRecording = false;
   let mediaRecorder: MediaRecorder | null = $state(null);
   let audioChunks: Blob[] = $state([]);
-  let conversation: ConversationMessage[] = $state([]);
-  let conversationId: string | null = $state(null); // Track conversation ID for memory
+  // Initialized from the in-memory stores so the chat survives navigation
+  let conversation: ConversationMessage[] = $state(get(tutorConversation) as ConversationMessage[]);
+  let conversationId: string | null = $state(get(tutorConversationId)); // Track conversation ID for memory
+
+  // Keep the stores in sync with local state (browser only; reassignments above trigger this)
+  $effect(() => {
+    tutorConversation.set(conversation);
+    tutorConversationId.set(conversationId);
+    tutorSelectedDialect.set(selectedDialect);
+  });
   let isSavingConversation = $state(false); // Track when saving/summarizing
   let isProcessing = $state(false);
   
@@ -1407,33 +1405,10 @@
               </h3>
               <div class="flex items-center gap-2 flex-wrap">
                 {#if conversation.length > 0}
-                  <!-- Global show/hide toggles: apply to every message -->
-                  <div class="flex gap-1.5" role="group" aria-label="Show or hide translation lines">
-                    <button
-                      type="button"
-                      onclick={() => (displayArabic = !displayArabic)}
-                      aria-pressed={displayArabic}
-                      class="text-xs px-2 py-1 rounded-md font-medium transition-colors {displayArabic ? 'bg-emerald-600 text-white' : 'bg-tile-500 text-text-300 hover:bg-tile-600'}"
-                    >
-                      العربية
-                    </button>
-                    <button
-                      type="button"
-                      onclick={() => (displayEnglish = !displayEnglish)}
-                      aria-pressed={displayEnglish}
-                      class="text-xs px-2 py-1 rounded-md font-medium transition-colors {displayEnglish ? 'bg-emerald-600 text-white' : 'bg-tile-500 text-text-300 hover:bg-tile-600'}"
-                    >
-                      English
-                    </button>
-                    <button
-                      type="button"
-                      onclick={() => (displayTransliteration = !displayTransliteration)}
-                      aria-pressed={displayTransliteration}
-                      title="Transliteration (Arabic in Latin letters)"
-                      class="text-xs px-2 py-1 rounded-md font-medium transition-colors {displayTransliteration ? 'bg-emerald-600 text-white' : 'bg-tile-500 text-text-300 hover:bg-tile-600'}"
-                    >
-                      Translit
-                    </button>
+                  <div class="flex border border-tile-600 rounded-md overflow-hidden text-[10px] font-semibold" role="group" aria-label="Show or hide translations for all messages">
+                    <button type="button" onclick={() => (displayEnglish = !displayEnglish)} aria-pressed={displayEnglish} title="Show English under every word" class="px-2 py-1 transition-colors {displayEnglish ? 'bg-tile-600 text-text-300' : 'bg-tile-300 text-text-200 hover:bg-tile-400'}">EN</button>
+                    <button type="button" onclick={() => (displayTransliteration = !displayTransliteration)} aria-pressed={displayTransliteration} title="Show transliteration for every message" class="px-2 py-1 transition-colors {displayTransliteration ? 'bg-tile-600 text-text-300' : 'bg-tile-300 text-text-200 hover:bg-tile-400'}">TR</button>
+                    <button type="button" onclick={() => (displayHint = !displayHint)} aria-pressed={displayHint} title="Show full translation for every message" class="px-2 py-1 transition-colors {displayHint ? 'bg-tile-600 text-text-300' : 'bg-tile-300 text-text-200 hover:bg-tile-400'}">Hint</button>
                   </div>
                 {/if}
                 {#if conversation.length > 0 && !activeScenarioContext}
@@ -1551,215 +1526,15 @@
           {:else}
             <div class="space-y-4 max-w-3xl mx-auto">
               {#each conversation as message (message.id)}
-                {#if message.type === 'user'}
-                  <!-- User Message: compact, right-aligned; word breakdown behind a toggle -->
-                  <div data-mid={message.id} class="scroll-mt-28 ml-auto max-w-[95%] sm:max-w-[85%] bg-sky-500/10 border-2 border-sky-500/30 rounded-xl p-3 sm:p-4">
-                    <div class="flex items-center justify-between gap-2 mb-2">
-                      <div class="flex items-center gap-2">
-                        <span class="w-7 h-7 bg-sky-600 rounded-full flex items-center justify-center text-white text-xs font-bold">
-                          You
-                        </span>
-                        <span class="text-xs text-text-200">
-                          {message.originalLanguage === 'ar' ? 'Spoke Arabic' : 'Asked in English'}
-                        </span>
-                      </div>
-                      <div class="flex gap-1.5 flex-wrap">
-                        {#if message.arabic && message.english && message.transliteration}
-                          <button
-                            onclick={() => toggleMessageVisibility(message.id, 'showBreakdown')}
-                            class="text-xs px-2 py-1 rounded-md font-medium transition-colors {message.showBreakdown ? 'bg-sky-600 text-white' : 'bg-tile-500 text-text-300 hover:bg-tile-600'}"
-                            aria-pressed={message.showBreakdown === true}
-                            title="Word-by-word breakdown"
-                          >
-                            🔍 Words
-                          </button>
-                        {/if}
-                        {#if message.feedback && message.feedback.trim() !== ''}
-                          <button
-                            onclick={() => toggleMessageVisibility(message.id, 'showFeedback')}
-                            class="text-xs px-2 py-1 rounded-md font-medium transition-colors {message.showFeedback !== false ? 'bg-amber-600 text-white' : 'bg-tile-500 text-text-300 hover:bg-tile-600'}"
-                            aria-pressed={message.showFeedback !== false}
-                          >
-                            💡 Tips
-                          </button>
-                        {/if}
-                      </div>
-                    </div>
-
-                    {#if message.showBreakdown && message.arabic && message.english && message.transliteration}
-                      <!-- Stories-style word-by-word card -->
-                      <div class="bg-tile-400 border-2 border-tile-600 rounded-xl p-4 sm:p-6">
-                        <!-- English translation at top -->
-                        <!-- {#if displayEnglish}
-                          <div class="mb-4 pb-3 border-b border-tile-600">
-                            <div class="flex flex-wrap gap-1.5 justify-center">
-                              {#each (message.english || '').split(' ') as word}
-                                <button
-                                  onclick={() => handleWordClick(word, 'english', message)}
-                                  aria-label={`Define ${word}`}
-                                  class="px-2 py-1 text-sm sm:text-base text-text-200 rounded-lg border-2 border-transparent hover:bg-tile-500 hover:border-tile-600 hover:shadow-md transition-all duration-200 cursor-pointer"
-                                >
-                                  {word}
-                                </button>
-                              {/each}
-                            </div>
-                          </div>
-                        {/if} -->
-
-                        <!-- Transliteration -->
-                        {#if displayTransliteration}
-                          <p class="text-sm sm:text-base text-text-200 italic text-center mb-3 leading-relaxed">
-                            {message.transliteration}
-                          </p>
-                        {/if}
-
-                        <!-- Arabic words - clickable for definitions -->
-                        {#if displayArabic}
-                          <div class="flex flex-wrap gap-2 sm:gap-3 justify-center" dir="rtl">
-                            {#if message.wordAlignments?.length}
-                              {#each message.wordAlignments as wordAlign}
-                                <button
-                                  onclick={() => handleWordClick(wordAlign.arabic, 'arabic', message)}
-                                  aria-label={`Define ${wordAlign.arabic}`}
-                                  class="flex flex-col items-center px-2 py-2 sm:px-3 sm:py-3 rounded-lg hover:bg-tile-500 hover:shadow-md transition-all duration-200 cursor-pointer border-2 border-transparent hover:border-tile-600"
-                                >
-                                  {#if displayEnglish}
-                                    <span class="text-xs sm:text-sm text-text-200 mb-1 opacity-90">{wordAlign.english}</span>
-                                  {/if}
-                                  <span class="text-lg sm:text-xl md:text-2xl font-semibold text-text-300">{wordAlign.arabic}</span>
-                                </button>
-                              {/each}
-                            {:else}
-                              {#each (message.arabic || '').split(' ') as arabicWord}
-                                <button
-                                  onclick={() => handleWordClick(arabicWord, 'arabic', message)}
-                                  aria-label={`Define ${arabicWord}`}
-                                  class="px-2 py-1 sm:px-3 sm:py-2 rounded-lg hover:bg-tile-500 hover:shadow-md transition-all duration-200 cursor-pointer border-2 border-transparent hover:border-tile-600 text-lg sm:text-xl md:text-2xl font-semibold text-text-300"
-                                >
-                                  {arabicWord}
-                                </button>
-                              {/each}
-                            {/if}
-                          </div>
-                        {/if}
-                      </div>
-                    {:else}
-                      {@const containsArabic = /[\u0600-\u06FF]/.test(message.arabic || '')}
-                      {#if displayArabic || !message.english}
-                        <p class="text-base sm:text-lg font-semibold text-text-300 leading-relaxed" dir={containsArabic ? 'rtl' : 'ltr'}>
-                          {message.arabic}
-                        </p>
-                      {/if}
-                      {#if displayTransliteration && message.transliteration}
-                        <p class="text-xs sm:text-sm text-text-200 italic mt-1">{message.transliteration}</p>
-                      {/if}
-                      {#if displayEnglish && message.english}
-                        <p class="text-xs sm:text-sm text-text-200 mt-1">{message.english}</p>
-                      {/if}
-                    {/if}
-
-                    {#if message.feedback && message.feedback.trim() !== '' && message.showFeedback !== false}
-                      <div class="mt-3 p-4 bg-amber-500/10 border border-amber-500/30 rounded-lg">
-                        <p class="text-sm font-bold text-amber-300 mb-2 flex items-center gap-2">
-                          <span>💡</span> Grammar Feedback
-                        </p>
-                        <p class="text-text-300 whitespace-pre-wrap leading-relaxed">{message.feedback}</p>
-                        {#if message.suggestedSentence}
-                          <div class="mt-3 pt-3 border-t border-amber-500/20">
-                            <p class="text-xs text-amber-400 font-semibold mb-1">Try saying</p>
-                            <p class="text-text-100 font-medium">{message.suggestedSentence.arabic}</p>
-                            <p class="text-text-300 text-sm mt-0.5">{message.suggestedSentence.transliteration}</p>
-                          </div>
-                        {/if}
-                      </div>
-                    {/if}
-                  </div>
-                {:else}
-                  <!-- Tutor Message -->
-                  <div data-mid={message.id} class="scroll-mt-28 mr-auto w-full sm:max-w-[92%] bg-tile-300 border-2 border-tile-500 rounded-xl p-4">
-                    <div class="flex items-center justify-between mb-3">
-                      <div class="flex items-center gap-2">
-                        <span class="w-8 h-8 bg-emerald-600 rounded-full flex items-center justify-center text-lg">
-                          🎓
-                        </span>
-                        <span class="text-sm font-semibold text-text-300">Tutor</span>
-                        {#if playingMessageId === message.id}
-                          <span class="text-sm animate-pulse" aria-label="Playing audio">🔊</span>
-                        {/if}
-                      </div>
-                      <div class="flex items-center gap-2 flex-wrap">
-                        {#if message.arabic}
-                          <div class="flex gap-1.5">
-                            <AudioButton text={message.arabic} dialect={selectedDialect} className="!p-2 !rounded-lg bg-tile-500 hover:bg-tile-600" />
-                            <button 
-                              onclick={() => compareDialects(message.arabic || '', message.english, message.transliteration)}
-                              class="text-xs px-3 py-2 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
-                            >
-                              Compare
-                            </button>
-                          </div>
-                        {/if}
-                      </div>
-                    </div>
-                    
-                    <!-- Stories-style sentence card for tutor -->
-                      <div class="bg-tile-400 border-2 border-tile-600 rounded-xl p-4 sm:p-6">
-                        <!-- English translation at top -->
-                        {#if displayEnglish}
-                          <div class="mb-4 pb-3 border-b border-tile-600">
-                            <div class="flex flex-wrap gap-1.5 justify-center">
-                              {#each (message.english || '').split(' ') as word}
-                                <button
-                                  onclick={() => handleWordClick(word, 'english', message)}
-                                  aria-label={`Define ${word}`}
-                                  class="px-2 py-1 text-sm sm:text-base text-text-200 rounded-lg border-2 border-transparent hover:bg-tile-500 hover:border-tile-600 hover:shadow-md transition-all duration-200 cursor-pointer"
-                                >
-                                  {word}
-                                </button>
-                              {/each}
-                            </div>
-                          </div>
-                        {/if}
-
-                        <!-- Transliteration -->
-                        {#if displayTransliteration}
-                          <p class="text-sm sm:text-base text-text-200 italic text-center mb-3 leading-relaxed">
-                            {message.transliteration}
-                          </p>
-                        {/if}
-
-                        <!-- Arabic words - clickable for definitions -->
-                        {#if displayArabic}
-                          <div class="flex flex-wrap gap-2 sm:gap-3 justify-center" dir="rtl">
-                            {#if message.wordAlignments?.length}
-                              {#each message.wordAlignments as wordAlign}
-                                <button
-                                  onclick={() => handleWordClick(wordAlign.arabic, 'arabic', message)}
-                                  aria-label={`Define ${wordAlign.arabic}`}
-                                  class="flex flex-col items-center px-2 py-2 sm:px-3 sm:py-3 rounded-lg hover:bg-tile-500 hover:shadow-md transition-all duration-200 cursor-pointer border-2 border-transparent hover:border-tile-600"
-                                >
-                                  {#if displayEnglish}
-                                    <span class="text-xs sm:text-sm text-text-200 mb-1 opacity-90">{wordAlign.english}</span>
-                                  {/if}
-                                  <span class="text-lg sm:text-xl md:text-2xl font-semibold text-text-300">{wordAlign.arabic}</span>
-                                </button>
-                              {/each}
-                            {:else}
-                              {#each (message.arabic || '').split(' ') as arabicWord}
-                                <button
-                                  onclick={() => handleWordClick(arabicWord, 'arabic', message)}
-                                  aria-label={`Define ${arabicWord}`}
-                                  class="px-2 py-1 sm:px-3 sm:py-2 rounded-lg hover:bg-tile-500 hover:shadow-md transition-all duration-200 cursor-pointer border-2 border-transparent hover:border-tile-600 text-lg sm:text-xl md:text-2xl font-semibold text-text-300"
-                                >
-                                  {arabicWord}
-                                </button>
-                              {/each}
-                            {/if}
-                          </div>
-                        {/if}
-                      </div>
-                    </div>
-                {/if}
+                <MessageBubble
+                  {message}
+                  showEnglish={displayEnglish}
+                  showTransliteration={displayTransliteration}
+                  showHint={displayHint}
+                  {playingMessageId}
+                  onWordClick={handleWordClick}
+                  onToggleFeedback={(id) => toggleMessageVisibility(id, 'showFeedback')}
+                />
               {/each}
 
               <!-- Reply hint: appears below the latest tutor message -->

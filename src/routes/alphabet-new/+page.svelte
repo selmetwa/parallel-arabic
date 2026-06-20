@@ -11,16 +11,30 @@
 		type Articulation
 	} from '$lib/constants/egyptian-alphabet';
 	import cn from 'classnames';
+	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
-	import { goto } from '$app/navigation';
+	import { goto, replaceState } from '$app/navigation';
+	import { page as appState } from '$app/state';
 	import { resolve } from '$app/paths';
+	import InlineAudioButton from '$lib/components/InlineAudioButton.svelte';
 	import ListeningExercise from './components/ListeningExercise.svelte';
 	import WritingExercise from './components/WritingExercise.svelte';
 	import SpeakingExercise from './components/SpeakingExercise.svelte';
 	import { practiceLetters, practiceWords } from './components/practice-data';
 
-	let page = $state(0);
 	const totalPages = 5;
+
+	// --- URL-synced state so a refresh keeps your place ---
+	// NB: query params can't be read at render time on a prerendered page, so we
+	// read them client-side in onMount and only start writing the URL afterwards.
+	function clampInt(raw: string | null, min: number, max: number, fallback: number) {
+		const n = raw === null ? NaN : parseInt(raw, 10);
+		if (Number.isNaN(n)) return fallback;
+		return Math.min(max, Math.max(min, n));
+	}
+
+	let hydrated = $state(false);
+	let page = $state(0);
 
 	const formSlots = [
 		{ key: 'isolated', label: 'Isolated', context: 'stands alone' },
@@ -65,14 +79,14 @@
 
 	function nextCard() {
 		if (cardIndex < mergedLetters.length - 1) {
-			cardDirection = 1;
+			cardDirection = -1;
 			cardIndex += 1;
 		}
 	}
 
 	function prevCard() {
 		if (cardIndex > 0) {
-			cardDirection = -1;
+			cardDirection = 1;
 			cardIndex -= 1;
 		}
 	}
@@ -85,20 +99,55 @@
 		if (pointerStartX === null) return;
 		const dx = event.clientX - pointerStartX;
 		pointerStartX = null;
-		if (dx < -50) nextCard();
-		else if (dx > 50) prevCard();
+		// RTL: swipe right (→) advances to next letter, swipe left (←) goes back
+		if (dx > 50) nextCard();
+		else if (dx < -50) prevCard();
 	}
 
 	function onLesson1Keydown(event: KeyboardEvent) {
 		if (page !== 0 || lesson1View !== 'cards') return;
-		if (event.key === 'ArrowRight') nextCard();
-		else if (event.key === 'ArrowLeft') prevCard();
+		// RTL: left arrow advances (next), right arrow goes back (prev)
+		if (event.key === 'ArrowLeft') nextCard();
+		else if (event.key === 'ArrowRight') prevCard();
 	}
 
 	let selectedArticulation = $state<Articulation>('throat');
 	const selectedGroup = $derived(
 		articulationGroups.find((g) => g.id === selectedArticulation) ?? articulationGroups[0]
 	);
+
+	// Restore place from the URL once, client-side (avoids prerender + hydration issues).
+	onMount(() => {
+		const p = appState.url.searchParams;
+		page = clampInt(p.get('lesson'), 1, totalPages, 1) - 1;
+		lesson1View = p.get('view') === 'all' ? 'all' : 'cards';
+		cardIndex = clampInt(p.get('card'), 1, mergedLetters.length, 1) - 1;
+		const group = p.get('group');
+		if (articulationGroups.some((g) => g.id === group)) {
+			selectedArticulation = group as Articulation;
+		}
+		hydrated = true;
+	});
+
+	// Persist the current place in the URL via shallow routing (no reload, no scroll jump).
+	$effect(() => {
+		if (!hydrated) return;
+		const sp = new URLSearchParams();
+		if (page > 0) sp.set('lesson', String(page + 1));
+		if (page === 0) {
+			if (lesson1View === 'all') sp.set('view', 'all');
+			else if (cardIndex > 0) sp.set('card', String(cardIndex + 1));
+		}
+		if (page === 1 && selectedArticulation !== 'throat') sp.set('group', selectedArticulation);
+
+		const next = sp.toString();
+		const current = appState.url.search.replace(/^\?/, '');
+		if (next !== current) {
+			const url = new URL(appState.url);
+			url.search = next;
+			replaceState(url, {});
+		}
+	});
 
 	const sixKickingGlyphs = $derived(
 		sixKickingLetters.map((key) => lettersByKey.get(key)!).filter(Boolean)
@@ -118,6 +167,25 @@
 </script>
 
 <svelte:window onkeydown={onLesson1Keydown} />
+
+{#snippet dialectAudio(msaText: string, egyptianText?: string | null)}
+	<span class="inline-flex flex-wrap items-center gap-1.5 align-middle">
+		<span
+			class="inline-flex items-center gap-1 rounded-full border border-tile-500 bg-tile-200 py-0.5 pl-1 pr-2"
+		>
+			<InlineAudioButton text={msaText} dialect="fusha" />
+			<span class="text-[0.6rem] font-semibold uppercase tracking-wide text-text-200">MSA</span>
+		</span>
+		{#if egyptianText}
+			<span
+				class="inline-flex items-center gap-1 rounded-full border border-green-600/40 bg-green-500/10 py-0.5 pl-1 pr-2"
+			>
+				<InlineAudioButton text={egyptianText} dialect="egyptian-arabic" />
+				<span class="text-[0.6rem] font-semibold uppercase tracking-wide text-green-700">EG</span>
+			</span>
+		{/if}
+	</span>
+{/snippet}
 
 <section class="min-h-screen bg-tile-200">
 	<!-- Header with Navigation -->
@@ -149,7 +217,7 @@
 
 	<!-- Content -->
 	<div class="py-8 sm:py-2">
-		<div class="mx-auto max-w-7xl px-3 sm:px-8">
+		<div class="mx-auto px-3 sm:px-8">
 			{#if page === 0}
 				<!-- Lesson 1: The 28 letters, Egyptian sounds -->
 				<div class="mb-2">
@@ -186,7 +254,7 @@
 					</div>
 
 					{#if lesson1View === 'all'}
-						<div class="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
+						<div class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
 							{#each mergedLetters as letter (letter.key)}
 								<div class="rounded-xl border border-tile-500 bg-tile-300 p-4 shadow-sm">
 									<div class="flex items-stretch gap-4">
@@ -195,7 +263,7 @@
 											aria-label={`Play pronunciation for ${letter.letterName}`}
 											class="group relative flex aspect-square w-20 flex-none cursor-pointer items-center justify-center overflow-hidden rounded-xl border border-tile-500 bg-tile-200 text-4xl text-text-300 shadow-sm transition-all duration-200 ease-out hover:-translate-y-1 hover:border-text-200 hover:bg-tile-400 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300 active:scale-95"
 										>
-											<span class="relative z-10">{letter.isolated}</span>
+											<span class="relative z-10 text-4xl">{letter.isolated}</span>
 											<div
 												class="absolute right-1 top-1 h-2 w-2 animate-pulse rounded-full bg-green-400 opacity-0 transition-opacity group-hover:opacity-100"
 											></div>
@@ -235,6 +303,14 @@
 													>— {letter.exampleFranco} ({letter.meaning})</span
 												>
 											</p>
+											<div class="mt-1.5">
+												{@render dialectAudio(
+													letter.exampleArabic,
+													hasEgyptianDistinction(letter)
+														? (letter.exampleArabicEgyptian ?? letter.exampleArabic)
+														: null
+												)}
+											</div>
 											<p class="mt-1 text-xs italic text-text-200">{letter.notes}</p>
 										</div>
 									</div>
@@ -298,18 +374,26 @@
 										{/if}
 									</div>
 
-									<div class="space-y-1">
+									<div class="space-y-2">
 										<p class="text-text-300">
 											<span class="text-2xl" dir="rtl">{currentLetter.exampleArabic}</span>
 											<span class="text-text-200">
 												— {currentLetter.exampleFranco} ({currentLetter.meaning})
 											</span>
 										</p>
+										<div class="flex justify-center">
+											{@render dialectAudio(
+												currentLetter.exampleArabic,
+												hasEgyptianDistinction(currentLetter)
+													? (currentLetter.exampleArabicEgyptian ?? currentLetter.exampleArabic)
+													: null
+											)}
+										</div>
 										<p class="text-sm italic text-text-200">{currentLetter.notes}</p>
 									</div>
 
 									<p class="text-xs text-text-200">
-										Tap the letter to hear it · swipe or use ← → to move
+										Tap the letter to hear it · swipe right→left or use → ← to move
 									</p>
 								</div>
 							{/key}
@@ -319,9 +403,9 @@
 						<div class="mt-4 flex items-center justify-center gap-6">
 							<button
 								type="button"
-								onclick={prevCard}
-								disabled={cardIndex === 0}
-								aria-label="Previous letter"
+								onclick={nextCard}
+								disabled={cardIndex === mergedLetters.length - 1}
+								aria-label="Next letter"
 								class="flex h-12 w-12 items-center justify-center rounded-full border border-tile-500 bg-tile-400 text-2xl font-bold text-text-300 shadow-sm transition-all hover:bg-tile-500 active:scale-95 disabled:cursor-not-allowed disabled:opacity-40"
 							>
 								‹
@@ -331,9 +415,9 @@
 							</span>
 							<button
 								type="button"
-								onclick={nextCard}
-								disabled={cardIndex === mergedLetters.length - 1}
-								aria-label="Next letter"
+								onclick={prevCard}
+								disabled={cardIndex === 0}
+								aria-label="Previous letter"
 								class="flex h-12 w-12 items-center justify-center rounded-full border border-tile-500 bg-tile-400 text-2xl font-bold text-text-300 shadow-sm transition-all hover:bg-tile-500 active:scale-95 disabled:cursor-not-allowed disabled:opacity-40"
 							>
 								›
@@ -411,7 +495,7 @@
 												: 'border-tile-500 bg-tile-200 text-text-300 opacity-50 hover:bg-tile-400 hover:opacity-100'
 										)}
 									>
-										<span class="relative z-10">{letter.isolated}</span>
+										<span class="relative z-10 text-3xl">{letter.isolated}</span>
 									</button>
 								</div>
 							{/each}
@@ -600,9 +684,10 @@
 								<p class="mb-3 text-sm leading-relaxed text-text-200">{note.summary}</p>
 								<ul class="space-y-1">
 									{#each note.rows as row (row.arabic)}
-										<li class="flex items-center gap-3 text-sm">
+										<li class="flex items-center gap-2 text-sm">
 											<span class="text-xl text-text-300" dir="rtl">{row.arabic}</span>
 											<span class="text-text-200">→ {row.egyptian}</span>
+											<span class="ml-auto">{@render dialectAudio(row.arabic, row.egyptianArabic ?? row.arabic)}</span>
 										</li>
 									{/each}
 								</ul>

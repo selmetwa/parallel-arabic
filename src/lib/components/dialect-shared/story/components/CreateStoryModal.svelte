@@ -599,9 +599,10 @@
 				</div>
 			</div>
 		{:else}
-			<div class="mb-6 border-b border-tile-500 pb-4">
-				<h1 class="text-2xl font-bold text-text-300 mb-1">Create {dialectName[dialect]} Content</h1>
-				<p class="text-text-200 text-sm">
+			<div class="mb-6 pb-4 border-b border-tile-400">
+				<p class="text-[0.65rem] font-bold uppercase tracking-[0.15em] text-text-200 border-l-2 border-brand pl-2 mb-2">Create Content</p>
+				<h1 class="text-xl font-bold text-text-300">{dialectName[dialect]}</h1>
+				<p class="text-text-200 text-sm mt-0.5">
 					Generate original stories and conversations or upload audio to transcribe.
 				</p>
 			</div>
@@ -632,27 +633,22 @@
 			
 			<form onsubmit={handleSubmit} class="flex flex-col gap-6">
 
-				<!-- Review Words Only Toggle - Prominent Feature -->
-				<div class="flex flex-col gap-4 bg-gradient-to-br from-tile-400/40 to-tile-500/30 p-5 rounded-xl border-2 border-tile-600/60 shadow-lg">
-					<div class="flex items-start justify-between gap-4">
-						<div class="flex flex-col gap-2 flex-1">
-							<div class="flex items-center gap-2">
-								<span class="text-2xl">🎯</span>
-								<p class="text-base font-bold text-text-300">Use Review Words Only</p>
-							</div>
-							<p class="text-sm text-text-200 leading-relaxed">
-								<strong class="text-text-300">Context-Based Learning:</strong> Generate content using words you're already learning. This reinforces your memory by seeing words in new contexts, improving retention through spaced repetition. Experience your vocabulary in authentic, meaningful stories and conversations that help you learn faster.
-							</p>
+				<!-- Review Words Toggle -->
+				<div class="bg-tile-300 border border-tile-400 rounded-xl p-4">
+					<div class="flex items-center justify-between gap-4">
+						<div class="flex-1 min-w-0">
+							<p class="text-sm font-bold text-text-300">Use Review Words Only</p>
+							<p class="text-xs text-text-200 leading-relaxed mt-0.5">Generate content using words from your saved vocabulary deck.</p>
 						</div>
-						<div class="relative flex items-center flex-shrink-0">
+						<label class="relative inline-flex items-center cursor-pointer shrink-0">
 							<input
 								type="checkbox"
 								id="useReviewWordsOnly"
 								bind:checked={useReviewWordsOnly}
-								class="peer w-6 h-6 cursor-pointer appearance-none rounded border-2 border-tile-600 bg-tile-200 checked:bg-tile-600 checked:border-tile-600 focus:ring-offset-0 focus:ring-2 focus:ring-tile-500 transition-all"
+								class="sr-only peer"
 							/>
-							<svg class="absolute w-4 h-4 text-white pointer-events-none opacity-0 peer-checked:opacity-100 left-1 top-1 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-						</div>
+							<div class="w-11 h-6 bg-tile-500 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-brand"></div>
+						</label>
 					</div>
 				</div>
 

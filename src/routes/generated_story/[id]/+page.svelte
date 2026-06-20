@@ -132,14 +132,15 @@
 	let showEnglish = $state(false);
 	let showTransliteration = $state(false);
 	let showTashkeel = $state(false);
+	let showHint = $state(false);
 
 	// Per-sentence overrides, per field (null = follow the global toggle for that field).
 	// Toggling one field must NOT freeze the others, otherwise the top toggles stop
 	// affecting a sentence after any per-sentence button is clicked.
-	type SentenceOverride = { english: boolean | null; transliteration: boolean | null; tashkeel: boolean | null };
+	type SentenceOverride = { english: boolean | null; transliteration: boolean | null; tashkeel: boolean | null; hint: boolean | null };
 	let sentenceOverrides = $state<Record<number, SentenceOverride>>({});
 
-	const emptyOverride: SentenceOverride = { english: null, transliteration: null, tashkeel: null };
+	const emptyOverride: SentenceOverride = { english: null, transliteration: null, tashkeel: null, hint: null };
 
 	function getSentenceEnglish(i: number) {
 		return sentenceOverrides[i]?.english ?? showEnglish;
@@ -149,6 +150,9 @@
 	}
 	function getSentenceTashkeel(i: number) {
 		return sentenceOverrides[i]?.tashkeel ?? showTashkeel;
+	}
+	function getSentenceHint(i: number) {
+		return sentenceOverrides[i]?.hint ?? showHint;
 	}
 	function toggleSentenceEnglish(i: number) {
 		const current = sentenceOverrides[i] ?? emptyOverride;
@@ -169,6 +173,13 @@
 		sentenceOverrides = {
 			...sentenceOverrides,
 			[i]: { ...current, tashkeel: !(current.tashkeel ?? showTashkeel) }
+		};
+	}
+	function toggleSentenceHint(i: number) {
+		const current = sentenceOverrides[i] ?? emptyOverride;
+		sentenceOverrides = {
+			...sentenceOverrides,
+			[i]: { ...current, hint: !(current.hint ?? showHint) }
 		};
 	}
 
@@ -602,6 +613,7 @@
       {@const sentenceEnglish = getSentenceEnglish(sentenceIndex)}
       {@const sentenceTransliteration = getSentenceTransliteration(sentenceIndex)}
       {@const sentenceTashkeel = getSentenceTashkeel(sentenceIndex)}
+      {@const sentenceHint = getSentenceHint(sentenceIndex)}
 
       <section
         data-sentence-index={sentenceIndex}
@@ -631,6 +643,7 @@
           showEnglish={sentenceEnglish}
           showTransliteration={sentenceTransliteration}
           showTashkeel={sentenceTashkeel}
+          showHint={sentenceHint}
           {savedWords}
         />
 
@@ -638,6 +651,11 @@
         <div class="mt-4 pt-3 border-t border-tile-600 flex items-center justify-between">
           <span class="text-xs text-text-200">Sentence {sentenceIndex + 1} of {sentences.length}</span>
           <div class="flex items-center gap-3">
+            <button
+              onclick={() => toggleSentenceHint(sentenceIndex)}
+              title={sentenceHint ? 'Hide translation' : 'Show translation'}
+              class={cn("text-xs transition-opacity", sentenceHint ? "opacity-40 hover:opacity-70" : "opacity-20 hover:opacity-50 line-through")}
+            >Hint</button>
             <button
               onclick={() => toggleSentenceEnglish(sentenceIndex)}
               title={sentenceEnglish ? 'Hide English' : 'Show English'}

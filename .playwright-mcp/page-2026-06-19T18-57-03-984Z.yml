@@ -1,0 +1,290 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - link "Back home" [ref=e6] [cursor=pointer]:
+            - /url: /en
+            - img [ref=e8]
+            - img [ref=e13]
+          - button "Switch translation languages" [ref=e22] [cursor=pointer]:
+            - img [ref=e23]
+            - generic [ref=e27]: Japanese
+        - link "New translation" [ref=e29] [cursor=pointer]:
+          - /url: /en
+          - img [ref=e30]
+          - text: New translation
+        - generic [ref=e35]:
+          - img [ref=e37]
+          - generic [ref=e41]:
+            - paragraph [ref=e42]: Translation data is stored on your device, not on our servers.
+            - paragraph [ref=e43]: It’s never used to train AI models.
+        - generic [ref=e45]:
+          - generic [ref=e46]:
+            - text: Log in to access more free translations.
+            - img [ref=e47]
+          - button "Start for free" [ref=e49] [cursor=pointer]
+          - link "Mac Windows Download" [ref=e51] [cursor=pointer]:
+            - /url: /en/download
+            - generic [ref=e52]:
+              - img "Mac" [ref=e53]
+              - img "Windows" [ref=e54]
+              - generic [ref=e59]: Download
+    - generic [ref=e61]:
+      - generic [ref=e62]:
+        - banner [ref=e63]:
+          - 'link "Nani Translate: Fast, Natural-Sounding AI Translation" [ref=e64] [cursor=pointer]':
+            - /url: /en
+            - 'img "Nani Translate: Fast, Natural-Sounding AI Translation" [ref=e65]'
+          - heading "What you can do with Nani Translate" [level=1] [ref=e66]
+          - paragraph [ref=e67]: Nani Translate is a fast and smooth AI translation tool built in Japan.
+          - link "Read the story" [ref=e68] [cursor=pointer]:
+            - /url: /en/stories
+            - generic [ref=e69]:
+              - img [ref=e70]
+              - text: Read the story
+        - generic [ref=e73]:
+          - generic [ref=e74]:
+            - img "Nani screen showing a translation with nuance notes and an example sentence." [ref=e76]
+            - generic [ref=e77]:
+              - heading "Natural translations with context" [level=2] [ref=e78]
+              - paragraph [ref=e79]: Nani explains nuance and alternative wording as it translates, so it is easier to choose the right phrasing.
+          - generic [ref=e80]:
+            - img "Nani screen showing several translation options with different tones." [ref=e82]
+            - generic [ref=e83]:
+              - heading "Choose from a few tones" [level=2] [ref=e84]
+              - paragraph [ref=e85]: When it makes sense, Nani shows a few versions, like casual or more formal, so you can pick the one that fits.
+          - generic [ref=e86]:
+            - link "Available in the Mac and Windows apps" [ref=e87] [cursor=pointer]:
+              - /url: /en/download
+              - img "Windows" [ref=e88]
+            - img "Selected text being sent to Nani with a keyboard shortcut for translation." [ref=e94]
+            - generic [ref=e95]:
+              - heading "Translate from any app with a shortcut" [level=2] [ref=e96]
+              - paragraph [ref=e97]: Select text, press the shortcut, and translate without leaving the app you are in.
+              - link "Learn more" [ref=e99] [cursor=pointer]:
+                - /url: /en/download
+                - text: Learn more
+                - img [ref=e100]
+          - generic [ref=e103]:
+            - img "Nani screen showing AI proofreading suggestions and writing feedback." [ref=e105]
+            - generic [ref=e106]:
+              - heading "Proofread and polish with AI" [level=2] [ref=e107]
+              - paragraph [ref=e108]: Check typos, grammar, and phrasing, then get suggestions for a more natural version.
+              - link "Learn more" [ref=e110] [cursor=pointer]:
+                - /url: /en/proofread
+                - text: Learn more
+                - img [ref=e111]
+          - generic [ref=e114]:
+            - img "Follow-up buttons for adjusting a translation tone, length, and wording." [ref=e116]
+            - generic [ref=e117]:
+              - heading "Fine-tune the tone quickly" [level=2] [ref=e118]
+              - paragraph [ref=e119]: Tap a follow-up button to make the translation more casual, more polite, shorter, or closer to what you meant.
+          - generic [ref=e120]:
+            - img "Nani screen highlighting the button for adding more content after translating." [ref=e122]
+            - generic [ref=e123]:
+              - heading "Add more after translating" [level=2] [ref=e124]
+              - paragraph [ref=e125]: After translating, type what you want to add in your own language. Nani translates it naturally and blends it into the existing text.
+          - generic [ref=e126]:
+            - img "Nani screen checking a translation by back-translating it into Japanese." [ref=e128]
+            - generic [ref=e129]:
+              - heading "Back-translate to check" [level=2] [ref=e130]
+              - paragraph [ref=e131]: Back-translate the result on the spot to check whether the nuance matches your intent.
+          - generic [ref=e132]:
+            - 'button "Play video: Natural-sounding AI speech" [ref=e135] [cursor=pointer]':
+              - img "Nani screen with a translated phrase and a speaker button for AI speech playback." [ref=e136]
+              - img [ref=e138]
+            - generic [ref=e140]:
+              - heading "Natural-sounding AI speech" [level=2] [ref=e141]
+              - paragraph [ref=e142]: Hear the translated text in a natural AI voice. With Pro, you can also check phonetic spelling.
+              - link "Learn more" [ref=e144] [cursor=pointer]:
+                - /url: /en/blog/ai-speech
+                - text: Learn more
+                - img [ref=e145]
+          - generic [ref=e148]:
+            - img "Nani input screen for choosing style and situation tags before translating." [ref=e150]
+            - generic [ref=e151]:
+              - heading "Pick a style for the situation" [level=2] [ref=e152]
+              - paragraph [ref=e153]: Choose a style that fits the moment, from a chat with friends to a business email.
+          - generic [ref=e154]:
+            - img "Settings form for creating a custom style tag in Nani." [ref=e156]
+            - generic [ref=e157]:
+              - heading "Save your own style tags" [level=2] [ref=e158]
+              - paragraph [ref=e159]: With Pro, you can save custom style tags and call them up quickly. You can also set tags by language or apply a tag by default.
+          - generic [ref=e160]:
+            - 'button "Play video: Draft replies with AI" [ref=e163] [cursor=pointer]':
+              - img "Nani screen for drafting an AI reply to a received message." [ref=e164]
+              - img [ref=e166]
+            - generic [ref=e168]:
+              - heading "Draft replies with AI" [level=2] [ref=e169]
+              - paragraph [ref=e170]: Turn the message you received into a reply draft for chat, email, or DM.
+          - generic [ref=e171]:
+            - img "Nani screen showing a simplified summary of a longer translated text." [ref=e173]
+            - generic [ref=e174]:
+              - heading "Summarize long text" [level=2] [ref=e175]
+              - paragraph [ref=e176]: Turn translated text into an easy-to-scan summary.
+          - generic [ref=e177]:
+            - img "Conversation translation screen with a translated message and reply composer." [ref=e179]
+            - generic [ref=e180]:
+              - heading "Translate written conversations" [level=2] [ref=e181]
+              - paragraph [ref=e182]: Translate DMs, emails, and other written exchanges, even if you do not really know the other person's language.
+          - generic [ref=e183]:
+            - img "Nani screen translating a photo of a Japanese road sign into English." [ref=e185]
+            - generic [ref=e186]:
+              - heading "Translate images quickly" [level=2] [ref=e187]
+              - paragraph [ref=e188]: Paste an image or drag it in to translate it. On Mac, dropping it onto the app icon works too.
+          - generic [ref=e189]:
+            - link "Available in the Mac and Windows apps" [ref=e190] [cursor=pointer]:
+              - /url: /en/download
+              - img "Windows" [ref=e191]
+            - img "Illustration of selecting part of the screen for screenshot translation." [ref=e197]
+            - generic [ref=e198]:
+              - heading "Translate screenshots" [level=2] [ref=e199]
+              - paragraph [ref=e200]: Capture the part of the screen you want to translate. Use a shortcut to translate directly from the app you are in.
+              - link "Learn more" [ref=e202] [cursor=pointer]:
+                - /url: /en/download
+                - text: Learn more
+                - img [ref=e203]
+          - generic [ref=e206]:
+            - link "Available in the Mac and Windows apps" [ref=e207] [cursor=pointer]:
+              - /url: /en/download
+              - img "Windows" [ref=e208]
+            - 'button "Play video: A quick check before you send" [ref=e215] [cursor=pointer]':
+              - img "Selected text sent to Nani proofreading with a keyboard shortcut." [ref=e216]
+              - img [ref=e218]
+            - generic [ref=e220]:
+              - heading "A quick check before you send" [level=2] [ref=e221]
+              - paragraph [ref=e222]: Select text and use the shortcut to check typos and wording before sending an email or chat message. Good for those “is this okay to send?” moments.
+              - link "Learn more" [ref=e224] [cursor=pointer]:
+                - /url: /en/blog/proofread
+                - text: Learn more
+                - img [ref=e225]
+          - generic [ref=e228]:
+            - img "Nani vocabulary card explaining a key phrase from the translated text." [ref=e230]
+            - generic [ref=e231]:
+              - heading "Pick up key phrases as you translate" [level=2] [ref=e232]
+              - paragraph [ref=e233]: For shorter text, Nani pulls out key phrases and explains them. An easy way to learn while translating.
+          - generic [ref=e234]:
+            - img "Your translation history is stored securely only on your device." [ref=e236]
+            - generic [ref=e237]:
+              - heading "History that stays local" [level=2] [ref=e238]
+              - paragraph [ref=e239]: Your translation history is saved locally, not on Nani's servers. You can look back later without sending that history to us.
+              - link "Learn more" [ref=e241] [cursor=pointer]:
+                - /url: /en/security
+                - text: Learn more
+                - img [ref=e242]
+          - generic [ref=e245]:
+            - link "Available in the Mac and Windows apps" [ref=e246] [cursor=pointer]:
+              - /url: /en/download
+              - img "Windows" [ref=e247]
+            - img "Nani screen loading a web page from a URL and translating its text." [ref=e253]
+            - generic [ref=e254]:
+              - heading "Translate from a URL" [level=2] [ref=e255]
+              - paragraph [ref=e256]: In the macOS and Windows apps, paste a URL and Nani will load the page text to translate.
+          - generic [ref=e257]:
+            - img "Nani team management screen for viewing members and inviting teammates." [ref=e259]
+            - generic [ref=e260]:
+              - heading "Built for teams too" [level=2] [ref=e261]
+              - paragraph [ref=e262]: With the Team Plan, organizations can manage members and usage in one place.
+              - link "Learn more" [ref=e264] [cursor=pointer]:
+                - /url: /en/team
+                - text: Learn more
+                - img [ref=e265]
+        - generic [ref=e270]:
+          - paragraph [ref=e271]: See upcoming features and recent updates
+          - link "Roadmap" [ref=e272] [cursor=pointer]:
+            - /url: /en/changelog
+            - generic [ref=e273]:
+              - text: Roadmap
+              - img [ref=e274]
+        - generic [ref=e277]:
+          - heading "Start translating for free" [level=2] [ref=e278]
+          - generic [ref=e279]:
+            - link "Web App" [ref=e280] [cursor=pointer]:
+              - /url: /en
+              - generic [ref=e281]:
+                - img [ref=e283]
+                - text: Web App
+            - link "Mac / Windows Windows" [ref=e288] [cursor=pointer]:
+              - /url: /en/download
+              - generic [ref=e289]:
+                - text: Mac
+                - generic [ref=e290]: /
+                - img "Windows" [ref=e291]
+                - text: Windows
+      - contentinfo [ref=e296]:
+        - generic [ref=e297]:
+          - generic [ref=e298]:
+            - 'link "Nani: AI Translator for Fast & Natural Translation" [ref=e299] [cursor=pointer]':
+              - /url: /en
+              - 'img "Nani: AI Translator for Fast & Natural Translation" [ref=e300]'
+            - paragraph [ref=e307]: Fast & Free AI Translator
+            - generic [ref=e308]: © 2026, Kioku LLC
+          - generic [ref=e309]:
+            - generic [ref=e310]:
+              - generic [ref=e311]: Nani!?
+              - generic [ref=e312]:
+                - link "Home" [ref=e313] [cursor=pointer]:
+                  - /url: /en?home=true
+                - link "Features" [ref=e314] [cursor=pointer]:
+                  - /url: /en/about
+                - link "Pricing" [ref=e315] [cursor=pointer]:
+                  - /url: /en/pricing
+                - link "For teams" [ref=e316] [cursor=pointer]:
+                  - /url: /en/team
+                - link "Blog" [ref=e317] [cursor=pointer]:
+                  - /url: /en/blog
+                - link "Our Story" [ref=e318] [cursor=pointer]:
+                  - /url: /en/stories
+                - link "Download macOS App Windows" [ref=e319] [cursor=pointer]:
+                  - /url: /en/download
+                  - text: Download
+                  - img "macOS App" [ref=e320]
+                  - img "Windows" [ref=e321]
+            - generic [ref=e326]:
+              - generic [ref=e327]: Support
+              - generic [ref=e328]:
+                - link "Changelog" [ref=e329] [cursor=pointer]:
+                  - /url: /en/changelog
+                - link "FAQ" [ref=e330] [cursor=pointer]:
+                  - /url: /en/help
+                - link "Contact" [ref=e331] [cursor=pointer]:
+                  - /url: /en/contact
+                - link "Security" [ref=e332] [cursor=pointer]:
+                  - /url: /en/security
+                - link "Terms & Privacy" [ref=e333] [cursor=pointer]:
+                  - /url: /en/terms
+                - link "Status" [ref=e334] [cursor=pointer]:
+                  - /url: https://status.nani.now/en
+                - link "Company" [ref=e335] [cursor=pointer]:
+                  - /url: https://kiok.jp
+            - generic [ref=e336]:
+              - generic [ref=e337]: Links
+              - generic [ref=e338]:
+                - link "Proofreading Mode" [ref=e339] [cursor=pointer]:
+                  - /url: /en/proofread
+                  - generic [ref=e340]: Proofreading Mode
+                - generic [ref=e341]:
+                  - link "Translate Japanese" [ref=e342] [cursor=pointer]:
+                    - /url: /en?to=ja
+                    - generic [ref=e343]: Translate Japanese
+                  - link "Translate Spanish" [ref=e344] [cursor=pointer]:
+                    - /url: /en?to=es
+                    - generic [ref=e345]: Translate Spanish
+                  - link "Translate Korean" [ref=e346] [cursor=pointer]:
+                    - /url: /en?to=ko
+                    - generic [ref=e347]: Translate Korean
+                  - link "Translate Simplified Chinese" [ref=e348] [cursor=pointer]:
+                    - /url: /en?to=zh-Hans
+                    - generic [ref=e349]: Translate Simplified Chinese
+                  - link "Translate Traditional Chinese" [ref=e350] [cursor=pointer]:
+                    - /url: /en?to=zh-Hant
+                    - generic [ref=e351]: Translate Traditional Chinese
+                  - group [ref=e352]:
+                    - generic "Other languages" [ref=e353] [cursor=pointer]:
+                      - img [ref=e354]
+                      - text: Other languages
+        - button "English" [ref=e358] [cursor=pointer]:
+          - text: English
+          - img [ref=e359]
+  - alert [ref=e363]

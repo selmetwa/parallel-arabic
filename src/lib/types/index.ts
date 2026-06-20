@@ -51,6 +51,27 @@ export type sentenceObjectGroup = {
 
 export type Dialect = 'fusha' | 'levantine' | 'darija' | 'egyptian-arabic' | 'iraqi' | 'khaleeji';
 
+export interface WordAlignment {
+  arabic: string;
+  english: string;
+  transliteration: string;
+}
+
+export interface ConversationMessage {
+  id: string;
+  type: 'user' | 'tutor';
+  arabic?: string;
+  english?: string;
+  transliteration?: string;
+  wordAlignments?: WordAlignment[];
+  feedback?: string;
+  suggestedSentence?: { arabic: string; transliteration: string } | null;
+  originalLanguage?: 'ar' | 'en';
+  timestamp: Date;
+  showFeedback?: boolean;
+  showBreakdown?: boolean;
+}
+
 export type DialectName = {
   fusha: 'Modern Standard Arabic',
   levantine: 'Levantine Arabic',
