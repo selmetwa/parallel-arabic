@@ -67,14 +67,20 @@ Student's proficiency level: ${level} (CEFR). Calibrate vocabulary and sentence 
 Recent conversation so far:
 ${conversationContext}
 
-Generate the NEXT line the student could naturally say to continue the conversation, based on what ${speakerLabel} just said.
+Generate the NEXT line the student could naturally say, based on what ${speakerLabel} just said. The MOST IMPORTANT goal: the line must KEEP THE CONVERSATION GOING and give ${speakerLabel} a clear reason to reply.
+
+To keep it going, the line should do at least one of these:
+- ask ${speakerLabel} a relevant question back,
+- share a new detail about the student that invites a follow-up, or
+- open a natural next sub-topic that fits the scenario.
 
 Rules:
-- ONE short sentence in ${dialectName}, calibrated to level ${level}.
 - Sound natural, not robotic. Use everyday phrasing for ${dialectName}.
-- Do NOT repeat lines the student has already said.
+- Do NOT produce dead-end / closing lines like "Thanks", "I'm good", "Okay", or goodbyes — UNLESS the conversation is genuinely meant to wrap up.
+- Stay on-topic${scenarioTitle ? ` and move toward the goal of the scenario ("${scenarioTitle}")` : ''}.
+- Do NOT repeat lines the student has already said, and don't just echo ${speakerLabel}'s question back unchanged.
 - If a name or place would be needed, leave a "___" blank for the student to fill in.
-- For A1/A2 keep it very short (3-7 words). For B1+ a fuller sentence is okay.
+- Calibrate to level ${level}: for A1/A2 keep it short (3-8 words) but still open-ended — usually a short question works best. For B1+ a fuller sentence with a follow-up is great.
 
 Respond as JSON with this exact shape:
 {
@@ -91,6 +97,9 @@ Respond as JSON with this exact shape:
       config: {
         temperature: 0.7,
         maxOutputTokens: 1024,
+        // Disable thinking — gemini-2.5-flash's thinking tokens count against
+        // maxOutputTokens and can leave no room for the actual JSON output.
+        thinkingConfig: { thinkingBudget: 0 },
         responseMimeType: 'application/json',
         responseJsonSchema: schemaJson
       }

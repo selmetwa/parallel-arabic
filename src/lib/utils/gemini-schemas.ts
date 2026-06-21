@@ -162,6 +162,34 @@ export function createWordsSchema() {
 export type WordsSchema = z.infer<ReturnType<typeof createWordsSchema>['zodSchema']>;
 
 /**
+ * Schema for scenario intro vocab (Learn phase before a guided conversation).
+ * Returns key beginner words/phrases plus a few short practice sentences that
+ * build on those words. Each item carries a short, friendly teaching line the
+ * tutor would say out loud (e.g. "The word for 'my name' is 'ismi'").
+ * Kept deliberately flat/simple to avoid Gemini 400s on complex schemas.
+ */
+export function createScenarioVocabSchema() {
+	const learnItem = z.object({
+		arabic: z.string(),
+		transliteration: z.string(),
+		english: z.string(),
+		teachingLine: z.string()
+	});
+
+	const schema = z.object({
+		vocab: z.array(learnItem),
+		sentences: z.array(learnItem)
+	});
+
+	return {
+		zodSchema: schema,
+		jsonSchema: zodToJsonSchema(schema)
+	};
+}
+
+export type ScenarioVocabSchema = z.infer<ReturnType<typeof createScenarioVocabSchema>['zodSchema']>;
+
+/**
  * Schema for tutor chat / translation responses
  */
 export function createTranslationResponseSchema() {

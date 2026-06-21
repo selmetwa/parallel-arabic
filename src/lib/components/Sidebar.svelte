@@ -71,6 +71,7 @@
         title: 'General',
         items: [
           { label: 'My words', href: '/review/all-words', icon: '🗂️' },
+          { label: 'History', href: '/history', icon: '📜' },
           session
             ? { label: 'Profile', href: '/profile', icon: '👤' }
             : { label: 'Login', href: '/login', icon: '🔐' }

@@ -1,6 +1,8 @@
 import type { PageServerLoad } from "./$types";
 import { supabase } from '$lib/supabaseClient';
 import { downloadStoryFromStorage } from '$lib/helpers/storage-helpers';
+import { getConversationMessages } from '$lib/utils/tutor-memory';
+import type { ConversationMessage } from '$lib/types/index';
 
 interface PracticeSentence {
   id: string;
@@ -26,14 +28,49 @@ interface RecentConversation {
   topics_discussed: string[] | null;
 }
 
-export const load: PageServerLoad = async ({ parent }) => {
+export const load: PageServerLoad = async ({ parent, url }) => {
   // Get session and subscription info from parent layout
   const { session, isSubscribed, user } = await parent();
-  
+
+  // Resume a past conversation when deep-linked via ?conversationId=...
+  let resumeConversation: ConversationMessage[] | null = null;
+  let resumeConversationId: string | null = null;
+  let resumeDialect: string | null = null;
+  const conversationIdParam = url.searchParams.get('conversationId');
+
+  if (user?.id && conversationIdParam) {
+    try {
+      // Verify the conversation belongs to this user before loading it.
+      const { data: convo } = await supabase
+        .from('tutor_conversation')
+        .select('id, dialect')
+        .eq('id', conversationIdParam)
+        .eq('user_id', user.id)
+        .maybeSingle();
+
+      if (convo) {
+        const messages = await getConversationMessages(convo.id);
+        resumeConversation = messages.map((m) => ({
+          id: m.id,
+          type: m.role,
+          arabic: m.arabic ?? undefined,
+          english: m.english ?? undefined,
+          transliteration: m.transliteration ?? undefined,
+          feedback: m.feedback ?? undefined,
+          timestamp: new Date(m.created_at)
+        }));
+        resumeConversationId = convo.id;
+        resumeDialect = convo.dialect;
+      }
+    } catch (e) {
+      console.error('Error loading conversation to resume:', e);
+    }
+  }
+
   // Fetch learning insights and recent conversations if user is logged in
   let learningInsights: LearningInsight[] = [];
   let recentConversations: RecentConversation[] = [];
-  
+
   if (user?.id) {
     try {
       // Fetch in parallel for speed
@@ -132,7 +169,10 @@ export const load: PageServerLoad = async ({ parent }) => {
     user,
     practiceSentences,
     learningInsights,
-    recentConversations
+    recentConversations,
+    resumeConversation,
+    resumeConversationId,
+    resumeDialect
   };
 };
 

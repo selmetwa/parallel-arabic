@@ -1,6 +1,7 @@
 <script lang="ts">
   import Modal from '$lib/components/Modal.svelte';
   import Button from '$lib/components/Button.svelte';
+  import Testimonial from '$lib/components/Testimonial.svelte';
   import { goto } from '$app/navigation';
 
   type Props = {
@@ -31,6 +32,12 @@
                 Create an account or log in to continue your learning journey.
             </p>
         </div>
+        <Testimonial
+            class="mt-6"
+            segments={[
+                { t: 'This is great! As someone outgrowing Duolingo this is perfect.', b: true }
+            ]}
+        />
     </div>
 
     <!-- Footer / Action -->

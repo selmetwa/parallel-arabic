@@ -1,5 +1,6 @@
 <script lang="ts">
   import Button from "./Button.svelte";
+  import MobileMenu from "./MobileMenu.svelte";
 
   interface Props {
     handleOpenDrawer: () => void;
@@ -13,6 +14,8 @@
   }
 
   let { handleOpenDrawer, session, targetDialect, user }: Props = $props();
+
+  let mobileMenuOpen = $state(false);
 
   // Map dialect values to flags (default to Egyptian)
   const dialectFlags: Record<string, string> = {
@@ -42,9 +45,17 @@
 <nav class="w-full border-b border-tile-600 py-4 bg-gradient-to-b from-tile-300 to-tile-200 backdrop-blur-sm sticky top-0 z-50 shadow-md">
     <menu class="w-full flex gap-4 px-4 sm:px-6 items-center flex-wrap">
         <li>
-          <a class="text-text-200 hover:text-text-300 text-sm sm:text-base font-semibold transition-colors duration-200" href="/">
-            Home
-          </a>
+          <button
+            type="button"
+            onclick={() => (mobileMenuOpen = true)}
+            class="grid h-9 w-9 place-items-center rounded-lg text-text-200 transition-all duration-200 hover:bg-tile-400 hover:text-text-300 active:scale-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300"
+            aria-label="Open menu"
+            title="Open menu"
+          >
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
         </li>
         <menu class="ml-auto flex flex-row gap-3 sm:gap-4 items-center">
           {#if session}
@@ -81,3 +92,10 @@
         </menu>
     </menu>
 </nav>
+
+<MobileMenu
+  isOpen={mobileMenuOpen}
+  onClose={() => (mobileMenuOpen = false)}
+  {session}
+  {handleOpenDrawer}
+/>
