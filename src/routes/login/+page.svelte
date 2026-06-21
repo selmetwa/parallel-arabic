@@ -3,6 +3,7 @@
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import Button from '$lib/components/Button.svelte';
+	import Testimonial from '$lib/components/Testimonial.svelte';
 	import type { ActionData } from './$types';
 	import { Browser } from '@capacitor/browser';
 	import { App } from '@capacitor/app';
@@ -340,6 +341,11 @@
         </button>
       </div>
     </form>
+    <Testimonial
+      segments={[
+        { t: 'This is great! As someone outgrowing Duolingo this is perfect.', b: true }
+      ]}
+    />
     <div>
       <div class="grid grid-cols-2 gap-4 flex-1 content-start">
         {#each bottomFeatures as feature}
@@ -352,8 +358,8 @@
       </div>
     </div>
     </div>
-    <div class="flex-1">
-      <div class="grid grid-cols-2 gap-4 flex-1 content-start">
+    <div class="flex-1 flex flex-col gap-4">
+      <div class="grid grid-cols-2 gap-4 content-start">
         {#each topFeatures as feature}
           <div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-5 shadow-lg">
             <div class="text-2xl mb-2">{feature.icon}</div>
@@ -362,6 +368,12 @@
           </div>
         {/each}
       </div>
+      <Testimonial
+        segments={[
+          { t: "Even though I'm a beginner, " },
+          { t: "your AI is the best I've tried among all the apps!", b: true }
+        ]}
+      />
     </div>
   </div>
 </section>

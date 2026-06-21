@@ -27,6 +27,35 @@ const dialectNames: Record<Dialect, string> = {
   'khaleeji': 'Khaleeji Arabic'
 };
 
+type CefrLevel = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2';
+
+// Normalize whatever the profile stores ("A1", "beginner", "Upper Int.", …) to a
+// CEFR level so we can calibrate response length/complexity to the learner.
+function normalizeCefrLevel(input?: string | null): CefrLevel {
+  const s = (input || '').toUpperCase();
+  const m = s.match(/[ABC][12]/);
+  if (m) return m[0] as CefrLevel;
+  if (s.includes('BEGIN')) return 'A1';
+  if (s.includes('ELEMENT')) return 'A2';
+  if (s.includes('UPPER')) return 'B2';
+  if (s.includes('INTER')) return 'B1';
+  if (s.includes('ADVAN')) return 'C1';
+  if (s.includes('PROFIC') || s.includes('FLUENT') || s.includes('MASTER')) return 'C2';
+  return 'A1';
+}
+
+// Per-level response calibration. This is the single most important control on
+// tutor output: responses must match the learner's level — short/simple for A1,
+// progressively longer/richer toward C2.
+const LEVEL_GUIDANCE: Record<CefrLevel, string> = {
+  A1: 'Reply with ONE very short sentence (about 4–8 words). Use only the most common, basic everyday words and simple present tense. No idioms, no subordinate clauses. Be as simple as possible.',
+  A2: 'Reply with 1–2 short, simple sentences. Use common everyday vocabulary and basic past/present tense. Keep grammar simple and avoid idioms.',
+  B1: 'Reply with 2–3 sentences. You may introduce some new vocabulary when context makes it clear. Use common connectors and a mix of tenses.',
+  B2: 'Reply with 3–4 sentences. Use richer, more varied vocabulary, a range of tenses, and the occasional idiom. You can touch on more abstract topics.',
+  C1: 'Reply with 4–5 sentences of natural, near-native speech. Use nuanced vocabulary, idioms, and cultural references freely.',
+  C2: 'Reply naturally as you would with a fluent native speaker — full complexity, nuance, idioms and sophisticated vocabulary, at whatever length fits the conversation.'
+};
+
 export const POST: RequestHandler = async ({ request, locals }) => {
   try {
     const apiKey = env['GEMINI_API_KEY'];
@@ -35,7 +64,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     }
     
     const ai = new GoogleGenAI({ apiKey });
-    const { message, dialect, conversation, conversationId: clientConversationId } = await request.json();
+    const { message, dialect, conversation, conversationId: clientConversationId, proficiencyLevel: clientProficiencyLevel } = await request.json();
 
     if (!message || typeof message !== 'string') {
       return error(400, { message: 'Invalid message format' });
@@ -53,7 +82,9 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     // Build learner context if user is logged in
     let learnerContextString = '';
     let conversationId = clientConversationId;
-    
+    // Effective level: client-provided wins, then the stored profile, then A1.
+    let level: CefrLevel = normalizeCefrLevel(clientProficiencyLevel);
+
     if (userId) {
       try {
         // Build learner context and get/create conversation in parallel
@@ -63,6 +94,9 @@ export const POST: RequestHandler = async ({ request, locals }) => {
         ]);
         learnerContextString = formatLearnerContextForPrompt(learnerContext);
         conversationId = resolvedId;
+        if (!clientProficiencyLevel && learnerContext.profile.proficiency_level) {
+          level = normalizeCefrLevel(learnerContext.profile.proficiency_level);
+        }
 
         // Save user message without blocking the Gemini call
         saveMessage(conversationId, 'user', null, message, null, null).catch(e =>
@@ -81,6 +115,12 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     
     // Build adaptive system prompt with learner context
     const systemPrompt = `You are a friendly, patient, and encouraging Arabic tutor specializing in ${dialectName}. You're having a natural conversation with a student learning Arabic.
+
+=== RESPONSE LEVEL — MOST IMPORTANT RULE ===
+The student's level is ${level} (CEFR). Calibrate EVERY response to this level:
+${LEVEL_GUIDANCE[level]}
+This overrides any other guidance about length. A reply that is too long, or uses vocabulary/grammar above ${level}, is a failure even if otherwise correct. Stay at or just slightly above the student's level so they can follow and learn.
+=== END RESPONSE LEVEL ===
 
 ${learnerContextString ? `
 === PERSONALIZED CONTEXT ===
@@ -102,7 +142,7 @@ IMPORTANT GUIDELINES:
 - When translating English phrases to Arabic, provide the translation in ${dialectName}
 - Keep responses conversational, natural, and appropriate for language learners
 - Be encouraging and supportive - celebrate progress!
-- Keep responses concise (1-3 sentences typically) unless explaining something complex
+- Match response length and complexity to the RESPONSE LEVEL rule above — this is the authority on how long/complex your reply should be
 - Use vocabulary appropriate for the student's level based on the conversation and their profile
 - If the student makes mistakes, gently correct them in a helpful way
 - Ask follow-up questions to keep the conversation going
@@ -151,8 +191,13 @@ IMPORTANT: wordAlignments must have one entry per Arabic word in your response, 
       contents: fullPrompt,
       config: {
         temperature: 0.8, // Slightly higher for more natural conversation
-        maxOutputTokens: 2048,
+        maxOutputTokens: 4096,
         topP: 0.9,
+        // gemini-2.5-flash "thinks" by default and thinking tokens count against
+        // maxOutputTokens. With this heavy prompt the model could spend the whole
+        // budget thinking and return no text (finishReason MAX_TOKENS), surfacing
+        // as "No response from Gemini". We don't need reasoning for this JSON reply.
+        thinkingConfig: { thinkingBudget: 0 },
         responseMimeType: 'application/json',
         responseJsonSchema: translationSchema.jsonSchema
       }

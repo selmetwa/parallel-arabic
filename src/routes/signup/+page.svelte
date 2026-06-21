@@ -2,6 +2,7 @@
 	import { enhance } from '$app/forms';
 	import { goto } from '$app/navigation';
 	import Button from '$lib/components/Button.svelte';
+	import Testimonial from '$lib/components/Testimonial.svelte';
 	import type { ActionData } from './$types';
 	import { Browser } from '@capacitor/browser';
 	import { App } from '@capacitor/app';
@@ -172,6 +173,14 @@
           <a href="/login" class="text-text-200 hover:text-text-300 underline transition-colors">Already have an account? Login</a>
         </div>
       </form>
+      <Testimonial
+        segments={[
+          { t: 'After only a day, I love Parallel Arabic.', b: true },
+          {
+            t: ' As a language teacher and an absolute language nut who speaks seven other languages besides Arabic, I can tell how much thought went into this.'
+          }
+        ]}
+      />
       <div>
         <div class="grid grid-cols-2 gap-4 flex-1 content-start">
           {#each bottomFeatures as feature}
@@ -184,8 +193,8 @@
         </div>
       </div>
     </div>
-    <div class="flex-1">
-      <div class="grid grid-cols-2 gap-4 flex-1 content-start">
+    <div class="flex-1 flex flex-col gap-4">
+      <div class="grid grid-cols-2 gap-4 content-start">
         {#each topFeatures as feature}
           <div class="bg-tile-400 border-2 border-tile-600 rounded-lg p-5 shadow-lg">
             <div class="text-2xl mb-2">{feature.icon}</div>
@@ -194,6 +203,13 @@
           </div>
         {/each}
       </div>
+      <Testimonial
+        segments={[
+          { t: 'I love it! This is something I have been ' },
+          { t: 'searching for ages', b: true },
+          { t: ' :) thank you so much' }
+        ]}
+      />
     </div>
   </div>
 </section>

@@ -3,7 +3,6 @@
 	// Critical components - needed for initial render
 	import Navigation from '$lib/components/Navigation.svelte';
 	import Sidebar from '$lib/components/Sidebar.svelte';
-	import BottomNavigation from '$lib/components/BottomNavigation.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 
 	import { onMount } from 'svelte';
@@ -497,7 +496,7 @@
 
 <!-- Main Content Area -->
 <main
-	class="flex min-h-screen flex-col bg-tile-200 pb-20 transition-all duration-300 lg:pb-0 {$sidebarCollapsed
+	class="flex min-h-screen flex-col bg-tile-200 transition-all duration-300 {$sidebarCollapsed
 		? 'lg:ml-0'
 		: 'lg:ml-64'} {data.session ? 'lg:pt-8' : ''}"
 >
@@ -520,9 +519,6 @@
 	<!-- Footer -->
 	<Footer />
 </main>
-
-<!-- Bottom Navigation - Mobile only -->
-<BottomNavigation />
 
 <!-- Chat Widget - lazy loaded, only shows on desktop -->
 {#if ChatWidget}

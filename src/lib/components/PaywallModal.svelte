@@ -2,6 +2,7 @@
   import Modal from '$lib/components/Modal.svelte';
   import Checkmark from '$lib/components/Checkmark.svelte';
   import SubscribeButton from '$lib/components/SubscribeButton.svelte';
+  import Testimonial from '$lib/components/Testimonial.svelte';
 
   type Props = {
     isOpen: boolean;
@@ -64,6 +65,14 @@
 
     <!-- Footer / Action -->
     <div class="p-6 pt-0">
+      <Testimonial
+        class="mb-4"
+        segments={[
+          { t: "Have tried many of the 'apps' and " },
+          { t: 'this is the closest one to doing what I want!', b: true },
+          { t: ' Very useful and comprehensive — I love the interlinear format for the stories.' }
+        ]}
+      />
       <SubscribeButton className="!py-3 !text-lg w-full shadow-md" />
       <p class="mt-3 text-xs text-text-200 text-center">
         By subscribing you agree to our

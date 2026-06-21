@@ -5,8 +5,10 @@
   import RecordButton from '$lib/components/RecordButton.svelte';
   import AudioLoading from '$lib/components/AudioLoading.svelte';
   import AudioButton from '$lib/components/AudioButton.svelte';
+  import Similarity from '$lib/components/Similarity.svelte';
   import MessageBubble from '$lib/components/tutor/ConversationMessage.svelte';
   import PaywallModal from '$lib/components/PaywallModal.svelte';
+  import Modal from '$lib/components/Modal.svelte';
   import DialectComparisonModal from '$lib/components/dialect-shared/sentences/DialectComparisonModal.svelte';
   import DefinitionModal from '$lib/components/dialect-shared/sentences/DefinitionModal.svelte';
   import ConversationSummaryModal from '$lib/components/ConversationSummaryModal.svelte';
@@ -16,6 +18,7 @@
   import { updateKeyboardStyle } from '$lib/helpers/update-keyboard-style';
   import { trackEvent } from '$lib/analytics';
   import { TUTOR_SCENARIOS, type TutorScenario } from '$lib/constants/tutor-scenarios';
+  import levenshtein from 'fast-levenshtein';
 
   let { data } = $props();
 
@@ -130,7 +133,7 @@
   let mode = $state<TutorMode>('conversation');
 
   let selectedDialect = $state<Dialect>(
-    (get(tutorSelectedDialect) as Dialect) || (getDefaultDialect(data.user) as Dialect)
+    (data.resumeDialect as Dialect) || (get(tutorSelectedDialect) as Dialect) || (getDefaultDialect(data.user) as Dialect)
   );
 
   // Scenario picker state (beginner conversation starters)
@@ -169,14 +172,181 @@
     activeScenarioContext ? activeScenarioContext.dialogs[selectedDialect] ?? null : null
   );
 
+  // ── Scenario Learn phase (vocab intro before the guided conversation) ──────
+  // When a scenario starts, the tutor first walks the learner through the key
+  // vocab and a few practice sentences (AI-generated) that build on those words,
+  // having them repeat each one aloud before the roleplay conversation begins.
+  interface ScenarioVocabItem {
+    arabic: string;
+    transliteration: string;
+    english: string;
+    teachingLine: string;
+    kind: 'word' | 'sentence';
+  }
+  const PRONUNCIATION_THRESHOLD = 60;
+  const MAX_ATTEMPTS_BEFORE_SKIP = 3;
+  let scenarioPhase = $state<'learn' | 'practice' | null>(null);
+  // Ordered list of learn items: the words first, then the practice sentences.
+  let scenarioVocab = $state<ScenarioVocabItem[]>([]);
+  let isLoadingVocab = $state(false);
+  let vocabError = $state<string | null>(null);
+  let currentVocabIndex = $state(0);
+  let vocabAttempts = $state(0);
+  let vocabResult = $state<{ similarity: number; passed: boolean } | null>(null);
+
+  let currentVocabItem = $derived(scenarioVocab[currentVocabIndex] ?? null);
+  let canSkipVocab = $derived(vocabAttempts >= MAX_ATTEMPTS_BEFORE_SKIP);
+
+  // Custom scenario: the learner describes what they want to talk about and we
+  // build an ad-hoc scenario that runs through the same Learn → Practice flow.
+  let showCustomScenarioModal = $state(false);
+  let customScenarioText = $state('');
+
+  function createCustomScenario() {
+    const text = customScenarioText.trim();
+    if (!text) return;
+
+    const scenario: TutorScenario = {
+      id: 'custom-' + Date.now(),
+      title: text.length > 60 ? text.slice(0, 60) + '…' : text,
+      emoji: '✨',
+      description: text,
+      level: 'beginner',
+      dialogs: {
+        [selectedDialect]: { otherRoleEnglish: 'Conversation partner', lines: [] }
+      }
+    };
+
+    trackEvent('tutor_custom_scenario_created', { dialect: selectedDialect });
+    showCustomScenarioModal = false;
+    customScenarioText = '';
+    startScenario(scenario);
+  }
+
   function startScenario(scenario: TutorScenario) {
     const dialog = scenario.dialogs[selectedDialect];
     if (!dialog) return;
 
     trackEvent('tutor_scenario_started', { scenario_id: scenario.id, dialect: selectedDialect });
     activeScenarioContext = scenario;
+    scenarioPhase = 'learn';
+    currentVocabIndex = 0;
+    vocabAttempts = 0;
+    vocabResult = null;
+    scenarioVocab = [];
+    currentHint = null;
+    fetchScenarioVocab();
+  }
+
+  // Fetch the AI-generated vocab list the learner repeats before the roleplay.
+  async function fetchScenarioVocab() {
+    if (!activeScenarioContext) return;
+    const dialog = activeScenarioContext.dialogs[selectedDialect];
+    if (!dialog) return;
+
+    isLoadingVocab = true;
+    vocabError = null;
+    trackEvent('scenario_vocab_started', { scenario_id: activeScenarioContext.id, dialect: selectedDialect });
+
+    try {
+      const r = await fetch('/api/scenario-intro', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          dialect: selectedDialect,
+          scenarioTitle: activeScenarioContext.title,
+          scenarioDescription: activeScenarioContext.description,
+          lines: dialog.lines,
+          proficiencyLevel: data.user?.proficiency_level || 'A1'
+        })
+      });
+      if (!r.ok) throw new Error('Failed to load vocab');
+      const d = await r.json();
+      const words = Array.isArray(d.vocab) ? d.vocab : [];
+      const sentences = Array.isArray(d.sentences) ? d.sentences : [];
+      // Words first, then practice sentences that build on them.
+      scenarioVocab = [
+        ...words.map((w: Omit<ScenarioVocabItem, 'kind'>) => ({ ...w, kind: 'word' as const })),
+        ...sentences.map((s: Omit<ScenarioVocabItem, 'kind'>) => ({ ...s, kind: 'sentence' as const }))
+      ];
+      if (scenarioVocab.length === 0) {
+        // Nothing to teach — go straight into the conversation.
+        beginPracticePhase();
+      }
+    } catch (e) {
+      console.error('Scenario vocab error:', e);
+      vocabError = "Couldn't load the vocabulary. Retry, or skip straight to the conversation.";
+    } finally {
+      isLoadingVocab = false;
+    }
+  }
+
+  // Character-level similarity for single vocab words. Word-level matching
+  // (calculateSimilarity) is too strict here — one differing letter scores 0%.
+  // Normalize away tashkeel + common letter variants that speech-to-text drops,
+  // then use Levenshtein for partial credit (same approach as /speak).
+  function calculateWordSimilarity(transcribed: string, expected: string): number {
+    const normalize = (text: string) =>
+      text
+        .replace(/[ً-ْ]/g, '') // tashkeel/diacritics
+        .replace(/[آأإٱ]/g, 'ا') // أ إ آ ٱ → ا
+        .replace(/ى/g, 'ي') // ى → ي
+        .replace(/ة/g, 'ه') // ة → ه
+        .replace(/ـ/g, '') // tatweel
+        .replace(/[،.؟!,?]/g, '')
+        .replace(/\s+/g, ' ')
+        .trim();
+
+    const t = normalize(transcribed);
+    const e = normalize(expected);
+    if (!t || !e) return 0;
+    if (t === e) return 100;
+
+    const distance = levenshtein.get(t, e);
+    const maxLength = Math.max(t.length, e.length);
+    return Math.max(0, Math.round((1 - distance / maxLength) * 100));
+  }
+
+  // Score the learner's spoken attempt at the current vocab word.
+  function scoreLearnAttempt(transcript: string) {
+    if (!currentVocabItem) return;
+    const similarity = calculateWordSimilarity(transcript, currentVocabItem.arabic);
+    const passed = similarity >= PRONUNCIATION_THRESHOLD;
+    vocabAttempts += 1;
+    vocabResult = { similarity, passed };
+    trackEvent('scenario_vocab_attempt', {
+      similarity,
+      passed,
+      word_index: currentVocabIndex,
+      dialect: selectedDialect
+    });
+  }
+
+  // Move to the next vocab word, or start the conversation after the last one.
+  function advanceVocab() {
+    if (currentVocabIndex < scenarioVocab.length - 1) {
+      currentVocabIndex += 1;
+      vocabAttempts = 0;
+      vocabResult = null;
+    } else {
+      beginPracticePhase();
+    }
+  }
+
+  function skipVocabWord() {
+    trackEvent('scenario_vocab_skipped', { word_index: currentVocabIndex, dialect: selectedDialect });
+    advanceVocab();
+  }
+
+  // Transition out of the Learn phase into the existing guided conversation.
+  function beginPracticePhase() {
+    scenarioPhase = 'practice';
     hintsVisible = true;
     currentHint = null;
+    trackEvent('scenario_practice_started', { scenario_id: activeScenarioContext?.id, dialect: selectedDialect });
+
+    const dialog = activeScenarioContext?.dialogs[selectedDialect];
+    if (!dialog) return;
 
     // Seed the very first hint from the hardcoded scenario data: the first
     // student line. After the student records and the AI replies, subsequent
@@ -214,6 +384,13 @@
   function exitScenario() {
     trackEvent('tutor_scenario_exited', { scenario_id: activeScenarioContext?.id, dialect: selectedDialect });
     activeScenarioContext = null;
+    scenarioPhase = null;
+    scenarioVocab = [];
+    currentVocabIndex = 0;
+    vocabAttempts = 0;
+    vocabResult = null;
+    isLoadingVocab = false;
+    vocabError = null;
     currentHint = null;
     isLoadingHint = false;
   }
@@ -290,9 +467,16 @@
   let discardRecording = false;
   let mediaRecorder: MediaRecorder | null = $state(null);
   let audioChunks: Blob[] = $state([]);
-  // Initialized from the in-memory stores so the chat survives navigation
-  let conversation: ConversationMessage[] = $state(get(tutorConversation) as ConversationMessage[]);
-  let conversationId: string | null = $state(get(tutorConversationId)); // Track conversation ID for memory
+  // Initialized from a deep-linked past conversation (History) when present,
+  // otherwise from the in-memory stores so the chat survives navigation.
+  let conversation: ConversationMessage[] = $state(
+    (data.resumeConversation as ConversationMessage[] | null)?.length
+      ? (data.resumeConversation as ConversationMessage[])
+      : (get(tutorConversation) as ConversationMessage[])
+  );
+  let conversationId: string | null = $state(
+    data.resumeConversationId ?? get(tutorConversationId)
+  ); // Track conversation ID for memory
 
   // Keep the stores in sync with local state (browser only; reassignments above trigger this)
   $effect(() => {
@@ -695,7 +879,11 @@
       }
 
       isTranscribing = false;
-      await sendUserMessage(userMessage, recordingLanguage);
+      if (scenarioPhase === 'learn') {
+        scoreLearnAttempt(userMessage);
+      } else {
+        await sendUserMessage(userMessage, recordingLanguage);
+      }
     } catch (error) {
       console.error('Error processing recording:', error);
       const noSpeech = error instanceof Error && error.message === 'No text transcribed';
@@ -730,7 +918,8 @@
           message: userMessage,
           dialect: selectedDialect,
           conversation: conversationHistory,
-          conversationId: conversationId
+          conversationId: conversationId,
+          proficiencyLevel: data.user?.proficiency_level || 'A1'
         })
       });
       if (!r.ok) throw new Error('Failed to get tutor response');
@@ -959,6 +1148,22 @@
     }
   }
 
+  // Learn-phase record control: always Arabic, and clear the previous score so
+  // the UI returns to its "now you try" state for a fresh attempt.
+  function toggleLearnRecording() {
+    if (!hasActiveSubscription && !recording) {
+      openPaywallModal();
+      return;
+    }
+
+    if (recording) {
+      stopRecording();
+    } else {
+      vocabResult = null;
+      startRecording('ar');
+    }
+  }
+
   async function clearConversation() {
     // Show summary if we have any messages at all
     if (conversation.length >= 2) {
@@ -1162,6 +1367,42 @@
   error={comparisonError}
   currentDialect={selectedDialect}
 />
+
+<Modal
+  isOpen={showCustomScenarioModal}
+  handleCloseModal={() => (showCustomScenarioModal = false)}
+  width="min(90%, 480px)"
+>
+  <div class="p-6">
+    <h2 class="text-lg font-bold text-text-300 flex items-center gap-2 mb-1">
+      <span>✨</span> Create your own scenario
+    </h2>
+    <p class="text-sm text-text-200 mb-4 leading-relaxed">
+      Describe what you'd like to talk about. Your tutor will teach you the key words and
+      sentences first, then practise the conversation with you.
+    </p>
+    <textarea
+      bind:value={customScenarioText}
+      rows="3"
+      placeholder="e.g., Ordering coffee and asking for the wifi password"
+      onkeydown={(e) => { if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') createCustomScenario(); }}
+      class="block w-full text-base text-text-300 bg-tile-200 border-2 border-tile-500 rounded-xl p-3 focus:border-tile-700 focus:outline-none focus:ring-2 focus:ring-tile-600/50 transition-all placeholder:text-text-100 resize-none"
+    ></textarea>
+    <div class="flex justify-end gap-2 mt-4">
+      <button
+        type="button"
+        onclick={() => { showCustomScenarioModal = false; customScenarioText = ''; }}
+        class="px-4 py-2 bg-tile-500 text-text-300 font-medium rounded-xl hover:bg-tile-600 transition-colors"
+      >Cancel</button>
+      <button
+        type="button"
+        onclick={createCustomScenario}
+        disabled={!customScenarioText.trim()}
+        class="px-5 py-2 bg-emerald-600 text-white font-semibold rounded-xl hover:bg-emerald-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+      >Start →</button>
+    </div>
+  </div>
+</Modal>
 
 <section class="min-h-screen bg-tile-200">
   <!-- Compact header: title + dialect picker -->
@@ -1459,22 +1700,26 @@
                   <span class="text-xl shrink-0">{activeScenarioContext.emoji}</span>
                   <div class="min-w-0">
                     <p class="text-xs font-semibold text-text-300 truncate">
-                      Practicing: {activeScenarioContext.title}
+                      {scenarioPhase === 'learn' ? 'Learning' : 'Practicing'}: {activeScenarioContext.title}
                     </p>
                     <p class="text-[11px] text-text-200 truncate">
-                      Tutor is playing: {activeScenarioDialog.otherRoleEnglish}
+                      {scenarioPhase === 'learn'
+                        ? 'New words first, then the conversation'
+                        : `Tutor is playing: ${activeScenarioDialog.otherRoleEnglish}`}
                     </p>
                   </div>
                 </div>
                 <div class="flex items-center gap-1.5 shrink-0">
-                  <button
-                    type="button"
-                    onclick={toggleHints}
-                    class="text-[11px] px-2 py-1 rounded-md font-medium bg-tile-500 hover:bg-tile-600 text-text-300 transition-colors"
-                    aria-pressed={hintsVisible}
-                  >
-                    {hintsVisible ? 'Hide hints' : 'Show hints'}
-                  </button>
+                  {#if scenarioPhase !== 'learn'}
+                    <button
+                      type="button"
+                      onclick={toggleHints}
+                      class="text-[11px] px-2 py-1 rounded-md font-medium bg-tile-500 hover:bg-tile-600 text-text-300 transition-colors"
+                      aria-pressed={hintsVisible}
+                    >
+                      {hintsVisible ? 'Hide hints' : 'Show hints'}
+                    </button>
+                  {/if}
                   <button
                     type="button"
                     onclick={exitScenario}
@@ -1488,7 +1733,119 @@
           </div>
         
         <div bind:this={transcriptContainer} class="p-4">
-          {#if conversation.length === 0 && !activeScenarioContext && !isTranscribing && !isGettingResponse && !chatError}
+          {#if scenarioPhase === 'learn'}
+            <div class="max-w-xl mx-auto py-4">
+              {#if isLoadingVocab}
+                <div class="flex flex-col items-center justify-center min-h-[300px] text-center gap-3">
+                  <span class="text-4xl animate-bounce">📚</span>
+                  <p class="text-text-300 font-semibold">Preparing your words & sentences…</p>
+                  <p class="text-text-200 text-sm">Your tutor is choosing the words and practice sentences you'll need for this conversation.</p>
+                </div>
+              {:else if vocabError}
+                <div class="bg-rose-500/10 border-2 border-rose-500/40 rounded-xl p-4 text-center">
+                  <p class="text-sm font-medium text-text-300 mb-3">{vocabError}</p>
+                  <div class="flex justify-center gap-2">
+                    <button
+                      type="button"
+                      onclick={fetchScenarioVocab}
+                      class="text-xs px-3 py-1.5 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
+                    >Retry</button>
+                    <button
+                      type="button"
+                      onclick={beginPracticePhase}
+                      class="text-xs px-3 py-1.5 bg-tile-500 text-text-300 rounded-lg font-medium hover:bg-tile-600 transition-colors"
+                    >Skip to conversation</button>
+                  </div>
+                </div>
+              {:else if currentVocabItem}
+                <div class="flex items-center justify-between mb-2">
+                  <div class="flex items-center gap-2">
+                    <span class="text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full {currentVocabItem.kind === 'sentence' ? 'bg-sky-500/15 text-sky-700' : 'bg-emerald-500/15 text-emerald-700'}">
+                      {currentVocabItem.kind === 'sentence' ? '💬 Practice sentence' : '🔤 New word'}
+                    </span>
+                    <span class="text-xs font-semibold text-text-200">{currentVocabIndex + 1} of {scenarioVocab.length}</span>
+                  </div>
+                  <button
+                    type="button"
+                    onclick={beginPracticePhase}
+                    class="text-xs text-text-200 hover:text-text-300 underline underline-offset-2"
+                  >Skip intro →</button>
+                </div>
+                <div class="h-1.5 w-full bg-tile-500 rounded-full overflow-hidden mb-6">
+                  <div class="h-full bg-emerald-500 transition-all duration-300" style="width: {(currentVocabIndex / scenarioVocab.length) * 100}%"></div>
+                </div>
+
+                <div class="bg-tile-300 border-2 border-tile-500 rounded-2xl p-6 text-center">
+                  <p class="text-text-200 text-sm mb-4 leading-relaxed">{currentVocabItem.teachingLine}</p>
+                  <p class="font-bold text-text-300 mb-2 {currentVocabItem.kind === 'sentence' ? 'text-2xl leading-relaxed' : 'text-4xl'}" dir="rtl">{currentVocabItem.arabic}</p>
+                  <p class="text-lg text-text-200 mb-1">{currentVocabItem.transliteration}</p>
+                  <p class="text-sm text-text-200 mb-5">{currentVocabItem.english}</p>
+                  <div class="flex justify-center">
+                    <AudioButton text={currentVocabItem.arabic} dialect={selectedDialect}>Hear it</AudioButton>
+                  </div>
+                </div>
+
+                <div class="mt-6 flex flex-col items-center gap-4">
+                  {#if vocabResult}
+                    <div class="flex flex-col items-center gap-2">
+                      <Similarity score={vocabResult.similarity} />
+                      <p class="text-sm font-semibold {vocabResult.passed ? 'text-emerald-600' : 'text-orange-500'}">
+                        {vocabResult.passed ? 'Nice — that sounded great!' : 'Not quite — listen again and repeat.'}
+                      </p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      {#if vocabResult.passed}
+                        <button
+                          type="button"
+                          onclick={advanceVocab}
+                          class="px-5 py-2.5 bg-emerald-600 text-white font-semibold rounded-xl hover:bg-emerald-700 transition-colors"
+                        >{currentVocabIndex < scenarioVocab.length - 1 ? 'Next →' : 'Start conversation →'}</button>
+                      {:else}
+                        <button
+                          type="button"
+                          onclick={toggleLearnRecording}
+                          disabled={isProcessing}
+                          class="px-5 py-2.5 bg-emerald-600 text-white font-semibold rounded-xl hover:bg-emerald-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                        >Try again</button>
+                        {#if canSkipVocab}
+                          <button
+                            type="button"
+                            onclick={skipVocabWord}
+                            class="px-4 py-2.5 bg-tile-500 text-text-300 font-medium rounded-xl hover:bg-tile-600 transition-colors"
+                          >Skip</button>
+                        {/if}
+                      {/if}
+                    </div>
+                  {:else}
+                    <button
+                      type="button"
+                      onclick={toggleLearnRecording}
+                      disabled={isProcessing}
+                      class="flex items-center justify-center gap-3 px-6 py-3 rounded-xl border-2 font-semibold text-text-300 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed {recording ? 'border-red-500 bg-red-500/15 shadow-lg' : 'border-tile-600 bg-tile-300 hover:bg-tile-500'}"
+                      aria-label={recording ? 'Stop recording' : 'Record your pronunciation'}
+                    >
+                      {#if recording}
+                        <span class="w-2.5 h-2.5 bg-red-500 rounded-full animate-pulse"></span>
+                        <span class="tabular-nums text-sm">{formatRecordingTime(recordingSeconds)}</span>
+                        <span class="text-sm font-medium">Listening — tap when done</span>
+                      {:else if isProcessing}
+                        <AudioLoading />
+                        <span class="text-sm font-medium">Checking…</span>
+                      {:else}
+                        <RecordButton />
+                        <span>Now you try</span>
+                      {/if}
+                    </button>
+                    {#if !hasActiveSubscription}
+                      <p class="text-xs text-text-200 text-center">
+                        🔒 <button type="button" class="underline underline-offset-2 hover:text-text-300" onclick={openPaywallModal}>Subscribe</button> to practice speaking
+                      </p>
+                    {/if}
+                  {/if}
+                </div>
+              {/if}
+            </div>
+          {:else if conversation.length === 0 && !activeScenarioContext && !isTranscribing && !isGettingResponse && !chatError}
             <div class="flex flex-col items-center justify-start h-full min-h-[400px] text-center py-6">
               <div class="text-6xl mb-4">👋</div>
               <h3 class="text-xl font-bold text-text-300 mb-2">Start a Conversation</h3>
@@ -1519,6 +1876,19 @@
                         </div>
                       </button>
                     {/each}
+
+                    <!-- Custom scenario CTA -->
+                    <button
+                      type="button"
+                      onclick={() => (showCustomScenarioModal = true)}
+                      class="group flex items-start gap-3 p-4 bg-sky-500/5 rounded-xl border-2 border-dashed border-sky-500/40 hover:bg-sky-500/10 hover:border-sky-500/60 hover:shadow-lg transition-all duration-200 text-left active:scale-95"
+                    >
+                      <span class="text-3xl shrink-0 transition-transform duration-200 group-hover:scale-110">✨</span>
+                      <div class="min-w-0">
+                        <p class="text-sm font-semibold text-text-300 mb-1">Create your own</p>
+                        <p class="text-xs text-text-200 leading-snug">Describe what you want to talk about and practice it.</p>
+                      </div>
+                    </button>
                   </div>
                 </div>
               {/if}
@@ -1643,7 +2013,9 @@
         </div>
 
         <!-- Composer: mic + language toggle, or typed input. Sticks to the viewport
-             bottom (above the mobile nav) so it's always reachable while the page scrolls. -->
+             bottom (above the mobile nav) so it's always reachable while the page scrolls.
+             Hidden during the Learn phase, which has its own record control. -->
+        {#if scenarioPhase !== 'learn'}
         <div class="border-t-2 border-tile-600 bg-tile-400 p-3 sm:p-4 sticky bottom-16 lg:bottom-0 z-30 rounded-b-lg">
           <div class="max-w-3xl mx-auto">
             {#if inputMode === 'text'}
@@ -1764,123 +2136,10 @@
             {/if}
           </div>
         </div>
+        {/if}
       </div>
       {/if}
 
-      <!-- Below the conversation: tips + learning profile -->
-      <div class="grid sm:grid-cols-2 gap-6 mt-6 items-start">
-        <!-- Tips Card -->
-        <div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
-          <div class="p-4 border-b border-tile-600">
-            <h3 class="text-sm font-bold text-text-300 flex items-center gap-2">
-              <span>💡</span> Tips
-            </h3>
-          </div>
-          <div class="p-4 space-y-2 text-sm text-text-200">
-            {#if mode === 'conversation'}
-              <p>• Tap the <strong class="text-text-300">mic button</strong> below the conversation to speak</p>
-              <p>• Switch the toggle to <strong class="text-text-300">EN</strong> to ask "How do I say...?"</p>
-              <p>• Click any word in responses for definitions</p>
-              <p>• Use the <strong class="text-text-300">العربية / English / Translit</strong> toggles above the conversation to hide or show each line</p>
-            {:else}
-              <p>• First, <strong class="text-text-300">listen</strong> to the sentence using the speaker button</p>
-              <p>• Then <strong class="text-text-300">record yourself</strong> saying the sentence</p>
-              <p>• Compare your pronunciation with the original</p>
-              <p>• Use the navigation to try different sentences</p>
-            {/if}
-          </div>
-        </div>
 
-        <!-- Learning Memory Card - Only show if there's data -->
-        {#if (learningInsights.length > 0 || recentConversations.length > 0) && mode === 'conversation'}
-          <div class="bg-tile-400 border-2 border-tile-600 rounded-lg shadow-lg overflow-hidden">
-            <div class="p-4 border-b border-tile-600">
-              <h3 class="text-sm font-bold text-text-300 flex items-center gap-2">
-                <span>🧠</span> Your Learning Profile
-              </h3>
-            </div>
-            <div class="p-4 space-y-4">
-              <!-- User Profile Summary -->
-              {#if data.user}
-                <div class="text-xs text-text-200 space-y-1">
-                  {#if data.user.proficiency_level}
-                    <p><span class="font-semibold text-text-300">Level:</span> {data.user.proficiency_level}</p>
-                  {/if}
-                  {#if data.user.current_streak > 0}
-                    <p><span class="font-semibold text-text-300">🔥 Streak:</span> {data.user.current_streak} days</p>
-                  {/if}
-                </div>
-              {/if}
-
-              <!-- Areas to Improve -->
-              {#if learningInsights.filter(i => i.insight_type === 'weakness').length > 0}
-                <div>
-                  <p class="text-xs font-semibold text-amber-400 mb-1.5">Areas to Focus On:</p>
-                  <ul class="text-xs text-text-200 space-y-1">
-                    {#each learningInsights.filter(i => i.insight_type === 'weakness').slice(0, 3) as insight}
-                      <li class="flex items-start gap-1.5">
-                        <span class="text-amber-400">•</span>
-                        <span>{insight.content}</span>
-                      </li>
-                    {/each}
-                  </ul>
-                </div>
-              {/if}
-
-              <!-- Strengths -->
-              {#if learningInsights.filter(i => i.insight_type === 'strength').length > 0}
-                <div>
-                  <p class="text-xs font-semibold text-emerald-600 mb-1.5">Your Strengths:</p>
-                  <ul class="text-xs text-text-200 space-y-1">
-                    {#each learningInsights.filter(i => i.insight_type === 'strength').slice(0, 3) as insight}
-                      <li class="flex items-start gap-1.5">
-                        <span class="text-emerald-600">✓</span>
-                        <span>{insight.content}</span>
-                      </li>
-                    {/each}
-                  </ul>
-                </div>
-              {/if}
-
-              <!-- Topics of Interest -->
-              {#if learningInsights.filter(i => i.insight_type === 'topic_interest').length > 0}
-                <div>
-                  <p class="text-xs font-semibold text-sky-400 mb-1.5">Topics You Like:</p>
-                  <div class="flex flex-wrap gap-1">
-                    {#each learningInsights.filter(i => i.insight_type === 'topic_interest').slice(0, 5) as insight}
-                      <span class="px-2 py-0.5 bg-sky-500/20 text-sky-300 text-xs rounded-full">
-                        {insight.content}
-                      </span>
-                    {/each}
-                  </div>
-                </div>
-              {/if}
-
-              <!-- Recent Sessions -->
-              {#if recentConversations.length > 0}
-                <div>
-                  <p class="text-xs font-semibold text-text-300 mb-1.5">Recent Sessions:</p>
-                  <div class="space-y-2">
-                    {#each recentConversations.slice(0, 3) as conv}
-                      <div class="text-xs bg-tile-300/50 rounded-lg p-2 border border-tile-500/50">
-                        <p class="text-text-200 line-clamp-2">{conv.summary || 'Conversation with tutor'}</p>
-                        {#if conv.topics_discussed && conv.topics_discussed.length > 0}
-                          <div class="flex flex-wrap gap-1 mt-1">
-                            {#each conv.topics_discussed.slice(0, 3) as topic}
-                              <span class="px-1.5 py-0.5 bg-tile-500/50 text-text-300 text-[10px] rounded">
-                                {topic}
-                              </span>
-                            {/each}
-                          </div>
-                        {/if}
-                      </div>
-                    {/each}
-                  </div>
-                </div>
-              {/if}
-            </div>
-          </div>
-        {/if}
-      </div>
   </div>
 </section>
