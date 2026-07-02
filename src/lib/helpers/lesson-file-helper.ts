@@ -1,8 +1,14 @@
 import { type GeneratedLesson } from '$lib/schemas/curriculum-schema';
+import { type GeneratedLessonV2 } from '$lib/schemas/lesson-v2-schema';
 import { supabase } from '$lib/supabaseClient';
 import { getCached, setCached, deleteCached, deleteCachedByPattern } from '$lib/server/redis';
 
 const STRUCTURED_LESSONS_BUCKET = 'structured_lesson';
+
+// v2 lessons (heavy-practice curriculum) live under a per-dialect path prefix in
+// the same bucket ({dialect}-v2/) so they never collide with legacy lessons or
+// with each other. See v2Prefix() below.
+const STRUCTURED_LESSON_V2_TTL = 86400; // 24 hours
 
 // Cache TTL for structured lessons (these rarely change)
 const STRUCTURED_LESSON_TTL = 86400; // 24 hours
@@ -179,6 +185,121 @@ export async function checkExistingLessons(topicIds: string[]): Promise<Record<s
     for (const id of topicIds) {
         result[id] = allExisting[id] || { exists: false };
     }
-    
+
+    return result;
+}
+
+// ---------------------------------------------------------------------------
+// v2 lessons (heavy-practice curriculum) — per dialect
+// File structure: {normalizedDialect}-v2/{topicId}.json
+// ---------------------------------------------------------------------------
+
+/** Storage folder prefix for a dialect's v2 lessons, e.g. "egyptian-arabic-v2". */
+function v2Prefix(dialect: string): string {
+    return `${normalizeDialect(dialect)}-v2`;
+}
+
+/** Saves a v2 lesson to storage and invalidates its caches. Dialect comes from the lesson. */
+export async function saveLessonV2(lesson: GeneratedLessonV2): Promise<void> {
+    if (!lesson.topicId || !lesson.dialect) {
+        throw new Error('Lesson topicId and dialect are required');
+    }
+
+    const nd = normalizeDialect(lesson.dialect);
+    const storagePath = `${nd}-v2/${lesson.topicId}.json`;
+    const fileContent = JSON.stringify(lesson, null, 2);
+
+    const { error } = await supabase.storage
+        .from(STRUCTURED_LESSONS_BUCKET)
+        .upload(storagePath, fileContent, {
+            contentType: 'application/json',
+            upsert: true
+        });
+
+    if (error) {
+        throw new Error(`Failed to save v2 lesson to storage: ${error.message}`);
+    }
+
+    await deleteCached(`structured_lesson_v2:${nd}:${lesson.topicId}`);
+    await deleteCached(`structured_lessons_v2:existence_map:${nd}`);
+}
+
+/** Loads a v2 lesson by topic ID for a dialect. Returns null if it does not exist. */
+export async function loadLessonV2(
+    topicId: string,
+    dialect: string
+): Promise<GeneratedLessonV2 | null> {
+    const nd = normalizeDialect(dialect);
+    const cacheKey = `structured_lesson_v2:${nd}:${topicId}`;
+
+    const cached = await getCached<GeneratedLessonV2>(cacheKey);
+    if (cached) {
+        return cached;
+    }
+
+    const storagePath = `${nd}-v2/${topicId}.json`;
+    const { data, error } = await supabase.storage
+        .from(STRUCTURED_LESSONS_BUCKET)
+        .download(storagePath);
+
+    if (error || !data) {
+        return null;
+    }
+
+    const jsonText = await data.text();
+    const lesson = JSON.parse(jsonText) as GeneratedLessonV2;
+
+    await setCached(cacheKey, lesson, STRUCTURED_LESSON_V2_TTL);
+    return lesson;
+}
+
+/**
+ * Checks which v2 lessons exist for a dialect and a given list of topic IDs.
+ * Returns a map of topicId -> { exists: boolean }.
+ */
+export async function checkExistingLessonsV2(
+    topicIds: string[],
+    dialect: string
+): Promise<Record<string, { exists: boolean }>> {
+    const nd = normalizeDialect(dialect);
+    const cacheKey = `structured_lessons_v2:existence_map:${nd}`;
+
+    const cachedMap = await getCached<Record<string, { exists: boolean }>>(cacheKey);
+    if (cachedMap) {
+        const result: Record<string, { exists: boolean }> = {};
+        for (const id of topicIds) {
+            result[id] = cachedMap[id] || { exists: false };
+        }
+        return result;
+    }
+
+    const allExisting: Record<string, { exists: boolean }> = {};
+    try {
+        const { data: files, error } = await supabase.storage
+            .from(STRUCTURED_LESSONS_BUCKET)
+            .list(v2Prefix(dialect), {
+                limit: 1000,
+                sortBy: { column: 'name', order: 'asc' }
+            });
+
+        if (error) {
+            console.warn('[checkExistingLessonsV2] Error listing v2 files:', error.message);
+        } else if (files) {
+            for (const file of files) {
+                if (file.name.endsWith('.json')) {
+                    allExisting[file.name.replace('.json', '')] = { exists: true };
+                }
+            }
+        }
+    } catch (error) {
+        console.warn('[checkExistingLessonsV2] Error processing v2 lessons:', error);
+    }
+
+    await setCached(cacheKey, allExisting, 3600);
+
+    const result: Record<string, { exists: boolean }> = {};
+    for (const id of topicIds) {
+        result[id] = allExisting[id] || { exists: false };
+    }
     return result;
 }

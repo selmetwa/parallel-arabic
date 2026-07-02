@@ -1,6 +1,7 @@
 import { redirect } from '@sveltejs/kit';
 import { curriculum } from '$lib/data/curriculum';
-import { checkExistingLessons } from '$lib/helpers/lesson-file-helper';
+import { getCurriculumV2 } from '$lib/data/curriculum-v2';
+import { checkExistingLessons, checkExistingLessonsV2 } from '$lib/helpers/lesson-file-helper';
 import { supabase } from '$lib/supabaseClient';
 import { isEmailWhitelisted } from '$lib/helpers/subscription';
 
@@ -41,6 +42,51 @@ export const load = async ({ params, parent, url }) => {
 
 	const dialectName = dialectMap[dialect.toLowerCase()] || dialect.toLowerCase();
 	const normalizedDialect = normalizeDialect(dialectName);
+
+	// Any dialect with a v2 curriculum uses the new heavy-practice lessons.
+	// Dialects without one fall through to the legacy path below, unchanged.
+	const v2Curriculum = getCurriculumV2(dialectName);
+	if (v2Curriculum) {
+		const v2TopicIds = v2Curriculum.flatMap((m) => m.topics.map((t) => t.id));
+		const v2Existing = await checkExistingLessonsV2(v2TopicIds, dialectName);
+		const existingLessons: Record<string, { exists: boolean }> = {};
+		for (const [topicId, info] of Object.entries(v2Existing)) {
+			existingLessons[topicId] = { exists: info.exists };
+		}
+
+		const userProgress: Record<string, { status: string; completed_at?: number }> = {};
+		if (user && session) {
+			const { data: progressData, error: progressError } = await supabase
+				.from('structured_lesson_progress')
+				.select('topic_id, status, completed_at')
+				.eq('user_id', user.id)
+				.eq('dialect', dialectName);
+
+			if (!progressError && progressData) {
+				for (const progress of progressData) {
+					userProgress[progress.topic_id] = {
+						status: progress.status,
+						completed_at: progress.completed_at || undefined
+					};
+				}
+			}
+		}
+
+		return {
+			session,
+			isSubscribed,
+			hasActiveSubscription: isSubscribed,
+			user,
+			curriculum: v2Curriculum,
+			dialect: dialectName,
+			existingLessons,
+			userProgress,
+			isWhitelisted: isWhitelisted || false,
+			autoOpenLessonId,
+			autoOpenStep,
+			useV2: true
+		};
+	}
 
 	// Filter curriculum based on dialect/module type
 	let filteredCurriculum = curriculum;
