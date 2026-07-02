@@ -3,7 +3,7 @@
 	import PaywallModal from '$lib/components/PaywallModal.svelte';
 	import AuthModal from '$lib/components/AuthModal.svelte';
     import LessonPlayer from '$lib/components/LessonPlayer.svelte';
-    import type { GeneratedLesson } from '$lib/schemas/curriculum-schema';
+    import LessonPlayerV2 from '$lib/components/LessonPlayerV2.svelte';
 	import { invalidateAll } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { trackEvent } from '$lib/analytics';
@@ -11,8 +11,12 @@
 	let { data } = $props();
 	let isModalOpen = $state(false);
 	let isAuthModalOpen = $state(false);
-    let activeLesson = $state<GeneratedLesson | null>(null);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    let activeLesson = $state<any>(null);
 	let isAutoOpening = $state(false);
+
+	// Egyptian Arabic uses the new heavy-practice v2 lessons + player.
+	const useV2 = (data as { useV2?: boolean }).useV2 ?? false;
 
 	// Dialect display names
 	const dialectNames: Record<string, string> = {
@@ -202,9 +206,11 @@
                 }
             }
 
-            // Load lesson with the specific dialect
-            const dialect = `?dialect=${encodeURIComponent(lessonNode.dialect)}`;
-            const response = await fetch(`/api/lessons/${lessonNode.id}${dialect}`);
+            // Load lesson — v2 (Egyptian) uses the dedicated heavy-practice endpoint.
+            const lessonUrl = useV2
+                ? `/api/lessons-v2/${lessonNode.id}?dialect=${encodeURIComponent(lessonNode.dialect)}`
+                : `/api/lessons/${lessonNode.id}?dialect=${encodeURIComponent(lessonNode.dialect)}`;
+            const response = await fetch(lessonUrl);
             if (!response.ok) throw new Error('Failed to load lesson');
             const lessonData = await response.json();
 
@@ -233,38 +239,58 @@
 </script>
 
 {#if activeLesson}
-    <LessonPlayer
-        lesson={activeLesson}
-        user={data.user}
-        initialStep={
-            data.user?.last_content_id === activeLesson?.topicId
-                ? (data.user?.last_content_position ?? 0)
-                : (activeLesson?.topicId === data.autoOpenLessonId && data.autoOpenStep !== null
-                    ? (data.autoOpenStep ?? 0)
-                    : 0)
-        }
-        onClose={async () => {
-            // Close the lesson player first
-            activeLesson = null;
-            // Refetch data to show updated completion status
-            await invalidateAll();
-        }}
-        onLessonComplete={async (nextLessonId) => {
-            trackEvent('lessons_lesson_completed', {
-                lesson_id: activeLesson?.topicId,
-                dialect: activeLesson?.dialect
-            });
-            // Close the lesson player first (completion already marked in LessonPlayer)
-            activeLesson = null;
+    {@const initialStepValue =
+        data.user?.last_content_id === activeLesson?.topicId
+            ? (data.user?.last_content_position ?? 0)
+            : (activeLesson?.topicId === data.autoOpenLessonId && data.autoOpenStep !== null
+                ? (data.autoOpenStep ?? 0)
+                : 0)}
+    {#if useV2}
+        <LessonPlayerV2
+            lesson={activeLesson}
+            user={data.user}
+            initialStep={initialStepValue}
+            onClose={async () => {
+                activeLesson = null;
+                await invalidateAll();
+            }}
+            onLessonComplete={async () => {
+                trackEvent('lessons_lesson_completed', {
+                    lesson_id: activeLesson?.topicId,
+                    dialect: activeLesson?.dialect
+                });
+                activeLesson = null;
+                await invalidateAll();
+            }}
+        />
+    {:else}
+        <LessonPlayer
+            lesson={activeLesson}
+            user={data.user}
+            initialStep={initialStepValue}
+            onClose={async () => {
+                // Close the lesson player first
+                activeLesson = null;
+                // Refetch data to show updated completion status
+                await invalidateAll();
+            }}
+            onLessonComplete={async () => {
+                trackEvent('lessons_lesson_completed', {
+                    lesson_id: activeLesson?.topicId,
+                    dialect: activeLesson?.dialect
+                });
+                // Close the lesson player first (completion already marked in LessonPlayer)
+                activeLesson = null;
 
-            // Refetch data to show updated completion status
-            // This will reload the page data including userProgress
-            await invalidateAll();
+                // Refetch data to show updated completion status
+                // This will reload the page data including userProgress
+                await invalidateAll();
 
-            // User is now back on the structured lessons page with updated data
-            // The next lesson should now be unlocked if it exists
-        }}
-    />
+                // User is now back on the structured lessons page with updated data
+                // The next lesson should now be unlocked if it exists
+            }}
+        />
+    {/if}
 {/if}
 
 <PaywallModal isOpen={isModalOpen} {handleCloseModal}></PaywallModal>
