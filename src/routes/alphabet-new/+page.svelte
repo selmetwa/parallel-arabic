@@ -17,12 +17,18 @@
 	import { page as appState } from '$app/state';
 	import { resolve } from '$app/paths';
 	import InlineAudioButton from '$lib/components/InlineAudioButton.svelte';
+	import PaywallModal from '$lib/components/PaywallModal.svelte';
 	import ListeningExercise from './components/ListeningExercise.svelte';
 	import WritingExercise from './components/WritingExercise.svelte';
 	import SpeakingExercise from './components/SpeakingExercise.svelte';
 	import { practiceLetters, practiceWords } from './components/practice-data';
 
 	const totalPages = 5;
+
+	// --- Paywall: free users can preview the first 5 letters on Lesson 1 only ---
+	const FREE_LETTER_LIMIT = 5;
+	const isSubscribed = $derived(Boolean(appState.data?.isSubscribed));
+	let showPaywall = $state(false);
 
 	// --- URL-synced state so a refresh keeps your place ---
 	// NB: query params can't be read at render time on a prerendered page, so we
@@ -78,9 +84,25 @@
 	const currentLetter = $derived(mergedLetters[cardIndex]);
 
 	function nextCard() {
+		if (!isSubscribed && cardIndex >= FREE_LETTER_LIMIT - 1) {
+			showPaywall = true;
+			return;
+		}
 		if (cardIndex < mergedLetters.length - 1) {
 			cardDirection = -1;
 			cardIndex += 1;
+		}
+	}
+
+	function toggleLesson1View() {
+		if (lesson1View === 'cards') {
+			if (!isSubscribed) {
+				showPaywall = true;
+				return;
+			}
+			lesson1View = 'all';
+		} else {
+			lesson1View = 'cards';
 		}
 	}
 
@@ -126,6 +148,12 @@
 		if (articulationGroups.some((g) => g.id === group)) {
 			selectedArticulation = group as Articulation;
 		}
+		// Free users can only land on Lesson 1's card view, capped at the preview limit.
+		if (!isSubscribed) {
+			page = 0;
+			lesson1View = 'cards';
+			cardIndex = Math.min(cardIndex, FREE_LETTER_LIMIT - 1);
+		}
 		hydrated = true;
 	});
 
@@ -153,9 +181,21 @@
 		sixKickingLetters.map((key) => lettersByKey.get(key)!).filter(Boolean)
 	);
 
+	function goToPage(i: number) {
+		if (!isSubscribed && i > 0) {
+			showPaywall = true;
+			return;
+		}
+		page = i;
+	}
+
 	function nextPage() {
 		if (page === totalPages - 1) {
 			goto(resolve('/alphabet'));
+			return;
+		}
+		if (!isSubscribed) {
+			showPaywall = true;
 			return;
 		}
 		page += 1;
@@ -163,6 +203,10 @@
 
 	function previousPage() {
 		page -= 1;
+	}
+
+	function handleCloseModal() {
+		showPaywall = false;
 	}
 </script>
 
@@ -196,7 +240,7 @@
 					<div class="flex items-center gap-2">
 						{#each Array(totalPages) as _, i (i)}
 							<button
-								onclick={() => (page = i)}
+								onclick={() => goToPage(i)}
 								class={cn(
 									'h-3 w-3 rounded-full transition-all duration-300',
 									page === i
@@ -236,7 +280,7 @@
 					<div class="mb-4 flex justify-end">
 						<button
 							type="button"
-							onclick={() => (lesson1View = lesson1View === 'cards' ? 'all' : 'cards')}
+							onclick={toggleLesson1View}
 							class="flex items-center gap-2 rounded-full border border-tile-500 bg-tile-400 px-4 py-2 text-sm font-semibold text-text-300 transition-colors hover:bg-tile-500 active:scale-95"
 						>
 							{#if lesson1View === 'cards'}
@@ -812,3 +856,5 @@
 		</div>
 	</footer>
 </section>
+
+<PaywallModal isOpen={showPaywall} {handleCloseModal} />
