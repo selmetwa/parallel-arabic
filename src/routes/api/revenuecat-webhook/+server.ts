@@ -6,11 +6,8 @@ import { PUBLIC_SUPABASE_URL } from '$env/static/public';
 
 export const POST: RequestHandler = async ({ request }) => {
   console.log('[RC webhook] ========== REQUEST RECEIVED ==========');
-  console.log('[RC webhook] SUPABASE_URL:', PUBLIC_SUPABASE_URL);
   console.log('[RC webhook] SERVICE_ROLE_KEY present:', !!env.SUPABASE_SERVICE_ROLE_KEY);
-  console.log('[RC webhook] SERVICE_ROLE_KEY prefix:', env.SUPABASE_SERVICE_ROLE_KEY?.slice(0, 20));
   console.log('[RC webhook] WEBHOOK_SECRET present:', !!env.REVENUECAT_WEBHOOK_SECRET);
-  console.log('[RC webhook] WEBHOOK_SECRET value:', env.REVENUECAT_WEBHOOK_SECRET);
 
   let adminSupabase;
   try {
@@ -22,10 +19,7 @@ export const POST: RequestHandler = async ({ request }) => {
   }
 
   const authHeader = request.headers.get('Authorization') ?? '';
-  console.log('[RC webhook] Auth header received:', authHeader);
   const token = authHeader.replace('Bearer ', '');
-  console.log('[RC webhook] Token extracted:', token);
-  console.log('[RC webhook] Token matches secret:', token === env.REVENUECAT_WEBHOOK_SECRET);
 
   if (env.REVENUECAT_WEBHOOK_SECRET && token !== env.REVENUECAT_WEBHOOK_SECRET) {
     console.error('[RC webhook] Unauthorized — token mismatch');
