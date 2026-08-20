@@ -4,5 +4,6 @@ export const WHITELISTED_EMAILS = [
   'ceciferreri18@gmail.com',
   'louisdasou@gmail.com',
   'artyom.beilis@gmail.com',
-  'sherifliketheclash@gmail.com'
+  'sherifliketheclash@gmail.com',
+  'vividkeep@gmail.com'
 ];
