@@ -1,0 +1,75 @@
+{
+  "slug": "my-name-is",
+  "dialect": "egyptian-arabic",
+  "english": "my name is...",
+  "arabic": "إِسْمِي",
+  "arabicPlain": "اسمي",
+  "transliteration": "ismi",
+  "franco": "esmy",
+  "literal": "name-my",
+  "usage": "This is the standard, everyday way to introduce yourself in Egyptian Arabic. It is used in both formal and informal situations, regardless of the gender of the speaker or the listener. You simply add your name directly after the word.",
+  "variants": [
+    {
+      "label": "I am (alternative)",
+      "arabic": "أَنَا",
+      "transliteration": "ana",
+      "english": "I am",
+      "note": "A very common and slightly more casual way to introduce yourself instead of saying 'my name is'."
+    },
+    {
+      "label": "What is your name? (to a man)",
+      "arabic": "إِسْمَك إِيه؟",
+      "transliteration": "ismak eih?",
+      "english": "What is your name?",
+      "note": "The standard way to ask a male his name after introducing yourself."
+    },
+    {
+      "label": "What is your name? (to a woman)",
+      "arabic": "إِسْمِك إِيه؟",
+      "transliteration": "ismik eih?",
+      "english": "What is your name?",
+      "note": "The standard way to ask a female her name."
+    },
+    {
+      "label": "What is your name? (formal, to a man)",
+      "arabic": "حَضْرِتَك إِسْمَك إِيه؟",
+      "transliteration": "7adretak ismak eih?",
+      "english": "What is your name?",
+      "note": "Used when speaking to someone older or in a professional setting."
+    }
+  ],
+  "responses": [
+    {
+      "arabic": "إِتْشَرَّفْنَا",
+      "transliteration": "etsharrafna",
+      "english": "Honored to meet you."
+    },
+    {
+      "arabic": "أَهْلاً بِيك",
+      "transliteration": "ahlan biik",
+      "english": "Welcome / Nice to meet you (to a man)."
+    },
+    {
+      "arabic": "وَأَنَا إِسْمِي",
+      "transliteration": "wa ana ismi",
+      "english": "And my name is..."
+    }
+  ],
+  "examples": [
+    {
+      "arabic": "أَهْلاً، أَنَا إِسْمِي أَحْمَد.",
+      "transliteration": "ahlan, ana ismi a7mad.",
+      "english": "Hello, my name is Ahmed."
+    },
+    {
+      "arabic": "إِسْمِي سَارَة، وَإِنْتَ إِسْمَك إِيه؟",
+      "transliteration": "ismi sara, wa enta ismak eih?",
+      "english": "My name is Sarah, and you, what is your name? (to a man)"
+    },
+    {
+      "arabic": "فُرْصَة سَعِيدَة، إِسْمِي مَحْمُود.",
+      "transliteration": "forsa sa3ida, ismi ma7moud.",
+      "english": "Nice to meet you, my name is Mahmoud."
+    }
+  ]
+}

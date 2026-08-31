@@ -4,6 +4,9 @@ import { blogPosts } from '$lib/constants/blog-posts';
 import verbIndex from '$lib/data/verb-conjugations/egyptian-arabic/index.json';
 import { stories as staticStories } from '$lib/constants/stories/index';
 import { BLOCKED_STORY_IDS } from '$lib/constants/stories/blocked';
+import { PHRASE_SEEDS, PHRASE_DIALECTS } from '$lib/constants/phrase-seeds';
+import { COMPARISON_SLUGS } from '$lib/constants/dialect-comparisons';
+import { existsPhrase } from '$lib/data/phrases/manifest';
 const BASE_URL = 'https://www.parallel-arabic.com';
 
 // Supabase caps a select at 1000 rows. There are more stories than that, so
@@ -117,6 +120,41 @@ export const GET: RequestHandler = async () => {
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
   </url>`);
+	}
+
+	// Dialect comparison pages
+	for (const slug of COMPARISON_SLUGS) {
+		urls.push(`
+  <url>
+    <loc>${BASE_URL}/${escapeXml(slug)}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`);
+	}
+
+	// Phrasebook: one index per dialect plus a page per generated phrase
+	for (const dialect of PHRASE_DIALECTS) {
+		if (!PHRASE_SEEDS.some((seed) => existsPhrase(dialect, seed.slug))) continue;
+
+		urls.push(`
+  <url>
+    <loc>${BASE_URL}/${dialect}/phrases</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>`);
+
+		for (const seed of PHRASE_SEEDS) {
+			if (!existsPhrase(dialect, seed.slug)) continue;
+			urls.push(`
+  <url>
+    <loc>${BASE_URL}/${dialect}/phrases/${escapeXml(seed.slug)}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>`);
+		}
 	}
 
 	// Hand-written stories served from $lib/constants/stories

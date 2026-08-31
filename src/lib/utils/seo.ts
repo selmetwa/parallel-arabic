@@ -300,6 +300,36 @@ export function getPageMeta(page: string, data?: any): PageMeta {
 				: `${baseUrl}/${dialectSlug}/conjugations`,
 			type: 'article'
 		},
+		comparison: {
+			title: data?.a
+				? `${formatDialectName(data.a)} vs ${formatDialectName(data.b)} - What's the Difference?`
+				: 'Arabic Dialects Compared | Parallel Arabic',
+			description: data?.a
+				? `${formatDialectName(data.a)} and ${formatDialectName(
+						data.b
+					)} compared: pronunciation, verb prefixes, negation, question words, and the same everyday phrases side by side. Which one should you learn?`
+				: 'How the Arabic dialects differ, and which one to learn.',
+			url: data?.slug ? `${baseUrl}/${data.slug}` : baseUrl,
+			type: 'article'
+		},
+		phrases: {
+			title: `${dialectName} Phrases - How to Say the Everyday Things | Parallel Arabic`,
+			description: `A ${dialectName} phrasebook: hello, how are you, thank you, happy birthday and the rest of the everyday phrases, each with Arabic script, tashkeel, transliteration and audio.`,
+			url: `${baseUrl}/${dialectSlug}/phrases`,
+			type: 'website'
+		},
+		phrase: {
+			title: data?.arabic
+				? `How to Say "${data.english}" in ${dialectName} - ${data.arabic} (${data.transliteration})`
+				: `${dialectName} Phrases | Parallel Arabic`,
+			description: data?.arabic
+				? `"${data.english}" in ${dialectName} is ${data.arabic} (${data.transliteration}). Hear it pronounced, see the forms for a man, a woman and a group, how people reply, and example sentences.`
+				: `How to say the everyday phrases in ${dialectName}.`,
+			url: data?.slug
+				? `${baseUrl}/${dialectSlug}/phrases/${data.slug}`
+				: `${baseUrl}/${dialectSlug}/phrases`,
+			type: 'article'
+		},
 		'dialect-vocab': {
 			title: data?.section
 				? `${dialectName} Vocabulary: ${data.section} | Parallel Arabic`
@@ -436,6 +466,11 @@ export function resolvePageKey(
 				? { key: 'dialect-conjugations', data: { dialect } }
 				: { key: 'conjugation-verb', data: { dialect, slug: parts[2] } };
 		}
+		if (parts[1] === 'phrases') {
+			return parts.length === 2
+				? { key: 'phrases', data: { dialect } }
+				: { key: 'phrase', data: { dialect, slug: parts[2] } };
+		}
 		if (parts[1] === 'vocab' || parts[1] === 'write') {
 			const key = parts[1] === 'vocab' ? 'dialect-vocab' : 'dialect-write';
 			return {
@@ -447,6 +482,17 @@ export function resolvePageKey(
 			return parts.length === 2
 				? { key: 'stories', data: { dialect } }
 				: { key: 'story', data: { dialect, id: parts[2] } };
+		}
+	}
+
+	// /<dialect>-vs-<dialect> comparison pages
+	if (parts.length === 1 && /-vs-/.test(parts[0])) {
+		const [a, b] = parts[0].split('-vs-');
+		if (
+			(DIALECTS as readonly string[]).includes(a) &&
+			(DIALECTS as readonly string[]).includes(b)
+		) {
+			return { key: 'comparison', data: { a, b, slug: parts[0] } };
 		}
 	}
 
@@ -545,7 +591,9 @@ export function deriveRouteData(key: string, data: any): Record<string, unknown>
 			dialect: data.storyData.dialect,
 			hasPaywalledSection: true,
 			title: `${englishTitle} (${arabicTitle}) - ${dialectName} Story with Translation`,
-			description: `Read "${englishTitle}" (${arabicTitle}), ${indefiniteArticle(dialectName)} ${dialectName} story in ${sentenceCount} sentences${level}. Arabic, transliteration and English side by side, with a full vocabulary glossary.`
+			description: `Read "${englishTitle}" (${arabicTitle}), ${indefiniteArticle(
+				dialectName
+			)} ${dialectName} story in ${sentenceCount} sentences${level}. Arabic, transliteration and English side by side, with a full vocabulary glossary.`
 		};
 	}
 
@@ -555,6 +603,21 @@ export function deriveRouteData(key: string, data: any): Record<string, unknown>
 			description: data.blogPost.description,
 			url: data.blogPost.url,
 			date: data.blogPost.date
+		};
+	}
+
+	if (key === 'dialect' || key === 'keyboard' || key === 'game') {
+		return { faqs: data.faqs };
+	}
+
+	if (key === 'phrase' && data.phrase) {
+		return {
+			slug: data.phrase.slug,
+			english: data.phrase.english,
+			arabic: data.phrase.arabicPlain || data.phrase.arabic,
+			transliteration: data.phrase.transliteration,
+			literal: data.phrase.literal,
+			usage: data.phrase.usage
 		};
 	}
 
@@ -705,6 +768,37 @@ export function generateStructuredData(page: string, data?: any) {
 		}
 
 		return article;
+	}
+
+	// Any page that supplies faqs gets FAQPage markup.
+	if (Array.isArray(data?.faqs) && data.faqs.length) {
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'FAQPage',
+			mainEntity: data.faqs.map((faq: { question: string; answer: string }) => ({
+				'@type': 'Question',
+				name: faq.question,
+				acceptedAnswer: { '@type': 'Answer', text: faq.answer }
+			}))
+		};
+	}
+
+	if (page === 'phrase' && data?.arabic) {
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'DefinedTerm',
+			name: data.arabic,
+			alternateName: data.transliteration,
+			description: `"${data.english}" in ${formatDialectName(data.dialect ?? '')}. ${
+				data.usage ?? ''
+			}`.trim(),
+			inDefinedTermSet: {
+				'@type': 'DefinedTermSet',
+				name: `${formatDialectName(data.dialect ?? '')} Phrases`,
+				url: `${baseUrl}/${data.dialect}/phrases`
+			},
+			inLanguage: 'ar'
+		};
 	}
 
 	if (page === 'conjugation-verb' && data?.arabic) {

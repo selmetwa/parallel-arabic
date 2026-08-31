@@ -1,0 +1,75 @@
+{
+  "slug": "how-much-is-this",
+  "dialect": "egyptian-arabic",
+  "english": "how much is this?",
+  "arabic": "بِكَام دَه؟",
+  "arabicPlain": "بكام ده؟",
+  "transliteration": "bkam da?",
+  "franco": "bkam da?",
+  "literal": "with-how-much this?",
+  "usage": "This is the standard, everyday way to ask the price of an item in Cairo. It is used in all contexts, from street markets to high-end stores, regardless of who you are speaking to. The demonstrative pronoun changes based on the grammatical gender of the item being discussed.",
+  "variants": [
+    {
+      "label": "feminine item",
+      "arabic": "بِكَام دِي؟",
+      "transliteration": "bkam di?",
+      "english": "How much is this?",
+      "note": "Use when pointing at a grammatically feminine object like a bag or a car."
+    },
+    {
+      "label": "plural items",
+      "arabic": "بِكَام دُول؟",
+      "transliteration": "bkam dol?",
+      "english": "How much are these?",
+      "note": "Use when asking the price of multiple items together."
+    },
+    {
+      "label": "polite to a man",
+      "arabic": "بِكَام دَه لَو سَمَحْت؟",
+      "transliteration": "bkam da law sama7t?",
+      "english": "How much is this, please?",
+      "note": "Add 'law sama7t' to be more polite to a male shopkeeper."
+    },
+    {
+      "label": "polite to a woman",
+      "arabic": "بِكَام دَه لَو سَمَحْتِي؟",
+      "transliteration": "bkam da law sama7ti?",
+      "english": "How much is this, please?",
+      "note": "Add 'law sama7ti' to be more polite to a female shopkeeper."
+    }
+  ],
+  "responses": [
+    {
+      "arabic": "دَه بِخَمْسِين جِنِيه.",
+      "transliteration": "da b khamsin geney.",
+      "english": "This is fifty pounds."
+    },
+    {
+      "arabic": "بِبَلَاش يَا بَاشَا.",
+      "transliteration": "bebalash ya basha.",
+      "english": "It is for free, pasha."
+    },
+    {
+      "arabic": "دِي بِمِيَّة جِنِيه.",
+      "transliteration": "di b meyet geney.",
+      "english": "This is one hundred pounds."
+    }
+  ],
+  "examples": [
+    {
+      "arabic": "لَو سَمَحْت، بِكَام دَه؟",
+      "transliteration": "law sama7t, bkam da?",
+      "english": "Excuse me, how much is this?"
+    },
+    {
+      "arabic": "بِكَام دَه؟ غَالِي أَوِي!",
+      "transliteration": "bkam da? ghali awy!",
+      "english": "How much is this? It is very expensive!"
+    },
+    {
+      "arabic": "التِّيشِيرْت دَه بِكَام؟",
+      "transliteration": "el-tishert da bkam?",
+      "english": "How much is this t-shirt?"
+    }
+  ]
+}
