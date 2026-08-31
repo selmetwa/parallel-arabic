@@ -8,9 +8,11 @@
 		dialect: Dialect;
 		/** Whether the phrasebook has been generated for this dialect. */
 		hasPhrases?: boolean;
+		/** Whether word pages have been built for this dialect. */
+		hasWords?: boolean;
 	}
 
-	let { dialect, hasPhrases = false }: Props = $props();
+	let { dialect, hasPhrases = false, hasWords = false }: Props = $props();
 
 	const content = $derived(DIALECT_LANDING[dialect]);
 
@@ -26,6 +28,16 @@
 						href: `/${dialect}/phrases`,
 						title: 'Phrases',
 						description: `How to say hello, thank you, happy birthday and the rest, with audio and the forms for a man, a woman or a group.`
+					}
+				]
+			: []),
+		...(hasWords
+			? [
+					{
+						href: `/${dialect}/word`,
+						title: 'Common Words',
+						description:
+							'The words you meet most often, each with audio and real example sentences from our stories.'
 					}
 				]
 			: []),

@@ -1,0 +1,68 @@
+{
+  "slug": "hello",
+  "dialect": "darija",
+  "english": "hello",
+  "arabic": "السَّلام عَلَيْكُم",
+  "arabicPlain": "السلام عليكم",
+  "transliteration": "s-salam 3alaykum",
+  "franco": "salam 3alikoum",
+  "literal": "the peace upon you",
+  "usage": "This is the default, universal greeting used in Morocco regardless of the time of day. It is appropriate for both formal and casual situations, and can be said to individuals or groups. For a quicker, more casual greeting among friends, people often just say salam.",
+  "variants": [
+    {
+      "label": "casual / short",
+      "arabic": "سَلام",
+      "transliteration": "salam",
+      "english": "hi / hello",
+      "note": "Used informally with friends, family, or in quick passing."
+    },
+    {
+      "label": "informal / youth",
+      "arabic": "أَهْلاً",
+      "transliteration": "ahlan",
+      "english": "hey / welcome",
+      "note": "Used casually among friends or when warmly welcoming someone you know."
+    },
+    {
+      "label": "morning greeting",
+      "arabic": "صْباح لْخِير",
+      "transliteration": "sba7 l-khir",
+      "english": "good morning",
+      "note": "Used instead of the standard greeting during the morning hours."
+    }
+  ],
+  "responses": [
+    {
+      "arabic": "وَعَلَيْكُم السَّلام",
+      "transliteration": "wa 3alaykum s-salam",
+      "english": "and upon you be peace"
+    },
+    {
+      "arabic": "سَلام",
+      "transliteration": "salam",
+      "english": "hi"
+    },
+    {
+      "arabic": "أَهْلاً بِيك",
+      "transliteration": "ahlan bik",
+      "english": "welcome to you"
+    }
+  ],
+  "examples": [
+    {
+      "arabic": "السَّلام عَلَيْكُم، عافاك واش عَنْدك لْخُبز؟",
+      "transliteration": "s-salam 3alaykum, 3afak wash 3andek l-khobz?",
+      "english": "Hello, please do you have bread?"
+    },
+    {
+      "arabic": "سَلام، كِيدايْر؟ كُلشي مْزْيان؟",
+      "transliteration": "salam, kidayr? kulshi mzyan?",
+      "english": "Hi, how are you doing? Everything good?"
+    },
+    {
+      "arabic": "السَّلام عَلَيْكُم، دِّيني لْلْمْدِينَة عافاك.",
+      "transliteration": "s-salam 3alaykum, ddini l-mdina 3afak.",
+      "english": "Hello, take me to the medina please."
+    }
+  ]
+}
