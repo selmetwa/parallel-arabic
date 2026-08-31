@@ -1,0 +1,68 @@
+{
+  "slug": "hello",
+  "dialect": "fusha",
+  "english": "hello",
+  "arabic": "مَرْحَبًا",
+  "arabicPlain": "مرحبا",
+  "transliteration": "mar7aban",
+  "franco": "mar7aba",
+  "literal": "spaciousness (functions directly as hello)",
+  "usage": "This is the standard, secular way to say hello in Modern Standard Arabic. It is used in formal writing, news broadcasts, and educational settings, and is appropriate for addressing anyone regardless of gender or number. While 'as-salamu 3alaykum' is also ubiquitous, 'mar7aban' is the most direct equivalent to a simple English hello.",
+  "variants": [
+    {
+      "label": "formal greeting",
+      "arabic": "السَّلَامُ عَلَيْكُمْ",
+      "transliteration": "as-salamu 3alaykum",
+      "english": "peace be upon you",
+      "note": "The most common formal and traditional greeting used across the Arab world."
+    },
+    {
+      "label": "casual / short",
+      "arabic": "أَهْلًا",
+      "transliteration": "ahlan",
+      "english": "hi / hello",
+      "note": "A shorter, slightly more casual greeting often used interchangeably with marhaban."
+    },
+    {
+      "label": "warm welcome",
+      "arabic": "أَهْلًا وَسَهْلًا",
+      "transliteration": "ahlan wa sahlan",
+      "english": "welcome",
+      "note": "Used when receiving guests or emphasizing a warm reception."
+    }
+  ],
+  "responses": [
+    {
+      "arabic": "مَرْحَبًا بِكَ",
+      "transliteration": "mar7aban bika",
+      "english": "hello to you (to a man)"
+    },
+    {
+      "arabic": "مَرْحَبًا بِكِ",
+      "transliteration": "mar7aban biki",
+      "english": "hello to you (to a woman)"
+    },
+    {
+      "arabic": "أَهْلًا بِكُمْ",
+      "transliteration": "ahlan bikum",
+      "english": "welcome to you (to a group)"
+    }
+  ],
+  "examples": [
+    {
+      "arabic": "مَرْحَبًا، كَيْفَ حَالُكَ الْيَوْمَ؟",
+      "transliteration": "mar7aban, kayfa 7aluka al-yawm?",
+      "english": "Hello, how are you today? (to a man)"
+    },
+    {
+      "arabic": "مَرْحَبًا بِالْجَمِيعِ فِي هَذَا اللِّقَاءِ.",
+      "transliteration": "mar7aban bil-jami3 fi hadha al-liqa'.",
+      "english": "Hello everyone in this meeting."
+    },
+    {
+      "arabic": "قَالَتْ مَرْحَبًا ثُمَّ جَلَسَتْ.",
+      "transliteration": "qalat mar7aban thumma jalasat.",
+      "english": "She said hello, then sat down."
+    }
+  ]
+}

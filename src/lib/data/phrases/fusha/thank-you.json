@@ -1,0 +1,75 @@
+{
+  "slug": "thank-you",
+  "dialect": "fusha",
+  "english": "thank you",
+  "arabic": "شُكْراً",
+  "arabicPlain": "شكرا",
+  "transliteration": "shukran",
+  "franco": "shokran",
+  "literal": "thanks",
+  "usage": "This is the standard, universal way to say thank you in Modern Standard Arabic. It is used in all contexts, from formal writing and news broadcasts to everyday speech. To be more specific or formal, pronouns are attached to the preposition li to specify who is being thanked.",
+  "variants": [
+    {
+      "label": "to a man",
+      "arabic": "شُكْراً لَكَ",
+      "transliteration": "shukran laka",
+      "english": "Thank you (to a male)",
+      "note": "Used when directly addressing a single male."
+    },
+    {
+      "label": "to a woman",
+      "arabic": "شُكْراً لَكِ",
+      "transliteration": "shukran laki",
+      "english": "Thank you (to a female)",
+      "note": "Used when directly addressing a single female."
+    },
+    {
+      "label": "to a group",
+      "arabic": "شُكْراً لَكُمْ",
+      "transliteration": "shukran lakum",
+      "english": "Thank you (to a group)",
+      "note": "Used when addressing multiple people or a mixed-gender group."
+    },
+    {
+      "label": "very much",
+      "arabic": "شُكْراً جَزيلاً",
+      "transliteration": "shukran jazeelan",
+      "english": "Thank you very much",
+      "note": "Used to express deeper gratitude or in more formal contexts."
+    }
+  ],
+  "responses": [
+    {
+      "arabic": "عَفْواً",
+      "transliteration": "3afwan",
+      "english": "You are welcome"
+    },
+    {
+      "arabic": "لا شُكْرَ عَلى واجِبٍ",
+      "transliteration": "la shukra 3ala wajibin",
+      "english": "Don't mention it (literally: no thanks for a duty)"
+    },
+    {
+      "arabic": "عَلى الرُّحْبِ وَالسَّعَةِ",
+      "transliteration": "3ala ar-ru7bi wa as-sa3ati",
+      "english": "You are very welcome (literally: with spaciousness and ease)"
+    }
+  ],
+  "examples": [
+    {
+      "arabic": "شُكْراً جَزيلاً عَلى مُساعَدَتِكَ.",
+      "transliteration": "shukran jazeelan 3ala musa3adatika.",
+      "english": "Thank you very much for your help."
+    },
+    {
+      "arabic": "شُكْراً لَكُمْ عَلى حُضورِكُمُ اليَوْمَ.",
+      "transliteration": "shukran lakum 3ala 7udoorikumu al-yawma.",
+      "english": "Thank you all for your attendance today."
+    },
+    {
+      "arabic": "أَقولُ لَكَ شُكْراً مِنْ أَعْماقِ قَلْبي.",
+      "transliteration": "aqoolu laka shukran min a3maqi qalbee.",
+      "english": "I say thank you to you from the bottom of my heart."
+    }
+  ]
+}

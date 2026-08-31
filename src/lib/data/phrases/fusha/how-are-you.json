@@ -1,0 +1,75 @@
+{
+  "slug": "how-are-you",
+  "dialect": "fusha",
+  "english": "how are you?",
+  "arabic": "كَيْفَ حَالُكَ؟",
+  "arabicPlain": "كيف حالك؟",
+  "transliteration": "kayfa 7aluka?",
+  "franco": "kayfa 7aluka?",
+  "literal": "how condition your",
+  "usage": "This is the standard way to ask how someone is in Modern Standard Arabic. It is used in formal writing, news broadcasts, and literature, though rarely in casual conversation where local dialects dominate. The pronoun suffix changes depending on the gender and number of the people being addressed.",
+  "variants": [
+    {
+      "label": "to a woman",
+      "arabic": "كَيْفَ حَالُكِ؟",
+      "transliteration": "kayfa 7aluki?",
+      "english": "How are you?",
+      "note": "Used when addressing a single female."
+    },
+    {
+      "label": "to a group",
+      "arabic": "كَيْفَ حَالُكُمْ؟",
+      "transliteration": "kayfa 7alukum?",
+      "english": "How are you?",
+      "note": "Used when addressing three or more people, or a mixed-gender group."
+    },
+    {
+      "label": "to two people",
+      "arabic": "كَيْفَ حَالُكُمَا؟",
+      "transliteration": "kayfa 7alukuma?",
+      "english": "How are you?",
+      "note": "Used specifically when addressing exactly two people."
+    },
+    {
+      "label": "gender-neutral / general",
+      "arabic": "كَيْفَ الْحَالُ؟",
+      "transliteration": "kayfa al-7alu?",
+      "english": "How are things?",
+      "note": "A general way to ask how things are without specifying gender."
+    }
+  ],
+  "responses": [
+    {
+      "arabic": "بِخَيْرٍ، شُكْراً",
+      "transliteration": "bikhayrin, shukran",
+      "english": "Well, thank you."
+    },
+    {
+      "arabic": "الْحَمْدُ لِلَّهِ",
+      "transliteration": "al-7amdu lillahi",
+      "english": "Praise be to God (doing well)."
+    },
+    {
+      "arabic": "أَنَا بِخَيْرٍ، وَأَنْتَ؟",
+      "transliteration": "ana bikhayrin, wa-anta?",
+      "english": "I am well, and you?"
+    }
+  ],
+  "examples": [
+    {
+      "arabic": "مَرْحَباً يَا أَحْمَد، كَيْفَ حَالُكَ الْيَوْمَ؟",
+      "transliteration": "mar7aban ya a7mad, kayfa 7aluka al-yawma?",
+      "english": "Hello Ahmad, how are you today?"
+    },
+    {
+      "arabic": "سَيِّدَتِي، كَيْفَ حَالُكِ بَعْدَ الرِّحْلَةِ؟",
+      "transliteration": "sayyidati, kayfa 7aluki ba3da ar-ri7lati?",
+      "english": "Madam, how are you after the trip?"
+    },
+    {
+      "arabic": "أَهْلاً بِكُمْ جَمِيعاً، كَيْفَ حَالُكُمْ؟",
+      "transliteration": "ahlan bikum jami3an, kayfa 7alukum?",
+      "english": "Welcome everyone, how are you?"
+    }
+  ]
+}

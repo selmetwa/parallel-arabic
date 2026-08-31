@@ -41,9 +41,3 @@ export interface PhraseIndexEntry {
 	arabic: string;
 	transliteration: string;
 }
-
-export interface PhraseIndex {
-	dialect: string;
-	generatedAt: string;
-	phrases: PhraseIndexEntry[];
-}

@@ -1,0 +1,68 @@
+{
+  "slug": "how-much-is-this",
+  "dialect": "darija",
+  "english": "how much is this?",
+  "arabic": "بْشْحال هادا؟",
+  "arabicPlain": "بشحال هادا؟",
+  "transliteration": "bsh7al hada?",
+  "franco": "bch7al hada?",
+  "literal": "with-how-much this",
+  "usage": "This is the standard, everyday way to ask for a price in Morocco, used in souks, taxis, and modern stores alike. It is completely neutral in formality and can be said to anyone. The word 'hada' (this) changes to 'hadi' if the object is feminine, or 'hado' for plural items.",
+  "variants": [
+    {
+      "label": "feminine item",
+      "arabic": "بْشْحال هادي؟",
+      "transliteration": "bsh7al hadi?",
+      "english": "How much is this? (feminine)",
+      "note": "Use this when pointing at or referring to a grammatically feminine object."
+    },
+    {
+      "label": "plural items",
+      "arabic": "بْشْحال هادو؟",
+      "transliteration": "bsh7al hado?",
+      "english": "How much are these?",
+      "note": "Use this when asking for the total price of a group of items."
+    },
+    {
+      "label": "naming the item",
+      "arabic": "بْشْحال هاد...؟",
+      "transliteration": "bsh7al had...?",
+      "english": "How much is this...?",
+      "note": "Use this followed by a specific noun, like 'bsh7al had l-ktab?' (how much is this book?)."
+    }
+  ],
+  "responses": [
+    {
+      "arabic": "بْ عْشْرين دْرْهْم.",
+      "transliteration": "b 3shrin drhm.",
+      "english": "For twenty dirhams."
+    },
+    {
+      "arabic": "هادا بْ خْمْسين دْرْهْم.",
+      "transliteration": "hada b khmsin drhm.",
+      "english": "This is for fifty dirhams."
+    },
+    {
+      "arabic": "مْيّة دْرْهْم، أخير تَمَن.",
+      "transliteration": "miyat drhm, akhir tamn.",
+      "english": "One hundred dirhams, final price."
+    }
+  ],
+  "examples": [
+    {
+      "arabic": "عافاك، بْشْحال هادا؟",
+      "transliteration": "3afak, bsh7al hada?",
+      "english": "Excuse me, how much is this?"
+    },
+    {
+      "arabic": "بْشْحال هاد صّبّاط؟",
+      "transliteration": "bsh7al had s-sbbat?",
+      "english": "How much are these shoes?"
+    },
+    {
+      "arabic": "بْشْحال هادي؟ واش تْقْدْر تْنْقْص شْوِيّة؟",
+      "transliteration": "bsh7al hadi? wash tqdr tnqs shwiya?",
+      "english": "How much is this? Can you lower the price a little?"
+    }
+  ]
+}
