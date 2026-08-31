@@ -1,0 +1,82 @@
+{
+  "slug": "please",
+  "dialect": "egyptian-arabic",
+  "english": "please",
+  "arabic": "لَوْ سَمَحْت",
+  "arabicPlain": "لو سمحت",
+  "transliteration": "law sama7t",
+  "franco": "law sama7t",
+  "literal": "if you allowed",
+  "usage": "This is the most common way to say \"please\" or \"excuse me\" in Egyptian Arabic. It is used to politely ask for something, get a waiter's attention, or ask someone to move. It must agree with the gender and number of the person being addressed.",
+  "variants": [
+    {
+      "label": "to a man",
+      "arabic": "لَوْ سَمَحْت",
+      "transliteration": "law sama7t",
+      "english": "please (to a man)",
+      "note": "The standard form used when speaking to a single male."
+    },
+    {
+      "label": "to a woman",
+      "arabic": "لَوْ سَمَحْتِي",
+      "transliteration": "law sama7ti",
+      "english": "please (to a woman)",
+      "note": "The standard form used when speaking to a single female."
+    },
+    {
+      "label": "to a group",
+      "arabic": "لَوْ سَمَحْتُوا",
+      "transliteration": "law sama7to",
+      "english": "please (to a group)",
+      "note": "Used when addressing two or more people."
+    },
+    {
+      "label": "alternative (more formal)",
+      "arabic": "مِنْ فَضْلَك",
+      "transliteration": "min fadlak",
+      "english": "please (from your favor)",
+      "note": "Slightly more formal, often used by service workers or when asking for a physical item."
+    },
+    {
+      "label": "alternative (excuse me)",
+      "arabic": "بَعْد إِذْنَك",
+      "transliteration": "ba3d iznak",
+      "english": "excuse me / please",
+      "note": "Used when asking to pass by someone, interrupting, or politely requesting a favor."
+    }
+  ],
+  "responses": [
+    {
+      "arabic": "إِتْفَضَّل",
+      "transliteration": "etfaddal",
+      "english": "go ahead / here you go"
+    },
+    {
+      "arabic": "عِنَيَّا",
+      "transliteration": "3enaya",
+      "english": "with pleasure (literally: my eyes)"
+    },
+    {
+      "arabic": "تَحْت أَمْرَك",
+      "transliteration": "ta7t amrak",
+      "english": "at your service"
+    }
+  ],
+  "examples": [
+    {
+      "arabic": "لَوْ سَمَحْت، عَايِز قَهْوَة.",
+      "transliteration": "law sama7t, 3ayez ahwa.",
+      "english": "Please, I want a coffee."
+    },
+    {
+      "arabic": "مُمْكِن تِسَاعِدْنِي لَوْ سَمَحْت؟",
+      "transliteration": "momken tesa3edni law sama7t?",
+      "english": "Can you help me, please?"
+    },
+    {
+      "arabic": "لَوْ سَمَحْتُوا، إِفْتَحُوا الْبَاب.",
+      "transliteration": "law sama7to, efta7o el bab.",
+      "english": "Please (to a group), open the door."
+    }
+  ]
+}

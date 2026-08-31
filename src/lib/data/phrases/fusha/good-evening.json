@@ -1,0 +1,75 @@
+{
+  "slug": "good-evening",
+  "dialect": "fusha",
+  "english": "good evening",
+  "arabic": "مَسَاءُ الْخَيْرِ",
+  "arabicPlain": "مساء الخير",
+  "transliteration": "masaa' al-khayr",
+  "franco": "masa2 el 5eir",
+  "literal": "evening of goodness",
+  "usage": "This is the standard greeting used from late afternoon until late at night in formal and broadcast contexts. It is universally understood across the Arab world and remains unchanged regardless of the gender or number of people being addressed. It is frequently used to open news broadcasts, formal speeches, and evening meetings.",
+  "variants": [
+    {
+      "label": "standard",
+      "arabic": "مَسَاءُ الْخَيْرِ",
+      "transliteration": "masaa' al-khayr",
+      "english": "Good evening",
+      "note": "The default phrase used for anyone, regardless of gender or number."
+    },
+    {
+      "label": "highly formal to a group",
+      "arabic": "طَابَ مَسَاؤُكُمْ",
+      "transliteration": "Taaba masaa'ukum",
+      "english": "May your evening be good",
+      "note": "Used by news anchors, hosts, or public speakers addressing an audience."
+    },
+    {
+      "label": "highly formal to a man",
+      "arabic": "طَابَ مَسَاؤُكَ",
+      "transliteration": "Taaba masaa'uka",
+      "english": "May your evening be good",
+      "note": "A formal wish directed at a single male."
+    },
+    {
+      "label": "highly formal to a woman",
+      "arabic": "طَابَ مَسَاؤُكِ",
+      "transliteration": "Taaba masaa'uki",
+      "english": "May your evening be good",
+      "note": "A formal wish directed at a single female."
+    }
+  ],
+  "responses": [
+    {
+      "arabic": "مَسَاءُ النُّورِ",
+      "transliteration": "masaa' an-nuur",
+      "english": "Good evening (literally: evening of light)"
+    },
+    {
+      "arabic": "مَسَاءُ السُّرُورِ",
+      "transliteration": "masaa' as-suruur",
+      "english": "Good evening (literally: evening of joy)"
+    },
+    {
+      "arabic": "مَسَاءُ الْخَيْرَاتِ",
+      "transliteration": "masaa' al-khayraat",
+      "english": "Good evening (literally: evening of blessings)"
+    }
+  ],
+  "examples": [
+    {
+      "arabic": "مَسَاءُ الْخَيْرِ أَيُّهَا السَّيِّدَاتُ وَالسَّادَةُ.",
+      "transliteration": "masaa' al-khayr ayyuhaa as-sayyidaat wa as-saadah.",
+      "english": "Good evening, ladies and gentlemen."
+    },
+    {
+      "arabic": "مَسَاءُ الْخَيْرِ، هَلْ يُمْكِنُنِي التَّحَدُّثُ مَعَ الْمُدِيرِ؟",
+      "transliteration": "masaa' al-khayr, hal yumkinunii at-ta7adduth ma3a al-mudiir?",
+      "english": "Good evening, may I speak with the manager?"
+    },
+    {
+      "arabic": "قَالَ الْمُذِيعُ: مَسَاءُ الْخَيْرِ وَأَهْلاً بِكُمْ فِي نَشْرَةِ الْأَخْبَارِ.",
+      "transliteration": "qaala al-mudhii3: masaa' al-khayr wa ahlan bikum fii nashrat al-akhbaar.",
+      "english": "The announcer said: Good evening and welcome to the news broadcast."
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "slug": "hello",
+  "dialect": "egyptian-arabic",
+  "english": "hello",
+  "arabic": "أَهْلاً",
+  "arabicPlain": "أهلا",
+  "transliteration": "ahlan",
+  "franco": "ahlan",
+  "literal": "family (short for you have come to family)",
+  "usage": "This is the most common secular way to say hello or welcome in Cairo. It is used in both casual and professional settings, regardless of religion or age. People usually follow it immediately with a question about the person's health or state.",
+  "variants": [
+    {
+      "label": "Islamic/Traditional",
+      "arabic": "سَلام عَلَيْكُم",
+      "transliteration": "salam 3aleikom",
+      "english": "peace be upon you",
+      "note": "The default greeting for many Egyptians, especially in shops or on the street."
+    },
+    {
+      "label": "To a man (How are you)",
+      "arabic": "إِزَيَّك",
+      "transliteration": "ezzayak",
+      "english": "how are you",
+      "note": "Often used as a standalone hello when greeting a male friend or acquaintance."
+    },
+    {
+      "label": "To a woman (How are you)",
+      "arabic": "إِزَيِّك",
+      "transliteration": "ezzayek",
+      "english": "how are you",
+      "note": "The female equivalent of ezzayak, used when greeting a woman."
+    },
+    {
+      "label": "More welcoming",
+      "arabic": "أَهْلاً وَسَهْلاً",
+      "transliteration": "ahlan wa sahlan",
+      "english": "hello and welcome",
+      "note": "Used when receiving guests at your home or office to show extra warmth."
+    }
+  ],
+  "responses": [
+    {
+      "arabic": "أَهْلاً بِيك",
+      "transliteration": "ahlan bik",
+      "english": "hello to you (to a man)"
+    },
+    {
+      "arabic": "أَهْلاً بِيكِي",
+      "transliteration": "ahlan biki",
+      "english": "hello to you (to a woman)"
+    },
+    {
+      "arabic": "وَعَلَيْكُم السَلام",
+      "transliteration": "wa 3aleikom el salam",
+      "english": "and peace be upon you (response to salam 3aleikom)"
+    }
+  ],
+  "examples": [
+    {
+      "arabic": "أَهْلاً، إِزَيَّك يا مُحَمَّد؟",
+      "transliteration": "ahlan, ezzayak ya mo7amed?",
+      "english": "Hello, how are you Mohamed?"
+    },
+    {
+      "arabic": "أَهْلاً يا جَماعَة، عامْلِين إِيه؟",
+      "transliteration": "ahlan ya gama3a, 3amlin eh?",
+      "english": "Hello everyone, how are you doing?"
+    },
+    {
+      "arabic": "أَهْلاً بِيك يا فَنْدِم.",
+      "transliteration": "ahlan bik ya fandem.",
+      "english": "Hello sir."
+    }
+  ]
+}

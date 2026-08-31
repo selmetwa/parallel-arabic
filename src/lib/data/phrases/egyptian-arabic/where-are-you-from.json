@@ -1,0 +1,82 @@
+{
+  "slug": "where-are-you-from",
+  "dialect": "egyptian-arabic",
+  "english": "where are you from?",
+  "arabic": "إِنْتَ مِنْين؟",
+  "arabicPlain": "انت منين؟",
+  "transliteration": "enta mneen?",
+  "franco": "enta mnen?",
+  "literal": "you from-where?",
+  "usage": "This is the standard, everyday way to ask someone where they are from in Cairo. It is used in both casual and semi-formal situations, though highly formal contexts use the respectful pronoun '7adretak'. The pronoun must change based on the gender and number of the person being addressed.",
+  "variants": [
+    {
+      "label": "to a man",
+      "arabic": "إِنْتَ مِنْين؟",
+      "transliteration": "enta mneen?",
+      "english": "Where are you from?",
+      "note": "The standard casual form used when speaking to a single male."
+    },
+    {
+      "label": "to a woman",
+      "arabic": "إِنْتِي مِنْين؟",
+      "transliteration": "enti mneen?",
+      "english": "Where are you from?",
+      "note": "The standard casual form used when speaking to a single female."
+    },
+    {
+      "label": "to a group",
+      "arabic": "إِنْتُوا مِنْين؟",
+      "transliteration": "ento mneen?",
+      "english": "Where are you from?",
+      "note": "Used when addressing two or more people."
+    },
+    {
+      "label": "formal to a man",
+      "arabic": "حَضْرِتَك مِنْين؟",
+      "transliteration": "7adretak mneen?",
+      "english": "Where are you from?",
+      "note": "Used to show respect to an older man, a customer, or someone in authority."
+    },
+    {
+      "label": "formal to a woman",
+      "arabic": "حَضْرِتِك مِنْين؟",
+      "transliteration": "7adretek mneen?",
+      "english": "Where are you from?",
+      "note": "Used to show respect to an older woman, a customer, or someone in authority."
+    }
+  ],
+  "responses": [
+    {
+      "arabic": "أَنَا مِنْ مَصْر.",
+      "transliteration": "ana min masr.",
+      "english": "I am from Egypt."
+    },
+    {
+      "arabic": "أَنَا مِنْ أَمْرِيكَا.",
+      "transliteration": "ana min amreeka.",
+      "english": "I am from America."
+    },
+    {
+      "arabic": "أَنَا مَصْرِي.",
+      "transliteration": "ana masry.",
+      "english": "I am Egyptian (male)."
+    }
+  ],
+  "examples": [
+    {
+      "arabic": "أَهْلاً، إِنْتَ مِنْين؟",
+      "transliteration": "ahlan, enta mneen?",
+      "english": "Hello, where are you from?"
+    },
+    {
+      "arabic": "إِنْتَ بِتِتْكَلِّم عَرَبِي كُوَيِّس، إِنْتَ مِنْين؟",
+      "transliteration": "enta betetkallem 3araby kwayyes, enta mneen?",
+      "english": "You speak Arabic well, where are you from?"
+    },
+    {
+      "arabic": "لَوْ سَمَحْت يَا فَنْدِم، حَضْرِتَك مِنْين؟",
+      "transliteration": "law sama7t ya fandem, 7adretak mneen?",
+      "english": "Excuse me sir, where are you from?"
+    }
+  ]
+}

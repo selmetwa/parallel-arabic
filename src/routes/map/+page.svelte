@@ -5,10 +5,6 @@
   let { data } = $props();
 </script>
 
-<svelte:head>
-  <title>Word Map | Parallel Arabic</title>
-</svelte:head>
-
 <div class="min-h-screen p-4">
   <header class="mb-4">
     <h1 class="text-2xl font-bold text-text-300">Your Word Map</h1>

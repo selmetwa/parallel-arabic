@@ -61,10 +61,6 @@
 	}
 </script>
 
-<svelte:head>
-	<title>Daily Challenge</title>
-</svelte:head>
-
 <section class="px-4 mt-6 sm:px-8 max-w-3xl mx-auto pb-16">
 	<!-- Header -->
 	<div class="mb-6">

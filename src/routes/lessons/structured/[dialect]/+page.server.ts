@@ -13,9 +13,9 @@ function normalizeDialect(dialect: string): string {
 export const load = async ({ params, parent, url }) => {
 	const { dialect } = params;
 
-	// The alphabet module now lives at /alphabet-new.
+	// The alphabet module now lives at /alphabet.
 	if (dialect.toLowerCase() === 'alphabet') {
-		redirect(307, '/alphabet-new');
+		redirect(307, '/alphabet');
 	}
 
 	const { session, isSubscribed, user } = await parent();

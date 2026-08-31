@@ -9,10 +9,6 @@
     }
 </script>
 
-<svelte:head>
-    <title>{data.session.title} | Self Study</title>
-</svelte:head>
-
 <SelfStudyPlayer
     session={data.session}
     sessionId={data.sessionId}

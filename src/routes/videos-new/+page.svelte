@@ -179,11 +179,6 @@
 	});
 </script>
 
-<svelte:head>
-	<title>Arabic Shorts | Learn Arabic</title>
-	<meta name="description" content="Learn Arabic through short-form video content in your target dialect" />
-</svelte:head>
-
 <div class="fixed inset-0 bg-gray-950 flex flex-col z-50">
 	<!-- Header with dialect selector -->
 	<header class="absolute top-0 left-0 right-0 z-20 bg-gradient-to-b from-black/90 via-black/60 to-transparent">

@@ -4,6 +4,7 @@ import { darijaSections } from '$lib/constants/darija-sections';
 import { levantineSections } from '$lib/constants/levantine-sections';
 import { fushaSections } from '$lib/constants/fusha-sections';
 import { supabase } from '$lib/supabaseClient';
+import { GAME_FAQS } from '$lib/constants/game-content';
 
 interface GameProgress {
   id: string;
@@ -61,6 +62,8 @@ export const load: PageServerLoad = async ({ parent }) => {
     categories: categoriesByDialect,
     dialects,
     inProgressGames,
-    categoryNameLookup
+    categoryNameLookup,
+    // Surfaced so the layout can emit FAQPage structured data.
+    faqs: GAME_FAQS
   };
 };

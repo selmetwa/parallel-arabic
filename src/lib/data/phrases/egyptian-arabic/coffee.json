@@ -1,0 +1,70 @@
+{
+  "slug": "coffee",
+  "dialect": "egyptian-arabic",
+  "english": "coffee",
+  "arabic": "وَاحِد قَهْوَة لَوْ سَمَحْت",
+  "arabicPlain": "واحد قهوة لو سمحت",
+  "transliteration": "wa7ed ahwa law sama7t",
+  "franco": "wa7ed ahwa law sama7t",
+  "literal": "one coffee if you allowed",
+  "usage": "Used to order a coffee in a café (ahwa) or restaurant. When ordering traditional Turkish-style coffee, Egyptians usually specify the sugar level immediately, such as 'mazboot' (medium sugar) or 'sada' (no sugar). The word 'ahwa' refers to both the drink itself and the traditional street-level coffee shops where it is served.",
+  "variants": [
+    {
+      "label": "Medium sugar (default)",
+      "arabic": "وَاحِد قَهْوَة مَظْبُوط لَوْ سَمَحْت",
+      "transliteration": "wa7ed ahwa mazboot law sama7t",
+      "english": "One medium-sugar coffee, please.",
+      "note": "This is the default and most common way to order traditional Egyptian coffee."
+    },
+    {
+      "label": "No sugar (black)",
+      "arabic": "وَاحِد قَهْوَة سَادَة لَوْ سَمَحْت",
+      "transliteration": "wa7ed ahwa sada law sama7t",
+      "english": "One black coffee, please.",
+      "note": "Use this if you want your coffee completely without sugar."
+    },
+    {
+      "label": "Extra sugar",
+      "arabic": "وَاحِد قَهْوَة زِيَادَة لَوْ سَمَحْت",
+      "transliteration": "wa7ed ahwa zeyada law sama7t",
+      "english": "One extra-sugar coffee, please.",
+      "note": "Used when you prefer your coffee very sweet."
+    },
+    {
+      "label": "Female speaker ordering",
+      "arabic": "عَايْزَة قَهْوَة لَوْ سَمَحْت",
+      "transliteration": "3ayza ahwa law sama7t",
+      "english": "I want a coffee, please.",
+      "note": "A common alternative for a woman ordering, instead of saying 'wa7ed ahwa'."
+    }
+  ],
+  "responses": [
+    {
+      "arabic": "عِنَيَّا، سُكَّرْهَا إِيه؟",
+      "transliteration": "3enayya, sokkarha eh?",
+      "english": "Right away, how much sugar?"
+    },
+    {
+      "arabic": "حَاضِر، دِقِيقَة وَاحْدَة",
+      "transliteration": "7ader, de2ee2a wa7da",
+      "english": "Certainly, one minute."
+    }
+  ],
+  "examples": [
+    {
+      "arabic": "لَوْ سَمَحْت، عَايِز اِتْنِين قَهْوَة مَظْبُوط.",
+      "transliteration": "law sama7t, 3ayez etneen ahwa mazboot.",
+      "english": "Excuse me, I want two medium-sugar coffees."
+    },
+    {
+      "arabic": "اَلْقَهْوَة دِي سُكَّرْهَا زِيَادَة قَوِي.",
+      "transliteration": "el ahwa di sokkarha zeyada awi.",
+      "english": "This coffee has way too much sugar."
+    },
+    {
+      "arabic": "تِشْرَب شَاي وَلَا قَهْوَة؟",
+      "transliteration": "teshrab shay wala ahwa?",
+      "english": "Will you drink tea or coffee?"
+    }
+  ]
+}

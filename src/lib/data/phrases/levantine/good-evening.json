@@ -1,0 +1,82 @@
+{
+  "slug": "good-evening",
+  "dialect": "levantine",
+  "english": "good evening",
+  "arabic": "مَسَا الخَيْر",
+  "arabicPlain": "مسا الخير",
+  "transliteration": "masa l-kheir",
+  "franco": "masa el 5eir",
+  "literal": "evening the-goodness",
+  "usage": "This is the standard, everyday greeting used from late afternoon until the end of the night. It is appropriate for all formalities and social situations across the Levant, and the base phrase does not change based on the gender or number of people being addressed.",
+  "variants": [
+    {
+      "label": "standard",
+      "arabic": "مَسَا الخَيْر",
+      "transliteration": "masa l-kheir",
+      "english": "Good evening",
+      "note": "The default greeting for any situation."
+    },
+    {
+      "label": "warm alternative (to a man)",
+      "arabic": "يِسْعِد مَسَاك",
+      "transliteration": "yes3ed masak",
+      "english": "May your evening be happy",
+      "note": "A very common and slightly more affectionate alternative used when addressing a male."
+    },
+    {
+      "label": "warm alternative (to a woman)",
+      "arabic": "يِسْعِد مَسَاكِي",
+      "transliteration": "yes3ed masaki",
+      "english": "May your evening be happy",
+      "note": "The feminine equivalent of the warm alternative."
+    },
+    {
+      "label": "warm alternative (to a group)",
+      "arabic": "يِسْعِد مَسَاكُم",
+      "transliteration": "yes3ed masakom",
+      "english": "May your evening be happy",
+      "note": "Used when addressing two or more people."
+    },
+    {
+      "label": "plural/enthusiastic",
+      "arabic": "مَسَا الخَيْرَات",
+      "transliteration": "masa l-kheirat",
+      "english": "Good evenings",
+      "note": "A cheerful, pluralized version often used when entering a room full of people."
+    }
+  ],
+  "responses": [
+    {
+      "arabic": "مَسَا النُّور",
+      "transliteration": "masa n-nour",
+      "english": "Evening of light"
+    },
+    {
+      "arabic": "مَسَا الوَرْد",
+      "transliteration": "masa l-ward",
+      "english": "Evening of roses"
+    },
+    {
+      "arabic": "يَا هَلَا",
+      "transliteration": "ya hala",
+      "english": "Welcome / Hello"
+    }
+  ],
+  "examples": [
+    {
+      "arabic": "مَسَا الخَيْر يَا شَبَاب، كِيفكُم اليُوم؟",
+      "transliteration": "masa l-kheir ya shabab, kifkom l-yom?",
+      "english": "Good evening guys, how are you today?"
+    },
+    {
+      "arabic": "مَسَا الخَيْر، فِي طَاوْلِة لَشَخْصِين؟",
+      "transliteration": "masa l-kheir, fi tawle la-shakhsein?",
+      "english": "Good evening, is there a table for two?"
+    },
+    {
+      "arabic": "يِسْعِد مَسَاكُم، تَفَضَّلُوا ارْتَاحُوا.",
+      "transliteration": "yes3ed masakom, tfaddalo rta7o.",
+      "english": "Good evening to you all, please come in and make yourselves comfortable."
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "slug": "whats-your-name",
+  "dialect": "levantine",
+  "english": "what's your name?",
+  "arabic": "شُو اسْمَك؟",
+  "arabicPlain": "شو اسمك؟",
+  "transliteration": "shu ismak?",
+  "franco": "shou ismak?",
+  "literal": "what name-your?",
+  "usage": "This is the standard, everyday way to ask someone's name in the Levant. It is used in casual and semi-formal situations with peers or people younger than you. For older individuals, authority figures, or in formal settings, speakers often switch to 'shu ism 7adertak' (what is the name of your presence) to show respect.",
+  "variants": [
+    {
+      "label": "to a woman",
+      "arabic": "شُو اسْمِك؟",
+      "transliteration": "shu ismik?",
+      "english": "What's your name?",
+      "note": "Use this when addressing a single female."
+    },
+    {
+      "label": "to a group",
+      "arabic": "شُو اسْمكُن؟",
+      "transliteration": "shu ismkun?",
+      "english": "What are your names?",
+      "note": "Use this when addressing two or more people (in Jordanian and Palestinian, 'shu ismkom' is more common)."
+    },
+    {
+      "label": "formal, to a man",
+      "arabic": "شُو اسْم حَضِرْتَك؟",
+      "transliteration": "shu ism 7adertak?",
+      "english": "What is your name?",
+      "note": "Use this to show respect to an older man, a customer, or in a professional setting."
+    },
+    {
+      "label": "formal, to a woman",
+      "arabic": "شُو اسْم حَضِرْتِك؟",
+      "transliteration": "shu ism 7adertik?",
+      "english": "What is your name?",
+      "note": "Use this to show respect to an older woman, a customer, or in a professional setting."
+    }
+  ],
+  "responses": [
+    {
+      "arabic": "اسْمي...",
+      "transliteration": "ismi...",
+      "english": "My name is..."
+    },
+    {
+      "arabic": "أنا...",
+      "transliteration": "ana...",
+      "english": "I am..."
+    }
+  ],
+  "examples": [
+    {
+      "arabic": "مَرْحَبا، أنا جْديد هون. شُو اسْمَك؟",
+      "transliteration": "mar7aba, ana jdid hon. shu ismak?",
+      "english": "Hello, I'm new here. What's your name?"
+    },
+    {
+      "arabic": "عَفْواً، ما سْمِعْت مْنيح، شُو اسْمِك؟",
+      "transliteration": "3afwan, ma sme3t mni7, shu ismik?",
+      "english": "Sorry, I didn't hear well, what's your name? (to a woman)"
+    },
+    {
+      "arabic": "أهْلاً فيكُن، شُو اسْمكُن؟",
+      "transliteration": "ahlan fikun, shu ismkun?",
+      "english": "Welcome to you all, what are your names?"
+    }
+  ]
+}

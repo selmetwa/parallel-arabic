@@ -1,6 +1,7 @@
 <script>
 	import { resolve } from '$app/paths';
 	import { slide } from 'svelte/transition';
+	import AppStoreBadge from '$lib/components/AppStoreBadge.svelte';
 
 	/** @typedef {{ title: string; img: string; fullImg?: string; descriptions: string[]; learnMoreLink?: string }} Card */
 	/** @typedef {{ t: string; b?: boolean }} QuoteSegment */
@@ -16,7 +17,6 @@
 	function closeLightbox() {
 		lightbox = null;
 	}
-
 
 	/** @type {number | null} */
 	let openIndex = $state(null);
@@ -37,7 +37,7 @@
 			img: '/images/marketing-alphabet.png',
 			fullImg: '/images/features-large/alphabet.png',
 			descriptions: ['Learn the Arabic Alphabet with interactive exercises'],
-			learnMoreLink: '/alphabet-new'
+			learnMoreLink: '/alphabet'
 		},
 		{
 			title: 'Tutor',
@@ -133,7 +133,9 @@
 			title: 'Dialect Comparison',
 			img: '/images/marketing-dialect-comparison.png',
 			fullImg: '/images/features-large/dialect-compare.png',
-			descriptions: ['Compare how a word or phrase is said across different Arabic dialects side by side']
+			descriptions: [
+				'Compare how a word or phrase is said across different Arabic dialects side by side'
+			]
 		},
 		{
 			title: 'On demand definitions',
@@ -157,11 +159,11 @@
 		},
 		{
 			q: 'How is this different from Duolingo?',
-			a: "Duolingo teaches Modern Standard Arabic through fixed, gamified exercises. Parallel Arabic focuses on spoken dialects and lets you generate learning material around your own saved words, so you’re practicing vocabulary that’s actually relevant to you, in the dialect you want to speak."
+			a: 'Duolingo teaches Modern Standard Arabic through fixed, gamified exercises. Parallel Arabic focuses on spoken dialects and lets you generate learning material around your own saved words, so you’re practicing vocabulary that’s actually relevant to you, in the dialect you want to speak.'
 		},
 		{
 			q: 'Is there a mobile app?',
-			a: 'Yes.... and no Parallel Arabic is a PWA (Progressive Web App) and can be installed as an app on your home screen on iOS and Android. Native IOS and Android apps are coming soon.'
+			a: 'Yes — Parallel Arabic is on the App Store for iPhone and iPad, free to download. There is no Android app yet, but the site is a Progressive Web App, so on Android and desktop you can install it to your home screen and get the same full-screen experience.'
 		}
 	];
 
@@ -233,12 +235,17 @@
 			<h2 class="text-base font-medium text-text-200 sm:text-2xl">
 				Learn and practice Arabic Dialects
 			</h2>
-			<a
-				href={resolve('/signup')}
-				class="mt-2 inline-flex items-center gap-2 rounded-full border-2 border-tile-600 bg-tile-500 px-7 py-3.5 text-base font-semibold text-text-300 transition-all duration-200 hover:-translate-y-0.5 hover:bg-tile-600 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300"
-			>
-				Start now <span aria-hidden="true">→</span>
-			</a>
+			<div class="mt-2 flex flex-col items-center gap-3 sm:flex-row">
+				<a
+					href={resolve('/signup')}
+					class="inline-flex items-center gap-2 rounded-full border-2 border-tile-600 bg-tile-500 px-7 py-3.5 text-base font-semibold text-text-300 transition-all duration-200 hover:-translate-y-0.5 hover:bg-tile-600 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300"
+				>
+					Start now <span aria-hidden="true">→</span>
+				</a>
+				<AppStoreBadge
+					className="rounded-full border-2 border-tile-600 px-6 py-2.5 hover:-translate-y-0.5 hover:shadow-lg"
+				/>
+			</div>
 		</header>
 
 		<!-- Feature Cards — CSS columns masonry -->
@@ -319,7 +326,11 @@
 	{/snippet}
 
 	<section class="overflow-hidden border-y border-tile-500 bg-tile-200 py-10 sm:py-14">
-			<h2 class="mx-auto text-center text-2xl sm:text-4xl font-bold text-text-300 tracking-tight mb-8 sm:mb-10">What our users say</h2>
+		<h2
+			class="mx-auto mb-8 text-center text-2xl font-bold tracking-tight text-text-300 sm:mb-10 sm:text-4xl"
+		>
+			What our users say
+		</h2>
 
 		<div class="marquee">
 			<div class="marquee__track">
@@ -329,25 +340,28 @@
 		</div>
 	</section>
 
-
 	<!-- FAQ — smooth accordion (logic preserved) -->
-	<section class="py-14 sm:py-20 bg-tile-200 border-t border-tile-500">
-		<div class="max-w-3xl mx-auto px-4 sm:px-8">
-			<h2 class="text-2xl sm:text-4xl font-bold text-text-300 tracking-tight mb-8 sm:mb-10">Frequently asked questions</h2>
+	<section class="border-t border-tile-500 bg-tile-200 py-14 sm:py-20">
+		<div class="mx-auto max-w-3xl px-4 sm:px-8">
+			<h2 class="mb-8 text-2xl font-bold tracking-tight text-text-300 sm:mb-10 sm:text-4xl">
+				Frequently asked questions
+			</h2>
 			<div class="space-y-3">
 				{#each faqs as faq, i (i)}
-					<div class="bg-tile-400 rounded-xl overflow-hidden">
+					<div class="overflow-hidden rounded-xl bg-tile-400">
 						<button
 							onclick={() => toggle(i)}
-							class="w-full text-left px-5 sm:px-6 py-4 flex items-center justify-between gap-4 cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300"
+							class="flex w-full cursor-pointer items-center justify-between gap-4 px-5 py-4 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300 sm:px-6"
 							aria-expanded={openIndex === i}
 						>
-							<span class="text-text-300 font-semibold">{faq.q}</span>
-							<span class="text-text-200 text-2xl leading-none flex-shrink-0" aria-hidden="true">{openIndex === i ? '−' : '+'}</span>
+							<span class="font-semibold text-text-300">{faq.q}</span>
+							<span class="flex-shrink-0 text-2xl leading-none text-text-200" aria-hidden="true"
+								>{openIndex === i ? '−' : '+'}</span
+							>
 						</button>
 						{#if openIndex === i}
-							<div class="px-5 sm:px-6 pb-5" transition:slide={{ duration: 200 }}>
-								<p class="text-text-200 leading-relaxed">{faq.a}</p>
+							<div class="px-5 pb-5 sm:px-6" transition:slide={{ duration: 200 }}>
+								<p class="leading-relaxed text-text-200">{faq.a}</p>
 							</div>
 						{/if}
 					</div>

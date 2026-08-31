@@ -101,9 +101,7 @@
 </script>
 
 <svelte:head>
-  <title>Frequently Asked Questions - Parallel Arabic</title>
-  <meta name="description" content="Find answers to common questions about Parallel Arabic, including why to learn Arabic dialects, how the platform works, subscription details, and learning tips." />
-  
+  <!-- Title and description come from the root layout via $lib/utils/seo -->
   <!-- FAQ Schema -->
   {@html `<script type="application/ld+json">${JSON.stringify(faqSchema)}</script>`}
 </svelte:head>

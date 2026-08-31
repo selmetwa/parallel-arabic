@@ -1,0 +1,82 @@
+{
+  "slug": "please",
+  "dialect": "levantine",
+  "english": "please",
+  "arabic": "لَوْ سَمَحْت",
+  "arabicPlain": "لو سمحت",
+  "transliteration": "law sama7t",
+  "franco": "law sama7t",
+  "literal": "if you permitted",
+  "usage": "This is the most common and versatile way to say \"please\" across the Levant, used to politely request something or get someone's attention like a waiter. It conjugates depending on the gender and number of the people you are speaking to. In Lebanon and parts of Syria, \"iza bitreed\" is also heavily used, while younger speakers everywhere frequently just use the English word \"please\".",
+  "variants": [
+    {
+      "label": "to a man",
+      "arabic": "لَوْ سَمَحْت",
+      "transliteration": "law sama7t",
+      "english": "please",
+      "note": "The default form used when addressing a single male."
+    },
+    {
+      "label": "to a woman",
+      "arabic": "لَوْ سَمَحْتِي",
+      "transliteration": "law sama7ti",
+      "english": "please",
+      "note": "Used when addressing a single female."
+    },
+    {
+      "label": "to a group",
+      "arabic": "لَوْ سَمَحْتُوا",
+      "transliteration": "law sama7tu",
+      "english": "please",
+      "note": "Used when addressing two or more people."
+    },
+    {
+      "label": "Lebanese/Syrian alternative",
+      "arabic": "إِذَا بِتْرِيد",
+      "transliteration": "iza bitreed",
+      "english": "please",
+      "note": "A very common alternative in Lebanon and Syria, literally meaning 'if you want'."
+    },
+    {
+      "label": "more formal",
+      "arabic": "مِنْ فَضْلَك",
+      "transliteration": "min fadlak",
+      "english": "please",
+      "note": "Slightly more formal, often used in customer service or professional settings."
+    }
+  ],
+  "responses": [
+    {
+      "arabic": "تَفَضَّل",
+      "transliteration": "tfaddal",
+      "english": "Here you go / Go ahead."
+    },
+    {
+      "arabic": "تِكْرَم",
+      "transliteration": "tikram",
+      "english": "At your service / You're welcome."
+    },
+    {
+      "arabic": "عَلَى عَيْنِي",
+      "transliteration": "3ala 3ayni",
+      "english": "With pleasure."
+    }
+  ],
+  "examples": [
+    {
+      "arabic": "لَوْ سَمَحْت، مُمْكِن الْحِسَاب؟",
+      "transliteration": "law sama7t, mumkin l-7isab?",
+      "english": "Please, can I have the bill?"
+    },
+    {
+      "arabic": "جِيبْلِي قَهْوَة لَوْ سَمَحْتِي.",
+      "transliteration": "jibli qahwa law sama7ti.",
+      "english": "Bring me a coffee, please (to a woman)."
+    },
+    {
+      "arabic": "لَوْ سَمَحْتُوا، سَكِّرُوا الْبَاب.",
+      "transliteration": "law sama7tu, sakkiru l-bab.",
+      "english": "Please close the door (to a group)."
+    }
+  ]
+}

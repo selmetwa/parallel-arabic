@@ -1,0 +1,82 @@
+{
+  "slug": "excuse-me",
+  "dialect": "egyptian-arabic",
+  "english": "excuse me",
+  "arabic": "لَوْ سَمَحْت",
+  "arabicPlain": "لو سمحت",
+  "transliteration": "law sama7t",
+  "franco": "law sama7t",
+  "literal": "if you permitted",
+  "usage": "This is the most common way to say excuse me when getting someone's attention, such as a waiter or a stranger on the street. It is also used to politely preface a request. The ending changes based on the gender and number of the people being addressed.",
+  "variants": [
+    {
+      "label": "To a man",
+      "arabic": "لَوْ سَمَحْت",
+      "transliteration": "law sama7t",
+      "english": "excuse me",
+      "note": "Used when addressing a single male."
+    },
+    {
+      "label": "To a woman",
+      "arabic": "لَوْ سَمَحْتِي",
+      "transliteration": "law sama7ti",
+      "english": "excuse me",
+      "note": "Used when addressing a single female."
+    },
+    {
+      "label": "To a group",
+      "arabic": "لَوْ سَمَحْتُوا",
+      "transliteration": "law sama7to",
+      "english": "excuse me",
+      "note": "Used when addressing two or more people."
+    },
+    {
+      "label": "Passing by",
+      "arabic": "عَنْ إِذْنَك",
+      "transliteration": "3an iznak",
+      "english": "excuse me / with your permission",
+      "note": "Used when asking someone to move so you can pass, or when excusing yourself to leave."
+    },
+    {
+      "label": "Apologetic",
+      "arabic": "لَامُؤَاخَذَة",
+      "transliteration": "la mo2akhza",
+      "english": "pardon me",
+      "note": "Used casually when bumping into someone or mentioning something slightly taboo."
+    }
+  ],
+  "responses": [
+    {
+      "arabic": "اِتْفَضَّل",
+      "transliteration": "etfaddal",
+      "english": "go ahead / here you go"
+    },
+    {
+      "arabic": "نَعَم",
+      "transliteration": "na3am",
+      "english": "yes?"
+    },
+    {
+      "arabic": "أَيْوَة",
+      "transliteration": "aywa",
+      "english": "yes?"
+    }
+  ],
+  "examples": [
+    {
+      "arabic": "لَوْ سَمَحْت، فِين الْمَحَطَّة؟",
+      "transliteration": "law sama7t, feyn el ma7atta?",
+      "english": "Excuse me, where is the station?"
+    },
+    {
+      "arabic": "الْحِسَاب لَوْ سَمَحْت.",
+      "transliteration": "el 7esab law sama7t.",
+      "english": "The check, excuse me."
+    },
+    {
+      "arabic": "عَنْ إِذْنَك، عَايِز أَعَدِّي.",
+      "transliteration": "3an iznak, 3ayez a3addi.",
+      "english": "Excuse me, I want to pass."
+    }
+  ]
+}
