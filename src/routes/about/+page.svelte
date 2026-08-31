@@ -37,7 +37,7 @@
 			img: '/images/marketing-alphabet.png',
 			fullImg: '/images/features-large/alphabet.png',
 			descriptions: ['Learn the Arabic Alphabet with interactive exercises'],
-			learnMoreLink: '/alphabet-new'
+			learnMoreLink: '/alphabet'
 		},
 		{
 			title: 'Tutor',

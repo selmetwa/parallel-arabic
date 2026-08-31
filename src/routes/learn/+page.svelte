@@ -3,11 +3,6 @@
   import SectionHeader from '$lib/components/SectionHeader.svelte';
 </script>
 
-<svelte:head>
-  <title>Learn Arabic - Alphabet, Lessons, Review & Vocabulary</title>
-  <meta name="description" content="Start learning Arabic with structured lessons, master the alphabet, review vocabulary with spaced repetition, and explore words across dialects." />
-</svelte:head>
-
 <section class="px-3 py-6 sm:px-8 max-w-7xl mx-auto">
   <SectionHeader title="Learn" />
 

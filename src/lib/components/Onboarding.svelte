@@ -532,7 +532,7 @@
                     icon: '✍️',
                     title: 'Alphabet',
                     description: 'Learn to read Arabic script from scratch',
-                    url: '/alphabet-new',
+                    url: '/alphabet',
                     badge: proficiencyLevel === 'A1' || proficiencyLevel === 'A2' ? 'New to Arabic script?' : null
                   },
                   {

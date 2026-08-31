@@ -3,11 +3,6 @@
   import SectionHeader from '$lib/components/SectionHeader.svelte';
 </script>
 
-<svelte:head>
-  <title>Practice Arabic - Stories, Sentences & Speaking</title>
-  <meta name="description" content="Practice Arabic with interactive stories, sentence drills, and speaking exercises. Improve your reading, grammar, and pronunciation skills." />
-</svelte:head>
-
 <section class="px-3 py-6 sm:px-8 max-w-7xl mx-auto">
   <SectionHeader title="Practice" />
 

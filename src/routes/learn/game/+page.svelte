@@ -241,11 +241,6 @@
   }
 </script>
 
-<svelte:head>
-  <title>Vocabulary Game - Practice Arabic</title>
-  <meta name="description" content="Play interactive games to practice Arabic vocabulary. Choose from multiple choice, listening, and speaking modes." />
-</svelte:head>
-
 <section class="px-3 py-6 sm:px-8 max-w-4xl mx-auto">
   <SectionHeader title="Vocabulary Game" />
 

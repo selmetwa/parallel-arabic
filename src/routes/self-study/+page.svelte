@@ -70,10 +70,6 @@
     }
 </script>
 
-<svelte:head>
-    <title>Self Study | Parallel Arabic</title>
-</svelte:head>
-
 {#if session}
     <SelfStudyPlayer {session} {sessionId} onClose={closeSession} user={data.user} />
 {:else}

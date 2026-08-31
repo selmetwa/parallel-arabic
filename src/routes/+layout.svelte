@@ -15,7 +15,11 @@
 	import { dev, browser } from '$app/environment';
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';
 	import posthog from 'posthog-js';
-	import { getPageMeta, generateStructuredData, formatDialectName } from '$lib/utils/seo';
+	import {
+		resolvePageMeta,
+		resolveStructuredData,
+		siteStructuredData
+	} from '$lib/utils/seo';
 	import {
 		importJobStore,
 		resumeImportJobIfNeeded,
@@ -217,164 +221,13 @@
 	// PWA manifest link
 	const webManifest = $derived(pwaInfo ? pwaInfo.webManifest.linkTag : '');
 
-	// Determine current page for SEO
-	const currentPage = $derived.by(() => {
-		const path = $page.url?.pathname ?? '/';
-
-		// Extract page identifier from path
-		if (path === '/') return 'home';
-		if (path.startsWith('/lessons/')) {
-			// Check if it's a specific lesson or dialect lessons page
-			const parts = path.split('/').filter((p) => p);
-			if (parts.length === 2 && parts[0] === 'lessons') {
-				// /lessons/[id] - specific lesson
-				return 'lesson';
-			}
-			// /lessons/[dialect] or /lessons/structured/[dialect]
-			return 'lessons';
-		}
-		if (path.startsWith('/stories/')) {
-			const parts = path.split('/').filter((p) => p);
-			if (parts.length === 2 && parts[0] === 'stories') {
-				// /stories/[id] - specific story
-				return 'story';
-			}
-			// /stories/[dialect]
-			return 'stories';
-		}
-		if (path.startsWith('/generated_story/')) return 'generated_story';
-		if (path === '/review/import') return 'import';
-		if (path === '/review' || path.startsWith('/review/')) return 'review';
-		if (path === '/tutor') return 'tutor';
-		if (path === '/stories') return 'stories';
-		if (path === '/lessons') return 'lessons';
-		if (path === '/alphabet-new') return 'alphabet-new';
-		if (path.startsWith('/alphabet')) return 'alphabet';
-		if (path === '/videos') return 'videos';
-		if (path === '/vocabulary') return 'vocabulary';
-		if (path === '/about') return 'about';
-		if (path === '/faq') return 'faq';
-		if (path === '/blog') return 'blog';
-		if (path.startsWith('/blog/')) return 'blogPost';
-		if (['/egyptian-arabic', '/fusha', '/levantine', '/darija'].includes(path)) return 'dialect';
-		return 'home';
-	});
-
-	// Get page-specific data from page store
-	const pageData = $derived.by(() => {
-		// Try to get data from the page store if available
-		// This will be populated by individual page load functions
-		return $page.data || {};
-	});
-
-	// Generate SEO meta tags
-	const seoMeta = $derived.by(() => {
-		const pageType = currentPage;
-		const data = pageData;
-
-		// Extract dialect from path if available
-		let pathParts: string[] = [];
-		pathParts = $page.url?.pathname?.split('/').filter((p) => p) ?? [];
-
-		const dialect = pathParts.find((p) =>
-			['egyptian-arabic', 'levantine', 'darija', 'fusha'].includes(p)
-		);
-
-		// For lesson pages, try to get lesson data
-		if (pageType === 'lesson' && data?.lesson) {
-			return getPageMeta(pageType, {
-				title: data.lesson.title || data.lesson.title_arabic,
-				description: data.lesson.description,
-				id: data.lesson.id,
-				dialect: data.lesson.dialect || dialect
-			});
-		}
-
-		// For story pages, try to get story data
-		if (pageType === 'story' && data?.story) {
-			return getPageMeta(pageType, {
-				title: data.story.title,
-				description: data.story.description,
-				id: data.story.id,
-				dialect: data.story.dialect || dialect
-			});
-		}
-
-		// For generated story pages
-		if (pageType === 'generated_story' && data?.storyData) {
-			const storyBody = data.storyData.story_body;
-			const englishTitle = storyBody?.title?.english || '';
-			const arabicTitle = storyBody?.title?.arabic || '';
-			const dialectName = formatDialectName(data.storyData.dialect);
-			const difficulty = data.storyData.difficulty || '';
-			const sentenceCount = storyBody?.sentences?.length || 0;
-			return getPageMeta('generated_story', {
-				title: englishTitle
-					? `${englishTitle} / ${arabicTitle} - ${dialectName} Arabic Story`
-					: null,
-				description: englishTitle
-					? `Read "${englishTitle}" (${arabicTitle}), a ${difficulty} ${dialectName} Arabic story with ${sentenceCount} sentences. Practice your Arabic reading comprehension on Parallel Arabic.`
-					: null,
-				id: data.storyData.id
-			});
-		}
-
-		// For blog post pages, use the post SEO data from the page load
-		if (pageType === 'blogPost' && data?.blogPost) {
-			return getPageMeta('blogPost', {
-				title: data.blogPost.title,
-				description: data.blogPost.description,
-				url: data.blogPost.url
-			});
-		}
-
-		return getPageMeta(pageType, { ...data, dialect });
-	});
-
-	// Generate structured data
-	const structuredData = $derived.by(() => {
-		const pageType = currentPage;
-		const data = pageData;
-
-		// For lesson pages, use lesson data
-		if (pageType === 'lesson' && data?.lesson) {
-			return generateStructuredData(pageType, {
-				title: data.lesson.title || data.lesson.title_arabic,
-				description: data.lesson.description,
-				level: data.lesson.level
-			});
-		}
-
-		// For story pages, use story data
-		if (pageType === 'story' && data?.story) {
-			return generateStructuredData(pageType, {
-				title: data.story.title,
-				description: data.story.description
-			});
-		}
-
-		// For generated story pages
-		if (pageType === 'generated_story' && data?.storyData) {
-			const storyBody = data.storyData.story_body;
-			const englishTitle = storyBody?.title?.english || '';
-			const arabicTitle = storyBody?.title?.arabic || '';
-			const dialectName = formatDialectName(data.storyData.dialect);
-			const difficulty = data.storyData.difficulty || '';
-			return generateStructuredData('generated_story', {
-				title: `${englishTitle} / ${arabicTitle} - ${dialectName} Arabic Story`,
-				description: `A ${difficulty} ${dialectName} Arabic story: ${englishTitle}${
-					arabicTitle ? ` / ${arabicTitle}` : ''
-				}`
-			});
-		}
-
-		// For blog post pages, emit BlogPosting structured data
-		if (pageType === 'blogPost' && data?.blogPost) {
-			return generateStructuredData('blogPost', data.blogPost);
-		}
-
-		return generateStructuredData(pageType, data);
-	});
+	// SEO metadata. All resolution lives in $lib/utils/seo so it can be unit
+	// tested; a route can override everything by returning `seo` from its load.
+	const seoMeta = $derived(resolvePageMeta($page.url?.pathname ?? '/', $page.data));
+	const structuredData = $derived(
+		resolveStructuredData($page.url?.pathname ?? '/', $page.data)
+	);
+	const siteGraph = siteStructuredData();
 </script>
 
 <svelte:head>
@@ -408,6 +261,7 @@
 
 	<!-- Structured Data (JSON-LD) -->
 	{@html `<script type="application/ld+json">${JSON.stringify(structuredData)}</script>`}
+	{@html `<script type="application/ld+json">${JSON.stringify(siteGraph)}</script>`}
 
 	{@html webManifest}
 </svelte:head>

@@ -1,47 +1,23 @@
 User-agent: *
 Allow: /
+
+# Private, per-user, and transactional pages
 Disallow: /api/
-Disallow: /profile/
-Disallow: /review/
+Disallow: /profile
+Disallow: /review
+Disallow: /history
+Disallow: /leaderboard
+Disallow: /map
+Disallow: /self-study
+Disallow: /challenge
+Disallow: /admin-panel
 Disallow: /auth/
 Disallow: /login
 Disallow: /signup
-Disallow: /pricing/
-
-# LLM / AI agent discoverability
-Allow: /llms.txt
-
-# Allow important public pages
-Allow: /about
-Allow: /faq
-Allow: /support
-Allow: /mobile-app
-Allow: /keyboard
-Allow: /anki-decks
-
-# Hub pages (mobile navigation)
-Allow: /learn
-Allow: /practice
-Allow: /explore
-
-# Learning content
-Allow: /alphabet/
-Allow: /lessons
-Allow: /vocabulary
-Allow: /stories
-Allow: /sentences
-Allow: /speak
-Allow: /videos
-Allow: /videos-new
-Allow: /tutor
-Allow: /generated_story
-Allow: /review
-
-# Dialect pages
-Allow: /egyptian-arabic/
-Allow: /fusha/
-Allow: /levantine/
-Allow: /darija/
+Disallow: /password-reset
+Disallow: /pricing/checkout
+Disallow: /pricing/canceled
+Disallow: /pricing/error
+Disallow: /pricing/subscribed
 
 Sitemap: https://www.parallel-arabic.com/sitemap.xml
-

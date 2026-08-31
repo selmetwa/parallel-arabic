@@ -204,7 +204,7 @@
 			</p>
 			<p>
 				<a
-					href={resolve('/alphabet-new')}
+					href={resolve('/alphabet')}
 					class="font-semibold text-text-300 underline underline-offset-4 hover:text-text-200"
 				>
 					It's here →

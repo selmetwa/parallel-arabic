@@ -86,11 +86,6 @@
   }
 </script>
 
-<svelte:head>
-  <title>Reset Password - Supabase Auth</title>
-  <meta name="description" content="Reset your password" />
-</svelte:head>
-
 <main class="min-h-screen bg-tile-200 py-12">
   <div class="container mx-auto px-4">
     <div class="mx-4 mb-6 mt-12 border border-tile-600 bg-tile-300 py-8 px-6 sm:mx-36">

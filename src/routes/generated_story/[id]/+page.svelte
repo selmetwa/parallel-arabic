@@ -184,7 +184,6 @@
 	}
 
 	const sentences = $derived(story?.sentences || []);
-	const visibleSentences = $derived(canReadFull ? sentences : sentences.slice(0, 1));
 	const keyVocab = $derived(story?.keyVocab || []);
 	const quiz = $derived(story?.quiz || null);
 
@@ -518,7 +517,7 @@
         <div class="flex items-center gap-2">
           <StoryAudioButton
             dialect={storyDialect as any}
-            sentences={visibleSentences}
+            {sentences}
             onSentenceChange={handleSentenceChange}
           />
         </div>
@@ -608,7 +607,7 @@
 {#if sentences.length > 0}
   <!-- Story sentences with word-aligned display -->
   <div class="space-y-6 px-4 py-6">
-    {#each visibleSentences as sentence, sentenceIndex}
+    {#each sentences as sentence, sentenceIndex}
       {@const isCurrentlyPlaying = currentPlayingSentenceIndex === sentenceIndex}
       {@const sentenceEnglish = getSentenceEnglish(sentenceIndex)}
       {@const sentenceTransliteration = getSentenceTransliteration(sentenceIndex)}
@@ -682,11 +681,11 @@
 
   {#if !canReadFull && sentences.length > 1}
     <div class="mx-4 mb-8 rounded-2xl border-2 border-tile-600 bg-tile-400 p-8 text-center shadow-lg">
-      <div class="mb-4 text-4xl">📖</div>
+      <div class="mb-4 text-4xl">🔊</div>
       {#if !data.userId}
-        <h2 class="mb-2 text-2xl font-bold text-text-300">Log in to keep reading</h2>
+        <h2 class="mb-2 text-2xl font-bold text-text-300">Hear this story read aloud</h2>
         <p class="mb-6 text-text-200">
-          This story has {sentences.length} sentences. Log in or create a free account to read the full story.
+          Create a free account to play the audio for every sentence, take the comprehension quiz, and save these words to your review deck.
         </p>
         <div class="flex justify-center gap-3">
           <a href="/login" class="rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-700">
@@ -697,9 +696,9 @@
           </a>
         </div>
       {:else}
-        <h2 class="mb-2 text-2xl font-bold text-text-300">Subscribe to keep reading</h2>
+        <h2 class="mb-2 text-2xl font-bold text-text-300">Hear this story read aloud</h2>
         <p class="mb-6 text-text-200">
-          This story has {sentences.length} sentences. Subscribe to read the full story, earn XP, and track your progress.
+          Subscribe to play the audio for every sentence, take the comprehension quiz, earn XP, and track your progress.
         </p>
         <button onclick={() => isPaywallOpen = true} class="rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-700">
           Subscribe
@@ -710,7 +709,7 @@
 {/if}
 
 <!-- Key Vocabulary Section -->
-{#if canReadFull && keyVocab && keyVocab.length > 0}
+{#if keyVocab && keyVocab.length > 0}
   <section class="px-4 py-8 sm:px-8 max-w-5xl mx-auto border-t border-tile-600 mt-8">
     <!-- Section Header -->
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
@@ -788,7 +787,7 @@
   {@const correctCount = Object.values(quizStates).filter(s => s?.isAnswered && s?.isCorrect).length}
   {@const quizProgress = (answeredCount / quiz.questions.length) * 100}
 
-  <section class="px-4 py-8 sm:px-8 max-w-5xl mx-auto border-t border-tile-600 mt-8">
+  <section class="subscriber-only px-4 py-8 sm:px-8 max-w-5xl mx-auto border-t border-tile-600 mt-8">
     <!-- Quiz Header -->
     <div class="text-center mb-8">
       <div class="inline-flex items-center gap-3 mb-4">

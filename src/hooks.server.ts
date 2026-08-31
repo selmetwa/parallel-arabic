@@ -48,6 +48,14 @@ const posthogProxy: Handle = async ({ event, resolve }) => {
 const redirects: Handle = async ({ event, resolve }) => {
 	const { pathname } = event.url;
 
+	// Consolidate the apex domain into www. Search Console shows both indexed
+	// separately, which splits ranking signals across duplicate URLs.
+	if (!dev && event.url.hostname === 'parallel-arabic.com') {
+		const target = new URL(event.url);
+		target.hostname = 'www.parallel-arabic.com';
+		redirect(308, target.toString());
+	}
+
 	// /[dialect]/vocab or /[dialect]/write → /vocabulary?dialect=<dialect>
 	// const vocabWriteMatch = pathname.match(
 	// 	/^\/(egyptian-arabic|darija|levantine|fusha)\/(vocab|write)(?:\/.*)?$/

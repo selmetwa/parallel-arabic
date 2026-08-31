@@ -762,10 +762,6 @@
   }
 </script>
 
-<svelte:head>
-  <title>Playing Game - Arabic Vocabulary</title>
-</svelte:head>
-
 <section class="px-3 py-6 sm:px-8 max-w-2xl mx-auto">
   {#if isLoading}
     <!-- Loading State -->

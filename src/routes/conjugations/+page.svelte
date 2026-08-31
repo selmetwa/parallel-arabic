@@ -82,11 +82,6 @@
 	}
 </script>
 
-<svelte:head>
-	<title>Arabic Verb Conjugation Practice — All Dialects</title>
-	<meta name="description" content="Practice Arabic verb conjugations in Egyptian, Levantine, Moroccan Darija, and Modern Standard Arabic. Drill past, present, and future tense by typing or multiple-choice quiz." />
-</svelte:head>
-
 {#if hasReachedLimit && data.session}
 	<div class="mx-4 mb-6 mt-12 border border-tile-600 bg-tile-300 py-8 text-center sm:mx-auto max-w-2xl rounded-xl shadow-lg">
 		<h1 class="text-2xl font-bold text-text-300">You have reached your free conjugation limit.</h1>
