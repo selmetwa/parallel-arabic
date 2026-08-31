@@ -1,0 +1,75 @@
+{
+  "slug": "how-are-you",
+  "dialect": "levantine",
+  "english": "how are you?",
+  "arabic": "كِيفَك؟",
+  "arabicPlain": "كيفك؟",
+  "transliteration": "kifak?",
+  "franco": "keefak?",
+  "literal": "how you",
+  "usage": "This is the standard, everyday way to ask someone how they are across the Levant. It is appropriate for friends, family, and casual acquaintances. The suffix must change to match the gender and number of the people you are speaking to.",
+  "variants": [
+    {
+      "label": "to a woman",
+      "arabic": "كِيفِك؟",
+      "transliteration": "kifik?",
+      "english": "How are you?",
+      "note": "Use this when addressing a single female."
+    },
+    {
+      "label": "to a group",
+      "arabic": "كِيفكُن؟",
+      "transliteration": "kifkon?",
+      "english": "How are you?",
+      "note": "Use this when addressing two or more people."
+    },
+    {
+      "label": "more formal (to a man)",
+      "arabic": "كِيف حَالَك؟",
+      "transliteration": "kif 7alak?",
+      "english": "How is your state?",
+      "note": "Use this with older individuals or in professional settings."
+    },
+    {
+      "label": "casual alternative (to a man)",
+      "arabic": "شُو أَخْبَارَك؟",
+      "transliteration": "shu akhbarak?",
+      "english": "What's your news?",
+      "note": "A very common casual alternative or follow-up question."
+    }
+  ],
+  "responses": [
+    {
+      "arabic": "الْحَمْدُ لِلّٰه",
+      "transliteration": "al7amdu lillah",
+      "english": "Praise be to God (Fine)"
+    },
+    {
+      "arabic": "مْنِيح",
+      "transliteration": "mni7",
+      "english": "Good (if speaker is male)"
+    },
+    {
+      "arabic": "تَمَام",
+      "transliteration": "tamam",
+      "english": "Great / Perfect"
+    }
+  ],
+  "examples": [
+    {
+      "arabic": "مَرْحَبَا يَا أَحْمَد، كِيفَك الْيُوم؟",
+      "transliteration": "mar7aba ya a7mad, kifak al-yom?",
+      "english": "Hello Ahmad, how are you today?"
+    },
+    {
+      "arabic": "كِيفِك يَا سَارَة؟ زَمَان عَنِّك.",
+      "transliteration": "kifik ya sara? zaman 3annik.",
+      "english": "How are you Sara? Long time no see."
+    },
+    {
+      "arabic": "كِيفكُن؟ شُو عَامْلِين؟",
+      "transliteration": "kifkon? shu 3amlin?",
+      "english": "How are you guys? What are you doing?"
+    }
+  ]
+}

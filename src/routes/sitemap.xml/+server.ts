@@ -6,6 +6,7 @@ import { stories as staticStories } from '$lib/constants/stories/index';
 import { BLOCKED_STORY_IDS } from '$lib/constants/stories/blocked';
 import { PHRASE_SEEDS, PHRASE_DIALECTS } from '$lib/constants/phrase-seeds';
 import { COMPARISON_SLUGS } from '$lib/constants/dialect-comparisons';
+import { WORD_DIALECTS, wordSlugsFor } from '$lib/data/words/manifest';
 import { existsPhrase } from '$lib/data/phrases/manifest';
 const BASE_URL = 'https://www.parallel-arabic.com';
 
@@ -120,6 +121,30 @@ export const GET: RequestHandler = async () => {
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
   </url>`);
+	}
+
+	// Word pages, one index per dialect plus a page per word that earned one
+	for (const dialect of WORD_DIALECTS) {
+		const slugs = wordSlugsFor(dialect);
+		if (!slugs.length) continue;
+
+		urls.push(`
+  <url>
+    <loc>${BASE_URL}/${dialect}/word</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`);
+
+		for (const slug of slugs) {
+			urls.push(`
+  <url>
+    <loc>${BASE_URL}/${dialect}/word/${escapeXml(slug)}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>`);
+		}
 	}
 
 	// Dialect comparison pages

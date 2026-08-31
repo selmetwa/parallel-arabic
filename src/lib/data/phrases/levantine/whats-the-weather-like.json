@@ -1,0 +1,68 @@
+{
+  "slug": "whats-the-weather-like",
+  "dialect": "levantine",
+  "english": "what's the weather like?",
+  "arabic": "كِيف الجَوّ؟",
+  "arabicPlain": "كيف الجو؟",
+  "transliteration": "kif el jaw?",
+  "franco": "kif l jaw?",
+  "literal": "how the atmosphere?",
+  "usage": "This is the most standard and natural way to ask about the weather across the Levant. It is used in both casual and formal contexts with anyone. In Lebanon and parts of Syria, 'kif el ta2es' is equally common and means exactly the same thing.",
+  "variants": [
+    {
+      "label": "alternative noun",
+      "arabic": "كِيف الطَّقس؟",
+      "transliteration": "kif el ta2es?",
+      "english": "What's the weather like?",
+      "note": "Uses the specific word for weather (ta2es) instead of atmosphere (jaw), very common in Lebanon and Syria."
+    },
+    {
+      "label": "asking about their location",
+      "arabic": "كِيف الجَوّ عِندكُم؟",
+      "transliteration": "kif el jaw 3endkom?",
+      "english": "How is the weather where you are?",
+      "note": "Used when calling or messaging someone in a different city or country to ask about their local weather."
+    },
+    {
+      "label": "asking for an update",
+      "arabic": "شُو أَخبَار الطَّقس؟",
+      "transliteration": "shu akhbar el ta2es?",
+      "english": "What's the weather forecast/news?",
+      "note": "A conversational way to ask if someone has checked the weather forecast."
+    }
+  ],
+  "responses": [
+    {
+      "arabic": "شُوب كْتِير اليُوم.",
+      "transliteration": "shob ktir el yom.",
+      "english": "It's very hot today."
+    },
+    {
+      "arabic": "بَرد وعَم تْشَتّي.",
+      "transliteration": "bard w 3am tshatti.",
+      "english": "It's cold and raining."
+    },
+    {
+      "arabic": "الجَوّ بِجَنِّن.",
+      "transliteration": "el jaw bijannen.",
+      "english": "The weather is amazing."
+    }
+  ],
+  "examples": [
+    {
+      "arabic": "كِيف الجَوّ بَرّا؟ فِي دَاعِي لَجَاكِيت؟",
+      "transliteration": "kif el jaw barra? fi da3i la jaket?",
+      "english": "What's the weather like outside? Do I need a jacket?"
+    },
+    {
+      "arabic": "كِيف الطَّقس بِبَيرُوت هالأَيَّام؟",
+      "transliteration": "kif el ta2es b beirut hal iyyam?",
+      "english": "What's the weather like in Beirut these days?"
+    },
+    {
+      "arabic": "عَم فَكِّر نِطلَع مِشوَار، كِيف الجَوّ اليُوم؟",
+      "transliteration": "3am fakker netla3 meshwar, kif el jaw el yom?",
+      "english": "I'm thinking we go on an outing, how is the weather today?"
+    }
+  ]
+}

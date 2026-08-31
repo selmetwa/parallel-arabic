@@ -1,0 +1,82 @@
+{
+  "slug": "welcome",
+  "dialect": "levantine",
+  "english": "welcome",
+  "arabic": "أَهْلاً وَسَهْلاً",
+  "arabicPlain": "أهلا وسهلا",
+  "transliteration": "ahlan wa sahlan",
+  "franco": "ahlan w sahlan",
+  "literal": "Family and ease (from an old classical greeting meaning 'you have come to family and trodden level ground')",
+  "usage": "This is the standard, ubiquitous greeting for welcoming someone to your home, country, or business. It is used across all Levantine regions and is appropriate for both formal and informal situations. It is often shortened to just 'ahlan' in casual contexts.",
+  "variants": [
+    {
+      "label": "to a man",
+      "arabic": "أَهْلاً وَسَهْلاً فِيك",
+      "transliteration": "ahlan wa sahlan feek",
+      "english": "Welcome (to you, m)",
+      "note": "Add the preposition 'feek' to specifically address a single male guest."
+    },
+    {
+      "label": "to a woman",
+      "arabic": "أَهْلاً وَسَهْلاً فِيكِي",
+      "transliteration": "ahlan wa sahlan feeki",
+      "english": "Welcome (to you, f)",
+      "note": "Add the preposition 'feeki' to specifically address a single female guest."
+    },
+    {
+      "label": "to a group",
+      "arabic": "أَهْلاً وَسَهْلاً فِيكُم",
+      "transliteration": "ahlan wa sahlan feekom",
+      "english": "Welcome (to you all)",
+      "note": "Used when welcoming multiple people at once."
+    },
+    {
+      "label": "shortened / casual",
+      "arabic": "أَهْلاً",
+      "transliteration": "ahlan",
+      "english": "Welcome / Hello",
+      "note": "Used as a quick, casual welcome or as a general greeting equivalent to 'hello'."
+    },
+    {
+      "label": "very warm / exaggerated",
+      "arabic": "يَا مِيَّة أَهْلاً وَسَهْلاً",
+      "transliteration": "ya meet ahlan wa sahlan",
+      "english": "A hundred welcomes",
+      "note": "Used to show extreme hospitality and warmth, especially common in Syria and Lebanon."
+    }
+  ],
+  "responses": [
+    {
+      "arabic": "أَهْلاً فِيك",
+      "transliteration": "ahlan feek",
+      "english": "Welcome to you too (replying to a man)"
+    },
+    {
+      "arabic": "أَهْلاً فِيكِي",
+      "transliteration": "ahlan feeki",
+      "english": "Welcome to you too (replying to a woman)"
+    },
+    {
+      "arabic": "أَهْلاً فِيكُم",
+      "transliteration": "ahlan feekom",
+      "english": "Welcome to you too (replying to a group)"
+    }
+  ],
+  "examples": [
+    {
+      "arabic": "أَهْلاً وَسَهْلاً فِيكُم بِبَيْتْنَا، تَفَضَّلُوا.",
+      "transliteration": "ahlan wa sahlan feekom bbeitna, tfaddalo.",
+      "english": "Welcome to our home, please come in."
+    },
+    {
+      "arabic": "يَا مِيَّة أَهْلاً وَسَهْلاً، نَوَّرْتُوا!",
+      "transliteration": "ya meet ahlan wa sahlan, nawwarto!",
+      "english": "A hundred welcomes, you brought light to the place!"
+    },
+    {
+      "arabic": "أَهْلاً وَسَهْلاً فِيك بِلُبْنَان، إِنْ شَاءَ الله تِنْبِسِط.",
+      "transliteration": "ahlan wa sahlan feek blibnan, inshallah tinbisit.",
+      "english": "Welcome to Lebanon, hopefully you will enjoy yourself."
+    }
+  ]
+}

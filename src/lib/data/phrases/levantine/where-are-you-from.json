@@ -1,0 +1,82 @@
+{
+  "slug": "where-are-you-from",
+  "dialect": "levantine",
+  "english": "where are you from?",
+  "arabic": "مِن وِين إِنتَ؟",
+  "arabicPlain": "من وين إنت؟",
+  "transliteration": "min ween enta?",
+  "franco": "mn ween enta?",
+  "literal": "from where you?",
+  "usage": "This is the standard, everyday way to ask someone where they are from in the Levant. It is used in both casual and formal situations, though in highly formal contexts one might use '7adertak' instead of 'enta'. The word order can also be flipped to 'enta min ween?' without changing the meaning.",
+  "variants": [
+    {
+      "label": "to a man",
+      "arabic": "مِن وِين إِنتَ؟",
+      "transliteration": "min ween enta?",
+      "english": "Where are you from?",
+      "note": "The standard form used when addressing a single male."
+    },
+    {
+      "label": "to a woman",
+      "arabic": "مِن وِين إِنتِي؟",
+      "transliteration": "min ween enti?",
+      "english": "Where are you from?",
+      "note": "The standard form used when addressing a single female."
+    },
+    {
+      "label": "to a group",
+      "arabic": "مِن وِين إِنتُو؟",
+      "transliteration": "min ween entu?",
+      "english": "Where are you from?",
+      "note": "Used when addressing two or more people."
+    },
+    {
+      "label": "formal (to a man)",
+      "arabic": "مِن وِين حَضِرتَك؟",
+      "transliteration": "min ween 7adertak?",
+      "english": "Where are you from?",
+      "note": "Used to show respect to older men or in professional settings."
+    },
+    {
+      "label": "formal (to a woman)",
+      "arabic": "مِن وِين حَضِرتِك؟",
+      "transliteration": "min ween 7adertik?",
+      "english": "Where are you from?",
+      "note": "Used to show respect to older women or in professional settings."
+    }
+  ],
+  "responses": [
+    {
+      "arabic": "أَنَا مِن سُورِيَا.",
+      "transliteration": "ana min surya.",
+      "english": "I am from Syria."
+    },
+    {
+      "arabic": "أَنَا لِبنَانِي.",
+      "transliteration": "ana libnani.",
+      "english": "I am Lebanese."
+    },
+    {
+      "arabic": "نِحنَا مِن عَمَّان.",
+      "transliteration": "ne7na min 3amman.",
+      "english": "We are from Amman."
+    }
+  ],
+  "examples": [
+    {
+      "arabic": "أَهلاً، فُرسَة سَعِيدَة. مِن وِين إِنتَ؟",
+      "transliteration": "ahlan, forsa sa3iida. min ween enta?",
+      "english": "Hello, nice to meet you. Where are you from?"
+    },
+    {
+      "arabic": "مِن وِين إِنتَ بِالأَصل؟",
+      "transliteration": "min ween enta bil-asel?",
+      "english": "Where are you from originally?"
+    },
+    {
+      "arabic": "لَو سَمَحتُوا، مِن وِين إِنتُو؟",
+      "transliteration": "law sama7tu, min ween entu?",
+      "english": "Excuse me, where are you (pl.) from?"
+    }
+  ]
+}

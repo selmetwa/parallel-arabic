@@ -312,6 +312,24 @@ export function getPageMeta(page: string, data?: any): PageMeta {
 			url: data?.slug ? `${baseUrl}/${data.slug}` : baseUrl,
 			type: 'article'
 		},
+		words: {
+			title: `${dialectName} Words - Common Vocabulary with Examples | Parallel Arabic`,
+			description: `Common ${dialectName} words with audio, transliteration and real example sentences taken from graded stories, so you see each word in context rather than on a flashcard.`,
+			url: `${baseUrl}/${dialectSlug}/word`,
+			type: 'website'
+		},
+		word: {
+			title: data?.arabic
+				? `${data.arabic} - "${data.english}" in ${dialectName} | Meaning, Audio & Examples`
+				: `${dialectName} Words | Parallel Arabic`,
+			description: data?.arabic
+				? `${data.arabic} (${data.transliteration}) means "${data.english}" in ${dialectName}. Hear it pronounced and read example sentences taken from real stories.`
+				: `Common ${dialectName} words with audio and examples.`,
+			url: data?.slug
+				? `${baseUrl}/${dialectSlug}/word/${data.slug}`
+				: `${baseUrl}/${dialectSlug}/word`,
+			type: 'article'
+		},
 		phrases: {
 			title: `${dialectName} Phrases - How to Say the Everyday Things | Parallel Arabic`,
 			description: `A ${dialectName} phrasebook: hello, how are you, thank you, happy birthday and the rest of the everyday phrases, each with Arabic script, tashkeel, transliteration and audio.`,
@@ -466,6 +484,11 @@ export function resolvePageKey(
 				? { key: 'dialect-conjugations', data: { dialect } }
 				: { key: 'conjugation-verb', data: { dialect, slug: parts[2] } };
 		}
+		if (parts[1] === 'word') {
+			return parts.length === 2
+				? { key: 'words', data: { dialect } }
+				: { key: 'word', data: { dialect, slug: parts[2] } };
+		}
 		if (parts[1] === 'phrases') {
 			return parts.length === 2
 				? { key: 'phrases', data: { dialect } }
@@ -608,6 +631,16 @@ export function deriveRouteData(key: string, data: any): Record<string, unknown>
 
 	if (key === 'dialect' || key === 'keyboard' || key === 'game') {
 		return { faqs: data.faqs };
+	}
+
+	if (key === 'word' && data.word) {
+		return {
+			slug: data.word.slug,
+			english: data.word.english,
+			arabic: data.word.arabic,
+			transliteration: data.word.transliteration || data.word.franco,
+			category: data.word.category
+		};
 	}
 
 	if (key === 'phrase' && data.phrase) {
@@ -780,6 +813,22 @@ export function generateStructuredData(page: string, data?: any) {
 				name: faq.question,
 				acceptedAnswer: { '@type': 'Answer', text: faq.answer }
 			}))
+		};
+	}
+
+	if (page === 'word' && data?.arabic) {
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'DefinedTerm',
+			name: data.arabic,
+			alternateName: data.transliteration,
+			description: `"${data.english}" in ${formatDialectName(data.dialect ?? '')}.`,
+			inDefinedTermSet: {
+				'@type': 'DefinedTermSet',
+				name: `${formatDialectName(data.dialect ?? '')} Vocabulary`,
+				url: `${baseUrl}/${data.dialect}/word`
+			},
+			inLanguage: 'ar'
 		};
 	}
 

@@ -1,0 +1,75 @@
+{
+  "slug": "thank-you",
+  "dialect": "levantine",
+  "english": "thank you",
+  "arabic": "شُكْراً",
+  "arabicPlain": "شكرا",
+  "transliteration": "shukran",
+  "franco": "shokran",
+  "literal": "thanks. Not idiomatic.",
+  "usage": "Shukran is the standard, universally understood word for thank you across the Levant, suitable for both formal and casual situations. In everyday interactions, Levantine speakers frequently use yeslamo (literally may your hands be safe) when receiving something physical, or ya3teek el 3afye (may God give you health) to acknowledge someone's effort.",
+  "variants": [
+    {
+      "label": "to a man",
+      "arabic": "شُكْراً إِلَك",
+      "transliteration": "shukran elak",
+      "english": "thank you",
+      "note": "Adds a personal pronoun to make the thanks more direct to a male listener."
+    },
+    {
+      "label": "to a woman",
+      "arabic": "شُكْراً إِلِك",
+      "transliteration": "shukran elik",
+      "english": "thank you",
+      "note": "Adds a personal pronoun to make the thanks more direct to a female listener."
+    },
+    {
+      "label": "when handed something",
+      "arabic": "يِسْلَموا",
+      "transliteration": "yeslamo",
+      "english": "thanks",
+      "note": "Extremely common in the Levant when someone physically hands you an object, like food or a cup of coffee."
+    },
+    {
+      "label": "for someone's effort",
+      "arabic": "يَعْطيك العافْيَة",
+      "transliteration": "ya3teek el 3afye",
+      "english": "may God give you health",
+      "note": "Used to thank service workers, colleagues, or anyone who has performed a task for you."
+    }
+  ],
+  "responses": [
+    {
+      "arabic": "عَفْواً",
+      "transliteration": "3afwan",
+      "english": "you're welcome"
+    },
+    {
+      "arabic": "أَهْلاً وَسَهْلاً",
+      "transliteration": "ahlan wa sahlan",
+      "english": "you're welcome (literally: welcome)"
+    },
+    {
+      "arabic": "وِإيديك",
+      "transliteration": "w eedeek",
+      "english": "and your hands (standard response to yeslamo, when speaking to a man)"
+    }
+  ],
+  "examples": [
+    {
+      "arabic": "شُكْراً كْتير عَلى مُساعَدْتَك.",
+      "transliteration": "shukran kteer 3ala musa3adtak.",
+      "english": "Thank you very much for your help."
+    },
+    {
+      "arabic": "يِسْلَموا إيديك عَلى هَالْقَهْوَة.",
+      "transliteration": "yeslamo eedeek 3ala hal qahwe.",
+      "english": "Thank you for this coffee."
+    },
+    {
+      "arabic": "شُكْراً، غَلَّبْناك مَعْنا.",
+      "transliteration": "shukran, ghallabnak ma3na.",
+      "english": "Thank you, we troubled you with us."
+    }
+  ]
+}
