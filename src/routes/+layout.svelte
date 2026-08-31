@@ -15,11 +15,7 @@
 	import { dev, browser } from '$app/environment';
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';
 	import posthog from 'posthog-js';
-	import {
-		resolvePageMeta,
-		resolveStructuredData,
-		siteStructuredData
-	} from '$lib/utils/seo';
+	import { resolvePageMeta, resolveStructuredData, siteStructuredData } from '$lib/utils/seo';
 	import {
 		importJobStore,
 		resumeImportJobIfNeeded,
@@ -41,6 +37,7 @@
 	let ChatWidget: typeof import('$lib/components/ChatWidget.svelte').default | null = $state(null);
 	let Toaster: typeof import('svelte-sonner').Toaster | null = $state(null);
 	let Onboarding: typeof import('$lib/components/Onboarding.svelte').default | null = $state(null);
+	let AppBanner: typeof import('$lib/components/AppBanner.svelte').default | null = $state(null);
 	let lazyComponentsLoaded = $state(false);
 
 	// Helper to detect if running in Capacitor native app
@@ -83,14 +80,15 @@
 		// Lazy load non-critical components after initial paint
 		// This improves FCP/LCP by ~230KB off the critical path
 		if (browser) {
-			const [drawerMod, buttonMod, radioMod, chatMod, toasterMod, onboardingMod] =
+			const [drawerMod, buttonMod, radioMod, chatMod, toasterMod, onboardingMod, appBannerMod] =
 				await Promise.all([
 					import('$lib/components/Drawer.svelte'),
 					import('$lib/components/Button.svelte'),
 					import('$lib/components/RadioButton.svelte'),
 					import('$lib/components/ChatWidget.svelte'),
 					import('svelte-sonner'),
-					import('$lib/components/Onboarding.svelte')
+					import('$lib/components/Onboarding.svelte'),
+					import('$lib/components/AppBanner.svelte')
 				]);
 
 			Drawer = drawerMod.default;
@@ -99,6 +97,7 @@
 			ChatWidget = chatMod.default;
 			Toaster = toasterMod.Toaster;
 			Onboarding = onboardingMod.default;
+			AppBanner = appBannerMod.default;
 			lazyComponentsLoaded = true;
 		}
 
@@ -224,9 +223,7 @@
 	// SEO metadata. All resolution lives in $lib/utils/seo so it can be unit
 	// tested; a route can override everything by returning `seo` from its load.
 	const seoMeta = $derived(resolvePageMeta($page.url?.pathname ?? '/', $page.data));
-	const structuredData = $derived(
-		resolveStructuredData($page.url?.pathname ?? '/', $page.data)
-	);
+	const structuredData = $derived(resolveStructuredData($page.url?.pathname ?? '/', $page.data));
 	const siteGraph = siteStructuredData();
 </script>
 
@@ -398,4 +395,9 @@
 		isOpen={showOnboarding}
 		handleCloseModal={handleCloseOnboarding}
 	/>
+{/if}
+
+<!-- iOS app banner - lazy loaded, decides for itself whether to show -->
+{#if AppBanner && !showOnboarding}
+	<AppBanner />
 {/if}

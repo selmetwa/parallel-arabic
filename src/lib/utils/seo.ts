@@ -125,9 +125,9 @@ export function getPageMeta(page: string, data?: any): PageMeta {
 			type: 'website'
 		},
 		'mobile-app': {
-			title: 'Parallel Arabic Mobile App - Learn Arabic on iOS & Android',
+			title: 'Parallel Arabic for iPhone & iPad - Download on the App Store',
 			description:
-				'Get Parallel Arabic on your phone. Lessons, stories, vocabulary review and the AI Arabic tutor on iOS and Android, with offline review and progress that syncs with the web app.',
+				'Get Parallel Arabic on your phone, free on the App Store. Lessons, stories, vocabulary review and the AI Arabic tutor, with progress that syncs with the web app. On Android, install the web app to your home screen.',
 			url: `${baseUrl}/mobile-app`,
 			type: 'website'
 		},

@@ -43,6 +43,7 @@ export function clearUserLocalStorage(): void {
 
   // Also clear sessionStorage
   sessionStorage.removeItem('homeBannerDismissed');
+  sessionStorage.removeItem('appBannerDismissed');
 
   // Remove all identified keys
   const uniqueKeys = [...new Set(keysToRemove)];
