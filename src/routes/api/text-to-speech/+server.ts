@@ -13,6 +13,10 @@ const STRIP_ARABIC_QM_ONLY = false;
 
 const FREE_TTS_LIMIT = 5;
 
+/** Per-browser audio plays allowed before signing in. */
+const ANON_TTS_LIMIT = 6;
+const ANON_TTS_COOKIE = 'anon_tts_plays';
+
 if (!ELEVENLABS_API_KEY) {
 	throw new Error('Missing ELEVENLABS_API_KEY in environment variables');
 }
@@ -41,33 +45,48 @@ function applyPronunciationFixes(cleaned: string, dialect: string): string {
 	return fixes[cleaned] ?? cleaned;
 }
 
-export const POST: RequestHandler = async ({ request, locals }) => {
-	// Auth check
+export const POST: RequestHandler = async ({ request, locals, cookies }) => {
 	const { sessionId, user } = await locals?.auth?.validate() || {};
-	if (!sessionId || !user) {
-		return new Response(JSON.stringify({ error: 'Unauthorized' }), {
-			status: 401,
-			headers: { 'Content-Type': 'application/json' }
-		});
-	}
-	const userId = user.id;
+	const userId = sessionId && user ? user.id : null;
 
-	// Paywall check — parallelize for speed
-	const [hasActiveSubscription, ttsCount] = await Promise.all([
-		getUserHasActiveSubscription(userId),
-		getUserTtsCount(userId)
-	]);
+	let hasActiveSubscription = false;
+	let ttsCount = 0;
+	let anonPlays = 0;
 
-	if (!hasActiveSubscription && ttsCount >= FREE_TTS_LIMIT) {
-		return new Response(JSON.stringify({
-			error: 'Subscription required',
-			message: `You've reached the free limit of ${FREE_TTS_LIMIT} audio plays. Subscribe to continue.`,
-			requiresSubscription: true,
-			ttsCount
-		}), {
-			status: 403,
-			headers: { 'Content-Type': 'application/json' }
-		});
+	if (userId) {
+		// Paywall check — parallelize for speed
+		[hasActiveSubscription, ttsCount] = await Promise.all([
+			getUserHasActiveSubscription(userId),
+			getUserTtsCount(userId)
+		]);
+
+		if (!hasActiveSubscription && ttsCount >= FREE_TTS_LIMIT) {
+			return new Response(JSON.stringify({
+				error: 'Subscription required',
+				message: `You've reached the free limit of ${FREE_TTS_LIMIT} audio plays. Subscribe to continue.`,
+				requiresSubscription: true,
+				ttsCount
+			}), {
+				status: 403,
+				headers: { 'Content-Type': 'application/json' }
+			});
+		}
+	} else {
+		// Signed-out visitors get a small per-browser allowance so someone landing
+		// on /tutor from search can hear the words in the free scenario steps
+		// before being asked to sign up.
+		anonPlays = Number(cookies.get(ANON_TTS_COOKIE)) || 0;
+
+		if (anonPlays >= ANON_TTS_LIMIT) {
+			return new Response(JSON.stringify({
+				error: 'Subscription required',
+				message: `You've reached the free limit of ${ANON_TTS_LIMIT} audio plays. Subscribe to continue.`,
+				requiresSubscription: true
+			}), {
+				status: 403,
+				headers: { 'Content-Type': 'application/json' }
+			});
+		}
 	}
 
 	try {
@@ -105,11 +124,19 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		const content = Buffer.concat(chunks);
 
 		// Increment counter for free users after successful generation
-		if (!hasActiveSubscription) {
+		if (userId && !hasActiveSubscription) {
 			await supabase
 				.from('user')
 				.update({ tts_calls_count: ttsCount + 1 })
 				.eq('id', userId);
+		} else if (!userId) {
+			cookies.set(ANON_TTS_COOKIE, String(anonPlays + 1), {
+				path: '/',
+				httpOnly: true,
+				sameSite: 'lax',
+				secure: true,
+				maxAge: 60 * 60 * 24 * 30
+			});
 		}
 
 		return new Response(content, {
