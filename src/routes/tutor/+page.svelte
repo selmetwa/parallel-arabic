@@ -120,6 +120,23 @@
     updateKeyboardStyle();
 
     autoPlayAudio = localStorage.getItem('tutor-autoplay') !== 'off';
+
+    freeStepsUsed = Number(localStorage.getItem(FREE_TRIAL_KEY)) || 0;
+
+    // Preload the beginner scenario for a first-time visitor (typically landing
+    // here from search) so there is something to practice straight away instead
+    // of an empty conversation they can't use.
+    if (
+      !hasActiveSubscription &&
+      freeStepsUsed < FREE_TRIAL_STEPS &&
+      conversation.length === 0 &&
+      !activeScenarioContext
+    ) {
+      const intro = TUTOR_SCENARIOS.find((s) => s.id === 'introducing-yourself');
+      if (intro?.dialogs[selectedDialect]) {
+        startScenario(intro);
+      }
+    }
   });
 
   const dialectOptions = [
@@ -196,6 +213,37 @@
 
   let currentVocabItem = $derived(scenarioVocab[currentVocabIndex] ?? null);
   let canSkipVocab = $derived(vocabAttempts >= MAX_ATTEMPTS_BEFORE_SKIP);
+
+  // ── Free trial ─────────────────────────────────────────────────────────────
+  // Someone landing on /tutor without a subscription gets a few Learn steps of
+  // the preloaded beginner scenario before the paywall, so a first visit is a
+  // real practice session rather than an immediate upsell. The count is kept in
+  // localStorage so refreshing doesn't hand out a fresh allowance.
+  const FREE_TRIAL_STEPS = 3;
+  const FREE_TRIAL_KEY = 'tutor-free-steps-used';
+  let freeStepsUsed = $state(0);
+  let trialActive = $derived(
+    !hasActiveSubscription && scenarioPhase === 'learn' && freeStepsUsed < FREE_TRIAL_STEPS
+  );
+  let freeStepsLeft = $derived(Math.max(0, FREE_TRIAL_STEPS - freeStepsUsed));
+  // Recording is allowed for subscribers, and for free users spending a trial step.
+  let canSpeak = $derived(hasActiveSubscription || trialActive);
+
+  // Spend one trial step. Returns false when that was the last one, so the
+  // caller stops instead of advancing.
+  function consumeFreeStep(): boolean {
+    const used = freeStepsUsed + 1;
+    freeStepsUsed = used;
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem(FREE_TRIAL_KEY, String(used));
+    }
+    if (used >= FREE_TRIAL_STEPS) {
+      trackEvent('tutor_free_trial_exhausted', { dialect: selectedDialect });
+      openPaywallModal();
+      return false;
+    }
+    return true;
+  }
 
   // Custom scenario: the learner describes what they want to talk about and we
   // build an ad-hoc scenario that runs through the same Learn → Practice flow.
@@ -324,6 +372,8 @@
 
   // Move to the next vocab word, or start the conversation after the last one.
   function advanceVocab() {
+    if (trialActive && !consumeFreeStep()) return;
+
     if (currentVocabIndex < scenarioVocab.length - 1) {
       currentVocabIndex += 1;
       vocabAttempts = 0;
@@ -781,7 +831,7 @@
   }
 
   async function startRecording(language: 'ar' | 'en') {
-    if (!hasActiveSubscription) {
+    if (!canSpeak) {
       openPaywallModal();
       return;
     }
@@ -1151,7 +1201,7 @@
   // Learn-phase record control: always Arabic, and clear the previous score so
   // the UI returns to its "now you try" state for a fresh attempt.
   function toggleLearnRecording() {
-    if (!hasActiveSubscription && !recording) {
+    if (!canSpeak && !recording) {
       openPaywallModal();
       return;
     }
@@ -1765,11 +1815,13 @@
                     </span>
                     <span class="text-xs font-semibold text-text-200">{currentVocabIndex + 1} of {scenarioVocab.length}</span>
                   </div>
-                  <button
-                    type="button"
-                    onclick={beginPracticePhase}
-                    class="text-xs text-text-200 hover:text-text-300 underline underline-offset-2"
-                  >Skip intro →</button>
+                  {#if !trialActive}
+                    <button
+                      type="button"
+                      onclick={beginPracticePhase}
+                      class="text-xs text-text-200 hover:text-text-300 underline underline-offset-2"
+                    >Skip intro →</button>
+                  {/if}
                 </div>
                 <div class="h-1.5 w-full bg-tile-500 rounded-full overflow-hidden mb-6">
                   <div class="h-full bg-emerald-500 transition-all duration-300" style="width: {(currentVocabIndex / scenarioVocab.length) * 100}%"></div>
@@ -1836,7 +1888,11 @@
                         <span>Now you try</span>
                       {/if}
                     </button>
-                    {#if !hasActiveSubscription}
+                    {#if trialActive}
+                      <p class="text-xs text-text-200 text-center">
+                        ✨ {freeStepsLeft} free practice {freeStepsLeft === 1 ? 'step' : 'steps'} left
+                      </p>
+                    {:else if !hasActiveSubscription}
                       <p class="text-xs text-text-200 text-center">
                         🔒 <button type="button" class="underline underline-offset-2 hover:text-text-300" onclick={openPaywallModal}>Subscribe</button> to practice speaking
                       </p>

@@ -47,19 +47,10 @@
 		aria-label="Get the Parallel Arabic iOS app"
 	>
 		<div class="mx-auto flex max-w-3xl items-center gap-3">
-			<img
-				src="/icons/icon-192.png"
-				alt=""
-				width="48"
-				height="48"
-				class="h-12 w-12 shrink-0 rounded-xl border border-tile-500"
-			/>
+	
 
 			<div class="min-w-0 flex-1">
 				<p class="font-bold leading-tight text-text-300">Parallel Arabic is better in the app</p>
-				<p class="text-sm leading-tight text-text-200">
-					Free on the App Store for iPhone and iPad.
-				</p>
 			</div>
 
 			<AppStoreBadge
