@@ -1,4 +1,4 @@
-import type { WordEntry, WordIndexEntry } from '$lib/types/words';
+import type { PracticeWord, WordEntry, WordIndexEntry } from '$lib/types/words';
 
 /**
  * The word files that exist, resolved at build time.
@@ -51,4 +51,30 @@ export function relatedWords(dialect: string, slug: string, take = 8): WordIndex
 		.sort((a, b) => a.frequencyRank - b.frequencyRank)
 		.slice(0, take)
 		.map((other) => ({ slug: other.slug, arabic: other.arabic, english: other.english }));
+}
+
+/**
+ * The word plus its category siblings, in the shape the practice round needs.
+ *
+ * Separate from `relatedWords` because that one feeds link grids and only needs
+ * a slug and a gloss, while a quiz needs the transliteration and audio too.
+ */
+export function practiceWordsFor(dialect: string, slug: string, take = 12): PracticeWord[] {
+	const entries = byDialect.get(dialect);
+	const word = entries?.get(slug);
+	if (!entries || !word) return [];
+
+	const toPractice = (entry: WordEntry): PracticeWord => ({
+		arabic: entry.arabic,
+		english: entry.english,
+		transliteration: entry.transliteration || entry.franco,
+		audioUrl: entry.audioUrl
+	});
+
+	const siblings = [...entries.values()]
+		.filter((other) => other.slug !== slug && (!word.category || other.category === word.category))
+		.sort((a, b) => a.frequencyRank - b.frequencyRank)
+		.slice(0, take - 1);
+
+	return [word, ...siblings].map(toPractice);
 }

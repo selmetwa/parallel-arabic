@@ -1,6 +1,12 @@
 import type { PageServerLoad, EntryGenerator } from './$types';
 import { error } from '@sveltejs/kit';
-import { WORD_DIALECTS, getWord, relatedWords, wordSlugsFor } from '$lib/data/words/manifest';
+import {
+	WORD_DIALECTS,
+	getWord,
+	practiceWordsFor,
+	relatedWords,
+	wordSlugsFor
+} from '$lib/data/words/manifest';
 
 export const prerender = true;
 
@@ -14,6 +20,7 @@ export const load: PageServerLoad = async ({ params }) => {
 	return {
 		word,
 		dialect: params.dialect,
-		related: relatedWords(params.dialect, params.word)
+		related: relatedWords(params.dialect, params.word),
+		practiceWords: practiceWordsFor(params.dialect, params.word)
 	};
 };

@@ -1,8 +1,11 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { currentDialect } from '$lib/store/store';
+	import { page } from '$app/state';
+	import VocabPractice from '$lib/components/dialect-shared/vocab/VocabPractice.svelte';
 	import { DIALECT_LANDING } from '$lib/constants/dialect-landing';
 	import type { Dialect } from '$lib/types/index';
+	import type { PracticeWord } from '$lib/types/words';
 
 	interface Props {
 		dialect: Dialect;
@@ -10,9 +13,11 @@
 		hasPhrases?: boolean;
 		/** Whether word pages have been built for this dialect. */
 		hasWords?: boolean;
+		/** Phrases to drill on. Omit and the practice section is not rendered. */
+		practiceWords?: PracticeWord[];
 	}
 
-	let { dialect, hasPhrases = false, hasWords = false }: Props = $props();
+	let { dialect, hasPhrases = false, hasWords = false, practiceWords = [] }: Props = $props();
 
 	const content = $derived(DIALECT_LANDING[dialect]);
 
@@ -111,6 +116,18 @@
 			{/each}
 		</div>
 	</section>
+
+	{#if practiceWords.length}
+		<div class="mb-12 mt-10">
+			<VocabPractice
+				words={practiceWords}
+				{dialect}
+				topicLabel="the basics"
+				isSubscribed={page.data.isSubscribed ?? false}
+				practiceHref="/{dialect}/phrases"
+			/>
+		</div>
+	{/if}
 
 	<section class="mb-12 mt-10">
 		<h2 class="mb-4 text-2xl font-bold text-text-300">Common questions</h2>
