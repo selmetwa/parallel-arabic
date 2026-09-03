@@ -3,12 +3,18 @@
   import { onMount, onDestroy } from 'svelte';
   import { gameSession } from '$lib/store/generated-content.svelte';
   import { Howl } from 'howler';
-  import levenshtein from 'fast-levenshtein';
   import AudioButton from '$lib/components/AudioButton.svelte';
   import SaveButton from '$lib/components/SaveButton.svelte';
   import PaywallModal from '$lib/components/PaywallModal.svelte';
   import type { Dialect } from '$lib/types/index';
-  import { normalizeArabicText } from '$lib/utils/arabic-normalization';
+  import {
+    PASS_THRESHOLD,
+    checkMediaRecorderSupport,
+    describeRecordingError,
+    scorePronunciation,
+    transcribe
+  } from '$lib/utils/pronunciation';
+  import { buildMultipleChoice } from '$lib/utils/quiz-questions';
   import { userXp, userLevel } from '$lib/store/xp-store';
   import { showXpToast } from '$lib/helpers/toast-helpers';
 
@@ -411,30 +417,20 @@
 
       // For multiple-choice and listening, we need wrong answers
       if (mode === 'multiple-choice' || mode === 'listening') {
-        // Randomly decide question type for multiple-choice
-        const type: GameQuestion['type'] = mode === 'listening'
-          ? 'listening'
-          : Math.random() > 0.5 ? 'arabic-to-english' : 'english-to-arabic';
-
-        // Get the correct answer
-        const correctAnswer = type === 'arabic-to-english' || type === 'listening'
-          ? word.english_word
-          : word.arabic_word;
-
-        // Get wrong options (3 random other words)
-        const wrongWords = allWords
-          .filter(w => w.arabic_word !== word.arabic_word)
-          .sort(() => Math.random() - 0.5)
-          .slice(0, 3);
-
-        const wrongAnswers = wrongWords.map(w =>
-          type === 'arabic-to-english' || type === 'listening' ? w.english_word : w.arabic_word
+        // Listening plays the Arabic, so the answer has to be the English.
+        // Everything else mixes direction per question.
+        const { options, correctAnswer, type } = buildMultipleChoice(
+          word,
+          allWords,
+          mode === 'listening' ? 'arabic-to-english' : undefined
         );
 
-        // Combine and shuffle options
-        const options = [...wrongAnswers, correctAnswer].sort(() => Math.random() - 0.5);
-
-        return { word, options, correctAnswer, type };
+        return {
+          word,
+          options,
+          correctAnswer,
+          type: mode === 'listening' ? ('listening' as const) : type
+        };
       }
 
       // Speaking mode
@@ -445,10 +441,6 @@
         type: 'arabic-to-english' as const
       };
     });
-  }
-
-  function checkMediaRecorderSupport(): boolean {
-    return !!(navigator.mediaDevices?.getUserMedia);
   }
 
   async function playAudio(text: string, dialect: string, audioUrl?: string | null) {
@@ -610,11 +602,7 @@
     } catch (e) {
       console.error('Failed to start recording:', e);
       isRecording = false;
-      if (e instanceof DOMException && e.name === 'NotAllowedError') {
-        spokenText = 'Microphone access denied. Please allow microphone access and try again.';
-      } else {
-        spokenText = 'Failed to start recording. Please try again.';
-      }
+      spokenText = describeRecordingError(e);
     }
   }
 
@@ -629,36 +617,19 @@
     isProcessing = true;
 
     try {
-      const formData = new FormData();
-      formData.append('audio', blob, 'recording.webm');
-      formData.append('dialect', data.gameParams.dialect);
-
-      const res = await fetch('/api/speech-to-text', {
-        method: 'POST',
-        body: formData,
-      });
-
-      if (!res.ok) {
-        const errorData = await res.json();
-        throw new Error(errorData.error || 'Transcription failed');
-      }
-
-      const result = await res.json();
-      spokenText = result.text || '';
+      spokenText = await transcribe(blob, data.gameParams.dialect);
 
       const targetText = currentQuestion.sentence
         ? currentQuestion.sentence.arabic
         : currentQuestion.word?.arabic_word || '';
-      const normalizedSpoken = normalizeArabicText(spokenText.replace(/\./g, ''));
-      const normalizedTarget = normalizeArabicText(targetText);
-      const distance = levenshtein.get(normalizedTarget, normalizedSpoken);
-      const maxLength = Math.max(normalizedTarget.length, normalizedSpoken.length);
-      pronunciationScore = maxLength > 0 ? Math.round((1 - distance / maxLength) * 100) : 0;
+      pronunciationScore = scorePronunciation(targetText, spokenText);
 
       speakingAttempts++;
       showSpeakingFeedback = true;
 
-      const threshold = currentQuestion.sentence ? 50 : 60;
+      const threshold = currentQuestion.sentence
+        ? PASS_THRESHOLD.sentence
+        : PASS_THRESHOLD.word;
       if (pronunciationScore >= threshold) {
         handleCorrectAnswer();
       }
