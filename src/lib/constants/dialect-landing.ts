@@ -73,6 +73,24 @@ export const DIALECT_LANDING: Record<string, DialectLandingContent> = {
 		],
 		extraLinks: [
 			{
+				href: '/egyptian-arabic/beginners',
+				title: 'Start Here',
+				description:
+					'The order to learn Egyptian Arabic in, from the alphabet to your first conversation.'
+			},
+			{
+				href: '/egyptian-arabic/vocabulary',
+				title: 'Vocabulary by Topic',
+				description:
+					'Word lists for numbers, food, family and more, each with audio and free practice.'
+			},
+			{
+				href: '/egyptian-arabic/pronunciation',
+				title: 'Pronunciation',
+				description:
+					'The six sound changes that separate Egyptian Arabic from what textbooks teach.'
+			},
+			{
 				href: '/egyptian-arabic/conjugations',
 				title: 'Verb Conjugations',
 				description:

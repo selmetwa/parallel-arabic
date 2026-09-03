@@ -129,6 +129,39 @@ export async function setCached<T>(key: string, data: T, ttlSeconds: number): Pr
 }
 
 /**
+ * Fixed-window rate limit. Returns whether this call is allowed and how many
+ * remain in the window.
+ *
+ * INCR + EXPIRE rather than getCached/setCached because a counter has to be
+ * atomic — two concurrent requests reading "4" and both writing "5" would let
+ * a limit of 5 through twice.
+ *
+ * Fails OPEN when Redis is unavailable: this is a cost ceiling on a paid API,
+ * not an authorization check, and a Redis blip should not take a user-facing
+ * feature down with it.
+ */
+export async function consumeRateLimit(
+  key: string,
+  limit: number,
+  windowSeconds: number
+): Promise<{ allowed: boolean; remaining: number }> {
+  try {
+    const client = await getRedisClient();
+    if (!client) return { allowed: true, remaining: limit };
+
+    const count = await client.incr(key);
+    if (count === 1) {
+      await client.expire(key, windowSeconds);
+    }
+
+    return { allowed: count <= limit, remaining: Math.max(0, limit - count) };
+  } catch (error) {
+    console.error(`❌ Redis rate limit error for ${key}:`, error);
+    return { allowed: true, remaining: limit };
+  }
+}
+
+/**
  * Delete a cached key
  */
 export async function deleteCached(key: string): Promise<boolean> {

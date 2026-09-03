@@ -38,7 +38,8 @@
     "cap:run:ios": "npm run cap:sync && npx cap run ios",
     "cap:run:android": "npm run cap:sync && npx cap run android",
     "generate:phrases": "vite-node scripts/generate-phrases.ts",
-    "build:words": "vite-node scripts/build-word-pages.ts"
+    "build:words": "vite-node scripts/build-word-pages.ts",
+    "build:vocab": "vite-node scripts/build-vocab-topics.ts"
   },
   "devDependencies": {
     "@capacitor/assets": "^3.0.5",

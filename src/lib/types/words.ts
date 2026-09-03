@@ -28,3 +28,14 @@ export interface WordIndexEntry {
 	arabic: string;
 	english: string;
 }
+
+/**
+ * The shape the practice round needs. Word pages, phrase pages and the
+ * vocabulary topic pages all map their own data onto this.
+ */
+export interface PracticeWord {
+	arabic: string;
+	english: string;
+	transliteration: string;
+	audioUrl?: string | null;
+}

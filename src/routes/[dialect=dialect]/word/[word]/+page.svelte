@@ -1,11 +1,18 @@
 <script lang="ts">
+	import { page } from '$app/state';
 	import InlineAudioButton from '$lib/components/InlineAudioButton.svelte';
+	import VocabPractice from '$lib/components/dialect-shared/vocab/VocabPractice.svelte';
 	import { formatDialectName } from '$lib/utils/seo';
-	import type { WordEntry, WordIndexEntry } from '$lib/types/words';
+	import type { PracticeWord, WordEntry, WordIndexEntry } from '$lib/types/words';
 	import type { Dialect } from '$lib/types/index';
 
 	interface Props {
-		data: { word: WordEntry; dialect: string; related: WordIndexEntry[] };
+		data: {
+			word: WordEntry;
+			dialect: string;
+			related: WordIndexEntry[];
+			practiceWords: PracticeWord[];
+		};
 	}
 
 	let { data }: Props = $props();
@@ -126,25 +133,17 @@
 		</section>
 	{/if}
 
-	<aside class="rounded-xl border border-tile-500 bg-tile-300 p-6">
-		<h2 class="mb-2 text-xl font-bold text-text-300">Learn this word properly</h2>
-		<p class="mb-4 text-text-200">
-			Save it to your review deck and it will come back on a spaced-repetition schedule until it
-			sticks.
-		</p>
-		<div class="flex flex-wrap gap-3">
-			<a
-				href="/vocabulary?dialect={data.dialect}&search={encodeURIComponent(word.arabic)}"
-				class="rounded-lg bg-blue-600 px-5 py-2.5 font-semibold text-white transition-colors hover:bg-blue-700"
-			>
-				Open in the vocabulary explorer
-			</a>
-			<a
-				href="/{data.dialect}/word"
-				class="rounded-lg border border-tile-600 bg-tile-500 px-5 py-2.5 font-semibold text-text-300 transition-colors hover:bg-tile-600"
-			>
-				All {dialectName} words
-			</a>
-		</div>
+	<VocabPractice
+		words={data.practiceWords}
+		dialect={data.dialect as Dialect}
+		topicLabel={categoryLabel ?? dialectName}
+		isSubscribed={page.data.isSubscribed ?? false}
+		practiceHref="/vocabulary?dialect={data.dialect}&search={encodeURIComponent(word.arabic)}"
+	/>
+
+	<aside class="mt-8 text-center">
+		<a href="/{data.dialect}/word" class="text-text-200 underline hover:text-text-300">
+			All {dialectName} words
+		</a>
 	</aside>
 </article>

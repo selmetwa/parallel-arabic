@@ -17,12 +17,12 @@
 
 	const speakArabic = async () => {
 		isLoading = true;
-		
+
 		// Stop any currently playing sound
 		if (currentSound) {
 			currentSound.stop();
 		}
-		
+
 		try {
 			let finalAudioUrl: string;
 			let serverPlaybackRate = 1.0;
@@ -87,24 +87,18 @@
 <button
 	type="button"
 	onclick={speakArabic}
-	class="inline-flex items-center justify-center p-1 rounded hover:bg-tile-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed {className}"
+	class="inline-flex items-center justify-center rounded p-1 transition-colors hover:bg-tile-500 disabled:cursor-not-allowed disabled:opacity-50 {className}"
 	disabled={isLoading}
 	aria-label="Play audio"
 >
 	{#if isLoading}
 		<svg
-			class="w-4 h-4 animate-spin"
+			class="h-4 w-4 animate-spin"
 			fill="none"
 			viewBox="0 0 24 24"
 			xmlns="http://www.w3.org/2000/svg"
 		>
-			<circle
-				class="opacity-25"
-				cx="12"
-				cy="12"
-				r="10"
-				stroke="currentColor"
-				stroke-width="4"
+			<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"
 			></circle>
 			<path
 				class="opacity-75"
@@ -113,18 +107,14 @@
 			></path>
 		</svg>
 	{:else}
-		<svg
-			class="w-4 h-4"
-			fill="currentColor"
-			viewBox="0 0 20 20"
-			xmlns="http://www.w3.org/2000/svg"
-		>
-			<path
-				fill-rule="evenodd"
-				d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.617.793L4.383 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.383l4-3.617a1 1 0 011.617.793zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z"
-				clip-rule="evenodd"
-			/>
+		<!--
+			Referenced from the sprite in the root layout rather than inlined. A
+			vocabulary table repeats this button once per row, and the full path data
+			is ~700 bytes — inlining it put three quarters of a megabyte of identical
+			SVG into the thousand-word list.
+		-->
+		<svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+			<use href="#pa-speaker" />
 		</svg>
 	{/if}
 </button>
-

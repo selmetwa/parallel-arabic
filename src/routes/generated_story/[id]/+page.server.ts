@@ -20,9 +20,18 @@ export const load = async ({ params, url, locals, setHeaders, parent }) => {
     });
   }
 
-  setHeaders({
-    'Cache-Control': 'public, max-age=1800, s-maxage=7200, stale-while-revalidate=3600'
-  });
+  // Only the logged-out preview is safe to share across visitors in a CDN/shared
+  // cache. Logged-in responses carry per-user data (isSubscribed, storyCompleted)
+  // and must never be cached publicly, or one user's page gets served to another.
+  if (!userId) {
+    setHeaders({
+      'Cache-Control': 'public, max-age=1800, s-maxage=7200, stale-while-revalidate=3600'
+    });
+  } else {
+    setHeaders({
+      'Cache-Control': 'private, no-store'
+    });
+  }
 
   const story = storyResult.story;
 

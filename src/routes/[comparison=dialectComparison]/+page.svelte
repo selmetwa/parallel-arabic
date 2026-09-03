@@ -1,6 +1,10 @@
 <script lang="ts">
+	import { page } from '$app/state';
+	import VocabPractice from '$lib/components/dialect-shared/vocab/VocabPractice.svelte';
 	import { formatDialectName } from '$lib/utils/seo';
 	import type { ComparisonPair } from '$lib/constants/dialect-comparisons';
+	import type { PracticeWord } from '$lib/types/words';
+	import type { Dialect } from '$lib/types/index';
 
 	interface PhraseRow {
 		slug: string;
@@ -21,6 +25,16 @@
 
 	const nameA = $derived(formatDialectName(data.pair.a));
 	const nameB = $derived(formatDialectName(data.pair.b));
+
+	// Drill the first dialect of the pair. Mixing both into one round would ask
+	// the learner to produce two answers for the same English prompt.
+	const practiceWords = $derived<PracticeWord[]>(
+		data.phrases.map((row) => ({
+			arabic: row.a.arabic,
+			english: row.english,
+			transliteration: row.a.transliteration
+		}))
+	);
 </script>
 
 <article class="mx-auto max-w-4xl px-4 py-8">
@@ -112,6 +126,18 @@
 		<h2 class="mb-3 text-2xl font-bold text-text-300">Which one should you learn?</h2>
 		<p class="text-lg leading-relaxed text-text-200">{data.pair.whichToLearn}</p>
 	</section>
+
+	{#if practiceWords.length}
+		<div class="mb-8">
+			<VocabPractice
+				words={practiceWords}
+				dialect={data.pair.a as Dialect}
+				topicLabel="{nameA} phrases"
+				isSubscribed={page.data.isSubscribed ?? false}
+				practiceHref="/{data.pair.a}/phrases"
+			/>
+		</div>
+	{/if}
 
 	<div class="grid gap-4 sm:grid-cols-2">
 		<a
