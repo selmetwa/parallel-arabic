@@ -330,6 +330,45 @@ export function getPageMeta(page: string, data?: any): PageMeta {
 				: `${baseUrl}/${dialectSlug}/word`,
 			type: 'article'
 		},
+		'vocabulary-hub': {
+			title: 'Egyptian Arabic Vocabulary - Word Lists by Topic with Audio | Parallel Arabic',
+			description:
+				'Egyptian Arabic vocabulary grouped by topic: numbers, food, family, colors, time and more. Every word with Arabic script, tashkeel, transliteration, franco spelling and real example sentences. Free practice on every list.',
+			url: `${baseUrl}/egyptian-arabic/vocabulary`,
+			type: 'website'
+		},
+		'vocabulary-topic': {
+			title: data?.label
+				? data.slug === 'most-common'
+					? `The ${Number(
+							data.count
+						).toLocaleString()} Most Common Egyptian Arabic Words | Parallel Arabic`
+					: `Egyptian Arabic ${data.label} - ${data.count} Words with Audio | Parallel Arabic`
+				: 'Egyptian Arabic Vocabulary | Parallel Arabic',
+			description: data?.label
+				? `${data.count} Egyptian Arabic words for ${String(
+						data.label
+					).toLowerCase()}, ordered by how often they come up. Arabic script with tashkeel, how to say each one, the franco spelling, and real example sentences. Free speaking and multiple-choice practice.`
+				: 'Egyptian Arabic vocabulary by topic, with audio and examples.',
+			url: data?.slug
+				? `${baseUrl}/egyptian-arabic/vocabulary/${data.slug}`
+				: `${baseUrl}/egyptian-arabic/vocabulary`,
+			type: 'article'
+		},
+		pronunciation: {
+			title: 'Egyptian Arabic Pronunciation - How Masri Actually Sounds | Parallel Arabic',
+			description:
+				'The six sound changes that separate Egyptian Arabic from Modern Standard Arabic: ج as a hard g, ق as a glottal stop, the "th" letters, ع and ح, the emphatic letters and the b- prefix. With audio and free speaking practice.',
+			url: `${baseUrl}/egyptian-arabic/pronunciation`,
+			type: 'article'
+		},
+		beginners: {
+			title: 'Egyptian Arabic for Beginners - Where to Start and in What Order',
+			description:
+				'A step-by-step path for learning Egyptian Arabic from scratch: the alphabet, the sounds Egyptian changes, the first hundred words, whole phrases, the present tense, then speaking. Each step links to a free page that teaches it.',
+			url: `${baseUrl}/egyptian-arabic/beginners`,
+			type: 'article'
+		},
 		phrases: {
 			title: `${dialectName} Phrases - How to Say the Everyday Things | Parallel Arabic`,
 			description: `A ${dialectName} phrasebook: hello, how are you, thank you, happy birthday and the rest of the everyday phrases, each with Arabic script, tashkeel, transliteration and audio.`,
@@ -484,6 +523,22 @@ export function resolvePageKey(
 				? { key: 'dialect-conjugations', data: { dialect } }
 				: { key: 'conjugation-verb', data: { dialect, slug: parts[2] } };
 		}
+		// Vocabulary topics, pronunciation and the beginner path are Egyptian-only
+		// for now, and their copy names Egyptian explicitly. Matching them for
+		// every dialect would give a future /levantine/vocabulary the wrong title.
+		if (dialect === 'egyptian-arabic') {
+			if (parts[1] === 'vocabulary') {
+				return parts.length === 2
+					? { key: 'vocabulary-hub', data: { dialect } }
+					: { key: 'vocabulary-topic', data: { dialect, slug: parts[2] } };
+			}
+			if (parts[1] === 'pronunciation' && parts.length === 2) {
+				return { key: 'pronunciation', data: { dialect } };
+			}
+			if (parts[1] === 'beginners' && parts.length === 2) {
+				return { key: 'beginners', data: { dialect } };
+			}
+		}
 		if (parts[1] === 'word') {
 			return parts.length === 2
 				? { key: 'words', data: { dialect } }
@@ -582,8 +637,14 @@ function unslug(slug: string): string {
 export function deriveRouteData(key: string, data: any): Record<string, unknown> {
 	if (!data) return {};
 
+	// Any route that returns `faqs` gets FAQPage markup, so the field has to
+	// survive this function. This used to be a hardcoded list of three keys,
+	// which silently dropped faqs from any route added later.
+	const shared = Array.isArray(data.faqs) && data.faqs.length ? { faqs: data.faqs } : {};
+
 	if (key === 'lesson' && data.lesson) {
 		return {
+			...shared,
 			title: data.lesson.title || data.lesson.title_arabic,
 			description: data.lesson.description,
 			id: data.lesson.id,
@@ -592,8 +653,24 @@ export function deriveRouteData(key: string, data: any): Record<string, unknown>
 		};
 	}
 
+	if (key === 'vocabulary-topic' && data.topic) {
+		return {
+			...shared,
+			// The whole topic goes through so the DefinedTermSet can list its terms.
+			topic: data.topic,
+			slug: data.topic.slug,
+			label: data.topic.label,
+			count: data.topic.words?.length ?? 0
+		};
+	}
+
 	if (key === 'story' && data.story && !Array.isArray(data.story)) {
-		return { title: data.story.title, description: data.story.description, id: data.story.id };
+		return {
+			...shared,
+			title: data.story.title,
+			description: data.story.description,
+			id: data.story.id
+		};
 	}
 
 	if (key === 'generated_story' && data.storyData) {
@@ -610,6 +687,7 @@ export function deriveRouteData(key: string, data: any): Record<string, unknown>
 		if (!englishTitle) return { id: data.storyData.id, dialect: data.storyData.dialect };
 
 		return {
+			...shared,
 			id: data.storyData.id,
 			dialect: data.storyData.dialect,
 			hasPaywalledSection: true,
@@ -622,6 +700,7 @@ export function deriveRouteData(key: string, data: any): Record<string, unknown>
 
 	if (key === 'blogPost' && data.blogPost) {
 		return {
+			...shared,
 			title: data.blogPost.title,
 			description: data.blogPost.description,
 			url: data.blogPost.url,
@@ -629,12 +708,9 @@ export function deriveRouteData(key: string, data: any): Record<string, unknown>
 		};
 	}
 
-	if (key === 'dialect' || key === 'keyboard' || key === 'game') {
-		return { faqs: data.faqs };
-	}
-
 	if (key === 'word' && data.word) {
 		return {
+			...shared,
 			slug: data.word.slug,
 			english: data.word.english,
 			arabic: data.word.arabic,
@@ -645,6 +721,7 @@ export function deriveRouteData(key: string, data: any): Record<string, unknown>
 
 	if (key === 'phrase' && data.phrase) {
 		return {
+			...shared,
 			slug: data.phrase.slug,
 			english: data.phrase.english,
 			arabic: data.phrase.arabicPlain || data.phrase.arabic,
@@ -656,6 +733,7 @@ export function deriveRouteData(key: string, data: any): Record<string, unknown>
 
 	if (key === 'conjugation-verb' && data.verb) {
 		return {
+			...shared,
 			arabic: data.verb.arabic,
 			transliteration: data.verb.transliteration,
 			english: data.verb.english,
@@ -663,7 +741,7 @@ export function deriveRouteData(key: string, data: any): Record<string, unknown>
 		};
 	}
 
-	return {};
+	return shared;
 }
 
 /**
@@ -816,6 +894,29 @@ export function generateStructuredData(page: string, data?: any) {
 		};
 	}
 
+	// A topic page is a list of terms, so it gets the set rather than a term.
+	if (page === 'vocabulary-topic' && data?.topic) {
+		const topic = data.topic as {
+			slug: string;
+			label: string;
+			words: { arabic: string; transliteration: string; english: string }[];
+		};
+		return {
+			'@context': 'https://schema.org',
+			'@type': 'DefinedTermSet',
+			name: `Egyptian Arabic ${topic.label}`,
+			url: `${baseUrl}/egyptian-arabic/vocabulary/${topic.slug}`,
+			inLanguage: 'ar',
+			hasDefinedTerm: topic.words.slice(0, 50).map((word) => ({
+				'@type': 'DefinedTerm',
+				name: word.arabic,
+				alternateName: word.transliteration,
+				description: word.english,
+				inLanguage: 'ar'
+			}))
+		};
+	}
+
 	if (page === 'word' && data?.arabic) {
 		return {
 			'@context': 'https://schema.org',
@@ -926,6 +1027,56 @@ export function siteStructuredData() {
 			}
 		}
 	];
+}
+
+/**
+ * Breadcrumb trail for a path, or null for pages shallow enough not to need one.
+ *
+ * `breadcrumbStructuredData` has existed since the SEO work started but nothing
+ * ever called it, so no page emitted BreadcrumbList. This resolves the trail
+ * from the path so the layout can emit it everywhere at once.
+ */
+export function resolveBreadcrumbs(pathname: string, data?: any) {
+	const path = pathname.replace(/\/+$/, '') || '/';
+	const parts = path.split('/').filter(Boolean);
+	if (parts.length < 2) return null;
+	if (isNoindexPath(path)) return null;
+
+	const trail: { name: string; path: string }[] = [{ name: 'Home', path: '/' }];
+
+	const dialect = (DIALECTS as readonly string[]).includes(parts[0]) ? parts[0] : null;
+	if (dialect) {
+		trail.push({ name: formatDialectName(dialect), path: `/${dialect}` });
+	} else {
+		trail.push({ name: titleCase(parts[0]), path: `/${parts[0]}` });
+	}
+
+	for (let i = 1; i < parts.length; i++) {
+		const segment = parts[i];
+		const isLast = i === parts.length - 1;
+		// The leaf is named after the thing itself where the page knows it.
+		const name = isLast ? leafName(segment, data) : titleCase(segment);
+		trail.push({ name, path: `/${parts.slice(0, i + 1).join('/')}` });
+	}
+
+	return breadcrumbStructuredData(trail);
+}
+
+function titleCase(segment: string): string {
+	return segment
+		.split('-')
+		.map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+		.join(' ');
+}
+
+function leafName(segment: string, data?: any): string {
+	return (
+		data?.topic?.label ||
+		data?.word?.english ||
+		data?.phrase?.english ||
+		data?.verb?.english ||
+		titleCase(segment)
+	);
 }
 
 export function breadcrumbStructuredData(trail: { name: string; path: string }[]) {

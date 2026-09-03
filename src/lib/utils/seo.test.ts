@@ -1,5 +1,11 @@
 import { describe, expect, it } from 'vitest';
-import { resolvePageMeta, resolvePageKey, isNoindexPath } from './seo';
+import {
+	resolvePageMeta,
+	resolvePageKey,
+	isNoindexPath,
+	resolveStructuredData,
+	resolveBreadcrumbs
+} from './seo';
 
 const BASE = 'https://www.parallel-arabic.com';
 
@@ -113,5 +119,88 @@ describe('resolvePageKey', () => {
 
 	it('returns null for an unmapped path so the caller self-canonicalises', () => {
 		expect(resolvePageKey('/some/route/added/later')).toBeNull();
+	});
+});
+
+describe('structured data', () => {
+	const faqs = [{ question: 'q', answer: 'a' }];
+
+	it('emits FAQPage for any route that returns faqs, not a hardcoded list', () => {
+		for (const path of [
+			'/egyptian-arabic',
+			'/egyptian-arabic/pronunciation',
+			'/egyptian-arabic/beginners'
+		]) {
+			expect((resolveStructuredData(path, { faqs }) as { '@type': string })['@type']).toBe(
+				'FAQPage'
+			);
+		}
+	});
+
+	it('emits a DefinedTermSet listing the words on a vocabulary topic page', () => {
+		const topic = {
+			slug: 'numbers',
+			label: 'Numbers',
+			heading: 'Egyptian Arabic Numbers',
+			words: [{ arabic: 'واحد', transliteration: 'waahid', english: 'one' }]
+		};
+		const sd = resolveStructuredData('/egyptian-arabic/vocabulary/numbers', { topic }) as {
+			'@type': string;
+			hasDefinedTerm: { name: string }[];
+		};
+		expect(sd['@type']).toBe('DefinedTermSet');
+		expect(sd.hasDefinedTerm[0].name).toBe('واحد');
+	});
+});
+
+describe('egyptian-only routes', () => {
+	it('maps the Egyptian vocabulary routes', () => {
+		expect(resolvePageKey('/egyptian-arabic/vocabulary')?.key).toBe('vocabulary-hub');
+		expect(resolvePageKey('/egyptian-arabic/vocabulary/numbers')).toEqual({
+			key: 'vocabulary-topic',
+			data: { dialect: 'egyptian-arabic', slug: 'numbers' }
+		});
+		expect(resolvePageKey('/egyptian-arabic/pronunciation')?.key).toBe('pronunciation');
+		expect(resolvePageKey('/egyptian-arabic/beginners')?.key).toBe('beginners');
+	});
+
+	it('does not claim those keys for other dialects', () => {
+		// These pages do not exist for Levantine, and their copy names Egyptian.
+		expect(resolvePageKey('/levantine/vocabulary')).toBeNull();
+		expect(resolvePageKey('/levantine/pronunciation')).toBeNull();
+	});
+});
+
+describe('breadcrumbs', () => {
+	it('skips pages too shallow to need a trail', () => {
+		expect(resolveBreadcrumbs('/')).toBeNull();
+		expect(resolveBreadcrumbs('/egyptian-arabic')).toBeNull();
+	});
+
+	it('skips noindex paths', () => {
+		expect(resolveBreadcrumbs('/profile/saved-words')).toBeNull();
+	});
+
+	it('builds a dialect-aware trail and names the leaf after the page', () => {
+		const crumbs = resolveBreadcrumbs('/egyptian-arabic/vocabulary/numbers', {
+			topic: { label: 'Numbers' }
+		}) as { itemListElement: { name: string; item: string }[] };
+
+		expect(crumbs.itemListElement.map((c) => c.name)).toEqual([
+			'Home',
+			'Egyptian Arabic',
+			'Vocabulary',
+			'Numbers'
+		]);
+		expect(crumbs.itemListElement[3].item).toBe(
+			'https://www.parallel-arabic.com/egyptian-arabic/vocabulary/numbers'
+		);
+	});
+
+	it('falls back to the slug when the page has no name for the leaf', () => {
+		const crumbs = resolveBreadcrumbs('/egyptian-arabic/pronunciation') as {
+			itemListElement: { name: string }[];
+		};
+		expect(crumbs.itemListElement.at(-1)?.name).toBe('Pronunciation');
 	});
 });

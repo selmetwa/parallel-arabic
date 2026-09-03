@@ -7,6 +7,7 @@ import { BLOCKED_STORY_IDS } from '$lib/constants/stories/blocked';
 import { PHRASE_SEEDS, PHRASE_DIALECTS } from '$lib/constants/phrase-seeds';
 import { COMPARISON_SLUGS } from '$lib/constants/dialect-comparisons';
 import { WORD_DIALECTS, wordSlugsFor } from '$lib/data/words/manifest';
+import { VOCAB_DIALECTS, topicSlugsFor } from '$lib/data/vocab/manifest';
 import { existsPhrase } from '$lib/data/phrases/manifest';
 const BASE_URL = 'https://www.parallel-arabic.com';
 
@@ -145,6 +146,40 @@ export const GET: RequestHandler = async () => {
     <priority>0.6</priority>
   </url>`);
 		}
+	}
+
+	// Vocabulary hub, topic pages, and the two hand-written Egyptian guides
+	for (const dialect of VOCAB_DIALECTS) {
+		const topics = topicSlugsFor(dialect);
+		if (!topics.length) continue;
+
+		urls.push(`
+  <url>
+    <loc>${BASE_URL}/${dialect}/vocabulary</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>`);
+
+		for (const topic of topics) {
+			urls.push(`
+  <url>
+    <loc>${BASE_URL}/${dialect}/vocabulary/${escapeXml(topic)}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>`);
+		}
+	}
+
+	for (const path of ['/egyptian-arabic/pronunciation', '/egyptian-arabic/beginners']) {
+		urls.push(`
+  <url>
+    <loc>${BASE_URL}${path}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>`);
 	}
 
 	// Dialect comparison pages

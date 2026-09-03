@@ -27,7 +27,10 @@
       <div class="space-y-4">
         <h3 class="text-text-100 font-semibold text-base mb-3 tracking-wide">Resources</h3>
         <ul class="space-y-2 text-text-300 text-sm">
-<li><a href="/anki-decks" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Anki Decks</a></li>
+<li><a href="/egyptian-arabic/vocabulary" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Egyptian Arabic Vocabulary</a></li>
+          <li><a href="/egyptian-arabic/pronunciation" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Egyptian Arabic Pronunciation</a></li>
+          <li><a href="/egyptian-arabic/beginners" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Egyptian Arabic for Beginners</a></li>
+          <li><a href="/anki-decks" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Anki Decks</a></li>
           <li><a href="/support" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Support</a></li>
           <li><a href="/faq" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">FAQ</a></li>
           <li><a href="https://github.com/selmetwa/parallel-arabic" target="_blank" class="hover:text-text-100 transition-all duration-200 hover:translate-x-1 inline-block">Source Code</a></li>
