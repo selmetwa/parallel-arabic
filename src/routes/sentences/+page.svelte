@@ -423,7 +423,7 @@
 		<div class="flex items-start gap-4">
 			<span class="text-4xl font-bold text-brand opacity-70 leading-none mt-1 shrink-0 select-none" aria-hidden="true" dir="rtl">جملة</span>
 			<div>
-				<p class="text-[0.65rem] font-bold uppercase tracking-[0.15em] text-text-200 border-l-2 border-brand pl-2 mb-2">Practice Tool</p>
+				<p class="text-[0.65rem] font-bold text-text-200 border-l-2 border-brand pl-2 mb-2">Practice Tool</p>
 				<h1 class="text-2xl sm:text-3xl text-text-300 font-bold tracking-tight">Sentence Practice</h1>
 				<p class="text-text-200 text-sm sm:text-base leading-snug max-w-2xl mt-1">
 					Drill grammar patterns and vocabulary in context with unlimited custom practice sentences.
@@ -455,7 +455,7 @@
 					<!-- Word Source Selection -->
 					<div class="bg-tile-300 border border-tile-400 rounded-xl overflow-hidden">
 						<div class="px-4 pt-4 pb-1">
-							<h3 class="text-xs font-bold uppercase tracking-[0.12em] text-text-200 border-l-2 border-brand pl-2">Word Source</h3>
+							<h3 class="text-xs font-bold text-text-200 border-l-2 border-brand pl-2">Word Source</h3>
 						</div>
 						<div class="p-4">
 							<div class="grid grid-cols-2 gap-3">
@@ -498,7 +498,7 @@
 					<!-- Difficulty Selection -->
 					<div class="bg-tile-300 border border-tile-400 rounded-xl overflow-hidden">
 						<div class="px-4 pt-4 pb-1">
-							<h3 class="text-xs font-bold uppercase tracking-[0.12em] text-text-200 border-l-2 border-brand pl-2">Difficulty Level</h3>
+							<h3 class="text-xs font-bold text-text-200 border-l-2 border-brand pl-2">Difficulty Level</h3>
 						</div>
 						<div class="p-4 pt-2">
 							<div class="grid grid-cols-3 sm:grid-cols-6 gap-2">
@@ -548,7 +548,7 @@
 					<!-- Difficulty Selection -->
 					<div class="bg-tile-300 border border-tile-400 rounded-xl overflow-hidden">
 						<div class="px-4 pt-4 pb-1">
-							<h3 class="text-xs font-bold uppercase tracking-[0.12em] text-text-200 border-l-2 border-brand pl-2">Difficulty Level</h3>
+							<h3 class="text-xs font-bold text-text-200 border-l-2 border-brand pl-2">Difficulty Level</h3>
 						</div>
 						<div class="p-4 pt-2">
 							<div class="grid grid-cols-3 sm:grid-cols-6 gap-2">
@@ -570,7 +570,7 @@
 					<div class="bg-tile-300 border border-tile-400 rounded-xl overflow-hidden">
 						<div class="px-4 pt-4 pb-1">
 							<div class="flex items-center justify-between">
-								<h3 class="text-xs font-bold uppercase tracking-[0.12em] text-text-200 border-l-2 border-brand pl-2">Focus Topics <span class="font-normal normal-case tracking-normal">(optional)</span></h3>
+								<h3 class="text-xs font-bold text-text-200 border-l-2 border-brand pl-2">Focus Topics <span class="font-normal normal-case tracking-normal">(optional)</span></h3>
 								{#if selectedLearningTopics.length > 0}
 									<button
 										type="button"
@@ -601,7 +601,7 @@
 					<!-- Vocabulary Input -->
 					<div class="bg-tile-300 border border-tile-400 rounded-xl overflow-hidden">
 						<div class="px-4 pt-4 pb-1">
-							<h3 class="text-xs font-bold uppercase tracking-[0.12em] text-text-200 border-l-2 border-brand pl-2">Custom Vocabulary <span class="font-normal normal-case tracking-normal">(optional)</span></h3>
+							<h3 class="text-xs font-bold text-text-200 border-l-2 border-brand pl-2">Custom Vocabulary <span class="font-normal normal-case tracking-normal">(optional)</span></h3>
 						</div>
 						<div class="p-4">
 							<!-- Input Mode Toggle -->
@@ -664,7 +664,7 @@
 					<!-- Practice Mode -->
 					<div class="bg-tile-300 border border-tile-400 rounded-xl overflow-hidden">
 						<div class="px-4 pt-4 pb-1">
-							<h3 class="text-xs font-bold uppercase tracking-[0.12em] text-text-200 border-l-2 border-brand pl-2">Practice Mode</h3>
+							<h3 class="text-xs font-bold text-text-200 border-l-2 border-brand pl-2">Practice Mode</h3>
 						</div>
 						<div class="p-4">
 							<div class="grid grid-cols-2 gap-3">
@@ -761,7 +761,7 @@
 							<span class="text-text-200 font-normal">of</span>
 							<span>{session.sentences.length}</span>
 						</h1>
-						<p class="text-xs text-text-200 font-medium uppercase tracking-wider mt-0.5">{dialectOptions.find(d => d.value === selectedDialect)?.label}</p>
+						<p class="text-xs text-text-200 font-medium mt-0.5">{dialectOptions.find(d => d.value === selectedDialect)?.label}</p>
 					</div>
 					<div class="w-24 flex justify-end gap-2">
 						{#if session.index < session.sentences.length - 1}

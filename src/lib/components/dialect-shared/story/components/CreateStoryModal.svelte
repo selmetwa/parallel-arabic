@@ -605,7 +605,7 @@
 			</div>
 		{:else}
 			<div class="mb-6 pb-4 border-b border-tile-400">
-				<p class="text-[0.65rem] font-bold uppercase tracking-[0.15em] text-text-200 border-l-2 border-brand pl-2 mb-2">Create Content</p>
+				<p class="text-[0.65rem] font-bold text-text-200 border-l-2 border-brand pl-2 mb-2">Create Content</p>
 				<h1 class="text-xl font-bold text-text-300">{dialectName[dialect]}</h1>
 				<p class="text-text-200 text-sm mt-0.5">
 					Generate original stories and conversations or upload audio to transcribe.

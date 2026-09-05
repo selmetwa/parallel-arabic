@@ -408,7 +408,7 @@
 			<div class="max-w-4xl mx-auto flex items-start gap-4">
 				<span class="text-4xl font-bold text-brand opacity-70 leading-none mt-1 shrink-0 select-none" aria-hidden="true" dir="rtl">نطق</span>
 				<div class="min-w-0">
-					<p class="text-[0.65rem] font-bold uppercase tracking-[0.15em] text-text-200 border-l-2 border-brand pl-2 mb-2">Practice Tool</p>
+					<p class="text-[0.65rem] font-bold text-text-200 border-l-2 border-brand pl-2 mb-2">Practice Tool</p>
 					<h1 class="text-2xl sm:text-3xl font-bold text-text-300 tracking-tight">Speaking Practice</h1>
 					<p class="text-text-200 text-sm sm:text-base leading-snug mt-1 max-w-2xl">
 						Practice your Arabic pronunciation with custom practice sentences and get real-time feedback.
@@ -441,7 +441,7 @@
 						<!-- Dialect Selection -->
 						<div class="bg-tile-300 border border-tile-400 rounded-xl overflow-hidden">
 							<div class="px-4 pt-4 pb-1">
-								<h3 class="text-xs font-bold uppercase tracking-[0.12em] text-text-200 border-l-2 border-brand pl-2">Select Dialect</h3>
+								<h3 class="text-xs font-bold text-text-200 border-l-2 border-brand pl-2">Select Dialect</h3>
 							</div>
 							<div class="p-4 pt-2">
 								<div class="grid grid-cols-2 gap-3">
@@ -462,7 +462,7 @@
 						<!-- Word Source Selection -->
 						<div class="bg-tile-300 border border-tile-400 rounded-xl overflow-hidden">
 							<div class="px-4 pt-4 pb-1">
-								<h3 class="text-xs font-bold uppercase tracking-[0.12em] text-text-200 border-l-2 border-brand pl-2">Word Source</h3>
+								<h3 class="text-xs font-bold text-text-200 border-l-2 border-brand pl-2">Word Source</h3>
 							</div>
 							<div class="p-4">
 								<div class="grid grid-cols-2 gap-3">
@@ -508,7 +508,7 @@
 						<!-- Dialect Selection -->
 						<div class="bg-tile-300 border border-tile-400 rounded-xl overflow-hidden">
 							<div class="px-4 pt-4 pb-1">
-								<h3 class="text-xs font-bold uppercase tracking-[0.12em] text-text-200 border-l-2 border-brand pl-2">Select Dialect</h3>
+								<h3 class="text-xs font-bold text-text-200 border-l-2 border-brand pl-2">Select Dialect</h3>
 							</div>
 							<div class="p-4 pt-2">
 								<div class="grid grid-cols-2 gap-3">
@@ -530,7 +530,7 @@
 					<!-- Difficulty Selection -->
 					<div class="bg-tile-300 border border-tile-400 rounded-xl overflow-hidden">
 						<div class="px-4 pt-4 pb-1">
-							<h3 class="text-xs font-bold uppercase tracking-[0.12em] text-text-200 border-l-2 border-brand pl-2">Difficulty Level</h3>
+							<h3 class="text-xs font-bold text-text-200 border-l-2 border-brand pl-2">Difficulty Level</h3>
 						</div>
 						<div class="p-4 pt-2">
 							<div class="grid grid-cols-3 sm:grid-cols-6 gap-2">
@@ -553,7 +553,7 @@
 						<div class="bg-tile-300 border border-tile-400 rounded-xl overflow-hidden">
 							<div class="px-4 pt-4 pb-1">
 								<div class="flex items-center justify-between">
-									<h3 class="text-xs font-bold uppercase tracking-[0.12em] text-text-200 border-l-2 border-brand pl-2">Focus Topics <span class="font-normal normal-case tracking-normal">(optional)</span></h3>
+									<h3 class="text-xs font-bold text-text-200 border-l-2 border-brand pl-2">Focus Topics <span class="font-normal normal-case tracking-normal">(optional)</span></h3>
 									{#if selectedLearningTopics.length > 0}
 										<button
 											type="button"
@@ -584,7 +584,7 @@
 						<!-- Vocabulary Input -->
 						<div class="bg-tile-300 border border-tile-400 rounded-xl overflow-hidden">
 							<div class="px-4 pt-4 pb-1">
-								<h3 class="text-xs font-bold uppercase tracking-[0.12em] text-text-200 border-l-2 border-brand pl-2">Custom Vocabulary <span class="font-normal normal-case tracking-normal">(optional)</span></h3>
+								<h3 class="text-xs font-bold text-text-200 border-l-2 border-brand pl-2">Custom Vocabulary <span class="font-normal normal-case tracking-normal">(optional)</span></h3>
 							</div>
 							<div class="p-4">
 								<!-- Input Mode Toggle -->

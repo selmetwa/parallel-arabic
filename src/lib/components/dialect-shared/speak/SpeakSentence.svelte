@@ -417,7 +417,7 @@
 
 					<!-- What you said -->
 					<div class="border-t border-tile-500/30 pt-6">
-						<p class="text-sm text-text-200 mb-3 uppercase tracking-wider font-bold text-center">You said:</p>
+						<p class="text-sm text-text-200 mb-3 font-bold text-center">You said:</p>
 						<p class="text-2xl sm:text-3xl text-center text-text-300 font-arabic leading-relaxed" dir="rtl">
 							{transcribedText}
 						</p>
@@ -426,7 +426,7 @@
 					<!-- Expected (if answer is shown) -->
 					{#if showAnswer}
 						<div class="border-t border-tile-500/30 pt-6 mt-6">
-							<p class="text-sm text-text-200 mb-3 uppercase tracking-wider font-bold text-center">Expected:</p>
+							<p class="text-sm text-text-200 mb-3 font-bold text-center">Expected:</p>
 							<p class="text-2xl sm:text-3xl text-center text-text-300 font-arabic leading-relaxed" dir="rtl">
 								{showTashkeel && sentence.arabicTashkeel ? sentence.arabicTashkeel : sentence.arabic}
 							</p>

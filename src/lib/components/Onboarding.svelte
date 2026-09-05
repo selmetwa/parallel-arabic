@@ -3,6 +3,8 @@
   import { cubicOut, backOut } from 'svelte/easing';
   import { currentDialect } from '$lib/store/store';
   import { goto } from '$app/navigation';
+  import OnboardingConversation from '$lib/components/onboarding/OnboardingConversation.svelte';
+  import type { Dialect } from '$lib/types';
 
   type Props = {
     isOpen: boolean;
@@ -18,12 +20,7 @@
   let isSubmitting = $state(false);
   let error = $state('');
 
-  // Display preferences
-  let showArabic = $state(true);
-  let showTransliteration = $state(true);
-  let showEnglish = $state(true);
-
-  const totalSteps = 5;
+  const totalSteps = 4;
 
   const dialects = [
     { id: 'egyptian-arabic', label: 'Egyptian', emoji: '🇪🇬', description: 'Most widely understood dialect' },
@@ -55,8 +52,7 @@
     { title: 'Dialect', subtitle: 'Choose your focus' },
     { title: 'Goals', subtitle: 'Why are you learning?' },
     { title: 'Level', subtitle: 'Where are you now?' },
-    { title: 'Display', subtitle: 'Customize your view' },
-    { title: 'Start', subtitle: "You're all set!" }
+    { title: 'Practice', subtitle: 'Say your first words' }
   ];
 
   function nextStep() {
@@ -66,7 +62,11 @@
     }
     if (step === 1 && !targetDialect) return;
     if (step === 2 && !learningReason) return;
-    if (step === 3 && !proficiencyLevel) return;
+    if (step === 3) {
+      if (!proficiencyLevel) return;
+      handleSubmit();
+      return;
+    }
     step += 1;
   }
 
@@ -108,10 +108,7 @@
         body: JSON.stringify({
           target_dialect: targetDialect,
           learning_reason: learningReason,
-          proficiency_level: proficiencyLevel,
-          show_arabic: showArabic,
-          show_transliteration: showTransliteration,
-          show_english: showEnglish
+          proficiency_level: proficiencyLevel
         })
       });
 
@@ -127,16 +124,16 @@
     }
 
     isSubmitting = false;
-    step = 5;
+    step = 4;
   }
 
   function getStaggerDelay(index: number) {
     return index * 80;
   }
 
-  async function navigateToFeature(url: string) {
+  async function finishOnboarding(destination: string) {
     handleCloseModal();
-    await goto(url, { replaceState: true });
+    await goto(destination, { replaceState: true });
   }
 </script>
 
@@ -163,10 +160,6 @@
     background-size: 48px 48px;
   }
 
-  .eyebrow {
-    letter-spacing: 0.32em;
-  }
-
   .card-hover {
     transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
   }
@@ -181,14 +174,6 @@
 
   .progress-step {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .toggle-switch {
-    transition: background-color 0.3s ease;
-  }
-
-  .toggle-knob {
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   /* Slow drift for the current-step ring */
@@ -248,7 +233,7 @@
         <!-- Current Step Label -->
         <div class="text-center h-4">
           {#if stepInfo[step].subtitle}
-            <span class="eyebrow text-[10px] sm:text-xs text-text-200 font-semibold uppercase">
+            <span class="text-xs text-text-200 font-semibold">
               {String(step).padStart(2, '0')} &nbsp;·&nbsp; {stepInfo[step].subtitle}
             </span>
           {/if}
@@ -266,7 +251,7 @@
               in:fly={{ y: 30, duration: 500, easing: cubicOut }}
             >
               <span
-                class="eyebrow text-[10px] sm:text-xs text-text-200 font-semibold uppercase mb-5 sm:mb-7"
+                class="text-xs text-text-200 font-semibold mb-5 sm:mb-7"
                 in:fade={{ duration: 500, delay: 150 }}
               >
                 Parallel Arabic
@@ -424,173 +409,26 @@
                   </button>
                 {/each}
               </div>
-            </div>
-          {/if}
 
-          <!-- Step 4: Display Preferences -->
-          {#if step === 4}
-            <div in:fly={{ y: 30, duration: 500, easing: cubicOut }}>
-              <div class="text-center mb-6">
-                <h2 class="text-2xl sm:text-3xl font-bold text-text-300 mb-1.5 tracking-tight">Display Settings</h2>
-                <p class="text-text-200 text-sm sm:text-base">Choose what you see while learning</p>
-              </div>
-
-              <!-- Live Preview -->
-              <div
-                class="relative max-w-md mx-auto mb-6 p-5 sm:p-6 rounded-2xl bg-tile-300/60 border border-text-300/10 backdrop-blur-sm overflow-hidden"
-                in:fly={{ y: 20, duration: 400, delay: 100, easing: cubicOut }}
-              >
-                <span class="eyebrow absolute top-3 left-4 text-[9px] font-semibold uppercase text-text-200/60">Preview</span>
-                <div class="text-center space-y-2 pt-3">
-                  {#if showEnglish}
-                    <p class="text-lg sm:text-xl text-text-300 font-semibold" in:fade={{ duration: 200 }}>
-                      Hello, how are you?
-                    </p>
-                  {/if}
-                  {#if showTransliteration}
-                    <p class="text-sm sm:text-base text-text-200 italic" in:fade={{ duration: 200 }}>
-                      ahlan, izzayak?
-                    </p>
-                  {/if}
-                  {#if showArabic}
-                    <p class="font-arabic font-semibold text-lg sm:text-xl text-text-300 pt-1" dir="rtl" lang="ar" in:fade={{ duration: 200 }}>
-                      أهلاً، إزيك؟
-                    </p>
-                  {/if}
-                  {#if !showEnglish && !showTransliteration && !showArabic}
-                    <p class="text-sm text-text-200/60 italic py-4">Select at least one option</p>
-                  {/if}
-                </div>
-              </div>
-
-              <!-- Toggle Cards -->
-              <div class="flex flex-col gap-2.5 max-w-md mx-auto">
-                {#each [
-                  { key: 'arabic', label: 'Arabic Script', desc: 'Show Arabic text', icon: '🔤', get: () => showArabic, set: (v: boolean) => showArabic = v },
-                  { key: 'translit', label: 'Transliteration', desc: 'Latin letter pronunciation', icon: '📝', get: () => showTransliteration, set: (v: boolean) => showTransliteration = v },
-                  { key: 'english', label: 'English', desc: 'Show translations', icon: '🇬🇧', get: () => showEnglish, set: (v: boolean) => showEnglish = v }
-                ] as opt, i (opt.key)}
-                  <button
-                    class="flex items-center gap-3 sm:gap-4 p-3.5 sm:p-4 rounded-2xl border transition-all duration-300 backdrop-blur-sm
-                      {opt.get()
-                        ? 'bg-text-300/[0.07] border-text-300/40'
-                        : 'bg-tile-300/40 border-text-300/10 hover:border-text-300/25'}"
-                    onclick={() => opt.set(!opt.get())}
-                    in:fly={{ y: 20, duration: 400, delay: 200 + getStaggerDelay(i), easing: cubicOut }}
-                  >
-                    <span class="text-2xl">{opt.icon}</span>
-                    <div class="flex-1 text-left">
-                      <span class="font-semibold text-sm sm:text-base text-text-300 block">{opt.label}</span>
-                      <span class="text-xs text-text-200">{opt.desc}</span>
-                    </div>
-                    <div class="toggle-switch w-12 h-7 rounded-full p-1 {opt.get() ? 'bg-green-500' : 'bg-tile-600'}">
-                      <div class="toggle-knob w-5 h-5 rounded-full bg-white shadow-md {opt.get() ? 'translate-x-5' : 'translate-x-0'}"></div>
-                    </div>
-                  </button>
-                {/each}
-              </div>
-
-              <!-- Submit Button -->
-              <div class="mt-7 flex justify-center" in:fly={{ y: 20, duration: 400, delay: 500, easing: cubicOut }}>
-                {#if isSubmitting}
+              {#if isSubmitting}
+                <div class="mt-7 flex justify-center" in:fade={{ duration: 200 }}>
                   <div class="flex items-center gap-3 text-text-300 px-8 py-3.5">
                     <div class="w-5 h-5 border-2 border-text-300 border-t-transparent rounded-full animate-spin"></div>
                     <span class="font-medium">Setting up your experience...</span>
                   </div>
-                {:else}
-                  <button
-                    class="group px-9 py-3.5 bg-text-300 text-tile-300 rounded-full font-semibold text-base
-                      hover:-translate-y-0.5 transition-all duration-300 hover:shadow-xl hover:shadow-text-300/20
-                      disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
-                    onclick={handleSubmit}
-                    disabled={!showArabic && !showTransliteration && !showEnglish}
-                  >
-                    <span class="flex items-center gap-2">
-                      Start Learning
-                      <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                      </svg>
-                    </span>
-                  </button>
-                {/if}
-              </div>
+                </div>
+              {/if}
             </div>
           {/if}
 
-          <!-- Step 5: Feature Showcase -->
-          {#if step === 5}
+          <!-- Step 4: First conversation -->
+          {#if step === 4}
             <div in:fly={{ y: 30, duration: 500, easing: cubicOut }}>
-              <div class="text-center mb-6">
-                <p class="font-arabic font-bold text-2xl sm:text-3xl text-text-300/80 mb-2" dir="rtl" lang="ar">يلّا نبدأ</p>
-                <h2 class="text-2xl sm:text-3xl font-bold text-text-300 mb-1.5 tracking-tight">You're all set!</h2>
-                <p class="text-text-200 text-sm sm:text-base">Pick where you'd like to start. You can always come back to any of these.</p>
-              </div>
-
-              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-3 max-w-2xl mx-auto">
-                {#each [
-                  {
-                    icon: '✍️',
-                    title: 'Alphabet',
-                    description: 'Learn to read Arabic script from scratch',
-                    url: '/alphabet',
-                    badge: proficiencyLevel === 'A1' || proficiencyLevel === 'A2' ? 'New to Arabic script?' : null
-                  },
-                  {
-                    icon: '📚',
-                    title: 'Lessons',
-                    description: 'Structured lessons in your dialect',
-                    url: `/lessons/structured/${targetDialect}`,
-                    badge: 'Recommended'
-                  },
-                  {
-                    icon: '📖',
-                    title: 'Stories',
-                    description: 'Read short stories, click any word',
-                    url: '/stories',
-                    badge: null
-                  },
-                  {
-                    icon: '📝',
-                    title: 'Sentences',
-                    description: 'Practice writing & matching sentences',
-                    url: '/sentences',
-                    badge: null
-                  },
-                  {
-                    icon: '🎮',
-                    title: 'Game',
-                    description: 'Reinforce vocabulary with quick games',
-                    url: '/learn/game',
-                    badge: null
-                  },
-                  {
-                    icon: '🤖',
-                    title: 'Tutor',
-                    description: 'Chat with an AI tutor in Arabic',
-                    url: '/tutor',
-                    badge: null
-                  }
-                ] as feature, i (feature.url)}
-                  <button
-                    class="card-hover group p-3.5 sm:p-5 rounded-2xl border text-left bg-tile-300/40 border-text-300/10 hover:border-text-300/40 hover:bg-tile-300/70 relative backdrop-blur-sm"
-                    onclick={() => navigateToFeature(feature.url)}
-                    in:fly={{ y: 30, duration: 400, delay: getStaggerDelay(i), easing: cubicOut }}
-                  >
-                    {#if feature.badge}
-                      <span class="absolute top-2.5 right-2.5 text-[10px] font-semibold px-2 py-0.5 rounded-full bg-text-300 text-tile-300">
-                        {feature.badge}
-                      </span>
-                    {/if}
-                    <div class="flex items-start gap-3 pt-2">
-                      <span class="text-2xl sm:text-3xl flex-shrink-0 transition-transform duration-300 group-hover:scale-110">{feature.icon}</span>
-                      <div class="flex-1 min-w-0 {feature.badge ? 'pr-12' : ''}">
-                        <span class="font-bold text-sm sm:text-base text-text-300 block">{feature.title}</span>
-                        <span class="text-xs text-text-200 leading-tight">{feature.description}</span>
-                      </div>
-                    </div>
-                  </button>
-                {/each}
-              </div>
+              <OnboardingConversation
+                dialect={targetDialect as Dialect}
+                {proficiencyLevel}
+                onFinish={finishOnboarding}
+              />
             </div>
           {/if}
 
@@ -628,20 +466,6 @@
               <svg class="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
-            </button>
-          </div>
-        </div>
-      {:else if step === 4}
-        <div class="px-4 sm:px-8 pb-5 sm:pb-7">
-          <div class="flex justify-start max-w-2xl mx-auto">
-            <button
-              class="group flex items-center gap-2 px-4 py-2 text-text-200 hover:text-text-300 transition-colors duration-200 rounded-full hover:bg-text-300/5"
-              onclick={prevStep}
-            >
-              <svg class="w-4 h-4 transition-transform duration-200 group-hover:-translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M11 17l-5-5m0 0l5-5m-5 5h12" />
-              </svg>
-              <span class="text-sm font-medium">Back</span>
             </button>
           </div>
         </div>

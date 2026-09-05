@@ -92,8 +92,6 @@
     color: var(--text1);
     font-weight: 700;
     font-size: 0.875rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
     position: sticky;
     top: 0;
   }

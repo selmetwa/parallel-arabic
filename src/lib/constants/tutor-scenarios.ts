@@ -33,27 +33,40 @@ export const TUTOR_SCENARIOS: TutorScenario[] = [
         otherRoleEnglish: 'New friend',
         lines: [
           { speaker: 'student', arabic: 'مرحبا، اسمي سارة.', transliteration: 'marhaba, ismi Sara.', english: "Hi, my name is Sara." },
-          { speaker: 'other', arabic: 'أهلًا سارة، تشرفنا. أنا أحمد.', transliteration: 'ahlan Sara, tsharrafna. ana Ahmad.', english: "Hi Sara, nice to meet you. I'm Ahmad." },
-          { speaker: 'student', arabic: 'أنا من كندا. وانت من وين؟', transliteration: 'ana min Canada. winta min wein?', english: "I'm from Canada. Where are you from?" },
-          { speaker: 'other', arabic: 'أنا من لبنان، من بيروت.', transliteration: 'ana min Lubnan, min Beirut.', english: "I'm from Lebanon, from Beirut." }
+          { speaker: 'other', arabic: 'أهلًا سارة، تشرفنا. أنا ريم.', transliteration: 'ahlan Sara, tsharrafna. ana Reem.', english: "Hi Sara, nice to meet you. I'm Reem." },
+          { speaker: 'student', arabic: 'أنا من كندا. وانتي من وين؟', transliteration: 'ana min Canada. w-inti min wein?', english: "I'm from Canada. Where are you from?" },
+          { speaker: 'other', arabic: 'أنا من لبنان، من بيروت.', transliteration: 'ana min Lubnan, min Beirut.', english: "I'm from Lebanon, from Beirut." },
+          { speaker: 'student', arabic: 'تشرفنا فيكي يا ريم!', transliteration: 'tsharrafna feeki ya Reem!', english: 'Nice to meet you, Reem!' }
         ]
       },
       'egyptian-arabic': {
         otherRoleEnglish: 'New friend',
         lines: [
-          { speaker: 'student', arabic: 'أهلاً، أنا اسمي سارة.', transliteration: 'ahlan, ana ismi Sara.', english: "Hi, my name is Sara." },
-          { speaker: 'other', arabic: 'أهلاً بيكي يا سارة. أنا أحمد.', transliteration: 'ahlan biki ya Sara. ana Ahmad.', english: "Hi Sara. I'm Ahmad." },
+          { speaker: 'student', arabic: 'أهلاً، أنا اسمي عمر.', transliteration: 'ahlan, ana ismi Omar.', english: "Hi, my name is Omar." },
+          { speaker: 'other', arabic: 'أهلاً بيك يا عمر. أنا أحمد.', transliteration: 'ahlan bik ya Omar. ana Ahmad.', english: "Hi Omar. I'm Ahmad." },
           { speaker: 'student', arabic: 'أنا من كندا. انت منين؟', transliteration: 'ana min Canada. inta mineen?', english: "I'm from Canada. Where are you from?" },
-          { speaker: 'other', arabic: 'أنا من مصر، من القاهرة.', transliteration: 'ana min Masr, min al-Qahira.', english: "I'm from Egypt, from Cairo." }
+          { speaker: 'other', arabic: 'أنا من مصر، من القاهرة.', transliteration: 'ana min Masr, min al-Qahira.', english: "I'm from Egypt, from Cairo." },
+          { speaker: 'student', arabic: 'تشرفت بيك يا أحمد!', transliteration: 'tsharraft beek ya Ahmad!', english: 'Nice to meet you, Ahmad!' }
         ]
       },
       'fusha': {
         otherRoleEnglish: 'New friend',
         lines: [
           { speaker: 'student', arabic: 'مرحبًا، اسمي سارة.', transliteration: 'marhaban, ismi Sara.', english: "Hello, my name is Sara." },
-          { speaker: 'other', arabic: 'أهلًا بكِ يا سارة. أنا أحمد.', transliteration: 'ahlan biki ya Sara. ana Ahmad.', english: "Hello Sara. I am Ahmad." },
-          { speaker: 'student', arabic: 'أنا من كندا. من أين أنت؟', transliteration: 'ana min Canada. min ayna anta?', english: "I am from Canada. Where are you from?" },
-          { speaker: 'other', arabic: 'أنا من الأردن.', transliteration: 'ana min al-Urdun.', english: "I am from Jordan." }
+          { speaker: 'other', arabic: 'أهلًا بكِ يا سارة. أنا هند.', transliteration: 'ahlan biki ya Sara. ana Hind.', english: "Hello Sara. I am Hind." },
+          { speaker: 'student', arabic: 'أنا من كندا. من أين أنتِ؟', transliteration: 'ana min Canada. min ayna anti?', english: "I am from Canada. Where are you from?" },
+          { speaker: 'other', arabic: 'أنا من الأردن.', transliteration: 'ana min al-Urdun.', english: "I am from Jordan." },
+          { speaker: 'student', arabic: 'تشرفت بكِ يا هند!', transliteration: 'tasharraftu biki ya Hind!', english: 'I am pleased to meet you, Hind!' }
+        ]
+      },
+      'darija': {
+        otherRoleEnglish: 'New friend',
+        lines: [
+          { speaker: 'student', arabic: 'سلام، سميتي سارة.', transliteration: 'salam, smiti Sara.', english: 'Hi, my name is Sara.' },
+          { speaker: 'other', arabic: 'أهلا سارة، تشرفنا. أنا ياسمين.', transliteration: 'ahlan Sara, tsharrafna. ana Yasmine.', english: "Hi Sara, nice to meet you. I'm Yasmine." },
+          { speaker: 'student', arabic: 'أنا من كندا. ومنين نتي؟', transliteration: 'ana men Canada. w mnin nti?', english: "I'm from Canada. Where are you from?" },
+          { speaker: 'other', arabic: 'أنا من المغرب، من الدار البيضاء.', transliteration: 'ana men lmghrib, men Dar l Bayda.', english: "I'm from Morocco, from Casablanca." },
+          { speaker: 'student', arabic: 'تشرفنا بيكي ياسمين!', transliteration: 'tsharrafna biki Yasmine!', english: 'Nice to meet you, Yasmine!' }
         ]
       }
     }

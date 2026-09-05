@@ -55,7 +55,7 @@
 	<section class="mb-10 overflow-x-auto">
 		<table class="w-full min-w-[36rem] border-collapse text-left">
 			<thead>
-				<tr class="border-b-2 border-tile-600 text-sm uppercase tracking-wide text-text-200">
+				<tr class="border-b-2 border-tile-600 text-sm text-text-200">
 					<th scope="col" class="py-3 pr-4">Arabic</th>
 					<th scope="col" class="py-3 pr-4">Pronunciation</th>
 					<th scope="col" class="py-3 pr-4">Franco</th>

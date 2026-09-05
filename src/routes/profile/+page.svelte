@@ -296,7 +296,7 @@
         <!-- User Info -->
         <div class="flex-1 text-center sm:text-left min-w-0">
           {#if isWhitelisted}
-            <span class="inline-block text-[0.65rem] font-bold uppercase tracking-[0.2em] text-brand mb-1.5">★ Whitelisted</span>
+ <span class="inline-block text-[0.65rem] font-bold text-brand mb-1.5">★ Whitelisted</span>
           {/if}
           <h1 class="text-3xl sm:text-4xl font-bold text-text-300 leading-tight truncate">
             {data.user?.email?.split('@')[0] || 'Learner'}
@@ -315,12 +315,12 @@
           <div class="flex flex-col items-center justify-center bg-tile-300/70 backdrop-blur rounded-xl border border-tile-600 px-5 py-3 min-w-[5.5rem]">
             <span class="text-2xl leading-none mb-1">🔥</span>
             <span class="text-2xl font-bold text-text-300 leading-none">{currentStreak}</span>
-            <span class="text-[0.65rem] text-text-200 uppercase tracking-wide mt-1">Streak</span>
+ <span class="text-[0.65rem] text-text-200 mt-1">Streak</span>
           </div>
           <div class="flex flex-col items-center justify-center bg-tile-300/70 backdrop-blur rounded-xl border border-tile-600 px-5 py-3 min-w-[5.5rem]">
             <span class="text-2xl leading-none mb-1">📚</span>
             <span class="text-2xl font-bold text-text-300 leading-none">{data.wordStats.total}</span>
-            <span class="text-[0.65rem] text-text-200 uppercase tracking-wide mt-1">Words</span>
+ <span class="text-[0.65rem] text-text-200 mt-1">Words</span>
           </div>
         </div>
       </div>
@@ -332,7 +332,7 @@
     <!-- Learning Progress -->
     <section class="reveal" style="--d: 1;">
       <div class="flex items-center gap-3 mb-5">
-        <h2 class="text-lg font-bold text-text-300 uppercase tracking-wide">Learning Progress</h2>
+ <h2 class="text-lg font-bold text-text-300">Learning Progress</h2>
         <div class="flex-1 h-px bg-tile-600"></div>
       </div>
 
@@ -367,7 +367,7 @@
         aria-expanded={showSettings}
       >
         <span class="text-lg">⚙️</span>
-        <h2 class="text-lg font-bold text-text-300 uppercase tracking-wide group-hover:text-text-200 transition-colors">Settings</h2>
+ <h2 class="text-lg font-bold text-text-300 group-hover:text-text-200 transition-colors">Settings</h2>
         <div class="flex-1 h-px bg-tile-600"></div>
         <span class="text-text-200 text-sm transform transition-transform {showSettings ? 'rotate-180' : ''}">▼</span>
       </button>
@@ -376,7 +376,7 @@
         <div class="bg-tile-400 border-2 border-tile-600 rounded-2xl shadow-lg overflow-hidden" transition:slide={{ duration: 200 }}>
           <!-- Learning Preferences -->
           <div class="p-5 sm:p-6 border-b border-tile-600">
-            <h3 class="text-xs font-bold text-text-200 mb-5 uppercase tracking-[0.15em]">Learning Preferences</h3>
+ <h3 class="text-xs font-bold text-text-200 mb-5">Learning Preferences</h3>
 
             <div class="space-y-6">
               <!-- Dialect Selection -->
@@ -514,12 +514,12 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-5 border-t border-tile-600">
                   {#if data.learningReason}
                     <div>
-                      <span class="text-xs text-text-200 uppercase tracking-[0.15em]">Learning Reason</span>
+ <span class="text-xs text-text-200">Learning Reason</span>
                       <p class="text-text-300 font-medium mt-1">{data.learningReason}</p>
                     </div>
                   {/if}
                   <div>
-                    <label for="proficiency_level" class="block text-xs text-text-200 uppercase tracking-[0.15em] mb-1.5">Proficiency Level</label>
+ <label for="proficiency_level" class="block text-xs text-text-200 mb-1.5">Proficiency Level</label>
                     <form
                       method="POST"
                       action="?/updateProficiencyLevel"
@@ -553,7 +553,7 @@
 
           <!-- Account Info -->
           <div class="p-5 sm:p-6 border-b border-tile-600 bg-tile-500/30">
-            <h3 class="text-xs font-bold text-text-200 mb-4 uppercase tracking-[0.15em]">Account</h3>
+ <h3 class="text-xs font-bold text-text-200 mb-4">Account</h3>
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div class="min-w-0">
                 <p class="text-text-300 font-medium truncate">{data.user?.email}</p>
@@ -619,7 +619,7 @@
           <!-- Subscription Management (only for subscribers) -->
           {#if data.hasActiveSubscription && !isWhitelisted}
             <div class="p-5 sm:p-6 bg-tile-500/20">
-              <h3 class="text-xs font-bold text-text-200 mb-4 uppercase tracking-[0.15em]">Subscription</h3>
+ <h3 class="text-xs font-bold text-text-200 mb-4">Subscription</h3>
 
               <div class="bg-tile-400 border-2 border-tile-600 rounded-xl p-4">
                 <div class="flex items-center gap-3 mb-3">
@@ -694,7 +694,7 @@
         aria-expanded={showContent}
       >
         <span class="text-lg">📚</span>
-        <h2 class="text-lg font-bold text-text-300 uppercase tracking-wide group-hover:text-text-200 transition-colors">Your Content</h2>
+ <h2 class="text-lg font-bold text-text-300 group-hover:text-text-200 transition-colors">Your Content</h2>
         <div class="flex-1 h-px bg-tile-600"></div>
         <span class="text-text-200 text-sm transform transition-transform {showContent ? 'rotate-180' : ''}">▼</span>
       </button>

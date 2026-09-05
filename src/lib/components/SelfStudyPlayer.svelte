@@ -451,7 +451,7 @@ English: "${context.english}"`;
                 <span class="text-xs text-text-200 font-medium">{gradedCount > 0 ? scorePercent + '%' : ''}</span>
             </div>
         </div>
-        <div class="text-xs font-bold uppercase tracking-wider text-text-200 shrink-0 hidden sm:block">{session.title}</div>
+ <div class="text-xs font-bold text-text-200 shrink-0 hidden sm:block">{session.title}</div>
     </header>
 
     <!-- Content -->
@@ -470,7 +470,7 @@ English: "${context.english}"`;
                     }}
                     <div class="space-y-4">
                         <div class="text-center">
-                            <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-text-300 bg-blue-100 border border-blue-300 px-4 py-1.5 rounded-full">📖 Reading</span>
+ <span class="inline-flex items-center gap-1.5 text-xs font-bold text-text-300 bg-blue-100 border border-blue-300 px-4 py-1.5 rounded-full">📖 Reading</span>
                             <h2 class="text-xl font-bold text-text-300 mt-3">{currentStep.title ?? ''}</h2>
                         </div>
 
@@ -546,7 +546,7 @@ English: "${context.english}"`;
                     {@const isArabicQuestion = currentStep.questionLanguage === 'arabic'}
                     <div class="space-y-4">
                         <div class="text-center">
-                            <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-text-300 bg-tile-500 border border-tile-600 px-4 py-1.5 rounded-full">
+ <span class="inline-flex items-center gap-1.5 text-xs font-bold text-text-300 bg-tile-500 border border-tile-600 px-4 py-1.5 rounded-full">
                                 {currentStep.focus === 'vocabulary' ? '📝 Vocabulary' : '🔤 Grammar'}
                             </span>
                         </div>
@@ -608,7 +608,7 @@ English: "${context.english}"`;
                     {@const displayArabic = showWritingTashkeel && step.targetArabicTashkeel ? step.targetArabicTashkeel : step.targetArabic ?? ''}
                     <div class="space-y-4">
                         <div class="text-center">
-                            <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-text-300 bg-tile-500 border border-tile-600 px-4 py-1.5 rounded-full">✍️ Writing</span>
+ <span class="inline-flex items-center gap-1.5 text-xs font-bold text-text-300 bg-tile-500 border border-tile-600 px-4 py-1.5 rounded-full">✍️ Writing</span>
                         </div>
 
                         {#if currentStep.tip}
@@ -742,7 +742,7 @@ English: "${context.english}"`;
                 {:else if currentStep.type === 'speaking'}
                     <div class="space-y-4">
                         <div class="text-center">
-                            <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-text-300 bg-tile-500 border border-tile-600 px-4 py-1.5 rounded-full">🎙️ Speaking</span>
+ <span class="inline-flex items-center gap-1.5 text-xs font-bold text-text-300 bg-tile-500 border border-tile-600 px-4 py-1.5 rounded-full">🎙️ Speaking</span>
                         </div>
                         <div class="bg-tile-400 border-2 border-tile-600 rounded-2xl p-5 shadow-md space-y-3">
                             <p class="text-base text-text-200">{currentStep.speakingEnglish ?? ''}</p>
@@ -801,7 +801,7 @@ English: "${context.english}"`;
                                 </div>
                                 {#if speakingTranscription}
                                     <div class="border-t border-tile-500/30 pt-4">
-                                        <p class="text-xs text-text-200 uppercase tracking-wider font-bold text-center mb-2">You said:</p>
+ <p class="text-xs text-text-200 font-bold text-center mb-2">You said:</p>
                                         <p class="text-xl text-center font-arabic text-text-300" dir="rtl">{speakingTranscription}</p>
                                     </div>
                                 {/if}

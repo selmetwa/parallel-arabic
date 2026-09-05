@@ -449,7 +449,7 @@
 										{#if currentLineIndex === index}
 											<div class="flex items-center gap-2 mb-3">
 												<div class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-												<span class="text-xs text-red-400 font-semibold uppercase tracking-wide">Now Playing</span>
+												<span class="text-xs text-red-400 font-semibold">Now Playing</span>
 											</div>
 										{/if}
 										

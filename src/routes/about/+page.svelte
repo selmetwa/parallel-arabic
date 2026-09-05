@@ -3,7 +3,7 @@
 	import { slide } from 'svelte/transition';
 	import AppStoreBadge from '$lib/components/AppStoreBadge.svelte';
 
-	/** @typedef {{ title: string; img: string; fullImg?: string; descriptions: string[]; learnMoreLink?: string }} Card */
+	/** @typedef {{ title: string; img: string; fullImg?: string; descriptions: string[]; learnMoreLink?: string; group: string }} Card */
 	/** @typedef {{ t: string; b?: boolean }} QuoteSegment */
 
 	/** @type {Card | null} */
@@ -31,13 +31,15 @@
 		if (event.key === 'Escape') closeLightbox();
 	}
 
+	/** @type {Card[]} */
 	const cards = [
 		{
 			title: 'Alphabet',
 			img: '/images/marketing-alphabet.png',
 			fullImg: '/images/features-large/alphabet.png',
 			descriptions: ['Learn the Arabic Alphabet with interactive exercises'],
-			learnMoreLink: '/alphabet'
+			learnMoreLink: '/alphabet',
+			group: 'foundation'
 		},
 		{
 			title: 'Tutor',
@@ -47,7 +49,8 @@
 				'Practice speaking with an AI tutor',
 				'Get real-time grammar feedback, and use practice situations to improve your speaking skills'
 			],
-			learnMoreLink: '/tutor'
+			learnMoreLink: '/tutor',
+			group: 'practice'
 		},
 		{
 			title: 'Short Stories',
@@ -56,13 +59,15 @@
 			descriptions: [
 				'Read short stories in arabic alongside the english translation and transliteration of the text'
 			],
-			learnMoreLink: '/stories'
+			learnMoreLink: '/stories',
+			group: 'read'
 		},
 		{
 			title: 'Spaced Repetition System',
 			img: '/images/marketing-spaced-recall.png',
 			fullImg: '/images/features-large/repitition.png',
-			descriptions: ['Spaced repetition for your saved words']
+			descriptions: ['Spaced repetition for your saved words'],
+			group: 'retain'
 		},
 		{
 			title: 'Writing Practice',
@@ -74,7 +79,8 @@
 				'Matching: Drag and drop Arabic words into the correct order to form a sentence.',
 				'Tracing: Same as writing, but with the letters laid out for you'
 			],
-			learnMoreLink: '/sentences'
+			learnMoreLink: '/sentences',
+			group: 'practice'
 		},
 		{
 			title: 'Lessons',
@@ -84,7 +90,8 @@
 				'Learn Arabic with structured lessons, from A1 - C2',
 				'Use structured lessons or create your own'
 			],
-			learnMoreLink: '/lessons'
+			learnMoreLink: '/lessons',
+			group: 'foundation'
 		},
 		{
 			title: 'Speaking',
@@ -93,7 +100,8 @@
 			descriptions: [
 				'Practice speaking generated Arabic sentences with instant pronunciation feedback'
 			],
-			learnMoreLink: '/speak'
+			learnMoreLink: '/speak',
+			group: 'practice'
 		},
 		{
 			title: 'Game',
@@ -102,7 +110,8 @@
 			descriptions: [
 				'Play games to learn Arabic, like fill in the blank, multiple choice, and more'
 			],
-			learnMoreLink: '/learn/game'
+			learnMoreLink: '/learn/game',
+			group: 'practice'
 		},
 		{
 			title: 'Import Words',
@@ -111,7 +120,8 @@
 			descriptions: [
 				'Bring your own words and import them into the app to learn them in context',
 				'Paste text or upload .csv files'
-			]
+			],
+			group: 'retain'
 		},
 		{
 			title: 'Vocabulary Table',
@@ -120,14 +130,16 @@
 			descriptions: [
 				'Keep track of all of your saved words in a table, and then easily import when creating lessons, stories, and practice exercises to learn them in context; not in isolation'
 			],
-			learnMoreLink: '/review/all-words'
+			learnMoreLink: '/review/all-words',
+			group: 'retain'
 		},
 		{
 			title: 'Conjugation Drills',
 			img: '/images/marketing-conjugation-drill.png',
 			fullImg: '/images/features-large/verb-conjugations.png',
 			descriptions: ['Practice Arabic verb conjugation with drills and quizzes'],
-			learnMoreLink: '/conjugations'
+			learnMoreLink: '/conjugations',
+			group: 'practice'
 		},
 		{
 			title: 'Dialect Comparison',
@@ -135,7 +147,8 @@
 			fullImg: '/images/features-large/dialect-compare.png',
 			descriptions: [
 				'Compare how a word or phrase is said across different Arabic dialects side by side'
-			]
+			],
+			group: 'read'
 		},
 		{
 			title: 'On demand definitions',
@@ -144,8 +157,39 @@
 			descriptions: [
 				'Tap any word to see its definition, transliteration, and example usage',
 				'Save words straight to your review deck'
-			]
+			],
+			group: 'read'
 		}
+	];
+
+	// Ordered feature sections. Grouping the thirteen cards gives the page a
+	// spine — without it the masonry reads as one undifferentiated wall.
+	const groups = [
+		{ id: 'foundation', label: 'Foundation', sub: 'start from zero' },
+		{ id: 'read', label: 'Read & look up', sub: 'meet real Arabic' },
+		{ id: 'practice', label: 'Practice', sub: 'produce it yourself' },
+		{ id: 'retain', label: 'Retain', sub: 'make it stick' }
+	];
+
+	// Continuous numbering across groups, in render order.
+	const numbering = $derived.by(() => {
+		/** @type {Record<string, number>} */
+		const map = {};
+		let n = 0;
+		for (const g of groups) {
+			for (const c of cards) {
+				if (c.group === g.id) map[c.title] = ++n;
+			}
+		}
+		return map;
+	});
+
+	/** @param {string} id */
+	const cardsIn = (id) => cards.filter((c) => c.group === id);
+
+	const specs = [
+		{ label: 'Dialects', value: '4' },
+		{ label: 'Lesson levels', value: 'A1–C2' }
 	];
 
 	const faqs = [
@@ -215,106 +259,152 @@
 
 <svelte:window onkeydown={handleKeydown} />
 
-<div class="min-h-screen bg-tile-200">
-	<main
-		class="mx-auto flex w-full max-w-5xl flex-col gap-10 px-4 py-10 sm:gap-16 sm:px-6 sm:py-16 lg:px-8"
-	>
-		<!-- Hero -->
-		<header class="flex flex-col items-center gap-3 text-center sm:gap-4">
-			<div
-				class="h-20 w-20 rounded-2xl border border-tile-500 bg-tile-300 sm:h-32 sm:w-32 sm:rounded-3xl"
-			>
-				<img
-					src="/icons/icon-trans.png"
-					alt="Parallel Arabic Logo"
-					class="h-full w-auto object-contain p-2"
-					fetchpriority="high"
-				/>
-			</div>
-			<h1 class="text-2xl font-bold text-text-300 sm:text-4xl">Parallel Arabic</h1>
-			<h2 class="text-base font-medium text-text-200 sm:text-2xl">
-				Learn and practice Arabic Dialects
-			</h2>
-			<div class="mt-2 flex flex-col items-center gap-3 sm:flex-row">
-				<a
-					href={resolve('/signup')}
-					class="inline-flex items-center gap-2 rounded-full border-2 border-tile-600 bg-tile-500 px-7 py-3.5 text-base font-semibold text-text-300 transition-all duration-200 hover:-translate-y-0.5 hover:bg-tile-600 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300"
-				>
-					Start now <span aria-hidden="true">→</span>
-				</a>
-				<AppStoreBadge
-					className="rounded-full border-2 border-tile-600 px-6 py-2.5 hover:-translate-y-0.5 hover:shadow-lg"
-				/>
-			</div>
-		</header>
+{#snippet sectionHead(/** @type {string} */ label, /** @type {string} */ sub)}
+	<div class="mb-5">
+		<h2 class="text-xl font-bold text-text-300 sm:text-2xl">{label}</h2>
+		<p class="mt-1 text-sm text-text-200">{sub}</p>
+	</div>
+{/snippet}
 
-		<!-- Feature Cards — CSS columns masonry -->
-		<section class="columns-1 gap-4 sm:columns-2 sm:gap-6">
-			{#each cards as card (card.title)}
-				<article
-					class="mb-4 flex w-full break-inside-avoid flex-col overflow-hidden rounded-xl border border-tile-500 bg-tile-300 sm:mb-6"
-				>
-					<button
-						type="button"
-						onclick={() => openLightbox(card)}
-						class="group relative block w-full cursor-zoom-in border-b border-tile-500"
-						aria-label={`View ${card.title} screenshot larger`}
+<div class="min-h-screen bg-tile-200">
+	<!-- ── Hero ────────────────────────────────────────────────────────────── -->
+	<header class="relative overflow-hidden border-b border-tile-500">
+		<div class="relative mx-auto max-w-5xl px-4 py-14 sm:px-6 sm:py-14 lg:px-8">
+			<h1
+				class="reveal max-w-3xl text-4xl font-bold leading-[1.08] tracking-tight text-text-300 sm:text-5xl lg:text-6xl"
+				style="animation-delay: 60ms;"
+			>
+				Parallel Arabic.
+			</h1>
+
+			<p
+				class="reveal mt-5 max-w-2xl text-base leading-relaxed text-text-200 sm:text-lg"
+				style="animation-delay: 120ms;"
+			>
+				One app for reading, listening, drilling and speaking a spoken Arabic dialect.
+			</p>
+
+			<!-- CTAs and specs share one row on desktop; specs wrap below on mobile. -->
+			<div
+				class="reveal mt-8 flex flex-col gap-5 sm:flex-row sm:flex-wrap sm:items-center sm:gap-6"
+				style="animation-delay: 180ms;"
+			>
+				<div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+					<a
+						href={resolve('/signup')}
+						class="inline-flex items-center justify-center gap-2 rounded-full border-2 border-tile-600 bg-tile-500 px-7 py-3.5 text-base font-semibold text-text-300 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-tile-600 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300 motion-reduce:hover:translate-y-0"
 					>
-						<img
-							src={card.img}
-							alt={card.title}
-							class="h-auto w-full transition-transform duration-300 group-hover:scale-[1.02]"
-						/>
-						<span
-							class="pointer-events-none absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/10"
-						></span>
-						<span
-							class="pointer-events-none absolute bottom-3 right-3 flex items-center gap-1 rounded-full bg-black/60 px-2.5 py-1 text-xs font-medium text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-						>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="14"
-								height="14"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"
-								></line><line x1="11" y1="8" x2="11" y2="14"></line><line
-									x1="8"
-									y1="11"
-									x2="14"
-									y2="11"
-								></line></svg
-							>
-							Expand
-						</span>
-					</button>
-					<div class="flex-1 space-y-2 px-4 py-4">
-						<p class="text-base font-semibold text-text-300 sm:text-lg">{card.title}</p>
-						<div class="space-y-1.5">
-							{#each card.descriptions as description, i (i)}
-								<p class="text-sm leading-relaxed text-text-200 sm:text-base">{description}</p>
-							{/each}
+						Start free <span aria-hidden="true">→</span>
+					</a>
+					<AppStoreBadge
+						className="rounded-full border-2 border-tile-600 px-6 py-2.5 hover:-translate-y-0.5 hover:shadow-lg motion-reduce:hover:translate-y-0"
+					/>
+				</div>
+
+				<dl class="flex items-center gap-6 sm:border-l sm:border-tile-500 sm:pl-6">
+					{#each specs as spec (spec.label)}
+						<!-- Reversed so the value reads above its label while `dt` stays first in the DOM. -->
+						<div class="flex flex-col-reverse gap-1">
+							<dt class="text-sm leading-none text-text-200">{spec.label}</dt>
+							<dd class="text-xl font-bold tabular-nums leading-none text-text-300">
+								{spec.value}
+							</dd>
 						</div>
-					</div>
-					{#if card.learnMoreLink}
-						<a
-							href={resolve(/** @type {any} */ (card.learnMoreLink))}
-							class="px-4 pb-4 text-sm text-blue-600 underline transition-colors hover:text-blue-700 sm:text-base"
-							>Learn more</a
+					{/each}
+				</dl>
+			</div>
+		</div>
+	</header>
+
+	<!-- ── Features, grouped ───────────────────────────────────────────────── -->
+	<main class="mx-auto w-full max-w-5xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+		{#each groups as group, gi (group.id)}
+			<section class="reveal mb-12 last:mb-0 sm:mb-16" style="animation-delay: {gi * 60}ms;">
+				{@render sectionHead(group.label, group.sub)}
+
+				<div class="columns-1 gap-4 sm:columns-2 sm:gap-6">
+					{#each cardsIn(group.id) as card (card.title)}
+						<article
+							class="mb-4 flex w-full break-inside-avoid flex-col overflow-hidden rounded-xl border border-tile-500 bg-tile-300 transition-colors duration-200 hover:border-tile-600 sm:mb-6"
 						>
-					{/if}
-				</article>
-			{/each}
-		</section>
+							<button
+								type="button"
+								onclick={() => openLightbox(card)}
+								class="group relative block w-full cursor-zoom-in border-b border-tile-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-text-300 focus-visible:[outline-offset:-2px]"
+								aria-label={`View ${card.title} screenshot larger`}
+							>
+								<img
+									src={card.img}
+									alt={card.title}
+									loading="lazy"
+									class="h-auto w-full transition-transform duration-300 group-hover:scale-[1.02] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+								/>
+								<span
+									class="pointer-events-none absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/10"
+								></span>
+								<span
+									class="pointer-events-none absolute bottom-3 right-3 flex items-center gap-1 rounded-full bg-black/60 px-2.5 py-1 text-xs font-medium text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100"
+								>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="14"
+										height="14"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										><circle cx="11" cy="11" r="8"></circle><line
+											x1="21"
+											y1="21"
+											x2="16.65"
+											y2="16.65"
+										></line><line x1="11" y1="8" x2="11" y2="14"></line><line
+											x1="8"
+											y1="11"
+											x2="14"
+											y2="11"
+										></line></svg
+									>
+									Expand
+								</span>
+							</button>
+
+							<div class="flex flex-1 flex-col px-4 py-4">
+								<div class="flex items-baseline gap-2.5">
+									<span class="text-sm tabular-nums text-text-200" aria-hidden="true"
+										>{String(numbering[card.title]).padStart(2, '0')}</span
+									>
+									<h3 class="text-base font-bold text-text-300 sm:text-lg">{card.title}</h3>
+								</div>
+
+								<div class="mt-2 space-y-1.5">
+									{#each card.descriptions as description, i (i)}
+										<p class="text-sm leading-relaxed text-text-200">{description}</p>
+									{/each}
+								</div>
+
+								{#if card.learnMoreLink}
+									<a
+										href={resolve(/** @type {any} */ (card.learnMoreLink))}
+										class="mt-3 inline-flex w-fit items-center gap-1.5 text-sm font-medium text-text-300 underline decoration-tile-600 underline-offset-4 transition-colors hover:decoration-text-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300"
+									>
+										Try {card.title.toLowerCase()} <span aria-hidden="true">→</span>
+									</a>
+								{/if}
+							</div>
+						</article>
+					{/each}
+				</div>
+			</section>
+		{/each}
 	</main>
 
+	<!-- ── Testimonials ────────────────────────────────────────────────────── -->
 	{#snippet quoteCard(/** @type {QuoteSegment[]} */ segments, /** @type {boolean} */ hidden)}
 		<figure
-			class="w-[280px] flex-shrink-0 rounded-xl bg-tile-400 p-5 shadow-sm sm:w-[320px] sm:p-6"
+			class="w-[280px] flex-shrink-0 rounded-xl border border-tile-500 bg-tile-400 p-5 sm:w-[320px] sm:p-6"
 			aria-hidden={hidden}
 		>
 			<span class="mb-2 block text-4xl leading-none text-text-200" aria-hidden="true">“</span>
@@ -325,12 +415,10 @@
 		</figure>
 	{/snippet}
 
-	<section class="overflow-hidden border-y border-tile-500 bg-tile-200 py-10 sm:py-14">
-		<h2
-			class="mx-auto mb-8 text-center text-2xl font-bold tracking-tight text-text-300 sm:mb-10 sm:text-4xl"
-		>
-			What our users say
-		</h2>
+	<section class="overflow-hidden border-y border-tile-500 bg-tile-300 py-12 sm:py-16">
+		<div class="mx-auto mb-8 max-w-5xl px-4 sm:px-6 lg:px-8">
+			{@render sectionHead('From learners', 'unedited')}
+		</div>
 
 		<div class="marquee">
 			<div class="marquee__track">
@@ -340,32 +428,58 @@
 		</div>
 	</section>
 
-	<!-- FAQ — smooth accordion (logic preserved) -->
-	<section class="border-t border-tile-500 bg-tile-200 py-14 sm:py-20">
-		<div class="mx-auto max-w-3xl px-4 sm:px-8">
-			<h2 class="mb-8 text-2xl font-bold tracking-tight text-text-300 sm:mb-10 sm:text-4xl">
-				Frequently asked questions
-			</h2>
-			<div class="space-y-3">
+	<!-- ── FAQ ─────────────────────────────────────────────────────────────── -->
+	<section class="py-12 sm:py-16">
+		<div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+			{@render sectionHead('Questions', 'the ones we get most')}
+
+			<div class="overflow-hidden rounded-xl border border-tile-500 bg-tile-300">
 				{#each faqs as faq, i (i)}
-					<div class="overflow-hidden rounded-xl bg-tile-400">
+					<div class="border-b border-tile-500 last:border-b-0">
 						<button
 							onclick={() => toggle(i)}
-							class="flex w-full cursor-pointer items-center justify-between gap-4 px-5 py-4 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300 sm:px-6"
+							class="flex w-full cursor-pointer items-center justify-between gap-4 px-5 py-4 text-left transition-colors duration-150 hover:bg-tile-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-text-300 focus-visible:[outline-offset:-2px] sm:px-6"
 							aria-expanded={openIndex === i}
 						>
 							<span class="font-semibold text-text-300">{faq.q}</span>
-							<span class="flex-shrink-0 text-2xl leading-none text-text-200" aria-hidden="true"
-								>{openIndex === i ? '−' : '+'}</span
+							<span
+								class="grid h-6 w-6 flex-shrink-0 place-items-center rounded-full border border-tile-600 text-lg leading-none text-text-200"
+								aria-hidden="true">{openIndex === i ? '−' : '+'}</span
 							>
 						</button>
 						{#if openIndex === i}
 							<div class="px-5 pb-5 sm:px-6" transition:slide={{ duration: 200 }}>
-								<p class="leading-relaxed text-text-200">{faq.a}</p>
+								<p class="max-w-prose leading-relaxed text-text-200">{faq.a}</p>
 							</div>
 						{/if}
 					</div>
 				{/each}
+			</div>
+		</div>
+	</section>
+
+	<!-- ── Closing CTA ─────────────────────────────────────────────────────── -->
+	<section class="relative overflow-hidden border-t border-tile-500">
+		<div class="reveal relative mx-auto max-w-3xl px-4 py-16 text-center sm:px-6 sm:py-24 lg:px-8">
+			<h2 class="text-3xl font-bold leading-tight tracking-tight text-text-300 sm:text-4xl">
+				Pick a dialect. Start today.
+			</h2>
+			<p class="mt-4 text-base text-text-200">
+				Free to start, and you can switch dialects whenever you like.
+			</p>
+			<div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+				<a
+					href={resolve('/signup')}
+					class="inline-flex items-center justify-center gap-2 rounded-full border-2 border-tile-600 bg-tile-500 px-7 py-3.5 text-base font-semibold text-text-300 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-tile-600 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300 motion-reduce:hover:translate-y-0"
+				>
+					Start free <span aria-hidden="true">→</span>
+				</a>
+				<a
+					href={resolve('/pricing')}
+					class="inline-flex items-center justify-center rounded-full border border-tile-500 px-6 py-3.5 text-base font-medium text-text-200 transition-colors duration-200 hover:border-tile-600 hover:text-text-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300"
+				>
+					See pricing
+				</a>
 			</div>
 		</div>
 	</section>
@@ -419,9 +533,38 @@
 {/if}
 
 <style>
+	@keyframes reveal {
+		from {
+			opacity: 0;
+			transform: translateY(14px);
+		}
+		to {
+			opacity: 1;
+			transform: none;
+		}
+	}
+	.reveal {
+		animation: reveal 0.5s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+	}
+
 	.marquee {
 		display: flex;
 		overflow: hidden;
+		/* Fades the track into the section edges instead of clipping it hard. */
+		-webkit-mask-image: linear-gradient(
+			to right,
+			transparent,
+			#000 6rem,
+			#000 calc(100% - 6rem),
+			transparent
+		);
+		mask-image: linear-gradient(
+			to right,
+			transparent,
+			#000 6rem,
+			#000 calc(100% - 6rem),
+			transparent
+		);
 	}
 
 	.marquee__track {
@@ -454,6 +597,9 @@
 			overflow-x: auto;
 		}
 		.marquee__track {
+			animation: none;
+		}
+		.reveal {
 			animation: none;
 		}
 	}

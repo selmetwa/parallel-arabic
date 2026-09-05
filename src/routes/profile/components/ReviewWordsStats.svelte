@@ -77,7 +77,7 @@
         <div class="relative overflow-hidden bg-tile-300 rounded-xl p-4 text-center border border-tile-600">
           <div class="absolute inset-x-0 top-0 h-1" style="background: {tile.accent};"></div>
           <div class="text-2xl sm:text-3xl font-bold tabular-nums" style="color: {tile.accent};">{tile.value}</div>
-          <div class="text-xs text-text-200 uppercase tracking-wide mt-1">{tile.label}</div>
+ <div class="text-xs text-text-200 mt-1">{tile.label}</div>
         </div>
       {/each}
     </div>
@@ -104,7 +104,7 @@
     <!-- By Dialect -->
     {#if dialectEntries.length > 0}
       <div>
-        <h4 class="text-xs font-semibold text-text-200 mb-3 uppercase tracking-[0.15em]">By Dialect</h4>
+ <h4 class="text-xs font-semibold text-text-200 mb-3">By Dialect</h4>
         <div class="grid grid-cols-2 gap-3">
           {#each dialectEntries as [dialect, stats] (dialect)}
             <div class="bg-tile-300 rounded-xl p-3 border border-tile-600 hover:border-brand transition-colors">

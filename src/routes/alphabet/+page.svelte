@@ -218,14 +218,14 @@
 			class="inline-flex items-center gap-1 rounded-full border border-tile-500 bg-tile-200 py-0.5 pl-1 pr-2"
 		>
 			<InlineAudioButton text={msaText} dialect="fusha" />
-			<span class="text-[0.6rem] font-semibold uppercase tracking-wide text-text-200">MSA</span>
+			<span class="text-[0.6rem] font-semibold text-text-200">MSA</span>
 		</span>
 		{#if egyptianText}
 			<span
 				class="inline-flex items-center gap-1 rounded-full border border-green-600/40 bg-green-500/10 py-0.5 pl-1 pr-2"
 			>
 				<InlineAudioButton text={egyptianText} dialect="egyptian-arabic" />
-				<span class="text-[0.6rem] font-semibold uppercase tracking-wide text-green-700">EG</span>
+				<span class="text-[0.6rem] font-semibold text-green-700">EG</span>
 			</span>
 		{/if}
 	</span>
@@ -638,7 +638,7 @@
 														: 'border-green-600/30 bg-green-500/10'
 												)}
 											>
-												<p class="text-[0.6rem] font-bold uppercase tracking-wide text-text-200">
+												<p class="text-[0.6rem] font-bold text-text-200">
 													{slot.label}
 												</p>
 												<p

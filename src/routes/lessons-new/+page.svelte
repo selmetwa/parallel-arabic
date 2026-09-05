@@ -250,7 +250,7 @@
                     <span class="text-5xl drop-shadow-md">🏆</span>
                 </div>
                 <div class="absolute top-full mt-4 bg-yellow-100 px-4 py-1 rounded-full border border-yellow-300 shadow-sm">
-                    <span class="text-xs font-bold text-yellow-800 uppercase tracking-wider">Goal</span>
+ <span class="text-xs font-bold text-yellow-800">Goal</span>
                 </div>
             </div>
 

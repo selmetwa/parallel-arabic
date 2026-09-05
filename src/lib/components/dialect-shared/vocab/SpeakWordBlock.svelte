@@ -110,7 +110,7 @@
 
 <div class="flex flex-col items-center gap-5">
 	<div class="text-center">
-		<p class="mb-2 text-xs uppercase tracking-wide text-text-200">Say this out loud</p>
+		<p class="mb-2 text-xs text-text-200">Say this out loud</p>
 		<p class="mb-1 text-lg text-text-200">{word.english}</p>
 		<div class="flex items-center justify-center gap-3">
 			<p class="text-4xl font-bold text-text-300" dir="rtl">{word.arabic}</p>

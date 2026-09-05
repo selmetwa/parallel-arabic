@@ -192,12 +192,12 @@
 
 	<!-- Root verb header -->
 	<div class="text-center mb-6 p-4 bg-tile-300 border border-tile-500 rounded-xl">
-		<p class="text-sm text-text-200 uppercase tracking-wider mb-1">Root Verb</p>
+		<p class="text-sm text-text-200 mb-1">Root Verb</p>
 		<p class="text-5xl font-bold text-text-300 mb-2" dir="rtl">{verb.arabic}</p>
 		<p class="text-xl text-text-200">{verb.transliteration}</p>
 		<p class="text-lg text-text-300 font-semibold">{verb.english}</p>
 		<p class="text-sm text-text-200 mt-2">{verb.rootLetters}</p>
-		<span class="inline-block mt-2 px-2 py-0.5 text-xs font-semibold rounded bg-tile-500 border border-tile-600 text-text-200 uppercase tracking-wide">
+		<span class="inline-block mt-2 px-2 py-0.5 text-xs font-semibold rounded bg-tile-500 border border-tile-600 text-text-200">
 			{verb.verbClass}
 		</span>
 		{#if verb.notes}
@@ -251,10 +251,10 @@
 
 				<!-- Tense + form badges -->
 				<div class="flex gap-2 justify-center mb-4">
-					<span class="px-2 py-0.5 text-xs font-semibold rounded bg-blue-600 text-white uppercase tracking-wide">
+					<span class="px-2 py-0.5 text-xs font-semibold rounded bg-blue-600 text-white">
 						{tenseLabel(currentExercise.tense)}
 					</span>
-					<span class="px-2 py-0.5 text-xs font-semibold rounded {currentExercise.form === 'affirmative' ? 'bg-green-600' : 'bg-red-600'} text-white uppercase tracking-wide">
+					<span class="px-2 py-0.5 text-xs font-semibold rounded {currentExercise.form === 'affirmative' ? 'bg-green-600' : 'bg-red-600'} text-white">
 						{formLabel(currentExercise.form)}
 					</span>
 				</div>

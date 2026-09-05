@@ -32,7 +32,7 @@
 		{:else}
 			{#each data.days as day (day.dayKey)}
 				<div class="mb-8">
-					<h2 class="text-[11px] uppercase tracking-[0.2em] text-text-200 font-bold mb-3">
+					<h2 class="text-xs text-text-200 font-bold mb-3">
 						{day.dayLabel}
 					</h2>
 

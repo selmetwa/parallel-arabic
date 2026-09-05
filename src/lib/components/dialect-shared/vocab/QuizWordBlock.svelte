@@ -28,7 +28,7 @@
 
 <div class="flex flex-col gap-5">
 	<div class="text-center">
-		<p class="mb-2 text-xs uppercase tracking-wide text-text-200">
+		<p class="mb-2 text-xs text-text-200">
 			{askingForEnglish ? 'What does this mean?' : 'How do you say this?'}
 		</p>
 		<div class="flex items-center justify-center gap-3">

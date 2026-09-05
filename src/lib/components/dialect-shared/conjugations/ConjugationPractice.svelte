@@ -501,7 +501,7 @@
 	{#if state}
 		<div class="mt-3 p-3 bg-tile-300 border border-tile-500 rounded-lg text-left">
 			<div class="flex items-center justify-between gap-2 mb-1">
-				<p class="text-xs font-bold text-text-200 uppercase tracking-wide">Example sentence</p>
+				<p class="text-xs font-bold text-text-200">Example sentence</p>
 				{#if state.status === 'done' && state.sentence}
 					<AudioButton text={state.sentence.arabic} {dialect} className="!p-1.5 bg-sky-600 !text-white hover:!bg-sky-700 rounded-lg" />
 				{/if}
@@ -525,7 +525,7 @@
 <div class="w-full max-w-6xl mx-auto">
 	<!-- Verb header -->
 	<div class="text-center mb-6 p-4 bg-tile-300 border border-tile-500 rounded-xl">
-		<p class="text-sm text-text-200 uppercase tracking-wider mb-1">Verb</p>
+		<p class="text-sm text-text-200 mb-1">Verb</p>
 		<div class="flex items-center justify-center gap-3">
 			<p class="text-5xl font-bold text-text-300" dir="rtl">{data.verb.arabic}</p>
 			<AudioButton text={data.verb.arabic} {dialect} className="!p-2 bg-sky-600 !text-white hover:!bg-sky-700 rounded-lg" />
@@ -533,7 +533,7 @@
 		<p class="text-xl text-text-200 mt-2">{data.verb.transliteration}</p>
 		<p class="text-lg text-text-300 font-semibold">{data.verb.english}</p>
 		<p class="text-sm text-text-200 mt-2">{data.rootLetters}</p>
-		<span class="inline-block mt-2 px-2 py-0.5 text-xs font-semibold rounded bg-tile-500 border border-tile-600 text-text-200 uppercase tracking-wide">
+		<span class="inline-block mt-2 px-2 py-0.5 text-xs font-semibold rounded bg-tile-500 border border-tile-600 text-text-200">
 			{data.verbClass}
 		</span>
 		{#if data.notes}
@@ -561,7 +561,7 @@
 	<!-- Filters -->
 	<div class="p-4 bg-tile-400 rounded-xl border border-tile-500 space-y-3 lg:sticky lg:top-4">
 		<div>
-			<p class="text-xs font-bold text-text-200 uppercase tracking-wide mb-2">Tenses</p>
+			<p class="text-xs font-bold text-text-200 mb-2">Tenses</p>
 			<div class="flex flex-wrap gap-2">
 				{#each ALL_TENSES as t (t)}
 					<button onclick={() => toggleTense(t)} class={chip(tenseOn[t])}>{tenseLabel(t)}</button>
@@ -569,7 +569,7 @@
 			</div>
 		</div>
 		<div>
-			<p class="text-xs font-bold text-text-200 uppercase tracking-wide mb-2">Forms</p>
+			<p class="text-xs font-bold text-text-200 mb-2">Forms</p>
 			<div class="flex flex-wrap gap-2">
 				{#each ALL_FORMS as f (f)}
 					<button onclick={() => toggleForm(f)} class={chip(formOn[f])}>{formLabel(f)}</button>
@@ -577,7 +577,7 @@
 			</div>
 		</div>
 		<div>
-			<p class="text-xs font-bold text-text-200 uppercase tracking-wide mb-2">Persons</p>
+			<p class="text-xs font-bold text-text-200 mb-2">Persons</p>
 			<div class="flex flex-wrap gap-2">
 				{#each ALL_PERSONS as p (p)}
 					<button onclick={() => togglePerson(p)} class={chip(personOn[p])}>
@@ -603,8 +603,8 @@
 		<!-- Prompt card -->
 		<div class="bg-tile-300 border border-tile-500 rounded-xl p-6 mb-4">
 			<div class="flex gap-2 justify-center mb-4">
-				<span class="px-2 py-0.5 text-xs font-semibold rounded bg-blue-600 text-white uppercase tracking-wide">{tenseLabel(currentExercise.tense)}</span>
-				<span class="px-2 py-0.5 text-xs font-semibold rounded {currentExercise.form === 'affirmative' ? 'bg-green-600' : 'bg-red-600'} text-white uppercase tracking-wide">{formLabel(currentExercise.form)}</span>
+				<span class="px-2 py-0.5 text-xs font-semibold rounded bg-blue-600 text-white">{tenseLabel(currentExercise.tense)}</span>
+				<span class="px-2 py-0.5 text-xs font-semibold rounded {currentExercise.form === 'affirmative' ? 'bg-green-600' : 'bg-red-600'} text-white">{formLabel(currentExercise.form)}</span>
 			</div>
 
 			<div class="text-center mb-6">
@@ -744,9 +744,9 @@
 									<p class="text-sm font-semibold {fb.color}">{fb.text}</p>
 								</div>
 							</div>
-							<p class="text-xs text-text-200 uppercase tracking-wider font-bold mb-1">You said</p>
+							<p class="text-xs text-text-200 font-bold mb-1">You said</p>
 							<p class="text-2xl text-text-300 font-arabic" dir="rtl">{transcribedText}</p>
-							<p class="text-xs text-text-200 uppercase tracking-wider font-bold mt-3 mb-1">Target</p>
+							<p class="text-xs text-text-200 font-bold mt-3 mb-1">Target</p>
 							<p class="text-2xl text-text-300 font-arabic" dir="rtl">{currentExercise.entry.arabic}</p>
 							<span class="block text-sm text-text-200">{currentExercise.entry.transliteration}</span>
 							<div class="flex justify-center mt-3">

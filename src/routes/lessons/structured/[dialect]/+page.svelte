@@ -337,7 +337,7 @@
 			<h1 class="text-3xl font-bold tracking-tight text-text-300 sm:text-4xl">
 				{dialectName}
 			</h1>
-			<p class="mt-1.5 text-sm uppercase tracking-[0.25em] text-text-200">Learning Path</p>
+			<p class="mt-1.5 text-sm text-text-200">Learning Path</p>
 
 			{#if totalCount > 0}
 				<div class="mt-6 w-full max-w-xs">
@@ -428,7 +428,7 @@
                     {#if i === 0 || lessonPositions[i-1].moduleTitle !== lesson.moduleTitle}
                         <div class="absolute -top-14 flex w-56 items-center justify-center gap-2">
                             <span class="h-px flex-1 bg-tile-400"></span>
-                            <span class="whitespace-nowrap text-[0.65rem] font-bold uppercase tracking-[0.15em] text-text-200">
+ <span class="whitespace-nowrap text-[0.65rem] font-bold text-text-200">
                                 {lesson.moduleTitle}
                             </span>
                             <span class="h-px flex-1 bg-tile-400"></span>
@@ -439,7 +439,7 @@
 					<div
 						class="absolute top-1/2 hidden w-48 -translate-y-1/2 rounded-xl border border-tile-400 bg-tile-200/95 p-3 shadow-lg backdrop-blur-sm transition-opacity duration-200 sm:block z-20 {labelSideClass} {lesson.status === 'active' ? 'opacity-100' : 'opacity-0 group-hover/node:opacity-100 group-focus-within/node:opacity-100'}"
 					>
-						<div class="mb-0.5 text-[0.6rem] font-bold uppercase tracking-wider text-text-200 opacity-70">
+						<div class="mb-0.5 text-[0.6rem] font-bold text-text-200 opacity-70">
 							Lesson {i + 1}
 						</div>
 						<h3 class="line-clamp-2 text-sm font-bold text-text-300">{lesson.title}</h3>
@@ -487,7 +487,7 @@
                     </div>
                 </div>
                 <div class="mt-4 rounded-full border border-amber-500/40 bg-amber-400/15 px-4 py-1">
-                    <span class="text-xs font-bold uppercase tracking-[0.15em] text-amber-700">Fluency</span>
+ <span class="text-xs font-bold text-amber-700">Fluency</span>
                 </div>
             </div>
 

@@ -11,9 +11,10 @@
     audioUrl?: string;
     className?: string;
     children?: Snippet;
+    bypassPaywall?: boolean;
   }
-  
-  let { text, dialect = 'egyptian-arabic', audioUrl, className = '', children }: Props = $props();
+
+  let { text, dialect = 'egyptian-arabic', audioUrl, className = '', children, bypassPaywall = false }: Props = $props();
 
 	let isLoading = $state(false);
 	let paywalled = $state(false);
@@ -58,7 +59,7 @@
 					headers: {
 						'Content-Type': 'application/json'
 					},
-					body: JSON.stringify({ text, dialect })
+					body: JSON.stringify({ text, dialect, context: bypassPaywall ? 'onboarding' : undefined })
 				});
 
 				if (!res.ok) {

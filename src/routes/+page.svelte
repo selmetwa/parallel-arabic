@@ -78,12 +78,12 @@
         href={resolve(href)}
         class="bg-tile-400 px-4 py-4 sm:px-5 sm:py-5 flex flex-col transition-colors duration-150 hover:bg-tile-500 focus-visible:outline focus-visible:outline-2 focus-visible:[outline-offset:-2px] focus-visible:outline-text-300"
       >
-        <span class="text-[10px] uppercase tracking-[0.16em] text-text-200 font-semibold truncate mb-2">{label}</span>
+ <span class="text-xs text-text-200 font-semibold truncate mb-2">{label}</span>
         <span class="text-3xl sm:text-4xl font-bold text-text-300 leading-none tabular-nums">{value}{#if unit}<span class="text-xs font-medium text-text-200 ml-1.5 align-baseline">{unit}</span>{/if}</span>
       </a>
     {:else}
       <div class="bg-tile-400 px-4 py-4 sm:px-5 sm:py-5 flex flex-col">
-        <span class="text-[10px] uppercase tracking-[0.16em] text-text-200 font-semibold truncate mb-2">{label}</span>
+ <span class="text-xs text-text-200 font-semibold truncate mb-2">{label}</span>
         <span class="text-3xl sm:text-4xl font-bold text-text-300 leading-none tabular-nums">{value}{#if unit}<span class="text-xs font-medium text-text-200 ml-1.5 align-baseline">{unit}</span>{/if}</span>
       </div>
     {/if}
@@ -91,7 +91,7 @@
 
   {#snippet sectionHead(label: string, sub: string)}
     <div class="flex items-center gap-3 mb-3">
-      <h2 class="text-[11px] font-bold uppercase tracking-[0.2em] text-text-200 shrink-0">{label}</h2>
+ <h2 class="text-xs font-bold text-text-200 shrink-0">{label}</h2>
       <div class="h-px flex-1 bg-tile-500"></div>
       <span class="text-[11px] text-text-200 italic shrink-0">{sub}</span>
     </div>
@@ -148,7 +148,7 @@
       <span class="min-w-0 flex-1">
         <span class="flex items-center gap-2 flex-wrap">
           <span class="text-sm sm:text-base font-bold text-text-300">{title}</span>
-          <span class="text-[10px] font-bold uppercase tracking-wide text-black bg-amber-400 px-1.5 py-0.5 rounded-full">Bonus XP</span>
+ <span class="text-xs font-bold text-black bg-amber-400 px-1.5 py-0.5 rounded-full">Bonus XP</span>
         </span>
         <span class="block text-xs sm:text-sm text-text-200 leading-snug mt-0.5">{desc}</span>
       </span>
@@ -199,7 +199,7 @@
 
         <div class="flex items-center gap-2 mb-3 pr-8">
           <span class="text-sm" aria-hidden="true">⚡</span>
-          <h2 class="text-[11px] font-bold uppercase tracking-[0.18em] text-text-300">Jump back in</h2>
+ <h2 class="text-xs font-bold text-text-300">Jump back in</h2>
           <div class="h-px flex-1 bg-tile-500"></div>
         </div>
 

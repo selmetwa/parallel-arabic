@@ -323,10 +323,8 @@
 		padding: 1.1rem 1.35rem;
 	}
 	.scenario-label {
-		font-size: 0.7rem;
+		font-size: 0.8rem;
 		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: 0.12em;
 		color: var(--brand);
 		margin-bottom: 0.5rem;
 	}
@@ -535,10 +533,8 @@
 		overflow-y: auto;
 	}
 	.panel-title {
-		font-size: 0.7rem;
+		font-size: 0.8rem;
 		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: 0.12em;
 		color: var(--text3);
 	}
 	.panel-hint {
