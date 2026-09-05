@@ -11,6 +11,10 @@
     {
       "path": "/api/cron/send-streak-reminders",
       "schedule": "0 18 * * *"
+    },
+    {
+      "path": "/api/cron/onboarding-nudge",
+      "schedule": "0 19 * * *"
     }
   ]
 }

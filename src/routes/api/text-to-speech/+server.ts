@@ -13,6 +13,9 @@ const STRIP_ARABIC_QM_ONLY = false;
 
 const FREE_TTS_LIMIT = 5;
 
+/** How long after completing onboarding its scripted conversation can bypass the TTS paywall. */
+const ONBOARDING_BYPASS_WINDOW_MS = 60 * 60 * 1000;
+
 /** Per-browser audio plays allowed before signing in. */
 const ANON_TTS_LIMIT = 6;
 const ANON_TTS_COOKIE = 'anon_tts_plays';
@@ -49,57 +52,74 @@ export const POST: RequestHandler = async ({ request, locals, cookies }) => {
 	const { sessionId, user } = await locals?.auth?.validate() || {};
 	const userId = sessionId && user ? user.id : null;
 
+	const data = await request.json();
+	const { text, dialect, context } = data;
+
+	if (!text) {
+		return new Response(JSON.stringify({ error: 'Missing required field: text' }), {
+			status: 400,
+			headers: { 'Content-Type': 'application/json' }
+		});
+	}
+
 	let hasActiveSubscription = false;
 	let ttsCount = 0;
 	let anonPlays = 0;
 
-	if (userId) {
-		// Paywall check — parallelize for speed
-		[hasActiveSubscription, ttsCount] = await Promise.all([
-			getUserHasActiveSubscription(userId),
-			getUserTtsCount(userId)
-		]);
+	// The onboarding conversation is a fixed, one-time scripted exercise — it
+	// shouldn't burn through (or be blocked by) the general free-plays paywall.
+	// The bypass only holds for a short window right after the user actually
+	// completes onboarding, so it can't be used for unlimited free TTS.
+	let isOnboardingBypass = false;
+	if (userId && context === 'onboarding') {
+		const { data: userRow } = await supabase
+			.from('user')
+			.select('onboarding_completed_at')
+			.eq('id', userId)
+			.single();
+		const completedAt = userRow?.onboarding_completed_at;
+		isOnboardingBypass = !!completedAt && Date.now() - completedAt < ONBOARDING_BYPASS_WINDOW_MS;
+	}
 
-		if (!hasActiveSubscription && ttsCount >= FREE_TTS_LIMIT) {
-			return new Response(JSON.stringify({
-				error: 'Subscription required',
-				message: `You've reached the free limit of ${FREE_TTS_LIMIT} audio plays. Subscribe to continue.`,
-				requiresSubscription: true,
-				ttsCount
-			}), {
-				status: 403,
-				headers: { 'Content-Type': 'application/json' }
-			});
-		}
-	} else {
-		// Signed-out visitors get a small per-browser allowance so someone landing
-		// on /tutor from search can hear the words in the free scenario steps
-		// before being asked to sign up.
-		anonPlays = Number(cookies.get(ANON_TTS_COOKIE)) || 0;
+	if (!isOnboardingBypass) {
+		if (userId) {
+			// Paywall check — parallelize for speed
+			[hasActiveSubscription, ttsCount] = await Promise.all([
+				getUserHasActiveSubscription(userId),
+				getUserTtsCount(userId)
+			]);
 
-		if (anonPlays >= ANON_TTS_LIMIT) {
-			return new Response(JSON.stringify({
-				error: 'Subscription required',
-				message: `You've reached the free limit of ${ANON_TTS_LIMIT} audio plays. Subscribe to continue.`,
-				requiresSubscription: true
-			}), {
-				status: 403,
-				headers: { 'Content-Type': 'application/json' }
-			});
+			if (!hasActiveSubscription && ttsCount >= FREE_TTS_LIMIT) {
+				return new Response(JSON.stringify({
+					error: 'Subscription required',
+					message: `You've reached the free limit of ${FREE_TTS_LIMIT} audio plays. Subscribe to continue.`,
+					requiresSubscription: true,
+					ttsCount
+				}), {
+					status: 403,
+					headers: { 'Content-Type': 'application/json' }
+				});
+			}
+		} else {
+			// Signed-out visitors get a small per-browser allowance so someone landing
+			// on /tutor from search can hear the words in the free scenario steps
+			// before being asked to sign up.
+			anonPlays = Number(cookies.get(ANON_TTS_COOKIE)) || 0;
+
+			if (anonPlays >= ANON_TTS_LIMIT) {
+				return new Response(JSON.stringify({
+					error: 'Subscription required',
+					message: `You've reached the free limit of ${ANON_TTS_LIMIT} audio plays. Subscribe to continue.`,
+					requiresSubscription: true
+				}), {
+					status: 403,
+					headers: { 'Content-Type': 'application/json' }
+				});
+			}
 		}
 	}
 
 	try {
-		const data = await request.json();
-		const { text, dialect } = data;
-
-		if (!text) {
-			return new Response(JSON.stringify({ error: 'Missing required field: text' }), {
-				status: 400,
-				headers: { 'Content-Type': 'application/json' }
-			});
-		}
-
 		const voiceConfig = getVoiceConfig(dialect);
 
 		const textForTTS = STRIP_ARABIC_QM_ONLY
@@ -123,20 +143,24 @@ export const POST: RequestHandler = async ({ request, locals, cookies }) => {
 
 		const content = Buffer.concat(chunks);
 
-		// Increment counter for free users after successful generation
-		if (userId && !hasActiveSubscription) {
-			await supabase
-				.from('user')
-				.update({ tts_calls_count: ttsCount + 1 })
-				.eq('id', userId);
-		} else if (!userId) {
-			cookies.set(ANON_TTS_COOKIE, String(anonPlays + 1), {
-				path: '/',
-				httpOnly: true,
-				sameSite: 'lax',
-				secure: true,
-				maxAge: 60 * 60 * 24 * 30
-			});
+		// Increment counter for free users after successful generation (skipped
+		// entirely for the onboarding bypass — those plays don't count against
+		// the free quota).
+		if (!isOnboardingBypass) {
+			if (userId && !hasActiveSubscription) {
+				await supabase
+					.from('user')
+					.update({ tts_calls_count: ttsCount + 1 })
+					.eq('id', userId);
+			} else if (!userId) {
+				cookies.set(ANON_TTS_COOKIE, String(anonPlays + 1), {
+					path: '/',
+					httpOnly: true,
+					sameSite: 'lax',
+					secure: true,
+					maxAge: 60 * 60 * 24 * 30
+				});
+			}
 		}
 
 		return new Response(content, {

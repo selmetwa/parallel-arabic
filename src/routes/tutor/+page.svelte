@@ -18,7 +18,7 @@
   import { updateKeyboardStyle } from '$lib/helpers/update-keyboard-style';
   import { trackEvent } from '$lib/analytics';
   import { TUTOR_SCENARIOS, type TutorScenario } from '$lib/constants/tutor-scenarios';
-  import levenshtein from 'fast-levenshtein';
+  import { calculateWordSimilarity } from '$lib/utils/pronunciation-similarity';
 
   let { data } = $props();
 
@@ -327,32 +327,6 @@
     } finally {
       isLoadingVocab = false;
     }
-  }
-
-  // Character-level similarity for single vocab words. Word-level matching
-  // (calculateSimilarity) is too strict here — one differing letter scores 0%.
-  // Normalize away tashkeel + common letter variants that speech-to-text drops,
-  // then use Levenshtein for partial credit (same approach as /speak).
-  function calculateWordSimilarity(transcribed: string, expected: string): number {
-    const normalize = (text: string) =>
-      text
-        .replace(/[ً-ْ]/g, '') // tashkeel/diacritics
-        .replace(/[آأإٱ]/g, 'ا') // أ إ آ ٱ → ا
-        .replace(/ى/g, 'ي') // ى → ي
-        .replace(/ة/g, 'ه') // ة → ه
-        .replace(/ـ/g, '') // tatweel
-        .replace(/[،.؟!,?]/g, '')
-        .replace(/\s+/g, ' ')
-        .trim();
-
-    const t = normalize(transcribed);
-    const e = normalize(expected);
-    if (!t || !e) return 0;
-    if (t === e) return 100;
-
-    const distance = levenshtein.get(t, e);
-    const maxLength = Math.max(t.length, e.length);
-    return Math.max(0, Math.round((1 - distance / maxLength) * 100));
   }
 
   // Score the learner's spoken attempt at the current vocab word.
@@ -1810,7 +1784,7 @@
               {:else if currentVocabItem}
                 <div class="flex items-center justify-between mb-2">
                   <div class="flex items-center gap-2">
-                    <span class="text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full {currentVocabItem.kind === 'sentence' ? 'bg-sky-500/15 text-sky-700' : 'bg-emerald-500/15 text-emerald-700'}">
+ <span class="text-xs font-bold px-2 py-0.5 rounded-full {currentVocabItem.kind === 'sentence' ? 'bg-sky-500/15 text-sky-700' : 'bg-emerald-500/15 text-emerald-700'}">
                       {currentVocabItem.kind === 'sentence' ? '💬 Practice sentence' : '🔤 New word'}
                     </span>
                     <span class="text-xs font-semibold text-text-200">{currentVocabIndex + 1} of {scenarioVocab.length}</span>
@@ -1968,7 +1942,7 @@
                 <div class="flex">
                   <div class="max-w-[90%] sm:max-w-[80%] bg-sky-500/10 border border-dashed border-sky-500/40 rounded-xl p-3 sm:p-4 ml-1">
                     <div class="flex items-center justify-between gap-3 mb-1">
-                      <span class="text-[10px] font-bold uppercase tracking-wide text-sky-700">
+ <span class="text-xs font-bold text-sky-700">
                         💡 Hint — try saying
                       </span>
                       {#if currentHint && !isLoadingHint}
