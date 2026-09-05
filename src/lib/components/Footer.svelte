@@ -49,13 +49,13 @@
     </div>
 
     <div class="pt-8 border-t-2 border-tile-600">
-      <p class="text-text-300 text-sm text-center">
+      <div class="text-text-300 text-sm text-center">
         Made with <Tooltip text="Love">
           {#snippet children()}
             <span class="cursor-help hover:scale-110 inline-block transition-transform duration-200">حُبّ</span>
           {/snippet}
         </Tooltip> by <a href="https://arabic-for-nerds.com/interviews/9273-roots/interview-sherif-elmetwally/" target="_blank" class="hover:text-text-100 font-medium transition-colors duration-200">Sherif Elmetwally</a>
-      </p>
+      </div>
     </div>
   </div>
 </footer>

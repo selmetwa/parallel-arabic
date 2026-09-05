@@ -110,8 +110,6 @@
 		gap: 0.4rem;
 		font-size: 0.8rem;
 		font-weight: 600;
-		text-transform: uppercase;
-		letter-spacing: 0.08em;
 		color: var(--text2);
 		text-decoration: none;
 		transition: color 0.2s;
@@ -146,10 +144,8 @@
 	}
 
 	.section-label {
-		font-size: 0.7rem;
+		font-size: 0.8rem;
 		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: 0.15em;
 		color: var(--text3);
 		margin-bottom: 1rem;
 		border-left: 2px solid var(--brand);
@@ -198,10 +194,8 @@
 
 	.badge {
 		display: inline-block;
-		font-size: 0.65rem;
+		font-size: 0.8rem;
 		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
 		color: var(--brand);
 		background: color-mix(in srgb, var(--brand) 12%, transparent);
 		border: 1px solid color-mix(in srgb, var(--brand) 30%, transparent);
@@ -328,10 +322,8 @@
 	}
 
 	.dialect-sub {
-		font-size: 0.7rem;
+		font-size: 0.8rem;
 		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
 		color: var(--text3);
 	}
 

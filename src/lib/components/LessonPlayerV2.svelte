@@ -444,10 +444,8 @@
 		padding: 0.12rem 0.55rem;
 	}
 	.step-label {
-		font-size: 0.68rem;
+		font-size: 0.8rem;
 		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
 		color: var(--text3);
 	}
 	.title {
@@ -542,10 +540,8 @@
 		max-width: 1080px;
 	}
 	.eyebrow {
-		font-size: 0.7rem;
+		font-size: 0.8rem;
 		font-weight: 800;
-		text-transform: uppercase;
-		letter-spacing: 0.16em;
 		color: var(--brand);
 	}
 	.head {

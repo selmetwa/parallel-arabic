@@ -334,15 +334,15 @@
 	{#if data.user}
 		<div class="mb-6 grid grid-cols-3 gap-px bg-tile-500 border border-tile-500 rounded-xl overflow-hidden">
 			<div class="bg-tile-400 px-4 py-3 flex flex-col gap-1">
-				<span class="text-[11px] uppercase tracking-wider text-text-200 font-semibold">Stories done</span>
+				<span class="text-xs text-text-200 font-semibold">Stories done</span>
 				<span class="text-xl font-bold text-text-300 leading-none">{data.completedStoryIds?.length ?? 0}</span>
 			</div>
 			<div class="bg-tile-400 px-4 py-3 flex flex-col gap-1">
-				<span class="text-[11px] uppercase tracking-wider text-text-200 font-semibold">Day streak</span>
+				<span class="text-xs text-text-200 font-semibold">Day streak</span>
 				<span class="text-xl font-bold text-text-300 leading-none">{data.user.current_streak ?? 0}</span>
 			</div>
 			<div class="bg-tile-400 px-4 py-3 flex flex-col gap-1">
-				<span class="text-[11px] uppercase tracking-wider text-text-200 font-semibold">Level</span>
+				<span class="text-xs text-text-200 font-semibold">Level</span>
 				<span class="text-xl font-bold text-text-300 leading-none">{data.user.current_level ?? 1}</span>
 			</div>
 		</div>
@@ -357,7 +357,7 @@
 				class="group flex items-center justify-between bg-tile-500 border border-amber-400/50 rounded-xl p-4 sm:p-5 shadow-sm hover:bg-tile-600 hover:shadow-lg transition-all duration-200 hover:-translate-y-1 motion-reduce:hover:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300"
 			>
 				<div class="flex flex-col gap-1 min-w-0">
-					<span class="text-xs font-semibold uppercase tracking-widest text-text-200">Continue Reading</span>
+					<span class="text-xs font-semibold text-text-200">Continue Reading</span>
 					<span class="text-xl sm:text-2xl font-bold text-text-300 group-hover:text-text-200 transition-colors leading-tight truncate">
 						{data.resumeStory.title}
 					</span>

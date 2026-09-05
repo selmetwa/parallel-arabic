@@ -40,15 +40,15 @@
     </div>
     <dl class="mt-5 grid gap-3 border-t border-tile-600 pt-5 text-left sm:grid-cols-2">
       <div>
-        <dt class="text-xs uppercase tracking-wide text-text-200">Without tashkeel</dt>
+ <dt class="text-xs text-text-200">Without tashkeel</dt>
         <dd class="text-lg text-text-300" dir="rtl">{phrase.arabicPlain}</dd>
       </div>
       <div>
-        <dt class="text-xs uppercase tracking-wide text-text-200">Franco / chat alphabet</dt>
+ <dt class="text-xs text-text-200">Franco / chat alphabet</dt>
         <dd class="text-lg text-text-300">{phrase.franco}</dd>
       </div>
       <div class="sm:col-span-2">
-        <dt class="text-xs uppercase tracking-wide text-text-200">Literally</dt>
+ <dt class="text-xs text-text-200">Literally</dt>
         <dd class="text-lg text-text-300">{phrase.literal}</dd>
       </div>
     </dl>
@@ -66,7 +66,7 @@
       <div class="space-y-3">
         {#each phrase.variants as variant (variant.arabic + variant.label)}
           <div class="rounded-xl border border-tile-500 bg-tile-300 p-5">
-            <p class="mb-2 text-xs font-semibold uppercase tracking-wide text-text-200">
+ <p class="mb-2 text-xs font-semibold text-text-200">
               {variant.label}
             </p>
             <div class="mb-2 flex flex-wrap items-center gap-3">
@@ -129,7 +129,7 @@
             href="/{other.dialect}/phrases/{phrase.slug}"
             class="block rounded-xl border border-tile-500 bg-tile-300 p-4 text-center transition-all hover:border-tile-600 hover:bg-tile-400"
           >
-            <p class="mb-2 text-xs uppercase tracking-wide text-text-200">
+ <p class="mb-2 text-xs text-text-200">
               {formatDialectName(other.dialect)}
             </p>
             <p class="text-2xl font-bold text-text-300" dir="rtl">{other.arabic}</p>

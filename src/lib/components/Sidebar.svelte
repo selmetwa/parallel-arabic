@@ -134,7 +134,7 @@
             type="button"
             onclick={() => toggleSection(section.title)}
             aria-expanded={expandedSections.has(section.title)}
-            class="group flex w-full items-center justify-between rounded-md px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-text-200 transition-colors duration-200 hover:text-text-300 focus-visible:outline focus-visible:outline-2 focus-visible:[outline-offset:-2px] focus-visible:outline-text-300"
+ class="group flex w-full items-center justify-between rounded-md px-3 py-1.5 text-xs font-bold text-text-200 transition-colors duration-200 hover:text-text-300 focus-visible:outline focus-visible:outline-2 focus-visible:[outline-offset:-2px] focus-visible:outline-text-300"
           >
             <span>{section.title}</span>
             <svg

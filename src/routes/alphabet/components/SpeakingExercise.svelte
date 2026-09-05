@@ -176,7 +176,7 @@
 				</div>
 			</div>
 			<div class="border-tile-500/30 border-t pt-3">
-				<p class="mb-1 text-center text-xs font-bold uppercase tracking-wider text-text-200">
+				<p class="mb-1 text-center text-xs font-bold text-text-200">
 					You said:
 				</p>
 				<p class="font-arabic text-center text-xl text-text-300" dir="rtl">{transcribedText}</p>

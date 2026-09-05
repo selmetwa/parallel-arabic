@@ -306,7 +306,7 @@
 
                 <!-- Details -->
                 <div class="flex-1 border-l-2 border-tile-500 pl-4">
-                  <p class="text-sm text-violet-600 font-semibold uppercase tracking-wide">
+ <p class="text-sm text-violet-600 font-semibold">
                     {item.englishLabel || item.word}
                   </p>
                   <p class="text-text-200 italic text-sm">{item.transliteration}</p>

@@ -170,7 +170,7 @@
 
 	<!-- Path cards -->
 	<div class="max-w-5xl mx-auto px-4 sm:px-8 py-8">
-		<p class="text-[10px] uppercase tracking-[0.2em] text-text-200 font-semibold mb-4">Choose your path</p>
+		<p class="text-xs text-text-200 font-semibold mb-4">Choose your path</p>
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
 			<!-- STRUCTURED card -->
@@ -184,8 +184,8 @@
 
 				<!-- Top row -->
 				<div class="flex items-center gap-2 mb-6">
-					<span class="text-[10px] uppercase tracking-[0.18em] font-bold text-text-200">Structured</span>
-					<span class="text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full bg-[color-mix(in_srgb,var(--brand)_12%,transparent)] text-[var(--brand)] border border-[color-mix(in_srgb,var(--brand)_25%,transparent)]">Curriculum</span>
+					<span class="text-xs font-bold text-text-200">Structured</span>
+					<span class="text-xs font-bold px-2 py-0.5 rounded-full bg-[color-mix(in_srgb,var(--brand)_12%,transparent)] text-[var(--brand)] border border-[color-mix(in_srgb,var(--brand)_25%,transparent)]">Curriculum</span>
 				</div>
 
 				<!-- Content -->
@@ -221,8 +221,8 @@
 
 				<!-- Top row -->
 				<div class="flex items-center gap-2 mb-6">
-					<span class="text-[10px] uppercase tracking-[0.18em] font-bold text-text-200">Custom</span>
-					<span class="text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/25">Any topic</span>
+					<span class="text-xs font-bold text-text-200">Custom</span>
+					<span class="text-xs font-bold px-2 py-0.5 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/25">Any topic</span>
 				</div>
 
 				<!-- Content -->

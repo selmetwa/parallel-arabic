@@ -35,7 +35,7 @@
 	<p class="mb-8 text-lg text-text-200">{PRONUNCIATION_INTRO}</p>
 
 	<nav class="mb-10 rounded-xl border border-tile-500 bg-tile-300 p-5">
-		<h2 class="mb-3 text-sm uppercase tracking-wide text-text-200">On this page</h2>
+		<h2 class="mb-3 text-sm text-text-200">On this page</h2>
 		<ul class="grid grid-cols-1 gap-2 sm:grid-cols-2">
 			{#each SOUND_SECTIONS as section (section.id)}
 				<li>
@@ -58,7 +58,7 @@
 			<div class="overflow-x-auto">
 				<table class="w-full min-w-[30rem] border-collapse text-left">
 					<thead>
-						<tr class="border-b-2 border-tile-600 text-sm uppercase tracking-wide text-text-200">
+						<tr class="border-b-2 border-tile-600 text-sm text-text-200">
 							<th scope="col" class="py-2 pr-4">Arabic</th>
 							<th scope="col" class="py-2 pr-4">Egyptian</th>
 							<th scope="col" class="py-2 pr-4">Standard Arabic</th>

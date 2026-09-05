@@ -54,7 +54,7 @@
 			/>
 		</svg>
 		<span class="flex flex-col text-left leading-tight">
-			<span class="text-[0.65rem] font-medium uppercase tracking-wide opacity-80">
+			<span class="text-[0.65rem] font-medium opacity-80">
 				Download on the
 			</span>
 			<span class="text-lg font-semibold">App Store</span>

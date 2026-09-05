@@ -704,7 +704,7 @@
 
         <button
             onclick={() => isDiacriticModalOpen = true}
-            class="text-[10px] uppercase tracking-[0.15em] font-semibold text-text-200 hover:text-text-300 px-3 py-1.5 rounded-lg hover:bg-tile-400 transition-colors"
+ class="text-xs font-semibold text-text-200 hover:text-text-300 px-3 py-1.5 rounded-lg hover:bg-tile-400 transition-colors"
             title="View diacritical marks guide"
             aria-label="View diacritical marks guide"
         >
@@ -725,7 +725,7 @@
                         <div class="space-y-6 lg:space-y-8">
                             <!-- Step type label + Title -->
                             <div class="text-center space-y-3">
-                                <p class="text-[10px] uppercase tracking-[0.2em] text-text-200 font-semibold">Learn</p>
+ <p class="text-xs text-text-200 font-semibold">Learn</p>
                                 <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold text-text-300">{currentStep.content.title.english}</h2>
                                 {#if currentStep.content.title.arabic}
                                     <h3 class="text-5xl sm:text-6xl text-text-300 font-arabic leading-relaxed" dir="rtl">{currentStep.content.title.arabic}</h3>
@@ -795,7 +795,7 @@
                                 <!-- Right: Examples -->
                                 {#if currentStep.content.examples && currentStep.content.examples.length > 0}
                                     <div class="bg-tile-400 border border-tile-500/60 rounded-2xl p-4 lg:p-6 shadow-sm">
-                                        <h4 class="text-[10px] uppercase tracking-[0.2em] font-semibold text-text-200 border-b border-tile-500 pb-2 mb-4">Examples</h4>
+ <h4 class="text-xs font-semibold text-text-200 border-b border-tile-500 pb-2 mb-4">Examples</h4>
                                         <div class="space-y-3 lg:space-y-4 max-h-[60vh] lg:max-h-none overflow-y-auto lg:overflow-visible">
                                             {#each currentStep.content.examples as example (example.arabic)}
                                                 <div class="bg-tile-300 p-3 lg:p-4 rounded-xl border border-tile-500/60 flex flex-col gap-3">
@@ -839,7 +839,7 @@
                         <div class="flex-1 flex flex-col justify-center space-y-4 lg:space-y-6">
                             <!-- Step type label -->
                             <div class="text-center space-y-1">
-                                <p class="text-[10px] uppercase tracking-[0.2em] text-text-200 font-semibold">Practice Sentence</p>
+ <p class="text-xs text-text-200 font-semibold">Practice Sentence</p>
                                 {#if step.context}
                                     <p class="text-sm text-text-200 italic">{step.context}</p>
                                 {/if}
@@ -867,7 +867,7 @@
                             <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
                                 <!-- Left: English sentence with word selection -->
                                 <div class="bg-tile-400 border border-tile-500/60 rounded-2xl p-4 lg:p-6 shadow-sm flex flex-col justify-center">
-                                    <h4 class="text-[10px] uppercase tracking-[0.2em] font-semibold text-text-200 mb-3">English</h4>
+ <h4 class="text-xs font-semibold text-text-200 mb-3">English</h4>
                                     <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
                                     <div
                                         class="flex w-fit flex-row flex-wrap text-base sm:text-lg font-medium text-text-200 select-none"
@@ -900,7 +900,7 @@
 
                                 <!-- Right: Arabic sentence -->
                                 <div class="bg-tile-400 border border-tile-500/60 rounded-2xl p-4 lg:p-6 shadow-sm flex flex-col justify-center">
-                                    <h4 class="text-[10px] uppercase tracking-[0.2em] font-semibold text-text-200 mb-3">Arabic</h4>
+ <h4 class="text-xs font-semibold text-text-200 mb-3">Arabic</h4>
                                     <p class="text-4xl sm:text-5xl lg:text-6xl font-bold text-text-300 leading-relaxed" dir="rtl">{step.sentence.arabic}</p>
                                     <p class="text-sm text-text-200 italic mt-3">{step.sentence.transliteration}</p>
                                 </div>
@@ -943,7 +943,7 @@
                         <div class="flex-1 flex flex-col justify-center space-y-4 lg:space-y-6">
                             <!-- Step type label -->
                             <div class="text-center">
-                                <p class="text-[10px] uppercase tracking-[0.2em] text-text-200 font-semibold">
+ <p class="text-xs text-text-200 font-semibold">
                                     {currentStep.exerciseType === 'multiple-choice' ? 'Quiz' :
                                      currentStep.exerciseType === 'fill-in-blank' ? 'Fill in the blank' : 'Match'}
                                 </p>

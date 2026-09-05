@@ -112,7 +112,7 @@
     <nav class="flex-1 overflow-y-auto px-3 py-4">
       {#each navSections as section (section.title)}
         <div class="mb-3">
-          <p class="px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-text-200">
+ <p class="px-3 py-1.5 text-xs font-bold text-text-200">
             {section.title}
           </p>
 

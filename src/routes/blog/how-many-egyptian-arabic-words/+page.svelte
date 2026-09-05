@@ -98,7 +98,7 @@
 			<div class="overflow-x-auto">
 				<table class="w-full border-collapse text-left">
 					<thead>
-						<tr class="border-b-2 border-tile-600 text-sm uppercase tracking-wide">
+						<tr class="border-b-2 border-tile-600 text-sm">
 							<th scope="col" class="py-2 pr-4">Top N words</th>
 							<th scope="col" class="py-2">Share of all tokens</th>
 						</tr>

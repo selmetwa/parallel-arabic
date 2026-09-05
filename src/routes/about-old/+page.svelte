@@ -247,7 +247,7 @@
 				<!-- Step 1 -->
 				<li class="relative pl-8 sm:pl-12">
 					<span class="absolute -left-[1.15rem] sm:-left-[1.4rem] top-0 flex items-center justify-center w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-tile-500 border-2 border-tile-600 text-text-300 font-bold text-base sm:text-lg">1</span>
-					<p class="text-xs text-text-200 uppercase tracking-[0.14em] mb-1">Skip this step if you're not a beginner!</p>
+					<p class="text-xs text-text-200 mb-1">Skip this step if you're not a beginner!</p>
 					<h3 class="text-xl sm:text-2xl font-bold text-text-300 mb-3">Master the foundations first</h3>
 					<p class="text-text-200 text-sm sm:text-base mb-3 italic">
 						Arabic script looks intimidating, and you're unsure where to even begin with a language that reads right-to-left…
@@ -260,7 +260,7 @@
 				<!-- Step 2 -->
 				<li class="relative pl-8 sm:pl-12">
 					<span class="absolute -left-[1.15rem] sm:-left-[1.4rem] top-0 flex items-center justify-center w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-tile-500 border-2 border-tile-600 text-text-300 font-bold text-base sm:text-lg">2</span>
-					<p class="text-xs text-text-200 uppercase tracking-[0.14em] mb-1">Immerse yourself in authentic Arabic</p>
+					<p class="text-xs text-text-200 mb-1">Immerse yourself in authentic Arabic</p>
 					<h3 class="text-xl sm:text-2xl font-bold text-text-300 mb-3">Read stories, tap any word</h3>
 					<p class="text-text-200 text-sm sm:text-base mb-3 italic">
 						Textbook Arabic feels disconnected from how people actually speak. You want to understand real conversations, not just formal phrases…
@@ -273,7 +273,7 @@
 				<!-- Step 3 -->
 				<li class="relative pl-8 sm:pl-12">
 					<span class="absolute -left-[1.15rem] sm:-left-[1.4rem] top-0 flex items-center justify-center w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-tile-500 border-2 border-tile-600 text-text-300 font-bold text-base sm:text-lg">3</span>
-					<p class="text-xs text-text-200 uppercase tracking-[0.14em] mb-1">Your content, your way</p>
+					<p class="text-xs text-text-200 mb-1">Your content, your way</p>
 					<h3 class="text-xl sm:text-2xl font-bold text-text-300 mb-3">Generate content from your own words</h3>
 					<p class="text-text-200 text-sm sm:text-base mb-3 italic">
 						Generic language apps bore you. The same repetitive exercises, the same irrelevant topics…
@@ -295,7 +295,7 @@
 				<!-- Step 4 -->
 				<li class="relative pl-8 sm:pl-12">
 					<span class="absolute -left-[1.15rem] sm:-left-[1.4rem] top-0 flex items-center justify-center w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-tile-500 border-2 border-tile-600 text-text-300 font-bold text-base sm:text-lg">4</span>
-					<p class="text-xs text-text-200 uppercase tracking-[0.14em] mb-1">Make it stick</p>
+					<p class="text-xs text-text-200 mb-1">Make it stick</p>
 					<h3 class="text-xl sm:text-2xl font-bold text-text-300 mb-3">Review your words with spaced repetition</h3>
 					<p class="text-text-200 text-sm sm:text-base mb-3 italic">
 						You've studied Arabic before but the words just don't stick. A week later, you've forgotten everything…

@@ -48,18 +48,18 @@
 		<dl class="mt-6 grid gap-3 border-t border-tile-600 pt-5 text-left sm:grid-cols-3">
 			{#if word.franco}
 				<div>
-					<dt class="text-xs uppercase tracking-wide text-text-200">Franco / chat</dt>
+					<dt class="text-xs text-text-200">Franco / chat</dt>
 					<dd class="text-lg text-text-300">{word.franco}</dd>
 				</div>
 			{/if}
 			{#if categoryLabel}
 				<div>
-					<dt class="text-xs uppercase tracking-wide text-text-200">Topic</dt>
+					<dt class="text-xs text-text-200">Topic</dt>
 					<dd class="text-lg capitalize text-text-300">{categoryLabel}</dd>
 				</div>
 			{/if}
 			<div>
-				<dt class="text-xs uppercase tracking-wide text-text-200">Seen in</dt>
+				<dt class="text-xs text-text-200">Seen in</dt>
 				<dd class="text-lg text-text-300">
 					{word.examples.length} of our stories
 				</dd>

@@ -93,10 +93,8 @@
 		gap: 1rem;
 	}
 	.eyebrow {
-		font-size: 0.7rem;
+		font-size: 0.8rem;
 		font-weight: 800;
-		text-transform: uppercase;
-		letter-spacing: 0.16em;
 		color: var(--brand);
 	}
 	.ask {

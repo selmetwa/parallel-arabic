@@ -87,7 +87,7 @@
             <!-- Controls row -->
             <div class="flex flex-wrap gap-4 justify-center">
                 <div class="flex flex-col gap-1">
-                    <label class="text-xs font-bold uppercase tracking-wider text-text-200" for="dialect-select">Dialect</label>
+ <label class="text-xs font-bold text-text-200" for="dialect-select">Dialect</label>
                     <select id="dialect-select" bind:value={selectedDialect} class="bg-tile-400 border-2 border-tile-600 rounded-xl px-4 py-2.5 text-text-300 font-semibold focus:outline-none focus:border-blue-400 transition-colors">
                         {#each DIALECTS as d (d.value)}
                             <option value={d.value}>{d.label}</option>
@@ -95,7 +95,7 @@
                     </select>
                 </div>
                 <div class="flex flex-col gap-1">
-                    <label class="text-xs font-bold uppercase tracking-wider text-text-200" for="level-select">Level</label>
+ <label class="text-xs font-bold text-text-200" for="level-select">Level</label>
                     <select id="level-select" bind:value={selectedLevel} class="bg-tile-400 border-2 border-tile-600 rounded-xl px-4 py-2.5 text-text-300 font-semibold focus:outline-none focus:border-blue-400 transition-colors">
                         {#each LEVELS as l (l)}
                             <option value={l}>{l}</option>
@@ -106,7 +106,7 @@
 
             <!-- Session length selector -->
             <div class="space-y-2">
-                <p class="text-xs font-bold uppercase tracking-wider text-text-200 text-center">Session Length</p>
+ <p class="text-xs font-bold text-text-200 text-center">Session Length</p>
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
                     {#each SESSION_LENGTHS as opt (opt.value)}
                         <button

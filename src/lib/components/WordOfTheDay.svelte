@@ -81,7 +81,7 @@
 
 <article class="bg-tile-300 border border-tile-500 rounded-2xl p-4 sm:p-6 flex flex-col gap-4">
   <!-- Header -->
-  <p class="text-xs font-medium text-text-200 uppercase tracking-widest">Word of the Day ✨</p>
+ <p class="text-xs font-medium text-text-200">Word of the Day ✨</p>
 
   <!-- Arabic word + audio -->
   <div class="flex items-start justify-between gap-3">
@@ -102,7 +102,7 @@
   <!-- Example sentences -->
   {#if examples.length > 0}
     <div class="flex flex-col gap-2 border-t border-tile-500 pt-3">
-      <p class="text-xs font-medium text-text-200 uppercase tracking-widest">Examples</p>
+ <p class="text-xs font-medium text-text-200">Examples</p>
       <ul class="flex flex-col gap-2">
         {#each examples as { label, text } (label)}
           <li class="flex flex-col gap-0.5">
