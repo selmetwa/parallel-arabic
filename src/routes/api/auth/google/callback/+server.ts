@@ -1,7 +1,6 @@
 import { redirect } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { syncSupabaseUserWithDB } from '$lib/helpers/supabase-auth-helpers';
-import { getPostHogClient } from '$lib/server/posthog';
 
 export const GET: RequestHandler = async ({ url, locals: { supabase } }) => {
 	console.log('🔗 Google OAuth callback hit');
@@ -54,14 +53,6 @@ export const GET: RequestHandler = async ({ url, locals: { supabase } }) => {
 				// Continue with login even if sync fails - can be retried later
 				// Don't block the user from logging in
 			}
-
-			const posthog = getPostHogClient();
-			posthog.capture({
-				distinctId: data.user.id,
-				event: isNewUser ? 'user_signed_up' : 'user_logged_in',
-				properties: { method: 'google' }
-			});
-			await posthog.flush();
 
 			// If it's a new user, redirect with newSignup flag to trigger onboarding
 			const redirectUrl = isNewUser ? '/?newSignup=true' : next;

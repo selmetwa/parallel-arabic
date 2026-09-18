@@ -1,7 +1,6 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { v4 as uuidv4 } from 'uuid';
-import { getPostHogClient } from '$lib/server/posthog';
 
 export const POST: RequestHandler = async ({ request, locals }) => {
 	const { supabase, safeGetSession } = locals;
@@ -68,14 +67,6 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 				return json({ success: false, error: 'Failed to create progress' }, { status: 500 });
 			}
 		}
-
-		const posthog = getPostHogClient();
-		posthog.capture({
-			distinctId: user.id,
-			event: 'lesson_started',
-			properties: { topic_id: topicId, dialect }
-		});
-		await posthog.flush();
 
 		return json({ success: true });
 	} catch (error) {

@@ -1,6 +1,5 @@
 import { redirect } from '@sveltejs/kit';
 import type { Actions } from './$types';
-import { getPostHogClient } from '$lib/server/posthog';
 
 export const load = async ({ locals: { safeGetSession } }) => {
 	const { session } = await safeGetSession();
@@ -25,16 +24,6 @@ export const actions: Actions = {
 			return {
 				error: error.message
 			};
-		}
-
-		if (data.user) {
-			const posthog = getPostHogClient();
-			posthog.capture({
-				distinctId: data.user.id,
-				event: 'user_logged_in',
-				properties: { method: 'email' }
-			});
-			await posthog.flush();
 		}
 
 		redirect(303, '/');

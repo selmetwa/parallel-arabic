@@ -1,11 +1,9 @@
 import { redirect } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
-import { getPostHogClient } from '$lib/server/posthog';
 
 export const POST: RequestHandler = async ({ locals, cookies, request, url }) => {
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const supabase = (locals as any).supabase;
-	const { user } = await locals.safeGetSession();
 	console.log('🔍 [logout] POST request received');
 	console.log('🔍 [logout] URL:', url.pathname);
 	console.log('🔍 [logout] Referer:', request.headers.get('referer'));
@@ -51,12 +49,6 @@ export const POST: RequestHandler = async ({ locals, cookies, request, url }) =>
 			}
 		});
 		console.log(`✅ [logout] Deleted ${deletedCount} Supabase auth cookies`);
-
-		if (user) {
-			const posthog = getPostHogClient();
-			posthog.capture({ distinctId: user.id, event: 'user_logged_out' });
-			await posthog.flush();
-		}
 
 		console.log('✅ [logout] Logout process completed successfully');
 	} catch (error) {

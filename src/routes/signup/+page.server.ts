@@ -3,7 +3,6 @@ import type { Actions } from './$types';
 import { syncSupabaseUserWithDB } from '$lib/helpers/supabase-auth-helpers';
 import { sendWelcomeEmail } from '$lib/server/email';
 import { ADMIN_ID } from '$env/static/private';
-import { getPostHogClient } from '$lib/server/posthog';
 
 export const load = async ({ locals: { safeGetSession } }) => {
 	const { session } = await safeGetSession();
@@ -63,16 +62,6 @@ export const actions: Actions = {
 				// Note: We don't return an error here because the auth was successful
 				// The user sync can be retried on login
 			}
-		}
-
-		if (isNewUser && data.user) {
-			const posthog = getPostHogClient();
-			posthog.capture({
-				distinctId: data.user.id,
-				event: 'user_signed_up',
-				properties: { method: 'email' }
-			});
-			await posthog.flush();
 		}
 
 		// If it's a new user and they're already authenticated (email confirmation not required),

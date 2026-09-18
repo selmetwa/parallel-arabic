@@ -6,7 +6,6 @@ import { getUserHasActiveSubscription } from '$lib/helpers/get-user-has-active-s
 import { getUserReviewCount } from '$lib/helpers/get-user-review-count';
 import { trackActivitySimple } from '$lib/helpers/track-activity';
 import { v4 as uuidv4 } from 'uuid';
-import { getPostHogClient } from '$lib/server/posthog';
 
 export const POST: RequestHandler = async ({ request, locals }) => {
 	const { sessionId, user } = (await locals?.auth?.validate()) || {};
@@ -109,18 +108,6 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		trackActivitySimple(userId, 'review', 1).catch((err) => {
 			console.error('Error tracking review activity:', err);
 		});
-
-		const posthog = getPostHogClient();
-		posthog.capture({
-			distinctId: userId,
-			event: 'word_reviewed',
-			properties: {
-				difficulty,
-				interval_days: reviewResult.intervalDays,
-				repetitions: reviewResult.repetitions
-			}
-		});
-		posthog.flush().catch(() => {});
 
 		return json({
 			success: true,

@@ -1,7 +1,6 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { supabase } from '$lib/supabaseClient';
-import { getPostHogClient } from '$lib/server/posthog';
 
 export const POST: RequestHandler = async ({ request, locals }) => {
 	const { sessionId, user } = (await locals?.auth?.validate()) || {};
@@ -62,18 +61,6 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 			console.error('Error updating onboarding data:', updateError);
 			return json({ error: 'Failed to save onboarding data' }, { status: 500 });
 		}
-
-		const posthog = getPostHogClient();
-		posthog.capture({
-			distinctId: user.id,
-			event: 'onboarding_completed',
-			properties: {
-				dialect: target_dialect,
-				proficiency_level,
-				learning_reason
-			}
-		});
-		await posthog.flush();
 
 		return json({ success: true });
 	} catch (e) {
