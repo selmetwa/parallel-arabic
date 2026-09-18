@@ -4,6 +4,7 @@ import { STRIPE_SECRET,  } from '$env/static/private';
 import { PUBLIC_WEBHOOK_SECRET } from '$env/static/public';
 import { json } from '@sveltejs/kit';
 import { supabase } from '$lib/supabaseClient';
+import { syncStripeSubscription } from '$lib/server/stripe-link';
 
 // Initialize Stripe with your secret key
 const stripe = new Stripe(STRIPE_SECRET, {
@@ -25,62 +26,9 @@ export const POST: RequestHandler = async ({ request }) => {
 	try {
 		event = stripe.webhooks.constructEvent(payload, signature, PUBLIC_WEBHOOK_SECRET);
 	} catch (err) {
-		return json({
-			status: 400,
-			body: `Webhook Error: ${(err as Error).message}`
-		});
+		// Real 400 so Stripe reports the delivery as failed instead of accepted.
+		return json({ error: `Webhook Error: ${(err as Error).message}` }, { status: 400 });
 	}
-
-  async function updateSubscription(subscriptionId: string) {
-    const { data: userToUpdate, error: fetchError } = await supabase
-      .from('user')
-      .select('*')
-      .eq('subscriber_id', subscriptionId)
-      .single();
-
-    if (fetchError && fetchError.code !== 'PGRST116') {
-      console.error('Error fetching user for subscription update:', fetchError);
-      return;
-    }
-
-    if (userToUpdate) {
-      // Get the actual subscription from Stripe instead of hardcoding 30 days
-      let subscriptionEndDate: number;
-      
-      try {
-        const subscription = await stripe.subscriptions.retrieve(subscriptionId);
-        if (subscription && subscription.current_period_end) {
-          // Stripe already provides the Unix timestamp
-          subscriptionEndDate = subscription.current_period_end;
-        } else {
-          // Fallback to 30 days if we can't get subscription details
-          const now = new Date();
-          const thirtyDaysFromNow = new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000);
-          subscriptionEndDate = Math.floor(thirtyDaysFromNow.getTime() / 1000);
-        }
-      } catch (error) {
-        console.error('Error fetching subscription from Stripe:', error);
-        // Fallback to 30 days
-        const now = new Date();
-        const thirtyDaysFromNow = new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000);
-        subscriptionEndDate = Math.floor(thirtyDaysFromNow.getTime() / 1000);
-      }
-
-      const { error: updateError } = await supabase
-        .from('user')
-        .update({
-          is_subscriber: true,
-          subscriber_id: subscriptionId,
-          subscription_end_date: subscriptionEndDate  // Store as Unix timestamp (seconds)
-        })
-        .eq('subscriber_id', subscriptionId)
-        .select();
-
-      if (updateError) {
-        console.error('Error updating user subscription:', updateError);
-      }
-    }
-  }
 
   // Handle subscription deletion (when subscription period ends after cancellation)
   async function handleSubscriptionDeleted(subscriptionId: string) {
@@ -113,14 +61,29 @@ export const POST: RequestHandler = async ({ request }) => {
     }
   }
 
-	// Handle the event
+	// Handle the event. Every handler is awaited so the function isn't torn down
+	// mid-write.
 	switch (event.type) {
+    case 'checkout.session.completed': {
+      // The only place that knows which user started the checkout, via
+      // client_reference_id. Covers users who close the tab before the
+      // return page loads — with a trial there is no charge to tip us off.
+      const session = event.data.object;
+      const subscriptionId =
+        typeof session.subscription === 'string'
+          ? session.subscription
+          : (session.subscription?.id ?? null);
+      await syncStripeSubscription(subscriptionId, session.client_reference_id);
+      break;
+    }
+    case 'customer.subscription.created':
 		case 'customer.subscription.updated':
-      updateSubscription(event.data.object.id);
+      // Status-aware: grants on trialing/active, revokes on past_due/unpaid.
+      await syncStripeSubscription(event.data.object.id);
 			break;
     case 'customer.subscription.deleted':
       // Fires when the subscription period ends (after cancel_at_period_end was set)
-      handleSubscriptionDeleted(event.data.object.id);
+      await handleSubscriptionDeleted(event.data.object.id);
       break;
 		default:
 	}

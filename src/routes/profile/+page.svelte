@@ -23,6 +23,11 @@
   let cancelSuccess = $state<string | null>(null);
   let showCancelConfirm = $state(false);
 
+  // Stripe-only: Apple subscriptions are reported with status 'active'.
+  const isTrialing = $derived(
+    data.subscriptionProvider === 'stripe' && data.subscriptionDetails?.status === 'trialing'
+  );
+
   // Expandable sections
   let showSettings = $state(false);
   let showContent = $state(false);
@@ -625,10 +630,14 @@
                 <div class="flex items-center gap-3 mb-3">
                   <span class="text-2xl">💳</span>
                   <div>
-                    <p class="text-text-300 font-semibold">Premium Subscription</p>
+                    <p class="text-text-300 font-semibold">{isTrialing ? 'Free Trial' : 'Premium Subscription'}</p>
                     {#if data.subscriptionDetails?.cancelAtPeriodEnd}
                       <p class="text-sm text-text-200">
                         ⚠️ Cancelling — access until {formatDate(data.subscriptionDetails.currentPeriodEnd)}
+                      </p>
+                    {:else if isTrialing}
+                      <p class="text-sm text-text-200">
+                        Free trial — first charge $10 on {formatDate(data.subscriptionDetails?.currentPeriodEnd)}
                       </p>
                     {:else}
                       <p class="text-sm text-text-200">
@@ -658,7 +667,13 @@
                     {#if showCancelConfirm}
                       <div class="danger-panel space-y-3 mt-4" transition:slide={{ duration: 150 }}>
                         <p class="text-text-300 text-sm font-semibold">Are you sure you want to cancel?</p>
-                        <p class="text-text-200 text-xs">You'll keep premium features until {formatDate(data.subscriptionDetails?.currentPeriodEnd)}.</p>
+                        <p class="text-text-200 text-xs">
+                          {#if isTrialing}
+                            You won't be charged. Premium access ends {formatDate(data.subscriptionDetails?.currentPeriodEnd)}.
+                          {:else}
+                            You'll keep premium features until {formatDate(data.subscriptionDetails?.currentPeriodEnd)}.
+                          {/if}
+                        </p>
                         <div class="flex gap-2">
                           <Button onClick={cancelSubscription} type="button" variant="danger" disabled={isCancelling} className="flex-1 text-sm">
                             {isCancelling ? 'Cancelling…' : 'Yes, cancel'}

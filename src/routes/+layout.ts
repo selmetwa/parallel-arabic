@@ -63,6 +63,7 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
       showOnboarding: data.showOnboarding ?? false,
       targetDialect: data.targetDialect ?? null,
       isSubscribed: data.isSubscribed,
+      trialEligible: data.trialEligible ?? false,
       userXp: data.userXp ?? 0,
       userLevel: data.userLevel ?? 1,
       proficiencyLevel: data.proficiencyLevel ?? null
@@ -84,7 +85,8 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
         user: null,
         showOnboarding: data.showOnboarding ?? false,
         targetDialect: data.targetDialect ?? null,
-        isSubscribed: data.isSubscribed
+        isSubscribed: data.isSubscribed,
+        trialEligible: data.trialEligible ?? false
       }
     } catch (fallbackError) {
       console.error('❌ [+layout.ts] Fallback also failed:', fallbackError)

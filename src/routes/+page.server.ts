@@ -2,6 +2,7 @@ import { StripeService } from "$lib/services/stripe.service";
 import { redirect, fail } from "@sveltejs/kit";
 import type { Actions } from "./$types";
 import { supabase } from "$lib/supabaseClient";
+import { checkUserSubscription } from "$lib/helpers/subscription";
 import type { LeaderboardEntry } from './api/leaderboard/weekly/+server';
 import { getStoriesPaginated } from "$lib/helpers/story-helpers";
 import { BLOCKED_STORY_IDS } from "$lib/constants/stories/blocked";
@@ -451,11 +452,29 @@ export const actions = {
       return fail(400, { error: 'Price ID is required' });
     }
     
-    console.log('💳 Calling StripeService.subscribe with priceId:', priceId);
+    // A card is collected either way. The trial only decides whether the first
+    // charge happens today or in 7 days, and it is offered once per account.
+    const { data: dbUser } = await supabase
+      .from('user')
+      .select('id, email, is_subscriber, subscription_end_date, has_used_trial')
+      .eq('supabase_auth_id', session.user.id)
+      .single();
+
+    if (!dbUser) {
+      return fail(400, { error: 'Could not find your account' });
+    }
+
+    const withTrial = !dbUser.has_used_trial && !checkUserSubscription(dbUser);
+
+    console.log('💳 Calling StripeService.subscribe with priceId:', priceId, 'trial:', withTrial);
     
     let stripeSession;
     try {
-      stripeSession = await StripeService.subscribe(priceId);
+      stripeSession = await StripeService.subscribe(priceId, {
+        userId: dbUser.id,
+        email: dbUser.email,
+        withTrial
+      });
     } catch (error) {
       console.error('❌ Stripe subscription error:', error);
       return fail(500, { error: 'Failed to create subscription' });
@@ -470,7 +489,7 @@ export const actions = {
         secure: true,
       });
       console.log('✅ Redirecting to /pricing/checkout');
-      throw redirect(302, "/pricing/checkout");
+      throw redirect(302, withTrial ? "/pricing/checkout?trial=1" : "/pricing/checkout");
     } else {
       console.log('❌ No client secret received from Stripe');
     }

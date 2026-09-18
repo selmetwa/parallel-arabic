@@ -15,6 +15,12 @@
   let { label = 'Subscribe Now', className = '', nativeClass = '' }: Props = $props();
 
   let isNative = $state<boolean | null>(null);
+
+  // Trial copy is web-only: offering a Stripe trial inside the iOS app would
+  // be an external purchase. isNative stays null until mount, so the WebView
+  // never flashes trial wording.
+  const showTrial = $derived(isNative === false && page.data.trialEligible === true);
+
   let isPurchasing = $state(false);
   let purchaseError = $state<string | null>(null);
   let purchaseSuccess = $state<string | null>(null);
@@ -120,7 +126,10 @@
   <form method="POST" action="/?/subscribe">
     <input type="hidden" name="price_id" value={PUBLIC_PRICE_ID} />
     <Button type="submit" className={className}>
-      {label}
+      {showTrial ? 'Start 7-day free trial' : label}
     </Button>
+    {#if showTrial}
+      <p class="mt-2 text-xs text-text-200 text-center">$0 today, then $10/month. Cancel anytime.</p>
+    {/if}
   </form>
 {/if}

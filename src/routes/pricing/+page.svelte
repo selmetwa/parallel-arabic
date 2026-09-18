@@ -1,6 +1,17 @@
 <script lang="ts">
 	import Checkmark from '$lib/components/Checkmark.svelte';
   import SubscribeButton from '$lib/components/SubscribeButton.svelte';
+  import { onMount } from 'svelte';
+  import { page } from '$app/state';
+  import { isNativeApp } from '$lib/helpers/is-native-app';
+
+  // Web-only trial copy. The Apple disclosure block below is unchanged.
+  let isNative = $state<boolean | null>(null);
+  onMount(() => {
+    isNative = isNativeApp();
+  });
+
+  const showTrial = $derived(isNative === false && page.data.trialEligible === true);
 </script>
 
 <div class="min-h-screen bg-tile-300">
@@ -74,6 +85,9 @@
                     <div class="bg-tile-500 border-b border-tile-600 p-8 text-center">
                         <h2 class="text-2xl font-bold text-text-300 mb-2">Monthly Subscription</h2>
                         <h3 class="text-4xl font-bold text-text-300">$10<span class="text-lg font-normal text-text-300">/month</span></h3>
+                        {#if showTrial}
+                            <p class="mt-3 text-sm font-semibold text-text-300">Start with 7 days free — $0 today, cancel anytime.</p>
+                        {/if}
                     </div>
                     <div class="p-8">
                          <ul class="flex flex-col gap-4 text-text-200">
