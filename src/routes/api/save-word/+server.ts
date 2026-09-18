@@ -3,7 +3,6 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { supabase } from '$lib/supabaseClient';
 import { trackActivitySimple } from '$lib/helpers/track-activity';
-import { getPostHogClient } from '$lib/server/posthog';
 
 export const POST: RequestHandler = async ({ request, locals }) => {
 	const data = await request.json();
@@ -82,14 +81,6 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		trackActivitySimple(userId, 'saved_word', 1).catch((err) => {
 			console.error('Error tracking saved word activity:', err);
 		});
-
-		const posthog = getPostHogClient();
-		posthog.capture({
-			distinctId: userId,
-			event: 'word_saved',
-			properties: { dialect: dialect || 'egyptian-arabic' }
-		});
-		posthog.flush().catch(() => {});
 
 		return json({ message: 'Saved' });
 	} catch (e) {

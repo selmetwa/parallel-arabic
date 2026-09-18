@@ -1,7 +1,6 @@
 import { error, json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { supabase } from '$lib/supabaseClient';
-import { getPostHogClient } from '$lib/server/posthog';
 import { updateConversationSummary, upsertLearningInsight } from '$lib/utils/tutor-memory';
 
 interface VocabularyWord {
@@ -97,18 +96,6 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 				}
 			}
 		}
-
-		const posthog = getPostHogClient();
-		posthog.capture({
-			distinctId: user.id,
-			event: 'tutor_session_saved',
-			properties: {
-				dialect,
-				saved_words_count: savedWordsCount,
-				topics: topics || []
-			}
-		});
-		posthog.flush().catch(() => {});
 
 		return json({
 			success: true,

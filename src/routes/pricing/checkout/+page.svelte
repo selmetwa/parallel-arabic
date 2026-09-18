@@ -6,8 +6,12 @@
   // Types and variables
   import { PUBLIC_STRIPE_PUBLISHABLE_KEY } from "$env/static/public";
   import { goto } from "$app/navigation";
+  import { page } from "$app/state";
 
   let { data } = $props();
+
+  // Set by the subscribe action when the session carries a trial.
+  const isTrial = $derived(page.url.searchParams.get('trial') === '1');
 
   /**
    * Checkout onMount
@@ -55,10 +59,14 @@
     <!-- Header -->
     <header class="text-center mb-12">
       <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-300 leading-tight mb-6">
-        Complete Your Subscription
+        {isTrial ? 'Start Your Free Trial' : 'Complete Your Subscription'}
       </h1>
       <p class="text-lg sm:text-xl text-text-200 leading-relaxed max-w-2xl mx-auto">
-        Secure checkout powered by Stripe. Your payment information is encrypted and secure.
+        {#if isTrial}
+          You won't be charged today. Your card is saved so your subscription continues automatically after 7 days — cancel any time before then.
+        {:else}
+          Secure checkout powered by Stripe. Your payment information is encrypted and secure.
+        {/if}
       </p>
     </header>
 

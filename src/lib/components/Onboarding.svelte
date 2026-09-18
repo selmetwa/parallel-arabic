@@ -4,6 +4,11 @@
   import { currentDialect } from '$lib/store/store';
   import { goto } from '$app/navigation';
   import OnboardingConversation from '$lib/components/onboarding/OnboardingConversation.svelte';
+  import SubscribeButton from '$lib/components/SubscribeButton.svelte';
+  import { onMount } from 'svelte';
+  import { page } from '$app/state';
+  import { isNativeApp } from '$lib/helpers/is-native-app';
+  import { trackEvent } from '$lib/analytics';
   import type { Dialect } from '$lib/types';
 
   type Props = {
@@ -20,7 +25,25 @@
   let isSubmitting = $state(false);
   let error = $state('');
 
+  // Trial offer (step 5) is web-only: a Stripe trial inside the iOS app would
+  // be an external purchase. isNative stays null until mount, so native users
+  // never see it.
+  let isNative = $state<boolean | null>(null);
+  let pendingDestination = $state('/');
+
+  onMount(() => {
+    isNative = isNativeApp();
+  });
+
   const totalSteps = 4;
+
+  const trialBenefits = [
+    'Every dialect: Egyptian, Levantine, Moroccan and Fusha',
+    'Structured lessons with progress tracking',
+    'AI Tutor for speaking practice with real-time feedback',
+    'All stories and conversations with native audio',
+    'Unlimited sentence mining and spaced repetition'
+  ];
 
   const dialects = [
     { id: 'egyptian-arabic', label: 'Egyptian', emoji: '🇪🇬', description: 'Most widely understood dialect' },
@@ -52,7 +75,8 @@
     { title: 'Dialect', subtitle: 'Choose your focus' },
     { title: 'Goals', subtitle: 'Why are you learning?' },
     { title: 'Level', subtitle: 'Where are you now?' },
-    { title: 'Practice', subtitle: 'Say your first words' }
+    { title: 'Practice', subtitle: 'Say your first words' },
+    { title: 'Trial', subtitle: '' }
   ];
 
   function nextStep() {
@@ -134,6 +158,27 @@
   async function finishOnboarding(destination: string) {
     handleCloseModal();
     await goto(destination, { replaceState: true });
+  }
+
+  /**
+   * End of the first speaking win. Eligible web users get the trial offer
+   * before they leave; everyone else lands exactly where they did before.
+   */
+  async function handleConversationFinish(destination: string) {
+    pendingDestination = destination;
+
+    if (isNative === false && page.data.trialEligible === true) {
+      trackEvent('trial_offer_shown', { placement: 'onboarding' });
+      step = 5;
+      return;
+    }
+
+    await finishOnboarding(destination);
+  }
+
+  async function skipTrial() {
+    trackEvent('trial_offer_skipped', { placement: 'onboarding' });
+    await finishOnboarding(pendingDestination);
   }
 </script>
 
@@ -427,8 +472,40 @@
               <OnboardingConversation
                 dialect={targetDialect as Dialect}
                 {proficiencyLevel}
-                onFinish={finishOnboarding}
+                onFinish={handleConversationFinish}
               />
+            </div>
+          {/if}
+
+          <!-- Step 5: Free trial offer (web only) -->
+          {#if step === 5}
+            <div class="max-w-xl mx-auto text-center" in:fly={{ y: 30, duration: 500, easing: cubicOut }}>
+              <h2 class="text-2xl sm:text-3xl font-bold text-text-300 mb-2 tracking-tight">
+                Unlock everything free for 7 days
+              </h2>
+              <p class="text-text-200 text-sm sm:text-base mb-6">
+                $0 today, then $10/month. Cancel anytime.
+              </p>
+
+              <ul class="text-left flex flex-col gap-3 mb-7 bg-tile-300/40 border border-text-300/10 rounded-2xl p-5">
+                {#each trialBenefits as benefit (benefit)}
+                  <li class="flex items-start gap-3 text-text-200 text-sm sm:text-base">
+                    <svg class="w-5 h-5 shrink-0 mt-0.5 text-text-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>{benefit}</span>
+                  </li>
+                {/each}
+              </ul>
+
+              <SubscribeButton className="!py-3 !text-lg w-full" />
+
+              <button
+                class="mt-4 text-sm font-medium text-text-200 hover:text-text-300 underline transition-colors"
+                onclick={skipTrial}
+              >
+                Continue with the free plan
+              </button>
             </div>
           {/if}
 

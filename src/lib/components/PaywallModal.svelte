@@ -3,6 +3,9 @@
   import Checkmark from '$lib/components/Checkmark.svelte';
   import SubscribeButton from '$lib/components/SubscribeButton.svelte';
   import Testimonial from '$lib/components/Testimonial.svelte';
+  import { onMount } from 'svelte';
+  import { page } from '$app/state';
+  import { isNativeApp } from '$lib/helpers/is-native-app';
 
   type Props = {
     isOpen: boolean;
@@ -10,15 +13,29 @@
   }
 
   let { isOpen = false, handleCloseModal = () => {} }: Props = $props();
+
+  // Web-only trial copy — see SubscribeButton for why this waits for mount.
+  let isNative = $state<boolean | null>(null);
+  onMount(() => {
+    isNative = isNativeApp();
+  });
+
+  const showTrial = $derived(isNative === false && page.data.trialEligible === true);
 </script>
 
 <Modal isOpen={isOpen} handleCloseModal={handleCloseModal} width="min(90%, 600px)" height="fit-content">
   <div class="flex flex-col bg-tile-400 rounded-lg overflow-hidden">
     <!-- Header -->
     <div class="bg-tile-500 border-b border-tile-600 p-6 text-center">
-        <h2 class="text-2xl font-bold text-text-300 mb-2">Unlock Full Access</h2>
-        <p class="text-text-200">Upgrade to master Arabic dialects</p>
-        <h3 class="text-3xl font-bold text-text-300 mt-3">$10<span class="text-lg font-normal text-text-300">/month</span></h3>
+        {#if showTrial}
+          <h2 class="text-2xl font-bold text-text-300 mb-2">Try everything free for 7 days</h2>
+          <p class="text-text-200">Full access to every dialect, lesson and story</p>
+          <h3 class="text-3xl font-bold text-text-300 mt-3">$0<span class="text-lg font-normal text-text-300"> today, then $10/month</span></h3>
+        {:else}
+          <h2 class="text-2xl font-bold text-text-300 mb-2">Unlock Full Access</h2>
+          <p class="text-text-200">Upgrade to master Arabic dialects</p>
+          <h3 class="text-3xl font-bold text-text-300 mt-3">$10<span class="text-lg font-normal text-text-300">/month</span></h3>
+        {/if}
     </div>
 
     <!-- Content -->

@@ -1,16 +1,7 @@
-import { browser } from '$app/environment';
-import posthog from 'posthog-js';
-
 /**
- * Thin client-side wrapper around posthog.capture. Single chokepoint for
- * semantic product events so we don't scatter raw posthog calls, and so
- * analytics can never break the app (SSR-safe + swallows errors).
+ * Thin chokepoint for semantic product events. No-op until an analytics
+ * provider is wired up again — kept so call sites don't need to change.
  */
-export function trackEvent(event: string, properties?: Record<string, unknown>) {
-	if (!browser) return;
-	try {
-		posthog.capture(event, properties);
-	} catch {
-		// never let analytics break the app
-	}
+export function trackEvent(_event: string, _properties?: Record<string, unknown>) {
+	// no-op
 }

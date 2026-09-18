@@ -27,12 +27,18 @@ export const load: LayoutServerLoad = async ({ locals, cookies, url }) => {
     const isNewSignup = url.searchParams.get('newSignup') === 'true'
     const showOnboarding = isNewSignup && !user.onboarding_completed
 
+    // Card-up-front trial is offered once per account, and only to users who
+    // aren't already subscribed. Consumers must also check they're not running
+    // inside the native app before showing any trial copy.
+    const trialEligible = !isSubscribed && !user.has_used_trial
+
     console.log({ user })
     return {
       session,
       user: user,  // Database user for backward compatibility
       cookies: cookies.getAll(),
       isSubscribed: isSubscribed,
+      trialEligible: trialEligible,
       showOnboarding: showOnboarding,
       targetDialect: user?.target_dialect || null,
       proficiencyLevel: user?.proficiency_level || null,

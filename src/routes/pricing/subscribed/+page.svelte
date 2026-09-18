@@ -1,15 +1,46 @@
+<script lang="ts">
+  import { onMount } from 'svelte';
+  import { trackEvent } from '$lib/analytics';
+
+  let { data } = $props();
+
+  function formatDate(unixSeconds: number | null | undefined) {
+    if (!unixSeconds) return '';
+    return new Date(unixSeconds * 1000).toLocaleDateString(undefined, {
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric'
+    });
+  }
+
+  onMount(() => {
+    if (data.isTrial) {
+      trackEvent('trial_started', { trial_ends: data.subscriptionEndDate });
+    }
+  });
+</script>
+
 <section class="min-h-screen bg-tile-300 py-12 sm:py-16">
   <div class="max-w-4xl mx-auto px-4 sm:px-8">
     <!-- Success Card -->
     <div class="bg-green-50 border-2 border-green-300 rounded-lg shadow-xl p-8 sm:p-12 text-center">
       <div class="mb-6">
         <div class="text-6xl mb-4">🎉</div>
-        <h1 class="text-3xl sm:text-4xl font-bold text-green-800 mb-4">
-          Thank You for Subscribing!
-        </h1>
-        <p class="text-lg sm:text-xl text-green-700 leading-relaxed mb-6">
-          Welcome to Parallel Arabic Premium! You now have access to all premium features and can start your Arabic learning journey.
-        </p>
+        {#if data.isTrial}
+          <h1 class="text-3xl sm:text-4xl font-bold text-green-800 mb-4">
+            Your Free Trial Has Started!
+          </h1>
+          <p class="text-lg sm:text-xl text-green-700 leading-relaxed mb-6">
+            You have full access to Parallel Arabic Premium for the next 7 days. Your subscription starts at $10/month on {formatDate(data.subscriptionEndDate)} — cancel any time before then from your profile and you won't be charged.
+          </p>
+        {:else}
+          <h1 class="text-3xl sm:text-4xl font-bold text-green-800 mb-4">
+            Thank You for Subscribing!
+          </h1>
+          <p class="text-lg sm:text-xl text-green-700 leading-relaxed mb-6">
+            Welcome to Parallel Arabic Premium! You now have access to all premium features and can start your Arabic learning journey.
+          </p>
+        {/if}
       </div>
 
       <!-- Features Highlight -->

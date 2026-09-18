@@ -14,7 +14,6 @@
 	import { pwaInfo } from 'virtual:pwa-info';
 	import { dev, browser } from '$app/environment';
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';
-	import posthog from 'posthog-js';
 	import {
 		resolveBreadcrumbs,
 		resolvePageMeta,
@@ -166,11 +165,6 @@
 			}
 		}
 
-		// Identify user in PostHog when session is available
-		if (data.user?.id) {
-			posthog.identify(data.user.id, { email: data.user.email });
-		}
-
 		// Listen to auth changes and invalidate layout when session changes
 		const { data: authData } = supabase.auth.onAuthStateChange((event: string, newSession: any) => {
 			console.log(
@@ -183,9 +177,6 @@
 			);
 			if (newSession?.expires_at !== session?.expires_at) {
 				invalidate('supabase:auth');
-			}
-			if (event === 'SIGNED_OUT') {
-				posthog.reset();
 			}
 		});
 

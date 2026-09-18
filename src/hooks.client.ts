@@ -1,5 +1,3 @@
-import posthog from 'posthog-js';
-import { PUBLIC_POSTHOG_PROJECT_TOKEN } from '$env/static/public';
 import type { HandleClientError } from '@sveltejs/kit';
 
 // import * as Sentry from '@sentry/sveltekit';
@@ -23,17 +21,7 @@ import type { HandleClientError } from '@sveltejs/kit';
 // });
 // console.log('[Sentry] DSN present:', !!import.meta.env.PUBLIC_SENTRY_DSN);
 
-export async function init() {
-	posthog.init(PUBLIC_POSTHOG_PROJECT_TOKEN, {
-		api_host: '/ingest',
-		ui_host: 'https://us.posthog.com',
-		defaults: '2026-01-30',
-		capture_exceptions: true
-	});
-}
-
 export const handleError: HandleClientError = async ({ error, status, message }) => {
-	posthog.captureException(error);
 	console.error(error);
 	return { message, status };
 };

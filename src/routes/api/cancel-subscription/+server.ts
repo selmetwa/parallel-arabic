@@ -2,7 +2,6 @@ import type { RequestHandler } from '@sveltejs/kit';
 import { json } from '@sveltejs/kit';
 import { supabase } from '$lib/supabaseClient';
 import { StripeService } from '$lib/services/stripe.service';
-import { getPostHogClient } from '$lib/server/posthog';
 
 export const POST: RequestHandler = async ({ locals }) => {
 	const { session, user } = await locals.safeGetSession();
@@ -34,17 +33,6 @@ export const POST: RequestHandler = async ({ locals }) => {
 		if (!subscription) {
 			return json({ error: 'Failed to cancel subscription' }, { status: 500 });
 		}
-
-		const posthog = getPostHogClient();
-		posthog.capture({
-			distinctId: user.id,
-			event: 'subscription_cancelled',
-			properties: {
-				cancel_at: subscription.cancel_at,
-				current_period_end: subscription.current_period_end
-			}
-		});
-		await posthog.flush();
 
 		// Return success with the cancellation date
 		return json({
