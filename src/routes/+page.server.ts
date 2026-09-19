@@ -40,8 +40,6 @@ export const load: PageServerLoad = async ({ parent }) => {
   let wordsDueForReviewCount = 0;
   let totalSavedWordsCount = 0;
   let inProgressGame: { id: string; dialect: string; category: string; game_mode: string; current_index: number; total_questions: number; score: number } | null = null;
-  let dailyChallenge: { id: string; challenge_type: string; story_id: string | null; completed: boolean; bonus_xp: number } | null = null;
-  let shouldGenerateChallenge = false;
   let wordOfDay: { id: string; arabic: string; transliteration: string; english: string; example_egyptian: string | null; example_levantine: string | null; example_darija: string | null; example_fusha: string | null; audio_url: string | null } | null = null;
   let wordOfDaySaved = false;
   let leaderboardTop5: LeaderboardEntry[] = [];
@@ -124,7 +122,7 @@ export const load: PageServerLoad = async ({ parent }) => {
 
     try {
       // Run all count queries in PARALLEL instead of sequential (~50-100ms saved)
-      const [totalResult, dueResult, gameResult, challengeResult, activityResult, mapWordsResult, weekActivityResult] = await Promise.all([
+      const [totalResult, dueResult, gameResult, activityResult, mapWordsResult, weekActivityResult] = await Promise.all([
         supabase
           .from('saved_word')
           .select('*', { count: 'exact', head: true })
@@ -143,12 +141,6 @@ export const load: PageServerLoad = async ({ parent }) => {
           .order('last_played_at', { ascending: false })
           .limit(1)
           .single(),
-        supabase
-          .from('daily_challenge')
-          .select('id, challenge_type, story_id, completed, bonus_xp')
-          .eq('user_id', userId)
-          .eq('challenge_date', todayMidnight)
-          .maybeSingle(),
         supabase
           .from('user_daily_activity')
           .select('word_of_day_saved')
@@ -177,12 +169,6 @@ export const load: PageServerLoad = async ({ parent }) => {
       }
       if (!gameResult.error && gameResult.data) {
         inProgressGame = gameResult.data;
-      }
-      if (!challengeResult.error && challengeResult.data) {
-        dailyChallenge = challengeResult.data;
-      } else if (!challengeResult.error && !challengeResult.data) {
-        // No challenge yet today — trigger lazy generation on the client
-        shouldGenerateChallenge = true;
       }
       if (!activityResult.error && activityResult.data) {
         wordOfDaySaved = activityResult.data.word_of_day_saved ?? false;
@@ -264,22 +250,6 @@ export const load: PageServerLoad = async ({ parent }) => {
 
   // Build dynamic activity suggestions based on user's stats
   const suggestions: ActivitySuggestion[] = [];
-
-  // Priority 0: Daily challenge (highest priority — shown above everything else)
-  if (dailyChallenge && !dailyChallenge.completed) {
-    const challengeHref = dailyChallenge.challenge_type === 'story' && dailyChallenge.story_id
-      ? `/generated_story/${dailyChallenge.story_id}?challenge=${dailyChallenge.id}`
-      : `/challenge/${dailyChallenge.id}`;
-    suggestions.push({
-      id: 'daily-challenge',
-      href: challengeHref,
-      icon: '⭐',
-      title: 'Daily Challenge',
-      subtitle: `Complete today's ${dailyChallenge.challenge_type === 'story' ? '5-sentence story' : '3-sentence'} challenge for +${dailyChallenge.bonus_xp} bonus XP`,
-      variant: 'amber',
-      priority: 11
-    });
-  }
 
   // Priority 1: Words due for review (highest priority if they have words)
   if (cappedReviewCount > 0) {
@@ -409,7 +379,6 @@ export const load: PageServerLoad = async ({ parent }) => {
     totalShortsViewed,
     currentStreak,
     suggestions,
-    shouldGenerateChallenge,
     wordOfDay,
     wordOfDaySaved,
     userDialect,
