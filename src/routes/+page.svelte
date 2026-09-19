@@ -14,8 +14,6 @@
   let { data }: { data: PageData } = $props();
 
   let bannerDismissed = $state(false);
-  let challengeGenerating = $state(false);
-  let generatedChallengeHref = $state<string | null>(null);
 
   // Masthead greeting — neutral defaults render identically on server & client to
   // avoid a hydration mismatch; the time-of-day variant is filled in onMount.
@@ -24,9 +22,8 @@
   let todayLabel = $state('');
 
   const suggestions = $derived(data.suggestions || []);
-  const dailyChallengeSuggestion = $derived(suggestions.find(s => s.id === 'daily-challenge'));
   const reviewSuggestion = $derived(suggestions.find(s => s.id === 'review'));
-  const otherSuggestions = $derived(suggestions.filter(s => s.id !== 'review' && s.id !== 'daily-challenge').slice(0, 4));
+  const otherSuggestions = $derived(suggestions.filter(s => s.id !== 'review').slice(0, 4));
 
   function dismissBanner() {
     bannerDismissed = true;
@@ -45,26 +42,6 @@
     }
 
     if (browser) bannerDismissed = sessionStorage.getItem('homeBannerDismissed') === 'true';
-
-    if (browser && data.shouldGenerateChallenge && data.user) {
-      challengeGenerating = true;
-      fetch('/api/daily-challenge', { method: 'POST' })
-        .then(r => r.json())
-        .then(result => {
-          if (result.success && result.challengeId) {
-            return fetch('/api/daily-challenge').then(r => r.json()).then(r => {
-              if (r.challenge) {
-                const c = r.challenge;
-                generatedChallengeHref = c.challenge_type === 'story' && c.story_id
-                  ? `/generated_story/${c.story_id}?challenge=${c.id}`
-                  : `/challenge/${c.id}`;
-              }
-            });
-          }
-        })
-        .catch(() => { /* non-critical */ })
-        .finally(() => { challengeGenerating = false; });
-    }
   });
 </script>
 
@@ -139,23 +116,6 @@
     </a>
   {/snippet}
 
-  {#snippet heroTile(href: string, icon: string, title: string, desc: string)}
-    <a
-      href={resolve(href)}
-      class="group flex w-full items-center gap-3 sm:gap-4 bg-tile-500 border-2 border-amber-400/60 rounded-xl p-4 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-tile-600 hover:shadow-md motion-reduce:hover:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300"
-    >
-      <span class="text-2xl sm:text-3xl leading-none shrink-0">{icon}</span>
-      <span class="min-w-0 flex-1">
-        <span class="flex items-center gap-2 flex-wrap">
-          <span class="text-sm sm:text-base font-bold text-text-300">{title}</span>
- <span class="text-xs font-bold text-black bg-amber-400 px-1.5 py-0.5 rounded-full">Bonus XP</span>
-        </span>
-        <span class="block text-xs sm:text-sm text-text-200 leading-snug mt-0.5">{desc}</span>
-      </span>
-      <span class="text-text-200 group-hover:text-text-300 transition-colors shrink-0 text-lg" aria-hidden="true">→</span>
-    </a>
-  {/snippet}
-
   <!-- ── Week strip ──────────────────────────────────────────────────────── -->
   {#if data.user && data.weekActivityDates}
     <div class="reveal" style="animation-delay: 60ms;">
@@ -180,7 +140,7 @@
   {/if}
 
   <!-- ── Activity suggestions ────────────────────────────────────────────── -->
-  {#if data.user && !bannerDismissed && (dailyChallengeSuggestion || reviewSuggestion || otherSuggestions.length > 0 || generatedChallengeHref)}
+  {#if data.user && !bannerDismissed && (reviewSuggestion || otherSuggestions.length > 0)}
     <div class="reveal relative rounded-2xl bg-tile-300 border border-tile-500 overflow-hidden" style="animation-delay: 180ms;">
       <!-- Amber accent bar -->
       <div class="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-amber-400/50 to-transparent"></div>
@@ -203,14 +163,8 @@
           <div class="h-px flex-1 bg-tile-500"></div>
         </div>
 
-        {#if dailyChallengeSuggestion}
-          {@render heroTile(dailyChallengeSuggestion.href, dailyChallengeSuggestion.icon, dailyChallengeSuggestion.title, dailyChallengeSuggestion.subtitle)}
-        {:else if generatedChallengeHref}
-          {@render heroTile(generatedChallengeHref, '⭐', 'Daily Challenge', "Complete today's challenge for +10 bonus XP")}
-        {/if}
-
         {#if reviewSuggestion || otherSuggestions.length > 0}
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 {dailyChallengeSuggestion || generatedChallengeHref ? 'mt-2.5' : ''}">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
             {#if reviewSuggestion}
               {@render suggTile(reviewSuggestion.href, reviewSuggestion.icon, reviewSuggestion.title, reviewSuggestion.subtitle)}
             {/if}
