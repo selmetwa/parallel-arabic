@@ -129,7 +129,7 @@ export const baseCurriculumV2A1B2: CurriculumV2Module[] = [
 			'Produce clear, detailed text and argue a position.'
 		],
 		topics: [
-			{ id: 'base-b2-u01', title: 'A Visit to the Country', description: 'Visiting a country where the dialect is spoken: landmarks, weather, and the warmth of the people.' },
+			{ id: 'base-b2-u01', title: 'A Visit to an Arabic-Speaking Country', description: 'Visiting a country where the language is spoken: its cities, landmarks, weather, and the warmth of the people. NOT the countryside — this is about visiting the country as a nation.' },
 			{ id: 'base-b2-u02', title: 'Geography and Regions', description: 'Cities and regions, their geography, and the nature of life in them.' },
 			{ id: 'base-b2-u03', title: 'Ramadan and Holidays', description: 'Ramadan and the major religious and cultural holidays.' },
 			{ id: 'base-b2-u04', title: 'Arab Countries and Their Cultures', description: 'Arab countries and cultures, their customs, clothing, and holidays.' },
