@@ -1,4 +1,16 @@
-# Revamp Structured Lessons — Heavy-Practice Egyptian Curriculum (v2)
+# Revamp Structured Lessons — Heavy-Practice Curriculum (v2)
+
+## Status (updated to match the code as of `a3d5645`)
+
+Shipped. The implementation went beyond the original Egyptian-only, Lesson-1-only scope:
+
+- **Multi-dialect engine.** Routing is driven by a dialect registry (`src/lib/data/curriculum-v2.ts`), not an Egyptian check. Any registered dialect gets v2; unregistered ones stay on the legacy path.
+- **Registered today:** `egyptian-arabic` (full A1–C2), `levantine` and `fusha` (both A1–B2 on the base curriculum; see `docs/levantine-v2-plan.md`). Darija is still on the legacy system.
+- **Ready for other dialects:** a dialect-neutral A1–B2 curriculum (`curriculum-base-v2.ts`) and per-dialect prompt rules (`dialect-rules-v2.ts`) exist; enabling a dialect is one registry line plus generation.
+- **Batch generation shipped** (`npm run generate:lessons`, `generate:lessons:all`, `generate:lessons:dry`), not deferred.
+- **End-of-level assessments shipped** (not in the original plan) — see §8.
+
+Sections below keep the original design rationale; where the code differs, the section says so.
 
 ## Context
 
@@ -12,6 +24,8 @@ A professional curriculum designer produced a new CEFR A1–C2 Egyptian Arabic f
 3. **Live AI mini-chat** for the in-lesson tutor conversation (runtime `/api/tutor-chat`, scoped to lesson vocab).
 4. **Generate Lesson 1 only** now; the rest are triggered later via a batch tool.
 
+> **As built:** decision 1 was generalized — the engine is dialect-agnostic behind a registry, with Egyptian the only dialect enabled. Decision 4 was superseded — the batch tool shipped in the same change (§7).
+
 ## Strategy: deterministic assembly + flat AI calls
 
 The single biggest technical risk is Gemini's known failure on large/complex `responseJsonSchema` (400s) and empty output when `maxOutputTokens` is consumed by thinking tokens. We avoid this entirely:
@@ -21,8 +35,12 @@ The single biggest technical risk is Gemini's known failure on large/complex `re
 
 ## Architecture (new parallel v2 system)
 
-### 1. Curriculum data — `src/lib/data/curriculum-egyptian-v2.ts` (new)
-Encode the A1–C2 framework as `{ id, title, topics: [{ id, title, description, level, objectives[] }] }`. Topic IDs namespaced to avoid collision with old IDs (e.g. `eg-a1-u02` for "Greetings & Introductions"). Source content from `docs/curriculum/curriculum-framework-a1-c2.en.md`. Leave `src/lib/data/curriculum.ts` untouched.
+### 1. Curriculum data
+- **`src/lib/data/curriculum-egyptian-v2.ts`** — Egyptian A1–C2 from `docs/curriculum/curriculum-framework-a1-c2.en.md`. Shape: `CurriculumV2Module = { id, title, level, objectives[], topics: [{ id, title, description }] }` (level and objectives live on the module, not the topic). Topic IDs are namespaced (`eg-a1-u02` = Greetings & Introductions).
+- **`src/lib/data/curriculum-base-v2.ts`** — dialect-neutral A1–B2 (`base-a1-u02`, …) for other dialects. Stops at B2 because the framework's C1/C2 units are Egypt-specific (colloquial poetry, Al-Azhar, Saidi culture); those are authored per dialect if needed.
+- **`src/lib/data/curriculum-v2.ts`** — the registry: `curriculumV2: Partial<Record<Dialect, CurriculumV2Module[]>>`, plus `getCurriculumV2`, `hasV2Curriculum`, `findV2Topic`, `V2_DIALECTS`. Currently `{ 'egyptian-arabic': curriculumEgyptianV2, levantine: baseCurriculumV2A1B2, fusha: baseCurriculumV2A1B2 }`.
+- **`src/lib/data/dialect-rules-v2.ts`** — per-dialect display names and prompt rules (`getDialectRules`, `getDialectName`) with shared format rules (clean `arabic` vs `arabicTashkeel`, word alignments).
+- `src/lib/data/curriculum.ts` is untouched.
 
 ### 2. Lesson schemas — `src/lib/schemas/lesson-v2-schema.ts` (new)
 Two layers:
@@ -133,7 +151,7 @@ export const generatedLessonV2Schema = z.object({
 Flow: **4 flat schemas the model fills → validated by Zod → assembler emits `steps[]` against `generatedLessonV2Schema`.** Every model call is schema-constrained; recurrence/ordering/alignment-presence are guaranteed by code.
 
 ### 3. Generation pipeline — `src/routes/api/generate-lesson-v2/+server.ts` (new)
-Orchestrates phases for one `{ topicId, dialect:'egyptian-arabic' }`, reusing `generateContentWithRetry` + `parseJsonFromGeminiResponse` + the corrected `config` pattern (mirror `src/routes/api/scenario-intro/+server.ts:87-99`):
+Orchestrates phases for one `{ topicId, dialect }` (`dialect` defaults to `'egyptian-arabic'`; returns 400 unless `hasV2Curriculum(dialect)`). Uses `gemini-2.5-flash` with `thinkingBudget: 0`, and injects `getDialectRules(dialect)` into every prompt. Reuses `generateContentWithRetry` + `parseJsonFromGeminiResponse` + the corrected `config` pattern (mirror `src/routes/api/scenario-intro/+server.ts:87-99`):
 - **Phase A — Vocab**: 12–15 items from topic + objectives + framework notes (dialect rules from the framework doc baked into the prompt).
 - **Phase B — Practice pool (batched)**: ~5–6 calls of ~20 sentences each (smaller batches because each sentence now carries `wordAlignments`), passing the vocab list and a coverage instruction so each word is reused; bound output per call to dodge token limits. Target pool ≈ 100–130 sentences.
 - **Phase C — Reading passage(s)** + **scenario brief** (small calls).
@@ -155,22 +173,51 @@ New player (do not modify `LessonPlayer.svelte`) that walks `StepV2[]` and deleg
 - `multiple-choice` / `translate` → reuse the MCQ rendering pattern from `InteractiveExercise.svelte` / current `LessonPlayer` exercise block
 - `vocab-intro` → small flashcard built from existing `AudioButton` + `BookmarkButton`
 - `tutor-conversation` → embed the tutor stack: `ConversationMessage.svelte` + runtime calls to `/api/scenario-intro` (seed) and `/api/tutor-chat` (live), scoped via the stored `scenarioBrief` and lesson vocab.
+As built, two dedicated step components were added in `src/lib/components/lesson-v2/`: `LessonMcqStep.svelte` (multiple-choice / translate) and `LessonTutorStep.svelte` (live tutor chat with mic, autoplay, auto-send, auto-scroll). The player also has Back/Skip.
 These components have built-in `next`/`resetSentences`/XP/save props — adapters supply no-op or stepper-aware callbacks. Reuse normalization from `src/lib/utils/arabic-normalization.ts` and audio via `speakArabic`/`AudioButton`.
 
 **Interlinear toggle:** every step that shows generated text passes the sentence's `wordAlignments` to its component so the learner can toggle per-word between English / Arabic / transliteration. `ArabicWordDisplay` and `ConversationMessage` already accept this; for `typing`/`reorder`/`translate`/`speaking`/`multiple-choice` the player exposes the same show-english / show-transliteration toggles (mirroring `ArabicWordDisplay`'s `showEnglish`/`showTransliteration` props) driven by the alignment array.
 
 ### 6. Storage, API, routing wiring (backwards compatible)
-- **Storage**: new path prefix in the existing `structured_lesson` bucket, e.g. `egyptian-arabic-v2/{topicId}.json`, via new helpers `saveLessonV2` / `loadLessonV2` / `checkExistingLessonsV2` in `src/lib/helpers/lesson-file-helper.ts` (new functions, old ones untouched). Distinct prefix → no cache-key or existence-map collisions.
+- **Storage**: new path prefix in the existing `structured_lesson` bucket, `{dialect}-v2/{topicId}.json` (e.g. `egyptian-arabic-v2/eg-a1-u02.json`; prefix from `v2Prefix(dialect)`), via new helpers `saveLessonV2` / `loadLessonV2` / `checkExistingLessonsV2` in `src/lib/helpers/lesson-file-helper.ts` (new functions, old ones untouched). Distinct prefix → no cache-key or existence-map collisions.
 - **API**: new `GET /api/lessons-v2/[id]/+server.ts` returning the v2 JSON (old `/api/lessons/[id]` unchanged).
-- **Route**: in `src/routes/lessons/structured/[dialect]/+page.server.ts` and `+page.svelte`, branch when `dialectName === 'egyptian-arabic'`: load `curriculum-egyptian-v2` + `checkExistingLessonsV2`, and mount `LessonPlayerV2`. All other dialects fall through to the existing code path. Progress continues to use `structured_lesson_progress` (topic IDs are namespaced; no schema change needed).
+- **Route**: `src/routes/lessons/structured/[dialect]/+page.server.ts` branches on `getCurriculumV2(dialectName)` (not a hard-coded Egyptian check). When a v2 curriculum is registered it loads that curriculum + `checkExistingLessonsV2` and returns `useV2: true`; `+page.svelte` then mounts `LessonPlayerV2`. Unregistered dialects fall through to the existing code path. Subscribed/whitelisted users can access all levels.
+- **Caution:** registering a dialect switches its structured page to v2 immediately, so the page is empty until that dialect's lessons exist in storage. Progress continues to use `structured_lesson_progress` (topic IDs are namespaced; no schema change needed).
 
-### 7. Lesson 1 generation
-Run `POST /api/generate-lesson-v2` for topic `eg-a1-u02` (Greetings & Introductions). Validate output against `docs/curriculum/lesson-01-greetings-introductions.en.md` content (greeting + introduction vocab, the dialogues, the self-intro reading, a "meet someone" tutor scenario). Iterate the prompts until the template is good; this becomes the reference all other lessons reuse.
+### 7. Lesson generation
+Lesson 1 (`eg-a1-u02`, Greetings & Introductions) was the reference template, checked against `docs/curriculum/lesson-01-greetings-introductions.en.md` (greeting + introduction vocab, the dialogues, the self-intro reading, a "meet someone" tutor scenario).
+
+Batch generation shipped as `scripts/generate-lessons-v2.ts`. It drives the running app's `/api/generate-lesson-v2`, skips topics that already exist (checked via `/api/lessons-v2/[id]`) and retries failures.
+
+```bash
+npm run generate:lessons -- --levels=A1,A2            # default: A1
+npm run generate:lessons:all                          # A1–C2
+npm run generate:lessons:dry                          # list targets, generate nothing
+npm run generate:lessons -- --only=eg-a1-u02          # explicit topic ids
+npm run generate:lessons -- --dialect=levantine       # default: egyptian-arabic
+```
+
+The script and the endpoint both refuse a dialect that is not registered in `curriculum-v2.ts`.
+
+### 8. End-of-level assessments (added during implementation)
+`POST /api/generate-assessment-v2 { level, dialect }` builds a cumulative assessment for a level: recognition, comprehension, reading, speaking and a tutor capstone. Logic lives in `src/lib/server/assemble-assessment-v2.ts`.
+- It harvests vocab, practice sentences and reading passages from that level's already-generated lessons, so the level's lessons must exist first (it returns 409 otherwise).
+- It is saved as a normal v2 lesson under the level's review-titled topic (e.g. `eg-a1-u21`, "Final Review and Assessment A1") via `saveLessonV2`.
+- Batch script: `npm run generate:assessments` (all levels by default; `--levels=`, `--dialect=`).
+
+## Adding another dialect (as done for Levantine)
+1. On a branch that is not deployed, register it in `curriculum-v2.ts`: `levantine: baseCurriculumV2A1B2`. Check its rules block in `dialect-rules-v2.ts`.
+2. Run the app on that branch and generate: `npm run generate:lessons -- --dialect=levantine --levels=A1,A2,B1,B2`, then `npm run generate:assessments -- --dialect=levantine --levels=A1,A2,B1,B2`.
+3. Spot-check lessons in `/lessons/structured/levantine`, then merge and deploy. Registering before generating would ship an empty structured page.
 
 ## Critical files
-- New: `src/lib/data/curriculum-egyptian-v2.ts`, `src/lib/schemas/lesson-v2-schema.ts`, `src/routes/api/generate-lesson-v2/+server.ts`, `src/lib/server/assemble-lesson-v2.ts`, `src/lib/components/LessonPlayerV2.svelte` (+ small step subcomponents), `src/routes/api/lessons-v2/[id]/+server.ts`.
-- Edit (additive, backwards-compatible): `src/lib/helpers/lesson-file-helper.ts` (add v2 helpers), `src/routes/lessons/structured/[dialect]/+page.server.ts` and `+page.svelte` (Egyptian branch).
-- Reuse as-is: `gemini-api-retry.ts`, `gemini-json-parser.ts`, `arabic-normalization.ts`, `SpeakSentence`, `SentenceBlock`, `ArabicWordDisplay`, `InteractiveExercise`, `ConversationMessage`, `AudioButton`/`speakArabic`, `/api/text-to-speech`, `/api/speech-to-text`, `/api/tutor-chat`, `/api/scenario-intro`.
+- Curriculum: `src/lib/data/curriculum-v2.ts` (registry), `curriculum-egyptian-v2.ts`, `curriculum-base-v2.ts`, `dialect-rules-v2.ts`.
+- Schema + assembly: `src/lib/schemas/lesson-v2-schema.ts`, `src/lib/server/assemble-lesson-v2.ts`, `src/lib/server/assemble-assessment-v2.ts`.
+- API: `src/routes/api/generate-lesson-v2/+server.ts`, `src/routes/api/generate-assessment-v2/+server.ts`, `src/routes/api/lessons-v2/[id]/+server.ts`.
+- Player: `src/lib/components/LessonPlayerV2.svelte`, `src/lib/components/lesson-v2/LessonMcqStep.svelte`, `src/lib/components/lesson-v2/LessonTutorStep.svelte`.
+- Scripts: `scripts/generate-lessons-v2.ts`, `scripts/generate-assessments-v2.ts`.
+- Edited (additive, backwards-compatible): `src/lib/helpers/lesson-file-helper.ts` (v2 helpers), `src/routes/lessons/structured/[dialect]/+page.server.ts` and `+page.svelte` (registry-driven v2 branch).
+- Reused as-is: `gemini-api-retry.ts`, `gemini-json-parser.ts`, `arabic-normalization.ts`, `SpeakSentence`, `SentenceBlock`, `ArabicWordDisplay`, `InteractiveExercise`, `ConversationMessage`, `AudioButton`/`speakArabic`, `/api/text-to-speech`, `/api/speech-to-text`, `/api/tutor-chat`, `/api/scenario-intro`.
 - Svelte: validate all new `.svelte`/`.svelte.ts` with the Svelte MCP `svelte-autofixer` before finishing (per project CLAUDE.md).
 
 ## Verification
@@ -178,10 +225,11 @@ Run `POST /api/generate-lesson-v2` for topic `eg-a1-u02` (Greetings & Introducti
 2. **Recurrence check**: a small script asserts every vocab word appears ≥8× across practice steps (the headline requirement). Print the per-word histogram.
 3. **Alignment check**: assert every generated sentence (vocab examples, pool, passages) has a non-empty `wordAlignments` array and that word count roughly matches the Arabic token count; confirm the per-word English/Arabic/transliteration toggle works in the player.
 4. **End-to-end in-app**: `npm run dev`, open `/lessons/structured/egyptian-arabic`, open Lesson 1, step through and confirm each step type renders and works — MCQ, EN→AR typing, reorder/build, AR→EN, speaking (record→score), interactive reading, and the live tutor mini-chat. Confirm audio (ElevenLabs) and STT (Chirp) work in-lesson, and toggling translation/transliteration per word works.
-5. **Backwards compat**: open a Darija/Levantine/Fusha structured path and an existing lesson — confirm unchanged behavior (old `LessonPlayer`, old curriculum, old API).
-6. **Resume + completion**: close mid-lesson, reopen → resumes at saved step; finish → `/api/structured-lessons/complete` awards XP and unlocks next node.
+5. **Assessments**: after a level's lessons exist, `npm run generate:assessments -- --levels=A1`; open the level's review topic and step through it.
+6. **Backwards compat**: open the Darija structured path (unregistered dialects) and an existing lesson — confirm unchanged behavior (old `LessonPlayer`, old curriculum, old API).
+7. **Resume + completion**: close mid-lesson, reopen → resumes at saved step; finish → `/api/structured-lessons/complete` awards XP and unlocks next node.
 
 ## Out of scope / follow-ups
-- Batch-generating A1–C2 (a `generate-lesson-batch-v2` tool can wrap the single-lesson endpoint once the template is approved).
-- Applying the v2 framework to other dialects.
+- Enabling v2 for Darija (the engine and base curriculum are ready; see "Adding another dialect").
+- Authoring C1/C2 for non-Egyptian dialects (Levantine and Fusha first).
 - Migrating old lessons to v2.

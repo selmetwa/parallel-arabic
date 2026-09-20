@@ -22,12 +22,11 @@ export { baseCurriculumV2A1B2 };
  * v2 curricula by dialect.
  *
  * - Egyptian uses its bespoke full A1–C2 curriculum.
- * - Other dialects use the shared, dialect-neutral A1–B2 base
+ * - Levantine and Fusha use the shared, dialect-neutral A1–B2 base
  *   (`baseCurriculumV2A1B2`) — C1/C2 are Egypt/literary-specific and authored
  *   per dialect if/when needed.
  *
- * To enable a dialect's v2 path, add it here, e.g.:
- *   levantine: baseCurriculumV2A1B2,
+ * To enable another dialect's v2 path, add it here, e.g.:
  *   darija: baseCurriculumV2A1B2,
  *
  * NOTE: enabling a dialect switches its /lessons/structured path from the legacy
@@ -35,7 +34,9 @@ export { baseCurriculumV2A1B2 };
  * once you intend to generate and ship its v2 lessons.
  */
 export const curriculumV2: Partial<Record<Dialect, CurriculumV2Module[]>> = {
-	'egyptian-arabic': curriculumEgyptianV2
+	'egyptian-arabic': curriculumEgyptianV2,
+	levantine: baseCurriculumV2A1B2,
+	fusha: baseCurriculumV2A1B2
 };
 
 /** Dialects that currently have a v2 curriculum (and therefore v2 lessons). */
