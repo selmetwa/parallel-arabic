@@ -15,7 +15,7 @@ export const GAME_MODE_INFO = [
 	{
 		icon: '🎧',
 		title: 'Listening',
-		body: 'Hear the word spoken in your dialect and choose what it means. This is the mode that closes the gap between recognising a word on the page and catching it in conversation.'
+		body: 'Hear a whole sentence spoken in your dialect and choose what it means, from four readings that differ by one thing — a tense, who is speaking, whether it was negated. This is the mode that closes the gap between recognising words on the page and catching them in conversation.'
 	},
 	{
 		icon: '🎤',

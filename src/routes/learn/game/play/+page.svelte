@@ -1,6 +1,6 @@
 <script lang="ts">
   import { goto } from '$app/navigation';
-  import { onMount, onDestroy } from 'svelte';
+  import { onMount, onDestroy, untrack } from 'svelte';
   import { gameSession } from '$lib/store/generated-content.svelte';
   import { Howl } from 'howler';
   import AudioButton from '$lib/components/AudioButton.svelte';
@@ -15,6 +15,15 @@
     transcribe
   } from '$lib/utils/pronunciation';
   import { buildMultipleChoice } from '$lib/utils/quiz-questions';
+  import {
+    NORMAL_RATE,
+    SLOW_RATE,
+    TtsAccessError,
+    play as playCachedAudio,
+    prefetch as prefetchAudio,
+    releaseAll as releaseAudio,
+    stopPlayback
+  } from '$lib/utils/listening-audio';
   import { userXp, userLevel } from '$lib/store/xp-store';
   import { showXpToast } from '$lib/helpers/toast-helpers';
 
@@ -31,14 +40,25 @@
     audio_url?: string | null;
   }
 
+  interface Distractor {
+    english: string;
+    /** Which single feature this option gets wrong: tense | person | negation | number | vocabulary */
+    variesBy: string;
+  }
+
+  /**
+   * One interface covers both sentence rounds. Fill-in-the-blank rounds carry the
+   * blankWord fields; listening comprehension rounds carry `distractors` instead.
+   */
   interface Sentence {
     arabic: string;
     english: string;
     transliteration: string;
-    blankWord: string;
-    blankWordEnglish: string;
-    blankWordTransliteration: string;
-    wrongOptions: string[];
+    blankWord?: string;
+    blankWordEnglish?: string;
+    blankWordTransliteration?: string;
+    wrongOptions?: string[];
+    distractors?: Distractor[];
   }
 
   interface GameQuestion {
@@ -46,7 +66,12 @@
     sentence?: Sentence;
     options: string[];
     correctAnswer: string;
-    type: 'arabic-to-english' | 'english-to-arabic' | 'listening' | 'fill-in-blank';
+    type:
+      | 'arabic-to-english'
+      | 'english-to-arabic'
+      | 'listening'
+      | 'listening-comprehension'
+      | 'fill-in-blank';
     // For sentence mode, the sentence with blank shown
     displayText?: string;
   }
@@ -98,6 +123,23 @@
   let currentQuestion = $derived(questions[currentIndex]);
   let progress = $derived(questions.length > 0 ? ((currentIndex + 1) / questions.length) * 100 : 0);
 
+  // What a wrong comprehension option got wrong. Naming the feature is the point of
+  // the round — the distractors are near misses, so "wrong" on its own teaches nothing.
+  const VARIES_BY_LABELS: Record<string, string> = {
+    tense: 'You picked the same sentence in a different tense.',
+    person: 'You picked a different subject — listen for who is doing it.',
+    negation: 'You picked the negative. Listen for whether it is negated.',
+    number: 'You picked the wrong number — singular against plural.',
+    vocabulary: 'One word was different. Listen for the key noun or verb.'
+  };
+
+  let comprehensionMiss = $derived.by(() => {
+    if (currentQuestion?.type !== 'listening-comprehension') return '';
+    if (isCorrect || !selectedAnswer) return '';
+    const picked = currentQuestion.sentence?.distractors?.find(d => d.english === selectedAnswer);
+    return picked ? (VARIES_BY_LABELS[picked.variesBy] ?? '') : '';
+  });
+
   // URL search params identify this game setup; captured at mount because the
   // URL has already changed by the time onDestroy runs during navigation
   let sessionParamsKey = '';
@@ -109,6 +151,9 @@
   // Keep the in-progress game in global state so navigating away doesn't
   // lose generated questions; cleared when the game is completed
   onDestroy(() => {
+    // A round holds one object URL per question; nothing else revokes them.
+    releaseAudio();
+
     if (!gameComplete && questions.length > 0 && sessionParamsKey) {
       gameSession.snapshot = {
         paramsKey: sessionParamsKey,
@@ -320,7 +365,9 @@
           customRequest: data.gameParams.customTopic,
           count: data.gameParams.count,
           learningTopics: data.gameParams.learningTopics || [],
-          reviewWords: reviewWords
+          reviewWords: reviewWords,
+          // Listening rounds need near-miss English options, not a blanked word
+          questionStyle: data.gameParams.mode === 'listening' ? 'comprehension' : 'blank'
         })
       });
 
@@ -341,23 +388,32 @@
   function createSentenceQuestions(sentences: Sentence[]) {
     const mode = data.gameParams.mode;
 
+    if (mode === 'listening') {
+      // Listening comprehension: hear the whole sentence, choose what it means.
+      // The options are English, and the distractors are near misses of the true
+      // translation — so the round can only be passed by parsing the sentence.
+      questions = sentences
+        .filter(sentence => (sentence.distractors?.length ?? 0) >= 3)
+        .map(sentence => ({
+          sentence,
+          options: [
+            sentence.english,
+            ...sentence.distractors!.map(d => d.english)
+          ].sort(() => Math.random() - 0.5),
+          correctAnswer: sentence.english,
+          type: 'listening-comprehension' as const
+        }));
+      return;
+    }
+
     questions = sentences.map(sentence => {
       // Create the display text with blank
-      const displayText = sentence.arabic.replace(sentence.blankWord, '______');
+      const displayText = sentence.arabic.replace(sentence.blankWord ?? '', '______');
 
       // Shuffle options (correct + 3 wrong)
-      const options = [...sentence.wrongOptions, sentence.blankWord].sort(() => Math.random() - 0.5);
+      const options = [...(sentence.wrongOptions ?? []), sentence.blankWord ?? ''].sort(() => Math.random() - 0.5);
 
-      if (mode === 'listening') {
-        // For listening mode with sentences: listen to full sentence, identify the missing word
-        return {
-          sentence,
-          options,
-          correctAnswer: sentence.blankWord,
-          type: 'listening' as const,
-          displayText
-        };
-      } else if (mode === 'speaking') {
+      if (mode === 'speaking') {
         // For speaking mode: pronounce the full sentence
         return {
           sentence,
@@ -371,7 +427,7 @@
         return {
           sentence,
           options,
-          correctAnswer: sentence.blankWord,
+          correctAnswer: sentence.blankWord ?? '',
           type: 'fill-in-blank' as const,
           displayText
         };
@@ -443,63 +499,97 @@
     });
   }
 
-  async function playAudio(text: string, dialect: string, audioUrl?: string | null) {
+  /**
+   * Silence both players. Pre-recorded files play through `currentSound` here while
+   * TTS plays through the cache helper, so stopping one is not enough.
+   */
+  function stopAllAudio() {
+    currentSound?.stop();
+    currentSound = null;
+    stopPlayback();
+    isPlayingAudio = false;
+  }
+
+  async function playAudio(
+    text: string,
+    dialect: string,
+    audioUrl?: string | null,
+    rate: number = NORMAL_RATE
+  ) {
     if (isPlayingAudio) return;
 
+    stopAllAudio();
     isPlayingAudio = true;
 
-    // Stop any currently playing sound
-    if (currentSound) {
-      currentSound.stop();
-    }
-
     try {
-      let finalAudioUrl: string;
-      let playbackRate = 1.0;
-
       if (audioUrl) {
-        finalAudioUrl = audioUrl;
-      } else {
-        // Use TTS API
-        const res = await fetch('/api/text-to-speech', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ text, dialect })
+        // Pre-recorded audio (some words have a real recording) — play it directly.
+        currentSound = new Howl({
+          src: [audioUrl],
+          autoplay: true,
+          rate,
+          format: ['mp3', 'wav'],
+          onend: () => { isPlayingAudio = false; },
+          onloaderror: () => { isPlayingAudio = false; },
+          onplayerror: () => { isPlayingAudio = false; }
         });
-
-        if (!res.ok) {
-          throw new Error(`TTS request failed: ${res.statusText}`);
-        }
-
-        playbackRate = parseFloat(res.headers.get('X-Playback-Rate') || '1.0');
-        const audioBlob = await res.blob();
-        finalAudioUrl = URL.createObjectURL(audioBlob);
+        currentSound.play();
+        return;
       }
 
-      currentSound = new Howl({
-        src: [finalAudioUrl],
-        autoplay: true,
-        rate: playbackRate * 0.9,
-        format: ['mp3', 'wav'],
-        onend: () => {
-          isPlayingAudio = false;
-        },
-        onloaderror: () => {
-          console.error('Audio load error');
-          isPlayingAudio = false;
-        },
-        onplayerror: () => {
-          console.error('Audio play error');
-          isPlayingAudio = false;
-        }
+      await playCachedAudio(text, dialect, {
+        rate,
+        onEnd: () => { isPlayingAudio = false; }
       });
-
-      currentSound.play();
     } catch (error) {
-      console.error('Audio playback failed:', error);
       isPlayingAudio = false;
+      // A quota or sign-in refusal needs to be shown, not logged — with autoplay
+      // the learner would otherwise just get silence and nothing to click.
+      if (error instanceof TtsAccessError) {
+        showPaywallModal = true;
+        return;
+      }
+      console.error('Audio playback failed:', error);
     }
   }
+
+  /**
+   * The text a question autoplays, or '' for questions that do not autoplay.
+   *
+   * Only the comprehension round autoplays: there the audio *is* the question, so
+   * there is nothing to look at until it has played. Word listening keeps its
+   * click-to-play behaviour (it still gets free replays from the cache).
+   */
+  function audioTextFor(question: GameQuestion | undefined): string {
+    if (!question) return '';
+    if (question.type === 'listening-comprehension') return question.sentence?.arabic ?? '';
+    return '';
+  }
+
+  // Autoplay each listening question once on arrival, and warm the next one's audio
+  // while the learner is answering this one, so it starts instantly.
+  //
+  // The guard is a plain variable, and the side effects run untracked: playAudio
+  // reads isPlayingAudio, which would otherwise make this effect depend on its own
+  // playback state and re-run on every play.
+  let autoplayedIndex = -1;
+  $effect(() => {
+    if (isLoading || gameComplete) return;
+
+    const index = currentIndex;
+    const text = audioTextFor(questions[index]);
+    const nextText = audioTextFor(questions[index + 1]);
+
+    untrack(() => {
+      if (text && autoplayedIndex !== index) {
+        autoplayedIndex = index;
+        playAudio(text, data.gameParams.dialect);
+      }
+      if (nextText) {
+        prefetchAudio(nextText, data.gameParams.dialect);
+      }
+    });
+  });
 
   async function awardGameXp() {
     try {
@@ -666,6 +756,10 @@
   async function nextQuestion() {
     turnsPlayed++;
 
+    // Leaving a question mid-playback would otherwise strand isPlayingAudio true,
+    // and the next question's autoplay would bail out on the busy guard.
+    stopAllAudio();
+
     // Check turn limit for non-subscribers (only for category-based games, not custom generated)
     if (!data.gameParams.useCustom && !data.isSubscribed && turnsPlayed >= FREE_TURN_LIMIT) {
       // Save progress before showing paywall
@@ -705,6 +799,9 @@
   }
 
   function restartGame() {
+    stopAllAudio();
+    // Let the first question autoplay again
+    autoplayedIndex = -1;
     currentIndex = 0;
     score = 0;
     selectedAnswer = null;
@@ -987,9 +1084,9 @@
         {:else if data.gameParams.mode === 'listening'}
           <!-- Listening Mode -->
           {#if currentQuestion.sentence}
-            <!-- Sentence listening -->
+            <!-- Sentence listening: hear it, choose what it means -->
             <div class="text-center mb-6">
-              <p class="text-text-200 text-sm mb-4">Listen to the sentence and identify the missing word</p>
+              <p class="text-text-200 text-sm mb-4">Listen and choose what it means</p>
 
               <button
                 onclick={() => playAudio(
@@ -999,7 +1096,7 @@
                 )}
                 disabled={isPlayingAudio}
                 class="w-24 h-24 mx-auto bg-blue-500 rounded-full flex items-center justify-center md:hover:bg-blue-600 transition-colors shadow-lg disabled:opacity-50"
-                aria-label="Play audio"
+                aria-label="Play audio again"
               >
                 {#if isPlayingAudio}
                   <svg class="w-10 h-10 text-white animate-pulse" fill="currentColor" viewBox="0 0 24 24">
@@ -1012,23 +1109,36 @@
                 {/if}
               </button>
 
-              <p class="text-text-100 text-sm mt-2">Click to play audio</p>
-              <p class="text-text-200 text-sm mt-4 italic">{currentQuestion.sentence.english}</p>
+              <div class="flex items-center justify-center gap-4 mt-3">
+                <p class="text-text-100 text-sm">Tap to replay</p>
+                <button
+                  onclick={() => playAudio(
+                    currentQuestion.sentence?.arabic || '',
+                    data.gameParams.dialect,
+                    undefined,
+                    SLOW_RATE
+                  )}
+                  disabled={isPlayingAudio}
+                  class="text-sm text-text-200 md:hover:text-text-300 underline transition-colors disabled:opacity-50"
+                >
+                  Slower
+                </button>
+              </div>
             </div>
 
-            <!-- Hint -->
+            <!-- Hint: the transliteration, never the meaning -->
             {#if !showResult}
               <button
                 onclick={() => showHint = !showHint}
                 class="w-full mb-4 py-2 text-sm text-text-200 md:hover:text-text-300 transition-colors"
               >
-                {showHint ? 'Hide' : 'Show'} Hint (sentence with blank)
+                {showHint ? 'Hide' : 'Show'} Hint (how it sounds)
               </button>
             {/if}
 
-            {#if showHint || showResult}
-              <p class="text-center text-xl font-bold text-text-300 mb-4" dir="rtl">
-                {currentQuestion.displayText}
+            {#if showHint && !showResult}
+              <p class="text-center text-base text-text-200 italic mb-4">
+                {currentQuestion.sentence.transliteration}
               </p>
             {/if}
           {:else if currentQuestion.word}
@@ -1253,6 +1363,9 @@
                       Correct answer: <span class="font-semibold text-text-300">{currentQuestion.correctAnswer}</span>
                     </p>
                   {/if}
+                  {#if comprehensionMiss}
+                    <p class="text-text-200 text-sm mt-1">{comprehensionMiss}</p>
+                  {/if}
                   {#if pronunciationScore !== null}
                     <div class="flex items-center gap-2">
                       <p class="text-red-400 text-sm">Pronunciation score: {pronunciationScore}%</p>
@@ -1286,9 +1399,36 @@
                   type="Word"
                 />
               </div>
-            {:else if !isCorrect && currentQuestion.sentence}
+            {:else if !isCorrect && currentQuestion.sentence && currentQuestion.type !== 'listening-comprehension'}
               <div class="mt-4">
                 <p class="text-text-200 text-sm mb-2">Missing word: <span class="font-bold text-blue-400">{currentQuestion.sentence.blankWord}</span> ({currentQuestion.sentence.blankWordEnglish})</p>
+              </div>
+            {/if}
+
+            <!-- Comprehension reveal: the sentence is only shown once it has been answered -->
+            {#if currentQuestion.type === 'listening-comprehension' && currentQuestion.sentence}
+              <div class="mt-4 pt-4 border-t border-tile-600">
+                <div class="flex items-center justify-center gap-2 mb-1">
+                  <p class="text-xl font-bold text-text-300" dir="rtl">{currentQuestion.sentence.arabic}</p>
+                  <AudioButton
+                    text={currentQuestion.sentence.arabic}
+                    dialect={data.gameParams.dialect as Dialect}
+                    className="text-text-300"
+                  />
+                </div>
+                <p class="text-center text-sm text-text-200 italic">{currentQuestion.sentence.transliteration}</p>
+                <div class="mt-3 flex items-center justify-center gap-2">
+                  <span class="text-text-200 text-sm">Save for later review:</span>
+                  <SaveButton
+                    objectToSave={{
+                      arabic: currentQuestion.sentence.arabic,
+                      english: currentQuestion.sentence.english,
+                      transliterated: currentQuestion.sentence.transliteration
+                    }}
+                    type="Sentence"
+                    className=""
+                  />
+                </div>
               </div>
             {/if}
           </div>

@@ -4,7 +4,10 @@ import { env } from '$env/dynamic/private';
 import { GoogleGenAI } from "@google/genai";
 import { normalizeArabicText } from '$lib/utils/arabic-normalization';
 import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
-import { createGameSentencesSchema } from '$lib/utils/gemini-schemas';
+import {
+  createGameSentencesSchema,
+  createListeningComprehensionSchema
+} from '$lib/utils/gemini-schemas';
 import { generateContentWithRetry, GeminiApiError } from '$lib/utils/gemini-api-retry';
 
 // Function to clean unwanted characters from text
@@ -13,8 +16,11 @@ function cleanText(text: string, type: 'arabic' | 'english' | 'transliteration')
 
   let cleaned = text;
 
-  // Remove common unwanted characters for all types
-  cleaned = cleaned.replace(/[''`""]/g, '');
+  // Remove common unwanted characters for all types.
+  // The apostrophe is deliberately kept: English options are shown as whole
+  // sentences, and stripping it turned "don't" into "dont". It is also meaningful
+  // in transliteration, whose whitelist below already allows it.
+  cleaned = cleaned.replace(/[`""]/g, '');
   cleaned = cleaned.replace(/[‚„]/g, '');
   cleaned = cleaned.replace(/[–—]/g, '-');
   cleaned = cleaned.replace(/…/g, '...');
@@ -47,6 +53,10 @@ export const POST: RequestHandler = async ({ request }) => {
   const count = Math.min(data.count || 10, 20); // Max 20 sentences
   const learningTopics = data.learningTopics || []; // Array of topic IDs
   const reviewWords = data.reviewWords || []; // Array of {arabic, english, transliteration}
+  // 'blank' = fill-in-the-blank (multiple choice), 'comprehension' = listening.
+  // Defaults to 'blank' so existing callers are unaffected.
+  const questionStyle: 'blank' | 'comprehension' =
+    data.questionStyle === 'comprehension' ? 'comprehension' : 'blank';
 
   // Map difficulty levels to descriptions
   const getDifficultyDescription = (level: string): string => {
@@ -121,7 +131,9 @@ export const POST: RequestHandler = async ({ request }) => {
       .join(', ');
     learningTopicsSection = `
       GRAMMAR FOCUS: Create sentences that practice ${topicDescriptions}.
-      Make sure the blank word is related to these grammar topics when possible.
+      ${questionStyle === 'comprehension'
+        ? 'Where possible, let the distractors turn on these grammar topics, so getting one wrong reveals a gap in exactly that area.'
+        : 'Make sure the blank word is related to these grammar topics when possible.'}
     `;
   }
 
@@ -136,11 +148,13 @@ export const POST: RequestHandler = async ({ request }) => {
       VOCABULARY TO USE: Create sentences that include these words from the user's vocabulary list:
       ${wordList}
 
-      IMPORTANT: Use these words as the blank word in your sentences. Each sentence should feature one of these vocabulary words.
+      ${questionStyle === 'comprehension'
+        ? 'IMPORTANT: Each sentence should feature one of these vocabulary words, so the learner has to recognise it by ear.'
+        : 'IMPORTANT: Use these words as the blank word in your sentences. Each sentence should feature one of these vocabulary words.'}
     `;
   }
 
-  const question = `
+  const blankPrompt = `
     Generate ${count} fill-in-the-blank sentences in ${config.name} for a vocabulary game.
 
     ${customRequestSection}
@@ -186,11 +200,86 @@ export const POST: RequestHandler = async ({ request }) => {
     }
   `;
 
-  try {
-    const systemPrompt = "You are a helpful Arabic language teacher creating fill-in-the-blank exercises. Always return valid JSON.";
-    const fullPrompt = `${systemPrompt}\n\n${question}`;
+  const comprehensionPrompt = `
+    Generate ${count} sentences in ${config.name} for a LISTENING COMPREHENSION exercise.
 
-    const sentencesSchema = createGameSentencesSchema();
+    The learner hears the sentence spoken aloud and nothing else — no Arabic text, no
+    translation — and must choose its meaning from four English options. So the whole
+    exercise lives or dies on the quality of the three wrong options.
+
+    ${customRequestSection}
+
+    ${learningTopicsSection}
+
+    ${reviewWordsSection}
+
+    DIFFICULTY LEVEL: ${getDifficultyDescription(difficulty)}
+
+    ${config.description}
+
+    For each sentence:
+    1. Write a complete, natural, everyday sentence in Arabic
+    2. Give its correct English translation and a transliteration of the full sentence
+    3. Write exactly 3 DISTRACTORS — wrong English translations
+
+    THE DISTRACTOR RULES — these matter more than anything else here:
+    - Each distractor must be a NEAR MISS: identical to the correct translation except
+      for ONE feature. Change the tense, or the subject, or negate it, or change
+      singular to plural, or swap exactly one concrete noun. Keep everything else word
+      for word the same.
+    - A learner who understood the sentence must be able to rule it out. A learner who
+      only caught a couple of words must NOT be able to.
+    - Never write an unrelated or absurd sentence. "I ate an elephant" is useless as a
+      distractor because it can be dismissed without listening at all.
+    - Use 3 DIFFERENT values of variesBy across the 3 distractors whenever the sentence
+      allows it, so one question tests several features.
+    - variesBy must be exactly one of: tense, person, negation, number, vocabulary
+      ("person" = wrong subject/pronoun, "vocabulary" = one noun or verb swapped)
+
+    Worked example. Arabic means "I went to the market yesterday":
+      correct:    "I went to the market yesterday"
+      distractor: "I am going to the market tomorrow"   variesBy: tense
+      distractor: "He went to the market yesterday"      variesBy: person
+      distractor: "I didn't go to the market yesterday"  variesBy: negation
+
+    IMPORTANT REQUIREMENTS:
+    - No diacritics in the Arabic text (no harakat)
+    - Transliterations use the English alphabet only
+    - Sentences must be natural spoken ${config.name}, the kind of thing someone would
+      actually say — this is going to be read aloud by a speech engine
+    - Keep sentences short enough to hold in memory on one listen (roughly 4-10 words)
+    - No distractor may mean the same thing as the correct translation
+
+    Return as JSON with this exact structure:
+    {
+      "sentences": [
+        {
+          "arabic": "full sentence in Arabic",
+          "english": "correct English translation",
+          "transliteration": "full sentence transliteration",
+          "distractors": [
+            { "english": "near-miss translation", "variesBy": "tense" },
+            { "english": "near-miss translation", "variesBy": "person" },
+            { "english": "near-miss translation", "variesBy": "negation" }
+          ]
+        }
+      ]
+    }
+  `;
+
+  const isComprehension = questionStyle === 'comprehension';
+
+  try {
+    const systemPrompt = isComprehension
+      ? "You are a helpful Arabic language teacher creating listening comprehension exercises. Always return valid JSON."
+      : "You are a helpful Arabic language teacher creating fill-in-the-blank exercises. Always return valid JSON.";
+    const fullPrompt = `${systemPrompt}\n\n${isComprehension ? comprehensionPrompt : blankPrompt}`;
+
+    // Loosely typed on purpose: the two styles return different sentence shapes, and
+    // each branch below validates its own fields.
+    const sentencesSchema: { zodSchema: any; jsonSchema: any } = isComprehension
+      ? createListeningComprehensionSchema()
+      : createGameSentencesSchema();
     const response = await generateContentWithRetry(ai, {
       model: "gemini-2.5-flash",
       contents: fullPrompt,
@@ -214,8 +303,53 @@ export const POST: RequestHandler = async ({ request }) => {
       throw new Error('Failed to parse JSON response');
     }
 
+    const rawSentences: any[] = (parsed as any).sentences || [];
+
+    if (isComprehension) {
+      // The blankWord substring check below does not apply here — there is no blank.
+      // What matters instead is that three distinct near-miss options survived.
+      const comprehensionSentences = rawSentences.map((sentence: any) => {
+        if (!sentence.arabic || !sentence.english) {
+          return null;
+        }
+
+        const english = cleanText(sentence.english, 'english');
+
+        // Dedupe on the English that will actually be shown: an option reading the
+        // same as the answer makes the question unanswerable, or marks a right
+        // answer wrong.
+        const seen = new Set<string>([english.toLowerCase()]);
+        const distractors = (sentence.distractors || [])
+          .map((d: any) => ({
+            english: cleanText(d?.english || '', 'english'),
+            variesBy: typeof d?.variesBy === 'string' ? d.variesBy.toLowerCase().trim() : ''
+          }))
+          .filter((d: { english: string }) => {
+            if (!d.english) return false;
+            const key = d.english.toLowerCase();
+            if (seen.has(key)) return false;
+            seen.add(key);
+            return true;
+          });
+
+        return {
+          arabic: cleanText(sentence.arabic, 'arabic'),
+          english,
+          transliteration: cleanText(sentence.transliteration, 'transliteration'),
+          // Exactly three, so the round is always four options wide
+          distractors: distractors.slice(0, 3)
+        };
+      }).filter((s: any) => s && s.arabic && s.english && s.distractors.length >= 3);
+
+      if (comprehensionSentences.length === 0) {
+        throw new Error('No valid sentences generated');
+      }
+
+      return json({ sentences: comprehensionSentences });
+    }
+
     // Clean and validate sentences
-    const sentences = (parsed.sentences || []).map((sentence: any) => {
+    const sentences = rawSentences.map((sentence: any) => {
       if (!sentence.arabic || !sentence.english || !sentence.blankWord) {
         return null;
       }
