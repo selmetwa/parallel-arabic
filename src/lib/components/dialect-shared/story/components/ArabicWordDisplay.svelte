@@ -1,5 +1,6 @@
 <script lang="ts">
 	import cn from 'classnames';
+	import { wordDragSelect } from '$lib/actions/word-drag-select';
 	import { askChatGTP } from '../helpers/ask-chat-gpt';
 	import { type Dialect } from '$lib/types/index';
 	import { trackEvent } from '$lib/analytics';
@@ -72,8 +73,7 @@
 		selectedIndices.length > 0 ? selectedIndices.map((i) => wordList[i]).join(' ') : ''
 	);
 
-	function handleWordMouseDown(index: number, event: MouseEvent) {
-		event.preventDefault();
+	function handleWordMouseDown(index: number) {
 		isSelecting = true;
 		selectionStartIndex = index;
 		selectionEndIndex = index;
@@ -241,11 +241,10 @@
 	</span>
 {/if}
 
-<!-- svelte-ignore a11y_no_static_element_interactions -->
 <div
 	class="flex flex-wrap gap-3 sm:gap-4 justify-center select-none"
 	dir="rtl"
-	onmouseup={handleWordMouseUp}
+	use:wordDragSelect={{ onStart: handleWordMouseDown, onExtend: handleWordMouseEnter, onEnd: handleWordMouseUp }}
 >
 	{#if sentence.wordAlignments?.length}
 		<!-- Word-aligned display -->
@@ -261,8 +260,7 @@
 							: 'border-transparent hover:bg-tile-500 hover:shadow-md hover:border-tile-600'
 				)}
 				onclick={() => fetchDefinition(wordAlign.arabic.replace(/[،,]/g, ''), wordAlign)}
-				onmousedown={(e) => handleWordMouseDown(wordIndex, e)}
-				onmouseenter={() => handleWordMouseEnter(wordIndex)}
+				data-word-index={wordIndex}
 			>
 
 				{#if showTransliteration}
@@ -297,8 +295,7 @@
 							: 'border-transparent hover:bg-tile-500 hover:shadow-md hover:border-tile-600'
 				)}
 				onclick={() => fetchDefinition((arabicWords[wordIndex] || arabicWord).replace(/[،,]/g, ''))}
-				onmousedown={(e) => handleWordMouseDown(wordIndex, e)}
-				onmouseenter={() => handleWordMouseEnter(wordIndex)}
+				data-word-index={wordIndex}
 			>
 				{arabicWord}
 			</button>

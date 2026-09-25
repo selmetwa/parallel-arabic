@@ -11,6 +11,7 @@
 	 * - "Clear Selection" button to reset selection
 	 */
 	import { get } from 'svelte/store';
+	import { wordDragSelect } from '$lib/actions/word-drag-select';
 	import { type Keyboard, type Dialect } from '$lib/types/index';
 	import { updateKeyboardStyle } from '$lib/helpers/update-keyboard-style';
 	import { hue, theme } from '$lib/store/store';
@@ -489,8 +490,7 @@
 	}
 
 	// Word selection functions
-	function handleWordMouseDown(index: number, event: MouseEvent) {
-		event.preventDefault();
+	function handleWordMouseDown(index: number) {
 		isSelecting = true;
 		selectionStartIndex = index;
 		selectionEndIndex = index;
@@ -719,17 +719,15 @@
 			</div>
 		{/if}
 		
-		<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 		<div
 			class="flex w-fit flex-row flex-wrap text-base sm:text-lg font-medium text-text-200 select-none"
-			onmouseup={handleWordMouseUp}
+			use:wordDragSelect={{ onStart: handleWordMouseDown, onExtend: handleWordMouseEnter, onEnd: handleWordMouseUp }}
 			role="application"
 			aria-label="Word selection area for definitions"
 		>
 			{#each sentence.english.split(' ') as word, index}
 				<span
-					onmousedown={(e) => handleWordMouseDown(index, e)}
-					onmouseenter={() => handleWordMouseEnter(index)}
+					data-word-index={index}
 					onclick={() => askChatGTP(word)}
 					onkeydown={(e) => {
 						if (e.key === 'Enter' || e.key === ' ') {

@@ -208,6 +208,16 @@
 	function handleCloseModal() {
 		showPaywall = false;
 	}
+
+	// One accent per lesson, so the stepper and each lesson's chrome agree on colour.
+	const lessonAccents = [
+		{ accent: '#0ea5e9', deep: '#0369a1' },
+		{ accent: '#8b5cf6', deep: '#6d28d9' },
+		{ accent: '#f59e0b', deep: '#b45309' },
+		{ accent: '#f43f5e', deep: '#9f1239' },
+		{ accent: '#10b981', deep: '#047857' }
+	];
+	const lessonAccent = $derived(lessonAccents[page] ?? lessonAccents[0]);
 </script>
 
 <svelte:window onkeydown={onLesson1Keydown} />
@@ -235,26 +245,34 @@
 	<!-- Header with Navigation -->
 	<header class="sticky top-0 z-10 border-b border-tile-500 bg-tile-200">
 		<div class="mx-auto max-w-7xl px-3 py-4 sm:px-8">
-			<div class="flex items-center justify-between">
-				<div class="flex items-center gap-4">
-					<div class="flex items-center gap-2">
-						{#each Array(totalPages) as _, i (i)}
-							<button
-								onclick={() => goToPage(i)}
-								class={cn(
-									'h-3 w-3 rounded-full transition-all duration-300',
-									page === i
-										? 'scale-110 bg-text-300'
-										: 'border border-tile-600 bg-tile-500 hover:bg-tile-400'
-								)}
-								aria-label="Go to lesson {i + 1}"
-							></button>
-						{/each}
-					</div>
-					<span class="hidden text-sm text-text-200 sm:block">
-						Lesson {page + 1} of {totalPages}
-					</span>
+			<div class="flex items-center gap-3">
+				<div class="stepper">
+					{#each Array(totalPages) as _, i (i)}
+						<button
+							onclick={() => goToPage(i)}
+							class="step {page === i ? 'is-on' : ''} {i < page ? 'is-done' : ''}"
+							style="--accent:{lessonAccents[i].accent}; --deep:{lessonAccents[i].deep};"
+							aria-label="Go to lesson {i + 1}"
+							aria-current={page === i ? 'step' : undefined}
+						>
+							{#if i < page}
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="3.5"
+										d="M5 13l4 4L19 7"
+									/>
+								</svg>
+							{:else}
+								{i + 1}
+							{/if}
+						</button>
+					{/each}
 				</div>
+				<span class="hidden text-sm font-semibold text-text-200 sm:block">
+					Lesson {page + 1} of {totalPages}
+				</span>
 			</div>
 		</div>
 	</header>
@@ -266,23 +284,14 @@
 				<!-- Lesson 1: The 28 letters, Egyptian sounds -->
 				<div class="mb-2">
 					<div class="mb-2 max-w-3xl">
-						<div
-							class="mb-3 inline-flex items-center gap-2 rounded-full border border-tile-500 bg-tile-400 px-3 py-1.5 text-xs text-text-200"
-						>
-							<span>Lesson 1</span>
-						</div>
+						<span class="lesson-badge" style="--accent:#0ea5e9;"> Lesson 1 </span>
 						<h1 class="mb-3 text-2xl font-bold leading-tight text-text-300 sm:text-3xl">
 							The 28 letters
 						</h1>
-
 					</div>
 
 					<div class="mb-4 flex justify-end">
-						<button
-							type="button"
-							onclick={toggleLesson1View}
-							class="flex items-center gap-2 rounded-full border border-tile-500 bg-tile-400 px-4 py-2 text-sm font-semibold text-text-300 transition-colors hover:bg-tile-500 active:scale-95"
-						>
+						<button type="button" onclick={toggleLesson1View} class="pill-btn">
 							{#if lesson1View === 'cards'}
 								<svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
 									<path d="M3 3h6v6H3V3zm8 0h6v6h-6V3zM3 11h6v6H3v-6zm8 0h6v6h-6v-6z" />
@@ -305,7 +314,8 @@
 										<button
 											onclick={() => playAudio(letter.key)}
 											aria-label={`Play pronunciation for ${letter.letterName}`}
-											class="group relative flex aspect-square w-20 flex-none cursor-pointer items-center justify-center overflow-hidden rounded-xl border border-tile-500 bg-tile-200 text-4xl text-text-300 shadow-sm transition-all duration-200 ease-out hover:-translate-y-1 hover:border-text-200 hover:bg-tile-400 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300 active:scale-95"
+											class="letter-tile letter-tile--sm"
+											style="--accent:#0ea5e9; --deep:#0369a1;"
 										>
 											<span class="relative z-10 text-4xl">{letter.isolated}</span>
 											<div
@@ -351,7 +361,7 @@
 												{@render dialectAudio(
 													letter.exampleArabic,
 													hasEgyptianDistinction(letter)
-														? (letter.exampleArabicEgyptian ?? letter.exampleArabic)
+														? letter.exampleArabicEgyptian ?? letter.exampleArabic
 														: null
 												)}
 											</div>
@@ -380,7 +390,8 @@
 									<button
 										onclick={() => playAudio(currentLetter.key)}
 										aria-label={`Play pronunciation for ${currentLetter.letterName}`}
-										class="group relative flex aspect-square w-44 flex-none cursor-pointer items-center justify-center rounded-3xl border border-tile-500 bg-tile-200 leading-none text-text-300 shadow-sm transition-all duration-200 ease-out hover:-translate-y-1 hover:border-text-200 hover:bg-tile-400 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300 active:scale-95 sm:w-56"
+										class="letter-tile letter-tile--lg"
+										style="--accent:{lessonAccent.accent}; --deep:{lessonAccent.deep};"
 									>
 										<span class="relative z-10 text-[6.5rem] leading-none sm:text-[8.5rem]"
 											>{currentLetter.isolated}</span
@@ -429,7 +440,7 @@
 											{@render dialectAudio(
 												currentLetter.exampleArabic,
 												hasEgyptianDistinction(currentLetter)
-													? (currentLetter.exampleArabicEgyptian ?? currentLetter.exampleArabic)
+													? currentLetter.exampleArabicEgyptian ?? currentLetter.exampleArabic
 													: null
 											)}
 										</div>
@@ -450,7 +461,7 @@
 								onclick={nextCard}
 								disabled={cardIndex === mergedLetters.length - 1}
 								aria-label="Next letter"
-								class="flex h-12 w-12 items-center justify-center rounded-full border border-tile-500 bg-tile-400 text-2xl font-bold text-text-300 shadow-sm transition-all hover:bg-tile-500 active:scale-95 disabled:cursor-not-allowed disabled:opacity-40"
+								class="deck-btn"
 							>
 								‹
 							</button>
@@ -462,7 +473,7 @@
 								onclick={prevCard}
 								disabled={cardIndex === 0}
 								aria-label="Previous letter"
-								class="flex h-12 w-12 items-center justify-center rounded-full border border-tile-500 bg-tile-400 text-2xl font-bold text-text-300 shadow-sm transition-all hover:bg-tile-500 active:scale-95 disabled:cursor-not-allowed disabled:opacity-40"
+								class="deck-btn"
 							>
 								›
 							</button>
@@ -475,11 +486,7 @@
 				<!-- Lesson 2: Articulation points -->
 				<div class="mb-8">
 					<div class="mb-6 max-w-3xl">
-						<div
-							class="mb-3 inline-flex items-center gap-2 rounded-full border border-tile-500 bg-tile-400 px-3 py-1.5 text-xs text-text-200"
-						>
-							<span>Lesson 2</span>
-						</div>
+						<span class="lesson-badge" style="--accent:#8b5cf6;"> Lesson 2 </span>
 						<h1 class="mb-3 text-2xl font-bold leading-tight text-text-300 sm:text-3xl">
 							Where the sounds come from
 						</h1>
@@ -494,12 +501,7 @@
 						{#each articulationGroups as group (group.id)}
 							<button
 								onclick={() => (selectedArticulation = group.id)}
-								class={cn(
-									'rounded-full border px-4 py-2 text-sm font-semibold transition-all duration-200 active:scale-95',
-									selectedArticulation === group.id
-										? 'border-tile-600 bg-tile-600 text-white shadow-sm'
-										: 'border-tile-500 bg-tile-400 text-text-300 hover:bg-tile-500'
-								)}
+								class="chip {selectedArticulation === group.id ? 'is-on' : ''}"
 							>
 								{group.label}
 							</button>
@@ -552,11 +554,7 @@
 				<!-- Lesson 3: Cursive forms + the six kicking letters -->
 				<div class="mb-8">
 					<div class="mb-6 max-w-4xl">
-						<div
-							class="mb-3 inline-flex items-center gap-2 rounded-full border border-tile-500 bg-tile-400 px-3 py-1.5 text-xs text-text-200"
-						>
-							<span>Lesson 3</span>
-						</div>
+						<span class="lesson-badge" style="--accent:#f59e0b;"> Lesson 3 </span>
 						<h1 class="mb-3 text-2xl font-bold leading-tight text-text-300 sm:text-3xl">
 							Arabic is cursive, written right to left
 						</h1>
@@ -666,11 +664,7 @@
 				<!-- Lesson 4: Special letters & Egyptian notes -->
 				<div class="mb-8">
 					<div class="mb-6 max-w-3xl">
-						<div
-							class="mb-3 inline-flex items-center gap-2 rounded-full border border-tile-500 bg-tile-400 px-3 py-1.5 text-xs text-text-200"
-						>
-							<span>Lesson 4</span>
-						</div>
+						<span class="lesson-badge" style="--accent:#f43f5e;"> Lesson 4 </span>
 						<h1 class="mb-3 text-2xl font-bold leading-tight text-text-300 sm:text-3xl">
 							Special shapes & Egyptian quirks
 						</h1>
@@ -731,7 +725,9 @@
 										<li class="flex items-center gap-2 text-sm">
 											<span class="text-xl text-text-300" dir="rtl">{row.arabic}</span>
 											<span class="text-text-200">→ {row.egyptian}</span>
-											<span class="ml-auto">{@render dialectAudio(row.arabic, row.egyptianArabic ?? row.arabic)}</span>
+											<span class="ml-auto"
+												>{@render dialectAudio(row.arabic, row.egyptianArabic ?? row.arabic)}</span
+											>
 										</li>
 									{/each}
 								</ul>
@@ -761,11 +757,7 @@
 				<!-- Lesson 5: Interactive practice -->
 				<div class="mb-8">
 					<div class="mb-6 max-w-3xl">
-						<div
-							class="mb-3 inline-flex items-center gap-2 rounded-full border border-tile-500 bg-tile-400 px-3 py-1.5 text-xs text-text-200"
-						>
-							<span>Lesson 5</span>
-						</div>
+						<span class="lesson-badge" style="--accent:#10b981;"> Lesson 5 </span>
 						<h1 class="mb-3 text-2xl font-bold leading-tight text-text-300 sm:text-3xl">
 							Practice what you learned
 						</h1>
@@ -776,25 +768,25 @@
 					</div>
 
 					<div class="grid grid-cols-1 gap-6 lg:grid-cols-3">
-						<section class="rounded-xl border border-tile-500 bg-tile-300 p-4 shadow-sm sm:p-5">
+						<section class="ex-card" style="--accent:#8b5cf6;">
 							<div class="mb-4 flex items-center gap-2">
-								<span class="text-xl" aria-hidden="true">🎧</span>
+								<span class="ex-emoji" aria-hidden="true">🎧</span>
 								<h2 class="text-lg font-bold text-text-300">Listen</h2>
 							</div>
 							<ListeningExercise letters={practiceLetters} />
 						</section>
 
-						<section class="rounded-xl border border-tile-500 bg-tile-300 p-4 shadow-sm sm:p-5">
+						<section class="ex-card" style="--accent:#f59e0b;">
 							<div class="mb-4 flex items-center gap-2">
-								<span class="text-xl" aria-hidden="true">✍️</span>
+								<span class="ex-emoji" aria-hidden="true">✍️</span>
 								<h2 class="text-lg font-bold text-text-300">Write</h2>
 							</div>
 							<WritingExercise letters={practiceLetters} words={practiceWords} />
 						</section>
 
-						<section class="rounded-xl border border-tile-500 bg-tile-300 p-4 shadow-sm sm:p-5">
+						<section class="ex-card" style="--accent:#f43f5e;">
 							<div class="mb-4 flex items-center gap-2">
-								<span class="text-xl" aria-hidden="true">🎤</span>
+								<span class="ex-emoji" aria-hidden="true">🎤</span>
 								<h2 class="text-lg font-bold text-text-300">Speak</h2>
 							</div>
 							<SpeakingExercise words={practiceWords} />
@@ -811,10 +803,7 @@
 			<div class="flex items-center justify-between">
 				<div>
 					{#if page > 0}
-						<button
-							onclick={previousPage}
-							class="flex items-center gap-2 rounded-full border border-tile-500 bg-tile-400 px-5 py-2.5 font-semibold text-text-300 shadow-sm transition-all duration-200 hover:bg-tile-500 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300 active:scale-95"
-						>
+						<button onclick={previousPage} class="pill-btn">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								class="h-4 w-4"
@@ -836,7 +825,8 @@
 
 				<button
 					onclick={nextPage}
-					class="flex items-center gap-2 rounded-full border border-tile-600 bg-tile-600 px-6 py-2.5 font-semibold text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-tile-700 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300 active:scale-95"
+					class="press"
+					style="--accent:{lessonAccent.accent}; --deep:{lessonAccent.deep};"
 				>
 					<span>{page === totalPages - 1 ? 'Back to Alphabet' : 'Next Lesson'}</span>
 					<svg
@@ -858,3 +848,269 @@
 </section>
 
 <PaywallModal isOpen={showPaywall} {handleCloseModal} />
+
+<style>
+	/* Lesson stepper */
+	.stepper {
+		display: flex;
+		align-items: center;
+		gap: 0.4rem;
+	}
+
+	.step {
+		display: grid;
+		place-items: center;
+		width: 1.9rem;
+		height: 1.9rem;
+		border-radius: 50%;
+		border: 2px solid var(--tile5);
+		background: var(--tile3);
+		font-size: 0.8rem;
+		font-weight: 600;
+		color: var(--text2);
+		cursor: pointer;
+		transition:
+			transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1),
+			background 0.2s ease,
+			border-color 0.2s ease,
+			color 0.2s ease;
+	}
+
+	.step:hover {
+		transform: translateY(-2px);
+		border-color: var(--accent);
+		color: var(--text1);
+	}
+
+	.step.is-on {
+		background: var(--accent);
+		border-color: var(--deep);
+		color: #fff;
+		transform: scale(1.12);
+	}
+
+	.step.is-done {
+		background: #22c55e;
+		border-color: #15803d;
+		color: #fff;
+	}
+
+	.step svg {
+		width: 0.85rem;
+		height: 0.85rem;
+	}
+
+	/* Lesson badge */
+	.lesson-badge {
+		display: inline-block;
+		margin-bottom: 0.75rem;
+		border-radius: 100px;
+		padding: 0.3rem 0.8rem;
+		font-size: 0.72rem;
+		font-weight: 600;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: #fff;
+		background: var(--accent);
+	}
+
+	/* Pill buttons (view toggle, previous) */
+	.pill-btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
+		border-radius: 100px;
+		border: 2px solid var(--tile5);
+		background: var(--tile3);
+		padding: 0.55rem 1.1rem;
+		font-size: 0.85rem;
+		font-weight: 600;
+		color: var(--text1);
+		cursor: pointer;
+		transition:
+			transform 0.16s cubic-bezier(0.34, 1.56, 0.64, 1),
+			background 0.2s ease,
+			border-color 0.2s ease;
+	}
+	.pill-btn:hover {
+		transform: translateY(-2px);
+		background: var(--tile4);
+		border-color: var(--tile6);
+	}
+	.pill-btn:active {
+		transform: translateY(1px);
+	}
+
+	/* Pressable primary (next lesson) */
+	.press {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.45rem;
+		border-radius: 100px;
+		padding: 0.6rem 1.4rem;
+		font-size: 0.92rem;
+		font-weight: 600;
+		color: #fff;
+		background: var(--accent);
+		box-shadow: 0 4px 0 var(--deep);
+		cursor: pointer;
+		transition:
+			transform 0.14s ease,
+			box-shadow 0.14s ease,
+			filter 0.2s ease;
+	}
+	.press:hover {
+		filter: brightness(1.06);
+	}
+	.press:active {
+		transform: translateY(4px);
+		box-shadow: 0 0 0 var(--deep);
+	}
+
+	/* Deck navigation */
+	.deck-btn {
+		display: grid;
+		place-items: center;
+		width: 3rem;
+		height: 3rem;
+		border-radius: 50%;
+		border: 2px solid var(--tile5);
+		background: var(--tile3);
+		box-shadow: 0 4px 0 var(--tile5);
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: var(--text1);
+		cursor: pointer;
+		transition:
+			transform 0.16s cubic-bezier(0.34, 1.56, 0.64, 1),
+			box-shadow 0.16s ease,
+			background 0.2s ease;
+	}
+	.deck-btn:hover:not(:disabled) {
+		transform: translateY(-3px);
+		background: var(--tile4);
+		box-shadow: 0 7px 0 var(--tile6);
+	}
+	.deck-btn:active:not(:disabled) {
+		transform: translateY(2px);
+		box-shadow: 0 1px 0 var(--tile6);
+	}
+	.deck-btn:disabled {
+		opacity: 0.35;
+		cursor: not-allowed;
+		box-shadow: none;
+	}
+
+	/* Chips (articulation groups) */
+	.chip {
+		padding: 0.5rem 1rem;
+		border-radius: 100px;
+		font-size: 0.85rem;
+		font-weight: 600;
+		color: var(--text2);
+		background: var(--tile3);
+		border: 2px solid var(--tile5);
+		cursor: pointer;
+		transition:
+			transform 0.16s cubic-bezier(0.34, 1.56, 0.64, 1),
+			background 0.18s ease,
+			border-color 0.18s ease,
+			color 0.18s ease;
+	}
+	.chip:hover {
+		transform: translateY(-2px);
+		border-color: var(--tile6);
+		color: var(--text1);
+	}
+	.chip.is-on {
+		background: #8b5cf6;
+		border-color: #6d28d9;
+		color: #fff;
+	}
+
+	/* Letter tiles */
+	.letter-tile {
+		position: relative;
+		display: grid;
+		place-items: center;
+		aspect-ratio: 1;
+		flex: none;
+		border-radius: 1.5rem;
+		border: 2px solid var(--tile5);
+		background: var(--tile2);
+		box-shadow: 0 5px 0 var(--tile5);
+		color: var(--text1);
+		line-height: 1;
+		cursor: pointer;
+		transition:
+			transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1),
+			box-shadow 0.18s ease,
+			border-color 0.18s ease,
+			background 0.2s ease;
+	}
+	.letter-tile:hover {
+		transform: translateY(-4px);
+		border-color: var(--accent);
+		background: var(--tile3);
+		box-shadow: 0 9px 0 var(--deep);
+	}
+	.letter-tile:active {
+		transform: translateY(2px);
+		box-shadow: 0 1px 0 var(--deep);
+	}
+	.letter-tile--lg {
+		width: 11rem;
+	}
+	@media (min-width: 640px) {
+		.letter-tile--lg {
+			width: 14rem;
+		}
+	}
+	.letter-tile--sm {
+		width: 5rem;
+		border-radius: 1rem;
+		font-size: 2.25rem;
+		overflow: hidden;
+	}
+
+	/* Lesson 5 exercise cards */
+	.ex-card {
+		border-radius: 1.1rem;
+		border: 2px solid var(--tile5);
+		background: var(--tile3);
+		padding: 1.1rem;
+		transition:
+			transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+			border-color 0.2s ease;
+	}
+	.ex-card:hover {
+		transform: translateY(-3px);
+		border-color: var(--accent);
+	}
+
+	.ex-emoji {
+		font-size: 1.4rem;
+		line-height: 1;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.step,
+		.pill-btn,
+		.press,
+		.deck-btn,
+		.chip,
+		.ex-card,
+		.letter-tile {
+			transition: none;
+		}
+		.step:hover,
+		.pill-btn:hover,
+		.deck-btn:hover:not(:disabled),
+		.chip:hover,
+		.ex-card:hover,
+		.letter-tile:hover {
+			transform: none;
+		}
+	}
+</style>

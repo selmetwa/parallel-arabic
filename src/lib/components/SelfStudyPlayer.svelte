@@ -1,5 +1,6 @@
 <script lang="ts">
     import { fade, fly } from 'svelte/transition';
+    import { wordDragSelect } from '$lib/actions/word-drag-select';
     import { onMount } from 'svelte';
     import levenshtein from 'fast-levenshtein';
     import type { SelfStudySession, SelfStudyStep } from '$lib/schemas/self-study-schema';
@@ -288,8 +289,7 @@
 
     // ── Writing word drag-to-define (English prompt words) ───────────────────
 
-    function handleWritingWordMouseDown(index: number, e: MouseEvent) {
-        e.preventDefault();
+    function handleWritingWordMouseDown(index: number) {
         writingWordIsSelecting = true;
         writingWordSelectionStart = index;
         writingWordSelectionEnd = index;
@@ -659,17 +659,15 @@ English: "${context.english}"`;
                                 {/if}
 
                                 <!-- Clickable/draggable English words -->
-                                <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
                                 <div
                                     class="flex w-fit flex-row flex-wrap text-base sm:text-lg font-medium text-text-200 select-none mx-auto"
-                                    onmouseup={handleWritingWordMouseUp}
+                                    use:wordDragSelect={{ onStart: handleWritingWordMouseDown, onExtend: handleWritingWordMouseEnter, onEnd: handleWritingWordMouseUp }}
                                     role="application"
                                     aria-label="Click words to look up definitions"
                                 >
                                     {#each englishWords as word, wi (wi)}
                                         <span
-                                            onmousedown={(e) => handleWritingWordMouseDown(wi, e)}
-                                            onmouseenter={() => handleWritingWordMouseEnter(wi)}
+                                            data-word-index={wi}
                                             onclick={() => lookupWord(word, { arabic: step.targetArabic ?? '', english: step.promptEnglish ?? '', transliteration: step.hint ?? '' })}
                                             onkeydown={(e) => { if (e.key === 'Enter') lookupWord(word, { arabic: step.targetArabic ?? '', english: step.promptEnglish ?? '', transliteration: step.hint ?? '' }); }}
                                             role="button"

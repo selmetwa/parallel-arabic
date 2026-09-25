@@ -8,7 +8,6 @@
 	import { onMount } from 'svelte';
 	import { theme, sidebarCollapsed } from '$lib/store/store';
 	import { userXp, userLevel } from '$lib/store/xp-store';
-	import XpBar from '$lib/components/XpBar.svelte';
 	import { invalidate } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { pwaInfo } from 'virtual:pwa-info';
@@ -311,15 +310,6 @@
 	</svelte:component>
 {/if}
 
-<!-- XP Progress Bar - fixed at top (hidden during onboarding) -->
-{#if !showOnboarding}
-	<XpBar
-		loggedIn={!!data.session}
-		initialXp={data.userXp ?? 0}
-		initialLevel={data.userLevel ?? 1}
-	/>
-{/if}
-
 <!-- Desktop Sidebar -->
 <Sidebar {session} {handleOpenDrawer} />
 
@@ -328,9 +318,7 @@
 	<button
 		type="button"
 		onclick={() => sidebarCollapsed.set(false)}
-		class="fixed left-4 z-50 hidden rounded-lg border-2 border-tile-600 bg-tile-500 p-3 text-text-300 shadow-lg transition-all duration-300 hover:bg-tile-600 lg:flex {data.session
-			? 'top-10'
-			: 'top-4'}"
+		class="fixed left-4 z-50 hidden rounded-lg border-2 border-tile-600 bg-tile-500 p-3 text-text-300 shadow-lg transition-all duration-300 hover:bg-tile-600 lg:flex top-4"
 		aria-label="Expand sidebar"
 		title="Expand sidebar"
 	>
@@ -349,7 +337,7 @@
 <main
 	class="flex min-h-screen flex-col bg-tile-200 transition-all duration-300 {$sidebarCollapsed
 		? 'lg:ml-0'
-		: 'lg:ml-64'} {data.session ? 'lg:pt-8' : ''}"
+		: 'lg:ml-64'}"
 >
 	<!-- Top Navigation - Only visible on mobile -->
 	<div class="lg:hidden">

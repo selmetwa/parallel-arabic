@@ -1,92 +1,126 @@
 <script lang="ts">
-	let { data } = $props();
-
+	// Each track gets its own accent so the grid reads as a set of places to go,
+	// not four copies of the same card.
 	const dialects = [
 		{
 			href: '/lessons/structured/egyptian-arabic',
-			arabic: 'مصر',
+			flag: '🇪🇬',
 			label: 'Egyptian Arabic',
 			sub: 'Masri',
-			flag: '🇪🇬',
-			note: 'Most widely understood dialect worldwide'
+			note: 'Most widely understood dialect worldwide',
+			accent: '#f59e0b',
+			deep: '#b45309'
 		},
 		{
 			href: '/lessons/structured/darija',
-			arabic: 'المغرب',
+			flag: '🇲🇦',
 			label: 'Moroccan Darija',
 			sub: 'Darija',
-			flag: '🇲🇦',
-			note: 'The dialect of North Africa'
+			note: 'The dialect of North Africa',
+			accent: '#f43f5e',
+			deep: '#9f1239'
 		},
 		{
 			href: '/lessons/structured/msa',
-			arabic: 'الفصحى',
+			flag: '📖',
 			label: 'Modern Standard Arabic',
 			sub: 'Fusha',
-			flag: '📖',
-			note: 'Formal Arabic used in media and literature'
+			note: 'Formal Arabic used in media and literature',
+			accent: '#8b5cf6',
+			deep: '#6d28d9'
 		},
 		{
 			href: '/lessons/structured/levantine',
-			arabic: 'الشام',
+			flag: '🇱🇧',
 			label: 'Levantine Arabic',
 			sub: 'Shami',
-			flag: '🇱🇧',
-			note: 'Syria, Lebanon, Jordan and Palestine'
+			note: 'Syria, Lebanon, Jordan and Palestine',
+			accent: '#10b981',
+			deep: '#047857'
 		}
 	];
 </script>
 
 <section class="page">
 	<div class="inner">
-		<div class="back-link">
-			<a href="/lessons">
-				<svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-				</svg>
-				Back to Lessons
-			</a>
-		</div>
-
-		<header class="page-header">
-			<h1>Structured Lessons</h1>
-			<p>Follow a curated path — from alphabet foundations to full dialect fluency.</p>
-		</header>
-
-		<div class="section-label">Foundation</div>
-		<a href="/lessons/structured/alphabet" class="foundation-card">
-			<div class="foundation-glyph" aria-hidden="true">أ</div>
-			<div class="foundation-body">
-				<div class="badge">Start Here</div>
-				<h2>Arabic Alphabet</h2>
-				<p>Master letter forms, vowel marks, and pronunciation — the essential key to every dialect.</p>
-			</div>
-			<div class="foundation-arrow">
-				<svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-				</svg>
-			</div>
+		<a href="/lessons" class="back">
+			<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2.5"
+					d="M15 19l-7-7 7-7"
+				/>
+			</svg>
+			Lessons
 		</a>
 
-		<div class="section-label" style="margin-top: 3rem;">Choose Your Dialect</div>
+		<header class="hero">
+			<h1>Structured lessons</h1>
+			<p>Designed by professionals.</p>
+		</header>
+
+		<!-- Step 1: the alphabet -->
+		<div class="step-head">
+			<span class="step-num">1</span>
+			<h2>Foundation</h2>
+			<span class="step-tag">Start here</span>
+		</div>
+
+		<a
+			href="/lessons/structured/alphabet"
+			class="foundation"
+			style="--accent:#0ea5e9; --deep:#0369a1;"
+		>
+			<span class="foundation-icon" aria-hidden="true">✏️</span>
+			<span class="foundation-body">
+				<span class="foundation-title">Arabic Alphabet</span>
+				<span class="foundation-note">
+					Master letter forms, vowel marks, and pronunciation — the essential key to every dialect.
+				</span>
+			</span>
+			<span class="foundation-go">
+				Start
+				<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2.5"
+						d="M9 5l7 7-7 7"
+					/>
+				</svg>
+			</span>
+		</a>
+
+		<!-- Step 2: the dialect -->
+		<div class="step-head step-head--spaced">
+			<span class="step-num">2</span>
+			<h2>Choose your dialect</h2>
+			<span class="step-tag">Pick one</span>
+		</div>
+
 		<div class="grid">
-			{#each dialects as d (d.href)}
-				<a href={d.href} class="dialect-card" style="--delay: {dialects.indexOf(d) * 80}ms">
-					<div class="dialect-watermark" aria-hidden="true">{d.arabic}</div>
-					<div class="dialect-body">
-						<div class="dialect-top">
-							<span class="dialect-flag">{d.flag}</span>
-							<span class="dialect-sub">{d.sub}</span>
-						</div>
-						<h2 class="dialect-name">{d.label}</h2>
-						<p class="dialect-note">{d.note}</p>
-						<div class="dialect-cta">
-							<span>Start Learning</span>
-							<svg class="cta-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-							</svg>
-						</div>
-					</div>
+			{#each dialects as d, i (d.href)}
+				<a
+					href={d.href}
+					class="card"
+					style="--accent:{d.accent}; --deep:{d.deep}; --delay:{i * 80}ms"
+				>
+					<span class="card-flag" aria-hidden="true">{d.flag}</span>
+					<span class="card-sub">{d.sub}</span>
+					<span class="card-name">{d.label}</span>
+					<span class="card-note">{d.note}</span>
+					<span class="card-go">
+						Start Learning
+						<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2.5"
+								d="M9 5l7 7-7 7"
+							/>
+						</svg>
+					</span>
 				</a>
 			{/each}
 		</div>
@@ -96,298 +130,298 @@
 <style>
 	.page {
 		min-height: 100vh;
-		padding: 2rem 1rem 5rem;
+		padding: 1.5rem 1.25rem 5rem;
 	}
 
 	.inner {
-		max-width: 900px;
+		max-width: 860px;
 		margin: 0 auto;
 	}
 
-	.back-link a {
+	.back {
 		display: inline-flex;
 		align-items: center;
-		gap: 0.4rem;
-		font-size: 0.8rem;
+		gap: 0.3rem;
+		font-size: 0.85rem;
 		font-weight: 600;
 		color: var(--text2);
 		text-decoration: none;
-		transition: color 0.2s;
+		transition:
+			transform 0.2s ease,
+			color 0.2s ease;
 	}
-	.back-link a:hover {
+	.back:hover {
 		color: var(--text1);
+		transform: translateX(-3px);
 	}
-
-	.back-link svg {
+	.back svg {
 		width: 1rem;
 		height: 1rem;
 	}
 
-	.page-header {
-		margin-top: 2.5rem;
-		margin-bottom: 2.5rem;
+	/* Hero */
+	.hero {
+		margin: 2.5rem 0 3rem;
 	}
 
-	.page-header h1 {
-		font-size: clamp(2rem, 5vw, 3rem);
-		font-weight: 700;
-		letter-spacing: -0.03em;
+	.hero h1 {
+		font-size: clamp(2.2rem, 6.5vw, 3.4rem);
+		font-weight: 600;
+		line-height: 1.05;
+		letter-spacing: -0.035em;
 		color: var(--text1);
-		line-height: 1.1;
 	}
 
-	.page-header p {
-		margin-top: 0.6rem;
-		font-size: 1rem;
+	.hero p {
+		margin-top: 0.9rem;
+		font-size: 1.02rem;
+		line-height: 1.55;
 		color: var(--text2);
-		max-width: 42ch;
+		max-width: 44ch;
 	}
 
-	.section-label {
-		font-size: 0.8rem;
-		font-weight: 700;
-		color: var(--text3);
-		margin-bottom: 1rem;
-		border-left: 2px solid var(--brand);
-		padding-left: 0.6rem;
-	}
-
-	/* Foundation Card */
-	.foundation-card {
+	/* Step headings */
+	.step-head {
 		display: flex;
 		align-items: center;
-		gap: 1.5rem;
-		position: relative;
-		overflow: hidden;
-		background: var(--tile3);
-		border-top: 1px solid var(--tile5);
-		border-right: 1px solid var(--tile5);
-		border-bottom: 1px solid var(--tile5);
-		border-left: 3px solid var(--brand);
-		border-radius: 1.25rem;
-		padding: 2rem 1.75rem;
-		text-decoration: none;
-		transition:
-			transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
-			box-shadow 0.25s ease,
-			background 0.2s;
+		gap: 0.7rem;
+		flex-wrap: wrap;
+		margin-bottom: 1rem;
 	}
 
-	.foundation-card:hover {
-		transform: translateY(-3px);
-		box-shadow: 0 12px 36px -8px rgba(0, 0, 0, 0.18);
-		background: var(--tile4);
+	.step-head--spaced {
+		margin-top: 3rem;
 	}
 
-	.foundation-glyph {
-		font-size: 5rem;
-		font-weight: 700;
-		color: var(--brand);
-		opacity: 0.9;
-		line-height: 1;
+	.step-num {
+		display: grid;
+		place-items: center;
+		width: 1.9rem;
+		height: 1.9rem;
+		border-radius: 50%;
+		background: var(--brand);
+		color: #fff;
+		font-size: 0.9rem;
+		font-weight: 600;
 		flex-shrink: 0;
+	}
+
+	.step-head h2 {
+		font-size: 1.25rem;
+		font-weight: 600;
+		letter-spacing: -0.02em;
+		color: var(--text1);
+	}
+
+	.step-tag {
+		font-size: 0.78rem;
+		font-weight: 600;
+		color: var(--text2);
+		background: var(--tile3);
+		border-radius: 100px;
+		padding: 0.25rem 0.7rem;
+	}
+
+	/* Shared "pressable" feel: a solid bottom edge that collapses on click. */
+	.foundation,
+	.card {
+		position: relative;
+		text-decoration: none;
+		border-radius: 1.25rem;
+		background: var(--tile3);
+		border: 2px solid var(--tile5);
+		box-shadow: 0 5px 0 var(--tile5);
+		transition:
+			transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1),
+			box-shadow 0.18s ease,
+			border-color 0.18s ease;
+	}
+
+	.foundation:hover,
+	.card:hover {
+		transform: translateY(-4px);
+		border-color: var(--accent);
+		box-shadow: 0 9px 0 var(--deep);
+	}
+
+	.foundation:active,
+	.card:active {
+		transform: translateY(2px);
+		box-shadow: 0 1px 0 var(--deep);
+	}
+
+	/* Foundation card */
+	.foundation {
+		display: flex;
+		align-items: center;
+		gap: 1.25rem;
+		flex-wrap: wrap;
+		padding: 1.5rem;
+	}
+
+	.foundation-icon {
+		display: grid;
+		place-items: center;
+		width: 3.5rem;
+		height: 3.5rem;
+		flex-shrink: 0;
+		font-size: 1.8rem;
+		border-radius: 1rem;
+		background: color-mix(in srgb, var(--accent) 22%, transparent);
+		transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+	}
+
+	.foundation:hover .foundation-icon {
+		transform: rotate(-3deg) scale(1.04);
 	}
 
 	.foundation-body {
-		flex: 1;
+		flex: 1 1 16rem;
+		min-width: 0;
 	}
 
-	.badge {
-		display: inline-block;
-		font-size: 0.8rem;
-		font-weight: 700;
-		color: var(--brand);
-		background: color-mix(in srgb, var(--brand) 12%, transparent);
-		border: 1px solid color-mix(in srgb, var(--brand) 30%, transparent);
-		border-radius: 100px;
-		padding: 0.2rem 0.65rem;
-		margin-bottom: 0.6rem;
-	}
-
-	.foundation-body h2 {
-		font-size: 1.5rem;
-		font-weight: 700;
+	.foundation-title {
+		display: block;
+		font-size: 1.3rem;
+		font-weight: 600;
+		letter-spacing: -0.02em;
 		color: var(--text1);
-		margin-bottom: 0.4rem;
 	}
 
-	.foundation-body p {
-		font-size: 0.9rem;
+	.foundation-note {
+		display: block;
+		margin-top: 0.35rem;
+		font-size: 0.88rem;
+		line-height: 1.55;
 		color: var(--text2);
-		line-height: 1.5;
-		max-width: 48ch;
+		max-width: 46ch;
 	}
 
-	.foundation-arrow {
-		flex-shrink: 0;
-		width: 2.5rem;
-		height: 2.5rem;
-		display: flex;
+	.foundation-go,
+	.card-go {
+		display: inline-flex;
 		align-items: center;
-		justify-content: center;
-		border-radius: 50%;
-		border: 1px solid var(--tile6);
-		color: var(--text2);
+		gap: 0.35rem;
+		font-size: 0.85rem;
+		font-weight: 600;
+		color: #fff;
+		background: var(--accent);
+		border-radius: 100px;
+		padding: 0.5rem 1.1rem;
+		white-space: nowrap;
 		transition:
-			transform 0.2s,
-			border-color 0.2s,
-			color 0.2s;
+			gap 0.2s ease,
+			filter 0.2s ease;
 	}
 
-	.foundation-card:hover .foundation-arrow {
-		transform: translateX(4px);
-		border-color: var(--brand);
-		color: var(--brand);
+	.foundation:hover .foundation-go,
+	.card:hover .card-go {
+		gap: 0.65rem;
+		filter: brightness(1.08);
 	}
 
-	.foundation-arrow svg {
-		width: 1.1rem;
-		height: 1.1rem;
+	.foundation-go svg,
+	.card-go svg {
+		width: 0.9rem;
+		height: 0.9rem;
 	}
 
-	/* Dialect Grid */
+	/* Dialect grid */
 	.grid {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 1rem;
 	}
 
-	@media (max-width: 560px) {
-		.grid {
-			grid-template-columns: 1fr;
-		}
-	}
-
-	.dialect-card {
-		position: relative;
-		overflow: hidden;
-		background: var(--tile2);
-		border: 1px solid var(--tile4);
-		border-radius: 1.25rem;
-		text-decoration: none;
-		padding: 1.5rem;
-		min-height: 200px;
+	.card {
 		display: flex;
 		flex-direction: column;
-		transition:
-			transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
-			box-shadow 0.25s ease,
-			border-color 0.2s;
-		animation: appear 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+		align-items: flex-start;
+		padding: 1.4rem;
+		animation: pop 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 		animation-delay: var(--delay, 0ms);
 	}
 
-	.dialect-card:hover {
-		transform: translateY(-4px);
-		box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.2);
-		border-color: var(--tile6);
-	}
-
-	.dialect-watermark {
-		position: absolute;
-		bottom: -0.5rem;
-		right: -0.5rem;
-		font-size: 6rem;
-		font-weight: 700;
-		color: var(--text1);
-		opacity: 0.04;
+	.card-flag {
+		font-size: 2rem;
 		line-height: 1;
-		pointer-events: none;
-		user-select: none;
-		transition: opacity 0.3s;
+		margin-bottom: 0.75rem;
+		transition: transform 0.22s ease-out;
 	}
 
-	.dialect-card:hover .dialect-watermark {
-		opacity: 0.08;
+	.card:hover .card-flag {
+		transform: rotate(-3deg) scale(1.05);
 	}
 
-	.dialect-body {
-		position: relative;
-		z-index: 1;
-		display: flex;
-		flex-direction: column;
-		height: 100%;
+	.card-sub {
+		font-size: 0.72rem;
+		font-weight: 600;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--accent);
 	}
 
-	.dialect-top {
-		display: flex;
-		align-items: center;
-		gap: 0.6rem;
-		margin-bottom: 0.9rem;
-	}
-
-	.dialect-flag {
-		font-size: 1.4rem;
-		line-height: 1;
-	}
-
-	.dialect-sub {
-		font-size: 0.8rem;
-		font-weight: 700;
-		color: var(--text3);
-	}
-
-	.dialect-name {
+	.card-name {
 		font-size: 1.15rem;
-		font-weight: 700;
-		color: var(--text1);
+		font-weight: 600;
+		letter-spacing: -0.02em;
 		line-height: 1.2;
-		margin-bottom: 0.5rem;
+		color: var(--text1);
+		margin-top: 0.15rem;
 	}
 
-	.dialect-note {
-		font-size: 0.82rem;
-		color: var(--text2);
+	.card-note {
+		font-size: 0.84rem;
 		line-height: 1.5;
+		color: var(--text2);
+		margin-top: 0.45rem;
 		flex: 1;
 	}
 
-	.dialect-cta {
-		display: flex;
-		align-items: center;
-		gap: 0.4rem;
-		margin-top: 1.2rem;
-		font-size: 0.8rem;
-		font-weight: 600;
-		color: var(--brand);
-		transition: gap 0.2s;
+	.card-go {
+		margin-top: 1.1rem;
 	}
 
-	.dialect-card:hover .dialect-cta {
-		gap: 0.7rem;
-	}
-
-	.cta-arrow {
-		width: 1rem;
-		height: 1rem;
-		transition: transform 0.2s;
-	}
-
-	.dialect-card:hover .cta-arrow {
-		transform: translateX(3px);
-	}
-
-	@keyframes appear {
+	@keyframes pop {
 		from {
 			opacity: 0;
-			transform: translateY(16px);
+			transform: translateY(14px) scale(0.97);
 		}
 		to {
 			opacity: 1;
-			transform: translateY(0);
+			transform: translateY(0) scale(1);
+		}
+	}
+
+	@media (max-width: 620px) {
+		.grid {
+			grid-template-columns: 1fr;
+		}
+		.foundation {
+			padding: 1.25rem;
 		}
 	}
 
 	@media (prefers-reduced-motion: reduce) {
-		.dialect-card {
+		.card {
 			animation: none;
 		}
-		.foundation-card,
-		.dialect-card,
-		.foundation-arrow,
-		.dialect-cta,
-		.cta-arrow {
+		.back,
+		.foundation,
+		.card,
+		.card-flag,
+		.foundation-icon,
+		.foundation-go,
+		.card-go {
 			transition: none;
+		}
+		.foundation:hover,
+		.card:hover {
+			transform: none;
+		}
+		.card:hover .card-flag,
+		.foundation:hover .foundation-icon {
+			transform: none;
 		}
 	}
 </style>

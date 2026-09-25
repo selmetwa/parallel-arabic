@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { wordDragSelect } from '$lib/actions/word-drag-select';
 	import cn from 'classnames';
 
 	import { hue, theme } from '$lib/store/store';
@@ -182,8 +183,7 @@
   }
 
   // Multi-word selection functions
-  function handleWordMouseDown(index: number, event: MouseEvent) {
-    event.preventDefault();
+  function handleWordMouseDown(index: number) {
     isSelecting = true;
     selectionStartIndex = index;
     selectionEndIndex = index;
@@ -449,14 +449,13 @@
 				<!-- Selectable English word display -->
 				<div 
 					class="flex flex-wrap gap-1 items-center justify-center select-none mb-2"
+					use:wordDragSelect={{ onStart: handleWordMouseDown, onExtend: handleWordMouseEnter, onEnd: handleWordMouseUp }}
 					role="group"
 					aria-label="Word selection area for definitions"
 				>
 					{#each word.english.split(' ') as englishWord, index}
 						<button
-							onmousedown={(e) => handleWordMouseDown(index, e)}
-							onmouseenter={() => handleWordMouseEnter(index)}
-							onmouseup={handleWordMouseUp}
+							data-word-index={index}
 							onclick={() => {
 								// Single click selects the word and defines it immediately
 								selectedWords = [englishWord];

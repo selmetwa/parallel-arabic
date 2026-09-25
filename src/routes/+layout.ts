@@ -66,7 +66,8 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
       trialEligible: data.trialEligible ?? false,
       userXp: data.userXp ?? 0,
       userLevel: data.userLevel ?? 1,
-      proficiencyLevel: data.proficiencyLevel ?? null
+      proficiencyLevel: data.proficiencyLevel ?? null,
+      goalLevel: data.goalLevel ?? null
     }
   } catch (error) {
     console.error('❌ [+layout.ts] Error in client layout load:', error)

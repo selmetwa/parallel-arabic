@@ -9,6 +9,7 @@
   import { clearUserLocalStorage } from '$lib/helpers/clear-user-data';
   import { slide, fade } from 'svelte/transition';
   import { WHITELISTED_EMAILS } from '$lib/config/whitelisted-emails';
+  import { CEFR_LEVELS } from '$lib/constants/cefr-levels';
 
   let { data }: { data: PageData } = $props();
 
@@ -529,15 +530,25 @@
                       method="POST"
                       action="?/updateProficiencyLevel"
                       use:enhance={enhanceStatus('proficiency', 'Updated!')}
-                      class="flex flex-row gap-2 items-center"
+                      class="flex flex-row gap-2 items-center flex-wrap"
                     >
                       <select
                         id="proficiency_level"
                         name="proficiency_level"
                         class="bg-tile-300 border-2 border-tile-600 text-text-300 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand text-sm font-medium"
                       >
-                        {#each ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'] as level (level)}
+                        {#each CEFR_LEVELS as level (level)}
                           <option value={level} selected={level === data.proficiencyLevel}>{level}</option>
+                        {/each}
+                      </select>
+                      <select
+                        name="goal_level"
+                        aria-label="Goal level"
+                        class="bg-tile-300 border-2 border-tile-600 text-text-300 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand text-sm font-medium"
+                      >
+                        <option value="" selected={!data.goalLevel}>Goal: not set</option>
+                        {#each CEFR_LEVELS as level (level)}
+                          <option value={level} selected={level === data.goalLevel}>Goal: {level}</option>
                         {/each}
                       </select>
                       <Button type="submit" className="px-4 py-2 text-sm" disabled={getStatus('proficiency').pending}>

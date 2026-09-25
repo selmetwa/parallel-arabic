@@ -1,6 +1,7 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { supabase } from '$lib/supabaseClient';
+import { CEFR_LEVELS, isCefrLevel } from '$lib/constants/cefr-levels';
 
 export const POST: RequestHandler = async ({ request, locals }) => {
 	const { sessionId, user } = (await locals?.auth?.validate()) || {};
@@ -13,6 +14,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		target_dialect,
 		learning_reason,
 		proficiency_level,
+		goal_level,
 		show_arabic,
 		show_transliteration,
 		show_english
@@ -20,14 +22,23 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 
 	// Validate inputs
 	const validDialects = ['egyptian-arabic', 'fusha', 'levantine', 'darija'];
-	const validLevels = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
 
 	if (!target_dialect || !validDialects.includes(target_dialect)) {
 		return json({ error: 'Invalid dialect' }, { status: 400 });
 	}
 
-	if (!proficiency_level || !validLevels.includes(proficiency_level)) {
+	if (!isCefrLevel(proficiency_level)) {
 		return json({ error: 'Invalid proficiency level' }, { status: 400 });
+	}
+
+	// The goal is optional — the onboarding screen can be skipped.
+	if (goal_level !== undefined && goal_level !== null) {
+		if (!isCefrLevel(goal_level)) {
+			return json({ error: 'Invalid goal level' }, { status: 400 });
+		}
+		if (CEFR_LEVELS.indexOf(goal_level) < CEFR_LEVELS.indexOf(proficiency_level)) {
+			return json({ error: 'Goal level cannot be below your current level' }, { status: 400 });
+		}
 	}
 
 	if (!learning_reason || typeof learning_reason !== 'string') {
@@ -42,6 +53,10 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		onboarding_completed: true,
 		onboarding_completed_at: Date.now()
 	};
+
+	if (goal_level) {
+		updateData.goal_level = goal_level;
+	}
 
 	// Add display preferences if provided
 	if (typeof show_arabic === 'boolean') {
