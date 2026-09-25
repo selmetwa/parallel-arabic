@@ -1,552 +1,996 @@
 <script lang="ts">
-  import { fade, fly, scale } from 'svelte/transition';
-  import { cubicOut, backOut } from 'svelte/easing';
-  import { currentDialect } from '$lib/store/store';
-  import { goto } from '$app/navigation';
-  import OnboardingConversation from '$lib/components/onboarding/OnboardingConversation.svelte';
-  import SubscribeButton from '$lib/components/SubscribeButton.svelte';
-  import { onMount } from 'svelte';
-  import { page } from '$app/state';
-  import { isNativeApp } from '$lib/helpers/is-native-app';
-  import { trackEvent } from '$lib/analytics';
-  import type { Dialect } from '$lib/types';
+	import { fade, fly, scale } from 'svelte/transition';
+	import { cubicOut, backOut } from 'svelte/easing';
+	import { currentDialect } from '$lib/store/store';
+	import { goto } from '$app/navigation';
+	import OnboardingConversation from '$lib/components/onboarding/OnboardingConversation.svelte';
+	import LevelSlider from '$lib/components/onboarding/LevelSlider.svelte';
+	import SubscribeButton from '$lib/components/SubscribeButton.svelte';
+	import { CEFR_LEVELS, type CefrLevel } from '$lib/constants/cefr-levels';
+	import { onMount } from 'svelte';
+	import { page } from '$app/state';
+	import { isNativeApp } from '$lib/helpers/is-native-app';
+	import { trackEvent } from '$lib/analytics';
+	import type { Dialect } from '$lib/types';
 
-  type Props = {
-    isOpen: boolean;
-    handleCloseModal: () => void;
-  }
+	type Props = {
+		isOpen: boolean;
+		handleCloseModal: () => void;
+	};
 
-  let { isOpen = false, handleCloseModal = () => {} }: Props = $props();
+	let { isOpen = false, handleCloseModal = () => {} }: Props = $props();
 
-  let step = $state(0);
-  let targetDialect = $state('');
-  let learningReason = $state('');
-  let proficiencyLevel = $state('');
-  let isSubmitting = $state(false);
-  let error = $state('');
+	const STEP = {
+		WELCOME: 0,
+		DIALECT: 1,
+		REASON: 2,
+		LEVEL: 3,
+		GOAL: 4,
+		CONVERSATION: 5,
+		TRIAL: 6
+	} as const;
 
-  // Trial offer (step 5) is web-only: a Stripe trial inside the iOS app would
-  // be an external purchase. isNative stays null until mount, so native users
-  // never see it.
-  let isNative = $state<boolean | null>(null);
-  let pendingDestination = $state('/');
+	/** Steps the header stepper covers — the conversation and trial sit outside it. */
+	const STEPPER_STEPS = [STEP.WELCOME, STEP.DIALECT, STEP.REASON, STEP.LEVEL, STEP.GOAL];
 
-  onMount(() => {
-    isNative = isNativeApp();
-  });
+	/** How far above their current level we pre-set someone's goal. */
+	const GOAL_OFFSET = 2;
 
-  const totalSteps = 4;
+	let step = $state<number>(STEP.WELCOME);
+	let targetDialect = $state('');
+	let learningReason = $state('');
+	let proficiencyLevel = $state<CefrLevel | ''>('');
+	let goalLevel = $state<CefrLevel | ''>('');
+	let isSubmitting = $state(false);
+	let error = $state('');
 
-  const trialBenefits = [
-    'Every dialect: Egyptian, Levantine, Moroccan and Fusha',
-    'Structured lessons with progress tracking',
-    'AI Tutor for speaking practice with real-time feedback',
-    'All stories and conversations with native audio',
-    'Unlimited sentence mining and spaced repetition'
-  ];
+	// Trial offer is web-only: a Stripe trial inside the iOS app would be an
+	// external purchase. isNative stays null until mount, so native users
+	// never see it.
+	let isNative = $state<boolean | null>(null);
+	let pendingDestination = $state('/');
 
-  const dialects = [
-    { id: 'egyptian-arabic', label: 'Egyptian', emoji: '🇪🇬', description: 'Most widely understood dialect' },
-    { id: 'levantine', label: 'Levantine', emoji: '🇱🇧', description: 'Syria, Lebanon, Palestine, Jordan' },
-    { id: 'fusha', label: 'MSA (Fusha)', emoji: '📚', description: 'Formal Arabic for media & literature' },
-    { id: 'darija', label: 'Moroccan', emoji: '🇲🇦', description: 'Unique North African dialect' }
-  ];
+	onMount(() => {
+		isNative = isNativeApp();
+	});
 
-  const learningReasons = [
-    { id: 'Travel', label: 'Travel', emoji: '✈️' },
-    { id: 'Work', label: 'Work', emoji: '💼' },
-    { id: 'Heritage', label: 'Heritage', emoji: '🌍' },
-    { id: 'Academic', label: 'Academic', emoji: '🎓' },
-    { id: 'Personal Interest', label: 'Interest', emoji: '❤️' },
-    { id: 'Other', label: 'Other', emoji: '✨' }
-  ];
+	const trialBenefits = [
+		'Every dialect: Egyptian, Levantine, Moroccan and Fusha',
+		'Structured lessons with progress tracking',
+		'AI Tutor for speaking practice with real-time feedback',
+		'All stories and conversations with native audio',
+		'Unlimited sentence mining and spaced repetition'
+	];
 
-  const proficiencyLevels = [
-    { id: 'A1', label: 'Complete Beginner', tag: 'A1', description: 'Just starting out' },
-    { id: 'A2', label: 'Elementary', tag: 'A2', description: 'Know basic phrases' },
-    { id: 'B1', label: 'Intermediate', tag: 'B1', description: 'Can hold conversations' },
-    { id: 'B2', label: 'Upper Intermediate', tag: 'B2', description: 'Comfortable with most topics' },
-    { id: 'C1', label: 'Advanced', tag: 'C1', description: 'Fluent in complex situations' },
-    { id: 'C2', label: 'Proficient', tag: 'C2', description: 'Near-native level' }
-  ];
+	// Accents match the dialect colours used across the rest of the app.
+	const dialects = [
+		{
+			id: 'egyptian-arabic',
+			label: 'Egyptian',
+			emoji: '🇪🇬',
+			description: 'Most widely understood dialect',
+			accent: '#f59e0b',
+			deep: '#b45309'
+		},
+		{
+			id: 'levantine',
+			label: 'Levantine',
+			emoji: '🇱🇧',
+			description: 'Syria, Lebanon, Palestine, Jordan',
+			accent: '#10b981',
+			deep: '#047857'
+		},
+		{
+			id: 'fusha',
+			label: 'MSA (Fusha)',
+			emoji: '📖',
+			description: 'Formal Arabic for media & literature',
+			accent: '#8b5cf6',
+			deep: '#6d28d9'
+		},
+		{
+			id: 'darija',
+			label: 'Moroccan',
+			emoji: '🇲🇦',
+			description: 'Unique North African dialect',
+			accent: '#f43f5e',
+			deep: '#9f1239'
+		}
+	];
 
-  const stepInfo = [
-    { title: 'Welcome', subtitle: '' },
-    { title: 'Dialect', subtitle: 'Choose your focus' },
-    { title: 'Goals', subtitle: 'Why are you learning?' },
-    { title: 'Level', subtitle: 'Where are you now?' },
-    { title: 'Practice', subtitle: 'Say your first words' },
-    { title: 'Trial', subtitle: '' }
-  ];
+	const learningReasons = [
+		{ id: 'Travel', label: 'Travel', emoji: '✈️', accent: '#0ea5e9', deep: '#0369a1' },
+		{ id: 'Work', label: 'Work', emoji: '💼', accent: '#f59e0b', deep: '#b45309' },
+		{ id: 'Heritage', label: 'Heritage', emoji: '🌍', accent: '#10b981', deep: '#047857' },
+		{ id: 'Academic', label: 'Academic', emoji: '🎓', accent: '#8b5cf6', deep: '#6d28d9' },
+		{ id: 'Personal Interest', label: 'Interest', emoji: '❤️', accent: '#f43f5e', deep: '#9f1239' },
+		{ id: 'Other', label: 'Other', emoji: '✨', accent: '#6366f1', deep: '#4338ca' }
+	];
 
-  function nextStep() {
-    if (step === 0) {
-      step += 1;
-      return;
-    }
-    if (step === 1 && !targetDialect) return;
-    if (step === 2 && !learningReason) return;
-    if (step === 3) {
-      if (!proficiencyLevel) return;
-      handleSubmit();
-      return;
-    }
-    step += 1;
-  }
+	// One entry per step, indexed by the STEP values above.
+	const stepInfo = [
+		{ title: 'Welcome', subtitle: '' },
+		{ title: 'Dialect', subtitle: 'Choose your focus' },
+		{ title: 'Goals', subtitle: 'Why are you learning?' },
+		{ title: 'Level', subtitle: 'Where are you now?' },
+		{ title: 'Target', subtitle: 'Where do you want to get to?' },
+		{ title: 'Practice', subtitle: 'Say your first words' },
+		{ title: 'Trial', subtitle: '' }
+	];
 
-  function prevStep() {
-    if (step > 0) step -= 1;
-  }
+	let showStepper = $derived(STEPPER_STEPS.includes(step as (typeof STEPPER_STEPS)[number]));
 
-  function selectDialect(id: string) {
-    targetDialect = id;
-    currentDialect.set(id);
-    setTimeout(() => nextStep(), 400);
-  }
+	function nextStep() {
+		if (step === STEP.WELCOME) {
+			step += 1;
+			return;
+		}
+		if (step === STEP.DIALECT && !targetDialect) return;
+		if (step === STEP.REASON && !learningReason) return;
+		if (step === STEP.LEVEL) {
+			if (!proficiencyLevel) return;
+			applyGoalDefault();
+			step = STEP.GOAL;
+			return;
+		}
+		if (step === STEP.GOAL) {
+			if (!goalLevel) return;
+			handleSubmit();
+			return;
+		}
+		step += 1;
+	}
 
-  function selectReason(id: string) {
-    learningReason = id;
-    setTimeout(() => nextStep(), 400);
-  }
+	function prevStep() {
+		if (step > 0) step -= 1;
+	}
 
-  function selectLevel(id: string) {
-    proficiencyLevel = id;
-    setTimeout(() => nextStep(), 400);
-  }
+	/**
+	 * Opens the goal screen a couple of levels ahead, and pulls a goal that now sits
+	 * below the current level (they went back and raised it) back up to a sane target.
+	 */
+	function applyGoalDefault() {
+		const currentIndex = CEFR_LEVELS.indexOf(proficiencyLevel as CefrLevel);
+		if (currentIndex < 0) return;
 
-  async function handleSubmit() {
-    if (!targetDialect || !learningReason || !proficiencyLevel) {
-      error = 'Please complete all steps';
-      return;
-    }
+		const goalIndex = goalLevel ? CEFR_LEVELS.indexOf(goalLevel) : -1;
+		if (goalIndex >= currentIndex) return;
 
-    if (isSubmitting) return;
+		goalLevel = CEFR_LEVELS[Math.min(CEFR_LEVELS.length - 1, currentIndex + GOAL_OFFSET)];
+	}
 
-    isSubmitting = true;
-    error = '';
+	function selectDialect(id: string) {
+		targetDialect = id;
+		currentDialect.set(id);
+		setTimeout(() => nextStep(), 400);
+	}
 
-    try {
-      const response = await fetch('/api/onboarding', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          target_dialect: targetDialect,
-          learning_reason: learningReason,
-          proficiency_level: proficiencyLevel
-        })
-      });
+	function selectReason(id: string) {
+		learningReason = id;
+		setTimeout(() => nextStep(), 400);
+	}
 
-      const data = await response.json();
+	function skipGoal() {
+		goalLevel = '';
+		handleSubmit();
+	}
 
-      if (!response.ok) {
-        throw new Error(data.error || 'Failed to save onboarding data');
-      }
-    } catch (e) {
-      error = e instanceof Error ? e.message : 'Something went wrong';
-      isSubmitting = false;
-      return;
-    }
+	async function handleSubmit() {
+		if (!targetDialect || !learningReason || !proficiencyLevel) {
+			error = 'Please complete all steps';
+			return;
+		}
 
-    isSubmitting = false;
-    step = 4;
-  }
+		if (isSubmitting) return;
 
-  function getStaggerDelay(index: number) {
-    return index * 80;
-  }
+		isSubmitting = true;
+		error = '';
 
-  async function finishOnboarding(destination: string) {
-    handleCloseModal();
-    await goto(destination, { replaceState: true });
-  }
+		try {
+			const response = await fetch('/api/onboarding', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({
+					target_dialect: targetDialect,
+					learning_reason: learningReason,
+					proficiency_level: proficiencyLevel,
+					goal_level: goalLevel || null
+				})
+			});
 
-  /**
-   * End of the first speaking win. Eligible web users get the trial offer
-   * before they leave; everyone else lands exactly where they did before.
-   */
-  async function handleConversationFinish(destination: string) {
-    pendingDestination = destination;
+			const data = await response.json();
 
-    if (isNative === false && page.data.trialEligible === true) {
-      trackEvent('trial_offer_shown', { placement: 'onboarding' });
-      step = 5;
-      return;
-    }
+			if (!response.ok) {
+				throw new Error(data.error || 'Failed to save onboarding data');
+			}
+		} catch (e) {
+			error = e instanceof Error ? e.message : 'Something went wrong';
+			isSubmitting = false;
+			return;
+		}
 
-    await finishOnboarding(destination);
-  }
+		isSubmitting = false;
+		step = STEP.CONVERSATION;
+	}
 
-  async function skipTrial() {
-    trackEvent('trial_offer_skipped', { placement: 'onboarding' });
-    await finishOnboarding(pendingDestination);
-  }
+	function getStaggerDelay(index: number) {
+		return index * 80;
+	}
+
+	async function finishOnboarding(destination: string) {
+		handleCloseModal();
+		await goto(destination, { replaceState: true });
+	}
+
+	/**
+	 * End of the first speaking win. Eligible web users get the trial offer
+	 * before they leave; everyone else lands exactly where they did before.
+	 */
+	async function handleConversationFinish(destination: string) {
+		pendingDestination = destination;
+
+		if (isNative === false && page.data.trialEligible === true) {
+			trackEvent('trial_offer_shown', { placement: 'onboarding' });
+			step = STEP.TRIAL;
+			return;
+		}
+
+		await finishOnboarding(destination);
+	}
+
+	async function skipTrial() {
+		trackEvent('trial_offer_skipped', { placement: 'onboarding' });
+		await finishOnboarding(pendingDestination);
+	}
 </script>
 
-<style>
-  /* Layered atmospheric background: petrol-tinted glow + Islamic star tessellation + vignette */
-  .onboarding-bg {
-    background:
-      radial-gradient(120% 90% at 50% -10%, hsl(var(--brand-hue) 40% 55% / 0.18), transparent 55%),
-      radial-gradient(90% 70% at 100% 100%, hsl(var(--brand-hue) 30% 40% / 0.12), transparent 50%),
-      linear-gradient(160deg, var(--tile3) 0%, var(--tile4) 55%, var(--tile3) 100%);
-  }
-
-  /* Soft inner vignette to focus the eye toward center */
-  .onboarding-bg::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background: radial-gradient(120% 100% at 50% 35%, transparent 55%, hsl(var(--brand-hue) 30% 12% / 0.22) 100%);
-  }
-
-  .geometric-pattern {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cg fill='none' stroke='currentColor' stroke-width='0.5'%3E%3Cpolygon points='24,4 29,19 44,19 32,29 37,44 24,34 11,44 16,29 4,19 19,19' /%3E%3C/g%3E%3C/svg%3E");
-    background-size: 48px 48px;
-  }
-
-  .card-hover {
-    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .card-hover:hover {
-    transform: translateY(-5px);
-  }
-
-  .selected-card {
-    transform: translateY(-5px) scale(1.015);
-  }
-
-  .progress-step {
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  /* Slow drift for the current-step ring */
-  @keyframes ring-pulse {
-    0%, 100% { box-shadow: 0 0 0 0 hsl(var(--brand-hue) 40% 50% / 0.35); }
-    50% { box-shadow: 0 0 0 6px hsl(var(--brand-hue) 40% 50% / 0); }
-  }
-  .ring-pulse { animation: ring-pulse 2.4s ease-in-out infinite; }
-</style>
-
 {#if isOpen}
-  <div
-    class="onboarding-bg fixed inset-0 z-50 overflow-hidden h-dvh"
-    transition:fade={{ duration: 300 }}
-  >
-    <!-- Geometric tessellation -->
-    <div class="absolute inset-0 pointer-events-none overflow-hidden">
-      <div class="geometric-pattern absolute inset-0 text-text-300 opacity-[0.05]"></div>
-    </div>
+	<div
+		class="onboarding-bg fixed inset-0 z-50 h-dvh overflow-hidden"
+		transition:fade={{ duration: 300 }}
+	>
+		<div class="relative flex h-full w-full flex-col">
+			<!-- Header with Progress -->
+			{#if showStepper}
+				<div class="px-4 pb-2 pt-5 sm:px-8 sm:pt-7">
+					<div class="mb-3 flex items-center justify-center gap-1.5 sm:gap-2">
+						{#each STEPPER_STEPS as stepperStep, i (stepperStep)}
+							<button
+								type="button"
+								class="step {stepperStep === step ? 'is-on' : ''} {stepperStep < step
+									? 'is-done'
+									: ''}"
+								onclick={() => {
+									if (stepperStep < step) step = stepperStep;
+								}}
+								disabled={stepperStep > step}
+								aria-label={`Step ${i + 1}`}
+								aria-current={stepperStep === step ? 'step' : undefined}
+							>
+								{#if stepperStep < step}
+									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="3.5"
+											d="M5 13l4 4L19 7"
+										/>
+									</svg>
+								{:else}
+									{i + 1}
+								{/if}
+							</button>
+							{#if i < STEPPER_STEPS.length - 1}
+								<div class="connector {stepperStep < step ? 'is-done' : ''}"></div>
+							{/if}
+						{/each}
+					</div>
 
-    <!-- Main Container -->
-    <div class="relative h-full w-full flex flex-col">
-      <!-- Header with Progress -->
-      <div class="px-4 sm:px-8 pt-5 sm:pt-7 pb-2">
-        <!-- Step Indicators -->
-        <div class="flex items-center justify-center gap-2 sm:gap-2.5 mb-3">
-          {#each Array(totalSteps) as _, i (i)}
-            <button
-              class="progress-step flex items-center"
-              onclick={() => { if (i < step) step = i; }}
-              disabled={i > step}
-              aria-label={`Step ${i + 1}`}
-            >
-              <div
-                class="w-7 h-7 sm:w-9 sm:h-9 rounded-full flex items-center justify-center text-[11px] sm:text-sm font-semibold transition-all duration-300
-                  {i < step
-                    ? 'bg-text-300 text-tile-300'
-                    : i === step
-                      ? 'bg-tile-300/60 text-text-300 ring-2 ring-text-300 ring-pulse'
-                      : 'bg-tile-500/60 text-text-200/60'}"
-              >
-                {#if i < step}
-                  <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                {:else}
-                  {i + 1}
-                {/if}
-              </div>
-            </button>
-            {#if i < totalSteps - 1}
-              <div class="w-6 sm:w-10 h-px rounded-full transition-all duration-500 {i < step ? 'bg-text-300' : 'bg-text-300/15'}"></div>
-            {/if}
-          {/each}
-        </div>
+					<div class="h-5 text-center">
+						{#if stepInfo[step].subtitle}
+							<span class="step-label">{stepInfo[step].subtitle}</span>
+						{/if}
+					</div>
+				</div>
+			{/if}
 
-        <!-- Current Step Label -->
-        <div class="text-center h-4">
-          {#if stepInfo[step].subtitle}
-            <span class="text-xs text-text-200 font-semibold">
-              {String(step).padStart(2, '0')} &nbsp;·&nbsp; {stepInfo[step].subtitle}
-            </span>
-          {/if}
-        </div>
-      </div>
+			<!-- Content Area -->
+			<div class="flex flex-1 items-center justify-center overflow-y-auto px-4 py-4 sm:px-8">
+				<div class="w-full max-w-4xl">
+					<!-- Step 0: Welcome -->
+					{#if step === STEP.WELCOME}
+						<div
+							class="flex flex-col items-center text-center"
+							in:fly={{ y: 30, duration: 500, easing: cubicOut }}
+						>
+							<span class="brand-kicker" in:fade={{ duration: 500, delay: 150 }}
+								>Parallel Arabic</span
+							>
 
-      <!-- Content Area -->
-      <div class="flex-1 flex items-center justify-center px-4 sm:px-8 py-4 overflow-hidden">
-        <div class="w-full max-w-4xl">
+							<h1
+								class="font-arabic mb-3 text-4xl font-bold text-text-300 sm:mb-4 sm:text-5xl lg:text-6xl"
+								dir="rtl"
+								lang="ar"
+								in:scale={{ start: 0.85, duration: 700, delay: 200, easing: backOut }}
+							>
+								أهلاً وسهلاً
+							</h1>
 
-          <!-- Step 0: Welcome -->
-          {#if step === 0}
-            <div
-              class="flex flex-col items-center text-center"
-              in:fly={{ y: 30, duration: 500, easing: cubicOut }}
-            >
-              <span
-                class="text-xs text-text-200 font-semibold mb-5 sm:mb-7"
-                in:fade={{ duration: 500, delay: 150 }}
-              >
-                Parallel Arabic
-              </span>
+							<div
+								class="mb-5 flex items-center gap-3 sm:mb-7 sm:gap-4"
+								in:fly={{ y: 16, duration: 500, delay: 380, easing: cubicOut }}
+							>
+								<span class="bg-text-300/25 h-px w-8 sm:w-12"></span>
+								<span class="text-base font-semibold tracking-wide text-text-300 sm:text-lg"
+									>Welcome</span
+								>
+								<span class="bg-text-300/25 h-px w-8 sm:w-12"></span>
+							</div>
 
-              <!-- Bilingual hero lockup: Arabic over a clean Latin line -->
-              <h1
-                class="font-arabic font-bold text-text-300 text-4xl sm:text-5xl lg:text-6xl mb-3 sm:mb-4"
-                dir="rtl"
-                lang="ar"
-                in:scale={{ start: 0.85, duration: 700, delay: 200, easing: backOut }}
-              >
-                أهلاً وسهلاً
-              </h1>
+							<p
+								class="mb-8 max-w-md text-base leading-relaxed text-text-200 sm:mb-10 sm:text-lg"
+								in:fly={{ y: 20, duration: 500, delay: 500, easing: cubicOut }}
+							>
+								Arabic isn't one language — it's Egyptian, Levantine, Moroccan, Modern Standard, and
+								more. Parallel Arabic is built around the variety you actually want to learn. Let's
+								set you up in a few quick steps.
+							</p>
 
-              <div
-                class="flex items-center gap-3 sm:gap-4 mb-5 sm:mb-7"
-                in:fly={{ y: 16, duration: 500, delay: 380, easing: cubicOut }}
-              >
-                <span class="h-px w-8 sm:w-12 bg-text-300/30"></span>
-                <span class="text-base sm:text-lg font-semibold text-text-300 tracking-wide">Welcome</span>
-                <span class="h-px w-8 sm:w-12 bg-text-300/30"></span>
-              </div>
+							<button
+								class="press"
+								style="--accent:#22c55e; --deep:#15803d;"
+								onclick={nextStep}
+								in:fly={{ y: 20, duration: 500, delay: 620, easing: cubicOut }}
+							>
+								Get Started
+								<svg
+									class="h-5 w-5"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+									stroke-width="2.5"
+									aria-hidden="true"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										d="M13 7l5 5m0 0l-5 5m5-5H6"
+									/>
+								</svg>
+							</button>
+						</div>
+					{/if}
 
-              <p
-                class="text-text-200 text-base sm:text-lg leading-relaxed max-w-md mb-8 sm:mb-10"
-                in:fly={{ y: 20, duration: 500, delay: 500, easing: cubicOut }}
-              >
-                Arabic isn't one language — it's Egyptian, Levantine, Moroccan, Modern Standard, and more. Parallel Arabic is built around the variety you actually want to learn. Let's set you up in a few quick steps.
-              </p>
+					<!-- Step 1: Dialect Selection -->
+					{#if step === STEP.DIALECT}
+						<div in:fly={{ y: 30, duration: 500, easing: cubicOut }}>
+							<div class="mb-7 text-center">
+								<h2 class="screen-title">Choose Your Dialect</h2>
+								<p class="screen-sub">Select the Arabic dialect you want to master</p>
+								<p class="screen-note">This shapes all your lessons, stories, and vocabulary.</p>
+							</div>
 
-              <button
-                class="group relative px-9 py-3.5 bg-text-300 text-tile-300 rounded-full font-semibold text-base sm:text-lg
-                  hover:-translate-y-0.5 transition-all duration-300 hover:shadow-xl hover:shadow-text-300/20"
-                onclick={nextStep}
-                in:fly={{ y: 20, duration: 500, delay: 620, easing: cubicOut }}
-              >
-                <span class="flex items-center gap-2">
-                  Get Started
-                  <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </span>
-              </button>
-            </div>
-          {/if}
+							<div class="mx-auto grid max-w-2xl grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
+								{#each dialects as dialect, i (dialect.id)}
+									<button
+										class="pick {targetDialect === dialect.id ? 'is-on' : ''}"
+										style="--accent:{dialect.accent}; --deep:{dialect.deep};"
+										aria-pressed={targetDialect === dialect.id}
+										onclick={() => selectDialect(dialect.id)}
+										in:fly={{ y: 30, duration: 400, delay: getStaggerDelay(i), easing: cubicOut }}
+									>
+										<span class="pick-emoji" aria-hidden="true">{dialect.emoji}</span>
+										<span class="min-w-0 flex-1 text-left">
+											<span class="pick-name">{dialect.label}</span>
+											<span class="pick-desc">{dialect.description}</span>
+										</span>
+										{#if targetDialect === dialect.id}
+											<span
+												class="pick-check"
+												in:scale={{ duration: 250, easing: backOut }}
+												aria-hidden="true"
+											>
+												<svg
+													fill="none"
+													viewBox="0 0 24 24"
+													stroke="currentColor"
+													stroke-width="3.5"
+												>
+													<path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+												</svg>
+											</span>
+										{/if}
+									</button>
+								{/each}
+							</div>
+						</div>
+					{/if}
 
-          <!-- Step 1: Dialect Selection -->
-          {#if step === 1}
-            <div in:fly={{ y: 30, duration: 500, easing: cubicOut }}>
-              <div class="text-center mb-7">
-                <h2 class="text-2xl sm:text-3xl font-bold text-text-300 mb-1.5 tracking-tight">Choose Your Dialect</h2>
-                <p class="text-text-200 text-sm sm:text-base">Select the Arabic dialect you want to master</p>
-                <p class="text-text-200/70 text-xs sm:text-sm mt-1">This shapes all your lessons, stories, and vocabulary.</p>
-              </div>
+					<!-- Step 2: Learning Reason -->
+					{#if step === STEP.REASON}
+						<div in:fly={{ y: 30, duration: 500, easing: cubicOut }}>
+							<div class="mb-7 text-center">
+								<h2 class="screen-title">What's Your Goal?</h2>
+								<p class="screen-sub">This helps us personalize your experience</p>
+							</div>
 
-              <div class="grid grid-cols-2 gap-3 sm:gap-4 max-w-2xl mx-auto">
-                {#each dialects as dialect, i (dialect.id)}
-                  <button
-                    class="card-hover group p-4 sm:p-5 rounded-2xl border text-left backdrop-blur-sm
-                      {targetDialect === dialect.id
-                        ? 'selected-card bg-text-300/[0.07] border-text-300 shadow-xl shadow-text-300/10'
-                        : 'bg-tile-300/40 border-text-300/10 hover:border-text-300/40 hover:bg-tile-300/70'}"
-                    onclick={() => selectDialect(dialect.id)}
-                    in:fly={{ y: 30, duration: 400, delay: getStaggerDelay(i), easing: cubicOut }}
-                  >
-                    <div class="flex items-start gap-3">
-                      <span class="text-3xl sm:text-4xl transition-transform duration-300 group-hover:scale-110">{dialect.emoji}</span>
-                      <div class="flex-1 min-w-0">
-                        <span class="font-bold text-base sm:text-lg text-text-300 block">{dialect.label}</span>
-                        <span class="text-xs sm:text-sm text-text-200 line-clamp-2">{dialect.description}</span>
-                      </div>
-                      {#if targetDialect === dialect.id}
-                        <div class="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-text-300 flex items-center justify-center flex-shrink-0" in:scale={{ duration: 250, easing: backOut }}>
-                          <svg class="w-3 h-3 sm:w-4 sm:h-4 text-tile-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                          </svg>
-                        </div>
-                      {/if}
-                    </div>
-                  </button>
-                {/each}
-              </div>
-            </div>
-          {/if}
+							<div class="mx-auto grid max-w-xl grid-cols-3 gap-2.5 sm:gap-3">
+								{#each learningReasons as reason, i (reason.id)}
+									<button
+										class="reason {learningReason === reason.id ? 'is-on' : ''}"
+										style="--accent:{reason.accent}; --deep:{reason.deep};"
+										aria-pressed={learningReason === reason.id}
+										onclick={() => selectReason(reason.id)}
+										in:fly={{ y: 30, duration: 400, delay: getStaggerDelay(i), easing: cubicOut }}
+									>
+										<span class="reason-emoji" aria-hidden="true">{reason.emoji}</span>
+										<span class="reason-label">{reason.label}</span>
+									</button>
+								{/each}
+							</div>
+						</div>
+					{/if}
 
-          <!-- Step 2: Learning Reason -->
-          {#if step === 2}
-            <div in:fly={{ y: 30, duration: 500, easing: cubicOut }}>
-              <div class="text-center mb-7">
-                <h2 class="text-2xl sm:text-3xl font-bold text-text-300 mb-1.5 tracking-tight">What's Your Goal?</h2>
-                <p class="text-text-200 text-sm sm:text-base">This helps us personalize your experience</p>
-              </div>
+					<!-- Step 3: Current level -->
+					{#if step === STEP.LEVEL}
+						<div in:fly={{ y: 30, duration: 500, easing: cubicOut }}>
+							<div class="mb-8 text-center">
+								<h2 class="screen-title">How strong is your Arabic right now?</h2>
+								<p class="screen-sub">Be honest — we'll meet you where you are.</p>
+							</div>
 
-              <div class="grid grid-cols-3 gap-2.5 sm:gap-3 max-w-xl mx-auto">
-                {#each learningReasons as reason, i (reason.id)}
-                  <button
-                    class="card-hover group relative p-3 sm:p-5 rounded-2xl border flex flex-col items-center gap-2 backdrop-blur-sm
-                      {learningReason === reason.id
-                        ? 'selected-card bg-text-300/[0.07] border-text-300 shadow-xl shadow-text-300/10'
-                        : 'bg-tile-300/40 border-text-300/10 hover:border-text-300/40 hover:bg-tile-300/70'}"
-                    onclick={() => selectReason(reason.id)}
-                    in:fly={{ y: 30, duration: 400, delay: getStaggerDelay(i), easing: cubicOut }}
-                  >
-                    <span class="text-2xl sm:text-3xl transition-transform duration-300 group-hover:scale-110">{reason.emoji}</span>
-                    <span class="font-semibold text-xs sm:text-sm text-text-300">{reason.label}</span>
-                    {#if learningReason === reason.id}
-                      <div class="absolute top-2 right-2 w-4 h-4 rounded-full bg-text-300 flex items-center justify-center" in:scale={{ duration: 250, easing: backOut }}>
-                        <svg class="w-2.5 h-2.5 text-tile-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                    {/if}
-                  </button>
-                {/each}
-              </div>
-            </div>
-          {/if}
+							<LevelSlider
+								variant="now"
+								value={proficiencyLevel}
+								onSelect={(level) => (proficiencyLevel = level)}
+								hint="Tap on the level that best describes you"
+							/>
 
-          <!-- Step 3: Proficiency Level -->
-          {#if step === 3}
-            <div in:fly={{ y: 30, duration: 500, easing: cubicOut }}>
-              <div class="text-center mb-7">
-                <h2 class="text-2xl sm:text-3xl font-bold text-text-300 mb-1.5 tracking-tight">Your Current Level</h2>
-                <p class="text-text-200 text-sm sm:text-base">Be honest — we'll meet you where you are</p>
-              </div>
+							<div class="mt-8 flex justify-center">
+								<button
+									class="press"
+									style="--accent:#22c55e; --deep:#15803d;"
+									disabled={!proficiencyLevel}
+									onclick={nextStep}
+								>
+									Continue
+								</button>
+							</div>
+						</div>
+					{/if}
 
-              <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 sm:gap-3 max-w-2xl mx-auto">
-                {#each proficiencyLevels as level, i (level.id)}
-                  <button
-                    class="card-hover group p-3 sm:p-4 rounded-2xl border text-left relative overflow-hidden backdrop-blur-sm
-                      {proficiencyLevel === level.id
-                        ? 'selected-card bg-text-300/[0.07] border-text-300 shadow-xl shadow-text-300/10'
-                        : 'bg-tile-300/40 border-text-300/10 hover:border-text-300/40 hover:bg-tile-300/70'}"
-                    onclick={() => selectLevel(level.id)}
-                    in:fly={{ y: 30, duration: 400, delay: getStaggerDelay(i), easing: cubicOut }}
-                  >
-                    <div class="flex items-start justify-between gap-2">
-                      <div>
-                        <span class="inline-block px-2 py-0.5 rounded-md text-xs font-bold mb-1.5 tracking-wide
-                          {proficiencyLevel === level.id ? 'bg-text-300 text-tile-300' : 'bg-text-300/10 text-text-200'}">
-                          {level.tag}
-                        </span>
-                        <span class="font-semibold text-sm sm:text-base text-text-300 block">{level.label}</span>
-                        <span class="text-xs text-text-200">{level.description}</span>
-                      </div>
-                      {#if proficiencyLevel === level.id}
-                        <div class="w-5 h-5 rounded-full bg-text-300 flex items-center justify-center flex-shrink-0" in:scale={{ duration: 250, easing: backOut }}>
-                          <svg class="w-3 h-3 text-tile-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                          </svg>
-                        </div>
-                      {/if}
-                    </div>
-                  </button>
-                {/each}
-              </div>
+					<!-- Step 4: Goal level -->
+					{#if step === STEP.GOAL}
+						<div in:fly={{ y: 30, duration: 500, easing: cubicOut }}>
+							<div class="mb-8 text-center">
+								<h2 class="screen-title">Where do you want to get to in the next year?</h2>
+								<p class="screen-sub">Pick a level and we'll build your path towards it.</p>
+							</div>
 
-              {#if isSubmitting}
-                <div class="mt-7 flex justify-center" in:fade={{ duration: 200 }}>
-                  <div class="flex items-center gap-3 text-text-300 px-8 py-3.5">
-                    <div class="w-5 h-5 border-2 border-text-300 border-t-transparent rounded-full animate-spin"></div>
-                    <span class="font-medium">Setting up your experience...</span>
-                  </div>
-                </div>
-              {/if}
-            </div>
-          {/if}
+							<LevelSlider
+								variant="goal"
+								value={goalLevel}
+								minLevel={proficiencyLevel}
+								onSelect={(level) => (goalLevel = level)}
+								hint="Tap on your goal level"
+							/>
 
-          <!-- Step 4: First conversation -->
-          {#if step === 4}
-            <div in:fly={{ y: 30, duration: 500, easing: cubicOut }}>
-              <OnboardingConversation
-                dialect={targetDialect as Dialect}
-                {proficiencyLevel}
-                onFinish={handleConversationFinish}
-              />
-            </div>
-          {/if}
+							<div class="mt-8 flex justify-center">
+								<button
+									class="press"
+									style="--accent:#22c55e; --deep:#15803d;"
+									disabled={!goalLevel || isSubmitting}
+									onclick={nextStep}
+								>
+									Continue
+								</button>
+							</div>
 
-          <!-- Step 5: Free trial offer (web only) -->
-          {#if step === 5}
-            <div class="max-w-xl mx-auto text-center" in:fly={{ y: 30, duration: 500, easing: cubicOut }}>
-              <h2 class="text-2xl sm:text-3xl font-bold text-text-300 mb-2 tracking-tight">
-                Unlock everything free for 7 days
-              </h2>
-              <p class="text-text-200 text-sm sm:text-base mb-6">
-                $0 today, then $10/month. Cancel anytime.
-              </p>
+							{#if isSubmitting}
+								<div class="mt-7 flex justify-center" in:fade={{ duration: 200 }}>
+									<div class="flex items-center gap-3 px-8 py-3.5 text-text-300">
+										<div
+											class="h-5 w-5 animate-spin rounded-full border-2 border-text-300 border-t-transparent"
+										></div>
+										<span class="font-medium">Setting up your experience...</span>
+									</div>
+								</div>
+							{/if}
+						</div>
+					{/if}
 
-              <ul class="text-left flex flex-col gap-3 mb-7 bg-tile-300/40 border border-text-300/10 rounded-2xl p-5">
-                {#each trialBenefits as benefit (benefit)}
-                  <li class="flex items-start gap-3 text-text-200 text-sm sm:text-base">
-                    <svg class="w-5 h-5 shrink-0 mt-0.5 text-text-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span>{benefit}</span>
-                  </li>
-                {/each}
-              </ul>
+					<!-- Step 5: First conversation -->
+					{#if step === STEP.CONVERSATION}
+						<div in:fly={{ y: 30, duration: 500, easing: cubicOut }}>
+							<OnboardingConversation
+								dialect={targetDialect as Dialect}
+								{proficiencyLevel}
+								onFinish={handleConversationFinish}
+							/>
+						</div>
+					{/if}
 
-              <SubscribeButton className="!py-3 !text-lg w-full" />
+					<!-- Step 6: Free trial offer (web only) -->
+					{#if step === STEP.TRIAL}
+						<div
+							class="mx-auto max-w-xl text-center"
+							in:fly={{ y: 30, duration: 500, easing: cubicOut }}
+						>
+							<div class="trial-emoji" aria-hidden="true">🎁</div>
+							<h2 class="screen-title">Unlock everything free for 7 days</h2>
+							<p class="screen-sub mb-6">$0 today, then $10/month. Cancel anytime.</p>
 
-              <button
-                class="mt-4 text-sm font-medium text-text-200 hover:text-text-300 underline transition-colors"
-                onclick={skipTrial}
-              >
-                Continue with the free plan
-              </button>
-            </div>
-          {/if}
+							<ul class="trial-list">
+								{#each trialBenefits as benefit (benefit)}
+									<li>
+										<svg
+											fill="none"
+											viewBox="0 0 24 24"
+											stroke="currentColor"
+											stroke-width="3"
+											aria-hidden="true"
+										>
+											<path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+										</svg>
+										<span>{benefit}</span>
+									</li>
+								{/each}
+							</ul>
 
-          <!-- Error Message -->
-          {#if error}
-            <div
-              class="mt-4 p-3 rounded-xl bg-red-500/10 border border-red-500/30 text-red-300 text-sm text-center max-w-md mx-auto"
-              in:fly={{ y: 10, duration: 300 }}
-            >
-              {error}
-            </div>
-          {/if}
-        </div>
-      </div>
+							<SubscribeButton className="!py-3 !text-lg w-full !rounded-2xl" />
 
-      <!-- Footer Navigation -->
-      {#if step > 0 && step < 4}
-        <div class="px-4 sm:px-8 pb-5 sm:pb-7">
-          <div class="flex justify-between items-center max-w-2xl mx-auto">
-            <button
-              class="group flex items-center gap-2 px-4 py-2 text-text-200 hover:text-text-300 transition-colors duration-200 rounded-full hover:bg-text-300/5"
-              onclick={prevStep}
-            >
-              <svg class="w-4 h-4 transition-transform duration-200 group-hover:-translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M11 17l-5-5m0 0l5-5m-5 5h12" />
-              </svg>
-              <span class="text-sm font-medium">Back</span>
-            </button>
+							<button class="skip-link mt-4" onclick={skipTrial}>Continue with the free plan</button
+							>
+						</div>
+					{/if}
 
-            <button
-              class="group flex items-center gap-2 px-5 py-2 text-text-200 hover:text-text-300 rounded-full hover:bg-text-300/5 transition-colors duration-200"
-              onclick={nextStep}
-            >
-              <span class="text-sm font-medium">Skip</span>
-              <svg class="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      {/if}
-    </div>
-  </div>
+					<!-- Error Message -->
+					{#if error}
+						<div class="error-note" in:fly={{ y: 10, duration: 300 }}>{error}</div>
+					{/if}
+				</div>
+			</div>
+
+			<!-- Footer Navigation -->
+			{#if step >= STEP.DIALECT && step <= STEP.GOAL}
+				<div class="px-4 pb-5 sm:px-8 sm:pb-7">
+					<div class="mx-auto flex max-w-2xl items-center justify-between">
+						<button class="nav-pill" onclick={prevStep}>
+							<svg
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+								stroke-width="2.5"
+								aria-hidden="true"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M11 17l-5-5m0 0l5-5m-5 5h12"
+								/>
+							</svg>
+							Back
+						</button>
+
+						<button class="nav-pill" onclick={step === STEP.GOAL ? skipGoal : nextStep}>
+							Skip
+							<svg
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+								stroke-width="2.5"
+								aria-hidden="true"
+							>
+								<path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+							</svg>
+						</button>
+					</div>
+				</div>
+			{/if}
+		</div>
+	</div>
 {/if}
+
+<style>
+	/* A soft brand wash — warm and open, rather than the old vignette + tessellation */
+	.onboarding-bg {
+		background: radial-gradient(
+				90% 70% at 15% 0%,
+				hsl(var(--brand-hue) 45% 55% / 0.16),
+				transparent 60%
+			),
+			radial-gradient(80% 60% at 100% 100%, hsl(145 45% 50% / 0.12), transparent 55%), var(--tile2);
+	}
+
+	/* Stepper */
+	.step {
+		display: grid;
+		place-items: center;
+		width: 2.1rem;
+		height: 2.1rem;
+		flex-shrink: 0;
+		border-radius: 50%;
+		border: 2px solid var(--tile5);
+		background: var(--tile3);
+		font-size: 0.82rem;
+		font-weight: 600;
+		color: var(--text2);
+		cursor: pointer;
+		transition:
+			transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1),
+			background 0.2s ease,
+			border-color 0.2s ease,
+			color 0.2s ease;
+	}
+
+	.step:disabled {
+		cursor: default;
+		opacity: 0.55;
+	}
+
+	.step:not(:disabled):hover {
+		transform: translateY(-2px);
+	}
+
+	.step.is-on {
+		background: var(--brand);
+		border-color: var(--brand);
+		color: #fff;
+		transform: scale(1.1);
+	}
+
+	.step.is-done {
+		background: #22c55e;
+		border-color: #15803d;
+		color: #fff;
+	}
+
+	.step svg {
+		width: 0.9rem;
+		height: 0.9rem;
+	}
+
+	.connector {
+		width: 1.5rem;
+		height: 2px;
+		border-radius: 100px;
+		background: var(--tile5);
+		transition: background 0.4s ease;
+	}
+	@media (min-width: 640px) {
+		.connector {
+			width: 2.5rem;
+		}
+	}
+	.connector.is-done {
+		background: #22c55e;
+	}
+
+	.step-label {
+		font-size: 0.75rem;
+		font-weight: 600;
+		color: var(--text2);
+	}
+
+	/* Headings */
+	.brand-kicker {
+		display: inline-block;
+		margin-bottom: 1.25rem;
+		border-radius: 100px;
+		background: var(--tile3);
+		padding: 0.3rem 0.9rem;
+		font-size: 0.75rem;
+		font-weight: 600;
+		color: var(--text2);
+	}
+
+	.screen-title {
+		font-size: 1.5rem;
+		font-weight: 600;
+		letter-spacing: -0.025em;
+		line-height: 1.15;
+		color: var(--text1);
+		margin-bottom: 0.4rem;
+		text-wrap: balance;
+	}
+	@media (min-width: 640px) {
+		.screen-title {
+			font-size: 1.85rem;
+		}
+	}
+
+	.screen-sub {
+		font-size: 0.9rem;
+		color: var(--text2);
+	}
+	@media (min-width: 640px) {
+		.screen-sub {
+			font-size: 1rem;
+		}
+	}
+
+	.screen-note {
+		margin-top: 0.25rem;
+		font-size: 0.8rem;
+		color: var(--text2);
+		opacity: 0.75;
+	}
+
+	/* Dialect cards */
+	.pick {
+		display: flex;
+		align-items: center;
+		gap: 0.9rem;
+		padding: 1rem 1.1rem;
+		border-radius: 1.25rem;
+		border: 2px solid var(--tile5);
+		background: var(--tile3);
+		box-shadow: 0 5px 0 var(--tile5);
+		cursor: pointer;
+		transition:
+			transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1),
+			box-shadow 0.18s ease,
+			border-color 0.18s ease,
+			background 0.18s ease;
+	}
+
+	.pick:hover {
+		transform: translateY(-4px);
+		border-color: var(--accent);
+		box-shadow: 0 9px 0 var(--deep);
+	}
+
+	.pick:active {
+		transform: translateY(2px);
+		box-shadow: 0 1px 0 var(--deep);
+	}
+
+	.pick.is-on {
+		border-color: var(--accent);
+		background: color-mix(in srgb, var(--accent) 13%, var(--tile3));
+		box-shadow: 0 5px 0 var(--deep);
+	}
+
+	.pick-emoji {
+		font-size: 2rem;
+		line-height: 1;
+		flex-shrink: 0;
+		transition: transform 0.22s ease-out;
+	}
+
+	.pick:hover .pick-emoji,
+	.pick.is-on .pick-emoji {
+		transform: rotate(-3deg) scale(1.05);
+	}
+
+	.pick-name {
+		display: block;
+		font-size: 1.02rem;
+		font-weight: 600;
+		color: var(--text1);
+	}
+
+	.pick-desc {
+		display: block;
+		margin-top: 0.1rem;
+		font-size: 0.8rem;
+		line-height: 1.4;
+		color: var(--text2);
+	}
+
+	.pick-check {
+		display: grid;
+		place-items: center;
+		width: 1.5rem;
+		height: 1.5rem;
+		flex-shrink: 0;
+		border-radius: 50%;
+		background: var(--accent);
+		color: #fff;
+	}
+
+	.pick-check svg {
+		width: 0.85rem;
+		height: 0.85rem;
+	}
+
+	/* Reason cards */
+	.reason {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 1rem 0.5rem;
+		border-radius: 1.25rem;
+		border: 2px solid var(--tile5);
+		background: var(--tile3);
+		box-shadow: 0 5px 0 var(--tile5);
+		cursor: pointer;
+		transition:
+			transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1),
+			box-shadow 0.18s ease,
+			border-color 0.18s ease,
+			background 0.18s ease;
+	}
+
+	.reason:hover {
+		transform: translateY(-4px);
+		border-color: var(--accent);
+		box-shadow: 0 9px 0 var(--deep);
+	}
+
+	.reason:active {
+		transform: translateY(2px);
+		box-shadow: 0 1px 0 var(--deep);
+	}
+
+	.reason.is-on {
+		border-color: var(--accent);
+		background: color-mix(in srgb, var(--accent) 13%, var(--tile3));
+		box-shadow: 0 5px 0 var(--deep);
+	}
+
+	.reason-emoji {
+		font-size: 1.7rem;
+		line-height: 1;
+		transition: transform 0.22s ease-out;
+	}
+
+	.reason:hover .reason-emoji,
+	.reason.is-on .reason-emoji {
+		transform: rotate(-3deg) scale(1.05);
+	}
+
+	.reason-label {
+		font-size: 0.8rem;
+		font-weight: 600;
+		color: var(--text1);
+	}
+
+	/* Pressable primary */
+	.press {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+		border-radius: 100px;
+		padding: 0.8rem 2.1rem;
+		font-size: 1rem;
+		font-weight: 600;
+		color: #fff;
+		background: var(--accent);
+		box-shadow: 0 5px 0 var(--deep);
+		cursor: pointer;
+		transition:
+			transform 0.14s ease,
+			box-shadow 0.14s ease,
+			filter 0.2s ease;
+	}
+
+	.press:hover:not(:disabled) {
+		filter: brightness(1.06);
+	}
+
+	.press:active:not(:disabled) {
+		transform: translateY(5px);
+		box-shadow: 0 0 0 var(--deep);
+	}
+
+	.press:disabled {
+		opacity: 0.4;
+		cursor: not-allowed;
+	}
+
+	/* Trial */
+	.trial-emoji {
+		font-size: 2.75rem;
+		line-height: 1;
+		margin-bottom: 0.75rem;
+	}
+
+	.trial-list {
+		display: flex;
+		flex-direction: column;
+		gap: 0.7rem;
+		margin: 0 0 1.75rem;
+		padding: 1.1rem 1.2rem;
+		text-align: left;
+		border-radius: 1.25rem;
+		border: 2px solid var(--tile5);
+		background: var(--tile3);
+	}
+
+	.trial-list li {
+		display: flex;
+		align-items: flex-start;
+		gap: 0.7rem;
+		font-size: 0.88rem;
+		line-height: 1.45;
+		color: var(--text2);
+	}
+
+	.trial-list svg {
+		width: 1.05rem;
+		height: 1.05rem;
+		flex-shrink: 0;
+		margin-top: 0.15rem;
+		color: #10b981;
+	}
+
+	.skip-link {
+		font-size: 0.85rem;
+		font-weight: 600;
+		color: var(--text2);
+		text-decoration: underline;
+		text-underline-offset: 3px;
+		cursor: pointer;
+		transition: color 0.2s ease;
+	}
+	.skip-link:hover {
+		color: var(--text1);
+	}
+
+	/* Footer nav */
+	.nav-pill {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.35rem;
+		border-radius: 100px;
+		border: 2px solid var(--tile5);
+		background: var(--tile3);
+		padding: 0.45rem 1rem;
+		font-size: 0.85rem;
+		font-weight: 600;
+		color: var(--text2);
+		cursor: pointer;
+		transition:
+			transform 0.16s cubic-bezier(0.34, 1.56, 0.64, 1),
+			background 0.2s ease,
+			color 0.2s ease;
+	}
+	.nav-pill:hover {
+		transform: translateY(-2px);
+		background: var(--tile4);
+		color: var(--text1);
+	}
+	.nav-pill svg {
+		width: 0.9rem;
+		height: 0.9rem;
+	}
+
+	.error-note {
+		margin: 1rem auto 0;
+		max-width: 28rem;
+		border-radius: 1rem;
+		border: 2px solid #f43f5e;
+		background: color-mix(in srgb, #f43f5e 15%, var(--tile3));
+		padding: 0.7rem 1rem;
+		text-align: center;
+		font-size: 0.85rem;
+		color: var(--text1);
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.step,
+		.pick,
+		.reason,
+		.press,
+		.nav-pill,
+		.pick-emoji,
+		.reason-emoji,
+		.connector {
+			transition: none;
+		}
+		.step:not(:disabled):hover,
+		.pick:hover,
+		.reason:hover,
+		.nav-pill:hover {
+			transform: none;
+		}
+		.pick:hover .pick-emoji,
+		.reason:hover .reason-emoji {
+			transform: none;
+		}
+	}
+</style>

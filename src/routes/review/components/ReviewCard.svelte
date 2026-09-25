@@ -1,5 +1,6 @@
 <script lang="ts">
   import Button from '$lib/components/Button.svelte';
+  import { wordDragSelect } from '$lib/actions/word-drag-select';
   import AudioButton from '$lib/components/AudioButton.svelte';
   import DefinitionModal from '$lib/components/dialect-shared/sentences/DefinitionModal.svelte';
   import DialectComparisonModal from '$lib/components/dialect-shared/sentences/DialectComparisonModal.svelte';
@@ -196,7 +197,7 @@
   }
 
   // Word selection functions for drag-to-highlight
-  function handleWordMouseDown(index: number, _event: MouseEvent) {
+  function handleWordMouseDown(index: number) {
     isSelecting = true;
     selectionStartIndex = index;
     selectionEndIndex = index;
@@ -229,8 +230,7 @@
   }
   
   // Arabic word selection functions
-  function handleArabicWordMouseDown(index: number, event: MouseEvent) {
-    event.preventDefault();
+  function handleArabicWordMouseDown(index: number) {
     isSelectingArabic = true;
     selectionStartIndexArabic = index;
     selectionEndIndexArabic = index;
@@ -244,7 +244,7 @@
     }
   }
 
-  function handleArabicWordMouseUp(_event: MouseEvent) {
+  function handleArabicWordMouseUp() {
     isSelectingArabic = false;
   }
 
@@ -469,7 +469,7 @@
         
         <div
           class="flex w-fit flex-row flex-wrap text-4xl p-2 sm:text-5xl font-bold text-text-100 select-none"
-          onmouseup={handleArabicWordMouseUp}
+          use:wordDragSelect={{ onStart: handleArabicWordMouseDown, onExtend: handleArabicWordMouseEnter, onEnd: handleArabicWordMouseUp }}
           aria-label="Arabic word selection area for definitions"
           role="application"
           dir="rtl"
@@ -478,8 +478,7 @@
             <button
               type="button"
               data-word-zone
-              onmousedown={(e) => handleArabicWordMouseDown(index, e)}
-              onmouseenter={() => handleArabicWordMouseEnter(index)}
+              data-word-index={index}
               onclick={() => askChatGTP(arabicWord)}
               onkeydown={(e) => {
                 if (e.key === 'Enter' || e.key === ' ') {
@@ -552,7 +551,7 @@
           
           <div
             class="flex w-fit flex-row flex-wrap text-4xl sm:text-5xl font-bold text-text-100 select-none"
-            onmouseup={handleArabicWordMouseUp}
+            use:wordDragSelect={{ onStart: handleArabicWordMouseDown, onExtend: handleArabicWordMouseEnter, onEnd: handleArabicWordMouseUp }}
             aria-label="Arabic word selection area for definitions"
             role="application"
             dir="rtl"
@@ -560,8 +559,7 @@
             {#each word.arabic.split(' ') as arabicWord, index}
               <span
                 data-word-zone
-                onmousedown={(e) => handleArabicWordMouseDown(index, e)}
-                onmouseenter={() => handleArabicWordMouseEnter(index)}
+                data-word-index={index}
                 onclick={() => askChatGTP(arabicWord)}
                 onkeydown={(e) => {
                   if (e.key === 'Enter' || e.key === ' ') {
@@ -605,15 +603,14 @@
           
           <div
             class="flex w-fit flex-row flex-wrap text-3xl sm:text-4xl font-bold text-text-300 select-none"
-            onmouseup={handleWordMouseUp}
+            use:wordDragSelect={{ onStart: handleWordMouseDown, onExtend: handleWordMouseEnter, onEnd: handleWordMouseUp }}
             aria-label="Word selection area for definitions"
             role="application"
           >
             {#each word.english.split(' ') as englishWord, index}
               <span
                 data-word-zone
-                onmousedown={(e) => handleWordMouseDown(index, e)}
-                onmouseenter={() => handleWordMouseEnter(index)}
+                data-word-index={index}
                 onclick={() => askChatGTP(englishWord)}
                 onkeydown={(e) => {
                   if (e.key === 'Enter' || e.key === ' ') {

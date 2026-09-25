@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { askChatGTP } from '../helpers/ask-chat-gpt';
+	import { wordDragSelect } from '$lib/actions/word-drag-select';
 	import cn from 'classnames';
 	import Checkmark from '$lib/components/Checkmark.svelte';
 	import Audio from '$lib/components/Audio.svelte';
@@ -96,8 +97,7 @@
 
 
 	// Multi-word selection functions
-	function handleWordMouseDown(index: number, event: MouseEvent) {
-		event.preventDefault();
+	function handleWordMouseDown(index: number) {
 		isSelecting = true;
 		selectionStartIndex = index;
 		selectionEndIndex = index;
@@ -397,7 +397,7 @@
 	<!-- Words container -->
 	<div
 		class={cn("flex flex-wrap gap-2 select-none", isArabic ? "text-text-300" : "text-text-200", innerClassname)}
-		onmouseup={handleWordMouseUp}
+		use:wordDragSelect={{ onStart: handleWordMouseDown, onExtend: handleWordMouseEnter, onEnd: handleWordMouseUp }}
 		role="application"
 		aria-label="Word selection area for definitions"
 	>
@@ -411,8 +411,7 @@
 						})}
 						value={wordAlign.arabic}
 						onclick={assignActiveWord}
-						onmousedown={(e) => handleWordMouseDown(wordIndex, e)}
-						onmouseenter={() => handleWordMouseEnter(wordIndex)}
+						data-word-index={wordIndex}
 						onkeydown={(e) => {
 							if (e.key === 'Enter' || e.key === ' ') {
 								e.preventDefault();
@@ -435,8 +434,7 @@
 						})}
 						value={word}
 						onclick={assignActiveWord}
-						onmousedown={(e) => handleWordMouseDown(index, e)}
-						onmouseenter={() => handleWordMouseEnter(index)}
+						data-word-index={index}
 						onkeydown={(e) => {
 							if (e.key === 'Enter' || e.key === ' ') {
 								e.preventDefault();
@@ -459,8 +457,7 @@
 					})}
 					value={word}
 					onclick={assignActiveWord}
-					onmousedown={(e) => handleWordMouseDown(index, e)}
-					onmouseenter={() => handleWordMouseEnter(index)}
+					data-word-index={index}
 					onkeydown={(e) => {
 						if (e.key === 'Enter' || e.key === ' ') {
 							e.preventDefault();

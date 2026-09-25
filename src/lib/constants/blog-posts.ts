@@ -11,6 +11,14 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 	{
+		slug: 'learning-arabic-with-ai',
+		title: 'Learning Arabic with AI: how the tutor actually works',
+		description:
+			'Every tutor message arrives as three lines — Arabic, transliteration, English — and every turn ends with a suggestion for what you could say next. Why all three, and what the conversation looks like without them.',
+		date: '2026-09-25',
+		readingTime: '9 min read'
+	},
+	{
 		slug: 'how-many-egyptian-arabic-words',
 		title: 'How many Egyptian Arabic words do you actually need?',
 		description:

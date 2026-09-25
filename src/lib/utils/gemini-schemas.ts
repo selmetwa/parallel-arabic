@@ -601,6 +601,53 @@ export function createGameSentencesSchema() {
 export type GameSentencesSchema = z.infer<ReturnType<typeof createGameSentencesSchema>['zodSchema']>;
 
 /**
+ * Schema for listening comprehension generation
+ *
+ * The learner hears the whole sentence and picks its meaning, so the options are
+ * English and the distractors have to be near misses — each one differing from
+ * the true translation along a single axis. `variesBy` names that axis so the
+ * feedback can tell the learner which feature they missed.
+ *
+ * Deliberately loose: no array bounds and `variesBy` is a plain string rather
+ * than an enum. A nested array-of-objects carrying an enum is the shape that has
+ * previously made Gemini reject `responseJsonSchema` outright, so the count and
+ * the allowed axis names are enforced in the prompt and re-checked server-side.
+ */
+export function createListeningComprehensionSchema() {
+	const distractorSchema = z.object({
+		// A believable but wrong English reading of the sentence
+		english: z.string(),
+		// Which single feature this option gets wrong:
+		// tense | person | negation | number | vocabulary
+		variesBy: z.string()
+	});
+
+	const listeningItemSchema = z.object({
+		// The sentence that gets spoken aloud
+		arabic: z.string(),
+		// The correct English meaning
+		english: z.string(),
+		// Transliteration of the full sentence, revealed after answering
+		transliteration: z.string(),
+		// 3 near-miss options (count enforced via prompt)
+		distractors: z.array(distractorSchema)
+	});
+
+	const schema = z.object({
+		sentences: z.array(listeningItemSchema)
+	});
+
+	return {
+		zodSchema: schema,
+		jsonSchema: zodToJsonSchema(schema)
+	};
+}
+
+export type ListeningComprehensionSchema = z.infer<
+	ReturnType<typeof createListeningComprehensionSchema>['zodSchema']
+>;
+
+/**
  * Schema for verb conjugation generation
  * Generates past/present/future conjugations (8 persons × 3 tenses × 2 forms)
  * plus object pronoun suffixes for a single verb

@@ -5,6 +5,7 @@ import { getUserHasActiveSubscription } from '$lib/helpers/get-user-has-active-s
 import { getStoriesByUser } from '$lib/helpers/story-helpers';
 import { StripeService } from '$lib/services/stripe.service';
 import { computeAchievements } from '$lib/config/achievements';
+import { CEFR_LEVELS, isCefrLevel } from '$lib/constants/cefr-levels';
 import { env } from '$env/dynamic/private';
 
 export const load = async ({ locals, parent }) => {
@@ -29,7 +30,7 @@ export const load = async ({ locals, parent }) => {
   // Fetch user's onboarding data and subscription info
   const { data: userData, error: userError } = await supabase
     .from('user')
-    .select('target_dialect, learning_reason, proficiency_level, onboarding_completed, daily_review_limit, subscriber_id, subscription_end_date, email_notifications_enabled, leaderboard_opt_out')
+    .select('target_dialect, learning_reason, proficiency_level, goal_level, onboarding_completed, daily_review_limit, subscriber_id, subscription_end_date, email_notifications_enabled, leaderboard_opt_out')
     .eq('id', userId)
     .single();
 
@@ -203,6 +204,7 @@ export const load = async ({ locals, parent }) => {
     targetDialect: userData?.target_dialect || null,
     learningReason: userData?.learning_reason || null,
     proficiencyLevel: userData?.proficiency_level || null,
+    goalLevel: userData?.goal_level || null,
     onboardingCompleted: userData?.onboarding_completed || false,
     dailyReviewLimit: userData?.daily_review_limit ?? 20,
     emailNotificationsEnabled: userData?.email_notifications_enabled ?? true,
@@ -340,19 +342,36 @@ export const actions: Actions = {
 
 		const formData = await request.formData();
 		const proficiencyLevel = formData.get('proficiency_level') as string;
+		const goalLevel = formData.get('goal_level') as string;
 
-		const validLevels = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
-		if (!proficiencyLevel || !validLevels.includes(proficiencyLevel)) {
+		if (!isCefrLevel(proficiencyLevel)) {
 			return {
 				success: false,
 				error: 'Invalid proficiency level'
 			};
 		}
 
+		// An empty goal means "not set" — the column is nullable.
+		if (goalLevel) {
+			if (!isCefrLevel(goalLevel)) {
+				return {
+					success: false,
+					error: 'Invalid goal level'
+				};
+			}
+
+			if (CEFR_LEVELS.indexOf(goalLevel) < CEFR_LEVELS.indexOf(proficiencyLevel)) {
+				return {
+					success: false,
+					error: 'Goal level cannot be below your current level'
+				};
+			}
+		}
+
 		try {
 			const { error: updateError } = await supabase
 				.from('user')
-				.update({ proficiency_level: proficiencyLevel })
+				.update({ proficiency_level: proficiencyLevel, goal_level: goalLevel || null })
 				.eq('id', user.id);
 
 			if (updateError) {
@@ -365,7 +384,8 @@ export const actions: Actions = {
 
 			return {
 				success: true,
-				proficiencyLevel
+				proficiencyLevel,
+				goalLevel: goalLevel || null
 			};
 		} catch (e) {
 			console.error('Exception updating proficiency_level:', e);

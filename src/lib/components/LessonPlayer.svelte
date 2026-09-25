@@ -1,5 +1,6 @@
 <script lang="ts">
     import { fade, fly, slide } from 'svelte/transition';
+    import { wordDragSelect } from '$lib/actions/word-drag-select';
     import type { GeneratedLesson, LessonStep, ExerciseStep, PracticeSentenceStep } from '$lib/schemas/curriculum-schema';
     import type { z } from 'zod';
     import type { Dialect } from '$lib/types/index';
@@ -483,8 +484,7 @@
         }
     }
     
-    function handleWordMouseDown(index: number, event: MouseEvent) {
-        event.preventDefault();
+    function handleWordMouseDown(index: number) {
         isSelecting = true;
         selectionStartIndex = index;
         selectionEndIndex = index;
@@ -868,17 +868,15 @@
                                 <!-- Left: English sentence with word selection -->
                                 <div class="bg-tile-400 border border-tile-500/60 rounded-2xl p-4 lg:p-6 shadow-sm flex flex-col justify-center">
  <h4 class="text-xs font-semibold text-text-200 mb-3">English</h4>
-                                    <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
                                     <div
                                         class="flex w-fit flex-row flex-wrap text-base sm:text-lg font-medium text-text-200 select-none"
-                                        onmouseup={handleWordMouseUp}
+                                        use:wordDragSelect={{ onStart: handleWordMouseDown, onExtend: handleWordMouseEnter, onEnd: handleWordMouseUp }}
                                         role="group"
                                         aria-label="Word selection area for definitions"
                                     >
                                         {#each step.sentence.english.split(' ') as word, index (index)}
                                             <span
-                                                onmousedown={(e) => handleWordMouseDown(index, e)}
-                                                onmouseenter={() => handleWordMouseEnter(index)}
+                                                data-word-index={index}
                                                 onclick={() => askChatGPT(word, step.sentence)}
                                                 onkeydown={(e) => {
                                                     if (e.key === 'Enter' || e.key === ' ') {
