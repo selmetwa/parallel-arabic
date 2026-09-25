@@ -14,8 +14,6 @@
 	let { data }: { data: PageData } = $props();
 
 	let bannerDismissed = $state(false);
-	let challengeGenerating = $state(false);
-	let generatedChallengeHref = $state<string | null>(null);
 
 	// Masthead greeting — neutral defaults render identically on server & client to
 	// avoid a hydration mismatch; the time-of-day variant is filled in onMount.
@@ -24,11 +22,8 @@
 	let todayLabel = $state('');
 
 	const suggestions = $derived(data.suggestions || []);
-	const dailyChallengeSuggestion = $derived(suggestions.find((s) => s.id === 'daily-challenge'));
 	const reviewSuggestion = $derived(suggestions.find((s) => s.id === 'review'));
-	const otherSuggestions = $derived(
-		suggestions.filter((s) => s.id !== 'review' && s.id !== 'daily-challenge').slice(0, 4)
-	);
+	const otherSuggestions = $derived(suggestions.filter((s) => s.id !== 'review').slice(0, 4));
 
 	function dismissBanner() {
 		bannerDismissed = true;
@@ -51,33 +46,6 @@
 		}
 
 		if (browser) bannerDismissed = sessionStorage.getItem('homeBannerDismissed') === 'true';
-
-		if (browser && data.shouldGenerateChallenge && data.user) {
-			challengeGenerating = true;
-			fetch('/api/daily-challenge', { method: 'POST' })
-				.then((r) => r.json())
-				.then((result) => {
-					if (result.success && result.challengeId) {
-						return fetch('/api/daily-challenge')
-							.then((r) => r.json())
-							.then((r) => {
-								if (r.challenge) {
-									const c = r.challenge;
-									generatedChallengeHref =
-										c.challenge_type === 'story' && c.story_id
-											? `/generated_story/${c.story_id}?challenge=${c.id}`
-											: `/challenge/${c.id}`;
-								}
-							});
-					}
-				})
-				.catch(() => {
-					/* non-critical */
-				})
-				.finally(() => {
-					challengeGenerating = false;
-				});
-		}
 	});
 </script>
 
@@ -157,20 +125,6 @@
 		</a>
 	{/snippet}
 
-	{#snippet heroTile(href: string, icon: string, title: string, desc: string)}
-		<a href={resolve(href)} class="hero-tile" style="--accent:#f59e0b; --deep:#b45309;">
-			<span class="hero-icon" aria-hidden="true">{icon}</span>
-			<span class="min-w-0 flex-1">
-				<span class="flex flex-wrap items-center gap-2">
-					<span class="hero-title">{title}</span>
-					<span class="hero-badge">Bonus XP</span>
-				</span>
-				<span class="hero-desc">{desc}</span>
-			</span>
-			<span class="hero-arrow" aria-hidden="true">→</span>
-		</a>
-	{/snippet}
-
 	<!-- ── Week strip ──────────────────────────────────────────────────────── -->
 	{#if data.user && data.weekActivityDates}
 		<div class="reveal" style="animation-delay: 60ms;">
@@ -231,7 +185,7 @@
 	{/if}
 
 	<!-- ── Activity suggestions ────────────────────────────────────────────── -->
-	{#if data.user && !bannerDismissed && (dailyChallengeSuggestion || reviewSuggestion || otherSuggestions.length > 0 || generatedChallengeHref)}
+	{#if data.user && !bannerDismissed && (reviewSuggestion || otherSuggestions.length > 0)}
 		<div class="reveal jump-panel" style="animation-delay: 180ms;">
 			<button onclick={dismissBanner} class="dismiss" aria-label="Dismiss suggestions">
 				<svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -249,47 +203,24 @@
 				<h2>Jump back in</h2>
 			</div>
 
-			{#if dailyChallengeSuggestion}
-				{@render heroTile(
-					dailyChallengeSuggestion.href,
-					dailyChallengeSuggestion.icon,
-					dailyChallengeSuggestion.title,
-					dailyChallengeSuggestion.subtitle
-				)}
-			{:else if generatedChallengeHref}
-				{@render heroTile(
-					generatedChallengeHref,
-					'⭐',
-					'Daily Challenge',
-					"Complete today's challenge for +10 bonus XP"
-				)}
-			{/if}
-
-			{#if reviewSuggestion || otherSuggestions.length > 0}
-				<div
-					class="grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3 {dailyChallengeSuggestion ||
-					generatedChallengeHref
-						? 'mt-2.5'
-						: ''}"
-				>
-					{#if reviewSuggestion}
-						{@render suggTile(
-							reviewSuggestion.href,
-							reviewSuggestion.icon,
-							reviewSuggestion.title,
-							reviewSuggestion.subtitle
-						)}
-					{/if}
-					{#each otherSuggestions as suggestion (suggestion.id)}
-						{@render suggTile(
-							suggestion.href,
-							suggestion.icon,
-							suggestion.title,
-							suggestion.subtitle
-						)}
-					{/each}
-				</div>
-			{/if}
+			<div class="grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
+				{#if reviewSuggestion}
+					{@render suggTile(
+						reviewSuggestion.href,
+						reviewSuggestion.icon,
+						reviewSuggestion.title,
+						reviewSuggestion.subtitle
+					)}
+				{/if}
+				{#each otherSuggestions as suggestion (suggestion.id)}
+					{@render suggTile(
+						suggestion.href,
+						suggestion.icon,
+						suggestion.title,
+						suggestion.subtitle
+					)}
+				{/each}
+			</div>
 		</div>
 	{:else if !data.user}
 		<div class="reveal" style="animation-delay: 120ms;">
@@ -573,73 +504,6 @@
 		height: 0.7rem;
 	}
 
-	/* Daily challenge hero */
-	.hero-tile {
-		display: flex;
-		align-items: center;
-		gap: 0.9rem;
-		border-radius: 1.1rem;
-		border: 2px solid var(--accent);
-		background: color-mix(in srgb, var(--accent) 14%, var(--tile3));
-		padding: 1rem;
-		text-decoration: none;
-		box-shadow: 0 4px 0 var(--deep);
-		transition:
-			transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1),
-			box-shadow 0.18s ease;
-	}
-	.hero-tile:hover {
-		transform: translateY(-4px);
-		box-shadow: 0 8px 0 var(--deep);
-	}
-	.hero-tile:active {
-		transform: translateY(2px);
-		box-shadow: 0 1px 0 var(--deep);
-	}
-
-	.hero-icon {
-		font-size: 2rem;
-		line-height: 1;
-		flex-shrink: 0;
-		transition: transform 0.22s ease-out;
-	}
-	.hero-tile:hover .hero-icon {
-		transform: rotate(-3deg) scale(1.05);
-	}
-
-	.hero-title {
-		font-size: 1rem;
-		font-weight: 600;
-		color: var(--text1);
-	}
-
-	.hero-badge {
-		font-size: 0.66rem;
-		font-weight: 700;
-		color: #7c2d12;
-		background: var(--accent);
-		border-radius: 100px;
-		padding: 0.15rem 0.5rem;
-	}
-
-	.hero-desc {
-		display: block;
-		margin-top: 0.2rem;
-		font-size: 0.82rem;
-		line-height: 1.45;
-		color: var(--text2);
-	}
-
-	.hero-arrow {
-		flex-shrink: 0;
-		font-size: 1.2rem;
-		color: var(--text2);
-		transition: transform 0.2s ease;
-	}
-	.hero-tile:hover .hero-arrow {
-		transform: translateX(4px);
-	}
-
 	@keyframes reveal {
 		from {
 			opacity: 0;
@@ -660,19 +524,15 @@
 		}
 		.tile,
 		.stat,
-		.hero-tile,
 		.tile-icon,
-		.hero-icon,
 		.dismiss {
 			transition: none;
 		}
 		.tile:hover,
-		a.stat:hover,
-		.hero-tile:hover {
+		a.stat:hover {
 			transform: none;
 		}
-		.tile:hover .tile-icon,
-		.hero-tile:hover .hero-icon {
+		.tile:hover .tile-icon {
 			transform: none;
 		}
 	}
