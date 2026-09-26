@@ -20,20 +20,9 @@
 		accent: string;
 		deep: string;
 		onPlayAgain: () => void;
-		/** The on-page sample: one sentence, no XP, no results card. */
-		demo?: boolean;
 	}
 
-	let {
-		sentences,
-		dialect,
-		signedIn,
-		isSubscribed,
-		accent,
-		deep,
-		onPlayAgain,
-		demo = false
-	}: Props = $props();
+	let { sentences, dialect, signedIn, isSubscribed, accent, deep, onPlayAgain }: Props = $props();
 
 	// Re-mounted (via {#key}) for each new round, so the first list is the one to use.
 	let index = $state(0);
@@ -70,7 +59,7 @@
 			status = 'solved';
 			outcomes[index] = !missedOnce;
 			announcement = `Correct: ${sentence.english}`;
-			if (!missedOnce && signedIn && !demo) {
+			if (!missedOnce && signedIn) {
 				awardGameXp();
 				xpEarned++;
 			}
@@ -106,7 +95,7 @@
 
 <p class="sr-only" aria-live="polite">{announcement}</p>
 
-{#if done && !demo}
+{#if done}
 	<GameResults
 		heading="{score} of {sentences.length} sentences on the first try"
 		stats={[{ label: 'First try', value: `${score}/${sentences.length}` }]}
@@ -130,17 +119,9 @@
 			{/each}
 		</ul>
 	</GameResults>
-{:else if done}
-	<p class="demo-done">
-		That's the idea. Premium gives you a fresh round of sentences at your level every time.
-	</p>
 {:else}
 	<div class="game" style="--accent:{accent}; --deep:{deep};">
-		{#if !demo}
-			<p class="progress">Sentence {index + 1} of {sentences.length}</p>
-		{:else}
-			<p class="progress">Sample sentence</p>
-		{/if}
+		<p class="progress">Sentence {index + 1} of {sentences.length}</p>
 
 		<div class="prompt">
 			<span class="prompt-label">Say this in Arabic</span>
@@ -185,7 +166,7 @@
 				{#if sentence.transliteration}<p class="translit">{sentence.transliteration}</p>{/if}
 				{#if isSubscribed}<AudioButton text={sentence.arabic} {dialect} />{/if}
 				<PressButton onclick={next} {accent} {deep}>
-					{demo ? 'Done' : index + 1 < sentences.length ? 'Next sentence' : 'See results'}
+					{index + 1 < sentences.length ? 'Next sentence' : 'See results'}
 				</PressButton>
 			</div>
 		{:else}
@@ -354,15 +335,6 @@
 	.translit {
 		font-style: italic;
 		color: var(--text2);
-	}
-
-	.demo-done {
-		border-radius: 1.1rem;
-		border: 2px solid var(--tile5);
-		background: var(--tile3);
-		padding: 1rem 1.1rem;
-		font-size: 0.92rem;
-		color: var(--text1);
 	}
 
 	.list-title {

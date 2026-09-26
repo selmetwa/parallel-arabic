@@ -8,7 +8,7 @@
 	const game = getGame('word-scramble')!;
 </script>
 
-<WordGamePage {game} {data} kind="letters" roundName="sets">
+<WordGamePage {game} {data} roundName="rounds">
 	{#snippet skeleton()}
 		<div class="skeleton">
 			<span class="ghost wide"></span>

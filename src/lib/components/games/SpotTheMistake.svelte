@@ -14,20 +14,9 @@
 		accent: string;
 		deep: string;
 		onPlayAgain: () => void;
-		/** The on-page sample: one sentence, no XP, no results card. */
-		demo?: boolean;
 	}
 
-	let {
-		items,
-		dialect,
-		signedIn,
-		isSubscribed,
-		accent,
-		deep,
-		onPlayAgain,
-		demo = false
-	}: Props = $props();
+	let { items, dialect, signedIn, isSubscribed, accent, deep, onPlayAgain }: Props = $props();
 
 	let index = $state(0);
 	let picked = $state<number | null>(null);
@@ -53,7 +42,7 @@
 			: `Not quite. The mistake was ${item.words[item.wrongIndex]}, which should be ${
 					item.correction
 				}. ${item.explanation}`;
-		if (right && signedIn && !demo) {
+		if (right && signedIn) {
 			awardGameXp();
 			xpEarned++;
 		}
@@ -68,7 +57,7 @@
 
 <p class="sr-only" aria-live="polite">{announcement}</p>
 
-{#if done && !demo}
+{#if done}
 	<GameResults
 		heading="{score} of {items.length} mistakes spotted"
 		stats={[{ label: 'Spotted', value: `${score}/${items.length}` }]}
@@ -92,14 +81,10 @@
 			{/each}
 		</ul>
 	</GameResults>
-{:else if done}
-	<p class="demo-done">
-		That's the idea. Premium gives you ten fresh sentences at your level every round.
-	</p>
 {:else}
 	<div class="game" style="--accent:{accent}; --deep:{deep};">
 		<p class="progress">
-			{demo ? 'Sample sentence' : `Sentence ${index + 1} of ${items.length}`}
+			Sentence {index + 1} of {items.length}
 		</p>
 		<p class="ask">Tap the word that's wrong.</p>
 
@@ -137,7 +122,7 @@
 				<p class="explanation">{item.explanation}</p>
 				{#if isSubscribed}<AudioButton text={item.correct} {dialect} />{/if}
 				<PressButton onclick={next} {accent} {deep}>
-					{demo ? 'Done' : index + 1 < items.length ? 'Next sentence' : 'See results'}
+					{index + 1 < items.length ? 'Next sentence' : 'See results'}
 				</PressButton>
 			</div>
 		{/if}
@@ -296,15 +281,6 @@
 	.explanation {
 		font-size: 0.92rem;
 		line-height: 1.55;
-		color: var(--text1);
-	}
-
-	.demo-done {
-		border-radius: 1.1rem;
-		border: 2px solid var(--tile5);
-		background: var(--tile3);
-		padding: 1rem 1.1rem;
-		font-size: 0.92rem;
 		color: var(--text1);
 	}
 

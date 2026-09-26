@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { localDay, readRoundsUsed, recordRound } from './free-rounds';
+import { readRoundsUsed, recordRound } from './free-rounds';
 
 function memoryStore() {
 	const data = new Map<string, string>();
@@ -10,19 +10,18 @@ function memoryStore() {
 }
 
 describe('free rounds', () => {
-	it('counts rounds for the day and resets on a new day', () => {
+	it('counts rounds per game', () => {
 		const store = memoryStore();
-		recordRound(store, 'word-match', 'anon', '2026-09-26');
-		recordRound(store, 'word-match', 'anon', '2026-09-26');
-		expect(readRoundsUsed(store, 'word-match', 'anon', '2026-09-26')).toBe(2);
-		expect(readRoundsUsed(store, 'word-match', 'anon', '2026-09-27')).toBe(0);
+		recordRound(store, 'word-scramble', 'anon');
+		recordRound(store, 'word-scramble', 'anon');
+		expect(readRoundsUsed(store, 'word-scramble', 'anon')).toBe(2);
 	});
 
 	it('keeps games and identities apart', () => {
 		const store = memoryStore();
-		recordRound(store, 'word-match', 'anon', '2026-09-26');
-		expect(readRoundsUsed(store, 'word-guess', 'anon', '2026-09-26')).toBe(0);
-		expect(readRoundsUsed(store, 'word-match', 'user-1', '2026-09-26')).toBe(0);
+		recordRound(store, 'word-scramble', 'anon');
+		expect(readRoundsUsed(store, 'odd-one-out', 'anon')).toBe(0);
+		expect(readRoundsUsed(store, 'word-scramble', 'user-1')).toBe(0);
 	});
 
 	it('survives storage that throws', () => {
@@ -34,12 +33,8 @@ describe('free rounds', () => {
 				throw new Error('blocked');
 			}
 		};
-		expect(readRoundsUsed(broken, 'word-match', 'anon', '2026-09-26')).toBe(0);
-		expect(recordRound(broken, 'word-match', 'anon', '2026-09-26')).toBe(1);
-		expect(readRoundsUsed(null, 'word-match', 'anon', '2026-09-26')).toBe(0);
-	});
-
-	it('uses the local calendar day', () => {
-		expect(localDay(new Date(2026, 0, 5, 23, 30))).toBe('2026-01-05');
+		expect(readRoundsUsed(broken, 'word-scramble', 'anon')).toBe(0);
+		expect(recordRound(broken, 'word-scramble', 'anon')).toBe(1);
+		expect(readRoundsUsed(null, 'word-scramble', 'anon')).toBe(0);
 	});
 });

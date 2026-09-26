@@ -1,7 +1,7 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { createSentenceScrambleSchema } from '$lib/utils/gemini-schemas';
-import { requireSubscriber } from '$lib/server/games/access';
+import { checkGameAccess } from '$lib/server/games/access';
 import { gameErrorResponse, generateValidated, parseGameRequest } from '$lib/server/games/generate';
 import {
 	SENTENCES_PER_ROUND,
@@ -9,10 +9,11 @@ import {
 	validateSentence
 } from '$lib/server/games/sentence-scramble';
 
-/** A fresh round of Sentence Scramble. Premium only. */
-export const POST: RequestHandler = async ({ request, locals }) => {
-	const denied = await requireSubscriber(locals);
-	if (denied) return denied;
+/** A fresh round of Sentence Scramble. Two free rounds, then Premium. */
+export const POST: RequestHandler = async (event) => {
+	const access = await checkGameAccess(event, 'sentence-scramble');
+	if ('denied' in access) return access.denied;
+	const { request } = event;
 
 	const { dialect, level } = parseGameRequest(await request.json().catch(() => ({})));
 	const seen = new Set<string>();
@@ -25,6 +26,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 			validate: (raw) => validateSentence(raw, level, seen),
 			want: SENTENCES_PER_ROUND
 		});
+		await access.charge();
 		return json({ items });
 	} catch (err) {
 		return gameErrorResponse(err);

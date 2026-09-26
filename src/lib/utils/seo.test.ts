@@ -19,7 +19,7 @@ describe('resolvePageMeta', () => {
 			'/mobile-app',
 			'/learn/game',
 			'/learn/game/quiz',
-			'/learn/game/word-match',
+			'/learn/game/word-scramble',
 			'/egyptian-arabic/conjugations',
 			'/egyptian-arabic/conjugations/gara',
 			'/levantine/phrases/hello',
@@ -56,11 +56,9 @@ describe('resolvePageMeta', () => {
 			'/mobile-app',
 			'/learn/game',
 			'/learn/game/quiz',
-			'/learn/game/word-match',
+			'/learn/game/word-scramble',
 			'/'
-		].map(
-			(p) => resolvePageMeta(p).title
-		);
+		].map((p) => resolvePageMeta(p).title);
 		expect(new Set(titles).size).toBe(titles.length);
 	});
 
@@ -129,9 +127,9 @@ describe('resolvePageKey', () => {
 	it('routes the games hub, the quiz and each game, but not the play screen', () => {
 		expect(resolvePageKey('/learn/game')?.key).toBe('game');
 		expect(resolvePageKey('/learn/game/quiz')?.key).toBe('game-quiz');
-		expect(resolvePageKey('/learn/game/word-match')).toEqual({
+		expect(resolvePageKey('/learn/game/word-scramble')).toEqual({
 			key: 'game-page',
-			data: { slug: 'word-match', gameName: 'Word Match' }
+			data: { slug: 'word-scramble', gameName: 'Word Scramble' }
 		});
 		expect(resolvePageKey('/learn/game/play')).toBeNull();
 		expect(resolvePageKey('/learn/game/not-a-game')).toBeNull();
@@ -153,7 +151,7 @@ describe('structured data', () => {
 			'/egyptian-arabic/beginners',
 			'/learn/game',
 			'/learn/game/quiz',
-			'/learn/game/word-match'
+			'/learn/game/word-scramble'
 		]) {
 			expect((resolveStructuredData(path, { faqs }) as { '@type': string })['@type']).toBe(
 				'FAQPage'

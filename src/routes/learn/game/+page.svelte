@@ -3,9 +3,6 @@
 	import GameCard from '$lib/components/games/GameCard.svelte';
 	import { GAMES, GAMES_HUB_FAQS, QUIZ_CARD, gameHref } from '$lib/constants/games';
 
-	const freeGames = GAMES.filter((g) => g.access === 'free-to-try');
-	const premiumGames = GAMES.filter((g) => g.access === 'subscriber');
-
 	// "Games by skill": every skill a game lists, with the games that train it.
 	const cards = [
 		...GAMES.map((g) => ({ ...g, href: gameHref(g.slug) })),
@@ -21,38 +18,18 @@
 	<header class="mb-8">
 		<h1 class="hero-title">Arabic Games</h1>
 		<p class="hero-sub">
-			Short games for Arabic vocabulary in Egyptian Arabic, Levantine, Moroccan Darija and Modern
-			Standard Arabic. The word games are free to try, with no account needed to start. Pick one,
+			Short games for Arabic vocabulary and grammar in Egyptian Arabic, Levantine, Moroccan Darija
+			and Modern Standard Arabic. Every game has two free rounds, with no account needed. Pick one,
 			choose your dialect, and play.
 		</p>
 	</header>
 
-	<section class="group">
-		<h2 class="group-title">Word games <span class="group-tag">Free to try</span></h2>
-		<div class="grid">
-			{#each freeGames as game (game.slug)}
-				<GameCard href={gameHref(game.slug)} {...game} />
-			{/each}
-		</div>
-	</section>
-
-	{#if premiumGames.length > 0}
-		<section class="group">
-			<h2 class="group-title">Puzzles <span class="group-tag">Premium</span></h2>
-			<div class="grid">
-				{#each premiumGames as game (game.slug)}
-					<GameCard href={gameHref(game.slug)} {...game} />
-				{/each}
-			</div>
-		</section>
-	{/if}
-
-	<section class="group">
-		<h2 class="group-title">Vocabulary quiz <span class="group-tag">Premium</span></h2>
-		<div class="grid">
-			<GameCard href="/learn/game/quiz" {...QUIZ_CARD} />
-		</div>
-	</section>
+	<div class="grid">
+		{#each GAMES as game (game.slug)}
+			<GameCard href={gameHref(game.slug)} {...game} />
+		{/each}
+		<GameCard href={gameHref(QUIZ_CARD.slug)} {...QUIZ_CARD} />
+	</div>
 
 	<section class="info">
 		<h2 class="section-title">Games by skill</h2>
@@ -106,30 +83,6 @@
 		line-height: 1.55;
 		color: var(--text2);
 		max-width: 62ch;
-	}
-
-	.group {
-		margin-top: 2rem;
-	}
-
-	.group-title {
-		display: flex;
-		align-items: center;
-		gap: 0.6rem;
-		margin-bottom: 0.9rem;
-		font-size: 1.15rem;
-		font-weight: 600;
-		letter-spacing: -0.02em;
-		color: var(--text1);
-	}
-
-	.group-tag {
-		font-size: 0.72rem;
-		font-weight: 600;
-		color: var(--text2);
-		background: var(--tile3);
-		border-radius: 100px;
-		padding: 0.22rem 0.65rem;
 	}
 
 	.grid {

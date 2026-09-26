@@ -1,5 +1,5 @@
 import { browser } from '$app/environment';
-import { FREE_ROUNDS_PER_DAY, localDay, readRoundsUsed, recordRound } from './free-rounds';
+import { FREE_ROUNDS, readRoundsUsed, recordRound } from './free-rounds';
 
 export type GateModal = 'auth' | 'paywall' | null;
 
@@ -12,11 +12,11 @@ function storage(): Storage | null {
 }
 
 /**
- * Reactive wrapper around the free-round allowance for one game. Storage is
+ * Reactive wrapper around the free rounds for one game. Storage is
  * only read after mount, so the server render never depends on it.
  *
  * Call `tryStartRound()` on the first move of a round: it counts the round, or
- * opens the sign-up / paywall modal and returns false when the allowance is used.
+ * opens the sign-up / paywall modal and returns false when the free rounds are used.
  */
 export function createRoundGate(
 	game: string,
@@ -29,7 +29,7 @@ export function createRoundGate(
 	const who = () => access().userId ?? 'anon';
 
 	$effect(() => {
-		used = readRoundsUsed(storage(), game, who(), localDay());
+		used = readRoundsUsed(storage(), game, who());
 		ready = true;
 	});
 
@@ -38,16 +38,16 @@ export function createRoundGate(
 	}
 
 	function canStart() {
-		return access().isSubscribed || used < FREE_ROUNDS_PER_DAY;
+		return access().isSubscribed || used < FREE_ROUNDS;
 	}
 
 	function tryStartRound() {
 		if (access().isSubscribed) return true;
-		if (used >= FREE_ROUNDS_PER_DAY) {
+		if (used >= FREE_ROUNDS) {
 			block();
 			return false;
 		}
-		used = Math.max(used + 1, recordRound(storage(), game, who(), localDay()));
+		used = Math.max(used + 1, recordRound(storage(), game, who()));
 		return true;
 	}
 
@@ -59,7 +59,7 @@ export function createRoundGate(
 			return access().isSubscribed;
 		},
 		get remaining() {
-			return Math.max(0, FREE_ROUNDS_PER_DAY - used);
+			return Math.max(0, FREE_ROUNDS - used);
 		},
 		get modal() {
 			return modal;
@@ -74,3 +74,13 @@ export function createRoundGate(
 }
 
 export type RoundGate = ReturnType<typeof createRoundGate>;
+
+/**
+ * The line under a game's heading for non-subscribers: how many free rounds
+ * are left. Nothing for subscribers, and nothing until storage has been read.
+ */
+export function freeRoundsStatus(gate: RoundGate, roundName: string): string | undefined {
+	if (!gate.ready || gate.unlimited) return undefined;
+	if (gate.remaining === 0) return `You've used your free ${roundName}`;
+	return `${gate.remaining} of ${FREE_ROUNDS} free ${roundName} left`;
+}

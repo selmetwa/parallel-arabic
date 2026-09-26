@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { buildPool, cleanWord, fitsKind, type WordRow } from './word-pool';
+import { buildPool, cleanWord, isLetterWord, type WordRow } from './word-pool';
 
 let nextId = 1;
 function row(
@@ -55,35 +55,31 @@ describe('cleanWord', () => {
 	});
 });
 
-describe('fitsKind', () => {
-	it('limits letter games to single words of 3–7 plain Arabic letters', () => {
+describe('isLetterWord', () => {
+	it('allows only single words of 3–7 plain Arabic letters', () => {
 		const word = (arabic: string) => cleanWord(row(arabic, 'x'))!;
-		expect(fitsKind(word('كل'), 'letters')).toBe(false);
-		expect(fitsKind(word('كل'), 'match')).toBe(true);
-		expect(fitsKind(word('كلِب'), 'letters')).toBe(true);
-		expect(fitsKind(word('حَيَوان أليف'), 'letters')).toBe(false);
-		expect(fitsKind(word('ڭاميلة'), 'letters')).toBe(false);
+		expect(isLetterWord(word('كل'))).toBe(false);
+		expect(isLetterWord(word('كلِب'))).toBe(true);
+		expect(isLetterWord(word('حَيَوان أليف'))).toBe(false);
+		expect(isLetterWord(word('ڭاميلة'))).toBe(false);
 	});
 });
 
 describe('buildPool', () => {
 	it('keeps one word per meaning, so a board never has two right answers', () => {
-		const pool = buildPool(
-			[
-				row('قطْمة', 'a bite'),
-				row('حِتّة (حِتت)', 'a bite'),
-				row('غزال', 'deer'),
-				row('غزلان', 'deer'),
-				row('حوت', 'whale'),
-				row('حيتان', 'whales')
-			],
-			'match'
-		);
+		const pool = buildPool([
+			row('قطْمة', 'a bite'),
+			row('حِتّة (حِتت)', 'a bite'),
+			row('غزال', 'deer'),
+			row('غزلان', 'deer'),
+			row('حوت', 'whale'),
+			row('حيتان', 'whales')
+		]);
 		expect(pool.map((w) => w.plain)).toEqual(['قطمة', 'غزال', 'حوت']);
 	});
 
 	it('keeps one word per spelling', () => {
-		const pool = buildPool([row('أسد', 'lion'), row('اسد', 'lion (big cat)')], 'match');
+		const pool = buildPool([row('أسد', 'lion'), row('اسد', 'lion (big cat)')]);
 		expect(pool).toHaveLength(1);
 	});
 });

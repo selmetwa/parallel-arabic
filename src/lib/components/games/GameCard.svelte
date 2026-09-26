@@ -8,7 +8,6 @@
 		tagline: string;
 		skills: string[];
 		levels: string;
-		access: 'free-to-try' | 'subscriber';
 		accent: string;
 		deep: string;
 		/** Smaller card for the "more games" strip under a game. */
@@ -22,7 +21,6 @@
 		tagline,
 		skills,
 		levels,
-		access,
 		accent,
 		deep,
 		compact = false
@@ -30,12 +28,7 @@
 </script>
 
 <a href={resolve(href)} class="card" class:compact style="--accent:{accent}; --deep:{deep};">
-	<span class="top">
-		<span class="emoji" aria-hidden="true">{emoji}</span>
-		<span class="badge" class:free={access === 'free-to-try'}>
-			{access === 'free-to-try' ? 'Free to try' : 'Premium'}
-		</span>
-	</span>
+	<span class="emoji" aria-hidden="true">{emoji}</span>
 	<span class="name">{name}</span>
 	<span class="tagline">{tagline}</span>
 	{#if !compact}
@@ -79,13 +72,6 @@
 		box-shadow: 0 1px 0 var(--deep);
 	}
 
-	.top {
-		display: flex;
-		align-items: flex-start;
-		justify-content: space-between;
-		gap: 0.5rem;
-	}
-
 	.emoji {
 		font-size: 2rem;
 		line-height: 1;
@@ -94,22 +80,6 @@
 
 	.card:hover .emoji {
 		transform: rotate(-4deg) scale(1.06);
-	}
-
-	.badge {
-		font-size: 0.68rem;
-		font-weight: 600;
-		letter-spacing: 0.04em;
-		text-transform: uppercase;
-		color: var(--text1);
-		background: color-mix(in srgb, #8b5cf6 22%, var(--tile3));
-		border-radius: 100px;
-		padding: 0.2rem 0.55rem;
-		white-space: nowrap;
-	}
-
-	.badge.free {
-		background: color-mix(in srgb, #10b981 24%, var(--tile3));
 	}
 
 	.name {

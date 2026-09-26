@@ -5,6 +5,7 @@
 	import PressButton from './PressButton.svelte';
 	import type { GameInfo } from '$lib/constants/games';
 	import { createGeneratedRound } from '$lib/games/generated-round.svelte';
+	import { createRoundGate, freeRoundsStatus } from '$lib/games/free-rounds.svelte';
 	import { LEVEL_OPTIONS, levelFromProficiency, type GameLevel } from '$lib/games/levels';
 	import { initialDialect, type GameDialect } from '$lib/games/themes';
 
@@ -19,12 +20,10 @@
 		endpoint: string;
 		/** What a round contains, e.g. "8 fresh sentences". */
 		roundLabel: string;
-		/** A hand-written sample non-subscribers can play on the page. */
-		demo: Snippet<[{ dialect: GameDialect }]>;
 		children: Snippet<[{ items: T[]; dialect: GameDialect; onPlayAgain: () => void }]>;
 	}
 
-	let { game, data, endpoint, roundLabel, demo, children }: Props = $props();
+	let { game, data, endpoint, roundLabel, children }: Props = $props();
 
 	// Chosen once on arrival; after that the chips own them.
 	let dialect = $state<GameDialect>(
@@ -32,21 +31,37 @@
 	);
 	let level = $state<GameLevel>(untrack(() => levelFromProficiency(data.proficiencyLevel)));
 
-	const round = createGeneratedRound<T>(
-		untrack(() => endpoint),
-		() => ({ isSubscribed: !!data.isSubscribed, signedIn: !!data.user })
+	const gate = createRoundGate(
+		untrack(() => game.slug),
+		() => ({ isSubscribed: !!data.isSubscribed, userId: data.user?.id ?? null })
 	);
+	const round = createGeneratedRound<T>(untrack(() => endpoint));
 
-	const start = () => round.start(dialect, level);
+	/**
+	 * The browser count opens the modal without a wasted request; the server
+	 * counts too and has the final say. A round is only counted once it loads.
+	 */
+	async function start() {
+		if (!gate.canStart()) {
+			gate.block();
+			return;
+		}
+		if (await round.start(dialect, level)) gate.tryStartRound();
+	}
+
+	function closeModal() {
+		gate.closeModal();
+		round.closeModal();
+	}
 </script>
 
 <GameShell
 	{game}
 	{dialect}
 	onDialectChange={(next) => (dialect = next)}
-	status={data.isSubscribed ? 'Premium' : 'Sample puzzle · Premium gets a fresh round every time'}
-	modal={round.modal}
-	onCloseModal={round.closeModal}
+	status={freeRoundsStatus(gate, 'rounds')}
+	modal={gate.modal ?? round.modal}
+	onCloseModal={closeModal}
 	pickers={[
 		{
 			id: 'level',
@@ -67,17 +82,12 @@
 			Preparing {roundLabel}…
 		</div>
 	{:else}
-		{#if !data.isSubscribed}
-			{#key dialect}
-				{@render demo({ dialect })}
-			{/key}
-		{/if}
 		<div class="start">
 			{#if round.status === 'error'}
 				<p class="error" role="alert">{round.error}</p>
 			{/if}
 			<PressButton onclick={start} accent={game.accent} deep={game.deep}>
-				{data.isSubscribed ? `Start · ${roundLabel}` : `Play ${roundLabel} with Premium`}
+				Start · {roundLabel}
 			</PressButton>
 		</div>
 	{/if}

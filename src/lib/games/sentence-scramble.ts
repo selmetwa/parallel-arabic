@@ -1,6 +1,5 @@
 import { normalizeArabicText } from '$lib/utils/arabic-normalization';
 import { shuffleUntilDifferent } from './shuffle';
-import type { GameDialect } from './themes';
 
 export interface ScrambleSentence {
 	/** For display — never normalized, so ة and أ stay as written. */
@@ -42,34 +41,3 @@ export function scrambleWords(
 		random
 	);
 }
-
-/**
- * One sentence non-subscribers can play on the page, per dialect. Hand-written;
- * worth a native speaker's check.
- */
-export const DEMO_SENTENCES: Record<GameDialect, ScrambleSentence> = {
-	'egyptian-arabic': {
-		arabic: 'أنا عايز أشرب شاي',
-		english: 'I want to drink tea',
-		transliteration: 'ana 3ayez ashrab shay',
-		words: ['أنا', 'عايز', 'أشرب', 'شاي']
-	},
-	levantine: {
-		arabic: 'أنا بدي إشرب شاي',
-		english: 'I want to drink tea',
-		transliteration: 'ana biddi ishrab shay',
-		words: ['أنا', 'بدي', 'إشرب', 'شاي']
-	},
-	darija: {
-		arabic: 'أنا بغيت نشرب أتاي',
-		english: 'I want to drink tea',
-		transliteration: 'ana bghit nshrab atay',
-		words: ['أنا', 'بغيت', 'نشرب', 'أتاي']
-	},
-	fusha: {
-		arabic: 'أريد أن أشرب الشاي',
-		english: 'I want to drink tea',
-		transliteration: 'urīdu an ashraba ash-shāy',
-		words: ['أريد', 'أن', 'أشرب', 'الشاي']
-	}
-};

@@ -155,7 +155,7 @@ export function getPageMeta(page: string, data?: any): PageMeta {
 		game: {
 			title: 'Arabic Games - Free Vocabulary & Word Games | Parallel Arabic',
 			description:
-				'Free Arabic word games in Egyptian, Levantine, Darija and Fusha: a memory match, word scramble and hangman, plus a quiz by reading, listening and speaking. No account needed.',
+				'Arabic games in four dialects: word scramble, odd one out, spot the mistake, sentence scramble and a vocabulary quiz. Two free rounds of each.',
 			url: `${baseUrl}/learn/game`,
 			type: 'website'
 		},

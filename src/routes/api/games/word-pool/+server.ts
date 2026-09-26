@@ -15,7 +15,6 @@ export const GET: RequestHandler = async ({ url, setHeaders }) => {
 		return json({ error: 'Unknown dialect' }, { status: 400 });
 	}
 
-	const kind = url.searchParams.get('kind') === 'letters' ? 'letters' : 'match';
 	const theme = resolveTheme(dialect, url.searchParams.get('theme'));
 
 	const { data, error } = await supabase
@@ -35,5 +34,5 @@ export const GET: RequestHandler = async ({ url, setHeaders }) => {
 		'x-robots-tag': 'noindex'
 	});
 
-	return json({ theme: theme.id, words: buildPool((data ?? []) as WordRow[], kind) });
+	return json({ theme: theme.id, words: buildPool((data ?? []) as WordRow[]) });
 };

@@ -19,23 +19,20 @@
 	import GameShell, { type Picker } from './GameShell.svelte';
 	import type { GameInfo } from '$lib/constants/games';
 	import { fetchWordPool } from '$lib/games/fetch-word-pool';
-	import { createRoundGate } from '$lib/games/free-rounds.svelte';
+	import { createRoundGate, freeRoundsStatus } from '$lib/games/free-rounds.svelte';
 	import { initialDialect, resolveTheme, themesFor } from '$lib/games/themes';
-	import type { PoolKind } from '$lib/games/word-pool';
 
 	interface Props {
 		game: GameInfo;
 		data: { isSubscribed?: boolean; user?: { id: string } | null; targetDialect?: string | null };
-		kind: PoolKind;
-		/** What one free round is called on this game: "boards", "sets", "words". */
+		/** What one round is called on this game, e.g. "sets". */
 		roundName: string;
-		extraPickers?: Picker[];
 		/** Placeholder shown while the words load. */
 		skeleton: Snippet;
 		children: Snippet<[WordGameContext]>;
 	}
 
-	let { game, data, kind, roundName, extraPickers = [], skeleton, children }: Props = $props();
+	let { game, data, roundName, skeleton, children }: Props = $props();
 
 	// Chosen once on arrival; after that the dialect chips own it.
 	const startDialect = untrack(() =>
@@ -61,7 +58,7 @@
 		const t = theme;
 		pool = null;
 		loadFailed = false;
-		fetchWordPool(kind, d, t)
+		fetchWordPool(d, t)
 			.then((res) => {
 				if (d === dialect && t === theme) pool = res.words;
 			})
@@ -75,13 +72,7 @@
 		theme = resolveTheme(next, theme).id;
 	}
 
-	const status = $derived(
-		!gate.ready
-			? undefined
-			: gate.unlimited
-				? `Premium · unlimited ${roundName}`
-				: `${gate.remaining} of 3 free ${roundName} left today`
-	);
+	const status = $derived(freeRoundsStatus(gate, roundName));
 
 	const pickers = $derived<Picker[]>([
 		{
@@ -90,8 +81,7 @@
 			value: theme,
 			options: themesFor(dialect).map((t) => ({ value: t.id, label: t.label, emoji: t.emoji })),
 			onChange: (value) => (theme = value)
-		},
-		...extraPickers
+		}
 	]);
 </script>
 

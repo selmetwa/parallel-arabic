@@ -6,12 +6,16 @@
 	import type { Dialect } from '$lib/types/index';
 	import { fetchUserReviewWords } from '$lib/helpers/fetch-review-words';
 	import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
+	import { createRoundGate, freeRoundsStatus } from '$lib/games/free-rounds.svelte';
 
 	let { data } = $props();
 
-	// Auth modal state
-	let showAuthModal = $state(false);
-	let showPaywallModal = $state(false);
+	// Two free quizzes, then the sign-up prompt (signed out) or the paywall.
+	const gate = createRoundGate('quiz', () => ({
+		isSubscribed: !!data.isSubscribed,
+		userId: data.user?.id ?? null
+	}));
+	const freeStatus = $derived(freeRoundsStatus(gate, 'quizzes'));
 	// In-progress games
 	let inProgressGames = $state(data.inProgressGames || []);
 	let deletingGameId = $state<string | null>(null);
@@ -244,16 +248,7 @@
 	);
 
 	function startGame() {
-		// Show auth modal for logged out users
-		if (!data.user) {
-			showAuthModal = true;
-			return;
-		}
-
-		if (!data.isSubscribed) {
-			showPaywallModal = true;
-			return;
-		}
+		if (!gate.tryStartRound()) return;
 
 		const params = new URLSearchParams();
 		params.set('dialect', selectedDialect);
@@ -302,6 +297,9 @@
 			A quiz built fresh each time, in your dialect and at your level. Choose words or sentences,
 			add a topic if you like, then answer by reading, listening or speaking.
 		</p>
+		{#if freeStatus}
+			<p class="free-status">{freeStatus}</p>
+		{/if}
 	</header>
 
 	<!-- In-Progress Games -->
@@ -608,9 +606,9 @@
 </section>
 
 <!-- Auth Modal for logged out users -->
-<AuthModal isOpen={showAuthModal} handleCloseModal={() => (showAuthModal = false)} />
+<AuthModal isOpen={gate.modal === 'auth'} handleCloseModal={gate.closeModal} />
 
-<PaywallModal isOpen={showPaywallModal} handleCloseModal={() => (showPaywallModal = false)} />
+<PaywallModal isOpen={gate.modal === 'paywall'} handleCloseModal={gate.closeModal} />
 
 <style>
 	/* Hero */
@@ -628,6 +626,17 @@
 		line-height: 1.55;
 		color: var(--text2);
 		max-width: 60ch;
+	}
+
+	.free-status {
+		display: inline-block;
+		margin-top: 0.85rem;
+		font-size: 0.8rem;
+		font-weight: 600;
+		color: var(--text1);
+		background: color-mix(in srgb, #22c55e 16%, var(--tile3));
+		border-radius: 100px;
+		padding: 0.3rem 0.8rem;
 	}
 
 	.back-link {

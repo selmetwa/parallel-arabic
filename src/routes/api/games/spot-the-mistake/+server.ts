@@ -1,7 +1,7 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { createSpotTheMistakeSchema } from '$lib/utils/gemini-schemas';
-import { requireSubscriber } from '$lib/server/games/access';
+import { checkGameAccess } from '$lib/server/games/access';
 import { gameErrorResponse, generateValidated, parseGameRequest } from '$lib/server/games/generate';
 import {
 	ITEMS_PER_ROUND,
@@ -9,10 +9,11 @@ import {
 	validateItem
 } from '$lib/server/games/spot-the-mistake';
 
-/** A fresh round of Spot the Mistake. Premium only. */
-export const POST: RequestHandler = async ({ request, locals }) => {
-	const denied = await requireSubscriber(locals);
-	if (denied) return denied;
+/** A fresh round of Spot the Mistake. Two free rounds, then Premium. */
+export const POST: RequestHandler = async (event) => {
+	const access = await checkGameAccess(event, 'spot-the-mistake');
+	if ('denied' in access) return access.denied;
+	const { request } = event;
 
 	const { dialect, level } = parseGameRequest(await request.json().catch(() => ({})));
 	const seen = new Set<string>();
@@ -27,6 +28,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 			temperature: 0.6,
 			thinkingBudget: 2048
 		});
+		await access.charge();
 		return json({ items });
 	} catch (err) {
 		return gameErrorResponse(err);

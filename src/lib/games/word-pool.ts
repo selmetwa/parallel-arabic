@@ -5,8 +5,8 @@
  * (`كلِب (كْلاب)`), verb pairs (`درّب، يْدرِّب`), whole example sentences,
  * templates (`__ـي بْيِوْجعْني`), loanwords with Latin in them (`MP3 بْلايِر`),
  * transliterations with grammar codes (`kal [i3]`), and several words per English
- * gloss. A memory board with two "a bite" cards has two right answers, so
- * duplicates by meaning are dropped too.
+ * gloss. Two words that both mean "a bite" would give one clue two answers, so
+ * duplicates by meaning are dropped too: a clue can't have two answers.
  */
 import { normalizeArabicText, stripArabicDiacritics } from '$lib/utils/arabic-normalization';
 
@@ -28,9 +28,6 @@ export interface GameWord {
 	transliteration: string;
 	audioUrl: string | null;
 }
-
-/** `match` = short entries for card games; `letters` = single words for spelling games. */
-export type PoolKind = 'match' | 'letters';
 
 const BRACKETED = /\s*[([][^)\]]*[)\]]/g;
 
@@ -74,9 +71,9 @@ export function cleanWord(row: WordRow): GameWord | null {
 	};
 }
 
-export function fitsKind(word: GameWord, kind: PoolKind): boolean {
-	if (kind === 'letters') return /^[ء-غف-ي]{3,7}$/.test(word.plain);
-	return word.plain.split(' ').length <= 2;
+/** A single word of 3–7 plain Arabic letters: something you can spell from tiles. */
+export function isLetterWord(word: GameWord): boolean {
+	return /^[ء-غف-ي]{3,7}$/.test(word.plain);
 }
 
 /** "to eat" and "eat", "whales" and "whale" are the same answer on a board. */
@@ -92,15 +89,15 @@ export function arabicKey(plain: string): string {
 	return normalizeArabicText(plain);
 }
 
-/** Every usable word for `kind`, unique by meaning and by spelling, in table order. */
-export function buildPool(rows: WordRow[], kind: PoolKind): GameWord[] {
+/** Every spellable word, unique by meaning and by spelling, in table order. */
+export function buildPool(rows: WordRow[]): GameWord[] {
 	const seenEnglish = new Set<string>();
 	const seenArabic = new Set<string>();
 	const pool: GameWord[] = [];
 
 	for (const row of rows) {
 		const word = cleanWord(row);
-		if (!word || !fitsKind(word, kind)) continue;
+		if (!word || !isLetterWord(word)) continue;
 
 		const en = englishKey(word.english);
 		const ar = arabicKey(word.plain);

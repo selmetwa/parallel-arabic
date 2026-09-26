@@ -14,20 +14,9 @@
 		accent: string;
 		deep: string;
 		onPlayAgain: () => void;
-		/** The on-page sample: one puzzle, no XP, no results card. */
-		demo?: boolean;
 	}
 
-	let {
-		puzzles,
-		dialect,
-		signedIn,
-		isSubscribed,
-		accent,
-		deep,
-		onPlayAgain,
-		demo = false
-	}: Props = $props();
+	let { puzzles, dialect, signedIn, isSubscribed, accent, deep, onPlayAgain }: Props = $props();
 
 	let index = $state(0);
 	let picked = $state<number | null>(null);
@@ -50,7 +39,7 @@
 		announcement = right
 			? `Correct: ${odd.arabic}. ${puzzle.explanation}`
 			: `Not quite. The odd one out was ${odd.arabic}. ${puzzle.explanation}`;
-		if (right && signedIn && !demo) {
+		if (right && signedIn) {
 			awardGameXp();
 			xpEarned++;
 		}
@@ -65,7 +54,7 @@
 
 <p class="sr-only" aria-live="polite">{announcement}</p>
 
-{#if done && !demo}
+{#if done}
 	<GameResults
 		heading="{score} of {puzzles.length} puzzles solved"
 		stats={[{ label: 'Solved', value: `${score}/${puzzles.length}` }]}
@@ -87,16 +76,11 @@
 			</ul>
 		{/if}
 	</GameResults>
-{:else if done}
-	<p class="demo-done">
-		That's one puzzle. Premium gives you ten fresh ones at your level every round, from easy to
-		hard.
-	</p>
 {:else}
 	<div class="game" style="--accent:{accent}; --deep:{deep};">
 		<div class="top">
 			<p class="progress">
-				{demo ? 'Sample puzzle' : `Puzzle ${index + 1} of ${puzzles.length}`}
+				Puzzle {index + 1} of {puzzles.length}
 				<span class="level">· {puzzle.difficulty}</span>
 			</p>
 			<label class="toggle">
@@ -144,7 +128,7 @@
 					</div>
 				{/if}
 				<PressButton onclick={next} {accent} {deep}>
-					{demo ? 'Done' : index + 1 < puzzles.length ? 'Next puzzle' : 'See results'}
+					{index + 1 < puzzles.length ? 'Next puzzle' : 'See results'}
 				</PressButton>
 			</div>
 		{/if}
@@ -300,15 +284,6 @@
 	.audio {
 		display: flex;
 		gap: 0.4rem;
-	}
-
-	.demo-done {
-		border-radius: 1.1rem;
-		border: 2px solid var(--tile5);
-		background: var(--tile3);
-		padding: 1rem 1.1rem;
-		font-size: 0.92rem;
-		color: var(--text1);
 	}
 
 	.list-title {

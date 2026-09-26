@@ -1,5 +1,3 @@
-import type { GameDialect } from './themes';
-
 export interface MistakeItem {
 	/** The incorrect sentence, word by word, edge punctuation removed. */
 	words: string[];
@@ -33,28 +31,4 @@ export const MISTAKE_LABELS: Record<MistakeType, string> = {
 	preposition: 'Preposition',
 	negation: 'Negation',
 	grammar: 'Grammar'
-};
-
-function demo(words: string[], correct: string, transliteration: string): MistakeItem {
-	return {
-		words,
-		wrongIndex: words.indexOf('طويل'),
-		correction: 'طويلة',
-		correct,
-		english: 'This girl is tall.',
-		transliteration,
-		errorType: 'gender',
-		explanation: 'البنت is feminine, so the adjective takes the feminine ending: طويلة, not طويل.'
-	};
-}
-
-/** The on-page sample for non-subscribers, per dialect. Hand-written; worth a native check. */
-export const DEMO_MISTAKES: Record<GameDialect, MistakeItem> = {
-	'egyptian-arabic': demo(['البنت', 'دي', 'طويل'], 'البنت دي طويلة', 'il-bint di tawiila'),
-	levantine: {
-		...demo(['هالبنت', 'طويل', 'كتير'], 'هالبنت طويلة كتير', 'hal-bint tawiile ktiir'),
-		english: 'This girl is very tall.'
-	},
-	darija: demo(['هاد', 'البنت', 'طويل'], 'هاد البنت طويلة', 'had l-bent twila'),
-	fusha: demo(['هذه', 'البنت', 'طويل'], 'هذه البنت طويلة', 'hādhihi al-bintu ṭawīla')
 };
