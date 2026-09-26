@@ -30,3 +30,6 @@ android/app/src/main/res/xml/config.xml
 # Sentry Config File
 .env.sentry-build-plugin
 .claude/plans/*.word-corpus-cache.json
+
+# Signed-in session for scripts/capture-feature-screenshots.ts
+/.auth

@@ -10,6 +10,14 @@ export interface Faq {
 	answer: string;
 }
 
+/** A mid-round screenshot for the hub card, from scripts/capture-feature-screenshots.ts. */
+export interface GameShot {
+	src: string;
+	w: number;
+	h: number;
+	alt: string;
+}
+
 export interface GameInfo {
 	slug: string;
 	name: string;
@@ -21,6 +29,7 @@ export interface GameInfo {
 	levels: string;
 	accent: string;
 	deep: string;
+	shot: GameShot;
 	seo: { title: string; description: string };
 	intro: string;
 	howToPlay: string[];
@@ -38,6 +47,12 @@ export const GAMES: GameInfo[] = [
 		levels: 'Beginner–Intermediate',
 		accent: '#8b5cf6',
 		deep: '#6d28d9',
+		shot: {
+			src: '/images/feature-pages/game-word-scramble.webp',
+			w: 1568,
+			h: 894,
+			alt: 'A Word Scramble round: the English meaning, the word so far and the letter tiles left to place'
+		},
 		seo: {
 			title: 'Arabic Word Scramble - Unscramble the Letters | Parallel Arabic',
 			description:
@@ -79,6 +94,12 @@ export const GAMES: GameInfo[] = [
 		levels: 'Beginner–Advanced',
 		accent: '#10b981',
 		deep: '#047857',
+		shot: {
+			src: '/images/feature-pages/game-odd-one-out.webp',
+			w: 1568,
+			h: 708,
+			alt: 'An Odd One Out puzzle: four Arabic words with transliteration, one of which does not belong'
+		},
 		seo: {
 			title: 'Arabic Odd One Out - Word Puzzles | Parallel Arabic',
 			description:
@@ -119,6 +140,12 @@ export const GAMES: GameInfo[] = [
 		levels: 'Beginner–Advanced',
 		accent: '#f43f5e',
 		deep: '#9f1239',
+		shot: {
+			src: '/images/feature-pages/game-spot-the-mistake.webp',
+			w: 1568,
+			h: 520,
+			alt: 'A Spot the Mistake round: an Arabic sentence with its English meaning and one wrong word to find'
+		},
 		seo: {
 			title: 'Spot the Mistake - Arabic Grammar Game | Parallel Arabic',
 			description:
@@ -160,6 +187,12 @@ export const GAMES: GameInfo[] = [
 		levels: 'Beginner–Advanced',
 		accent: '#ec4899',
 		deep: '#9d174d',
+		shot: {
+			src: '/images/feature-pages/game-sentence-scramble.webp',
+			w: 1568,
+			h: 810,
+			alt: 'A Sentence Scramble round: an English sentence and the Arabic words to tap into the right order'
+		},
 		seo: {
 			title: 'Arabic Sentence Scramble - Word Order Game | Parallel Arabic',
 			description:
@@ -202,7 +235,13 @@ export const QUIZ_CARD = {
 	skills: ['Reading', 'Listening', 'Speaking'],
 	levels: 'A1–C2',
 	accent: '#22c55e',
-	deep: '#15803d'
+	deep: '#15803d',
+	shot: {
+		src: '/images/feature-pages/game-quiz.webp',
+		w: 1456,
+		h: 1490,
+		alt: 'A Vocabulary Quiz question: fill in the blank in an Arabic sentence from four choices'
+	}
 };
 
 export const GAMES_HUB_FAQS: Faq[] = [

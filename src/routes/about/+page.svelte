@@ -8,11 +8,16 @@
 	 *   | '/learn/game' | '/speak' | '/review/all-words' | '/egyptian-arabic' | '/levantine'
 	 *   | '/darija' | '/fusha'} Route
 	 */
+	/**
+	 * The /features landing page for a step or feature. Descriptive link text, since
+	 * these are the page's main internal links to them.
+	 * @typedef {{ href: `/features/${string}`; label: string }} More
+	 */
 	/** @typedef {{ ar: string; tr: string; en: string }} Word */
 	/** @typedef {{ label: string; native: string; note: string; href: Route; words: Word[] }} Dialect */
 	/** @typedef {{ title: string; img: string; w: number; h: number; alt: string }} Shot */
-	/** @typedef {Shot & { num: string; verb: string; body: string; href?: Route; cta?: string; chat?: boolean }} Step */
-	/** @typedef {Shot & { body: string; href?: Route; cta?: string; focus?: string }} Feature */
+	/** @typedef {Shot & { num: string; verb: string; body: string; href?: Route; cta?: string; more?: More; chat?: boolean }} Step */
+	/** @typedef {Shot & { body: string; href?: Route; cta?: string; more?: More; focus?: string }} Feature */
 	/** @typedef {{ t: string; b?: boolean }} QuoteSegment */
 
 	// ── Hero demo: one sentence in all four dialects ──────────────────────────
@@ -135,7 +140,8 @@
 			img: '/images/features-large/stories.png',
 			w: 1532,
 			h: 534,
-			alt: 'A story sentence with the English meaning and transliteration above each Arabic word'
+			alt: 'A story sentence with the English meaning and transliteration above each Arabic word',
+			more: { href: '/features/arabic-reading-practice', label: 'More on reading practice' }
 		},
 		{
 			num: '٢',
@@ -145,7 +151,8 @@
 			img: '/images/features-large/definition-modal.png',
 			w: 701,
 			h: 773,
-			alt: 'The definition card for صغير, showing its meaning, its root and how it is used in context'
+			alt: 'The definition card for صغير, showing its meaning, its root and how it is used in context',
+			more: { href: '/features/tap-to-translate', label: 'How tap-to-translate works' }
 		},
 		{
 			num: '٣',
@@ -157,7 +164,8 @@
 			img: '/images/features-large/game.png',
 			w: 649,
 			h: 818,
-			alt: 'A fill-in-the-blank question in Egyptian Arabic'
+			alt: 'A fill-in-the-blank question in Egyptian Arabic',
+			more: { href: '/features/learn-arabic-by-playing', label: 'More about the games' }
 		},
 		{
 			num: '٤',
@@ -170,7 +178,8 @@
 			img: '/images/features-large/tutor.png',
 			w: 2376,
 			h: 814,
-			alt: 'A conversation with the AI Tutor, with each Arabic word glossed in English'
+			alt: 'A conversation with the AI Tutor, with each Arabic word glossed in English',
+			more: { href: '/features/arabic-conversation-practice', label: 'More on conversation practice' }
 		}
 	];
 
@@ -184,7 +193,8 @@
 			img: '/images/features-large/lessons.png',
 			w: 637,
 			h: 1195,
-			alt: 'A lesson path through Greetings, Basics, Nationality and Family'
+			alt: 'A lesson path through Greetings, Basics, Nationality and Family',
+			more: { href: '/features/arabic-course', label: 'About the course' }
 		},
 		{
 			title: 'Spaced-repetition review',
@@ -192,7 +202,8 @@
 			img: '/images/features-large/repitition.png',
 			w: 1568,
 			h: 1228,
-			alt: 'A review card for ايوه, meaning yes, with Easy, Medium and Hard buttons'
+			alt: 'A review card for ايوه, meaning yes, with Easy, Medium and Hard buttons',
+			more: { href: '/features/arabic-spaced-repetition', label: 'How spaced repetition works' }
 		},
 		{
 			title: 'Pronunciation practice',
@@ -202,7 +213,8 @@
 			img: '/images/features-large/speak.png',
 			w: 1202,
 			h: 957,
-			alt: 'Speaking practice scoring a spoken Arabic sentence at 100 percent'
+			alt: 'Speaking practice scoring a spoken Arabic sentence at 100 percent',
+			more: { href: '/features/arabic-pronunciation-practice', label: 'More on pronunciation practice' }
 		},
 		{
 			title: 'Alphabet',
@@ -222,7 +234,8 @@
 			img: '/images/features-large/sentences.png',
 			w: 1238,
 			h: 868,
-			alt: 'Tracing an Arabic sentence on the built-in keyboard'
+			alt: 'Tracing an Arabic sentence on the built-in keyboard',
+			more: { href: '/features/arabic-writing-practice', label: 'More on writing practice' }
 		},
 		{
 			title: 'Conjugation drills',
@@ -232,7 +245,8 @@
 			img: '/images/features-large/verb-conjugations.png',
 			w: 841,
 			h: 747,
-			alt: 'A past-tense conjugation quiz for “I went”'
+			alt: 'A past-tense conjugation quiz for “I went”',
+			more: { href: '/features/arabic-verb-conjugation-practice', label: 'More on verb drills' }
 		},
 		{
 			title: 'Dialect comparison',
@@ -240,7 +254,8 @@
 			img: '/images/features-large/dialect-compare.png',
 			w: 787,
 			h: 653,
-			alt: 'One word compared across Egyptian, Levantine, Moroccan and Fusha'
+			alt: 'One word compared across Egyptian, Levantine, Moroccan and Fusha',
+			more: { href: '/features/compare-arabic-dialects', label: 'How dialect comparison works' }
 		},
 		{
 			title: 'Import your words',
@@ -248,7 +263,8 @@
 			img: '/images/features-large/import.png',
 			w: 783,
 			h: 1113,
-			alt: 'Pasting a word list to import, with Egyptian Arabic selected'
+			alt: 'Pasting a word list to import, with Egyptian Arabic selected',
+			more: { href: '/features/import-arabic-vocabulary', label: 'How importing works' }
 		},
 		{
 			title: 'Vocabulary table',
@@ -260,7 +276,8 @@
 			h: 616,
 			// Wide enough that a centred crop would cut off the Arabic column.
 			focus: 'left top',
-			alt: 'A table of saved words with their English, transliteration and review status'
+			alt: 'A table of saved words with their English, transliteration and review status',
+			more: { href: '/features/arabic-vocabulary-tracker', label: 'More on the word bank' }
 		}
 	];
 
@@ -556,10 +573,17 @@
 							<p class="step-verb">Step {i + 1} · {step.verb}</p>
 							<h3 class="step-title">{step.title}</h3>
 							<p class="body mt-3">{step.body}</p>
-							{#if step.href}
-								<a href={resolve(step.href)} class="link mt-5">
-									{step.cta} <span aria-hidden="true">→</span>
-								</a>
+							{#if step.href || step.more}
+								<div class="links mt-5">
+									{#if step.href}
+										<a href={resolve(step.href)} class="link">
+											{step.cta} <span aria-hidden="true">→</span>
+										</a>
+									{/if}
+									{#if step.more}
+										<a href={resolve(step.more.href)} class="link link--quiet">{step.more.label}</a>
+									{/if}
+								</div>
 							{/if}
 						</div>
 						<button
@@ -630,16 +654,28 @@
 							<div class="feature-body">
 								<h3>{f.title}</h3>
 								<p>{f.body}</p>
-								{#if f.href}
-									<a href={resolve(f.href)} class="link mt-auto pt-4">
-										{f.cta} <span aria-hidden="true">→</span>
-									</a>
+								{#if f.href || f.more}
+									<div class="links mt-auto pt-4">
+										{#if f.href}
+											<a href={resolve(f.href)} class="link">
+												{f.cta} <span aria-hidden="true">→</span>
+											</a>
+										{/if}
+										{#if f.more}
+											<a href={resolve(f.more.href)} class="link link--quiet">{f.more.label}</a>
+										{/if}
+									</div>
 								{/if}
 							</div>
 						</article>
 					</li>
 				{/each}
 			</ul>
+
+			<p class="body mt-10 rise">
+				Every one of these has its own page with screenshots and answers to common questions:
+				<a href={resolve('/features')} class="link">see every feature</a>.
+			</p>
 		</div>
 	</section>
 
@@ -855,6 +891,18 @@
 	}
 	.link:hover {
 		text-decoration-color: var(--accent);
+	}
+	/* Sits beside the primary link: same shape, one step quieter. */
+	.link--quiet {
+		font-weight: 500;
+		color: var(--text2);
+	}
+	.links {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		column-gap: 1.5rem;
+		row-gap: 0.6rem;
 	}
 
 	.fine-print {
