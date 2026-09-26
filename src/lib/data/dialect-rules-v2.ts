@@ -54,10 +54,20 @@ const DIALECT_PHONOLOGY: Record<string, string> = {
 - Present tense is the imperfect (يذهب); future uses سـ / سوف (سيذهب).`
 };
 
+/**
+ * How to write naturally in a dialect, without the lesson-specific output rules.
+ * Used by prompts whose JSON has no tashkeel or word-alignment fields.
+ */
+export function getDialectStyle(dialect: string): string {
+	return (
+		DIALECT_PHONOLOGY[dialect] ??
+		`Write in authentic ${getDialectName(
+			dialect
+		)} as it is actually spoken by native speakers — natural and conversational, not stiff or overly formal.`
+	);
+}
+
 /** Returns the full rules block (phonology + shared format) for a dialect. */
 export function getDialectRules(dialect: string): string {
-	const phonology =
-		DIALECT_PHONOLOGY[dialect] ??
-		`Write in authentic ${getDialectName(dialect)} as it is actually spoken by native speakers — natural and conversational, not stiff or overly formal.`;
-	return `${phonology}\n${FORMAT_RULES}`.trim();
+	return `${getDialectStyle(dialect)}\n${FORMAT_RULES}`.trim();
 }

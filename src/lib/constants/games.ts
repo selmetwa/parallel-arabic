@@ -159,6 +159,48 @@ export const GAMES: GameInfo[] = [
 					'Yes, with an Arabic keyboard layout. Each letter you type counts as a guess, and Enter moves on to the next word.'
 			}
 		]
+	},
+	{
+		slug: 'sentence-scramble',
+		name: 'Sentence Scramble',
+		heading: 'Arabic Sentence Scramble',
+		emoji: '🧩',
+		tagline: 'Put the words of an Arabic sentence back in the right order.',
+		skills: ['Grammar', 'Word order'],
+		levels: 'Beginner–Advanced',
+		access: 'subscriber',
+		accent: '#ec4899',
+		deep: '#9d174d',
+		seo: {
+			title: 'Arabic Sentence Scramble - Word Order Game | Parallel Arabic',
+			description:
+				'Rebuild Arabic sentences from their scrambled words. Fresh sentences at your level in Egyptian, Levantine, Darija or Fusha, with audio and transliteration.'
+		},
+		intro:
+			'A word-order game for Arabic. You see what a sentence means in English and its words in a jumble. Tap them into the right order and learn how a sentence in your dialect is put together.',
+		howToPlay: [
+			'Pick a dialect and a level, then start a round of eight sentences.',
+			'Read the English, then tap the Arabic words in order. The sentence builds from right to left.',
+			'Tap a placed word to send it back. When all the words are in, the sentence is checked.',
+			'Words in the wrong place are highlighted. Fix them, or show the answer and move on.'
+		],
+		faqs: [
+			{
+				question: "Isn't Arabic word order flexible?",
+				answer:
+					'Often it is, especially in speech. The sentences in this game are chosen to have one natural order, so the answer is not up for debate. They are short, everyday sentences, not lists or phrases that could go either way.'
+			},
+			{
+				question: 'Can I hear the sentences?',
+				answer:
+					'Yes. Once a sentence is solved you can play it aloud in your dialect, and read its transliteration.'
+			},
+			{
+				question: 'What level are the sentences?',
+				answer:
+					'You choose. Beginner sentences are three to six words of everyday Arabic; advanced ones run up to ten words with richer vocabulary.'
+			}
+		]
 	}
 ];
 

@@ -735,3 +735,24 @@ export function createConjugationExerciseSchema() {
 }
 
 export type ConjugationExerciseSchema = z.infer<ReturnType<typeof createConjugationExerciseSchema>['zodSchema']>;
+
+/**
+ * Schemas for the puzzle games under /learn/game.
+ *
+ * Kept flat like the listening schema above: no array bounds and no enums, so
+ * Gemini never rejects them as too complex. Counts and allowed values are set
+ * in the prompt and checked server-side (src/lib/server/games/).
+ */
+export function createSentenceScrambleSchema() {
+	const schema = z.object({
+		sentences: z.array(
+			z.object({
+				arabic: z.string(),
+				english: z.string(),
+				transliteration: z.string()
+			})
+		)
+	});
+
+	return { zodSchema: schema, jsonSchema: zodToJsonSchema(schema) };
+}
