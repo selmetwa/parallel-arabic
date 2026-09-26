@@ -1,78 +1,21 @@
 <script lang="ts">
-	import { untrack } from 'svelte';
-	import { page } from '$app/state';
-	import GameShell from '$lib/components/games/GameShell.svelte';
+	import WordGamePage from '$lib/components/games/WordGamePage.svelte';
 	import WordMatch from '$lib/components/games/WordMatch.svelte';
 	import { getGame } from '$lib/constants/games';
-	import { fetchWordPool } from '$lib/games/fetch-word-pool';
-	import { createRoundGate } from '$lib/games/free-rounds.svelte';
-	import { initialDialect, resolveTheme, themesFor, type GameDialect } from '$lib/games/themes';
 	import { PAIRS, type BoardSize } from '$lib/games/word-match';
-	import type { GameWord } from '$lib/games/word-pool';
 
 	let { data } = $props();
 
 	const game = getGame('word-match')!;
-
-	// Chosen once on arrival; after that the dialect chips own it.
-	const startDialect = untrack(() =>
-		initialDialect(page.url.searchParams.get('dialect'), data.targetDialect)
-	);
-	let dialect = $state<GameDialect>(startDialect);
-	let theme = $state(resolveTheme(startDialect, null).id);
 	let size = $state<BoardSize>('easy');
-	let pool = $state<GameWord[] | null>(null);
-	let loadFailed = $state(false);
-
-	const gate = createRoundGate(game.slug, () => ({
-		isSubscribed: !!data.isSubscribed,
-		userId: data.user?.id ?? null
-	}));
-
-	// Load the theme's words after mount; the list is never part of the page HTML.
-	$effect(() => {
-		const d = dialect;
-		const t = theme;
-		pool = null;
-		loadFailed = false;
-		fetchWordPool('match', d, t)
-			.then((res) => {
-				if (d === dialect && t === theme) pool = res.words;
-			})
-			.catch(() => {
-				if (d === dialect && t === theme) loadFailed = true;
-			});
-	});
-
-	function changeDialect(next: GameDialect) {
-		dialect = next;
-		theme = resolveTheme(next, theme).id;
-	}
-
-	const status = $derived(
-		!gate.ready
-			? undefined
-			: gate.unlimited
-				? 'Premium · unlimited boards'
-				: `${gate.remaining} of 3 free boards left today`
-	);
 </script>
 
-<GameShell
+<WordGamePage
 	{game}
-	{dialect}
-	onDialectChange={changeDialect}
-	{status}
-	modal={gate.modal}
-	onCloseModal={gate.closeModal}
-	pickers={[
-		{
-			id: 'theme',
-			label: 'Theme',
-			value: theme,
-			options: themesFor(dialect).map((t) => ({ value: t.id, label: t.label, emoji: t.emoji })),
-			onChange: (value) => (theme = value)
-		},
+	{data}
+	kind="match"
+	roundName="boards"
+	extraPickers={[
 		{
 			id: 'size',
 			label: 'Board',
@@ -85,31 +28,29 @@
 		}
 	]}
 >
-	{#if pool}
-		{#key `${dialect}:${theme}:${size}`}
+	{#snippet skeleton()}
+		<div class="skeleton">
+			{#each Array.from({ length: PAIRS[size] * 2 }, (_, i) => i) as i (i)}
+				<span class="ghost"></span>
+			{/each}
+		</div>
+	{/snippet}
+
+	{#snippet children({ pool, dialect, gate, signedIn, isSubscribed })}
+		{#key size}
 			<WordMatch
 				{pool}
 				{size}
 				{dialect}
 				{gate}
-				signedIn={!!data.user}
-				isSubscribed={!!data.isSubscribed}
+				{signedIn}
+				{isSubscribed}
 				accent={game.accent}
 				deep={game.deep}
 			/>
 		{/key}
-	{:else if loadFailed}
-		<p class="load-error" role="alert">
-			The words didn't load. Check your connection and pick the theme again.
-		</p>
-	{:else}
-		<div class="skeleton" aria-busy="true" aria-label="Loading the board">
-			{#each Array.from({ length: PAIRS[size] * 2 }, (_, i) => i) as i (i)}
-				<span class="ghost"></span>
-			{/each}
-		</div>
-	{/if}
-</GameShell>
+	{/snippet}
+</WordGamePage>
 
 <style>
 	.skeleton {
@@ -133,14 +74,6 @@
 		background: var(--tile3);
 		border: 2px solid var(--tile5);
 		animation: pulse 1.4s ease-in-out infinite;
-	}
-
-	.load-error {
-		border-radius: 0.9rem;
-		padding: 0.8rem 1rem;
-		font-size: 0.9rem;
-		color: var(--text1);
-		background: color-mix(in srgb, #f43f5e 16%, var(--tile3));
 	}
 
 	@keyframes pulse {

@@ -75,6 +75,90 @@ export const GAMES: GameInfo[] = [
 					'Because the dialects really do use different words. A tomato is طماطم in Egypt, بندورة in the Levant and ماطيشة in Morocco. Pick the dialect you are learning and the board uses its words.'
 			}
 		]
+	},
+	{
+		slug: 'word-scramble',
+		name: 'Word Scramble',
+		heading: 'Arabic Word Scramble',
+		emoji: '🔤',
+		tagline: 'Put the letters back in order and watch them join into a word.',
+		skills: ['Spelling', 'Letters'],
+		levels: 'Beginner–Intermediate',
+		access: 'free-to-try',
+		accent: '#8b5cf6',
+		deep: '#6d28d9',
+		seo: {
+			title: 'Arabic Word Scramble - Unscramble the Letters | Parallel Arabic',
+			description:
+				'Unscramble Arabic words letter by letter and see how the letters join as you go. Free spelling practice in Egyptian, Levantine, Darija and Fusha.'
+		},
+		intro:
+			'A spelling game for Arabic words. You get the meaning and the letters, shuffled. Tap them back into order, and the answer joins up as you go, the way Arabic letters connect in real writing.',
+		howToPlay: [
+			'Pick a dialect and a theme. Each set has five words, from short to long.',
+			'Read the meaning, then tap the letters in the order you think they go. The word builds from right to left.',
+			'Undo takes back the last letter. Stuck? A hint places the next correct letter, and Skip shows the answer.',
+			'Finish the set to see which words you unscrambled on your own.'
+		],
+		faqs: [
+			{
+				question: 'Arabic letters change shape. How do the tiles work?',
+				answer:
+					'Each tile shows a letter on its own, the way it looks in the alphabet. When you place it, it joins the letters around it and takes the shape it has inside the word. Watching that happen is half the point of the game.'
+			},
+			{
+				question: 'Is there a timer?',
+				answer:
+					'No. Take as long as you need. The score counts the words you solved without a hint or a skip.'
+			},
+			{
+				question: 'Can I type instead of tapping?',
+				answer:
+					'Yes. With an Arabic keyboard layout, typing a letter places the matching tile and Backspace takes the last one back.'
+			}
+		]
+	},
+	{
+		slug: 'word-guess',
+		name: 'Word Guess',
+		heading: 'Arabic Word Guess (Hangman)',
+		emoji: '🔎',
+		tagline: 'Find the hidden Arabic word one letter at a time.',
+		skills: ['Spelling', 'Letters', 'Vocabulary'],
+		levels: 'Beginner–Intermediate',
+		access: 'free-to-try',
+		accent: '#f59e0b',
+		deep: '#b45309',
+		seo: {
+			title: 'Arabic Hangman Game - Guess the Word | Parallel Arabic',
+			description:
+				'Arabic hangman: guess the hidden word one letter at a time, with its English meaning as the clue. Free in Egyptian, Levantine, Darija and Fusha.'
+		},
+		intro:
+			'Arabic hangman, without the gallows. You know what the word means and how many letters it has. Guess its letters one at a time before you run out of misses.',
+		howToPlay: [
+			'Pick a dialect and a theme. The meaning of the hidden word is your clue.',
+			'Tap a letter. If it is in the word, every place it appears is filled in.',
+			'Six wrong letters and the word is revealed.',
+			'Each word ends with its spelling, transliteration and, where there is a recording, how it sounds.'
+		],
+		faqs: [
+			{
+				question: 'Is this Arabic hangman?',
+				answer:
+					'Yes, the same idea: guess the letters of a hidden word before your misses run out. You get six misses per word, and there is no gallows.'
+			},
+			{
+				question: 'Do I need to find hamza and taa marbuta separately?',
+				answer:
+					'No. Letters that are written differently but learned together share a key: ا also fills in أ, إ and آ; ه fills in ة; ي fills in ى; and ء fills in ئ and ؤ.'
+			},
+			{
+				question: 'Can I use my computer keyboard?',
+				answer:
+					'Yes, with an Arabic keyboard layout. Each letter you type counts as a guess, and Enter moves on to the next word.'
+			}
+		]
 	}
 ];
 
