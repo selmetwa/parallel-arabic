@@ -161,6 +161,89 @@ export const GAMES: GameInfo[] = [
 		]
 	},
 	{
+		slug: 'odd-one-out',
+		name: 'Odd One Out',
+		heading: 'Arabic Odd One Out',
+		emoji: '🧠',
+		tagline: 'Four Arabic words, one doesn’t belong. Spot it, then learn why.',
+		skills: ['Vocabulary', 'Grammar'],
+		levels: 'Beginner–Advanced',
+		access: 'subscriber',
+		accent: '#10b981',
+		deep: '#047857',
+		seo: {
+			title: 'Arabic Odd One Out - Word Puzzles | Parallel Arabic',
+			description:
+				'Arabic word puzzles: four words, one doesn’t belong. Spot it by meaning, gender, word type or shared root, then read why. Fresh puzzles in four dialects.'
+		},
+		intro:
+			'Four Arabic words: three share something, one doesn’t. Sometimes it’s the meaning, sometimes the grammar: gender, singular or plural, or the three-letter root the words are built from. Every answer comes with the reason.',
+		howToPlay: [
+			'Pick a dialect and a level, then start a round of ten puzzles. They get harder as you go.',
+			'Read the four words and tap the one that doesn’t belong.',
+			'Every word’s meaning appears, with a line explaining the pattern.',
+			'At the end, go back over the puzzles you missed and their explanations.'
+		],
+		faqs: [
+			{
+				question: 'What patterns do the puzzles use?',
+				answer:
+					'Five kinds: meaning (three fruits and a chair), gender (three masculine nouns and a feminine one), word type (three verbs and a noun), singular or plural, and shared root.'
+			},
+			{
+				question: 'What is an Arabic root?',
+				answer:
+					'Most Arabic words are built from a root of three consonants that carries a core meaning. كتاب (book), مكتب (office) and كاتب (writer) all come from ك-ت-ب, to do with writing. Spotting roots is one of the fastest ways to guess new words.'
+			},
+			{
+				question: 'Are the puzzles the same every time?',
+				answer: 'No. Every round is a fresh set of ten, in the dialect and at the level you choose.'
+			}
+		]
+	},
+	{
+		slug: 'spot-the-mistake',
+		name: 'Spot the Mistake',
+		heading: 'Spot the Mistake in Arabic',
+		emoji: '🔍',
+		tagline: 'One word in each Arabic sentence is wrong. Tap it and see the fix.',
+		skills: ['Grammar', 'Reading'],
+		levels: 'Beginner–Advanced',
+		access: 'subscriber',
+		accent: '#f43f5e',
+		deep: '#9f1239',
+		seo: {
+			title: 'Spot the Mistake - Arabic Grammar Game | Parallel Arabic',
+			description:
+				'An Arabic grammar game: each sentence has one wrong word. Tap it, see the corrected sentence and learn the rule. Fresh sentences in four dialects.'
+		},
+		intro:
+			'Each Arabic sentence has one word that doesn’t fit: an adjective in the wrong gender, a verb that doesn’t match its subject, a plural that should be singular. Find it, then see the corrected sentence and the rule behind it.',
+		howToPlay: [
+			'Pick a dialect and a level, then start a round of ten sentences.',
+			'Read the sentence, with its English meaning underneath, and tap the word that’s wrong.',
+			'The correction appears over the wrong word, with the corrected sentence and a short explanation.',
+			'At the end, review every corrected sentence and play any of them aloud.'
+		],
+		faqs: [
+			{
+				question: 'What kinds of mistakes are in the sentences?',
+				answer:
+					'The ones learners make most: an adjective that doesn’t agree with its noun, a verb in the wrong person, a singular where a plural belongs, and a possessive ending that points to the wrong person. Each one clashes with another word in the same sentence, so you can prove it.'
+			},
+			{
+				question: 'Does the grammar change by dialect?',
+				answer:
+					'Some of it does. Verb prefixes and demonstratives differ between Egyptian, Levantine, Darija and Fusha, so the sentences and corrections follow the dialect you pick.'
+			},
+			{
+				question: 'What level is Spot the Mistake for?',
+				answer:
+					'Any level. Beginner rounds use short everyday sentences; advanced rounds use longer sentences where the mismatch is further from the word it depends on.'
+			}
+		]
+	},
+	{
 		slug: 'sentence-scramble',
 		name: 'Sentence Scramble',
 		heading: 'Arabic Sentence Scramble',

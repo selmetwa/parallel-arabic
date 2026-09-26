@@ -40,7 +40,8 @@ export async function generateValidated<Parsed, Item>({
 	items,
 	validate,
 	want,
-	temperature = 0.9
+	temperature = 0.9,
+	thinkingBudget = 0
 }: {
 	prompt: string;
 	schema: { zodSchema: z.ZodSchema<Parsed>; jsonSchema: unknown };
@@ -51,6 +52,8 @@ export async function generateValidated<Parsed, Item>({
 	/** How many items a round should have. */
 	want: number;
 	temperature?: number;
+	/** Let the model reason first — worth it where correctness is subtle. */
+	thinkingBudget?: number;
 }): Promise<Item[]> {
 	const apiKey = env['GEMINI_API_KEY'];
 	if (!apiKey) throw new Error('GEMINI_API_KEY is not configured');
@@ -65,8 +68,8 @@ export async function generateValidated<Parsed, Item>({
 			contents: prompt,
 			config: {
 				temperature,
-				maxOutputTokens: 8192,
-				thinkingConfig: { thinkingBudget: 0 },
+				maxOutputTokens: 8192 + thinkingBudget,
+				thinkingConfig: { thinkingBudget },
 				responseMimeType: 'application/json',
 				responseJsonSchema: schema.jsonSchema
 			}

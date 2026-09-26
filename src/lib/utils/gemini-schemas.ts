@@ -756,3 +756,45 @@ export function createSentenceScrambleSchema() {
 
 	return { zodSchema: schema, jsonSchema: zodToJsonSchema(schema) };
 }
+
+export function createOddOneOutSchema() {
+	const schema = z.object({
+		puzzles: z.array(
+			z.object({
+				words: z.array(
+					z.object({
+						arabic: z.string(),
+						english: z.string(),
+						transliteration: z.string()
+					})
+				),
+				// The exact Arabic of the odd word — models miscount indices.
+				oddWord: z.string(),
+				pattern: z.string(),
+				explanation: z.string(),
+				difficulty: z.string()
+			})
+		)
+	});
+
+	return { zodSchema: schema, jsonSchema: zodToJsonSchema(schema) };
+}
+
+export function createSpotTheMistakeSchema() {
+	const schema = z.object({
+		items: z.array(
+			z.object({
+				incorrect: z.string(),
+				wrongWord: z.string(),
+				correction: z.string(),
+				correct: z.string(),
+				english: z.string(),
+				transliteration: z.string(),
+				errorType: z.string(),
+				explanation: z.string()
+			})
+		)
+	});
+
+	return { zodSchema: schema, jsonSchema: zodToJsonSchema(schema) };
+}
