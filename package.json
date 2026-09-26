@@ -21,6 +21,7 @@
     "sync:subscriptions:dry": "vite-node scripts/sync-stripe-subscriptions.ts --dry-run",
     "populate:words": "vite-node scripts/populate-words.ts",
     "populate:words:dry": "vite-node scripts/populate-words.ts --dry-run",
+    "screenshots:features": "vite-node scripts/capture-feature-screenshots.ts",
     "seed:wotd": "vite-node scripts/seed-word-of-the-day.ts",
     "seed:wotd:dry": "vite-node scripts/seed-word-of-the-day.ts --dry-run",
     "upload:lessons": "vite-node scripts/upload-lessons-to-storage.ts",

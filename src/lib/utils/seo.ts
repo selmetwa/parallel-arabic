@@ -1,4 +1,5 @@
 import { getGame } from '$lib/constants/games';
+import { getFeature } from '$lib/constants/features';
 
 export interface PageMeta {
 	title: string;
@@ -112,6 +113,27 @@ function gamePageMeta(slug: string | undefined): PageMeta {
 	};
 }
 
+/** Meta for one of the /features landing pages, from its entry in FEATURES. */
+function featurePageMeta(slug: string | undefined): PageMeta {
+	const feature = slug ? getFeature(slug) : undefined;
+	if (!feature) {
+		return {
+			title: 'Features | Parallel Arabic',
+			description: 'Everything Parallel Arabic does to help you learn Arabic dialects.',
+			url: `${baseUrl}/features`,
+			type: 'website'
+		};
+	}
+	return {
+		title: feature.seo.title,
+		description: feature.seo.description,
+		// The hero screenshot previews the feature better than the site banner.
+		image: `${baseUrl}${feature.hero.src}`,
+		url: `${baseUrl}/features/${feature.slug}`,
+		type: 'website'
+	};
+}
+
 export function getPageMeta(page: string, data?: any): PageMeta {
 	const dialectSlug = (data?.dialect ?? '') as string;
 	const dialectName = formatDialectName(dialectSlug);
@@ -167,6 +189,14 @@ export function getPageMeta(page: string, data?: any): PageMeta {
 			type: 'website'
 		},
 		'game-page': gamePageMeta(data?.slug),
+		features: {
+			title: 'Features - How Parallel Arabic Helps You Learn Arabic | Parallel Arabic',
+			description:
+				'Every Parallel Arabic feature in one place: the AI Tutor, graded stories, tap-to-translate, a structured course, spaced repetition, pronunciation and writing practice, verb drills and dialect comparison.',
+			url: `${baseUrl}/features`,
+			type: 'website'
+		},
+		'feature-page': featurePageMeta(data?.slug),
 		alphabet: {
 			title: 'Interactive Arabic Alphabet - Learn All 28 Letters | Parallel Arabic',
 			description:
@@ -632,6 +662,12 @@ export function resolvePageKey(
 		if (parts.length === 3 && getGame(parts[2]))
 			return { key: 'game-page', data: { slug: parts[2], gameName: getGame(parts[2])!.name } };
 		// /learn/game/play stays unmapped; it is noindex via NOINDEX_PREFIXES.
+		return null;
+	}
+	if (parts[0] === 'features') {
+		if (parts.length === 1) return { key: 'features', data: {} };
+		if (parts.length === 2 && getFeature(parts[1]))
+			return { key: 'feature-page', data: { slug: parts[1], featureName: getFeature(parts[1])!.name } };
 		return null;
 	}
 	if (path === '/blog') return { key: 'blog', data: {} };
@@ -1108,6 +1144,7 @@ function titleCase(segment: string): string {
 function leafName(segment: string, data?: any): string {
 	return (
 		data?.gameName ||
+		data?.featureName ||
 		data?.topic?.label ||
 		data?.word?.english ||
 		data?.phrase?.english ||

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
 	import type { Pathname } from '$app/types';
+	import type { GameShot } from '$lib/constants/games';
 	interface Props {
 		href: Pathname;
 		name: string;
@@ -10,6 +11,8 @@
 		levels: string;
 		accent: string;
 		deep: string;
+		/** Shown on full cards only. */
+		shot?: GameShot;
 		/** Smaller card for the "more games" strip under a game. */
 		compact?: boolean;
 	}
@@ -23,11 +26,17 @@
 		levels,
 		accent,
 		deep,
+		shot,
 		compact = false
 	}: Props = $props();
 </script>
 
 <a href={resolve(href)} class="card" class:compact style="--accent:{accent}; --deep:{deep};">
+	{#if shot && !compact}
+		<span class="shot">
+			<img src={shot.src} width={shot.w} height={shot.h} alt={shot.alt} loading="lazy" decoding="async" />
+		</span>
+	{/if}
 	<span class="emoji" aria-hidden="true">{emoji}</span>
 	<span class="name">{name}</span>
 	<span class="tagline">{tagline}</span>
@@ -70,6 +79,25 @@
 	.card:active {
 		transform: translateY(1px);
 		box-shadow: 0 1px 0 var(--deep);
+	}
+
+	/* Shots vary from wide to tall, so they sit whole in a fixed frame whose fill
+	   matches the page colour they were captured on (the light theme). */
+	.shot {
+		display: grid;
+		place-items: center;
+		aspect-ratio: 16 / 10;
+		margin: -0.4rem -0.4rem 0.35rem;
+		overflow: hidden;
+		border-radius: 0.75rem;
+		border: 1px solid var(--tile5);
+		background: #c4ced6;
+	}
+
+	.shot img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
 	}
 
 	.emoji {
