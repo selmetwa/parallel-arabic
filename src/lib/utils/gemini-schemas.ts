@@ -735,3 +735,66 @@ export function createConjugationExerciseSchema() {
 }
 
 export type ConjugationExerciseSchema = z.infer<ReturnType<typeof createConjugationExerciseSchema>['zodSchema']>;
+
+/**
+ * Schemas for the puzzle games under /learn/game.
+ *
+ * Kept flat like the listening schema above: no array bounds and no enums, so
+ * Gemini never rejects them as too complex. Counts and allowed values are set
+ * in the prompt and checked server-side (src/lib/server/games/).
+ */
+export function createSentenceScrambleSchema() {
+	const schema = z.object({
+		sentences: z.array(
+			z.object({
+				arabic: z.string(),
+				english: z.string(),
+				transliteration: z.string()
+			})
+		)
+	});
+
+	return { zodSchema: schema, jsonSchema: zodToJsonSchema(schema) };
+}
+
+export function createOddOneOutSchema() {
+	const schema = z.object({
+		puzzles: z.array(
+			z.object({
+				words: z.array(
+					z.object({
+						arabic: z.string(),
+						english: z.string(),
+						transliteration: z.string()
+					})
+				),
+				// The exact Arabic of the odd word — models miscount indices.
+				oddWord: z.string(),
+				pattern: z.string(),
+				explanation: z.string(),
+				difficulty: z.string()
+			})
+		)
+	});
+
+	return { zodSchema: schema, jsonSchema: zodToJsonSchema(schema) };
+}
+
+export function createSpotTheMistakeSchema() {
+	const schema = z.object({
+		items: z.array(
+			z.object({
+				incorrect: z.string(),
+				wrongWord: z.string(),
+				correction: z.string(),
+				correct: z.string(),
+				english: z.string(),
+				transliteration: z.string(),
+				errorType: z.string(),
+				explanation: z.string()
+			})
+		)
+	});
+
+	return { zodSchema: schema, jsonSchema: zodToJsonSchema(schema) };
+}

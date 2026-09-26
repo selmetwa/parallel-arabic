@@ -82,7 +82,7 @@ export const load: PageServerLoad = async ({ url, parent }) => {
 
   // Validate required parameters
   if (!category) {
-    throw redirect(302, '/learn/game');
+    throw redirect(302, '/learn/game/quiz');
   }
 
   // Fetch ALL words from the database for this category (no limit for category mode)

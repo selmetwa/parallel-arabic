@@ -272,8 +272,8 @@
 			{@render compactTile(
 				'/learn/game',
 				'🎮',
-				'Game',
-				'Vocab drills: multiple-choice, listening, speaking.',
+				'Games',
+				'Word games and a vocabulary quiz.',
 				'#f59e0b',
 				'#b45309'
 			)}

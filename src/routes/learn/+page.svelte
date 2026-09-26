@@ -38,8 +38,8 @@
     <Card
       href="/learn/game"
       icon="🎮"
-      title="Game"
-      description="Practice vocabulary through interactive games. Multiple choice, listening, and speaking modes."
+      title="Games"
+      description="Word games and a vocabulary quiz in your dialect."
     />
   </div>
 </section>

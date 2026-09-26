@@ -27,7 +27,7 @@
 		dialect,
 		topicLabel,
 		isSubscribed = false,
-		practiceHref = resolve('/learn/game')
+		practiceHref = resolve('/learn/game/quiz')
 	}: Props = $props();
 
 	/** A multiple-choice question needs an answer plus three distractors. */

@@ -1,3 +1,5 @@
+import { getGame } from '$lib/constants/games';
+
 export interface PageMeta {
 	title: string;
 	description: string;
@@ -91,6 +93,25 @@ export function isNoindexPath(pathname: string): boolean {
 	return NOINDEX_PREFIXES.some((p) => path === p || path.startsWith(p + '/'));
 }
 
+/** Meta for one of the games under /learn/game, from its entry in GAMES. */
+function gamePageMeta(slug: string | undefined): PageMeta {
+	const game = slug ? getGame(slug) : undefined;
+	if (!game) {
+		return {
+			title: 'Arabic Games | Parallel Arabic',
+			description: 'Free Arabic word games in four dialects.',
+			url: `${baseUrl}/learn/game`,
+			type: 'website'
+		};
+	}
+	return {
+		title: game.seo.title,
+		description: game.seo.description,
+		url: `${baseUrl}/learn/game/${game.slug}`,
+		type: 'website'
+	};
+}
+
 export function getPageMeta(page: string, data?: any): PageMeta {
 	const dialectSlug = (data?.dialect ?? '') as string;
 	const dialectName = formatDialectName(dialectSlug);
@@ -134,10 +155,18 @@ export function getPageMeta(page: string, data?: any): PageMeta {
 		game: {
 			title: 'Arabic Games - Free Vocabulary & Word Games | Parallel Arabic',
 			description:
-				'Play free Arabic language games: multiple choice, listening, matching and speaking modes across Egyptian, Levantine, Darija and Fusha. Learn Arabic words by playing, and track what you have mastered.',
+				'Arabic games in four dialects: word scramble, odd one out, spot the mistake, sentence scramble and a vocabulary quiz. Two free rounds of each.',
 			url: `${baseUrl}/learn/game`,
 			type: 'website'
 		},
+		'game-quiz': {
+			title: 'Arabic Vocabulary Quiz - Multiple Choice, Listening & Speaking | Parallel Arabic',
+			description:
+				'An Arabic vocabulary quiz built fresh each time, in your dialect and at your level. Answer by reading, listening or speaking, in words or whole sentences.',
+			url: `${baseUrl}/learn/game/quiz`,
+			type: 'website'
+		},
+		'game-page': gamePageMeta(data?.slug),
 		alphabet: {
 			title: 'Interactive Arabic Alphabet - Learn All 28 Letters | Parallel Arabic',
 			description:
@@ -597,7 +626,14 @@ export function resolvePageKey(
 	if (path === '/alphabet/practice/keyboard')
 		return { key: 'alphabet-practice-keyboard', data: {} };
 
-	if (path === '/learn/game') return { key: 'game', data: {} };
+	if (parts[0] === 'learn' && parts[1] === 'game') {
+		if (parts.length === 2) return { key: 'game', data: {} };
+		if (parts.length === 3 && parts[2] === 'quiz') return { key: 'game-quiz', data: {} };
+		if (parts.length === 3 && getGame(parts[2]))
+			return { key: 'game-page', data: { slug: parts[2], gameName: getGame(parts[2])!.name } };
+		// /learn/game/play stays unmapped; it is noindex via NOINDEX_PREFIXES.
+		return null;
+	}
 	if (path === '/blog') return { key: 'blog', data: {} };
 	if (parts[0] === 'blog') return { key: 'blogPost', data: {} };
 
@@ -1071,6 +1107,7 @@ function titleCase(segment: string): string {
 
 function leafName(segment: string, data?: any): string {
 	return (
+		data?.gameName ||
 		data?.topic?.label ||
 		data?.word?.english ||
 		data?.phrase?.english ||

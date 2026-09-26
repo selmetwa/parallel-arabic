@@ -1,5 +1,6 @@
 /**
- * Copy for the /learn/game landing page.
+ * Copy for the /learn/game/quiz setup page (moved from /learn/game, which is
+ * now the games hub).
  *
  * The page ranked around position 22 for "arabic games", "arabic language
  * games" and "arabic word game" because it was a configuration screen with no
@@ -24,30 +25,25 @@ export const GAME_MODE_INFO = [
 	}
 ];
 
-export const GAME_FAQS = [
+/**
+ * Quiz-only questions. The general ones (is it free, which dialects, the
+ * alphabet) live on the games hub, in GAMES_HUB_FAQS, so the two pages don't
+ * emit the same FAQ markup.
+ */
+export const QUIZ_FAQS = [
 	{
-		question: 'Are the Arabic games free?',
+		question: 'Can I quiz myself on my saved words?',
 		answer:
-			'Yes. You can play without an account. Signing in adds saved progress, XP and a review deck that remembers the words you got wrong.'
+			'Yes, in sentence rounds. Turn on "Use Your Review Words" and the quiz writes its sentences around the words you have saved: all of them, or only the ones due for review.'
 	},
 	{
-		question: 'Which dialects can I play in?',
+		question: 'How does speaking mode score me?',
 		answer:
-			'Egyptian Arabic, Levantine, Moroccan Darija and Modern Standard Arabic. The word lists and the audio change with the dialect you pick, so you are not learning Fusha vocabulary with an Egyptian accent bolted on.'
+			'You say the word or sentence, and what you said is compared with the target letter by letter. A word passes at 60% and a sentence at 50%, and you can try again as often as you like or skip.'
 	},
 	{
-		question: 'Do I need to know the Arabic alphabet first?',
+		question: 'What does listening mode test?',
 		answer:
-			'Not for the listening mode, which works from audio and English. For the reading modes it helps a great deal — the interactive alphabet takes about an hour to get through and makes everything after it easier.'
-	},
-	{
-		question: 'Can I play with my own vocabulary?',
-		answer:
-			'Yes. Choose your saved words as the source instead of a topic, and the game will draw from the deck you have built up rather than a preset list.'
-	},
-	{
-		question: 'Are these games good for children?',
-		answer:
-			'They work for any age, though the vocabulary topics are chosen for adult learners — travel, food, work, family. There is no time pressure and nothing to lose, so they suit a slow pace.'
+			'Whether you understood a whole sentence, not whether you caught one word. You hear the sentence and pick its meaning from four readings that differ in one detail: the tense, who is speaking, or whether it was negated.'
 	}
 ];

@@ -51,3 +51,11 @@ export function removeArabicComma(text: string): string {
   const commataPattern = /[\u060C]/g;
   return text.replace(commataPattern, '');
 }
+
+/**
+ * Remove tashkeel and tatweel but keep every letter as written — unlike the
+ * normalizers above, the result is safe to show. أ stays أ, ة stays ة.
+ */
+export function stripArabicDiacritics(text: string): string {
+  return text.replace(/[ؐ-ًؚ-ٰٟۖ-ۭ࣓-ࣣ࣡-ࣿـ]/g, '');
+}
