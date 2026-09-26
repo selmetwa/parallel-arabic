@@ -129,7 +129,7 @@
 		dialect={data.dialect as Dialect}
 		topicLabel={topic.label}
 		isSubscribed={page.data.isSubscribed ?? false}
-		practiceHref="/learn/game?dialect={data.dialect}"
+		practiceHref="/learn/game/quiz"
 	/>
 
 	{#if data.related.length}

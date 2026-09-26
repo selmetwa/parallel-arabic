@@ -195,7 +195,7 @@
     const serverResumeData = data.resumeData;
     let resumeGameData = serverResumeData;
 
-    // Also check sessionStorage as fallback (for continue from /learn/game page)
+    // Also check sessionStorage as fallback (for continue from /learn/game/quiz page)
     if (!resumeGameData && typeof window !== 'undefined') {
       const storedData = sessionStorage.getItem('resumeGame');
       if (storedData) {
@@ -938,7 +938,7 @@
           Play Again
         </button>
         <button
-          onclick={() => goto('/learn/game')}
+          onclick={() => goto('/learn/game/quiz')}
           class="flex-1 py-3 px-6 bg-tile-500 text-text-300 font-bold rounded-lg md:hover:bg-tile-600 transition-colors border-2 border-tile-600"
         >
           New Game
@@ -951,7 +951,7 @@
       <!-- Progress Bar -->
       <div class="flex items-center gap-4">
         <button
-          onclick={() => goto('/learn/game')}
+          onclick={() => goto('/learn/game/quiz')}
           class="text-text-200 md:hover:text-text-300 transition-colors"
           aria-label="Back to game setup"
         >
@@ -1452,7 +1452,7 @@
         We couldn't find enough words for this game. Try a different category or dialect.
       </p>
       <button
-        onclick={() => goto('/learn/game')}
+        onclick={() => goto('/learn/game/quiz')}
         class="py-3 px-6 bg-blue-500 text-white font-bold rounded-lg md:hover:bg-blue-600 transition-colors"
       >
         Go Back
@@ -1465,5 +1465,5 @@
 <PaywallModal isOpen={showPaywallModal} handleCloseModal={() => {
   showPaywallModal = false;
   // When closing paywall, redirect to game setup
-  goto('/learn/game');
+  goto('/learn/game/quiz');
 }} />

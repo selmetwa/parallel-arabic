@@ -9,6 +9,7 @@ import { COMPARISON_SLUGS } from '$lib/constants/dialect-comparisons';
 import { WORD_DIALECTS, wordSlugsFor } from '$lib/data/words/manifest';
 import { VOCAB_DIALECTS, topicSlugsFor } from '$lib/data/vocab/manifest';
 import { existsPhrase } from '$lib/data/phrases/manifest';
+import { GAMES } from '$lib/constants/games';
 const BASE_URL = 'https://www.parallel-arabic.com';
 
 // Supabase caps a select at 1000 rows. There are more stories than that, so
@@ -53,6 +54,11 @@ const staticPages = [
 	{ path: '/lessons', priority: '0.8', changefreq: 'weekly' },
 	{ path: '/lessons/structured', priority: '0.8', changefreq: 'weekly' },
 	{ path: '/vocabulary', priority: '0.8', changefreq: 'weekly' },
+
+	// Games
+	{ path: '/learn/game', priority: '0.8', changefreq: 'weekly' },
+	{ path: '/learn/game/quiz', priority: '0.6', changefreq: 'monthly' },
+	...GAMES.map((g) => ({ path: `/learn/game/${g.slug}`, priority: '0.7', changefreq: 'monthly' })),
 
 	// Practice section
 	{ path: '/stories', priority: '0.8', changefreq: 'weekly' },

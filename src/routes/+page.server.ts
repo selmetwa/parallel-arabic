@@ -302,7 +302,7 @@ export const load: PageServerLoad = async ({ parent }) => {
 
     suggestions.push({
       id: 'game',
-      href: `/learn/game`,
+      href: `/learn/game/play?${continueParams}`,
       icon: '🎮',
       title: `Continue your game`,
       subtitle: `${inProgressGame.current_index}/${inProgressGame.total_questions} complete – score: ${inProgressGame.score}`,
@@ -314,8 +314,8 @@ export const load: PageServerLoad = async ({ parent }) => {
       id: 'game',
       href: '/learn/game',
       icon: '🎮',
-      title: 'Play vocabulary game',
-      subtitle: 'Practice words through interactive multiple choice, listening & speaking',
+      title: 'Play a word game',
+      subtitle: 'Word games and a vocabulary quiz in your dialect',
       variant: 'rose',
       priority: 6
     });
