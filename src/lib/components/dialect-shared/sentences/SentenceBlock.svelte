@@ -1027,14 +1027,6 @@
 				{@render englishWordDisplay()}
 			</div>
 			
-			<!-- Instructions -->
-			<div class="mb-4 p-3 bg-tile-400 border-l-4 border-violet-500 rounded-r">
-				<p class="text-sm text-text-300">
-					<strong>Instructions:</strong> Click the Arabic words in the correct order to form the sentence. 
-					Use the hints if you need help!
-				</p>
-			</div>
-			
 			<!-- Your answer area -->
 			<div class="mb-4 p-4 bg-tile-300 rounded-xl border-2 border-tile-500 min-h-[80px]">
 				<h4 class="text-sm font-bold text-text-200 mb-3">Your Answer:</h4>

@@ -4,10 +4,10 @@
 	import type { GeneratedLessonV2, SentenceItem } from '$lib/schemas/lesson-v2-schema';
 	import AudioButton from '$lib/components/AudioButton.svelte';
 	import SpeakSentence from '$lib/components/dialect-shared/speak/SpeakSentence.svelte';
-	import SentenceBlock from '$lib/components/dialect-shared/sentences/SentenceBlock.svelte';
 	import ArabicWordDisplay from '$lib/components/dialect-shared/story/components/ArabicWordDisplay.svelte';
 	import LessonTutorStep from '$lib/components/lesson-v2/LessonTutorStep.svelte';
 	import LessonMcqStep from '$lib/components/lesson-v2/LessonMcqStep.svelte';
+	import LessonReorderStep from '$lib/components/lesson-v2/LessonReorderStep.svelte';
 	import { userXp, userLevel } from '$lib/store/xp-store';
 	import { showXpToast } from '$lib/helpers/toast-helpers';
 	import { LEVEL_TIERS } from '$lib/helpers/xp-levels';
@@ -39,7 +39,8 @@
 		content: 'Learn',
 		'vocab-intro': 'New words',
 		'multiple-choice': 'Quiz',
-		typing: 'Write',
+		// Typing steps are played as reorder too: learners skipped the keyboard.
+		typing: 'Build',
 		reorder: 'Build',
 		translate: 'Translate',
 		speaking: 'Speak',
@@ -252,9 +253,9 @@
 						</section>
 					{:else if currentStep.type === 'typing' || currentStep.type === 'reorder'}
 						<section class="card pad">
-							<div class="eyebrow">{currentStep.type === 'reorder' ? 'Build' : 'Write'}</div>
-							<h2 class="head">{currentStep.type === 'reorder' ? 'Build the sentence in Arabic' : 'Write it in Arabic'}</h2>
-							<SentenceBlock sentence={currentStep.sentence} resetSentences={noop} next={goNext} {dialect} />
+							<div class="eyebrow">Build</div>
+							<h2 class="head">Build the sentence in Arabic</h2>
+							<LessonReorderStep sentence={currentStep.sentence} {dialect} onContinue={goNext} />
 						</section>
 					{:else if currentStep.type === 'speaking'}
 						<section class="card pad">
