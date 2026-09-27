@@ -41,8 +41,7 @@ export const GET: RequestHandler = async ({ url }) => {
         try {
           await syncSupabaseUserWithDB(data.user, supabase)
           
-          // Send welcome email to new users (admin only, non-blocking)
-          // Only send if the new user is an admin
+          // Send welcome email to new users (non-blocking)
           if (isNewUser && data.user.email && data.user.id) {
             const newUserId = data.user.id;
               sendWelcomeEmail(data.user.email, newUserId).catch(error => {
