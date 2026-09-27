@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { fade, fly } from 'svelte/transition';
+	import { resolve } from '$app/paths';
 	import PaywallModal from '$lib/components/PaywallModal.svelte';
 	import AuthModal from '$lib/components/AuthModal.svelte';
     import LessonPlayer from '$lib/components/LessonPlayer.svelte';
@@ -36,6 +37,15 @@
 
 	const dialectName = dialectNames[data.dialect] || data.dialect;
 	const dialectGlyph = dialectGlyphs[data.dialect] || 'العربية';
+
+	// Same accent pairs as the dialect cards on /lessons/structured.
+	const dialectAccents: Record<string, { accent: string; deep: string }> = {
+		'egyptian-arabic': { accent: '#f59e0b', deep: '#b45309' },
+		darija: { accent: '#f43f5e', deep: '#9f1239' },
+		fusha: { accent: '#8b5cf6', deep: '#6d28d9' },
+		levantine: { accent: '#10b981', deep: '#047857' }
+	};
+	const { accent, deep } = $derived(dialectAccents[data.dialect] ?? { accent: '#0ea5e9', deep: '#0369a1' });
 
 	const STEP_HEIGHT = 140;
 	const AMPLITUDE = 100;
@@ -145,14 +155,6 @@
 
 	function handleCloseModal() {
 		isModalOpen = false;
-	}
-
-	function nodeClasses(status: string) {
-		if (status === 'completed')
-			return 'bg-amber-400 text-amber-950 border-b-[6px] border-amber-600 shadow-[0_10px_24px_-10px_rgba(217,119,6,0.8)] hover:-translate-y-0.5 active:translate-y-1 active:border-b-2 cursor-pointer';
-		if (status === 'active')
-			return 'bg-brand text-white border-b-[6px] border-black/30 shadow-lg shadow-black/25 hover:-translate-y-0.5 active:translate-y-1 active:border-b-2 cursor-pointer';
-		return 'bg-tile-300 text-text-200 border-b-[6px] border-tile-400 cursor-pointer';
 	}
 
     async function handleLessonClick(lessonNode: any) {
@@ -296,206 +298,435 @@
 <PaywallModal isOpen={isModalOpen} {handleCloseModal}></PaywallModal>
 <AuthModal isOpen={isAuthModalOpen} handleCloseModal={() => isAuthModalOpen = false}></AuthModal>
 
-<div class="relative min-h-screen overflow-x-hidden bg-tile-100 pb-24 font-sans">
-	<!-- Atmosphere: brand glow + drifting calligraphy field -->
-	<div class="pointer-events-none fixed inset-0 z-0 select-none overflow-hidden">
-		<div
-			class="absolute -top-40 left-1/2 h-[36rem] w-[36rem] -translate-x-1/2 rounded-full opacity-30 blur-3xl"
-			style="background: radial-gradient(circle, var(--brand) 0%, transparent 70%);"
-		></div>
-		<div class="absolute inset-0 opacity-[0.06] text-tile-600">
-			<span class="absolute left-[6%] top-[8%] text-[7rem] -rotate-12">ا</span>
-			<span class="absolute right-[8%] top-[18%] text-[9rem] rotate-6">ب</span>
-			<span class="absolute left-[14%] top-[42%] text-[8rem] rotate-3">ج</span>
-			<span class="absolute right-[12%] top-[55%] text-[10rem] -rotate-6">م</span>
-			<span class="absolute left-[8%] top-[72%] text-[8rem] -rotate-3">ع</span>
-			<span class="absolute right-[16%] bottom-[6%] text-[7rem] rotate-12">س</span>
-		</div>
-	</div>
+<section class="page" style="--accent:{accent}; --deep:{deep};">
+	<div class="inner">
+		<a href={resolve('/lessons/structured')} class="back">
+			<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+			</svg>
+			Structured lessons
+		</a>
 
-	<div class="relative z-10 mx-auto flex max-w-2xl flex-col items-center px-4 py-8">
-		<header class="rise mb-10 flex w-full flex-col items-center text-center">
-			<div class="mb-5 w-full text-left">
-				<a
-					href="/lessons/structured"
-					class="inline-flex items-center gap-2 text-sm font-medium text-text-200 transition-colors hover:text-text-300"
-				>
-					<svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-					</svg>
-					Back to Structured Lessons
-				</a>
-			</div>
-
-			<span
-				class="mb-3 text-4xl font-bold leading-none text-brand opacity-90 sm:text-5xl"
-				dir="rtl"
-				aria-hidden="true"
-			>
-				{dialectGlyph}
-			</span>
-			<h1 class="text-3xl font-bold tracking-tight text-text-300 sm:text-4xl">
-				{dialectName}
-			</h1>
-			<p class="mt-1.5 text-sm text-text-200">Learning Path</p>
-
+		<header class="hero rise">
+			<span class="glyph" dir="rtl" aria-hidden="true">{dialectGlyph}</span>
+			<h1>{dialectName}</h1>
+			<p>Learning path</p>
 			{#if totalCount > 0}
-				<div class="mt-6 w-full max-w-xs">
-					<div class="mb-2 flex items-center justify-between text-xs font-semibold text-text-200">
+				<div class="meter">
+					<div class="meter-row">
 						<span>{completedCount} of {totalCount} lessons</span>
-						<span class="text-brand">{progressPct}%</span>
+						<span class="meter-pct">{progressPct}%</span>
 					</div>
-					<div class="h-2.5 w-full overflow-hidden rounded-full bg-tile-300 shadow-inner">
-						<div
-							class="h-full rounded-full bg-brand transition-[width] duration-700 ease-out"
-							style="width: {progressPct}%"
-						></div>
+					<div class="meter-track">
+						<div class="meter-fill" style="width: {progressPct}%"></div>
 					</div>
 				</div>
 			{/if}
 		</header>
 
-		<!-- Path Container -->
-		<div
-			class="relative mx-auto mt-12 w-full max-w-xs sm:max-w-sm"
-			style="height: {goal.y + 170}px;"
-		>
-            <!-- SVG Trail Layer -->
-            <svg
-                class="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 overflow-visible"
-                width="400"
-                height={goal.y + 170}
-                viewBox="-200 0 400 {goal.y + 170}"
-                style="z-index: 0;"
-            >
-                <!-- Carved base groove -->
-                {#each segments as seg (seg.d)}
-                    <path
-                        d={seg.d}
-                        class="stroke-tile-300"
-                        stroke-width="18"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                    />
-                {/each}
+		<!-- Path container: nodes are placed on a sine wave; see lessonPositions -->
+		<div class="relative mx-auto mt-12 w-full max-w-xs sm:max-w-sm" style="height: {goal.y + 170}px;">
+			<svg
+				class="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 overflow-visible"
+				width="400"
+				height={goal.y + 170}
+				viewBox="-200 0 400 {goal.y + 170}"
+				style="z-index: 0;"
+			>
+				<!-- Base groove under the whole trail -->
+				{#each segments as seg (seg.d)}
+					<path d={seg.d} class="trail trail--groove" />
+				{/each}
+				<!-- Progress: inked where done, flowing dots into the next lesson, faint ahead -->
+				{#each segments as seg (seg.d)}
+					{#if seg.done}
+						<path d={seg.d} class="trail trail--done" />
+					{:else if seg.next}
+						<path d={seg.d} class="trail trail--next trail-flow" />
+					{:else}
+						<path d={seg.d} class="trail trail--ahead" />
+					{/if}
+				{/each}
+			</svg>
 
-                <!-- Progress overlay: inked where done, gold dots where it's your next step, muted ahead -->
-                {#each segments as seg (seg.d)}
-                    {#if seg.done}
-                        <path
-                            d={seg.d}
-                            class="stroke-brand"
-                            stroke-width="10"
-                            fill="none"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        />
-                    {:else if seg.next}
-                        <path
-                            d={seg.d}
-                            class="trail-flow stroke-amber-400"
-                            stroke-width="7"
-                            fill="none"
-                            stroke-linecap="round"
-                            stroke-dasharray="1 20"
-                        />
-                    {:else}
-                        <path
-                            d={seg.d}
-                            class="stroke-tile-400 opacity-70"
-                            stroke-width="6"
-                            fill="none"
-                            stroke-linecap="round"
-                            stroke-dasharray="1 20"
-                        />
-                    {/if}
-                {/each}
-            </svg>
-
-			<!-- Nodes Layer -->
 			{#each lessonPositions as lesson, i (lesson.id)}
-				{@const labelSideClass = lesson.x > 0 ? 'right-full mr-5' : 'left-full ml-5'}
 				<div
 					class="absolute left-1/2 z-10 flex w-24 -translate-x-1/2 flex-col items-center justify-center"
 					style="transform: translate(calc(-50% + {lesson.x}px), {lesson.y}px);"
 				>
-					<div
-						class="rise group/node flex flex-col items-center"
-						style="animation-delay: {Math.min(i, 12) * 55}ms;"
-					>
-                    <!-- Chapter divider — first topic of each module -->
-                    {#if i === 0 || lessonPositions[i-1].moduleTitle !== lesson.moduleTitle}
-                        <div class="absolute -top-14 flex w-56 items-center justify-center gap-2">
-                            <span class="h-px flex-1 bg-tile-400"></span>
- <span class="whitespace-nowrap text-[0.65rem] font-bold text-text-200">
-                                {lesson.moduleTitle}
-                            </span>
-                            <span class="h-px flex-1 bg-tile-400"></span>
-                        </div>
-                    {/if}
+					<div class="rise stop flex flex-col items-center" style="animation-delay: {Math.min(i, 12) * 55}ms;">
+						<!-- Module divider: first topic of each module -->
+						{#if i === 0 || lessonPositions[i - 1].moduleTitle !== lesson.moduleTitle}
+							<div class="module">
+								<span class="module-pill">{lesson.moduleTitle}</span>
+							</div>
+						{/if}
 
-					<!-- Desktop tooltip: always shown for the active step, on hover otherwise -->
-					<div
-						class="absolute top-1/2 hidden w-48 -translate-y-1/2 rounded-xl border border-tile-400 bg-tile-200/95 p-3 shadow-lg backdrop-blur-sm transition-opacity duration-200 sm:block z-20 {labelSideClass} {lesson.status === 'active' ? 'opacity-100' : 'opacity-0 group-hover/node:opacity-100 group-focus-within/node:opacity-100'}"
-					>
-						<div class="mb-0.5 text-[0.6rem] font-bold text-text-200 opacity-70">
-							Lesson {i + 1}
-						</div>
-						<h3 class="line-clamp-2 text-sm font-bold text-text-300">{lesson.title}</h3>
-						<p class="mt-1 text-[10px] leading-tight text-text-200 opacity-80">{lesson.description}</p>
-                         <div class="absolute top-1/2 h-3 w-3 -translate-y-1/2 rotate-45 border-t border-r border-tile-400 bg-tile-200 {lesson.x > 0 ? '-right-1.5' : '-left-1.5'}"></div>
-					</div>
-
-					<!-- Node Button -->
-					<div class="relative">
-						<button
-							class="relative flex h-20 w-20 items-center justify-center rounded-full transition-all duration-200 hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:h-24 sm:w-24 {nodeClasses(lesson.status)} {lesson.status === 'active' ? 'ring-2 ring-brand/40 ring-offset-2 ring-offset-tile-100' : ''}"
-							onclick={() => handleLessonClick(lesson)}
-							aria-label={lesson.title}
+						<!-- Desktop tooltip: always shown for the active step, on hover otherwise -->
+						<div
+							class="tip {lesson.x > 0 ? 'tip--left' : 'tip--right'}"
+							class:tip--shown={lesson.status === 'active'}
 						>
-							{#if lesson.status === 'completed'}
-								<svg class="h-9 w-9 drop-shadow-sm sm:h-10 sm:w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-									<path d="M5 13l4 4L19 7" />
-								</svg>
-							{:else if lesson.status === 'locked'}
-								<svg class="h-7 w-7 opacity-60" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-									<path d="M12 1a5 5 0 00-5 5v3H6a2 2 0 00-2 2v9a2 2 0 002 2h12a2 2 0 002-2v-9a2 2 0 00-2-2h-1V6a5 5 0 00-5-5zm3 8H9V6a3 3 0 016 0v3z" />
-								</svg>
-							{:else}
-								<span class="text-2xl font-extrabold drop-shadow-sm sm:text-3xl">{i + 1}</span>
-							{/if}
-						</button>
+							<span class="tip-num">Lesson {i + 1}</span>
+							<h3 class="tip-title">{lesson.title}</h3>
+							<p class="tip-note">{lesson.description}</p>
+						</div>
 
-                        <!-- Mobile-only label below -->
-                        <div class="absolute top-full left-1/2 mt-3 w-32 -translate-x-1/2 rounded-lg border border-tile-300 bg-tile-200/90 p-2 text-center shadow-sm backdrop-blur-sm sm:hidden z-30">
-                            <span class="block truncate text-xs font-bold text-text-300">{lesson.title}</span>
-                        </div>
-					</div>
+						<div class="relative">
+							<button
+								class="node"
+								class:is-done={lesson.status === 'completed'}
+								class:is-active={lesson.status === 'active'}
+								class:is-locked={lesson.status === 'locked'}
+								onclick={() => handleLessonClick(lesson)}
+								aria-label={lesson.title}
+							>
+								{#if lesson.status === 'completed'}
+									<svg class="node-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<path d="M5 13l4 4L19 7" />
+									</svg>
+								{:else if lesson.status === 'locked'}
+									<svg class="node-lock" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+										<path d="M12 1a5 5 0 00-5 5v3H6a2 2 0 00-2 2v9a2 2 0 002 2h12a2 2 0 002-2v-9a2 2 0 00-2-2h-1V6a5 5 0 00-5-5zm3 8H9V6a3 3 0 016 0v3z" />
+									</svg>
+								{:else}
+									<span class="node-num">{i + 1}</span>
+								{/if}
+							</button>
+							<!-- Mobile-only label below -->
+							<div class="tip-mobile">
+								<span>{lesson.title}</span>
+							</div>
+						</div>
 					</div>
 				</div>
 			{/each}
 
-            <!-- Goal Node -->
-            <div
-                class="absolute left-1/2 z-10 flex w-28 -translate-x-1/2 flex-col items-center justify-center"
-                style="transform: translate(calc(-50% + {goal.x}px), {goal.y}px);"
-            >
-                <div class="relative">
-                    <div class="flex h-24 w-24 items-center justify-center rounded-full border-b-[6px] border-amber-600 bg-gradient-to-b from-amber-300 to-amber-500 shadow-[0_12px_30px_-10px_rgba(217,119,6,0.85)] transition-transform hover:scale-105 sm:h-28 sm:w-28">
-                        <span class="text-5xl drop-shadow-md">🏆</span>
-                    </div>
-                </div>
-                <div class="mt-4 rounded-full border border-amber-500/40 bg-amber-400/15 px-4 py-1">
- <span class="text-xs font-bold text-amber-700">Fluency</span>
-                </div>
-            </div>
-
+			<!-- Goal node -->
+			<div
+				class="absolute left-1/2 z-10 flex w-28 -translate-x-1/2 flex-col items-center justify-center"
+				style="transform: translate(calc(-50% + {goal.x}px), {goal.y}px);"
+			>
+				<div class="goal" aria-hidden="true">🏆</div>
+				<span class="goal-pill">Fluency</span>
+			</div>
 		</div>
 	</div>
-</div>
+</section>
 
 <style>
+	.page {
+		min-height: 100vh;
+		overflow-x: hidden;
+		padding: 1.5rem 1.25rem 6rem;
+	}
+
+	.inner {
+		max-width: 42rem;
+		margin: 0 auto;
+	}
+
+	.back {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.3rem;
+		font-size: 0.85rem;
+		font-weight: 600;
+		color: var(--text2);
+		transition:
+			transform 0.2s ease,
+			color 0.2s ease;
+	}
+	.back:hover {
+		color: var(--text1);
+		transform: translateX(-3px);
+	}
+	.back svg {
+		width: 1rem;
+		height: 1rem;
+	}
+
+	/* Header */
+	.hero {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 2rem;
+		text-align: center;
+	}
+	.glyph {
+		font-size: 1.6rem;
+		font-weight: 600;
+		line-height: 1.2;
+		color: var(--accent);
+	}
+	.hero h1 {
+		margin-top: 0.3rem;
+		font-size: clamp(2.2rem, 6.5vw, 3.2rem);
+		font-weight: 600;
+		line-height: 1.05;
+		letter-spacing: -0.035em;
+		color: var(--text1);
+	}
+	.hero p {
+		margin-top: 0.5rem;
+		font-size: 0.95rem;
+		color: var(--text2);
+	}
+
+	.meter {
+		width: 100%;
+		max-width: 20rem;
+		margin-top: 1.5rem;
+	}
+	.meter-row {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 0.45rem;
+		font-size: 0.78rem;
+		font-weight: 600;
+		color: var(--text2);
+	}
+	.meter-pct {
+		color: var(--text1);
+	}
+	.meter-track {
+		height: 0.65rem;
+		overflow: hidden;
+		border-radius: 100px;
+		background: var(--tile4);
+	}
+	.meter-fill {
+		height: 100%;
+		border-radius: 100px;
+		background: var(--accent);
+		transition: width 0.7s ease-out;
+	}
+
+	/* Trail */
+	.trail {
+		fill: none;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+	}
+	.trail--groove {
+		stroke: var(--tile4);
+		stroke-width: 18;
+	}
+	.trail--done {
+		stroke: var(--accent);
+		stroke-width: 10;
+	}
+	.trail--next {
+		stroke: var(--accent);
+		stroke-width: 7;
+		stroke-dasharray: 1 20;
+	}
+	.trail--ahead {
+		stroke: var(--tile6);
+		stroke-width: 6;
+		stroke-dasharray: 1 20;
+	}
+
+	/* Module divider */
+	.module {
+		position: absolute;
+		top: -3.4rem;
+		display: flex;
+		width: 16rem;
+		justify-content: center;
+	}
+	.module-pill {
+		white-space: nowrap;
+		font-size: 0.72rem;
+		font-weight: 600;
+		color: var(--text2);
+		background: var(--tile3);
+		border: 2px solid var(--tile5);
+		border-radius: 100px;
+		padding: 0.2rem 0.75rem;
+	}
+
+	/* Nodes: pressable discs with a solid bottom edge */
+	.node {
+		position: relative;
+		display: grid;
+		place-items: center;
+		width: 5rem;
+		height: 5rem;
+		border-radius: 50%;
+		cursor: pointer;
+		border: 2px solid var(--tile5);
+		background: var(--tile3);
+		color: var(--text1);
+		box-shadow: 0 6px 0 var(--tile5);
+		transition:
+			transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1),
+			box-shadow 0.18s ease,
+			border-color 0.18s ease;
+	}
+	@media (min-width: 640px) {
+		.node {
+			width: 6rem;
+			height: 6rem;
+		}
+	}
+	.node:focus-visible {
+		outline: 2px solid var(--text1);
+		outline-offset: 4px;
+	}
+	.node.is-done,
+	.node.is-active {
+		background: var(--accent);
+		border-color: var(--deep);
+		color: #fff;
+		box-shadow: 0 6px 0 var(--deep);
+	}
+	.node.is-done:hover,
+	.node.is-active:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 9px 0 var(--deep);
+	}
+	.node.is-done:active,
+	.node.is-active:active {
+		transform: translateY(4px);
+		box-shadow: 0 1px 0 var(--deep);
+	}
+	/* "You are here": a ring and a gentle pulse */
+	.node.is-active {
+		outline: 4px solid color-mix(in srgb, var(--accent) 35%, transparent);
+		outline-offset: 4px;
+		animation: pulse 2.4s ease-in-out infinite;
+	}
+	.node.is-locked {
+		background: var(--tile4);
+		color: var(--text2);
+	}
+	.node-icon {
+		width: 2.4rem;
+		height: 2.4rem;
+	}
+	.node-lock {
+		width: 1.75rem;
+		height: 1.75rem;
+		opacity: 0.7;
+	}
+	.node-num {
+		font-size: 1.9rem;
+		font-weight: 700;
+	}
+
+	/* Tooltips */
+	.tip {
+		position: absolute;
+		top: 50%;
+		z-index: 20;
+		display: none;
+		width: 12rem;
+		transform: translateY(-50%);
+		padding: 0.75rem 0.85rem;
+		border-radius: 1.1rem;
+		border: 2px solid var(--tile5);
+		background: var(--tile3);
+		box-shadow: 0 4px 0 var(--tile5);
+		opacity: 0;
+		transition: opacity 0.2s ease;
+	}
+	@media (min-width: 640px) {
+		.tip {
+			display: block;
+		}
+	}
+	.stop:hover .tip,
+	.stop:focus-within .tip,
+	.tip--shown {
+		opacity: 1;
+	}
+	.tip--shown {
+		border-color: var(--accent);
+		box-shadow: 0 4px 0 var(--deep);
+	}
+	.tip--left {
+		right: 100%;
+		margin-right: 1.25rem;
+	}
+	.tip--right {
+		left: 100%;
+		margin-left: 1.25rem;
+	}
+	.tip-num {
+		font-size: 0.68rem;
+		font-weight: 600;
+		color: var(--text2);
+	}
+	.tip-title {
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		font-size: 0.9rem;
+		font-weight: 600;
+		line-height: 1.3;
+		color: var(--text1);
+	}
+	.tip-note {
+		margin-top: 0.25rem;
+		font-size: 0.72rem;
+		line-height: 1.4;
+		color: var(--text2);
+	}
+	.tip-mobile {
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		z-index: 30;
+		width: 8rem;
+		margin-top: 0.9rem;
+		transform: translateX(-50%);
+		padding: 0.35rem 0.5rem;
+		text-align: center;
+		border-radius: 0.75rem;
+		border: 2px solid var(--tile5);
+		background: var(--tile3);
+	}
+	.tip-mobile span {
+		display: block;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		font-size: 0.72rem;
+		font-weight: 600;
+		color: var(--text1);
+	}
+	@media (min-width: 640px) {
+		.tip-mobile {
+			display: none;
+		}
+	}
+
+	/* Goal */
+	.goal {
+		display: grid;
+		place-items: center;
+		width: 6rem;
+		height: 6rem;
+		border-radius: 50%;
+		font-size: 2.8rem;
+		background: #fbbf24;
+		border: 2px solid #b45309;
+		box-shadow: 0 6px 0 #b45309;
+	}
+	.goal-pill {
+		margin-top: 1rem;
+		font-size: 0.75rem;
+		font-weight: 600;
+		color: var(--text1);
+		background: color-mix(in srgb, #f59e0b 18%, var(--tile3));
+		border-radius: 100px;
+		padding: 0.25rem 0.9rem;
+	}
+
 	@keyframes flow {
 		to {
 			stroke-dashoffset: -1000;
@@ -511,6 +742,11 @@
 			transform: translateY(0) scale(1);
 		}
 	}
+	@keyframes pulse {
+		50% {
+			outline-color: color-mix(in srgb, var(--accent) 12%, transparent);
+		}
+	}
 	.trail-flow {
 		animation: flow 24s linear infinite;
 	}
@@ -519,8 +755,17 @@
 	}
 	@media (prefers-reduced-motion: reduce) {
 		.trail-flow,
-		.rise {
+		.rise,
+		.node.is-active {
 			animation: none;
+		}
+		.back,
+		.node {
+			transition: none;
+		}
+		.node:hover,
+		.node:active {
+			transform: none;
 		}
 	}
 </style>
