@@ -18,7 +18,7 @@
 	import { userXp, userLevel } from '$lib/store/xp-store';
 	import { showXpToast } from '$lib/helpers/toast-helpers';
 	import { LEVEL_TIERS } from '$lib/helpers/xp-levels';
-	import { getBrowserInfo } from '$lib/helpers/get-browser-info';
+	import { arabicRunsHtml } from '$lib/helpers/arabic-runs';
 	import KeyboardDocumentation from '$lib/components/KeyboardDocumentation.svelte';
 	import Modal from '$lib/components/Modal.svelte';
 	import Button from '$lib/components/Button.svelte';
@@ -317,8 +317,6 @@
 		};
 	});
 
-	const isSafari = getBrowserInfo();
-
 	// Trace mode: map each target character to a fill-in state based on input.
 	// 'pending' = not yet reached (dimmed), 'correct' = filled in, 'incorrect' = red.
 	let traceChars = $derived.by(() => {
@@ -338,17 +336,16 @@
 	});
 
 	let traceHtml = $derived(
-		traceChars
-			.map(({ char, state }) => {
-				const cls = cn('text-2xl sm:text-3xl transition-opacity duration-150', {
-					'text-text-300': state === 'correct',
-					'text-red-500': state === 'incorrect',
-					'text-text-300 opacity-40': state === 'pending'
-				});
-				const content = isSafari ? `&zwj;&zwj;${char}&zwj;&zwj;` : char;
-				return `<span class="${cls}">${content}</span>`;
-			})
-			.join('')
+		arabicRunsHtml(
+			traceChars,
+			(c) => c.char,
+			(c) =>
+				cn({
+					'text-text-300': c.state === 'correct',
+					'text-red-500': c.state === 'incorrect',
+					'text-[color-mix(in_srgb,var(--text1)_40%,transparent)]': c.state === 'pending'
+				})
+		)
 	);
 
 	function openInfoModal() {
@@ -948,35 +945,13 @@
 		{#if practiceMode === 'trace'}
 			<!-- Trace mode: dimmed answer that fills in as you type -->
 			<div class="mt-4" dir="rtl">
-				<span class="font-arabic leading-loose">{@html traceHtml}</span>
+				<span class="font-arabic leading-loose text-2xl sm:text-3xl">{@html traceHtml}</span>
 			</div>
 		{:else}
 		<div class="mt-4">
-			{#if isSafari}
-				<span class="text-2xl sm:text-3xl">
-					{@html attempt
-						.map(
-							({ letter, correct }) =>
-								`<span class="${cn('text-2xl sm:text-3xl', {
-									'text-green-700': correct,
-									'text-red-500': !correct
-								})}">&zwj;&zwj;${letter}&zwj;&zwj;</span>`
-						)
-						.join('')}
-				</span>
-			{:else}
-				<span class="text-2xl sm:text-3xl">
-					{@html attempt
-						.map(
-							({ letter, correct }) =>
-								`<span class="${cn('text-2xl sm:text-3xl', {
-									'text-green-700': correct,
-									'text-red-500': !correct
-								})}">${letter}</span>`
-						)
-						.join('')}
-				</span>
-			{/if}
+			<span class="text-2xl sm:text-3xl">
+				{@html arabicRunsHtml(attempt, (a) => a.letter, (a) => (a.correct ? 'text-green-700' : 'text-red-500'))}
+			</span>
 		</div>
 		{/if}
 	</div>

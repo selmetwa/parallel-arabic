@@ -8,7 +8,7 @@
 	import { type Keyboard, type Dialect } from '$lib/types/index';
 	import Button from '$lib/components/Button.svelte';
 	import Canvas from '$lib/components/Canvas.svelte';
-	import { getBrowserInfo } from '$lib/helpers/get-browser-info';
+	import { arabicRunsHtml } from '$lib/helpers/arabic-runs';
   import Modal from '$lib/components/Modal.svelte';
   import KeyboardDocumentation from '$lib/components/KeyboardDocumentation.svelte';
   import SaveButton from '$lib/components/SaveButton.svelte';
@@ -162,7 +162,6 @@
 		showHint = !showHint;
 	}
 
-	const isSafari = getBrowserInfo();
 
   function openInfoModal() {
     isInfoModalOpen = true;
@@ -481,31 +480,9 @@
 			</div>
 			
 			<div class="text-center">
-				{#if isSafari}
-					<span class="text-3xl">
-						{@html attempt
-							.map(
-								({ letter, correct }) =>
-									`<span class="${cn('text-3xl', {
-										'text-green-700': correct,
-										'text-red-500': !correct
-									})}">&zwj;&zwj;${letter}&zwj;&zwj;</span>`
-							)
-							.join('')}
-					</span>
-				{:else}
-					<span class="text-3xl">
-						{@html attempt
-							.map(
-								({ letter, correct }) =>
-									`<span class="${cn('text-3xl', {
-										'text-green-700': correct,
-										'text-red-500': !correct
-									})}">${letter}</span>`
-							)
-							.join('')}
-					</span>
-				{/if}
+				<span class="text-3xl">
+					{@html arabicRunsHtml(attempt, (a) => a.letter, (a) => (a.correct ? 'text-green-700' : 'text-red-500'))}
+				</span>
 			</div>
 		</div>
 		

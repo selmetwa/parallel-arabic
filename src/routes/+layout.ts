@@ -2,6 +2,7 @@ import { createBrowserClient, createServerClient, isBrowser } from '@supabase/ss
 import { PUBLIC_SUPABASE_PUBLISHABLE_KEY, PUBLIC_SUPABASE_URL } from '$env/static/public'
 import type { LayoutLoad } from './$types'
 import { browser } from '$app/environment';
+import type { UserContext } from '$lib/server/user-context';
 
 export const prerender = false; // Dynamic pages need auth
 export const ssr = true;        // Enable SSR for faster initial load
@@ -55,8 +56,20 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
       data: { user },
     } = await supabase.auth.getUser()
 
+    // Prerendered pages ship layout data built without a user, so a logged-in
+    // visitor would look like a free user. Fetch their real values instead.
+    let userContext: Partial<UserContext> = {}
+    if (browser && user && !data.user) {
+      try {
+        const res = await fetch('/api/me')
+        if (res.ok) userContext = await res.json()
+      } catch {
+        // Keep the server defaults
+      }
+    }
+
     // Preserve showOnboarding and targetDialect from server data
-    return { 
+    return {
       session, 
       supabase, 
       user,
@@ -67,7 +80,8 @@ export const load: LayoutLoad = async ({ data, depends, fetch }) => {
       userXp: data.userXp ?? 0,
       userLevel: data.userLevel ?? 1,
       proficiencyLevel: data.proficiencyLevel ?? null,
-      goalLevel: data.goalLevel ?? null
+      goalLevel: data.goalLevel ?? null,
+      ...userContext
     }
   } catch (error) {
     console.error('❌ [+layout.ts] Error in client layout load:', error)
