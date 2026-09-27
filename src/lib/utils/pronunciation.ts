@@ -3,9 +3,9 @@
  * vocabulary pages.
  *
  * Lifted out of `src/routes/learn/game/play/+page.svelte`, which had the only
- * version that normalizes both sides before comparing. `PronunciationTestModal`
- * and `SpeakSentence` still run levenshtein against raw text and score correct
- * answers far too low; they should move onto this eventually.
+ * version that normalizes both sides before comparing. `SpeakSentence` still
+ * runs levenshtein against raw text and scores correct answers far too low; it
+ * should move onto this eventually.
  */
 import levenshtein from 'fast-levenshtein';
 import { normalizeArabicText } from '$lib/utils/arabic-normalization';
