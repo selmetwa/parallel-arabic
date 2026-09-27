@@ -1,5 +1,5 @@
 import type { LayoutServerLoad } from './$types'
-import { checkUserSubscription } from '$lib/helpers/subscription'
+import { getUserContext } from '$lib/server/user-context'
 
 export const load: LayoutServerLoad = async ({ locals, cookies, url }) => {
   try {
@@ -18,33 +18,20 @@ export const load: LayoutServerLoad = async ({ locals, cookies, url }) => {
       };
     }
 
-    // Use shared subscription check utility (no extra DB calls)
-    const isSubscribed = checkUserSubscription(user);
-
     // Only show onboarding if:
     // 1. User has newSignup=true query parameter (just signed up)
     // 2. AND onboarding is not completed
     const isNewSignup = url.searchParams.get('newSignup') === 'true'
     const showOnboarding = isNewSignup && !user.onboarding_completed
 
-    // Card-up-front trial is offered once per account, and only to users who
-    // aren't already subscribed. Consumers must also check they're not running
-    // inside the native app before showing any trial copy.
-    const trialEligible = !isSubscribed && !user.has_used_trial
-
     console.log({ user })
     return {
       session,
       user: user,  // Database user for backward compatibility
       cookies: cookies.getAll(),
-      isSubscribed: isSubscribed,
-      trialEligible: trialEligible,
       showOnboarding: showOnboarding,
-      targetDialect: user?.target_dialect || null,
-      proficiencyLevel: user?.proficiency_level || null,
-      goalLevel: user?.goal_level || null,
-      userXp: user?.total_xp ?? 0,
-      userLevel: user?.current_level ?? 1
+      // Subscription, trial, XP and dialect fields (shared with /api/me)
+      ...getUserContext(user)
     };
   } catch (error) {
     console.error('❌ [+layout.server.ts] Error in layout load:', error)
