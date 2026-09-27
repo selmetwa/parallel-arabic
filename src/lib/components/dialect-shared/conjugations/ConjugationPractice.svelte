@@ -24,7 +24,7 @@
 	import { userXp, userLevel } from '$lib/store/xp-store';
 	import { showXpToast } from '$lib/helpers/toast-helpers';
 	import { LEVEL_TIERS } from '$lib/helpers/xp-levels';
-	import { getBrowserInfo } from '$lib/helpers/get-browser-info';
+	import { arabicRunsHtml } from '$lib/helpers/arabic-runs';
 	import { normalizeArabicText, normalizeArabicTextLight } from '$lib/utils/arabic-normalization';
 	import AudioButton from '$lib/components/AudioButton.svelte';
 	import AudioLoading from '$lib/components/AudioLoading.svelte';
@@ -166,7 +166,6 @@
 	}
 
 	const isMobile = () => typeof window !== 'undefined' && window.innerWidth < 768;
-	const isSafari = getBrowserInfo();
 
 	// Reset current index whenever the filter selection changes.
 	$effect(() => {
@@ -651,15 +650,7 @@
 
 				<div class="text-center mb-4 min-h-[2.5rem]">
 					<span class="text-2xl sm:text-3xl">
-						{#if isSafari}
-							{@html attempt
-								.map(({ letter, correct }) => `<span class="${cn('text-2xl sm:text-3xl', { 'text-green-700': correct, 'text-red-500': !correct })}">&zwj;&zwj;${letter}&zwj;&zwj;</span>`)
-								.join('')}
-						{:else}
-							{@html attempt
-								.map(({ letter, correct }) => `<span class="${cn('text-2xl sm:text-3xl', { 'text-green-700': correct, 'text-red-500': !correct })}">${letter}</span>`)
-								.join('')}
-						{/if}
+						{@html arabicRunsHtml(attempt, (a) => a.letter, (a) => (a.correct ? 'text-green-700' : 'text-red-500'))}
 					</span>
 				</div>
 
