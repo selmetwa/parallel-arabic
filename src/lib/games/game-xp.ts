@@ -5,9 +5,8 @@
  * user's total, so two requests in the same moment (two quick matches on a
  * board) can overwrite each other and lose XP.
  *
- * Unlike the quiz, this shows no toast: `showXpToast` speaks a praise phrase
- * through text-to-speech, which would spend a free user's audio allowance on
- * every correct answer. The games show the XP earned on their results screen.
+ * Unlike the quiz, this shows no toast per correct answer. The games show the
+ * XP earned on their results screen.
  */
 import { userLevel, userXp } from '$lib/store/xp-store';
 
