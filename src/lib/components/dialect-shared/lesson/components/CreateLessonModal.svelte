@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Button from '$lib/components/Button.svelte';
+	import PressButton from '$lib/components/games/PressButton.svelte';
 	import Modal from '$lib/components/Modal.svelte';
 	import RadioButton from '$lib/components/RadioButton.svelte';
 	import { goto } from '$app/navigation';
@@ -763,13 +764,7 @@
 </Modal>
 
 <div class="w-fit">
-	{#if !data.session}
-		<Button onClick={() => goto('/signup')} type="button" className="shadow-sm hover:shadow-md transition-all">
-			Create New Lesson
-		</Button>
-	{:else}
-		<Button onClick={openModal} type="button" className="shadow-sm hover:shadow-md transition-all">
-			Create New Lesson
-		</Button>
-	{/if}
+	<PressButton onclick={data.session ? openModal : () => goto('/signup')}>
+		Create new lesson
+	</PressButton>
 </div>
