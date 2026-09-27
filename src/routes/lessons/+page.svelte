@@ -1,278 +1,372 @@
 <script lang="ts">
-	import PaywallModal from '$lib/components/PaywallModal.svelte';
-	import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
+	import { resolve } from '$app/paths';
 	import { trackEvent } from '$lib/analytics';
 
-	let { data } = $props();
-	let isModalOpen = $state(false);
-
-	// Search and filter state
-	let searchQuery = $state('');
-	let filterDialect = $state<string>(getDefaultDialect(data.user));
-	let filterLevel = $state<string>('all');
-	let sortBy = $state<'newest' | 'oldest' | 'level' | 'title'>('newest');
-
-	let userGeneratedLessons = $derived.by(() => {
-		const output = [];
-
-		for (const lesson of data.user_generated_lessons) {
-			const lessonData = lesson as {
-				id: string;
-				title?: string;
-				title_arabic?: string;
-				description?: string;
-				level: string;
-				dialect: string;
-				dialect_name?: string;
-				created_at: string;
-				sub_lesson_count?: number;
-				estimated_duration?: number;
-				lesson_body?: {
-					title?: { english?: string; arabic?: string };
-					description?: { english?: string };
-					subLessons?: unknown[];
-					estimatedDuration?: number;
-					level?: string;
-				};
-			};
-
-			const lessonBody = lessonData.lesson_body;
-
-			const subLessonCount = lessonData.sub_lesson_count ?? lessonBody?.subLessons?.length ?? 0;
-			const estimatedDuration = lessonData.estimated_duration ?? lessonBody?.estimatedDuration ?? null;
-
-			output.push({
-				id: lessonData.id,
-				title: lessonBody?.title?.english || lessonData.title || '',
-				description: lessonData.description || lessonBody?.description?.english || '',
-				createdAt: lessonData.created_at,
-				level: lessonData.level || lessonBody?.level || 'beginner',
-				dialect: lessonData.dialect,
-				dialectName: lessonData.dialect_name,
-				subLessonCount: subLessonCount,
-				estimatedDuration: estimatedDuration
-			});
+	const paths = [
+		{
+			id: 'structured',
+			href: '/lessons/structured' as const,
+			icon: '🗺️',
+			title: 'Structured path',
+			note: 'A step-by-step curriculum from the alphabet upwards, one module at a time.',
+			pills: ['4 dialects', 'A1 to C2', 'Tracks your progress'],
+			cta: 'Explore the curriculum',
+			accent: '#0ea5e9',
+			deep: '#0369a1'
+		},
+		{
+			id: 'custom',
+			href: '/lessons/custom' as const,
+			icon: '✨',
+			title: 'Custom lessons',
+			note: 'Create a lesson on any topic, like food, travel or work, or browse the ones other learners made.',
+			pills: ['Any topic', 'Any level', 'Community library'],
+			cta: 'Browse lessons',
+			accent: '#8b5cf6',
+			deep: '#6d28d9'
 		}
-		return output;
-	});
-
-	function openPaywallModal() {
-		isModalOpen = true;
-	}
-
-	function handleCloseModal() {
-		isModalOpen = false;
-	}
-
-	const dialectOptions = [
-		{ value: 'egyptian-arabic', label: 'Egyptian Arabic' },
-		{ value: 'fusha', label: 'Modern Standard Arabic' },
-		{ value: 'levantine', label: 'Levantine Arabic' },
-		{ value: 'darija', label: 'Moroccan Darija' },
 	];
 
-	const filterDialectOptions = [
-		{ value: 'all', label: 'All Dialects' },
-		...dialectOptions
+	const inside = [
+		{
+			emoji: '🔊',
+			title: 'Audio on everything',
+			body: 'Hear every word and sentence as often as you need.',
+			accent: '#0ea5e9'
+		},
+		{
+			emoji: '🎯',
+			title: 'Exercises as you go',
+			body: 'Multiple choice and fill-in-the-blank after each topic.',
+			accent: '#f59e0b'
+		},
+		{
+			emoji: '🌍',
+			title: 'Dialect comparison',
+			body: 'See how a phrase changes across all four dialects.',
+			accent: '#10b981'
+		}
 	];
-
-	const levelOptions = [
-		{ value: 'all', label: 'All Levels' },
-		{ value: 'beginner', label: 'Beginner' },
-		{ value: 'intermediate', label: 'Intermediate' },
-		{ value: 'advanced', label: 'Advanced' },
-	];
-
-	const levelOrder: Record<string, number> = {
-		'beginner': 1,
-		'intermediate': 2,
-		'advanced': 3,
-	};
-
-	const filteredAndSortedLessons = $derived.by(() => {
-		let filtered = [...userGeneratedLessons];
-
-		if (searchQuery.trim()) {
-			const query = searchQuery.toLowerCase();
-			filtered = filtered.filter(lesson =>
-				lesson.title?.toLowerCase().includes(query) ||
-				lesson.description?.toLowerCase().includes(query)
-			);
-		}
-
-		if (filterDialect !== 'all') {
-			filtered = filtered.filter(lesson => lesson.dialect === filterDialect);
-		}
-
-		if (filterLevel !== 'all') {
-			filtered = filtered.filter(lesson =>
-				lesson.level?.toLowerCase() === filterLevel.toLowerCase()
-			);
-		}
-
-		if (sortBy === 'newest') {
-			filtered.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
-		} else if (sortBy === 'oldest') {
-			filtered.sort((a, b) => new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime());
-		} else if (sortBy === 'level') {
-			filtered.sort((a, b) => {
-				const aLevel = levelOrder[a.level?.toLowerCase() || 'beginner'] || 0;
-				const bLevel = levelOrder[b.level?.toLowerCase() || 'beginner'] || 0;
-				return aLevel - bLevel;
-			});
-		} else if (sortBy === 'title') {
-			filtered.sort((a, b) => (a.title || '').localeCompare(b.title || ''));
-		}
-
-		return filtered;
-	});
-
-	function getDialectBadgeColor(dialect: string) {
-		const colors = {
-			'egyptian-arabic': 'bg-tile-500 text-text-300',
-			'levantine': 'bg-orange-100 text-orange-800',
-			'darija': 'bg-green-100 text-green-800',
-			'fusha': 'bg-purple-100 text-purple-800',
-		};
-		return colors[dialect as keyof typeof colors] || 'bg-gray-100 text-gray-800';
-	}
-
-	function getLevelBadgeColor(level: string) {
-		const colors = {
-			beginner: 'bg-green-100 text-green-800',
-			intermediate: 'bg-yellow-100 text-yellow-800',
-			advanced: 'bg-red-100 text-red-800',
-		};
-		return colors[level as keyof typeof colors] || 'bg-gray-100 text-gray-800';
-	}
-
-	function getDialectLabel(dialect: string, originalName?: string) {
-		if (dialect === 'fusha') return 'MSA';
-		return originalName || dialect;
-	}
-
-	function capitalizeFirst(str: string) {
-		return str.charAt(0).toUpperCase() + str.slice(1);
-	}
 </script>
 
-<PaywallModal isOpen={isModalOpen} {handleCloseModal}></PaywallModal>
+<section class="page">
+	<div class="inner">
+		<header class="hero">
+			<h1>Lessons</h1>
+			<p>Follow a structured path, or make a lesson on any topic, in four Arabic dialects.</p>
+		</header>
 
-<section class="min-h-screen">
+		<div class="step-head">
+			<span class="step-num">1</span>
+			<h2>Choose your path</h2>
+			<span class="step-tag">Pick one</span>
+		</div>
 
-	<!-- Compact page header -->
-	<header class="max-w-5xl mx-auto px-4 sm:px-8 pt-10 pb-8 border-b border-tile-500">
-		<h1 class="text-4xl sm:text-5xl font-black text-text-300 tracking-tight leading-none">Lessons</h1>
-		<p class="mt-3 text-text-200 text-base sm:text-lg max-w-lg leading-relaxed">
-			A structured curriculum or custom lessons on any topic — in four Arabic dialects.
-		</p>
-	</header>
+		<div class="paths">
+			{#each paths as p, i (p.id)}
+				<a
+					href={resolve(p.href)}
+					class="path"
+					style="--accent:{p.accent}; --deep:{p.deep}; --delay:{i * 80}ms"
+					onclick={() => trackEvent('lessons_path_selected', { path: p.id })}
+				>
+					<span class="path-icon" aria-hidden="true">{p.icon}</span>
+					<span class="path-title">{p.title}</span>
+					<span class="path-note">{p.note}</span>
+					<span class="pills">
+						{#each p.pills as pill (pill)}
+							<span class="pill">{pill}</span>
+						{/each}
+					</span>
+					<span class="path-go">
+						{p.cta}
+						<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
+						</svg>
+					</span>
+				</a>
+			{/each}
+		</div>
 
-	<!-- Path cards -->
-	<div class="max-w-5xl mx-auto px-4 sm:px-8 py-8">
-		<p class="text-xs text-text-200 font-semibold mb-4">Choose your path</p>
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-
-			<!-- STRUCTURED card -->
-			<a
-				href="/lessons/structured"
-				onclick={() => trackEvent('lessons_path_selected', { path: 'structured' })}
-				class="group relative overflow-hidden flex flex-col bg-tile-400 border border-tile-500 border-l-4 border-l-[--brand] rounded-2xl p-6 sm:p-8 min-h-[280px] transition-all duration-200 hover:bg-tile-500 hover:-translate-y-1 hover:shadow-lg motion-reduce:hover:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300"
-			>
-				<!-- Arabic watermark background -->
-				<!-- <span class="absolute bottom-2 right-3 text-[9rem] font-bold text-text-300 opacity-[0.04] leading-none pointer-events-none select-none" dir="rtl" aria-hidden="true">منهج</span> -->
-
-				<!-- Top row -->
-				<div class="flex items-center gap-2 mb-6">
-					<span class="text-xs font-bold text-text-200">Structured</span>
-					<span class="text-xs font-bold px-2 py-0.5 rounded-full bg-[color-mix(in_srgb,var(--brand)_12%,transparent)] text-[var(--brand)] border border-[color-mix(in_srgb,var(--brand)_25%,transparent)]">Curriculum</span>
+		<h2 class="how-title">What's in a lesson</h2>
+		<div class="how">
+			{#each inside as item (item.title)}
+				<div class="how-card" style="--accent:{item.accent};">
+					<span class="how-emoji" aria-hidden="true">{item.emoji}</span>
+					<h3>{item.title}</h3>
+					<p>{item.body}</p>
 				</div>
-
-				<!-- Content -->
-				<div class="flex-1">
-					<h2 class="text-2xl sm:text-3xl font-bold text-text-300 mb-3 leading-tight">Structured Path</h2>
-					<p class="text-text-200 text-sm leading-relaxed max-w-[38ch]">A curated sequence from alphabet to fluency. Progress through modules designed for systematic learning.</p>
-				</div>
-
-				<!-- Dialect flags row -->
-				<div class="flex items-center gap-2 mt-5 mb-4">
-					<span class="text-xl" title="Egyptian Arabic">🇪🇬</span>
-					<span class="text-xl" title="Moroccan Darija">🇲🇦</span>
-					<span class="text-xl" title="Levantine Arabic">🇱🇧</span>
-					<span class="text-xl" title="Modern Standard Arabic">📖</span>
-					<span class="text-xs text-text-200 ml-1">4 dialects</span>
-				</div>
-
-				<!-- CTA -->
-				<div class="flex items-center gap-2 text-sm font-bold text-text-300 group-hover:gap-3 transition-all duration-200">
-					<span>Explore curriculum</span>
-					<span aria-hidden="true">→</span>
-				</div>
-			</a>
-
-			<!-- CUSTOM card -->
-			<a
-				href="/lessons/custom"
-				onclick={() => trackEvent('lessons_path_selected', { path: 'custom' })}
-				class="group relative overflow-hidden flex flex-col bg-tile-400 border border-purple-500/30 rounded-2xl p-6 sm:p-8 min-h-[280px] transition-all duration-200 hover:bg-tile-500 hover:-translate-y-1 hover:shadow-lg motion-reduce:hover:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300"
-			>
-				<!-- Arabic watermark -->
-				<!-- <span class="absolute bottom-2 right-3 text-[9rem] font-bold text-purple-400 opacity-[0.06] leading-none pointer-events-none select-none" dir="rtl" aria-hidden="true">إنشاء</span> -->
-
-				<!-- Top row -->
-				<div class="flex items-center gap-2 mb-6">
-					<span class="text-xs font-bold text-text-200">Custom</span>
-					<span class="text-xs font-bold px-2 py-0.5 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/25">Any topic</span>
-				</div>
-
-				<!-- Content -->
-				<div class="flex-1">
-					<h2 class="text-2xl sm:text-3xl font-bold text-text-300 mb-3 leading-tight">Custom Lessons</h2>
-					<p class="text-text-200 text-sm leading-relaxed max-w-[38ch]">Create lessons on any topic — food, travel, culture, business. Search, filter, and browse the community library.</p>
-				</div>
-
-				<!-- Feature tags -->
-				<div class="flex flex-wrap gap-2 mt-5 mb-4">
-					<span class="text-[11px] px-2 py-0.5 rounded-full bg-tile-500 border border-tile-600 text-text-200">Any level</span>
-					<span class="text-[11px] px-2 py-0.5 rounded-full bg-tile-500 border border-tile-600 text-text-200">4 dialects</span>
-					<span class="text-[11px] px-2 py-0.5 rounded-full bg-tile-500 border border-tile-600 text-text-200">Community library</span>
-				</div>
-
-				<!-- CTA -->
-				<div class="flex items-center gap-2 text-sm font-bold text-text-300 group-hover:gap-3 transition-all duration-200">
-					<span>Browse lessons</span>
-					<span aria-hidden="true">→</span>
-				</div>
-			</a>
-
+			{/each}
 		</div>
 	</div>
-
-	<!-- What's in every lesson: compact horizontal strip -->
-	<!-- <div class="max-w-5xl mx-auto px-4 sm:px-8 pb-12">
-		<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-			<div class="bg-tile-400 border border-tile-500 rounded-xl p-4 flex items-start gap-3">
-				<span class="text-2xl shrink-0" aria-hidden="true">🎯</span>
-				<div>
-					<h3 class="text-sm font-bold text-text-300">Interactive exercises</h3>
-					<p class="text-xs text-text-200 mt-0.5 leading-relaxed">Multiple-choice and fill-in-the-blank after each topic.</p>
-				</div>
-			</div>
-			<div class="bg-tile-400 border border-tile-500 rounded-xl p-4 flex items-start gap-3">
-				<span class="text-2xl shrink-0" aria-hidden="true">🔊</span>
-				<div>
-					<h3 class="text-sm font-bold text-text-300">Native audio</h3>
-					<p class="text-xs text-text-200 mt-0.5 leading-relaxed">Every word and sentence includes audio playback.</p>
-				</div>
-			</div>
-			<div class="bg-tile-400 border border-tile-500 rounded-xl p-4 flex items-start gap-3">
-				<span class="text-2xl shrink-0" aria-hidden="true">🌍</span>
-				<div>
-					<h3 class="text-sm font-bold text-text-300">Dialect comparison</h3>
-					<p class="text-xs text-text-200 mt-0.5 leading-relaxed">See how expressions vary across all 4 dialects.</p>
-				</div>
-			</div>
-		</div>
-	</div> -->
-
 </section>
+
+<style>
+	.page {
+		min-height: 100vh;
+		padding: 1.5rem 1.25rem 5rem;
+	}
+
+	.inner {
+		max-width: 860px;
+		margin: 0 auto;
+	}
+
+	/* Hero */
+	.hero {
+		margin: 1.5rem 0 2.5rem;
+	}
+
+	.hero h1 {
+		font-size: clamp(2.2rem, 6.5vw, 3.4rem);
+		font-weight: 600;
+		line-height: 1.05;
+		letter-spacing: -0.035em;
+		color: var(--text1);
+	}
+
+	.hero p {
+		margin-top: 0.9rem;
+		font-size: 1.02rem;
+		line-height: 1.55;
+		color: var(--text2);
+		max-width: 46ch;
+	}
+
+	/* Step heading, as on /lessons/structured and /speak */
+	.step-head {
+		display: flex;
+		align-items: center;
+		gap: 0.7rem;
+		flex-wrap: wrap;
+		margin-bottom: 1rem;
+	}
+
+	.step-num {
+		display: grid;
+		place-items: center;
+		width: 1.9rem;
+		height: 1.9rem;
+		border-radius: 50%;
+		background: var(--brand);
+		color: #fff;
+		font-size: 0.9rem;
+		font-weight: 600;
+		flex-shrink: 0;
+	}
+
+	.step-head h2 {
+		font-size: 1.25rem;
+		font-weight: 600;
+		letter-spacing: -0.02em;
+		color: var(--text1);
+	}
+
+	.step-tag {
+		font-size: 0.78rem;
+		font-weight: 600;
+		color: var(--text2);
+		background: var(--tile3);
+		border-radius: 100px;
+		padding: 0.25rem 0.7rem;
+	}
+
+	/* Path cards: pressable, with a solid bottom edge that collapses on click */
+	.paths {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+	}
+
+	.path {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 1.5rem;
+		text-decoration: none;
+		border-radius: 1.25rem;
+		background: var(--tile3);
+		border: 2px solid var(--tile5);
+		box-shadow: 0 5px 0 var(--tile5);
+		animation: pop 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+		animation-delay: var(--delay, 0ms);
+		transition:
+			transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1),
+			box-shadow 0.18s ease,
+			border-color 0.18s ease;
+	}
+
+	.path:hover {
+		transform: translateY(-4px);
+		border-color: var(--accent);
+		box-shadow: 0 9px 0 var(--deep);
+	}
+
+	.path:active {
+		transform: translateY(2px);
+		box-shadow: 0 1px 0 var(--deep);
+	}
+
+	.path:focus-visible {
+		outline: 2px solid var(--text1);
+		outline-offset: 3px;
+	}
+
+	.path-icon {
+		display: grid;
+		place-items: center;
+		width: 3.5rem;
+		height: 3.5rem;
+		font-size: 1.8rem;
+		border-radius: 1rem;
+		background: color-mix(in srgb, var(--accent) 22%, transparent);
+		transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+	}
+
+	.path:hover .path-icon {
+		transform: rotate(-3deg) scale(1.04);
+	}
+
+	.path-title {
+		margin-top: 1rem;
+		font-size: 1.3rem;
+		font-weight: 600;
+		letter-spacing: -0.02em;
+		color: var(--text1);
+	}
+
+	.path-note {
+		margin-top: 0.4rem;
+		font-size: 0.9rem;
+		line-height: 1.55;
+		color: var(--text2);
+		flex: 1;
+	}
+
+	.pills {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.35rem;
+		margin-top: 1rem;
+	}
+
+	.pill {
+		font-size: 0.72rem;
+		font-weight: 600;
+		color: var(--text1);
+		background: color-mix(in srgb, var(--accent) 16%, var(--tile3));
+		border-radius: 100px;
+		padding: 0.2rem 0.6rem;
+	}
+
+	.path-go {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.35rem;
+		margin-top: 1.25rem;
+		font-size: 0.85rem;
+		font-weight: 600;
+		color: #fff;
+		background: var(--accent);
+		border-radius: 100px;
+		padding: 0.5rem 1.1rem;
+		transition:
+			gap 0.2s ease,
+			filter 0.2s ease;
+	}
+
+	.path:hover .path-go {
+		gap: 0.65rem;
+		filter: brightness(1.08);
+	}
+
+	.path-go svg {
+		width: 0.9rem;
+		height: 0.9rem;
+	}
+
+	/* What's in a lesson, as on /speak */
+	.how-title {
+		margin: 3rem 0 0.9rem;
+		font-size: 1.15rem;
+		font-weight: 600;
+		letter-spacing: -0.02em;
+		color: var(--text1);
+	}
+
+	.how {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 0.75rem;
+	}
+
+	.how-card {
+		border-radius: 1.1rem;
+		border: 2px solid var(--tile5);
+		background: var(--tile3);
+		padding: 1.1rem;
+		transition:
+			transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+			border-color 0.2s ease;
+	}
+
+	.how-card:hover {
+		transform: translateY(-3px);
+		border-color: var(--accent);
+	}
+
+	.how-emoji {
+		display: block;
+		font-size: 1.6rem;
+		line-height: 1;
+	}
+
+	.how-card h3 {
+		margin-top: 0.55rem;
+		font-size: 0.98rem;
+		font-weight: 600;
+		color: var(--text1);
+	}
+
+	.how-card p {
+		margin-top: 0.3rem;
+		font-size: 0.85rem;
+		line-height: 1.5;
+		color: var(--text2);
+	}
+
+	@keyframes pop {
+		from {
+			opacity: 0;
+			transform: translateY(14px) scale(0.97);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0) scale(1);
+		}
+	}
+
+	@media (max-width: 620px) {
+		.paths,
+		.how {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.path {
+			animation: none;
+		}
+		.path,
+		.path-icon,
+		.path-go,
+		.how-card {
+			transition: none;
+		}
+		.path:hover,
+		.how-card:hover,
+		.path:hover .path-icon {
+			transform: none;
+		}
+	}
+</style>

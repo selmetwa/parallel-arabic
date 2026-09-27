@@ -315,18 +315,22 @@
 		flex-direction: column;
 		gap: 1rem;
 	}
+	/* --accent/--deep and --go/--go-deep come from LessonPlayerV2. */
 	.scenario {
-		background: var(--tile1);
-		border: 1px solid var(--tile3);
-		border-left: 3px solid var(--brand);
+		background: var(--tile2);
+		border: 2px solid var(--tile4);
 		border-radius: 1.1rem;
 		padding: 1.1rem 1.35rem;
 	}
 	.scenario-label {
-		font-size: 0.8rem;
-		font-weight: 700;
-		color: var(--brand);
-		margin-bottom: 0.5rem;
+		display: inline-block;
+		font-size: 0.75rem;
+		font-weight: 600;
+		color: var(--text1);
+		background: color-mix(in srgb, var(--accent, var(--brand)) 16%, var(--tile3));
+		border-radius: 100px;
+		padding: 0.22rem 0.65rem;
+		margin-bottom: 0.6rem;
 	}
 	.situation {
 		color: var(--text1);
@@ -373,26 +377,26 @@
 		gap: 0.4rem;
 	}
 	.toggles button {
-		font-size: 0.7rem;
+		font-size: 0.72rem;
 		font-weight: 600;
-		padding: 0.2rem 0.6rem;
+		padding: 0.22rem 0.65rem;
 		border-radius: 100px;
-		border: 1px solid var(--tile5);
+		border: 2px solid var(--tile5);
 		background: var(--tile2);
 		color: var(--text2);
 		cursor: pointer;
 	}
 	.toggles button.active {
-		background: var(--brand);
-		color: white;
-		border-color: var(--brand);
+		background: var(--accent, var(--brand));
+		color: #fff;
+		border-color: var(--deep, var(--brand));
 	}
 	.composer {
 		display: flex;
 		flex-direction: column;
 		gap: 0.9rem;
 		padding: 0.85rem 0 0.4rem;
-		border-top: 1px solid var(--tile3);
+		border-top: 2px solid var(--tile4);
 	}
 	.speak-zone {
 		display: flex;
@@ -405,19 +409,25 @@
 		height: 5rem;
 		border-radius: 50%;
 		border: none;
-		background: var(--brand);
+		background: var(--accent, var(--brand));
 		color: #fff;
 		display: grid;
 		place-items: center;
 		cursor: pointer;
-		box-shadow: 0 16px 34px -12px var(--brand);
+		box-shadow: 0 6px 0 var(--deep, var(--brand));
 		transition:
-			transform 0.16s ease,
-			filter 0.16s ease;
+			transform 0.14s ease,
+			box-shadow 0.14s ease,
+			filter 0.2s ease;
 	}
 	.mic-big:not(:disabled):hover {
-		transform: translateY(-2px) scale(1.03);
-		filter: brightness(1.07);
+		transform: translateY(-2px);
+		box-shadow: 0 8px 0 var(--deep, var(--brand));
+		filter: brightness(1.06);
+	}
+	.mic-big:not(:disabled):active {
+		transform: translateY(5px);
+		box-shadow: 0 1px 0 var(--deep, var(--brand));
 	}
 	.mic-big:disabled {
 		opacity: 0.6;
@@ -453,10 +463,10 @@
 	.type-field {
 		flex: 1;
 		resize: none;
-		border-radius: 0.75rem;
-		border: 1px solid var(--tile4);
-		background: var(--tile1);
-		color: var(--text2);
+		border-radius: 1rem;
+		border: 2px solid var(--tile5);
+		background: var(--tile2);
+		color: var(--text1);
 		padding: 0.5rem 0.75rem;
 		font: inherit;
 		font-size: 0.9rem;
@@ -465,18 +475,21 @@
 	.send {
 		flex-shrink: 0;
 		font-size: 0.8rem;
-		font-weight: 700;
+		font-weight: 600;
 		padding: 0.5rem 0.95rem;
-		border-radius: 0.7rem;
-		border: 1px solid var(--tile4);
+		border-radius: 100px;
+		border: 2px solid var(--tile5);
 		background: var(--tile2);
 		color: var(--text2);
 		cursor: pointer;
-		transition: all 0.15s ease;
+		transition:
+			background 0.15s ease,
+			border-color 0.15s ease,
+			color 0.15s ease;
 	}
 	.send:not(:disabled):hover {
-		background: var(--brand);
-		border-color: var(--brand);
+		background: var(--accent, var(--brand));
+		border-color: var(--deep, var(--brand));
 		color: #fff;
 	}
 	.send:disabled {
@@ -484,21 +497,25 @@
 		cursor: default;
 	}
 	.primary {
-		background: var(--brand);
-		color: white;
+		background: var(--go, #22c55e);
+		color: #fff;
 		border: none;
-		border-radius: 0.85rem;
+		border-radius: 1rem;
 		padding: 0.65rem 1.2rem;
-		font-weight: 700;
+		font-weight: 600;
 		cursor: pointer;
-		box-shadow: 0 10px 22px -12px var(--brand);
+		box-shadow: 0 4px 0 var(--go-deep, #15803d);
 		transition:
-			transform 0.16s ease,
-			filter 0.16s ease;
+			transform 0.14s ease,
+			box-shadow 0.14s ease,
+			filter 0.2s ease;
 	}
 	.primary:not(:disabled):hover {
-		transform: translateY(-2px);
 		filter: brightness(1.06);
+	}
+	.primary:not(:disabled):active {
+		transform: translateY(4px);
+		box-shadow: 0 0 0 var(--go-deep, #15803d);
 	}
 	.primary:disabled {
 		opacity: 0.5;
@@ -526,7 +543,7 @@
 		width: 240px;
 		flex-shrink: 0;
 		background: var(--tile2);
-		border: 1px solid var(--tile4);
+		border: 2px solid var(--tile4);
 		border-radius: 1rem;
 		padding: 0.85rem;
 		max-height: 60vh;
@@ -556,8 +573,8 @@
 		padding: 0.2rem;
 	}
 	.word-panel li.focus {
-		background: color-mix(in srgb, var(--brand) 10%, transparent);
-		border: 1px solid color-mix(in srgb, var(--brand) 28%, transparent);
+		background: color-mix(in srgb, var(--accent, var(--brand)) 12%, transparent);
+		border: 2px solid color-mix(in srgb, var(--accent, var(--brand)) 40%, transparent);
 	}
 	.word {
 		flex: 1;

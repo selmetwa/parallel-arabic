@@ -57,7 +57,7 @@
 
 		<header class="hero">
 			<h1>Structured lessons</h1>
-			<p>Designed by professionals.</p>
+			<p>A step-by-step path from A1 in your dialect. Start with the alphabet, then pick a dialect.</p>
 		</header>
 
 		<!-- Step 1: the alphabet -->
