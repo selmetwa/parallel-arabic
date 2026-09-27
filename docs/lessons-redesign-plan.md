@@ -52,13 +52,7 @@ Keep the layout maths (`STEP_HEIGHT`, `lessonPositions`, `segments`, `goal`), th
 - The three empty states use `/speak`'s `.msg-emoji`/`.msg-title`/`.msg-body` inside a dashed `--tile5` card.
 
 ### 5. Single custom lesson (`src/routes/lessons/[id]/+page.svelte`)
-Content and components stay (`InlineAudioButton`, `InteractiveExercise`, `ReviewCarousel`, `PronunciationTestModal`, `LessonPlayer`). Restyle the page shell and section chrome:
-- Header: `.back`, dialect and level pills, `.hero-title` (English), the Arabic title under it with its audio button, description in `.hero-sub`, and the primary "Start lesson" as `PressButton` in the dialect accent.
-- Each section (Objectives, Sub-lessons, Grammar Focus, Cultural Notes, Pronunciation Tips, Common Mistakes, Summary, Key Takeaways, Quiz) gets a numbered `.step-head` with a small `.step-tag`, and its body in a `--tile3` card with a 2px `--tile5` border and a 1.1rem radius. Replace the per-section Tailwind colour boxes with the section accent from the same palette.
-- Phrase rows and examples become simple tile rows. Incorrect and correct examples use `--red1`/`--green1` tokens instead of `red-*`/`green-*` classes.
-- The "Lesson Not Found" and error states use `.msg-*`.
-- Closing CTA ("Ready to create your own lesson?") becomes a `.band` card like the feature pages, with a `PressButton` to `/lessons/custom`.
-- Only the page's own markup is in scope. `InteractiveExercise`, `ReviewCarousel` and the lesson players keep their current styling; note any glaring mismatch for a follow-up.
+**Changed during implementation.** All 39 stored custom lessons turned out to be step-based and open straight in `LessonPlayer`, and `/api/create-lesson` only generates that format, so the page's sub-lesson layout never rendered. Instead of restyling it, it was deleted (agreed with the user), along with the components only it used: `InteractiveExercise`, `ReviewCarousel` and `PronunciationTestModal`. The page renders the player once mounted, "Loading lesson…" before that, and a `/speak`-style message when the lesson is missing.
 
 ## Order
 1. Hub (+ load cleanup) → 2. `/lessons/structured` copy → 3. Custom list (+ modal trigger) → 4. Path → 5. `[id]` page. Commit after each page so each can be reviewed or reverted on its own.
