@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { fade, fly } from 'svelte/transition';
 	import { resolve } from '$app/paths';
+	import { dialectAccent } from '$lib/constants/dialect-accents';
 	import PaywallModal from '$lib/components/PaywallModal.svelte';
 	import AuthModal from '$lib/components/AuthModal.svelte';
     import LessonPlayer from '$lib/components/LessonPlayer.svelte';
@@ -38,14 +39,7 @@
 	const dialectName = dialectNames[data.dialect] || data.dialect;
 	const dialectGlyph = dialectGlyphs[data.dialect] || 'العربية';
 
-	// Same accent pairs as the dialect cards on /lessons/structured.
-	const dialectAccents: Record<string, { accent: string; deep: string }> = {
-		'egyptian-arabic': { accent: '#f59e0b', deep: '#b45309' },
-		darija: { accent: '#f43f5e', deep: '#9f1239' },
-		fusha: { accent: '#8b5cf6', deep: '#6d28d9' },
-		levantine: { accent: '#10b981', deep: '#047857' }
-	};
-	const { accent, deep } = $derived(dialectAccents[data.dialect] ?? { accent: '#0ea5e9', deep: '#0369a1' });
+	const { accent, deep } = $derived(dialectAccent(data.dialect));
 
 	const STEP_HEIGHT = 140;
 	const AMPLITUDE = 100;

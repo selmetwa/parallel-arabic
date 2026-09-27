@@ -11,6 +11,7 @@
 	import { userXp, userLevel } from '$lib/store/xp-store';
 	import { showXpToast } from '$lib/helpers/toast-helpers';
 	import { LEVEL_TIERS } from '$lib/helpers/xp-levels';
+	import { dialectAccent } from '$lib/constants/dialect-accents';
 
 	interface Props {
 		lesson: GeneratedLessonV2;
@@ -23,6 +24,8 @@
 	let { lesson, onClose, onLessonComplete, user, initialStep }: Props = $props();
 
 	let dialect = $derived(lesson.dialect as Dialect);
+	// The dialect's accent, as on its learning path. Step components inherit it.
+	let accent = $derived(dialectAccent(lesson.dialect));
 
 	// Seed the step index from the prop once; subsequent navigation is local.
 	let currentStepIndex = $state(untrack(() => initialStep ?? 0));
@@ -139,13 +142,12 @@
 	const noop = () => {};
 </script>
 
-<div class="overlay" role="dialog" aria-modal="true">
-	<!-- Atmosphere: soft brand glow + a giant faint calligraphic glyph -->
-	<div class="atmos" aria-hidden="true">
-		<div class="glow"></div>
-		<div class="watermark">ع</div>
-	</div>
-
+<div
+	class="overlay"
+	role="dialog"
+	aria-modal="true"
+	style="--accent:{accent.accent}; --deep:{accent.deep};"
+>
 	<header class="bar">
 		<button class="icon-btn" onclick={() => { saveProgress(); onClose(); }} aria-label="Close lesson">
 			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18" /></svg>
@@ -262,7 +264,7 @@
 							<button class="primary" onclick={goNext}>Continue</button>
 						</section>
 					{:else if currentStep.type === 'reading'}
-						<section class="card pad reading-card">
+						<section class="card pad">
 							<div class="eyebrow">Reading</div>
 							<h2 class="head">{currentStep.title}</h2>
 							<div class="reading">
@@ -300,7 +302,12 @@
 </div>
 
 {#if activeWord}
-	<div class="word-modal" role="dialog" aria-modal="true">
+	<div
+		class="word-modal"
+		role="dialog"
+		aria-modal="true"
+		style="--accent:{accent.accent}; --deep:{accent.deep};"
+	>
 		<button class="word-scrim" onclick={() => (activeWord = null)} aria-label="Close definition"></button>
 		<div class="word-box">
 			<button class="icon-btn close-x" onclick={() => (activeWord = null)} aria-label="Close">
@@ -318,53 +325,26 @@
 	</div>
 {/if}
 
+
 <style>
+	/* Same system as /speak and the lessons pages: tile cards with a solid
+	   bottom edge, the dialect's --accent/--deep pair for identity, and a green
+	   --go pair for the main action. Step components inherit these variables. */
 	.overlay {
+		--go: #22c55e;
+		--go-deep: #15803d;
 		position: fixed;
 		inset: 0;
 		z-index: 60;
-		background: var(--tile1);
-		color: var(--text1);
 		display: flex;
 		flex-direction: column;
-		font-family: 'ReadexPro', system-ui, sans-serif;
-	}
-
-	/* Atmosphere */
-	.atmos {
-		position: absolute;
-		inset: 0;
-		overflow: hidden;
-		pointer-events: none;
-		z-index: 0;
-	}
-	.glow {
-		position: absolute;
-		top: -30%;
-		left: 50%;
-		width: 60rem;
-		height: 60rem;
-		transform: translateX(-50%);
-		background: radial-gradient(circle, var(--brand) 0%, transparent 65%);
-		opacity: 0.12;
-		filter: blur(20px);
-	}
-	.watermark {
-		position: absolute;
-		right: -3rem;
-		bottom: -8rem;
-		font-family: 'Rakkas', serif;
-		font-size: 34rem;
-		line-height: 1;
+		background: var(--tile2);
 		color: var(--text1);
-		opacity: 0.03;
-		user-select: none;
+		font-family: 'ReadexPro', system-ui, sans-serif;
 	}
 
 	/* Header */
 	.bar {
-		position: relative;
-		z-index: 2;
 		display: flex;
 		align-items: center;
 		gap: 1rem;
@@ -373,20 +353,23 @@
 	.icon-btn {
 		display: grid;
 		place-items: center;
-		width: 2.1rem;
-		height: 2.1rem;
+		flex-shrink: 0;
+		width: 2.25rem;
+		height: 2.25rem;
 		border-radius: 50%;
-		border: 1px solid var(--tile4);
-		background: var(--tile2);
+		border: 2px solid var(--tile5);
+		background: var(--tile3);
 		color: var(--text2);
 		cursor: pointer;
-		transition: all 0.18s ease;
-		flex-shrink: 0;
+		transition:
+			color 0.18s ease,
+			border-color 0.18s ease,
+			transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1);
 	}
 	.icon-btn:hover {
 		color: var(--text1);
 		border-color: var(--tile6);
-		transform: scale(1.05);
+		transform: translateY(-2px);
 	}
 	.icon-btn svg {
 		width: 1.05rem;
@@ -394,38 +377,34 @@
 	}
 	.track {
 		flex: 1;
-		height: 10px;
-		background: var(--tile3);
-		border-radius: 100px;
+		height: 0.75rem;
 		overflow: hidden;
-		box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12);
+		border-radius: 100px;
+		background: var(--tile4);
 	}
 	.fill {
 		height: 100%;
 		border-radius: 100px;
-		background: linear-gradient(90deg, color-mix(in srgb, var(--brand) 70%, white), var(--brand));
-		box-shadow: 0 0 12px -2px var(--brand);
+		background: var(--accent);
 		transition: width 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 	}
 	.count {
 		font-variant-numeric: tabular-nums;
-		font-weight: 700;
 		font-size: 0.95rem;
+		font-weight: 600;
 		color: var(--text1);
 	}
 	.count span {
-		color: var(--text3);
 		font-weight: 500;
+		color: var(--text2);
 	}
 
 	/* Toolbar */
 	.toolbar {
-		position: relative;
-		z-index: 2;
 		display: flex;
 		align-items: center;
 		gap: 0.6rem;
-		padding: 0 1.1rem 0.7rem;
+		padding: 0 1.1rem 0.75rem;
 	}
 	.crumbs {
 		display: flex;
@@ -434,75 +413,76 @@
 		min-width: 0;
 	}
 	.level {
-		font-size: 0.68rem;
-		font-weight: 800;
-		letter-spacing: 0.08em;
-		color: var(--brand);
-		border: 1px solid color-mix(in srgb, var(--brand) 35%, transparent);
-		background: color-mix(in srgb, var(--brand) 10%, transparent);
+		font-size: 0.72rem;
+		font-weight: 600;
+		color: var(--text1);
+		background: color-mix(in srgb, var(--accent) 16%, var(--tile3));
 		border-radius: 100px;
-		padding: 0.12rem 0.55rem;
+		padding: 0.18rem 0.6rem;
 	}
 	.step-label {
 		font-size: 0.8rem;
-		font-weight: 700;
-		color: var(--text3);
+		font-weight: 600;
+		color: var(--text2);
 	}
 	.title {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 		font-size: 0.85rem;
 		font-weight: 600;
 		color: var(--text2);
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
 	}
 	.spacer {
 		flex: 1;
 	}
+	/* Segmented control, as on /speak */
 	.toggle-group {
 		display: inline-flex;
-		border: 1px solid var(--tile4);
+		gap: 0.2rem;
+		padding: 0.2rem;
 		border-radius: 100px;
-		overflow: hidden;
+		border: 2px solid var(--tile5);
+		background: var(--tile3);
 	}
 	.tog {
+		padding: 0.2rem 0.65rem;
+		border-radius: 100px;
 		font-size: 0.72rem;
-		font-weight: 700;
-		padding: 0.22rem 0.62rem;
-		border: none;
-		background: var(--tile2);
+		font-weight: 600;
 		color: var(--text2);
 		cursor: pointer;
-		transition: all 0.15s ease;
-	}
-	.tog + .tog {
-		border-left: 1px solid var(--tile4);
+		transition:
+			background 0.15s ease,
+			color 0.15s ease;
 	}
 	.tog.on {
-		background: var(--brand);
+		background: var(--accent);
 		color: #fff;
 	}
+	/* Chip, as on /speak */
 	.ghost {
-		font-size: 0.74rem;
-		font-weight: 700;
-		padding: 0.24rem 0.7rem;
+		padding: 0.3rem 0.8rem;
 		border-radius: 100px;
-		border: 1px solid var(--tile4);
-		background: transparent;
+		border: 2px solid var(--tile5);
+		background: var(--tile3);
+		font-size: 0.78rem;
+		font-weight: 600;
 		color: var(--text2);
 		cursor: pointer;
-		transition: all 0.15s ease;
+		transition:
+			color 0.15s ease,
+			border-color 0.15s ease,
+			transform 0.16s cubic-bezier(0.34, 1.56, 0.64, 1);
 	}
 	.ghost:hover {
-		color: var(--text1);
+		transform: translateY(-2px);
 		border-color: var(--tile6);
-		background: var(--tile2);
+		color: var(--text1);
 	}
 
 	/* Body + step entrance */
 	.body {
-		position: relative;
-		z-index: 1;
 		flex: 1;
 		overflow-y: auto;
 		padding: 1.25rem 1.1rem 5rem;
@@ -523,15 +503,15 @@
 
 	/* Card */
 	.card {
-		max-width: 760px;
-		margin: 0 auto;
 		display: flex;
 		flex-direction: column;
 		gap: 1.1rem;
-		background: var(--tile2);
-		border: 1px solid var(--tile4);
-		border-radius: 1.5rem;
-		box-shadow: 0 20px 50px -24px rgba(0, 0, 0, 0.35);
+		max-width: 760px;
+		margin: 0 auto;
+		border-radius: 1.25rem;
+		border: 2px solid var(--tile5);
+		background: var(--tile3);
+		box-shadow: 0 5px 0 var(--tile5);
 	}
 	.card.pad {
 		padding: 1.75rem;
@@ -540,84 +520,91 @@
 		max-width: 1080px;
 	}
 	.eyebrow {
-		font-size: 0.8rem;
-		font-weight: 800;
-		color: var(--brand);
+		align-self: flex-start;
+		font-size: 0.75rem;
+		font-weight: 600;
+		color: var(--text1);
+		background: color-mix(in srgb, var(--accent) 16%, var(--tile3));
+		border-radius: 100px;
+		padding: 0.22rem 0.65rem;
 	}
 	.head {
+		margin-top: -0.3rem;
 		font-size: 1.4rem;
-		font-weight: 700;
+		font-weight: 600;
+		line-height: 1.2;
 		letter-spacing: -0.02em;
 		color: var(--text1);
-		line-height: 1.2;
-		margin-top: -0.4rem;
 	}
 	.text {
-		color: var(--text2);
 		line-height: 1.7;
 		white-space: pre-line;
+		color: var(--text2);
 	}
 
 	/* Content examples */
 	.examples {
-		list-style: none;
 		display: flex;
 		flex-direction: column;
 		gap: 0.7rem;
+		list-style: none;
 	}
 	.examples li {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		gap: 0.75rem;
-		background: var(--tile1);
-		border: 1px solid var(--tile3);
-		border-radius: 1rem;
 		padding: 0.9rem 1.1rem;
+		border-radius: 1rem;
+		border: 2px solid var(--tile4);
+		background: var(--tile2);
 		transition: border-color 0.18s ease;
 	}
 	.examples li:hover {
-		border-color: var(--tile5);
+		border-color: var(--accent);
 	}
 	.ex-ar {
 		font-size: 1.55rem;
-		color: var(--text1);
 		line-height: 1.3;
+		color: var(--text1);
 	}
 	.ex-tr {
-		color: var(--text2);
 		font-size: 0.9rem;
+		color: var(--text2);
 	}
 	.ex-en {
-		color: var(--text3);
 		font-size: 0.88rem;
+		color: var(--text2);
 	}
 
-	/* Vocab flashcards */
+	/* Vocab cards */
 	.vocab-grid {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 0.85rem;
 	}
 	.vocab {
-		background: var(--tile1);
-		border: 1px solid var(--tile3);
-		border-radius: 1.1rem;
 		padding: 1.1rem;
+		border-radius: 1.1rem;
+		border: 2px solid var(--tile4);
+		background: var(--tile2);
+		box-shadow: 0 4px 0 var(--tile4);
 		transition:
 			transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
-			border-color 0.2s ease;
-		animation: cardIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+			border-color 0.2s ease,
+			box-shadow 0.2s ease;
+		animation: cardIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 		animation-delay: calc(var(--i, 0) * 60ms + 80ms);
 	}
 	.vocab:hover {
 		transform: translateY(-3px);
-		border-color: color-mix(in srgb, var(--brand) 45%, var(--tile4));
+		border-color: var(--accent);
+		box-shadow: 0 6px 0 var(--deep);
 	}
 	@keyframes cardIn {
 		from {
 			opacity: 0;
-			transform: translateY(12px) scale(0.98);
+			transform: translateY(12px) scale(0.97);
 		}
 		to {
 			opacity: 1;
@@ -634,69 +621,69 @@
 	.v-ar {
 		font-size: 1.75rem;
 		font-weight: 600;
-		color: var(--text1);
 		line-height: 1.25;
+		color: var(--text1);
 	}
 	.v-tr {
-		color: var(--brand);
 		font-size: 0.95rem;
 		font-weight: 600;
+		color: var(--text1);
 	}
 	.v-en {
-		color: var(--text2);
-		font-size: 0.85rem;
 		margin-top: 0.15rem;
+		font-size: 0.85rem;
+		color: var(--text2);
 	}
 
 	/* Reading */
-	.reading-card {
-		border-left: 3px solid var(--brand);
-	}
 	.reading {
 		display: flex;
 		flex-direction: column;
 		gap: 1.1rem;
-		background: var(--tile1);
-		border: 1px solid var(--tile3);
-		border-radius: 1rem;
 		padding: 1.25rem;
+		border-radius: 1rem;
+		border: 2px solid var(--tile4);
+		background: var(--tile2);
 	}
 
-	/* Primary button */
+	/* Main action: the green press button from /speak */
 	.primary {
 		align-self: stretch;
-		background: var(--brand);
-		color: #fff;
-		border: none;
-		border-radius: 1rem;
 		padding: 0.95rem 1.2rem;
-		font-weight: 700;
+		border-radius: 1rem;
 		font-size: 1rem;
+		font-weight: 600;
+		color: #fff;
+		background: var(--go);
+		box-shadow: 0 4px 0 var(--go-deep);
 		cursor: pointer;
-		box-shadow: 0 10px 24px -10px var(--brand);
 		transition:
-			transform 0.16s ease,
-			box-shadow 0.16s ease,
-			filter 0.16s ease;
+			transform 0.14s ease,
+			box-shadow 0.14s ease,
+			filter 0.2s ease;
 	}
 	.primary:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 16px 30px -12px var(--brand);
 		filter: brightness(1.06);
 	}
 	.primary:active {
-		transform: translateY(0);
+		transform: translateY(4px);
+		box-shadow: 0 0 0 var(--go-deep);
+	}
+
+	button:focus-visible {
+		outline: 2px solid var(--text1);
+		outline-offset: 3px;
 	}
 
 	/* Congratulations */
 	.done {
-		max-width: 460px;
-		margin: 3.5rem auto;
-		text-align: center;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		gap: 0.85rem;
+		max-width: 460px;
+		margin: 3.5rem auto;
+		text-align: center;
 		animation: stepIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
 	}
 	.burst {
@@ -705,33 +692,33 @@
 	}
 	@keyframes pop {
 		from {
-			transform: scale(0.3);
 			opacity: 0;
+			transform: scale(0.3);
 		}
 		to {
-			transform: scale(1);
 			opacity: 1;
+			transform: scale(1);
 		}
 	}
 	.ar-flourish {
-		font-family: 'Rakkas', serif;
-		font-size: 3.2rem;
-		line-height: 1;
-		color: var(--brand);
+		font-size: 2.6rem;
+		font-weight: 600;
+		line-height: 1.1;
+		color: var(--accent);
 	}
 	.done h2 {
 		font-size: 1.7rem;
-		font-weight: 700;
-		letter-spacing: -0.02em;
+		font-weight: 600;
+		letter-spacing: -0.025em;
 		color: var(--text1);
 	}
 	.done p {
-		color: var(--text2);
 		line-height: 1.6;
+		color: var(--text2);
 	}
 	.done .primary {
-		margin-top: 0.6rem;
 		align-self: center;
+		margin-top: 0.6rem;
 		padding-inline: 2rem;
 	}
 
@@ -747,21 +734,19 @@
 	.word-scrim {
 		position: absolute;
 		inset: 0;
-		border: none;
-		background: rgba(0, 0, 0, 0.45);
-		backdrop-filter: blur(2px);
+		background: rgb(0 0 0 / 0.45);
 		cursor: pointer;
 	}
 	.word-box {
 		position: relative;
 		z-index: 1;
-		background: var(--tile2);
-		border: 1px solid var(--tile4);
-		border-radius: 1.25rem;
-		padding: 1.75rem;
-		max-width: 420px;
 		width: 100%;
-		box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.5);
+		max-width: 420px;
+		padding: 1.75rem;
+		border-radius: 1.25rem;
+		border: 2px solid var(--tile5);
+		background: var(--tile3);
+		box-shadow: 0 6px 0 var(--tile5);
 		animation: cardIn 0.3s ease both;
 	}
 	.close-x {
@@ -775,23 +760,23 @@
 		color: var(--text1);
 	}
 	.word-tr {
-		color: var(--brand);
-		font-weight: 600;
 		margin-top: 0.2rem;
+		font-weight: 600;
+		color: var(--text2);
 	}
 	.word-en {
-		color: var(--text1);
-		font-weight: 600;
 		margin-top: 0.3rem;
+		font-weight: 600;
+		color: var(--text1);
 	}
 	.word-desc {
-		color: var(--text2);
 		margin-top: 0.7rem;
 		line-height: 1.6;
 		white-space: pre-line;
+		color: var(--text2);
 	}
 	.muted {
-		color: var(--text3);
+		color: var(--text2);
 	}
 
 	@media (max-width: 560px) {
@@ -816,8 +801,14 @@
 		.fill,
 		.primary,
 		.icon-btn,
+		.ghost,
 		.vocab {
 			transition: none;
+		}
+		.icon-btn:hover,
+		.ghost:hover,
+		.vocab:hover {
+			transform: none;
 		}
 	}
 </style>

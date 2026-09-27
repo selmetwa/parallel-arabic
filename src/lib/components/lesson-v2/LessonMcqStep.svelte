@@ -87,46 +87,50 @@
 </div>
 
 <style>
+	/* --accent/--deep and --go/--go-deep come from LessonPlayerV2. */
 	.mcq {
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
 	}
 	.eyebrow {
-		font-size: 0.8rem;
-		font-weight: 800;
-		color: var(--brand);
+		align-self: flex-start;
+		font-size: 0.75rem;
+		font-weight: 600;
+		color: var(--text1);
+		background: color-mix(in srgb, var(--accent, var(--brand)) 16%, var(--tile3));
+		border-radius: 100px;
+		padding: 0.22rem 0.65rem;
 	}
 	.ask {
-		color: var(--text1);
 		font-weight: 600;
+		text-align: center;
+		color: var(--text1);
 	}
 	.ask.big {
-		font-size: 1.3rem;
-		letter-spacing: -0.01em;
-		line-height: 1.3;
 		margin-top: -0.3rem;
+		font-size: 1.3rem;
+		line-height: 1.3;
+		letter-spacing: -0.01em;
 	}
 	.prompt-ar {
 		font-size: 2.1rem;
 		font-weight: 600;
-		color: var(--text1);
-		text-align: center;
 		line-height: 1.35;
+		text-align: center;
+		color: var(--text1);
 	}
 	.prompt-tr {
-		text-align: center;
-		color: var(--brand);
 		font-weight: 600;
+		text-align: center;
+		color: var(--text2);
 	}
 	.prompt-audio {
 		display: flex;
 		justify-content: center;
 	}
-	.ask {
-		text-align: center;
-	}
 
+	/* Options: pick cards, as on /speak */
 	.options {
 		display: flex;
 		flex-direction: column;
@@ -137,16 +141,18 @@
 		display: flex;
 		align-items: center;
 		gap: 0.9rem;
-		text-align: left;
-		background: var(--tile1);
-		border: 1.5px solid var(--tile4);
-		border-radius: 1rem;
 		padding: 0.9rem 1rem;
+		text-align: left;
+		border-radius: 1.1rem;
+		border: 2px solid var(--tile5);
+		background: var(--tile2);
+		box-shadow: 0 3px 0 var(--tile5);
 		cursor: pointer;
 		transition:
 			transform 0.16s cubic-bezier(0.34, 1.56, 0.64, 1),
 			border-color 0.16s ease,
 			background 0.16s ease,
+			box-shadow 0.16s ease,
 			opacity 0.2s ease;
 		animation: optIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
 		animation-delay: calc(var(--i, 0) * 55ms + 60ms);
@@ -154,7 +160,7 @@
 	@keyframes optIn {
 		from {
 			opacity: 0;
-			transform: translateX(-10px);
+			transform: translateY(8px);
 		}
 		to {
 			opacity: 1;
@@ -163,23 +169,35 @@
 	}
 	.opt:not(:disabled):hover {
 		transform: translateY(-2px);
-		border-color: color-mix(in srgb, var(--brand) 55%, var(--tile4));
+		border-color: var(--accent, var(--brand));
+		box-shadow: 0 5px 0 var(--deep, var(--tile6));
+	}
+	.opt:not(:disabled):active {
+		transform: translateY(2px);
+		box-shadow: 0 1px 0 var(--deep, var(--tile6));
 	}
 	.opt:disabled {
 		cursor: default;
 	}
+	.opt:focus-visible,
+	.primary:focus-visible {
+		outline: 2px solid var(--text1);
+		outline-offset: 3px;
+	}
 	.badge {
-		flex-shrink: 0;
 		display: grid;
 		place-items: center;
+		flex-shrink: 0;
 		width: 2rem;
 		height: 2rem;
 		border-radius: 50%;
-		background: var(--tile3);
-		color: var(--text2);
-		font-weight: 800;
 		font-size: 0.85rem;
-		transition: all 0.16s ease;
+		font-weight: 600;
+		color: var(--text2);
+		background: var(--tile4);
+		transition:
+			background 0.16s ease,
+			color 0.16s ease;
 	}
 	.opt-body {
 		display: flex;
@@ -189,24 +207,26 @@
 	}
 	.opt-text {
 		font-size: 1.25rem;
-		color: var(--text1);
 		line-height: 1.3;
+		color: var(--text1);
 	}
 	.opt-sub {
 		font-size: 0.85rem;
-		color: var(--text3);
+		color: var(--text2);
 	}
 	.opt.selected {
-		border-color: var(--brand);
-		background: color-mix(in srgb, var(--brand) 8%, var(--tile1));
+		border-color: var(--accent, var(--brand));
+		background: color-mix(in srgb, var(--accent, var(--brand)) 12%, var(--tile2));
+		box-shadow: 0 3px 0 var(--deep, var(--tile6));
 	}
 	.opt.selected .badge {
-		background: var(--brand);
+		background: var(--accent, var(--brand));
 		color: #fff;
 	}
 	.opt.correct {
 		border-color: #2e9e5b;
-		background: color-mix(in srgb, #2e9e5b 14%, var(--tile1));
+		background: color-mix(in srgb, #2e9e5b 14%, var(--tile2));
+		box-shadow: 0 3px 0 #1f7a44;
 	}
 	.opt.correct .badge {
 		background: #2e9e5b;
@@ -214,7 +234,8 @@
 	}
 	.opt.wrong {
 		border-color: #d65745;
-		background: color-mix(in srgb, #d65745 14%, var(--tile1));
+		background: color-mix(in srgb, #d65745 14%, var(--tile2));
+		box-shadow: 0 3px 0 #a8402f;
 	}
 	.opt.wrong .badge {
 		background: #d65745;
@@ -224,7 +245,7 @@
 		opacity: 0.5;
 	}
 	.feedback {
-		font-weight: 700;
+		font-weight: 600;
 		text-align: center;
 	}
 	.feedback.good {
@@ -233,35 +254,43 @@
 	.feedback.bad {
 		color: #d65745;
 	}
+
+	/* Main action: the green press button */
 	.primary {
 		align-self: stretch;
-		background: var(--brand);
-		color: #fff;
-		border: none;
-		border-radius: 1rem;
 		padding: 0.95rem 1.2rem;
-		font-weight: 700;
+		border-radius: 1rem;
 		font-size: 1rem;
+		font-weight: 600;
+		color: #fff;
+		background: var(--go, #22c55e);
+		box-shadow: 0 4px 0 var(--go-deep, #15803d);
 		cursor: pointer;
-		box-shadow: 0 10px 24px -10px var(--brand);
 		transition:
-			transform 0.16s ease,
-			box-shadow 0.16s ease,
-			filter 0.16s ease;
+			transform 0.14s ease,
+			box-shadow 0.14s ease,
+			filter 0.2s ease;
 	}
 	.primary:not(:disabled):hover {
-		transform: translateY(-2px);
-		box-shadow: 0 16px 30px -12px var(--brand);
 		filter: brightness(1.06);
+	}
+	.primary:not(:disabled):active {
+		transform: translateY(4px);
+		box-shadow: 0 0 0 var(--go-deep, #15803d);
 	}
 	.primary:disabled {
 		opacity: 0.45;
-		cursor: default;
+		cursor: not-allowed;
 	}
+
 	@media (prefers-reduced-motion: reduce) {
 		.opt {
 			animation: none;
 			transition: none;
+		}
+		.opt:not(:disabled):hover,
+		.opt:not(:disabled):active {
+			transform: none;
 		}
 	}
 </style>
