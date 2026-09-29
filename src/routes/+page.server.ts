@@ -7,7 +7,7 @@ import type { LeaderboardEntry } from './api/leaderboard/weekly/+server';
 import { getStoriesPaginated } from "$lib/helpers/story-helpers";
 import { BLOCKED_STORY_IDS } from "$lib/constants/stories/blocked";
 import { curriculum } from "$lib/data/curriculum";
-import { STRIPE_MONTHLY_PRICE_ID, STRIPE_ANNUAL_PRICE_ID } from "$env/static/private";
+import { env } from "$env/dynamic/private";
 import { isPlanId } from "$lib/constants/pricing";
 
 function proficiencyToDifficulty(level: string | null | undefined): string | null {
@@ -423,7 +423,12 @@ export const actions = {
     if (plan !== null && !isPlanId(plan)) {
       return fail(400, { error: 'Unknown plan' });
     }
-    const priceId = plan === 'annual' ? STRIPE_ANNUAL_PRICE_ID : STRIPE_MONTHLY_PRICE_ID;
+    // Read at runtime so a missing var fails this request, not the build.
+    const priceId = plan === 'annual' ? env.STRIPE_ANNUAL_PRICE_ID : env.STRIPE_MONTHLY_PRICE_ID;
+    if (!priceId) {
+      console.error('❌ Missing Stripe price env var for plan:', plan ?? 'monthly');
+      return fail(500, { error: 'This plan is not available right now' });
+    }
     
     // A card is collected either way. The trial only decides whether the first
     // charge happens today or in 7 days, and it is offered once per account.
