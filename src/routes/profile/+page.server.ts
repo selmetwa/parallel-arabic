@@ -51,6 +51,9 @@ export const load = async ({ locals, parent }) => {
     cancelAtPeriodEnd: boolean;
     currentPeriodEnd: number | null;
     status: string | null;
+    /** Stripe only: 'month' | 'year' and the price in dollars */
+    interval?: string | null;
+    amount?: number | null;
   } = {
     cancelAtPeriodEnd: false,
     currentPeriodEnd: null,
@@ -61,10 +64,13 @@ export const load = async ({ locals, parent }) => {
     try {
       const subscription = await StripeService.getSubscription(userData.subscriber_id);
       if (subscription) {
+        const price = subscription.items?.data[0]?.price;
         subscriptionDetails = {
           cancelAtPeriodEnd: subscription.cancel_at_period_end,
           currentPeriodEnd: subscription.current_period_end,
-          status: subscription.status
+          status: subscription.status,
+          interval: price?.recurring?.interval ?? null,
+          amount: price?.unit_amount != null ? price.unit_amount / 100 : null
         };
       }
     } catch (error) {

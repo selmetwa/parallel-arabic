@@ -6,6 +6,7 @@
   import { onMount } from 'svelte';
   import { page } from '$app/state';
   import { isNativeApp } from '$lib/helpers/is-native-app';
+  import { PLANS } from '$lib/constants/pricing';
 
   type Props = {
     isOpen: boolean;
@@ -14,7 +15,7 @@
 
   let { isOpen = false, handleCloseModal = () => {} }: Props = $props();
 
-  // Web-only trial copy — see SubscribeButton for why this waits for mount.
+  // Web-only trial and annual-plan copy — see SubscribeButton for why this waits for mount.
   let isNative = $state<boolean | null>(null);
   onMount(() => {
     isNative = isNativeApp();
@@ -35,6 +36,9 @@
           <h2 class="text-2xl font-bold text-text-300 mb-2">Unlock Full Access</h2>
           <p class="text-text-200">Upgrade to master Arabic dialects</p>
           <h3 class="text-3xl font-bold text-text-300 mt-3">$10<span class="text-lg font-normal text-text-300">/month</span></h3>
+        {/if}
+        {#if isNative === false}
+          <p class="mt-1 text-sm text-text-300">or {PLANS.annual.price} — {PLANS.annual.savings.toLowerCase()}</p>
         {/if}
     </div>
 

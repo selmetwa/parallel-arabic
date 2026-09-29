@@ -518,7 +518,7 @@
 						>
 							<div class="trial-emoji" aria-hidden="true">🎁</div>
 							<h2 class="screen-title">Unlock everything free for 7 days</h2>
-							<p class="screen-sub mb-6">$0 today, then $10/month. Cancel anytime.</p>
+							<p class="screen-sub mb-6">$0 today, then $10/month or $96/year. Cancel anytime.</p>
 
 							<ul class="trial-list">
 								{#each trialBenefits as benefit (benefit)}

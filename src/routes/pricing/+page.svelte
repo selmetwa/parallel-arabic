@@ -4,8 +4,9 @@
   import { onMount } from 'svelte';
   import { page } from '$app/state';
   import { isNativeApp } from '$lib/helpers/is-native-app';
+  import { PLANS } from '$lib/constants/pricing';
 
-  // Web-only trial copy. The Apple disclosure block below is unchanged.
+  // Web-only trial and annual-plan copy. The Apple disclosure block below is unchanged.
   let isNative = $state<boolean | null>(null);
   onMount(() => {
     isNative = isNativeApp();
@@ -83,8 +84,11 @@
                         POPULAR
                     </div>
                     <div class="bg-tile-500 border-b border-tile-600 p-8 text-center">
-                        <h2 class="text-2xl font-bold text-text-300 mb-2">Monthly Subscription</h2>
+                        <h2 class="text-2xl font-bold text-text-300 mb-2">{isNative === false ? 'Premium' : 'Monthly Subscription'}</h2>
                         <h3 class="text-4xl font-bold text-text-300">$10<span class="text-lg font-normal text-text-300">/month</span></h3>
+                        {#if isNative === false}
+                            <p class="mt-2 text-sm text-text-300">or {PLANS.annual.price} — {PLANS.annual.savings.toLowerCase()}</p>
+                        {/if}
                         {#if showTrial}
                             <p class="mt-3 text-sm font-semibold text-text-300">Start with 7 days free — $0 today, cancel anytime.</p>
                         {/if}

@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { PUBLIC_PRICE_ID } from '$env/static/public';
   import Button from '$lib/components/Button.svelte';
   import { onMount } from 'svelte';
   import { invalidateAll } from '$app/navigation';
   import { page } from '$app/state';
   import { RevenueCatService } from '$lib/services/revenuecat.service';
+  import { PLANS, type PlanId } from '$lib/constants/pricing';
 
   type Props = {
     label?: string;
@@ -20,6 +20,9 @@
   // be an external purchase. isNative stays null until mount, so the WebView
   // never flashes trial wording.
   const showTrial = $derived(isNative === false && page.data.trialEligible === true);
+
+  // Web-only choice; the native branch below never renders it.
+  let plan = $state<PlanId>('annual');
 
   let isPurchasing = $state(false);
   let purchaseError = $state<string | null>(null);
@@ -124,12 +127,26 @@
   </Button>
 {:else}
   <form method="POST" action="/?/subscribe">
-    <input type="hidden" name="price_id" value={PUBLIC_PRICE_ID} />
+    <div role="radiogroup" aria-label="Billing period" class="mb-3 grid grid-cols-2 gap-1 rounded-lg border border-tile-600 bg-tile-300 p-1">
+      {#each ['monthly', 'annual'] as const as id (id)}
+        <label
+          class="flex cursor-pointer flex-col items-center rounded-md px-2 py-1.5 text-sm transition-colors has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-tile-600 {plan === id
+            ? 'bg-tile-500 text-text-300 font-semibold shadow-sm'
+            : 'text-text-200 hover:text-text-300'}"
+        >
+          <input type="radio" name="plan" value={id} bind:group={plan} class="sr-only" />
+          <span>{PLANS[id].label}</span>
+          <span class="text-xs font-normal">
+            {id === 'annual' ? `${PLANS.annual.perMonth} · ${PLANS.annual.savings}` : PLANS.monthly.price}
+          </span>
+        </label>
+      {/each}
+    </div>
     <Button type="submit" className={className}>
       {showTrial ? 'Start 7-day free trial' : label}
     </Button>
-    {#if showTrial}
-      <p class="mt-2 text-xs text-text-200 text-center">$0 today, then $10/month. Cancel anytime.</p>
-    {/if}
+    <p class="mt-2 text-xs text-text-200 text-center">
+      {showTrial ? `$0 today, then ${PLANS[plan].price}.` : `${PLANS[plan].price}.`} Cancel anytime.
+    </p>
   </form>
 {/if}
