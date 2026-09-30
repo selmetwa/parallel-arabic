@@ -7,6 +7,8 @@ import type { LeaderboardEntry } from './api/leaderboard/weekly/+server';
 import { getStoriesPaginated } from "$lib/helpers/story-helpers";
 import { BLOCKED_STORY_IDS } from "$lib/constants/stories/blocked";
 import { curriculum } from "$lib/data/curriculum";
+import { env } from "$env/dynamic/private";
+import { isPlanId } from "$lib/constants/pricing";
 
 function proficiencyToDifficulty(level: string | null | undefined): string | null {
   if (!level) return 'a1';
@@ -414,11 +416,18 @@ export const actions = {
       throw redirect(302, '/login');
     }
   
+    // The client picks a plan, never a raw price ID. A legacy `price_id` post
+    // (a page cached from before the annual plan) is treated as monthly.
     const form = await request.formData();
-    const priceId = form.get("price_id") as string;
-    
+    const plan = form.get("plan");
+    if (plan !== null && !isPlanId(plan)) {
+      return fail(400, { error: 'Unknown plan' });
+    }
+    // Read at runtime so a missing var fails this request, not the build.
+    const priceId = plan === 'annual' ? env.STRIPE_ANNUAL_PRICE_ID : env.STRIPE_MONTHLY_PRICE_ID;
     if (!priceId) {
-      return fail(400, { error: 'Price ID is required' });
+      console.error('❌ Missing Stripe price env var for plan:', plan ?? 'monthly');
+      return fail(500, { error: 'This plan is not available right now' });
     }
     
     // A card is collected either way. The trial only decides whether the first
@@ -435,7 +444,7 @@ export const actions = {
 
     const withTrial = !dbUser.has_used_trial && !checkUserSubscription(dbUser);
 
-    console.log('💳 Calling StripeService.subscribe with priceId:', priceId, 'trial:', withTrial);
+    console.log('💳 Calling StripeService.subscribe with plan:', plan ?? 'monthly', 'trial:', withTrial);
     
     let stripeSession;
     try {

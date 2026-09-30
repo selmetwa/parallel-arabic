@@ -44,9 +44,8 @@ Only the copy that `SubscribeButton` and the pricing pieces render comes from th
 
 ### 5. Copy updates (hard-coded "$10/month")
 - `src/routes/pricing/+page.svelte:86-89`: the card header shows both options ("$10/month or $96/year"), or relies on the toggle inside SubscribeButton. Keep the Apple disclosure (148-163) as monthly only. It describes the in-app purchase.
-- `src/lib/components/PaywallModal.svelte:33,37`, `Onboarding.svelte:521`, `src/routes/about/+page.svelte:713-724`: add "or $96/year (save 20%)".
-- `src/lib/constants/features.ts` FAQ (121, 183, 286): mention the annual option and that it's billed on the website only.
-- Only on web: anything shown in the WebView must not advertise the Stripe annual price. The about/FAQ pages load in the app, so wrap the annual mention in the existing `isNative === false` pattern, or keep those pages monthly-only if that's simpler. (I'll check each one during implementation.)
+- `PaywallModal.svelte` and the pricing page add a web-only "or $96/year — save 20%" line. `Onboarding.svelte` changes its trial copy; that step is already web-only.
+- **Decision:** `about/+page.svelte` and the `features.ts` FAQ stay "$10 a month". Both pages load inside the iOS WebView, and the FAQ text is also used in SEO metadata. Advertising a cheaper external price in the app is an App Store review risk, and "$10 a month" is still true.
 
 ### 6. Cleanup
 The PUBLIC_PRICE_ID imports in the stories/review/darija/levantine pages (listed in `docs/free-trial-plan.md:230`) are unused. Leave them alone for now, since `PUBLIC_PRICE_ID` stays defined. Remove `PUBLIC_PRICE_ID` in a follow-up once nothing references it.

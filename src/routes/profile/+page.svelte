@@ -28,6 +28,13 @@
   const isTrialing = $derived(
     data.subscriptionProvider === 'stripe' && data.subscriptionDetails?.status === 'trialing'
   );
+  const planLabel = $derived(
+    data.subscriptionDetails?.interval === 'year'
+      ? 'Annual'
+      : data.subscriptionDetails?.interval === 'month'
+        ? 'Monthly'
+        : null
+  );
 
   // Expandable sections
   let showSettings = $state(false);
@@ -641,14 +648,16 @@
                 <div class="flex items-center gap-3 mb-3">
                   <span class="text-2xl">💳</span>
                   <div>
-                    <p class="text-text-300 font-semibold">{isTrialing ? 'Free Trial' : 'Premium Subscription'}</p>
+                    <p class="text-text-300 font-semibold">
+                      {isTrialing ? 'Free Trial' : 'Premium Subscription'}{planLabel ? ` · ${planLabel}` : ''}
+                    </p>
                     {#if data.subscriptionDetails?.cancelAtPeriodEnd}
                       <p class="text-sm text-text-200">
                         ⚠️ Cancelling — access until {formatDate(data.subscriptionDetails.currentPeriodEnd)}
                       </p>
                     {:else if isTrialing}
                       <p class="text-sm text-text-200">
-                        Free trial — first charge $10 on {formatDate(data.subscriptionDetails?.currentPeriodEnd)}
+                        Free trial — first charge ${data.subscriptionDetails?.amount ?? 10} on {formatDate(data.subscriptionDetails?.currentPeriodEnd)}
                       </p>
                     {:else}
                       <p class="text-sm text-text-200">
