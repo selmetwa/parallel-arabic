@@ -40,7 +40,7 @@ const config = {
 					precompress: false,
 					strict: false // Allow non-prerendered routes
 				})
-			: adapterVercel({ runtime: 'nodejs20.x' }),
+			: adapterVercel({ runtime: 'nodejs24.x' }),
 
 		paths: {
 			relative: false

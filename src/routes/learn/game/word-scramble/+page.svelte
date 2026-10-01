@@ -16,7 +16,7 @@
 		</div>
 	{/snippet}
 
-	{#snippet children({ pool, dialect, gate, signedIn, isSubscribed })}
+	{#snippet children({ pool, dialect, gate, signedIn, isSubscribed, onStart })}
 		<WordScramble
 			{pool}
 			{dialect}
@@ -25,6 +25,7 @@
 			{isSubscribed}
 			accent={game.accent}
 			deep={game.deep}
+			{onStart}
 		/>
 	{/snippet}
 </WordGamePage>
