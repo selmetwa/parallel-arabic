@@ -828,8 +828,18 @@
     };
     return labels[dialect] || dialect;
   }
+
+  // The quiz plays fullscreen; lock the page behind it so only the game scrolls.
+  $effect(() => {
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  });
 </script>
 
+<div class="fixed inset-0 z-[60] overflow-y-auto overscroll-contain bg-tile-200 pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)]">
 <section class="px-3 py-6 sm:px-8 max-w-2xl mx-auto">
   {#if isLoading}
     <!-- Loading State -->
@@ -1460,6 +1470,7 @@
     </div>
   {/if}
 </section>
+</div>
 
 <!-- Paywall Modal for free tier limit -->
 <PaywallModal isOpen={showPaywallModal} handleCloseModal={() => {

@@ -26,9 +26,11 @@
 		isSubscribed: boolean;
 		accent: string;
 		deep: string;
+		/** Called when the first move of a set spends a free round. */
+		onStart?: () => void;
 	}
 
-	let { pool, dialect, gate, signedIn, isSubscribed, accent, deep }: Props = $props();
+	let { pool, dialect, gate, signedIn, isSubscribed, accent, deep, onStart }: Props = $props();
 
 	// Re-mounted (via {#key}) when the theme changes, so the first pool is the one to use.
 	let words = $state(untrack(() => pickSet(pool)));
@@ -53,6 +55,7 @@
 		if (started) return true;
 		if (!gate.tryStartRound()) return false;
 		started = true;
+		onStart?.();
 		return true;
 	}
 

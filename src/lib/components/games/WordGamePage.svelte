@@ -10,6 +10,8 @@
 		gate: RoundGate;
 		signedIn: boolean;
 		isSubscribed: boolean;
+		/** Call when a round starts, to take the game fullscreen. */
+		onStart: () => void;
 	}
 </script>
 
@@ -42,6 +44,8 @@
 	let theme = $state(resolveTheme(startDialect, null).id);
 	let pool = $state<GameWord[] | null>(null);
 	let loadFailed = $state(false);
+	// Set on the first move of a round; the ← button drops back to the page.
+	let fullscreen = $state(false);
 
 	const gate = createRoundGate(
 		untrack(() => game.slug),
@@ -93,6 +97,8 @@
 	modal={gate.modal}
 	onCloseModal={gate.closeModal}
 	{pickers}
+	{fullscreen}
+	onExitFullscreen={() => (fullscreen = false)}
 >
 	{#if pool}
 		{#key `${dialect}:${theme}`}
@@ -102,7 +108,8 @@
 				theme,
 				gate,
 				signedIn: !!data.user,
-				isSubscribed: !!data.isSubscribed
+				isSubscribed: !!data.isSubscribed,
+				onStart: () => (fullscreen = true)
 			})}
 		{/key}
 	{:else if loadFailed}

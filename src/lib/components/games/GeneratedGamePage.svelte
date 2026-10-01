@@ -36,6 +36,8 @@
 		() => ({ isSubscribed: !!data.isSubscribed, userId: data.user?.id ?? null })
 	);
 	const round = createGeneratedRound<T>(untrack(() => endpoint));
+	// Set on Start; the player can drop back to the page with the ← button.
+	let fullscreen = $state(false);
 
 	/**
 	 * The browser count opens the modal without a wasted request; the server
@@ -46,7 +48,9 @@
 			gate.block();
 			return;
 		}
+		fullscreen = true;
 		if (await round.start(dialect, level)) gate.tryStartRound();
+		else fullscreen = false;
 	}
 
 	function closeModal() {
@@ -62,6 +66,8 @@
 	status={freeRoundsStatus(gate, 'rounds')}
 	modal={gate.modal ?? round.modal}
 	onCloseModal={closeModal}
+	fullscreen={fullscreen && (round.status === 'loading' || round.status === 'playing')}
+	onExitFullscreen={() => (fullscreen = false)}
 	pickers={[
 		{
 			id: 'level',

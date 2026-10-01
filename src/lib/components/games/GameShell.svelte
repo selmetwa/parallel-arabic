@@ -27,6 +27,9 @@
 		status?: string;
 		modal: 'auth' | 'paywall' | null;
 		onCloseModal: () => void;
+		/** Lift the play area into a fullscreen overlay while a round is on. */
+		fullscreen?: boolean;
+		onExitFullscreen?: () => void;
 		children: Snippet;
 	}
 
@@ -38,10 +41,26 @@
 		status,
 		modal,
 		onCloseModal,
+		fullscreen = false,
+		onExitFullscreen,
 		children
 	}: Props = $props();
 
 	const otherGames = $derived(GAMES.filter((g) => g.slug !== game.slug));
+
+	// Lock the page behind the fullscreen round so only the game scrolls.
+	$effect(() => {
+		if (!fullscreen) return;
+		const prev = document.body.style.overflow;
+		document.body.style.overflow = 'hidden';
+		return () => {
+			document.body.style.overflow = prev;
+		};
+	});
+
+	function onkeydown(event: KeyboardEvent) {
+		if (fullscreen && event.key === 'Escape' && !modal) onExitFullscreen?.();
+	}
 </script>
 
 {#snippet chipRow(
@@ -70,6 +89,8 @@
 	</div>
 {/snippet}
 
+<svelte:window {onkeydown} />
+
 <section
 	class="shell mx-auto max-w-3xl px-4 pb-24 pt-8 sm:px-5"
 	style="--accent:{game.accent}; --deep:{game.deep};"
@@ -96,8 +117,34 @@
 		{/each}
 	</div>
 
-	<div class="play-area">
-		{@render children()}
+	<!-- The children stay in place and only the wrapper changes, so a round
+	     keeps its state when it goes fullscreen. -->
+	<div class="play-area" class:fullscreen>
+		{#if fullscreen}
+			<div class="fs-bar">
+				<div class="fs-bar-inner">
+					<button
+						type="button"
+						class="fs-exit"
+						onclick={() => onExitFullscreen?.()}
+						aria-label="Exit fullscreen"
+						title="Exit fullscreen">←</button
+					>
+					<span class="fs-title">
+						<span aria-hidden="true">{game.emoji}</span>
+						{game.name}
+					</span>
+					{#if status}
+						<span class="fs-status">{status}</span>
+					{/if}
+				</div>
+			</div>
+		{/if}
+		<div class="play-body">
+			<div class="play-inner">
+				{@render children()}
+			</div>
+		</div>
 	</div>
 
 	<section class="info">
@@ -249,6 +296,90 @@
 
 	.play-area {
 		margin-top: 1.75rem;
+	}
+
+	.play-area.fullscreen {
+		position: fixed;
+		inset: 0;
+		z-index: 60;
+		display: flex;
+		flex-direction: column;
+		height: 100dvh;
+		margin: 0;
+		background: var(--tile2);
+	}
+
+	.fs-bar {
+		flex-shrink: 0;
+		padding-top: env(safe-area-inset-top);
+		border-bottom: 2px solid var(--tile5);
+		background: var(--tile3);
+	}
+
+	.fs-bar-inner {
+		display: flex;
+		align-items: center;
+		gap: 0.6rem;
+		max-width: 48rem;
+		margin: 0 auto;
+		padding: 0.6rem 1rem;
+	}
+
+	.fs-exit {
+		display: grid;
+		place-items: center;
+		width: 2.25rem;
+		height: 2.25rem;
+		border-radius: 0.6rem;
+		font-size: 1.1rem;
+		color: var(--text1);
+		cursor: pointer;
+		transition: background 0.18s ease;
+	}
+
+	.fs-exit:hover {
+		background: var(--tile5);
+	}
+
+	.fs-title {
+		flex: 1;
+		min-width: 0;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		font-weight: 600;
+		color: var(--text1);
+	}
+
+	.fs-status {
+		flex-shrink: 0;
+		font-size: 0.75rem;
+		font-weight: 600;
+		color: var(--text1);
+		background: color-mix(in srgb, var(--accent) 16%, var(--tile3));
+		border-radius: 100px;
+		padding: 0.25rem 0.7rem;
+	}
+
+	.fullscreen .play-body {
+		flex: 1;
+		min-height: 0;
+		overflow-y: auto;
+		overscroll-behavior: contain;
+		padding: 1.5rem 1rem max(1.5rem, env(safe-area-inset-bottom));
+	}
+
+	/* Same width and gutters as the shell, so the game keeps its size. */
+	.fullscreen .play-inner {
+		max-width: 48rem;
+		margin: 0 auto;
+	}
+
+	@media (min-width: 640px) {
+		.fullscreen .play-body {
+			padding-left: 1.25rem;
+			padding-right: 1.25rem;
+		}
 	}
 
 	.info {
