@@ -1,7 +1,21 @@
 import type { LayoutServerLoad } from './$types'
+import { redirect } from '@sveltejs/kit'
 import { getUserContext } from '$lib/server/user-context'
+import { checkUserSubscription } from '$lib/helpers/subscription'
+import { isPaywalled, isPaywallExempt } from '$lib/server/paywall-experiment'
 
 export const load: LayoutServerLoad = async ({ locals, cookies, url }) => {
+  // Paywall A/B test. Outside the try so the catch can't swallow the redirect.
+  // url.pathname is only read for paywalled users: reading it makes SvelteKit
+  // rerun this load on every client-side navigation.
+  if (
+    locals.user &&
+    isPaywalled(locals.user, checkUserSubscription(locals.user)) &&
+    !isPaywallExempt(url.pathname)
+  ) {
+    redirect(303, '/paywall')
+  }
+
   try {
     const { session, user } = locals
     

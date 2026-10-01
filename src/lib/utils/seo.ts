@@ -86,6 +86,7 @@ const NOINDEX_PREFIXES = [
 	'/pricing/canceled',
 	'/pricing/error',
 	'/pricing/subscribed',
+	'/paywall',
 	'/learn/game/play'
 ];
 
