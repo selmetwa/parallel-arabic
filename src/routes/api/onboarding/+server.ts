@@ -2,6 +2,8 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { supabase } from '$lib/supabaseClient';
 import { CEFR_LEVELS, isCefrLevel } from '$lib/constants/cefr-levels';
+import { checkUserSubscription } from '$lib/helpers/subscription';
+import { assignVariant, isExperimentOn, type PaywallVariant } from '$lib/server/paywall-experiment';
 
 export const POST: RequestHandler = async ({ request, locals }) => {
 	const { sessionId, user } = (await locals?.auth?.validate()) || {};
@@ -17,7 +19,8 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		goal_level,
 		show_arabic,
 		show_transliteration,
-		show_english
+		show_english,
+		platform
 	} = await request.json();
 
 	// Validate inputs
@@ -69,6 +72,23 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		updateData.show_english = show_english;
 	}
 
+	// Paywall A/B test: new web signups only. Native is excluded because the
+	// trial is web-only, and the client is the only side that can tell.
+	const dbUser = locals.user;
+	let variant: PaywallVariant | null = dbUser?.paywall_variant ?? null;
+	if (
+		isExperimentOn() &&
+		platform === 'web' &&
+		dbUser &&
+		!dbUser.paywall_variant &&
+		!dbUser.onboarding_completed &&
+		!checkUserSubscription(dbUser)
+	) {
+		variant = assignVariant();
+		updateData.paywall_variant = variant;
+		updateData.paywall_variant_assigned_at = Date.now();
+	}
+
 	try {
 		const { error: updateError } = await supabase.from('user').update(updateData).eq('id', user.id);
 
@@ -77,7 +97,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 			return json({ error: 'Failed to save onboarding data' }, { status: 500 });
 		}
 
-		return json({ success: true });
+		return json({ success: true, variant });
 	} catch (e) {
 		console.error('Exception updating onboarding data:', e);
 		return json({ error: 'Something went wrong' }, { status: 500 });

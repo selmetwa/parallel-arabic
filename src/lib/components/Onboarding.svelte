@@ -5,7 +5,7 @@
 	import { goto } from '$app/navigation';
 	import OnboardingConversation from '$lib/components/onboarding/OnboardingConversation.svelte';
 	import LevelSlider from '$lib/components/onboarding/LevelSlider.svelte';
-	import SubscribeButton from '$lib/components/SubscribeButton.svelte';
+	import TrialOffer from '$lib/components/TrialOffer.svelte';
 	import { CEFR_LEVELS, type CefrLevel } from '$lib/constants/cefr-levels';
 	import { onMount } from 'svelte';
 	import { page } from '$app/state';
@@ -49,18 +49,12 @@
 	// never see it.
 	let isNative = $state<boolean | null>(null);
 	let pendingDestination = $state('/');
+	// Paywall A/B test group, assigned by /api/onboarding. 'hard' hides the skip link.
+	let paywallVariant = $state<string | null>(null);
 
 	onMount(() => {
 		isNative = isNativeApp();
 	});
-
-	const trialBenefits = [
-		'Every dialect: Egyptian, Levantine, Moroccan and Fusha',
-		'Structured lessons with progress tracking',
-		'AI Tutor for speaking practice with real-time feedback',
-		'All stories and conversations with native audio',
-		'Unlimited sentence mining and spaced repetition'
-	];
 
 	// Accents match the dialect colours used across the rest of the app.
 	const dialects = [
@@ -117,6 +111,12 @@
 		{ title: 'Practice', subtitle: 'Say your first words' },
 		{ title: 'Trial', subtitle: '' }
 	];
+
+	let chosenDialectName = $derived.by(() => {
+		if (targetDialect === 'fusha') return 'Modern Standard Arabic';
+		const d = dialects.find((d) => d.id === targetDialect);
+		return d ? `${d.label} Arabic` : '';
+	});
 
 	let showStepper = $derived(STEPPER_STEPS.includes(step as (typeof STEPPER_STEPS)[number]));
 
@@ -194,7 +194,8 @@
 					target_dialect: targetDialect,
 					learning_reason: learningReason,
 					proficiency_level: proficiencyLevel,
-					goal_level: goalLevel || null
+					goal_level: goalLevel || null,
+					platform: isNative ? 'native' : 'web'
 				})
 			});
 
@@ -203,6 +204,7 @@
 			if (!response.ok) {
 				throw new Error(data.error || 'Failed to save onboarding data');
 			}
+			paywallVariant = data.variant ?? null;
 		} catch (e) {
 			error = e instanceof Error ? e.message : 'Something went wrong';
 			isSubmitting = false;
@@ -230,7 +232,7 @@
 		pendingDestination = destination;
 
 		if (isNative === false && page.data.trialEligible === true) {
-			trackEvent('trial_offer_shown', { placement: 'onboarding' });
+			trackEvent('trial_offer_shown', { placement: 'onboarding', variant: paywallVariant });
 			step = STEP.TRIAL;
 			return;
 		}
@@ -295,8 +297,9 @@
 			{/if}
 
 			<!-- Content Area -->
-			<div class="flex flex-1 items-center justify-center overflow-y-auto px-4 py-4 sm:px-8">
-				<div class="w-full max-w-4xl">
+			<div class="flex flex-1 justify-center overflow-y-auto px-4 py-4 sm:px-8">
+				<!-- my-auto rather than items-center, so content taller than the screen scrolls from the top instead of being clipped -->
+				<div class="my-auto w-full max-w-4xl">
 					<!-- Step 0: Welcome -->
 					{#if step === STEP.WELCOME}
 						<div
@@ -512,36 +515,10 @@
 
 					<!-- Step 6: Free trial offer (web only) -->
 					{#if step === STEP.TRIAL}
-						<div
-							class="mx-auto max-w-xl text-center"
-							in:fly={{ y: 30, duration: 500, easing: cubicOut }}
-						>
-							<div class="trial-emoji" aria-hidden="true">🎁</div>
-							<h2 class="screen-title">Unlock everything free for 7 days</h2>
-							<p class="screen-sub mb-6">$0 today, then $10/month or $96/year. Cancel anytime.</p>
-
-							<ul class="trial-list">
-								{#each trialBenefits as benefit (benefit)}
-									<li>
-										<svg
-											fill="none"
-											viewBox="0 0 24 24"
-											stroke="currentColor"
-											stroke-width="3"
-											aria-hidden="true"
-										>
-											<path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-										</svg>
-										<span>{benefit}</span>
-									</li>
-								{/each}
-							</ul>
-
-							<SubscribeButton className="!py-3 !text-lg w-full !rounded-2xl" />
-
-							<button class="skip-link mt-4" onclick={skipTrial}>Continue with the free plan</button
-							>
-						</div>
+						<TrialOffer
+							dialectName={chosenDialectName}
+							onSkip={paywallVariant === 'hard' ? undefined : skipTrial}
+						/>
 					{/if}
 
 					<!-- Error Message -->
@@ -880,55 +857,6 @@
 	.press:disabled {
 		opacity: 0.4;
 		cursor: not-allowed;
-	}
-
-	/* Trial */
-	.trial-emoji {
-		font-size: 2.75rem;
-		line-height: 1;
-		margin-bottom: 0.75rem;
-	}
-
-	.trial-list {
-		display: flex;
-		flex-direction: column;
-		gap: 0.7rem;
-		margin: 0 0 1.75rem;
-		padding: 1.1rem 1.2rem;
-		text-align: left;
-		border-radius: 1.25rem;
-		border: 2px solid var(--tile5);
-		background: var(--tile3);
-	}
-
-	.trial-list li {
-		display: flex;
-		align-items: flex-start;
-		gap: 0.7rem;
-		font-size: 0.88rem;
-		line-height: 1.45;
-		color: var(--text2);
-	}
-
-	.trial-list svg {
-		width: 1.05rem;
-		height: 1.05rem;
-		flex-shrink: 0;
-		margin-top: 0.15rem;
-		color: #10b981;
-	}
-
-	.skip-link {
-		font-size: 0.85rem;
-		font-weight: 600;
-		color: var(--text2);
-		text-decoration: underline;
-		text-underline-offset: 3px;
-		cursor: pointer;
-		transition: color 0.2s ease;
-	}
-	.skip-link:hover {
-		color: var(--text1);
 	}
 
 	/* Footer nav */
