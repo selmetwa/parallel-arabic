@@ -93,23 +93,32 @@
 		<div class="grid" dir="rtl">
 			{#each puzzle.words as word, i (i)}
 				{@const isOdd = i === puzzle.oddIndex}
-				<button
-					type="button"
-					class="word"
-					class:right={picked !== null && isOdd}
-					class:wrong={picked === i && !isOdd}
-					disabled={picked !== null}
-					onclick={() => pick(i)}
-				>
-					<span class="ar" lang="ar">{word.arabic}</span>
-					{#if showTransliteration && word.transliteration}
-						<span class="tr" dir="ltr">{word.transliteration}</span>
+				<!-- The audio button sits beside the card, not inside it, so playing
+				     a word never picks it. -->
+				<div class="cell">
+					<button
+						type="button"
+						class="word"
+						class:right={picked !== null && isOdd}
+						class:wrong={picked === i && !isOdd}
+						disabled={picked !== null}
+						onclick={() => pick(i)}
+					>
+						<span class="ar" lang="ar">{word.arabic}</span>
+						{#if showTransliteration && word.transliteration}
+							<span class="tr" dir="ltr">{word.transliteration}</span>
+						{/if}
+						{#if picked !== null}
+							<span class="en" dir="ltr">{word.english}</span>
+							<span class="sr-only">{isOdd ? '(the odd one out)' : ''}</span>
+						{/if}
+					</button>
+					{#if isSubscribed}
+						<div class="listen">
+							<AudioButton text={word.arabic} {dialect} />
+						</div>
 					{/if}
-					{#if picked !== null}
-						<span class="en" dir="ltr">{word.english}</span>
-						<span class="sr-only">{isOdd ? '(the odd one out)' : ''}</span>
-					{/if}
-				</button>
+				</div>
 			{/each}
 		</div>
 
@@ -120,13 +129,6 @@
 					<span class="badge">{PATTERN_LABELS[puzzle.pattern]}</span>
 				</p>
 				<p class="explanation">{puzzle.explanation}</p>
-				{#if isSubscribed}
-					<div class="audio">
-						{#each puzzle.words as word, i (i)}
-							<AudioButton text={word.arabic} {dialect} />
-						{/each}
-					</div>
-				{/if}
 				<PressButton onclick={next} {accent} {deep}>
 					{index + 1 < puzzles.length ? 'Next puzzle' : 'See results'}
 				</PressButton>
@@ -178,6 +180,19 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 0.65rem;
+	}
+
+	.cell {
+		position: relative;
+		display: grid;
+	}
+
+	/* Top-left corner of the card, clear of the centred word. */
+	.listen {
+		position: absolute;
+		top: 0.45rem;
+		left: 0.45rem;
+		color: var(--text2);
 	}
 
 	.word {
@@ -279,11 +294,6 @@
 		font-size: 0.92rem;
 		line-height: 1.55;
 		color: var(--text1);
-	}
-
-	.audio {
-		display: flex;
-		gap: 0.4rem;
 	}
 
 	.list-title {
