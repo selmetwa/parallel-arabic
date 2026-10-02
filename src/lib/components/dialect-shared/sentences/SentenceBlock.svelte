@@ -56,6 +56,42 @@
 	type PracticeMode = 'typing' | 'reorder' | 'trace';
 	let practiceMode = $state<PracticeMode>('trace');
 
+	const practiceModes: Array<{
+		value: PracticeMode;
+		label: string;
+		sub: string;
+		accent: string;
+		deep: string;
+		icon: string;
+		dashed?: boolean;
+	}> = [
+		{
+			value: 'trace',
+			label: 'Trace',
+			sub: 'Fill in the faded answer',
+			accent: '#0ea5e9',
+			deep: '#0369a1',
+			icon: 'M4 20h16M4 20l4-12 4 8 4-12 4 16',
+			dashed: true
+		},
+		{
+			value: 'typing',
+			label: 'Typing',
+			sub: 'Type it from memory',
+			accent: '#10b981',
+			deep: '#047857',
+			icon: 'M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z'
+		},
+		{
+			value: 'reorder',
+			label: 'Reorder',
+			sub: 'Arrange the words',
+			accent: '#8b5cf6',
+			deep: '#6d28d9',
+			icon: 'M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15'
+		}
+	];
+
 	// Modes that use the keyboard (virtual or native) for free-form input
 	let usesKeyboard = $derived(practiceMode === 'typing' || practiceMode === 'trace');
 
@@ -530,10 +566,6 @@
 		compareMyInput(value);
 	}
 
-	function toggleKeyboard() {
-		keyboard = keyboard === 'virtual' ? 'physical' : 'virtual';
-	}
-
 	// Sentence Reordering Mode Functions
 	function handleReorderWordClick(word: string, index: number) {
 		if (reorderChecked) return;
@@ -697,32 +729,25 @@
 
 </script>
 
+
 {#snippet englishWordDisplay()}
-	<div class="flex flex-col items-center justify-center gap-3">
+	<div class="prompt">
 		{#if selectedWords.length > 0}
-			<div class="flex gap-2 mb-2">
-				<button
-					onclick={() => askChatGTP(selectedWords)}
-					class="px-3 py-1 bg-tile-400 text-text-300 rounded border border-tile-600 hover:bg-tile-500 hover:border-tile-500 transition-colors"
-				>
+			<div class="mb-3 flex flex-wrap justify-center gap-2">
+				<button type="button" onclick={() => askChatGTP(selectedWords)} class="chip is-on">
 					Define "{selectedWords.join(' ')}"
 				</button>
-				<button
-					onclick={clearSelection}
-					class="px-3 py-1 bg-tile-400 text-text-300 rounded border border-tile-600 hover:bg-tile-500 hover:border-tile-500 transition-colors"
-				>
-					Clear Selection
-				</button>
+				<button type="button" onclick={clearSelection} class="chip">Clear selection</button>
 			</div>
 		{/if}
-		
+
 		<div
-			class="flex w-fit flex-row flex-wrap text-base sm:text-lg font-medium text-text-200 select-none"
+			class="prompt-words"
 			use:wordDragSelect={{ onStart: handleWordMouseDown, onExtend: handleWordMouseEnter, onEnd: handleWordMouseUp }}
 			role="application"
 			aria-label="Word selection area for definitions"
 		>
-			{#each sentence.english.split(' ') as word, index}
+			{#each sentence.english.split(' ') as word, index (index)}
 				<span
 					data-word-index={index}
 					onclick={() => askChatGTP(word)}
@@ -735,19 +760,17 @@
 					role="button"
 					tabindex="0"
 					aria-label={`Get definition for: ${word}`}
-					class={cn("p-1 text-base sm:text-lg duration-300 cursor-pointer border-2", {
-						"bg-blue-200 border-blue-400": isWordSelected(index),
-						"hover:bg-tile-500 border-transparent hover:border-tile-600": !isWordSelected(index)
-					})}
-					>{word}</span
+					class="word {isWordSelected(index) ? 'is-on' : ''}">{word}</span
 				>
 			{/each}
 		</div>
 		{#if showHint}
-			<p class="text-xl text-text-200">({sentence.transliteration})</p>
+			<p class="reveal">{sentence.transliteration}</p>
 		{/if}
 		{#if showAnswer || showTashkeel}
-			<p class="text-2xl text-text-300" dir="rtl">({showTashkeel && sentence.arabicTashkeel ? sentence.arabicTashkeel : sentence.arabic})</p>
+			<p class="reveal reveal--ar font-arabic" dir="rtl">
+				{showTashkeel && sentence.arabicTashkeel ? sentence.arabicTashkeel : sentence.arabic}
+			</p>
 		{/if}
 	</div>
 {/snippet}
@@ -777,317 +800,643 @@
 
 {#if sentence}
 	{#if isCorrect}
-		<div class="mb-4 bg-green-100 py-3 px-4 text-center border-2 border-green-100 rounded-lg flex items-center justify-between gap-4">
-			<p class="text-lg font-bold text-text-300">
+		<div class="note note--good banner">
+			<p class="banner-text">
 				{#if usesKeyboard}
-					{sentence.arabic} is Correct!
+					<span class="font-arabic" dir="rtl">{sentence.arabic}</span> is correct!
 				{:else}
 					Sentence arranged correctly!
 				{/if}
 			</p>
 			<button
+				type="button"
 				onclick={next}
-				class="flex items-center gap-1.5 px-4 py-2 text-sm font-semibold bg-green-600 text-white rounded-lg hover:bg-green-700 transition-all duration-200 shadow-sm hover:shadow-md whitespace-nowrap"
+				class="press press--sm px-4 py-2"
+				style="--accent:#22c55e; --deep:#15803d;"
 			>
 				Next
-				<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+				<svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
 				</svg>
 			</button>
 		</div>
 	{/if}
-	
+
 	<InfoDisclaimer></InfoDisclaimer>
-	
+
 	<!-- Practice Mode Selector -->
-	<div class="mb-6 p-4 bg-tile-400 rounded-xl border border-tile-500">
-		<p class="text-sm font-semibold text-text-200 mb-3 text-center">Choose Practice Mode</p>
-		<div class="flex flex-wrap justify-center gap-2">
+	<div class="mb-6 grid gap-2.5 sm:grid-cols-3">
+		{#each practiceModes as m (m.value)}
 			<button
-				onclick={() => handleModeChange('typing')}
-				class={cn(
-					"flex items-center gap-2 px-4 py-2.5 rounded-lg font-semibold transition-all duration-200 border-2",
-					practiceMode === 'typing' 
-						? "bg-emerald-600 text-white border-emerald-500 shadow-lg" 
-						: "bg-tile-300 text-text-300 border-tile-500 hover:bg-tile-500 hover:border-tile-600"
-				)}
+				type="button"
+				onclick={() => handleModeChange(m.value)}
+				aria-pressed={practiceMode === m.value}
+				class="pick {practiceMode === m.value ? 'is-on' : ''}"
+				style="--accent:{m.accent}; --deep:{m.deep};"
 			>
-				<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
-				</svg>
-				<span>Typing</span>
+				<span class="pick-icon" aria-hidden="true">
+					<svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							stroke-dasharray={m.dashed ? '3 3' : undefined}
+							d={m.icon}
+						></path>
+					</svg>
+				</span>
+				<span class="min-w-0 text-left">
+					<span class="pick-name">{m.label}</span>
+					<span class="pick-sub">{m.sub}</span>
+				</span>
 			</button>
-			<button
-				onclick={() => handleModeChange('trace')}
-				class={cn(
-					"flex items-center gap-2 px-4 py-2.5 rounded-lg font-semibold transition-all duration-200 border-2",
-					practiceMode === 'trace'
-						? "bg-sky-600 text-white border-sky-500 shadow-lg"
-						: "bg-tile-300 text-text-300 border-tile-500 hover:bg-tile-500 hover:border-tile-600"
-				)}
-			>
-				<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke-dasharray="3 3" d="M4 20h16M4 20l4-12 4 8 4-12 4 16"></path>
-				</svg>
-				<span>Trace</span>
-			</button>
-			<button
-				onclick={() => handleModeChange('reorder')}
-				class={cn(
-					"flex items-center gap-2 px-4 py-2.5 rounded-lg font-semibold transition-all duration-200 border-2",
-					practiceMode === 'reorder' 
-						? "bg-violet-600 text-white border-violet-500 shadow-lg" 
-						: "bg-tile-300 text-text-300 border-tile-500 hover:bg-tile-500 hover:border-tile-600"
-				)}
-			>
-				<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
-				</svg>
-				<span>Sentence Reorder</span>
-			</button>
-		</div>
+		{/each}
 	</div>
-	
-	<div class="flex flex-wrap items-center justify-center gap-2 mb-6 p-3 bg-tile-400 rounded-xl border border-tile-500">
-		<!-- Toggle buttons group -->
-		<div class="flex gap-1.5">
-			<button 
-				onclick={handleToggleHint} 
-				class="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold rounded-lg transition-all duration-200 {showHint ? 'bg-amber-600 text-white shadow-md' : 'bg-tile-500 text-text-300 hover:bg-tile-600 border border-tile-600'}"
+
+	<!-- Toolbar -->
+	<div class="toolbar">
+		<div class="flex flex-wrap gap-2">
+			<button
+				type="button"
+				onclick={handleToggleHint}
+				aria-pressed={showHint}
+				class="chip {showHint ? 'is-on' : ''}"
 				title="Your preference will be saved"
 			>
-				<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-				</svg>
-				<span>{showHint ? 'Hide' : 'Show'} Hint</span>
+				Hint
 			</button>
 			<button
+				type="button"
 				onclick={handleToggleAnswer}
-				class="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold rounded-lg transition-all duration-200 {showAnswer ? 'bg-amber-600 text-white shadow-md' : 'bg-tile-500 text-text-300 hover:bg-tile-600 border border-tile-600'}"
+				aria-pressed={showAnswer}
+				class="chip {showAnswer ? 'is-on' : ''}"
 				title="Your preference will be saved"
 			>
-				<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
-				</svg>
-				<span>{showAnswer ? 'Hide' : 'Show'} Answer</span>
+				Answer
 			</button>
 			{#if sentence.arabicTashkeel}
-			<button
-				onclick={() => { showTashkeel = !showTashkeel; trackEvent('sentences_tashkeel_toggled', { visible: showTashkeel }); }}
-				class="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold rounded-lg transition-all duration-200 {showTashkeel ? 'bg-amber-600 text-white shadow-md' : 'bg-tile-500 text-text-300 hover:bg-tile-600 border border-tile-600'}"
-			>
-				<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
-				</svg>
-				<span>{showTashkeel ? 'Hide' : 'Show'} Tashkeel</span>
-			</button>
-			{/if}
-		</div>
-		
-		<!-- Divider -->
-		<div class="hidden sm:block w-px h-8 bg-tile-600"></div>
-		
-		<!-- Audio button -->
-		<button 
-			onclick={() => {
-				trackEvent('sentences_audio_played', { dialect });
-				const audioBtn = document.querySelector('.sentence-audio-btn') as HTMLButtonElement;
-				audioBtn?.click();
-			}}
-			class="flex items-center gap-1.5 px-4 py-2 text-sm font-semibold bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition-all duration-200 shadow-sm hover:shadow-md"
-		>
-			<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-				<path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.617.793L4.383 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.383l4-3.617a1 1 0 011.617.793zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"/>
-			</svg>
-			<span>Listen</span>
-		</button>
-		<AudioButton text={sentence.arabic} dialect={dialect} className="sentence-audio-btn hidden" />
-		
-		<!-- Compare button -->
-		<button 
-			onclick={compareDialects}
-			class="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-all duration-200 shadow-sm hover:shadow-md"
-		>
-			<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
-			</svg>
-			<span>Compare</span>
-		</button>
-		
-		<!-- Save button -->
-		<SaveButton
-			objectToSave={{
-				arabic: sentence.arabic,
-				english: sentence.english,
-				transliterated: sentence.transliteration
-			}}
-			type="Sentence"
-		/>
-		
-		<!-- Reset button -->
-		<button 
-			onclick={resetSentences}
-			class="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold bg-rose-600 text-white rounded-lg hover:bg-rose-700 transition-all duration-200 shadow-sm hover:shadow-md"
-		>
-			<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
-			</svg>
-			<span>Reset</span>
-		</button>
-	</div>
-	
-	<!-- ==================== TYPING / TRACE MODE ==================== -->
-	{#if usesKeyboard}
-	<div class="text-center mb-6">
-		{@render englishWordDisplay()}
-
-		{#if practiceMode === 'trace'}
-			<!-- Trace mode: dimmed answer that fills in as you type -->
-			<div class="mt-4" dir="rtl">
-				<span class="font-arabic leading-loose text-2xl sm:text-3xl">{@html traceHtml}</span>
-			</div>
-		{:else}
-		<div class="mt-4">
-			<span class="text-2xl sm:text-3xl">
-				{@html arabicRunsHtml(attempt, (a) => a.letter, (a) => (a.correct ? 'text-green-700' : 'text-red-500'))}
-			</span>
-		</div>
-		{/if}
-	</div>
-
-	<Modal isOpen={isInfoModalOpen} handleCloseModal={closeInfoModal} height="70%" width="80%">
-		<KeyboardDocumentation></KeyboardDocumentation>
-	</Modal>
-	
-	<div class="mb-6 p-4" bind:this={keyboardContainer}>
-		<div class="mb-3 flex items-center justify-between gap-2">
-			<button 
-				onclick={toggleKeyboard} 
-				class="flex items-center gap-2 px-3 py-1.5 text-sm text-text-300 bg-tile-400 hover:bg-tile-500 border border-tile-500 rounded-lg transition-colors"
-			>
-				<span>{keyboard === 'virtual' ? '📱 Use native keyboard' : '⌨️ Use virtual keyboard'}</span>
-			</button>
-			{#if keyboard === 'virtual'}
-				<button 
-					class="text-sm text-text-200 hover:text-text-300 underline transition-colors" 
-					onclick={openInfoModal}
+				<button
+					type="button"
+					onclick={() => {
+						showTashkeel = !showTashkeel;
+						trackEvent('sentences_tashkeel_toggled', { visible: showTashkeel });
+					}}
+					aria-pressed={showTashkeel}
+					class="chip {showTashkeel ? 'is-on' : ''}"
 				>
-					How does this work?
+					Tashkeel
 				</button>
 			{/if}
 		</div>
-		
-		<div class={cn('block', { hidden: keyboard !== 'virtual' })}>
-			<arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
+
+		<div class="flex flex-wrap items-center gap-2">
+			<button
+				type="button"
+				onclick={() => {
+					trackEvent('sentences_audio_played', { dialect });
+					const audioBtn = document.querySelector('.sentence-audio-btn') as HTMLButtonElement;
+					audioBtn?.click();
+				}}
+				class="press press--sm px-4 py-2"
+				style="--accent:#0ea5e9; --deep:#0369a1;"
+			>
+				<svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+					<path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.617.793L4.383 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.383l4-3.617a1 1 0 011.617.793zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd" />
+				</svg>
+				Listen
+			</button>
+			<AudioButton text={sentence.arabic} {dialect} className="sentence-audio-btn hidden" />
+			<button type="button" onclick={compareDialects} class="chip">Compare</button>
+			<SaveButton
+				objectToSave={{
+					arabic: sentence.arabic,
+					english: sentence.english,
+					transliterated: sentence.transliteration
+				}}
+				type="Sentence"
+				className="!rounded-full !px-4 !py-2 !text-[0.83rem] !shadow-none"
+			/>
+			<button type="button" onclick={resetSentences} class="chip">Reset</button>
 		</div>
-		
-		<textarea
-			oninput={onRegularKeyboard}
-			bind:value={keyboardValue}
-			placeholder="اكتب هنا..."
-			dir="rtl"
-			class={cn('block min-h-40 w-full text-2xl sm:text-3xl font-arabic text-text-300 bg-tile-200 border-2 border-tile-500 rounded-xl p-4 focus:border-tile-700 focus:outline-none focus:ring-2 focus:ring-tile-600/50 transition-all placeholder:text-text-100', {
-				hidden: keyboard === 'virtual'
-			})}
-		></textarea>
 	</div>
+
+	<!-- ==================== TYPING / TRACE MODE ==================== -->
+	{#if usesKeyboard}
+		<div class="mb-6">
+			{@render englishWordDisplay()}
+
+			{#if practiceMode === 'trace'}
+				<!-- Trace mode: dimmed answer that fills in as you type -->
+				<div class="mt-5 text-center" dir="rtl">
+					<span class="font-arabic text-2xl leading-loose sm:text-3xl">{@html traceHtml}</span>
+				</div>
+			{:else}
+				<div class="mt-5 text-center">
+					<span class="text-2xl sm:text-3xl">
+						{@html arabicRunsHtml(attempt, (a) => a.letter, (a) => (a.correct ? 'text-green-700' : 'text-red-500'))}
+					</span>
+				</div>
+			{/if}
+		</div>
+
+		<Modal isOpen={isInfoModalOpen} handleCloseModal={closeInfoModal} height="70%" width="80%">
+			<KeyboardDocumentation></KeyboardDocumentation>
+		</Modal>
+
+		<div class="mb-6" bind:this={keyboardContainer}>
+			<div class="mb-3 flex flex-wrap items-center justify-between gap-2">
+				<div class="seg-wrap">
+					<button
+						type="button"
+						onclick={() => (keyboard = 'virtual')}
+						class="seg {keyboard === 'virtual' ? 'is-on' : ''}">Virtual keyboard</button
+					>
+					<button
+						type="button"
+						onclick={() => (keyboard = 'physical')}
+						class="seg {keyboard === 'physical' ? 'is-on' : ''}">Native keyboard</button
+					>
+				</div>
+				{#if keyboard === 'virtual'}
+					<button type="button" class="link-btn" onclick={openInfoModal}>
+						How does this work?
+					</button>
+				{/if}
+			</div>
+
+			<div class={cn('block', { hidden: keyboard !== 'virtual' })}>
+				<arabic-keyboard showEnglishValue="true" showShiftedValue="true"></arabic-keyboard>
+			</div>
+
+			<textarea
+				oninput={onRegularKeyboard}
+				bind:value={keyboardValue}
+				placeholder="اكتب هنا..."
+				dir="rtl"
+				class="arabic-input font-arabic {keyboard === 'virtual' ? 'hidden' : ''}"
+			></textarea>
+		</div>
 	{/if}
-	
+
 	<!-- ==================== SENTENCE REORDERING MODE ==================== -->
 	{#if practiceMode === 'reorder'}
 		<div class="mb-6">
 			<!-- English sentence display with drag-and-define -->
-			<div class="text-center mb-6">
-				{@render englishWordDisplay()}
-			</div>
-			
+			{@render englishWordDisplay()}
+
 			<!-- Your answer area -->
-			<div class="mb-4 p-4 bg-tile-300 rounded-xl border-2 border-tile-500 min-h-[80px]">
-				<h4 class="text-sm font-bold text-text-200 mb-3">Your Answer:</h4>
+			<div class="zone">
+				<p class="zone-label">Your answer</p>
 				{#if selectedReorderWords.length > 0}
-					<div class="flex flex-wrap gap-2 justify-center" dir="rtl">
-						{#each selectedReorderWords as word, index}
-							<span 
-								class={cn(
-									"px-4 py-2.5 text-xl font-semibold rounded-lg border-2",
-									reorderChecked 
-										? (reorderCorrect ? "bg-green-100 border-green-400 text-green-800" : "bg-red-100 border-red-400 text-red-800")
-										: "bg-violet-100 border-violet-400 text-violet-800"
-								)}
+					<div class="flex flex-wrap justify-center gap-2" dir="rtl">
+						{#each selectedReorderWords as word, i (i)}
+							<span
+								class="tile {reorderChecked
+									? reorderCorrect
+										? 'tile--good'
+										: 'tile--bad'
+									: 'tile--on'}"
 							>
 								{word}
 							</span>
 						{/each}
 					</div>
 				{:else}
-					<p class="text-text-200 text-center italic">Click words below to build your sentence...</p>
+					<p class="zone-empty">Tap the words below to build your sentence</p>
 				{/if}
 			</div>
-			
+
 			<!-- Action buttons -->
 			{#if !reorderChecked}
-				<div class="flex justify-center gap-3 mb-4">
+				<div class="my-4 flex flex-wrap justify-center gap-3">
 					<button
+						type="button"
 						onclick={removeLastReorderWord}
 						disabled={selectedReorderWords.length === 0}
-						class="px-4 py-2 bg-tile-500 text-text-300 font-semibold rounded-lg hover:bg-tile-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+						class="press press--off press--sm px-5 py-2.5"
 					>
-						← Undo Last
+						Undo last
 					</button>
 					<button
+						type="button"
 						onclick={clearReorderSelection}
 						disabled={selectedReorderWords.length === 0}
-						class="px-4 py-2 bg-tile-500 text-text-300 font-semibold rounded-lg hover:bg-tile-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+						class="press press--off press--sm px-5 py-2.5"
 					>
-						Clear All
+						Clear all
 					</button>
 					<button
+						type="button"
 						onclick={checkReorderAnswer}
 						disabled={shuffledArabicWords.length > 0}
-						class="px-6 py-2 bg-violet-600 text-white font-semibold rounded-lg hover:bg-violet-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+						class="press press--sm px-6 py-2.5"
+						style="--accent:#8b5cf6; --deep:#6d28d9;"
 					>
-						Check Answer
+						Check answer
 					</button>
 				</div>
 			{/if}
-			
+
 			<!-- Available words -->
 			{#if !reorderChecked && shuffledArabicWords.length > 0}
-				<div class="p-4 bg-tile-300 rounded-xl border border-tile-500">
-					<h4 class="text-sm font-bold text-text-200 mb-3">Available Words (Click to add):</h4>
-					<div class="flex flex-wrap gap-2 justify-center" dir="rtl">
-						{#each shuffledArabicWords as word, index}
-							<button
-								onclick={() => handleReorderWordClick(word, index)}
-								class="px-4 py-2.5 text-xl font-semibold bg-tile-400 border-2 border-tile-500 text-text-300 rounded-lg hover:bg-violet-100 hover:border-violet-400 hover:text-violet-800 transition-all duration-200"
-							>
-								{word}
-							</button>
-						{/each}
-					</div>
+				<div class="flex flex-wrap justify-center gap-2" dir="rtl">
+					{#each shuffledArabicWords as word, index (index)}
+						<button type="button" onclick={() => handleReorderWordClick(word, index)} class="tile">
+							{word}
+						</button>
+					{/each}
 				</div>
 			{/if}
-			
+
 			<!-- Results -->
 			{#if reorderChecked}
-				<div class="mt-4 p-4 rounded-xl border-2 {reorderCorrect ? 'bg-green-50 border-green-300' : 'bg-red-50 border-red-300'}">
-					{#if reorderCorrect}
-						<p class="text-lg font-bold text-green-700">🎉 Perfect! You arranged the sentence correctly!</p>
-					{:else}
-						<p class="text-lg font-bold text-red-700 mb-2">❌ Not quite right. Here's the correct order:</p>
-						<p class="text-xl font-semibold text-text-300" dir="rtl">{sentence.arabic}</p>
-					{/if}
-				</div>
-				<div class="mt-4 text-center">
+				{#if reorderCorrect}
+					<p class="note note--good">Perfect! You arranged the sentence correctly.</p>
+				{:else}
+					<div class="note note--bad">
+						<p>Not quite right. Here's the correct order:</p>
+						<p class="mt-1 font-arabic text-xl font-semibold" dir="rtl">{sentence.arabic}</p>
+					</div>
+				{/if}
+				<div class="mt-5 text-center">
 					<button
+						type="button"
 						onclick={resetReorder}
-						class="px-6 py-2.5 bg-violet-600 text-white font-semibold rounded-lg hover:bg-violet-700 transition-colors"
+						class="press px-7 py-3"
+						style="--accent:#8b5cf6; --deep:#6d28d9;"
 					>
-						Try Again
+						Try again
 					</button>
 				</div>
 			{/if}
 		</div>
 	{/if}
 {/if}
+
+<style>
+	/* Mode picker */
+	.pick {
+		position: relative;
+		display: flex;
+		align-items: center;
+		gap: 0.85rem;
+		padding: 0.85rem 1rem;
+		border-radius: 1.1rem;
+		border: 2px solid var(--tile5);
+		background: var(--tile3);
+		cursor: pointer;
+		transition:
+			transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1),
+			border-color 0.18s ease,
+			box-shadow 0.18s ease,
+			background 0.18s ease;
+	}
+	.pick:hover {
+		transform: translateY(-3px);
+		border-color: var(--accent);
+		box-shadow: 0 6px 0 var(--deep);
+	}
+	.pick:active {
+		transform: translateY(1px);
+		box-shadow: 0 1px 0 var(--deep);
+	}
+	.pick.is-on {
+		border-color: var(--accent);
+		background: color-mix(in srgb, var(--accent) 12%, var(--tile3));
+		box-shadow: 0 4px 0 var(--deep);
+	}
+
+	.pick-icon {
+		display: grid;
+		place-items: center;
+		width: 2.2rem;
+		height: 2.2rem;
+		border-radius: 0.7rem;
+		flex-shrink: 0;
+		color: var(--accent);
+		background: color-mix(in srgb, var(--accent) 16%, var(--tile4));
+	}
+	.pick-icon svg {
+		width: 1.2rem;
+		height: 1.2rem;
+	}
+
+	.pick-name {
+		display: block;
+		font-size: 0.95rem;
+		font-weight: 600;
+		line-height: 1.2;
+		color: var(--text1);
+	}
+	.pick-sub {
+		display: block;
+		font-size: 0.78rem;
+		font-style: italic;
+		color: var(--text2);
+	}
+
+	/* Toolbar */
+	.toolbar {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.6rem;
+		margin-bottom: 1.25rem;
+	}
+
+	.chip {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.35rem;
+		padding: 0.45rem 0.95rem;
+		border-radius: 100px;
+		font-size: 0.83rem;
+		font-weight: 600;
+		color: var(--text2);
+		background: var(--tile3);
+		border: 2px solid var(--tile5);
+		cursor: pointer;
+		transition:
+			transform 0.16s cubic-bezier(0.34, 1.56, 0.64, 1),
+			background 0.18s ease,
+			border-color 0.18s ease,
+			color 0.18s ease;
+	}
+	.chip:hover {
+		transform: translateY(-2px);
+		border-color: var(--tile6);
+		color: var(--text1);
+	}
+	.chip.is-on {
+		background: #0ea5e9;
+		border-color: #0369a1;
+		color: #fff;
+	}
+
+	/* Pressable button */
+	.press {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.45rem;
+		border-radius: 1rem;
+		font-size: 1rem;
+		font-weight: 600;
+		color: #fff;
+		background: var(--accent);
+		box-shadow: 0 4px 0 var(--deep);
+		cursor: pointer;
+		transition:
+			transform 0.14s ease,
+			box-shadow 0.14s ease,
+			filter 0.2s ease;
+	}
+	.press:hover:not(:disabled) {
+		filter: brightness(1.06);
+	}
+	.press:active:not(:disabled) {
+		transform: translateY(4px);
+		box-shadow: 0 0 0 var(--deep);
+	}
+	.press:disabled {
+		opacity: 0.45;
+		cursor: not-allowed;
+	}
+	.press--sm {
+		font-size: 0.83rem;
+		border-radius: 100px;
+		box-shadow: 0 3px 0 var(--deep);
+	}
+	.press--sm:active:not(:disabled) {
+		transform: translateY(3px);
+	}
+	.press--off {
+		background: var(--tile5);
+		color: var(--text1);
+		box-shadow: 0 3px 0 var(--tile6);
+	}
+
+	/* Correct banner */
+	.banner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+		margin: 0 0 1rem;
+	}
+	.banner-text {
+		font-size: 1rem;
+		font-weight: 600;
+	}
+
+	/* Notes — tint carries the meaning, text stays on the theme's own ink */
+	.note {
+		margin-top: 0.75rem;
+		font-size: 0.9rem;
+		line-height: 1.5;
+		font-weight: 500;
+		color: var(--text2);
+		border-radius: 0.8rem;
+		background: var(--tile3);
+		padding: 0.7rem 0.95rem;
+	}
+	.note--good {
+		color: var(--text1);
+		background: color-mix(in srgb, #10b981 18%, var(--tile3));
+		box-shadow: inset 3px 0 0 #10b981;
+	}
+	.note--bad {
+		color: var(--text1);
+		background: color-mix(in srgb, #f43f5e 18%, var(--tile3));
+		box-shadow: inset 3px 0 0 #f43f5e;
+	}
+
+	/* Prompt card */
+	.prompt {
+		border-radius: 1.1rem;
+		border: 2px solid var(--tile5);
+		background: var(--tile3);
+		padding: 1.5rem 1.25rem;
+		text-align: center;
+	}
+
+	.prompt-words {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 0.1rem;
+		font-size: clamp(1.25rem, 3.5vw, 1.6rem);
+		font-weight: 600;
+		letter-spacing: -0.02em;
+		color: var(--text1);
+		user-select: none;
+	}
+
+	.word {
+		padding: 0.1rem 0.3rem;
+		border-radius: 0.5rem;
+		cursor: pointer;
+		transition: background 0.15s ease;
+	}
+	.word:hover {
+		background: var(--tile5);
+	}
+	.word:focus-visible {
+		outline: 2px solid var(--brand);
+		outline-offset: 1px;
+	}
+	.word.is-on {
+		background: color-mix(in srgb, #0ea5e9 25%, var(--tile3));
+		box-shadow: inset 0 -2px 0 #0ea5e9;
+	}
+
+	.reveal {
+		margin-top: 0.9rem;
+		font-size: 1.05rem;
+		font-style: italic;
+		color: var(--text2);
+	}
+	.reveal--ar {
+		font-size: 1.6rem;
+		font-style: normal;
+		color: var(--text1);
+	}
+
+	/* Keyboard */
+	.seg-wrap {
+		display: inline-flex;
+		gap: 0.25rem;
+		padding: 0.25rem;
+		border-radius: 100px;
+		background: var(--tile3);
+		border: 2px solid var(--tile5);
+	}
+	.seg {
+		padding: 0.45rem 1rem;
+		border-radius: 100px;
+		font-size: 0.83rem;
+		font-weight: 600;
+		color: var(--text2);
+		cursor: pointer;
+		transition:
+			background 0.2s ease,
+			color 0.2s ease;
+	}
+	.seg.is-on {
+		background: var(--tile5);
+		color: var(--text1);
+	}
+
+	.link-btn {
+		font-size: 0.8rem;
+		font-weight: 600;
+		color: var(--text2);
+		text-decoration: underline;
+		text-underline-offset: 3px;
+		cursor: pointer;
+	}
+	.link-btn:hover {
+		color: var(--text1);
+	}
+
+	.arabic-input {
+		display: block;
+		width: 100%;
+		min-height: 10rem;
+		border-radius: 1.1rem;
+		border: 2px solid var(--tile5);
+		background: var(--tile3);
+		padding: 0.85rem 1rem;
+		font-size: 1.75rem;
+		color: var(--text1);
+		transition: border-color 0.2s ease;
+	}
+	.arabic-input.hidden {
+		display: none;
+	}
+	.arabic-input:focus {
+		outline: none;
+		border-color: #0ea5e9;
+	}
+	.arabic-input::placeholder {
+		color: var(--text2);
+		opacity: 0.65;
+	}
+
+	/* Reorder */
+	.zone {
+		margin-top: 1rem;
+		min-height: 5.5rem;
+		border-radius: 1.1rem;
+		border: 2px dashed var(--tile5);
+		padding: 0.9rem 1rem 1.1rem;
+	}
+	.zone-label {
+		margin-bottom: 0.6rem;
+		font-size: 0.8rem;
+		font-weight: 600;
+		color: var(--text2);
+	}
+	.zone-empty {
+		text-align: center;
+		font-size: 0.9rem;
+		color: var(--text2);
+	}
+
+	.tile {
+		padding: 0.5rem 1rem;
+		border-radius: 0.9rem;
+		font-size: 1.25rem;
+		font-weight: 600;
+		color: var(--text1);
+		background: var(--tile3);
+		border: 2px solid var(--tile5);
+		box-shadow: 0 3px 0 var(--tile5);
+	}
+	button.tile {
+		cursor: pointer;
+		transition:
+			transform 0.16s cubic-bezier(0.34, 1.56, 0.64, 1),
+			border-color 0.18s ease,
+			box-shadow 0.18s ease;
+	}
+	button.tile:hover {
+		transform: translateY(-2px);
+		border-color: #8b5cf6;
+		box-shadow: 0 5px 0 #6d28d9;
+	}
+	button.tile:active {
+		transform: translateY(2px);
+		box-shadow: 0 1px 0 #6d28d9;
+	}
+	.tile--on {
+		border-color: #8b5cf6;
+		background: color-mix(in srgb, #8b5cf6 12%, var(--tile3));
+		box-shadow: 0 3px 0 #6d28d9;
+	}
+	.tile--good {
+		border-color: #10b981;
+		background: color-mix(in srgb, #10b981 15%, var(--tile3));
+		box-shadow: 0 3px 0 #047857;
+	}
+	.tile--bad {
+		border-color: #f43f5e;
+		background: color-mix(in srgb, #f43f5e 15%, var(--tile3));
+		box-shadow: 0 3px 0 #9f1239;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.pick,
+		.chip,
+		.press,
+		button.tile {
+			transition: none;
+		}
+		.pick:hover,
+		.chip:hover,
+		button.tile:hover {
+			transform: none;
+		}
+	}
+</style>

@@ -1,7 +1,5 @@
 <script lang="ts">
-	import Button from '$lib/components/Button.svelte';
-	import { type sentenceObjectGroup, type sentenceObjectItem } from '$lib/types/index';
-	import RadioButton from '$lib/components/RadioButton.svelte';
+	import { type sentenceObjectItem } from '$lib/types/index';
   import SaveButton from '$lib/components/SaveButton.svelte';
 	import { userXp, userLevel } from '$lib/store/xp-store';
 	import { showXpToast } from '$lib/helpers/toast-helpers';
@@ -45,7 +43,7 @@
 	let showAnswer = $state(false);
 	let showTashkeel = $state(false);
 	let selectedObj = $state({} as sentenceObjectItem);
-	let selected = $state(null);
+	let selected = $state<string | null>(null);
 	
 	function shuffleArray(array: any) {
 		const _arr = [...array];
@@ -56,45 +54,39 @@
 		return _arr;
 	}
 
-  let targetSentence = $derived(sentences.slice(1)[index])
+	let targetSentence = $derived(sentences[index]);
 
-  let sentenceObj = $derived.by(() => {
-    if (sentences.length > index) {
-      const shuffledWords = shuffleArray(sentences.slice(1));
+	// Wrong answers come from the other sentences in the set. Skip the answer
+	// itself and anything whose Arabic or English repeats an option already
+	// picked, so all options on screen are distinct.
+	let sentenceObj = $derived.by(() => {
+		if (!targetSentence) return null;
 
-      const shuffledAnswers = shuffleArray([
-        targetSentence,
-        shuffledWords[0],
-        shuffledWords[1],
-        shuffledWords[2]
-      ]);
+		const seenArabic = new Set([targetSentence.arabic.trim()]);
+		const seenEnglish = new Set([targetSentence.english.trim()]);
+		const distractors: sentenceObjectItem[] = [];
 
-      return {
-        answer: targetSentence,
-        first: shuffledAnswers[0],
-        second: shuffledAnswers[1],
-        third: shuffledAnswers[2],
-        fourth: shuffledAnswers[3]
-      }
-    } else {
-      return {} as sentenceObjectGroup;
-    }
-  })
-
-	function getObjectByEnglishValue(data: sentenceObjectGroup, englishValue: string) {
-		for (let key in data) {
-			if (data[key].english === englishValue) {
-				return data[key];
-			}
+		for (const candidate of shuffleArray(sentences) as sentenceObjectItem[]) {
+			if (distractors.length === 3) break;
+			const arabic = candidate.arabic.trim();
+			const english = candidate.english.trim();
+			if (seenArabic.has(arabic) || seenEnglish.has(english)) continue;
+			seenArabic.add(arabic);
+			seenEnglish.add(english);
+			distractors.push(candidate);
 		}
-		return {} as sentenceObjectItem;
-	}
 
-	function handleClick(e: any) {
-		const value = e.target.value;
+		return {
+			answer: targetSentence,
+			options: shuffleArray([targetSentence, ...distractors]) as sentenceObjectItem[]
+		};
+	});
+
+	function handleClick(value: string) {
+		if (!sentenceObj) return;
 		selected = value;
 
-		selectedObj = getObjectByEnglishValue(sentenceObj, value);
+		selectedObj = sentenceObj.options.find((o) => o.english === value) ?? ({} as sentenceObjectItem);
 
 		if (selected === sentenceObj.answer.english) {
 			isCorrect = true;
@@ -119,93 +111,220 @@
 	});
 </script>
 
-<section class="py-4">
+<section class="py-2">
 {#if sentenceObj}
 	{#if isCorrect}
-		<div class="flex w-full flex-row items-center mb-4 justify-center gap-2 bg-green-100 py-3 px-4 border-2 border-green-100 transition-all duration-300">
-			<span class="text-lg font-bold text-text-300">
-				{sentenceObj.answer.arabic} is correct
-			</span>
-		</div>
+		<p class="note note--good mb-4">
+			<span class="font-arabic" dir="rtl">{sentenceObj.answer.arabic}</span> is correct
+		</p>
 	{/if}
 	{#if isIncorrect}
-		<div class="flex w-full flex-row items-center justify-center gap-2 bg-red-100 py-3 px-4 border-2 border-red-100 transition-all duration-300 mb-4">
-			<span class="text-lg font-bold text-text-300">
-				{selectedObj.arabic} is incorrect
-			</span>
-		</div>
+		<p class="note note--bad mb-4">
+			<span class="font-arabic" dir="rtl">{selectedObj.arabic}</span> is incorrect
+		</p>
 	{/if}
-	
-	<div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
-		<Button onClick={() => (showHint = !showHint)} type="button">
-			{showHint ? 'Hide' : 'Show'} Hint
-		</Button>
-		<Button onClick={() => (showAnswer = !showAnswer)} type="button">
-			{showAnswer ? 'Hide' : 'Show'} Answer
-		</Button>
-		{#if sentenceObj.answer.arabicTashkeel}
-		<Button onClick={() => (showTashkeel = !showTashkeel)} type="button">
-			{showTashkeel ? 'Hide' : 'Show'} Tashkeel
-		</Button>
-		{/if}
-		<SaveButton type="sentence" objectToSave={{
-			arabic: sentenceObj.answer.arabic,
-			english: sentenceObj.answer.english,
-			transliterated: sentenceObj.answer.transliteration
-		}} />
-		<Button onClick={resetSentences} type="button">Reset</Button>
+
+	<div class="toolbar">
+		<div class="flex flex-wrap gap-2">
+			<button
+				type="button"
+				onclick={() => (showHint = !showHint)}
+				aria-pressed={showHint}
+				class="chip {showHint ? 'is-on' : ''}">Hint</button
+			>
+			<button
+				type="button"
+				onclick={() => (showAnswer = !showAnswer)}
+				aria-pressed={showAnswer}
+				class="chip {showAnswer ? 'is-on' : ''}">Answer</button
+			>
+			{#if sentenceObj.answer.arabicTashkeel}
+				<button
+					type="button"
+					onclick={() => (showTashkeel = !showTashkeel)}
+					aria-pressed={showTashkeel}
+					class="chip {showTashkeel ? 'is-on' : ''}">Tashkeel</button
+				>
+			{/if}
+		</div>
+		<div class="flex flex-wrap items-center gap-2">
+			<SaveButton
+				type="sentence"
+				objectToSave={{
+					arabic: sentenceObj.answer.arabic,
+					english: sentenceObj.answer.english,
+					transliterated: sentenceObj.answer.transliteration
+				}}
+				className="!rounded-full !px-4 !py-2 !text-[0.83rem] !shadow-none"
+			/>
+			<button type="button" onclick={resetSentences} class="chip">Reset</button>
+		</div>
 	</div>
 
-	<div class="text-center mb-6">
-		<div class="flex flex-col items-center justify-center gap-3">
-			<h1 class="text-3xl sm:text-4xl font-bold text-text-300">{sentenceObj.answer.english}</h1>
-			{#if showHint}
-				<p class="text-xl text-text-200">({sentenceObj.answer.transliteration})</p>
-			{/if}
-			{#if showAnswer}
-				<p class="text-2xl text-text-300" dir="rtl">({showTashkeel && sentenceObj.answer.arabicTashkeel ? sentenceObj.answer.arabicTashkeel : sentenceObj.answer.arabic})</p>
-			{/if}
-		</div>
+	<div class="prompt">
+		<h1 class="prompt-text">{sentenceObj.answer.english}</h1>
+		{#if showHint}
+			<p class="reveal">{sentenceObj.answer.transliteration}</p>
+		{/if}
+		{#if showAnswer}
+			<p class="reveal reveal--ar font-arabic" dir="rtl">
+				{showTashkeel && sentenceObj.answer.arabicTashkeel
+					? sentenceObj.answer.arabicTashkeel
+					: sentenceObj.answer.arabic}
+			</p>
+		{/if}
 	</div>
-	
-	<fieldset class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+
+	<fieldset class="mt-5 grid grid-cols-1 gap-2.5 sm:grid-cols-2">
 		<legend class="sr-only">Choose the correct Arabic translation</legend>
-		<RadioButton
-			text={sentenceObj.first.arabic}
-			value={sentenceObj.first.english}
-			isSelected={selected === sentenceObj.first.english}
-			onClick={handleClick}
-			selectableFor={sentenceObj.first.english}
-			wrapperClass="!p-3"
-			className="!text-lg !font-medium"
-		/>
-		<RadioButton
-			text={sentenceObj.second.arabic}
-			value={sentenceObj.second.english}
-			isSelected={selected === sentenceObj.second.english}
-			onClick={handleClick}
-			selectableFor={sentenceObj.second.english}
-			wrapperClass="!p-3"
-			className="!text-lg !font-medium"
-		/>
-		<RadioButton
-			text={sentenceObj.third.arabic}
-			onClick={handleClick}
-			value={sentenceObj.third.english}
-			isSelected={selected === sentenceObj.third.english}
-			selectableFor={sentenceObj.third.english}
-			wrapperClass="!p-3"
-			className="!text-lg !font-medium"
-		/>
-		<RadioButton
-			text={sentenceObj.fourth.arabic}
-			value={sentenceObj.fourth.english}
-			isSelected={selected === sentenceObj.fourth.english}
-			selectableFor={sentenceObj.fourth.english}
-			onClick={handleClick}
-			wrapperClass="!p-3"
-			className="!text-lg !font-medium"
-		/>
+		{#each sentenceObj.options as opt, i (i)}
+			{@const isPicked = selected === opt.english}
+			<button
+				type="button"
+				onclick={() => handleClick(opt.english)}
+				aria-pressed={isPicked}
+				class="pick {isPicked ? 'is-on' : ''}"
+				style={isPicked
+					? isCorrect
+						? '--accent:#22c55e; --deep:#15803d;'
+						: '--accent:#f43f5e; --deep:#9f1239;'
+					: '--accent:#0ea5e9; --deep:#0369a1;'}
+				dir="rtl"
+			>
+				<span class="pick-text font-arabic">{opt.arabic}</span>
+			</button>
+		{/each}
 	</fieldset>
 {/if}
 </section>
+
+<style>
+	.toolbar {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.6rem;
+		margin-bottom: 1.25rem;
+	}
+
+	.chip {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.45rem 0.95rem;
+		border-radius: 100px;
+		font-size: 0.83rem;
+		font-weight: 600;
+		color: var(--text2);
+		background: var(--tile3);
+		border: 2px solid var(--tile5);
+		cursor: pointer;
+		transition:
+			transform 0.16s cubic-bezier(0.34, 1.56, 0.64, 1),
+			background 0.18s ease,
+			border-color 0.18s ease,
+			color 0.18s ease;
+	}
+	.chip:hover {
+		transform: translateY(-2px);
+		border-color: var(--tile6);
+		color: var(--text1);
+	}
+	.chip.is-on {
+		background: #0ea5e9;
+		border-color: #0369a1;
+		color: #fff;
+	}
+
+	/* Notes — tint carries the meaning, text stays on the theme's own ink */
+	.note {
+		font-size: 0.95rem;
+		line-height: 1.5;
+		font-weight: 600;
+		border-radius: 0.8rem;
+		padding: 0.7rem 0.95rem;
+		color: var(--text1);
+	}
+	.note--good {
+		background: color-mix(in srgb, #10b981 18%, var(--tile3));
+		box-shadow: inset 3px 0 0 #10b981;
+	}
+	.note--bad {
+		background: color-mix(in srgb, #f43f5e 18%, var(--tile3));
+		box-shadow: inset 3px 0 0 #f43f5e;
+	}
+
+	.prompt {
+		border-radius: 1.1rem;
+		border: 2px solid var(--tile5);
+		background: var(--tile3);
+		padding: 1.5rem 1.25rem;
+		text-align: center;
+	}
+	.prompt-text {
+		font-size: clamp(1.4rem, 4vw, 1.9rem);
+		font-weight: 600;
+		line-height: 1.3;
+		letter-spacing: -0.02em;
+		color: var(--text1);
+	}
+	.reveal {
+		margin-top: 0.9rem;
+		font-size: 1.05rem;
+		font-style: italic;
+		color: var(--text2);
+	}
+	.reveal--ar {
+		font-size: 1.6rem;
+		font-style: normal;
+		color: var(--text1);
+	}
+
+	.pick {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 4rem;
+		padding: 0.85rem 1rem;
+		border-radius: 1.1rem;
+		border: 2px solid var(--tile5);
+		background: var(--tile3);
+		cursor: pointer;
+		transition:
+			transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1),
+			border-color 0.18s ease,
+			box-shadow 0.18s ease,
+			background 0.18s ease;
+	}
+	.pick:hover {
+		transform: translateY(-3px);
+		border-color: var(--accent);
+		box-shadow: 0 6px 0 var(--deep);
+	}
+	.pick:active {
+		transform: translateY(1px);
+		box-shadow: 0 1px 0 var(--deep);
+	}
+	.pick.is-on {
+		border-color: var(--accent);
+		background: color-mix(in srgb, var(--accent) 14%, var(--tile3));
+		box-shadow: 0 4px 0 var(--deep);
+	}
+	.pick-text {
+		font-size: 1.3rem;
+		font-weight: 500;
+		line-height: 1.6;
+		color: var(--text1);
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.chip,
+		.pick {
+			transition: none;
+		}
+		.chip:hover,
+		.pick:hover {
+			transform: none;
+		}
+	}
+</style>
