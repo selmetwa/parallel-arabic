@@ -364,10 +364,10 @@
 	let hasReachedLimit = $derived(!data.isSubscribed && sentencesViewed >= 5);
 
 	const dialectOptions = [
-		{ value: 'egyptian-arabic', label: 'Egyptian Arabic', sub: 'Masri', flag: '🇪🇬' },
-		{ value: 'fusha', label: 'Modern Standard Arabic', sub: 'Fusha', flag: '📖' },
-		{ value: 'levantine', label: 'Levantine Arabic', sub: 'Shami', flag: '🇱🇧' },
-		{ value: 'darija', label: 'Moroccan Darija', sub: 'Darija', flag: '🇲🇦' }
+		{ value: 'egyptian-arabic', label: 'Egyptian Arabic', sub: 'Masri' },
+		{ value: 'fusha', label: 'Modern Standard Arabic', sub: 'Fusha' },
+		{ value: 'levantine', label: 'Levantine Arabic', sub: 'Shami' },
+		{ value: 'darija', label: 'Moroccan Darija', sub: 'Darija' }
 	];
 
 	const learningTopicOptions = [
@@ -397,7 +397,7 @@
 	// A plain-English read-out of the setup, shown beside the generate button.
 	let summaryLine = $derived(
 		[
-			`${activeDialect?.flag ?? ''} ${activeDialect?.sub ?? ''}`.trim(),
+			activeDialect?.sub,
 			activeLevel?.sublabel,
 			useReviewWordsOnly
 				? reviewWordsSource === 'all'
@@ -422,7 +422,6 @@
 
 {#if hasReachedLimit && data.session}
 	<div class="mx-auto max-w-lg px-5 py-16 text-center">
-		<div class="msg-emoji">🔒</div>
 		<h1 class="msg-title">You have reached your limit of 5 sentences.</h1>
 		<p class="msg-body">To continue practicing, please subscribe.</p>
 		<div class="mt-7 flex justify-center">
@@ -435,7 +434,6 @@
 
 {#if isError}
 	<div class="mx-auto max-w-lg px-5 pt-12 text-center">
-		<div class="msg-emoji">🙈</div>
 		<h1 class="msg-title">Generation Failed</h1>
 		<p class="msg-body">{errorMessage}</p>
 		<button
@@ -604,7 +602,7 @@
 								vocabularyFile = null;
 								fileError = '';
 							}}
-							class="seg {vocabularyInputMode === 'text' ? 'is-on' : ''}">✍️ Text</button
+							class="seg {vocabularyInputMode === 'text' ? 'is-on' : ''}">Text</button
 						>
 						<button
 							type="button"
@@ -612,7 +610,7 @@
 								vocabularyInputMode = 'file';
 								vocabularyWords = '';
 							}}
-							class="seg {vocabularyInputMode === 'file' ? 'is-on' : ''}">📂 File</button
+							class="seg {vocabularyInputMode === 'file' ? 'is-on' : ''}">File</button
 						>
 					</div>
 
@@ -698,7 +696,7 @@
 							class="press w-full px-7 py-3.5 sm:w-auto"
 							style="--accent:#22c55e; --deep:#15803d;"
 						>
-							<span aria-hidden="true">📝</span> Generate Sentences
+							Generate Sentences
 						</button>
 					{/if}
 				</div>
@@ -721,7 +719,6 @@
 	<div
 		class="mx-auto flex min-h-[70vh] max-w-lg flex-col items-center justify-center px-5 text-center"
 	>
-		<div class="bounce-emoji">✍️</div>
 		<h1 class="msg-title">Generating Sentences...</h1>
 		<p class="msg-body">
 			Creating {activeDialect?.label} sentences tailored to your level.
@@ -731,13 +728,10 @@
 			<div class="loading-sweep h-full w-1/3 rounded-full bg-emerald-500"></div>
 		</div>
 		<div class="tip">
-			<span class="tip-emoji" aria-hidden="true">💡</span>
-			<span>
-				<span class="tip-title">Pro Tip</span>
-				<span class="tip-body">
-					You can leave this page and continue using the app. We'll notify you when your sentences
-					are ready!
-				</span>
+			<span class="tip-title">Pro Tip</span>
+			<span class="tip-body">
+				You can leave this page and continue using the app. We'll notify you when your sentences
+				are ready!
 			</span>
 		</div>
 	</div>
@@ -768,7 +762,6 @@
 						{/each}
 					</div>
 					<span class="progress-label">
-						{activeDialect?.flag}
 						Sentence {session.index + 1} of {session.sentences.length}
 					</span>
 				</div>
@@ -810,15 +803,15 @@
 			</div>
 		</header>
 
-		<main class="flex-grow bg-tile-300">
+		<main class="flex-grow">
 			{#if mode === 'write'}
-				<section class="mx-auto max-w-7xl px-4 py-8 sm:px-8">
+				<section class="mx-auto max-w-3xl px-5 py-8">
 					<SentenceBlock {sentence} {resetSentences} dialect={selectedDialect as Dialect} {next} />
 				</section>
 			{/if}
 
 			{#if mode === 'quiz'}
-				<section class="mx-auto max-w-7xl px-4 py-8 sm:px-8">
+				<section class="mx-auto max-w-3xl px-5 py-8">
 					<SentenceQuiz
 						sentences={session.sentences}
 						index={session.index}
@@ -1335,19 +1328,6 @@
 	}
 
 	/* Message states */
-	.msg-emoji {
-		font-size: 3.5rem;
-		line-height: 1;
-		margin-bottom: 1rem;
-	}
-
-	.bounce-emoji {
-		font-size: 3.5rem;
-		line-height: 1;
-		margin-bottom: 1rem;
-		animation: bob 1.3s ease-in-out infinite;
-	}
-
 	.msg-title {
 		font-size: 1.7rem;
 		font-weight: 600;
@@ -1363,9 +1343,7 @@
 	}
 
 	.tip {
-		display: flex;
-		align-items: flex-start;
-		gap: 0.7rem;
+		display: block;
 		margin-top: 1.75rem;
 		width: 100%;
 		text-align: left;
@@ -1373,12 +1351,6 @@
 		border: 2px solid var(--tile5);
 		background: var(--tile3);
 		padding: 0.9rem 1rem;
-	}
-
-	.tip-emoji {
-		font-size: 1.25rem;
-		line-height: 1.2;
-		flex-shrink: 0;
 	}
 
 	.tip-title {
@@ -1483,16 +1455,6 @@
 		}
 	}
 
-	@keyframes bob {
-		0%,
-		100% {
-			transform: translateY(0) rotate(-4deg);
-		}
-		50% {
-			transform: translateY(-10px) rotate(4deg);
-		}
-	}
-
 	@keyframes pop {
 		from {
 			opacity: 0;
@@ -1506,9 +1468,6 @@
 
 	@media (prefers-reduced-motion: reduce) {
 		.block {
-			animation: none;
-		}
-		.bounce-emoji {
 			animation: none;
 		}
 		.loading-sweep {

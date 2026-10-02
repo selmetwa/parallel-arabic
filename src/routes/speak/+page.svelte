@@ -386,7 +386,7 @@
 	// A plain-English read-out of the setup, so the button says what it will do.
 	let summaryLine = $derived(
 		[
-			`${activeDialect?.flag ?? ''} ${activeDialect?.sub ?? ''}`.trim(),
+			activeDialect?.sub,
 			activeLevel?.sublabel,
 			useReviewWordsOnly
 				? reviewWordsSource === 'all'
@@ -407,7 +407,6 @@
 	{#if hasReachedLimit && data.session}
 		<!-- Daily limit reached -->
 		<div class="mx-auto max-w-lg px-5 py-16 text-center">
-			<div class="msg-emoji">🔒</div>
 			<h1 class="msg-title">Free Limit Reached</h1>
 			<p class="msg-body">
 				You've practiced 5 sentences today. Subscribe to unlock unlimited speaking practice and
@@ -423,7 +422,6 @@
 	{:else if isError}
 		<!-- Error -->
 		<div class="mx-auto max-w-lg px-5 py-16 text-center">
-			<div class="msg-emoji">🙈</div>
 			<h1 class="msg-title">Generation Failed</h1>
 			<p class="msg-body">{errorMessage}</p>
 			<button
@@ -442,7 +440,6 @@
 		<div
 			class="mx-auto flex min-h-[70vh] max-w-lg flex-col items-center justify-center px-5 text-center"
 		>
-			<div class="bounce-emoji">✍️</div>
 			<h1 class="msg-title">Generating Your Sentences</h1>
 			<p class="msg-body">
 				Creating personalized {activeDialect?.label} practice… this may take up to 30 seconds.
@@ -627,7 +624,7 @@
 									vocabularyFile = null;
 									fileError = '';
 								}}
-								class="seg {vocabularyInputMode === 'text' ? 'is-on' : ''}">✍️ Text</button
+								class="seg {vocabularyInputMode === 'text' ? 'is-on' : ''}">Text</button
 							>
 							<button
 								type="button"
@@ -635,7 +632,7 @@
 									vocabularyInputMode = 'file';
 									vocabularyWords = '';
 								}}
-								class="seg {vocabularyInputMode === 'file' ? 'is-on' : ''}">📂 File</button
+								class="seg {vocabularyInputMode === 'file' ? 'is-on' : ''}">File</button
 							>
 						</div>
 
@@ -688,7 +685,7 @@
 								class="press w-full px-7 py-3.5 sm:w-auto"
 								style="--accent:#22c55e; --deep:#15803d;"
 							>
-								<span aria-hidden="true">🎙️</span> Generate Speaking Sentences
+								Generate Speaking Sentences
 							</button>
 						{/if}
 					</div>
@@ -755,7 +752,6 @@
 						{/each}
 					</div>
 					<span class="progress-label">
-						{activeDialect?.flag}
 						{session.index + 1} of {session.sentences.length}
 					</span>
 				</div>
@@ -791,7 +787,9 @@
 			</div>
 		</header>
 
-		<SpeakSentence {sentence} {resetSentences} dialect={selectedDialect as Dialect} />
+		<div class="mx-auto max-w-3xl px-5 py-8">
+			<SpeakSentence {sentence} {resetSentences} dialect={selectedDialect as Dialect} />
+		</div>
 	{/if}
 </section>
 
@@ -1359,19 +1357,6 @@
 	}
 
 	/* Message states */
-	.msg-emoji {
-		font-size: 3.5rem;
-		line-height: 1;
-		margin-bottom: 1rem;
-	}
-
-	.bounce-emoji {
-		font-size: 3.5rem;
-		line-height: 1;
-		margin-bottom: 1rem;
-		animation: bob 1.3s ease-in-out infinite;
-	}
-
 	.msg-title {
 		font-size: 1.7rem;
 		font-weight: 600;
@@ -1469,16 +1454,6 @@
 		}
 	}
 
-	@keyframes bob {
-		0%,
-		100% {
-			transform: translateY(0) rotate(-4deg);
-		}
-		50% {
-			transform: translateY(-10px) rotate(4deg);
-		}
-	}
-
 	@keyframes pop {
 		from {
 			opacity: 0;
@@ -1493,9 +1468,6 @@
 	@media (prefers-reduced-motion: reduce) {
 		.block,
 		.pick-check {
-			animation: none;
-		}
-		.bounce-emoji {
 			animation: none;
 		}
 		.loading-sweep {

@@ -265,6 +265,8 @@ export const POST: RequestHandler = async ({ request }) => {
 
     REMEMBER: Maximum 2 sentences per topic area. Ensure diverse themes across all 5 sentences.
 
+    All 5 sentences must be distinct from each other: no two may share the same Arabic text or the same English translation. They are shown side by side as multiple-choice options, so duplicates make a question unanswerable.
+
     Can you make sure each sentence follows this format
     {
 		  arabic: string; (no diacritics)
