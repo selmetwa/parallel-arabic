@@ -104,6 +104,9 @@ export class RoomScene {
 	private templates = new Map<string, Promise<Three.Group>>();
 	private characterModels = new Map<string, Promise<{ scene: Three.Group; clips: Three.AnimationClip[] }>>();
 	private characters = new Map<string, Character>();
+	private vehicles = new Map<string, Three.Group>();
+	/** The vehicle the camera rides behind, and where behind it (in its own space). */
+	private following: { key: string; offset: Three.Vector3 } | null = null;
 	private spawned: Three.Group[] = [];
 	private hidden = new Set<string>();
 	private clock: Three.Clock;
@@ -382,13 +385,12 @@ export class RoomScene {
 	}
 
 	/**
-	 * Puts a copy of one of the room's objects somewhere new, popping in. Used
-	 * for dishes the waiter brings; `clearSpawned` takes them all away.
+	 * Puts a model somewhere in the room, popping in. Used for things handed
+	 * over in a scenario; `clearSpawned` takes them all away.
 	 */
-	async spawn(id: string, placement: Placement) {
-		const object = this.room?.objects.find((o) => o.id === id);
-		if (!object || !this.roomGroup) return;
-		const template = await this.template(object.model);
+	async spawn(url: string, placement: Placement) {
+		const template = await this.template(url);
+		if (!this.roomGroup) return;
 		const { group } = this.place(template, placement);
 		this.roomGroup.add(group);
 		this.spawned.push(group);
@@ -549,9 +551,97 @@ export class RoomScene {
 		this.invalidate();
 	}
 
+	// --- vehicles --------------------------------------------------------------
+
+	/** Adds a vehicle (a Kenney car; they face +z) to the room. */
+	async addVehicle(key: string, url: string, placement: Placement) {
+		const template = await this.template(url);
+		this.removeVehicle(key);
+		const { group } = this.place(template, placement);
+		this.scene.add(group);
+		this.vehicles.set(key, group);
+		this.invalidate();
+	}
+
+	removeVehicle(key: string) {
+		const group = this.vehicles.get(key);
+		if (!group) return;
+		if (this.following?.key === key) this.following = null;
+		group.removeFromParent();
+		group.traverse((node) => {
+			const mesh = node as Three.Mesh;
+			if (mesh.isMesh) for (const m of [mesh.material].flat()) m.dispose();
+		});
+		this.vehicles.delete(key);
+		this.invalidate();
+	}
+
+	clearVehicles() {
+		for (const key of [...this.vehicles.keys()]) this.removeVehicle(key);
+	}
+
+	/**
+	 * Rides the camera behind a vehicle, `offset` metres in its own space
+	 * (behind is -z), looking the way it goes. `null` lets go of the camera;
+	 * follow with `setPose` to put it somewhere.
+	 */
+	followVehicle(key: string | null, offset: [number, number, number] = [0, 3, -7]) {
+		this.following = key ? { key, offset: new this.THREE.Vector3(...offset) } : null;
+		if (key) this.pitch = -0.2;
+		this.invalidate();
+	}
+
+	/**
+	 * Drives a vehicle through points on the road, turning smoothly into each
+	 * leg and slowing down for the last one.
+	 */
+	driveVehicle(key: string, path: [number, number][], speed = 7) {
+		const group = this.vehicles.get(key);
+		if (!group || !path.length) return Promise.resolve();
+		const THREE = this.THREE;
+		let chain = Promise.resolve();
+		let from = group.position.clone();
+		let heading = group.rotation.y;
+		path.forEach(([x, z], i) => {
+			const start = from;
+			const end = new THREE.Vector3(x, group.position.y, z);
+			const startHeading = heading;
+			let endHeading = Math.atan2(end.x - start.x, end.z - start.z);
+			while (endHeading - startHeading > Math.PI) endHeading -= Math.PI * 2;
+			while (endHeading - startHeading < -Math.PI) endHeading += Math.PI * 2;
+			const last = i === path.length - 1;
+			const duration = (start.distanceTo(end) / speed) * 1000 * (last ? 1.6 : 1);
+			chain = chain.then(
+				() =>
+					new Promise<void>((resolve) => {
+						if (this.reducedMotion || duration < 1) {
+							group.position.copy(end);
+							group.rotation.y = endHeading;
+							return resolve();
+						}
+						this.animate(
+							duration,
+							(t) => {
+								// Ease out on the last leg, so the car pulls up rather than stops dead.
+								const e = last ? 1 - Math.pow(1 - t, 2) : t;
+								group.position.lerpVectors(start, end, e);
+								const turn = Math.min(1, t / Math.min(1, 400 / duration));
+								group.rotation.y = startHeading + (endHeading - startHeading) * turn;
+							},
+							resolve
+						);
+					})
+			);
+			from = end;
+			heading = endHeading;
+		});
+		return chain;
+	}
+
 	dispose() {
 		this.loadToken++;
 		this.clearCharacters();
+		this.clearVehicles();
 		// Late calls (an overlay tidying up after us) must not draw with a freed renderer.
 		this.disposed = true;
 		cancelAnimationFrame(this.frame);
@@ -629,6 +719,18 @@ export class RoomScene {
 		const h = room.height;
 		const shell = new THREE.Group();
 		const floorMat = new THREE.MeshStandardMaterial({ color: room.colors.floor, roughness: 1 });
+
+		// Outdoors: ground to the horizon and a sky, with a haze that hides the edge.
+		this.scene.background = room.outdoor ? new THREE.Color(room.colors.wall) : null;
+		this.scene.fog = room.outdoor ? new THREE.Fog(room.colors.wall, 25, Math.max(w, d) * 0.7) : null;
+		this.camera.far = room.outdoor ? Math.max(w, d) : 50;
+		this.camera.updateProjectionMatrix();
+		if (room.outdoor) {
+			const ground = new THREE.Mesh(new THREE.PlaneGeometry(w, d), floorMat);
+			ground.rotation.x = -Math.PI / 2;
+			shell.add(ground);
+			return shell;
+		}
 		const wallMat = new THREE.MeshStandardMaterial({ color: room.colors.wall, roughness: 1 });
 		const ceilingMat = new THREE.MeshStandardMaterial({ color: '#fbf8f3', roughness: 1 });
 
@@ -706,6 +808,7 @@ export class RoomScene {
 		this.tweens = [];
 		// Spawned copies lived in the room group and were freed with it.
 		this.spawned = [];
+		this.clearVehicles();
 		this.hidden.clear();
 	}
 
@@ -885,6 +988,15 @@ export class RoomScene {
 
 		const delta = this.clock.getDelta();
 		for (const character of this.characters.values()) character.mixer.update(delta);
+
+		const followed = this.following && this.vehicles.get(this.following.key);
+		if (followed) {
+			// Offset in metres, turned with the car but not scaled with it.
+			const offset = this.following!.offset.clone().applyAxisAngle(this.camera.up, followed.rotation.y);
+			this.camera.position.copy(followed.position).add(offset);
+			// The camera looks down -z at yaw 0; the car goes +z in its own space.
+			this.yaw = followed.rotation.y + Math.PI;
+		}
 
 		this.camera.rotation.set(this.pitch, this.yaw, 0);
 		this.renderer.render(this.scene, this.camera);

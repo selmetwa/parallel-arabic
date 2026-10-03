@@ -18,7 +18,7 @@
 	let dialect = $state<GameDialect>(
 		untrack(() => initialDialect(page.url.searchParams.get('dialect'), data.targetDialect))
 	);
-	let roomId = $state<RoomId>(getRoom(page.url.searchParams.get('room') ?? '').id);
+	let roomId = $state<RoomId>(getRoom(page.url.searchParams.get('room') ?? '').id as RoomId);
 	let level = $state<Level>('normal');
 	let mode = $state<Mode>('find');
 	/** Learned words per room, for the current dialect. Read after mount. */
@@ -138,7 +138,7 @@
 			isSubscribed={!!data.isSubscribed}
 			accent={game.accent}
 			deep={game.deep}
-			onNextRoom={nextRoom ? () => (roomId = nextRoom.id) : undefined}
+			onNextRoom={nextRoom ? () => (roomId = nextRoom.id as RoomId) : undefined}
 		/>
 	{/key}
 </GameShell>
