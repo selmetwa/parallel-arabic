@@ -131,6 +131,18 @@ const SHOTS: Shot[] = [
 		prepare: startRound
 	},
 	{
+		name: 'game-room-hunt',
+		path: '/learn/game/room-hunt?room=kitchen&dialect=egyptian-arabic',
+		// The lesson runs fullscreen, so the viewport is the shot.
+		viewport: { width: 1280, height: 730 },
+		prepare: async (page) => {
+			await page.getByText(/Setting up the/).waitFor({ state: 'detached', timeout: 60_000 });
+			await page.getByRole('button', { name: /^(Start|Practice)/ }).click();
+			// Let the view turn to the first glowing object and its name play.
+			await page.waitForTimeout(2500);
+		}
+	},
+	{
 		name: 'game-quiz',
 		path: '/learn/game/quiz',
 		// The quiz starts on its own page, /learn/game/play.
@@ -186,7 +198,11 @@ async function main() {
 	mkdirSync(dirname(AUTH_FILE), { recursive: true });
 
 	// The installed Chrome: Playwright's bundled Chromium here is too old for current macOS.
-	const browser = await chromium.launch({ channel: 'chrome' });
+	// Headless Chrome has WebGL off; software rendering is enough for Room Hunt's 3D rooms.
+	const browser = await chromium.launch({
+		channel: 'chrome',
+		args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist']
+	});
 	const context = await browser.newContext({
 		viewport: DESKTOP,
 		deviceScaleFactor: 2,
