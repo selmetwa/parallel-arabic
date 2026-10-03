@@ -176,9 +176,13 @@
 	$effect(() => {
 		if (!immersive) return;
 		const prev = document.body.style.overflow;
+		const prevOverscroll = document.documentElement.style.overscrollBehavior;
 		document.body.style.overflow = 'hidden';
+		// No pull-to-refresh or rubber-banding when a drag starts on the HUD.
+		document.documentElement.style.overscrollBehavior = 'none';
 		return () => {
 			document.body.style.overflow = prev;
+			document.documentElement.style.overscrollBehavior = prevOverscroll;
 		};
 	});
 
@@ -257,9 +261,15 @@
 		immersive = true;
 		// Real fullscreen where the browser allows it (not iPhone Safari); the
 		// fixed overlay covers the page either way.
-		container?.requestFullscreen?.({ navigationUI: 'hide' }).catch(() => {});
+		// Phones and the app skip it: there a swipe from the top edge ends browser
+		// fullscreen, and that would throw the player out of the round mid-drag.
+		if (!touchDevice()) container?.requestFullscreen?.({ navigationUI: 'hide' }).catch(() => {});
 		requestAnimationFrame(() => container?.querySelector<HTMLElement>('.viewport')?.focus());
 		scene?.refresh();
+	}
+
+	function touchDevice() {
+		return window.matchMedia('(pointer: coarse)').matches;
 	}
 
 	function exitImmersive() {
@@ -871,6 +881,9 @@
 	.hunt.immersive {
 		position: fixed;
 		inset: 0;
+		/* Drags on the HUD must not scroll or bounce the page underneath. */
+		touch-action: none;
+		overscroll-behavior: none;
 		z-index: 1000;
 		display: block;
 		background: #000;
@@ -1218,6 +1231,8 @@
 		inset: 0;
 		overflow-y: auto;
 		overscroll-behavior: contain;
+		/* The game blocks touch scrolling; the results still need it. */
+		touch-action: pan-y;
 		padding: 4.5rem 0.75rem max(1.5rem, env(safe-area-inset-bottom));
 		background: rgb(0 0 0 / 0.45);
 	}
