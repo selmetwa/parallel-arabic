@@ -26,6 +26,8 @@ export interface FeatureShot {
 	w: number;
 	h: number;
 	alt: string;
+	/** A screen recording to play in place of the image (which becomes its poster). */
+	video?: string;
 }
 
 export interface FeatureSection {
@@ -51,11 +53,12 @@ export interface FeatureInfo {
 	faqs: Faq[];
 }
 
-const shot = (name: string, w: number, h: number, alt: string): FeatureShot => ({
+const shot = (name: string, w: number, h: number, alt: string, video?: string): FeatureShot => ({
 	src: `/images/feature-pages/${name}.webp`,
 	w,
 	h,
-	alt
+	alt,
+	...(video && { video: `/images/feature-pages/${video}.mp4` })
 });
 
 export const FEATURES: FeatureInfo[] = [
@@ -651,6 +654,122 @@ export const FEATURES: FeatureInfo[] = [
 			{
 				question: 'Is the word bank free?',
 				answer: 'Yes. Saving words and seeing them all in one place is part of the free plan.'
+			}
+		]
+	},
+	{
+		// /learn/game/room-hunt ranks for the game itself; this page is for
+		// "learn Arabic in 3D" and "order food in Arabic".
+		slug: 'learn-arabic-in-3d',
+		name: 'Room Hunt 3D',
+		emoji: '🏠',
+		heading: 'Learn Arabic in 3D: words around the house, and ordering a meal',
+		lede: 'Step into a 3D kitchen, bathroom or restaurant. Learn what everything is called in your dialect, find things when you hear "Where is the…?", then sit down and order dinner from a waiter, in Arabic.',
+		blurb: 'Learn household words in 3D rooms and order dinner from a waiter.',
+		seo: {
+			title: 'Learn Arabic in 3D: Home Words & Ordering Food | Parallel Arabic',
+			description:
+				'Learn the Arabic for things in the kitchen, bathroom and restaurant inside a 3D room, then order a meal from a waiter. Egyptian, Levantine, Darija and Fusha.'
+		},
+		hero: shot(
+			'room-hunt-order-served',
+			2560,
+			1440,
+			'Ordering a meal in Room Hunt: the waiter says "Here you go, enjoy your meal" in Egyptian Arabic with transliteration and English, and the fish and tea you ordered are on the table',
+			'room-hunt-order'
+		),
+		sections: [
+			{
+				title: 'Four new words at a time',
+				body: 'Each lesson teaches four things in the room. The view turns to each one, it glows, you hear its name and see it written, and you tap it to move on. A kitchen takes four short lessons, not one long list.',
+				shot: shot(
+					'room-hunt-learn',
+					2560,
+					1440,
+					'A Room Hunt lesson teaching the Egyptian word for stove, بوتاجاز, with the stove glowing',
+					'room-hunt-lesson'
+				)
+			},
+			{
+				title: '"Where is the stove?"',
+				body: 'Then the game asks for them, mixed with words you already know, the way someone would ask: فين البوتاجاز؟ in Cairo, وين الغاز؟ in Beirut. You find it and tap it. Every question is recorded, so you hear it as well as read it.',
+				shot: shot(
+					'room-hunt-find',
+					2560,
+					1440,
+					'A Find it question in the kitchen: "Where is the stove?" in Egyptian Arabic, with transliteration and English'
+				)
+			},
+			{
+				title: 'Wrong taps still teach you something',
+				body: 'Tap the wrong thing and it tells you what you tapped, so a miss is one more word. Miss twice and the right object glows. Anything you missed comes back a few questions later, while it is fresh.',
+				shot: shot(
+					'room-hunt-hint',
+					2560,
+					1440,
+					'After two wrong taps, the stove glows amber and the card says the last tap was the cupboard'
+				)
+			},
+			{
+				title: 'Name it, or say it',
+				body: 'Switch to Name it and the game turns it around: an object glows and you pick its name from four, or press the microphone and say it out loud.',
+				shot: shot(
+					'room-hunt-name',
+					2560,
+					1440,
+					'Name it mode in the bathroom: the washing machine glows and four Egyptian Arabic words are offered, with a Say it button'
+				)
+			},
+			{
+				title: 'Order a meal from the waiter',
+				body: 'In the restaurant you can sit down and order. The waiter walks over and talks to you in your dialect, with the Arabic, transliteration and English on screen. You answer by picking a reply or saying it. Some replies fit the moment and some do not, like asking for the bill before you have sat down.',
+				shot: shot(
+					'room-hunt-order-waiter',
+					2560,
+					1440,
+					'The waiter welcomes you to the restaurant in Egyptian Arabic while you reply شكرا'
+				)
+			},
+			{
+				title: 'You get what you ordered',
+				body: 'Tea or water, fish, chicken or soup, cake or no cake: the waiter goes to the kitchen and brings exactly that to your table. At the end you get the bill, your order in Arabic, and every phrase you used, ready to save.',
+				shot: shot(
+					'room-hunt-order-receipt',
+					2560,
+					1440,
+					'The end of the meal: your order in Arabic (tea, fish, cake) and the phrases you used, each with audio and a save button'
+				)
+			},
+			{
+				title: 'Four dialects, every word recorded',
+				body: 'Egyptian, Levantine, Moroccan Darija and Modern Standard Arabic each use their own words: the fridge is a tallaga in Cairo and a barrad in Beirut. Every word, question and line of the waiter has a recording.'
+			},
+			{
+				title: 'Easy, Normal or Hard',
+				body: 'Easy shows the English and points the way. Normal keeps the Arabic and transliteration. Hard is listening only: you hear the question and the words appear after you answer.'
+			}
+		],
+		app: { href: '/learn/game/room-hunt', label: 'Step into the kitchen' },
+		faqs: [
+			{
+				question: 'Is Room Hunt a real 3D game?',
+				answer:
+					'Yes. It runs in your browser with no download. You stand in the middle of a room and drag to look around, or use the arrow keys, and it goes fullscreen when a lesson starts.'
+			},
+			{
+				question: 'What do I say to the waiter?',
+				answer:
+					'You greet them, order a drink and a main, answer when they ask about dessert, ask for the bill and say goodbye. Each turn offers a few replies; pick one or say it. The lines change with your dialect.'
+			},
+			{
+				question: 'Does it work on a phone?',
+				answer:
+					'Yes. Drag with one finger to look around and tap to choose. The rooms are small, so they load quickly on mobile data.'
+			},
+			{
+				question: 'How many words does it teach?',
+				answer:
+					'Thirty-nine everyday things across the three rooms, from the fridge and the sink to forks, bread and tea, plus about twenty restaurant phrases.'
 			}
 		]
 	},

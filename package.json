@@ -43,7 +43,11 @@
     "cap:run:android": "npm run cap:sync && npx cap run android",
     "generate:phrases": "vite-node scripts/generate-phrases.ts",
     "build:words": "vite-node scripts/build-word-pages.ts",
-    "build:vocab": "vite-node scripts/build-vocab-topics.ts"
+    "build:vocab": "vite-node scripts/build-vocab-topics.ts",
+    "generate:room-hunt": "vite-node scripts/generate-room-hunt-vocab.ts",
+    "generate:room-hunt-audio": "vite-node scripts/generate-room-hunt-audio.ts",
+    "generate:room-hunt-scenario": "vite-node scripts/generate-room-hunt-scenario.ts",
+    "screenshots:room-hunt": "vite-node scripts/capture-room-hunt-media.ts"
   },
   "devDependencies": {
     "@capacitor/assets": "^3.0.5",
@@ -63,6 +67,7 @@
     "@types/howler": "^2.2.12",
     "@types/moment": "^2.13.0",
     "@types/nodemailer": "^6.4.17",
+    "@types/three": "^0.186.0",
     "@types/uuid": "^9.0.8",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
@@ -132,6 +137,7 @@
     "stripe": "^16.6.0",
     "svelte-heatmap": "^1.0.2",
     "svelte-sonner": "^1.0.5",
+    "three": "^0.186.1",
     "ts-node": "^10.9.2",
     "uuid": "^9.0.1",
     "youtube-transcript": "^1.2.1",

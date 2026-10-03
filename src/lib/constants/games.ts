@@ -38,6 +38,63 @@ export interface GameInfo {
 
 export const GAMES: GameInfo[] = [
 	{
+		slug: 'room-hunt',
+		name: 'Room Hunt',
+		heading: 'Arabic Room Hunt: Find the Object',
+		emoji: '🏠',
+		tagline: 'Step into a 3D kitchen, bathroom or restaurant and learn what everything is called.',
+		skills: ['Vocabulary', 'Listening', 'Speaking'],
+		levels: 'Beginner',
+		accent: '#f59e0b',
+		deep: '#b45309',
+		shot: {
+			src: '/images/feature-pages/game-room-hunt.webp',
+			w: 2560,
+			h: 1460,
+			alt: 'A Room Hunt lesson: a 3D kitchen with the fridge labelled تلاجة and a card teaching the word'
+		},
+		seo: {
+			title: 'Arabic Room Hunt - Learn Household Words in 3D | Parallel Arabic',
+			description:
+				'Look around a 3D kitchen, bathroom and restaurant and tap the object that matches the Arabic word. Egyptian, Levantine, Darija and Fusha.'
+		},
+		intro:
+			'A vocabulary game set in real rooms. Step into a kitchen, a bathroom or a restaurant and learn what everything is called, a few words at a time, then find each thing when you hear "Where is the…?" in your dialect.',
+		howToPlay: [
+			'Pick a dialect and a room. Drag to look around, or use the arrow keys. Tap anything to hear its name.',
+			'Start a lesson and the game goes fullscreen. It teaches four new words: each object glows, says its name, and you tap it to move on.',
+			'Then it asks for them, mixed with words you already know. In Find it you tap the object; in Name it you pick or say its name.',
+			'Miss one and it comes back a few questions later. Miss twice and the answer glows, but that one earns no XP.'
+		],
+		faqs: [
+			{
+				question: 'Which words does Room Hunt teach?',
+				answer:
+					'Everyday things around the house and at a meal out: the fridge, the stove, the sink, the mirror, plates, forks, bread, tea. Each dialect uses its own word, so the fridge is a tallaga in Cairo and a barrad in Beirut.'
+			},
+			{
+				question: 'Does it work on a phone?',
+				answer:
+					'Yes. Drag with one finger to look around and tap to choose. The room loads once, and small things like forks have a generous tap area.'
+			},
+			{
+				question: 'What do Easy, Normal and Hard change?',
+				answer:
+					'Easy shows the Arabic, the transliteration and the English, and an arrow points the way. Normal drops the English. Hard is listening only: you hear the question and find the object, and the words appear after you answer.'
+			},
+			{
+				question: 'Can I practise ordering food in Arabic?',
+				answer:
+					'Yes. In the restaurant, choose Order a meal. You sit at a table and a waiter takes your order in your dialect: greet them, order a drink and a main, decide on dessert and ask for the bill. Whatever you order is brought to your table.'
+			},
+			{
+				question: 'Can I practise speaking in Room Hunt?',
+				answer:
+					'Yes. In Name it mode an object glows and you can tap the microphone and say its name instead of picking from the list. Every word also has a recording you can replay as often as you like.'
+			}
+		]
+	},
+	{
 		slug: 'word-scramble',
 		name: 'Word Scramble',
 		heading: 'Arabic Word Scramble',
