@@ -157,7 +157,9 @@
 			});
 
 		function onFullscreenChange() {
-			if (!document.fullscreenElement && immersive) exitImmersive();
+			// Desktop only: Escape ends browser fullscreen, and that should leave the
+			// round too. A touch gesture ending it must never throw the player out.
+			if (!document.fullscreenElement && immersive && !touchDevice()) exitImmersive();
 		}
 		document.addEventListener('fullscreenchange', onFullscreenChange);
 
@@ -261,15 +263,16 @@
 		immersive = true;
 		// Real fullscreen where the browser allows it (not iPhone Safari); the
 		// fixed overlay covers the page either way.
-		// Phones and the app skip it: there a swipe from the top edge ends browser
-		// fullscreen, and that would throw the player out of the round mid-drag.
+		// Touch devices skip it: on iOS a swipe down, and on Android a swipe from
+		// the top edge, ends browser fullscreen, which would end the round mid-drag.
 		if (!touchDevice()) container?.requestFullscreen?.({ navigationUI: 'hide' }).catch(() => {});
 		requestAnimationFrame(() => container?.querySelector<HTMLElement>('.viewport')?.focus());
 		scene?.refresh();
 	}
 
+	/** Any touchscreen, including an iPad with a trackpad attached. */
 	function touchDevice() {
-		return window.matchMedia('(pointer: coarse)').matches;
+		return window.matchMedia('(any-pointer: coarse)').matches;
 	}
 
 	function exitImmersive() {
