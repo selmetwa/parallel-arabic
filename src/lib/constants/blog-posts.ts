@@ -11,6 +11,14 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 	{
+		slug: 'ordering-food-in-arabic-3d',
+		title: 'I built a 3D restaurant to practise ordering food in Arabic',
+		description:
+			'Room Hunt teaches the Arabic for things in a kitchen, a bathroom and a restaurant, four words at a time, then sits you down with a waiter who brings whatever you order. In Egyptian, Levantine, Darija and Fusha.',
+		date: '2026-10-03',
+		readingTime: '6 min read'
+	},
+	{
 		slug: 'learning-arabic-with-ai',
 		title: 'Learning Arabic with AI: how the tutor actually works',
 		description:

@@ -16,15 +16,31 @@
 {#snippet screenshot(shot: FeatureShot, eager = false)}
 	<figure class="frame">
 		<span class="frame-bar" aria-hidden="true"><i></i><i></i><i></i></span>
-		<img
-			src={shot.src}
-			width={shot.w}
-			height={shot.h}
-			alt={shot.alt}
-			loading={eager ? 'eager' : 'lazy'}
-			fetchpriority={eager ? 'high' : 'auto'}
-			decoding="async"
-		/>
+		{#if shot.video}
+			<!-- Silent screen recordings: muted, so browsers let them autoplay. -->
+			<video
+				src={shot.video}
+				poster={shot.src}
+				width={shot.w}
+				height={shot.h}
+				aria-label={shot.alt}
+				autoplay
+				muted
+				loop
+				playsinline
+				preload={eager ? 'auto' : 'metadata'}
+			></video>
+		{:else}
+			<img
+				src={shot.src}
+				width={shot.w}
+				height={shot.h}
+				alt={shot.alt}
+				loading={eager ? 'eager' : 'lazy'}
+				fetchpriority={eager ? 'high' : 'auto'}
+				decoding="async"
+			/>
+		{/if}
 	</figure>
 {/snippet}
 
@@ -233,7 +249,8 @@
 		border-radius: 50%;
 		background: var(--tile6);
 	}
-	.frame img {
+	.frame img,
+	.frame video {
 		display: block;
 		width: 100%;
 		height: auto;
