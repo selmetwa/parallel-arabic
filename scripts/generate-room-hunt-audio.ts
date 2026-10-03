@@ -4,8 +4,8 @@
  * plays audio for everyone without spending text-to-speech calls.
  *
  * Writes static/games/room-hunt/audio/<dialect>/<id>.mp3 (the word),
- * <id>.q.mp3 (the question) and order/<line>.mp3 (the "Order a meal"
- * conversation, the waiter in a second voice). Existing files are kept unless --regenerate, so
+ * <id>.q.mp3 (the question) and <scenario>/<line>.mp3 for every scenario
+ * (the other person in a second voice, matching their gender). Existing files are kept unless --regenerate, so
  * after a hand fix in vocab.json, delete that word's files and run again.
  *
  * Usage:
@@ -21,8 +21,7 @@ import { existsSync, mkdirSync, writeFileSync } from 'fs';
 import { getVoiceConfig } from '../src/lib/utils/voice-config';
 import { GAME_DIALECTS } from '../src/lib/games/themes';
 import vocab from '../src/lib/games/room-hunt/vocab.json';
-import orderLines from '../src/lib/games/room-hunt/order-lines.json';
-import { ORDER_LINES } from '../src/lib/games/room-hunt/order';
+import { SCENARIOS } from '../src/lib/games/room-hunt/scenarios/index';
 import type { GameDialect } from '../src/lib/games/themes';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -35,12 +34,16 @@ const CONCURRENCY = 4;
 
 type Entry = { arabic: string; question?: string };
 
-/** The waiter's voice: unlike the player's, and the same gender as the waiter model (WAITER in order.ts). */
-const WAITER_VOICE: Record<GameDialect, string> = {
-	'egyptian-arabic': 'Haytham - Conversation',
-	levantine: 'Sara – The Premium Humanlike Arabic Voice | سارة – الصوت العربي الواقعي الفاخر',
-	darija: 'Jawad - Natural and Conversational',
-	fusha: 'Adam - Warm & Classic'
+/**
+ * The other person's voice: never the player's, and the same gender as the
+ * scenario says (npcGender), which its Arabic agrees with. Only the genders a
+ * dialect has a second voice for are listed; the tests keep npcGender to them.
+ */
+const NPC_VOICE: Record<GameDialect, Partial<Record<'m' | 'f', string>>> = {
+	'egyptian-arabic': { m: 'Haytham - Conversation', f: 'Hoda' },
+	levantine: { f: 'Sara – The Premium Humanlike Arabic Voice | سارة – الصوت العربي الواقعي الفاخر' },
+	darija: { m: 'Jawad - Natural and Conversational' },
+	fusha: { m: 'Adam - Warm & Classic' }
 };
 
 async function main() {
@@ -76,19 +79,23 @@ async function main() {
 			}
 		}
 
-		mkdirSync(join(dir, 'order'), { recursive: true });
-		for (const [id, byDialect] of Object.entries(orderLines as Record<string, Record<string, Entry>>)) {
-			const entry = byDialect[dialect];
-			const file = join(dir, 'order', `${id}.mp3`);
-			if (!entry || (!regenerate && existsSync(file))) continue;
-			jobs.push({
-				file,
-				// Keep the question mark here: these are whole sentences, and it shapes the intonation.
-				text: entry.arabic,
-				voice: ORDER_LINES[id].speaker === 'waiter' ? WAITER_VOICE[dialect] : voice.voice,
-				stability: voice.stability,
-				similarity: voice.similarity_boost
-			});
+		for (const { scenario } of SCENARIOS) {
+			const npcVoice = NPC_VOICE[dialect][scenario.npcGender[dialect]];
+			if (!npcVoice) throw new Error(`${scenario.id}: no ${scenario.npcGender[dialect]} voice for ${dialect}`);
+			mkdirSync(join(dir, scenario.id), { recursive: true });
+			for (const [id, byDialect] of Object.entries(scenario.text)) {
+				const entry = byDialect[dialect];
+				const file = join(dir, scenario.id, `${id}.mp3`);
+				if (!entry || (!regenerate && existsSync(file))) continue;
+				jobs.push({
+					file,
+					// Keep the question mark here: these are whole sentences, and it shapes the intonation.
+					text: entry.arabic,
+					voice: scenario.lines[id].speaker === 'npc' ? npcVoice : voice.voice,
+					stability: voice.stability,
+					similarity: voice.similarity_boost
+				});
+			}
 		}
 	}
 

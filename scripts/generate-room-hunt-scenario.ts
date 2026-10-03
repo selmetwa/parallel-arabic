@@ -1,15 +1,17 @@
 #!/usr/bin/env node
 /**
- * Fill src/lib/games/room-hunt/order-lines.json: the "Order a meal"
- * conversation (src/lib/games/room-hunt/order.ts) in each game dialect.
+ * Fill a scenario's lines file (src/lib/games/room-hunt/scenarios/<id>.json)
+ * with Gemini: any line in the scenario that has no Arabic yet, in each game
+ * dialect.
  *
- * The whole conversation goes to Gemini at once, so the lines read as one
- * scene. Lines already in the file are kept, so hand fixes survive a re-run;
+ * The scenarios' lines are written by hand now; this is for drafting a new
+ * one. The whole conversation goes to Gemini at once, so the lines read as one
+ * scene. Lines already in the file are kept, so hand edits survive a re-run;
  * pass --regenerate to redo them.
  *
  * Usage:
- *   npm run generate:room-hunt-scenario
- *   npm run generate:room-hunt-scenario -- --regenerate
+ *   npm run generate:room-hunt-scenario -- --scenario=taxi
+ *   npm run generate:room-hunt-scenario -- --scenario=taxi --regenerate
  */
 
 import { GoogleGenAI } from '@google/genai';
@@ -19,7 +21,8 @@ import dotenv from 'dotenv';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import { existsSync, readFileSync, writeFileSync } from 'fs';
-import { ORDER_LINES, ORDER_TURNS, WAITER } from '../src/lib/games/room-hunt/order';
+import { getScenario } from '../src/lib/games/room-hunt/scenarios/index';
+import type { Scenario } from '../src/lib/games/room-hunt/scenarios/scenario';
 import { GAME_DIALECTS, type GameDialect } from '../src/lib/games/themes';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -27,7 +30,7 @@ const __dirname = dirname(__filename);
 dotenv.config({ path: join(__dirname, '..', '.env.local') });
 dotenv.config({ path: join(__dirname, '..', '.env') });
 
-const OUT = join(__dirname, '..', 'src', 'lib', 'games', 'room-hunt', 'order-lines.json');
+const SCENARIOS_DIR = join(__dirname, '..', 'src', 'lib', 'games', 'room-hunt', 'scenarios');
 
 const DIALECT_NAMES: Record<GameDialect, string> = {
 	'egyptian-arabic': 'Egyptian Arabic (Masri, as spoken in Cairo)',
@@ -54,27 +57,37 @@ function parseJsonSafe(text: string) {
 	);
 }
 
-function describeScene() {
-	return ORDER_TURNS.map((turn) => {
+function describeScene(scenario: Scenario) {
+	const role = scenario.npcRole.toUpperCase();
+	const turns = scenario.turns.map((turn) => {
 		const options = turn.choices
-			.map((c) => `    ${c.line} — "${ORDER_LINES[c.line].english}"${c.ok ? '' : ' (a wrong answer here)'}`)
+			.map((c) => {
+				const extra = c.reply ? `; ${role} replies ${c.reply} — "${scenario.lines[c.reply].english}"` : '';
+				return `    ${c.line} — "${scenario.lines[c.line].english}"${c.ok ? '' : ' (a wrong answer here)'}${extra}`;
+			})
 			.join('\n');
-		return `  WAITER ${turn.waiter} — "${ORDER_LINES[turn.waiter].english}"\n  CUSTOMER answers with one of:\n${options}`;
-	}).join('\n');
+		return `  ${role} ${turn.npc} — "${scenario.lines[turn.npc].english}"\n  CUSTOMER answers with one of:\n${options}`;
+	});
+	const others = Object.entries(scenario.lines)
+		.filter(([id, line]) => line.speaker === 'item' || id.endsWith('_sorry'))
+		.map(([id, line]) =>
+			line.speaker === 'item'
+				? `  ITEM ${id} — "${line.english}" (the name of something handed over, as a short noun phrase)`
+				: `  ${role} ${id} — "${line.english}" (said after a reply that doesn't fit)`
+		);
+	return [...turns, ...others].join('\n');
 }
 
-async function translate(ai: GoogleGenAI, dialect: GameDialect, ids: string[]) {
-	const waiter = WAITER[dialect].gender === 'f' ? 'a woman' : 'a man';
-	const prompt = `You are writing a short restaurant scene for an Arabic learning game, in ${DIALECT_NAMES[dialect]}.
+async function translate(ai: GoogleGenAI, scenario: Scenario, dialect: GameDialect, ids: string[]) {
+	const npc = scenario.npcGender[dialect] === 'f' ? 'a woman' : 'a man';
+	const prompt = `You are writing a short scene for an Arabic learning game, in ${DIALECT_NAMES[dialect]}: "${scenario.title}". ${scenario.blurb}
 
-The waiter is ${waiter}; the customer is a man eating alone. Write every line the way people really talk in ${DIALECT_NAMES[dialect]} at a casual neighbourhood restaurant: short, natural, polite.${dialect === 'fusha' ? '' : ' Do NOT use Modern Standard Arabic phrasing.'} Use the right gender agreement for who is speaking to whom (the waiter addresses a man; the customer addresses ${waiter === 'a woman' ? 'a woman' : 'a man'}).
+The ${scenario.npcRole.toLowerCase()} is ${npc}; the customer is a man. Write every line the way people really talk in ${DIALECT_NAMES[dialect]}: short, natural, polite.${dialect === 'fusha' ? '' : ' Do NOT use Modern Standard Arabic phrasing.'} Use the right gender agreement for who is speaking to whom (the ${scenario.npcRole.toLowerCase()} addresses a man; the customer addresses ${npc}).
 
 Some customer lines are deliberately wrong answers for the moment they appear (the game teaches which reply fits). Translate them faithfully anyway; do not "fix" them.
 
 THE SCENE (line id — English):
-${describeScene()}
-  WAITER w_coming — "${ORDER_LINES.w_coming.english}" (said when going to get the order)
-  WAITER w_sorry — "${ORDER_LINES.w_sorry.english}" (said after a reply that doesn't fit)
+${describeScene(scenario)}
 
 For each of these line ids, give:
 - arabic: the line in Arabic script WITH full tashkeel.
@@ -117,8 +130,13 @@ Return PURE JSON only. No markdown code blocks. No explanations.`,
 
 async function main() {
 	const regenerate = process.argv.includes('--regenerate');
+	const id = process.argv.find((a) => a.startsWith('--scenario='))?.split('=')[1];
+	if (!id) throw new Error('Pass --scenario=<id>');
+	const { scenario } = getScenario(id);
+	if (scenario.id !== id) throw new Error(`Unknown scenario "${id}"`);
+	const OUT = join(SCENARIOS_DIR, `${id}.json`);
 	const lines: Lines = existsSync(OUT) ? JSON.parse(readFileSync(OUT, 'utf-8')) : {};
-	const ids = Object.keys(ORDER_LINES);
+	const ids = Object.keys(scenario.lines);
 
 	const apiKey = process.env.GEMINI_API_KEY;
 	if (!apiKey) throw new Error('GEMINI_API_KEY is required');
@@ -129,7 +147,7 @@ async function main() {
 			const todo = ids.filter((id) => regenerate || !lines[id]?.[dialect]);
 			if (!todo.length) return console.log(`${dialect}: all ${ids.length} lines done`);
 			console.log(`${dialect}: writing ${todo.length} lines...`);
-			for (const [id, entry] of await translate(ai, dialect, todo)) {
+			for (const [id, entry] of await translate(ai, scenario, dialect, todo)) {
 				lines[id] = { ...lines[id], [dialect]: entry };
 			}
 		})

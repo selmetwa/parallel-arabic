@@ -95,6 +95,53 @@ export const GAMES: GameInfo[] = [
 		]
 	},
 	{
+		slug: 'scenarios',
+		name: 'Scenarios',
+		heading: 'Arabic Conversation Practice: Taxi, Market, Pharmacy and More',
+		emoji: '🗣️',
+		tagline: 'Take a taxi, haggle at a market, see a pharmacist and check into a hotel, in Arabic.',
+		skills: ['Speaking', 'Listening', 'Phrases'],
+		levels: 'Beginner–Intermediate',
+		accent: '#0ea5e9',
+		deep: '#0369a1',
+		shot: {
+			src: '/images/feature-pages/game-scenarios.webp',
+			w: 2560,
+			h: 1440,
+			alt: 'A Scenarios conversation at a market stall: the seller asks how many kilos in Egyptian Arabic, with your replies to choose from'
+		},
+		seo: {
+			title: 'Arabic Conversation Practice: Real-Life Scenes | Parallel Arabic',
+			description:
+				'Practise everyday Arabic conversations in 3D: take a taxi, haggle at a market, visit a pharmacy, check into a hotel. In Egyptian, Levantine, Darija and Fusha.'
+		},
+		intro:
+			'Short spoken conversations in places you will actually be. A taxi driver asks where you are going, a market seller tells you the price, a pharmacist asks what hurts. You answer in Arabic, and what you ask for turns up.',
+		howToPlay: [
+			'Pick a dialect and a scene: a restaurant, a taxi, a market, a pharmacy or a hotel.',
+			'Press Start. The other person speaks first, with the Arabic, transliteration and English on screen and a recording you can replay.',
+			'Answer by tapping one of the replies, or press the microphone and say it. Some replies do not fit the moment, and you will be asked again.',
+			'What you ask for happens: the taxi drives you there, the seller bags your tomatoes. At the end you keep every phrase you used.'
+		],
+		faqs: [
+			{
+				question: 'Which situations can I practise?',
+				answer:
+					'Ordering a meal, taking a taxi (with directions and haggling the fare), buying fruit and vegetables at a market, describing symptoms at a pharmacy, and checking into a hotel. More are on the way.'
+			},
+			{
+				question: 'Do I have to speak, or can I tap?',
+				answer:
+					'Either. Every turn offers a few replies to tap, and a microphone to say one instead. Hearing your reply played back in a native voice after you choose it is part of the practice.'
+			},
+			{
+				question: 'Is the Arabic the same in every dialect?',
+				answer:
+					'No. Each scene is written separately for Egyptian, Levantine, Moroccan Darija and Modern Standard Arabic, so the taxi driver in Cairo says 3ala feen? and the one in Casablanca says fin ghadi?'
+			}
+		]
+	},
+	{
 		slug: 'word-scramble',
 		name: 'Word Scramble',
 		heading: 'Arabic Word Scramble',

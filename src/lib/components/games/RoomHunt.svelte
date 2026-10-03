@@ -4,7 +4,8 @@
 	import GameWordList from './GameWordList.svelte';
 	import PressButton from './PressButton.svelte';
 	import SpeakAnswer from './SpeakAnswer.svelte';
-	import OrderScenario from './OrderScenario.svelte';
+	import ScenarioPlayer from './ScenarioPlayer.svelte';
+	import { getScenario } from '$lib/games/room-hunt/scenarios/index';
 	import { awardGameXp } from '$lib/games/game-xp';
 	import { shuffle } from '$lib/games/shuffle';
 	import type { RoundGate } from '$lib/games/free-rounds.svelte';
@@ -751,8 +752,9 @@
 
 			{#if phase === 'order' && scene && !loading}
 				{#key orderRun}
-					<OrderScenario
+					<ScenarioPlayer
 						{scene}
+						entry={getScenario('restaurant')}
 						{dialect}
 						{level}
 						{translit}

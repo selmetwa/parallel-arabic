@@ -29,13 +29,16 @@ export interface RoomObject {
 }
 
 export interface Room {
-	id: RoomId;
+	/** A Room Hunt room, or a scenario's own setting. */
+	id: RoomId | string;
 	label: string;
 	emoji: string;
 	/** Floor width (x) and depth (z). */
 	size: [number, number];
 	height: number;
 	colors: { floor: string; wall: string };
+	/** No walls or ceiling: the floor runs out to the sky (a street, a market). */
+	outdoor?: boolean;
 	objects: RoomObject[];
 	/** Set dressing that can't be picked. */
 	decor: { model: string; placements: Placement[] }[];
@@ -87,6 +90,15 @@ export const CONCEPTS: Record<string, { english: string; hint: string }> = {
 const MODELS = '/games/room-hunt/models';
 const f = (name: string) => `${MODELS}/furniture/${name}.glb`;
 const food = (name: string) => `${MODELS}/food/${name}.glb`;
+
+/** Model URLs by kit, for scenario settings and props. */
+export const model = {
+	furniture: f,
+	food,
+	car: (name: string) => `${MODELS}/car/${name}.glb`,
+	roads: (name: string) => `${MODELS}/roads/${name}.glb`,
+	buildings: (name: string) => `${MODELS}/buildings/${name}.glb`
+};
 
 /** The furniture kit is half size. */
 const FURN = 2;

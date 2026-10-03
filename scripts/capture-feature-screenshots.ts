@@ -143,6 +143,22 @@ const SHOTS: Shot[] = [
 		}
 	},
 	{
+		name: 'game-scenarios',
+		path: '/learn/game/scenarios?scene=market&dialect=egyptian-arabic',
+		// The conversation runs fullscreen, so the viewport is the shot.
+		viewport: { width: 1280, height: 720 },
+		prepare: async (page) => {
+			await page.evaluate(() => localStorage.setItem('pa-room-hunt-muted', '1'));
+			await page.getByText(/Setting the scene/).waitFor({ state: 'detached', timeout: 60_000 });
+			await page.getByRole('button', { name: 'Start the conversation' }).click();
+			// Ask for tomatoes, then stop on "How many kilos?".
+			await page.locator('.reply .option').first().waitFor({ timeout: 60_000 });
+			await page.locator('.reply .option', { hasText: /طماطم|طَمَاطِم/ }).click();
+			await page.locator('.reply .option', { hasText: /كيلو|كِيلُو/ }).first().waitFor({ timeout: 60_000 });
+			await page.waitForTimeout(1200);
+		}
+	},
+	{
 		name: 'game-quiz',
 		path: '/learn/game/quiz',
 		// The quiz starts on its own page, /learn/game/play.
