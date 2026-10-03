@@ -567,7 +567,8 @@
 		min-width: 0;
 		display: grid;
 		gap: 0;
-		padding: 0.25rem 0.7rem;
+		justify-items: center;
+		padding: 0.3rem 0.7rem;
 		border-radius: 0.75rem;
 		color: var(--text1);
 		background: var(--tile2, var(--tile3));
@@ -585,21 +586,20 @@
 		box-shadow: 0 0 0 3px rgb(245 158 11 / 0.35);
 	}
 
+	/* Centred, and wrapping rather than cut off: the English is the part a beginner needs. */
 	.option-ar {
 		font-size: 1.1rem;
 		font-weight: 600;
 		line-height: 1.6;
-		text-align: right;
+		text-align: center;
 	}
 
 	.option-sub {
 		min-width: 0;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
 		font-size: 0.75rem;
+		line-height: 1.35;
 		color: var(--text2);
-		text-align: left;
+		text-align: center;
 	}
 
 	.note {
