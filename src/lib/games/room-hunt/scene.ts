@@ -32,6 +32,12 @@ const PITCH_MAX = 0.55;
 const TAP_SLOP = 8;
 /** Radians per pixel dragged: a full swipe across a phone turns about 30°. */
 const DRAG_SPEED = 0.0015;
+/**
+ * Fingers on a phone travel a few hundred pixels at most, so touch turns
+ * faster: a swipe across a phone turns about 120°, enough to look behind you
+ * in two swipes.
+ */
+const TOUCH_DRAG_SPEED = 0.0055;
 
 const COLORS = {
 	hover: 0x2a2a2a,
@@ -121,6 +127,8 @@ export class RoomScene {
 		vx: number;
 		vy: number;
 		t: number;
+		/** Radians per pixel: faster for a finger than a mouse. */
+		speed: number;
 	} | null = null;
 	private resizeObserver: ResizeObserver;
 	private loadToken = 0;
@@ -715,7 +723,8 @@ export class RoomScene {
 			startY: event.clientY,
 			vx: 0,
 			vy: 0,
-			t: event.timeStamp
+			t: event.timeStamp,
+			speed: event.pointerType === 'touch' ? TOUCH_DRAG_SPEED : DRAG_SPEED
 		};
 	};
 
@@ -728,7 +737,7 @@ export class RoomScene {
 			p.vx = 0.7 * (dx / dt) + 0.3 * p.vx;
 			p.vy = 0.7 * (dy / dt) + 0.3 * p.vy;
 			p.t = event.timeStamp;
-			this.turn(dx * DRAG_SPEED, dy * DRAG_SPEED);
+			this.turn(dx * p.speed, dy * p.speed);
 			p.x = event.clientX;
 			p.y = event.clientY;
 			return;
@@ -744,7 +753,7 @@ export class RoomScene {
 		if (moved > TAP_SLOP) {
 			// Keep turning a little after a flick, unless the finger stopped first.
 			const fresh = event.timeStamp - p.t < 80;
-			if (fresh && !this.reducedMotion) this.startGlide(p.vx, p.vy);
+			if (fresh && !this.reducedMotion) this.startGlide(p.vx, p.vy, p.speed);
 			return;
 		}
 		if (!this.pickEnabled) return;
@@ -804,13 +813,13 @@ export class RoomScene {
 
 	private glide: { vx: number; vy: number } | null = null;
 
-	private startGlide(vx: number, vy: number) {
+	private startGlide(vx: number, vy: number, speed: number) {
 		if (Math.hypot(vx, vy) < 0.15) return;
 		const glide = { vx, vy };
 		this.glide = glide;
 		this.animate(400, (t) => {
 			if (this.glide !== glide) return;
-			const k = (1 - t) * 6 * DRAG_SPEED;
+			const k = (1 - t) * 6 * speed;
 			this.yaw += glide.vx * k;
 			this.pitch = clamp(this.pitch + glide.vy * k, PITCH_MIN, PITCH_MAX);
 		});

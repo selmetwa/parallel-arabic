@@ -574,6 +574,8 @@
 		inset: 0;
 		overflow-y: auto;
 		overscroll-behavior: contain;
+		/* The game blocks touch scrolling; the results still need it. */
+		touch-action: pan-y;
 		padding: 4.5rem 0.75rem max(1.5rem, env(safe-area-inset-bottom));
 		background: rgb(0 0 0 / 0.45);
 	}
