@@ -17,29 +17,48 @@ export const market: Scenario = {
 	text: text as Scenario['text'],
 	lines: {
 		m_hello: { speaker: 'npc', english: 'Good morning! What would you like?' },
+		m_fresh: { speaker: 'npc', english: "Have a look, they're very fresh!" },
 		m_kilos: { speaker: 'npc', english: 'How many kilos?' },
+		m_ripe: { speaker: 'npc', english: 'Ripe ones, for today?' },
 		m_here: { speaker: 'npc', english: 'Here you go. Anything else?' },
+		m_lemon_size: { speaker: 'npc', english: 'Big lemons or small ones?' },
+		m_else: { speaker: 'npc', english: 'Anything else?' },
 		m_price: { speaker: 'npc', english: "That's thirty." },
 		m_twentyfive: { speaker: 'npc', english: 'OK, twenty-five, just for you.' },
+		m_change: { speaker: 'npc', english: 'Do you have change?' },
+		m_no_problem: { speaker: 'npc', english: "No problem, here's your change." },
+		m_bag: { speaker: 'npc', english: 'Do you need a bag?' },
+		m_local: { speaker: 'npc', english: 'Are you from around here?' },
 		m_bye: { speaker: 'npc', english: 'Thank you! Come again.' },
 		m_sorry: { speaker: 'npc', english: 'Sorry? What did you say?' },
-
 		y_tomatoes: { speaker: 'you', english: 'Tomatoes, please.' },
 		y_oranges: { speaker: 'you', english: 'Oranges, please.' },
+		y_look_great: { speaker: 'you', english: 'They look great!' },
 		y_one_kilo: { speaker: 'you', english: 'One kilo.' },
 		y_two_kilos: { speaker: 'you', english: 'Two kilos.' },
+		y_today: { speaker: 'you', english: 'Yes, for today.' },
+		y_tomorrow: { speaker: 'you', english: 'For tomorrow, please.' },
+		y_lemons: { speaker: 'you', english: 'And half a kilo of lemons, please.' },
+		y_small: { speaker: 'you', english: 'Small ones, please.' },
+		y_big: { speaker: 'you', english: 'Big ones.' },
 		y_how_much: { speaker: 'you', english: 'No, thanks. How much is it?' },
 		y_too_expensive: { speaker: 'you', english: "That's expensive! Twenty?" },
 		y_ok_here: { speaker: 'you', english: 'OK, here you go.' },
+		y_only_hundred: { speaker: 'you', english: 'Sorry, I only have a hundred.' },
+		y_have_change: { speaker: 'you', english: 'Yes, here you go.' },
+		y_yes_please: { speaker: 'you', english: 'Yes, please.' },
+		y_bag_no: { speaker: 'you', english: 'No, I have one.' },
+		y_tourist: { speaker: 'you', english: "No, I'm visiting." },
+		y_nearby: { speaker: 'you', english: 'Yes, I live nearby.' },
 		y_thanks_bye: { speaker: 'you', english: 'Thanks, goodbye!' },
 		y_stop_here: { speaker: 'you', english: 'Stop here, please.' },
 		y_tea: { speaker: 'you', english: 'Tea, please.' },
 		y_enjoy: { speaker: 'you', english: 'Enjoy your meal!' },
 		y_bill: { speaker: 'you', english: 'The bill, please.' },
 		y_welcome: { speaker: 'you', english: 'Welcome!' },
-
 		item_tomatoes: { speaker: 'item', english: 'tomatoes' },
-		item_oranges: { speaker: 'item', english: 'oranges' }
+		item_oranges: { speaker: 'item', english: 'oranges' },
+		item_lemons: { speaker: 'item', english: 'lemons' }
 	},
 	turns: [
 		{
@@ -52,12 +71,30 @@ export const market: Scenario = {
 			]
 		},
 		{
+			id: 'fresh',
+			npc: 'm_fresh',
+			choices: [
+				{ line: 'y_look_great', ok: true },
+				{ line: 'y_enjoy', ok: false },
+				{ line: 'y_bill', ok: false }
+			]
+		},
+		{
 			id: 'kilos',
 			npc: 'm_kilos',
 			choices: [
 				{ line: 'y_one_kilo', ok: true },
 				{ line: 'y_two_kilos', ok: true },
 				{ line: 'y_tea', ok: false }
+			]
+		},
+		{
+			id: 'ripe',
+			npc: 'm_ripe',
+			choices: [
+				{ line: 'y_today', ok: true },
+				{ line: 'y_tomorrow', ok: true },
+				{ line: 'y_welcome', ok: false }
 			],
 			fetch: true
 		},
@@ -65,9 +102,28 @@ export const market: Scenario = {
 			id: 'more',
 			npc: 'm_here',
 			choices: [
-				{ line: 'y_how_much', ok: true },
+				{ line: 'y_lemons', ok: true, give: 'lemons' },
 				{ line: 'y_enjoy', ok: false },
-				{ line: 'y_welcome', ok: false }
+				{ line: 'y_stop_here', ok: false }
+			]
+		},
+		{
+			id: 'lemons',
+			npc: 'm_lemon_size',
+			choices: [
+				{ line: 'y_small', ok: true },
+				{ line: 'y_big', ok: true },
+				{ line: 'y_bill', ok: false }
+			],
+			fetch: true
+		},
+		{
+			id: 'else',
+			npc: 'm_else',
+			choices: [
+				{ line: 'y_how_much', ok: true },
+				{ line: 'y_welcome', ok: false },
+				{ line: 'y_tea', ok: false }
 			]
 		},
 		{
@@ -77,6 +133,33 @@ export const market: Scenario = {
 				{ line: 'y_too_expensive', ok: true, reply: 'm_twentyfive' },
 				{ line: 'y_ok_here', ok: true },
 				{ line: 'y_bill', ok: false }
+			]
+		},
+		{
+			id: 'change',
+			npc: 'm_change',
+			choices: [
+				{ line: 'y_only_hundred', ok: true, reply: 'm_no_problem' },
+				{ line: 'y_have_change', ok: true },
+				{ line: 'y_tomatoes', ok: false }
+			]
+		},
+		{
+			id: 'bag',
+			npc: 'm_bag',
+			choices: [
+				{ line: 'y_yes_please', ok: true },
+				{ line: 'y_bag_no', ok: true },
+				{ line: 'y_stop_here', ok: false }
+			]
+		},
+		{
+			id: 'local',
+			npc: 'm_local',
+			choices: [
+				{ line: 'y_tourist', ok: true },
+				{ line: 'y_nearby', ok: true },
+				{ line: 'y_two_kilos', ok: false }
 			]
 		},
 		{
@@ -190,7 +273,12 @@ export const marketStage: Stage = {
 	},
 	give: {
 		tomatoes: bagOf('tomato', 1.4),
-		oranges: bagOf('orange', 1.4)
+		oranges: bagOf('orange', 1.4),
+		lemons: [
+			{ model: food('lemon'), placement: { at: [0.5, TOP, STALL_Z + 0.32], scale: 1.2 } },
+			{ model: food('lemon'), placement: { at: [0.62, TOP, STALL_Z + 0.24], rot: 50, scale: 1.2 } },
+			{ model: food('lemon'), placement: { at: [0.56, TOP, STALL_Z + 0.42], rot: 120, scale: 1.2 } }
+		]
 	},
 	extras: [
 		{ model: 'character-male-f', at: [-2.6, 0, STALL_Z - 1.4], rot: 0, animation: 'idle' },

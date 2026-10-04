@@ -263,7 +263,11 @@
 		faceGuest();
 	}
 
-	/** Rides behind the vehicle along a route, then stands the player somewhere new. */
+	/**
+	 * Rides behind the vehicle along a route. With a `then` pose the player
+	 * gets out there; without one the camera stays behind the stopped car, so
+	 * the conversation carries on mid-ride.
+	 */
 	async function drive(key: string) {
 		const vehicle = stage.vehicle;
 		const route = vehicle?.drives[key];
@@ -273,6 +277,7 @@
 		await scene.driveVehicle(VEHICLE, route.path);
 		if (cancelled) return;
 		await wait(400);
+		if (!route.then) return;
 		scene.followVehicle(null);
 		pose = route.then;
 		scene.setPose(route.then);

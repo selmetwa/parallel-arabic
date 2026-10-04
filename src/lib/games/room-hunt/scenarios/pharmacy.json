@@ -73,20 +73,20 @@
 	},
 	"p_price": {
 		"egyptian-arabic": {
-			"arabic": "خَمَسْتَاشَر جِنِيه. أَلْف سَلَامَة!",
-			"transliteration": "khamastashar geneh. alf salama!"
+			"arabic": "خَمَسْتَاشَر جِنِيه.",
+			"transliteration": "khamastashar geneh."
 		},
 		"levantine": {
-			"arabic": "خَمْسْطَعْش. سَلامْتَك!",
-			"transliteration": "khamsta3sh. salamtak!"
+			"arabic": "خَمْسْطَعْش.",
+			"transliteration": "khamsta3sh."
 		},
 		"darija": {
-			"arabic": "خْمْسْطَاش دَرْهَم. اللَّه يْشَافِيك!",
-			"transliteration": "khmstash derham. llah ychafik!"
+			"arabic": "خْمْسْطَاش دَرْهَم.",
+			"transliteration": "khmstash derham."
 		},
 		"fusha": {
-			"arabic": "خَمْسَةَ عَشَرَ. سَلَامَتُكَ!",
-			"transliteration": "khamsata 3ashar. salamatuk!"
+			"arabic": "خَمْسَةَ عَشَرَ.",
+			"transliteration": "khamsata 3ashar."
 		}
 	},
 	"p_sorry": {
@@ -393,6 +393,330 @@
 		"fusha": {
 			"arabic": "شَايٌ، مِنْ فَضْلِكَ.",
 			"transliteration": "shay, min fadlik."
+		}
+	},
+	"p_allergy": {
+		"egyptian-arabic": {
+			"arabic": "عَنْدَك حَسَاسِيَّة مِن أَيّ دَوَا؟",
+			"transliteration": "3andak 7asaseya men ay dawa?"
+		},
+		"levantine": {
+			"arabic": "عِنْدَك حَساسِيِّة مِن شِي دَوا؟",
+			"transliteration": "3indak 7asasiyye min shi dawa?"
+		},
+		"darija": {
+			"arabic": "عَنْدْك الْحْسَاسِيَّة مْنْ شِي دْوَا؟",
+			"transliteration": "3endek l7sasiya men shi dwa?"
+		},
+		"fusha": {
+			"arabic": "هَلْ لَدَيْكَ حَسَاسِيَّةٌ مِنْ أَيِّ دَوَاءٍ؟",
+			"transliteration": "hal ladayka 7asasiyya min ayyi dawa2?"
+		}
+	},
+	"p_other": {
+		"egyptian-arabic": {
+			"arabic": "بِتَاخُد أَيّ دَوَا تَانِي؟",
+			"transliteration": "betakhod ay dawa tani?"
+		},
+		"levantine": {
+			"arabic": "عَم تاخُد شِي دَوا تاني؟",
+			"transliteration": "3am takhod shi dawa tani?"
+		},
+		"darija": {
+			"arabic": "كَتَاخُد شِي دْوَا آخُر؟",
+			"transliteration": "katakhud shi dwa akhur?"
+		},
+		"fusha": {
+			"arabic": "هَلْ تَتَنَاوَلُ أَيَّ دَوَاءٍ آخَرَ؟",
+			"transliteration": "hal tatanawalu ayya dawa2in akhar?"
+		}
+	},
+	"p_eaten": {
+		"egyptian-arabic": {
+			"arabic": "أَكَلْت حَاجَة النَّهَارْدَة؟",
+			"transliteration": "akalt 7aga ennaharda?"
+		},
+		"levantine": {
+			"arabic": "أَكَلْت شِي الْيَوم؟",
+			"transliteration": "akalt shi el-yom?"
+		},
+		"darija": {
+			"arabic": "كْلِيتِي شِي حَاجَة الْيُوم؟",
+			"transliteration": "kliti shi 7aja lyum?"
+		},
+		"fusha": {
+			"arabic": "هَلْ أَكَلْتَ شَيْئًا الْيَوْمَ؟",
+			"transliteration": "hal akalta shay2an al-yawm?"
+		}
+	},
+	"p_exactly": {
+		"egyptian-arabic": {
+			"arabic": "بِالظَّبْط.",
+			"transliteration": "bel zabt."
+		},
+		"levantine": {
+			"arabic": "بِالزَّبْط.",
+			"transliteration": "biz-zabt."
+		},
+		"darija": {
+			"arabic": "هُوَ هَادَاك.",
+			"transliteration": "huwa hadak."
+		},
+		"fusha": {
+			"arabic": "تَمَامًا.",
+			"transliteration": "tamaman."
+		}
+	},
+	"p_water": {
+		"egyptian-arabic": {
+			"arabic": "وَاشْرَب مَيَّة كِتِير.",
+			"transliteration": "we eshrab mayya keteer."
+		},
+		"levantine": {
+			"arabic": "وِشْرَب مَيّ كْتير.",
+			"transliteration": "w ishrab mayy kteer."
+		},
+		"darija": {
+			"arabic": "وْشْرَب الْمَا بْزَّاف.",
+			"transliteration": "w shreb lma bezzaf."
+		},
+		"fusha": {
+			"arabic": "وَاشْرَبْ الْكَثِيرَ مِنَ الْمَاءِ.",
+			"transliteration": "washrab al-kathira mina al-ma2."
+		}
+	},
+	"p_doctor": {
+		"egyptian-arabic": {
+			"arabic": "لَوْ مَا اتْحَسِّنْتِش فِي تَلَات أَيَّام، رُوح لِدُكْتُور.",
+			"transliteration": "law ma et7assentesh fi talat ayyam, rou7 le doktor."
+		},
+		"levantine": {
+			"arabic": "إِذا ما تْحَسَّنْت بِتْلات إِيّام، رُوح عَحَكيم.",
+			"transliteration": "iza ma t7assant b tlat iyyam, ru7 3a 7akeem."
+		},
+		"darija": {
+			"arabic": "إِلَا مَا تْحْسْنْتِيش فْتْلَات يَّام، سِير عْنْد الطّْبِيب.",
+			"transliteration": "ila ma t7essentish f tlat iyyam, sir 3end tbib."
+		},
+		"fusha": {
+			"arabic": "إِذَا لَمْ تَتَحَسَّنْ خِلَالَ ثَلَاثَةِ أَيَّامٍ، فَاذْهَبْ إِلَى الطَّبِيبِ.",
+			"transliteration": "idha lam tata7assan khilala thalathati ayyam, fa-dhhab ila at-tabib."
+		}
+	},
+	"p_else": {
+		"egyptian-arabic": {
+			"arabic": "أَيّ خِدْمَة تَانْيَة؟",
+			"transliteration": "ay khedma tanya?"
+		},
+		"levantine": {
+			"arabic": "شِي تاني؟",
+			"transliteration": "shi tani?"
+		},
+		"darija": {
+			"arabic": "شِي حَاجَة أُخْرَى؟",
+			"transliteration": "shi 7aja okhra?"
+		},
+		"fusha": {
+			"arabic": "هَلْ تَحْتَاجُ شَيْئًا آخَرَ؟",
+			"transliteration": "hal ta7taju shay2an akhar?"
+		}
+	},
+	"p_bye": {
+		"egyptian-arabic": {
+			"arabic": "أَلْف سَلَامَة!",
+			"transliteration": "alf salama!"
+		},
+		"levantine": {
+			"arabic": "سَلامْتَك!",
+			"transliteration": "salamtak!"
+		},
+		"darija": {
+			"arabic": "اللَّه يْشَافِيك!",
+			"transliteration": "llah ychafik!"
+		},
+		"fusha": {
+			"arabic": "سَلَامَتُكَ!",
+			"transliteration": "salamatuk!"
+		}
+	},
+	"y_not_allergic": {
+		"egyptian-arabic": {
+			"arabic": "لَأ، مَعَنْدِيش.",
+			"transliteration": "la2, ma3andeesh."
+		},
+		"levantine": {
+			"arabic": "لا، ما عِنْدي.",
+			"transliteration": "la, ma 3indi."
+		},
+		"darija": {
+			"arabic": "لَا، مَا عَنْدِيش.",
+			"transliteration": "la, ma 3endish."
+		},
+		"fusha": {
+			"arabic": "لَا، لَيْسَ لَدَيَّ.",
+			"transliteration": "la, laysa ladayya."
+		}
+	},
+	"y_penicillin": {
+		"egyptian-arabic": {
+			"arabic": "أَيْوَة، مِن الْبِنِسِلِين.",
+			"transliteration": "aywa, men el penicillin."
+		},
+		"levantine": {
+			"arabic": "إِيه، مِن الْبِنِسِلِين.",
+			"transliteration": "eh, min el penicillin."
+		},
+		"darija": {
+			"arabic": "إِيِّه، مْنْ الْبِينِيسِيلِين.",
+			"transliteration": "iyeh, men lpenicilin."
+		},
+		"fusha": {
+			"arabic": "نَعَمْ، مِنَ الْبِنِسِلِينِ.",
+			"transliteration": "na3am, mina al-binisilin."
+		}
+	},
+	"y_nothing": {
+		"egyptian-arabic": {
+			"arabic": "لَأ، وَلَا حَاجَة.",
+			"transliteration": "la2, wala 7aga."
+		},
+		"levantine": {
+			"arabic": "لا، وَلا شِي.",
+			"transliteration": "la, wala shi."
+		},
+		"darija": {
+			"arabic": "لَا، وَالُو.",
+			"transliteration": "la, walu."
+		},
+		"fusha": {
+			"arabic": "لَا، لَا شَيْءَ.",
+			"transliteration": "la, la shay2."
+		}
+	},
+	"y_had_breakfast": {
+		"egyptian-arabic": {
+			"arabic": "أَيْوَة، فِطِرْت.",
+			"transliteration": "aywa, fetert."
+		},
+		"levantine": {
+			"arabic": "إِيه، تْرَوَّقْت.",
+			"transliteration": "eh, trawwa2t."
+		},
+		"darija": {
+			"arabic": "إِيِّه، فْطَرْت.",
+			"transliteration": "iyeh, fturt."
+		},
+		"fusha": {
+			"arabic": "نَعَمْ، تَنَاوَلْتُ الْفَطُورَ.",
+			"transliteration": "na3am, tanawaltu al-futur."
+		}
+	},
+	"y_not_yet": {
+		"egyptian-arabic": {
+			"arabic": "لِسَّه.",
+			"transliteration": "lessa."
+		},
+		"levantine": {
+			"arabic": "لِسّا.",
+			"transliteration": "lissa."
+		},
+		"darija": {
+			"arabic": "مَازَال.",
+			"transliteration": "mazal."
+		},
+		"fusha": {
+			"arabic": "لَيْسَ بَعْدُ.",
+			"transliteration": "laysa ba3d."
+		}
+	},
+	"y_repeat": {
+		"egyptian-arabic": {
+			"arabic": "تَلَات مَرَّات فِي الْيُوم، بَعْد الْأَكْل؟",
+			"transliteration": "talat marrat fel yom, ba3d el akl?"
+		},
+		"levantine": {
+			"arabic": "تْلات مَرّات بِالْيوم، بَعْد الْأَكِل؟",
+			"transliteration": "tlat marrat bil-yom, ba3d el akel?"
+		},
+		"darija": {
+			"arabic": "تْلَات مَرَّات فْالنْهَار، مُورَا الْمَاكْلَة؟",
+			"transliteration": "tlat merrat f nhar, mora lmakla?"
+		},
+		"fusha": {
+			"arabic": "ثَلَاثَ مَرَّاتٍ فِي الْيَوْمِ، بَعْدَ الطَّعَامِ؟",
+			"transliteration": "thalatha marratin fil-yawm, ba3da at-ta3am?"
+		}
+	},
+	"y_will": {
+		"egyptian-arabic": {
+			"arabic": "حَاضِر.",
+			"transliteration": "7ader."
+		},
+		"levantine": {
+			"arabic": "حاضِر.",
+			"transliteration": "7ader."
+		},
+		"darija": {
+			"arabic": "وَاخَّا.",
+			"transliteration": "wakha."
+		},
+		"fusha": {
+			"arabic": "حَسَنًا، سَأَفْعَلُ.",
+			"transliteration": "7asanan, sa-af3al."
+		}
+	},
+	"y_ok_thanks": {
+		"egyptian-arabic": {
+			"arabic": "مَاشِي، شُكْرًا.",
+			"transliteration": "mashi, shokran."
+		},
+		"levantine": {
+			"arabic": "ماشي، شُكْراً.",
+			"transliteration": "mashi, shukran."
+		},
+		"darija": {
+			"arabic": "وَاخَّا، شُكْراً.",
+			"transliteration": "wakha, shokran."
+		},
+		"fusha": {
+			"arabic": "حَسَنًا، شُكْرًا.",
+			"transliteration": "7asanan, shukran."
+		}
+	},
+	"y_here_you_go": {
+		"egyptian-arabic": {
+			"arabic": "اتْفَضَّلِي.",
+			"transliteration": "etfaddali."
+		},
+		"levantine": {
+			"arabic": "تْفَضَّلي.",
+			"transliteration": "tfaddali."
+		},
+		"darija": {
+			"arabic": "هَاك.",
+			"transliteration": "hak."
+		},
+		"fusha": {
+			"arabic": "تَفَضَّلْ.",
+			"transliteration": "tafaddal."
+		}
+	},
+	"y_too_expensive": {
+		"egyptian-arabic": {
+			"arabic": "غَالِي! عِشْرِين؟",
+			"transliteration": "ghali! 3eshreen?"
+		},
+		"levantine": {
+			"arabic": "غالي! عِشْرين؟",
+			"transliteration": "ghali! 3ishreen?"
+		},
+		"darija": {
+			"arabic": "غَالِي! عْشْرِين؟",
+			"transliteration": "ghali! 3shrin?"
+		},
+		"fusha": {
+			"arabic": "هَذَا غَالٍ! عِشْرُونَ؟",
+			"transliteration": "hadha ghalin! 3ishrun?"
 		}
 	}
 }

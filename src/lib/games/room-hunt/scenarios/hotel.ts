@@ -20,21 +20,38 @@ export const hotel: Scenario = {
 		h_hello: { speaker: 'npc', english: 'Good evening, welcome to the hotel!' },
 		h_name: { speaker: 'npc', english: "What's your name, please?" },
 		h_nights: { speaker: 'npc', english: 'For how many nights?' },
+		h_type: { speaker: 'npc', english: 'A single room or a double?' },
+		h_view: { speaker: 'npc', english: 'Would you like a room with a sea view?' },
 		h_passport: { speaker: 'npc', english: 'May I see your passport?' },
+		h_pay: { speaker: 'npc', english: 'Will you pay now or when you leave?' },
 		h_key: { speaker: 'npc', english: "Here's your key. Your room is on the third floor." },
+		h_lift: { speaker: 'npc', english: 'The lift is on your right.' },
+		h_anything: { speaker: 'npc', english: 'Can I help you with anything else?' },
 		h_breakfast: { speaker: 'npc', english: 'From seven to ten, in the restaurant.' },
+		h_checkout: { speaker: 'npc', english: 'Check-out is at twelve.' },
+		h_more: { speaker: 'npc', english: 'Anything else?' },
 		h_wifi: { speaker: 'npc', english: 'The password is on the card.' },
+		h_bags: { speaker: 'npc', english: 'Do you need help with your bags?' },
 		h_enjoy: { speaker: 'npc', english: 'Enjoy your stay!' },
 		h_sorry: { speaker: 'npc', english: "Sorry? I didn't understand." },
-
 		y_reservation: { speaker: 'you', english: 'Good evening. I have a reservation.' },
 		y_name: { speaker: 'you', english: 'My name is Adam.' },
 		y_two_nights: { speaker: 'you', english: 'Two nights.' },
 		y_three_nights: { speaker: 'you', english: 'Three nights.' },
+		y_single: { speaker: 'you', english: 'A single, please.' },
+		y_double: { speaker: 'you', english: 'A double, please.' },
+		y_view_yes: { speaker: 'you', english: 'Yes, please!' },
+		y_view_no: { speaker: 'you', english: "No, that's fine." },
 		y_passport: { speaker: 'you', english: 'Of course, here you go.' },
-		y_breakfast: { speaker: 'you', english: 'Thank you. What time is breakfast?' },
+		y_pay_leave: { speaker: 'you', english: 'When I leave.' },
+		y_pay_now: { speaker: 'you', english: 'Now, by card.' },
+		y_lift: { speaker: 'you', english: 'Thank you. Where is the lift?' },
+		y_breakfast: { speaker: 'you', english: 'What time is breakfast?' },
+		y_checkout: { speaker: 'you', english: 'What time is check-out?' },
 		y_wifi: { speaker: 'you', english: 'And the wifi password?' },
 		y_great: { speaker: 'you', english: 'Great, thank you!' },
+		y_bags_no: { speaker: 'you', english: "No thanks, I'm fine." },
+		y_bags_yes: { speaker: 'you', english: 'Yes, please.' },
 		y_good_night: { speaker: 'you', english: 'Thank you, good night!' },
 		y_two_kilos: { speaker: 'you', english: 'Two kilos.' },
 		y_stop_here: { speaker: 'you', english: 'Stop here, please.' },
@@ -42,7 +59,6 @@ export const hotel: Scenario = {
 		y_enjoy: { speaker: 'you', english: 'Enjoy your meal!' },
 		y_too_expensive: { speaker: 'you', english: "That's expensive! Twenty?" },
 		y_welcome: { speaker: 'you', english: 'Welcome!' },
-
 		item_key: { speaker: 'item', english: 'room key' }
 	},
 	turns: [
@@ -74,6 +90,24 @@ export const hotel: Scenario = {
 			]
 		},
 		{
+			id: 'room',
+			npc: 'h_type',
+			choices: [
+				{ line: 'y_single', ok: true },
+				{ line: 'y_double', ok: true },
+				{ line: 'y_headache', ok: false }
+			]
+		},
+		{
+			id: 'view',
+			npc: 'h_view',
+			choices: [
+				{ line: 'y_view_yes', ok: true },
+				{ line: 'y_view_no', ok: true },
+				{ line: 'y_stop_here', ok: false }
+			]
+		},
+		{
 			id: 'passport',
 			npc: 'h_passport',
 			choices: [
@@ -84,21 +118,48 @@ export const hotel: Scenario = {
 			fetch: true
 		},
 		{
+			id: 'pay',
+			npc: 'h_pay',
+			choices: [
+				{ line: 'y_pay_leave', ok: true },
+				{ line: 'y_pay_now', ok: true },
+				{ line: 'y_two_nights', ok: false }
+			]
+		},
+		{
 			id: 'key',
 			npc: 'h_key',
 			choices: [
-				{ line: 'y_breakfast', ok: true },
+				{ line: 'y_lift', ok: true, reply: 'h_lift' },
 				{ line: 'y_enjoy', ok: false },
 				{ line: 'y_welcome', ok: false }
 			]
 		},
 		{
-			id: 'breakfast',
-			npc: 'h_breakfast',
+			id: 'anything',
+			npc: 'h_anything',
+			choices: [
+				{ line: 'y_breakfast', ok: true, reply: 'h_breakfast' },
+				{ line: 'y_checkout', ok: true, reply: 'h_checkout' },
+				{ line: 'y_two_kilos', ok: false }
+			]
+		},
+		{
+			id: 'more',
+			npc: 'h_more',
 			choices: [
 				{ line: 'y_wifi', ok: true, reply: 'h_wifi' },
 				{ line: 'y_great', ok: true },
 				{ line: 'y_headache', ok: false }
+			]
+		},
+		{
+			id: 'bags',
+			npc: 'h_bags',
+			choices: [
+				{ line: 'y_bags_no', ok: true },
+				{ line: 'y_bags_yes', ok: true },
+				{ line: 'y_stop_here', ok: false }
 			]
 		},
 		{

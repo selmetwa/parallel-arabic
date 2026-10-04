@@ -78,6 +78,16 @@ describe('a conversation', () => {
 	const okLine = (turn: number) => restaurant.turns[turn].choices.find((c) => c.ok)!.line;
 	const wrongLine = (turn: number) => restaurant.turns[turn].choices.find((c) => !c.ok)!.line;
 
+	/** Answers right until `stop` (a turn id), taking `picks` where given. */
+	function playUntil(stop: string, picks: Record<string, string> = {}) {
+		const state = createScenarioState();
+		for (const turn of restaurant.turns) {
+			if (turn.id === stop) break;
+			reply(restaurant, state, picks[turn.id] ?? turn.choices.find((c) => c.ok)!.line);
+		}
+		return state;
+	}
+
 	it('moves on after a fitting reply and earns XP', () => {
 		const state = createScenarioState();
 		expect(reply(restaurant, state, okLine(0))).toMatchObject({ result: 'ok', xp: true });
@@ -87,37 +97,39 @@ describe('a conversation', () => {
 
 	it('keeps the turn after a reply that does not fit, then marks a right one', () => {
 		const state = createScenarioState();
+		const first = restaurant.turns[0].id;
 		expect(reply(restaurant, state, wrongLine(0)).result).toBe('wrong');
 		expect(hintedLine(restaurant, state)).toBeUndefined();
 		expect(reply(restaurant, state, wrongLine(0)).result).toBe('hint');
 		expect(hintedLine(restaurant, state)).toBe(okLine(0));
 		expect(reply(restaurant, state, okLine(0))).toMatchObject({ result: 'ok', xp: false });
-		expect(state.outcomes.greet).toBe('hinted');
+		expect(state.outcomes[first]).toBe('hinted');
 	});
 
-	it('hands over what was asked for when a fetching turn ends, with the reply', () => {
-		const state = createScenarioState();
-		reply(restaurant, state, okLine(0));
-		expect(reply(restaurant, state, 'y_water').fetch).toBeUndefined();
-		expect(reply(restaurant, state, 'y_soup')).toMatchObject({
+	it('hands over everything asked for when a fetching turn ends, with the reply', () => {
+		const state = playUntil('bread', { drink: 'y_water', food: 'y_soup' });
+		expect(state.pending).toEqual(['glass', 'soup']);
+		expect(reply(restaurant, state, 'y_yes_please')).toMatchObject({
 			reply: 'w_coming',
-			fetch: ['glass', 'soup']
+			fetch: ['glass', 'soup', 'bread']
 		});
-		expect(state.given).toEqual(['glass', 'soup']);
+		expect(state.given).toEqual(['glass', 'soup', 'bread']);
 	});
 
 	it('fetches nothing when nothing was asked for', () => {
-		const state = createScenarioState();
-		for (const line of ['y_thanks', 'y_tea', 'y_fish', 'y_thanks']) reply(restaurant, state, line);
+		const state = playUntil('coffee', { dessert: 'y_no_thanks' });
 		expect(reply(restaurant, state, 'y_no_thanks').fetch).toBeUndefined();
 	});
 
-	it('reports a drive when its turn is answered', () => {
+	it('reports each drive when its turn is answered', () => {
 		const { scenario } = getScenario('taxi');
 		const state = createScenarioState();
-		const way = scenario.turns.findIndex((t) => t.drive);
-		for (const turn of scenario.turns.slice(0, way)) reply(scenario, state, turn.choices.find((c) => c.ok)!.line);
-		expect(reply(scenario, state, 'y_straight_right').drive).toBe('station');
+		const drives: string[] = [];
+		for (const turn of scenario.turns) {
+			const result = reply(scenario, state, turn.choices.find((c) => c.ok)!.line);
+			if (result.drive) drives.push(result.drive);
+		}
+		expect(drives).toEqual(['light', 'station']);
 	});
 
 	it('refuses a line that is not an answer to this turn', () => {
