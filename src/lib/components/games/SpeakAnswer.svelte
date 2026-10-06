@@ -70,7 +70,7 @@
 		status = 'processing';
 		try {
 			const heard = await transcribe(blob, dialect);
-			const scores = targets.map((t) => scorePronunciation(t, heard));
+			const scores = targets.map((t) => scorePronunciation(t, heard, dialect));
 			const best = scores.indexOf(Math.max(...scores));
 			onResult(scores[best] >= PASS_THRESHOLD.word ? best : -1, heard);
 		} catch (e) {
