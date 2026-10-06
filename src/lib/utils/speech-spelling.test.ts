@@ -40,9 +40,30 @@ describe('spellForSpeech, Egyptian', () => {
 	});
 });
 
-describe('spellForSpeech, other dialects', () => {
+describe('spellForSpeech, Levantine', () => {
+	const lev = (text: string) => spellForSpeech(text, 'levantine');
+
+	it('says ق as a hamza, ث as t and ذ as d', () => {
+		expect(lev('قَدّيش')).toBe('أَدّيش');
+		expect(lev('قَهْوِة')).toBe('أَهْوِة');
+		expect(lev('الطَّرِيق')).toBe('الطَّرِيء');
+		expect(lev('ثَلَاثَة')).toBe('تَلَاتَة');
+	});
+
+	it('keeps ج as "j"', () => {
+		expect(lev('جاج')).toBe('جاج');
+		expect(lev('الْمَحَطَّة؟ جِنِيه')).toBe('الْمَحَطَّة؟ جِنِيه');
+	});
+
+	it('uses the same exceptions', () => {
+		expect(lev('إذا')).toBe('إزا');
+		expect(lev('القرآن')).toBe('القرآن');
+	});
+});
+
+describe('spellForSpeech, Darija and Fusha', () => {
 	it('leaves them as written', () => {
-		for (const dialect of ['levantine', 'darija', 'fusha']) {
+		for (const dialect of ['darija', 'fusha']) {
 			expect(spellForSpeech('جِنِيه قَهْوَة ثَلَّاجَة', dialect)).toBe('جِنِيه قَهْوَة ثَلَّاجَة');
 		}
 	});

@@ -3,18 +3,22 @@
  *
  * Arabic script doesn't mark dialect: جنيه is spelled the same in Cairo and in
  * Fusha, so the voice reads it the standard way (ج as "j", ق as "q", ث as "th").
- * For Egyptian, the voice gets a copy spelled the way Cairo says it; learners
- * still see the normal spelling.
+ * For Egyptian and Levantine, the voice gets a copy spelled the way people say
+ * it; learners still see the normal spelling.
  *
- * - ج → گ (a hard g: geneh, tallaga)
- * - ق → hamza (2ahwa, taree2): أ at the start of a word, ء inside it
+ * - ق → hamza (2ahwa, 2addeish): أ at the start of a word, ء inside it
  * - ث → ت, ذ → د (talata, dahab)
+ * - Egyptian only: ج → گ (a hard g: geneh, tallaga). Levantine keeps "j".
  *
  * A few words don't follow the rules: learned words where ث and ذ become s and
- * z, and words that keep the formal q. Those are in EGYPTIAN_WORDS.
+ * z, and words that keep the formal q. Those are in SPOKEN_WORDS.
  */
 
+/** Tashkeel: fathatan to sukun, and the dagger alif. */
+const HARAKA = /[ً-ْٰ]/;
 const HARAKAT = /[ً-ْٰ]/g;
+/** A run of Arabic letters: one word. */
+const ARABIC_WORD = /[؀-ۿݐ-ݿ]+/g;
 
 /** Prefixes that can come before a word's first letter: و، ف، ب، ل and ال. */
 const PREFIXES = ['وال', 'فال', 'بال', 'لل', 'ال', 'و', 'ف', 'ب', 'ل'];
@@ -23,7 +27,7 @@ const PREFIXES = ['وال', 'فال', 'بال', 'لل', 'ال', 'و', 'ف', 'ب'
  * Whole words (without tashkeel or prefixes) the rules get wrong: what the
  * voice should read instead, or `null` to leave the word as written.
  */
-const EGYPTIAN_WORDS: Record<string, string | null> = {
+const SPOKEN_WORDS: Record<string, string | null> = {
 	قرآن: null,
 	قران: null,
 	ثقافة: 'سقافة',
@@ -46,11 +50,11 @@ const EGYPTIAN_WORDS: Record<string, string | null> = {
 /** The word without tashkeel, and without the longest prefix whose rest is a known word. */
 function lookup(word: string): { prefix: string; entry: string | null } | undefined {
 	const bare = word.replace(HARAKAT, '');
-	if (bare in EGYPTIAN_WORDS) return { prefix: '', entry: EGYPTIAN_WORDS[bare] };
+	if (bare in SPOKEN_WORDS) return { prefix: '', entry: SPOKEN_WORDS[bare] };
 	for (const prefix of PREFIXES) {
 		const rest = bare.slice(prefix.length);
-		if (bare.startsWith(prefix) && rest in EGYPTIAN_WORDS) {
-			return { prefix, entry: EGYPTIAN_WORDS[rest] };
+		if (bare.startsWith(prefix) && rest in SPOKEN_WORDS) {
+			return { prefix, entry: SPOKEN_WORDS[rest] };
 		}
 	}
 	return undefined;
@@ -64,14 +68,14 @@ function stemStart(word: string): number {
 	let letters = 0;
 	let i = 0;
 	while (i < word.length && letters < prefix.length) {
-		if (!/[ً-ْٰ]/.test(word[i])) letters++;
+		if (!HARAKA.test(word[i])) letters++;
 		i++;
 	}
-	while (i < word.length && /[ً-ْٰ]/.test(word[i])) i++;
+	while (i < word.length && HARAKA.test(word[i])) i++;
 	return i;
 }
 
-function egyptianWord(word: string): string {
+function spokenWord(word: string, hardG: boolean): string {
 	const known = lookup(word);
 	if (known) return known.entry === null ? word : known.prefix + known.entry;
 
@@ -79,7 +83,7 @@ function egyptianWord(word: string): string {
 	let out = '';
 	for (let i = 0; i < word.length; i++) {
 		const ch = word[i];
-		if (ch === 'ج') out += 'گ';
+		if (ch === 'ج' && hardG) out += 'گ';
 		else if (ch === 'ث') out += 'ت';
 		else if (ch === 'ذ') out += 'د';
 		else if (ch === 'ق') out += i === start || i === 0 ? 'أ' : 'ء';
@@ -88,8 +92,9 @@ function egyptianWord(word: string): string {
 	return out;
 }
 
-/** The text as the voice should read it, for this dialect. Other dialects are unchanged. */
+/** The text as the voice should read it, for this dialect. Darija and Fusha are unchanged. */
 export function spellForSpeech(text: string, dialect: string): string {
-	if (dialect !== 'egyptian-arabic') return text;
-	return text.replace(/[؀-ۿݐ-ݿ]+/g, egyptianWord);
+	if (dialect !== 'egyptian-arabic' && dialect !== 'levantine') return text;
+	const hardG = dialect === 'egyptian-arabic';
+	return text.replace(ARABIC_WORD, (word) => spokenWord(word, hardG));
 }
