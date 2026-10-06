@@ -394,5 +394,383 @@
 			"arabic": "هَذَا غَالٍ! عِشْرُونَ؟",
 			"transliteration": "hadha ghalin! 3ishrun?"
 		}
+	},
+	"m_fresh": {
+		"egyptian-arabic": {
+			"arabic": "بُصّ، طَازَة أَوِي!",
+			"transliteration": "boss, taza awi!"
+		},
+		"levantine": {
+			"arabic": "شُوف، كْتير طازَة!",
+			"transliteration": "shuf, kteer taza!"
+		},
+		"darija": {
+			"arabic": "شُوف، طْرِيَّة بْزَّاف!",
+			"transliteration": "shuf, triya bezzaf!"
+		},
+		"fusha": {
+			"arabic": "اُنْظُرْ، إِنَّهَا طَازَجَةٌ جِدًّا!",
+			"transliteration": "unzur, innaha tazija jiddan!"
+		}
+	},
+	"m_ripe": {
+		"egyptian-arabic": {
+			"arabic": "مِسْتِوِيَّة، لِلنَّهَارْدَة؟",
+			"transliteration": "mestewiya, lennaharda?"
+		},
+		"levantine": {
+			"arabic": "مِسْتْوْيِة، لَالْيَوم؟",
+			"transliteration": "mistwiyeh, la-l-yom?"
+		},
+		"darija": {
+			"arabic": "طَايْبِين، دْيَال الْيُوم؟",
+			"transliteration": "taybin, dyal lyum?"
+		},
+		"fusha": {
+			"arabic": "نَاضِجَةٌ، لِلْيَوْمِ؟",
+			"transliteration": "nadija, lil-yawm?"
+		}
+	},
+	"m_lemon_size": {
+		"egyptian-arabic": {
+			"arabic": "لَمُون كْبِير وَلَّا صُغَيَّر؟",
+			"transliteration": "lamoon kbeer walla soghayyar?"
+		},
+		"levantine": {
+			"arabic": "لَيمون كْبير وَلّا زْغير؟",
+			"transliteration": "laymun kbeer walla zgheer?"
+		},
+		"darija": {
+			"arabic": "الْحَامْض كْبِير وَلَّا صْغِير؟",
+			"transliteration": "l7amed kbir wella sghir?"
+		},
+		"fusha": {
+			"arabic": "لَيْمُونٌ كَبِيرٌ أَمْ صَغِيرٌ؟",
+			"transliteration": "laymun kabir am saghir?"
+		}
+	},
+	"m_else": {
+		"egyptian-arabic": {
+			"arabic": "حَاجَة تَانْيَة؟",
+			"transliteration": "7aga tanya?"
+		},
+		"levantine": {
+			"arabic": "شِي تاني؟",
+			"transliteration": "shi tani?"
+		},
+		"darija": {
+			"arabic": "شِي حَاجَة أُخْرَى؟",
+			"transliteration": "shi 7aja okhra?"
+		},
+		"fusha": {
+			"arabic": "شَيْءٌ آخَرُ؟",
+			"transliteration": "shay2un akhar?"
+		}
+	},
+	"m_change": {
+		"egyptian-arabic": {
+			"arabic": "مَعَاك فَكَّة؟",
+			"transliteration": "ma3ak fakka?"
+		},
+		"levantine": {
+			"arabic": "مَعَك فْراطَة؟",
+			"transliteration": "ma3ak fraata?"
+		},
+		"darija": {
+			"arabic": "عَنْدْك الصَّرْف؟",
+			"transliteration": "3endek sserf?"
+		},
+		"fusha": {
+			"arabic": "هَلْ مَعَكَ فَكَّةٌ؟",
+			"transliteration": "hal ma3aka fakka?"
+		}
+	},
+	"m_no_problem": {
+		"egyptian-arabic": {
+			"arabic": "مَفِيش مُشْكِلَة، اتْفَضَّل الْبَاقِي.",
+			"transliteration": "mafeesh moshkela, etfaddal el ba2i."
+		},
+		"levantine": {
+			"arabic": "مِش مُشْكِلِة، تْفَضَّل الْباقي.",
+			"transliteration": "mish mushkileh, tfaddal el ba2i."
+		},
+		"darija": {
+			"arabic": "مَاشِي مُشْكِل، هَاك الصَّرْف.",
+			"transliteration": "mashi mushkil, hak sserf."
+		},
+		"fusha": {
+			"arabic": "لَا مُشْكِلَةَ، تَفَضَّلِ الْبَاقِيَ.",
+			"transliteration": "la mushkila, tafaddal al-baqi."
+		}
+	},
+	"m_bag": {
+		"egyptian-arabic": {
+			"arabic": "عَايِز كِيس؟",
+			"transliteration": "3ayez kees?"
+		},
+		"levantine": {
+			"arabic": "بِدَّك كِيس؟",
+			"transliteration": "biddak kees?"
+		},
+		"darija": {
+			"arabic": "بْغِيتِي مِيكَة؟",
+			"transliteration": "bghiti mika?"
+		},
+		"fusha": {
+			"arabic": "هَلْ تَحْتَاجُ كِيسًا؟",
+			"transliteration": "hal ta7taju kisan?"
+		}
+	},
+	"m_local": {
+		"egyptian-arabic": {
+			"arabic": "إِنْتَ مِن هِنَا؟",
+			"transliteration": "enta men hena?"
+		},
+		"levantine": {
+			"arabic": "إِنْتَ مِن هَون؟",
+			"transliteration": "inta min hon?"
+		},
+		"darija": {
+			"arabic": "نْتَا مْنْ هْنَا؟",
+			"transliteration": "nta men hna?"
+		},
+		"fusha": {
+			"arabic": "هَلْ أَنْتَ مِنْ هُنَا؟",
+			"transliteration": "hal anta min huna?"
+		}
+	},
+	"y_look_great": {
+		"egyptian-arabic": {
+			"arabic": "شَكْلَهَا حِلْو أَوِي!",
+			"transliteration": "shakleha 7elw awi!"
+		},
+		"levantine": {
+			"arabic": "شَكْلُن كْتير حِلو!",
+			"transliteration": "shakelon kteer 7ilu!"
+		},
+		"darija": {
+			"arabic": "بَايْنِين مْزْيَانِين!",
+			"transliteration": "baynin mzyanin!"
+		},
+		"fusha": {
+			"arabic": "تَبْدُو رَائِعَةً!",
+			"transliteration": "tabdu ra2i3a!"
+		}
+	},
+	"y_today": {
+		"egyptian-arabic": {
+			"arabic": "أَيْوَة، لِلنَّهَارْدَة.",
+			"transliteration": "aywa, lennaharda."
+		},
+		"levantine": {
+			"arabic": "إِيه، لَالْيَوم.",
+			"transliteration": "eh, la-l-yom."
+		},
+		"darija": {
+			"arabic": "إِيِّه، دْيَال الْيُوم.",
+			"transliteration": "iyeh, dyal lyum."
+		},
+		"fusha": {
+			"arabic": "نَعَمْ، لِلْيَوْمِ.",
+			"transliteration": "na3am, lil-yawm."
+		}
+	},
+	"y_tomorrow": {
+		"egyptian-arabic": {
+			"arabic": "لِبُكْرَة، لَوْ سَمَحْت.",
+			"transliteration": "lebokra, law sama7t."
+		},
+		"levantine": {
+			"arabic": "لَبُكْرا، لَوْ سَمَحْتِ.",
+			"transliteration": "la-bukra, law sama7ti."
+		},
+		"darija": {
+			"arabic": "دْيَال غْدَّا، عَافَاك.",
+			"transliteration": "dyal ghedda, 3afak."
+		},
+		"fusha": {
+			"arabic": "لِلْغَدِ، مِنْ فَضْلِكَ.",
+			"transliteration": "lil-ghad, min fadlik."
+		}
+	},
+	"y_lemons": {
+		"egyptian-arabic": {
+			"arabic": "وَنُصّ كِيلُو لَمُون، لَوْ سَمَحْت.",
+			"transliteration": "we noss kilo lamoon, law sama7t."
+		},
+		"levantine": {
+			"arabic": "وْنُصّ كِيلو لَيمون، لَوْ سَمَحْتِ.",
+			"transliteration": "w nuss kilo laymun, law sama7ti."
+		},
+		"darija": {
+			"arabic": "وْنُصّ كِيلُو دْ الْحَامْض، عَافَاك.",
+			"transliteration": "w ness kilo d l7amed, 3afak."
+		},
+		"fusha": {
+			"arabic": "وَنِصْفُ كِيلُو لَيْمُونٍ، مِنْ فَضْلِكَ.",
+			"transliteration": "wa nisfu kilu laymun, min fadlik."
+		}
+	},
+	"y_small": {
+		"egyptian-arabic": {
+			"arabic": "صُغَيَّر، لَوْ سَمَحْت.",
+			"transliteration": "soghayyar, law sama7t."
+		},
+		"levantine": {
+			"arabic": "زْغير، لَوْ سَمَحْتِ.",
+			"transliteration": "zgheer, law sama7ti."
+		},
+		"darija": {
+			"arabic": "صْغِير، عَافَاك.",
+			"transliteration": "sghir, 3afak."
+		},
+		"fusha": {
+			"arabic": "صَغِيرٌ، مِنْ فَضْلِكَ.",
+			"transliteration": "saghir, min fadlik."
+		}
+	},
+	"y_big": {
+		"egyptian-arabic": {
+			"arabic": "كْبِير.",
+			"transliteration": "kbeer."
+		},
+		"levantine": {
+			"arabic": "كْبير.",
+			"transliteration": "kbeer."
+		},
+		"darija": {
+			"arabic": "كْبِير.",
+			"transliteration": "kbir."
+		},
+		"fusha": {
+			"arabic": "كَبِيرٌ.",
+			"transliteration": "kabir."
+		}
+	},
+	"y_only_hundred": {
+		"egyptian-arabic": {
+			"arabic": "آسِف، مَعَايَا مِيَّة بَسّ.",
+			"transliteration": "asef, ma3aya meyya bass."
+		},
+		"levantine": {
+			"arabic": "آسِف، مَعي بَسّ مِيّة.",
+			"transliteration": "asef, ma3i bass miyye."
+		},
+		"darija": {
+			"arabic": "سْمَحْ لِيَّا، عَنْدِي غِير مِيَّة.",
+			"transliteration": "sme7 liya, 3endi ghir miya."
+		},
+		"fusha": {
+			"arabic": "آسِفٌ، لَيْسَ مَعِي إِلَّا مِئَةٌ.",
+			"transliteration": "asif, laysa ma3i illa mi2a."
+		}
+	},
+	"y_have_change": {
+		"egyptian-arabic": {
+			"arabic": "أَيْوَة، اتْفَضَّل.",
+			"transliteration": "aywa, etfaddal."
+		},
+		"levantine": {
+			"arabic": "إِيه، تْفَضَّلي.",
+			"transliteration": "eh, tfaddali."
+		},
+		"darija": {
+			"arabic": "إِيِّه، هَاك.",
+			"transliteration": "iyeh, hak."
+		},
+		"fusha": {
+			"arabic": "نَعَمْ، تَفَضَّلْ.",
+			"transliteration": "na3am, tafaddal."
+		}
+	},
+	"y_yes_please": {
+		"egyptian-arabic": {
+			"arabic": "أَيْوَة، لَوْ سَمَحْت.",
+			"transliteration": "aywa, law sama7t."
+		},
+		"levantine": {
+			"arabic": "إِيه، لَوْ سَمَحْتِ.",
+			"transliteration": "eh, law sama7ti."
+		},
+		"darija": {
+			"arabic": "إِيِّه، عَافَاك.",
+			"transliteration": "iyeh, 3afak."
+		},
+		"fusha": {
+			"arabic": "نَعَمْ، مِنْ فَضْلِكَ.",
+			"transliteration": "na3am, min fadlik."
+		}
+	},
+	"y_bag_no": {
+		"egyptian-arabic": {
+			"arabic": "لَأ، مَعَايَا وَاحِد.",
+			"transliteration": "la2, ma3aya wa7ed."
+		},
+		"levantine": {
+			"arabic": "لا، مَعي واحَد.",
+			"transliteration": "la, ma3i wa7ad."
+		},
+		"darija": {
+			"arabic": "لَا، عَنْدِي وَحْدَة.",
+			"transliteration": "la, 3endi we7da."
+		},
+		"fusha": {
+			"arabic": "لَا، مَعِي كِيسٌ.",
+			"transliteration": "la, ma3i kis."
+		}
+	},
+	"y_tourist": {
+		"egyptian-arabic": {
+			"arabic": "لَأ، أَنَا زَايِر.",
+			"transliteration": "la2, ana zayer."
+		},
+		"levantine": {
+			"arabic": "لا، أَنا زايِر.",
+			"transliteration": "la, ana zayer."
+		},
+		"darija": {
+			"arabic": "لَا، أَنَا جَايْ نْزُور.",
+			"transliteration": "la, ana jay nzur."
+		},
+		"fusha": {
+			"arabic": "لَا، أَنَا زَائِرٌ.",
+			"transliteration": "la, ana za2ir."
+		}
+	},
+	"y_nearby": {
+		"egyptian-arabic": {
+			"arabic": "أَيْوَة، أَنَا سَاكِن قُرَيِّب.",
+			"transliteration": "aywa, ana saken 2orayyeb."
+		},
+		"levantine": {
+			"arabic": "إِيه، أَنا ساكِن قَريب.",
+			"transliteration": "eh, ana saken 2areeb."
+		},
+		"darija": {
+			"arabic": "إِيِّه، أَنَا سَاكْن قْرِيب.",
+			"transliteration": "iyeh, ana sakn qrib."
+		},
+		"fusha": {
+			"arabic": "نَعَمْ، أَسْكُنُ قَرِيبًا.",
+			"transliteration": "na3am, askunu qariban."
+		}
+	},
+	"item_lemons": {
+		"egyptian-arabic": {
+			"arabic": "لَمُون",
+			"transliteration": "lamoon"
+		},
+		"levantine": {
+			"arabic": "لَيمون",
+			"transliteration": "laymun"
+		},
+		"darija": {
+			"arabic": "الْحَامْض",
+			"transliteration": "l7amed"
+		},
+		"fusha": {
+			"arabic": "لَيْمُون",
+			"transliteration": "laymun"
+		}
 	}
 }

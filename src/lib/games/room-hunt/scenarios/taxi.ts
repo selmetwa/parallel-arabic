@@ -24,18 +24,33 @@ export const taxi: Scenario = {
 		d_price: { speaker: 'npc', english: 'The station? Fifty.' },
 		d_forty: { speaker: 'npc', english: 'Fine, forty.' },
 		d_lets_go: { speaker: 'npc', english: "Let's go!" },
+		d_ac: { speaker: 'npc', english: 'Do you want the air conditioning on?' },
 		d_way: { speaker: 'npc', english: 'Do you know the way?' },
+		d_traffic: { speaker: 'npc', english: 'So much traffic today!' },
+		d_from: { speaker: 'npc', english: 'Where are you from?' },
+		d_arabic: { speaker: 'npc', english: 'Your Arabic is really good!' },
+		d_turn: { speaker: 'npc', english: 'Right or left?' },
 		d_here: { speaker: 'npc', english: 'Here?' },
 		d_arrived: { speaker: 'npc', english: "Here we are. That's the station." },
+		d_receipt: { speaker: 'npc', english: 'Do you need a receipt?' },
 		d_bye: { speaker: 'npc', english: 'Thank you! Have a good day.' },
 		d_sorry: { speaker: 'npc', english: "Sorry? I didn't get that." },
-
 		y_station: { speaker: 'you', english: 'To the train station, please.' },
 		y_too_much: { speaker: 'you', english: "That's too much! Forty?" },
 		y_ok_go: { speaker: 'you', english: "OK, let's go." },
+		y_ac_yes: { speaker: 'you', english: "Yes please, it's hot." },
+		y_ac_no: { speaker: 'you', english: 'No thanks, the window is fine.' },
 		y_straight_right: { speaker: 'you', english: 'Go straight, then right at the traffic light.' },
+		y_traffic: { speaker: 'you', english: "Yes, it's always like this." },
+		y_from_canada: { speaker: 'you', english: "I'm from Canada." },
+		y_from_england: { speaker: 'you', english: "I'm from England." },
+		y_learning: { speaker: 'you', english: "Thank you! I'm learning." },
+		y_right: { speaker: 'you', english: 'Right, please.' },
+		y_left: { speaker: 'you', english: 'Left, please.' },
 		y_stop_here: { speaker: 'you', english: 'Yes, stop here, please.' },
 		y_change: { speaker: 'you', english: 'Here you go. Keep the change.' },
+		y_no_thanks: { speaker: 'you', english: 'No, thank you.' },
+		y_yes_please: { speaker: 'you', english: 'Yes, please.' },
 		y_thanks_bye: { speaker: 'you', english: 'Thanks, goodbye!' },
 		y_table_two: { speaker: 'you', english: 'A table for two, please.' },
 		y_headache: { speaker: 'you', english: 'I have a headache.' },
@@ -65,12 +80,58 @@ export const taxi: Scenario = {
 			]
 		},
 		{
+			id: 'ac',
+			npc: 'd_ac',
+			choices: [
+				{ line: 'y_ac_yes', ok: true },
+				{ line: 'y_ac_no', ok: true },
+				{ line: 'y_menu', ok: false }
+			]
+		},
+		{
 			id: 'way',
 			npc: 'd_way',
 			choices: [
 				{ line: 'y_straight_right', ok: true },
 				{ line: 'y_enjoy', ok: false },
 				{ line: 'y_welcome', ok: false }
+			],
+			drive: 'light'
+		},
+		{
+			id: 'traffic',
+			npc: 'd_traffic',
+			choices: [
+				{ line: 'y_traffic', ok: true },
+				{ line: 'y_kilo', ok: false },
+				{ line: 'y_table_two', ok: false }
+			]
+		},
+		{
+			id: 'from',
+			npc: 'd_from',
+			choices: [
+				{ line: 'y_from_canada', ok: true },
+				{ line: 'y_from_england', ok: true },
+				{ line: 'y_headache', ok: false }
+			]
+		},
+		{
+			id: 'arabic',
+			npc: 'd_arabic',
+			choices: [
+				{ line: 'y_learning', ok: true },
+				{ line: 'y_menu', ok: false },
+				{ line: 'y_welcome', ok: false }
+			]
+		},
+		{
+			id: 'turn',
+			npc: 'd_turn',
+			choices: [
+				{ line: 'y_right', ok: true },
+				{ line: 'y_left', ok: false },
+				{ line: 'y_enjoy', ok: false }
 			],
 			drive: 'station'
 		},
@@ -90,6 +151,15 @@ export const taxi: Scenario = {
 				{ line: 'y_change', ok: true },
 				{ line: 'y_menu', ok: false },
 				{ line: 'y_headache', ok: false }
+			]
+		},
+		{
+			id: 'receipt',
+			npc: 'd_receipt',
+			choices: [
+				{ line: 'y_no_thanks', ok: true },
+				{ line: 'y_yes_please', ok: true },
+				{ line: 'y_table_two', ok: false }
 			]
 		},
 		{
@@ -181,6 +251,8 @@ export const taxiStage: Stage = {
 		arrive: [[1, 2]],
 		follow: [0, 3.4, -8],
 		drives: {
+			// Up to the red light at the crossroads; the camera stays behind the car.
+			light: { path: [[1, -7.4]] },
 			station: {
 				path: [
 					[1, -9.4],

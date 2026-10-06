@@ -5,6 +5,8 @@
  * read it. The hub lists only what is in here, so a game appears once it ships.
  */
 
+import type { Pathname } from '$app/types';
+
 export interface Faq {
 	question: string;
 	answer: string;
@@ -20,6 +22,8 @@ export interface GameShot {
 
 export interface GameInfo {
 	slug: string;
+	/** Set when the game lives outside /learn/game (Scenarios has a page of its own). */
+	path?: Pathname;
 	name: string;
 	/** The page's h1 — worded for the search it should rank for. */
 	heading: string;
@@ -96,6 +100,7 @@ export const GAMES: GameInfo[] = [
 	},
 	{
 		slug: 'scenarios',
+		path: '/scenarios',
 		name: 'Scenarios',
 		heading: 'Arabic Conversation Practice: Taxi, Market, Pharmacy and More',
 		emoji: '🗣️',
@@ -376,8 +381,8 @@ export const GAMES_HUB_FAQS: Faq[] = [
 	}
 ];
 
-export function gameHref(slug: string): `/learn/game/${string}` {
-	return `/learn/game/${slug}`;
+export function gameHref(slug: string): Pathname {
+	return getGame(slug)?.path ?? (`/learn/game/${slug}` as Pathname);
 }
 
 export function getGame(slug: string): GameInfo | undefined {

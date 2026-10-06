@@ -41,6 +41,8 @@
 	let Toaster: typeof import('svelte-sonner').Toaster | null = $state(null);
 	let Onboarding: typeof import('$lib/components/Onboarding.svelte').default | null = $state(null);
 	let AppBanner: typeof import('$lib/components/AppBanner.svelte').default | null = $state(null);
+	let ScenariosAnnouncement: typeof import('$lib/components/ScenariosAnnouncement.svelte').default | null =
+		$state(null);
 	let lazyComponentsLoaded = $state(false);
 
 	// Helper to detect if running in Capacitor native app
@@ -83,16 +85,25 @@
 		// Lazy load non-critical components after initial paint
 		// This improves FCP/LCP by ~230KB off the critical path
 		if (browser) {
-			const [drawerMod, buttonMod, radioMod, chatMod, toasterMod, onboardingMod, appBannerMod] =
-				await Promise.all([
-					import('$lib/components/Drawer.svelte'),
-					import('$lib/components/Button.svelte'),
-					import('$lib/components/RadioButton.svelte'),
-					import('$lib/components/ChatWidget.svelte'),
-					import('svelte-sonner'),
-					import('$lib/components/Onboarding.svelte'),
-					import('$lib/components/AppBanner.svelte')
-				]);
+			const [
+				drawerMod,
+				buttonMod,
+				radioMod,
+				chatMod,
+				toasterMod,
+				onboardingMod,
+				appBannerMod,
+				announcementMod
+			] = await Promise.all([
+				import('$lib/components/Drawer.svelte'),
+				import('$lib/components/Button.svelte'),
+				import('$lib/components/RadioButton.svelte'),
+				import('$lib/components/ChatWidget.svelte'),
+				import('svelte-sonner'),
+				import('$lib/components/Onboarding.svelte'),
+				import('$lib/components/AppBanner.svelte'),
+				import('$lib/components/ScenariosAnnouncement.svelte')
+			]);
 
 			Drawer = drawerMod.default;
 			Button = buttonMod.default;
@@ -101,6 +112,7 @@
 			Toaster = toasterMod.Toaster;
 			Onboarding = onboardingMod.default;
 			AppBanner = appBannerMod.default;
+			ScenariosAnnouncement = announcementMod.default;
 			lazyComponentsLoaded = true;
 		}
 
@@ -398,6 +410,11 @@
 		isOpen={showOnboarding}
 		handleCloseModal={handleCloseOnboarding}
 	/>
+{/if}
+
+<!-- "New: Scenarios" - a modal, once per user, never over onboarding -->
+{#if ScenariosAnnouncement && !showOnboarding}
+	<ScenariosAnnouncement signedIn={!!data.user} />
 {/if}
 
 <!-- iOS app banner - lazy loaded, decides for itself whether to show -->

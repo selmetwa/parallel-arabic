@@ -2,6 +2,7 @@ import { ElevenLabsClient } from 'elevenlabs';
 import { env } from '$env/dynamic/private';
 import type { RequestHandler } from './$types';
 import { getVoiceConfig } from '$lib/utils/voice-config';
+import { spellForSpeech } from '$lib/utils/speech-spelling';
 import { getUserHasActiveSubscription } from '$lib/helpers/get-user-has-active-subscription';
 import { getUserTtsCount } from '$lib/helpers/get-user-tts-count';
 import { supabase } from '$lib/supabaseClient';
@@ -124,7 +125,8 @@ export const POST: RequestHandler = async ({ request, locals, cookies }) => {
 
 		const textForTTS = STRIP_ARABIC_QM_ONLY
 			? text.replace(/؟/g, '')
-			: applyPronunciationFixes(normalizeForTTS(text), dialect);
+			: // Exact-match fixes first; otherwise spell it the way the dialect says it (geneh, not jeneh).
+				spellForSpeech(applyPronunciationFixes(normalizeForTTS(text), dialect), dialect);
 
 		const audioStream = await client.generate({
 			voice: voiceConfig.voice,

@@ -50,7 +50,8 @@ export interface Stage {
 		arrive: FloorPoint[];
 		/** The camera's place behind the vehicle while it drives, in its own space. */
 		follow: [number, number, number];
-		drives: Record<string, { path: FloorPoint[]; then: Pose }>;
+		/** `then` puts the player somewhere after the drive; without it the camera stays behind the car. */
+		drives: Record<string, { path: FloorPoint[]; then?: Pose }>;
 	};
 }
 

@@ -9,7 +9,7 @@ import { COMPARISON_SLUGS } from '$lib/constants/dialect-comparisons';
 import { WORD_DIALECTS, wordSlugsFor } from '$lib/data/words/manifest';
 import { VOCAB_DIALECTS, topicSlugsFor } from '$lib/data/vocab/manifest';
 import { existsPhrase } from '$lib/data/phrases/manifest';
-import { GAMES } from '$lib/constants/games';
+import { GAMES, gameHref } from '$lib/constants/games';
 import { FEATURES } from '$lib/constants/features';
 const BASE_URL = 'https://www.parallel-arabic.com';
 
@@ -59,7 +59,7 @@ const staticPages = [
 	// Games
 	{ path: '/learn/game', priority: '0.8', changefreq: 'weekly' },
 	{ path: '/learn/game/quiz', priority: '0.6', changefreq: 'monthly' },
-	...GAMES.map((g) => ({ path: `/learn/game/${g.slug}`, priority: '0.7', changefreq: 'monthly' })),
+	...GAMES.map((g) => ({ path: gameHref(g.slug), priority: '0.7', changefreq: 'monthly' })),
 
 	// Feature landing pages
 	{ path: '/features', priority: '0.8', changefreq: 'monthly' },
