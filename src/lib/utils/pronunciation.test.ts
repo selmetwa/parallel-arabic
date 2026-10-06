@@ -36,3 +36,35 @@ describe('scorePronunciation', () => {
 		expect(scorePronunciation('', '')).toBe(0);
 	});
 });
+
+describe('scorePronunciation with a dialect', () => {
+	it('matches numbers the recognizer wrote as digits', () => {
+		// Said "keteer awi! arbe3een?"; Chirp returned digits and the formal قوي.
+		// The scenario mic passes at the word threshold; this used to fail it.
+		expect(scorePronunciation('كِتِير أَوِي! أَرْبِعِين؟', 'كتير قوي 40')).toBeLessThan(
+			PASS_THRESHOLD.word
+		);
+		expect(scorePronunciation('كِتِير أَوِي! أَرْبِعِين؟', 'كتير قوي 40', 'egyptian-arabic')).toBe(
+			100
+		);
+	});
+
+	it('writes compound numbers out the way the dialect says them', () => {
+		expect(scorePronunciation('مِيَّة وْخَمْسِين جِنِيه.', '150 جنيه', 'egyptian-arabic')).toBe(100);
+		expect(scorePronunciation('خَمْسَة وْعِشْرِين', '٢٥', 'levantine')).toBe(100);
+		expect(scorePronunciation('رْبْعِين', '40', 'darija')).toBe(100);
+		expect(scorePronunciation('أَرْبَعُونَ', '40', 'fusha')).toBe(100);
+	});
+
+	it('keeps different numbers different', () => {
+		const one = scorePronunciation('كِيلُو وَاحِد.', 'كيلو 1', 'egyptian-arabic');
+		const two = scorePronunciation('اتْنِين كِيلُو.', 'كيلو 1', 'egyptian-arabic');
+		expect(one).toBeGreaterThan(two);
+	});
+
+	it('treats ق and hamza alike in Egyptian and Levantine, not in Fusha', () => {
+		expect(scorePronunciation('قَهْوَة', 'أهوة', 'egyptian-arabic')).toBe(100);
+		expect(scorePronunciation('قَدّيش', 'أديش', 'levantine')).toBe(100);
+		expect(scorePronunciation('قَهْوَة', 'أهوة', 'fusha')).toBeLessThan(100);
+	});
+});
