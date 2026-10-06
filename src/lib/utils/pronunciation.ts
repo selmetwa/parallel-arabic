@@ -9,6 +9,7 @@
  */
 import levenshtein from 'fast-levenshtein';
 import { normalizeArabicText } from '$lib/utils/arabic-normalization';
+import { foldForMatch } from '$lib/utils/spoken-match';
 
 /**
  * Levenshtein is unforgiving on short strings, so a single word needs a higher
@@ -38,10 +39,17 @@ export async function transcribe(blob: Blob, dialect: string): Promise<string> {
 	return result.text || '';
 }
 
-/** 0–100, how close the transcript is to what the learner was asked to say. */
-export function scorePronunciation(target: string, spoken: string): number {
-	const normalizedSpoken = normalizeArabicText(spoken.replace(/\./g, ''));
-	const normalizedTarget = normalizeArabicText(target);
+/**
+ * 0–100, how close the transcript is to what the learner was asked to say.
+ * With a dialect, both sides are folded first (spoken-match.ts): digits the
+ * recognizer wrote become the dialect's number words, and formal spellings
+ * like قوي match the dialect's أوي.
+ */
+export function scorePronunciation(target: string, spoken: string, dialect?: string): number {
+	const normalizedSpoken = dialect
+		? foldForMatch(spoken, dialect)
+		: normalizeArabicText(spoken.replace(/\./g, ''));
+	const normalizedTarget = dialect ? foldForMatch(target, dialect) : normalizeArabicText(target);
 	const distance = levenshtein.get(normalizedTarget, normalizedSpoken);
 	const maxLength = Math.max(normalizedTarget.length, normalizedSpoken.length);
 
