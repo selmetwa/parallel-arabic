@@ -1,14 +1,12 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { fade, scale } from 'svelte/transition';
-	import { goto } from '$app/navigation';
 	import { page } from '$app/state';
 	import { resolve } from '$app/paths';
-	import { toast } from 'svelte-sonner';
 
 	/**
-	 * Tells signed-in users about Scenarios, once: a modal on desktop, a toast on
-	 * phones and in the app. "Once" is per browser (localStorage), and visiting
+	 * Tells signed-in users about Scenarios, once, in a modal (desktop, phones
+	 * and the app alike). "Once" is per browser (localStorage), and visiting
 	 * /scenarios counts as having seen it.
 	 */
 	interface Props {
@@ -62,16 +60,7 @@
 		const timer = setTimeout(() => {
 			if (seen() || quiet()) return;
 			markSeen();
-			const desktop = window.matchMedia('(min-width: 1024px) and (pointer: fine)').matches;
-			if (desktop) {
-				open = true;
-			} else {
-				toast('New: Scenarios 🗣️', {
-					description: 'Take a taxi, shop at a market or check into a hotel, all in Arabic.',
-					duration: 12000,
-					action: { label: 'Try it', onClick: () => goto(resolve('/scenarios')) }
-				});
-			}
+			open = true;
 		}, DELAY_MS);
 		return () => clearTimeout(timer);
 	});

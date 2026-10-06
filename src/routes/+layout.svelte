@@ -412,7 +412,7 @@
 	/>
 {/if}
 
-<!-- "New: Scenarios" - a modal on desktop, a toast on mobile; once per user, never over onboarding -->
+<!-- "New: Scenarios" - a modal, once per user, never over onboarding -->
 {#if ScenariosAnnouncement && !showOnboarding}
 	<ScenariosAnnouncement signedIn={!!data.user} />
 {/if}
