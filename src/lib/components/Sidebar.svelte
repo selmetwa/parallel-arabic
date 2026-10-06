@@ -58,6 +58,7 @@
 			{
 				title: 'Practice',
 				items: [
+					{ label: 'Scenarios', href: '/scenarios', icon: '🗣️' },
 					{ label: 'Game', href: '/learn/game', icon: '🎮' },
 					{ label: 'Sentences', href: '/sentences', icon: '📝' },
 					{ label: 'Conjugations', href: '/conjugations', icon: '🔄' },

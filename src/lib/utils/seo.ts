@@ -1,4 +1,4 @@
-import { getGame } from '$lib/constants/games';
+import { gameHref, getGame } from '$lib/constants/games';
 import { getFeature } from '$lib/constants/features';
 
 export interface PageMeta {
@@ -109,7 +109,7 @@ function gamePageMeta(slug: string | undefined): PageMeta {
 	return {
 		title: game.seo.title,
 		description: game.seo.description,
-		url: `${baseUrl}/learn/game/${game.slug}`,
+		url: `${baseUrl}${gameHref(game.slug)}`,
 		type: 'website'
 	};
 }
@@ -665,6 +665,8 @@ export function resolvePageKey(
 		// /learn/game/play stays unmapped; it is noindex via NOINDEX_PREFIXES.
 		return null;
 	}
+	if (path === '/scenarios')
+		return { key: 'game-page', data: { slug: 'scenarios', gameName: getGame('scenarios')!.name } };
 	if (parts[0] === 'features') {
 		if (parts.length === 1) return { key: 'features', data: {} };
 		if (parts.length === 2 && getFeature(parts[1]))

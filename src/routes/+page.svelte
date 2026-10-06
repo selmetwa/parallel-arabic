@@ -234,6 +234,31 @@
 		</div>
 	{/if}
 
+	<!-- ── New: Scenarios ──────────────────────────────────────────────────── -->
+	<div class="reveal" style="animation-delay: 210ms;">
+		<a href={resolve('/scenarios')} class="feature" style="--accent:#0ea5e9; --deep:#0369a1;">
+			<span class="feature-text">
+				<span class="feature-badge">New</span>
+				<span class="feature-title">Scenarios: real conversations in 3D</span>
+				<span class="feature-desc">
+					Take a taxi, haggle at the market, see a pharmacist or check into a hotel, talking
+					Arabic the whole way. In Egyptian, Levantine, Darija and Fusha.
+				</span>
+				<span class="feature-scenes" aria-hidden="true">🍽️ 🚕 🍅 💊 🛎️</span>
+				<span class="feature-cta">Try a conversation <span aria-hidden="true">→</span></span>
+			</span>
+			<img
+				src="/images/feature-pages/game-scenarios.webp"
+				width="2560"
+				height="1440"
+				alt="A Scenarios conversation at a market stall: the seller asks how many kilos in Egyptian Arabic"
+				loading="lazy"
+				decoding="async"
+				class="feature-shot"
+			/>
+		</a>
+	</div>
+
 	<!-- ── Learn ───────────────────────────────────────────────────────────── -->
 	<div class="reveal" style="animation-delay: 240ms;">
 		{@render sectionHead('🌱', 'Learn', 'build the foundation')}
@@ -404,6 +429,95 @@
 	}
 
 	/* Tiles */
+	/* Featured: Scenarios */
+	.feature {
+		display: grid;
+		gap: 1rem;
+		align-items: center;
+		border-radius: 1.25rem;
+		border: 2px solid var(--accent);
+		background: color-mix(in srgb, var(--accent) 9%, var(--tile3));
+		padding: 1rem;
+		text-decoration: none;
+		box-shadow: 0 4px 0 var(--deep);
+		transition:
+			transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1),
+			box-shadow 0.18s ease;
+	}
+
+	@media (min-width: 768px) {
+		.feature {
+			grid-template-columns: 1fr 1.1fr;
+			padding: 1.25rem 1.25rem 1.25rem 1.5rem;
+		}
+	}
+
+	.feature:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 7px 0 var(--deep);
+	}
+
+	.feature:active {
+		transform: translateY(2px);
+		box-shadow: 0 1px 0 var(--deep);
+	}
+
+	.feature-text {
+		display: grid;
+		gap: 0.45rem;
+		justify-items: start;
+	}
+
+	.feature-badge {
+		padding: 0.15rem 0.6rem;
+		border-radius: 100px;
+		font-size: 0.7rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		color: #fff;
+		background: var(--accent);
+	}
+
+	.feature-title {
+		font-size: 1.3rem;
+		font-weight: 700;
+		letter-spacing: -0.02em;
+		line-height: 1.25;
+		color: var(--text1);
+	}
+
+	.feature-desc {
+		font-size: 0.92rem;
+		line-height: 1.5;
+		color: var(--text2);
+	}
+
+	.feature-scenes {
+		font-size: 1.3rem;
+		letter-spacing: 0.2rem;
+	}
+
+	.feature-cta {
+		font-size: 0.92rem;
+		font-weight: 700;
+		color: var(--text1);
+	}
+
+	.feature-shot {
+		display: block;
+		width: 100%;
+		height: auto;
+		border-radius: 0.9rem;
+		border: 2px solid var(--tile5);
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.feature {
+			transition: none;
+		}
+	}
+
 	.tile {
 		display: flex;
 		flex-direction: column;

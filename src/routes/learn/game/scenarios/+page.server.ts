@@ -1,9 +1,7 @@
+import { redirect } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
-import { getGame } from '$lib/constants/games';
 
-const game = getGame('scenarios')!;
-
-export const load: PageServerLoad = async () => {
-	// faqs → FAQPage markup (layout); gameName → breadcrumb leaf.
-	return { faqs: game.faqs, gameName: game.name };
+// Scenarios moved to a page of its own; keep old links (and their ?scene=) working.
+export const load: PageServerLoad = ({ url }) => {
+	redirect(301, `/scenarios${url.search}`);
 };

@@ -144,7 +144,7 @@ const SHOTS: Shot[] = [
 	},
 	{
 		name: 'game-scenarios',
-		path: '/learn/game/scenarios?scene=market&dialect=egyptian-arabic',
+		path: '/scenarios?scene=market&dialect=egyptian-arabic',
 		// The conversation runs fullscreen, so the viewport is the shot.
 		viewport: { width: 1280, height: 720 },
 		prepare: async (page) => {
