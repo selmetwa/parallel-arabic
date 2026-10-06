@@ -8,9 +8,13 @@
  * (the other person in a second voice, matching their gender). Existing files are kept unless --regenerate, so
  * after a hand fix in vocab.json, delete that word's files and run again.
  *
+ * The voice reads each line through spellForSpeech, so Egyptian comes out the
+ * way Cairo says it (geneh, 2ahwa), while the game shows the normal spelling.
+ *
  * Usage:
  *   npm run generate:room-hunt-audio
  *   npm run generate:room-hunt-audio -- --regenerate
+ *   npm run generate:room-hunt-audio -- --regenerate --dialect=egyptian-arabic
  */
 
 import { ElevenLabsClient } from 'elevenlabs';
@@ -19,6 +23,7 @@ import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import { existsSync, mkdirSync, writeFileSync } from 'fs';
 import { getVoiceConfig } from '../src/lib/utils/voice-config';
+import { spellForSpeech } from '../src/lib/utils/speech-spelling';
 import { GAME_DIALECTS } from '../src/lib/games/themes';
 import vocab from '../src/lib/games/room-hunt/vocab.json';
 import { SCENARIOS } from '../src/lib/games/room-hunt/scenarios/index';
@@ -48,13 +53,14 @@ const NPC_VOICE: Record<GameDialect, Partial<Record<'m' | 'f', string>>> = {
 
 async function main() {
 	const regenerate = process.argv.includes('--regenerate');
+	const only = process.argv.find((a) => a.startsWith('--dialect='))?.split('=')[1];
 	const apiKey = process.env.ELEVENLABS_API_KEY;
 	if (!apiKey) throw new Error('ELEVENLABS_API_KEY is required');
 	const client = new ElevenLabsClient({ apiKey });
 
 	const jobs: { file: string; text: string; voice: string; stability: number; similarity: number }[] =
 		[];
-	for (const dialect of GAME_DIALECTS) {
+	for (const dialect of GAME_DIALECTS.filter((d) => !only || d === only)) {
 		const dir = join(OUT, dialect);
 		mkdirSync(dir, { recursive: true });
 		const voice = getVoiceConfig(dialect);
@@ -71,7 +77,7 @@ async function main() {
 				jobs.push({
 					file,
 					// The question mark makes some voices trail off; the endpoint strips it too.
-					text: text.replace(/[؟?]/g, '').trim(),
+					text: spellForSpeech(text.replace(/[؟?]/g, '').trim(), dialect),
 					voice: voice.voice,
 					stability: voice.stability,
 					similarity: voice.similarity_boost
@@ -90,7 +96,7 @@ async function main() {
 				jobs.push({
 					file,
 					// Keep the question mark here: these are whole sentences, and it shapes the intonation.
-					text: entry.arabic,
+					text: spellForSpeech(entry.arabic, dialect),
 					voice: scenario.lines[id].speaker === 'npc' ? npcVoice : voice.voice,
 					stability: voice.stability,
 					similarity: voice.similarity_boost
