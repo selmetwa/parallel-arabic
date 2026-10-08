@@ -5,14 +5,22 @@
   import { page } from '$app/state';
   import { isNativeApp } from '$lib/helpers/is-native-app';
   import { PLANS } from '$lib/constants/pricing';
+  import { RevenueCatService, type StorePlans } from '$lib/services/revenuecat.service';
 
-  // Web-only trial and annual-plan copy. The Apple disclosure block below is unchanged.
+  // Web-only trial and annual-plan copy. In the app, the header and the Apple
+  // disclosure use StoreKit prices once they load, and today's copy until then.
   let isNative = $state<boolean | null>(null);
+  let storePlans = $state.raw<StorePlans | null>(null);
   onMount(() => {
     isNative = isNativeApp();
+    const userId = page.data.user?.id;
+    if (isNative && userId) {
+      RevenueCatService.getPlans(userId).then((plans) => (storePlans = plans));
+    }
   });
 
   const showTrial = $derived(isNative === false && page.data.trialEligible === true);
+  const appleTrialDays = $derived(storePlans?.monthly.trialDays ?? storePlans?.annual?.trialDays ?? null);
 </script>
 
 <div class="min-h-screen bg-tile-300">
@@ -84,8 +92,14 @@
                         POPULAR
                     </div>
                     <div class="bg-tile-500 border-b border-tile-600 p-8 text-center">
-                        <h2 class="text-2xl font-bold text-text-300 mb-2">{isNative === false ? 'Premium' : 'Monthly Subscription'}</h2>
-                        <h3 class="text-4xl font-bold text-text-300">$10<span class="text-lg font-normal text-text-300">/month</span></h3>
+                        <h2 class="text-2xl font-bold text-text-300 mb-2">{isNative === false || storePlans?.annual ? 'Premium' : 'Monthly Subscription'}</h2>
+                        <h3 class="text-4xl font-bold text-text-300">{storePlans?.monthly.priceString ?? '$10'}<span class="text-lg font-normal text-text-300">/month</span></h3>
+                        {#if storePlans?.annual}
+                            <p class="mt-2 text-sm text-text-300">or {storePlans.annual.priceString}/year</p>
+                        {/if}
+                        {#if appleTrialDays}
+                            <p class="mt-3 text-sm font-semibold text-text-300">Start with {appleTrialDays} days free. Cancel anytime.</p>
+                        {/if}
                         {#if isNative === false}
                             <p class="mt-2 text-sm text-text-300">or {PLANS.annual.price} — {PLANS.annual.savings.toLowerCase()}</p>
                         {/if}
@@ -152,18 +166,39 @@
                           <SubscribeButton className="!py-3 !text-lg w-full" />
                           <div class="mt-4 text-xs text-text-200 leading-relaxed text-left bg-tile-300 border border-tile-600 rounded-md p-4">
                             <p class="font-semibold text-text-300 mb-2">Subscription: Parallel Arabic Premium</p>
-                            <ul class="list-disc list-inside mb-3 space-y-1">
-                              <li>Length: 1 month, auto-renewing</li>
-                              <li>Price: $10.00 USD per month</li>
-                            </ul>
-                            <p>
-                              Payment will be charged to your Apple ID account at the confirmation of purchase.
-                              Subscription automatically renews unless auto-renew is turned off at least 24 hours
-                              before the end of the current period. Your account will be charged for renewal
-                              within 24 hours prior to the end of the current period at the same $10.00 USD price.
-                              You can manage your subscription and turn off auto-renewal in your Apple ID
-                              Account Settings after purchase.
-                            </p>
+                            {#if storePlans}
+                              <ul class="list-disc list-inside mb-3 space-y-1">
+                                <li>Monthly: 1 month, auto-renewing, {storePlans.monthly.priceString} per month{storePlans.monthly.trialDays ? `, after a ${storePlans.monthly.trialDays}-day free trial` : ''}</li>
+                                {#if storePlans.annual}
+                                  <li>Annual: 1 year, auto-renewing, {storePlans.annual.priceString} per year{storePlans.annual.trialDays ? `, after a ${storePlans.annual.trialDays}-day free trial` : ''}</li>
+                                {/if}
+                              </ul>
+                              <p>
+                                {#if appleTrialDays}
+                                  The free trial is for new subscribers only. If you don't cancel at least 24 hours
+                                  before the trial ends, your subscription starts and you are charged the plan's price.
+                                {/if}
+                                Payment will be charged to your Apple ID account at the confirmation of purchase{appleTrialDays ? ', or at the end of the free trial' : ''}.
+                                Subscription automatically renews unless auto-renew is turned off at least 24 hours
+                                before the end of the current period. Your account will be charged for renewal
+                                within 24 hours prior to the end of the current period at the same price.
+                                You can manage your subscription and turn off auto-renewal in your Apple ID
+                                Account Settings after purchase.
+                              </p>
+                            {:else}
+                              <ul class="list-disc list-inside mb-3 space-y-1">
+                                <li>Length: 1 month, auto-renewing</li>
+                                <li>Price: $10.00 USD per month</li>
+                              </ul>
+                              <p>
+                                Payment will be charged to your Apple ID account at the confirmation of purchase.
+                                Subscription automatically renews unless auto-renew is turned off at least 24 hours
+                                before the end of the current period. Your account will be charged for renewal
+                                within 24 hours prior to the end of the current period at the same $10.00 USD price.
+                                You can manage your subscription and turn off auto-renewal in your Apple ID
+                                Account Settings after purchase.
+                              </p>
+                            {/if}
                           </div>
                           <p class="mt-3 text-xs text-text-200 text-center">
                             By subscribing you agree to our

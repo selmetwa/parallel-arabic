@@ -20,8 +20,10 @@ function resolveFromRevenueCatRest(data: any): ResolvedEntitlement | null {
   const expiresMs = entitlement.expires_date ? new Date(entitlement.expires_date).getTime() : null;
   const isActive = expiresMs ? expiresMs > Date.now() : false;
 
+  // With monthly and annual products a subscriber can have several entries, so
+  // use the one that grants the entitlement, not whichever is listed first.
   const subscriptions = data?.subscriber?.subscriptions ?? {};
-  const subKey = Object.keys(subscriptions)[0];
+  const subKey = entitlement.product_identifier ?? Object.keys(subscriptions)[0];
   const transactionId = subscriptions[subKey]?.original_transaction_id ?? subKey ?? null;
 
   return { isActive, expiresMs, transactionId, source: 'revenuecat_rest' };
