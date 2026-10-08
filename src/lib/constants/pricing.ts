@@ -1,6 +1,7 @@
 /**
- * Stripe (web) plans. The annual plan is web-only: the iOS app sells the
- * monthly plan through Apple, so never render annual copy inside the WebView.
+ * Stripe (web) plans. The iOS app sells its own monthly and annual products
+ * through Apple, with StoreKit prices (RevenueCatService.getPlans), so never
+ * render these prices inside the WebView. Only the labels are shared.
  * Price IDs live in STRIPE_MONTHLY_PRICE_ID / STRIPE_ANNUAL_PRICE_ID.
  */
 export type PlanId = 'monthly' | 'annual';

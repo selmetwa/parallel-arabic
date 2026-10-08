@@ -1,9 +1,12 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
+	import { onMount } from 'svelte';
 	import { page } from '$app/state';
 	import SubscribeButton from '$lib/components/SubscribeButton.svelte';
 	import { FEATURES } from '$lib/constants/features';
+	import { isNativeApp } from '$lib/helpers/is-native-app';
+	import { RevenueCatService } from '$lib/services/revenuecat.service';
 
 	type Props = {
 		/** e.g. "Egyptian Arabic"; falls back to generic copy when empty. */
@@ -16,8 +19,23 @@
 	let { dialectName = '', onSkip, onLogout }: Props = $props();
 
 	// Someone who already used their trial (or let it lapse) can only subscribe.
-	// SubscribeButton drops its trial wording on the same flag.
-	let trialEligible = $derived(page.data.trialEligible === true);
+	// Web reads the Stripe flag; the app asks Apple, since a Stripe trial can't
+	// be advertised there. Both stay false until mount, so nothing flashes.
+	let isNative = $state<boolean | null>(null);
+	let appleTrial = $state(false);
+	let trialEligible = $derived(
+		isNative === false ? page.data.trialEligible === true : isNative === true && appleTrial
+	);
+
+	onMount(() => {
+		isNative = isNativeApp();
+		const userId = page.data.user?.id;
+		if (isNative && userId) {
+			RevenueCatService.getPlans(userId).then((plans) => {
+				appleTrial = !!(plans?.monthly.trialDays || plans?.annual?.trialDays);
+			});
+		}
+	});
 </script>
 
 <div class="text-center" in:fly={{ y: 30, duration: 500, easing: cubicOut }}>

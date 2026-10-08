@@ -41,7 +41,7 @@ export const POST: RequestHandler = async ({ request }) => {
     return json({ error: 'Missing event' }, { status: 400 });
   }
 
-  const { app_user_id, type, expiration_at_ms, original_transaction_id } = event;
+  const { app_user_id, type, expiration_at_ms, original_transaction_id, period_type } = event;
   console.log('[RC webhook] app_user_id:', app_user_id);
   console.log('[RC webhook] type:', type);
   console.log('[RC webhook] expiration_at_ms:', expiration_at_ms);
@@ -67,7 +67,9 @@ export const POST: RequestHandler = async ({ request }) => {
         .update({
           is_subscriber: true,
           subscriber_id: original_transaction_id ?? null,
-          subscription_end_date: subscriptionEndDate
+          subscription_end_date: subscriptionEndDate,
+          // An Apple trial uses up the web trial too (see user-context trialEligible).
+          ...(period_type === 'TRIAL' && { has_used_trial: true })
         })
         .eq('id', app_user_id)
         .select();
