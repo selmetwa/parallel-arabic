@@ -4,6 +4,7 @@
 	import GameWordList from './GameWordList.svelte';
 	import PressButton from './PressButton.svelte';
 	import { awardGameXp } from '$lib/games/game-xp';
+	import { missedNote, saveMissedWords } from '$lib/games/save-missed';
 	import {
 		MAX_XP_PER_ROUND,
 		MIN_POOL,
@@ -49,6 +50,7 @@
 	let xpEarned = $state(0);
 	let best = $state(untrack(() => readBest()));
 	let newBest = $state(false);
+	let savedMissed = $state(0);
 	let interval: ReturnType<typeof setInterval> | undefined;
 	let flashTimer: ReturnType<typeof setTimeout> | undefined;
 
@@ -90,6 +92,7 @@
 		missed = [];
 		xpEarned = 0;
 		newBest = false;
+		savedMissed = 0;
 		msLeft = ROUND_SECONDS * 1000;
 		phase = 'playing';
 		const endAt = Date.now() + msLeft;
@@ -103,6 +106,7 @@
 	function finish() {
 		clearInterval(interval);
 		phase = 'done';
+		if (signedIn && missed.length) saveMissedWords(missed, dialect).then((n) => (savedMissed = n));
 		if (score > best) {
 			best = score;
 			newBest = true;
@@ -166,7 +170,12 @@
 			{ label: 'Wrong', value: wrong },
 			{ label: 'Best streak', value: bestStreak }
 		]}
-		note={newBest ? 'A new best for this theme.' : best ? `Your best here: ${best}` : undefined}
+		note={[
+			newBest ? 'A new best for this theme.' : best ? `Your best here: ${best}.` : '',
+			missedNote(savedMissed) ?? ''
+		]
+			.filter(Boolean)
+			.join(' ') || undefined}
 		{xpEarned}
 		{accent}
 		{deep}

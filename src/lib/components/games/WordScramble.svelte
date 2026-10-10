@@ -6,6 +6,7 @@
 	import PressButton from './PressButton.svelte';
 	import { keysForTyped } from '$lib/games/arabic-letters';
 	import { awardGameXp } from '$lib/games/game-xp';
+	import { missedNote, saveMissedWords } from '$lib/games/save-missed';
 	import {
 		correctPrefix,
 		isSolved,
@@ -43,6 +44,7 @@
 	let started = $state(false);
 	let xpEarned = $state(0);
 	let announcement = $state('');
+	let savedMissed = $state(0);
 
 	const word = $derived(words[index]);
 	const done = $derived(index >= words.length);
@@ -112,6 +114,10 @@
 
 	function next() {
 		index++;
+		if (index >= words.length && signedIn) {
+			const missed = words.filter((w) => !outcomes[w.id]);
+			saveMissedWords(missed, dialect).then((n) => (savedMissed = n));
+		}
 		if (index < words.length) {
 			tiles = makeTiles(words[index].plain);
 			placed = [];
@@ -135,6 +141,7 @@
 		outcomes = {};
 		started = false;
 		xpEarned = 0;
+		savedMissed = 0;
 		announcement = '';
 	}
 
@@ -170,6 +177,7 @@
 			{ label: 'Hints or skips', value: words.length - solvedCount }
 		]}
 		{xpEarned}
+		note={missedNote(savedMissed)}
 		{accent}
 		{deep}
 		onPlayAgain={playAgain}

@@ -4,6 +4,7 @@
 	import GameWordList from './GameWordList.svelte';
 	import PressButton from './PressButton.svelte';
 	import { awardGameXp } from '$lib/games/game-xp';
+	import { missedNote, saveMissedWords } from '$lib/games/save-missed';
 	import { MIN_RECORDED, buildRound, recordedWords } from '$lib/games/listen-and-spell';
 	import type { GameWord } from '$lib/games/word-pool';
 	import type { RoundGate } from '$lib/games/free-rounds.svelte';
@@ -31,6 +32,7 @@
 	let started = $state(false);
 	let xpEarned = $state(0);
 	let announcement = $state('');
+	let savedMissed = $state(0);
 	let audio: HTMLAudioElement | null = null;
 
 	const question = $derived(questions[index]);
@@ -73,6 +75,10 @@
 		index++;
 		picked = null;
 		announcement = '';
+		if (index >= questions.length && signedIn) {
+			const missed = words.filter((w) => outcomes[w.id] === false);
+			if (missed.length) saveMissedWords(missed, dialect).then((n) => (savedMissed = n));
+		}
 		// Started rounds play each new word straight away.
 		if (index < questions.length) queueMicrotask(play);
 	}
@@ -88,6 +94,7 @@
 		outcomes = {};
 		started = false;
 		xpEarned = 0;
+		savedMissed = 0;
 		announcement = '';
 	}
 </script>
@@ -101,6 +108,7 @@
 		heading="{score} of {questions.length} heard right"
 		stats={[{ label: 'Right', value: `${score}/${questions.length}` }]}
 		{xpEarned}
+		note={missedNote(savedMissed)}
 		{accent}
 		{deep}
 		onPlayAgain={playAgain}

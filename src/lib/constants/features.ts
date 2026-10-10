@@ -822,7 +822,7 @@ export const FEATURES: FeatureInfo[] = [
 			{
 				question: 'Do the words I get wrong come back?',
 				answer:
-					'Sign in and they do: the words you miss come back later in your review, so a bad round still teaches you something.'
+					'Sign in and they do: in Word Scramble, Speed Round and Listen & Spell, the words you miss go into your review, so a bad round still teaches you something.'
 			},
 			{
 				question: 'How are the games different from each other?',
