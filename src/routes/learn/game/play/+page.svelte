@@ -4,6 +4,7 @@
   import { gameSession } from '$lib/store/generated-content.svelte';
   import { Howl } from 'howler';
   import AudioButton from '$lib/components/AudioButton.svelte';
+  import { audioFor } from '$lib/games/game-audio';
   import SaveButton from '$lib/components/SaveButton.svelte';
   import PaywallModal from '$lib/components/PaywallModal.svelte';
   import type { Dialect } from '$lib/types/index';
@@ -894,7 +895,7 @@
                   <AudioButton
                     text={word.arabic_word}
                     dialect={word.dialect as Dialect}
-                    audioUrl={word.audio_url || undefined}
+                    audioUrl={audioFor(word.arabic_word, word.dialect, word.audio_url) ?? undefined}
                   />
                   <SaveButton
                     objectToSave={{
@@ -931,6 +932,7 @@
                   <AudioButton
                     text={sentence.arabic}
                     dialect={data.gameParams.dialect as Dialect}
+                    audioUrl={audioFor(sentence.arabic, data.gameParams.dialect) ?? undefined}
                   />
                 </div>
               </div>
@@ -1007,6 +1009,7 @@
                 <AudioButton
                   text={currentQuestion.sentence.arabic}
                   dialect={data.gameParams.dialect as Dialect}
+                  audioUrl={audioFor(currentQuestion.sentence.arabic, data.gameParams.dialect) ?? undefined}
                   className="text-text-300 mt-2"
                 />
               </div>
@@ -1046,7 +1049,7 @@
                   <AudioButton
                     text={currentQuestion.word.arabic_word}
                     dialect={currentQuestion.word.dialect as Dialect}
-                    audioUrl={currentQuestion.word.audio_url || undefined}
+                    audioUrl={audioFor(currentQuestion.word.arabic_word, currentQuestion.word.dialect, currentQuestion.word.audio_url) ?? undefined}
                     className="text-text-300"
                   />
                 {/if}
@@ -1230,6 +1233,7 @@
                 <AudioButton
                   text={currentQuestion.sentence.arabic}
                   dialect={data.gameParams.dialect as Dialect}
+                  audioUrl={audioFor(currentQuestion.sentence.arabic, data.gameParams.dialect) ?? undefined}
                   className="text-text-300 mt-2"
                 />
               </div>
@@ -1245,7 +1249,7 @@
                 <AudioButton
                   text={currentQuestion.word.arabic_word}
                   dialect={currentQuestion.word.dialect as Dialect}
-                  audioUrl={currentQuestion.word.audio_url || undefined}
+                  audioUrl={audioFor(currentQuestion.word.arabic_word, currentQuestion.word.dialect, currentQuestion.word.audio_url) ?? undefined}
                   className="text-text-300"
                 />
               </div>
@@ -1423,6 +1427,7 @@
                   <AudioButton
                     text={currentQuestion.sentence.arabic}
                     dialect={data.gameParams.dialect as Dialect}
+                    audioUrl={audioFor(currentQuestion.sentence.arabic, data.gameParams.dialect) ?? undefined}
                     className="text-text-300"
                   />
                 </div>

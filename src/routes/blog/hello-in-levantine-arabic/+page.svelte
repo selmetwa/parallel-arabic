@@ -5,6 +5,7 @@
 	import MemoryPairs from '$lib/components/games/MemoryPairs.svelte';
 	import { blogPosts } from '$lib/constants/blog-posts';
 	import { getGame } from '$lib/constants/games';
+	import { gameAudioUrl } from '$lib/games/game-audio';
 	import { openGate } from '$lib/games/open-gate';
 	import type { GameWord } from '$lib/games/word-pool';
 	import { stripArabicDiacritics } from '$lib/utils/arabic-normalization';
@@ -21,7 +22,8 @@
 		plain: stripArabicDiacritics(arabic),
 		english,
 		transliteration,
-		audioUrl: null
+		// Spoken in the Levantine voice, so the Listen board works too.
+		audioUrl: gameAudioUrl(arabic, 'levantine')
 	});
 
 	const meeting = [
@@ -117,7 +119,7 @@
 
 	<BlogGame
 		title="Match the greetings"
-		blurb="Six greetings from above. Flip two cards at a time and match each Arabic phrase to what it means."
+		blurb="Six greetings from above. Flip two cards at a time and match each Arabic phrase to what it means, or switch to Sound ↔ Arabic and match what you hear."
 		accent={pairs.accent}
 		deep={pairs.deep}
 		showStart={false}

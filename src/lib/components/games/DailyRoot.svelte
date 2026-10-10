@@ -1,7 +1,9 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { onDestroy, onMount } from 'svelte';
 	import PressButton from './PressButton.svelte';
 	import { awardGameXp } from '$lib/games/game-xp';
+	import { gameAudioUrl } from '$lib/games/game-audio';
+	import { playClip, stopClip } from '$lib/games/room-hunt/audio';
 	import {
 		MAX_TRIES,
 		isSolved,
@@ -97,6 +99,10 @@
 		placed = placed.slice(0, -1);
 	}
 
+	// The roots are Modern Standard Arabic words, so they're spoken in Fusha.
+	const say = (arabic: string) => playClip(gameAudioUrl(arabic, 'fusha'));
+	onDestroy(stopClip);
+
 	function check() {
 		if (!word || !clue || placed.length !== [...word.plain].length) return;
 		const guess = built;
@@ -110,6 +116,7 @@
 		} else {
 			announcement = 'Not yet. Green letters are in the right place, yellow are in the word.';
 		}
+		if (clueDone(clue)) say(word.arabic);
 		placed = [];
 		save();
 		if (clues.every(clueDone)) onDone?.();
@@ -208,6 +215,12 @@
 							{clue.solved ? '✓ Correct!' : 'The word was:'}
 							<span class="ar" lang="ar" dir="rtl">{word.arabic}</span>
 							<span class="tr">{word.transliteration}</span>
+							<button
+								type="button"
+								class="say"
+								onclick={() => say(word.arabic)}
+								aria-label="Play {word.transliteration}">🔊</button
+							>
 						</p>
 						<PressButton onclick={nextClue} {accent} {deep}>Next word</PressButton>
 					</div>
@@ -244,6 +257,17 @@
 {/if}
 
 <style>
+	.say {
+		margin-inline-start: 0.3rem;
+		border-radius: 0.5rem;
+		padding: 0.1rem 0.35rem;
+		cursor: pointer;
+	}
+
+	.say:hover {
+		background: var(--tile5);
+	}
+
 	.waiting {
 		margin-top: 1.5rem;
 		text-align: center;

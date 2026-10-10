@@ -8,6 +8,7 @@ import { phraseSlugsFor, getPhrase } from '$lib/data/phrases/manifest';
 import { GAME_DIALECTS, type GameDialect } from '$lib/games/themes';
 import { VOCAB, wordFor } from '$lib/games/room-hunt/round';
 import type { DialectItem } from '$lib/games/dialect-match';
+import { audioFor } from '$lib/games/game-audio';
 
 function roomHuntItems(): DialectItem[] {
 	return Object.keys(VOCAB).map((id) => {
@@ -38,7 +39,18 @@ function phraseItems(): DialectItem[] {
 
 let cached: DialectItem[] | null = null;
 
+/** Every form can be heard: the recording where there is one, the dialect's voice otherwise. */
+function withAudio(item: DialectItem): DialectItem {
+	const forms = Object.fromEntries(
+		GAME_DIALECTS.map((d) => {
+			const form = item.forms[d];
+			return [d, { ...form, audioUrl: audioFor(form.arabic, d, form.audioUrl) }];
+		})
+	) as DialectItem['forms'];
+	return { ...item, forms };
+}
+
 export function dialectMatchItems(): DialectItem[] {
-	cached ??= [...(sets as DialectItem[]), ...roomHuntItems(), ...phraseItems()];
+	cached ??= [...(sets as DialectItem[]), ...roomHuntItems(), ...phraseItems()].map(withAudio);
 	return cached;
 }

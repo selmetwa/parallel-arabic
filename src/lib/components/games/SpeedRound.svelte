@@ -4,6 +4,7 @@
 	import GameWordList from './GameWordList.svelte';
 	import PressButton from './PressButton.svelte';
 	import { awardGameXp } from '$lib/games/game-xp';
+	import { playClip, stopClip } from '$lib/games/room-hunt/audio';
 	import { missedNote, saveMissedWords } from '$lib/games/save-missed';
 	import {
 		MAX_XP_PER_ROUND,
@@ -61,6 +62,13 @@
 	onDestroy(() => {
 		clearInterval(interval);
 		clearTimeout(flashTimer);
+		stopClip();
+	});
+
+	// Each word is said as it appears; a quick answer cuts it off.
+	$effect(() => {
+		const url = phase === 'playing' ? question?.word.audioUrl : null;
+		if (url) playClip(url);
 	});
 
 	function readBest(): number {
@@ -105,6 +113,7 @@
 
 	function finish() {
 		clearInterval(interval);
+		stopClip();
 		phase = 'done';
 		if (signedIn && missed.length) saveMissedWords(missed, dialect).then((n) => (savedMissed = n));
 		if (score > best) {

@@ -61,10 +61,22 @@ describe('spellForSpeech, Levantine', () => {
 	});
 });
 
-describe('spellForSpeech, Darija and Fusha', () => {
-	it('leaves them as written', () => {
-		for (const dialect of ['darija', 'fusha']) {
-			expect(spellForSpeech('جِنِيه قَهْوَة ثَلَّاجَة', dialect)).toBe('جِنِيه قَهْوَة ثَلَّاجَة');
-		}
+describe('spellForSpeech, Darija', () => {
+	const ma = (text: string) => spellForSpeech(text, 'darija');
+
+	it('has no "th" sounds: ث as t, ذ as d, ظ as ḍ', () => {
+		expect(ma('ثْلَاثَة')).toBe('تْلَاتَة');
+		expect(ma('ذْهَب')).toBe('دْهَب');
+		expect(ma('ظْهَر')).toBe('ضْهَر');
+	});
+
+	it('keeps ق and ج', () => {
+		expect(ma('قَهْوَة جْمَل')).toBe('قَهْوَة جْمَل');
+	});
+});
+
+describe('spellForSpeech, Fusha', () => {
+	it('leaves it as written', () => {
+		expect(spellForSpeech('جِنِيه قَهْوَة ثَلَّاجَة ذَهَب', 'fusha')).toBe('جِنِيه قَهْوَة ثَلَّاجَة ذَهَب');
 	});
 });

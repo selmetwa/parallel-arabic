@@ -10,6 +10,9 @@
  * - ث → ت, ذ → د (talata, dahab)
  * - Egyptian only: ج → گ (a hard g: geneh, tallaga). Levantine keeps "j".
  *
+ * Darija keeps ق and ج but has no "th" sounds at all: ث → ت, ذ → د, ظ → ض
+ * (tlata, dheb, ḍher), whether the word is a learned one or not.
+ *
  * A few words don't follow the rules: learned words where ث and ذ become s and
  * z, and words that keep the formal q. Those are in SPOKEN_WORDS.
  */
@@ -75,6 +78,10 @@ function stemStart(word: string): number {
 	return i;
 }
 
+function darijaWord(word: string): string {
+	return word.replace(/ث/g, 'ت').replace(/ذ/g, 'د').replace(/ظ/g, 'ض');
+}
+
 function spokenWord(word: string, hardG: boolean): string {
 	const known = lookup(word);
 	if (known) return known.entry === null ? word : known.prefix + known.entry;
@@ -92,8 +99,9 @@ function spokenWord(word: string, hardG: boolean): string {
 	return out;
 }
 
-/** The text as the voice should read it, for this dialect. Darija and Fusha are unchanged. */
+/** The text as the voice should read it, for this dialect. Fusha is unchanged. */
 export function spellForSpeech(text: string, dialect: string): string {
+	if (dialect === 'darija') return text.replace(ARABIC_WORD, darijaWord);
 	if (dialect !== 'egyptian-arabic' && dialect !== 'levantine') return text;
 	const hardG = dialect === 'egyptian-arabic';
 	return text.replace(ARABIC_WORD, (word) => spokenWord(word, hardG));

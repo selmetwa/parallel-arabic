@@ -1,5 +1,6 @@
 <script lang="ts">
 	import AudioButton from '$lib/components/AudioButton.svelte';
+	import { gameAudioUrl } from '$lib/games/game-audio';
 	import GameResults from './GameResults.svelte';
 	import PressButton from './PressButton.svelte';
 	import { awardGameXp } from '$lib/games/game-xp';
@@ -10,13 +11,12 @@
 		items: GapItem[];
 		dialect: GameDialect;
 		signedIn: boolean;
-		isSubscribed: boolean;
 		accent: string;
 		deep: string;
 		onPlayAgain: () => void;
 	}
 
-	let { items, dialect, signedIn, isSubscribed, accent, deep, onPlayAgain }: Props = $props();
+	let { items, dialect, signedIn, accent, deep, onPlayAgain }: Props = $props();
 
 	let index = $state(0);
 	let picked = $state<number | null>(null);
@@ -126,9 +126,7 @@
 				{/if}
 				<p class="explanation">{item.explanation}</p>
 				<div class="reveal-actions">
-					{#if isSubscribed}
-						<AudioButton text={sentence(item)} {dialect} />
-					{/if}
+					<AudioButton text={sentence(item)} {dialect} audioUrl={gameAudioUrl(sentence(item), dialect)} />
 					<PressButton onclick={next} {accent} {deep}>
 						{index + 1 < items.length ? 'Next sentence' : 'See results'}
 					</PressButton>

@@ -1,10 +1,12 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { onDestroy, onMount } from 'svelte';
 	import GameResults from './GameResults.svelte';
 	import PressButton from './PressButton.svelte';
 	import { awardGameXp } from '$lib/games/game-xp';
 	import { PRONOUNS, type BlitzQuestion, type TenseChoice } from '$lib/games/verb-blitz';
 	import type { GameDialect } from '$lib/games/themes';
+	import { gameAudioUrl } from '$lib/games/game-audio';
+	import { playClip, stopClip } from '$lib/games/room-hunt/audio';
 
 	interface Props {
 		dialect: GameDialect;
@@ -33,6 +35,10 @@
 	const question = $derived(questions?.[index]);
 	const done = $derived(!!questions && index >= questions.length);
 
+	/** Hear the conjugated form, said the way the dialect says it. */
+	const say = (arabic: string) => playClip(gameAudioUrl(arabic, dialect));
+	onDestroy(stopClip);
+
 	onMount(async () => {
 		try {
 			const params = new URLSearchParams({ dialect, tense });
@@ -49,6 +55,7 @@
 		picked = i;
 		const right = i === question.answer;
 		const form = question.options[question.answer].arabic;
+		say(form);
 		if (right) {
 			score++;
 			if (signedIn) awardGameXp();
@@ -91,6 +98,12 @@
 					<li class="row">
 						<span class="ar" lang="ar" dir="rtl">{q.options[q.answer].arabic}</span>
 						<span class="en">{q.english} · {q.options[q.answer].transliteration}</span>
+						<button
+							type="button"
+							class="say"
+							onclick={() => say(q.options[q.answer].arabic)}
+							aria-label="Play {q.options[q.answer].transliteration}">🔊</button
+						>
 					</li>
 				{/each}
 			</ul>
@@ -138,6 +151,12 @@
 					{picked === question.answer ? '✓ Correct!' : '✗ Not this time.'}
 					<span lang="ar" dir="rtl">{question.options[question.answer].arabic}</span>
 					means “{question.english}”.
+					<button
+						type="button"
+						class="say"
+						onclick={() => say(question.options[question.answer].arabic)}
+						aria-label="Play it again">🔊</button
+					>
 				</p>
 				<PressButton onclick={next} {accent} {deep}>
 					{index + 1 < questions.length ? 'Next verb' : 'See results'}
@@ -148,6 +167,22 @@
 {/if}
 
 <style>
+	.say {
+		margin-inline-start: 0.4rem;
+		border-radius: 0.5rem;
+		padding: 0.1rem 0.35rem;
+		cursor: pointer;
+	}
+
+	.say:hover {
+		background: var(--tile5);
+	}
+
+	.row .say {
+		justify-self: start;
+		margin: 0;
+	}
+
 	.waiting {
 		margin-top: 1.5rem;
 		text-align: center;

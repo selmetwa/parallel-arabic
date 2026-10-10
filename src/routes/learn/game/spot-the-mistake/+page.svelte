@@ -20,7 +20,6 @@
 			items={items as MistakeItem[]}
 			{dialect}
 			signedIn={!!data.user}
-			isSubscribed={!!data.isSubscribed}
 			accent={game.accent}
 			deep={game.deep}
 			{onPlayAgain}
