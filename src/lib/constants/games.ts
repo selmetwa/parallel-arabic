@@ -107,7 +107,7 @@ export const GAMES: GameInfo[] = [
 		name: 'Scenarios',
 		heading: 'Arabic Conversation Practice: Taxi, Market, Pharmacy and More',
 		emoji: '🗣️',
-		tagline: 'Take a taxi, haggle at a market, see a pharmacist and check into a hotel, in Arabic.',
+		tagline: 'Take a taxi, see a doctor, check in for a flight and order a coffee, in Arabic.',
 		skills: ['Speaking', 'Listening', 'Phrases'],
 		levels: 'Beginner–Intermediate',
 		accent: '#0ea5e9',
@@ -121,12 +121,12 @@ export const GAMES: GameInfo[] = [
 		seo: {
 			title: 'Arabic Conversation Practice: Real-Life Scenes | Parallel Arabic',
 			description:
-				'Practise everyday Arabic conversations in 3D: take a taxi, haggle at a market, visit a pharmacy, check into a hotel. In Egyptian, Levantine, Darija and Fusha.'
+				'Practise everyday Arabic conversations in 3D: take a taxi, haggle at a market, see a doctor, check in at the airport, order at a café. In Egyptian, Levantine, Darija and Fusha.'
 		},
 		intro:
 			'Short spoken conversations in places you will actually be. A taxi driver asks where you are going, a market seller tells you the price, a pharmacist asks what hurts. You answer in Arabic, and what you ask for turns up.',
 		howToPlay: [
-			'Pick a dialect and a scene: a restaurant, a taxi, a market, a pharmacy or a hotel.',
+			'Pick a dialect and a scene: a restaurant, a taxi, a market, a pharmacy, a hotel, a café, a doctor’s office, an airport or a street where you ask the way.',
 			'Press Start. The other person speaks first, with the Arabic, transliteration and English on screen and a recording you can replay.',
 			'Answer by tapping one of the replies, or press the microphone and say it. Some replies do not fit the moment, and you will be asked again.',
 			'What you ask for happens: the taxi drives you there, the seller bags your tomatoes. At the end you keep every phrase you used.'
@@ -135,7 +135,7 @@ export const GAMES: GameInfo[] = [
 			{
 				question: 'Which situations can I practise?',
 				answer:
-					'Ordering a meal, taking a taxi (with directions and haggling the fare), buying fruit and vegetables at a market, describing symptoms at a pharmacy, and checking into a hotel. More are on the way.'
+					'Nine so far: ordering a meal, taking a taxi (with directions and haggling the fare), buying fruit and vegetables at a market, describing symptoms at a pharmacy, checking into a hotel, ordering at a café, seeing a doctor, checking in for a flight, and asking a stranger the way.'
 			},
 			{
 				question: 'Do I have to speak, or can I tap?',
