@@ -731,6 +731,58 @@ export const GAMES: GameInfo[] = [
 					'The Egyptian verbs each have a conjugation page with every form, recorded. The other dialects’ tables are used in this game for now.'
 			}
 		]
+	},
+	{
+		slug: 'daily-root',
+		name: 'Daily Root',
+		heading: 'Daily Root: an Arabic Word Puzzle Like Wordle',
+		emoji: '🌱',
+		tagline: 'One Arabic root a day. Build the words that grow from it, in three tries each.',
+		skills: ['Vocabulary', 'Roots', 'Spelling'],
+		levels: 'Intermediate',
+		accent: '#22c55e',
+		deep: '#15803d',
+		shot: {
+			src: '/images/feature-pages/game-daily-root.webp',
+			w: 1568,
+			h: 900,
+			alt: 'The Daily Root puzzle: the root ك ت ب, English clues, and a row of green and yellow letter tiles'
+		},
+		seo: {
+			title: 'Daily Root - Arabic Wordle-Style Word Puzzle | Parallel Arabic',
+			description:
+				'A free daily Arabic word puzzle: one three-letter root, five English clues. Build each word from letter tiles in three tries, then share your result.'
+		},
+		intro:
+			'Most Arabic words grow from a root of three letters. ك ت ب is to do with writing, and from it come كاتب (writer), كتاب (book) and مكتب (office). Each day brings a new root and clues in English. Build each word from letter tiles. After a try, green means right letter, right place; yellow means right letter, wrong place.',
+		howToPlay: [
+			'Read today’s root and the first clue. The clue tells you the meaning and how many letters the word has.',
+			'Tap letter tiles to spell the word. Two of the tiles are decoys.',
+			'Press Check. Green letters are in the right place, yellow ones belong somewhere else. You get three tries per word.',
+			'Finish all the clues and share your squares. A new root comes out every day at midnight UTC.'
+		],
+		faqs: [
+			{
+				question: 'What is an Arabic root?',
+				answer:
+					'A set of usually three consonants that carries a core meaning. Arabic builds words by putting those letters into patterns: ma-…-a for a place (مدرسة, a school, from د ر س), …-a-…-i-… for a doer (كاتب, a writer, from ك ت ب). Learn the patterns and one root opens up a family of words.'
+			},
+			{
+				question: 'Is it the same puzzle for everyone?',
+				answer:
+					'Yes. Everyone gets the same root on the same day, which is what makes the share squares worth comparing.'
+			},
+			{
+				question: 'Which kind of Arabic is it in?',
+				answer:
+					'Modern Standard Arabic. Roots are shared by every dialect, so the same families turn up in Egyptian, Levantine and Darija too.'
+			},
+			{
+				question: 'Do I need to type in Arabic?',
+				answer:
+					'No. You build each word by tapping letter tiles, so there is no keyboard to fight with.'
+			}
+		]
 	}
 ];
 
