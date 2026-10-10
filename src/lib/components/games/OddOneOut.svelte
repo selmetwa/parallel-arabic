@@ -1,5 +1,6 @@
 <script lang="ts">
 	import AudioButton from '$lib/components/AudioButton.svelte';
+	import { gameAudioUrl } from '$lib/games/game-audio';
 	import GameResults from './GameResults.svelte';
 	import PressButton from './PressButton.svelte';
 	import { awardGameXp } from '$lib/games/game-xp';
@@ -10,13 +11,12 @@
 		puzzles: OddPuzzle[];
 		dialect: GameDialect;
 		signedIn: boolean;
-		isSubscribed: boolean;
 		accent: string;
 		deep: string;
 		onPlayAgain: () => void;
 	}
 
-	let { puzzles, dialect, signedIn, isSubscribed, accent, deep, onPlayAgain }: Props = $props();
+	let { puzzles, dialect, signedIn, accent, deep, onPlayAgain }: Props = $props();
 
 	let index = $state(0);
 	let picked = $state<number | null>(null);
@@ -114,11 +114,9 @@
 							<span class="sr-only">{isOdd ? '(the odd one out)' : ''}</span>
 						{/if}
 					</button>
-					{#if isSubscribed}
-						<div class="listen">
-							<AudioButton text={word.arabic} {dialect} />
-						</div>
-					{/if}
+					<div class="listen">
+						<AudioButton text={word.arabic} {dialect} audioUrl={gameAudioUrl(word.arabic, dialect)} />
+					</div>
 				</div>
 			{/each}
 		</div>

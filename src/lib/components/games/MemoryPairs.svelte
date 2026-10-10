@@ -70,7 +70,9 @@
 
 	function flip(card: MemoryCard) {
 		if (busy || open.includes(card.id) || matched.includes(card.id) || !beginRound()) return;
-		if (card.face === 'audio') play(card.word);
+		// Reading boards say the Arabic as it turns over; on listening boards
+		// that would give the match away, so only sound cards play there.
+		if (card.face === 'audio' || (mode === 'read' && card.face === 'arabic')) play(card.word);
 		open = [...open, card.id];
 		if (open.length < 2) return;
 

@@ -13,6 +13,7 @@
  */
 
 import { Howl } from 'howler';
+import { canSpeak, gameAudioUrl } from '$lib/games/game-audio';
 
 /** The app plays TTS slightly slow across the board; a listening round keeps that baseline. */
 export const NORMAL_RATE = 0.9;
@@ -38,6 +39,13 @@ function keyFor(text: string, dialect: string): string {
 }
 
 async function fetchAudioUrl(text: string, dialect: string): Promise<string> {
+	// Game dialects go through the free, CDN-cached game audio; the paid
+	// endpoint (and its free-play quota) is only for anything it can't speak.
+	if (canSpeak(text, dialect)) {
+		const spoken = await fetch(gameAudioUrl(text, dialect));
+		if (spoken.ok) return URL.createObjectURL(await spoken.blob());
+	}
+
 	const res = await fetch('/api/text-to-speech', {
 		method: 'POST',
 		headers: { 'Content-Type': 'application/json' },

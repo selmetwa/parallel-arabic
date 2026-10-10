@@ -1,5 +1,6 @@
 <script lang="ts">
 	import AudioButton from '$lib/components/AudioButton.svelte';
+	import { gameAudioUrl } from '$lib/games/game-audio';
 	import GameResults from './GameResults.svelte';
 	import PressButton from './PressButton.svelte';
 	import { awardGameXp } from '$lib/games/game-xp';
@@ -10,13 +11,12 @@
 		items: MistakeItem[];
 		dialect: GameDialect;
 		signedIn: boolean;
-		isSubscribed: boolean;
 		accent: string;
 		deep: string;
 		onPlayAgain: () => void;
 	}
 
-	let { items, dialect, signedIn, isSubscribed, accent, deep, onPlayAgain }: Props = $props();
+	let { items, dialect, signedIn, accent, deep, onPlayAgain }: Props = $props();
 
 	let index = $state(0);
 	let picked = $state<number | null>(null);
@@ -77,7 +77,7 @@
 						<span class="ar" lang="ar" dir="rtl">{it.correct}</span>
 						<span class="en">{it.english}</span>
 					</span>
-					{#if isSubscribed}<AudioButton text={it.correct} {dialect} />{/if}
+					<AudioButton text={it.correct} {dialect} audioUrl={gameAudioUrl(it.correct, dialect)} />
 				</li>
 			{/each}
 		</ul>
@@ -121,7 +121,7 @@
 				</p>
 				{#if item.transliteration}<p class="translit">{item.transliteration}</p>{/if}
 				<p class="explanation">{item.explanation}</p>
-				{#if isSubscribed}<AudioButton text={item.correct} {dialect} />{/if}
+				<AudioButton text={item.correct} {dialect} audioUrl={gameAudioUrl(item.correct, dialect)} />
 				<PressButton onclick={next} {accent} {deep}>
 					{index + 1 < items.length ? 'Next sentence' : 'See results'}
 				</PressButton>

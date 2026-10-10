@@ -3,6 +3,7 @@ import type { RequestHandler } from './$types';
 import { supabase } from '$lib/supabaseClient';
 import { isGameDialect, resolveTheme } from '$lib/games/themes';
 import { buildPool, type WordRow } from '$lib/games/word-pool';
+import { audioFor } from '$lib/games/game-audio';
 
 /**
  * The cleaned word list for one dialect and theme. Deterministic (the client
@@ -34,5 +35,11 @@ export const GET: RequestHandler = async ({ url, setHeaders }) => {
 		'x-robots-tag': 'noindex'
 	});
 
-	return json({ theme: theme.id, words: buildPool((data ?? []) as WordRow[]) });
+	// Words without a recording are spoken in the dialect's voice instead.
+	const words = buildPool((data ?? []) as WordRow[]).map((w) => ({
+		...w,
+		audioUrl: audioFor(w.arabic, dialect, w.audioUrl)
+	}));
+
+	return json({ theme: theme.id, words });
 };

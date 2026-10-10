@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { untrack } from 'svelte';
 	import AudioButton from '$lib/components/AudioButton.svelte';
+	import { gameAudioUrl } from '$lib/games/game-audio';
 	import GameResults from './GameResults.svelte';
 	import PressButton from './PressButton.svelte';
 	import { awardGameXp } from '$lib/games/game-xp';
@@ -16,13 +17,12 @@
 		sentences: ScrambleSentence[];
 		dialect: GameDialect;
 		signedIn: boolean;
-		isSubscribed: boolean;
 		accent: string;
 		deep: string;
 		onPlayAgain: () => void;
 	}
 
-	let { sentences, dialect, signedIn, isSubscribed, accent, deep, onPlayAgain }: Props = $props();
+	let { sentences, dialect, signedIn, accent, deep, onPlayAgain }: Props = $props();
 
 	// Re-mounted (via {#key}) for each new round, so the first list is the one to use.
 	let index = $state(0);
@@ -115,7 +115,7 @@
 						<span class="ar" lang="ar" dir="rtl">{s.arabic}</span>
 						<span class="en">{s.english}</span>
 					</span>
-					{#if isSubscribed}<AudioButton text={s.arabic} {dialect} />{/if}
+					<AudioButton text={s.arabic} {dialect} audioUrl={gameAudioUrl(s.arabic, dialect)} />
 				</li>
 			{/each}
 		</ul>
@@ -165,7 +165,7 @@
 						: 'Here it is.'}
 				</p>
 				{#if sentence.transliteration}<p class="translit">{sentence.transliteration}</p>{/if}
-				{#if isSubscribed}<AudioButton text={sentence.arabic} {dialect} />{/if}
+				<AudioButton text={sentence.arabic} {dialect} audioUrl={gameAudioUrl(sentence.arabic, dialect)} />
 				<PressButton onclick={next} {accent} {deep}>
 					{index + 1 < sentences.length ? 'Next sentence' : 'See results'}
 				</PressButton>
