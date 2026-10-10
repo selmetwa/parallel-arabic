@@ -16,14 +16,18 @@ export function createGeneratedRound<T>(endpoint: string) {
 	let roundId = $state(0);
 
 	/** Resolves true once a round is ready to play. */
-	async function start(dialect: GameDialect, level: GameLevel): Promise<boolean> {
+	async function start(
+		dialect: GameDialect,
+		level: GameLevel,
+		extra: Record<string, unknown> = {}
+	): Promise<boolean> {
 		status = 'loading';
 		error = '';
 		try {
 			const res = await fetch(endpoint, {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify({ dialect, level })
+				body: JSON.stringify({ ...extra, dialect, level })
 			});
 			if (res.status === 401 || res.status === 403) {
 				modal = res.status === 401 ? 'auth' : 'paywall';

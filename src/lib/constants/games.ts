@@ -580,6 +580,53 @@ export const GAMES: GameInfo[] = [
 					'No. It works best if you know one, because you learn the others by comparison. Even beginners pick up the giveaways quickly, like Darija’s دابا for “now”.'
 			}
 		]
+	},
+	{
+		slug: 'fill-the-gap',
+		name: 'Fill the Gap',
+		heading: 'Arabic Fill in the Blank: Sentence Practice',
+		emoji: '✏️',
+		tagline: 'One word is missing from each Arabic sentence. Pick the one that fits.',
+		skills: ['Vocabulary', 'Reading', 'Grammar'],
+		levels: 'Beginner–Advanced',
+		accent: '#f97316',
+		deep: '#c2410c',
+		shot: {
+			src: '/images/feature-pages/game-fill-the-gap.webp',
+			w: 1568,
+			h: 900,
+			alt: 'A Fill the Gap question: an Arabic sentence with one word missing and four words to choose from'
+		},
+		seo: {
+			title: 'Arabic Fill in the Blank Exercises | Parallel Arabic',
+			description:
+				'Arabic fill-in-the-blank practice: pick the missing word in everyday sentences, then see why it fits. Fresh sentences at your level in Egyptian, Levantine, Darija and Fusha.'
+		},
+		intro:
+			'Everyday Arabic sentences with one word missing. Read the sentence and its meaning, then pick the word that fits from four. Only one makes sense: the others are the wrong food, the wrong time or the wrong kind of word. Signed in, you can have the sentences built around words you’ve saved.',
+		howToPlay: [
+			'Pick a dialect and a level. Signed in, choose Any words or My saved words.',
+			'Start a round of ten sentences. Read the Arabic, with the English underneath.',
+			'Tap the word that fills the gap. The answer, transliteration and a short explanation appear.',
+			'At the end, go back over the sentences you missed.'
+		],
+		faqs: [
+			{
+				question: 'Why fill in the blank instead of just reading?',
+				answer:
+					'Because it makes you use the words around the gap. To pick the right word you have to understand the rest of the sentence, which is reading for meaning, and you see each new word in context instead of on its own.'
+			},
+			{
+				question: 'What does “My saved words” do?',
+				answer:
+					'It builds the round around words you have saved while reading or playing, so you meet them again in new sentences. It works best once you have saved ten or more words in that dialect.'
+			},
+			{
+				question: 'Are the sentences different every time?',
+				answer:
+					'Yes. Every round is a fresh set of ten in your dialect and at your level, and you can play any sentence aloud once you’ve answered.'
+			}
+		]
 	}
 ];
 

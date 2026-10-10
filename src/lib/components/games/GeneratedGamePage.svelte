@@ -1,7 +1,7 @@
 <script lang="ts" generics="T">
 	import { untrack, type Snippet } from 'svelte';
 	import { page } from '$app/state';
-	import GameShell from './GameShell.svelte';
+	import GameShell, { type Picker } from './GameShell.svelte';
 	import PressButton from './PressButton.svelte';
 	import type { GameInfo } from '$lib/constants/games';
 	import { createGeneratedRound } from '$lib/games/generated-round.svelte';
@@ -20,10 +20,15 @@
 		endpoint: string;
 		/** What a round contains, e.g. "8 fresh sentences". */
 		roundLabel: string;
+		/** Game-specific chip rows, shown under the level. */
+		extraPickers?: Picker[];
+		/** Game-specific fields sent with each round request. */
+		extraBody?: Record<string, unknown>;
 		children: Snippet<[{ items: T[]; dialect: GameDialect; onPlayAgain: () => void }]>;
 	}
 
-	let { game, data, endpoint, roundLabel, children }: Props = $props();
+	let { game, data, endpoint, roundLabel, extraPickers = [], extraBody = {}, children }: Props =
+		$props();
 
 	// Chosen once on arrival; after that the chips own them.
 	let dialect = $state<GameDialect>(
@@ -49,7 +54,7 @@
 			return;
 		}
 		fullscreen = true;
-		if (await round.start(dialect, level)) gate.tryStartRound();
+		if (await round.start(dialect, level, extraBody)) gate.tryStartRound();
 		else fullscreen = false;
 	}
 
@@ -75,7 +80,8 @@
 			value: level,
 			options: LEVEL_OPTIONS,
 			onChange: (value) => (level = value as GameLevel)
-		}
+		},
+		...extraPickers
 	]}
 >
 	{#if round.status === 'playing'}
