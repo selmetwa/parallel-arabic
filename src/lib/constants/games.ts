@@ -382,6 +382,53 @@ export const GAMES: GameInfo[] = [
 					'Everyday words from the theme you pick, like food, animals, the body or the house, in the dialect you choose. Each new board leans towards words you haven’t just seen.'
 			}
 		]
+	},
+	{
+		slug: 'speed-round',
+		name: 'Speed Round',
+		heading: 'Arabic Vocabulary Speed Quiz: 60 Seconds',
+		emoji: '⚡',
+		tagline: 'An Arabic word and a meaning: right or wrong? As many as you can in a minute.',
+		skills: ['Vocabulary', 'Reading'],
+		levels: 'Beginner–Intermediate',
+		accent: '#eab308',
+		deep: '#a16207',
+		shot: {
+			src: '/images/feature-pages/game-speed-round.webp',
+			w: 1568,
+			h: 900,
+			alt: 'A Speed Round question: an Arabic word beside an English meaning, with Right and Wrong buttons and the clock running'
+		},
+		seo: {
+			title: 'Arabic Vocabulary Speed Quiz - 60-Second Game | Parallel Arabic',
+			description:
+				'How many Arabic words can you check in 60 seconds? A fast true-or-false vocabulary game with streak bonuses, in Egyptian, Levantine, Darija and Fusha.'
+		},
+		intro:
+			'Sixty seconds on the clock. You see an Arabic word next to an English meaning: is it right or wrong? Answer as fast as you can. Five right in a row doubles your points, ten triples them, and one miss resets the streak.',
+		howToPlay: [
+			'Pick a dialect and a theme, then press Start the clock.',
+			'Read the Arabic word and the meaning beside it. Tap Right if they match, Wrong if they don’t.',
+			'On a keyboard, use → or Y for right and ← or N for wrong.',
+			'When the time is up you see your score, your best streak and the words you missed.'
+		],
+		faqs: [
+			{
+				question: 'Why play against the clock?',
+				answer:
+					'Knowing a word slowly isn’t the same as knowing it. In conversation you have a second or two to recognise it, and a timed round shows you which words you really know and which you are still working out.'
+			},
+			{
+				question: 'How does the score work?',
+				answer:
+					'Each right answer is worth one point. From five in a row it is worth two, and from ten in a row three. A wrong answer costs nothing but resets the streak, so accuracy pays more than guessing.'
+			},
+			{
+				question: 'Is my best score saved?',
+				answer:
+					'Yes, on this device, for each dialect and theme, so you have something to beat next time.'
+			}
+		]
 	}
 ];
 
@@ -427,7 +474,7 @@ export const GAMES_HUB_FAQS: Faq[] = [
 	{
 		question: 'Are these games good for children?',
 		answer:
-			'They work for any age, though the vocabulary is chosen for adult learners: food, family, travel, work. There is no timer and nothing to lose, so they suit a slow pace.'
+			'They work for any age, though the vocabulary is chosen for adult learners: food, family, travel, work. Only Speed Round has a timer, so the rest suit a slow pace.'
 	}
 ];
 
