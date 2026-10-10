@@ -627,6 +627,58 @@ export const GAMES: GameInfo[] = [
 					'Yes. Every round is a fresh set of ten in your dialect and at your level, and you can play any sentence aloud once you’ve answered.'
 			}
 		]
+	},
+	{
+		slug: 'shadowing',
+		name: 'Shadowing',
+		heading: 'Arabic Shadowing: Listen, Repeat, Get a Score',
+		emoji: '🎙️',
+		tagline: 'Hear a native speaker, say it the same way, and see how close you got.',
+		skills: ['Speaking', 'Listening', 'Pronunciation'],
+		levels: 'Beginner–Intermediate',
+		accent: '#d946ef',
+		deep: '#a21caf',
+		shot: {
+			src: '/images/feature-pages/game-shadowing.webp',
+			w: 1568,
+			h: 900,
+			alt: 'A Shadowing line: an Arabic sentence with transliteration and meaning, a Listen button, a Say it button and a score out of 100'
+		},
+		seo: {
+			title: 'Arabic Shadowing Practice with Native Audio | Parallel Arabic',
+			description:
+				'Shadow native Arabic speakers: listen to a real line, repeat it out loud and get a score out of 100. Egyptian, Levantine, Darija and Fusha.'
+		},
+		intro:
+			'Shadowing is the simplest speaking drill there is: listen to a native speaker and say exactly what they said, the way they said it. Every line here is a recorded phrase people actually use, from ordering in a café to asking a taxi driver to stop. Say it, and see a score out of 100.',
+		howToPlay: [
+			'Pick a dialect and press Start. A round is six short lines.',
+			'Listen to the line as often as you like, reading the Arabic, transliteration and meaning.',
+			'Press Say it, repeat the line, and tap again to stop. You get a score and what we heard.',
+			'Try again to beat your score, or move on. At the end, see every line with your best score.'
+		],
+		faqs: [
+			{
+				question: 'What is shadowing?',
+				answer:
+					'A way to practise speaking by imitating native audio straight after hearing it: same words, same rhythm, same melody. It trains your mouth and your ear together and builds the confidence to say whole phrases rather than one word at a time.'
+			},
+			{
+				question: 'How is my pronunciation scored?',
+				answer:
+					'Your recording is transcribed and compared with the line you were repeating. Getting every word, in order, scores near 100. It checks the words you say, so a clear attempt with the right words scores well even with an accent.'
+			},
+			{
+				question: 'Where do the lines come from?',
+				answer:
+					'They are recorded lines from the Scenarios conversations and the Room Hunt game: what a waiter, a taxi driver or a pharmacist says, and what you say back. Each one is short enough to repeat after a single listen.'
+			},
+			{
+				question: 'Do I need a microphone?',
+				answer:
+					'Yes, a phone or laptop mic is fine. Without one, or once the free speaking practice runs out, you can still listen and repeat along without a score.'
+			}
+		]
 	}
 ];
 
