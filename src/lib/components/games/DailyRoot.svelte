@@ -16,9 +16,11 @@
 		signedIn: boolean;
 		accent: string;
 		deep: string;
+		/** Called once every clue is solved or out of tries (also when today's game was already finished). */
+		onDone?: () => void;
 	}
 
-	let { signedIn, accent, deep }: Props = $props();
+	let { signedIn, accent, deep, onDone }: Props = $props();
 
 	interface ClueState {
 		guesses: string[];
@@ -79,6 +81,7 @@
 			puzzle = p;
 			const next = clues.findIndex((c) => !clueDone(c));
 			openClue(next === -1 ? 0 : next);
+			if (next === -1) onDone?.();
 		} catch {
 			loadError = "Today's puzzle didn't load. Check your connection and try again.";
 		}
@@ -109,6 +112,7 @@
 		}
 		placed = [];
 		save();
+		if (clues.every(clueDone)) onDone?.();
 	}
 
 	function nextClue() {

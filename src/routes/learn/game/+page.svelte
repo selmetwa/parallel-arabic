@@ -1,7 +1,11 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
 	import GameCard from '$lib/components/games/GameCard.svelte';
-	import { GAMES, GAMES_HUB_FAQS, QUIZ_CARD, gameHref } from '$lib/constants/games';
+	import { GAMES, GAMES_HUB_FAQS, QUIZ_CARD, gameHref, getGame } from '$lib/constants/games';
+	import { puzzleNumber } from '$lib/games/daily-root';
+	import { gameOfTheDay } from '$lib/games/today';
+
+	const todayGame = getGame(gameOfTheDay(puzzleNumber()))!;
 
 	// "Games by skill": every skill a game lists, with the games that train it.
 	const cards = [
@@ -23,6 +27,14 @@
 			choose your dialect, and play.
 		</p>
 	</header>
+
+	<a href={resolve('/learn/game/today')} class="today">
+		<span class="today-emoji" aria-hidden="true">📅</span>
+		<span>
+			<span class="today-title">Today’s challenge</span>
+			<span class="today-desc">Daily Root + {todayGame.name}. About three minutes; keeps your streak going.</span>
+		</span>
+	</a>
 
 	<div class="grid">
 		{#each GAMES as game (game.slug)}
@@ -69,6 +81,30 @@
 </section>
 
 <style>
+	.today {
+		display: flex;
+		align-items: center;
+		gap: 0.9rem;
+		margin-bottom: 1rem;
+		border-radius: 1.25rem;
+		border: 2px solid #22c55e;
+		background: color-mix(in srgb, #22c55e 10%, var(--tile3));
+		padding: 1rem 1.1rem;
+	}
+	.today-emoji {
+		font-size: 1.8rem;
+	}
+	.today-title {
+		display: block;
+		font-weight: 600;
+		color: var(--text1);
+	}
+	.today-desc {
+		display: block;
+		font-size: 0.88rem;
+		color: var(--text2);
+	}
+
 	.hero-title {
 		font-size: clamp(2.2rem, 7vw, 3.2rem);
 		font-weight: 600;

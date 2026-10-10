@@ -17,9 +17,11 @@
 		accent: string;
 		deep: string;
 		onPlayAgain: () => void;
+		/** Called once, when the last answer has been moved past. */
+		onFinish?: (score: number, total: number) => void;
 	}
 
-	let { items, signedIn, accent, deep, onPlayAgain }: Props = $props();
+	let { items, signedIn, accent, deep, onPlayAgain, onFinish }: Props = $props();
 
 	let questions = $state<DialectQuestion[]>(untrack(() => buildRound(items)));
 	let index = $state(0);
@@ -70,6 +72,7 @@
 		index++;
 		picked = null;
 		announcement = '';
+		if (index === questions.length) onFinish?.(score, questions.length);
 		playIfListen();
 	}
 </script>

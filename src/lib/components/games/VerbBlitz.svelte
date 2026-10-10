@@ -13,9 +13,11 @@
 		accent: string;
 		deep: string;
 		onPlayAgain: () => void;
+		/** Called once, when the last answer has been moved past. */
+		onFinish?: (score: number, total: number) => void;
 	}
 
-	let { dialect, tense, signedIn, accent, deep, onPlayAgain }: Props = $props();
+	let { dialect, tense, signedIn, accent, deep, onPlayAgain, onFinish }: Props = $props();
 
 	const TENSE_LABEL = { past: 'Past', present: 'Present', future: 'Future' } as const;
 
@@ -63,6 +65,7 @@
 		index++;
 		picked = null;
 		announcement = '';
+		if (questions && index === questions.length) onFinish?.(score, questions.length);
 	}
 </script>
 
