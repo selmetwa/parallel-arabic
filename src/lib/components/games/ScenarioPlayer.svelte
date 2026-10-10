@@ -211,8 +211,8 @@
 			return;
 		}
 
-		if (result.xp && signedIn) {
-			awardGameXp();
+		if (result.xp) {
+			if (signedIn) awardGameXp();
 			xpEarned++;
 		}
 		if (stage.npc) scene.playAnimation(NPC, 'emote-yes', { once: true, then: 'idle' });
@@ -405,6 +405,7 @@
 					}
 				]}
 				{xpEarned}
+				{signedIn}
 				{accent}
 				{deep}
 				onPlayAgain={onRestart}

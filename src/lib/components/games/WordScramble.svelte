@@ -73,8 +73,8 @@
 			status = 'solved';
 			outcomes[word.id] = !hinted;
 			announcement = `Correct: ${word.arabic}, ${word.english}`;
-			if (!hinted && signedIn) {
-				awardGameXp();
+			if (!hinted) {
+				if (signedIn) awardGameXp();
 				xpEarned++;
 			}
 		} else {
@@ -177,6 +177,9 @@
 			{ label: 'Hints or skips', value: words.length - solvedCount }
 		]}
 		{xpEarned}
+		{signedIn}
+		missedWords={words.filter((w) => !outcomes[w.id])}
+		{dialect}
 		note={missedNote(savedMissed)}
 		{accent}
 		{deep}

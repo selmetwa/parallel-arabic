@@ -39,8 +39,8 @@
 		announcement = right
 			? `Correct: ${odd.arabic}. ${puzzle.explanation}`
 			: `Not quite. The odd one out was ${odd.arabic}. ${puzzle.explanation}`;
-		if (right && signedIn) {
-			awardGameXp();
+		if (right) {
+			if (signedIn) awardGameXp();
 			xpEarned++;
 		}
 	}
@@ -59,6 +59,7 @@
 		heading="{score} of {puzzles.length} puzzles solved"
 		stats={[{ label: 'Solved', value: `${score}/${puzzles.length}` }]}
 		{xpEarned}
+		{signedIn}
 		{accent}
 		{deep}
 		{onPlayAgain}

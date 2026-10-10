@@ -42,8 +42,8 @@
 			: `Not quite. The mistake was ${item.words[item.wrongIndex]}, which should be ${
 					item.correction
 				}. ${item.explanation}`;
-		if (right && signedIn) {
-			awardGameXp();
+		if (right) {
+			if (signedIn) awardGameXp();
 			xpEarned++;
 		}
 	}
@@ -62,6 +62,7 @@
 		heading="{score} of {items.length} mistakes spotted"
 		stats={[{ label: 'Spotted', value: `${score}/${items.length}` }]}
 		{xpEarned}
+		{signedIn}
 		{accent}
 		{deep}
 		{onPlayAgain}

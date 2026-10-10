@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { GAMES, GAMES_HUB_FAQS, QUIZ_CARD, getGame } from './games';
+import { GAMES, GAMES_HUB_FAQS, GAME_LEVEL_GROUPS, QUIZ_CARD, getGame, levelGroup } from './games';
 import { QUIZ_FAQS } from './game-content';
 import { GAME_DIALECTS, GAME_THEMES, themesFor } from '$lib/games/themes';
 import { sections } from './sections';
@@ -78,5 +78,18 @@ describe('game themes', () => {
 		for (const dialect of GAME_DIALECTS) {
 			expect(themesFor(dialect).length, dialect).toBeGreaterThanOrEqual(5);
 		}
+	});
+});
+
+describe('hub level groups', () => {
+	it('puts each game in a known group, and every group has games', () => {
+		const ids = GAME_LEVEL_GROUPS.map((g) => g.id) as string[];
+		const used = new Set([...GAMES, QUIZ_CARD].map((g) => levelGroup(g.levels)));
+		for (const group of used) expect(ids).toContain(group);
+		for (const id of ids) expect(used.has(id as never), id).toBe(true);
+	});
+
+	it('starts absolute beginners with Letter Hunt', () => {
+		expect(levelGroup(getGame('letter-hunt')!.levels)).toBe('start');
 	});
 });

@@ -122,8 +122,8 @@
 			bestStreak = Math.max(bestStreak, streak);
 			correct++;
 			flash = 'right';
-			if (signedIn && xpEarned < MAX_XP_PER_ROUND) {
-				awardGameXp();
+			if (xpEarned < MAX_XP_PER_ROUND) {
+				if (signedIn) awardGameXp();
 				xpEarned++;
 			}
 		} else {
@@ -177,6 +177,9 @@
 			.filter(Boolean)
 			.join(' ') || undefined}
 		{xpEarned}
+		{signedIn}
+		missedWords={missed}
+		{dialect}
 		{accent}
 		{deep}
 		onPlayAgain={playAgain}

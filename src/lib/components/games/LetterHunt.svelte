@@ -56,10 +56,8 @@
 		const { letter } = question;
 		if (right) {
 			score++;
-			if (signedIn) {
-				awardGameXp();
-				xpEarned++;
-			}
+			if (signedIn) awardGameXp();
+			xpEarned++;
 		} else if (!missed.includes(letter)) {
 			missed = [...missed, letter];
 		}
@@ -83,6 +81,7 @@
 		heading="{score} of {questions.length} letters"
 		stats={[{ label: 'Right', value: `${score}/${questions.length}` }]}
 		{xpEarned}
+		{signedIn}
 		{accent}
 		{deep}
 		{onPlayAgain}

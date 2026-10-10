@@ -3,10 +3,12 @@ import type { RequestHandler } from './$types'
 import { syncSupabaseUserWithDB } from '$lib/helpers/supabase-auth-helpers'
 import { sendWelcomeEmail } from '$lib/server/email'
 import { ADMIN_ID } from '$env/static/private'
+import { NEXT_COOKIE, safeNext, withNewSignup } from '$lib/helpers/safe-next'
 
-export const GET: RequestHandler = async ({ url, locals: { supabase } }) => {
+export const GET: RequestHandler = async ({ url, cookies, locals: { supabase } }) => {
   const code = url.searchParams.get('code')
-  const next = url.searchParams.get('next') ?? '/'
+  const next = safeNext(url.searchParams.get('next') ?? cookies.get(NEXT_COOKIE))
+  cookies.delete(NEXT_COOKIE, { path: '/' })
 
   if (code) {
     const { data, error } = await supabase.auth.exchangeCodeForSession(code)
@@ -40,8 +42,7 @@ export const GET: RequestHandler = async ({ url, locals: { supabase } }) => {
       }
       
       // If it's a new user, redirect with newSignup flag to trigger onboarding
-      const redirectPath = next.startsWith('/') ? next : `/${next}`
-      const redirectUrl = isNewUser ? '/?newSignup=true' : redirectPath
+      const redirectUrl = isNewUser ? withNewSignup(next) : next
       redirect(303, redirectUrl)
     } else {
       console.error('❌ Code exchange failed:', error)

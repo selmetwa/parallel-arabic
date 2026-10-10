@@ -7,19 +7,29 @@
   import { page } from '$app/state';
   import { isNativeApp } from '$lib/helpers/is-native-app';
   import { PLANS } from '$lib/constants/pricing';
+  import { GAMES } from '$lib/constants/games';
 
   type Props = {
     isOpen: boolean;
     handleCloseModal: () => void;
+    /** Set when a game opened the paywall, so the offer leads with games. */
+    gameName?: string;
   }
 
-  let { isOpen = false, handleCloseModal = () => {} }: Props = $props();
+  let { isOpen = false, handleCloseModal = () => {}, gameName }: Props = $props();
 
   // Web-only trial and annual-plan copy — see SubscribeButton for why this waits for mount.
   let isNative = $state<boolean | null>(null);
   onMount(() => {
     isNative = isNativeApp();
   });
+
+  const otherGames = $derived(
+    GAMES.filter((g) => g.name !== gameName)
+      .slice(0, 4)
+      .map((g) => g.name)
+      .join(', ') + ' and more'
+  );
 
   const showTrial = $derived(isNative === false && page.data.trialEligible === true);
 </script>
@@ -29,12 +39,12 @@
     <!-- Header -->
     <div class="bg-tile-500 border-b border-tile-600 p-6 text-center">
         {#if showTrial}
-          <h2 class="text-2xl font-bold text-text-300 mb-2">Try everything free for 7 days</h2>
-          <p class="text-text-200">Full access to every dialect, lesson and story</p>
+          <h2 class="text-2xl font-bold text-text-300 mb-2">{gameName ? `Unlimited ${gameName}, free for 7 days` : 'Try everything free for 7 days'}</h2>
+          <p class="text-text-200">{gameName ? 'Plus every other game, dialect, lesson and story' : 'Full access to every dialect, lesson and story'}</p>
           <h3 class="text-3xl font-bold text-text-300 mt-3">$0<span class="text-lg font-normal text-text-300"> today, then $10/month</span></h3>
         {:else}
-          <h2 class="text-2xl font-bold text-text-300 mb-2">Unlock Full Access</h2>
-          <p class="text-text-200">Upgrade to master Arabic dialects</p>
+          <h2 class="text-2xl font-bold text-text-300 mb-2">{gameName ? `Unlimited ${gameName}` : 'Unlock Full Access'}</h2>
+          <p class="text-text-200">{gameName ? 'Plus every other game, dialect, lesson and story' : 'Upgrade to master Arabic dialects'}</p>
           <h3 class="text-3xl font-bold text-text-300 mt-3">$10<span class="text-lg font-normal text-text-300">/month</span></h3>
         {/if}
         {#if isNative === false}
@@ -45,6 +55,12 @@
     <!-- Content -->
     <div class="p-6 overflow-y-auto max-h-[50vh]">
         <ul class="flex flex-col gap-3 text-text-200">
+            {#if gameName}
+              <li class="flex items-start gap-3 bg-tile-300/50 p-3 rounded-lg border border-tile-500">
+                  <div class="shrink-0 mt-1"><Checkmark /></div>
+                  <span><strong class="text-text-300">Every game, unlimited:</strong> as many rounds of {gameName} as you like, plus {otherGames}. Missed words go straight into your review.</span>
+              </li>
+            {/if}
             <li class="flex items-start gap-3 bg-tile-300/50 p-3 rounded-lg border border-tile-500">
                 <div class="shrink-0 mt-1"><Checkmark /></div>
                 <span><strong class="text-text-300">Structured Lessons:</strong> Follow comprehensive learning paths organized by modules and topics for Egyptian Arabic, Levantine, Moroccan Darija, and Modern Standard Arabic. Progress through lessons sequentially with progress tracking and unlock new content as you advance.</span>

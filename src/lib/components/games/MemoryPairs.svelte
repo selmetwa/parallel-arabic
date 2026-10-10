@@ -80,10 +80,8 @@
 			matched = [...matched, a.id, b.id];
 			open = [];
 			announcement = `Pair: ${a.word.arabic}, ${a.word.english}`;
-			if (signedIn) {
-				awardGameXp();
-				xpEarned++;
-			}
+			if (signedIn) awardGameXp();
+			xpEarned++;
 		} else {
 			busy = true;
 			announcement = 'Not a pair.';
@@ -132,6 +130,7 @@
 		]}
 		note={moves === PAIRS_PER_BOARD ? 'Not a single miss.' : undefined}
 		{xpEarned}
+		{signedIn}
 		{accent}
 		{deep}
 		onPlayAgain={playAgain}

@@ -1,12 +1,13 @@
 import { redirect } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { syncSupabaseUserWithDB } from '$lib/helpers/supabase-auth-helpers';
+import { safeNext, withNewSignup } from '$lib/helpers/safe-next';
 
 export const GET: RequestHandler = async ({ url, locals: { supabase } }) => {
 	console.log('🔗 Google OAuth callback hit');
 
 	const code = url.searchParams.get('code');
-	const next = url.searchParams.get('next') ?? '/';
+	const next = safeNext(url.searchParams.get('next'));
 	const error = url.searchParams.get('error');
 	const error_description = url.searchParams.get('error_description');
 
@@ -55,7 +56,7 @@ export const GET: RequestHandler = async ({ url, locals: { supabase } }) => {
 			}
 
 			// If it's a new user, redirect with newSignup flag to trigger onboarding
-			const redirectUrl = isNewUser ? '/?newSignup=true' : next;
+			const redirectUrl = isNewUser ? withNewSignup(next) : next;
 			console.log('🏠 Redirecting to:', redirectUrl);
 			throw redirect(303, redirectUrl);
 		}

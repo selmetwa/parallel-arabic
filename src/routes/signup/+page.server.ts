@@ -2,13 +2,14 @@ import { redirect } from '@sveltejs/kit';
 import type { Actions } from './$types';
 import { syncSupabaseUserWithDB } from '$lib/helpers/supabase-auth-helpers';
 import { sendWelcomeEmail } from '$lib/server/email';
+import { safeNext, withNewSignup } from '$lib/helpers/safe-next';
 
-export const load = async ({ locals: { safeGetSession } }) => {
+export const load = async ({ locals: { safeGetSession }, url }) => {
 	const { session } = await safeGetSession();
 
-	// If already logged in, redirect to home
+	// If already logged in, send them where they were going
 	if (session) {
-		redirect(303, '/');
+		redirect(303, safeNext(url.searchParams.get('next')));
 	}
 
 	return {};
@@ -19,6 +20,7 @@ export const actions: Actions = {
 		const formData = await request.formData();
 		const email = formData.get('email') as string;
 		const password = formData.get('password') as string;
+		const next = safeNext(formData.get('next') as string | null);
 
 		const { data, error } = await supabase.auth.signUp({ email, password });
 		if (error) {
@@ -59,9 +61,9 @@ export const actions: Actions = {
 		}
 
 		// If it's a new user and they're already authenticated (email confirmation not required),
-		// redirect to home with newSignup flag to trigger onboarding
+		// send them back where they came from, with the newSignup flag to trigger onboarding
 		if (isNewUser && data.session) {
-			throw redirect(303, '/?newSignup=true');
+			throw redirect(303, withNewSignup(next));
 		}
 
 		return {

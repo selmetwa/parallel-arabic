@@ -3,35 +3,41 @@
   import Button from '$lib/components/Button.svelte';
   import Testimonial from '$lib/components/Testimonial.svelte';
   import { goto } from '$app/navigation';
+  import { page } from '$app/state';
+  import { resolve } from '$app/paths';
 
   type Props = {
     isOpen: boolean;
     handleCloseModal: () => void;
+    title?: string;
+    message?: string;
+    /** Where to come back to after signing up or logging in. Defaults to this page. */
+    next?: string;
   }
 
-  let { isOpen = false, handleCloseModal = () => {} }: Props = $props();
+  let {
+    isOpen = false,
+    handleCloseModal = () => {},
+    title = 'Login Required',
+    message = 'Create an account or log in to continue your learning journey.',
+    next
+  }: Props = $props();
 
-  function handleLogin() {
-    goto('/login');
-  }
+  const nextQuery = $derived(
+    `?next=${encodeURIComponent(next ?? page.url.pathname + page.url.search)}`
+  );
 </script>
 
 <Modal isOpen={isOpen} handleCloseModal={handleCloseModal} width="min(90%, 500px)" height="fit-content">
   <div class="flex flex-col bg-tile-400 rounded-lg overflow-hidden">
     <!-- Header -->
     <div class="bg-tile-500 border-b border-tile-600 p-6 text-center">
-        <h2 class="text-2xl font-bold text-text-300 mb-2">Login Required</h2>
-        <p class="text-text-200">Please log in to access this content</p>
+        <h2 class="text-2xl font-bold text-text-300">{title}</h2>
     </div>
 
     <!-- Content -->
     <div class="p-6 overflow-y-auto">
-        <div class="text-center space-y-4">
-            <div class="text-6xl mb-4">🔒</div>
-            <p class="text-lg text-text-200">
-                Create an account or log in to continue your learning journey.
-            </p>
-        </div>
+        <p class="text-lg text-text-200 text-center">{message}</p>
         <Testimonial
             class="mt-6"
             segments={[
@@ -41,11 +47,13 @@
     </div>
 
     <!-- Footer / Action -->
-    <div class="p-6 pt-0">
-        <Button onClick={handleLogin} className="!py-3 !text-lg w-full shadow-md">
-            Go to Login
+    <div class="p-6 pt-0 flex flex-col items-center gap-3">
+        <Button type="button" onClick={() => goto(`${resolve('/signup')}${nextQuery}`)} className="!py-3 !text-lg w-full shadow-md">
+            Create a free account
         </Button>
+        <a href="{resolve('/login')}{nextQuery}" class="text-sm font-semibold text-text-200 underline underline-offset-2 hover:text-text-300">
+            I already have an account
+        </a>
     </div>
   </div>
 </Modal>
-

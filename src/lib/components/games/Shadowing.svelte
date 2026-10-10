@@ -69,8 +69,8 @@
 		last = { score, heard };
 		attempts++;
 		announcement = `${score} out of 100. ${RATING_LABEL[rate(score)]}.`;
-		if (firstPass && signedIn) {
-			awardGameXp();
+		if (firstPass) {
+			if (signedIn) awardGameXp();
 			xpEarned++;
 		}
 	}
@@ -95,6 +95,7 @@
 			{ label: 'Average', value: scored.length ? average : '–' }
 		]}
 		{xpEarned}
+		{signedIn}
 		{accent}
 		{deep}
 		{onPlayAgain}
