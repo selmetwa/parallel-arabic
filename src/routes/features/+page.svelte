@@ -1,6 +1,9 @@
 <script lang="ts">
 	import FeatureGrid from '$lib/components/features/FeatureGrid.svelte';
 	import { FEATURE_LINKS } from '$lib/constants/features';
+
+	const tools = FEATURE_LINKS.filter((l) => !l.group);
+	const games = FEATURE_LINKS.filter((l) => l.group === 'games');
 </script>
 
 <section class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
@@ -10,7 +13,11 @@
 		Modern Standard Arabic: read, listen, speak, write and review.
 	</p>
 	<div class="grid-wrap">
-		<FeatureGrid links={FEATURE_LINKS} />
+		<FeatureGrid links={tools} />
+	</div>
+	<h2 class="group-title">Games</h2>
+	<div class="grid-wrap grid-wrap--tight">
+		<FeatureGrid links={games} />
 	</div>
 </section>
 
@@ -32,5 +39,17 @@
 
 	.grid-wrap {
 		margin-top: 2.5rem;
+	}
+
+	.grid-wrap--tight {
+		margin-top: 1rem;
+	}
+
+	.group-title {
+		margin-top: 3rem;
+		font-size: 1.5rem;
+		font-weight: 600;
+		letter-spacing: -0.02em;
+		color: var(--text1);
 	}
 </style>

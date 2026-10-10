@@ -10,7 +10,12 @@
 	// as a row of short points.
 	const shown = $derived(feature.sections.filter((s) => s.shot));
 	const points = $derived(feature.sections.filter((s) => !s.shot));
-	const others = $derived(FEATURE_LINKS.filter((l) => l.href !== `/features/${feature.slug}`));
+	// Game pages suggest other games; everything else suggests the other tools.
+	const others = $derived(
+		FEATURE_LINKS.filter(
+			(l) => l.href !== `/features/${feature.slug}` && l.group === feature.group
+		)
+	);
 </script>
 
 {#snippet screenshot(shot: FeatureShot, eager = false)}
@@ -111,7 +116,7 @@
 	</section>
 
 	<section class="more">
-		<h2 class="h2">Explore more features</h2>
+		<h2 class="h2">{feature.group === 'games' ? 'More games' : 'Explore more features'}</h2>
 		<FeatureGrid links={others} />
 	</section>
 </article>

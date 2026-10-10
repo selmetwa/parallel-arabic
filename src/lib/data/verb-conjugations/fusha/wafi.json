@@ -1,0 +1,318 @@
+{
+  "slug": "wafi",
+  "arabic": "قَبِلَ",
+  "transliteration": "qabila",
+  "english": "to accept",
+  "wordId": null,
+  "rootLetters": "ق ب ل",
+  "verbClass": "sound",
+  "notes": "Form I verb with i in the past and a in the present: qabila, yaqbalu.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "قَبِلْتُ",
+          "transliteration": "qabiltu",
+          "english": "I accepted"
+        },
+        {
+          "person": "enta",
+          "arabic": "قَبِلْتَ",
+          "transliteration": "qabilta",
+          "english": "you (m) accepted"
+        },
+        {
+          "person": "enti",
+          "arabic": "قَبِلْتِ",
+          "transliteration": "qabilti",
+          "english": "you (f) accepted"
+        },
+        {
+          "person": "howa",
+          "arabic": "قَبِلَ",
+          "transliteration": "qabila",
+          "english": "he accepted"
+        },
+        {
+          "person": "heya",
+          "arabic": "قَبِلَتْ",
+          "transliteration": "qabilat",
+          "english": "she accepted"
+        },
+        {
+          "person": "ehna",
+          "arabic": "قَبِلْنَا",
+          "transliteration": "qabilna",
+          "english": "we accepted"
+        },
+        {
+          "person": "entu",
+          "arabic": "قَبِلْتُمْ",
+          "transliteration": "qabiltum",
+          "english": "you (pl) accepted"
+        },
+        {
+          "person": "homma",
+          "arabic": "قَبِلُوا",
+          "transliteration": "qabilu",
+          "english": "they accepted"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مَا قَبِلْتُ",
+          "transliteration": "ma qabiltu",
+          "english": "I didn't accept"
+        },
+        {
+          "person": "enta",
+          "arabic": "مَا قَبِلْتَ",
+          "transliteration": "ma qabilta",
+          "english": "you (m) didn't accept"
+        },
+        {
+          "person": "enti",
+          "arabic": "مَا قَبِلْتِ",
+          "transliteration": "ma qabilti",
+          "english": "you (f) didn't accept"
+        },
+        {
+          "person": "howa",
+          "arabic": "مَا قَبِلَ",
+          "transliteration": "ma qabila",
+          "english": "he didn't accept"
+        },
+        {
+          "person": "heya",
+          "arabic": "مَا قَبِلَتْ",
+          "transliteration": "ma qabilat",
+          "english": "she didn't accept"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مَا قَبِلْنَا",
+          "transliteration": "ma qabilna",
+          "english": "we didn't accept"
+        },
+        {
+          "person": "entu",
+          "arabic": "مَا قَبِلْتُمْ",
+          "transliteration": "ma qabiltum",
+          "english": "you (pl) didn't accept"
+        },
+        {
+          "person": "homma",
+          "arabic": "مَا قَبِلُوا",
+          "transliteration": "ma qabilu",
+          "english": "they didn't accept"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أَقْبَلُ",
+          "transliteration": "aqbalu",
+          "english": "I accept"
+        },
+        {
+          "person": "enta",
+          "arabic": "تَقْبَلُ",
+          "transliteration": "taqbalu",
+          "english": "you (m) accept"
+        },
+        {
+          "person": "enti",
+          "arabic": "تَقْبَلِينَ",
+          "transliteration": "taqbalina",
+          "english": "you (f) accept"
+        },
+        {
+          "person": "howa",
+          "arabic": "يَقْبَلُ",
+          "transliteration": "yaqbalu",
+          "english": "he accepts"
+        },
+        {
+          "person": "heya",
+          "arabic": "تَقْبَلُ",
+          "transliteration": "taqbalu",
+          "english": "she accepts"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نَقْبَلُ",
+          "transliteration": "naqbalu",
+          "english": "we accept"
+        },
+        {
+          "person": "entu",
+          "arabic": "تَقْبَلُونَ",
+          "transliteration": "taqbaluna",
+          "english": "you (pl) accept"
+        },
+        {
+          "person": "homma",
+          "arabic": "يَقْبَلُونَ",
+          "transliteration": "yaqbaluna",
+          "english": "they accept"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَا أَقْبَلُ",
+          "transliteration": "la aqbalu",
+          "english": "I don't accept"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَا تَقْبَلُ",
+          "transliteration": "la taqbalu",
+          "english": "you (m) don't accept"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَا تَقْبَلِينَ",
+          "transliteration": "la taqbalina",
+          "english": "you (f) don't accept"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَا يَقْبَلُ",
+          "transliteration": "la yaqbalu",
+          "english": "he doesn't accept"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَا تَقْبَلُ",
+          "transliteration": "la taqbalu",
+          "english": "she doesn't accept"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَا نَقْبَلُ",
+          "transliteration": "la naqbalu",
+          "english": "we don't accept"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَا تَقْبَلُونَ",
+          "transliteration": "la taqbaluna",
+          "english": "you (pl) don't accept"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَا يَقْبَلُونَ",
+          "transliteration": "la yaqbaluna",
+          "english": "they don't accept"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَأَقْبَلُ",
+          "transliteration": "sa2aqbalu",
+          "english": "I will accept"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَتَقْبَلُ",
+          "transliteration": "sataqbalu",
+          "english": "you (m) will accept"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَتَقْبَلِينَ",
+          "transliteration": "sataqbalina",
+          "english": "you (f) will accept"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَيَقْبَلُ",
+          "transliteration": "sayaqbalu",
+          "english": "he will accept"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَتَقْبَلُ",
+          "transliteration": "sataqbalu",
+          "english": "she will accept"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَنَقْبَلُ",
+          "transliteration": "sanaqbalu",
+          "english": "we will accept"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَتَقْبَلُونَ",
+          "transliteration": "sataqbaluna",
+          "english": "you (pl) will accept"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَيَقْبَلُونَ",
+          "transliteration": "sayaqbaluna",
+          "english": "they will accept"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَنْ أَقْبَلَ",
+          "transliteration": "lan aqbala",
+          "english": "I won't accept"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَنْ تَقْبَلَ",
+          "transliteration": "lan taqbala",
+          "english": "you (m) won't accept"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَنْ تَقْبَلِي",
+          "transliteration": "lan taqbali",
+          "english": "you (f) won't accept"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَنْ يَقْبَلَ",
+          "transliteration": "lan yaqbala",
+          "english": "he won't accept"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَنْ تَقْبَلَ",
+          "transliteration": "lan taqbala",
+          "english": "she won't accept"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَنْ نَقْبَلَ",
+          "transliteration": "lan naqbala",
+          "english": "we won't accept"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَنْ تَقْبَلُوا",
+          "transliteration": "lan taqbalu",
+          "english": "you (pl) won't accept"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَنْ يَقْبَلُوا",
+          "transliteration": "lan yaqbalu",
+          "english": "they won't accept"
+        }
+      ]
+    }
+  }
+}

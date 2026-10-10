@@ -1,0 +1,318 @@
+{
+  "slug": "akar",
+  "arabic": "شَكَرَ",
+  "transliteration": "shakara",
+  "english": "to thank",
+  "wordId": null,
+  "rootLetters": "ش ك ر",
+  "verbClass": "sound",
+  "notes": "Form I verb: shakara, yashkuru.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "شَكَرْتُ",
+          "transliteration": "shakartu",
+          "english": "I thanked"
+        },
+        {
+          "person": "enta",
+          "arabic": "شَكَرْتَ",
+          "transliteration": "shakarta",
+          "english": "you (m) thanked"
+        },
+        {
+          "person": "enti",
+          "arabic": "شَكَرْتِ",
+          "transliteration": "shakarti",
+          "english": "you (f) thanked"
+        },
+        {
+          "person": "howa",
+          "arabic": "شَكَرَ",
+          "transliteration": "shakara",
+          "english": "he thanked"
+        },
+        {
+          "person": "heya",
+          "arabic": "شَكَرَتْ",
+          "transliteration": "shakarat",
+          "english": "she thanked"
+        },
+        {
+          "person": "ehna",
+          "arabic": "شَكَرْنَا",
+          "transliteration": "shakarna",
+          "english": "we thanked"
+        },
+        {
+          "person": "entu",
+          "arabic": "شَكَرْتُمْ",
+          "transliteration": "shakartum",
+          "english": "you (pl) thanked"
+        },
+        {
+          "person": "homma",
+          "arabic": "شَكَرُوا",
+          "transliteration": "shakaru",
+          "english": "they thanked"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مَا شَكَرْتُ",
+          "transliteration": "ma shakartu",
+          "english": "I didn't thank"
+        },
+        {
+          "person": "enta",
+          "arabic": "مَا شَكَرْتَ",
+          "transliteration": "ma shakarta",
+          "english": "you (m) didn't thank"
+        },
+        {
+          "person": "enti",
+          "arabic": "مَا شَكَرْتِ",
+          "transliteration": "ma shakarti",
+          "english": "you (f) didn't thank"
+        },
+        {
+          "person": "howa",
+          "arabic": "مَا شَكَرَ",
+          "transliteration": "ma shakara",
+          "english": "he didn't thank"
+        },
+        {
+          "person": "heya",
+          "arabic": "مَا شَكَرَتْ",
+          "transliteration": "ma shakarat",
+          "english": "she didn't thank"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مَا شَكَرْنَا",
+          "transliteration": "ma shakarna",
+          "english": "we didn't thank"
+        },
+        {
+          "person": "entu",
+          "arabic": "مَا شَكَرْتُمْ",
+          "transliteration": "ma shakartum",
+          "english": "you (pl) didn't thank"
+        },
+        {
+          "person": "homma",
+          "arabic": "مَا شَكَرُوا",
+          "transliteration": "ma shakaru",
+          "english": "they didn't thank"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أَشْكُرُ",
+          "transliteration": "ashkuru",
+          "english": "I thank"
+        },
+        {
+          "person": "enta",
+          "arabic": "تَشْكُرُ",
+          "transliteration": "tashkuru",
+          "english": "you (m) thank"
+        },
+        {
+          "person": "enti",
+          "arabic": "تَشْكُرِينَ",
+          "transliteration": "tashkurina",
+          "english": "you (f) thank"
+        },
+        {
+          "person": "howa",
+          "arabic": "يَشْكُرُ",
+          "transliteration": "yashkuru",
+          "english": "he thanks"
+        },
+        {
+          "person": "heya",
+          "arabic": "تَشْكُرُ",
+          "transliteration": "tashkuru",
+          "english": "she thanks"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نَشْكُرُ",
+          "transliteration": "nashkuru",
+          "english": "we thank"
+        },
+        {
+          "person": "entu",
+          "arabic": "تَشْكُرُونَ",
+          "transliteration": "tashkuruna",
+          "english": "you (pl) thank"
+        },
+        {
+          "person": "homma",
+          "arabic": "يَشْكُرُونَ",
+          "transliteration": "yashkuruna",
+          "english": "they thank"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَا أَشْكُرُ",
+          "transliteration": "la ashkuru",
+          "english": "I don't thank"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَا تَشْكُرُ",
+          "transliteration": "la tashkuru",
+          "english": "you (m) don't thank"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَا تَشْكُرِينَ",
+          "transliteration": "la tashkurina",
+          "english": "you (f) don't thank"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَا يَشْكُرُ",
+          "transliteration": "la yashkuru",
+          "english": "he doesn't thank"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَا تَشْكُرُ",
+          "transliteration": "la tashkuru",
+          "english": "she doesn't thank"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَا نَشْكُرُ",
+          "transliteration": "la nashkuru",
+          "english": "we don't thank"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَا تَشْكُرُونَ",
+          "transliteration": "la tashkuruna",
+          "english": "you (pl) don't thank"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَا يَشْكُرُونَ",
+          "transliteration": "la yashkuruna",
+          "english": "they don't thank"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَأَشْكُرُ",
+          "transliteration": "sa2ashkuru",
+          "english": "I will thank"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَتَشْكُرُ",
+          "transliteration": "satashkuru",
+          "english": "you (m) will thank"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَتَشْكُرِينَ",
+          "transliteration": "satashkurina",
+          "english": "you (f) will thank"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَيَشْكُرُ",
+          "transliteration": "sayashkuru",
+          "english": "he will thank"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَتَشْكُرُ",
+          "transliteration": "satashkuru",
+          "english": "she will thank"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَنَشْكُرُ",
+          "transliteration": "sanashkuru",
+          "english": "we will thank"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَتَشْكُرُونَ",
+          "transliteration": "satashkuruna",
+          "english": "you (pl) will thank"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَيَشْكُرُونَ",
+          "transliteration": "sayashkuruna",
+          "english": "they will thank"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَنْ أَشْكُرَ",
+          "transliteration": "lan ashkura",
+          "english": "I won't thank"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَنْ تَشْكُرَ",
+          "transliteration": "lan tashkura",
+          "english": "you (m) won't thank"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَنْ تَشْكُرِي",
+          "transliteration": "lan tashkuri",
+          "english": "you (f) won't thank"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَنْ يَشْكُرَ",
+          "transliteration": "lan yashkura",
+          "english": "he won't thank"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَنْ تَشْكُرَ",
+          "transliteration": "lan tashkura",
+          "english": "she won't thank"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَنْ نَشْكُرَ",
+          "transliteration": "lan nashkura",
+          "english": "we won't thank"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَنْ تَشْكُرُوا",
+          "transliteration": "lan tashkuru",
+          "english": "you (pl) won't thank"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَنْ يَشْكُرُوا",
+          "transliteration": "lan yashkuru",
+          "english": "they won't thank"
+        }
+      ]
+    }
+  }
+}

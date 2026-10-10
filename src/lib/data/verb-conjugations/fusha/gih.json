@@ -1,0 +1,318 @@
+{
+  "slug": "gih",
+  "arabic": "جَاءَ",
+  "transliteration": "ja2a",
+  "english": "to come",
+  "wordId": null,
+  "rootLetters": "ج ي ء",
+  "verbClass": "hollow, hamzated",
+  "notes": "Hollow verb ending in hamza: ji2tu, I came; yaji2u, he comes. The hamza changes its seat with the ending.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "جِئْتُ",
+          "transliteration": "ji2tu",
+          "english": "I came"
+        },
+        {
+          "person": "enta",
+          "arabic": "جِئْتَ",
+          "transliteration": "ji2ta",
+          "english": "you (m) came"
+        },
+        {
+          "person": "enti",
+          "arabic": "جِئْتِ",
+          "transliteration": "ji2ti",
+          "english": "you (f) came"
+        },
+        {
+          "person": "howa",
+          "arabic": "جَاءَ",
+          "transliteration": "ja2a",
+          "english": "he came"
+        },
+        {
+          "person": "heya",
+          "arabic": "جَاءَتْ",
+          "transliteration": "ja2at",
+          "english": "she came"
+        },
+        {
+          "person": "ehna",
+          "arabic": "جِئْنَا",
+          "transliteration": "ji2na",
+          "english": "we came"
+        },
+        {
+          "person": "entu",
+          "arabic": "جِئْتُمْ",
+          "transliteration": "ji2tum",
+          "english": "you (pl) came"
+        },
+        {
+          "person": "homma",
+          "arabic": "جَاؤُوا",
+          "transliteration": "ja2u",
+          "english": "they came"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مَا جِئْتُ",
+          "transliteration": "ma ji2tu",
+          "english": "I didn't come"
+        },
+        {
+          "person": "enta",
+          "arabic": "مَا جِئْتَ",
+          "transliteration": "ma ji2ta",
+          "english": "you (m) didn't come"
+        },
+        {
+          "person": "enti",
+          "arabic": "مَا جِئْتِ",
+          "transliteration": "ma ji2ti",
+          "english": "you (f) didn't come"
+        },
+        {
+          "person": "howa",
+          "arabic": "مَا جَاءَ",
+          "transliteration": "ma ja2a",
+          "english": "he didn't come"
+        },
+        {
+          "person": "heya",
+          "arabic": "مَا جَاءَتْ",
+          "transliteration": "ma ja2at",
+          "english": "she didn't come"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مَا جِئْنَا",
+          "transliteration": "ma ji2na",
+          "english": "we didn't come"
+        },
+        {
+          "person": "entu",
+          "arabic": "مَا جِئْتُمْ",
+          "transliteration": "ma ji2tum",
+          "english": "you (pl) didn't come"
+        },
+        {
+          "person": "homma",
+          "arabic": "مَا جَاؤُوا",
+          "transliteration": "ma ja2u",
+          "english": "they didn't come"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أَجِيءُ",
+          "transliteration": "aji2u",
+          "english": "I come"
+        },
+        {
+          "person": "enta",
+          "arabic": "تَجِيءُ",
+          "transliteration": "taji2u",
+          "english": "you (m) come"
+        },
+        {
+          "person": "enti",
+          "arabic": "تَجِيئِينَ",
+          "transliteration": "taji2ina",
+          "english": "you (f) come"
+        },
+        {
+          "person": "howa",
+          "arabic": "يَجِيءُ",
+          "transliteration": "yaji2u",
+          "english": "he comes"
+        },
+        {
+          "person": "heya",
+          "arabic": "تَجِيءُ",
+          "transliteration": "taji2u",
+          "english": "she comes"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نَجِيءُ",
+          "transliteration": "naji2u",
+          "english": "we come"
+        },
+        {
+          "person": "entu",
+          "arabic": "تَجِيئُونَ",
+          "transliteration": "taji2una",
+          "english": "you (pl) come"
+        },
+        {
+          "person": "homma",
+          "arabic": "يَجِيئُونَ",
+          "transliteration": "yaji2una",
+          "english": "they come"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَا أَجِيءُ",
+          "transliteration": "la aji2u",
+          "english": "I don't come"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَا تَجِيءُ",
+          "transliteration": "la taji2u",
+          "english": "you (m) don't come"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَا تَجِيئِينَ",
+          "transliteration": "la taji2ina",
+          "english": "you (f) don't come"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَا يَجِيءُ",
+          "transliteration": "la yaji2u",
+          "english": "he doesn't come"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَا تَجِيءُ",
+          "transliteration": "la taji2u",
+          "english": "she doesn't come"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَا نَجِيءُ",
+          "transliteration": "la naji2u",
+          "english": "we don't come"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَا تَجِيئُونَ",
+          "transliteration": "la taji2una",
+          "english": "you (pl) don't come"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَا يَجِيئُونَ",
+          "transliteration": "la yaji2una",
+          "english": "they don't come"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَأَجِيءُ",
+          "transliteration": "sa2aji2u",
+          "english": "I will come"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَتَجِيءُ",
+          "transliteration": "sataji2u",
+          "english": "you (m) will come"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَتَجِيئِينَ",
+          "transliteration": "sataji2ina",
+          "english": "you (f) will come"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَيَجِيءُ",
+          "transliteration": "sayaji2u",
+          "english": "he will come"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَتَجِيءُ",
+          "transliteration": "sataji2u",
+          "english": "she will come"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَنَجِيءُ",
+          "transliteration": "sanaji2u",
+          "english": "we will come"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَتَجِيئُونَ",
+          "transliteration": "sataji2una",
+          "english": "you (pl) will come"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَيَجِيئُونَ",
+          "transliteration": "sayaji2una",
+          "english": "they will come"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَنْ أَجِيءَ",
+          "transliteration": "lan aji2a",
+          "english": "I won't come"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَنْ تَجِيءَ",
+          "transliteration": "lan taji2a",
+          "english": "you (m) won't come"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَنْ تَجِيئِي",
+          "transliteration": "lan taji2i",
+          "english": "you (f) won't come"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَنْ يَجِيءَ",
+          "transliteration": "lan yaji2a",
+          "english": "he won't come"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَنْ تَجِيءَ",
+          "transliteration": "lan taji2a",
+          "english": "she won't come"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَنْ نَجِيءَ",
+          "transliteration": "lan naji2a",
+          "english": "we won't come"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَنْ تَجِيئُوا",
+          "transliteration": "lan taji2u",
+          "english": "you (pl) won't come"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَنْ يَجِيئُوا",
+          "transliteration": "lan yaji2u",
+          "english": "they won't come"
+        }
+      ]
+    }
+  }
+}

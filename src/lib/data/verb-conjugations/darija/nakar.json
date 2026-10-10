@@ -1,0 +1,318 @@
+{
+  "slug": "nakar",
+  "arabic": "نكر",
+  "transliteration": "nker",
+  "english": "to deny",
+  "wordId": null,
+  "rootLetters": "ن ك ر",
+  "verbClass": "sound",
+  "notes": "Regular verb: kannker, I deny.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "نكرت",
+          "transliteration": "nkert",
+          "english": "I denied"
+        },
+        {
+          "person": "enta",
+          "arabic": "نكرتي",
+          "transliteration": "nkerti",
+          "english": "you (m) denied"
+        },
+        {
+          "person": "enti",
+          "arabic": "نكرتي",
+          "transliteration": "nkerti",
+          "english": "you (f) denied"
+        },
+        {
+          "person": "howa",
+          "arabic": "نكر",
+          "transliteration": "nker",
+          "english": "he denied"
+        },
+        {
+          "person": "heya",
+          "arabic": "نكرات",
+          "transliteration": "nekrat",
+          "english": "she denied"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نكرنا",
+          "transliteration": "nkerna",
+          "english": "we denied"
+        },
+        {
+          "person": "entu",
+          "arabic": "نكرتيو",
+          "transliteration": "nkertiw",
+          "english": "you (pl) denied"
+        },
+        {
+          "person": "homma",
+          "arabic": "نكرو",
+          "transliteration": "nekru",
+          "english": "they denied"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما نكرتش",
+          "transliteration": "ma nkertsh",
+          "english": "I didn't deny"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما نكرتيش",
+          "transliteration": "ma nkertish",
+          "english": "you (m) didn't deny"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما نكرتيش",
+          "transliteration": "ma nkertish",
+          "english": "you (f) didn't deny"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما نكرش",
+          "transliteration": "ma nkersh",
+          "english": "he didn't deny"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما نكراتش",
+          "transliteration": "ma nekratsh",
+          "english": "she didn't deny"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما نكرناش",
+          "transliteration": "ma nkernash",
+          "english": "we didn't deny"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما نكرتيوش",
+          "transliteration": "ma nkertiwsh",
+          "english": "you (pl) didn't deny"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما نكروش",
+          "transliteration": "ma nekrush",
+          "english": "they didn't deny"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كننكر",
+          "transliteration": "kannker",
+          "english": "I deny"
+        },
+        {
+          "person": "enta",
+          "arabic": "كتنكر",
+          "transliteration": "katnker",
+          "english": "you (m) deny"
+        },
+        {
+          "person": "enti",
+          "arabic": "كتنكري",
+          "transliteration": "katnekri",
+          "english": "you (f) deny"
+        },
+        {
+          "person": "howa",
+          "arabic": "كينكر",
+          "transliteration": "kaynker",
+          "english": "he denies"
+        },
+        {
+          "person": "heya",
+          "arabic": "كتنكر",
+          "transliteration": "katnker",
+          "english": "she denies"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كننكرو",
+          "transliteration": "kannekru",
+          "english": "we deny"
+        },
+        {
+          "person": "entu",
+          "arabic": "كتنكرو",
+          "transliteration": "katnekru",
+          "english": "you (pl) deny"
+        },
+        {
+          "person": "homma",
+          "arabic": "كينكرو",
+          "transliteration": "kaynekru",
+          "english": "they deny"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كننكرش",
+          "transliteration": "ma kannkersh",
+          "english": "I don't deny"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كتنكرش",
+          "transliteration": "ma katnkersh",
+          "english": "you (m) don't deny"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كتنكريش",
+          "transliteration": "ma katnekrish",
+          "english": "you (f) don't deny"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كينكرش",
+          "transliteration": "ma kaynkersh",
+          "english": "he doesn't deny"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كتنكرش",
+          "transliteration": "ma katnkersh",
+          "english": "she doesn't deny"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كننكروش",
+          "transliteration": "ma kannekrush",
+          "english": "we don't deny"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كتنكروش",
+          "transliteration": "ma katnekrush",
+          "english": "you (pl) don't deny"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كينكروش",
+          "transliteration": "ma kaynekrush",
+          "english": "they don't deny"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "غادي ننكر",
+          "transliteration": "ghadi nnker",
+          "english": "I will deny"
+        },
+        {
+          "person": "enta",
+          "arabic": "غادي تنكر",
+          "transliteration": "ghadi tnker",
+          "english": "you (m) will deny"
+        },
+        {
+          "person": "enti",
+          "arabic": "غادي تنكري",
+          "transliteration": "ghadi tnekri",
+          "english": "you (f) will deny"
+        },
+        {
+          "person": "howa",
+          "arabic": "غادي ينكر",
+          "transliteration": "ghadi ynker",
+          "english": "he will deny"
+        },
+        {
+          "person": "heya",
+          "arabic": "غادي تنكر",
+          "transliteration": "ghadi tnker",
+          "english": "she will deny"
+        },
+        {
+          "person": "ehna",
+          "arabic": "غادي ننكرو",
+          "transliteration": "ghadi nnekru",
+          "english": "we will deny"
+        },
+        {
+          "person": "entu",
+          "arabic": "غادي تنكرو",
+          "transliteration": "ghadi tnekru",
+          "english": "you (pl) will deny"
+        },
+        {
+          "person": "homma",
+          "arabic": "غادي ينكرو",
+          "transliteration": "ghadi ynekru",
+          "english": "they will deny"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما غاديش ننكر",
+          "transliteration": "ma ghadish nnker",
+          "english": "I won't deny"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما غاديش تنكر",
+          "transliteration": "ma ghadish tnker",
+          "english": "you (m) won't deny"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما غاديش تنكري",
+          "transliteration": "ma ghadish tnekri",
+          "english": "you (f) won't deny"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما غاديش ينكر",
+          "transliteration": "ma ghadish ynker",
+          "english": "he won't deny"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما غاديش تنكر",
+          "transliteration": "ma ghadish tnker",
+          "english": "she won't deny"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما غاديش ننكرو",
+          "transliteration": "ma ghadish nnekru",
+          "english": "we won't deny"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما غاديش تنكرو",
+          "transliteration": "ma ghadish tnekru",
+          "english": "you (pl) won't deny"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما غاديش ينكرو",
+          "transliteration": "ma ghadish ynekru",
+          "english": "they won't deny"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,654 @@
+{
+  "dialect": "darija",
+  "generatedAt": "2026-10-10T02:40:55.297Z",
+  "verbs": [
+    {
+      "slug": "wafi",
+      "arabic": "وافق",
+      "transliteration": "wafeq",
+      "english": "to accept",
+      "wordId": null,
+      "rootLetters": "و ف ق",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "rah-ma3a",
+      "arabic": "رافق",
+      "transliteration": "rafeq",
+      "english": "to accompany",
+      "wordId": null,
+      "rootLetters": "ر ف ق",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "abba",
+      "arabic": "ضبط",
+      "transliteration": "dbet",
+      "english": "to adjust",
+      "wordId": null,
+      "rootLetters": "ض ب ط",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "i3taraf",
+      "arabic": "اعترف",
+      "transliteration": "3taref",
+      "english": "to admit",
+      "wordId": null,
+      "rootLetters": "ع ر ف",
+      "verbClass": "form VIII"
+    },
+    {
+      "slug": "assar-3ala",
+      "arabic": "أثر على",
+      "transliteration": "atter 3la",
+      "english": "to affect",
+      "wordId": null,
+      "rootLetters": "أ ث ر",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "samah",
+      "arabic": "سمح",
+      "transliteration": "sme7",
+      "english": "to allow",
+      "wordId": null,
+      "rootLetters": "س م ح",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "i3tazar-3an",
+      "arabic": "اعتذر على",
+      "transliteration": "3tader 3la",
+      "english": "to apologize for",
+      "wordId": null,
+      "rootLetters": "ع ذ ر",
+      "verbClass": "form VIII"
+    },
+    {
+      "slug": "ahar",
+      "arabic": "بان",
+      "transliteration": "ban",
+      "english": "to appear",
+      "wordId": null,
+      "rootLetters": "ب ي ن",
+      "verbClass": "hollow"
+    },
+    {
+      "slug": "qaddar",
+      "arabic": "قدر",
+      "transliteration": "qedder",
+      "english": "to appreciate",
+      "wordId": null,
+      "rootLetters": "ق د ر",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "ri-i-bi",
+      "arabic": "وافق على",
+      "transliteration": "wafeq 3la",
+      "english": "to approve of",
+      "wordId": null,
+      "rootLetters": "و ف ق",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "sa-al",
+      "arabic": "سول",
+      "transliteration": "sewwel",
+      "english": "to ask",
+      "wordId": null,
+      "rootLetters": "س أ ل",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "alab",
+      "arabic": "طلب",
+      "transliteration": "tleb",
+      "english": "to ask for",
+      "wordId": null,
+      "rootLetters": "ط ل ب",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "ha-ar",
+      "arabic": "حضر",
+      "transliteration": "7der",
+      "english": "to attend",
+      "wordId": null,
+      "rootLetters": "ح ض ر",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "kan",
+      "arabic": "كان",
+      "transliteration": "kan",
+      "english": "to be",
+      "wordId": null,
+      "rootLetters": "ك و ن",
+      "verbClass": "hollow"
+    },
+    {
+      "slug": "rahin",
+      "arabic": "راهن",
+      "transliteration": "rahen",
+      "english": "to bet",
+      "wordId": null,
+      "rootLetters": "ر ه ن",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "lam-3ala",
+      "arabic": "لام على",
+      "transliteration": "lam 3la",
+      "english": "to blame",
+      "wordId": null,
+      "rootLetters": "ل و م",
+      "verbClass": "hollow"
+    },
+    {
+      "slug": "kasar",
+      "arabic": "هرس",
+      "transliteration": "herres",
+      "english": "to break",
+      "wordId": null,
+      "rootLetters": "ه ر س",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "xaba",
+      "arabic": "خبط",
+      "transliteration": "khbet",
+      "english": "to bump into",
+      "wordId": null,
+      "rootLetters": "خ ب ط",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "hara",
+      "arabic": "حرق",
+      "transliteration": "7req",
+      "english": "to burn",
+      "wordId": null,
+      "rootLetters": "ح ر ق",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "ihtamm",
+      "arabic": "اهتم بـ",
+      "transliteration": "htemm b",
+      "english": "to care about",
+      "wordId": null,
+      "rootLetters": "ه م م",
+      "verbClass": "doubled"
+    },
+    {
+      "slug": "ghayyar",
+      "arabic": "بدل",
+      "transliteration": "beddel",
+      "english": "to change",
+      "wordId": null,
+      "rootLetters": "ب د ل",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "ixtar",
+      "arabic": "ختار",
+      "transliteration": "khtar",
+      "english": "to choose",
+      "wordId": null,
+      "rootLetters": "خ ي ر",
+      "verbClass": "hollow"
+    },
+    {
+      "slug": "gih",
+      "arabic": "جا",
+      "transliteration": "ja",
+      "english": "to come",
+      "wordId": null,
+      "rootLetters": "ج ي ء",
+      "verbClass": "irregular"
+    },
+    {
+      "slug": "qarin",
+      "arabic": "قارن",
+      "transliteration": "qaren",
+      "english": "to compare",
+      "wordId": null,
+      "rootLetters": "ق ر ن",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "itta-al-bi",
+      "arabic": "تاصل بـ",
+      "transliteration": "ttasel b",
+      "english": "to contact",
+      "wordId": null,
+      "rootLetters": "و ص ل",
+      "verbClass": "form VIII"
+    },
+    {
+      "slug": "kammil",
+      "arabic": "كمل",
+      "transliteration": "kemmel",
+      "english": "to continue",
+      "wordId": null,
+      "rootLetters": "ك م ل",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "nakar",
+      "arabic": "نكر",
+      "transliteration": "nker",
+      "english": "to deny",
+      "wordId": null,
+      "rootLetters": "ن ك ر",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "wa-af",
+      "arabic": "وصف",
+      "transliteration": "wsef",
+      "english": "to describe",
+      "wordId": null,
+      "rootLetters": "و ص ف",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "ammim",
+      "arabic": "صمم",
+      "transliteration": "sammem",
+      "english": "to design",
+      "wordId": null,
+      "rootLetters": "ص م م",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "ixtalaf",
+      "arabic": "ختالف",
+      "transliteration": "khtalef",
+      "english": "to differ",
+      "wordId": null,
+      "rootLetters": "خ ل ف",
+      "verbClass": "form VIII"
+    },
+    {
+      "slug": "ixtafa",
+      "arabic": "غبر",
+      "transliteration": "ghber",
+      "english": "to disappear",
+      "wordId": null,
+      "rootLetters": "غ ب ر",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "wa-a3",
+      "arabic": "طيح",
+      "transliteration": "tiyye7",
+      "english": "to drop",
+      "wordId": null,
+      "rootLetters": "ط ي ح",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "3abbar-3an",
+      "arabic": "عبر على",
+      "transliteration": "3ebber 3la",
+      "english": "to express",
+      "wordId": null,
+      "rootLetters": "ع ب ر",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "wi-i3",
+      "arabic": "طاح",
+      "transliteration": "ta7",
+      "english": "to fall",
+      "wordId": null,
+      "rootLetters": "ط ي ح",
+      "verbClass": "hollow"
+    },
+    {
+      "slug": "la-a-la-a",
+      "arabic": "لقى",
+      "transliteration": "lqa",
+      "english": "to find",
+      "wordId": null,
+      "rootLetters": "ل ق ي",
+      "verbClass": "defective"
+    },
+    {
+      "slug": "allah",
+      "arabic": "صاوب",
+      "transliteration": "sawb",
+      "english": "to fix",
+      "wordId": null,
+      "rootLetters": "ص و ب",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "afa",
+      "arabic": "عام",
+      "transliteration": "3am",
+      "english": "to float",
+      "wordId": null,
+      "rootLetters": "ع و م",
+      "verbClass": "hollow"
+    },
+    {
+      "slug": "mana3",
+      "arabic": "منع",
+      "transliteration": "mne3",
+      "english": "to forbid",
+      "wordId": null,
+      "rootLetters": "م ن ع",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "idda",
+      "arabic": "عطى",
+      "transliteration": "3ta",
+      "english": "to give",
+      "wordId": null,
+      "rootLetters": "ع ط ي",
+      "verbClass": "defective"
+    },
+    {
+      "slug": "rah",
+      "arabic": "مشى",
+      "transliteration": "msha",
+      "english": "to go",
+      "wordId": null,
+      "rootLetters": "م ش ي",
+      "verbClass": "defective"
+    },
+    {
+      "slug": "ha-al",
+      "arabic": "وقع",
+      "transliteration": "wqe3",
+      "english": "to happen",
+      "wordId": null,
+      "rootLetters": "و ق ع",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "kan-3andu",
+      "arabic": "كان عندو",
+      "transliteration": "kan 3endu",
+      "english": "to have",
+      "wordId": null,
+      "rootLetters": "ع ن د",
+      "verbClass": "irregular"
+    },
+    {
+      "slug": "sa3id",
+      "arabic": "عاون",
+      "transliteration": "3awen",
+      "english": "to help",
+      "wordId": null,
+      "rootLetters": "ع و ن",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "arab",
+      "arabic": "ضرب",
+      "transliteration": "dreb",
+      "english": "to hit",
+      "wordId": null,
+      "rootLetters": "ض ر ب",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "nawa",
+      "arabic": "نوى",
+      "transliteration": "nwa",
+      "english": "to intend",
+      "wordId": null,
+      "rootLetters": "ن و ي",
+      "verbClass": "defective"
+    },
+    {
+      "slug": "na",
+      "arabic": "نقز",
+      "transliteration": "nqez",
+      "english": "to jump",
+      "wordId": null,
+      "rootLetters": "ن ق ز",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "sab",
+      "arabic": "خلى",
+      "transliteration": "khella",
+      "english": "to leave",
+      "wordId": null,
+      "rootLetters": "خ ل ي",
+      "verbClass": "defective"
+    },
+    {
+      "slug": "kidib",
+      "arabic": "كذب",
+      "transliteration": "kdeb",
+      "english": "to lie",
+      "wordId": null,
+      "rootLetters": "ك ذ ب",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "3a",
+      "arabic": "عاش",
+      "transliteration": "3ash",
+      "english": "to live",
+      "wordId": null,
+      "rootLetters": "ع ي ش",
+      "verbClass": "hollow"
+    },
+    {
+      "slug": "ba-li",
+      "arabic": "شاف فـ",
+      "transliteration": "shaf f",
+      "english": "to look at",
+      "wordId": null,
+      "rootLetters": "ش و ف",
+      "verbClass": "hollow"
+    },
+    {
+      "slug": "xisir",
+      "arabic": "خسر",
+      "transliteration": "khser",
+      "english": "to lose",
+      "wordId": null,
+      "rootLetters": "خ س ر",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "a-ad",
+      "arabic": "قصد",
+      "transliteration": "qsed",
+      "english": "to mean",
+      "wordId": null,
+      "rootLetters": "ق ص د",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "itharrak",
+      "arabic": "تحرك",
+      "transliteration": "t7errek",
+      "english": "to move",
+      "wordId": null,
+      "rootLetters": "ح ر ك",
+      "verbClass": "form V"
+    },
+    {
+      "slug": "harrak",
+      "arabic": "حرك",
+      "transliteration": "7errek",
+      "english": "to move (something)",
+      "wordId": null,
+      "rootLetters": "ح ر ك",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "fatah",
+      "arabic": "حل",
+      "transliteration": "7ell",
+      "english": "to open",
+      "wordId": null,
+      "rootLetters": "ح ل ل",
+      "verbClass": "doubled"
+    },
+    {
+      "slug": "gahhiz",
+      "arabic": "وجد",
+      "transliteration": "wejjed",
+      "english": "to prepare",
+      "wordId": null,
+      "rootLetters": "و ج د",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "3aqib",
+      "arabic": "عاقب",
+      "transliteration": "3aqeb",
+      "english": "to punish",
+      "wordId": null,
+      "rootLetters": "ع ق ب",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "rafa",
+      "arabic": "رفض",
+      "transliteration": "rfed",
+      "english": "to refuse",
+      "wordId": null,
+      "rootLetters": "ر ف ض",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "ihtaram",
+      "arabic": "احترم",
+      "transliteration": "7tarem",
+      "english": "to respect",
+      "wordId": null,
+      "rootLetters": "ح ر م",
+      "verbClass": "form VIII"
+    },
+    {
+      "slug": "gara",
+      "arabic": "جرى",
+      "transliteration": "jra",
+      "english": "to run",
+      "wordId": null,
+      "rootLetters": "ج ر ي",
+      "verbClass": "defective"
+    },
+    {
+      "slug": "warra",
+      "arabic": "ورى",
+      "transliteration": "werra",
+      "english": "to show",
+      "wordId": null,
+      "rootLetters": "و ر ي",
+      "verbClass": "defective"
+    },
+    {
+      "slug": "ghiri",
+      "arabic": "غرق",
+      "transliteration": "ghreq",
+      "english": "to sink",
+      "wordId": null,
+      "rootLetters": "غ ر ق",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "a3ad",
+      "arabic": "بقى",
+      "transliteration": "bqa",
+      "english": "to stay",
+      "wordId": null,
+      "rootLetters": "ب ق ي",
+      "verbClass": "defective"
+    },
+    {
+      "slug": "nigih",
+      "arabic": "نجح",
+      "transliteration": "nje7",
+      "english": "to succeed",
+      "wordId": null,
+      "rootLetters": "ن ج ح",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "a-xad",
+      "arabic": "خدا",
+      "transliteration": "khda",
+      "english": "to take",
+      "wordId": null,
+      "rootLetters": "أ خ ذ",
+      "verbClass": "irregular"
+    },
+    {
+      "slug": "mazza",
+      "arabic": "قطع",
+      "transliteration": "qette3",
+      "english": "to tear",
+      "wordId": null,
+      "rootLetters": "ق ط ع",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "akar",
+      "arabic": "شكر",
+      "transliteration": "shker",
+      "english": "to thank",
+      "wordId": null,
+      "rootLetters": "ش ك ر",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "raba",
+      "arabic": "ربط",
+      "transliteration": "rbet",
+      "english": "to tie",
+      "wordId": null,
+      "rootLetters": "ر ب ط",
+      "verbClass": "sound"
+    },
+    {
+      "slug": "lamas",
+      "arabic": "قاس",
+      "transliteration": "qas",
+      "english": "to touch",
+      "wordId": null,
+      "rootLetters": "ق ي س",
+      "verbClass": "hollow"
+    },
+    {
+      "slug": "ista3mil",
+      "arabic": "ستعمل",
+      "transliteration": "sta3mel",
+      "english": "to use",
+      "wordId": null,
+      "rootLetters": "ع م ل",
+      "verbClass": "form X"
+    },
+    {
+      "slug": "istanna",
+      "arabic": "تسنى",
+      "transliteration": "tsenna",
+      "english": "to wait",
+      "wordId": null,
+      "rootLetters": "أ ن ي",
+      "verbClass": "defective"
+    },
+    {
+      "slug": "mi-i-ma3a",
+      "arabic": "مشى مع",
+      "transliteration": "msha m3a",
+      "english": "to walk with",
+      "wordId": null,
+      "rootLetters": "م ش ي",
+      "verbClass": "defective"
+    }
+  ]
+}

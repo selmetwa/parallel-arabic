@@ -1,0 +1,318 @@
+{
+  "slug": "xaba",
+  "arabic": "خبط",
+  "transliteration": "khbet",
+  "english": "to bump into",
+  "wordId": null,
+  "rootLetters": "خ ب ط",
+  "verbClass": "sound",
+  "notes": "Regular verb for knocking or bumping into something.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "خبطت",
+          "transliteration": "khbett",
+          "english": "I bumped into"
+        },
+        {
+          "person": "enta",
+          "arabic": "خبطتي",
+          "transliteration": "khbetti",
+          "english": "you (m) bumped into"
+        },
+        {
+          "person": "enti",
+          "arabic": "خبطتي",
+          "transliteration": "khbetti",
+          "english": "you (f) bumped into"
+        },
+        {
+          "person": "howa",
+          "arabic": "خبط",
+          "transliteration": "khbet",
+          "english": "he bumped into"
+        },
+        {
+          "person": "heya",
+          "arabic": "خبطات",
+          "transliteration": "khebtat",
+          "english": "she bumped into"
+        },
+        {
+          "person": "ehna",
+          "arabic": "خبطنا",
+          "transliteration": "khbetna",
+          "english": "we bumped into"
+        },
+        {
+          "person": "entu",
+          "arabic": "خبطتيو",
+          "transliteration": "khbettiw",
+          "english": "you (pl) bumped into"
+        },
+        {
+          "person": "homma",
+          "arabic": "خبطو",
+          "transliteration": "khebtu",
+          "english": "they bumped into"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما خبطتش",
+          "transliteration": "ma khbettsh",
+          "english": "I didn't bump into"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما خبطتيش",
+          "transliteration": "ma khbettish",
+          "english": "you (m) didn't bump into"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما خبطتيش",
+          "transliteration": "ma khbettish",
+          "english": "you (f) didn't bump into"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما خبطش",
+          "transliteration": "ma khbetsh",
+          "english": "he didn't bump into"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما خبطاتش",
+          "transliteration": "ma khebtatsh",
+          "english": "she didn't bump into"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما خبطناش",
+          "transliteration": "ma khbetnash",
+          "english": "we didn't bump into"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما خبطتيوش",
+          "transliteration": "ma khbettiwsh",
+          "english": "you (pl) didn't bump into"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما خبطوش",
+          "transliteration": "ma khebtush",
+          "english": "they didn't bump into"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كنخبط",
+          "transliteration": "kankhbet",
+          "english": "I bump into"
+        },
+        {
+          "person": "enta",
+          "arabic": "كتخبط",
+          "transliteration": "katkhbet",
+          "english": "you (m) bump into"
+        },
+        {
+          "person": "enti",
+          "arabic": "كتخبطي",
+          "transliteration": "katkhebti",
+          "english": "you (f) bump into"
+        },
+        {
+          "person": "howa",
+          "arabic": "كيخبط",
+          "transliteration": "kaykhbet",
+          "english": "he bumps into"
+        },
+        {
+          "person": "heya",
+          "arabic": "كتخبط",
+          "transliteration": "katkhbet",
+          "english": "she bumps into"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كنخبطو",
+          "transliteration": "kankhebtu",
+          "english": "we bump into"
+        },
+        {
+          "person": "entu",
+          "arabic": "كتخبطو",
+          "transliteration": "katkhebtu",
+          "english": "you (pl) bump into"
+        },
+        {
+          "person": "homma",
+          "arabic": "كيخبطو",
+          "transliteration": "kaykhebtu",
+          "english": "they bump into"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كنخبطش",
+          "transliteration": "ma kankhbetsh",
+          "english": "I don't bump into"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كتخبطش",
+          "transliteration": "ma katkhbetsh",
+          "english": "you (m) don't bump into"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كتخبطيش",
+          "transliteration": "ma katkhebtish",
+          "english": "you (f) don't bump into"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كيخبطش",
+          "transliteration": "ma kaykhbetsh",
+          "english": "he doesn't bump into"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كتخبطش",
+          "transliteration": "ma katkhbetsh",
+          "english": "she doesn't bump into"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كنخبطوش",
+          "transliteration": "ma kankhebtush",
+          "english": "we don't bump into"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كتخبطوش",
+          "transliteration": "ma katkhebtush",
+          "english": "you (pl) don't bump into"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كيخبطوش",
+          "transliteration": "ma kaykhebtush",
+          "english": "they don't bump into"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "غادي نخبط",
+          "transliteration": "ghadi nkhbet",
+          "english": "I will bump into"
+        },
+        {
+          "person": "enta",
+          "arabic": "غادي تخبط",
+          "transliteration": "ghadi tkhbet",
+          "english": "you (m) will bump into"
+        },
+        {
+          "person": "enti",
+          "arabic": "غادي تخبطي",
+          "transliteration": "ghadi tkhebti",
+          "english": "you (f) will bump into"
+        },
+        {
+          "person": "howa",
+          "arabic": "غادي يخبط",
+          "transliteration": "ghadi ykhbet",
+          "english": "he will bump into"
+        },
+        {
+          "person": "heya",
+          "arabic": "غادي تخبط",
+          "transliteration": "ghadi tkhbet",
+          "english": "she will bump into"
+        },
+        {
+          "person": "ehna",
+          "arabic": "غادي نخبطو",
+          "transliteration": "ghadi nkhebtu",
+          "english": "we will bump into"
+        },
+        {
+          "person": "entu",
+          "arabic": "غادي تخبطو",
+          "transliteration": "ghadi tkhebtu",
+          "english": "you (pl) will bump into"
+        },
+        {
+          "person": "homma",
+          "arabic": "غادي يخبطو",
+          "transliteration": "ghadi ykhebtu",
+          "english": "they will bump into"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما غاديش نخبط",
+          "transliteration": "ma ghadish nkhbet",
+          "english": "I won't bump into"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما غاديش تخبط",
+          "transliteration": "ma ghadish tkhbet",
+          "english": "you (m) won't bump into"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما غاديش تخبطي",
+          "transliteration": "ma ghadish tkhebti",
+          "english": "you (f) won't bump into"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما غاديش يخبط",
+          "transliteration": "ma ghadish ykhbet",
+          "english": "he won't bump into"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما غاديش تخبط",
+          "transliteration": "ma ghadish tkhbet",
+          "english": "she won't bump into"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما غاديش نخبطو",
+          "transliteration": "ma ghadish nkhebtu",
+          "english": "we won't bump into"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما غاديش تخبطو",
+          "transliteration": "ma ghadish tkhebtu",
+          "english": "you (pl) won't bump into"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما غاديش يخبطو",
+          "transliteration": "ma ghadish ykhebtu",
+          "english": "they won't bump into"
+        }
+      ]
+    }
+  }
+}

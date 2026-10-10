@@ -798,3 +798,21 @@ export function createSpotTheMistakeSchema() {
 
 	return { zodSchema: schema, jsonSchema: zodToJsonSchema(schema) };
 }
+
+/** Fill the Gap: flat items, no array bounds (tight bounds make the schema too complex). */
+export function createFillTheGapSchema() {
+	const schema = z.object({
+		items: z.array(
+			z.object({
+				sentence: z.string(),
+				answer: z.string(),
+				distractors: z.array(z.string()),
+				english: z.string(),
+				transliteration: z.string(),
+				explanation: z.string()
+			})
+		)
+	});
+
+	return { zodSchema: schema, jsonSchema: zodToJsonSchema(schema) };
+}

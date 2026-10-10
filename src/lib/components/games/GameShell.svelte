@@ -10,6 +10,7 @@
 
 <script lang="ts">
 	import { resolve } from '$app/paths';
+	import type { Pathname } from '$app/types';
 	import type { Snippet } from 'svelte';
 	import AuthModal from '$lib/components/AuthModal.svelte';
 	import PaywallModal from '$lib/components/PaywallModal.svelte';
@@ -21,6 +22,8 @@
 		game: GameInfo;
 		dialect: GameDialect;
 		onDialectChange: (dialect: GameDialect) => void;
+		/** False for games that cover every dialect at once (Dialect Match, Daily Root). */
+		showDialect?: boolean;
 		/** Theme, board size, level — rendered as chip rows under the dialect. */
 		pickers?: Picker[];
 		/** Short status shown beside the heading, e.g. "2 of 3 free rounds left today". */
@@ -37,6 +40,7 @@
 		game,
 		dialect,
 		onDialectChange,
+		showDialect = true,
 		pickers = [],
 		status,
 		modal,
@@ -103,15 +107,22 @@
 			<h1>{game.heading}</h1>
 		</div>
 		<p class="intro">{game.intro}</p>
+		{#if game.feature}
+			<a href={resolve(`/features/${game.feature}` as Pathname)} class="feature-link">
+				How {game.name} helps you learn <span aria-hidden="true">→</span>
+			</a>
+		{/if}
 		{#if status}
 			<p class="status">{status}</p>
 		{/if}
 	</header>
 
 	<div class="controls">
-		{@render chipRow('dialect', 'Dialect', dialect, DIALECT_OPTIONS, (value) =>
-			onDialectChange(value as GameDialect)
-		)}
+		{#if showDialect}
+			{@render chipRow('dialect', 'Dialect', dialect, DIALECT_OPTIONS, (value) =>
+				onDialectChange(value as GameDialect)
+			)}
+		{/if}
 		{#each pickers as picker (picker.id)}
 			{@render chipRow(picker.id, picker.label, picker.value, picker.options, picker.onChange)}
 		{/each}
@@ -228,6 +239,20 @@
 		line-height: 1.55;
 		color: var(--text2);
 		max-width: 62ch;
+	}
+
+	.feature-link {
+		display: block;
+		width: fit-content;
+		margin-top: 0.6rem;
+		font-size: 0.85rem;
+		font-weight: 600;
+		color: var(--text2);
+		text-decoration: underline;
+		text-underline-offset: 3px;
+	}
+	.feature-link:hover {
+		color: var(--brand);
 	}
 
 	.status {

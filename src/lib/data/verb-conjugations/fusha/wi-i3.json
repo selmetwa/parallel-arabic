@@ -1,0 +1,318 @@
+{
+  "slug": "wi-i3",
+  "arabic": "سَقَطَ",
+  "transliteration": "saqata",
+  "english": "to fall",
+  "wordId": null,
+  "rootLetters": "س ق ط",
+  "verbClass": "sound",
+  "notes": "Form I verb: saqata, yasqutu.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَقَطْتُ",
+          "transliteration": "saqattu",
+          "english": "I fell"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَقَطْتَ",
+          "transliteration": "saqatta",
+          "english": "you (m) fell"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَقَطْتِ",
+          "transliteration": "saqatti",
+          "english": "you (f) fell"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَقَطَ",
+          "transliteration": "saqata",
+          "english": "he fell"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَقَطَتْ",
+          "transliteration": "saqatat",
+          "english": "she fell"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَقَطْنَا",
+          "transliteration": "saqatna",
+          "english": "we fell"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَقَطْتُمْ",
+          "transliteration": "saqattum",
+          "english": "you (pl) fell"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَقَطُوا",
+          "transliteration": "saqatu",
+          "english": "they fell"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مَا سَقَطْتُ",
+          "transliteration": "ma saqattu",
+          "english": "I didn't fall"
+        },
+        {
+          "person": "enta",
+          "arabic": "مَا سَقَطْتَ",
+          "transliteration": "ma saqatta",
+          "english": "you (m) didn't fall"
+        },
+        {
+          "person": "enti",
+          "arabic": "مَا سَقَطْتِ",
+          "transliteration": "ma saqatti",
+          "english": "you (f) didn't fall"
+        },
+        {
+          "person": "howa",
+          "arabic": "مَا سَقَطَ",
+          "transliteration": "ma saqata",
+          "english": "he didn't fall"
+        },
+        {
+          "person": "heya",
+          "arabic": "مَا سَقَطَتْ",
+          "transliteration": "ma saqatat",
+          "english": "she didn't fall"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مَا سَقَطْنَا",
+          "transliteration": "ma saqatna",
+          "english": "we didn't fall"
+        },
+        {
+          "person": "entu",
+          "arabic": "مَا سَقَطْتُمْ",
+          "transliteration": "ma saqattum",
+          "english": "you (pl) didn't fall"
+        },
+        {
+          "person": "homma",
+          "arabic": "مَا سَقَطُوا",
+          "transliteration": "ma saqatu",
+          "english": "they didn't fall"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أَسْقُطُ",
+          "transliteration": "asqutu",
+          "english": "I fall"
+        },
+        {
+          "person": "enta",
+          "arabic": "تَسْقُطُ",
+          "transliteration": "tasqutu",
+          "english": "you (m) fall"
+        },
+        {
+          "person": "enti",
+          "arabic": "تَسْقُطِينَ",
+          "transliteration": "tasqutina",
+          "english": "you (f) fall"
+        },
+        {
+          "person": "howa",
+          "arabic": "يَسْقُطُ",
+          "transliteration": "yasqutu",
+          "english": "he falls"
+        },
+        {
+          "person": "heya",
+          "arabic": "تَسْقُطُ",
+          "transliteration": "tasqutu",
+          "english": "she falls"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نَسْقُطُ",
+          "transliteration": "nasqutu",
+          "english": "we fall"
+        },
+        {
+          "person": "entu",
+          "arabic": "تَسْقُطُونَ",
+          "transliteration": "tasqutuna",
+          "english": "you (pl) fall"
+        },
+        {
+          "person": "homma",
+          "arabic": "يَسْقُطُونَ",
+          "transliteration": "yasqutuna",
+          "english": "they fall"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَا أَسْقُطُ",
+          "transliteration": "la asqutu",
+          "english": "I don't fall"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَا تَسْقُطُ",
+          "transliteration": "la tasqutu",
+          "english": "you (m) don't fall"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَا تَسْقُطِينَ",
+          "transliteration": "la tasqutina",
+          "english": "you (f) don't fall"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَا يَسْقُطُ",
+          "transliteration": "la yasqutu",
+          "english": "he doesn't fall"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَا تَسْقُطُ",
+          "transliteration": "la tasqutu",
+          "english": "she doesn't fall"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَا نَسْقُطُ",
+          "transliteration": "la nasqutu",
+          "english": "we don't fall"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَا تَسْقُطُونَ",
+          "transliteration": "la tasqutuna",
+          "english": "you (pl) don't fall"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَا يَسْقُطُونَ",
+          "transliteration": "la yasqutuna",
+          "english": "they don't fall"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَأَسْقُطُ",
+          "transliteration": "sa2asqutu",
+          "english": "I will fall"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَتَسْقُطُ",
+          "transliteration": "satasqutu",
+          "english": "you (m) will fall"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَتَسْقُطِينَ",
+          "transliteration": "satasqutina",
+          "english": "you (f) will fall"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَيَسْقُطُ",
+          "transliteration": "sayasqutu",
+          "english": "he will fall"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَتَسْقُطُ",
+          "transliteration": "satasqutu",
+          "english": "she will fall"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَنَسْقُطُ",
+          "transliteration": "sanasqutu",
+          "english": "we will fall"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَتَسْقُطُونَ",
+          "transliteration": "satasqutuna",
+          "english": "you (pl) will fall"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَيَسْقُطُونَ",
+          "transliteration": "sayasqutuna",
+          "english": "they will fall"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَنْ أَسْقُطَ",
+          "transliteration": "lan asquta",
+          "english": "I won't fall"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَنْ تَسْقُطَ",
+          "transliteration": "lan tasquta",
+          "english": "you (m) won't fall"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَنْ تَسْقُطِي",
+          "transliteration": "lan tasquti",
+          "english": "you (f) won't fall"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَنْ يَسْقُطَ",
+          "transliteration": "lan yasquta",
+          "english": "he won't fall"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَنْ تَسْقُطَ",
+          "transliteration": "lan tasquta",
+          "english": "she won't fall"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَنْ نَسْقُطَ",
+          "transliteration": "lan nasquta",
+          "english": "we won't fall"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَنْ تَسْقُطُوا",
+          "transliteration": "lan tasqutu",
+          "english": "you (pl) won't fall"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَنْ يَسْقُطُوا",
+          "transliteration": "lan yasqutu",
+          "english": "they won't fall"
+        }
+      ]
+    }
+  }
+}

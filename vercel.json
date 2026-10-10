@@ -5,12 +5,24 @@
       "schedule": "0 0 * * *"
     },
     {
-      "path": "/api/cron/send-streak-reminders",
-      "schedule": "0 18 * * *"
-    },
-    {
       "path": "/api/cron/onboarding-nudge",
       "schedule": "0 19 * * *"
+    },
+    {
+      "path": "/api/cron/send-streak-reminders?run=0",
+      "schedule": "0 0 * * *"
+    },
+    {
+      "path": "/api/cron/send-streak-reminders?run=6",
+      "schedule": "0 6 * * *"
+    },
+    {
+      "path": "/api/cron/send-streak-reminders?run=12",
+      "schedule": "0 12 * * *"
+    },
+    {
+      "path": "/api/cron/send-streak-reminders?run=18",
+      "schedule": "0 18 * * *"
     }
   ]
 }

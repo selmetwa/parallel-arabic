@@ -1,0 +1,318 @@
+{
+  "slug": "arab",
+  "arabic": "ضرب",
+  "transliteration": "dreb",
+  "english": "to hit",
+  "wordId": null,
+  "rootLetters": "ض ر ب",
+  "verbClass": "sound",
+  "notes": "Regular verb: kandreb, I hit.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "ضربت",
+          "transliteration": "drebt",
+          "english": "I hit"
+        },
+        {
+          "person": "enta",
+          "arabic": "ضربتي",
+          "transliteration": "drebti",
+          "english": "you (m) hit"
+        },
+        {
+          "person": "enti",
+          "arabic": "ضربتي",
+          "transliteration": "drebti",
+          "english": "you (f) hit"
+        },
+        {
+          "person": "howa",
+          "arabic": "ضرب",
+          "transliteration": "dreb",
+          "english": "he hit"
+        },
+        {
+          "person": "heya",
+          "arabic": "ضربات",
+          "transliteration": "derbat",
+          "english": "she hit"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ضربنا",
+          "transliteration": "drebna",
+          "english": "we hit"
+        },
+        {
+          "person": "entu",
+          "arabic": "ضربتيو",
+          "transliteration": "drebtiw",
+          "english": "you (pl) hit"
+        },
+        {
+          "person": "homma",
+          "arabic": "ضربو",
+          "transliteration": "derbu",
+          "english": "they hit"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما ضربتش",
+          "transliteration": "ma drebtsh",
+          "english": "I didn't hit"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما ضربتيش",
+          "transliteration": "ma drebtish",
+          "english": "you (m) didn't hit"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما ضربتيش",
+          "transliteration": "ma drebtish",
+          "english": "you (f) didn't hit"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما ضربش",
+          "transliteration": "ma drebsh",
+          "english": "he didn't hit"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما ضرباتش",
+          "transliteration": "ma derbatsh",
+          "english": "she didn't hit"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما ضربناش",
+          "transliteration": "ma drebnash",
+          "english": "we didn't hit"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما ضربتيوش",
+          "transliteration": "ma drebtiwsh",
+          "english": "you (pl) didn't hit"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما ضربوش",
+          "transliteration": "ma derbush",
+          "english": "they didn't hit"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كنضرب",
+          "transliteration": "kandreb",
+          "english": "I hit"
+        },
+        {
+          "person": "enta",
+          "arabic": "كتضرب",
+          "transliteration": "katdreb",
+          "english": "you (m) hit"
+        },
+        {
+          "person": "enti",
+          "arabic": "كتضربي",
+          "transliteration": "katderbi",
+          "english": "you (f) hit"
+        },
+        {
+          "person": "howa",
+          "arabic": "كيضرب",
+          "transliteration": "kaydreb",
+          "english": "he hits"
+        },
+        {
+          "person": "heya",
+          "arabic": "كتضرب",
+          "transliteration": "katdreb",
+          "english": "she hits"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كنضربو",
+          "transliteration": "kanderbu",
+          "english": "we hit"
+        },
+        {
+          "person": "entu",
+          "arabic": "كتضربو",
+          "transliteration": "katderbu",
+          "english": "you (pl) hit"
+        },
+        {
+          "person": "homma",
+          "arabic": "كيضربو",
+          "transliteration": "kayderbu",
+          "english": "they hit"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كنضربش",
+          "transliteration": "ma kandrebsh",
+          "english": "I don't hit"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كتضربش",
+          "transliteration": "ma katdrebsh",
+          "english": "you (m) don't hit"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كتضربيش",
+          "transliteration": "ma katderbish",
+          "english": "you (f) don't hit"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كيضربش",
+          "transliteration": "ma kaydrebsh",
+          "english": "he doesn't hit"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كتضربش",
+          "transliteration": "ma katdrebsh",
+          "english": "she doesn't hit"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كنضربوش",
+          "transliteration": "ma kanderbush",
+          "english": "we don't hit"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كتضربوش",
+          "transliteration": "ma katderbush",
+          "english": "you (pl) don't hit"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كيضربوش",
+          "transliteration": "ma kayderbush",
+          "english": "they don't hit"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "غادي نضرب",
+          "transliteration": "ghadi ndreb",
+          "english": "I will hit"
+        },
+        {
+          "person": "enta",
+          "arabic": "غادي تضرب",
+          "transliteration": "ghadi tdreb",
+          "english": "you (m) will hit"
+        },
+        {
+          "person": "enti",
+          "arabic": "غادي تضربي",
+          "transliteration": "ghadi tderbi",
+          "english": "you (f) will hit"
+        },
+        {
+          "person": "howa",
+          "arabic": "غادي يضرب",
+          "transliteration": "ghadi ydreb",
+          "english": "he will hit"
+        },
+        {
+          "person": "heya",
+          "arabic": "غادي تضرب",
+          "transliteration": "ghadi tdreb",
+          "english": "she will hit"
+        },
+        {
+          "person": "ehna",
+          "arabic": "غادي نضربو",
+          "transliteration": "ghadi nderbu",
+          "english": "we will hit"
+        },
+        {
+          "person": "entu",
+          "arabic": "غادي تضربو",
+          "transliteration": "ghadi tderbu",
+          "english": "you (pl) will hit"
+        },
+        {
+          "person": "homma",
+          "arabic": "غادي يضربو",
+          "transliteration": "ghadi yderbu",
+          "english": "they will hit"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما غاديش نضرب",
+          "transliteration": "ma ghadish ndreb",
+          "english": "I won't hit"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما غاديش تضرب",
+          "transliteration": "ma ghadish tdreb",
+          "english": "you (m) won't hit"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما غاديش تضربي",
+          "transliteration": "ma ghadish tderbi",
+          "english": "you (f) won't hit"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما غاديش يضرب",
+          "transliteration": "ma ghadish ydreb",
+          "english": "he won't hit"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما غاديش تضرب",
+          "transliteration": "ma ghadish tdreb",
+          "english": "she won't hit"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما غاديش نضربو",
+          "transliteration": "ma ghadish nderbu",
+          "english": "we won't hit"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما غاديش تضربو",
+          "transliteration": "ma ghadish tderbu",
+          "english": "you (pl) won't hit"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما غاديش يضربو",
+          "transliteration": "ma ghadish yderbu",
+          "english": "they won't hit"
+        }
+      ]
+    }
+  }
+}

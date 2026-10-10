@@ -1,0 +1,318 @@
+{
+  "slug": "rah",
+  "arabic": "ذَهَبَ",
+  "transliteration": "dhahaba",
+  "english": "to go",
+  "wordId": null,
+  "rootLetters": "ذ ه ب",
+  "verbClass": "sound",
+  "notes": "Form I verb: dhahaba, yadhhabu.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "ذَهَبْتُ",
+          "transliteration": "dhahabtu",
+          "english": "I went"
+        },
+        {
+          "person": "enta",
+          "arabic": "ذَهَبْتَ",
+          "transliteration": "dhahabta",
+          "english": "you (m) went"
+        },
+        {
+          "person": "enti",
+          "arabic": "ذَهَبْتِ",
+          "transliteration": "dhahabti",
+          "english": "you (f) went"
+        },
+        {
+          "person": "howa",
+          "arabic": "ذَهَبَ",
+          "transliteration": "dhahaba",
+          "english": "he went"
+        },
+        {
+          "person": "heya",
+          "arabic": "ذَهَبَتْ",
+          "transliteration": "dhahabat",
+          "english": "she went"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ذَهَبْنَا",
+          "transliteration": "dhahabna",
+          "english": "we went"
+        },
+        {
+          "person": "entu",
+          "arabic": "ذَهَبْتُمْ",
+          "transliteration": "dhahabtum",
+          "english": "you (pl) went"
+        },
+        {
+          "person": "homma",
+          "arabic": "ذَهَبُوا",
+          "transliteration": "dhahabu",
+          "english": "they went"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مَا ذَهَبْتُ",
+          "transliteration": "ma dhahabtu",
+          "english": "I didn't go"
+        },
+        {
+          "person": "enta",
+          "arabic": "مَا ذَهَبْتَ",
+          "transliteration": "ma dhahabta",
+          "english": "you (m) didn't go"
+        },
+        {
+          "person": "enti",
+          "arabic": "مَا ذَهَبْتِ",
+          "transliteration": "ma dhahabti",
+          "english": "you (f) didn't go"
+        },
+        {
+          "person": "howa",
+          "arabic": "مَا ذَهَبَ",
+          "transliteration": "ma dhahaba",
+          "english": "he didn't go"
+        },
+        {
+          "person": "heya",
+          "arabic": "مَا ذَهَبَتْ",
+          "transliteration": "ma dhahabat",
+          "english": "she didn't go"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مَا ذَهَبْنَا",
+          "transliteration": "ma dhahabna",
+          "english": "we didn't go"
+        },
+        {
+          "person": "entu",
+          "arabic": "مَا ذَهَبْتُمْ",
+          "transliteration": "ma dhahabtum",
+          "english": "you (pl) didn't go"
+        },
+        {
+          "person": "homma",
+          "arabic": "مَا ذَهَبُوا",
+          "transliteration": "ma dhahabu",
+          "english": "they didn't go"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أَذْهَبُ",
+          "transliteration": "adhhabu",
+          "english": "I go"
+        },
+        {
+          "person": "enta",
+          "arabic": "تَذْهَبُ",
+          "transliteration": "tadhhabu",
+          "english": "you (m) go"
+        },
+        {
+          "person": "enti",
+          "arabic": "تَذْهَبِينَ",
+          "transliteration": "tadhhabina",
+          "english": "you (f) go"
+        },
+        {
+          "person": "howa",
+          "arabic": "يَذْهَبُ",
+          "transliteration": "yadhhabu",
+          "english": "he goes"
+        },
+        {
+          "person": "heya",
+          "arabic": "تَذْهَبُ",
+          "transliteration": "tadhhabu",
+          "english": "she goes"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نَذْهَبُ",
+          "transliteration": "nadhhabu",
+          "english": "we go"
+        },
+        {
+          "person": "entu",
+          "arabic": "تَذْهَبُونَ",
+          "transliteration": "tadhhabuna",
+          "english": "you (pl) go"
+        },
+        {
+          "person": "homma",
+          "arabic": "يَذْهَبُونَ",
+          "transliteration": "yadhhabuna",
+          "english": "they go"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَا أَذْهَبُ",
+          "transliteration": "la adhhabu",
+          "english": "I don't go"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَا تَذْهَبُ",
+          "transliteration": "la tadhhabu",
+          "english": "you (m) don't go"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَا تَذْهَبِينَ",
+          "transliteration": "la tadhhabina",
+          "english": "you (f) don't go"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَا يَذْهَبُ",
+          "transliteration": "la yadhhabu",
+          "english": "he doesn't go"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَا تَذْهَبُ",
+          "transliteration": "la tadhhabu",
+          "english": "she doesn't go"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَا نَذْهَبُ",
+          "transliteration": "la nadhhabu",
+          "english": "we don't go"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَا تَذْهَبُونَ",
+          "transliteration": "la tadhhabuna",
+          "english": "you (pl) don't go"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَا يَذْهَبُونَ",
+          "transliteration": "la yadhhabuna",
+          "english": "they don't go"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَأَذْهَبُ",
+          "transliteration": "sa2adhhabu",
+          "english": "I will go"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَتَذْهَبُ",
+          "transliteration": "satadhhabu",
+          "english": "you (m) will go"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَتَذْهَبِينَ",
+          "transliteration": "satadhhabina",
+          "english": "you (f) will go"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَيَذْهَبُ",
+          "transliteration": "sayadhhabu",
+          "english": "he will go"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَتَذْهَبُ",
+          "transliteration": "satadhhabu",
+          "english": "she will go"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَنَذْهَبُ",
+          "transliteration": "sanadhhabu",
+          "english": "we will go"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَتَذْهَبُونَ",
+          "transliteration": "satadhhabuna",
+          "english": "you (pl) will go"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَيَذْهَبُونَ",
+          "transliteration": "sayadhhabuna",
+          "english": "they will go"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَنْ أَذْهَبَ",
+          "transliteration": "lan adhhaba",
+          "english": "I won't go"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَنْ تَذْهَبَ",
+          "transliteration": "lan tadhhaba",
+          "english": "you (m) won't go"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَنْ تَذْهَبِي",
+          "transliteration": "lan tadhhabi",
+          "english": "you (f) won't go"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَنْ يَذْهَبَ",
+          "transliteration": "lan yadhhaba",
+          "english": "he won't go"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَنْ تَذْهَبَ",
+          "transliteration": "lan tadhhaba",
+          "english": "she won't go"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَنْ نَذْهَبَ",
+          "transliteration": "lan nadhhaba",
+          "english": "we won't go"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَنْ تَذْهَبُوا",
+          "transliteration": "lan tadhhabu",
+          "english": "you (pl) won't go"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَنْ يَذْهَبُوا",
+          "transliteration": "lan yadhhabu",
+          "english": "they won't go"
+        }
+      ]
+    }
+  }
+}

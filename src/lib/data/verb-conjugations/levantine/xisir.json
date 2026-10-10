@@ -1,0 +1,318 @@
+{
+  "slug": "xisir",
+  "arabic": "خسر",
+  "transliteration": "khisir",
+  "english": "to lose",
+  "wordId": null,
+  "rootLetters": "خ س ر",
+  "verbClass": "sound",
+  "notes": "Regular verb with i in the past: khsirt, I lost.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "خسرت",
+          "transliteration": "khsirt",
+          "english": "I lost"
+        },
+        {
+          "person": "enta",
+          "arabic": "خسرت",
+          "transliteration": "khsirt",
+          "english": "you (m) lost"
+        },
+        {
+          "person": "enti",
+          "arabic": "خسرتي",
+          "transliteration": "khsirti",
+          "english": "you (f) lost"
+        },
+        {
+          "person": "howa",
+          "arabic": "خسر",
+          "transliteration": "khisir",
+          "english": "he lost"
+        },
+        {
+          "person": "heya",
+          "arabic": "خسرت",
+          "transliteration": "khisrit",
+          "english": "she lost"
+        },
+        {
+          "person": "ehna",
+          "arabic": "خسرنا",
+          "transliteration": "khsirna",
+          "english": "we lost"
+        },
+        {
+          "person": "entu",
+          "arabic": "خسرتوا",
+          "transliteration": "khsirtu",
+          "english": "you (pl) lost"
+        },
+        {
+          "person": "homma",
+          "arabic": "خسروا",
+          "transliteration": "khisru",
+          "english": "they lost"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما خسرت",
+          "transliteration": "ma khsirt",
+          "english": "I didn't lose"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما خسرت",
+          "transliteration": "ma khsirt",
+          "english": "you (m) didn't lose"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما خسرتي",
+          "transliteration": "ma khsirti",
+          "english": "you (f) didn't lose"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما خسر",
+          "transliteration": "ma khisir",
+          "english": "he didn't lose"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما خسرت",
+          "transliteration": "ma khisrit",
+          "english": "she didn't lose"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما خسرنا",
+          "transliteration": "ma khsirna",
+          "english": "we didn't lose"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما خسرتوا",
+          "transliteration": "ma khsirtu",
+          "english": "you (pl) didn't lose"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما خسروا",
+          "transliteration": "ma khisru",
+          "english": "they didn't lose"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بخسر",
+          "transliteration": "bikhsar",
+          "english": "I lose"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتخسر",
+          "transliteration": "btikhsar",
+          "english": "you (m) lose"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتخسري",
+          "transliteration": "btikhsari",
+          "english": "you (f) lose"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيخسر",
+          "transliteration": "byikhsar",
+          "english": "he loses"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتخسر",
+          "transliteration": "btikhsar",
+          "english": "she loses"
+        },
+        {
+          "person": "ehna",
+          "arabic": "منخسر",
+          "transliteration": "mnikhsar",
+          "english": "we lose"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتخسروا",
+          "transliteration": "btikhsaru",
+          "english": "you (pl) lose"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيخسروا",
+          "transliteration": "byikhsaru",
+          "english": "they lose"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما بخسر",
+          "transliteration": "ma bikhsar",
+          "english": "I don't lose"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتخسر",
+          "transliteration": "ma btikhsar",
+          "english": "you (m) don't lose"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتخسري",
+          "transliteration": "ma btikhsari",
+          "english": "you (f) don't lose"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيخسر",
+          "transliteration": "ma byikhsar",
+          "english": "he doesn't lose"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتخسر",
+          "transliteration": "ma btikhsar",
+          "english": "she doesn't lose"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما منخسر",
+          "transliteration": "ma mnikhsar",
+          "english": "we don't lose"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتخسروا",
+          "transliteration": "ma btikhsaru",
+          "english": "you (pl) don't lose"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيخسروا",
+          "transliteration": "ma byikhsaru",
+          "english": "they don't lose"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "رح اخسر",
+          "transliteration": "ra7 ikhsar",
+          "english": "I will lose"
+        },
+        {
+          "person": "enta",
+          "arabic": "رح تخسر",
+          "transliteration": "ra7 tikhsar",
+          "english": "you (m) will lose"
+        },
+        {
+          "person": "enti",
+          "arabic": "رح تخسري",
+          "transliteration": "ra7 tikhsari",
+          "english": "you (f) will lose"
+        },
+        {
+          "person": "howa",
+          "arabic": "رح يخسر",
+          "transliteration": "ra7 yikhsar",
+          "english": "he will lose"
+        },
+        {
+          "person": "heya",
+          "arabic": "رح تخسر",
+          "transliteration": "ra7 tikhsar",
+          "english": "she will lose"
+        },
+        {
+          "person": "ehna",
+          "arabic": "رح نخسر",
+          "transliteration": "ra7 nikhsar",
+          "english": "we will lose"
+        },
+        {
+          "person": "entu",
+          "arabic": "رح تخسروا",
+          "transliteration": "ra7 tikhsaru",
+          "english": "you (pl) will lose"
+        },
+        {
+          "person": "homma",
+          "arabic": "رح يخسروا",
+          "transliteration": "ra7 yikhsaru",
+          "english": "they will lose"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما رح اخسر",
+          "transliteration": "ma ra7 ikhsar",
+          "english": "I won't lose"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما رح تخسر",
+          "transliteration": "ma ra7 tikhsar",
+          "english": "you (m) won't lose"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما رح تخسري",
+          "transliteration": "ma ra7 tikhsari",
+          "english": "you (f) won't lose"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما رح يخسر",
+          "transliteration": "ma ra7 yikhsar",
+          "english": "he won't lose"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما رح تخسر",
+          "transliteration": "ma ra7 tikhsar",
+          "english": "she won't lose"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما رح نخسر",
+          "transliteration": "ma ra7 nikhsar",
+          "english": "we won't lose"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما رح تخسروا",
+          "transliteration": "ma ra7 tikhsaru",
+          "english": "you (pl) won't lose"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما رح يخسروا",
+          "transliteration": "ma ra7 yikhsaru",
+          "english": "they won't lose"
+        }
+      ]
+    }
+  }
+}
