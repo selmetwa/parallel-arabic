@@ -335,6 +335,53 @@ export const GAMES: GameInfo[] = [
 					'You choose. Beginner sentences are three to six words of everyday Arabic; advanced ones run up to ten words with richer vocabulary.'
 			}
 		]
+	},
+	{
+		slug: 'memory-pairs',
+		name: 'Memory Pairs',
+		heading: 'Arabic Memory Game: Match the Pairs',
+		emoji: '🃏',
+		tagline: 'Turn over cards and match each Arabic word to its meaning, or to its sound.',
+		skills: ['Vocabulary', 'Reading', 'Listening'],
+		levels: 'Beginner',
+		accent: '#8b5cf6',
+		deep: '#6d28d9',
+		shot: {
+			src: '/images/feature-pages/game-memory-pairs.webp',
+			w: 1568,
+			h: 900,
+			alt: 'A Memory Pairs board: twelve cards, two turned over showing an Arabic word and its English meaning'
+		},
+		seo: {
+			title: 'Arabic Memory Game - Match Words to Meanings | Parallel Arabic',
+			description:
+				'A free Arabic memory game: turn over cards and match each word to its English meaning or its recording. Egyptian, Levantine, Darija and Fusha, by theme.'
+		},
+		intro:
+			'The card game you know, with Arabic words. Twelve cards, six pairs: turn two over at a time and find each Arabic word’s English meaning. Switch to Sound and match the word to its recording instead.',
+		howToPlay: [
+			'Pick a dialect and a theme, then choose Arabic ↔ English or Sound ↔ Arabic.',
+			'Tap a card to turn it over, then tap another. If they are a pair, they stay face up.',
+			'If they aren’t, they turn back over after a moment. Remember where they were.',
+			'Clear the board in as few moves as you can. Six moves is a perfect game.'
+		],
+		faqs: [
+			{
+				question: 'Does a memory game actually help with Arabic vocabulary?',
+				answer:
+					'Yes. Every turn makes you read an Arabic word and recall what it means before you find its partner, and you see the same words several times in a few minutes. That repeated recall is what makes words stick.'
+			},
+			{
+				question: 'What is the Sound mode?',
+				answer:
+					'Half the cards play a recording instead of showing text. You match what you hear to the written Arabic, which trains your ear and your reading at the same time. It appears for themes where every word has a recording.'
+			},
+			{
+				question: 'Which words are on the cards?',
+				answer:
+					'Everyday words from the theme you pick, like food, animals, the body or the house, in the dialect you choose. Each new board leans towards words you haven’t just seen.'
+			}
+		]
 	}
 ];
 
