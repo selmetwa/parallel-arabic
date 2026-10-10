@@ -72,19 +72,25 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		updateData.show_english = show_english;
 	}
 
-	// Paywall A/B test: new web signups only. Native is excluded because the
-	// trial is web-only, and the client is the only side that can tell.
+	// Paywall: new web signups join the A/B test; new iOS signups always get
+	// the hard paywall ('hard_ios', kept out of the test's numbers). Only the
+	// client can tell which platform it is on.
 	const dbUser = locals.user;
 	let variant: PaywallVariant | null = dbUser?.paywall_variant ?? null;
-	if (
-		isExperimentOn() &&
-		platform === 'web' &&
-		dbUser &&
+	const isNewUnpaidUser =
+		!!dbUser &&
 		!dbUser.paywall_variant &&
 		!dbUser.onboarding_completed &&
-		!checkUserSubscription(dbUser)
-	) {
-		variant = assignVariant();
+		!checkUserSubscription(dbUser);
+	const newVariant: PaywallVariant | null = !isNewUnpaidUser
+		? null
+		: platform === 'native'
+			? 'hard_ios'
+			: platform === 'web' && isExperimentOn()
+				? assignVariant()
+				: null;
+	if (newVariant) {
+		variant = newVariant;
 		updateData.paywall_variant = variant;
 		updateData.paywall_variant_assigned_at = Date.now();
 	}

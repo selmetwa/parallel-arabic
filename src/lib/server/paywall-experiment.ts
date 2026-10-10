@@ -7,9 +7,14 @@ import { env } from '$env/dynamic/private';
  * group can't use the app until they subscribe or start a trial; 'freemium'
  * gets the app as it is today. The variant is stored on the user row, so it
  * never changes, and turning the experiment off only stops new assignments.
+ *
+ * New iOS signups always get 'hard_ios': the same gate, outside the test and
+ * the PAYWALL_EXPERIMENT switch, so web results stay web-only.
  */
 
-export type PaywallVariant = 'hard' | 'freemium';
+export type PaywallVariant = 'hard' | 'freemium' | 'hard_ios';
+
+const GATED_VARIANTS: (string | null | undefined)[] = ['hard', 'hard_ios'];
 
 /** Read at runtime so the test can be stopped from Vercel without a rebuild. */
 export function isExperimentOn(): boolean {
@@ -20,8 +25,11 @@ export function assignVariant(): PaywallVariant {
 	return Math.random() < 0.5 ? 'hard' : 'freemium';
 }
 
-/** Paths a gated user can still reach: the paywall itself, checkout, auth and help. */
-const EXEMPT_PREFIXES = ['/paywall', '/pricing', '/auth', '/password-reset'];
+/**
+ * Paths a gated user can still reach: the paywall itself, checkout, auth and
+ * help, plus /profile, where account deletion lives (App Store 5.1.1(v)).
+ */
+const EXEMPT_PREFIXES = ['/paywall', '/pricing', '/auth', '/password-reset', '/profile'];
 const EXEMPT_PATHS = ['/login', '/signup', '/support', '/privacy'];
 
 export function isPaywallExempt(pathname: string): boolean {
@@ -37,10 +45,10 @@ interface GateUser {
 }
 
 /**
- * True for a hard-group user without a subscription or trial. Onboarding has
+ * True for a gated user ('hard' or 'hard_ios') without a subscription or trial. Onboarding has
  * to be complete first, so the onboarding modal and its first conversation
  * still run on the page they signed up on.
  */
 export function isPaywalled(user: GateUser, isSubscribed: boolean): boolean {
-	return user.paywall_variant === 'hard' && !!user.onboarding_completed && !isSubscribed;
+	return GATED_VARIANTS.includes(user.paywall_variant) && !!user.onboarding_completed && !isSubscribed;
 }

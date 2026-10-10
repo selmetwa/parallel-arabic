@@ -44,13 +44,15 @@
 	let isSubmitting = $state(false);
 	let error = $state('');
 
-	// Trial offer is web-only: a Stripe trial inside the iOS app would be an
-	// external purchase. isNative stays null until mount, so native users
-	// never see it.
+	// Web gets the Stripe trial offer; iOS gets the same step with Apple's
+	// plans and trial (TrialOffer/SubscribeButton never show Stripe in the app).
+	// isNative stays null until mount, so nothing shows before the check.
 	let isNative = $state<boolean | null>(null);
 	let pendingDestination = $state('/');
-	// Paywall A/B test group, assigned by /api/onboarding. 'hard' hides the skip link.
+	// Paywall group, assigned by /api/onboarding. 'hard' (web test) and
+	// 'hard_ios' (every new iOS signup) hide the skip link.
 	let paywallVariant = $state<string | null>(null);
+	const isHardPaywall = $derived(paywallVariant === 'hard' || paywallVariant === 'hard_ios');
 
 	onMount(() => {
 		isNative = isNativeApp();
@@ -225,13 +227,16 @@
 	}
 
 	/**
-	 * End of the first speaking win. Eligible web users get the trial offer
-	 * before they leave; everyone else lands exactly where they did before.
+	 * End of the first speaking win. Eligible web users and new iOS signups get
+	 * the trial offer before they leave; everyone else lands exactly where they
+	 * did before. On iOS, TrialOffer asks Apple whether to say "free trial".
 	 */
 	async function handleConversationFinish(destination: string) {
 		pendingDestination = destination;
 
-		if (isNative === false && page.data.trialEligible === true) {
+		const showOffer =
+			isNative === false ? page.data.trialEligible === true : paywallVariant === 'hard_ios';
+		if (showOffer) {
 			trackEvent('trial_offer_shown', { placement: 'onboarding', variant: paywallVariant });
 			step = STEP.TRIAL;
 			return;
@@ -513,11 +518,11 @@
 						</div>
 					{/if}
 
-					<!-- Step 6: Free trial offer (web only) -->
+					<!-- Step 6: Free trial offer (Stripe on web, Apple on iOS) -->
 					{#if step === STEP.TRIAL}
 						<TrialOffer
 							dialectName={chosenDialectName}
-							onSkip={paywallVariant === 'hard' ? undefined : skipTrial}
+							onSkip={isHardPaywall ? undefined : skipTrial}
 						/>
 					{/if}
 
