@@ -36,6 +36,8 @@ interface Shot {
 	/** Anything to do before the capture: open a modal, answer a question. */
 	prepare?: (page: Page) => Promise<void>;
 	viewport?: { width: number; height: number };
+	/** How long to let animations settle before the capture (default 800ms). */
+	settle?: number;
 }
 
 const DESKTOP = { width: 1280, height: 860 };
@@ -43,6 +45,29 @@ const DESKTOP = { width: 1280, height: 860 };
 const GAME = { width: 1024, height: 900 };
 /** Breathing room around an element crop, in CSS pixels. */
 const PAD = 28;
+
+/** Answer the current question with its first option, to show the reveal. */
+async function answerFirst(page: Page, option: string) {
+	await page.locator(option).first().click();
+}
+
+/** Start a game that builds its round in the browser, and wait for the first question. */
+async function startLocal(page: Page, ready: string) {
+	await page.getByRole('button', { name: /^Start/ }).click();
+	await page.locator(ready).first().waitFor({ timeout: 60_000 });
+}
+
+/** Open a scene, start the conversation and answer the first turn. */
+function scene(reply: RegExp) {
+	return async (page: Page) => {
+		await page.evaluate(() => localStorage.setItem('pa-room-hunt-muted', '1'));
+		await page.getByText(/Setting the scene/).waitFor({ state: 'detached', timeout: 60_000 });
+		await page.getByRole('button', { name: 'Start the conversation' }).click();
+		await page.locator('.reply .option').first().waitFor({ timeout: 60_000 });
+		await page.locator('.reply .option', { hasText: reply }).first().click();
+		await page.waitForTimeout(4000);
+	};
+}
 
 /** The generated games open on a Start button, then write the round. */
 async function startRound(page: Page) {
@@ -159,6 +184,181 @@ const SHOTS: Shot[] = [
 		}
 	},
 	{
+		name: 'game-memory-pairs',
+		path: '/learn/game/memory-pairs?dialect=egyptian-arabic',
+		// Fullscreen once the round starts: crop to the game, not the overlay.
+		selector: '.play-inner',
+		viewport: GAME,
+		// Two cards up: captured before a wrong pair turns back over.
+		settle: 0,
+		prepare: async (page) => {
+			const cards = page.locator('.board .card');
+			await cards.first().waitFor({ timeout: 60_000 });
+			await cards.nth(0).click();
+			await cards.nth(1).click();
+			await page.waitForTimeout(450);
+		}
+	},
+	{
+		name: 'game-speed-round',
+		path: '/learn/game/speed-round?dialect=egyptian-arabic',
+		// Fullscreen once the round starts: crop to the game, not the overlay.
+		selector: '.play-inner',
+		viewport: GAME,
+		prepare: async (page) => {
+			await page.getByRole('button', { name: 'Start the clock' }).click();
+			for (let i = 0; i < 3; i++) await page.locator('.ans.yes').click();
+			await page.waitForTimeout(300);
+		}
+	},
+	{
+		name: 'game-listen-and-spell',
+		path: '/learn/game/listen-and-spell?dialect=egyptian-arabic',
+		// Fullscreen once the round starts: crop to the game, not the overlay.
+		selector: '.play-inner',
+		viewport: GAME,
+		prepare: async (page) => {
+			await page.getByRole('button', { name: 'Play the word' }).click();
+		}
+	},
+	{
+		name: 'listen-and-spell-reveal',
+		path: '/learn/game/listen-and-spell?dialect=egyptian-arabic',
+		// Fullscreen once the round starts: crop to the game, not the overlay.
+		selector: '.play-inner',
+		viewport: GAME,
+		prepare: async (page) => {
+			await page.getByRole('button', { name: 'Play the word' }).click();
+			await answerFirst(page, '.options .option');
+		}
+	},
+	{
+		name: 'game-letter-hunt',
+		path: '/learn/game/letter-hunt',
+		// Fullscreen once the round starts: crop to the game, not the overlay.
+		selector: '.play-inner',
+		viewport: GAME,
+		prepare: (page) => startLocal(page, '.options .option')
+	},
+	{
+		name: 'letter-hunt-reveal',
+		path: '/learn/game/letter-hunt',
+		// Fullscreen once the round starts: crop to the game, not the overlay.
+		selector: '.play-inner',
+		viewport: GAME,
+		prepare: async (page) => {
+			await startLocal(page, '.options .option');
+			await answerFirst(page, '.options .option');
+		}
+	},
+	{
+		name: 'game-dialect-match',
+		path: '/learn/game/dialect-match',
+		// Fullscreen once the round starts: crop to the game, not the overlay.
+		selector: '.play-inner',
+		viewport: GAME,
+		prepare: (page) => startLocal(page, '.game .option')
+	},
+	{
+		name: 'dialect-match-reveal',
+		path: '/learn/game/dialect-match',
+		// Fullscreen once the round starts: crop to the game, not the overlay.
+		selector: '.play-inner',
+		viewport: GAME,
+		prepare: async (page) => {
+			await startLocal(page, '.game .option');
+			await answerFirst(page, '.game .option');
+		}
+	},
+	{
+		name: 'game-fill-the-gap',
+		path: '/learn/game/fill-the-gap?dialect=egyptian-arabic',
+		// Fullscreen once the round starts: crop to the game, not the overlay.
+		selector: '.play-inner',
+		viewport: GAME,
+		prepare: startRound
+	},
+	{
+		name: 'fill-the-gap-reveal',
+		path: '/learn/game/fill-the-gap?dialect=egyptian-arabic',
+		// Fullscreen once the round starts: crop to the game, not the overlay.
+		selector: '.play-inner',
+		viewport: GAME,
+		prepare: async (page) => {
+			await startRound(page);
+			await answerFirst(page, '.options .option');
+		}
+	},
+	{
+		name: 'game-shadowing',
+		path: '/learn/game/shadowing?dialect=egyptian-arabic',
+		// Fullscreen once the round starts: crop to the game, not the overlay.
+		selector: '.play-inner',
+		viewport: GAME,
+		prepare: (page) => startLocal(page, '.line .listen')
+	},
+	{
+		name: 'game-verb-blitz',
+		path: '/learn/game/verb-blitz?dialect=egyptian-arabic',
+		// Fullscreen once the round starts: crop to the game, not the overlay.
+		selector: '.play-inner',
+		viewport: GAME,
+		prepare: (page) => startLocal(page, '.options .option')
+	},
+	{
+		name: 'verb-blitz-reveal',
+		path: '/learn/game/verb-blitz?dialect=levantine',
+		// Fullscreen once the round starts: crop to the game, not the overlay.
+		selector: '.play-inner',
+		viewport: GAME,
+		prepare: async (page) => {
+			await startLocal(page, '.options .option');
+			await answerFirst(page, '.options .option');
+		}
+	},
+	{
+		name: 'game-daily-root',
+		path: '/learn/game/daily-root',
+		selector: '.play-area',
+		viewport: GAME,
+		prepare: async (page) => {
+			await page.locator('.tiles .tile').first().waitFor({ timeout: 60_000 });
+			// A first try: fill the slots and check, to show the coloured row.
+			const slots = await page.locator('.cell.slot').count();
+			for (let i = 0; i < slots; i++) await page.locator('.tiles .tile:not([disabled])').first().click();
+			await page.getByRole('button', { name: 'Check' }).click();
+		}
+	},
+	{
+		name: 'odd-one-out-reveal',
+		path: '/learn/game/odd-one-out?dialect=egyptian-arabic',
+		// Fullscreen once the round starts: crop to the game, not the overlay.
+		selector: '.play-inner',
+		viewport: GAME,
+		prepare: async (page) => {
+			await startRound(page);
+			await answerFirst(page, '.grid .word');
+		}
+	},
+	{
+		name: 'scenario-cafe',
+		path: '/scenarios?scene=cafe&dialect=egyptian-arabic',
+		viewport: { width: 1280, height: 720 },
+		prepare: scene(/قهوة|قَهْوَة/)
+	},
+	{
+		name: 'scenario-doctor',
+		path: '/scenarios?scene=doctor&dialect=levantine',
+		viewport: { width: 1280, height: 720 },
+		prepare: scene(/زلعوم|زْلْعُومِي/)
+	},
+	{
+		name: 'scenario-airport',
+		path: '/scenarios?scene=airport&dialect=darija',
+		viewport: { width: 1280, height: 720 },
+		prepare: scene(/باسبور|البَاسْبُور/)
+	},
+	{
 		name: 'game-quiz',
 		path: '/learn/game/quiz',
 		// The quiz starts on its own page, /learn/game/play.
@@ -245,7 +445,7 @@ async function main() {
 			throw new Error(`${shot.name}: the page is showing a Vite error overlay`);
 		}
 		// Let entrance animations settle.
-		await page.waitForTimeout(800);
+		await page.waitForTimeout(shot.settle ?? 800);
 
 		if (survey) {
 			const file = join(SURVEY_DIR, `${shot.name}.png`);

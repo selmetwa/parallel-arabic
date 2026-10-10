@@ -103,6 +103,7 @@ export const GAMES: GameInfo[] = [
 	},
 	{
 		slug: 'scenarios',
+		feature: 'arabic-role-play-practice',
 		path: '/scenarios',
 		name: 'Scenarios',
 		heading: 'Arabic Conversation Practice: Taxi, Market, Pharmacy and More',
@@ -121,7 +122,7 @@ export const GAMES: GameInfo[] = [
 		seo: {
 			title: 'Arabic Conversation Practice: Real-Life Scenes | Parallel Arabic',
 			description:
-				'Practise everyday Arabic conversations in 3D: take a taxi, haggle at a market, see a doctor, check in at the airport, order at a café. In Egyptian, Levantine, Darija and Fusha.'
+				'Everyday Arabic conversations in 3D: a taxi, a market, a doctor, airport check-in, a café and more. In Egyptian, Levantine, Darija and Fusha.'
 		},
 		intro:
 			'Short spoken conversations in places you will actually be. A taxi driver asks where you are going, a market seller tells you the price, a pharmacist asks what hurts. You answer in Arabic, and what you ask for turns up.',
@@ -151,6 +152,7 @@ export const GAMES: GameInfo[] = [
 	},
 	{
 		slug: 'word-scramble',
+		feature: 'arabic-spelling-practice',
 		name: 'Word Scramble',
 		heading: 'Arabic Word Scramble',
 		emoji: '🔤',
@@ -198,6 +200,7 @@ export const GAMES: GameInfo[] = [
 	},
 	{
 		slug: 'odd-one-out',
+		feature: 'arabic-vocabulary-puzzles',
 		name: 'Odd One Out',
 		heading: 'Arabic Odd One Out',
 		emoji: '🧠',
@@ -244,6 +247,7 @@ export const GAMES: GameInfo[] = [
 	},
 	{
 		slug: 'spot-the-mistake',
+		feature: 'arabic-grammar-practice',
 		name: 'Spot the Mistake',
 		heading: 'Spot the Mistake in Arabic',
 		emoji: '🔍',
@@ -291,6 +295,7 @@ export const GAMES: GameInfo[] = [
 	},
 	{
 		slug: 'sentence-scramble',
+		feature: 'arabic-sentence-building-practice',
 		name: 'Sentence Scramble',
 		heading: 'Arabic Sentence Scramble',
 		emoji: '🧩',
@@ -338,6 +343,7 @@ export const GAMES: GameInfo[] = [
 	},
 	{
 		slug: 'memory-pairs',
+		feature: 'arabic-memory-game-vocabulary',
 		name: 'Memory Pairs',
 		heading: 'Arabic Memory Game: Match the Pairs',
 		emoji: '🃏',
@@ -348,8 +354,8 @@ export const GAMES: GameInfo[] = [
 		deep: '#6d28d9',
 		shot: {
 			src: '/images/feature-pages/game-memory-pairs.webp',
-			w: 1568,
-			h: 900,
+			w: 1648,
+			h: 1082,
 			alt: 'A Memory Pairs board: twelve cards, two turned over showing an Arabic word and its English meaning'
 		},
 		seo: {
@@ -385,6 +391,7 @@ export const GAMES: GameInfo[] = [
 	},
 	{
 		slug: 'speed-round',
+		feature: 'arabic-flashcards-speed-practice',
 		name: 'Speed Round',
 		heading: 'Arabic Vocabulary Speed Quiz: 60 Seconds',
 		emoji: '⚡',
@@ -395,8 +402,8 @@ export const GAMES: GameInfo[] = [
 		deep: '#a16207',
 		shot: {
 			src: '/images/feature-pages/game-speed-round.webp',
-			w: 1568,
-			h: 900,
+			w: 1648,
+			h: 806,
 			alt: 'A Speed Round question: an Arabic word beside an English meaning, with Right and Wrong buttons and the clock running'
 		},
 		seo: {
@@ -432,6 +439,7 @@ export const GAMES: GameInfo[] = [
 	},
 	{
 		slug: 'listen-and-spell',
+		feature: 'arabic-listening-spelling-practice',
 		name: 'Listen & Spell',
 		heading: 'Arabic Listening Game: Hear It, Spell It',
 		emoji: '👂',
@@ -442,8 +450,8 @@ export const GAMES: GameInfo[] = [
 		deep: '#0e7490',
 		shot: {
 			src: '/images/feature-pages/game-listen-and-spell.webp',
-			w: 1568,
-			h: 900,
+			w: 1648,
+			h: 760,
 			alt: 'A Listen & Spell question: a play button and four Arabic spellings of a word to choose from'
 		},
 		seo: {
@@ -479,9 +487,10 @@ export const GAMES: GameInfo[] = [
 	},
 	{
 		slug: 'letter-hunt',
+		feature: 'arabic-letter-forms-practice',
 		name: 'Letter Hunt',
 		heading: 'Arabic Letter Game: Beginning, Middle and End Forms',
-		emoji: '🔤',
+		emoji: '🔡',
 		tagline: 'Recognise every Arabic letter at the start, middle and end of a word, and by its sound.',
 		skills: ['Alphabet', 'Reading', 'Listening'],
 		levels: 'Absolute beginner',
@@ -489,12 +498,12 @@ export const GAMES: GameInfo[] = [
 		deep: '#0f766e',
 		shot: {
 			src: '/images/feature-pages/game-letter-hunt.webp',
-			w: 1568,
-			h: 900,
+			w: 1648,
+			h: 690,
 			alt: 'A Letter Hunt question: the middle form of an Arabic letter, with four letters to choose from'
 		},
 		seo: {
-			title: 'Arabic Letter Forms Game - Beginning, Middle, End | Parallel Arabic',
+			title: 'Arabic Letter Forms Game | Parallel Arabic',
 			description:
 				'Learn to recognise Arabic letters in every position: the start, middle and end of a word, plus the sound of each one. A free game for beginners.'
 		},
@@ -531,6 +540,7 @@ export const GAMES: GameInfo[] = [
 	},
 	{
 		slug: 'dialect-match',
+		feature: 'which-arabic-dialect-quiz',
 		name: 'Dialect Match',
 		heading: 'Which Arabic Dialect Is It? Egyptian, Levantine, Darija or Fusha',
 		emoji: '🌍',
@@ -541,14 +551,14 @@ export const GAMES: GameInfo[] = [
 		deep: '#4338ca',
 		shot: {
 			src: '/images/feature-pages/game-dialect-match.webp',
-			w: 1568,
-			h: 900,
+			w: 1648,
+			h: 840,
 			alt: 'A Dialect Match question: an Arabic word with its meaning, and buttons for Egyptian, Levantine, Darija and Fusha'
 		},
 		seo: {
 			title: 'Which Arabic Dialect Is It? Dialect Quiz Game | Parallel Arabic',
 			description:
-				'Guess the Arabic dialect from a word, a phrase or a native recording: Egyptian, Levantine, Moroccan Darija or Modern Standard Arabic. Then see all four side by side.'
+				'Guess the dialect of an Arabic word, phrase or native recording: Egyptian, Levantine, Darija or Fusha. Then see all four side by side.'
 		},
 		intro:
 			'The same thing is said four different ways. “What?” is إيه in Cairo, شو in Beirut, شنو in Casablanca and ماذا in Fusha. Read a word or hear a recording and say which dialect it is, or pick how one dialect says it. After every answer you see all four.',
@@ -583,6 +593,7 @@ export const GAMES: GameInfo[] = [
 	},
 	{
 		slug: 'fill-the-gap',
+		feature: 'arabic-fill-in-the-blank-exercises',
 		name: 'Fill the Gap',
 		heading: 'Arabic Fill in the Blank: Sentence Practice',
 		emoji: '✏️',
@@ -593,14 +604,14 @@ export const GAMES: GameInfo[] = [
 		deep: '#c2410c',
 		shot: {
 			src: '/images/feature-pages/game-fill-the-gap.webp',
-			w: 1568,
-			h: 900,
+			w: 1648,
+			h: 708,
 			alt: 'A Fill the Gap question: an Arabic sentence with one word missing and four words to choose from'
 		},
 		seo: {
-			title: 'Arabic Fill in the Blank Exercises | Parallel Arabic',
+			title: 'Fill the Gap - Arabic Sentence Game | Parallel Arabic',
 			description:
-				'Arabic fill-in-the-blank practice: pick the missing word in everyday sentences, then see why it fits. Fresh sentences at your level in Egyptian, Levantine, Darija and Fusha.'
+				'Pick the missing word in everyday Arabic sentences, then see why it fits. Fresh sentences at your level in Egyptian, Levantine, Darija and Fusha.'
 		},
 		intro:
 			'Everyday Arabic sentences with one word missing. Read the sentence and its meaning, then pick the word that fits from four. Only one makes sense: the others are the wrong food, the wrong time or the wrong kind of word. Signed in, you can have the sentences built around words you’ve saved.',
@@ -630,6 +641,7 @@ export const GAMES: GameInfo[] = [
 	},
 	{
 		slug: 'shadowing',
+		feature: 'arabic-shadowing-practice',
 		name: 'Shadowing',
 		heading: 'Arabic Shadowing: Listen, Repeat, Get a Score',
 		emoji: '🎙️',
@@ -640,12 +652,12 @@ export const GAMES: GameInfo[] = [
 		deep: '#a21caf',
 		shot: {
 			src: '/images/feature-pages/game-shadowing.webp',
-			w: 1568,
-			h: 900,
+			w: 1648,
+			h: 880,
 			alt: 'A Shadowing line: an Arabic sentence with transliteration and meaning, a Listen button, a Say it button and a score out of 100'
 		},
 		seo: {
-			title: 'Arabic Shadowing Practice with Native Audio | Parallel Arabic',
+			title: 'Arabic Shadowing Game - Repeat and Get a Score | Parallel Arabic',
 			description:
 				'Shadow native Arabic speakers: listen to a real line, repeat it out loud and get a score out of 100. Egyptian, Levantine, Darija and Fusha.'
 		},
@@ -682,6 +694,7 @@ export const GAMES: GameInfo[] = [
 	},
 	{
 		slug: 'verb-blitz',
+		feature: 'arabic-verb-drills',
 		name: 'Verb Blitz',
 		heading: 'Arabic Verb Conjugation Game',
 		emoji: '🔁',
@@ -692,14 +705,14 @@ export const GAMES: GameInfo[] = [
 		deep: '#0369a1',
 		shot: {
 			src: '/images/feature-pages/game-verb-blitz.webp',
-			w: 1568,
-			h: 900,
+			w: 1648,
+			h: 844,
 			alt: 'A Verb Blitz question: the verb عاش with the pronoun هي and Past, and four conjugated forms to choose from'
 		},
 		seo: {
-			title: 'Arabic Verb Conjugation Game - Past, Present, Future | Parallel Arabic',
+			title: 'Arabic Verb Conjugation Game | Parallel Arabic',
 			description:
-				'Practise conjugating Arabic verbs: pick the right form for each person and tense, affirmative and negative. 72 everyday verbs in Egyptian, Levantine, Darija and Fusha.'
+				'Pick the right form of an Arabic verb for each person and tense, affirmative and negative. 72 verbs in Egyptian, Levantine, Darija and Fusha.'
 		},
 		intro:
 			'Arabic verbs change for every person and tense: عاش is “he lived”, عاشت “she lived”, بيعيش “he lives”. Each question gives you a verb, a person and a tense, and you pick the right form from four. 72 everyday verbs, past, present and future, including the negative.',
@@ -734,6 +747,7 @@ export const GAMES: GameInfo[] = [
 	},
 	{
 		slug: 'daily-root',
+		feature: 'arabic-root-words-daily-puzzle',
 		name: 'Daily Root',
 		heading: 'Daily Root: an Arabic Word Puzzle Like Wordle',
 		emoji: '🌱',
@@ -745,7 +759,7 @@ export const GAMES: GameInfo[] = [
 		shot: {
 			src: '/images/feature-pages/game-daily-root.webp',
 			w: 1568,
-			h: 900,
+			h: 1504,
 			alt: 'The Daily Root puzzle: the root ك ت ب, English clues, and a row of green and yellow letter tiles'
 		},
 		seo: {
@@ -763,7 +777,7 @@ export const GAMES: GameInfo[] = [
 		],
 		faqs: [
 			{
-				question: 'What is an Arabic root?',
+				question: 'How do Arabic roots work?',
 				answer:
 					'A set of usually three consonants that carries a core meaning. Arabic builds words by putting those letters into patterns: ma-…-a for a place (مدرسة, a school, from د ر س), …-a-…-i-… for a doer (كاتب, a writer, from ك ت ب). Learn the patterns and one root opens up a family of words.'
 			},

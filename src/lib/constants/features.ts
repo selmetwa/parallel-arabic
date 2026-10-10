@@ -15,6 +15,7 @@
 
 import type { Pathname } from '$app/types';
 import { GAMES, QUIZ_CARD } from './games';
+import { GAME_FEATURES } from './game-features';
 
 export interface Faq {
 	question: string;
@@ -783,7 +784,7 @@ export const FEATURES: FeatureInfo[] = [
 		name: 'Games',
 		emoji: '🎮',
 		heading: 'Practice Arabic spelling, vocabulary and grammar by playing',
-		lede: 'Five short games for vocabulary, spelling and grammar, in Egyptian, Levantine, Moroccan Darija and Fusha. A round takes a few minutes, and every game has two free rounds with no account needed.',
+		lede: 'Short games for vocabulary, spelling, listening, speaking and grammar, in Egyptian, Levantine, Moroccan Darija and Fusha. A round takes a few minutes, and every game has free rounds with no account needed.',
 		blurb: 'Word scramble, odd one out and more, in four dialects.',
 		seo: {
 			title: 'Learn Arabic by Playing: Spelling & Grammar Practice | Parallel Arabic',
@@ -829,7 +830,9 @@ export const FEATURES: FeatureInfo[] = [
 					'Word Scramble trains spelling and how letters join. Odd One Out trains meaning and grammar patterns. Spot the Mistake and Sentence Scramble train grammar and word order in full sentences. The Vocabulary Quiz mixes reading, listening and speaking.'
 			}
 		]
-	}
+	},
+	// One page per game, listed under "Games" on /features.
+	...GAME_FEATURES
 ];
 
 export function getFeature(slug: string): FeatureInfo | undefined {

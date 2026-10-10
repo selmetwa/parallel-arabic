@@ -134,8 +134,8 @@ export const doctor: Scenario = {
 };
 
 const f = model.furniture;
-/** The desk top, where the prescription is put down. */
-const DESK_TOP = 0.76;
+/** The table top (the same table as the restaurant's), where the prescription is put down. */
+const DESK_TOP = 0.655;
 
 const clinic: Room = {
 	id: 'clinic',
@@ -147,10 +147,10 @@ const clinic: Room = {
 	objects: [],
 	decor: [
 		// The doctor's desk between you and the doctor.
-		{ model: f('desk'), placements: [{ at: [0, 0, -0.7], scale: 2 }] },
-		{ model: f('chair'), placements: [{ at: [0, 0, -1.5], scale: 2 }] },
-		{ model: f('books'), placements: [{ at: [-0.5, DESK_TOP, -0.75], rot: 15, scale: 1.4 }] },
-		{ model: f('lampSquareTable'), placements: [{ at: [0.6, DESK_TOP, -0.8], scale: 1.8 }] },
+		// A low table, so the doctor shows above it.
+		{ model: f('table'), placements: [{ at: [0, 0, -0.5], scale: 2 }] },
+		{ model: f('books'), placements: [{ at: [-0.5, DESK_TOP, -0.6], rot: 15, scale: 1.2 }] },
+		{ model: f('lampSquareTable'), placements: [{ at: [0.6, DESK_TOP, -0.65], scale: 1.6 }] },
 		// Files along the back wall, and an examination couch to the side.
 		{
 			model: f('bookcaseClosed'),
@@ -164,19 +164,19 @@ const clinic: Room = {
 
 export const doctorStage: Stage = {
 	setting: clinic,
-	// Sitting across the desk from the doctor.
-	pose: { at: [0, 1.3, 1.1], yaw: 0, pitch: -0.12 },
+	// Across the desk from the doctor, framed like the pharmacy counter.
+	pose: { at: [0, 1.7, 1.8], yaw: 0, pitch: -0.18 },
 	npc: {
 		// The ones in white coats.
 		model: { m: 'character-male-e', f: 'character-female-e' },
 		scale: 1.9,
-		start: [0, -1.3],
+		start: [0, -1.25],
 		route: [],
 		// Writes the prescription without leaving the desk.
 		fetch: { route: [] },
-		handOver: [0, -0.4]
+		handOver: [0, -0.2]
 	},
 	give: {
-		prescription: [{ model: f('books'), placement: { at: [0.15, DESK_TOP, -0.35], rot: -10, scale: 1 } }]
+		prescription: [{ model: f('books'), placement: { at: [0.15, DESK_TOP, -0.2], rot: -10, scale: 1 } }]
 	}
 };

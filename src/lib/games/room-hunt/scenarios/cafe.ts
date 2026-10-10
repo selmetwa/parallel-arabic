@@ -135,8 +135,8 @@ const shop: Room = {
 			placements: [-0.95, 0, 0.95].map((x) => ({ at: [x, 0, -0.8], scale: [2.2, 1.7, 2.2] }) as Placement)
 		},
 		{ model: f('kitchenCoffeeMachine'), placements: [{ at: [0.95, COUNTER_TOP, -0.95], rot: 180, scale: 2 }] },
-		{ model: food('cake'), placements: [{ at: [-0.9, COUNTER_TOP, -0.9], scale: 1.2 }] },
-		{ model: food('loaf-round'), placements: [{ at: [-1.35, COUNTER_TOP, -0.85], scale: 1 }] },
+		{ model: food('cake'), placements: [{ at: [-0.9, COUNTER_TOP, -0.9], scale: 0.5 }] },
+		{ model: food('loaf-round'), placements: [{ at: [-1.35, COUNTER_TOP, -0.85], scale: 0.3 }] },
 		// Shelves behind, and a couple of tables.
 		{
 			model: f('kitchenCabinetUpper'),
@@ -151,7 +151,7 @@ const shop: Room = {
 				{ at: [2.5, 0, 1.9], rot: 180, scale: 2 }
 			]
 		},
-		{ model: food('mug'), placements: [{ at: [-2.4, TABLE_TOP, 1.2], scale: 0.9 }] },
+		{ model: food('mug'), placements: [{ at: [-2.4, TABLE_TOP, 1.2], scale: 0.6 }] },
 		{ model: f('pottedPlant'), placements: [{ at: [3, 0, -2.4], scale: 2.4 }] }
 	]
 };
@@ -173,9 +173,10 @@ export const cafeStage: Stage = {
 		handOver: [0, -0.35]
 	},
 	give: {
-		coffee: onCounter('cup-coffee', 0.15, 1.1),
-		tea: onCounter('cup-tea', 0.15, 1.1),
-		croissant: onCounter('loaf-round', -0.25, 0.8)
+		// The same sizes as at the restaurant table.
+		coffee: onCounter('cup-coffee', 0.15, 0.6),
+		tea: onCounter('cup-tea', 0.15, 0.7),
+		croissant: onCounter('loaf-round', -0.25, 0.3)
 	},
 	extras: [{ model: 'character-female-a', at: [-2.5, 0.42, 1.9], rot: 180, animation: 'sit' }]
 };
