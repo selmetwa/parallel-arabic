@@ -1,0 +1,318 @@
+{
+  "slug": "gahhiz",
+  "arabic": "وجد",
+  "transliteration": "wejjed",
+  "english": "to prepare",
+  "wordId": null,
+  "rootLetters": "و ج د",
+  "verbClass": "sound",
+  "notes": "Darija gets things ready with wejjed: kanwejjed, I prepare.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "وجدت",
+          "transliteration": "wejjedt",
+          "english": "I prepared"
+        },
+        {
+          "person": "enta",
+          "arabic": "وجدتي",
+          "transliteration": "wejjedti",
+          "english": "you (m) prepared"
+        },
+        {
+          "person": "enti",
+          "arabic": "وجدتي",
+          "transliteration": "wejjedti",
+          "english": "you (f) prepared"
+        },
+        {
+          "person": "howa",
+          "arabic": "وجد",
+          "transliteration": "wejjed",
+          "english": "he prepared"
+        },
+        {
+          "person": "heya",
+          "arabic": "وجدات",
+          "transliteration": "wejjdat",
+          "english": "she prepared"
+        },
+        {
+          "person": "ehna",
+          "arabic": "وجدنا",
+          "transliteration": "wejjedna",
+          "english": "we prepared"
+        },
+        {
+          "person": "entu",
+          "arabic": "وجدتيو",
+          "transliteration": "wejjedtiw",
+          "english": "you (pl) prepared"
+        },
+        {
+          "person": "homma",
+          "arabic": "وجدو",
+          "transliteration": "wejjdu",
+          "english": "they prepared"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما وجدتش",
+          "transliteration": "ma wejjedtsh",
+          "english": "I didn't prepare"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما وجدتيش",
+          "transliteration": "ma wejjedtish",
+          "english": "you (m) didn't prepare"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما وجدتيش",
+          "transliteration": "ma wejjedtish",
+          "english": "you (f) didn't prepare"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما وجدش",
+          "transliteration": "ma wejjedsh",
+          "english": "he didn't prepare"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما وجداتش",
+          "transliteration": "ma wejjdatsh",
+          "english": "she didn't prepare"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما وجدناش",
+          "transliteration": "ma wejjednash",
+          "english": "we didn't prepare"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما وجدتيوش",
+          "transliteration": "ma wejjedtiwsh",
+          "english": "you (pl) didn't prepare"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما وجدوش",
+          "transliteration": "ma wejjdush",
+          "english": "they didn't prepare"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كنوجد",
+          "transliteration": "kanwejjed",
+          "english": "I prepare"
+        },
+        {
+          "person": "enta",
+          "arabic": "كتوجد",
+          "transliteration": "katwejjed",
+          "english": "you (m) prepare"
+        },
+        {
+          "person": "enti",
+          "arabic": "كتوجدي",
+          "transliteration": "katwejjdi",
+          "english": "you (f) prepare"
+        },
+        {
+          "person": "howa",
+          "arabic": "كيوجد",
+          "transliteration": "kaywejjed",
+          "english": "he prepares"
+        },
+        {
+          "person": "heya",
+          "arabic": "كتوجد",
+          "transliteration": "katwejjed",
+          "english": "she prepares"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كنوجدو",
+          "transliteration": "kanwejjdu",
+          "english": "we prepare"
+        },
+        {
+          "person": "entu",
+          "arabic": "كتوجدو",
+          "transliteration": "katwejjdu",
+          "english": "you (pl) prepare"
+        },
+        {
+          "person": "homma",
+          "arabic": "كيوجدو",
+          "transliteration": "kaywejjdu",
+          "english": "they prepare"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كنوجدش",
+          "transliteration": "ma kanwejjedsh",
+          "english": "I don't prepare"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كتوجدش",
+          "transliteration": "ma katwejjedsh",
+          "english": "you (m) don't prepare"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كتوجديش",
+          "transliteration": "ma katwejjdish",
+          "english": "you (f) don't prepare"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كيوجدش",
+          "transliteration": "ma kaywejjedsh",
+          "english": "he doesn't prepare"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كتوجدش",
+          "transliteration": "ma katwejjedsh",
+          "english": "she doesn't prepare"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كنوجدوش",
+          "transliteration": "ma kanwejjdush",
+          "english": "we don't prepare"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كتوجدوش",
+          "transliteration": "ma katwejjdush",
+          "english": "you (pl) don't prepare"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كيوجدوش",
+          "transliteration": "ma kaywejjdush",
+          "english": "they don't prepare"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "غادي نوجد",
+          "transliteration": "ghadi nwejjed",
+          "english": "I will prepare"
+        },
+        {
+          "person": "enta",
+          "arabic": "غادي توجد",
+          "transliteration": "ghadi twejjed",
+          "english": "you (m) will prepare"
+        },
+        {
+          "person": "enti",
+          "arabic": "غادي توجدي",
+          "transliteration": "ghadi twejjdi",
+          "english": "you (f) will prepare"
+        },
+        {
+          "person": "howa",
+          "arabic": "غادي يوجد",
+          "transliteration": "ghadi ywejjed",
+          "english": "he will prepare"
+        },
+        {
+          "person": "heya",
+          "arabic": "غادي توجد",
+          "transliteration": "ghadi twejjed",
+          "english": "she will prepare"
+        },
+        {
+          "person": "ehna",
+          "arabic": "غادي نوجدو",
+          "transliteration": "ghadi nwejjdu",
+          "english": "we will prepare"
+        },
+        {
+          "person": "entu",
+          "arabic": "غادي توجدو",
+          "transliteration": "ghadi twejjdu",
+          "english": "you (pl) will prepare"
+        },
+        {
+          "person": "homma",
+          "arabic": "غادي يوجدو",
+          "transliteration": "ghadi ywejjdu",
+          "english": "they will prepare"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما غاديش نوجد",
+          "transliteration": "ma ghadish nwejjed",
+          "english": "I won't prepare"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما غاديش توجد",
+          "transliteration": "ma ghadish twejjed",
+          "english": "you (m) won't prepare"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما غاديش توجدي",
+          "transliteration": "ma ghadish twejjdi",
+          "english": "you (f) won't prepare"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما غاديش يوجد",
+          "transliteration": "ma ghadish ywejjed",
+          "english": "he won't prepare"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما غاديش توجد",
+          "transliteration": "ma ghadish twejjed",
+          "english": "she won't prepare"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما غاديش نوجدو",
+          "transliteration": "ma ghadish nwejjdu",
+          "english": "we won't prepare"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما غاديش توجدو",
+          "transliteration": "ma ghadish twejjdu",
+          "english": "you (pl) won't prepare"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما غاديش يوجدو",
+          "transliteration": "ma ghadish ywejjdu",
+          "english": "they won't prepare"
+        }
+      ]
+    }
+  }
+}

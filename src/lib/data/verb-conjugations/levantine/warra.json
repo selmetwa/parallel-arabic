@@ -1,0 +1,318 @@
+{
+  "slug": "warra",
+  "arabic": "فرجى",
+  "transliteration": "farja",
+  "english": "to show",
+  "wordId": null,
+  "rootLetters": "ف ر ج",
+  "verbClass": "defective",
+  "notes": "Levantine for \"to show\": farjeeni, show me.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "فرجيت",
+          "transliteration": "farjeet",
+          "english": "I showed"
+        },
+        {
+          "person": "enta",
+          "arabic": "فرجيت",
+          "transliteration": "farjeet",
+          "english": "you (m) showed"
+        },
+        {
+          "person": "enti",
+          "arabic": "فرجيتي",
+          "transliteration": "farjeeti",
+          "english": "you (f) showed"
+        },
+        {
+          "person": "howa",
+          "arabic": "فرجى",
+          "transliteration": "farja",
+          "english": "he showed"
+        },
+        {
+          "person": "heya",
+          "arabic": "فرجت",
+          "transliteration": "farjit",
+          "english": "she showed"
+        },
+        {
+          "person": "ehna",
+          "arabic": "فرجينا",
+          "transliteration": "farjeena",
+          "english": "we showed"
+        },
+        {
+          "person": "entu",
+          "arabic": "فرجيتوا",
+          "transliteration": "farjeetu",
+          "english": "you (pl) showed"
+        },
+        {
+          "person": "homma",
+          "arabic": "فرجوا",
+          "transliteration": "farju",
+          "english": "they showed"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما فرجيت",
+          "transliteration": "ma farjeet",
+          "english": "I didn't show"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما فرجيت",
+          "transliteration": "ma farjeet",
+          "english": "you (m) didn't show"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما فرجيتي",
+          "transliteration": "ma farjeeti",
+          "english": "you (f) didn't show"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما فرجى",
+          "transliteration": "ma farja",
+          "english": "he didn't show"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما فرجت",
+          "transliteration": "ma farjit",
+          "english": "she didn't show"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما فرجينا",
+          "transliteration": "ma farjeena",
+          "english": "we didn't show"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما فرجيتوا",
+          "transliteration": "ma farjeetu",
+          "english": "you (pl) didn't show"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما فرجوا",
+          "transliteration": "ma farju",
+          "english": "they didn't show"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بفرجي",
+          "transliteration": "bfarji",
+          "english": "I show"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتفرجي",
+          "transliteration": "btfarji",
+          "english": "you (m) show"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتفرجي",
+          "transliteration": "btfarji",
+          "english": "you (f) show"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيفرجي",
+          "transliteration": "bifarji",
+          "english": "he shows"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتفرجي",
+          "transliteration": "btfarji",
+          "english": "she shows"
+        },
+        {
+          "person": "ehna",
+          "arabic": "منفرجي",
+          "transliteration": "mnfarji",
+          "english": "we show"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتفرجوا",
+          "transliteration": "btfarju",
+          "english": "you (pl) show"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيفرجوا",
+          "transliteration": "bifarju",
+          "english": "they show"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما بفرجي",
+          "transliteration": "ma bfarji",
+          "english": "I don't show"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتفرجي",
+          "transliteration": "ma btfarji",
+          "english": "you (m) don't show"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتفرجي",
+          "transliteration": "ma btfarji",
+          "english": "you (f) don't show"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيفرجي",
+          "transliteration": "ma bifarji",
+          "english": "he doesn't show"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتفرجي",
+          "transliteration": "ma btfarji",
+          "english": "she doesn't show"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما منفرجي",
+          "transliteration": "ma mnfarji",
+          "english": "we don't show"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتفرجوا",
+          "transliteration": "ma btfarju",
+          "english": "you (pl) don't show"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيفرجوا",
+          "transliteration": "ma bifarju",
+          "english": "they don't show"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "رح فرجي",
+          "transliteration": "ra7 farji",
+          "english": "I will show"
+        },
+        {
+          "person": "enta",
+          "arabic": "رح تفرجي",
+          "transliteration": "ra7 tfarji",
+          "english": "you (m) will show"
+        },
+        {
+          "person": "enti",
+          "arabic": "رح تفرجي",
+          "transliteration": "ra7 tfarji",
+          "english": "you (f) will show"
+        },
+        {
+          "person": "howa",
+          "arabic": "رح يفرجي",
+          "transliteration": "ra7 yfarji",
+          "english": "he will show"
+        },
+        {
+          "person": "heya",
+          "arabic": "رح تفرجي",
+          "transliteration": "ra7 tfarji",
+          "english": "she will show"
+        },
+        {
+          "person": "ehna",
+          "arabic": "رح نفرجي",
+          "transliteration": "ra7 nfarji",
+          "english": "we will show"
+        },
+        {
+          "person": "entu",
+          "arabic": "رح تفرجوا",
+          "transliteration": "ra7 tfarju",
+          "english": "you (pl) will show"
+        },
+        {
+          "person": "homma",
+          "arabic": "رح يفرجوا",
+          "transliteration": "ra7 yfarju",
+          "english": "they will show"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما رح فرجي",
+          "transliteration": "ma ra7 farji",
+          "english": "I won't show"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما رح تفرجي",
+          "transliteration": "ma ra7 tfarji",
+          "english": "you (m) won't show"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما رح تفرجي",
+          "transliteration": "ma ra7 tfarji",
+          "english": "you (f) won't show"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما رح يفرجي",
+          "transliteration": "ma ra7 yfarji",
+          "english": "he won't show"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما رح تفرجي",
+          "transliteration": "ma ra7 tfarji",
+          "english": "she won't show"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما رح نفرجي",
+          "transliteration": "ma ra7 nfarji",
+          "english": "we won't show"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما رح تفرجوا",
+          "transliteration": "ma ra7 tfarju",
+          "english": "you (pl) won't show"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما رح يفرجوا",
+          "transliteration": "ma ra7 yfarju",
+          "english": "they won't show"
+        }
+      ]
+    }
+  }
+}

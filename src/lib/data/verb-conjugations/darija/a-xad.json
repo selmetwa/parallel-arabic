@@ -1,0 +1,318 @@
+{
+  "slug": "a-xad",
+  "arabic": "خدا",
+  "transliteration": "khda",
+  "english": "to take",
+  "wordId": null,
+  "rootLetters": "أ خ ذ",
+  "verbClass": "irregular",
+  "notes": "Irregular: khda, he took; khdit, I took; kanakhod, I take.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "خديت",
+          "transliteration": "khdit",
+          "english": "I took"
+        },
+        {
+          "person": "enta",
+          "arabic": "خديتي",
+          "transliteration": "khditi",
+          "english": "you (m) took"
+        },
+        {
+          "person": "enti",
+          "arabic": "خديتي",
+          "transliteration": "khditi",
+          "english": "you (f) took"
+        },
+        {
+          "person": "howa",
+          "arabic": "خدا",
+          "transliteration": "khda",
+          "english": "he took"
+        },
+        {
+          "person": "heya",
+          "arabic": "خدات",
+          "transliteration": "khdat",
+          "english": "she took"
+        },
+        {
+          "person": "ehna",
+          "arabic": "خدينا",
+          "transliteration": "khdina",
+          "english": "we took"
+        },
+        {
+          "person": "entu",
+          "arabic": "خديتيو",
+          "transliteration": "khditiw",
+          "english": "you (pl) took"
+        },
+        {
+          "person": "homma",
+          "arabic": "خداو",
+          "transliteration": "khdaw",
+          "english": "they took"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما خديتش",
+          "transliteration": "ma khditsh",
+          "english": "I didn't take"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما خديتيش",
+          "transliteration": "ma khditish",
+          "english": "you (m) didn't take"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما خديتيش",
+          "transliteration": "ma khditish",
+          "english": "you (f) didn't take"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما خداش",
+          "transliteration": "ma khdash",
+          "english": "he didn't take"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما خداتش",
+          "transliteration": "ma khdatsh",
+          "english": "she didn't take"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما خديناش",
+          "transliteration": "ma khdinash",
+          "english": "we didn't take"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما خديتيوش",
+          "transliteration": "ma khditiwsh",
+          "english": "you (pl) didn't take"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما خداوش",
+          "transliteration": "ma khdawsh",
+          "english": "they didn't take"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كناخد",
+          "transliteration": "kanakhod",
+          "english": "I take"
+        },
+        {
+          "person": "enta",
+          "arabic": "كتاخد",
+          "transliteration": "katakhod",
+          "english": "you (m) take"
+        },
+        {
+          "person": "enti",
+          "arabic": "كتاخدي",
+          "transliteration": "katakhdi",
+          "english": "you (f) take"
+        },
+        {
+          "person": "howa",
+          "arabic": "كياخد",
+          "transliteration": "kayakhod",
+          "english": "he takes"
+        },
+        {
+          "person": "heya",
+          "arabic": "كتاخد",
+          "transliteration": "katakhod",
+          "english": "she takes"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كناخدو",
+          "transliteration": "kanakhdu",
+          "english": "we take"
+        },
+        {
+          "person": "entu",
+          "arabic": "كتاخدو",
+          "transliteration": "katakhdu",
+          "english": "you (pl) take"
+        },
+        {
+          "person": "homma",
+          "arabic": "كياخدو",
+          "transliteration": "kayakhdu",
+          "english": "they take"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كناخدش",
+          "transliteration": "ma kanakhodsh",
+          "english": "I don't take"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كتاخدش",
+          "transliteration": "ma katakhodsh",
+          "english": "you (m) don't take"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كتاخديش",
+          "transliteration": "ma katakhdish",
+          "english": "you (f) don't take"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كياخدش",
+          "transliteration": "ma kayakhodsh",
+          "english": "he doesn't take"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كتاخدش",
+          "transliteration": "ma katakhodsh",
+          "english": "she doesn't take"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كناخدوش",
+          "transliteration": "ma kanakhdush",
+          "english": "we don't take"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كتاخدوش",
+          "transliteration": "ma katakhdush",
+          "english": "you (pl) don't take"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كياخدوش",
+          "transliteration": "ma kayakhdush",
+          "english": "they don't take"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "غادي ناخد",
+          "transliteration": "ghadi nakhod",
+          "english": "I will take"
+        },
+        {
+          "person": "enta",
+          "arabic": "غادي تاخد",
+          "transliteration": "ghadi takhod",
+          "english": "you (m) will take"
+        },
+        {
+          "person": "enti",
+          "arabic": "غادي تاخدي",
+          "transliteration": "ghadi takhdi",
+          "english": "you (f) will take"
+        },
+        {
+          "person": "howa",
+          "arabic": "غادي ياخد",
+          "transliteration": "ghadi yakhod",
+          "english": "he will take"
+        },
+        {
+          "person": "heya",
+          "arabic": "غادي تاخد",
+          "transliteration": "ghadi takhod",
+          "english": "she will take"
+        },
+        {
+          "person": "ehna",
+          "arabic": "غادي ناخدو",
+          "transliteration": "ghadi nakhdu",
+          "english": "we will take"
+        },
+        {
+          "person": "entu",
+          "arabic": "غادي تاخدو",
+          "transliteration": "ghadi takhdu",
+          "english": "you (pl) will take"
+        },
+        {
+          "person": "homma",
+          "arabic": "غادي ياخدو",
+          "transliteration": "ghadi yakhdu",
+          "english": "they will take"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما غاديش ناخد",
+          "transliteration": "ma ghadish nakhod",
+          "english": "I won't take"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما غاديش تاخد",
+          "transliteration": "ma ghadish takhod",
+          "english": "you (m) won't take"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما غاديش تاخدي",
+          "transliteration": "ma ghadish takhdi",
+          "english": "you (f) won't take"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما غاديش ياخد",
+          "transliteration": "ma ghadish yakhod",
+          "english": "he won't take"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما غاديش تاخد",
+          "transliteration": "ma ghadish takhod",
+          "english": "she won't take"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما غاديش ناخدو",
+          "transliteration": "ma ghadish nakhdu",
+          "english": "we won't take"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما غاديش تاخدو",
+          "transliteration": "ma ghadish takhdu",
+          "english": "you (pl) won't take"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما غاديش ياخدو",
+          "transliteration": "ma ghadish yakhdu",
+          "english": "they won't take"
+        }
+      ]
+    }
+  }
+}

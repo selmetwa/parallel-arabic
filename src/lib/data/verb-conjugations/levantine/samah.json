@@ -1,0 +1,318 @@
+{
+  "slug": "samah",
+  "arabic": "سمح",
+  "transliteration": "sama7",
+  "english": "to allow",
+  "wordId": null,
+  "rootLetters": "س م ح",
+  "verbClass": "sound",
+  "notes": "Regular verb with an a in the present (bisma7).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سمحت",
+          "transliteration": "sama7t",
+          "english": "I allowed"
+        },
+        {
+          "person": "enta",
+          "arabic": "سمحت",
+          "transliteration": "sama7t",
+          "english": "you (m) allowed"
+        },
+        {
+          "person": "enti",
+          "arabic": "سمحتي",
+          "transliteration": "sama7ti",
+          "english": "you (f) allowed"
+        },
+        {
+          "person": "howa",
+          "arabic": "سمح",
+          "transliteration": "sama7",
+          "english": "he allowed"
+        },
+        {
+          "person": "heya",
+          "arabic": "سمحت",
+          "transliteration": "sam7it",
+          "english": "she allowed"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سمحنا",
+          "transliteration": "sama7na",
+          "english": "we allowed"
+        },
+        {
+          "person": "entu",
+          "arabic": "سمحتوا",
+          "transliteration": "sama7tu",
+          "english": "you (pl) allowed"
+        },
+        {
+          "person": "homma",
+          "arabic": "سمحوا",
+          "transliteration": "sam7u",
+          "english": "they allowed"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما سمحت",
+          "transliteration": "ma sama7t",
+          "english": "I didn't allow"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما سمحت",
+          "transliteration": "ma sama7t",
+          "english": "you (m) didn't allow"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما سمحتي",
+          "transliteration": "ma sama7ti",
+          "english": "you (f) didn't allow"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما سمح",
+          "transliteration": "ma sama7",
+          "english": "he didn't allow"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما سمحت",
+          "transliteration": "ma sam7it",
+          "english": "she didn't allow"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما سمحنا",
+          "transliteration": "ma sama7na",
+          "english": "we didn't allow"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما سمحتوا",
+          "transliteration": "ma sama7tu",
+          "english": "you (pl) didn't allow"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما سمحوا",
+          "transliteration": "ma sam7u",
+          "english": "they didn't allow"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بسمح",
+          "transliteration": "bisma7",
+          "english": "I allow"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتسمح",
+          "transliteration": "btisma7",
+          "english": "you (m) allow"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتسمحي",
+          "transliteration": "btisma7i",
+          "english": "you (f) allow"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيسمح",
+          "transliteration": "byisma7",
+          "english": "he allows"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتسمح",
+          "transliteration": "btisma7",
+          "english": "she allows"
+        },
+        {
+          "person": "ehna",
+          "arabic": "منسمح",
+          "transliteration": "mnisma7",
+          "english": "we allow"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتسمحوا",
+          "transliteration": "btisma7u",
+          "english": "you (pl) allow"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيسمحوا",
+          "transliteration": "byisma7u",
+          "english": "they allow"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما بسمح",
+          "transliteration": "ma bisma7",
+          "english": "I don't allow"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتسمح",
+          "transliteration": "ma btisma7",
+          "english": "you (m) don't allow"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتسمحي",
+          "transliteration": "ma btisma7i",
+          "english": "you (f) don't allow"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيسمح",
+          "transliteration": "ma byisma7",
+          "english": "he doesn't allow"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتسمح",
+          "transliteration": "ma btisma7",
+          "english": "she doesn't allow"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما منسمح",
+          "transliteration": "ma mnisma7",
+          "english": "we don't allow"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتسمحوا",
+          "transliteration": "ma btisma7u",
+          "english": "you (pl) don't allow"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيسمحوا",
+          "transliteration": "ma byisma7u",
+          "english": "they don't allow"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "رح اسمح",
+          "transliteration": "ra7 isma7",
+          "english": "I will allow"
+        },
+        {
+          "person": "enta",
+          "arabic": "رح تسمح",
+          "transliteration": "ra7 tisma7",
+          "english": "you (m) will allow"
+        },
+        {
+          "person": "enti",
+          "arabic": "رح تسمحي",
+          "transliteration": "ra7 tisma7i",
+          "english": "you (f) will allow"
+        },
+        {
+          "person": "howa",
+          "arabic": "رح يسمح",
+          "transliteration": "ra7 yisma7",
+          "english": "he will allow"
+        },
+        {
+          "person": "heya",
+          "arabic": "رح تسمح",
+          "transliteration": "ra7 tisma7",
+          "english": "she will allow"
+        },
+        {
+          "person": "ehna",
+          "arabic": "رح نسمح",
+          "transliteration": "ra7 nisma7",
+          "english": "we will allow"
+        },
+        {
+          "person": "entu",
+          "arabic": "رح تسمحوا",
+          "transliteration": "ra7 tisma7u",
+          "english": "you (pl) will allow"
+        },
+        {
+          "person": "homma",
+          "arabic": "رح يسمحوا",
+          "transliteration": "ra7 yisma7u",
+          "english": "they will allow"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما رح اسمح",
+          "transliteration": "ma ra7 isma7",
+          "english": "I won't allow"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما رح تسمح",
+          "transliteration": "ma ra7 tisma7",
+          "english": "you (m) won't allow"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما رح تسمحي",
+          "transliteration": "ma ra7 tisma7i",
+          "english": "you (f) won't allow"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما رح يسمح",
+          "transliteration": "ma ra7 yisma7",
+          "english": "he won't allow"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما رح تسمح",
+          "transliteration": "ma ra7 tisma7",
+          "english": "she won't allow"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما رح نسمح",
+          "transliteration": "ma ra7 nisma7",
+          "english": "we won't allow"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما رح تسمحوا",
+          "transliteration": "ma ra7 tisma7u",
+          "english": "you (pl) won't allow"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما رح يسمحوا",
+          "transliteration": "ma ra7 yisma7u",
+          "english": "they won't allow"
+        }
+      ]
+    }
+  }
+}

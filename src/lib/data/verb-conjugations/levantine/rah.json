@@ -1,0 +1,318 @@
+{
+  "slug": "rah",
+  "arabic": "راح",
+  "transliteration": "ra7",
+  "english": "to go",
+  "wordId": null,
+  "rootLetters": "ر و ح",
+  "verbClass": "hollow",
+  "notes": "Hollow verb: ru7t, I went; bru7, I go. The future marker ra7 comes from this verb.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "رحت",
+          "transliteration": "ru7t",
+          "english": "I went"
+        },
+        {
+          "person": "enta",
+          "arabic": "رحت",
+          "transliteration": "ru7t",
+          "english": "you (m) went"
+        },
+        {
+          "person": "enti",
+          "arabic": "رحتي",
+          "transliteration": "ru7ti",
+          "english": "you (f) went"
+        },
+        {
+          "person": "howa",
+          "arabic": "راح",
+          "transliteration": "ra7",
+          "english": "he went"
+        },
+        {
+          "person": "heya",
+          "arabic": "راحت",
+          "transliteration": "ra7it",
+          "english": "she went"
+        },
+        {
+          "person": "ehna",
+          "arabic": "رحنا",
+          "transliteration": "ru7na",
+          "english": "we went"
+        },
+        {
+          "person": "entu",
+          "arabic": "رحتوا",
+          "transliteration": "ru7tu",
+          "english": "you (pl) went"
+        },
+        {
+          "person": "homma",
+          "arabic": "راحوا",
+          "transliteration": "ra7u",
+          "english": "they went"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما رحت",
+          "transliteration": "ma ru7t",
+          "english": "I didn't go"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما رحت",
+          "transliteration": "ma ru7t",
+          "english": "you (m) didn't go"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما رحتي",
+          "transliteration": "ma ru7ti",
+          "english": "you (f) didn't go"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما راح",
+          "transliteration": "ma ra7",
+          "english": "he didn't go"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما راحت",
+          "transliteration": "ma ra7it",
+          "english": "she didn't go"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما رحنا",
+          "transliteration": "ma ru7na",
+          "english": "we didn't go"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما رحتوا",
+          "transliteration": "ma ru7tu",
+          "english": "you (pl) didn't go"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما راحوا",
+          "transliteration": "ma ra7u",
+          "english": "they didn't go"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بروح",
+          "transliteration": "bru7",
+          "english": "I go"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتروح",
+          "transliteration": "btru7",
+          "english": "you (m) go"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتروحي",
+          "transliteration": "btru7i",
+          "english": "you (f) go"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيروح",
+          "transliteration": "biru7",
+          "english": "he goes"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتروح",
+          "transliteration": "btru7",
+          "english": "she goes"
+        },
+        {
+          "person": "ehna",
+          "arabic": "منروح",
+          "transliteration": "mnru7",
+          "english": "we go"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتروحوا",
+          "transliteration": "btru7u",
+          "english": "you (pl) go"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيروحوا",
+          "transliteration": "biru7u",
+          "english": "they go"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما بروح",
+          "transliteration": "ma bru7",
+          "english": "I don't go"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتروح",
+          "transliteration": "ma btru7",
+          "english": "you (m) don't go"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتروحي",
+          "transliteration": "ma btru7i",
+          "english": "you (f) don't go"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيروح",
+          "transliteration": "ma biru7",
+          "english": "he doesn't go"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتروح",
+          "transliteration": "ma btru7",
+          "english": "she doesn't go"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما منروح",
+          "transliteration": "ma mnru7",
+          "english": "we don't go"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتروحوا",
+          "transliteration": "ma btru7u",
+          "english": "you (pl) don't go"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيروحوا",
+          "transliteration": "ma biru7u",
+          "english": "they don't go"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "رح روح",
+          "transliteration": "ra7 ru7",
+          "english": "I will go"
+        },
+        {
+          "person": "enta",
+          "arabic": "رح تروح",
+          "transliteration": "ra7 tru7",
+          "english": "you (m) will go"
+        },
+        {
+          "person": "enti",
+          "arabic": "رح تروحي",
+          "transliteration": "ra7 tru7i",
+          "english": "you (f) will go"
+        },
+        {
+          "person": "howa",
+          "arabic": "رح يروح",
+          "transliteration": "ra7 yru7",
+          "english": "he will go"
+        },
+        {
+          "person": "heya",
+          "arabic": "رح تروح",
+          "transliteration": "ra7 tru7",
+          "english": "she will go"
+        },
+        {
+          "person": "ehna",
+          "arabic": "رح نروح",
+          "transliteration": "ra7 nru7",
+          "english": "we will go"
+        },
+        {
+          "person": "entu",
+          "arabic": "رح تروحوا",
+          "transliteration": "ra7 tru7u",
+          "english": "you (pl) will go"
+        },
+        {
+          "person": "homma",
+          "arabic": "رح يروحوا",
+          "transliteration": "ra7 yru7u",
+          "english": "they will go"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما رح روح",
+          "transliteration": "ma ra7 ru7",
+          "english": "I won't go"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما رح تروح",
+          "transliteration": "ma ra7 tru7",
+          "english": "you (m) won't go"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما رح تروحي",
+          "transliteration": "ma ra7 tru7i",
+          "english": "you (f) won't go"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما رح يروح",
+          "transliteration": "ma ra7 yru7",
+          "english": "he won't go"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما رح تروح",
+          "transliteration": "ma ra7 tru7",
+          "english": "she won't go"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما رح نروح",
+          "transliteration": "ma ra7 nru7",
+          "english": "we won't go"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما رح تروحوا",
+          "transliteration": "ma ra7 tru7u",
+          "english": "you (pl) won't go"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما رح يروحوا",
+          "transliteration": "ma ra7 yru7u",
+          "english": "they won't go"
+        }
+      ]
+    }
+  }
+}

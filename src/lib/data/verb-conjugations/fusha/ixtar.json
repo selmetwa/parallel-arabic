@@ -1,0 +1,318 @@
+{
+  "slug": "ixtar",
+  "arabic": "اخْتَارَ",
+  "transliteration": "ikhtara",
+  "english": "to choose",
+  "wordId": null,
+  "rootLetters": "خ ي ر",
+  "verbClass": "hollow",
+  "notes": "Hollow Form VIII verb: the long a shortens before -tu (ikhtartu).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "اخْتَرْتُ",
+          "transliteration": "ikhtartu",
+          "english": "I chose"
+        },
+        {
+          "person": "enta",
+          "arabic": "اخْتَرْتَ",
+          "transliteration": "ikhtarta",
+          "english": "you (m) chose"
+        },
+        {
+          "person": "enti",
+          "arabic": "اخْتَرْتِ",
+          "transliteration": "ikhtarti",
+          "english": "you (f) chose"
+        },
+        {
+          "person": "howa",
+          "arabic": "اخْتَارَ",
+          "transliteration": "ikhtara",
+          "english": "he chose"
+        },
+        {
+          "person": "heya",
+          "arabic": "اخْتَارَتْ",
+          "transliteration": "ikhtarat",
+          "english": "she chose"
+        },
+        {
+          "person": "ehna",
+          "arabic": "اخْتَرْنَا",
+          "transliteration": "ikhtarna",
+          "english": "we chose"
+        },
+        {
+          "person": "entu",
+          "arabic": "اخْتَرْتُمْ",
+          "transliteration": "ikhtartum",
+          "english": "you (pl) chose"
+        },
+        {
+          "person": "homma",
+          "arabic": "اخْتَارُوا",
+          "transliteration": "ikhtaru",
+          "english": "they chose"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مَا اخْتَرْتُ",
+          "transliteration": "ma ikhtartu",
+          "english": "I didn't choose"
+        },
+        {
+          "person": "enta",
+          "arabic": "مَا اخْتَرْتَ",
+          "transliteration": "ma ikhtarta",
+          "english": "you (m) didn't choose"
+        },
+        {
+          "person": "enti",
+          "arabic": "مَا اخْتَرْتِ",
+          "transliteration": "ma ikhtarti",
+          "english": "you (f) didn't choose"
+        },
+        {
+          "person": "howa",
+          "arabic": "مَا اخْتَارَ",
+          "transliteration": "ma ikhtara",
+          "english": "he didn't choose"
+        },
+        {
+          "person": "heya",
+          "arabic": "مَا اخْتَارَتْ",
+          "transliteration": "ma ikhtarat",
+          "english": "she didn't choose"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مَا اخْتَرْنَا",
+          "transliteration": "ma ikhtarna",
+          "english": "we didn't choose"
+        },
+        {
+          "person": "entu",
+          "arabic": "مَا اخْتَرْتُمْ",
+          "transliteration": "ma ikhtartum",
+          "english": "you (pl) didn't choose"
+        },
+        {
+          "person": "homma",
+          "arabic": "مَا اخْتَارُوا",
+          "transliteration": "ma ikhtaru",
+          "english": "they didn't choose"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أَخْتَارُ",
+          "transliteration": "akhtaru",
+          "english": "I choose"
+        },
+        {
+          "person": "enta",
+          "arabic": "تَخْتَارُ",
+          "transliteration": "takhtaru",
+          "english": "you (m) choose"
+        },
+        {
+          "person": "enti",
+          "arabic": "تَخْتَارِينَ",
+          "transliteration": "takhtarina",
+          "english": "you (f) choose"
+        },
+        {
+          "person": "howa",
+          "arabic": "يَخْتَارُ",
+          "transliteration": "yakhtaru",
+          "english": "he chooses"
+        },
+        {
+          "person": "heya",
+          "arabic": "تَخْتَارُ",
+          "transliteration": "takhtaru",
+          "english": "she chooses"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نَخْتَارُ",
+          "transliteration": "nakhtaru",
+          "english": "we choose"
+        },
+        {
+          "person": "entu",
+          "arabic": "تَخْتَارُونَ",
+          "transliteration": "takhtaruna",
+          "english": "you (pl) choose"
+        },
+        {
+          "person": "homma",
+          "arabic": "يَخْتَارُونَ",
+          "transliteration": "yakhtaruna",
+          "english": "they choose"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَا أَخْتَارُ",
+          "transliteration": "la akhtaru",
+          "english": "I don't choose"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَا تَخْتَارُ",
+          "transliteration": "la takhtaru",
+          "english": "you (m) don't choose"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَا تَخْتَارِينَ",
+          "transliteration": "la takhtarina",
+          "english": "you (f) don't choose"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَا يَخْتَارُ",
+          "transliteration": "la yakhtaru",
+          "english": "he doesn't choose"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَا تَخْتَارُ",
+          "transliteration": "la takhtaru",
+          "english": "she doesn't choose"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَا نَخْتَارُ",
+          "transliteration": "la nakhtaru",
+          "english": "we don't choose"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَا تَخْتَارُونَ",
+          "transliteration": "la takhtaruna",
+          "english": "you (pl) don't choose"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَا يَخْتَارُونَ",
+          "transliteration": "la yakhtaruna",
+          "english": "they don't choose"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَأَخْتَارُ",
+          "transliteration": "sa2akhtaru",
+          "english": "I will choose"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَتَخْتَارُ",
+          "transliteration": "satakhtaru",
+          "english": "you (m) will choose"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَتَخْتَارِينَ",
+          "transliteration": "satakhtarina",
+          "english": "you (f) will choose"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَيَخْتَارُ",
+          "transliteration": "sayakhtaru",
+          "english": "he will choose"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَتَخْتَارُ",
+          "transliteration": "satakhtaru",
+          "english": "she will choose"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَنَخْتَارُ",
+          "transliteration": "sanakhtaru",
+          "english": "we will choose"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَتَخْتَارُونَ",
+          "transliteration": "satakhtaruna",
+          "english": "you (pl) will choose"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَيَخْتَارُونَ",
+          "transliteration": "sayakhtaruna",
+          "english": "they will choose"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَنْ أَخْتَارَ",
+          "transliteration": "lan akhtara",
+          "english": "I won't choose"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَنْ تَخْتَارَ",
+          "transliteration": "lan takhtara",
+          "english": "you (m) won't choose"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَنْ تَخْتَارِي",
+          "transliteration": "lan takhtari",
+          "english": "you (f) won't choose"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَنْ يَخْتَارَ",
+          "transliteration": "lan yakhtara",
+          "english": "he won't choose"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَنْ تَخْتَارَ",
+          "transliteration": "lan takhtara",
+          "english": "she won't choose"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَنْ نَخْتَارَ",
+          "transliteration": "lan nakhtara",
+          "english": "we won't choose"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَنْ تَخْتَارُوا",
+          "transliteration": "lan takhtaru",
+          "english": "you (pl) won't choose"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَنْ يَخْتَارُوا",
+          "transliteration": "lan yakhtaru",
+          "english": "they won't choose"
+        }
+      ]
+    }
+  }
+}

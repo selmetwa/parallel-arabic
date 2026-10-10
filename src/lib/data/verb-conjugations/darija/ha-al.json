@@ -1,0 +1,318 @@
+{
+  "slug": "ha-al",
+  "arabic": "وقع",
+  "transliteration": "wqe3",
+  "english": "to happen",
+  "wordId": null,
+  "rootLetters": "و ق ع",
+  "verbClass": "sound",
+  "notes": "Mostly used for things: ash wqe3? What happened?",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "وقعت",
+          "transliteration": "wqe3t",
+          "english": "I happened"
+        },
+        {
+          "person": "enta",
+          "arabic": "وقعتي",
+          "transliteration": "wqe3ti",
+          "english": "you (m) happened"
+        },
+        {
+          "person": "enti",
+          "arabic": "وقعتي",
+          "transliteration": "wqe3ti",
+          "english": "you (f) happened"
+        },
+        {
+          "person": "howa",
+          "arabic": "وقع",
+          "transliteration": "wqe3",
+          "english": "he happened"
+        },
+        {
+          "person": "heya",
+          "arabic": "وقعات",
+          "transliteration": "weq3at",
+          "english": "she happened"
+        },
+        {
+          "person": "ehna",
+          "arabic": "وقعنا",
+          "transliteration": "wqe3na",
+          "english": "we happened"
+        },
+        {
+          "person": "entu",
+          "arabic": "وقعتيو",
+          "transliteration": "wqe3tiw",
+          "english": "you (pl) happened"
+        },
+        {
+          "person": "homma",
+          "arabic": "وقعو",
+          "transliteration": "weq3u",
+          "english": "they happened"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما وقعتش",
+          "transliteration": "ma wqe3tsh",
+          "english": "I didn't happen"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما وقعتيش",
+          "transliteration": "ma wqe3tish",
+          "english": "you (m) didn't happen"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما وقعتيش",
+          "transliteration": "ma wqe3tish",
+          "english": "you (f) didn't happen"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما وقعش",
+          "transliteration": "ma wqe3sh",
+          "english": "he didn't happen"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما وقعاتش",
+          "transliteration": "ma weq3atsh",
+          "english": "she didn't happen"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما وقعناش",
+          "transliteration": "ma wqe3nash",
+          "english": "we didn't happen"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما وقعتيوش",
+          "transliteration": "ma wqe3tiwsh",
+          "english": "you (pl) didn't happen"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما وقعوش",
+          "transliteration": "ma weq3ush",
+          "english": "they didn't happen"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كنوقع",
+          "transliteration": "kanwqe3",
+          "english": "I happen"
+        },
+        {
+          "person": "enta",
+          "arabic": "كتوقع",
+          "transliteration": "katwqe3",
+          "english": "you (m) happen"
+        },
+        {
+          "person": "enti",
+          "arabic": "كتوقعي",
+          "transliteration": "katweq3i",
+          "english": "you (f) happen"
+        },
+        {
+          "person": "howa",
+          "arabic": "كيوقع",
+          "transliteration": "kaywqe3",
+          "english": "he happens"
+        },
+        {
+          "person": "heya",
+          "arabic": "كتوقع",
+          "transliteration": "katwqe3",
+          "english": "she happens"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كنوقعو",
+          "transliteration": "kanweq3u",
+          "english": "we happen"
+        },
+        {
+          "person": "entu",
+          "arabic": "كتوقعو",
+          "transliteration": "katweq3u",
+          "english": "you (pl) happen"
+        },
+        {
+          "person": "homma",
+          "arabic": "كيوقعو",
+          "transliteration": "kayweq3u",
+          "english": "they happen"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كنوقعش",
+          "transliteration": "ma kanwqe3sh",
+          "english": "I don't happen"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كتوقعش",
+          "transliteration": "ma katwqe3sh",
+          "english": "you (m) don't happen"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كتوقعيش",
+          "transliteration": "ma katweq3ish",
+          "english": "you (f) don't happen"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كيوقعش",
+          "transliteration": "ma kaywqe3sh",
+          "english": "he doesn't happen"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كتوقعش",
+          "transliteration": "ma katwqe3sh",
+          "english": "she doesn't happen"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كنوقعوش",
+          "transliteration": "ma kanweq3ush",
+          "english": "we don't happen"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كتوقعوش",
+          "transliteration": "ma katweq3ush",
+          "english": "you (pl) don't happen"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كيوقعوش",
+          "transliteration": "ma kayweq3ush",
+          "english": "they don't happen"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "غادي نوقع",
+          "transliteration": "ghadi nwqe3",
+          "english": "I will happen"
+        },
+        {
+          "person": "enta",
+          "arabic": "غادي توقع",
+          "transliteration": "ghadi twqe3",
+          "english": "you (m) will happen"
+        },
+        {
+          "person": "enti",
+          "arabic": "غادي توقعي",
+          "transliteration": "ghadi tweq3i",
+          "english": "you (f) will happen"
+        },
+        {
+          "person": "howa",
+          "arabic": "غادي يوقع",
+          "transliteration": "ghadi ywqe3",
+          "english": "he will happen"
+        },
+        {
+          "person": "heya",
+          "arabic": "غادي توقع",
+          "transliteration": "ghadi twqe3",
+          "english": "she will happen"
+        },
+        {
+          "person": "ehna",
+          "arabic": "غادي نوقعو",
+          "transliteration": "ghadi nweq3u",
+          "english": "we will happen"
+        },
+        {
+          "person": "entu",
+          "arabic": "غادي توقعو",
+          "transliteration": "ghadi tweq3u",
+          "english": "you (pl) will happen"
+        },
+        {
+          "person": "homma",
+          "arabic": "غادي يوقعو",
+          "transliteration": "ghadi yweq3u",
+          "english": "they will happen"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما غاديش نوقع",
+          "transliteration": "ma ghadish nwqe3",
+          "english": "I won't happen"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما غاديش توقع",
+          "transliteration": "ma ghadish twqe3",
+          "english": "you (m) won't happen"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما غاديش توقعي",
+          "transliteration": "ma ghadish tweq3i",
+          "english": "you (f) won't happen"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما غاديش يوقع",
+          "transliteration": "ma ghadish ywqe3",
+          "english": "he won't happen"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما غاديش توقع",
+          "transliteration": "ma ghadish twqe3",
+          "english": "she won't happen"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما غاديش نوقعو",
+          "transliteration": "ma ghadish nweq3u",
+          "english": "we won't happen"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما غاديش توقعو",
+          "transliteration": "ma ghadish tweq3u",
+          "english": "you (pl) won't happen"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما غاديش يوقعو",
+          "transliteration": "ma ghadish yweq3u",
+          "english": "they won't happen"
+        }
+      ]
+    }
+  }
+}

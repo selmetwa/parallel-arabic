@@ -1,0 +1,318 @@
+{
+  "slug": "kan",
+  "arabic": "كان",
+  "transliteration": "kan",
+  "english": "to be",
+  "wordId": null,
+  "rootLetters": "ك و ن",
+  "verbClass": "hollow",
+  "notes": "Hollow verb: kunt in the past, bikun (usually \"will be\" or \"tends to be\") in the present.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كنت",
+          "transliteration": "kunt",
+          "english": "I was"
+        },
+        {
+          "person": "enta",
+          "arabic": "كنت",
+          "transliteration": "kunt",
+          "english": "you (m) were"
+        },
+        {
+          "person": "enti",
+          "arabic": "كنتي",
+          "transliteration": "kunti",
+          "english": "you (f) were"
+        },
+        {
+          "person": "howa",
+          "arabic": "كان",
+          "transliteration": "kan",
+          "english": "he was"
+        },
+        {
+          "person": "heya",
+          "arabic": "كانت",
+          "transliteration": "kanit",
+          "english": "she was"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كنا",
+          "transliteration": "kunna",
+          "english": "we were"
+        },
+        {
+          "person": "entu",
+          "arabic": "كنتوا",
+          "transliteration": "kuntu",
+          "english": "you (pl) were"
+        },
+        {
+          "person": "homma",
+          "arabic": "كانوا",
+          "transliteration": "kanu",
+          "english": "they were"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كنت",
+          "transliteration": "ma kunt",
+          "english": "I wasn't"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كنت",
+          "transliteration": "ma kunt",
+          "english": "you (m) weren't"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كنتي",
+          "transliteration": "ma kunti",
+          "english": "you (f) weren't"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كان",
+          "transliteration": "ma kan",
+          "english": "he wasn't"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كانت",
+          "transliteration": "ma kanit",
+          "english": "she wasn't"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كنا",
+          "transliteration": "ma kunna",
+          "english": "we weren't"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كنتوا",
+          "transliteration": "ma kuntu",
+          "english": "you (pl) weren't"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كانوا",
+          "transliteration": "ma kanu",
+          "english": "they weren't"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بكون",
+          "transliteration": "bkun",
+          "english": "I am"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتكون",
+          "transliteration": "btkun",
+          "english": "you (m) are"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتكوني",
+          "transliteration": "btkuni",
+          "english": "you (f) are"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيكون",
+          "transliteration": "bikun",
+          "english": "he is"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتكون",
+          "transliteration": "btkun",
+          "english": "she is"
+        },
+        {
+          "person": "ehna",
+          "arabic": "منكون",
+          "transliteration": "mnkun",
+          "english": "we are"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتكونوا",
+          "transliteration": "btkunu",
+          "english": "you (pl) are"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيكونوا",
+          "transliteration": "bikunu",
+          "english": "they are"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما بكون",
+          "transliteration": "ma bkun",
+          "english": "I am not"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتكون",
+          "transliteration": "ma btkun",
+          "english": "you (m) are not"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتكوني",
+          "transliteration": "ma btkuni",
+          "english": "you (f) are not"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيكون",
+          "transliteration": "ma bikun",
+          "english": "he is not"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتكون",
+          "transliteration": "ma btkun",
+          "english": "she is not"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما منكون",
+          "transliteration": "ma mnkun",
+          "english": "we are not"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتكونوا",
+          "transliteration": "ma btkunu",
+          "english": "you (pl) are not"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيكونوا",
+          "transliteration": "ma bikunu",
+          "english": "they are not"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "رح كون",
+          "transliteration": "ra7 kun",
+          "english": "I will be"
+        },
+        {
+          "person": "enta",
+          "arabic": "رح تكون",
+          "transliteration": "ra7 tkun",
+          "english": "you (m) will be"
+        },
+        {
+          "person": "enti",
+          "arabic": "رح تكوني",
+          "transliteration": "ra7 tkuni",
+          "english": "you (f) will be"
+        },
+        {
+          "person": "howa",
+          "arabic": "رح يكون",
+          "transliteration": "ra7 ykun",
+          "english": "he will be"
+        },
+        {
+          "person": "heya",
+          "arabic": "رح تكون",
+          "transliteration": "ra7 tkun",
+          "english": "she will be"
+        },
+        {
+          "person": "ehna",
+          "arabic": "رح نكون",
+          "transliteration": "ra7 nkun",
+          "english": "we will be"
+        },
+        {
+          "person": "entu",
+          "arabic": "رح تكونوا",
+          "transliteration": "ra7 tkunu",
+          "english": "you (pl) will be"
+        },
+        {
+          "person": "homma",
+          "arabic": "رح يكونوا",
+          "transliteration": "ra7 ykunu",
+          "english": "they will be"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما رح كون",
+          "transliteration": "ma ra7 kun",
+          "english": "I won't be"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما رح تكون",
+          "transliteration": "ma ra7 tkun",
+          "english": "you (m) won't be"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما رح تكوني",
+          "transliteration": "ma ra7 tkuni",
+          "english": "you (f) won't be"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما رح يكون",
+          "transliteration": "ma ra7 ykun",
+          "english": "he won't be"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما رح تكون",
+          "transliteration": "ma ra7 tkun",
+          "english": "she won't be"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما رح نكون",
+          "transliteration": "ma ra7 nkun",
+          "english": "we won't be"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما رح تكونوا",
+          "transliteration": "ma ra7 tkunu",
+          "english": "you (pl) won't be"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما رح يكونوا",
+          "transliteration": "ma ra7 ykunu",
+          "english": "they won't be"
+        }
+      ]
+    }
+  }
+}

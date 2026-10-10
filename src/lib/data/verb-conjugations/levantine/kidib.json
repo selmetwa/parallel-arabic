@@ -1,0 +1,318 @@
+{
+  "slug": "kidib",
+  "arabic": "كذب",
+  "transliteration": "kazab",
+  "english": "to lie",
+  "wordId": null,
+  "rootLetters": "ك ذ ب",
+  "verbClass": "sound",
+  "notes": "Regular verb; the dh of Fusha is pronounced z: bikzob, I lie.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كذبت",
+          "transliteration": "kazabt",
+          "english": "I lied"
+        },
+        {
+          "person": "enta",
+          "arabic": "كذبت",
+          "transliteration": "kazabt",
+          "english": "you (m) lied"
+        },
+        {
+          "person": "enti",
+          "arabic": "كذبتي",
+          "transliteration": "kazabti",
+          "english": "you (f) lied"
+        },
+        {
+          "person": "howa",
+          "arabic": "كذب",
+          "transliteration": "kazab",
+          "english": "he lied"
+        },
+        {
+          "person": "heya",
+          "arabic": "كذبت",
+          "transliteration": "kazbit",
+          "english": "she lied"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كذبنا",
+          "transliteration": "kazabna",
+          "english": "we lied"
+        },
+        {
+          "person": "entu",
+          "arabic": "كذبتوا",
+          "transliteration": "kazabtu",
+          "english": "you (pl) lied"
+        },
+        {
+          "person": "homma",
+          "arabic": "كذبوا",
+          "transliteration": "kazbu",
+          "english": "they lied"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كذبت",
+          "transliteration": "ma kazabt",
+          "english": "I didn't lie"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كذبت",
+          "transliteration": "ma kazabt",
+          "english": "you (m) didn't lie"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كذبتي",
+          "transliteration": "ma kazabti",
+          "english": "you (f) didn't lie"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كذب",
+          "transliteration": "ma kazab",
+          "english": "he didn't lie"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كذبت",
+          "transliteration": "ma kazbit",
+          "english": "she didn't lie"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كذبنا",
+          "transliteration": "ma kazabna",
+          "english": "we didn't lie"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كذبتوا",
+          "transliteration": "ma kazabtu",
+          "english": "you (pl) didn't lie"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كذبوا",
+          "transliteration": "ma kazbu",
+          "english": "they didn't lie"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بكذب",
+          "transliteration": "bikzob",
+          "english": "I lie"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتكذب",
+          "transliteration": "btikzob",
+          "english": "you (m) lie"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتكذبي",
+          "transliteration": "btikzbi",
+          "english": "you (f) lie"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيكذب",
+          "transliteration": "byikzob",
+          "english": "he lies"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتكذب",
+          "transliteration": "btikzob",
+          "english": "she lies"
+        },
+        {
+          "person": "ehna",
+          "arabic": "منكذب",
+          "transliteration": "mnikzob",
+          "english": "we lie"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتكذبوا",
+          "transliteration": "btikzbu",
+          "english": "you (pl) lie"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيكذبوا",
+          "transliteration": "byikzbu",
+          "english": "they lie"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما بكذب",
+          "transliteration": "ma bikzob",
+          "english": "I don't lie"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتكذب",
+          "transliteration": "ma btikzob",
+          "english": "you (m) don't lie"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتكذبي",
+          "transliteration": "ma btikzbi",
+          "english": "you (f) don't lie"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيكذب",
+          "transliteration": "ma byikzob",
+          "english": "he doesn't lie"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتكذب",
+          "transliteration": "ma btikzob",
+          "english": "she doesn't lie"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما منكذب",
+          "transliteration": "ma mnikzob",
+          "english": "we don't lie"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتكذبوا",
+          "transliteration": "ma btikzbu",
+          "english": "you (pl) don't lie"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيكذبوا",
+          "transliteration": "ma byikzbu",
+          "english": "they don't lie"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "رح اكذب",
+          "transliteration": "ra7 ikzob",
+          "english": "I will lie"
+        },
+        {
+          "person": "enta",
+          "arabic": "رح تكذب",
+          "transliteration": "ra7 tikzob",
+          "english": "you (m) will lie"
+        },
+        {
+          "person": "enti",
+          "arabic": "رح تكذبي",
+          "transliteration": "ra7 tikzbi",
+          "english": "you (f) will lie"
+        },
+        {
+          "person": "howa",
+          "arabic": "رح يكذب",
+          "transliteration": "ra7 yikzob",
+          "english": "he will lie"
+        },
+        {
+          "person": "heya",
+          "arabic": "رح تكذب",
+          "transliteration": "ra7 tikzob",
+          "english": "she will lie"
+        },
+        {
+          "person": "ehna",
+          "arabic": "رح نكذب",
+          "transliteration": "ra7 nikzob",
+          "english": "we will lie"
+        },
+        {
+          "person": "entu",
+          "arabic": "رح تكذبوا",
+          "transliteration": "ra7 tikzbu",
+          "english": "you (pl) will lie"
+        },
+        {
+          "person": "homma",
+          "arabic": "رح يكذبوا",
+          "transliteration": "ra7 yikzbu",
+          "english": "they will lie"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما رح اكذب",
+          "transliteration": "ma ra7 ikzob",
+          "english": "I won't lie"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما رح تكذب",
+          "transliteration": "ma ra7 tikzob",
+          "english": "you (m) won't lie"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما رح تكذبي",
+          "transliteration": "ma ra7 tikzbi",
+          "english": "you (f) won't lie"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما رح يكذب",
+          "transliteration": "ma ra7 yikzob",
+          "english": "he won't lie"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما رح تكذب",
+          "transliteration": "ma ra7 tikzob",
+          "english": "she won't lie"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما رح نكذب",
+          "transliteration": "ma ra7 nikzob",
+          "english": "we won't lie"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما رح تكذبوا",
+          "transliteration": "ma ra7 tikzbu",
+          "english": "you (pl) won't lie"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما رح يكذبوا",
+          "transliteration": "ma ra7 yikzbu",
+          "english": "they won't lie"
+        }
+      ]
+    }
+  }
+}

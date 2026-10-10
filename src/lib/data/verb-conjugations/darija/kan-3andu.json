@@ -1,0 +1,318 @@
+{
+  "slug": "kan-3andu",
+  "arabic": "كان عندو",
+  "transliteration": "kan 3endu",
+  "english": "to have",
+  "wordId": null,
+  "rootLetters": "ع ن د",
+  "verbClass": "irregular",
+  "notes": "\"To have\" is 3end plus a pronoun ending: 3endi, I have. The past adds kan, the future ghadi ykun.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كان عندي",
+          "transliteration": "kan 3endi",
+          "english": "I had"
+        },
+        {
+          "person": "enta",
+          "arabic": "كان عندك",
+          "transliteration": "kan 3endek",
+          "english": "you (m) had"
+        },
+        {
+          "person": "enti",
+          "arabic": "كان عندك",
+          "transliteration": "kan 3endek",
+          "english": "you (f) had"
+        },
+        {
+          "person": "howa",
+          "arabic": "كان عندو",
+          "transliteration": "kan 3endu",
+          "english": "he had"
+        },
+        {
+          "person": "heya",
+          "arabic": "كان عندها",
+          "transliteration": "kan 3endha",
+          "english": "she had"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كان عندنا",
+          "transliteration": "kan 3endna",
+          "english": "we had"
+        },
+        {
+          "person": "entu",
+          "arabic": "كان عندكم",
+          "transliteration": "kan 3endkum",
+          "english": "you (pl) had"
+        },
+        {
+          "person": "homma",
+          "arabic": "كان عندهم",
+          "transliteration": "kan 3endhum",
+          "english": "they had"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كانش عندي",
+          "transliteration": "ma kansh 3endi",
+          "english": "I didn't have"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كانش عندك",
+          "transliteration": "ma kansh 3endek",
+          "english": "you (m) didn't have"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كانش عندك",
+          "transliteration": "ma kansh 3endek",
+          "english": "you (f) didn't have"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كانش عندو",
+          "transliteration": "ma kansh 3endu",
+          "english": "he didn't have"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كانش عندها",
+          "transliteration": "ma kansh 3endha",
+          "english": "she didn't have"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كانش عندنا",
+          "transliteration": "ma kansh 3endna",
+          "english": "we didn't have"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كانش عندكم",
+          "transliteration": "ma kansh 3endkum",
+          "english": "you (pl) didn't have"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كانش عندهم",
+          "transliteration": "ma kansh 3endhum",
+          "english": "they didn't have"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "عندي",
+          "transliteration": "3endi",
+          "english": "I have"
+        },
+        {
+          "person": "enta",
+          "arabic": "عندك",
+          "transliteration": "3endek",
+          "english": "you (m) have"
+        },
+        {
+          "person": "enti",
+          "arabic": "عندك",
+          "transliteration": "3endek",
+          "english": "you (f) have"
+        },
+        {
+          "person": "howa",
+          "arabic": "عندو",
+          "transliteration": "3endu",
+          "english": "he has"
+        },
+        {
+          "person": "heya",
+          "arabic": "عندها",
+          "transliteration": "3endha",
+          "english": "she has"
+        },
+        {
+          "person": "ehna",
+          "arabic": "عندنا",
+          "transliteration": "3endna",
+          "english": "we have"
+        },
+        {
+          "person": "entu",
+          "arabic": "عندكم",
+          "transliteration": "3endkum",
+          "english": "you (pl) have"
+        },
+        {
+          "person": "homma",
+          "arabic": "عندهم",
+          "transliteration": "3endhum",
+          "english": "they have"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما عنديش",
+          "transliteration": "ma 3endish",
+          "english": "I don't have"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما عندكش",
+          "transliteration": "ma 3endeksh",
+          "english": "you (m) don't have"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما عندكش",
+          "transliteration": "ma 3endeksh",
+          "english": "you (f) don't have"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما عندوش",
+          "transliteration": "ma 3endush",
+          "english": "he doesn't have"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما عندهاش",
+          "transliteration": "ma 3endhash",
+          "english": "she doesn't have"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما عندناش",
+          "transliteration": "ma 3endnash",
+          "english": "we don't have"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما عندكمش",
+          "transliteration": "ma 3endkumsh",
+          "english": "you (pl) don't have"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما عندهمش",
+          "transliteration": "ma 3endhumsh",
+          "english": "they don't have"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "غادي يكون عندي",
+          "transliteration": "ghadi ykun 3endi",
+          "english": "I will have"
+        },
+        {
+          "person": "enta",
+          "arabic": "غادي يكون عندك",
+          "transliteration": "ghadi ykun 3endek",
+          "english": "you (m) will have"
+        },
+        {
+          "person": "enti",
+          "arabic": "غادي يكون عندك",
+          "transliteration": "ghadi ykun 3endek",
+          "english": "you (f) will have"
+        },
+        {
+          "person": "howa",
+          "arabic": "غادي يكون عندو",
+          "transliteration": "ghadi ykun 3endu",
+          "english": "he will have"
+        },
+        {
+          "person": "heya",
+          "arabic": "غادي يكون عندها",
+          "transliteration": "ghadi ykun 3endha",
+          "english": "she will have"
+        },
+        {
+          "person": "ehna",
+          "arabic": "غادي يكون عندنا",
+          "transliteration": "ghadi ykun 3endna",
+          "english": "we will have"
+        },
+        {
+          "person": "entu",
+          "arabic": "غادي يكون عندكم",
+          "transliteration": "ghadi ykun 3endkum",
+          "english": "you (pl) will have"
+        },
+        {
+          "person": "homma",
+          "arabic": "غادي يكون عندهم",
+          "transliteration": "ghadi ykun 3endhum",
+          "english": "they will have"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما غاديش يكون عندي",
+          "transliteration": "ma ghadish ykun 3endi",
+          "english": "I won't have"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما غاديش يكون عندك",
+          "transliteration": "ma ghadish ykun 3endek",
+          "english": "you (m) won't have"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما غاديش يكون عندك",
+          "transliteration": "ma ghadish ykun 3endek",
+          "english": "you (f) won't have"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما غاديش يكون عندو",
+          "transliteration": "ma ghadish ykun 3endu",
+          "english": "he won't have"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما غاديش يكون عندها",
+          "transliteration": "ma ghadish ykun 3endha",
+          "english": "she won't have"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما غاديش يكون عندنا",
+          "transliteration": "ma ghadish ykun 3endna",
+          "english": "we won't have"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما غاديش يكون عندكم",
+          "transliteration": "ma ghadish ykun 3endkum",
+          "english": "you (pl) won't have"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما غاديش يكون عندهم",
+          "transliteration": "ma ghadish ykun 3endhum",
+          "english": "they won't have"
+        }
+      ]
+    }
+  }
+}

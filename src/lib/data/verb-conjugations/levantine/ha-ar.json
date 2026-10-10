@@ -1,0 +1,318 @@
+{
+  "slug": "ha-ar",
+  "arabic": "حضر",
+  "transliteration": "7adar",
+  "english": "to attend",
+  "wordId": null,
+  "rootLetters": "ح ض ر",
+  "verbClass": "sound",
+  "notes": "Regular verb: bi7dar, I attend.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "حضرت",
+          "transliteration": "7adart",
+          "english": "I attended"
+        },
+        {
+          "person": "enta",
+          "arabic": "حضرت",
+          "transliteration": "7adart",
+          "english": "you (m) attended"
+        },
+        {
+          "person": "enti",
+          "arabic": "حضرتي",
+          "transliteration": "7adarti",
+          "english": "you (f) attended"
+        },
+        {
+          "person": "howa",
+          "arabic": "حضر",
+          "transliteration": "7adar",
+          "english": "he attended"
+        },
+        {
+          "person": "heya",
+          "arabic": "حضرت",
+          "transliteration": "7adrit",
+          "english": "she attended"
+        },
+        {
+          "person": "ehna",
+          "arabic": "حضرنا",
+          "transliteration": "7adarna",
+          "english": "we attended"
+        },
+        {
+          "person": "entu",
+          "arabic": "حضرتوا",
+          "transliteration": "7adartu",
+          "english": "you (pl) attended"
+        },
+        {
+          "person": "homma",
+          "arabic": "حضروا",
+          "transliteration": "7adru",
+          "english": "they attended"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما حضرت",
+          "transliteration": "ma 7adart",
+          "english": "I didn't attend"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما حضرت",
+          "transliteration": "ma 7adart",
+          "english": "you (m) didn't attend"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما حضرتي",
+          "transliteration": "ma 7adarti",
+          "english": "you (f) didn't attend"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما حضر",
+          "transliteration": "ma 7adar",
+          "english": "he didn't attend"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما حضرت",
+          "transliteration": "ma 7adrit",
+          "english": "she didn't attend"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما حضرنا",
+          "transliteration": "ma 7adarna",
+          "english": "we didn't attend"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما حضرتوا",
+          "transliteration": "ma 7adartu",
+          "english": "you (pl) didn't attend"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما حضروا",
+          "transliteration": "ma 7adru",
+          "english": "they didn't attend"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بحضر",
+          "transliteration": "bi7dar",
+          "english": "I attend"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتحضر",
+          "transliteration": "bti7dar",
+          "english": "you (m) attend"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتحضري",
+          "transliteration": "bti7dari",
+          "english": "you (f) attend"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيحضر",
+          "transliteration": "byi7dar",
+          "english": "he attends"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتحضر",
+          "transliteration": "bti7dar",
+          "english": "she attends"
+        },
+        {
+          "person": "ehna",
+          "arabic": "منحضر",
+          "transliteration": "mni7dar",
+          "english": "we attend"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتحضروا",
+          "transliteration": "bti7daru",
+          "english": "you (pl) attend"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيحضروا",
+          "transliteration": "byi7daru",
+          "english": "they attend"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما بحضر",
+          "transliteration": "ma bi7dar",
+          "english": "I don't attend"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتحضر",
+          "transliteration": "ma bti7dar",
+          "english": "you (m) don't attend"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتحضري",
+          "transliteration": "ma bti7dari",
+          "english": "you (f) don't attend"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيحضر",
+          "transliteration": "ma byi7dar",
+          "english": "he doesn't attend"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتحضر",
+          "transliteration": "ma bti7dar",
+          "english": "she doesn't attend"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما منحضر",
+          "transliteration": "ma mni7dar",
+          "english": "we don't attend"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتحضروا",
+          "transliteration": "ma bti7daru",
+          "english": "you (pl) don't attend"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيحضروا",
+          "transliteration": "ma byi7daru",
+          "english": "they don't attend"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "رح احضر",
+          "transliteration": "ra7 i7dar",
+          "english": "I will attend"
+        },
+        {
+          "person": "enta",
+          "arabic": "رح تحضر",
+          "transliteration": "ra7 ti7dar",
+          "english": "you (m) will attend"
+        },
+        {
+          "person": "enti",
+          "arabic": "رح تحضري",
+          "transliteration": "ra7 ti7dari",
+          "english": "you (f) will attend"
+        },
+        {
+          "person": "howa",
+          "arabic": "رح يحضر",
+          "transliteration": "ra7 yi7dar",
+          "english": "he will attend"
+        },
+        {
+          "person": "heya",
+          "arabic": "رح تحضر",
+          "transliteration": "ra7 ti7dar",
+          "english": "she will attend"
+        },
+        {
+          "person": "ehna",
+          "arabic": "رح نحضر",
+          "transliteration": "ra7 ni7dar",
+          "english": "we will attend"
+        },
+        {
+          "person": "entu",
+          "arabic": "رح تحضروا",
+          "transliteration": "ra7 ti7daru",
+          "english": "you (pl) will attend"
+        },
+        {
+          "person": "homma",
+          "arabic": "رح يحضروا",
+          "transliteration": "ra7 yi7daru",
+          "english": "they will attend"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما رح احضر",
+          "transliteration": "ma ra7 i7dar",
+          "english": "I won't attend"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما رح تحضر",
+          "transliteration": "ma ra7 ti7dar",
+          "english": "you (m) won't attend"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما رح تحضري",
+          "transliteration": "ma ra7 ti7dari",
+          "english": "you (f) won't attend"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما رح يحضر",
+          "transliteration": "ma ra7 yi7dar",
+          "english": "he won't attend"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما رح تحضر",
+          "transliteration": "ma ra7 ti7dar",
+          "english": "she won't attend"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما رح نحضر",
+          "transliteration": "ma ra7 ni7dar",
+          "english": "we won't attend"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما رح تحضروا",
+          "transliteration": "ma ra7 ti7daru",
+          "english": "you (pl) won't attend"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما رح يحضروا",
+          "transliteration": "ma ra7 yi7daru",
+          "english": "they won't attend"
+        }
+      ]
+    }
+  }
+}

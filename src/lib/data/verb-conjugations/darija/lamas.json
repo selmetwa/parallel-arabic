@@ -1,0 +1,318 @@
+{
+  "slug": "lamas",
+  "arabic": "قاس",
+  "transliteration": "qas",
+  "english": "to touch",
+  "wordId": null,
+  "rootLetters": "ق ي س",
+  "verbClass": "hollow",
+  "notes": "Darija touches with qas: ma tqish! Don’t touch!",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "قست",
+          "transliteration": "qist",
+          "english": "I touched"
+        },
+        {
+          "person": "enta",
+          "arabic": "قستي",
+          "transliteration": "qisti",
+          "english": "you (m) touched"
+        },
+        {
+          "person": "enti",
+          "arabic": "قستي",
+          "transliteration": "qisti",
+          "english": "you (f) touched"
+        },
+        {
+          "person": "howa",
+          "arabic": "قاس",
+          "transliteration": "qas",
+          "english": "he touched"
+        },
+        {
+          "person": "heya",
+          "arabic": "قاسات",
+          "transliteration": "qasat",
+          "english": "she touched"
+        },
+        {
+          "person": "ehna",
+          "arabic": "قسنا",
+          "transliteration": "qisna",
+          "english": "we touched"
+        },
+        {
+          "person": "entu",
+          "arabic": "قستيو",
+          "transliteration": "qistiw",
+          "english": "you (pl) touched"
+        },
+        {
+          "person": "homma",
+          "arabic": "قاسو",
+          "transliteration": "qasu",
+          "english": "they touched"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما قستش",
+          "transliteration": "ma qistsh",
+          "english": "I didn't touch"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما قستيش",
+          "transliteration": "ma qistish",
+          "english": "you (m) didn't touch"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما قستيش",
+          "transliteration": "ma qistish",
+          "english": "you (f) didn't touch"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما قاسش",
+          "transliteration": "ma qassh",
+          "english": "he didn't touch"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما قاساتش",
+          "transliteration": "ma qasatsh",
+          "english": "she didn't touch"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما قسناش",
+          "transliteration": "ma qisnash",
+          "english": "we didn't touch"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما قستيوش",
+          "transliteration": "ma qistiwsh",
+          "english": "you (pl) didn't touch"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما قاسوش",
+          "transliteration": "ma qasush",
+          "english": "they didn't touch"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كنقيس",
+          "transliteration": "kanqis",
+          "english": "I touch"
+        },
+        {
+          "person": "enta",
+          "arabic": "كتقيس",
+          "transliteration": "katqis",
+          "english": "you (m) touch"
+        },
+        {
+          "person": "enti",
+          "arabic": "كتقيسي",
+          "transliteration": "katqisi",
+          "english": "you (f) touch"
+        },
+        {
+          "person": "howa",
+          "arabic": "كيقيس",
+          "transliteration": "kayqis",
+          "english": "he touches"
+        },
+        {
+          "person": "heya",
+          "arabic": "كتقيس",
+          "transliteration": "katqis",
+          "english": "she touches"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كنقيسو",
+          "transliteration": "kanqisu",
+          "english": "we touch"
+        },
+        {
+          "person": "entu",
+          "arabic": "كتقيسو",
+          "transliteration": "katqisu",
+          "english": "you (pl) touch"
+        },
+        {
+          "person": "homma",
+          "arabic": "كيقيسو",
+          "transliteration": "kayqisu",
+          "english": "they touch"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما كنقيسش",
+          "transliteration": "ma kanqissh",
+          "english": "I don't touch"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما كتقيسش",
+          "transliteration": "ma katqissh",
+          "english": "you (m) don't touch"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما كتقيسيش",
+          "transliteration": "ma katqisish",
+          "english": "you (f) don't touch"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما كيقيسش",
+          "transliteration": "ma kayqissh",
+          "english": "he doesn't touch"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما كتقيسش",
+          "transliteration": "ma katqissh",
+          "english": "she doesn't touch"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما كنقيسوش",
+          "transliteration": "ma kanqisush",
+          "english": "we don't touch"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما كتقيسوش",
+          "transliteration": "ma katqisush",
+          "english": "you (pl) don't touch"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما كيقيسوش",
+          "transliteration": "ma kayqisush",
+          "english": "they don't touch"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "غادي نقيس",
+          "transliteration": "ghadi nqis",
+          "english": "I will touch"
+        },
+        {
+          "person": "enta",
+          "arabic": "غادي تقيس",
+          "transliteration": "ghadi tqis",
+          "english": "you (m) will touch"
+        },
+        {
+          "person": "enti",
+          "arabic": "غادي تقيسي",
+          "transliteration": "ghadi tqisi",
+          "english": "you (f) will touch"
+        },
+        {
+          "person": "howa",
+          "arabic": "غادي يقيس",
+          "transliteration": "ghadi yqis",
+          "english": "he will touch"
+        },
+        {
+          "person": "heya",
+          "arabic": "غادي تقيس",
+          "transliteration": "ghadi tqis",
+          "english": "she will touch"
+        },
+        {
+          "person": "ehna",
+          "arabic": "غادي نقيسو",
+          "transliteration": "ghadi nqisu",
+          "english": "we will touch"
+        },
+        {
+          "person": "entu",
+          "arabic": "غادي تقيسو",
+          "transliteration": "ghadi tqisu",
+          "english": "you (pl) will touch"
+        },
+        {
+          "person": "homma",
+          "arabic": "غادي يقيسو",
+          "transliteration": "ghadi yqisu",
+          "english": "they will touch"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما غاديش نقيس",
+          "transliteration": "ma ghadish nqis",
+          "english": "I won't touch"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما غاديش تقيس",
+          "transliteration": "ma ghadish tqis",
+          "english": "you (m) won't touch"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما غاديش تقيسي",
+          "transliteration": "ma ghadish tqisi",
+          "english": "you (f) won't touch"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما غاديش يقيس",
+          "transliteration": "ma ghadish yqis",
+          "english": "he won't touch"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما غاديش تقيس",
+          "transliteration": "ma ghadish tqis",
+          "english": "she won't touch"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما غاديش نقيسو",
+          "transliteration": "ma ghadish nqisu",
+          "english": "we won't touch"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما غاديش تقيسو",
+          "transliteration": "ma ghadish tqisu",
+          "english": "you (pl) won't touch"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما غاديش يقيسو",
+          "transliteration": "ma ghadish yqisu",
+          "english": "they won't touch"
+        }
+      ]
+    }
+  }
+}

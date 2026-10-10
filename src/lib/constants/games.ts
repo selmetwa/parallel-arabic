@@ -679,6 +679,58 @@ export const GAMES: GameInfo[] = [
 					'Yes, a phone or laptop mic is fine. Without one, or once the free speaking practice runs out, you can still listen and repeat along without a score.'
 			}
 		]
+	},
+	{
+		slug: 'verb-blitz',
+		name: 'Verb Blitz',
+		heading: 'Arabic Verb Conjugation Game',
+		emoji: '🔁',
+		tagline: 'A verb, a person and a tense: pick the right form, in your dialect.',
+		skills: ['Grammar', 'Verbs'],
+		levels: 'Beginner–Intermediate',
+		accent: '#0ea5e9',
+		deep: '#0369a1',
+		shot: {
+			src: '/images/feature-pages/game-verb-blitz.webp',
+			w: 1568,
+			h: 900,
+			alt: 'A Verb Blitz question: the verb عاش with the pronoun هي and Past, and four conjugated forms to choose from'
+		},
+		seo: {
+			title: 'Arabic Verb Conjugation Game - Past, Present, Future | Parallel Arabic',
+			description:
+				'Practise conjugating Arabic verbs: pick the right form for each person and tense, affirmative and negative. 72 everyday verbs in Egyptian, Levantine, Darija and Fusha.'
+		},
+		intro:
+			'Arabic verbs change for every person and tense: عاش is “he lived”, عاشت “she lived”, بيعيش “he lives”. Each question gives you a verb, a person and a tense, and you pick the right form from four. 72 everyday verbs, past, present and future, including the negative.',
+		howToPlay: [
+			'Pick a dialect and a tense, or Mixed, then press Start. A round is ten verbs.',
+			'Read the verb, the person (أنا, هي, إحنا…) and the tense. Some questions are negative.',
+			'Tap the form that fits. The wrong ones are the same verb for other people or tenses.',
+			'The answer shows with its transliteration and meaning. At the end, go over the ones you missed.'
+		],
+		faqs: [
+			{
+				question: 'How are Arabic verbs conjugated?',
+				answer:
+					'By adding prefixes and endings to a stem. In the past tense the ending shows the person (fata7t, I opened; fata7it, she opened). In the present a prefix does it, plus a dialect marker: b- in Egyptian and Levantine, ka- in Darija.'
+			},
+			{
+				question: 'Are the verbs the same in every dialect?',
+				answer:
+					'The patterns are close, the markers are not. The present is بيفتح in Cairo and Beirut and كيحل in Casablanca, the future is ه in Egyptian, رح in Levantine, غادي in Darija and سـ in Fusha. Each dialect has its own verb tables here.'
+			},
+			{
+				question: 'Do I need to know the alphabet?',
+				answer:
+					'Yes. The forms are in Arabic script, with the transliteration shown once you answer. Fusha forms carry full vowel marks, because without them several people’s forms look identical.'
+			},
+			{
+				question: 'Where can I see a verb’s full table?',
+				answer:
+					'The Egyptian verbs each have a conjugation page with every form, recorded. The other dialects’ tables are used in this game for now.'
+			}
+		]
 	}
 ];
 

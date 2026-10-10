@@ -1,0 +1,318 @@
+{
+  "slug": "ixtalaf",
+  "arabic": "اختلف",
+  "transliteration": "ikhtalaf",
+  "english": "to differ",
+  "wordId": null,
+  "rootLetters": "خ ل ف",
+  "verbClass": "form VIII",
+  "notes": "Form VIII verb: bikhtilif, I differ or disagree.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "اختلفت",
+          "transliteration": "ikhtalaft",
+          "english": "I differed"
+        },
+        {
+          "person": "enta",
+          "arabic": "اختلفت",
+          "transliteration": "ikhtalaft",
+          "english": "you (m) differed"
+        },
+        {
+          "person": "enti",
+          "arabic": "اختلفتي",
+          "transliteration": "ikhtalafti",
+          "english": "you (f) differed"
+        },
+        {
+          "person": "howa",
+          "arabic": "اختلف",
+          "transliteration": "ikhtalaf",
+          "english": "he differed"
+        },
+        {
+          "person": "heya",
+          "arabic": "اختلفت",
+          "transliteration": "ikhtalafit",
+          "english": "she differed"
+        },
+        {
+          "person": "ehna",
+          "arabic": "اختلفنا",
+          "transliteration": "ikhtalafna",
+          "english": "we differed"
+        },
+        {
+          "person": "entu",
+          "arabic": "اختلفتوا",
+          "transliteration": "ikhtalaftu",
+          "english": "you (pl) differed"
+        },
+        {
+          "person": "homma",
+          "arabic": "اختلفوا",
+          "transliteration": "ikhtalafu",
+          "english": "they differed"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما اختلفت",
+          "transliteration": "ma ikhtalaft",
+          "english": "I didn't differ"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما اختلفت",
+          "transliteration": "ma ikhtalaft",
+          "english": "you (m) didn't differ"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما اختلفتي",
+          "transliteration": "ma ikhtalafti",
+          "english": "you (f) didn't differ"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما اختلف",
+          "transliteration": "ma ikhtalaf",
+          "english": "he didn't differ"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما اختلفت",
+          "transliteration": "ma ikhtalafit",
+          "english": "she didn't differ"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما اختلفنا",
+          "transliteration": "ma ikhtalafna",
+          "english": "we didn't differ"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما اختلفتوا",
+          "transliteration": "ma ikhtalaftu",
+          "english": "you (pl) didn't differ"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما اختلفوا",
+          "transliteration": "ma ikhtalafu",
+          "english": "they didn't differ"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "بختلف",
+          "transliteration": "bikhtilif",
+          "english": "I differ"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتختلف",
+          "transliteration": "btikhtilif",
+          "english": "you (m) differ"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتختلفي",
+          "transliteration": "btikhtilfi",
+          "english": "you (f) differ"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيختلف",
+          "transliteration": "byikhtilif",
+          "english": "he differs"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتختلف",
+          "transliteration": "btikhtilif",
+          "english": "she differs"
+        },
+        {
+          "person": "ehna",
+          "arabic": "منختلف",
+          "transliteration": "mnikhtilif",
+          "english": "we differ"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتختلفوا",
+          "transliteration": "btikhtilfu",
+          "english": "you (pl) differ"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيختلفوا",
+          "transliteration": "byikhtilfu",
+          "english": "they differ"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما بختلف",
+          "transliteration": "ma bikhtilif",
+          "english": "I don't differ"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتختلف",
+          "transliteration": "ma btikhtilif",
+          "english": "you (m) don't differ"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتختلفي",
+          "transliteration": "ma btikhtilfi",
+          "english": "you (f) don't differ"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيختلف",
+          "transliteration": "ma byikhtilif",
+          "english": "he doesn't differ"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتختلف",
+          "transliteration": "ma btikhtilif",
+          "english": "she doesn't differ"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما منختلف",
+          "transliteration": "ma mnikhtilif",
+          "english": "we don't differ"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتختلفوا",
+          "transliteration": "ma btikhtilfu",
+          "english": "you (pl) don't differ"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيختلفوا",
+          "transliteration": "ma byikhtilfu",
+          "english": "they don't differ"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "رح اختلف",
+          "transliteration": "ra7 ikhtilif",
+          "english": "I will differ"
+        },
+        {
+          "person": "enta",
+          "arabic": "رح تختلف",
+          "transliteration": "ra7 tikhtilif",
+          "english": "you (m) will differ"
+        },
+        {
+          "person": "enti",
+          "arabic": "رح تختلفي",
+          "transliteration": "ra7 tikhtilfi",
+          "english": "you (f) will differ"
+        },
+        {
+          "person": "howa",
+          "arabic": "رح يختلف",
+          "transliteration": "ra7 yikhtilif",
+          "english": "he will differ"
+        },
+        {
+          "person": "heya",
+          "arabic": "رح تختلف",
+          "transliteration": "ra7 tikhtilif",
+          "english": "she will differ"
+        },
+        {
+          "person": "ehna",
+          "arabic": "رح نختلف",
+          "transliteration": "ra7 nikhtilif",
+          "english": "we will differ"
+        },
+        {
+          "person": "entu",
+          "arabic": "رح تختلفوا",
+          "transliteration": "ra7 tikhtilfu",
+          "english": "you (pl) will differ"
+        },
+        {
+          "person": "homma",
+          "arabic": "رح يختلفوا",
+          "transliteration": "ra7 yikhtilfu",
+          "english": "they will differ"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما رح اختلف",
+          "transliteration": "ma ra7 ikhtilif",
+          "english": "I won't differ"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما رح تختلف",
+          "transliteration": "ma ra7 tikhtilif",
+          "english": "you (m) won't differ"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما رح تختلفي",
+          "transliteration": "ma ra7 tikhtilfi",
+          "english": "you (f) won't differ"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما رح يختلف",
+          "transliteration": "ma ra7 yikhtilif",
+          "english": "he won't differ"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما رح تختلف",
+          "transliteration": "ma ra7 tikhtilif",
+          "english": "she won't differ"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما رح نختلف",
+          "transliteration": "ma ra7 nikhtilif",
+          "english": "we won't differ"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما رح تختلفوا",
+          "transliteration": "ma ra7 tikhtilfu",
+          "english": "you (pl) won't differ"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما رح يختلفوا",
+          "transliteration": "ma ra7 yikhtilfu",
+          "english": "they won't differ"
+        }
+      ]
+    }
+  }
+}

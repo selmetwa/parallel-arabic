@@ -1,0 +1,318 @@
+{
+  "slug": "kidib",
+  "arabic": "كَذَبَ",
+  "transliteration": "kadhaba",
+  "english": "to lie",
+  "wordId": null,
+  "rootLetters": "ك ذ ب",
+  "verbClass": "sound",
+  "notes": "Form I verb: kadhaba, yakdhibu.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كَذَبْتُ",
+          "transliteration": "kadhabtu",
+          "english": "I lied"
+        },
+        {
+          "person": "enta",
+          "arabic": "كَذَبْتَ",
+          "transliteration": "kadhabta",
+          "english": "you (m) lied"
+        },
+        {
+          "person": "enti",
+          "arabic": "كَذَبْتِ",
+          "transliteration": "kadhabti",
+          "english": "you (f) lied"
+        },
+        {
+          "person": "howa",
+          "arabic": "كَذَبَ",
+          "transliteration": "kadhaba",
+          "english": "he lied"
+        },
+        {
+          "person": "heya",
+          "arabic": "كَذَبَتْ",
+          "transliteration": "kadhabat",
+          "english": "she lied"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كَذَبْنَا",
+          "transliteration": "kadhabna",
+          "english": "we lied"
+        },
+        {
+          "person": "entu",
+          "arabic": "كَذَبْتُمْ",
+          "transliteration": "kadhabtum",
+          "english": "you (pl) lied"
+        },
+        {
+          "person": "homma",
+          "arabic": "كَذَبُوا",
+          "transliteration": "kadhabu",
+          "english": "they lied"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مَا كَذَبْتُ",
+          "transliteration": "ma kadhabtu",
+          "english": "I didn't lie"
+        },
+        {
+          "person": "enta",
+          "arabic": "مَا كَذَبْتَ",
+          "transliteration": "ma kadhabta",
+          "english": "you (m) didn't lie"
+        },
+        {
+          "person": "enti",
+          "arabic": "مَا كَذَبْتِ",
+          "transliteration": "ma kadhabti",
+          "english": "you (f) didn't lie"
+        },
+        {
+          "person": "howa",
+          "arabic": "مَا كَذَبَ",
+          "transliteration": "ma kadhaba",
+          "english": "he didn't lie"
+        },
+        {
+          "person": "heya",
+          "arabic": "مَا كَذَبَتْ",
+          "transliteration": "ma kadhabat",
+          "english": "she didn't lie"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مَا كَذَبْنَا",
+          "transliteration": "ma kadhabna",
+          "english": "we didn't lie"
+        },
+        {
+          "person": "entu",
+          "arabic": "مَا كَذَبْتُمْ",
+          "transliteration": "ma kadhabtum",
+          "english": "you (pl) didn't lie"
+        },
+        {
+          "person": "homma",
+          "arabic": "مَا كَذَبُوا",
+          "transliteration": "ma kadhabu",
+          "english": "they didn't lie"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أَكْذِبُ",
+          "transliteration": "akdhibu",
+          "english": "I lie"
+        },
+        {
+          "person": "enta",
+          "arabic": "تَكْذِبُ",
+          "transliteration": "takdhibu",
+          "english": "you (m) lie"
+        },
+        {
+          "person": "enti",
+          "arabic": "تَكْذِبِينَ",
+          "transliteration": "takdhibina",
+          "english": "you (f) lie"
+        },
+        {
+          "person": "howa",
+          "arabic": "يَكْذِبُ",
+          "transliteration": "yakdhibu",
+          "english": "he lies"
+        },
+        {
+          "person": "heya",
+          "arabic": "تَكْذِبُ",
+          "transliteration": "takdhibu",
+          "english": "she lies"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نَكْذِبُ",
+          "transliteration": "nakdhibu",
+          "english": "we lie"
+        },
+        {
+          "person": "entu",
+          "arabic": "تَكْذِبُونَ",
+          "transliteration": "takdhibuna",
+          "english": "you (pl) lie"
+        },
+        {
+          "person": "homma",
+          "arabic": "يَكْذِبُونَ",
+          "transliteration": "yakdhibuna",
+          "english": "they lie"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَا أَكْذِبُ",
+          "transliteration": "la akdhibu",
+          "english": "I don't lie"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَا تَكْذِبُ",
+          "transliteration": "la takdhibu",
+          "english": "you (m) don't lie"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَا تَكْذِبِينَ",
+          "transliteration": "la takdhibina",
+          "english": "you (f) don't lie"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَا يَكْذِبُ",
+          "transliteration": "la yakdhibu",
+          "english": "he doesn't lie"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَا تَكْذِبُ",
+          "transliteration": "la takdhibu",
+          "english": "she doesn't lie"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَا نَكْذِبُ",
+          "transliteration": "la nakdhibu",
+          "english": "we don't lie"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَا تَكْذِبُونَ",
+          "transliteration": "la takdhibuna",
+          "english": "you (pl) don't lie"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَا يَكْذِبُونَ",
+          "transliteration": "la yakdhibuna",
+          "english": "they don't lie"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَأَكْذِبُ",
+          "transliteration": "sa2akdhibu",
+          "english": "I will lie"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَتَكْذِبُ",
+          "transliteration": "satakdhibu",
+          "english": "you (m) will lie"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَتَكْذِبِينَ",
+          "transliteration": "satakdhibina",
+          "english": "you (f) will lie"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَيَكْذِبُ",
+          "transliteration": "sayakdhibu",
+          "english": "he will lie"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَتَكْذِبُ",
+          "transliteration": "satakdhibu",
+          "english": "she will lie"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَنَكْذِبُ",
+          "transliteration": "sanakdhibu",
+          "english": "we will lie"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَتَكْذِبُونَ",
+          "transliteration": "satakdhibuna",
+          "english": "you (pl) will lie"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَيَكْذِبُونَ",
+          "transliteration": "sayakdhibuna",
+          "english": "they will lie"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَنْ أَكْذِبَ",
+          "transliteration": "lan akdhiba",
+          "english": "I won't lie"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَنْ تَكْذِبَ",
+          "transliteration": "lan takdhiba",
+          "english": "you (m) won't lie"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَنْ تَكْذِبِي",
+          "transliteration": "lan takdhibi",
+          "english": "you (f) won't lie"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَنْ يَكْذِبَ",
+          "transliteration": "lan yakdhiba",
+          "english": "he won't lie"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَنْ تَكْذِبَ",
+          "transliteration": "lan takdhiba",
+          "english": "she won't lie"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَنْ نَكْذِبَ",
+          "transliteration": "lan nakdhiba",
+          "english": "we won't lie"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَنْ تَكْذِبُوا",
+          "transliteration": "lan takdhibu",
+          "english": "you (pl) won't lie"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَنْ يَكْذِبُوا",
+          "transliteration": "lan yakdhibu",
+          "english": "they won't lie"
+        }
+      ]
+    }
+  }
+}

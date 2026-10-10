@@ -1,0 +1,318 @@
+{
+  "slug": "alab",
+  "arabic": "طَلَبَ",
+  "transliteration": "talaba",
+  "english": "to ask for",
+  "wordId": null,
+  "rootLetters": "ط ل ب",
+  "verbClass": "sound",
+  "notes": "Form I verb: talaba, yatlubu.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "طَلَبْتُ",
+          "transliteration": "talabtu",
+          "english": "I asked for"
+        },
+        {
+          "person": "enta",
+          "arabic": "طَلَبْتَ",
+          "transliteration": "talabta",
+          "english": "you (m) asked for"
+        },
+        {
+          "person": "enti",
+          "arabic": "طَلَبْتِ",
+          "transliteration": "talabti",
+          "english": "you (f) asked for"
+        },
+        {
+          "person": "howa",
+          "arabic": "طَلَبَ",
+          "transliteration": "talaba",
+          "english": "he asked for"
+        },
+        {
+          "person": "heya",
+          "arabic": "طَلَبَتْ",
+          "transliteration": "talabat",
+          "english": "she asked for"
+        },
+        {
+          "person": "ehna",
+          "arabic": "طَلَبْنَا",
+          "transliteration": "talabna",
+          "english": "we asked for"
+        },
+        {
+          "person": "entu",
+          "arabic": "طَلَبْتُمْ",
+          "transliteration": "talabtum",
+          "english": "you (pl) asked for"
+        },
+        {
+          "person": "homma",
+          "arabic": "طَلَبُوا",
+          "transliteration": "talabu",
+          "english": "they asked for"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مَا طَلَبْتُ",
+          "transliteration": "ma talabtu",
+          "english": "I didn't ask for"
+        },
+        {
+          "person": "enta",
+          "arabic": "مَا طَلَبْتَ",
+          "transliteration": "ma talabta",
+          "english": "you (m) didn't ask for"
+        },
+        {
+          "person": "enti",
+          "arabic": "مَا طَلَبْتِ",
+          "transliteration": "ma talabti",
+          "english": "you (f) didn't ask for"
+        },
+        {
+          "person": "howa",
+          "arabic": "مَا طَلَبَ",
+          "transliteration": "ma talaba",
+          "english": "he didn't ask for"
+        },
+        {
+          "person": "heya",
+          "arabic": "مَا طَلَبَتْ",
+          "transliteration": "ma talabat",
+          "english": "she didn't ask for"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مَا طَلَبْنَا",
+          "transliteration": "ma talabna",
+          "english": "we didn't ask for"
+        },
+        {
+          "person": "entu",
+          "arabic": "مَا طَلَبْتُمْ",
+          "transliteration": "ma talabtum",
+          "english": "you (pl) didn't ask for"
+        },
+        {
+          "person": "homma",
+          "arabic": "مَا طَلَبُوا",
+          "transliteration": "ma talabu",
+          "english": "they didn't ask for"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أَطْلُبُ",
+          "transliteration": "atlubu",
+          "english": "I ask for"
+        },
+        {
+          "person": "enta",
+          "arabic": "تَطْلُبُ",
+          "transliteration": "tatlubu",
+          "english": "you (m) ask for"
+        },
+        {
+          "person": "enti",
+          "arabic": "تَطْلُبِينَ",
+          "transliteration": "tatlubina",
+          "english": "you (f) ask for"
+        },
+        {
+          "person": "howa",
+          "arabic": "يَطْلُبُ",
+          "transliteration": "yatlubu",
+          "english": "he asks for"
+        },
+        {
+          "person": "heya",
+          "arabic": "تَطْلُبُ",
+          "transliteration": "tatlubu",
+          "english": "she asks for"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نَطْلُبُ",
+          "transliteration": "natlubu",
+          "english": "we ask for"
+        },
+        {
+          "person": "entu",
+          "arabic": "تَطْلُبُونَ",
+          "transliteration": "tatlubuna",
+          "english": "you (pl) ask for"
+        },
+        {
+          "person": "homma",
+          "arabic": "يَطْلُبُونَ",
+          "transliteration": "yatlubuna",
+          "english": "they ask for"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَا أَطْلُبُ",
+          "transliteration": "la atlubu",
+          "english": "I don't ask for"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَا تَطْلُبُ",
+          "transliteration": "la tatlubu",
+          "english": "you (m) don't ask for"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَا تَطْلُبِينَ",
+          "transliteration": "la tatlubina",
+          "english": "you (f) don't ask for"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَا يَطْلُبُ",
+          "transliteration": "la yatlubu",
+          "english": "he doesn't ask for"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَا تَطْلُبُ",
+          "transliteration": "la tatlubu",
+          "english": "she doesn't ask for"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَا نَطْلُبُ",
+          "transliteration": "la natlubu",
+          "english": "we don't ask for"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَا تَطْلُبُونَ",
+          "transliteration": "la tatlubuna",
+          "english": "you (pl) don't ask for"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَا يَطْلُبُونَ",
+          "transliteration": "la yatlubuna",
+          "english": "they don't ask for"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَأَطْلُبُ",
+          "transliteration": "sa2atlubu",
+          "english": "I will ask for"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَتَطْلُبُ",
+          "transliteration": "satatlubu",
+          "english": "you (m) will ask for"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَتَطْلُبِينَ",
+          "transliteration": "satatlubina",
+          "english": "you (f) will ask for"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَيَطْلُبُ",
+          "transliteration": "sayatlubu",
+          "english": "he will ask for"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَتَطْلُبُ",
+          "transliteration": "satatlubu",
+          "english": "she will ask for"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَنَطْلُبُ",
+          "transliteration": "sanatlubu",
+          "english": "we will ask for"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَتَطْلُبُونَ",
+          "transliteration": "satatlubuna",
+          "english": "you (pl) will ask for"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَيَطْلُبُونَ",
+          "transliteration": "sayatlubuna",
+          "english": "they will ask for"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَنْ أَطْلُبَ",
+          "transliteration": "lan atluba",
+          "english": "I won't ask for"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَنْ تَطْلُبَ",
+          "transliteration": "lan tatluba",
+          "english": "you (m) won't ask for"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَنْ تَطْلُبِي",
+          "transliteration": "lan tatlubi",
+          "english": "you (f) won't ask for"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَنْ يَطْلُبَ",
+          "transliteration": "lan yatluba",
+          "english": "he won't ask for"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَنْ تَطْلُبَ",
+          "transliteration": "lan tatluba",
+          "english": "she won't ask for"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَنْ نَطْلُبَ",
+          "transliteration": "lan natluba",
+          "english": "we won't ask for"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَنْ تَطْلُبُوا",
+          "transliteration": "lan tatlubu",
+          "english": "you (pl) won't ask for"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَنْ يَطْلُبُوا",
+          "transliteration": "lan yatlubu",
+          "english": "they won't ask for"
+        }
+      ]
+    }
+  }
+}

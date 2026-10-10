@@ -1,0 +1,318 @@
+{
+  "slug": "kan",
+  "arabic": "كَانَ",
+  "transliteration": "kana",
+  "english": "to be",
+  "wordId": null,
+  "rootLetters": "ك و ن",
+  "verbClass": "hollow",
+  "notes": "Hollow verb: kuntu, I was; yakunu, he is (or will be).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "كُنْتُ",
+          "transliteration": "kuntu",
+          "english": "I was"
+        },
+        {
+          "person": "enta",
+          "arabic": "كُنْتَ",
+          "transliteration": "kunta",
+          "english": "you (m) were"
+        },
+        {
+          "person": "enti",
+          "arabic": "كُنْتِ",
+          "transliteration": "kunti",
+          "english": "you (f) were"
+        },
+        {
+          "person": "howa",
+          "arabic": "كَانَ",
+          "transliteration": "kana",
+          "english": "he was"
+        },
+        {
+          "person": "heya",
+          "arabic": "كَانَتْ",
+          "transliteration": "kanat",
+          "english": "she was"
+        },
+        {
+          "person": "ehna",
+          "arabic": "كُنَّا",
+          "transliteration": "kunna",
+          "english": "we were"
+        },
+        {
+          "person": "entu",
+          "arabic": "كُنْتُمْ",
+          "transliteration": "kuntum",
+          "english": "you (pl) were"
+        },
+        {
+          "person": "homma",
+          "arabic": "كَانُوا",
+          "transliteration": "kanu",
+          "english": "they were"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "مَا كُنْتُ",
+          "transliteration": "ma kuntu",
+          "english": "I wasn't"
+        },
+        {
+          "person": "enta",
+          "arabic": "مَا كُنْتَ",
+          "transliteration": "ma kunta",
+          "english": "you (m) weren't"
+        },
+        {
+          "person": "enti",
+          "arabic": "مَا كُنْتِ",
+          "transliteration": "ma kunti",
+          "english": "you (f) weren't"
+        },
+        {
+          "person": "howa",
+          "arabic": "مَا كَانَ",
+          "transliteration": "ma kana",
+          "english": "he wasn't"
+        },
+        {
+          "person": "heya",
+          "arabic": "مَا كَانَتْ",
+          "transliteration": "ma kanat",
+          "english": "she wasn't"
+        },
+        {
+          "person": "ehna",
+          "arabic": "مَا كُنَّا",
+          "transliteration": "ma kunna",
+          "english": "we weren't"
+        },
+        {
+          "person": "entu",
+          "arabic": "مَا كُنْتُمْ",
+          "transliteration": "ma kuntum",
+          "english": "you (pl) weren't"
+        },
+        {
+          "person": "homma",
+          "arabic": "مَا كَانُوا",
+          "transliteration": "ma kanu",
+          "english": "they weren't"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "أَكُونُ",
+          "transliteration": "akunu",
+          "english": "I am"
+        },
+        {
+          "person": "enta",
+          "arabic": "تَكُونُ",
+          "transliteration": "takunu",
+          "english": "you (m) are"
+        },
+        {
+          "person": "enti",
+          "arabic": "تَكُونِينَ",
+          "transliteration": "takunina",
+          "english": "you (f) are"
+        },
+        {
+          "person": "howa",
+          "arabic": "يَكُونُ",
+          "transliteration": "yakunu",
+          "english": "he is"
+        },
+        {
+          "person": "heya",
+          "arabic": "تَكُونُ",
+          "transliteration": "takunu",
+          "english": "she is"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نَكُونُ",
+          "transliteration": "nakunu",
+          "english": "we are"
+        },
+        {
+          "person": "entu",
+          "arabic": "تَكُونُونَ",
+          "transliteration": "takununa",
+          "english": "you (pl) are"
+        },
+        {
+          "person": "homma",
+          "arabic": "يَكُونُونَ",
+          "transliteration": "yakununa",
+          "english": "they are"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَا أَكُونُ",
+          "transliteration": "la akunu",
+          "english": "I am not"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَا تَكُونُ",
+          "transliteration": "la takunu",
+          "english": "you (m) are not"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَا تَكُونِينَ",
+          "transliteration": "la takunina",
+          "english": "you (f) are not"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَا يَكُونُ",
+          "transliteration": "la yakunu",
+          "english": "he is not"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَا تَكُونُ",
+          "transliteration": "la takunu",
+          "english": "she is not"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَا نَكُونُ",
+          "transliteration": "la nakunu",
+          "english": "we are not"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَا تَكُونُونَ",
+          "transliteration": "la takununa",
+          "english": "you (pl) are not"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَا يَكُونُونَ",
+          "transliteration": "la yakununa",
+          "english": "they are not"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "سَأَكُونُ",
+          "transliteration": "sa2akunu",
+          "english": "I will be"
+        },
+        {
+          "person": "enta",
+          "arabic": "سَتَكُونُ",
+          "transliteration": "satakunu",
+          "english": "you (m) will be"
+        },
+        {
+          "person": "enti",
+          "arabic": "سَتَكُونِينَ",
+          "transliteration": "satakunina",
+          "english": "you (f) will be"
+        },
+        {
+          "person": "howa",
+          "arabic": "سَيَكُونُ",
+          "transliteration": "sayakunu",
+          "english": "he will be"
+        },
+        {
+          "person": "heya",
+          "arabic": "سَتَكُونُ",
+          "transliteration": "satakunu",
+          "english": "she will be"
+        },
+        {
+          "person": "ehna",
+          "arabic": "سَنَكُونُ",
+          "transliteration": "sanakunu",
+          "english": "we will be"
+        },
+        {
+          "person": "entu",
+          "arabic": "سَتَكُونُونَ",
+          "transliteration": "satakununa",
+          "english": "you (pl) will be"
+        },
+        {
+          "person": "homma",
+          "arabic": "سَيَكُونُونَ",
+          "transliteration": "sayakununa",
+          "english": "they will be"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "لَنْ أَكُونَ",
+          "transliteration": "lan akuna",
+          "english": "I won't be"
+        },
+        {
+          "person": "enta",
+          "arabic": "لَنْ تَكُونَ",
+          "transliteration": "lan takuna",
+          "english": "you (m) won't be"
+        },
+        {
+          "person": "enti",
+          "arabic": "لَنْ تَكُونِي",
+          "transliteration": "lan takuni",
+          "english": "you (f) won't be"
+        },
+        {
+          "person": "howa",
+          "arabic": "لَنْ يَكُونَ",
+          "transliteration": "lan yakuna",
+          "english": "he won't be"
+        },
+        {
+          "person": "heya",
+          "arabic": "لَنْ تَكُونَ",
+          "transliteration": "lan takuna",
+          "english": "she won't be"
+        },
+        {
+          "person": "ehna",
+          "arabic": "لَنْ نَكُونَ",
+          "transliteration": "lan nakuna",
+          "english": "we won't be"
+        },
+        {
+          "person": "entu",
+          "arabic": "لَنْ تَكُونُوا",
+          "transliteration": "lan takunu",
+          "english": "you (pl) won't be"
+        },
+        {
+          "person": "homma",
+          "arabic": "لَنْ يَكُونُوا",
+          "transliteration": "lan yakunu",
+          "english": "they won't be"
+        }
+      ]
+    }
+  }
+}
