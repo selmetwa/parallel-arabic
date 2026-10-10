@@ -133,6 +133,8 @@ Doing it in this order means the paywall test never runs on top of a brand-new t
 
 ## Phase 2 — Hard paywall on iOS
 
+> **As built (2026-10-09):** every new iOS signup gets the hard paywall, with no freemium group. iOS users are stored as `paywall_variant = 'hard_ios'` (not `'hard'`), so the web A/B test's numbers stay web-only. No new column, just a wider check constraint (`docs/sql/2026-10-09-paywall-variant-hard-ios.sql`). The assignment doesn't depend on `PAYWALL_EXPERIMENT`. In onboarding, iOS signups see the trial offer step with Apple's plans. `/profile` is reachable from the paywall so users can delete their account (guideline 5.1.1(v)). The decisions below are kept for reference.
+
 ### Decisions to make first
 - **One experiment or two?** Recommendation: **keep it as one A/B test, but record the platform** (`paywall_variant_platform`, `'web' | 'native'`). That way each platform's results can be read separately in PostHog. Apple trials and Stripe card-up-front trials convert differently, so pooled numbers would hide the effect.
 - **Apple guideline 5.1.1:** a hard paywall right after a required signup is allowed. The paywall must also offer Restore (Phase 1) and a way to log out, which TrialOffer already has through `onLogout`.
