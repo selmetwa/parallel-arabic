@@ -24,6 +24,8 @@ export interface GameInfo {
 	slug: string;
 	/** Set when the game lives outside /learn/game (Scenarios has a page of its own). */
 	path?: Pathname;
+	/** Slug of the game's /features landing page, linked from the game page. */
+	feature?: string;
 	name: string;
 	/** The page's h1 — worded for the search it should rank for. */
 	heading: string;
@@ -43,6 +45,7 @@ export interface GameInfo {
 export const GAMES: GameInfo[] = [
 	{
 		slug: 'room-hunt',
+		feature: 'learn-arabic-in-3d',
 		name: 'Room Hunt',
 		heading: 'Arabic Room Hunt: Find the Object',
 		emoji: '🏠',

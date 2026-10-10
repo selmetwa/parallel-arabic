@@ -51,6 +51,8 @@ export interface FeatureInfo {
 	sections: FeatureSection[];
 	app: { href: Pathname; label: string };
 	faqs: Faq[];
+	/** Game pages are listed apart from the other features. */
+	group?: 'games';
 }
 
 const shot = (name: string, w: number, h: number, alt: string, video?: string): FeatureShot => ({
@@ -661,6 +663,7 @@ export const FEATURES: FeatureInfo[] = [
 		// /learn/game/room-hunt ranks for the game itself; this page is for
 		// "learn Arabic in 3D" and "order food in Arabic".
 		slug: 'learn-arabic-in-3d',
+		group: 'games',
 		name: 'Room Hunt 3D',
 		emoji: '🏠',
 		heading: 'Learn Arabic in 3D: words around the house, and ordering a meal',
@@ -776,6 +779,7 @@ export const FEATURES: FeatureInfo[] = [
 	{
 		// /learn/game ranks for "Arabic games"; this page stays off those words.
 		slug: 'learn-arabic-by-playing',
+		group: 'games',
 		name: 'Games',
 		emoji: '🎮',
 		heading: 'Practice Arabic spelling, vocabulary and grammar by playing',
@@ -837,6 +841,7 @@ export interface FeatureLink {
 	name: string;
 	emoji: string;
 	blurb: string;
+	group?: 'games';
 }
 
 /** The "explore more" grid: every feature page, plus features with pages elsewhere. */
@@ -845,7 +850,8 @@ export const FEATURE_LINKS: FeatureLink[] = [
 		href: `/features/${f.slug}` as const,
 		name: f.name,
 		emoji: f.emoji,
-		blurb: f.blurb
+		blurb: f.blurb,
+		group: f.group
 	})),
 	{
 		href: '/alphabet',
