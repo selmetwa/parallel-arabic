@@ -23,8 +23,9 @@
     next
   }: Props = $props();
 
+  // Only read the URL once open: prerendered pages can't touch url.search.
   const nextQuery = $derived(
-    `?next=${encodeURIComponent(next ?? page.url.pathname + page.url.search)}`
+    isOpen ? `?next=${encodeURIComponent(next ?? page.url.pathname + page.url.search)}` : ''
   );
 </script>
 
