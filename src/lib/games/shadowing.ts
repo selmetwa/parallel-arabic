@@ -6,8 +6,25 @@ import type { GameDialect } from './themes';
 import { PASS_THRESHOLD } from '$lib/utils/pronunciation';
 
 export const LINES_PER_ROUND = 6;
-/** Short enough to repeat after one listen. */
-const MAX_WORDS = 8;
+
+/**
+ * Easy: short lines, text shown. Medium: longer lines, text shown. Hard: the
+ * longer lines by ear, with the text hidden until the first try.
+ */
+export type ShadowLevel = 'easy' | 'medium' | 'hard';
+export const SHADOW_LEVELS: { value: ShadowLevel; label: string }[] = [
+	{ value: 'easy', label: 'Easy' },
+	{ value: 'medium', label: 'Medium' },
+	{ value: 'hard', label: 'Hard (by ear)' }
+];
+/** Lines of up to this many words are easy; longer ones are medium and hard. */
+const SHORT_LINE = 3;
+
+const wordCount = (arabic: string) => arabic.trim().split(/\s+/).length;
+
+export function fitsLevel(line: ShadowLine, level: ShadowLevel): boolean {
+	return level === 'easy' ? wordCount(line.arabic) <= SHORT_LINE : wordCount(line.arabic) > SHORT_LINE;
+}
 
 export interface ShadowLine {
 	id: string;
@@ -52,19 +69,21 @@ export function linesFor(dialect: GameDialect): ShadowLine[] {
 			source: 'Room Hunt'
 		};
 	});
-	return [...scenes, ...questions].filter(
-		(l) => l.arabic.trim().split(/\s+/).length <= MAX_WORDS
-	);
+	return [...scenes, ...questions];
 }
 
 export function buildRound(
 	dialect: GameDialect,
+	level: ShadowLevel = 'easy',
 	{
 		random = Math.random,
 		avoid = new Set<string>()
 	}: { random?: () => number; avoid?: Set<string> } = {}
 ): ShadowLine[] {
-	const lines = shuffle(linesFor(dialect), random);
+	const lines = shuffle(
+		linesFor(dialect).filter((l) => fitsLevel(l, level)),
+		random
+	);
 	return [...lines.filter((l) => !avoid.has(l.id)), ...lines.filter((l) => avoid.has(l.id))].slice(
 		0,
 		LINES_PER_ROUND

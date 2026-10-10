@@ -4,19 +4,26 @@
 	import PressButton from './PressButton.svelte';
 	import SpeakAnswer from './SpeakAnswer.svelte';
 	import { awardGameXp } from '$lib/games/game-xp';
-	import { buildRound, rate, type Rating, type ShadowLine } from '$lib/games/shadowing';
+	import {
+		buildRound,
+		rate,
+		type Rating,
+		type ShadowLevel,
+		type ShadowLine
+	} from '$lib/games/shadowing';
 	import type { GameDialect } from '$lib/games/themes';
 	import { scorePronunciation } from '$lib/utils/pronunciation';
 
 	interface Props {
 		dialect: GameDialect;
+		level: ShadowLevel;
 		signedIn: boolean;
 		accent: string;
 		deep: string;
 		onPlayAgain: () => void;
 	}
 
-	let { dialect, signedIn, accent, deep, onPlayAgain }: Props = $props();
+	let { dialect, level, signedIn, accent, deep, onPlayAgain }: Props = $props();
 
 	const RATING_LABEL: Record<Rating, string> = {
 		great: 'Great',
@@ -24,18 +31,21 @@
 		again: 'Try once more'
 	};
 
-	let lines = $state<ShadowLine[]>(untrack(() => buildRound(dialect)));
+	let lines = $state<ShadowLine[]>(untrack(() => buildRound(dialect, level)));
 	let index = $state(0);
 	/** Best score per line id. */
 	let best = $state<Record<string, number>>({});
 	let last = $state<{ score: number; heard: string } | null>(null);
 	let attempts = $state(0);
 	let unavailable = $state('');
+	/** Hard hides the words until the first try, or until asked for. */
+	let shown = $state(false);
 	let xpEarned = $state(0);
 	let announcement = $state('');
 	let audio: HTMLAudioElement | null = null;
 
 	const line = $derived(lines[index]);
+	const textVisible = $derived(level !== 'hard' || shown || attempts > 0 || !!unavailable);
 	const done = $derived(index >= lines.length);
 	const scored = $derived(Object.values(best));
 	const average = $derived(
@@ -69,6 +79,7 @@
 		index++;
 		last = null;
 		attempts = 0;
+		shown = false;
 		announcement = '';
 		if (index < lines.length) play(lines[index].audioUrl);
 	}
@@ -112,8 +123,13 @@
 			<button type="button" class="listen" onclick={() => play(line.audioUrl)}>
 				🔊 Listen
 			</button>
-			<p class="ar" lang="ar" dir="rtl">{line.arabic}</p>
-			<p class="tr">{line.transliteration}</p>
+			{#if textVisible}
+				<p class="ar" lang="ar" dir="rtl">{line.arabic}</p>
+				<p class="tr">{line.transliteration}</p>
+			{:else}
+				<p class="by-ear">Listen and repeat. The words appear after your first try.</p>
+				<button type="button" class="show" onclick={() => (shown = true)}>Show the words</button>
+			{/if}
 			<p class="en">{line.english}</p>
 		</div>
 
@@ -193,6 +209,21 @@
 		font-weight: 600;
 		line-height: 1.5;
 		color: var(--text1);
+	}
+
+	.by-ear {
+		font-size: 0.95rem;
+		font-weight: 600;
+		color: var(--text1);
+	}
+
+	.show {
+		font-size: 0.8rem;
+		font-weight: 600;
+		color: var(--text2);
+		text-decoration: underline;
+		text-underline-offset: 3px;
+		cursor: pointer;
 	}
 
 	.tr {

@@ -664,7 +664,7 @@ export const GAMES: GameInfo[] = [
 		intro:
 			'Shadowing is the simplest speaking drill there is: listen to a native speaker and say exactly what they said, the way they said it. Every line here is a recorded phrase people actually use, from ordering in a café to asking a taxi driver to stop. Say it, and see a score out of 100.',
 		howToPlay: [
-			'Pick a dialect and press Start. A round is six short lines.',
+			'Pick a dialect and a level, then press Start. Easy lines are a few words; Medium lines are whole sentences; Hard is the same sentences by ear, with the words hidden until you try.',
 			'Listen to the line as often as you like, reading the Arabic, transliteration and meaning.',
 			'Press Say it, repeat the line, and tap again to stop. You get a score and what we heard.',
 			'Try again to beat your score, or move on. At the end, see every line with your best score.'
