@@ -1,0 +1,596 @@
+[
+	{
+		"id": "what",
+		"english": "what?",
+		"forms": {
+			"egyptian-arabic": {
+				"arabic": "إِيه؟",
+				"transliteration": "eh?"
+			},
+			"levantine": {
+				"arabic": "شُو؟",
+				"transliteration": "shu?"
+			},
+			"darija": {
+				"arabic": "شْنُو؟",
+				"transliteration": "shnu?"
+			},
+			"fusha": {
+				"arabic": "مَاذَا؟",
+				"transliteration": "madha?"
+			}
+		}
+	},
+	{
+		"id": "why",
+		"english": "why?",
+		"forms": {
+			"egyptian-arabic": {
+				"arabic": "لِيه؟",
+				"transliteration": "leh?"
+			},
+			"levantine": {
+				"arabic": "لَيْش؟",
+				"transliteration": "laysh?"
+			},
+			"darija": {
+				"arabic": "عْلَاش؟",
+				"transliteration": "3lash?"
+			},
+			"fusha": {
+				"arabic": "لِمَاذَا؟",
+				"transliteration": "limadha?"
+			}
+		}
+	},
+	{
+		"id": "now",
+		"english": "now",
+		"forms": {
+			"egyptian-arabic": {
+				"arabic": "دِلْوَقْتِي",
+				"transliteration": "dilwa2ti"
+			},
+			"levantine": {
+				"arabic": "هَلَّق",
+				"transliteration": "hallaq"
+			},
+			"darija": {
+				"arabic": "دَابَا",
+				"transliteration": "daba"
+			},
+			"fusha": {
+				"arabic": "الآنَ",
+				"transliteration": "al-2ana"
+			}
+		}
+	},
+	{
+		"id": "i-want",
+		"english": "I want",
+		"forms": {
+			"egyptian-arabic": {
+				"arabic": "عَايِز",
+				"transliteration": "3ayiz"
+			},
+			"levantine": {
+				"arabic": "بَدِّي",
+				"transliteration": "baddi"
+			},
+			"darija": {
+				"arabic": "بْغِيت",
+				"transliteration": "bghit"
+			},
+			"fusha": {
+				"arabic": "أُرِيدُ",
+				"transliteration": "uridu"
+			}
+		}
+	},
+	{
+		"id": "i-dont-want",
+		"english": "I don't want",
+		"forms": {
+			"egyptian-arabic": {
+				"arabic": "مِش عَايِز",
+				"transliteration": "mish 3ayiz"
+			},
+			"levantine": {
+				"arabic": "مَا بَدِّي",
+				"transliteration": "ma baddi"
+			},
+			"darija": {
+				"arabic": "مَا بْغِيتْش",
+				"transliteration": "ma bghitsh"
+			},
+			"fusha": {
+				"arabic": "لَا أُرِيدُ",
+				"transliteration": "la uridu"
+			}
+		}
+	},
+	{
+		"id": "good",
+		"english": "good",
+		"forms": {
+			"egyptian-arabic": {
+				"arabic": "كْوَيِّس",
+				"transliteration": "kwayyis"
+			},
+			"levantine": {
+				"arabic": "مْنِيح",
+				"transliteration": "mni7"
+			},
+			"darija": {
+				"arabic": "مْزْيَان",
+				"transliteration": "mzyan"
+			},
+			"fusha": {
+				"arabic": "جَيِّد",
+				"transliteration": "jayyid"
+			}
+		}
+	},
+	{
+		"id": "not-good",
+		"english": "not good",
+		"forms": {
+			"egyptian-arabic": {
+				"arabic": "مِش كْوَيِّس",
+				"transliteration": "mish kwayyis"
+			},
+			"levantine": {
+				"arabic": "مُش مْنِيح",
+				"transliteration": "mush mni7"
+			},
+			"darija": {
+				"arabic": "مَاشِي مْزْيَان",
+				"transliteration": "mashi mzyan"
+			},
+			"fusha": {
+				"arabic": "لَيْسَ جَيِّدًا",
+				"transliteration": "laysa jayyidan"
+			}
+		}
+	},
+	{
+		"id": "im-fine",
+		"english": "I'm fine",
+		"forms": {
+			"egyptian-arabic": {
+				"arabic": "أَنَا كْوَيِّس",
+				"transliteration": "ana kwayyis"
+			},
+			"levantine": {
+				"arabic": "أَنَا مْنِيح",
+				"transliteration": "ana mni7"
+			},
+			"darija": {
+				"arabic": "لَابَاس",
+				"transliteration": "labas"
+			},
+			"fusha": {
+				"arabic": "أَنَا بِخَيْرٍ",
+				"transliteration": "ana bikhayr"
+			}
+		}
+	},
+	{
+		"id": "nothing",
+		"english": "nothing",
+		"forms": {
+			"egyptian-arabic": {
+				"arabic": "وَلَا حَاجَة",
+				"transliteration": "wala 7aga"
+			},
+			"levantine": {
+				"arabic": "وَلَا شِي",
+				"transliteration": "wala shi"
+			},
+			"darija": {
+				"arabic": "وَالُو",
+				"transliteration": "walu"
+			},
+			"fusha": {
+				"arabic": "لَا شَيْءَ",
+				"transliteration": "la shay2"
+			}
+		}
+	},
+	{
+		"id": "child",
+		"english": "a child",
+		"forms": {
+			"egyptian-arabic": {
+				"arabic": "عَيِّل",
+				"transliteration": "3ayyil"
+			},
+			"levantine": {
+				"arabic": "وَلَد",
+				"transliteration": "walad"
+			},
+			"darija": {
+				"arabic": "دْرِّي",
+				"transliteration": "drri"
+			},
+			"fusha": {
+				"arabic": "طِفْل",
+				"transliteration": "tifl"
+			}
+		}
+	},
+	{
+		"id": "how-much",
+		"english": "how much?",
+		"forms": {
+			"egyptian-arabic": {
+				"arabic": "بِكَام؟",
+				"transliteration": "bikam?"
+			},
+			"levantine": {
+				"arabic": "قَدَّيْش؟",
+				"transliteration": "2addaysh?"
+			},
+			"darija": {
+				"arabic": "بْشْحَال؟",
+				"transliteration": "bsh7al?"
+			},
+			"fusha": {
+				"arabic": "بِكَمْ؟",
+				"transliteration": "bikam?"
+			}
+		}
+	},
+	{
+		"id": "yes",
+		"english": "yes",
+		"forms": {
+			"egyptian-arabic": {
+				"arabic": "أَيْوَه",
+				"transliteration": "aywa"
+			},
+			"levantine": {
+				"arabic": "إِيه",
+				"transliteration": "eh"
+			},
+			"darija": {
+				"arabic": "وَاخَّا",
+				"transliteration": "wakha"
+			},
+			"fusha": {
+				"arabic": "نَعَمْ",
+				"transliteration": "na3am"
+			}
+		}
+	},
+	{
+		"id": "come-here",
+		"english": "come here",
+		"forms": {
+			"egyptian-arabic": {
+				"arabic": "تَعَالَى هِنَا",
+				"transliteration": "ta3ala hina"
+			},
+			"levantine": {
+				"arabic": "تَعَا لَهُون",
+				"transliteration": "ta3a lahon"
+			},
+			"darija": {
+				"arabic": "أَجِي لْهْنَا",
+				"transliteration": "aji lhna"
+			},
+			"fusha": {
+				"arabic": "تَعَالَ إِلَى هُنَا",
+				"transliteration": "ta3al ila huna"
+			}
+		}
+	},
+	{
+		"id": "there-is",
+		"english": "there is",
+		"forms": {
+			"egyptian-arabic": {
+				"arabic": "فِيه",
+				"transliteration": "fih"
+			},
+			"levantine": {
+				"arabic": "فِي",
+				"transliteration": "fi"
+			},
+			"darija": {
+				"arabic": "كَايْن",
+				"transliteration": "kayn"
+			},
+			"fusha": {
+				"arabic": "يُوجَدُ",
+				"transliteration": "yujadu"
+			}
+		}
+	},
+	{
+		"id": "this",
+		"english": "this",
+		"forms": {
+			"egyptian-arabic": {
+				"arabic": "دَه",
+				"transliteration": "da"
+			},
+			"levantine": {
+				"arabic": "هَيْدَا",
+				"transliteration": "hayda"
+			},
+			"darija": {
+				"arabic": "هَادَا",
+				"transliteration": "hada"
+			},
+			"fusha": {
+				"arabic": "هَذَا",
+				"transliteration": "hadha"
+			}
+		}
+	},
+	{
+		"id": "i-dont-know",
+		"english": "I don't know",
+		"forms": {
+			"egyptian-arabic": {
+				"arabic": "مَعْرَفْش",
+				"transliteration": "ma3rafsh"
+			},
+			"levantine": {
+				"arabic": "مَا بَعْرِف",
+				"transliteration": "ma ba3rif"
+			},
+			"darija": {
+				"arabic": "مَا عْرَفْتْش",
+				"transliteration": "ma 3raftsh"
+			},
+			"fusha": {
+				"arabic": "لَا أَعْرِفُ",
+				"transliteration": "la a3rifu"
+			}
+		}
+	},
+	{
+		"id": "hungry",
+		"english": "I'm hungry",
+		"forms": {
+			"egyptian-arabic": {
+				"arabic": "أَنَا جَعَان",
+				"transliteration": "ana ga3an"
+			},
+			"levantine": {
+				"arabic": "أَنَا جُوعَان",
+				"transliteration": "ana ju3an"
+			},
+			"darija": {
+				"arabic": "أَنَا جِيعَان",
+				"transliteration": "ana ji3an"
+			},
+			"fusha": {
+				"arabic": "أَنَا جَائِعٌ",
+				"transliteration": "ana ja2i3"
+			}
+		}
+	},
+	{
+		"id": "really",
+		"english": "really?",
+		"forms": {
+			"egyptian-arabic": {
+				"arabic": "بِجَدّ؟",
+				"transliteration": "bigadd?"
+			},
+			"levantine": {
+				"arabic": "عَنْجَد؟",
+				"transliteration": "3anjad?"
+			},
+			"darija": {
+				"arabic": "بْصَّح؟",
+				"transliteration": "bssa7?"
+			},
+			"fusha": {
+				"arabic": "حَقًّا؟",
+				"transliteration": "7aqqan?"
+			}
+		}
+	},
+	{
+		"id": "your-name",
+		"english": "what's your name? (to a man)",
+		"forms": {
+			"egyptian-arabic": {
+				"arabic": "اسْمَك إِيه؟",
+				"transliteration": "ismak eh?"
+			},
+			"levantine": {
+				"arabic": "شُو اسْمَك؟",
+				"transliteration": "shu ismak?"
+			},
+			"darija": {
+				"arabic": "شْنُو سْمِيتْك؟",
+				"transliteration": "shnu smitk?"
+			},
+			"fusha": {
+				"arabic": "مَا اسْمُكَ؟",
+				"transliteration": "ma ismuka?"
+			}
+		}
+	},
+	{
+		"id": "tomato",
+		"english": "tomatoes",
+		"forms": {
+			"egyptian-arabic": {
+				"arabic": "قُوطَة",
+				"transliteration": "2uta"
+			},
+			"levantine": {
+				"arabic": "بَنَدُورَة",
+				"transliteration": "banadora"
+			},
+			"darija": {
+				"arabic": "مَاطِيشَة",
+				"transliteration": "matisha"
+			},
+			"fusha": {
+				"arabic": "طَمَاطِم",
+				"transliteration": "tamatim"
+			}
+		}
+	},
+	{
+		"id": "enough",
+		"english": "that's enough",
+		"forms": {
+			"egyptian-arabic": {
+				"arabic": "خَلَاص",
+				"transliteration": "khalas"
+			},
+			"levantine": {
+				"arabic": "خَلَص",
+				"transliteration": "khalas"
+			},
+			"darija": {
+				"arabic": "صَافِي",
+				"transliteration": "safi"
+			},
+			"fusha": {
+				"arabic": "يَكْفِي",
+				"transliteration": "yakfi"
+			}
+		}
+	},
+	{
+		"id": "i-can",
+		"english": "I can",
+		"forms": {
+			"egyptian-arabic": {
+				"arabic": "أَقْدَر",
+				"transliteration": "a2dar"
+			},
+			"levantine": {
+				"arabic": "فِيِّي",
+				"transliteration": "fiyyi"
+			},
+			"darija": {
+				"arabic": "نْقْدَر",
+				"transliteration": "nqdar"
+			},
+			"fusha": {
+				"arabic": "أَسْتَطِيعُ",
+				"transliteration": "astati3u"
+			}
+		}
+	},
+	{
+		"id": "cat",
+		"english": "a cat",
+		"forms": {
+			"egyptian-arabic": {
+				"arabic": "قُطَّة",
+				"transliteration": "2utta"
+			},
+			"levantine": {
+				"arabic": "بِسِّة",
+				"transliteration": "bisse"
+			},
+			"darija": {
+				"arabic": "مُشّ",
+				"transliteration": "mushsh"
+			},
+			"fusha": {
+				"arabic": "هِرَّة",
+				"transliteration": "hirra"
+			}
+		}
+	},
+	{
+		"id": "like-this",
+		"english": "like this",
+		"forms": {
+			"egyptian-arabic": {
+				"arabic": "كِدَه",
+				"transliteration": "kida"
+			},
+			"levantine": {
+				"arabic": "هَيْك",
+				"transliteration": "hayk"
+			},
+			"darija": {
+				"arabic": "هَكَّا",
+				"transliteration": "hakka"
+			},
+			"fusha": {
+				"arabic": "هَكَذَا",
+				"transliteration": "hakadha"
+			}
+		}
+	},
+	{
+		"id": "no-problem",
+		"english": "no problem",
+		"forms": {
+			"egyptian-arabic": {
+				"arabic": "مَفِيش مُشْكِلَة",
+				"transliteration": "mafish mushkila"
+			},
+			"levantine": {
+				"arabic": "مَا فِي مُشْكِلِة",
+				"transliteration": "ma fi mushkile"
+			},
+			"darija": {
+				"arabic": "مَاشِي مُشْكِل",
+				"transliteration": "mashi mushkil"
+			},
+			"fusha": {
+				"arabic": "لَا مُشْكِلَةَ",
+				"transliteration": "la mushkila"
+			}
+		}
+	},
+	{
+		"id": "very",
+		"english": "very",
+		"forms": {
+			"egyptian-arabic": {
+				"arabic": "أَوِي",
+				"transliteration": "awi"
+			},
+			"levantine": {
+				"arabic": "كْتِير",
+				"transliteration": "ktir"
+			},
+			"darija": {
+				"arabic": "بَزَّاف",
+				"transliteration": "bezzaf"
+			},
+			"fusha": {
+				"arabic": "جِدًّا",
+				"transliteration": "jiddan"
+			}
+		}
+	},
+	{
+		"id": "bravo",
+		"english": "well done",
+		"forms": {
+			"egyptian-arabic": {
+				"arabic": "بُرَافُو عَلِيك",
+				"transliteration": "bravo 3alek"
+			},
+			"levantine": {
+				"arabic": "يِعْطِيك العَافْيِة",
+				"transliteration": "ya3tik il-3afye"
+			},
+			"darija": {
+				"arabic": "تْبَارْكْ اللّه عْلِيك",
+				"transliteration": "tbarkallah 3lik"
+			},
+			"fusha": {
+				"arabic": "أَحْسَنْتَ",
+				"transliteration": "a7santa"
+			}
+		}
+	}
+]

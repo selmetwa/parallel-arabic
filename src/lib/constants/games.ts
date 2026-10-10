@@ -528,6 +528,58 @@ export const GAMES: GameInfo[] = [
 					'Go through the interactive alphabet first, which teaches each letter with its sound. Then come back here to practise recognising them quickly.'
 			}
 		]
+	},
+	{
+		slug: 'dialect-match',
+		name: 'Dialect Match',
+		heading: 'Which Arabic Dialect Is It? Egyptian, Levantine, Darija or Fusha',
+		emoji: '🌍',
+		tagline: 'Is it Egyptian, Levantine, Moroccan or Fusha? Read it or hear it, and guess.',
+		skills: ['Dialects', 'Listening', 'Vocabulary'],
+		levels: 'Beginner–Advanced',
+		accent: '#6366f1',
+		deep: '#4338ca',
+		shot: {
+			src: '/images/feature-pages/game-dialect-match.webp',
+			w: 1568,
+			h: 900,
+			alt: 'A Dialect Match question: an Arabic word with its meaning, and buttons for Egyptian, Levantine, Darija and Fusha'
+		},
+		seo: {
+			title: 'Which Arabic Dialect Is It? Dialect Quiz Game | Parallel Arabic',
+			description:
+				'Guess the Arabic dialect from a word, a phrase or a native recording: Egyptian, Levantine, Moroccan Darija or Modern Standard Arabic. Then see all four side by side.'
+		},
+		intro:
+			'The same thing is said four different ways. “What?” is إيه in Cairo, شو in Beirut, شنو in Casablanca and ماذا in Fusha. Read a word or hear a recording and say which dialect it is, or pick how one dialect says it. After every answer you see all four.',
+		howToPlay: [
+			'Press Start. A round is ten questions of three kinds, mixed.',
+			'See a word or phrase and tap its dialect, or listen to a recording and do the same.',
+			'Or get a meaning and a dialect, and pick that dialect’s way of saying it from four.',
+			'After each answer, compare all four dialects and play the recordings.'
+		],
+		faqs: [
+			{
+				question: 'How different are the Arabic dialects?',
+				answer:
+					'Very, in everyday words. Egyptian, Levantine and Moroccan Darija share most of their grammar with Modern Standard Arabic but use different words for things people say all day: what, why, now, I want, good. Darija differs the most, mixing in Amazigh and French words.'
+			},
+			{
+				question: 'Which dialect should I learn?',
+				answer:
+					'The one spoken by the people you want to talk to. Egyptian is the most widely understood thanks to films and TV, Levantine is spoken from Lebanon to Jordan, and Fusha is for reading, news and formal speech. This game shows you how much they overlap.'
+			},
+			{
+				question: 'Where do the recordings come from?',
+				answer:
+					'Native recordings made for Parallel Arabic’s 3D Room Hunt game, in all four dialects. The rest of the questions are written words and phrases you read.'
+			},
+			{
+				question: 'Do I need to know all four dialects to play?',
+				answer:
+					'No. It works best if you know one, because you learn the others by comparison. Even beginners pick up the giveaways quickly, like Darija’s دابا for “now”.'
+			}
+		]
 	}
 ];
 
