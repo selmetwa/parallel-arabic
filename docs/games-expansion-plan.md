@@ -9,6 +9,7 @@ Outcome:
 - A `/features/<slug>` landing page for every game, new and existing (15 pages), each aimed at a different search from its game page.
 
 **Decisions (locked with the user)**
+- No keyboard input in any game: everything is tap or pick.
 - Verb Blitz ships in all 4 dialects. The Levantine, Darija and Fusha conjugation files get written first.
 - New scenes: doctor's visit, airport & passport, asking for directions, coffee shop / bakery.
 - Feature pages for the new games **and** the existing ones (word scramble, odd one out, spot the mistake, sentence scramble, quiz, Scenarios).
@@ -95,15 +96,15 @@ Free rounds work as on today's games unless noted.
 - **Data:** `letters` from `alphabet.ts`. Works the same in every dialect, so the dialect only changes the level-2 words.
 - Letter audio: reuse the alphabet page's sounds if they exist; otherwise none in v1.
 
-### 5. Listen & Type: `listen-and-type` → feature `arabic-dictation-practice`
-- **Play:** hear a word, type it on the Word Scramble keyboard or a physical keyboard. Partial credit by letter, via `letterKey` folding and the edit distance in `pronunciation-similarity.ts`.
-- **Data:** word-pool words with `audioUrl` only. If a theme has fewer than 8, hide the theme.
+### 5. Listen & Spell: `listen-and-spell` → feature `arabic-listening-spelling-practice`
+- **No typing** (user decision: Arabic keyboard input converts badly). Hear a word, pick its spelling from 4. One wrong option is a near-miss that swaps a sound-alike letter (س/ص, ت/ط, د/ض, ذ/ز/ظ, ح/ه, ك/ق, ث/س, ع/ء); the others are words of similar length.
+- **Data:** word-pool words with `audioUrl` only. If a theme has fewer than 8, the game says so.
 
 ### 6. Verb Blitz: `verb-blitz` → feature `arabic-verb-conjugation-game`
 - **Content first:** write `verb-conjugations/{levantine,darija,fusha}/*.json` for the same 75 verbs, in the Egyptian file shape.
   - Each dialect uses its own person keys (Fusha: أنا/أنتَ/أنتِ/هو/هي/نحن/أنتم/هم; no dual in v1).
   - Then check the existing `[dialect]/conjugations` pages either render the new files correctly or ignore them.
-- **Play:** "هي · past · عاش" → pick from 4 (distractors are the same verb's other persons/tenses). Hard mode: type it.
+- **Play:** "هي · past · عاش" → pick from 4 (distractors are the same verb's other persons/tenses). No typing.
 - **Data:** a static JSON import is fine (our own content, and it's already public on the conjugation pages).
 
 ### 7. Fill the Gap: `fill-the-gap` → feature `arabic-fill-in-the-blank`
@@ -121,7 +122,7 @@ Free rounds work as on today's games unless noted.
 ### 9. Daily Root: `daily-root` → feature `arabic-wordle-daily-puzzle`
 - **Play:**
   - Today's root (e.g. ك-ت-ب) and 5 English clues (writer, office, book…).
-  - Type each derived word, 3 tries per clue, letters shown green or yellow against the answer.
+  - Build each derived word from letter tiles (no typing), 3 tries per clue, letters shown green or yellow against the answer.
   - Finish with a shareable emoji grid ("Parallel Arabic Daily Root #42").
 - **Content:** hand-written `src/lib/data/daily-root/roots.json`, about 180 roots × 5 derived Fusha words (arabic, plain, transliteration, english). Roots are shared across dialects, so the puzzle is labelled Fusha.
 - **Serving:** `/api/games/daily-root` returns **today's** puzzle only, by days since launch mod N in UTC, so the answer list never reaches the client.

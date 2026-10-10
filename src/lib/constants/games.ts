@@ -429,6 +429,53 @@ export const GAMES: GameInfo[] = [
 					'Yes, on this device, for each dialect and theme, so you have something to beat next time.'
 			}
 		]
+	},
+	{
+		slug: 'listen-and-spell',
+		name: 'Listen & Spell',
+		heading: 'Arabic Listening Game: Hear It, Spell It',
+		emoji: '👂',
+		tagline: 'Hear an Arabic word and pick how it’s spelled. س or ص? ت or ط?',
+		skills: ['Listening', 'Spelling'],
+		levels: 'Beginner–Intermediate',
+		accent: '#06b6d4',
+		deep: '#0e7490',
+		shot: {
+			src: '/images/feature-pages/game-listen-and-spell.webp',
+			w: 1568,
+			h: 900,
+			alt: 'A Listen & Spell question: a play button and four Arabic spellings of a word to choose from'
+		},
+		seo: {
+			title: 'Arabic Listening & Spelling Game | Parallel Arabic',
+			description:
+				'Hear a native recording and pick the right Arabic spelling, with near-misses like س and ص or ت and ط to train your ear. Egyptian, Levantine, Darija and Fusha.'
+		},
+		intro:
+			'A listening game for the letters that sound alike. Hear a word, recorded by a native speaker, and pick its spelling from four. One of the wrong answers is always close: the same word with س for ص, or ك for ق.',
+		howToPlay: [
+			'Pick a dialect and a theme, then press Play the word.',
+			'Listen, as many times as you like, and tap the spelling you heard.',
+			'The answer shows the word with its transliteration and meaning.',
+			'After eight words, go over the ones you missed and play them again.'
+		],
+		faqs: [
+			{
+				question: 'Why are some of the wrong answers so close?',
+				answer:
+					'Because those are the letters learners actually confuse: س and ص, ت and ط, د and ض, ك and ق, ح and ه. Telling them apart by ear is what lets you spell a new word you hear, and look it up.'
+			},
+			{
+				question: 'Do I have to type anything?',
+				answer:
+					'No. You only listen and tap. The game is about hearing the difference between sounds, not about using an Arabic keyboard.'
+			},
+			{
+				question: 'Are the recordings real people?',
+				answer:
+					'Yes. Every word in the game has a recording, and themes without enough recorded words are left out.'
+			}
+		]
 	}
 ];
 
