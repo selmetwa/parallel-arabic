@@ -1,5 +1,19 @@
 # Games expansion: 9 new games, 4 new scenarios, a feature page for every game
 
+> **As built (2026-10-10), where it differs from the plan below**
+> - No keyboard input anywhere (user decision mid-build). Listen & Type became **Listen & Spell** (`listen-and-spell`), Verb Blitz is multiple choice only, and Daily Root builds words from letter tiles.
+> - Verb tables: 72 verbs × 3 new dialects, written as stem tables in `scripts/verb-conjugations/{levantine,darija,fusha}.ts` and expanded by `build.ts` (`npx vite-node scripts/verb-conjugations/build.ts`). Fusha carries full tashkeel. Three Egyptian glosses are wrong (احترم "to behave", جرى "to happen", استنى "to stay"); the new dialects use the real meanings, and the Egyptian files are untouched.
+> - Daily Root: 144 roots, 628 words, 4–5 words a day (not 180 × 5).
+> - Dialect Match: 27 hand-written items plus Room Hunt's 39 recorded words and 8 phrasebook entries, served from the page load (our own content).
+> - Feature slugs: Verb Blitz's page is `arabic-verb-drills` (an existing `arabic-verb-conjugation-practice` page covers the tables), Daily Root's is `arabic-root-words-daily-puzzle`, the existing games use `arabic-spelling-practice`, `arabic-grammar-practice`, `arabic-fill-in-the-blank-exercises`.
+> - Scenarios: café, doctor, airport and directions reuse the furniture/food/road kits; 468 new recordings.
+>
+> **For native review** (everything is hand-written; Darija most of all):
+> - `src/lib/data/dialect-match/sets.json` (e.g. "well done" in Levantine is يعطيك العافية, which is closer to "good job/thanks for your effort").
+> - `scripts/verb-conjugations/darija.ts` and `levantine.ts` stems, especially the verb choices (Darija هرس for "break", صاوب for "fix", قاس for "touch").
+> - `src/lib/games/room-hunt/scenarios/{cafe,doctor,airport,directions}.json`, Darija lines especially (كولوار, سرجم, البطاقة ديال الطيارة).
+> - `src/lib/data/daily-root/roots.json` (Fusha).
+
 ## Context
 The games are getting a lot of traffic, so we're adding more and giving each one an SEO landing page. Today there are 7 games (word scramble, odd one out, spot the mistake, sentence scramble, quiz, Room Hunt, Scenarios). Each has a `/learn/game/<slug>` page built from `GAMES` in `src/lib/constants/games.ts`. Room Hunt is the only one that also has a `/features/...` landing page.
 
