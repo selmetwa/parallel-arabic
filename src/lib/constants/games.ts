@@ -476,6 +476,58 @@ export const GAMES: GameInfo[] = [
 					'Yes. Every word in the game has a recording, and themes without enough recorded words are left out.'
 			}
 		]
+	},
+	{
+		slug: 'letter-hunt',
+		name: 'Letter Hunt',
+		heading: 'Arabic Letter Game: Beginning, Middle and End Forms',
+		emoji: '🔤',
+		tagline: 'Recognise every Arabic letter at the start, middle and end of a word, and by its sound.',
+		skills: ['Alphabet', 'Reading', 'Listening'],
+		levels: 'Absolute beginner',
+		accent: '#14b8a6',
+		deep: '#0f766e',
+		shot: {
+			src: '/images/feature-pages/game-letter-hunt.webp',
+			w: 1568,
+			h: 900,
+			alt: 'A Letter Hunt question: the middle form of an Arabic letter, with four letters to choose from'
+		},
+		seo: {
+			title: 'Arabic Letter Forms Game - Beginning, Middle, End | Parallel Arabic',
+			description:
+				'Learn to recognise Arabic letters in every position: the start, middle and end of a word, plus the sound of each one. A free game for beginners.'
+		},
+		intro:
+			'Most Arabic letters change shape depending on where they sit in a word. This game drills all of them: see a letter in its middle or end form and name it, pick how a letter is written at the start of a word, or hear a sound and find its letter.',
+		howToPlay: [
+			'Press Start. A round is ten letters, with three kinds of question mixed together.',
+			'Name the letter from one of its forms, pick the right form for a position, or tap the letter you hear.',
+			'The wrong answers are letters with the same body and different dots, the mix-ups that slow readers down.',
+			'After each answer you see all of the letter’s forms. At the end, replay the sounds of any you missed.'
+		],
+		faqs: [
+			{
+				question: 'Why do Arabic letters have different forms?',
+				answer:
+					'Arabic is joined-up writing. Most letters connect to the next one, so they have a form for the start, the middle and the end of a word, plus one for when they stand alone. ب is ﺑ at the start, ﺒ in the middle and ﺐ at the end.'
+			},
+			{
+				question: 'Which letters don’t join?',
+				answer:
+					'Six letters never connect to the letter after them: ا, د, ذ, ر, ز and و. They only have a standalone form and an end form, which is why the game never asks for their start or middle form.'
+			},
+			{
+				question: 'Is this game the same for every dialect?',
+				answer:
+					'Yes. Egyptian, Levantine, Moroccan Darija and Modern Standard Arabic all use the same alphabet, so there’s no dialect to choose.'
+			},
+			{
+				question: 'I don’t know any letters yet. Where should I start?',
+				answer:
+					'Go through the interactive alphabet first, which teaches each letter with its sound. Then come back here to practise recognising them quickly.'
+			}
+		]
 	}
 ];
 
