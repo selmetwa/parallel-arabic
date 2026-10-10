@@ -11,6 +11,38 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 	{
+		slug: 'fusha-egyptian-levantine-darija',
+		title: 'Fusha, Egyptian, Levantine, Darija: can you hear the difference?',
+		description:
+			'What separates the four Arabics people choose between, the handful of everyday words and sounds that give each one away, and two rounds of a game to find out whether you can already tell them apart.',
+		date: '2026-10-10',
+		readingTime: '7 min read'
+	},
+	{
+		slug: 'how-arabic-letters-connect',
+		title: 'How Arabic letters connect (and why words look different from the alphabet chart)',
+		description:
+			'Every letter has up to four shapes, several are told apart only by dots, and six never join forwards, which is why Arabic words have gaps in the middle. The three rules, with two games to practise them.',
+		date: '2026-10-10',
+		readingTime: '6 min read'
+	},
+	{
+		slug: 'hello-in-levantine-arabic',
+		title: 'How to say hello in Levantine Arabic',
+		description:
+			'Mar7aba, saba7 el khayr, ahlan wa sahlan, kifak: the greetings used from Beirut to Amman, the replies that go with them, and memory games to make them stick.',
+		date: '2026-10-10',
+		readingTime: '6 min read'
+	},
+	{
+		slug: 'harakat-arabic-vowel-marks',
+		title: 'Harakat: the Arabic vowel marks, explained by ear',
+		description:
+			'Fatha, kasra, damma, sukun, shadda and tanween: what each mark sounds like, why Arabic usually leaves them out, how to type them, and a listening game where only the vowels change.',
+		date: '2026-10-10',
+		readingTime: '6 min read'
+	},
+	{
 		slug: 'ordering-food-in-arabic-3d',
 		title: 'I built a 3D restaurant to practise ordering food in Arabic',
 		description:
