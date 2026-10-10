@@ -141,6 +141,12 @@
 
 		resumeImportJobIfNeeded().catch(() => {});
 
+		// Streak days and reminders follow the learner's own clock.
+		if (data.user?.id) {
+			const { syncTimeZone } = await import('$lib/helpers/sync-timezone');
+			syncTimeZone(data.user.id);
+		}
+
 		// Initialize RevenueCat in native app when user is logged in
 		if (isNativeApp() && data.user?.id) {
 			const { RevenueCatService } = await import('$lib/services/revenuecat.service');

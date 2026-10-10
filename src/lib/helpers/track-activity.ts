@@ -1,5 +1,6 @@
 import { supabase } from '$lib/supabaseClient';
 import { v4 as uuidv4 } from 'uuid';
+import { nextStreak } from './streak';
 
 /**
  * Get the start of day timestamp (midnight UTC)
@@ -22,26 +23,15 @@ function getStartOfWeek(): number {
   return utcDate.getTime();
 }
 
-/**
- * Calculate streak based on last activity date
- */
-function calculateStreak(lastActivityDate: number | null, currentStreak: number): number {
-  if (!lastActivityDate) return 1;
-  
-  const today = getStartOfDay();
-  const yesterday = today - 24 * 60 * 60 * 1000;
-  const lastActivityDay = Math.floor(lastActivityDate / (24 * 60 * 60 * 1000)) * (24 * 60 * 60 * 1000);
-  
-  if (lastActivityDay === today) {
-    // Activity today - maintain streak
-    return currentStreak;
-  } else if (lastActivityDay === yesterday) {
-    // Activity yesterday - increment streak
-    return currentStreak + 1;
-  } else {
-    // Gap in activity - reset to 1
-    return 1;
-  }
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function streakStateOf(user: any) {
+  return {
+    current: user.current_streak || 0,
+    longest: user.longest_streak || 0,
+    freezes: user.streak_freezes || 0,
+    lastActivity: user.last_activity_date ?? null,
+    timezone: user.timezone ?? null
+  };
 }
 
 export type ActivityType = 'review' | 'sentence' | 'story' | 'lesson' | 'saved_word' | 'short';
@@ -62,7 +52,7 @@ export async function trackActivity(
     // Get current user data
     const { data: user, error: userError } = await supabase
       .from('user')
-      .select('current_streak, longest_streak, last_activity_date, week_start_date')
+      .select('current_streak, longest_streak, last_activity_date, week_start_date, streak_freezes, timezone')
       .eq('id', userId)
       .single();
 
@@ -71,9 +61,8 @@ export async function trackActivity(
       return { success: false, error: 'User not found' };
     }
 
-    // Calculate new streak
-    const newStreak = calculateStreak(user.last_activity_date, user.current_streak || 0);
-    const newLongestStreak = Math.max(user.longest_streak || 0, newStreak);
+    // Calculate new streak (in the learner's time zone, with freezes)
+    const streak = nextStreak(streakStateOf(user), now);
 
     // Check if we're in a new week
     const isNewWeek = !user.week_start_date || user.week_start_date < weekStart;
@@ -149,9 +138,10 @@ export async function trackActivity(
 
     // Update user stats
     const updateData: any = {
-      last_activity_date: today,
-      current_streak: newStreak,
-      longest_streak: newLongestStreak,
+      last_activity_date: now,
+      current_streak: streak.current,
+      longest_streak: streak.longest,
+      streak_freezes: streak.freezes,
       [totalField]: (user[totalField] || 0) + count
     };
 
@@ -212,7 +202,7 @@ export async function trackActivitySimple(
     // Get current user data
     const { data: user, error: userError } = await supabase
       .from('user')
-      .select('current_streak, longest_streak, last_activity_date, week_start_date, total_reviews, total_sentences_viewed, total_stories_viewed, total_lessons_viewed, total_saved_words, total_shorts_viewed, reviews_this_week, sentences_viewed_this_week, stories_viewed_this_week, lessons_viewed_this_week, saved_words_this_week, shorts_viewed_this_week')
+      .select('current_streak, longest_streak, last_activity_date, week_start_date, streak_freezes, timezone, total_reviews, total_sentences_viewed, total_stories_viewed, total_lessons_viewed, total_saved_words, total_shorts_viewed, reviews_this_week, sentences_viewed_this_week, stories_viewed_this_week, lessons_viewed_this_week, saved_words_this_week, shorts_viewed_this_week')
       .eq('id', userId)
       .single();
 
@@ -221,9 +211,8 @@ export async function trackActivitySimple(
       return { success: false, error: 'User not found' };
     }
 
-    // Calculate new streak
-    const newStreak = calculateStreak(user.last_activity_date, user.current_streak || 0);
-    const newLongestStreak = Math.max(user.longest_streak || 0, newStreak);
+    // Calculate new streak (in the learner's time zone, with freezes)
+    const streak = nextStreak(streakStateOf(user), now);
 
     // Check if we're in a new week
     const isNewWeek = !user.week_start_date || user.week_start_date < weekStart;
@@ -311,9 +300,10 @@ export async function trackActivitySimple(
 
     // Update user stats
     const updateData: any = {
-      last_activity_date: today,
-      current_streak: newStreak,
-      longest_streak: newLongestStreak,
+      last_activity_date: now,
+      current_streak: streak.current,
+      longest_streak: streak.longest,
+      streak_freezes: streak.freezes,
       [fields.total]: (user[fields.total] || 0) + count
     };
 
@@ -348,3 +338,46 @@ export async function trackActivitySimple(
   }
 }
 
+/**
+ * Keep the streak going for activity that has no counter of its own (playing a
+ * game). Writes only on the first activity of the learner's day, and marks the
+ * day in user_daily_activity so the week strip shows it.
+ */
+export async function touchStreak(userId: string): Promise<void> {
+  try {
+    const now = Date.now();
+    const { data: user, error } = await supabase
+      .from('user')
+      .select('current_streak, longest_streak, last_activity_date, streak_freezes, timezone')
+      .eq('id', userId)
+      .single();
+    if (error || !user) return;
+
+    const streak = nextStreak(streakStateOf(user), now);
+    if (!streak.newDay) return;
+
+    await supabase
+      .from('user')
+      .update({
+        last_activity_date: now,
+        current_streak: streak.current,
+        longest_streak: streak.longest,
+        streak_freezes: streak.freezes
+      })
+      .eq('id', userId);
+
+    const today = getStartOfDay();
+    await supabase.from('user_daily_activity').upsert(
+      {
+        id: `${userId}-${today}`,
+        user_id: userId,
+        activity_date: today,
+        created_at: now,
+        updated_at: now
+      },
+      { onConflict: 'user_id,activity_date', ignoreDuplicates: true }
+    );
+  } catch (error) {
+    console.error('Error touching streak:', error);
+  }
+}

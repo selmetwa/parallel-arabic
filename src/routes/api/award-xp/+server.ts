@@ -1,6 +1,7 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { awardXp } from '$lib/helpers/award-xp';
+import { touchStreak } from '$lib/helpers/track-activity';
 import type { XpEventType } from '$lib/helpers/xp-levels';
 
 const VALID_EVENT_TYPES: XpEventType[] = ['review_cycle', 'review_correct', 'sentence_correct', 'story_complete', 'game_correct', 'challenge_bonus', 'conjugation_correct'];
@@ -55,6 +56,8 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		}
 
 		const result = await awardXp(user.id, eventType, supabase);
+		// Playing counts as a day of practice, like reading or reviewing.
+		if (result.success) await touchStreak(user.id);
 		return json(result);
 	} catch (error) {
 		console.error('Error in award-xp endpoint:', error);
