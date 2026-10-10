@@ -59,8 +59,8 @@
 			status = 'solved';
 			outcomes[index] = !missedOnce;
 			announcement = `Correct: ${sentence.english}`;
-			if (!missedOnce && signedIn) {
-				awardGameXp();
+			if (!missedOnce) {
+				if (signedIn) awardGameXp();
 				xpEarned++;
 			}
 		} else {
@@ -100,6 +100,7 @@
 		heading="{score} of {sentences.length} sentences on the first try"
 		stats={[{ label: 'First try', value: `${score}/${sentences.length}` }]}
 		{xpEarned}
+		{signedIn}
 		{accent}
 		{deep}
 		{onPlayAgain}

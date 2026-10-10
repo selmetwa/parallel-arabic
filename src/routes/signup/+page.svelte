@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
 	import { goto } from '$app/navigation';
+	import { page } from '$app/state';
+	import { rememberNext, safeNext } from '$lib/helpers/safe-next';
 	import Button from '$lib/components/Button.svelte';
 	import Testimonial from '$lib/components/Testimonial.svelte';
 	import type { ActionData } from './$types';
@@ -9,6 +11,10 @@
 
   // Get data and form from props
   let { data, form }: { data: any; form: ActionData } = $props();
+
+  // Where to go after signing in, e.g. back to the game that asked for an account.
+  const next = $derived(safeNext(page.url.searchParams.get('next')));
+  const nextQuery = $derived(next === '/' ? '' : `?next=${encodeURIComponent(next)}`);
 
   // Form state
   let loading = $state(false);
@@ -26,6 +32,8 @@
     const redirectUrl = isNative
       ? 'com.parallelarabic.app://auth/callback'
       : `${window.location.origin}/auth/callback`;
+
+    if (!isNative) rememberNext(next);
 
     const { data: oauthData, error: authError } = await supabase.auth.signInWithOAuth({
       provider: 'google',
@@ -63,7 +71,7 @@
           const { error: sessionError } = await supabase.auth.exchangeCodeForSession(code);
           if (!sessionError) {
             await fetch('/api/auth/sync', { method: 'POST' });
-            goto('/');
+            goto(next);
           }
         }
         loading = false;
@@ -106,6 +114,7 @@
         }}
         class="bg-tile-400 border-2 border-tile-600 rounded-xl shadow-xl p-8 shrink-0"
       >
+        <input type="hidden" name="next" value={next} />
         <h1 class="text-3xl font-bold text-text-300 mb-6">Create your account</h1>
         
         <div class="flex flex-col gap-4 mb-4 min-w-[320px]">
@@ -170,7 +179,7 @@
         </div>
 
         <div class="pt-4 border-t border-tile-500">
-          <a href="/login" class="text-text-200 hover:text-text-300 underline transition-colors">Already have an account? Login</a>
+          <a href="/login{nextQuery}" class="text-text-200 hover:text-text-300 underline transition-colors">Already have an account? Login</a>
         </div>
       </form>
       <Testimonial

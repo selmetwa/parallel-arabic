@@ -433,8 +433,8 @@
 		const { result, xp } = answer(round, id);
 
 		if (result === 'correct') {
-			if (xp && signedIn) {
-				awardGameXp();
+			if (xp) {
+				if (signedIn) awardGameXp();
 				xpEarned++;
 			}
 			const word = wordFor(target, dialect);
@@ -785,6 +785,7 @@
 							]}
 							note="{learnedHere} of {total} words learned in the {room.label.toLowerCase()}"
 							{xpEarned}
+							{signedIn}
 							{accent}
 							{deep}
 							onPlayAgain={() => start()}

@@ -39,8 +39,8 @@
 		announcement = right
 			? `Correct: ${sentence(item)}`
 			: `Not quite. The missing word was ${item.options[item.answer]}. ${item.explanation}`;
-		if (right && signedIn) {
-			awardGameXp();
+		if (right) {
+			if (signedIn) awardGameXp();
 			xpEarned++;
 		}
 	}
@@ -59,6 +59,7 @@
 		heading="{score} of {items.length} gaps filled"
 		stats={[{ label: 'Right', value: `${score}/${items.length}` }]}
 		{xpEarned}
+		{signedIn}
 		{accent}
 		{deep}
 		{onPlayAgain}

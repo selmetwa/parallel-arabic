@@ -15,6 +15,8 @@
 		shot?: GameShot;
 		/** Smaller card for the "more games" strip under a game. */
 		compact?: boolean;
+		/** Query string added to the link, e.g. "?dialect=levantine". */
+		query?: string;
 	}
 
 	let {
@@ -27,11 +29,12 @@
 		accent,
 		deep,
 		shot,
-		compact = false
+		compact = false,
+		query = ''
 	}: Props = $props();
 </script>
 
-<a href={resolve(href)} class="card" class:compact style="--accent:{accent}; --deep:{deep};">
+<a href="{resolve(href)}{query}" class="card" class:compact style="--accent:{accent}; --deep:{deep};">
 	{#if shot && !compact}
 		<span class="shot">
 			<img src={shot.src} width={shot.w} height={shot.h} alt={shot.alt} loading="lazy" decoding="async" />

@@ -145,3 +145,23 @@ export function initialDialect(
 	if (isGameDialect(targetDialect)) return targetDialect;
 	return 'egyptian-arabic';
 }
+
+const DIALECT_KEY = 'pa-game-dialect';
+
+/** The dialect last picked on a game or the hub, remembered on this device. */
+export function savedDialect(): GameDialect | null {
+	try {
+		const value = localStorage.getItem(DIALECT_KEY);
+		return isGameDialect(value) ? value : null;
+	} catch {
+		return null;
+	}
+}
+
+export function saveDialect(dialect: GameDialect): void {
+	try {
+		localStorage.setItem(DIALECT_KEY, dialect);
+	} catch {
+		// Private mode — the choice lasts for this page only.
+	}
+}

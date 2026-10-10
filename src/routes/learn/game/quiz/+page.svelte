@@ -606,9 +606,14 @@
 </section>
 
 <!-- Auth Modal for logged out users -->
-<AuthModal isOpen={gate.modal === 'auth'} handleCloseModal={gate.closeModal} />
+<AuthModal
+	isOpen={gate.modal === 'auth'}
+	handleCloseModal={gate.closeModal}
+	title="Keep playing Vocabulary Quiz"
+	message="You've played your free rounds. Make a free account for two more rounds of every game, plus XP and a daily streak."
+/>
 
-<PaywallModal isOpen={gate.modal === 'paywall'} handleCloseModal={gate.closeModal} />
+<PaywallModal isOpen={gate.modal === 'paywall'} handleCloseModal={gate.closeModal} gameName="Vocabulary Quiz" />
 
 <style>
 	/* Hero */

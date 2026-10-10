@@ -1,18 +1,26 @@
 <script lang="ts">
+	import { onMount, type Snippet } from 'svelte';
 	import { resolve } from '$app/paths';
-	import type { Snippet } from 'svelte';
+	import { page } from '$app/state';
 	import PressButton from './PressButton.svelte';
+	import { rememberRound } from '$lib/games/pending-round';
+	import type { GameWord } from '$lib/games/word-pool';
 
 	interface Props {
 		heading: string;
 		stats: { label: string; value: string | number }[];
-		/** XP earned this round; shown only when signed in and above zero. */
+		/** XP from this round. Signed in: shown as a stat. Signed out: what they would have earned. */
 		xpEarned?: number;
 		note?: string;
 		accent: string;
 		deep: string;
 		onPlayAgain: () => void;
 		playAgainLabel?: string;
+		/** False shows what the round would have saved, with a sign-up link. */
+		signedIn?: boolean;
+		/** Words missed this round, kept for review once the player signs up. */
+		missedWords?: GameWord[];
+		dialect?: string;
 		children?: Snippet;
 	}
 
@@ -25,8 +33,35 @@
 		deep,
 		onPlayAgain,
 		playAgainLabel = 'Play again',
+		signedIn = true,
+		missedWords = [],
+		dialect = '',
 		children
 	}: Props = $props();
+
+	// Kept on this device, then saved to the account after sign-up (GameShell).
+	onMount(() => {
+		if (signedIn) return;
+		try {
+			rememberRound(localStorage, { xp: xpEarned, words: missedWords, dialect });
+		} catch {
+			// No storage — the nudge still shows.
+		}
+	});
+
+	const signupHref = $derived(
+		`${resolve('/signup')}?next=${encodeURIComponent(page.url.pathname + page.url.search)}`
+	);
+	const missedCount = $derived(missedWords.length);
+	const keepLine = $derived.by(() => {
+		const parts = [];
+		if (xpEarned > 0) parts.push(`earned +${xpEarned} XP`);
+		if (missedCount > 0)
+			parts.push(
+				`saved ${missedCount === 1 ? 'the word' : `the ${missedCount} words`} you missed to review`
+			);
+		return parts.length ? `With an account you'd have ${parts.join(' and ')}.` : null;
+	});
 
 	// Move focus here when the round ends, so keyboard and screen-reader users
 	// land on the result instead of on a card that no longer matters.
@@ -45,7 +80,7 @@
 				<dd>{stat.value}</dd>
 			</div>
 		{/each}
-		{#if xpEarned > 0}
+		{#if signedIn && xpEarned > 0}
 			<div class="stat">
 				<dt>XP</dt>
 				<dd>+{xpEarned}</dd>
@@ -55,6 +90,16 @@
 
 	{#if note}
 		<p class="note">{note}</p>
+	{/if}
+
+	{#if !signedIn}
+		<div class="keep">
+			<p>{keepLine ?? 'Make a free account to earn XP and keep a daily streak.'}</p>
+			<a href={signupHref} class="keep-link">
+				{keepLine ? 'Create a free account to keep them' : 'Create a free account'}
+				<span aria-hidden="true">→</span>
+			</a>
+		</div>
 	{/if}
 
 	<div class="actions">
@@ -120,6 +165,29 @@
 		font-size: 0.9rem;
 		font-weight: 600;
 		color: var(--text1);
+	}
+
+	.keep {
+		margin-top: 1rem;
+		border-radius: 0.9rem;
+		border: 2px dashed var(--accent);
+		background: var(--tile3);
+		padding: 0.8rem 1rem;
+		font-size: 0.9rem;
+		color: var(--text1);
+	}
+
+	.keep-link {
+		display: inline-block;
+		margin-top: 0.4rem;
+		font-weight: 600;
+		color: var(--text1);
+		text-decoration: underline;
+		text-underline-offset: 3px;
+	}
+
+	.keep-link:hover {
+		color: var(--accent);
 	}
 
 	.actions {

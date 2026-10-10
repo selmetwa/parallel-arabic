@@ -9,14 +9,18 @@
 </script>
 
 <script lang="ts">
+	import { onMount, type Snippet } from 'svelte';
 	import { resolve } from '$app/paths';
+	import { page } from '$app/state';
 	import type { Pathname } from '$app/types';
-	import type { Snippet } from 'svelte';
 	import AuthModal from '$lib/components/AuthModal.svelte';
 	import PaywallModal from '$lib/components/PaywallModal.svelte';
 	import GameCard from './GameCard.svelte';
 	import { GAMES, QUIZ_CARD, gameHref, type GameInfo } from '$lib/constants/games';
-	import { DIALECT_OPTIONS, type GameDialect } from '$lib/games/themes';
+	import { DIALECT_OPTIONS, saveDialect, type GameDialect } from '$lib/games/themes';
+	import { awardGameXp } from '$lib/games/game-xp';
+	import { takePendingRound } from '$lib/games/pending-round';
+	import { saveMissedWords } from '$lib/games/save-missed';
 
 	interface Props {
 		game: GameInfo;
@@ -51,6 +55,26 @@
 	}: Props = $props();
 
 	const otherGames = $derived(GAMES.filter((g) => g.slug !== game.slug));
+
+	// A round played before signing up, saved to the new account on arrival.
+	let savedRound = $state<string | null>(null);
+	onMount(() => {
+		if (!page.data.user) return;
+		let round;
+		try {
+			round = takePendingRound(localStorage);
+		} catch {
+			return;
+		}
+		if (!round) return;
+		for (let i = 0; i < round.xp; i++) awardGameXp();
+		if (round.words.length) saveMissedWords(round.words, round.dialect);
+		const parts = [];
+		if (round.xp) parts.push(`+${round.xp} XP`);
+		if (round.words.length)
+			parts.push(`${round.words.length} ${round.words.length === 1 ? 'word' : 'words'} in your review`);
+		savedRound = `Your last round is saved: ${parts.join(', ')}.`;
+	});
 
 	// Lock the page behind the fullscreen round so only the game scrolls.
 	$effect(() => {
@@ -115,13 +139,17 @@
 		{#if status}
 			<p class="status">{status}</p>
 		{/if}
+		{#if savedRound}
+			<p class="saved-round" role="status">✓ {savedRound}</p>
+		{/if}
 	</header>
 
 	<div class="controls">
 		{#if showDialect}
-			{@render chipRow('dialect', 'Dialect', dialect, DIALECT_OPTIONS, (value) =>
-				onDialectChange(value as GameDialect)
-			)}
+			{@render chipRow('dialect', 'Dialect', dialect, DIALECT_OPTIONS, (value) => {
+				saveDialect(value as GameDialect);
+				onDialectChange(value as GameDialect);
+			})}
 		{/if}
 		{#each pickers as picker (picker.id)}
 			{@render chipRow(picker.id, picker.label, picker.value, picker.options, picker.onChange)}
@@ -198,8 +226,13 @@
 	</nav>
 </section>
 
-<AuthModal isOpen={modal === 'auth'} handleCloseModal={onCloseModal} />
-<PaywallModal isOpen={modal === 'paywall'} handleCloseModal={onCloseModal} />
+<AuthModal
+	isOpen={modal === 'auth'}
+	handleCloseModal={onCloseModal}
+	title="Keep playing {game.name}"
+	message="You've played your free rounds. Make a free account for two more rounds of every game, plus XP and a daily streak."
+/>
+<PaywallModal isOpen={modal === 'paywall'} handleCloseModal={onCloseModal} gameName={game.name} />
 
 <style>
 	.back {
@@ -264,6 +297,16 @@
 		background: color-mix(in srgb, var(--accent) 16%, var(--tile3));
 		border-radius: 100px;
 		padding: 0.3rem 0.8rem;
+	}
+
+	.saved-round {
+		margin-top: 0.85rem;
+		border-radius: 0.9rem;
+		padding: 0.6rem 0.9rem;
+		font-size: 0.88rem;
+		font-weight: 600;
+		color: var(--text1);
+		background: color-mix(in srgb, #22c55e 16%, var(--tile3));
 	}
 
 	.controls {

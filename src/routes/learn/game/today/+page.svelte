@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { resolve } from '$app/paths';
+	import { page } from '$app/state';
 	import DailyRoot from '$lib/components/games/DailyRoot.svelte';
 	import DialectMatch from '$lib/components/games/DialectMatch.svelte';
 	import LetterHunt from '$lib/components/games/LetterHunt.svelte';
@@ -12,7 +13,9 @@
 
 	const root = getGame('daily-root')!;
 	const game = $derived(getGame(data.game)!);
-	const dialect = $derived(initialDialect(null, data.targetDialect));
+	const dialect = $derived(
+		initialDialect(page.url.searchParams.get('dialect'), data.targetDialect)
+	);
 
 	// Each step is remembered per day on this device; the bonus is claimed on the server.
 	const storageKey = $derived(`pa-today:${data.number}`);

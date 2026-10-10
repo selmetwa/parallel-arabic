@@ -58,10 +58,8 @@
 		const form = question.item.forms[question.dialect];
 		if (right) {
 			score++;
-			if (signedIn) {
-				awardGameXp();
-				xpEarned++;
-			}
+			if (signedIn) awardGameXp();
+			xpEarned++;
 		}
 		announcement = right
 			? `Correct: ${form.arabic} is ${dialectLabel(question.dialect)}.`
@@ -84,6 +82,7 @@
 		heading="{score} of {questions.length} dialects spotted"
 		stats={[{ label: 'Right', value: `${score}/${questions.length}` }]}
 		{xpEarned}
+		{signedIn}
 		{accent}
 		{deep}
 		{onPlayAgain}

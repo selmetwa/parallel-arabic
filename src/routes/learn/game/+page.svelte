@@ -1,17 +1,63 @@
 <script lang="ts">
+	import { onMount, untrack } from 'svelte';
 	import { resolve } from '$app/paths';
 	import GameCard from '$lib/components/games/GameCard.svelte';
-	import { GAMES, GAMES_HUB_FAQS, QUIZ_CARD, gameHref, getGame } from '$lib/constants/games';
+	import {
+		GAMES,
+		GAMES_HUB_FAQS,
+		GAME_LEVEL_GROUPS,
+		QUIZ_CARD,
+		gameHref,
+		getGame,
+		levelGroup
+	} from '$lib/constants/games';
 	import { puzzleNumber } from '$lib/games/daily-root';
 	import { gameOfTheDay } from '$lib/games/today';
+	import {
+		DIALECT_OPTIONS,
+		initialDialect,
+		isGameDialect,
+		saveDialect,
+		savedDialect,
+		type GameDialect
+	} from '$lib/games/themes';
+
+	let { data } = $props();
 
 	const todayGame = getGame(gameOfTheDay(puzzleNumber()))!;
 
-	// "Games by skill": every skill a game lists, with the games that train it.
+	// Picked here and carried into every game link. Links stay plain until the
+	// visitor has a dialect of their own, so crawlers see one URL per game.
+	const target = untrack(() => data.targetDialect);
+	let dialect = $state<GameDialect>(initialDialect(null, target));
+	let chosen = $state(isGameDialect(target));
+	onMount(() => {
+		const saved = savedDialect();
+		if (saved) {
+			dialect = saved;
+			chosen = true;
+		}
+	});
+	const query = $derived(chosen ? `?dialect=${dialect}` : '');
+
+	function pickDialect(value: GameDialect) {
+		dialect = value;
+		chosen = true;
+		saveDialect(value);
+	}
+
 	const cards = [
 		...GAMES.map((g) => ({ ...g, href: gameHref(g.slug) })),
 		{ ...QUIZ_CARD, href: gameHref(QUIZ_CARD.slug) }
 	];
+
+	// The game grid, split by level: beginners see where to start first.
+	const groups = GAME_LEVEL_GROUPS.map((group) => ({
+		...group,
+		games: cards.filter((c) => levelGroup(c.levels) === group.id)
+	})).filter((group) => group.games.length);
+
+	// "Games by skill": every skill a game lists, with the games that train it.
 	const bySkill = [...new Set(cards.flatMap((c) => c.skills))].map((skill) => ({
 		skill,
 		games: cards.filter((c) => c.skills.includes(skill))
@@ -19,29 +65,58 @@
 </script>
 
 <section class="mx-auto max-w-4xl px-4 pb-24 pt-8 sm:px-5">
-	<header class="mb-8">
+	<header class="mb-6">
 		<h1 class="hero-title">Arabic Games</h1>
-		<p class="hero-sub">
+		<p class="hero-sub">Short games for learning Arabic. Two free rounds of each, no account needed.</p>
+	</header>
+
+	<div class="picker">
+		<span class="picker-label" id="hub-dialect">Your dialect</span>
+		<div class="chips" role="group" aria-labelledby="hub-dialect">
+			{#each DIALECT_OPTIONS as option (option.value)}
+				<button
+					type="button"
+					class="chip"
+					class:is-on={option.value === dialect}
+					aria-pressed={option.value === dialect}
+					onclick={() => pickDialect(option.value)}
+				>
+					<span aria-hidden="true">{option.emoji}</span>
+					{option.label}
+				</button>
+			{/each}
+		</div>
+	</div>
+
+	<a href="{resolve('/learn/game/today')}{query}" class="today">
+		<span class="today-emoji" aria-hidden="true">📅</span>
+		<span class="today-text">
+			<span class="today-title">Today’s challenge</span>
+			<span class="today-desc">Daily Root + {todayGame.name}. About three minutes; keeps your streak going.</span>
+		</span>
+		<span class="today-play">Play now <span aria-hidden="true">→</span></span>
+	</a>
+
+	{#each groups as group (group.id)}
+		<section class="level">
+			<h2 class="section-title">{group.title}</h2>
+			<p class="level-note">{group.note}</p>
+			<div class="grid">
+				{#each group.games as game (game.slug)}
+					<GameCard {...game} {query} />
+				{/each}
+			</div>
+		</section>
+	{/each}
+
+	<section class="info">
+		<h2 class="section-title">About these games</h2>
+		<p class="about">
 			Short games for Arabic vocabulary and grammar in Egyptian Arabic, Levantine, Moroccan Darija
 			and Modern Standard Arabic. Every game has two free rounds, with no account needed. Pick one,
 			choose your dialect, and play.
 		</p>
-	</header>
-
-	<a href={resolve('/learn/game/today')} class="today">
-		<span class="today-emoji" aria-hidden="true">📅</span>
-		<span>
-			<span class="today-title">Today’s challenge</span>
-			<span class="today-desc">Daily Root + {todayGame.name}. About three minutes; keeps your streak going.</span>
-		</span>
-	</a>
-
-	<div class="grid">
-		{#each GAMES as game (game.slug)}
-			<GameCard href={gameHref(game.slug)} {...game} />
-		{/each}
-		<GameCard href={gameHref(QUIZ_CARD.slug)} {...QUIZ_CARD} />
-	</div>
+	</section>
 
 	<section class="info">
 		<h2 class="section-title">Games by skill</h2>
@@ -81,28 +156,134 @@
 </section>
 
 <style>
+	.picker {
+		margin-bottom: 1.25rem;
+	}
+
+	.picker-label {
+		display: block;
+		margin-bottom: 0.4rem;
+		font-size: 0.8rem;
+		font-weight: 600;
+		color: var(--text2);
+	}
+
+	.chips {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.45rem;
+	}
+
+	.chip {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.35rem;
+		min-height: 2.5rem;
+		padding: 0.45rem 0.85rem;
+		border-radius: 100px;
+		font-size: 0.85rem;
+		font-weight: 500;
+		color: var(--text2);
+		background: var(--tile3);
+		border: 2px solid var(--tile5);
+		cursor: pointer;
+		transition:
+			background 0.18s ease,
+			border-color 0.18s ease,
+			color 0.18s ease;
+	}
+
+	.chip:hover {
+		border-color: var(--tile6);
+		color: var(--text1);
+	}
+
+	.chip.is-on {
+		color: var(--text1);
+		font-weight: 600;
+		border-color: #22c55e;
+		background: color-mix(in srgb, #22c55e 18%, var(--tile3));
+	}
+
 	.today {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
-		gap: 0.9rem;
-		margin-bottom: 1rem;
+		gap: 0.9rem 1.1rem;
 		border-radius: 1.25rem;
 		border: 2px solid #22c55e;
 		background: color-mix(in srgb, #22c55e 10%, var(--tile3));
-		padding: 1rem 1.1rem;
+		padding: 1.25rem 1.3rem;
+		box-shadow: 0 5px 0 #15803d;
+		transition:
+			transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1),
+			box-shadow 0.18s ease;
+	}
+	.today:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 7px 0 #15803d;
+	}
+	.today:active {
+		transform: translateY(3px);
+		box-shadow: 0 2px 0 #15803d;
 	}
 	.today-emoji {
-		font-size: 1.8rem;
+		font-size: 2.2rem;
+	}
+	.today-text {
+		flex: 1;
+		min-width: 12rem;
 	}
 	.today-title {
 		display: block;
+		font-size: 1.2rem;
 		font-weight: 600;
 		color: var(--text1);
 	}
 	.today-desc {
 		display: block;
-		font-size: 0.88rem;
+		margin-top: 0.15rem;
+		font-size: 0.9rem;
 		color: var(--text2);
+	}
+	.today-play {
+		border-radius: 100px;
+		background: #22c55e;
+		color: #fff;
+		font-weight: 600;
+		padding: 0.6rem 1.2rem;
+		white-space: nowrap;
+	}
+
+	.level {
+		margin-top: 2.5rem;
+	}
+
+	.level .section-title {
+		margin-bottom: 0.2rem;
+	}
+
+	.level-note {
+		margin-bottom: 1rem;
+		font-size: 0.9rem;
+		color: var(--text2);
+	}
+
+	.about {
+		font-size: 0.95rem;
+		line-height: 1.6;
+		color: var(--text2);
+		max-width: 62ch;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.today {
+			transition: none;
+		}
+		.today:hover,
+		.today:active {
+			transform: none;
+		}
 	}
 
 	.hero-title {

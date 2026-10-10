@@ -51,10 +51,8 @@
 		const form = question.options[question.answer].arabic;
 		if (right) {
 			score++;
-			if (signedIn) {
-				awardGameXp();
-				xpEarned++;
-			}
+			if (signedIn) awardGameXp();
+			xpEarned++;
 		} else {
 			missed = [...missed, question];
 		}
@@ -80,6 +78,7 @@
 		heading="{score} of {questions.length} verbs right"
 		stats={[{ label: 'Right', value: `${score}/${questions.length}` }]}
 		{xpEarned}
+		{signedIn}
 		{accent}
 		{deep}
 		{onPlayAgain}

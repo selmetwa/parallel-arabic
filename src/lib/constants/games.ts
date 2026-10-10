@@ -853,3 +853,44 @@ export function gameHref(slug: string): Pathname {
 export function getGame(slug: string): GameInfo | undefined {
 	return GAMES.find((g) => g.slug === slug);
 }
+
+/** The hub's level sections, in page order. */
+export const GAME_LEVEL_GROUPS = [
+	{
+		id: 'start',
+		title: 'New to Arabic? Start here',
+		note: 'No reading needed yet: letters, pictures and sounds.'
+	},
+	{
+		id: 'beginner',
+		title: 'Beginner to intermediate',
+		note: 'Everyday words and phrases, once you know a few letters.'
+	},
+	{
+		id: 'intermediate',
+		title: 'Intermediate',
+		note: 'For learners who read comfortably.'
+	},
+	{
+		id: 'all',
+		title: 'All levels',
+		note: 'The difficulty follows the level you pick.'
+	}
+] as const;
+
+export type GameLevelGroup = (typeof GAME_LEVEL_GROUPS)[number]['id'];
+
+/** Which hub section a game's `levels` label belongs in. */
+export function levelGroup(levels: string): GameLevelGroup {
+	switch (levels) {
+		case 'Absolute beginner':
+		case 'Beginner':
+			return 'start';
+		case 'Beginner–Intermediate':
+			return 'beginner';
+		case 'Intermediate':
+			return 'intermediate';
+		default:
+			return 'all';
+	}
+}

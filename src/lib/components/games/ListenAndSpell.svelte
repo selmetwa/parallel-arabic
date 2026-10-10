@@ -65,8 +65,8 @@
 		announcement = right
 			? `Correct: ${question.word.arabic}, ${question.word.english}`
 			: `The word was ${question.word.arabic}, ${question.word.english}`;
-		if (right && signedIn) {
-			awardGameXp();
+		if (right) {
+			if (signedIn) awardGameXp();
 			xpEarned++;
 		}
 	}
@@ -108,6 +108,9 @@
 		heading="{score} of {questions.length} heard right"
 		stats={[{ label: 'Right', value: `${score}/${questions.length}` }]}
 		{xpEarned}
+		{signedIn}
+		missedWords={words.filter((w) => outcomes[w.id] === false)}
+		{dialect}
 		note={missedNote(savedMissed)}
 		{accent}
 		{deep}
