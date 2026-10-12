@@ -1,0 +1,75 @@
+{
+  "slug": "how-much-is-this",
+  "dialect": "fusha",
+  "english": "how much is this?",
+  "arabic": "بِكَمْ هَذَا؟",
+  "arabicPlain": "بكم هذا؟",
+  "transliteration": "bikam hadha?",
+  "franco": "bekam hatha?",
+  "literal": "for-how-much this",
+  "usage": "The short, standard way to ask a price while pointing at something. hadha is used for a masculine noun and hadhihi for a feminine one. It is understood everywhere, though in a real market the seller will answer in dialect.",
+  "variants": [
+    {
+      "label": "for a feminine noun",
+      "arabic": "بِكَمْ هَذِهِ؟",
+      "transliteration": "bikam hadhihi?",
+      "english": "How much is this?",
+      "note": "Use when the item is grammatically feminine, like a bag or a car."
+    },
+    {
+      "label": "fuller",
+      "arabic": "كَمْ سِعْرُ هَذَا؟",
+      "transliteration": "kam si3ru hadha?",
+      "english": "What is the price of this?",
+      "note": "A complete sentence, good in shops and in writing."
+    },
+    {
+      "label": "asking the cost",
+      "arabic": "كَمْ الثَّمَنُ؟",
+      "transliteration": "kam ath-thamanu?",
+      "english": "How much is the cost?",
+      "note": "Use when the item is already clear."
+    },
+    {
+      "label": "short",
+      "arabic": "مَا السِّعْرُ؟",
+      "transliteration": "ma as-si3ru?",
+      "english": "What is the price?",
+      "note": "A neutral alternative with the same meaning."
+    }
+  ],
+  "responses": [
+    {
+      "arabic": "بِعَشَرَةِ دَنَانِيرَ",
+      "transliteration": "bi3asharati dananira",
+      "english": "Ten dinars."
+    },
+    {
+      "arabic": "هَذَا بِخَمْسِينَ دِرْهَماً",
+      "transliteration": "hadha bikhamsina dirhaman",
+      "english": "This is fifty dirhams."
+    },
+    {
+      "arabic": "السِّعْرُ مَكْتُوبٌ هُنَا",
+      "transliteration": "as-si3ru maktubun huna",
+      "english": "The price is written here."
+    }
+  ],
+  "examples": [
+    {
+      "arabic": "بِكَمْ هَذَا الْكِتَابُ؟",
+      "transliteration": "bikam hadha al-kitabu?",
+      "english": "How much is this book?"
+    },
+    {
+      "arabic": "بِكَمْ هَذِهِ الْحَقِيبَةُ مِنْ فَضْلِكَ؟",
+      "transliteration": "bikam hadhihi al-7aqibatu min fadlika?",
+      "english": "How much is this bag, please?"
+    },
+    {
+      "arabic": "هَذَا جَمِيلٌ، بِكَمْ هَذَا؟",
+      "transliteration": "hadha jamilun, bikam hadha?",
+      "english": "This is lovely, how much is it?"
+    }
+  ]
+}

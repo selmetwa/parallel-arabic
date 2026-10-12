@@ -499,8 +499,9 @@ export const FEATURES: FeatureInfo[] = [
 					'Yes. Egyptian adds بـ before present-tense verbs and هـ for the future, Levantine uses رح for the future, and all the dialects drop the dual forms that Fusha keeps.'
 			},
 			{
-				question: 'Where are the Egyptian verb tables?',
-				answer: 'At /egyptian-arabic/conjugations, with a page for each verb.'
+				question: 'Where are the verb tables?',
+				answer:
+					'Each dialect has its own: /egyptian-arabic/conjugations, /levantine/conjugations, /darija/conjugations and /fusha/conjugations, with a page for each verb.'
 			}
 		]
 	},

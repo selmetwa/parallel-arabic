@@ -58,6 +58,12 @@
 		},
 		...(content.extraLinks ?? []),
 		{
+			href: `/${dialect}/conjugations`,
+			title: 'Verb Conjugations',
+			description:
+				'Full conjugation tables for 72 common verbs, every tense, affirmative and negative.'
+		},
+		{
 			href: '/tutor',
 			title: 'Conversation Practice',
 			description: `Talk to the AI tutor in ${content.heading} and get corrections as you go.`

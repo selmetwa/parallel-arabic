@@ -21,6 +21,8 @@ export interface WordEntry {
 	/** Slug of the conjugation page, when this word is a verb that has one. */
 	conjugationSlug: string | null;
 	examples: WordExample[];
+	/** The same meaning in the other dialects, from scripts/add-word-dialects.ts. */
+	otherDialects?: { dialect: string; arabic: string; transliteration: string }[];
 }
 
 export interface WordIndexEntry {
