@@ -5,6 +5,7 @@
 	import { goto } from '$app/navigation';
 	import OnboardingConversation from '$lib/components/onboarding/OnboardingConversation.svelte';
 	import LevelSlider from '$lib/components/onboarding/LevelSlider.svelte';
+	import DialectPicker from '$lib/components/onboarding/DialectPicker.svelte';
 	import TrialOffer from '$lib/components/TrialOffer.svelte';
 	import { CEFR_LEVELS, type CefrLevel } from '$lib/constants/cefr-levels';
 	import { onMount } from 'svelte';
@@ -80,7 +81,7 @@
 			id: 'fusha',
 			label: 'MSA (Fusha)',
 			emoji: '📖',
-			description: 'Formal Arabic for media & literature',
+			description: 'Formal Arabic of news and books, shared across the Arab world',
 			accent: '#8b5cf6',
 			deep: '#6d28d9'
 		},
@@ -164,7 +165,6 @@
 	function selectDialect(id: string) {
 		targetDialect = id;
 		currentDialect.set(id);
-		setTimeout(() => nextStep(), 400);
 	}
 
 	function selectReason(id: string) {
@@ -378,38 +378,17 @@
 								<p class="screen-note">This shapes all your lessons, stories, and vocabulary.</p>
 							</div>
 
-							<div class="mx-auto grid max-w-2xl grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
-								{#each dialects as dialect, i (dialect.id)}
-									<button
-										class="pick {targetDialect === dialect.id ? 'is-on' : ''}"
-										style="--accent:{dialect.accent}; --deep:{dialect.deep};"
-										aria-pressed={targetDialect === dialect.id}
-										onclick={() => selectDialect(dialect.id)}
-										in:fly={{ y: 30, duration: 400, delay: getStaggerDelay(i), easing: cubicOut }}
-									>
-										<span class="pick-emoji" aria-hidden="true">{dialect.emoji}</span>
-										<span class="min-w-0 flex-1 text-left">
-											<span class="pick-name">{dialect.label}</span>
-											<span class="pick-desc">{dialect.description}</span>
-										</span>
-										{#if targetDialect === dialect.id}
-											<span
-												class="pick-check"
-												in:scale={{ duration: 250, easing: backOut }}
-												aria-hidden="true"
-											>
-												<svg
-													fill="none"
-													viewBox="0 0 24 24"
-													stroke="currentColor"
-													stroke-width="3.5"
-												>
-													<path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-												</svg>
-											</span>
-										{/if}
-									</button>
-								{/each}
+							<DialectPicker {dialects} value={targetDialect} onSelect={selectDialect} />
+
+							<div class="mt-7 flex justify-center">
+								<button
+									class="press"
+									style="--accent:#22c55e; --deep:#15803d;"
+									disabled={!targetDialect}
+									onclick={nextStep}
+								>
+									Continue
+								</button>
 							</div>
 						</div>
 					{/if}
@@ -698,84 +677,6 @@
 		opacity: 0.75;
 	}
 
-	/* Dialect cards */
-	.pick {
-		display: flex;
-		align-items: center;
-		gap: 0.9rem;
-		padding: 1rem 1.1rem;
-		border-radius: 1.25rem;
-		border: 2px solid var(--tile5);
-		background: var(--tile3);
-		box-shadow: 0 5px 0 var(--tile5);
-		cursor: pointer;
-		transition:
-			transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1),
-			box-shadow 0.18s ease,
-			border-color 0.18s ease,
-			background 0.18s ease;
-	}
-
-	.pick:hover {
-		transform: translateY(-4px);
-		border-color: var(--accent);
-		box-shadow: 0 9px 0 var(--deep);
-	}
-
-	.pick:active {
-		transform: translateY(2px);
-		box-shadow: 0 1px 0 var(--deep);
-	}
-
-	.pick.is-on {
-		border-color: var(--accent);
-		background: color-mix(in srgb, var(--accent) 13%, var(--tile3));
-		box-shadow: 0 5px 0 var(--deep);
-	}
-
-	.pick-emoji {
-		font-size: 2rem;
-		line-height: 1;
-		flex-shrink: 0;
-		transition: transform 0.22s ease-out;
-	}
-
-	.pick:hover .pick-emoji,
-	.pick.is-on .pick-emoji {
-		transform: rotate(-3deg) scale(1.05);
-	}
-
-	.pick-name {
-		display: block;
-		font-size: 1.02rem;
-		font-weight: 600;
-		color: var(--text1);
-	}
-
-	.pick-desc {
-		display: block;
-		margin-top: 0.1rem;
-		font-size: 0.8rem;
-		line-height: 1.4;
-		color: var(--text2);
-	}
-
-	.pick-check {
-		display: grid;
-		place-items: center;
-		width: 1.5rem;
-		height: 1.5rem;
-		flex-shrink: 0;
-		border-radius: 50%;
-		background: var(--accent);
-		color: #fff;
-	}
-
-	.pick-check svg {
-		width: 0.85rem;
-		height: 0.85rem;
-	}
-
 	/* Reason cards */
 	.reason {
 		position: relative;
@@ -906,22 +807,18 @@
 
 	@media (prefers-reduced-motion: reduce) {
 		.step,
-		.pick,
 		.reason,
 		.press,
 		.nav-pill,
-		.pick-emoji,
 		.reason-emoji,
 		.connector {
 			transition: none;
 		}
 		.step:not(:disabled):hover,
-		.pick:hover,
 		.reason:hover,
 		.nav-pill:hover {
 			transform: none;
 		}
-		.pick:hover .pick-emoji,
 		.reason:hover .reason-emoji {
 			transform: none;
 		}
