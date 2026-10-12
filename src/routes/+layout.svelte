@@ -8,7 +8,7 @@
 	import { onMount } from 'svelte';
 	import { theme, sidebarCollapsed } from '$lib/store/store';
 	import { userXp, userLevel } from '$lib/store/xp-store';
-	import { invalidate } from '$app/navigation';
+	import { goto, invalidate } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { pwaInfo } from 'virtual:pwa-info';
 	import { dev, browser } from '$app/environment';
@@ -41,6 +41,7 @@
 	let Toaster: typeof import('svelte-sonner').Toaster | null = $state(null);
 	let Onboarding: typeof import('$lib/components/Onboarding.svelte').default | null = $state(null);
 	let AppBanner: typeof import('$lib/components/AppBanner.svelte').default | null = $state(null);
+	let PushPrompt: typeof import('$lib/components/PushPrompt.svelte').default | null = $state(null);
 	let ScenariosAnnouncement: typeof import('$lib/components/ScenariosAnnouncement.svelte').default | null =
 		$state(null);
 	let lazyComponentsLoaded = $state(false);
@@ -168,6 +169,31 @@
 				},
 				onRegisterError(error) {
 					if (dev) console.log('SW registration error', error);
+				}
+			});
+		}
+
+		// Universal Links: a tapped parallel-arabic.com link opens the app, which
+		// then has to go to that page itself. Sign-in callbacks use the custom URL
+		// scheme and are handled on the login and signup pages.
+		if (isNativeApp()) {
+			const { App } = await import('@capacitor/app');
+			App.addListener('appUrlOpen', ({ url }) => {
+				const target = new URL(url);
+				if (target.origin !== window.location.origin) return;
+				goto(target.pathname + target.search + target.hash);
+			});
+		}
+
+		// Push notifications (native app, signed in): refresh the device token if
+		// they're already allowed, otherwise load the card that asks.
+		if (isNativeApp() && data.user?.id) {
+			import('$lib/helpers/push-notifications').then(async (push) => {
+				const permission = await push.pushPermission();
+				if (permission === 'granted') {
+					await push.registerForPush();
+				} else if (permission === 'prompt') {
+					PushPrompt = (await import('$lib/components/PushPrompt.svelte')).default;
 				}
 			});
 		}
@@ -426,4 +452,9 @@
 <!-- iOS app banner - lazy loaded, decides for itself whether to show -->
 {#if AppBanner && !showOnboarding}
 	<AppBanner />
+{/if}
+
+<!-- Asks app users to turn on reminders - never over onboarding -->
+{#if PushPrompt && !showOnboarding}
+	<PushPrompt />
 {/if}

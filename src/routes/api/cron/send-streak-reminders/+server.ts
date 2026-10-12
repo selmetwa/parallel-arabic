@@ -3,6 +3,7 @@ import type { RequestHandler } from './$types';
 import { supabase } from '$lib/supabaseClient';
 import { sendStreakReminderEmail } from '$lib/server/email';
 import { localHour, streakAtRisk } from '$lib/helpers/streak';
+import { sendPushReminders } from '$lib/server/push-reminders';
 
 /**
  * Local hours (inclusive start, exclusive end) when a reminder may go out.
@@ -30,6 +31,13 @@ export const GET: RequestHandler = async ({ request }) => {
 
 	try {
 		const now = Date.now();
+
+		// Pushes go first: a streak push stamps streak_reminder_sent_at, so app
+		// users don't also get the email below. A push failure must not stop the emails.
+		const pushesSent = await sendPushReminders(now).catch((err) => {
+			console.error('Error sending push reminders:', err);
+			return 0;
+		});
 
 		const { data: users, error: fetchError } = await supabase
 			.from('user')
@@ -76,7 +84,7 @@ export const GET: RequestHandler = async ({ request }) => {
 			);
 		}
 
-		return json({ success: true, emailsSent, considered: users?.length ?? 0 });
+		return json({ success: true, emailsSent, pushesSent, considered: users?.length ?? 0 });
 	} catch (error) {
 		console.error('Error in send-streak-reminders cron job:', error);
 		return json(

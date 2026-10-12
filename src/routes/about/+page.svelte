@@ -443,6 +443,7 @@
 				>
 					{@render startCta('')}
 					<AppStoreBadge
+						campaign="about-hero"
 						className="justify-center rounded-full border-2 border-tile-600 px-6 py-2.5 hover:-translate-y-0.5 motion-reduce:hover:translate-y-0"
 					/>
 				</div>
@@ -769,6 +770,7 @@
 			<div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
 				{@render startCta('cta--light')}
 				<AppStoreBadge
+					campaign="about-footer"
 					className="justify-center rounded-full border border-white/30 !bg-white/10 px-6 py-2.5 !text-white hover:!bg-white/20 focus-visible:!outline-white"
 				/>
 			</div>
