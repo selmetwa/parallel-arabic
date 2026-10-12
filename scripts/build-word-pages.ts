@@ -17,6 +17,7 @@
  *   npm run build:words
  *   npm run build:words -- --limit=200
  *   npm run build:words -- --refresh-corpus   (re-download story bodies)
+ *   npm run build:words -- --dialect=levantine   (default: egyptian-arabic)
  */
 
 import { fileURLToPath } from 'url';
@@ -24,7 +25,8 @@ import { dirname, join } from 'path';
 import { writeFileSync, readFileSync, existsSync, mkdirSync, rmSync, readdirSync } from 'fs';
 import { supabase } from '../src/lib/supabaseClient';
 import { commonWords } from '../src/lib/constants/common-words';
-import verbIndex from '../src/lib/data/verb-conjugations/egyptian-arabic/index.json';
+import { plainRomanisation } from '../src/lib/utils/romanise';
+import { addOtherDialects } from './lib/word-dialects';
 import {
 	buildCorpusIndex,
 	exampleMatchesSense,
@@ -37,9 +39,30 @@ import {
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const DIALECT = 'egyptian-arabic';
+const DIALECT =
+	process.argv
+		.slice(2)
+		.find((a) => a.startsWith('--dialect='))
+		?.split('=')[1] ?? 'egyptian-arabic';
 const OUT_DIR = join(__dirname, '..', 'src', 'lib', 'data', 'words', DIALECT);
-const CORPUS_CACHE = join(__dirname, '..', '.word-corpus-cache.json');
+// The Egyptian cache keeps its original name; build-vocab-topics.ts reads it.
+const CORPUS_CACHE = join(
+	__dirname,
+	'..',
+	DIALECT === 'egyptian-arabic' ? '.word-corpus-cache.json' : `.word-corpus-cache.${DIALECT}.json`
+);
+
+/**
+ * The Levantine and Darija rows carry a plural or a present-tense form after
+ * the headword — "راس (رْواس)", "شِرِب، يِشْرب". Only the headword can be
+ * matched against story text, and only the headword belongs in a page title.
+ */
+function headword(text: string | null | undefined): string {
+	return (text ?? '')
+		.replace(/\s*\(.*$/, '')
+		.replace(/\s*[،,].*$/, '')
+		.trim();
+}
 
 /** A word needs this many real example sentences to earn a page. */
 const MIN_EXAMPLES = 2;
@@ -222,7 +245,13 @@ async function main() {
 			.range(from, from + 999);
 		if (error) throw error;
 		if (!data?.length) break;
-		wordRows.push(...(data as WordRow[]));
+		wordRows.push(
+			...(data as WordRow[]).map((row) => ({
+				...row,
+				arabic_word: headword(row.arabic_word),
+				transliterated_word: headword(row.transliterated_word)
+			}))
+		);
 		if (data.length < 1000) break;
 	}
 	console.log(`word table: ${wordRows.length} ${DIALECT} entries`);
@@ -238,6 +267,9 @@ async function main() {
 		// "most_common" is where the particles and pronouns live — من, في, بس, ده.
 		// They dominate any frequency count and nobody searches for them.
 		if (EXCLUDED_CATEGORIES.has(row.category)) continue;
+		// A few rows are whole sentences filed under their first word:
+		// شُكْراً as "Thanks, I'm full."
+		if (/[.?!]$/.test((row.english_word ?? '').trim())) continue;
 		const key = normalise(row.arabic_word ?? '');
 		if (!key || key.length < 2 || STOPWORDS.has(key)) continue;
 		if (!bySkeleton.has(key)) bySkeleton.set(key, []);
@@ -259,12 +291,19 @@ async function main() {
 	// Franco spellings, where the frequency list has one for the same word.
 	const francoByWord = new Map<string, string>();
 	const occurrencesByWord = new Map<string, number>();
-	for (const word of commonWords) {
+	// The frequency list is Egyptian; the other dialects have no franco source.
+	for (const word of DIALECT === 'egyptian-arabic' ? commonWords : []) {
 		const key = normalise(word.word);
 		if (!francoByWord.has(key)) francoByWord.set(key, word.franco ?? '');
 		occurrencesByWord.set(key, Math.max(occurrencesByWord.get(key) ?? 0, word.appeared ?? 0));
 	}
 
+	const verbIndex = JSON.parse(
+		readFileSync(
+			join(__dirname, '..', 'src', 'lib', 'data', 'verb-conjugations', DIALECT, 'index.json'),
+			'utf-8'
+		)
+	) as { verbs: { arabic: string; slug: string }[] };
 	const verbBySlugSource = new Map<string, string>();
 	for (const verb of verbIndex.verbs) {
 		verbBySlugSource.set(normalise(verb.arabic), verb.slug);
@@ -314,7 +353,15 @@ async function main() {
 			franco,
 			appeared: occurrencesByWord.get(key) ?? null
 		};
-		const slug = toSlug(franco || (row.transliterated_word ?? ''), row.arabic_word, taken);
+		// Egyptian slugs are indexed URLs, so they keep the spelling they were
+		// first built with. The other dialects get a typeable one.
+		const slug = toSlug(
+			DIALECT === 'egyptian-arabic'
+				? franco || (row.transliterated_word ?? '')
+				: plainRomanisation(row.transliterated_word ?? ''),
+			row.arabic_word,
+			taken
+		);
 
 		built.push({ slug, arabic: word.word, english: word.en, examples: examples.length });
 
@@ -375,6 +422,8 @@ async function main() {
 		) + '\n'
 	);
 	console.log(`wrote ${built.length} files to ${OUT_DIR}`);
+
+	await addOtherDialects(dirname(OUT_DIR), { only: [DIALECT] });
 }
 
 main().catch((e) => {

@@ -1,0 +1,75 @@
+{
+  "slug": "whats-your-name",
+  "dialect": "fusha",
+  "english": "what's your name?",
+  "arabic": "مَا اسْمُكَ؟",
+  "arabicPlain": "ما اسمك؟",
+  "transliteration": "ma ismuka?",
+  "franco": "ma esmak?",
+  "literal": "what name-your",
+  "usage": "The standard question when meeting someone, here in the form addressed to a man. The ending changes with who you are asking: ismuka to a man, ismuki to a woman. It is neutral in tone; with an older person or in a formal setting the polite form with al-karim is better.",
+  "variants": [
+    {
+      "label": "to a woman",
+      "arabic": "مَا اسْمُكِ؟",
+      "transliteration": "ma ismuki?",
+      "english": "What's your name?",
+      "note": "Use when asking a woman."
+    },
+    {
+      "label": "to a group",
+      "arabic": "مَا أَسْمَاؤُكُمْ؟",
+      "transliteration": "ma asma'ukum?",
+      "english": "What are your names?",
+      "note": "Use when asking several people at once."
+    },
+    {
+      "label": "very polite",
+      "arabic": "مَا الِاسْمُ الْكَرِيمُ؟",
+      "transliteration": "ma al-ismu al-karimu?",
+      "english": "What is the honourable name?",
+      "note": "Use with elders, clients, or anyone you want to show respect."
+    },
+    {
+      "label": "blunt",
+      "arabic": "مَنْ أَنْتَ؟",
+      "transliteration": "man anta?",
+      "english": "Who are you?",
+      "note": "Asks who someone is rather than their name; can sound abrupt."
+    }
+  ],
+  "responses": [
+    {
+      "arabic": "اِسْمِي...",
+      "transliteration": "ismi...",
+      "english": "My name is..."
+    },
+    {
+      "arabic": "أَنَا...",
+      "transliteration": "ana...",
+      "english": "I am..."
+    },
+    {
+      "arabic": "اِسْمِي أَحْمَد، وَأَنْتَ؟",
+      "transliteration": "ismi a7mad, wa-anta?",
+      "english": "My name is Ahmad, and you?"
+    }
+  ],
+  "examples": [
+    {
+      "arabic": "مَرْحَباً، مَا اسْمُكَ؟",
+      "transliteration": "mar7aban, ma ismuka?",
+      "english": "Hello, what's your name?"
+    },
+    {
+      "arabic": "عَفْواً، مَا اسْمُكِ يَا آنِسَة؟",
+      "transliteration": "3afwan, ma ismuki ya anisa?",
+      "english": "Excuse me, what is your name, miss?"
+    },
+    {
+      "arabic": "مَا اسْمُكَ وَمِنْ أَيْنَ أَنْتَ؟",
+      "transliteration": "ma ismuka wa-min ayna anta?",
+      "english": "What is your name and where are you from?"
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 	import { page } from '$app/state';
 	import InlineAudioButton from '$lib/components/InlineAudioButton.svelte';
 	import VocabPractice from '$lib/components/dialect-shared/vocab/VocabPractice.svelte';
-	import { formatDialectName } from '$lib/utils/seo';
+	import { formatDialectName, wordRomanisation } from '$lib/utils/seo';
 	import type { PracticeWord, WordEntry, WordIndexEntry } from '$lib/types/words';
 	import type { Dialect } from '$lib/types/index';
 
@@ -19,6 +19,8 @@
 
 	const word = $derived(data.word);
 	const dialectName = $derived(formatDialectName(data.dialect));
+	const romanised = $derived(wordRomanisation(word));
+	const otherDialects = $derived(word.otherDialects ?? []);
 	const categoryLabel = $derived(word.category ? word.category.replace(/_+/g, ' ') : null);
 </script>
 
@@ -30,7 +32,8 @@
 	</nav>
 
 	<h1 class="mb-6 text-3xl font-bold text-text-300">
-		{word.arabic} — "{word.english}" in {dialectName}
+		{word.arabic}
+		{#if romanised}({romanised}){/if} — "{word.english}" in {dialectName}
 	</h1>
 
 	<section class="mb-8 rounded-xl border-2 border-tile-600 bg-tile-400 p-6 text-center sm:p-8">
@@ -80,6 +83,30 @@
 			</div>
 			<span aria-hidden="true" class="text-text-300">→</span>
 		</a>
+	{/if}
+
+	{#if otherDialects.length}
+		<section class="mb-8">
+			<h2 class="mb-4 text-2xl font-bold text-text-300">
+				"{word.english}" in the other dialects
+			</h2>
+			<div class="grid gap-3 sm:grid-cols-3">
+				{#each otherDialects as other (other.dialect + other.arabic)}
+					<div class="rounded-xl border border-tile-500 bg-tile-300 p-4 text-center">
+						<a class="mb-2 block text-xs text-text-200 underline hover:text-text-300" href="/{other.dialect}">
+							{formatDialectName(other.dialect)}
+						</a>
+						<div class="flex items-center justify-center gap-2">
+							<p class="text-2xl font-bold text-text-300" dir="rtl">{other.arabic}</p>
+							<InlineAudioButton text={other.arabic} dialect={other.dialect as Dialect} />
+						</div>
+						{#if other.transliteration}
+							<p class="text-sm italic text-text-200">{other.transliteration}</p>
+						{/if}
+					</div>
+				{/each}
+			</div>
+		</section>
 	{/if}
 
 	<section class="mb-8">

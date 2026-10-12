@@ -89,12 +89,6 @@ export const DIALECT_LANDING: Record<string, DialectLandingContent> = {
 				title: 'Pronunciation',
 				description:
 					'The six sound changes that separate Egyptian Arabic from what textbooks teach.'
-			},
-			{
-				href: '/egyptian-arabic/conjugations',
-				title: 'Verb Conjugations',
-				description:
-					'Full conjugation tables for 72 common verbs, every tense, affirmative and negative.'
 			}
 		]
 	},

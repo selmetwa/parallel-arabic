@@ -3,6 +3,7 @@ import { supabase } from '$lib/supabaseClient';
 import { downloadStoryFromStorage } from '$lib/helpers/storage-helpers';
 import { getConversationMessages } from '$lib/utils/tutor-memory';
 import type { ConversationMessage } from '$lib/types/index';
+import { TUTOR_FAQS } from '$lib/constants/tutor-faqs';
 
 interface PracticeSentence {
   id: string;
@@ -172,7 +173,9 @@ export const load: PageServerLoad = async ({ parent, url }) => {
     recentConversations,
     resumeConversation,
     resumeConversationId,
-    resumeDialect
+    resumeDialect,
+    // Surfaced so the layout can emit FAQPage structured data.
+    faqs: TUTOR_FAQS
   };
 };
 

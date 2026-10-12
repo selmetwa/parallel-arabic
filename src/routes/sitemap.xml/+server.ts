@@ -1,7 +1,7 @@
 import type { RequestHandler } from './$types';
 import { supabase } from '$lib/supabaseClient';
 import { blogPosts } from '$lib/constants/blog-posts';
-import verbIndex from '$lib/data/verb-conjugations/egyptian-arabic/index.json';
+import { VERB_DIALECTS, verbIndexFor } from '$lib/data/verb-conjugations/manifest';
 import { stories as staticStories } from '$lib/constants/stories/index';
 import { BLOCKED_STORY_IDS } from '$lib/constants/stories/blocked';
 import { PHRASE_SEEDS, PHRASE_DIALECTS } from '$lib/constants/phrase-seeds';
@@ -77,7 +77,6 @@ const staticPages = [
 
 	// Dialect landing pages
 	{ path: '/egyptian-arabic', priority: '0.9', changefreq: 'weekly' },
-	{ path: '/egyptian-arabic/conjugations', priority: '0.8', changefreq: 'monthly' },
 	{ path: '/fusha', priority: '0.9', changefreq: 'weekly' },
 	{ path: '/levantine', priority: '0.9', changefreq: 'weekly' },
 	{ path: '/darija', priority: '0.9', changefreq: 'weekly' },
@@ -250,13 +249,21 @@ export const GET: RequestHandler = async () => {
 	}
 
 	// Add verb conjugation pages (static JSON, no DB needed)
-	for (const verb of verbIndex.verbs) {
+	for (const dialect of VERB_DIALECTS) {
 		urls.push(`
   <url>
-    <loc>${BASE_URL}/egyptian-arabic/conjugations/${escapeXml(verb.slug)}</loc>
+    <loc>${BASE_URL}/${dialect}/conjugations</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>`);
+		for (const verb of verbIndexFor(dialect)) {
+			urls.push(`
+  <url>
+    <loc>${BASE_URL}/${dialect}/conjugations/${escapeXml(verb.slug)}</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>`);
+		}
 	}
 
 	// Fetch dynamic content from database

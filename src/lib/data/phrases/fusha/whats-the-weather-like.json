@@ -1,0 +1,75 @@
+{
+  "slug": "whats-the-weather-like",
+  "dialect": "fusha",
+  "english": "what's the weather like?",
+  "arabic": "كَيْفَ الطَّقْسُ؟",
+  "arabicPlain": "كيف الطقس؟",
+  "transliteration": "kayfa at-taqsu?",
+  "franco": "kayfa al-taqs?",
+  "literal": "how the-weather",
+  "usage": "The standard question about the weather, the same for anyone you ask. taqs is the word used in forecasts; jaww is a common alternative that also means \"atmosphere\". Add a time word like al-yawma or ghadan to ask about a particular day.",
+  "variants": [
+    {
+      "label": "today",
+      "arabic": "كَيْفَ الطَّقْسُ الْيَوْمَ؟",
+      "transliteration": "kayfa at-taqsu al-yawma?",
+      "english": "What's the weather like today?",
+      "note": "Use to ask about right now."
+    },
+    {
+      "label": "alternative word",
+      "arabic": "كَيْفَ الْجَوُّ؟",
+      "transliteration": "kayfa al-jawwu?",
+      "english": "How's the weather?",
+      "note": "jaww is slightly more conversational than taqs."
+    },
+    {
+      "label": "news style",
+      "arabic": "مَا حَالَةُ الطَّقْسِ؟",
+      "transliteration": "ma 7alatu at-taqsi?",
+      "english": "What is the state of the weather?",
+      "note": "The wording of weather reports."
+    },
+    {
+      "label": "asking the temperature",
+      "arabic": "كَمْ دَرَجَةُ الْحَرَارَةِ؟",
+      "transliteration": "kam darajatu al-7ararati?",
+      "english": "What is the temperature?",
+      "note": "Use when you want a number."
+    }
+  ],
+  "responses": [
+    {
+      "arabic": "الطَّقْسُ جَمِيلٌ",
+      "transliteration": "at-taqsu jamilun",
+      "english": "The weather is nice."
+    },
+    {
+      "arabic": "الْجَوُّ حَارٌّ جِدّاً",
+      "transliteration": "al-jawwu 7arrun jiddan",
+      "english": "It is very hot."
+    },
+    {
+      "arabic": "الْجَوُّ بَارِدٌ وَمُمْطِرٌ",
+      "transliteration": "al-jawwu baridun wa-mumtirun",
+      "english": "It is cold and rainy."
+    }
+  ],
+  "examples": [
+    {
+      "arabic": "كَيْفَ الطَّقْسُ فِي بَلَدِكَ؟",
+      "transliteration": "kayfa at-taqsu fi baladika?",
+      "english": "What's the weather like in your country?"
+    },
+    {
+      "arabic": "كَيْفَ الطَّقْسُ غَداً؟ هَلْ سَتُمْطِرُ؟",
+      "transliteration": "kayfa at-taqsu ghadan? hal satumtiru?",
+      "english": "What's the weather like tomorrow? Will it rain?"
+    },
+    {
+      "arabic": "كَيْفَ الطَّقْسُ فِي دُبَيّ فِي الصَّيْفِ؟",
+      "transliteration": "kayfa at-taqsu fi dubayy fi as-sayfi?",
+      "english": "What's the weather like in Dubai in the summer?"
+    }
+  ]
+}

@@ -43,6 +43,7 @@
     "cap:run:android": "npm run cap:sync && npx cap run android",
     "generate:phrases": "vite-node scripts/generate-phrases.ts",
     "build:words": "vite-node scripts/build-word-pages.ts",
+    "build:word-dialects": "vite-node scripts/add-word-dialects.ts",
     "build:vocab": "vite-node scripts/build-vocab-topics.ts",
     "generate:room-hunt": "vite-node scripts/generate-room-hunt-vocab.ts",
     "generate:room-hunt-audio": "vite-node scripts/generate-room-hunt-audio.ts",

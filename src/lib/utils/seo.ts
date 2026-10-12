@@ -1,4 +1,6 @@
-import { gameHref, getGame } from '$lib/constants/games';
+import { GAMES, gameHref, getGame } from '$lib/constants/games';
+import { PLANS } from '$lib/constants/pricing';
+import { plainRomanisation } from '$lib/utils/romanise';
 import { getFeature } from '$lib/constants/features';
 
 export interface PageMeta {
@@ -32,30 +34,149 @@ export function formatDialectName(dialect: string): string {
 }
 
 /**
+ * Short names for a sentence that lists several dialects, and the name people
+ * actually search with: "please in arabic", never "in modern standard arabic".
+ */
+const DIALECT_SHORT: Record<string, string> = {
+	'egyptian-arabic': 'Egyptian',
+	levantine: 'Levantine',
+	darija: 'Darija',
+	fusha: 'MSA'
+};
+
+function searchDialectName(dialect: string): string {
+	return dialect === 'fusha' ? 'Arabic' : formatDialectName(dialect);
+}
+
+/** "how are you?" → "How Are You?". Splits on spaces only, so "what's" survives. */
+function capitaliseWords(text: string): string {
+	return text
+		.split(' ')
+		.map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+		.join(' ');
+}
+
+/** "a, b and c". */
+function listWithAnd(items: string[]): string {
+	return items.length < 2
+		? items.join('')
+		: `${items.slice(0, -1).join(', ')} and ${items[items.length - 1]}`;
+}
+
+/** The spelling to lead a word page with: the franco one where we have it. */
+export function wordRomanisation(word: { franco?: string; transliteration?: string }): string {
+	return word.franco || plainRomanisation(word.transliteration ?? '');
+}
+
+/**
+ * "to finish, end, complete" → "to finish"; "time (countable unit…" → "time";
+ * "(extended) family" → "family".
+ */
+function firstSense(english: string): string {
+	return english
+		.replace(/^\([^)]*\)\s*/, '')
+		.split(/[,;(]/)[0]
+		.trim();
+}
+
+/** "I-love-you" and "I love you" are the same gloss; saying it twice adds nothing. */
+function sameWords(a: string, b: string): boolean {
+	const letters = (text: string) => text.toLowerCase().replace(/[^a-z]/g, '');
+	return letters(a) === letters(b);
+}
+
+/** The first candidate short enough to show untruncated, else the shortest one offered. */
+function firstThatFits(limit: number, ...candidates: string[]): string {
+	return candidates.find((text) => text.length <= limit) ?? candidates[candidates.length - 1];
+}
+
+const TITLE_LIMIT = 60;
+const DESCRIPTION_LIMIT = 160;
+
+/**
+ * Phrase pages rank on page one and were clicked 0.35% of the time: the old
+ * title gave the whole answer away, and the results page already shows it.
+ * This one leads with what a translation box cannot: how many other ways
+ * there are to say it.
+ */
+function phraseTitle(data: any, dialect: string): string {
+	const head = `"${capitaliseWords(data.english)}" in ${searchDialectName(dialect)}`;
+	const answer = `${head}: ${data.arabic} (${data.transliteration})`;
+	if (!data.moreWays) return answer;
+	const ways = `${head}: ${data.moreWays + 1} Ways to Say It`;
+	return firstThatFits(
+		TITLE_LIMIT,
+		`${answer} + ${data.moreWays} More Way${data.moreWays > 1 ? 's' : ''}`,
+		`${ways}, with Audio`,
+		ways
+	);
+}
+
+function phraseDescription(data: any, dialectName: string): string {
+	const answer = `${data.arabic} (${data.transliteration}) is "${data.english}" in ${dialectName}`;
+	const extras = [
+		data.moreWays ? `${data.moreWays} other way${data.moreWays > 1 ? 's' : ''} to say it` : '',
+		data.replies ? `${data.replies} ways to reply` : '',
+		'example sentences'
+	].filter(Boolean);
+	const rest = `Hear it said, with ${listWithAnd(extras)}.`;
+	return firstThatFits(
+		DESCRIPTION_LIMIT,
+		data.literal && !sameWords(data.literal, data.english)
+			? `${answer}, literally "${data.literal}". ${rest}`
+			: `${answer}. ${rest}`,
+		`${answer}. ${rest}`
+	);
+}
+
+/**
+ * Leads with the romanised spelling because that is what gets searched:
+ * "baba in arabic", "barra meaning in arabic".
+ */
+function wordTitle(data: any, dialectName: string): string {
+	const base = `${capitaliseWords(data.romanised)} (${data.arabic}) Meaning in ${dialectName}: "${capitaliseWords(
+		firstSense(data.english)
+	)}"`;
+	return firstThatFits(TITLE_LIMIT, `${base} + ${data.exampleCount} Examples`, base);
+}
+
+function wordDescription(data: any, dialectName: string): string {
+	const others: string[] = data.otherDialectNames ?? [];
+	const answer = `${data.arabic} (${data.romanised}) means "${firstSense(data.english)}" in ${dialectName}.`;
+	const examples = `read ${data.exampleCount} real sentences that use it`;
+	return firstThatFits(
+		DESCRIPTION_LIMIT,
+		others.length
+			? `${answer} Hear it pronounced, ${examples} and see the same word in ${listWithAnd(others)}.`
+			: `${answer} Hear it pronounced and ${examples}, each taken from a story.`,
+		`${answer} Hear it pronounced and ${examples}.`
+	);
+}
+
+/**
  * Per-dialect copy. The four dialect landing pages previously shared one
  * description template, which made them near-duplicates of each other.
  */
 const DIALECT_META: Record<DialectSlug, { title: string; description: string }> = {
 	'egyptian-arabic': {
-		title: 'Learn Egyptian Arabic Online - Lessons, Stories & Verb Conjugations | Parallel Arabic',
+		title: 'Learn Egyptian Arabic (Masri): Lessons, Stories, Verb Tables',
 		description:
-			'Learn Egyptian Arabic (Masri), the most widely understood dialect in the Arab world. Interactive lessons, graded stories, a searchable vocabulary explorer, full verb conjugation tables, and AI conversation practice.'
+			'Learn Egyptian Arabic (Masri), the most widely understood Arabic dialect. Lessons, graded stories, vocabulary by topic, verb tables and speaking practice.'
 	},
 	levantine: {
-		title:
-			'Learn Levantine Arabic Online - Syrian, Lebanese, Jordanian & Palestinian | Parallel Arabic',
+		title: 'Learn Levantine Arabic (Shami): Phrases, Stories, Vocabulary',
 		description:
-			'Learn Levantine Arabic (Shami) as spoken in Syria, Lebanon, Jordan and Palestine. Greetings like marhaba and keefak, graded stories, vocabulary, and AI conversation practice in the Levantine dialect.'
+			'Learn Levantine Arabic (Shami), the dialect of Syria, Lebanon, Jordan and Palestine. Phrases with audio, graded stories, vocabulary and speaking practice.'
 	},
 	darija: {
-		title: 'Learn Moroccan Darija Online - Lessons, Stories & Vocabulary | Parallel Arabic',
+		title: 'Learn Moroccan Darija Online: Phrases, Stories & Vocabulary',
 		description:
-			'Learn Moroccan Darija, the Arabic of Morocco. Interactive lessons, graded stories, a vocabulary explorer with Amazigh and French loanwords, and AI conversation practice in Darija.'
+			'Learn Moroccan Darija, the Arabic of Morocco. Everyday phrases with audio, lessons, graded stories and a vocabulary explorer with Amazigh and French loanwords.'
 	},
 	fusha: {
-		title: 'Learn Fusha (Modern Standard Arabic) Online - Lessons & Vocabulary | Parallel Arabic',
+		title: 'Learn Fusha (Modern Standard Arabic): Lessons & Vocabulary',
 		description:
-			'Learn Fusha, Modern Standard Arabic: the written and formal Arabic used across news, books and the Quran. Interactive lessons, graded reading, vocabulary, and AI conversation practice in MSA.'
+			'Learn Fusha, Modern Standard Arabic: the written, formal Arabic of news, books and the Quran. Lessons, graded reading, vocabulary and common phrases with audio.'
 	}
 };
 
@@ -155,16 +276,16 @@ export function getPageMeta(page: string, data?: any): PageMeta {
 			type: 'website'
 		},
 		tutor: {
-			title: 'AI Arabic Tutor - Speak Arabic with AI | Parallel Arabic',
+			title: 'AI Arabic Tutor - Speak Arabic with AI, Free to Try',
 			description:
-				'Practise Arabic conversation with an AI tutor that talks back. Speak Egyptian, Levantine, Moroccan Darija or Modern Standard Arabic, get corrections in real time, and build fluency without a scheduled lesson.',
+				'Talk to an AI Arabic tutor that answers out loud and corrects your mistakes as you go. Speak Egyptian, Levantine or Modern Standard Arabic. Free to try.',
 			url: `${baseUrl}/tutor`,
 			type: 'website'
 		},
 		keyboard: {
-			title: 'Arabic Keyboard Online - Type Arabic with Diacritics | Parallel Arabic',
+			title: 'Arabic Keyboard Online: Type with Diacritics (Harakat), Free',
 			description:
-				'A free online Arabic keyboard. Type Arabic letters, add harakat and diacritics (fatha, kasra, damma, shadda, sukun, tanween), and copy the result anywhere. No download, works on phone and desktop.',
+				'A free online Arabic keyboard. Type Arabic from an English keyboard, add harakat (fatha, kasra, damma, shadda, sukun, tanween) and copy the text. No download.',
 			url: `${baseUrl}/keyboard`,
 			type: 'website'
 		},
@@ -176,9 +297,8 @@ export function getPageMeta(page: string, data?: any): PageMeta {
 			type: 'website'
 		},
 		game: {
-			title: 'Arabic Games - Free Vocabulary & Word Games | Parallel Arabic',
-			description:
-				'Arabic games in four dialects: word scramble, odd one out, spot the mistake, sentence scramble and a vocabulary quiz. Two free rounds of each.',
+			title: `Arabic Games - ${GAMES.length} Free Online Games to Learn Arabic`,
+			description: `${GAMES.length} Arabic games online: word scramble, memory pairs, a daily word puzzle, listening rounds and 3D scenes. Four dialects, two free rounds each, no sign-up.`,
 			url: `${baseUrl}/learn/game`,
 			type: 'website'
 		},
@@ -244,12 +364,21 @@ export function getPageMeta(page: string, data?: any): PageMeta {
 			type: 'website'
 		},
 		lesson: {
+			// Lesson titles already name the dialect, so the old "- Arabic Lesson |
+			// Parallel Arabic" suffix only pushed them past what a result shows.
 			title: data?.title
-				? `${data.title} - Arabic Lesson | Parallel Arabic`
+				? firstThatFits(
+						TITLE_LIMIT,
+						data.level ? `${data.title} (${capitaliseWords(data.level)} Lesson)` : data.title,
+						data.title
+					)
 				: 'Arabic Lesson | Parallel Arabic',
+			// No lesson has a stored description, so every one shared the fallback.
 			description:
 				data?.description ||
-				'Learn Arabic through an interactive lesson with vocabulary, grammar notes and conversation practice.',
+				(data?.title
+					? `An interactive ${data.level ? `${data.level} ` : ''}${dialectName} lesson: ${data.title}. Vocabulary, grammar notes and conversation practice.`
+					: 'Learn Arabic through an interactive lesson with vocabulary, grammar notes and conversation practice.'),
 			url: data?.id ? `${baseUrl}/lessons/${data.id}` : `${baseUrl}/lessons`,
 			type: 'article'
 		},
@@ -343,7 +472,7 @@ export function getPageMeta(page: string, data?: any): PageMeta {
 			type: 'website'
 		},
 		'dialect-conjugations': {
-			title: `${dialectName} Verb Conjugation Tables - Every Tense | Parallel Arabic`,
+			title: `${dialectName} Verb Conjugation Tables - Every Tense`,
 			description: `Full ${dialectName} conjugation tables for the most common verbs. Past, present, future and imperative, affirmative and negative, with transliteration and English for every form.`,
 			url: `${baseUrl}/${dialectSlug}/conjugations`,
 			type: 'website'
@@ -373,17 +502,19 @@ export function getPageMeta(page: string, data?: any): PageMeta {
 			type: 'article'
 		},
 		words: {
-			title: `${dialectName} Words - Common Vocabulary with Examples | Parallel Arabic`,
+			title: `${dialectName} Words - Common Vocabulary with Examples`,
 			description: `Common ${dialectName} words with audio, transliteration and real example sentences taken from graded stories, so you see each word in context rather than on a flashcard.`,
 			url: `${baseUrl}/${dialectSlug}/word`,
 			type: 'website'
 		},
 		word: {
-			title: data?.arabic
-				? `${data.arabic} - "${data.english}" in ${dialectName} | Meaning, Audio & Examples`
+			// Every entry in this map is built on every call, so this one is also
+			// evaluated with a phrase's or a verb's data; `romanised` marks a word.
+			title: data?.romanised
+				? wordTitle(data, searchDialectName(dialectSlug))
 				: `${dialectName} Words | Parallel Arabic`,
-			description: data?.arabic
-				? `${data.arabic} (${data.transliteration}) means "${data.english}" in ${dialectName}. Hear it pronounced and read example sentences taken from real stories.`
+			description: data?.romanised
+				? wordDescription(data, dialectName)
 				: `Common ${dialectName} words with audio and examples.`,
 			url: data?.slug
 				? `${baseUrl}/${dialectSlug}/word/${data.slug}`
@@ -437,10 +568,10 @@ export function getPageMeta(page: string, data?: any): PageMeta {
 		},
 		phrase: {
 			title: data?.arabic
-				? `How to Say "${data.english}" in ${dialectName} - ${data.arabic} (${data.transliteration})`
+				? phraseTitle(data, dialectSlug)
 				: `${dialectName} Phrases | Parallel Arabic`,
 			description: data?.arabic
-				? `"${data.english}" in ${dialectName} is ${data.arabic} (${data.transliteration}). Hear it pronounced, see the forms for a man, a woman and a group, how people reply, and example sentences.`
+				? phraseDescription(data, dialectName)
 				: `How to say the everyday phrases in ${dialectName}.`,
 			url: data?.slug
 				? `${baseUrl}/${dialectSlug}/phrases/${data.slug}`
@@ -520,9 +651,8 @@ export function getPageMeta(page: string, data?: any): PageMeta {
 			type: 'website'
 		},
 		pricing: {
-			title: 'Pricing - Parallel Arabic Subscription Plans',
-			description:
-				'Parallel Arabic pricing. Start free, then unlock unlimited lessons, stories, audio and the AI tutor across every dialect.',
+			title: `Parallel Arabic Pricing - Free Plan or Premium from ${PLANS.annual.perMonth}`,
+			description: `Parallel Arabic is free to start. Premium is ${PLANS.monthly.price} or ${PLANS.annual.price} and unlocks every lesson, story and game in four Arabic dialects, plus the AI Tutor.`,
 			url: `${baseUrl}/pricing`,
 			type: 'website'
 		},
@@ -540,7 +670,9 @@ export function getPageMeta(page: string, data?: any): PageMeta {
 			type: 'website'
 		},
 		blogPost: {
-			title: data?.title ? `${data.title} | Parallel Arabic` : 'Blog | Parallel Arabic',
+			title: data?.title
+				? firstThatFits(TITLE_LIMIT, `${data.title} | Parallel Arabic`, data.title)
+				: 'Blog | Parallel Arabic',
 			description: data?.description || 'Notes on learning Arabic from Parallel Arabic.',
 			url: data?.url || `${baseUrl}/blog`,
 			type: 'article'
@@ -788,8 +920,17 @@ export function deriveRouteData(key: string, data: any): Record<string, unknown>
 			...shared,
 			slug: data.word.slug,
 			english: data.word.english,
-			arabic: data.word.arabic,
+			arabic: data.word.arabic?.trim(),
 			transliteration: data.word.transliteration || data.word.franco,
+			romanised: wordRomanisation(data.word),
+			exampleCount: data.word.examples?.length ?? 0,
+			otherDialectNames: [
+				...new Set<string>(
+					(data.word.otherDialects ?? []).map(
+						(other: { dialect: string }) => DIALECT_SHORT[other.dialect] ?? other.dialect
+					)
+				)
+			],
 			category: data.word.category
 		};
 	}
@@ -802,7 +943,12 @@ export function deriveRouteData(key: string, data: any): Record<string, unknown>
 			arabic: data.phrase.arabicPlain || data.phrase.arabic,
 			transliteration: data.phrase.transliteration,
 			literal: data.phrase.literal,
-			usage: data.phrase.usage
+			usage: data.phrase.usage,
+			// Some entries repeat the headline phrase as their first variant.
+			moreWays: (data.phrase.variants ?? []).filter(
+				(variant: { arabic: string }) => variant.arabic !== data.phrase.arabic
+			).length,
+			replies: data.phrase.responses?.length ?? 0
 		};
 	}
 

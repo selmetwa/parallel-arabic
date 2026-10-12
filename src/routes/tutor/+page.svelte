@@ -12,6 +12,7 @@
 	import AudioButton from '$lib/components/AudioButton.svelte';
 	import Similarity from '$lib/components/Similarity.svelte';
 	import MessageBubble from '$lib/components/tutor/ConversationMessage.svelte';
+	import TutorAbout from '$lib/components/tutor/TutorAbout.svelte';
 	import PaywallModal from '$lib/components/PaywallModal.svelte';
 	import Modal from '$lib/components/Modal.svelte';
 	import DialectComparisonModal from '$lib/components/dialect-shared/sentences/DialectComparisonModal.svelte';
@@ -2555,6 +2556,10 @@
 		{/if}
 	</div>
 </section>
+
+{#if !hasActiveSubscription}
+	<TutorAbout />
+{/if}
 
 <style>
 	/* Dialect switcher */
