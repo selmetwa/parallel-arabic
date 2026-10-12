@@ -14,6 +14,7 @@
 				install the web app to your home screen and it behaves the same way.
 			</p>
 			<AppStoreBadge
+				campaign="mobile-app-hero"
 				className="px-6 py-3 border-2 border-tile-600 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
 			/>
 		</header>
@@ -184,6 +185,7 @@
 					Get Started Free →
 				</a>
 				<AppStoreBadge
+					campaign="mobile-app-footer"
 					className="px-6 py-3 border-2 border-tile-600 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
 				/>
 			</div>

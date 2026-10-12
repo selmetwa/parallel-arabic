@@ -1,16 +1,18 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { APP_STORE_URL } from '$lib/constants/app-store';
+	import { appStoreUrl, type AppStoreCampaign } from '$lib/constants/app-store';
 	import { isNativeApp } from '$lib/helpers/is-native-app';
 
 	interface Props {
+		/** Which placement this is, so installs can be attributed to it. */
+		campaign: AppStoreCampaign;
 		/** Shape/spacing classes, so each page can match its own CTA style. */
 		className?: string;
 		/** Called before navigating, e.g. to record a banner dismissal. */
 		onNavigate?: () => void;
 	}
 
-	let { className = '', onNavigate }: Props = $props();
+	let { campaign, className = '', onNavigate }: Props = $props();
 
 	/**
 	 * Rendered server-side so the App Store link is in the HTML, then hidden if
@@ -33,7 +35,7 @@
 -->
 {#if !inNativeApp}
 	<a
-		href={APP_STORE_URL}
+		href={appStoreUrl(campaign)}
 		rel="noopener"
 		onclick={() => onNavigate?.()}
 		class="inline-flex items-center gap-3 bg-tile-500 text-text-300 transition-all duration-200 hover:bg-tile-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-300 {className}"

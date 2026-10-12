@@ -8,6 +8,7 @@
 	import { TUTOR_SCENARIOS } from '$lib/constants/tutor-scenarios';
 	import { calculateWordSimilarity } from '$lib/utils/pronunciation-similarity';
 	import { trackEvent } from '$lib/analytics';
+	import { requestAppReview } from '$lib/helpers/request-app-review';
 	import type { Dialect } from '$lib/types';
 
 	interface Props {
@@ -169,6 +170,8 @@
 	function finish() {
 		trackEvent('onboarding_conversation_finished', { dialect });
 		phase = 'finished';
+		// They just spoke their first Arabic: the best moment to ask for a rating.
+		requestAppReview();
 	}
 
 	function choose(destination: string) {

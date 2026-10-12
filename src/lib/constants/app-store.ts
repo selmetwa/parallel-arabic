@@ -23,3 +23,27 @@ export const APP_STORE_ID = '6761313327';
  * not carry target="_blank" — see AppStoreBadge.
  */
 export const APP_STORE_URL = `https://apps.apple.com/app/id${APP_STORE_ID}`;
+
+/**
+ * Apple's provider token: the numeric `pt` value from App Store Connect's
+ * campaign link generator (App Analytics → Acquisition → Generate Campaign
+ * Link). It is public, and the same for every campaign.
+ */
+export const APP_STORE_PROVIDER_TOKEN = '128686021';
+
+/** Every place the site links to the listing. Shows up as the campaign in App Store Connect. */
+export type AppStoreCampaign =
+	| 'web-banner'
+	| 'mobile-app-hero'
+	| 'mobile-app-footer'
+	| 'about-hero'
+	| 'about-footer';
+
+/** The listing link, tagged so App Store Connect can attribute installs to a placement. */
+export function appStoreUrl(
+	campaign: AppStoreCampaign,
+	providerToken: string = APP_STORE_PROVIDER_TOKEN
+): string {
+	if (!providerToken) return APP_STORE_URL;
+	return `${APP_STORE_URL}?pt=${providerToken}&ct=${campaign}&mt=8`;
+}

@@ -54,6 +54,7 @@
 			</div>
 
 			<AppStoreBadge
+				campaign="web-banner"
 				className="rounded-xl border-2 border-tile-600 px-3 py-2"
 				onNavigate={dismiss}
 			/>
