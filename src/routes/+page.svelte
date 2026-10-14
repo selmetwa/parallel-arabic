@@ -13,6 +13,7 @@
 	import Leaderboard from '$lib/components/Leaderboard.svelte';
 	import ArabicMap from '$lib/components/ArabicMap.svelte';
 	import WeekStrip from '$lib/components/WeekStrip.svelte';
+	import DailyGoal from '$lib/components/DailyGoal.svelte';
 
 	let { data }: { data: PageData } = $props();
 
@@ -184,6 +185,13 @@
 				{@render stat('Stories read', data.totalStoriesViewed ?? 0, '', '/stories', '#8b5cf6')}
 				{@render stat('Sentences', data.totalSentencesViewed ?? 0, '', '/sentences', '#10b981')}
 			{/if}
+		</div>
+	{/if}
+
+	<!-- ── Daily goal (after the first-run card has done its job) ───────────── -->
+	{#if data.user && !data.firstRun}
+		<div class="reveal" style="animation-delay: 150ms;">
+			<DailyGoal progress={data.dailyGoal} />
 		</div>
 	{/if}
 

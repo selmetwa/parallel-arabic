@@ -1,6 +1,7 @@
 import { json } from "@sveltejs/kit";
 import { env } from '$env/dynamic/private';
 import { consumeRateLimit } from '$lib/server/redis';
+import { logActivity } from '$lib/server/activity';
 
 /**
  * Transcription is billed per call and this endpoint is reachable from
@@ -184,6 +185,9 @@ export async function POST({ request, locals, cookies, getClientAddress }) {
           sameSite: 'lax',
           maxAge: 60 * 60 * 24 * 30
         });
+      } else if (user) {
+        // A sentence said out loud, toward the daily goal.
+        await logActivity(user.id, 'speak');
       }
 
       return json({ text: transcript, languageCode });

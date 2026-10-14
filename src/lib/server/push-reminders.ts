@@ -16,7 +16,7 @@ interface Learner {
 }
 
 /** Same query the review page uses for "due". */
-async function dueWordCount(userId: string, now: number): Promise<number> {
+export async function dueWordCount(userId: string, now: number): Promise<number> {
 	const { count } = await supabase
 		.from('saved_word')
 		.select('id', { count: 'exact', head: true })

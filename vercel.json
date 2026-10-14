@@ -9,6 +9,10 @@
       "schedule": "0 19 * * *"
     },
     {
+      "path": "/api/cron/weekly-recap",
+      "schedule": "0 17 * * 0"
+    },
+    {
       "path": "/api/cron/send-streak-reminders?run=0",
       "schedule": "0 0 * * *"
     },
