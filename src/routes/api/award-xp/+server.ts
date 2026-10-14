@@ -4,7 +4,10 @@ import { awardXp } from '$lib/helpers/award-xp';
 import { touchStreak } from '$lib/helpers/track-activity';
 import type { XpEventType } from '$lib/helpers/xp-levels';
 
-const VALID_EVENT_TYPES: XpEventType[] = ['review_cycle', 'review_correct', 'sentence_correct', 'story_complete', 'game_correct', 'challenge_bonus', 'conjugation_correct'];
+const VALID_EVENT_TYPES: XpEventType[] = ['review_cycle', 'review_correct', 'sentence_correct', 'story_complete', 'game_correct', 'challenge_bonus', 'conjugation_correct', 'onboarding_conversation'];
+
+/** The first-conversation bonus can only be claimed right after onboarding. */
+const ONBOARDING_BONUS_WINDOW_MS = 60 * 60 * 1000;
 
 export const POST: RequestHandler = async ({ request, locals }) => {
 	const { supabase, safeGetSession } = locals;
@@ -20,6 +23,18 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 
 		if (!VALID_EVENT_TYPES.includes(eventType)) {
 			return json({ success: false, error: 'Invalid event type' }, { status: 400 });
+		}
+
+		if (eventType === 'onboarding_conversation') {
+			const { data: row } = await supabase
+				.from('user')
+				.select('onboarding_completed_at')
+				.eq('id', user.id)
+				.single();
+			const completedAt = Number(row?.onboarding_completed_at ?? 0);
+			if (!completedAt || Date.now() - completedAt > ONBOARDING_BONUS_WINDOW_MS) {
+				return json({ success: false, error: 'Not eligible' }, { status: 400 });
+			}
 		}
 
 		// Deduplicate story completions

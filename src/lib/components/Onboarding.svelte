@@ -6,6 +6,8 @@
 	import OnboardingConversation from '$lib/components/onboarding/OnboardingConversation.svelte';
 	import LevelSlider from '$lib/components/onboarding/LevelSlider.svelte';
 	import DialectPicker from '$lib/components/onboarding/DialectPicker.svelte';
+	import YourPlan from '$lib/components/onboarding/YourPlan.svelte';
+	import { firstLesson } from '$lib/helpers/first-lesson';
 	import TrialOffer from '$lib/components/TrialOffer.svelte';
 	import { CEFR_LEVELS, type CefrLevel } from '$lib/constants/cefr-levels';
 	import { onMount } from 'svelte';
@@ -28,10 +30,11 @@
 		LEVEL: 3,
 		GOAL: 4,
 		CONVERSATION: 5,
-		TRIAL: 6
+		PLAN: 6,
+		TRIAL: 7
 	} as const;
 
-	/** Steps the header stepper covers — the conversation and trial sit outside it. */
+	/** Steps the header stepper covers — the conversation, plan and trial sit outside it. */
 	const STEPPER_STEPS = [STEP.WELCOME, STEP.DIALECT, STEP.REASON, STEP.LEVEL, STEP.GOAL];
 
 	/** How far above their current level we pre-set someone's goal. */
@@ -44,6 +47,7 @@
 	let goalLevel = $state<CefrLevel | ''>('');
 	let isSubmitting = $state(false);
 	let error = $state('');
+	let conversationDone = $state(false);
 
 	// Web gets the Stripe trial offer; iOS gets the same step with Apple's
 	// plans and trial (TrialOffer/SubscribeButton never show Stripe in the app).
@@ -112,6 +116,7 @@
 		{ title: 'Level', subtitle: 'Where are you now?' },
 		{ title: 'Target', subtitle: 'Where do you want to get to?' },
 		{ title: 'Practice', subtitle: 'Say your first words' },
+		{ title: 'Plan', subtitle: '' },
 		{ title: 'Trial', subtitle: '' }
 	];
 
@@ -119,6 +124,12 @@
 		if (targetDialect === 'fusha') return 'Modern Standard Arabic';
 		const d = dialects.find((d) => d.id === targetDialect);
 		return d ? `${d.label} Arabic` : '';
+	});
+
+	let lesson = $derived(firstLesson(targetDialect, proficiencyLevel, page.data.isSubscribed === true));
+
+	$effect(() => {
+		if (isOpen) trackEvent('onboarding_step_viewed', { step: stepInfo[step].title.toLowerCase() });
 	});
 
 	let showStepper = $derived(STEPPER_STEPS.includes(step as (typeof STEPPER_STEPS)[number]));
@@ -222,16 +233,22 @@
 	}
 
 	async function finishOnboarding(destination: string) {
+		trackEvent('onboarding_exit', { destination, conversation_done: conversationDone });
 		handleCloseModal();
 		await goto(destination, { replaceState: true });
 	}
 
+	function handleConversationFinish(completed: boolean) {
+		conversationDone = completed;
+		step = STEP.PLAN;
+	}
+
 	/**
-	 * End of the first speaking win. Eligible web users and new iOS signups get
-	 * the trial offer before they leave; everyone else lands exactly where they
-	 * did before. On iOS, TrialOffer asks Apple whether to say "free trial".
+	 * They picked where to start. Eligible web users and new iOS signups get the
+	 * trial offer before they leave; everyone else goes straight there. On iOS,
+	 * TrialOffer asks Apple whether to say "free trial".
 	 */
-	async function handleConversationFinish(destination: string) {
+	async function handlePlanStart(destination: string) {
 		pendingDestination = destination;
 
 		const showOffer =
@@ -397,8 +414,8 @@
 					{#if step === STEP.REASON}
 						<div in:fly={{ y: 30, duration: 500, easing: cubicOut }}>
 							<div class="mb-7 text-center">
-								<h2 class="screen-title">What's Your Goal?</h2>
-								<p class="screen-sub">This helps us personalize your experience</p>
+								<h2 class="screen-title">What do you want Arabic for?</h2>
+								<p class="screen-sub">We'll start you on a conversation you'd actually have.</p>
 							</div>
 
 							<div class="mx-auto grid max-w-xl grid-cols-3 gap-2.5 sm:gap-3">
@@ -491,13 +508,25 @@
 						<div in:fly={{ y: 30, duration: 500, easing: cubicOut }}>
 							<OnboardingConversation
 								dialect={targetDialect as Dialect}
-								{proficiencyLevel}
+								{learningReason}
 								onFinish={handleConversationFinish}
 							/>
 						</div>
 					{/if}
 
-					<!-- Step 6: Free trial offer (Stripe on web, Apple on iOS) -->
+					<!-- Step 6: The plan, and where to start -->
+					{#if step === STEP.PLAN}
+						<YourPlan
+							{proficiencyLevel}
+							{goalLevel}
+							{conversationDone}
+							{lesson}
+							isNative={isNative === true}
+							onStart={handlePlanStart}
+						/>
+					{/if}
+
+					<!-- Step 7: Free trial offer (Stripe on web, Apple on iOS) -->
 					{#if step === STEP.TRIAL}
 						<TrialOffer
 							dialectName={chosenDialectName}

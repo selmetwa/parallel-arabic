@@ -9,6 +9,7 @@ import { BLOCKED_STORY_IDS } from "$lib/constants/stories/blocked";
 import { curriculum } from "$lib/data/curriculum";
 import { env } from "$env/dynamic/private";
 import { isPlanId } from "$lib/constants/pricing";
+import { firstLesson } from "$lib/helpers/first-lesson";
 
 function proficiencyToDifficulty(level: string | null | undefined): string | null {
   if (!level) return 'a1';
@@ -342,7 +343,7 @@ export const load: PageServerLoad = async ({ parent }) => {
     };
     suggestions.push({
       id: 'start-lesson',
-      href: `/lessons/structured/${userDialect}`,
+      href: firstLesson(userDialect, user?.proficiency_level, isSubscribed).href,
       icon: '📚',
       title: 'Start a lesson',
       subtitle: `Begin your first ${dialectDisplayNames[userDialect] ?? userDialect} lesson`,
@@ -367,6 +368,24 @@ export const load: PageServerLoad = async ({ parent }) => {
   // Sort by priority (higher first)
   suggestions.sort((a, b) => b.priority - a.priority);
 
+  // Brand-new learners get one "start here" card instead of a page of zeros and
+  // equal-weight options (docs/onboarding-v3-plan.md).
+  const hasStarted =
+    (user?.total_lessons_viewed ?? 0) > 0 ||
+    totalStoriesViewed > 0 ||
+    totalSentencesViewed > 0 ||
+    (user?.total_reviews ?? 0) > 0 ||
+    totalSavedWordsCount > 0 ||
+    !!inProgressLesson ||
+    !!inProgressGame;
+  const firstRun =
+    user?.id && user.onboarding_completed && !hasStarted
+      ? {
+          lesson: firstLesson(userDialect, user.proficiency_level, isSubscribed),
+          conversationDone: currentStreak > 0 || (user.total_xp ?? 0) > 0
+        }
+      : null;
+
   return {
     session,
     isSubscribed,
@@ -390,6 +409,7 @@ export const load: PageServerLoad = async ({ parent }) => {
     featuredStory,
     weekActivityDates,
     weekStartTimestamp,
+    firstRun,
   };
 };
 

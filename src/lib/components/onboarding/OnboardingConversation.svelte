@@ -5,7 +5,8 @@
 	import AudioLoading from '$lib/components/AudioLoading.svelte';
 	import RecordButton from '$lib/components/RecordButton.svelte';
 	import Similarity from '$lib/components/Similarity.svelte';
-	import { TUTOR_SCENARIOS } from '$lib/constants/tutor-scenarios';
+	import { onboardingScenario } from '$lib/constants/tutor-scenarios';
+	import { userLevel, userXp } from '$lib/store/xp-store';
 	import { calculateWordSimilarity } from '$lib/utils/pronunciation-similarity';
 	import { trackEvent } from '$lib/analytics';
 	import { requestAppReview } from '$lib/helpers/request-app-review';
@@ -13,23 +14,21 @@
 
 	interface Props {
 		dialect: Dialect;
-		proficiencyLevel: string;
-		onFinish: (destination: string) => void;
+		learningReason: string;
+		/** `completed` is false when they skipped or there was no dialog to practise. */
+		onFinish: (completed: boolean) => void;
 	}
 
-	let { dialect, proficiencyLevel, onFinish }: Props = $props();
+	let { dialect, learningReason, onFinish }: Props = $props();
 
 	const PRONUNCIATION_THRESHOLD = 60;
 
-	const scenario = TUTOR_SCENARIOS.find((s) => s.id === 'introducing-yourself');
+	let scenario = $derived(onboardingScenario(learningReason, dialect));
 	let dialog = $derived(scenario?.dialogs[dialect]);
 	let lines = $derived(dialog?.lines ?? []);
 
-	let lessonDestination = $derived(
-		proficiencyLevel === 'A1' ? '/alphabet' : `/lessons/structured/${dialect}`
-	);
-
 	let phase = $state<'line' | 'finished'>('line');
+	let xpAwarded = $state(0);
 	let currentIndex = $state(0);
 	let attempts = $state(0);
 	let result = $state<{ similarity: number; passed: boolean } | null>(null);
@@ -47,10 +46,10 @@
 
 	$effect(() => {
 		if (!dialog) {
-			onFinish(lessonDestination);
+			onFinish(false);
 			return;
 		}
-		trackEvent('onboarding_conversation_started', { dialect });
+		trackEvent('onboarding_conversation_started', { dialect, scenario: scenario?.id });
 	});
 
 	function formatRecordingTime(seconds: number): string {
@@ -162,21 +161,37 @@
 	}
 
 	function skipPractice() {
+		discardRecording = recording;
 		stopRecording();
-		trackEvent('onboarding_conversation_skipped', { dialect, line_index: currentIndex });
-		phase = 'finished';
+		trackEvent('onboarding_conversation_skipped', { dialect, scenario: scenario?.id, line_index: currentIndex });
+		onFinish(false);
 	}
 
 	function finish() {
-		trackEvent('onboarding_conversation_finished', { dialect });
+		trackEvent('onboarding_conversation_finished', { dialect, scenario: scenario?.id });
 		phase = 'finished';
+		awardFirstWin();
 		// They just spoke their first Arabic: the best moment to ask for a rating.
 		requestAppReview();
 	}
 
-	function choose(destination: string) {
-		trackEvent('onboarding_conversation_destination_chosen', { dialect, destination });
-		onFinish(destination);
+	/** The first conversation counts: XP, and day one of their streak. */
+	async function awardFirstWin() {
+		try {
+			const res = await fetch('/api/award-xp', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ eventType: 'onboarding_conversation' })
+			});
+			const result = await res.json();
+			if (result.success) {
+				xpAwarded = result.xpAwarded;
+				userXp.set(result.newTotalXp);
+				if (result.leveledUp) userLevel.set(result.newLevel);
+			}
+		} catch {
+			// XP is non-critical.
+		}
 	}
 </script>
 
@@ -186,7 +201,9 @@
 			<div class="text-center mb-6">
 				<p class="font-arabic font-bold text-2xl sm:text-3xl text-text-300/80 mb-2" dir="rtl" lang="ar">يلّا نبدأ</p>
 				<h2 class="text-2xl sm:text-3xl font-bold text-text-300 mb-1.5 tracking-tight">Let's say your first words</h2>
-				<p class="text-text-200 text-sm sm:text-base">A quick scripted conversation — introduce yourself in Arabic.</p>
+				<p class="text-text-200 text-sm sm:text-base">
+					A quick scripted conversation: {scenario?.title.toLowerCase()}.
+				</p>
 			</div>
 
 			<div class="flex items-center justify-between mb-2">
@@ -284,26 +301,35 @@
 				<h2 class="text-2xl sm:text-3xl font-bold text-text-300 mb-2 tracking-tight">
 					You just had your first conversation in Arabic!
 				</h2>
-				<p class="text-text-200 text-sm sm:text-base mb-8 max-w-sm">
-					Keep the momentum going — chat freely with your AI tutor, or head into a structured lesson.
+				<p class="text-text-200 text-sm sm:text-base mb-5 max-w-sm">
+					That's the hardest part done. Let's keep the momentum going.
 				</p>
-				<div class="flex flex-col sm:flex-row gap-3">
-					<button
-						type="button"
-						onclick={() => choose('/tutor')}
-						class="px-6 py-3 bg-text-300 text-tile-300 rounded-full font-semibold hover:-translate-y-0.5 transition-all duration-300"
-					>
-						Continue to Tutor
-					</button>
-					<button
-						type="button"
-						onclick={() => choose(lessonDestination)}
-						class="px-6 py-3 bg-tile-300 border border-text-300/20 text-text-300 rounded-full font-semibold hover:bg-tile-500 transition-colors duration-300"
-					>
-						Go to a Lesson
-					</button>
+				<div class="mb-8 flex min-h-8 flex-wrap justify-center gap-2">
+					{#if xpAwarded}
+						<span class="win-pill" in:fly={{ y: 8, duration: 300 }}>+{xpAwarded} XP</span>
+						<span class="win-pill" in:fly={{ y: 8, duration: 300, delay: 120 }}>🔥 Streak started</span>
+					{/if}
 				</div>
+				<button
+					type="button"
+					onclick={() => onFinish(true)}
+					class="px-8 py-3 bg-text-300 text-tile-300 rounded-full font-semibold hover:-translate-y-0.5 transition-all duration-300"
+				>
+					Continue
+				</button>
 			</div>
 		{/if}
 	</div>
 {/if}
+
+<style>
+	.win-pill {
+		border-radius: 100px;
+		border: 2px solid #f59e0b;
+		background: color-mix(in srgb, #f59e0b 14%, var(--tile3));
+		padding: 0.3rem 0.85rem;
+		font-size: 0.85rem;
+		font-weight: 700;
+		color: var(--text1);
+	}
+</style>

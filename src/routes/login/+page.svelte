@@ -2,7 +2,7 @@
 	import { enhance } from '$app/forms';
 	import { goto } from '$app/navigation';
 	import { page } from '$app/state';
-	import { rememberNext, safeNext } from '$lib/helpers/safe-next';
+	import { rememberNext, safeNext, withNewSignup } from '$lib/helpers/safe-next';
 	import { onMount } from 'svelte';
 	import Button from '$lib/components/Button.svelte';
 	import Testimonial from '$lib/components/Testimonial.svelte';
@@ -142,7 +142,7 @@
           })
         });
 
-        let syncBody: { error?: string; code?: string } = {};
+        let syncBody: { error?: string; code?: string; needsOnboarding?: boolean } = {};
         try {
           syncBody = await syncRes.json();
         } catch {
@@ -156,7 +156,7 @@
           return;
         }
 
-        window.location.href = next;
+        window.location.href = syncBody.needsOnboarding ? withNewSignup(next) : next;
       });
     }
     // On web, supabase handles redirect automatically via /auth/callback
@@ -209,8 +209,9 @@
         if (code) {
           const { error: sessionError } = await supabase.auth.exchangeCodeForSession(code);
           if (!sessionError) {
-            await fetch('/api/auth/sync', { method: 'POST' });
-            goto(next);
+            const sync = await fetch('/api/auth/sync', { method: 'POST' });
+            const { needsOnboarding } = await sync.json().catch(() => ({}));
+            goto(needsOnboarding ? withNewSignup(next) : next);
           }
         }
         loading = false;

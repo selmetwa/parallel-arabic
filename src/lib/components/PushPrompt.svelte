@@ -1,21 +1,20 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
-	import { enablePush } from '$lib/helpers/push-notifications';
+	import { enablePush, PUSH_PROMPT_SNOOZE_KEY, snoozePushPrompt } from '$lib/helpers/push-notifications';
 
-	const STORAGE_KEY = 'pushPromptSnoozedUntil';
 	/** "Not now" is not "never": ask again after this long. */
 	const SNOOZE_MS = 14 * 24 * 60 * 60 * 1000;
 
 	let visible = $state(false);
 
 	onMount(() => {
-		visible = Date.now() > Number(localStorage.getItem(STORAGE_KEY) ?? 0);
+		visible = Date.now() > Number(localStorage.getItem(PUSH_PROMPT_SNOOZE_KEY) ?? 0);
 	});
 
 	function notNow() {
 		visible = false;
-		localStorage.setItem(STORAGE_KEY, String(Date.now() + SNOOZE_MS));
+		snoozePushPrompt(SNOOZE_MS);
 	}
 
 	// iOS only shows its own dialog once, so whatever they answer there is final.

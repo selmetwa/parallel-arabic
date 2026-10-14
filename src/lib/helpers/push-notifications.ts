@@ -16,6 +16,18 @@ async function plugin() {
 	return (await import('@capacitor/push-notifications')).PushNotifications;
 }
 
+/** localStorage key holding when the "turn on reminders" banner may ask again. */
+export const PUSH_PROMPT_SNOOZE_KEY = 'pushPromptSnoozedUntil';
+
+/** Stop the reminder banner asking for this long (ms). */
+export function snoozePushPrompt(ms: number): void {
+	try {
+		localStorage.setItem(PUSH_PROMPT_SNOOZE_KEY, String(Date.now() + ms));
+	} catch {
+		// Private mode: the banner may ask again, which is harmless.
+	}
+}
+
 export async function pushPermission(): Promise<PushPermission> {
 	if (!isNativeApp()) return 'unavailable';
 

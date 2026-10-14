@@ -2,12 +2,13 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { supabase } from '$lib/supabaseClient';
 import { sendOnboardingNudgeEmail } from '$lib/server/email';
+import { firstLesson } from '$lib/helpers/first-lesson';
 
 const DAY_MS = 24 * 60 * 60 * 1000;
 
+// The same first lesson onboarding pointed them to, not a page to choose from.
 function getCtaUrl(proficiencyLevel: string | null, targetDialect: string | null): string {
-  if (proficiencyLevel === 'A1') return '/alphabet';
-  return `/lessons/structured/${targetDialect ?? 'egyptian-arabic'}`;
+  return firstLesson(targetDialect, proficiencyLevel).href;
 }
 
 export const GET: RequestHandler = async ({ request }) => {
