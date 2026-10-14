@@ -47,6 +47,36 @@ export function localHour(ts: number, tz: string | null | undefined): number {
 	return Number(hour) % 24;
 }
 
+/** How far `tz`'s wall clock is ahead of UTC at `ts` (ms). */
+function zoneOffset(ts: number, tz: string): number {
+	const parts = Object.fromEntries(
+		new Intl.DateTimeFormat('en-US', {
+			timeZone: tz,
+			hourCycle: 'h23',
+			year: 'numeric',
+			month: 'numeric',
+			day: 'numeric',
+			hour: 'numeric',
+			minute: 'numeric',
+			second: 'numeric'
+		})
+			.formatToParts(ts)
+			.map((p) => [p.type, Number(p.value)])
+	);
+	const wall = Date.UTC(parts.year, parts.month - 1, parts.day, parts.hour % 24, parts.minute, parts.second);
+	return wall - Math.floor(ts / 1000) * 1000;
+}
+
+/** When the learner's current calendar day began (ms), in `tz`. */
+export function localDayStart(ts: number, tz: string | null | undefined): number {
+	const zone = safeTimeZone(tz);
+	const [y, m, d] = localDayKey(ts, zone).split('-').map(Number);
+	const midnight = Date.UTC(y, m - 1, d);
+	// Twice, so a day that starts on a daylight-saving change still lands on midnight.
+	const first = midnight - zoneOffset(midnight, zone);
+	return midnight - zoneOffset(first, zone);
+}
+
 /** Whole days from day key `a` to day key `b`. */
 export function daysBetween(a: string, b: string): number {
 	const toUtc = (key: string) => {

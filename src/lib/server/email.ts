@@ -92,8 +92,15 @@ export const sendPasswordResetLink = async (token: string, _email: string, userI
 	return result;
 };
 
-export const sendStreakReminderEmail = async (email: string, streakCount: number, userId: string) => {
+export const sendStreakReminderEmail = async (
+	email: string,
+	streakCount: number,
+	userId: string,
+	/** "review 10 words and play a game", if they set a daily goal. */
+	goalText?: string | null
+) => {
 	const siteUrl = 'https://parallel-arabic.com';
+	const goalLine = goalText ? `Today's goal: ${goalText}.` : '';
 	const profileUrl = `${siteUrl}/profile`;
 
 	const html = `
@@ -125,6 +132,7 @@ export const sendStreakReminderEmail = async (email: string, streakCount: number
 									<p style="font-size: 16px; color: #001a33; margin-bottom: 20px; line-height: 1.6;">
 										Just a few minutes of practice is all it takes to keep your streak alive and continue your Arabic learning journey.
 									</p>
+									${goalLine ? `<p style="font-size: 16px; color: #001a33; margin-bottom: 20px; line-height: 1.6;"><strong>${goalLine}</strong></p>` : ''}
 
 									<!-- CTA Button -->
 									<table role="presentation" style="width: 100%; margin-top: 30px;">
@@ -164,7 +172,7 @@ Don't lose your ${streakCount}-day streak!
 You've built an impressive ${streakCount}-day streak on Parallel Arabic — don't let it slip away today!
 
 Just a few minutes of practice is all it takes to keep your streak alive and continue your Arabic learning journey.
-
+${goalLine ? `\n${goalLine}\n` : ''}
 Continue Learning: ${siteUrl}/lessons
 
 Happy learning,
@@ -351,4 +359,103 @@ To manage notification settings, visit: ${profileUrl}
 		console.error(`Error sending day-${day} onboarding nudge email to user ${userId}:`, error);
 		throw error;
 	}
+};
+
+export interface BrandedEmail {
+	subject: string;
+	heading: string;
+	/** Plain-text paragraphs, escaped when rendered. */
+	paragraphs: string[];
+	/** Short lines shown as a list after the first paragraph, e.g. "23 words reviewed". */
+	stats?: string[];
+	cta: { label: string; path: string };
+}
+
+const escapeHtml = (value: string) =>
+	value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+/** The retention emails (weekly recap, comeback), in the same layout as the streak email. */
+export const sendBrandedEmail = async (to: string, email: BrandedEmail) => {
+	const siteUrl = 'https://parallel-arabic.com';
+	const profileUrl = `${siteUrl}/profile`;
+	const ctaUrl = `${siteUrl}${email.cta.path}`;
+	const p = (text: string) =>
+		`<p style="font-size: 16px; color: #001a33; margin: 0 0 16px 0; line-height: 1.6;">${escapeHtml(text)}</p>`;
+	const [first, ...rest] = email.paragraphs;
+	const stats = email.stats?.length
+		? `<ul style="margin: 0 0 16px 0; padding-left: 20px; font-size: 16px; color: #001a33; line-height: 1.8;">${email.stats
+				.map((s) => `<li><strong>${escapeHtml(s)}</strong></li>`)
+				.join('')}</ul>`
+		: '';
+
+	const html = `
+		<!DOCTYPE html>
+		<html>
+		<head>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>${escapeHtml(email.subject)}</title>
+		</head>
+		<body style="font-family: 'ReadexPro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #001a33; background-color: #b8c4d0; margin: 0; padding: 0;">
+			<table role="presentation" style="width: 100%; border-collapse: collapse; background-color: #b8c4d0; padding: 20px;">
+				<tr>
+					<td align="center" style="padding: 20px 0;">
+						<table role="presentation" style="max-width: 600px; width: 100%; background-color: #a8b8c8; border: 2px solid #8898a8; border-radius: 8px; overflow: hidden;">
+							<tr>
+								<td style="background-color: #98a8b8; border-bottom: 2px solid #8898a8; padding: 30px; text-align: center;">
+									<h1 style="color: #001a33; margin: 0; font-size: 26px; font-weight: bold;">${escapeHtml(email.heading)}</h1>
+								</td>
+							</tr>
+							<tr>
+								<td style="padding: 30px; background-color: #a8b8c8;">
+									${first ? p(first) : ''}
+									${stats}
+									${rest.map(p).join('')}
+									<table role="presentation" style="width: 100%; margin-top: 24px;">
+										<tr>
+											<td align="center" style="padding: 0;">
+												<a href="${ctaUrl}" style="display: inline-block; background-color: #98a8b8; color: #001a33; padding: 14px 28px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 16px; border: 2px solid #8898a8;">
+													${escapeHtml(email.cta.label)} &rarr;
+												</a>
+											</td>
+										</tr>
+									</table>
+									<table role="presentation" style="width: 100%; margin-top: 30px; padding-top: 20px; border-top: 1px solid #8898a8;">
+										<tr>
+											<td align="center" style="color: #4d5c66; font-size: 14px; line-height: 1.6;">
+												<p style="margin: 5px 0;">Happy learning,<br><strong style="color: #001a33;">Sherif</strong><br>Founder, Parallel Arabic</p>
+												<p style="margin: 15px 0 5px 0; font-size: 12px;">
+													<a href="${profileUrl}" style="color: #4d5c66;">Manage notification settings</a>
+												</p>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</body>
+		</html>
+	`;
+
+	const text = [
+		email.heading,
+		'',
+		...(first ? [first, ''] : []),
+		...(email.stats?.length ? [...email.stats.map((s) => `- ${s}`), ''] : []),
+		...rest.flatMap((r) => [r, '']),
+		`${email.cta.label}: ${ctaUrl}`,
+		'',
+		'Happy learning,',
+		'Sherif',
+		'Founder, Parallel Arabic',
+		'',
+		'---',
+		`To manage notification settings, visit: ${profileUrl}`
+	].join('\n');
+
+	const mg = getMailgunClient();
+	return mg.messages.create(MAILGUN_DOMAIN, { from: FROM_EMAIL, to: [to], subject: email.subject, text, html });
 };

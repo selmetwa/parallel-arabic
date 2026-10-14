@@ -3,6 +3,7 @@ import {
 	daysBetween,
 	earnedBadges,
 	localDayKey,
+	localDayStart,
 	localHour,
 	nextStreak,
 	safeTimeZone,
@@ -102,5 +103,19 @@ describe('earnedBadges', () => {
 	it('gives the badges up to the longest streak', () => {
 		expect(earnedBadges(6)).toHaveLength(0);
 		expect(earnedBadges(30).map((b) => b.days)).toEqual([7, 30]);
+	});
+});
+
+describe('localDayStart', () => {
+	it('is midnight in the learner\'s time zone', () => {
+		const now = Date.UTC(2026, 9, 14, 15, 30);
+		expect(localDayStart(now, 'America/New_York')).toBe(Date.UTC(2026, 9, 14, 4));
+		expect(localDayStart(now, 'Asia/Tokyo')).toBe(Date.UTC(2026, 9, 14, 15));
+		expect(localDayStart(now, null)).toBe(Date.UTC(2026, 9, 14));
+	});
+
+	it('handles a day that starts in one offset and ends in another', () => {
+		// New York leaves daylight saving on 1 November 2026: midnight is still EDT.
+		expect(localDayStart(Date.UTC(2026, 10, 1, 18), 'America/New_York')).toBe(Date.UTC(2026, 10, 1, 4));
 	});
 });

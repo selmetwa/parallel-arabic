@@ -41,13 +41,27 @@ export function createRoundGate(
 		return access().isSubscribed || used < FREE_ROUNDS;
 	}
 
+	// A round started counts toward the daily goal.
+	function logRound() {
+		if (!access().userId) return;
+		fetch('/api/activity', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({ kind: 'game' })
+		}).catch(() => {});
+	}
+
 	function tryStartRound() {
-		if (access().isSubscribed) return true;
+		if (access().isSubscribed) {
+			logRound();
+			return true;
+		}
 		if (used >= FREE_ROUNDS) {
 			block();
 			return false;
 		}
 		used = Math.max(used + 1, recordRound(storage(), game, who()));
+		logRound();
 		return true;
 	}
 

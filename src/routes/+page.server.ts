@@ -10,6 +10,9 @@ import { curriculum } from "$lib/data/curriculum";
 import { env } from "$env/dynamic/private";
 import { isPlanId } from "$lib/constants/pricing";
 import { firstLesson } from "$lib/helpers/first-lesson";
+import { goalProgress, parseGoal } from "$lib/constants/daily-goal";
+import { countActivity } from "$lib/server/activity";
+import { localDayStart } from "$lib/helpers/streak";
 
 function proficiencyToDifficulty(level: string | null | undefined): string | null {
   if (!level) return 'a1';
@@ -58,6 +61,12 @@ export const load: PageServerLoad = async ({ parent }) => {
   const totalStoriesViewed = user?.total_stories_viewed || 0;
   const totalShortsViewed = user?.total_shorts_viewed || 0;
   const currentStreak = user?.current_streak || 0;
+
+  // Today's goal progress, counted from the start of the learner's own day.
+  const goal = parseGoal(user?.daily_goal);
+  const goalCountsPromise = user?.id && goal
+    ? countActivity(user.id, localDayStart(Date.now(), user.timezone))
+    : null;
 
   // Fetch word of the day + leaderboard top 5 for all visitors (no auth required)
   const todayStr = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
@@ -386,6 +395,8 @@ export const load: PageServerLoad = async ({ parent }) => {
         }
       : null;
 
+  const dailyGoal = goal && goalCountsPromise ? goalProgress(goal, await goalCountsPromise) : null;
+
   return {
     session,
     isSubscribed,
@@ -410,6 +421,7 @@ export const load: PageServerLoad = async ({ parent }) => {
     weekActivityDates,
     weekStartTimestamp,
     firstRun,
+    dailyGoal,
   };
 };
 
