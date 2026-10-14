@@ -1,6 +1,7 @@
 import { json, type Cookies } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { syncSupabaseUserWithDB } from '$lib/helpers/supabase-auth-helpers';
+import { sendWelcomeEmail } from '$lib/server/email';
 import { createClient } from '@supabase/supabase-js';
 import { PUBLIC_SUPABASE_URL } from '$env/static/public';
 import { env } from '$env/dynamic/private';
@@ -17,6 +18,32 @@ type ErrorCode =
 
 function err(code: ErrorCode, message: string, status: number, detail?: string) {
   return json({ error: message, code, detail }, { status });
+}
+
+/**
+ * Native sign-in has no /auth/callback redirect to add `newSignup=true`, so the
+ * app asks here whether to open onboarding. True for brand-new accounts and for
+ * older ones that never finished it.
+ */
+async function syncAndCheckOnboarding(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  user: any,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  client: any
+): Promise<boolean> {
+  const { data: existing } = await client
+    .from('user')
+    .select('id')
+    .eq('supabase_auth_id', user.id)
+    .maybeSingle();
+
+  const row = await syncSupabaseUserWithDB(user, client);
+
+  if (!existing && user.email) {
+    sendWelcomeEmail(user.email, user.id).catch((e) => console.error('Failed to send welcome email:', e));
+  }
+
+  return !row?.onboarding_completed;
 }
 
 function projectRef(): string | null {
@@ -76,9 +103,9 @@ export const POST: RequestHandler = async ({ locals, request, cookies }) => {
     }
     console.log('[sync] Server flow — syncing user:', user.id);
     try {
-      await syncSupabaseUserWithDB(user, supabase);
+      const needsOnboarding = await syncAndCheckOnboarding(user, supabase);
       console.log('[sync] Server flow sync OK');
-      return json({ ok: true });
+      return json({ ok: true, needsOnboarding });
     } catch (e) {
       const message = (e as Error)?.message || 'Sync failed';
       console.error('[sync] Server flow sync error:', e);
@@ -150,8 +177,9 @@ export const POST: RequestHandler = async ({ locals, request, cookies }) => {
     );
   }
 
+  let needsOnboarding = false;
   try {
-    await syncSupabaseUserWithDB(user, adminSupabase);
+    needsOnboarding = await syncAndCheckOnboarding(user, adminSupabase);
     console.log('[sync] Token flow sync OK');
   } catch (e) {
     const message = (e as Error)?.message || 'Sync failed';
@@ -186,5 +214,5 @@ export const POST: RequestHandler = async ({ locals, request, cookies }) => {
     });
   }
 
-  return json({ ok: true });
+  return json({ ok: true, needsOnboarding });
 };

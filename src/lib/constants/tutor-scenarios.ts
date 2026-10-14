@@ -120,7 +120,9 @@ export const TUTOR_SCENARIOS: TutorScenario[] = [
           { speaker: 'other', arabic: 'أهلين، شو بتحب تشرب؟', transliteration: 'ahlein, shu bithibb tishrab?', english: 'Hi, what would you like to drink?' },
           { speaker: 'student', arabic: 'بدي قهوة من فضلك.', transliteration: 'biddi ahweh min fadlak.', english: "I'd like a coffee, please." },
           { speaker: 'other', arabic: 'مع سكر؟', transliteration: 'ma3 sukkar?', english: 'With sugar?' },
-          { speaker: 'student', arabic: 'بدون سكر، شكراً.', transliteration: 'bidoon sukkar, shukran.', english: 'No sugar, thanks.' }
+          { speaker: 'student', arabic: 'بدون سكر، شكراً.', transliteration: 'bidoon sukkar, shukran.', english: 'No sugar, thanks.' },
+          { speaker: 'other', arabic: 'بدك شي تاني؟', transliteration: 'baddak shi tani?', english: 'Do you want anything else?' },
+          { speaker: 'student', arabic: 'لا، بس هيك. شكراً كتير!', transliteration: 'la, bass heik. shukran kteer!', english: "No, that's all. Thanks a lot!" }
         ]
       },
       'egyptian-arabic': {
@@ -129,7 +131,9 @@ export const TUTOR_SCENARIOS: TutorScenario[] = [
           { speaker: 'other', arabic: 'اتفضل، تحب تشرب إيه؟', transliteration: 'itfaddal, tihibb tishrab eih?', english: 'Welcome, what would you like to drink?' },
           { speaker: 'student', arabic: 'عايز قهوة من فضلك.', transliteration: '3ayiz ahwa min fadlak.', english: 'I want a coffee, please.' },
           { speaker: 'other', arabic: 'سكر؟', transliteration: 'sukkar?', english: 'Sugar?' },
-          { speaker: 'student', arabic: 'سكر قليل، شكراً.', transliteration: 'sukkar 2alil, shukran.', english: 'A little sugar, thanks.' }
+          { speaker: 'student', arabic: 'سكر قليل، شكراً.', transliteration: 'sukkar 2alil, shukran.', english: 'A little sugar, thanks.' },
+          { speaker: 'other', arabic: 'عايز حاجة تانية؟', transliteration: '3ayiz haga tanya?', english: 'Do you want anything else?' },
+          { speaker: 'student', arabic: 'لا، كده تمام. شكراً!', transliteration: 'la, kida tamam. shukran!', english: "No, that's it. Thanks!" }
         ]
       },
       'fusha': {
@@ -138,7 +142,21 @@ export const TUTOR_SCENARIOS: TutorScenario[] = [
           { speaker: 'other', arabic: 'مرحبًا، ماذا تودّ أن تشرب؟', transliteration: 'marhaban, matha tawadd an tashrab?', english: 'Hello, what would you like to drink?' },
           { speaker: 'student', arabic: 'أريد قهوة من فضلك.', transliteration: 'ureed qahwa min fadlik.', english: 'I would like a coffee, please.' },
           { speaker: 'other', arabic: 'مع السكر؟', transliteration: 'ma3a as-sukkar?', english: 'With sugar?' },
-          { speaker: 'student', arabic: 'بدون سكر، شكرًا لك.', transliteration: 'bidoon sukkar, shukran lak.', english: 'Without sugar, thank you.' }
+          { speaker: 'student', arabic: 'بدون سكر، شكرًا لك.', transliteration: 'bidoon sukkar, shukran lak.', english: 'Without sugar, thank you.' },
+          { speaker: 'other', arabic: 'هل تريد شيئًا آخر؟', transliteration: 'hal tureed shay2an akhar?', english: 'Would you like anything else?' },
+          { speaker: 'student', arabic: 'لا، هذا كل شيء. شكرًا جزيلًا!', transliteration: 'la, hatha kull shay2. shukran jazeelan!', english: "No, that's everything. Thank you very much!" }
+        ]
+      },
+      // Darija drafted from general Moroccan patterns; needs a native-speaker check.
+      'darija': {
+        otherRoleEnglish: 'Café server',
+        lines: [
+          { speaker: 'other', arabic: 'مرحبا، أش بغيتي تشرب؟', transliteration: 'marhba, ash bghiti tsherb?', english: 'Welcome, what would you like to drink?' },
+          { speaker: 'student', arabic: 'بغيت قهوة عافاك.', transliteration: 'bghit qahwa 3afak.', english: "I'd like a coffee, please." },
+          { speaker: 'other', arabic: 'بالسكر؟', transliteration: 'b-ssukkar?', english: 'With sugar?' },
+          { speaker: 'student', arabic: 'بلا سكر، شكرا.', transliteration: 'bla sukkar, shukran.', english: 'No sugar, thanks.' },
+          { speaker: 'other', arabic: 'بغيتي شي حاجة أخرى؟', transliteration: 'bghiti shi haja khra?', english: 'Do you want anything else?' },
+          { speaker: 'student', arabic: 'لا، هادشي هو. شكرا بزاف!', transliteration: 'la, hadshi huwa. shukran bzaf!', english: "No, that's it. Thanks a lot!" }
         ]
       }
     }
@@ -300,7 +318,9 @@ export const TUTOR_SCENARIOS: TutorScenario[] = [
           { speaker: 'other', arabic: 'عندك إخوة؟', transliteration: '3indak ikhweh?', english: 'Do you have siblings?' },
           { speaker: 'student', arabic: 'عندي أخ وأخت.', transliteration: '3indi akh w-ikht.', english: 'I have one brother and one sister.' },
           { speaker: 'other', arabic: 'وين ساكنين؟', transliteration: 'wein sakneen?', english: 'Where do they live?' },
-          { speaker: 'student', arabic: 'ساكنين مع أهلي في كندا.', transliteration: 'sakneen ma3 ahli fi Canada.', english: 'They live with my parents in Canada.' }
+          { speaker: 'student', arabic: 'ساكنين مع أهلي في كندا.', transliteration: 'sakneen ma3 ahli fi Canada.', english: 'They live with my parents in Canada.' },
+          { speaker: 'other', arabic: 'شو بيشتغل أخوك؟', transliteration: 'shu bishtighil akhook?', english: 'What does your brother do?' },
+          { speaker: 'student', arabic: 'أخوي أستاذ، وأختي لسّا طالبة.', transliteration: 'akhooy ustaz, w-ikhti lissa talbeh.', english: 'My brother is a teacher, and my sister is still a student.' }
         ]
       },
       'egyptian-arabic': {
@@ -309,7 +329,9 @@ export const TUTOR_SCENARIOS: TutorScenario[] = [
           { speaker: 'other', arabic: 'عندك إخوات؟', transliteration: '3andak ikhwaat?', english: 'Do you have siblings?' },
           { speaker: 'student', arabic: 'عندي أخ وأخت.', transliteration: '3andi akh wi ukht.', english: 'I have a brother and a sister.' },
           { speaker: 'other', arabic: 'ساكنين فين؟', transliteration: 'sakneen fein?', english: 'Where do they live?' },
-          { speaker: 'student', arabic: 'ساكنين مع أهلي في كندا.', transliteration: 'sakneen ma3 ahli fi Canada.', english: 'They live with my parents in Canada.' }
+          { speaker: 'student', arabic: 'ساكنين مع أهلي في كندا.', transliteration: 'sakneen ma3 ahli fi Canada.', english: 'They live with my parents in Canada.' },
+          { speaker: 'other', arabic: 'أخوك بيشتغل إيه؟', transliteration: 'akhook biyishtaghal eih?', english: 'What does your brother do?' },
+          { speaker: 'student', arabic: 'أخويا مدرس، وأختي لسه طالبة.', transliteration: 'akhooya mudarris, w-ukhti lissa talba.', english: 'My brother is a teacher, and my sister is still a student.' }
         ]
       },
       'fusha': {
@@ -318,7 +340,21 @@ export const TUTOR_SCENARIOS: TutorScenario[] = [
           { speaker: 'other', arabic: 'هل لديك إخوة؟', transliteration: 'hal ladayka ikhwa?', english: 'Do you have siblings?' },
           { speaker: 'student', arabic: 'لديّ أخ وأخت.', transliteration: 'ladayya akh wa-ukht.', english: 'I have a brother and a sister.' },
           { speaker: 'other', arabic: 'أين يعيشون؟', transliteration: 'ayna ya3eeshoon?', english: 'Where do they live?' },
-          { speaker: 'student', arabic: 'يعيشون مع والديّ في كندا.', transliteration: 'ya3eeshoon ma3a walidayya fi Canada.', english: 'They live with my parents in Canada.' }
+          { speaker: 'student', arabic: 'يعيشون مع والديّ في كندا.', transliteration: 'ya3eeshoon ma3a walidayya fi Canada.', english: 'They live with my parents in Canada.' },
+          { speaker: 'other', arabic: 'ماذا يعمل أخوك؟', transliteration: 'matha ya3mal akhook?', english: 'What does your brother do?' },
+          { speaker: 'student', arabic: 'أخي معلّم، وأختي ما زالت طالبة.', transliteration: 'akhi mu3allim, wa-ukhti ma zalat taliba.', english: 'My brother is a teacher, and my sister is still a student.' }
+        ]
+      },
+      // Darija drafted from general Moroccan patterns; needs a native-speaker check.
+      'darija': {
+        otherRoleEnglish: 'A friend',
+        lines: [
+          { speaker: 'other', arabic: 'عندك خوت؟', transliteration: '3ndek khut?', english: 'Do you have siblings?' },
+          { speaker: 'student', arabic: 'عندي خويا وختي.', transliteration: '3ndi khuya w khti.', english: 'I have a brother and a sister.' },
+          { speaker: 'other', arabic: 'فين ساكنين؟', transliteration: 'fin saknin?', english: 'Where do they live?' },
+          { speaker: 'student', arabic: 'ساكنين مع والديا ف كندا.', transliteration: 'saknin m3a waldiya f Canada.', english: 'They live with my parents in Canada.' },
+          { speaker: 'other', arabic: 'أش خدام خوك؟', transliteration: 'ash khddam khuk?', english: 'What does your brother do?' },
+          { speaker: 'student', arabic: 'خويا أستاذ، وختي باقا طالبة.', transliteration: 'khuya ustad, w khti baqa taliba.', english: 'My brother is a teacher, and my sister is still a student.' }
         ]
       }
     }
@@ -396,3 +432,21 @@ export const TUTOR_SCENARIOS: TutorScenario[] = [
     }
   }
 ];
+
+/** First onboarding conversation for each "why are you learning" answer. */
+const ONBOARDING_SCENARIO_BY_REASON: Record<string, string> = {
+  Travel: 'ordering-coffee',
+  Heritage: 'talking-about-family'
+};
+
+/**
+ * The scripted conversation onboarding opens with: picked from the learner's
+ * reason, falling back to "Introducing Yourself" when there's no match or no
+ * dialog in their dialect.
+ */
+export function onboardingScenario(reason: string | null | undefined, dialect: Dialect): TutorScenario | undefined {
+  const preferredId = (reason && ONBOARDING_SCENARIO_BY_REASON[reason]) || 'introducing-yourself';
+  const preferred = TUTOR_SCENARIOS.find((s) => s.id === preferredId);
+  if (preferred?.dialogs[dialect]) return preferred;
+  return TUTOR_SCENARIOS.find((s) => s.id === 'introducing-yourself');
+}

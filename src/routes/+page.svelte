@@ -138,8 +138,8 @@
 		</div>
 	{/if}
 
-	<!-- ── Stats ribbon ────────────────────────────────────────────────────── -->
-	{#if data.user}
+	<!-- ── Stats ribbon (hidden until there's something to count) ─────────── -->
+	{#if data.user && !data.firstRun}
 		<div
 			class="reveal grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-5"
 			style="animation-delay: 120ms;"
@@ -187,8 +187,27 @@
 		</div>
 	{/if}
 
-	<!-- ── Activity suggestions ────────────────────────────────────────────── -->
-	{#if data.user && !bannerDismissed && (reviewSuggestion || otherSuggestions.length > 0)}
+	<!-- ── First run: one clear next step ──────────────────────────────────── -->
+	{#if data.firstRun}
+		<div class="reveal jump-panel start-here" style="animation-delay: 120ms;">
+			<div class="sec-head">
+				<span class="sec-emoji" aria-hidden="true">🧭</span>
+				<h2>Start here</h2>
+			</div>
+			<ol class="start-list">
+				{#each [{ label: 'Your first conversation', done: data.firstRun.conversationDone }, { label: data.firstRun.lesson.title, done: false }, { label: 'Today’s challenge', done: false }] as item, i (i)}
+					<li class="start-item {item.done ? 'is-done' : ''}">
+						<span class="start-dot" aria-hidden="true">{item.done ? '✓' : i + 1}</span>
+						<span>{item.label}</span>
+						{#if item.done}<span class="sr-only">(done)</span>{/if}
+					</li>
+				{/each}
+			</ol>
+			<a href={resolve(data.firstRun.lesson.href)} class="start-cta">
+				Start: {data.firstRun.lesson.title} <span aria-hidden="true">→</span>
+			</a>
+		</div>
+	{:else if data.user && !bannerDismissed && (reviewSuggestion || otherSuggestions.length > 0)}
 		<div class="reveal jump-panel" style="animation-delay: 180ms;">
 			<button onclick={dismissBanner} class="dismiss" aria-label="Dismiss suggestions">
 				<svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -594,6 +613,68 @@
 	}
 
 	/* Jump-back-in panel */
+	.start-here {
+		border-color: var(--brand);
+	}
+
+	.start-list {
+		display: flex;
+		flex-direction: column;
+		gap: 0.45rem;
+		margin-bottom: 1rem;
+	}
+
+	.start-item {
+		display: flex;
+		align-items: center;
+		gap: 0.7rem;
+		font-weight: 600;
+		color: var(--text1);
+	}
+
+	.start-item.is-done {
+		color: var(--text2);
+		text-decoration: line-through;
+	}
+
+	.start-dot {
+		display: grid;
+		place-items: center;
+		width: 1.6rem;
+		height: 1.6rem;
+		flex-shrink: 0;
+		border-radius: 50%;
+		border: 2px solid var(--tile5);
+		font-size: 0.78rem;
+		font-weight: 700;
+		color: var(--text2);
+		text-decoration: none;
+	}
+
+	.is-done .start-dot {
+		border-color: #15803d;
+		background: #22c55e;
+		color: #fff;
+	}
+
+	.start-cta {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
+		border-radius: 100px;
+		padding: 0.7rem 1.6rem;
+		font-weight: 600;
+		color: #fff;
+		background: #22c55e;
+		box-shadow: 0 4px 0 #15803d;
+		text-decoration: none;
+	}
+
+	.start-cta:active {
+		transform: translateY(4px);
+		box-shadow: 0 0 0 #15803d;
+	}
+
 	.jump-panel {
 		position: relative;
 		border-radius: 1.25rem;
