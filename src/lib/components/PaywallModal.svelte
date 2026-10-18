@@ -92,6 +92,16 @@
 		wasOpen = isOpen;
 	});
 
+	// Keep the page behind from scrolling while the popup is up.
+	$effect(() => {
+		if (!isOpen) return;
+		const prev = document.body.style.overflow;
+		document.body.style.overflow = 'hidden';
+		return () => {
+			document.body.style.overflow = prev;
+		};
+	});
+
 	function close() {
 		trackEvent('paywall_dismissed', { source });
 		showAll = false;
@@ -299,6 +309,7 @@
 		border: 0;
 		background: hsl(200 100% 8% / 0.5);
 		cursor: default;
+		touch-action: none; /* dragging the dimmed area must not scroll the page */
 	}
 
 	/* A bottom sheet on phones; a centred card from tablet width up. */

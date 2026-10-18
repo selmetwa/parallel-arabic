@@ -13,6 +13,15 @@
 
 	let dialectName = $derived(DIALECT_NAMES[page.data.targetDialect ?? ''] ?? '');
 
+	// The app is still rendered underneath; keep a thumb scroll from reaching it.
+	$effect(() => {
+		const prev = document.body.style.overflow;
+		document.body.style.overflow = 'hidden';
+		return () => {
+			document.body.style.overflow = prev;
+		};
+	});
+
 	async function logout() {
 		try {
 			await fetch('/auth/logout', { method: 'POST', credentials: 'include' });
@@ -24,7 +33,7 @@
 </script>
 
 <!-- Covers the app chrome: every link in it would only redirect back here. -->
-<div class="paywall-bg fixed inset-0 z-50 overflow-y-auto">
+<div class="paywall-bg fixed inset-0 z-50 overflow-y-auto overscroll-contain">
 	<div class="flex min-h-full justify-center px-4 py-8 sm:px-8">
 		<div class="my-auto w-full max-w-4xl">
 			<TrialOffer {dialectName} onLogout={logout} />
