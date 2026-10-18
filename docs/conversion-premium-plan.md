@@ -1,9 +1,11 @@
 # Conversion and premium positioning
 
-Built from the Conversion Optimisation and Premium Positioning strategies in `docs/product-design-playbook/`. Decided with the user on 2026-10-17: build everything that doesn't depend on moving everyone to the hard paywall. Not built:
-- the follow-up emails for paywalled users
-- the returning-visitor `/paywall`
-- making the hard paywall the default
+Built from the Conversion Optimisation and Premium Positioning strategies in `docs/product-design-playbook/`.
+
+Decided with the user (2026-10-17/18):
+- **Every new signup gets the hard paywall** (see `docs/paywall-ab-test-plan.md`).
+- **Paywalled users are left out of the weekly recap and comeback emails**, whose links would only lead back to `/paywall`.
+- **Not built yet:** trial-focused follow-up emails for people at the wall, and a different `/paywall` for returning visitors.
 
 ## What changed
 

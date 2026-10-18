@@ -1,5 +1,7 @@
 # Hard paywall vs. freemium A/B test
 
+**Concluded 2026-10-18: hard paywall for everyone.** Of signups in the 60 days to Oct 17, 19.4% of the 31 in the hard group were paying, against 8.1% of the 37 freemium users. Every new web signup now gets `hard` (and iOS `hard_ios`). Freemium users from the test keep the free plan. The `PAYWALL_EXPERIMENT` env var is no longer read.
+
 ## Context
 We want to know whether a hard paywall (no free plan after signup) converts better than today's freemium. Half of new **web** signups get the hard paywall. The other half get the app exactly as it is today. The user stops the test manually.
 
