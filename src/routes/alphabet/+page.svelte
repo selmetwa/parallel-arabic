@@ -847,7 +847,7 @@
 	</footer>
 </section>
 
-<PaywallModal isOpen={showPaywall} {handleCloseModal} />
+<PaywallModal source="alphabet" isOpen={showPaywall} {handleCloseModal} />
 
 <style>
 	/* Lesson stepper */

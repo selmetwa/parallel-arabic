@@ -1480,7 +1480,7 @@
 </div>
 
 <!-- Paywall Modal for free tier limit -->
-<PaywallModal isOpen={showPaywallModal} handleCloseModal={() => {
+<PaywallModal source="game" isOpen={showPaywallModal} handleCloseModal={() => {
   showPaywallModal = false;
   // When closing paywall, redirect to game setup
   goto('/learn/game/quiz');

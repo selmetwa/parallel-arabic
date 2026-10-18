@@ -1482,7 +1482,7 @@
 	}
 </script>
 
-<PaywallModal isOpen={isModalOpen} {handleCloseModal}></PaywallModal>
+<PaywallModal source="tutor" isOpen={isModalOpen} {handleCloseModal}></PaywallModal>
 
 <DefinitionModal
 	activeWordObj={activeWord || { english: '', isLoading: false, description: '' }}

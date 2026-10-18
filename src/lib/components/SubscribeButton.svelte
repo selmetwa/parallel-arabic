@@ -5,14 +5,23 @@
   import { page } from '$app/state';
   import { RevenueCatService, type StorePlans } from '$lib/services/revenuecat.service';
   import { PLANS, type PlanId } from '$lib/constants/pricing';
+  import { trackEvent } from '$lib/analytics';
 
   type Props = {
     label?: string;
     className?: string;
     nativeClass?: string;
+    /** 'cards' shows the plans as two large rows (the paywall popup); 'toggle' is the compact switch. */
+    planLayout?: 'toggle' | 'cards';
+    /** Where the paywall opened from; recorded when checkout starts. */
+    source?: string;
   }
 
-  let { label = 'Subscribe Now', className = '', nativeClass = '' }: Props = $props();
+  let { label = 'Subscribe Now', className = '', nativeClass = '', planLayout = 'toggle', source }: Props = $props();
+
+  function trackCheckout() {
+    if (source) trackEvent('paywall_checkout_started', { source, plan, native: !!isNative });
+  }
 
   let isNative = $state<boolean | null>(null);
 
@@ -110,6 +119,7 @@
   }
 
   async function handleApplePurchase() {
+    trackCheckout();
     isPurchasing = true;
     purchaseError = null;
     purchaseSuccess = null;
@@ -167,6 +177,33 @@
   </div>
 {/snippet}
 
+<!-- Each plan as a large row: name and detail on the left, price on the right. -->
+{#snippet planCards(rows: Record<PlanId, { detail: string; price: string; badge?: string }>)}
+  <div role="radiogroup" aria-label="Billing period" class="mb-3 flex flex-col gap-2">
+    {#each ['annual', 'monthly'] as const as id (id)}
+      <label
+        class="relative flex min-h-[3.75rem] cursor-pointer items-center gap-3 rounded-2xl border-2 px-3.5 transition-colors has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-tile-600 {plan === id
+          ? 'border-text-300 bg-tile-300'
+          : 'border-tile-600 bg-tile-400 hover:border-tile-500'}"
+      >
+        <input type="radio" name="plan" value={id} bind:group={plan} class="sr-only" />
+        <span
+          aria-hidden="true"
+          class="h-5 w-5 shrink-0 rounded-full {plan === id ? 'border-[6px] border-text-300' : 'border-2 border-tile-600'}"
+        ></span>
+        <span class="flex min-w-0 flex-1 flex-col text-left">
+          <span class="text-[0.95rem] font-semibold text-text-300">{PLANS[id].label}</span>
+          <span class="text-xs text-text-200">{rows[id].detail}</span>
+        </span>
+        <span class="flex flex-col items-end">
+          <span class="text-base font-bold text-text-300">{rows[id].price}</span>
+          {#if rows[id].badge}<span class="text-[0.7rem] font-bold text-emerald-700">{rows[id].badge}</span>{/if}
+        </span>
+      </label>
+    {/each}
+  </div>
+{/snippet}
+
 {#if purchaseError}
   <p class="text-red-400 text-sm mb-2 text-center">{purchaseError}</p>
 {/if}
@@ -180,7 +217,17 @@
   </Button>
 {:else if isNative}
   <!-- Apple prices and trial only. Never Stripe prices or PLANS copy (App Store 3.1.1). -->
-  {#if storePlans?.annual}
+  {#if storePlans?.annual && planLayout === 'cards'}
+    {@render planCards({
+      annual: {
+        detail: `${storePlans.annual.priceString} billed yearly`,
+        price: storePlans.annual.pricePerMonthString
+          ? `${storePlans.annual.pricePerMonthString}/mo`
+          : `${storePlans.annual.priceString}/yr`
+      },
+      monthly: { detail: 'Cancel any time', price: `${storePlans.monthly.priceString}/mo` }
+    })}
+  {:else if storePlans?.annual}
     {@render planToggle((id) =>
       id === 'annual'
         ? storePlans!.annual!.pricePerMonthString
@@ -214,10 +261,17 @@
     {isRestoring ? 'Restoring…' : 'Restore purchases'}
   </button>
 {:else}
-  <form method="POST" action="/?/subscribe">
-    {@render planToggle((id) =>
-      id === 'annual' ? `${PLANS.annual.perMonth} · ${PLANS.annual.savings}` : PLANS.monthly.price
-    )}
+  <form method="POST" action="/?/subscribe" onsubmit={trackCheckout}>
+    {#if planLayout === 'cards'}
+      {@render planCards({
+        annual: { detail: `${PLANS.annual.price.replace('/year', '')} billed yearly`, price: PLANS.annual.perMonth, badge: PLANS.annual.savings },
+        monthly: { detail: 'Cancel any time', price: PLANS.monthly.price.replace('/month', '/mo') }
+      })}
+    {:else}
+      {@render planToggle((id) =>
+        id === 'annual' ? `${PLANS.annual.perMonth} · ${PLANS.annual.savings}` : PLANS.monthly.price
+      )}
+    {/if}
     <Button type="submit" className={className}>
       {showTrial ? 'Start 7-day free trial' : label}
     </Button>

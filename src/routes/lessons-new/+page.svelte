@@ -150,7 +150,7 @@
     />
 {/if}
 
-<PaywallModal isOpen={isModalOpen} {handleCloseModal}></PaywallModal>
+<PaywallModal source="lesson" isOpen={isModalOpen} {handleCloseModal}></PaywallModal>
 
 <div class="min-h-screen bg-tile-100 overflow-x-hidden relative font-sans pb-20">
 	<!-- Background decorative elements -->

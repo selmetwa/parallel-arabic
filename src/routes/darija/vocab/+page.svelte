@@ -14,7 +14,7 @@
 	}
 </script>
 
-<PaywallModal isOpen={isModalOpen} {handleCloseModal}></PaywallModal>
+<PaywallModal source="vocab" isOpen={isModalOpen} {handleCloseModal}></PaywallModal>
 
 <section class="px-3 mt-6 sm:px-8 max-w-5xl mx-auto">
 	<div class="text-left mb-6">

@@ -572,7 +572,7 @@
 	];
 </script>
 
-<PaywallModal isOpen={isPaywallModalOpen} handleCloseModal={handleClosePaywallModal}></PaywallModal>
+<PaywallModal source="story" isOpen={isPaywallModalOpen} handleCloseModal={handleClosePaywallModal}></PaywallModal>
 
 <Modal {isOpen} handleCloseModal={closeModal} width="700px" height={isLoading ? "fit-content" : "90%"}>
 	<div class="p-6">

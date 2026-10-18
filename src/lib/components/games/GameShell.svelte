@@ -232,7 +232,7 @@
 	title="Keep playing {game.name}"
 	message="You've played your free rounds. Make a free account for two more rounds of every game, plus XP and a daily streak."
 />
-<PaywallModal isOpen={modal === 'paywall'} handleCloseModal={onCloseModal} gameName={game.name} />
+<PaywallModal source="game" isOpen={modal === 'paywall'} handleCloseModal={onCloseModal} gameName={game.name} />
 
 <style>
 	.back {

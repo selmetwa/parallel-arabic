@@ -60,7 +60,7 @@ function handleCloseModal() {
 
 </script>
 
-<PaywallModal isOpen={isModalOpen} {handleCloseModal}></PaywallModal>
+<PaywallModal source="story" isOpen={isModalOpen} {handleCloseModal}></PaywallModal>
 
 <section class="px-3 mt-6 sm:px-8 max-w-5xl mx-auto">
   <div class="text-left mb-6">
