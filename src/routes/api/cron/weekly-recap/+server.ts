@@ -6,6 +6,8 @@ import { countActivity } from '$lib/server/activity';
 import { dueWordCount } from '$lib/server/push-reminders';
 import { nextStep, weeklyRecapEmail } from '$lib/server/retention-email';
 import { describeGoal, parseGoal } from '$lib/constants/daily-goal';
+import { isPaywalled } from '$lib/server/paywall-experiment';
+import { checkUserSubscription } from '$lib/helpers/subscription';
 
 const DAY_MS = 24 * 60 * 60 * 1000;
 /** Free learners quiet for longer than this get nothing; subscribers always get one. */
@@ -27,6 +29,9 @@ type Recipient = {
 	last_content_dialect: string | null;
 	last_content_position: number | null;
 	weekly_email_sent_at: number | null;
+	paywall_variant: string | null;
+	onboarding_completed: boolean | null;
+	subscription_end_date: number | null;
 };
 
 const count = (query: PromiseLike<{ count: number | null }>) =>
@@ -88,7 +93,7 @@ export const GET: RequestHandler = async ({ request }) => {
 	const { data: users, error } = await supabase
 		.from('user')
 		.select(
-			'id, email, is_subscriber, current_streak, longest_streak, total_lessons_viewed, daily_goal, last_content_type, last_content_id, last_content_dialect, last_content_position, weekly_email_sent_at'
+			'id, email, is_subscriber, current_streak, longest_streak, total_lessons_viewed, daily_goal, last_content_type, last_content_id, last_content_dialect, last_content_position, weekly_email_sent_at, paywall_variant, onboarding_completed, subscription_end_date'
 		)
 		.eq('email_notifications_enabled', true)
 		.not('email', 'is', null)
@@ -101,7 +106,10 @@ export const GET: RequestHandler = async ({ request }) => {
 
 	let sent = 0;
 	const recipients = ((users ?? []) as Recipient[]).filter(
-		(u) => !u.weekly_email_sent_at || now - u.weekly_email_sent_at > RESEND_AFTER_MS
+		(u) =>
+			(!u.weekly_email_sent_at || now - u.weekly_email_sent_at > RESEND_AFTER_MS) &&
+			// Behind the hard paywall, every link in the recap leads back to /paywall.
+			!isPaywalled(u, checkUserSubscription(u))
 	);
 	for (let i = 0; i < recipients.length; i += BATCH_SIZE) {
 		await Promise.allSettled(

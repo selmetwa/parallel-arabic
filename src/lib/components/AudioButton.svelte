@@ -117,7 +117,7 @@
 	};
 </script>
 
-<PaywallModal isOpen={isPaywallModalOpen} handleCloseModal={handleClosePaywallModal} />
+<PaywallModal source="audio" isOpen={isPaywallModalOpen} handleCloseModal={handleClosePaywallModal} />
 <AuthModal isOpen={isAuthModalOpen} handleCloseModal={handleCloseAuthModal} />
 
 <button

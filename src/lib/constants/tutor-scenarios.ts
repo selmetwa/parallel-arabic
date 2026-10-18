@@ -450,3 +450,20 @@ export function onboardingScenario(reason: string | null | undefined, dialect: D
   if (preferred?.dialogs[dialect]) return preferred;
   return TUTOR_SCENARIOS.find((s) => s.id === 'introducing-yourself');
 }
+
+/**
+ * Onboarding plays a short cut of the dialog: the lines below, chosen so the
+ * exchange still ends naturally rather than on an unanswered question.
+ */
+const ONBOARDING_LINES: Record<string, number[]> = {
+  'introducing-yourself': [0, 1, 4],
+  'ordering-coffee': [0, 1, 2, 3],
+  'talking-about-family': [0, 1, 2, 3]
+};
+
+export function onboardingLines(scenario: TutorScenario | undefined, dialect: Dialect): ScenarioLine[] {
+  const lines = scenario?.dialogs[dialect]?.lines ?? [];
+  const keep = scenario && ONBOARDING_LINES[scenario.id];
+  if (!keep) return lines;
+  return keep.map((i) => lines[i]).filter((line): line is ScenarioLine => !!line);
+}

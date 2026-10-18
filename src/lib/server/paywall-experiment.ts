@@ -1,29 +1,16 @@
-import { env } from '$env/dynamic/private';
-
 /**
- * Hard paywall vs freemium A/B test (docs/paywall-ab-test-plan.md).
+ * The hard paywall. It started as a 50/50 test against freemium
+ * (docs/paywall-ab-test-plan.md); 'hard' converted about twice as well, so
+ * since 2026-10-18 every new signup gets it: 'hard' on the web, 'hard_ios' in
+ * the app. A gated user can't use the app until they subscribe or start a trial.
  *
- * New web signups are split 50/50 when they finish onboarding. The 'hard'
- * group can't use the app until they subscribe or start a trial; 'freemium'
- * gets the app as it is today. The variant is stored on the user row, so it
- * never changes, and turning the experiment off only stops new assignments.
- *
- * New iOS signups always get 'hard_ios': the same gate, outside the test and
- * the PAYWALL_EXPERIMENT switch, so web results stay web-only.
+ * The variant is stored on the user row and never changes, so the 'freemium'
+ * users from the test keep the free plan.
  */
 
 export type PaywallVariant = 'hard' | 'freemium' | 'hard_ios';
 
 const GATED_VARIANTS: (string | null | undefined)[] = ['hard', 'hard_ios'];
-
-/** Read at runtime so the test can be stopped from Vercel without a rebuild. */
-export function isExperimentOn(): boolean {
-	return env.PAYWALL_EXPERIMENT === 'on';
-}
-
-export function assignVariant(): PaywallVariant {
-	return Math.random() < 0.5 ? 'hard' : 'freemium';
-}
 
 /**
  * Paths a gated user can still reach: the paywall itself, checkout, auth and

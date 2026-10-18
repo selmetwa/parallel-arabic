@@ -206,7 +206,7 @@
 		return str.charAt(0).toUpperCase() + str.slice(1);
 	}
 </script>
-<PaywallModal isOpen={isModalOpen} {handleCloseModal}></PaywallModal>
+<PaywallModal source="lesson" isOpen={isModalOpen} {handleCloseModal}></PaywallModal>
 <AuthModal isOpen={isAuthModalOpen} handleCloseModal={() => (isAuthModalOpen = false)}></AuthModal>
 
 <section class="page">

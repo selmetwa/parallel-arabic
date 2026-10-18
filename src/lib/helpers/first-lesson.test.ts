@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { firstLesson } from './first-lesson';
 import { getCurriculumV2 } from '$lib/data/curriculum-v2';
-import { onboardingScenario } from '$lib/constants/tutor-scenarios';
+import { onboardingLines, onboardingScenario } from '$lib/constants/tutor-scenarios';
 
 describe('firstLesson', () => {
 	it('starts beginners on the alphabet', () => {
@@ -41,6 +41,19 @@ describe('onboardingScenario', () => {
 		for (const reason of ['Travel', 'Heritage', 'Work']) {
 			for (const dialect of ['egyptian-arabic', 'levantine', 'fusha', 'darija'] as const) {
 				expect(onboardingScenario(reason, dialect)?.dialogs[dialect]).toBeTruthy();
+			}
+		}
+	});
+});
+
+describe('onboardingLines', () => {
+	it('plays a short cut that ends on an answer, in every dialect', () => {
+		for (const reason of ['Work', 'Travel', 'Heritage']) {
+			for (const dialect of ['egyptian-arabic', 'levantine', 'fusha', 'darija'] as const) {
+				const lines = onboardingLines(onboardingScenario(reason, dialect), dialect);
+				expect(lines.length).toBeGreaterThanOrEqual(3);
+				expect(lines.length).toBeLessThanOrEqual(4);
+				expect(lines.at(-1)?.english).not.toMatch(/\?$/);
 			}
 		}
 	});

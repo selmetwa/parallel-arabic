@@ -7,6 +7,7 @@
 	import LevelSlider from '$lib/components/onboarding/LevelSlider.svelte';
 	import DialectPicker from '$lib/components/onboarding/DialectPicker.svelte';
 	import YourPlan from '$lib/components/onboarding/YourPlan.svelte';
+	import BuildingPlan from '$lib/components/onboarding/BuildingPlan.svelte';
 	import { firstLesson } from '$lib/helpers/first-lesson';
 	import TrialOffer from '$lib/components/TrialOffer.svelte';
 	import { CEFR_LEVELS, type CefrLevel } from '$lib/constants/cefr-levels';
@@ -31,7 +32,9 @@
 		GOAL: 4,
 		CONVERSATION: 5,
 		PLAN: 6,
-		TRIAL: 7
+		TRIAL: 7,
+		/** A short narrated pause between the conversation and the plan. */
+		BUILDING: 8
 	} as const;
 
 	/** Steps the header stepper covers — the conversation, plan and trial sit outside it. */
@@ -117,8 +120,17 @@
 		{ title: 'Target', subtitle: 'Where do you want to get to?' },
 		{ title: 'Practice', subtitle: 'Say your first words' },
 		{ title: 'Plan', subtitle: '' },
-		{ title: 'Trial', subtitle: '' }
+		{ title: 'Trial', subtitle: '' },
+		{ title: 'Building', subtitle: '' }
 	];
+
+	/** "for travel", "for work"… what the plan starts with, from their reason. */
+	const REASON_FOCUS: Record<string, string> = {
+		Travel: 'Starting with conversations for travel',
+		Work: 'Starting with conversations for work',
+		Heritage: 'Starting with conversations about family',
+		Academic: 'Starting with the foundations for study'
+	};
 
 	let chosenDialectName = $derived.by(() => {
 		if (targetDialect === 'fusha') return 'Modern Standard Arabic';
@@ -127,6 +139,14 @@
 	});
 
 	let lesson = $derived(firstLesson(targetDialect, proficiencyLevel, page.data.isSubscribed === true));
+
+	let buildingLines = $derived([
+		goalLevel && goalLevel !== proficiencyLevel
+			? `${chosenDialectName}, ${proficiencyLevel} to ${goalLevel}`
+			: `${chosenDialectName}, from ${proficiencyLevel}`,
+		REASON_FOCUS[learningReason] ?? 'Starting with everyday conversations',
+		lesson.title === 'Your first lesson' ? 'Picking your first lesson' : `Picking your first lesson: ${lesson.title}`
+	]);
 
 	$effect(() => {
 		if (isOpen) trackEvent('onboarding_step_viewed', { step: stepInfo[step].title.toLowerCase() });
@@ -240,7 +260,7 @@
 
 	function handleConversationFinish(completed: boolean) {
 		conversationDone = completed;
-		step = STEP.PLAN;
+		step = STEP.BUILDING;
 	}
 
 	/**
@@ -512,6 +532,11 @@
 								onFinish={handleConversationFinish}
 							/>
 						</div>
+					{/if}
+
+					<!-- Between the conversation and the plan: "Building your plan" -->
+					{#if step === STEP.BUILDING}
+						<BuildingPlan lines={buildingLines} onDone={() => (step = STEP.PLAN)} />
 					{/if}
 
 					<!-- Step 6: The plan, and where to start -->

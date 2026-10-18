@@ -269,7 +269,7 @@
 	}
 </script>
 
-<PaywallModal isOpen={isModalOpen} {handleCloseModal} />
+<PaywallModal source="story" isOpen={isModalOpen} {handleCloseModal} />
 
 <!-- Generating Story Modal -->
 <Modal isOpen={isGeneratingModalOpen} handleCloseModal={() => {}} width="700px" height="fit-content">

@@ -173,7 +173,7 @@
   ];
 </script>
 
-<PaywallModal isOpen={isPaywallModalOpen} handleCloseModal={handleClosePaywallModal}></PaywallModal>
+<PaywallModal source="video" isOpen={isPaywallModalOpen} handleCloseModal={handleClosePaywallModal}></PaywallModal>
 
 <Modal {isOpen} handleCloseModal={closeModal} width="600px" height='fit-content'>
 	<div class="p-4">

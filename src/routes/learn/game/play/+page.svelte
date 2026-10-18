@@ -1,5 +1,6 @@
 <script lang="ts">
   import { goto } from '$app/navigation';
+  import { hapticTap } from '$lib/helpers/haptics';
   import { onMount, onDestroy, untrack } from 'svelte';
   import { gameSession } from '$lib/store/generated-content.svelte';
   import { Howl } from 'howler';
@@ -593,6 +594,7 @@
   });
 
   async function awardGameXp() {
+    hapticTap();
     try {
       const res = await fetch('/api/award-xp', {
         method: 'POST',
@@ -1478,7 +1480,7 @@
 </div>
 
 <!-- Paywall Modal for free tier limit -->
-<PaywallModal isOpen={showPaywallModal} handleCloseModal={() => {
+<PaywallModal source="game" isOpen={showPaywallModal} handleCloseModal={() => {
   showPaywallModal = false;
   // When closing paywall, redirect to game setup
   goto('/learn/game/quiz');

@@ -6,6 +6,8 @@ import { daysBetween, localDayKey, localHour, streakAtRisk } from '$lib/helpers/
 import { dueWordCount, sendPushReminders } from '$lib/server/push-reminders';
 import { comebackEmail, nextStep } from '$lib/server/retention-email';
 import { describeGoal, parseGoal } from '$lib/constants/daily-goal';
+import { isPaywalled } from '$lib/server/paywall-experiment';
+import { checkUserSubscription } from '$lib/helpers/subscription';
 
 /**
  * Local hours (inclusive start, exclusive end) when a reminder may go out.
@@ -118,7 +120,7 @@ async function sendComebackEmails(now: number): Promise<number> {
 	const { data: users, error } = await supabase
 		.from('user')
 		.select(
-			'id, email, last_activity_date, timezone, push_sent_at, comeback_email_sent_at, total_lessons_viewed, daily_goal, last_content_type, last_content_id, last_content_dialect, last_content_position'
+			'id, email, last_activity_date, timezone, push_sent_at, comeback_email_sent_at, total_lessons_viewed, daily_goal, last_content_type, last_content_id, last_content_dialect, last_content_position, paywall_variant, onboarding_completed, is_subscriber, subscription_end_date'
 		)
 		.eq('email_notifications_enabled', true)
 		.not('email', 'is', null)
@@ -126,6 +128,8 @@ async function sendComebackEmails(now: number): Promise<number> {
 	if (error) throw error;
 
 	const due = (users ?? []).filter((u) => {
+		// Behind the hard paywall, the email's link leads back to /paywall.
+		if (isPaywalled(u, checkUserSubscription(u))) return false;
 		const hour = localHour(now, u.timezone);
 		if (hour < EVENING[0] || hour >= EVENING[1]) return false;
 		if (u.comeback_email_sent_at && now - u.comeback_email_sent_at < RESEND_AFTER_MS) return false;

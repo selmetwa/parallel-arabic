@@ -10,6 +10,9 @@ interface ContextUser {
   goal_level?: string | null;
   total_xp?: number | null;
   current_level?: number | null;
+  current_streak?: number | null;
+  total_lessons_viewed?: number | null;
+  total_saved_words?: number | null;
 }
 
 /**
@@ -30,7 +33,13 @@ export function getUserContext(user: ContextUser) {
     proficiencyLevel: user.proficiency_level || null,
     goalLevel: user.goal_level || null,
     userXp: user.total_xp ?? 0,
-    userLevel: user.current_level ?? 1
+    userLevel: user.current_level ?? 1,
+    // What they've built so far, for the paywall popup to reflect back.
+    progress: {
+      streak: user.current_streak ?? 0,
+      lessons: user.total_lessons_viewed ?? 0,
+      savedWords: user.total_saved_words ?? 0
+    }
   };
 }
 

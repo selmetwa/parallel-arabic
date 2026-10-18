@@ -12,6 +12,8 @@
 	import { showXpToast } from '$lib/helpers/toast-helpers';
 	import { LEVEL_TIERS } from '$lib/helpers/xp-levels';
 	import { dialectAccent } from '$lib/constants/dialect-accents';
+	import SignatureWord from '$lib/components/SignatureWord.svelte';
+	import { hapticSuccess } from '$lib/helpers/haptics';
 
 	interface Props {
 		lesson: GeneratedLessonV2;
@@ -33,6 +35,14 @@
 	let totalSteps = $derived(lesson.steps.length);
 	let progress = $derived(Math.round(((currentStepIndex + 1) / totalSteps) * 100));
 	let showCongratulations = $state(false);
+
+	// The word that writes itself out on the completion screen: the lesson's first new word.
+	let signatureWord = $derived.by(() => {
+		for (const step of lesson.steps) {
+			if (step.type === 'vocab-intro' && step.items.length) return step.items[0];
+		}
+		return null;
+	});
 
 	// A short label for the current step, shown in the header eyebrow.
 	const STEP_LABELS: Record<string, string> = {
@@ -83,6 +93,7 @@
 			saveProgress();
 		} else {
 			showCongratulations = true;
+			hapticSuccess();
 		}
 	}
 
@@ -179,8 +190,16 @@
 	<main class="body">
 		{#if showCongratulations}
 			<div class="done">
-				<div class="burst" aria-hidden="true">🎉</div>
-				<div class="ar-flourish">أحسنت</div>
+				{#if signatureWord}
+					<SignatureWord
+						arabic={signatureWord.arabicTashkeel || signatureWord.arabic}
+						transliteration={signatureWord.transliteration}
+						english={signatureWord.english}
+						caption="Your word from this lesson"
+					/>
+				{:else}
+					<SignatureWord arabic="أحسنت" english="Well done" />
+				{/if}
 				<h2>Lesson complete</h2>
 				<p>You practiced every new word many times over — across reading, speaking, building and translating. That's how it sticks.</p>
 				<button class="primary" onclick={handleFinish}>Finish &amp; continue</button>
@@ -687,26 +706,6 @@
 		text-align: center;
 		animation: stepIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
 	}
-	.burst {
-		font-size: 3.5rem;
-		animation: pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
-	}
-	@keyframes pop {
-		from {
-			opacity: 0;
-			transform: scale(0.3);
-		}
-		to {
-			opacity: 1;
-			transform: scale(1);
-		}
-	}
-	.ar-flourish {
-		font-size: 2.6rem;
-		font-weight: 600;
-		line-height: 1.1;
-		color: var(--accent);
-	}
 	.done h2 {
 		font-size: 1.7rem;
 		font-weight: 600;
@@ -795,7 +794,6 @@
 		.step,
 		.vocab,
 		.done,
-		.burst,
 		.word-box {
 			animation: none;
 		}

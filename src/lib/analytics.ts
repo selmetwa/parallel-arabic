@@ -1,9 +1,9 @@
 /**
- * Thin chokepoint for semantic product events. Onboarding and trial-offer
- * events are stored in `onboarding_event` so the signup funnel can be measured;
+ * Thin chokepoint for semantic product events. Onboarding, trial-offer and
+ * paywall events are stored in `onboarding_event` so the funnel can be measured;
  * everything else is a no-op until an analytics provider is wired up again.
  */
-const RECORDED_PREFIXES = ['onboarding_', 'trial_offer_'];
+const RECORDED_PREFIXES = ['onboarding_', 'trial_offer_', 'paywall_'];
 
 export function isRecordedEvent(event: string): boolean {
 	return RECORDED_PREFIXES.some((prefix) => event.startsWith(prefix)) && event.length <= 64;

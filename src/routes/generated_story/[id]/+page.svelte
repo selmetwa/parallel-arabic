@@ -1014,4 +1014,4 @@
   </section>
 {/if}
 
-<PaywallModal isOpen={isPaywallOpen} handleCloseModal={() => isPaywallOpen = false} />
+<PaywallModal source="story" isOpen={isPaywallOpen} handleCloseModal={() => isPaywallOpen = false} />

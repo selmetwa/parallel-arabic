@@ -3,6 +3,7 @@
 	import { resolve } from '$app/paths';
 	import { dialectAccent } from '$lib/constants/dialect-accents';
 	import PaywallModal from '$lib/components/PaywallModal.svelte';
+	import type { PaywallLesson } from '$lib/constants/paywall';
 	import AuthModal from '$lib/components/AuthModal.svelte';
     import LessonPlayer from '$lib/components/LessonPlayer.svelte';
     import LessonPlayerV2 from '$lib/components/LessonPlayerV2.svelte';
@@ -151,6 +152,30 @@
 		isModalOpen = false;
 	}
 
+	/** The locked lesson the paywall previews: its title now, its first words once loaded. */
+	let paywallLesson = $state<PaywallLesson | null>(null);
+
+	async function openLessonPaywall(lessonNode: { id: string; title: string; description?: string; dialect: string }) {
+		paywallLesson = { title: lessonNode.title, description: lessonNode.description };
+		isModalOpen = true;
+		if (!useV2) return;
+		try {
+			const res = await fetch(`/api/lessons-v2/${lessonNode.id}?dialect=${encodeURIComponent(lessonNode.dialect)}`);
+			if (!res.ok) return;
+			const lesson = await res.json();
+			const intro = lesson.steps?.find((step: { type: string }) => step.type === 'vocab-intro');
+			const words = (intro?.items ?? []).slice(0, 4).map((w: { arabic: string; arabicTashkeel?: string; transliteration: string; english: string }) => ({
+				arabic: w.arabicTashkeel || w.arabic,
+				transliteration: w.transliteration,
+				english: w.english
+			}));
+			// Only if the paywall is still showing this lesson.
+			if (words.length && paywallLesson?.title === lessonNode.title) paywallLesson = { ...paywallLesson, words };
+		} catch {
+			// The preview is a nice-to-have: the paywall works without it.
+		}
+	}
+
     async function handleLessonClick(lessonNode: any) {
         // Check authentication first
         if (!data.user || !data.session) {
@@ -163,7 +188,7 @@
             // Check if it's paywalled
             if (lessonNode.isPaywalled) {
                 trackEvent('lessons_paywall_triggered', { lesson_id: lessonNode.id, dialect: lessonNode.dialect });
-                isModalOpen = true;
+                openLessonPaywall(lessonNode);
                 return;
             }
 
@@ -289,7 +314,7 @@
     {/if}
 {/if}
 
-<PaywallModal isOpen={isModalOpen} {handleCloseModal}></PaywallModal>
+<PaywallModal source="lesson" lesson={paywallLesson} isOpen={isModalOpen} {handleCloseModal}></PaywallModal>
 <AuthModal isOpen={isAuthModalOpen} handleCloseModal={() => isAuthModalOpen = false}></AuthModal>
 
 <section class="page" style="--accent:{accent}; --deep:{deep};">

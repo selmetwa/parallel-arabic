@@ -3,7 +3,7 @@ import type { RequestHandler } from './$types';
 import { supabase } from '$lib/supabaseClient';
 import { CEFR_LEVELS, isCefrLevel } from '$lib/constants/cefr-levels';
 import { checkUserSubscription } from '$lib/helpers/subscription';
-import { assignVariant, isExperimentOn, type PaywallVariant } from '$lib/server/paywall-experiment';
+import type { PaywallVariant } from '$lib/server/paywall-experiment';
 
 export const POST: RequestHandler = async ({ request, locals }) => {
 	const { sessionId, user } = (await locals?.auth?.validate()) || {};
@@ -72,9 +72,9 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		updateData.show_english = show_english;
 	}
 
-	// Paywall: new web signups join the A/B test; new iOS signups always get
-	// the hard paywall ('hard_ios', kept out of the test's numbers). Only the
-	// client can tell which platform it is on.
+	// Paywall: every new signup gets the hard paywall, 'hard' on the web and
+	// 'hard_ios' in the app (see paywall-experiment.ts). Only the client can
+	// tell which platform it is on.
 	const dbUser = locals.user;
 	let variant: PaywallVariant | null = dbUser?.paywall_variant ?? null;
 	const isNewUnpaidUser =
@@ -86,8 +86,8 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 		? null
 		: platform === 'native'
 			? 'hard_ios'
-			: platform === 'web' && isExperimentOn()
-				? assignVariant()
+			: platform === 'web'
+				? 'hard'
 				: null;
 	if (newVariant) {
 		variant = newVariant;

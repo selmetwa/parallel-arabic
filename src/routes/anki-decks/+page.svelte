@@ -138,7 +138,7 @@
 </script>
 
 <section class="min-h-screen bg-tile-300">
-  <PaywallModal isOpen={isModalOpen} {handleCloseModal}></PaywallModal>
+  <PaywallModal source="anki" isOpen={isModalOpen} {handleCloseModal}></PaywallModal>
 
   <!-- Header Section -->
   <header class="border-b-2 border-tile-600 bg-tile-400 shadow-lg">

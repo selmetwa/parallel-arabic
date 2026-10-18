@@ -177,5 +177,5 @@
 		{/if}
 	</section>
 
-	<PaywallModal isOpen={showPaywall} handleCloseModal={() => (showPaywall = false)} />
+	<PaywallModal source="vocab" isOpen={showPaywall} handleCloseModal={() => (showPaywall = false)} />
 {/if}
