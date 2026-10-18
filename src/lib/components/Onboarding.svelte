@@ -531,6 +531,9 @@
 						<TrialOffer
 							dialectName={chosenDialectName}
 							onSkip={isHardPaywall ? undefined : skipTrial}
+							{conversationDone}
+							{proficiencyLevel}
+							{goalLevel}
 						/>
 					{/if}
 
