@@ -4,6 +4,7 @@
 	import { page } from '$app/state';
 	import PressButton from './PressButton.svelte';
 	import { rememberRound } from '$lib/games/pending-round';
+	import { hapticSuccess } from '$lib/helpers/haptics';
 	import type { GameWord } from '$lib/games/word-pool';
 
 	interface Props {
@@ -41,6 +42,7 @@
 
 	// Kept on this device, then saved to the account after sign-up (GameShell).
 	onMount(() => {
+		hapticSuccess();
 		if (signedIn) return;
 		try {
 			rememberRound(localStorage, { xp: xpEarned, words: missedWords, dialect });

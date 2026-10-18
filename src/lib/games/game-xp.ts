@@ -9,10 +9,12 @@
  * XP earned on their results screen.
  */
 import { userLevel, userXp } from '$lib/store/xp-store';
+import { hapticTap } from '$lib/helpers/haptics';
 
 let queue: Promise<void> = Promise.resolve();
 
 export function awardGameXp(): void {
+	hapticTap();
 	queue = queue.then(async () => {
 		try {
 			const res = await fetch('/api/award-xp', {

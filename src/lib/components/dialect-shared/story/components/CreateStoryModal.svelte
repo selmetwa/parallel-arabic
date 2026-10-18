@@ -1,4 +1,6 @@
 <script lang="ts">
+	import NarratedSteps from '$lib/components/NarratedSteps.svelte';
+	import { getDialectDisplayName } from '$lib/utils/dialect-api';
 	import Button from '$lib/components/Button.svelte';
 	import Modal from '$lib/components/Modal.svelte';
 	import RadioButton from '$lib/components/RadioButton.svelte';
@@ -63,6 +65,14 @@
 	let reviewWords = $state<Array<{ arabic: string; english: string; transliteration: string }>>([]);
 	let isLoadingReviewWords = $state(false);
 	let reviewWordsError = $state('');
+
+	/** What the server is doing while a story is written, shown one step at a time. */
+	let generationSteps = $derived([
+		useReviewWordsOnly ? 'Picking words from your review deck' : `Choosing words for ${option.toUpperCase()}`,
+		`Writing it in ${getDialectDisplayName(dialect)}`,
+		'Adding English and transliteration, line by line',
+		'Putting it together'
+	]);
 
 	function openModal() {
 		if (!data.session) {
@@ -579,6 +589,14 @@
 							Generating {dialectName[dialect]} {storyType === 'story' ? 'Story' : 'Conversation'}...
 						{/if}
 					</h2>
+					{#if creationMode === 'generate'}
+						<div class="my-2">
+							<NarratedSteps
+								lines={generationSteps}
+								stepMs={dialect === 'darija' || dialect === 'egyptian-arabic' ? 7000 : 1500}
+							/>
+						</div>
+					{/if}
 					<p class="text-text-200 text-lg">
 						Crafting custom content just for you.
 						<span class="block mt-2 text-sm opacity-75">

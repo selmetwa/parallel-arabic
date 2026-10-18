@@ -5,11 +5,12 @@
 	import AudioLoading from '$lib/components/AudioLoading.svelte';
 	import RecordButton from '$lib/components/RecordButton.svelte';
 	import Similarity from '$lib/components/Similarity.svelte';
-	import { onboardingScenario } from '$lib/constants/tutor-scenarios';
+	import { onboardingLines, onboardingScenario } from '$lib/constants/tutor-scenarios';
 	import { userLevel, userXp } from '$lib/store/xp-store';
 	import { calculateWordSimilarity } from '$lib/utils/pronunciation-similarity';
 	import { trackEvent } from '$lib/analytics';
 	import { requestAppReview } from '$lib/helpers/request-app-review';
+	import { hapticSuccess, hapticTap } from '$lib/helpers/haptics';
 	import type { Dialect } from '$lib/types';
 
 	interface Props {
@@ -25,9 +26,11 @@
 
 	let scenario = $derived(onboardingScenario(learningReason, dialect));
 	let dialog = $derived(scenario?.dialogs[dialect]);
-	let lines = $derived(dialog?.lines ?? []);
+	let lines = $derived(onboardingLines(scenario, dialect));
 
 	let phase = $state<'line' | 'finished'>('line');
+	/** For people who can't or don't want to speak yet: hear each line, then move on. */
+	let listenOnly = $state(false);
 	let xpAwarded = $state(0);
 	let currentIndex = $state(0);
 	let attempts = $state(0);
@@ -100,7 +103,7 @@
 		} catch (err) {
 			console.error('Error starting recording:', err);
 			recording = false;
-			recordingError = "Couldn't access your microphone. Check browser permissions, or skip this practice.";
+			recordingError = "Couldn't access your microphone. Check browser permissions, or listen instead.";
 		}
 	}
 
@@ -140,10 +143,11 @@
 			const passed = similarity >= PRONUNCIATION_THRESHOLD;
 			attempts += 1;
 			result = { similarity, passed };
+			if (passed) hapticTap();
 			trackEvent('onboarding_conversation_attempt', { dialect, line_index: currentIndex, attempt: attempts, similarity, passed });
 		} catch (err) {
 			console.error('Error processing recording:', err);
-			recordingError = "Couldn't hear that clearly. Try again, or skip this practice.";
+			recordingError = "Couldn't hear that clearly. Try again, or listen instead.";
 		} finally {
 			isProcessing = false;
 		}
@@ -160,6 +164,15 @@
 		}
 	}
 
+	function listenInstead() {
+		discardRecording = recording;
+		stopRecording();
+		listenOnly = true;
+		result = null;
+		recordingError = null;
+		trackEvent('onboarding_conversation_listen_mode', { dialect, scenario: scenario?.id, line_index: currentIndex });
+	}
+
 	function skipPractice() {
 		discardRecording = recording;
 		stopRecording();
@@ -168,8 +181,9 @@
 	}
 
 	function finish() {
-		trackEvent('onboarding_conversation_finished', { dialect, scenario: scenario?.id });
+		trackEvent('onboarding_conversation_finished', { dialect, scenario: scenario?.id, mode: listenOnly ? 'listen' : 'speak' });
 		phase = 'finished';
+		hapticSuccess();
 		awardFirstWin();
 		// They just spoke their first Arabic: the best moment to ask for a rating.
 		requestAppReview();
@@ -206,17 +220,10 @@
 				</p>
 			</div>
 
-			<div class="flex items-center justify-between mb-2">
+			<div class="mb-2">
 				<span class="text-xs font-semibold text-text-200">
 					Line {currentIndex + 1} of {lines.length}
 				</span>
-				<button
-					type="button"
-					onclick={skipPractice}
-					class="text-xs text-text-200 hover:text-text-300 underline underline-offset-2"
-				>
-					Skip this practice →
-				</button>
 			</div>
 			<div class="h-1.5 w-full bg-tile-500 rounded-full overflow-hidden mb-6">
 				<div
@@ -226,7 +233,11 @@
 			</div>
 
 			<div class="bg-tile-300 border-2 border-tile-500 rounded-2xl p-6 text-center">
-				{#if currentLine.speaker === 'other'}
+				{#if listenOnly}
+					<span class="text-xs font-bold px-2 py-0.5 rounded-full bg-sky-500/15 text-sky-700">
+						Listen{currentLine.speaker === 'other' ? ` to the ${dialog.otherRoleEnglish}` : ', then say it in your head'}
+					</span>
+				{:else if currentLine.speaker === 'other'}
 					<span class="text-xs font-bold px-2 py-0.5 rounded-full bg-sky-500/15 text-sky-700">
 						🎤 Repeat as {dialog.otherRoleEnglish}
 					</span>
@@ -244,7 +255,15 @@
 			</div>
 
 			<div class="mt-6 flex flex-col items-center gap-4">
-				{#if result}
+				{#if listenOnly}
+					<button
+						type="button"
+						onclick={advanceLine}
+						class="px-8 py-3 font-semibold rounded-xl bg-emerald-600 text-white hover:bg-emerald-700 transition-colors"
+					>
+						{currentIndex < lines.length - 1 ? 'Next →' : 'Finish →'}
+					</button>
+				{:else if result}
 					<div class="flex flex-col items-center gap-2">
 						<Similarity score={result.similarity} />
 						<p class="text-sm font-semibold {result.passed ? 'text-emerald-600' : 'text-orange-500'}">
@@ -293,16 +312,32 @@
 					{#if recordingError}
 						<p class="text-xs text-orange-500 text-center max-w-xs">{recordingError}</p>
 					{/if}
+					<button
+						type="button"
+						onclick={listenInstead}
+						class="text-sm font-semibold text-text-200 hover:text-text-300 underline underline-offset-2"
+					>
+						Can't talk right now? Listen instead
+					</button>
 				{/if}
+				<button
+					type="button"
+					onclick={skipPractice}
+					class="mt-4 text-xs text-text-200/80 hover:text-text-300 underline underline-offset-2"
+				>
+					Skip for now
+				</button>
 			</div>
 		{:else if phase === 'finished'}
 			<div class="flex flex-col items-center text-center" in:fade={{ duration: 300 }}>
 				<span class="text-5xl mb-4">🎉</span>
 				<h2 class="text-2xl sm:text-3xl font-bold text-text-300 mb-2 tracking-tight">
-					You just had your first conversation in Arabic!
+					{listenOnly ? 'You just followed your first conversation in Arabic!' : 'You just had your first conversation in Arabic!'}
 				</h2>
 				<p class="text-text-200 text-sm sm:text-base mb-5 max-w-sm">
-					That's the hardest part done. Let's keep the momentum going.
+					{listenOnly
+						? 'Next time, try saying it out loud. For now, let’s keep the momentum going.'
+						: 'That’s the hardest part done. Let’s keep the momentum going.'}
 				</p>
 				<div class="mb-8 flex min-h-8 flex-wrap justify-center gap-2">
 					{#if xpAwarded}
