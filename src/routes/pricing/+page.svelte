@@ -35,14 +35,10 @@
 		"Stories, games and review that bring words back right before you'd forget them"
 	];
 
-	/** What a free account actually gets. Keep in step with the gates in the app. */
-	const FREE_INCLUDES = [
-		'The first lesson of every learning path',
-		'The first five letters of the alphabet, with audio',
-		'Two free rounds of every game',
-		'A short try of the tutor',
-		'Save words and review them with spaced repetition'
-	];
+	// There's no free plan for new signups (everyone gets the hard paywall), so
+	// the second card explains the trial instead. Web trials are 7 days; the
+	// app shows Apple's, if the product has one.
+	const trialDays = $derived(isNative === false ? 7 : isNative === true ? appleTrialDays : null);
 </script>
 
 <div class="min-h-screen bg-tile-300 px-4 pb-20 pt-14 sm:px-8 sm:pt-20">
@@ -61,7 +57,7 @@
 		</p>
 	</header>
 
-	<div class="plans">
+	<div class="plans" class:plans--single={!trialDays}>
 		<!-- Premium first: it's the one we're recommending, and on phones it should be on top. -->
 		<section class="plan plan--premium" aria-labelledby="premium-title">
 			<h2 id="premium-title" class="plan-name">Premium</h2>
@@ -143,19 +139,29 @@
 			{/if}
 		</section>
 
-		<section class="plan" aria-labelledby="free-title">
-			<h2 id="free-title" class="plan-name">Free</h2>
-			<p class="price">$0</p>
-			<p class="price-alt">A taste of each part of the app</p>
-			<ul class="free-list">
-				{#each FREE_INCLUDES as item (item)}
-					<li>{item}</li>
-				{/each}
-			</ul>
-			{#if !page.data.user}
-				<a href={resolve('/signup')} class="free-cta">Sign up free</a>
-			{/if}
-		</section>
+		{#if trialDays}
+			<section class="plan" aria-labelledby="trial-title">
+				<h2 id="trial-title" class="plan-name">How the free trial works</h2>
+				<ol class="trial-steps">
+					<li><strong>Today</strong><span>Full access to everything, $0</span></li>
+					<li>
+						<strong>Day {trialDays}</strong><span
+							>Your plan starts, unless you cancel before then</span
+						>
+					</li>
+					<li>
+						<strong>Any time</strong><span
+							>{isNative
+								? 'Cancel in your Apple ID settings'
+								: 'Cancel from your profile, nothing charged before day 7'}</span
+						>
+					</li>
+				</ol>
+				{#if !page.data.user}
+					<a href={resolve('/signup')} class="free-cta">New here? Create your account</a>
+				{/if}
+			</section>
+		{/if}
 	</div>
 
 	<div class="mx-auto mt-10 max-w-4xl text-center">
@@ -210,6 +216,10 @@
 		.plans {
 			grid-template-columns: 1.25fr 1fr;
 		}
+		.plans--single {
+			grid-template-columns: minmax(0, 34rem);
+			justify-content: center;
+		}
 	}
 
 	.plan {
@@ -260,16 +270,14 @@
 		color: var(--text1);
 	}
 
-	.outcomes,
-	.free-list {
+	.outcomes {
 		display: flex;
 		flex-direction: column;
 		gap: 0.6rem;
 		margin: 1.25rem 0 1.4rem;
 	}
 
-	.outcomes li,
-	.free-list li {
+	.outcomes li {
 		position: relative;
 		padding-left: 1.4rem;
 		line-height: 1.4;
@@ -281,13 +289,7 @@
 		color: var(--text1);
 	}
 
-	.free-list li {
-		font-size: 0.92rem;
-		color: var(--text2);
-	}
-
-	.outcomes li::before,
-	.free-list li::before {
+	.outcomes li::before {
 		content: '';
 		position: absolute;
 		left: 0.2rem;
@@ -298,8 +300,25 @@
 		background: var(--brand);
 	}
 
-	.free-list li::before {
-		background: var(--tile6);
+	.trial-steps {
+		display: grid;
+		gap: 0.9rem;
+		margin: 1.1rem 0 1.4rem;
+		border-left: 2px solid var(--tile5);
+		padding-left: 1rem;
+	}
+
+	.trial-steps li {
+		display: flex;
+		flex-direction: column;
+		gap: 0.1rem;
+		font-size: 0.92rem;
+		line-height: 1.4;
+		color: var(--text2);
+	}
+
+	.trial-steps strong {
+		color: var(--text1);
 	}
 
 	.terms {

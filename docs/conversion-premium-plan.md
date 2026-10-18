@@ -11,7 +11,7 @@ Decided with the user (2026-10-17/18):
 
 1. **`/pricing` rebuilt** (The Paywall, JTBD Copywriting).
    - **Premium comes first:** three outcomes, the annual price shown as "$8/mo billed yearly", the trial, and the full feature list behind a toggle (`FeatureGrid`, shared with the trial offer).
-   - **The free column is accurate:** it lists only what a free account gets: the first lesson of each path, the first 5 alphabet letters, 2 free rounds of each game, a short tutor trial, and saving and reviewing words.
+   - **No free column:** new signups get the hard paywall, so the second card explains the trial instead (today full access, day 7 the plan starts, cancel any time). It's hidden in the app when Apple's product has no trial.
    - **Fixed:** web visitors no longer see Apple's "charged to your Apple ID" terms. Web shows Stripe terms; the app shows Apple's, with StoreKit prices.
 2. **Social proof** at the trial offer (end of onboarding and `/paywall`) and on `/pricing`.
    - **Live numbers:** learners and words saved in the last 30 days, from `/api/social-proof`. Rounded down to the hundred and cached for an hour.
