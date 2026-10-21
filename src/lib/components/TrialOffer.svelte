@@ -9,6 +9,8 @@
 	import { isNativeApp } from '$lib/helpers/is-native-app';
 	import { RevenueCatService } from '$lib/services/revenuecat.service';
 	import { CEFR_LEVEL_INFO, type CefrLevel } from '$lib/constants/cefr-levels';
+	import { describeGoal } from '$lib/constants/daily-goal';
+	import { NOTHING_TRIED, type TryProgress } from '$lib/constants/onboarding-try';
 
 	type Props = {
 		/** e.g. "Egyptian Arabic"; falls back to generic copy when empty. */
@@ -17,7 +19,7 @@
 		onSkip?: () => void;
 		onLogout?: () => void;
 		/** From onboarding: lets the offer recap what they've already done. */
-		conversationDone?: boolean;
+		tried?: TryProgress;
 		proficiencyLevel?: CefrLevel | '';
 		goalLevel?: CefrLevel | '';
 	};
@@ -26,14 +28,28 @@
 		dialectName = '',
 		onSkip,
 		onLogout,
-		conversationDone = false,
+		tried = NOTHING_TRIED,
 		proficiencyLevel = '',
 		goalLevel = ''
 	}: Props = $props();
 
 	let showAll = $state(false);
 
-	const hasRecap = $derived(conversationDone || !!goalLevel);
+	const hasRecap = $derived(
+		tried.read || tried.spoke || tried.traced || tried.played || !!tried.goal || !!goalLevel
+	);
+	/** "You read, said and wrote your first Egyptian Arabic", from what they did in onboarding. */
+	const didSummary = $derived.by(() => {
+		const verbs = [tried.read && 'read', tried.spoke && 'said', tried.traced && 'wrote'].filter(
+			(v): v is string => !!v
+		);
+		const what = `your first ${dialectName || 'Arabic'}`;
+		if (verbs.length === 0) return tried.played ? 'You built your first Arabic sentences' : '';
+		const list = verbs.length === 1 ? verbs[0] : `${verbs.slice(0, -1).join(', ')} and ${verbs.at(-1)}`;
+		return `You ${list} ${what}${tried.played ? ', then built it yourself' : ''}`;
+	});
+	// Speaking and the scramble both award XP, and XP starts the streak.
+	const streakStarted = $derived(tried.spoke || tried.played);
 
 	const benefits = $derived([
 		`Speak ${dialectName || 'Arabic'} with live corrections`,
@@ -66,10 +82,10 @@
 <div class="mx-auto max-w-md text-center" in:fly={{ y: 30, duration: 500, easing: cubicOut }}>
 	{#if hasRecap}
 		<ul class="recap">
-			{#if conversationDone}
+			{#if didSummary}
 				<li>
 					<span class="tick" aria-hidden="true"></span>
-					You spoke your first {dialectName || 'Arabic'}
+					{didSummary}
 				</li>
 			{/if}
 			{#if goalLevel}
@@ -78,7 +94,13 @@
 					Goal: {goalLevel}, "{CEFR_LEVEL_INFO[goalLevel].goal.replace(/^I want to /, '')}"
 				</li>
 			{/if}
-			{#if conversationDone}
+			{#if tried.goal}
+				<li>
+					<span class="tick tick--goal" aria-hidden="true"></span>
+					Every day: {describeGoal(tried.goal)}
+				</li>
+			{/if}
+			{#if streakStarted}
 				<li>
 					<span class="tick tick--streak" aria-hidden="true"></span>
 					Day 1 of your streak

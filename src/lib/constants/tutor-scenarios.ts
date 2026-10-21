@@ -452,13 +452,14 @@ export function onboardingScenario(reason: string | null | undefined, dialect: D
 }
 
 /**
- * Onboarding plays a short cut of the dialog: the lines below, chosen so the
- * exchange still ends naturally rather than on an unanswered question.
+ * Onboarding plays a short cut of the dialog: three lines, you → them → you,
+ * starting on the learner's first line (the one the Read step just showed) and
+ * ending on an answer rather than an unanswered question.
  */
 const ONBOARDING_LINES: Record<string, number[]> = {
   'introducing-yourself': [0, 1, 4],
-  'ordering-coffee': [0, 1, 2, 3],
-  'talking-about-family': [0, 1, 2, 3]
+  'ordering-coffee': [1, 2, 3],
+  'talking-about-family': [1, 2, 3]
 };
 
 export function onboardingLines(scenario: TutorScenario | undefined, dialect: Dialect): ScenarioLine[] {

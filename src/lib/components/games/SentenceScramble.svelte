@@ -19,10 +19,12 @@
 		signedIn: boolean;
 		accent: string;
 		deep: string;
-		onPlayAgain: () => void;
+		onPlayAgain?: () => void;
+		/** Set by onboarding: called after the last sentence, in place of the results screen. */
+		onFinish?: () => void;
 	}
 
-	let { sentences, dialect, signedIn, accent, deep, onPlayAgain }: Props = $props();
+	let { sentences, dialect, signedIn, accent, deep, onPlayAgain, onFinish }: Props = $props();
 
 	// Re-mounted (via {#key}) for each new round, so the first list is the one to use.
 	let index = $state(0);
@@ -82,6 +84,10 @@
 	}
 
 	function next() {
+		if (onFinish && index + 1 >= sentences.length) {
+			onFinish();
+			return;
+		}
 		index++;
 		if (index < sentences.length) {
 			tokens = scrambleWords(sentences[index].words);
@@ -95,7 +101,7 @@
 
 <p class="sr-only" aria-live="polite">{announcement}</p>
 
-{#if done}
+{#if done && onPlayAgain}
 	<GameResults
 		heading="{score} of {sentences.length} sentences on the first try"
 		stats={[{ label: 'First try', value: `${score}/${sentences.length}` }]}
@@ -120,7 +126,7 @@
 			{/each}
 		</ul>
 	</GameResults>
-{:else}
+{:else if !done}
 	<div class="game" style="--accent:{accent}; --deep:{deep};">
 		<p class="progress">Sentence {index + 1} of {sentences.length}</p>
 
@@ -167,7 +173,7 @@
 				{#if sentence.transliteration}<p class="translit">{sentence.transliteration}</p>{/if}
 				<AudioButton text={sentence.arabic} {dialect} audioUrl={gameAudioUrl(sentence.arabic, dialect)} />
 				<PressButton onclick={next} {accent} {deep}>
-					{index + 1 < sentences.length ? 'Next sentence' : 'See results'}
+					{index + 1 < sentences.length ? 'Next sentence' : onFinish ? 'Continue' : 'See results'}
 				</PressButton>
 			</div>
 		{:else}

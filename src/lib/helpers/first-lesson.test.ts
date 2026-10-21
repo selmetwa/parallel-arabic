@@ -47,12 +47,11 @@ describe('onboardingScenario', () => {
 });
 
 describe('onboardingLines', () => {
-	it('plays a short cut that ends on an answer, in every dialect', () => {
+	it('plays you, them, you, ending on an answer, in every dialect', () => {
 		for (const reason of ['Work', 'Travel', 'Heritage']) {
 			for (const dialect of ['egyptian-arabic', 'levantine', 'fusha', 'darija'] as const) {
 				const lines = onboardingLines(onboardingScenario(reason, dialect), dialect);
-				expect(lines.length).toBeGreaterThanOrEqual(3);
-				expect(lines.length).toBeLessThanOrEqual(4);
+				expect(lines.map((l) => l.speaker)).toEqual(['student', 'other', 'student']);
 				expect(lines.at(-1)?.english).not.toMatch(/\?$/);
 			}
 		}

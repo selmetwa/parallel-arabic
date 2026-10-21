@@ -1,26 +1,10 @@
 <script>
-	import { getStroke } from 'perfect-freehand';
+	import { strokePath } from '$lib/helpers/freehand';
 
 	let { letter, size } = $props();
 
 	let points = $state([[]]);
 	let pathData = $state([]);
-
-	function getSvgPathFromStroke(stroke) {
-		if (!stroke.length) return "";
-
-		const d = stroke.reduce(
-			(acc, [x0, y0], i, arr) => {
-				const [x1, y1] = arr[(i + 1) % arr.length];
-				acc.push(x0, y0, (x0 + x1) / 2, (y0 + y1) / 2);
-				return acc;
-			},
-			["M", ...stroke[0], "Q"]
-		);
-
-		d.push("Z");
-		return d.join(" ");
-	}
 
 	function handlePointerDown(e) {
 		e.target.setPointerCapture(e.pointerId);
@@ -48,24 +32,7 @@
 
 	// Update path data when points change
 	$effect(() => {
-		pathData = points.map(strokePoints => {
-			const stroke = getStroke(strokePoints, {
-				size: size,
-				thinning: 0.5,
-				smoothing: 0.2,
-				streamline: 0.2,
-				simulatePressure: true,
-				start: {
-					taper: 0,
-					easing: (t) => 1 - Math.cos((t * Math.PI) / 2),
-				},
-				end: {
-					taper: 0,
-					easing: (t) => 1 - Math.cos((t * Math.PI) / 2),
-				},
-			});
-			return getSvgPathFromStroke(stroke);
-		});
+		pathData = points.map((strokePoints) => strokePath(strokePoints, size));
 	});
 </script>
 

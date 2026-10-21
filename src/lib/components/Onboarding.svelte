@@ -8,6 +8,19 @@
 	import DialectPicker from '$lib/components/onboarding/DialectPicker.svelte';
 	import YourPlan from '$lib/components/onboarding/YourPlan.svelte';
 	import BuildingPlan from '$lib/components/onboarding/BuildingPlan.svelte';
+	import ReadSentence from '$lib/components/onboarding/ReadSentence.svelte';
+	import TraceWord from '$lib/components/onboarding/TraceWord.svelte';
+	import TryScramble from '$lib/components/onboarding/TryScramble.svelte';
+	import DailyGoalPick from '$lib/components/onboarding/DailyGoalPick.svelte';
+	import { onboardingLines, onboardingScenario } from '$lib/constants/tutor-scenarios';
+	import {
+		NOTHING_TRIED,
+		scrambleSentences,
+		tryContent,
+		type TryProgress
+	} from '$lib/constants/onboarding-try';
+	import type { GameDialect } from '$lib/games/themes';
+	import type { DailyGoal } from '$lib/constants/daily-goal';
 	import { firstLesson } from '$lib/helpers/first-lesson';
 	import TrialOffer from '$lib/components/TrialOffer.svelte';
 	import { CEFR_LEVELS, type CefrLevel } from '$lib/constants/cefr-levels';
@@ -30,15 +43,21 @@
 		REASON: 2,
 		LEVEL: 3,
 		GOAL: 4,
-		CONVERSATION: 5,
-		PLAN: 6,
-		TRIAL: 7,
-		/** A short narrated pause between the conversation and the plan. */
-		BUILDING: 8
+		// "Try it": one dialog, read, said, traced and played (docs/onboarding-v4-plan.md).
+		READ: 5,
+		CONVERSATION: 6,
+		TRACE: 7,
+		PLAY: 8,
+		DAILY_GOAL: 9,
+		/** A short narrated pause between the Try-it steps and the plan. */
+		BUILDING: 10,
+		PLAN: 11,
+		TRIAL: 12
 	} as const;
 
-	/** Steps the header stepper covers — the conversation, plan and trial sit outside it. */
+	/** Steps the header stepper covers: the questions, then the Try-it steps. */
 	const STEPPER_STEPS = [STEP.WELCOME, STEP.DIALECT, STEP.REASON, STEP.LEVEL, STEP.GOAL];
+	const TRY_STEPS = [STEP.READ, STEP.CONVERSATION, STEP.TRACE, STEP.PLAY, STEP.DAILY_GOAL];
 
 	/** How far above their current level we pre-set someone's goal. */
 	const GOAL_OFFSET = 2;
@@ -50,7 +69,7 @@
 	let goalLevel = $state<CefrLevel | ''>('');
 	let isSubmitting = $state(false);
 	let error = $state('');
-	let conversationDone = $state(false);
+	let tried = $state<TryProgress>({ ...NOTHING_TRIED });
 
 	// Web gets the Stripe trial offer; iOS gets the same step with Apple's
 	// plans and trial (TrialOffer/SubscribeButton never show Stripe in the app).
@@ -118,10 +137,14 @@
 		{ title: 'Goals', subtitle: 'Why are you learning?' },
 		{ title: 'Level', subtitle: 'Where are you now?' },
 		{ title: 'Target', subtitle: 'Where do you want to get to?' },
-		{ title: 'Practice', subtitle: 'Say your first words' },
+		{ title: 'Read', subtitle: 'Read it' },
+		{ title: 'Practice', subtitle: 'Say it' },
+		{ title: 'Trace', subtitle: 'Write it' },
+		{ title: 'Play', subtitle: 'Play with it' },
+		{ title: 'Daily goal', subtitle: 'Make it a habit' },
+		{ title: 'Building', subtitle: '' },
 		{ title: 'Plan', subtitle: '' },
-		{ title: 'Trial', subtitle: '' },
-		{ title: 'Building', subtitle: '' }
+		{ title: 'Trial', subtitle: '' }
 	];
 
 	/** "for travel", "for work"… what the plan starts with, from their reason. */
@@ -152,7 +175,39 @@
 		if (isOpen) trackEvent('onboarding_step_viewed', { step: stepInfo[step].title.toLowerCase() });
 	});
 
-	let showStepper = $derived(STEPPER_STEPS.includes(step as (typeof STEPPER_STEPS)[number]));
+	// One dialog for the whole Try-it section, picked from their reason.
+	let scenario = $derived(onboardingScenario(learningReason, targetDialect as Dialect));
+	let dialog = $derived(scenario?.dialogs[targetDialect as Dialect]);
+	let tryData = $derived(tryContent(scenario, targetDialect as Dialect));
+	// The scramble rebuilds the learner's own lines from the conversation.
+	let sentences = $derived(scrambleSentences(onboardingLines(scenario, targetDialect as Dialect)));
+
+	let inTry = $derived(TRY_STEPS.includes(step as (typeof TRY_STEPS)[number]));
+	let stepperSteps = $derived<readonly number[]>(inTry ? TRY_STEPS : STEPPER_STEPS);
+	let showStepper = $derived(inTry || STEPPER_STEPS.includes(step as (typeof STEPPER_STEPS)[number]));
+
+	/** Read and Trace need written content, Play needs the conversation; without them they're left out. */
+	function nextTryStep(from: number): number {
+		for (const s of TRY_STEPS.slice(TRY_STEPS.indexOf(from as (typeof TRY_STEPS)[number]) + 1)) {
+			if (s === STEP.PLAY ? sentences.length > 0 : tryData || s === STEP.CONVERSATION || s === STEP.DAILY_GOAL)
+				return s;
+		}
+		return STEP.BUILDING;
+	}
+
+	/** Every Try-it step ends here, whether it was done or skipped. */
+	function finishTryStep(key: 'read' | 'spoke' | 'traced' | 'played' | null, done: boolean) {
+		if (key) tried[key] = done;
+		trackEvent(done ? 'onboarding_try_done' : 'onboarding_try_skipped', {
+			step: stepInfo[step].title.toLowerCase()
+		});
+		step = nextTryStep(step);
+	}
+
+	function finishDailyGoal(goal: DailyGoal) {
+		tried.goal = goal;
+		finishTryStep(null, true);
+	}
 
 	function nextStep() {
 		if (step === STEP.WELCOME) {
@@ -245,7 +300,7 @@
 		}
 
 		isSubmitting = false;
-		step = STEP.CONVERSATION;
+		step = tryData ? STEP.READ : STEP.CONVERSATION;
 	}
 
 	function getStaggerDelay(index: number) {
@@ -253,14 +308,13 @@
 	}
 
 	async function finishOnboarding(destination: string) {
-		trackEvent('onboarding_exit', { destination, conversation_done: conversationDone });
+		trackEvent('onboarding_exit', { destination, conversation_done: tried.spoke });
 		handleCloseModal();
 		await goto(destination, { replaceState: true });
 	}
 
 	function handleConversationFinish(completed: boolean) {
-		conversationDone = completed;
-		step = STEP.BUILDING;
+		finishTryStep('spoke', completed);
 	}
 
 	/**
@@ -298,16 +352,17 @@
 			{#if showStepper}
 				<div class="px-4 pb-2 pt-5 sm:px-8 sm:pt-7">
 					<div class="mb-3 flex items-center justify-center gap-1.5 sm:gap-2">
-						{#each STEPPER_STEPS as stepperStep, i (stepperStep)}
+						{#each stepperSteps as stepperStep, i (stepperStep)}
+							<!-- Try-it steps can't be revisited: the conversation would award XP twice. -->
 							<button
 								type="button"
 								class="step {stepperStep === step ? 'is-on' : ''} {stepperStep < step
 									? 'is-done'
 									: ''}"
 								onclick={() => {
-									if (stepperStep < step) step = stepperStep;
+									if (!inTry && stepperStep < step) step = stepperStep;
 								}}
-								disabled={stepperStep > step}
+								disabled={inTry ? stepperStep !== step : stepperStep > step}
 								aria-label={`Step ${i + 1}`}
 								aria-current={stepperStep === step ? 'step' : undefined}
 							>
@@ -324,7 +379,7 @@
 									{i + 1}
 								{/if}
 							</button>
-							{#if i < STEPPER_STEPS.length - 1}
+							{#if i < stepperSteps.length - 1}
 								<div class="connector {stepperStep < step ? 'is-done' : ''}"></div>
 							{/if}
 						{/each}
@@ -523,40 +578,75 @@
 						</div>
 					{/if}
 
-					<!-- Step 5: First conversation -->
+					<!-- Try it: read the dialog's opening -->
+					{#if step === STEP.READ && tryData && dialog}
+						<ReadSentence
+							{dialog}
+							lines={tryData.readLines.map((i) => dialog.lines[i])}
+							dialect={targetDialect as Dialect}
+							onDone={() => finishTryStep('read', true)}
+							onSkip={() => finishTryStep('read', false)}
+						/>
+					{/if}
+
+					<!-- Try it: say it, as a three-line conversation -->
 					{#if step === STEP.CONVERSATION}
 						<div in:fly={{ y: 30, duration: 500, easing: cubicOut }}>
 							<OnboardingConversation
 								dialect={targetDialect as Dialect}
-								{learningReason}
+								{scenario}
 								onFinish={handleConversationFinish}
 							/>
 						</div>
 					{/if}
 
-					<!-- Between the conversation and the plan: "Building your plan" -->
+					<!-- Try it: trace a short word from it -->
+					{#if step === STEP.TRACE && tryData}
+						<TraceWord
+							word={tryData.trace}
+							onDone={() => finishTryStep('traced', true)}
+							onSkip={() => finishTryStep('traced', false)}
+						/>
+					{/if}
+
+					<!-- Try it: rebuild what they said, word by word -->
+					{#if step === STEP.PLAY && sentences.length > 0}
+						<TryScramble
+							{sentences}
+							dialect={targetDialect as GameDialect}
+							onDone={() => finishTryStep('played', true)}
+							onSkip={() => finishTryStep('played', false)}
+						/>
+					{/if}
+
+					<!-- Try it: a daily goal -->
+					{#if step === STEP.DAILY_GOAL}
+						<DailyGoalPick onDone={finishDailyGoal} onSkip={() => finishTryStep(null, false)} />
+					{/if}
+
+					<!-- Between the Try-it steps and the plan: "Building your plan" -->
 					{#if step === STEP.BUILDING}
 						<BuildingPlan lines={buildingLines} onDone={() => (step = STEP.PLAN)} />
 					{/if}
 
-					<!-- Step 6: The plan, and where to start -->
+					<!-- The plan, and where to start -->
 					{#if step === STEP.PLAN}
 						<YourPlan
 							{proficiencyLevel}
 							{goalLevel}
-							{conversationDone}
+							{tried}
 							{lesson}
 							isNative={isNative === true}
 							onStart={handlePlanStart}
 						/>
 					{/if}
 
-					<!-- Step 7: Free trial offer (Stripe on web, Apple on iOS) -->
+					<!-- Free trial offer (Stripe on web, Apple on iOS) -->
 					{#if step === STEP.TRIAL}
 						<TrialOffer
 							dialectName={chosenDialectName}
 							onSkip={isHardPaywall ? undefined : skipTrial}
-							{conversationDone}
+							{tried}
 							{proficiencyLevel}
 							{goalLevel}
 						/>
