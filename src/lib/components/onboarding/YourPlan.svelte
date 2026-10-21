@@ -10,17 +10,19 @@
 	} from '$lib/helpers/push-notifications';
 	import { trackEvent } from '$lib/analytics';
 	import type { FirstLesson } from '$lib/helpers/first-lesson';
+	import type { TryProgress } from '$lib/constants/onboarding-try';
+	import { describeGoal } from '$lib/constants/daily-goal';
 
 	interface Props {
 		proficiencyLevel: CefrLevel | '';
 		goalLevel: CefrLevel | '';
-		conversationDone: boolean;
+		tried: TryProgress;
 		lesson: FirstLesson;
 		isNative: boolean;
 		onStart: (destination: string) => void;
 	}
 
-	let { proficiencyLevel, goalLevel, conversationDone, lesson, isNative, onStart }: Props = $props();
+	let { proficiencyLevel, goalLevel, tried, lesson, isNative, onStart }: Props = $props();
 
 	/** Long enough that the generic reminder banner doesn't re-ask straight after this screen. */
 	const SNOOZE_AFTER_PLAN_MS = 14 * 24 * 60 * 60 * 1000;
@@ -36,9 +38,12 @@
 	const goalCaption = $derived(goalLevel ? CEFR_LEVEL_INFO[goalLevel].goal : '');
 
 	const checklist = $derived([
-		{ label: 'Your first conversation', done: conversationDone },
+		{ label: 'Your first sentence: read, said, written', done: tried.read || tried.spoke || tried.traced },
 		{ label: lesson.title, done: false },
-		{ label: "Today's challenge", done: false }
+		{
+			label: tried.goal ? `Today's goal: ${describeGoal(tried.goal)}` : "Today's challenge",
+			done: false
+		}
 	]);
 
 	async function remindMe() {

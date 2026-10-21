@@ -5,7 +5,7 @@
 	import AudioLoading from '$lib/components/AudioLoading.svelte';
 	import RecordButton from '$lib/components/RecordButton.svelte';
 	import Similarity from '$lib/components/Similarity.svelte';
-	import { onboardingLines, onboardingScenario } from '$lib/constants/tutor-scenarios';
+	import { onboardingLines, type TutorScenario } from '$lib/constants/tutor-scenarios';
 	import { userLevel, userXp } from '$lib/store/xp-store';
 	import { calculateWordSimilarity } from '$lib/utils/pronunciation-similarity';
 	import { trackEvent } from '$lib/analytics';
@@ -15,16 +15,16 @@
 
 	interface Props {
 		dialect: Dialect;
-		learningReason: string;
+		/** Chosen by the parent, so Read, Trace and Play use the same dialog. */
+		scenario: TutorScenario | undefined;
 		/** `completed` is false when they skipped or there was no dialog to practise. */
 		onFinish: (completed: boolean) => void;
 	}
 
-	let { dialect, learningReason, onFinish }: Props = $props();
+	let { dialect, scenario, onFinish }: Props = $props();
 
 	const PRONUNCIATION_THRESHOLD = 60;
 
-	let scenario = $derived(onboardingScenario(learningReason, dialect));
 	let dialog = $derived(scenario?.dialogs[dialect]);
 	let lines = $derived(onboardingLines(scenario, dialect));
 
@@ -214,9 +214,9 @@
 		{#if phase === 'line' && currentLine}
 			<div class="text-center mb-6">
 				<p class="font-arabic font-bold text-2xl sm:text-3xl text-text-300/80 mb-2" dir="rtl" lang="ar">يلّا نبدأ</p>
-				<h2 class="text-2xl sm:text-3xl font-bold text-text-300 mb-1.5 tracking-tight">Let's say your first words</h2>
+				<h2 class="text-2xl sm:text-3xl font-bold text-text-300 mb-1.5 tracking-tight">Now say it</h2>
 				<p class="text-text-200 text-sm sm:text-base">
-					A quick scripted conversation: {scenario?.title.toLowerCase()}.
+					You just read the first line. Say it out loud, then keep the conversation going.
 				</p>
 			</div>
 
