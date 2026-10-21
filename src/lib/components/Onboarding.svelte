@@ -85,6 +85,16 @@
 		isNative = isNativeApp();
 	});
 
+	// Keep the page behind from scrolling while onboarding is up, as PaywallModal does.
+	$effect(() => {
+		if (!isOpen) return;
+		const prev = document.body.style.overflow;
+		document.body.style.overflow = 'hidden';
+		return () => {
+			document.body.style.overflow = prev;
+		};
+	});
+
 	// Accents match the dialect colours used across the rest of the app.
 	const dialects = [
 		{
@@ -394,7 +404,7 @@
 			{/if}
 
 			<!-- Content Area -->
-			<div class="flex flex-1 justify-center overflow-y-auto px-4 py-4 sm:px-8">
+			<div class="flex flex-1 justify-center overflow-y-auto overscroll-contain px-4 py-4 sm:px-8">
 				<!-- my-auto rather than items-center, so content taller than the screen scrolls from the top instead of being clipped -->
 				<div class="my-auto w-full max-w-4xl">
 					<!-- Step 0: Welcome -->
