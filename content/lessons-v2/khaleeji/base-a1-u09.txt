@@ -1,0 +1,220 @@
+# Khaleeji — A1 — Days of the Week and Months (base-a1-u09)
+# Gulf: باكِر = tomorrow (said "baachir"), أمس = yesterday, دَوام = work hours. Months are often said by number: شَهَر سِتّة = June.
+
+@vocab
+noun = Saturday
+السَّبت / is-sabt / Saturday
+
+noun = Sunday
+الأحَد / il-a7ad / Sunday
+
+noun = Monday
+الإثنين / il-ithneen / Monday
+
+noun = Tuesday
+الثُّلاثاء / ith-thilaathaa / Tuesday
+
+noun = Wednesday
+الأربِعاء / il-arbi3aa / Wednesday
+
+noun = Thursday
+الخَميس / il-khamees / Thursday
+
+noun = Friday
+الجُمعة / il-yum3a / Friday
+
+adverb = Today
+اليوم / il-yoom / Today
+
+adverb = Tomorrow
+باكِر / baachir / Tomorrow
+
+adverb = Yesterday
+أمس / ams / Yesterday
+
+noun:m = Week
+أسبوع / usboo3 / Week
+
+noun:m = Month
+شَهَر / shahar / Month
+
+noun:m = Appointment
+مَوعِد / maw3id / Appointment
+
+noun:f = Holiday
+عُطلة / 3utla / Holiday
+
+noun:m = Work (job hours)
+دَوام / dawaam / Work
+
+@pool
+Today is Saturday. = Today; Saturday
+اليوم / il-yoom / Today is | السَّبت. / is-sabt. / Saturday.
+
+Tomorrow is Sunday. = Tomorrow; Sunday
+باكِر / baachir / Tomorrow is | الأحَد. / il-a7ad. / Sunday.
+
+Yesterday was Friday. = Yesterday; Friday
+أمس / ams / Yesterday was | الجُمعة. / il-yum3a. / Friday.
+
+I have an appointment on Monday. = Appointment; Monday
+عِندي / 3indi / I have | مَوعِد / maw3id / an appointment | يوم / yoom / on | الإثنين. / il-ithneen. / Monday.
+
+Friday is a holiday. = Friday; Holiday
+الجُمعة / il-yum3a / Friday is | عُطلة. / 3utla. / a holiday.
+
+What day is it today? = Today
+شو / shu / What is | اليوم؟ / il-yoom? / today?
+
+Today is Tuesday. = Today; Tuesday
+اليوم / il-yoom / Today is | الثُّلاثاء. / ith-thilaathaa. / Tuesday.
+
+The appointment is on Wednesday. = Appointment; Wednesday
+المَوعِد / il-maw3id / The appointment is | يوم / yoom / on | الأربِعاء. / il-arbi3aa. / Wednesday.
+
+On Thursday we go to the mall. = Thursday
+الخَميس / il-khamees / On Thursday | نْروح / nrooh / we go | المول. / il-mool. / to the mall.
+
+The week has seven days. = Week
+الأسبوع / il-usboo3 / The week | فيه / fee / has in it | سَبع / saba3 / seven | أيّام. / ayyaam. / days.
+
+Next month I have a holiday. = Month; Holiday
+الشَّهَر / ish-shahar / The month | الجاي / il-yaay / next | عِندي / 3indi / I have | عُطلة. / 3utla. / a holiday.
+
+Tomorrow I have an appointment. = Tomorrow; Appointment
+باكِر / baachir / Tomorrow | عِندي / 3indi / I have | مَوعِد. / maw3id. / an appointment.
+
+Yesterday I was busy. = Yesterday
+أمس / ams / Yesterday | كِنت / kint / I was | مَشغول. / mashghool. / busy.
+
+On Saturday I go to work. = Saturday; Work (job hours)
+السَّبت / is-sabt / On Saturday | أروح / arooh / I go | الدَّوام. / id-dawaam. / to work.
+
+On Sunday I have an exam. = Sunday
+الأحَد / il-a7ad / On Sunday | عِندي / 3indi / I have | إمتِحان. / imti7aan. / an exam.
+
+On Monday and Tuesday I'm busy. = Monday; Tuesday
+الإثنين / il-ithneen / Monday | والثُّلاثاء / w-ith-thilaathaa / and Tuesday | مَشغول. / mashghool. / I'm busy.
+
+See you on Wednesday. = Wednesday
+نْشوفَك / nshoofak / We'll see you | الأربِعاء. / il-arbi3aa. / on Wednesday.
+
+Is Thursday a holiday? No, Friday. = Thursday; Holiday; Friday
+الخَميس / il-khamees / Is Thursday | عُطلة؟ / 3utla? / a holiday? | لا، / laa, / No, | الجُمعة. / il-yum3a. / Friday.
+
+Next week I have an appointment. = Week; Appointment
+الأسبوع / il-usboo3 / The week | الجاي / il-yaay / next | عِندي / 3indi / I have | مَوعِد. / maw3id. / an appointment.
+
+This month is June. = Month
+هاذا / haadha / This | الشَّهَر / ish-shahar / month is | شَهَر / shahar / month | سِتّة. / sitta. / six.
+
+August is a hot month. = Month
+شَهَر / shahar / Month | ثَمانية / thamaanya / eight is | حار / 7aarr / hot | وايد. / waayid. / very.
+
+How many days are in the month? = Month
+كَم / cham / How many | يوم / yoom / days are | بالشَّهَر؟ / bish-shahar? / in the month?
+
+Tomorrow is Thursday. = Tomorrow; Thursday
+باكِر / baachir / Tomorrow is | الخَميس. / il-khamees. / Thursday.
+
+Yesterday was Wednesday. = Yesterday; Wednesday
+أمس / ams / Yesterday was | الأربِعاء. / il-arbi3aa. / Wednesday.
+
+Today is Sunday. = Today; Sunday
+اليوم / il-yoom / Today is | الأحَد. / il-a7ad. / Sunday.
+
+The weekend is Saturday and Sunday. = Holiday; Saturday; Sunday
+العُطلة / il-3utla / The holiday is | السَّبت / is-sabt / Saturday | والأحَد. / w-il-a7ad. / and Sunday.
+
+The doctor's appointment is on Tuesday. = Appointment; Tuesday
+مَوعِد / maw3id / The appointment of | الدَّختَر / id-dakhtar / the doctor is | الثُّلاثاء. / ith-thilaathaa. / Tuesday.
+
+Monday is the first day of the week. = Monday; Week
+الإثنين / il-ithneen / Monday is | أوَّل / awwal / the first | يوم / yoom / day | بالأسبوع. / bil-usboo3. / of the week.
+
+When is your appointment? = Appointment
+مَوعدَك / maw3idak / Your appointment is | مِتى؟ / mita? / when?
+
+Last week I was in Kuwait. = Week
+الأسبوع / il-usboo3 / The week | اللي / illi / that | طاف / taaf / passed | كِنت / kint / I was | بالكُوَيت. / bil-kuwayt. / in Kuwait.
+
+Last month I went to Muscat. = Month
+الشَّهَر / ish-shahar / The month | اللي / illi / that | طاف / taaf / passed | رِحت / ri7t / I went | مَسقَط. / masgat. / to Muscat.
+
+Today is a holiday! = Today; Holiday
+اليوم / il-yoom / Today is | عُطلة! / 3utla! / a holiday!
+
+Tomorrow is Monday, I have work. = Tomorrow; Monday; Work (job hours)
+باكِر / baachir / Tomorrow is | الإثنين، / il-ithneen, / Monday, | عِندي / 3indi / I have | دَوام. / dawaam. / work.
+
+Yesterday was Saturday. = Yesterday; Saturday
+أمس / ams / Yesterday was | السَّبت. / is-sabt. / Saturday.
+
+On Thursday I have an appointment. = Thursday; Appointment
+الخَميس / il-khamees / On Thursday | عِندي / 3indi / I have | مَوعِد. / maw3id. / an appointment.
+
+December is a nice month. = Month
+شَهَر / shahar / Month | ثْنَعَش / thna3ash / twelve is | حِلو. / 7ilu. / nice.
+
+A whole week off! = Week; Holiday
+أسبوع / usboo3 / A week | كامِل / kaamil / whole | عُطلة! / 3utla! / off!
+
+On Wednesday we go to the cinema. = Wednesday
+الأربِعاء / il-arbi3aa / On Wednesday | نْروح / nrooh / we go | السّينَما. / is-seenama. / to the cinema.
+
+Is Tuesday tomorrow? = Tuesday; Tomorrow
+الثُّلاثاء / ith-thilaathaa / Is Tuesday | باكِر؟ / baachir? / tomorrow?
+
+On Friday we go to my grandfather's house. = Friday
+الجُمعة / il-yum3a / On Friday | نْروح / nrooh / we go | بيت / beet / to the house of | جَدّي. / yaddi. / my grandfather.
+
+Yesterday was Monday. = Yesterday; Monday
+أمس / ams / Yesterday was | الإثنين. / il-ithneen. / Monday.
+
+On Sunday and Monday I have work. = Sunday; Monday; Work (job hours)
+الأحَد / il-a7ad / Sunday | والإثنين / w-il-ithneen / and Monday | عِندي / 3indi / I have | دَوام. / dawaam. / work.
+
+Saturday or Sunday? = Saturday; Sunday
+السَّبت / is-sabt / Saturday | لو / law / or | الأحَد؟ / il-a7ad? / Sunday?
+
+On Tuesday I'm very busy. = Tuesday
+الثُّلاثاء / ith-thilaathaa / On Tuesday | مَشغول / mashghool / I'm busy | وايد. / waayid. / very.
+
+The appointment is next Wednesday. = Appointment; Wednesday
+المَوعِد / il-maw3id / The appointment is | الأربِعاء / il-arbi3aa / Wednesday | الجاي. / il-yaay. / next.
+
+Next Thursday is a holiday. = Thursday; Holiday
+الخَميس / il-khamees / Thursday | الجاي / il-yaay / next is | عُطلة. / 3utla. / a holiday.
+
+Work starts at seven. = Work (job hours)
+الدَّوام / id-dawaam / Work | يِبدا / yibda / starts | السّاعة / is-saa3a / at | سَبعة. / sab3a. / seven.
+
+Today I have no work. = Today; Work (job hours)
+اليوم / il-yoom / Today | ما / ma / not | عِندي / 3indi / I have | دَوام. / dawaam. / work.
+
+@passage My Week
+From Monday to Friday I have work.
+مِن / min / From | الإثنين / il-ithneen / Monday | لين / leen / until | الجُمعة / il-yum3a / Friday | عِندي / 3indi / I have | دَوام. / dawaam. / work.
+
+On Thursday I go to the mall.
+الخَميس / il-khamees / On Thursday | أروح / arooh / I go | المول. / il-mool. / to the mall.
+
+Saturday is a holiday; I go to my grandfather's house.
+السَّبت / is-sabt / Saturday is | عُطلة، / 3utla, / a holiday, | أروح / arooh / I go | بيت / beet / to the house of | جَدّي. / yaddi. / my grandfather.
+
+@passage An Appointment
+I have an appointment with the doctor.
+عِندي / 3indi / I have | مَوعِد / maw3id / an appointment | وِيّا / wiyya / with | الدَّختَر. / id-dakhtar. / the doctor.
+
+Is the appointment on Tuesday?
+المَوعِد / il-maw3id / Is the appointment | يوم / yoom / on | الثُّلاثاء؟ / ith-thilaathaa? / Tuesday?
+
+No, tomorrow, Wednesday.
+لا، / laa, / No, | باكِر / baachir / tomorrow, | الأربِعاء. / il-arbi3aa. / Wednesday.
+
+@scenario
+situation: The student calls a clinic in Abu Dhabi to book an appointment with a doctor.
+studentRole: A patient learning Gulf Arabic.
+otherRole: The clinic receptionist, who checks which days are free.
+goalEnglish: Ask for an appointment, agree on a day of the week, and confirm whether it is today, tomorrow or next week.
+targetWords: Appointment; Today; Tomorrow; Week; Monday; Tuesday; Wednesday; Holiday
