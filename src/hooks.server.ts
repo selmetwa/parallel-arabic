@@ -4,8 +4,9 @@ import { redirect, type Handle, type HandleServerError } from '@sveltejs/kit';
 import { sequence } from '@sveltejs/kit/hooks';
 import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_PUBLISHABLE_KEY } from '$env/static/public';
 import { dev } from '$app/environment';
+import { ALL_DIALECTS } from '$lib/constants/dialects';
 
-const DIALECTS = ['egyptian-arabic', 'darija', 'levantine', 'fusha'];
+const DIALECTS = ALL_DIALECTS;
 
 const redirects: Handle = async ({ event, resolve }) => {
 	const { pathname } = event.url;

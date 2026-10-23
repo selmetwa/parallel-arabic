@@ -524,7 +524,11 @@ export function createDialectComparisonSchema() {
 		egyptian: dialectSchema,
 		darija: dialectSchema,
 		levantine: dialectSchema,
-		fusha: dialectSchema
+		fusha: dialectSchema,
+		// Optional: requested only once selectable, or when it is the learner's dialect.
+		iraqi: dialectSchema.optional(),
+		khaleeji: dialectSchema.optional(),
+		saudi: dialectSchema.optional()
 	});
 
 	return {

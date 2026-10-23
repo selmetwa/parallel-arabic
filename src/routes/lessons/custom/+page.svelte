@@ -4,6 +4,7 @@
 	import AuthModal from '$lib/components/AuthModal.svelte';
 	import CreateLessonModal from '$lib/components/dialect-shared/lesson/components/CreateLessonModal.svelte';
 	import { trackEvent } from '$lib/analytics';
+	import { isSelectableDialect } from '$lib/constants/dialects';
 
 	let { data } = $props();
 	let isModalOpen = $state(false);
@@ -84,7 +85,10 @@
 		{ value: 'fusha', label: 'Modern Standard Arabic' },
 		{ value: 'levantine', label: 'Levantine Arabic' },
 		{ value: 'darija', label: 'Moroccan Darija' },
-	];
+		{ value: 'iraqi', label: 'Iraqi Arabic' },
+		{ value: 'khaleeji', label: 'Gulf Arabic' },
+		{ value: 'saudi', label: 'Saudi Arabic' },
+	].filter((d) => isSelectableDialect(d.value));
 
 	const filterDialectOptions = [
 		{ value: 'all', label: 'All Dialects' },
@@ -156,7 +160,10 @@
 		'egyptian-arabic': { flag: '🇪🇬', short: 'Egyptian', sub: 'Masri', accent: '#f59e0b', deep: '#b45309' },
 		levantine: { flag: '🇱🇧', short: 'Levantine', sub: 'Shami', accent: '#10b981', deep: '#047857' },
 		darija: { flag: '🇲🇦', short: 'Darija', sub: 'Moroccan', accent: '#f43f5e', deep: '#9f1239' },
-		fusha: { flag: '📖', short: 'MSA', sub: 'Fusha', accent: '#8b5cf6', deep: '#6d28d9' }
+		fusha: { flag: '📖', short: 'MSA', sub: 'Fusha', accent: '#8b5cf6', deep: '#6d28d9' },
+		iraqi: { flag: '🇮🇶', short: 'Iraqi', sub: 'Baghdadi', accent: '#14b8a6', deep: '#0f766e' },
+		khaleeji: { flag: '🇦🇪', short: 'Khaleeji', sub: 'Gulf', accent: '#06b6d4', deep: '#0e7490' },
+		saudi: { flag: '🇸🇦', short: 'Saudi', sub: 'Hijazi', accent: '#84cc16', deep: '#4d7c0f' }
 	};
 	const FALLBACK_STYLE = { flag: '🌍', short: 'Arabic', sub: '', accent: '#0ea5e9', deep: '#0369a1' };
 

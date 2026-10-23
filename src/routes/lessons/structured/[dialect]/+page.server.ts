@@ -37,7 +37,10 @@ export const load = async ({ params, parent, url }) => {
 		egyptian: 'egyptian-arabic',
 		'egyptian-arabic': 'egyptian-arabic',
 		alphabet: 'alphabet',
-		grammar: 'grammar'
+		grammar: 'grammar',
+		iraqi: 'iraqi',
+		khaleeji: 'khaleeji',
+		saudi: 'saudi'
 	};
 
 	const dialectName = dialectMap[dialect.toLowerCase()] || dialect.toLowerCase();

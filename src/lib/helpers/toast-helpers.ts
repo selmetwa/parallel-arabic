@@ -410,6 +410,9 @@ function getDialectDisplayName(dialect: string): string {
     'darija': 'Moroccan Darija',
     'fusha': 'Modern Standard Arabic',
     'levantine': 'Levantine Arabic',
+    'iraqi': 'Iraqi Arabic',
+    'khaleeji': 'Gulf Arabic (Khaleeji)',
+    'saudi': 'Saudi Arabic (Hijazi)',
   };
   
   return dialectNames[dialect] || dialect;

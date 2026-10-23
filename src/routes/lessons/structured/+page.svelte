@@ -1,8 +1,11 @@
 <script lang="ts">
+	import { isSelectableDialect } from '$lib/constants/dialects';
+
 	// Each track gets its own accent so the grid reads as a set of places to go,
 	// not four copies of the same card.
 	const dialects = [
 		{
+			dialect: 'egyptian-arabic',
 			href: '/lessons/structured/egyptian-arabic',
 			flag: '🇪🇬',
 			label: 'Egyptian Arabic',
@@ -12,6 +15,7 @@
 			deep: '#b45309'
 		},
 		{
+			dialect: 'darija',
 			href: '/lessons/structured/darija',
 			flag: '🇲🇦',
 			label: 'Moroccan Darija',
@@ -21,6 +25,7 @@
 			deep: '#9f1239'
 		},
 		{
+			dialect: 'fusha',
 			href: '/lessons/structured/msa',
 			flag: '📖',
 			label: 'Modern Standard Arabic',
@@ -30,6 +35,7 @@
 			deep: '#6d28d9'
 		},
 		{
+			dialect: 'levantine',
 			href: '/lessons/structured/levantine',
 			flag: '🇱🇧',
 			label: 'Levantine Arabic',
@@ -37,8 +43,38 @@
 			note: 'Syria, Lebanon, Jordan and Palestine',
 			accent: '#10b981',
 			deep: '#047857'
+		},
+		{
+			dialect: 'iraqi',
+			href: '/lessons/structured/iraqi',
+			flag: '🇮🇶',
+			label: 'Iraqi Arabic',
+			sub: 'Baghdadi',
+			note: 'Baghdad, Basra and across Iraq',
+			accent: '#14b8a6',
+			deep: '#0f766e'
+		},
+		{
+			dialect: 'khaleeji',
+			href: '/lessons/structured/khaleeji',
+			flag: '🇦🇪',
+			label: 'Gulf Arabic',
+			sub: 'Khaleeji',
+			note: 'UAE, Kuwait, Qatar, Bahrain and Oman',
+			accent: '#06b6d4',
+			deep: '#0e7490'
+		},
+		{
+			dialect: 'saudi',
+			href: '/lessons/structured/saudi',
+			flag: '🇸🇦',
+			label: 'Saudi Arabic',
+			sub: 'Hijazi',
+			note: 'Jeddah, Mecca and the Hijaz',
+			accent: '#84cc16',
+			deep: '#4d7c0f'
 		}
-	];
+	].filter((d) => isSelectableDialect(d.dialect));
 </script>
 
 <section class="page">

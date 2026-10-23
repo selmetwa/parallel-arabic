@@ -43,6 +43,9 @@ export const load: PageServerLoad = async ({ params, parent, locals, setHeaders 
 		'darija': 'Moroccan Darija',
 		'fusha': 'Modern Standard Arabic',
 		'levantine': 'Levantine Arabic',
+		'iraqi': 'Iraqi Arabic',
+		'khaleeji': 'Gulf Arabic (Khaleeji)',
+		'saudi': 'Saudi Arabic (Hijazi)',
 	};
 
 	// Set cache headers - lesson content rarely changes

@@ -7,6 +7,7 @@ import { StripeService } from '$lib/services/stripe.service';
 import { computeAchievements } from '$lib/config/achievements';
 import { CEFR_LEVELS, isCefrLevel } from '$lib/constants/cefr-levels';
 import { env } from '$env/dynamic/private';
+import { isDialect } from '$lib/constants/dialects';
 
 export const load = async ({ locals, parent }) => {
 	const { session, user } = await parent();
@@ -238,8 +239,7 @@ export const actions: Actions = {
 		const targetDialect = formData.get('target_dialect') as string;
 
 		// Validate dialect
-		const validDialects = ['egyptian-arabic', 'fusha', 'levantine', 'darija'];
-		if (!targetDialect || !validDialects.includes(targetDialect)) {
+		if (!isDialect(targetDialect)) {
 			return {
 				success: false,
 				error: 'Invalid dialect selected'

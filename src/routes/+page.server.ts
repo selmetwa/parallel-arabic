@@ -241,6 +241,9 @@ export const load: PageServerLoad = async ({ parent }) => {
         'levantine': 'Levantine Arabic',
         'darija': 'Moroccan Darija',
         'fusha': 'Modern Standard Arabic',
+        'iraqi': 'Iraqi Arabic',
+        'khaleeji': 'Gulf Arabic (Khaleeji)',
+        'saudi': 'Saudi Arabic (Hijazi)',
       };
       const candidate = recResult.stories.find((s: any) => !BLOCKED_STORY_IDS.includes(s.id));
       if (candidate) {
@@ -349,6 +352,9 @@ export const load: PageServerLoad = async ({ parent }) => {
       'levantine': 'Levantine Arabic',
       'darija': 'Moroccan Darija',
       'fusha': 'Modern Standard Arabic',
+      'iraqi': 'Iraqi Arabic',
+      'khaleeji': 'Gulf Arabic (Khaleeji)',
+      'saudi': 'Saudi Arabic (Hijazi)',
     };
     suggestions.push({
       id: 'start-lesson',

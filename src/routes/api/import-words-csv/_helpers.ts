@@ -8,7 +8,7 @@ export const wordCompletionSchema = z.object({
   arabic: z.string().optional(),
   english: z.string().optional(),
   transliteration: z.string().optional(),
-  dialect: z.enum(['egyptian-arabic', 'fusha', 'levantine', 'darija']).optional()
+  dialect: z.enum(['egyptian-arabic', 'fusha', 'levantine', 'darija', 'iraqi', 'khaleeji', 'saudi']).optional()
 });
 
 const columnMappings: Record<string, string> = {
@@ -250,7 +250,17 @@ export function normalizeDialect(dialect: string): string {
     'shami': 'levantine',
     'darija': 'darija',
     'moroccan': 'darija',
-    'moroccan darija': 'darija'
+    'moroccan darija': 'darija',
+    'iraqi': 'iraqi',
+    'iraqi arabic': 'iraqi',
+    'khaleeji': 'khaleeji',
+    'gulf': 'khaleeji',
+    'gulf arabic': 'khaleeji',
+    'emirati': 'khaleeji',
+    'kuwaiti': 'khaleeji',
+    'saudi': 'saudi',
+    'saudi arabic': 'saudi',
+    'hijazi': 'saudi'
   };
 
   return dialectMap[normalized] || 'egyptian-arabic';

@@ -1,5 +1,4 @@
 import type { ParamMatcher } from '@sveltejs/kit';
+import { isDialect } from '$lib/constants/dialects';
 
-const DIALECTS = new Set(['egyptian-arabic', 'levantine', 'darija', 'fusha']);
-
-export const match: ParamMatcher = (param) => DIALECTS.has(param);
+export const match: ParamMatcher = (param) => isDialect(param);

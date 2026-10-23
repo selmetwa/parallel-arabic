@@ -1,6 +1,7 @@
 import { getStoriesPaginated, getStoryById } from '$lib/helpers/story-helpers';
 import { BLOCKED_STORY_IDS } from '$lib/constants/stories/blocked';
 import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
+import { isDialect } from '$lib/constants/dialects';
 
 const PAGE_SIZE = 12;
 
@@ -11,7 +12,6 @@ function proficiencyToDifficulty(level: string | null | undefined): string | nul
   return _level;  
 }
 
-const VALID_DIALECTS = ['egyptian-arabic', 'darija', 'levantine', 'fusha'];
 
 export const load = async ({ parent, locals, url }) => {
   // Get session and subscription status from layout
@@ -19,7 +19,7 @@ export const load = async ({ parent, locals, url }) => {
 
   // Use dialect query param if present and valid, otherwise fall back to user's target dialect
   const dialectParam = url.searchParams.get('dialect');
-  const initialDialect = dialectParam && VALID_DIALECTS.includes(dialectParam)
+  const initialDialect = dialectParam && isDialect(dialectParam)
     ? dialectParam
     : getDefaultDialect(user);
 
@@ -140,6 +140,9 @@ function getDialectDisplayName(dialect: string) {
     'darija': 'Moroccan Darija',
     'fusha': 'Modern Standard Arabic',
     'levantine': 'Levantine Arabic',
+    'iraqi': 'Iraqi Arabic',
+    'khaleeji': 'Gulf Arabic (Khaleeji)',
+    'saudi': 'Saudi Arabic (Hijazi)',
   };
   
   return dialectNames[dialect as keyof typeof dialectNames] || dialect;

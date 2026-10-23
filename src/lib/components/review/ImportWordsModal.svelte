@@ -6,8 +6,9 @@
   import { toast } from 'svelte-sonner';
   import { importJobStore, startImportJob } from '$lib/stores/import-job';
   import { trackEvent } from '$lib/analytics';
+  import { isSelectableDialect } from '$lib/constants/dialects';
 
-  type Dialect = 'egyptian-arabic' | 'darija' | 'fusha' | 'levantine';
+  type Dialect = 'egyptian-arabic' | 'darija' | 'fusha' | 'levantine' | 'iraqi' | 'khaleeji' | 'saudi';
 
   type DialectUser = { target_dialect?: string | null } | null;
 
@@ -47,12 +48,16 @@
     }
   });
 
-  const dialectOptions: Array<{ value: Dialect; label: string }> = [
+  const allDialectOptions: Array<{ value: Dialect; label: string }> = [
     { value: 'egyptian-arabic', label: 'Egyptian Arabic' },
     { value: 'fusha', label: 'Modern Standard Arabic (Fusha)' },
     { value: 'levantine', label: 'Levantine Arabic' },
-    { value: 'darija', label: 'Moroccan Darija' }
+    { value: 'darija', label: 'Moroccan Darija' },
+    { value: 'iraqi', label: 'Iraqi Arabic' },
+    { value: 'khaleeji', label: 'Gulf Arabic' },
+    { value: 'saudi', label: 'Saudi Arabic' }
   ];
+  const dialectOptions = allDialectOptions.filter((d) => isSelectableDialect(d.value));
 
   function close() {
     open = false;

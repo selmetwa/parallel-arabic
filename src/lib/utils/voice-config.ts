@@ -33,10 +33,14 @@ export const getVoiceConfig = (dialect: string) => {
         stability: 0.9,
         similarity_boost: 0.9
       };
+    // TODO(voices): replace the iraqi/khaleeji/saudi placeholders with ElevenLabs
+    // voice IDs, and set gender/gender2 to match, since IDs don't reveal gender.
     case 'iraqi':
       return {
-        voice: 'Mona', // Using Levantine voice as fallback for Iraqi
-        voice2: 'Mustafa', // Placeholder - second voice for conversations
+        voice: 'Mona', // Placeholder (Fusha voice)
+        voice2: 'Mustafa', // Placeholder
+        gender: 'female' as const,
+        gender2: 'male' as const,
         speed: 0.9,
         stability: 0.9,
         similarity_boost: 0.9
@@ -44,7 +48,19 @@ export const getVoiceConfig = (dialect: string) => {
     case 'khaleeji':
       return {
         voice: 'Ghawi',
-        voice2: 'Fatima', // Placeholder - second voice for conversations
+        voice2: 'Fatima', // Placeholder
+        gender: 'male' as const,
+        gender2: 'female' as const,
+        speed: 0.9,
+        stability: 0.9,
+        similarity_boost: 0.9
+      };
+    case 'saudi':
+      return {
+        voice: 'Ghawi', // Placeholder (Khaleeji voice)
+        voice2: 'Fatima', // Placeholder
+        gender: 'male' as const,
+        gender2: 'female' as const,
         speed: 0.9,
         stability: 0.9,
         similarity_boost: 0.9
@@ -72,8 +88,9 @@ export const getSpeakerNames = (dialect: string): { speaker1: string; speaker2: 
     return femaleVoices.some(name => lowerVoiceName.includes(name)) ? 'female' : 'male';
   };
 
-  const voice1Gender = getGender(voiceConfig.voice);
-  const voice2Gender = getGender(voiceConfig.voice2);
+  // Prefer an explicit gender; voice IDs can't be read for one.
+  const voice1Gender = ('gender' in voiceConfig && voiceConfig.gender) || getGender(voiceConfig.voice);
+  const voice2Gender = ('gender2' in voiceConfig && voiceConfig.gender2) || getGender(voiceConfig.voice2);
 
   // Dialect-specific name pools
   const names = {
@@ -100,6 +117,10 @@ export const getSpeakerNames = (dialect: string): { speaker1: string; speaker2: 
     'khaleeji': {
       male: ['سالم', 'محمد', 'عبد الله', 'فهد', 'خالد', 'عبد العزيز', 'طلال', 'فيصل', 'عبد الرحمن', 'نواف'],
       female: ['نورا', 'سارة', 'ريم', 'هند', 'منى', 'عبير', 'فاطمة', 'مها', 'أمل', 'لطيفة']
+    },
+    'saudi': {
+      male: ['عبد الله', 'محمد', 'فهد', 'سعود', 'تركي', 'ماجد', 'عبد العزيز', 'فيصل', 'بندر', 'نايف'],
+      female: ['نورة', 'سارة', 'ريم', 'هيفاء', 'لمى', 'غادة', 'جواهر', 'منيرة', 'رهف', 'شهد']
     }
   };
 

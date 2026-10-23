@@ -142,7 +142,11 @@ function normalizeArrayToObject<T>(data: unknown, zodSchema: z.ZodSchema<T>): un
 				'moroccan_darija': 'darija',
 				'levantine_arabic': 'levantine',
 				'modern_standard_arabic': 'fusha',
-				'fusha': 'fusha'
+				'fusha': 'fusha',
+				'iraqi_arabic': 'iraqi',
+				'gulf_arabic': 'khaleeji',
+				'khaleeji': 'khaleeji',
+				'saudi_arabic': 'saudi'
 			};
 			
 			const normalized: Record<string, unknown> = {};
@@ -241,7 +245,10 @@ function normalizeArrayToObject<T>(data: unknown, zodSchema: z.ZodSchema<T>): un
 				'Modern Standard Arabic (Fusha)': 'fusha',
 				'Egyptian Arabic': 'egyptian',
 				'Moroccan Darija': 'darija',
-				'Levantine Arabic': 'levantine'
+				'Levantine Arabic': 'levantine',
+				'Iraqi Arabic': 'iraqi',
+				'Gulf Arabic (Khaleeji)': 'khaleeji',
+				'Saudi Arabic (Hijazi)': 'saudi'
 			};
 
 			const normalized: Record<string, { arabic: string; transliteration: string }> = {};

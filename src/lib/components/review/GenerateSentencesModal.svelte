@@ -5,6 +5,7 @@
   import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
   import { fetchUserReviewWords } from '$lib/helpers/fetch-review-words';
   import { trackEvent } from '$lib/analytics';
+  import { isSelectableDialect } from '$lib/constants/dialects';
 
   interface GeneratedItem {
     arabic: string;
@@ -30,8 +31,11 @@
     { value: 'egyptian-arabic', label: 'Egyptian Arabic' },
     { value: 'fusha', label: 'Modern Standard Arabic (Fusha)' },
     { value: 'levantine', label: 'Levantine Arabic' },
-    { value: 'darija', label: 'Moroccan Arabic (Darija)' }
-  ];
+    { value: 'darija', label: 'Moroccan Arabic (Darija)' },
+    { value: 'iraqi', label: 'Iraqi Arabic' },
+    { value: 'khaleeji', label: 'Gulf Arabic' },
+    { value: 'saudi', label: 'Saudi Arabic' }
+  ].filter((d) => isSelectableDialect(d.value));
 
   const difficultyOptions = [
     { value: 'a1', label: 'A1 (Beginner)' },

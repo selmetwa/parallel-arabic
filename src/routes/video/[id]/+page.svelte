@@ -79,6 +79,9 @@
 			'levantine': 'bg-orange-600 text-white',
 			'darija': 'bg-green-600 text-white',
 			'fusha': 'bg-purple-600 text-white',
+			'iraqi': 'bg-teal-600 text-white',
+			'khaleeji': 'bg-amber-600 text-white',
+			'saudi': 'bg-emerald-600 text-white',
 		};
 		return colors[dialect as keyof typeof colors] || 'bg-gray-600 text-white';
 	}

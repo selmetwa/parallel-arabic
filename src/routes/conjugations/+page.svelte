@@ -6,6 +6,7 @@
 	import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
 	import { type Dialect } from '$lib/types/index';
 	import { conjugationPractice as session } from '$lib/store/generated-content.svelte';
+	import { isSelectableDialect } from '$lib/constants/dialects';
 
 	let { data } = $props();
 
@@ -13,8 +14,11 @@
 		{ value: 'egyptian-arabic', label: 'Egyptian Arabic', emoji: '🇪🇬' },
 		{ value: 'fusha', label: 'Modern Standard Arabic', emoji: '📚' },
 		{ value: 'levantine', label: 'Levantine Arabic', emoji: '🇱🇧' },
-		{ value: 'darija', label: 'Moroccan Darija', emoji: '🇲🇦' }
-	];
+		{ value: 'darija', label: 'Moroccan Darija', emoji: '🇲🇦' },
+		{ value: 'iraqi', label: 'Iraqi Arabic', emoji: '🇮🇶' },
+		{ value: 'khaleeji', label: 'Gulf Arabic', emoji: '🇦🇪' },
+		{ value: 'saudi', label: 'Saudi Arabic', emoji: '🇸🇦' }
+	].filter((d) => isSelectableDialect(d.value));
 
 	const exampleVerbs = ['to write', 'to eat', 'to go', 'to drink', 'to study', 'to speak'];
 

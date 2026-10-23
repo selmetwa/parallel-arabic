@@ -126,6 +126,24 @@ export const POST: RequestHandler = async ({ request, locals }) => {
       wordList: [],
       commonWordsInstruction: '',
       wordListInstruction: 'Please use vocabulary common in Moroccan Darija conversations.'
+    },
+    'iraqi': {
+      name: 'IRAQI ARABIC',
+      wordList: [],
+      commonWordsInstruction: '',
+      wordListInstruction: 'Please use vocabulary common in Iraqi Arabic conversations.'
+    },
+    'khaleeji': {
+      name: 'GULF ARABIC (KHALEEJI)',
+      wordList: [],
+      commonWordsInstruction: '',
+      wordListInstruction: 'Please use vocabulary common in Gulf Arabic conversations.'
+    },
+    'saudi': {
+      name: 'SAUDI HIJAZI ARABIC',
+      wordList: [],
+      commonWordsInstruction: '',
+      wordListInstruction: 'Please use vocabulary common in Saudi Hijazi Arabic conversations.'
     }
   } as const;
 

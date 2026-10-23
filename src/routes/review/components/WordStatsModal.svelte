@@ -28,7 +28,8 @@
     darija: 'Moroccan Darija',
     'egyptian-arabic': 'Egyptian Arabic',
     iraqi: 'Iraqi Arabic',
-    khaleeji: 'Khaleeji Arabic'
+    khaleeji: 'Khaleeji Arabic',
+    saudi: 'Saudi Arabic (Hijazi)'
   };
 
   function getRetentionLabel(easeFactor: number): string {

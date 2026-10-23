@@ -96,7 +96,8 @@
       'fusha': 'Modern Standard Arabic',
       'levantine': 'Levantine Arabic',
       'iraqi': 'Iraqi Arabic',
-      'khaleeji': 'Khaleeji Arabic'
+      'khaleeji': 'Khaleeji Arabic',
+      'saudi': 'Saudi Arabic (Hijazi)'
     };
     return dialectNames[dialect as keyof typeof dialectNames] || dialect;
   }
@@ -109,7 +110,8 @@
       'fusha': 'bg-purple-100 text-purple-800',
       'levantine': 'bg-pink-100 text-pink-800',
       'iraqi': 'bg-yellow-100 text-yellow-800',
-      'khaleeji': 'bg-indigo-100 text-indigo-800'
+      'khaleeji': 'bg-indigo-100 text-indigo-800',
+      'saudi': 'bg-emerald-100 text-emerald-800'
     };
     return colors[dialect as keyof typeof colors] || 'bg-gray-100 text-gray-800';
   }

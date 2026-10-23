@@ -11,6 +11,9 @@
  * - in Egyptian and Levantine, letters that sound alike folded together, as in
  *   speech-spelling.ts: ق and the hamzas count as one, ث as ت, ذ as د, and
  *   Egyptian ج as گ.
+ * - in Iraqi, Gulf and Saudi, the Persian-style letters folded into the standard
+ *   ones (گ as ق, چ as ك), which speech-to-text uses; Saudi (Hijazi) also folds
+ *   ث as ت and ذ as د.
  */
 import { normalizeArabicText } from '$lib/utils/arabic-normalization';
 
@@ -40,6 +43,24 @@ const NUMBERS: Record<string, NumberWords> = {
 		tens: ['', '', 'عشرين', 'تلاتين', 'ربعين', 'خمسين', 'ستين', 'سبعين', 'تمانين', 'تسعين'],
 		hundreds: ['', 'مية', 'ميتين', 'تلتمية', 'ربعمية', 'خمسمية', 'ستمية', 'سبعمية', 'تمنمية', 'تسعمية']
 	},
+	iraqi: {
+		units: ['صفر', 'واحد', 'ثنين', 'ثلاثة', 'اربعة', 'خمسة', 'ستة', 'سبعة', 'ثمانية', 'تسعة', 'عشرة',
+			'احدعش', 'ثنعش', 'ثلطعش', 'اربعطعش', 'خمسطعش', 'سطعش', 'سبعطعش', 'ثمنطعش', 'تسعطعش'],
+		tens: ['', '', 'عشرين', 'ثلاثين', 'اربعين', 'خمسين', 'ستين', 'سبعين', 'ثمانين', 'تسعين'],
+		hundreds: ['', 'مية', 'ميتين', 'ثلثمية', 'اربعمية', 'خمسمية', 'ستمية', 'سبعمية', 'ثمنمية', 'تسعمية']
+	},
+	khaleeji: {
+		units: ['صفر', 'واحد', 'ثنين', 'ثلاثة', 'اربعة', 'خمسة', 'ستة', 'سبعة', 'ثمانية', 'تسعة', 'عشرة',
+			'احدعش', 'ثنعش', 'ثلطعش', 'اربعطعش', 'خمسطعش', 'سطعش', 'سبعطعش', 'ثمنطعش', 'تسعطعش'],
+		tens: ['', '', 'عشرين', 'ثلاثين', 'اربعين', 'خمسين', 'ستين', 'سبعين', 'ثمانين', 'تسعين'],
+		hundreds: ['', 'مية', 'ميتين', 'ثلاثمية', 'اربعمية', 'خمسمية', 'ستمية', 'سبعمية', 'ثمانمية', 'تسعمية']
+	},
+	saudi: {
+		units: ['صفر', 'واحد', 'اتنين', 'تلاتة', 'اربعة', 'خمسة', 'ستة', 'سبعة', 'تمانية', 'تسعة', 'عشرة',
+			'احدعش', 'اتنعش', 'تلتعش', 'اربعتعش', 'خمستعش', 'ستعش', 'سبعتعش', 'تمنتعش', 'تسعتعش'],
+		tens: ['', '', 'عشرين', 'تلاتين', 'اربعين', 'خمسين', 'ستين', 'سبعين', 'تمانين', 'تسعين'],
+		hundreds: ['', 'مية', 'ميتين', 'تلتمية', 'اربعمية', 'خمسمية', 'ستمية', 'سبعمية', 'تمنمية', 'تسعمية']
+	},
 	fusha: {
 		units: ['صفر', 'واحد', 'اثنان', 'ثلاثة', 'اربعة', 'خمسة', 'ستة', 'سبعة', 'ثمانية', 'تسعة', 'عشرة',
 			'احد عشر', 'اثنا عشر', 'ثلاثة عشر', 'اربعة عشر', 'خمسة عشر', 'ستة عشر', 'سبعة عشر', 'ثمانية عشر', 'تسعة عشر'],
@@ -66,15 +87,22 @@ export function numberInWords(n: number, dialect: string): string {
 
 const ARABIC_INDIC = '٠١٢٣٤٥٦٧٨٩';
 
+const GULF_IRAQI = new Set(['iraqi', 'khaleeji', 'saudi']);
+
 /** Both sides of a speaking check, in the same form. */
 export function foldForMatch(text: string, dialect: string): string {
 	const withWords = text
 		.replace(/[٠-٩]/g, (d) => String(ARABIC_INDIC.indexOf(d)))
 		.replace(/\d+/g, (digits) => ` ${numberInWords(Number(digits), dialect)} `);
-	let folded = normalizeArabicText(withWords);
+	// Before normalizing, which drops گ and چ as non-Arabic letters.
+	const standardLetters = GULF_IRAQI.has(dialect)
+		? withWords.replace(/گ/g, 'ق').replace(/چ/g, 'ك')
+		: withWords;
+	let folded = normalizeArabicText(standardLetters);
 	if (dialect === 'egyptian-arabic' || dialect === 'levantine') {
 		folded = folded.replace(/[قء]/g, 'ا').replace(/ث/g, 'ت').replace(/ذ/g, 'د');
 		if (dialect === 'egyptian-arabic') folded = folded.replace(/گ/g, 'ج');
 	}
+	if (dialect === 'saudi') folded = folded.replace(/ث/g, 'ت').replace(/ذ/g, 'د');
 	return folded.replace(/\s+/g, ' ').trim();
 }

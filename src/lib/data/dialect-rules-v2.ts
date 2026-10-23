@@ -16,7 +16,8 @@ export const DIALECT_DISPLAY_NAMES: Record<string, string> = {
 	darija: 'Moroccan Darija',
 	fusha: 'Modern Standard Arabic (Fusha)',
 	iraqi: 'Iraqi Arabic',
-	khaleeji: 'Khaleeji (Gulf) Arabic'
+	khaleeji: 'Khaleeji (Gulf) Arabic',
+	saudi: 'Saudi Arabic (Hijazi)'
 };
 
 export function getDialectName(dialect: string): string {
@@ -47,6 +48,27 @@ const DIALECT_PHONOLOGY: Record<string, string> = {
 - Present/continuous uses كا/تا prefix (كانمشي = I go/am going); future uses غادي/غا (غادي نمشي).
 - Everyday words: now = دابا, what = شنو/آش, I want = بغيت, good = مزيان. Some French loanwords are natural.
 - Negation with ما...ش (ماكانمشيش); conversational word order.`,
+
+	iraqi: `Write in authentic IRAQI ARABIC (Baghdadi) as actually spoken — NOT Modern Standard Arabic.
+- No case inflection; word endings do not change for case.
+- qaf is often g and kaf is often ch in everyday words; write those as گ and چ where Iraqis do (گال، چان، باچر), otherwise keep ق and ك.
+- Ongoing actions take da- (دا يروح / ديروح); future uses راح (راح أروح).
+- Everyday words: now = هسّه, what = شنو, how = شلون, there is / isn't = أكو / ماكو, very = كلش, good = زين.
+- Negation with ما for verbs (ما أعرف) and مو for everything else (مو زين); conversational word order.`,
+
+	khaleeji: `Write in authentic GULF ARABIC (Khaleeji, Emirati/Kuwaiti) as actually spoken — NOT Modern Standard Arabic.
+- No case inflection; word endings do not change for case.
+- qaf is usually g and jeem is often y in speech, but keep the standard spelling (ق، ج، ك); show the pronunciation in transliteration only.
+- Ongoing actions use قاعد (قاعد أكتب); future uses the b- prefix (بروح = I will go).
+- Everyday words: now = الحين, what = شو / شنو, I want = أبي, a lot / very = وايد, good = زين, also = بعد.
+- Negation with ما for verbs (ما أدري) and مب / مو for everything else; conversational word order.`,
+
+	saudi: `Write in authentic SAUDI HIJAZI ARABIC (Jeddah/Mecca) as actually spoken — NOT Modern Standard Arabic and NOT Najdi.
+- No case inflection; word endings do not change for case.
+- qaf is usually g (keep ق in writing); ث is said and written ت (تلاتة) and ذ as د (هادا).
+- Present-tense verbs take the b- prefix (بيروح / بروح); future uses the ح- prefix (حروح).
+- Everyday words: now = دحين, what = إيش, I want = أبغى, very = مرّة, like this = كدا, good = كويس.
+- Negation with ما for verbs (ما أدري) and مو for everything else (مو كدا); conversational word order.`,
 
 	fusha: `Write in clear MODERN STANDARD ARABIC (Fusha) — formal, correct written/spoken standard.
 - Use proper Standard Arabic grammar and vocabulary (this is the one variety that IS standard, not colloquial).
@@ -102,6 +124,54 @@ const MSA_TO_DIALECT: Record<string, [msa: string, dialect: string][]> = {
 		['جيد', 'مزيان'],
 		['كثير / جداً', 'بزاف'],
 		['فقط', 'غير']
+	],
+	iraqi: [
+		['ماذا', 'شنو'],
+		['لماذا', 'ليش'],
+		['كيف', 'شلون'],
+		['أين', 'وين'],
+		['الآن', 'هسّه'],
+		['سوف / سـ', 'راح (راح أروح)'],
+		['ليس', 'مو (مو زين)'],
+		['يوجد / لا يوجد', 'أكو / ماكو'],
+		['جداً', 'كلش'],
+		['كثير', 'هواية'],
+		['جيد', 'زين'],
+		['أيضاً', 'هم'],
+		['غداً', 'باچر'],
+		['الذي / التي', 'اللي']
+	],
+	khaleeji: [
+		['ماذا', 'شو / شنو'],
+		['لماذا', 'ليش'],
+		['أين', 'وين'],
+		['الآن', 'الحين'],
+		['أريد / يريد', 'أبي / يبي'],
+		['سوف / سـ', 'بـ (بروح)'],
+		['ليس', 'مب / مو'],
+		['لا أعرف', 'ما أدري'],
+		['جداً / كثير', 'وايد'],
+		['جيد', 'زين'],
+		['أيضاً', 'بعد'],
+		['غداً', 'باكر'],
+		['الذي / التي', 'اللي'],
+		['فقط', 'بس']
+	],
+	saudi: [
+		['هذا / هذه', 'هادا / هادي'],
+		['ماذا', 'إيش'],
+		['لماذا', 'ليش'],
+		['أين', 'فين'],
+		['الآن', 'دحين'],
+		['أريد / يريد', 'أبغى / يبغى'],
+		['سوف / سـ', 'حـ (حروح)'],
+		['ليس', 'مو (مو كدا)'],
+		['لا أعرف', 'ما أدري'],
+		['جداً', 'مرّة'],
+		['جيد', 'كويس'],
+		['هكذا', 'كدا'],
+		['أيضاً', 'كمان'],
+		['الذي / التي', 'اللي']
 	]
 };
 
@@ -120,7 +190,22 @@ const DIALECT_EXAMPLES: Record<string, string> = {
 	darija: `- فين غادي دابا؟ (Where are you going now?)
 - ماعرفتش شنو ندير، كاينة بزاف ديال الخدمة اليوم. (I don't know what to do, there's so much work today.)
 - غادي نتغداو برا غدا. (We'll go out for lunch tomorrow.)
-- Wrong (MSA): ماذا تريد أن تأكل الآن؟ → Right: آش بغيتي تاكل دابا؟`
+- Wrong (MSA): ماذا تريد أن تأكل الآن؟ → Right: آش بغيتي تاكل دابا؟`,
+
+	iraqi: `- وين رايح هسّه؟ (Where are you going now?)
+- ما أعرف شسوّي، أكو شغل هواية اليوم. (I don't know what to do, there's so much work today.)
+- باچر راح نطلع نتغدى برّه. (We'll go out for lunch tomorrow.)
+- Wrong (MSA): ماذا تريد أن تأكل الآن؟ → Right: شتريد تاكل هسّه؟`,
+
+	khaleeji: `- وين رايح الحين؟ (Where are you going now?)
+- ما أدري شو أسوّي، عندي شغل وايد اليوم. (I don't know what to do, I have so much work today.)
+- باكر بنطلع نتغدى برّا. (We'll go out for lunch tomorrow.)
+- Wrong (MSA): ماذا تريد أن تأكل الآن؟ → Right: شو تبي تاكل الحين؟`,
+
+	saudi: `- فين رايح دحين؟ (Where are you going now?)
+- ما أدري إيش أسوّي، عندي شغل كتير اليوم. (I don't know what to do, I have so much work today.)
+- بكرة حنطلع نتغدى برّا. (We'll go out for lunch tomorrow.)
+- Wrong (MSA): ماذا تريد أن تأكل الآن؟ → Right: إيش تبغى تاكل دحين؟`
 };
 
 /**

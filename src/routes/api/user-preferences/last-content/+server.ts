@@ -1,5 +1,6 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
+import { isDialect } from '$lib/constants/dialects';
 
 export const POST: RequestHandler = async ({ request, locals }) => {
   const { supabase, safeGetSession } = locals;
@@ -25,8 +26,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
   }
 
   // Validate dialect
-  const validDialects = ['egyptian-arabic', 'fusha', 'levantine', 'darija'];
-  if (last_content_dialect && !validDialects.includes(last_content_dialect)) {
+  if (last_content_dialect && !isDialect(last_content_dialect)) {
     return json({ error: 'Invalid dialect' }, { status: 400 });
   }
 

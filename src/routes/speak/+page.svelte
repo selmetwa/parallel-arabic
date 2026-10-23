@@ -14,6 +14,7 @@
 	import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
 	import { fetchUserReviewWords } from '$lib/helpers/fetch-review-words';
 	import { speakPractice as session } from '$lib/store/generated-content.svelte';
+	import { isSelectableDialect } from '$lib/constants/dialects';
 
 	let { data } = $props();
 
@@ -356,8 +357,32 @@
 			flag: '🇲🇦',
 			accent: '#f43f5e',
 			deep: '#9f1239'
+		},
+		{
+			value: 'iraqi',
+			label: 'Iraqi Arabic',
+			sub: 'Baghdadi',
+			flag: '🇮🇶',
+			accent: '#14b8a6',
+			deep: '#0f766e'
+		},
+		{
+			value: 'khaleeji',
+			label: 'Gulf Arabic',
+			sub: 'Khaleeji',
+			flag: '🇦🇪',
+			accent: '#06b6d4',
+			deep: '#0e7490'
+		},
+		{
+			value: 'saudi',
+			label: 'Saudi Arabic',
+			sub: 'Hijazi',
+			flag: '🇸🇦',
+			accent: '#84cc16',
+			deep: '#4d7c0f'
 		}
-	];
+	].filter((d) => isSelectableDialect(d.value));
 
 	const learningTopicOptions = [
 		{ label: 'Verb Conjugation', value: 'verb conjugation', emoji: '🔄' },

@@ -5,6 +5,7 @@ import { GoogleGenAI } from "@google/genai";
 import { generateContentWithRetry } from '$lib/utils/gemini-api-retry';
 import { createDialectComparisonSchema } from '$lib/utils/gemini-schemas';
 import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
+import { SELECTABLE_DIALECTS } from '$lib/constants/dialects';
 
 export const POST: RequestHandler = async ({ request }) => {
   const apiKey = env['GEMINI_API_KEY'];
@@ -25,11 +26,17 @@ export const POST: RequestHandler = async ({ request }) => {
     'egyptian-arabic': 'egyptian',
     'darija': 'darija',
     'levantine': 'levantine',
-    'fusha': 'fusha'
+    'fusha': 'fusha',
+    'iraqi': 'iraqi',
+    'khaleeji': 'khaleeji',
+    'saudi': 'saudi'
   };
 
   const currentDialectKey = currentDialect ? dialectMap[currentDialect] : null;
-  const dialectsToTranslate = ['egyptian', 'darija', 'levantine', 'fusha'].filter(d => d !== currentDialectKey);
+  // Every selectable dialect, plus the learner's own even while it is still hidden.
+  const comparedKeys = SELECTABLE_DIALECTS.map((d) => dialectMap[d]);
+  if (currentDialectKey && !comparedKeys.includes(currentDialectKey)) comparedKeys.push(currentDialectKey);
+  const dialectsToTranslate = comparedKeys.filter(d => d !== currentDialectKey);
 
   const { jsonSchema, zodSchema } = createDialectComparisonSchema();
 
@@ -39,7 +46,10 @@ export const POST: RequestHandler = async ({ request }) => {
       'egyptian': 'Egyptian Arabic',
       'darija': 'Moroccan Darija',
       'levantine': 'Levantine Arabic',
-      'fusha': 'Modern Standard Arabic (Fusha)'
+      'fusha': 'Modern Standard Arabic (Fusha)',
+      'iraqi': 'Iraqi Arabic',
+      'khaleeji': 'Gulf Arabic (Khaleeji)',
+      'saudi': 'Saudi Arabic (Hijazi)'
     };
     return names[d];
   }).join(', ')}.\n\n`;
@@ -49,7 +59,10 @@ export const POST: RequestHandler = async ({ request }) => {
       'egyptian': 'Egyptian Arabic',
       'darija': 'Moroccan Darija',
       'levantine': 'Levantine Arabic',
-      'fusha': 'Modern Standard Arabic (Fusha)'
+      'fusha': 'Modern Standard Arabic (Fusha)',
+      'iraqi': 'Iraqi Arabic',
+      'khaleeji': 'Gulf Arabic (Khaleeji)',
+      'saudi': 'Saudi Arabic (Hijazi)'
     };
     prompt += `For ${currentDialectName[currentDialectKey]}, use the original Arabic text exactly as provided: "${text}". `;
     if (transliteration) {
@@ -83,6 +96,10 @@ export const POST: RequestHandler = async ({ request }) => {
     console.log('compare dialects response', response.text);
     // Parse the response text as JSON using the helper that handles markdown blocks
     const parsedResponse = parseJsonFromGeminiResponse(response.text || '{}', zodSchema);
+    // The learner's own dialect is the original text; don't depend on the model echoing an optional key.
+    if (currentDialectKey && !(currentDialectKey in parsedResponse)) {
+      Object.assign(parsedResponse, { [currentDialectKey]: { arabic: text, transliteration: transliteration ?? '' } });
+    }
     return json(parsedResponse);
 
   } catch (e) {

@@ -9,6 +9,7 @@
     showVideoProcessingErrorToast 
   } from '$lib/helpers/toast-helpers';
   import PaywallModal from '$lib/components/PaywallModal.svelte';
+  import { isSelectableDialect } from '$lib/constants/dialects';
 
   interface Props {
     data: any;
@@ -169,8 +170,11 @@
     { value: 'egyptian-arabic', label: 'Egyptian Arabic' },
     { value: 'fusha', label: 'Modern Standard Arabic' },
     { value: 'levantine', label: 'Levantine Arabic' },
-    { value: 'darija', label: 'Moroccan Darija' }
-  ];
+    { value: 'darija', label: 'Moroccan Darija' },
+    { value: 'iraqi', label: 'Iraqi Arabic' },
+    { value: 'khaleeji', label: 'Gulf Arabic' },
+    { value: 'saudi', label: 'Saudi Arabic' }
+  ].filter((d) => isSelectableDialect(d.value));
 </script>
 
 <PaywallModal source="video" isOpen={isPaywallModalOpen} handleCloseModal={handleClosePaywallModal}></PaywallModal>

@@ -25,6 +25,7 @@
 	import { trackEvent } from '$lib/analytics';
 	import { TUTOR_SCENARIOS, type TutorScenario } from '$lib/constants/tutor-scenarios';
 	import { calculateWordSimilarity } from '$lib/utils/pronunciation-similarity';
+	import { isSelectableDialect } from '$lib/constants/dialects';
 
 	let { data } = $props();
 
@@ -178,8 +179,32 @@
 			emoji: '🇱🇧',
 			accent: '#10b981',
 			deep: '#047857'
+		},
+		{
+			value: 'iraqi',
+			label: 'Iraqi Arabic',
+			short: 'Iraqi',
+			emoji: '🇮🇶',
+			accent: '#14b8a6',
+			deep: '#0f766e'
+		},
+		{
+			value: 'khaleeji',
+			label: 'Gulf Arabic',
+			short: 'Khaleeji',
+			emoji: '🇦🇪',
+			accent: '#06b6d4',
+			deep: '#0e7490'
+		},
+		{
+			value: 'saudi',
+			label: 'Saudi Arabic',
+			short: 'Saudi',
+			emoji: '🇸🇦',
+			accent: '#84cc16',
+			deep: '#4d7c0f'
 		}
-	];
+	].filter((d) => isSelectableDialect(d.value));
 
 	// Scenario accents cycle so the grid reads as a set of distinct places to go.
 	const scenarioAccents = [

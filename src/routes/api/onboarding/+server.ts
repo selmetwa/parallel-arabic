@@ -4,6 +4,7 @@ import { supabase } from '$lib/supabaseClient';
 import { CEFR_LEVELS, isCefrLevel } from '$lib/constants/cefr-levels';
 import { checkUserSubscription } from '$lib/helpers/subscription';
 import type { PaywallVariant } from '$lib/server/paywall-experiment';
+import { isDialect } from '$lib/constants/dialects';
 
 export const POST: RequestHandler = async ({ request, locals }) => {
 	const { sessionId, user } = (await locals?.auth?.validate()) || {};
@@ -24,9 +25,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 	} = await request.json();
 
 	// Validate inputs
-	const validDialects = ['egyptian-arabic', 'fusha', 'levantine', 'darija'];
-
-	if (!target_dialect || !validDialects.includes(target_dialect)) {
+	if (!isDialect(target_dialect)) {
 		return json({ error: 'Invalid dialect' }, { status: 400 });
 	}
 

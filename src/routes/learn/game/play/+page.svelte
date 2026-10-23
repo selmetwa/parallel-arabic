@@ -827,7 +827,10 @@
       'egyptian-arabic': 'Egyptian',
       'levantine': 'Levantine',
       'darija': 'Darija',
-      'fusha': 'Fusha'
+      'fusha': 'Fusha',
+      'iraqi': 'Iraqi',
+      'khaleeji': 'Khaleeji',
+      'saudi': 'Saudi'
     };
     return labels[dialect] || dialect;
   }

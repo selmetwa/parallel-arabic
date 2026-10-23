@@ -37,7 +37,8 @@ function getDialectDisplayName(dialect: string) {
     'fusha': 'Modern Standard Arabic',
     'levantine': 'Levantine Arabic',
     'iraqi': 'Iraqi Arabic',
-    'khaleeji': 'Khaleeji Arabic'
+    'khaleeji': 'Khaleeji Arabic',
+    'saudi': 'Saudi Arabic (Hijazi)'
   };
   
   return dialectNames[dialect as keyof typeof dialectNames] || dialect;
