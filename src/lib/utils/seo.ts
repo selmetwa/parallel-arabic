@@ -297,7 +297,7 @@ export function getPageMeta(page: string, data?: any): PageMeta {
 			type: 'website'
 		},
 		game: {
-			title: `Arabic Games - ${GAMES.length} Free Online Games to Learn Arabic`,
+			title: `Arabic Games Online - ${GAMES.length} Free Word Games to Learn Arabic`,
 			description: `${GAMES.length} Arabic games online: word scramble, memory pairs, a daily word puzzle, listening rounds and 3D scenes. Four dialects, two free rounds each, no sign-up.`,
 			url: `${baseUrl}/learn/game`,
 			type: 'website'
@@ -534,7 +534,7 @@ export function getPageMeta(page: string, data?: any): PageMeta {
 					? `The ${Number(
 							data.count
 						).toLocaleString()} Most Common Egyptian Arabic Words | Parallel Arabic`
-					: `Egyptian Arabic ${data.label} - ${data.count} Words with Audio | Parallel Arabic`
+					: `${data.label} in Egyptian Arabic - ${data.count} Words with Audio | Parallel Arabic`
 				: 'Egyptian Arabic Vocabulary | Parallel Arabic',
 			description: data?.label
 				? `${data.count} Egyptian Arabic words for ${String(
