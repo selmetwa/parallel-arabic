@@ -1,0 +1,2264 @@
+{
+	"vocab": [
+		{
+			"arabic": "الشمال",
+			"arabicTashkeel": "الشَّمال",
+			"english": "The north",
+			"transliteration": "ish-shamaal",
+			"wordAlignments": [
+				{
+					"arabic": "الشمال",
+					"english": "The north",
+					"transliteration": "ish-shamaal"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "الجنوب",
+			"arabicTashkeel": "الجَنوب",
+			"english": "The south",
+			"transliteration": "ij-janoob",
+			"wordAlignments": [
+				{
+					"arabic": "الجنوب",
+					"english": "The south",
+					"transliteration": "ij-janoob"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "الوسط",
+			"arabicTashkeel": "الوَسَط",
+			"english": "The centre",
+			"transliteration": "il-wasat",
+			"wordAlignments": [
+				{
+					"arabic": "الوسط",
+					"english": "The centre",
+					"transliteration": "il-wasat"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "الغرب",
+			"arabicTashkeel": "الغَرب",
+			"english": "The west",
+			"transliteration": "il-gharb",
+			"wordAlignments": [
+				{
+					"arabic": "الغرب",
+					"english": "The west",
+					"transliteration": "il-gharb"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "محافظة",
+			"arabicTashkeel": "مُحافَظة",
+			"english": "Governorate",
+			"transliteration": "mu7aafadha",
+			"wordAlignments": [
+				{
+					"arabic": "محافظة",
+					"english": "Governorate",
+					"transliteration": "mu7aafadha"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "الفرات",
+			"arabicTashkeel": "الفُرات",
+			"english": "The Euphrates",
+			"transliteration": "il-furaat",
+			"wordAlignments": [
+				{
+					"arabic": "الفرات",
+					"english": "The Euphrates",
+					"transliteration": "il-furaat"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "دجلة",
+			"arabicTashkeel": "دِجلة",
+			"english": "The Tigris",
+			"transliteration": "dijla",
+			"wordAlignments": [
+				{
+					"arabic": "دجلة",
+					"english": "The Tigris",
+					"transliteration": "dijla"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "سهل",
+			"arabicTashkeel": "سَهِل",
+			"english": "Plain",
+			"transliteration": "sahil",
+			"wordAlignments": [
+				{
+					"arabic": "سهل",
+					"english": "Plain",
+					"transliteration": "sahil"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "مناخ",
+			"arabicTashkeel": "مَناخ",
+			"english": "Climate",
+			"transliteration": "manaakh",
+			"wordAlignments": [
+				{
+					"arabic": "مناخ",
+					"english": "Climate",
+					"transliteration": "manaakh"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "سكان",
+			"arabicTashkeel": "سُكّان",
+			"english": "Population",
+			"transliteration": "sukkaan",
+			"wordAlignments": [
+				{
+					"arabic": "سكان",
+					"english": "Population",
+					"transliteration": "sukkaan"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "حدود",
+			"arabicTashkeel": "حُدود",
+			"english": "Borders",
+			"transliteration": "7udood",
+			"wordAlignments": [
+				{
+					"arabic": "حدود",
+					"english": "Borders",
+					"transliteration": "7udood"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "زراعة",
+			"arabicTashkeel": "زِراعة",
+			"english": "Agriculture",
+			"transliteration": "ziraa3a",
+			"wordAlignments": [
+				{
+					"arabic": "زراعة",
+					"english": "Agriculture",
+					"transliteration": "ziraa3a"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "حقل نفط",
+			"arabicTashkeel": "حَقِل نَفُط",
+			"english": "Oil field",
+			"transliteration": "7agil nafut",
+			"wordAlignments": [
+				{
+					"arabic": "حقل",
+					"english": "Field of",
+					"transliteration": "7agil"
+				},
+				{
+					"arabic": "نفط",
+					"english": "oil",
+					"transliteration": "nafut"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "الريف",
+			"arabicTashkeel": "الرّيف",
+			"english": "Countryside",
+			"transliteration": "ir-reef",
+			"wordAlignments": [
+				{
+					"arabic": "الريف",
+					"english": "The countryside",
+					"transliteration": "ir-reef"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "خصب",
+			"arabicTashkeel": "خِصِب",
+			"english": "Fertile",
+			"transliteration": "khisib",
+			"wordAlignments": [
+				{
+					"arabic": "خصب",
+					"english": "Fertile",
+					"transliteration": "khisib"
+				}
+			],
+			"partOfSpeech": "adjective"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "شمال العراق جبلي وأخضر.",
+			"arabicTashkeel": "شَمال العِراق جَبَلي وأخضَر.",
+			"english": "The north of Iraq is mountainous and green.",
+			"transliteration": "shamaal il-3iraaq jabali w-akhdhar.",
+			"wordAlignments": [
+				{
+					"arabic": "شمال",
+					"english": "The north of",
+					"transliteration": "shamaal"
+				},
+				{
+					"arabic": "العراق",
+					"english": "Iraq is",
+					"transliteration": "il-3iraaq"
+				},
+				{
+					"arabic": "جبلي",
+					"english": "mountainous",
+					"transliteration": "jabali"
+				},
+				{
+					"arabic": "وأخضر.",
+					"english": "and green.",
+					"transliteration": "w-akhdhar."
+				}
+			],
+			"targetWords": [
+				"The north"
+			]
+		},
+		{
+			"arabic": "الجنوب حار وسهل.",
+			"arabicTashkeel": "الجَنوب حار وسَهِل.",
+			"english": "The south is hot and flat.",
+			"transliteration": "ij-janoob 7aarr w-sahil.",
+			"wordAlignments": [
+				{
+					"arabic": "الجنوب",
+					"english": "The south is",
+					"transliteration": "ij-janoob"
+				},
+				{
+					"arabic": "حار",
+					"english": "hot",
+					"transliteration": "7aarr"
+				},
+				{
+					"arabic": "وسهل.",
+					"english": "and flat.",
+					"transliteration": "w-sahil."
+				}
+			],
+			"targetWords": [
+				"The south"
+			]
+		},
+		{
+			"arabic": "بغداد بوسط العراق.",
+			"arabicTashkeel": "بَغداد بوَسَط العِراق.",
+			"english": "Baghdad is in the centre of Iraq.",
+			"transliteration": "baghdaad b-wasat il-3iraaq.",
+			"wordAlignments": [
+				{
+					"arabic": "بغداد",
+					"english": "Baghdad is",
+					"transliteration": "baghdaad"
+				},
+				{
+					"arabic": "بوسط",
+					"english": "in the centre of",
+					"transliteration": "b-wasat"
+				},
+				{
+					"arabic": "العراق.",
+					"english": "Iraq.",
+					"transliteration": "il-3iraaq."
+				}
+			],
+			"targetWords": [
+				"The centre"
+			]
+		},
+		{
+			"arabic": "الغرب أغلبه صحرا.",
+			"arabicTashkeel": "الغَرب أغلَبَه صَحرا.",
+			"english": "The west is mostly desert.",
+			"transliteration": "il-gharb aghlaba sa7ra.",
+			"wordAlignments": [
+				{
+					"arabic": "الغرب",
+					"english": "The west is",
+					"transliteration": "il-gharb"
+				},
+				{
+					"arabic": "أغلبه",
+					"english": "mostly",
+					"transliteration": "aghlaba"
+				},
+				{
+					"arabic": "صحرا.",
+					"english": "desert.",
+					"transliteration": "sa7ra."
+				}
+			],
+			"targetWords": [
+				"The west"
+			]
+		},
+		{
+			"arabic": "العراق بيه ثمنطعش محافظة.",
+			"arabicTashkeel": "العِراق بيه ثْمنطَعَش مُحافَظة.",
+			"english": "Iraq has eighteen governorates.",
+			"transliteration": "il-3iraaq bee thmunta3ash mu7aafadha.",
+			"wordAlignments": [
+				{
+					"arabic": "العراق",
+					"english": "Iraq",
+					"transliteration": "il-3iraaq"
+				},
+				{
+					"arabic": "بيه",
+					"english": "has",
+					"transliteration": "bee"
+				},
+				{
+					"arabic": "ثمنطعش",
+					"english": "eighteen",
+					"transliteration": "thmunta3ash"
+				},
+				{
+					"arabic": "محافظة.",
+					"english": "governorates.",
+					"transliteration": "mu7aafadha."
+				}
+			],
+			"targetWords": [
+				"Governorate"
+			]
+		},
+		{
+			"arabic": "الفرات يمر بكربلاء والناصرية.",
+			"arabicTashkeel": "الفُرات يْمُر بكَربَلاء والنّاصِرية.",
+			"english": "The Euphrates passes through Karbala and Nasiriyah.",
+			"transliteration": "il-furaat ymurr b-karbalaa2 w-in-naasiriyya.",
+			"wordAlignments": [
+				{
+					"arabic": "الفرات",
+					"english": "The Euphrates",
+					"transliteration": "il-furaat"
+				},
+				{
+					"arabic": "يمر",
+					"english": "passes",
+					"transliteration": "ymurr"
+				},
+				{
+					"arabic": "بكربلاء",
+					"english": "through Karbala",
+					"transliteration": "b-karbalaa2"
+				},
+				{
+					"arabic": "والناصرية.",
+					"english": "and Nasiriyah.",
+					"transliteration": "w-in-naasiriyya."
+				}
+			],
+			"targetWords": [
+				"The Euphrates"
+			]
+		},
+		{
+			"arabic": "دجلة يقسم بغداد لنصين.",
+			"arabicTashkeel": "دِجلة يْقَسِّم بَغداد لنُصّين.",
+			"english": "The Tigris divides Baghdad into two halves.",
+			"transliteration": "dijla ygassim baghdaad l-nusseen.",
+			"wordAlignments": [
+				{
+					"arabic": "دجلة",
+					"english": "The Tigris",
+					"transliteration": "dijla"
+				},
+				{
+					"arabic": "يقسم",
+					"english": "divides",
+					"transliteration": "ygassim"
+				},
+				{
+					"arabic": "بغداد",
+					"english": "Baghdad",
+					"transliteration": "baghdaad"
+				},
+				{
+					"arabic": "لنصين.",
+					"english": "into two halves.",
+					"transliteration": "l-nusseen."
+				}
+			],
+			"targetWords": [
+				"The Tigris"
+			]
+		},
+		{
+			"arabic": "السهل بين النهرين خصب.",
+			"arabicTashkeel": "السَّهِل بين النَّهرَين خِصِب.",
+			"english": "The plain between the two rivers is fertile.",
+			"transliteration": "is-sahil been in-nahrayn khisib.",
+			"wordAlignments": [
+				{
+					"arabic": "السهل",
+					"english": "The plain",
+					"transliteration": "is-sahil"
+				},
+				{
+					"arabic": "بين",
+					"english": "between",
+					"transliteration": "been"
+				},
+				{
+					"arabic": "النهرين",
+					"english": "the two rivers is",
+					"transliteration": "in-nahrayn"
+				},
+				{
+					"arabic": "خصب.",
+					"english": "fertile.",
+					"transliteration": "khisib."
+				}
+			],
+			"targetWords": [
+				"Plain",
+				"Fertile"
+			]
+		},
+		{
+			"arabic": "مناخ العراق حار وجاف.",
+			"arabicTashkeel": "مَناخ العِراق حار وجاف.",
+			"english": "Iraq's climate is hot and dry.",
+			"transliteration": "manaakh il-3iraaq 7aarr w-jaaf.",
+			"wordAlignments": [
+				{
+					"arabic": "مناخ",
+					"english": "The climate of",
+					"transliteration": "manaakh"
+				},
+				{
+					"arabic": "العراق",
+					"english": "Iraq is",
+					"transliteration": "il-3iraaq"
+				},
+				{
+					"arabic": "حار",
+					"english": "hot",
+					"transliteration": "7aarr"
+				},
+				{
+					"arabic": "وجاف.",
+					"english": "and dry.",
+					"transliteration": "w-jaaf."
+				}
+			],
+			"targetWords": [
+				"Climate"
+			]
+		},
+		{
+			"arabic": "سكان العراق أكثر من أربعين مليون.",
+			"arabicTashkeel": "سُكّان العِراق أكثَر مِن أربعين مَليون.",
+			"english": "Iraq's population is more than forty million.",
+			"transliteration": "sukkaan il-3iraaq akthar min arba3een malyoon.",
+			"wordAlignments": [
+				{
+					"arabic": "سكان",
+					"english": "The population of",
+					"transliteration": "sukkaan"
+				},
+				{
+					"arabic": "العراق",
+					"english": "Iraq is",
+					"transliteration": "il-3iraaq"
+				},
+				{
+					"arabic": "أكثر",
+					"english": "more",
+					"transliteration": "akthar"
+				},
+				{
+					"arabic": "من",
+					"english": "than",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "أربعين",
+					"english": "forty",
+					"transliteration": "arba3een"
+				},
+				{
+					"arabic": "مليون.",
+					"english": "million.",
+					"transliteration": "malyoon."
+				}
+			],
+			"targetWords": [
+				"Population"
+			]
+		},
+		{
+			"arabic": "العراق إله حدود ويا ست دول.",
+			"arabicTashkeel": "العِراق إلَه حُدود ويّا سِت دُوَل.",
+			"english": "Iraq has borders with six countries.",
+			"transliteration": "il-3iraaq ila 7udood wiyya sitt duwal.",
+			"wordAlignments": [
+				{
+					"arabic": "العراق",
+					"english": "Iraq",
+					"transliteration": "il-3iraaq"
+				},
+				{
+					"arabic": "إله",
+					"english": "has",
+					"transliteration": "ila"
+				},
+				{
+					"arabic": "حدود",
+					"english": "borders",
+					"transliteration": "7udood"
+				},
+				{
+					"arabic": "ويا",
+					"english": "with",
+					"transliteration": "wiyya"
+				},
+				{
+					"arabic": "ست",
+					"english": "six",
+					"transliteration": "sitt"
+				},
+				{
+					"arabic": "دول.",
+					"english": "countries.",
+					"transliteration": "duwal."
+				}
+			],
+			"targetWords": [
+				"Borders"
+			]
+		},
+		{
+			"arabic": "الزراعة تعتمد عالأنهار.",
+			"arabicTashkeel": "الزِّراعة تِعتِمِد عالأنهار.",
+			"english": "Agriculture depends on the rivers.",
+			"transliteration": "iz-ziraa3a ti3timid 3al-anhaar.",
+			"wordAlignments": [
+				{
+					"arabic": "الزراعة",
+					"english": "Agriculture",
+					"transliteration": "iz-ziraa3a"
+				},
+				{
+					"arabic": "تعتمد",
+					"english": "depends",
+					"transliteration": "ti3timid"
+				},
+				{
+					"arabic": "عالأنهار.",
+					"english": "on the rivers.",
+					"transliteration": "3al-anhaar."
+				}
+			],
+			"targetWords": [
+				"Agriculture"
+			]
+		},
+		{
+			"arabic": "البصرة بيها حقول نفط كبيرة.",
+			"arabicTashkeel": "البَصرة بيها حُقول نَفُط كْبيرة.",
+			"english": "Basra has big oil fields.",
+			"transliteration": "il-basra beeha 7ugool nafut chbeera.",
+			"wordAlignments": [
+				{
+					"arabic": "البصرة",
+					"english": "Basra",
+					"transliteration": "il-basra"
+				},
+				{
+					"arabic": "بيها",
+					"english": "has",
+					"transliteration": "beeha"
+				},
+				{
+					"arabic": "حقول",
+					"english": "fields of",
+					"transliteration": "7ugool"
+				},
+				{
+					"arabic": "نفط",
+					"english": "oil",
+					"transliteration": "nafut"
+				},
+				{
+					"arabic": "كبيرة.",
+					"english": "big.",
+					"transliteration": "chbeera."
+				}
+			],
+			"targetWords": [
+				"Oil field"
+			]
+		},
+		{
+			"arabic": "الحياة بالريف بسيطة.",
+			"arabicTashkeel": "الحَياة بالرّيف بَسيطة.",
+			"english": "Life in the countryside is simple.",
+			"transliteration": "il-7ayaat bir-reef baseeta.",
+			"wordAlignments": [
+				{
+					"arabic": "الحياة",
+					"english": "Life",
+					"transliteration": "il-7ayaat"
+				},
+				{
+					"arabic": "بالريف",
+					"english": "in the countryside is",
+					"transliteration": "bir-reef"
+				},
+				{
+					"arabic": "بسيطة.",
+					"english": "simple.",
+					"transliteration": "baseeta."
+				}
+			],
+			"targetWords": [
+				"Countryside"
+			]
+		},
+		{
+			"arabic": "التربة هنا خصبة هواية.",
+			"arabicTashkeel": "التُّربة هْنا خِصبة هْوايَة.",
+			"english": "The soil here is very fertile.",
+			"transliteration": "it-turba hnaa khisba hwaaya.",
+			"wordAlignments": [
+				{
+					"arabic": "التربة",
+					"english": "The soil",
+					"transliteration": "it-turba"
+				},
+				{
+					"arabic": "هنا",
+					"english": "here is",
+					"transliteration": "hnaa"
+				},
+				{
+					"arabic": "خصبة",
+					"english": "fertile",
+					"transliteration": "khisba"
+				},
+				{
+					"arabic": "هواية.",
+					"english": "very.",
+					"transliteration": "hwaaya."
+				}
+			],
+			"targetWords": [
+				"Fertile"
+			]
+		},
+		{
+			"arabic": "بالشمال ينزل ثلج بالشتا.",
+			"arabicTashkeel": "بالشَّمال يِنزِل ثَلِج بالشِّتا.",
+			"english": "In the north it snows in winter.",
+			"transliteration": "bish-shamaal yinzil thalij bish-shita.",
+			"wordAlignments": [
+				{
+					"arabic": "بالشمال",
+					"english": "In the north",
+					"transliteration": "bish-shamaal"
+				},
+				{
+					"arabic": "ينزل",
+					"english": "falls",
+					"transliteration": "yinzil"
+				},
+				{
+					"arabic": "ثلج",
+					"english": "snow",
+					"transliteration": "thalij"
+				},
+				{
+					"arabic": "بالشتا.",
+					"english": "in winter.",
+					"transliteration": "bish-shita."
+				}
+			],
+			"targetWords": [
+				"The north"
+			]
+		},
+		{
+			"arabic": "أهل الجنوب مشهورين بالكرم.",
+			"arabicTashkeel": "أهل الجَنوب مَشهورين بالكَرَم.",
+			"english": "The people of the south are famous for their generosity.",
+			"transliteration": "ahl ij-janoob mash-hooreen bil-karam.",
+			"wordAlignments": [
+				{
+					"arabic": "أهل",
+					"english": "The people of",
+					"transliteration": "ahl"
+				},
+				{
+					"arabic": "الجنوب",
+					"english": "the south are",
+					"transliteration": "ij-janoob"
+				},
+				{
+					"arabic": "مشهورين",
+					"english": "famous",
+					"transliteration": "mash-hooreen"
+				},
+				{
+					"arabic": "بالكرم.",
+					"english": "for generosity.",
+					"transliteration": "bil-karam."
+				}
+			],
+			"targetWords": [
+				"The south"
+			]
+		},
+		{
+			"arabic": "الوسط بيه أكثر سكان.",
+			"arabicTashkeel": "الوَسَط بيه أكثَر سُكّان.",
+			"english": "The centre has the most population.",
+			"transliteration": "il-wasat bee akthar sukkaan.",
+			"wordAlignments": [
+				{
+					"arabic": "الوسط",
+					"english": "The centre",
+					"transliteration": "il-wasat"
+				},
+				{
+					"arabic": "بيه",
+					"english": "has",
+					"transliteration": "bee"
+				},
+				{
+					"arabic": "أكثر",
+					"english": "most",
+					"transliteration": "akthar"
+				},
+				{
+					"arabic": "سكان.",
+					"english": "population.",
+					"transliteration": "sukkaan."
+				}
+			],
+			"targetWords": [
+				"The centre",
+				"Population"
+			]
+		},
+		{
+			"arabic": "الأنبار بغرب العراق.",
+			"arabicTashkeel": "الأنبار بغَرب العِراق.",
+			"english": "Anbar is in the west of Iraq.",
+			"transliteration": "il-anbaar b-gharb il-3iraaq.",
+			"wordAlignments": [
+				{
+					"arabic": "الأنبار",
+					"english": "Anbar is",
+					"transliteration": "il-anbaar"
+				},
+				{
+					"arabic": "بغرب",
+					"english": "in the west of",
+					"transliteration": "b-gharb"
+				},
+				{
+					"arabic": "العراق.",
+					"english": "Iraq.",
+					"transliteration": "il-3iraaq."
+				}
+			],
+			"targetWords": [
+				"The west"
+			]
+		},
+		{
+			"arabic": "محافظة البصرة بأقصى الجنوب.",
+			"arabicTashkeel": "مُحافَظة البَصرة بأقصى الجَنوب.",
+			"english": "Basra Governorate is in the far south.",
+			"transliteration": "mu7aafadhat il-basra b-agsa ij-janoob.",
+			"wordAlignments": [
+				{
+					"arabic": "محافظة",
+					"english": "The governorate of",
+					"transliteration": "mu7aafadhat"
+				},
+				{
+					"arabic": "البصرة",
+					"english": "Basra is",
+					"transliteration": "il-basra"
+				},
+				{
+					"arabic": "بأقصى",
+					"english": "in the farthest",
+					"transliteration": "b-agsa"
+				},
+				{
+					"arabic": "الجنوب.",
+					"english": "south.",
+					"transliteration": "ij-janoob."
+				}
+			],
+			"targetWords": [
+				"Governorate",
+				"The south"
+			]
+		},
+		{
+			"arabic": "الفرات يجي من تركيا.",
+			"arabicTashkeel": "الفُرات يِجي مِن تُركيا.",
+			"english": "The Euphrates comes from Turkey.",
+			"transliteration": "il-furaat yiji min turkiya.",
+			"wordAlignments": [
+				{
+					"arabic": "الفرات",
+					"english": "The Euphrates",
+					"transliteration": "il-furaat"
+				},
+				{
+					"arabic": "يجي",
+					"english": "comes",
+					"transliteration": "yiji"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "تركيا.",
+					"english": "Turkey.",
+					"transliteration": "turkiya."
+				}
+			],
+			"targetWords": [
+				"The Euphrates"
+			]
+		},
+		{
+			"arabic": "قعدنا على شط دجلة.",
+			"arabicTashkeel": "قِعَدنا عَلى شَط دِجلة.",
+			"english": "We sat on the bank of the Tigris.",
+			"transliteration": "gi3adna 3ala shatt dijla.",
+			"wordAlignments": [
+				{
+					"arabic": "قعدنا",
+					"english": "We sat",
+					"transliteration": "gi3adna"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "شط",
+					"english": "the bank of",
+					"transliteration": "shatt"
+				},
+				{
+					"arabic": "دجلة.",
+					"english": "the Tigris.",
+					"transliteration": "dijla."
+				}
+			],
+			"targetWords": [
+				"The Tigris"
+			]
+		},
+		{
+			"arabic": "سهل الرافدين واسع.",
+			"arabicTashkeel": "سَهِل الرّافِدَين واسِع.",
+			"english": "The Mesopotamian plain is wide.",
+			"transliteration": "sahil ir-raafidayn waasi3.",
+			"wordAlignments": [
+				{
+					"arabic": "سهل",
+					"english": "The plain of",
+					"transliteration": "sahil"
+				},
+				{
+					"arabic": "الرافدين",
+					"english": "the two rivers is",
+					"transliteration": "ir-raafidayn"
+				},
+				{
+					"arabic": "واسع.",
+					"english": "wide.",
+					"transliteration": "waasi3."
+				}
+			],
+			"targetWords": [
+				"Plain"
+			]
+		},
+		{
+			"arabic": "المناخ بالشمال أعدل.",
+			"arabicTashkeel": "المَناخ بالشَّمال أعدَل.",
+			"english": "The climate in the north is milder.",
+			"transliteration": "il-manaakh bish-shamaal a3dal.",
+			"wordAlignments": [
+				{
+					"arabic": "المناخ",
+					"english": "The climate",
+					"transliteration": "il-manaakh"
+				},
+				{
+					"arabic": "بالشمال",
+					"english": "in the north is",
+					"transliteration": "bish-shamaal"
+				},
+				{
+					"arabic": "أعدل.",
+					"english": "milder.",
+					"transliteration": "a3dal."
+				}
+			],
+			"targetWords": [
+				"Climate",
+				"The north"
+			]
+		},
+		{
+			"arabic": "أغلب السكان شباب.",
+			"arabicTashkeel": "أغلَب السُّكّان شَباب.",
+			"english": "Most of the population is young.",
+			"transliteration": "aghlab is-sukkaan shabaab.",
+			"wordAlignments": [
+				{
+					"arabic": "أغلب",
+					"english": "Most of",
+					"transliteration": "aghlab"
+				},
+				{
+					"arabic": "السكان",
+					"english": "the population",
+					"transliteration": "is-sukkaan"
+				},
+				{
+					"arabic": "شباب.",
+					"english": "are young.",
+					"transliteration": "shabaab."
+				}
+			],
+			"targetWords": [
+				"Population"
+			]
+		},
+		{
+			"arabic": "الحدود ويا إيران طويلة.",
+			"arabicTashkeel": "الحُدود ويّا إيران طْويلة.",
+			"english": "The borders with Iran are long.",
+			"transliteration": "il-7udood wiyya eeraan tweela.",
+			"wordAlignments": [
+				{
+					"arabic": "الحدود",
+					"english": "The borders",
+					"transliteration": "il-7udood"
+				},
+				{
+					"arabic": "ويا",
+					"english": "with",
+					"transliteration": "wiyya"
+				},
+				{
+					"arabic": "إيران",
+					"english": "Iran are",
+					"transliteration": "eeraan"
+				},
+				{
+					"arabic": "طويلة.",
+					"english": "long.",
+					"transliteration": "tweela."
+				}
+			],
+			"targetWords": [
+				"Borders"
+			]
+		},
+		{
+			"arabic": "النخل أهم زراعة بالجنوب.",
+			"arabicTashkeel": "النَّخَل أهَم زِراعة بالجَنوب.",
+			"english": "Date palms are the most important agriculture in the south.",
+			"transliteration": "in-nakhal aham ziraa3a bij-janoob.",
+			"wordAlignments": [
+				{
+					"arabic": "النخل",
+					"english": "Palm trees are",
+					"transliteration": "in-nakhal"
+				},
+				{
+					"arabic": "أهم",
+					"english": "the most important",
+					"transliteration": "aham"
+				},
+				{
+					"arabic": "زراعة",
+					"english": "agriculture",
+					"transliteration": "ziraa3a"
+				},
+				{
+					"arabic": "بالجنوب.",
+					"english": "in the south.",
+					"transliteration": "bij-janoob."
+				}
+			],
+			"targetWords": [
+				"Agriculture"
+			]
+		},
+		{
+			"arabic": "حقول النفط تنطي أغلب الفلوس.",
+			"arabicTashkeel": "حُقول النَّفُط تِنطي أغلَب الفْلوس.",
+			"english": "Oil fields provide most of the money.",
+			"transliteration": "7ugool in-nafut tinti aghlab il-floos.",
+			"wordAlignments": [
+				{
+					"arabic": "حقول",
+					"english": "The fields of",
+					"transliteration": "7ugool"
+				},
+				{
+					"arabic": "النفط",
+					"english": "oil",
+					"transliteration": "in-nafut"
+				},
+				{
+					"arabic": "تنطي",
+					"english": "give",
+					"transliteration": "tinti"
+				},
+				{
+					"arabic": "أغلب",
+					"english": "most of",
+					"transliteration": "aghlab"
+				},
+				{
+					"arabic": "الفلوس.",
+					"english": "the money.",
+					"transliteration": "il-floos."
+				}
+			],
+			"targetWords": [
+				"Oil field"
+			]
+		},
+		{
+			"arabic": "جدي وجدتي يسكنون بالريف.",
+			"arabicTashkeel": "جَدّي وجِدَّتي يِسكنون بالرّيف.",
+			"english": "My grandparents live in the countryside.",
+			"transliteration": "jiddi w-jiddati yiskinoon bir-reef.",
+			"wordAlignments": [
+				{
+					"arabic": "جدي",
+					"english": "My grandfather",
+					"transliteration": "jiddi"
+				},
+				{
+					"arabic": "وجدتي",
+					"english": "and my grandmother",
+					"transliteration": "w-jiddati"
+				},
+				{
+					"arabic": "يسكنون",
+					"english": "live",
+					"transliteration": "yiskinoon"
+				},
+				{
+					"arabic": "بالريف.",
+					"english": "in the countryside.",
+					"transliteration": "bir-reef."
+				}
+			],
+			"targetWords": [
+				"Countryside"
+			]
+		},
+		{
+			"arabic": "أرض خصبة يم النهر.",
+			"arabicTashkeel": "أرض خِصبة يَم النَّهَر.",
+			"english": "Fertile land near the river.",
+			"transliteration": "ardh khisba yamm in-nahar.",
+			"wordAlignments": [
+				{
+					"arabic": "أرض",
+					"english": "Land",
+					"transliteration": "ardh"
+				},
+				{
+					"arabic": "خصبة",
+					"english": "fertile",
+					"transliteration": "khisba"
+				},
+				{
+					"arabic": "يم",
+					"english": "near",
+					"transliteration": "yamm"
+				},
+				{
+					"arabic": "النهر.",
+					"english": "the river.",
+					"transliteration": "in-nahar."
+				}
+			],
+			"targetWords": [
+				"Fertile"
+			]
+		},
+		{
+			"arabic": "السياح يحبون الشمال بالصيف.",
+			"arabicTashkeel": "السُّيّاح يْحِبّون الشَّمال بالصّيف.",
+			"english": "Tourists love the north in summer.",
+			"transliteration": "is-suyyaa7 y7ibboon ish-shamaal bis-seef.",
+			"wordAlignments": [
+				{
+					"arabic": "السياح",
+					"english": "Tourists",
+					"transliteration": "is-suyyaa7"
+				},
+				{
+					"arabic": "يحبون",
+					"english": "love",
+					"transliteration": "y7ibboon"
+				},
+				{
+					"arabic": "الشمال",
+					"english": "the north",
+					"transliteration": "ish-shamaal"
+				},
+				{
+					"arabic": "بالصيف.",
+					"english": "in summer.",
+					"transliteration": "bis-seef."
+				}
+			],
+			"targetWords": [
+				"The north"
+			]
+		},
+		{
+			"arabic": "الأهوار بالجنوب.",
+			"arabicTashkeel": "الأهوار بالجَنوب.",
+			"english": "The marshes are in the south.",
+			"transliteration": "il-ahwaar bij-janoob.",
+			"wordAlignments": [
+				{
+					"arabic": "الأهوار",
+					"english": "The marshes are",
+					"transliteration": "il-ahwaar"
+				},
+				{
+					"arabic": "بالجنوب.",
+					"english": "in the south.",
+					"transliteration": "bij-janoob."
+				}
+			],
+			"targetWords": [
+				"The south"
+			]
+		},
+		{
+			"arabic": "الحياة بالوسط مزدحمة.",
+			"arabicTashkeel": "الحَياة بالوَسَط مَزدَحمة.",
+			"english": "Life in the centre is busy.",
+			"transliteration": "il-7ayaat bil-wasat mazda7ma.",
+			"wordAlignments": [
+				{
+					"arabic": "الحياة",
+					"english": "Life",
+					"transliteration": "il-7ayaat"
+				},
+				{
+					"arabic": "بالوسط",
+					"english": "in the centre is",
+					"transliteration": "bil-wasat"
+				},
+				{
+					"arabic": "مزدحمة.",
+					"english": "busy.",
+					"transliteration": "mazda7ma."
+				}
+			],
+			"targetWords": [
+				"The centre"
+			]
+		},
+		{
+			"arabic": "الصحرا الغربية كبيرة هواية.",
+			"arabicTashkeel": "الصَّحرا الغَربية كْبيرة هْوايَة.",
+			"english": "The western desert is huge.",
+			"transliteration": "is-sa7ra il-gharbiyya chbeera hwaaya.",
+			"wordAlignments": [
+				{
+					"arabic": "الصحرا",
+					"english": "The desert",
+					"transliteration": "is-sa7ra"
+				},
+				{
+					"arabic": "الغربية",
+					"english": "western is",
+					"transliteration": "il-gharbiyya"
+				},
+				{
+					"arabic": "كبيرة",
+					"english": "big",
+					"transliteration": "chbeera"
+				},
+				{
+					"arabic": "هواية.",
+					"english": "very.",
+					"transliteration": "hwaaya."
+				}
+			],
+			"targetWords": [
+				"The west"
+			]
+		},
+		{
+			"arabic": "من يا محافظة إنت؟",
+			"arabicTashkeel": "مِن يا مُحافَظة إنتَ؟",
+			"english": "Which governorate are you from?",
+			"transliteration": "min ya mu7aafadha inta?",
+			"wordAlignments": [
+				{
+					"arabic": "من",
+					"english": "From",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "يا",
+					"english": "which",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "محافظة",
+					"english": "governorate",
+					"transliteration": "mu7aafadha"
+				},
+				{
+					"arabic": "إنت؟",
+					"english": "are you?",
+					"transliteration": "inta?"
+				}
+			],
+			"targetWords": [
+				"Governorate"
+			]
+		},
+		{
+			"arabic": "دجلة والفرات يلتقون بالقرنة.",
+			"arabicTashkeel": "دِجلة والفُرات يِلتَقون بالقُرنة.",
+			"english": "The Tigris and Euphrates meet at Qurna.",
+			"transliteration": "dijla w-il-furaat yiltagoon bil-gurna.",
+			"wordAlignments": [
+				{
+					"arabic": "دجلة",
+					"english": "The Tigris",
+					"transliteration": "dijla"
+				},
+				{
+					"arabic": "والفرات",
+					"english": "and the Euphrates",
+					"transliteration": "w-il-furaat"
+				},
+				{
+					"arabic": "يلتقون",
+					"english": "meet",
+					"transliteration": "yiltagoon"
+				},
+				{
+					"arabic": "بالقرنة.",
+					"english": "at Qurna.",
+					"transliteration": "bil-gurna."
+				}
+			],
+			"targetWords": [
+				"The Tigris",
+				"The Euphrates"
+			]
+		},
+		{
+			"arabic": "الحنطة تطلع بالسهل الشمالي.",
+			"arabicTashkeel": "الحِنطة تِطلَع بالسَّهِل الشَّمالي.",
+			"english": "Wheat grows in the northern plain.",
+			"transliteration": "il-7inta titla3 bis-sahil ish-shamaali.",
+			"wordAlignments": [
+				{
+					"arabic": "الحنطة",
+					"english": "Wheat",
+					"transliteration": "il-7inta"
+				},
+				{
+					"arabic": "تطلع",
+					"english": "grows",
+					"transliteration": "titla3"
+				},
+				{
+					"arabic": "بالسهل",
+					"english": "in the plain",
+					"transliteration": "bis-sahil"
+				},
+				{
+					"arabic": "الشمالي.",
+					"english": "northern.",
+					"transliteration": "ish-shamaali."
+				}
+			],
+			"targetWords": [
+				"Plain"
+			]
+		},
+		{
+			"arabic": "تغير المناخ يأثر عالأنهار.",
+			"arabicTashkeel": "تغَيُّر المَناخ يأثِّر عالأنهار.",
+			"english": "Climate change affects the rivers.",
+			"transliteration": "tghayyur il-manaakh y2aththir 3al-anhaar.",
+			"wordAlignments": [
+				{
+					"arabic": "تغير",
+					"english": "The change of",
+					"transliteration": "tghayyur"
+				},
+				{
+					"arabic": "المناخ",
+					"english": "the climate",
+					"transliteration": "il-manaakh"
+				},
+				{
+					"arabic": "يأثر",
+					"english": "affects",
+					"transliteration": "y2aththir"
+				},
+				{
+					"arabic": "عالأنهار.",
+					"english": "the rivers.",
+					"transliteration": "3al-anhaar."
+				}
+			],
+			"targetWords": [
+				"Climate"
+			]
+		},
+		{
+			"arabic": "سكان بغداد تقريبا تسعة ملايين.",
+			"arabicTashkeel": "سُكّان بَغداد تَقريباً تِسعة مَلايين.",
+			"english": "The population of Baghdad is about nine million.",
+			"transliteration": "sukkaan baghdaad tagreeban tis3a malaayeen.",
+			"wordAlignments": [
+				{
+					"arabic": "سكان",
+					"english": "The population of",
+					"transliteration": "sukkaan"
+				},
+				{
+					"arabic": "بغداد",
+					"english": "Baghdad is",
+					"transliteration": "baghdaad"
+				},
+				{
+					"arabic": "تقريبا",
+					"english": "about",
+					"transliteration": "tagreeban"
+				},
+				{
+					"arabic": "تسعة",
+					"english": "nine",
+					"transliteration": "tis3a"
+				},
+				{
+					"arabic": "ملايين.",
+					"english": "million.",
+					"transliteration": "malaayeen."
+				}
+			],
+			"targetWords": [
+				"Population"
+			]
+		},
+		{
+			"arabic": "عبرنا الحدود للأردن.",
+			"arabicTashkeel": "عِبَرنا الحُدود للأُردُن.",
+			"english": "We crossed the border to Jordan.",
+			"transliteration": "3ibarna il-7udood lil-urdun.",
+			"wordAlignments": [
+				{
+					"arabic": "عبرنا",
+					"english": "We crossed",
+					"transliteration": "3ibarna"
+				},
+				{
+					"arabic": "الحدود",
+					"english": "the border",
+					"transliteration": "il-7udood"
+				},
+				{
+					"arabic": "للأردن.",
+					"english": "to Jordan.",
+					"transliteration": "lil-urdun."
+				}
+			],
+			"targetWords": [
+				"Borders"
+			]
+		},
+		{
+			"arabic": "الزراعة تحتاج ماي.",
+			"arabicTashkeel": "الزِّراعة تِحتاج ماي.",
+			"english": "Agriculture needs water.",
+			"transliteration": "iz-ziraa3a ti7taaj maay.",
+			"wordAlignments": [
+				{
+					"arabic": "الزراعة",
+					"english": "Agriculture",
+					"transliteration": "iz-ziraa3a"
+				},
+				{
+					"arabic": "تحتاج",
+					"english": "needs",
+					"transliteration": "ti7taaj"
+				},
+				{
+					"arabic": "ماي.",
+					"english": "water.",
+					"transliteration": "maay."
+				}
+			],
+			"targetWords": [
+				"Agriculture"
+			]
+		},
+		{
+			"arabic": "العمال بحقل النفط.",
+			"arabicTashkeel": "العُمّال بحَقِل النَّفُط.",
+			"english": "Workers at the oil field.",
+			"transliteration": "il-3ummaal b-7agil in-nafut.",
+			"wordAlignments": [
+				{
+					"arabic": "العمال",
+					"english": "The workers",
+					"transliteration": "il-3ummaal"
+				},
+				{
+					"arabic": "بحقل",
+					"english": "at the field of",
+					"transliteration": "b-7agil"
+				},
+				{
+					"arabic": "النفط.",
+					"english": "oil.",
+					"transliteration": "in-nafut."
+				}
+			],
+			"targetWords": [
+				"Oil field"
+			]
+		},
+		{
+			"arabic": "الريف هادي وحلو.",
+			"arabicTashkeel": "الرّيف هادي وحِلو.",
+			"english": "The countryside is quiet and beautiful.",
+			"transliteration": "ir-reef haadi w-7ilu.",
+			"wordAlignments": [
+				{
+					"arabic": "الريف",
+					"english": "The countryside is",
+					"transliteration": "ir-reef"
+				},
+				{
+					"arabic": "هادي",
+					"english": "quiet",
+					"transliteration": "haadi"
+				},
+				{
+					"arabic": "وحلو.",
+					"english": "and beautiful.",
+					"transliteration": "w-7ilu."
+				}
+			],
+			"targetWords": [
+				"Countryside"
+			]
+		},
+		{
+			"arabic": "أرض خصبة وماي كافي.",
+			"arabicTashkeel": "أرض خِصبة وماي كافي.",
+			"english": "Fertile land and enough water.",
+			"transliteration": "ardh khisba w-maay kaafi.",
+			"wordAlignments": [
+				{
+					"arabic": "أرض",
+					"english": "Land",
+					"transliteration": "ardh"
+				},
+				{
+					"arabic": "خصبة",
+					"english": "fertile",
+					"transliteration": "khisba"
+				},
+				{
+					"arabic": "وماي",
+					"english": "and water",
+					"transliteration": "w-maay"
+				},
+				{
+					"arabic": "كافي.",
+					"english": "enough.",
+					"transliteration": "kaafi."
+				}
+			],
+			"targetWords": [
+				"Fertile"
+			]
+		},
+		{
+			"arabic": "الموصل أكبر مدينة بالشمال.",
+			"arabicTashkeel": "المَوصِل أكبَر مَدينة بالشَّمال.",
+			"english": "Mosul is the biggest city in the north.",
+			"transliteration": "il-mawsil akbar madeena bish-shamaal.",
+			"wordAlignments": [
+				{
+					"arabic": "الموصل",
+					"english": "Mosul is",
+					"transliteration": "il-mawsil"
+				},
+				{
+					"arabic": "أكبر",
+					"english": "the biggest",
+					"transliteration": "akbar"
+				},
+				{
+					"arabic": "مدينة",
+					"english": "city",
+					"transliteration": "madeena"
+				},
+				{
+					"arabic": "بالشمال.",
+					"english": "in the north.",
+					"transliteration": "bish-shamaal."
+				}
+			],
+			"targetWords": [
+				"The north"
+			]
+		},
+		{
+			"arabic": "من الشمال للجنوب.",
+			"arabicTashkeel": "مِن الشَّمال للجَنوب.",
+			"english": "From the north to the south.",
+			"transliteration": "min ish-shamaal lij-janoob.",
+			"wordAlignments": [
+				{
+					"arabic": "من",
+					"english": "From",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الشمال",
+					"english": "the north",
+					"transliteration": "ish-shamaal"
+				},
+				{
+					"arabic": "للجنوب.",
+					"english": "to the south.",
+					"transliteration": "lij-janoob."
+				}
+			],
+			"targetWords": [
+				"The north",
+				"The south"
+			]
+		},
+		{
+			"arabic": "كربلاء والنجف بالفرات الأوسط.",
+			"arabicTashkeel": "كَربَلاء والنَّجَف بالفُرات الأوسَط.",
+			"english": "Karbala and Najaf are in the middle Euphrates region.",
+			"transliteration": "karbalaa2 w-in-najaf bil-furaat il-awsat.",
+			"wordAlignments": [
+				{
+					"arabic": "كربلاء",
+					"english": "Karbala",
+					"transliteration": "karbalaa2"
+				},
+				{
+					"arabic": "والنجف",
+					"english": "and Najaf are",
+					"transliteration": "w-in-najaf"
+				},
+				{
+					"arabic": "بالفرات",
+					"english": "in the Euphrates",
+					"transliteration": "bil-furaat"
+				},
+				{
+					"arabic": "الأوسط.",
+					"english": "middle.",
+					"transliteration": "il-awsat."
+				}
+			],
+			"targetWords": [
+				"The Euphrates"
+			]
+		},
+		{
+			"arabic": "محافظ المحافظة.",
+			"arabicTashkeel": "مُحافِظ المُحافَظة.",
+			"english": "The governor of the governorate.",
+			"transliteration": "mu7aafidh il-mu7aafadha.",
+			"wordAlignments": [
+				{
+					"arabic": "محافظ",
+					"english": "The governor of",
+					"transliteration": "mu7aafidh"
+				},
+				{
+					"arabic": "المحافظة.",
+					"english": "the governorate.",
+					"transliteration": "il-mu7aafadha."
+				}
+			],
+			"targetWords": [
+				"Governorate"
+			]
+		},
+		{
+			"arabic": "دجلة واطي هالسنة.",
+			"arabicTashkeel": "دِجلة واطي هالسَّنة.",
+			"english": "The Tigris is lower this year.",
+			"transliteration": "dijla waati has-sana.",
+			"wordAlignments": [
+				{
+					"arabic": "دجلة",
+					"english": "The Tigris is",
+					"transliteration": "dijla"
+				},
+				{
+					"arabic": "واطي",
+					"english": "low",
+					"transliteration": "waati"
+				},
+				{
+					"arabic": "هالسنة.",
+					"english": "this year.",
+					"transliteration": "has-sana."
+				}
+			],
+			"targetWords": [
+				"The Tigris"
+			]
+		},
+		{
+			"arabic": "سهل أخضر.",
+			"arabicTashkeel": "سَهِل أخضَر.",
+			"english": "A green plain.",
+			"transliteration": "sahil akhdhar.",
+			"wordAlignments": [
+				{
+					"arabic": "سهل",
+					"english": "A plain",
+					"transliteration": "sahil"
+				},
+				{
+					"arabic": "أخضر.",
+					"english": "green.",
+					"transliteration": "akhdhar."
+				}
+			],
+			"targetWords": [
+				"Plain"
+			]
+		},
+		{
+			"arabic": "المناخ بالجنوب رطب.",
+			"arabicTashkeel": "المَناخ بالجَنوب رَطب.",
+			"english": "The climate in the south is humid.",
+			"transliteration": "il-manaakh bij-janoob ratib.",
+			"wordAlignments": [
+				{
+					"arabic": "المناخ",
+					"english": "The climate",
+					"transliteration": "il-manaakh"
+				},
+				{
+					"arabic": "بالجنوب",
+					"english": "in the south is",
+					"transliteration": "bij-janoob"
+				},
+				{
+					"arabic": "رطب.",
+					"english": "humid.",
+					"transliteration": "ratib."
+				}
+			],
+			"targetWords": [
+				"Climate"
+			]
+		},
+		{
+			"arabic": "سكان دا يزدادون.",
+			"arabicTashkeel": "سُكّان دا يِزدادون.",
+			"english": "A growing population.",
+			"transliteration": "sukkaan da yizdaadoon.",
+			"wordAlignments": [
+				{
+					"arabic": "سكان",
+					"english": "A population",
+					"transliteration": "sukkaan"
+				},
+				{
+					"arabic": "دا",
+					"english": "ongoing",
+					"transliteration": "da"
+				},
+				{
+					"arabic": "يزدادون.",
+					"english": "increasing.",
+					"transliteration": "yizdaadoon."
+				}
+			],
+			"targetWords": [
+				"Population"
+			]
+		},
+		{
+			"arabic": "حدود مسدودة.",
+			"arabicTashkeel": "حُدود مَسدودة.",
+			"english": "Closed borders.",
+			"transliteration": "7udood masdooda.",
+			"wordAlignments": [
+				{
+					"arabic": "حدود",
+					"english": "Borders",
+					"transliteration": "7udood"
+				},
+				{
+					"arabic": "مسدودة.",
+					"english": "closed.",
+					"transliteration": "masdooda."
+				}
+			],
+			"targetWords": [
+				"Borders"
+			]
+		},
+		{
+			"arabic": "زراعة حديثة.",
+			"arabicTashkeel": "زِراعة حَديثة.",
+			"english": "Modern agriculture.",
+			"transliteration": "ziraa3a 7adeetha.",
+			"wordAlignments": [
+				{
+					"arabic": "زراعة",
+					"english": "Agriculture",
+					"transliteration": "ziraa3a"
+				},
+				{
+					"arabic": "حديثة.",
+					"english": "modern.",
+					"transliteration": "7adeetha."
+				}
+			],
+			"targetWords": [
+				"Agriculture"
+			]
+		},
+		{
+			"arabic": "أكبر حقل نفط بالعراق.",
+			"arabicTashkeel": "أكبَر حَقِل نَفُط بالعِراق.",
+			"english": "The biggest oil field in Iraq.",
+			"transliteration": "akbar 7agil nafut bil-3iraaq.",
+			"wordAlignments": [
+				{
+					"arabic": "أكبر",
+					"english": "The biggest",
+					"transliteration": "akbar"
+				},
+				{
+					"arabic": "حقل",
+					"english": "field of",
+					"transliteration": "7agil"
+				},
+				{
+					"arabic": "نفط",
+					"english": "oil",
+					"transliteration": "nafut"
+				},
+				{
+					"arabic": "بالعراق.",
+					"english": "in Iraq.",
+					"transliteration": "bil-3iraaq."
+				}
+			],
+			"targetWords": [
+				"Oil field"
+			]
+		},
+		{
+			"arabic": "الريف والمدينة.",
+			"arabicTashkeel": "الرّيف والمَدينة.",
+			"english": "The countryside and the city.",
+			"transliteration": "ir-reef w-il-madeena.",
+			"wordAlignments": [
+				{
+					"arabic": "الريف",
+					"english": "The countryside",
+					"transliteration": "ir-reef"
+				},
+				{
+					"arabic": "والمدينة.",
+					"english": "and the city.",
+					"transliteration": "w-il-madeena."
+				}
+			],
+			"targetWords": [
+				"Countryside"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "The Regions of Iraq",
+			"sentences": [
+				{
+					"arabic": "العراق متقسم لثمنطعش محافظة، وكل منطقة إلها طبيعتها.",
+					"arabicTashkeel": "العِراق مِتقَسِّم لثْمنطَعَش مُحافَظة، وكُل مَنطِقة إلها طَبيعتها.",
+					"english": "Iraq is divided into eighteen governorates, and each region has its own nature.",
+					"transliteration": "il-3iraaq mitgassim l-thmunta3ash mu7aafadha, w-kull mantiga ilha tabee3atha.",
+					"wordAlignments": [
+						{
+							"arabic": "العراق",
+							"english": "Iraq",
+							"transliteration": "il-3iraaq"
+						},
+						{
+							"arabic": "متقسم",
+							"english": "is divided",
+							"transliteration": "mitgassim"
+						},
+						{
+							"arabic": "لثمنطعش",
+							"english": "into eighteen",
+							"transliteration": "l-thmunta3ash"
+						},
+						{
+							"arabic": "محافظة،",
+							"english": "governorates,",
+							"transliteration": "mu7aafadha,"
+						},
+						{
+							"arabic": "وكل",
+							"english": "and every",
+							"transliteration": "w-kull"
+						},
+						{
+							"arabic": "منطقة",
+							"english": "region",
+							"transliteration": "mantiga"
+						},
+						{
+							"arabic": "إلها",
+							"english": "has",
+							"transliteration": "ilha"
+						},
+						{
+							"arabic": "طبيعتها.",
+							"english": "its nature.",
+							"transliteration": "tabee3atha."
+						}
+					]
+				},
+				{
+					"arabic": "الشمال جبلي، مناخه أعدل وبيه ثلج بالشتا.",
+					"arabicTashkeel": "الشَّمال جَبَلي، مَناخَه أعدَل وبيه ثَلِج بالشِّتا.",
+					"english": "The north is mountainous, with a milder climate and snow in winter.",
+					"transliteration": "ish-shamaal jabali, manaakha a3dal w-bee thalij bish-shita.",
+					"wordAlignments": [
+						{
+							"arabic": "الشمال",
+							"english": "The north is",
+							"transliteration": "ish-shamaal"
+						},
+						{
+							"arabic": "جبلي،",
+							"english": "mountainous,",
+							"transliteration": "jabali,"
+						},
+						{
+							"arabic": "مناخه",
+							"english": "its climate is",
+							"transliteration": "manaakha"
+						},
+						{
+							"arabic": "أعدل",
+							"english": "milder",
+							"transliteration": "a3dal"
+						},
+						{
+							"arabic": "وبيه",
+							"english": "and it has",
+							"transliteration": "w-bee"
+						},
+						{
+							"arabic": "ثلج",
+							"english": "snow",
+							"transliteration": "thalij"
+						},
+						{
+							"arabic": "بالشتا.",
+							"english": "in winter.",
+							"transliteration": "bish-shita."
+						}
+					]
+				},
+				{
+					"arabic": "الوسط سهل خصب بين دجلة والفرات.",
+					"arabicTashkeel": "الوَسَط سَهِل خِصِب بين دِجلة والفُرات.",
+					"english": "The centre is a fertile plain between the Tigris and the Euphrates.",
+					"transliteration": "il-wasat sahil khisib been dijla w-il-furaat.",
+					"wordAlignments": [
+						{
+							"arabic": "الوسط",
+							"english": "The centre is",
+							"transliteration": "il-wasat"
+						},
+						{
+							"arabic": "سهل",
+							"english": "a plain",
+							"transliteration": "sahil"
+						},
+						{
+							"arabic": "خصب",
+							"english": "fertile",
+							"transliteration": "khisib"
+						},
+						{
+							"arabic": "بين",
+							"english": "between",
+							"transliteration": "been"
+						},
+						{
+							"arabic": "دجلة",
+							"english": "the Tigris",
+							"transliteration": "dijla"
+						},
+						{
+							"arabic": "والفرات.",
+							"english": "and the Euphrates.",
+							"transliteration": "w-il-furaat."
+						}
+					]
+				},
+				{
+					"arabic": "الغرب صحرا كبيرة، والجنوب بيه الأهوار والنخل.",
+					"arabicTashkeel": "الغَرب صَحرا كْبيرة، والجَنوب بيه الأهوار والنَّخَل.",
+					"english": "The west is a huge desert, and the south has the marshes and palm trees.",
+					"transliteration": "il-gharb sa7ra chbeera, w-ij-janoob bee il-ahwaar w-in-nakhal.",
+					"wordAlignments": [
+						{
+							"arabic": "الغرب",
+							"english": "The west is",
+							"transliteration": "il-gharb"
+						},
+						{
+							"arabic": "صحرا",
+							"english": "a desert",
+							"transliteration": "sa7ra"
+						},
+						{
+							"arabic": "كبيرة،",
+							"english": "big,",
+							"transliteration": "chbeera,"
+						},
+						{
+							"arabic": "والجنوب",
+							"english": "and the south",
+							"transliteration": "w-ij-janoob"
+						},
+						{
+							"arabic": "بيه",
+							"english": "has",
+							"transliteration": "bee"
+						},
+						{
+							"arabic": "الأهوار",
+							"english": "the marshes",
+							"transliteration": "il-ahwaar"
+						},
+						{
+							"arabic": "والنخل.",
+							"english": "and the palm trees.",
+							"transliteration": "w-in-nakhal."
+						}
+					]
+				},
+				{
+					"arabic": "أغلب حقول النفط بالجنوب، خصوصا بالبصرة.",
+					"arabicTashkeel": "أغلَب حُقول النَّفُط بالجَنوب، خُصوصاً بالبَصرة.",
+					"english": "Most of the oil fields are in the south, especially in Basra.",
+					"transliteration": "aghlab 7ugool in-nafut bij-janoob, khusoosan bil-basra.",
+					"wordAlignments": [
+						{
+							"arabic": "أغلب",
+							"english": "Most of",
+							"transliteration": "aghlab"
+						},
+						{
+							"arabic": "حقول",
+							"english": "the fields of",
+							"transliteration": "7ugool"
+						},
+						{
+							"arabic": "النفط",
+							"english": "oil are",
+							"transliteration": "in-nafut"
+						},
+						{
+							"arabic": "بالجنوب،",
+							"english": "in the south,",
+							"transliteration": "bij-janoob,"
+						},
+						{
+							"arabic": "خصوصا",
+							"english": "especially",
+							"transliteration": "khusoosan"
+						},
+						{
+							"arabic": "بالبصرة.",
+							"english": "in Basra.",
+							"transliteration": "bil-basra."
+						}
+					]
+				},
+				{
+					"arabic": "الزراعة مهمة، بس تغير المناخ دا يأثر عالأنهار.",
+					"arabicTashkeel": "الزِّراعة مُهِمّة، بَس تغَيُّر المَناخ دا يأثِّر عالأنهار.",
+					"english": "Agriculture is important, but climate change is affecting the rivers.",
+					"transliteration": "iz-ziraa3a muhimma, bas tghayyur il-manaakh da y2aththir 3al-anhaar.",
+					"wordAlignments": [
+						{
+							"arabic": "الزراعة",
+							"english": "Agriculture is",
+							"transliteration": "iz-ziraa3a"
+						},
+						{
+							"arabic": "مهمة،",
+							"english": "important,",
+							"transliteration": "muhimma,"
+						},
+						{
+							"arabic": "بس",
+							"english": "but",
+							"transliteration": "bas"
+						},
+						{
+							"arabic": "تغير",
+							"english": "the change of",
+							"transliteration": "tghayyur"
+						},
+						{
+							"arabic": "المناخ",
+							"english": "the climate",
+							"transliteration": "il-manaakh"
+						},
+						{
+							"arabic": "دا",
+							"english": "is",
+							"transliteration": "da"
+						},
+						{
+							"arabic": "يأثر",
+							"english": "affecting",
+							"transliteration": "y2aththir"
+						},
+						{
+							"arabic": "عالأنهار.",
+							"english": "the rivers.",
+							"transliteration": "3al-anhaar."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "Where the Rivers Meet",
+			"sentences": [
+				{
+					"arabic": "دجلة والفرات يلتقون بالقرنة، شمال البصرة.",
+					"arabicTashkeel": "دِجلة والفُرات يِلتَقون بالقُرنة، شَمال البَصرة.",
+					"english": "The Tigris and the Euphrates meet at Qurna, north of Basra.",
+					"transliteration": "dijla w-il-furaat yiltagoon bil-gurna, shamaal il-basra.",
+					"wordAlignments": [
+						{
+							"arabic": "دجلة",
+							"english": "The Tigris",
+							"transliteration": "dijla"
+						},
+						{
+							"arabic": "والفرات",
+							"english": "and the Euphrates",
+							"transliteration": "w-il-furaat"
+						},
+						{
+							"arabic": "يلتقون",
+							"english": "meet",
+							"transliteration": "yiltagoon"
+						},
+						{
+							"arabic": "بالقرنة،",
+							"english": "at Qurna,",
+							"transliteration": "bil-gurna,"
+						},
+						{
+							"arabic": "شمال",
+							"english": "north of",
+							"transliteration": "shamaal"
+						},
+						{
+							"arabic": "البصرة.",
+							"english": "Basra.",
+							"transliteration": "il-basra."
+						}
+					]
+				},
+				{
+					"arabic": "سوية يسوون شط العرب، اللي يروح للخليج.",
+					"arabicTashkeel": "سْوَيّة يْسَوّون شَط العَرَب، اللي يْروح للخَليج.",
+					"english": "Together they form the Shatt al-Arab, which flows to the Gulf.",
+					"transliteration": "swayya ysawwoon shatt il-3arab, illi yrooh lil-khaleej.",
+					"wordAlignments": [
+						{
+							"arabic": "سوية",
+							"english": "Together",
+							"transliteration": "swayya"
+						},
+						{
+							"arabic": "يسوون",
+							"english": "they make",
+							"transliteration": "ysawwoon"
+						},
+						{
+							"arabic": "شط",
+							"english": "the Shatt",
+							"transliteration": "shatt"
+						},
+						{
+							"arabic": "العرب،",
+							"english": "al-Arab,",
+							"transliteration": "il-3arab,"
+						},
+						{
+							"arabic": "اللي",
+							"english": "which",
+							"transliteration": "illi"
+						},
+						{
+							"arabic": "يروح",
+							"english": "goes",
+							"transliteration": "yrooh"
+						},
+						{
+							"arabic": "للخليج.",
+							"english": "to the Gulf.",
+							"transliteration": "lil-khaleej."
+						}
+					]
+				},
+				{
+					"arabic": "الأرض اللي حواليهم أخصب أرض بالبلد.",
+					"arabicTashkeel": "الأرض اللي حَوالَيهُم أخصَب أرض بالبَلَد.",
+					"english": "The land around them is the most fertile in the country.",
+					"transliteration": "il-ardh illi 7awaalayhum akhsab ardh bil-balad.",
+					"wordAlignments": [
+						{
+							"arabic": "الأرض",
+							"english": "The land",
+							"transliteration": "il-ardh"
+						},
+						{
+							"arabic": "اللي",
+							"english": "that is",
+							"transliteration": "illi"
+						},
+						{
+							"arabic": "حواليهم",
+							"english": "around them is",
+							"transliteration": "7awaalayhum"
+						},
+						{
+							"arabic": "أخصب",
+							"english": "the most fertile",
+							"transliteration": "akhsab"
+						},
+						{
+							"arabic": "أرض",
+							"english": "land",
+							"transliteration": "ardh"
+						},
+						{
+							"arabic": "بالبلد.",
+							"english": "in the country.",
+							"transliteration": "bil-balad."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is looking at a map of Iraq with an Iraqi geography teacher and asking about the different regions.",
+		"studentRole": "A curious learner of Iraqi Arabic.",
+		"otherRole": "A geography teacher who loves Iraq's landscapes.",
+		"goalEnglish": "Ask about each region (north, south, centre, west), the rivers, the climate, the population and the economy (agriculture and oil), and where your Iraqi friends come from.",
+		"targetWords": [
+			"The north",
+			"The south",
+			"Governorate",
+			"The Tigris",
+			"The Euphrates",
+			"Climate",
+			"Agriculture",
+			"Oil field"
+		]
+	}
+}

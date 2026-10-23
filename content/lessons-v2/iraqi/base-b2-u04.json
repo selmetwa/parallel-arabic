@@ -1,0 +1,2313 @@
+{
+	"vocab": [
+		{
+			"arabic": "الوطن العربي",
+			"arabicTashkeel": "الوَطَن العَرَبي",
+			"english": "The Arab world",
+			"transliteration": "il-watan il-3arabi",
+			"wordAlignments": [
+				{
+					"arabic": "الوطن",
+					"english": "The homeland",
+					"transliteration": "il-watan"
+				},
+				{
+					"arabic": "العربي",
+					"english": "Arab",
+					"transliteration": "il-3arabi"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "مصر",
+			"arabicTashkeel": "مَصِر",
+			"english": "Egypt",
+			"transliteration": "masir",
+			"wordAlignments": [
+				{
+					"arabic": "مصر",
+					"english": "Egypt",
+					"transliteration": "masir"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "الشام",
+			"arabicTashkeel": "الشّام",
+			"english": "The Levant",
+			"transliteration": "ish-shaam",
+			"wordAlignments": [
+				{
+					"arabic": "الشام",
+					"english": "The Levant",
+					"transliteration": "ish-shaam"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "الخليج",
+			"arabicTashkeel": "الخَليج",
+			"english": "The Gulf",
+			"transliteration": "il-khaleej",
+			"wordAlignments": [
+				{
+					"arabic": "الخليج",
+					"english": "The Gulf",
+					"transliteration": "il-khaleej"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "المغرب",
+			"arabicTashkeel": "المَغرِب",
+			"english": "Morocco",
+			"transliteration": "il-maghrib",
+			"wordAlignments": [
+				{
+					"arabic": "المغرب",
+					"english": "Morocco",
+					"transliteration": "il-maghrib"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "لهجة",
+			"arabicTashkeel": "لَهجة",
+			"english": "Dialect",
+			"transliteration": "lahja",
+			"wordAlignments": [
+				{
+					"arabic": "لهجة",
+					"english": "Dialect",
+					"transliteration": "lahja"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "تقاليد",
+			"arabicTashkeel": "تَقاليد",
+			"english": "Traditions",
+			"transliteration": "tagaaleed",
+			"wordAlignments": [
+				{
+					"arabic": "تقاليد",
+					"english": "Traditions",
+					"transliteration": "tagaaleed"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "لبس تقليدي",
+			"arabicTashkeel": "لِبِس تَقليدي",
+			"english": "Traditional dress",
+			"transliteration": "libis tagleedi",
+			"wordAlignments": [
+				{
+					"arabic": "لبس",
+					"english": "Clothing",
+					"transliteration": "libis"
+				},
+				{
+					"arabic": "تقليدي",
+					"english": "traditional",
+					"transliteration": "tagleedi"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "مطبخ",
+			"arabicTashkeel": "مَطبَخ",
+			"english": "Cuisine",
+			"transliteration": "matbakh",
+			"wordAlignments": [
+				{
+					"arabic": "مطبخ",
+					"english": "Kitchen",
+					"transliteration": "matbakh"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "يشبه",
+			"arabicTashkeel": "يِشبَه",
+			"english": "It resembles",
+			"transliteration": "yishbah",
+			"wordAlignments": [
+				{
+					"arabic": "يشبه",
+					"english": "It resembles",
+					"transliteration": "yishbah"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "مختلف",
+			"arabicTashkeel": "مُختَلِف",
+			"english": "Different",
+			"transliteration": "mukhtalif",
+			"wordAlignments": [
+				{
+					"arabic": "مختلف",
+					"english": "Different",
+					"transliteration": "mukhtalif"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "مشترك",
+			"arabicTashkeel": "مُشتَرَك",
+			"english": "Shared / common",
+			"transliteration": "mushtarak",
+			"wordAlignments": [
+				{
+					"arabic": "مشترك",
+					"english": "Shared",
+					"transliteration": "mushtarak"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "مجاور",
+			"arabicTashkeel": "مُجاوِر",
+			"english": "Neighbouring",
+			"transliteration": "mujaawir",
+			"wordAlignments": [
+				{
+					"arabic": "مجاور",
+					"english": "Neighbouring",
+					"transliteration": "mujaawir"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "هوية",
+			"arabicTashkeel": "هَوية",
+			"english": "Identity",
+			"transliteration": "hawiyya",
+			"wordAlignments": [
+				{
+					"arabic": "هوية",
+					"english": "Identity",
+					"transliteration": "hawiyya"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "تنوع",
+			"arabicTashkeel": "تَنَوُّع",
+			"english": "Diversity",
+			"transliteration": "tanawwu3",
+			"wordAlignments": [
+				{
+					"arabic": "تنوع",
+					"english": "Diversity",
+					"transliteration": "tanawwu3"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "الوطن العربي بيه إثنين وعشرين دولة.",
+			"arabicTashkeel": "الوَطَن العَرَبي بيه إثنَين وعِشرين دَولة.",
+			"english": "The Arab world has twenty-two countries.",
+			"transliteration": "il-watan il-3arabi bee ithnayn w-3ishreen dawla.",
+			"wordAlignments": [
+				{
+					"arabic": "الوطن",
+					"english": "The homeland",
+					"transliteration": "il-watan"
+				},
+				{
+					"arabic": "العربي",
+					"english": "Arab",
+					"transliteration": "il-3arabi"
+				},
+				{
+					"arabic": "بيه",
+					"english": "has",
+					"transliteration": "bee"
+				},
+				{
+					"arabic": "إثنين",
+					"english": "two",
+					"transliteration": "ithnayn"
+				},
+				{
+					"arabic": "وعشرين",
+					"english": "and twenty",
+					"transliteration": "w-3ishreen"
+				},
+				{
+					"arabic": "دولة.",
+					"english": "countries.",
+					"transliteration": "dawla."
+				}
+			],
+			"targetWords": [
+				"The Arab world"
+			]
+		},
+		{
+			"arabic": "أفلام مصر مشهورة بكل الدول العربية.",
+			"arabicTashkeel": "أفلام مَصِر مَشهورة بكُل الدُّوَل العَرَبية.",
+			"english": "Egyptian films are famous in all Arab countries.",
+			"transliteration": "aflaam masir mash-hoora b-kull id-duwal il-3arabiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "أفلام",
+					"english": "The films of",
+					"transliteration": "aflaam"
+				},
+				{
+					"arabic": "مصر",
+					"english": "Egypt are",
+					"transliteration": "masir"
+				},
+				{
+					"arabic": "مشهورة",
+					"english": "famous",
+					"transliteration": "mash-hoora"
+				},
+				{
+					"arabic": "بكل",
+					"english": "in all",
+					"transliteration": "b-kull"
+				},
+				{
+					"arabic": "الدول",
+					"english": "the countries",
+					"transliteration": "id-duwal"
+				},
+				{
+					"arabic": "العربية.",
+					"english": "Arab.",
+					"transliteration": "il-3arabiyya."
+				}
+			],
+			"targetWords": [
+				"Egypt"
+			]
+		},
+		{
+			"arabic": "أكل الشام يشبه الأكل العراقي.",
+			"arabicTashkeel": "أكِل الشّام يِشبَه الأكِل العِراقي.",
+			"english": "Levantine food is similar to Iraqi food.",
+			"transliteration": "akil ish-shaam yishbah il-akil il-3iraaqi.",
+			"wordAlignments": [
+				{
+					"arabic": "أكل",
+					"english": "The food of",
+					"transliteration": "akil"
+				},
+				{
+					"arabic": "الشام",
+					"english": "the Levant",
+					"transliteration": "ish-shaam"
+				},
+				{
+					"arabic": "يشبه",
+					"english": "resembles",
+					"transliteration": "yishbah"
+				},
+				{
+					"arabic": "الأكل",
+					"english": "the food",
+					"transliteration": "il-akil"
+				},
+				{
+					"arabic": "العراقي.",
+					"english": "Iraqi.",
+					"transliteration": "il-3iraaqi."
+				}
+			],
+			"targetWords": [
+				"The Levant",
+				"It resembles"
+			]
+		},
+		{
+			"arabic": "دول الخليج غنية بالنفط.",
+			"arabicTashkeel": "دُوَل الخَليج غَنية بالنَّفُط.",
+			"english": "The Gulf countries are rich in oil.",
+			"transliteration": "duwal il-khaleej ghaniyya bin-nafut.",
+			"wordAlignments": [
+				{
+					"arabic": "دول",
+					"english": "The countries of",
+					"transliteration": "duwal"
+				},
+				{
+					"arabic": "الخليج",
+					"english": "the Gulf are",
+					"transliteration": "il-khaleej"
+				},
+				{
+					"arabic": "غنية",
+					"english": "rich",
+					"transliteration": "ghaniyya"
+				},
+				{
+					"arabic": "بالنفط.",
+					"english": "in oil.",
+					"transliteration": "bin-nafut."
+				}
+			],
+			"targetWords": [
+				"The Gulf"
+			]
+		},
+		{
+			"arabic": "المغرب بعيد، بالطرف الثاني من الوطن العربي.",
+			"arabicTashkeel": "المَغرِب بْعيد، بالطَّرَف الثّاني مِن الوَطَن العَرَبي.",
+			"english": "Morocco is far, at the other end of the Arab world.",
+			"transliteration": "il-maghrib b3eed, bit-taraf ith-thaani min il-watan il-3arabi.",
+			"wordAlignments": [
+				{
+					"arabic": "المغرب",
+					"english": "Morocco is",
+					"transliteration": "il-maghrib"
+				},
+				{
+					"arabic": "بعيد،",
+					"english": "far,",
+					"transliteration": "b3eed,"
+				},
+				{
+					"arabic": "بالطرف",
+					"english": "at the end",
+					"transliteration": "bit-taraf"
+				},
+				{
+					"arabic": "الثاني",
+					"english": "other",
+					"transliteration": "ith-thaani"
+				},
+				{
+					"arabic": "من",
+					"english": "of",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الوطن",
+					"english": "the homeland",
+					"transliteration": "il-watan"
+				},
+				{
+					"arabic": "العربي.",
+					"english": "Arab.",
+					"transliteration": "il-3arabi."
+				}
+			],
+			"targetWords": [
+				"Morocco",
+				"The Arab world"
+			]
+		},
+		{
+			"arabic": "كل دولة إلها لهجتها.",
+			"arabicTashkeel": "كُل دَولة إلها لَهجتها.",
+			"english": "Every country has its own dialect.",
+			"transliteration": "kull dawla ilha lahjat-ha.",
+			"wordAlignments": [
+				{
+					"arabic": "كل",
+					"english": "Every",
+					"transliteration": "kull"
+				},
+				{
+					"arabic": "دولة",
+					"english": "country",
+					"transliteration": "dawla"
+				},
+				{
+					"arabic": "إلها",
+					"english": "has",
+					"transliteration": "ilha"
+				},
+				{
+					"arabic": "لهجتها.",
+					"english": "its dialect.",
+					"transliteration": "lahjat-ha."
+				}
+			],
+			"targetWords": [
+				"Dialect"
+			]
+		},
+		{
+			"arabic": "التقاليد العربية تتشابه بهواية أشياء.",
+			"arabicTashkeel": "التَّقاليد العَرَبية تِتشابَه بهْوايَة أشياء.",
+			"english": "Arab traditions are similar in many things.",
+			"transliteration": "it-tagaaleed il-3arabiyya titshaabah b-hwaaya ashyaa2.",
+			"wordAlignments": [
+				{
+					"arabic": "التقاليد",
+					"english": "The traditions",
+					"transliteration": "it-tagaaleed"
+				},
+				{
+					"arabic": "العربية",
+					"english": "Arab",
+					"transliteration": "il-3arabiyya"
+				},
+				{
+					"arabic": "تتشابه",
+					"english": "resemble each other",
+					"transliteration": "titshaabah"
+				},
+				{
+					"arabic": "بهواية",
+					"english": "in many",
+					"transliteration": "b-hwaaya"
+				},
+				{
+					"arabic": "أشياء.",
+					"english": "things.",
+					"transliteration": "ashyaa2."
+				}
+			],
+			"targetWords": [
+				"Traditions",
+				"It resembles"
+			]
+		},
+		{
+			"arabic": "الدشداشة لبس تقليدي بالعراق والخليج.",
+			"arabicTashkeel": "الدِّشداشة لِبِس تَقليدي بالعِراق والخَليج.",
+			"english": "The dishdasha is traditional dress in Iraq and the Gulf.",
+			"transliteration": "id-dishdaasha libis tagleedi bil-3iraaq w-il-khaleej.",
+			"wordAlignments": [
+				{
+					"arabic": "الدشداشة",
+					"english": "The dishdasha is",
+					"transliteration": "id-dishdaasha"
+				},
+				{
+					"arabic": "لبس",
+					"english": "clothing",
+					"transliteration": "libis"
+				},
+				{
+					"arabic": "تقليدي",
+					"english": "traditional",
+					"transliteration": "tagleedi"
+				},
+				{
+					"arabic": "بالعراق",
+					"english": "in Iraq",
+					"transliteration": "bil-3iraaq"
+				},
+				{
+					"arabic": "والخليج.",
+					"english": "and the Gulf.",
+					"transliteration": "w-il-khaleej."
+				}
+			],
+			"targetWords": [
+				"Traditional dress",
+				"The Gulf"
+			]
+		},
+		{
+			"arabic": "المطبخ المغربي مشهور بالكسكس.",
+			"arabicTashkeel": "المَطبَخ المَغرِبي مَشهور بالكُسكُس.",
+			"english": "Moroccan cuisine is famous for couscous.",
+			"transliteration": "il-matbakh il-maghribi mash-hoor bil-kuskus.",
+			"wordAlignments": [
+				{
+					"arabic": "المطبخ",
+					"english": "The cuisine",
+					"transliteration": "il-matbakh"
+				},
+				{
+					"arabic": "المغربي",
+					"english": "Moroccan is",
+					"transliteration": "il-maghribi"
+				},
+				{
+					"arabic": "مشهور",
+					"english": "famous",
+					"transliteration": "mash-hoor"
+				},
+				{
+					"arabic": "بالكسكس.",
+					"english": "for couscous.",
+					"transliteration": "bil-kuskus."
+				}
+			],
+			"targetWords": [
+				"Cuisine",
+				"Morocco"
+			]
+		},
+		{
+			"arabic": "اللهجة المصرية مختلفة عن العراقية.",
+			"arabicTashkeel": "اللَّهجة المَصرية مُختَلفة عَن العِراقية.",
+			"english": "The Egyptian dialect is different from the Iraqi one.",
+			"transliteration": "il-lahja il-masriyya mukhtalfa 3an il-3iraaqiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "اللهجة",
+					"english": "The dialect",
+					"transliteration": "il-lahja"
+				},
+				{
+					"arabic": "المصرية",
+					"english": "Egyptian is",
+					"transliteration": "il-masriyya"
+				},
+				{
+					"arabic": "مختلفة",
+					"english": "different",
+					"transliteration": "mukhtalfa"
+				},
+				{
+					"arabic": "عن",
+					"english": "from",
+					"transliteration": "3an"
+				},
+				{
+					"arabic": "العراقية.",
+					"english": "the Iraqi.",
+					"transliteration": "il-3iraaqiyya."
+				}
+			],
+			"targetWords": [
+				"Dialect",
+				"Different"
+			]
+		},
+		{
+			"arabic": "عدنا لغة وتاريخ مشترك.",
+			"arabicTashkeel": "عِدنا لُغة وتاريخ مُشتَرَك.",
+			"english": "We have a shared language and history.",
+			"transliteration": "3idna lugha w-taareekh mushtarak.",
+			"wordAlignments": [
+				{
+					"arabic": "عدنا",
+					"english": "We have",
+					"transliteration": "3idna"
+				},
+				{
+					"arabic": "لغة",
+					"english": "a language",
+					"transliteration": "lugha"
+				},
+				{
+					"arabic": "وتاريخ",
+					"english": "and history",
+					"transliteration": "w-taareekh"
+				},
+				{
+					"arabic": "مشترك.",
+					"english": "shared.",
+					"transliteration": "mushtarak."
+				}
+			],
+			"targetWords": [
+				"Shared / common"
+			]
+		},
+		{
+			"arabic": "الدول المجاورة للعراق.",
+			"arabicTashkeel": "الدُّوَل المُجاوِرة للعِراق.",
+			"english": "Iraq's neighbouring countries.",
+			"transliteration": "id-duwal il-mujaawira lil-3iraaq.",
+			"wordAlignments": [
+				{
+					"arabic": "الدول",
+					"english": "The countries",
+					"transliteration": "id-duwal"
+				},
+				{
+					"arabic": "المجاورة",
+					"english": "neighbouring",
+					"transliteration": "il-mujaawira"
+				},
+				{
+					"arabic": "للعراق.",
+					"english": "to Iraq.",
+					"transliteration": "lil-3iraaq."
+				}
+			],
+			"targetWords": [
+				"Neighbouring"
+			]
+		},
+		{
+			"arabic": "الهوية العربية بيها تنوع.",
+			"arabicTashkeel": "الهَوية العَرَبية بيها تَنَوُّع.",
+			"english": "Arab identity is diverse.",
+			"transliteration": "il-hawiyya il-3arabiyya beeha tanawwu3.",
+			"wordAlignments": [
+				{
+					"arabic": "الهوية",
+					"english": "The identity",
+					"transliteration": "il-hawiyya"
+				},
+				{
+					"arabic": "العربية",
+					"english": "Arab",
+					"transliteration": "il-3arabiyya"
+				},
+				{
+					"arabic": "بيها",
+					"english": "has",
+					"transliteration": "beeha"
+				},
+				{
+					"arabic": "تنوع.",
+					"english": "diversity.",
+					"transliteration": "tanawwu3."
+				}
+			],
+			"targetWords": [
+				"Identity",
+				"Diversity"
+			]
+		},
+		{
+			"arabic": "تنوع العراق قوته.",
+			"arabicTashkeel": "تَنَوُّع العِراق قوّتَه.",
+			"english": "Iraq's diversity is its strength.",
+			"transliteration": "tanawwu3 il-3iraaq guwwata.",
+			"wordAlignments": [
+				{
+					"arabic": "تنوع",
+					"english": "The diversity of",
+					"transliteration": "tanawwu3"
+				},
+				{
+					"arabic": "العراق",
+					"english": "Iraq is",
+					"transliteration": "il-3iraaq"
+				},
+				{
+					"arabic": "قوته.",
+					"english": "its strength.",
+					"transliteration": "guwwata."
+				}
+			],
+			"targetWords": [
+				"Diversity"
+			]
+		},
+		{
+			"arabic": "نفسي أزور مصر وأشوف الأهرامات.",
+			"arabicTashkeel": "نَفسي أزور مَصِر وأشوف الأهرامات.",
+			"english": "I'd love to visit Egypt and see the pyramids.",
+			"transliteration": "nafsi azoor masir w-ashoof il-ahraamaat.",
+			"wordAlignments": [
+				{
+					"arabic": "نفسي",
+					"english": "I'd really love",
+					"transliteration": "nafsi"
+				},
+				{
+					"arabic": "أزور",
+					"english": "to visit",
+					"transliteration": "azoor"
+				},
+				{
+					"arabic": "مصر",
+					"english": "Egypt",
+					"transliteration": "masir"
+				},
+				{
+					"arabic": "وأشوف",
+					"english": "and see",
+					"transliteration": "w-ashoof"
+				},
+				{
+					"arabic": "الأهرامات.",
+					"english": "the pyramids.",
+					"transliteration": "il-ahraamaat."
+				}
+			],
+			"targetWords": [
+				"Egypt"
+			]
+		},
+		{
+			"arabic": "دمشق قلب الشام.",
+			"arabicTashkeel": "دِمَشق قَلُب الشّام.",
+			"english": "Damascus is the heart of the Levant.",
+			"transliteration": "dimashq galub ish-shaam.",
+			"wordAlignments": [
+				{
+					"arabic": "دمشق",
+					"english": "Damascus is",
+					"transliteration": "dimashq"
+				},
+				{
+					"arabic": "قلب",
+					"english": "the heart of",
+					"transliteration": "galub"
+				},
+				{
+					"arabic": "الشام.",
+					"english": "the Levant.",
+					"transliteration": "ish-shaam."
+				}
+			],
+			"targetWords": [
+				"The Levant"
+			]
+		},
+		{
+			"arabic": "لهجة الخليج قريبة من لهجة الجنوب.",
+			"arabicTashkeel": "لَهجة الخَليج قْريبة مِن لَهجة الجَنوب.",
+			"english": "The Gulf dialect is close to southern Iraqi.",
+			"transliteration": "lahjat il-khaleej greeba min lahjat ij-janoob.",
+			"wordAlignments": [
+				{
+					"arabic": "لهجة",
+					"english": "The dialect of",
+					"transliteration": "lahjat"
+				},
+				{
+					"arabic": "الخليج",
+					"english": "the Gulf is",
+					"transliteration": "il-khaleej"
+				},
+				{
+					"arabic": "قريبة",
+					"english": "close",
+					"transliteration": "greeba"
+				},
+				{
+					"arabic": "من",
+					"english": "to",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "لهجة",
+					"english": "the dialect of",
+					"transliteration": "lahjat"
+				},
+				{
+					"arabic": "الجنوب.",
+					"english": "the south.",
+					"transliteration": "ij-janoob."
+				}
+			],
+			"targetWords": [
+				"The Gulf",
+				"Dialect"
+			]
+		},
+		{
+			"arabic": "الدارجة المغربية صعبة عالعراقيين.",
+			"arabicTashkeel": "الدّارجة المَغرِبية صَعبة عالعِراقيين.",
+			"english": "Moroccan Darija is hard for Iraqis.",
+			"transliteration": "id-daarja il-maghribiyya sa3ba 3al-3iraaqiyyeen.",
+			"wordAlignments": [
+				{
+					"arabic": "الدارجة",
+					"english": "Darija",
+					"transliteration": "id-daarja"
+				},
+				{
+					"arabic": "المغربية",
+					"english": "Moroccan is",
+					"transliteration": "il-maghribiyya"
+				},
+				{
+					"arabic": "صعبة",
+					"english": "hard",
+					"transliteration": "sa3ba"
+				},
+				{
+					"arabic": "عالعراقيين.",
+					"english": "for Iraqis.",
+					"transliteration": "3al-3iraaqiyyeen."
+				}
+			],
+			"targetWords": [
+				"Morocco",
+				"Dialect"
+			]
+		},
+		{
+			"arabic": "إحترام التقاليد مهم.",
+			"arabicTashkeel": "إحتِرام التَّقاليد مُهِم.",
+			"english": "Respecting traditions is important.",
+			"transliteration": "i7tiraam it-tagaaleed muhimm.",
+			"wordAlignments": [
+				{
+					"arabic": "إحترام",
+					"english": "Respecting",
+					"transliteration": "i7tiraam"
+				},
+				{
+					"arabic": "التقاليد",
+					"english": "the traditions is",
+					"transliteration": "it-tagaaleed"
+				},
+				{
+					"arabic": "مهم.",
+					"english": "important.",
+					"transliteration": "muhimm."
+				}
+			],
+			"targetWords": [
+				"Traditions"
+			]
+		},
+		{
+			"arabic": "اللبس التقليدي للنسوان بالجنوب العباية.",
+			"arabicTashkeel": "اللِّبِس التَّقليدي للنِّسوان بالجَنوب العَباية.",
+			"english": "Women's traditional dress in the south is the abaya.",
+			"transliteration": "il-libis it-tagleedi lin-niswaan bij-janoob il-3abaaya.",
+			"wordAlignments": [
+				{
+					"arabic": "اللبس",
+					"english": "The clothing",
+					"transliteration": "il-libis"
+				},
+				{
+					"arabic": "التقليدي",
+					"english": "traditional",
+					"transliteration": "it-tagleedi"
+				},
+				{
+					"arabic": "للنسوان",
+					"english": "for women",
+					"transliteration": "lin-niswaan"
+				},
+				{
+					"arabic": "بالجنوب",
+					"english": "in the south is",
+					"transliteration": "bij-janoob"
+				},
+				{
+					"arabic": "العباية.",
+					"english": "the abaya.",
+					"transliteration": "il-3abaaya."
+				}
+			],
+			"targetWords": [
+				"Traditional dress"
+			]
+		},
+		{
+			"arabic": "المطبخ العراقي بيه أكلات تمن هواية.",
+			"arabicTashkeel": "المَطبَخ العِراقي بيه أكلات تِمَّن هْوايَة.",
+			"english": "Iraqi cuisine has many rice dishes.",
+			"transliteration": "il-matbakh il-3iraaqi bee aklaat timman hwaaya.",
+			"wordAlignments": [
+				{
+					"arabic": "المطبخ",
+					"english": "The cuisine",
+					"transliteration": "il-matbakh"
+				},
+				{
+					"arabic": "العراقي",
+					"english": "Iraqi",
+					"transliteration": "il-3iraaqi"
+				},
+				{
+					"arabic": "بيه",
+					"english": "has",
+					"transliteration": "bee"
+				},
+				{
+					"arabic": "أكلات",
+					"english": "dishes",
+					"transliteration": "aklaat"
+				},
+				{
+					"arabic": "تمن",
+					"english": "of rice",
+					"transliteration": "timman"
+				},
+				{
+					"arabic": "هواية.",
+					"english": "many.",
+					"transliteration": "hwaaya."
+				}
+			],
+			"targetWords": [
+				"Cuisine"
+			]
+		},
+		{
+			"arabic": "البصرة تشبه الكويت بهواية أشياء.",
+			"arabicTashkeel": "البَصرة تِشبَه الكُوَيت بهْوايَة أشياء.",
+			"english": "Basra resembles Kuwait in many things.",
+			"transliteration": "il-basra tishbah il-kuwayt b-hwaaya ashyaa2.",
+			"wordAlignments": [
+				{
+					"arabic": "البصرة",
+					"english": "Basra",
+					"transliteration": "il-basra"
+				},
+				{
+					"arabic": "تشبه",
+					"english": "resembles",
+					"transliteration": "tishbah"
+				},
+				{
+					"arabic": "الكويت",
+					"english": "Kuwait",
+					"transliteration": "il-kuwayt"
+				},
+				{
+					"arabic": "بهواية",
+					"english": "in many",
+					"transliteration": "b-hwaaya"
+				},
+				{
+					"arabic": "أشياء.",
+					"english": "things.",
+					"transliteration": "ashyaa2."
+				}
+			],
+			"targetWords": [
+				"It resembles"
+			]
+		},
+		{
+			"arabic": "كل منطقة إلها عادات مختلفة.",
+			"arabicTashkeel": "كُل مَنطِقة إلها عادات مُختَلفة.",
+			"english": "Each region has different customs.",
+			"transliteration": "kull mantiga ilha 3aadaat mukhtalfa.",
+			"wordAlignments": [
+				{
+					"arabic": "كل",
+					"english": "Every",
+					"transliteration": "kull"
+				},
+				{
+					"arabic": "منطقة",
+					"english": "region",
+					"transliteration": "mantiga"
+				},
+				{
+					"arabic": "إلها",
+					"english": "has",
+					"transliteration": "ilha"
+				},
+				{
+					"arabic": "عادات",
+					"english": "customs",
+					"transliteration": "3aadaat"
+				},
+				{
+					"arabic": "مختلفة.",
+					"english": "different.",
+					"transliteration": "mukhtalfa."
+				}
+			],
+			"targetWords": [
+				"Different"
+			]
+		},
+		{
+			"arabic": "أعياد مشتركة مثل العيدين.",
+			"arabicTashkeel": "أعياد مُشتَرَكة مِثل العيدَين.",
+			"english": "Shared holidays like the two Eids.",
+			"transliteration": "a3yaad mushtaraka mithil il-3eedayn.",
+			"wordAlignments": [
+				{
+					"arabic": "أعياد",
+					"english": "Holidays",
+					"transliteration": "a3yaad"
+				},
+				{
+					"arabic": "مشتركة",
+					"english": "shared",
+					"transliteration": "mushtaraka"
+				},
+				{
+					"arabic": "مثل",
+					"english": "like",
+					"transliteration": "mithil"
+				},
+				{
+					"arabic": "العيدين.",
+					"english": "the two Eids.",
+					"transliteration": "il-3eedayn."
+				}
+			],
+			"targetWords": [
+				"Shared / common"
+			]
+		},
+		{
+			"arabic": "سوريا والأردن دول مجاورة.",
+			"arabicTashkeel": "سوريا والأُردُن دُوَل مُجاوِرة.",
+			"english": "Syria and Jordan are neighbouring countries.",
+			"transliteration": "soorya w-il-urdun duwal mujaawira.",
+			"wordAlignments": [
+				{
+					"arabic": "سوريا",
+					"english": "Syria",
+					"transliteration": "soorya"
+				},
+				{
+					"arabic": "والأردن",
+					"english": "and Jordan are",
+					"transliteration": "w-il-urdun"
+				},
+				{
+					"arabic": "دول",
+					"english": "countries",
+					"transliteration": "duwal"
+				},
+				{
+					"arabic": "مجاورة.",
+					"english": "neighbouring.",
+					"transliteration": "mujaawira."
+				}
+			],
+			"targetWords": [
+				"Neighbouring"
+			]
+		},
+		{
+			"arabic": "اللغة جزء من الهوية.",
+			"arabicTashkeel": "اللُّغة جُزء مِن الهَوية.",
+			"english": "Language is part of identity.",
+			"transliteration": "il-lugha juz2 min il-hawiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "اللغة",
+					"english": "Language is",
+					"transliteration": "il-lugha"
+				},
+				{
+					"arabic": "جزء",
+					"english": "part",
+					"transliteration": "juz2"
+				},
+				{
+					"arabic": "من",
+					"english": "of",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الهوية.",
+					"english": "identity.",
+					"transliteration": "il-hawiyya."
+				}
+			],
+			"targetWords": [
+				"Identity"
+			]
+		},
+		{
+			"arabic": "التنوع الثقافي بالوطن العربي.",
+			"arabicTashkeel": "التَّنَوُّع الثَّقافي بالوَطَن العَرَبي.",
+			"english": "Cultural diversity in the Arab world.",
+			"transliteration": "it-tanawwu3 ith-thagaafi bil-watan il-3arabi.",
+			"wordAlignments": [
+				{
+					"arabic": "التنوع",
+					"english": "The diversity",
+					"transliteration": "it-tanawwu3"
+				},
+				{
+					"arabic": "الثقافي",
+					"english": "cultural",
+					"transliteration": "ith-thagaafi"
+				},
+				{
+					"arabic": "بالوطن",
+					"english": "in the homeland",
+					"transliteration": "bil-watan"
+				},
+				{
+					"arabic": "العربي.",
+					"english": "Arab.",
+					"transliteration": "il-3arabi."
+				}
+			],
+			"targetWords": [
+				"Diversity",
+				"The Arab world"
+			]
+		},
+		{
+			"arabic": "اللهجة المصرية أكثر لهجة مفهومة.",
+			"arabicTashkeel": "اللَّهجة المَصرية أكثَر لَهجة مَفهومة.",
+			"english": "Egyptian is the most understood dialect.",
+			"transliteration": "il-lahja il-masriyya akthar lahja mafhooma.",
+			"wordAlignments": [
+				{
+					"arabic": "اللهجة",
+					"english": "The dialect",
+					"transliteration": "il-lahja"
+				},
+				{
+					"arabic": "المصرية",
+					"english": "Egyptian is",
+					"transliteration": "il-masriyya"
+				},
+				{
+					"arabic": "أكثر",
+					"english": "the most",
+					"transliteration": "akthar"
+				},
+				{
+					"arabic": "لهجة",
+					"english": "dialect",
+					"transliteration": "lahja"
+				},
+				{
+					"arabic": "مفهومة.",
+					"english": "understood.",
+					"transliteration": "mafhooma."
+				}
+			],
+			"targetWords": [
+				"Egypt",
+				"Dialect"
+			]
+		},
+		{
+			"arabic": "الشام معروفة بحلوياتها.",
+			"arabicTashkeel": "الشّام مَعروفة بحَلَوياتها.",
+			"english": "The Levant is known for its sweets.",
+			"transliteration": "ish-shaam ma3roofa b-7alawiyyaat-ha.",
+			"wordAlignments": [
+				{
+					"arabic": "الشام",
+					"english": "The Levant is",
+					"transliteration": "ish-shaam"
+				},
+				{
+					"arabic": "معروفة",
+					"english": "known",
+					"transliteration": "ma3roofa"
+				},
+				{
+					"arabic": "بحلوياتها.",
+					"english": "for its sweets.",
+					"transliteration": "b-7alawiyyaat-ha."
+				}
+			],
+			"targetWords": [
+				"The Levant"
+			]
+		},
+		{
+			"arabic": "أعراس الخليج كبيرة.",
+			"arabicTashkeel": "أعراس الخَليج كْبيرة.",
+			"english": "Gulf weddings are big.",
+			"transliteration": "a3raas il-khaleej chbeera.",
+			"wordAlignments": [
+				{
+					"arabic": "أعراس",
+					"english": "The weddings of",
+					"transliteration": "a3raas"
+				},
+				{
+					"arabic": "الخليج",
+					"english": "the Gulf are",
+					"transliteration": "il-khaleej"
+				},
+				{
+					"arabic": "كبيرة.",
+					"english": "big.",
+					"transliteration": "chbeera."
+				}
+			],
+			"targetWords": [
+				"The Gulf"
+			]
+		},
+		{
+			"arabic": "شاي النعناع مشهور بالمغرب.",
+			"arabicTashkeel": "شاي النِّعناع مَشهور بالمَغرِب.",
+			"english": "Mint tea is popular in Morocco.",
+			"transliteration": "chaay in-ni3naa3 mash-hoor bil-maghrib.",
+			"wordAlignments": [
+				{
+					"arabic": "شاي",
+					"english": "Tea",
+					"transliteration": "chaay"
+				},
+				{
+					"arabic": "النعناع",
+					"english": "with mint is",
+					"transliteration": "in-ni3naa3"
+				},
+				{
+					"arabic": "مشهور",
+					"english": "popular",
+					"transliteration": "mash-hoor"
+				},
+				{
+					"arabic": "بالمغرب.",
+					"english": "in Morocco.",
+					"transliteration": "bil-maghrib."
+				}
+			],
+			"targetWords": [
+				"Morocco"
+			]
+		},
+		{
+			"arabic": "أفتهم اللهجة الشامية.",
+			"arabicTashkeel": "أفتِهِم اللَّهجة الشّامية.",
+			"english": "I understand the Levantine dialect.",
+			"transliteration": "aftihim il-lahja ish-shaamiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "أفتهم",
+					"english": "I understand",
+					"transliteration": "aftihim"
+				},
+				{
+					"arabic": "اللهجة",
+					"english": "the dialect",
+					"transliteration": "il-lahja"
+				},
+				{
+					"arabic": "الشامية.",
+					"english": "Levantine.",
+					"transliteration": "ish-shaamiyya."
+				}
+			],
+			"targetWords": [
+				"Dialect",
+				"The Levant"
+			]
+		},
+		{
+			"arabic": "التقاليد العتيقة دا تختفي.",
+			"arabicTashkeel": "التَّقاليد العَتيقة دا تِختِفي.",
+			"english": "Old traditions are disappearing.",
+			"transliteration": "it-tagaaleed il-3ateega da tikhtifi.",
+			"wordAlignments": [
+				{
+					"arabic": "التقاليد",
+					"english": "The traditions",
+					"transliteration": "it-tagaaleed"
+				},
+				{
+					"arabic": "العتيقة",
+					"english": "old",
+					"transliteration": "il-3ateega"
+				},
+				{
+					"arabic": "دا",
+					"english": "are",
+					"transliteration": "da"
+				},
+				{
+					"arabic": "تختفي.",
+					"english": "disappearing.",
+					"transliteration": "tikhtifi."
+				}
+			],
+			"targetWords": [
+				"Traditions"
+			]
+		},
+		{
+			"arabic": "اللبس الكردي التقليدي ملون.",
+			"arabicTashkeel": "اللِّبِس الكُردي التَّقليدي مُلَوَّن.",
+			"english": "The Kurdish traditional dress is colourful.",
+			"transliteration": "il-libis il-kurdi it-tagleedi mlawwan.",
+			"wordAlignments": [
+				{
+					"arabic": "اللبس",
+					"english": "The clothing",
+					"transliteration": "il-libis"
+				},
+				{
+					"arabic": "الكردي",
+					"english": "Kurdish",
+					"transliteration": "il-kurdi"
+				},
+				{
+					"arabic": "التقليدي",
+					"english": "traditional is",
+					"transliteration": "it-tagleedi"
+				},
+				{
+					"arabic": "ملون.",
+					"english": "colourful.",
+					"transliteration": "mlawwan."
+				}
+			],
+			"targetWords": [
+				"Traditional dress"
+			]
+		},
+		{
+			"arabic": "كل مطبخ إله سره.",
+			"arabicTashkeel": "كُل مَطبَخ إلَه سِرَّه.",
+			"english": "Every cuisine has its secret.",
+			"transliteration": "kull matbakh ila sirra.",
+			"wordAlignments": [
+				{
+					"arabic": "كل",
+					"english": "Every",
+					"transliteration": "kull"
+				},
+				{
+					"arabic": "مطبخ",
+					"english": "cuisine",
+					"transliteration": "matbakh"
+				},
+				{
+					"arabic": "إله",
+					"english": "has",
+					"transliteration": "ila"
+				},
+				{
+					"arabic": "سره.",
+					"english": "its secret.",
+					"transliteration": "sirra."
+				}
+			],
+			"targetWords": [
+				"Cuisine"
+			]
+		},
+		{
+			"arabic": "الموسيقى العراقية تشبه موسيقى الخليج.",
+			"arabicTashkeel": "الموسيقى العِراقية تِشبَه موسيقى الخَليج.",
+			"english": "Iraqi music resembles Gulf music.",
+			"transliteration": "il-mooseega il-3iraaqiyya tishbah mooseega il-khaleej.",
+			"wordAlignments": [
+				{
+					"arabic": "الموسيقى",
+					"english": "Music",
+					"transliteration": "il-mooseega"
+				},
+				{
+					"arabic": "العراقية",
+					"english": "Iraqi",
+					"transliteration": "il-3iraaqiyya"
+				},
+				{
+					"arabic": "تشبه",
+					"english": "resembles",
+					"transliteration": "tishbah"
+				},
+				{
+					"arabic": "موسيقى",
+					"english": "the music of",
+					"transliteration": "mooseega"
+				},
+				{
+					"arabic": "الخليج.",
+					"english": "the Gulf.",
+					"transliteration": "il-khaleej."
+				}
+			],
+			"targetWords": [
+				"It resembles",
+				"The Gulf"
+			]
+		},
+		{
+			"arabic": "مختلفين بس قريبين.",
+			"arabicTashkeel": "مُختَلفين بَس قْريبين.",
+			"english": "Different but close.",
+			"transliteration": "mukhtalfeen bas greebeen.",
+			"wordAlignments": [
+				{
+					"arabic": "مختلفين",
+					"english": "Different",
+					"transliteration": "mukhtalfeen"
+				},
+				{
+					"arabic": "بس",
+					"english": "but",
+					"transliteration": "bas"
+				},
+				{
+					"arabic": "قريبين.",
+					"english": "close.",
+					"transliteration": "greebeen."
+				}
+			],
+			"targetWords": [
+				"Different"
+			]
+		},
+		{
+			"arabic": "تاريخ مشترك آلاف السنين.",
+			"arabicTashkeel": "تاريخ مُشتَرَك آلاف السِّنين.",
+			"english": "A shared history of thousands of years.",
+			"transliteration": "taareekh mushtarak aalaaf is-sneen.",
+			"wordAlignments": [
+				{
+					"arabic": "تاريخ",
+					"english": "A history",
+					"transliteration": "taareekh"
+				},
+				{
+					"arabic": "مشترك",
+					"english": "shared",
+					"transliteration": "mushtarak"
+				},
+				{
+					"arabic": "آلاف",
+					"english": "thousands of",
+					"transliteration": "aalaaf"
+				},
+				{
+					"arabic": "السنين.",
+					"english": "years.",
+					"transliteration": "is-sneen."
+				}
+			],
+			"targetWords": [
+				"Shared / common"
+			]
+		},
+		{
+			"arabic": "إيران وتركيا دول مجاورة هم.",
+			"arabicTashkeel": "إيران وتُركيا دُوَل مُجاوِرة هَم.",
+			"english": "Iran and Turkey are neighbouring countries too.",
+			"transliteration": "eeraan w-turkiya duwal mujaawira ham.",
+			"wordAlignments": [
+				{
+					"arabic": "إيران",
+					"english": "Iran",
+					"transliteration": "eeraan"
+				},
+				{
+					"arabic": "وتركيا",
+					"english": "and Turkey are",
+					"transliteration": "w-turkiya"
+				},
+				{
+					"arabic": "دول",
+					"english": "countries",
+					"transliteration": "duwal"
+				},
+				{
+					"arabic": "مجاورة",
+					"english": "neighbouring",
+					"transliteration": "mujaawira"
+				},
+				{
+					"arabic": "هم.",
+					"english": "too.",
+					"transliteration": "ham."
+				}
+			],
+			"targetWords": [
+				"Neighbouring"
+			]
+		},
+		{
+			"arabic": "الهوية العراقية تشمل العرب والكرد وغيرهم.",
+			"arabicTashkeel": "الهَوية العِراقية تِشمَل العَرَب والكُرد وغَيرهُم.",
+			"english": "Iraqi identity includes Arabs, Kurds and others.",
+			"transliteration": "il-hawiyya il-3iraaqiyya tishmal il-3arab w-il-kurd w-gheerhum.",
+			"wordAlignments": [
+				{
+					"arabic": "الهوية",
+					"english": "The identity",
+					"transliteration": "il-hawiyya"
+				},
+				{
+					"arabic": "العراقية",
+					"english": "Iraqi",
+					"transliteration": "il-3iraaqiyya"
+				},
+				{
+					"arabic": "تشمل",
+					"english": "includes",
+					"transliteration": "tishmal"
+				},
+				{
+					"arabic": "العرب",
+					"english": "Arabs",
+					"transliteration": "il-3arab"
+				},
+				{
+					"arabic": "والكرد",
+					"english": "and Kurds",
+					"transliteration": "w-il-kurd"
+				},
+				{
+					"arabic": "وغيرهم.",
+					"english": "and others.",
+					"transliteration": "w-gheerhum."
+				}
+			],
+			"targetWords": [
+				"Identity"
+			]
+		},
+		{
+			"arabic": "تنوع بالأكل والموسيقى واللبس.",
+			"arabicTashkeel": "تَنَوُّع بالأكِل والموسيقى واللِّبِس.",
+			"english": "Diversity of food, music and dress.",
+			"transliteration": "tanawwu3 bil-akil w-il-mooseega w-il-libis.",
+			"wordAlignments": [
+				{
+					"arabic": "تنوع",
+					"english": "Diversity of",
+					"transliteration": "tanawwu3"
+				},
+				{
+					"arabic": "بالأكل",
+					"english": "food,",
+					"transliteration": "bil-akil"
+				},
+				{
+					"arabic": "والموسيقى",
+					"english": "music",
+					"transliteration": "w-il-mooseega"
+				},
+				{
+					"arabic": "واللبس.",
+					"english": "and dress.",
+					"transliteration": "w-il-libis."
+				}
+			],
+			"targetWords": [
+				"Diversity"
+			]
+		},
+		{
+			"arabic": "من الخليج للمحيط: الوطن العربي.",
+			"arabicTashkeel": "مِن الخَليج للمُحيط: الوَطَن العَرَبي.",
+			"english": "From the Gulf to the ocean: the Arab world.",
+			"transliteration": "min il-khaleej lil-mu7eet: il-watan il-3arabi.",
+			"wordAlignments": [
+				{
+					"arabic": "من",
+					"english": "From",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الخليج",
+					"english": "the Gulf",
+					"transliteration": "il-khaleej"
+				},
+				{
+					"arabic": "للمحيط:",
+					"english": "to the ocean:",
+					"transliteration": "lil-mu7eet:"
+				},
+				{
+					"arabic": "الوطن",
+					"english": "the homeland",
+					"transliteration": "il-watan"
+				},
+				{
+					"arabic": "العربي.",
+					"english": "Arab.",
+					"transliteration": "il-3arabi."
+				}
+			],
+			"targetWords": [
+				"The Arab world",
+				"The Gulf"
+			]
+		},
+		{
+			"arabic": "درست بمصر سنتين.",
+			"arabicTashkeel": "دِرَسِت بمَصِر سَنتين.",
+			"english": "I studied in Egypt for two years.",
+			"transliteration": "dirasit b-masir santeen.",
+			"wordAlignments": [
+				{
+					"arabic": "درست",
+					"english": "I studied",
+					"transliteration": "dirasit"
+				},
+				{
+					"arabic": "بمصر",
+					"english": "in Egypt",
+					"transliteration": "b-masir"
+				},
+				{
+					"arabic": "سنتين.",
+					"english": "two years.",
+					"transliteration": "santeen."
+				}
+			],
+			"targetWords": [
+				"Egypt"
+			]
+		},
+		{
+			"arabic": "تقاليد الشام والعراق.",
+			"arabicTashkeel": "تَقاليد الشّام والعِراق.",
+			"english": "Levantine and Iraqi traditions.",
+			"transliteration": "tagaaleed ish-shaam w-il-3iraaq.",
+			"wordAlignments": [
+				{
+					"arabic": "تقاليد",
+					"english": "The traditions of",
+					"transliteration": "tagaaleed"
+				},
+				{
+					"arabic": "الشام",
+					"english": "the Levant",
+					"transliteration": "ish-shaam"
+				},
+				{
+					"arabic": "والعراق.",
+					"english": "and Iraq.",
+					"transliteration": "w-il-3iraaq."
+				}
+			],
+			"targetWords": [
+				"The Levant",
+				"Traditions"
+			]
+		},
+		{
+			"arabic": "المغرب مختلف عن المشرق.",
+			"arabicTashkeel": "المَغرِب مُختَلِف عَن المَشرِق.",
+			"english": "Morocco is different from the east.",
+			"transliteration": "il-maghrib mukhtalif 3an il-mashriq.",
+			"wordAlignments": [
+				{
+					"arabic": "المغرب",
+					"english": "Morocco is",
+					"transliteration": "il-maghrib"
+				},
+				{
+					"arabic": "مختلف",
+					"english": "different",
+					"transliteration": "mukhtalif"
+				},
+				{
+					"arabic": "عن",
+					"english": "from",
+					"transliteration": "3an"
+				},
+				{
+					"arabic": "المشرق.",
+					"english": "the east.",
+					"transliteration": "il-mashriq."
+				}
+			],
+			"targetWords": [
+				"Morocco",
+				"Different"
+			]
+		},
+		{
+			"arabic": "يحكي بلهجة البصرة.",
+			"arabicTashkeel": "يِحكي بلَهجة البَصرة.",
+			"english": "He speaks with a Basra dialect.",
+			"transliteration": "yi7chi b-lahjat il-basra.",
+			"wordAlignments": [
+				{
+					"arabic": "يحكي",
+					"english": "He speaks",
+					"transliteration": "yi7chi"
+				},
+				{
+					"arabic": "بلهجة",
+					"english": "with the dialect of",
+					"transliteration": "b-lahjat"
+				},
+				{
+					"arabic": "البصرة.",
+					"english": "Basra.",
+					"transliteration": "il-basra."
+				}
+			],
+			"targetWords": [
+				"Dialect"
+			]
+		},
+		{
+			"arabic": "لبس تقليدي بالأعياد.",
+			"arabicTashkeel": "لِبِس تَقليدي بالأعياد.",
+			"english": "Wearing traditional dress on holidays.",
+			"transliteration": "libis tagleedi bil-a3yaad.",
+			"wordAlignments": [
+				{
+					"arabic": "لبس",
+					"english": "Wearing",
+					"transliteration": "libis"
+				},
+				{
+					"arabic": "تقليدي",
+					"english": "traditional clothing",
+					"transliteration": "tagleedi"
+				},
+				{
+					"arabic": "بالأعياد.",
+					"english": "on holidays.",
+					"transliteration": "bil-a3yaad."
+				}
+			],
+			"targetWords": [
+				"Traditional dress"
+			]
+		},
+		{
+			"arabic": "المطبخ اللبناني خفيف.",
+			"arabicTashkeel": "المَطبَخ اللُّبناني خَفيف.",
+			"english": "Lebanese cuisine is light.",
+			"transliteration": "il-matbakh il-lubnaani khafeef.",
+			"wordAlignments": [
+				{
+					"arabic": "المطبخ",
+					"english": "The cuisine",
+					"transliteration": "il-matbakh"
+				},
+				{
+					"arabic": "اللبناني",
+					"english": "Lebanese is",
+					"transliteration": "il-lubnaani"
+				},
+				{
+					"arabic": "خفيف.",
+					"english": "light.",
+					"transliteration": "khafeef."
+				}
+			],
+			"targetWords": [
+				"Cuisine"
+			]
+		},
+		{
+			"arabic": "لكنته تشبه السوري.",
+			"arabicTashkeel": "لَكنتَه تِشبَه السّوري.",
+			"english": "His accent resembles Syrian.",
+			"transliteration": "lakinta tishbah is-soori.",
+			"wordAlignments": [
+				{
+					"arabic": "لكنته",
+					"english": "His accent",
+					"transliteration": "lakinta"
+				},
+				{
+					"arabic": "تشبه",
+					"english": "resembles",
+					"transliteration": "tishbah"
+				},
+				{
+					"arabic": "السوري.",
+					"english": "the Syrian.",
+					"transliteration": "is-soori."
+				}
+			],
+			"targetWords": [
+				"It resembles"
+			]
+		},
+		{
+			"arabic": "قيم مشتركة.",
+			"arabicTashkeel": "قِيَم مُشتَرَكة.",
+			"english": "Shared values.",
+			"transliteration": "qiyam mushtaraka.",
+			"wordAlignments": [
+				{
+					"arabic": "قيم",
+					"english": "Values",
+					"transliteration": "qiyam"
+				},
+				{
+					"arabic": "مشتركة.",
+					"english": "shared.",
+					"transliteration": "mushtaraka."
+				}
+			],
+			"targetWords": [
+				"Shared / common"
+			]
+		},
+		{
+			"arabic": "مدن مجاورة.",
+			"arabicTashkeel": "مُدُن مُجاوِرة.",
+			"english": "Neighbouring cities.",
+			"transliteration": "mudun mujaawira.",
+			"wordAlignments": [
+				{
+					"arabic": "مدن",
+					"english": "Cities",
+					"transliteration": "mudun"
+				},
+				{
+					"arabic": "مجاورة.",
+					"english": "neighbouring.",
+					"transliteration": "mujaawira."
+				}
+			],
+			"targetWords": [
+				"Neighbouring"
+			]
+		},
+		{
+			"arabic": "الهوية الوطنية.",
+			"arabicTashkeel": "الهَوية الوَطَنية.",
+			"english": "National identity.",
+			"transliteration": "il-hawiyya il-wataniyya.",
+			"wordAlignments": [
+				{
+					"arabic": "الهوية",
+					"english": "The identity",
+					"transliteration": "il-hawiyya"
+				},
+				{
+					"arabic": "الوطنية.",
+					"english": "national.",
+					"transliteration": "il-wataniyya."
+				}
+			],
+			"targetWords": [
+				"Identity"
+			]
+		},
+		{
+			"arabic": "التنوع حلو.",
+			"arabicTashkeel": "التَّنَوُّع حِلو.",
+			"english": "Diversity is beautiful.",
+			"transliteration": "it-tanawwu3 7ilu.",
+			"wordAlignments": [
+				{
+					"arabic": "التنوع",
+					"english": "Diversity is",
+					"transliteration": "it-tanawwu3"
+				},
+				{
+					"arabic": "حلو.",
+					"english": "beautiful.",
+					"transliteration": "7ilu."
+				}
+			],
+			"targetWords": [
+				"Diversity"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "One World, Many Cultures",
+			"sentences": [
+				{
+					"arabic": "الوطن العربي يمتد من الخليج للمحيط الأطلسي.",
+					"arabicTashkeel": "الوَطَن العَرَبي يِمتَد مِن الخَليج للمُحيط الأطلَسي.",
+					"english": "The Arab world stretches from the Gulf to the Atlantic Ocean.",
+					"transliteration": "il-watan il-3arabi yimtadd min il-khaleej lil-mu7eet il-atlasi.",
+					"wordAlignments": [
+						{
+							"arabic": "الوطن",
+							"english": "The homeland",
+							"transliteration": "il-watan"
+						},
+						{
+							"arabic": "العربي",
+							"english": "Arab",
+							"transliteration": "il-3arabi"
+						},
+						{
+							"arabic": "يمتد",
+							"english": "stretches",
+							"transliteration": "yimtadd"
+						},
+						{
+							"arabic": "من",
+							"english": "from",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "الخليج",
+							"english": "the Gulf",
+							"transliteration": "il-khaleej"
+						},
+						{
+							"arabic": "للمحيط",
+							"english": "to the ocean",
+							"transliteration": "lil-mu7eet"
+						},
+						{
+							"arabic": "الأطلسي.",
+							"english": "Atlantic.",
+							"transliteration": "il-atlasi."
+						}
+					]
+				},
+				{
+					"arabic": "نشترك باللغة، وهواية تقاليد والعيدين.",
+					"arabicTashkeel": "نِشتِرِك باللُّغة، وهْوايَة تَقاليد والعيدَين.",
+					"english": "We share the language, many traditions and the two Eids.",
+					"transliteration": "nishtirik bil-lugha, w-hwaaya tagaaleed w-il-3eedayn.",
+					"wordAlignments": [
+						{
+							"arabic": "نشترك",
+							"english": "We share",
+							"transliteration": "nishtirik"
+						},
+						{
+							"arabic": "باللغة،",
+							"english": "the language,",
+							"transliteration": "bil-lugha,"
+						},
+						{
+							"arabic": "وهواية",
+							"english": "and many",
+							"transliteration": "w-hwaaya"
+						},
+						{
+							"arabic": "تقاليد",
+							"english": "traditions",
+							"transliteration": "tagaaleed"
+						},
+						{
+							"arabic": "والعيدين.",
+							"english": "and the two Eids.",
+							"transliteration": "w-il-3eedayn."
+						}
+					]
+				},
+				{
+					"arabic": "بس كل دولة إلها لهجتها، ومطبخها ولبسها التقليدي.",
+					"arabicTashkeel": "بَس كُل دَولة إلها لَهجتها، ومَطبَخها ولِبِسها التَّقليدي.",
+					"english": "But every country has its own dialect, cuisine and traditional dress.",
+					"transliteration": "bas kull dawla ilha lahjat-ha, w-matbakhha w-libisha it-tagleedi.",
+					"wordAlignments": [
+						{
+							"arabic": "بس",
+							"english": "But",
+							"transliteration": "bas"
+						},
+						{
+							"arabic": "كل",
+							"english": "every",
+							"transliteration": "kull"
+						},
+						{
+							"arabic": "دولة",
+							"english": "country",
+							"transliteration": "dawla"
+						},
+						{
+							"arabic": "إلها",
+							"english": "has",
+							"transliteration": "ilha"
+						},
+						{
+							"arabic": "لهجتها،",
+							"english": "its dialect,",
+							"transliteration": "lahjat-ha,"
+						},
+						{
+							"arabic": "ومطبخها",
+							"english": "and its cuisine",
+							"transliteration": "w-matbakhha"
+						},
+						{
+							"arabic": "ولبسها",
+							"english": "and its clothing",
+							"transliteration": "w-libisha"
+						},
+						{
+							"arabic": "التقليدي.",
+							"english": "traditional.",
+							"transliteration": "it-tagleedi."
+						}
+					]
+				},
+				{
+					"arabic": "الأكل العراقي يشبه أكل الشام، ولهجتنا قريبة من الخليج.",
+					"arabicTashkeel": "الأكِل العِراقي يِشبَه أكِل الشّام، ولَهجتنا قْريبة مِن الخَليج.",
+					"english": "Iraqi food resembles Levantine food, and our dialect is close to the Gulf.",
+					"transliteration": "il-akil il-3iraaqi yishbah akil ish-shaam, w-lahjatna greeba min il-khaleej.",
+					"wordAlignments": [
+						{
+							"arabic": "الأكل",
+							"english": "The food",
+							"transliteration": "il-akil"
+						},
+						{
+							"arabic": "العراقي",
+							"english": "Iraqi",
+							"transliteration": "il-3iraaqi"
+						},
+						{
+							"arabic": "يشبه",
+							"english": "resembles",
+							"transliteration": "yishbah"
+						},
+						{
+							"arabic": "أكل",
+							"english": "the food of",
+							"transliteration": "akil"
+						},
+						{
+							"arabic": "الشام،",
+							"english": "the Levant,",
+							"transliteration": "ish-shaam,"
+						},
+						{
+							"arabic": "ولهجتنا",
+							"english": "and our dialect is",
+							"transliteration": "w-lahjatna"
+						},
+						{
+							"arabic": "قريبة",
+							"english": "close",
+							"transliteration": "greeba"
+						},
+						{
+							"arabic": "من",
+							"english": "to",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "الخليج.",
+							"english": "the Gulf.",
+							"transliteration": "il-khaleej."
+						}
+					]
+				},
+				{
+					"arabic": "الدارجة المغربية مختلفة هواية، بس المصري مفهوم بكل مكان بفضل الأفلام.",
+					"arabicTashkeel": "الدّارجة المَغرِبية مُختَلفة هْوايَة، بَس المَصري مَفهوم بكُل مَكان بفَضِل الأفلام.",
+					"english": "Moroccan Darija is very different, but Egyptian is understood everywhere thanks to the films.",
+					"transliteration": "id-daarja il-maghribiyya mukhtalfa hwaaya, bas il-masri mafhoom b-kull makaan b-fadhil il-aflaam.",
+					"wordAlignments": [
+						{
+							"arabic": "الدارجة",
+							"english": "Darija",
+							"transliteration": "id-daarja"
+						},
+						{
+							"arabic": "المغربية",
+							"english": "Moroccan is",
+							"transliteration": "il-maghribiyya"
+						},
+						{
+							"arabic": "مختلفة",
+							"english": "different",
+							"transliteration": "mukhtalfa"
+						},
+						{
+							"arabic": "هواية،",
+							"english": "very,",
+							"transliteration": "hwaaya,"
+						},
+						{
+							"arabic": "بس",
+							"english": "but",
+							"transliteration": "bas"
+						},
+						{
+							"arabic": "المصري",
+							"english": "Egyptian",
+							"transliteration": "il-masri"
+						},
+						{
+							"arabic": "مفهوم",
+							"english": "is understood",
+							"transliteration": "mafhoom"
+						},
+						{
+							"arabic": "بكل",
+							"english": "in every",
+							"transliteration": "b-kull"
+						},
+						{
+							"arabic": "مكان",
+							"english": "place",
+							"transliteration": "makaan"
+						},
+						{
+							"arabic": "بفضل",
+							"english": "thanks to",
+							"transliteration": "b-fadhil"
+						},
+						{
+							"arabic": "الأفلام.",
+							"english": "the films.",
+							"transliteration": "il-aflaam."
+						}
+					]
+				},
+				{
+					"arabic": "هذا التنوع جزء من هويتنا.",
+					"arabicTashkeel": "هَذا التَّنَوُّع جُزء مِن هَويَّتنا.",
+					"english": "This diversity is part of our identity.",
+					"transliteration": "haatha it-tanawwu3 juz2 min hawiyyatna.",
+					"wordAlignments": [
+						{
+							"arabic": "هذا",
+							"english": "This",
+							"transliteration": "haatha"
+						},
+						{
+							"arabic": "التنوع",
+							"english": "diversity is",
+							"transliteration": "it-tanawwu3"
+						},
+						{
+							"arabic": "جزء",
+							"english": "part",
+							"transliteration": "juz2"
+						},
+						{
+							"arabic": "من",
+							"english": "of",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "هويتنا.",
+							"english": "our identity.",
+							"transliteration": "hawiyyatna."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "Iraq and Its Neighbours",
+			"sentences": [
+				{
+					"arabic": "العراق إله ست دول مجاورة.",
+					"arabicTashkeel": "العِراق إلَه سِت دُوَل مُجاوِرة.",
+					"english": "Iraq has six neighbouring countries.",
+					"transliteration": "il-3iraaq ila sitt duwal mujaawira.",
+					"wordAlignments": [
+						{
+							"arabic": "العراق",
+							"english": "Iraq",
+							"transliteration": "il-3iraaq"
+						},
+						{
+							"arabic": "إله",
+							"english": "has",
+							"transliteration": "ila"
+						},
+						{
+							"arabic": "ست",
+							"english": "six",
+							"transliteration": "sitt"
+						},
+						{
+							"arabic": "دول",
+							"english": "countries",
+							"transliteration": "duwal"
+						},
+						{
+							"arabic": "مجاورة.",
+							"english": "neighbouring.",
+							"transliteration": "mujaawira."
+						}
+					]
+				},
+				{
+					"arabic": "بالبصرة، العادات تشبه الكويت؛ وبالموصل، تشبه سوريا.",
+					"arabicTashkeel": "بالبَصرة، العادات تِشبَه الكُوَيت؛ وبالمَوصِل، تِشبَه سوريا.",
+					"english": "In Basra, the customs resemble Kuwait; in Mosul, they resemble Syria.",
+					"transliteration": "bil-basra, il-3aadaat tishbah il-kuwayt; w-bil-mawsil, tishbah soorya.",
+					"wordAlignments": [
+						{
+							"arabic": "بالبصرة،",
+							"english": "In Basra,",
+							"transliteration": "bil-basra,"
+						},
+						{
+							"arabic": "العادات",
+							"english": "the customs",
+							"transliteration": "il-3aadaat"
+						},
+						{
+							"arabic": "تشبه",
+							"english": "resemble",
+							"transliteration": "tishbah"
+						},
+						{
+							"arabic": "الكويت؛",
+							"english": "Kuwait;",
+							"transliteration": "il-kuwayt;"
+						},
+						{
+							"arabic": "وبالموصل،",
+							"english": "and in Mosul,",
+							"transliteration": "w-bil-mawsil,"
+						},
+						{
+							"arabic": "تشبه",
+							"english": "they resemble",
+							"transliteration": "tishbah"
+						},
+						{
+							"arabic": "سوريا.",
+							"english": "Syria.",
+							"transliteration": "soorya."
+						}
+					]
+				},
+				{
+					"arabic": "لهذا العراق ملتقى الثقافات.",
+					"arabicTashkeel": "لِهَذا العِراق مُلتَقى الثَّقافات.",
+					"english": "That's why Iraq is a meeting point of cultures.",
+					"transliteration": "li-haatha il-3iraaq multaga ith-thagaafaat.",
+					"wordAlignments": [
+						{
+							"arabic": "لهذا",
+							"english": "That's why",
+							"transliteration": "li-haatha"
+						},
+						{
+							"arabic": "العراق",
+							"english": "Iraq is",
+							"transliteration": "il-3iraaq"
+						},
+						{
+							"arabic": "ملتقى",
+							"english": "a meeting point of",
+							"transliteration": "multaga"
+						},
+						{
+							"arabic": "الثقافات.",
+							"english": "the cultures.",
+							"transliteration": "ith-thagaafaat."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is at a dinner in Baghdad with an Iraqi, an Egyptian and a Lebanese colleague, and they start comparing their countries.",
+		"studentRole": "A guest learning Iraqi Arabic.",
+		"otherRole": "An Iraqi colleague who loves comparing Arab cultures.",
+		"goalEnglish": "Compare dialects, food, traditional dress and traditions across Arab countries, and talk about what is shared and what is different.",
+		"targetWords": [
+			"The Arab world",
+			"Dialect",
+			"Traditions",
+			"Cuisine",
+			"It resembles",
+			"Different",
+			"Shared / common",
+			"Diversity"
+		]
+	}
+}
