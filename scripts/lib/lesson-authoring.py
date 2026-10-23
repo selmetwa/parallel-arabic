@@ -97,6 +97,13 @@ def main(draft_path, out_path):
             out['pool'].append(item)
         elif section == 'passage':
             out['passages'][-1]['sentences'].append(sentence(header.strip(), words))
+    # A tag must name one of this lesson's vocab glosses; drop (and report) any that don't.
+    glosses = {v['english'].lower() for v in out['vocab']}
+    for item in out['pool'] + ([out['scenario']] if out['scenario'] else []):
+        unknown = [t for t in item['targetWords'] if t.lower() not in glosses]
+        if unknown:
+            print(f"  dropped tag(s) {unknown} not in this lesson's vocab")
+            item['targetWords'] = [t for t in item['targetWords'] if t.lower() in glosses]
     json.dump(out, open(out_path, 'w', encoding='utf-8'), ensure_ascii=False, indent='\t')
     open(out_path, 'a', encoding='utf-8').write('\n')
     print(f"{out_path}: {len(out['vocab'])} vocab, {len(out['pool'])} sentences, {len(out['passages'])} passages")
