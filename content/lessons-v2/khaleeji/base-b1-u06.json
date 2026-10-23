@@ -1,0 +1,2126 @@
+{
+	"vocab": [
+		{
+			"arabic": "منبه",
+			"arabicTashkeel": "مُنَبِّه",
+			"english": "Alarm clock",
+			"transliteration": "munabbih",
+			"wordAlignments": [
+				{
+					"arabic": "منبه",
+					"english": "Alarm",
+					"transliteration": "munabbih"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "مستعجل",
+			"arabicTashkeel": "مِستَعجِل",
+			"english": "In a hurry",
+			"transliteration": "mista3jil",
+			"wordAlignments": [
+				{
+					"arabic": "مستعجل",
+					"english": "In a hurry",
+					"transliteration": "mista3jil"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "مشاوير",
+			"arabicTashkeel": "مَشاوير",
+			"english": "Errands",
+			"transliteration": "mashaaweer",
+			"wordAlignments": [
+				{
+					"arabic": "مشاوير",
+					"english": "Errands",
+					"transliteration": "mashaaweer"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "شغل البيت",
+			"arabicTashkeel": "شُغل البيت",
+			"english": "Housework",
+			"transliteration": "shughl il-beet",
+			"wordAlignments": [
+				{
+					"arabic": "شغل",
+					"english": "Work of",
+					"transliteration": "shughl"
+				},
+				{
+					"arabic": "البيت",
+					"english": "the house",
+					"transliteration": "il-beet"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "غسيل",
+			"arabicTashkeel": "غَسيل",
+			"english": "Laundry",
+			"transliteration": "ghaseel",
+			"wordAlignments": [
+				{
+					"arabic": "غسيل",
+					"english": "Laundry",
+					"transliteration": "ghaseel"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "تنظيف",
+			"arabicTashkeel": "تَنظيف",
+			"english": "Cleaning",
+			"transliteration": "tandheef",
+			"wordAlignments": [
+				{
+					"arabic": "تنظيف",
+					"english": "Cleaning",
+					"transliteration": "tandheef"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "مقاضي",
+			"arabicTashkeel": "مَقاضي",
+			"english": "Grocery shopping",
+			"transliteration": "magaadhi",
+			"wordAlignments": [
+				{
+					"arabic": "مقاضي",
+					"english": "Groceries",
+					"transliteration": "magaadhi"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "فواتير",
+			"arabicTashkeel": "فَواتير",
+			"english": "Bills",
+			"transliteration": "fawaateer",
+			"wordAlignments": [
+				{
+					"arabic": "فواتير",
+					"english": "Bills",
+					"transliteration": "fawaateer"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "شغالة",
+			"arabicTashkeel": "شَغّالة",
+			"english": "Housemaid",
+			"transliteration": "shaghghaala",
+			"wordAlignments": [
+				{
+					"arabic": "شغالة",
+					"english": "Housemaid",
+					"transliteration": "shaghghaala"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "مكيف",
+			"arabicTashkeel": "مُكَيِّف",
+			"english": "Air conditioner",
+			"transliteration": "mukayyif",
+			"wordAlignments": [
+				{
+					"arabic": "مكيف",
+					"english": "AC",
+					"transliteration": "mukayyif"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "روتين",
+			"arabicTashkeel": "روتين",
+			"english": "Routine",
+			"transliteration": "rooteen",
+			"wordAlignments": [
+				{
+					"arabic": "روتين",
+					"english": "Routine",
+					"transliteration": "rooteen"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "طريق الدوام",
+			"arabicTashkeel": "طَريق الدَّوام",
+			"english": "The commute",
+			"transliteration": "tareeg id-dawaam",
+			"wordAlignments": [
+				{
+					"arabic": "طريق",
+					"english": "The road of",
+					"transliteration": "tareeg"
+				},
+				{
+					"arabic": "الدوام",
+					"english": "work",
+					"transliteration": "id-dawaam"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "نومة الظهر",
+			"arabicTashkeel": "نومة الظُّهر",
+			"english": "Afternoon nap",
+			"transliteration": "noomat idh-dhuhr",
+			"wordAlignments": [
+				{
+					"arabic": "نومة",
+					"english": "Sleep of",
+					"transliteration": "noomat"
+				},
+				{
+					"arabic": "الظهر",
+					"english": "noon",
+					"transliteration": "idh-dhuhr"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "ويكند",
+			"arabicTashkeel": "ويكِند",
+			"english": "Weekend",
+			"transliteration": "weekend",
+			"wordAlignments": [
+				{
+					"arabic": "ويكند",
+					"english": "Weekend",
+					"transliteration": "weekend"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "يوم مشغول",
+			"arabicTashkeel": "يوم مَشغول",
+			"english": "Busy day",
+			"transliteration": "yoom mashghool",
+			"wordAlignments": [
+				{
+					"arabic": "يوم",
+					"english": "A day",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "مشغول",
+					"english": "busy",
+					"transliteration": "mashghool"
+				}
+			],
+			"partOfSpeech": "phrase"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "المنبه يرن الساعة ست.",
+			"arabicTashkeel": "المُنَبِّه يْرِن السّاعة سِت.",
+			"english": "The alarm rings at six.",
+			"transliteration": "il-munabbih yrinn is-saa3a sitt.",
+			"wordAlignments": [
+				{
+					"arabic": "المنبه",
+					"english": "The alarm",
+					"transliteration": "il-munabbih"
+				},
+				{
+					"arabic": "يرن",
+					"english": "rings",
+					"transliteration": "yrinn"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "at",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "ست.",
+					"english": "six.",
+					"transliteration": "sitt."
+				}
+			],
+			"targetWords": [
+				"Alarm clock"
+			]
+		},
+		{
+			"arabic": "أنا مستعجل، ما عندي وقت.",
+			"arabicTashkeel": "أنا مِستَعجِل، ما عِندي وَقت.",
+			"english": "I'm in a hurry, I don't have time.",
+			"transliteration": "ana mista3jil, ma 3indi wagt.",
+			"wordAlignments": [
+				{
+					"arabic": "أنا",
+					"english": "I am",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "مستعجل،",
+					"english": "in a hurry,",
+					"transliteration": "mista3jil,"
+				},
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "وقت.",
+					"english": "time.",
+					"transliteration": "wagt."
+				}
+			],
+			"targetWords": [
+				"In a hurry"
+			]
+		},
+		{
+			"arabic": "عندي مشاوير وايد اليوم.",
+			"arabicTashkeel": "عِندي مَشاوير وايد اليوم.",
+			"english": "I have a lot of errands today.",
+			"transliteration": "3indi mashaaweer waayid il-yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "مشاوير",
+					"english": "errands",
+					"transliteration": "mashaaweer"
+				},
+				{
+					"arabic": "وايد",
+					"english": "many",
+					"transliteration": "waayid"
+				},
+				{
+					"arabic": "اليوم.",
+					"english": "today.",
+					"transliteration": "il-yoom."
+				}
+			],
+			"targetWords": [
+				"Errands"
+			]
+		},
+		{
+			"arabic": "نتقاسم شغل البيت.",
+			"arabicTashkeel": "نِتقاسَم شُغل البيت.",
+			"english": "We share the housework.",
+			"transliteration": "nitgaasam shughl il-beet.",
+			"wordAlignments": [
+				{
+					"arabic": "نتقاسم",
+					"english": "We share",
+					"transliteration": "nitgaasam"
+				},
+				{
+					"arabic": "شغل",
+					"english": "the work of",
+					"transliteration": "shughl"
+				},
+				{
+					"arabic": "البيت.",
+					"english": "the house.",
+					"transliteration": "il-beet."
+				}
+			],
+			"targetWords": [
+				"Housework"
+			]
+		},
+		{
+			"arabic": "أسوي الغسيل يوم السبت.",
+			"arabicTashkeel": "أسَوّي الغَسيل يوم السَّبت.",
+			"english": "I do the laundry on Saturday.",
+			"transliteration": "asawwi il-ghaseel yoom is-sabt.",
+			"wordAlignments": [
+				{
+					"arabic": "أسوي",
+					"english": "I do",
+					"transliteration": "asawwi"
+				},
+				{
+					"arabic": "الغسيل",
+					"english": "the laundry",
+					"transliteration": "il-ghaseel"
+				},
+				{
+					"arabic": "يوم",
+					"english": "on",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "السبت.",
+					"english": "Saturday.",
+					"transliteration": "is-sabt."
+				}
+			],
+			"targetWords": [
+				"Laundry"
+			]
+		},
+		{
+			"arabic": "التنظيف ياخذ الصبح كله.",
+			"arabicTashkeel": "التَّنظيف ياخِذ الصُّبح كِلَّه.",
+			"english": "Cleaning takes all morning.",
+			"transliteration": "it-tandheef yaakhidh is-sub7 killa.",
+			"wordAlignments": [
+				{
+					"arabic": "التنظيف",
+					"english": "Cleaning",
+					"transliteration": "it-tandheef"
+				},
+				{
+					"arabic": "ياخذ",
+					"english": "takes",
+					"transliteration": "yaakhidh"
+				},
+				{
+					"arabic": "الصبح",
+					"english": "the morning",
+					"transliteration": "is-sub7"
+				},
+				{
+					"arabic": "كله.",
+					"english": "all of it.",
+					"transliteration": "killa."
+				}
+			],
+			"targetWords": [
+				"Cleaning"
+			]
+		},
+		{
+			"arabic": "أمي تشتري المقاضي يوم الخميس.",
+			"arabicTashkeel": "أُمّي تِشتِري المَقاضي يوم الخَميس.",
+			"english": "My mom does the grocery shopping on Thursday.",
+			"transliteration": "ummi tishtiri il-magaadhi yoom il-khamees.",
+			"wordAlignments": [
+				{
+					"arabic": "أمي",
+					"english": "My mom",
+					"transliteration": "ummi"
+				},
+				{
+					"arabic": "تشتري",
+					"english": "buys",
+					"transliteration": "tishtiri"
+				},
+				{
+					"arabic": "المقاضي",
+					"english": "the groceries",
+					"transliteration": "il-magaadhi"
+				},
+				{
+					"arabic": "يوم",
+					"english": "on",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "الخميس.",
+					"english": "Thursday.",
+					"transliteration": "il-khamees."
+				}
+			],
+			"targetWords": [
+				"Grocery shopping"
+			]
+		},
+		{
+			"arabic": "أدفع الفواتير كل شهر.",
+			"arabicTashkeel": "أدفَع الفَواتير كِل شَهَر.",
+			"english": "I pay the bills every month.",
+			"transliteration": "adfa3 il-fawaateer kil shahar.",
+			"wordAlignments": [
+				{
+					"arabic": "أدفع",
+					"english": "I pay",
+					"transliteration": "adfa3"
+				},
+				{
+					"arabic": "الفواتير",
+					"english": "the bills",
+					"transliteration": "il-fawaateer"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kil"
+				},
+				{
+					"arabic": "شهر.",
+					"english": "month.",
+					"transliteration": "shahar."
+				}
+			],
+			"targetWords": [
+				"Bills"
+			]
+		},
+		{
+			"arabic": "الشغالة تساعد أمي.",
+			"arabicTashkeel": "الشَّغّالة تساعِد أُمّي.",
+			"english": "The housemaid helps my mom.",
+			"transliteration": "ish-shaghghaala tsaa3id ummi.",
+			"wordAlignments": [
+				{
+					"arabic": "الشغالة",
+					"english": "The housemaid",
+					"transliteration": "ish-shaghghaala"
+				},
+				{
+					"arabic": "تساعد",
+					"english": "helps",
+					"transliteration": "tsaa3id"
+				},
+				{
+					"arabic": "أمي.",
+					"english": "my mom.",
+					"transliteration": "ummi."
+				}
+			],
+			"targetWords": [
+				"Housemaid"
+			]
+		},
+		{
+			"arabic": "المكيف شغال طول اليوم بالصيف.",
+			"arabicTashkeel": "المُكَيِّف شَغّال طول اليوم بالصّيف.",
+			"english": "The AC is on all day in summer.",
+			"transliteration": "il-mukayyif shaghghaal tool il-yoom bis-seef.",
+			"wordAlignments": [
+				{
+					"arabic": "المكيف",
+					"english": "The AC is",
+					"transliteration": "il-mukayyif"
+				},
+				{
+					"arabic": "شغال",
+					"english": "on",
+					"transliteration": "shaghghaal"
+				},
+				{
+					"arabic": "طول",
+					"english": "all",
+					"transliteration": "tool"
+				},
+				{
+					"arabic": "اليوم",
+					"english": "day",
+					"transliteration": "il-yoom"
+				},
+				{
+					"arabic": "بالصيف.",
+					"english": "in summer.",
+					"transliteration": "bis-seef."
+				}
+			],
+			"targetWords": [
+				"Air conditioner"
+			]
+		},
+		{
+			"arabic": "روتيني اليومي ممل.",
+			"arabicTashkeel": "روتيني اليومي مُمِل.",
+			"english": "My daily routine is boring.",
+			"transliteration": "rooteeni il-yoomi mumill.",
+			"wordAlignments": [
+				{
+					"arabic": "روتيني",
+					"english": "My routine",
+					"transliteration": "rooteeni"
+				},
+				{
+					"arabic": "اليومي",
+					"english": "daily is",
+					"transliteration": "il-yoomi"
+				},
+				{
+					"arabic": "ممل.",
+					"english": "boring.",
+					"transliteration": "mumill."
+				}
+			],
+			"targetWords": [
+				"Routine"
+			]
+		},
+		{
+			"arabic": "طريق الدوام ياخذ ساعة.",
+			"arabicTashkeel": "طَريق الدَّوام ياخِذ ساعة.",
+			"english": "The commute takes an hour.",
+			"transliteration": "tareeg id-dawaam yaakhidh saa3a.",
+			"wordAlignments": [
+				{
+					"arabic": "طريق",
+					"english": "The road of",
+					"transliteration": "tareeg"
+				},
+				{
+					"arabic": "الدوام",
+					"english": "work",
+					"transliteration": "id-dawaam"
+				},
+				{
+					"arabic": "ياخذ",
+					"english": "takes",
+					"transliteration": "yaakhidh"
+				},
+				{
+					"arabic": "ساعة.",
+					"english": "an hour.",
+					"transliteration": "saa3a."
+				}
+			],
+			"targetWords": [
+				"The commute"
+			]
+		},
+		{
+			"arabic": "بعد الغدا آخذ نومة الظهر.",
+			"arabicTashkeel": "بَعد الغَدا آخِذ نومة الظُّهر.",
+			"english": "After lunch I take an afternoon nap.",
+			"transliteration": "ba3d il-ghada aakhidh noomat idh-dhuhr.",
+			"wordAlignments": [
+				{
+					"arabic": "بعد",
+					"english": "After",
+					"transliteration": "ba3d"
+				},
+				{
+					"arabic": "الغدا",
+					"english": "lunch",
+					"transliteration": "il-ghada"
+				},
+				{
+					"arabic": "آخذ",
+					"english": "I take",
+					"transliteration": "aakhidh"
+				},
+				{
+					"arabic": "نومة",
+					"english": "a sleep of",
+					"transliteration": "noomat"
+				},
+				{
+					"arabic": "الظهر.",
+					"english": "noon.",
+					"transliteration": "idh-dhuhr."
+				}
+			],
+			"targetWords": [
+				"Afternoon nap"
+			]
+		},
+		{
+			"arabic": "شو تسوي بالويكند؟",
+			"arabicTashkeel": "شو تسَوّي بالويكِند؟",
+			"english": "What do you do at the weekend?",
+			"transliteration": "shu tsawwi bil-weekend?",
+			"wordAlignments": [
+				{
+					"arabic": "شو",
+					"english": "What",
+					"transliteration": "shu"
+				},
+				{
+					"arabic": "تسوي",
+					"english": "do you do",
+					"transliteration": "tsawwi"
+				},
+				{
+					"arabic": "بالويكند؟",
+					"english": "at the weekend?",
+					"transliteration": "bil-weekend?"
+				}
+			],
+			"targetWords": [
+				"Weekend"
+			]
+		},
+		{
+			"arabic": "اليوم كان يوم مشغول.",
+			"arabicTashkeel": "اليوم كان يوم مَشغول.",
+			"english": "Today was a busy day.",
+			"transliteration": "il-yoom kaan yoom mashghool.",
+			"wordAlignments": [
+				{
+					"arabic": "اليوم",
+					"english": "Today",
+					"transliteration": "il-yoom"
+				},
+				{
+					"arabic": "كان",
+					"english": "was",
+					"transliteration": "kaan"
+				},
+				{
+					"arabic": "يوم",
+					"english": "a day",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "مشغول.",
+					"english": "busy.",
+					"transliteration": "mashghool."
+				}
+			],
+			"targetWords": [
+				"Busy day"
+			]
+		},
+		{
+			"arabic": "ما سمعت المنبه.",
+			"arabicTashkeel": "ما سِمَعت المُنَبِّه.",
+			"english": "I didn't hear the alarm.",
+			"transliteration": "ma sima3t il-munabbih.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "سمعت",
+					"english": "I heard",
+					"transliteration": "sima3t"
+				},
+				{
+					"arabic": "المنبه.",
+					"english": "the alarm.",
+					"transliteration": "il-munabbih."
+				}
+			],
+			"targetWords": [
+				"Alarm clock"
+			]
+		},
+		{
+			"arabic": "ليش دايما مستعجل؟",
+			"arabicTashkeel": "ليش دايماً مِستَعجِل؟",
+			"english": "Why are you always in a hurry?",
+			"transliteration": "leesh daayman mista3jil?",
+			"wordAlignments": [
+				{
+					"arabic": "ليش",
+					"english": "Why",
+					"transliteration": "leesh"
+				},
+				{
+					"arabic": "دايما",
+					"english": "always",
+					"transliteration": "daayman"
+				},
+				{
+					"arabic": "مستعجل؟",
+					"english": "in a hurry?",
+					"transliteration": "mista3jil?"
+				}
+			],
+			"targetWords": [
+				"In a hurry"
+			]
+		},
+		{
+			"arabic": "بخلص مشاويري وبجي.",
+			"arabicTashkeel": "بخَلِّص مَشاويري وبَجي.",
+			"english": "I'll finish my errands and come.",
+			"transliteration": "bkhallis mashaaweeri w-bayi.",
+			"wordAlignments": [
+				{
+					"arabic": "بخلص",
+					"english": "I'll finish",
+					"transliteration": "bkhallis"
+				},
+				{
+					"arabic": "مشاويري",
+					"english": "my errands",
+					"transliteration": "mashaaweeri"
+				},
+				{
+					"arabic": "وبجي.",
+					"english": "and come.",
+					"transliteration": "w-bayi."
+				}
+			],
+			"targetWords": [
+				"Errands"
+			]
+		},
+		{
+			"arabic": "شغل البيت ما يخلص.",
+			"arabicTashkeel": "شُغل البيت ما يِخلَص.",
+			"english": "Housework never ends.",
+			"transliteration": "shughl il-beet ma yikhlas.",
+			"wordAlignments": [
+				{
+					"arabic": "شغل",
+					"english": "The work of",
+					"transliteration": "shughl"
+				},
+				{
+					"arabic": "البيت",
+					"english": "the house",
+					"transliteration": "il-beet"
+				},
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "يخلص.",
+					"english": "ends.",
+					"transliteration": "yikhlas."
+				}
+			],
+			"targetWords": [
+				"Housework"
+			]
+		},
+		{
+			"arabic": "الغسيل على السطح.",
+			"arabicTashkeel": "الغَسيل على السَّطح.",
+			"english": "The laundry is on the roof.",
+			"transliteration": "il-ghaseel 3ala is-sat7.",
+			"wordAlignments": [
+				{
+					"arabic": "الغسيل",
+					"english": "The laundry is",
+					"transliteration": "il-ghaseel"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "السطح.",
+					"english": "the roof.",
+					"transliteration": "is-sat7."
+				}
+			],
+			"targetWords": [
+				"Laundry"
+			]
+		},
+		{
+			"arabic": "تنظيف قبل العيد.",
+			"arabicTashkeel": "تَنظيف قَبل العيد.",
+			"english": "Cleaning before Eid.",
+			"transliteration": "tandheef gabil il-3eed.",
+			"wordAlignments": [
+				{
+					"arabic": "تنظيف",
+					"english": "Cleaning",
+					"transliteration": "tandheef"
+				},
+				{
+					"arabic": "قبل",
+					"english": "before",
+					"transliteration": "gabil"
+				},
+				{
+					"arabic": "العيد.",
+					"english": "Eid.",
+					"transliteration": "il-3eed."
+				}
+			],
+			"targetWords": [
+				"Cleaning"
+			]
+		},
+		{
+			"arabic": "نسيت المقاضي!",
+			"arabicTashkeel": "نِسيت المَقاضي!",
+			"english": "I forgot the grocery shopping!",
+			"transliteration": "niseet il-magaadhi!",
+			"wordAlignments": [
+				{
+					"arabic": "نسيت",
+					"english": "I forgot",
+					"transliteration": "niseet"
+				},
+				{
+					"arabic": "المقاضي!",
+					"english": "the groceries!",
+					"transliteration": "il-magaadhi!"
+				}
+			],
+			"targetWords": [
+				"Grocery shopping"
+			]
+		},
+		{
+			"arabic": "فاتورة الكهربا عالية بالصيف.",
+			"arabicTashkeel": "فاتورة الكَهرَبا عالية بالصّيف.",
+			"english": "The electricity bill is high in summer.",
+			"transliteration": "faatoorat il-kahraba 3aalya bis-seef.",
+			"wordAlignments": [
+				{
+					"arabic": "فاتورة",
+					"english": "The bill of",
+					"transliteration": "faatoorat"
+				},
+				{
+					"arabic": "الكهربا",
+					"english": "electricity is",
+					"transliteration": "il-kahraba"
+				},
+				{
+					"arabic": "عالية",
+					"english": "high",
+					"transliteration": "3aalya"
+				},
+				{
+					"arabic": "بالصيف.",
+					"english": "in summer.",
+					"transliteration": "bis-seef."
+				}
+			],
+			"targetWords": [
+				"Bills"
+			]
+		},
+		{
+			"arabic": "الشغالة بإجازة.",
+			"arabicTashkeel": "الشَّغّالة بإجازة.",
+			"english": "The housemaid is on holiday.",
+			"transliteration": "ish-shaghghaala b-ijaaza.",
+			"wordAlignments": [
+				{
+					"arabic": "الشغالة",
+					"english": "The housemaid is",
+					"transliteration": "ish-shaghghaala"
+				},
+				{
+					"arabic": "بإجازة.",
+					"english": "on holiday.",
+					"transliteration": "b-ijaaza."
+				}
+			],
+			"targetWords": [
+				"Housemaid"
+			]
+		},
+		{
+			"arabic": "المكيف خرب!",
+			"arabicTashkeel": "المُكَيِّف خِرَب!",
+			"english": "The AC broke!",
+			"transliteration": "il-mukayyif khirab!",
+			"wordAlignments": [
+				{
+					"arabic": "المكيف",
+					"english": "The AC",
+					"transliteration": "il-mukayyif"
+				},
+				{
+					"arabic": "خرب!",
+					"english": "broke!",
+					"transliteration": "khirab!"
+				}
+			],
+			"targetWords": [
+				"Air conditioner"
+			]
+		},
+		{
+			"arabic": "أبي أغير روتيني.",
+			"arabicTashkeel": "أبي أغَيِّر روتيني.",
+			"english": "I want to change my routine.",
+			"transliteration": "abi aghayyir rooteeni.",
+			"wordAlignments": [
+				{
+					"arabic": "أبي",
+					"english": "I want",
+					"transliteration": "abi"
+				},
+				{
+					"arabic": "أغير",
+					"english": "to change",
+					"transliteration": "aghayyir"
+				},
+				{
+					"arabic": "روتيني.",
+					"english": "my routine.",
+					"transliteration": "rooteeni."
+				}
+			],
+			"targetWords": [
+				"Routine"
+			]
+		},
+		{
+			"arabic": "أسمع الراديو بطريق الدوام.",
+			"arabicTashkeel": "أسمَع الرّاديو بطَريق الدَّوام.",
+			"english": "I listen to the radio during the commute.",
+			"transliteration": "asma3 ir-raadyo b-tareeg id-dawaam.",
+			"wordAlignments": [
+				{
+					"arabic": "أسمع",
+					"english": "I listen to",
+					"transliteration": "asma3"
+				},
+				{
+					"arabic": "الراديو",
+					"english": "the radio",
+					"transliteration": "ir-raadyo"
+				},
+				{
+					"arabic": "بطريق",
+					"english": "on the road of",
+					"transliteration": "b-tareeg"
+				},
+				{
+					"arabic": "الدوام.",
+					"english": "work.",
+					"transliteration": "id-dawaam."
+				}
+			],
+			"targetWords": [
+				"The commute"
+			]
+		},
+		{
+			"arabic": "نومة الظهر مقدسة بالصيف.",
+			"arabicTashkeel": "نومة الظُّهر مُقَدَّسة بالصّيف.",
+			"english": "The afternoon nap is sacred in summer.",
+			"transliteration": "noomat idh-dhuhr mugaddasa bis-seef.",
+			"wordAlignments": [
+				{
+					"arabic": "نومة",
+					"english": "The sleep of",
+					"transliteration": "noomat"
+				},
+				{
+					"arabic": "الظهر",
+					"english": "noon is",
+					"transliteration": "idh-dhuhr"
+				},
+				{
+					"arabic": "مقدسة",
+					"english": "sacred",
+					"transliteration": "mugaddasa"
+				},
+				{
+					"arabic": "بالصيف.",
+					"english": "in summer.",
+					"transliteration": "bis-seef."
+				}
+			],
+			"targetWords": [
+				"Afternoon nap"
+			]
+		},
+		{
+			"arabic": "بالويكند نزور جدتي.",
+			"arabicTashkeel": "بالويكِند نزور جَدّتي.",
+			"english": "At the weekend we visit my grandmother.",
+			"transliteration": "bil-weekend nzoor yaddati.",
+			"wordAlignments": [
+				{
+					"arabic": "بالويكند",
+					"english": "At the weekend",
+					"transliteration": "bil-weekend"
+				},
+				{
+					"arabic": "نزور",
+					"english": "we visit",
+					"transliteration": "nzoor"
+				},
+				{
+					"arabic": "جدتي.",
+					"english": "my grandmother.",
+					"transliteration": "yaddati."
+				}
+			],
+			"targetWords": [
+				"Weekend"
+			]
+		},
+		{
+			"arabic": "باكر يوم مشغول بعد.",
+			"arabicTashkeel": "باكِر يوم مَشغول بَعَد.",
+			"english": "Tomorrow is a busy day too.",
+			"transliteration": "baachir yoom mashghool ba3ad.",
+			"wordAlignments": [
+				{
+					"arabic": "باكر",
+					"english": "Tomorrow is",
+					"transliteration": "baachir"
+				},
+				{
+					"arabic": "يوم",
+					"english": "a day",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "مشغول",
+					"english": "busy",
+					"transliteration": "mashghool"
+				},
+				{
+					"arabic": "بعد.",
+					"english": "too.",
+					"transliteration": "ba3ad."
+				}
+			],
+			"targetWords": [
+				"Busy day"
+			]
+		},
+		{
+			"arabic": "حط المنبه على خمس.",
+			"arabicTashkeel": "حُط المُنَبِّه على خَمس.",
+			"english": "Set the alarm for five.",
+			"transliteration": "7utt il-munabbih 3ala khams.",
+			"wordAlignments": [
+				{
+					"arabic": "حط",
+					"english": "Set",
+					"transliteration": "7utt"
+				},
+				{
+					"arabic": "المنبه",
+					"english": "the alarm",
+					"transliteration": "il-munabbih"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "خمس.",
+					"english": "five.",
+					"transliteration": "khams."
+				}
+			],
+			"targetWords": [
+				"Alarm clock"
+			]
+		},
+		{
+			"arabic": "لا تستعجل، كل بشويش.",
+			"arabicTashkeel": "لا تِستَعجِل، كِل بشْوَيش.",
+			"english": "Don't be in a hurry, eat slowly.",
+			"transliteration": "la tista3jil, kil b-shweesh.",
+			"wordAlignments": [
+				{
+					"arabic": "لا",
+					"english": "Don't",
+					"transliteration": "la"
+				},
+				{
+					"arabic": "تستعجل،",
+					"english": "hurry,",
+					"transliteration": "tista3jil,"
+				},
+				{
+					"arabic": "كل",
+					"english": "eat",
+					"transliteration": "kil"
+				},
+				{
+					"arabic": "بشويش.",
+					"english": "slowly.",
+					"transliteration": "b-shweesh."
+				}
+			],
+			"targetWords": [
+				"In a hurry"
+			]
+		},
+		{
+			"arabic": "مشاويري بالبنك والجمعية.",
+			"arabicTashkeel": "مَشاويري بالبَنك والجَمعية.",
+			"english": "My errands are at the bank and the co-op.",
+			"transliteration": "mashaaweeri bil-bank w-il-jam3iyya.",
+			"wordAlignments": [
+				{
+					"arabic": "مشاويري",
+					"english": "My errands are",
+					"transliteration": "mashaaweeri"
+				},
+				{
+					"arabic": "بالبنك",
+					"english": "at the bank",
+					"transliteration": "bil-bank"
+				},
+				{
+					"arabic": "والجمعية.",
+					"english": "and the co-op.",
+					"transliteration": "w-il-jam3iyya."
+				}
+			],
+			"targetWords": [
+				"Errands"
+			]
+		},
+		{
+			"arabic": "رجلي يساعد بشغل البيت.",
+			"arabicTashkeel": "رَجلي يساعِد بشُغل البيت.",
+			"english": "My husband helps with the housework.",
+			"transliteration": "reeli ysaa3id b-shughl il-beet.",
+			"wordAlignments": [
+				{
+					"arabic": "رجلي",
+					"english": "My husband",
+					"transliteration": "reeli"
+				},
+				{
+					"arabic": "يساعد",
+					"english": "helps",
+					"transliteration": "ysaa3id"
+				},
+				{
+					"arabic": "بشغل",
+					"english": "with the work of",
+					"transliteration": "b-shughl"
+				},
+				{
+					"arabic": "البيت.",
+					"english": "the house.",
+					"transliteration": "il-beet."
+				}
+			],
+			"targetWords": [
+				"Housework"
+			]
+		},
+		{
+			"arabic": "الغسيل ينشف بسرعة بالصيف.",
+			"arabicTashkeel": "الغَسيل ينشَف بسُرعة بالصّيف.",
+			"english": "The laundry dries fast in summer.",
+			"transliteration": "il-ghaseel yinshaf b-sur3a bis-seef.",
+			"wordAlignments": [
+				{
+					"arabic": "الغسيل",
+					"english": "The laundry",
+					"transliteration": "il-ghaseel"
+				},
+				{
+					"arabic": "ينشف",
+					"english": "dries",
+					"transliteration": "yinshaf"
+				},
+				{
+					"arabic": "بسرعة",
+					"english": "fast",
+					"transliteration": "b-sur3a"
+				},
+				{
+					"arabic": "بالصيف.",
+					"english": "in summer.",
+					"transliteration": "bis-seef."
+				}
+			],
+			"targetWords": [
+				"Laundry"
+			]
+		},
+		{
+			"arabic": "تنظيف المطبخ.",
+			"arabicTashkeel": "تَنظيف المَطبَخ.",
+			"english": "Kitchen cleaning.",
+			"transliteration": "tandheef il-matbakh.",
+			"wordAlignments": [
+				{
+					"arabic": "تنظيف",
+					"english": "Cleaning of",
+					"transliteration": "tandheef"
+				},
+				{
+					"arabic": "المطبخ.",
+					"english": "the kitchen.",
+					"transliteration": "il-matbakh."
+				}
+			],
+			"targetWords": [
+				"Cleaning"
+			]
+		},
+		{
+			"arabic": "تبي شي من المقاضي؟",
+			"arabicTashkeel": "تَبي شي مِن المَقاضي؟",
+			"english": "Do you need anything from the groceries?",
+			"transliteration": "tabi shay min il-magaadhi?",
+			"wordAlignments": [
+				{
+					"arabic": "تبي",
+					"english": "Do you want",
+					"transliteration": "tabi"
+				},
+				{
+					"arabic": "شي",
+					"english": "something",
+					"transliteration": "shay"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "المقاضي؟",
+					"english": "the groceries?",
+					"transliteration": "il-magaadhi?"
+				}
+			],
+			"targetWords": [
+				"Grocery shopping"
+			]
+		},
+		{
+			"arabic": "فواتير الماي والكهربا.",
+			"arabicTashkeel": "فَواتير الماي والكَهرَبا.",
+			"english": "The water and electricity bills.",
+			"transliteration": "fawaateer il-maay w-il-kahraba.",
+			"wordAlignments": [
+				{
+					"arabic": "فواتير",
+					"english": "The bills of",
+					"transliteration": "fawaateer"
+				},
+				{
+					"arabic": "الماي",
+					"english": "the water",
+					"transliteration": "il-maay"
+				},
+				{
+					"arabic": "والكهربا.",
+					"english": "and electricity.",
+					"transliteration": "w-il-kahraba."
+				}
+			],
+			"targetWords": [
+				"Bills"
+			]
+		},
+		{
+			"arabic": "الشغالة تطبخ الغدا.",
+			"arabicTashkeel": "الشَّغّالة تِطبَخ الغَدا.",
+			"english": "The housemaid cooks lunch.",
+			"transliteration": "ish-shaghghaala titbakh il-ghada.",
+			"wordAlignments": [
+				{
+					"arabic": "الشغالة",
+					"english": "The housemaid",
+					"transliteration": "ish-shaghghaala"
+				},
+				{
+					"arabic": "تطبخ",
+					"english": "cooks",
+					"transliteration": "titbakh"
+				},
+				{
+					"arabic": "الغدا.",
+					"english": "lunch.",
+					"transliteration": "il-ghada."
+				}
+			],
+			"targetWords": [
+				"Housemaid"
+			]
+		},
+		{
+			"arabic": "شغل المكيف، حر.",
+			"arabicTashkeel": "شَغِّل المُكَيِّف، حَر.",
+			"english": "Turn on the AC, it's hot.",
+			"transliteration": "shaghghil il-mukayyif, 7arr.",
+			"wordAlignments": [
+				{
+					"arabic": "شغل",
+					"english": "Turn on",
+					"transliteration": "shaghghil"
+				},
+				{
+					"arabic": "المكيف،",
+					"english": "the AC,",
+					"transliteration": "il-mukayyif,"
+				},
+				{
+					"arabic": "حر.",
+					"english": "it's hot.",
+					"transliteration": "7arr."
+				}
+			],
+			"targetWords": [
+				"Air conditioner"
+			]
+		},
+		{
+			"arabic": "نفس الروتين كل يوم.",
+			"arabicTashkeel": "نَفس الرّوتين كِل يوم.",
+			"english": "Same routine every day.",
+			"transliteration": "nafs ir-rooteen kil yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "نفس",
+					"english": "The same",
+					"transliteration": "nafs"
+				},
+				{
+					"arabic": "الروتين",
+					"english": "routine",
+					"transliteration": "ir-rooteen"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kil"
+				},
+				{
+					"arabic": "يوم.",
+					"english": "day.",
+					"transliteration": "yoom."
+				}
+			],
+			"targetWords": [
+				"Routine"
+			]
+		},
+		{
+			"arabic": "طريق الدوام متعب.",
+			"arabicTashkeel": "طَريق الدَّوام مِتعِب.",
+			"english": "The commute is tiring.",
+			"transliteration": "tareeg id-dawaam mit3ib.",
+			"wordAlignments": [
+				{
+					"arabic": "طريق",
+					"english": "The road of",
+					"transliteration": "tareeg"
+				},
+				{
+					"arabic": "الدوام",
+					"english": "work is",
+					"transliteration": "id-dawaam"
+				},
+				{
+					"arabic": "متعب.",
+					"english": "tiring.",
+					"transliteration": "mit3ib."
+				}
+			],
+			"targetWords": [
+				"The commute"
+			]
+		},
+		{
+			"arabic": "لا تتصل فيني وقت نومة الظهر!",
+			"arabicTashkeel": "لا تِتَّصِل فيني وَقت نومة الظُّهر!",
+			"english": "Don't call me during my afternoon nap!",
+			"transliteration": "la tittasil feeni wagt noomat idh-dhuhr!",
+			"wordAlignments": [
+				{
+					"arabic": "لا",
+					"english": "Don't",
+					"transliteration": "la"
+				},
+				{
+					"arabic": "تتصل",
+					"english": "call",
+					"transliteration": "tittasil"
+				},
+				{
+					"arabic": "فيني",
+					"english": "me",
+					"transliteration": "feeni"
+				},
+				{
+					"arabic": "وقت",
+					"english": "at the time of",
+					"transliteration": "wagt"
+				},
+				{
+					"arabic": "نومة",
+					"english": "the sleep of",
+					"transliteration": "noomat"
+				},
+				{
+					"arabic": "الظهر!",
+					"english": "noon!",
+					"transliteration": "idh-dhuhr!"
+				}
+			],
+			"targetWords": [
+				"Afternoon nap"
+			]
+		},
+		{
+			"arabic": "الويكند قصير.",
+			"arabicTashkeel": "الويكِند قْصَيِّر.",
+			"english": "The weekend is short.",
+			"transliteration": "il-weekend gsayyir.",
+			"wordAlignments": [
+				{
+					"arabic": "الويكند",
+					"english": "The weekend is",
+					"transliteration": "il-weekend"
+				},
+				{
+					"arabic": "قصير.",
+					"english": "short.",
+					"transliteration": "gsayyir."
+				}
+			],
+			"targetWords": [
+				"Weekend"
+			]
+		},
+		{
+			"arabic": "الإثنين دايما يوم مشغول.",
+			"arabicTashkeel": "الإثنين دايماً يوم مَشغول.",
+			"english": "Monday is always a busy day.",
+			"transliteration": "il-ithneen daayman yoom mashghool.",
+			"wordAlignments": [
+				{
+					"arabic": "الإثنين",
+					"english": "Monday is",
+					"transliteration": "il-ithneen"
+				},
+				{
+					"arabic": "دايما",
+					"english": "always",
+					"transliteration": "daayman"
+				},
+				{
+					"arabic": "يوم",
+					"english": "a day",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "مشغول.",
+					"english": "busy.",
+					"transliteration": "mashghool."
+				}
+			],
+			"targetWords": [
+				"Busy day"
+			]
+		},
+		{
+			"arabic": "تلفوني منبهي.",
+			"arabicTashkeel": "تِلِفوني مُنَبِّهي.",
+			"english": "My phone is my alarm.",
+			"transliteration": "tilifooni munabbihi.",
+			"wordAlignments": [
+				{
+					"arabic": "تلفوني",
+					"english": "My phone is",
+					"transliteration": "tilifooni"
+				},
+				{
+					"arabic": "منبهي.",
+					"english": "my alarm.",
+					"transliteration": "munabbihi."
+				}
+			],
+			"targetWords": [
+				"Alarm clock"
+			]
+		},
+		{
+			"arabic": "طلع مستعجل.",
+			"arabicTashkeel": "طِلَع مِستَعجِل.",
+			"english": "He left in a hurry.",
+			"transliteration": "tila3 mista3jil.",
+			"wordAlignments": [
+				{
+					"arabic": "طلع",
+					"english": "He left",
+					"transliteration": "tila3"
+				},
+				{
+					"arabic": "مستعجل.",
+					"english": "in a hurry.",
+					"transliteration": "mista3jil."
+				}
+			],
+			"targetWords": [
+				"In a hurry"
+			]
+		},
+		{
+			"arabic": "مشاوير صغيرة.",
+			"arabicTashkeel": "مَشاوير صْغيرة.",
+			"english": "Small errands.",
+			"transliteration": "mashaaweer sgheera.",
+			"wordAlignments": [
+				{
+					"arabic": "مشاوير",
+					"english": "Errands",
+					"transliteration": "mashaaweer"
+				},
+				{
+					"arabic": "صغيرة.",
+					"english": "small.",
+					"transliteration": "sgheera."
+				}
+			],
+			"targetWords": [
+				"Errands"
+			]
+		},
+		{
+			"arabic": "أكره شغل البيت.",
+			"arabicTashkeel": "أكرَه شُغل البيت.",
+			"english": "I hate housework.",
+			"transliteration": "akrah shughl il-beet.",
+			"wordAlignments": [
+				{
+					"arabic": "أكره",
+					"english": "I hate",
+					"transliteration": "akrah"
+				},
+				{
+					"arabic": "شغل",
+					"english": "the work of",
+					"transliteration": "shughl"
+				},
+				{
+					"arabic": "البيت.",
+					"english": "the house.",
+					"transliteration": "il-beet."
+				}
+			],
+			"targetWords": [
+				"Housework"
+			]
+		},
+		{
+			"arabic": "نشر الغسيل.",
+			"arabicTashkeel": "نَشِّر الغَسيل.",
+			"english": "Hang the laundry.",
+			"transliteration": "nashshir il-ghaseel.",
+			"wordAlignments": [
+				{
+					"arabic": "نشر",
+					"english": "Hang out",
+					"transliteration": "nashshir"
+				},
+				{
+					"arabic": "الغسيل.",
+					"english": "the laundry.",
+					"transliteration": "il-ghaseel."
+				}
+			],
+			"targetWords": [
+				"Laundry"
+			]
+		},
+		{
+			"arabic": "تنظيف كامل.",
+			"arabicTashkeel": "تَنظيف كامِل.",
+			"english": "Deep cleaning.",
+			"transliteration": "tandheef kaamil.",
+			"wordAlignments": [
+				{
+					"arabic": "تنظيف",
+					"english": "Cleaning",
+					"transliteration": "tandheef"
+				},
+				{
+					"arabic": "كامل.",
+					"english": "complete.",
+					"transliteration": "kaamil."
+				}
+			],
+			"targetWords": [
+				"Cleaning"
+			]
+		},
+		{
+			"arabic": "مقاضي الأسبوع.",
+			"arabicTashkeel": "مَقاضي الأسبوع.",
+			"english": "The weekly grocery shopping.",
+			"transliteration": "magaadhi il-usboo3.",
+			"wordAlignments": [
+				{
+					"arabic": "مقاضي",
+					"english": "The groceries of",
+					"transliteration": "magaadhi"
+				},
+				{
+					"arabic": "الأسبوع.",
+					"english": "the week.",
+					"transliteration": "il-usboo3."
+				}
+			],
+			"targetWords": [
+				"Grocery shopping"
+			]
+		},
+		{
+			"arabic": "دفعت كل الفواتير.",
+			"arabicTashkeel": "دِفَعت كِل الفَواتير.",
+			"english": "I paid all the bills.",
+			"transliteration": "difa3t kil il-fawaateer.",
+			"wordAlignments": [
+				{
+					"arabic": "دفعت",
+					"english": "I paid",
+					"transliteration": "difa3t"
+				},
+				{
+					"arabic": "كل",
+					"english": "all",
+					"transliteration": "kil"
+				},
+				{
+					"arabic": "الفواتير.",
+					"english": "the bills.",
+					"transliteration": "il-fawaateer."
+				}
+			],
+			"targetWords": [
+				"Bills"
+			]
+		},
+		{
+			"arabic": "المكيف صوته عالي.",
+			"arabicTashkeel": "المُكَيِّف صوتَه عالي.",
+			"english": "The AC is noisy.",
+			"transliteration": "il-mukayyif soota 3aali.",
+			"wordAlignments": [
+				{
+					"arabic": "المكيف",
+					"english": "The AC",
+					"transliteration": "il-mukayyif"
+				},
+				{
+					"arabic": "صوته",
+					"english": "its sound is",
+					"transliteration": "soota"
+				},
+				{
+					"arabic": "عالي.",
+					"english": "loud.",
+					"transliteration": "3aali."
+				}
+			],
+			"targetWords": [
+				"Air conditioner"
+			]
+		},
+		{
+			"arabic": "روتين دوام وبيت.",
+			"arabicTashkeel": "روتين دَوام وبيت.",
+			"english": "A routine of work and home.",
+			"transliteration": "rooteen dawaam w-beet.",
+			"wordAlignments": [
+				{
+					"arabic": "روتين",
+					"english": "A routine of",
+					"transliteration": "rooteen"
+				},
+				{
+					"arabic": "دوام",
+					"english": "work",
+					"transliteration": "dawaam"
+				},
+				{
+					"arabic": "وبيت.",
+					"english": "and home.",
+					"transliteration": "w-beet."
+				}
+			],
+			"targetWords": [
+				"Routine"
+			]
+		},
+		{
+			"arabic": "طريق الدوام بالمترو.",
+			"arabicTashkeel": "طَريق الدَّوام بالمِترو.",
+			"english": "The commute by metro.",
+			"transliteration": "tareeg id-dawaam bil-mitro.",
+			"wordAlignments": [
+				{
+					"arabic": "طريق",
+					"english": "The road of",
+					"transliteration": "tareeg"
+				},
+				{
+					"arabic": "الدوام",
+					"english": "work",
+					"transliteration": "id-dawaam"
+				},
+				{
+					"arabic": "بالمترو.",
+					"english": "by metro.",
+					"transliteration": "bil-mitro."
+				}
+			],
+			"targetWords": [
+				"The commute"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "A Day in My Life",
+			"sentences": [
+				{
+					"arabic": "المنبه يرن الساعة ست كل يوم.",
+					"arabicTashkeel": "المُنَبِّه يْرِن السّاعة سِت كِل يوم.",
+					"english": "My alarm rings at six every day.",
+					"transliteration": "il-munabbih yrinn is-saa3a sitt kil yoom.",
+					"wordAlignments": [
+						{
+							"arabic": "المنبه",
+							"english": "The alarm",
+							"transliteration": "il-munabbih"
+						},
+						{
+							"arabic": "يرن",
+							"english": "rings",
+							"transliteration": "yrinn"
+						},
+						{
+							"arabic": "الساعة",
+							"english": "at",
+							"transliteration": "is-saa3a"
+						},
+						{
+							"arabic": "ست",
+							"english": "six",
+							"transliteration": "sitt"
+						},
+						{
+							"arabic": "كل",
+							"english": "every",
+							"transliteration": "kil"
+						},
+						{
+							"arabic": "يوم.",
+							"english": "day.",
+							"transliteration": "yoom."
+						}
+					]
+				},
+				{
+					"arabic": "دايما مستعجل الصبح، وطريق الدوام ياخذ ساعة.",
+					"arabicTashkeel": "دايماً مِستَعجِل الصُّبح، وطَريق الدَّوام ياخِذ ساعة.",
+					"english": "I'm always in a hurry in the morning, and the commute takes an hour.",
+					"transliteration": "daayman mista3jil is-sub7, w-tareeg id-dawaam yaakhidh saa3a.",
+					"wordAlignments": [
+						{
+							"arabic": "دايما",
+							"english": "Always",
+							"transliteration": "daayman"
+						},
+						{
+							"arabic": "مستعجل",
+							"english": "in a hurry",
+							"transliteration": "mista3jil"
+						},
+						{
+							"arabic": "الصبح،",
+							"english": "in the morning,",
+							"transliteration": "is-sub7,"
+						},
+						{
+							"arabic": "وطريق",
+							"english": "and the road of",
+							"transliteration": "w-tareeg"
+						},
+						{
+							"arabic": "الدوام",
+							"english": "work",
+							"transliteration": "id-dawaam"
+						},
+						{
+							"arabic": "ياخذ",
+							"english": "takes",
+							"transliteration": "yaakhidh"
+						},
+						{
+							"arabic": "ساعة.",
+							"english": "an hour.",
+							"transliteration": "saa3a."
+						}
+					]
+				},
+				{
+					"arabic": "بعد الدوام أسوي مشاويري: البنك، الجمعية والفواتير.",
+					"arabicTashkeel": "بَعد الدَّوام أسَوّي مَشاويري: البَنك، الجَمعية والفَواتير.",
+					"english": "After work I do my errands: the bank, the co-op and the bills.",
+					"transliteration": "ba3d id-dawaam asawwi mashaaweeri: il-bank, il-jam3iyya w-il-fawaateer.",
+					"wordAlignments": [
+						{
+							"arabic": "بعد",
+							"english": "After",
+							"transliteration": "ba3d"
+						},
+						{
+							"arabic": "الدوام",
+							"english": "work",
+							"transliteration": "id-dawaam"
+						},
+						{
+							"arabic": "أسوي",
+							"english": "I do",
+							"transliteration": "asawwi"
+						},
+						{
+							"arabic": "مشاويري:",
+							"english": "my errands:",
+							"transliteration": "mashaaweeri:"
+						},
+						{
+							"arabic": "البنك،",
+							"english": "the bank,",
+							"transliteration": "il-bank,"
+						},
+						{
+							"arabic": "الجمعية",
+							"english": "the co-op",
+							"transliteration": "il-jam3iyya"
+						},
+						{
+							"arabic": "والفواتير.",
+							"english": "and the bills.",
+							"transliteration": "w-il-fawaateer."
+						}
+					]
+				},
+				{
+					"arabic": "بالبيت آخذ نومة الظهر والمكيف شغال.",
+					"arabicTashkeel": "بالبيت آخِذ نومة الظُّهر والمُكَيِّف شَغّال.",
+					"english": "At home I take an afternoon nap with the AC on.",
+					"transliteration": "bil-beet aakhidh noomat idh-dhuhr w-il-mukayyif shaghghaal.",
+					"wordAlignments": [
+						{
+							"arabic": "بالبيت",
+							"english": "At home",
+							"transliteration": "bil-beet"
+						},
+						{
+							"arabic": "آخذ",
+							"english": "I take",
+							"transliteration": "aakhidh"
+						},
+						{
+							"arabic": "نومة",
+							"english": "a sleep of",
+							"transliteration": "noomat"
+						},
+						{
+							"arabic": "الظهر",
+							"english": "noon",
+							"transliteration": "idh-dhuhr"
+						},
+						{
+							"arabic": "والمكيف",
+							"english": "and the AC is",
+							"transliteration": "w-il-mukayyif"
+						},
+						{
+							"arabic": "شغال.",
+							"english": "on.",
+							"transliteration": "shaghghaal."
+						}
+					]
+				},
+				{
+					"arabic": "نفس الروتين كل يوم، بس الويكند غير.",
+					"arabicTashkeel": "نَفس الرّوتين كِل يوم، بَس الويكِند غير.",
+					"english": "It's the same routine every day, but the weekend is different.",
+					"transliteration": "nafs ir-rooteen kil yoom, bas il-weekend ghair.",
+					"wordAlignments": [
+						{
+							"arabic": "نفس",
+							"english": "The same",
+							"transliteration": "nafs"
+						},
+						{
+							"arabic": "الروتين",
+							"english": "routine",
+							"transliteration": "ir-rooteen"
+						},
+						{
+							"arabic": "كل",
+							"english": "every",
+							"transliteration": "kil"
+						},
+						{
+							"arabic": "يوم،",
+							"english": "day,",
+							"transliteration": "yoom,"
+						},
+						{
+							"arabic": "بس",
+							"english": "but",
+							"transliteration": "bas"
+						},
+						{
+							"arabic": "الويكند",
+							"english": "the weekend is",
+							"transliteration": "il-weekend"
+						},
+						{
+							"arabic": "غير.",
+							"english": "different.",
+							"transliteration": "ghair."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "Saturday",
+			"sentences": [
+				{
+					"arabic": "يوم السبت نسوي شغل البيت.",
+					"arabicTashkeel": "يوم السَّبت نسَوّي شُغل البيت.",
+					"english": "On Saturday we do the housework.",
+					"transliteration": "yoom is-sabt nsawwi shughl il-beet.",
+					"wordAlignments": [
+						{
+							"arabic": "يوم",
+							"english": "On",
+							"transliteration": "yoom"
+						},
+						{
+							"arabic": "السبت",
+							"english": "Saturday",
+							"transliteration": "is-sabt"
+						},
+						{
+							"arabic": "نسوي",
+							"english": "we do",
+							"transliteration": "nsawwi"
+						},
+						{
+							"arabic": "شغل",
+							"english": "the work of",
+							"transliteration": "shughl"
+						},
+						{
+							"arabic": "البيت.",
+							"english": "the house.",
+							"transliteration": "il-beet."
+						}
+					]
+				},
+				{
+					"arabic": "أختي تسوي الغسيل وأنا التنظيف.",
+					"arabicTashkeel": "أُختي تسَوّي الغَسيل وأنا التَّنظيف.",
+					"english": "My sister does the laundry and I do the cleaning.",
+					"transliteration": "ukhti tsawwi il-ghaseel w-ana it-tandheef.",
+					"wordAlignments": [
+						{
+							"arabic": "أختي",
+							"english": "My sister",
+							"transliteration": "ukhti"
+						},
+						{
+							"arabic": "تسوي",
+							"english": "does",
+							"transliteration": "tsawwi"
+						},
+						{
+							"arabic": "الغسيل",
+							"english": "the laundry",
+							"transliteration": "il-ghaseel"
+						},
+						{
+							"arabic": "وأنا",
+							"english": "and I",
+							"transliteration": "w-ana"
+						},
+						{
+							"arabic": "التنظيف.",
+							"english": "the cleaning.",
+							"transliteration": "it-tandheef."
+						}
+					]
+				},
+				{
+					"arabic": "بعدين نروح سوا نشتري المقاضي.",
+					"arabicTashkeel": "بَعدين نْروح سَوا نِشتِري المَقاضي.",
+					"english": "Then we go together for the grocery shopping.",
+					"transliteration": "ba3dain nrooh sawa nishtiri il-magaadhi.",
+					"wordAlignments": [
+						{
+							"arabic": "بعدين",
+							"english": "Then",
+							"transliteration": "ba3dain"
+						},
+						{
+							"arabic": "نروح",
+							"english": "we go",
+							"transliteration": "nrooh"
+						},
+						{
+							"arabic": "سوا",
+							"english": "together",
+							"transliteration": "sawa"
+						},
+						{
+							"arabic": "نشتري",
+							"english": "to buy",
+							"transliteration": "nishtiri"
+						},
+						{
+							"arabic": "المقاضي.",
+							"english": "the groceries.",
+							"transliteration": "il-magaadhi."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student and an Emirati colleague are chatting during a coffee break about how busy their days are.",
+		"studentRole": "An employee learning Gulf Arabic.",
+		"otherRole": "The Emirati colleague, who has a long commute from Sharjah.",
+		"goalEnglish": "Describe your daily routine, your commute, your errands and housework, and how you spend the weekend.",
+		"targetWords": [
+			"Routine",
+			"The commute",
+			"Errands",
+			"Housework",
+			"Grocery shopping",
+			"Bills",
+			"Weekend",
+			"In a hurry"
+		]
+	}
+}
