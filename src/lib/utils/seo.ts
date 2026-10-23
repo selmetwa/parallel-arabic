@@ -159,19 +159,19 @@ function wordDescription(data: any, dialectName: string): string {
  */
 const DIALECT_META: Record<DialectSlug, { title: string; description: string }> = {
 	'egyptian-arabic': {
-		title: 'Learn Egyptian Arabic (Masri): Lessons, Stories, Verb Tables',
+		title: 'Learn Egyptian Arabic Online (Masri): Lessons, Stories, Verb Tables',
 		description:
 			'Learn Egyptian Arabic (Masri), the most widely understood Arabic dialect. Lessons, graded stories, vocabulary by topic, verb tables and speaking practice.'
 	},
 	levantine: {
-		title: 'Learn Levantine Arabic (Shami): Phrases, Stories, Vocabulary',
+		title: 'Learn Levantine Arabic Online (Shami): Phrases, Stories, Vocabulary',
 		description:
 			'Learn Levantine Arabic (Shami), the dialect of Syria, Lebanon, Jordan and Palestine. Phrases with audio, graded stories, vocabulary and speaking practice.'
 	},
 	darija: {
-		title: 'Learn Moroccan Darija Online: Phrases, Stories & Vocabulary',
+		title: 'Learn Moroccan Arabic (Darija) Online: Phrases, Stories & Vocabulary',
 		description:
-			'Learn Moroccan Darija, the Arabic of Morocco. Everyday phrases with audio, lessons, graded stories and a vocabulary explorer with Amazigh and French loanwords.'
+			'Learn Moroccan Arabic (Darija), the Arabic of Morocco. Everyday phrases with audio, lessons, graded stories and a vocabulary explorer with Amazigh and French loanwords.'
 	},
 	fusha: {
 		title: 'Learn Fusha (Modern Standard Arabic): Lessons & Vocabulary',
@@ -554,7 +554,7 @@ export function getPageMeta(page: string, data?: any): PageMeta {
 			type: 'article'
 		},
 		beginners: {
-			title: 'Egyptian Arabic for Beginners - Where to Start and in What Order',
+			title: 'How to Learn Egyptian Arabic - A Beginner Path, Step by Step',
 			description:
 				'A step-by-step path for learning Egyptian Arabic from scratch: the alphabet, the sounds Egyptian changes, the first hundred words, whole phrases, the present tense, then speaking. Each step links to a free page that teaches it.',
 			url: `${baseUrl}/egyptian-arabic/beginners`,

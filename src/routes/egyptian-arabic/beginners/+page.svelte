@@ -12,7 +12,7 @@
 		<a class="underline hover:text-text-300" href={resolve('/egyptian-arabic')}>Egyptian Arabic</a>
 	</nav>
 
-	<h1 class="mb-4 text-3xl font-bold text-text-300 sm:text-4xl">Egyptian Arabic for Beginners</h1>
+	<h1 class="mb-4 text-3xl font-bold text-text-300 sm:text-4xl">How to Learn Egyptian Arabic</h1>
 
 	<p class="mb-10 text-lg text-text-200">{BEGINNERS_INTRO}</p>
 
