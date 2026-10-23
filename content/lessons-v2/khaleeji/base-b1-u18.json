@@ -1,0 +1,2130 @@
+{
+	"vocab": [
+		{
+			"arabic": "ريوق",
+			"arabicTashkeel": "ريوق",
+			"english": "Breakfast",
+			"transliteration": "ryoog",
+			"wordAlignments": [
+				{
+					"arabic": "ريوق",
+					"english": "Breakfast",
+					"transliteration": "ryoog"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "غدا",
+			"arabicTashkeel": "غَدا",
+			"english": "Lunch",
+			"transliteration": "ghada",
+			"wordAlignments": [
+				{
+					"arabic": "غدا",
+					"english": "Lunch",
+					"transliteration": "ghada"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "عشا",
+			"arabicTashkeel": "عَشا",
+			"english": "Dinner",
+			"transliteration": "3asha",
+			"wordAlignments": [
+				{
+					"arabic": "عشا",
+					"english": "Dinner",
+					"transliteration": "3asha"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "وجبة",
+			"arabicTashkeel": "وَجبة",
+			"english": "Meal",
+			"transliteration": "wajba",
+			"wordAlignments": [
+				{
+					"arabic": "وجبة",
+					"english": "Meal",
+					"transliteration": "wajba"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "صحي",
+			"arabicTashkeel": "صِحّي",
+			"english": "Healthy",
+			"transliteration": "si77i",
+			"wordAlignments": [
+				{
+					"arabic": "صحي",
+					"english": "Healthy",
+					"transliteration": "si77i"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "دهون",
+			"arabicTashkeel": "دُهون",
+			"english": "Fats",
+			"transliteration": "duhoon",
+			"wordAlignments": [
+				{
+					"arabic": "دهون",
+					"english": "Fats",
+					"transliteration": "duhoon"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "حلاوة",
+			"arabicTashkeel": "حَلاوة",
+			"english": "Sweets",
+			"transliteration": "7alaawa",
+			"wordAlignments": [
+				{
+					"arabic": "حلاوة",
+					"english": "Sweets",
+					"transliteration": "7alaawa"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "وجبات سريعة",
+			"arabicTashkeel": "وَجبات سَريعة",
+			"english": "Fast food",
+			"transliteration": "wajbaat saree3a",
+			"wordAlignments": [
+				{
+					"arabic": "وجبات",
+					"english": "Meals",
+					"transliteration": "wajbaat"
+				},
+				{
+					"arabic": "سريعة",
+					"english": "fast",
+					"transliteration": "saree3a"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "رجيم",
+			"arabicTashkeel": "رِجيم",
+			"english": "Diet",
+			"transliteration": "rijeem",
+			"wordAlignments": [
+				{
+					"arabic": "رجيم",
+					"english": "Diet",
+					"transliteration": "rijeem"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "سعرات",
+			"arabicTashkeel": "سُعرات",
+			"english": "Calories",
+			"transliteration": "su3raat",
+			"wordAlignments": [
+				{
+					"arabic": "سعرات",
+					"english": "Calories",
+					"transliteration": "su3raat"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "شبعان",
+			"arabicTashkeel": "شَبعان",
+			"english": "Full (after eating)",
+			"transliteration": "shab3aan",
+			"wordAlignments": [
+				{
+					"arabic": "شبعان",
+					"english": "Full",
+					"transliteration": "shab3aan"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "أكل البيت",
+			"arabicTashkeel": "أكل البيت",
+			"english": "Home cooking",
+			"transliteration": "akl il-beet",
+			"wordAlignments": [
+				{
+					"arabic": "أكل",
+					"english": "Food of",
+					"transliteration": "akl"
+				},
+				{
+					"arabic": "البيت",
+					"english": "the home",
+					"transliteration": "il-beet"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "عادة",
+			"arabicTashkeel": "عادة",
+			"english": "Habit",
+			"transliteration": "3aada",
+			"wordAlignments": [
+				{
+					"arabic": "عادة",
+					"english": "Habit",
+					"transliteration": "3aada"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "يقلل",
+			"arabicTashkeel": "يْقَلِّل",
+			"english": "He reduces",
+			"transliteration": "ygallil",
+			"wordAlignments": [
+				{
+					"arabic": "يقلل",
+					"english": "He reduces",
+					"transliteration": "ygallil"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "تصبيرة",
+			"arabicTashkeel": "تَصبيرة",
+			"english": "Snack",
+			"transliteration": "tasbeera",
+			"wordAlignments": [
+				{
+					"arabic": "تصبيرة",
+					"english": "Snack",
+					"transliteration": "tasbeera"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "الريوق أهم وجبة.",
+			"arabicTashkeel": "الرّيوق أهَم وَجبة.",
+			"english": "Breakfast is the most important meal.",
+			"transliteration": "ir-ryoog aham wajba.",
+			"wordAlignments": [
+				{
+					"arabic": "الريوق",
+					"english": "Breakfast is",
+					"transliteration": "ir-ryoog"
+				},
+				{
+					"arabic": "أهم",
+					"english": "the most important",
+					"transliteration": "aham"
+				},
+				{
+					"arabic": "وجبة.",
+					"english": "meal.",
+					"transliteration": "wajba."
+				}
+			],
+			"targetWords": [
+				"Breakfast",
+				"Meal"
+			]
+		},
+		{
+			"arabic": "بالخليج الغدا الوجبة الكبيرة.",
+			"arabicTashkeel": "بالخَليج الغَدا الوَجبة الكْبيرة.",
+			"english": "In the Gulf, lunch is the big meal.",
+			"transliteration": "bil-khaleej il-ghada il-wajba il-chbeera.",
+			"wordAlignments": [
+				{
+					"arabic": "بالخليج",
+					"english": "In the Gulf",
+					"transliteration": "bil-khaleej"
+				},
+				{
+					"arabic": "الغدا",
+					"english": "lunch is",
+					"transliteration": "il-ghada"
+				},
+				{
+					"arabic": "الوجبة",
+					"english": "the meal",
+					"transliteration": "il-wajba"
+				},
+				{
+					"arabic": "الكبيرة.",
+					"english": "big.",
+					"transliteration": "il-chbeera."
+				}
+			],
+			"targetWords": [
+				"Lunch",
+				"Meal"
+			]
+		},
+		{
+			"arabic": "نتعشى عشا خفيف.",
+			"arabicTashkeel": "نِتعَشّى عَشا خَفيف.",
+			"english": "We have a light dinner.",
+			"transliteration": "nit3ashsha 3asha khafeef.",
+			"wordAlignments": [
+				{
+					"arabic": "نتعشى",
+					"english": "We have dinner",
+					"transliteration": "nit3ashsha"
+				},
+				{
+					"arabic": "عشا",
+					"english": "a dinner",
+					"transliteration": "3asha"
+				},
+				{
+					"arabic": "خفيف.",
+					"english": "light.",
+					"transliteration": "khafeef."
+				}
+			],
+			"targetWords": [
+				"Dinner"
+			]
+		},
+		{
+			"arabic": "ثلاث وجبات باليوم.",
+			"arabicTashkeel": "ثَلاث وَجبات باليوم.",
+			"english": "Three meals a day.",
+			"transliteration": "thalaath wajbaat bil-yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "ثلاث",
+					"english": "Three",
+					"transliteration": "thalaath"
+				},
+				{
+					"arabic": "وجبات",
+					"english": "meals",
+					"transliteration": "wajbaat"
+				},
+				{
+					"arabic": "باليوم.",
+					"english": "a day.",
+					"transliteration": "bil-yoom."
+				}
+			],
+			"targetWords": [
+				"Meal"
+			]
+		},
+		{
+			"arabic": "الخضرة صحية.",
+			"arabicTashkeel": "الخُضرة صِحّية.",
+			"english": "Vegetables are healthy.",
+			"transliteration": "il-khudhra si77iyya.",
+			"wordAlignments": [
+				{
+					"arabic": "الخضرة",
+					"english": "Vegetables are",
+					"transliteration": "il-khudhra"
+				},
+				{
+					"arabic": "صحية.",
+					"english": "healthy.",
+					"transliteration": "si77iyya."
+				}
+			],
+			"targetWords": [
+				"Healthy"
+			]
+		},
+		{
+			"arabic": "هالأكل فيه دهون وايد.",
+			"arabicTashkeel": "هالأكل فيه دُهون وايد.",
+			"english": "This food has too much fat.",
+			"transliteration": "hal-akl fee duhoon waayid.",
+			"wordAlignments": [
+				{
+					"arabic": "هالأكل",
+					"english": "This food",
+					"transliteration": "hal-akl"
+				},
+				{
+					"arabic": "فيه",
+					"english": "has in it",
+					"transliteration": "fee"
+				},
+				{
+					"arabic": "دهون",
+					"english": "fats",
+					"transliteration": "duhoon"
+				},
+				{
+					"arabic": "وايد.",
+					"english": "a lot.",
+					"transliteration": "waayid."
+				}
+			],
+			"targetWords": [
+				"Fats"
+			]
+		},
+		{
+			"arabic": "أحب الحلاوة العربية.",
+			"arabicTashkeel": "أحِب الحَلاوة العَرَبية.",
+			"english": "I love Arabic sweets.",
+			"transliteration": "a7ibb il-7alaawa il-3arabiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "أحب",
+					"english": "I love",
+					"transliteration": "a7ibb"
+				},
+				{
+					"arabic": "الحلاوة",
+					"english": "sweets",
+					"transliteration": "il-7alaawa"
+				},
+				{
+					"arabic": "العربية.",
+					"english": "Arabic.",
+					"transliteration": "il-3arabiyya."
+				}
+			],
+			"targetWords": [
+				"Sweets"
+			]
+		},
+		{
+			"arabic": "الوجبات السريعة مو صحية.",
+			"arabicTashkeel": "الوَجبات السَّريعة مو صِحّية.",
+			"english": "Fast food is not healthy.",
+			"transliteration": "il-wajbaat is-saree3a moo si77iyya.",
+			"wordAlignments": [
+				{
+					"arabic": "الوجبات",
+					"english": "Meals",
+					"transliteration": "il-wajbaat"
+				},
+				{
+					"arabic": "السريعة",
+					"english": "fast are",
+					"transliteration": "is-saree3a"
+				},
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "صحية.",
+					"english": "healthy.",
+					"transliteration": "si77iyya."
+				}
+			],
+			"targetWords": [
+				"Fast food",
+				"Healthy"
+			]
+		},
+		{
+			"arabic": "أنا على رجيم.",
+			"arabicTashkeel": "أنا على رِجيم.",
+			"english": "I'm on a diet.",
+			"transliteration": "ana 3ala rijeem.",
+			"wordAlignments": [
+				{
+					"arabic": "أنا",
+					"english": "I am",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "رجيم.",
+					"english": "a diet.",
+					"transliteration": "rijeem."
+				}
+			],
+			"targetWords": [
+				"Diet"
+			]
+		},
+		{
+			"arabic": "كم سعرة فيه؟",
+			"arabicTashkeel": "كَم سُعرة فيه؟",
+			"english": "How many calories are in this?",
+			"transliteration": "cham su3ra fee?",
+			"wordAlignments": [
+				{
+					"arabic": "كم",
+					"english": "How many",
+					"transliteration": "cham"
+				},
+				{
+					"arabic": "سعرة",
+					"english": "calories",
+					"transliteration": "su3ra"
+				},
+				{
+					"arabic": "فيه؟",
+					"english": "are in it?",
+					"transliteration": "fee?"
+				}
+			],
+			"targetWords": [
+				"Calories"
+			]
+		},
+		{
+			"arabic": "لا مشكور، شبعان.",
+			"arabicTashkeel": "لا مَشكور، شَبعان.",
+			"english": "No thanks, I'm full.",
+			"transliteration": "laa mashkoor, shab3aan.",
+			"wordAlignments": [
+				{
+					"arabic": "لا",
+					"english": "No",
+					"transliteration": "laa"
+				},
+				{
+					"arabic": "مشكور،",
+					"english": "thanks,",
+					"transliteration": "mashkoor,"
+				},
+				{
+					"arabic": "شبعان.",
+					"english": "I'm full.",
+					"transliteration": "shab3aan."
+				}
+			],
+			"targetWords": [
+				"Full (after eating)"
+			]
+		},
+		{
+			"arabic": "أكل البيت الأحسن.",
+			"arabicTashkeel": "أكل البيت الأحسَن.",
+			"english": "Home cooking is the best.",
+			"transliteration": "akl il-beet il-a7san.",
+			"wordAlignments": [
+				{
+					"arabic": "أكل",
+					"english": "The food of",
+					"transliteration": "akl"
+				},
+				{
+					"arabic": "البيت",
+					"english": "the home is",
+					"transliteration": "il-beet"
+				},
+				{
+					"arabic": "الأحسن.",
+					"english": "the best.",
+					"transliteration": "il-a7san."
+				}
+			],
+			"targetWords": [
+				"Home cooking"
+			]
+		},
+		{
+			"arabic": "الأكل متأخر عادة شينة.",
+			"arabicTashkeel": "الأكل مِتأخِّر عادة شينة.",
+			"english": "Eating late is a bad habit.",
+			"transliteration": "il-akl mit2akhkhir 3aada sheena.",
+			"wordAlignments": [
+				{
+					"arabic": "الأكل",
+					"english": "Eating",
+					"transliteration": "il-akl"
+				},
+				{
+					"arabic": "متأخر",
+					"english": "late is",
+					"transliteration": "mit2akhkhir"
+				},
+				{
+					"arabic": "عادة",
+					"english": "a habit",
+					"transliteration": "3aada"
+				},
+				{
+					"arabic": "شينة.",
+					"english": "bad.",
+					"transliteration": "sheena."
+				}
+			],
+			"targetWords": [
+				"Habit"
+			]
+		},
+		{
+			"arabic": "قللت الشكر بالشاي.",
+			"arabicTashkeel": "قَلَّلت الشَّكَر بالشّاي.",
+			"english": "I reduced sugar in my tea.",
+			"transliteration": "gallalt ish-shakar bish-shaay.",
+			"wordAlignments": [
+				{
+					"arabic": "قللت",
+					"english": "I reduced",
+					"transliteration": "gallalt"
+				},
+				{
+					"arabic": "الشكر",
+					"english": "the sugar",
+					"transliteration": "ish-shakar"
+				},
+				{
+					"arabic": "بالشاي.",
+					"english": "in the tea.",
+					"transliteration": "bish-shaay."
+				}
+			],
+			"targetWords": [
+				"He reduces"
+			]
+		},
+		{
+			"arabic": "تصبيرة قبل المغرب.",
+			"arabicTashkeel": "تَصبيرة قَبل المَغرِب.",
+			"english": "A snack before maghrib.",
+			"transliteration": "tasbeera gabil il-maghrib.",
+			"wordAlignments": [
+				{
+					"arabic": "تصبيرة",
+					"english": "A snack",
+					"transliteration": "tasbeera"
+				},
+				{
+					"arabic": "قبل",
+					"english": "before",
+					"transliteration": "gabil"
+				},
+				{
+					"arabic": "المغرب.",
+					"english": "sunset.",
+					"transliteration": "il-maghrib."
+				}
+			],
+			"targetWords": [
+				"Snack"
+			]
+		},
+		{
+			"arabic": "ريوق خليجي: بلاليط، بيض وخبز.",
+			"arabicTashkeel": "ريوق خَليجي: بَلاليط، بيض وخُبُز.",
+			"english": "A Gulf breakfast: balaleet, eggs and bread.",
+			"transliteration": "ryoog khaleeji: balaaleet, beedh w-khubuz.",
+			"wordAlignments": [
+				{
+					"arabic": "ريوق",
+					"english": "A breakfast",
+					"transliteration": "ryoog"
+				},
+				{
+					"arabic": "خليجي:",
+					"english": "Gulf:",
+					"transliteration": "khaleeji:"
+				},
+				{
+					"arabic": "بلاليط،",
+					"english": "balaleet,",
+					"transliteration": "balaaleet,"
+				},
+				{
+					"arabic": "بيض",
+					"english": "eggs",
+					"transliteration": "beedh"
+				},
+				{
+					"arabic": "وخبز.",
+					"english": "and bread.",
+					"transliteration": "w-khubuz."
+				}
+			],
+			"targetWords": [
+				"Breakfast"
+			]
+		},
+		{
+			"arabic": "شو الغدا اليوم؟",
+			"arabicTashkeel": "شو الغَدا اليوم؟",
+			"english": "What's for lunch today?",
+			"transliteration": "shu il-ghada il-yoom?",
+			"wordAlignments": [
+				{
+					"arabic": "شو",
+					"english": "What is",
+					"transliteration": "shu"
+				},
+				{
+					"arabic": "الغدا",
+					"english": "the lunch",
+					"transliteration": "il-ghada"
+				},
+				{
+					"arabic": "اليوم؟",
+					"english": "today?",
+					"transliteration": "il-yoom?"
+				}
+			],
+			"targetWords": [
+				"Lunch"
+			]
+		},
+		{
+			"arabic": "نتعشى الساعة تسع.",
+			"arabicTashkeel": "نِتعَشّى السّاعة تِسع.",
+			"english": "We eat dinner at nine.",
+			"transliteration": "nit3ashsha is-saa3a tisa3.",
+			"wordAlignments": [
+				{
+					"arabic": "نتعشى",
+					"english": "We have dinner",
+					"transliteration": "nit3ashsha"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "at",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "تسع.",
+					"english": "nine.",
+					"transliteration": "tisa3."
+				}
+			],
+			"targetWords": [
+				"Dinner"
+			]
+		},
+		{
+			"arabic": "وجبة كبيرة يوم الجمعة.",
+			"arabicTashkeel": "وَجبة كْبيرة يوم الجُمعة.",
+			"english": "A big meal on Friday.",
+			"transliteration": "wajba chbeera yoom il-yum3a.",
+			"wordAlignments": [
+				{
+					"arabic": "وجبة",
+					"english": "A meal",
+					"transliteration": "wajba"
+				},
+				{
+					"arabic": "كبيرة",
+					"english": "big",
+					"transliteration": "chbeera"
+				},
+				{
+					"arabic": "يوم",
+					"english": "on",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "الجمعة.",
+					"english": "Friday.",
+					"transliteration": "il-yum3a."
+				}
+			],
+			"targetWords": [
+				"Meal"
+			]
+		},
+		{
+			"arabic": "أحاول آكل صحي.",
+			"arabicTashkeel": "أحاوِل آكِل صِحّي.",
+			"english": "I try to eat healthy.",
+			"transliteration": "a7aawil aakil si77i.",
+			"wordAlignments": [
+				{
+					"arabic": "أحاول",
+					"english": "I try",
+					"transliteration": "a7aawil"
+				},
+				{
+					"arabic": "آكل",
+					"english": "to eat",
+					"transliteration": "aakil"
+				},
+				{
+					"arabic": "صحي.",
+					"english": "healthy.",
+					"transliteration": "si77i."
+				}
+			],
+			"targetWords": [
+				"Healthy"
+			]
+		},
+		{
+			"arabic": "الدهون شينة حق القلب.",
+			"arabicTashkeel": "الدُّهون شينة حَق القَلب.",
+			"english": "Fats are bad for the heart.",
+			"transliteration": "id-duhoon sheena 7agg il-galb.",
+			"wordAlignments": [
+				{
+					"arabic": "الدهون",
+					"english": "Fats are",
+					"transliteration": "id-duhoon"
+				},
+				{
+					"arabic": "شينة",
+					"english": "bad",
+					"transliteration": "sheena"
+				},
+				{
+					"arabic": "حق",
+					"english": "for",
+					"transliteration": "7agg"
+				},
+				{
+					"arabic": "القلب.",
+					"english": "the heart.",
+					"transliteration": "il-galb."
+				}
+			],
+			"targetWords": [
+				"Fats"
+			]
+		},
+		{
+			"arabic": "الحلاوة الزايدة شينة حق السنون.",
+			"arabicTashkeel": "الحَلاوة الزّايدة شينة حَق السِّنون.",
+			"english": "Too many sweets are bad for your teeth.",
+			"transliteration": "il-7alaawa iz-zaayda sheena 7agg is-sinoon.",
+			"wordAlignments": [
+				{
+					"arabic": "الحلاوة",
+					"english": "Sweets",
+					"transliteration": "il-7alaawa"
+				},
+				{
+					"arabic": "الزايدة",
+					"english": "in excess are",
+					"transliteration": "iz-zaayda"
+				},
+				{
+					"arabic": "شينة",
+					"english": "bad",
+					"transliteration": "sheena"
+				},
+				{
+					"arabic": "حق",
+					"english": "for",
+					"transliteration": "7agg"
+				},
+				{
+					"arabic": "السنون.",
+					"english": "the teeth.",
+					"transliteration": "is-sinoon."
+				}
+			],
+			"targetWords": [
+				"Sweets"
+			]
+		},
+		{
+			"arabic": "العيال يحبون الوجبات السريعة.",
+			"arabicTashkeel": "العْيال يْحِبّون الوَجبات السَّريعة.",
+			"english": "The kids love fast food.",
+			"transliteration": "il-3yaal y7ibboon il-wajbaat is-saree3a.",
+			"wordAlignments": [
+				{
+					"arabic": "العيال",
+					"english": "The kids",
+					"transliteration": "il-3yaal"
+				},
+				{
+					"arabic": "يحبون",
+					"english": "love",
+					"transliteration": "y7ibboon"
+				},
+				{
+					"arabic": "الوجبات",
+					"english": "the meals",
+					"transliteration": "il-wajbaat"
+				},
+				{
+					"arabic": "السريعة.",
+					"english": "fast.",
+					"transliteration": "is-saree3a."
+				}
+			],
+			"targetWords": [
+				"Fast food"
+			]
+		},
+		{
+			"arabic": "الرجيم صعب برمضان.",
+			"arabicTashkeel": "الرِّجيم صَعب برَمَضان.",
+			"english": "The diet is hard during Ramadan.",
+			"transliteration": "ir-rijeem sa3b b-ramadhaan.",
+			"wordAlignments": [
+				{
+					"arabic": "الرجيم",
+					"english": "The diet is",
+					"transliteration": "ir-rijeem"
+				},
+				{
+					"arabic": "صعب",
+					"english": "hard",
+					"transliteration": "sa3b"
+				},
+				{
+					"arabic": "برمضان.",
+					"english": "in Ramadan.",
+					"transliteration": "b-ramadhaan."
+				}
+			],
+			"targetWords": [
+				"Diet"
+			]
+		},
+		{
+			"arabic": "اللقيمات فيها سعرات وايد.",
+			"arabicTashkeel": "اللُّقَيمات فيها سُعرات وايد.",
+			"english": "Luqaimat have a lot of calories.",
+			"transliteration": "il-lugaimaat feeha su3raat waayid.",
+			"wordAlignments": [
+				{
+					"arabic": "اللقيمات",
+					"english": "Luqaimat",
+					"transliteration": "il-lugaimaat"
+				},
+				{
+					"arabic": "فيها",
+					"english": "have in them",
+					"transliteration": "feeha"
+				},
+				{
+					"arabic": "سعرات",
+					"english": "calories",
+					"transliteration": "su3raat"
+				},
+				{
+					"arabic": "وايد.",
+					"english": "a lot.",
+					"transliteration": "waayid."
+				}
+			],
+			"targetWords": [
+				"Calories"
+			]
+		},
+		{
+			"arabic": "أكلت وايد، شبعان حيل.",
+			"arabicTashkeel": "أكَلت وايد، شَبعان حيل.",
+			"english": "I ate a lot, I'm very full.",
+			"transliteration": "akalt waayid, shab3aan 7eil.",
+			"wordAlignments": [
+				{
+					"arabic": "أكلت",
+					"english": "I ate",
+					"transliteration": "akalt"
+				},
+				{
+					"arabic": "وايد،",
+					"english": "a lot,",
+					"transliteration": "waayid,"
+				},
+				{
+					"arabic": "شبعان",
+					"english": "I'm full",
+					"transliteration": "shab3aan"
+				},
+				{
+					"arabic": "حيل.",
+					"english": "very.",
+					"transliteration": "7eil."
+				}
+			],
+			"targetWords": [
+				"Full (after eating)"
+			]
+		},
+		{
+			"arabic": "مشتاق لأكل البيت.",
+			"arabicTashkeel": "مِشتاق لأكل البيت.",
+			"english": "I miss home cooking.",
+			"transliteration": "mishtaag l-akl il-beet.",
+			"wordAlignments": [
+				{
+					"arabic": "مشتاق",
+					"english": "I'm missing",
+					"transliteration": "mishtaag"
+				},
+				{
+					"arabic": "لأكل",
+					"english": "the food of",
+					"transliteration": "l-akl"
+				},
+				{
+					"arabic": "البيت.",
+					"english": "the home.",
+					"transliteration": "il-beet."
+				}
+			],
+			"targetWords": [
+				"Home cooking"
+			]
+		},
+		{
+			"arabic": "عادة زينة: ماي كل صبح.",
+			"arabicTashkeel": "عادة زينة: ماي كِل صُبح.",
+			"english": "A good habit: water every morning.",
+			"transliteration": "3aada zeena: maay kil sub7.",
+			"wordAlignments": [
+				{
+					"arabic": "عادة",
+					"english": "A habit",
+					"transliteration": "3aada"
+				},
+				{
+					"arabic": "زينة:",
+					"english": "good:",
+					"transliteration": "zeena:"
+				},
+				{
+					"arabic": "ماي",
+					"english": "water",
+					"transliteration": "maay"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kil"
+				},
+				{
+					"arabic": "صبح.",
+					"english": "morning.",
+					"transliteration": "sub7."
+				}
+			],
+			"targetWords": [
+				"Habit"
+			]
+		},
+		{
+			"arabic": "قلل الملح.",
+			"arabicTashkeel": "قَلِّل المِلح.",
+			"english": "Reduce the salt.",
+			"transliteration": "gallil il-mil7.",
+			"wordAlignments": [
+				{
+					"arabic": "قلل",
+					"english": "Reduce",
+					"transliteration": "gallil"
+				},
+				{
+					"arabic": "الملح.",
+					"english": "the salt.",
+					"transliteration": "il-mil7."
+				}
+			],
+			"targetWords": [
+				"He reduces"
+			]
+		},
+		{
+			"arabic": "المكسرات تصبيرة زينة.",
+			"arabicTashkeel": "المُكَسَّرات تَصبيرة زينة.",
+			"english": "Nuts are a good snack.",
+			"transliteration": "il-mukassaraat tasbeera zeena.",
+			"wordAlignments": [
+				{
+					"arabic": "المكسرات",
+					"english": "Nuts are",
+					"transliteration": "il-mukassaraat"
+				},
+				{
+					"arabic": "تصبيرة",
+					"english": "a snack",
+					"transliteration": "tasbeera"
+				},
+				{
+					"arabic": "زينة.",
+					"english": "good.",
+					"transliteration": "zeena."
+				}
+			],
+			"targetWords": [
+				"Snack"
+			]
+		},
+		{
+			"arabic": "ما تريقت اليوم.",
+			"arabicTashkeel": "ما تريَّقت اليوم.",
+			"english": "I skipped breakfast today.",
+			"transliteration": "ma trayyagt il-yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "تريقت",
+					"english": "I had breakfast",
+					"transliteration": "trayyagt"
+				},
+				{
+					"arabic": "اليوم.",
+					"english": "today.",
+					"transliteration": "il-yoom."
+				}
+			],
+			"targetWords": [
+				"Breakfast"
+			]
+		},
+		{
+			"arabic": "الغدا الساعة ثنتين.",
+			"arabicTashkeel": "الغَدا السّاعة ثِنتين.",
+			"english": "Lunch is at two.",
+			"transliteration": "il-ghada is-saa3a thinteen.",
+			"wordAlignments": [
+				{
+					"arabic": "الغدا",
+					"english": "Lunch is",
+					"transliteration": "il-ghada"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "at",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "ثنتين.",
+					"english": "two.",
+					"transliteration": "thinteen."
+				}
+			],
+			"targetWords": [
+				"Lunch"
+			]
+		},
+		{
+			"arabic": "العشا عند جدتي.",
+			"arabicTashkeel": "العَشا عِند جَدّتي.",
+			"english": "Dinner at grandma's.",
+			"transliteration": "il-3asha 3ind yaddati.",
+			"wordAlignments": [
+				{
+					"arabic": "العشا",
+					"english": "Dinner is",
+					"transliteration": "il-3asha"
+				},
+				{
+					"arabic": "عند",
+					"english": "at",
+					"transliteration": "3ind"
+				},
+				{
+					"arabic": "جدتي.",
+					"english": "my grandmother's.",
+					"transliteration": "yaddati."
+				}
+			],
+			"targetWords": [
+				"Dinner"
+			]
+		},
+		{
+			"arabic": "وجبة صحية.",
+			"arabicTashkeel": "وَجبة صِحّية.",
+			"english": "A healthy meal.",
+			"transliteration": "wajba si77iyya.",
+			"wordAlignments": [
+				{
+					"arabic": "وجبة",
+					"english": "A meal",
+					"transliteration": "wajba"
+				},
+				{
+					"arabic": "صحية.",
+					"english": "healthy.",
+					"transliteration": "si77iyya."
+				}
+			],
+			"targetWords": [
+				"Healthy",
+				"Meal"
+			]
+		},
+		{
+			"arabic": "أكل بدون دهون.",
+			"arabicTashkeel": "أكل بدون دُهون.",
+			"english": "Food without fats.",
+			"transliteration": "akl bidoon duhoon.",
+			"wordAlignments": [
+				{
+					"arabic": "أكل",
+					"english": "Food",
+					"transliteration": "akl"
+				},
+				{
+					"arabic": "بدون",
+					"english": "without",
+					"transliteration": "bidoon"
+				},
+				{
+					"arabic": "دهون.",
+					"english": "fats.",
+					"transliteration": "duhoon."
+				}
+			],
+			"targetWords": [
+				"Fats"
+			]
+		},
+		{
+			"arabic": "الحلاوة بالعيد.",
+			"arabicTashkeel": "الحَلاوة بالعيد.",
+			"english": "Sweets on Eid.",
+			"transliteration": "il-7alaawa bil-3eed.",
+			"wordAlignments": [
+				{
+					"arabic": "الحلاوة",
+					"english": "Sweets",
+					"transliteration": "il-7alaawa"
+				},
+				{
+					"arabic": "بالعيد.",
+					"english": "on Eid.",
+					"transliteration": "bil-3eed."
+				}
+			],
+			"targetWords": [
+				"Sweets"
+			]
+		},
+		{
+			"arabic": "الوجبات السريعة رخيصة وسريعة.",
+			"arabicTashkeel": "الوَجبات السَّريعة رْخيصة وسَريعة.",
+			"english": "Fast food is cheap and quick.",
+			"transliteration": "il-wajbaat is-saree3a rkheesa w-saree3a.",
+			"wordAlignments": [
+				{
+					"arabic": "الوجبات",
+					"english": "Meals",
+					"transliteration": "il-wajbaat"
+				},
+				{
+					"arabic": "السريعة",
+					"english": "fast are",
+					"transliteration": "is-saree3a"
+				},
+				{
+					"arabic": "رخيصة",
+					"english": "cheap",
+					"transliteration": "rkheesa"
+				},
+				{
+					"arabic": "وسريعة.",
+					"english": "and quick.",
+					"transliteration": "w-saree3a."
+				}
+			],
+			"targetWords": [
+				"Fast food"
+			]
+		},
+		{
+			"arabic": "بديت رجيم أمس.",
+			"arabicTashkeel": "بَدَيت رِجيم أمس.",
+			"english": "I started a diet yesterday.",
+			"transliteration": "badeet rijeem ams.",
+			"wordAlignments": [
+				{
+					"arabic": "بديت",
+					"english": "I started",
+					"transliteration": "badeet"
+				},
+				{
+					"arabic": "رجيم",
+					"english": "a diet",
+					"transliteration": "rijeem"
+				},
+				{
+					"arabic": "أمس.",
+					"english": "yesterday.",
+					"transliteration": "ams."
+				}
+			],
+			"targetWords": [
+				"Diet"
+			]
+		},
+		{
+			"arabic": "أحسب السعرات.",
+			"arabicTashkeel": "أحسِب السُّعرات.",
+			"english": "I count the calories.",
+			"transliteration": "a7sib is-su3raat.",
+			"wordAlignments": [
+				{
+					"arabic": "أحسب",
+					"english": "I count",
+					"transliteration": "a7sib"
+				},
+				{
+					"arabic": "السعرات.",
+					"english": "the calories.",
+					"transliteration": "is-su3raat."
+				}
+			],
+			"targetWords": [
+				"Calories"
+			]
+		},
+		{
+			"arabic": "شبعان؟",
+			"arabicTashkeel": "شَبعان؟",
+			"english": "Are you full?",
+			"transliteration": "shab3aan?",
+			"wordAlignments": [
+				{
+					"arabic": "شبعان؟",
+					"english": "Are you full?",
+					"transliteration": "shab3aan?"
+				}
+			],
+			"targetWords": [
+				"Full (after eating)"
+			]
+		},
+		{
+			"arabic": "أكل البيت أصح.",
+			"arabicTashkeel": "أكل البيت أصَحّ.",
+			"english": "Home cooking is healthier.",
+			"transliteration": "akl il-beet asa77.",
+			"wordAlignments": [
+				{
+					"arabic": "أكل",
+					"english": "The food of",
+					"transliteration": "akl"
+				},
+				{
+					"arabic": "البيت",
+					"english": "the home is",
+					"transliteration": "il-beet"
+				},
+				{
+					"arabic": "أصح.",
+					"english": "healthier.",
+					"transliteration": "asa77."
+				}
+			],
+			"targetWords": [
+				"Home cooking"
+			]
+		},
+		{
+			"arabic": "الأكل بسرعة عادة شينة.",
+			"arabicTashkeel": "الأكل بسُرعة عادة شينة.",
+			"english": "Eating fast is a bad habit.",
+			"transliteration": "il-akl b-sur3a 3aada sheena.",
+			"wordAlignments": [
+				{
+					"arabic": "الأكل",
+					"english": "Eating",
+					"transliteration": "il-akl"
+				},
+				{
+					"arabic": "بسرعة",
+					"english": "fast is",
+					"transliteration": "b-sur3a"
+				},
+				{
+					"arabic": "عادة",
+					"english": "a habit",
+					"transliteration": "3aada"
+				},
+				{
+					"arabic": "شينة.",
+					"english": "bad.",
+					"transliteration": "sheena."
+				}
+			],
+			"targetWords": [
+				"Habit"
+			]
+		},
+		{
+			"arabic": "الدختر قال لي أقلل الشكر.",
+			"arabicTashkeel": "الدَّختَر قال لي أقَلِّل الشَّكَر.",
+			"english": "The doctor told me to reduce sugar.",
+			"transliteration": "id-dakhtar gaal li agallil ish-shakar.",
+			"wordAlignments": [
+				{
+					"arabic": "الدختر",
+					"english": "The doctor",
+					"transliteration": "id-dakhtar"
+				},
+				{
+					"arabic": "قال",
+					"english": "said",
+					"transliteration": "gaal"
+				},
+				{
+					"arabic": "لي",
+					"english": "to me",
+					"transliteration": "li"
+				},
+				{
+					"arabic": "أقلل",
+					"english": "to reduce",
+					"transliteration": "agallil"
+				},
+				{
+					"arabic": "الشكر.",
+					"english": "the sugar.",
+					"transliteration": "ish-shakar."
+				}
+			],
+			"targetWords": [
+				"He reduces"
+			]
+		},
+		{
+			"arabic": "تصبيرة بين الوجبات.",
+			"arabicTashkeel": "تَصبيرة بين الوَجبات.",
+			"english": "A snack between meals.",
+			"transliteration": "tasbeera been il-wajbaat.",
+			"wordAlignments": [
+				{
+					"arabic": "تصبيرة",
+					"english": "A snack",
+					"transliteration": "tasbeera"
+				},
+				{
+					"arabic": "بين",
+					"english": "between",
+					"transliteration": "been"
+				},
+				{
+					"arabic": "الوجبات.",
+					"english": "the meals.",
+					"transliteration": "il-wajbaat."
+				}
+			],
+			"targetWords": [
+				"Snack",
+				"Meal"
+			]
+		},
+		{
+			"arabic": "الريوق ويا العايلة.",
+			"arabicTashkeel": "الرّيوق وِيّا العايلة.",
+			"english": "Breakfast with the family.",
+			"transliteration": "ir-ryoog wiyya il-3aayla.",
+			"wordAlignments": [
+				{
+					"arabic": "الريوق",
+					"english": "Breakfast",
+					"transliteration": "ir-ryoog"
+				},
+				{
+					"arabic": "ويا",
+					"english": "with",
+					"transliteration": "wiyya"
+				},
+				{
+					"arabic": "العايلة.",
+					"english": "the family.",
+					"transliteration": "il-3aayla."
+				}
+			],
+			"targetWords": [
+				"Breakfast"
+			]
+		},
+		{
+			"arabic": "غدا ثقيل.",
+			"arabicTashkeel": "غَدا ثَقيل.",
+			"english": "A heavy lunch.",
+			"transliteration": "ghada thageel.",
+			"wordAlignments": [
+				{
+					"arabic": "غدا",
+					"english": "A lunch",
+					"transliteration": "ghada"
+				},
+				{
+					"arabic": "ثقيل.",
+					"english": "heavy.",
+					"transliteration": "thageel."
+				}
+			],
+			"targetWords": [
+				"Lunch"
+			]
+		},
+		{
+			"arabic": "نتعشى برا بالشتا.",
+			"arabicTashkeel": "نِتعَشّى بَرّا بالشِّتا.",
+			"english": "We eat dinner outside in winter.",
+			"transliteration": "nit3ashsha barra bish-shita.",
+			"wordAlignments": [
+				{
+					"arabic": "نتعشى",
+					"english": "We have dinner",
+					"transliteration": "nit3ashsha"
+				},
+				{
+					"arabic": "برا",
+					"english": "outside",
+					"transliteration": "barra"
+				},
+				{
+					"arabic": "بالشتا.",
+					"english": "in winter.",
+					"transliteration": "bish-shita."
+				}
+			],
+			"targetWords": [
+				"Dinner"
+			]
+		},
+		{
+			"arabic": "الأكل الصحي غالي.",
+			"arabicTashkeel": "الأكل الصِّحّي غالي.",
+			"english": "Healthy food is expensive.",
+			"transliteration": "il-akl is-si77i ghaali.",
+			"wordAlignments": [
+				{
+					"arabic": "الأكل",
+					"english": "Food",
+					"transliteration": "il-akl"
+				},
+				{
+					"arabic": "الصحي",
+					"english": "healthy is",
+					"transliteration": "is-si77i"
+				},
+				{
+					"arabic": "غالي.",
+					"english": "expensive.",
+					"transliteration": "ghaali."
+				}
+			],
+			"targetWords": [
+				"Healthy"
+			]
+		},
+		{
+			"arabic": "الهريس فيه دهون وايد.",
+			"arabicTashkeel": "الهَريس فيه دُهون وايد.",
+			"english": "Harees has a lot of fat.",
+			"transliteration": "il-harees fee duhoon waayid.",
+			"wordAlignments": [
+				{
+					"arabic": "الهريس",
+					"english": "Harees",
+					"transliteration": "il-harees"
+				},
+				{
+					"arabic": "فيه",
+					"english": "has in it",
+					"transliteration": "fee"
+				},
+				{
+					"arabic": "دهون",
+					"english": "fats",
+					"transliteration": "duhoon"
+				},
+				{
+					"arabic": "وايد.",
+					"english": "a lot.",
+					"transliteration": "waayid."
+				}
+			],
+			"targetWords": [
+				"Fats"
+			]
+		},
+		{
+			"arabic": "ما آكل حلاوة.",
+			"arabicTashkeel": "ما آكِل حَلاوة.",
+			"english": "I don't eat sweets.",
+			"transliteration": "ma aakil 7alaawa.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "آكل",
+					"english": "I eat",
+					"transliteration": "aakil"
+				},
+				{
+					"arabic": "حلاوة.",
+					"english": "sweets.",
+					"transliteration": "7alaawa."
+				}
+			],
+			"targetWords": [
+				"Sweets"
+			]
+		},
+		{
+			"arabic": "الوجبات السريعة كل يوم عادة شينة.",
+			"arabicTashkeel": "الوَجبات السَّريعة كِل يوم عادة شينة.",
+			"english": "Fast food every day is a bad habit.",
+			"transliteration": "il-wajbaat is-saree3a kil yoom 3aada sheena.",
+			"wordAlignments": [
+				{
+					"arabic": "الوجبات",
+					"english": "Meals",
+					"transliteration": "il-wajbaat"
+				},
+				{
+					"arabic": "السريعة",
+					"english": "fast",
+					"transliteration": "is-saree3a"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kil"
+				},
+				{
+					"arabic": "يوم",
+					"english": "day is",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "عادة",
+					"english": "a habit",
+					"transliteration": "3aada"
+				},
+				{
+					"arabic": "شينة.",
+					"english": "bad.",
+					"transliteration": "sheena."
+				}
+			],
+			"targetWords": [
+				"Fast food",
+				"Habit"
+			]
+		},
+		{
+			"arabic": "الرجيم مالي فشل!",
+			"arabicTashkeel": "الرِّجيم مالي فِشَل!",
+			"english": "My diet failed!",
+			"transliteration": "ir-rijeem maali fishal!",
+			"wordAlignments": [
+				{
+					"arabic": "الرجيم",
+					"english": "The diet",
+					"transliteration": "ir-rijeem"
+				},
+				{
+					"arabic": "مالي",
+					"english": "of mine",
+					"transliteration": "maali"
+				},
+				{
+					"arabic": "فشل!",
+					"english": "failed!",
+					"transliteration": "fishal!"
+				}
+			],
+			"targetWords": [
+				"Diet"
+			]
+		},
+		{
+			"arabic": "سعرات أقل.",
+			"arabicTashkeel": "سُعرات أقَل.",
+			"english": "Fewer calories.",
+			"transliteration": "su3raat agall.",
+			"wordAlignments": [
+				{
+					"arabic": "سعرات",
+					"english": "Calories",
+					"transliteration": "su3raat"
+				},
+				{
+					"arabic": "أقل.",
+					"english": "fewer.",
+					"transliteration": "agall."
+				}
+			],
+			"targetWords": [
+				"Calories"
+			]
+		},
+		{
+			"arabic": "الضيوف شبعانين.",
+			"arabicTashkeel": "الضّيوف شَبعانين.",
+			"english": "The guests are full.",
+			"transliteration": "idh-dhyoof shab3aaneen.",
+			"wordAlignments": [
+				{
+					"arabic": "الضيوف",
+					"english": "The guests are",
+					"transliteration": "idh-dhyoof"
+				},
+				{
+					"arabic": "شبعانين.",
+					"english": "full.",
+					"transliteration": "shab3aaneen."
+				}
+			],
+			"targetWords": [
+				"Full (after eating)"
+			]
+		},
+		{
+			"arabic": "أكل البيت من إيد أمي.",
+			"arabicTashkeel": "أكل البيت مِن إيد أُمّي.",
+			"english": "Mom's home cooking.",
+			"transliteration": "akl il-beet min eed ummi.",
+			"wordAlignments": [
+				{
+					"arabic": "أكل",
+					"english": "The food of",
+					"transliteration": "akl"
+				},
+				{
+					"arabic": "البيت",
+					"english": "the home",
+					"transliteration": "il-beet"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "إيد",
+					"english": "the hand of",
+					"transliteration": "eed"
+				},
+				{
+					"arabic": "أمي.",
+					"english": "my mom.",
+					"transliteration": "ummi."
+				}
+			],
+			"targetWords": [
+				"Home cooking"
+			]
+		},
+		{
+			"arabic": "قلل الوجبات السريعة.",
+			"arabicTashkeel": "قَلِّل الوَجبات السَّريعة.",
+			"english": "Reduce fast food.",
+			"transliteration": "gallil il-wajbaat is-saree3a.",
+			"wordAlignments": [
+				{
+					"arabic": "قلل",
+					"english": "Reduce",
+					"transliteration": "gallil"
+				},
+				{
+					"arabic": "الوجبات",
+					"english": "the meals",
+					"transliteration": "il-wajbaat"
+				},
+				{
+					"arabic": "السريعة.",
+					"english": "fast.",
+					"transliteration": "is-saree3a."
+				}
+			],
+			"targetWords": [
+				"He reduces",
+				"Fast food"
+			]
+		},
+		{
+			"arabic": "التمر التصبيرة الخليجية.",
+			"arabicTashkeel": "التَّمر التَّصبيرة الخَليجية.",
+			"english": "Dates are the classic Gulf snack.",
+			"transliteration": "it-tamr it-tasbeera il-khaleejiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "التمر",
+					"english": "Dates are",
+					"transliteration": "it-tamr"
+				},
+				{
+					"arabic": "التصبيرة",
+					"english": "the snack",
+					"transliteration": "it-tasbeera"
+				},
+				{
+					"arabic": "الخليجية.",
+					"english": "Gulf.",
+					"transliteration": "il-khaleejiyya."
+				}
+			],
+			"targetWords": [
+				"Snack"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "Gulf Eating Habits",
+			"sentences": [
+				{
+					"arabic": "بالخليج الريوق عادة بلاليط، بيض وخبز.",
+					"arabicTashkeel": "بالخَليج الرّيوق عادةً بَلاليط، بيض وخُبُز.",
+					"english": "In the Gulf, breakfast is often balaleet, eggs and bread.",
+					"transliteration": "bil-khaleej ir-ryoog 3aadatan balaaleet, beedh w-khubuz.",
+					"wordAlignments": [
+						{
+							"arabic": "بالخليج",
+							"english": "In the Gulf",
+							"transliteration": "bil-khaleej"
+						},
+						{
+							"arabic": "الريوق",
+							"english": "breakfast is",
+							"transliteration": "ir-ryoog"
+						},
+						{
+							"arabic": "عادة",
+							"english": "usually",
+							"transliteration": "3aadatan"
+						},
+						{
+							"arabic": "بلاليط،",
+							"english": "balaleet,",
+							"transliteration": "balaaleet,"
+						},
+						{
+							"arabic": "بيض",
+							"english": "eggs",
+							"transliteration": "beedh"
+						},
+						{
+							"arabic": "وخبز.",
+							"english": "and bread.",
+							"transliteration": "w-khubuz."
+						}
+					]
+				},
+				{
+					"arabic": "الغدا أكبر وجبة: عيش، سمك لو لحم.",
+					"arabicTashkeel": "الغَدا أكبَر وَجبة: عيش، سِمَك لو لَحَم.",
+					"english": "Lunch is the biggest meal: rice, fish or meat.",
+					"transliteration": "il-ghada akbar wajba: 3eesh, simach law la7am.",
+					"wordAlignments": [
+						{
+							"arabic": "الغدا",
+							"english": "Lunch is",
+							"transliteration": "il-ghada"
+						},
+						{
+							"arabic": "أكبر",
+							"english": "the biggest",
+							"transliteration": "akbar"
+						},
+						{
+							"arabic": "وجبة:",
+							"english": "meal:",
+							"transliteration": "wajba:"
+						},
+						{
+							"arabic": "عيش،",
+							"english": "rice,",
+							"transliteration": "3eesh,"
+						},
+						{
+							"arabic": "سمك",
+							"english": "fish",
+							"transliteration": "simach"
+						},
+						{
+							"arabic": "لو",
+							"english": "or",
+							"transliteration": "law"
+						},
+						{
+							"arabic": "لحم.",
+							"english": "meat.",
+							"transliteration": "la7am."
+						}
+					]
+				},
+				{
+					"arabic": "العشا متأخر وخفيف.",
+					"arabicTashkeel": "العَشا مِتأخِّر وخَفيف.",
+					"english": "Dinner is late and light.",
+					"transliteration": "il-3asha mit2akhkhir w-khafeef.",
+					"wordAlignments": [
+						{
+							"arabic": "العشا",
+							"english": "Dinner is",
+							"transliteration": "il-3asha"
+						},
+						{
+							"arabic": "متأخر",
+							"english": "late",
+							"transliteration": "mit2akhkhir"
+						},
+						{
+							"arabic": "وخفيف.",
+							"english": "and light.",
+							"transliteration": "w-khafeef."
+						}
+					]
+				},
+				{
+					"arabic": "العصر الناس يشربون قهوة ويا تمر تصبيرة.",
+					"arabicTashkeel": "العَصر النّاس يِشرَبون قَهوة وِيّا تَمر تَصبيرة.",
+					"english": "In the afternoon people drink coffee with dates as a snack.",
+					"transliteration": "il-3asr in-naas yishraboon gahwa wiyya tamr tasbeera.",
+					"wordAlignments": [
+						{
+							"arabic": "العصر",
+							"english": "In the afternoon",
+							"transliteration": "il-3asr"
+						},
+						{
+							"arabic": "الناس",
+							"english": "people",
+							"transliteration": "in-naas"
+						},
+						{
+							"arabic": "يشربون",
+							"english": "drink",
+							"transliteration": "yishraboon"
+						},
+						{
+							"arabic": "قهوة",
+							"english": "coffee",
+							"transliteration": "gahwa"
+						},
+						{
+							"arabic": "ويا",
+							"english": "with",
+							"transliteration": "wiyya"
+						},
+						{
+							"arabic": "تمر",
+							"english": "dates",
+							"transliteration": "tamr"
+						},
+						{
+							"arabic": "تصبيرة.",
+							"english": "as a snack.",
+							"transliteration": "tasbeera."
+						}
+					]
+				},
+				{
+					"arabic": "أكل البيت زاكي، بس فيه دهون وايد.",
+					"arabicTashkeel": "أكل البيت زاكي، بَس فيه دُهون وايد.",
+					"english": "Home cooking is delicious, but it has a lot of fat.",
+					"transliteration": "akl il-beet zaaki, bas fee duhoon waayid.",
+					"wordAlignments": [
+						{
+							"arabic": "أكل",
+							"english": "The food of",
+							"transliteration": "akl"
+						},
+						{
+							"arabic": "البيت",
+							"english": "the home is",
+							"transliteration": "il-beet"
+						},
+						{
+							"arabic": "زاكي،",
+							"english": "delicious,",
+							"transliteration": "zaaki,"
+						},
+						{
+							"arabic": "بس",
+							"english": "but",
+							"transliteration": "bas"
+						},
+						{
+							"arabic": "فيه",
+							"english": "it has",
+							"transliteration": "fee"
+						},
+						{
+							"arabic": "دهون",
+							"english": "fats",
+							"transliteration": "duhoon"
+						},
+						{
+							"arabic": "وايد.",
+							"english": "a lot.",
+							"transliteration": "waayid."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "My Diet",
+			"sentences": [
+				{
+					"arabic": "الدختر قال لازم أقلل الدهون والحلاوة.",
+					"arabicTashkeel": "الدَّختَر قال لازِم أقَلِّل الدُّهون والحَلاوة.",
+					"english": "The doctor said I must reduce fats and sweets.",
+					"transliteration": "id-dakhtar gaal laazim agallil id-duhoon w-il-7alaawa.",
+					"wordAlignments": [
+						{
+							"arabic": "الدختر",
+							"english": "The doctor",
+							"transliteration": "id-dakhtar"
+						},
+						{
+							"arabic": "قال",
+							"english": "said",
+							"transliteration": "gaal"
+						},
+						{
+							"arabic": "لازم",
+							"english": "I must",
+							"transliteration": "laazim"
+						},
+						{
+							"arabic": "أقلل",
+							"english": "reduce",
+							"transliteration": "agallil"
+						},
+						{
+							"arabic": "الدهون",
+							"english": "fats",
+							"transliteration": "id-duhoon"
+						},
+						{
+							"arabic": "والحلاوة.",
+							"english": "and sweets.",
+							"transliteration": "w-il-7alaawa."
+						}
+					]
+				},
+				{
+					"arabic": "فبديت رجيم وآكل وجبات صحية.",
+					"arabicTashkeel": "فبَدَيت رِجيم وآكِل وَجبات صِحّية.",
+					"english": "So I started a diet and I eat healthy meals.",
+					"transliteration": "f-badeet rijeem w-aakil wajbaat si77iyya.",
+					"wordAlignments": [
+						{
+							"arabic": "فبديت",
+							"english": "So I started",
+							"transliteration": "f-badeet"
+						},
+						{
+							"arabic": "رجيم",
+							"english": "a diet",
+							"transliteration": "rijeem"
+						},
+						{
+							"arabic": "وآكل",
+							"english": "and I eat",
+							"transliteration": "w-aakil"
+						},
+						{
+							"arabic": "وجبات",
+							"english": "meals",
+							"transliteration": "wajbaat"
+						},
+						{
+							"arabic": "صحية.",
+							"english": "healthy.",
+							"transliteration": "si77iyya."
+						}
+					]
+				},
+				{
+					"arabic": "بس ببيت جدتي، دايما آكل لين أشبع!",
+					"arabicTashkeel": "بَس ببيت جَدّتي، دايماً آكِل لين أشبَع!",
+					"english": "But at grandma's house, I always eat until I'm full!",
+					"transliteration": "bas b-beet yaddati, daayman aakil leen ashba3!",
+					"wordAlignments": [
+						{
+							"arabic": "بس",
+							"english": "But",
+							"transliteration": "bas"
+						},
+						{
+							"arabic": "ببيت",
+							"english": "at the house of",
+							"transliteration": "b-beet"
+						},
+						{
+							"arabic": "جدتي،",
+							"english": "my grandmother,",
+							"transliteration": "yaddati,"
+						},
+						{
+							"arabic": "دايما",
+							"english": "always",
+							"transliteration": "daayman"
+						},
+						{
+							"arabic": "آكل",
+							"english": "I eat",
+							"transliteration": "aakil"
+						},
+						{
+							"arabic": "لين",
+							"english": "until",
+							"transliteration": "leen"
+						},
+						{
+							"arabic": "أشبع!",
+							"english": "I'm full!",
+							"transliteration": "ashba3!"
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is chatting with an Emirati friend who has just started a diet, at a café during the afternoon.",
+		"studentRole": "A friend learning Gulf Arabic.",
+		"otherRole": "The Emirati friend, who is struggling with the diet.",
+		"goalEnglish": "Talk about your meals and eating habits, what is healthy or not, and give advice about the diet.",
+		"targetWords": [
+			"Breakfast",
+			"Lunch",
+			"Meal",
+			"Healthy",
+			"Diet",
+			"Fast food",
+			"Habit",
+			"Snack"
+		]
+	}
+}
