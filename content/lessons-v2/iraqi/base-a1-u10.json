@@ -1,0 +1,2081 @@
+{
+	"vocab": [
+		{
+			"arabic": "شنو",
+			"arabicTashkeel": "شِنو",
+			"english": "What",
+			"transliteration": "shinu",
+			"wordAlignments": [
+				{
+					"arabic": "شنو",
+					"english": "What",
+					"transliteration": "shinu"
+				}
+			],
+			"partOfSpeech": "question"
+		},
+		{
+			"arabic": "منو",
+			"arabicTashkeel": "مِنو",
+			"english": "Who",
+			"transliteration": "minu",
+			"wordAlignments": [
+				{
+					"arabic": "منو",
+					"english": "Who",
+					"transliteration": "minu"
+				}
+			],
+			"partOfSpeech": "question"
+		},
+		{
+			"arabic": "وين",
+			"arabicTashkeel": "وين",
+			"english": "Where",
+			"transliteration": "ween",
+			"wordAlignments": [
+				{
+					"arabic": "وين",
+					"english": "Where",
+					"transliteration": "ween"
+				}
+			],
+			"partOfSpeech": "question"
+		},
+		{
+			"arabic": "شلون",
+			"arabicTashkeel": "شْلون",
+			"english": "How",
+			"transliteration": "shloon",
+			"wordAlignments": [
+				{
+					"arabic": "شلون",
+					"english": "How",
+					"transliteration": "shloon"
+				}
+			],
+			"partOfSpeech": "question"
+		},
+		{
+			"arabic": "يمتى",
+			"arabicTashkeel": "يَمتى",
+			"english": "When",
+			"transliteration": "yamta",
+			"wordAlignments": [
+				{
+					"arabic": "يمتى",
+					"english": "When",
+					"transliteration": "yamta"
+				}
+			],
+			"partOfSpeech": "question"
+		},
+		{
+			"arabic": "ليش",
+			"arabicTashkeel": "ليش",
+			"english": "Why",
+			"transliteration": "leesh",
+			"wordAlignments": [
+				{
+					"arabic": "ليش",
+					"english": "Why",
+					"transliteration": "leesh"
+				}
+			],
+			"partOfSpeech": "question"
+		},
+		{
+			"arabic": "كم",
+			"arabicTashkeel": "كَم",
+			"english": "How many",
+			"transliteration": "cham",
+			"wordAlignments": [
+				{
+					"arabic": "كم",
+					"english": "How many",
+					"transliteration": "cham"
+				}
+			],
+			"partOfSpeech": "question"
+		},
+		{
+			"arabic": "بيش",
+			"arabicTashkeel": "بيش",
+			"english": "How much (price)",
+			"transliteration": "beesh",
+			"wordAlignments": [
+				{
+					"arabic": "بيش",
+					"english": "How much",
+					"transliteration": "beesh"
+				}
+			],
+			"partOfSpeech": "question"
+		},
+		{
+			"arabic": "منين",
+			"arabicTashkeel": "مْنين",
+			"english": "From where",
+			"transliteration": "mneen",
+			"wordAlignments": [
+				{
+					"arabic": "منين",
+					"english": "From where",
+					"transliteration": "mneen"
+				}
+			],
+			"partOfSpeech": "question"
+		},
+		{
+			"arabic": "لوين",
+			"arabicTashkeel": "لْوين",
+			"english": "To where",
+			"transliteration": "lween",
+			"wordAlignments": [
+				{
+					"arabic": "لوين",
+					"english": "To where",
+					"transliteration": "lween"
+				}
+			],
+			"partOfSpeech": "question"
+		},
+		{
+			"arabic": "شكد",
+			"arabicTashkeel": "شْكَد",
+			"english": "How long / how much",
+			"transliteration": "shgadd",
+			"wordAlignments": [
+				{
+					"arabic": "شكد",
+					"english": "How long",
+					"transliteration": "shgadd"
+				}
+			],
+			"partOfSpeech": "question"
+		},
+		{
+			"arabic": "ياهو",
+			"arabicTashkeel": "ياهو",
+			"english": "Which one",
+			"transliteration": "yaahu",
+			"wordAlignments": [
+				{
+					"arabic": "ياهو",
+					"english": "Which one",
+					"transliteration": "yaahu"
+				}
+			],
+			"partOfSpeech": "question"
+		},
+		{
+			"arabic": "لأن",
+			"arabicTashkeel": "لأن",
+			"english": "Because",
+			"transliteration": "li2ann",
+			"wordAlignments": [
+				{
+					"arabic": "لأن",
+					"english": "Because",
+					"transliteration": "li2ann"
+				}
+			],
+			"partOfSpeech": "conjunction"
+		},
+		{
+			"arabic": "شكو ماكو؟",
+			"arabicTashkeel": "شَكو ماكو؟",
+			"english": "What's up?",
+			"transliteration": "shaku maaku?",
+			"wordAlignments": [
+				{
+					"arabic": "شكو",
+					"english": "What is there",
+					"transliteration": "shaku"
+				},
+				{
+					"arabic": "ماكو؟",
+					"english": "and what isn't?",
+					"transliteration": "maaku?"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "تعرف",
+			"arabicTashkeel": "تِعرُف",
+			"english": "Do you know",
+			"transliteration": "ti3ruf",
+			"wordAlignments": [
+				{
+					"arabic": "تعرف",
+					"english": "Do you know",
+					"transliteration": "ti3ruf"
+				}
+			],
+			"partOfSpeech": "verb"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "شنو هذا؟",
+			"arabicTashkeel": "شِنو هَذا؟",
+			"english": "What is this?",
+			"transliteration": "shinu haatha?",
+			"wordAlignments": [
+				{
+					"arabic": "شنو",
+					"english": "What is",
+					"transliteration": "shinu"
+				},
+				{
+					"arabic": "هذا؟",
+					"english": "this?",
+					"transliteration": "haatha?"
+				}
+			],
+			"targetWords": [
+				"What"
+			]
+		},
+		{
+			"arabic": "منو هذا؟",
+			"arabicTashkeel": "مِنو هَذا؟",
+			"english": "Who is this?",
+			"transliteration": "minu haatha?",
+			"wordAlignments": [
+				{
+					"arabic": "منو",
+					"english": "Who is",
+					"transliteration": "minu"
+				},
+				{
+					"arabic": "هذا؟",
+					"english": "this?",
+					"transliteration": "haatha?"
+				}
+			],
+			"targetWords": [
+				"Who"
+			]
+		},
+		{
+			"arabic": "وين البيت؟",
+			"arabicTashkeel": "وين البيت؟",
+			"english": "Where is the house?",
+			"transliteration": "ween il-beet?",
+			"wordAlignments": [
+				{
+					"arabic": "وين",
+					"english": "Where is",
+					"transliteration": "ween"
+				},
+				{
+					"arabic": "البيت؟",
+					"english": "the house?",
+					"transliteration": "il-beet?"
+				}
+			],
+			"targetWords": [
+				"Where"
+			]
+		},
+		{
+			"arabic": "شلون الأهل؟",
+			"arabicTashkeel": "شْلون الأهَل؟",
+			"english": "How is the family?",
+			"transliteration": "shloon il-ahal?",
+			"wordAlignments": [
+				{
+					"arabic": "شلون",
+					"english": "How is",
+					"transliteration": "shloon"
+				},
+				{
+					"arabic": "الأهل؟",
+					"english": "the family?",
+					"transliteration": "il-ahal?"
+				}
+			],
+			"targetWords": [
+				"How"
+			]
+		},
+		{
+			"arabic": "يمتى الموعد؟",
+			"arabicTashkeel": "يَمتى المَوعِد؟",
+			"english": "When is the appointment?",
+			"transliteration": "yamta il-maw3id?",
+			"wordAlignments": [
+				{
+					"arabic": "يمتى",
+					"english": "When is",
+					"transliteration": "yamta"
+				},
+				{
+					"arabic": "الموعد؟",
+					"english": "the appointment?",
+					"transliteration": "il-maw3id?"
+				}
+			],
+			"targetWords": [
+				"When"
+			]
+		},
+		{
+			"arabic": "ليش إنت تعبان؟",
+			"arabicTashkeel": "ليش إنتَ تَعبان؟",
+			"english": "Why are you tired?",
+			"transliteration": "leesh inta ta3baan?",
+			"wordAlignments": [
+				{
+					"arabic": "ليش",
+					"english": "Why are",
+					"transliteration": "leesh"
+				},
+				{
+					"arabic": "إنت",
+					"english": "you",
+					"transliteration": "inta"
+				},
+				{
+					"arabic": "تعبان؟",
+					"english": "tired?",
+					"transliteration": "ta3baan?"
+				}
+			],
+			"targetWords": [
+				"Why"
+			]
+		},
+		{
+			"arabic": "كم طالب عندك؟",
+			"arabicTashkeel": "كَم طالِب عِندَك؟",
+			"english": "How many students do you have?",
+			"transliteration": "cham taalib 3indak?",
+			"wordAlignments": [
+				{
+					"arabic": "كم",
+					"english": "How many",
+					"transliteration": "cham"
+				},
+				{
+					"arabic": "طالب",
+					"english": "students",
+					"transliteration": "taalib"
+				},
+				{
+					"arabic": "عندك؟",
+					"english": "do you have?",
+					"transliteration": "3indak?"
+				}
+			],
+			"targetWords": [
+				"How many"
+			]
+		},
+		{
+			"arabic": "بيش هذا؟",
+			"arabicTashkeel": "بيش هَذا؟",
+			"english": "How much is this?",
+			"transliteration": "beesh haatha?",
+			"wordAlignments": [
+				{
+					"arabic": "بيش",
+					"english": "How much is",
+					"transliteration": "beesh"
+				},
+				{
+					"arabic": "هذا؟",
+					"english": "this?",
+					"transliteration": "haatha?"
+				}
+			],
+			"targetWords": [
+				"How much (price)"
+			]
+		},
+		{
+			"arabic": "منين إنت؟",
+			"arabicTashkeel": "مْنين إنتَ؟",
+			"english": "Where are you from?",
+			"transliteration": "mneen inta?",
+			"wordAlignments": [
+				{
+					"arabic": "منين",
+					"english": "From where",
+					"transliteration": "mneen"
+				},
+				{
+					"arabic": "إنت؟",
+					"english": "are you?",
+					"transliteration": "inta?"
+				}
+			],
+			"targetWords": [
+				"From where"
+			]
+		},
+		{
+			"arabic": "لوين رايح؟",
+			"arabicTashkeel": "لْوين رايح؟",
+			"english": "Where are you going?",
+			"transliteration": "lween raayi7?",
+			"wordAlignments": [
+				{
+					"arabic": "لوين",
+					"english": "To where",
+					"transliteration": "lween"
+				},
+				{
+					"arabic": "رايح؟",
+					"english": "are you going?",
+					"transliteration": "raayi7?"
+				}
+			],
+			"targetWords": [
+				"To where"
+			]
+		},
+		{
+			"arabic": "شكد تبقى؟",
+			"arabicTashkeel": "شْكَد تِبقى؟",
+			"english": "How long are you staying?",
+			"transliteration": "shgadd tibga?",
+			"wordAlignments": [
+				{
+					"arabic": "شكد",
+					"english": "How long",
+					"transliteration": "shgadd"
+				},
+				{
+					"arabic": "تبقى؟",
+					"english": "are you staying?",
+					"transliteration": "tibga?"
+				}
+			],
+			"targetWords": [
+				"How long / how much"
+			]
+		},
+		{
+			"arabic": "ياهو بيتك؟",
+			"arabicTashkeel": "ياهو بيتَك؟",
+			"english": "Which one is your house?",
+			"transliteration": "yaahu beetak?",
+			"wordAlignments": [
+				{
+					"arabic": "ياهو",
+					"english": "Which one is",
+					"transliteration": "yaahu"
+				},
+				{
+					"arabic": "بيتك؟",
+					"english": "your house?",
+					"transliteration": "beetak?"
+				}
+			],
+			"targetWords": [
+				"Which one"
+			]
+		},
+		{
+			"arabic": "لأن عندي دوام.",
+			"arabicTashkeel": "لأن عِندي دَوام.",
+			"english": "Because I have work.",
+			"transliteration": "li2ann 3indi dawaam.",
+			"wordAlignments": [
+				{
+					"arabic": "لأن",
+					"english": "Because",
+					"transliteration": "li2ann"
+				},
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "دوام.",
+					"english": "work.",
+					"transliteration": "dawaam."
+				}
+			],
+			"targetWords": [
+				"Because"
+			]
+		},
+		{
+			"arabic": "شكو ماكو؟",
+			"arabicTashkeel": "شَكو ماكو؟",
+			"english": "What's up?",
+			"transliteration": "shaku maaku?",
+			"wordAlignments": [
+				{
+					"arabic": "شكو",
+					"english": "What is there",
+					"transliteration": "shaku"
+				},
+				{
+					"arabic": "ماكو؟",
+					"english": "and what isn't?",
+					"transliteration": "maaku?"
+				}
+			],
+			"targetWords": [
+				"What's up?"
+			]
+		},
+		{
+			"arabic": "تعرف وين السوق؟",
+			"arabicTashkeel": "تِعرُف وين السّوق؟",
+			"english": "Do you know where the market is?",
+			"transliteration": "ti3ruf ween is-soog?",
+			"wordAlignments": [
+				{
+					"arabic": "تعرف",
+					"english": "Do you know",
+					"transliteration": "ti3ruf"
+				},
+				{
+					"arabic": "وين",
+					"english": "where",
+					"transliteration": "ween"
+				},
+				{
+					"arabic": "السوق؟",
+					"english": "the market is?",
+					"transliteration": "is-soog?"
+				}
+			],
+			"targetWords": [
+				"Do you know",
+				"Where"
+			]
+		},
+		{
+			"arabic": "شنو تريد؟",
+			"arabicTashkeel": "شِنو تْريد؟",
+			"english": "What do you want?",
+			"transliteration": "shinu treed?",
+			"wordAlignments": [
+				{
+					"arabic": "شنو",
+					"english": "What",
+					"transliteration": "shinu"
+				},
+				{
+					"arabic": "تريد؟",
+					"english": "do you want?",
+					"transliteration": "treed?"
+				}
+			],
+			"targetWords": [
+				"What"
+			]
+		},
+		{
+			"arabic": "منو المدرس؟",
+			"arabicTashkeel": "مِنو المُدَرِّس؟",
+			"english": "Who is the teacher?",
+			"transliteration": "minu il-mudarris?",
+			"wordAlignments": [
+				{
+					"arabic": "منو",
+					"english": "Who is",
+					"transliteration": "minu"
+				},
+				{
+					"arabic": "المدرس؟",
+					"english": "the teacher?",
+					"transliteration": "il-mudarris?"
+				}
+			],
+			"targetWords": [
+				"Who"
+			]
+		},
+		{
+			"arabic": "وين الحمام؟",
+			"arabicTashkeel": "وين الحَمّام؟",
+			"english": "Where is the bathroom?",
+			"transliteration": "ween il-7ammaam?",
+			"wordAlignments": [
+				{
+					"arabic": "وين",
+					"english": "Where is",
+					"transliteration": "ween"
+				},
+				{
+					"arabic": "الحمام؟",
+					"english": "the bathroom?",
+					"transliteration": "il-7ammaam?"
+				}
+			],
+			"targetWords": [
+				"Where"
+			]
+		},
+		{
+			"arabic": "شلون أروح للسوق؟",
+			"arabicTashkeel": "شْلون أروح للسّوق؟",
+			"english": "How do I get to the market?",
+			"transliteration": "shloon arooh lis-soog?",
+			"wordAlignments": [
+				{
+					"arabic": "شلون",
+					"english": "How",
+					"transliteration": "shloon"
+				},
+				{
+					"arabic": "أروح",
+					"english": "do I go",
+					"transliteration": "arooh"
+				},
+				{
+					"arabic": "للسوق؟",
+					"english": "to the market?",
+					"transliteration": "lis-soog?"
+				}
+			],
+			"targetWords": [
+				"How"
+			]
+		},
+		{
+			"arabic": "يمتى ترجع؟",
+			"arabicTashkeel": "يَمتى تِرجَع؟",
+			"english": "When are you coming back?",
+			"transliteration": "yamta tirja3?",
+			"wordAlignments": [
+				{
+					"arabic": "يمتى",
+					"english": "When",
+					"transliteration": "yamta"
+				},
+				{
+					"arabic": "ترجع؟",
+					"english": "are you coming back?",
+					"transliteration": "tirja3?"
+				}
+			],
+			"targetWords": [
+				"When"
+			]
+		},
+		{
+			"arabic": "ليش ما جيت البارحة؟",
+			"arabicTashkeel": "ليش ما جيت البارحة؟",
+			"english": "Why didn't you come yesterday?",
+			"transliteration": "leesh ma jeet il-baar7a?",
+			"wordAlignments": [
+				{
+					"arabic": "ليش",
+					"english": "Why",
+					"transliteration": "leesh"
+				},
+				{
+					"arabic": "ما",
+					"english": "didn't",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "جيت",
+					"english": "you come",
+					"transliteration": "jeet"
+				},
+				{
+					"arabic": "البارحة؟",
+					"english": "yesterday?",
+					"transliteration": "il-baar7a?"
+				}
+			],
+			"targetWords": [
+				"Why"
+			]
+		},
+		{
+			"arabic": "لأن كنت مريض.",
+			"arabicTashkeel": "لأن كِنِت مَريض.",
+			"english": "Because I was sick.",
+			"transliteration": "li2ann chinit mareedh.",
+			"wordAlignments": [
+				{
+					"arabic": "لأن",
+					"english": "Because",
+					"transliteration": "li2ann"
+				},
+				{
+					"arabic": "كنت",
+					"english": "I was",
+					"transliteration": "chinit"
+				},
+				{
+					"arabic": "مريض.",
+					"english": "sick.",
+					"transliteration": "mareedh."
+				}
+			],
+			"targetWords": [
+				"Because"
+			]
+		},
+		{
+			"arabic": "كم عمرك؟",
+			"arabicTashkeel": "كَم عُمرَك؟",
+			"english": "How old are you?",
+			"transliteration": "cham 3umrak?",
+			"wordAlignments": [
+				{
+					"arabic": "كم",
+					"english": "How many",
+					"transliteration": "cham"
+				},
+				{
+					"arabic": "عمرك؟",
+					"english": "is your age?",
+					"transliteration": "3umrak?"
+				}
+			],
+			"targetWords": [
+				"How many"
+			]
+		},
+		{
+			"arabic": "بيش الكيلو؟",
+			"arabicTashkeel": "بيش الكيلو؟",
+			"english": "How much is a kilo?",
+			"transliteration": "beesh il-keelo?",
+			"wordAlignments": [
+				{
+					"arabic": "بيش",
+					"english": "How much is",
+					"transliteration": "beesh"
+				},
+				{
+					"arabic": "الكيلو؟",
+					"english": "the kilo?",
+					"transliteration": "il-keelo?"
+				}
+			],
+			"targetWords": [
+				"How much (price)"
+			]
+		},
+		{
+			"arabic": "منين جاي؟",
+			"arabicTashkeel": "مْنين جاي؟",
+			"english": "Where are you coming from?",
+			"transliteration": "mneen jaay?",
+			"wordAlignments": [
+				{
+					"arabic": "منين",
+					"english": "From where",
+					"transliteration": "mneen"
+				},
+				{
+					"arabic": "جاي؟",
+					"english": "are you coming?",
+					"transliteration": "jaay?"
+				}
+			],
+			"targetWords": [
+				"From where"
+			]
+		},
+		{
+			"arabic": "لوين تروح باكر؟",
+			"arabicTashkeel": "لْوين تْروح باكِر؟",
+			"english": "Where are you going tomorrow?",
+			"transliteration": "lween trooh baachir?",
+			"wordAlignments": [
+				{
+					"arabic": "لوين",
+					"english": "To where",
+					"transliteration": "lween"
+				},
+				{
+					"arabic": "تروح",
+					"english": "are you going",
+					"transliteration": "trooh"
+				},
+				{
+					"arabic": "باكر؟",
+					"english": "tomorrow?",
+					"transliteration": "baachir?"
+				}
+			],
+			"targetWords": [
+				"To where"
+			]
+		},
+		{
+			"arabic": "شكد بعيد؟",
+			"arabicTashkeel": "شْكَد بْعيد؟",
+			"english": "How far is it?",
+			"transliteration": "shgadd b3eed?",
+			"wordAlignments": [
+				{
+					"arabic": "شكد",
+					"english": "How much",
+					"transliteration": "shgadd"
+				},
+				{
+					"arabic": "بعيد؟",
+					"english": "is it far?",
+					"transliteration": "b3eed?"
+				}
+			],
+			"targetWords": [
+				"How long / how much"
+			]
+		},
+		{
+			"arabic": "ياهو الأحسن؟",
+			"arabicTashkeel": "ياهو الأحسَن؟",
+			"english": "Which one is better?",
+			"transliteration": "yaahu il-a7san?",
+			"wordAlignments": [
+				{
+					"arabic": "ياهو",
+					"english": "Which one is",
+					"transliteration": "yaahu"
+				},
+				{
+					"arabic": "الأحسن؟",
+					"english": "better?",
+					"transliteration": "il-a7san?"
+				}
+			],
+			"targetWords": [
+				"Which one"
+			]
+		},
+		{
+			"arabic": "شكو ماكو؟ ماكو شي.",
+			"arabicTashkeel": "شَكو ماكو؟ ماكو شي.",
+			"english": "What's up? Nothing.",
+			"transliteration": "shaku maaku? maaku shi.",
+			"wordAlignments": [
+				{
+					"arabic": "شكو",
+					"english": "What is there",
+					"transliteration": "shaku"
+				},
+				{
+					"arabic": "ماكو؟",
+					"english": "and what isn't?",
+					"transliteration": "maaku?"
+				},
+				{
+					"arabic": "ماكو",
+					"english": "There is no",
+					"transliteration": "maaku"
+				},
+				{
+					"arabic": "شي.",
+					"english": "thing.",
+					"transliteration": "shi."
+				}
+			],
+			"targetWords": [
+				"What's up?"
+			]
+		},
+		{
+			"arabic": "تعرف منو هذا؟",
+			"arabicTashkeel": "تِعرُف مِنو هَذا؟",
+			"english": "Do you know who this is?",
+			"transliteration": "ti3ruf minu haatha?",
+			"wordAlignments": [
+				{
+					"arabic": "تعرف",
+					"english": "Do you know",
+					"transliteration": "ti3ruf"
+				},
+				{
+					"arabic": "منو",
+					"english": "who",
+					"transliteration": "minu"
+				},
+				{
+					"arabic": "هذا؟",
+					"english": "this is?",
+					"transliteration": "haatha?"
+				}
+			],
+			"targetWords": [
+				"Do you know",
+				"Who"
+			]
+		},
+		{
+			"arabic": "شنو إسمك؟",
+			"arabicTashkeel": "شِنو إسمَك؟",
+			"english": "What is your name?",
+			"transliteration": "shinu ismak?",
+			"wordAlignments": [
+				{
+					"arabic": "شنو",
+					"english": "What is",
+					"transliteration": "shinu"
+				},
+				{
+					"arabic": "إسمك؟",
+					"english": "your name?",
+					"transliteration": "ismak?"
+				}
+			],
+			"targetWords": [
+				"What"
+			]
+		},
+		{
+			"arabic": "منو جاي ويانا؟",
+			"arabicTashkeel": "مِنو جاي وِيّانا؟",
+			"english": "Who is coming with us?",
+			"transliteration": "minu jaay wiyyaana?",
+			"wordAlignments": [
+				{
+					"arabic": "منو",
+					"english": "Who is",
+					"transliteration": "minu"
+				},
+				{
+					"arabic": "جاي",
+					"english": "coming",
+					"transliteration": "jaay"
+				},
+				{
+					"arabic": "ويانا؟",
+					"english": "with us?",
+					"transliteration": "wiyyaana?"
+				}
+			],
+			"targetWords": [
+				"Who"
+			]
+		},
+		{
+			"arabic": "وين تسكن؟",
+			"arabicTashkeel": "وين تِسكُن؟",
+			"english": "Where do you live?",
+			"transliteration": "ween tiskun?",
+			"wordAlignments": [
+				{
+					"arabic": "وين",
+					"english": "Where",
+					"transliteration": "ween"
+				},
+				{
+					"arabic": "تسكن؟",
+					"english": "do you live?",
+					"transliteration": "tiskun?"
+				}
+			],
+			"targetWords": [
+				"Where"
+			]
+		},
+		{
+			"arabic": "شلون الجو اليوم؟",
+			"arabicTashkeel": "شْلون الجَو اليوم؟",
+			"english": "How is the weather today?",
+			"transliteration": "shloon ij-jaw il-yoom?",
+			"wordAlignments": [
+				{
+					"arabic": "شلون",
+					"english": "How is",
+					"transliteration": "shloon"
+				},
+				{
+					"arabic": "الجو",
+					"english": "the weather",
+					"transliteration": "ij-jaw"
+				},
+				{
+					"arabic": "اليوم؟",
+					"english": "today?",
+					"transliteration": "il-yoom?"
+				}
+			],
+			"targetWords": [
+				"How"
+			]
+		},
+		{
+			"arabic": "يمتى الدوام يخلص؟",
+			"arabicTashkeel": "يَمتى الدَّوام يِخلَص؟",
+			"english": "When does work end?",
+			"transliteration": "yamta id-dawaam yikhlas?",
+			"wordAlignments": [
+				{
+					"arabic": "يمتى",
+					"english": "When does",
+					"transliteration": "yamta"
+				},
+				{
+					"arabic": "الدوام",
+					"english": "work",
+					"transliteration": "id-dawaam"
+				},
+				{
+					"arabic": "يخلص؟",
+					"english": "end?",
+					"transliteration": "yikhlas?"
+				}
+			],
+			"targetWords": [
+				"When"
+			]
+		},
+		{
+			"arabic": "ليش السوق مسدود؟",
+			"arabicTashkeel": "ليش السّوق مَسدود؟",
+			"english": "Why is the market closed?",
+			"transliteration": "leesh is-soog masdood?",
+			"wordAlignments": [
+				{
+					"arabic": "ليش",
+					"english": "Why is",
+					"transliteration": "leesh"
+				},
+				{
+					"arabic": "السوق",
+					"english": "the market",
+					"transliteration": "is-soog"
+				},
+				{
+					"arabic": "مسدود؟",
+					"english": "closed?",
+					"transliteration": "masdood?"
+				}
+			],
+			"targetWords": [
+				"Why"
+			]
+		},
+		{
+			"arabic": "لأن اليوم عطلة.",
+			"arabicTashkeel": "لأن اليوم عُطلة.",
+			"english": "Because today is a holiday.",
+			"transliteration": "li2ann il-yoom 3utla.",
+			"wordAlignments": [
+				{
+					"arabic": "لأن",
+					"english": "Because",
+					"transliteration": "li2ann"
+				},
+				{
+					"arabic": "اليوم",
+					"english": "today is",
+					"transliteration": "il-yoom"
+				},
+				{
+					"arabic": "عطلة.",
+					"english": "a holiday.",
+					"transliteration": "3utla."
+				}
+			],
+			"targetWords": [
+				"Because"
+			]
+		},
+		{
+			"arabic": "كم يوم تبقى؟",
+			"arabicTashkeel": "كَم يوم تِبقى؟",
+			"english": "How many days are you staying?",
+			"transliteration": "cham yoom tibga?",
+			"wordAlignments": [
+				{
+					"arabic": "كم",
+					"english": "How many",
+					"transliteration": "cham"
+				},
+				{
+					"arabic": "يوم",
+					"english": "days",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "تبقى؟",
+					"english": "are you staying?",
+					"transliteration": "tibga?"
+				}
+			],
+			"targetWords": [
+				"How many"
+			]
+		},
+		{
+			"arabic": "بيش التذكرة؟",
+			"arabicTashkeel": "بيش التَّذكَرة؟",
+			"english": "How much is the ticket?",
+			"transliteration": "beesh it-tathkara?",
+			"wordAlignments": [
+				{
+					"arabic": "بيش",
+					"english": "How much is",
+					"transliteration": "beesh"
+				},
+				{
+					"arabic": "التذكرة؟",
+					"english": "the ticket?",
+					"transliteration": "it-tathkara?"
+				}
+			],
+			"targetWords": [
+				"How much (price)"
+			]
+		},
+		{
+			"arabic": "منين إنتي؟",
+			"arabicTashkeel": "مْنين إنتي؟",
+			"english": "Where are you from?",
+			"transliteration": "mneen inti?",
+			"wordAlignments": [
+				{
+					"arabic": "منين",
+					"english": "From where",
+					"transliteration": "mneen"
+				},
+				{
+					"arabic": "إنتي؟",
+					"english": "are you?",
+					"transliteration": "inti?"
+				}
+			],
+			"targetWords": [
+				"From where"
+			]
+		},
+		{
+			"arabic": "لوين الباص؟",
+			"arabicTashkeel": "لْوين الباص؟",
+			"english": "Where is the bus going?",
+			"transliteration": "lween il-paas?",
+			"wordAlignments": [
+				{
+					"arabic": "لوين",
+					"english": "To where is",
+					"transliteration": "lween"
+				},
+				{
+					"arabic": "الباص؟",
+					"english": "the bus going?",
+					"transliteration": "il-paas?"
+				}
+			],
+			"targetWords": [
+				"To where"
+			]
+		},
+		{
+			"arabic": "شكد تحتاج؟",
+			"arabicTashkeel": "شْكَد تِحتاج؟",
+			"english": "How much do you need?",
+			"transliteration": "shgadd ti7taaj?",
+			"wordAlignments": [
+				{
+					"arabic": "شكد",
+					"english": "How much",
+					"transliteration": "shgadd"
+				},
+				{
+					"arabic": "تحتاج؟",
+					"english": "do you need?",
+					"transliteration": "ti7taaj?"
+				}
+			],
+			"targetWords": [
+				"How long / how much"
+			]
+		},
+		{
+			"arabic": "ياهو قلمك؟",
+			"arabicTashkeel": "ياهو قَلَمَك؟",
+			"english": "Which one is your pen?",
+			"transliteration": "yaahu galamak?",
+			"wordAlignments": [
+				{
+					"arabic": "ياهو",
+					"english": "Which one is",
+					"transliteration": "yaahu"
+				},
+				{
+					"arabic": "قلمك؟",
+					"english": "your pen?",
+					"transliteration": "galamak?"
+				}
+			],
+			"targetWords": [
+				"Which one"
+			]
+		},
+		{
+			"arabic": "شكو ماكو بالدوام؟",
+			"arabicTashkeel": "شَكو ماكو بالدَّوام؟",
+			"english": "What's up at work?",
+			"transliteration": "shaku maaku bid-dawaam?",
+			"wordAlignments": [
+				{
+					"arabic": "شكو",
+					"english": "What is there",
+					"transliteration": "shaku"
+				},
+				{
+					"arabic": "ماكو",
+					"english": "and what isn't",
+					"transliteration": "maaku"
+				},
+				{
+					"arabic": "بالدوام؟",
+					"english": "at work?",
+					"transliteration": "bid-dawaam?"
+				}
+			],
+			"targetWords": [
+				"What's up?"
+			]
+		},
+		{
+			"arabic": "تعرف شلون تروح؟",
+			"arabicTashkeel": "تِعرُف شْلون تْروح؟",
+			"english": "Do you know how to get there?",
+			"transliteration": "ti3ruf shloon trooh?",
+			"wordAlignments": [
+				{
+					"arabic": "تعرف",
+					"english": "Do you know",
+					"transliteration": "ti3ruf"
+				},
+				{
+					"arabic": "شلون",
+					"english": "how",
+					"transliteration": "shloon"
+				},
+				{
+					"arabic": "تروح؟",
+					"english": "to go?",
+					"transliteration": "trooh?"
+				}
+			],
+			"targetWords": [
+				"Do you know",
+				"How"
+			]
+		},
+		{
+			"arabic": "تعرف عربي؟",
+			"arabicTashkeel": "تِعرُف عَرَبي؟",
+			"english": "Do you know Arabic?",
+			"transliteration": "ti3ruf 3arabi?",
+			"wordAlignments": [
+				{
+					"arabic": "تعرف",
+					"english": "Do you know",
+					"transliteration": "ti3ruf"
+				},
+				{
+					"arabic": "عربي؟",
+					"english": "Arabic?",
+					"transliteration": "3arabi?"
+				}
+			],
+			"targetWords": [
+				"Do you know"
+			]
+		},
+		{
+			"arabic": "لأن هو مشغول.",
+			"arabicTashkeel": "لأن هوَّ مَشغول.",
+			"english": "Because he is busy.",
+			"transliteration": "li2ann huwwa mashghool.",
+			"wordAlignments": [
+				{
+					"arabic": "لأن",
+					"english": "Because",
+					"transliteration": "li2ann"
+				},
+				{
+					"arabic": "هو",
+					"english": "he is",
+					"transliteration": "huwwa"
+				},
+				{
+					"arabic": "مشغول.",
+					"english": "busy.",
+					"transliteration": "mashghool."
+				}
+			],
+			"targetWords": [
+				"Because"
+			]
+		},
+		{
+			"arabic": "لوين نروح اليوم؟",
+			"arabicTashkeel": "لْوين نْروح اليوم؟",
+			"english": "Where are we going today?",
+			"transliteration": "lween nrooh il-yoom?",
+			"wordAlignments": [
+				{
+					"arabic": "لوين",
+					"english": "To where",
+					"transliteration": "lween"
+				},
+				{
+					"arabic": "نروح",
+					"english": "are we going",
+					"transliteration": "nrooh"
+				},
+				{
+					"arabic": "اليوم؟",
+					"english": "today?",
+					"transliteration": "il-yoom?"
+				}
+			],
+			"targetWords": [
+				"To where"
+			]
+		},
+		{
+			"arabic": "شكد عمرك؟",
+			"arabicTashkeel": "شْكَد عُمرَك؟",
+			"english": "How old are you?",
+			"transliteration": "shgadd 3umrak?",
+			"wordAlignments": [
+				{
+					"arabic": "شكد",
+					"english": "How much is",
+					"transliteration": "shgadd"
+				},
+				{
+					"arabic": "عمرك؟",
+					"english": "your age?",
+					"transliteration": "3umrak?"
+				}
+			],
+			"targetWords": [
+				"How long / how much"
+			]
+		},
+		{
+			"arabic": "ياهو أرخص؟",
+			"arabicTashkeel": "ياهو أرخَص؟",
+			"english": "Which one is cheaper?",
+			"transliteration": "yaahu arkhas?",
+			"wordAlignments": [
+				{
+					"arabic": "ياهو",
+					"english": "Which one is",
+					"transliteration": "yaahu"
+				},
+				{
+					"arabic": "أرخص؟",
+					"english": "cheaper?",
+					"transliteration": "arkhas?"
+				}
+			],
+			"targetWords": [
+				"Which one"
+			]
+		},
+		{
+			"arabic": "تعرف رقمه؟",
+			"arabicTashkeel": "تِعرُف رَقمَه؟",
+			"english": "Do you know his number?",
+			"transliteration": "ti3ruf ragma?",
+			"wordAlignments": [
+				{
+					"arabic": "تعرف",
+					"english": "Do you know",
+					"transliteration": "ti3ruf"
+				},
+				{
+					"arabic": "رقمه؟",
+					"english": "his number?",
+					"transliteration": "ragma?"
+				}
+			],
+			"targetWords": [
+				"Do you know"
+			]
+		},
+		{
+			"arabic": "شكو ماكو اليوم؟",
+			"arabicTashkeel": "شَكو ماكو اليوم؟",
+			"english": "What's up today?",
+			"transliteration": "shaku maaku il-yoom?",
+			"wordAlignments": [
+				{
+					"arabic": "شكو",
+					"english": "What is there",
+					"transliteration": "shaku"
+				},
+				{
+					"arabic": "ماكو",
+					"english": "and what isn't",
+					"transliteration": "maaku"
+				},
+				{
+					"arabic": "اليوم؟",
+					"english": "today?",
+					"transliteration": "il-yoom?"
+				}
+			],
+			"targetWords": [
+				"What's up?"
+			]
+		},
+		{
+			"arabic": "شكد الكيلو؟",
+			"arabicTashkeel": "شْكَد الكيلو؟",
+			"english": "How much is a kilo?",
+			"transliteration": "shgadd il-keelo?",
+			"wordAlignments": [
+				{
+					"arabic": "شكد",
+					"english": "How much is",
+					"transliteration": "shgadd"
+				},
+				{
+					"arabic": "الكيلو؟",
+					"english": "the kilo?",
+					"transliteration": "il-keelo?"
+				}
+			],
+			"targetWords": [
+				"How long / how much"
+			]
+		},
+		{
+			"arabic": "منين أجيب الخبز؟",
+			"arabicTashkeel": "مْنين أجيب الخُبُز؟",
+			"english": "Where do I get bread from?",
+			"transliteration": "mneen ajeeb il-khubuz?",
+			"wordAlignments": [
+				{
+					"arabic": "منين",
+					"english": "From where",
+					"transliteration": "mneen"
+				},
+				{
+					"arabic": "أجيب",
+					"english": "do I get",
+					"transliteration": "ajeeb"
+				},
+				{
+					"arabic": "الخبز؟",
+					"english": "bread?",
+					"transliteration": "il-khubuz?"
+				}
+			],
+			"targetWords": [
+				"From where"
+			]
+		},
+		{
+			"arabic": "شنو تشتغل؟",
+			"arabicTashkeel": "شِنو تِشتُغُل؟",
+			"english": "What do you do?",
+			"transliteration": "shinu tishtughul?",
+			"wordAlignments": [
+				{
+					"arabic": "شنو",
+					"english": "What",
+					"transliteration": "shinu"
+				},
+				{
+					"arabic": "تشتغل؟",
+					"english": "do you work?",
+					"transliteration": "tishtughul?"
+				}
+			],
+			"targetWords": [
+				"What"
+			]
+		},
+		{
+			"arabic": "شنو صار؟",
+			"arabicTashkeel": "شِنو صار؟",
+			"english": "What happened?",
+			"transliteration": "shinu saar?",
+			"wordAlignments": [
+				{
+					"arabic": "شنو",
+					"english": "What",
+					"transliteration": "shinu"
+				},
+				{
+					"arabic": "صار؟",
+					"english": "happened?",
+					"transliteration": "saar?"
+				}
+			],
+			"targetWords": [
+				"What"
+			]
+		},
+		{
+			"arabic": "منو بالباب؟",
+			"arabicTashkeel": "مِنو بالباب؟",
+			"english": "Who is at the door?",
+			"transliteration": "minu bil-baab?",
+			"wordAlignments": [
+				{
+					"arabic": "منو",
+					"english": "Who is",
+					"transliteration": "minu"
+				},
+				{
+					"arabic": "بالباب؟",
+					"english": "at the door?",
+					"transliteration": "bil-baab?"
+				}
+			],
+			"targetWords": [
+				"Who"
+			]
+		},
+		{
+			"arabic": "وين أهلك؟",
+			"arabicTashkeel": "وين أهلَك؟",
+			"english": "Where is your family?",
+			"transliteration": "ween ahlak?",
+			"wordAlignments": [
+				{
+					"arabic": "وين",
+					"english": "Where is",
+					"transliteration": "ween"
+				},
+				{
+					"arabic": "أهلك؟",
+					"english": "your family?",
+					"transliteration": "ahlak?"
+				}
+			],
+			"targetWords": [
+				"Where"
+			]
+		},
+		{
+			"arabic": "شلون تعرف؟",
+			"arabicTashkeel": "شْلون تِعرُف؟",
+			"english": "How do you know?",
+			"transliteration": "shloon ti3ruf?",
+			"wordAlignments": [
+				{
+					"arabic": "شلون",
+					"english": "How",
+					"transliteration": "shloon"
+				},
+				{
+					"arabic": "تعرف؟",
+					"english": "do you know?",
+					"transliteration": "ti3ruf?"
+				}
+			],
+			"targetWords": [
+				"How",
+				"Do you know"
+			]
+		},
+		{
+			"arabic": "يمتى العطلة؟",
+			"arabicTashkeel": "يَمتى العُطلة؟",
+			"english": "When is the holiday?",
+			"transliteration": "yamta il-3utla?",
+			"wordAlignments": [
+				{
+					"arabic": "يمتى",
+					"english": "When is",
+					"transliteration": "yamta"
+				},
+				{
+					"arabic": "العطلة؟",
+					"english": "the holiday?",
+					"transliteration": "il-3utla?"
+				}
+			],
+			"targetWords": [
+				"When"
+			]
+		},
+		{
+			"arabic": "يمتى نروح؟",
+			"arabicTashkeel": "يَمتى نْروح؟",
+			"english": "When are we going?",
+			"transliteration": "yamta nrooh?",
+			"wordAlignments": [
+				{
+					"arabic": "يمتى",
+					"english": "When",
+					"transliteration": "yamta"
+				},
+				{
+					"arabic": "نروح؟",
+					"english": "are we going?",
+					"transliteration": "nrooh?"
+				}
+			],
+			"targetWords": [
+				"When"
+			]
+		},
+		{
+			"arabic": "ليش تضحك؟",
+			"arabicTashkeel": "ليش تِضحَك؟",
+			"english": "Why are you laughing?",
+			"transliteration": "leesh tidh7ak?",
+			"wordAlignments": [
+				{
+					"arabic": "ليش",
+					"english": "Why",
+					"transliteration": "leesh"
+				},
+				{
+					"arabic": "تضحك؟",
+					"english": "are you laughing?",
+					"transliteration": "tidh7ak?"
+				}
+			],
+			"targetWords": [
+				"Why"
+			]
+		},
+		{
+			"arabic": "ليش ما تاكل؟",
+			"arabicTashkeel": "ليش ما تاكُل؟",
+			"english": "Why aren't you eating?",
+			"transliteration": "leesh ma taakul?",
+			"wordAlignments": [
+				{
+					"arabic": "ليش",
+					"english": "Why",
+					"transliteration": "leesh"
+				},
+				{
+					"arabic": "ما",
+					"english": "aren't",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "تاكل؟",
+					"english": "you eating?",
+					"transliteration": "taakul?"
+				}
+			],
+			"targetWords": [
+				"Why"
+			]
+		},
+		{
+			"arabic": "كم أخ عندك؟",
+			"arabicTashkeel": "كَم أخ عِندَك؟",
+			"english": "How many brothers do you have?",
+			"transliteration": "cham akh 3indak?",
+			"wordAlignments": [
+				{
+					"arabic": "كم",
+					"english": "How many",
+					"transliteration": "cham"
+				},
+				{
+					"arabic": "أخ",
+					"english": "brothers",
+					"transliteration": "akh"
+				},
+				{
+					"arabic": "عندك؟",
+					"english": "do you have?",
+					"transliteration": "3indak?"
+				}
+			],
+			"targetWords": [
+				"How many"
+			]
+		},
+		{
+			"arabic": "كم ساعة؟",
+			"arabicTashkeel": "كَم ساعة؟",
+			"english": "How many hours?",
+			"transliteration": "cham saa3a?",
+			"wordAlignments": [
+				{
+					"arabic": "كم",
+					"english": "How many",
+					"transliteration": "cham"
+				},
+				{
+					"arabic": "ساعة؟",
+					"english": "hours?",
+					"transliteration": "saa3a?"
+				}
+			],
+			"targetWords": [
+				"How many"
+			]
+		},
+		{
+			"arabic": "بيش القميص؟",
+			"arabicTashkeel": "بيش القَميص؟",
+			"english": "How much is the shirt?",
+			"transliteration": "beesh il-gamees?",
+			"wordAlignments": [
+				{
+					"arabic": "بيش",
+					"english": "How much is",
+					"transliteration": "beesh"
+				},
+				{
+					"arabic": "القميص؟",
+					"english": "the shirt?",
+					"transliteration": "il-gamees?"
+				}
+			],
+			"targetWords": [
+				"How much (price)"
+			]
+		},
+		{
+			"arabic": "بيش هاي؟",
+			"arabicTashkeel": "بيش هاي؟",
+			"english": "How much is this one?",
+			"transliteration": "beesh haay?",
+			"wordAlignments": [
+				{
+					"arabic": "بيش",
+					"english": "How much is",
+					"transliteration": "beesh"
+				},
+				{
+					"arabic": "هاي؟",
+					"english": "this one?",
+					"transliteration": "haay?"
+				}
+			],
+			"targetWords": [
+				"How much (price)"
+			]
+		},
+		{
+			"arabic": "منين إشتريته؟",
+			"arabicTashkeel": "مْنين إشتَريتَه؟",
+			"english": "Where did you buy it from?",
+			"transliteration": "mneen ishtareeta?",
+			"wordAlignments": [
+				{
+					"arabic": "منين",
+					"english": "From where",
+					"transliteration": "mneen"
+				},
+				{
+					"arabic": "إشتريته؟",
+					"english": "did you buy it?",
+					"transliteration": "ishtareeta?"
+				}
+			],
+			"targetWords": [
+				"From where"
+			]
+		},
+		{
+			"arabic": "لوين رحت البارحة؟",
+			"arabicTashkeel": "لْوين رِحِت البارحة؟",
+			"english": "Where did you go yesterday?",
+			"transliteration": "lween ri7it il-baar7a?",
+			"wordAlignments": [
+				{
+					"arabic": "لوين",
+					"english": "To where",
+					"transliteration": "lween"
+				},
+				{
+					"arabic": "رحت",
+					"english": "did you go",
+					"transliteration": "ri7it"
+				},
+				{
+					"arabic": "البارحة؟",
+					"english": "yesterday?",
+					"transliteration": "il-baar7a?"
+				}
+			],
+			"targetWords": [
+				"To where"
+			]
+		},
+		{
+			"arabic": "ياهو الباص؟",
+			"arabicTashkeel": "ياهو الباص؟",
+			"english": "Which one is the bus?",
+			"transliteration": "yaahu il-paas?",
+			"wordAlignments": [
+				{
+					"arabic": "ياهو",
+					"english": "Which one is",
+					"transliteration": "yaahu"
+				},
+				{
+					"arabic": "الباص؟",
+					"english": "the bus?",
+					"transliteration": "il-paas?"
+				}
+			],
+			"targetWords": [
+				"Which one"
+			]
+		},
+		{
+			"arabic": "لأن الجو حار.",
+			"arabicTashkeel": "لأن الجَو حار.",
+			"english": "Because the weather is hot.",
+			"transliteration": "li2ann ij-jaw 7aarr.",
+			"wordAlignments": [
+				{
+					"arabic": "لأن",
+					"english": "Because",
+					"transliteration": "li2ann"
+				},
+				{
+					"arabic": "الجو",
+					"english": "the weather is",
+					"transliteration": "ij-jaw"
+				},
+				{
+					"arabic": "حار.",
+					"english": "hot.",
+					"transliteration": "7aarr."
+				}
+			],
+			"targetWords": [
+				"Because"
+			]
+		},
+		{
+			"arabic": "هلا علي، شكو ماكو؟",
+			"arabicTashkeel": "هَلا عَلي، شَكو ماكو؟",
+			"english": "Hi Ali, what's up?",
+			"transliteration": "hala 3ali, shaku maaku?",
+			"wordAlignments": [
+				{
+					"arabic": "هلا",
+					"english": "Hi",
+					"transliteration": "hala"
+				},
+				{
+					"arabic": "علي،",
+					"english": "Ali,",
+					"transliteration": "3ali,"
+				},
+				{
+					"arabic": "شكو",
+					"english": "what is there",
+					"transliteration": "shaku"
+				},
+				{
+					"arabic": "ماكو؟",
+					"english": "and what isn't?",
+					"transliteration": "maaku?"
+				}
+			],
+			"targetWords": [
+				"What's up?"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "On the Street",
+			"sentences": [
+				{
+					"arabic": "عفوا، تعرف وين السوق؟",
+					"arabicTashkeel": "عَفواً، تِعرُف وين السّوق؟",
+					"english": "Excuse me, do you know where the market is?",
+					"transliteration": "3afwan, ti3ruf ween is-soog?",
+					"wordAlignments": [
+						{
+							"arabic": "عفوا،",
+							"english": "Excuse me,",
+							"transliteration": "3afwan,"
+						},
+						{
+							"arabic": "تعرف",
+							"english": "do you know",
+							"transliteration": "ti3ruf"
+						},
+						{
+							"arabic": "وين",
+							"english": "where",
+							"transliteration": "ween"
+						},
+						{
+							"arabic": "السوق؟",
+							"english": "the market is?",
+							"transliteration": "is-soog?"
+						}
+					]
+				},
+				{
+					"arabic": "إي، ليش؟",
+					"arabicTashkeel": "إي، ليش؟",
+					"english": "Yes, why?",
+					"transliteration": "ee, leesh?",
+					"wordAlignments": [
+						{
+							"arabic": "إي،",
+							"english": "Yes,",
+							"transliteration": "ee,"
+						},
+						{
+							"arabic": "ليش؟",
+							"english": "why?",
+							"transliteration": "leesh?"
+						}
+					]
+				},
+				{
+					"arabic": "لأن أريد خبز.",
+					"arabicTashkeel": "لأن أريد خُبُز.",
+					"english": "Because I want bread.",
+					"transliteration": "li2ann areed khubuz.",
+					"wordAlignments": [
+						{
+							"arabic": "لأن",
+							"english": "Because",
+							"transliteration": "li2ann"
+						},
+						{
+							"arabic": "أريد",
+							"english": "I want",
+							"transliteration": "areed"
+						},
+						{
+							"arabic": "خبز.",
+							"english": "bread.",
+							"transliteration": "khubuz."
+						}
+					]
+				},
+				{
+					"arabic": "السوق قريب، هناك.",
+					"arabicTashkeel": "السّوق قْريب، هْناك.",
+					"english": "The market is near, over there.",
+					"transliteration": "is-soog greeb, hnaak.",
+					"wordAlignments": [
+						{
+							"arabic": "السوق",
+							"english": "The market is",
+							"transliteration": "is-soog"
+						},
+						{
+							"arabic": "قريب،",
+							"english": "near,",
+							"transliteration": "greeb,"
+						},
+						{
+							"arabic": "هناك.",
+							"english": "over there.",
+							"transliteration": "hnaak."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "A Phone Call",
+			"sentences": [
+				{
+					"arabic": "هلا، شكو ماكو؟",
+					"arabicTashkeel": "هَلا، شَكو ماكو؟",
+					"english": "Hi, what's up?",
+					"transliteration": "hala, shaku maaku?",
+					"wordAlignments": [
+						{
+							"arabic": "هلا،",
+							"english": "Hi,",
+							"transliteration": "hala,"
+						},
+						{
+							"arabic": "شكو",
+							"english": "what is there",
+							"transliteration": "shaku"
+						},
+						{
+							"arabic": "ماكو؟",
+							"english": "and what isn't?",
+							"transliteration": "maaku?"
+						}
+					]
+				},
+				{
+					"arabic": "وين إنت هسه؟",
+					"arabicTashkeel": "وين إنتَ هَسَّه؟",
+					"english": "Where are you now?",
+					"transliteration": "ween inta hassa?",
+					"wordAlignments": [
+						{
+							"arabic": "وين",
+							"english": "Where are",
+							"transliteration": "ween"
+						},
+						{
+							"arabic": "إنت",
+							"english": "you",
+							"transliteration": "inta"
+						},
+						{
+							"arabic": "هسه؟",
+							"english": "now?",
+							"transliteration": "hassa?"
+						}
+					]
+				},
+				{
+					"arabic": "آني بالبيت. يمتى تجي؟",
+					"arabicTashkeel": "آني بالبيت. يَمتى تِجي؟",
+					"english": "I'm at home. When are you coming?",
+					"transliteration": "aani bil-beet. yamta tiji?",
+					"wordAlignments": [
+						{
+							"arabic": "آني",
+							"english": "I am",
+							"transliteration": "aani"
+						},
+						{
+							"arabic": "بالبيت.",
+							"english": "at home.",
+							"transliteration": "bil-beet."
+						},
+						{
+							"arabic": "يمتى",
+							"english": "When",
+							"transliteration": "yamta"
+						},
+						{
+							"arabic": "تجي؟",
+							"english": "are you coming?",
+							"transliteration": "tiji?"
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is new in Baghdad and stops a friendly passer-by to ask for help finding their way.",
+		"studentRole": "A visitor learning Iraqi Arabic.",
+		"otherRole": "A helpful local who answers questions and asks some back.",
+		"goalEnglish": "Ask where places are, how to get there, how far it is and how much a taxi costs.",
+		"targetWords": [
+			"Where",
+			"How",
+			"How much (price)",
+			"How long / how much",
+			"Why",
+			"Because",
+			"Do you know",
+			"What's up?"
+		]
+	}
+}

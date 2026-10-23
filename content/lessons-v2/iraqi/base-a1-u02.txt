@@ -1,0 +1,234 @@
+# Iraqi — A1 — Greetings and Introductions (base-a1-u02)
+
+@vocab
+greeting = Hello
+هَلا / hala / Hello
+
+greeting = Peace be upon you
+السَّلامُ / is-salaamu / Peace | عَلَيكُم / 3alaykum / upon you
+
+phrase = How are you? (to a man)
+شْلونَك؟ / shloonak? / How are you?
+
+phrase = How are you? (to a woman)
+!شْلونِك؟ / shloonich? / How are you?
+
+adjective = Fine / good
+زين / zeen / fine
+
+phrase = Praise be to God
+الحَمدُ / il-7amdu / Praise | لله / lillaah / be to God
+
+greeting = Welcome
+أهلاً / ahlan / Welcome | وسَهلاً / wa sahlan / and welcome
+
+phrase = Nice to meet you
+تْشَرَّفنا / tsharrafna / Nice to meet you
+
+phrase = My name is
+إسمي / ismi / My name is
+
+phrase = What is your name? (to a man)
+شِنو / shinu / What | إسمَك؟ / ismak? / your name?
+
+phrase = What is your name? (to a woman)
+شِنو / shinu / What | !إسمِك؟ / ismich? / your name?
+
+phrase = Where are you from? (to a man)
+مْنين / mneen / From where | إنتَ؟ / inta? / are you?
+
+phrase = I am from
+آني / aani / I | مِن / min / am from
+
+phrase = What is your job? (to a man)
+شِنو / shinu / What | شُغلَك؟ / shughlak? / is your job?
+
+greeting = Goodbye
+مَع / ma3a / With | السَّلامة / is-salaama / safety
+
+@pool
+Hello, how are you? = Hello; How are you? (to a man)
+هَلا، / hala, / Hello, | شْلونَك؟ / shloonak? / how are you?
+
+Hello, how are you? = Hello; How are you? (to a woman)
+هَلا، / hala, / Hello, | !شْلونِك؟ / shloonich? / how are you?
+
+Fine, praise be to God. = Fine / good; Praise be to God
+زين، / zeen, / Fine, | الحَمدُ / il-7amdu / praise | لله. / lillaah. / be to God.
+
+Peace be upon you, how are you? = Peace be upon you; How are you? (to a man)
+السَّلامُ / is-salaamu / Peace | عَلَيكُم، / 3alaykum, / upon you, | شْلونَك؟ / shloonak? / how are you?
+
+Praise be to God, I'm fine. = Praise be to God; Fine / good
+الحَمدُ / il-7amdu / Praise | لله، / lillaah, / be to God, | آني / aani / I am | زين. / zeen. / fine.
+
+Welcome, my name is Ali. = Welcome; My name is
+أهلاً / ahlan / Welcome | وسَهلاً، / wa sahlan, / and welcome, | إسمي / ismi / my name is | عَلي. / 3ali. / Ali.
+
+My name is Zainab, nice to meet you. = My name is; Nice to meet you
+إسمي / ismi / My name is | زَينَب، / zaynab, / Zainab, | تْشَرَّفنا. / tsharrafna. / nice to meet you.
+
+Hello, what is your name? = Hello; What is your name? (to a man)
+هَلا، / hala, / Hello, | شِنو / shinu / what | إسمَك؟ / ismak? / is your name?
+
+Peace be upon you, what is your name? = Peace be upon you; What is your name? (to a woman)
+السَّلامُ / is-salaamu / Peace | عَلَيكُم، / 3alaykum, / upon you, | شِنو / shinu / what | !إسمِك؟ / ismich? / is your name?
+
+My name is Haider, I am from Baghdad. = My name is; I am from
+إسمي / ismi / My name is | حَيدَر، / 7aydar, / Haider, | آني / aani / I | مِن / min / am from | بَغداد. / baghdaad. / Baghdad.
+
+Where are you from? I am from Basra. = Where are you from? (to a man); I am from
+مْنين / mneen / From where | إنتَ؟ / inta? / are you? | آني / aani / I | مِن / min / am from | البَصرة. / il-basra. / Basra.
+
+Nice to meet you, I am from Erbil. = Nice to meet you; I am from
+تْشَرَّفنا، / tsharrafna, / Nice to meet you, | آني / aani / I | مِن / min / am from | أربيل. / arbeel. / Erbil.
+
+Welcome, what is your job? = Welcome; What is your job? (to a man)
+أهلاً / ahlan / Welcome | وسَهلاً، / wa sahlan, / and welcome, | شِنو / shinu / what | شُغلَك؟ / shughlak? / is your job?
+
+My name is Omar, what is your name? = My name is; What is your name? (to a man)
+إسمي / ismi / My name is | عُمَر، / 3umar, / Omar, | شِنو / shinu / what | إسمَك؟ / ismak? / is your name?
+
+Goodbye, nice to meet you. = Goodbye; Nice to meet you
+مَع / ma3a / With | السَّلامة، / is-salaama, / safety, | تْشَرَّفنا. / tsharrafna. / nice to meet you.
+
+Okay, goodbye. = Fine / good; Goodbye
+زين، / zeen, / Okay, | مَع / ma3a / with | السَّلامة. / is-salaama. / safety.
+
+Hello, welcome. = Hello; Welcome
+هَلا، / hala, / Hello, | أهلاً / ahlan / welcome | وسَهلاً. / wa sahlan. / and welcome.
+
+Peace be upon you, my name is Sarah. = Peace be upon you; My name is
+السَّلامُ / is-salaamu / Peace | عَلَيكُم، / 3alaykum, / upon you, | إسمي / ismi / my name is | سارة. / saara. / Sarah.
+
+How are you? Good? = How are you? (to a man); Fine / good
+شْلونَك؟ / shloonak? / How are you? | زين؟ / zeen? / Good?
+
+Praise be to God, and how are you? = Praise be to God; How are you? (to a woman)
+الحَمدُ / il-7amdu / Praise | لله، / lillaah, / be to God, | وإنتي / w-inti / and you | !شْلونِك؟ / shloonich? / how are you?
+
+Hello, where are you from? = Hello; Where are you from? (to a man)
+هَلا، / hala, / Hello, | مْنين / mneen / from where | إنتَ؟ / inta? / are you?
+
+I am from Baghdad, nice to meet you. = I am from; Nice to meet you
+آني / aani / I | مِن / min / am from | بَغداد، / baghdaad, / Baghdad, | تْشَرَّفنا. / tsharrafna. / nice to meet you.
+
+What is your job? I am a teacher. = What is your job? (to a man)
+شِنو / shinu / What | شُغلَك؟ / shughlak? / is your job? | آني / aani / I am | مُدَرِّس. / mudarris. / a teacher.
+
+Goodbye, God be with you. = Goodbye
+مَع / ma3a / With | السَّلامة، / is-salaama, / safety, | الله / allah / God | وِيّاك. / wiyyaak. / be with you.
+
+Welcome, nice to meet you. = Welcome; Nice to meet you
+أهلاً / ahlan / Welcome | وسَهلاً، / wa sahlan, / and welcome, | تْشَرَّفنا. / tsharrafna. / nice to meet you.
+
+My name is Maryam, I am from Najaf. = My name is; I am from
+إسمي / ismi / My name is | مَريَم، / maryam, / Maryam, | آني / aani / I | مِن / min / am from | النَّجَف. / in-najaf. / Najaf.
+
+What is your name? My name is Noor. = What is your name? (to a woman); My name is
+شِنو / shinu / What | !إسمِك؟ / ismich? / is your name? | إسمي / ismi / My name is | نور. / noor. / Noor.
+
+Peace be upon you, welcome. = Peace be upon you; Welcome
+السَّلامُ / is-salaamu / Peace | عَلَيكُم، / 3alaykum, / upon you, | أهلاً / ahlan / welcome | وسَهلاً. / wa sahlan. / and welcome.
+
+Hello Zainab, how are you? = Hello; How are you? (to a woman)
+هَلا / hala / Hello | زَينَب، / zaynab, / Zainab, | !شْلونِك؟ / shloonich? / how are you?
+
+Fine, praise be to God, and how are you? = Fine / good; Praise be to God; How are you? (to a man)
+زين / zeen / Fine | الحَمدُ / il-7amdu / praise | لله، / lillaah, / be to God, | وإنتَ / w-inta / and you | شْلونَك؟ / shloonak? / how are you?
+
+Where are you from? From Baghdad? = Where are you from? (to a man)
+مْنين / mneen / From where | إنتَ؟ / inta? / are you? | مِن / min / From | بَغداد؟ / baghdaad? / Baghdad?
+
+What is your job here? = What is your job? (to a man)
+شِنو / shinu / What | شُغلَك / shughlak / is your job | هْنا؟ / hnaa? / here?
+
+My name is Ahmed, what is your job? = My name is; What is your job? (to a man)
+إسمي / ismi / My name is | أحمَد، / a7mad, / Ahmed, | شِنو / shinu / what | شُغلَك؟ / shughlak? / is your job?
+
+Nice to meet you, Ali, goodbye. = Nice to meet you; Goodbye
+تْشَرَّفنا / tsharrafna / Nice to meet you | يا / ya / O | عَلي، / 3ali, / Ali, | مَع / ma3a / with | السَّلامة. / is-salaama. / safety.
+
+Hello, my name is Karrar. = Hello; My name is
+هَلا، / hala, / Hello, | إسمي / ismi / my name is | كَرّار. / karraar. / Karrar.
+
+Peace be upon you, where are you from? = Peace be upon you; Where are you from? (to a man)
+السَّلامُ / is-salaamu / Peace | عَلَيكُم، / 3alaykum, / upon you, | مْنين / mneen / from where | إنتَ؟ / inta? / are you?
+
+Welcome, where are you from? = Welcome; Where are you from? (to a man)
+أهلاً / ahlan / Welcome | وسَهلاً، / wa sahlan, / and welcome, | مْنين / mneen / from where | إنتَ؟ / inta? / are you?
+
+I am from Sulaymaniyah, and you? = I am from
+آني / aani / I | مِن / min / am from | السُّليمانية، / is-sulaymaaniyya, / Sulaymaniyah, | وإنتَ؟ / w-inta? / and you?
+
+What is your name? My name is Yousif. = What is your name? (to a man); My name is
+شِنو / shinu / What | إسمَك؟ / ismak? / is your name? | إسمي / ismi / My name is | يوسِف. / yoosif. / Yousif.
+
+Goodbye, Zainab! = Goodbye
+مَع / ma3a / With | السَّلامة / is-salaama / safety | يا / ya / O | زَينَب! / zaynab! / Zainab!
+
+Peace be upon you, how are you? = Peace be upon you; How are you? (to a woman)
+السَّلامُ / is-salaamu / Peace | عَلَيكُم، / 3alaykum, / upon you, | !شْلونِك؟ / shloonich? / how are you?
+
+Good, nice to meet you. = Fine / good; Nice to meet you
+زين، / zeen, / Good, | تْشَرَّفنا. / tsharrafna. / nice to meet you.
+
+Hello Ali, how are you? = Hello; How are you? (to a man)
+هَلا / hala / Hello | عَلي، / 3ali, / Ali, | شْلونَك؟ / shloonak? / how are you?
+
+Welcome, how are you? = Welcome; How are you? (to a woman)
+أهلاً / ahlan / Welcome | وسَهلاً، / wa sahlan, / and welcome, | !شْلونِك؟ / shloonich? / how are you?
+
+Praise be to God, everything is fine. = Praise be to God; Fine / good
+الحَمدُ / il-7amdu / Praise | لله، / lillaah, / be to God, | كُلشي / kulshi / everything | زين. / zeen. / is fine.
+
+Welcome, what is your name? = Welcome; What is your name? (to a man)
+أهلاً / ahlan / Welcome | وسَهلاً، / wa sahlan, / and welcome, | شِنو / shinu / what | إسمَك؟ / ismak? / is your name?
+
+Hello dear, what is your name? = Hello; What is your name? (to a man)
+هَلا / hala / Hello | حَبيبي، / 7abeebi, / dear, | شِنو / shinu / what | إسمَك؟ / ismak? / is your name?
+
+Hello, what is your name? = Hello; What is your name? (to a woman)
+هَلا، / hala, / Hello, | شِنو / shinu / what | !إسمِك؟ / ismich? / is your name?
+
+What is your name? My name is Ali. = What is your name? (to a woman); My name is
+شِنو / shinu / What | !إسمِك؟ / ismich? / is your name? | آني / aani / I, | إسمي / ismi / my name is | عَلي. / 3ali. / Ali.
+
+Welcome, what is your name? = Welcome; What is your name? (to a woman)
+أهلاً / ahlan / Welcome | وسَهلاً، / wa sahlan, / and welcome, | شِنو / shinu / what | !إسمِك؟ / ismich? / is your name?
+
+Hello, what is your job? = Hello; What is your job? (to a man)
+هَلا، / hala, / Hello, | شِنو / shinu / what | شُغلَك؟ / shughlak? / is your job?
+
+@passage At the Tea House
+Peace be upon you!
+السَّلامُ / is-salaamu / Peace | عَلَيكُم! / 3alaykum! / upon you!
+
+And upon you be peace, how are you?
+وعَلَيكُم / w-3alaykum / And upon you | السَّلام، / is-salaam, / peace, | شْلونَك؟ / shloonak? / how are you?
+
+Fine, praise be to God. My name is Ali.
+زين / zeen / Fine | الحَمدُ / il-7amdu / praise | لله. / lillaah. / be to God. | إسمي / ismi / My name is | عَلي. / 3ali. / Ali.
+
+Welcome, Ali, nice to meet you.
+أهلاً / ahlan / Welcome | وسَهلاً / wa sahlan / and welcome | يا / ya / O | عَلي، / 3ali, / Ali, | تْشَرَّفنا. / tsharrafna. / nice to meet you.
+
+@passage A New Neighbour
+Hello, my name is Zainab.
+هَلا، / hala, / Hello, | إسمي / ismi / my name is | زَينَب. / zaynab. / Zainab.
+
+I am from Basra, and where are you from?
+آني / aani / I | مِن / min / am from | البَصرة، / il-basra, / Basra, | وإنتي / w-inti / and you | مْنين؟ / mneen? / from where?
+
+I am from Baghdad, nice to meet you.
+آني / aani / I | مِن / min / am from | بَغداد، / baghdaad, / Baghdad, | تْشَرَّفنا. / tsharrafna. / nice to meet you.
+
+Goodbye!
+مَع / ma3a / With | السَّلامة! / is-salaama! / safety!
+
+@scenario
+situation: The student is at a chaykhana (tea house) in Baghdad and starts chatting with a friendly regular.
+studentRole: A visitor learning Iraqi Arabic.
+otherRole: An Iraqi man who comes to the tea house every evening.
+goalEnglish: Greet him, introduce yourself, ask his name and where he is from, then say goodbye.
+targetWords: Peace be upon you; How are you? (to a man); My name is; What is your name? (to a man); Where are you from? (to a man); I am from; Goodbye

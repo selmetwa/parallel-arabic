@@ -1,0 +1,214 @@
+# Iraqi — A1 — Numbers from 1 to 10 (base-a1-u05)
+# Before a plural noun Iraqis use the short form (ثلاث كتب، خمس آلاف); counting uses the full form.
+
+@vocab
+number = One
+واحِد / waa7id / One
+
+number = Two
+ثْنين / thneen / Two
+
+number = Three
+ثْلاثة / thlaatha / Three
+
+number = Four
+أربعة / arba3a / Four
+
+number = Five
+خَمسة / khamsa / Five
+
+number = Six
+سِتّة / sitta / Six
+
+number = Seven
+سَبعة / sab3a / Seven
+
+number = Eight
+ثْمانية / thmaanya / Eight
+
+number = Nine
+تِسعة / tis3a / Nine
+
+number = Ten
+عَشرة / 3ashra / Ten
+
+question = How many
+كَم / cham / How many
+
+question = How much
+بيش / beesh / How much
+
+noun:m = Dinar
+دينار / deenaar / Dinar
+
+number = Thousand
+ألف / alf / Thousand
+
+noun:m = Age
+عُمُر / 3umur / Age
+
+@pool
+One, two, three! = One; Two; Three
+واحِد، / waa7id, / One, | ثْنين، / thneen, / two, | ثْلاثة! / thlaatha! / three!
+
+Four, five, six. = Four; Five; Six
+أربعة، / arba3a, / Four, | خَمسة، / khamsa, / five, | سِتّة. / sitta. / six.
+
+Seven, eight, nine, ten. = Seven; Eight; Nine; Ten
+سَبعة، / sab3a, / Seven, | ثْمانية، / thmaanya, / eight, | تِسعة، / tis3a, / nine, | عَشرة. / 3ashra. / ten.
+
+How old are you? = How many; Age
+كَم / cham / How many | عُمرَك؟ / 3umrak? / is your age?
+
+I am ten. = Age; Ten
+عُمري / 3umri / My age is | عَشرة. / 3ashra. / ten.
+
+He is seven. = Age; Seven
+عُمرَه / 3umra / His age is | سَبعة. / sab3a. / seven.
+
+How much is this? = How much
+بيش / beesh / How much is | هَذا؟ / haatha? / this?
+
+For a thousand dinars. = Thousand; Dinar
+بألف / b-alf / For a thousand | دينار. / deenaar. / dinars.
+
+I have three books. = Three
+عِندي / 3indi / I have | ثْلاث / thlath / three | كُتُب. / kutub. / books.
+
+How many books do you have? = How many
+كَم / cham / How many | كْتاب / ktaab / books | عِندَك؟ / 3indak? / do you have?
+
+I have five. = Five
+عِندي / 3indi / I have | خَمسة. / khamsa. / five.
+
+My number is seven, eight, nine. = Seven; Eight; Nine
+رَقمي / ragmi / My number is | سَبعة، / sab3a, / seven, | ثْمانية، / thmaanya, / eight, | تِسعة. / tis3a. / nine.
+
+How much is the book? = How much
+بيش / beesh / How much is | الكْتاب؟ / il-ktaab? / the book?
+
+The book is five thousand dinars. = Five; Dinar
+الكْتاب / il-ktaab / The book is | بخَمس / b-khams / for five | آلاف / aalaaf / thousand | دينار. / deenaar. / dinars.
+
+The pen is a thousand dinars. = Thousand; Dinar
+القَلَم / il-galam / The pen is | بألف / b-alf / for a thousand | دينار. / deenaar. / dinars.
+
+How old is she? She is six. = How many; Age; Six
+كَم / cham / How many | عُمُرها؟ / 3umurha? / is her age? | عُمُرها / 3umurha / Her age is | سِتّة. / sitta. / six.
+
+I have two. = Two
+عِندي / 3indi / I have | ثْنين. / thneen. / two.
+
+Just one. = One
+واحِد / waa7id / One | بَس. / bas. / only.
+
+How much is the bread? A thousand. = How much; Thousand
+بيش / beesh / How much is | الخُبُز؟ / il-khubuz? / the bread? | بألف. / b-alf. / For a thousand.
+
+Ten thousand dinars. = Ten; Dinar
+عَشرة / 3ashra / Ten | آلاف / aalaaf / thousand | دينار. / deenaar. / dinars.
+
+How many students are here? = How many
+كَم / cham / How many | طالِب / taalib / students are | هْنا؟ / hnaa? / here?
+
+There are eight here. = Eight
+هْنا / hnaa / Here there are | ثْمانية. / thmaanya. / eight.
+
+Four and four is eight. = Four; Eight
+أربعة / arba3a / Four | وأربعة / w-arba3a / and four is | ثْمانية. / thmaanya. / eight.
+
+Five and five is ten. = Five; Ten
+خَمسة / khamsa / Five | وخَمسة / w-khamsa / and five is | عَشرة. / 3ashra. / ten.
+
+Three and six is nine. = Three; Six; Nine
+ثْلاثة / thlaatha / Three | وسِتّة / w-sitta / and six is | تِسعة. / tis3a. / nine.
+
+Two and seven is nine. = Two; Seven; Nine
+ثْنين / thneen / Two | وسَبعة / w-sab3a / and seven is | تِسعة. / tis3a. / nine.
+
+One and three is four. = One; Three; Four
+واحِد / waa7id / One | وثْلاثة / w-thlaatha / and three is | أربعة. / arba3a. / four.
+
+Six and two is eight. = Six; Two; Eight
+سِتّة / sitta / Six | وثْنين / w-thneen / and two is | ثْمانية. / thmaanya. / eight.
+
+My son is eight. = Age; Eight
+إبني / ibni / My son | عُمرَه / 3umra / his age is | ثْمانية. / thmaanya. / eight.
+
+How much is the car? = How much
+بيش / beesh / How much is | السَّيّارة؟ / is-sayyaara? / the car?
+
+How many dinars? = How many; Dinar
+كَم / cham / How many | دينار؟ / deenaar? / dinars?
+
+Only a thousand dinars. = Thousand; Dinar
+ألف / alf / A thousand | دينار / deenaar / dinars | بَس. / bas. / only.
+
+I have four brothers. = Four
+عِندي / 3indi / I have | أربَع / arba3 / four | إخوان. / ikhwaan. / brothers.
+
+Ali has seven pens. = Seven
+عَلي / 3ali / Ali | عِندَه / 3inda / has | سَبع / saba3 / seven | أقلام. / aglaam. / pens.
+
+Take three. = Three
+خُذ / khudh / Take | ثْلاثة. / thlaatha. / three.
+
+Only five, not six. = Five; Six
+خَمسة / khamsa / Five | بَس، / bas, / only, | مو / moo / not | سِتّة. / sitta. / six.
+
+Nine or ten? = Nine; Ten
+تِسعة / tis3a / Nine | لو / law / or | عَشرة؟ / 3ashra? / ten?
+
+One or two? = One; Two
+واحِد / waa7id / One | لو / law / or | ثْنين؟ / thneen? / two?
+
+How much is this? Three thousand. = How much; Three
+بيش / beesh / How much is | هاي؟ / haay? / this? | بثْلاث / b-thlath / For three | آلاف. / aalaaf. / thousand.
+
+How old are you? = How many; Age
+كَم / cham / How many | !عُمرِك؟ / 3umrich? / is your age?
+
+Only ten. = Ten
+عَشرة / 3ashra / Ten | بَس. / bas. / only.
+
+I have one. = One
+عِندي / 3indi / I have | واحِد. / waa7id. / one.
+
+Eight or nine? = Eight; Nine
+ثْمانية / thmaanya / Eight | لو / law / or | تِسعة؟ / tis3a? / nine?
+
+Only four. = Four
+أربعة / arba3a / Four | بَس. / bas. / only.
+
+This is for a thousand. = Thousand
+هَذا / haatha / This is | بألف. / b-alf. / for a thousand.
+
+@passage At the Bakery
+Peace be upon you, how much is the bread?
+السَّلامُ / is-salaamu / Peace | عَلَيكُم، / 3alaykum, / upon you, | بيش / beesh / how much is | الخُبُز؟ / il-khubuz? / the bread?
+
+The bread is a thousand dinars.
+الخُبُز / il-khubuz / The bread is | بألف / b-alf / for a thousand | دينار. / deenaar. / dinars.
+
+Okay, I want two.
+زين، / zeen, / Okay, | أريد /areed / I want | ثْنين. / thneen. / two.
+
+Here you are.
+تْفَضَّل. / tfaddal. / Here you are.
+
+@passage My Family
+I am ten.
+عُمري / 3umri / My age is | عَشرة. / 3ashra. / ten.
+
+My brother is seven.
+أخويَه / akhooya / My brother | عُمرَه / 3umra / his age is | سَبعة. / sab3a. / seven.
+
+My sister is five.
+أختي / ukhti / My sister | عُمُرها / 3umurha / her age is | خَمسة. / khamsa. / five.
+
+@scenario
+situation: The student is shopping at a small market stall in Baghdad and needs to ask prices and quantities.
+studentRole: A shopper learning Iraqi Arabic.
+otherRole: The stall owner, who quotes prices in dinars.
+goalEnglish: Ask how much things cost, say how many you want, and count out your money.
+targetWords: How much; How many; Dinar; Thousand; One; Two; Three; Five
