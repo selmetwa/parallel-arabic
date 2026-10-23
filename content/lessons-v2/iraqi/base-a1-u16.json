@@ -1,0 +1,1844 @@
+{
+	"vocab": [
+		{
+			"arabic": "كتب",
+			"arabicTashkeel": "كُتُب",
+			"english": "Books",
+			"transliteration": "kutub",
+			"wordAlignments": [
+				{
+					"arabic": "كتب",
+					"english": "Books",
+					"transliteration": "kutub"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "بيوت",
+			"arabicTashkeel": "بيوت",
+			"english": "Houses",
+			"transliteration": "byoot",
+			"wordAlignments": [
+				{
+					"arabic": "بيوت",
+					"english": "Houses",
+					"transliteration": "byoot"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "ولد",
+			"arabicTashkeel": "وِلِد",
+			"english": "Boys",
+			"transliteration": "wilid",
+			"wordAlignments": [
+				{
+					"arabic": "ولد",
+					"english": "Boys",
+					"transliteration": "wilid"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "بنات",
+			"arabicTashkeel": "بَنات",
+			"english": "Girls",
+			"transliteration": "banaat",
+			"wordAlignments": [
+				{
+					"arabic": "بنات",
+					"english": "Girls",
+					"transliteration": "banaat"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "سيارات",
+			"arabicTashkeel": "سَيّارات",
+			"english": "Cars",
+			"transliteration": "sayyaaraat",
+			"wordAlignments": [
+				{
+					"arabic": "سيارات",
+					"english": "Cars",
+					"transliteration": "sayyaaraat"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "أقلام",
+			"arabicTashkeel": "أقلام",
+			"english": "Pens",
+			"transliteration": "aglaam",
+			"wordAlignments": [
+				{
+					"arabic": "أقلام",
+					"english": "Pens",
+					"transliteration": "aglaam"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "طلاب",
+			"arabicTashkeel": "طُلّاب",
+			"english": "Students",
+			"transliteration": "tullaab",
+			"wordAlignments": [
+				{
+					"arabic": "طلاب",
+					"english": "Students",
+					"transliteration": "tullaab"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "غرف",
+			"arabicTashkeel": "غُرَف",
+			"english": "Rooms",
+			"transliteration": "ghuraf",
+			"wordAlignments": [
+				{
+					"arabic": "غرف",
+					"english": "Rooms",
+					"transliteration": "ghuraf"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "ربع",
+			"arabicTashkeel": "رَبُع",
+			"english": "Friends",
+			"transliteration": "rabu3",
+			"wordAlignments": [
+				{
+					"arabic": "ربع",
+					"english": "Friends",
+					"transliteration": "rabu3"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "مدرسين",
+			"arabicTashkeel": "مُدَرِّسين",
+			"english": "Teachers",
+			"transliteration": "mudarriseen",
+			"wordAlignments": [
+				{
+					"arabic": "مدرسين",
+					"english": "Teachers",
+					"transliteration": "mudarriseen"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "أيام",
+			"arabicTashkeel": "أيّام",
+			"english": "Days",
+			"transliteration": "ayyaam",
+			"wordAlignments": [
+				{
+					"arabic": "أيام",
+					"english": "Days",
+					"transliteration": "ayyaam"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "أبواب",
+			"arabicTashkeel": "أبواب",
+			"english": "Doors",
+			"transliteration": "abwaab",
+			"wordAlignments": [
+				{
+					"arabic": "أبواب",
+					"english": "Doors",
+					"transliteration": "abwaab"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "رجال",
+			"arabicTashkeel": "رْجال",
+			"english": "Men",
+			"transliteration": "rjaal",
+			"wordAlignments": [
+				{
+					"arabic": "رجال",
+					"english": "Men",
+					"transliteration": "rjaal"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "نسوان",
+			"arabicTashkeel": "نِسوان",
+			"english": "Women",
+			"transliteration": "niswaan",
+			"wordAlignments": [
+				{
+					"arabic": "نسوان",
+					"english": "Women",
+					"transliteration": "niswaan"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "كراسي",
+			"arabicTashkeel": "كَراسي",
+			"english": "Chairs",
+			"transliteration": "karaasi",
+			"wordAlignments": [
+				{
+					"arabic": "كراسي",
+					"english": "Chairs",
+					"transliteration": "karaasi"
+				}
+			],
+			"partOfSpeech": "noun"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "كتاب واحد، ثلاث كتب.",
+			"arabicTashkeel": "كْتاب واحِد، ثْلاث كُتُب.",
+			"english": "One book, three books.",
+			"transliteration": "ktaab waa7id, thlath kutub.",
+			"wordAlignments": [
+				{
+					"arabic": "كتاب",
+					"english": "A book",
+					"transliteration": "ktaab"
+				},
+				{
+					"arabic": "واحد،",
+					"english": "one,",
+					"transliteration": "waa7id,"
+				},
+				{
+					"arabic": "ثلاث",
+					"english": "three",
+					"transliteration": "thlath"
+				},
+				{
+					"arabic": "كتب.",
+					"english": "books.",
+					"transliteration": "kutub."
+				}
+			],
+			"targetWords": [
+				"Books"
+			]
+		},
+		{
+			"arabic": "هذولة كتب جديدة.",
+			"arabicTashkeel": "هَذولة كُتُب جْديدة.",
+			"english": "These are new books.",
+			"transliteration": "hathoola kutub jdeeda.",
+			"wordAlignments": [
+				{
+					"arabic": "هذولة",
+					"english": "These are",
+					"transliteration": "hathoola"
+				},
+				{
+					"arabic": "كتب",
+					"english": "books",
+					"transliteration": "kutub"
+				},
+				{
+					"arabic": "جديدة.",
+					"english": "new.",
+					"transliteration": "jdeeda."
+				}
+			],
+			"targetWords": [
+				"Books"
+			]
+		},
+		{
+			"arabic": "البيوت كبيرة.",
+			"arabicTashkeel": "البيوت كْبيرة.",
+			"english": "The houses are big.",
+			"transliteration": "il-byoot chbeera.",
+			"wordAlignments": [
+				{
+					"arabic": "البيوت",
+					"english": "The houses are",
+					"transliteration": "il-byoot"
+				},
+				{
+					"arabic": "كبيرة.",
+					"english": "big.",
+					"transliteration": "chbeera."
+				}
+			],
+			"targetWords": [
+				"Houses"
+			]
+		},
+		{
+			"arabic": "الولد يلعبون بره.",
+			"arabicTashkeel": "الوِلِد يِلعَبون بَرّه.",
+			"english": "The boys are playing outside.",
+			"transliteration": "il-wilid yil3aboon barra.",
+			"wordAlignments": [
+				{
+					"arabic": "الولد",
+					"english": "The boys are",
+					"transliteration": "il-wilid"
+				},
+				{
+					"arabic": "يلعبون",
+					"english": "playing",
+					"transliteration": "yil3aboon"
+				},
+				{
+					"arabic": "بره.",
+					"english": "outside.",
+					"transliteration": "barra."
+				}
+			],
+			"targetWords": [
+				"Boys"
+			]
+		},
+		{
+			"arabic": "البنات بالمدرسة.",
+			"arabicTashkeel": "البَنات بالمَدرَسة.",
+			"english": "The girls are at school.",
+			"transliteration": "il-banaat bil-madrasa.",
+			"wordAlignments": [
+				{
+					"arabic": "البنات",
+					"english": "The girls are",
+					"transliteration": "il-banaat"
+				},
+				{
+					"arabic": "بالمدرسة.",
+					"english": "at school.",
+					"transliteration": "bil-madrasa."
+				}
+			],
+			"targetWords": [
+				"Girls"
+			]
+		},
+		{
+			"arabic": "بالشارع سيارات هواية.",
+			"arabicTashkeel": "بالشّارع سَيّارات هْوايَة.",
+			"english": "There are a lot of cars in the street.",
+			"transliteration": "bish-shaari3 sayyaaraat hwaaya.",
+			"wordAlignments": [
+				{
+					"arabic": "بالشارع",
+					"english": "In the street",
+					"transliteration": "bish-shaari3"
+				},
+				{
+					"arabic": "سيارات",
+					"english": "cars",
+					"transliteration": "sayyaaraat"
+				},
+				{
+					"arabic": "هواية.",
+					"english": "a lot.",
+					"transliteration": "hwaaya."
+				}
+			],
+			"targetWords": [
+				"Cars"
+			]
+		},
+		{
+			"arabic": "عندي خمس أقلام.",
+			"arabicTashkeel": "عِندي خَمس أقلام.",
+			"english": "I have five pens.",
+			"transliteration": "3indi khams aglaam.",
+			"wordAlignments": [
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "خمس",
+					"english": "five",
+					"transliteration": "khams"
+				},
+				{
+					"arabic": "أقلام.",
+					"english": "pens.",
+					"transliteration": "aglaam."
+				}
+			],
+			"targetWords": [
+				"Pens"
+			]
+		},
+		{
+			"arabic": "الطلاب بالصف.",
+			"arabicTashkeel": "الطُّلّاب بالصَّف.",
+			"english": "The students are in the class.",
+			"transliteration": "it-tullaab bis-saff.",
+			"wordAlignments": [
+				{
+					"arabic": "الطلاب",
+					"english": "The students are",
+					"transliteration": "it-tullaab"
+				},
+				{
+					"arabic": "بالصف.",
+					"english": "in the class.",
+					"transliteration": "bis-saff."
+				}
+			],
+			"targetWords": [
+				"Students"
+			]
+		},
+		{
+			"arabic": "البيت بيه أربع غرف.",
+			"arabicTashkeel": "البيت بيه أربَع غُرَف.",
+			"english": "The house has four rooms.",
+			"transliteration": "il-beet bee arba3 ghuraf.",
+			"wordAlignments": [
+				{
+					"arabic": "البيت",
+					"english": "The house",
+					"transliteration": "il-beet"
+				},
+				{
+					"arabic": "بيه",
+					"english": "has",
+					"transliteration": "bee"
+				},
+				{
+					"arabic": "أربع",
+					"english": "four",
+					"transliteration": "arba3"
+				},
+				{
+					"arabic": "غرف.",
+					"english": "rooms.",
+					"transliteration": "ghuraf."
+				}
+			],
+			"targetWords": [
+				"Rooms"
+			]
+		},
+		{
+			"arabic": "ربعي جايين اليوم.",
+			"arabicTashkeel": "رَبعي جايين اليوم.",
+			"english": "My friends are coming today.",
+			"transliteration": "rab3i jaayeen il-yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "ربعي",
+					"english": "My friends are",
+					"transliteration": "rab3i"
+				},
+				{
+					"arabic": "جايين",
+					"english": "coming",
+					"transliteration": "jaayeen"
+				},
+				{
+					"arabic": "اليوم.",
+					"english": "today.",
+					"transliteration": "il-yoom."
+				}
+			],
+			"targetWords": [
+				"Friends"
+			]
+		},
+		{
+			"arabic": "المدرسين مشغولين.",
+			"arabicTashkeel": "المُدَرِّسين مَشغولين.",
+			"english": "The teachers are busy.",
+			"transliteration": "il-mudarriseen mashghooleen.",
+			"wordAlignments": [
+				{
+					"arabic": "المدرسين",
+					"english": "The teachers are",
+					"transliteration": "il-mudarriseen"
+				},
+				{
+					"arabic": "مشغولين.",
+					"english": "busy.",
+					"transliteration": "mashghooleen."
+				}
+			],
+			"targetWords": [
+				"Teachers"
+			]
+		},
+		{
+			"arabic": "الإسبوع بيه سبع أيام.",
+			"arabicTashkeel": "الإسبوع بيه سَبع أيّام.",
+			"english": "The week has seven days.",
+			"transliteration": "il-isboo3 bee saba3 ayyaam.",
+			"wordAlignments": [
+				{
+					"arabic": "الإسبوع",
+					"english": "The week",
+					"transliteration": "il-isboo3"
+				},
+				{
+					"arabic": "بيه",
+					"english": "has",
+					"transliteration": "bee"
+				},
+				{
+					"arabic": "سبع",
+					"english": "seven",
+					"transliteration": "saba3"
+				},
+				{
+					"arabic": "أيام.",
+					"english": "days.",
+					"transliteration": "ayyaam."
+				}
+			],
+			"targetWords": [
+				"Days"
+			]
+		},
+		{
+			"arabic": "الأبواب مفتوحة.",
+			"arabicTashkeel": "الأبواب مَفتوحة.",
+			"english": "The doors are open.",
+			"transliteration": "il-abwaab maftoo7a.",
+			"wordAlignments": [
+				{
+					"arabic": "الأبواب",
+					"english": "The doors are",
+					"transliteration": "il-abwaab"
+				},
+				{
+					"arabic": "مفتوحة.",
+					"english": "open.",
+					"transliteration": "maftoo7a."
+				}
+			],
+			"targetWords": [
+				"Doors"
+			]
+		},
+		{
+			"arabic": "الرجال بالقهوة.",
+			"arabicTashkeel": "الرْجال بالقَهوة.",
+			"english": "The men are in the coffeehouse.",
+			"transliteration": "ir-rjaal bil-gahwa.",
+			"wordAlignments": [
+				{
+					"arabic": "الرجال",
+					"english": "The men are",
+					"transliteration": "ir-rjaal"
+				},
+				{
+					"arabic": "بالقهوة.",
+					"english": "in the coffeehouse.",
+					"transliteration": "bil-gahwa."
+				}
+			],
+			"targetWords": [
+				"Men"
+			]
+		},
+		{
+			"arabic": "النسوان بالمطبخ.",
+			"arabicTashkeel": "النِّسوان بالمَطبَخ.",
+			"english": "The women are in the kitchen.",
+			"transliteration": "in-niswaan bil-matbakh.",
+			"wordAlignments": [
+				{
+					"arabic": "النسوان",
+					"english": "The women are",
+					"transliteration": "in-niswaan"
+				},
+				{
+					"arabic": "بالمطبخ.",
+					"english": "in the kitchen.",
+					"transliteration": "bil-matbakh."
+				}
+			],
+			"targetWords": [
+				"Women"
+			]
+		},
+		{
+			"arabic": "نحتاج كراسي.",
+			"arabicTashkeel": "نِحتاج كَراسي.",
+			"english": "We need chairs.",
+			"transliteration": "ni7taaj karaasi.",
+			"wordAlignments": [
+				{
+					"arabic": "نحتاج",
+					"english": "We need",
+					"transliteration": "ni7taaj"
+				},
+				{
+					"arabic": "كراسي.",
+					"english": "chairs.",
+					"transliteration": "karaasi."
+				}
+			],
+			"targetWords": [
+				"Chairs"
+			]
+		},
+		{
+			"arabic": "بيت، بيتين، بيوت هواية.",
+			"arabicTashkeel": "بيت، بيتين، بيوت هْوايَة.",
+			"english": "A house, two houses, many houses.",
+			"transliteration": "beet, beeteen, byoot hwaaya.",
+			"wordAlignments": [
+				{
+					"arabic": "بيت،",
+					"english": "A house,",
+					"transliteration": "beet,"
+				},
+				{
+					"arabic": "بيتين،",
+					"english": "two houses,",
+					"transliteration": "beeteen,"
+				},
+				{
+					"arabic": "بيوت",
+					"english": "houses",
+					"transliteration": "byoot"
+				},
+				{
+					"arabic": "هواية.",
+					"english": "many.",
+					"transliteration": "hwaaya."
+				}
+			],
+			"targetWords": [
+				"Houses"
+			]
+		},
+		{
+			"arabic": "ولد واحد، ثلاث ولد.",
+			"arabicTashkeel": "وَلَد واحِد، ثْلاث وِلِد.",
+			"english": "One boy, three boys.",
+			"transliteration": "walad waa7id, thlath wilid.",
+			"wordAlignments": [
+				{
+					"arabic": "ولد",
+					"english": "A boy",
+					"transliteration": "walad"
+				},
+				{
+					"arabic": "واحد،",
+					"english": "one,",
+					"transliteration": "waa7id,"
+				},
+				{
+					"arabic": "ثلاث",
+					"english": "three",
+					"transliteration": "thlath"
+				},
+				{
+					"arabic": "ولد.",
+					"english": "boys.",
+					"transliteration": "wilid."
+				}
+			],
+			"targetWords": [
+				"Boys"
+			]
+		},
+		{
+			"arabic": "بنت وحدة، أربع بنات.",
+			"arabicTashkeel": "بِنت وَحدة، أربَع بَنات.",
+			"english": "One girl, four girls.",
+			"transliteration": "bint wa7da, arba3 banaat.",
+			"wordAlignments": [
+				{
+					"arabic": "بنت",
+					"english": "A girl",
+					"transliteration": "bint"
+				},
+				{
+					"arabic": "وحدة،",
+					"english": "one,",
+					"transliteration": "wa7da,"
+				},
+				{
+					"arabic": "أربع",
+					"english": "four",
+					"transliteration": "arba3"
+				},
+				{
+					"arabic": "بنات.",
+					"english": "girls.",
+					"transliteration": "banaat."
+				}
+			],
+			"targetWords": [
+				"Girls"
+			]
+		},
+		{
+			"arabic": "سيارة وحدة، سيارتين.",
+			"arabicTashkeel": "سَيّارة وَحدة، سَيّارتين.",
+			"english": "One car, two cars.",
+			"transliteration": "sayyaara wa7da, sayyaarteen.",
+			"wordAlignments": [
+				{
+					"arabic": "سيارة",
+					"english": "A car",
+					"transliteration": "sayyaara"
+				},
+				{
+					"arabic": "وحدة،",
+					"english": "one,",
+					"transliteration": "wa7da,"
+				},
+				{
+					"arabic": "سيارتين.",
+					"english": "two cars.",
+					"transliteration": "sayyaarteen."
+				}
+			],
+			"targetWords": [
+				"Cars"
+			]
+		},
+		{
+			"arabic": "وين الأقلام؟",
+			"arabicTashkeel": "وين الأقلام؟",
+			"english": "Where are the pens?",
+			"transliteration": "ween il-aglaam?",
+			"wordAlignments": [
+				{
+					"arabic": "وين",
+					"english": "Where are",
+					"transliteration": "ween"
+				},
+				{
+					"arabic": "الأقلام؟",
+					"english": "the pens?",
+					"transliteration": "il-aglaam?"
+				}
+			],
+			"targetWords": [
+				"Pens"
+			]
+		},
+		{
+			"arabic": "كم طالب؟ عشرين طالب.",
+			"arabicTashkeel": "كَم طالِب؟ عِشرين طالِب.",
+			"english": "How many students?",
+			"transliteration": "cham taalib? 3ishreen taalib.",
+			"wordAlignments": [
+				{
+					"arabic": "كم",
+					"english": "How many",
+					"transliteration": "cham"
+				},
+				{
+					"arabic": "طالب؟",
+					"english": "students?",
+					"transliteration": "taalib?"
+				},
+				{
+					"arabic": "عشرين",
+					"english": "Twenty",
+					"transliteration": "3ishreen"
+				},
+				{
+					"arabic": "طالب.",
+					"english": "students.",
+					"transliteration": "taalib."
+				}
+			],
+			"targetWords": [
+				"Students"
+			]
+		},
+		{
+			"arabic": "الغرف نظيفة.",
+			"arabicTashkeel": "الغُرَف نْظيفة.",
+			"english": "The rooms are clean.",
+			"transliteration": "il-ghuraf ndheefa.",
+			"wordAlignments": [
+				{
+					"arabic": "الغرف",
+					"english": "The rooms are",
+					"transliteration": "il-ghuraf"
+				},
+				{
+					"arabic": "نظيفة.",
+					"english": "clean.",
+					"transliteration": "ndheefa."
+				}
+			],
+			"targetWords": [
+				"Rooms"
+			]
+		},
+		{
+			"arabic": "وين ربعك؟",
+			"arabicTashkeel": "وين رَبعَك؟",
+			"english": "Where are your friends?",
+			"transliteration": "ween rab3ak?",
+			"wordAlignments": [
+				{
+					"arabic": "وين",
+					"english": "Where are",
+					"transliteration": "ween"
+				},
+				{
+					"arabic": "ربعك؟",
+					"english": "your friends?",
+					"transliteration": "rab3ak?"
+				}
+			],
+			"targetWords": [
+				"Friends"
+			]
+		},
+		{
+			"arabic": "المدرسين عراقيين.",
+			"arabicTashkeel": "المُدَرِّسين عِراقيين.",
+			"english": "The teachers are Iraqi.",
+			"transliteration": "il-mudarriseen 3iraaqiyyeen.",
+			"wordAlignments": [
+				{
+					"arabic": "المدرسين",
+					"english": "The teachers are",
+					"transliteration": "il-mudarriseen"
+				},
+				{
+					"arabic": "عراقيين.",
+					"english": "Iraqi.",
+					"transliteration": "3iraaqiyyeen."
+				}
+			],
+			"targetWords": [
+				"Teachers"
+			]
+		},
+		{
+			"arabic": "ثلاث أيام بس.",
+			"arabicTashkeel": "ثْلاث أيّام بَس.",
+			"english": "Three days only.",
+			"transliteration": "thlath ayyaam bas.",
+			"wordAlignments": [
+				{
+					"arabic": "ثلاث",
+					"english": "Three",
+					"transliteration": "thlath"
+				},
+				{
+					"arabic": "أيام",
+					"english": "days",
+					"transliteration": "ayyaam"
+				},
+				{
+					"arabic": "بس.",
+					"english": "only.",
+					"transliteration": "bas."
+				}
+			],
+			"targetWords": [
+				"Days"
+			]
+		},
+		{
+			"arabic": "سدوا الأبواب.",
+			"arabicTashkeel": "سِدّوا الأبواب.",
+			"english": "Close the doors.",
+			"transliteration": "sidduu il-abwaab.",
+			"wordAlignments": [
+				{
+					"arabic": "سدوا",
+					"english": "Close",
+					"transliteration": "sidduu"
+				},
+				{
+					"arabic": "الأبواب.",
+					"english": "the doors.",
+					"transliteration": "il-abwaab."
+				}
+			],
+			"targetWords": [
+				"Doors"
+			]
+		},
+		{
+			"arabic": "الرجال يشتغلون.",
+			"arabicTashkeel": "الرْجال يِشتُغلون.",
+			"english": "The men are working.",
+			"transliteration": "ir-rjaal yishtughloon.",
+			"wordAlignments": [
+				{
+					"arabic": "الرجال",
+					"english": "The men are",
+					"transliteration": "ir-rjaal"
+				},
+				{
+					"arabic": "يشتغلون.",
+					"english": "working.",
+					"transliteration": "yishtughloon."
+				}
+			],
+			"targetWords": [
+				"Men"
+			]
+		},
+		{
+			"arabic": "النسوان يحكون.",
+			"arabicTashkeel": "النِّسوان يِحكون.",
+			"english": "The women are talking.",
+			"transliteration": "in-niswaan yi7choon.",
+			"wordAlignments": [
+				{
+					"arabic": "النسوان",
+					"english": "The women are",
+					"transliteration": "in-niswaan"
+				},
+				{
+					"arabic": "يحكون.",
+					"english": "talking.",
+					"transliteration": "yi7choon."
+				}
+			],
+			"targetWords": [
+				"Women"
+			]
+		},
+		{
+			"arabic": "الكراسي بالحديقة.",
+			"arabicTashkeel": "الكَراسي بالحَديقة.",
+			"english": "The chairs are in the garden.",
+			"transliteration": "il-karaasi bil-7adeega.",
+			"wordAlignments": [
+				{
+					"arabic": "الكراسي",
+					"english": "The chairs are",
+					"transliteration": "il-karaasi"
+				},
+				{
+					"arabic": "بالحديقة.",
+					"english": "in the garden.",
+					"transliteration": "bil-7adeega."
+				}
+			],
+			"targetWords": [
+				"Chairs"
+			]
+		},
+		{
+			"arabic": "أقرا كتب هواية.",
+			"arabicTashkeel": "أقرا كُتُب هْوايَة.",
+			"english": "I read a lot of books.",
+			"transliteration": "agra kutub hwaaya.",
+			"wordAlignments": [
+				{
+					"arabic": "أقرا",
+					"english": "I read",
+					"transliteration": "agra"
+				},
+				{
+					"arabic": "كتب",
+					"english": "books",
+					"transliteration": "kutub"
+				},
+				{
+					"arabic": "هواية.",
+					"english": "a lot.",
+					"transliteration": "hwaaya."
+				}
+			],
+			"targetWords": [
+				"Books"
+			]
+		},
+		{
+			"arabic": "البيوت العتيقة حلوة.",
+			"arabicTashkeel": "البيوت العَتيقة حِلوة.",
+			"english": "The old houses are nice.",
+			"transliteration": "il-byoot il-3ateega 7ilwa.",
+			"wordAlignments": [
+				{
+					"arabic": "البيوت",
+					"english": "The houses",
+					"transliteration": "il-byoot"
+				},
+				{
+					"arabic": "العتيقة",
+					"english": "old are",
+					"transliteration": "il-3ateega"
+				},
+				{
+					"arabic": "حلوة.",
+					"english": "nice.",
+					"transliteration": "7ilwa."
+				}
+			],
+			"targetWords": [
+				"Houses"
+			]
+		},
+		{
+			"arabic": "الولد والبنات بالمدرسة.",
+			"arabicTashkeel": "الوِلِد والبَنات بالمَدرَسة.",
+			"english": "The boys and girls are at school.",
+			"transliteration": "il-wilid w-il-banaat bil-madrasa.",
+			"wordAlignments": [
+				{
+					"arabic": "الولد",
+					"english": "The boys",
+					"transliteration": "il-wilid"
+				},
+				{
+					"arabic": "والبنات",
+					"english": "and the girls are",
+					"transliteration": "w-il-banaat"
+				},
+				{
+					"arabic": "بالمدرسة.",
+					"english": "at school.",
+					"transliteration": "bil-madrasa."
+				}
+			],
+			"targetWords": [
+				"Boys",
+				"Girls"
+			]
+		},
+		{
+			"arabic": "السيارات جديدة.",
+			"arabicTashkeel": "السَّيّارات جْديدة.",
+			"english": "The cars are new.",
+			"transliteration": "is-sayyaaraat jdeeda.",
+			"wordAlignments": [
+				{
+					"arabic": "السيارات",
+					"english": "The cars are",
+					"transliteration": "is-sayyaaraat"
+				},
+				{
+					"arabic": "جديدة.",
+					"english": "new.",
+					"transliteration": "jdeeda."
+				}
+			],
+			"targetWords": [
+				"Cars"
+			]
+		},
+		{
+			"arabic": "الأقلام بالجنطة.",
+			"arabicTashkeel": "الأقلام بالجُنطة.",
+			"english": "The pens are in the bag.",
+			"transliteration": "il-aglaam bij-junta.",
+			"wordAlignments": [
+				{
+					"arabic": "الأقلام",
+					"english": "The pens are",
+					"transliteration": "il-aglaam"
+				},
+				{
+					"arabic": "بالجنطة.",
+					"english": "in the bag.",
+					"transliteration": "bij-junta."
+				}
+			],
+			"targetWords": [
+				"Pens"
+			]
+		},
+		{
+			"arabic": "طالب واحد، طلاب هواية.",
+			"arabicTashkeel": "طالِب واحِد، طُلّاب هْوايَة.",
+			"english": "One student, many students.",
+			"transliteration": "taalib waa7id, tullaab hwaaya.",
+			"wordAlignments": [
+				{
+					"arabic": "طالب",
+					"english": "A student",
+					"transliteration": "taalib"
+				},
+				{
+					"arabic": "واحد،",
+					"english": "one,",
+					"transliteration": "waa7id,"
+				},
+				{
+					"arabic": "طلاب",
+					"english": "students",
+					"transliteration": "tullaab"
+				},
+				{
+					"arabic": "هواية.",
+					"english": "many.",
+					"transliteration": "hwaaya."
+				}
+			],
+			"targetWords": [
+				"Students"
+			]
+		},
+		{
+			"arabic": "كم غرفة؟ ثلاث غرف.",
+			"arabicTashkeel": "كَم غُرفة؟ ثْلاث غُرَف.",
+			"english": "How many rooms?",
+			"transliteration": "cham ghurfa? thlath ghuraf.",
+			"wordAlignments": [
+				{
+					"arabic": "كم",
+					"english": "How many",
+					"transliteration": "cham"
+				},
+				{
+					"arabic": "غرفة؟",
+					"english": "rooms?",
+					"transliteration": "ghurfa?"
+				},
+				{
+					"arabic": "ثلاث",
+					"english": "Three",
+					"transliteration": "thlath"
+				},
+				{
+					"arabic": "غرف.",
+					"english": "rooms.",
+					"transliteration": "ghuraf."
+				}
+			],
+			"targetWords": [
+				"Rooms"
+			]
+		},
+		{
+			"arabic": "ربعي طلاب.",
+			"arabicTashkeel": "رَبعي طُلّاب.",
+			"english": "My friends are students.",
+			"transliteration": "rab3i tullaab.",
+			"wordAlignments": [
+				{
+					"arabic": "ربعي",
+					"english": "My friends are",
+					"transliteration": "rab3i"
+				},
+				{
+					"arabic": "طلاب.",
+					"english": "students.",
+					"transliteration": "tullaab."
+				}
+			],
+			"targetWords": [
+				"Friends",
+				"Students"
+			]
+		},
+		{
+			"arabic": "مدرس، ثنين مدرسين، مدرسين هواية.",
+			"arabicTashkeel": "مُدَرِّس، ثْنين مُدَرِّسين، مُدَرِّسين هْوايَة.",
+			"english": "One teacher, two teachers, many teachers.",
+			"transliteration": "mudarris, thneen mudarriseen, mudarriseen hwaaya.",
+			"wordAlignments": [
+				{
+					"arabic": "مدرس،",
+					"english": "A teacher,",
+					"transliteration": "mudarris,"
+				},
+				{
+					"arabic": "ثنين",
+					"english": "two",
+					"transliteration": "thneen"
+				},
+				{
+					"arabic": "مدرسين،",
+					"english": "teachers,",
+					"transliteration": "mudarriseen,"
+				},
+				{
+					"arabic": "مدرسين",
+					"english": "teachers",
+					"transliteration": "mudarriseen"
+				},
+				{
+					"arabic": "هواية.",
+					"english": "many.",
+					"transliteration": "hwaaya."
+				}
+			],
+			"targetWords": [
+				"Teachers"
+			]
+		},
+		{
+			"arabic": "الأيام طويلة بالصيف.",
+			"arabicTashkeel": "الأيّام طْويلة بالصّيف.",
+			"english": "The days are long in summer.",
+			"transliteration": "il-ayyaam tweela bis-seef.",
+			"wordAlignments": [
+				{
+					"arabic": "الأيام",
+					"english": "The days are",
+					"transliteration": "il-ayyaam"
+				},
+				{
+					"arabic": "طويلة",
+					"english": "long",
+					"transliteration": "tweela"
+				},
+				{
+					"arabic": "بالصيف.",
+					"english": "in summer.",
+					"transliteration": "bis-seef."
+				}
+			],
+			"targetWords": [
+				"Days"
+			]
+		},
+		{
+			"arabic": "البيت بيه بابين.",
+			"arabicTashkeel": "البيت بيه بابين.",
+			"english": "The house has two doors.",
+			"transliteration": "il-beet bee baabeen.",
+			"wordAlignments": [
+				{
+					"arabic": "البيت",
+					"english": "The house",
+					"transliteration": "il-beet"
+				},
+				{
+					"arabic": "بيه",
+					"english": "has",
+					"transliteration": "bee"
+				},
+				{
+					"arabic": "بابين.",
+					"english": "two doors.",
+					"transliteration": "baabeen."
+				}
+			],
+			"targetWords": [
+				"Doors"
+			]
+		},
+		{
+			"arabic": "الرجال والنسوان بالعرس.",
+			"arabicTashkeel": "الرْجال والنِّسوان بالعِرِس.",
+			"english": "The men and women are at the wedding.",
+			"transliteration": "ir-rjaal w-in-niswaan bil-3iris.",
+			"wordAlignments": [
+				{
+					"arabic": "الرجال",
+					"english": "The men",
+					"transliteration": "ir-rjaal"
+				},
+				{
+					"arabic": "والنسوان",
+					"english": "and the women are",
+					"transliteration": "w-in-niswaan"
+				},
+				{
+					"arabic": "بالعرس.",
+					"english": "at the wedding.",
+					"transliteration": "bil-3iris."
+				}
+			],
+			"targetWords": [
+				"Men",
+				"Women"
+			]
+		},
+		{
+			"arabic": "البيت بيه ست كراسي.",
+			"arabicTashkeel": "البيت بيه سِت كَراسي.",
+			"english": "The house has six chairs.",
+			"transliteration": "il-beet bee sitt karaasi.",
+			"wordAlignments": [
+				{
+					"arabic": "البيت",
+					"english": "The house",
+					"transliteration": "il-beet"
+				},
+				{
+					"arabic": "بيه",
+					"english": "has",
+					"transliteration": "bee"
+				},
+				{
+					"arabic": "ست",
+					"english": "six",
+					"transliteration": "sitt"
+				},
+				{
+					"arabic": "كراسي.",
+					"english": "chairs.",
+					"transliteration": "karaasi."
+				}
+			],
+			"targetWords": [
+				"Chairs"
+			]
+		},
+		{
+			"arabic": "الكتب فوق الميز.",
+			"arabicTashkeel": "الكُتُب فوق الميز.",
+			"english": "The books are on the table.",
+			"transliteration": "il-kutub foog il-meez.",
+			"wordAlignments": [
+				{
+					"arabic": "الكتب",
+					"english": "The books are",
+					"transliteration": "il-kutub"
+				},
+				{
+					"arabic": "فوق",
+					"english": "on",
+					"transliteration": "foog"
+				},
+				{
+					"arabic": "الميز.",
+					"english": "the table.",
+					"transliteration": "il-meez."
+				}
+			],
+			"targetWords": [
+				"Books"
+			]
+		},
+		{
+			"arabic": "هذولة البيوت غالية.",
+			"arabicTashkeel": "هَذولة البيوت غالية.",
+			"english": "These houses are expensive.",
+			"transliteration": "hathoola il-byoot ghaalya.",
+			"wordAlignments": [
+				{
+					"arabic": "هذولة",
+					"english": "These",
+					"transliteration": "hathoola"
+				},
+				{
+					"arabic": "البيوت",
+					"english": "houses are",
+					"transliteration": "il-byoot"
+				},
+				{
+					"arabic": "غالية.",
+					"english": "expensive.",
+					"transliteration": "ghaalya."
+				}
+			],
+			"targetWords": [
+				"Houses"
+			]
+		},
+		{
+			"arabic": "الولد تعبانين.",
+			"arabicTashkeel": "الوِلِد تَعبانين.",
+			"english": "The boys are tired.",
+			"transliteration": "il-wilid ta3baaneen.",
+			"wordAlignments": [
+				{
+					"arabic": "الولد",
+					"english": "The boys are",
+					"transliteration": "il-wilid"
+				},
+				{
+					"arabic": "تعبانين.",
+					"english": "tired.",
+					"transliteration": "ta3baaneen."
+				}
+			],
+			"targetWords": [
+				"Boys"
+			]
+		},
+		{
+			"arabic": "البنات شاطرات.",
+			"arabicTashkeel": "البَنات شاطرات.",
+			"english": "The girls are clever.",
+			"transliteration": "il-banaat shaatraat.",
+			"wordAlignments": [
+				{
+					"arabic": "البنات",
+					"english": "The girls are",
+					"transliteration": "il-banaat"
+				},
+				{
+					"arabic": "شاطرات.",
+					"english": "clever.",
+					"transliteration": "shaatraat."
+				}
+			],
+			"targetWords": [
+				"Girls"
+			]
+		},
+		{
+			"arabic": "السيارات قدام البيت.",
+			"arabicTashkeel": "السَّيّارات قِدّام البيت.",
+			"english": "The cars are in front of the house.",
+			"transliteration": "is-sayyaaraat giddaam il-beet.",
+			"wordAlignments": [
+				{
+					"arabic": "السيارات",
+					"english": "The cars are",
+					"transliteration": "is-sayyaaraat"
+				},
+				{
+					"arabic": "قدام",
+					"english": "in front of",
+					"transliteration": "giddaam"
+				},
+				{
+					"arabic": "البيت.",
+					"english": "the house.",
+					"transliteration": "il-beet."
+				}
+			],
+			"targetWords": [
+				"Cars"
+			]
+		},
+		{
+			"arabic": "هذولة الأقلام رخيصة.",
+			"arabicTashkeel": "هَذولة الأقلام رْخيصة.",
+			"english": "These pens are cheap.",
+			"transliteration": "hathoola il-aglaam rkheesa.",
+			"wordAlignments": [
+				{
+					"arabic": "هذولة",
+					"english": "These",
+					"transliteration": "hathoola"
+				},
+				{
+					"arabic": "الأقلام",
+					"english": "pens are",
+					"transliteration": "il-aglaam"
+				},
+				{
+					"arabic": "رخيصة.",
+					"english": "cheap.",
+					"transliteration": "rkheesa."
+				}
+			],
+			"targetWords": [
+				"Pens"
+			]
+		},
+		{
+			"arabic": "الطلاب يقرون.",
+			"arabicTashkeel": "الطُّلّاب يِقرون.",
+			"english": "The students are reading.",
+			"transliteration": "it-tullaab yigroon.",
+			"wordAlignments": [
+				{
+					"arabic": "الطلاب",
+					"english": "The students are",
+					"transliteration": "it-tullaab"
+				},
+				{
+					"arabic": "يقرون.",
+					"english": "reading.",
+					"transliteration": "yigroon."
+				}
+			],
+			"targetWords": [
+				"Students"
+			]
+		},
+		{
+			"arabic": "الغرف كبيرة.",
+			"arabicTashkeel": "الغُرَف كْبيرة.",
+			"english": "The rooms are big.",
+			"transliteration": "il-ghuraf chbeera.",
+			"wordAlignments": [
+				{
+					"arabic": "الغرف",
+					"english": "The rooms are",
+					"transliteration": "il-ghuraf"
+				},
+				{
+					"arabic": "كبيرة.",
+					"english": "big.",
+					"transliteration": "chbeera."
+				}
+			],
+			"targetWords": [
+				"Rooms"
+			]
+		},
+		{
+			"arabic": "طالع ويا ربعي.",
+			"arabicTashkeel": "طالِع ويّا رَبعي.",
+			"english": "I'm going out with my friends.",
+			"transliteration": "taali3 wiyya rab3i.",
+			"wordAlignments": [
+				{
+					"arabic": "طالع",
+					"english": "I'm going out",
+					"transliteration": "taali3"
+				},
+				{
+					"arabic": "ويا",
+					"english": "with",
+					"transliteration": "wiyya"
+				},
+				{
+					"arabic": "ربعي.",
+					"english": "my friends.",
+					"transliteration": "rab3i."
+				}
+			],
+			"targetWords": [
+				"Friends"
+			]
+		},
+		{
+			"arabic": "المدرسين بالمدرسة.",
+			"arabicTashkeel": "المُدَرِّسين بالمَدرَسة.",
+			"english": "The teachers are in the school.",
+			"transliteration": "il-mudarriseen bil-madrasa.",
+			"wordAlignments": [
+				{
+					"arabic": "المدرسين",
+					"english": "The teachers are",
+					"transliteration": "il-mudarriseen"
+				},
+				{
+					"arabic": "بالمدرسة.",
+					"english": "in the school.",
+					"transliteration": "bil-madrasa."
+				}
+			],
+			"targetWords": [
+				"Teachers"
+			]
+		},
+		{
+			"arabic": "قبل يومين.",
+			"arabicTashkeel": "قَبُل يومين.",
+			"english": "Two days ago.",
+			"transliteration": "gabul yoomeen.",
+			"wordAlignments": [
+				{
+					"arabic": "قبل",
+					"english": "Before",
+					"transliteration": "gabul"
+				},
+				{
+					"arabic": "يومين.",
+					"english": "two days.",
+					"transliteration": "yoomeen."
+				}
+			],
+			"targetWords": [
+				"Days"
+			]
+		},
+		{
+			"arabic": "أيام العطلة حلوة.",
+			"arabicTashkeel": "أيّام العُطلة حِلوة.",
+			"english": "The holiday days are nice.",
+			"transliteration": "ayyaam il-3utla 7ilwa.",
+			"wordAlignments": [
+				{
+					"arabic": "أيام",
+					"english": "The days of",
+					"transliteration": "ayyaam"
+				},
+				{
+					"arabic": "العطلة",
+					"english": "the holiday are",
+					"transliteration": "il-3utla"
+				},
+				{
+					"arabic": "حلوة.",
+					"english": "nice.",
+					"transliteration": "7ilwa."
+				}
+			],
+			"targetWords": [
+				"Days"
+			]
+		},
+		{
+			"arabic": "الأبواب بيض.",
+			"arabicTashkeel": "الأبواب بيض.",
+			"english": "The doors are white.",
+			"transliteration": "il-abwaab beedh.",
+			"wordAlignments": [
+				{
+					"arabic": "الأبواب",
+					"english": "The doors are",
+					"transliteration": "il-abwaab"
+				},
+				{
+					"arabic": "بيض.",
+					"english": "white.",
+					"transliteration": "beedh."
+				}
+			],
+			"targetWords": [
+				"Doors"
+			]
+		},
+		{
+			"arabic": "الرجال طوال.",
+			"arabicTashkeel": "الرْجال طْوال.",
+			"english": "The men are tall.",
+			"transliteration": "ir-rjaal twaal.",
+			"wordAlignments": [
+				{
+					"arabic": "الرجال",
+					"english": "The men are",
+					"transliteration": "ir-rjaal"
+				},
+				{
+					"arabic": "طوال.",
+					"english": "tall.",
+					"transliteration": "twaal."
+				}
+			],
+			"targetWords": [
+				"Men"
+			]
+		},
+		{
+			"arabic": "النسوان بالسوق.",
+			"arabicTashkeel": "النِّسوان بالسّوق.",
+			"english": "The women are at the market.",
+			"transliteration": "in-niswaan bis-soog.",
+			"wordAlignments": [
+				{
+					"arabic": "النسوان",
+					"english": "The women are",
+					"transliteration": "in-niswaan"
+				},
+				{
+					"arabic": "بالسوق.",
+					"english": "at the market.",
+					"transliteration": "bis-soog."
+				}
+			],
+			"targetWords": [
+				"Women"
+			]
+		},
+		{
+			"arabic": "جيبوا الكراسي.",
+			"arabicTashkeel": "جيبوا الكَراسي.",
+			"english": "Bring the chairs.",
+			"transliteration": "jeebu il-karaasi.",
+			"wordAlignments": [
+				{
+					"arabic": "جيبوا",
+					"english": "Bring",
+					"transliteration": "jeebu"
+				},
+				{
+					"arabic": "الكراسي.",
+					"english": "the chairs.",
+					"transliteration": "il-karaasi."
+				}
+			],
+			"targetWords": [
+				"Chairs"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "The Classroom",
+			"sentences": [
+				{
+					"arabic": "الصف بيه عشرين طالب.",
+					"arabicTashkeel": "الصَّف بيه عِشرين طالِب.",
+					"english": "The classroom has twenty students.",
+					"transliteration": "is-saff bee 3ishreen taalib.",
+					"wordAlignments": [
+						{
+							"arabic": "الصف",
+							"english": "The class",
+							"transliteration": "is-saff"
+						},
+						{
+							"arabic": "بيه",
+							"english": "has",
+							"transliteration": "bee"
+						},
+						{
+							"arabic": "عشرين",
+							"english": "twenty",
+							"transliteration": "3ishreen"
+						},
+						{
+							"arabic": "طالب.",
+							"english": "students.",
+							"transliteration": "taalib."
+						}
+					]
+				},
+				{
+					"arabic": "الولد والبنات قاعدين عالكراسي.",
+					"arabicTashkeel": "الوِلِد والبَنات قاعدين عالكَراسي.",
+					"english": "The boys and girls sit on the chairs.",
+					"transliteration": "il-wilid w-il-banaat gaa3deen 3al-karaasi.",
+					"wordAlignments": [
+						{
+							"arabic": "الولد",
+							"english": "The boys",
+							"transliteration": "il-wilid"
+						},
+						{
+							"arabic": "والبنات",
+							"english": "and the girls",
+							"transliteration": "w-il-banaat"
+						},
+						{
+							"arabic": "قاعدين",
+							"english": "are sitting",
+							"transliteration": "gaa3deen"
+						},
+						{
+							"arabic": "عالكراسي.",
+							"english": "on the chairs.",
+							"transliteration": "3al-karaasi."
+						}
+					]
+				},
+				{
+					"arabic": "الكتب والأقلام فوق الميزات.",
+					"arabicTashkeel": "الكُتُب والأقلام فوق الميزات.",
+					"english": "The books and pens are on the tables.",
+					"transliteration": "il-kutub w-il-aglaam foog il-meezaat.",
+					"wordAlignments": [
+						{
+							"arabic": "الكتب",
+							"english": "The books",
+							"transliteration": "il-kutub"
+						},
+						{
+							"arabic": "والأقلام",
+							"english": "and the pens are",
+							"transliteration": "w-il-aglaam"
+						},
+						{
+							"arabic": "فوق",
+							"english": "on",
+							"transliteration": "foog"
+						},
+						{
+							"arabic": "الميزات.",
+							"english": "the tables.",
+							"transliteration": "il-meezaat."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "At the Wedding",
+			"sentences": [
+				{
+					"arabic": "الرجال بالحديقة.",
+					"arabicTashkeel": "الرْجال بالحَديقة.",
+					"english": "The men are in the garden.",
+					"transliteration": "ir-rjaal bil-7adeega.",
+					"wordAlignments": [
+						{
+							"arabic": "الرجال",
+							"english": "The men are",
+							"transliteration": "ir-rjaal"
+						},
+						{
+							"arabic": "بالحديقة.",
+							"english": "in the garden.",
+							"transliteration": "bil-7adeega."
+						}
+					]
+				},
+				{
+					"arabic": "النسوان بالغرف الكبيرة.",
+					"arabicTashkeel": "النِّسوان بالغُرَف الكْبيرة.",
+					"english": "The women are in the big rooms.",
+					"transliteration": "in-niswaan bil-ghuraf il-chbeera.",
+					"wordAlignments": [
+						{
+							"arabic": "النسوان",
+							"english": "The women are",
+							"transliteration": "in-niswaan"
+						},
+						{
+							"arabic": "بالغرف",
+							"english": "in the rooms",
+							"transliteration": "bil-ghuraf"
+						},
+						{
+							"arabic": "الكبيرة.",
+							"english": "big.",
+							"transliteration": "il-chbeera."
+						}
+					]
+				},
+				{
+					"arabic": "ربعي كلهم هنا.",
+					"arabicTashkeel": "رَبعي كُلهُم هْنا.",
+					"english": "My friends are all here.",
+					"transliteration": "rab3i kullhum hnaa.",
+					"wordAlignments": [
+						{
+							"arabic": "ربعي",
+							"english": "My friends",
+							"transliteration": "rab3i"
+						},
+						{
+							"arabic": "كلهم",
+							"english": "all of them are",
+							"transliteration": "kullhum"
+						},
+						{
+							"arabic": "هنا.",
+							"english": "here.",
+							"transliteration": "hnaa."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is helping an Iraqi friend set up the house for a family party.",
+		"studentRole": "A friend helping out, learning Iraqi Arabic.",
+		"otherRole": "The Iraqi host, who keeps counting how many of everything they need.",
+		"goalEnglish": "Count chairs, rooms and guests, using singular and plural words (one chair, many chairs; one girl, four girls).",
+		"targetWords": [
+			"Chairs",
+			"Rooms",
+			"Men",
+			"Women",
+			"Boys",
+			"Girls",
+			"Friends",
+			"Days"
+		]
+	}
+}

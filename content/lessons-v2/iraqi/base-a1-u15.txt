@@ -1,0 +1,248 @@
+# Iraqi — A1 — Food and Drink (base-a1-u15)
+# Iraqi staples: تمن (timman, rice) with مرق (marag, stew); قيمر (geemar) with bread for breakfast.
+# Tea is written شاي but said "chaay" (standard letters, Iraqi pronunciation in transliteration).
+
+@vocab
+noun:m = Bread
+خُبُز / khubuz / Bread
+
+noun:m = Rice
+تِمَّن / timman / Rice
+
+noun:m = Stew
+مَرَق / marag / Stew
+
+noun:m = Meat
+لَحَم / la7am / Meat
+
+noun:m = Chicken
+دِجاج / dijaaj / Chicken
+
+noun:m = Fish
+سِمَك / simach / Fish
+
+noun:m = Tea
+شاي / chaay / Tea
+
+noun:m = Water
+ماي / maay / Water
+
+noun:m = Milk
+حَليب / 7aleeb / Milk
+
+noun = Fruit
+فَواكِه / fawaakih / Fruit
+
+noun:f = Vegetables
+خُضرة / khudhra / Vegetables
+
+noun:m = Eggs
+بيض / beedh / Eggs
+
+noun:m = Clotted cream
+قَيمَر / geemar / Clotted cream
+
+adjective = Hungry
+جوعان / joo3aan / Hungry
+
+adjective = Thirsty
+عَطشان / 3atshaan / Thirsty
+
+@pool
+I want bread. = Bread
+أريد / areed / I want | خُبُز. / khubuz. / bread.
+
+Rice with stew is delicious. = Rice; Stew
+التِّمَّن / it-timman / Rice | ويّا / wiyya / with | المَرَق / il-marag / stew is | طَيِّب. / tayyib. / delicious.
+
+I don't eat meat. = Meat
+ما / ma / not | آكُل / aakul / I eat | لَحَم. / la7am. / meat.
+
+Chicken with rice. = Chicken; Rice
+دِجاج / dijaaj / Chicken | ويّا / wiyya / with | تِمَّن. / timman. / rice.
+
+Masgouf is a grilled fish. = Fish
+المَسكوف / il-masgoof / Masgouf is | سِمَك / simach / a fish | مَشوي. / mashwi. / grilled.
+
+Do you want tea? = Tea
+تْريد / treed / Do you want | شاي؟ / chaay? / tea?
+
+I want cold water. = Water
+أريد / areed / I want | ماي / maay / water | بارِد. / baarid. / cold.
+
+Milk is in the fridge. = Milk
+الحَليب / il-7aleeb / Milk is | بالثَّلّاجة. / bith-thallaaja. / in the fridge.
+
+I like fruit. = Fruit
+أحِب / a7ibb / I like | الفَواكِه. / il-fawaakih. / fruit.
+
+The vegetables are fresh. = Vegetables
+الخُضرة / il-khudhra / The vegetables are | طازة. / taaza. / fresh.
+
+Eggs for breakfast. = Eggs
+بيض / beedh / Eggs | للرِّيوق. / lir-reyoog. / for breakfast.
+
+Clotted cream with bread is the best breakfast. = Clotted cream; Bread
+القَيمَر / il-geemar / Clotted cream | ويّا / wiyya / with | الخُبُز / il-khubuz / bread is | أحسَن / a7san / the best | رِيوق. / reyoog. / breakfast.
+
+I'm hungry. = Hungry
+آني / aani / I am | جوعان. / joo3aan. / hungry.
+
+I'm thirsty. = Thirsty
+آني / aani / I am | عَطشان. / 3atshaan. / thirsty.
+
+The bread is hot. = Bread
+الخُبُز / il-khubuz / The bread is | حار. / 7aarr. / hot.
+
+The rice is ready. = Rice
+التِّمَّن / it-timman / The rice is | جاهِز. / jaahiz. / ready.
+
+What stew is there today? = Stew
+شِنو / shinu / What | مَرَق / marag / stew is there | اليوم؟ / il-yoom? / today?
+
+How much is a kilo of meat? = Meat
+بيش / beesh / How much is | كيلو / keelo / a kilo of | اللَّحَم؟ / il-la7am? / meat?
+
+My mom cooks chicken. = Chicken
+أُمّي / ummi / My mom | تُطبُخ / tutbukh / cooks | دِجاج. / dijaaj. / chicken.
+
+Fish on Friday. = Fish
+سِمَك / simach / Fish | يوم / yoom / on | الجُمعة. / ij-jum3a. / Friday.
+
+Tea with sugar, please. = Tea
+شاي / chaay / Tea | بشَكَر / b-shakar / with sugar | رَجاءً. / rajaa2an. / please.
+
+Water, please. = Water
+ماي / maay / Water | رَجاءً. / rajaa2an. / please.
+
+Do you like milk? = Milk
+تْحِب / t7ibb / Do you like | الحَليب؟ / il-7aleeb? / milk?
+
+The fruit is cheap at the market. = Fruit
+الفَواكِه / il-fawaakih / Fruit is | رْخيصة / rkheesa / cheap | بالسّوق. / bis-soog. / at the market.
+
+I buy vegetables every day. = Vegetables
+أشتِري / ashtiri / I buy | خُضرة / khudhra / vegetables | كُل / kull / every | يوم. / yoom. / day.
+
+How many eggs do you want? = Eggs
+كَم / cham / How many | بيضة / beedha / eggs | تْريد؟ / treed? / do you want?
+
+Do you have clotted cream? = Clotted cream
+عِندَك / 3indak / Do you have | قَيمَر؟ / geemar? / clotted cream?
+
+Are you hungry? = Hungry
+إنتَ / inta / Are you | جوعان؟ / joo3aan? / hungry?
+
+Are you thirsty? Do you want water? = Thirsty; Water
+عَطشان؟ / 3atshaan? / Thirsty? | تْريد / treed / Do you want | ماي؟ / maay? / water?
+
+Bread, rice and stew. = Bread; Rice; Stew
+خُبُز / khubuz / Bread, | وتِمَّن / w-timman / and rice | ومَرَق. / w-marag. / and stew.
+
+Okra stew is my favourite. = Stew
+مَرَق / marag / The stew of | البامية / il-baamya / okra is | المُفَضَّل / il-mufadhdhal / the favourite | عِندي. / 3indi. / for me.
+
+The meat is delicious. = Meat
+اللَّحَم / il-la7am / The meat is | طَيِّب. / tayyib. / delicious.
+
+Chicken or meat? = Chicken; Meat
+دِجاج / dijaaj / Chicken | لو / law / or | لَحَم؟ / la7am? / meat?
+
+The fish is fresh. = Fish
+السِّمَك / is-simach / The fish is | طازة. / taaza. / fresh.
+
+After the food, tea. = Tea
+بَعد / ba3d / After | الأكِل، / il-akil, / the food, | شاي. / chaay. / tea.
+
+The water is cold. = Water
+الماي / il-maay / The water is | بارِد. / baarid. / cold.
+
+Milk with tea. = Milk; Tea
+حَليب / 7aleeb / Milk | ويّا / wiyya / with | شاي. / chaay. / tea.
+
+I eat fruit after lunch. = Fruit
+آكُل / aakul / I eat | فَواكِه / fawaakih / fruit | بَعد / ba3d / after | الغَدا. / il-ghada. / lunch.
+
+Vegetables are good for you. = Vegetables
+الخُضرة / il-khudhra / Vegetables are | زينة / zeena / good | إلَك. / ilak. / for you.
+
+I eat eggs in the morning. = Eggs
+آكُل / aakul / I eat | بيض / beedh / eggs | الصُّبُح. / is-subu7. / in the morning.
+
+Clotted cream with honey. = Clotted cream
+قَيمَر / geemar / Clotted cream | ويّا / wiyya / with | عَسَل. / 3asal. / honey.
+
+I'm very hungry! = Hungry
+آني / aani / I am | جوعان / joo3aan / hungry | هْوايَة! / hwaaya! / very!
+
+The kids are thirsty. = Thirsty
+الجْهال / ij-jhaal / The kids are | عَطشانين. / 3atshaaneen. / thirsty.
+
+Is the bread fresh? = Bread
+الخُبُز / il-khubuz / Is the bread | طازة؟ / taaza? / fresh?
+
+Rice with beans. = Rice
+تِمَّن / timman / Rice | ويّا / wiyya / with | فاصولية. / faasoolya. / beans.
+
+The stew is hot. = Stew
+المَرَق / il-marag / The stew is | حار. / 7aarr. / hot.
+
+Grilled meat. = Meat
+لَحَم / la7am / Meat | مَشوي. / mashwi. / grilled.
+
+The chicken is ready. = Chicken
+الدِّجاج / id-dijaaj / The chicken is | جاهِز. / jaahiz. / ready.
+
+Do you like fish? = Fish
+تْحِب / t7ibb / Do you like | السِّمَك؟ / is-simach? / fish?
+
+The tea is hot. = Tea
+الشاي / ich-chaay / The tea is | حار. / 7aarr. / hot.
+
+A glass of water. = Water
+إستِكان / istikaan / A glass of | ماي. / maay. / water.
+
+Hot milk in the morning. = Milk
+حَليب / 7aleeb / Milk | حار / 7aarr / hot | الصُّبُح. / is-subu7. / in the morning.
+
+Fruit and vegetables. = Fruit; Vegetables
+فَواكِه / fawaakih / Fruit | وخُضرة. / w-khudhra. / and vegetables.
+
+Two eggs, please. = Eggs
+بيضَتين / beedhteen / Two eggs | رَجاءً. / rajaa2an. / please.
+
+The clotted cream is fresh. = Clotted cream
+القَيمَر / il-geemar / The clotted cream is | طازة. / taaza. / fresh.
+
+Hungry? Come and eat. = Hungry
+جوعان؟ / joo3aan? / Hungry? | تَعال / ta3aal / Come | أُكُل. / ukul. / eat.
+
+I'm thirsty, I want tea. = Thirsty; Tea
+آني / aani / I am | عَطشان، / 3atshaan, / thirsty, | أريد / areed / I want | شاي. / chaay. / tea.
+
+@passage An Iraqi Breakfast
+In the morning we eat bread and clotted cream.
+الصُّبُح / is-subu7 / In the morning | ناكُل / naakul / we eat | خُبُز / khubuz / bread | وقَيمَر. / w-geemar. / and clotted cream.
+
+My dad eats eggs.
+أبويَه / abooya / My dad | ياكُل / yaakul / eats | بيض. / beedh. / eggs.
+
+And everyone drinks tea.
+والكُل / w-il-kull / And everyone | يِشرَب / yishrab / drinks | شاي. / chaay. / tea.
+
+@passage Lunch
+I'm hungry! What's for lunch?
+آني / aani / I am | جوعان! / joo3aan! / hungry! | شِنو / shinu / What is | الغَدا؟ / il-ghada? / lunch?
+
+Rice and okra stew, and chicken.
+تِمَّن / timman / Rice | ومَرَق / w-marag / and stew of | بامية، / baamya, / okra, | ودِجاج. / w-dijaaj. / and chicken.
+
+Delicious! And water, please.
+طَيِّب! / tayyib! / Delicious! | وماي / w-maay / And water | رَجاءً. / rajaa2an. / please.
+
+@scenario
+situation: The student is having lunch at a family restaurant in Baghdad and is ordering from the waiter.
+studentRole: A hungry customer learning Iraqi Arabic.
+otherRole: The waiter, who recommends rice with stew and masgouf.
+goalEnglish: Say you are hungry and thirsty, order rice, stew and a drink, and ask what fish or meat they have.
+targetWords: Hungry; Thirsty; Rice; Stew; Fish; Meat; Water; Tea
