@@ -9,6 +9,7 @@ import type { z } from 'zod';
 import { generateContentWithRetry, GeminiApiError } from '$lib/utils/gemini-api-retry';
 import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
 import { isGameDialect, type GameDialect } from '$lib/games/themes';
+import { getDialectSystemInstruction } from '$lib/data/dialect-rules-v2';
 import { GAME_LEVELS, type GameLevel } from '$lib/games/levels';
 
 export const LEVEL_GUIDE: Record<GameLevel, string> = {
@@ -35,6 +36,7 @@ export class NotEnoughItemsError extends Error {}
 const MIN_ITEMS = 3;
 
 export async function generateValidated<Parsed, Item>({
+	dialect,
 	prompt,
 	schema,
 	items,
@@ -43,6 +45,8 @@ export async function generateValidated<Parsed, Item>({
 	temperature = 0.9,
 	thinkingBudget = 0
 }: {
+	/** Sets the system instruction: how to write this dialect. */
+	dialect: GameDialect;
 	prompt: string;
 	schema: { zodSchema: z.ZodSchema<Parsed>; jsonSchema: unknown };
 	/** Pull the raw item list out of the parsed response. */
@@ -67,6 +71,7 @@ export async function generateValidated<Parsed, Item>({
 			model: 'gemini-2.5-flash',
 			contents: prompt,
 			config: {
+				systemInstruction: getDialectSystemInstruction(dialect),
 				temperature,
 				maxOutputTokens: 8192 + thinkingBudget,
 				thinkingConfig: { thinkingBudget },

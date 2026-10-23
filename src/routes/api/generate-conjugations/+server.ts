@@ -5,6 +5,7 @@ import { GoogleGenAI } from '@google/genai';
 import { generateContentWithRetry, GeminiApiError } from '$lib/utils/gemini-api-retry';
 import { createConjugationExerciseSchema } from '$lib/utils/gemini-schemas';
 import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
+import { getDialectSystemInstruction } from '$lib/data/dialect-rules-v2';
 
 type DialectKey = 'egyptian-arabic' | 'fusha' | 'levantine' | 'darija';
 
@@ -108,6 +109,7 @@ Return PURE JSON only. No markdown code blocks. No explanations.`;
 			model: 'gemini-2.5-flash',
 			contents: prompt,
 			config: {
+				systemInstruction: getDialectSystemInstruction(dialectKey),
 				responseMimeType: 'application/json',
 				responseJsonSchema: jsonSchema
 			}

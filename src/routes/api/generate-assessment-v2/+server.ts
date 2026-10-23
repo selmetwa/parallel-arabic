@@ -3,7 +3,7 @@ import type { RequestHandler } from './$types';
 import { GoogleGenAI } from '@google/genai';
 import { env } from '$env/dynamic/private';
 import { getCurriculumV2, hasV2Curriculum } from '$lib/data/curriculum-v2';
-import { getDialectName } from '$lib/data/dialect-rules-v2';
+import { getDialectName, getDialectSystemInstruction } from '$lib/data/dialect-rules-v2';
 import {
 	generatedLessonV2Schema,
 	createScenarioBriefSchema,
@@ -117,6 +117,7 @@ export const POST: RequestHandler = async ({ request }) => {
 Vocabulary to draw on: ${vocabList}
 Return JSON: { "situation", "studentRole", "otherRole", "goalEnglish", "targetWords" }. targetWords = english glosses (from the list) the student should use.`,
 				config: {
+					systemInstruction: getDialectSystemInstruction(dialect),
 					temperature: 0.7,
 					maxOutputTokens: 2048,
 					thinkingConfig: { thinkingBudget: 0 },

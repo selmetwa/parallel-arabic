@@ -14,6 +14,7 @@ import { uploadStoryToStorage } from '$lib/helpers/storage-helpers';
 import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
 import { createStorySchema, createSentenceSegmentationSchema } from '$lib/utils/gemini-schemas';
 import { invalidateStoryCaches } from '$lib/server/redis';
+import { getDialectSystemInstruction } from '$lib/data/dialect-rules-v2';
 
 interface GenerationData {
 	description: string;
@@ -340,7 +341,6 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 	const dialectConfigs = {
 		'egyptian-arabic': {
 			name: 'EGYPTIAN ARABIC',
-			description: 'Please only use words that are commonly used in the Egyptian dialect, not in modern standard Arabic or other dialects.',
 			culturalContext: `Settings: Cairo neighborhoods (Zamalek, Mohandeseen, Maadi, Downtown Cairo, Shubra, Heliopolis, Dokki), Alexandria corniche, local transport (tok tok, microbus, metro, yellow taxi), markets (Khan el-Khalili, Ataba, Wekalet el-Balah), institutions (ahwa/coffeehouse, pharmacy, government office, bank, hospital).
 Currency: Egyptian pounds (جنيه) — use realistic prices (e.g., a cup of tea is 5-10 pounds, taxi ride is 30-80 pounds).
 Food & drink: ful, ta3meya, koshari, feteer, hawawshi, ahwa mazboot/sada/ziyada, karkade, 7Up (classic Egyptian order).
@@ -354,7 +354,6 @@ Dialect flavor words: يعني، خالص، أيوه، معلش، يلا، ما�
 		},
 		'fusha': {
 			name: 'MODERN STANDARD ARABIC (FUSHA)',
-			description: 'Please use formal Modern Standard Arabic as used in news, literature, and official communications. Avoid colloquial expressions.',
 			culturalContext: `Settings: news studios, universities, conference rooms, official offices, schools, courtrooms, newspapers, international organizations.
 Register: formal written Arabic — use complete verb conjugations, proper case endings where natural, classical connectors (حيث، إذ، بينما، غير أن).
 Character archetypes: journalist, professor, student, government official, diplomat, author, judge, teacher.
@@ -364,7 +363,6 @@ Flavor: include rhetorical questions, formal transitions, and varied sentence le
 		},
 		'darija': {
 			name: 'MOROCCAN DARIJA',
-			description: 'Please use Moroccan Darija dialect as spoken in Morocco. Use natural conversational Moroccan Arabic expressions and vocabulary.',
 			culturalContext: `Settings: Casablanca neighborhoods (Maarif, Hay Hassani), Marrakech medina and Jemaa el-Fna, Rabat, Fes medina, local hammam, souk, train station (ONCF), café maure.
 Currency: Moroccan dirhams (درهم) — use realistic prices (e.g., mint tea is 5-10 dirhams, taxi is 10-20 dirhams).
 Food & drink: atay (mint tea), msemen, harira, couscous (especially Friday), briouats, sellou, mahia.
@@ -491,7 +489,7 @@ Dialect flavor: mix of Arabic, Berber, and French loanwords — e.g., الطوم
 
     CRITICAL REQUIREMENT: You MUST generate exactly ${sentenceCount} sentences. This is non-negotiable. Count your sentences and ensure you have exactly ${sentenceCount}.
 
-    Please write a ${contentType} based on "${description}" in ${config.name}. ${config.description}
+    Please write a ${contentType} based on "${description}" in ${config.name}.
 
     OPENING APPROACH: ${randomOpeningVariant}
 
@@ -616,6 +614,7 @@ Dialect flavor: mix of Arabic, Berber, and French loanwords — e.g., الطوم
 			model: 'gemini-2.5-flash',
 			contents: question,
 			config: {
+				systemInstruction: getDialectSystemInstruction(dialect),
 				temperature: 0.8,
 				maxOutputTokens: 32768, // High cap so schema-enforced JSON isn't truncated on long stories
 				responseMimeType: 'application/json',

@@ -5,6 +5,7 @@ import { env } from '$env/dynamic/private';
 import { createSelfStudySchema } from '$lib/schemas/self-study-schema';
 import { generateContentWithRetry } from '$lib/utils/gemini-api-retry';
 import { supabase } from '$lib/supabaseClient';
+import { getDialectSystemInstruction } from '$lib/data/dialect-rules-v2';
 
 // Extract the outermost JSON object from the response, regardless of
 // markdown wrappers or trailing content after the closing brace.
@@ -153,6 +154,7 @@ ${schemaString}`;
         const response = await generateContentWithRetry(ai, {
             model: 'gemini-2.5-flash',
             contents: prompt,
+            config: { systemInstruction: getDialectSystemInstruction(dialect) },
             // @ts-expect-error - generationConfig valid but types may be outdated
             generationConfig: {
                 temperature: 0.7,

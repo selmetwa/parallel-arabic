@@ -6,6 +6,7 @@ import { type Dialect } from '$lib/types/index';
 import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
 import { createScenarioVocabSchema } from '$lib/utils/gemini-schemas';
 import { generateContentWithRetry, GeminiApiError } from '$lib/utils/gemini-api-retry';
+import { getDialectSystemInstruction } from '$lib/data/dialect-rules-v2';
 
 type ScenarioLine = {
   speaker: 'student' | 'other';
@@ -88,6 +89,7 @@ Respond as JSON with this exact shape:
       model: 'gemini-2.5-flash',
       contents: prompt,
       config: {
+        systemInstruction: getDialectSystemInstruction(dialect),
         temperature: 0.6,
         maxOutputTokens: 4096,
         // Disable thinking — gemini-2.5-flash's thinking tokens count against

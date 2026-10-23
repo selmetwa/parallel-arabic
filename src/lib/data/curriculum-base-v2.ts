@@ -7,7 +7,7 @@
  * authored per dialect rather than shared.
  *
  * Titles and descriptions here are region-neutral; the actual dialect-specific
- * vocabulary/sentences are produced at generation time from `getDialectRules`.
+ * vocabulary/sentences are produced at generation time from `getDialectSystemInstruction`.
  * Egyptian keeps its own bespoke `curriculum-egyptian-v2.ts` (full A1–C2).
  *
  * To give a dialect the A1–B2 path, register it in `curriculum-v2.ts`:

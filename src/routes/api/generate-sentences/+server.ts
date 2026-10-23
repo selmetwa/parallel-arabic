@@ -8,6 +8,7 @@ import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
 import { createSentencesSchema } from '$lib/utils/gemini-schemas';
 import { generateContentWithRetry, GeminiApiError } from '$lib/utils/gemini-api-retry';
 import { addTashkeelToSentences } from '$lib/utils/add-tashkeel';
+import { getDialectSystemInstruction } from "$lib/data/dialect-rules-v2";
 
 // Function to clean unwanted characters from text
 function cleanText(text: string, type: 'arabic' | 'english' | 'transliteration'): string {
@@ -90,42 +91,36 @@ export const POST: RequestHandler = async ({ request }) => {
   const dialectConfigs = {
     'egyptian-arabic': {
       name: 'EGYPTIAN',
-      description: 'Please make sure that the arabic provided is in the EGYPTIAN dialect. Please only use words that are commonly used in the Egyptian dialect, not in modern standard Arabic or other dialects.',
       wordList: commonWords,
       commonWordsInstruction: 'Here are 3000 of the most common words in Egyptian Arabic, please use these words in your sentences:',
       wordListInstruction: 'please only use the words in the common words list.'
     },
     'fusha': {
       name: 'MODERN STANDARD ARABIC (FUSHA)',
-      description: 'Please make sure that the arabic provided is in MODERN STANDARD ARABIC (FUSHA). Use formal Arabic as used in news, literature, and official communications. Avoid colloquial expressions.',
       wordList: [], // No specific word list for Fusha yet
       commonWordsInstruction: '',
       wordListInstruction: 'Please use formal Modern Standard Arabic vocabulary appropriate for news and literature.'
     },
     'levantine': {
       name: 'LEVANTINE ARABIC',
-      description: 'Please make sure that the arabic provided is in the LEVANTINE dialect as spoken in Syria, Lebanon, Palestine, and Jordan. Use natural conversational Levantine expressions.',
       wordList: [], // No specific word list for Levantine yet
       commonWordsInstruction: '',
       wordListInstruction: 'Please use vocabulary common in Levantine Arabic conversations.'
     },
     'darija': {
       name: 'MOROCCAN DARIJA',
-      description: 'Please make sure that the arabic provided is in MOROCCAN DARIJA as spoken in Morocco. Use natural conversational Moroccan Arabic expressions and vocabulary.',
       wordList: [], // No specific word list for Darija yet
       commonWordsInstruction: '',
       wordListInstruction: 'Please use vocabulary common in Moroccan Darija conversations.'
     },
     'iraqi': {
       name: 'IRAQI ARABIC',
-      description: 'Please make sure that the arabic provided is in the IRAQI dialect as spoken in Iraq. Use natural conversational Iraqi expressions and vocabulary.',
       wordList: [], // No specific word list for Iraqi yet
       commonWordsInstruction: '',
       wordListInstruction: 'Please use vocabulary common in Iraqi Arabic conversations.'
     },
     'khaleeji': {
       name: 'KHALEEJI ARABIC',
-      description: 'Please make sure that the arabic provided is in the KHALEEJI dialect as spoken in the Gulf states (UAE, Saudi Arabia, Kuwait, Bahrain, Qatar, Oman). Use natural conversational Gulf Arabic expressions and vocabulary.',
       wordList: [], // No specific word list for Khaleeji yet
       commonWordsInstruction: '',
       wordListInstruction: 'Please use vocabulary common in Khaleeji Arabic conversations.'
@@ -276,7 +271,6 @@ export const POST: RequestHandler = async ({ request }) => {
 
     Can you also provide the transliteration for each sentence.
 
-    ${config.description}
 
     Can you make sure that there are no diacratics in the arabic sentences. Nothing like [أَ إِ آ] please. (THIS is very important)
 
@@ -336,6 +330,7 @@ IMPORTANT:
       model: "gemini-2.5-flash",
       contents: enhancedQuestion,
       config: {
+        systemInstruction: getDialectSystemInstruction(dialect),
         temperature: 0.9,
         topP: 0.95,
         maxOutputTokens: 8192, // Increase token limit to prevent truncation

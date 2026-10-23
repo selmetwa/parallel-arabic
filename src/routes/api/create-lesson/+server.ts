@@ -11,6 +11,7 @@ import { uploadLessonToStorage } from '$lib/helpers/storage-helpers';
 import { invalidateLessonCaches } from '$lib/server/redis';
 import fs from 'fs';
 import path from 'path';
+import { getDialectSystemInstruction } from '$lib/data/dialect-rules-v2';
 
 interface LessonGenerationData {
 	topic: string;
@@ -220,19 +221,15 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 	const dialectConfigs = {
 		'egyptian-arabic': {
 			name: 'EGYPTIAN ARABIC',
-			description: 'Please only use words that are commonly used in the Egyptian dialect, not in modern standard Arabic or other dialects.',
 		},
 		'fusha': {
 			name: 'MODERN STANDARD ARABIC (FUSHA)',
-			description: 'Please use formal Modern Standard Arabic as used in news, literature, and official communications. Avoid colloquial expressions.',
 		},
 		'levantine': {
 			name: 'LEVANTINE ARABIC',
-			description: 'Please use Levantine Arabic dialect as spoken in Syria, Lebanon, Palestine, and Jordan. Use natural conversational Levantine expressions.',
 		},
 		'darija': {
 			name: 'MOROCCAN DARIJA',
-			description: 'Please use Moroccan Darija dialect as spoken in Morocco. Use natural conversational Moroccan Arabic expressions and vocabulary.',
 		},
 	} as const;
 
@@ -362,7 +359,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 	CRITICAL REQUIREMENTS:
 	- Generate a complete lesson with exactly ${totalSteps} steps (approximately ${totalContentSteps} content steps, ${totalPracticeSentences} practice sentences, and ${totalExercises} exercises)
 	- The lesson follows a STEP-BY-STEP format where users progress through one step at a time
-	- All content must be in ${config.name}: ${config.description}
+	- All content must be in ${config.name}.
 	
 	LESSON TOPIC: ${topic || 'General Arabic language learning'}
 	
@@ -503,6 +500,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
 			model: 'gemini-2.5-flash',
 			contents: question,
 			config: {
+				systemInstruction: getDialectSystemInstruction(dialect),
 				temperature: 0.9,
 				maxOutputTokens: 32768, // Higher token limit for comprehensive lessons
 				responseMimeType: 'application/json',

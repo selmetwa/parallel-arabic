@@ -6,12 +6,13 @@ import { type Dialect } from '$lib/types/index';
 import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
 import { createTranslationWithAlignmentsSchema } from '$lib/utils/gemini-schemas';
 import { generateContentWithRetry, GeminiApiError } from '$lib/utils/gemini-api-retry';
-import { 
-  buildLearnerContext, 
+import {
+  buildLearnerContext,
   formatLearnerContextForPrompt,
   getOrCreateConversation,
   saveMessage
 } from '$lib/utils/tutor-memory';
+import { getDialectSystemInstruction } from "$lib/data/dialect-rules-v2";
 
 type ChatMessage = {
   role: 'user' | 'assistant';
@@ -190,6 +191,7 @@ IMPORTANT: wordAlignments must have one entry per Arabic word in your response, 
       model: "gemini-2.5-flash",
       contents: fullPrompt,
       config: {
+        systemInstruction: getDialectSystemInstruction(dialect),
         temperature: 0.8, // Slightly higher for more natural conversation
         maxOutputTokens: 4096,
         topP: 0.9,

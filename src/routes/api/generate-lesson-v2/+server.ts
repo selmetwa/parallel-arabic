@@ -3,7 +3,7 @@ import type { RequestHandler } from './$types';
 import { GoogleGenAI } from '@google/genai';
 import { env } from '$env/dynamic/private';
 import { findV2Topic, hasV2Curriculum } from '$lib/data/curriculum-v2';
-import { getDialectRules, getDialectName } from '$lib/data/dialect-rules-v2';
+import { getDialectName, getDialectSystemInstruction, getLessonFormatRules } from '$lib/data/dialect-rules-v2';
 import {
 	createLessonVocabSchema,
 	createPracticePoolSchema,
@@ -42,6 +42,7 @@ function buildAi() {
 
 async function callGemini<T>(
 	ai: GoogleGenAI,
+	systemInstruction: string,
 	prompt: string,
 	zodSchema: ZodType<T>,
 	jsonSchema: object,
@@ -51,6 +52,7 @@ async function callGemini<T>(
 		model: MODEL,
 		contents: prompt,
 		config: {
+			systemInstruction,
 			temperature: 0.7,
 			maxOutputTokens,
 			topP: 0.9,
@@ -82,7 +84,8 @@ export const POST: RequestHandler = async ({ request }) => {
 		return json({ error: `Unknown topicId: ${topicId}` }, { status: 400 });
 	}
 	const { module, topic } = found;
-	const rules = getDialectRules(dialect);
+	const rules = getLessonFormatRules();
+	const system = getDialectSystemInstruction(dialect);
 	const dialectName = getDialectName(dialect);
 
 	let ai: GoogleGenAI;
@@ -105,6 +108,7 @@ ${module.objectives.map((o) => `- ${o}`).join('\n')}
 		const vocabSchema = createLessonVocabSchema();
 		const vocabResp = await callGemini(
 			ai,
+			system,
 			`${rules}
 
 You are a professional ${dialectName} curriculum designer.
@@ -139,6 +143,7 @@ Return JSON: { "vocab": [ ... ] }`,
 
 			const batch = await callGemini(
 				ai,
+				system,
 				`${rules}
 
 You are writing practice sentences for a ${dialectName} lesson on "${topic.title}" (${module.level}).
@@ -185,6 +190,7 @@ Return JSON: { "sentences": [ ... ] }`,
 			try {
 				const passage = await callGemini(
 					ai,
+					system,
 					`${rules}
 
 Write a reading-comprehension passage for a ${dialectName} lesson on "${topic.title}" (${module.level}).
@@ -210,6 +216,7 @@ Return JSON: { "title": "...", "sentences": [ ... ] }`,
 		try {
 			scenario = await callGemini(
 				ai,
+				system,
 				`You are designing a short roleplay for a ${dialectName} lesson on "${topic.title}" (${module.level}).
 Lesson vocabulary the student should use:
 ${vocabList}

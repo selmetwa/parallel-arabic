@@ -8,6 +8,7 @@ import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
 import { createSentencesSchema } from '$lib/utils/gemini-schemas';
 import { generateContentWithRetry, GeminiApiError } from '$lib/utils/gemini-api-retry';
 import { addTashkeelToSentences } from '$lib/utils/add-tashkeel';
+import { getDialectSystemInstruction } from "$lib/data/dialect-rules-v2";
 
 
 // Function to clean unwanted characters from text
@@ -91,7 +92,6 @@ export const POST: RequestHandler = async ({ request }) => {
   const dialectConfigs = {
     'egyptian-arabic': {
       name: 'EGYPTIAN',
-      description: 'Please make sure that the arabic provided is in the EGYPTIAN dialect. Please only use words that are commonly used in the Egyptian dialect, not in modern standard Arabic or other dialects.',
       wordList: commonWords,
       commonWordsInstruction: 'Here are 3000 of the most common words in Egyptian Arabic, please use these words in your sentences:',
       wordListInstruction: 'please only use the words in the common words list.'
@@ -242,7 +242,6 @@ export const POST: RequestHandler = async ({ request }) => {
 
     Can you also provide the transliteration for each sentence.
 
-    ${config.description}
 
     Can you make sure that there are no diacratics in the arabic sentences. Nothing like [أَ إِ آ] please. (THIS is very important)
 
@@ -290,6 +289,7 @@ export const POST: RequestHandler = async ({ request }) => {
       model: "gemini-2.5-flash",
       contents: question,
       config: {
+        systemInstruction: getDialectSystemInstruction(dialect),
         temperature: 0.9,
         topP: 0.95,
         maxOutputTokens: 8192, // Increase token limit to prevent truncation

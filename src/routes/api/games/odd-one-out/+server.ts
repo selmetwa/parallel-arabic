@@ -21,6 +21,7 @@ export const POST: RequestHandler = async (event) => {
 
 	try {
 		const items = await generateValidated({
+			dialect,
 			prompt: oddOneOutPrompt(dialect, level),
 			schema: createOddOneOutSchema(),
 			items: (parsed) => parsed.puzzles,

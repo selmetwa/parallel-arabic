@@ -20,6 +20,7 @@ export const POST: RequestHandler = async (event) => {
 
 	try {
 		const items = await generateValidated({
+			dialect,
 			prompt: spotTheMistakePrompt(dialect, level),
 			schema: createSpotTheMistakeSchema(),
 			items: (parsed) => parsed.items,

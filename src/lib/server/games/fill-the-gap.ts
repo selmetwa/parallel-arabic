@@ -1,4 +1,4 @@
-import { getDialectName, getDialectStyle } from '$lib/data/dialect-rules-v2';
+import { getDialectName } from '$lib/data/dialect-rules-v2';
 import { normalizeArabicText } from '$lib/utils/arabic-normalization';
 import { shuffle } from '$lib/games/shuffle';
 import type { GapItem } from '$lib/games/fill-the-gap';
@@ -18,8 +18,6 @@ Build the items around these words the learner has saved, one word per item, usi
 `
 		: '';
 	return `You are writing a "fill the gap" vocabulary game for learners of ${name}, pitched at ${LEVEL_GUIDE[level]}.
-
-${getDialectStyle(dialect)}
 ${saved}
 Write 12 items. Each is a natural everyday sentence in ${name} with one word that will be blanked out, plus three wrong choices for the blank.
 

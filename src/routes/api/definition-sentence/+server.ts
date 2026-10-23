@@ -4,6 +4,7 @@ import { env } from '$env/dynamic/private';
 import { GoogleGenAI } from "@google/genai";
 import { generateContentWithRetry } from '$lib/utils/gemini-api-retry';
 import { createWordDefinitionSchema } from '$lib/utils/gemini-schemas';
+import { getDialectSystemInstruction } from "$lib/data/dialect-rules-v2";
 
 const dialectNames: Record<string, string> = {
   fusha: 'Modern Standard Arabic',
@@ -147,6 +148,7 @@ MAKE SURE THAT THE RESPONSE IS JSON FORMAT USING THE FOLOWING STRUCTURE
       model: "gemini-2.5-flash",
       contents: enhancedQuestion,
       config: {
+        ...(typeof data.dialect === 'string' && { systemInstruction: getDialectSystemInstruction(data.dialect) }),
         responseMimeType: 'application/json',
         responseJsonSchema: jsonSchema
       }

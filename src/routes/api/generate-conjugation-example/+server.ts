@@ -6,6 +6,7 @@ import { generateContentWithRetry, GeminiApiError } from '$lib/utils/gemini-api-
 import { textWithTranslationSchema } from '$lib/utils/gemini-schemas';
 import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
 import { zodToJsonSchema } from 'zod-to-json-schema';
+import { getDialectSystemInstruction } from '$lib/data/dialect-rules-v2';
 
 const DIALECT_NAMES: Record<string, string> = {
 	'egyptian-arabic': 'Egyptian Arabic (colloquial, not MSA)',
@@ -50,6 +51,7 @@ Return PURE JSON only. No markdown code blocks. No explanations.`;
 			model: 'gemini-2.5-flash',
 			contents: prompt,
 			config: {
+				systemInstruction: getDialectSystemInstruction(dialect),
 				responseMimeType: 'application/json',
 				responseJsonSchema: jsonSchema
 			}
