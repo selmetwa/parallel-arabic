@@ -1,0 +1,2041 @@
+{
+	"vocab": [
+		{
+			"arabic": "إقتصاد",
+			"arabicTashkeel": "إقتِصاد",
+			"english": "Economy",
+			"transliteration": "iqtisaad",
+			"wordAlignments": [
+				{
+					"arabic": "إقتصاد",
+					"english": "Economy",
+					"transliteration": "iqtisaad"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "بورصة",
+			"arabicTashkeel": "بورصة",
+			"english": "Stock exchange",
+			"transliteration": "boorsa",
+			"wordAlignments": [
+				{
+					"arabic": "بورصة",
+					"english": "Stock exchange",
+					"transliteration": "boorsa"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "أسهم",
+			"arabicTashkeel": "أسهُم",
+			"english": "Shares",
+			"transliteration": "ashum",
+			"wordAlignments": [
+				{
+					"arabic": "أسهم",
+					"english": "Shares",
+					"transliteration": "ashum"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "سعر الصرف",
+			"arabicTashkeel": "سِعِر الصَّرف",
+			"english": "Exchange rate",
+			"transliteration": "si3ir is-sarf",
+			"wordAlignments": [
+				{
+					"arabic": "سعر",
+					"english": "Price of",
+					"transliteration": "si3ir"
+				},
+				{
+					"arabic": "الصرف",
+					"english": "exchange",
+					"transliteration": "is-sarf"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "دولار",
+			"arabicTashkeel": "دولار",
+			"english": "Dollar",
+			"transliteration": "doolaar",
+			"wordAlignments": [
+				{
+					"arabic": "دولار",
+					"english": "Dollar",
+					"transliteration": "doolaar"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "عملة",
+			"arabicTashkeel": "عُملة",
+			"english": "Currency",
+			"transliteration": "3umla",
+			"wordAlignments": [
+				{
+					"arabic": "عملة",
+					"english": "Currency",
+					"transliteration": "3umla"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "تضخم",
+			"arabicTashkeel": "تَضَخُّم",
+			"english": "Inflation",
+			"transliteration": "tadhakhkhum",
+			"wordAlignments": [
+				{
+					"arabic": "تضخم",
+					"english": "Inflation",
+					"transliteration": "tadhakhkhum"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "غلاء",
+			"arabicTashkeel": "غَلاء",
+			"english": "Rising prices",
+			"transliteration": "ghalaa2",
+			"wordAlignments": [
+				{
+					"arabic": "غلاء",
+					"english": "Expensiveness",
+					"transliteration": "ghalaa2"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "إستثمار",
+			"arabicTashkeel": "إستِثمار",
+			"english": "Investment",
+			"transliteration": "istithmaar",
+			"wordAlignments": [
+				{
+					"arabic": "إستثمار",
+					"english": "Investment",
+					"transliteration": "istithmaar"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "قرض",
+			"arabicTashkeel": "قَرِض",
+			"english": "Loan",
+			"transliteration": "garidh",
+			"wordAlignments": [
+				{
+					"arabic": "قرض",
+					"english": "Loan",
+					"transliteration": "garidh"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "توفير",
+			"arabicTashkeel": "توفير",
+			"english": "Savings",
+			"transliteration": "tawfeer",
+			"wordAlignments": [
+				{
+					"arabic": "توفير",
+					"english": "Saving",
+					"transliteration": "tawfeer"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "ميزانية",
+			"arabicTashkeel": "ميزانية",
+			"english": "Budget",
+			"transliteration": "meezaaniyya",
+			"wordAlignments": [
+				{
+					"arabic": "ميزانية",
+					"english": "Budget",
+					"transliteration": "meezaaniyya"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "بطالة",
+			"arabicTashkeel": "بِطالة",
+			"english": "Unemployment",
+			"transliteration": "bitaala",
+			"wordAlignments": [
+				{
+					"arabic": "بطالة",
+					"english": "Unemployment",
+					"transliteration": "bitaala"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "دين",
+			"arabicTashkeel": "دين",
+			"english": "Debt",
+			"transliteration": "deen",
+			"wordAlignments": [
+				{
+					"arabic": "دين",
+					"english": "Debt",
+					"transliteration": "deen"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "تجارة",
+			"arabicTashkeel": "تِجارة",
+			"english": "Trade",
+			"transliteration": "tijaara",
+			"wordAlignments": [
+				{
+					"arabic": "تجارة",
+					"english": "Trade",
+					"transliteration": "tijaara"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "إقتصاد العراق يعتمد عالنفط.",
+			"arabicTashkeel": "إقتِصاد العِراق يِعتِمِد عالنَّفُط.",
+			"english": "Iraq's economy depends on oil.",
+			"transliteration": "iqtisaad il-3iraaq yi3timid 3an-nafut.",
+			"wordAlignments": [
+				{
+					"arabic": "إقتصاد",
+					"english": "The economy of",
+					"transliteration": "iqtisaad"
+				},
+				{
+					"arabic": "العراق",
+					"english": "Iraq",
+					"transliteration": "il-3iraaq"
+				},
+				{
+					"arabic": "يعتمد",
+					"english": "depends",
+					"transliteration": "yi3timid"
+				},
+				{
+					"arabic": "عالنفط.",
+					"english": "on oil.",
+					"transliteration": "3an-nafut."
+				}
+			],
+			"targetWords": [
+				"Economy"
+			]
+		},
+		{
+			"arabic": "البورصة العراقية زغيرة.",
+			"arabicTashkeel": "البورصة العِراقية زْغَيّرة.",
+			"english": "The Iraqi stock exchange is small.",
+			"transliteration": "il-boorsa il-3iraaqiyya zghayyra.",
+			"wordAlignments": [
+				{
+					"arabic": "البورصة",
+					"english": "The stock exchange",
+					"transliteration": "il-boorsa"
+				},
+				{
+					"arabic": "العراقية",
+					"english": "Iraqi is",
+					"transliteration": "il-3iraaqiyya"
+				},
+				{
+					"arabic": "زغيرة.",
+					"english": "small.",
+					"transliteration": "zghayyra."
+				}
+			],
+			"targetWords": [
+				"Stock exchange"
+			]
+		},
+		{
+			"arabic": "إشترى أسهم ببنك.",
+			"arabicTashkeel": "إشتِرى أسهُم ببَنك.",
+			"english": "He bought shares in a bank.",
+			"transliteration": "ishtira ashum b-bank.",
+			"wordAlignments": [
+				{
+					"arabic": "إشترى",
+					"english": "He bought",
+					"transliteration": "ishtira"
+				},
+				{
+					"arabic": "أسهم",
+					"english": "shares",
+					"transliteration": "ashum"
+				},
+				{
+					"arabic": "ببنك.",
+					"english": "in a bank.",
+					"transliteration": "b-bank."
+				}
+			],
+			"targetWords": [
+				"Shares"
+			]
+		},
+		{
+			"arabic": "شكد سعر الصرف اليوم؟",
+			"arabicTashkeel": "شْكَد سِعِر الصَّرف اليوم؟",
+			"english": "What is today's exchange rate?",
+			"transliteration": "shgadd si3ir is-sarf il-yoom?",
+			"wordAlignments": [
+				{
+					"arabic": "شكد",
+					"english": "How much is",
+					"transliteration": "shgadd"
+				},
+				{
+					"arabic": "سعر",
+					"english": "the price of",
+					"transliteration": "si3ir"
+				},
+				{
+					"arabic": "الصرف",
+					"english": "exchange",
+					"transliteration": "is-sarf"
+				},
+				{
+					"arabic": "اليوم؟",
+					"english": "today?",
+					"transliteration": "il-yoom?"
+				}
+			],
+			"targetWords": [
+				"Exchange rate"
+			]
+		},
+		{
+			"arabic": "الدولار بكم دينار؟",
+			"arabicTashkeel": "الدّولار بكَم دينار؟",
+			"english": "How many dinars is the dollar?",
+			"transliteration": "id-doolaar b-cham deenaar?",
+			"wordAlignments": [
+				{
+					"arabic": "الدولار",
+					"english": "The dollar",
+					"transliteration": "id-doolaar"
+				},
+				{
+					"arabic": "بكم",
+					"english": "for how many",
+					"transliteration": "b-cham"
+				},
+				{
+					"arabic": "دينار؟",
+					"english": "dinars?",
+					"transliteration": "deenaar?"
+				}
+			],
+			"targetWords": [
+				"Dollar"
+			]
+		},
+		{
+			"arabic": "الدينار العراقي العملة الوطنية.",
+			"arabicTashkeel": "الدّينار العِراقي العُملة الوَطَنية.",
+			"english": "The Iraqi dinar is the national currency.",
+			"transliteration": "id-deenaar il-3iraaqi il-3umla il-wataniyya.",
+			"wordAlignments": [
+				{
+					"arabic": "الدينار",
+					"english": "The dinar",
+					"transliteration": "id-deenaar"
+				},
+				{
+					"arabic": "العراقي",
+					"english": "Iraqi is",
+					"transliteration": "il-3iraaqi"
+				},
+				{
+					"arabic": "العملة",
+					"english": "the currency",
+					"transliteration": "il-3umla"
+				},
+				{
+					"arabic": "الوطنية.",
+					"english": "national.",
+					"transliteration": "il-wataniyya."
+				}
+			],
+			"targetWords": [
+				"Currency"
+			]
+		},
+		{
+			"arabic": "التضخم يقلل قيمة الفلوس.",
+			"arabicTashkeel": "التَّضَخُّم يْقَلِّل قيمة الفْلوس.",
+			"english": "Inflation reduces the value of money.",
+			"transliteration": "it-tadhakhkhum ygallil geemat il-floos.",
+			"wordAlignments": [
+				{
+					"arabic": "التضخم",
+					"english": "Inflation",
+					"transliteration": "it-tadhakhkhum"
+				},
+				{
+					"arabic": "يقلل",
+					"english": "reduces",
+					"transliteration": "ygallil"
+				},
+				{
+					"arabic": "قيمة",
+					"english": "the value of",
+					"transliteration": "geemat"
+				},
+				{
+					"arabic": "الفلوس.",
+					"english": "money.",
+					"transliteration": "il-floos."
+				}
+			],
+			"targetWords": [
+				"Inflation"
+			]
+		},
+		{
+			"arabic": "الناس تشتكي من الغلاء.",
+			"arabicTashkeel": "النّاس تِشتِكي مِن الغَلاء.",
+			"english": "People complain about rising prices.",
+			"transliteration": "in-naas tishtiki min il-ghalaa2.",
+			"wordAlignments": [
+				{
+					"arabic": "الناس",
+					"english": "People",
+					"transliteration": "in-naas"
+				},
+				{
+					"arabic": "تشتكي",
+					"english": "complain",
+					"transliteration": "tishtiki"
+				},
+				{
+					"arabic": "من",
+					"english": "about",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الغلاء.",
+					"english": "the rising prices.",
+					"transliteration": "il-ghalaa2."
+				}
+			],
+			"targetWords": [
+				"Rising prices"
+			]
+		},
+		{
+			"arabic": "الإستثمار الأجنبي يساعد الإقتصاد.",
+			"arabicTashkeel": "الإستِثمار الأجنَبي يْساعِد الإقتِصاد.",
+			"english": "Foreign investment helps the economy.",
+			"transliteration": "il-istithmaar il-ajnabi ysaa3id il-iqtisaad.",
+			"wordAlignments": [
+				{
+					"arabic": "الإستثمار",
+					"english": "Investment",
+					"transliteration": "il-istithmaar"
+				},
+				{
+					"arabic": "الأجنبي",
+					"english": "foreign",
+					"transliteration": "il-ajnabi"
+				},
+				{
+					"arabic": "يساعد",
+					"english": "helps",
+					"transliteration": "ysaa3id"
+				},
+				{
+					"arabic": "الإقتصاد.",
+					"english": "the economy.",
+					"transliteration": "il-iqtisaad."
+				}
+			],
+			"targetWords": [
+				"Investment",
+				"Economy"
+			]
+		},
+		{
+			"arabic": "أخذ قرض من البنك حتى يشتري بيت.",
+			"arabicTashkeel": "أخَذ قَرِض مِن البَنك حَتّى يِشتِري بيت.",
+			"english": "He took a loan from the bank to buy a house.",
+			"transliteration": "akhadh garidh min il-bank 7atta yishtiri beet.",
+			"wordAlignments": [
+				{
+					"arabic": "أخذ",
+					"english": "He took",
+					"transliteration": "akhadh"
+				},
+				{
+					"arabic": "قرض",
+					"english": "a loan",
+					"transliteration": "garidh"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "البنك",
+					"english": "the bank",
+					"transliteration": "il-bank"
+				},
+				{
+					"arabic": "حتى",
+					"english": "to",
+					"transliteration": "7atta"
+				},
+				{
+					"arabic": "يشتري",
+					"english": "buy",
+					"transliteration": "yishtiri"
+				},
+				{
+					"arabic": "بيت.",
+					"english": "a house.",
+					"transliteration": "beet."
+				}
+			],
+			"targetWords": [
+				"Loan"
+			]
+		},
+		{
+			"arabic": "حطيت توفيري بالذهب.",
+			"arabicTashkeel": "حَطَّيت توفيري بالذَّهَب.",
+			"english": "I put my savings in gold.",
+			"transliteration": "7atteet tawfeeri bidh-dhahab.",
+			"wordAlignments": [
+				{
+					"arabic": "حطيت",
+					"english": "I put",
+					"transliteration": "7atteet"
+				},
+				{
+					"arabic": "توفيري",
+					"english": "my savings",
+					"transliteration": "tawfeeri"
+				},
+				{
+					"arabic": "بالذهب.",
+					"english": "in gold.",
+					"transliteration": "bidh-dhahab."
+				}
+			],
+			"targetWords": [
+				"Savings"
+			]
+		},
+		{
+			"arabic": "ميزانية الحكومة تعتمد على واردات النفط.",
+			"arabicTashkeel": "ميزانية الحُكومة تِعتِمِد عَلى واردات النَّفُط.",
+			"english": "The government budget depends on oil revenue.",
+			"transliteration": "meezaaniyyat il-7ukooma ti3timid 3ala waaridaat in-nafut.",
+			"wordAlignments": [
+				{
+					"arabic": "ميزانية",
+					"english": "The budget of",
+					"transliteration": "meezaaniyyat"
+				},
+				{
+					"arabic": "الحكومة",
+					"english": "the government",
+					"transliteration": "il-7ukooma"
+				},
+				{
+					"arabic": "تعتمد",
+					"english": "depends",
+					"transliteration": "ti3timid"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "واردات",
+					"english": "the revenues of",
+					"transliteration": "waaridaat"
+				},
+				{
+					"arabic": "النفط.",
+					"english": "oil.",
+					"transliteration": "in-nafut."
+				}
+			],
+			"targetWords": [
+				"Budget"
+			]
+		},
+		{
+			"arabic": "البطالة بين الشباب عالية.",
+			"arabicTashkeel": "البِطالة بين الشَّباب عالية.",
+			"english": "Unemployment among young people is high.",
+			"transliteration": "il-bitaala been ish-shabaab 3aalya.",
+			"wordAlignments": [
+				{
+					"arabic": "البطالة",
+					"english": "Unemployment",
+					"transliteration": "il-bitaala"
+				},
+				{
+					"arabic": "بين",
+					"english": "among",
+					"transliteration": "been"
+				},
+				{
+					"arabic": "الشباب",
+					"english": "young people is",
+					"transliteration": "ish-shabaab"
+				},
+				{
+					"arabic": "عالية.",
+					"english": "high.",
+					"transliteration": "3aalya."
+				}
+			],
+			"targetWords": [
+				"Unemployment"
+			]
+		},
+		{
+			"arabic": "عليه دين كبير.",
+			"arabicTashkeel": "عَلَيه دين كْبير.",
+			"english": "He has a big debt.",
+			"transliteration": "3alee deen chbeer.",
+			"wordAlignments": [
+				{
+					"arabic": "عليه",
+					"english": "On him is",
+					"transliteration": "3alee"
+				},
+				{
+					"arabic": "دين",
+					"english": "a debt",
+					"transliteration": "deen"
+				},
+				{
+					"arabic": "كبير.",
+					"english": "big.",
+					"transliteration": "chbeer."
+				}
+			],
+			"targetWords": [
+				"Debt"
+			]
+		},
+		{
+			"arabic": "التجارة بين العراق وتركيا.",
+			"arabicTashkeel": "التِّجارة بين العِراق وتُركيا.",
+			"english": "Trade between Iraq and Turkey.",
+			"transliteration": "it-tijaara been il-3iraaq w-turkiya.",
+			"wordAlignments": [
+				{
+					"arabic": "التجارة",
+					"english": "Trade",
+					"transliteration": "it-tijaara"
+				},
+				{
+					"arabic": "بين",
+					"english": "between",
+					"transliteration": "been"
+				},
+				{
+					"arabic": "العراق",
+					"english": "Iraq",
+					"transliteration": "il-3iraaq"
+				},
+				{
+					"arabic": "وتركيا.",
+					"english": "and Turkey.",
+					"transliteration": "w-turkiya."
+				}
+			],
+			"targetWords": [
+				"Trade"
+			]
+		},
+		{
+			"arabic": "الإقتصاد العالمي ضعيف.",
+			"arabicTashkeel": "الإقتِصاد العالَمي ضْعيف.",
+			"english": "The world economy is weak.",
+			"transliteration": "il-iqtisaad il-3aalami dh3eef.",
+			"wordAlignments": [
+				{
+					"arabic": "الإقتصاد",
+					"english": "The economy",
+					"transliteration": "il-iqtisaad"
+				},
+				{
+					"arabic": "العالمي",
+					"english": "world is",
+					"transliteration": "il-3aalami"
+				},
+				{
+					"arabic": "ضعيف.",
+					"english": "weak.",
+					"transliteration": "dh3eef."
+				}
+			],
+			"targetWords": [
+				"Economy"
+			]
+		},
+		{
+			"arabic": "البورصة نزلت اليوم.",
+			"arabicTashkeel": "البورصة نِزلَت اليوم.",
+			"english": "The stock exchange fell today.",
+			"transliteration": "il-boorsa nizlat il-yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "البورصة",
+					"english": "The stock exchange",
+					"transliteration": "il-boorsa"
+				},
+				{
+					"arabic": "نزلت",
+					"english": "fell",
+					"transliteration": "nizlat"
+				},
+				{
+					"arabic": "اليوم.",
+					"english": "today.",
+					"transliteration": "il-yoom."
+				}
+			],
+			"targetWords": [
+				"Stock exchange"
+			]
+		},
+		{
+			"arabic": "الإستثمار بالأسهم مخاطرة.",
+			"arabicTashkeel": "الإستِثمار بالأسهُم مُخاطَرة.",
+			"english": "Investing in shares is risky.",
+			"transliteration": "il-istithmaar bil-ashum mukhaatara.",
+			"wordAlignments": [
+				{
+					"arabic": "الإستثمار",
+					"english": "Investing",
+					"transliteration": "il-istithmaar"
+				},
+				{
+					"arabic": "بالأسهم",
+					"english": "in shares is",
+					"transliteration": "bil-ashum"
+				},
+				{
+					"arabic": "مخاطرة.",
+					"english": "a risk.",
+					"transliteration": "mukhaatara."
+				}
+			],
+			"targetWords": [
+				"Shares"
+			]
+		},
+		{
+			"arabic": "سعر الصرف صعد.",
+			"arabicTashkeel": "سِعِر الصَّرف صِعَد.",
+			"english": "The exchange rate went up.",
+			"transliteration": "si3ir is-sarf si3ad.",
+			"wordAlignments": [
+				{
+					"arabic": "سعر",
+					"english": "The price of",
+					"transliteration": "si3ir"
+				},
+				{
+					"arabic": "الصرف",
+					"english": "exchange",
+					"transliteration": "is-sarf"
+				},
+				{
+					"arabic": "صعد.",
+					"english": "went up.",
+					"transliteration": "si3ad."
+				}
+			],
+			"targetWords": [
+				"Exchange rate"
+			]
+		},
+		{
+			"arabic": "ناس هواية يوفرون بالدولار.",
+			"arabicTashkeel": "ناس هْوايَة يْوَفّرون بالدّولار.",
+			"english": "Many people save in dollars.",
+			"transliteration": "naas hwaaya ywaffiroon bid-doolaar.",
+			"wordAlignments": [
+				{
+					"arabic": "ناس",
+					"english": "People",
+					"transliteration": "naas"
+				},
+				{
+					"arabic": "هواية",
+					"english": "many",
+					"transliteration": "hwaaya"
+				},
+				{
+					"arabic": "يوفرون",
+					"english": "save",
+					"transliteration": "ywaffiroon"
+				},
+				{
+					"arabic": "بالدولار.",
+					"english": "in dollars.",
+					"transliteration": "bid-doolaar."
+				}
+			],
+			"targetWords": [
+				"Dollar",
+				"Savings"
+			]
+		},
+		{
+			"arabic": "عملة قوية.",
+			"arabicTashkeel": "عُملة قَويّة.",
+			"english": "A strong currency.",
+			"transliteration": "3umla gawiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "عملة",
+					"english": "A currency",
+					"transliteration": "3umla"
+				},
+				{
+					"arabic": "قوية.",
+					"english": "strong.",
+					"transliteration": "gawiyya."
+				}
+			],
+			"targetWords": [
+				"Currency"
+			]
+		},
+		{
+			"arabic": "تضخم عالي.",
+			"arabicTashkeel": "تَضَخُّم عالي.",
+			"english": "High inflation.",
+			"transliteration": "tadhakhkhum 3aali.",
+			"wordAlignments": [
+				{
+					"arabic": "تضخم",
+					"english": "Inflation",
+					"transliteration": "tadhakhkhum"
+				},
+				{
+					"arabic": "عالي.",
+					"english": "high.",
+					"transliteration": "3aali."
+				}
+			],
+			"targetWords": [
+				"Inflation"
+			]
+		},
+		{
+			"arabic": "الغلاء يأثر عالفقرا أكثر شي.",
+			"arabicTashkeel": "الغَلاء يأثِّر عالفُقَرا أكثَر شي.",
+			"english": "Rising prices affect the poor most.",
+			"transliteration": "il-ghalaa2 y2aththir 3al-fugara akthar shi.",
+			"wordAlignments": [
+				{
+					"arabic": "الغلاء",
+					"english": "The rising prices",
+					"transliteration": "il-ghalaa2"
+				},
+				{
+					"arabic": "يأثر",
+					"english": "affects",
+					"transliteration": "y2aththir"
+				},
+				{
+					"arabic": "عالفقرا",
+					"english": "the poor",
+					"transliteration": "3al-fugara"
+				},
+				{
+					"arabic": "أكثر",
+					"english": "most",
+					"transliteration": "akthar"
+				},
+				{
+					"arabic": "شي.",
+					"english": "thing.",
+					"transliteration": "shi."
+				}
+			],
+			"targetWords": [
+				"Rising prices"
+			]
+		},
+		{
+			"arabic": "الإستثمار بالسكن.",
+			"arabicTashkeel": "الإستِثمار بالسَّكَن.",
+			"english": "Investment in housing.",
+			"transliteration": "il-istithmaar bis-sakan.",
+			"wordAlignments": [
+				{
+					"arabic": "الإستثمار",
+					"english": "Investment",
+					"transliteration": "il-istithmaar"
+				},
+				{
+					"arabic": "بالسكن.",
+					"english": "in housing.",
+					"transliteration": "bis-sakan."
+				}
+			],
+			"targetWords": [
+				"Investment"
+			]
+		},
+		{
+			"arabic": "القرض فايدته عالية.",
+			"arabicTashkeel": "القَرِض فايدتَه عالية.",
+			"english": "The loan has high interest.",
+			"transliteration": "il-garidh faaydata 3aalya.",
+			"wordAlignments": [
+				{
+					"arabic": "القرض",
+					"english": "The loan",
+					"transliteration": "il-garidh"
+				},
+				{
+					"arabic": "فايدته",
+					"english": "its interest is",
+					"transliteration": "faaydata"
+				},
+				{
+					"arabic": "عالية.",
+					"english": "high.",
+					"transliteration": "3aalya."
+				}
+			],
+			"targetWords": [
+				"Loan"
+			]
+		},
+		{
+			"arabic": "توفير للمستقبل.",
+			"arabicTashkeel": "توفير للمُستَقبَل.",
+			"english": "Savings for the future.",
+			"transliteration": "tawfeer lil-mustaqbal.",
+			"wordAlignments": [
+				{
+					"arabic": "توفير",
+					"english": "Saving",
+					"transliteration": "tawfeer"
+				},
+				{
+					"arabic": "للمستقبل.",
+					"english": "for the future.",
+					"transliteration": "lil-mustaqbal."
+				}
+			],
+			"targetWords": [
+				"Savings"
+			]
+		},
+		{
+			"arabic": "ميزانية البيت.",
+			"arabicTashkeel": "ميزانية البيت.",
+			"english": "The family budget.",
+			"transliteration": "meezaaniyyat il-beet.",
+			"wordAlignments": [
+				{
+					"arabic": "ميزانية",
+					"english": "The budget of",
+					"transliteration": "meezaaniyyat"
+				},
+				{
+					"arabic": "البيت.",
+					"english": "the house.",
+					"transliteration": "il-beet."
+				}
+			],
+			"targetWords": [
+				"Budget"
+			]
+		},
+		{
+			"arabic": "مكافحة البطالة تحتاج فرص شغل.",
+			"arabicTashkeel": "مُكافَحة البِطالة تِحتاج فُرَص شُغُل.",
+			"english": "Fighting unemployment needs jobs.",
+			"transliteration": "mukaafa7at il-bitaala ti7taaj furas shughul.",
+			"wordAlignments": [
+				{
+					"arabic": "مكافحة",
+					"english": "Fighting",
+					"transliteration": "mukaafa7at"
+				},
+				{
+					"arabic": "البطالة",
+					"english": "unemployment",
+					"transliteration": "il-bitaala"
+				},
+				{
+					"arabic": "تحتاج",
+					"english": "needs",
+					"transliteration": "ti7taaj"
+				},
+				{
+					"arabic": "فرص",
+					"english": "opportunities of",
+					"transliteration": "furas"
+				},
+				{
+					"arabic": "شغل.",
+					"english": "work.",
+					"transliteration": "shughul."
+				}
+			],
+			"targetWords": [
+				"Unemployment"
+			]
+		},
+		{
+			"arabic": "إدفع ديونك.",
+			"arabicTashkeel": "إدفَع ديونَك.",
+			"english": "Pay your debts.",
+			"transliteration": "idfa3 dyoonak.",
+			"wordAlignments": [
+				{
+					"arabic": "إدفع",
+					"english": "Pay",
+					"transliteration": "idfa3"
+				},
+				{
+					"arabic": "ديونك.",
+					"english": "your debts.",
+					"transliteration": "dyoonak."
+				}
+			],
+			"targetWords": [
+				"Debt"
+			]
+		},
+		{
+			"arabic": "التجارة زينة هالسنة.",
+			"arabicTashkeel": "التِّجارة زينة هالسَّنة.",
+			"english": "Trade is good this year.",
+			"transliteration": "it-tijaara zeena has-sana.",
+			"wordAlignments": [
+				{
+					"arabic": "التجارة",
+					"english": "Trade is",
+					"transliteration": "it-tijaara"
+				},
+				{
+					"arabic": "زينة",
+					"english": "good",
+					"transliteration": "zeena"
+				},
+				{
+					"arabic": "هالسنة.",
+					"english": "this year.",
+					"transliteration": "has-sana."
+				}
+			],
+			"targetWords": [
+				"Trade"
+			]
+		},
+		{
+			"arabic": "تنويع الإقتصاد.",
+			"arabicTashkeel": "تَنويع الإقتِصاد.",
+			"english": "Diversifying the economy.",
+			"transliteration": "tanwee3 il-iqtisaad.",
+			"wordAlignments": [
+				{
+					"arabic": "تنويع",
+					"english": "Diversifying",
+					"transliteration": "tanwee3"
+				},
+				{
+					"arabic": "الإقتصاد.",
+					"english": "the economy.",
+					"transliteration": "il-iqtisaad."
+				}
+			],
+			"targetWords": [
+				"Economy"
+			]
+		},
+		{
+			"arabic": "أخبار البورصة.",
+			"arabicTashkeel": "أخبار البورصة.",
+			"english": "News of the stock exchange.",
+			"transliteration": "akhbaar il-boorsa.",
+			"wordAlignments": [
+				{
+					"arabic": "أخبار",
+					"english": "The news of",
+					"transliteration": "akhbaar"
+				},
+				{
+					"arabic": "البورصة.",
+					"english": "the stock exchange.",
+					"transliteration": "il-boorsa."
+				}
+			],
+			"targetWords": [
+				"Stock exchange"
+			]
+		},
+		{
+			"arabic": "سعر الأسهم.",
+			"arabicTashkeel": "سِعِر الأسهُم.",
+			"english": "The price of shares.",
+			"transliteration": "si3ir il-ashum.",
+			"wordAlignments": [
+				{
+					"arabic": "سعر",
+					"english": "The price of",
+					"transliteration": "si3ir"
+				},
+				{
+					"arabic": "الأسهم.",
+					"english": "the shares.",
+					"transliteration": "il-ashum."
+				}
+			],
+			"targetWords": [
+				"Shares"
+			]
+		},
+		{
+			"arabic": "سعر الصرف يأثر عالأسعار.",
+			"arabicTashkeel": "سِعِر الصَّرف يأثِّر عالأسعار.",
+			"english": "The exchange rate affects prices.",
+			"transliteration": "si3ir is-sarf y2aththir 3al-as3aar.",
+			"wordAlignments": [
+				{
+					"arabic": "سعر",
+					"english": "The price of",
+					"transliteration": "si3ir"
+				},
+				{
+					"arabic": "الصرف",
+					"english": "exchange",
+					"transliteration": "is-sarf"
+				},
+				{
+					"arabic": "يأثر",
+					"english": "affects",
+					"transliteration": "y2aththir"
+				},
+				{
+					"arabic": "عالأسعار.",
+					"english": "the prices.",
+					"transliteration": "3al-as3aar."
+				}
+			],
+			"targetWords": [
+				"Exchange rate"
+			]
+		},
+		{
+			"arabic": "مية دولار.",
+			"arabicTashkeel": "مِيّة دولار.",
+			"english": "A hundred dollars.",
+			"transliteration": "miyya doolaar.",
+			"wordAlignments": [
+				{
+					"arabic": "مية",
+					"english": "A hundred",
+					"transliteration": "miyya"
+				},
+				{
+					"arabic": "دولار.",
+					"english": "dollars.",
+					"transliteration": "doolaar."
+				}
+			],
+			"targetWords": [
+				"Dollar"
+			]
+		},
+		{
+			"arabic": "تصريف العملة بالصيرفة.",
+			"arabicTashkeel": "تَصريف العُملة بالصّيرَفة.",
+			"english": "Changing currency at the exchange shop.",
+			"transliteration": "tasreef il-3umla bis-seerafa.",
+			"wordAlignments": [
+				{
+					"arabic": "تصريف",
+					"english": "Exchanging",
+					"transliteration": "tasreef"
+				},
+				{
+					"arabic": "العملة",
+					"english": "the currency",
+					"transliteration": "il-3umla"
+				},
+				{
+					"arabic": "بالصيرفة.",
+					"english": "at the exchange shop.",
+					"transliteration": "bis-seerafa."
+				}
+			],
+			"targetWords": [
+				"Currency"
+			]
+		},
+		{
+			"arabic": "أسباب التضخم.",
+			"arabicTashkeel": "أسباب التَّضَخُّم.",
+			"english": "The causes of inflation.",
+			"transliteration": "asbaab it-tadhakhkhum.",
+			"wordAlignments": [
+				{
+					"arabic": "أسباب",
+					"english": "The causes of",
+					"transliteration": "asbaab"
+				},
+				{
+					"arabic": "التضخم.",
+					"english": "inflation.",
+					"transliteration": "it-tadhakhkhum."
+				}
+			],
+			"targetWords": [
+				"Inflation"
+			]
+		},
+		{
+			"arabic": "غلاء الأكل.",
+			"arabicTashkeel": "غَلاء الأكِل.",
+			"english": "Rising prices of food.",
+			"transliteration": "ghalaa2 il-akil.",
+			"wordAlignments": [
+				{
+					"arabic": "غلاء",
+					"english": "The rising prices of",
+					"transliteration": "ghalaa2"
+				},
+				{
+					"arabic": "الأكل.",
+					"english": "food.",
+					"transliteration": "il-akil."
+				}
+			],
+			"targetWords": [
+				"Rising prices"
+			]
+		},
+		{
+			"arabic": "إستثمار زين.",
+			"arabicTashkeel": "إستِثمار زين.",
+			"english": "A good investment.",
+			"transliteration": "istithmaar zeen.",
+			"wordAlignments": [
+				{
+					"arabic": "إستثمار",
+					"english": "An investment",
+					"transliteration": "istithmaar"
+				},
+				{
+					"arabic": "زين.",
+					"english": "good.",
+					"transliteration": "zeen."
+				}
+			],
+			"targetWords": [
+				"Investment"
+			]
+		},
+		{
+			"arabic": "قرض بلا فايدة.",
+			"arabicTashkeel": "قَرِض بَلا فايدة.",
+			"english": "A loan without interest.",
+			"transliteration": "garidh bala faayda.",
+			"wordAlignments": [
+				{
+					"arabic": "قرض",
+					"english": "A loan",
+					"transliteration": "garidh"
+				},
+				{
+					"arabic": "بلا",
+					"english": "without",
+					"transliteration": "bala"
+				},
+				{
+					"arabic": "فايدة.",
+					"english": "interest.",
+					"transliteration": "faayda."
+				}
+			],
+			"targetWords": [
+				"Loan"
+			]
+		},
+		{
+			"arabic": "توفير شهري.",
+			"arabicTashkeel": "توفير شَهري.",
+			"english": "Monthly savings.",
+			"transliteration": "tawfeer shahri.",
+			"wordAlignments": [
+				{
+					"arabic": "توفير",
+					"english": "Saving",
+					"transliteration": "tawfeer"
+				},
+				{
+					"arabic": "شهري.",
+					"english": "monthly.",
+					"transliteration": "shahri."
+				}
+			],
+			"targetWords": [
+				"Savings"
+			]
+		},
+		{
+			"arabic": "الميزانية الجديدة إنقرت.",
+			"arabicTashkeel": "الميزانية الجْديدة إنقِرّت.",
+			"english": "The new budget was approved.",
+			"transliteration": "il-meezaaniyya ij-jdeeda ingirrat.",
+			"wordAlignments": [
+				{
+					"arabic": "الميزانية",
+					"english": "The budget",
+					"transliteration": "il-meezaaniyya"
+				},
+				{
+					"arabic": "الجديدة",
+					"english": "new",
+					"transliteration": "ij-jdeeda"
+				},
+				{
+					"arabic": "إنقرت.",
+					"english": "was approved.",
+					"transliteration": "ingirrat."
+				}
+			],
+			"targetWords": [
+				"Budget"
+			]
+		},
+		{
+			"arabic": "البطالة قلت السنة الفاتت.",
+			"arabicTashkeel": "البِطالة قَلَّت السَّنة الفاتَت.",
+			"english": "Unemployment fell last year.",
+			"transliteration": "il-bitaala gallat is-sana il-faatat.",
+			"wordAlignments": [
+				{
+					"arabic": "البطالة",
+					"english": "Unemployment",
+					"transliteration": "il-bitaala"
+				},
+				{
+					"arabic": "قلت",
+					"english": "decreased",
+					"transliteration": "gallat"
+				},
+				{
+					"arabic": "السنة",
+					"english": "the year",
+					"transliteration": "is-sana"
+				},
+				{
+					"arabic": "الفاتت.",
+					"english": "last.",
+					"transliteration": "il-faatat."
+				}
+			],
+			"targetWords": [
+				"Unemployment"
+			]
+		},
+		{
+			"arabic": "دين للبنك.",
+			"arabicTashkeel": "دين للبَنك.",
+			"english": "A debt to the bank.",
+			"transliteration": "deen lil-bank.",
+			"wordAlignments": [
+				{
+					"arabic": "دين",
+					"english": "A debt",
+					"transliteration": "deen"
+				},
+				{
+					"arabic": "للبنك.",
+					"english": "to the bank.",
+					"transliteration": "lil-bank."
+				}
+			],
+			"targetWords": [
+				"Debt"
+			]
+		},
+		{
+			"arabic": "التجارة ويا الدول المجاورة.",
+			"arabicTashkeel": "التِّجارة ويّا الدُّوَل المُجاوِرة.",
+			"english": "Trade with neighbouring countries.",
+			"transliteration": "it-tijaara wiyya id-duwal il-mujaawira.",
+			"wordAlignments": [
+				{
+					"arabic": "التجارة",
+					"english": "Trade",
+					"transliteration": "it-tijaara"
+				},
+				{
+					"arabic": "ويا",
+					"english": "with",
+					"transliteration": "wiyya"
+				},
+				{
+					"arabic": "الدول",
+					"english": "the countries",
+					"transliteration": "id-duwal"
+				},
+				{
+					"arabic": "المجاورة.",
+					"english": "neighbouring.",
+					"transliteration": "il-mujaawira."
+				}
+			],
+			"targetWords": [
+				"Trade"
+			]
+		},
+		{
+			"arabic": "الإقتصاد القوي يحتاج أكثر من النفط.",
+			"arabicTashkeel": "الإقتِصاد القَوي يِحتاج أكثَر مِن النَّفُط.",
+			"english": "A strong economy needs more than oil.",
+			"transliteration": "il-iqtisaad il-gawi yi7taaj akthar min in-nafut.",
+			"wordAlignments": [
+				{
+					"arabic": "الإقتصاد",
+					"english": "The economy",
+					"transliteration": "il-iqtisaad"
+				},
+				{
+					"arabic": "القوي",
+					"english": "strong",
+					"transliteration": "il-gawi"
+				},
+				{
+					"arabic": "يحتاج",
+					"english": "needs",
+					"transliteration": "yi7taaj"
+				},
+				{
+					"arabic": "أكثر",
+					"english": "more",
+					"transliteration": "akthar"
+				},
+				{
+					"arabic": "من",
+					"english": "than",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "النفط.",
+					"english": "oil.",
+					"transliteration": "in-nafut."
+				}
+			],
+			"targetWords": [
+				"Economy"
+			]
+		},
+		{
+			"arabic": "البورصة تفتح الساعة عشرة.",
+			"arabicTashkeel": "البورصة تِفتَح السّاعة عَشرة.",
+			"english": "The stock exchange opens at ten.",
+			"transliteration": "il-boorsa tifta7 is-saa3a 3ashra.",
+			"wordAlignments": [
+				{
+					"arabic": "البورصة",
+					"english": "The stock exchange",
+					"transliteration": "il-boorsa"
+				},
+				{
+					"arabic": "تفتح",
+					"english": "opens",
+					"transliteration": "tifta7"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "at",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "عشرة.",
+					"english": "ten.",
+					"transliteration": "3ashra."
+				}
+			],
+			"targetWords": [
+				"Stock exchange"
+			]
+		},
+		{
+			"arabic": "بيع الأسهم.",
+			"arabicTashkeel": "بيع الأسهُم.",
+			"english": "Selling shares.",
+			"transliteration": "bee3 il-ashum.",
+			"wordAlignments": [
+				{
+					"arabic": "بيع",
+					"english": "Selling",
+					"transliteration": "bee3"
+				},
+				{
+					"arabic": "الأسهم.",
+					"english": "the shares.",
+					"transliteration": "il-ashum."
+				}
+			],
+			"targetWords": [
+				"Shares"
+			]
+		},
+		{
+			"arabic": "سعر الصرف الرسمي.",
+			"arabicTashkeel": "سِعِر الصَّرف الرَّسمي.",
+			"english": "The official exchange rate.",
+			"transliteration": "si3ir is-sarf ir-rasmi.",
+			"wordAlignments": [
+				{
+					"arabic": "سعر",
+					"english": "The price of",
+					"transliteration": "si3ir"
+				},
+				{
+					"arabic": "الصرف",
+					"english": "exchange",
+					"transliteration": "is-sarf"
+				},
+				{
+					"arabic": "الرسمي.",
+					"english": "official.",
+					"transliteration": "ir-rasmi."
+				}
+			],
+			"targetWords": [
+				"Exchange rate"
+			]
+		},
+		{
+			"arabic": "الدولار نزل.",
+			"arabicTashkeel": "الدّولار نِزَل.",
+			"english": "The dollar went down.",
+			"transliteration": "id-doolaar nizal.",
+			"wordAlignments": [
+				{
+					"arabic": "الدولار",
+					"english": "The dollar",
+					"transliteration": "id-doolaar"
+				},
+				{
+					"arabic": "نزل.",
+					"english": "went down.",
+					"transliteration": "nizal."
+				}
+			],
+			"targetWords": [
+				"Dollar"
+			]
+		},
+		{
+			"arabic": "عملة جديدة.",
+			"arabicTashkeel": "عُملة جْديدة.",
+			"english": "A new currency.",
+			"transliteration": "3umla jdeeda.",
+			"wordAlignments": [
+				{
+					"arabic": "عملة",
+					"english": "A currency",
+					"transliteration": "3umla"
+				},
+				{
+					"arabic": "جديدة.",
+					"english": "new.",
+					"transliteration": "jdeeda."
+				}
+			],
+			"targetWords": [
+				"Currency"
+			]
+		},
+		{
+			"arabic": "التضخم والبطالة.",
+			"arabicTashkeel": "التَّضَخُّم والبِطالة.",
+			"english": "Inflation and unemployment.",
+			"transliteration": "it-tadhakhkhum w-il-bitaala.",
+			"wordAlignments": [
+				{
+					"arabic": "التضخم",
+					"english": "Inflation",
+					"transliteration": "it-tadhakhkhum"
+				},
+				{
+					"arabic": "والبطالة.",
+					"english": "and unemployment.",
+					"transliteration": "w-il-bitaala."
+				}
+			],
+			"targetWords": [
+				"Inflation",
+				"Unemployment"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "The Iraqi Economy",
+			"sentences": [
+				{
+					"arabic": "إقتصاد العراق يعتمد أكثر شي عالنفط؛ أغلب الميزانية من واردات النفط.",
+					"arabicTashkeel": "إقتِصاد العِراق يِعتِمِد أكثَر شي عالنَّفُط؛ أغلَب الميزانية مِن واردات النَّفُط.",
+					"english": "Iraq's economy depends mainly on oil; most of the budget comes from oil revenue.",
+					"transliteration": "iqtisaad il-3iraaq yi3timid akthar shi 3an-nafut; aghlab il-meezaaniyya min waaridaat in-nafut.",
+					"wordAlignments": [
+						{
+							"arabic": "إقتصاد",
+							"english": "The economy of",
+							"transliteration": "iqtisaad"
+						},
+						{
+							"arabic": "العراق",
+							"english": "Iraq",
+							"transliteration": "il-3iraaq"
+						},
+						{
+							"arabic": "يعتمد",
+							"english": "depends",
+							"transliteration": "yi3timid"
+						},
+						{
+							"arabic": "أكثر",
+							"english": "mostly",
+							"transliteration": "akthar"
+						},
+						{
+							"arabic": "شي",
+							"english": "thing",
+							"transliteration": "shi"
+						},
+						{
+							"arabic": "عالنفط؛",
+							"english": "on oil;",
+							"transliteration": "3an-nafut;"
+						},
+						{
+							"arabic": "أغلب",
+							"english": "most of",
+							"transliteration": "aghlab"
+						},
+						{
+							"arabic": "الميزانية",
+							"english": "the budget",
+							"transliteration": "il-meezaaniyya"
+						},
+						{
+							"arabic": "من",
+							"english": "from",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "واردات",
+							"english": "the revenues of",
+							"transliteration": "waaridaat"
+						},
+						{
+							"arabic": "النفط.",
+							"english": "oil.",
+							"transliteration": "in-nafut."
+						}
+					]
+				},
+				{
+					"arabic": "من تنزل أسعار النفط، الحكومة تصير عدها مشكلة بالرواتب.",
+					"arabicTashkeel": "مِن تِنزِل أسعار النَّفُط، الحُكومة تِصير عِدها مُشكِلة بالرَّواتِب.",
+					"english": "When oil prices fall, the government has a problem paying salaries.",
+					"transliteration": "min tinzil as3aar in-nafut, il-7ukooma tseer 3idha mushkila bir-rawaatib.",
+					"wordAlignments": [
+						{
+							"arabic": "من",
+							"english": "When",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "تنزل",
+							"english": "fall",
+							"transliteration": "tinzil"
+						},
+						{
+							"arabic": "أسعار",
+							"english": "the prices of",
+							"transliteration": "as3aar"
+						},
+						{
+							"arabic": "النفط،",
+							"english": "oil,",
+							"transliteration": "in-nafut,"
+						},
+						{
+							"arabic": "الحكومة",
+							"english": "the government",
+							"transliteration": "il-7ukooma"
+						},
+						{
+							"arabic": "تصير",
+							"english": "gets",
+							"transliteration": "tseer"
+						},
+						{
+							"arabic": "عدها",
+							"english": "to it",
+							"transliteration": "3idha"
+						},
+						{
+							"arabic": "مشكلة",
+							"english": "a problem",
+							"transliteration": "mushkila"
+						},
+						{
+							"arabic": "بالرواتب.",
+							"english": "with the salaries.",
+							"transliteration": "bir-rawaatib."
+						}
+					]
+				},
+				{
+					"arabic": "الناس تتابع سعر صرف الدولار كل يوم، لأن يأثر عالأسعار.",
+					"arabicTashkeel": "النّاس تِتابِع سِعِر صَرف الدّولار كُل يوم، لأن يأثِّر عالأسعار.",
+					"english": "People watch the exchange rate of the dollar every day, because it affects prices.",
+					"transliteration": "in-naas titaabi3 si3ir sarf id-doolaar kull yoom, li2ann y2aththir 3al-as3aar.",
+					"wordAlignments": [
+						{
+							"arabic": "الناس",
+							"english": "People",
+							"transliteration": "in-naas"
+						},
+						{
+							"arabic": "تتابع",
+							"english": "follow",
+							"transliteration": "titaabi3"
+						},
+						{
+							"arabic": "سعر",
+							"english": "the price of",
+							"transliteration": "si3ir"
+						},
+						{
+							"arabic": "صرف",
+							"english": "exchange of",
+							"transliteration": "sarf"
+						},
+						{
+							"arabic": "الدولار",
+							"english": "the dollar",
+							"transliteration": "id-doolaar"
+						},
+						{
+							"arabic": "كل",
+							"english": "every",
+							"transliteration": "kull"
+						},
+						{
+							"arabic": "يوم،",
+							"english": "day,",
+							"transliteration": "yoom,"
+						},
+						{
+							"arabic": "لأن",
+							"english": "because",
+							"transliteration": "li2ann"
+						},
+						{
+							"arabic": "يأثر",
+							"english": "it affects",
+							"transliteration": "y2aththir"
+						},
+						{
+							"arabic": "عالأسعار.",
+							"english": "the prices.",
+							"transliteration": "3al-as3aar."
+						}
+					]
+				},
+				{
+					"arabic": "الغلاء والبطالة أكبر تحديات للشباب.",
+					"arabicTashkeel": "الغَلاء والبِطالة أكبَر تَحَدّيات للشَّباب.",
+					"english": "Rising prices and unemployment are the biggest challenges for young people.",
+					"transliteration": "il-ghalaa2 w-il-bitaala akbar ta7addiyaat lish-shabaab.",
+					"wordAlignments": [
+						{
+							"arabic": "الغلاء",
+							"english": "Rising prices",
+							"transliteration": "il-ghalaa2"
+						},
+						{
+							"arabic": "والبطالة",
+							"english": "and unemployment are",
+							"transliteration": "w-il-bitaala"
+						},
+						{
+							"arabic": "أكبر",
+							"english": "the biggest",
+							"transliteration": "akbar"
+						},
+						{
+							"arabic": "تحديات",
+							"english": "challenges",
+							"transliteration": "ta7addiyaat"
+						},
+						{
+							"arabic": "للشباب.",
+							"english": "for the young people.",
+							"transliteration": "lish-shabaab."
+						}
+					]
+				},
+				{
+					"arabic": "الخبراء يقولون العراق يحتاج إستثمار أكثر بالزراعة والصناعة والتجارة.",
+					"arabicTashkeel": "الخُبَراء يْقولون العِراق يِحتاج إستِثمار أكثَر بالزِّراعة والصِّناعة والتِّجارة.",
+					"english": "Experts say Iraq needs more investment in agriculture, industry and trade.",
+					"transliteration": "il-khubaraa2 ygooloon il-3iraaq yi7taaj istithmaar akthar biz-ziraa3a w-is-sinaa3a w-it-tijaara.",
+					"wordAlignments": [
+						{
+							"arabic": "الخبراء",
+							"english": "The experts",
+							"transliteration": "il-khubaraa2"
+						},
+						{
+							"arabic": "يقولون",
+							"english": "say",
+							"transliteration": "ygooloon"
+						},
+						{
+							"arabic": "العراق",
+							"english": "Iraq",
+							"transliteration": "il-3iraaq"
+						},
+						{
+							"arabic": "يحتاج",
+							"english": "needs",
+							"transliteration": "yi7taaj"
+						},
+						{
+							"arabic": "إستثمار",
+							"english": "investment",
+							"transliteration": "istithmaar"
+						},
+						{
+							"arabic": "أكثر",
+							"english": "more",
+							"transliteration": "akthar"
+						},
+						{
+							"arabic": "بالزراعة",
+							"english": "in agriculture",
+							"transliteration": "biz-ziraa3a"
+						},
+						{
+							"arabic": "والصناعة",
+							"english": "and industry",
+							"transliteration": "w-is-sinaa3a"
+						},
+						{
+							"arabic": "والتجارة.",
+							"english": "and trade.",
+							"transliteration": "w-it-tijaara."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "Saving in Gold",
+			"sentences": [
+				{
+					"arabic": "جدتي ما تثق بالبنوك ولا بالبورصة.",
+					"arabicTashkeel": "جِدَّتي ما تِثِق بالبُنوك ولا بالبورصة.",
+					"english": "My grandmother doesn't trust banks or the stock exchange.",
+					"transliteration": "jiddati ma tithig bil-bunook w-la bil-boorsa.",
+					"wordAlignments": [
+						{
+							"arabic": "جدتي",
+							"english": "My grandmother",
+							"transliteration": "jiddati"
+						},
+						{
+							"arabic": "ما",
+							"english": "not",
+							"transliteration": "ma"
+						},
+						{
+							"arabic": "تثق",
+							"english": "trusts",
+							"transliteration": "tithig"
+						},
+						{
+							"arabic": "بالبنوك",
+							"english": "the banks",
+							"transliteration": "bil-bunook"
+						},
+						{
+							"arabic": "ولا",
+							"english": "nor",
+							"transliteration": "w-la"
+						},
+						{
+							"arabic": "بالبورصة.",
+							"english": "the stock exchange.",
+							"transliteration": "bil-boorsa."
+						}
+					]
+				},
+				{
+					"arabic": "تحط كل توفيرها بالذهب، لأن الذهب يحافظ على قيمته.",
+					"arabicTashkeel": "تْحُط كُل توفيرها بالذَّهَب، لأن الذَّهَب يِحافِظ عَلى قيمتَه.",
+					"english": "She puts all her savings in gold, because gold keeps its value.",
+					"transliteration": "t7utt kull tawfeerha bidh-dhahab, li2ann idh-dhahab yi7aafidh 3ala geemata.",
+					"wordAlignments": [
+						{
+							"arabic": "تحط",
+							"english": "She puts",
+							"transliteration": "t7utt"
+						},
+						{
+							"arabic": "كل",
+							"english": "all",
+							"transliteration": "kull"
+						},
+						{
+							"arabic": "توفيرها",
+							"english": "her savings",
+							"transliteration": "tawfeerha"
+						},
+						{
+							"arabic": "بالذهب،",
+							"english": "in gold,",
+							"transliteration": "bidh-dhahab,"
+						},
+						{
+							"arabic": "لأن",
+							"english": "because",
+							"transliteration": "li2ann"
+						},
+						{
+							"arabic": "الذهب",
+							"english": "gold",
+							"transliteration": "idh-dhahab"
+						},
+						{
+							"arabic": "يحافظ",
+							"english": "keeps",
+							"transliteration": "yi7aafidh"
+						},
+						{
+							"arabic": "على",
+							"english": "on",
+							"transliteration": "3ala"
+						},
+						{
+							"arabic": "قيمته.",
+							"english": "its value.",
+							"transliteration": "geemata."
+						}
+					]
+				},
+				{
+					"arabic": "وقت التضخم، كان كلامها صح!",
+					"arabicTashkeel": "وَقت التَّضَخُّم، كان كَلامها صَح!",
+					"english": "During inflation, she was right!",
+					"transliteration": "wagt it-tadhakhkhum, chaan kalaamha sa77!",
+					"wordAlignments": [
+						{
+							"arabic": "وقت",
+							"english": "At the time of",
+							"transliteration": "wagt"
+						},
+						{
+							"arabic": "التضخم،",
+							"english": "inflation,",
+							"transliteration": "it-tadhakhkhum,"
+						},
+						{
+							"arabic": "كان",
+							"english": "was",
+							"transliteration": "chaan"
+						},
+						{
+							"arabic": "كلامها",
+							"english": "her words",
+							"transliteration": "kalaamha"
+						},
+						{
+							"arabic": "صح!",
+							"english": "right!",
+							"transliteration": "sa77!"
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is discussing personal finance with an Iraqi friend who wants to save money and maybe invest.",
+		"studentRole": "A friend learning Iraqi Arabic.",
+		"otherRole": "An Iraqi friend worried about rising prices and the dollar rate.",
+		"goalEnglish": "Discuss the exchange rate, inflation and rising prices, compare ways to save (gold, dollars, shares, the bank), and talk about loans and debt.",
+		"targetWords": [
+			"Economy",
+			"Exchange rate",
+			"Dollar",
+			"Inflation",
+			"Rising prices",
+			"Savings",
+			"Investment",
+			"Loan"
+		]
+	}
+}
