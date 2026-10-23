@@ -1,0 +1,1782 @@
+{
+	"vocab": [
+		{
+			"arabic": "مدرسة",
+			"arabicTashkeel": "مَدرَسة",
+			"english": "School",
+			"transliteration": "madrasa",
+			"wordAlignments": [
+				{
+					"arabic": "مدرسة",
+					"english": "School",
+					"transliteration": "madrasa"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "صف",
+			"arabicTashkeel": "صَف",
+			"english": "Class",
+			"transliteration": "saff",
+			"wordAlignments": [
+				{
+					"arabic": "صف",
+					"english": "Class",
+					"transliteration": "saff"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "أبلة",
+			"arabicTashkeel": "أبلة",
+			"english": "Teacher (female)",
+			"transliteration": "abla",
+			"wordAlignments": [
+				{
+					"arabic": "أبلة",
+					"english": "Teacher",
+					"transliteration": "abla"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "دفتر",
+			"arabicTashkeel": "دَفتَر",
+			"english": "Notebook",
+			"transliteration": "daftar",
+			"wordAlignments": [
+				{
+					"arabic": "دفتر",
+					"english": "Notebook",
+					"transliteration": "daftar"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "سبورة",
+			"arabicTashkeel": "سَبّورة",
+			"english": "Board",
+			"transliteration": "sabboora",
+			"wordAlignments": [
+				{
+					"arabic": "سبورة",
+					"english": "Board",
+					"transliteration": "sabboora"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "إمتحان",
+			"arabicTashkeel": "إمتِحان",
+			"english": "Exam",
+			"transliteration": "imti7aan",
+			"wordAlignments": [
+				{
+					"arabic": "إمتحان",
+					"english": "Exam",
+					"transliteration": "imti7aan"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "واجب",
+			"arabicTashkeel": "واجِب",
+			"english": "Homework",
+			"transliteration": "waajib",
+			"wordAlignments": [
+				{
+					"arabic": "واجب",
+					"english": "Homework",
+					"transliteration": "waajib"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "درس",
+			"arabicTashkeel": "دَرس",
+			"english": "Lesson",
+			"transliteration": "dars",
+			"wordAlignments": [
+				{
+					"arabic": "درس",
+					"english": "Lesson",
+					"transliteration": "dars"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "فسحة",
+			"arabicTashkeel": "فُسحة",
+			"english": "Break",
+			"transliteration": "fus7a",
+			"wordAlignments": [
+				{
+					"arabic": "فسحة",
+					"english": "Break",
+					"transliteration": "fus7a"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "شنطة",
+			"arabicTashkeel": "شَنطة",
+			"english": "Schoolbag",
+			"transliteration": "shanta",
+			"wordAlignments": [
+				{
+					"arabic": "شنطة",
+					"english": "Bag",
+					"transliteration": "shanta"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "أكتب",
+			"arabicTashkeel": "أكتِب",
+			"english": "I write",
+			"transliteration": "aktib",
+			"wordAlignments": [
+				{
+					"arabic": "أكتب",
+					"english": "I write",
+					"transliteration": "aktib"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "أقرا",
+			"arabicTashkeel": "أقرا",
+			"english": "I read",
+			"transliteration": "agra",
+			"wordAlignments": [
+				{
+					"arabic": "أقرا",
+					"english": "I read",
+					"transliteration": "agra"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "أدرس",
+			"arabicTashkeel": "أدرِس",
+			"english": "I study",
+			"transliteration": "adris",
+			"wordAlignments": [
+				{
+					"arabic": "أدرس",
+					"english": "I study",
+					"transliteration": "adris"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "سؤال",
+			"arabicTashkeel": "سُؤال",
+			"english": "Question",
+			"transliteration": "su2aal",
+			"wordAlignments": [
+				{
+					"arabic": "سؤال",
+					"english": "Question",
+					"transliteration": "su2aal"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "جواب",
+			"arabicTashkeel": "جَواب",
+			"english": "Answer",
+			"transliteration": "jawaab",
+			"wordAlignments": [
+				{
+					"arabic": "جواب",
+					"english": "Answer",
+					"transliteration": "jawaab"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "المدرسة قريبة من البيت.",
+			"arabicTashkeel": "المَدرَسة قَريبة مِن البيت.",
+			"english": "The school is near the house.",
+			"transliteration": "il-madrasa gareeba min il-beet.",
+			"wordAlignments": [
+				{
+					"arabic": "المدرسة",
+					"english": "The school is",
+					"transliteration": "il-madrasa"
+				},
+				{
+					"arabic": "قريبة",
+					"english": "near",
+					"transliteration": "gareeba"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "البيت.",
+					"english": "the house.",
+					"transliteration": "il-beet."
+				}
+			],
+			"targetWords": [
+				"School"
+			]
+		},
+		{
+			"arabic": "الصف كبير.",
+			"arabicTashkeel": "الصَّف كْبير.",
+			"english": "The class is big.",
+			"transliteration": "is-saff chbeer.",
+			"wordAlignments": [
+				{
+					"arabic": "الصف",
+					"english": "The class is",
+					"transliteration": "is-saff"
+				},
+				{
+					"arabic": "كبير.",
+					"english": "big.",
+					"transliteration": "chbeer."
+				}
+			],
+			"targetWords": [
+				"Class"
+			]
+		},
+		{
+			"arabic": "الأبلة بالصف.",
+			"arabicTashkeel": "الأبلة بالصَّف.",
+			"english": "The teacher is in the class.",
+			"transliteration": "il-abla bis-saff.",
+			"wordAlignments": [
+				{
+					"arabic": "الأبلة",
+					"english": "The teacher is",
+					"transliteration": "il-abla"
+				},
+				{
+					"arabic": "بالصف.",
+					"english": "in the class.",
+					"transliteration": "bis-saff."
+				}
+			],
+			"targetWords": [
+				"Teacher (female)",
+				"Class"
+			]
+		},
+		{
+			"arabic": "وين دفتري؟",
+			"arabicTashkeel": "وين دَفتَري؟",
+			"english": "Where is my notebook?",
+			"transliteration": "ween daftari?",
+			"wordAlignments": [
+				{
+					"arabic": "وين",
+					"english": "Where is",
+					"transliteration": "ween"
+				},
+				{
+					"arabic": "دفتري؟",
+					"english": "my notebook?",
+					"transliteration": "daftari?"
+				}
+			],
+			"targetWords": [
+				"Notebook"
+			]
+		},
+		{
+			"arabic": "الأبلة تكتب على السبورة.",
+			"arabicTashkeel": "الأبلة تِكتِب على السَّبّورة.",
+			"english": "The teacher writes on the board.",
+			"transliteration": "il-abla tiktib 3ala is-sabboora.",
+			"wordAlignments": [
+				{
+					"arabic": "الأبلة",
+					"english": "The teacher",
+					"transliteration": "il-abla"
+				},
+				{
+					"arabic": "تكتب",
+					"english": "writes",
+					"transliteration": "tiktib"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "السبورة.",
+					"english": "the board.",
+					"transliteration": "is-sabboora."
+				}
+			],
+			"targetWords": [
+				"Teacher (female)",
+				"Board"
+			]
+		},
+		{
+			"arabic": "باكر عندي إمتحان.",
+			"arabicTashkeel": "باكِر عِندي إمتِحان.",
+			"english": "Tomorrow I have an exam.",
+			"transliteration": "baachir 3indi imti7aan.",
+			"wordAlignments": [
+				{
+					"arabic": "باكر",
+					"english": "Tomorrow",
+					"transliteration": "baachir"
+				},
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "إمتحان.",
+					"english": "an exam.",
+					"transliteration": "imti7aan."
+				}
+			],
+			"targetWords": [
+				"Exam"
+			]
+		},
+		{
+			"arabic": "الواجب سهل.",
+			"arabicTashkeel": "الواجِب سَهل.",
+			"english": "The homework is easy.",
+			"transliteration": "il-waajib sahl.",
+			"wordAlignments": [
+				{
+					"arabic": "الواجب",
+					"english": "The homework is",
+					"transliteration": "il-waajib"
+				},
+				{
+					"arabic": "سهل.",
+					"english": "easy.",
+					"transliteration": "sahl."
+				}
+			],
+			"targetWords": [
+				"Homework"
+			]
+		},
+		{
+			"arabic": "درس اليوم حلو.",
+			"arabicTashkeel": "دَرس اليوم حِلو.",
+			"english": "Today's lesson is nice.",
+			"transliteration": "dars il-yoom 7ilu.",
+			"wordAlignments": [
+				{
+					"arabic": "درس",
+					"english": "The lesson of",
+					"transliteration": "dars"
+				},
+				{
+					"arabic": "اليوم",
+					"english": "today is",
+					"transliteration": "il-yoom"
+				},
+				{
+					"arabic": "حلو.",
+					"english": "nice.",
+					"transliteration": "7ilu."
+				}
+			],
+			"targetWords": [
+				"Lesson"
+			]
+		},
+		{
+			"arabic": "الفسحة الساعة عشرة.",
+			"arabicTashkeel": "الفُسحة السّاعة عَشرة.",
+			"english": "The break is at ten.",
+			"transliteration": "il-fus7a is-saa3a 3ashra.",
+			"wordAlignments": [
+				{
+					"arabic": "الفسحة",
+					"english": "The break is",
+					"transliteration": "il-fus7a"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "at",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "عشرة.",
+					"english": "ten.",
+					"transliteration": "3ashra."
+				}
+			],
+			"targetWords": [
+				"Break"
+			]
+		},
+		{
+			"arabic": "شنطتي ثقيلة.",
+			"arabicTashkeel": "شَنطتي ثَقيلة.",
+			"english": "My bag is heavy.",
+			"transliteration": "shantati thageela.",
+			"wordAlignments": [
+				{
+					"arabic": "شنطتي",
+					"english": "My bag is",
+					"transliteration": "shantati"
+				},
+				{
+					"arabic": "ثقيلة.",
+					"english": "heavy.",
+					"transliteration": "thageela."
+				}
+			],
+			"targetWords": [
+				"Schoolbag"
+			]
+		},
+		{
+			"arabic": "أكتب بالدفتر.",
+			"arabicTashkeel": "أكتِب بالدَّفتَر.",
+			"english": "I write in the notebook.",
+			"transliteration": "aktib bid-daftar.",
+			"wordAlignments": [
+				{
+					"arabic": "أكتب",
+					"english": "I write",
+					"transliteration": "aktib"
+				},
+				{
+					"arabic": "بالدفتر.",
+					"english": "in the notebook.",
+					"transliteration": "bid-daftar."
+				}
+			],
+			"targetWords": [
+				"I write",
+				"Notebook"
+			]
+		},
+		{
+			"arabic": "أقرا الكتاب.",
+			"arabicTashkeel": "أقرا الكِتاب.",
+			"english": "I read the book.",
+			"transliteration": "agra il-kitaab.",
+			"wordAlignments": [
+				{
+					"arabic": "أقرا",
+					"english": "I read",
+					"transliteration": "agra"
+				},
+				{
+					"arabic": "الكتاب.",
+					"english": "the book.",
+					"transliteration": "il-kitaab."
+				}
+			],
+			"targetWords": [
+				"I read"
+			]
+		},
+		{
+			"arabic": "أدرس كل يوم.",
+			"arabicTashkeel": "أدرِس كِل يوم.",
+			"english": "I study every day.",
+			"transliteration": "adris kil yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "أدرس",
+					"english": "I study",
+					"transliteration": "adris"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kil"
+				},
+				{
+					"arabic": "يوم.",
+					"english": "day.",
+					"transliteration": "yoom."
+				}
+			],
+			"targetWords": [
+				"I study"
+			]
+		},
+		{
+			"arabic": "عندي سؤال.",
+			"arabicTashkeel": "عِندي سُؤال.",
+			"english": "I have a question.",
+			"transliteration": "3indi su2aal.",
+			"wordAlignments": [
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "سؤال.",
+					"english": "a question.",
+					"transliteration": "su2aal."
+				}
+			],
+			"targetWords": [
+				"Question"
+			]
+		},
+		{
+			"arabic": "شو الجواب؟",
+			"arabicTashkeel": "شو الجَواب؟",
+			"english": "What is the answer?",
+			"transliteration": "shu il-jawaab?",
+			"wordAlignments": [
+				{
+					"arabic": "شو",
+					"english": "What is",
+					"transliteration": "shu"
+				},
+				{
+					"arabic": "الجواب؟",
+					"english": "the answer?",
+					"transliteration": "il-jawaab?"
+				}
+			],
+			"targetWords": [
+				"Answer"
+			]
+		},
+		{
+			"arabic": "مدرستي كبيرة.",
+			"arabicTashkeel": "مَدرَستي كْبيرة.",
+			"english": "My school is big.",
+			"transliteration": "madrasti chbeera.",
+			"wordAlignments": [
+				{
+					"arabic": "مدرستي",
+					"english": "My school is",
+					"transliteration": "madrasti"
+				},
+				{
+					"arabic": "كبيرة.",
+					"english": "big.",
+					"transliteration": "chbeera."
+				}
+			],
+			"targetWords": [
+				"School"
+			]
+		},
+		{
+			"arabic": "في عشرين طالب بالصف.",
+			"arabicTashkeel": "في عِشرين طالِب بالصَّف.",
+			"english": "There are twenty students in the class.",
+			"transliteration": "fee 3ishreen taalib bis-saff.",
+			"wordAlignments": [
+				{
+					"arabic": "في",
+					"english": "There are",
+					"transliteration": "fee"
+				},
+				{
+					"arabic": "عشرين",
+					"english": "twenty",
+					"transliteration": "3ishreen"
+				},
+				{
+					"arabic": "طالب",
+					"english": "students",
+					"transliteration": "taalib"
+				},
+				{
+					"arabic": "بالصف.",
+					"english": "in the class.",
+					"transliteration": "bis-saff."
+				}
+			],
+			"targetWords": [
+				"Class"
+			]
+		},
+		{
+			"arabic": "أبلة، عندي سؤال!",
+			"arabicTashkeel": "أبلة، عِندي سُؤال!",
+			"english": "Miss, I have a question!",
+			"transliteration": "abla, 3indi su2aal!",
+			"wordAlignments": [
+				{
+					"arabic": "أبلة،",
+					"english": "Miss,",
+					"transliteration": "abla,"
+				},
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "سؤال!",
+					"english": "a question!",
+					"transliteration": "su2aal!"
+				}
+			],
+			"targetWords": [
+				"Teacher (female)",
+				"Question"
+			]
+		},
+		{
+			"arabic": "الدفتر بالشنطة.",
+			"arabicTashkeel": "الدَّفتَر بالشَّنطة.",
+			"english": "The notebook is in the bag.",
+			"transliteration": "id-daftar bish-shanta.",
+			"wordAlignments": [
+				{
+					"arabic": "الدفتر",
+					"english": "The notebook is",
+					"transliteration": "id-daftar"
+				},
+				{
+					"arabic": "بالشنطة.",
+					"english": "in the bag.",
+					"transliteration": "bish-shanta."
+				}
+			],
+			"targetWords": [
+				"Notebook",
+				"Schoolbag"
+			]
+		},
+		{
+			"arabic": "السبورة نظيفة.",
+			"arabicTashkeel": "السَّبّورة نْظيفة.",
+			"english": "The board is clean.",
+			"transliteration": "is-sabboora ndheefa.",
+			"wordAlignments": [
+				{
+					"arabic": "السبورة",
+					"english": "The board is",
+					"transliteration": "is-sabboora"
+				},
+				{
+					"arabic": "نظيفة.",
+					"english": "clean.",
+					"transliteration": "ndheefa."
+				}
+			],
+			"targetWords": [
+				"Board"
+			]
+		},
+		{
+			"arabic": "الإمتحان سهل.",
+			"arabicTashkeel": "الإمتِحان سَهل.",
+			"english": "The exam is easy.",
+			"transliteration": "il-imti7aan sahl.",
+			"wordAlignments": [
+				{
+					"arabic": "الإمتحان",
+					"english": "The exam is",
+					"transliteration": "il-imti7aan"
+				},
+				{
+					"arabic": "سهل.",
+					"english": "easy.",
+					"transliteration": "sahl."
+				}
+			],
+			"targetWords": [
+				"Exam"
+			]
+		},
+		{
+			"arabic": "وين الواجب؟",
+			"arabicTashkeel": "وين الواجِب؟",
+			"english": "Where is the homework?",
+			"transliteration": "ween il-waajib?",
+			"wordAlignments": [
+				{
+					"arabic": "وين",
+					"english": "Where is",
+					"transliteration": "ween"
+				},
+				{
+					"arabic": "الواجب؟",
+					"english": "the homework?",
+					"transliteration": "il-waajib?"
+				}
+			],
+			"targetWords": [
+				"Homework"
+			]
+		},
+		{
+			"arabic": "الدرس يبدا الساعة سبعة ونص.",
+			"arabicTashkeel": "الدَّرس يِبدا السّاعة سَبعة ونُص.",
+			"english": "The lesson starts at seven thirty.",
+			"transliteration": "id-dars yibda is-saa3a sab3a w-nuss.",
+			"wordAlignments": [
+				{
+					"arabic": "الدرس",
+					"english": "The lesson",
+					"transliteration": "id-dars"
+				},
+				{
+					"arabic": "يبدا",
+					"english": "starts",
+					"transliteration": "yibda"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "at",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "سبعة",
+					"english": "seven",
+					"transliteration": "sab3a"
+				},
+				{
+					"arabic": "ونص.",
+					"english": "and a half.",
+					"transliteration": "w-nuss."
+				}
+			],
+			"targetWords": [
+				"Lesson"
+			]
+		},
+		{
+			"arabic": "بالفسحة ناكل.",
+			"arabicTashkeel": "بالفُسحة ناكِل.",
+			"english": "During the break we eat.",
+			"transliteration": "bil-fus7a naakil.",
+			"wordAlignments": [
+				{
+					"arabic": "بالفسحة",
+					"english": "During the break",
+					"transliteration": "bil-fus7a"
+				},
+				{
+					"arabic": "ناكل.",
+					"english": "we eat.",
+					"transliteration": "naakil."
+				}
+			],
+			"targetWords": [
+				"Break"
+			]
+		},
+		{
+			"arabic": "الشنطة تحت الكرسي.",
+			"arabicTashkeel": "الشَّنطة تَحت الكِرسي.",
+			"english": "The bag is under the chair.",
+			"transliteration": "ish-shanta ta7t il-kirsi.",
+			"wordAlignments": [
+				{
+					"arabic": "الشنطة",
+					"english": "The bag is",
+					"transliteration": "ish-shanta"
+				},
+				{
+					"arabic": "تحت",
+					"english": "under",
+					"transliteration": "ta7t"
+				},
+				{
+					"arabic": "الكرسي.",
+					"english": "the chair.",
+					"transliteration": "il-kirsi."
+				}
+			],
+			"targetWords": [
+				"Schoolbag"
+			]
+		},
+		{
+			"arabic": "أكتب إسمي.",
+			"arabicTashkeel": "أكتِب إسمي.",
+			"english": "I write my name.",
+			"transliteration": "aktib ismi.",
+			"wordAlignments": [
+				{
+					"arabic": "أكتب",
+					"english": "I write",
+					"transliteration": "aktib"
+				},
+				{
+					"arabic": "إسمي.",
+					"english": "my name.",
+					"transliteration": "ismi."
+				}
+			],
+			"targetWords": [
+				"I write"
+			]
+		},
+		{
+			"arabic": "أقرا قصة.",
+			"arabicTashkeel": "أقرا قِصّة.",
+			"english": "I read a story.",
+			"transliteration": "agra gissa.",
+			"wordAlignments": [
+				{
+					"arabic": "أقرا",
+					"english": "I read",
+					"transliteration": "agra"
+				},
+				{
+					"arabic": "قصة.",
+					"english": "a story.",
+					"transliteration": "gissa."
+				}
+			],
+			"targetWords": [
+				"I read"
+			]
+		},
+		{
+			"arabic": "أدرس حق الإمتحان.",
+			"arabicTashkeel": "أدرِس حَق الإمتِحان.",
+			"english": "I study for the exam.",
+			"transliteration": "adris 7agg il-imti7aan.",
+			"wordAlignments": [
+				{
+					"arabic": "أدرس",
+					"english": "I study",
+					"transliteration": "adris"
+				},
+				{
+					"arabic": "حق",
+					"english": "for",
+					"transliteration": "7agg"
+				},
+				{
+					"arabic": "الإمتحان.",
+					"english": "the exam.",
+					"transliteration": "il-imti7aan."
+				}
+			],
+			"targetWords": [
+				"I study",
+				"Exam"
+			]
+		},
+		{
+			"arabic": "السؤال صعب.",
+			"arabicTashkeel": "السُّؤال صَعب.",
+			"english": "The question is hard.",
+			"transliteration": "is-su2aal sa3b.",
+			"wordAlignments": [
+				{
+					"arabic": "السؤال",
+					"english": "The question is",
+					"transliteration": "is-su2aal"
+				},
+				{
+					"arabic": "صعب.",
+					"english": "hard.",
+					"transliteration": "sa3b."
+				}
+			],
+			"targetWords": [
+				"Question"
+			]
+		},
+		{
+			"arabic": "الجواب صح.",
+			"arabicTashkeel": "الجَواب صَح.",
+			"english": "The answer is correct.",
+			"transliteration": "il-jawaab sa7.",
+			"wordAlignments": [
+				{
+					"arabic": "الجواب",
+					"english": "The answer is",
+					"transliteration": "il-jawaab"
+				},
+				{
+					"arabic": "صح.",
+					"english": "correct.",
+					"transliteration": "sa7."
+				}
+			],
+			"targetWords": [
+				"Answer"
+			]
+		},
+		{
+			"arabic": "العيال يروحون المدرسة.",
+			"arabicTashkeel": "العْيال يْروحون المَدرَسة.",
+			"english": "The kids go to school.",
+			"transliteration": "il-3yaal yroo7oon il-madrasa.",
+			"wordAlignments": [
+				{
+					"arabic": "العيال",
+					"english": "The kids",
+					"transliteration": "il-3yaal"
+				},
+				{
+					"arabic": "يروحون",
+					"english": "go",
+					"transliteration": "yroo7oon"
+				},
+				{
+					"arabic": "المدرسة.",
+					"english": "to school.",
+					"transliteration": "il-madrasa."
+				}
+			],
+			"targetWords": [
+				"School"
+			]
+		},
+		{
+			"arabic": "صفنا بالدور الثاني.",
+			"arabicTashkeel": "صَفّنا بالدّور الثّاني.",
+			"english": "Our class is on the second floor.",
+			"transliteration": "saffna bid-door ith-thaani.",
+			"wordAlignments": [
+				{
+					"arabic": "صفنا",
+					"english": "Our class is",
+					"transliteration": "saffna"
+				},
+				{
+					"arabic": "بالدور",
+					"english": "on the floor",
+					"transliteration": "bid-door"
+				},
+				{
+					"arabic": "الثاني.",
+					"english": "second.",
+					"transliteration": "ith-thaani."
+				}
+			],
+			"targetWords": [
+				"Class"
+			]
+		},
+		{
+			"arabic": "الأبلة طيبة وايد.",
+			"arabicTashkeel": "الأبلة طَيبة وايد.",
+			"english": "The teacher is very kind.",
+			"transliteration": "il-abla tayba waayid.",
+			"wordAlignments": [
+				{
+					"arabic": "الأبلة",
+					"english": "The teacher is",
+					"transliteration": "il-abla"
+				},
+				{
+					"arabic": "طيبة",
+					"english": "kind",
+					"transliteration": "tayba"
+				},
+				{
+					"arabic": "وايد.",
+					"english": "very.",
+					"transliteration": "waayid."
+				}
+			],
+			"targetWords": [
+				"Teacher (female)"
+			]
+		},
+		{
+			"arabic": "الدفتر جديد.",
+			"arabicTashkeel": "الدَّفتَر جْديد.",
+			"english": "The notebook is new.",
+			"transliteration": "id-daftar ydeed.",
+			"wordAlignments": [
+				{
+					"arabic": "الدفتر",
+					"english": "The notebook is",
+					"transliteration": "id-daftar"
+				},
+				{
+					"arabic": "جديد.",
+					"english": "new.",
+					"transliteration": "ydeed."
+				}
+			],
+			"targetWords": [
+				"Notebook"
+			]
+		},
+		{
+			"arabic": "أكتب على السبورة.",
+			"arabicTashkeel": "أُكتُب على السَّبّورة.",
+			"english": "Write on the board.",
+			"transliteration": "uktub 3ala is-sabboora.",
+			"wordAlignments": [
+				{
+					"arabic": "أكتب",
+					"english": "Write",
+					"transliteration": "uktub"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "السبورة.",
+					"english": "the board.",
+					"transliteration": "is-sabboora."
+				}
+			],
+			"targetWords": [
+				"Board"
+			]
+		},
+		{
+			"arabic": "متى الإمتحان؟",
+			"arabicTashkeel": "مِتى الإمتِحان؟",
+			"english": "When is the exam?",
+			"transliteration": "mita il-imti7aan?",
+			"wordAlignments": [
+				{
+					"arabic": "متى",
+					"english": "When is",
+					"transliteration": "mita"
+				},
+				{
+					"arabic": "الإمتحان؟",
+					"english": "the exam?",
+					"transliteration": "il-imti7aan?"
+				}
+			],
+			"targetWords": [
+				"Exam"
+			]
+		},
+		{
+			"arabic": "أسوي الواجب بالبيت.",
+			"arabicTashkeel": "أسَوّي الواجِب بالبيت.",
+			"english": "I do my homework at home.",
+			"transliteration": "asawwi il-waajib bil-beet.",
+			"wordAlignments": [
+				{
+					"arabic": "أسوي",
+					"english": "I do",
+					"transliteration": "asawwi"
+				},
+				{
+					"arabic": "الواجب",
+					"english": "the homework",
+					"transliteration": "il-waajib"
+				},
+				{
+					"arabic": "بالبيت.",
+					"english": "at home.",
+					"transliteration": "bil-beet."
+				}
+			],
+			"targetWords": [
+				"Homework"
+			]
+		},
+		{
+			"arabic": "الدرس طويل.",
+			"arabicTashkeel": "الدَّرس طْويل.",
+			"english": "The lesson is long.",
+			"transliteration": "id-dars tweel.",
+			"wordAlignments": [
+				{
+					"arabic": "الدرس",
+					"english": "The lesson is",
+					"transliteration": "id-dars"
+				},
+				{
+					"arabic": "طويل.",
+					"english": "long.",
+					"transliteration": "tweel."
+				}
+			],
+			"targetWords": [
+				"Lesson"
+			]
+		},
+		{
+			"arabic": "الفسحة قصيرة.",
+			"arabicTashkeel": "الفُسحة قْصَيّرة.",
+			"english": "The break is short.",
+			"transliteration": "il-fus7a gsayyra.",
+			"wordAlignments": [
+				{
+					"arabic": "الفسحة",
+					"english": "The break is",
+					"transliteration": "il-fus7a"
+				},
+				{
+					"arabic": "قصيرة.",
+					"english": "short.",
+					"transliteration": "gsayyra."
+				}
+			],
+			"targetWords": [
+				"Break"
+			]
+		},
+		{
+			"arabic": "شنطتي وردية.",
+			"arabicTashkeel": "شَنطتي وَردية.",
+			"english": "My bag is pink.",
+			"transliteration": "shantati wardiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "شنطتي",
+					"english": "My bag is",
+					"transliteration": "shantati"
+				},
+				{
+					"arabic": "وردية.",
+					"english": "pink.",
+					"transliteration": "wardiyya."
+				}
+			],
+			"targetWords": [
+				"Schoolbag"
+			]
+		},
+		{
+			"arabic": "أكتب الجواب.",
+			"arabicTashkeel": "أكتِب الجَواب.",
+			"english": "I write the answer.",
+			"transliteration": "aktib il-jawaab.",
+			"wordAlignments": [
+				{
+					"arabic": "أكتب",
+					"english": "I write",
+					"transliteration": "aktib"
+				},
+				{
+					"arabic": "الجواب.",
+					"english": "the answer.",
+					"transliteration": "il-jawaab."
+				}
+			],
+			"targetWords": [
+				"I write",
+				"Answer"
+			]
+		},
+		{
+			"arabic": "أقرا السؤال.",
+			"arabicTashkeel": "أقرا السُّؤال.",
+			"english": "I read the question.",
+			"transliteration": "agra is-su2aal.",
+			"wordAlignments": [
+				{
+					"arabic": "أقرا",
+					"english": "I read",
+					"transliteration": "agra"
+				},
+				{
+					"arabic": "السؤال.",
+					"english": "the question.",
+					"transliteration": "is-su2aal."
+				}
+			],
+			"targetWords": [
+				"I read",
+				"Question"
+			]
+		},
+		{
+			"arabic": "أدرس بالبيت.",
+			"arabicTashkeel": "أدرِس بالبيت.",
+			"english": "I study at home.",
+			"transliteration": "adris bil-beet.",
+			"wordAlignments": [
+				{
+					"arabic": "أدرس",
+					"english": "I study",
+					"transliteration": "adris"
+				},
+				{
+					"arabic": "بالبيت.",
+					"english": "at home.",
+					"transliteration": "bil-beet."
+				}
+			],
+			"targetWords": [
+				"I study"
+			]
+		},
+		{
+			"arabic": "الأبلة تسأل سؤال.",
+			"arabicTashkeel": "الأبلة تِسأل سُؤال.",
+			"english": "The teacher asks a question.",
+			"transliteration": "il-abla tis2al su2aal.",
+			"wordAlignments": [
+				{
+					"arabic": "الأبلة",
+					"english": "The teacher",
+					"transliteration": "il-abla"
+				},
+				{
+					"arabic": "تسأل",
+					"english": "asks",
+					"transliteration": "tis2al"
+				},
+				{
+					"arabic": "سؤال.",
+					"english": "a question.",
+					"transliteration": "su2aal."
+				}
+			],
+			"targetWords": [
+				"Teacher (female)",
+				"Question"
+			]
+		},
+		{
+			"arabic": "أعرف الجواب!",
+			"arabicTashkeel": "أعرِف الجَواب!",
+			"english": "I know the answer!",
+			"transliteration": "a3rif il-jawaab!",
+			"wordAlignments": [
+				{
+					"arabic": "أعرف",
+					"english": "I know",
+					"transliteration": "a3rif"
+				},
+				{
+					"arabic": "الجواب!",
+					"english": "the answer!",
+					"transliteration": "il-jawaab!"
+				}
+			],
+			"targetWords": [
+				"Answer"
+			]
+		},
+		{
+			"arabic": "وين المدرسة؟",
+			"arabicTashkeel": "وين المَدرَسة؟",
+			"english": "Where is the school?",
+			"transliteration": "ween il-madrasa?",
+			"wordAlignments": [
+				{
+					"arabic": "وين",
+					"english": "Where is",
+					"transliteration": "ween"
+				},
+				{
+					"arabic": "المدرسة؟",
+					"english": "the school?",
+					"transliteration": "il-madrasa?"
+				}
+			],
+			"targetWords": [
+				"School"
+			]
+		},
+		{
+			"arabic": "الصف نظيف.",
+			"arabicTashkeel": "الصَّف نْظيف.",
+			"english": "The class is clean.",
+			"transliteration": "is-saff ndheef.",
+			"wordAlignments": [
+				{
+					"arabic": "الصف",
+					"english": "The class is",
+					"transliteration": "is-saff"
+				},
+				{
+					"arabic": "نظيف.",
+					"english": "clean.",
+					"transliteration": "ndheef."
+				}
+			],
+			"targetWords": [
+				"Class"
+			]
+		},
+		{
+			"arabic": "الإمتحان يوم الأحد.",
+			"arabicTashkeel": "الإمتِحان يوم الأحَد.",
+			"english": "The exam is on Sunday.",
+			"transliteration": "il-imti7aan yoom il-a7ad.",
+			"wordAlignments": [
+				{
+					"arabic": "الإمتحان",
+					"english": "The exam is",
+					"transliteration": "il-imti7aan"
+				},
+				{
+					"arabic": "يوم",
+					"english": "on",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "الأحد.",
+					"english": "Sunday.",
+					"transliteration": "il-a7ad."
+				}
+			],
+			"targetWords": [
+				"Exam"
+			]
+		},
+		{
+			"arabic": "الواجب بالدفتر.",
+			"arabicTashkeel": "الواجِب بالدَّفتَر.",
+			"english": "The homework is in the notebook.",
+			"transliteration": "il-waajib bid-daftar.",
+			"wordAlignments": [
+				{
+					"arabic": "الواجب",
+					"english": "The homework is",
+					"transliteration": "il-waajib"
+				},
+				{
+					"arabic": "بالدفتر.",
+					"english": "in the notebook.",
+					"transliteration": "bid-daftar."
+				}
+			],
+			"targetWords": [
+				"Homework",
+				"Notebook"
+			]
+		},
+		{
+			"arabic": "فاهم الدرس.",
+			"arabicTashkeel": "فاهِم الدَّرس.",
+			"english": "I understand the lesson.",
+			"transliteration": "faahim id-dars.",
+			"wordAlignments": [
+				{
+					"arabic": "فاهم",
+					"english": "I understand",
+					"transliteration": "faahim"
+				},
+				{
+					"arabic": "الدرس.",
+					"english": "the lesson.",
+					"transliteration": "id-dars."
+				}
+			],
+			"targetWords": [
+				"Lesson"
+			]
+		},
+		{
+			"arabic": "الفسحة خلصت.",
+			"arabicTashkeel": "الفُسحة خَلصَت.",
+			"english": "The break is over.",
+			"transliteration": "il-fus7a khalsat.",
+			"wordAlignments": [
+				{
+					"arabic": "الفسحة",
+					"english": "The break",
+					"transliteration": "il-fus7a"
+				},
+				{
+					"arabic": "خلصت.",
+					"english": "is over.",
+					"transliteration": "khalsat."
+				}
+			],
+			"targetWords": [
+				"Break"
+			]
+		},
+		{
+			"arabic": "حط الكتاب بالشنطة.",
+			"arabicTashkeel": "حُط الكِتاب بالشَّنطة.",
+			"english": "Put the book in the bag.",
+			"transliteration": "7utt il-kitaab bish-shanta.",
+			"wordAlignments": [
+				{
+					"arabic": "حط",
+					"english": "Put",
+					"transliteration": "7utt"
+				},
+				{
+					"arabic": "الكتاب",
+					"english": "the book",
+					"transliteration": "il-kitaab"
+				},
+				{
+					"arabic": "بالشنطة.",
+					"english": "in the bag.",
+					"transliteration": "bish-shanta."
+				}
+			],
+			"targetWords": [
+				"Schoolbag"
+			]
+		},
+		{
+			"arabic": "أكتب وأقرا.",
+			"arabicTashkeel": "أكتِب وأقرا.",
+			"english": "I write and I read.",
+			"transliteration": "aktib w-agra.",
+			"wordAlignments": [
+				{
+					"arabic": "أكتب",
+					"english": "I write",
+					"transliteration": "aktib"
+				},
+				{
+					"arabic": "وأقرا.",
+					"english": "and I read.",
+					"transliteration": "w-agra."
+				}
+			],
+			"targetWords": [
+				"I write",
+				"I read"
+			]
+		},
+		{
+			"arabic": "أدرس عربي.",
+			"arabicTashkeel": "أدرِس عَرَبي.",
+			"english": "I study Arabic.",
+			"transliteration": "adris 3arabi.",
+			"wordAlignments": [
+				{
+					"arabic": "أدرس",
+					"english": "I study",
+					"transliteration": "adris"
+				},
+				{
+					"arabic": "عربي.",
+					"english": "Arabic.",
+					"transliteration": "3arabi."
+				}
+			],
+			"targetWords": [
+				"I study"
+			]
+		},
+		{
+			"arabic": "السبورة كبيرة.",
+			"arabicTashkeel": "السَّبّورة كْبيرة.",
+			"english": "The board is big.",
+			"transliteration": "is-sabboora chbeera.",
+			"wordAlignments": [
+				{
+					"arabic": "السبورة",
+					"english": "The board is",
+					"transliteration": "is-sabboora"
+				},
+				{
+					"arabic": "كبيرة.",
+					"english": "big.",
+					"transliteration": "chbeera."
+				}
+			],
+			"targetWords": [
+				"Board"
+			]
+		},
+		{
+			"arabic": "الأبلة تكتب الدرس على السبورة.",
+			"arabicTashkeel": "الأبلة تِكتِب الدَّرس على السَّبّورة.",
+			"english": "The teacher writes the lesson on the board.",
+			"transliteration": "il-abla tiktib id-dars 3ala is-sabboora.",
+			"wordAlignments": [
+				{
+					"arabic": "الأبلة",
+					"english": "The teacher",
+					"transliteration": "il-abla"
+				},
+				{
+					"arabic": "تكتب",
+					"english": "writes",
+					"transliteration": "tiktib"
+				},
+				{
+					"arabic": "الدرس",
+					"english": "the lesson",
+					"transliteration": "id-dars"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "السبورة.",
+					"english": "the board.",
+					"transliteration": "is-sabboora."
+				}
+			],
+			"targetWords": [
+				"Teacher (female)",
+				"Lesson",
+				"Board"
+			]
+		},
+		{
+			"arabic": "أقرا كل ليلة.",
+			"arabicTashkeel": "أقرا كِل ليلة.",
+			"english": "I read every night.",
+			"transliteration": "agra kil leela.",
+			"wordAlignments": [
+				{
+					"arabic": "أقرا",
+					"english": "I read",
+					"transliteration": "agra"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kil"
+				},
+				{
+					"arabic": "ليلة.",
+					"english": "night.",
+					"transliteration": "leela."
+				}
+			],
+			"targetWords": [
+				"I read"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "My School Day",
+			"sentences": [
+				{
+					"arabic": "أروح المدرسة الساعة سبعة.",
+					"arabicTashkeel": "أروح المَدرَسة السّاعة سَبعة.",
+					"english": "I go to school at seven.",
+					"transliteration": "arooh il-madrasa is-saa3a sab3a.",
+					"wordAlignments": [
+						{
+							"arabic": "أروح",
+							"english": "I go",
+							"transliteration": "arooh"
+						},
+						{
+							"arabic": "المدرسة",
+							"english": "to school",
+							"transliteration": "il-madrasa"
+						},
+						{
+							"arabic": "الساعة",
+							"english": "at",
+							"transliteration": "is-saa3a"
+						},
+						{
+							"arabic": "سبعة.",
+							"english": "seven.",
+							"transliteration": "sab3a."
+						}
+					]
+				},
+				{
+					"arabic": "الأبلة تكتب الدرس على السبورة.",
+					"arabicTashkeel": "الأبلة تِكتِب الدَّرس على السَّبّورة.",
+					"english": "The teacher writes the lesson on the board.",
+					"transliteration": "il-abla tiktib id-dars 3ala is-sabboora.",
+					"wordAlignments": [
+						{
+							"arabic": "الأبلة",
+							"english": "The teacher",
+							"transliteration": "il-abla"
+						},
+						{
+							"arabic": "تكتب",
+							"english": "writes",
+							"transliteration": "tiktib"
+						},
+						{
+							"arabic": "الدرس",
+							"english": "the lesson",
+							"transliteration": "id-dars"
+						},
+						{
+							"arabic": "على",
+							"english": "on",
+							"transliteration": "3ala"
+						},
+						{
+							"arabic": "السبورة.",
+							"english": "the board.",
+							"transliteration": "is-sabboora."
+						}
+					]
+				},
+				{
+					"arabic": "بالفسحة نلعب برا.",
+					"arabicTashkeel": "بالفُسحة نِلعَب بَرّا.",
+					"english": "During the break we play outside.",
+					"transliteration": "bil-fus7a nil3ab barra.",
+					"wordAlignments": [
+						{
+							"arabic": "بالفسحة",
+							"english": "During the break",
+							"transliteration": "bil-fus7a"
+						},
+						{
+							"arabic": "نلعب",
+							"english": "we play",
+							"transliteration": "nil3ab"
+						},
+						{
+							"arabic": "برا.",
+							"english": "outside.",
+							"transliteration": "barra."
+						}
+					]
+				},
+				{
+					"arabic": "بالبيت أسوي الواجب.",
+					"arabicTashkeel": "بالبيت أسَوّي الواجِب.",
+					"english": "At home I do my homework.",
+					"transliteration": "bil-beet asawwi il-waajib.",
+					"wordAlignments": [
+						{
+							"arabic": "بالبيت",
+							"english": "At home",
+							"transliteration": "bil-beet"
+						},
+						{
+							"arabic": "أسوي",
+							"english": "I do",
+							"transliteration": "asawwi"
+						},
+						{
+							"arabic": "الواجب.",
+							"english": "the homework.",
+							"transliteration": "il-waajib."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "Before the Exam",
+			"sentences": [
+				{
+					"arabic": "باكر عندنا إمتحان.",
+					"arabicTashkeel": "باكِر عِندنا إمتِحان.",
+					"english": "Tomorrow we have an exam.",
+					"transliteration": "baachir 3indana imti7aan.",
+					"wordAlignments": [
+						{
+							"arabic": "باكر",
+							"english": "Tomorrow",
+							"transliteration": "baachir"
+						},
+						{
+							"arabic": "عندنا",
+							"english": "we have",
+							"transliteration": "3indana"
+						},
+						{
+							"arabic": "إمتحان.",
+							"english": "an exam.",
+							"transliteration": "imti7aan."
+						}
+					]
+				},
+				{
+					"arabic": "أدرس وأقرا الكتاب.",
+					"arabicTashkeel": "أدرِس وأقرا الكِتاب.",
+					"english": "I study and I read the book.",
+					"transliteration": "adris w-agra il-kitaab.",
+					"wordAlignments": [
+						{
+							"arabic": "أدرس",
+							"english": "I study",
+							"transliteration": "adris"
+						},
+						{
+							"arabic": "وأقرا",
+							"english": "and I read",
+							"transliteration": "w-agra"
+						},
+						{
+							"arabic": "الكتاب.",
+							"english": "the book.",
+							"transliteration": "il-kitaab."
+						}
+					]
+				},
+				{
+					"arabic": "أبلة، الإمتحان صعب؟",
+					"arabicTashkeel": "أبلة، الإمتِحان صَعب؟",
+					"english": "Miss, is the exam hard?",
+					"transliteration": "abla, il-imti7aan sa3b?",
+					"wordAlignments": [
+						{
+							"arabic": "أبلة،",
+							"english": "Miss,",
+							"transliteration": "abla,"
+						},
+						{
+							"arabic": "الإمتحان",
+							"english": "is the exam",
+							"transliteration": "il-imti7aan"
+						},
+						{
+							"arabic": "صعب؟",
+							"english": "hard?",
+							"transliteration": "sa3b?"
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "It is break time at a school in Kuwait, and the student is chatting with a Kuwaiti classmate about lessons and tomorrow's exam.",
+		"studentRole": "A new student learning Gulf Arabic.",
+		"otherRole": "A chatty Kuwaiti classmate.",
+		"goalEnglish": "Talk about your class and teacher, ask when the exam is, and say what you study and read at home.",
+		"targetWords": [
+			"School",
+			"Class",
+			"Teacher (female)",
+			"Exam",
+			"Homework",
+			"Lesson",
+			"I study",
+			"Question"
+		]
+	}
+}
