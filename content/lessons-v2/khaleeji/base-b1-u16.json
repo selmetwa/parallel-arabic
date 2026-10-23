@@ -1,0 +1,2051 @@
+{
+	"vocab": [
+		{
+			"arabic": "أعتقد",
+			"arabicTashkeel": "أعتِقِد",
+			"english": "I think",
+			"transliteration": "a3tigid",
+			"wordAlignments": [
+				{
+					"arabic": "أعتقد",
+					"english": "I think",
+					"transliteration": "a3tigid"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "برأيي",
+			"arabicTashkeel": "برأيي",
+			"english": "In my opinion",
+			"transliteration": "b-ra2yi",
+			"wordAlignments": [
+				{
+					"arabic": "برأيي",
+					"english": "In my opinion",
+					"transliteration": "b-ra2yi"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "أظن",
+			"arabicTashkeel": "أظِن",
+			"english": "I suppose",
+			"transliteration": "adhinn",
+			"wordAlignments": [
+				{
+					"arabic": "أظن",
+					"english": "I suppose",
+					"transliteration": "adhinn"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "أتفق",
+			"arabicTashkeel": "أتِّفِق",
+			"english": "I agree",
+			"transliteration": "attifig",
+			"wordAlignments": [
+				{
+					"arabic": "أتفق",
+					"english": "I agree",
+					"transliteration": "attifig"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "ما أتفق",
+			"arabicTashkeel": "ما أتِّفِق",
+			"english": "I disagree",
+			"transliteration": "ma attifig",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "أتفق",
+					"english": "I agree",
+					"transliteration": "attifig"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "صح",
+			"arabicTashkeel": "صَح",
+			"english": "Right / correct",
+			"transliteration": "sa77",
+			"wordAlignments": [
+				{
+					"arabic": "صح",
+					"english": "Right",
+					"transliteration": "sa77"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "غلط",
+			"arabicTashkeel": "غَلَط",
+			"english": "Wrong",
+			"transliteration": "ghalat",
+			"wordAlignments": [
+				{
+					"arabic": "غلط",
+					"english": "Wrong",
+					"transliteration": "ghalat"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "فكرة",
+			"arabicTashkeel": "فِكرة",
+			"english": "Idea",
+			"transliteration": "fikra",
+			"wordAlignments": [
+				{
+					"arabic": "فكرة",
+					"english": "Idea",
+					"transliteration": "fikra"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "رأي",
+			"arabicTashkeel": "رأي",
+			"english": "Opinion",
+			"transliteration": "ra2y",
+			"wordAlignments": [
+				{
+					"arabic": "رأي",
+					"english": "Opinion",
+					"transliteration": "ra2y"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "أحس",
+			"arabicTashkeel": "أحِس",
+			"english": "I feel",
+			"transliteration": "a7iss",
+			"wordAlignments": [
+				{
+					"arabic": "أحس",
+					"english": "I feel",
+					"transliteration": "a7iss"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "مقتنع",
+			"arabicTashkeel": "مِقتِنِع",
+			"english": "Convinced",
+			"transliteration": "migtini3",
+			"wordAlignments": [
+				{
+					"arabic": "مقتنع",
+					"english": "Convinced",
+					"transliteration": "migtini3"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "بالعكس",
+			"arabicTashkeel": "بالعَكس",
+			"english": "On the contrary",
+			"transliteration": "bil-3aks",
+			"wordAlignments": [
+				{
+					"arabic": "بالعكس",
+					"english": "On the contrary",
+					"transliteration": "bil-3aks"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "شو رأيك؟",
+			"arabicTashkeel": "شو رأيَك؟",
+			"english": "What do you think?",
+			"transliteration": "shu ra2yak?",
+			"wordAlignments": [
+				{
+					"arabic": "شو",
+					"english": "What is",
+					"transliteration": "shu"
+				},
+				{
+					"arabic": "رأيك؟",
+					"english": "your opinion?",
+					"transliteration": "ra2yak?"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "بصراحة",
+			"arabicTashkeel": "بصَراحة",
+			"english": "Honestly",
+			"transliteration": "b-saraa7a",
+			"wordAlignments": [
+				{
+					"arabic": "بصراحة",
+					"english": "Honestly",
+					"transliteration": "b-saraa7a"
+				}
+			],
+			"partOfSpeech": "adverb"
+		},
+		{
+			"arabic": "وجهة نظر",
+			"arabicTashkeel": "وِجهة نَظَر",
+			"english": "Point of view",
+			"transliteration": "wijhat nadhar",
+			"wordAlignments": [
+				{
+					"arabic": "وجهة",
+					"english": "Direction of",
+					"transliteration": "wijhat"
+				},
+				{
+					"arabic": "نظر",
+					"english": "view",
+					"transliteration": "nadhar"
+				}
+			],
+			"partOfSpeech": "phrase"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "أعتقد دبي أحلى مدينة.",
+			"arabicTashkeel": "أعتِقِد دُبَي أحلى مَدينة.",
+			"english": "I think Dubai is the most beautiful city.",
+			"transliteration": "a3tigid dubay a7la madeena.",
+			"wordAlignments": [
+				{
+					"arabic": "أعتقد",
+					"english": "I think",
+					"transliteration": "a3tigid"
+				},
+				{
+					"arabic": "دبي",
+					"english": "Dubai is",
+					"transliteration": "dubay"
+				},
+				{
+					"arabic": "أحلى",
+					"english": "the nicest",
+					"transliteration": "a7la"
+				},
+				{
+					"arabic": "مدينة.",
+					"english": "city.",
+					"transliteration": "madeena."
+				}
+			],
+			"targetWords": [
+				"I think"
+			]
+		},
+		{
+			"arabic": "برأيي، الأكل هني أحسن.",
+			"arabicTashkeel": "برأيي، الأكل هِني أحسَن.",
+			"english": "In my opinion, the food here is better.",
+			"transliteration": "b-ra2yi, il-akl hini a7san.",
+			"wordAlignments": [
+				{
+					"arabic": "برأيي،",
+					"english": "In my opinion,",
+					"transliteration": "b-ra2yi,"
+				},
+				{
+					"arabic": "الأكل",
+					"english": "the food",
+					"transliteration": "il-akl"
+				},
+				{
+					"arabic": "هني",
+					"english": "here is",
+					"transliteration": "hini"
+				},
+				{
+					"arabic": "أحسن.",
+					"english": "better.",
+					"transliteration": "a7san."
+				}
+			],
+			"targetWords": [
+				"In my opinion"
+			]
+		},
+		{
+			"arabic": "أظن بيجي متأخر.",
+			"arabicTashkeel": "أظِن بِيجي مِتأخِّر.",
+			"english": "I suppose he's coming late.",
+			"transliteration": "adhinn biyi mit2akhkhir.",
+			"wordAlignments": [
+				{
+					"arabic": "أظن",
+					"english": "I suppose",
+					"transliteration": "adhinn"
+				},
+				{
+					"arabic": "بيجي",
+					"english": "he'll come",
+					"transliteration": "biyi"
+				},
+				{
+					"arabic": "متأخر.",
+					"english": "late.",
+					"transliteration": "mit2akhkhir."
+				}
+			],
+			"targetWords": [
+				"I suppose"
+			]
+		},
+		{
+			"arabic": "أتفق وياك.",
+			"arabicTashkeel": "أتِّفِق وِيّاك.",
+			"english": "I agree with you.",
+			"transliteration": "attifig wiyyaak.",
+			"wordAlignments": [
+				{
+					"arabic": "أتفق",
+					"english": "I agree",
+					"transliteration": "attifig"
+				},
+				{
+					"arabic": "وياك.",
+					"english": "with you.",
+					"transliteration": "wiyyaak."
+				}
+			],
+			"targetWords": [
+				"I agree"
+			]
+		},
+		{
+			"arabic": "ما أتفق، هاذا مو صح.",
+			"arabicTashkeel": "ما أتِّفِق، هاذا مو صَح.",
+			"english": "I disagree, this is not right.",
+			"transliteration": "ma attifig, haadha moo sa77.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "أتفق،",
+					"english": "I agree,",
+					"transliteration": "attifig,"
+				},
+				{
+					"arabic": "هاذا",
+					"english": "this is",
+					"transliteration": "haadha"
+				},
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "صح.",
+					"english": "right.",
+					"transliteration": "sa77."
+				}
+			],
+			"targetWords": [
+				"I disagree",
+				"Right / correct"
+			]
+		},
+		{
+			"arabic": "كلامك صح.",
+			"arabicTashkeel": "كَلامَك صَح.",
+			"english": "You're right.",
+			"transliteration": "kalaamak sa77.",
+			"wordAlignments": [
+				{
+					"arabic": "كلامك",
+					"english": "Your words are",
+					"transliteration": "kalaamak"
+				},
+				{
+					"arabic": "صح.",
+					"english": "right.",
+					"transliteration": "sa77."
+				}
+			],
+			"targetWords": [
+				"Right / correct"
+			]
+		},
+		{
+			"arabic": "هاذا غلط.",
+			"arabicTashkeel": "هاذا غَلَط.",
+			"english": "That's wrong.",
+			"transliteration": "haadha ghalat.",
+			"wordAlignments": [
+				{
+					"arabic": "هاذا",
+					"english": "This is",
+					"transliteration": "haadha"
+				},
+				{
+					"arabic": "غلط.",
+					"english": "wrong.",
+					"transliteration": "ghalat."
+				}
+			],
+			"targetWords": [
+				"Wrong"
+			]
+		},
+		{
+			"arabic": "فكرة زينة!",
+			"arabicTashkeel": "فِكرة زينة!",
+			"english": "That's a good idea!",
+			"transliteration": "fikra zeena!",
+			"wordAlignments": [
+				{
+					"arabic": "فكرة",
+					"english": "An idea",
+					"transliteration": "fikra"
+				},
+				{
+					"arabic": "زينة!",
+					"english": "good!",
+					"transliteration": "zeena!"
+				}
+			],
+			"targetWords": [
+				"Idea"
+			]
+		},
+		{
+			"arabic": "كل واحد له رأيه.",
+			"arabicTashkeel": "كِل واحِد لَه رأيَه.",
+			"english": "Everyone has their opinion.",
+			"transliteration": "kil waa7id la ra2ya.",
+			"wordAlignments": [
+				{
+					"arabic": "كل",
+					"english": "Every",
+					"transliteration": "kil"
+				},
+				{
+					"arabic": "واحد",
+					"english": "one",
+					"transliteration": "waa7id"
+				},
+				{
+					"arabic": "له",
+					"english": "has",
+					"transliteration": "la"
+				},
+				{
+					"arabic": "رأيه.",
+					"english": "his opinion.",
+					"transliteration": "ra2ya."
+				}
+			],
+			"targetWords": [
+				"Opinion"
+			]
+		},
+		{
+			"arabic": "أحس هاذا مو عدل.",
+			"arabicTashkeel": "أحِس هاذا مو عَدل.",
+			"english": "I feel this is unfair.",
+			"transliteration": "a7iss haadha moo 3adl.",
+			"wordAlignments": [
+				{
+					"arabic": "أحس",
+					"english": "I feel",
+					"transliteration": "a7iss"
+				},
+				{
+					"arabic": "هاذا",
+					"english": "this is",
+					"transliteration": "haadha"
+				},
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "عدل.",
+					"english": "fair.",
+					"transliteration": "3adl."
+				}
+			],
+			"targetWords": [
+				"I feel"
+			]
+		},
+		{
+			"arabic": "مو مقتنع.",
+			"arabicTashkeel": "مو مِقتِنِع.",
+			"english": "I'm not convinced.",
+			"transliteration": "moo migtini3.",
+			"wordAlignments": [
+				{
+					"arabic": "مو",
+					"english": "Not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "مقتنع.",
+					"english": "convinced.",
+					"transliteration": "migtini3."
+				}
+			],
+			"targetWords": [
+				"Convinced"
+			]
+		},
+		{
+			"arabic": "بالعكس، رخيص وايد.",
+			"arabicTashkeel": "بالعَكس، رْخيص وايد.",
+			"english": "On the contrary, it's very cheap.",
+			"transliteration": "bil-3aks, rkhees waayid.",
+			"wordAlignments": [
+				{
+					"arabic": "بالعكس،",
+					"english": "On the contrary,",
+					"transliteration": "bil-3aks,"
+				},
+				{
+					"arabic": "رخيص",
+					"english": "it's cheap",
+					"transliteration": "rkhees"
+				},
+				{
+					"arabic": "وايد.",
+					"english": "very.",
+					"transliteration": "waayid."
+				}
+			],
+			"targetWords": [
+				"On the contrary"
+			]
+		},
+		{
+			"arabic": "شو رأيك بالفلم؟",
+			"arabicTashkeel": "شو رأيَك بالفِلم؟",
+			"english": "What do you think of the film?",
+			"transliteration": "shu ra2yak bil-filim?",
+			"wordAlignments": [
+				{
+					"arabic": "شو",
+					"english": "What is",
+					"transliteration": "shu"
+				},
+				{
+					"arabic": "رأيك",
+					"english": "your opinion",
+					"transliteration": "ra2yak"
+				},
+				{
+					"arabic": "بالفلم؟",
+					"english": "of the film?",
+					"transliteration": "bil-filim?"
+				}
+			],
+			"targetWords": [
+				"What do you think?"
+			]
+		},
+		{
+			"arabic": "بصراحة، ما عجبني.",
+			"arabicTashkeel": "بصَراحة، ما عِجَبني.",
+			"english": "Honestly, I didn't like it.",
+			"transliteration": "b-saraa7a, ma 3ijabni.",
+			"wordAlignments": [
+				{
+					"arabic": "بصراحة،",
+					"english": "Honestly,",
+					"transliteration": "b-saraa7a,"
+				},
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "عجبني.",
+					"english": "it pleased me.",
+					"transliteration": "3ijabni."
+				}
+			],
+			"targetWords": [
+				"Honestly"
+			]
+		},
+		{
+			"arabic": "هاذي وجهة نظرك.",
+			"arabicTashkeel": "هاذي وِجهة نَظَرَك.",
+			"english": "That's your point of view.",
+			"transliteration": "haadhi wijhat nadharak.",
+			"wordAlignments": [
+				{
+					"arabic": "هاذي",
+					"english": "This is",
+					"transliteration": "haadhi"
+				},
+				{
+					"arabic": "وجهة",
+					"english": "the direction of",
+					"transliteration": "wijhat"
+				},
+				{
+					"arabic": "نظرك.",
+					"english": "your view.",
+					"transliteration": "nadharak."
+				}
+			],
+			"targetWords": [
+				"Point of view"
+			]
+		},
+		{
+			"arabic": "أعتقد الإمتحان بيكون سهل.",
+			"arabicTashkeel": "أعتِقِد الإمتِحان بيكون سَهل.",
+			"english": "I think the exam will be easy.",
+			"transliteration": "a3tigid il-imti7aan beekoon sahl.",
+			"wordAlignments": [
+				{
+					"arabic": "أعتقد",
+					"english": "I think",
+					"transliteration": "a3tigid"
+				},
+				{
+					"arabic": "الإمتحان",
+					"english": "the exam",
+					"transliteration": "il-imti7aan"
+				},
+				{
+					"arabic": "بيكون",
+					"english": "will be",
+					"transliteration": "beekoon"
+				},
+				{
+					"arabic": "سهل.",
+					"english": "easy.",
+					"transliteration": "sahl."
+				}
+			],
+			"targetWords": [
+				"I think"
+			]
+		},
+		{
+			"arabic": "برأيي لازم نطلع بدري.",
+			"arabicTashkeel": "برأيي لازِم نِطلَع بَدري.",
+			"english": "In my opinion, we should leave early.",
+			"transliteration": "b-ra2yi laazim nitla3 badri.",
+			"wordAlignments": [
+				{
+					"arabic": "برأيي",
+					"english": "In my opinion",
+					"transliteration": "b-ra2yi"
+				},
+				{
+					"arabic": "لازم",
+					"english": "we must",
+					"transliteration": "laazim"
+				},
+				{
+					"arabic": "نطلع",
+					"english": "leave",
+					"transliteration": "nitla3"
+				},
+				{
+					"arabic": "بدري.",
+					"english": "early.",
+					"transliteration": "badri."
+				}
+			],
+			"targetWords": [
+				"In my opinion"
+			]
+		},
+		{
+			"arabic": "أظن هاذا صحيح.",
+			"arabicTashkeel": "أظِن هاذا صَحيح.",
+			"english": "I suppose that's true.",
+			"transliteration": "adhinn haadha sa7ee7.",
+			"wordAlignments": [
+				{
+					"arabic": "أظن",
+					"english": "I suppose",
+					"transliteration": "adhinn"
+				},
+				{
+					"arabic": "هاذا",
+					"english": "this is",
+					"transliteration": "haadha"
+				},
+				{
+					"arabic": "صحيح.",
+					"english": "true.",
+					"transliteration": "sa7ee7."
+				}
+			],
+			"targetWords": [
+				"I suppose"
+			]
+		},
+		{
+			"arabic": "نتفق على كل شي.",
+			"arabicTashkeel": "نِتِّفِق على كِل شي.",
+			"english": "We agree on everything.",
+			"transliteration": "nittifig 3ala kil shay.",
+			"wordAlignments": [
+				{
+					"arabic": "نتفق",
+					"english": "We agree",
+					"transliteration": "nittifig"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kil"
+				},
+				{
+					"arabic": "شي.",
+					"english": "thing.",
+					"transliteration": "shay."
+				}
+			],
+			"targetWords": [
+				"I agree"
+			]
+		},
+		{
+			"arabic": "ما أتفق ويا هالفكرة.",
+			"arabicTashkeel": "ما أتِّفِق وِيّا هالفِكرة.",
+			"english": "I disagree with this idea.",
+			"transliteration": "ma attifig wiyya hal-fikra.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "أتفق",
+					"english": "I agree",
+					"transliteration": "attifig"
+				},
+				{
+					"arabic": "ويا",
+					"english": "with",
+					"transliteration": "wiyya"
+				},
+				{
+					"arabic": "هالفكرة.",
+					"english": "this idea.",
+					"transliteration": "hal-fikra."
+				}
+			],
+			"targetWords": [
+				"I disagree",
+				"Idea"
+			]
+		},
+		{
+			"arabic": "هاذا الجواب الصح؟",
+			"arabicTashkeel": "هاذا الجَواب الصَّح؟",
+			"english": "Is this the right answer?",
+			"transliteration": "haadha il-jawaab is-sa77?",
+			"wordAlignments": [
+				{
+					"arabic": "هاذا",
+					"english": "Is this",
+					"transliteration": "haadha"
+				},
+				{
+					"arabic": "الجواب",
+					"english": "the answer",
+					"transliteration": "il-jawaab"
+				},
+				{
+					"arabic": "الصح؟",
+					"english": "right?",
+					"transliteration": "is-sa77?"
+				}
+			],
+			"targetWords": [
+				"Right / correct"
+			]
+		},
+		{
+			"arabic": "العنوان غلط.",
+			"arabicTashkeel": "العِنوان غَلَط.",
+			"english": "The address is wrong.",
+			"transliteration": "il-3inwaan ghalat.",
+			"wordAlignments": [
+				{
+					"arabic": "العنوان",
+					"english": "The address is",
+					"transliteration": "il-3inwaan"
+				},
+				{
+					"arabic": "غلط.",
+					"english": "wrong.",
+					"transliteration": "ghalat."
+				}
+			],
+			"targetWords": [
+				"Wrong"
+			]
+		},
+		{
+			"arabic": "عندي فكرة!",
+			"arabicTashkeel": "عِندي فِكرة!",
+			"english": "I have an idea!",
+			"transliteration": "3indi fikra!",
+			"wordAlignments": [
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "فكرة!",
+					"english": "an idea!",
+					"transliteration": "fikra!"
+				}
+			],
+			"targetWords": [
+				"Idea"
+			]
+		},
+		{
+			"arabic": "أحترم رأيك.",
+			"arabicTashkeel": "أحتِرِم رأيَك.",
+			"english": "I respect your opinion.",
+			"transliteration": "a7tirim ra2yak.",
+			"wordAlignments": [
+				{
+					"arabic": "أحترم",
+					"english": "I respect",
+					"transliteration": "a7tirim"
+				},
+				{
+					"arabic": "رأيك.",
+					"english": "your opinion.",
+					"transliteration": "ra2yak."
+				}
+			],
+			"targetWords": [
+				"Opinion"
+			]
+		},
+		{
+			"arabic": "أحس إني تعبان اليوم.",
+			"arabicTashkeel": "أحِس إنّي تَعبان اليوم.",
+			"english": "I feel tired today.",
+			"transliteration": "a7iss inni ta3baan il-yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "أحس",
+					"english": "I feel",
+					"transliteration": "a7iss"
+				},
+				{
+					"arabic": "إني",
+					"english": "that I am",
+					"transliteration": "inni"
+				},
+				{
+					"arabic": "تعبان",
+					"english": "tired",
+					"transliteration": "ta3baan"
+				},
+				{
+					"arabic": "اليوم.",
+					"english": "today.",
+					"transliteration": "il-yoom."
+				}
+			],
+			"targetWords": [
+				"I feel"
+			]
+		},
+		{
+			"arabic": "إنت مقتنع الحين؟",
+			"arabicTashkeel": "إنتَ مِقتِنِع الحين؟",
+			"english": "Are you convinced now?",
+			"transliteration": "inta migtini3 il-7een?",
+			"wordAlignments": [
+				{
+					"arabic": "إنت",
+					"english": "Are you",
+					"transliteration": "inta"
+				},
+				{
+					"arabic": "مقتنع",
+					"english": "convinced",
+					"transliteration": "migtini3"
+				},
+				{
+					"arabic": "الحين؟",
+					"english": "now?",
+					"transliteration": "il-7een?"
+				}
+			],
+			"targetWords": [
+				"Convinced"
+			]
+		},
+		{
+			"arabic": "مو حر، بالعكس، بارد.",
+			"arabicTashkeel": "مو حَر، بالعَكس، بارِد.",
+			"english": "It's not hot, on the contrary, it's cold.",
+			"transliteration": "moo 7arr, bil-3aks, baarid.",
+			"wordAlignments": [
+				{
+					"arabic": "مو",
+					"english": "Not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "حر،",
+					"english": "hot,",
+					"transliteration": "7arr,"
+				},
+				{
+					"arabic": "بالعكس،",
+					"english": "on the contrary,",
+					"transliteration": "bil-3aks,"
+				},
+				{
+					"arabic": "بارد.",
+					"english": "it's cold.",
+					"transliteration": "baarid."
+				}
+			],
+			"targetWords": [
+				"On the contrary"
+			]
+		},
+		{
+			"arabic": "شو رأيك، نروح؟",
+			"arabicTashkeel": "شو رأيَك، نْروح؟",
+			"english": "What do you think, shall we go?",
+			"transliteration": "shu ra2yak, nrooh?",
+			"wordAlignments": [
+				{
+					"arabic": "شو",
+					"english": "What is",
+					"transliteration": "shu"
+				},
+				{
+					"arabic": "رأيك،",
+					"english": "your opinion,",
+					"transliteration": "ra2yak,"
+				},
+				{
+					"arabic": "نروح؟",
+					"english": "shall we go?",
+					"transliteration": "nrooh?"
+				}
+			],
+			"targetWords": [
+				"What do you think?"
+			]
+		},
+		{
+			"arabic": "بصراحة، غالي وايد.",
+			"arabicTashkeel": "بصَراحة، غالي وايد.",
+			"english": "Honestly, it's very expensive.",
+			"transliteration": "b-saraa7a, ghaali waayid.",
+			"wordAlignments": [
+				{
+					"arabic": "بصراحة،",
+					"english": "Honestly,",
+					"transliteration": "b-saraa7a,"
+				},
+				{
+					"arabic": "غالي",
+					"english": "it's expensive",
+					"transliteration": "ghaali"
+				},
+				{
+					"arabic": "وايد.",
+					"english": "very.",
+					"transliteration": "waayid."
+				}
+			],
+			"targetWords": [
+				"Honestly"
+			]
+		},
+		{
+			"arabic": "من وجهة نظري، الخطة زينة.",
+			"arabicTashkeel": "مِن وِجهة نَظَري، الخُطّة زينة.",
+			"english": "From my point of view, it's a good plan.",
+			"transliteration": "min wijhat nadhari, il-khutta zeena.",
+			"wordAlignments": [
+				{
+					"arabic": "من",
+					"english": "From",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "وجهة",
+					"english": "the direction of",
+					"transliteration": "wijhat"
+				},
+				{
+					"arabic": "نظري،",
+					"english": "my view,",
+					"transliteration": "nadhari,"
+				},
+				{
+					"arabic": "الخطة",
+					"english": "the plan is",
+					"transliteration": "il-khutta"
+				},
+				{
+					"arabic": "زينة.",
+					"english": "good.",
+					"transliteration": "zeena."
+				}
+			],
+			"targetWords": [
+				"Point of view"
+			]
+		},
+		{
+			"arabic": "أعتقد كلامه صح.",
+			"arabicTashkeel": "أعتِقِد كَلامَه صَح.",
+			"english": "I think he's right.",
+			"transliteration": "a3tigid kalaama sa77.",
+			"wordAlignments": [
+				{
+					"arabic": "أعتقد",
+					"english": "I think",
+					"transliteration": "a3tigid"
+				},
+				{
+					"arabic": "كلامه",
+					"english": "his words are",
+					"transliteration": "kalaama"
+				},
+				{
+					"arabic": "صح.",
+					"english": "right.",
+					"transliteration": "sa77."
+				}
+			],
+			"targetWords": [
+				"I think",
+				"Right / correct"
+			]
+		},
+		{
+			"arabic": "برأيي، التكنولوجيا مفيدة.",
+			"arabicTashkeel": "برأيي، التِّكنولوجيا مُفيدة.",
+			"english": "In my opinion, technology is useful.",
+			"transliteration": "b-ra2yi, it-tiknoloojya mufeeda.",
+			"wordAlignments": [
+				{
+					"arabic": "برأيي،",
+					"english": "In my opinion,",
+					"transliteration": "b-ra2yi,"
+				},
+				{
+					"arabic": "التكنولوجيا",
+					"english": "technology is",
+					"transliteration": "it-tiknoloojya"
+				},
+				{
+					"arabic": "مفيدة.",
+					"english": "useful.",
+					"transliteration": "mufeeda."
+				}
+			],
+			"targetWords": [
+				"In my opinion"
+			]
+		},
+		{
+			"arabic": "أظنك مشغول.",
+			"arabicTashkeel": "أظِنَّك مَشغول.",
+			"english": "I suppose you're busy.",
+			"transliteration": "adhinnak mashghool.",
+			"wordAlignments": [
+				{
+					"arabic": "أظنك",
+					"english": "I suppose you are",
+					"transliteration": "adhinnak"
+				},
+				{
+					"arabic": "مشغول.",
+					"english": "busy.",
+					"transliteration": "mashghool."
+				}
+			],
+			"targetWords": [
+				"I suppose"
+			]
+		},
+		{
+			"arabic": "أتفق مية بالمية.",
+			"arabicTashkeel": "أتِّفِق مِيّة بالمِيّة.",
+			"english": "I completely agree.",
+			"transliteration": "attifig miyya bil-miyya.",
+			"wordAlignments": [
+				{
+					"arabic": "أتفق",
+					"english": "I agree",
+					"transliteration": "attifig"
+				},
+				{
+					"arabic": "مية",
+					"english": "a hundred",
+					"transliteration": "miyya"
+				},
+				{
+					"arabic": "بالمية.",
+					"english": "percent.",
+					"transliteration": "bil-miyya."
+				}
+			],
+			"targetWords": [
+				"I agree"
+			]
+		},
+		{
+			"arabic": "ما أتفق وياك، آسف.",
+			"arabicTashkeel": "ما أتِّفِق وِيّاك، آسِف.",
+			"english": "I disagree with you, sorry.",
+			"transliteration": "ma attifig wiyyaak, aasif.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "أتفق",
+					"english": "I agree",
+					"transliteration": "attifig"
+				},
+				{
+					"arabic": "وياك،",
+					"english": "with you,",
+					"transliteration": "wiyyaak,"
+				},
+				{
+					"arabic": "آسف.",
+					"english": "sorry.",
+					"transliteration": "aasif."
+				}
+			],
+			"targetWords": [
+				"I disagree"
+			]
+		},
+		{
+			"arabic": "الطريقة الصح.",
+			"arabicTashkeel": "الطَّريقة الصَّح.",
+			"english": "The right way.",
+			"transliteration": "it-tareega is-sa77.",
+			"wordAlignments": [
+				{
+					"arabic": "الطريقة",
+					"english": "The way",
+					"transliteration": "it-tareega"
+				},
+				{
+					"arabic": "الصح.",
+					"english": "right.",
+					"transliteration": "is-sa77."
+				}
+			],
+			"targetWords": [
+				"Right / correct"
+			]
+		},
+		{
+			"arabic": "قرار غلط.",
+			"arabicTashkeel": "قَرار غَلَط.",
+			"english": "A wrong decision.",
+			"transliteration": "garaar ghalat.",
+			"wordAlignments": [
+				{
+					"arabic": "قرار",
+					"english": "A decision",
+					"transliteration": "garaar"
+				},
+				{
+					"arabic": "غلط.",
+					"english": "wrong.",
+					"transliteration": "ghalat."
+				}
+			],
+			"targetWords": [
+				"Wrong"
+			]
+		},
+		{
+			"arabic": "فكرة تهبل، يلا نسويها.",
+			"arabicTashkeel": "فِكرة تْهَبِّل، يَلّا نسَوّيها.",
+			"english": "A great idea, let's do it.",
+			"transliteration": "fikra thabbil, yalla nsawweeha.",
+			"wordAlignments": [
+				{
+					"arabic": "فكرة",
+					"english": "An idea",
+					"transliteration": "fikra"
+				},
+				{
+					"arabic": "تهبل،",
+					"english": "awesome,",
+					"transliteration": "thabbil,"
+				},
+				{
+					"arabic": "يلا",
+					"english": "come on",
+					"transliteration": "yalla"
+				},
+				{
+					"arabic": "نسويها.",
+					"english": "let's do it.",
+					"transliteration": "nsawweeha."
+				}
+			],
+			"targetWords": [
+				"Idea"
+			]
+		},
+		{
+			"arabic": "شو رأيك بالقانون الجديد؟",
+			"arabicTashkeel": "شو رأيَك بالقانون الجْديد؟",
+			"english": "What is your opinion of the new law?",
+			"transliteration": "shu ra2yak bil-gaanoon il-ydeed?",
+			"wordAlignments": [
+				{
+					"arabic": "شو",
+					"english": "What is",
+					"transliteration": "shu"
+				},
+				{
+					"arabic": "رأيك",
+					"english": "your opinion",
+					"transliteration": "ra2yak"
+				},
+				{
+					"arabic": "بالقانون",
+					"english": "of the law",
+					"transliteration": "bil-gaanoon"
+				},
+				{
+					"arabic": "الجديد؟",
+					"english": "new?",
+					"transliteration": "il-ydeed?"
+				}
+			],
+			"targetWords": [
+				"Opinion"
+			]
+		},
+		{
+			"arabic": "أحس إنه صادق.",
+			"arabicTashkeel": "أحِس إنَّه صادِق.",
+			"english": "I feel that he's honest.",
+			"transliteration": "a7iss inna saadig.",
+			"wordAlignments": [
+				{
+					"arabic": "أحس",
+					"english": "I feel",
+					"transliteration": "a7iss"
+				},
+				{
+					"arabic": "إنه",
+					"english": "that he is",
+					"transliteration": "inna"
+				},
+				{
+					"arabic": "صادق.",
+					"english": "honest.",
+					"transliteration": "saadig."
+				}
+			],
+			"targetWords": [
+				"I feel"
+			]
+		},
+		{
+			"arabic": "أنا مقتنع بكلامك.",
+			"arabicTashkeel": "أنا مِقتِنِع بكَلامَك.",
+			"english": "I'm convinced by your words.",
+			"transliteration": "ana migtini3 b-kalaamak.",
+			"wordAlignments": [
+				{
+					"arabic": "أنا",
+					"english": "I am",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "مقتنع",
+					"english": "convinced",
+					"transliteration": "migtini3"
+				},
+				{
+					"arabic": "بكلامك.",
+					"english": "by your words.",
+					"transliteration": "b-kalaamak."
+				}
+			],
+			"targetWords": [
+				"Convinced"
+			]
+		},
+		{
+			"arabic": "بالعكس، عاجبني.",
+			"arabicTashkeel": "بالعَكس، عاجبني.",
+			"english": "On the contrary, I like it.",
+			"transliteration": "bil-3aks, 3aajibni.",
+			"wordAlignments": [
+				{
+					"arabic": "بالعكس،",
+					"english": "On the contrary,",
+					"transliteration": "bil-3aks,"
+				},
+				{
+					"arabic": "عاجبني.",
+					"english": "it pleases me.",
+					"transliteration": "3aajibni."
+				}
+			],
+			"targetWords": [
+				"On the contrary"
+			]
+		},
+		{
+			"arabic": "شو رأيك بفكرتي؟",
+			"arabicTashkeel": "شو رأيَك بفِكرتي؟",
+			"english": "What do you think of my idea?",
+			"transliteration": "shu ra2yak b-fikrati?",
+			"wordAlignments": [
+				{
+					"arabic": "شو",
+					"english": "What is",
+					"transliteration": "shu"
+				},
+				{
+					"arabic": "رأيك",
+					"english": "your opinion",
+					"transliteration": "ra2yak"
+				},
+				{
+					"arabic": "بفكرتي؟",
+					"english": "of my idea?",
+					"transliteration": "b-fikrati?"
+				}
+			],
+			"targetWords": [
+				"What do you think?",
+				"Idea"
+			]
+		},
+		{
+			"arabic": "بصراحة، ما أدري.",
+			"arabicTashkeel": "بصَراحة، ما أدري.",
+			"english": "Honestly, I don't know.",
+			"transliteration": "b-saraa7a, ma adri.",
+			"wordAlignments": [
+				{
+					"arabic": "بصراحة،",
+					"english": "Honestly,",
+					"transliteration": "b-saraa7a,"
+				},
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "أدري.",
+					"english": "I know.",
+					"transliteration": "adri."
+				}
+			],
+			"targetWords": [
+				"Honestly"
+			]
+		},
+		{
+			"arabic": "وجهة نظر غير.",
+			"arabicTashkeel": "وِجهة نَظَر غير.",
+			"english": "A different point of view.",
+			"transliteration": "wijhat nadhar ghair.",
+			"wordAlignments": [
+				{
+					"arabic": "وجهة",
+					"english": "A direction of",
+					"transliteration": "wijhat"
+				},
+				{
+					"arabic": "نظر",
+					"english": "view",
+					"transliteration": "nadhar"
+				},
+				{
+					"arabic": "غير.",
+					"english": "different.",
+					"transliteration": "ghair."
+				}
+			],
+			"targetWords": [
+				"Point of view"
+			]
+		},
+		{
+			"arabic": "ما أعتقد.",
+			"arabicTashkeel": "ما أعتِقِد.",
+			"english": "I don't think so.",
+			"transliteration": "ma a3tigid.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "أعتقد.",
+					"english": "I think so.",
+					"transliteration": "a3tigid."
+				}
+			],
+			"targetWords": [
+				"I think"
+			]
+		},
+		{
+			"arabic": "برأيي لازم ترتاح.",
+			"arabicTashkeel": "برأيي لازِم ترتاح.",
+			"english": "In my opinion, you should rest.",
+			"transliteration": "b-ra2yi laazim trtaa7.",
+			"wordAlignments": [
+				{
+					"arabic": "برأيي",
+					"english": "In my opinion",
+					"transliteration": "b-ra2yi"
+				},
+				{
+					"arabic": "لازم",
+					"english": "you must",
+					"transliteration": "laazim"
+				},
+				{
+					"arabic": "ترتاح.",
+					"english": "rest.",
+					"transliteration": "trtaa7."
+				}
+			],
+			"targetWords": [
+				"In my opinion"
+			]
+		},
+		{
+			"arabic": "أظن إنا تأخرنا.",
+			"arabicTashkeel": "أظِن إنّا تأخَّرنا.",
+			"english": "I suppose we're late.",
+			"transliteration": "adhinn inna t2akhkharna.",
+			"wordAlignments": [
+				{
+					"arabic": "أظن",
+					"english": "I suppose",
+					"transliteration": "adhinn"
+				},
+				{
+					"arabic": "إنا",
+					"english": "that we",
+					"transliteration": "inna"
+				},
+				{
+					"arabic": "تأخرنا.",
+					"english": "are late.",
+					"transliteration": "t2akhkharna."
+				}
+			],
+			"targetWords": [
+				"I suppose"
+			]
+		},
+		{
+			"arabic": "تتفق؟",
+			"arabicTashkeel": "تِتِّفِق؟",
+			"english": "Do you agree?",
+			"transliteration": "tittifig?",
+			"wordAlignments": [
+				{
+					"arabic": "تتفق؟",
+					"english": "Do you agree?",
+					"transliteration": "tittifig?"
+				}
+			],
+			"targetWords": [
+				"I agree"
+			]
+		},
+		{
+			"arabic": "ما أتفق، الوقت مو مناسب.",
+			"arabicTashkeel": "ما أتِّفِق، الوَقت مو مُناسِب.",
+			"english": "I disagree, it's not a good time.",
+			"transliteration": "ma attifig, il-wagt moo munaasib.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "أتفق،",
+					"english": "I agree,",
+					"transliteration": "attifig,"
+				},
+				{
+					"arabic": "الوقت",
+					"english": "the time is",
+					"transliteration": "il-wagt"
+				},
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "مناسب.",
+					"english": "suitable.",
+					"transliteration": "munaasib."
+				}
+			],
+			"targetWords": [
+				"I disagree"
+			]
+		},
+		{
+			"arabic": "صح لو غلط؟",
+			"arabicTashkeel": "صَح لو غَلَط؟",
+			"english": "Right or wrong?",
+			"transliteration": "sa77 law ghalat?",
+			"wordAlignments": [
+				{
+					"arabic": "صح",
+					"english": "Right",
+					"transliteration": "sa77"
+				},
+				{
+					"arabic": "لو",
+					"english": "or",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "غلط؟",
+					"english": "wrong?",
+					"transliteration": "ghalat?"
+				}
+			],
+			"targetWords": [
+				"Right / correct",
+				"Wrong"
+			]
+		},
+		{
+			"arabic": "خذيت الطريق الغلط.",
+			"arabicTashkeel": "خَذيت الطَّريق الغَلَط.",
+			"english": "You took the wrong road.",
+			"transliteration": "khadheet it-tareeg il-ghalat.",
+			"wordAlignments": [
+				{
+					"arabic": "خذيت",
+					"english": "You took",
+					"transliteration": "khadheet"
+				},
+				{
+					"arabic": "الطريق",
+					"english": "the road",
+					"transliteration": "it-tareeg"
+				},
+				{
+					"arabic": "الغلط.",
+					"english": "wrong.",
+					"transliteration": "il-ghalat."
+				}
+			],
+			"targetWords": [
+				"Wrong"
+			]
+		},
+		{
+			"arabic": "هاذي فكرة منو؟",
+			"arabicTashkeel": "هاذي فِكرة مِنو؟",
+			"english": "Whose idea was this?",
+			"transliteration": "haadhi fikrat minu?",
+			"wordAlignments": [
+				{
+					"arabic": "هاذي",
+					"english": "This was",
+					"transliteration": "haadhi"
+				},
+				{
+					"arabic": "فكرة",
+					"english": "the idea of",
+					"transliteration": "fikrat"
+				},
+				{
+					"arabic": "منو؟",
+					"english": "whom?",
+					"transliteration": "minu?"
+				}
+			],
+			"targetWords": [
+				"Idea"
+			]
+		},
+		{
+			"arabic": "رأيي غير.",
+			"arabicTashkeel": "رأيي غير.",
+			"english": "My opinion is different.",
+			"transliteration": "ra2yi ghair.",
+			"wordAlignments": [
+				{
+					"arabic": "رأيي",
+					"english": "My opinion is",
+					"transliteration": "ra2yi"
+				},
+				{
+					"arabic": "غير.",
+					"english": "different.",
+					"transliteration": "ghair."
+				}
+			],
+			"targetWords": [
+				"Opinion"
+			]
+		},
+		{
+			"arabic": "أحس إني مستانس هني.",
+			"arabicTashkeel": "أحِس إنّي مِستانِس هِني.",
+			"english": "I feel happy here.",
+			"transliteration": "a7iss inni mistaanis hini.",
+			"wordAlignments": [
+				{
+					"arabic": "أحس",
+					"english": "I feel",
+					"transliteration": "a7iss"
+				},
+				{
+					"arabic": "إني",
+					"english": "that I am",
+					"transliteration": "inni"
+				},
+				{
+					"arabic": "مستانس",
+					"english": "happy",
+					"transliteration": "mistaanis"
+				},
+				{
+					"arabic": "هني.",
+					"english": "here.",
+					"transliteration": "hini."
+				}
+			],
+			"targetWords": [
+				"I feel"
+			]
+		},
+		{
+			"arabic": "أنا مقتنع إنه غلط.",
+			"arabicTashkeel": "أنا مِقتِنِع إنَّه غَلَط.",
+			"english": "I'm convinced it's a mistake.",
+			"transliteration": "ana migtini3 inna ghalat.",
+			"wordAlignments": [
+				{
+					"arabic": "أنا",
+					"english": "I am",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "مقتنع",
+					"english": "convinced",
+					"transliteration": "migtini3"
+				},
+				{
+					"arabic": "إنه",
+					"english": "that it is",
+					"transliteration": "inna"
+				},
+				{
+					"arabic": "غلط.",
+					"english": "wrong.",
+					"transliteration": "ghalat."
+				}
+			],
+			"targetWords": [
+				"Convinced",
+				"Wrong"
+			]
+		},
+		{
+			"arabic": "شو رأيك بأبوظبي؟",
+			"arabicTashkeel": "شو رأيَك بأبوظَبي؟",
+			"english": "What do you think of Abu Dhabi?",
+			"transliteration": "shu ra2yak b-abudhabi?",
+			"wordAlignments": [
+				{
+					"arabic": "شو",
+					"english": "What is",
+					"transliteration": "shu"
+				},
+				{
+					"arabic": "رأيك",
+					"english": "your opinion",
+					"transliteration": "ra2yak"
+				},
+				{
+					"arabic": "بأبوظبي؟",
+					"english": "of Abu Dhabi?",
+					"transliteration": "b-abudhabi?"
+				}
+			],
+			"targetWords": [
+				"What do you think?"
+			]
+		},
+		{
+			"arabic": "بصراحة، هي الأحسن.",
+			"arabicTashkeel": "بصَراحة، هي الأحسَن.",
+			"english": "Honestly, it's the best.",
+			"transliteration": "b-saraa7a, hi il-a7san.",
+			"wordAlignments": [
+				{
+					"arabic": "بصراحة،",
+					"english": "Honestly,",
+					"transliteration": "b-saraa7a,"
+				},
+				{
+					"arabic": "هي",
+					"english": "it is",
+					"transliteration": "hi"
+				},
+				{
+					"arabic": "الأحسن.",
+					"english": "the best.",
+					"transliteration": "il-a7san."
+				}
+			],
+			"targetWords": [
+				"Honestly"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "The New Mall",
+			"sentences": [
+				{
+					"arabic": "ربيعي سألني: شو رأيك بالمول الجديد؟",
+					"arabicTashkeel": "رَبيعي سألني: شو رأيَك بالمول الجْديد؟",
+					"english": "My friend asked me: What do you think of the new mall?",
+					"transliteration": "rabee3i sa2alni: shu ra2yak bil-mool il-ydeed?",
+					"wordAlignments": [
+						{
+							"arabic": "ربيعي",
+							"english": "My friend",
+							"transliteration": "rabee3i"
+						},
+						{
+							"arabic": "سألني:",
+							"english": "asked me:",
+							"transliteration": "sa2alni:"
+						},
+						{
+							"arabic": "شو",
+							"english": "what is",
+							"transliteration": "shu"
+						},
+						{
+							"arabic": "رأيك",
+							"english": "your opinion",
+							"transliteration": "ra2yak"
+						},
+						{
+							"arabic": "بالمول",
+							"english": "of the mall",
+							"transliteration": "bil-mool"
+						},
+						{
+							"arabic": "الجديد؟",
+							"english": "new?",
+							"transliteration": "il-ydeed?"
+						}
+					]
+				},
+				{
+					"arabic": "بصراحة، برأيي غالي وايد.",
+					"arabicTashkeel": "بصَراحة، برأيي غالي وايد.",
+					"english": "Honestly, in my opinion it's very expensive.",
+					"transliteration": "b-saraa7a, b-ra2yi ghaali waayid.",
+					"wordAlignments": [
+						{
+							"arabic": "بصراحة،",
+							"english": "Honestly,",
+							"transliteration": "b-saraa7a,"
+						},
+						{
+							"arabic": "برأيي",
+							"english": "in my opinion",
+							"transliteration": "b-ra2yi"
+						},
+						{
+							"arabic": "غالي",
+							"english": "it's expensive",
+							"transliteration": "ghaali"
+						},
+						{
+							"arabic": "وايد.",
+							"english": "very.",
+							"transliteration": "waayid."
+						}
+					]
+				},
+				{
+					"arabic": "قال: ما أتفق. بالعكس، الأسعار معقولة.",
+					"arabicTashkeel": "قال: ما أتِّفِق. بالعَكس، الأسعار مَعقولة.",
+					"english": "He said: I disagree. On the contrary, the prices are reasonable.",
+					"transliteration": "gaal: ma attifig. bil-3aks, il-as3aar ma3goola.",
+					"wordAlignments": [
+						{
+							"arabic": "قال:",
+							"english": "He said:",
+							"transliteration": "gaal:"
+						},
+						{
+							"arabic": "ما",
+							"english": "not",
+							"transliteration": "ma"
+						},
+						{
+							"arabic": "أتفق.",
+							"english": "I agree.",
+							"transliteration": "attifig."
+						},
+						{
+							"arabic": "بالعكس،",
+							"english": "On the contrary,",
+							"transliteration": "bil-3aks,"
+						},
+						{
+							"arabic": "الأسعار",
+							"english": "the prices are",
+							"transliteration": "il-as3aar"
+						},
+						{
+							"arabic": "معقولة.",
+							"english": "reasonable.",
+							"transliteration": "ma3goola."
+						}
+					]
+				},
+				{
+					"arabic": "أعتقد السوق القديم أحسن، بس هاذي وجهة نظري.",
+					"arabicTashkeel": "أعتِقِد السّوق القَديم أحسَن، بَس هاذي وِجهة نَظَري.",
+					"english": "I think the old souk is better, but that's my point of view.",
+					"transliteration": "a3tigid is-soog il-gadeem a7san, bas haadhi wijhat nadhari.",
+					"wordAlignments": [
+						{
+							"arabic": "أعتقد",
+							"english": "I think",
+							"transliteration": "a3tigid"
+						},
+						{
+							"arabic": "السوق",
+							"english": "the souk",
+							"transliteration": "is-soog"
+						},
+						{
+							"arabic": "القديم",
+							"english": "old is",
+							"transliteration": "il-gadeem"
+						},
+						{
+							"arabic": "أحسن،",
+							"english": "better,",
+							"transliteration": "a7san,"
+						},
+						{
+							"arabic": "بس",
+							"english": "but",
+							"transliteration": "bas"
+						},
+						{
+							"arabic": "هاذي",
+							"english": "this is",
+							"transliteration": "haadhi"
+						},
+						{
+							"arabic": "وجهة",
+							"english": "the direction of",
+							"transliteration": "wijhat"
+						},
+						{
+							"arabic": "نظري.",
+							"english": "my view.",
+							"transliteration": "nadhari."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "A Family Discussion",
+			"sentences": [
+				{
+					"arabic": "أبوي يعتقد لازم أدرس طب.",
+					"arabicTashkeel": "أبوي يِعتِقِد لازِم أدرِس طِب.",
+					"english": "My father thinks I should study medicine.",
+					"transliteration": "abooy yi3tigid laazim adris tibb.",
+					"wordAlignments": [
+						{
+							"arabic": "أبوي",
+							"english": "My father",
+							"transliteration": "abooy"
+						},
+						{
+							"arabic": "يعتقد",
+							"english": "thinks",
+							"transliteration": "yi3tigid"
+						},
+						{
+							"arabic": "لازم",
+							"english": "I must",
+							"transliteration": "laazim"
+						},
+						{
+							"arabic": "أدرس",
+							"english": "study",
+							"transliteration": "adris"
+						},
+						{
+							"arabic": "طب.",
+							"english": "medicine.",
+							"transliteration": "tibb."
+						}
+					]
+				},
+				{
+					"arabic": "أحترم رأيه، بس مو مقتنع.",
+					"arabicTashkeel": "أحتِرِم رأيَه، بَس مو مِقتِنِع.",
+					"english": "I respect his opinion, but I'm not convinced.",
+					"transliteration": "a7tirim ra2ya, bas moo migtini3.",
+					"wordAlignments": [
+						{
+							"arabic": "أحترم",
+							"english": "I respect",
+							"transliteration": "a7tirim"
+						},
+						{
+							"arabic": "رأيه،",
+							"english": "his opinion,",
+							"transliteration": "ra2ya,"
+						},
+						{
+							"arabic": "بس",
+							"english": "but",
+							"transliteration": "bas"
+						},
+						{
+							"arabic": "مو",
+							"english": "not",
+							"transliteration": "moo"
+						},
+						{
+							"arabic": "مقتنع.",
+							"english": "convinced.",
+							"transliteration": "migtini3."
+						}
+					]
+				},
+				{
+					"arabic": "بصراحة، أحس الهندسة أحسن لي.",
+					"arabicTashkeel": "بصَراحة، أحِس الهَندَسة أحسَن لي.",
+					"english": "Honestly, I feel engineering is better for me.",
+					"transliteration": "b-saraa7a, a7iss il-handasa a7san li.",
+					"wordAlignments": [
+						{
+							"arabic": "بصراحة،",
+							"english": "Honestly,",
+							"transliteration": "b-saraa7a,"
+						},
+						{
+							"arabic": "أحس",
+							"english": "I feel",
+							"transliteration": "a7iss"
+						},
+						{
+							"arabic": "الهندسة",
+							"english": "engineering is",
+							"transliteration": "il-handasa"
+						},
+						{
+							"arabic": "أحسن",
+							"english": "better",
+							"transliteration": "a7san"
+						},
+						{
+							"arabic": "لي.",
+							"english": "for me.",
+							"transliteration": "li."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student and an Emirati friend are debating where to go for dinner and which new film to see.",
+		"studentRole": "A friend learning Gulf Arabic.",
+		"otherRole": "The Emirati friend, who always has a strong opinion.",
+		"goalEnglish": "Give your opinion, agree or disagree politely, ask what your friend thinks and try to convince them.",
+		"targetWords": [
+			"I think",
+			"In my opinion",
+			"I agree",
+			"I disagree",
+			"What do you think?",
+			"Honestly",
+			"Idea",
+			"Convinced"
+		]
+	}
+}
