@@ -1,0 +1,2060 @@
+{
+	"vocab": [
+		{
+			"arabic": "مسلسل",
+			"arabicTashkeel": "مُسَلسَل",
+			"english": "TV series",
+			"transliteration": "musalsal",
+			"wordAlignments": [
+				{
+					"arabic": "مسلسل",
+					"english": "Series",
+					"transliteration": "musalsal"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "فلم",
+			"arabicTashkeel": "فِلِم",
+			"english": "Film",
+			"transliteration": "filim",
+			"wordAlignments": [
+				{
+					"arabic": "فلم",
+					"english": "Film",
+					"transliteration": "filim"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "ممثل",
+			"arabicTashkeel": "مُمَثِّل",
+			"english": "Actor",
+			"transliteration": "mumaththil",
+			"wordAlignments": [
+				{
+					"arabic": "ممثل",
+					"english": "Actor",
+					"transliteration": "mumaththil"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "ممثلة",
+			"arabicTashkeel": "مُمَثّلة",
+			"english": "Actress",
+			"transliteration": "mumaththla",
+			"wordAlignments": [
+				{
+					"arabic": "ممثلة",
+					"english": "Actress",
+					"transliteration": "mumaththla"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "مخرج",
+			"arabicTashkeel": "مُخرِج",
+			"english": "Director",
+			"transliteration": "mukhrij",
+			"wordAlignments": [
+				{
+					"arabic": "مخرج",
+					"english": "Director",
+					"transliteration": "mukhrij"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "حلقة",
+			"arabicTashkeel": "حَلقة",
+			"english": "Episode",
+			"transliteration": "7alga",
+			"wordAlignments": [
+				{
+					"arabic": "حلقة",
+					"english": "Episode",
+					"transliteration": "7alga"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "بطل",
+			"arabicTashkeel": "بَطَل",
+			"english": "Lead role / hero",
+			"transliteration": "batal",
+			"wordAlignments": [
+				{
+					"arabic": "بطل",
+					"english": "Hero",
+					"transliteration": "batal"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "نهاية",
+			"arabicTashkeel": "نِهاية",
+			"english": "Ending",
+			"transliteration": "nihaaya",
+			"wordAlignments": [
+				{
+					"arabic": "نهاية",
+					"english": "Ending",
+					"transliteration": "nihaaya"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "كوميدي",
+			"arabicTashkeel": "كوميدي",
+			"english": "Comedy",
+			"transliteration": "koomeedi",
+			"wordAlignments": [
+				{
+					"arabic": "كوميدي",
+					"english": "Comedy",
+					"transliteration": "koomeedi"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "رعب",
+			"arabicTashkeel": "رُعُب",
+			"english": "Horror",
+			"transliteration": "ru3ub",
+			"wordAlignments": [
+				{
+					"arabic": "رعب",
+					"english": "Horror",
+					"transliteration": "ru3ub"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "مشهد",
+			"arabicTashkeel": "مَشهَد",
+			"english": "Scene",
+			"transliteration": "mash-had",
+			"wordAlignments": [
+				{
+					"arabic": "مشهد",
+					"english": "Scene",
+					"transliteration": "mash-had"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "جمهور",
+			"arabicTashkeel": "جُمهور",
+			"english": "Audience",
+			"transliteration": "jumhoor",
+			"wordAlignments": [
+				{
+					"arabic": "جمهور",
+					"english": "Audience",
+					"transliteration": "jumhoor"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "ترجمة",
+			"arabicTashkeel": "تَرجَمة",
+			"english": "Subtitles",
+			"transliteration": "tarjama",
+			"wordAlignments": [
+				{
+					"arabic": "ترجمة",
+					"english": "Translation",
+					"transliteration": "tarjama"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "موسم",
+			"arabicTashkeel": "مَوسِم",
+			"english": "Season",
+			"transliteration": "mawsim",
+			"wordAlignments": [
+				{
+					"arabic": "موسم",
+					"english": "Season",
+					"transliteration": "mawsim"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "قصة",
+			"arabicTashkeel": "قِصّة",
+			"english": "Story / plot",
+			"transliteration": "gissa",
+			"wordAlignments": [
+				{
+					"arabic": "قصة",
+					"english": "Story",
+					"transliteration": "gissa"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "شفت المسلسل الجديد؟",
+			"arabicTashkeel": "شِفِت المُسَلسَل الجْديد؟",
+			"english": "Have you seen the new series?",
+			"transliteration": "shifit il-musalsal ij-jdeed?",
+			"wordAlignments": [
+				{
+					"arabic": "شفت",
+					"english": "Have you seen",
+					"transliteration": "shifit"
+				},
+				{
+					"arabic": "المسلسل",
+					"english": "the series",
+					"transliteration": "il-musalsal"
+				},
+				{
+					"arabic": "الجديد؟",
+					"english": "new?",
+					"transliteration": "ij-jdeed?"
+				}
+			],
+			"targetWords": [
+				"TV series"
+			]
+		},
+		{
+			"arabic": "خلي نشوف فلم الليلة.",
+			"arabicTashkeel": "خَلّي نْشوف فِلِم الليلة.",
+			"english": "Let's watch a film tonight.",
+			"transliteration": "khalli nshoof filim il-leela.",
+			"wordAlignments": [
+				{
+					"arabic": "خلي",
+					"english": "Let's",
+					"transliteration": "khalli"
+				},
+				{
+					"arabic": "نشوف",
+					"english": "watch",
+					"transliteration": "nshoof"
+				},
+				{
+					"arabic": "فلم",
+					"english": "a film",
+					"transliteration": "filim"
+				},
+				{
+					"arabic": "الليلة.",
+					"english": "tonight.",
+					"transliteration": "il-leela."
+				}
+			],
+			"targetWords": [
+				"Film"
+			]
+		},
+		{
+			"arabic": "هو ممثل عراقي مشهور.",
+			"arabicTashkeel": "هوَّ مُمَثِّل عِراقي مَشهور.",
+			"english": "He is a famous Iraqi actor.",
+			"transliteration": "huwwa mumaththil 3iraaqi mash-hoor.",
+			"wordAlignments": [
+				{
+					"arabic": "هو",
+					"english": "He is",
+					"transliteration": "huwwa"
+				},
+				{
+					"arabic": "ممثل",
+					"english": "an actor",
+					"transliteration": "mumaththil"
+				},
+				{
+					"arabic": "عراقي",
+					"english": "Iraqi",
+					"transliteration": "3iraaqi"
+				},
+				{
+					"arabic": "مشهور.",
+					"english": "famous.",
+					"transliteration": "mash-hoor."
+				}
+			],
+			"targetWords": [
+				"Actor"
+			]
+		},
+		{
+			"arabic": "الممثلة كانت ممتازة بهذا الدور.",
+			"arabicTashkeel": "المُمَثّلة كانَت مُمتازة بهَذا الدّور.",
+			"english": "The actress was excellent in this role.",
+			"transliteration": "il-mumaththla chaanat mumtaaza b-haatha id-door.",
+			"wordAlignments": [
+				{
+					"arabic": "الممثلة",
+					"english": "The actress",
+					"transliteration": "il-mumaththla"
+				},
+				{
+					"arabic": "كانت",
+					"english": "was",
+					"transliteration": "chaanat"
+				},
+				{
+					"arabic": "ممتازة",
+					"english": "excellent",
+					"transliteration": "mumtaaza"
+				},
+				{
+					"arabic": "بهذا",
+					"english": "in this",
+					"transliteration": "b-haatha"
+				},
+				{
+					"arabic": "الدور.",
+					"english": "role.",
+					"transliteration": "id-door."
+				}
+			],
+			"targetWords": [
+				"Actress"
+			]
+		},
+		{
+			"arabic": "المخرج شاب.",
+			"arabicTashkeel": "المُخرِج شاب.",
+			"english": "The director is young.",
+			"transliteration": "il-mukhrij shaabb.",
+			"wordAlignments": [
+				{
+					"arabic": "المخرج",
+					"english": "The director is",
+					"transliteration": "il-mukhrij"
+				},
+				{
+					"arabic": "شاب.",
+					"english": "young.",
+					"transliteration": "shaabb."
+				}
+			],
+			"targetWords": [
+				"Director"
+			]
+		},
+		{
+			"arabic": "فاتتني حلقة البارحة.",
+			"arabicTashkeel": "فاتَتني حَلقة البارحة.",
+			"english": "I missed yesterday's episode.",
+			"transliteration": "faatatni 7algat il-baar7a.",
+			"wordAlignments": [
+				{
+					"arabic": "فاتتني",
+					"english": "I missed",
+					"transliteration": "faatatni"
+				},
+				{
+					"arabic": "حلقة",
+					"english": "the episode of",
+					"transliteration": "7algat"
+				},
+				{
+					"arabic": "البارحة.",
+					"english": "yesterday.",
+					"transliteration": "il-baar7a."
+				}
+			],
+			"targetWords": [
+				"Episode"
+			]
+		},
+		{
+			"arabic": "البطل يموت بالنهاية.",
+			"arabicTashkeel": "البَطَل يْموت بالنِّهاية.",
+			"english": "The hero dies at the end.",
+			"transliteration": "il-batal ymoot bin-nihaaya.",
+			"wordAlignments": [
+				{
+					"arabic": "البطل",
+					"english": "The hero",
+					"transliteration": "il-batal"
+				},
+				{
+					"arabic": "يموت",
+					"english": "dies",
+					"transliteration": "ymoot"
+				},
+				{
+					"arabic": "بالنهاية.",
+					"english": "at the ending.",
+					"transliteration": "bin-nihaaya."
+				}
+			],
+			"targetWords": [
+				"Lead role / hero",
+				"Ending"
+			]
+		},
+		{
+			"arabic": "النهاية كانت حزينة.",
+			"arabicTashkeel": "النِّهاية كانَت حَزينة.",
+			"english": "The ending was sad.",
+			"transliteration": "in-nihaaya chaanat 7azeena.",
+			"wordAlignments": [
+				{
+					"arabic": "النهاية",
+					"english": "The ending",
+					"transliteration": "in-nihaaya"
+				},
+				{
+					"arabic": "كانت",
+					"english": "was",
+					"transliteration": "chaanat"
+				},
+				{
+					"arabic": "حزينة.",
+					"english": "sad.",
+					"transliteration": "7azeena."
+				}
+			],
+			"targetWords": [
+				"Ending"
+			]
+		},
+		{
+			"arabic": "أحب الأفلام الكوميدي.",
+			"arabicTashkeel": "أحِب الأفلام الكوميدي.",
+			"english": "I love comedy films.",
+			"transliteration": "a7ibb il-aflaam il-koomeedi.",
+			"wordAlignments": [
+				{
+					"arabic": "أحب",
+					"english": "I love",
+					"transliteration": "a7ibb"
+				},
+				{
+					"arabic": "الأفلام",
+					"english": "films",
+					"transliteration": "il-aflaam"
+				},
+				{
+					"arabic": "الكوميدي.",
+					"english": "comedy.",
+					"transliteration": "il-koomeedi."
+				}
+			],
+			"targetWords": [
+				"Comedy",
+				"Film"
+			]
+		},
+		{
+			"arabic": "أفلام الرعب تخوفني.",
+			"arabicTashkeel": "أفلام الرُّعُب تْخَوِّفني.",
+			"english": "Horror films scare me.",
+			"transliteration": "aflaam ir-ru3ub tkhawwifni.",
+			"wordAlignments": [
+				{
+					"arabic": "أفلام",
+					"english": "Films of",
+					"transliteration": "aflaam"
+				},
+				{
+					"arabic": "الرعب",
+					"english": "horror",
+					"transliteration": "ir-ru3ub"
+				},
+				{
+					"arabic": "تخوفني.",
+					"english": "scare me.",
+					"transliteration": "tkhawwifni."
+				}
+			],
+			"targetWords": [
+				"Horror"
+			]
+		},
+		{
+			"arabic": "آخر مشهد كان حلو.",
+			"arabicTashkeel": "آخِر مَشهَد كان حِلو.",
+			"english": "The last scene was beautiful.",
+			"transliteration": "aakhir mash-had chaan 7ilu.",
+			"wordAlignments": [
+				{
+					"arabic": "آخر",
+					"english": "The last",
+					"transliteration": "aakhir"
+				},
+				{
+					"arabic": "مشهد",
+					"english": "scene",
+					"transliteration": "mash-had"
+				},
+				{
+					"arabic": "كان",
+					"english": "was",
+					"transliteration": "chaan"
+				},
+				{
+					"arabic": "حلو.",
+					"english": "beautiful.",
+					"transliteration": "7ilu."
+				}
+			],
+			"targetWords": [
+				"Scene"
+			]
+		},
+		{
+			"arabic": "الجمهور صفق هواية.",
+			"arabicTashkeel": "الجُمهور صَفَّق هْوايَة.",
+			"english": "The audience clapped a lot.",
+			"transliteration": "ij-jumhoor saffag hwaaya.",
+			"wordAlignments": [
+				{
+					"arabic": "الجمهور",
+					"english": "The audience",
+					"transliteration": "ij-jumhoor"
+				},
+				{
+					"arabic": "صفق",
+					"english": "clapped",
+					"transliteration": "saffag"
+				},
+				{
+					"arabic": "هواية.",
+					"english": "a lot.",
+					"transliteration": "hwaaya."
+				}
+			],
+			"targetWords": [
+				"Audience"
+			]
+		},
+		{
+			"arabic": "أكو ترجمة عربي؟",
+			"arabicTashkeel": "أكو تَرجَمة عَرَبي؟",
+			"english": "Is there Arabic subtitles?",
+			"transliteration": "aku tarjama 3arabi?",
+			"wordAlignments": [
+				{
+					"arabic": "أكو",
+					"english": "Is there",
+					"transliteration": "aku"
+				},
+				{
+					"arabic": "ترجمة",
+					"english": "translation",
+					"transliteration": "tarjama"
+				},
+				{
+					"arabic": "عربي؟",
+					"english": "Arabic?",
+					"transliteration": "3arabi?"
+				}
+			],
+			"targetWords": [
+				"Subtitles"
+			]
+		},
+		{
+			"arabic": "الموسم الثاني أحسن.",
+			"arabicTashkeel": "المَوسِم الثّاني أحسَن.",
+			"english": "The second season is better.",
+			"transliteration": "il-mawsim ith-thaani a7san.",
+			"wordAlignments": [
+				{
+					"arabic": "الموسم",
+					"english": "The season",
+					"transliteration": "il-mawsim"
+				},
+				{
+					"arabic": "الثاني",
+					"english": "second is",
+					"transliteration": "ith-thaani"
+				},
+				{
+					"arabic": "أحسن.",
+					"english": "better.",
+					"transliteration": "a7san."
+				}
+			],
+			"targetWords": [
+				"Season"
+			]
+		},
+		{
+			"arabic": "قصة المسلسل عن عائلة بغدادية.",
+			"arabicTashkeel": "قِصّة المُسَلسَل عَن عائلة بَغدادية.",
+			"english": "The story of the series is about a Baghdadi family.",
+			"transliteration": "gissat il-musalsal 3an 3aa2ila baghdaadiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "قصة",
+					"english": "The story of",
+					"transliteration": "gissat"
+				},
+				{
+					"arabic": "المسلسل",
+					"english": "the series is",
+					"transliteration": "il-musalsal"
+				},
+				{
+					"arabic": "عن",
+					"english": "about",
+					"transliteration": "3an"
+				},
+				{
+					"arabic": "عائلة",
+					"english": "a family",
+					"transliteration": "3aa2ila"
+				},
+				{
+					"arabic": "بغدادية.",
+					"english": "Baghdadi.",
+					"transliteration": "baghdaadiyya."
+				}
+			],
+			"targetWords": [
+				"Story / plot",
+				"TV series"
+			]
+		},
+		{
+			"arabic": "برمضان أكو مسلسلات هواية.",
+			"arabicTashkeel": "برَمَضان أكو مُسَلسَلات هْوايَة.",
+			"english": "In Ramadan there are many series.",
+			"transliteration": "b-ramadhaan aku musalsalaat hwaaya.",
+			"wordAlignments": [
+				{
+					"arabic": "برمضان",
+					"english": "In Ramadan",
+					"transliteration": "b-ramadhaan"
+				},
+				{
+					"arabic": "أكو",
+					"english": "there are",
+					"transliteration": "aku"
+				},
+				{
+					"arabic": "مسلسلات",
+					"english": "series",
+					"transliteration": "musalsalaat"
+				},
+				{
+					"arabic": "هواية.",
+					"english": "many.",
+					"transliteration": "hwaaya."
+				}
+			],
+			"targetWords": [
+				"TV series"
+			]
+		},
+		{
+			"arabic": "الفلم كان طويل، ثلاث ساعات.",
+			"arabicTashkeel": "الفِلِم كان طْويل، ثْلاث ساعات.",
+			"english": "The film was long, three hours.",
+			"transliteration": "il-filim chaan tweel, thlath saa3aat.",
+			"wordAlignments": [
+				{
+					"arabic": "الفلم",
+					"english": "The film",
+					"transliteration": "il-filim"
+				},
+				{
+					"arabic": "كان",
+					"english": "was",
+					"transliteration": "chaan"
+				},
+				{
+					"arabic": "طويل،",
+					"english": "long,",
+					"transliteration": "tweel,"
+				},
+				{
+					"arabic": "ثلاث",
+					"english": "three",
+					"transliteration": "thlath"
+				},
+				{
+					"arabic": "ساعات.",
+					"english": "hours.",
+					"transliteration": "saa3aat."
+				}
+			],
+			"targetWords": [
+				"Film"
+			]
+		},
+		{
+			"arabic": "منو الممثل البطل؟",
+			"arabicTashkeel": "مِنو المُمَثِّل البَطَل؟",
+			"english": "Who is the main actor?",
+			"transliteration": "minu il-mumaththil il-batal?",
+			"wordAlignments": [
+				{
+					"arabic": "منو",
+					"english": "Who is",
+					"transliteration": "minu"
+				},
+				{
+					"arabic": "الممثل",
+					"english": "the actor",
+					"transliteration": "il-mumaththil"
+				},
+				{
+					"arabic": "البطل؟",
+					"english": "lead?",
+					"transliteration": "il-batal?"
+				}
+			],
+			"targetWords": [
+				"Actor",
+				"Lead role / hero"
+			]
+		},
+		{
+			"arabic": "تحلم تصير ممثلة.",
+			"arabicTashkeel": "تِحلَم تْصير مُمَثّلة.",
+			"english": "She dreams of becoming an actress.",
+			"transliteration": "ti7lam tseer mumaththla.",
+			"wordAlignments": [
+				{
+					"arabic": "تحلم",
+					"english": "She dreams",
+					"transliteration": "ti7lam"
+				},
+				{
+					"arabic": "تصير",
+					"english": "to become",
+					"transliteration": "tseer"
+				},
+				{
+					"arabic": "ممثلة.",
+					"english": "an actress.",
+					"transliteration": "mumaththla."
+				}
+			],
+			"targetWords": [
+				"Actress"
+			]
+		},
+		{
+			"arabic": "المخرج ربح جايزة.",
+			"arabicTashkeel": "المُخرِج رِبَح جايزة.",
+			"english": "The director won a prize.",
+			"transliteration": "il-mukhrij riba7 jaayza.",
+			"wordAlignments": [
+				{
+					"arabic": "المخرج",
+					"english": "The director",
+					"transliteration": "il-mukhrij"
+				},
+				{
+					"arabic": "ربح",
+					"english": "won",
+					"transliteration": "riba7"
+				},
+				{
+					"arabic": "جايزة.",
+					"english": "a prize.",
+					"transliteration": "jaayza."
+				}
+			],
+			"targetWords": [
+				"Director"
+			]
+		},
+		{
+			"arabic": "كل حلقة ساعة.",
+			"arabicTashkeel": "كُل حَلقة ساعة.",
+			"english": "Every episode is an hour.",
+			"transliteration": "kull 7alga saa3a.",
+			"wordAlignments": [
+				{
+					"arabic": "كل",
+					"english": "Every",
+					"transliteration": "kull"
+				},
+				{
+					"arabic": "حلقة",
+					"english": "episode is",
+					"transliteration": "7alga"
+				},
+				{
+					"arabic": "ساعة.",
+					"english": "an hour.",
+					"transliteration": "saa3a."
+				}
+			],
+			"targetWords": [
+				"Episode"
+			]
+		},
+		{
+			"arabic": "البطل شجاع.",
+			"arabicTashkeel": "البَطَل شُجاع.",
+			"english": "The hero is brave.",
+			"transliteration": "il-batal shujaa3.",
+			"wordAlignments": [
+				{
+					"arabic": "البطل",
+					"english": "The hero is",
+					"transliteration": "il-batal"
+				},
+				{
+					"arabic": "شجاع.",
+					"english": "brave.",
+					"transliteration": "shujaa3."
+				}
+			],
+			"targetWords": [
+				"Lead role / hero"
+			]
+		},
+		{
+			"arabic": "لا تحكيلي النهاية!",
+			"arabicTashkeel": "لا تِحكيلي النِّهاية!",
+			"english": "Don't tell me the ending!",
+			"transliteration": "la ti7cheeli in-nihaaya!",
+			"wordAlignments": [
+				{
+					"arabic": "لا",
+					"english": "Don't",
+					"transliteration": "la"
+				},
+				{
+					"arabic": "تحكيلي",
+					"english": "tell me",
+					"transliteration": "ti7cheeli"
+				},
+				{
+					"arabic": "النهاية!",
+					"english": "the ending!",
+					"transliteration": "in-nihaaya!"
+				}
+			],
+			"targetWords": [
+				"Ending"
+			]
+		},
+		{
+			"arabic": "الكوميدي العراقي يضحك هواية.",
+			"arabicTashkeel": "الكوميدي العِراقي يِضَحِّك هْوايَة.",
+			"english": "Iraqi comedy is very funny.",
+			"transliteration": "il-koomeedi il-3iraaqi yidha77ik hwaaya.",
+			"wordAlignments": [
+				{
+					"arabic": "الكوميدي",
+					"english": "Comedy",
+					"transliteration": "il-koomeedi"
+				},
+				{
+					"arabic": "العراقي",
+					"english": "Iraqi is",
+					"transliteration": "il-3iraaqi"
+				},
+				{
+					"arabic": "يضحك",
+					"english": "funny",
+					"transliteration": "yidha77ik"
+				},
+				{
+					"arabic": "هواية.",
+					"english": "very.",
+					"transliteration": "hwaaya."
+				}
+			],
+			"targetWords": [
+				"Comedy"
+			]
+		},
+		{
+			"arabic": "ما أشوف رعب.",
+			"arabicTashkeel": "ما أشوف رُعُب.",
+			"english": "I don't watch horror.",
+			"transliteration": "ma ashoof ru3ub.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "أشوف",
+					"english": "I watch",
+					"transliteration": "ashoof"
+				},
+				{
+					"arabic": "رعب.",
+					"english": "horror.",
+					"transliteration": "ru3ub."
+				}
+			],
+			"targetWords": [
+				"Horror"
+			]
+		},
+		{
+			"arabic": "مشهد حزين.",
+			"arabicTashkeel": "مَشهَد حَزين.",
+			"english": "A sad scene.",
+			"transliteration": "mash-had 7azeen.",
+			"wordAlignments": [
+				{
+					"arabic": "مشهد",
+					"english": "A scene",
+					"transliteration": "mash-had"
+				},
+				{
+					"arabic": "حزين.",
+					"english": "sad.",
+					"transliteration": "7azeen."
+				}
+			],
+			"targetWords": [
+				"Scene"
+			]
+		},
+		{
+			"arabic": "الجمهور حب الفلم.",
+			"arabicTashkeel": "الجُمهور حَب الفِلِم.",
+			"english": "The audience loved the film.",
+			"transliteration": "ij-jumhoor 7abb il-filim.",
+			"wordAlignments": [
+				{
+					"arabic": "الجمهور",
+					"english": "The audience",
+					"transliteration": "ij-jumhoor"
+				},
+				{
+					"arabic": "حب",
+					"english": "loved",
+					"transliteration": "7abb"
+				},
+				{
+					"arabic": "الفلم.",
+					"english": "the film.",
+					"transliteration": "il-filim."
+				}
+			],
+			"targetWords": [
+				"Audience",
+				"Film"
+			]
+		},
+		{
+			"arabic": "الترجمة سريعة.",
+			"arabicTashkeel": "التَّرجَمة سَريعة.",
+			"english": "The subtitles are fast.",
+			"transliteration": "it-tarjama saree3a.",
+			"wordAlignments": [
+				{
+					"arabic": "الترجمة",
+					"english": "The translation is",
+					"transliteration": "it-tarjama"
+				},
+				{
+					"arabic": "سريعة.",
+					"english": "fast.",
+					"transliteration": "saree3a."
+				}
+			],
+			"targetWords": [
+				"Subtitles"
+			]
+		},
+		{
+			"arabic": "يمتى يبدي الموسم الجديد؟",
+			"arabicTashkeel": "يَمتى يِبدي المَوسِم الجْديد؟",
+			"english": "When does the new season start?",
+			"transliteration": "yamta yibdi il-mawsim ij-jdeed?",
+			"wordAlignments": [
+				{
+					"arabic": "يمتى",
+					"english": "When",
+					"transliteration": "yamta"
+				},
+				{
+					"arabic": "يبدي",
+					"english": "starts",
+					"transliteration": "yibdi"
+				},
+				{
+					"arabic": "الموسم",
+					"english": "the season",
+					"transliteration": "il-mawsim"
+				},
+				{
+					"arabic": "الجديد؟",
+					"english": "new?",
+					"transliteration": "ij-jdeed?"
+				}
+			],
+			"targetWords": [
+				"Season"
+			]
+		},
+		{
+			"arabic": "القصة حقيقية.",
+			"arabicTashkeel": "القِصّة حَقيقية.",
+			"english": "The story is true.",
+			"transliteration": "il-gissa 7aqeeqiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "القصة",
+					"english": "The story is",
+					"transliteration": "il-gissa"
+				},
+				{
+					"arabic": "حقيقية.",
+					"english": "true.",
+					"transliteration": "7aqeeqiyya."
+				}
+			],
+			"targetWords": [
+				"Story / plot"
+			]
+		},
+		{
+			"arabic": "المسلسلات التركية مشهورة بالعراق.",
+			"arabicTashkeel": "المُسَلسَلات التُّركية مَشهورة بالعِراق.",
+			"english": "Turkish series are popular in Iraq.",
+			"transliteration": "il-musalsalaat it-turkiyya mash-hoora bil-3iraaq.",
+			"wordAlignments": [
+				{
+					"arabic": "المسلسلات",
+					"english": "Series",
+					"transliteration": "il-musalsalaat"
+				},
+				{
+					"arabic": "التركية",
+					"english": "Turkish are",
+					"transliteration": "it-turkiyya"
+				},
+				{
+					"arabic": "مشهورة",
+					"english": "popular",
+					"transliteration": "mash-hoora"
+				},
+				{
+					"arabic": "بالعراق.",
+					"english": "in Iraq.",
+					"transliteration": "bil-3iraaq."
+				}
+			],
+			"targetWords": [
+				"TV series"
+			]
+		},
+		{
+			"arabic": "فلم مصري.",
+			"arabicTashkeel": "فِلِم مَصري.",
+			"english": "An Egyptian film.",
+			"transliteration": "filim masri.",
+			"wordAlignments": [
+				{
+					"arabic": "فلم",
+					"english": "A film",
+					"transliteration": "filim"
+				},
+				{
+					"arabic": "مصري.",
+					"english": "Egyptian.",
+					"transliteration": "masri."
+				}
+			],
+			"targetWords": [
+				"Film"
+			]
+		},
+		{
+			"arabic": "الممثل إجا من البصرة.",
+			"arabicTashkeel": "المُمَثِّل إجا مِن البَصرة.",
+			"english": "The actor came from Basra.",
+			"transliteration": "il-mumaththil ija min il-basra.",
+			"wordAlignments": [
+				{
+					"arabic": "الممثل",
+					"english": "The actor",
+					"transliteration": "il-mumaththil"
+				},
+				{
+					"arabic": "إجا",
+					"english": "came",
+					"transliteration": "ija"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "البصرة.",
+					"english": "Basra.",
+					"transliteration": "il-basra."
+				}
+			],
+			"targetWords": [
+				"Actor"
+			]
+		},
+		{
+			"arabic": "الممثلة بكت بالمشهد.",
+			"arabicTashkeel": "المُمَثّلة بِكَت بالمَشهَد.",
+			"english": "The actress cried in the scene.",
+			"transliteration": "il-mumaththla bichat bil-mash-had.",
+			"wordAlignments": [
+				{
+					"arabic": "الممثلة",
+					"english": "The actress",
+					"transliteration": "il-mumaththla"
+				},
+				{
+					"arabic": "بكت",
+					"english": "cried",
+					"transliteration": "bichat"
+				},
+				{
+					"arabic": "بالمشهد.",
+					"english": "in the scene.",
+					"transliteration": "bil-mash-had."
+				}
+			],
+			"targetWords": [
+				"Actress",
+				"Scene"
+			]
+		},
+		{
+			"arabic": "مخرج عراقي.",
+			"arabicTashkeel": "مُخرِج عِراقي.",
+			"english": "An Iraqi director.",
+			"transliteration": "mukhrij 3iraaqi.",
+			"wordAlignments": [
+				{
+					"arabic": "مخرج",
+					"english": "A director",
+					"transliteration": "mukhrij"
+				},
+				{
+					"arabic": "عراقي.",
+					"english": "Iraqi.",
+					"transliteration": "3iraaqi."
+				}
+			],
+			"targetWords": [
+				"Director"
+			]
+		},
+		{
+			"arabic": "آخر حلقة الليلة.",
+			"arabicTashkeel": "آخِر حَلقة الليلة.",
+			"english": "The last episode is tonight.",
+			"transliteration": "aakhir 7alga il-leela.",
+			"wordAlignments": [
+				{
+					"arabic": "آخر",
+					"english": "The last",
+					"transliteration": "aakhir"
+				},
+				{
+					"arabic": "حلقة",
+					"english": "episode is",
+					"transliteration": "7alga"
+				},
+				{
+					"arabic": "الليلة.",
+					"english": "tonight.",
+					"transliteration": "il-leela."
+				}
+			],
+			"targetWords": [
+				"Episode"
+			]
+		},
+		{
+			"arabic": "البطل ورفيجه.",
+			"arabicTashkeel": "البَطَل ورَفيجَه.",
+			"english": "The hero and his friend.",
+			"transliteration": "il-batal w-rafeega.",
+			"wordAlignments": [
+				{
+					"arabic": "البطل",
+					"english": "The hero",
+					"transliteration": "il-batal"
+				},
+				{
+					"arabic": "ورفيجه.",
+					"english": "and his friend.",
+					"transliteration": "w-rafeega."
+				}
+			],
+			"targetWords": [
+				"Lead role / hero"
+			]
+		},
+		{
+			"arabic": "نهاية سعيدة.",
+			"arabicTashkeel": "نِهاية سَعيدة.",
+			"english": "A happy ending.",
+			"transliteration": "nihaaya sa3eeda.",
+			"wordAlignments": [
+				{
+					"arabic": "نهاية",
+					"english": "An ending",
+					"transliteration": "nihaaya"
+				},
+				{
+					"arabic": "سعيدة.",
+					"english": "happy.",
+					"transliteration": "sa3eeda."
+				}
+			],
+			"targetWords": [
+				"Ending"
+			]
+		},
+		{
+			"arabic": "مسلسل كوميدي.",
+			"arabicTashkeel": "مُسَلسَل كوميدي.",
+			"english": "A comedy series.",
+			"transliteration": "musalsal koomeedi.",
+			"wordAlignments": [
+				{
+					"arabic": "مسلسل",
+					"english": "A series",
+					"transliteration": "musalsal"
+				},
+				{
+					"arabic": "كوميدي.",
+					"english": "comedy.",
+					"transliteration": "koomeedi."
+				}
+			],
+			"targetWords": [
+				"Comedy",
+				"TV series"
+			]
+		},
+		{
+			"arabic": "رعب وأكشن.",
+			"arabicTashkeel": "رُعُب وأكشَن.",
+			"english": "Horror and action.",
+			"transliteration": "ru3ub w-akshan.",
+			"wordAlignments": [
+				{
+					"arabic": "رعب",
+					"english": "Horror",
+					"transliteration": "ru3ub"
+				},
+				{
+					"arabic": "وأكشن.",
+					"english": "and action.",
+					"transliteration": "w-akshan."
+				}
+			],
+			"targetWords": [
+				"Horror"
+			]
+		},
+		{
+			"arabic": "أول مشهد بالفلم.",
+			"arabicTashkeel": "أوَّل مَشهَد بالفِلِم.",
+			"english": "The film's first scene.",
+			"transliteration": "awwal mash-had bil-filim.",
+			"wordAlignments": [
+				{
+					"arabic": "أول",
+					"english": "The first",
+					"transliteration": "awwal"
+				},
+				{
+					"arabic": "مشهد",
+					"english": "scene",
+					"transliteration": "mash-had"
+				},
+				{
+					"arabic": "بالفلم.",
+					"english": "in the film.",
+					"transliteration": "bil-filim."
+				}
+			],
+			"targetWords": [
+				"Scene"
+			]
+		},
+		{
+			"arabic": "الجمهور ضحك.",
+			"arabicTashkeel": "الجُمهور ضِحَك.",
+			"english": "The audience laughed.",
+			"transliteration": "ij-jumhoor dhi7ak.",
+			"wordAlignments": [
+				{
+					"arabic": "الجمهور",
+					"english": "The audience",
+					"transliteration": "ij-jumhoor"
+				},
+				{
+					"arabic": "ضحك.",
+					"english": "laughed.",
+					"transliteration": "dhi7ak."
+				}
+			],
+			"targetWords": [
+				"Audience"
+			]
+		},
+		{
+			"arabic": "فلم بلا ترجمة.",
+			"arabicTashkeel": "فِلِم بَلا تَرجَمة.",
+			"english": "A film without subtitles.",
+			"transliteration": "filim bala tarjama.",
+			"wordAlignments": [
+				{
+					"arabic": "فلم",
+					"english": "A film",
+					"transliteration": "filim"
+				},
+				{
+					"arabic": "بلا",
+					"english": "without",
+					"transliteration": "bala"
+				},
+				{
+					"arabic": "ترجمة.",
+					"english": "translation.",
+					"transliteration": "tarjama."
+				}
+			],
+			"targetWords": [
+				"Subtitles"
+			]
+		},
+		{
+			"arabic": "ثلاث مواسم، كل واحد ثلاثين حلقة.",
+			"arabicTashkeel": "ثْلاث مَواسِم، كُل واحِد ثْلاثين حَلقة.",
+			"english": "Three seasons, thirty episodes each.",
+			"transliteration": "thlath mawaasim, kull waa7id thlaatheen 7alga.",
+			"wordAlignments": [
+				{
+					"arabic": "ثلاث",
+					"english": "Three",
+					"transliteration": "thlath"
+				},
+				{
+					"arabic": "مواسم،",
+					"english": "seasons,",
+					"transliteration": "mawaasim,"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kull"
+				},
+				{
+					"arabic": "واحد",
+					"english": "one",
+					"transliteration": "waa7id"
+				},
+				{
+					"arabic": "ثلاثين",
+					"english": "thirty",
+					"transliteration": "thlaatheen"
+				},
+				{
+					"arabic": "حلقة.",
+					"english": "episodes.",
+					"transliteration": "7alga."
+				}
+			],
+			"targetWords": [
+				"Season",
+				"Episode"
+			]
+		},
+		{
+			"arabic": "قصة حب.",
+			"arabicTashkeel": "قِصّة حُب.",
+			"english": "A love story.",
+			"transliteration": "gissat 7ubb.",
+			"wordAlignments": [
+				{
+					"arabic": "قصة",
+					"english": "A story of",
+					"transliteration": "gissat"
+				},
+				{
+					"arabic": "حب.",
+					"english": "love.",
+					"transliteration": "7ubb."
+				}
+			],
+			"targetWords": [
+				"Story / plot"
+			]
+		},
+		{
+			"arabic": "أشوف المسلسل ويا أمي.",
+			"arabicTashkeel": "أشوف المُسَلسَل ويّا أُمّي.",
+			"english": "I watch the series with my mother.",
+			"transliteration": "ashoof il-musalsal wiyya ummi.",
+			"wordAlignments": [
+				{
+					"arabic": "أشوف",
+					"english": "I watch",
+					"transliteration": "ashoof"
+				},
+				{
+					"arabic": "المسلسل",
+					"english": "the series",
+					"transliteration": "il-musalsal"
+				},
+				{
+					"arabic": "ويا",
+					"english": "with",
+					"transliteration": "wiyya"
+				},
+				{
+					"arabic": "أمي.",
+					"english": "my mother.",
+					"transliteration": "ummi."
+				}
+			],
+			"targetWords": [
+				"TV series"
+			]
+		},
+		{
+			"arabic": "السينما تعرض فلم جديد.",
+			"arabicTashkeel": "السّينَما تْعرِض فِلِم جْديد.",
+			"english": "The cinema shows a new film.",
+			"transliteration": "is-seenama t3ridh filim jdeed.",
+			"wordAlignments": [
+				{
+					"arabic": "السينما",
+					"english": "The cinema",
+					"transliteration": "is-seenama"
+				},
+				{
+					"arabic": "تعرض",
+					"english": "shows",
+					"transliteration": "t3ridh"
+				},
+				{
+					"arabic": "فلم",
+					"english": "a film",
+					"transliteration": "filim"
+				},
+				{
+					"arabic": "جديد.",
+					"english": "new.",
+					"transliteration": "jdeed."
+				}
+			],
+			"targetWords": [
+				"Film"
+			]
+		},
+		{
+			"arabic": "الممثل المفضل عندي.",
+			"arabicTashkeel": "المُمَثِّل المُفَضَّل عِندي.",
+			"english": "My favourite actor.",
+			"transliteration": "il-mumaththil il-mufadhdhal 3indi.",
+			"wordAlignments": [
+				{
+					"arabic": "الممثل",
+					"english": "The actor",
+					"transliteration": "il-mumaththil"
+				},
+				{
+					"arabic": "المفضل",
+					"english": "favourite",
+					"transliteration": "il-mufadhdhal"
+				},
+				{
+					"arabic": "عندي.",
+					"english": "for me.",
+					"transliteration": "3indi."
+				}
+			],
+			"targetWords": [
+				"Actor"
+			]
+		},
+		{
+			"arabic": "ممثلة جديدة.",
+			"arabicTashkeel": "مُمَثّلة جْديدة.",
+			"english": "A new actress.",
+			"transliteration": "mumaththla jdeeda.",
+			"wordAlignments": [
+				{
+					"arabic": "ممثلة",
+					"english": "An actress",
+					"transliteration": "mumaththla"
+				},
+				{
+					"arabic": "جديدة.",
+					"english": "new.",
+					"transliteration": "jdeeda."
+				}
+			],
+			"targetWords": [
+				"Actress"
+			]
+		},
+		{
+			"arabic": "فلم المخرج الجديد.",
+			"arabicTashkeel": "فِلِم المُخرِج الجْديد.",
+			"english": "The director's new film.",
+			"transliteration": "filim il-mukhrij ij-jdeed.",
+			"wordAlignments": [
+				{
+					"arabic": "فلم",
+					"english": "The film of",
+					"transliteration": "filim"
+				},
+				{
+					"arabic": "المخرج",
+					"english": "the director",
+					"transliteration": "il-mukhrij"
+				},
+				{
+					"arabic": "الجديد.",
+					"english": "new.",
+					"transliteration": "ij-jdeed."
+				}
+			],
+			"targetWords": [
+				"Director"
+			]
+		},
+		{
+			"arabic": "شفت حلقتين.",
+			"arabicTashkeel": "شِفِت حَلقتين.",
+			"english": "I watched two episodes.",
+			"transliteration": "shifit 7algteen.",
+			"wordAlignments": [
+				{
+					"arabic": "شفت",
+					"english": "I watched",
+					"transliteration": "shifit"
+				},
+				{
+					"arabic": "حلقتين.",
+					"english": "two episodes.",
+					"transliteration": "7algteen."
+				}
+			],
+			"targetWords": [
+				"Episode"
+			]
+		},
+		{
+			"arabic": "يلعب دور البطل.",
+			"arabicTashkeel": "يِلعَب دور البَطَل.",
+			"english": "He plays the hero.",
+			"transliteration": "yil3ab door il-batal.",
+			"wordAlignments": [
+				{
+					"arabic": "يلعب",
+					"english": "He plays",
+					"transliteration": "yil3ab"
+				},
+				{
+					"arabic": "دور",
+					"english": "the role of",
+					"transliteration": "door"
+				},
+				{
+					"arabic": "البطل.",
+					"english": "the hero.",
+					"transliteration": "il-batal."
+				}
+			],
+			"targetWords": [
+				"Lead role / hero"
+			]
+		},
+		{
+			"arabic": "النهاية غريبة.",
+			"arabicTashkeel": "النِّهاية غَريبة.",
+			"english": "The ending is strange.",
+			"transliteration": "in-nihaaya ghareeba.",
+			"wordAlignments": [
+				{
+					"arabic": "النهاية",
+					"english": "The ending is",
+					"transliteration": "in-nihaaya"
+				},
+				{
+					"arabic": "غريبة.",
+					"english": "strange.",
+					"transliteration": "ghareeba."
+				}
+			],
+			"targetWords": [
+				"Ending"
+			]
+		},
+		{
+			"arabic": "كوميدي لو رعب؟",
+			"arabicTashkeel": "كوميدي لو رُعُب؟",
+			"english": "Comedy or horror?",
+			"transliteration": "koomeedi law ru3ub?",
+			"wordAlignments": [
+				{
+					"arabic": "كوميدي",
+					"english": "Comedy",
+					"transliteration": "koomeedi"
+				},
+				{
+					"arabic": "لو",
+					"english": "or",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "رعب؟",
+					"english": "horror?",
+					"transliteration": "ru3ub?"
+				}
+			],
+			"targetWords": [
+				"Comedy",
+				"Horror"
+			]
+		},
+		{
+			"arabic": "مشهد يضحك.",
+			"arabicTashkeel": "مَشهَد يِضَحِّك.",
+			"english": "A funny scene.",
+			"transliteration": "mash-had yidha77ik.",
+			"wordAlignments": [
+				{
+					"arabic": "مشهد",
+					"english": "A scene",
+					"transliteration": "mash-had"
+				},
+				{
+					"arabic": "يضحك.",
+					"english": "funny.",
+					"transliteration": "yidha77ik."
+				}
+			],
+			"targetWords": [
+				"Scene"
+			]
+		},
+		{
+			"arabic": "الجمهور كبير.",
+			"arabicTashkeel": "الجُمهور كْبير.",
+			"english": "The audience is big.",
+			"transliteration": "ij-jumhoor chbeer.",
+			"wordAlignments": [
+				{
+					"arabic": "الجمهور",
+					"english": "The audience is",
+					"transliteration": "ij-jumhoor"
+				},
+				{
+					"arabic": "كبير.",
+					"english": "big.",
+					"transliteration": "chbeer."
+				}
+			],
+			"targetWords": [
+				"Audience"
+			]
+		},
+		{
+			"arabic": "ترجمة إنكليزي.",
+			"arabicTashkeel": "تَرجَمة إنكليزي.",
+			"english": "English subtitles.",
+			"transliteration": "tarjama ingileezi.",
+			"wordAlignments": [
+				{
+					"arabic": "ترجمة",
+					"english": "Translation",
+					"transliteration": "tarjama"
+				},
+				{
+					"arabic": "إنكليزي.",
+					"english": "English.",
+					"transliteration": "ingileezi."
+				}
+			],
+			"targetWords": [
+				"Subtitles"
+			]
+		},
+		{
+			"arabic": "القصة طويلة ومعقدة.",
+			"arabicTashkeel": "القِصّة طْويلة ومْعَقّدة.",
+			"english": "The story is long and complicated.",
+			"transliteration": "il-gissa tweela w-m3aggda.",
+			"wordAlignments": [
+				{
+					"arabic": "القصة",
+					"english": "The story is",
+					"transliteration": "il-gissa"
+				},
+				{
+					"arabic": "طويلة",
+					"english": "long",
+					"transliteration": "tweela"
+				},
+				{
+					"arabic": "ومعقدة.",
+					"english": "and complicated.",
+					"transliteration": "w-m3aggda."
+				}
+			],
+			"targetWords": [
+				"Story / plot"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "A Ramadan Series",
+			"sentences": [
+				{
+					"arabic": "كل رمضان، عائلتي تشوف مسلسل عراقي بعد الفطور.",
+					"arabicTashkeel": "كُل رَمَضان، عائلتي تْشوف مُسَلسَل عِراقي بَعد الفُطور.",
+					"english": "Every Ramadan, my family watches an Iraqi series after breakfast.",
+					"transliteration": "kull ramadhaan, 3aa2ilti tshoof musalsal 3iraaqi ba3d il-futoor.",
+					"wordAlignments": [
+						{
+							"arabic": "كل",
+							"english": "Every",
+							"transliteration": "kull"
+						},
+						{
+							"arabic": "رمضان،",
+							"english": "Ramadan,",
+							"transliteration": "ramadhaan,"
+						},
+						{
+							"arabic": "عائلتي",
+							"english": "my family",
+							"transliteration": "3aa2ilti"
+						},
+						{
+							"arabic": "تشوف",
+							"english": "watches",
+							"transliteration": "tshoof"
+						},
+						{
+							"arabic": "مسلسل",
+							"english": "a series",
+							"transliteration": "musalsal"
+						},
+						{
+							"arabic": "عراقي",
+							"english": "Iraqi",
+							"transliteration": "3iraaqi"
+						},
+						{
+							"arabic": "بعد",
+							"english": "after",
+							"transliteration": "ba3d"
+						},
+						{
+							"arabic": "الفطور.",
+							"english": "the breakfast.",
+							"transliteration": "il-futoor."
+						}
+					]
+				},
+				{
+					"arabic": "قصة هالسنة عن عائلة ببغداد القديمة.",
+					"arabicTashkeel": "قِصّة هالسَّنة عَن عائلة ببَغداد القَديمة.",
+					"english": "This year's story is about a family in old Baghdad.",
+					"transliteration": "gissat has-sana 3an 3aa2ila b-baghdaad il-gadeema.",
+					"wordAlignments": [
+						{
+							"arabic": "قصة",
+							"english": "The story of",
+							"transliteration": "gissat"
+						},
+						{
+							"arabic": "هالسنة",
+							"english": "this year is",
+							"transliteration": "has-sana"
+						},
+						{
+							"arabic": "عن",
+							"english": "about",
+							"transliteration": "3an"
+						},
+						{
+							"arabic": "عائلة",
+							"english": "a family",
+							"transliteration": "3aa2ila"
+						},
+						{
+							"arabic": "ببغداد",
+							"english": "in Baghdad",
+							"transliteration": "b-baghdaad"
+						},
+						{
+							"arabic": "القديمة.",
+							"english": "old.",
+							"transliteration": "il-gadeema."
+						}
+					]
+				},
+				{
+					"arabic": "الممثل البطل مشهور، والممثلة جديدة.",
+					"arabicTashkeel": "المُمَثِّل البَطَل مَشهور، والمُمَثّلة جْديدة.",
+					"english": "The lead actor is famous, and the actress is new.",
+					"transliteration": "il-mumaththil il-batal mash-hoor, w-il-mumaththla jdeeda.",
+					"wordAlignments": [
+						{
+							"arabic": "الممثل",
+							"english": "The actor",
+							"transliteration": "il-mumaththil"
+						},
+						{
+							"arabic": "البطل",
+							"english": "lead is",
+							"transliteration": "il-batal"
+						},
+						{
+							"arabic": "مشهور،",
+							"english": "famous,",
+							"transliteration": "mash-hoor,"
+						},
+						{
+							"arabic": "والممثلة",
+							"english": "and the actress is",
+							"transliteration": "w-il-mumaththla"
+						},
+						{
+							"arabic": "جديدة.",
+							"english": "new.",
+							"transliteration": "jdeeda."
+						}
+					]
+				},
+				{
+					"arabic": "كل حلقة تخلص بمشهد مثير.",
+					"arabicTashkeel": "كُل حَلقة تِخلَص بمَشهَد مُثير.",
+					"english": "Every episode ends with an exciting scene.",
+					"transliteration": "kull 7alga tikhlas b-mash-had muthiir.",
+					"wordAlignments": [
+						{
+							"arabic": "كل",
+							"english": "Every",
+							"transliteration": "kull"
+						},
+						{
+							"arabic": "حلقة",
+							"english": "episode",
+							"transliteration": "7alga"
+						},
+						{
+							"arabic": "تخلص",
+							"english": "ends",
+							"transliteration": "tikhlas"
+						},
+						{
+							"arabic": "بمشهد",
+							"english": "with a scene",
+							"transliteration": "b-mash-had"
+						},
+						{
+							"arabic": "مثير.",
+							"english": "exciting.",
+							"transliteration": "muthiir."
+						}
+					]
+				},
+				{
+					"arabic": "أمي تقول: ما أريد أعرف النهاية!",
+					"arabicTashkeel": "أُمّي تْقول: ما أريد أعرُف النِّهاية!",
+					"english": "My mother says: I don't want to know the ending!",
+					"transliteration": "ummi tgool: ma areed a3ruf in-nihaaya!",
+					"wordAlignments": [
+						{
+							"arabic": "أمي",
+							"english": "My mother",
+							"transliteration": "ummi"
+						},
+						{
+							"arabic": "تقول:",
+							"english": "says:",
+							"transliteration": "tgool:"
+						},
+						{
+							"arabic": "ما",
+							"english": "not",
+							"transliteration": "ma"
+						},
+						{
+							"arabic": "أريد",
+							"english": "I want",
+							"transliteration": "areed"
+						},
+						{
+							"arabic": "أعرف",
+							"english": "to know",
+							"transliteration": "a3ruf"
+						},
+						{
+							"arabic": "النهاية!",
+							"english": "the ending!",
+							"transliteration": "in-nihaaya!"
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "At the Cinema",
+			"sentences": [
+				{
+					"arabic": "يوم الجمعة رحنا للسينما بالمول.",
+					"arabicTashkeel": "يوم الجُمعة رِحنا للسّينَما بالمول.",
+					"english": "On Friday we went to the cinema at the mall.",
+					"transliteration": "yoom ij-jum3a ri7na lis-seenama bil-mool.",
+					"wordAlignments": [
+						{
+							"arabic": "يوم",
+							"english": "On",
+							"transliteration": "yoom"
+						},
+						{
+							"arabic": "الجمعة",
+							"english": "Friday",
+							"transliteration": "ij-jum3a"
+						},
+						{
+							"arabic": "رحنا",
+							"english": "we went",
+							"transliteration": "ri7na"
+						},
+						{
+							"arabic": "للسينما",
+							"english": "to the cinema",
+							"transliteration": "lis-seenama"
+						},
+						{
+							"arabic": "بالمول.",
+							"english": "at the mall.",
+							"transliteration": "bil-mool."
+						}
+					]
+				},
+				{
+					"arabic": "شفنا فلم كوميدي أمريكي بترجمة عربي.",
+					"arabicTashkeel": "شِفنا فِلِم كوميدي أمريكي بتَرجَمة عَرَبي.",
+					"english": "We watched an American comedy film with Arabic subtitles.",
+					"transliteration": "shifna filim koomeedi amreeki b-tarjama 3arabi.",
+					"wordAlignments": [
+						{
+							"arabic": "شفنا",
+							"english": "We watched",
+							"transliteration": "shifna"
+						},
+						{
+							"arabic": "فلم",
+							"english": "a film",
+							"transliteration": "filim"
+						},
+						{
+							"arabic": "كوميدي",
+							"english": "comedy",
+							"transliteration": "koomeedi"
+						},
+						{
+							"arabic": "أمريكي",
+							"english": "American",
+							"transliteration": "amreeki"
+						},
+						{
+							"arabic": "بترجمة",
+							"english": "with translation",
+							"transliteration": "b-tarjama"
+						},
+						{
+							"arabic": "عربي.",
+							"english": "Arabic.",
+							"transliteration": "3arabi."
+						}
+					]
+				},
+				{
+					"arabic": "الجمهور ضحك هواية.",
+					"arabicTashkeel": "الجُمهور ضِحَك هْوايَة.",
+					"english": "The audience laughed a lot.",
+					"transliteration": "ij-jumhoor dhi7ak hwaaya.",
+					"wordAlignments": [
+						{
+							"arabic": "الجمهور",
+							"english": "The audience",
+							"transliteration": "ij-jumhoor"
+						},
+						{
+							"arabic": "ضحك",
+							"english": "laughed",
+							"transliteration": "dhi7ak"
+						},
+						{
+							"arabic": "هواية.",
+							"english": "a lot.",
+							"transliteration": "hwaaya."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "During Ramadan, the student and an Iraqi friend are deciding which series and films to watch after breakfast.",
+		"studentRole": "A friend learning Iraqi Arabic.",
+		"otherRole": "An Iraqi friend who watches every Ramadan series.",
+		"goalEnglish": "Talk about series and films you like (comedy, horror, drama), the actors and the story, and ask your friend not to spoil the ending.",
+		"targetWords": [
+			"TV series",
+			"Film",
+			"Actor",
+			"Episode",
+			"Story / plot",
+			"Ending",
+			"Comedy",
+			"Scene"
+		]
+	}
+}
