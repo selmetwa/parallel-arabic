@@ -1,0 +1,250 @@
+# Iraqi — A2 — Directions and Transport in the City (base-a2-u20)
+# Iraqi: كراج = bus/minibus terminal, موقف (mawgif) = stop, خط = route/line, أجرة = fare.
+
+@vocab
+noun:m = Stop (bus)
+مَوقِف / mawgif / Stop
+
+noun:m = Bus terminal
+كَراج / karaaj / Terminal
+
+noun:m = Route / line
+خَط / khatt / Route
+
+noun:f = Fare
+أُجرة / ujra / Fare
+
+phrase = Main street
+الشّارع / ish-shaari3 / The street | الرَّئيسي / ir-ra2eesi / main
+
+noun:m = Tunnel
+نَفَق / nafag / Tunnel
+
+verb = It passes by
+يْمُر / ymurr / It passes
+
+verb = It takes (time)
+ياخُذ / yaakhudh / It takes
+
+noun:f = Distance
+مَسافة / masaafa / Distance
+
+adjective = Direct
+مُباشِر / mubaashir / Direct
+
+verb = Change (vehicles)!
+بَدِّل / baddil / Change
+
+verb = Ask!
+إسأل / is2al / Ask
+
+verb = Get off!
+إنزِل / inzil / Get off
+
+verb = Take!
+خُذ / khudh / Take
+
+phrase = On the way
+بالطَّريق / bit-tareeg / On the way
+
+@pool
+Where is the bus stop? = Stop (bus)
+وين / ween / Where is | مَوقِف / mawgif / the stop of | الباص؟ / il-paas? / the bus?
+
+The minibuses leave from the Bab al-Sharqi terminal. = Bus terminal
+الكَيّات / il-kayyaat / The minibuses | تِطلَع / titla3 / leave | مِن / min / from | كَراج / karaaj / the terminal of | باب / baab / Bab | الشَّرقي. / ish-sharqi. / al-Sharqi.
+
+Which route goes to Kadhimiya? = Route / line
+يا / ya / Which | خَط / khatt / route | يْروح / yrooh / goes | للكاظمية؟ / lil-kaadhimiyya? / to Kadhimiya?
+
+How much is the fare? = Fare
+شْكَد / shgadd / How much is | الأُجرة؟ / il-ujra? / the fare?
+
+Walk along the main street. = Main street
+إمشي / imshi / Walk | عالشّارع / 3ash-shaari3 / along the street | الرَّئيسي. / ir-ra2eesi. / main.
+
+Go through the tunnel. = Tunnel
+روح / rooh / Go | مِن / min / through | النَّفَق. / in-nafag. / the tunnel.
+
+The bus passes by the university. = It passes by
+الباص / il-paas / The bus | يْمُر / ymurr / passes | مِن / min / by | الجامعة. / ij-jaam3a. / the university.
+
+The road takes half an hour. = It takes (time)
+الطَّريق / it-tareeg / The road | ياخُذ / yaakhudh / takes | نُص / nuss / half | ساعة. / saa3a. / an hour.
+
+What is the distance? = Distance
+شْكَد / shgadd / How much is | المَسافة؟ / il-masaafa? / the distance?
+
+Is there a direct bus? = Direct
+أكو / aku / Is there | باص / paas / a bus | مُباشِر؟ / mubaashir? / direct?
+
+Change at Tahrir Square. = Change (vehicles)!
+بَدِّل / baddil / Change | بساحة / b-saa7at / at the square of | التَّحرير. / it-ta7reer. / Tahrir.
+
+Ask the driver. = Ask!
+إسأل / is2al / Ask | السّايِق. / is-saayig. / the driver.
+
+Get off at the second stop. = Get off!; Stop (bus)
+إنزِل / inzil / Get off | بالمَوقِف / bil-mawgif / at the stop | الثّاني. / ith-thaani. / second.
+
+Take a taxi from here. = Take!
+خُذ / khudh / Take | تَكسي / taksi / a taxi | مِن / min / from | هْنا. / hnaa. / here.
+
+The market is on the way. = On the way
+السّوق / is-soog / The market is | بالطَّريق. / bit-tareeg. / on the way.
+
+The stop is in front of the bank. = Stop (bus)
+المَوقِف / il-mawgif / The stop is | قِدّام / giddaam / in front of | البَنك. / il-bank. / the bank.
+
+The terminal is crowded in the morning. = Bus terminal
+الكَراج / il-karaaj / The terminal is | مَزدَحِم / mazda7im / crowded | الصُّبُح. / is-subu7. / in the morning.
+
+This route is long. = Route / line
+هَذا / haatha / This | الخَط / il-khatt / route is | طْويل. / tweel. / long.
+
+The fare is a thousand dinars. = Fare
+الأُجرة / il-ujra / The fare is | ألف / alf / a thousand | دينار. / deenaar. / dinars.
+
+The shops are on the main street. = Main street
+المَحَلّات / il-ma7allaat / The shops are | عالشّارع / 3ash-shaari3 / on the street | الرَّئيسي. / ir-ra2eesi. / main.
+
+The tunnel is closed today. = Tunnel
+النَّفَق / in-nafag / The tunnel is | مَسدود / masdood / closed | اليوم. / il-yoom. / today.
+
+Does it pass by the hospital? = It passes by
+يْمُر / ymurr / Does it pass | مِن / min / by | المُستَشفى؟ / il-mustashfa? / the hospital?
+
+How long does it take? = It takes (time)
+شْكَد / shgadd / How much | ياخُذ / yaakhudh / does it take | وَكِت؟ / wakit? / time?
+
+The distance is short. = Distance
+المَسافة / il-masaafa / The distance is | قْصَيّرة. / gsayyra. / short.
+
+The direct route is faster. = Direct; Route / line
+الخَط / il-khatt / The route | المُباشِر / il-mubaashir / direct is | أسرَع. / asra3. / faster.
+
+Do I need to change? = Change (vehicles)!
+لازِم / laazim / Must | أبَدِّل؟ / abaddil? / I change?
+
+Ask someone on the street. = Ask!
+إسأل / is2al / Ask | واحِد / waa7id / someone | بالشّارع. / bish-shaari3. / on the street.
+
+Get off here, please. = Get off!
+إنزِل / inzil / Get off | هْنا / hnaa / here | رَجاءً. / rajaa2an. / please.
+
+Take the minibus from the terminal. = Take!; Bus terminal
+خُذ / khudh / Take | الكَيّا / il-kayya / the minibus | مِن / min / from | الكَراج. / il-karaaj. / the terminal.
+
+I'll buy bread on the way. = On the way
+أشتِري / ashtiri / I'll buy | خُبُز / khubuz / bread | بالطَّريق. / bit-tareeg. / on the way.
+
+Wait at the stop. = Stop (bus)
+إنتِظِر / intidhir / Wait | بالمَوقِف. / bil-mawgif. / at the stop.
+
+The terminal is far from here. = Bus terminal
+الكَراج / il-karaaj / The terminal is | بْعيد / b3eed / far | مِن / min / from | هْنا. / hnaa. / here.
+
+The Karrada route. = Route / line
+خَط / khatt / The route of | الكَرّادة. / il-karraada. / Karrada.
+
+The fare went up. = Fare
+الأُجرة / il-ujra / The fare | صِعدَت. / si3dat. / went up.
+
+The main street is crowded. = Main street
+الشّارع / ish-shaari3 / The street | الرَّئيسي / ir-ra2eesi / main is | مَزدَحِم. / mazda7im. / crowded.
+
+After the tunnel, turn right. = Tunnel
+بَعد / ba3d / After | النَّفَق، / in-nafag, / the tunnel, | لِف / liff / turn | يِمين. / yimeen. / right.
+
+The bus passes by every ten minutes. = It passes by
+الباص / il-paas / The bus | يْمُر / ymurr / passes | كُل / kull / every | عَشر / 3ashir / ten | دَقايِق. / dagaayig. / minutes.
+
+The trip takes two hours. = It takes (time)
+السَّفرة / is-safra / The trip | تاخُذ / taakhudh / takes | ساعتين. / saa3teen. / two hours.
+
+The distance between Baghdad and Basra is long. = Distance
+المَسافة / il-masaafa / The distance | بين / been / between | بَغداد / baghdaad / Baghdad | والبَصرة / w-il-basra / and Basra is | طْويلة. / tweela. / long.
+
+A direct flight. = Direct
+رِحلة / ri7la / A flight | مُباشرة. / mubaashra. / direct.
+
+Change buses at the terminal. = Change (vehicles)!; Bus terminal
+بَدِّل / baddil / Change | الباص / il-paas / the bus | بالكَراج. / bil-karaaj. / at the terminal.
+
+Ask about the fare first. = Ask!; Fare
+إسأل / is2al / Ask | عَن / 3an / about | الأُجرة / il-ujra / the fare | أوَّل. / awwal. / first.
+
+Get off after the bridge. = Get off!
+إنزِل / inzil / Get off | بَعد / ba3d / after | الجِسِر. / ij-jisir. / the bridge.
+
+Take the first route. = Take!; Route / line
+خُذ / khudh / Take | أوَّل / awwal / the first | خَط. / khatt. / route.
+
+Is the pharmacy on the way? = On the way
+الصَّيدَلية / is-saydaliyya / Is the pharmacy | بالطَّريق؟ / bit-tareeg? / on the way?
+
+The stop is near. = Stop (bus)
+المَوقِف / il-mawgif / The stop is | قْريب. / greeb. / near.
+
+The new terminal. = Bus terminal
+الكَراج / il-karaaj / The terminal | الجْديد. / ij-jdeed. / new.
+
+Pay the fare to the driver. = Fare
+إدفَع / idfa3 / Pay | الأُجرة / il-ujra / the fare | للسّايِق. / lis-saayig. / to the driver.
+
+Take the main street, it's faster. = Main street; Take!
+خُذ / khudh / Take | الشّارع / ish-shaari3 / the street | الرَّئيسي، / ir-ra2eesi, / main, | أسرَع. / asra3. / it's faster.
+
+The tunnel is long. = Tunnel
+النَّفَق / in-nafag / The tunnel is | طْويل. / tweel. / long.
+
+The minibus passes by our house. = It passes by
+الكَيّا / il-kayya / The minibus | تْمُر / tmurr / passes | مِن / min / by | بيتنا. / beetna. / our house.
+
+It takes ten minutes on foot. = It takes (time)
+ياخُذ / yaakhudh / It takes | عَشر / 3ashir / ten | دَقايِق / dagaayig / minutes | بالمَشي. / bil-mashi. / on foot.
+
+A short distance. = Distance
+مَسافة / masaafa / A distance | قْصَيّرة. / gsayyra. / short.
+
+Not direct, you have to change. = Direct; Change (vehicles)!
+مو / moo / Not | مُباشِر، / mubaashir, / direct, | لازِم / laazim / you must | تْبَدِّل. / tbaddil. / change.
+
+Ask at the terminal. = Ask!
+إسأل / is2al / Ask | بالكَراج. / bil-karaaj. / at the terminal.
+
+Get off at the last stop. = Get off!; Stop (bus)
+إنزِل / inzil / Get off | بآخِر / b-aakhir / at the last | مَوقِف. / mawgif. / stop.
+
+We talked on the way. = On the way
+حِكَينا / 7ichayna / We talked | بالطَّريق. / bit-tareeg. / on the way.
+
+@passage To the Kadhimiya Shrine
+Take the minibus from the Bab al-Sharqi terminal.
+خُذ / khudh / Take | الكَيّا / il-kayya / the minibus | مِن / min / from | كَراج / karaaj / the terminal of | باب / baab / Bab | الشَّرقي. / ish-sharqi. / al-Sharqi.
+
+It's not direct; change at Bab al-Muadham.
+مو / moo / Not | مُباشِر، / mubaashir, / direct, | بَدِّل / baddil / change | بباب / b-baab / at Bab | المُعَظَّم. / il-mu3adhdham. / al-Muadham.
+
+The road takes forty minutes, and the fare is a thousand dinars.
+الطَّريق / it-tareeg / The road | ياخُذ / yaakhudh / takes | أربعين / arba3een / forty | دَقيقة، / dageega, / minutes, | والأُجرة / w-il-ujra / and the fare is | ألف / alf / a thousand | دينار. / deenaar. / dinars.
+
+Get off at the last stop.
+إنزِل / inzil / Get off | بآخِر / b-aakhir / at the last | مَوقِف. / mawgif. / stop.
+
+@passage A Short Walk
+The bookshop isn't far, the distance is short.
+المَكتَبة / il-maktaba / The bookshop is | مو / moo / not | بْعيدة، / b3eeda, / far, | المَسافة / il-masaafa / the distance is | قْصَيّرة. / gsayyra. / short.
+
+Walk along the main street and go through the tunnel.
+إمشي / imshi / Walk | عالشّارع / 3ash-shaari3 / along the street | الرَّئيسي / ir-ra2eesi / main | وفوت / w-foot / and go | مِن / min / through | النَّفَق. / in-nafag. / the tunnel.
+
+On the way there's a café, ask there.
+بالطَّريق / bit-tareeg / On the way | أكو / aku / there is | قَهوة، / gahwa, / a café, | إسأل / is2al / ask | هْناك. / hnaak. / there.
+
+@scenario
+situation: The student wants to visit the Kadhimiya shrine from central Baghdad by public transport and asks at a bus stop.
+studentRole: A visitor learning Iraqi Arabic.
+otherRole: An older Iraqi man waiting at the stop, who knows all the routes.
+goalEnglish: Ask which route goes there, whether it's direct or you need to change, how long it takes, the fare, and where to get off.
+targetWords: Route / line; Stop (bus); Direct; Change (vehicles)!; It takes (time); Fare; Get off!; Bus terminal

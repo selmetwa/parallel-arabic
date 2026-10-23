@@ -1,0 +1,1921 @@
+{
+	"vocab": [
+		{
+			"arabic": "شغل",
+			"arabicTashkeel": "شُغُل",
+			"english": "Job / work",
+			"transliteration": "shughul",
+			"wordAlignments": [
+				{
+					"arabic": "شغل",
+					"english": "Job",
+					"transliteration": "shughul"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "وظيفة",
+			"arabicTashkeel": "وَظيفة",
+			"english": "Position (job)",
+			"transliteration": "wadheefa",
+			"wordAlignments": [
+				{
+					"arabic": "وظيفة",
+					"english": "Position",
+					"transliteration": "wadheefa"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "مقابلة",
+			"arabicTashkeel": "مُقابلة",
+			"english": "Interview",
+			"transliteration": "mgaabla",
+			"wordAlignments": [
+				{
+					"arabic": "مقابلة",
+					"english": "Interview",
+					"transliteration": "mgaabla"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "السيرة الذاتية",
+			"arabicTashkeel": "السّيرة الذّاتية",
+			"english": "CV",
+			"transliteration": "is-seera idh-dhaatiya",
+			"wordAlignments": [
+				{
+					"arabic": "السيرة",
+					"english": "The record",
+					"transliteration": "is-seera"
+				},
+				{
+					"arabic": "الذاتية",
+					"english": "personal",
+					"transliteration": "idh-dhaatiya"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "خبرة",
+			"arabicTashkeel": "خِبرة",
+			"english": "Experience",
+			"transliteration": "khibra",
+			"wordAlignments": [
+				{
+					"arabic": "خبرة",
+					"english": "Experience",
+					"transliteration": "khibra"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "شهادة",
+			"arabicTashkeel": "شَهادة",
+			"english": "Degree / certificate",
+			"transliteration": "shahaada",
+			"wordAlignments": [
+				{
+					"arabic": "شهادة",
+					"english": "Degree",
+					"transliteration": "shahaada"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "راتب",
+			"arabicTashkeel": "راتِب",
+			"english": "Salary",
+			"transliteration": "raatib",
+			"wordAlignments": [
+				{
+					"arabic": "راتب",
+					"english": "Salary",
+					"transliteration": "raatib"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "شركة",
+			"arabicTashkeel": "شَرِكة",
+			"english": "Company",
+			"transliteration": "shirka",
+			"wordAlignments": [
+				{
+					"arabic": "شركة",
+					"english": "Company",
+					"transliteration": "shirka"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "مدير",
+			"arabicTashkeel": "مُدير",
+			"english": "Manager",
+			"transliteration": "mudeer",
+			"wordAlignments": [
+				{
+					"arabic": "مدير",
+					"english": "Manager",
+					"transliteration": "mudeer"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "موظف",
+			"arabicTashkeel": "مْوَظَّف",
+			"english": "Employee",
+			"transliteration": "mwadhdhaf",
+			"wordAlignments": [
+				{
+					"arabic": "موظف",
+					"english": "Employee",
+					"transliteration": "mwadhdhaf"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "تخرجت",
+			"arabicTashkeel": "تخَرَّجِت",
+			"english": "I graduated",
+			"transliteration": "tkharrajit",
+			"wordAlignments": [
+				{
+					"arabic": "تخرجت",
+					"english": "I graduated",
+					"transliteration": "tkharrajit"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "لغة",
+			"arabicTashkeel": "لُغة",
+			"english": "Language",
+			"transliteration": "lugha",
+			"wordAlignments": [
+				{
+					"arabic": "لغة",
+					"english": "Language",
+					"transliteration": "lugha"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "كمبيوتر",
+			"arabicTashkeel": "كُمبيوتَر",
+			"english": "Computer",
+			"transliteration": "kombyootar",
+			"wordAlignments": [
+				{
+					"arabic": "كمبيوتر",
+					"english": "Computer",
+					"transliteration": "kombyootar"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "مهارات",
+			"arabicTashkeel": "مَهارات",
+			"english": "Skills",
+			"transliteration": "mahaaraat",
+			"wordAlignments": [
+				{
+					"arabic": "مهارات",
+					"english": "Skills",
+					"transliteration": "mahaaraat"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "دوام كامل",
+			"arabicTashkeel": "دَوام كامِل",
+			"english": "Full-time",
+			"transliteration": "dawaam kaamil",
+			"wordAlignments": [
+				{
+					"arabic": "دوام",
+					"english": "Hours",
+					"transliteration": "dawaam"
+				},
+				{
+					"arabic": "كامل",
+					"english": "full",
+					"transliteration": "kaamil"
+				}
+			],
+			"partOfSpeech": "phrase"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "دا أدور شغل.",
+			"arabicTashkeel": "دا أدَوِّر شُغُل.",
+			"english": "I'm looking for a job.",
+			"transliteration": "da adawwir shughul.",
+			"wordAlignments": [
+				{
+					"arabic": "دا",
+					"english": "I am",
+					"transliteration": "da"
+				},
+				{
+					"arabic": "أدور",
+					"english": "looking for",
+					"transliteration": "adawwir"
+				},
+				{
+					"arabic": "شغل.",
+					"english": "a job.",
+					"transliteration": "shughul."
+				}
+			],
+			"targetWords": [
+				"Job / work"
+			]
+		},
+		{
+			"arabic": "أكو وظيفة جديدة بالشركة.",
+			"arabicTashkeel": "أكو وَظيفة جْديدة بالشَّرِكة.",
+			"english": "There is a new position at the company.",
+			"transliteration": "aku wadheefa jdeeda bish-shirka.",
+			"wordAlignments": [
+				{
+					"arabic": "أكو",
+					"english": "There is",
+					"transliteration": "aku"
+				},
+				{
+					"arabic": "وظيفة",
+					"english": "a position",
+					"transliteration": "wadheefa"
+				},
+				{
+					"arabic": "جديدة",
+					"english": "new",
+					"transliteration": "jdeeda"
+				},
+				{
+					"arabic": "بالشركة.",
+					"english": "at the company.",
+					"transliteration": "bish-shirka."
+				}
+			],
+			"targetWords": [
+				"Position (job)",
+				"Company"
+			]
+		},
+		{
+			"arabic": "عندي مقابلة باكر.",
+			"arabicTashkeel": "عِندي مُقابلة باكِر.",
+			"english": "I have an interview tomorrow.",
+			"transliteration": "3indi mgaabla baachir.",
+			"wordAlignments": [
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "مقابلة",
+					"english": "an interview",
+					"transliteration": "mgaabla"
+				},
+				{
+					"arabic": "باكر.",
+					"english": "tomorrow.",
+					"transliteration": "baachir."
+				}
+			],
+			"targetWords": [
+				"Interview"
+			]
+		},
+		{
+			"arabic": "دزلي السيرة الذاتية مالتك.",
+			"arabicTashkeel": "دِزّلي السّيرة الذّاتية مالتَك.",
+			"english": "Send me your CV.",
+			"transliteration": "dizzli is-seera idh-dhaatiya maaltak.",
+			"wordAlignments": [
+				{
+					"arabic": "دزلي",
+					"english": "Send me",
+					"transliteration": "dizzli"
+				},
+				{
+					"arabic": "السيرة",
+					"english": "the record",
+					"transliteration": "is-seera"
+				},
+				{
+					"arabic": "الذاتية",
+					"english": "personal",
+					"transliteration": "idh-dhaatiya"
+				},
+				{
+					"arabic": "مالتك.",
+					"english": "of yours.",
+					"transliteration": "maaltak."
+				}
+			],
+			"targetWords": [
+				"CV"
+			]
+		},
+		{
+			"arabic": "شكد عندك خبرة؟",
+			"arabicTashkeel": "شْكَد عِندَك خِبرة؟",
+			"english": "How much experience do you have?",
+			"transliteration": "shgadd 3indak khibra?",
+			"wordAlignments": [
+				{
+					"arabic": "شكد",
+					"english": "How much",
+					"transliteration": "shgadd"
+				},
+				{
+					"arabic": "عندك",
+					"english": "do you have",
+					"transliteration": "3indak"
+				},
+				{
+					"arabic": "خبرة؟",
+					"english": "experience?",
+					"transliteration": "khibra?"
+				}
+			],
+			"targetWords": [
+				"Experience"
+			]
+		},
+		{
+			"arabic": "عندي شهادة بالهندسة.",
+			"arabicTashkeel": "عِندي شَهادة بالهَندَسة.",
+			"english": "I have a degree in engineering.",
+			"transliteration": "3indi shahaada bil-handasa.",
+			"wordAlignments": [
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "شهادة",
+					"english": "a degree",
+					"transliteration": "shahaada"
+				},
+				{
+					"arabic": "بالهندسة.",
+					"english": "in engineering.",
+					"transliteration": "bil-handasa."
+				}
+			],
+			"targetWords": [
+				"Degree / certificate"
+			]
+		},
+		{
+			"arabic": "الراتب زين.",
+			"arabicTashkeel": "الرّاتِب زين.",
+			"english": "The salary is good.",
+			"transliteration": "ir-raatib zeen.",
+			"wordAlignments": [
+				{
+					"arabic": "الراتب",
+					"english": "The salary is",
+					"transliteration": "ir-raatib"
+				},
+				{
+					"arabic": "زين.",
+					"english": "good.",
+					"transliteration": "zeen."
+				}
+			],
+			"targetWords": [
+				"Salary"
+			]
+		},
+		{
+			"arabic": "الشركة كبيرة.",
+			"arabicTashkeel": "الشَّرِكة كْبيرة.",
+			"english": "The company is big.",
+			"transliteration": "ish-shirka chbeera.",
+			"wordAlignments": [
+				{
+					"arabic": "الشركة",
+					"english": "The company is",
+					"transliteration": "ish-shirka"
+				},
+				{
+					"arabic": "كبيرة.",
+					"english": "big.",
+					"transliteration": "chbeera."
+				}
+			],
+			"targetWords": [
+				"Company"
+			]
+		},
+		{
+			"arabic": "المدير يريد يشوفك.",
+			"arabicTashkeel": "المُدير يْريد يْشوفَك.",
+			"english": "The manager wants to see you.",
+			"transliteration": "il-mudeer yreed yshoofak.",
+			"wordAlignments": [
+				{
+					"arabic": "المدير",
+					"english": "The manager",
+					"transliteration": "il-mudeer"
+				},
+				{
+					"arabic": "يريد",
+					"english": "wants",
+					"transliteration": "yreed"
+				},
+				{
+					"arabic": "يشوفك.",
+					"english": "to see you.",
+					"transliteration": "yshoofak."
+				}
+			],
+			"targetWords": [
+				"Manager"
+			]
+		},
+		{
+			"arabic": "آني موظف ببنك.",
+			"arabicTashkeel": "آني مْوَظَّف ببَنك.",
+			"english": "I'm an employee at a bank.",
+			"transliteration": "aani mwadhdhaf b-bank.",
+			"wordAlignments": [
+				{
+					"arabic": "آني",
+					"english": "I am",
+					"transliteration": "aani"
+				},
+				{
+					"arabic": "موظف",
+					"english": "an employee",
+					"transliteration": "mwadhdhaf"
+				},
+				{
+					"arabic": "ببنك.",
+					"english": "at a bank.",
+					"transliteration": "b-bank."
+				}
+			],
+			"targetWords": [
+				"Employee"
+			]
+		},
+		{
+			"arabic": "تخرجت سنة ألفين وعشرين.",
+			"arabicTashkeel": "تخَرَّجِت سَنة ألفين وعِشرين.",
+			"english": "I graduated in 2020.",
+			"transliteration": "tkharrajit sanat alfeen w-3ishreen.",
+			"wordAlignments": [
+				{
+					"arabic": "تخرجت",
+					"english": "I graduated",
+					"transliteration": "tkharrajit"
+				},
+				{
+					"arabic": "سنة",
+					"english": "in the year",
+					"transliteration": "sanat"
+				},
+				{
+					"arabic": "ألفين",
+					"english": "two thousand",
+					"transliteration": "alfeen"
+				},
+				{
+					"arabic": "وعشرين.",
+					"english": "and twenty.",
+					"transliteration": "w-3ishreen."
+				}
+			],
+			"targetWords": [
+				"I graduated"
+			]
+		},
+		{
+			"arabic": "أحكي ثلاث لغات.",
+			"arabicTashkeel": "أحكي ثْلاث لُغات.",
+			"english": "I speak three languages.",
+			"transliteration": "a7chi thlath lughaat.",
+			"wordAlignments": [
+				{
+					"arabic": "أحكي",
+					"english": "I speak",
+					"transliteration": "a7chi"
+				},
+				{
+					"arabic": "ثلاث",
+					"english": "three",
+					"transliteration": "thlath"
+				},
+				{
+					"arabic": "لغات.",
+					"english": "languages.",
+					"transliteration": "lughaat."
+				}
+			],
+			"targetWords": [
+				"Language"
+			]
+		},
+		{
+			"arabic": "أعرف الكمبيوتر زين.",
+			"arabicTashkeel": "أعرُف الكُمبيوتَر زين.",
+			"english": "I know computers well.",
+			"transliteration": "a3ruf il-kombyootar zeen.",
+			"wordAlignments": [
+				{
+					"arabic": "أعرف",
+					"english": "I know",
+					"transliteration": "a3ruf"
+				},
+				{
+					"arabic": "الكمبيوتر",
+					"english": "the computer",
+					"transliteration": "il-kombyootar"
+				},
+				{
+					"arabic": "زين.",
+					"english": "well.",
+					"transliteration": "zeen."
+				}
+			],
+			"targetWords": [
+				"Computer"
+			]
+		},
+		{
+			"arabic": "شنو مهاراتك؟",
+			"arabicTashkeel": "شِنو مَهاراتَك؟",
+			"english": "What are your skills?",
+			"transliteration": "shinu mahaaraatak?",
+			"wordAlignments": [
+				{
+					"arabic": "شنو",
+					"english": "What are",
+					"transliteration": "shinu"
+				},
+				{
+					"arabic": "مهاراتك؟",
+					"english": "your skills?",
+					"transliteration": "mahaaraatak?"
+				}
+			],
+			"targetWords": [
+				"Skills"
+			]
+		},
+		{
+			"arabic": "الشغل دوام كامل؟",
+			"arabicTashkeel": "الشُّغُل دَوام كامِل؟",
+			"english": "Is the job full-time?",
+			"transliteration": "ish-shughul dawaam kaamil?",
+			"wordAlignments": [
+				{
+					"arabic": "الشغل",
+					"english": "Is the job",
+					"transliteration": "ish-shughul"
+				},
+				{
+					"arabic": "دوام",
+					"english": "hours",
+					"transliteration": "dawaam"
+				},
+				{
+					"arabic": "كامل؟",
+					"english": "full?",
+					"transliteration": "kaamil?"
+				}
+			],
+			"targetWords": [
+				"Full-time",
+				"Job / work"
+			]
+		},
+		{
+			"arabic": "أحب شغلي.",
+			"arabicTashkeel": "أحِب شُغلي.",
+			"english": "I love my job.",
+			"transliteration": "a7ibb shughli.",
+			"wordAlignments": [
+				{
+					"arabic": "أحب",
+					"english": "I love",
+					"transliteration": "a7ibb"
+				},
+				{
+					"arabic": "شغلي.",
+					"english": "my job.",
+					"transliteration": "shughli."
+				}
+			],
+			"targetWords": [
+				"Job / work"
+			]
+		},
+		{
+			"arabic": "شنو الوظيفة اللي تريدها؟",
+			"arabicTashkeel": "شِنو الوَظيفة اللي تْريدها؟",
+			"english": "What position do you want?",
+			"transliteration": "shinu il-wadheefa illi treedha?",
+			"wordAlignments": [
+				{
+					"arabic": "شنو",
+					"english": "What",
+					"transliteration": "shinu"
+				},
+				{
+					"arabic": "الوظيفة",
+					"english": "position",
+					"transliteration": "il-wadheefa"
+				},
+				{
+					"arabic": "اللي",
+					"english": "that",
+					"transliteration": "illi"
+				},
+				{
+					"arabic": "تريدها؟",
+					"english": "you want?",
+					"transliteration": "treedha?"
+				}
+			],
+			"targetWords": [
+				"Position (job)"
+			]
+		},
+		{
+			"arabic": "المقابلة الساعة عشرة.",
+			"arabicTashkeel": "المُقابلة السّاعة عَشرة.",
+			"english": "The interview is at ten.",
+			"transliteration": "il-mgaabla is-saa3a 3ashra.",
+			"wordAlignments": [
+				{
+					"arabic": "المقابلة",
+					"english": "The interview is",
+					"transliteration": "il-mgaabla"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "at",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "عشرة.",
+					"english": "ten.",
+					"transliteration": "3ashra."
+				}
+			],
+			"targetWords": [
+				"Interview"
+			]
+		},
+		{
+			"arabic": "السيرة الذاتية جاهزة.",
+			"arabicTashkeel": "السّيرة الذّاتية جاهزة.",
+			"english": "My CV is ready.",
+			"transliteration": "is-seera idh-dhaatiya jaahza.",
+			"wordAlignments": [
+				{
+					"arabic": "السيرة",
+					"english": "The record",
+					"transliteration": "is-seera"
+				},
+				{
+					"arabic": "الذاتية",
+					"english": "personal",
+					"transliteration": "idh-dhaatiya"
+				},
+				{
+					"arabic": "جاهزة.",
+					"english": "is ready.",
+					"transliteration": "jaahza."
+				}
+			],
+			"targetWords": [
+				"CV"
+			]
+		},
+		{
+			"arabic": "خمس سنين خبرة.",
+			"arabicTashkeel": "خَمس سِنين خِبرة.",
+			"english": "Five years of experience.",
+			"transliteration": "khams sneen khibra.",
+			"wordAlignments": [
+				{
+					"arabic": "خمس",
+					"english": "Five",
+					"transliteration": "khams"
+				},
+				{
+					"arabic": "سنين",
+					"english": "years of",
+					"transliteration": "sneen"
+				},
+				{
+					"arabic": "خبرة.",
+					"english": "experience.",
+					"transliteration": "khibra."
+				}
+			],
+			"targetWords": [
+				"Experience"
+			]
+		},
+		{
+			"arabic": "شهادة جامعية.",
+			"arabicTashkeel": "شَهادة جامعية.",
+			"english": "A university degree.",
+			"transliteration": "shahaada jaam3iyya.",
+			"wordAlignments": [
+				{
+					"arabic": "شهادة",
+					"english": "A degree",
+					"transliteration": "shahaada"
+				},
+				{
+					"arabic": "جامعية.",
+					"english": "university.",
+					"transliteration": "jaam3iyya."
+				}
+			],
+			"targetWords": [
+				"Degree / certificate"
+			]
+		},
+		{
+			"arabic": "شكد الراتب؟",
+			"arabicTashkeel": "شْكَد الرّاتِب؟",
+			"english": "What is the salary?",
+			"transliteration": "shgadd ir-raatib?",
+			"wordAlignments": [
+				{
+					"arabic": "شكد",
+					"english": "How much is",
+					"transliteration": "shgadd"
+				},
+				{
+					"arabic": "الراتب؟",
+					"english": "the salary?",
+					"transliteration": "ir-raatib?"
+				}
+			],
+			"targetWords": [
+				"Salary"
+			]
+		},
+		{
+			"arabic": "أشتغل بشركة نفط.",
+			"arabicTashkeel": "أشتُغُل بشَرِكة نَفُط.",
+			"english": "I work at an oil company.",
+			"transliteration": "ashtughul b-shirkat nafut.",
+			"wordAlignments": [
+				{
+					"arabic": "أشتغل",
+					"english": "I work",
+					"transliteration": "ashtughul"
+				},
+				{
+					"arabic": "بشركة",
+					"english": "at a company of",
+					"transliteration": "b-shirkat"
+				},
+				{
+					"arabic": "نفط.",
+					"english": "oil.",
+					"transliteration": "nafut."
+				}
+			],
+			"targetWords": [
+				"Company"
+			]
+		},
+		{
+			"arabic": "المدير طيب.",
+			"arabicTashkeel": "المُدير طَيِّب.",
+			"english": "The manager is kind.",
+			"transliteration": "il-mudeer tayyib.",
+			"wordAlignments": [
+				{
+					"arabic": "المدير",
+					"english": "The manager is",
+					"transliteration": "il-mudeer"
+				},
+				{
+					"arabic": "طيب.",
+					"english": "kind.",
+					"transliteration": "tayyib."
+				}
+			],
+			"targetWords": [
+				"Manager"
+			]
+		},
+		{
+			"arabic": "الموظفين مشغولين.",
+			"arabicTashkeel": "المْوَظَّفين مَشغولين.",
+			"english": "The employees are busy.",
+			"transliteration": "il-mwadhdhafeen mashghooleen.",
+			"wordAlignments": [
+				{
+					"arabic": "الموظفين",
+					"english": "The employees are",
+					"transliteration": "il-mwadhdhafeen"
+				},
+				{
+					"arabic": "مشغولين.",
+					"english": "busy.",
+					"transliteration": "mashghooleen."
+				}
+			],
+			"targetWords": [
+				"Employee"
+			]
+		},
+		{
+			"arabic": "تخرجت من جامعة بغداد.",
+			"arabicTashkeel": "تخَرَّجِت مِن جامعة بَغداد.",
+			"english": "I graduated from Baghdad University.",
+			"transliteration": "tkharrajit min jaam3at baghdaad.",
+			"wordAlignments": [
+				{
+					"arabic": "تخرجت",
+					"english": "I graduated",
+					"transliteration": "tkharrajit"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "جامعة",
+					"english": "the university of",
+					"transliteration": "jaam3at"
+				},
+				{
+					"arabic": "بغداد.",
+					"english": "Baghdad.",
+					"transliteration": "baghdaad."
+				}
+			],
+			"targetWords": [
+				"I graduated"
+			]
+		},
+		{
+			"arabic": "الإنكليزي لغة مهمة.",
+			"arabicTashkeel": "الإنكليزي لُغة مُهِمّة.",
+			"english": "English is an important language.",
+			"transliteration": "il-ingileezi lugha muhimma.",
+			"wordAlignments": [
+				{
+					"arabic": "الإنكليزي",
+					"english": "English is",
+					"transliteration": "il-ingileezi"
+				},
+				{
+					"arabic": "لغة",
+					"english": "a language",
+					"transliteration": "lugha"
+				},
+				{
+					"arabic": "مهمة.",
+					"english": "important.",
+					"transliteration": "muhimma."
+				}
+			],
+			"targetWords": [
+				"Language"
+			]
+		},
+		{
+			"arabic": "تعرف كمبيوتر؟",
+			"arabicTashkeel": "تِعرُف كُمبيوتَر؟",
+			"english": "Do you know the computer?",
+			"transliteration": "ti3ruf kombyootar?",
+			"wordAlignments": [
+				{
+					"arabic": "تعرف",
+					"english": "Do you know",
+					"transliteration": "ti3ruf"
+				},
+				{
+					"arabic": "كمبيوتر؟",
+					"english": "computer?",
+					"transliteration": "kombyootar?"
+				}
+			],
+			"targetWords": [
+				"Computer"
+			]
+		},
+		{
+			"arabic": "مهارات التواصل.",
+			"arabicTashkeel": "مَهارات التَّواصُل.",
+			"english": "Communication skills.",
+			"transliteration": "mahaaraat it-tawaasul.",
+			"wordAlignments": [
+				{
+					"arabic": "مهارات",
+					"english": "Skills of",
+					"transliteration": "mahaaraat"
+				},
+				{
+					"arabic": "التواصل.",
+					"english": "communication.",
+					"transliteration": "it-tawaasul."
+				}
+			],
+			"targetWords": [
+				"Skills"
+			]
+		},
+		{
+			"arabic": "دوام كامل لو جزئي؟",
+			"arabicTashkeel": "دَوام كامِل لو جُزئي؟",
+			"english": "Full-time or part-time?",
+			"transliteration": "dawaam kaamil law juz2i?",
+			"wordAlignments": [
+				{
+					"arabic": "دوام",
+					"english": "Hours",
+					"transliteration": "dawaam"
+				},
+				{
+					"arabic": "كامل",
+					"english": "full",
+					"transliteration": "kaamil"
+				},
+				{
+					"arabic": "لو",
+					"english": "or",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "جزئي؟",
+					"english": "part?",
+					"transliteration": "juz2i?"
+				}
+			],
+			"targetWords": [
+				"Full-time"
+			]
+		},
+		{
+			"arabic": "لقيت شغل جديد.",
+			"arabicTashkeel": "لِقيت شُغُل جْديد.",
+			"english": "I found a new job.",
+			"transliteration": "ligeet shughul jdeed.",
+			"wordAlignments": [
+				{
+					"arabic": "لقيت",
+					"english": "I found",
+					"transliteration": "ligeet"
+				},
+				{
+					"arabic": "شغل",
+					"english": "a job",
+					"transliteration": "shughul"
+				},
+				{
+					"arabic": "جديد.",
+					"english": "new.",
+					"transliteration": "jdeed."
+				}
+			],
+			"targetWords": [
+				"Job / work"
+			]
+		},
+		{
+			"arabic": "الوظيفة تحتاج خبرة.",
+			"arabicTashkeel": "الوَظيفة تِحتاج خِبرة.",
+			"english": "The position needs experience.",
+			"transliteration": "il-wadheefa ti7taaj khibra.",
+			"wordAlignments": [
+				{
+					"arabic": "الوظيفة",
+					"english": "The position",
+					"transliteration": "il-wadheefa"
+				},
+				{
+					"arabic": "تحتاج",
+					"english": "needs",
+					"transliteration": "ti7taaj"
+				},
+				{
+					"arabic": "خبرة.",
+					"english": "experience.",
+					"transliteration": "khibra."
+				}
+			],
+			"targetWords": [
+				"Position (job)",
+				"Experience"
+			]
+		},
+		{
+			"arabic": "شلون المقابلة؟",
+			"arabicTashkeel": "شْلون المُقابلة؟",
+			"english": "How was the interview?",
+			"transliteration": "shloon il-mgaabla?",
+			"wordAlignments": [
+				{
+					"arabic": "شلون",
+					"english": "How was",
+					"transliteration": "shloon"
+				},
+				{
+					"arabic": "المقابلة؟",
+					"english": "the interview?",
+					"transliteration": "il-mgaabla?"
+				}
+			],
+			"targetWords": [
+				"Interview"
+			]
+		},
+		{
+			"arabic": "جيب السيرة الذاتية والشهادة.",
+			"arabicTashkeel": "جيب السّيرة الذّاتية والشَّهادة.",
+			"english": "Bring your CV and your degree.",
+			"transliteration": "jeeb is-seera idh-dhaatiya w-ish-shahaada.",
+			"wordAlignments": [
+				{
+					"arabic": "جيب",
+					"english": "Bring",
+					"transliteration": "jeeb"
+				},
+				{
+					"arabic": "السيرة",
+					"english": "the record",
+					"transliteration": "is-seera"
+				},
+				{
+					"arabic": "الذاتية",
+					"english": "personal",
+					"transliteration": "idh-dhaatiya"
+				},
+				{
+					"arabic": "والشهادة.",
+					"english": "and the degree.",
+					"transliteration": "w-ish-shahaada."
+				}
+			],
+			"targetWords": [
+				"CV",
+				"Degree / certificate"
+			]
+		},
+		{
+			"arabic": "ما عندي خبرة، بس أتعلم بسرعة.",
+			"arabicTashkeel": "ما عِندي خِبرة، بَس أتعَلَّم بسُرعة.",
+			"english": "I don't have experience, but I learn fast.",
+			"transliteration": "ma 3indi khibra, bas at3allam b-sur3a.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "خبرة،",
+					"english": "experience,",
+					"transliteration": "khibra,"
+				},
+				{
+					"arabic": "بس",
+					"english": "but",
+					"transliteration": "bas"
+				},
+				{
+					"arabic": "أتعلم",
+					"english": "I learn",
+					"transliteration": "at3allam"
+				},
+				{
+					"arabic": "بسرعة.",
+					"english": "fast.",
+					"transliteration": "b-sur3a."
+				}
+			],
+			"targetWords": [
+				"Experience"
+			]
+		},
+		{
+			"arabic": "شهادة ماجستير.",
+			"arabicTashkeel": "شَهادة ماجِستير.",
+			"english": "A master's degree.",
+			"transliteration": "shahaada maajisteer.",
+			"wordAlignments": [
+				{
+					"arabic": "شهادة",
+					"english": "A degree of",
+					"transliteration": "shahaada"
+				},
+				{
+					"arabic": "ماجستير.",
+					"english": "master's.",
+					"transliteration": "maajisteer."
+				}
+			],
+			"targetWords": [
+				"Degree / certificate"
+			]
+		},
+		{
+			"arabic": "الراتب كل شهر.",
+			"arabicTashkeel": "الرّاتِب كُل شَهَر.",
+			"english": "The salary is paid every month.",
+			"transliteration": "ir-raatib kull shahar.",
+			"wordAlignments": [
+				{
+					"arabic": "الراتب",
+					"english": "The salary",
+					"transliteration": "ir-raatib"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kull"
+				},
+				{
+					"arabic": "شهر.",
+					"english": "month.",
+					"transliteration": "shahar."
+				}
+			],
+			"targetWords": [
+				"Salary"
+			]
+		},
+		{
+			"arabic": "شركة جديدة بأربيل.",
+			"arabicTashkeel": "شَرِكة جْديدة بأربيل.",
+			"english": "A new company in Erbil.",
+			"transliteration": "shirka jdeeda b-arbeel.",
+			"wordAlignments": [
+				{
+					"arabic": "شركة",
+					"english": "A company",
+					"transliteration": "shirka"
+				},
+				{
+					"arabic": "جديدة",
+					"english": "new",
+					"transliteration": "jdeeda"
+				},
+				{
+					"arabic": "بأربيل.",
+					"english": "in Erbil.",
+					"transliteration": "b-arbeel."
+				}
+			],
+			"targetWords": [
+				"Company"
+			]
+		},
+		{
+			"arabic": "أريد أحكي ويا المدير.",
+			"arabicTashkeel": "أريد أحكي ويّا المُدير.",
+			"english": "I want to speak with the manager.",
+			"transliteration": "areed a7chi wiyya il-mudeer.",
+			"wordAlignments": [
+				{
+					"arabic": "أريد",
+					"english": "I want",
+					"transliteration": "areed"
+				},
+				{
+					"arabic": "أحكي",
+					"english": "to speak",
+					"transliteration": "a7chi"
+				},
+				{
+					"arabic": "ويا",
+					"english": "with",
+					"transliteration": "wiyya"
+				},
+				{
+					"arabic": "المدير.",
+					"english": "the manager.",
+					"transliteration": "il-mudeer."
+				}
+			],
+			"targetWords": [
+				"Manager"
+			]
+		},
+		{
+			"arabic": "موظف حكومة.",
+			"arabicTashkeel": "مْوَظَّف حُكومة.",
+			"english": "A government employee.",
+			"transliteration": "mwadhdhaf 7ukooma.",
+			"wordAlignments": [
+				{
+					"arabic": "موظف",
+					"english": "An employee of",
+					"transliteration": "mwadhdhaf"
+				},
+				{
+					"arabic": "حكومة.",
+					"english": "government.",
+					"transliteration": "7ukooma."
+				}
+			],
+			"targetWords": [
+				"Employee"
+			]
+		},
+		{
+			"arabic": "يمتى تخرجت؟",
+			"arabicTashkeel": "يَمتى تخَرَّجِت؟",
+			"english": "When did you graduate?",
+			"transliteration": "yamta tkharrajit?",
+			"wordAlignments": [
+				{
+					"arabic": "يمتى",
+					"english": "When",
+					"transliteration": "yamta"
+				},
+				{
+					"arabic": "تخرجت؟",
+					"english": "did you graduate?",
+					"transliteration": "tkharrajit?"
+				}
+			],
+			"targetWords": [
+				"I graduated"
+			]
+		},
+		{
+			"arabic": "العربي لغتي.",
+			"arabicTashkeel": "العَرَبي لُغتي.",
+			"english": "Arabic is my language.",
+			"transliteration": "il-3arabi lughti.",
+			"wordAlignments": [
+				{
+					"arabic": "العربي",
+					"english": "Arabic is",
+					"transliteration": "il-3arabi"
+				},
+				{
+					"arabic": "لغتي.",
+					"english": "my language.",
+					"transliteration": "lughti."
+				}
+			],
+			"targetWords": [
+				"Language"
+			]
+		},
+		{
+			"arabic": "أشتغل عالكمبيوتر طول اليوم.",
+			"arabicTashkeel": "أشتُغُل عالكُمبيوتَر طول اليوم.",
+			"english": "I work on the computer all day.",
+			"transliteration": "ashtughul 3al-kombyootar tool il-yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "أشتغل",
+					"english": "I work",
+					"transliteration": "ashtughul"
+				},
+				{
+					"arabic": "عالكمبيوتر",
+					"english": "on the computer",
+					"transliteration": "3al-kombyootar"
+				},
+				{
+					"arabic": "طول",
+					"english": "all",
+					"transliteration": "tool"
+				},
+				{
+					"arabic": "اليوم.",
+					"english": "day.",
+					"transliteration": "il-yoom."
+				}
+			],
+			"targetWords": [
+				"Computer"
+			]
+		},
+		{
+			"arabic": "عندك مهارات زينة.",
+			"arabicTashkeel": "عِندَك مَهارات زينة.",
+			"english": "You have good skills.",
+			"transliteration": "3indak mahaaraat zeena.",
+			"wordAlignments": [
+				{
+					"arabic": "عندك",
+					"english": "You have",
+					"transliteration": "3indak"
+				},
+				{
+					"arabic": "مهارات",
+					"english": "skills",
+					"transliteration": "mahaaraat"
+				},
+				{
+					"arabic": "زينة.",
+					"english": "good.",
+					"transliteration": "zeena."
+				}
+			],
+			"targetWords": [
+				"Skills"
+			]
+		},
+		{
+			"arabic": "أريد شغل دوام كامل.",
+			"arabicTashkeel": "أريد شُغُل دَوام كامِل.",
+			"english": "I want a full-time job.",
+			"transliteration": "areed shughul dawaam kaamil.",
+			"wordAlignments": [
+				{
+					"arabic": "أريد",
+					"english": "I want",
+					"transliteration": "areed"
+				},
+				{
+					"arabic": "شغل",
+					"english": "a job",
+					"transliteration": "shughul"
+				},
+				{
+					"arabic": "دوام",
+					"english": "hours",
+					"transliteration": "dawaam"
+				},
+				{
+					"arabic": "كامل.",
+					"english": "full.",
+					"transliteration": "kaamil."
+				}
+			],
+			"targetWords": [
+				"Full-time",
+				"Job / work"
+			]
+		},
+		{
+			"arabic": "الشغل قريب من بيتي.",
+			"arabicTashkeel": "الشُّغُل قْريب مِن بيتي.",
+			"english": "The job is near my house.",
+			"transliteration": "ish-shughul greeb min beeti.",
+			"wordAlignments": [
+				{
+					"arabic": "الشغل",
+					"english": "The job is",
+					"transliteration": "ish-shughul"
+				},
+				{
+					"arabic": "قريب",
+					"english": "near",
+					"transliteration": "greeb"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "بيتي.",
+					"english": "my house.",
+					"transliteration": "beeti."
+				}
+			],
+			"targetWords": [
+				"Job / work"
+			]
+		},
+		{
+			"arabic": "وظيفة مهمة.",
+			"arabicTashkeel": "وَظيفة مُهِمّة.",
+			"english": "An important position.",
+			"transliteration": "wadheefa muhimma.",
+			"wordAlignments": [
+				{
+					"arabic": "وظيفة",
+					"english": "A position",
+					"transliteration": "wadheefa"
+				},
+				{
+					"arabic": "مهمة.",
+					"english": "important.",
+					"transliteration": "muhimma."
+				}
+			],
+			"targetWords": [
+				"Position (job)"
+			]
+		},
+		{
+			"arabic": "المقابلة كانت سهلة.",
+			"arabicTashkeel": "المُقابلة كانَت سَهلة.",
+			"english": "The interview was easy.",
+			"transliteration": "il-mgaabla chaanat sahla.",
+			"wordAlignments": [
+				{
+					"arabic": "المقابلة",
+					"english": "The interview",
+					"transliteration": "il-mgaabla"
+				},
+				{
+					"arabic": "كانت",
+					"english": "was",
+					"transliteration": "chaanat"
+				},
+				{
+					"arabic": "سهلة.",
+					"english": "easy.",
+					"transliteration": "sahla."
+				}
+			],
+			"targetWords": [
+				"Interview"
+			]
+		},
+		{
+			"arabic": "الخبرة مهمة.",
+			"arabicTashkeel": "الخِبرة مُهِمّة.",
+			"english": "Experience is important.",
+			"transliteration": "il-khibra muhimma.",
+			"wordAlignments": [
+				{
+					"arabic": "الخبرة",
+					"english": "Experience is",
+					"transliteration": "il-khibra"
+				},
+				{
+					"arabic": "مهمة.",
+					"english": "important.",
+					"transliteration": "muhimma."
+				}
+			],
+			"targetWords": [
+				"Experience"
+			]
+		},
+		{
+			"arabic": "راتب عالي.",
+			"arabicTashkeel": "راتِب عالي.",
+			"english": "A high salary.",
+			"transliteration": "raatib 3aali.",
+			"wordAlignments": [
+				{
+					"arabic": "راتب",
+					"english": "A salary",
+					"transliteration": "raatib"
+				},
+				{
+					"arabic": "عالي.",
+					"english": "high.",
+					"transliteration": "3aali."
+				}
+			],
+			"targetWords": [
+				"Salary"
+			]
+		},
+		{
+			"arabic": "مدير الشركة.",
+			"arabicTashkeel": "مُدير الشَّرِكة.",
+			"english": "The company manager.",
+			"transliteration": "mudeer ish-shirka.",
+			"wordAlignments": [
+				{
+					"arabic": "مدير",
+					"english": "The manager of",
+					"transliteration": "mudeer"
+				},
+				{
+					"arabic": "الشركة.",
+					"english": "the company.",
+					"transliteration": "ish-shirka."
+				}
+			],
+			"targetWords": [
+				"Company",
+				"Manager"
+			]
+		},
+		{
+			"arabic": "هو موظف جديد.",
+			"arabicTashkeel": "هوَّ مْوَظَّف جْديد.",
+			"english": "He is a new employee.",
+			"transliteration": "huwwa mwadhdhaf jdeed.",
+			"wordAlignments": [
+				{
+					"arabic": "هو",
+					"english": "He is",
+					"transliteration": "huwwa"
+				},
+				{
+					"arabic": "موظف",
+					"english": "an employee",
+					"transliteration": "mwadhdhaf"
+				},
+				{
+					"arabic": "جديد.",
+					"english": "new.",
+					"transliteration": "jdeed."
+				}
+			],
+			"targetWords": [
+				"Employee"
+			]
+		},
+		{
+			"arabic": "تخرجت ولقيت شغل.",
+			"arabicTashkeel": "تخَرَّجِت ولِقيت شُغُل.",
+			"english": "I graduated and found a job.",
+			"transliteration": "tkharrajit w-ligeet shughul.",
+			"wordAlignments": [
+				{
+					"arabic": "تخرجت",
+					"english": "I graduated",
+					"transliteration": "tkharrajit"
+				},
+				{
+					"arabic": "ولقيت",
+					"english": "and found",
+					"transliteration": "w-ligeet"
+				},
+				{
+					"arabic": "شغل.",
+					"english": "a job.",
+					"transliteration": "shughul."
+				}
+			],
+			"targetWords": [
+				"I graduated",
+				"Job / work"
+			]
+		},
+		{
+			"arabic": "شنو اللغات اللي تحكيها؟",
+			"arabicTashkeel": "شِنو اللُّغات اللي تِحكيها؟",
+			"english": "What languages do you speak?",
+			"transliteration": "shinu il-lughaat illi ti7cheeha?",
+			"wordAlignments": [
+				{
+					"arabic": "شنو",
+					"english": "What",
+					"transliteration": "shinu"
+				},
+				{
+					"arabic": "اللغات",
+					"english": "languages",
+					"transliteration": "il-lughaat"
+				},
+				{
+					"arabic": "اللي",
+					"english": "that",
+					"transliteration": "illi"
+				},
+				{
+					"arabic": "تحكيها؟",
+					"english": "you speak?",
+					"transliteration": "ti7cheeha?"
+				}
+			],
+			"targetWords": [
+				"Language"
+			]
+		},
+		{
+			"arabic": "كمبيوتر جديد.",
+			"arabicTashkeel": "كُمبيوتَر جْديد.",
+			"english": "A new computer.",
+			"transliteration": "kombyootar jdeed.",
+			"wordAlignments": [
+				{
+					"arabic": "كمبيوتر",
+					"english": "A computer",
+					"transliteration": "kombyootar"
+				},
+				{
+					"arabic": "جديد.",
+					"english": "new.",
+					"transliteration": "jdeed."
+				}
+			],
+			"targetWords": [
+				"Computer"
+			]
+		},
+		{
+			"arabic": "مهارات الكمبيوتر.",
+			"arabicTashkeel": "مَهارات الكُمبيوتَر.",
+			"english": "Computer skills.",
+			"transliteration": "mahaaraat il-kombyootar.",
+			"wordAlignments": [
+				{
+					"arabic": "مهارات",
+					"english": "Skills of",
+					"transliteration": "mahaaraat"
+				},
+				{
+					"arabic": "الكمبيوتر.",
+					"english": "the computer.",
+					"transliteration": "il-kombyootar."
+				}
+			],
+			"targetWords": [
+				"Skills",
+				"Computer"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "The Interview",
+			"sentences": [
+				{
+					"arabic": "هلا، آني هنا للمقابلة.",
+					"arabicTashkeel": "هَلا، آني هْنا للمُقابلة.",
+					"english": "Hello, I'm here for the interview.",
+					"transliteration": "hala, aani hnaa lil-mgaabla.",
+					"wordAlignments": [
+						{
+							"arabic": "هلا،",
+							"english": "Hello,",
+							"transliteration": "hala,"
+						},
+						{
+							"arabic": "آني",
+							"english": "I am",
+							"transliteration": "aani"
+						},
+						{
+							"arabic": "هنا",
+							"english": "here",
+							"transliteration": "hnaa"
+						},
+						{
+							"arabic": "للمقابلة.",
+							"english": "for the interview.",
+							"transliteration": "lil-mgaabla."
+						}
+					]
+				},
+				{
+					"arabic": "تخرجت من جامعة بغداد بشهادة هندسة.",
+					"arabicTashkeel": "تخَرَّجِت مِن جامعة بَغداد بشَهادة هَندَسة.",
+					"english": "I graduated from Baghdad University with an engineering degree.",
+					"transliteration": "tkharrajit min jaam3at baghdaad b-shahaadat handasa.",
+					"wordAlignments": [
+						{
+							"arabic": "تخرجت",
+							"english": "I graduated",
+							"transliteration": "tkharrajit"
+						},
+						{
+							"arabic": "من",
+							"english": "from",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "جامعة",
+							"english": "the university of",
+							"transliteration": "jaam3at"
+						},
+						{
+							"arabic": "بغداد",
+							"english": "Baghdad",
+							"transliteration": "baghdaad"
+						},
+						{
+							"arabic": "بشهادة",
+							"english": "with a degree of",
+							"transliteration": "b-shahaadat"
+						},
+						{
+							"arabic": "هندسة.",
+							"english": "engineering.",
+							"transliteration": "handasa."
+						}
+					]
+				},
+				{
+					"arabic": "عندي ثلاث سنين خبرة وأحكي إنكليزي.",
+					"arabicTashkeel": "عِندي ثْلاث سِنين خِبرة وأحكي إنكليزي.",
+					"english": "I have three years of experience and I speak English.",
+					"transliteration": "3indi thlath sneen khibra w-a7chi ingileezi.",
+					"wordAlignments": [
+						{
+							"arabic": "عندي",
+							"english": "I have",
+							"transliteration": "3indi"
+						},
+						{
+							"arabic": "ثلاث",
+							"english": "three",
+							"transliteration": "thlath"
+						},
+						{
+							"arabic": "سنين",
+							"english": "years of",
+							"transliteration": "sneen"
+						},
+						{
+							"arabic": "خبرة",
+							"english": "experience",
+							"transliteration": "khibra"
+						},
+						{
+							"arabic": "وأحكي",
+							"english": "and I speak",
+							"transliteration": "w-a7chi"
+						},
+						{
+							"arabic": "إنكليزي.",
+							"english": "English.",
+							"transliteration": "ingileezi."
+						}
+					]
+				},
+				{
+					"arabic": "شكد الراتب، والشغل دوام كامل؟",
+					"arabicTashkeel": "شْكَد الرّاتِب، والشُّغُل دَوام كامِل؟",
+					"english": "What is the salary, and is the job full-time?",
+					"transliteration": "shgadd ir-raatib, w-ish-shughul dawaam kaamil?",
+					"wordAlignments": [
+						{
+							"arabic": "شكد",
+							"english": "How much is",
+							"transliteration": "shgadd"
+						},
+						{
+							"arabic": "الراتب،",
+							"english": "the salary,",
+							"transliteration": "ir-raatib,"
+						},
+						{
+							"arabic": "والشغل",
+							"english": "and is the job",
+							"transliteration": "w-ish-shughul"
+						},
+						{
+							"arabic": "دوام",
+							"english": "hours",
+							"transliteration": "dawaam"
+						},
+						{
+							"arabic": "كامل؟",
+							"english": "full?",
+							"transliteration": "kaamil?"
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "A New Job",
+			"sentences": [
+				{
+					"arabic": "أخويه لقى شغل بشركة كبيرة.",
+					"arabicTashkeel": "أخويَه لِقى شُغُل بشَرِكة كْبيرة.",
+					"english": "My brother found a job at a big company.",
+					"transliteration": "akhooya liga shughul b-shirka chbeera.",
+					"wordAlignments": [
+						{
+							"arabic": "أخويه",
+							"english": "My brother",
+							"transliteration": "akhooya"
+						},
+						{
+							"arabic": "لقى",
+							"english": "found",
+							"transliteration": "liga"
+						},
+						{
+							"arabic": "شغل",
+							"english": "a job",
+							"transliteration": "shughul"
+						},
+						{
+							"arabic": "بشركة",
+							"english": "at a company",
+							"transliteration": "b-shirka"
+						},
+						{
+							"arabic": "كبيرة.",
+							"english": "big.",
+							"transliteration": "chbeera."
+						}
+					]
+				},
+				{
+					"arabic": "المدير عجبته مهاراته.",
+					"arabicTashkeel": "المُدير عِجبَته مَهاراتَه.",
+					"english": "The manager liked his skills.",
+					"transliteration": "il-mudeer 3ijbata mahaaraata.",
+					"wordAlignments": [
+						{
+							"arabic": "المدير",
+							"english": "The manager",
+							"transliteration": "il-mudeer"
+						},
+						{
+							"arabic": "عجبته",
+							"english": "liked",
+							"transliteration": "3ijbata"
+						},
+						{
+							"arabic": "مهاراته.",
+							"english": "his skills.",
+							"transliteration": "mahaaraata."
+						}
+					]
+				},
+				{
+					"arabic": "الراتب زين، الحمد لله.",
+					"arabicTashkeel": "الرّاتِب زين، الحَمدُ لله.",
+					"english": "The salary is good, praise be to God.",
+					"transliteration": "ir-raatib zeen, il-7amdu lillaah.",
+					"wordAlignments": [
+						{
+							"arabic": "الراتب",
+							"english": "The salary is",
+							"transliteration": "ir-raatib"
+						},
+						{
+							"arabic": "زين،",
+							"english": "good,",
+							"transliteration": "zeen,"
+						},
+						{
+							"arabic": "الحمد",
+							"english": "praise",
+							"transliteration": "il-7amdu"
+						},
+						{
+							"arabic": "لله.",
+							"english": "be to God.",
+							"transliteration": "lillaah."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is at a job interview with the manager of a company in Baghdad.",
+		"studentRole": "A job applicant learning Iraqi Arabic.",
+		"otherRole": "The company manager conducting the interview.",
+		"goalEnglish": "Talk about your degree, your experience, the languages and skills you have, and ask about the salary and working hours.",
+		"targetWords": [
+			"Interview",
+			"Experience",
+			"Degree / certificate",
+			"Skills",
+			"Language",
+			"Salary",
+			"Full-time",
+			"Manager"
+		]
+	}
+}

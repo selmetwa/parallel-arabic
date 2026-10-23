@@ -1,0 +1,1930 @@
+{
+	"vocab": [
+		{
+			"arabic": "هواية",
+			"arabicTashkeel": "هِواية",
+			"english": "Hobby",
+			"transliteration": "hiwaaya",
+			"wordAlignments": [
+				{
+					"arabic": "هواية",
+					"english": "Hobby",
+					"transliteration": "hiwaaya"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "وكت الفراغ",
+			"arabicTashkeel": "وَكِت الفَراغ",
+			"english": "Free time",
+			"transliteration": "wakit il-faraagh",
+			"wordAlignments": [
+				{
+					"arabic": "وكت",
+					"english": "Time",
+					"transliteration": "wakit"
+				},
+				{
+					"arabic": "الفراغ",
+					"english": "of emptiness",
+					"transliteration": "il-faraagh"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "القراية",
+			"arabicTashkeel": "القِراية",
+			"english": "Reading",
+			"transliteration": "il-giraaya",
+			"wordAlignments": [
+				{
+					"arabic": "القراية",
+					"english": "Reading",
+					"transliteration": "il-giraaya"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "الرسم",
+			"arabicTashkeel": "الرَّسِم",
+			"english": "Drawing",
+			"transliteration": "ir-rasim",
+			"wordAlignments": [
+				{
+					"arabic": "الرسم",
+					"english": "Drawing",
+					"transliteration": "ir-rasim"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "موسيقى",
+			"arabicTashkeel": "موسيقى",
+			"english": "Music",
+			"transliteration": "mooseega",
+			"wordAlignments": [
+				{
+					"arabic": "موسيقى",
+					"english": "Music",
+					"transliteration": "mooseega"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "الغنا",
+			"arabicTashkeel": "الغِنا",
+			"english": "Singing",
+			"transliteration": "il-ghina",
+			"wordAlignments": [
+				{
+					"arabic": "الغنا",
+					"english": "Singing",
+					"transliteration": "il-ghina"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "التصوير",
+			"arabicTashkeel": "التَّصوير",
+			"english": "Photography",
+			"transliteration": "it-tasweer",
+			"wordAlignments": [
+				{
+					"arabic": "التصوير",
+					"english": "Photography",
+					"transliteration": "it-tasweer"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "السفر",
+			"arabicTashkeel": "السَّفَر",
+			"english": "Travelling",
+			"transliteration": "is-safar",
+			"wordAlignments": [
+				{
+					"arabic": "السفر",
+					"english": "Travelling",
+					"transliteration": "is-safar"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "صيد السمك",
+			"arabicTashkeel": "صيد السِّمَك",
+			"english": "Fishing",
+			"transliteration": "seed is-simach",
+			"wordAlignments": [
+				{
+					"arabic": "صيد",
+					"english": "Hunting of",
+					"transliteration": "seed"
+				},
+				{
+					"arabic": "السمك",
+					"english": "fish",
+					"transliteration": "is-simach"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "شطرنج",
+			"arabicTashkeel": "شَطرَنج",
+			"english": "Chess",
+			"transliteration": "shatranj",
+			"wordAlignments": [
+				{
+					"arabic": "شطرنج",
+					"english": "Chess",
+					"transliteration": "shatranj"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "دومنة",
+			"arabicTashkeel": "دومِنة",
+			"english": "Dominoes",
+			"transliteration": "doomina",
+			"wordAlignments": [
+				{
+					"arabic": "دومنة",
+					"english": "Dominoes",
+					"transliteration": "doomina"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "أفلام",
+			"arabicTashkeel": "أفلام",
+			"english": "Movies",
+			"transliteration": "aflaam",
+			"wordAlignments": [
+				{
+					"arabic": "أفلام",
+					"english": "Movies",
+					"transliteration": "aflaam"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "أحب",
+			"arabicTashkeel": "أحِب",
+			"english": "I like",
+			"transliteration": "a7ibb",
+			"wordAlignments": [
+				{
+					"arabic": "أحب",
+					"english": "I like",
+					"transliteration": "a7ibb"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "ما أحب",
+			"arabicTashkeel": "ما أحِب",
+			"english": "I don't like",
+			"transliteration": "ma a7ibb",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "أحب",
+					"english": "I like",
+					"transliteration": "a7ibb"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "أفضل",
+			"arabicTashkeel": "أفَضِّل",
+			"english": "I prefer",
+			"transliteration": "afadhdhil",
+			"wordAlignments": [
+				{
+					"arabic": "أفضل",
+					"english": "I prefer",
+					"transliteration": "afadhdhil"
+				}
+			],
+			"partOfSpeech": "verb"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "شنو هوايتك؟",
+			"arabicTashkeel": "شِنو هِوايتَك؟",
+			"english": "What is your hobby?",
+			"transliteration": "shinu hiwaaytak?",
+			"wordAlignments": [
+				{
+					"arabic": "شنو",
+					"english": "What is",
+					"transliteration": "shinu"
+				},
+				{
+					"arabic": "هوايتك؟",
+					"english": "your hobby?",
+					"transliteration": "hiwaaytak?"
+				}
+			],
+			"targetWords": [
+				"Hobby"
+			]
+		},
+		{
+			"arabic": "شتسوي بوكت الفراغ؟",
+			"arabicTashkeel": "شِتسَوّي بوَكِت الفَراغ؟",
+			"english": "What do you do in your free time?",
+			"transliteration": "shitsawwi b-wakit il-faraagh?",
+			"wordAlignments": [
+				{
+					"arabic": "شتسوي",
+					"english": "What do you do",
+					"transliteration": "shitsawwi"
+				},
+				{
+					"arabic": "بوكت",
+					"english": "in the time of",
+					"transliteration": "b-wakit"
+				},
+				{
+					"arabic": "الفراغ؟",
+					"english": "emptiness?",
+					"transliteration": "il-faraagh?"
+				}
+			],
+			"targetWords": [
+				"Free time"
+			]
+		},
+		{
+			"arabic": "أحب القراية.",
+			"arabicTashkeel": "أحِب القِراية.",
+			"english": "I like reading.",
+			"transliteration": "a7ibb il-giraaya.",
+			"wordAlignments": [
+				{
+					"arabic": "أحب",
+					"english": "I like",
+					"transliteration": "a7ibb"
+				},
+				{
+					"arabic": "القراية.",
+					"english": "reading.",
+					"transliteration": "il-giraaya."
+				}
+			],
+			"targetWords": [
+				"I like",
+				"Reading"
+			]
+		},
+		{
+			"arabic": "أختي تحب الرسم.",
+			"arabicTashkeel": "أُختي تْحِب الرَّسِم.",
+			"english": "My sister likes drawing.",
+			"transliteration": "ukhti t7ibb ir-rasim.",
+			"wordAlignments": [
+				{
+					"arabic": "أختي",
+					"english": "My sister",
+					"transliteration": "ukhti"
+				},
+				{
+					"arabic": "تحب",
+					"english": "likes",
+					"transliteration": "t7ibb"
+				},
+				{
+					"arabic": "الرسم.",
+					"english": "drawing.",
+					"transliteration": "ir-rasim."
+				}
+			],
+			"targetWords": [
+				"Drawing"
+			]
+		},
+		{
+			"arabic": "أسمع موسيقى كل يوم.",
+			"arabicTashkeel": "أسمَع موسيقى كُل يوم.",
+			"english": "I listen to music every day.",
+			"transliteration": "asma3 mooseega kull yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "أسمع",
+					"english": "I listen to",
+					"transliteration": "asma3"
+				},
+				{
+					"arabic": "موسيقى",
+					"english": "music",
+					"transliteration": "mooseega"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kull"
+				},
+				{
+					"arabic": "يوم.",
+					"english": "day.",
+					"transliteration": "yoom."
+				}
+			],
+			"targetWords": [
+				"Music"
+			]
+		},
+		{
+			"arabic": "يحب الغنا.",
+			"arabicTashkeel": "يْحِب الغِنا.",
+			"english": "He loves singing.",
+			"transliteration": "y7ibb il-ghina.",
+			"wordAlignments": [
+				{
+					"arabic": "يحب",
+					"english": "He loves",
+					"transliteration": "y7ibb"
+				},
+				{
+					"arabic": "الغنا.",
+					"english": "singing.",
+					"transliteration": "il-ghina."
+				}
+			],
+			"targetWords": [
+				"Singing"
+			]
+		},
+		{
+			"arabic": "التصوير هوايتي.",
+			"arabicTashkeel": "التَّصوير هِوايتي.",
+			"english": "Photography is my hobby.",
+			"transliteration": "it-tasweer hiwaayti.",
+			"wordAlignments": [
+				{
+					"arabic": "التصوير",
+					"english": "Photography is",
+					"transliteration": "it-tasweer"
+				},
+				{
+					"arabic": "هوايتي.",
+					"english": "my hobby.",
+					"transliteration": "hiwaayti."
+				}
+			],
+			"targetWords": [
+				"Photography",
+				"Hobby"
+			]
+		},
+		{
+			"arabic": "أموت عالسفر.",
+			"arabicTashkeel": "أموت عالسَّفَر.",
+			"english": "I love travelling.",
+			"transliteration": "amoot 3as-safar.",
+			"wordAlignments": [
+				{
+					"arabic": "أموت",
+					"english": "I die for",
+					"transliteration": "amoot"
+				},
+				{
+					"arabic": "عالسفر.",
+					"english": "travelling.",
+					"transliteration": "3as-safar."
+				}
+			],
+			"targetWords": [
+				"Travelling"
+			]
+		},
+		{
+			"arabic": "جدي يحب صيد السمك بدجلة.",
+			"arabicTashkeel": "جَدّي يْحِب صيد السِّمَك بدِجلة.",
+			"english": "My grandfather loves fishing in the Tigris.",
+			"transliteration": "jiddi y7ibb seed is-simach b-dijla.",
+			"wordAlignments": [
+				{
+					"arabic": "جدي",
+					"english": "My grandfather",
+					"transliteration": "jiddi"
+				},
+				{
+					"arabic": "يحب",
+					"english": "loves",
+					"transliteration": "y7ibb"
+				},
+				{
+					"arabic": "صيد",
+					"english": "hunting of",
+					"transliteration": "seed"
+				},
+				{
+					"arabic": "السمك",
+					"english": "fish",
+					"transliteration": "is-simach"
+				},
+				{
+					"arabic": "بدجلة.",
+					"english": "in the Tigris.",
+					"transliteration": "b-dijla."
+				}
+			],
+			"targetWords": [
+				"Fishing"
+			]
+		},
+		{
+			"arabic": "تلعب شطرنج؟",
+			"arabicTashkeel": "تِلعَب شَطرَنج؟",
+			"english": "Do you play chess?",
+			"transliteration": "til3ab shatranj?",
+			"wordAlignments": [
+				{
+					"arabic": "تلعب",
+					"english": "Do you play",
+					"transliteration": "til3ab"
+				},
+				{
+					"arabic": "شطرنج؟",
+					"english": "chess?",
+					"transliteration": "shatranj?"
+				}
+			],
+			"targetWords": [
+				"Chess"
+			]
+		},
+		{
+			"arabic": "الرجال يلعبون دومنة بالقهوة.",
+			"arabicTashkeel": "الرْجال يِلعَبون دومِنة بالقَهوة.",
+			"english": "The men play dominoes at the café.",
+			"transliteration": "ir-rjaal yil3aboon doomina bil-gahwa.",
+			"wordAlignments": [
+				{
+					"arabic": "الرجال",
+					"english": "The men",
+					"transliteration": "ir-rjaal"
+				},
+				{
+					"arabic": "يلعبون",
+					"english": "play",
+					"transliteration": "yil3aboon"
+				},
+				{
+					"arabic": "دومنة",
+					"english": "dominoes",
+					"transliteration": "doomina"
+				},
+				{
+					"arabic": "بالقهوة.",
+					"english": "at the café.",
+					"transliteration": "bil-gahwa."
+				}
+			],
+			"targetWords": [
+				"Dominoes"
+			]
+		},
+		{
+			"arabic": "أشوف أفلام بالليل.",
+			"arabicTashkeel": "أشوف أفلام بالليل.",
+			"english": "I watch movies at night.",
+			"transliteration": "ashoof aflaam bil-leel.",
+			"wordAlignments": [
+				{
+					"arabic": "أشوف",
+					"english": "I watch",
+					"transliteration": "ashoof"
+				},
+				{
+					"arabic": "أفلام",
+					"english": "movies",
+					"transliteration": "aflaam"
+				},
+				{
+					"arabic": "بالليل.",
+					"english": "at night.",
+					"transliteration": "bil-leel."
+				}
+			],
+			"targetWords": [
+				"Movies"
+			]
+		},
+		{
+			"arabic": "ما أحب الطوبة.",
+			"arabicTashkeel": "ما أحِب الطّوبة.",
+			"english": "I don't like football.",
+			"transliteration": "ma a7ibb it-tooba.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "أحب",
+					"english": "I like",
+					"transliteration": "a7ibb"
+				},
+				{
+					"arabic": "الطوبة.",
+					"english": "football.",
+					"transliteration": "it-tooba."
+				}
+			],
+			"targetWords": [
+				"I don't like"
+			]
+		},
+		{
+			"arabic": "أفضل القراية على التلفزيون.",
+			"arabicTashkeel": "أفَضِّل القِراية عَلى التَّلَفِزيون.",
+			"english": "I prefer reading to television.",
+			"transliteration": "afadhdhil il-giraaya 3ala it-talafizyoon.",
+			"wordAlignments": [
+				{
+					"arabic": "أفضل",
+					"english": "I prefer",
+					"transliteration": "afadhdhil"
+				},
+				{
+					"arabic": "القراية",
+					"english": "reading",
+					"transliteration": "il-giraaya"
+				},
+				{
+					"arabic": "على",
+					"english": "over",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "التلفزيون.",
+					"english": "television.",
+					"transliteration": "it-talafizyoon."
+				}
+			],
+			"targetWords": [
+				"I prefer",
+				"Reading"
+			]
+		},
+		{
+			"arabic": "هوايتي الطبخ.",
+			"arabicTashkeel": "هِوايتي الطَّبُخ.",
+			"english": "My hobby is cooking.",
+			"transliteration": "hiwaayti it-tabukh.",
+			"wordAlignments": [
+				{
+					"arabic": "هوايتي",
+					"english": "My hobby is",
+					"transliteration": "hiwaayti"
+				},
+				{
+					"arabic": "الطبخ.",
+					"english": "cooking.",
+					"transliteration": "it-tabukh."
+				}
+			],
+			"targetWords": [
+				"Hobby"
+			]
+		},
+		{
+			"arabic": "ما عندي وكت فراغ.",
+			"arabicTashkeel": "ما عِندي وَكِت فَراغ.",
+			"english": "I don't have free time.",
+			"transliteration": "ma 3indi wakit faraagh.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "وكت",
+					"english": "time",
+					"transliteration": "wakit"
+				},
+				{
+					"arabic": "فراغ.",
+					"english": "free.",
+					"transliteration": "faraagh."
+				}
+			],
+			"targetWords": [
+				"Free time"
+			]
+		},
+		{
+			"arabic": "القراية مفيدة.",
+			"arabicTashkeel": "القِراية مُفيدة.",
+			"english": "Reading is useful.",
+			"transliteration": "il-giraaya mufeeda.",
+			"wordAlignments": [
+				{
+					"arabic": "القراية",
+					"english": "Reading is",
+					"transliteration": "il-giraaya"
+				},
+				{
+					"arabic": "مفيدة.",
+					"english": "useful.",
+					"transliteration": "mufeeda."
+				}
+			],
+			"targetWords": [
+				"Reading"
+			]
+		},
+		{
+			"arabic": "يرسم زين هواية.",
+			"arabicTashkeel": "يِرسِم زين هْوايَة.",
+			"english": "He draws very well.",
+			"transliteration": "yirsim zeen hwaaya.",
+			"wordAlignments": [
+				{
+					"arabic": "يرسم",
+					"english": "He draws",
+					"transliteration": "yirsim"
+				},
+				{
+					"arabic": "زين",
+					"english": "well",
+					"transliteration": "zeen"
+				},
+				{
+					"arabic": "هواية.",
+					"english": "very.",
+					"transliteration": "hwaaya."
+				}
+			],
+			"targetWords": [
+				"Drawing"
+			]
+		},
+		{
+			"arabic": "شنو موسيقى تحب؟",
+			"arabicTashkeel": "شِنو موسيقى تْحِب؟",
+			"english": "What music do you like?",
+			"transliteration": "shinu mooseega t7ibb?",
+			"wordAlignments": [
+				{
+					"arabic": "شنو",
+					"english": "What",
+					"transliteration": "shinu"
+				},
+				{
+					"arabic": "موسيقى",
+					"english": "music",
+					"transliteration": "mooseega"
+				},
+				{
+					"arabic": "تحب؟",
+					"english": "do you like?",
+					"transliteration": "t7ibb?"
+				}
+			],
+			"targetWords": [
+				"Music"
+			]
+		},
+		{
+			"arabic": "الغنا العراقي حلو.",
+			"arabicTashkeel": "الغِنا العِراقي حِلو.",
+			"english": "Iraqi singing is beautiful.",
+			"transliteration": "il-ghina il-3iraaqi 7ilu.",
+			"wordAlignments": [
+				{
+					"arabic": "الغنا",
+					"english": "Singing",
+					"transliteration": "il-ghina"
+				},
+				{
+					"arabic": "العراقي",
+					"english": "Iraqi is",
+					"transliteration": "il-3iraaqi"
+				},
+				{
+					"arabic": "حلو.",
+					"english": "beautiful.",
+					"transliteration": "7ilu."
+				}
+			],
+			"targetWords": [
+				"Singing"
+			]
+		},
+		{
+			"arabic": "أصور بغداد.",
+			"arabicTashkeel": "أصَوِّر بَغداد.",
+			"english": "I take photos of Baghdad.",
+			"transliteration": "asawwir baghdaad.",
+			"wordAlignments": [
+				{
+					"arabic": "أصور",
+					"english": "I photograph",
+					"transliteration": "asawwir"
+				},
+				{
+					"arabic": "بغداد.",
+					"english": "Baghdad.",
+					"transliteration": "baghdaad."
+				}
+			],
+			"targetWords": [
+				"Photography"
+			]
+		},
+		{
+			"arabic": "السفر غالي.",
+			"arabicTashkeel": "السَّفَر غالي.",
+			"english": "Travelling is expensive.",
+			"transliteration": "is-safar ghaali.",
+			"wordAlignments": [
+				{
+					"arabic": "السفر",
+					"english": "Travelling is",
+					"transliteration": "is-safar"
+				},
+				{
+					"arabic": "غالي.",
+					"english": "expensive.",
+					"transliteration": "ghaali."
+				}
+			],
+			"targetWords": [
+				"Travelling"
+			]
+		},
+		{
+			"arabic": "صيد السمك يحتاج صبر.",
+			"arabicTashkeel": "صيد السِّمَك يِحتاج صَبُر.",
+			"english": "Fishing needs patience.",
+			"transliteration": "seed is-simach yi7taaj sabur.",
+			"wordAlignments": [
+				{
+					"arabic": "صيد",
+					"english": "Hunting of",
+					"transliteration": "seed"
+				},
+				{
+					"arabic": "السمك",
+					"english": "fish",
+					"transliteration": "is-simach"
+				},
+				{
+					"arabic": "يحتاج",
+					"english": "needs",
+					"transliteration": "yi7taaj"
+				},
+				{
+					"arabic": "صبر.",
+					"english": "patience.",
+					"transliteration": "sabur."
+				}
+			],
+			"targetWords": [
+				"Fishing"
+			]
+		},
+		{
+			"arabic": "الشطرنج صعب.",
+			"arabicTashkeel": "الشَّطرَنج صَعُب.",
+			"english": "Chess is hard.",
+			"transliteration": "ish-shatranj sa3ub.",
+			"wordAlignments": [
+				{
+					"arabic": "الشطرنج",
+					"english": "Chess is",
+					"transliteration": "ish-shatranj"
+				},
+				{
+					"arabic": "صعب.",
+					"english": "hard.",
+					"transliteration": "sa3ub."
+				}
+			],
+			"targetWords": [
+				"Chess"
+			]
+		},
+		{
+			"arabic": "خلي نلعب دومنة.",
+			"arabicTashkeel": "خَلّي نِلعَب دومِنة.",
+			"english": "Let's play dominoes.",
+			"transliteration": "khalli nil3ab doomina.",
+			"wordAlignments": [
+				{
+					"arabic": "خلي",
+					"english": "Let's",
+					"transliteration": "khalli"
+				},
+				{
+					"arabic": "نلعب",
+					"english": "play",
+					"transliteration": "nil3ab"
+				},
+				{
+					"arabic": "دومنة.",
+					"english": "dominoes.",
+					"transliteration": "doomina."
+				}
+			],
+			"targetWords": [
+				"Dominoes"
+			]
+		},
+		{
+			"arabic": "أحب الأفلام المصرية.",
+			"arabicTashkeel": "أحِب الأفلام المَصرية.",
+			"english": "I like Egyptian movies.",
+			"transliteration": "a7ibb il-aflaam il-masriyya.",
+			"wordAlignments": [
+				{
+					"arabic": "أحب",
+					"english": "I like",
+					"transliteration": "a7ibb"
+				},
+				{
+					"arabic": "الأفلام",
+					"english": "movies",
+					"transliteration": "il-aflaam"
+				},
+				{
+					"arabic": "المصرية.",
+					"english": "Egyptian.",
+					"transliteration": "il-masriyya."
+				}
+			],
+			"targetWords": [
+				"I like",
+				"Movies"
+			]
+		},
+		{
+			"arabic": "ما أحب الموسيقى العالية.",
+			"arabicTashkeel": "ما أحِب الموسيقى العالية.",
+			"english": "I don't like loud music.",
+			"transliteration": "ma a7ibb il-mooseega il-3aalya.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "أحب",
+					"english": "I like",
+					"transliteration": "a7ibb"
+				},
+				{
+					"arabic": "الموسيقى",
+					"english": "music",
+					"transliteration": "il-mooseega"
+				},
+				{
+					"arabic": "العالية.",
+					"english": "loud.",
+					"transliteration": "il-3aalya."
+				}
+			],
+			"targetWords": [
+				"I don't like",
+				"Music"
+			]
+		},
+		{
+			"arabic": "أفضل الشاي.",
+			"arabicTashkeel": "أفَضِّل الشاي.",
+			"english": "I prefer tea.",
+			"transliteration": "afadhdhil ich-chaay.",
+			"wordAlignments": [
+				{
+					"arabic": "أفضل",
+					"english": "I prefer",
+					"transliteration": "afadhdhil"
+				},
+				{
+					"arabic": "الشاي.",
+					"english": "tea.",
+					"transliteration": "ich-chaay."
+				}
+			],
+			"targetWords": [
+				"I prefer"
+			]
+		},
+		{
+			"arabic": "كل واحد عنده هواية.",
+			"arabicTashkeel": "كُل واحِد عِندَه هِواية.",
+			"english": "Every person has a hobby.",
+			"transliteration": "kull waa7id 3inda hiwaaya.",
+			"wordAlignments": [
+				{
+					"arabic": "كل",
+					"english": "Every",
+					"transliteration": "kull"
+				},
+				{
+					"arabic": "واحد",
+					"english": "one",
+					"transliteration": "waa7id"
+				},
+				{
+					"arabic": "عنده",
+					"english": "has",
+					"transliteration": "3inda"
+				},
+				{
+					"arabic": "هواية.",
+					"english": "a hobby.",
+					"transliteration": "hiwaaya."
+				}
+			],
+			"targetWords": [
+				"Hobby"
+			]
+		},
+		{
+			"arabic": "بوكت الفراغ أطلع ويا ربعي.",
+			"arabicTashkeel": "بوَكِت الفَراغ أطلَع ويّا رَبعي.",
+			"english": "In my free time I go out with my friends.",
+			"transliteration": "b-wakit il-faraagh atla3 wiyya rab3i.",
+			"wordAlignments": [
+				{
+					"arabic": "بوكت",
+					"english": "In the time of",
+					"transliteration": "b-wakit"
+				},
+				{
+					"arabic": "الفراغ",
+					"english": "emptiness",
+					"transliteration": "il-faraagh"
+				},
+				{
+					"arabic": "أطلع",
+					"english": "I go out",
+					"transliteration": "atla3"
+				},
+				{
+					"arabic": "ويا",
+					"english": "with",
+					"transliteration": "wiyya"
+				},
+				{
+					"arabic": "ربعي.",
+					"english": "my friends.",
+					"transliteration": "rab3i."
+				}
+			],
+			"targetWords": [
+				"Free time"
+			]
+		},
+		{
+			"arabic": "أبويه يحب قراية الجريدة.",
+			"arabicTashkeel": "أبويَه يْحِب قِراية الجَريدة.",
+			"english": "My dad loves reading the newspaper.",
+			"transliteration": "abooya y7ibb giraayat ij-jareeda.",
+			"wordAlignments": [
+				{
+					"arabic": "أبويه",
+					"english": "My dad",
+					"transliteration": "abooya"
+				},
+				{
+					"arabic": "يحب",
+					"english": "loves",
+					"transliteration": "y7ibb"
+				},
+				{
+					"arabic": "قراية",
+					"english": "reading of",
+					"transliteration": "giraayat"
+				},
+				{
+					"arabic": "الجريدة.",
+					"english": "the newspaper.",
+					"transliteration": "ij-jareeda."
+				}
+			],
+			"targetWords": [
+				"Reading"
+			]
+		},
+		{
+			"arabic": "الرسم يريحني.",
+			"arabicTashkeel": "الرَّسِم يْرَيّحني.",
+			"english": "Drawing relaxes me.",
+			"transliteration": "ir-rasim yrayyi7ni.",
+			"wordAlignments": [
+				{
+					"arabic": "الرسم",
+					"english": "Drawing",
+					"transliteration": "ir-rasim"
+				},
+				{
+					"arabic": "يريحني.",
+					"english": "relaxes me.",
+					"transliteration": "yrayyi7ni."
+				}
+			],
+			"targetWords": [
+				"Drawing"
+			]
+		},
+		{
+			"arabic": "تعزف موسيقى.",
+			"arabicTashkeel": "تِعزِف موسيقى.",
+			"english": "She plays music.",
+			"transliteration": "ti3zif mooseega.",
+			"wordAlignments": [
+				{
+					"arabic": "تعزف",
+					"english": "She plays",
+					"transliteration": "ti3zif"
+				},
+				{
+					"arabic": "موسيقى.",
+					"english": "music.",
+					"transliteration": "mooseega."
+				}
+			],
+			"targetWords": [
+				"Music"
+			]
+		},
+		{
+			"arabic": "ما أحب الغنا.",
+			"arabicTashkeel": "ما أحِب الغِنا.",
+			"english": "I don't like singing.",
+			"transliteration": "ma a7ibb il-ghina.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "أحب",
+					"english": "I like",
+					"transliteration": "a7ibb"
+				},
+				{
+					"arabic": "الغنا.",
+					"english": "singing.",
+					"transliteration": "il-ghina."
+				}
+			],
+			"targetWords": [
+				"I don't like",
+				"Singing"
+			]
+		},
+		{
+			"arabic": "التصوير هواية غالية.",
+			"arabicTashkeel": "التَّصوير هِواية غالية.",
+			"english": "Photography is an expensive hobby.",
+			"transliteration": "it-tasweer hiwaaya ghaalya.",
+			"wordAlignments": [
+				{
+					"arabic": "التصوير",
+					"english": "Photography is",
+					"transliteration": "it-tasweer"
+				},
+				{
+					"arabic": "هواية",
+					"english": "a hobby",
+					"transliteration": "hiwaaya"
+				},
+				{
+					"arabic": "غالية.",
+					"english": "expensive.",
+					"transliteration": "ghaalya."
+				}
+			],
+			"targetWords": [
+				"Photography",
+				"Hobby"
+			]
+		},
+		{
+			"arabic": "أفضل السفر بالطيارة.",
+			"arabicTashkeel": "أفَضِّل السَّفَر بالطَّيّارة.",
+			"english": "I prefer travelling by plane.",
+			"transliteration": "afadhdhil is-safar bit-tayyaara.",
+			"wordAlignments": [
+				{
+					"arabic": "أفضل",
+					"english": "I prefer",
+					"transliteration": "afadhdhil"
+				},
+				{
+					"arabic": "السفر",
+					"english": "travelling",
+					"transliteration": "is-safar"
+				},
+				{
+					"arabic": "بالطيارة.",
+					"english": "by plane.",
+					"transliteration": "bit-tayyaara."
+				}
+			],
+			"targetWords": [
+				"I prefer",
+				"Travelling"
+			]
+		},
+		{
+			"arabic": "صيد السمك يوم الجمعة.",
+			"arabicTashkeel": "صيد السِّمَك يوم الجُمعة.",
+			"english": "Fishing on Friday.",
+			"transliteration": "seed is-simach yoom ij-jum3a.",
+			"wordAlignments": [
+				{
+					"arabic": "صيد",
+					"english": "Hunting of",
+					"transliteration": "seed"
+				},
+				{
+					"arabic": "السمك",
+					"english": "fish",
+					"transliteration": "is-simach"
+				},
+				{
+					"arabic": "يوم",
+					"english": "on",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "الجمعة.",
+					"english": "Friday.",
+					"transliteration": "ij-jum3a."
+				}
+			],
+			"targetWords": [
+				"Fishing"
+			]
+		},
+		{
+			"arabic": "جدي علمني الشطرنج.",
+			"arabicTashkeel": "جَدّي عَلَّمني الشَّطرَنج.",
+			"english": "My grandpa taught me chess.",
+			"transliteration": "jiddi 3allamni ish-shatranj.",
+			"wordAlignments": [
+				{
+					"arabic": "جدي",
+					"english": "My grandfather",
+					"transliteration": "jiddi"
+				},
+				{
+					"arabic": "علمني",
+					"english": "taught me",
+					"transliteration": "3allamni"
+				},
+				{
+					"arabic": "الشطرنج.",
+					"english": "chess.",
+					"transliteration": "ish-shatranj."
+				}
+			],
+			"targetWords": [
+				"Chess"
+			]
+		},
+		{
+			"arabic": "الدومنة لعبة قهاوي.",
+			"arabicTashkeel": "الدّومِنة لِعبة قَهاوي.",
+			"english": "Dominoes is a café game.",
+			"transliteration": "id-doomina li3bat gahaawi.",
+			"wordAlignments": [
+				{
+					"arabic": "الدومنة",
+					"english": "Dominoes is",
+					"transliteration": "id-doomina"
+				},
+				{
+					"arabic": "لعبة",
+					"english": "a game of",
+					"transliteration": "li3bat"
+				},
+				{
+					"arabic": "قهاوي.",
+					"english": "cafés.",
+					"transliteration": "gahaawi."
+				}
+			],
+			"targetWords": [
+				"Dominoes"
+			]
+		},
+		{
+			"arabic": "خلي نشوف فلم الليلة.",
+			"arabicTashkeel": "خَلّي نْشوف فِلِم الليلة.",
+			"english": "Let's watch a movie tonight.",
+			"transliteration": "khalli nshoof filim il-leela.",
+			"wordAlignments": [
+				{
+					"arabic": "خلي",
+					"english": "Let's",
+					"transliteration": "khalli"
+				},
+				{
+					"arabic": "نشوف",
+					"english": "watch",
+					"transliteration": "nshoof"
+				},
+				{
+					"arabic": "فلم",
+					"english": "a movie",
+					"transliteration": "filim"
+				},
+				{
+					"arabic": "الليلة.",
+					"english": "tonight.",
+					"transliteration": "il-leela."
+				}
+			],
+			"targetWords": [
+				"Movies"
+			]
+		},
+		{
+			"arabic": "أحب السباحة والسفر.",
+			"arabicTashkeel": "أحِب السِّباحة والسَّفَر.",
+			"english": "I like swimming and travelling.",
+			"transliteration": "a7ibb is-sibaa7a w-is-safar.",
+			"wordAlignments": [
+				{
+					"arabic": "أحب",
+					"english": "I like",
+					"transliteration": "a7ibb"
+				},
+				{
+					"arabic": "السباحة",
+					"english": "swimming",
+					"transliteration": "is-sibaa7a"
+				},
+				{
+					"arabic": "والسفر.",
+					"english": "and travelling.",
+					"transliteration": "w-is-safar."
+				}
+			],
+			"targetWords": [
+				"I like",
+				"Travelling"
+			]
+		},
+		{
+			"arabic": "ما أحب الشطرنج.",
+			"arabicTashkeel": "ما أحِب الشَّطرَنج.",
+			"english": "I don't like chess.",
+			"transliteration": "ma a7ibb ish-shatranj.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "أحب",
+					"english": "I like",
+					"transliteration": "a7ibb"
+				},
+				{
+					"arabic": "الشطرنج.",
+					"english": "chess.",
+					"transliteration": "ish-shatranj."
+				}
+			],
+			"targetWords": [
+				"I don't like",
+				"Chess"
+			]
+		},
+		{
+			"arabic": "ياهو تفضل، الأفلام لو الكتب؟",
+			"arabicTashkeel": "ياهو تْفَضِّل، الأفلام لو الكُتُب؟",
+			"english": "Which do you prefer, movies or books?",
+			"transliteration": "yaahu tfadhdhil, il-aflaam law il-kutub?",
+			"wordAlignments": [
+				{
+					"arabic": "ياهو",
+					"english": "Which",
+					"transliteration": "yaahu"
+				},
+				{
+					"arabic": "تفضل،",
+					"english": "do you prefer,",
+					"transliteration": "tfadhdhil,"
+				},
+				{
+					"arabic": "الأفلام",
+					"english": "movies",
+					"transliteration": "il-aflaam"
+				},
+				{
+					"arabic": "لو",
+					"english": "or",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "الكتب؟",
+					"english": "books?",
+					"transliteration": "il-kutub?"
+				}
+			],
+			"targetWords": [
+				"I prefer",
+				"Movies"
+			]
+		},
+		{
+			"arabic": "هوايتي الجديدة.",
+			"arabicTashkeel": "هِوايتي الجْديدة.",
+			"english": "My new hobby.",
+			"transliteration": "hiwaayti ij-jdeeda.",
+			"wordAlignments": [
+				{
+					"arabic": "هوايتي",
+					"english": "My hobby",
+					"transliteration": "hiwaayti"
+				},
+				{
+					"arabic": "الجديدة.",
+					"english": "new.",
+					"transliteration": "ij-jdeeda."
+				}
+			],
+			"targetWords": [
+				"Hobby"
+			]
+		},
+		{
+			"arabic": "وكت الفراغ بالعطلة.",
+			"arabicTashkeel": "وَكِت الفَراغ بالعُطلة.",
+			"english": "Free time on the weekend.",
+			"transliteration": "wakit il-faraagh bil-3utla.",
+			"wordAlignments": [
+				{
+					"arabic": "وكت",
+					"english": "Time of",
+					"transliteration": "wakit"
+				},
+				{
+					"arabic": "الفراغ",
+					"english": "emptiness",
+					"transliteration": "il-faraagh"
+				},
+				{
+					"arabic": "بالعطلة.",
+					"english": "on the weekend.",
+					"transliteration": "bil-3utla."
+				}
+			],
+			"targetWords": [
+				"Free time"
+			]
+		},
+		{
+			"arabic": "أقرا قبل النوم.",
+			"arabicTashkeel": "أقرا قَبُل النّوم.",
+			"english": "I read before sleeping.",
+			"transliteration": "agra gabul in-noom.",
+			"wordAlignments": [
+				{
+					"arabic": "أقرا",
+					"english": "I read",
+					"transliteration": "agra"
+				},
+				{
+					"arabic": "قبل",
+					"english": "before",
+					"transliteration": "gabul"
+				},
+				{
+					"arabic": "النوم.",
+					"english": "sleeping.",
+					"transliteration": "in-noom."
+				}
+			],
+			"targetWords": [
+				"Reading"
+			]
+		},
+		{
+			"arabic": "درس رسم.",
+			"arabicTashkeel": "دَرِس رَسِم.",
+			"english": "A drawing class.",
+			"transliteration": "daris rasim.",
+			"wordAlignments": [
+				{
+					"arabic": "درس",
+					"english": "A lesson of",
+					"transliteration": "daris"
+				},
+				{
+					"arabic": "رسم.",
+					"english": "drawing.",
+					"transliteration": "rasim."
+				}
+			],
+			"targetWords": [
+				"Drawing"
+			]
+		},
+		{
+			"arabic": "الموسيقى العراقية حلوة.",
+			"arabicTashkeel": "الموسيقى العِراقية حِلوة.",
+			"english": "Iraqi music is beautiful.",
+			"transliteration": "il-mooseega il-3iraaqiyya 7ilwa.",
+			"wordAlignments": [
+				{
+					"arabic": "الموسيقى",
+					"english": "Music",
+					"transliteration": "il-mooseega"
+				},
+				{
+					"arabic": "العراقية",
+					"english": "Iraqi is",
+					"transliteration": "il-3iraaqiyya"
+				},
+				{
+					"arabic": "حلوة.",
+					"english": "beautiful.",
+					"transliteration": "7ilwa."
+				}
+			],
+			"targetWords": [
+				"Music"
+			]
+		},
+		{
+			"arabic": "تغني بالأعراس.",
+			"arabicTashkeel": "تْغَنّي بالأعراس.",
+			"english": "She sings at weddings.",
+			"transliteration": "tghanni bil-a3raas.",
+			"wordAlignments": [
+				{
+					"arabic": "تغني",
+					"english": "She sings",
+					"transliteration": "tghanni"
+				},
+				{
+					"arabic": "بالأعراس.",
+					"english": "at weddings.",
+					"transliteration": "bil-a3raas."
+				}
+			],
+			"targetWords": [
+				"Singing"
+			]
+		},
+		{
+			"arabic": "دورة تصوير.",
+			"arabicTashkeel": "دَورة تَصوير.",
+			"english": "A photography course.",
+			"transliteration": "dawrat tasweer.",
+			"wordAlignments": [
+				{
+					"arabic": "دورة",
+					"english": "A course of",
+					"transliteration": "dawrat"
+				},
+				{
+					"arabic": "تصوير.",
+					"english": "photography.",
+					"transliteration": "tasweer."
+				}
+			],
+			"targetWords": [
+				"Photography"
+			]
+		},
+		{
+			"arabic": "السفر يفتح العقل.",
+			"arabicTashkeel": "السَّفَر يِفتَح العَقِل.",
+			"english": "Travelling opens the mind.",
+			"transliteration": "is-safar yifta7 il-3agil.",
+			"wordAlignments": [
+				{
+					"arabic": "السفر",
+					"english": "Travelling",
+					"transliteration": "is-safar"
+				},
+				{
+					"arabic": "يفتح",
+					"english": "opens",
+					"transliteration": "yifta7"
+				},
+				{
+					"arabic": "العقل.",
+					"english": "the mind.",
+					"transliteration": "il-3agil."
+				}
+			],
+			"targetWords": [
+				"Travelling"
+			]
+		},
+		{
+			"arabic": "تحب صيد السمك؟",
+			"arabicTashkeel": "تْحِب صيد السِّمَك؟",
+			"english": "Do you like fishing?",
+			"transliteration": "t7ibb seed is-simach?",
+			"wordAlignments": [
+				{
+					"arabic": "تحب",
+					"english": "Do you like",
+					"transliteration": "t7ibb"
+				},
+				{
+					"arabic": "صيد",
+					"english": "hunting of",
+					"transliteration": "seed"
+				},
+				{
+					"arabic": "السمك؟",
+					"english": "fish?",
+					"transliteration": "is-simach?"
+				}
+			],
+			"targetWords": [
+				"I like",
+				"Fishing"
+			]
+		},
+		{
+			"arabic": "ألعب شطرنج بالتلفون.",
+			"arabicTashkeel": "ألعَب شَطرَنج بالتَّلَفون.",
+			"english": "I play chess on my phone.",
+			"transliteration": "al3ab shatranj bit-talafoon.",
+			"wordAlignments": [
+				{
+					"arabic": "ألعب",
+					"english": "I play",
+					"transliteration": "al3ab"
+				},
+				{
+					"arabic": "شطرنج",
+					"english": "chess",
+					"transliteration": "shatranj"
+				},
+				{
+					"arabic": "بالتلفون.",
+					"english": "on the phone.",
+					"transliteration": "bit-talafoon."
+				}
+			],
+			"targetWords": [
+				"Chess"
+			]
+		},
+		{
+			"arabic": "منو غلب بالدومنة؟",
+			"arabicTashkeel": "مِنو غِلَب بالدّومِنة؟",
+			"english": "Who won at dominoes?",
+			"transliteration": "minu ghilab bid-doomina?",
+			"wordAlignments": [
+				{
+					"arabic": "منو",
+					"english": "Who",
+					"transliteration": "minu"
+				},
+				{
+					"arabic": "غلب",
+					"english": "won",
+					"transliteration": "ghilab"
+				},
+				{
+					"arabic": "بالدومنة؟",
+					"english": "at dominoes?",
+					"transliteration": "bid-doomina?"
+				}
+			],
+			"targetWords": [
+				"Dominoes"
+			]
+		},
+		{
+			"arabic": "أفلام عتيقة.",
+			"arabicTashkeel": "أفلام عَتيقة.",
+			"english": "Old movies.",
+			"transliteration": "aflaam 3ateega.",
+			"wordAlignments": [
+				{
+					"arabic": "أفلام",
+					"english": "Movies",
+					"transliteration": "aflaam"
+				},
+				{
+					"arabic": "عتيقة.",
+					"english": "old.",
+					"transliteration": "3ateega."
+				}
+			],
+			"targetWords": [
+				"Movies"
+			]
+		},
+		{
+			"arabic": "ما أحب أقعد بكير.",
+			"arabicTashkeel": "ما أحِب أقعَد بَكّير.",
+			"english": "I don't like waking up early.",
+			"transliteration": "ma a7ibb ag3ad bachcheer.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "أحب",
+					"english": "I like",
+					"transliteration": "a7ibb"
+				},
+				{
+					"arabic": "أقعد",
+					"english": "to wake up",
+					"transliteration": "ag3ad"
+				},
+				{
+					"arabic": "بكير.",
+					"english": "early.",
+					"transliteration": "bachcheer."
+				}
+			],
+			"targetWords": [
+				"I don't like"
+			]
+		},
+		{
+			"arabic": "أفضل المسا.",
+			"arabicTashkeel": "أفَضِّل المَسا.",
+			"english": "I prefer the evening.",
+			"transliteration": "afadhdhil il-masa.",
+			"wordAlignments": [
+				{
+					"arabic": "أفضل",
+					"english": "I prefer",
+					"transliteration": "afadhdhil"
+				},
+				{
+					"arabic": "المسا.",
+					"english": "the evening.",
+					"transliteration": "il-masa."
+				}
+			],
+			"targetWords": [
+				"I prefer"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "My Free Time",
+			"sentences": [
+				{
+					"arabic": "بوكت الفراغ أحب القراية.",
+					"arabicTashkeel": "بوَكِت الفَراغ أحِب القِراية.",
+					"english": "In my free time I like reading.",
+					"transliteration": "b-wakit il-faraagh a7ibb il-giraaya.",
+					"wordAlignments": [
+						{
+							"arabic": "بوكت",
+							"english": "In the time of",
+							"transliteration": "b-wakit"
+						},
+						{
+							"arabic": "الفراغ",
+							"english": "emptiness",
+							"transliteration": "il-faraagh"
+						},
+						{
+							"arabic": "أحب",
+							"english": "I like",
+							"transliteration": "a7ibb"
+						},
+						{
+							"arabic": "القراية.",
+							"english": "reading.",
+							"transliteration": "il-giraaya."
+						}
+					]
+				},
+				{
+					"arabic": "وأحب التصوير والسفر هم.",
+					"arabicTashkeel": "وأحِب التَّصوير والسَّفَر هَم.",
+					"english": "I also like photography and travelling.",
+					"transliteration": "w-a7ibb it-tasweer w-is-safar ham.",
+					"wordAlignments": [
+						{
+							"arabic": "وأحب",
+							"english": "And I like",
+							"transliteration": "w-a7ibb"
+						},
+						{
+							"arabic": "التصوير",
+							"english": "photography",
+							"transliteration": "it-tasweer"
+						},
+						{
+							"arabic": "والسفر",
+							"english": "and travelling",
+							"transliteration": "w-is-safar"
+						},
+						{
+							"arabic": "هم.",
+							"english": "too.",
+							"transliteration": "ham."
+						}
+					]
+				},
+				{
+					"arabic": "ما أحب الطوبة، أفضل الشطرنج.",
+					"arabicTashkeel": "ما أحِب الطّوبة، أفَضِّل الشَّطرَنج.",
+					"english": "I don't like football, I prefer chess.",
+					"transliteration": "ma a7ibb it-tooba, afadhdhil ish-shatranj.",
+					"wordAlignments": [
+						{
+							"arabic": "ما",
+							"english": "not",
+							"transliteration": "ma"
+						},
+						{
+							"arabic": "أحب",
+							"english": "I like",
+							"transliteration": "a7ibb"
+						},
+						{
+							"arabic": "الطوبة،",
+							"english": "football,",
+							"transliteration": "it-tooba,"
+						},
+						{
+							"arabic": "أفضل",
+							"english": "I prefer",
+							"transliteration": "afadhdhil"
+						},
+						{
+							"arabic": "الشطرنج.",
+							"english": "chess.",
+							"transliteration": "ish-shatranj."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "At the Café",
+			"sentences": [
+				{
+					"arabic": "كل مسا أبويه يروح للقهوة.",
+					"arabicTashkeel": "كُل مَسا أبويَه يْروح للقَهوة.",
+					"english": "Every evening my dad goes to the café.",
+					"transliteration": "kull masa abooya yrooh lil-gahwa.",
+					"wordAlignments": [
+						{
+							"arabic": "كل",
+							"english": "Every",
+							"transliteration": "kull"
+						},
+						{
+							"arabic": "مسا",
+							"english": "evening",
+							"transliteration": "masa"
+						},
+						{
+							"arabic": "أبويه",
+							"english": "my dad",
+							"transliteration": "abooya"
+						},
+						{
+							"arabic": "يروح",
+							"english": "goes",
+							"transliteration": "yrooh"
+						},
+						{
+							"arabic": "للقهوة.",
+							"english": "to the café.",
+							"transliteration": "lil-gahwa."
+						}
+					]
+				},
+				{
+					"arabic": "يلعب دومنة ويا ربعه ويشرب شاي.",
+					"arabicTashkeel": "يِلعَب دومِنة ويّا رَبعَه ويِشرَب شاي.",
+					"english": "He plays dominoes with his friends and drinks tea.",
+					"transliteration": "yil3ab doomina wiyya rab3a w-yishrab chaay.",
+					"wordAlignments": [
+						{
+							"arabic": "يلعب",
+							"english": "He plays",
+							"transliteration": "yil3ab"
+						},
+						{
+							"arabic": "دومنة",
+							"english": "dominoes",
+							"transliteration": "doomina"
+						},
+						{
+							"arabic": "ويا",
+							"english": "with",
+							"transliteration": "wiyya"
+						},
+						{
+							"arabic": "ربعه",
+							"english": "his friends",
+							"transliteration": "rab3a"
+						},
+						{
+							"arabic": "ويشرب",
+							"english": "and drinks",
+							"transliteration": "w-yishrab"
+						},
+						{
+							"arabic": "شاي.",
+							"english": "tea.",
+							"transliteration": "chaay."
+						}
+					]
+				},
+				{
+					"arabic": "هاي هوايته المفضلة.",
+					"arabicTashkeel": "هاي هِوايتَه المُفَضَّلة.",
+					"english": "That is his favourite hobby.",
+					"transliteration": "haay hiwaayta il-mufadhdhala.",
+					"wordAlignments": [
+						{
+							"arabic": "هاي",
+							"english": "That is",
+							"transliteration": "haay"
+						},
+						{
+							"arabic": "هوايته",
+							"english": "his hobby",
+							"transliteration": "hiwaayta"
+						},
+						{
+							"arabic": "المفضلة.",
+							"english": "favourite.",
+							"transliteration": "il-mufadhdhala."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is at an evening language exchange in Baghdad and is getting to know an Iraqi university student.",
+		"studentRole": "A language-exchange partner learning Iraqi Arabic.",
+		"otherRole": "An Iraqi student who loves photography and dominoes.",
+		"goalEnglish": "Talk about what you like and don't like doing in your free time, and compare your hobbies.",
+		"targetWords": [
+			"Hobby",
+			"Free time",
+			"I like",
+			"I don't like",
+			"I prefer",
+			"Reading",
+			"Travelling",
+			"Movies"
+		]
+	}
+}
