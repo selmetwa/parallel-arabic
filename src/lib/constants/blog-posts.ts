@@ -11,6 +11,38 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 	{
+		slug: 'how-to-learn-levantine-arabic',
+		title: 'How to learn Levantine Arabic',
+		description:
+			'Which accent to pick, why the alphabet still comes first, the sounds and grammar that make Shami different from Egyptian, and the order to learn it in, with a realistic timeline for each stage.',
+		date: '2026-10-22',
+		readingTime: '8 min read'
+	},
+	{
+		slug: 'how-to-learn-moroccan-arabic',
+		title: 'How to learn Moroccan Arabic (Darija)',
+		description:
+			'Darija is the hardest major dialect to find material for and the most rewarding to speak in Morocco. What makes it different, the order to learn it in, and how to get listening practice when most Arabic media is Egyptian.',
+		date: '2026-10-22',
+		readingTime: '8 min read'
+	},
+	{
+		slug: 'is-arabic-hard-to-learn',
+		title: 'Is Arabic hard to learn? What is actually hard, and what isn\'t',
+		description:
+			'The script takes two weeks. The sounds take a month. What makes Arabic hard is that people speak one Arabic and write another. The genuinely difficult parts, the parts that only look difficult, and how to pick the right Arabic for your goal.',
+		date: '2026-10-22',
+		readingTime: '7 min read'
+	},
+	{
+		slug: 'how-long-does-it-take-to-learn-arabic',
+		title: 'How long does it take to learn Arabic?',
+		description:
+			'The US Foreign Service Institute puts Arabic at about 2,200 class hours for English speakers. What that number means for a learner with an hour a day, how long each milestone takes, and why picking a dialect changes the answer.',
+		date: '2026-10-22',
+		readingTime: '7 min read'
+	},
+	{
 		slug: 'fusha-egyptian-levantine-darija',
 		title: 'Fusha, Egyptian, Levantine, Darija: can you hear the difference?',
 		description:

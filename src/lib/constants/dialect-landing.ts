@@ -133,6 +133,14 @@ export const DIALECT_LANDING: Record<string, DialectLandingContent> = {
 				answer:
 					'Not harder, but there is less learning material and less media exposure, so it can take more effort to find good listening practice. The grammar is very close to Egyptian.'
 			}
+		],
+		extraLinks: [
+			{
+				href: '/blog/how-to-learn-levantine-arabic',
+				title: 'Start Here',
+				description:
+					'How to learn Levantine Arabic: what to do first, which accent to pick, and how long each stage takes.'
+			}
 		]
 	},
 	darija: {
@@ -175,6 +183,14 @@ export const DIALECT_LANDING: Record<string, DialectLandingContent> = {
 				question: 'Do Moroccans understand Modern Standard Arabic?',
 				answer:
 					'Yes, from schooling and news media, but they do not use it conversationally. Speaking Fusha in a Moroccan café will be understood and will also mark you as a foreigner.'
+			}
+		],
+		extraLinks: [
+			{
+				href: '/blog/how-to-learn-moroccan-arabic',
+				title: 'Start Here',
+				description:
+					'How to learn Moroccan Arabic: the order that works, what makes Darija different, and where to find practice.'
 			}
 		]
 	},

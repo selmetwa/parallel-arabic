@@ -78,7 +78,7 @@
 <section class="mx-auto mt-6 max-w-5xl px-3 sm:px-8">
 	<header class="mb-6 text-left">
 		<h1 class="mb-1 text-3xl font-bold tracking-tight text-text-300 sm:text-4xl">
-			{content.heading}
+			Learn {content.heading}
 			<span class="ms-2 text-2xl font-normal text-text-200" dir="rtl">{content.nativeName}</span>
 		</h1>
 		<p class="text-lg leading-snug text-text-200 sm:text-xl">{content.tagline}</p>
