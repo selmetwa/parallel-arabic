@@ -1,0 +1,283 @@
+# Khaleeji — A1 — The Present Tense (base-a1-u18)
+# Vocab gives the he-form; sentences conjugate with أنا / إنتَ / إنتي / هو / هي. Gulf: قاعِد + verb = "right now" (قاعِد آكِل = I'm eating), يَبي = he wants.
+
+@vocab
+verb = To go
+يْروح / yrooh / He goes
+
+verb = To eat
+ياكِل / yaakil / He eats
+
+verb = To drink
+يِشرَب / yishrab / He drinks
+
+verb = To work
+يِشتِغِل / yishtighil / He works
+
+verb = To live
+يِسكِن / yiskin / He lives
+
+verb = To like
+يْحِب / y7ibb / He likes
+
+verb = To want
+يَبي / yabi / He wants
+
+verb = To see
+يْشوف / yshoof / He sees
+
+verb = To speak
+يِتكَلَّم / yitkallam / He speaks
+
+verb = To know
+يِعرِف / yi3rif / He knows
+
+verb = To write
+يِكتِب / yiktib / He writes
+
+verb = To read
+يِقرا / yigra / He reads
+
+verb = To sleep
+يْنام / ynaam / He sleeps
+
+verb = To cook
+يِطبَخ / yitbakh / He cooks
+
+verb = To study
+يِدرِس / yidris / He studies
+
+@pool
+I go to work every day. = To go
+أروح / arooh / I go | الدَّوام / id-dawaam / to work | كِل / kil / every | يوم. / yoom. / day.
+
+Where are you going? = To go
+وين / ween / Where | تْروح؟ / trooh? / are you going?
+
+Are you going to the mall? = To go
+تْروحين / trooheen / Are you going | المول؟ / il-mool? / to the mall?
+
+He goes to school. = To go
+هو / hu / He | يْروح / yrooh / goes | المَدرَسة. / il-madrasa. / to school.
+
+I eat bread. = To eat
+آكِل / aakil / I eat | خُبُز. / khubuz. / bread.
+
+What are you eating? = To eat
+شو / shu / What | تاكِل؟ / taakil? / are you eating?
+
+Do you eat fish? = To eat
+تاكِلين / taakleen / Do you eat | سِمَك؟ / simach? / fish?
+
+She eats rice. = To eat
+هي / hi / She | تاكِل / taakil / eats | عيش. / 3eesh. / rice.
+
+I drink tea. = To drink
+أشرَب / ashrab / I drink | شاي. / chaay. / tea.
+
+Do you drink coffee? = To drink
+تِشرَب / tishrab / Do you drink | قَهوة؟ / gahwa? / coffee?
+
+He drinks water. = To drink
+هو / hu / He | يِشرَب / yishrab / drinks | ماي. / maay. / water.
+
+I work in a bank. = To work
+أشتِغِل / ashtighil / I work | ببَنك. / b-bank. / in a bank.
+
+Where do you work? = To work
+وين / ween / Where | تِشتِغِل؟ / tishtighil? / do you work?
+
+She works at the hospital. = To work
+هي / hi / She | تِشتِغِل / tishtighil / works | بالمُستَشفى. / bil-mustashfa. / at the hospital.
+
+I live in Dubai. = To live
+أسكِن / askin / I live | بدُبَي. / b-dubay. / in Dubai.
+
+Where do you live? = To live
+وين / ween / Where | تِسكِن؟ / tiskin? / do you live?
+
+Do you live here? = To live
+تِسكِنين / tiskineen / Do you live | هِني؟ / hini? / here?
+
+He lives in Kuwait. = To live
+هو / hu / He | يِسكِن / yiskin / lives | بالكُوَيت. / bil-kuwayt. / in Kuwait.
+
+I like Dubai. = To like
+أحِب / a7ibb / I like | دُبَي. / dubay. / Dubai.
+
+Do you like fish? = To like
+تْحِب / t7ibb / Do you like | السِّمَك؟ / is-simach? / fish?
+
+What do you like? = To like
+شو / shu / What | تْحِبين؟ / t7ibbeen? / do you like?
+
+She likes reading. = To like; To read
+هي / hi / She | تْحِب / t7ibb / likes | تِقرا. / tigra. / to read.
+
+I want water. = To want
+أبي / abi / I want | ماي. / maay. / water.
+
+What do you want? = To want
+شو / shu / What | تَبي؟ / tabi? / do you want?
+
+Do you want tea? = To want
+تَبين / tabeen / Do you want | شاي؟ / chaay? / tea?
+
+He wants a new car. = To want
+هو / hu / He | يَبي / yabi / wants | سَيّارة / sayyaara / a car | جْديدة. / ydeeda. / new.
+
+I see the house. = To see
+أشوف / ashoof / I see | البيت. / il-beet. / the house.
+
+Do you see the car? = To see
+تْشوف / tshoof / Do you see | السَّيّارة؟ / is-sayyaara? / the car?
+
+He sees his friends every day. = To see
+يْشوف / yshoof / He sees | رَبعَه / rab3a / his friends | كِل / kil / every | يوم. / yoom. / day.
+
+I speak Arabic. = To speak
+أتكَلَّم / atkallam / I speak | عَرَبي. / 3arabi. / Arabic.
+
+Do you speak English? = To speak
+تِتكَلَّم / titkallam / Do you speak | إنجليزي؟ / ingleezi? / English?
+
+She speaks fast. = To speak
+هي / hi / She | تِتكَلَّم / titkallam / speaks | بسُرعة. / b-sur3a. / fast.
+
+I know him. = To know
+أعرفَه. / a3rifa. / I know him.
+
+Do you know the way? = To know
+تِعرِف / ti3rif / Do you know | الطَّريق؟ / it-tareeg? / the way?
+
+He knows Dubai well. = To know
+يِعرِف / yi3rif / He knows | دُبَي / dubay / Dubai | زين. / zeen. / well.
+
+I write a letter. = To write
+أكتِب / aktib / I write | رِسالة. / risaala. / a letter.
+
+What are you writing? = To write
+شو / shu / What | تِكتِب؟ / tiktib? / are you writing?
+
+She writes in the notebook. = To write
+هي / hi / She | تِكتِب / tiktib / writes | بالدَّفتَر. / bid-daftar. / in the notebook.
+
+I read the newspaper. = To read
+أقرا / agra / I read | الجَريدة. / il-yareeda. / the newspaper.
+
+What are you reading? = To read
+شو / shu / What | تِقرا؟ / tigra? / are you reading?
+
+He reads every night. = To read
+يِقرا / yigra / He reads | كِل / kil / every | ليلة. / leela. / night.
+
+I sleep early. = To sleep
+أنام / anaam / I sleep | بَدري. / badri. / early.
+
+When do you sleep? = To sleep
+مِتى / mita / When | تْنام؟ / tnaam? / do you sleep?
+
+The baby sleeps a lot. = To sleep
+الجاهِل / il-yaahil / The baby | يْنام / ynaam / sleeps | وايد. / waayid. / a lot.
+
+I cook rice and fish. = To cook
+أطبَخ / atbakh / I cook | عيش / 3eesh / rice | وسِمَك. / w-simach. / and fish.
+
+What are you cooking today? = To cook
+شو / shu / What | تِطبَخين / titbakheen / are you cooking | اليوم؟ / il-yoom? / today?
+
+My mom cooks every day. = To cook
+أُمّي / ummi / My mom | تِطبَخ / titbakh / cooks | كِل / kil / every | يوم. / yoom. / day.
+
+I study at the university. = To study
+أدرِس / adris / I study | بالجامعة. / bil-yaam3a. / at the university.
+
+What do you study? = To study
+شو / shu / What | تِدرِس؟ / tidris? / do you study?
+
+She studies medicine. = To study
+هي / hi / She | تِدرِس / tidris / studies | طِب. / tibb. / medicine.
+
+I'm eating now. = To eat
+قاعِد / gaa3id / I'm in the middle of | آكِل / aakil / eating | الحين. / il-7een. / now.
+
+He is going to the mall now. = To go
+هو / hu / He | رايِح / raayi7 / is going | المول / il-mool / to the mall | الحين. / il-7een. / now.
+
+I like tea, and you? = To like
+أحِب / a7ibb / I like | الشّاي، / ish-shaay, / tea, | وإنتَ؟ / w-inta? / and you?
+
+He doesn't want to go. = To want; To go
+ما / ma / not | يَبي / yabi / he wants | يْروح. / yrooh. / to go.
+
+She doesn't eat meat. = To eat
+ما / ma / not | تاكِل / taakil / she eats | لَحَم. / la7am. / meat.
+
+I don't know. = To know
+ما / ma / not | أعرِف. / a3rif. / I know.
+
+You speak Gulf Arabic well! = To speak
+تِتكَلَّم / titkallam / You speak | خَليجي / khaleeji / Gulf | زين! / zeen! / well!
+
+He works and studies. = To work; To study
+يِشتِغِل / yishtighil / He works | ويِدرِس. / w-yidris. / and studies.
+
+I want to sleep. = To want; To sleep
+أبي / abi / I want | أنام. / anaam. / to sleep.
+
+Do you see Salem? = To see
+تْشوف / tshoof / Do you see | سالِم؟ / saalim? / Salem?
+
+I write and read every day. = To write; To read
+أكتِب / aktib / I write | وأقرا / w-agra / and read | كِل / kil / every | يوم. / yoom. / day.
+
+He drinks tea and eats bread. = To drink; To eat
+يِشرَب / yishrab / He drinks | شاي / chaay / tea | وياكِل / w-yaakil / and eats | خُبُز. / khubuz. / bread.
+
+She cooks and I eat! = To cook; To eat
+هي / hi / She | تِطبَخ / titbakh / cooks | وأنا / w-ana / and I | آكِل! / aakil! / eat!
+
+Where does she live? = To live
+وين / ween / Where | تِسكِن؟ / tiskin? / does she live?
+
+He lives and works in Abu Dhabi. = To live; To work
+يِسكِن / yiskin / He lives | ويِشتِغِل / w-yishtighil / and works | بأبوظَبي. / b-abudhabi. / in Abu Dhabi.
+
+Do you know where he lives? = To know; To live
+تِعرِف / ti3rif / Do you know | وين / ween / where | يِسكِن؟ / yiskin? / he lives?
+
+She sleeps at ten. = To sleep
+هي / hi / She | تْنام / tnaam / sleeps | السّاعة / is-saa3a / at | عَشر. / 3ashar. / ten.
+
+I study and write. = To study; To write
+أدرِس / adris / I study | وأكتِب. / w-aktib. / and write.
+
+Do you drink milk? = To drink
+تِشرَبين / tishrabeen / Do you drink | حَليب؟ / 7aleeb? / milk?
+
+@passage Salem's Day
+Salem lives in Dubai.
+سالِم / saalim / Salem | يِسكِن / yiskin / lives | بدُبَي. / b-dubay. / in Dubai.
+
+He works in a bank and studies at night.
+يِشتِغِل / yishtighil / He works | ببَنك / b-bank / in a bank | ويِدرِس / w-yidris / and studies | بالليل. / bil-leel. / at night.
+
+He likes coffee and reads the newspaper.
+يْحِب / y7ibb / He likes | القَهوة / il-gahwa / coffee | ويِقرا / w-yigra / and reads | الجَريدة. / il-yareeda. / the newspaper.
+
+@passage Mariam
+Mariam speaks Arabic and English.
+مَريَم / maryam / Mariam | تِتكَلَّم / titkallam / speaks | عَرَبي / 3arabi / Arabic | وإنجليزي. / w-ingleezi. / and English.
+
+She cooks machboos and fish.
+تِطبَخ / titbakh / She cooks | مَكبوس / machboos / machboos | وسِمَك. / w-simach. / and fish.
+
+She sleeps early and goes to work early.
+تْنام / tnaam / She sleeps | بَدري / badri / early | وتْروح / w-trooh / and goes | الدَّوام / id-dawaam / to work | بَدري. / badri. / early.
+
+@scenario
+situation: The student is getting to know a new Emirati colleague over coffee on the first day at an office in Dubai.
+studentRole: A new employee learning Gulf Arabic.
+otherRole: The Emirati colleague, curious about the newcomer's routine.
+goalEnglish: Say where you live and work, what you like to eat and drink, and ask the same questions back.
+targetWords: To live; To work; To like; To want; To eat; To drink; To speak; To study

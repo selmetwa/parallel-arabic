@@ -1,0 +1,1712 @@
+{
+	"vocab": [
+		{
+			"arabic": "الساعة",
+			"arabicTashkeel": "السّاعة",
+			"english": "Clock / hour",
+			"transliteration": "is-saa3a",
+			"wordAlignments": [
+				{
+					"arabic": "الساعة",
+					"english": "The hour",
+					"transliteration": "is-saa3a"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "كم الساعة؟",
+			"arabicTashkeel": "كَم السّاعة؟",
+			"english": "What time is it?",
+			"transliteration": "cham is-saa3a?",
+			"wordAlignments": [
+				{
+					"arabic": "كم",
+					"english": "How much is",
+					"transliteration": "cham"
+				},
+				{
+					"arabic": "الساعة؟",
+					"english": "the hour?",
+					"transliteration": "is-saa3a?"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "نص",
+			"arabicTashkeel": "نُص",
+			"english": "Half",
+			"transliteration": "nuss",
+			"wordAlignments": [
+				{
+					"arabic": "نص",
+					"english": "Half",
+					"transliteration": "nuss"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "ربع",
+			"arabicTashkeel": "رُبع",
+			"english": "Quarter",
+			"transliteration": "rub3",
+			"wordAlignments": [
+				{
+					"arabic": "ربع",
+					"english": "Quarter",
+					"transliteration": "rub3"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "إلا ربع",
+			"arabicTashkeel": "إلّا رُبع",
+			"english": "Quarter to",
+			"transliteration": "illa rub3",
+			"wordAlignments": [
+				{
+					"arabic": "إلا",
+					"english": "Except",
+					"transliteration": "illa"
+				},
+				{
+					"arabic": "ربع",
+					"english": "a quarter",
+					"transliteration": "rub3"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "دقيقة",
+			"arabicTashkeel": "دَقيقة",
+			"english": "Minute",
+			"transliteration": "dageega",
+			"wordAlignments": [
+				{
+					"arabic": "دقيقة",
+					"english": "Minute",
+					"transliteration": "dageega"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "الصبح",
+			"arabicTashkeel": "الصُّبح",
+			"english": "Morning",
+			"transliteration": "is-sub7",
+			"wordAlignments": [
+				{
+					"arabic": "الصبح",
+					"english": "Morning",
+					"transliteration": "is-sub7"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "الظهر",
+			"arabicTashkeel": "الظُّهر",
+			"english": "Noon",
+			"transliteration": "idh-dhuhr",
+			"wordAlignments": [
+				{
+					"arabic": "الظهر",
+					"english": "Noon",
+					"transliteration": "idh-dhuhr"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "العصر",
+			"arabicTashkeel": "العَصر",
+			"english": "Afternoon",
+			"transliteration": "il-3asr",
+			"wordAlignments": [
+				{
+					"arabic": "العصر",
+					"english": "Afternoon",
+					"transliteration": "il-3asr"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "المسا",
+			"arabicTashkeel": "المَسا",
+			"english": "Evening",
+			"transliteration": "il-masa",
+			"wordAlignments": [
+				{
+					"arabic": "المسا",
+					"english": "Evening",
+					"transliteration": "il-masa"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "الليل",
+			"arabicTashkeel": "الليل",
+			"english": "Night",
+			"transliteration": "il-leel",
+			"wordAlignments": [
+				{
+					"arabic": "الليل",
+					"english": "Night",
+					"transliteration": "il-leel"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "بدري",
+			"arabicTashkeel": "بَدري",
+			"english": "Early",
+			"transliteration": "badri",
+			"wordAlignments": [
+				{
+					"arabic": "بدري",
+					"english": "Early",
+					"transliteration": "badri"
+				}
+			],
+			"partOfSpeech": "adverb"
+		},
+		{
+			"arabic": "متأخر",
+			"arabicTashkeel": "مِتأخِّر",
+			"english": "Late",
+			"transliteration": "mit2akhkhir",
+			"wordAlignments": [
+				{
+					"arabic": "متأخر",
+					"english": "Late",
+					"transliteration": "mit2akhkhir"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "الحين",
+			"arabicTashkeel": "الحين",
+			"english": "Now",
+			"transliteration": "il-7een",
+			"wordAlignments": [
+				{
+					"arabic": "الحين",
+					"english": "Now",
+					"transliteration": "il-7een"
+				}
+			],
+			"partOfSpeech": "adverb"
+		},
+		{
+			"arabic": "وقت",
+			"arabicTashkeel": "وَقت",
+			"english": "Time",
+			"transliteration": "wagt",
+			"wordAlignments": [
+				{
+					"arabic": "وقت",
+					"english": "Time",
+					"transliteration": "wagt"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "كم الساعة؟",
+			"arabicTashkeel": "كَم السّاعة؟",
+			"english": "What time is it?",
+			"transliteration": "cham is-saa3a?",
+			"wordAlignments": [
+				{
+					"arabic": "كم",
+					"english": "How much is",
+					"transliteration": "cham"
+				},
+				{
+					"arabic": "الساعة؟",
+					"english": "the hour?",
+					"transliteration": "is-saa3a?"
+				}
+			],
+			"targetWords": [
+				"What time is it?"
+			]
+		},
+		{
+			"arabic": "الساعة ثمان.",
+			"arabicTashkeel": "السّاعة ثَمان.",
+			"english": "It's eight o'clock.",
+			"transliteration": "is-saa3a thamaan.",
+			"wordAlignments": [
+				{
+					"arabic": "الساعة",
+					"english": "The hour is",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "ثمان.",
+					"english": "eight.",
+					"transliteration": "thamaan."
+				}
+			],
+			"targetWords": [
+				"Clock / hour"
+			]
+		},
+		{
+			"arabic": "الساعة ثلاث ونص.",
+			"arabicTashkeel": "السّاعة ثَلاث ونُص.",
+			"english": "It's half past three.",
+			"transliteration": "is-saa3a thalaath w-nuss.",
+			"wordAlignments": [
+				{
+					"arabic": "الساعة",
+					"english": "The hour is",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "ثلاث",
+					"english": "three",
+					"transliteration": "thalaath"
+				},
+				{
+					"arabic": "ونص.",
+					"english": "and a half.",
+					"transliteration": "w-nuss."
+				}
+			],
+			"targetWords": [
+				"Clock / hour",
+				"Half"
+			]
+		},
+		{
+			"arabic": "الساعة أربع وربع.",
+			"arabicTashkeel": "السّاعة أربَع ورُبع.",
+			"english": "It's quarter past four.",
+			"transliteration": "is-saa3a arba3 w-rub3.",
+			"wordAlignments": [
+				{
+					"arabic": "الساعة",
+					"english": "The hour is",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "أربع",
+					"english": "four",
+					"transliteration": "arba3"
+				},
+				{
+					"arabic": "وربع.",
+					"english": "and a quarter.",
+					"transliteration": "w-rub3."
+				}
+			],
+			"targetWords": [
+				"Clock / hour",
+				"Quarter"
+			]
+		},
+		{
+			"arabic": "الساعة خمس إلا ربع.",
+			"arabicTashkeel": "السّاعة خَمس إلّا رُبع.",
+			"english": "It's quarter to five.",
+			"transliteration": "is-saa3a khams illa rub3.",
+			"wordAlignments": [
+				{
+					"arabic": "الساعة",
+					"english": "The hour is",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "خمس",
+					"english": "five",
+					"transliteration": "khams"
+				},
+				{
+					"arabic": "إلا",
+					"english": "except",
+					"transliteration": "illa"
+				},
+				{
+					"arabic": "ربع.",
+					"english": "a quarter.",
+					"transliteration": "rub3."
+				}
+			],
+			"targetWords": [
+				"Clock / hour",
+				"Quarter to"
+			]
+		},
+		{
+			"arabic": "عشر دقايق.",
+			"arabicTashkeel": "عَشر دَقايِق.",
+			"english": "Ten minutes.",
+			"transliteration": "3ashar dagaayig.",
+			"wordAlignments": [
+				{
+					"arabic": "عشر",
+					"english": "Ten",
+					"transliteration": "3ashar"
+				},
+				{
+					"arabic": "دقايق.",
+					"english": "minutes.",
+					"transliteration": "dagaayig."
+				}
+			],
+			"targetWords": [
+				"Minute"
+			]
+		},
+		{
+			"arabic": "الصبح أروح الدوام.",
+			"arabicTashkeel": "الصُّبح أروح الدَّوام.",
+			"english": "In the morning I go to work.",
+			"transliteration": "is-sub7 arooh id-dawaam.",
+			"wordAlignments": [
+				{
+					"arabic": "الصبح",
+					"english": "In the morning",
+					"transliteration": "is-sub7"
+				},
+				{
+					"arabic": "أروح",
+					"english": "I go",
+					"transliteration": "arooh"
+				},
+				{
+					"arabic": "الدوام.",
+					"english": "to work.",
+					"transliteration": "id-dawaam."
+				}
+			],
+			"targetWords": [
+				"Morning"
+			]
+		},
+		{
+			"arabic": "الظهر ناكل غدا.",
+			"arabicTashkeel": "الظُّهر ناكِل غَدا.",
+			"english": "At noon we eat lunch.",
+			"transliteration": "idh-dhuhr naakil ghada.",
+			"wordAlignments": [
+				{
+					"arabic": "الظهر",
+					"english": "At noon",
+					"transliteration": "idh-dhuhr"
+				},
+				{
+					"arabic": "ناكل",
+					"english": "we eat",
+					"transliteration": "naakil"
+				},
+				{
+					"arabic": "غدا.",
+					"english": "lunch.",
+					"transliteration": "ghada."
+				}
+			],
+			"targetWords": [
+				"Noon"
+			]
+		},
+		{
+			"arabic": "العصر أنام شوي.",
+			"arabicTashkeel": "العَصر أنام شْوَي.",
+			"english": "In the afternoon I sleep a little.",
+			"transliteration": "il-3asr anaam shway.",
+			"wordAlignments": [
+				{
+					"arabic": "العصر",
+					"english": "In the afternoon",
+					"transliteration": "il-3asr"
+				},
+				{
+					"arabic": "أنام",
+					"english": "I sleep",
+					"transliteration": "anaam"
+				},
+				{
+					"arabic": "شوي.",
+					"english": "a little.",
+					"transliteration": "shway."
+				}
+			],
+			"targetWords": [
+				"Afternoon"
+			]
+		},
+		{
+			"arabic": "المسا نطلع.",
+			"arabicTashkeel": "المَسا نِطلَع.",
+			"english": "In the evening we go out.",
+			"transliteration": "il-masa nitla3.",
+			"wordAlignments": [
+				{
+					"arabic": "المسا",
+					"english": "In the evening",
+					"transliteration": "il-masa"
+				},
+				{
+					"arabic": "نطلع.",
+					"english": "we go out.",
+					"transliteration": "nitla3."
+				}
+			],
+			"targetWords": [
+				"Evening"
+			]
+		},
+		{
+			"arabic": "بالليل أقرا.",
+			"arabicTashkeel": "بالليل أقرا.",
+			"english": "At night I read.",
+			"transliteration": "bil-leel agra.",
+			"wordAlignments": [
+				{
+					"arabic": "بالليل",
+					"english": "At night",
+					"transliteration": "bil-leel"
+				},
+				{
+					"arabic": "أقرا.",
+					"english": "I read.",
+					"transliteration": "agra."
+				}
+			],
+			"targetWords": [
+				"Night"
+			]
+		},
+		{
+			"arabic": "أقوم بدري.",
+			"arabicTashkeel": "أقوم بَدري.",
+			"english": "I wake up early.",
+			"transliteration": "agoom badri.",
+			"wordAlignments": [
+				{
+					"arabic": "أقوم",
+					"english": "I wake up",
+					"transliteration": "agoom"
+				},
+				{
+					"arabic": "بدري.",
+					"english": "early.",
+					"transliteration": "badri."
+				}
+			],
+			"targetWords": [
+				"Early"
+			]
+		},
+		{
+			"arabic": "أنا متأخر.",
+			"arabicTashkeel": "أنا مِتأخِّر.",
+			"english": "I'm late.",
+			"transliteration": "ana mit2akhkhir.",
+			"wordAlignments": [
+				{
+					"arabic": "أنا",
+					"english": "I am",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "متأخر.",
+					"english": "late.",
+					"transliteration": "mit2akhkhir."
+				}
+			],
+			"targetWords": [
+				"Late"
+			]
+		},
+		{
+			"arabic": "شو تسوي الحين؟",
+			"arabicTashkeel": "شو تسَوّي الحين؟",
+			"english": "What are you doing now?",
+			"transliteration": "shu tsawwi il-7een?",
+			"wordAlignments": [
+				{
+					"arabic": "شو",
+					"english": "What",
+					"transliteration": "shu"
+				},
+				{
+					"arabic": "تسوي",
+					"english": "are you doing",
+					"transliteration": "tsawwi"
+				},
+				{
+					"arabic": "الحين؟",
+					"english": "now?",
+					"transliteration": "il-7een?"
+				}
+			],
+			"targetWords": [
+				"Now"
+			]
+		},
+		{
+			"arabic": "ما عندي وقت.",
+			"arabicTashkeel": "ما عِندي وَقت.",
+			"english": "I don't have time.",
+			"transliteration": "ma 3indi wagt.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "وقت.",
+					"english": "time.",
+					"transliteration": "wagt."
+				}
+			],
+			"targetWords": [
+				"Time"
+			]
+		},
+		{
+			"arabic": "كم الساعة الحين؟",
+			"arabicTashkeel": "كَم السّاعة الحين؟",
+			"english": "What time is it now?",
+			"transliteration": "cham is-saa3a il-7een?",
+			"wordAlignments": [
+				{
+					"arabic": "كم",
+					"english": "How much is",
+					"transliteration": "cham"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "the hour",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "الحين؟",
+					"english": "now?",
+					"transliteration": "il-7een?"
+				}
+			],
+			"targetWords": [
+				"What time is it?",
+				"Now"
+			]
+		},
+		{
+			"arabic": "الساعة ثنعش.",
+			"arabicTashkeel": "السّاعة ثْنَعَش.",
+			"english": "It's twelve o'clock.",
+			"transliteration": "is-saa3a thna3ash.",
+			"wordAlignments": [
+				{
+					"arabic": "الساعة",
+					"english": "The hour is",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "ثنعش.",
+					"english": "twelve.",
+					"transliteration": "thna3ash."
+				}
+			],
+			"targetWords": [
+				"Clock / hour"
+			]
+		},
+		{
+			"arabic": "نص ساعة.",
+			"arabicTashkeel": "نُص ساعة.",
+			"english": "Half an hour.",
+			"transliteration": "nuss saa3a.",
+			"wordAlignments": [
+				{
+					"arabic": "نص",
+					"english": "Half",
+					"transliteration": "nuss"
+				},
+				{
+					"arabic": "ساعة.",
+					"english": "an hour.",
+					"transliteration": "saa3a."
+				}
+			],
+			"targetWords": [
+				"Half",
+				"Clock / hour"
+			]
+		},
+		{
+			"arabic": "ربع ساعة.",
+			"arabicTashkeel": "رُبع ساعة.",
+			"english": "A quarter of an hour.",
+			"transliteration": "rub3 saa3a.",
+			"wordAlignments": [
+				{
+					"arabic": "ربع",
+					"english": "A quarter of",
+					"transliteration": "rub3"
+				},
+				{
+					"arabic": "ساعة.",
+					"english": "an hour.",
+					"transliteration": "saa3a."
+				}
+			],
+			"targetWords": [
+				"Quarter"
+			]
+		},
+		{
+			"arabic": "سبع إلا ربع.",
+			"arabicTashkeel": "سَبع إلّا رُبع.",
+			"english": "It's quarter to seven.",
+			"transliteration": "saba3 illa rub3.",
+			"wordAlignments": [
+				{
+					"arabic": "سبع",
+					"english": "Seven",
+					"transliteration": "saba3"
+				},
+				{
+					"arabic": "إلا",
+					"english": "except",
+					"transliteration": "illa"
+				},
+				{
+					"arabic": "ربع.",
+					"english": "a quarter.",
+					"transliteration": "rub3."
+				}
+			],
+			"targetWords": [
+				"Quarter to"
+			]
+		},
+		{
+			"arabic": "خمس دقايق لو سمحت.",
+			"arabicTashkeel": "خَمس دَقايِق لو سَمَحت.",
+			"english": "Five minutes, please.",
+			"transliteration": "khams dagaayig law sama7t.",
+			"wordAlignments": [
+				{
+					"arabic": "خمس",
+					"english": "Five",
+					"transliteration": "khams"
+				},
+				{
+					"arabic": "دقايق",
+					"english": "minutes",
+					"transliteration": "dagaayig"
+				},
+				{
+					"arabic": "لو",
+					"english": "if",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "سمحت.",
+					"english": "you please.",
+					"transliteration": "sama7t."
+				}
+			],
+			"targetWords": [
+				"Minute"
+			]
+		},
+		{
+			"arabic": "صباح الخير!",
+			"arabicTashkeel": "صَباح الخير!",
+			"english": "Good morning!",
+			"transliteration": "sabaa7 il-khair!",
+			"wordAlignments": [
+				{
+					"arabic": "صباح",
+					"english": "Morning of",
+					"transliteration": "sabaa7"
+				},
+				{
+					"arabic": "الخير!",
+					"english": "goodness!",
+					"transliteration": "il-khair!"
+				}
+			],
+			"targetWords": [
+				"Morning"
+			]
+		},
+		{
+			"arabic": "الصلاة الظهر.",
+			"arabicTashkeel": "الصَّلاة الظُّهر.",
+			"english": "The prayer is at noon.",
+			"transliteration": "is-salaa idh-dhuhr.",
+			"wordAlignments": [
+				{
+					"arabic": "الصلاة",
+					"english": "The prayer is",
+					"transliteration": "is-salaa"
+				},
+				{
+					"arabic": "الظهر.",
+					"english": "at noon.",
+					"transliteration": "idh-dhuhr."
+				}
+			],
+			"targetWords": [
+				"Noon"
+			]
+		},
+		{
+			"arabic": "أروح الجيم العصر.",
+			"arabicTashkeel": "أروح الجيم العَصر.",
+			"english": "I go to the gym in the afternoon.",
+			"transliteration": "arooh il-jeem il-3asr.",
+			"wordAlignments": [
+				{
+					"arabic": "أروح",
+					"english": "I go",
+					"transliteration": "arooh"
+				},
+				{
+					"arabic": "الجيم",
+					"english": "to the gym",
+					"transliteration": "il-jeem"
+				},
+				{
+					"arabic": "العصر.",
+					"english": "in the afternoon.",
+					"transliteration": "il-3asr."
+				}
+			],
+			"targetWords": [
+				"Afternoon"
+			]
+		},
+		{
+			"arabic": "مسا الخير!",
+			"arabicTashkeel": "مَسا الخير!",
+			"english": "Good evening!",
+			"transliteration": "masa il-khair!",
+			"wordAlignments": [
+				{
+					"arabic": "مسا",
+					"english": "Evening of",
+					"transliteration": "masa"
+				},
+				{
+					"arabic": "الخير!",
+					"english": "goodness!",
+					"transliteration": "il-khair!"
+				}
+			],
+			"targetWords": [
+				"Evening"
+			]
+		},
+		{
+			"arabic": "الجو حلو بالليل.",
+			"arabicTashkeel": "الجَو حِلو بالليل.",
+			"english": "The weather is nice at night.",
+			"transliteration": "il-yaw 7ilu bil-leel.",
+			"wordAlignments": [
+				{
+					"arabic": "الجو",
+					"english": "The weather is",
+					"transliteration": "il-yaw"
+				},
+				{
+					"arabic": "حلو",
+					"english": "nice",
+					"transliteration": "7ilu"
+				},
+				{
+					"arabic": "بالليل.",
+					"english": "at night.",
+					"transliteration": "bil-leel."
+				}
+			],
+			"targetWords": [
+				"Night"
+			]
+		},
+		{
+			"arabic": "بعدها بدري.",
+			"arabicTashkeel": "بَعَدها بَدري.",
+			"english": "It's still early.",
+			"transliteration": "ba3adha badri.",
+			"wordAlignments": [
+				{
+					"arabic": "بعدها",
+					"english": "It's still",
+					"transliteration": "ba3adha"
+				},
+				{
+					"arabic": "بدري.",
+					"english": "early.",
+					"transliteration": "badri."
+				}
+			],
+			"targetWords": [
+				"Early"
+			]
+		},
+		{
+			"arabic": "آسف، تأخرت.",
+			"arabicTashkeel": "آسِف، تأخَّرت.",
+			"english": "Sorry, I'm late.",
+			"transliteration": "aasif, t2akhkhart.",
+			"wordAlignments": [
+				{
+					"arabic": "آسف،",
+					"english": "Sorry,",
+					"transliteration": "aasif,"
+				},
+				{
+					"arabic": "تأخرت.",
+					"english": "I'm late.",
+					"transliteration": "t2akhkhart."
+				}
+			],
+			"targetWords": [
+				"Late"
+			]
+		},
+		{
+			"arabic": "جاي الحين.",
+			"arabicTashkeel": "جاي الحين.",
+			"english": "I'm coming now.",
+			"transliteration": "yaay il-7een.",
+			"wordAlignments": [
+				{
+					"arabic": "جاي",
+					"english": "I'm coming",
+					"transliteration": "yaay"
+				},
+				{
+					"arabic": "الحين.",
+					"english": "now.",
+					"transliteration": "il-7een."
+				}
+			],
+			"targetWords": [
+				"Now"
+			]
+		},
+		{
+			"arabic": "عندك وقت باكر؟",
+			"arabicTashkeel": "عِندَك وَقت باكِر؟",
+			"english": "Do you have time tomorrow?",
+			"transliteration": "3indak wagt baachir?",
+			"wordAlignments": [
+				{
+					"arabic": "عندك",
+					"english": "Do you have",
+					"transliteration": "3indak"
+				},
+				{
+					"arabic": "وقت",
+					"english": "time",
+					"transliteration": "wagt"
+				},
+				{
+					"arabic": "باكر؟",
+					"english": "tomorrow?",
+					"transliteration": "baachir?"
+				}
+			],
+			"targetWords": [
+				"Time"
+			]
+		},
+		{
+			"arabic": "الدوام يبدا الساعة سبع.",
+			"arabicTashkeel": "الدَّوام يِبدا السّاعة سَبع.",
+			"english": "Work starts at seven.",
+			"transliteration": "id-dawaam yibda is-saa3a saba3.",
+			"wordAlignments": [
+				{
+					"arabic": "الدوام",
+					"english": "Work",
+					"transliteration": "id-dawaam"
+				},
+				{
+					"arabic": "يبدا",
+					"english": "starts",
+					"transliteration": "yibda"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "at the hour",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "سبع.",
+					"english": "seven.",
+					"transliteration": "saba3."
+				}
+			],
+			"targetWords": [
+				"Clock / hour"
+			]
+		},
+		{
+			"arabic": "الفلم الساعة تسع ونص.",
+			"arabicTashkeel": "الفِلم السّاعة تِسع ونُص.",
+			"english": "The film is at half past nine.",
+			"transliteration": "il-filim is-saa3a tisa3 w-nuss.",
+			"wordAlignments": [
+				{
+					"arabic": "الفلم",
+					"english": "The film is",
+					"transliteration": "il-filim"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "at",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "تسع",
+					"english": "nine",
+					"transliteration": "tisa3"
+				},
+				{
+					"arabic": "ونص.",
+					"english": "and a half.",
+					"transliteration": "w-nuss."
+				}
+			],
+			"targetWords": [
+				"Half"
+			]
+		},
+		{
+			"arabic": "الصف الساعة عشر وربع.",
+			"arabicTashkeel": "الصَّف السّاعة عَشر ورُبع.",
+			"english": "The class is at quarter past ten.",
+			"transliteration": "is-saff is-saa3a 3ashar w-rub3.",
+			"wordAlignments": [
+				{
+					"arabic": "الصف",
+					"english": "The class is",
+					"transliteration": "is-saff"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "at",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "عشر",
+					"english": "ten",
+					"transliteration": "3ashar"
+				},
+				{
+					"arabic": "وربع.",
+					"english": "and a quarter.",
+					"transliteration": "w-rub3."
+				}
+			],
+			"targetWords": [
+				"Quarter"
+			]
+		},
+		{
+			"arabic": "الموعد الساعة ثلاث إلا ربع.",
+			"arabicTashkeel": "المَوعِد السّاعة ثَلاث إلّا رُبع.",
+			"english": "The appointment is at quarter to three.",
+			"transliteration": "il-maw3id is-saa3a thalaath illa rub3.",
+			"wordAlignments": [
+				{
+					"arabic": "الموعد",
+					"english": "The appointment is",
+					"transliteration": "il-maw3id"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "at",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "ثلاث",
+					"english": "three",
+					"transliteration": "thalaath"
+				},
+				{
+					"arabic": "إلا",
+					"english": "except",
+					"transliteration": "illa"
+				},
+				{
+					"arabic": "ربع.",
+					"english": "a quarter.",
+					"transliteration": "rub3."
+				}
+			],
+			"targetWords": [
+				"Quarter to"
+			]
+		},
+		{
+			"arabic": "أنطر دقيقة.",
+			"arabicTashkeel": "أنطِر دَقيقة.",
+			"english": "Wait a minute.",
+			"transliteration": "antir dageega.",
+			"wordAlignments": [
+				{
+					"arabic": "أنطر",
+					"english": "Wait",
+					"transliteration": "antir"
+				},
+				{
+					"arabic": "دقيقة.",
+					"english": "a minute.",
+					"transliteration": "dageega."
+				}
+			],
+			"targetWords": [
+				"Minute"
+			]
+		},
+		{
+			"arabic": "أشرب قهوة الصبح.",
+			"arabicTashkeel": "أشرَب قَهوة الصُّبح.",
+			"english": "I drink coffee in the morning.",
+			"transliteration": "ashrab gahwa is-sub7.",
+			"wordAlignments": [
+				{
+					"arabic": "أشرب",
+					"english": "I drink",
+					"transliteration": "ashrab"
+				},
+				{
+					"arabic": "قهوة",
+					"english": "coffee",
+					"transliteration": "gahwa"
+				},
+				{
+					"arabic": "الصبح.",
+					"english": "in the morning.",
+					"transliteration": "is-sub7."
+				}
+			],
+			"targetWords": [
+				"Morning"
+			]
+		},
+		{
+			"arabic": "الظهر حر وايد.",
+			"arabicTashkeel": "الظُّهر حَر وايد.",
+			"english": "At noon it's very hot.",
+			"transliteration": "idh-dhuhr 7arr waayid.",
+			"wordAlignments": [
+				{
+					"arabic": "الظهر",
+					"english": "At noon",
+					"transliteration": "idh-dhuhr"
+				},
+				{
+					"arabic": "حر",
+					"english": "it's hot",
+					"transliteration": "7arr"
+				},
+				{
+					"arabic": "وايد.",
+					"english": "very.",
+					"transliteration": "waayid."
+				}
+			],
+			"targetWords": [
+				"Noon"
+			]
+		},
+		{
+			"arabic": "العيال يلعبون العصر.",
+			"arabicTashkeel": "العْيال يِلعَبون العَصر.",
+			"english": "The kids play in the afternoon.",
+			"transliteration": "il-3yaal yil3aboon il-3asr.",
+			"wordAlignments": [
+				{
+					"arabic": "العيال",
+					"english": "The kids",
+					"transliteration": "il-3yaal"
+				},
+				{
+					"arabic": "يلعبون",
+					"english": "play",
+					"transliteration": "yil3aboon"
+				},
+				{
+					"arabic": "العصر.",
+					"english": "in the afternoon.",
+					"transliteration": "il-3asr."
+				}
+			],
+			"targetWords": [
+				"Afternoon"
+			]
+		},
+		{
+			"arabic": "نتعشى بالمسا.",
+			"arabicTashkeel": "نِتعَشّى بالمَسا.",
+			"english": "We have dinner in the evening.",
+			"transliteration": "nit3ashsha bil-masa.",
+			"wordAlignments": [
+				{
+					"arabic": "نتعشى",
+					"english": "We have dinner",
+					"transliteration": "nit3ashsha"
+				},
+				{
+					"arabic": "بالمسا.",
+					"english": "in the evening.",
+					"transliteration": "bil-masa."
+				}
+			],
+			"targetWords": [
+				"Evening"
+			]
+		},
+		{
+			"arabic": "أنام متأخر بالليل.",
+			"arabicTashkeel": "أنام مِتأخِّر بالليل.",
+			"english": "I sleep late at night.",
+			"transliteration": "anaam mit2akhkhir bil-leel.",
+			"wordAlignments": [
+				{
+					"arabic": "أنام",
+					"english": "I sleep",
+					"transliteration": "anaam"
+				},
+				{
+					"arabic": "متأخر",
+					"english": "late",
+					"transliteration": "mit2akhkhir"
+				},
+				{
+					"arabic": "بالليل.",
+					"english": "at night.",
+					"transliteration": "bil-leel."
+				}
+			],
+			"targetWords": [
+				"Night",
+				"Late"
+			]
+		},
+		{
+			"arabic": "تعال بدري باكر.",
+			"arabicTashkeel": "تْعال بَدري باكِر.",
+			"english": "Come early tomorrow.",
+			"transliteration": "t3aal badri baachir.",
+			"wordAlignments": [
+				{
+					"arabic": "تعال",
+					"english": "Come",
+					"transliteration": "t3aal"
+				},
+				{
+					"arabic": "بدري",
+					"english": "early",
+					"transliteration": "badri"
+				},
+				{
+					"arabic": "باكر.",
+					"english": "tomorrow.",
+					"transliteration": "baachir."
+				}
+			],
+			"targetWords": [
+				"Early"
+			]
+		},
+		{
+			"arabic": "الباص متأخر.",
+			"arabicTashkeel": "الباص مِتأخِّر.",
+			"english": "The bus is late.",
+			"transliteration": "il-baas mit2akhkhir.",
+			"wordAlignments": [
+				{
+					"arabic": "الباص",
+					"english": "The bus is",
+					"transliteration": "il-baas"
+				},
+				{
+					"arabic": "متأخر.",
+					"english": "late.",
+					"transliteration": "mit2akhkhir."
+				}
+			],
+			"targetWords": [
+				"Late"
+			]
+		},
+		{
+			"arabic": "مو الحين، بعدين.",
+			"arabicTashkeel": "مو الحين، بَعدين.",
+			"english": "Not now, later.",
+			"transliteration": "moo il-7een, ba3dain.",
+			"wordAlignments": [
+				{
+					"arabic": "مو",
+					"english": "Not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "الحين،",
+					"english": "now,",
+					"transliteration": "il-7een,"
+				},
+				{
+					"arabic": "بعدين.",
+					"english": "later.",
+					"transliteration": "ba3dain."
+				}
+			],
+			"targetWords": [
+				"Now"
+			]
+		},
+		{
+			"arabic": "ما في وقت!",
+			"arabicTashkeel": "ما في وَقت!",
+			"english": "There's no time!",
+			"transliteration": "ma fee wagt!",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "في",
+					"english": "there is",
+					"transliteration": "fee"
+				},
+				{
+					"arabic": "وقت!",
+					"english": "time!",
+					"transliteration": "wagt!"
+				}
+			],
+			"targetWords": [
+				"Time"
+			]
+		},
+		{
+			"arabic": "الساعة وحدة.",
+			"arabicTashkeel": "السّاعة وَحدة.",
+			"english": "It's one o'clock.",
+			"transliteration": "is-saa3a wa7da.",
+			"wordAlignments": [
+				{
+					"arabic": "الساعة",
+					"english": "The hour is",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "وحدة.",
+					"english": "one.",
+					"transliteration": "wa7da."
+				}
+			],
+			"targetWords": [
+				"Clock / hour"
+			]
+		},
+		{
+			"arabic": "إحدعش ونص.",
+			"arabicTashkeel": "إحدَعَش ونُص.",
+			"english": "Half past eleven.",
+			"transliteration": "i7da3ash w-nuss.",
+			"wordAlignments": [
+				{
+					"arabic": "إحدعش",
+					"english": "Eleven",
+					"transliteration": "i7da3ash"
+				},
+				{
+					"arabic": "ونص.",
+					"english": "and a half.",
+					"transliteration": "w-nuss."
+				}
+			],
+			"targetWords": [
+				"Half"
+			]
+		},
+		{
+			"arabic": "ثنتين وربع.",
+			"arabicTashkeel": "ثِنتين ورُبع.",
+			"english": "Quarter past two.",
+			"transliteration": "thinteen w-rub3.",
+			"wordAlignments": [
+				{
+					"arabic": "ثنتين",
+					"english": "Two",
+					"transliteration": "thinteen"
+				},
+				{
+					"arabic": "وربع.",
+					"english": "and a quarter.",
+					"transliteration": "w-rub3."
+				}
+			],
+			"targetWords": [
+				"Quarter"
+			]
+		},
+		{
+			"arabic": "ثمان إلا ربع.",
+			"arabicTashkeel": "ثَمان إلّا رُبع.",
+			"english": "Quarter to eight.",
+			"transliteration": "thamaan illa rub3.",
+			"wordAlignments": [
+				{
+					"arabic": "ثمان",
+					"english": "Eight",
+					"transliteration": "thamaan"
+				},
+				{
+					"arabic": "إلا",
+					"english": "except",
+					"transliteration": "illa"
+				},
+				{
+					"arabic": "ربع.",
+					"english": "a quarter.",
+					"transliteration": "rub3."
+				}
+			],
+			"targetWords": [
+				"Quarter to"
+			]
+		},
+		{
+			"arabic": "عشرين دقيقة.",
+			"arabicTashkeel": "عِشرين دَقيقة.",
+			"english": "Twenty minutes.",
+			"transliteration": "3ishreen dageega.",
+			"wordAlignments": [
+				{
+					"arabic": "عشرين",
+					"english": "Twenty",
+					"transliteration": "3ishreen"
+				},
+				{
+					"arabic": "دقيقة.",
+					"english": "minutes.",
+					"transliteration": "dageega."
+				}
+			],
+			"targetWords": [
+				"Minute"
+			]
+		},
+		{
+			"arabic": "كل صبح أتمشى.",
+			"arabicTashkeel": "كِل صُبح أتمَشّى.",
+			"english": "Every morning I go for a walk.",
+			"transliteration": "kil sub7 atmashsha.",
+			"wordAlignments": [
+				{
+					"arabic": "كل",
+					"english": "Every",
+					"transliteration": "kil"
+				},
+				{
+					"arabic": "صبح",
+					"english": "morning",
+					"transliteration": "sub7"
+				},
+				{
+					"arabic": "أتمشى.",
+					"english": "I walk.",
+					"transliteration": "atmashsha."
+				}
+			],
+			"targetWords": [
+				"Morning"
+			]
+		},
+		{
+			"arabic": "أدرس بالليل.",
+			"arabicTashkeel": "أدرِس بالليل.",
+			"english": "I study at night.",
+			"transliteration": "adris bil-leel.",
+			"wordAlignments": [
+				{
+					"arabic": "أدرس",
+					"english": "I study",
+					"transliteration": "adris"
+				},
+				{
+					"arabic": "بالليل.",
+					"english": "at night.",
+					"transliteration": "bil-leel."
+				}
+			],
+			"targetWords": [
+				"Night"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "My Day",
+			"sentences": [
+				{
+					"arabic": "أقوم بدري، الساعة ست.",
+					"arabicTashkeel": "أقوم بَدري، السّاعة سِت.",
+					"english": "I wake up early, at six.",
+					"transliteration": "agoom badri, is-saa3a sitt.",
+					"wordAlignments": [
+						{
+							"arabic": "أقوم",
+							"english": "I wake up",
+							"transliteration": "agoom"
+						},
+						{
+							"arabic": "بدري،",
+							"english": "early,",
+							"transliteration": "badri,"
+						},
+						{
+							"arabic": "الساعة",
+							"english": "at",
+							"transliteration": "is-saa3a"
+						},
+						{
+							"arabic": "ست.",
+							"english": "six.",
+							"transliteration": "sitt."
+						}
+					]
+				},
+				{
+					"arabic": "الدوام يبدا الساعة سبع ونص.",
+					"arabicTashkeel": "الدَّوام يِبدا السّاعة سَبع ونُص.",
+					"english": "Work starts at half past seven.",
+					"transliteration": "id-dawaam yibda is-saa3a saba3 w-nuss.",
+					"wordAlignments": [
+						{
+							"arabic": "الدوام",
+							"english": "Work",
+							"transliteration": "id-dawaam"
+						},
+						{
+							"arabic": "يبدا",
+							"english": "starts",
+							"transliteration": "yibda"
+						},
+						{
+							"arabic": "الساعة",
+							"english": "at",
+							"transliteration": "is-saa3a"
+						},
+						{
+							"arabic": "سبع",
+							"english": "seven",
+							"transliteration": "saba3"
+						},
+						{
+							"arabic": "ونص.",
+							"english": "and a half.",
+							"transliteration": "w-nuss."
+						}
+					]
+				},
+				{
+					"arabic": "العصر أنام شوي.",
+					"arabicTashkeel": "العَصر أنام شْوَي.",
+					"english": "In the afternoon I sleep a little.",
+					"transliteration": "il-3asr anaam shway.",
+					"wordAlignments": [
+						{
+							"arabic": "العصر",
+							"english": "In the afternoon",
+							"transliteration": "il-3asr"
+						},
+						{
+							"arabic": "أنام",
+							"english": "I sleep",
+							"transliteration": "anaam"
+						},
+						{
+							"arabic": "شوي.",
+							"english": "a little.",
+							"transliteration": "shway."
+						}
+					]
+				},
+				{
+					"arabic": "بالليل أقرا وبعدين أنام.",
+					"arabicTashkeel": "بالليل أقرا وبَعدين أنام.",
+					"english": "At night I read and then I sleep.",
+					"transliteration": "bil-leel agra w-ba3dain anaam.",
+					"wordAlignments": [
+						{
+							"arabic": "بالليل",
+							"english": "At night",
+							"transliteration": "bil-leel"
+						},
+						{
+							"arabic": "أقرا",
+							"english": "I read",
+							"transliteration": "agra"
+						},
+						{
+							"arabic": "وبعدين",
+							"english": "and then",
+							"transliteration": "w-ba3dain"
+						},
+						{
+							"arabic": "أنام.",
+							"english": "I sleep.",
+							"transliteration": "anaam."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "On the Phone",
+			"sentences": [
+				{
+					"arabic": "كم الساعة الحين؟",
+					"arabicTashkeel": "كَم السّاعة الحين؟",
+					"english": "What time is it now?",
+					"transliteration": "cham is-saa3a il-7een?",
+					"wordAlignments": [
+						{
+							"arabic": "كم",
+							"english": "How much is",
+							"transliteration": "cham"
+						},
+						{
+							"arabic": "الساعة",
+							"english": "the hour",
+							"transliteration": "is-saa3a"
+						},
+						{
+							"arabic": "الحين؟",
+							"english": "now?",
+							"transliteration": "il-7een?"
+						}
+					]
+				},
+				{
+					"arabic": "تسع إلا ربع. إنت متأخر!",
+					"arabicTashkeel": "تِسع إلّا رُبع. إنتَ مِتأخِّر!",
+					"english": "It's quarter to nine. You're late!",
+					"transliteration": "tisa3 illa rub3. inta mit2akhkhir!",
+					"wordAlignments": [
+						{
+							"arabic": "تسع",
+							"english": "Nine",
+							"transliteration": "tisa3"
+						},
+						{
+							"arabic": "إلا",
+							"english": "except",
+							"transliteration": "illa"
+						},
+						{
+							"arabic": "ربع.",
+							"english": "a quarter.",
+							"transliteration": "rub3."
+						},
+						{
+							"arabic": "إنت",
+							"english": "You are",
+							"transliteration": "inta"
+						},
+						{
+							"arabic": "متأخر!",
+							"english": "late!",
+							"transliteration": "mit2akhkhir!"
+						}
+					]
+				},
+				{
+					"arabic": "آسف، جاي الحين، خمس دقايق.",
+					"arabicTashkeel": "آسِف، جاي الحين، خَمس دَقايِق.",
+					"english": "Sorry, I'm coming now, five minutes.",
+					"transliteration": "aasif, yaay il-7een, khams dagaayig.",
+					"wordAlignments": [
+						{
+							"arabic": "آسف،",
+							"english": "Sorry,",
+							"transliteration": "aasif,"
+						},
+						{
+							"arabic": "جاي",
+							"english": "I'm coming",
+							"transliteration": "yaay"
+						},
+						{
+							"arabic": "الحين،",
+							"english": "now,",
+							"transliteration": "il-7een,"
+						},
+						{
+							"arabic": "خمس",
+							"english": "five",
+							"transliteration": "khams"
+						},
+						{
+							"arabic": "دقايق.",
+							"english": "minutes.",
+							"transliteration": "dagaayig."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is arranging to meet an Emirati colleague for dinner after work in Dubai.",
+		"studentRole": "A colleague learning Gulf Arabic.",
+		"otherRole": "The Emirati colleague, who is always running a little late.",
+		"goalEnglish": "Ask what time it is, agree on a time to meet, and say whether you are early or late.",
+		"targetWords": [
+			"What time is it?",
+			"Clock / hour",
+			"Half",
+			"Quarter",
+			"Minute",
+			"Early",
+			"Late",
+			"Now"
+		]
+	}
+}
