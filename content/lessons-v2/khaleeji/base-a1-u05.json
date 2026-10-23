@@ -1,0 +1,1549 @@
+{
+	"vocab": [
+		{
+			"arabic": "واحد",
+			"arabicTashkeel": "واحِد",
+			"english": "One",
+			"transliteration": "waa7id",
+			"wordAlignments": [
+				{
+					"arabic": "واحد",
+					"english": "One",
+					"transliteration": "waa7id"
+				}
+			],
+			"partOfSpeech": "number"
+		},
+		{
+			"arabic": "ثنين",
+			"arabicTashkeel": "ثْنين",
+			"english": "Two",
+			"transliteration": "thneen",
+			"wordAlignments": [
+				{
+					"arabic": "ثنين",
+					"english": "Two",
+					"transliteration": "thneen"
+				}
+			],
+			"partOfSpeech": "number"
+		},
+		{
+			"arabic": "ثلاثة",
+			"arabicTashkeel": "ثَلاثة",
+			"english": "Three",
+			"transliteration": "thalaatha",
+			"wordAlignments": [
+				{
+					"arabic": "ثلاثة",
+					"english": "Three",
+					"transliteration": "thalaatha"
+				}
+			],
+			"partOfSpeech": "number"
+		},
+		{
+			"arabic": "أربعة",
+			"arabicTashkeel": "أربعة",
+			"english": "Four",
+			"transliteration": "arba3a",
+			"wordAlignments": [
+				{
+					"arabic": "أربعة",
+					"english": "Four",
+					"transliteration": "arba3a"
+				}
+			],
+			"partOfSpeech": "number"
+		},
+		{
+			"arabic": "خمسة",
+			"arabicTashkeel": "خَمسة",
+			"english": "Five",
+			"transliteration": "khamsa",
+			"wordAlignments": [
+				{
+					"arabic": "خمسة",
+					"english": "Five",
+					"transliteration": "khamsa"
+				}
+			],
+			"partOfSpeech": "number"
+		},
+		{
+			"arabic": "ستة",
+			"arabicTashkeel": "سِتّة",
+			"english": "Six",
+			"transliteration": "sitta",
+			"wordAlignments": [
+				{
+					"arabic": "ستة",
+					"english": "Six",
+					"transliteration": "sitta"
+				}
+			],
+			"partOfSpeech": "number"
+		},
+		{
+			"arabic": "سبعة",
+			"arabicTashkeel": "سَبعة",
+			"english": "Seven",
+			"transliteration": "sab3a",
+			"wordAlignments": [
+				{
+					"arabic": "سبعة",
+					"english": "Seven",
+					"transliteration": "sab3a"
+				}
+			],
+			"partOfSpeech": "number"
+		},
+		{
+			"arabic": "ثمانية",
+			"arabicTashkeel": "ثَمانية",
+			"english": "Eight",
+			"transliteration": "thamaanya",
+			"wordAlignments": [
+				{
+					"arabic": "ثمانية",
+					"english": "Eight",
+					"transliteration": "thamaanya"
+				}
+			],
+			"partOfSpeech": "number"
+		},
+		{
+			"arabic": "تسعة",
+			"arabicTashkeel": "تِسعة",
+			"english": "Nine",
+			"transliteration": "tis3a",
+			"wordAlignments": [
+				{
+					"arabic": "تسعة",
+					"english": "Nine",
+					"transliteration": "tis3a"
+				}
+			],
+			"partOfSpeech": "number"
+		},
+		{
+			"arabic": "عشرة",
+			"arabicTashkeel": "عَشرة",
+			"english": "Ten",
+			"transliteration": "3ashra",
+			"wordAlignments": [
+				{
+					"arabic": "عشرة",
+					"english": "Ten",
+					"transliteration": "3ashra"
+				}
+			],
+			"partOfSpeech": "number"
+		},
+		{
+			"arabic": "كم",
+			"arabicTashkeel": "كَم",
+			"english": "How many",
+			"transliteration": "cham",
+			"wordAlignments": [
+				{
+					"arabic": "كم",
+					"english": "How many",
+					"transliteration": "cham"
+				}
+			],
+			"partOfSpeech": "question"
+		},
+		{
+			"arabic": "بكم",
+			"arabicTashkeel": "بْكَم",
+			"english": "How much",
+			"transliteration": "b-cham",
+			"wordAlignments": [
+				{
+					"arabic": "بكم",
+					"english": "For how much",
+					"transliteration": "b-cham"
+				}
+			],
+			"partOfSpeech": "question"
+		},
+		{
+			"arabic": "درهم",
+			"arabicTashkeel": "دِرهَم",
+			"english": "Dirham",
+			"transliteration": "dirham",
+			"wordAlignments": [
+				{
+					"arabic": "درهم",
+					"english": "Dirham",
+					"transliteration": "dirham"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "ريال",
+			"arabicTashkeel": "ريال",
+			"english": "Riyal",
+			"transliteration": "riyaal",
+			"wordAlignments": [
+				{
+					"arabic": "ريال",
+					"english": "Riyal",
+					"transliteration": "riyaal"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "عمر",
+			"arabicTashkeel": "عُمُر",
+			"english": "Age",
+			"transliteration": "3umur",
+			"wordAlignments": [
+				{
+					"arabic": "عمر",
+					"english": "Age",
+					"transliteration": "3umur"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "واحد، ثنين، ثلاثة!",
+			"arabicTashkeel": "واحِد، ثْنين، ثَلاثة!",
+			"english": "One, two, three!",
+			"transliteration": "waa7id, thneen, thalaatha!",
+			"wordAlignments": [
+				{
+					"arabic": "واحد،",
+					"english": "One,",
+					"transliteration": "waa7id,"
+				},
+				{
+					"arabic": "ثنين،",
+					"english": "two,",
+					"transliteration": "thneen,"
+				},
+				{
+					"arabic": "ثلاثة!",
+					"english": "three!",
+					"transliteration": "thalaatha!"
+				}
+			],
+			"targetWords": [
+				"One",
+				"Two",
+				"Three"
+			]
+		},
+		{
+			"arabic": "أربعة، خمسة، ستة.",
+			"arabicTashkeel": "أربعة، خَمسة، سِتّة.",
+			"english": "Four, five, six.",
+			"transliteration": "arba3a, khamsa, sitta.",
+			"wordAlignments": [
+				{
+					"arabic": "أربعة،",
+					"english": "Four,",
+					"transliteration": "arba3a,"
+				},
+				{
+					"arabic": "خمسة،",
+					"english": "five,",
+					"transliteration": "khamsa,"
+				},
+				{
+					"arabic": "ستة.",
+					"english": "six.",
+					"transliteration": "sitta."
+				}
+			],
+			"targetWords": [
+				"Four",
+				"Five",
+				"Six"
+			]
+		},
+		{
+			"arabic": "سبعة، ثمانية، تسعة، عشرة.",
+			"arabicTashkeel": "سَبعة، ثَمانية، تِسعة، عَشرة.",
+			"english": "Seven, eight, nine, ten.",
+			"transliteration": "sab3a, thamaanya, tis3a, 3ashra.",
+			"wordAlignments": [
+				{
+					"arabic": "سبعة،",
+					"english": "Seven,",
+					"transliteration": "sab3a,"
+				},
+				{
+					"arabic": "ثمانية،",
+					"english": "eight,",
+					"transliteration": "thamaanya,"
+				},
+				{
+					"arabic": "تسعة،",
+					"english": "nine,",
+					"transliteration": "tis3a,"
+				},
+				{
+					"arabic": "عشرة.",
+					"english": "ten.",
+					"transliteration": "3ashra."
+				}
+			],
+			"targetWords": [
+				"Seven",
+				"Eight",
+				"Nine",
+				"Ten"
+			]
+		},
+		{
+			"arabic": "كم عمرك؟",
+			"arabicTashkeel": "كَم عُمرَك؟",
+			"english": "How old are you?",
+			"transliteration": "cham 3umrak?",
+			"wordAlignments": [
+				{
+					"arabic": "كم",
+					"english": "How many",
+					"transliteration": "cham"
+				},
+				{
+					"arabic": "عمرك؟",
+					"english": "is your age?",
+					"transliteration": "3umrak?"
+				}
+			],
+			"targetWords": [
+				"How many",
+				"Age"
+			]
+		},
+		{
+			"arabic": "عمري عشرة.",
+			"arabicTashkeel": "عُمري عَشرة.",
+			"english": "I am ten.",
+			"transliteration": "3umri 3ashra.",
+			"wordAlignments": [
+				{
+					"arabic": "عمري",
+					"english": "My age is",
+					"transliteration": "3umri"
+				},
+				{
+					"arabic": "عشرة.",
+					"english": "ten.",
+					"transliteration": "3ashra."
+				}
+			],
+			"targetWords": [
+				"Age",
+				"Ten"
+			]
+		},
+		{
+			"arabic": "عمره سبعة.",
+			"arabicTashkeel": "عُمرَه سَبعة.",
+			"english": "He is seven.",
+			"transliteration": "3umra sab3a.",
+			"wordAlignments": [
+				{
+					"arabic": "عمره",
+					"english": "His age is",
+					"transliteration": "3umra"
+				},
+				{
+					"arabic": "سبعة.",
+					"english": "seven.",
+					"transliteration": "sab3a."
+				}
+			],
+			"targetWords": [
+				"Age",
+				"Seven"
+			]
+		},
+		{
+			"arabic": "بكم هاذا؟",
+			"arabicTashkeel": "بْكَم هاذا؟",
+			"english": "How much is this?",
+			"transliteration": "b-cham haadha?",
+			"wordAlignments": [
+				{
+					"arabic": "بكم",
+					"english": "For how much is",
+					"transliteration": "b-cham"
+				},
+				{
+					"arabic": "هاذا؟",
+					"english": "this?",
+					"transliteration": "haadha?"
+				}
+			],
+			"targetWords": [
+				"How much"
+			]
+		},
+		{
+			"arabic": "خمسة دراهم.",
+			"arabicTashkeel": "خَمسة دَراهِم.",
+			"english": "Five dirhams.",
+			"transliteration": "khamsa daraahim.",
+			"wordAlignments": [
+				{
+					"arabic": "خمسة",
+					"english": "Five",
+					"transliteration": "khamsa"
+				},
+				{
+					"arabic": "دراهم.",
+					"english": "dirhams.",
+					"transliteration": "daraahim."
+				}
+			],
+			"targetWords": [
+				"Five",
+				"Dirham"
+			]
+		},
+		{
+			"arabic": "عندي ثلاث كتب.",
+			"arabicTashkeel": "عِندي ثَلاث كُتُب.",
+			"english": "I have three books.",
+			"transliteration": "3indi thalaath kutub.",
+			"wordAlignments": [
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "ثلاث",
+					"english": "three",
+					"transliteration": "thalaath"
+				},
+				{
+					"arabic": "كتب.",
+					"english": "books.",
+					"transliteration": "kutub."
+				}
+			],
+			"targetWords": [
+				"Three"
+			]
+		},
+		{
+			"arabic": "كم كتاب عندك؟",
+			"arabicTashkeel": "كَم كِتاب عِندَك؟",
+			"english": "How many books do you have?",
+			"transliteration": "cham kitaab 3indak?",
+			"wordAlignments": [
+				{
+					"arabic": "كم",
+					"english": "How many",
+					"transliteration": "cham"
+				},
+				{
+					"arabic": "كتاب",
+					"english": "books",
+					"transliteration": "kitaab"
+				},
+				{
+					"arabic": "عندك؟",
+					"english": "do you have?",
+					"transliteration": "3indak?"
+				}
+			],
+			"targetWords": [
+				"How many"
+			]
+		},
+		{
+			"arabic": "عندي خمسة.",
+			"arabicTashkeel": "عِندي خَمسة.",
+			"english": "I have five.",
+			"transliteration": "3indi khamsa.",
+			"wordAlignments": [
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "خمسة.",
+					"english": "five.",
+					"transliteration": "khamsa."
+				}
+			],
+			"targetWords": [
+				"Five"
+			]
+		},
+		{
+			"arabic": "رقمي سبعة، ثمانية، تسعة.",
+			"arabicTashkeel": "رَقمي سَبعة، ثَمانية، تِسعة.",
+			"english": "My number is seven, eight, nine.",
+			"transliteration": "ragmi sab3a, thamaanya, tis3a.",
+			"wordAlignments": [
+				{
+					"arabic": "رقمي",
+					"english": "My number is",
+					"transliteration": "ragmi"
+				},
+				{
+					"arabic": "سبعة،",
+					"english": "seven,",
+					"transliteration": "sab3a,"
+				},
+				{
+					"arabic": "ثمانية،",
+					"english": "eight,",
+					"transliteration": "thamaanya,"
+				},
+				{
+					"arabic": "تسعة.",
+					"english": "nine.",
+					"transliteration": "tis3a."
+				}
+			],
+			"targetWords": [
+				"Seven",
+				"Eight",
+				"Nine"
+			]
+		},
+		{
+			"arabic": "بكم الكتاب؟",
+			"arabicTashkeel": "بْكَم الكِتاب؟",
+			"english": "How much is the book?",
+			"transliteration": "b-cham il-kitaab?",
+			"wordAlignments": [
+				{
+					"arabic": "بكم",
+					"english": "For how much is",
+					"transliteration": "b-cham"
+				},
+				{
+					"arabic": "الكتاب؟",
+					"english": "the book?",
+					"transliteration": "il-kitaab?"
+				}
+			],
+			"targetWords": [
+				"How much"
+			]
+		},
+		{
+			"arabic": "الكتاب بعشرة دراهم.",
+			"arabicTashkeel": "الكِتاب بعَشرة دَراهِم.",
+			"english": "The book is ten dirhams.",
+			"transliteration": "il-kitaab b-3ashra daraahim.",
+			"wordAlignments": [
+				{
+					"arabic": "الكتاب",
+					"english": "The book is",
+					"transliteration": "il-kitaab"
+				},
+				{
+					"arabic": "بعشرة",
+					"english": "for ten",
+					"transliteration": "b-3ashra"
+				},
+				{
+					"arabic": "دراهم.",
+					"english": "dirhams.",
+					"transliteration": "daraahim."
+				}
+			],
+			"targetWords": [
+				"Ten",
+				"Dirham"
+			]
+		},
+		{
+			"arabic": "القلم بدرهم واحد.",
+			"arabicTashkeel": "القَلَم بدِرهَم واحِد.",
+			"english": "The pen is one dirham.",
+			"transliteration": "il-galam b-dirham waa7id.",
+			"wordAlignments": [
+				{
+					"arabic": "القلم",
+					"english": "The pen is",
+					"transliteration": "il-galam"
+				},
+				{
+					"arabic": "بدرهم",
+					"english": "for a dirham",
+					"transliteration": "b-dirham"
+				},
+				{
+					"arabic": "واحد.",
+					"english": "one.",
+					"transliteration": "waa7id."
+				}
+			],
+			"targetWords": [
+				"One",
+				"Dirham"
+			]
+		},
+		{
+			"arabic": "كم عمرها؟ عمرها ستة.",
+			"arabicTashkeel": "كَم عُمُرها؟ عُمُرها سِتّة.",
+			"english": "How old is she? She is six.",
+			"transliteration": "cham 3umurha? 3umurha sitta.",
+			"wordAlignments": [
+				{
+					"arabic": "كم",
+					"english": "How many",
+					"transliteration": "cham"
+				},
+				{
+					"arabic": "عمرها؟",
+					"english": "is her age?",
+					"transliteration": "3umurha?"
+				},
+				{
+					"arabic": "عمرها",
+					"english": "Her age is",
+					"transliteration": "3umurha"
+				},
+				{
+					"arabic": "ستة.",
+					"english": "six.",
+					"transliteration": "sitta."
+				}
+			],
+			"targetWords": [
+				"How many",
+				"Age",
+				"Six"
+			]
+		},
+		{
+			"arabic": "عندي ثنين.",
+			"arabicTashkeel": "عِندي ثْنين.",
+			"english": "I have two.",
+			"transliteration": "3indi thneen.",
+			"wordAlignments": [
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "ثنين.",
+					"english": "two.",
+					"transliteration": "thneen."
+				}
+			],
+			"targetWords": [
+				"Two"
+			]
+		},
+		{
+			"arabic": "واحد بس.",
+			"arabicTashkeel": "واحِد بَس.",
+			"english": "Just one.",
+			"transliteration": "waa7id bas.",
+			"wordAlignments": [
+				{
+					"arabic": "واحد",
+					"english": "One",
+					"transliteration": "waa7id"
+				},
+				{
+					"arabic": "بس.",
+					"english": "only.",
+					"transliteration": "bas."
+				}
+			],
+			"targetWords": [
+				"One"
+			]
+		},
+		{
+			"arabic": "بكم الخبز؟ بريالين.",
+			"arabicTashkeel": "بْكَم الخُبُز؟ بريالين.",
+			"english": "How much is the bread? Two riyals.",
+			"transliteration": "b-cham il-khubuz? b-riyaaleen.",
+			"wordAlignments": [
+				{
+					"arabic": "بكم",
+					"english": "For how much is",
+					"transliteration": "b-cham"
+				},
+				{
+					"arabic": "الخبز؟",
+					"english": "the bread?",
+					"transliteration": "il-khubuz?"
+				},
+				{
+					"arabic": "بريالين.",
+					"english": "For two riyals.",
+					"transliteration": "b-riyaaleen."
+				}
+			],
+			"targetWords": [
+				"How much",
+				"Two",
+				"Riyal"
+			]
+		},
+		{
+			"arabic": "عشرة ريالات.",
+			"arabicTashkeel": "عَشرة ريالات.",
+			"english": "Ten riyals.",
+			"transliteration": "3ashra riyaalaat.",
+			"wordAlignments": [
+				{
+					"arabic": "عشرة",
+					"english": "Ten",
+					"transliteration": "3ashra"
+				},
+				{
+					"arabic": "ريالات.",
+					"english": "riyals.",
+					"transliteration": "riyaalaat."
+				}
+			],
+			"targetWords": [
+				"Ten",
+				"Riyal"
+			]
+		},
+		{
+			"arabic": "كم طالب هني؟",
+			"arabicTashkeel": "كَم طالِب هِني؟",
+			"english": "How many students are here?",
+			"transliteration": "cham taalib hini?",
+			"wordAlignments": [
+				{
+					"arabic": "كم",
+					"english": "How many",
+					"transliteration": "cham"
+				},
+				{
+					"arabic": "طالب",
+					"english": "students are",
+					"transliteration": "taalib"
+				},
+				{
+					"arabic": "هني؟",
+					"english": "here?",
+					"transliteration": "hini?"
+				}
+			],
+			"targetWords": [
+				"How many"
+			]
+		},
+		{
+			"arabic": "في ثمانية هني.",
+			"arabicTashkeel": "في ثَمانية هِني.",
+			"english": "There are eight here.",
+			"transliteration": "fee thamaanya hini.",
+			"wordAlignments": [
+				{
+					"arabic": "في",
+					"english": "There are",
+					"transliteration": "fee"
+				},
+				{
+					"arabic": "ثمانية",
+					"english": "eight",
+					"transliteration": "thamaanya"
+				},
+				{
+					"arabic": "هني.",
+					"english": "here.",
+					"transliteration": "hini."
+				}
+			],
+			"targetWords": [
+				"Eight"
+			]
+		},
+		{
+			"arabic": "أربعة وأربعة ثمانية.",
+			"arabicTashkeel": "أربعة وأربعة ثَمانية.",
+			"english": "Four and four is eight.",
+			"transliteration": "arba3a w-arba3a thamaanya.",
+			"wordAlignments": [
+				{
+					"arabic": "أربعة",
+					"english": "Four",
+					"transliteration": "arba3a"
+				},
+				{
+					"arabic": "وأربعة",
+					"english": "and four is",
+					"transliteration": "w-arba3a"
+				},
+				{
+					"arabic": "ثمانية.",
+					"english": "eight.",
+					"transliteration": "thamaanya."
+				}
+			],
+			"targetWords": [
+				"Four",
+				"Eight"
+			]
+		},
+		{
+			"arabic": "خمسة وخمسة عشرة.",
+			"arabicTashkeel": "خَمسة وخَمسة عَشرة.",
+			"english": "Five and five is ten.",
+			"transliteration": "khamsa w-khamsa 3ashra.",
+			"wordAlignments": [
+				{
+					"arabic": "خمسة",
+					"english": "Five",
+					"transliteration": "khamsa"
+				},
+				{
+					"arabic": "وخمسة",
+					"english": "and five is",
+					"transliteration": "w-khamsa"
+				},
+				{
+					"arabic": "عشرة.",
+					"english": "ten.",
+					"transliteration": "3ashra."
+				}
+			],
+			"targetWords": [
+				"Five",
+				"Ten"
+			]
+		},
+		{
+			"arabic": "ثلاثة وستة تسعة.",
+			"arabicTashkeel": "ثَلاثة وسِتّة تِسعة.",
+			"english": "Three and six is nine.",
+			"transliteration": "thalaatha w-sitta tis3a.",
+			"wordAlignments": [
+				{
+					"arabic": "ثلاثة",
+					"english": "Three",
+					"transliteration": "thalaatha"
+				},
+				{
+					"arabic": "وستة",
+					"english": "and six is",
+					"transliteration": "w-sitta"
+				},
+				{
+					"arabic": "تسعة.",
+					"english": "nine.",
+					"transliteration": "tis3a."
+				}
+			],
+			"targetWords": [
+				"Three",
+				"Six",
+				"Nine"
+			]
+		},
+		{
+			"arabic": "ثنين وسبعة تسعة.",
+			"arabicTashkeel": "ثْنين وسَبعة تِسعة.",
+			"english": "Two and seven is nine.",
+			"transliteration": "thneen w-sab3a tis3a.",
+			"wordAlignments": [
+				{
+					"arabic": "ثنين",
+					"english": "Two",
+					"transliteration": "thneen"
+				},
+				{
+					"arabic": "وسبعة",
+					"english": "and seven is",
+					"transliteration": "w-sab3a"
+				},
+				{
+					"arabic": "تسعة.",
+					"english": "nine.",
+					"transliteration": "tis3a."
+				}
+			],
+			"targetWords": [
+				"Two",
+				"Seven",
+				"Nine"
+			]
+		},
+		{
+			"arabic": "واحد وثلاثة أربعة.",
+			"arabicTashkeel": "واحِد وثَلاثة أربعة.",
+			"english": "One and three is four.",
+			"transliteration": "waa7id w-thalaatha arba3a.",
+			"wordAlignments": [
+				{
+					"arabic": "واحد",
+					"english": "One",
+					"transliteration": "waa7id"
+				},
+				{
+					"arabic": "وثلاثة",
+					"english": "and three is",
+					"transliteration": "w-thalaatha"
+				},
+				{
+					"arabic": "أربعة.",
+					"english": "four.",
+					"transliteration": "arba3a."
+				}
+			],
+			"targetWords": [
+				"One",
+				"Three",
+				"Four"
+			]
+		},
+		{
+			"arabic": "ستة وثنين ثمانية.",
+			"arabicTashkeel": "سِتّة وثْنين ثَمانية.",
+			"english": "Six and two is eight.",
+			"transliteration": "sitta w-thneen thamaanya.",
+			"wordAlignments": [
+				{
+					"arabic": "ستة",
+					"english": "Six",
+					"transliteration": "sitta"
+				},
+				{
+					"arabic": "وثنين",
+					"english": "and two is",
+					"transliteration": "w-thneen"
+				},
+				{
+					"arabic": "ثمانية.",
+					"english": "eight.",
+					"transliteration": "thamaanya."
+				}
+			],
+			"targetWords": [
+				"Six",
+				"Two",
+				"Eight"
+			]
+		},
+		{
+			"arabic": "ولدي عمره ثمانية.",
+			"arabicTashkeel": "وِلدي عُمرَه ثَمانية.",
+			"english": "My son is eight.",
+			"transliteration": "wildi 3umra thamaanya.",
+			"wordAlignments": [
+				{
+					"arabic": "ولدي",
+					"english": "My son",
+					"transliteration": "wildi"
+				},
+				{
+					"arabic": "عمره",
+					"english": "his age is",
+					"transliteration": "3umra"
+				},
+				{
+					"arabic": "ثمانية.",
+					"english": "eight.",
+					"transliteration": "thamaanya."
+				}
+			],
+			"targetWords": [
+				"Age",
+				"Eight"
+			]
+		},
+		{
+			"arabic": "بكم السيارة؟",
+			"arabicTashkeel": "بْكَم السَّيّارة؟",
+			"english": "How much is the car?",
+			"transliteration": "b-cham is-sayyaara?",
+			"wordAlignments": [
+				{
+					"arabic": "بكم",
+					"english": "For how much is",
+					"transliteration": "b-cham"
+				},
+				{
+					"arabic": "السيارة؟",
+					"english": "the car?",
+					"transliteration": "is-sayyaara?"
+				}
+			],
+			"targetWords": [
+				"How much"
+			]
+		},
+		{
+			"arabic": "كم درهم؟",
+			"arabicTashkeel": "كَم دِرهَم؟",
+			"english": "How many dirhams?",
+			"transliteration": "cham dirham?",
+			"wordAlignments": [
+				{
+					"arabic": "كم",
+					"english": "How many",
+					"transliteration": "cham"
+				},
+				{
+					"arabic": "درهم؟",
+					"english": "dirhams?",
+					"transliteration": "dirham?"
+				}
+			],
+			"targetWords": [
+				"How many",
+				"Dirham"
+			]
+		},
+		{
+			"arabic": "ريال واحد بس.",
+			"arabicTashkeel": "ريال واحِد بَس.",
+			"english": "Only one riyal.",
+			"transliteration": "riyaal waa7id bas.",
+			"wordAlignments": [
+				{
+					"arabic": "ريال",
+					"english": "A riyal",
+					"transliteration": "riyaal"
+				},
+				{
+					"arabic": "واحد",
+					"english": "one",
+					"transliteration": "waa7id"
+				},
+				{
+					"arabic": "بس.",
+					"english": "only.",
+					"transliteration": "bas."
+				}
+			],
+			"targetWords": [
+				"Riyal",
+				"One"
+			]
+		},
+		{
+			"arabic": "عندي أربع إخوان.",
+			"arabicTashkeel": "عِندي أربَع إخوان.",
+			"english": "I have four brothers.",
+			"transliteration": "3indi arba3 ikhwaan.",
+			"wordAlignments": [
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "أربع",
+					"english": "four",
+					"transliteration": "arba3"
+				},
+				{
+					"arabic": "إخوان.",
+					"english": "brothers.",
+					"transliteration": "ikhwaan."
+				}
+			],
+			"targetWords": [
+				"Four"
+			]
+		},
+		{
+			"arabic": "سالم عنده سبع أقلام.",
+			"arabicTashkeel": "سالِم عِندَه سَبع أقلام.",
+			"english": "Salem has seven pens.",
+			"transliteration": "saalim 3inda saba3 aglaam.",
+			"wordAlignments": [
+				{
+					"arabic": "سالم",
+					"english": "Salem",
+					"transliteration": "saalim"
+				},
+				{
+					"arabic": "عنده",
+					"english": "has",
+					"transliteration": "3inda"
+				},
+				{
+					"arabic": "سبع",
+					"english": "seven",
+					"transliteration": "saba3"
+				},
+				{
+					"arabic": "أقلام.",
+					"english": "pens.",
+					"transliteration": "aglaam."
+				}
+			],
+			"targetWords": [
+				"Seven"
+			]
+		},
+		{
+			"arabic": "خذ ثلاثة.",
+			"arabicTashkeel": "خُذ ثَلاثة.",
+			"english": "Take three.",
+			"transliteration": "khudh thalaatha.",
+			"wordAlignments": [
+				{
+					"arabic": "خذ",
+					"english": "Take",
+					"transliteration": "khudh"
+				},
+				{
+					"arabic": "ثلاثة.",
+					"english": "three.",
+					"transliteration": "thalaatha."
+				}
+			],
+			"targetWords": [
+				"Three"
+			]
+		},
+		{
+			"arabic": "خمسة بس، مو ستة.",
+			"arabicTashkeel": "خَمسة بَس، مو سِتّة.",
+			"english": "Only five, not six.",
+			"transliteration": "khamsa bas, moo sitta.",
+			"wordAlignments": [
+				{
+					"arabic": "خمسة",
+					"english": "Five",
+					"transliteration": "khamsa"
+				},
+				{
+					"arabic": "بس،",
+					"english": "only,",
+					"transliteration": "bas,"
+				},
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "ستة.",
+					"english": "six.",
+					"transliteration": "sitta."
+				}
+			],
+			"targetWords": [
+				"Five",
+				"Six"
+			]
+		},
+		{
+			"arabic": "تسعة لو عشرة؟",
+			"arabicTashkeel": "تِسعة لو عَشرة؟",
+			"english": "Nine or ten?",
+			"transliteration": "tis3a law 3ashra?",
+			"wordAlignments": [
+				{
+					"arabic": "تسعة",
+					"english": "Nine",
+					"transliteration": "tis3a"
+				},
+				{
+					"arabic": "لو",
+					"english": "or",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "عشرة؟",
+					"english": "ten?",
+					"transliteration": "3ashra?"
+				}
+			],
+			"targetWords": [
+				"Nine",
+				"Ten"
+			]
+		},
+		{
+			"arabic": "واحد لو ثنين؟",
+			"arabicTashkeel": "واحِد لو ثْنين؟",
+			"english": "One or two?",
+			"transliteration": "waa7id law thneen?",
+			"wordAlignments": [
+				{
+					"arabic": "واحد",
+					"english": "One",
+					"transliteration": "waa7id"
+				},
+				{
+					"arabic": "لو",
+					"english": "or",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "ثنين؟",
+					"english": "two?",
+					"transliteration": "thneen?"
+				}
+			],
+			"targetWords": [
+				"One",
+				"Two"
+			]
+		},
+		{
+			"arabic": "بكم هاذي؟ بثلاثة دراهم.",
+			"arabicTashkeel": "بْكَم هاذي؟ بثَلاثة دَراهِم.",
+			"english": "How much is this? Three dirhams.",
+			"transliteration": "b-cham haadhi? b-thalaatha daraahim.",
+			"wordAlignments": [
+				{
+					"arabic": "بكم",
+					"english": "For how much is",
+					"transliteration": "b-cham"
+				},
+				{
+					"arabic": "هاذي؟",
+					"english": "this?",
+					"transliteration": "haadhi?"
+				},
+				{
+					"arabic": "بثلاثة",
+					"english": "For three",
+					"transliteration": "b-thalaatha"
+				},
+				{
+					"arabic": "دراهم.",
+					"english": "dirhams.",
+					"transliteration": "daraahim."
+				}
+			],
+			"targetWords": [
+				"How much",
+				"Three",
+				"Dirham"
+			]
+		},
+		{
+			"arabic": "كم عمرك؟",
+			"arabicTashkeel": "كَم عُمرِك؟",
+			"english": "How old are you?",
+			"transliteration": "cham 3umrich?",
+			"wordAlignments": [
+				{
+					"arabic": "كم",
+					"english": "How many",
+					"transliteration": "cham"
+				},
+				{
+					"arabic": "عمرك؟",
+					"english": "is your age?",
+					"transliteration": "3umrich?"
+				}
+			],
+			"targetWords": [
+				"How many",
+				"Age"
+			]
+		},
+		{
+			"arabic": "عشرة بس.",
+			"arabicTashkeel": "عَشرة بَس.",
+			"english": "Only ten.",
+			"transliteration": "3ashra bas.",
+			"wordAlignments": [
+				{
+					"arabic": "عشرة",
+					"english": "Ten",
+					"transliteration": "3ashra"
+				},
+				{
+					"arabic": "بس.",
+					"english": "only.",
+					"transliteration": "bas."
+				}
+			],
+			"targetWords": [
+				"Ten"
+			]
+		},
+		{
+			"arabic": "عندي واحد.",
+			"arabicTashkeel": "عِندي واحِد.",
+			"english": "I have one.",
+			"transliteration": "3indi waa7id.",
+			"wordAlignments": [
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "واحد.",
+					"english": "one.",
+					"transliteration": "waa7id."
+				}
+			],
+			"targetWords": [
+				"One"
+			]
+		},
+		{
+			"arabic": "ثمانية لو تسعة؟",
+			"arabicTashkeel": "ثَمانية لو تِسعة؟",
+			"english": "Eight or nine?",
+			"transliteration": "thamaanya law tis3a?",
+			"wordAlignments": [
+				{
+					"arabic": "ثمانية",
+					"english": "Eight",
+					"transliteration": "thamaanya"
+				},
+				{
+					"arabic": "لو",
+					"english": "or",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "تسعة؟",
+					"english": "nine?",
+					"transliteration": "tis3a?"
+				}
+			],
+			"targetWords": [
+				"Eight",
+				"Nine"
+			]
+		},
+		{
+			"arabic": "أربعة بس.",
+			"arabicTashkeel": "أربعة بَس.",
+			"english": "Only four.",
+			"transliteration": "arba3a bas.",
+			"wordAlignments": [
+				{
+					"arabic": "أربعة",
+					"english": "Four",
+					"transliteration": "arba3a"
+				},
+				{
+					"arabic": "بس.",
+					"english": "only.",
+					"transliteration": "bas."
+				}
+			],
+			"targetWords": [
+				"Four"
+			]
+		},
+		{
+			"arabic": "هاذا بخمسة ريالات.",
+			"arabicTashkeel": "هاذا بخَمسة ريالات.",
+			"english": "This is five riyals.",
+			"transliteration": "haadha b-khamsa riyaalaat.",
+			"wordAlignments": [
+				{
+					"arabic": "هاذا",
+					"english": "This is",
+					"transliteration": "haadha"
+				},
+				{
+					"arabic": "بخمسة",
+					"english": "for five",
+					"transliteration": "b-khamsa"
+				},
+				{
+					"arabic": "ريالات.",
+					"english": "riyals.",
+					"transliteration": "riyaalaat."
+				}
+			],
+			"targetWords": [
+				"Five",
+				"Riyal"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "At the Bakery",
+			"sentences": [
+				{
+					"arabic": "السلام عليكم، بكم الخبز؟",
+					"arabicTashkeel": "السَّلامُ عَلَيكُم، بْكَم الخُبُز؟",
+					"english": "Peace be upon you, how much is the bread?",
+					"transliteration": "is-salaamu 3alaykum, b-cham il-khubuz?",
+					"wordAlignments": [
+						{
+							"arabic": "السلام",
+							"english": "Peace",
+							"transliteration": "is-salaamu"
+						},
+						{
+							"arabic": "عليكم،",
+							"english": "upon you,",
+							"transliteration": "3alaykum,"
+						},
+						{
+							"arabic": "بكم",
+							"english": "for how much is",
+							"transliteration": "b-cham"
+						},
+						{
+							"arabic": "الخبز؟",
+							"english": "the bread?",
+							"transliteration": "il-khubuz?"
+						}
+					]
+				},
+				{
+					"arabic": "الخبز بدرهمين.",
+					"arabicTashkeel": "الخُبُز بدِرهَمين.",
+					"english": "The bread is two dirhams.",
+					"transliteration": "il-khubuz b-dirhameen.",
+					"wordAlignments": [
+						{
+							"arabic": "الخبز",
+							"english": "The bread is",
+							"transliteration": "il-khubuz"
+						},
+						{
+							"arabic": "بدرهمين.",
+							"english": "for two dirhams.",
+							"transliteration": "b-dirhameen."
+						}
+					]
+				},
+				{
+					"arabic": "زين، أبي ثنين.",
+					"arabicTashkeel": "زين، أبي ثْنين.",
+					"english": "Okay, I want two.",
+					"transliteration": "zeen, abi thneen.",
+					"wordAlignments": [
+						{
+							"arabic": "زين،",
+							"english": "Okay,",
+							"transliteration": "zeen,"
+						},
+						{
+							"arabic": "أبي",
+							"english": "I want",
+							"transliteration": "abi"
+						},
+						{
+							"arabic": "ثنين.",
+							"english": "two.",
+							"transliteration": "thneen."
+						}
+					]
+				},
+				{
+					"arabic": "تفضل.",
+					"arabicTashkeel": "تْفَضَّل.",
+					"english": "Here you are.",
+					"transliteration": "tfaddal.",
+					"wordAlignments": [
+						{
+							"arabic": "تفضل.",
+							"english": "Here you are.",
+							"transliteration": "tfaddal."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "My Family",
+			"sentences": [
+				{
+					"arabic": "عمري عشرة.",
+					"arabicTashkeel": "عُمري عَشرة.",
+					"english": "I am ten.",
+					"transliteration": "3umri 3ashra.",
+					"wordAlignments": [
+						{
+							"arabic": "عمري",
+							"english": "My age is",
+							"transliteration": "3umri"
+						},
+						{
+							"arabic": "عشرة.",
+							"english": "ten.",
+							"transliteration": "3ashra."
+						}
+					]
+				},
+				{
+					"arabic": "أخوي عمره سبعة.",
+					"arabicTashkeel": "أخوي عُمرَه سَبعة.",
+					"english": "My brother is seven.",
+					"transliteration": "akhooy 3umra sab3a.",
+					"wordAlignments": [
+						{
+							"arabic": "أخوي",
+							"english": "My brother",
+							"transliteration": "akhooy"
+						},
+						{
+							"arabic": "عمره",
+							"english": "his age is",
+							"transliteration": "3umra"
+						},
+						{
+							"arabic": "سبعة.",
+							"english": "seven.",
+							"transliteration": "sab3a."
+						}
+					]
+				},
+				{
+					"arabic": "أختي عمرها خمسة.",
+					"arabicTashkeel": "أُختي عُمُرها خَمسة.",
+					"english": "My sister is five.",
+					"transliteration": "ukhti 3umurha khamsa.",
+					"wordAlignments": [
+						{
+							"arabic": "أختي",
+							"english": "My sister",
+							"transliteration": "ukhti"
+						},
+						{
+							"arabic": "عمرها",
+							"english": "her age is",
+							"transliteration": "3umurha"
+						},
+						{
+							"arabic": "خمسة.",
+							"english": "five.",
+							"transliteration": "khamsa."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is shopping at a small grocery (baqala) in Abu Dhabi and needs to ask prices and quantities.",
+		"studentRole": "A shopper learning Gulf Arabic.",
+		"otherRole": "The baqala owner, who quotes prices in dirhams.",
+		"goalEnglish": "Ask how much things cost, say how many you want, and count out your money.",
+		"targetWords": [
+			"How much",
+			"How many",
+			"Dirham",
+			"One",
+			"Two",
+			"Three",
+			"Five",
+			"Ten"
+		]
+	}
+}
