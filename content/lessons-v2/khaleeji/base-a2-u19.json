@@ -1,0 +1,2068 @@
+{
+	"vocab": [
+		{
+			"arabic": "دايما",
+			"arabicTashkeel": "دايماً",
+			"english": "Always",
+			"transliteration": "daayman",
+			"wordAlignments": [
+				{
+					"arabic": "دايما",
+					"english": "Always",
+					"transliteration": "daayman"
+				}
+			],
+			"partOfSpeech": "adverb"
+		},
+		{
+			"arabic": "أبد",
+			"arabicTashkeel": "أبَد",
+			"english": "Never",
+			"transliteration": "abad",
+			"wordAlignments": [
+				{
+					"arabic": "أبد",
+					"english": "Never",
+					"transliteration": "abad"
+				}
+			],
+			"partOfSpeech": "adverb"
+		},
+		{
+			"arabic": "أحيانا",
+			"arabicTashkeel": "أحياناً",
+			"english": "Sometimes",
+			"transliteration": "a7yaanan",
+			"wordAlignments": [
+				{
+					"arabic": "أحيانا",
+					"english": "Sometimes",
+					"transliteration": "a7yaanan"
+				}
+			],
+			"partOfSpeech": "adverb"
+		},
+		{
+			"arabic": "قريب",
+			"arabicTashkeel": "قَريب",
+			"english": "Soon",
+			"transliteration": "gareeb",
+			"wordAlignments": [
+				{
+					"arabic": "قريب",
+					"english": "Soon",
+					"transliteration": "gareeb"
+				}
+			],
+			"partOfSpeech": "adverb"
+		},
+		{
+			"arabic": "بعد",
+			"arabicTashkeel": "بَعَد",
+			"english": "Still / yet",
+			"transliteration": "ba3ad",
+			"wordAlignments": [
+				{
+					"arabic": "بعد",
+					"english": "Still",
+					"transliteration": "ba3ad"
+				}
+			],
+			"partOfSpeech": "adverb"
+		},
+		{
+			"arabic": "عقب باكر",
+			"arabicTashkeel": "عُقب باكِر",
+			"english": "Day after tomorrow",
+			"transliteration": "3ugub baachir",
+			"wordAlignments": [
+				{
+					"arabic": "عقب",
+					"english": "After",
+					"transliteration": "3ugub"
+				},
+				{
+					"arabic": "باكر",
+					"english": "tomorrow",
+					"transliteration": "baachir"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "أول أمس",
+			"arabicTashkeel": "أوَّل أمس",
+			"english": "Day before yesterday",
+			"transliteration": "awwal ams",
+			"wordAlignments": [
+				{
+					"arabic": "أول",
+					"english": "Before",
+					"transliteration": "awwal"
+				},
+				{
+					"arabic": "أمس",
+					"english": "yesterday",
+					"transliteration": "ams"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "هالأسبوع",
+			"arabicTashkeel": "هالأسبوع",
+			"english": "This week",
+			"transliteration": "hal-usboo3",
+			"wordAlignments": [
+				{
+					"arabic": "هالأسبوع",
+					"english": "This week",
+					"transliteration": "hal-usboo3"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "هالسنة",
+			"arabicTashkeel": "هالسَّنة",
+			"english": "This year",
+			"transliteration": "has-sana",
+			"wordAlignments": [
+				{
+					"arabic": "هالسنة",
+					"english": "This year",
+					"transliteration": "has-sana"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "السنة اللي طافت",
+			"arabicTashkeel": "السَّنة اللي طافَت",
+			"english": "Last year",
+			"transliteration": "is-sana illi taafat",
+			"wordAlignments": [
+				{
+					"arabic": "السنة",
+					"english": "The year",
+					"transliteration": "is-sana"
+				},
+				{
+					"arabic": "اللي",
+					"english": "that",
+					"transliteration": "illi"
+				},
+				{
+					"arabic": "طافت",
+					"english": "passed",
+					"transliteration": "taafat"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "السنة الجاية",
+			"arabicTashkeel": "السَّنة الجاية",
+			"english": "Next year",
+			"transliteration": "is-sana il-yaaya",
+			"wordAlignments": [
+				{
+					"arabic": "السنة",
+					"english": "The year",
+					"transliteration": "is-sana"
+				},
+				{
+					"arabic": "الجاية",
+					"english": "coming",
+					"transliteration": "il-yaaya"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "قبل شوي",
+			"arabicTashkeel": "قَبل شْوَي",
+			"english": "A moment ago",
+			"transliteration": "gabil shway",
+			"wordAlignments": [
+				{
+					"arabic": "قبل",
+					"english": "Before",
+					"transliteration": "gabil"
+				},
+				{
+					"arabic": "شوي",
+					"english": "a little",
+					"transliteration": "shway"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "بعد شوي",
+			"arabicTashkeel": "بَعد شْوَي",
+			"english": "In a little while",
+			"transliteration": "ba3d shway",
+			"wordAlignments": [
+				{
+					"arabic": "بعد",
+					"english": "After",
+					"transliteration": "ba3d"
+				},
+				{
+					"arabic": "شوي",
+					"english": "a little",
+					"transliteration": "shway"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "الليلة",
+			"arabicTashkeel": "الليلة",
+			"english": "Tonight",
+			"transliteration": "il-leela",
+			"wordAlignments": [
+				{
+					"arabic": "الليلة",
+					"english": "Tonight",
+					"transliteration": "il-leela"
+				}
+			],
+			"partOfSpeech": "adverb"
+		},
+		{
+			"arabic": "بكل مكان",
+			"arabicTashkeel": "بكِل مَكان",
+			"english": "Everywhere",
+			"transliteration": "b-kil makaan",
+			"wordAlignments": [
+				{
+					"arabic": "بكل",
+					"english": "In every",
+					"transliteration": "b-kil"
+				},
+				{
+					"arabic": "مكان",
+					"english": "place",
+					"transliteration": "makaan"
+				}
+			],
+			"partOfSpeech": "phrase"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "دايما أشرب قهوة الصبح.",
+			"arabicTashkeel": "دايماً أشرَب قَهوة الصُّبح.",
+			"english": "I always drink coffee in the morning.",
+			"transliteration": "daayman ashrab gahwa is-sub7.",
+			"wordAlignments": [
+				{
+					"arabic": "دايما",
+					"english": "Always",
+					"transliteration": "daayman"
+				},
+				{
+					"arabic": "أشرب",
+					"english": "I drink",
+					"transliteration": "ashrab"
+				},
+				{
+					"arabic": "قهوة",
+					"english": "coffee",
+					"transliteration": "gahwa"
+				},
+				{
+					"arabic": "الصبح.",
+					"english": "in the morning.",
+					"transliteration": "is-sub7."
+				}
+			],
+			"targetWords": [
+				"Always"
+			]
+		},
+		{
+			"arabic": "ما آكل لحم أبد.",
+			"arabicTashkeel": "ما آكِل لَحَم أبَد.",
+			"english": "I never eat meat.",
+			"transliteration": "ma aakil la7am abad.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "آكل",
+					"english": "I eat",
+					"transliteration": "aakil"
+				},
+				{
+					"arabic": "لحم",
+					"english": "meat",
+					"transliteration": "la7am"
+				},
+				{
+					"arabic": "أبد.",
+					"english": "ever.",
+					"transliteration": "abad."
+				}
+			],
+			"targetWords": [
+				"Never"
+			]
+		},
+		{
+			"arabic": "أحيانا أروح الكوفي.",
+			"arabicTashkeel": "أحياناً أروح الكوفي.",
+			"english": "Sometimes I go to the café.",
+			"transliteration": "a7yaanan arooh il-koofi.",
+			"wordAlignments": [
+				{
+					"arabic": "أحيانا",
+					"english": "Sometimes",
+					"transliteration": "a7yaanan"
+				},
+				{
+					"arabic": "أروح",
+					"english": "I go",
+					"transliteration": "arooh"
+				},
+				{
+					"arabic": "الكوفي.",
+					"english": "to the café.",
+					"transliteration": "il-koofi."
+				}
+			],
+			"targetWords": [
+				"Sometimes"
+			]
+		},
+		{
+			"arabic": "العطلة جاية قريب.",
+			"arabicTashkeel": "العُطلة جاية قَريب.",
+			"english": "The holiday is coming soon.",
+			"transliteration": "il-3utla yaaya gareeb.",
+			"wordAlignments": [
+				{
+					"arabic": "العطلة",
+					"english": "The holiday is",
+					"transliteration": "il-3utla"
+				},
+				{
+					"arabic": "جاية",
+					"english": "coming",
+					"transliteration": "yaaya"
+				},
+				{
+					"arabic": "قريب.",
+					"english": "soon.",
+					"transliteration": "gareeb."
+				}
+			],
+			"targetWords": [
+				"Soon"
+			]
+		},
+		{
+			"arabic": "بعدني بالدوام.",
+			"arabicTashkeel": "بَعَدني بالدَّوام.",
+			"english": "I'm still at work.",
+			"transliteration": "ba3adni bid-dawaam.",
+			"wordAlignments": [
+				{
+					"arabic": "بعدني",
+					"english": "I'm still",
+					"transliteration": "ba3adni"
+				},
+				{
+					"arabic": "بالدوام.",
+					"english": "at work.",
+					"transliteration": "bid-dawaam."
+				}
+			],
+			"targetWords": [
+				"Still / yet"
+			]
+		},
+		{
+			"arabic": "عقب باكر الجمعة.",
+			"arabicTashkeel": "عُقب باكِر الجُمعة.",
+			"english": "The day after tomorrow is Friday.",
+			"transliteration": "3ugub baachir il-yum3a.",
+			"wordAlignments": [
+				{
+					"arabic": "عقب",
+					"english": "After",
+					"transliteration": "3ugub"
+				},
+				{
+					"arabic": "باكر",
+					"english": "tomorrow is",
+					"transliteration": "baachir"
+				},
+				{
+					"arabic": "الجمعة.",
+					"english": "Friday.",
+					"transliteration": "il-yum3a."
+				}
+			],
+			"targetWords": [
+				"Day after tomorrow"
+			]
+		},
+		{
+			"arabic": "أول أمس كنت بالكويت.",
+			"arabicTashkeel": "أوَّل أمس كِنت بالكُوَيت.",
+			"english": "The day before yesterday I was in Kuwait.",
+			"transliteration": "awwal ams kint bil-kuwayt.",
+			"wordAlignments": [
+				{
+					"arabic": "أول",
+					"english": "Before",
+					"transliteration": "awwal"
+				},
+				{
+					"arabic": "أمس",
+					"english": "yesterday",
+					"transliteration": "ams"
+				},
+				{
+					"arabic": "كنت",
+					"english": "I was",
+					"transliteration": "kint"
+				},
+				{
+					"arabic": "بالكويت.",
+					"english": "in Kuwait.",
+					"transliteration": "bil-kuwayt."
+				}
+			],
+			"targetWords": [
+				"Day before yesterday"
+			]
+		},
+		{
+			"arabic": "هالأسبوع أنا مشغول وايد.",
+			"arabicTashkeel": "هالأسبوع أنا مَشغول وايد.",
+			"english": "This week I'm very busy.",
+			"transliteration": "hal-usboo3 ana mashghool waayid.",
+			"wordAlignments": [
+				{
+					"arabic": "هالأسبوع",
+					"english": "This week",
+					"transliteration": "hal-usboo3"
+				},
+				{
+					"arabic": "أنا",
+					"english": "I am",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "مشغول",
+					"english": "busy",
+					"transliteration": "mashghool"
+				},
+				{
+					"arabic": "وايد.",
+					"english": "very.",
+					"transliteration": "waayid."
+				}
+			],
+			"targetWords": [
+				"This week"
+			]
+		},
+		{
+			"arabic": "هالسنة بتخرج.",
+			"arabicTashkeel": "هالسَّنة بَتخَرَّج.",
+			"english": "This year I graduate.",
+			"transliteration": "has-sana batkharraj.",
+			"wordAlignments": [
+				{
+					"arabic": "هالسنة",
+					"english": "This year",
+					"transliteration": "has-sana"
+				},
+				{
+					"arabic": "بتخرج.",
+					"english": "I'll graduate.",
+					"transliteration": "batkharraj."
+				}
+			],
+			"targetWords": [
+				"This year"
+			]
+		},
+		{
+			"arabic": "السنة اللي طافت سافرت تركيا.",
+			"arabicTashkeel": "السَّنة اللي طافَت سافَرت تُركيا.",
+			"english": "Last year I travelled to Turkey.",
+			"transliteration": "is-sana illi taafat saafart turkiya.",
+			"wordAlignments": [
+				{
+					"arabic": "السنة",
+					"english": "The year",
+					"transliteration": "is-sana"
+				},
+				{
+					"arabic": "اللي",
+					"english": "that",
+					"transliteration": "illi"
+				},
+				{
+					"arabic": "طافت",
+					"english": "passed",
+					"transliteration": "taafat"
+				},
+				{
+					"arabic": "سافرت",
+					"english": "I travelled",
+					"transliteration": "saafart"
+				},
+				{
+					"arabic": "تركيا.",
+					"english": "to Turkey.",
+					"transliteration": "turkiya."
+				}
+			],
+			"targetWords": [
+				"Last year"
+			]
+		},
+		{
+			"arabic": "السنة الجاية بشتري سيارة.",
+			"arabicTashkeel": "السَّنة الجاية بَشتِري سَيّارة.",
+			"english": "Next year I'll buy a car.",
+			"transliteration": "is-sana il-yaaya bashtiri sayyaara.",
+			"wordAlignments": [
+				{
+					"arabic": "السنة",
+					"english": "The year",
+					"transliteration": "is-sana"
+				},
+				{
+					"arabic": "الجاية",
+					"english": "coming",
+					"transliteration": "il-yaaya"
+				},
+				{
+					"arabic": "بشتري",
+					"english": "I'll buy",
+					"transliteration": "bashtiri"
+				},
+				{
+					"arabic": "سيارة.",
+					"english": "a car.",
+					"transliteration": "sayyaara."
+				}
+			],
+			"targetWords": [
+				"Next year"
+			]
+		},
+		{
+			"arabic": "طلع قبل شوي.",
+			"arabicTashkeel": "طِلَع قَبل شْوَي.",
+			"english": "He left a moment ago.",
+			"transliteration": "tila3 gabil shway.",
+			"wordAlignments": [
+				{
+					"arabic": "طلع",
+					"english": "He left",
+					"transliteration": "tila3"
+				},
+				{
+					"arabic": "قبل",
+					"english": "before",
+					"transliteration": "gabil"
+				},
+				{
+					"arabic": "شوي.",
+					"english": "a little.",
+					"transliteration": "shway."
+				}
+			],
+			"targetWords": [
+				"A moment ago"
+			]
+		},
+		{
+			"arabic": "بجي بعد شوي.",
+			"arabicTashkeel": "بَجي بَعد شْوَي.",
+			"english": "I'll come in a little while.",
+			"transliteration": "bayi ba3d shway.",
+			"wordAlignments": [
+				{
+					"arabic": "بجي",
+					"english": "I'll come",
+					"transliteration": "bayi"
+				},
+				{
+					"arabic": "بعد",
+					"english": "after",
+					"transliteration": "ba3d"
+				},
+				{
+					"arabic": "شوي.",
+					"english": "a little.",
+					"transliteration": "shway."
+				}
+			],
+			"targetWords": [
+				"In a little while"
+			]
+		},
+		{
+			"arabic": "الليلة بنطلع.",
+			"arabicTashkeel": "الليلة بِنطلَع.",
+			"english": "Tonight we're going out.",
+			"transliteration": "il-leela bintla3.",
+			"wordAlignments": [
+				{
+					"arabic": "الليلة",
+					"english": "Tonight",
+					"transliteration": "il-leela"
+				},
+				{
+					"arabic": "بنطلع.",
+					"english": "we'll go out.",
+					"transliteration": "bintla3."
+				}
+			],
+			"targetWords": [
+				"Tonight"
+			]
+		},
+		{
+			"arabic": "في زحمة بكل مكان.",
+			"arabicTashkeel": "في زَحمة بكِل مَكان.",
+			"english": "There's traffic everywhere.",
+			"transliteration": "fee za7ma b-kil makaan.",
+			"wordAlignments": [
+				{
+					"arabic": "في",
+					"english": "There is",
+					"transliteration": "fee"
+				},
+				{
+					"arabic": "زحمة",
+					"english": "traffic",
+					"transliteration": "za7ma"
+				},
+				{
+					"arabic": "بكل",
+					"english": "in every",
+					"transliteration": "b-kil"
+				},
+				{
+					"arabic": "مكان.",
+					"english": "place.",
+					"transliteration": "makaan."
+				}
+			],
+			"targetWords": [
+				"Everywhere"
+			]
+		},
+		{
+			"arabic": "دايما متأخر.",
+			"arabicTashkeel": "دايماً مِتأخِّر.",
+			"english": "He is always late.",
+			"transliteration": "daayman mit2akhkhir.",
+			"wordAlignments": [
+				{
+					"arabic": "دايما",
+					"english": "Always",
+					"transliteration": "daayman"
+				},
+				{
+					"arabic": "متأخر.",
+					"english": "he's late.",
+					"transliteration": "mit2akhkhir."
+				}
+			],
+			"targetWords": [
+				"Always"
+			]
+		},
+		{
+			"arabic": "ما رحت مسقط أبد.",
+			"arabicTashkeel": "ما رِحت مَسقَط أبَد.",
+			"english": "I've never been to Muscat.",
+			"transliteration": "ma ri7t masgat abad.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "رحت",
+					"english": "I went",
+					"transliteration": "ri7t"
+				},
+				{
+					"arabic": "مسقط",
+					"english": "to Muscat",
+					"transliteration": "masgat"
+				},
+				{
+					"arabic": "أبد.",
+					"english": "ever.",
+					"transliteration": "abad."
+				}
+			],
+			"targetWords": [
+				"Never"
+			]
+		},
+		{
+			"arabic": "أحيانا تمطر بالشتا.",
+			"arabicTashkeel": "أحياناً تمطِر بالشِّتا.",
+			"english": "Sometimes it rains in winter.",
+			"transliteration": "a7yaanan tmatir bish-shita.",
+			"wordAlignments": [
+				{
+					"arabic": "أحيانا",
+					"english": "Sometimes",
+					"transliteration": "a7yaanan"
+				},
+				{
+					"arabic": "تمطر",
+					"english": "it rains",
+					"transliteration": "tmatir"
+				},
+				{
+					"arabic": "بالشتا.",
+					"english": "in winter.",
+					"transliteration": "bish-shita."
+				}
+			],
+			"targetWords": [
+				"Sometimes"
+			]
+		},
+		{
+			"arabic": "نشوفك قريب!",
+			"arabicTashkeel": "نْشوفَك قَريب!",
+			"english": "See you soon!",
+			"transliteration": "nshoofak gareeb!",
+			"wordAlignments": [
+				{
+					"arabic": "نشوفك",
+					"english": "We'll see you",
+					"transliteration": "nshoofak"
+				},
+				{
+					"arabic": "قريب!",
+					"english": "soon!",
+					"transliteration": "gareeb!"
+				}
+			],
+			"targetWords": [
+				"Soon"
+			]
+		},
+		{
+			"arabic": "بعده نايم؟",
+			"arabicTashkeel": "بَعَدَه نايِم؟",
+			"english": "Is he still asleep?",
+			"transliteration": "ba3ada naayim?",
+			"wordAlignments": [
+				{
+					"arabic": "بعده",
+					"english": "Is he still",
+					"transliteration": "ba3ada"
+				},
+				{
+					"arabic": "نايم؟",
+					"english": "asleep?",
+					"transliteration": "naayim?"
+				}
+			],
+			"targetWords": [
+				"Still / yet"
+			]
+		},
+		{
+			"arabic": "الإمتحان عقب باكر.",
+			"arabicTashkeel": "الإمتِحان عُقب باكِر.",
+			"english": "The exam is the day after tomorrow.",
+			"transliteration": "il-imti7aan 3ugub baachir.",
+			"wordAlignments": [
+				{
+					"arabic": "الإمتحان",
+					"english": "The exam is",
+					"transliteration": "il-imti7aan"
+				},
+				{
+					"arabic": "عقب",
+					"english": "after",
+					"transliteration": "3ugub"
+				},
+				{
+					"arabic": "باكر.",
+					"english": "tomorrow.",
+					"transliteration": "baachir."
+				}
+			],
+			"targetWords": [
+				"Day after tomorrow"
+			]
+		},
+		{
+			"arabic": "أول أمس كان عطلة.",
+			"arabicTashkeel": "أوَّل أمس كان عُطلة.",
+			"english": "The day before yesterday was a holiday.",
+			"transliteration": "awwal ams kaan 3utla.",
+			"wordAlignments": [
+				{
+					"arabic": "أول",
+					"english": "Before",
+					"transliteration": "awwal"
+				},
+				{
+					"arabic": "أمس",
+					"english": "yesterday",
+					"transliteration": "ams"
+				},
+				{
+					"arabic": "كان",
+					"english": "was",
+					"transliteration": "kaan"
+				},
+				{
+					"arabic": "عطلة.",
+					"english": "a holiday.",
+					"transliteration": "3utla."
+				}
+			],
+			"targetWords": [
+				"Day before yesterday"
+			]
+		},
+		{
+			"arabic": "شو بتسوي هالأسبوع؟",
+			"arabicTashkeel": "شو بِتسَوّي هالأسبوع؟",
+			"english": "What are you doing this week?",
+			"transliteration": "shu bitsawwi hal-usboo3?",
+			"wordAlignments": [
+				{
+					"arabic": "شو",
+					"english": "What",
+					"transliteration": "shu"
+				},
+				{
+					"arabic": "بتسوي",
+					"english": "will you do",
+					"transliteration": "bitsawwi"
+				},
+				{
+					"arabic": "هالأسبوع؟",
+					"english": "this week?",
+					"transliteration": "hal-usboo3?"
+				}
+			],
+			"targetWords": [
+				"This week"
+			]
+		},
+		{
+			"arabic": "هالسنة صعبة.",
+			"arabicTashkeel": "هالسَّنة صَعبة.",
+			"english": "This year is hard.",
+			"transliteration": "has-sana sa3ba.",
+			"wordAlignments": [
+				{
+					"arabic": "هالسنة",
+					"english": "This year is",
+					"transliteration": "has-sana"
+				},
+				{
+					"arabic": "صعبة.",
+					"english": "hard.",
+					"transliteration": "sa3ba."
+				}
+			],
+			"targetWords": [
+				"This year"
+			]
+		},
+		{
+			"arabic": "السنة اللي طافت كانت أحسن.",
+			"arabicTashkeel": "السَّنة اللي طافَت كانَت أحسَن.",
+			"english": "Last year was better.",
+			"transliteration": "is-sana illi taafat kaanat a7san.",
+			"wordAlignments": [
+				{
+					"arabic": "السنة",
+					"english": "The year",
+					"transliteration": "is-sana"
+				},
+				{
+					"arabic": "اللي",
+					"english": "that",
+					"transliteration": "illi"
+				},
+				{
+					"arabic": "طافت",
+					"english": "passed",
+					"transliteration": "taafat"
+				},
+				{
+					"arabic": "كانت",
+					"english": "was",
+					"transliteration": "kaanat"
+				},
+				{
+					"arabic": "أحسن.",
+					"english": "better.",
+					"transliteration": "a7san."
+				}
+			],
+			"targetWords": [
+				"Last year"
+			]
+		},
+		{
+			"arabic": "السنة الجاية إن شاء الله.",
+			"arabicTashkeel": "السَّنة الجاية إن شاء الله.",
+			"english": "Next year, God willing.",
+			"transliteration": "is-sana il-yaaya in shaa2 allah.",
+			"wordAlignments": [
+				{
+					"arabic": "السنة",
+					"english": "The year",
+					"transliteration": "is-sana"
+				},
+				{
+					"arabic": "الجاية",
+					"english": "coming",
+					"transliteration": "il-yaaya"
+				},
+				{
+					"arabic": "إن",
+					"english": "if",
+					"transliteration": "in"
+				},
+				{
+					"arabic": "شاء",
+					"english": "willed",
+					"transliteration": "shaa2"
+				},
+				{
+					"arabic": "الله.",
+					"english": "God.",
+					"transliteration": "allah."
+				}
+			],
+			"targetWords": [
+				"Next year"
+			]
+		},
+		{
+			"arabic": "إتصلت قبل شوي.",
+			"arabicTashkeel": "إتَّصلَت قَبل شْوَي.",
+			"english": "She called a moment ago.",
+			"transliteration": "ittaslat gabil shway.",
+			"wordAlignments": [
+				{
+					"arabic": "إتصلت",
+					"english": "She called",
+					"transliteration": "ittaslat"
+				},
+				{
+					"arabic": "قبل",
+					"english": "before",
+					"transliteration": "gabil"
+				},
+				{
+					"arabic": "شوي.",
+					"english": "a little.",
+					"transliteration": "shway."
+				}
+			],
+			"targetWords": [
+				"A moment ago"
+			]
+		},
+		{
+			"arabic": "الأكل بيكون جاهز بعد شوي.",
+			"arabicTashkeel": "الأكل بيكون جاهِز بَعد شْوَي.",
+			"english": "The food will be ready in a little while.",
+			"transliteration": "il-akl beekoon jaahiz ba3d shway.",
+			"wordAlignments": [
+				{
+					"arabic": "الأكل",
+					"english": "The food",
+					"transliteration": "il-akl"
+				},
+				{
+					"arabic": "بيكون",
+					"english": "will be",
+					"transliteration": "beekoon"
+				},
+				{
+					"arabic": "جاهز",
+					"english": "ready",
+					"transliteration": "jaahiz"
+				},
+				{
+					"arabic": "بعد",
+					"english": "after",
+					"transliteration": "ba3d"
+				},
+				{
+					"arabic": "شوي.",
+					"english": "a little.",
+					"transliteration": "shway."
+				}
+			],
+			"targetWords": [
+				"In a little while"
+			]
+		},
+		{
+			"arabic": "الليلة في مباراة.",
+			"arabicTashkeel": "الليلة في مُباراة.",
+			"english": "Tonight there's a match.",
+			"transliteration": "il-leela fee mubaaraa.",
+			"wordAlignments": [
+				{
+					"arabic": "الليلة",
+					"english": "Tonight",
+					"transliteration": "il-leela"
+				},
+				{
+					"arabic": "في",
+					"english": "there is",
+					"transliteration": "fee"
+				},
+				{
+					"arabic": "مباراة.",
+					"english": "a match.",
+					"transliteration": "mubaaraa."
+				}
+			],
+			"targetWords": [
+				"Tonight"
+			]
+		},
+		{
+			"arabic": "دورته بكل مكان.",
+			"arabicTashkeel": "دَوَّرتَه بكِل مَكان.",
+			"english": "I looked for it everywhere.",
+			"transliteration": "dawwarta b-kil makaan.",
+			"wordAlignments": [
+				{
+					"arabic": "دورته",
+					"english": "I looked for it",
+					"transliteration": "dawwarta"
+				},
+				{
+					"arabic": "بكل",
+					"english": "in every",
+					"transliteration": "b-kil"
+				},
+				{
+					"arabic": "مكان.",
+					"english": "place.",
+					"transliteration": "makaan."
+				}
+			],
+			"targetWords": [
+				"Everywhere"
+			]
+		},
+		{
+			"arabic": "دايما ناكل سوا.",
+			"arabicTashkeel": "دايماً ناكِل سَوا.",
+			"english": "We always eat together.",
+			"transliteration": "daayman naakil sawa.",
+			"wordAlignments": [
+				{
+					"arabic": "دايما",
+					"english": "Always",
+					"transliteration": "daayman"
+				},
+				{
+					"arabic": "ناكل",
+					"english": "we eat",
+					"transliteration": "naakil"
+				},
+				{
+					"arabic": "سوا.",
+					"english": "together.",
+					"transliteration": "sawa."
+				}
+			],
+			"targetWords": [
+				"Always"
+			]
+		},
+		{
+			"arabic": "ما أنسى أبد.",
+			"arabicTashkeel": "ما أنسى أبَد.",
+			"english": "I never forget.",
+			"transliteration": "ma ansa abad.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "أنسى",
+					"english": "I forget",
+					"transliteration": "ansa"
+				},
+				{
+					"arabic": "أبد.",
+					"english": "ever.",
+					"transliteration": "abad."
+				}
+			],
+			"targetWords": [
+				"Never"
+			]
+		},
+		{
+			"arabic": "أحيانا أكون تعبان.",
+			"arabicTashkeel": "أحياناً أكون تَعبان.",
+			"english": "Sometimes I'm tired.",
+			"transliteration": "a7yaanan akoon ta3baan.",
+			"wordAlignments": [
+				{
+					"arabic": "أحيانا",
+					"english": "Sometimes",
+					"transliteration": "a7yaanan"
+				},
+				{
+					"arabic": "أكون",
+					"english": "I am",
+					"transliteration": "akoon"
+				},
+				{
+					"arabic": "تعبان.",
+					"english": "tired.",
+					"transliteration": "ta3baan."
+				}
+			],
+			"targetWords": [
+				"Sometimes"
+			]
+		},
+		{
+			"arabic": "المول الجديد بيفتح قريب.",
+			"arabicTashkeel": "المول الجْديد بيفتَح قَريب.",
+			"english": "The new mall opens soon.",
+			"transliteration": "il-mool il-ydeed beefta7 gareeb.",
+			"wordAlignments": [
+				{
+					"arabic": "المول",
+					"english": "The mall",
+					"transliteration": "il-mool"
+				},
+				{
+					"arabic": "الجديد",
+					"english": "new",
+					"transliteration": "il-ydeed"
+				},
+				{
+					"arabic": "بيفتح",
+					"english": "will open",
+					"transliteration": "beefta7"
+				},
+				{
+					"arabic": "قريب.",
+					"english": "soon.",
+					"transliteration": "gareeb."
+				}
+			],
+			"targetWords": [
+				"Soon"
+			]
+		},
+		{
+			"arabic": "بعدني ما أكلت.",
+			"arabicTashkeel": "بَعَدني ما أكَلت.",
+			"english": "I haven't eaten yet.",
+			"transliteration": "ba3adni ma akalt.",
+			"wordAlignments": [
+				{
+					"arabic": "بعدني",
+					"english": "I still",
+					"transliteration": "ba3adni"
+				},
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "أكلت.",
+					"english": "have eaten.",
+					"transliteration": "akalt."
+				}
+			],
+			"targetWords": [
+				"Still / yet"
+			]
+		},
+		{
+			"arabic": "بسافر عقب باكر.",
+			"arabicTashkeel": "بَسافِر عُقب باكِر.",
+			"english": "I'm travelling the day after tomorrow.",
+			"transliteration": "basaafir 3ugub baachir.",
+			"wordAlignments": [
+				{
+					"arabic": "بسافر",
+					"english": "I'll travel",
+					"transliteration": "basaafir"
+				},
+				{
+					"arabic": "عقب",
+					"english": "after",
+					"transliteration": "3ugub"
+				},
+				{
+					"arabic": "باكر.",
+					"english": "tomorrow.",
+					"transliteration": "baachir."
+				}
+			],
+			"targetWords": [
+				"Day after tomorrow"
+			]
+		},
+		{
+			"arabic": "شفته أول أمس.",
+			"arabicTashkeel": "شِفتَه أوَّل أمس.",
+			"english": "I saw him the day before yesterday.",
+			"transliteration": "shifta awwal ams.",
+			"wordAlignments": [
+				{
+					"arabic": "شفته",
+					"english": "I saw him",
+					"transliteration": "shifta"
+				},
+				{
+					"arabic": "أول",
+					"english": "before",
+					"transliteration": "awwal"
+				},
+				{
+					"arabic": "أمس.",
+					"english": "yesterday.",
+					"transliteration": "ams."
+				}
+			],
+			"targetWords": [
+				"Day before yesterday"
+			]
+		},
+		{
+			"arabic": "هالأسبوع ما في دوام يوم الخميس.",
+			"arabicTashkeel": "هالأسبوع ما في دَوام يوم الخَميس.",
+			"english": "This week there's no work on Thursday.",
+			"transliteration": "hal-usboo3 ma fee dawaam yoom il-khamees.",
+			"wordAlignments": [
+				{
+					"arabic": "هالأسبوع",
+					"english": "This week",
+					"transliteration": "hal-usboo3"
+				},
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "في",
+					"english": "there is",
+					"transliteration": "fee"
+				},
+				{
+					"arabic": "دوام",
+					"english": "work",
+					"transliteration": "dawaam"
+				},
+				{
+					"arabic": "يوم",
+					"english": "on",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "الخميس.",
+					"english": "Thursday.",
+					"transliteration": "il-khamees."
+				}
+			],
+			"targetWords": [
+				"This week"
+			]
+		},
+		{
+			"arabic": "هالسنة حر وايد.",
+			"arabicTashkeel": "هالسَّنة حَر وايد.",
+			"english": "This year it's very hot.",
+			"transliteration": "has-sana 7arr waayid.",
+			"wordAlignments": [
+				{
+					"arabic": "هالسنة",
+					"english": "This year",
+					"transliteration": "has-sana"
+				},
+				{
+					"arabic": "حر",
+					"english": "it's hot",
+					"transliteration": "7arr"
+				},
+				{
+					"arabic": "وايد.",
+					"english": "very.",
+					"transliteration": "waayid."
+				}
+			],
+			"targetWords": [
+				"This year"
+			]
+		},
+		{
+			"arabic": "السنة اللي طافت سكنت بالدوحة.",
+			"arabicTashkeel": "السَّنة اللي طافَت سِكَنت بالدّوحة.",
+			"english": "Last year I lived in Doha.",
+			"transliteration": "is-sana illi taafat sikant bid-doo7a.",
+			"wordAlignments": [
+				{
+					"arabic": "السنة",
+					"english": "The year",
+					"transliteration": "is-sana"
+				},
+				{
+					"arabic": "اللي",
+					"english": "that",
+					"transliteration": "illi"
+				},
+				{
+					"arabic": "طافت",
+					"english": "passed",
+					"transliteration": "taafat"
+				},
+				{
+					"arabic": "سكنت",
+					"english": "I lived",
+					"transliteration": "sikant"
+				},
+				{
+					"arabic": "بالدوحة.",
+					"english": "in Doha.",
+					"transliteration": "bid-doo7a."
+				}
+			],
+			"targetWords": [
+				"Last year"
+			]
+		},
+		{
+			"arabic": "السنة الجاية بدرس إنجليزي.",
+			"arabicTashkeel": "السَّنة الجاية بَدرِس إنجليزي.",
+			"english": "Next year I'll study English.",
+			"transliteration": "is-sana il-yaaya badris ingleezi.",
+			"wordAlignments": [
+				{
+					"arabic": "السنة",
+					"english": "The year",
+					"transliteration": "is-sana"
+				},
+				{
+					"arabic": "الجاية",
+					"english": "coming",
+					"transliteration": "il-yaaya"
+				},
+				{
+					"arabic": "بدرس",
+					"english": "I'll study",
+					"transliteration": "badris"
+				},
+				{
+					"arabic": "إنجليزي.",
+					"english": "English.",
+					"transliteration": "ingleezi."
+				}
+			],
+			"targetWords": [
+				"Next year"
+			]
+		},
+		{
+			"arabic": "كنت هني قبل شوي.",
+			"arabicTashkeel": "كِنت هِني قَبل شْوَي.",
+			"english": "I was here a moment ago.",
+			"transliteration": "kint hini gabil shway.",
+			"wordAlignments": [
+				{
+					"arabic": "كنت",
+					"english": "I was",
+					"transliteration": "kint"
+				},
+				{
+					"arabic": "هني",
+					"english": "here",
+					"transliteration": "hini"
+				},
+				{
+					"arabic": "قبل",
+					"english": "before",
+					"transliteration": "gabil"
+				},
+				{
+					"arabic": "شوي.",
+					"english": "a little.",
+					"transliteration": "shway."
+				}
+			],
+			"targetWords": [
+				"A moment ago"
+			]
+		},
+		{
+			"arabic": "أنطر، برد بعد شوي.",
+			"arabicTashkeel": "أنطِر، بَرِد بَعد شْوَي.",
+			"english": "Wait, I'll come back in a little while.",
+			"transliteration": "antir, baridd ba3d shway.",
+			"wordAlignments": [
+				{
+					"arabic": "أنطر،",
+					"english": "Wait,",
+					"transliteration": "antir,"
+				},
+				{
+					"arabic": "برد",
+					"english": "I'll come back",
+					"transliteration": "baridd"
+				},
+				{
+					"arabic": "بعد",
+					"english": "after",
+					"transliteration": "ba3d"
+				},
+				{
+					"arabic": "شوي.",
+					"english": "a little.",
+					"transliteration": "shway."
+				}
+			],
+			"targetWords": [
+				"In a little while"
+			]
+		},
+		{
+			"arabic": "شو بتسوي الليلة؟",
+			"arabicTashkeel": "شو بِتسَوّي الليلة؟",
+			"english": "What are you doing tonight?",
+			"transliteration": "shu bitsawwi il-leela?",
+			"wordAlignments": [
+				{
+					"arabic": "شو",
+					"english": "What",
+					"transliteration": "shu"
+				},
+				{
+					"arabic": "بتسوي",
+					"english": "will you do",
+					"transliteration": "bitsawwi"
+				},
+				{
+					"arabic": "الليلة؟",
+					"english": "tonight?",
+					"transliteration": "il-leela?"
+				}
+			],
+			"targetWords": [
+				"Tonight"
+			]
+		},
+		{
+			"arabic": "النخل بكل مكان بالعين.",
+			"arabicTashkeel": "النَّخل بكِل مَكان بالعين.",
+			"english": "Palm trees are everywhere in Al Ain.",
+			"transliteration": "in-nakhl b-kil makaan bil-3een.",
+			"wordAlignments": [
+				{
+					"arabic": "النخل",
+					"english": "Palm trees",
+					"transliteration": "in-nakhl"
+				},
+				{
+					"arabic": "بكل",
+					"english": "in every",
+					"transliteration": "b-kil"
+				},
+				{
+					"arabic": "مكان",
+					"english": "place",
+					"transliteration": "makaan"
+				},
+				{
+					"arabic": "بالعين.",
+					"english": "in Al Ain.",
+					"transliteration": "bil-3een."
+				}
+			],
+			"targetWords": [
+				"Everywhere"
+			]
+		},
+		{
+			"arabic": "دايما لو أحيانا؟",
+			"arabicTashkeel": "دايماً لو أحياناً؟",
+			"english": "Always or sometimes?",
+			"transliteration": "daayman law a7yaanan?",
+			"wordAlignments": [
+				{
+					"arabic": "دايما",
+					"english": "Always",
+					"transliteration": "daayman"
+				},
+				{
+					"arabic": "لو",
+					"english": "or",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "أحيانا؟",
+					"english": "sometimes?",
+					"transliteration": "a7yaanan?"
+				}
+			],
+			"targetWords": [
+				"Always",
+				"Sometimes"
+			]
+		},
+		{
+			"arabic": "أبد مرة ثانية!",
+			"arabicTashkeel": "أبَد مَرّة ثانية!",
+			"english": "Never again!",
+			"transliteration": "abad marra thaanya!",
+			"wordAlignments": [
+				{
+					"arabic": "أبد",
+					"english": "Never",
+					"transliteration": "abad"
+				},
+				{
+					"arabic": "مرة",
+					"english": "time",
+					"transliteration": "marra"
+				},
+				{
+					"arabic": "ثانية!",
+					"english": "second!",
+					"transliteration": "thaanya!"
+				}
+			],
+			"targetWords": [
+				"Never"
+			]
+		},
+		{
+			"arabic": "أحيانا إي، أحيانا لا.",
+			"arabicTashkeel": "أحياناً إي، أحياناً لا.",
+			"english": "Sometimes yes, sometimes no.",
+			"transliteration": "a7yaanan ee, a7yaanan laa.",
+			"wordAlignments": [
+				{
+					"arabic": "أحيانا",
+					"english": "Sometimes",
+					"transliteration": "a7yaanan"
+				},
+				{
+					"arabic": "إي،",
+					"english": "yes,",
+					"transliteration": "ee,"
+				},
+				{
+					"arabic": "أحيانا",
+					"english": "sometimes",
+					"transliteration": "a7yaanan"
+				},
+				{
+					"arabic": "لا.",
+					"english": "no.",
+					"transliteration": "laa."
+				}
+			],
+			"targetWords": [
+				"Sometimes"
+			]
+		},
+		{
+			"arabic": "النتايج بتطلع قريب.",
+			"arabicTashkeel": "النَّتايِج بتِطلَع قَريب.",
+			"english": "The results come out soon.",
+			"transliteration": "in-nataayij bititla3 gareeb.",
+			"wordAlignments": [
+				{
+					"arabic": "النتايج",
+					"english": "The results",
+					"transliteration": "in-nataayij"
+				},
+				{
+					"arabic": "بتطلع",
+					"english": "will come out",
+					"transliteration": "bititla3"
+				},
+				{
+					"arabic": "قريب.",
+					"english": "soon.",
+					"transliteration": "gareeb."
+				}
+			],
+			"targetWords": [
+				"Soon"
+			]
+		},
+		{
+			"arabic": "بعدك بدبي؟",
+			"arabicTashkeel": "بَعَدَك بدُبَي؟",
+			"english": "Are you still in Dubai?",
+			"transliteration": "ba3adak b-dubay?",
+			"wordAlignments": [
+				{
+					"arabic": "بعدك",
+					"english": "Are you still",
+					"transliteration": "ba3adak"
+				},
+				{
+					"arabic": "بدبي؟",
+					"english": "in Dubai?",
+					"transliteration": "b-dubay?"
+				}
+			],
+			"targetWords": [
+				"Still / yet"
+			]
+		},
+		{
+			"arabic": "باكر لو عقب باكر؟",
+			"arabicTashkeel": "باكِر لو عُقب باكِر؟",
+			"english": "Tomorrow or the day after tomorrow?",
+			"transliteration": "baachir law 3ugub baachir?",
+			"wordAlignments": [
+				{
+					"arabic": "باكر",
+					"english": "Tomorrow",
+					"transliteration": "baachir"
+				},
+				{
+					"arabic": "لو",
+					"english": "or",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "عقب",
+					"english": "after",
+					"transliteration": "3ugub"
+				},
+				{
+					"arabic": "باكر؟",
+					"english": "tomorrow?",
+					"transliteration": "baachir?"
+				}
+			],
+			"targetWords": [
+				"Day after tomorrow"
+			]
+		},
+		{
+			"arabic": "مو أمس، أول أمس.",
+			"arabicTashkeel": "مو أمس، أوَّل أمس.",
+			"english": "Not yesterday, the day before yesterday.",
+			"transliteration": "moo ams, awwal ams.",
+			"wordAlignments": [
+				{
+					"arabic": "مو",
+					"english": "Not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "أمس،",
+					"english": "yesterday,",
+					"transliteration": "ams,"
+				},
+				{
+					"arabic": "أول",
+					"english": "before",
+					"transliteration": "awwal"
+				},
+				{
+					"arabic": "أمس.",
+					"english": "yesterday.",
+					"transliteration": "ams."
+				}
+			],
+			"targetWords": [
+				"Day before yesterday"
+			]
+		},
+		{
+			"arabic": "الموعد هالأسبوع.",
+			"arabicTashkeel": "المَوعِد هالأسبوع.",
+			"english": "The appointment is this week.",
+			"transliteration": "il-maw3id hal-usboo3.",
+			"wordAlignments": [
+				{
+					"arabic": "الموعد",
+					"english": "The appointment is",
+					"transliteration": "il-maw3id"
+				},
+				{
+					"arabic": "هالأسبوع.",
+					"english": "this week.",
+					"transliteration": "hal-usboo3."
+				}
+			],
+			"targetWords": [
+				"This week"
+			]
+		},
+		{
+			"arabic": "هالسنة لو السنة الجاية؟",
+			"arabicTashkeel": "هالسَّنة لو السَّنة الجاية؟",
+			"english": "This year or next year?",
+			"transliteration": "has-sana law is-sana il-yaaya?",
+			"wordAlignments": [
+				{
+					"arabic": "هالسنة",
+					"english": "This year",
+					"transliteration": "has-sana"
+				},
+				{
+					"arabic": "لو",
+					"english": "or",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "السنة",
+					"english": "the year",
+					"transliteration": "is-sana"
+				},
+				{
+					"arabic": "الجاية؟",
+					"english": "coming?",
+					"transliteration": "il-yaaya?"
+				}
+			],
+			"targetWords": [
+				"This year",
+				"Next year"
+			]
+		},
+		{
+			"arabic": "الليلة الساعة تسع.",
+			"arabicTashkeel": "الليلة السّاعة تِسع.",
+			"english": "Tonight at nine.",
+			"transliteration": "il-leela is-saa3a tisa3.",
+			"wordAlignments": [
+				{
+					"arabic": "الليلة",
+					"english": "Tonight",
+					"transliteration": "il-leela"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "at",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "تسع.",
+					"english": "nine.",
+					"transliteration": "tisa3."
+				}
+			],
+			"targetWords": [
+				"Tonight"
+			]
+		},
+		{
+			"arabic": "العيال يخلون ألعابهم بكل مكان.",
+			"arabicTashkeel": "العْيال يْخَلّون ألعابهُم بكِل مَكان.",
+			"english": "The kids leave their toys everywhere.",
+			"transliteration": "il-3yaal ykhalloon al3aabhum b-kil makaan.",
+			"wordAlignments": [
+				{
+					"arabic": "العيال",
+					"english": "The kids",
+					"transliteration": "il-3yaal"
+				},
+				{
+					"arabic": "يخلون",
+					"english": "leave",
+					"transliteration": "ykhalloon"
+				},
+				{
+					"arabic": "ألعابهم",
+					"english": "their toys",
+					"transliteration": "al3aabhum"
+				},
+				{
+					"arabic": "بكل",
+					"english": "in every",
+					"transliteration": "b-kil"
+				},
+				{
+					"arabic": "مكان.",
+					"english": "place.",
+					"transliteration": "makaan."
+				}
+			],
+			"targetWords": [
+				"Everywhere"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "My Plans",
+			"sentences": [
+				{
+					"arabic": "هالأسبوع مشغول وايد بالدوام.",
+					"arabicTashkeel": "هالأسبوع مَشغول وايد بالدَّوام.",
+					"english": "This week I'm very busy at work.",
+					"transliteration": "hal-usboo3 mashghool waayid bid-dawaam.",
+					"wordAlignments": [
+						{
+							"arabic": "هالأسبوع",
+							"english": "This week",
+							"transliteration": "hal-usboo3"
+						},
+						{
+							"arabic": "مشغول",
+							"english": "I'm busy",
+							"transliteration": "mashghool"
+						},
+						{
+							"arabic": "وايد",
+							"english": "very",
+							"transliteration": "waayid"
+						},
+						{
+							"arabic": "بالدوام.",
+							"english": "at work.",
+							"transliteration": "bid-dawaam."
+						}
+					]
+				},
+				{
+					"arabic": "عقب باكر بسافر الكويت.",
+					"arabicTashkeel": "عُقب باكِر بَسافِر الكُوَيت.",
+					"english": "The day after tomorrow I'm travelling to Kuwait.",
+					"transliteration": "3ugub baachir basaafir il-kuwayt.",
+					"wordAlignments": [
+						{
+							"arabic": "عقب",
+							"english": "After",
+							"transliteration": "3ugub"
+						},
+						{
+							"arabic": "باكر",
+							"english": "tomorrow",
+							"transliteration": "baachir"
+						},
+						{
+							"arabic": "بسافر",
+							"english": "I'll travel",
+							"transliteration": "basaafir"
+						},
+						{
+							"arabic": "الكويت.",
+							"english": "to Kuwait.",
+							"transliteration": "il-kuwayt."
+						}
+					]
+				},
+				{
+					"arabic": "دايما أزور جدتي هناك.",
+					"arabicTashkeel": "دايماً أزور جَدّتي هْناك.",
+					"english": "I always visit my grandmother there.",
+					"transliteration": "daayman azoor yaddati hnaak.",
+					"wordAlignments": [
+						{
+							"arabic": "دايما",
+							"english": "Always",
+							"transliteration": "daayman"
+						},
+						{
+							"arabic": "أزور",
+							"english": "I visit",
+							"transliteration": "azoor"
+						},
+						{
+							"arabic": "جدتي",
+							"english": "my grandmother",
+							"transliteration": "yaddati"
+						},
+						{
+							"arabic": "هناك.",
+							"english": "there.",
+							"transliteration": "hnaak."
+						}
+					]
+				},
+				{
+					"arabic": "السنة الجاية أبي أدرس بلندن.",
+					"arabicTashkeel": "السَّنة الجاية أبي أدرِس بلَندَن.",
+					"english": "Next year I want to study in London.",
+					"transliteration": "is-sana il-yaaya abi adris b-landan.",
+					"wordAlignments": [
+						{
+							"arabic": "السنة",
+							"english": "The year",
+							"transliteration": "is-sana"
+						},
+						{
+							"arabic": "الجاية",
+							"english": "coming",
+							"transliteration": "il-yaaya"
+						},
+						{
+							"arabic": "أبي",
+							"english": "I want",
+							"transliteration": "abi"
+						},
+						{
+							"arabic": "أدرس",
+							"english": "to study",
+							"transliteration": "adris"
+						},
+						{
+							"arabic": "بلندن.",
+							"english": "in London.",
+							"transliteration": "b-landan."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "Where Is Salem?",
+			"sentences": [
+				{
+					"arabic": "وين سالم؟ كان هني قبل شوي.",
+					"arabicTashkeel": "وين سالِم؟ كان هِني قَبل شْوَي.",
+					"english": "Where is Salem? He was here a moment ago.",
+					"transliteration": "ween saalim? kaan hini gabil shway.",
+					"wordAlignments": [
+						{
+							"arabic": "وين",
+							"english": "Where is",
+							"transliteration": "ween"
+						},
+						{
+							"arabic": "سالم؟",
+							"english": "Salem?",
+							"transliteration": "saalim?"
+						},
+						{
+							"arabic": "كان",
+							"english": "He was",
+							"transliteration": "kaan"
+						},
+						{
+							"arabic": "هني",
+							"english": "here",
+							"transliteration": "hini"
+						},
+						{
+							"arabic": "قبل",
+							"english": "before",
+							"transliteration": "gabil"
+						},
+						{
+							"arabic": "شوي.",
+							"english": "a little.",
+							"transliteration": "shway."
+						}
+					]
+				},
+				{
+					"arabic": "دورته بكل مكان.",
+					"arabicTashkeel": "دَوَّرتَه بكِل مَكان.",
+					"english": "I looked for him everywhere.",
+					"transliteration": "dawwarta b-kil makaan.",
+					"wordAlignments": [
+						{
+							"arabic": "دورته",
+							"english": "I looked for him",
+							"transliteration": "dawwarta"
+						},
+						{
+							"arabic": "بكل",
+							"english": "in every",
+							"transliteration": "b-kil"
+						},
+						{
+							"arabic": "مكان.",
+							"english": "place.",
+							"transliteration": "makaan."
+						}
+					]
+				},
+				{
+					"arabic": "بعده بالمول، بيجي بعد شوي.",
+					"arabicTashkeel": "بَعَدَه بالمول، بِيجي بَعد شْوَي.",
+					"english": "He's still at the mall; he'll come in a little while.",
+					"transliteration": "ba3ada bil-mool, biyi ba3d shway.",
+					"wordAlignments": [
+						{
+							"arabic": "بعده",
+							"english": "He's still",
+							"transliteration": "ba3ada"
+						},
+						{
+							"arabic": "بالمول،",
+							"english": "at the mall,",
+							"transliteration": "bil-mool,"
+						},
+						{
+							"arabic": "بيجي",
+							"english": "he'll come",
+							"transliteration": "biyi"
+						},
+						{
+							"arabic": "بعد",
+							"english": "after",
+							"transliteration": "ba3d"
+						},
+						{
+							"arabic": "شوي.",
+							"english": "a little.",
+							"transliteration": "shway."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is planning a busy week with an Emirati colleague and they are comparing their schedules.",
+		"studentRole": "A colleague learning Gulf Arabic.",
+		"otherRole": "The Emirati colleague, who is always travelling.",
+		"goalEnglish": "Talk about what you always, sometimes or never do, and agree on a day this week (tomorrow, the day after, tonight) to meet.",
+		"targetWords": [
+			"Always",
+			"Sometimes",
+			"Never",
+			"Still / yet",
+			"Day after tomorrow",
+			"This week",
+			"Tonight",
+			"Soon"
+		]
+	}
+}

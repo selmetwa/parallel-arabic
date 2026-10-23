@@ -1,0 +1,2027 @@
+{
+	"vocab": [
+		{
+			"arabic": "موقف",
+			"arabicTashkeel": "مَوقِف",
+			"english": "Stop (bus)",
+			"transliteration": "mawgif",
+			"wordAlignments": [
+				{
+					"arabic": "موقف",
+					"english": "Stop",
+					"transliteration": "mawgif"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "محطة الباصات",
+			"arabicTashkeel": "مَحَطّة الباصات",
+			"english": "Bus terminal",
+			"transliteration": "ma7attat il-baasaat",
+			"wordAlignments": [
+				{
+					"arabic": "محطة",
+					"english": "Station of",
+					"transliteration": "ma7attat"
+				},
+				{
+					"arabic": "الباصات",
+					"english": "the buses",
+					"transliteration": "il-baasaat"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "خط",
+			"arabicTashkeel": "خَط",
+			"english": "Route / line",
+			"transliteration": "khatt",
+			"wordAlignments": [
+				{
+					"arabic": "خط",
+					"english": "Route",
+					"transliteration": "khatt"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "أجرة",
+			"arabicTashkeel": "أُجرة",
+			"english": "Fare",
+			"transliteration": "ujra",
+			"wordAlignments": [
+				{
+					"arabic": "أجرة",
+					"english": "Fare",
+					"transliteration": "ujra"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "الشارع الرئيسي",
+			"arabicTashkeel": "الشّارع الرَّئيسي",
+			"english": "Main street",
+			"transliteration": "ish-shaari3 ir-ra2eesi",
+			"wordAlignments": [
+				{
+					"arabic": "الشارع",
+					"english": "The street",
+					"transliteration": "ish-shaari3"
+				},
+				{
+					"arabic": "الرئيسي",
+					"english": "main",
+					"transliteration": "ir-ra2eesi"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "نفق",
+			"arabicTashkeel": "نَفَق",
+			"english": "Tunnel",
+			"transliteration": "nafag",
+			"wordAlignments": [
+				{
+					"arabic": "نفق",
+					"english": "Tunnel",
+					"transliteration": "nafag"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "يمر",
+			"arabicTashkeel": "يْمُر",
+			"english": "It passes by",
+			"transliteration": "ymurr",
+			"wordAlignments": [
+				{
+					"arabic": "يمر",
+					"english": "It passes",
+					"transliteration": "ymurr"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "ياخذ",
+			"arabicTashkeel": "ياخِذ",
+			"english": "It takes (time)",
+			"transliteration": "yaakhidh",
+			"wordAlignments": [
+				{
+					"arabic": "ياخذ",
+					"english": "It takes",
+					"transliteration": "yaakhidh"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "مسافة",
+			"arabicTashkeel": "مَسافة",
+			"english": "Distance",
+			"transliteration": "masaafa",
+			"wordAlignments": [
+				{
+					"arabic": "مسافة",
+					"english": "Distance",
+					"transliteration": "masaafa"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "مباشر",
+			"arabicTashkeel": "مُباشِر",
+			"english": "Direct",
+			"transliteration": "mubaashir",
+			"wordAlignments": [
+				{
+					"arabic": "مباشر",
+					"english": "Direct",
+					"transliteration": "mubaashir"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "بدل",
+			"arabicTashkeel": "بَدِّل",
+			"english": "Change (vehicles)!",
+			"transliteration": "baddil",
+			"wordAlignments": [
+				{
+					"arabic": "بدل",
+					"english": "Change",
+					"transliteration": "baddil"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "إسأل",
+			"arabicTashkeel": "إسأل",
+			"english": "Ask!",
+			"transliteration": "is2al",
+			"wordAlignments": [
+				{
+					"arabic": "إسأل",
+					"english": "Ask",
+					"transliteration": "is2al"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "إنزل",
+			"arabicTashkeel": "إنزِل",
+			"english": "Get off!",
+			"transliteration": "inzil",
+			"wordAlignments": [
+				{
+					"arabic": "إنزل",
+					"english": "Get off",
+					"transliteration": "inzil"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "خذ",
+			"arabicTashkeel": "خُذ",
+			"english": "Take!",
+			"transliteration": "khudh",
+			"wordAlignments": [
+				{
+					"arabic": "خذ",
+					"english": "Take",
+					"transliteration": "khudh"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "بالطريق",
+			"arabicTashkeel": "بالطَّريق",
+			"english": "On the way",
+			"transliteration": "bit-tareeg",
+			"wordAlignments": [
+				{
+					"arabic": "بالطريق",
+					"english": "On the way",
+					"transliteration": "bit-tareeg"
+				}
+			],
+			"partOfSpeech": "phrase"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "وين موقف الباص؟",
+			"arabicTashkeel": "وين مَوقِف الباص؟",
+			"english": "Where is the bus stop?",
+			"transliteration": "ween mawgif il-baas?",
+			"wordAlignments": [
+				{
+					"arabic": "وين",
+					"english": "Where is",
+					"transliteration": "ween"
+				},
+				{
+					"arabic": "موقف",
+					"english": "the stop of",
+					"transliteration": "mawgif"
+				},
+				{
+					"arabic": "الباص؟",
+					"english": "the bus?",
+					"transliteration": "il-baas?"
+				}
+			],
+			"targetWords": [
+				"Stop (bus)"
+			]
+		},
+		{
+			"arabic": "الباصات تطلع من محطة الباصات بسوق الذهب.",
+			"arabicTashkeel": "الباصات تِطلَع مِن مَحَطّة الباصات بسوق الذَّهَب.",
+			"english": "The buses leave from the Gold Souk terminal.",
+			"transliteration": "il-baasaat titla3 min ma7attat il-baasaat b-soog idh-dhahab.",
+			"wordAlignments": [
+				{
+					"arabic": "الباصات",
+					"english": "The buses",
+					"transliteration": "il-baasaat"
+				},
+				{
+					"arabic": "تطلع",
+					"english": "leave",
+					"transliteration": "titla3"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "محطة",
+					"english": "the station of",
+					"transliteration": "ma7attat"
+				},
+				{
+					"arabic": "الباصات",
+					"english": "the buses",
+					"transliteration": "il-baasaat"
+				},
+				{
+					"arabic": "بسوق",
+					"english": "at the souk of",
+					"transliteration": "b-soog"
+				},
+				{
+					"arabic": "الذهب.",
+					"english": "gold.",
+					"transliteration": "idh-dhahab."
+				}
+			],
+			"targetWords": [
+				"Bus terminal"
+			]
+		},
+		{
+			"arabic": "أي خط يروح المطار؟",
+			"arabicTashkeel": "أيّ خَط يْروح المَطار؟",
+			"english": "Which line goes to the airport?",
+			"transliteration": "ayy khatt yrooh il-mataar?",
+			"wordAlignments": [
+				{
+					"arabic": "أي",
+					"english": "Which",
+					"transliteration": "ayy"
+				},
+				{
+					"arabic": "خط",
+					"english": "line",
+					"transliteration": "khatt"
+				},
+				{
+					"arabic": "يروح",
+					"english": "goes",
+					"transliteration": "yrooh"
+				},
+				{
+					"arabic": "المطار؟",
+					"english": "to the airport?",
+					"transliteration": "il-mataar?"
+				}
+			],
+			"targetWords": [
+				"Route / line"
+			]
+		},
+		{
+			"arabic": "كم الأجرة؟",
+			"arabicTashkeel": "كَم الأُجرة؟",
+			"english": "How much is the fare?",
+			"transliteration": "cham il-ujra?",
+			"wordAlignments": [
+				{
+					"arabic": "كم",
+					"english": "How much is",
+					"transliteration": "cham"
+				},
+				{
+					"arabic": "الأجرة؟",
+					"english": "the fare?",
+					"transliteration": "il-ujra?"
+				}
+			],
+			"targetWords": [
+				"Fare"
+			]
+		},
+		{
+			"arabic": "إمش بالشارع الرئيسي.",
+			"arabicTashkeel": "إمشِ بالشّارع الرَّئيسي.",
+			"english": "Walk along the main street.",
+			"transliteration": "imshi bish-shaari3 ir-ra2eesi.",
+			"wordAlignments": [
+				{
+					"arabic": "إمش",
+					"english": "Walk",
+					"transliteration": "imshi"
+				},
+				{
+					"arabic": "بالشارع",
+					"english": "along the street",
+					"transliteration": "bish-shaari3"
+				},
+				{
+					"arabic": "الرئيسي.",
+					"english": "main.",
+					"transliteration": "ir-ra2eesi."
+				}
+			],
+			"targetWords": [
+				"Main street"
+			]
+		},
+		{
+			"arabic": "خش النفق.",
+			"arabicTashkeel": "خُش النَّفَق.",
+			"english": "Go through the tunnel.",
+			"transliteration": "khush in-nafag.",
+			"wordAlignments": [
+				{
+					"arabic": "خش",
+					"english": "Go into",
+					"transliteration": "khush"
+				},
+				{
+					"arabic": "النفق.",
+					"english": "the tunnel.",
+					"transliteration": "in-nafag."
+				}
+			],
+			"targetWords": [
+				"Tunnel"
+			]
+		},
+		{
+			"arabic": "الباص يمر على الجامعة.",
+			"arabicTashkeel": "الباص يْمُر على الجامعة.",
+			"english": "The bus passes by the university.",
+			"transliteration": "il-baas ymurr 3ala il-yaam3a.",
+			"wordAlignments": [
+				{
+					"arabic": "الباص",
+					"english": "The bus",
+					"transliteration": "il-baas"
+				},
+				{
+					"arabic": "يمر",
+					"english": "passes",
+					"transliteration": "ymurr"
+				},
+				{
+					"arabic": "على",
+					"english": "by",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "الجامعة.",
+					"english": "the university.",
+					"transliteration": "il-yaam3a."
+				}
+			],
+			"targetWords": [
+				"It passes by"
+			]
+		},
+		{
+			"arabic": "المشوار ياخذ نص ساعة.",
+			"arabicTashkeel": "المِشوار ياخِذ نُص ساعة.",
+			"english": "The trip takes half an hour.",
+			"transliteration": "il-mishwaar yaakhidh nuss saa3a.",
+			"wordAlignments": [
+				{
+					"arabic": "المشوار",
+					"english": "The trip",
+					"transliteration": "il-mishwaar"
+				},
+				{
+					"arabic": "ياخذ",
+					"english": "takes",
+					"transliteration": "yaakhidh"
+				},
+				{
+					"arabic": "نص",
+					"english": "half",
+					"transliteration": "nuss"
+				},
+				{
+					"arabic": "ساعة.",
+					"english": "an hour.",
+					"transliteration": "saa3a."
+				}
+			],
+			"targetWords": [
+				"It takes (time)"
+			]
+		},
+		{
+			"arabic": "كم المسافة؟",
+			"arabicTashkeel": "كَم المَسافة؟",
+			"english": "What is the distance?",
+			"transliteration": "cham il-masaafa?",
+			"wordAlignments": [
+				{
+					"arabic": "كم",
+					"english": "How much is",
+					"transliteration": "cham"
+				},
+				{
+					"arabic": "المسافة؟",
+					"english": "the distance?",
+					"transliteration": "il-masaafa?"
+				}
+			],
+			"targetWords": [
+				"Distance"
+			]
+		},
+		{
+			"arabic": "في باص مباشر؟",
+			"arabicTashkeel": "في باص مُباشِر؟",
+			"english": "Is there a direct bus?",
+			"transliteration": "fee baas mubaashir?",
+			"wordAlignments": [
+				{
+					"arabic": "في",
+					"english": "Is there",
+					"transliteration": "fee"
+				},
+				{
+					"arabic": "باص",
+					"english": "a bus",
+					"transliteration": "baas"
+				},
+				{
+					"arabic": "مباشر؟",
+					"english": "direct?",
+					"transliteration": "mubaashir?"
+				}
+			],
+			"targetWords": [
+				"Direct"
+			]
+		},
+		{
+			"arabic": "بدل بمحطة الإتحاد.",
+			"arabicTashkeel": "بَدِّل بمَحَطّة الإتّحاد.",
+			"english": "Change at Union station.",
+			"transliteration": "baddil b-ma7attat il-itti7aad.",
+			"wordAlignments": [
+				{
+					"arabic": "بدل",
+					"english": "Change",
+					"transliteration": "baddil"
+				},
+				{
+					"arabic": "بمحطة",
+					"english": "at the station of",
+					"transliteration": "b-ma7attat"
+				},
+				{
+					"arabic": "الإتحاد.",
+					"english": "Union.",
+					"transliteration": "il-itti7aad."
+				}
+			],
+			"targetWords": [
+				"Change (vehicles)!"
+			]
+		},
+		{
+			"arabic": "إسأل الدريول.",
+			"arabicTashkeel": "إسأل الدْرَيوِل.",
+			"english": "Ask the driver.",
+			"transliteration": "is2al id-draywil.",
+			"wordAlignments": [
+				{
+					"arabic": "إسأل",
+					"english": "Ask",
+					"transliteration": "is2al"
+				},
+				{
+					"arabic": "الدريول.",
+					"english": "the driver.",
+					"transliteration": "id-draywil."
+				}
+			],
+			"targetWords": [
+				"Ask!"
+			]
+		},
+		{
+			"arabic": "إنزل بالموقف الثاني.",
+			"arabicTashkeel": "إنزِل بالمَوقِف الثّاني.",
+			"english": "Get off at the second stop.",
+			"transliteration": "inzil bil-mawgif ith-thaani.",
+			"wordAlignments": [
+				{
+					"arabic": "إنزل",
+					"english": "Get off",
+					"transliteration": "inzil"
+				},
+				{
+					"arabic": "بالموقف",
+					"english": "at the stop",
+					"transliteration": "bil-mawgif"
+				},
+				{
+					"arabic": "الثاني.",
+					"english": "second.",
+					"transliteration": "ith-thaani."
+				}
+			],
+			"targetWords": [
+				"Get off!",
+				"Stop (bus)"
+			]
+		},
+		{
+			"arabic": "خذ تاكسي من هني.",
+			"arabicTashkeel": "خُذ تاكسي مِن هِني.",
+			"english": "Take a taxi from here.",
+			"transliteration": "khudh taaksi min hini.",
+			"wordAlignments": [
+				{
+					"arabic": "خذ",
+					"english": "Take",
+					"transliteration": "khudh"
+				},
+				{
+					"arabic": "تاكسي",
+					"english": "a taxi",
+					"transliteration": "taaksi"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "هني.",
+					"english": "here.",
+					"transliteration": "hini."
+				}
+			],
+			"targetWords": [
+				"Take!"
+			]
+		},
+		{
+			"arabic": "الجمعية بالطريق.",
+			"arabicTashkeel": "الجَمعية بالطَّريق.",
+			"english": "The supermarket is on the way.",
+			"transliteration": "il-jam3iyya bit-tareeg.",
+			"wordAlignments": [
+				{
+					"arabic": "الجمعية",
+					"english": "The co-op is",
+					"transliteration": "il-jam3iyya"
+				},
+				{
+					"arabic": "بالطريق.",
+					"english": "on the way.",
+					"transliteration": "bit-tareeg."
+				}
+			],
+			"targetWords": [
+				"On the way"
+			]
+		},
+		{
+			"arabic": "الموقف قدام البنك.",
+			"arabicTashkeel": "المَوقِف قِدّام البَنك.",
+			"english": "The stop is in front of the bank.",
+			"transliteration": "il-mawgif giddaam il-bank.",
+			"wordAlignments": [
+				{
+					"arabic": "الموقف",
+					"english": "The stop is",
+					"transliteration": "il-mawgif"
+				},
+				{
+					"arabic": "قدام",
+					"english": "in front of",
+					"transliteration": "giddaam"
+				},
+				{
+					"arabic": "البنك.",
+					"english": "the bank.",
+					"transliteration": "il-bank."
+				}
+			],
+			"targetWords": [
+				"Stop (bus)"
+			]
+		},
+		{
+			"arabic": "محطة الباصات زحمة الصبح.",
+			"arabicTashkeel": "مَحَطّة الباصات زَحمة الصُّبح.",
+			"english": "The terminal is crowded in the morning.",
+			"transliteration": "ma7attat il-baasaat za7ma is-sub7.",
+			"wordAlignments": [
+				{
+					"arabic": "محطة",
+					"english": "The station of",
+					"transliteration": "ma7attat"
+				},
+				{
+					"arabic": "الباصات",
+					"english": "the buses is",
+					"transliteration": "il-baasaat"
+				},
+				{
+					"arabic": "زحمة",
+					"english": "crowded",
+					"transliteration": "za7ma"
+				},
+				{
+					"arabic": "الصبح.",
+					"english": "in the morning.",
+					"transliteration": "is-sub7."
+				}
+			],
+			"targetWords": [
+				"Bus terminal"
+			]
+		},
+		{
+			"arabic": "الخط الأحمر طويل.",
+			"arabicTashkeel": "الخَط الأحمَر طْويل.",
+			"english": "The red line is long.",
+			"transliteration": "il-khatt il-a7mar tweel.",
+			"wordAlignments": [
+				{
+					"arabic": "الخط",
+					"english": "The line",
+					"transliteration": "il-khatt"
+				},
+				{
+					"arabic": "الأحمر",
+					"english": "red is",
+					"transliteration": "il-a7mar"
+				},
+				{
+					"arabic": "طويل.",
+					"english": "long.",
+					"transliteration": "tweel."
+				}
+			],
+			"targetWords": [
+				"Route / line"
+			]
+		},
+		{
+			"arabic": "الأجرة خمس دراهم.",
+			"arabicTashkeel": "الأُجرة خَمس دَراهِم.",
+			"english": "The fare is five dirhams.",
+			"transliteration": "il-ujra khams daraahim.",
+			"wordAlignments": [
+				{
+					"arabic": "الأجرة",
+					"english": "The fare is",
+					"transliteration": "il-ujra"
+				},
+				{
+					"arabic": "خمس",
+					"english": "five",
+					"transliteration": "khams"
+				},
+				{
+					"arabic": "دراهم.",
+					"english": "dirhams.",
+					"transliteration": "daraahim."
+				}
+			],
+			"targetWords": [
+				"Fare"
+			]
+		},
+		{
+			"arabic": "المحلات بالشارع الرئيسي.",
+			"arabicTashkeel": "المَحَلّات بالشّارع الرَّئيسي.",
+			"english": "The shops are on the main street.",
+			"transliteration": "il-ma7allaat bish-shaari3 ir-ra2eesi.",
+			"wordAlignments": [
+				{
+					"arabic": "المحلات",
+					"english": "The shops are",
+					"transliteration": "il-ma7allaat"
+				},
+				{
+					"arabic": "بالشارع",
+					"english": "on the street",
+					"transliteration": "bish-shaari3"
+				},
+				{
+					"arabic": "الرئيسي.",
+					"english": "main.",
+					"transliteration": "ir-ra2eesi."
+				}
+			],
+			"targetWords": [
+				"Main street"
+			]
+		},
+		{
+			"arabic": "النفق مسكر اليوم.",
+			"arabicTashkeel": "النَّفَق مْسَكَّر اليوم.",
+			"english": "The tunnel is closed today.",
+			"transliteration": "in-nafag msakkar il-yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "النفق",
+					"english": "The tunnel is",
+					"transliteration": "in-nafag"
+				},
+				{
+					"arabic": "مسكر",
+					"english": "closed",
+					"transliteration": "msakkar"
+				},
+				{
+					"arabic": "اليوم.",
+					"english": "today.",
+					"transliteration": "il-yoom."
+				}
+			],
+			"targetWords": [
+				"Tunnel"
+			]
+		},
+		{
+			"arabic": "يمر على المستشفى؟",
+			"arabicTashkeel": "يْمُر على المُستَشفى؟",
+			"english": "Does it pass by the hospital?",
+			"transliteration": "ymurr 3ala il-mustashfa?",
+			"wordAlignments": [
+				{
+					"arabic": "يمر",
+					"english": "Does it pass",
+					"transliteration": "ymurr"
+				},
+				{
+					"arabic": "على",
+					"english": "by",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "المستشفى؟",
+					"english": "the hospital?",
+					"transliteration": "il-mustashfa?"
+				}
+			],
+			"targetWords": [
+				"It passes by"
+			]
+		},
+		{
+			"arabic": "كم ياخذ وقت؟",
+			"arabicTashkeel": "كَم ياخِذ وَقت؟",
+			"english": "How long does it take?",
+			"transliteration": "cham yaakhidh wagt?",
+			"wordAlignments": [
+				{
+					"arabic": "كم",
+					"english": "How much",
+					"transliteration": "cham"
+				},
+				{
+					"arabic": "ياخذ",
+					"english": "does it take",
+					"transliteration": "yaakhidh"
+				},
+				{
+					"arabic": "وقت؟",
+					"english": "time?",
+					"transliteration": "wagt?"
+				}
+			],
+			"targetWords": [
+				"It takes (time)"
+			]
+		},
+		{
+			"arabic": "المسافة قصيرة.",
+			"arabicTashkeel": "المَسافة قْصَيّرة.",
+			"english": "The distance is short.",
+			"transliteration": "il-masaafa gsayyra.",
+			"wordAlignments": [
+				{
+					"arabic": "المسافة",
+					"english": "The distance is",
+					"transliteration": "il-masaafa"
+				},
+				{
+					"arabic": "قصيرة.",
+					"english": "short.",
+					"transliteration": "gsayyra."
+				}
+			],
+			"targetWords": [
+				"Distance"
+			]
+		},
+		{
+			"arabic": "الخط المباشر أسرع.",
+			"arabicTashkeel": "الخَط المُباشِر أسرَع.",
+			"english": "The direct line is faster.",
+			"transliteration": "il-khatt il-mubaashir asra3.",
+			"wordAlignments": [
+				{
+					"arabic": "الخط",
+					"english": "The line",
+					"transliteration": "il-khatt"
+				},
+				{
+					"arabic": "المباشر",
+					"english": "direct is",
+					"transliteration": "il-mubaashir"
+				},
+				{
+					"arabic": "أسرع.",
+					"english": "faster.",
+					"transliteration": "asra3."
+				}
+			],
+			"targetWords": [
+				"Direct",
+				"Route / line"
+			]
+		},
+		{
+			"arabic": "لازم أبدل؟",
+			"arabicTashkeel": "لازِم أبَدِّل؟",
+			"english": "Do I need to change?",
+			"transliteration": "laazim abaddil?",
+			"wordAlignments": [
+				{
+					"arabic": "لازم",
+					"english": "Must",
+					"transliteration": "laazim"
+				},
+				{
+					"arabic": "أبدل؟",
+					"english": "I change?",
+					"transliteration": "abaddil?"
+				}
+			],
+			"targetWords": [
+				"Change (vehicles)!"
+			]
+		},
+		{
+			"arabic": "إسأل أحد بالشارع.",
+			"arabicTashkeel": "إسأل أحَد بالشّارع.",
+			"english": "Ask someone on the street.",
+			"transliteration": "is2al a7ad bish-shaari3.",
+			"wordAlignments": [
+				{
+					"arabic": "إسأل",
+					"english": "Ask",
+					"transliteration": "is2al"
+				},
+				{
+					"arabic": "أحد",
+					"english": "someone",
+					"transliteration": "a7ad"
+				},
+				{
+					"arabic": "بالشارع.",
+					"english": "on the street.",
+					"transliteration": "bish-shaari3."
+				}
+			],
+			"targetWords": [
+				"Ask!"
+			]
+		},
+		{
+			"arabic": "إنزل هني لو سمحت.",
+			"arabicTashkeel": "إنزِل هِني لو سَمَحت.",
+			"english": "Get off here, please.",
+			"transliteration": "inzil hini law sama7t.",
+			"wordAlignments": [
+				{
+					"arabic": "إنزل",
+					"english": "Get off",
+					"transliteration": "inzil"
+				},
+				{
+					"arabic": "هني",
+					"english": "here",
+					"transliteration": "hini"
+				},
+				{
+					"arabic": "لو",
+					"english": "if",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "سمحت.",
+					"english": "you please.",
+					"transliteration": "sama7t."
+				}
+			],
+			"targetWords": [
+				"Get off!"
+			]
+		},
+		{
+			"arabic": "خذ الباص من محطة الباصات.",
+			"arabicTashkeel": "خُذ الباص مِن مَحَطّة الباصات.",
+			"english": "Take the bus from the terminal.",
+			"transliteration": "khudh il-baas min ma7attat il-baasaat.",
+			"wordAlignments": [
+				{
+					"arabic": "خذ",
+					"english": "Take",
+					"transliteration": "khudh"
+				},
+				{
+					"arabic": "الباص",
+					"english": "the bus",
+					"transliteration": "il-baas"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "محطة",
+					"english": "the station of",
+					"transliteration": "ma7attat"
+				},
+				{
+					"arabic": "الباصات.",
+					"english": "the buses.",
+					"transliteration": "il-baasaat."
+				}
+			],
+			"targetWords": [
+				"Take!",
+				"Bus terminal"
+			]
+		},
+		{
+			"arabic": "بشتري خبز بالطريق.",
+			"arabicTashkeel": "بَشتِري خُبُز بالطَّريق.",
+			"english": "I'll buy bread on the way.",
+			"transliteration": "bashtiri khubuz bit-tareeg.",
+			"wordAlignments": [
+				{
+					"arabic": "بشتري",
+					"english": "I'll buy",
+					"transliteration": "bashtiri"
+				},
+				{
+					"arabic": "خبز",
+					"english": "bread",
+					"transliteration": "khubuz"
+				},
+				{
+					"arabic": "بالطريق.",
+					"english": "on the way.",
+					"transliteration": "bit-tareeg."
+				}
+			],
+			"targetWords": [
+				"On the way"
+			]
+		},
+		{
+			"arabic": "أنطر بالموقف.",
+			"arabicTashkeel": "أنطِر بالمَوقِف.",
+			"english": "Wait at the stop.",
+			"transliteration": "antir bil-mawgif.",
+			"wordAlignments": [
+				{
+					"arabic": "أنطر",
+					"english": "Wait",
+					"transliteration": "antir"
+				},
+				{
+					"arabic": "بالموقف.",
+					"english": "at the stop.",
+					"transliteration": "bil-mawgif."
+				}
+			],
+			"targetWords": [
+				"Stop (bus)"
+			]
+		},
+		{
+			"arabic": "محطة الباصات بعيدة من هني.",
+			"arabicTashkeel": "مَحَطّة الباصات بَعيدة مِن هِني.",
+			"english": "The terminal is far from here.",
+			"transliteration": "ma7attat il-baasaat ba3eeda min hini.",
+			"wordAlignments": [
+				{
+					"arabic": "محطة",
+					"english": "The station of",
+					"transliteration": "ma7attat"
+				},
+				{
+					"arabic": "الباصات",
+					"english": "the buses is",
+					"transliteration": "il-baasaat"
+				},
+				{
+					"arabic": "بعيدة",
+					"english": "far",
+					"transliteration": "ba3eeda"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "هني.",
+					"english": "here.",
+					"transliteration": "hini."
+				}
+			],
+			"targetWords": [
+				"Bus terminal"
+			]
+		},
+		{
+			"arabic": "الخط الأخضر.",
+			"arabicTashkeel": "الخَط الأخضَر.",
+			"english": "The green line.",
+			"transliteration": "il-khatt il-akhdhar.",
+			"wordAlignments": [
+				{
+					"arabic": "الخط",
+					"english": "The line",
+					"transliteration": "il-khatt"
+				},
+				{
+					"arabic": "الأخضر.",
+					"english": "green.",
+					"transliteration": "il-akhdhar."
+				}
+			],
+			"targetWords": [
+				"Route / line"
+			]
+		},
+		{
+			"arabic": "الأجرة زادت.",
+			"arabicTashkeel": "الأُجرة زادَت.",
+			"english": "The fare went up.",
+			"transliteration": "il-ujra zaadat.",
+			"wordAlignments": [
+				{
+					"arabic": "الأجرة",
+					"english": "The fare",
+					"transliteration": "il-ujra"
+				},
+				{
+					"arabic": "زادت.",
+					"english": "went up.",
+					"transliteration": "zaadat."
+				}
+			],
+			"targetWords": [
+				"Fare"
+			]
+		},
+		{
+			"arabic": "الشارع الرئيسي زحمة.",
+			"arabicTashkeel": "الشّارع الرَّئيسي زَحمة.",
+			"english": "The main street is crowded.",
+			"transliteration": "ish-shaari3 ir-ra2eesi za7ma.",
+			"wordAlignments": [
+				{
+					"arabic": "الشارع",
+					"english": "The street",
+					"transliteration": "ish-shaari3"
+				},
+				{
+					"arabic": "الرئيسي",
+					"english": "main is",
+					"transliteration": "ir-ra2eesi"
+				},
+				{
+					"arabic": "زحمة.",
+					"english": "crowded.",
+					"transliteration": "za7ma."
+				}
+			],
+			"targetWords": [
+				"Main street"
+			]
+		},
+		{
+			"arabic": "بعد النفق، لف يمين.",
+			"arabicTashkeel": "بَعد النَّفَق، لِف يَمين.",
+			"english": "After the tunnel, turn right.",
+			"transliteration": "ba3d in-nafag, liff yimeen.",
+			"wordAlignments": [
+				{
+					"arabic": "بعد",
+					"english": "After",
+					"transliteration": "ba3d"
+				},
+				{
+					"arabic": "النفق،",
+					"english": "the tunnel,",
+					"transliteration": "in-nafag,"
+				},
+				{
+					"arabic": "لف",
+					"english": "turn",
+					"transliteration": "liff"
+				},
+				{
+					"arabic": "يمين.",
+					"english": "right.",
+					"transliteration": "yimeen."
+				}
+			],
+			"targetWords": [
+				"Tunnel"
+			]
+		},
+		{
+			"arabic": "الباص يمر كل عشر دقايق.",
+			"arabicTashkeel": "الباص يْمُر كِل عَشر دَقايِق.",
+			"english": "The bus passes by every ten minutes.",
+			"transliteration": "il-baas ymurr kil 3ashar dagaayig.",
+			"wordAlignments": [
+				{
+					"arabic": "الباص",
+					"english": "The bus",
+					"transliteration": "il-baas"
+				},
+				{
+					"arabic": "يمر",
+					"english": "passes",
+					"transliteration": "ymurr"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kil"
+				},
+				{
+					"arabic": "عشر",
+					"english": "ten",
+					"transliteration": "3ashar"
+				},
+				{
+					"arabic": "دقايق.",
+					"english": "minutes.",
+					"transliteration": "dagaayig."
+				}
+			],
+			"targetWords": [
+				"It passes by"
+			]
+		},
+		{
+			"arabic": "المشوار ياخذ ساعتين.",
+			"arabicTashkeel": "المِشوار ياخِذ ساعتين.",
+			"english": "The trip takes two hours.",
+			"transliteration": "il-mishwaar yaakhidh saa3teen.",
+			"wordAlignments": [
+				{
+					"arabic": "المشوار",
+					"english": "The trip",
+					"transliteration": "il-mishwaar"
+				},
+				{
+					"arabic": "ياخذ",
+					"english": "takes",
+					"transliteration": "yaakhidh"
+				},
+				{
+					"arabic": "ساعتين.",
+					"english": "two hours.",
+					"transliteration": "saa3teen."
+				}
+			],
+			"targetWords": [
+				"It takes (time)"
+			]
+		},
+		{
+			"arabic": "المسافة بين دبي وأبوظبي طويلة.",
+			"arabicTashkeel": "المَسافة بين دُبَي وأبوظَبي طْويلة.",
+			"english": "The distance between Dubai and Abu Dhabi is long.",
+			"transliteration": "il-masaafa been dubay w-abudhabi tweela.",
+			"wordAlignments": [
+				{
+					"arabic": "المسافة",
+					"english": "The distance",
+					"transliteration": "il-masaafa"
+				},
+				{
+					"arabic": "بين",
+					"english": "between",
+					"transliteration": "been"
+				},
+				{
+					"arabic": "دبي",
+					"english": "Dubai",
+					"transliteration": "dubay"
+				},
+				{
+					"arabic": "وأبوظبي",
+					"english": "and Abu Dhabi is",
+					"transliteration": "w-abudhabi"
+				},
+				{
+					"arabic": "طويلة.",
+					"english": "long.",
+					"transliteration": "tweela."
+				}
+			],
+			"targetWords": [
+				"Distance"
+			]
+		},
+		{
+			"arabic": "رحلة مباشرة.",
+			"arabicTashkeel": "رِحلة مُباشرة.",
+			"english": "A direct flight.",
+			"transliteration": "ri7la mubaashra.",
+			"wordAlignments": [
+				{
+					"arabic": "رحلة",
+					"english": "A flight",
+					"transliteration": "ri7la"
+				},
+				{
+					"arabic": "مباشرة.",
+					"english": "direct.",
+					"transliteration": "mubaashra."
+				}
+			],
+			"targetWords": [
+				"Direct"
+			]
+		},
+		{
+			"arabic": "بدل الباص بمحطة الباصات.",
+			"arabicTashkeel": "بَدِّل الباص بمَحَطّة الباصات.",
+			"english": "Change buses at the terminal.",
+			"transliteration": "baddil il-baas b-ma7attat il-baasaat.",
+			"wordAlignments": [
+				{
+					"arabic": "بدل",
+					"english": "Change",
+					"transliteration": "baddil"
+				},
+				{
+					"arabic": "الباص",
+					"english": "the bus",
+					"transliteration": "il-baas"
+				},
+				{
+					"arabic": "بمحطة",
+					"english": "at the station of",
+					"transliteration": "b-ma7attat"
+				},
+				{
+					"arabic": "الباصات.",
+					"english": "the buses.",
+					"transliteration": "il-baasaat."
+				}
+			],
+			"targetWords": [
+				"Change (vehicles)!",
+				"Bus terminal"
+			]
+		},
+		{
+			"arabic": "إسأل عن الأجرة أول.",
+			"arabicTashkeel": "إسأل عَن الأُجرة أوَّل.",
+			"english": "Ask about the fare first.",
+			"transliteration": "is2al 3an il-ujra awwal.",
+			"wordAlignments": [
+				{
+					"arabic": "إسأل",
+					"english": "Ask",
+					"transliteration": "is2al"
+				},
+				{
+					"arabic": "عن",
+					"english": "about",
+					"transliteration": "3an"
+				},
+				{
+					"arabic": "الأجرة",
+					"english": "the fare",
+					"transliteration": "il-ujra"
+				},
+				{
+					"arabic": "أول.",
+					"english": "first.",
+					"transliteration": "awwal."
+				}
+			],
+			"targetWords": [
+				"Ask!",
+				"Fare"
+			]
+		},
+		{
+			"arabic": "إنزل بعد الجسر.",
+			"arabicTashkeel": "إنزِل بَعد الجِسر.",
+			"english": "Get off after the bridge.",
+			"transliteration": "inzil ba3d il-yisir.",
+			"wordAlignments": [
+				{
+					"arabic": "إنزل",
+					"english": "Get off",
+					"transliteration": "inzil"
+				},
+				{
+					"arabic": "بعد",
+					"english": "after",
+					"transliteration": "ba3d"
+				},
+				{
+					"arabic": "الجسر.",
+					"english": "the bridge.",
+					"transliteration": "il-yisir."
+				}
+			],
+			"targetWords": [
+				"Get off!"
+			]
+		},
+		{
+			"arabic": "خذ أول خط.",
+			"arabicTashkeel": "خُذ أوَّل خَط.",
+			"english": "Take the first line.",
+			"transliteration": "khudh awwal khatt.",
+			"wordAlignments": [
+				{
+					"arabic": "خذ",
+					"english": "Take",
+					"transliteration": "khudh"
+				},
+				{
+					"arabic": "أول",
+					"english": "the first",
+					"transliteration": "awwal"
+				},
+				{
+					"arabic": "خط.",
+					"english": "line.",
+					"transliteration": "khatt."
+				}
+			],
+			"targetWords": [
+				"Take!",
+				"Route / line"
+			]
+		},
+		{
+			"arabic": "الصيدلية بالطريق؟",
+			"arabicTashkeel": "الصَّيدَلية بالطَّريق؟",
+			"english": "Is the pharmacy on the way?",
+			"transliteration": "is-saydaliyya bit-tareeg?",
+			"wordAlignments": [
+				{
+					"arabic": "الصيدلية",
+					"english": "Is the pharmacy",
+					"transliteration": "is-saydaliyya"
+				},
+				{
+					"arabic": "بالطريق؟",
+					"english": "on the way?",
+					"transliteration": "bit-tareeg?"
+				}
+			],
+			"targetWords": [
+				"On the way"
+			]
+		},
+		{
+			"arabic": "الموقف قريب.",
+			"arabicTashkeel": "المَوقِف قَريب.",
+			"english": "The stop is near.",
+			"transliteration": "il-mawgif gareeb.",
+			"wordAlignments": [
+				{
+					"arabic": "الموقف",
+					"english": "The stop is",
+					"transliteration": "il-mawgif"
+				},
+				{
+					"arabic": "قريب.",
+					"english": "near.",
+					"transliteration": "gareeb."
+				}
+			],
+			"targetWords": [
+				"Stop (bus)"
+			]
+		},
+		{
+			"arabic": "محطة الباصات الجديدة.",
+			"arabicTashkeel": "مَحَطّة الباصات الجْديدة.",
+			"english": "The new terminal.",
+			"transliteration": "ma7attat il-baasaat il-ydeeda.",
+			"wordAlignments": [
+				{
+					"arabic": "محطة",
+					"english": "The station of",
+					"transliteration": "ma7attat"
+				},
+				{
+					"arabic": "الباصات",
+					"english": "the buses",
+					"transliteration": "il-baasaat"
+				},
+				{
+					"arabic": "الجديدة.",
+					"english": "new.",
+					"transliteration": "il-ydeeda."
+				}
+			],
+			"targetWords": [
+				"Bus terminal"
+			]
+		},
+		{
+			"arabic": "إدفع الأجرة بالبطاقة.",
+			"arabicTashkeel": "إدفَع الأُجرة بالبِطاقة.",
+			"english": "Pay the fare with the card.",
+			"transliteration": "idfa3 il-ujra bil-bitaaga.",
+			"wordAlignments": [
+				{
+					"arabic": "إدفع",
+					"english": "Pay",
+					"transliteration": "idfa3"
+				},
+				{
+					"arabic": "الأجرة",
+					"english": "the fare",
+					"transliteration": "il-ujra"
+				},
+				{
+					"arabic": "بالبطاقة.",
+					"english": "with the card.",
+					"transliteration": "bil-bitaaga."
+				}
+			],
+			"targetWords": [
+				"Fare"
+			]
+		},
+		{
+			"arabic": "خذ الشارع الرئيسي، أسرع.",
+			"arabicTashkeel": "خُذ الشّارع الرَّئيسي، أسرَع.",
+			"english": "Take the main street, it's faster.",
+			"transliteration": "khudh ish-shaari3 ir-ra2eesi, asra3.",
+			"wordAlignments": [
+				{
+					"arabic": "خذ",
+					"english": "Take",
+					"transliteration": "khudh"
+				},
+				{
+					"arabic": "الشارع",
+					"english": "the street",
+					"transliteration": "ish-shaari3"
+				},
+				{
+					"arabic": "الرئيسي،",
+					"english": "main,",
+					"transliteration": "ir-ra2eesi,"
+				},
+				{
+					"arabic": "أسرع.",
+					"english": "it's faster.",
+					"transliteration": "asra3."
+				}
+			],
+			"targetWords": [
+				"Main street",
+				"Take!"
+			]
+		},
+		{
+			"arabic": "النفق طويل.",
+			"arabicTashkeel": "النَّفَق طْويل.",
+			"english": "The tunnel is long.",
+			"transliteration": "in-nafag tweel.",
+			"wordAlignments": [
+				{
+					"arabic": "النفق",
+					"english": "The tunnel is",
+					"transliteration": "in-nafag"
+				},
+				{
+					"arabic": "طويل.",
+					"english": "long.",
+					"transliteration": "tweel."
+				}
+			],
+			"targetWords": [
+				"Tunnel"
+			]
+		},
+		{
+			"arabic": "الباص يمر جنب بيتنا.",
+			"arabicTashkeel": "الباص يْمُر جَنب بيتنا.",
+			"english": "The bus passes by our house.",
+			"transliteration": "il-baas ymurr yamb beetna.",
+			"wordAlignments": [
+				{
+					"arabic": "الباص",
+					"english": "The bus",
+					"transliteration": "il-baas"
+				},
+				{
+					"arabic": "يمر",
+					"english": "passes",
+					"transliteration": "ymurr"
+				},
+				{
+					"arabic": "جنب",
+					"english": "next to",
+					"transliteration": "yamb"
+				},
+				{
+					"arabic": "بيتنا.",
+					"english": "our house.",
+					"transliteration": "beetna."
+				}
+			],
+			"targetWords": [
+				"It passes by"
+			]
+		},
+		{
+			"arabic": "ياخذ عشر دقايق مشي.",
+			"arabicTashkeel": "ياخِذ عَشر دَقايِق مَشي.",
+			"english": "It takes ten minutes on foot.",
+			"transliteration": "yaakhidh 3ashar dagaayig mashi.",
+			"wordAlignments": [
+				{
+					"arabic": "ياخذ",
+					"english": "It takes",
+					"transliteration": "yaakhidh"
+				},
+				{
+					"arabic": "عشر",
+					"english": "ten",
+					"transliteration": "3ashar"
+				},
+				{
+					"arabic": "دقايق",
+					"english": "minutes",
+					"transliteration": "dagaayig"
+				},
+				{
+					"arabic": "مشي.",
+					"english": "on foot.",
+					"transliteration": "mashi."
+				}
+			],
+			"targetWords": [
+				"It takes (time)"
+			]
+		},
+		{
+			"arabic": "مسافة قصيرة.",
+			"arabicTashkeel": "مَسافة قْصَيّرة.",
+			"english": "A short distance.",
+			"transliteration": "masaafa gsayyra.",
+			"wordAlignments": [
+				{
+					"arabic": "مسافة",
+					"english": "A distance",
+					"transliteration": "masaafa"
+				},
+				{
+					"arabic": "قصيرة.",
+					"english": "short.",
+					"transliteration": "gsayyra."
+				}
+			],
+			"targetWords": [
+				"Distance"
+			]
+		},
+		{
+			"arabic": "مو مباشر، لازم تبدل.",
+			"arabicTashkeel": "مو مُباشِر، لازِم تبَدِّل.",
+			"english": "Not direct, you have to change.",
+			"transliteration": "moo mubaashir, laazim tbaddil.",
+			"wordAlignments": [
+				{
+					"arabic": "مو",
+					"english": "Not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "مباشر،",
+					"english": "direct,",
+					"transliteration": "mubaashir,"
+				},
+				{
+					"arabic": "لازم",
+					"english": "you must",
+					"transliteration": "laazim"
+				},
+				{
+					"arabic": "تبدل.",
+					"english": "change.",
+					"transliteration": "tbaddil."
+				}
+			],
+			"targetWords": [
+				"Direct",
+				"Change (vehicles)!"
+			]
+		},
+		{
+			"arabic": "إسأل بالمحطة.",
+			"arabicTashkeel": "إسأل بالمَحَطّة.",
+			"english": "Ask at the terminal.",
+			"transliteration": "is2al bil-ma7atta.",
+			"wordAlignments": [
+				{
+					"arabic": "إسأل",
+					"english": "Ask",
+					"transliteration": "is2al"
+				},
+				{
+					"arabic": "بالمحطة.",
+					"english": "at the station.",
+					"transliteration": "bil-ma7atta."
+				}
+			],
+			"targetWords": [
+				"Ask!"
+			]
+		},
+		{
+			"arabic": "إنزل بآخر موقف.",
+			"arabicTashkeel": "إنزِل بآخِر مَوقِف.",
+			"english": "Get off at the last stop.",
+			"transliteration": "inzil b-aakhir mawgif.",
+			"wordAlignments": [
+				{
+					"arabic": "إنزل",
+					"english": "Get off",
+					"transliteration": "inzil"
+				},
+				{
+					"arabic": "بآخر",
+					"english": "at the last",
+					"transliteration": "b-aakhir"
+				},
+				{
+					"arabic": "موقف.",
+					"english": "stop.",
+					"transliteration": "mawgif."
+				}
+			],
+			"targetWords": [
+				"Get off!",
+				"Stop (bus)"
+			]
+		},
+		{
+			"arabic": "تكلمنا بالطريق.",
+			"arabicTashkeel": "تكَلَّمنا بالطَّريق.",
+			"english": "We talked on the way.",
+			"transliteration": "tkallamna bit-tareeg.",
+			"wordAlignments": [
+				{
+					"arabic": "تكلمنا",
+					"english": "We talked",
+					"transliteration": "tkallamna"
+				},
+				{
+					"arabic": "بالطريق.",
+					"english": "on the way.",
+					"transliteration": "bit-tareeg."
+				}
+			],
+			"targetWords": [
+				"On the way"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "To Dubai Mall",
+			"sentences": [
+				{
+					"arabic": "خذ الخط الأحمر من محطة الإتحاد.",
+					"arabicTashkeel": "خُذ الخَط الأحمَر مِن مَحَطّة الإتّحاد.",
+					"english": "Take the red line from Union station.",
+					"transliteration": "khudh il-khatt il-a7mar min ma7attat il-itti7aad.",
+					"wordAlignments": [
+						{
+							"arabic": "خذ",
+							"english": "Take",
+							"transliteration": "khudh"
+						},
+						{
+							"arabic": "الخط",
+							"english": "the line",
+							"transliteration": "il-khatt"
+						},
+						{
+							"arabic": "الأحمر",
+							"english": "red",
+							"transliteration": "il-a7mar"
+						},
+						{
+							"arabic": "من",
+							"english": "from",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "محطة",
+							"english": "the station of",
+							"transliteration": "ma7attat"
+						},
+						{
+							"arabic": "الإتحاد.",
+							"english": "Union.",
+							"transliteration": "il-itti7aad."
+						}
+					]
+				},
+				{
+					"arabic": "مباشر، ما تحتاج تبدل.",
+					"arabicTashkeel": "مُباشِر، ما تحتاج تبَدِّل.",
+					"english": "It's direct, you don't need to change.",
+					"transliteration": "mubaashir, ma t7taaj tbaddil.",
+					"wordAlignments": [
+						{
+							"arabic": "مباشر،",
+							"english": "It's direct,",
+							"transliteration": "mubaashir,"
+						},
+						{
+							"arabic": "ما",
+							"english": "not",
+							"transliteration": "ma"
+						},
+						{
+							"arabic": "تحتاج",
+							"english": "you need",
+							"transliteration": "t7taaj"
+						},
+						{
+							"arabic": "تبدل.",
+							"english": "to change.",
+							"transliteration": "tbaddil."
+						}
+					]
+				},
+				{
+					"arabic": "المشوار ياخذ عشرين دقيقة، والأجرة ست دراهم.",
+					"arabicTashkeel": "المِشوار ياخِذ عِشرين دَقيقة، والأُجرة سِت دَراهِم.",
+					"english": "The trip takes twenty minutes, and the fare is six dirhams.",
+					"transliteration": "il-mishwaar yaakhidh 3ishreen dageega, w-il-ujra sitt daraahim.",
+					"wordAlignments": [
+						{
+							"arabic": "المشوار",
+							"english": "The trip",
+							"transliteration": "il-mishwaar"
+						},
+						{
+							"arabic": "ياخذ",
+							"english": "takes",
+							"transliteration": "yaakhidh"
+						},
+						{
+							"arabic": "عشرين",
+							"english": "twenty",
+							"transliteration": "3ishreen"
+						},
+						{
+							"arabic": "دقيقة،",
+							"english": "minutes,",
+							"transliteration": "dageega,"
+						},
+						{
+							"arabic": "والأجرة",
+							"english": "and the fare is",
+							"transliteration": "w-il-ujra"
+						},
+						{
+							"arabic": "ست",
+							"english": "six",
+							"transliteration": "sitt"
+						},
+						{
+							"arabic": "دراهم.",
+							"english": "dirhams.",
+							"transliteration": "daraahim."
+						}
+					]
+				},
+				{
+					"arabic": "إنزل بموقف برج خليفة.",
+					"arabicTashkeel": "إنزِل بمَوقِف بُرج خَليفة.",
+					"english": "Get off at the Burj Khalifa stop.",
+					"transliteration": "inzil b-mawgif burj khaleefa.",
+					"wordAlignments": [
+						{
+							"arabic": "إنزل",
+							"english": "Get off",
+							"transliteration": "inzil"
+						},
+						{
+							"arabic": "بموقف",
+							"english": "at the stop of",
+							"transliteration": "b-mawgif"
+						},
+						{
+							"arabic": "برج",
+							"english": "Burj",
+							"transliteration": "burj"
+						},
+						{
+							"arabic": "خليفة.",
+							"english": "Khalifa.",
+							"transliteration": "khaleefa."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "A Short Walk",
+			"sentences": [
+				{
+					"arabic": "المكتبة مو بعيدة، المسافة قصيرة.",
+					"arabicTashkeel": "المَكتَبة مو بَعيدة، المَسافة قْصَيّرة.",
+					"english": "The bookshop isn't far, the distance is short.",
+					"transliteration": "il-maktaba moo ba3eeda, il-masaafa gsayyra.",
+					"wordAlignments": [
+						{
+							"arabic": "المكتبة",
+							"english": "The bookshop is",
+							"transliteration": "il-maktaba"
+						},
+						{
+							"arabic": "مو",
+							"english": "not",
+							"transliteration": "moo"
+						},
+						{
+							"arabic": "بعيدة،",
+							"english": "far,",
+							"transliteration": "ba3eeda,"
+						},
+						{
+							"arabic": "المسافة",
+							"english": "the distance is",
+							"transliteration": "il-masaafa"
+						},
+						{
+							"arabic": "قصيرة.",
+							"english": "short.",
+							"transliteration": "gsayyra."
+						}
+					]
+				},
+				{
+					"arabic": "إمش بالشارع الرئيسي وخش النفق.",
+					"arabicTashkeel": "إمشِ بالشّارع الرَّئيسي وخُش النَّفَق.",
+					"english": "Walk along the main street and go through the tunnel.",
+					"transliteration": "imshi bish-shaari3 ir-ra2eesi w-khush in-nafag.",
+					"wordAlignments": [
+						{
+							"arabic": "إمش",
+							"english": "Walk",
+							"transliteration": "imshi"
+						},
+						{
+							"arabic": "بالشارع",
+							"english": "along the street",
+							"transliteration": "bish-shaari3"
+						},
+						{
+							"arabic": "الرئيسي",
+							"english": "main",
+							"transliteration": "ir-ra2eesi"
+						},
+						{
+							"arabic": "وخش",
+							"english": "and go into",
+							"transliteration": "w-khush"
+						},
+						{
+							"arabic": "النفق.",
+							"english": "the tunnel.",
+							"transliteration": "in-nafag."
+						}
+					]
+				},
+				{
+					"arabic": "بالطريق في كوفي، إسأل هناك.",
+					"arabicTashkeel": "بالطَّريق في كوفي، إسأل هْناك.",
+					"english": "On the way there's a café, ask there.",
+					"transliteration": "bit-tareeg fee koofi, is2al hnaak.",
+					"wordAlignments": [
+						{
+							"arabic": "بالطريق",
+							"english": "On the way",
+							"transliteration": "bit-tareeg"
+						},
+						{
+							"arabic": "في",
+							"english": "there is",
+							"transliteration": "fee"
+						},
+						{
+							"arabic": "كوفي،",
+							"english": "a café,",
+							"transliteration": "koofi,"
+						},
+						{
+							"arabic": "إسأل",
+							"english": "ask",
+							"transliteration": "is2al"
+						},
+						{
+							"arabic": "هناك.",
+							"english": "there.",
+							"transliteration": "hnaak."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student wants to get from their hotel in Deira to Dubai Mall by public transport and asks a hotel receptionist for help.",
+		"studentRole": "A tourist learning Gulf Arabic.",
+		"otherRole": "The helpful hotel receptionist.",
+		"goalEnglish": "Ask which line or bus to take, whether it is direct or you need to change, how long it takes, the fare, and where to get off.",
+		"targetWords": [
+			"Route / line",
+			"Stop (bus)",
+			"Fare",
+			"Direct",
+			"Change (vehicles)!",
+			"It takes (time)",
+			"Get off!",
+			"On the way"
+		]
+	}
+}
