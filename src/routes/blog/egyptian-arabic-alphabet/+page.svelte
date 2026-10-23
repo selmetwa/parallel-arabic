@@ -52,7 +52,7 @@
 				letters, same shapes. Just the everyday spoken version rather than the formal one.
 			</p>
 			<p>
-				One note before we start: I'm going to write the sounds in <strong>franco</strong> (the Arabic
+				One note before we start: I'm going to write the sounds in <a href={resolve('/blog/franco-arabic')}><strong>franco</strong></a> (the Arabic
 				chat alphabet), where numbers stand in for letters English doesn't have. 7 is ح, 3 is ع, 2 is
 				a hamza. You'll pick it up as we go.
 			</p>
