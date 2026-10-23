@@ -1,0 +1,2170 @@
+{
+	"vocab": [
+		{
+			"arabic": "نظام التعليم",
+			"arabicTashkeel": "نِظام التَّعليم",
+			"english": "Education system",
+			"transliteration": "nidhaam it-ta3leem",
+			"wordAlignments": [
+				{
+					"arabic": "نظام",
+					"english": "System of",
+					"transliteration": "nidhaam"
+				},
+				{
+					"arabic": "التعليم",
+					"english": "education",
+					"transliteration": "it-ta3leem"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "حكومي",
+			"arabicTashkeel": "حُكومي",
+			"english": "State (public)",
+			"transliteration": "7ukoomi",
+			"wordAlignments": [
+				{
+					"arabic": "حكومي",
+					"english": "Governmental",
+					"transliteration": "7ukoomi"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "خاص",
+			"arabicTashkeel": "خاص",
+			"english": "Private (school)",
+			"transliteration": "khaass",
+			"wordAlignments": [
+				{
+					"arabic": "خاص",
+					"english": "Private",
+					"transliteration": "khaass"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "مدرسة إبتدائية",
+			"arabicTashkeel": "مَدرَسة إبتِدائية",
+			"english": "Primary school",
+			"transliteration": "madrasa ibtidaa2iyya",
+			"wordAlignments": [
+				{
+					"arabic": "مدرسة",
+					"english": "School",
+					"transliteration": "madrasa"
+				},
+				{
+					"arabic": "إبتدائية",
+					"english": "primary",
+					"transliteration": "ibtidaa2iyya"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "إعدادي",
+			"arabicTashkeel": "إعدادي",
+			"english": "Middle school",
+			"transliteration": "i3daadi",
+			"wordAlignments": [
+				{
+					"arabic": "إعدادي",
+					"english": "Middle school",
+					"transliteration": "i3daadi"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "ثانوي",
+			"arabicTashkeel": "ثانَوي",
+			"english": "High school",
+			"transliteration": "thaanawi",
+			"wordAlignments": [
+				{
+					"arabic": "ثانوي",
+					"english": "Secondary",
+					"transliteration": "thaanawi"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "بعثة",
+			"arabicTashkeel": "بَعثة",
+			"english": "Scholarship",
+			"transliteration": "ba3tha",
+			"wordAlignments": [
+				{
+					"arabic": "بعثة",
+					"english": "Scholarship",
+					"transliteration": "ba3tha"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "منهج",
+			"arabicTashkeel": "مَنهَج",
+			"english": "Curriculum",
+			"transliteration": "manhaj",
+			"wordAlignments": [
+				{
+					"arabic": "منهج",
+					"english": "Curriculum",
+					"transliteration": "manhaj"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "حفظ",
+			"arabicTashkeel": "حِفظ",
+			"english": "Memorization",
+			"transliteration": "7ifdh",
+			"wordAlignments": [
+				{
+					"arabic": "حفظ",
+					"english": "Memorization",
+					"transliteration": "7ifdh"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "فهم",
+			"arabicTashkeel": "فَهم",
+			"english": "Understanding",
+			"transliteration": "fahm",
+			"wordAlignments": [
+				{
+					"arabic": "فهم",
+					"english": "Understanding",
+					"transliteration": "fahm"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "نسبة",
+			"arabicTashkeel": "نِسبة",
+			"english": "Grade percentage",
+			"transliteration": "nisba",
+			"wordAlignments": [
+				{
+					"arabic": "نسبة",
+					"english": "Percentage",
+					"transliteration": "nisba"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "دروس خصوصية",
+			"arabicTashkeel": "دُروس خُصوصية",
+			"english": "Private lessons",
+			"transliteration": "duroos khusoosiyya",
+			"wordAlignments": [
+				{
+					"arabic": "دروس",
+					"english": "Lessons",
+					"transliteration": "duroos"
+				},
+				{
+					"arabic": "خصوصية",
+					"english": "private",
+					"transliteration": "khusoosiyya"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "طريقة التدريس",
+			"arabicTashkeel": "طَريقة التَّدريس",
+			"english": "Teaching method",
+			"transliteration": "tareegat it-tadrees",
+			"wordAlignments": [
+				{
+					"arabic": "طريقة",
+					"english": "Method of",
+					"transliteration": "tareegat"
+				},
+				{
+					"arabic": "التدريس",
+					"english": "teaching",
+					"transliteration": "it-tadrees"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "التفكير النقدي",
+			"arabicTashkeel": "التَّفكير النَّقدي",
+			"english": "Critical thinking",
+			"transliteration": "it-tafkeer in-nagdi",
+			"wordAlignments": [
+				{
+					"arabic": "التفكير",
+					"english": "Thinking",
+					"transliteration": "it-tafkeer"
+				},
+				{
+					"arabic": "النقدي",
+					"english": "critical",
+					"transliteration": "in-nagdi"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "جامعة",
+			"arabicTashkeel": "جامعة",
+			"english": "University",
+			"transliteration": "yaam3a",
+			"wordAlignments": [
+				{
+					"arabic": "جامعة",
+					"english": "University",
+					"transliteration": "yaam3a"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "نظام التعليم تغير وايد.",
+			"arabicTashkeel": "نِظام التَّعليم تغَيَّر وايد.",
+			"english": "The education system has changed a lot.",
+			"transliteration": "nidhaam it-ta3leem tghayyar waayid.",
+			"wordAlignments": [
+				{
+					"arabic": "نظام",
+					"english": "The system of",
+					"transliteration": "nidhaam"
+				},
+				{
+					"arabic": "التعليم",
+					"english": "education",
+					"transliteration": "it-ta3leem"
+				},
+				{
+					"arabic": "تغير",
+					"english": "changed",
+					"transliteration": "tghayyar"
+				},
+				{
+					"arabic": "وايد.",
+					"english": "a lot.",
+					"transliteration": "waayid."
+				}
+			],
+			"targetWords": [
+				"Education system"
+			]
+		},
+		{
+			"arabic": "المدارس الحكومية ببلاش حق المواطنين.",
+			"arabicTashkeel": "المَدارِس الحُكومية بَبلاش حَق المُواطنين.",
+			"english": "State schools are free for citizens.",
+			"transliteration": "il-madaaris il-7ukoomiyya b-balaash 7agg il-muwaatneen.",
+			"wordAlignments": [
+				{
+					"arabic": "المدارس",
+					"english": "The schools",
+					"transliteration": "il-madaaris"
+				},
+				{
+					"arabic": "الحكومية",
+					"english": "state are",
+					"transliteration": "il-7ukoomiyya"
+				},
+				{
+					"arabic": "ببلاش",
+					"english": "free",
+					"transliteration": "b-balaash"
+				},
+				{
+					"arabic": "حق",
+					"english": "for",
+					"transliteration": "7agg"
+				},
+				{
+					"arabic": "المواطنين.",
+					"english": "the citizens.",
+					"transliteration": "il-muwaatneen."
+				}
+			],
+			"targetWords": [
+				"State (public)"
+			]
+		},
+		{
+			"arabic": "المدارس الخاصة غالية.",
+			"arabicTashkeel": "المَدارِس الخاصّة غالية.",
+			"english": "Private schools are expensive.",
+			"transliteration": "il-madaaris il-khaassa ghaalya.",
+			"wordAlignments": [
+				{
+					"arabic": "المدارس",
+					"english": "The schools",
+					"transliteration": "il-madaaris"
+				},
+				{
+					"arabic": "الخاصة",
+					"english": "private are",
+					"transliteration": "il-khaassa"
+				},
+				{
+					"arabic": "غالية.",
+					"english": "expensive.",
+					"transliteration": "ghaalya."
+				}
+			],
+			"targetWords": [
+				"Private (school)"
+			]
+		},
+		{
+			"arabic": "ولدي بمدرسة إبتدائية.",
+			"arabicTashkeel": "وِلدي بمَدرَسة إبتِدائية.",
+			"english": "My son is in primary school.",
+			"transliteration": "wildi b-madrasa ibtidaa2iyya.",
+			"wordAlignments": [
+				{
+					"arabic": "ولدي",
+					"english": "My son is",
+					"transliteration": "wildi"
+				},
+				{
+					"arabic": "بمدرسة",
+					"english": "in a school",
+					"transliteration": "b-madrasa"
+				},
+				{
+					"arabic": "إبتدائية.",
+					"english": "primary.",
+					"transliteration": "ibtidaa2iyya."
+				}
+			],
+			"targetWords": [
+				"Primary school"
+			]
+		},
+		{
+			"arabic": "بنتي خلصت الإعدادي.",
+			"arabicTashkeel": "بِنتي خَلَّصَت الإعدادي.",
+			"english": "My daughter finished middle school.",
+			"transliteration": "binti khallasat il-i3daadi.",
+			"wordAlignments": [
+				{
+					"arabic": "بنتي",
+					"english": "My daughter",
+					"transliteration": "binti"
+				},
+				{
+					"arabic": "خلصت",
+					"english": "finished",
+					"transliteration": "khallasat"
+				},
+				{
+					"arabic": "الإعدادي.",
+					"english": "middle school.",
+					"transliteration": "il-i3daadi."
+				}
+			],
+			"targetWords": [
+				"Middle school"
+			]
+		},
+		{
+			"arabic": "هو بآخر سنة ثانوي.",
+			"arabicTashkeel": "هو بآخِر سَنة ثانَوي.",
+			"english": "He is in his last year of high school.",
+			"transliteration": "hu b-aakhir sana thaanawi.",
+			"wordAlignments": [
+				{
+					"arabic": "هو",
+					"english": "He is",
+					"transliteration": "hu"
+				},
+				{
+					"arabic": "بآخر",
+					"english": "in the last",
+					"transliteration": "b-aakhir"
+				},
+				{
+					"arabic": "سنة",
+					"english": "year",
+					"transliteration": "sana"
+				},
+				{
+					"arabic": "ثانوي.",
+					"english": "of secondary.",
+					"transliteration": "thaanawi."
+				}
+			],
+			"targetWords": [
+				"High school"
+			]
+		},
+		{
+			"arabic": "خذت بعثة تدرس بلندن.",
+			"arabicTashkeel": "خَذَت بَعثة تِدرِس بلَندَن.",
+			"english": "She got a scholarship to study in London.",
+			"transliteration": "khadhat ba3tha tidris b-landan.",
+			"wordAlignments": [
+				{
+					"arabic": "خذت",
+					"english": "She got",
+					"transliteration": "khadhat"
+				},
+				{
+					"arabic": "بعثة",
+					"english": "a scholarship",
+					"transliteration": "ba3tha"
+				},
+				{
+					"arabic": "تدرس",
+					"english": "to study",
+					"transliteration": "tidris"
+				},
+				{
+					"arabic": "بلندن.",
+					"english": "in London.",
+					"transliteration": "b-landan."
+				}
+			],
+			"targetWords": [
+				"Scholarship"
+			]
+		},
+		{
+			"arabic": "المنهج طويل وثقيل.",
+			"arabicTashkeel": "المَنهَج طْويل وثَقيل.",
+			"english": "The curriculum is long and heavy.",
+			"transliteration": "il-manhaj tweel w-thageel.",
+			"wordAlignments": [
+				{
+					"arabic": "المنهج",
+					"english": "The curriculum is",
+					"transliteration": "il-manhaj"
+				},
+				{
+					"arabic": "طويل",
+					"english": "long",
+					"transliteration": "tweel"
+				},
+				{
+					"arabic": "وثقيل.",
+					"english": "and heavy.",
+					"transliteration": "w-thageel."
+				}
+			],
+			"targetWords": [
+				"Curriculum"
+			]
+		},
+		{
+			"arabic": "النظام القديم كان يعتمد على الحفظ.",
+			"arabicTashkeel": "النِّظام القَديم كان يِعتِمِد على الحِفظ.",
+			"english": "The old system depended on memorization.",
+			"transliteration": "in-nidhaam il-gadeem kaan yi3timid 3ala il-7ifdh.",
+			"wordAlignments": [
+				{
+					"arabic": "النظام",
+					"english": "The system",
+					"transliteration": "in-nidhaam"
+				},
+				{
+					"arabic": "القديم",
+					"english": "old",
+					"transliteration": "il-gadeem"
+				},
+				{
+					"arabic": "كان",
+					"english": "was",
+					"transliteration": "kaan"
+				},
+				{
+					"arabic": "يعتمد",
+					"english": "depending",
+					"transliteration": "yi3timid"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "الحفظ.",
+					"english": "memorization.",
+					"transliteration": "il-7ifdh."
+				}
+			],
+			"targetWords": [
+				"Memorization"
+			]
+		},
+		{
+			"arabic": "الفهم أهم من الحفظ.",
+			"arabicTashkeel": "الفَهم أهَم مِن الحِفظ.",
+			"english": "Understanding is more important than memorization.",
+			"transliteration": "il-fahm aham min il-7ifdh.",
+			"wordAlignments": [
+				{
+					"arabic": "الفهم",
+					"english": "Understanding is",
+					"transliteration": "il-fahm"
+				},
+				{
+					"arabic": "أهم",
+					"english": "more important",
+					"transliteration": "aham"
+				},
+				{
+					"arabic": "من",
+					"english": "than",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الحفظ.",
+					"english": "memorization.",
+					"transliteration": "il-7ifdh."
+				}
+			],
+			"targetWords": [
+				"Understanding",
+				"Memorization"
+			]
+		},
+		{
+			"arabic": "كم كانت نسبتك؟",
+			"arabicTashkeel": "كَم كانَت نِسبتَك؟",
+			"english": "What was your final percentage?",
+			"transliteration": "cham kaanat nisbatak?",
+			"wordAlignments": [
+				{
+					"arabic": "كم",
+					"english": "How much",
+					"transliteration": "cham"
+				},
+				{
+					"arabic": "كانت",
+					"english": "was",
+					"transliteration": "kaanat"
+				},
+				{
+					"arabic": "نسبتك؟",
+					"english": "your percentage?",
+					"transliteration": "nisbatak?"
+				}
+			],
+			"targetWords": [
+				"Grade percentage"
+			]
+		},
+		{
+			"arabic": "طلاب وايد ياخذون دروس خصوصية.",
+			"arabicTashkeel": "طُلّاب وايد ياخذون دُروس خُصوصية.",
+			"english": "Many students take private lessons.",
+			"transliteration": "tullaab waayid yaakhdhoon duroos khusoosiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "طلاب",
+					"english": "Students",
+					"transliteration": "tullaab"
+				},
+				{
+					"arabic": "وايد",
+					"english": "many",
+					"transliteration": "waayid"
+				},
+				{
+					"arabic": "ياخذون",
+					"english": "take",
+					"transliteration": "yaakhdhoon"
+				},
+				{
+					"arabic": "دروس",
+					"english": "lessons",
+					"transliteration": "duroos"
+				},
+				{
+					"arabic": "خصوصية.",
+					"english": "private.",
+					"transliteration": "khusoosiyya."
+				}
+			],
+			"targetWords": [
+				"Private lessons"
+			]
+		},
+		{
+			"arabic": "طريقة التدريس حديثة.",
+			"arabicTashkeel": "طَريقة التَّدريس حَديثة.",
+			"english": "The teaching method is modern.",
+			"transliteration": "tareegat it-tadrees 7adeetha.",
+			"wordAlignments": [
+				{
+					"arabic": "طريقة",
+					"english": "The method of",
+					"transliteration": "tareegat"
+				},
+				{
+					"arabic": "التدريس",
+					"english": "teaching is",
+					"transliteration": "it-tadrees"
+				},
+				{
+					"arabic": "حديثة.",
+					"english": "modern.",
+					"transliteration": "7adeetha."
+				}
+			],
+			"targetWords": [
+				"Teaching method"
+			]
+		},
+		{
+			"arabic": "التفكير النقدي مهم بالمدارس.",
+			"arabicTashkeel": "التَّفكير النَّقدي مُهِم بالمَدارِس.",
+			"english": "Critical thinking is important in schools.",
+			"transliteration": "it-tafkeer in-nagdi muhimm bil-madaaris.",
+			"wordAlignments": [
+				{
+					"arabic": "التفكير",
+					"english": "Thinking",
+					"transliteration": "it-tafkeer"
+				},
+				{
+					"arabic": "النقدي",
+					"english": "critical is",
+					"transliteration": "in-nagdi"
+				},
+				{
+					"arabic": "مهم",
+					"english": "important",
+					"transliteration": "muhimm"
+				},
+				{
+					"arabic": "بالمدارس.",
+					"english": "in schools.",
+					"transliteration": "bil-madaaris."
+				}
+			],
+			"targetWords": [
+				"Critical thinking"
+			]
+		},
+		{
+			"arabic": "حتى تدرس طب، تحتاج نسبة عالية.",
+			"arabicTashkeel": "حَتّى تِدرِس طِب، تحتاج نِسبة عالية.",
+			"english": "To enter medicine, you need a high percentage.",
+			"transliteration": "7atta tidris tibb, t7taaj nisba 3aalya.",
+			"wordAlignments": [
+				{
+					"arabic": "حتى",
+					"english": "In order to",
+					"transliteration": "7atta"
+				},
+				{
+					"arabic": "تدرس",
+					"english": "study",
+					"transliteration": "tidris"
+				},
+				{
+					"arabic": "طب،",
+					"english": "medicine,",
+					"transliteration": "tibb,"
+				},
+				{
+					"arabic": "تحتاج",
+					"english": "you need",
+					"transliteration": "t7taaj"
+				},
+				{
+					"arabic": "نسبة",
+					"english": "a percentage",
+					"transliteration": "nisba"
+				},
+				{
+					"arabic": "عالية.",
+					"english": "high.",
+					"transliteration": "3aalya."
+				}
+			],
+			"targetWords": [
+				"Grade percentage",
+				"University"
+			]
+		},
+		{
+			"arabic": "مقارنة أنظمة التعليم.",
+			"arabicTashkeel": "مُقارَنة أنظِمة التَّعليم.",
+			"english": "Comparing education systems.",
+			"transliteration": "mugaarana andhimat it-ta3leem.",
+			"wordAlignments": [
+				{
+					"arabic": "مقارنة",
+					"english": "Comparing",
+					"transliteration": "mugaarana"
+				},
+				{
+					"arabic": "أنظمة",
+					"english": "the systems of",
+					"transliteration": "andhimat"
+				},
+				{
+					"arabic": "التعليم.",
+					"english": "education.",
+					"transliteration": "it-ta3leem."
+				}
+			],
+			"targetWords": [
+				"Education system"
+			]
+		},
+		{
+			"arabic": "المدرسين بالمدارس الحكومية زينين.",
+			"arabicTashkeel": "المُدَرِّسين بالمَدارِس الحُكومية زينين.",
+			"english": "Teachers in state schools are good.",
+			"transliteration": "il-mudarriseen bil-madaaris il-7ukoomiyya zeeneen.",
+			"wordAlignments": [
+				{
+					"arabic": "المدرسين",
+					"english": "The teachers",
+					"transliteration": "il-mudarriseen"
+				},
+				{
+					"arabic": "بالمدارس",
+					"english": "in the schools",
+					"transliteration": "bil-madaaris"
+				},
+				{
+					"arabic": "الحكومية",
+					"english": "state are",
+					"transliteration": "il-7ukoomiyya"
+				},
+				{
+					"arabic": "زينين.",
+					"english": "good.",
+					"transliteration": "zeeneen."
+				}
+			],
+			"targetWords": [
+				"State (public)"
+			]
+		},
+		{
+			"arabic": "جامعة خاصة بدبي.",
+			"arabicTashkeel": "جامعة خاصّة بدُبَي.",
+			"english": "A private university in Dubai.",
+			"transliteration": "yaam3a khaassa b-dubay.",
+			"wordAlignments": [
+				{
+					"arabic": "جامعة",
+					"english": "A university",
+					"transliteration": "yaam3a"
+				},
+				{
+					"arabic": "خاصة",
+					"english": "private",
+					"transliteration": "khaassa"
+				},
+				{
+					"arabic": "بدبي.",
+					"english": "in Dubai.",
+					"transliteration": "b-dubay."
+				}
+			],
+			"targetWords": [
+				"Private (school)",
+				"University"
+			]
+		},
+		{
+			"arabic": "الإبتدائي خمس سنين.",
+			"arabicTashkeel": "الإبتِدائي خَمس سِنين.",
+			"english": "Primary school is five years.",
+			"transliteration": "il-ibtidaa2i khams sneen.",
+			"wordAlignments": [
+				{
+					"arabic": "الإبتدائي",
+					"english": "Primary is",
+					"transliteration": "il-ibtidaa2i"
+				},
+				{
+					"arabic": "خمس",
+					"english": "five",
+					"transliteration": "khams"
+				},
+				{
+					"arabic": "سنين.",
+					"english": "years.",
+					"transliteration": "sneen."
+				}
+			],
+			"targetWords": [
+				"Primary school"
+			]
+		},
+		{
+			"arabic": "الإعدادي ثلاث سنين.",
+			"arabicTashkeel": "الإعدادي ثَلاث سِنين.",
+			"english": "Middle school is three years.",
+			"transliteration": "il-i3daadi thalaath sneen.",
+			"wordAlignments": [
+				{
+					"arabic": "الإعدادي",
+					"english": "Middle school is",
+					"transliteration": "il-i3daadi"
+				},
+				{
+					"arabic": "ثلاث",
+					"english": "three",
+					"transliteration": "thalaath"
+				},
+				{
+					"arabic": "سنين.",
+					"english": "years.",
+					"transliteration": "sneen."
+				}
+			],
+			"targetWords": [
+				"Middle school"
+			]
+		},
+		{
+			"arabic": "إختار العلمي بالثانوي.",
+			"arabicTashkeel": "إختار العِلمي بالثّانَوي.",
+			"english": "He chose the science stream in high school.",
+			"transliteration": "ikhtaar il-3ilmi bith-thaanawi.",
+			"wordAlignments": [
+				{
+					"arabic": "إختار",
+					"english": "He chose",
+					"transliteration": "ikhtaar"
+				},
+				{
+					"arabic": "العلمي",
+					"english": "the science stream",
+					"transliteration": "il-3ilmi"
+				},
+				{
+					"arabic": "بالثانوي.",
+					"english": "in secondary.",
+					"transliteration": "bith-thaanawi."
+				}
+			],
+			"targetWords": [
+				"High school"
+			]
+		},
+		{
+			"arabic": "الحكومة تدفع حق البعثة.",
+			"arabicTashkeel": "الحُكومة تِدفَع حَق البَعثة.",
+			"english": "The government pays for the scholarship.",
+			"transliteration": "il-7ukooma tidfa3 7agg il-ba3tha.",
+			"wordAlignments": [
+				{
+					"arabic": "الحكومة",
+					"english": "The government",
+					"transliteration": "il-7ukooma"
+				},
+				{
+					"arabic": "تدفع",
+					"english": "pays",
+					"transliteration": "tidfa3"
+				},
+				{
+					"arabic": "حق",
+					"english": "for",
+					"transliteration": "7agg"
+				},
+				{
+					"arabic": "البعثة.",
+					"english": "the scholarship.",
+					"transliteration": "il-ba3tha."
+				}
+			],
+			"targetWords": [
+				"Scholarship"
+			]
+		},
+		{
+			"arabic": "غيروا المنهج هالسنة.",
+			"arabicTashkeel": "غَيّروا المَنهَج هالسَّنة.",
+			"english": "They changed the curriculum this year.",
+			"transliteration": "ghayyaru il-manhaj has-sana.",
+			"wordAlignments": [
+				{
+					"arabic": "غيروا",
+					"english": "They changed",
+					"transliteration": "ghayyaru"
+				},
+				{
+					"arabic": "المنهج",
+					"english": "the curriculum",
+					"transliteration": "il-manhaj"
+				},
+				{
+					"arabic": "هالسنة.",
+					"english": "this year.",
+					"transliteration": "has-sana."
+				}
+			],
+			"targetWords": [
+				"Curriculum"
+			]
+		},
+		{
+			"arabic": "الحفظ بدون فهم ما ينفع.",
+			"arabicTashkeel": "الحِفظ بدون فَهم ما يِنفَع.",
+			"english": "Memorization without understanding is useless.",
+			"transliteration": "il-7ifdh bidoon fahm ma yinfa3.",
+			"wordAlignments": [
+				{
+					"arabic": "الحفظ",
+					"english": "Memorization",
+					"transliteration": "il-7ifdh"
+				},
+				{
+					"arabic": "بدون",
+					"english": "without",
+					"transliteration": "bidoon"
+				},
+				{
+					"arabic": "فهم",
+					"english": "understanding",
+					"transliteration": "fahm"
+				},
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "ينفع.",
+					"english": "useful.",
+					"transliteration": "yinfa3."
+				}
+			],
+			"targetWords": [
+				"Memorization",
+				"Understanding"
+			]
+		},
+		{
+			"arabic": "الفهم ياخذ وقت.",
+			"arabicTashkeel": "الفَهم ياخِذ وَقت.",
+			"english": "Understanding takes time.",
+			"transliteration": "il-fahm yaakhidh wagt.",
+			"wordAlignments": [
+				{
+					"arabic": "الفهم",
+					"english": "Understanding",
+					"transliteration": "il-fahm"
+				},
+				{
+					"arabic": "ياخذ",
+					"english": "takes",
+					"transliteration": "yaakhidh"
+				},
+				{
+					"arabic": "وقت.",
+					"english": "time.",
+					"transliteration": "wagt."
+				}
+			],
+			"targetWords": [
+				"Understanding"
+			]
+		},
+		{
+			"arabic": "نسبتي كانت خمسة وتسعين.",
+			"arabicTashkeel": "نِسبتي كانَت خَمسة وتِسعين.",
+			"english": "My percentage was ninety-five.",
+			"transliteration": "nisbati kaanat khamsa w-tis3een.",
+			"wordAlignments": [
+				{
+					"arabic": "نسبتي",
+					"english": "My percentage",
+					"transliteration": "nisbati"
+				},
+				{
+					"arabic": "كانت",
+					"english": "was",
+					"transliteration": "kaanat"
+				},
+				{
+					"arabic": "خمسة",
+					"english": "five",
+					"transliteration": "khamsa"
+				},
+				{
+					"arabic": "وتسعين.",
+					"english": "and ninety.",
+					"transliteration": "w-tis3een."
+				}
+			],
+			"targetWords": [
+				"Grade percentage"
+			]
+		},
+		{
+			"arabic": "الدروس الخصوصية غالية.",
+			"arabicTashkeel": "الدُّروس الخُصوصية غالية.",
+			"english": "Private lessons are expensive.",
+			"transliteration": "id-duroos il-khusoosiyya ghaalya.",
+			"wordAlignments": [
+				{
+					"arabic": "الدروس",
+					"english": "Lessons",
+					"transliteration": "id-duroos"
+				},
+				{
+					"arabic": "الخصوصية",
+					"english": "private are",
+					"transliteration": "il-khusoosiyya"
+				},
+				{
+					"arabic": "غالية.",
+					"english": "expensive.",
+					"transliteration": "ghaalya."
+				}
+			],
+			"targetWords": [
+				"Private lessons"
+			]
+		},
+		{
+			"arabic": "طريقة تدريس حديثة.",
+			"arabicTashkeel": "طَريقة تَدريس حَديثة.",
+			"english": "A modern teaching method.",
+			"transliteration": "tareega tadrees 7adeetha.",
+			"wordAlignments": [
+				{
+					"arabic": "طريقة",
+					"english": "A method",
+					"transliteration": "tareega"
+				},
+				{
+					"arabic": "تدريس",
+					"english": "of teaching",
+					"transliteration": "tadrees"
+				},
+				{
+					"arabic": "حديثة.",
+					"english": "modern.",
+					"transliteration": "7adeetha."
+				}
+			],
+			"targetWords": [
+				"Teaching method"
+			]
+		},
+		{
+			"arabic": "علموا العيال التفكير النقدي.",
+			"arabicTashkeel": "عَلِّموا العْيال التَّفكير النَّقدي.",
+			"english": "Teach children critical thinking.",
+			"transliteration": "3allimu il-3yaal it-tafkeer in-nagdi.",
+			"wordAlignments": [
+				{
+					"arabic": "علموا",
+					"english": "Teach",
+					"transliteration": "3allimu"
+				},
+				{
+					"arabic": "العيال",
+					"english": "the children",
+					"transliteration": "il-3yaal"
+				},
+				{
+					"arabic": "التفكير",
+					"english": "thinking",
+					"transliteration": "it-tafkeer"
+				},
+				{
+					"arabic": "النقدي.",
+					"english": "critical.",
+					"transliteration": "in-nagdi."
+				}
+			],
+			"targetWords": [
+				"Critical thinking"
+			]
+		},
+		{
+			"arabic": "جامعة الإمارات بالعين.",
+			"arabicTashkeel": "جامعة الإمارات بالعين.",
+			"english": "UAE University is in Al Ain.",
+			"transliteration": "yaam3at il-imaaraat bil-3een.",
+			"wordAlignments": [
+				{
+					"arabic": "جامعة",
+					"english": "The university of",
+					"transliteration": "yaam3at"
+				},
+				{
+					"arabic": "الإمارات",
+					"english": "the UAE is",
+					"transliteration": "il-imaaraat"
+				},
+				{
+					"arabic": "بالعين.",
+					"english": "in Al Ain.",
+					"transliteration": "bil-3een."
+				}
+			],
+			"targetWords": [
+				"University"
+			]
+		},
+		{
+			"arabic": "نظام التعليم بفنلندا مشهور.",
+			"arabicTashkeel": "نِظام التَّعليم بفِنلَندا مَشهور.",
+			"english": "The education system in Finland is famous.",
+			"transliteration": "nidhaam it-ta3leem b-finlanda mash-hoor.",
+			"wordAlignments": [
+				{
+					"arabic": "نظام",
+					"english": "The system of",
+					"transliteration": "nidhaam"
+				},
+				{
+					"arabic": "التعليم",
+					"english": "education",
+					"transliteration": "it-ta3leem"
+				},
+				{
+					"arabic": "بفنلندا",
+					"english": "in Finland is",
+					"transliteration": "b-finlanda"
+				},
+				{
+					"arabic": "مشهور.",
+					"english": "famous.",
+					"transliteration": "mash-hoor."
+				}
+			],
+			"targetWords": [
+				"Education system"
+			]
+		},
+		{
+			"arabic": "وظيفة حكومية بعد التخرج.",
+			"arabicTashkeel": "وَظيفة حُكومية بَعد التَّخَرُّج.",
+			"english": "A state job after graduation.",
+			"transliteration": "wadheefa 7ukoomiyya ba3d it-takharruj.",
+			"wordAlignments": [
+				{
+					"arabic": "وظيفة",
+					"english": "A job",
+					"transliteration": "wadheefa"
+				},
+				{
+					"arabic": "حكومية",
+					"english": "government",
+					"transliteration": "7ukoomiyya"
+				},
+				{
+					"arabic": "بعد",
+					"english": "after",
+					"transliteration": "ba3d"
+				},
+				{
+					"arabic": "التخرج.",
+					"english": "graduation.",
+					"transliteration": "it-takharruj."
+				}
+			],
+			"targetWords": [
+				"State (public)"
+			]
+		},
+		{
+			"arabic": "المدارس الخاصة تدرس بالإنجليزي.",
+			"arabicTashkeel": "المَدارِس الخاصّة تْدَرِّس بالإنجليزي.",
+			"english": "Private schools teach in English.",
+			"transliteration": "il-madaaris il-khaassa tdarris bil-ingleezi.",
+			"wordAlignments": [
+				{
+					"arabic": "المدارس",
+					"english": "The schools",
+					"transliteration": "il-madaaris"
+				},
+				{
+					"arabic": "الخاصة",
+					"english": "private",
+					"transliteration": "il-khaassa"
+				},
+				{
+					"arabic": "تدرس",
+					"english": "teach",
+					"transliteration": "tdarris"
+				},
+				{
+					"arabic": "بالإنجليزي.",
+					"english": "in English.",
+					"transliteration": "bil-ingleezi."
+				}
+			],
+			"targetWords": [
+				"Private (school)"
+			]
+		},
+		{
+			"arabic": "المدرسة الإبتدائية قريبة من بيتنا.",
+			"arabicTashkeel": "المَدرَسة الإبتِدائية قَريبة مِن بيتنا.",
+			"english": "The primary school is near our house.",
+			"transliteration": "il-madrasa il-ibtidaa2iyya gareeba min beetna.",
+			"wordAlignments": [
+				{
+					"arabic": "المدرسة",
+					"english": "The school",
+					"transliteration": "il-madrasa"
+				},
+				{
+					"arabic": "الإبتدائية",
+					"english": "primary is",
+					"transliteration": "il-ibtidaa2iyya"
+				},
+				{
+					"arabic": "قريبة",
+					"english": "near",
+					"transliteration": "gareeba"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "بيتنا.",
+					"english": "our house.",
+					"transliteration": "beetna."
+				}
+			],
+			"targetWords": [
+				"Primary school"
+			]
+		},
+		{
+			"arabic": "طلاب الثانوي يدرسون ليل نهار.",
+			"arabicTashkeel": "طُلّاب الثّانَوي يِدرِسون ليل نَهار.",
+			"english": "High school students study day and night.",
+			"transliteration": "tullaab ith-thaanawi yidrisoon leel nahaar.",
+			"wordAlignments": [
+				{
+					"arabic": "طلاب",
+					"english": "The students of",
+					"transliteration": "tullaab"
+				},
+				{
+					"arabic": "الثانوي",
+					"english": "secondary",
+					"transliteration": "ith-thaanawi"
+				},
+				{
+					"arabic": "يدرسون",
+					"english": "study",
+					"transliteration": "yidrisoon"
+				},
+				{
+					"arabic": "ليل",
+					"english": "night",
+					"transliteration": "leel"
+				},
+				{
+					"arabic": "نهار.",
+					"english": "and day.",
+					"transliteration": "nahaar."
+				}
+			],
+			"targetWords": [
+				"High school"
+			]
+		},
+		{
+			"arabic": "بعثة لجامعة أمريكية.",
+			"arabicTashkeel": "بَعثة لجامعة أمريكية.",
+			"english": "A scholarship to an American university.",
+			"transliteration": "ba3tha l-yaam3a amreekiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "بعثة",
+					"english": "A scholarship",
+					"transliteration": "ba3tha"
+				},
+				{
+					"arabic": "لجامعة",
+					"english": "to a university",
+					"transliteration": "l-yaam3a"
+				},
+				{
+					"arabic": "أمريكية.",
+					"english": "American.",
+					"transliteration": "amreekiyya."
+				}
+			],
+			"targetWords": [
+				"Scholarship",
+				"University"
+			]
+		},
+		{
+			"arabic": "منهج إنجليزي جديد.",
+			"arabicTashkeel": "مَنهَج إنجليزي جْديد.",
+			"english": "A new English curriculum.",
+			"transliteration": "manhaj ingleezi ydeed.",
+			"wordAlignments": [
+				{
+					"arabic": "منهج",
+					"english": "A curriculum",
+					"transliteration": "manhaj"
+				},
+				{
+					"arabic": "إنجليزي",
+					"english": "English",
+					"transliteration": "ingleezi"
+				},
+				{
+					"arabic": "جديد.",
+					"english": "new.",
+					"transliteration": "ydeed."
+				}
+			],
+			"targetWords": [
+				"Curriculum"
+			]
+		},
+		{
+			"arabic": "حفظت الكتاب كله!",
+			"arabicTashkeel": "حِفَظت الكِتاب كِلَّه!",
+			"english": "I memorized the whole book!",
+			"transliteration": "7ifadht il-kitaab killa!",
+			"wordAlignments": [
+				{
+					"arabic": "حفظت",
+					"english": "I memorized",
+					"transliteration": "7ifadht"
+				},
+				{
+					"arabic": "الكتاب",
+					"english": "the book",
+					"transliteration": "il-kitaab"
+				},
+				{
+					"arabic": "كله!",
+					"english": "all of it!",
+					"transliteration": "killa!"
+				}
+			],
+			"targetWords": [
+				"Memorization"
+			]
+		},
+		{
+			"arabic": "فهم الدرس هو الهدف.",
+			"arabicTashkeel": "فَهم الدَّرس هو الهَدَف.",
+			"english": "Understanding the lesson is the goal.",
+			"transliteration": "fahm id-dars hu il-hadaf.",
+			"wordAlignments": [
+				{
+					"arabic": "فهم",
+					"english": "Understanding",
+					"transliteration": "fahm"
+				},
+				{
+					"arabic": "الدرس",
+					"english": "the lesson is",
+					"transliteration": "id-dars"
+				},
+				{
+					"arabic": "هو",
+					"english": "it is",
+					"transliteration": "hu"
+				},
+				{
+					"arabic": "الهدف.",
+					"english": "the goal.",
+					"transliteration": "il-hadaf."
+				}
+			],
+			"targetWords": [
+				"Understanding"
+			]
+		},
+		{
+			"arabic": "النسبة العالية تفتح أبواب.",
+			"arabicTashkeel": "النِّسبة العالية تِفتَح أبواب.",
+			"english": "A high percentage opens doors.",
+			"transliteration": "in-nisba il-3aalya tifta7 abwaab.",
+			"wordAlignments": [
+				{
+					"arabic": "النسبة",
+					"english": "The percentage",
+					"transliteration": "in-nisba"
+				},
+				{
+					"arabic": "العالية",
+					"english": "high",
+					"transliteration": "il-3aalya"
+				},
+				{
+					"arabic": "تفتح",
+					"english": "opens",
+					"transliteration": "tifta7"
+				},
+				{
+					"arabic": "أبواب.",
+					"english": "doors.",
+					"transliteration": "abwaab."
+				}
+			],
+			"targetWords": [
+				"Grade percentage"
+			]
+		},
+		{
+			"arabic": "أمي كانت تعطي دروس خصوصية بالبيت.",
+			"arabicTashkeel": "أُمّي كانَت تعَطي دُروس خُصوصية بالبيت.",
+			"english": "My mother gave private lessons at home.",
+			"transliteration": "ummi kaanat t3ati duroos khusoosiyya bil-beet.",
+			"wordAlignments": [
+				{
+					"arabic": "أمي",
+					"english": "My mother",
+					"transliteration": "ummi"
+				},
+				{
+					"arabic": "كانت",
+					"english": "was",
+					"transliteration": "kaanat"
+				},
+				{
+					"arabic": "تعطي",
+					"english": "giving",
+					"transliteration": "t3ati"
+				},
+				{
+					"arabic": "دروس",
+					"english": "lessons",
+					"transliteration": "duroos"
+				},
+				{
+					"arabic": "خصوصية",
+					"english": "private",
+					"transliteration": "khusoosiyya"
+				},
+				{
+					"arabic": "بالبيت.",
+					"english": "at home.",
+					"transliteration": "bil-beet."
+				}
+			],
+			"targetWords": [
+				"Private lessons"
+			]
+		},
+		{
+			"arabic": "كل مدرس له طريقة تدريس.",
+			"arabicTashkeel": "كِل مُدَرِّس لَه طَريقة تَدريس.",
+			"english": "Every teacher has a teaching method.",
+			"transliteration": "kil mudarris la tareegat tadrees.",
+			"wordAlignments": [
+				{
+					"arabic": "كل",
+					"english": "Every",
+					"transliteration": "kil"
+				},
+				{
+					"arabic": "مدرس",
+					"english": "teacher",
+					"transliteration": "mudarris"
+				},
+				{
+					"arabic": "له",
+					"english": "has",
+					"transliteration": "la"
+				},
+				{
+					"arabic": "طريقة",
+					"english": "a method of",
+					"transliteration": "tareegat"
+				},
+				{
+					"arabic": "تدريس.",
+					"english": "teaching.",
+					"transliteration": "tadrees."
+				}
+			],
+			"targetWords": [
+				"Teaching method"
+			]
+		},
+		{
+			"arabic": "التفكير النقدي بالجامعة.",
+			"arabicTashkeel": "التَّفكير النَّقدي بالجامعة.",
+			"english": "Critical thinking at university.",
+			"transliteration": "it-tafkeer in-nagdi bil-yaam3a.",
+			"wordAlignments": [
+				{
+					"arabic": "التفكير",
+					"english": "Thinking",
+					"transliteration": "it-tafkeer"
+				},
+				{
+					"arabic": "النقدي",
+					"english": "critical",
+					"transliteration": "in-nagdi"
+				},
+				{
+					"arabic": "بالجامعة.",
+					"english": "at the university.",
+					"transliteration": "bil-yaam3a."
+				}
+			],
+			"targetWords": [
+				"Critical thinking",
+				"University"
+			]
+		},
+		{
+			"arabic": "تطوير نظام التعليم ياخذ سنين.",
+			"arabicTashkeel": "تَطوير نِظام التَّعليم ياخِذ سِنين.",
+			"english": "Reforming the education system takes years.",
+			"transliteration": "tatweer nidhaam it-ta3leem yaakhidh sneen.",
+			"wordAlignments": [
+				{
+					"arabic": "تطوير",
+					"english": "Developing",
+					"transliteration": "tatweer"
+				},
+				{
+					"arabic": "نظام",
+					"english": "the system of",
+					"transliteration": "nidhaam"
+				},
+				{
+					"arabic": "التعليم",
+					"english": "education",
+					"transliteration": "it-ta3leem"
+				},
+				{
+					"arabic": "ياخذ",
+					"english": "takes",
+					"transliteration": "yaakhidh"
+				},
+				{
+					"arabic": "سنين.",
+					"english": "years.",
+					"transliteration": "sneen."
+				}
+			],
+			"targetWords": [
+				"Education system"
+			]
+		},
+		{
+			"arabic": "حكومي لو خاص؟",
+			"arabicTashkeel": "حُكومي لو خاص؟",
+			"english": "State or private?",
+			"transliteration": "7ukoomi law khaass?",
+			"wordAlignments": [
+				{
+					"arabic": "حكومي",
+					"english": "State",
+					"transliteration": "7ukoomi"
+				},
+				{
+					"arabic": "لو",
+					"english": "or",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "خاص؟",
+					"english": "private?",
+					"transliteration": "khaass?"
+				}
+			],
+			"targetWords": [
+				"State (public)",
+				"Private (school)"
+			]
+		},
+		{
+			"arabic": "مدرسة إعدادية حق البنات.",
+			"arabicTashkeel": "مَدرَسة إعدادية حَق البَنات.",
+			"english": "A girls' middle school.",
+			"transliteration": "madrasa i3daadiyya 7agg il-banaat.",
+			"wordAlignments": [
+				{
+					"arabic": "مدرسة",
+					"english": "A school",
+					"transliteration": "madrasa"
+				},
+				{
+					"arabic": "إعدادية",
+					"english": "middle",
+					"transliteration": "i3daadiyya"
+				},
+				{
+					"arabic": "حق",
+					"english": "for",
+					"transliteration": "7agg"
+				},
+				{
+					"arabic": "البنات.",
+					"english": "the girls.",
+					"transliteration": "il-banaat."
+				}
+			],
+			"targetWords": [
+				"Middle school"
+			]
+		},
+		{
+			"arabic": "مدرسة ثانوية حق العيال.",
+			"arabicTashkeel": "مَدرَسة ثانَوية حَق العْيال.",
+			"english": "A boys' high school.",
+			"transliteration": "madrasa thaanawiyya 7agg il-3yaal.",
+			"wordAlignments": [
+				{
+					"arabic": "مدرسة",
+					"english": "A school",
+					"transliteration": "madrasa"
+				},
+				{
+					"arabic": "ثانوية",
+					"english": "secondary",
+					"transliteration": "thaanawiyya"
+				},
+				{
+					"arabic": "حق",
+					"english": "for",
+					"transliteration": "7agg"
+				},
+				{
+					"arabic": "العيال.",
+					"english": "the boys.",
+					"transliteration": "il-3yaal."
+				}
+			],
+			"targetWords": [
+				"High school"
+			]
+		},
+		{
+			"arabic": "منهج ثقيل.",
+			"arabicTashkeel": "مَنهَج ثَقيل.",
+			"english": "A heavy curriculum.",
+			"transliteration": "manhaj thageel.",
+			"wordAlignments": [
+				{
+					"arabic": "منهج",
+					"english": "A curriculum",
+					"transliteration": "manhaj"
+				},
+				{
+					"arabic": "ثقيل.",
+					"english": "heavy.",
+					"transliteration": "thageel."
+				}
+			],
+			"targetWords": [
+				"Curriculum"
+			]
+		},
+		{
+			"arabic": "نسبة ثمانين.",
+			"arabicTashkeel": "نِسبة ثَمانين.",
+			"english": "A percentage of eighty.",
+			"transliteration": "nisba thamaaneen.",
+			"wordAlignments": [
+				{
+					"arabic": "نسبة",
+					"english": "A percentage of",
+					"transliteration": "nisba"
+				},
+				{
+					"arabic": "ثمانين.",
+					"english": "eighty.",
+					"transliteration": "thamaaneen."
+				}
+			],
+			"targetWords": [
+				"Grade percentage"
+			]
+		},
+		{
+			"arabic": "دروس خصوصية بالرياضيات.",
+			"arabicTashkeel": "دُروس خُصوصية بالرِّياضيات.",
+			"english": "Private lessons in mathematics.",
+			"transliteration": "duroos khusoosiyya bir-riyaadhiyyaat.",
+			"wordAlignments": [
+				{
+					"arabic": "دروس",
+					"english": "Lessons",
+					"transliteration": "duroos"
+				},
+				{
+					"arabic": "خصوصية",
+					"english": "private",
+					"transliteration": "khusoosiyya"
+				},
+				{
+					"arabic": "بالرياضيات.",
+					"english": "in mathematics.",
+					"transliteration": "bir-riyaadhiyyaat."
+				}
+			],
+			"targetWords": [
+				"Private lessons"
+			]
+		},
+		{
+			"arabic": "أحسن طريقة تدريس.",
+			"arabicTashkeel": "أحسَن طَريقة تَدريس.",
+			"english": "The best teaching method.",
+			"transliteration": "a7san tareegat tadrees.",
+			"wordAlignments": [
+				{
+					"arabic": "أحسن",
+					"english": "The best",
+					"transliteration": "a7san"
+				},
+				{
+					"arabic": "طريقة",
+					"english": "method of",
+					"transliteration": "tareegat"
+				},
+				{
+					"arabic": "تدريس.",
+					"english": "teaching.",
+					"transliteration": "tadrees."
+				}
+			],
+			"targetWords": [
+				"Teaching method"
+			]
+		},
+		{
+			"arabic": "رد من البعثة بشهادة دكتوراه.",
+			"arabicTashkeel": "رَدّ مِن البَعثة بشَهادة دُكتوراه.",
+			"english": "He returned from his scholarship with a PhD.",
+			"transliteration": "radd min il-ba3tha b-shahaadat duktooraah.",
+			"wordAlignments": [
+				{
+					"arabic": "رد",
+					"english": "He came back",
+					"transliteration": "radd"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "البعثة",
+					"english": "the scholarship",
+					"transliteration": "il-ba3tha"
+				},
+				{
+					"arabic": "بشهادة",
+					"english": "with a degree of",
+					"transliteration": "b-shahaadat"
+				},
+				{
+					"arabic": "دكتوراه.",
+					"english": "doctorate.",
+					"transliteration": "duktooraah."
+				}
+			],
+			"targetWords": [
+				"Scholarship"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "Education in the UAE",
+			"sentences": [
+				{
+					"arabic": "بالإمارات العيال يدرسون إبتدائي، بعدين إعدادي، بعدين ثانوي.",
+					"arabicTashkeel": "بالإمارات العْيال يِدرِسون إبتِدائي، بَعدين إعدادي، بَعدين ثانَوي.",
+					"english": "In the UAE, children study in primary, then middle, then high school.",
+					"transliteration": "bil-imaaraat il-3yaal yidrisoon ibtidaa2i, ba3dain i3daadi, ba3dain thaanawi.",
+					"wordAlignments": [
+						{
+							"arabic": "بالإمارات",
+							"english": "In the UAE",
+							"transliteration": "bil-imaaraat"
+						},
+						{
+							"arabic": "العيال",
+							"english": "the children",
+							"transliteration": "il-3yaal"
+						},
+						{
+							"arabic": "يدرسون",
+							"english": "study",
+							"transliteration": "yidrisoon"
+						},
+						{
+							"arabic": "إبتدائي،",
+							"english": "primary,",
+							"transliteration": "ibtidaa2i,"
+						},
+						{
+							"arabic": "بعدين",
+							"english": "then",
+							"transliteration": "ba3dain"
+						},
+						{
+							"arabic": "إعدادي،",
+							"english": "middle,",
+							"transliteration": "i3daadi,"
+						},
+						{
+							"arabic": "بعدين",
+							"english": "then",
+							"transliteration": "ba3dain"
+						},
+						{
+							"arabic": "ثانوي.",
+							"english": "secondary.",
+							"transliteration": "thaanawi."
+						}
+					]
+				},
+				{
+					"arabic": "بآخر الثانوي، النسبة تحدد الجامعة.",
+					"arabicTashkeel": "بآخِر الثّانَوي، النِّسبة تْحَدِّد الجامعة.",
+					"english": "At the end of high school, your percentage decides the university.",
+					"transliteration": "b-aakhir ith-thaanawi, in-nisba t7addid il-yaam3a.",
+					"wordAlignments": [
+						{
+							"arabic": "بآخر",
+							"english": "At the end of",
+							"transliteration": "b-aakhir"
+						},
+						{
+							"arabic": "الثانوي،",
+							"english": "secondary,",
+							"transliteration": "ith-thaanawi,"
+						},
+						{
+							"arabic": "النسبة",
+							"english": "the percentage",
+							"transliteration": "in-nisba"
+						},
+						{
+							"arabic": "تحدد",
+							"english": "decides",
+							"transliteration": "t7addid"
+						},
+						{
+							"arabic": "الجامعة.",
+							"english": "the university.",
+							"transliteration": "il-yaam3a."
+						}
+					]
+				},
+				{
+					"arabic": "أحسن الطلاب ياخذون بعثة يدرسون برا.",
+					"arabicTashkeel": "أحسَن الطُّلّاب ياخذون بَعثة يِدرِسون بَرّا.",
+					"english": "The best students get a scholarship to study abroad.",
+					"transliteration": "a7san it-tullaab yaakhdhoon ba3tha yidrisoon barra.",
+					"wordAlignments": [
+						{
+							"arabic": "أحسن",
+							"english": "The best",
+							"transliteration": "a7san"
+						},
+						{
+							"arabic": "الطلاب",
+							"english": "students",
+							"transliteration": "it-tullaab"
+						},
+						{
+							"arabic": "ياخذون",
+							"english": "get",
+							"transliteration": "yaakhdhoon"
+						},
+						{
+							"arabic": "بعثة",
+							"english": "a scholarship",
+							"transliteration": "ba3tha"
+						},
+						{
+							"arabic": "يدرسون",
+							"english": "to study",
+							"transliteration": "yidrisoon"
+						},
+						{
+							"arabic": "برا.",
+							"english": "abroad.",
+							"transliteration": "barra."
+						}
+					]
+				},
+				{
+					"arabic": "المنهج الجديد يركز على الفهم والتفكير النقدي، مو الحفظ.",
+					"arabicTashkeel": "المَنهَج الجْديد يرَكِّز على الفَهم والتَّفكير النَّقدي، مو الحِفظ.",
+					"english": "The new curriculum focuses on understanding and critical thinking, not memorization.",
+					"transliteration": "il-manhaj il-ydeed yrakkiz 3ala il-fahm w-it-tafkeer in-nagdi, moo il-7ifdh.",
+					"wordAlignments": [
+						{
+							"arabic": "المنهج",
+							"english": "The curriculum",
+							"transliteration": "il-manhaj"
+						},
+						{
+							"arabic": "الجديد",
+							"english": "new",
+							"transliteration": "il-ydeed"
+						},
+						{
+							"arabic": "يركز",
+							"english": "focuses",
+							"transliteration": "yrakkiz"
+						},
+						{
+							"arabic": "على",
+							"english": "on",
+							"transliteration": "3ala"
+						},
+						{
+							"arabic": "الفهم",
+							"english": "understanding",
+							"transliteration": "il-fahm"
+						},
+						{
+							"arabic": "والتفكير",
+							"english": "and thinking",
+							"transliteration": "w-it-tafkeer"
+						},
+						{
+							"arabic": "النقدي،",
+							"english": "critical,",
+							"transliteration": "in-nagdi,"
+						},
+						{
+							"arabic": "مو",
+							"english": "not",
+							"transliteration": "moo"
+						},
+						{
+							"arabic": "الحفظ.",
+							"english": "memorization.",
+							"transliteration": "il-7ifdh."
+						}
+					]
+				},
+				{
+					"arabic": "ومع كذي، طلاب وايد ياخذون دروس خصوصية قبل الإمتحانات.",
+					"arabicTashkeel": "ومَع كِذي، طُلّاب وايد ياخذون دُروس خُصوصية قَبل الإمتِحانات.",
+					"english": "Still, many students take private lessons before the exams.",
+					"transliteration": "w-ma3 chidhi, tullaab waayid yaakhdhoon duroos khusoosiyya gabil il-imti7aanaat.",
+					"wordAlignments": [
+						{
+							"arabic": "ومع",
+							"english": "And with",
+							"transliteration": "w-ma3"
+						},
+						{
+							"arabic": "كذي،",
+							"english": "this,",
+							"transliteration": "chidhi,"
+						},
+						{
+							"arabic": "طلاب",
+							"english": "students",
+							"transliteration": "tullaab"
+						},
+						{
+							"arabic": "وايد",
+							"english": "many",
+							"transliteration": "waayid"
+						},
+						{
+							"arabic": "ياخذون",
+							"english": "take",
+							"transliteration": "yaakhdhoon"
+						},
+						{
+							"arabic": "دروس",
+							"english": "lessons",
+							"transliteration": "duroos"
+						},
+						{
+							"arabic": "خصوصية",
+							"english": "private",
+							"transliteration": "khusoosiyya"
+						},
+						{
+							"arabic": "قبل",
+							"english": "before",
+							"transliteration": "gabil"
+						},
+						{
+							"arabic": "الإمتحانات.",
+							"english": "the exams.",
+							"transliteration": "il-imti7aanaat."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "State or Private?",
+			"sentences": [
+				{
+					"arabic": "جارتي تودي عيالها مدرسة خاصة.",
+					"arabicTashkeel": "جارتي تْوَدّي عْيالها مَدرَسة خاصّة.",
+					"english": "My neighbour sends her kids to a private school.",
+					"transliteration": "jaarti twaddi 3yaalha madrasa khaassa.",
+					"wordAlignments": [
+						{
+							"arabic": "جارتي",
+							"english": "My neighbour",
+							"transliteration": "jaarti"
+						},
+						{
+							"arabic": "تودي",
+							"english": "sends",
+							"transliteration": "twaddi"
+						},
+						{
+							"arabic": "عيالها",
+							"english": "her kids",
+							"transliteration": "3yaalha"
+						},
+						{
+							"arabic": "مدرسة",
+							"english": "to a school",
+							"transliteration": "madrasa"
+						},
+						{
+							"arabic": "خاصة.",
+							"english": "private.",
+							"transliteration": "khaassa."
+						}
+					]
+				},
+				{
+					"arabic": "غالية، بس الصفوف صغيرة ويدرسون بالإنجليزي.",
+					"arabicTashkeel": "غالية، بَس الصُّفوف صْغيرة ويْدَرّسون بالإنجليزي.",
+					"english": "It's expensive, but the classes are small and they teach in English.",
+					"transliteration": "ghaalya, bas is-sufoof sgheera w-ydarrisoon bil-ingleezi.",
+					"wordAlignments": [
+						{
+							"arabic": "غالية،",
+							"english": "It's expensive,",
+							"transliteration": "ghaalya,"
+						},
+						{
+							"arabic": "بس",
+							"english": "but",
+							"transliteration": "bas"
+						},
+						{
+							"arabic": "الصفوف",
+							"english": "the classes are",
+							"transliteration": "is-sufoof"
+						},
+						{
+							"arabic": "صغيرة",
+							"english": "small",
+							"transliteration": "sgheera"
+						},
+						{
+							"arabic": "ويدرسون",
+							"english": "and they teach",
+							"transliteration": "w-ydarrisoon"
+						},
+						{
+							"arabic": "بالإنجليزي.",
+							"english": "in English.",
+							"transliteration": "bil-ingleezi."
+						}
+					]
+				},
+				{
+					"arabic": "عيالي يروحون مدرسة حكومية، وأمورهم زينة وايد.",
+					"arabicTashkeel": "عْيالي يْروحون مَدرَسة حُكومية، وأمورهُم زينة وايد.",
+					"english": "My kids go to a state school, and they are doing very well.",
+					"transliteration": "3yaali yroo7oon madrasa 7ukoomiyya, w-umoorhum zeena waayid.",
+					"wordAlignments": [
+						{
+							"arabic": "عيالي",
+							"english": "My kids",
+							"transliteration": "3yaali"
+						},
+						{
+							"arabic": "يروحون",
+							"english": "go",
+							"transliteration": "yroo7oon"
+						},
+						{
+							"arabic": "مدرسة",
+							"english": "to a school",
+							"transliteration": "madrasa"
+						},
+						{
+							"arabic": "حكومية،",
+							"english": "state,",
+							"transliteration": "7ukoomiyya,"
+						},
+						{
+							"arabic": "وأمورهم",
+							"english": "and their affairs are",
+							"transliteration": "w-umoorhum"
+						},
+						{
+							"arabic": "زينة",
+							"english": "good",
+							"transliteration": "zeena"
+						},
+						{
+							"arabic": "وايد.",
+							"english": "very.",
+							"transliteration": "waayid."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student, a new parent in Dubai, asks an Emirati colleague for advice on choosing a school for their child.",
+		"studentRole": "A parent learning Gulf Arabic.",
+		"otherRole": "The Emirati colleague, a teacher who knows the system well.",
+		"goalEnglish": "Compare state and private schools, ask about the curriculum and teaching methods, and talk about memorization versus understanding.",
+		"targetWords": [
+			"Education system",
+			"State (public)",
+			"Private (school)",
+			"Curriculum",
+			"Teaching method",
+			"Memorization",
+			"Understanding",
+			"Critical thinking"
+		]
+	}
+}
