@@ -1,0 +1,1832 @@
+{
+	"vocab": [
+		{
+			"arabic": "تعال",
+			"arabicTashkeel": "تْعال",
+			"english": "Come!",
+			"transliteration": "t3aal",
+			"wordAlignments": [
+				{
+					"arabic": "تعال",
+					"english": "Come",
+					"transliteration": "t3aal"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "روح",
+			"arabicTashkeel": "رُوح",
+			"english": "Go!",
+			"transliteration": "rooh",
+			"wordAlignments": [
+				{
+					"arabic": "روح",
+					"english": "Go",
+					"transliteration": "rooh"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "إقعد",
+			"arabicTashkeel": "إقعِد",
+			"english": "Sit!",
+			"transliteration": "ig3id",
+			"wordAlignments": [
+				{
+					"arabic": "إقعد",
+					"english": "Sit",
+					"transliteration": "ig3id"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "وقف",
+			"arabicTashkeel": "وَقِّف",
+			"english": "Stand!",
+			"transliteration": "waggif",
+			"wordAlignments": [
+				{
+					"arabic": "وقف",
+					"english": "Stand",
+					"transliteration": "waggif"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "أنطر",
+			"arabicTashkeel": "أنطِر",
+			"english": "Wait!",
+			"transliteration": "antir",
+			"wordAlignments": [
+				{
+					"arabic": "أنطر",
+					"english": "Wait",
+					"transliteration": "antir"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "إركض",
+			"arabicTashkeel": "إركِض",
+			"english": "Run!",
+			"transliteration": "irkidh",
+			"wordAlignments": [
+				{
+					"arabic": "إركض",
+					"english": "Run",
+					"transliteration": "irkidh"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "إلعب",
+			"arabicTashkeel": "إلعَب",
+			"english": "Play!",
+			"transliteration": "il3ab",
+			"wordAlignments": [
+				{
+					"arabic": "إلعب",
+					"english": "Play",
+					"transliteration": "il3ab"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "إسكت",
+			"arabicTashkeel": "إسكِت",
+			"english": "Be quiet!",
+			"transliteration": "iskit",
+			"wordAlignments": [
+				{
+					"arabic": "إسكت",
+					"english": "Be quiet",
+					"transliteration": "iskit"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "جيب",
+			"arabicTashkeel": "جيب",
+			"english": "Bring!",
+			"transliteration": "jeeb",
+			"wordAlignments": [
+				{
+					"arabic": "جيب",
+					"english": "Bring",
+					"transliteration": "jeeb"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "عطني",
+			"arabicTashkeel": "عَطني",
+			"english": "Give me!",
+			"transliteration": "3atni",
+			"wordAlignments": [
+				{
+					"arabic": "عطني",
+					"english": "Give me",
+					"transliteration": "3atni"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "شوف",
+			"arabicTashkeel": "شوف",
+			"english": "Look!",
+			"transliteration": "shoof",
+			"wordAlignments": [
+				{
+					"arabic": "شوف",
+					"english": "Look",
+					"transliteration": "shoof"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "إسمع",
+			"arabicTashkeel": "إسمَع",
+			"english": "Listen!",
+			"transliteration": "isma3",
+			"wordAlignments": [
+				{
+					"arabic": "إسمع",
+					"english": "Listen",
+					"transliteration": "isma3"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "فتح",
+			"arabicTashkeel": "فَتِّح",
+			"english": "Open!",
+			"transliteration": "fatti7",
+			"wordAlignments": [
+				{
+					"arabic": "فتح",
+					"english": "Open",
+					"transliteration": "fatti7"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "سكر",
+			"arabicTashkeel": "سَكِّر",
+			"english": "Close!",
+			"transliteration": "sakkir",
+			"wordAlignments": [
+				{
+					"arabic": "سكر",
+					"english": "Close",
+					"transliteration": "sakkir"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "دير بالك",
+			"arabicTashkeel": "دير بالَك",
+			"english": "Be careful!",
+			"transliteration": "deer baalak",
+			"wordAlignments": [
+				{
+					"arabic": "دير",
+					"english": "Turn",
+					"transliteration": "deer"
+				},
+				{
+					"arabic": "بالك",
+					"english": "your mind",
+					"transliteration": "baalak"
+				}
+			],
+			"partOfSpeech": "phrase"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "تعال هني!",
+			"arabicTashkeel": "تْعال هِني!",
+			"english": "Come here!",
+			"transliteration": "t3aal hini!",
+			"wordAlignments": [
+				{
+					"arabic": "تعال",
+					"english": "Come",
+					"transliteration": "t3aal"
+				},
+				{
+					"arabic": "هني!",
+					"english": "here!",
+					"transliteration": "hini!"
+				}
+			],
+			"targetWords": [
+				"Come!"
+			]
+		},
+		{
+			"arabic": "تعالي يا مريم!",
+			"arabicTashkeel": "تْعالي يا مَريَم!",
+			"english": "Come, Mariam!",
+			"transliteration": "t3aali ya maryam!",
+			"wordAlignments": [
+				{
+					"arabic": "تعالي",
+					"english": "Come",
+					"transliteration": "t3aali"
+				},
+				{
+					"arabic": "يا",
+					"english": "O",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "مريم!",
+					"english": "Mariam!",
+					"transliteration": "maryam!"
+				}
+			],
+			"targetWords": [
+				"Come!"
+			]
+		},
+		{
+			"arabic": "تعالوا الأكل جاهز!",
+			"arabicTashkeel": "تْعالوا الأكل جاهِز!",
+			"english": "Come, all of you, the food is ready!",
+			"transliteration": "t3aalu il-akl jaahiz!",
+			"wordAlignments": [
+				{
+					"arabic": "تعالوا",
+					"english": "Come, all of you,",
+					"transliteration": "t3aalu"
+				},
+				{
+					"arabic": "الأكل",
+					"english": "the food is",
+					"transliteration": "il-akl"
+				},
+				{
+					"arabic": "جاهز!",
+					"english": "ready!",
+					"transliteration": "jaahiz!"
+				}
+			],
+			"targetWords": [
+				"Come!"
+			]
+		},
+		{
+			"arabic": "روح البيت.",
+			"arabicTashkeel": "رُوح البيت.",
+			"english": "Go home.",
+			"transliteration": "rooh il-beet.",
+			"wordAlignments": [
+				{
+					"arabic": "روح",
+					"english": "Go",
+					"transliteration": "rooh"
+				},
+				{
+					"arabic": "البيت.",
+					"english": "home.",
+					"transliteration": "il-beet."
+				}
+			],
+			"targetWords": [
+				"Go!"
+			]
+		},
+		{
+			"arabic": "لا تروح الحين.",
+			"arabicTashkeel": "لا تْروح الحين.",
+			"english": "Don't go now.",
+			"transliteration": "la trooh il-7een.",
+			"wordAlignments": [
+				{
+					"arabic": "لا",
+					"english": "Don't",
+					"transliteration": "la"
+				},
+				{
+					"arabic": "تروح",
+					"english": "go",
+					"transliteration": "trooh"
+				},
+				{
+					"arabic": "الحين.",
+					"english": "now.",
+					"transliteration": "il-7een."
+				}
+			],
+			"targetWords": [
+				"Go!"
+			]
+		},
+		{
+			"arabic": "إقعد هني لو سمحت.",
+			"arabicTashkeel": "إقعِد هِني لو سَمَحت.",
+			"english": "Sit here, please.",
+			"transliteration": "ig3id hini law sama7t.",
+			"wordAlignments": [
+				{
+					"arabic": "إقعد",
+					"english": "Sit",
+					"transliteration": "ig3id"
+				},
+				{
+					"arabic": "هني",
+					"english": "here",
+					"transliteration": "hini"
+				},
+				{
+					"arabic": "لو",
+					"english": "if",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "سمحت.",
+					"english": "you please.",
+					"transliteration": "sama7t."
+				}
+			],
+			"targetWords": [
+				"Sit!"
+			]
+		},
+		{
+			"arabic": "إقعدوا كلكم.",
+			"arabicTashkeel": "إقعِدوا كِلكُم.",
+			"english": "Sit down, everyone.",
+			"transliteration": "ig3idu kilkum.",
+			"wordAlignments": [
+				{
+					"arabic": "إقعدوا",
+					"english": "Sit down,",
+					"transliteration": "ig3idu"
+				},
+				{
+					"arabic": "كلكم.",
+					"english": "all of you.",
+					"transliteration": "kilkum."
+				}
+			],
+			"targetWords": [
+				"Sit!"
+			]
+		},
+		{
+			"arabic": "وقف هني.",
+			"arabicTashkeel": "وَقِّف هِني.",
+			"english": "Stand here.",
+			"transliteration": "waggif hini.",
+			"wordAlignments": [
+				{
+					"arabic": "وقف",
+					"english": "Stand",
+					"transliteration": "waggif"
+				},
+				{
+					"arabic": "هني.",
+					"english": "here.",
+					"transliteration": "hini."
+				}
+			],
+			"targetWords": [
+				"Stand!"
+			]
+		},
+		{
+			"arabic": "أنطر دقيقة!",
+			"arabicTashkeel": "أنطِر دَقيقة!",
+			"english": "Wait a minute!",
+			"transliteration": "antir dageega!",
+			"wordAlignments": [
+				{
+					"arabic": "أنطر",
+					"english": "Wait",
+					"transliteration": "antir"
+				},
+				{
+					"arabic": "دقيقة!",
+					"english": "a minute!",
+					"transliteration": "dageega!"
+				}
+			],
+			"targetWords": [
+				"Wait!"
+			]
+		},
+		{
+			"arabic": "أنطرني!",
+			"arabicTashkeel": "أنطِرني!",
+			"english": "Wait for me!",
+			"transliteration": "antirni!",
+			"wordAlignments": [
+				{
+					"arabic": "أنطرني!",
+					"english": "Wait for me!",
+					"transliteration": "antirni!"
+				}
+			],
+			"targetWords": [
+				"Wait!"
+			]
+		},
+		{
+			"arabic": "إركض، الباص جاي!",
+			"arabicTashkeel": "إركِض، الباص جاي!",
+			"english": "Run, the bus is coming!",
+			"transliteration": "irkidh, il-baas yaay!",
+			"wordAlignments": [
+				{
+					"arabic": "إركض،",
+					"english": "Run,",
+					"transliteration": "irkidh,"
+				},
+				{
+					"arabic": "الباص",
+					"english": "the bus is",
+					"transliteration": "il-baas"
+				},
+				{
+					"arabic": "جاي!",
+					"english": "coming!",
+					"transliteration": "yaay!"
+				}
+			],
+			"targetWords": [
+				"Run!"
+			]
+		},
+		{
+			"arabic": "إلعب برا.",
+			"arabicTashkeel": "إلعَب بَرّا.",
+			"english": "Play outside.",
+			"transliteration": "il3ab barra.",
+			"wordAlignments": [
+				{
+					"arabic": "إلعب",
+					"english": "Play",
+					"transliteration": "il3ab"
+				},
+				{
+					"arabic": "برا.",
+					"english": "outside.",
+					"transliteration": "barra."
+				}
+			],
+			"targetWords": [
+				"Play!"
+			]
+		},
+		{
+			"arabic": "يا عيال، إلعبوا بهدوء!",
+			"arabicTashkeel": "يا عْيال، إلعَبوا بهَدوء!",
+			"english": "Kids, play quietly!",
+			"transliteration": "ya 3yaal, il3abu b-hudoo2!",
+			"wordAlignments": [
+				{
+					"arabic": "يا",
+					"english": "O",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "عيال،",
+					"english": "kids,",
+					"transliteration": "3yaal,"
+				},
+				{
+					"arabic": "إلعبوا",
+					"english": "play",
+					"transliteration": "il3abu"
+				},
+				{
+					"arabic": "بهدوء!",
+					"english": "quietly!",
+					"transliteration": "b-hudoo2!"
+				}
+			],
+			"targetWords": [
+				"Play!"
+			]
+		},
+		{
+			"arabic": "إسكت، الجاهل نايم.",
+			"arabicTashkeel": "إسكِت، الجاهِل نايِم.",
+			"english": "Be quiet, the baby is asleep.",
+			"transliteration": "iskit, il-yaahil naayim.",
+			"wordAlignments": [
+				{
+					"arabic": "إسكت،",
+					"english": "Be quiet,",
+					"transliteration": "iskit,"
+				},
+				{
+					"arabic": "الجاهل",
+					"english": "the baby is",
+					"transliteration": "il-yaahil"
+				},
+				{
+					"arabic": "نايم.",
+					"english": "asleep.",
+					"transliteration": "naayim."
+				}
+			],
+			"targetWords": [
+				"Be quiet!"
+			]
+		},
+		{
+			"arabic": "جيب الكتاب.",
+			"arabicTashkeel": "جيب الكِتاب.",
+			"english": "Bring the book.",
+			"transliteration": "jeeb il-kitaab.",
+			"wordAlignments": [
+				{
+					"arabic": "جيب",
+					"english": "Bring",
+					"transliteration": "jeeb"
+				},
+				{
+					"arabic": "الكتاب.",
+					"english": "the book.",
+					"transliteration": "il-kitaab."
+				}
+			],
+			"targetWords": [
+				"Bring!"
+			]
+		},
+		{
+			"arabic": "جيبي ماي لو سمحتي.",
+			"arabicTashkeel": "جيبي ماي لو سَمَحتي.",
+			"english": "Bring water, please.",
+			"transliteration": "jeebi maay law sama7ti.",
+			"wordAlignments": [
+				{
+					"arabic": "جيبي",
+					"english": "Bring",
+					"transliteration": "jeebi"
+				},
+				{
+					"arabic": "ماي",
+					"english": "water",
+					"transliteration": "maay"
+				},
+				{
+					"arabic": "لو",
+					"english": "if",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "سمحتي.",
+					"english": "you please.",
+					"transliteration": "sama7ti."
+				}
+			],
+			"targetWords": [
+				"Bring!"
+			]
+		},
+		{
+			"arabic": "عطني القلم.",
+			"arabicTashkeel": "عَطني القَلَم.",
+			"english": "Give me the pen.",
+			"transliteration": "3atni il-galam.",
+			"wordAlignments": [
+				{
+					"arabic": "عطني",
+					"english": "Give me",
+					"transliteration": "3atni"
+				},
+				{
+					"arabic": "القلم.",
+					"english": "the pen.",
+					"transliteration": "il-galam."
+				}
+			],
+			"targetWords": [
+				"Give me!"
+			]
+		},
+		{
+			"arabic": "شوف هاذا!",
+			"arabicTashkeel": "شوف هاذا!",
+			"english": "Look at this!",
+			"transliteration": "shoof haadha!",
+			"wordAlignments": [
+				{
+					"arabic": "شوف",
+					"english": "Look at",
+					"transliteration": "shoof"
+				},
+				{
+					"arabic": "هاذا!",
+					"english": "this!",
+					"transliteration": "haadha!"
+				}
+			],
+			"targetWords": [
+				"Look!"
+			]
+		},
+		{
+			"arabic": "إسمعني.",
+			"arabicTashkeel": "إسمَعني.",
+			"english": "Listen to me.",
+			"transliteration": "isma3ni.",
+			"wordAlignments": [
+				{
+					"arabic": "إسمعني.",
+					"english": "Listen to me.",
+					"transliteration": "isma3ni."
+				}
+			],
+			"targetWords": [
+				"Listen!"
+			]
+		},
+		{
+			"arabic": "إسمعوا كلكم!",
+			"arabicTashkeel": "إسمَعوا كِلكُم!",
+			"english": "Listen, everyone!",
+			"transliteration": "isma3u kilkum!",
+			"wordAlignments": [
+				{
+					"arabic": "إسمعوا",
+					"english": "Listen,",
+					"transliteration": "isma3u"
+				},
+				{
+					"arabic": "كلكم!",
+					"english": "all of you!",
+					"transliteration": "kilkum!"
+				}
+			],
+			"targetWords": [
+				"Listen!"
+			]
+		},
+		{
+			"arabic": "فتح الدريشة.",
+			"arabicTashkeel": "فَتِّح الدَّريشة.",
+			"english": "Open the window.",
+			"transliteration": "fatti7 id-daresha.",
+			"wordAlignments": [
+				{
+					"arabic": "فتح",
+					"english": "Open",
+					"transliteration": "fatti7"
+				},
+				{
+					"arabic": "الدريشة.",
+					"english": "the window.",
+					"transliteration": "id-daresha."
+				}
+			],
+			"targetWords": [
+				"Open!"
+			]
+		},
+		{
+			"arabic": "سكر الباب.",
+			"arabicTashkeel": "سَكِّر الباب.",
+			"english": "Close the door.",
+			"transliteration": "sakkir il-baab.",
+			"wordAlignments": [
+				{
+					"arabic": "سكر",
+					"english": "Close",
+					"transliteration": "sakkir"
+				},
+				{
+					"arabic": "الباب.",
+					"english": "the door.",
+					"transliteration": "il-baab."
+				}
+			],
+			"targetWords": [
+				"Close!"
+			]
+		},
+		{
+			"arabic": "دير بالك، الشارع!",
+			"arabicTashkeel": "دير بالَك، الشّارع!",
+			"english": "Be careful, the street!",
+			"transliteration": "deer baalak, ish-shaari3!",
+			"wordAlignments": [
+				{
+					"arabic": "دير",
+					"english": "Take",
+					"transliteration": "deer"
+				},
+				{
+					"arabic": "بالك،",
+					"english": "care,",
+					"transliteration": "baalak,"
+				},
+				{
+					"arabic": "الشارع!",
+					"english": "the street!",
+					"transliteration": "ish-shaari3!"
+				}
+			],
+			"targetWords": [
+				"Be careful!"
+			]
+		},
+		{
+			"arabic": "تعال وإقعد ويانا.",
+			"arabicTashkeel": "تْعال وإقعِد وِيّانا.",
+			"english": "Come and sit with us.",
+			"transliteration": "t3aal w-ig3id wiyyaana.",
+			"wordAlignments": [
+				{
+					"arabic": "تعال",
+					"english": "Come",
+					"transliteration": "t3aal"
+				},
+				{
+					"arabic": "وإقعد",
+					"english": "and sit",
+					"transliteration": "w-ig3id"
+				},
+				{
+					"arabic": "ويانا.",
+					"english": "with us.",
+					"transliteration": "wiyyaana."
+				}
+			],
+			"targetWords": [
+				"Come!",
+				"Sit!"
+			]
+		},
+		{
+			"arabic": "روح وجيب خبز.",
+			"arabicTashkeel": "رُوح وجيب خُبُز.",
+			"english": "Go and bring bread.",
+			"transliteration": "rooh w-jeeb khubuz.",
+			"wordAlignments": [
+				{
+					"arabic": "روح",
+					"english": "Go",
+					"transliteration": "rooh"
+				},
+				{
+					"arabic": "وجيب",
+					"english": "and bring",
+					"transliteration": "w-jeeb"
+				},
+				{
+					"arabic": "خبز.",
+					"english": "bread.",
+					"transliteration": "khubuz."
+				}
+			],
+			"targetWords": [
+				"Go!",
+				"Bring!"
+			]
+		},
+		{
+			"arabic": "لا تقعد على الأرض.",
+			"arabicTashkeel": "لا تِقعِد على الأرض.",
+			"english": "Don't sit on the floor.",
+			"transliteration": "la tig3id 3ala il-ardh.",
+			"wordAlignments": [
+				{
+					"arabic": "لا",
+					"english": "Don't",
+					"transliteration": "la"
+				},
+				{
+					"arabic": "تقعد",
+					"english": "sit",
+					"transliteration": "tig3id"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "الأرض.",
+					"english": "the floor.",
+					"transliteration": "il-ardh."
+				}
+			],
+			"targetWords": [
+				"Sit!"
+			]
+		},
+		{
+			"arabic": "وقفوا، المدرس جاي.",
+			"arabicTashkeel": "وَقِّفوا، المُدَرِّس جاي.",
+			"english": "Stand up, the teacher is coming.",
+			"transliteration": "waggifu, il-mudarris yaay.",
+			"wordAlignments": [
+				{
+					"arabic": "وقفوا،",
+					"english": "Stand up,",
+					"transliteration": "waggifu,"
+				},
+				{
+					"arabic": "المدرس",
+					"english": "the teacher is",
+					"transliteration": "il-mudarris"
+				},
+				{
+					"arabic": "جاي.",
+					"english": "coming.",
+					"transliteration": "yaay."
+				}
+			],
+			"targetWords": [
+				"Stand!"
+			]
+		},
+		{
+			"arabic": "أنطر برا.",
+			"arabicTashkeel": "أنطِر بَرّا.",
+			"english": "Wait outside.",
+			"transliteration": "antir barra.",
+			"wordAlignments": [
+				{
+					"arabic": "أنطر",
+					"english": "Wait",
+					"transliteration": "antir"
+				},
+				{
+					"arabic": "برا.",
+					"english": "outside.",
+					"transliteration": "barra."
+				}
+			],
+			"targetWords": [
+				"Wait!"
+			]
+		},
+		{
+			"arabic": "لا تركض داخل البيت!",
+			"arabicTashkeel": "لا تِركِض داخِل البيت!",
+			"english": "Don't run in the house!",
+			"transliteration": "la tirkidh daakhil il-beet!",
+			"wordAlignments": [
+				{
+					"arabic": "لا",
+					"english": "Don't",
+					"transliteration": "la"
+				},
+				{
+					"arabic": "تركض",
+					"english": "run",
+					"transliteration": "tirkidh"
+				},
+				{
+					"arabic": "داخل",
+					"english": "inside",
+					"transliteration": "daakhil"
+				},
+				{
+					"arabic": "البيت!",
+					"english": "the house!",
+					"transliteration": "il-beet!"
+				}
+			],
+			"targetWords": [
+				"Run!"
+			]
+		},
+		{
+			"arabic": "إلعب ويا أخوك.",
+			"arabicTashkeel": "إلعَب وِيّا أخوك.",
+			"english": "Play with your brother.",
+			"transliteration": "il3ab wiyya akhook.",
+			"wordAlignments": [
+				{
+					"arabic": "إلعب",
+					"english": "Play",
+					"transliteration": "il3ab"
+				},
+				{
+					"arabic": "ويا",
+					"english": "with",
+					"transliteration": "wiyya"
+				},
+				{
+					"arabic": "أخوك.",
+					"english": "your brother.",
+					"transliteration": "akhook."
+				}
+			],
+			"targetWords": [
+				"Play!"
+			]
+		},
+		{
+			"arabic": "إسكتوا لو سمحتوا!",
+			"arabicTashkeel": "إسكِتوا لو سَمَحتوا!",
+			"english": "Be quiet, please!",
+			"transliteration": "iskitu law sama7tu!",
+			"wordAlignments": [
+				{
+					"arabic": "إسكتوا",
+					"english": "Be quiet",
+					"transliteration": "iskitu"
+				},
+				{
+					"arabic": "لو",
+					"english": "if",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "سمحتوا!",
+					"english": "you please!",
+					"transliteration": "sama7tu!"
+				}
+			],
+			"targetWords": [
+				"Be quiet!"
+			]
+		},
+		{
+			"arabic": "جيب لي كرك.",
+			"arabicTashkeel": "جيب لي كَرَك.",
+			"english": "Bring me karak.",
+			"transliteration": "jeeb li karak.",
+			"wordAlignments": [
+				{
+					"arabic": "جيب",
+					"english": "Bring",
+					"transliteration": "jeeb"
+				},
+				{
+					"arabic": "لي",
+					"english": "me",
+					"transliteration": "li"
+				},
+				{
+					"arabic": "كرك.",
+					"english": "karak.",
+					"transliteration": "karak."
+				}
+			],
+			"targetWords": [
+				"Bring!"
+			]
+		},
+		{
+			"arabic": "عطني رقمك.",
+			"arabicTashkeel": "عَطني رَقمَك.",
+			"english": "Give me your number.",
+			"transliteration": "3atni ragmak.",
+			"wordAlignments": [
+				{
+					"arabic": "عطني",
+					"english": "Give me",
+					"transliteration": "3atni"
+				},
+				{
+					"arabic": "رقمك.",
+					"english": "your number.",
+					"transliteration": "ragmak."
+				}
+			],
+			"targetWords": [
+				"Give me!"
+			]
+		},
+		{
+			"arabic": "شوف، البحر!",
+			"arabicTashkeel": "شوف، البَحَر!",
+			"english": "Look, the sea!",
+			"transliteration": "shoof, il-ba7ar!",
+			"wordAlignments": [
+				{
+					"arabic": "شوف،",
+					"english": "Look,",
+					"transliteration": "shoof,"
+				},
+				{
+					"arabic": "البحر!",
+					"english": "the sea!",
+					"transliteration": "il-ba7ar!"
+				}
+			],
+			"targetWords": [
+				"Look!"
+			]
+		},
+		{
+			"arabic": "إسمع الأخبار.",
+			"arabicTashkeel": "إسمَع الأخبار.",
+			"english": "Listen to the news.",
+			"transliteration": "isma3 il-akhbaar.",
+			"wordAlignments": [
+				{
+					"arabic": "إسمع",
+					"english": "Listen to",
+					"transliteration": "isma3"
+				},
+				{
+					"arabic": "الأخبار.",
+					"english": "the news.",
+					"transliteration": "il-akhbaar."
+				}
+			],
+			"targetWords": [
+				"Listen!"
+			]
+		},
+		{
+			"arabic": "فتح كتابك.",
+			"arabicTashkeel": "فَتِّح كِتابَك.",
+			"english": "Open your book.",
+			"transliteration": "fatti7 kitaabak.",
+			"wordAlignments": [
+				{
+					"arabic": "فتح",
+					"english": "Open",
+					"transliteration": "fatti7"
+				},
+				{
+					"arabic": "كتابك.",
+					"english": "your book.",
+					"transliteration": "kitaabak."
+				}
+			],
+			"targetWords": [
+				"Open!"
+			]
+		},
+		{
+			"arabic": "سكر الدريشة، المكيف شغال.",
+			"arabicTashkeel": "سَكِّر الدَّريشة، المُكَيِّف شَغّال.",
+			"english": "Close the window, the AC is on.",
+			"transliteration": "sakkir id-daresha, il-mukayyif shaghghaal.",
+			"wordAlignments": [
+				{
+					"arabic": "سكر",
+					"english": "Close",
+					"transliteration": "sakkir"
+				},
+				{
+					"arabic": "الدريشة،",
+					"english": "the window,",
+					"transliteration": "id-daresha,"
+				},
+				{
+					"arabic": "المكيف",
+					"english": "the AC is",
+					"transliteration": "il-mukayyif"
+				},
+				{
+					"arabic": "شغال.",
+					"english": "on.",
+					"transliteration": "shaghghaal."
+				}
+			],
+			"targetWords": [
+				"Close!"
+			]
+		},
+		{
+			"arabic": "دير بالك، السكين حاد.",
+			"arabicTashkeel": "دير بالَك، السِّكّين حادّ.",
+			"english": "Be careful, the knife is sharp.",
+			"transliteration": "deer baalak, is-sichcheen 7aadd.",
+			"wordAlignments": [
+				{
+					"arabic": "دير",
+					"english": "Take",
+					"transliteration": "deer"
+				},
+				{
+					"arabic": "بالك،",
+					"english": "care,",
+					"transliteration": "baalak,"
+				},
+				{
+					"arabic": "السكين",
+					"english": "the knife is",
+					"transliteration": "is-sichcheen"
+				},
+				{
+					"arabic": "حاد.",
+					"english": "sharp.",
+					"transliteration": "7aadd."
+				}
+			],
+			"targetWords": [
+				"Be careful!"
+			]
+		},
+		{
+			"arabic": "تعال باكر.",
+			"arabicTashkeel": "تْعال باكِر.",
+			"english": "Come tomorrow.",
+			"transliteration": "t3aal baachir.",
+			"wordAlignments": [
+				{
+					"arabic": "تعال",
+					"english": "Come",
+					"transliteration": "t3aal"
+				},
+				{
+					"arabic": "باكر.",
+					"english": "tomorrow.",
+					"transliteration": "baachir."
+				}
+			],
+			"targetWords": [
+				"Come!"
+			]
+		},
+		{
+			"arabic": "روح سيدا.",
+			"arabicTashkeel": "رُوح سيدا.",
+			"english": "Go straight.",
+			"transliteration": "rooh seeda.",
+			"wordAlignments": [
+				{
+					"arabic": "روح",
+					"english": "Go",
+					"transliteration": "rooh"
+				},
+				{
+					"arabic": "سيدا.",
+					"english": "straight.",
+					"transliteration": "seeda."
+				}
+			],
+			"targetWords": [
+				"Go!"
+			]
+		},
+		{
+			"arabic": "إقعدي جنبي.",
+			"arabicTashkeel": "إقعِدي جَنبي.",
+			"english": "Sit next to me.",
+			"transliteration": "ig3idi yambi.",
+			"wordAlignments": [
+				{
+					"arabic": "إقعدي",
+					"english": "Sit",
+					"transliteration": "ig3idi"
+				},
+				{
+					"arabic": "جنبي.",
+					"english": "next to me.",
+					"transliteration": "yambi."
+				}
+			],
+			"targetWords": [
+				"Sit!"
+			]
+		},
+		{
+			"arabic": "وقف قدام الباب.",
+			"arabicTashkeel": "وَقِّف قِدّام الباب.",
+			"english": "Stand in front of the door.",
+			"transliteration": "waggif giddaam il-baab.",
+			"wordAlignments": [
+				{
+					"arabic": "وقف",
+					"english": "Stand",
+					"transliteration": "waggif"
+				},
+				{
+					"arabic": "قدام",
+					"english": "in front of",
+					"transliteration": "giddaam"
+				},
+				{
+					"arabic": "الباب.",
+					"english": "the door.",
+					"transliteration": "il-baab."
+				}
+			],
+			"targetWords": [
+				"Stand!"
+			]
+		},
+		{
+			"arabic": "لا تنطرني.",
+			"arabicTashkeel": "لا تِنطِرني.",
+			"english": "Don't wait for me.",
+			"transliteration": "la tintirni.",
+			"wordAlignments": [
+				{
+					"arabic": "لا",
+					"english": "Don't",
+					"transliteration": "la"
+				},
+				{
+					"arabic": "تنطرني.",
+					"english": "wait for me.",
+					"transliteration": "tintirni."
+				}
+			],
+			"targetWords": [
+				"Wait!"
+			]
+		},
+		{
+			"arabic": "إركض بسرعة!",
+			"arabicTashkeel": "إركِض بسُرعة!",
+			"english": "Run fast!",
+			"transliteration": "irkidh b-sur3a!",
+			"wordAlignments": [
+				{
+					"arabic": "إركض",
+					"english": "Run",
+					"transliteration": "irkidh"
+				},
+				{
+					"arabic": "بسرعة!",
+					"english": "fast!",
+					"transliteration": "b-sur3a!"
+				}
+			],
+			"targetWords": [
+				"Run!"
+			]
+		},
+		{
+			"arabic": "يلا نلعب كورة.",
+			"arabicTashkeel": "يَلّا نِلعَب كورة.",
+			"english": "Let's play football.",
+			"transliteration": "yalla nil3ab koora.",
+			"wordAlignments": [
+				{
+					"arabic": "يلا",
+					"english": "Come on,",
+					"transliteration": "yalla"
+				},
+				{
+					"arabic": "نلعب",
+					"english": "let's play",
+					"transliteration": "nil3ab"
+				},
+				{
+					"arabic": "كورة.",
+					"english": "football.",
+					"transliteration": "koora."
+				}
+			],
+			"targetWords": [
+				"Play!"
+			]
+		},
+		{
+			"arabic": "إسكت وإسمع.",
+			"arabicTashkeel": "إسكِت وإسمَع.",
+			"english": "Be quiet and listen.",
+			"transliteration": "iskit w-isma3.",
+			"wordAlignments": [
+				{
+					"arabic": "إسكت",
+					"english": "Be quiet",
+					"transliteration": "iskit"
+				},
+				{
+					"arabic": "وإسمع.",
+					"english": "and listen.",
+					"transliteration": "w-isma3."
+				}
+			],
+			"targetWords": [
+				"Be quiet!",
+				"Listen!"
+			]
+		},
+		{
+			"arabic": "جيب العيال.",
+			"arabicTashkeel": "جيب العْيال.",
+			"english": "Bring the kids.",
+			"transliteration": "jeeb il-3yaal.",
+			"wordAlignments": [
+				{
+					"arabic": "جيب",
+					"english": "Bring",
+					"transliteration": "jeeb"
+				},
+				{
+					"arabic": "العيال.",
+					"english": "the kids.",
+					"transliteration": "il-3yaal."
+				}
+			],
+			"targetWords": [
+				"Bring!"
+			]
+		},
+		{
+			"arabic": "عطني الملح لو سمحت.",
+			"arabicTashkeel": "عَطني المِلح لو سَمَحت.",
+			"english": "Give me the salt, please.",
+			"transliteration": "3atni il-mil7 law sama7t.",
+			"wordAlignments": [
+				{
+					"arabic": "عطني",
+					"english": "Give me",
+					"transliteration": "3atni"
+				},
+				{
+					"arabic": "الملح",
+					"english": "the salt",
+					"transliteration": "il-mil7"
+				},
+				{
+					"arabic": "لو",
+					"english": "if",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "سمحت.",
+					"english": "you please.",
+					"transliteration": "sama7t."
+				}
+			],
+			"targetWords": [
+				"Give me!"
+			]
+		},
+		{
+			"arabic": "لا تشوف!",
+			"arabicTashkeel": "لا تْشوف!",
+			"english": "Don't look!",
+			"transliteration": "la tshoof!",
+			"wordAlignments": [
+				{
+					"arabic": "لا",
+					"english": "Don't",
+					"transliteration": "la"
+				},
+				{
+					"arabic": "تشوف!",
+					"english": "look!",
+					"transliteration": "tshoof!"
+				}
+			],
+			"targetWords": [
+				"Look!"
+			]
+		},
+		{
+			"arabic": "إسمع، عندي سؤال.",
+			"arabicTashkeel": "إسمَع، عِندي سُؤال.",
+			"english": "Listen, I have a question.",
+			"transliteration": "isma3, 3indi su2aal.",
+			"wordAlignments": [
+				{
+					"arabic": "إسمع،",
+					"english": "Listen,",
+					"transliteration": "isma3,"
+				},
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "سؤال.",
+					"english": "a question.",
+					"transliteration": "su2aal."
+				}
+			],
+			"targetWords": [
+				"Listen!"
+			]
+		},
+		{
+			"arabic": "لا تفتح الثلاجة.",
+			"arabicTashkeel": "لا تفَتِّح الثَّلّاجة.",
+			"english": "Don't open the fridge.",
+			"transliteration": "la tfatti7 ith-thallaaja.",
+			"wordAlignments": [
+				{
+					"arabic": "لا",
+					"english": "Don't",
+					"transliteration": "la"
+				},
+				{
+					"arabic": "تفتح",
+					"english": "open",
+					"transliteration": "tfatti7"
+				},
+				{
+					"arabic": "الثلاجة.",
+					"english": "the fridge.",
+					"transliteration": "ith-thallaaja."
+				}
+			],
+			"targetWords": [
+				"Open!"
+			]
+		},
+		{
+			"arabic": "سكر عيونك.",
+			"arabicTashkeel": "سَكِّر عْيونَك.",
+			"english": "Close your eyes.",
+			"transliteration": "sakkir 3yoonak.",
+			"wordAlignments": [
+				{
+					"arabic": "سكر",
+					"english": "Close",
+					"transliteration": "sakkir"
+				},
+				{
+					"arabic": "عيونك.",
+					"english": "your eyes.",
+					"transliteration": "3yoonak."
+				}
+			],
+			"targetWords": [
+				"Close!"
+			]
+		},
+		{
+			"arabic": "دير بالك بالطريق.",
+			"arabicTashkeel": "دير بالَك بالطَّريق.",
+			"english": "Be careful on the road.",
+			"transliteration": "deer baalak bit-tareeg.",
+			"wordAlignments": [
+				{
+					"arabic": "دير",
+					"english": "Take",
+					"transliteration": "deer"
+				},
+				{
+					"arabic": "بالك",
+					"english": "care",
+					"transliteration": "baalak"
+				},
+				{
+					"arabic": "بالطريق.",
+					"english": "on the road.",
+					"transliteration": "bit-tareeg."
+				}
+			],
+			"targetWords": [
+				"Be careful!"
+			]
+		},
+		{
+			"arabic": "فتح الباب وشوف.",
+			"arabicTashkeel": "فَتِّح الباب وشوف.",
+			"english": "Open the door and look.",
+			"transliteration": "fatti7 il-baab w-shoof.",
+			"wordAlignments": [
+				{
+					"arabic": "فتح",
+					"english": "Open",
+					"transliteration": "fatti7"
+				},
+				{
+					"arabic": "الباب",
+					"english": "the door",
+					"transliteration": "il-baab"
+				},
+				{
+					"arabic": "وشوف.",
+					"english": "and look.",
+					"transliteration": "w-shoof."
+				}
+			],
+			"targetWords": [
+				"Open!",
+				"Look!"
+			]
+		},
+		{
+			"arabic": "سكر الباب وأنطر.",
+			"arabicTashkeel": "سَكِّر الباب وأنطِر.",
+			"english": "Close the door and wait.",
+			"transliteration": "sakkir il-baab w-antir.",
+			"wordAlignments": [
+				{
+					"arabic": "سكر",
+					"english": "Close",
+					"transliteration": "sakkir"
+				},
+				{
+					"arabic": "الباب",
+					"english": "the door",
+					"transliteration": "il-baab"
+				},
+				{
+					"arabic": "وأنطر.",
+					"english": "and wait.",
+					"transliteration": "w-antir."
+				}
+			],
+			"targetWords": [
+				"Close!",
+				"Wait!"
+			]
+		},
+		{
+			"arabic": "عطني دقيقة.",
+			"arabicTashkeel": "عَطني دَقيقة.",
+			"english": "Give me a minute.",
+			"transliteration": "3atni dageega.",
+			"wordAlignments": [
+				{
+					"arabic": "عطني",
+					"english": "Give me",
+					"transliteration": "3atni"
+				},
+				{
+					"arabic": "دقيقة.",
+					"english": "a minute.",
+					"transliteration": "dageega."
+				}
+			],
+			"targetWords": [
+				"Give me!"
+			]
+		},
+		{
+			"arabic": "وقف وتعال.",
+			"arabicTashkeel": "وَقِّف وتْعال.",
+			"english": "Stand up and come.",
+			"transliteration": "waggif w-t3aal.",
+			"wordAlignments": [
+				{
+					"arabic": "وقف",
+					"english": "Stand up",
+					"transliteration": "waggif"
+				},
+				{
+					"arabic": "وتعال.",
+					"english": "and come.",
+					"transliteration": "w-t3aal."
+				}
+			],
+			"targetWords": [
+				"Stand!",
+				"Come!"
+			]
+		},
+		{
+			"arabic": "لا تركض، دير بالك!",
+			"arabicTashkeel": "لا تِركِض، دير بالَك!",
+			"english": "Don't run, be careful!",
+			"transliteration": "la tirkidh, deer baalak!",
+			"wordAlignments": [
+				{
+					"arabic": "لا",
+					"english": "Don't",
+					"transliteration": "la"
+				},
+				{
+					"arabic": "تركض،",
+					"english": "run,",
+					"transliteration": "tirkidh,"
+				},
+				{
+					"arabic": "دير",
+					"english": "take",
+					"transliteration": "deer"
+				},
+				{
+					"arabic": "بالك!",
+					"english": "care!",
+					"transliteration": "baalak!"
+				}
+			],
+			"targetWords": [
+				"Run!",
+				"Be careful!"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "At Home",
+			"sentences": [
+				{
+					"arabic": "يا عيال، تعالوا، الأكل جاهز!",
+					"arabicTashkeel": "يا عْيال، تْعالوا، الأكل جاهِز!",
+					"english": "Kids, come, the food is ready!",
+					"transliteration": "ya 3yaal, t3aalu, il-akl jaahiz!",
+					"wordAlignments": [
+						{
+							"arabic": "يا",
+							"english": "O",
+							"transliteration": "ya"
+						},
+						{
+							"arabic": "عيال،",
+							"english": "kids,",
+							"transliteration": "3yaal,"
+						},
+						{
+							"arabic": "تعالوا،",
+							"english": "come,",
+							"transliteration": "t3aalu,"
+						},
+						{
+							"arabic": "الأكل",
+							"english": "the food is",
+							"transliteration": "il-akl"
+						},
+						{
+							"arabic": "جاهز!",
+							"english": "ready!",
+							"transliteration": "jaahiz!"
+						}
+					]
+				},
+				{
+					"arabic": "سالم، جيب الصحون، ومريم، جيبي الماي.",
+					"arabicTashkeel": "سالِم، جيب الصُّحون، ومَريَم، جيبي الماي.",
+					"english": "Salem, bring the plates, and Mariam, bring the water.",
+					"transliteration": "saalim, jeeb is-su7oon, w-maryam, jeebi il-maay.",
+					"wordAlignments": [
+						{
+							"arabic": "سالم،",
+							"english": "Salem,",
+							"transliteration": "saalim,"
+						},
+						{
+							"arabic": "جيب",
+							"english": "bring",
+							"transliteration": "jeeb"
+						},
+						{
+							"arabic": "الصحون،",
+							"english": "the plates,",
+							"transliteration": "is-su7oon,"
+						},
+						{
+							"arabic": "ومريم،",
+							"english": "and Mariam,",
+							"transliteration": "w-maryam,"
+						},
+						{
+							"arabic": "جيبي",
+							"english": "bring",
+							"transliteration": "jeebi"
+						},
+						{
+							"arabic": "الماي.",
+							"english": "the water.",
+							"transliteration": "il-maay."
+						}
+					]
+				},
+				{
+					"arabic": "إقعدوا وكلوا. لا تلعبون بالأكل!",
+					"arabicTashkeel": "إقعِدوا وكِلوا. لا تِلعَبون بالأكل!",
+					"english": "Sit down and eat. Don't play with the food!",
+					"transliteration": "ig3idu w-kilu. la til3aboon bil-akl!",
+					"wordAlignments": [
+						{
+							"arabic": "إقعدوا",
+							"english": "Sit down",
+							"transliteration": "ig3idu"
+						},
+						{
+							"arabic": "وكلوا.",
+							"english": "and eat.",
+							"transliteration": "w-kilu."
+						},
+						{
+							"arabic": "لا",
+							"english": "Don't",
+							"transliteration": "la"
+						},
+						{
+							"arabic": "تلعبون",
+							"english": "play",
+							"transliteration": "til3aboon"
+						},
+						{
+							"arabic": "بالأكل!",
+							"english": "with the food!",
+							"transliteration": "bil-akl!"
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "In Class",
+			"sentences": [
+				{
+					"arabic": "إسمعوا كلكم وإسكتوا.",
+					"arabicTashkeel": "إسمَعوا كِلكُم وإسكِتوا.",
+					"english": "Listen, everyone, and be quiet.",
+					"transliteration": "isma3u kilkum w-iskitu.",
+					"wordAlignments": [
+						{
+							"arabic": "إسمعوا",
+							"english": "Listen",
+							"transliteration": "isma3u"
+						},
+						{
+							"arabic": "كلكم",
+							"english": "all of you",
+							"transliteration": "kilkum"
+						},
+						{
+							"arabic": "وإسكتوا.",
+							"english": "and be quiet.",
+							"transliteration": "w-iskitu."
+						}
+					]
+				},
+				{
+					"arabic": "فتحوا كتبكم وشوفوا السبورة.",
+					"arabicTashkeel": "فَتّحوا كُتُبكُم وشوفوا السَّبّورة.",
+					"english": "Open your books and look at the board.",
+					"transliteration": "fatt7u kutubkum w-shoofu is-sabboora.",
+					"wordAlignments": [
+						{
+							"arabic": "فتحوا",
+							"english": "Open",
+							"transliteration": "fatt7u"
+						},
+						{
+							"arabic": "كتبكم",
+							"english": "your books",
+							"transliteration": "kutubkum"
+						},
+						{
+							"arabic": "وشوفوا",
+							"english": "and look at",
+							"transliteration": "w-shoofu"
+						},
+						{
+							"arabic": "السبورة.",
+							"english": "the board.",
+							"transliteration": "is-sabboora."
+						}
+					]
+				},
+				{
+					"arabic": "سالم، وقف وتعال هني.",
+					"arabicTashkeel": "سالِم، وَقِّف وتْعال هِني.",
+					"english": "Salem, stand up and come here.",
+					"transliteration": "saalim, waggif w-t3aal hini.",
+					"wordAlignments": [
+						{
+							"arabic": "سالم،",
+							"english": "Salem,",
+							"transliteration": "saalim,"
+						},
+						{
+							"arabic": "وقف",
+							"english": "stand up",
+							"transliteration": "waggif"
+						},
+						{
+							"arabic": "وتعال",
+							"english": "and come",
+							"transliteration": "w-t3aal"
+						},
+						{
+							"arabic": "هني.",
+							"english": "here.",
+							"transliteration": "hini."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is babysitting an Emirati family's lively kids for an afternoon at their home in Dubai.",
+		"studentRole": "The babysitter, learning Gulf Arabic.",
+		"otherRole": "The eldest child, who keeps testing the rules.",
+		"goalEnglish": "Give instructions: come here, sit down, be quiet, don't run, bring this, give me that, and be careful.",
+		"targetWords": [
+			"Come!",
+			"Sit!",
+			"Be quiet!",
+			"Run!",
+			"Bring!",
+			"Give me!",
+			"Wait!",
+			"Be careful!"
+		]
+	}
+}
