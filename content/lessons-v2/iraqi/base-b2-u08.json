@@ -1,0 +1,2193 @@
+{
+	"vocab": [
+		{
+			"arabic": "نقاط القوة",
+			"arabicTashkeel": "نِقاط القوّة",
+			"english": "Strengths",
+			"transliteration": "nigaat il-guwwa",
+			"wordAlignments": [
+				{
+					"arabic": "نقاط",
+					"english": "Points of",
+					"transliteration": "nigaat"
+				},
+				{
+					"arabic": "القوة",
+					"english": "strength",
+					"transliteration": "il-guwwa"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "نقاط الضعف",
+			"arabicTashkeel": "نِقاط الضَّعف",
+			"english": "Weaknesses",
+			"transliteration": "nigaat idh-dha3f",
+			"wordAlignments": [
+				{
+					"arabic": "نقاط",
+					"english": "Points of",
+					"transliteration": "nigaat"
+				},
+				{
+					"arabic": "الضعف",
+					"english": "weakness",
+					"transliteration": "idh-dha3f"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "الشغل الجماعي",
+			"arabicTashkeel": "الشُّغُل الجَماعي",
+			"english": "Teamwork",
+			"transliteration": "ish-shughul ij-jamaa3i",
+			"wordAlignments": [
+				{
+					"arabic": "الشغل",
+					"english": "The work",
+					"transliteration": "ish-shughul"
+				},
+				{
+					"arabic": "الجماعي",
+					"english": "collective",
+					"transliteration": "ij-jamaa3i"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "مسؤولية",
+			"arabicTashkeel": "مَسؤولية",
+			"english": "Responsibility",
+			"transliteration": "mas2ooliyya",
+			"wordAlignments": [
+				{
+					"arabic": "مسؤولية",
+					"english": "Responsibility",
+					"transliteration": "mas2ooliyya"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "ترقية",
+			"arabicTashkeel": "تَرقية",
+			"english": "Promotion",
+			"transliteration": "targiya",
+			"wordAlignments": [
+				{
+					"arabic": "ترقية",
+					"english": "Promotion",
+					"transliteration": "targiya"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "قيادة",
+			"arabicTashkeel": "قِيادة",
+			"english": "Leadership",
+			"transliteration": "giyaada",
+			"wordAlignments": [
+				{
+					"arabic": "قيادة",
+					"english": "Leadership",
+					"transliteration": "giyaada"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "تفاوض",
+			"arabicTashkeel": "تَفاوُض",
+			"english": "Negotiation",
+			"transliteration": "tafaawudh",
+			"wordAlignments": [
+				{
+					"arabic": "تفاوض",
+					"english": "Negotiation",
+					"transliteration": "tafaawudh"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "إمتيازات",
+			"arabicTashkeel": "إمتِيازات",
+			"english": "Benefits (perks)",
+			"transliteration": "imtiyaazaat",
+			"wordAlignments": [
+				{
+					"arabic": "إمتيازات",
+					"english": "Benefits",
+					"transliteration": "imtiyaazaat"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "تدريب",
+			"arabicTashkeel": "تَدريب",
+			"english": "Training",
+			"transliteration": "tadreeb",
+			"wordAlignments": [
+				{
+					"arabic": "تدريب",
+					"english": "Training",
+					"transliteration": "tadreeb"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "إنجاز",
+			"arabicTashkeel": "إنجاز",
+			"english": "Achievement",
+			"transliteration": "injaaz",
+			"wordAlignments": [
+				{
+					"arabic": "إنجاز",
+					"english": "Achievement",
+					"transliteration": "injaaz"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "تحدي",
+			"arabicTashkeel": "تَحَدّي",
+			"english": "Challenge",
+			"transliteration": "ta7addi",
+			"wordAlignments": [
+				{
+					"arabic": "تحدي",
+					"english": "Challenge",
+					"transliteration": "ta7addi"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "توصية",
+			"arabicTashkeel": "تَوصية",
+			"english": "Recommendation letter",
+			"transliteration": "tawsiya",
+			"wordAlignments": [
+				{
+					"arabic": "توصية",
+					"english": "Recommendation",
+					"transliteration": "tawsiya"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "فترة تجربة",
+			"arabicTashkeel": "فَترة تَجرُبة",
+			"english": "Probation period",
+			"transliteration": "fatrat tajruba",
+			"wordAlignments": [
+				{
+					"arabic": "فترة",
+					"english": "Period of",
+					"transliteration": "fatrat"
+				},
+				{
+					"arabic": "تجربة",
+					"english": "trial",
+					"transliteration": "tajruba"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "يستقيل",
+			"arabicTashkeel": "يِستَقيل",
+			"english": "He resigns",
+			"transliteration": "yistageel",
+			"wordAlignments": [
+				{
+					"arabic": "يستقيل",
+					"english": "He resigns",
+					"transliteration": "yistageel"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "مرشح",
+			"arabicTashkeel": "مُرَشَّح",
+			"english": "Candidate",
+			"transliteration": "murashshah",
+			"wordAlignments": [
+				{
+					"arabic": "مرشح",
+					"english": "Candidate",
+					"transliteration": "murashshah"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "شنو نقاط قوتك؟",
+			"arabicTashkeel": "شِنو نِقاط قوّتَك؟",
+			"english": "What are your strengths?",
+			"transliteration": "shinu nigaat guwwatak?",
+			"wordAlignments": [
+				{
+					"arabic": "شنو",
+					"english": "What are",
+					"transliteration": "shinu"
+				},
+				{
+					"arabic": "نقاط",
+					"english": "the points of",
+					"transliteration": "nigaat"
+				},
+				{
+					"arabic": "قوتك؟",
+					"english": "your strength?",
+					"transliteration": "guwwatak?"
+				}
+			],
+			"targetWords": [
+				"Strengths"
+			]
+		},
+		{
+			"arabic": "كل واحد عنده نقاط ضعف.",
+			"arabicTashkeel": "كُل واحِد عِندَه نِقاط ضَعف.",
+			"english": "Everyone has weaknesses.",
+			"transliteration": "kull waa7id 3inda nigaat dha3f.",
+			"wordAlignments": [
+				{
+					"arabic": "كل",
+					"english": "Every",
+					"transliteration": "kull"
+				},
+				{
+					"arabic": "واحد",
+					"english": "one",
+					"transliteration": "waa7id"
+				},
+				{
+					"arabic": "عنده",
+					"english": "has",
+					"transliteration": "3inda"
+				},
+				{
+					"arabic": "نقاط",
+					"english": "points of",
+					"transliteration": "nigaat"
+				},
+				{
+					"arabic": "ضعف.",
+					"english": "weakness.",
+					"transliteration": "dha3f."
+				}
+			],
+			"targetWords": [
+				"Weaknesses"
+			]
+		},
+		{
+			"arabic": "أحب الشغل الجماعي.",
+			"arabicTashkeel": "أحِب الشُّغُل الجَماعي.",
+			"english": "I like teamwork.",
+			"transliteration": "a7ibb ish-shughul ij-jamaa3i.",
+			"wordAlignments": [
+				{
+					"arabic": "أحب",
+					"english": "I like",
+					"transliteration": "a7ibb"
+				},
+				{
+					"arabic": "الشغل",
+					"english": "the work",
+					"transliteration": "ish-shughul"
+				},
+				{
+					"arabic": "الجماعي.",
+					"english": "collective.",
+					"transliteration": "ij-jamaa3i."
+				}
+			],
+			"targetWords": [
+				"Teamwork"
+			]
+		},
+		{
+			"arabic": "ما أخاف من المسؤولية.",
+			"arabicTashkeel": "ما أخاف مِن المَسؤولية.",
+			"english": "I'm not afraid of responsibility.",
+			"transliteration": "ma akhaaf min il-mas2ooliyya.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "أخاف",
+					"english": "I'm afraid",
+					"transliteration": "akhaaf"
+				},
+				{
+					"arabic": "من",
+					"english": "of",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "المسؤولية.",
+					"english": "responsibility.",
+					"transliteration": "il-mas2ooliyya."
+				}
+			],
+			"targetWords": [
+				"Responsibility"
+			]
+		},
+		{
+			"arabic": "بعد سنتين أخذت ترقية.",
+			"arabicTashkeel": "بَعد سَنتين أخَذِت تَرقية.",
+			"english": "After two years I got a promotion.",
+			"transliteration": "ba3d santeen akhadhit targiya.",
+			"wordAlignments": [
+				{
+					"arabic": "بعد",
+					"english": "After",
+					"transliteration": "ba3d"
+				},
+				{
+					"arabic": "سنتين",
+					"english": "two years",
+					"transliteration": "santeen"
+				},
+				{
+					"arabic": "أخذت",
+					"english": "I got",
+					"transliteration": "akhadhit"
+				},
+				{
+					"arabic": "ترقية.",
+					"english": "a promotion.",
+					"transliteration": "targiya."
+				}
+			],
+			"targetWords": [
+				"Promotion"
+			]
+		},
+		{
+			"arabic": "عنده مهارات قيادة قوية.",
+			"arabicTashkeel": "عِندَه مَهارات قِيادة قَويّة.",
+			"english": "He has strong leadership skills.",
+			"transliteration": "3inda mahaaraat giyaada gawiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "عنده",
+					"english": "He has",
+					"transliteration": "3inda"
+				},
+				{
+					"arabic": "مهارات",
+					"english": "skills of",
+					"transliteration": "mahaaraat"
+				},
+				{
+					"arabic": "قيادة",
+					"english": "leadership",
+					"transliteration": "giyaada"
+				},
+				{
+					"arabic": "قوية.",
+					"english": "strong.",
+					"transliteration": "gawiyya."
+				}
+			],
+			"targetWords": [
+				"Leadership"
+			]
+		},
+		{
+			"arabic": "التفاوض عالراتب صعب.",
+			"arabicTashkeel": "التَّفاوُض عالرّاتِب صَعُب.",
+			"english": "Salary negotiation is hard.",
+			"transliteration": "it-tafaawudh 3ar-raatib sa3ub.",
+			"wordAlignments": [
+				{
+					"arabic": "التفاوض",
+					"english": "Negotiation",
+					"transliteration": "it-tafaawudh"
+				},
+				{
+					"arabic": "عالراتب",
+					"english": "on the salary is",
+					"transliteration": "3ar-raatib"
+				},
+				{
+					"arabic": "صعب.",
+					"english": "hard.",
+					"transliteration": "sa3ub."
+				}
+			],
+			"targetWords": [
+				"Negotiation"
+			]
+		},
+		{
+			"arabic": "شنو الإمتيازات اللي تنطيها الشركة؟",
+			"arabicTashkeel": "شِنو الإمتِيازات اللي تِنطيها الشَّرِكة؟",
+			"english": "What benefits does the company offer?",
+			"transliteration": "shinu il-imtiyaazaat illi tinteeha ish-shirka?",
+			"wordAlignments": [
+				{
+					"arabic": "شنو",
+					"english": "What are",
+					"transliteration": "shinu"
+				},
+				{
+					"arabic": "الإمتيازات",
+					"english": "the benefits",
+					"transliteration": "il-imtiyaazaat"
+				},
+				{
+					"arabic": "اللي",
+					"english": "that",
+					"transliteration": "illi"
+				},
+				{
+					"arabic": "تنطيها",
+					"english": "gives them",
+					"transliteration": "tinteeha"
+				},
+				{
+					"arabic": "الشركة؟",
+					"english": "the company?",
+					"transliteration": "ish-shirka?"
+				}
+			],
+			"targetWords": [
+				"Benefits (perks)"
+			]
+		},
+		{
+			"arabic": "أكو تدريب للموظفين الجدد؟",
+			"arabicTashkeel": "أكو تَدريب للمْوَظَّفين الجُدُد؟",
+			"english": "Is there training for new employees?",
+			"transliteration": "aku tadreeb lil-mwadhdhafeen ij-judud?",
+			"wordAlignments": [
+				{
+					"arabic": "أكو",
+					"english": "Is there",
+					"transliteration": "aku"
+				},
+				{
+					"arabic": "تدريب",
+					"english": "training",
+					"transliteration": "tadreeb"
+				},
+				{
+					"arabic": "للموظفين",
+					"english": "for the employees",
+					"transliteration": "lil-mwadhdhafeen"
+				},
+				{
+					"arabic": "الجدد؟",
+					"english": "new?",
+					"transliteration": "ij-judud?"
+				}
+			],
+			"targetWords": [
+				"Training"
+			]
+		},
+		{
+			"arabic": "أكبر إنجاز إلي كان هذا المشروع.",
+			"arabicTashkeel": "أكبَر إنجاز إلي كان هَذا المَشروع.",
+			"english": "My biggest achievement was this project.",
+			"transliteration": "akbar injaaz ili chaan haatha il-mashroo3.",
+			"wordAlignments": [
+				{
+					"arabic": "أكبر",
+					"english": "The biggest",
+					"transliteration": "akbar"
+				},
+				{
+					"arabic": "إنجاز",
+					"english": "achievement",
+					"transliteration": "injaaz"
+				},
+				{
+					"arabic": "إلي",
+					"english": "of mine",
+					"transliteration": "ili"
+				},
+				{
+					"arabic": "كان",
+					"english": "was",
+					"transliteration": "chaan"
+				},
+				{
+					"arabic": "هذا",
+					"english": "this",
+					"transliteration": "haatha"
+				},
+				{
+					"arabic": "المشروع.",
+					"english": "project.",
+					"transliteration": "il-mashroo3."
+				}
+			],
+			"targetWords": [
+				"Achievement"
+			]
+		},
+		{
+			"arabic": "إحكيلي عن تحدي واجهته.",
+			"arabicTashkeel": "إحكيلي عَن تَحَدّي واجَهتَه.",
+			"english": "Tell me about a challenge you faced.",
+			"transliteration": "i7cheeli 3an ta7addi waajahta.",
+			"wordAlignments": [
+				{
+					"arabic": "إحكيلي",
+					"english": "Tell me",
+					"transliteration": "i7cheeli"
+				},
+				{
+					"arabic": "عن",
+					"english": "about",
+					"transliteration": "3an"
+				},
+				{
+					"arabic": "تحدي",
+					"english": "a challenge",
+					"transliteration": "ta7addi"
+				},
+				{
+					"arabic": "واجهته.",
+					"english": "you faced.",
+					"transliteration": "waajahta."
+				}
+			],
+			"targetWords": [
+				"Challenge"
+			]
+		},
+		{
+			"arabic": "عندي توصية من مديري.",
+			"arabicTashkeel": "عِندي تَوصية مِن مُديري.",
+			"english": "I have a recommendation letter from my manager.",
+			"transliteration": "3indi tawsiya min mudeeri.",
+			"wordAlignments": [
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "توصية",
+					"english": "a recommendation",
+					"transliteration": "tawsiya"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "مديري.",
+					"english": "my manager.",
+					"transliteration": "mudeeri."
+				}
+			],
+			"targetWords": [
+				"Recommendation letter"
+			]
+		},
+		{
+			"arabic": "فترة التجربة ثلاث شهور.",
+			"arabicTashkeel": "فَترة التَّجرُبة ثْلاث شهور.",
+			"english": "The probation period is three months.",
+			"transliteration": "fatrat it-tajruba thlath shhoor.",
+			"wordAlignments": [
+				{
+					"arabic": "فترة",
+					"english": "The period of",
+					"transliteration": "fatrat"
+				},
+				{
+					"arabic": "التجربة",
+					"english": "trial is",
+					"transliteration": "it-tajruba"
+				},
+				{
+					"arabic": "ثلاث",
+					"english": "three",
+					"transliteration": "thlath"
+				},
+				{
+					"arabic": "شهور.",
+					"english": "months.",
+					"transliteration": "shhoor."
+				}
+			],
+			"targetWords": [
+				"Probation period"
+			]
+		},
+		{
+			"arabic": "إستقال بسبب الراتب.",
+			"arabicTashkeel": "إستَقال بسَبَب الرّاتِب.",
+			"english": "He resigned because of the salary.",
+			"transliteration": "istagaal b-sabab ir-raatib.",
+			"wordAlignments": [
+				{
+					"arabic": "إستقال",
+					"english": "He resigned",
+					"transliteration": "istagaal"
+				},
+				{
+					"arabic": "بسبب",
+					"english": "because of",
+					"transliteration": "b-sabab"
+				},
+				{
+					"arabic": "الراتب.",
+					"english": "the salary.",
+					"transliteration": "ir-raatib."
+				}
+			],
+			"targetWords": [
+				"He resigns"
+			]
+		},
+		{
+			"arabic": "أكو خمس مرشحين للوظيفة.",
+			"arabicTashkeel": "أكو خَمس مُرَشَّحين للوَظيفة.",
+			"english": "There are five candidates for the position.",
+			"transliteration": "aku khams murashshaheen lil-wadheefa.",
+			"wordAlignments": [
+				{
+					"arabic": "أكو",
+					"english": "There are",
+					"transliteration": "aku"
+				},
+				{
+					"arabic": "خمس",
+					"english": "five",
+					"transliteration": "khams"
+				},
+				{
+					"arabic": "مرشحين",
+					"english": "candidates",
+					"transliteration": "murashshaheen"
+				},
+				{
+					"arabic": "للوظيفة.",
+					"english": "for the position.",
+					"transliteration": "lil-wadheefa."
+				}
+			],
+			"targetWords": [
+				"Candidate"
+			]
+		},
+		{
+			"arabic": "نقطة قوتي التنظيم.",
+			"arabicTashkeel": "نُقطة قوّتي التَّنظيم.",
+			"english": "My strength is organization.",
+			"transliteration": "nugtat guwwati it-tandheem.",
+			"wordAlignments": [
+				{
+					"arabic": "نقطة",
+					"english": "The point of",
+					"transliteration": "nugtat"
+				},
+				{
+					"arabic": "قوتي",
+					"english": "my strength is",
+					"transliteration": "guwwati"
+				},
+				{
+					"arabic": "التنظيم.",
+					"english": "organization.",
+					"transliteration": "it-tandheem."
+				}
+			],
+			"targetWords": [
+				"Strengths"
+			]
+		},
+		{
+			"arabic": "نقطة ضعفي إني أحب الكمال.",
+			"arabicTashkeel": "نُقطة ضَعفي إنّي أحِب الكَمال.",
+			"english": "My weakness is that I'm a perfectionist.",
+			"transliteration": "nugtat dha3fi inni a7ibb il-kamaal.",
+			"wordAlignments": [
+				{
+					"arabic": "نقطة",
+					"english": "The point of",
+					"transliteration": "nugtat"
+				},
+				{
+					"arabic": "ضعفي",
+					"english": "my weakness",
+					"transliteration": "dha3fi"
+				},
+				{
+					"arabic": "إني",
+					"english": "that I",
+					"transliteration": "inni"
+				},
+				{
+					"arabic": "أحب",
+					"english": "love",
+					"transliteration": "a7ibb"
+				},
+				{
+					"arabic": "الكمال.",
+					"english": "perfection.",
+					"transliteration": "il-kamaal."
+				}
+			],
+			"targetWords": [
+				"Weaknesses"
+			]
+		},
+		{
+			"arabic": "الشغل الجماعي ينطي نتايج أحسن.",
+			"arabicTashkeel": "الشُّغُل الجَماعي يِنطي نَتايِج أحسَن.",
+			"english": "Teamwork gives better results.",
+			"transliteration": "ish-shughul ij-jamaa3i yinti nataayij a7san.",
+			"wordAlignments": [
+				{
+					"arabic": "الشغل",
+					"english": "The work",
+					"transliteration": "ish-shughul"
+				},
+				{
+					"arabic": "الجماعي",
+					"english": "collective",
+					"transliteration": "ij-jamaa3i"
+				},
+				{
+					"arabic": "ينطي",
+					"english": "gives",
+					"transliteration": "yinti"
+				},
+				{
+					"arabic": "نتايج",
+					"english": "results",
+					"transliteration": "nataayij"
+				},
+				{
+					"arabic": "أحسن.",
+					"english": "better.",
+					"transliteration": "a7san."
+				}
+			],
+			"targetWords": [
+				"Teamwork"
+			]
+		},
+		{
+			"arabic": "هذا الشغل بيه مسؤولية كبيرة.",
+			"arabicTashkeel": "هَذا الشُّغُل بيه مَسؤولية كْبيرة.",
+			"english": "This job has a lot of responsibility.",
+			"transliteration": "haatha ish-shughul bee mas2ooliyya chbeera.",
+			"wordAlignments": [
+				{
+					"arabic": "هذا",
+					"english": "This",
+					"transliteration": "haatha"
+				},
+				{
+					"arabic": "الشغل",
+					"english": "job",
+					"transliteration": "ish-shughul"
+				},
+				{
+					"arabic": "بيه",
+					"english": "has",
+					"transliteration": "bee"
+				},
+				{
+					"arabic": "مسؤولية",
+					"english": "responsibility",
+					"transliteration": "mas2ooliyya"
+				},
+				{
+					"arabic": "كبيرة.",
+					"english": "big.",
+					"transliteration": "chbeera."
+				}
+			],
+			"targetWords": [
+				"Responsibility"
+			]
+		},
+		{
+			"arabic": "يمتى الترقية الجاية؟",
+			"arabicTashkeel": "يَمتى التَّرقية الجاية؟",
+			"english": "When is the next promotion?",
+			"transliteration": "yamta it-targiya ij-jaaya?",
+			"wordAlignments": [
+				{
+					"arabic": "يمتى",
+					"english": "When is",
+					"transliteration": "yamta"
+				},
+				{
+					"arabic": "الترقية",
+					"english": "the promotion",
+					"transliteration": "it-targiya"
+				},
+				{
+					"arabic": "الجاية؟",
+					"english": "next?",
+					"transliteration": "ij-jaaya?"
+				}
+			],
+			"targetWords": [
+				"Promotion"
+			]
+		},
+		{
+			"arabic": "القيادة مو بس أوامر.",
+			"arabicTashkeel": "القِيادة مو بَس أوامِر.",
+			"english": "Leadership is not just giving orders.",
+			"transliteration": "il-giyaada moo bas awaamir.",
+			"wordAlignments": [
+				{
+					"arabic": "القيادة",
+					"english": "Leadership is",
+					"transliteration": "il-giyaada"
+				},
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "بس",
+					"english": "only",
+					"transliteration": "bas"
+				},
+				{
+					"arabic": "أوامر.",
+					"english": "orders.",
+					"transliteration": "awaamir."
+				}
+			],
+			"targetWords": [
+				"Leadership"
+			]
+		},
+		{
+			"arabic": "التفاوض أخذ ساعة.",
+			"arabicTashkeel": "التَّفاوُض أخَذ ساعة.",
+			"english": "The negotiation took an hour.",
+			"transliteration": "it-tafaawudh akhadh saa3a.",
+			"wordAlignments": [
+				{
+					"arabic": "التفاوض",
+					"english": "The negotiation",
+					"transliteration": "it-tafaawudh"
+				},
+				{
+					"arabic": "أخذ",
+					"english": "took",
+					"transliteration": "akhadh"
+				},
+				{
+					"arabic": "ساعة.",
+					"english": "an hour.",
+					"transliteration": "saa3a."
+				}
+			],
+			"targetWords": [
+				"Negotiation"
+			]
+		},
+		{
+			"arabic": "التأمين الصحي من الإمتيازات.",
+			"arabicTashkeel": "التّأمين الصِّحّي مِن الإمتِيازات.",
+			"english": "Health insurance is one of the benefits.",
+			"transliteration": "it-ta2meen is-si77i min il-imtiyaazaat.",
+			"wordAlignments": [
+				{
+					"arabic": "التأمين",
+					"english": "Insurance",
+					"transliteration": "it-ta2meen"
+				},
+				{
+					"arabic": "الصحي",
+					"english": "health is",
+					"transliteration": "is-si77i"
+				},
+				{
+					"arabic": "من",
+					"english": "among",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الإمتيازات.",
+					"english": "the benefits.",
+					"transliteration": "il-imtiyaazaat."
+				}
+			],
+			"targetWords": [
+				"Benefits (perks)"
+			]
+		},
+		{
+			"arabic": "التدريب بأربيل إسبوع.",
+			"arabicTashkeel": "التَّدريب بأربيل إسبوع.",
+			"english": "The training is in Erbil for a week.",
+			"transliteration": "it-tadreeb b-arbeel isboo3.",
+			"wordAlignments": [
+				{
+					"arabic": "التدريب",
+					"english": "The training is",
+					"transliteration": "it-tadreeb"
+				},
+				{
+					"arabic": "بأربيل",
+					"english": "in Erbil",
+					"transliteration": "b-arbeel"
+				},
+				{
+					"arabic": "إسبوع.",
+					"english": "a week.",
+					"transliteration": "isboo3."
+				}
+			],
+			"targetWords": [
+				"Training"
+			]
+		},
+		{
+			"arabic": "خلصنا المشروع بوقته، وهذا إنجاز.",
+			"arabicTashkeel": "خَلَّصنا المَشروع بوَقتَه، وهَذا إنجاز.",
+			"english": "Finishing the project on time was an achievement.",
+			"transliteration": "khallasna il-mashroo3 b-wagta, w-haatha injaaz.",
+			"wordAlignments": [
+				{
+					"arabic": "خلصنا",
+					"english": "We finished",
+					"transliteration": "khallasna"
+				},
+				{
+					"arabic": "المشروع",
+					"english": "the project",
+					"transliteration": "il-mashroo3"
+				},
+				{
+					"arabic": "بوقته،",
+					"english": "on its time,",
+					"transliteration": "b-wagta,"
+				},
+				{
+					"arabic": "وهذا",
+					"english": "and this",
+					"transliteration": "w-haatha"
+				},
+				{
+					"arabic": "إنجاز.",
+					"english": "is an achievement.",
+					"transliteration": "injaaz."
+				}
+			],
+			"targetWords": [
+				"Achievement"
+			]
+		},
+		{
+			"arabic": "كل شغل جديد تحدي.",
+			"arabicTashkeel": "كُل شُغُل جْديد تَحَدّي.",
+			"english": "Every new job is a challenge.",
+			"transliteration": "kull shughul jdeed ta7addi.",
+			"wordAlignments": [
+				{
+					"arabic": "كل",
+					"english": "Every",
+					"transliteration": "kull"
+				},
+				{
+					"arabic": "شغل",
+					"english": "job",
+					"transliteration": "shughul"
+				},
+				{
+					"arabic": "جديد",
+					"english": "new is",
+					"transliteration": "jdeed"
+				},
+				{
+					"arabic": "تحدي.",
+					"english": "a challenge.",
+					"transliteration": "ta7addi."
+				}
+			],
+			"targetWords": [
+				"Challenge"
+			]
+		},
+		{
+			"arabic": "تكدر تدز توصية؟",
+			"arabicTashkeel": "تِكدَر تْدِز تَوصية؟",
+			"english": "Can you send a recommendation letter?",
+			"transliteration": "tigdar tdizz tawsiya?",
+			"wordAlignments": [
+				{
+					"arabic": "تكدر",
+					"english": "Can you",
+					"transliteration": "tigdar"
+				},
+				{
+					"arabic": "تدز",
+					"english": "send",
+					"transliteration": "tdizz"
+				},
+				{
+					"arabic": "توصية؟",
+					"english": "a recommendation?",
+					"transliteration": "tawsiya?"
+				}
+			],
+			"targetWords": [
+				"Recommendation letter"
+			]
+		},
+		{
+			"arabic": "عبرت فترة التجربة.",
+			"arabicTashkeel": "عِبَرِت فَترة التَّجرُبة.",
+			"english": "I passed the probation period.",
+			"transliteration": "3ibarit fatrat it-tajruba.",
+			"wordAlignments": [
+				{
+					"arabic": "عبرت",
+					"english": "I passed",
+					"transliteration": "3ibarit"
+				},
+				{
+					"arabic": "فترة",
+					"english": "the period of",
+					"transliteration": "fatrat"
+				},
+				{
+					"arabic": "التجربة.",
+					"english": "trial.",
+					"transliteration": "it-tajruba."
+				}
+			],
+			"targetWords": [
+				"Probation period"
+			]
+		},
+		{
+			"arabic": "ليش إستقلت من شغلك الأخير؟",
+			"arabicTashkeel": "ليش إستَقَلِت مِن شُغلَك الأخير؟",
+			"english": "Why did you resign from your last job?",
+			"transliteration": "leesh istagalit min shughlak il-akheer?",
+			"wordAlignments": [
+				{
+					"arabic": "ليش",
+					"english": "Why",
+					"transliteration": "leesh"
+				},
+				{
+					"arabic": "إستقلت",
+					"english": "did you resign",
+					"transliteration": "istagalit"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "شغلك",
+					"english": "your job",
+					"transliteration": "shughlak"
+				},
+				{
+					"arabic": "الأخير؟",
+					"english": "last?",
+					"transliteration": "il-akheer?"
+				}
+			],
+			"targetWords": [
+				"He resigns"
+			]
+		},
+		{
+			"arabic": "أحسن مرشح أخذ الوظيفة.",
+			"arabicTashkeel": "أحسَن مُرَشَّح أخَذ الوَظيفة.",
+			"english": "The best candidate got the job.",
+			"transliteration": "a7san murashshah akhadh il-wadheefa.",
+			"wordAlignments": [
+				{
+					"arabic": "أحسن",
+					"english": "The best",
+					"transliteration": "a7san"
+				},
+				{
+					"arabic": "مرشح",
+					"english": "candidate",
+					"transliteration": "murashshah"
+				},
+				{
+					"arabic": "أخذ",
+					"english": "took",
+					"transliteration": "akhadh"
+				},
+				{
+					"arabic": "الوظيفة.",
+					"english": "the position.",
+					"transliteration": "il-wadheefa."
+				}
+			],
+			"targetWords": [
+				"Candidate"
+			]
+		},
+		{
+			"arabic": "إحكي عن نقاط قوتك وضعفك.",
+			"arabicTashkeel": "إحكي عَن نِقاط قوّتَك وضَعفَك.",
+			"english": "Talk about your strengths and weaknesses.",
+			"transliteration": "i7chi 3an nigaat guwwatak w-dha3fak.",
+			"wordAlignments": [
+				{
+					"arabic": "إحكي",
+					"english": "Talk",
+					"transliteration": "i7chi"
+				},
+				{
+					"arabic": "عن",
+					"english": "about",
+					"transliteration": "3an"
+				},
+				{
+					"arabic": "نقاط",
+					"english": "the points of",
+					"transliteration": "nigaat"
+				},
+				{
+					"arabic": "قوتك",
+					"english": "your strength",
+					"transliteration": "guwwatak"
+				},
+				{
+					"arabic": "وضعفك.",
+					"english": "and your weakness.",
+					"transliteration": "w-dha3fak."
+				}
+			],
+			"targetWords": [
+				"Strengths",
+				"Weaknesses"
+			]
+		},
+		{
+			"arabic": "أشتغل زين بالشغل الجماعي.",
+			"arabicTashkeel": "أشتُغُل زين بالشُّغُل الجَماعي.",
+			"english": "I work well in a team.",
+			"transliteration": "ashtughul zeen bish-shughul ij-jamaa3i.",
+			"wordAlignments": [
+				{
+					"arabic": "أشتغل",
+					"english": "I work",
+					"transliteration": "ashtughul"
+				},
+				{
+					"arabic": "زين",
+					"english": "well",
+					"transliteration": "zeen"
+				},
+				{
+					"arabic": "بالشغل",
+					"english": "in the work",
+					"transliteration": "bish-shughul"
+				},
+				{
+					"arabic": "الجماعي.",
+					"english": "collective.",
+					"transliteration": "ij-jamaa3i."
+				}
+			],
+			"targetWords": [
+				"Teamwork"
+			]
+		},
+		{
+			"arabic": "تحملت مسؤولية الغلط.",
+			"arabicTashkeel": "تحَمَّلِت مَسؤولية الغَلَط.",
+			"english": "I took responsibility for the mistake.",
+			"transliteration": "t7ammalit mas2ooliyyat il-ghalat.",
+			"wordAlignments": [
+				{
+					"arabic": "تحملت",
+					"english": "I bore",
+					"transliteration": "t7ammalit"
+				},
+				{
+					"arabic": "مسؤولية",
+					"english": "the responsibility of",
+					"transliteration": "mas2ooliyyat"
+				},
+				{
+					"arabic": "الغلط.",
+					"english": "the mistake.",
+					"transliteration": "il-ghalat."
+				}
+			],
+			"targetWords": [
+				"Responsibility"
+			]
+		},
+		{
+			"arabic": "ترقية وزيادة بالراتب.",
+			"arabicTashkeel": "تَرقية وزيادة بالرّاتِب.",
+			"english": "A promotion and a salary increase.",
+			"transliteration": "targiya w-ziyaada bir-raatib.",
+			"wordAlignments": [
+				{
+					"arabic": "ترقية",
+					"english": "A promotion",
+					"transliteration": "targiya"
+				},
+				{
+					"arabic": "وزيادة",
+					"english": "and an increase",
+					"transliteration": "w-ziyaada"
+				},
+				{
+					"arabic": "بالراتب.",
+					"english": "in the salary.",
+					"transliteration": "bir-raatib."
+				}
+			],
+			"targetWords": [
+				"Promotion"
+			]
+		},
+		{
+			"arabic": "القيادة تحتاج صبر.",
+			"arabicTashkeel": "القِيادة تِحتاج صَبُر.",
+			"english": "Leadership needs patience.",
+			"transliteration": "il-giyaada ti7taaj sabur.",
+			"wordAlignments": [
+				{
+					"arabic": "القيادة",
+					"english": "Leadership",
+					"transliteration": "il-giyaada"
+				},
+				{
+					"arabic": "تحتاج",
+					"english": "needs",
+					"transliteration": "ti7taaj"
+				},
+				{
+					"arabic": "صبر.",
+					"english": "patience.",
+					"transliteration": "sabur."
+				}
+			],
+			"targetWords": [
+				"Leadership"
+			]
+		},
+		{
+			"arabic": "التفاوض فن.",
+			"arabicTashkeel": "التَّفاوُض فَن.",
+			"english": "Negotiation is an art.",
+			"transliteration": "it-tafaawudh fann.",
+			"wordAlignments": [
+				{
+					"arabic": "التفاوض",
+					"english": "Negotiation is",
+					"transliteration": "it-tafaawudh"
+				},
+				{
+					"arabic": "فن.",
+					"english": "an art.",
+					"transliteration": "fann."
+				}
+			],
+			"targetWords": [
+				"Negotiation"
+			]
+		},
+		{
+			"arabic": "ماكو إمتيازات، بس الراتب.",
+			"arabicTashkeel": "ماكو إمتِيازات، بَس الرّاتِب.",
+			"english": "No benefits, only the salary.",
+			"transliteration": "maaku imtiyaazaat, bas ir-raatib.",
+			"wordAlignments": [
+				{
+					"arabic": "ماكو",
+					"english": "There are no",
+					"transliteration": "maaku"
+				},
+				{
+					"arabic": "إمتيازات،",
+					"english": "benefits,",
+					"transliteration": "imtiyaazaat,"
+				},
+				{
+					"arabic": "بس",
+					"english": "only",
+					"transliteration": "bas"
+				},
+				{
+					"arabic": "الراتب.",
+					"english": "the salary.",
+					"transliteration": "ir-raatib."
+				}
+			],
+			"targetWords": [
+				"Benefits (perks)"
+			]
+		},
+		{
+			"arabic": "تدريب عالنظام الجديد.",
+			"arabicTashkeel": "تَدريب عالنِّظام الجْديد.",
+			"english": "Training on the new system.",
+			"transliteration": "tadreeb 3an-nidhaam ij-jdeed.",
+			"wordAlignments": [
+				{
+					"arabic": "تدريب",
+					"english": "Training",
+					"transliteration": "tadreeb"
+				},
+				{
+					"arabic": "عالنظام",
+					"english": "on the system",
+					"transliteration": "3an-nidhaam"
+				},
+				{
+					"arabic": "الجديد.",
+					"english": "new.",
+					"transliteration": "ij-jdeed."
+				}
+			],
+			"targetWords": [
+				"Training"
+			]
+		},
+		{
+			"arabic": "إنجازاتك تبهر.",
+			"arabicTashkeel": "إنجازاتَك تِبهِر.",
+			"english": "Your achievements are impressive.",
+			"transliteration": "injaazaatak tibhir.",
+			"wordAlignments": [
+				{
+					"arabic": "إنجازاتك",
+					"english": "Your achievements are",
+					"transliteration": "injaazaatak"
+				},
+				{
+					"arabic": "تبهر.",
+					"english": "impressive.",
+					"transliteration": "tibhir."
+				}
+			],
+			"targetWords": [
+				"Achievement"
+			]
+		},
+		{
+			"arabic": "أكبر تحدي كان اللغة.",
+			"arabicTashkeel": "أكبَر تَحَدّي كان اللُّغة.",
+			"english": "The biggest challenge was the language.",
+			"transliteration": "akbar ta7addi chaan il-lugha.",
+			"wordAlignments": [
+				{
+					"arabic": "أكبر",
+					"english": "The biggest",
+					"transliteration": "akbar"
+				},
+				{
+					"arabic": "تحدي",
+					"english": "challenge",
+					"transliteration": "ta7addi"
+				},
+				{
+					"arabic": "كان",
+					"english": "was",
+					"transliteration": "chaan"
+				},
+				{
+					"arabic": "اللغة.",
+					"english": "the language.",
+					"transliteration": "il-lugha."
+				}
+			],
+			"targetWords": [
+				"Challenge"
+			]
+		},
+		{
+			"arabic": "توصية قوية.",
+			"arabicTashkeel": "تَوصية قَويّة.",
+			"english": "A strong recommendation.",
+			"transliteration": "tawsiya gawiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "توصية",
+					"english": "A recommendation",
+					"transliteration": "tawsiya"
+				},
+				{
+					"arabic": "قوية.",
+					"english": "strong.",
+					"transliteration": "gawiyya."
+				}
+			],
+			"targetWords": [
+				"Recommendation letter"
+			]
+		},
+		{
+			"arabic": "بفترة التجربة يقيمونك.",
+			"arabicTashkeel": "بفَترة التَّجرُبة يْقَيّمونَك.",
+			"english": "During the probation period, they evaluate you.",
+			"transliteration": "b-fatrat it-tajruba ygayymoonak.",
+			"wordAlignments": [
+				{
+					"arabic": "بفترة",
+					"english": "In the period of",
+					"transliteration": "b-fatrat"
+				},
+				{
+					"arabic": "التجربة",
+					"english": "trial",
+					"transliteration": "it-tajruba"
+				},
+				{
+					"arabic": "يقيمونك.",
+					"english": "they evaluate you.",
+					"transliteration": "ygayymoonak."
+				}
+			],
+			"targetWords": [
+				"Probation period"
+			]
+		},
+		{
+			"arabic": "لا تستقيل قبل ما تلقى شغل ثاني.",
+			"arabicTashkeel": "لا تِستَقيل قَبُل ما تِلقى شُغُل ثاني.",
+			"english": "Don't resign before you find another job.",
+			"transliteration": "la tistageel gabul ma tilga shughul thaani.",
+			"wordAlignments": [
+				{
+					"arabic": "لا",
+					"english": "Don't",
+					"transliteration": "la"
+				},
+				{
+					"arabic": "تستقيل",
+					"english": "resign",
+					"transliteration": "tistageel"
+				},
+				{
+					"arabic": "قبل",
+					"english": "before",
+					"transliteration": "gabul"
+				},
+				{
+					"arabic": "ما",
+					"english": "that",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "تلقى",
+					"english": "you find",
+					"transliteration": "tilga"
+				},
+				{
+					"arabic": "شغل",
+					"english": "a job",
+					"transliteration": "shughul"
+				},
+				{
+					"arabic": "ثاني.",
+					"english": "another.",
+					"transliteration": "thaani."
+				}
+			],
+			"targetWords": [
+				"He resigns"
+			]
+		},
+		{
+			"arabic": "المرشح وصل بكير.",
+			"arabicTashkeel": "المُرَشَّح وُصَل بَكّير.",
+			"english": "The candidate arrived early.",
+			"transliteration": "il-murashshah wusal bachcheer.",
+			"wordAlignments": [
+				{
+					"arabic": "المرشح",
+					"english": "The candidate",
+					"transliteration": "il-murashshah"
+				},
+				{
+					"arabic": "وصل",
+					"english": "arrived",
+					"transliteration": "wusal"
+				},
+				{
+					"arabic": "بكير.",
+					"english": "early.",
+					"transliteration": "bachcheer."
+				}
+			],
+			"targetWords": [
+				"Candidate"
+			]
+		},
+		{
+			"arabic": "نقاط القوة أهم.",
+			"arabicTashkeel": "نِقاط القوّة أهَم.",
+			"english": "Strengths matter more.",
+			"transliteration": "nigaat il-guwwa aham.",
+			"wordAlignments": [
+				{
+					"arabic": "نقاط",
+					"english": "The points of",
+					"transliteration": "nigaat"
+				},
+				{
+					"arabic": "القوة",
+					"english": "strength",
+					"transliteration": "il-guwwa"
+				},
+				{
+					"arabic": "أهم.",
+					"english": "more important.",
+					"transliteration": "aham."
+				}
+			],
+			"targetWords": [
+				"Strengths"
+			]
+		},
+		{
+			"arabic": "دا أشتغل على نقاط ضعفي.",
+			"arabicTashkeel": "دا أشتُغُل عَلى نِقاط ضَعفي.",
+			"english": "I'm working on my weaknesses.",
+			"transliteration": "da ashtughul 3ala nigaat dha3fi.",
+			"wordAlignments": [
+				{
+					"arabic": "دا",
+					"english": "I am",
+					"transliteration": "da"
+				},
+				{
+					"arabic": "أشتغل",
+					"english": "working",
+					"transliteration": "ashtughul"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "نقاط",
+					"english": "the points of",
+					"transliteration": "nigaat"
+				},
+				{
+					"arabic": "ضعفي.",
+					"english": "my weakness.",
+					"transliteration": "dha3fi."
+				}
+			],
+			"targetWords": [
+				"Weaknesses"
+			]
+		},
+		{
+			"arabic": "الشغل الجماعي والتواصل.",
+			"arabicTashkeel": "الشُّغُل الجَماعي والتَّواصُل.",
+			"english": "Teamwork and communication.",
+			"transliteration": "ish-shughul ij-jamaa3i w-it-tawaasul.",
+			"wordAlignments": [
+				{
+					"arabic": "الشغل",
+					"english": "The work",
+					"transliteration": "ish-shughul"
+				},
+				{
+					"arabic": "الجماعي",
+					"english": "collective",
+					"transliteration": "ij-jamaa3i"
+				},
+				{
+					"arabic": "والتواصل.",
+					"english": "and communication.",
+					"transliteration": "w-it-tawaasul."
+				}
+			],
+			"targetWords": [
+				"Teamwork"
+			]
+		},
+		{
+			"arabic": "مسؤولية ثقيلة.",
+			"arabicTashkeel": "مَسؤولية ثْقيلة.",
+			"english": "A heavy responsibility.",
+			"transliteration": "mas2ooliyya thgeela.",
+			"wordAlignments": [
+				{
+					"arabic": "مسؤولية",
+					"english": "A responsibility",
+					"transliteration": "mas2ooliyya"
+				},
+				{
+					"arabic": "ثقيلة.",
+					"english": "heavy.",
+					"transliteration": "thgeela."
+				}
+			],
+			"targetWords": [
+				"Responsibility"
+			]
+		},
+		{
+			"arabic": "مبروك الترقية!",
+			"arabicTashkeel": "مَبروك التَّرقية!",
+			"english": "Congratulations on the promotion!",
+			"transliteration": "mabrook it-targiya!",
+			"wordAlignments": [
+				{
+					"arabic": "مبروك",
+					"english": "Congratulations",
+					"transliteration": "mabrook"
+				},
+				{
+					"arabic": "الترقية!",
+					"english": "on the promotion!",
+					"transliteration": "it-targiya!"
+				}
+			],
+			"targetWords": [
+				"Promotion"
+			]
+		},
+		{
+			"arabic": "منصب قيادة.",
+			"arabicTashkeel": "مَنصِب قِيادة.",
+			"english": "A leadership position.",
+			"transliteration": "mansib giyaada.",
+			"wordAlignments": [
+				{
+					"arabic": "منصب",
+					"english": "A position of",
+					"transliteration": "mansib"
+				},
+				{
+					"arabic": "قيادة.",
+					"english": "leadership.",
+					"transliteration": "giyaada."
+				}
+			],
+			"targetWords": [
+				"Leadership"
+			]
+		},
+		{
+			"arabic": "تفاوض عالعقد.",
+			"arabicTashkeel": "تَفاوُض عالعَقِد.",
+			"english": "Negotiation on the contract.",
+			"transliteration": "tafaawudh 3al-3agid.",
+			"wordAlignments": [
+				{
+					"arabic": "تفاوض",
+					"english": "Negotiation",
+					"transliteration": "tafaawudh"
+				},
+				{
+					"arabic": "عالعقد.",
+					"english": "on the contract.",
+					"transliteration": "3al-3agid."
+				}
+			],
+			"targetWords": [
+				"Negotiation"
+			]
+		},
+		{
+			"arabic": "إمتيازات زينة.",
+			"arabicTashkeel": "إمتِيازات زينة.",
+			"english": "Good benefits.",
+			"transliteration": "imtiyaazaat zeena.",
+			"wordAlignments": [
+				{
+					"arabic": "إمتيازات",
+					"english": "Benefits",
+					"transliteration": "imtiyaazaat"
+				},
+				{
+					"arabic": "زينة.",
+					"english": "good.",
+					"transliteration": "zeena."
+				}
+			],
+			"targetWords": [
+				"Benefits (perks)"
+			]
+		},
+		{
+			"arabic": "تدريب بره العراق.",
+			"arabicTashkeel": "تَدريب بَرّه العِراق.",
+			"english": "Training abroad.",
+			"transliteration": "tadreeb barra il-3iraaq.",
+			"wordAlignments": [
+				{
+					"arabic": "تدريب",
+					"english": "Training",
+					"transliteration": "tadreeb"
+				},
+				{
+					"arabic": "بره",
+					"english": "outside",
+					"transliteration": "barra"
+				},
+				{
+					"arabic": "العراق.",
+					"english": "Iraq.",
+					"transliteration": "il-3iraaq."
+				}
+			],
+			"targetWords": [
+				"Training"
+			]
+		},
+		{
+			"arabic": "إنجاز كبير.",
+			"arabicTashkeel": "إنجاز كْبير.",
+			"english": "A big achievement.",
+			"transliteration": "injaaz chbeer.",
+			"wordAlignments": [
+				{
+					"arabic": "إنجاز",
+					"english": "An achievement",
+					"transliteration": "injaaz"
+				},
+				{
+					"arabic": "كبير.",
+					"english": "big.",
+					"transliteration": "chbeer."
+				}
+			],
+			"targetWords": [
+				"Achievement"
+			]
+		},
+		{
+			"arabic": "أحب التحديات.",
+			"arabicTashkeel": "أحِب التَّحَدّيات.",
+			"english": "I love challenges.",
+			"transliteration": "a7ibb it-ta7addiyaat.",
+			"wordAlignments": [
+				{
+					"arabic": "أحب",
+					"english": "I love",
+					"transliteration": "a7ibb"
+				},
+				{
+					"arabic": "التحديات.",
+					"english": "challenges.",
+					"transliteration": "it-ta7addiyaat."
+				}
+			],
+			"targetWords": [
+				"Challenge"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "The Second Interview",
+			"sentences": [
+				{
+					"arabic": "اليوم كانت عندي مقابلة ثانية ويا مدير الشركة.",
+					"arabicTashkeel": "اليوم كانَت عِندي مُقابلة ثانية ويّا مُدير الشَّرِكة.",
+					"english": "Today I had a second interview with the director of the company.",
+					"transliteration": "il-yoom chaanat 3indi mgaabla thaanya wiyya mudeer ish-shirka.",
+					"wordAlignments": [
+						{
+							"arabic": "اليوم",
+							"english": "Today",
+							"transliteration": "il-yoom"
+						},
+						{
+							"arabic": "كانت",
+							"english": "was",
+							"transliteration": "chaanat"
+						},
+						{
+							"arabic": "عندي",
+							"english": "to me",
+							"transliteration": "3indi"
+						},
+						{
+							"arabic": "مقابلة",
+							"english": "an interview",
+							"transliteration": "mgaabla"
+						},
+						{
+							"arabic": "ثانية",
+							"english": "second",
+							"transliteration": "thaanya"
+						},
+						{
+							"arabic": "ويا",
+							"english": "with",
+							"transliteration": "wiyya"
+						},
+						{
+							"arabic": "مدير",
+							"english": "the director of",
+							"transliteration": "mudeer"
+						},
+						{
+							"arabic": "الشركة.",
+							"english": "the company.",
+							"transliteration": "ish-shirka."
+						}
+					]
+				},
+				{
+					"arabic": "سألني عن نقاط قوتي وضعفي.",
+					"arabicTashkeel": "سِألني عَن نِقاط قوّتي وضَعفي.",
+					"english": "He asked me about my strengths and weaknesses.",
+					"transliteration": "si2alni 3an nigaat guwwati w-dha3fi.",
+					"wordAlignments": [
+						{
+							"arabic": "سألني",
+							"english": "He asked me",
+							"transliteration": "si2alni"
+						},
+						{
+							"arabic": "عن",
+							"english": "about",
+							"transliteration": "3an"
+						},
+						{
+							"arabic": "نقاط",
+							"english": "the points of",
+							"transliteration": "nigaat"
+						},
+						{
+							"arabic": "قوتي",
+							"english": "my strength",
+							"transliteration": "guwwati"
+						},
+						{
+							"arabic": "وضعفي.",
+							"english": "and my weakness.",
+							"transliteration": "w-dha3fi."
+						}
+					]
+				},
+				{
+					"arabic": "قلت: نقطة قوتي الشغل الجماعي، وضعفي إني أشتغل هواية.",
+					"arabicTashkeel": "قِلِت: نُقطة قوّتي الشُّغُل الجَماعي، وضَعفي إنّي أشتُغُل هْوايَة.",
+					"english": "I said: my strength is teamwork, and my weakness is that I work too much.",
+					"transliteration": "gilit: nugtat guwwati ish-shughul ij-jamaa3i, w-dha3fi inni ashtughul hwaaya.",
+					"wordAlignments": [
+						{
+							"arabic": "قلت:",
+							"english": "I said:",
+							"transliteration": "gilit:"
+						},
+						{
+							"arabic": "نقطة",
+							"english": "the point of",
+							"transliteration": "nugtat"
+						},
+						{
+							"arabic": "قوتي",
+							"english": "my strength is",
+							"transliteration": "guwwati"
+						},
+						{
+							"arabic": "الشغل",
+							"english": "the work",
+							"transliteration": "ish-shughul"
+						},
+						{
+							"arabic": "الجماعي،",
+							"english": "collective,",
+							"transliteration": "ij-jamaa3i,"
+						},
+						{
+							"arabic": "وضعفي",
+							"english": "and my weakness",
+							"transliteration": "w-dha3fi"
+						},
+						{
+							"arabic": "إني",
+							"english": "that I",
+							"transliteration": "inni"
+						},
+						{
+							"arabic": "أشتغل",
+							"english": "work",
+							"transliteration": "ashtughul"
+						},
+						{
+							"arabic": "هواية.",
+							"english": "a lot.",
+							"transliteration": "hwaaya."
+						}
+					]
+				},
+				{
+					"arabic": "بعدين حكيتله عن أكبر إنجاز والتحديات اللي واجهتها.",
+					"arabicTashkeel": "بَعدين حِكيتلَه عَن أكبَر إنجاز والتَّحَدّيات اللي واجَهتها.",
+					"english": "Then I told him about my biggest achievement and the challenges I faced.",
+					"transliteration": "ba3deen 7icheetla 3an akbar injaaz w-it-ta7addiyaat illi waajahit-ha.",
+					"wordAlignments": [
+						{
+							"arabic": "بعدين",
+							"english": "Then",
+							"transliteration": "ba3deen"
+						},
+						{
+							"arabic": "حكيتله",
+							"english": "I told him",
+							"transliteration": "7icheetla"
+						},
+						{
+							"arabic": "عن",
+							"english": "about",
+							"transliteration": "3an"
+						},
+						{
+							"arabic": "أكبر",
+							"english": "my biggest",
+							"transliteration": "akbar"
+						},
+						{
+							"arabic": "إنجاز",
+							"english": "achievement",
+							"transliteration": "injaaz"
+						},
+						{
+							"arabic": "والتحديات",
+							"english": "and the challenges",
+							"transliteration": "w-it-ta7addiyaat"
+						},
+						{
+							"arabic": "اللي",
+							"english": "that",
+							"transliteration": "illi"
+						},
+						{
+							"arabic": "واجهتها.",
+							"english": "I faced.",
+							"transliteration": "waajahit-ha."
+						}
+					]
+				},
+				{
+					"arabic": "بالنهاية حكينا عن الراتب والإمتيازات وفترة التجربة.",
+					"arabicTashkeel": "بالنِّهاية حِكَينا عَن الرّاتِب والإمتِيازات وفَترة التَّجرُبة.",
+					"english": "At the end we discussed the salary, the benefits and the probation period.",
+					"transliteration": "bin-nihaaya 7ichayna 3an ir-raatib w-il-imtiyaazaat w-fatrat it-tajruba.",
+					"wordAlignments": [
+						{
+							"arabic": "بالنهاية",
+							"english": "At the end",
+							"transliteration": "bin-nihaaya"
+						},
+						{
+							"arabic": "حكينا",
+							"english": "we talked",
+							"transliteration": "7ichayna"
+						},
+						{
+							"arabic": "عن",
+							"english": "about",
+							"transliteration": "3an"
+						},
+						{
+							"arabic": "الراتب",
+							"english": "the salary,",
+							"transliteration": "ir-raatib"
+						},
+						{
+							"arabic": "والإمتيازات",
+							"english": "and the benefits",
+							"transliteration": "w-il-imtiyaazaat"
+						},
+						{
+							"arabic": "وفترة",
+							"english": "and the period of",
+							"transliteration": "w-fatrat"
+						},
+						{
+							"arabic": "التجربة.",
+							"english": "trial.",
+							"transliteration": "it-tajruba."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "A Promotion",
+			"sentences": [
+				{
+					"arabic": "بعد ثلاث سنين بالشركة، أختي أخذت ترقية.",
+					"arabicTashkeel": "بَعد ثْلاث سِنين بالشَّرِكة، أُختي أخذَت تَرقية.",
+					"english": "After three years at the company, my sister got a promotion.",
+					"transliteration": "ba3d thlath sneen bish-shirka, ukhti akhdhat targiya.",
+					"wordAlignments": [
+						{
+							"arabic": "بعد",
+							"english": "After",
+							"transliteration": "ba3d"
+						},
+						{
+							"arabic": "ثلاث",
+							"english": "three",
+							"transliteration": "thlath"
+						},
+						{
+							"arabic": "سنين",
+							"english": "years",
+							"transliteration": "sneen"
+						},
+						{
+							"arabic": "بالشركة،",
+							"english": "at the company,",
+							"transliteration": "bish-shirka,"
+						},
+						{
+							"arabic": "أختي",
+							"english": "my sister",
+							"transliteration": "ukhti"
+						},
+						{
+							"arabic": "أخذت",
+							"english": "got",
+							"transliteration": "akhdhat"
+						},
+						{
+							"arabic": "ترقية.",
+							"english": "a promotion.",
+							"transliteration": "targiya."
+						}
+					]
+				},
+				{
+					"arabic": "هسه عدها منصب قيادة ومسؤولية أكثر.",
+					"arabicTashkeel": "هَسَّه عِدها مَنصِب قِيادة ومَسؤولية أكثَر.",
+					"english": "Now she has a leadership position and more responsibility.",
+					"transliteration": "hassa 3idha mansib giyaada w-mas2ooliyya akthar.",
+					"wordAlignments": [
+						{
+							"arabic": "هسه",
+							"english": "Now",
+							"transliteration": "hassa"
+						},
+						{
+							"arabic": "عدها",
+							"english": "she has",
+							"transliteration": "3idha"
+						},
+						{
+							"arabic": "منصب",
+							"english": "a position of",
+							"transliteration": "mansib"
+						},
+						{
+							"arabic": "قيادة",
+							"english": "leadership",
+							"transliteration": "giyaada"
+						},
+						{
+							"arabic": "ومسؤولية",
+							"english": "and responsibility",
+							"transliteration": "w-mas2ooliyya"
+						},
+						{
+							"arabic": "أكثر.",
+							"english": "more.",
+							"transliteration": "akthar."
+						}
+					]
+				},
+				{
+					"arabic": "تقول أكبر تحدي إدارة الناس.",
+					"arabicTashkeel": "تْقول أكبَر تَحَدّي إدارة النّاس.",
+					"english": "She says the biggest challenge is managing people.",
+					"transliteration": "tgool akbar ta7addi idaarat in-naas.",
+					"wordAlignments": [
+						{
+							"arabic": "تقول",
+							"english": "She says",
+							"transliteration": "tgool"
+						},
+						{
+							"arabic": "أكبر",
+							"english": "the biggest",
+							"transliteration": "akbar"
+						},
+						{
+							"arabic": "تحدي",
+							"english": "challenge is",
+							"transliteration": "ta7addi"
+						},
+						{
+							"arabic": "إدارة",
+							"english": "managing",
+							"transliteration": "idaarat"
+						},
+						{
+							"arabic": "الناس.",
+							"english": "people.",
+							"transliteration": "in-naas."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is in a final-round interview for a senior position at a company in Baghdad.",
+		"studentRole": "An experienced candidate learning Iraqi Arabic.",
+		"otherRole": "The company director, who asks tough questions.",
+		"goalEnglish": "Talk about your strengths and weaknesses, your achievements and a challenge you overcame, and negotiate the salary, benefits and training.",
+		"targetWords": [
+			"Strengths",
+			"Weaknesses",
+			"Achievement",
+			"Challenge",
+			"Leadership",
+			"Negotiation",
+			"Benefits (perks)",
+			"Promotion"
+		]
+	}
+}
