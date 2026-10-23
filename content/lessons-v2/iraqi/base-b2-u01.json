@@ -1,0 +1,2452 @@
+{
+	"vocab": [
+		{
+			"arabic": "معلم",
+			"arabicTashkeel": "مَعلَم",
+			"english": "Landmark",
+			"transliteration": "ma3lam",
+			"wordAlignments": [
+				{
+					"arabic": "معلم",
+					"english": "Landmark",
+					"transliteration": "ma3lam"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "عاصمة",
+			"arabicTashkeel": "عاصِمة",
+			"english": "Capital",
+			"transliteration": "3aasima",
+			"wordAlignments": [
+				{
+					"arabic": "عاصمة",
+					"english": "Capital",
+					"transliteration": "3aasima"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "أثري",
+			"arabicTashkeel": "أثَري",
+			"english": "Ancient / archaeological",
+			"transliteration": "athari",
+			"wordAlignments": [
+				{
+					"arabic": "أثري",
+					"english": "Ancient",
+					"transliteration": "athari"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "زقورة",
+			"arabicTashkeel": "زَقّورة",
+			"english": "Ziggurat",
+			"transliteration": "zaggoora",
+			"wordAlignments": [
+				{
+					"arabic": "زقورة",
+					"english": "Ziggurat",
+					"transliteration": "zaggoora"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "الأهوار",
+			"arabicTashkeel": "الأهوار",
+			"english": "The Marshes",
+			"transliteration": "il-ahwaar",
+			"wordAlignments": [
+				{
+					"arabic": "الأهوار",
+					"english": "The Marshes",
+					"transliteration": "il-ahwaar"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "بلاد الرافدين",
+			"arabicTashkeel": "بِلاد الرّافِدَين",
+			"english": "Mesopotamia",
+			"transliteration": "bilaad ir-raafidayn",
+			"wordAlignments": [
+				{
+					"arabic": "بلاد",
+					"english": "Land of",
+					"transliteration": "bilaad"
+				},
+				{
+					"arabic": "الرافدين",
+					"english": "the two rivers",
+					"transliteration": "ir-raafidayn"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "كرم",
+			"arabicTashkeel": "كَرَم",
+			"english": "Generosity",
+			"transliteration": "karam",
+			"wordAlignments": [
+				{
+					"arabic": "كرم",
+					"english": "Generosity",
+					"transliteration": "karam"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "مضياف",
+			"arabicTashkeel": "مِضياف",
+			"english": "Hospitable",
+			"transliteration": "midhyaaf",
+			"wordAlignments": [
+				{
+					"arabic": "مضياف",
+					"english": "Hospitable",
+					"transliteration": "midhyaaf"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "ثقافة",
+			"arabicTashkeel": "ثَقافة",
+			"english": "Culture",
+			"transliteration": "thagaafa",
+			"wordAlignments": [
+				{
+					"arabic": "ثقافة",
+					"english": "Culture",
+					"transliteration": "thagaafa"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "زاير",
+			"arabicTashkeel": "زايِر",
+			"english": "Visitor",
+			"transliteration": "zaayir",
+			"wordAlignments": [
+				{
+					"arabic": "زاير",
+					"english": "Visitor",
+					"transliteration": "zaayir"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "جولة",
+			"arabicTashkeel": "جَولة",
+			"english": "Tour",
+			"transliteration": "jawla",
+			"wordAlignments": [
+				{
+					"arabic": "جولة",
+					"english": "Tour",
+					"transliteration": "jawla"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "حضارة",
+			"arabicTashkeel": "حَضارة",
+			"english": "Civilization",
+			"transliteration": "7adhaara",
+			"wordAlignments": [
+				{
+					"arabic": "حضارة",
+					"english": "Civilization",
+					"transliteration": "7adhaara"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "مرقد",
+			"arabicTashkeel": "مَرقَد",
+			"english": "Shrine",
+			"transliteration": "margad",
+			"wordAlignments": [
+				{
+					"arabic": "مرقد",
+					"english": "Shrine",
+					"transliteration": "margad"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "تاريخي",
+			"arabicTashkeel": "تاريخي",
+			"english": "Historic",
+			"transliteration": "taareekhi",
+			"wordAlignments": [
+				{
+					"arabic": "تاريخي",
+					"english": "Historic",
+					"transliteration": "taareekhi"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "إنطباع",
+			"arabicTashkeel": "إنطِباع",
+			"english": "Impression",
+			"transliteration": "intibaa3",
+			"wordAlignments": [
+				{
+					"arabic": "إنطباع",
+					"english": "Impression",
+					"transliteration": "intibaa3"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "كل مدينة بالعراق بيها معلم مشهور.",
+			"arabicTashkeel": "كُل مَدينة بالعِراق بيها مَعلَم مَشهور.",
+			"english": "Every city in Iraq has a famous landmark.",
+			"transliteration": "kull madeena bil-3iraaq beeha ma3lam mash-hoor.",
+			"wordAlignments": [
+				{
+					"arabic": "كل",
+					"english": "Every",
+					"transliteration": "kull"
+				},
+				{
+					"arabic": "مدينة",
+					"english": "city",
+					"transliteration": "madeena"
+				},
+				{
+					"arabic": "بالعراق",
+					"english": "in Iraq",
+					"transliteration": "bil-3iraaq"
+				},
+				{
+					"arabic": "بيها",
+					"english": "has",
+					"transliteration": "beeha"
+				},
+				{
+					"arabic": "معلم",
+					"english": "a landmark",
+					"transliteration": "ma3lam"
+				},
+				{
+					"arabic": "مشهور.",
+					"english": "famous.",
+					"transliteration": "mash-hoor."
+				}
+			],
+			"targetWords": [
+				"Landmark"
+			]
+		},
+		{
+			"arabic": "بغداد عاصمة العراق.",
+			"arabicTashkeel": "بَغداد عاصِمة العِراق.",
+			"english": "Baghdad is the capital of Iraq.",
+			"transliteration": "baghdaad 3aasimat il-3iraaq.",
+			"wordAlignments": [
+				{
+					"arabic": "بغداد",
+					"english": "Baghdad is",
+					"transliteration": "baghdaad"
+				},
+				{
+					"arabic": "عاصمة",
+					"english": "the capital of",
+					"transliteration": "3aasimat"
+				},
+				{
+					"arabic": "العراق.",
+					"english": "Iraq.",
+					"transliteration": "il-3iraaq."
+				}
+			],
+			"targetWords": [
+				"Capital"
+			]
+		},
+		{
+			"arabic": "أكو مئات المواقع الأثرية بالجنوب.",
+			"arabicTashkeel": "أكو مِئات المَواقِع الأثَرية بالجَنوب.",
+			"english": "There are hundreds of archaeological sites in the south.",
+			"transliteration": "aku mi2aat il-mawaagi3 il-athariyya bij-janoob.",
+			"wordAlignments": [
+				{
+					"arabic": "أكو",
+					"english": "There are",
+					"transliteration": "aku"
+				},
+				{
+					"arabic": "مئات",
+					"english": "hundreds of",
+					"transliteration": "mi2aat"
+				},
+				{
+					"arabic": "المواقع",
+					"english": "the sites",
+					"transliteration": "il-mawaagi3"
+				},
+				{
+					"arabic": "الأثرية",
+					"english": "archaeological",
+					"transliteration": "il-athariyya"
+				},
+				{
+					"arabic": "بالجنوب.",
+					"english": "in the south.",
+					"transliteration": "bij-janoob."
+				}
+			],
+			"targetWords": [
+				"Ancient / archaeological"
+			]
+		},
+		{
+			"arabic": "زقورة أور عمرها أكثر من أربع آلاف سنة.",
+			"arabicTashkeel": "زَقّورة أور عُمُرها أكثَر مِن أربَع آلاف سَنة.",
+			"english": "The Ziggurat of Ur is more than four thousand years old.",
+			"transliteration": "zaggoorat oor 3umurha akthar min arba3 aalaaf sana.",
+			"wordAlignments": [
+				{
+					"arabic": "زقورة",
+					"english": "The ziggurat of",
+					"transliteration": "zaggoorat"
+				},
+				{
+					"arabic": "أور",
+					"english": "Ur",
+					"transliteration": "oor"
+				},
+				{
+					"arabic": "عمرها",
+					"english": "its age is",
+					"transliteration": "3umurha"
+				},
+				{
+					"arabic": "أكثر",
+					"english": "more",
+					"transliteration": "akthar"
+				},
+				{
+					"arabic": "من",
+					"english": "than",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "أربع",
+					"english": "four",
+					"transliteration": "arba3"
+				},
+				{
+					"arabic": "آلاف",
+					"english": "thousand",
+					"transliteration": "aalaaf"
+				},
+				{
+					"arabic": "سنة.",
+					"english": "years.",
+					"transliteration": "sana."
+				}
+			],
+			"targetWords": [
+				"Ziggurat"
+			]
+		},
+		{
+			"arabic": "سوينا سفرة بالبلم بالأهوار.",
+			"arabicTashkeel": "سَوّينا سَفرة بالبَلَم بالأهوار.",
+			"english": "We took a boat trip in the Marshes.",
+			"transliteration": "sawweena safra bil-balam bil-ahwaar.",
+			"wordAlignments": [
+				{
+					"arabic": "سوينا",
+					"english": "We made",
+					"transliteration": "sawweena"
+				},
+				{
+					"arabic": "سفرة",
+					"english": "a trip",
+					"transliteration": "safra"
+				},
+				{
+					"arabic": "بالبلم",
+					"english": "by boat",
+					"transliteration": "bil-balam"
+				},
+				{
+					"arabic": "بالأهوار.",
+					"english": "in the Marshes.",
+					"transliteration": "bil-ahwaar."
+				}
+			],
+			"targetWords": [
+				"The Marshes"
+			]
+		},
+		{
+			"arabic": "العراق بلاد الرافدين.",
+			"arabicTashkeel": "العِراق بِلاد الرّافِدَين.",
+			"english": "Iraq is the land of Mesopotamia.",
+			"transliteration": "il-3iraaq bilaad ir-raafidayn.",
+			"wordAlignments": [
+				{
+					"arabic": "العراق",
+					"english": "Iraq is",
+					"transliteration": "il-3iraaq"
+				},
+				{
+					"arabic": "بلاد",
+					"english": "the land of",
+					"transliteration": "bilaad"
+				},
+				{
+					"arabic": "الرافدين.",
+					"english": "the two rivers.",
+					"transliteration": "ir-raafidayn."
+				}
+			],
+			"targetWords": [
+				"Mesopotamia"
+			]
+		},
+		{
+			"arabic": "الكرم العراقي مشهور.",
+			"arabicTashkeel": "الكَرَم العِراقي مَشهور.",
+			"english": "Iraqi generosity is famous.",
+			"transliteration": "il-karam il-3iraaqi mash-hoor.",
+			"wordAlignments": [
+				{
+					"arabic": "الكرم",
+					"english": "Generosity",
+					"transliteration": "il-karam"
+				},
+				{
+					"arabic": "العراقي",
+					"english": "Iraqi is",
+					"transliteration": "il-3iraaqi"
+				},
+				{
+					"arabic": "مشهور.",
+					"english": "famous.",
+					"transliteration": "mash-hoor."
+				}
+			],
+			"targetWords": [
+				"Generosity"
+			]
+		},
+		{
+			"arabic": "العراقيين مضيافين هواية.",
+			"arabicTashkeel": "العِراقيين مِضيافين هْوايَة.",
+			"english": "Iraqis are very hospitable.",
+			"transliteration": "il-3iraaqiyyeen midhyaafeen hwaaya.",
+			"wordAlignments": [
+				{
+					"arabic": "العراقيين",
+					"english": "Iraqis are",
+					"transliteration": "il-3iraaqiyyeen"
+				},
+				{
+					"arabic": "مضيافين",
+					"english": "hospitable",
+					"transliteration": "midhyaafeen"
+				},
+				{
+					"arabic": "هواية.",
+					"english": "very.",
+					"transliteration": "hwaaya."
+				}
+			],
+			"targetWords": [
+				"Hospitable"
+			]
+		},
+		{
+			"arabic": "الثقافة العراقية غنية ومتنوعة.",
+			"arabicTashkeel": "الثَّقافة العِراقية غَنية ومِتنَوّعة.",
+			"english": "Iraqi culture is rich and diverse.",
+			"transliteration": "ith-thagaafa il-3iraaqiyya ghaniyya w-mitnawwi3a.",
+			"wordAlignments": [
+				{
+					"arabic": "الثقافة",
+					"english": "Culture",
+					"transliteration": "ith-thagaafa"
+				},
+				{
+					"arabic": "العراقية",
+					"english": "Iraqi is",
+					"transliteration": "il-3iraaqiyya"
+				},
+				{
+					"arabic": "غنية",
+					"english": "rich",
+					"transliteration": "ghaniyya"
+				},
+				{
+					"arabic": "ومتنوعة.",
+					"english": "and diverse.",
+					"transliteration": "w-mitnawwi3a."
+				}
+			],
+			"targetWords": [
+				"Culture"
+			]
+		},
+		{
+			"arabic": "كل زاير ياخذ شاي وابتسامة.",
+			"arabicTashkeel": "كُل زايِر ياخُذ شاي وابتِسامة.",
+			"english": "Every visitor gets tea and a smile.",
+			"transliteration": "kull zaayir yaakhudh chaay w-ibtisaama.",
+			"wordAlignments": [
+				{
+					"arabic": "كل",
+					"english": "Every",
+					"transliteration": "kull"
+				},
+				{
+					"arabic": "زاير",
+					"english": "visitor",
+					"transliteration": "zaayir"
+				},
+				{
+					"arabic": "ياخذ",
+					"english": "gets",
+					"transliteration": "yaakhudh"
+				},
+				{
+					"arabic": "شاي",
+					"english": "tea",
+					"transliteration": "chaay"
+				},
+				{
+					"arabic": "وابتسامة.",
+					"english": "and a smile.",
+					"transliteration": "w-ibtisaama."
+				}
+			],
+			"targetWords": [
+				"Visitor"
+			]
+		},
+		{
+			"arabic": "حجزنا جولة ببغداد القديمة.",
+			"arabicTashkeel": "حِجَزنا جَولة ببَغداد القَديمة.",
+			"english": "We booked a tour of old Baghdad.",
+			"transliteration": "7ijazna jawla b-baghdaad il-gadeema.",
+			"wordAlignments": [
+				{
+					"arabic": "حجزنا",
+					"english": "We booked",
+					"transliteration": "7ijazna"
+				},
+				{
+					"arabic": "جولة",
+					"english": "a tour",
+					"transliteration": "jawla"
+				},
+				{
+					"arabic": "ببغداد",
+					"english": "in Baghdad",
+					"transliteration": "b-baghdaad"
+				},
+				{
+					"arabic": "القديمة.",
+					"english": "old.",
+					"transliteration": "il-gadeema."
+				}
+			],
+			"targetWords": [
+				"Tour"
+			]
+		},
+		{
+			"arabic": "بلاد الرافدين مهد الحضارة.",
+			"arabicTashkeel": "بِلاد الرّافِدَين مَهد الحَضارة.",
+			"english": "Mesopotamia is the cradle of civilization.",
+			"transliteration": "bilaad ir-raafidayn mahd il-7adhaara.",
+			"wordAlignments": [
+				{
+					"arabic": "بلاد",
+					"english": "The land of",
+					"transliteration": "bilaad"
+				},
+				{
+					"arabic": "الرافدين",
+					"english": "the two rivers is",
+					"transliteration": "ir-raafidayn"
+				},
+				{
+					"arabic": "مهد",
+					"english": "the cradle of",
+					"transliteration": "mahd"
+				},
+				{
+					"arabic": "الحضارة.",
+					"english": "civilization.",
+					"transliteration": "il-7adhaara."
+				}
+			],
+			"targetWords": [
+				"Civilization",
+				"Mesopotamia"
+			]
+		},
+		{
+			"arabic": "ملايين يزورون مرقد الإمام الحسين بكربلاء.",
+			"arabicTashkeel": "مَلايين يزورون مَرقَد الإمام الحُسَين بكَربَلاء.",
+			"english": "Millions visit the Imam Hussein shrine in Karbala.",
+			"transliteration": "malaayeen yzooroon margad il-imaam il-7usayn b-karbalaa2.",
+			"wordAlignments": [
+				{
+					"arabic": "ملايين",
+					"english": "Millions",
+					"transliteration": "malaayeen"
+				},
+				{
+					"arabic": "يزورون",
+					"english": "visit",
+					"transliteration": "yzooroon"
+				},
+				{
+					"arabic": "مرقد",
+					"english": "the shrine of",
+					"transliteration": "margad"
+				},
+				{
+					"arabic": "الإمام",
+					"english": "Imam",
+					"transliteration": "il-imaam"
+				},
+				{
+					"arabic": "الحسين",
+					"english": "Hussein",
+					"transliteration": "il-7usayn"
+				},
+				{
+					"arabic": "بكربلاء.",
+					"english": "in Karbala.",
+					"transliteration": "b-karbalaa2."
+				}
+			],
+			"targetWords": [
+				"Shrine"
+			]
+		},
+		{
+			"arabic": "شارع المتنبي شارع تاريخي.",
+			"arabicTashkeel": "شارِع المُتَنَبّي شارِع تاريخي.",
+			"english": "Al-Mutanabbi Street is a historic street.",
+			"transliteration": "shaari3 il-mutanabbi shaari3 taareekhi.",
+			"wordAlignments": [
+				{
+					"arabic": "شارع",
+					"english": "The street of",
+					"transliteration": "shaari3"
+				},
+				{
+					"arabic": "المتنبي",
+					"english": "Al-Mutanabbi is",
+					"transliteration": "il-mutanabbi"
+				},
+				{
+					"arabic": "شارع",
+					"english": "a street",
+					"transliteration": "shaari3"
+				},
+				{
+					"arabic": "تاريخي.",
+					"english": "historic.",
+					"transliteration": "taareekhi."
+				}
+			],
+			"targetWords": [
+				"Historic"
+			]
+		},
+		{
+			"arabic": "شنو إنطباعك الأول عن بغداد؟",
+			"arabicTashkeel": "شِنو إنطِباعَك الأوَّل عَن بَغداد؟",
+			"english": "What was your first impression of Baghdad?",
+			"transliteration": "shinu intibaa3ak il-awwal 3an baghdaad?",
+			"wordAlignments": [
+				{
+					"arabic": "شنو",
+					"english": "What was",
+					"transliteration": "shinu"
+				},
+				{
+					"arabic": "إنطباعك",
+					"english": "your impression",
+					"transliteration": "intibaa3ak"
+				},
+				{
+					"arabic": "الأول",
+					"english": "first",
+					"transliteration": "il-awwal"
+				},
+				{
+					"arabic": "عن",
+					"english": "about",
+					"transliteration": "3an"
+				},
+				{
+					"arabic": "بغداد؟",
+					"english": "Baghdad?",
+					"transliteration": "baghdaad?"
+				}
+			],
+			"targetWords": [
+				"Impression"
+			]
+		},
+		{
+			"arabic": "ملوية سامراء معلم مشهور.",
+			"arabicTashkeel": "مَلويّة سامَرّاء مَعلَم مَشهور.",
+			"english": "The Malwiya minaret in Samarra is a famous landmark.",
+			"transliteration": "malwiyyat saamarraa2 ma3lam mash-hoor.",
+			"wordAlignments": [
+				{
+					"arabic": "ملوية",
+					"english": "The Malwiya of",
+					"transliteration": "malwiyyat"
+				},
+				{
+					"arabic": "سامراء",
+					"english": "Samarra is",
+					"transliteration": "saamarraa2"
+				},
+				{
+					"arabic": "معلم",
+					"english": "a landmark",
+					"transliteration": "ma3lam"
+				},
+				{
+					"arabic": "مشهور.",
+					"english": "famous.",
+					"transliteration": "mash-hoor."
+				}
+			],
+			"targetWords": [
+				"Landmark"
+			]
+		},
+		{
+			"arabic": "أربيل عاصمة إقليم كردستان.",
+			"arabicTashkeel": "أربيل عاصِمة إقليم كُردِستان.",
+			"english": "Erbil is the capital of the Kurdistan Region.",
+			"transliteration": "arbeel 3aasimat igleem kurdistaan.",
+			"wordAlignments": [
+				{
+					"arabic": "أربيل",
+					"english": "Erbil is",
+					"transliteration": "arbeel"
+				},
+				{
+					"arabic": "عاصمة",
+					"english": "the capital of",
+					"transliteration": "3aasimat"
+				},
+				{
+					"arabic": "إقليم",
+					"english": "the region of",
+					"transliteration": "igleem"
+				},
+				{
+					"arabic": "كردستان.",
+					"english": "Kurdistan.",
+					"transliteration": "kurdistaan."
+				}
+			],
+			"targetWords": [
+				"Capital"
+			]
+		},
+		{
+			"arabic": "بابل أشهر مدينة أثرية.",
+			"arabicTashkeel": "بابِل أشهَر مَدينة أثَرية.",
+			"english": "Babylon is the most famous archaeological city.",
+			"transliteration": "baabil ash-har madeena athariyya.",
+			"wordAlignments": [
+				{
+					"arabic": "بابل",
+					"english": "Babylon is",
+					"transliteration": "baabil"
+				},
+				{
+					"arabic": "أشهر",
+					"english": "the most famous",
+					"transliteration": "ash-har"
+				},
+				{
+					"arabic": "مدينة",
+					"english": "city",
+					"transliteration": "madeena"
+				},
+				{
+					"arabic": "أثرية.",
+					"english": "archaeological.",
+					"transliteration": "athariyya."
+				}
+			],
+			"targetWords": [
+				"Ancient / archaeological"
+			]
+		},
+		{
+			"arabic": "الزقورة كانت معبد.",
+			"arabicTashkeel": "الزَّقّورة كانَت مَعبَد.",
+			"english": "The ziggurat was a temple.",
+			"transliteration": "iz-zaggoora chaanat ma3bad.",
+			"wordAlignments": [
+				{
+					"arabic": "الزقورة",
+					"english": "The ziggurat",
+					"transliteration": "iz-zaggoora"
+				},
+				{
+					"arabic": "كانت",
+					"english": "was",
+					"transliteration": "chaanat"
+				},
+				{
+					"arabic": "معبد.",
+					"english": "a temple.",
+					"transliteration": "ma3bad."
+				}
+			],
+			"targetWords": [
+				"Ziggurat"
+			]
+		},
+		{
+			"arabic": "الأهوار بقائمة اليونسكو.",
+			"arabicTashkeel": "الأهوار بقائمة اليونِسكو.",
+			"english": "The Marshes are on the UNESCO list.",
+			"transliteration": "il-ahwaar b-gaa2imat il-yoonisko.",
+			"wordAlignments": [
+				{
+					"arabic": "الأهوار",
+					"english": "The Marshes are",
+					"transliteration": "il-ahwaar"
+				},
+				{
+					"arabic": "بقائمة",
+					"english": "on the list of",
+					"transliteration": "b-gaa2imat"
+				},
+				{
+					"arabic": "اليونسكو.",
+					"english": "UNESCO.",
+					"transliteration": "il-yoonisko."
+				}
+			],
+			"targetWords": [
+				"The Marshes"
+			]
+		},
+		{
+			"arabic": "دجلة والفرات سووا بلاد الرافدين.",
+			"arabicTashkeel": "دِجلة والفُرات سَوّوا بِلاد الرّافِدَين.",
+			"english": "The Tigris and the Euphrates made Mesopotamia.",
+			"transliteration": "dijla w-il-furaat sawwaw bilaad ir-raafidayn.",
+			"wordAlignments": [
+				{
+					"arabic": "دجلة",
+					"english": "The Tigris",
+					"transliteration": "dijla"
+				},
+				{
+					"arabic": "والفرات",
+					"english": "and the Euphrates",
+					"transliteration": "w-il-furaat"
+				},
+				{
+					"arabic": "سووا",
+					"english": "made",
+					"transliteration": "sawwaw"
+				},
+				{
+					"arabic": "بلاد",
+					"english": "the land of",
+					"transliteration": "bilaad"
+				},
+				{
+					"arabic": "الرافدين.",
+					"english": "the two rivers.",
+					"transliteration": "ir-raafidayn."
+				}
+			],
+			"targetWords": [
+				"Mesopotamia"
+			]
+		},
+		{
+			"arabic": "كرمهم فاجأني.",
+			"arabicTashkeel": "كَرَمهُم فاجأني.",
+			"english": "Their generosity surprised me.",
+			"transliteration": "karamhum faaja2ni.",
+			"wordAlignments": [
+				{
+					"arabic": "كرمهم",
+					"english": "Their generosity",
+					"transliteration": "karamhum"
+				},
+				{
+					"arabic": "فاجأني.",
+					"english": "surprised me.",
+					"transliteration": "faaja2ni."
+				}
+			],
+			"targetWords": [
+				"Generosity"
+			]
+		},
+		{
+			"arabic": "عائلة مضيافة عزمتنا عالغدا.",
+			"arabicTashkeel": "عائلة مِضيافة عَزّمتنا عالغَدا.",
+			"english": "A hospitable family invited us to lunch.",
+			"transliteration": "3aa2ila midhyaafa 3azzamatna 3al-ghada.",
+			"wordAlignments": [
+				{
+					"arabic": "عائلة",
+					"english": "A family",
+					"transliteration": "3aa2ila"
+				},
+				{
+					"arabic": "مضيافة",
+					"english": "hospitable",
+					"transliteration": "midhyaafa"
+				},
+				{
+					"arabic": "عزمتنا",
+					"english": "invited us",
+					"transliteration": "3azzamatna"
+				},
+				{
+					"arabic": "عالغدا.",
+					"english": "to lunch.",
+					"transliteration": "3al-ghada."
+				}
+			],
+			"targetWords": [
+				"Hospitable"
+			]
+		},
+		{
+			"arabic": "أريد أتعرف عالثقافة العراقية.",
+			"arabicTashkeel": "أريد أتعَرَّف عالثَّقافة العِراقية.",
+			"english": "I want to learn about Iraqi culture.",
+			"transliteration": "areed at3arraf 3ath-thagaafa il-3iraaqiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "أريد",
+					"english": "I want",
+					"transliteration": "areed"
+				},
+				{
+					"arabic": "أتعرف",
+					"english": "to learn",
+					"transliteration": "at3arraf"
+				},
+				{
+					"arabic": "عالثقافة",
+					"english": "about the culture",
+					"transliteration": "3ath-thagaafa"
+				},
+				{
+					"arabic": "العراقية.",
+					"english": "Iraqi.",
+					"transliteration": "il-3iraaqiyya."
+				}
+			],
+			"targetWords": [
+				"Culture"
+			]
+		},
+		{
+			"arabic": "الزوار يجون من كل العالم.",
+			"arabicTashkeel": "الزّوّار يِجون مِن كُل العالَم.",
+			"english": "Visitors come from all over the world.",
+			"transliteration": "iz-zuwwaar yijoon min kull il-3aalam.",
+			"wordAlignments": [
+				{
+					"arabic": "الزوار",
+					"english": "Visitors",
+					"transliteration": "iz-zuwwaar"
+				},
+				{
+					"arabic": "يجون",
+					"english": "come",
+					"transliteration": "yijoon"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "كل",
+					"english": "all",
+					"transliteration": "kull"
+				},
+				{
+					"arabic": "العالم.",
+					"english": "the world.",
+					"transliteration": "il-3aalam."
+				}
+			],
+			"targetWords": [
+				"Visitor"
+			]
+		},
+		{
+			"arabic": "الجولة تبدي الساعة تسعة الصبح.",
+			"arabicTashkeel": "الجَولة تِبدي السّاعة تِسعة الصُّبُح.",
+			"english": "The tour starts at nine in the morning.",
+			"transliteration": "ij-jawla tibdi is-saa3a tis3a is-subu7.",
+			"wordAlignments": [
+				{
+					"arabic": "الجولة",
+					"english": "The tour",
+					"transliteration": "ij-jawla"
+				},
+				{
+					"arabic": "تبدي",
+					"english": "starts",
+					"transliteration": "tibdi"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "at",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "تسعة",
+					"english": "nine",
+					"transliteration": "tis3a"
+				},
+				{
+					"arabic": "الصبح.",
+					"english": "in the morning.",
+					"transliteration": "is-subu7."
+				}
+			],
+			"targetWords": [
+				"Tour"
+			]
+		},
+		{
+			"arabic": "الحضارة السومرية إخترعت الكتابة.",
+			"arabicTashkeel": "الحَضارة السّومَرية إختِرعَت الكِتابة.",
+			"english": "The Sumerian civilization invented writing.",
+			"transliteration": "il-7adhaara is-soomariyya ikhtir3at il-kitaaba.",
+			"wordAlignments": [
+				{
+					"arabic": "الحضارة",
+					"english": "The civilization",
+					"transliteration": "il-7adhaara"
+				},
+				{
+					"arabic": "السومرية",
+					"english": "Sumerian",
+					"transliteration": "is-soomariyya"
+				},
+				{
+					"arabic": "إخترعت",
+					"english": "invented",
+					"transliteration": "ikhtir3at"
+				},
+				{
+					"arabic": "الكتابة.",
+					"english": "writing.",
+					"transliteration": "il-kitaaba."
+				}
+			],
+			"targetWords": [
+				"Civilization"
+			]
+		},
+		{
+			"arabic": "مرقد الإمام علي بالنجف إله قبة ذهبية.",
+			"arabicTashkeel": "مَرقَد الإمام عَلي بالنَّجَف إلَه قُبّة ذَهَبية.",
+			"english": "The Imam Ali shrine in Najaf has a golden dome.",
+			"transliteration": "margad il-imaam 3ali bin-najaf ila gubba dhahabiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "مرقد",
+					"english": "The shrine of",
+					"transliteration": "margad"
+				},
+				{
+					"arabic": "الإمام",
+					"english": "Imam",
+					"transliteration": "il-imaam"
+				},
+				{
+					"arabic": "علي",
+					"english": "Ali",
+					"transliteration": "3ali"
+				},
+				{
+					"arabic": "بالنجف",
+					"english": "in Najaf",
+					"transliteration": "bin-najaf"
+				},
+				{
+					"arabic": "إله",
+					"english": "has",
+					"transliteration": "ila"
+				},
+				{
+					"arabic": "قبة",
+					"english": "a dome",
+					"transliteration": "gubba"
+				},
+				{
+					"arabic": "ذهبية.",
+					"english": "golden.",
+					"transliteration": "dhahabiyya."
+				}
+			],
+			"targetWords": [
+				"Shrine"
+			]
+		},
+		{
+			"arabic": "أبواب بغداد التاريخية.",
+			"arabicTashkeel": "أبواب بَغداد التّاريخية.",
+			"english": "The historic gates of Baghdad.",
+			"transliteration": "abwaab baghdaad it-taareekhiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "أبواب",
+					"english": "The gates of",
+					"transliteration": "abwaab"
+				},
+				{
+					"arabic": "بغداد",
+					"english": "Baghdad",
+					"transliteration": "baghdaad"
+				},
+				{
+					"arabic": "التاريخية.",
+					"english": "historic.",
+					"transliteration": "it-taareekhiyya."
+				}
+			],
+			"targetWords": [
+				"Historic"
+			]
+		},
+		{
+			"arabic": "إنطباعي الناس هنا طيبين هواية.",
+			"arabicTashkeel": "إنطِباعي النّاس هْنا طَيّبين هْوايَة.",
+			"english": "My impression is that people here are very kind.",
+			"transliteration": "intibaa3i in-naas hnaa tayyibeen hwaaya.",
+			"wordAlignments": [
+				{
+					"arabic": "إنطباعي",
+					"english": "My impression is",
+					"transliteration": "intibaa3i"
+				},
+				{
+					"arabic": "الناس",
+					"english": "the people",
+					"transliteration": "in-naas"
+				},
+				{
+					"arabic": "هنا",
+					"english": "here are",
+					"transliteration": "hnaa"
+				},
+				{
+					"arabic": "طيبين",
+					"english": "kind",
+					"transliteration": "tayyibeen"
+				},
+				{
+					"arabic": "هواية.",
+					"english": "very.",
+					"transliteration": "hwaaya."
+				}
+			],
+			"targetWords": [
+				"Impression"
+			]
+		},
+		{
+			"arabic": "المتحف العراقي معلم مهم.",
+			"arabicTashkeel": "المَتحَف العِراقي مَعلَم مُهِم.",
+			"english": "The Iraq Museum is an important landmark.",
+			"transliteration": "il-mat7af il-3iraaqi ma3lam muhimm.",
+			"wordAlignments": [
+				{
+					"arabic": "المتحف",
+					"english": "The museum",
+					"transliteration": "il-mat7af"
+				},
+				{
+					"arabic": "العراقي",
+					"english": "Iraqi is",
+					"transliteration": "il-3iraaqi"
+				},
+				{
+					"arabic": "معلم",
+					"english": "a landmark",
+					"transliteration": "ma3lam"
+				},
+				{
+					"arabic": "مهم.",
+					"english": "important.",
+					"transliteration": "muhimm."
+				}
+			],
+			"targetWords": [
+				"Landmark"
+			]
+		},
+		{
+			"arabic": "العاصمة مزدحمة وحية.",
+			"arabicTashkeel": "العاصِمة مَزدَحمة وحَيّة.",
+			"english": "The capital is crowded and lively.",
+			"transliteration": "il-3aasima mazda7ma w-7ayya.",
+			"wordAlignments": [
+				{
+					"arabic": "العاصمة",
+					"english": "The capital is",
+					"transliteration": "il-3aasima"
+				},
+				{
+					"arabic": "مزدحمة",
+					"english": "crowded",
+					"transliteration": "mazda7ma"
+				},
+				{
+					"arabic": "وحية.",
+					"english": "and lively.",
+					"transliteration": "w-7ayya."
+				}
+			],
+			"targetWords": [
+				"Capital"
+			]
+		},
+		{
+			"arabic": "علماء الآثار لقوا تماثيل جديدة.",
+			"arabicTashkeel": "عُلَماء الآثار لِقوا تَماثيل جْديدة.",
+			"english": "The archaeologists found new statues.",
+			"transliteration": "3ulamaa2 il-aathaar ligaw tamaatheel jdeeda.",
+			"wordAlignments": [
+				{
+					"arabic": "علماء",
+					"english": "The scholars of",
+					"transliteration": "3ulamaa2"
+				},
+				{
+					"arabic": "الآثار",
+					"english": "antiquities",
+					"transliteration": "il-aathaar"
+				},
+				{
+					"arabic": "لقوا",
+					"english": "found",
+					"transliteration": "ligaw"
+				},
+				{
+					"arabic": "تماثيل",
+					"english": "statues",
+					"transliteration": "tamaatheel"
+				},
+				{
+					"arabic": "جديدة.",
+					"english": "new.",
+					"transliteration": "jdeeda."
+				}
+			],
+			"targetWords": [
+				"Ancient / archaeological"
+			]
+		},
+		{
+			"arabic": "صعدنا درج الزقورة.",
+			"arabicTashkeel": "صِعَدنا دَرَج الزَّقّورة.",
+			"english": "We climbed the steps of the ziggurat.",
+			"transliteration": "si3adna daraj iz-zaggoora.",
+			"wordAlignments": [
+				{
+					"arabic": "صعدنا",
+					"english": "We climbed",
+					"transliteration": "si3adna"
+				},
+				{
+					"arabic": "درج",
+					"english": "the steps of",
+					"transliteration": "daraj"
+				},
+				{
+					"arabic": "الزقورة.",
+					"english": "the ziggurat.",
+					"transliteration": "iz-zaggoora."
+				}
+			],
+			"targetWords": [
+				"Ziggurat"
+			]
+		},
+		{
+			"arabic": "عرب الأهوار يعيشون ببيوت قصب.",
+			"arabicTashkeel": "عَرَب الأهوار يِعيشون ببيوت قَصَب.",
+			"english": "The Marsh Arabs live in reed houses.",
+			"transliteration": "3arab il-ahwaar yi3eeshoon b-byoot gasab.",
+			"wordAlignments": [
+				{
+					"arabic": "عرب",
+					"english": "The Arabs of",
+					"transliteration": "3arab"
+				},
+				{
+					"arabic": "الأهوار",
+					"english": "the Marshes",
+					"transliteration": "il-ahwaar"
+				},
+				{
+					"arabic": "يعيشون",
+					"english": "live",
+					"transliteration": "yi3eeshoon"
+				},
+				{
+					"arabic": "ببيوت",
+					"english": "in houses of",
+					"transliteration": "b-byoot"
+				},
+				{
+					"arabic": "قصب.",
+					"english": "reed.",
+					"transliteration": "gasab."
+				}
+			],
+			"targetWords": [
+				"The Marshes"
+			]
+		},
+		{
+			"arabic": "بلاد الرافدين إنطت العالم أول القوانين.",
+			"arabicTashkeel": "بِلاد الرّافِدَين إنطَت العالَم أوَّل القَوانين.",
+			"english": "Mesopotamia gave the world the first laws.",
+			"transliteration": "bilaad ir-raafidayn intat il-3aalam awwal il-gawaaneen.",
+			"wordAlignments": [
+				{
+					"arabic": "بلاد",
+					"english": "The land of",
+					"transliteration": "bilaad"
+				},
+				{
+					"arabic": "الرافدين",
+					"english": "the two rivers",
+					"transliteration": "ir-raafidayn"
+				},
+				{
+					"arabic": "إنطت",
+					"english": "gave",
+					"transliteration": "intat"
+				},
+				{
+					"arabic": "العالم",
+					"english": "the world",
+					"transliteration": "il-3aalam"
+				},
+				{
+					"arabic": "أول",
+					"english": "the first",
+					"transliteration": "awwal"
+				},
+				{
+					"arabic": "القوانين.",
+					"english": "laws.",
+					"transliteration": "il-gawaaneen."
+				}
+			],
+			"targetWords": [
+				"Mesopotamia"
+			]
+		},
+		{
+			"arabic": "الكرم جزء من الثقافة العراقية.",
+			"arabicTashkeel": "الكَرَم جُزء مِن الثَّقافة العِراقية.",
+			"english": "Generosity is part of Iraqi culture.",
+			"transliteration": "il-karam juz2 min ith-thagaafa il-3iraaqiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "الكرم",
+					"english": "Generosity is",
+					"transliteration": "il-karam"
+				},
+				{
+					"arabic": "جزء",
+					"english": "part",
+					"transliteration": "juz2"
+				},
+				{
+					"arabic": "من",
+					"english": "of",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الثقافة",
+					"english": "the culture",
+					"transliteration": "ith-thagaafa"
+				},
+				{
+					"arabic": "العراقية.",
+					"english": "Iraqi.",
+					"transliteration": "il-3iraaqiyya."
+				}
+			],
+			"targetWords": [
+				"Generosity",
+				"Culture"
+			]
+		},
+		{
+			"arabic": "أهل البصرة مضيافين.",
+			"arabicTashkeel": "أهل البَصرة مِضيافين.",
+			"english": "The people of Basra are hospitable.",
+			"transliteration": "ahl il-basra midhyaafeen.",
+			"wordAlignments": [
+				{
+					"arabic": "أهل",
+					"english": "The people of",
+					"transliteration": "ahl"
+				},
+				{
+					"arabic": "البصرة",
+					"english": "Basra are",
+					"transliteration": "il-basra"
+				},
+				{
+					"arabic": "مضيافين.",
+					"english": "hospitable.",
+					"transliteration": "midhyaafeen."
+				}
+			],
+			"targetWords": [
+				"Hospitable"
+			]
+		},
+		{
+			"arabic": "ثقافة الشاي والسوالف.",
+			"arabicTashkeel": "ثَقافة الشاي والسّوالِف.",
+			"english": "A culture of tea and conversation.",
+			"transliteration": "thagaafat ich-chaay w-is-swaalif.",
+			"wordAlignments": [
+				{
+					"arabic": "ثقافة",
+					"english": "A culture of",
+					"transliteration": "thagaafat"
+				},
+				{
+					"arabic": "الشاي",
+					"english": "tea",
+					"transliteration": "ich-chaay"
+				},
+				{
+					"arabic": "والسوالف.",
+					"english": "and conversation.",
+					"transliteration": "w-is-swaalif."
+				}
+			],
+			"targetWords": [
+				"Culture"
+			]
+		},
+		{
+			"arabic": "الزاير سأل عن تاريخ المدينة.",
+			"arabicTashkeel": "الزّايِر سِأل عَن تاريخ المَدينة.",
+			"english": "The visitor asked about the history of the city.",
+			"transliteration": "iz-zaayir si2al 3an taareekh il-madeena.",
+			"wordAlignments": [
+				{
+					"arabic": "الزاير",
+					"english": "The visitor",
+					"transliteration": "iz-zaayir"
+				},
+				{
+					"arabic": "سأل",
+					"english": "asked",
+					"transliteration": "si2al"
+				},
+				{
+					"arabic": "عن",
+					"english": "about",
+					"transliteration": "3an"
+				},
+				{
+					"arabic": "تاريخ",
+					"english": "the history of",
+					"transliteration": "taareekh"
+				},
+				{
+					"arabic": "المدينة.",
+					"english": "the city.",
+					"transliteration": "il-madeena."
+				}
+			],
+			"targetWords": [
+				"Visitor",
+				"Historic"
+			]
+		},
+		{
+			"arabic": "جولة ويا دليل بالمتحف.",
+			"arabicTashkeel": "جَولة ويّا دَليل بالمَتحَف.",
+			"english": "A guided tour of the museum.",
+			"transliteration": "jawla wiyya daleel bil-mat7af.",
+			"wordAlignments": [
+				{
+					"arabic": "جولة",
+					"english": "A tour",
+					"transliteration": "jawla"
+				},
+				{
+					"arabic": "ويا",
+					"english": "with",
+					"transliteration": "wiyya"
+				},
+				{
+					"arabic": "دليل",
+					"english": "a guide",
+					"transliteration": "daleel"
+				},
+				{
+					"arabic": "بالمتحف.",
+					"english": "in the museum.",
+					"transliteration": "bil-mat7af."
+				}
+			],
+			"targetWords": [
+				"Tour"
+			]
+		},
+		{
+			"arabic": "الحضارة البابلية كانت عظيمة.",
+			"arabicTashkeel": "الحَضارة البابِلية كانَت عَظيمة.",
+			"english": "The Babylonian civilization was great.",
+			"transliteration": "il-7adhaara il-baabiliyya chaanat 3adheema.",
+			"wordAlignments": [
+				{
+					"arabic": "الحضارة",
+					"english": "The civilization",
+					"transliteration": "il-7adhaara"
+				},
+				{
+					"arabic": "البابلية",
+					"english": "Babylonian",
+					"transliteration": "il-baabiliyya"
+				},
+				{
+					"arabic": "كانت",
+					"english": "was",
+					"transliteration": "chaanat"
+				},
+				{
+					"arabic": "عظيمة.",
+					"english": "great.",
+					"transliteration": "3adheema."
+				}
+			],
+			"targetWords": [
+				"Civilization"
+			]
+		},
+		{
+			"arabic": "المراقد مفتوحة ليل ونهار.",
+			"arabicTashkeel": "المَراقِد مَفتوحة ليل ونَهار.",
+			"english": "The shrines are open day and night.",
+			"transliteration": "il-maraagid maftoo7a leel w-nahaar.",
+			"wordAlignments": [
+				{
+					"arabic": "المراقد",
+					"english": "The shrines are",
+					"transliteration": "il-maraagid"
+				},
+				{
+					"arabic": "مفتوحة",
+					"english": "open",
+					"transliteration": "maftoo7a"
+				},
+				{
+					"arabic": "ليل",
+					"english": "night",
+					"transliteration": "leel"
+				},
+				{
+					"arabic": "ونهار.",
+					"english": "and day.",
+					"transliteration": "w-nahaar."
+				}
+			],
+			"targetWords": [
+				"Shrine"
+			]
+		},
+		{
+			"arabic": "زيارة تاريخية.",
+			"arabicTashkeel": "زِيارة تاريخية.",
+			"english": "A historic visit.",
+			"transliteration": "ziyaara taareekhiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "زيارة",
+					"english": "A visit",
+					"transliteration": "ziyaara"
+				},
+				{
+					"arabic": "تاريخية.",
+					"english": "historic.",
+					"transliteration": "taareekhiyya."
+				}
+			],
+			"targetWords": [
+				"Historic"
+			]
+		},
+		{
+			"arabic": "السفرة ترکت إنطباع حلو.",
+			"arabicTashkeel": "السَّفرة تِرکَت إنطِباع حِلو.",
+			"english": "The trip left a beautiful impression.",
+			"transliteration": "is-safra tirkat intibaa3 7ilu.",
+			"wordAlignments": [
+				{
+					"arabic": "السفرة",
+					"english": "The trip",
+					"transliteration": "is-safra"
+				},
+				{
+					"arabic": "ترکت",
+					"english": "left",
+					"transliteration": "tirkat"
+				},
+				{
+					"arabic": "إنطباع",
+					"english": "an impression",
+					"transliteration": "intibaa3"
+				},
+				{
+					"arabic": "حلو.",
+					"english": "beautiful.",
+					"transliteration": "7ilu."
+				}
+			],
+			"targetWords": [
+				"Impression"
+			]
+		},
+		{
+			"arabic": "ياهو المعلم اللي عجبك أكثر؟",
+			"arabicTashkeel": "ياهو المَعلَم اللي عِجبَك أكثَر؟",
+			"english": "Which landmark did you like most?",
+			"transliteration": "yaahu il-ma3lam illi 3ijbak akthar?",
+			"wordAlignments": [
+				{
+					"arabic": "ياهو",
+					"english": "Which",
+					"transliteration": "yaahu"
+				},
+				{
+					"arabic": "المعلم",
+					"english": "landmark",
+					"transliteration": "il-ma3lam"
+				},
+				{
+					"arabic": "اللي",
+					"english": "that",
+					"transliteration": "illi"
+				},
+				{
+					"arabic": "عجبك",
+					"english": "you liked",
+					"transliteration": "3ijbak"
+				},
+				{
+					"arabic": "أكثر؟",
+					"english": "most?",
+					"transliteration": "akthar?"
+				}
+			],
+			"targetWords": [
+				"Landmark"
+			]
+		},
+		{
+			"arabic": "الحياة بالعاصمة غالية.",
+			"arabicTashkeel": "الحَياة بالعاصِمة غالية.",
+			"english": "Life in the capital is expensive.",
+			"transliteration": "il-7ayaat bil-3aasima ghaalya.",
+			"wordAlignments": [
+				{
+					"arabic": "الحياة",
+					"english": "Life",
+					"transliteration": "il-7ayaat"
+				},
+				{
+					"arabic": "بالعاصمة",
+					"english": "in the capital is",
+					"transliteration": "bil-3aasima"
+				},
+				{
+					"arabic": "غالية.",
+					"english": "expensive.",
+					"transliteration": "ghaalya."
+				}
+			],
+			"targetWords": [
+				"Capital"
+			]
+		},
+		{
+			"arabic": "موقع أثري قريب من الناصرية.",
+			"arabicTashkeel": "مَوقِع أثَري قْريب مِن النّاصِرية.",
+			"english": "An archaeological site near Nasiriyah.",
+			"transliteration": "mawgi3 athari greeb min in-naasiriyya.",
+			"wordAlignments": [
+				{
+					"arabic": "موقع",
+					"english": "A site",
+					"transliteration": "mawgi3"
+				},
+				{
+					"arabic": "أثري",
+					"english": "archaeological",
+					"transliteration": "athari"
+				},
+				{
+					"arabic": "قريب",
+					"english": "near",
+					"transliteration": "greeb"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الناصرية.",
+					"english": "Nasiriyah.",
+					"transliteration": "in-naasiriyya."
+				}
+			],
+			"targetWords": [
+				"Ancient / archaeological"
+			]
+		},
+		{
+			"arabic": "الزقورة وقت الغروب ساحرة.",
+			"arabicTashkeel": "الزَّقّورة وَقت الغُروب ساحرة.",
+			"english": "The ziggurat at sunset is magical.",
+			"transliteration": "iz-zaggoora wagt il-ghuroob saa7ra.",
+			"wordAlignments": [
+				{
+					"arabic": "الزقورة",
+					"english": "The ziggurat",
+					"transliteration": "iz-zaggoora"
+				},
+				{
+					"arabic": "وقت",
+					"english": "at the time of",
+					"transliteration": "wagt"
+				},
+				{
+					"arabic": "الغروب",
+					"english": "sunset is",
+					"transliteration": "il-ghuroob"
+				},
+				{
+					"arabic": "ساحرة.",
+					"english": "magical.",
+					"transliteration": "saa7ra."
+				}
+			],
+			"targetWords": [
+				"Ziggurat"
+			]
+		},
+		{
+			"arabic": "الجاموس يعيش بالأهوار.",
+			"arabicTashkeel": "الجاموس يِعيش بالأهوار.",
+			"english": "Buffalo live in the Marshes.",
+			"transliteration": "ij-jaamoos yi3eesh bil-ahwaar.",
+			"wordAlignments": [
+				{
+					"arabic": "الجاموس",
+					"english": "Buffalo",
+					"transliteration": "ij-jaamoos"
+				},
+				{
+					"arabic": "يعيش",
+					"english": "live",
+					"transliteration": "yi3eesh"
+				},
+				{
+					"arabic": "بالأهوار.",
+					"english": "in the Marshes.",
+					"transliteration": "bil-ahwaar."
+				}
+			],
+			"targetWords": [
+				"The Marshes"
+			]
+		},
+		{
+			"arabic": "تاريخ بلاد الرافدين طويل.",
+			"arabicTashkeel": "تاريخ بِلاد الرّافِدَين طْويل.",
+			"english": "The history of Mesopotamia is long.",
+			"transliteration": "taareekh bilaad ir-raafidayn tweel.",
+			"wordAlignments": [
+				{
+					"arabic": "تاريخ",
+					"english": "The history of",
+					"transliteration": "taareekh"
+				},
+				{
+					"arabic": "بلاد",
+					"english": "the land of",
+					"transliteration": "bilaad"
+				},
+				{
+					"arabic": "الرافدين",
+					"english": "the two rivers is",
+					"transliteration": "ir-raafidayn"
+				},
+				{
+					"arabic": "طويل.",
+					"english": "long.",
+					"transliteration": "tweel."
+				}
+			],
+			"targetWords": [
+				"Mesopotamia"
+			]
+		},
+		{
+			"arabic": "كرمهم ما إله حدود.",
+			"arabicTashkeel": "كَرَمهُم ما إلَه حُدود.",
+			"english": "Their generosity is endless.",
+			"transliteration": "karamhum ma ila 7udood.",
+			"wordAlignments": [
+				{
+					"arabic": "كرمهم",
+					"english": "Their generosity",
+					"transliteration": "karamhum"
+				},
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "إله",
+					"english": "has",
+					"transliteration": "ila"
+				},
+				{
+					"arabic": "حدود.",
+					"english": "limits.",
+					"transliteration": "7udood."
+				}
+			],
+			"targetWords": [
+				"Generosity"
+			]
+		},
+		{
+			"arabic": "شعب مضياف.",
+			"arabicTashkeel": "شَعب مِضياف.",
+			"english": "A hospitable people.",
+			"transliteration": "sha3ab midhyaaf.",
+			"wordAlignments": [
+				{
+					"arabic": "شعب",
+					"english": "A people",
+					"transliteration": "sha3ab"
+				},
+				{
+					"arabic": "مضياف.",
+					"english": "hospitable.",
+					"transliteration": "midhyaaf."
+				}
+			],
+			"targetWords": [
+				"Hospitable"
+			]
+		},
+		{
+			"arabic": "الزوار حبوا الأكل.",
+			"arabicTashkeel": "الزّوّار حَبّوا الأكِل.",
+			"english": "The visitors loved the food.",
+			"transliteration": "iz-zuwwaar 7abbu il-akil.",
+			"wordAlignments": [
+				{
+					"arabic": "الزوار",
+					"english": "The visitors",
+					"transliteration": "iz-zuwwaar"
+				},
+				{
+					"arabic": "حبوا",
+					"english": "loved",
+					"transliteration": "7abbu"
+				},
+				{
+					"arabic": "الأكل.",
+					"english": "the food.",
+					"transliteration": "il-akil."
+				}
+			],
+			"targetWords": [
+				"Visitor"
+			]
+		},
+		{
+			"arabic": "جولة بالأهوار.",
+			"arabicTashkeel": "جَولة بالأهوار.",
+			"english": "A tour of the Marshes.",
+			"transliteration": "jawla bil-ahwaar.",
+			"wordAlignments": [
+				{
+					"arabic": "جولة",
+					"english": "A tour",
+					"transliteration": "jawla"
+				},
+				{
+					"arabic": "بالأهوار.",
+					"english": "in the Marshes.",
+					"transliteration": "bil-ahwaar."
+				}
+			],
+			"targetWords": [
+				"Tour",
+				"The Marshes"
+			]
+		},
+		{
+			"arabic": "حضارة عتيقة.",
+			"arabicTashkeel": "حَضارة عَتيقة.",
+			"english": "An old civilization.",
+			"transliteration": "7adhaara 3ateega.",
+			"wordAlignments": [
+				{
+					"arabic": "حضارة",
+					"english": "A civilization",
+					"transliteration": "7adhaara"
+				},
+				{
+					"arabic": "عتيقة.",
+					"english": "old.",
+					"transliteration": "3ateega."
+				}
+			],
+			"targetWords": [
+				"Civilization"
+			]
+		},
+		{
+			"arabic": "إنطباعي الأول كان إيجابي.",
+			"arabicTashkeel": "إنطِباعي الأوَّل كان إيجابي.",
+			"english": "My first impression was positive.",
+			"transliteration": "intibaa3i il-awwal chaan eejaabi.",
+			"wordAlignments": [
+				{
+					"arabic": "إنطباعي",
+					"english": "My impression",
+					"transliteration": "intibaa3i"
+				},
+				{
+					"arabic": "الأول",
+					"english": "first",
+					"transliteration": "il-awwal"
+				},
+				{
+					"arabic": "كان",
+					"english": "was",
+					"transliteration": "chaan"
+				},
+				{
+					"arabic": "إيجابي.",
+					"english": "positive.",
+					"transliteration": "eejaabi."
+				}
+			],
+			"targetWords": [
+				"Impression"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "A Week in Iraq",
+			"sentences": [
+				{
+					"arabic": "الربيع الفات صديقي من لندن زار العراق لأول مرة.",
+					"arabicTashkeel": "الرَّبيع الفات صَديقي مِن لَندَن زار العِراق لأوَّل مَرّة.",
+					"english": "Last spring my friend from London visited Iraq for the first time.",
+					"transliteration": "ir-rabee3 il-faat sadeegi min landan zaar il-3iraaq l-awwal marra.",
+					"wordAlignments": [
+						{
+							"arabic": "الربيع",
+							"english": "The spring",
+							"transliteration": "ir-rabee3"
+						},
+						{
+							"arabic": "الفات",
+							"english": "last",
+							"transliteration": "il-faat"
+						},
+						{
+							"arabic": "صديقي",
+							"english": "my friend",
+							"transliteration": "sadeegi"
+						},
+						{
+							"arabic": "من",
+							"english": "from",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "لندن",
+							"english": "London",
+							"transliteration": "landan"
+						},
+						{
+							"arabic": "زار",
+							"english": "visited",
+							"transliteration": "zaar"
+						},
+						{
+							"arabic": "العراق",
+							"english": "Iraq",
+							"transliteration": "il-3iraaq"
+						},
+						{
+							"arabic": "لأول",
+							"english": "for the first",
+							"transliteration": "l-awwal"
+						},
+						{
+							"arabic": "مرة.",
+							"english": "time.",
+							"transliteration": "marra."
+						}
+					]
+				},
+				{
+					"arabic": "بدينا بالعاصمة، بجولة ببغداد القديمة وشارع المتنبي.",
+					"arabicTashkeel": "بدَينا بالعاصِمة، بجَولة ببَغداد القَديمة وشارِع المُتَنَبّي.",
+					"english": "We started in the capital, with a tour of old Baghdad and Al-Mutanabbi Street.",
+					"transliteration": "bdeena bil-3aasima, b-jawla b-baghdaad il-gadeema w-shaari3 il-mutanabbi.",
+					"wordAlignments": [
+						{
+							"arabic": "بدينا",
+							"english": "We started",
+							"transliteration": "bdeena"
+						},
+						{
+							"arabic": "بالعاصمة،",
+							"english": "in the capital,",
+							"transliteration": "bil-3aasima,"
+						},
+						{
+							"arabic": "بجولة",
+							"english": "with a tour",
+							"transliteration": "b-jawla"
+						},
+						{
+							"arabic": "ببغداد",
+							"english": "in Baghdad",
+							"transliteration": "b-baghdaad"
+						},
+						{
+							"arabic": "القديمة",
+							"english": "old",
+							"transliteration": "il-gadeema"
+						},
+						{
+							"arabic": "وشارع",
+							"english": "and the street of",
+							"transliteration": "w-shaari3"
+						},
+						{
+							"arabic": "المتنبي.",
+							"english": "Al-Mutanabbi.",
+							"transliteration": "il-mutanabbi."
+						}
+					]
+				},
+				{
+					"arabic": "بعدين نزلنا للجنوب حتى نشوف بابل وزقورة أور.",
+					"arabicTashkeel": "بَعدين نِزَلنا للجَنوب حَتّى نْشوف بابِل وزَقّورة أور.",
+					"english": "Then we went south to see Babylon and the Ziggurat of Ur.",
+					"transliteration": "ba3deen nizalna lij-janoob 7atta nshoof baabil w-zaggoorat oor.",
+					"wordAlignments": [
+						{
+							"arabic": "بعدين",
+							"english": "Then",
+							"transliteration": "ba3deen"
+						},
+						{
+							"arabic": "نزلنا",
+							"english": "we went down",
+							"transliteration": "nizalna"
+						},
+						{
+							"arabic": "للجنوب",
+							"english": "to the south",
+							"transliteration": "lij-janoob"
+						},
+						{
+							"arabic": "حتى",
+							"english": "to",
+							"transliteration": "7atta"
+						},
+						{
+							"arabic": "نشوف",
+							"english": "see",
+							"transliteration": "nshoof"
+						},
+						{
+							"arabic": "بابل",
+							"english": "Babylon",
+							"transliteration": "baabil"
+						},
+						{
+							"arabic": "وزقورة",
+							"english": "and the ziggurat of",
+							"transliteration": "w-zaggoorat"
+						},
+						{
+							"arabic": "أور.",
+							"english": "Ur.",
+							"transliteration": "oor."
+						}
+					]
+				},
+				{
+					"arabic": "قال: هذا مهد الحضارة، أحس بالتاريخ هنا.",
+					"arabicTashkeel": "قال: هَذا مَهد الحَضارة، أحِس بالتّاريخ هْنا.",
+					"english": "He said: This is the cradle of civilization; I can feel the history here.",
+					"transliteration": "gaal: haatha mahd il-7adhaara, a7iss bit-taareekh hnaa.",
+					"wordAlignments": [
+						{
+							"arabic": "قال:",
+							"english": "He said:",
+							"transliteration": "gaal:"
+						},
+						{
+							"arabic": "هذا",
+							"english": "this is",
+							"transliteration": "haatha"
+						},
+						{
+							"arabic": "مهد",
+							"english": "the cradle of",
+							"transliteration": "mahd"
+						},
+						{
+							"arabic": "الحضارة،",
+							"english": "civilization,",
+							"transliteration": "il-7adhaara,"
+						},
+						{
+							"arabic": "أحس",
+							"english": "I feel",
+							"transliteration": "a7iss"
+						},
+						{
+							"arabic": "بالتاريخ",
+							"english": "the history",
+							"transliteration": "bit-taareekh"
+						},
+						{
+							"arabic": "هنا.",
+							"english": "here.",
+							"transliteration": "hnaa."
+						}
+					]
+				},
+				{
+					"arabic": "بالأهوار، عائلة عزمتنا لبيتهم القصب وسوتلنا شاي وسمك.",
+					"arabicTashkeel": "بالأهوار، عائلة عَزّمتنا لبيتهُم القَصَب وسَوّتلنا شاي وسِمَك.",
+					"english": "In the Marshes, a family invited us into their reed house and made us tea and fish.",
+					"transliteration": "bil-ahwaar, 3aa2ila 3azzamatna l-beethum il-gasab w-sawwatilna chaay w-simach.",
+					"wordAlignments": [
+						{
+							"arabic": "بالأهوار،",
+							"english": "In the Marshes,",
+							"transliteration": "bil-ahwaar,"
+						},
+						{
+							"arabic": "عائلة",
+							"english": "a family",
+							"transliteration": "3aa2ila"
+						},
+						{
+							"arabic": "عزمتنا",
+							"english": "invited us",
+							"transliteration": "3azzamatna"
+						},
+						{
+							"arabic": "لبيتهم",
+							"english": "to their house",
+							"transliteration": "l-beethum"
+						},
+						{
+							"arabic": "القصب",
+							"english": "of reed",
+							"transliteration": "il-gasab"
+						},
+						{
+							"arabic": "وسوتلنا",
+							"english": "and made for us",
+							"transliteration": "w-sawwatilna"
+						},
+						{
+							"arabic": "شاي",
+							"english": "tea",
+							"transliteration": "chaay"
+						},
+						{
+							"arabic": "وسمك.",
+							"english": "and fish.",
+							"transliteration": "w-simach."
+						}
+					]
+				},
+				{
+					"arabic": "إنطباعه؟ العراقيين أكثر ناس مضيافين شافهم بحياته.",
+					"arabicTashkeel": "إنطِباعَه؟ العِراقيين أكثَر ناس مِضيافين شافهُم بحَياتَه.",
+					"english": "His impression? Iraqis are the most hospitable people he has ever met.",
+					"transliteration": "intibaa3a? il-3iraaqiyyeen akthar naas midhyaafeen shaafhum b-7ayaata.",
+					"wordAlignments": [
+						{
+							"arabic": "إنطباعه؟",
+							"english": "His impression?",
+							"transliteration": "intibaa3a?"
+						},
+						{
+							"arabic": "العراقيين",
+							"english": "Iraqis are",
+							"transliteration": "il-3iraaqiyyeen"
+						},
+						{
+							"arabic": "أكثر",
+							"english": "the most",
+							"transliteration": "akthar"
+						},
+						{
+							"arabic": "ناس",
+							"english": "people",
+							"transliteration": "naas"
+						},
+						{
+							"arabic": "مضيافين",
+							"english": "hospitable",
+							"transliteration": "midhyaafeen"
+						},
+						{
+							"arabic": "شافهم",
+							"english": "he has seen",
+							"transliteration": "shaafhum"
+						},
+						{
+							"arabic": "بحياته.",
+							"english": "in his life.",
+							"transliteration": "b-7ayaata."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "The Weather and the People",
+			"sentences": [
+				{
+					"arabic": "الجو بالعراق حار بالصيف، بس الربيع والخريف حلوين.",
+					"arabicTashkeel": "الجَو بالعِراق حار بالصّيف، بَس الرَّبيع والخَريف حِلوين.",
+					"english": "The weather in Iraq is hot in summer, but spring and autumn are beautiful.",
+					"transliteration": "ij-jaw bil-3iraaq 7aarr bis-seef, bas ir-rabee3 w-il-khareef 7ilween.",
+					"wordAlignments": [
+						{
+							"arabic": "الجو",
+							"english": "The weather",
+							"transliteration": "ij-jaw"
+						},
+						{
+							"arabic": "بالعراق",
+							"english": "in Iraq is",
+							"transliteration": "bil-3iraaq"
+						},
+						{
+							"arabic": "حار",
+							"english": "hot",
+							"transliteration": "7aarr"
+						},
+						{
+							"arabic": "بالصيف،",
+							"english": "in summer,",
+							"transliteration": "bis-seef,"
+						},
+						{
+							"arabic": "بس",
+							"english": "but",
+							"transliteration": "bas"
+						},
+						{
+							"arabic": "الربيع",
+							"english": "spring",
+							"transliteration": "ir-rabee3"
+						},
+						{
+							"arabic": "والخريف",
+							"english": "and autumn are",
+							"transliteration": "w-il-khareef"
+						},
+						{
+							"arabic": "حلوين.",
+							"english": "beautiful.",
+							"transliteration": "7ilween."
+						}
+					]
+				},
+				{
+					"arabic": "أحسن وكت للزيارة من تشرين لنيسان.",
+					"arabicTashkeel": "أحسَن وَكِت للزِّيارة مِن تِشرين لنيسان.",
+					"english": "The best time to visit is from October to April.",
+					"transliteration": "a7san wakit liz-ziyaara min tishreen l-neesaan.",
+					"wordAlignments": [
+						{
+							"arabic": "أحسن",
+							"english": "The best",
+							"transliteration": "a7san"
+						},
+						{
+							"arabic": "وكت",
+							"english": "time",
+							"transliteration": "wakit"
+						},
+						{
+							"arabic": "للزيارة",
+							"english": "for visiting is",
+							"transliteration": "liz-ziyaara"
+						},
+						{
+							"arabic": "من",
+							"english": "from",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "تشرين",
+							"english": "October",
+							"transliteration": "tishreen"
+						},
+						{
+							"arabic": "لنيسان.",
+							"english": "to April.",
+							"transliteration": "l-neesaan."
+						}
+					]
+				},
+				{
+					"arabic": "وين ما تروح، راح تلقى كرم وترحيب حار.",
+					"arabicTashkeel": "وين ما تْروح، راح تِلقى كَرَم وتَرحيب حار.",
+					"english": "Wherever you go, you will find generosity and a warm welcome.",
+					"transliteration": "ween ma trooh, raa7 tilga karam w-tar7eeb 7aarr.",
+					"wordAlignments": [
+						{
+							"arabic": "وين",
+							"english": "Where",
+							"transliteration": "ween"
+						},
+						{
+							"arabic": "ما",
+							"english": "ever",
+							"transliteration": "ma"
+						},
+						{
+							"arabic": "تروح،",
+							"english": "you go,",
+							"transliteration": "trooh,"
+						},
+						{
+							"arabic": "راح",
+							"english": "you will",
+							"transliteration": "raa7"
+						},
+						{
+							"arabic": "تلقى",
+							"english": "find",
+							"transliteration": "tilga"
+						},
+						{
+							"arabic": "كرم",
+							"english": "generosity",
+							"transliteration": "karam"
+						},
+						{
+							"arabic": "وترحيب",
+							"english": "and a welcome",
+							"transliteration": "w-tar7eeb"
+						},
+						{
+							"arabic": "حار.",
+							"english": "warm.",
+							"transliteration": "7aarr."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is helping a foreign friend plan their first visit to Iraq and asks an Iraqi travel guide for advice.",
+		"studentRole": "Someone planning a trip, learning Iraqi Arabic.",
+		"otherRole": "An enthusiastic Iraqi tour guide.",
+		"goalEnglish": "Ask which cities and landmarks to visit (Baghdad, Babylon, Ur, the Marshes, the shrines), when the weather is best, and what visitors should know about Iraqi culture and hospitality.",
+		"targetWords": [
+			"Landmark",
+			"Capital",
+			"Ancient / archaeological",
+			"The Marshes",
+			"Civilization",
+			"Tour",
+			"Hospitable",
+			"Culture"
+		]
+	}
+}
