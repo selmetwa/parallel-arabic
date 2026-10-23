@@ -1,0 +1,1765 @@
+{
+	"vocab": [
+		{
+			"arabic": "مزرعة",
+			"arabicTashkeel": "مَزرعة",
+			"english": "Farm",
+			"transliteration": "mazra3a",
+			"wordAlignments": [
+				{
+					"arabic": "مزرعة",
+					"english": "Farm",
+					"transliteration": "mazra3a"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "مزارع",
+			"arabicTashkeel": "مِزارِع",
+			"english": "Farmer",
+			"transliteration": "mizaari3",
+			"wordAlignments": [
+				{
+					"arabic": "مزارع",
+					"english": "Farmer",
+					"transliteration": "mizaari3"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "بقرة",
+			"arabicTashkeel": "بَقرة",
+			"english": "Cow",
+			"transliteration": "bagra",
+			"wordAlignments": [
+				{
+					"arabic": "بقرة",
+					"english": "Cow",
+					"transliteration": "bagra"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "غنم",
+			"arabicTashkeel": "غَنَم",
+			"english": "Sheep",
+			"transliteration": "ghanam",
+			"wordAlignments": [
+				{
+					"arabic": "غنم",
+					"english": "Sheep",
+					"transliteration": "ghanam"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "عنز",
+			"arabicTashkeel": "عَنز",
+			"english": "Goat",
+			"transliteration": "3anz",
+			"wordAlignments": [
+				{
+					"arabic": "عنز",
+					"english": "Goat",
+					"transliteration": "3anz"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "دجاجة",
+			"arabicTashkeel": "دِجاجة",
+			"english": "Hen",
+			"transliteration": "diyaaya",
+			"wordAlignments": [
+				{
+					"arabic": "دجاجة",
+					"english": "Hen",
+					"transliteration": "diyaaya"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "ديك",
+			"arabicTashkeel": "ديك",
+			"english": "Rooster",
+			"transliteration": "deech",
+			"wordAlignments": [
+				{
+					"arabic": "ديك",
+					"english": "Rooster",
+					"transliteration": "deech"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "حصان",
+			"arabicTashkeel": "حْصان",
+			"english": "Horse",
+			"transliteration": "7saan",
+			"wordAlignments": [
+				{
+					"arabic": "حصان",
+					"english": "Horse",
+					"transliteration": "7saan"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "حمار",
+			"arabicTashkeel": "حْمار",
+			"english": "Donkey",
+			"transliteration": "7maar",
+			"wordAlignments": [
+				{
+					"arabic": "حمار",
+					"english": "Donkey",
+					"transliteration": "7maar"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "كلب",
+			"arabicTashkeel": "كَلب",
+			"english": "Dog",
+			"transliteration": "chalb",
+			"wordAlignments": [
+				{
+					"arabic": "كلب",
+					"english": "Dog",
+					"transliteration": "chalb"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "بطة",
+			"arabicTashkeel": "بَطّة",
+			"english": "Duck",
+			"transliteration": "batta",
+			"wordAlignments": [
+				{
+					"arabic": "بطة",
+					"english": "Duck",
+					"transliteration": "batta"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "فلج",
+			"arabicTashkeel": "فَلَج",
+			"english": "Falaj (water channel)",
+			"transliteration": "falaj",
+			"wordAlignments": [
+				{
+					"arabic": "فلج",
+					"english": "Falaj",
+					"transliteration": "falaj"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "نخل",
+			"arabicTashkeel": "نَخل",
+			"english": "Palm trees",
+			"transliteration": "nakhl",
+			"wordAlignments": [
+				{
+					"arabic": "نخل",
+					"english": "Palm trees",
+					"transliteration": "nakhl"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "تمر",
+			"arabicTashkeel": "تَمر",
+			"english": "Dates",
+			"transliteration": "tamr",
+			"wordAlignments": [
+				{
+					"arabic": "تمر",
+					"english": "Dates",
+					"transliteration": "tamr"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "يأكل",
+			"arabicTashkeel": "يْأكِّل",
+			"english": "He feeds",
+			"transliteration": "y2akkil",
+			"wordAlignments": [
+				{
+					"arabic": "يأكل",
+					"english": "He feeds",
+					"transliteration": "y2akkil"
+				}
+			],
+			"partOfSpeech": "verb"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "جدي عنده مزرعة.",
+			"arabicTashkeel": "جَدّي عِندَه مَزرعة.",
+			"english": "My grandfather has a farm.",
+			"transliteration": "yaddi 3inda mazra3a.",
+			"wordAlignments": [
+				{
+					"arabic": "جدي",
+					"english": "My grandfather",
+					"transliteration": "yaddi"
+				},
+				{
+					"arabic": "عنده",
+					"english": "has",
+					"transliteration": "3inda"
+				},
+				{
+					"arabic": "مزرعة.",
+					"english": "a farm.",
+					"transliteration": "mazra3a."
+				}
+			],
+			"targetWords": [
+				"Farm"
+			]
+		},
+		{
+			"arabic": "المزارع يشتغل بدري.",
+			"arabicTashkeel": "المِزارِع يِشتِغِل بَدري.",
+			"english": "The farmer works early.",
+			"transliteration": "il-mizaari3 yishtighil badri.",
+			"wordAlignments": [
+				{
+					"arabic": "المزارع",
+					"english": "The farmer",
+					"transliteration": "il-mizaari3"
+				},
+				{
+					"arabic": "يشتغل",
+					"english": "works",
+					"transliteration": "yishtighil"
+				},
+				{
+					"arabic": "بدري.",
+					"english": "early.",
+					"transliteration": "badri."
+				}
+			],
+			"targetWords": [
+				"Farmer"
+			]
+		},
+		{
+			"arabic": "البقرة تعطي حليب.",
+			"arabicTashkeel": "البَقرة تعَطي حَليب.",
+			"english": "The cow gives milk.",
+			"transliteration": "il-bagra t3ati 7aleeb.",
+			"wordAlignments": [
+				{
+					"arabic": "البقرة",
+					"english": "The cow",
+					"transliteration": "il-bagra"
+				},
+				{
+					"arabic": "تعطي",
+					"english": "gives",
+					"transliteration": "t3ati"
+				},
+				{
+					"arabic": "حليب.",
+					"english": "milk.",
+					"transliteration": "7aleeb."
+				}
+			],
+			"targetWords": [
+				"Cow"
+			]
+		},
+		{
+			"arabic": "الغنم بالمزرعة.",
+			"arabicTashkeel": "الغَنَم بالمَزرعة.",
+			"english": "The sheep are in the farm.",
+			"transliteration": "il-ghanam bil-mazra3a.",
+			"wordAlignments": [
+				{
+					"arabic": "الغنم",
+					"english": "The sheep are",
+					"transliteration": "il-ghanam"
+				},
+				{
+					"arabic": "بالمزرعة.",
+					"english": "in the farm.",
+					"transliteration": "bil-mazra3a."
+				}
+			],
+			"targetWords": [
+				"Sheep"
+			]
+		},
+		{
+			"arabic": "العنز تاكل كل شي.",
+			"arabicTashkeel": "العَنز تاكِل كِل شي.",
+			"english": "The goat eats everything.",
+			"transliteration": "il-3anz taakil kil shay.",
+			"wordAlignments": [
+				{
+					"arabic": "العنز",
+					"english": "The goat",
+					"transliteration": "il-3anz"
+				},
+				{
+					"arabic": "تاكل",
+					"english": "eats",
+					"transliteration": "taakil"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kil"
+				},
+				{
+					"arabic": "شي.",
+					"english": "thing.",
+					"transliteration": "shay."
+				}
+			],
+			"targetWords": [
+				"Goat"
+			]
+		},
+		{
+			"arabic": "الدجاجة تبيض.",
+			"arabicTashkeel": "الدِّجاجة تبيض.",
+			"english": "The hen lays eggs.",
+			"transliteration": "id-diyaaya tbeedh.",
+			"wordAlignments": [
+				{
+					"arabic": "الدجاجة",
+					"english": "The hen",
+					"transliteration": "id-diyaaya"
+				},
+				{
+					"arabic": "تبيض.",
+					"english": "lays eggs.",
+					"transliteration": "tbeedh."
+				}
+			],
+			"targetWords": [
+				"Hen"
+			]
+		},
+		{
+			"arabic": "الديك يقومنا بدري.",
+			"arabicTashkeel": "الديك يْقَوِّمنا بَدري.",
+			"english": "The rooster wakes us up early.",
+			"transliteration": "id-deech ygawwimna badri.",
+			"wordAlignments": [
+				{
+					"arabic": "الديك",
+					"english": "The rooster",
+					"transliteration": "id-deech"
+				},
+				{
+					"arabic": "يقومنا",
+					"english": "wakes us up",
+					"transliteration": "ygawwimna"
+				},
+				{
+					"arabic": "بدري.",
+					"english": "early.",
+					"transliteration": "badri."
+				}
+			],
+			"targetWords": [
+				"Rooster"
+			]
+		},
+		{
+			"arabic": "الحصان سريع.",
+			"arabicTashkeel": "الحْصان سَريع.",
+			"english": "The horse is fast.",
+			"transliteration": "il-7saan saree3.",
+			"wordAlignments": [
+				{
+					"arabic": "الحصان",
+					"english": "The horse is",
+					"transliteration": "il-7saan"
+				},
+				{
+					"arabic": "سريع.",
+					"english": "fast.",
+					"transliteration": "saree3."
+				}
+			],
+			"targetWords": [
+				"Horse"
+			]
+		},
+		{
+			"arabic": "الحمار يشيل التمر.",
+			"arabicTashkeel": "الحْمار يِشيل التَّمر.",
+			"english": "The donkey carries the dates.",
+			"transliteration": "il-7maar yisheel it-tamr.",
+			"wordAlignments": [
+				{
+					"arabic": "الحمار",
+					"english": "The donkey",
+					"transliteration": "il-7maar"
+				},
+				{
+					"arabic": "يشيل",
+					"english": "carries",
+					"transliteration": "yisheel"
+				},
+				{
+					"arabic": "التمر.",
+					"english": "the dates.",
+					"transliteration": "it-tamr."
+				}
+			],
+			"targetWords": [
+				"Donkey",
+				"Dates"
+			]
+		},
+		{
+			"arabic": "الكلب يحرس المزرعة.",
+			"arabicTashkeel": "الكَلب يِحرِس المَزرعة.",
+			"english": "The dog guards the farm.",
+			"transliteration": "il-chalb yi7ris il-mazra3a.",
+			"wordAlignments": [
+				{
+					"arabic": "الكلب",
+					"english": "The dog",
+					"transliteration": "il-chalb"
+				},
+				{
+					"arabic": "يحرس",
+					"english": "guards",
+					"transliteration": "yi7ris"
+				},
+				{
+					"arabic": "المزرعة.",
+					"english": "the farm.",
+					"transliteration": "il-mazra3a."
+				}
+			],
+			"targetWords": [
+				"Dog",
+				"Farm"
+			]
+		},
+		{
+			"arabic": "البطة تسبح بالبركة.",
+			"arabicTashkeel": "البَطّة تِسبَح بالبِركة.",
+			"english": "The duck swims in the pond.",
+			"transliteration": "il-batta tisba7 bil-birka.",
+			"wordAlignments": [
+				{
+					"arabic": "البطة",
+					"english": "The duck",
+					"transliteration": "il-batta"
+				},
+				{
+					"arabic": "تسبح",
+					"english": "swims",
+					"transliteration": "tisba7"
+				},
+				{
+					"arabic": "بالبركة.",
+					"english": "in the pond.",
+					"transliteration": "bil-birka."
+				}
+			],
+			"targetWords": [
+				"Duck"
+			]
+		},
+		{
+			"arabic": "الماي يجي من الفلج.",
+			"arabicTashkeel": "الماي يِجي مِن الفَلَج.",
+			"english": "The water comes from the falaj.",
+			"transliteration": "il-maay yiyi min il-falaj.",
+			"wordAlignments": [
+				{
+					"arabic": "الماي",
+					"english": "The water",
+					"transliteration": "il-maay"
+				},
+				{
+					"arabic": "يجي",
+					"english": "comes",
+					"transliteration": "yiyi"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الفلج.",
+					"english": "the falaj.",
+					"transliteration": "il-falaj."
+				}
+			],
+			"targetWords": [
+				"Falaj (water channel)"
+			]
+		},
+		{
+			"arabic": "العين مشهورة بالنخل.",
+			"arabicTashkeel": "العين مَشهورة بالنَّخل.",
+			"english": "Al Ain is famous for its palm trees.",
+			"transliteration": "il-3een mash-hoora bin-nakhl.",
+			"wordAlignments": [
+				{
+					"arabic": "العين",
+					"english": "Al Ain is",
+					"transliteration": "il-3een"
+				},
+				{
+					"arabic": "مشهورة",
+					"english": "famous",
+					"transliteration": "mash-hoora"
+				},
+				{
+					"arabic": "بالنخل.",
+					"english": "for palm trees.",
+					"transliteration": "bin-nakhl."
+				}
+			],
+			"targetWords": [
+				"Palm trees"
+			]
+		},
+		{
+			"arabic": "التمر الإماراتي لذيذ.",
+			"arabicTashkeel": "التَّمر الإماراتي لَذيذ.",
+			"english": "Emirati dates are delicious.",
+			"transliteration": "it-tamr il-imaaraati ladheedh.",
+			"wordAlignments": [
+				{
+					"arabic": "التمر",
+					"english": "Dates",
+					"transliteration": "it-tamr"
+				},
+				{
+					"arabic": "الإماراتي",
+					"english": "Emirati are",
+					"transliteration": "il-imaaraati"
+				},
+				{
+					"arabic": "لذيذ.",
+					"english": "delicious.",
+					"transliteration": "ladheedh."
+				}
+			],
+			"targetWords": [
+				"Dates"
+			]
+		},
+		{
+			"arabic": "أكل الدجاج.",
+			"arabicTashkeel": "أكِّل الدِّجاج.",
+			"english": "Feed the hens.",
+			"transliteration": "akkil id-diyaay.",
+			"wordAlignments": [
+				{
+					"arabic": "أكل",
+					"english": "Feed",
+					"transliteration": "akkil"
+				},
+				{
+					"arabic": "الدجاج.",
+					"english": "the hens.",
+					"transliteration": "id-diyaay."
+				}
+			],
+			"targetWords": [
+				"He feeds",
+				"Hen"
+			]
+		},
+		{
+			"arabic": "المزرعة بعيدة عن المدينة.",
+			"arabicTashkeel": "المَزرعة بَعيدة عَن المَدينة.",
+			"english": "The farm is far from the city.",
+			"transliteration": "il-mazra3a ba3eeda 3an il-madeena.",
+			"wordAlignments": [
+				{
+					"arabic": "المزرعة",
+					"english": "The farm is",
+					"transliteration": "il-mazra3a"
+				},
+				{
+					"arabic": "بعيدة",
+					"english": "far",
+					"transliteration": "ba3eeda"
+				},
+				{
+					"arabic": "عن",
+					"english": "from",
+					"transliteration": "3an"
+				},
+				{
+					"arabic": "المدينة.",
+					"english": "the city.",
+					"transliteration": "il-madeena."
+				}
+			],
+			"targetWords": [
+				"Farm"
+			]
+		},
+		{
+			"arabic": "المزارع عنده حيوانات وايد.",
+			"arabicTashkeel": "المِزارِع عِندَه حَيوانات وايد.",
+			"english": "The farmer has many animals.",
+			"transliteration": "il-mizaari3 3inda 7aywaanaat waayid.",
+			"wordAlignments": [
+				{
+					"arabic": "المزارع",
+					"english": "The farmer",
+					"transliteration": "il-mizaari3"
+				},
+				{
+					"arabic": "عنده",
+					"english": "has",
+					"transliteration": "3inda"
+				},
+				{
+					"arabic": "حيوانات",
+					"english": "animals",
+					"transliteration": "7aywaanaat"
+				},
+				{
+					"arabic": "وايد.",
+					"english": "many.",
+					"transliteration": "waayid."
+				}
+			],
+			"targetWords": [
+				"Farmer"
+			]
+		},
+		{
+			"arabic": "عندنا بقرتين.",
+			"arabicTashkeel": "عِندنا بَقرتين.",
+			"english": "We have two cows.",
+			"transliteration": "3indana bagarteen.",
+			"wordAlignments": [
+				{
+					"arabic": "عندنا",
+					"english": "We have",
+					"transliteration": "3indana"
+				},
+				{
+					"arabic": "بقرتين.",
+					"english": "two cows.",
+					"transliteration": "bagarteen."
+				}
+			],
+			"targetWords": [
+				"Cow"
+			]
+		},
+		{
+			"arabic": "الغنم تاكل عشب.",
+			"arabicTashkeel": "الغَنَم تاكِل عِشب.",
+			"english": "The sheep eat grass.",
+			"transliteration": "il-ghanam taakil 3ishb.",
+			"wordAlignments": [
+				{
+					"arabic": "الغنم",
+					"english": "The sheep",
+					"transliteration": "il-ghanam"
+				},
+				{
+					"arabic": "تاكل",
+					"english": "eat",
+					"transliteration": "taakil"
+				},
+				{
+					"arabic": "عشب.",
+					"english": "grass.",
+					"transliteration": "3ishb."
+				}
+			],
+			"targetWords": [
+				"Sheep"
+			]
+		},
+		{
+			"arabic": "حليب العنز.",
+			"arabicTashkeel": "حَليب العَنز.",
+			"english": "Goat's milk.",
+			"transliteration": "7aleeb il-3anz.",
+			"wordAlignments": [
+				{
+					"arabic": "حليب",
+					"english": "Milk of",
+					"transliteration": "7aleeb"
+				},
+				{
+					"arabic": "العنز.",
+					"english": "the goat.",
+					"transliteration": "il-3anz."
+				}
+			],
+			"targetWords": [
+				"Goat"
+			]
+		},
+		{
+			"arabic": "بيض طازج من الدجاجة.",
+			"arabicTashkeel": "بيض طازَج مِن الدِّجاجة.",
+			"english": "Fresh eggs from the hen.",
+			"transliteration": "beedh taazaj min id-diyaaya.",
+			"wordAlignments": [
+				{
+					"arabic": "بيض",
+					"english": "Eggs",
+					"transliteration": "beedh"
+				},
+				{
+					"arabic": "طازج",
+					"english": "fresh",
+					"transliteration": "taazaj"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الدجاجة.",
+					"english": "the hen.",
+					"transliteration": "id-diyaaya."
+				}
+			],
+			"targetWords": [
+				"Hen"
+			]
+		},
+		{
+			"arabic": "الديك يأذن الصبح.",
+			"arabicTashkeel": "الديك يْأذِّن الصُّبح.",
+			"english": "The rooster crows in the morning.",
+			"transliteration": "id-deech y2adhdhin is-sub7.",
+			"wordAlignments": [
+				{
+					"arabic": "الديك",
+					"english": "The rooster",
+					"transliteration": "id-deech"
+				},
+				{
+					"arabic": "يأذن",
+					"english": "crows",
+					"transliteration": "y2adhdhin"
+				},
+				{
+					"arabic": "الصبح.",
+					"english": "in the morning.",
+					"transliteration": "is-sub7."
+				}
+			],
+			"targetWords": [
+				"Rooster"
+			]
+		},
+		{
+			"arabic": "ركبت الحصان.",
+			"arabicTashkeel": "رِكَبت الحْصان.",
+			"english": "I rode the horse.",
+			"transliteration": "rikabt il-7saan.",
+			"wordAlignments": [
+				{
+					"arabic": "ركبت",
+					"english": "I rode",
+					"transliteration": "rikabt"
+				},
+				{
+					"arabic": "الحصان.",
+					"english": "the horse.",
+					"transliteration": "il-7saan."
+				}
+			],
+			"targetWords": [
+				"Horse"
+			]
+		},
+		{
+			"arabic": "الحمار تعبان.",
+			"arabicTashkeel": "الحْمار تَعبان.",
+			"english": "The donkey is tired.",
+			"transliteration": "il-7maar ta3baan.",
+			"wordAlignments": [
+				{
+					"arabic": "الحمار",
+					"english": "The donkey is",
+					"transliteration": "il-7maar"
+				},
+				{
+					"arabic": "تعبان.",
+					"english": "tired.",
+					"transliteration": "ta3baan."
+				}
+			],
+			"targetWords": [
+				"Donkey"
+			]
+		},
+		{
+			"arabic": "الكلب ينبح.",
+			"arabicTashkeel": "الكَلب يْنَبِّح.",
+			"english": "The dog is barking.",
+			"transliteration": "il-chalb ynabbi7.",
+			"wordAlignments": [
+				{
+					"arabic": "الكلب",
+					"english": "The dog is",
+					"transliteration": "il-chalb"
+				},
+				{
+					"arabic": "ينبح.",
+					"english": "barking.",
+					"transliteration": "ynabbi7."
+				}
+			],
+			"targetWords": [
+				"Dog"
+			]
+		},
+		{
+			"arabic": "البطة وعيالها.",
+			"arabicTashkeel": "البَطّة وعْيالها.",
+			"english": "The duck and her chicks.",
+			"transliteration": "il-batta w-3yaalha.",
+			"wordAlignments": [
+				{
+					"arabic": "البطة",
+					"english": "The duck",
+					"transliteration": "il-batta"
+				},
+				{
+					"arabic": "وعيالها.",
+					"english": "and her chicks.",
+					"transliteration": "w-3yaalha."
+				}
+			],
+			"targetWords": [
+				"Duck"
+			]
+		},
+		{
+			"arabic": "الفلج قديم وايد.",
+			"arabicTashkeel": "الفَلَج قَديم وايد.",
+			"english": "The falaj is very old.",
+			"transliteration": "il-falaj gadeem waayid.",
+			"wordAlignments": [
+				{
+					"arabic": "الفلج",
+					"english": "The falaj is",
+					"transliteration": "il-falaj"
+				},
+				{
+					"arabic": "قديم",
+					"english": "old",
+					"transliteration": "gadeem"
+				},
+				{
+					"arabic": "وايد.",
+					"english": "very.",
+					"transliteration": "waayid."
+				}
+			],
+			"targetWords": [
+				"Falaj (water channel)"
+			]
+		},
+		{
+			"arabic": "النخل طويل.",
+			"arabicTashkeel": "النَّخل طْويل.",
+			"english": "The palm trees are tall.",
+			"transliteration": "in-nakhl tweel.",
+			"wordAlignments": [
+				{
+					"arabic": "النخل",
+					"english": "The palm trees are",
+					"transliteration": "in-nakhl"
+				},
+				{
+					"arabic": "طويل.",
+					"english": "tall.",
+					"transliteration": "tweel."
+				}
+			],
+			"targetWords": [
+				"Palm trees"
+			]
+		},
+		{
+			"arabic": "تمر ويا قهوة.",
+			"arabicTashkeel": "تَمر وِيّا قَهوة.",
+			"english": "Dates with coffee.",
+			"transliteration": "tamr wiyya gahwa.",
+			"wordAlignments": [
+				{
+					"arabic": "تمر",
+					"english": "Dates",
+					"transliteration": "tamr"
+				},
+				{
+					"arabic": "ويا",
+					"english": "with",
+					"transliteration": "wiyya"
+				},
+				{
+					"arabic": "قهوة.",
+					"english": "coffee.",
+					"transliteration": "gahwa."
+				}
+			],
+			"targetWords": [
+				"Dates"
+			]
+		},
+		{
+			"arabic": "جدتي تأكل البط.",
+			"arabicTashkeel": "جَدّتي تْأكِّل البَط.",
+			"english": "My grandmother feeds the ducks.",
+			"transliteration": "yaddati t2akkil il-batt.",
+			"wordAlignments": [
+				{
+					"arabic": "جدتي",
+					"english": "My grandmother",
+					"transliteration": "yaddati"
+				},
+				{
+					"arabic": "تأكل",
+					"english": "feeds",
+					"transliteration": "t2akkil"
+				},
+				{
+					"arabic": "البط.",
+					"english": "the ducks.",
+					"transliteration": "il-batt."
+				}
+			],
+			"targetWords": [
+				"He feeds",
+				"Duck"
+			]
+		},
+		{
+			"arabic": "نروح المزرعة بالشتا.",
+			"arabicTashkeel": "نْروح المَزرعة بالشِّتا.",
+			"english": "We go to the farm in winter.",
+			"transliteration": "nrooh il-mazra3a bish-shita.",
+			"wordAlignments": [
+				{
+					"arabic": "نروح",
+					"english": "We go",
+					"transliteration": "nrooh"
+				},
+				{
+					"arabic": "المزرعة",
+					"english": "to the farm",
+					"transliteration": "il-mazra3a"
+				},
+				{
+					"arabic": "بالشتا.",
+					"english": "in winter.",
+					"transliteration": "bish-shita."
+				}
+			],
+			"targetWords": [
+				"Farm"
+			]
+		},
+		{
+			"arabic": "المزارع يزرع نخل.",
+			"arabicTashkeel": "المِزارِع يِزرَع نَخل.",
+			"english": "The farmer plants palm trees.",
+			"transliteration": "il-mizaari3 yizra3 nakhl.",
+			"wordAlignments": [
+				{
+					"arabic": "المزارع",
+					"english": "The farmer",
+					"transliteration": "il-mizaari3"
+				},
+				{
+					"arabic": "يزرع",
+					"english": "plants",
+					"transliteration": "yizra3"
+				},
+				{
+					"arabic": "نخل.",
+					"english": "palm trees.",
+					"transliteration": "nakhl."
+				}
+			],
+			"targetWords": [
+				"Farmer",
+				"Palm trees"
+			]
+		},
+		{
+			"arabic": "البقرة سودا وبيضا.",
+			"arabicTashkeel": "البَقرة سودا وبيضا.",
+			"english": "The cow is black and white.",
+			"transliteration": "il-bagra sooda w-beedha.",
+			"wordAlignments": [
+				{
+					"arabic": "البقرة",
+					"english": "The cow is",
+					"transliteration": "il-bagra"
+				},
+				{
+					"arabic": "سودا",
+					"english": "black",
+					"transliteration": "sooda"
+				},
+				{
+					"arabic": "وبيضا.",
+					"english": "and white.",
+					"transliteration": "w-beedha."
+				}
+			],
+			"targetWords": [
+				"Cow"
+			]
+		},
+		{
+			"arabic": "غنم وايد.",
+			"arabicTashkeel": "غَنَم وايد.",
+			"english": "A lot of sheep.",
+			"transliteration": "ghanam waayid.",
+			"wordAlignments": [
+				{
+					"arabic": "غنم",
+					"english": "Sheep",
+					"transliteration": "ghanam"
+				},
+				{
+					"arabic": "وايد.",
+					"english": "a lot.",
+					"transliteration": "waayid."
+				}
+			],
+			"targetWords": [
+				"Sheep"
+			]
+		},
+		{
+			"arabic": "العنز فوق السطح!",
+			"arabicTashkeel": "العَنز فوق السَّطح!",
+			"english": "The goat is on the roof!",
+			"transliteration": "il-3anz foog is-sat7!",
+			"wordAlignments": [
+				{
+					"arabic": "العنز",
+					"english": "The goat is",
+					"transliteration": "il-3anz"
+				},
+				{
+					"arabic": "فوق",
+					"english": "on",
+					"transliteration": "foog"
+				},
+				{
+					"arabic": "السطح!",
+					"english": "the roof!",
+					"transliteration": "is-sat7!"
+				}
+			],
+			"targetWords": [
+				"Goat"
+			]
+		},
+		{
+			"arabic": "الدجاج بالقن.",
+			"arabicTashkeel": "الدِّجاج بالقِن.",
+			"english": "The hens are in the coop.",
+			"transliteration": "id-diyaay bil-ginn.",
+			"wordAlignments": [
+				{
+					"arabic": "الدجاج",
+					"english": "The hens are",
+					"transliteration": "id-diyaay"
+				},
+				{
+					"arabic": "بالقن.",
+					"english": "in the coop.",
+					"transliteration": "bil-ginn."
+				}
+			],
+			"targetWords": [
+				"Hen"
+			]
+		},
+		{
+			"arabic": "الديك أحمر.",
+			"arabicTashkeel": "الديك أحمَر.",
+			"english": "The rooster is red.",
+			"transliteration": "id-deech a7mar.",
+			"wordAlignments": [
+				{
+					"arabic": "الديك",
+					"english": "The rooster is",
+					"transliteration": "id-deech"
+				},
+				{
+					"arabic": "أحمر.",
+					"english": "red.",
+					"transliteration": "a7mar."
+				}
+			],
+			"targetWords": [
+				"Rooster"
+			]
+		},
+		{
+			"arabic": "حصان عربي.",
+			"arabicTashkeel": "حْصان عَرَبي.",
+			"english": "An Arabian horse.",
+			"transliteration": "7saan 3arabi.",
+			"wordAlignments": [
+				{
+					"arabic": "حصان",
+					"english": "A horse",
+					"transliteration": "7saan"
+				},
+				{
+					"arabic": "عربي.",
+					"english": "Arabian.",
+					"transliteration": "3arabi."
+				}
+			],
+			"targetWords": [
+				"Horse"
+			]
+		},
+		{
+			"arabic": "الحمار ما يبي يمشي.",
+			"arabicTashkeel": "الحْمار ما يَبي يِمشي.",
+			"english": "The donkey doesn't want to walk.",
+			"transliteration": "il-7maar ma yabi yimshi.",
+			"wordAlignments": [
+				{
+					"arabic": "الحمار",
+					"english": "The donkey",
+					"transliteration": "il-7maar"
+				},
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "يبي",
+					"english": "he wants",
+					"transliteration": "yabi"
+				},
+				{
+					"arabic": "يمشي.",
+					"english": "to walk.",
+					"transliteration": "yimshi."
+				}
+			],
+			"targetWords": [
+				"Donkey"
+			]
+		},
+		{
+			"arabic": "كلب المزرعة كبير.",
+			"arabicTashkeel": "كَلب المَزرعة كْبير.",
+			"english": "The farm dog is big.",
+			"transliteration": "chalb il-mazra3a chbeer.",
+			"wordAlignments": [
+				{
+					"arabic": "كلب",
+					"english": "The dog of",
+					"transliteration": "chalb"
+				},
+				{
+					"arabic": "المزرعة",
+					"english": "the farm is",
+					"transliteration": "il-mazra3a"
+				},
+				{
+					"arabic": "كبير.",
+					"english": "big.",
+					"transliteration": "chbeer."
+				}
+			],
+			"targetWords": [
+				"Dog",
+				"Farm"
+			]
+		},
+		{
+			"arabic": "البط على الماي.",
+			"arabicTashkeel": "البَط على الماي.",
+			"english": "The ducks are on the water.",
+			"transliteration": "il-batt 3ala il-maay.",
+			"wordAlignments": [
+				{
+					"arabic": "البط",
+					"english": "The ducks are",
+					"transliteration": "il-batt"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "الماي.",
+					"english": "the water.",
+					"transliteration": "il-maay."
+				}
+			],
+			"targetWords": [
+				"Duck"
+			]
+		},
+		{
+			"arabic": "الفلج يسقي النخل.",
+			"arabicTashkeel": "الفَلَج يِسقي النَّخل.",
+			"english": "The falaj waters the palm trees.",
+			"transliteration": "il-falaj yisgi in-nakhl.",
+			"wordAlignments": [
+				{
+					"arabic": "الفلج",
+					"english": "The falaj",
+					"transliteration": "il-falaj"
+				},
+				{
+					"arabic": "يسقي",
+					"english": "waters",
+					"transliteration": "yisgi"
+				},
+				{
+					"arabic": "النخل.",
+					"english": "the palm trees.",
+					"transliteration": "in-nakhl."
+				}
+			],
+			"targetWords": [
+				"Falaj (water channel)",
+				"Palm trees"
+			]
+		},
+		{
+			"arabic": "نخرف التمر بالصيف.",
+			"arabicTashkeel": "نْخَرِّف التَّمر بالصّيف.",
+			"english": "We pick dates in summer.",
+			"transliteration": "nkharrif it-tamr bis-seef.",
+			"wordAlignments": [
+				{
+					"arabic": "نخرف",
+					"english": "We pick",
+					"transliteration": "nkharrif"
+				},
+				{
+					"arabic": "التمر",
+					"english": "the dates",
+					"transliteration": "it-tamr"
+				},
+				{
+					"arabic": "بالصيف.",
+					"english": "in summer.",
+					"transliteration": "bis-seef."
+				}
+			],
+			"targetWords": [
+				"Dates"
+			]
+		},
+		{
+			"arabic": "أكل الحصان.",
+			"arabicTashkeel": "أكِّل الحْصان.",
+			"english": "Feed the horse.",
+			"transliteration": "akkil il-7saan.",
+			"wordAlignments": [
+				{
+					"arabic": "أكل",
+					"english": "Feed",
+					"transliteration": "akkil"
+				},
+				{
+					"arabic": "الحصان.",
+					"english": "the horse.",
+					"transliteration": "il-7saan."
+				}
+			],
+			"targetWords": [
+				"He feeds",
+				"Horse"
+			]
+		},
+		{
+			"arabic": "بيت المزارع جنب الفلج.",
+			"arabicTashkeel": "بيت المِزارِع جَنب الفَلَج.",
+			"english": "The farmer's house is next to the falaj.",
+			"transliteration": "beet il-mizaari3 yamb il-falaj.",
+			"wordAlignments": [
+				{
+					"arabic": "بيت",
+					"english": "The house of",
+					"transliteration": "beet"
+				},
+				{
+					"arabic": "المزارع",
+					"english": "the farmer is",
+					"transliteration": "il-mizaari3"
+				},
+				{
+					"arabic": "جنب",
+					"english": "next to",
+					"transliteration": "yamb"
+				},
+				{
+					"arabic": "الفلج.",
+					"english": "the falaj.",
+					"transliteration": "il-falaj."
+				}
+			],
+			"targetWords": [
+				"Farmer",
+				"Falaj (water channel)"
+			]
+		},
+		{
+			"arabic": "حليب من البقرة.",
+			"arabicTashkeel": "حَليب مِن البَقرة.",
+			"english": "Milk from the cow.",
+			"transliteration": "7aleeb min il-bagra.",
+			"wordAlignments": [
+				{
+					"arabic": "حليب",
+					"english": "Milk",
+					"transliteration": "7aleeb"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "البقرة.",
+					"english": "the cow.",
+					"transliteration": "il-bagra."
+				}
+			],
+			"targetWords": [
+				"Cow"
+			]
+		},
+		{
+			"arabic": "الغنم والعنز.",
+			"arabicTashkeel": "الغَنَم والعَنز.",
+			"english": "The sheep and the goats.",
+			"transliteration": "il-ghanam w-il-3anz.",
+			"wordAlignments": [
+				{
+					"arabic": "الغنم",
+					"english": "The sheep",
+					"transliteration": "il-ghanam"
+				},
+				{
+					"arabic": "والعنز.",
+					"english": "and the goats.",
+					"transliteration": "w-il-3anz."
+				}
+			],
+			"targetWords": [
+				"Sheep",
+				"Goat"
+			]
+		},
+		{
+			"arabic": "دجاجة وديك.",
+			"arabicTashkeel": "دِجاجة وديك.",
+			"english": "A hen and a rooster.",
+			"transliteration": "diyaaya w-deech.",
+			"wordAlignments": [
+				{
+					"arabic": "دجاجة",
+					"english": "A hen",
+					"transliteration": "diyaaya"
+				},
+				{
+					"arabic": "وديك.",
+					"english": "and a rooster.",
+					"transliteration": "w-deech."
+				}
+			],
+			"targetWords": [
+				"Hen",
+				"Rooster"
+			]
+		},
+		{
+			"arabic": "يأكل الحيوانات كل صبح.",
+			"arabicTashkeel": "يْأكِّل الحَيوانات كِل صُبح.",
+			"english": "He feeds the animals every morning.",
+			"transliteration": "y2akkil il-7aywaanaat kil sub7.",
+			"wordAlignments": [
+				{
+					"arabic": "يأكل",
+					"english": "He feeds",
+					"transliteration": "y2akkil"
+				},
+				{
+					"arabic": "الحيوانات",
+					"english": "the animals",
+					"transliteration": "il-7aywaanaat"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kil"
+				},
+				{
+					"arabic": "صبح.",
+					"english": "morning.",
+					"transliteration": "sub7."
+				}
+			],
+			"targetWords": [
+				"He feeds"
+			]
+		},
+		{
+			"arabic": "الكلب والقطو.",
+			"arabicTashkeel": "الكَلب والقَطو.",
+			"english": "The dog and the cat.",
+			"transliteration": "il-chalb w-il-gattu.",
+			"wordAlignments": [
+				{
+					"arabic": "الكلب",
+					"english": "The dog",
+					"transliteration": "il-chalb"
+				},
+				{
+					"arabic": "والقطو.",
+					"english": "and the cat.",
+					"transliteration": "w-il-gattu."
+				}
+			],
+			"targetWords": [
+				"Dog"
+			]
+		},
+		{
+			"arabic": "مزرعة كبيرة.",
+			"arabicTashkeel": "مَزرعة كْبيرة.",
+			"english": "A big farm.",
+			"transliteration": "mazra3a chbeera.",
+			"wordAlignments": [
+				{
+					"arabic": "مزرعة",
+					"english": "A farm",
+					"transliteration": "mazra3a"
+				},
+				{
+					"arabic": "كبيرة.",
+					"english": "big.",
+					"transliteration": "chbeera."
+				}
+			],
+			"targetWords": [
+				"Farm"
+			]
+		},
+		{
+			"arabic": "حمار وحصان.",
+			"arabicTashkeel": "حْمار وحْصان.",
+			"english": "A donkey and a horse.",
+			"transliteration": "7maar w-7saan.",
+			"wordAlignments": [
+				{
+					"arabic": "حمار",
+					"english": "A donkey",
+					"transliteration": "7maar"
+				},
+				{
+					"arabic": "وحصان.",
+					"english": "and a horse.",
+					"transliteration": "w-7saan."
+				}
+			],
+			"targetWords": [
+				"Donkey",
+				"Horse"
+			]
+		},
+		{
+			"arabic": "تمر من ليوا.",
+			"arabicTashkeel": "تَمر مِن ليوا.",
+			"english": "Dates from Liwa.",
+			"transliteration": "tamr min leewa.",
+			"wordAlignments": [
+				{
+					"arabic": "تمر",
+					"english": "Dates",
+					"transliteration": "tamr"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "ليوا.",
+					"english": "Liwa.",
+					"transliteration": "leewa."
+				}
+			],
+			"targetWords": [
+				"Dates"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "Grandfather's Farm",
+			"sentences": [
+				{
+					"arabic": "مزرعة جدي قريبة من العين.",
+					"arabicTashkeel": "مَزرعة جَدّي قَريبة مِن العين.",
+					"english": "My grandfather's farm is near Al Ain.",
+					"transliteration": "mazra3at yaddi gareeba min il-3een.",
+					"wordAlignments": [
+						{
+							"arabic": "مزرعة",
+							"english": "The farm of",
+							"transliteration": "mazra3at"
+						},
+						{
+							"arabic": "جدي",
+							"english": "my grandfather is",
+							"transliteration": "yaddi"
+						},
+						{
+							"arabic": "قريبة",
+							"english": "near",
+							"transliteration": "gareeba"
+						},
+						{
+							"arabic": "من",
+							"english": "from",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "العين.",
+							"english": "Al Ain.",
+							"transliteration": "il-3een."
+						}
+					]
+				},
+				{
+					"arabic": "عنده عنز، غنم، دجاج وكلب كبير.",
+					"arabicTashkeel": "عِندَه عَنز، غَنَم، دِجاج وكَلب كْبير.",
+					"english": "He has goats, sheep, hens and a big dog.",
+					"transliteration": "3inda 3anz, ghanam, diyaay w-chalb chbeer.",
+					"wordAlignments": [
+						{
+							"arabic": "عنده",
+							"english": "He has",
+							"transliteration": "3inda"
+						},
+						{
+							"arabic": "عنز،",
+							"english": "goats,",
+							"transliteration": "3anz,"
+						},
+						{
+							"arabic": "غنم،",
+							"english": "sheep,",
+							"transliteration": "ghanam,"
+						},
+						{
+							"arabic": "دجاج",
+							"english": "hens",
+							"transliteration": "diyaay"
+						},
+						{
+							"arabic": "وكلب",
+							"english": "and a dog",
+							"transliteration": "w-chalb"
+						},
+						{
+							"arabic": "كبير.",
+							"english": "big.",
+							"transliteration": "chbeer."
+						}
+					]
+				},
+				{
+					"arabic": "كل صبح الديك يقومنا.",
+					"arabicTashkeel": "كِل صُبح الديك يْقَوِّمنا.",
+					"english": "Every morning the rooster wakes us up.",
+					"transliteration": "kil sub7 id-deech ygawwimna.",
+					"wordAlignments": [
+						{
+							"arabic": "كل",
+							"english": "Every",
+							"transliteration": "kil"
+						},
+						{
+							"arabic": "صبح",
+							"english": "morning",
+							"transliteration": "sub7"
+						},
+						{
+							"arabic": "الديك",
+							"english": "the rooster",
+							"transliteration": "id-deech"
+						},
+						{
+							"arabic": "يقومنا.",
+							"english": "wakes us up.",
+							"transliteration": "ygawwimna."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "The Palm Farm",
+			"sentences": [
+				{
+					"arabic": "عندنا مزرعة مليانة نخل.",
+					"arabicTashkeel": "عِندنا مَزرعة مِليانة نَخل.",
+					"english": "We have a farm full of palm trees.",
+					"transliteration": "3indana mazra3a milyaana nakhl.",
+					"wordAlignments": [
+						{
+							"arabic": "عندنا",
+							"english": "We have",
+							"transliteration": "3indana"
+						},
+						{
+							"arabic": "مزرعة",
+							"english": "a farm",
+							"transliteration": "mazra3a"
+						},
+						{
+							"arabic": "مليانة",
+							"english": "full of",
+							"transliteration": "milyaana"
+						},
+						{
+							"arabic": "نخل.",
+							"english": "palm trees.",
+							"transliteration": "nakhl."
+						}
+					]
+				},
+				{
+					"arabic": "الماي يجي من الفلج القديم.",
+					"arabicTashkeel": "الماي يِجي مِن الفَلَج القَديم.",
+					"english": "The water comes from the old falaj.",
+					"transliteration": "il-maay yiyi min il-falaj il-gadeem.",
+					"wordAlignments": [
+						{
+							"arabic": "الماي",
+							"english": "The water",
+							"transliteration": "il-maay"
+						},
+						{
+							"arabic": "يجي",
+							"english": "comes",
+							"transliteration": "yiyi"
+						},
+						{
+							"arabic": "من",
+							"english": "from",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "الفلج",
+							"english": "the falaj",
+							"transliteration": "il-falaj"
+						},
+						{
+							"arabic": "القديم.",
+							"english": "old.",
+							"transliteration": "il-gadeem."
+						}
+					]
+				},
+				{
+					"arabic": "بالصيف نخرف التمر.",
+					"arabicTashkeel": "بالصّيف نْخَرِّف التَّمر.",
+					"english": "In summer we pick the dates.",
+					"transliteration": "bis-seef nkharrif it-tamr.",
+					"wordAlignments": [
+						{
+							"arabic": "بالصيف",
+							"english": "In summer",
+							"transliteration": "bis-seef"
+						},
+						{
+							"arabic": "نخرف",
+							"english": "we pick",
+							"transliteration": "nkharrif"
+						},
+						{
+							"arabic": "التمر.",
+							"english": "the dates.",
+							"transliteration": "it-tamr."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is visiting an Emirati friend's family farm near Al Ain during the date harvest.",
+		"studentRole": "A guest learning Gulf Arabic.",
+		"otherRole": "The friend's grandfather, the proud farmer.",
+		"goalEnglish": "Ask about the animals and palm trees, offer to help feed the animals, and talk about the dates and the falaj.",
+		"targetWords": [
+			"Farm",
+			"Farmer",
+			"Palm trees",
+			"Dates",
+			"Falaj (water channel)",
+			"Goat",
+			"Hen",
+			"He feeds"
+		]
+	}
+}
