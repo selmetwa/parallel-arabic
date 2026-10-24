@@ -19,6 +19,7 @@ import { randomUUID } from 'crypto';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 dotenv.config({ path: join(ROOT, '.env') });
+dotenv.config({ path: join(ROOT, '.env.local') });
 
 const DIALECTS = ['iraqi', 'khaleeji', 'saudi'];
 const dryRun = process.argv.includes('--dry-run');
