@@ -1,0 +1,1576 @@
+{
+	"vocab": [
+		{
+			"arabic": "هادا",
+			"arabicTashkeel": "هادا",
+			"english": "This (masculine)",
+			"transliteration": "haada",
+			"wordAlignments": [
+				{
+					"arabic": "هادا",
+					"english": "This",
+					"transliteration": "haada"
+				}
+			],
+			"partOfSpeech": "pronoun",
+			"gender": "m"
+		},
+		{
+			"arabic": "هادي",
+			"arabicTashkeel": "هادي",
+			"english": "This (feminine)",
+			"transliteration": "haadi",
+			"wordAlignments": [
+				{
+					"arabic": "هادي",
+					"english": "This",
+					"transliteration": "haadi"
+				}
+			],
+			"partOfSpeech": "pronoun",
+			"gender": "f"
+		},
+		{
+			"arabic": "دول",
+			"arabicTashkeel": "دول",
+			"english": "These",
+			"transliteration": "dool",
+			"wordAlignments": [
+				{
+					"arabic": "دول",
+					"english": "These",
+					"transliteration": "dool"
+				}
+			],
+			"partOfSpeech": "pronoun"
+		},
+		{
+			"arabic": "داك",
+			"arabicTashkeel": "داك",
+			"english": "That (masculine)",
+			"transliteration": "daak",
+			"wordAlignments": [
+				{
+					"arabic": "داك",
+					"english": "That",
+					"transliteration": "daak"
+				}
+			],
+			"partOfSpeech": "pronoun",
+			"gender": "m"
+		},
+		{
+			"arabic": "ديك",
+			"arabicTashkeel": "ديك",
+			"english": "That (feminine)",
+			"transliteration": "deek",
+			"wordAlignments": [
+				{
+					"arabic": "ديك",
+					"english": "That",
+					"transliteration": "deek"
+				}
+			],
+			"partOfSpeech": "pronoun",
+			"gender": "f"
+		},
+		{
+			"arabic": "إيش",
+			"arabicTashkeel": "إيش",
+			"english": "What",
+			"transliteration": "eesh",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What",
+					"transliteration": "eesh"
+				}
+			],
+			"partOfSpeech": "question"
+		},
+		{
+			"arabic": "مين",
+			"arabicTashkeel": "مين",
+			"english": "Who",
+			"transliteration": "meen",
+			"wordAlignments": [
+				{
+					"arabic": "مين",
+					"english": "Who",
+					"transliteration": "meen"
+				}
+			],
+			"partOfSpeech": "question"
+		},
+		{
+			"arabic": "كتاب",
+			"arabicTashkeel": "كِتاب",
+			"english": "Book",
+			"transliteration": "kitaab",
+			"wordAlignments": [
+				{
+					"arabic": "كتاب",
+					"english": "Book",
+					"transliteration": "kitaab"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "قلم",
+			"arabicTashkeel": "قَلَم",
+			"english": "Pen",
+			"transliteration": "galam",
+			"wordAlignments": [
+				{
+					"arabic": "قلم",
+					"english": "Pen",
+					"transliteration": "galam"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "بيت",
+			"arabicTashkeel": "بيت",
+			"english": "House",
+			"transliteration": "bait",
+			"wordAlignments": [
+				{
+					"arabic": "بيت",
+					"english": "House",
+					"transliteration": "bait"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "سيارة",
+			"arabicTashkeel": "سَيّارة",
+			"english": "Car",
+			"transliteration": "sayyaara",
+			"wordAlignments": [
+				{
+					"arabic": "سيارة",
+					"english": "Car",
+					"transliteration": "sayyaara"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "كبير",
+			"arabicTashkeel": "كْبير",
+			"english": "Big",
+			"transliteration": "kbeer",
+			"wordAlignments": [
+				{
+					"arabic": "كبير",
+					"english": "Big",
+					"transliteration": "kbeer"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "صغير",
+			"arabicTashkeel": "صُغَيَّر",
+			"english": "Small",
+			"transliteration": "sughayyar",
+			"wordAlignments": [
+				{
+					"arabic": "صغير",
+					"english": "Small",
+					"transliteration": "sughayyar"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "حلو",
+			"arabicTashkeel": "حِلو",
+			"english": "Nice",
+			"transliteration": "7ilu",
+			"wordAlignments": [
+				{
+					"arabic": "حلو",
+					"english": "Nice",
+					"transliteration": "7ilu"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "حق",
+			"arabicTashkeel": "حَق",
+			"english": "Belonging to",
+			"transliteration": "7agg",
+			"wordAlignments": [
+				{
+					"arabic": "حق",
+					"english": "Belonging to",
+					"transliteration": "7agg"
+				}
+			],
+			"partOfSpeech": "particle"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "هادا كتاب.",
+			"arabicTashkeel": "هادا كِتاب.",
+			"english": "This is a book.",
+			"transliteration": "haada kitaab.",
+			"wordAlignments": [
+				{
+					"arabic": "هادا",
+					"english": "This is",
+					"transliteration": "haada"
+				},
+				{
+					"arabic": "كتاب.",
+					"english": "a book.",
+					"transliteration": "kitaab."
+				}
+			],
+			"targetWords": [
+				"This (masculine)",
+				"Book"
+			]
+		},
+		{
+			"arabic": "هادي سيارة.",
+			"arabicTashkeel": "هادي سَيّارة.",
+			"english": "This is a car.",
+			"transliteration": "haadi sayyaara.",
+			"wordAlignments": [
+				{
+					"arabic": "هادي",
+					"english": "This is",
+					"transliteration": "haadi"
+				},
+				{
+					"arabic": "سيارة.",
+					"english": "a car.",
+					"transliteration": "sayyaara."
+				}
+			],
+			"targetWords": [
+				"This (feminine)",
+				"Car"
+			]
+		},
+		{
+			"arabic": "دول كتب.",
+			"arabicTashkeel": "دول كُتُب.",
+			"english": "These are books.",
+			"transliteration": "dool kutub.",
+			"wordAlignments": [
+				{
+					"arabic": "دول",
+					"english": "These are",
+					"transliteration": "dool"
+				},
+				{
+					"arabic": "كتب.",
+					"english": "books.",
+					"transliteration": "kutub."
+				}
+			],
+			"targetWords": [
+				"These"
+			]
+		},
+		{
+			"arabic": "داك بيت كبير.",
+			"arabicTashkeel": "داك بيت كْبير.",
+			"english": "That is a big house.",
+			"transliteration": "daak bait kbeer.",
+			"wordAlignments": [
+				{
+					"arabic": "داك",
+					"english": "That is",
+					"transliteration": "daak"
+				},
+				{
+					"arabic": "بيت",
+					"english": "a house",
+					"transliteration": "bait"
+				},
+				{
+					"arabic": "كبير.",
+					"english": "big.",
+					"transliteration": "kbeer."
+				}
+			],
+			"targetWords": [
+				"That (masculine)",
+				"House",
+				"Big"
+			]
+		},
+		{
+			"arabic": "ديك سيارة صغيرة.",
+			"arabicTashkeel": "ديك سَيّارة صُغَيَّرة.",
+			"english": "That is a small car.",
+			"transliteration": "deek sayyaara sughayyara.",
+			"wordAlignments": [
+				{
+					"arabic": "ديك",
+					"english": "That is",
+					"transliteration": "deek"
+				},
+				{
+					"arabic": "سيارة",
+					"english": "a car",
+					"transliteration": "sayyaara"
+				},
+				{
+					"arabic": "صغيرة.",
+					"english": "small.",
+					"transliteration": "sughayyara."
+				}
+			],
+			"targetWords": [
+				"That (feminine)",
+				"Car"
+			]
+		},
+		{
+			"arabic": "إيش هادا؟",
+			"arabicTashkeel": "إيش هادا؟",
+			"english": "What is this?",
+			"transliteration": "eesh haada?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What is",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "هادا؟",
+					"english": "this?",
+					"transliteration": "haada?"
+				}
+			],
+			"targetWords": [
+				"What",
+				"This (masculine)"
+			]
+		},
+		{
+			"arabic": "مين هادا؟",
+			"arabicTashkeel": "مين هادا؟",
+			"english": "Who is this?",
+			"transliteration": "meen haada?",
+			"wordAlignments": [
+				{
+					"arabic": "مين",
+					"english": "Who is",
+					"transliteration": "meen"
+				},
+				{
+					"arabic": "هادا؟",
+					"english": "this?",
+					"transliteration": "haada?"
+				}
+			],
+			"targetWords": [
+				"Who",
+				"This (masculine)"
+			]
+		},
+		{
+			"arabic": "هادا قلم حلو.",
+			"arabicTashkeel": "هادا قَلَم حِلو.",
+			"english": "This is a nice pen.",
+			"transliteration": "haada galam 7ilu.",
+			"wordAlignments": [
+				{
+					"arabic": "هادا",
+					"english": "This is",
+					"transliteration": "haada"
+				},
+				{
+					"arabic": "قلم",
+					"english": "a pen",
+					"transliteration": "galam"
+				},
+				{
+					"arabic": "حلو.",
+					"english": "nice.",
+					"transliteration": "7ilu."
+				}
+			],
+			"targetWords": [
+				"This (masculine)",
+				"Pen",
+				"Nice"
+			]
+		},
+		{
+			"arabic": "هادا الكتاب حق فيصل.",
+			"arabicTashkeel": "هادا الكِتاب حَق فَيصَل.",
+			"english": "This book belongs to Faisal.",
+			"transliteration": "haada il-kitaab 7agg faisal.",
+			"wordAlignments": [
+				{
+					"arabic": "هادا",
+					"english": "This",
+					"transliteration": "haada"
+				},
+				{
+					"arabic": "الكتاب",
+					"english": "book",
+					"transliteration": "il-kitaab"
+				},
+				{
+					"arabic": "حق",
+					"english": "belongs to",
+					"transliteration": "7agg"
+				},
+				{
+					"arabic": "فيصل.",
+					"english": "Faisal.",
+					"transliteration": "faisal."
+				}
+			],
+			"targetWords": [
+				"This (masculine)",
+				"Book",
+				"Belonging to"
+			]
+		},
+		{
+			"arabic": "إيش داك؟",
+			"arabicTashkeel": "إيش داك؟",
+			"english": "What is that?",
+			"transliteration": "eesh daak?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What is",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "داك؟",
+					"english": "that?",
+					"transliteration": "daak?"
+				}
+			],
+			"targetWords": [
+				"What",
+				"That (masculine)"
+			]
+		},
+		{
+			"arabic": "مين ديك؟",
+			"arabicTashkeel": "مين ديك؟",
+			"english": "Who is that?",
+			"transliteration": "meen deek?",
+			"wordAlignments": [
+				{
+					"arabic": "مين",
+					"english": "Who is",
+					"transliteration": "meen"
+				},
+				{
+					"arabic": "ديك؟",
+					"english": "that?",
+					"transliteration": "deek?"
+				}
+			],
+			"targetWords": [
+				"Who",
+				"That (feminine)"
+			]
+		},
+		{
+			"arabic": "دول طلاب.",
+			"arabicTashkeel": "دول طُلّاب.",
+			"english": "These are students.",
+			"transliteration": "dool tullaab.",
+			"wordAlignments": [
+				{
+					"arabic": "دول",
+					"english": "These are",
+					"transliteration": "dool"
+				},
+				{
+					"arabic": "طلاب.",
+					"english": "students.",
+					"transliteration": "tullaab."
+				}
+			],
+			"targetWords": [
+				"These"
+			]
+		},
+		{
+			"arabic": "البيت كبير.",
+			"arabicTashkeel": "البيت كْبير.",
+			"english": "The house is big.",
+			"transliteration": "il-bait kbeer.",
+			"wordAlignments": [
+				{
+					"arabic": "البيت",
+					"english": "The house is",
+					"transliteration": "il-bait"
+				},
+				{
+					"arabic": "كبير.",
+					"english": "big.",
+					"transliteration": "kbeer."
+				}
+			],
+			"targetWords": [
+				"House",
+				"Big"
+			]
+		},
+		{
+			"arabic": "القلم صغير.",
+			"arabicTashkeel": "القَلَم صُغَيَّر.",
+			"english": "The pen is small.",
+			"transliteration": "il-galam sughayyar.",
+			"wordAlignments": [
+				{
+					"arabic": "القلم",
+					"english": "The pen is",
+					"transliteration": "il-galam"
+				},
+				{
+					"arabic": "صغير.",
+					"english": "small.",
+					"transliteration": "sughayyar."
+				}
+			],
+			"targetWords": [
+				"Pen",
+				"Small"
+			]
+		},
+		{
+			"arabic": "هادا بيت صغير.",
+			"arabicTashkeel": "هادا بيت صُغَيَّر.",
+			"english": "This is a small house.",
+			"transliteration": "haada bait sughayyar.",
+			"wordAlignments": [
+				{
+					"arabic": "هادا",
+					"english": "This is",
+					"transliteration": "haada"
+				},
+				{
+					"arabic": "بيت",
+					"english": "a house",
+					"transliteration": "bait"
+				},
+				{
+					"arabic": "صغير.",
+					"english": "small.",
+					"transliteration": "sughayyar."
+				}
+			],
+			"targetWords": [
+				"This (masculine)",
+				"House",
+				"Small"
+			]
+		},
+		{
+			"arabic": "داك القلم حق المدرس.",
+			"arabicTashkeel": "داك القَلَم حَق المُدَرِّس.",
+			"english": "That pen belongs to the teacher.",
+			"transliteration": "daak il-galam 7agg il-mudarris.",
+			"wordAlignments": [
+				{
+					"arabic": "داك",
+					"english": "That",
+					"transliteration": "daak"
+				},
+				{
+					"arabic": "القلم",
+					"english": "pen",
+					"transliteration": "il-galam"
+				},
+				{
+					"arabic": "حق",
+					"english": "belongs to",
+					"transliteration": "7agg"
+				},
+				{
+					"arabic": "المدرس.",
+					"english": "the teacher.",
+					"transliteration": "il-mudarris."
+				}
+			],
+			"targetWords": [
+				"That (masculine)",
+				"Pen",
+				"Belonging to"
+			]
+		},
+		{
+			"arabic": "هادي سيارة حلوة.",
+			"arabicTashkeel": "هادي سَيّارة حِلوة.",
+			"english": "This is a nice car.",
+			"transliteration": "haadi sayyaara 7ilwa.",
+			"wordAlignments": [
+				{
+					"arabic": "هادي",
+					"english": "This is",
+					"transliteration": "haadi"
+				},
+				{
+					"arabic": "سيارة",
+					"english": "a car",
+					"transliteration": "sayyaara"
+				},
+				{
+					"arabic": "حلوة.",
+					"english": "nice.",
+					"transliteration": "7ilwa."
+				}
+			],
+			"targetWords": [
+				"This (feminine)",
+				"Car"
+			]
+		},
+		{
+			"arabic": "إيش هادي؟",
+			"arabicTashkeel": "إيش هادي؟",
+			"english": "What is this?",
+			"transliteration": "eesh haadi?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What is",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "هادي؟",
+					"english": "this?",
+					"transliteration": "haadi?"
+				}
+			],
+			"targetWords": [
+				"What",
+				"This (feminine)"
+			]
+		},
+		{
+			"arabic": "مين داك؟",
+			"arabicTashkeel": "مين داك؟",
+			"english": "Who is that?",
+			"transliteration": "meen daak?",
+			"wordAlignments": [
+				{
+					"arabic": "مين",
+					"english": "Who is",
+					"transliteration": "meen"
+				},
+				{
+					"arabic": "داك؟",
+					"english": "that?",
+					"transliteration": "daak?"
+				}
+			],
+			"targetWords": [
+				"Who",
+				"That (masculine)"
+			]
+		},
+		{
+			"arabic": "دول الكتب حق مين؟",
+			"arabicTashkeel": "دول الكُتُب حَق مين؟",
+			"english": "Whose are these books?",
+			"transliteration": "dool il-kutub 7agg meen?",
+			"wordAlignments": [
+				{
+					"arabic": "دول",
+					"english": "These",
+					"transliteration": "dool"
+				},
+				{
+					"arabic": "الكتب",
+					"english": "books",
+					"transliteration": "il-kutub"
+				},
+				{
+					"arabic": "حق",
+					"english": "belong to",
+					"transliteration": "7agg"
+				},
+				{
+					"arabic": "مين؟",
+					"english": "whom?",
+					"transliteration": "meen?"
+				}
+			],
+			"targetWords": [
+				"These",
+				"Belonging to",
+				"Who"
+			]
+		},
+		{
+			"arabic": "الكتاب حلو.",
+			"arabicTashkeel": "الكِتاب حِلو.",
+			"english": "The book is nice.",
+			"transliteration": "il-kitaab 7ilu.",
+			"wordAlignments": [
+				{
+					"arabic": "الكتاب",
+					"english": "The book is",
+					"transliteration": "il-kitaab"
+				},
+				{
+					"arabic": "حلو.",
+					"english": "nice.",
+					"transliteration": "7ilu."
+				}
+			],
+			"targetWords": [
+				"Book",
+				"Nice"
+			]
+		},
+		{
+			"arabic": "السيارة حق أبويا.",
+			"arabicTashkeel": "السَّيّارة حَق أبويا.",
+			"english": "The car belongs to my dad.",
+			"transliteration": "is-sayyaara 7agg abooya.",
+			"wordAlignments": [
+				{
+					"arabic": "السيارة",
+					"english": "The car",
+					"transliteration": "is-sayyaara"
+				},
+				{
+					"arabic": "حق",
+					"english": "belongs to",
+					"transliteration": "7agg"
+				},
+				{
+					"arabic": "أبويا.",
+					"english": "my dad.",
+					"transliteration": "abooya."
+				}
+			],
+			"targetWords": [
+				"Car",
+				"Belonging to"
+			]
+		},
+		{
+			"arabic": "ديك البنت مين؟",
+			"arabicTashkeel": "ديك البِنت مين؟",
+			"english": "Who is that girl?",
+			"transliteration": "deek il-bint meen?",
+			"wordAlignments": [
+				{
+					"arabic": "ديك",
+					"english": "That",
+					"transliteration": "deek"
+				},
+				{
+					"arabic": "البنت",
+					"english": "girl",
+					"transliteration": "il-bint"
+				},
+				{
+					"arabic": "مين؟",
+					"english": "is who?",
+					"transliteration": "meen?"
+				}
+			],
+			"targetWords": [
+				"That (feminine)",
+				"Who"
+			]
+		},
+		{
+			"arabic": "هادا كتاب كبير.",
+			"arabicTashkeel": "هادا كِتاب كْبير.",
+			"english": "This is a big book.",
+			"transliteration": "haada kitaab kbeer.",
+			"wordAlignments": [
+				{
+					"arabic": "هادا",
+					"english": "This is",
+					"transliteration": "haada"
+				},
+				{
+					"arabic": "كتاب",
+					"english": "a book",
+					"transliteration": "kitaab"
+				},
+				{
+					"arabic": "كبير.",
+					"english": "big.",
+					"transliteration": "kbeer."
+				}
+			],
+			"targetWords": [
+				"This (masculine)",
+				"Book",
+				"Big"
+			]
+		},
+		{
+			"arabic": "داك البيت حلو.",
+			"arabicTashkeel": "داك البيت حِلو.",
+			"english": "That house is nice.",
+			"transliteration": "daak il-bait 7ilu.",
+			"wordAlignments": [
+				{
+					"arabic": "داك",
+					"english": "That",
+					"transliteration": "daak"
+				},
+				{
+					"arabic": "البيت",
+					"english": "house is",
+					"transliteration": "il-bait"
+				},
+				{
+					"arabic": "حلو.",
+					"english": "nice.",
+					"transliteration": "7ilu."
+				}
+			],
+			"targetWords": [
+				"That (masculine)",
+				"House",
+				"Nice"
+			]
+		},
+		{
+			"arabic": "إيش دول؟",
+			"arabicTashkeel": "إيش دول؟",
+			"english": "What are these?",
+			"transliteration": "eesh dool?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What are",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "دول؟",
+					"english": "these?",
+					"transliteration": "dool?"
+				}
+			],
+			"targetWords": [
+				"What",
+				"These"
+			]
+		},
+		{
+			"arabic": "القلم حق مين؟",
+			"arabicTashkeel": "القَلَم حَق مين؟",
+			"english": "Whose pen is it?",
+			"transliteration": "il-galam 7agg meen?",
+			"wordAlignments": [
+				{
+					"arabic": "القلم",
+					"english": "The pen",
+					"transliteration": "il-galam"
+				},
+				{
+					"arabic": "حق",
+					"english": "belongs to",
+					"transliteration": "7agg"
+				},
+				{
+					"arabic": "مين؟",
+					"english": "whom?",
+					"transliteration": "meen?"
+				}
+			],
+			"targetWords": [
+				"Pen",
+				"Belonging to",
+				"Who"
+			]
+		},
+		{
+			"arabic": "هادي سيارة كبيرة.",
+			"arabicTashkeel": "هادي سَيّارة كْبيرة.",
+			"english": "This is a big car.",
+			"transliteration": "haadi sayyaara kbeera.",
+			"wordAlignments": [
+				{
+					"arabic": "هادي",
+					"english": "This is",
+					"transliteration": "haadi"
+				},
+				{
+					"arabic": "سيارة",
+					"english": "a car",
+					"transliteration": "sayyaara"
+				},
+				{
+					"arabic": "كبيرة.",
+					"english": "big.",
+					"transliteration": "kbeera."
+				}
+			],
+			"targetWords": [
+				"This (feminine)",
+				"Car"
+			]
+		},
+		{
+			"arabic": "ديك السيارة حلوة.",
+			"arabicTashkeel": "ديك السَّيّارة حِلوة.",
+			"english": "That car is nice.",
+			"transliteration": "deek is-sayyaara 7ilwa.",
+			"wordAlignments": [
+				{
+					"arabic": "ديك",
+					"english": "That",
+					"transliteration": "deek"
+				},
+				{
+					"arabic": "السيارة",
+					"english": "car is",
+					"transliteration": "is-sayyaara"
+				},
+				{
+					"arabic": "حلوة.",
+					"english": "nice.",
+					"transliteration": "7ilwa."
+				}
+			],
+			"targetWords": [
+				"That (feminine)",
+				"Car"
+			]
+		},
+		{
+			"arabic": "البيت صغير بس حلو.",
+			"arabicTashkeel": "البيت صُغَيَّر بَس حِلو.",
+			"english": "The house is small but nice.",
+			"transliteration": "il-bait sughayyar bas 7ilu.",
+			"wordAlignments": [
+				{
+					"arabic": "البيت",
+					"english": "The house is",
+					"transliteration": "il-bait"
+				},
+				{
+					"arabic": "صغير",
+					"english": "small",
+					"transliteration": "sughayyar"
+				},
+				{
+					"arabic": "بس",
+					"english": "but",
+					"transliteration": "bas"
+				},
+				{
+					"arabic": "حلو.",
+					"english": "nice.",
+					"transliteration": "7ilu."
+				}
+			],
+			"targetWords": [
+				"House",
+				"Small",
+				"Nice"
+			]
+		},
+		{
+			"arabic": "هادا الكتاب صغير.",
+			"arabicTashkeel": "هادا الكِتاب صُغَيَّر.",
+			"english": "This book is small.",
+			"transliteration": "haada il-kitaab sughayyar.",
+			"wordAlignments": [
+				{
+					"arabic": "هادا",
+					"english": "This",
+					"transliteration": "haada"
+				},
+				{
+					"arabic": "الكتاب",
+					"english": "book is",
+					"transliteration": "il-kitaab"
+				},
+				{
+					"arabic": "صغير.",
+					"english": "small.",
+					"transliteration": "sughayyar."
+				}
+			],
+			"targetWords": [
+				"This (masculine)",
+				"Book",
+				"Small"
+			]
+		},
+		{
+			"arabic": "دول بيوت كبيرة.",
+			"arabicTashkeel": "دول بُيوت كْبيرة.",
+			"english": "These are big houses.",
+			"transliteration": "dool buyoot kbeera.",
+			"wordAlignments": [
+				{
+					"arabic": "دول",
+					"english": "These are",
+					"transliteration": "dool"
+				},
+				{
+					"arabic": "بيوت",
+					"english": "houses",
+					"transliteration": "buyoot"
+				},
+				{
+					"arabic": "كبيرة.",
+					"english": "big.",
+					"transliteration": "kbeera."
+				}
+			],
+			"targetWords": [
+				"These"
+			]
+		},
+		{
+			"arabic": "داك القلم حلو.",
+			"arabicTashkeel": "داك القَلَم حِلو.",
+			"english": "That pen is nice.",
+			"transliteration": "daak il-galam 7ilu.",
+			"wordAlignments": [
+				{
+					"arabic": "داك",
+					"english": "That",
+					"transliteration": "daak"
+				},
+				{
+					"arabic": "القلم",
+					"english": "pen is",
+					"transliteration": "il-galam"
+				},
+				{
+					"arabic": "حلو.",
+					"english": "nice.",
+					"transliteration": "7ilu."
+				}
+			],
+			"targetWords": [
+				"That (masculine)",
+				"Pen",
+				"Nice"
+			]
+		},
+		{
+			"arabic": "مين هادي؟",
+			"arabicTashkeel": "مين هادي؟",
+			"english": "Who is this?",
+			"transliteration": "meen haadi?",
+			"wordAlignments": [
+				{
+					"arabic": "مين",
+					"english": "Who is",
+					"transliteration": "meen"
+				},
+				{
+					"arabic": "هادي؟",
+					"english": "this?",
+					"transliteration": "haadi?"
+				}
+			],
+			"targetWords": [
+				"Who",
+				"This (feminine)"
+			]
+		},
+		{
+			"arabic": "إيش ديك؟",
+			"arabicTashkeel": "إيش ديك؟",
+			"english": "What is that?",
+			"transliteration": "eesh deek?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What is",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "ديك؟",
+					"english": "that?",
+					"transliteration": "deek?"
+				}
+			],
+			"targetWords": [
+				"What",
+				"That (feminine)"
+			]
+		},
+		{
+			"arabic": "الكتاب حق المدرس.",
+			"arabicTashkeel": "الكِتاب حَق المُدَرِّس.",
+			"english": "The book belongs to the teacher.",
+			"transliteration": "il-kitaab 7agg il-mudarris.",
+			"wordAlignments": [
+				{
+					"arabic": "الكتاب",
+					"english": "The book",
+					"transliteration": "il-kitaab"
+				},
+				{
+					"arabic": "حق",
+					"english": "belongs to",
+					"transliteration": "7agg"
+				},
+				{
+					"arabic": "المدرس.",
+					"english": "the teacher.",
+					"transliteration": "il-mudarris."
+				}
+			],
+			"targetWords": [
+				"Book",
+				"Belonging to"
+			]
+		},
+		{
+			"arabic": "هادا قلم صغير.",
+			"arabicTashkeel": "هادا قَلَم صُغَيَّر.",
+			"english": "This is a small pen.",
+			"transliteration": "haada galam sughayyar.",
+			"wordAlignments": [
+				{
+					"arabic": "هادا",
+					"english": "This is",
+					"transliteration": "haada"
+				},
+				{
+					"arabic": "قلم",
+					"english": "a pen",
+					"transliteration": "galam"
+				},
+				{
+					"arabic": "صغير.",
+					"english": "small.",
+					"transliteration": "sughayyar."
+				}
+			],
+			"targetWords": [
+				"This (masculine)",
+				"Pen",
+				"Small"
+			]
+		},
+		{
+			"arabic": "دول السيارات حق مين؟",
+			"arabicTashkeel": "دول السَّيّارات حَق مين؟",
+			"english": "Whose are these cars?",
+			"transliteration": "dool is-sayyaaraat 7agg meen?",
+			"wordAlignments": [
+				{
+					"arabic": "دول",
+					"english": "These",
+					"transliteration": "dool"
+				},
+				{
+					"arabic": "السيارات",
+					"english": "cars",
+					"transliteration": "is-sayyaaraat"
+				},
+				{
+					"arabic": "حق",
+					"english": "belong to",
+					"transliteration": "7agg"
+				},
+				{
+					"arabic": "مين؟",
+					"english": "whom?",
+					"transliteration": "meen?"
+				}
+			],
+			"targetWords": [
+				"These",
+				"Belonging to",
+				"Who"
+			]
+		},
+		{
+			"arabic": "البيت كبير؟",
+			"arabicTashkeel": "البيت كْبير؟",
+			"english": "Is the house big?",
+			"transliteration": "il-bait kbeer?",
+			"wordAlignments": [
+				{
+					"arabic": "البيت",
+					"english": "Is the house",
+					"transliteration": "il-bait"
+				},
+				{
+					"arabic": "كبير؟",
+					"english": "big?",
+					"transliteration": "kbeer?"
+				}
+			],
+			"targetWords": [
+				"House",
+				"Big"
+			]
+		},
+		{
+			"arabic": "ديك المدرسة كبيرة.",
+			"arabicTashkeel": "ديك المَدرَسة كْبيرة.",
+			"english": "That school is big.",
+			"transliteration": "deek il-madrasa kbeera.",
+			"wordAlignments": [
+				{
+					"arabic": "ديك",
+					"english": "That",
+					"transliteration": "deek"
+				},
+				{
+					"arabic": "المدرسة",
+					"english": "school is",
+					"transliteration": "il-madrasa"
+				},
+				{
+					"arabic": "كبيرة.",
+					"english": "big.",
+					"transliteration": "kbeera."
+				}
+			],
+			"targetWords": [
+				"That (feminine)"
+			]
+		},
+		{
+			"arabic": "إيش هادا الكتاب؟",
+			"arabicTashkeel": "إيش هادا الكِتاب؟",
+			"english": "What is this book?",
+			"transliteration": "eesh haada il-kitaab?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What is",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "هادا",
+					"english": "this",
+					"transliteration": "haada"
+				},
+				{
+					"arabic": "الكتاب؟",
+					"english": "book?",
+					"transliteration": "il-kitaab?"
+				}
+			],
+			"targetWords": [
+				"What",
+				"This (masculine)",
+				"Book"
+			]
+		},
+		{
+			"arabic": "هادا حلو مرة.",
+			"arabicTashkeel": "هادا حِلو مَرّة.",
+			"english": "This is very nice.",
+			"transliteration": "haada 7ilu marra.",
+			"wordAlignments": [
+				{
+					"arabic": "هادا",
+					"english": "This is",
+					"transliteration": "haada"
+				},
+				{
+					"arabic": "حلو",
+					"english": "nice",
+					"transliteration": "7ilu"
+				},
+				{
+					"arabic": "مرة.",
+					"english": "very.",
+					"transliteration": "marra."
+				}
+			],
+			"targetWords": [
+				"This (masculine)",
+				"Nice"
+			]
+		},
+		{
+			"arabic": "هادي صغيرة.",
+			"arabicTashkeel": "هادي صُغَيَّرة.",
+			"english": "This one is small.",
+			"transliteration": "haadi sughayyara.",
+			"wordAlignments": [
+				{
+					"arabic": "هادي",
+					"english": "This one is",
+					"transliteration": "haadi"
+				},
+				{
+					"arabic": "صغيرة.",
+					"english": "small.",
+					"transliteration": "sughayyara."
+				}
+			],
+			"targetWords": [
+				"This (feminine)"
+			]
+		},
+		{
+			"arabic": "دول حلوين.",
+			"arabicTashkeel": "دول حِلوين.",
+			"english": "These are nice.",
+			"transliteration": "dool 7ilween.",
+			"wordAlignments": [
+				{
+					"arabic": "دول",
+					"english": "These are",
+					"transliteration": "dool"
+				},
+				{
+					"arabic": "حلوين.",
+					"english": "nice.",
+					"transliteration": "7ilween."
+				}
+			],
+			"targetWords": [
+				"These"
+			]
+		},
+		{
+			"arabic": "داك كتاب كبير.",
+			"arabicTashkeel": "داك كِتاب كْبير.",
+			"english": "That is a big book.",
+			"transliteration": "daak kitaab kbeer.",
+			"wordAlignments": [
+				{
+					"arabic": "داك",
+					"english": "That is",
+					"transliteration": "daak"
+				},
+				{
+					"arabic": "كتاب",
+					"english": "a book",
+					"transliteration": "kitaab"
+				},
+				{
+					"arabic": "كبير.",
+					"english": "big.",
+					"transliteration": "kbeer."
+				}
+			],
+			"targetWords": [
+				"That (masculine)",
+				"Book",
+				"Big"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "At Home",
+			"sentences": [
+				{
+					"arabic": "هادا بيتنا.",
+					"arabicTashkeel": "هادا بيتنا.",
+					"english": "This is our house.",
+					"transliteration": "haada baitna.",
+					"wordAlignments": [
+						{
+							"arabic": "هادا",
+							"english": "This is",
+							"transliteration": "haada"
+						},
+						{
+							"arabic": "بيتنا.",
+							"english": "our house.",
+							"transliteration": "baitna."
+						}
+					]
+				},
+				{
+					"arabic": "البيت صغير بس حلو.",
+					"arabicTashkeel": "البيت صُغَيَّر بَس حِلو.",
+					"english": "The house is small but nice.",
+					"transliteration": "il-bait sughayyar bas 7ilu.",
+					"wordAlignments": [
+						{
+							"arabic": "البيت",
+							"english": "The house is",
+							"transliteration": "il-bait"
+						},
+						{
+							"arabic": "صغير",
+							"english": "small",
+							"transliteration": "sughayyar"
+						},
+						{
+							"arabic": "بس",
+							"english": "but",
+							"transliteration": "bas"
+						},
+						{
+							"arabic": "حلو.",
+							"english": "nice.",
+							"transliteration": "7ilu."
+						}
+					]
+				},
+				{
+					"arabic": "هادي السيارة حق أبويا.",
+					"arabicTashkeel": "هادي السَّيّارة حَق أبويا.",
+					"english": "This car belongs to my dad.",
+					"transliteration": "haadi is-sayyaara 7agg abooya.",
+					"wordAlignments": [
+						{
+							"arabic": "هادي",
+							"english": "This",
+							"transliteration": "haadi"
+						},
+						{
+							"arabic": "السيارة",
+							"english": "car",
+							"transliteration": "is-sayyaara"
+						},
+						{
+							"arabic": "حق",
+							"english": "belongs to",
+							"transliteration": "7agg"
+						},
+						{
+							"arabic": "أبويا.",
+							"english": "my dad.",
+							"transliteration": "abooya."
+						}
+					]
+				},
+				{
+					"arabic": "داك القلم حقي.",
+					"arabicTashkeel": "داك القَلَم حَقّي.",
+					"english": "That pen is mine.",
+					"transliteration": "daak il-galam 7aggi.",
+					"wordAlignments": [
+						{
+							"arabic": "داك",
+							"english": "That",
+							"transliteration": "daak"
+						},
+						{
+							"arabic": "القلم",
+							"english": "pen is",
+							"transliteration": "il-galam"
+						},
+						{
+							"arabic": "حقي.",
+							"english": "mine.",
+							"transliteration": "7aggi."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "In the Classroom",
+			"sentences": [
+				{
+					"arabic": "إيش هادا؟",
+					"arabicTashkeel": "إيش هادا؟",
+					"english": "What is this?",
+					"transliteration": "eesh haada?",
+					"wordAlignments": [
+						{
+							"arabic": "إيش",
+							"english": "What is",
+							"transliteration": "eesh"
+						},
+						{
+							"arabic": "هادا؟",
+							"english": "this?",
+							"transliteration": "haada?"
+						}
+					]
+				},
+				{
+					"arabic": "هادا كتاب.",
+					"arabicTashkeel": "هادا كِتاب.",
+					"english": "This is a book.",
+					"transliteration": "haada kitaab.",
+					"wordAlignments": [
+						{
+							"arabic": "هادا",
+							"english": "This is",
+							"transliteration": "haada"
+						},
+						{
+							"arabic": "كتاب.",
+							"english": "a book.",
+							"transliteration": "kitaab."
+						}
+					]
+				},
+				{
+					"arabic": "مين داك؟",
+					"arabicTashkeel": "مين داك؟",
+					"english": "Who is that?",
+					"transliteration": "meen daak?",
+					"wordAlignments": [
+						{
+							"arabic": "مين",
+							"english": "Who is",
+							"transliteration": "meen"
+						},
+						{
+							"arabic": "داك؟",
+							"english": "that?",
+							"transliteration": "daak?"
+						}
+					]
+				},
+				{
+					"arabic": "داك المدرس.",
+					"arabicTashkeel": "داك المُدَرِّس.",
+					"english": "That is the teacher.",
+					"transliteration": "daak il-mudarris.",
+					"wordAlignments": [
+						{
+							"arabic": "داك",
+							"english": "That is",
+							"transliteration": "daak"
+						},
+						{
+							"arabic": "المدرس.",
+							"english": "the teacher.",
+							"transliteration": "il-mudarris."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is browsing a stall in the old Balad market in Jeddah, where books and pens are sold.",
+		"studentRole": "A shopper learning Saudi (Hijazi) Arabic.",
+		"otherRole": "The friendly stall owner.",
+		"goalEnglish": "Point at things and ask what they are, whose they are, and whether they are big or small.",
+		"targetWords": [
+			"This (masculine)",
+			"This (feminine)",
+			"That (masculine)",
+			"What",
+			"Who",
+			"Book",
+			"Pen",
+			"Belonging to"
+		]
+	}
+}
