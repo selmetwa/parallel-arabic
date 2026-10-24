@@ -1,0 +1,235 @@
+# Saudi (Hijazi) — A1 — Numbers from 11 to 100 (base-a1-u06)
+# Hijazi teens end in -aashar: حِداشَر، إتناشَر، خَمَستاشَر. جَوّال = mobile phone (Saudi word).
+
+@vocab
+number = Eleven
+حِداشَر / 7idaashar / Eleven
+
+number = Twelve
+إتناشَر / itnaashar / Twelve
+
+number = Fifteen
+خَمَستاشَر / khamastaashar / Fifteen
+
+number = Twenty
+عِشرين / 3ishreen / Twenty
+
+number = Thirty
+تَلاتين / talaateen / Thirty
+
+number = Forty
+أربَعين / arba3een / Forty
+
+number = Fifty
+خَمسين / khamseen / Fifty
+
+number = Sixty
+سِتّين / sitteen / Sixty
+
+number = Seventy
+سَبعين / sab3een / Seventy
+
+number = Eighty
+تَمانين / tamaaneen / Eighty
+
+number = Ninety
+تِسعين / tis3een / Ninety
+
+number = Hundred
+مِيّة / miyya / Hundred
+
+noun:m = Number
+رَقَم / ragam / Number
+
+noun:m = Mobile phone
+جَوّال / jawwaal / Mobile
+
+noun:f = Year
+سَنة / sana / Year
+
+@pool
+I am twenty years old. = Twenty; Year
+عُمري / 3umri / My age is | عِشرين / 3ishreen / twenty | سَنة. / sana. / years.
+
+He is thirty years old. = Thirty; Year
+عُمرُه / 3umru / His age is | تَلاتين / talaateen / thirty | سَنة. / sana. / years.
+
+She is forty years old. = Forty; Year
+عُمرَها / 3umraha / Her age is | أربَعين / arba3een / forty | سَنة. / sana. / years.
+
+My uncle is fifty years old. = Fifty; Year
+عَمّي / 3ammi / My uncle | عُمرُه / 3umru / his age is | خَمسين / khamseen / fifty | سَنة. / sana. / years.
+
+My grandfather is seventy years old. = Seventy; Year
+جَدّي / jaddi / My grandfather | عُمرُه / 3umru / his age is | سَبعين / sab3een / seventy | سَنة. / sana. / years.
+
+My grandmother is eighty years old. = Eighty; Year
+جَدّتي / jaddati / My grandmother | عُمرَها / 3umraha / her age is | تَمانين / tamaaneen / eighty | سَنة. / sana. / years.
+
+How much is this? Twenty riyals. = Twenty
+بِكَم / bikam / For how much is | هادا؟ / haada? / this? | بعِشرين / b-3ishreen / For twenty | ريال. / riyaal. / riyals.
+
+This is fifty riyals. = Fifty
+هادا / haada / This is | بخَمسين / b-khamseen / for fifty | ريال. / riyaal. / riyals.
+
+What is your mobile number? = Number; Mobile phone
+إيش / eesh / What is | رَقَم / ragam / the number of | جَوّالَك؟ / jawwaalak? / your mobile?
+
+The house number is twelve. = Number; Twelve
+رَقَم / ragam / The number of | البيت / il-bait / the house is | إتناشَر. / itnaashar. / twelve.
+
+Room number eleven. = Number; Eleven
+الغُرفة / il-ghurfa / The room | رَقَم / ragam / number | حِداشَر. / 7idaashar. / eleven.
+
+I have fifteen books. = Fifteen
+عِندي / 3indi / I have | خَمَستاشَر / khamastaashar / fifteen | كِتاب. / kitaab. / books.
+
+There are twenty students in the class. = Twenty
+فيه / feeh / There are | عِشرين / 3ishreen / twenty | طالِب / taalib / students | في / fi / in | الفَصل. / il-fasl. / the class.
+
+Ten and ten is twenty. = Twenty
+عَشَرة / 3ashara / Ten | وعَشَرة / w-3ashara / and ten is | عِشرين. / 3ishreen. / twenty.
+
+Twenty and twenty is forty. = Twenty; Forty
+عِشرين / 3ishreen / Twenty | وعِشرين / w-3ishreen / and twenty is | أربَعين. / arba3een. / forty.
+
+Thirty and thirty is sixty. = Thirty; Sixty
+تَلاتين / talaateen / Thirty | وتَلاتين / w-talaateen / and thirty is | سِتّين. / sitteen. / sixty.
+
+Fifty and fifty is a hundred. = Fifty; Hundred
+خَمسين / khamseen / Fifty | وخَمسين / w-khamseen / and fifty is | مِيّة. / miyya. / a hundred.
+
+Forty and fifty is ninety. = Forty; Fifty; Ninety
+أربَعين / arba3een / Forty | وخَمسين / w-khamseen / and fifty is | تِسعين. / tis3een. / ninety.
+
+Sixty and twenty is eighty. = Sixty; Twenty; Eighty
+سِتّين / sitteen / Sixty | وعِشرين / w-3ishreen / and twenty is | تَمانين. / tamaaneen. / eighty.
+
+Seventy and thirty is a hundred. = Seventy; Thirty; Hundred
+سَبعين / sab3een / Seventy | وتَلاتين / w-talaateen / and thirty is | مِيّة. / miyya. / a hundred.
+
+Twenty-five. = Twenty
+خَمسة / khamsa / Five | وعِشرين. / w-3ishreen. / and twenty.
+
+Ninety riyals. = Ninety
+تِسعين / tis3een / Ninety | ريال. / riyaal. / riyals.
+
+The book is twelve riyals. = Twelve
+الكِتاب / il-kitaab / The book is | بإتناشَر / b-itnaashar / for twelve | ريال. / riyaal. / riyals.
+
+I am eleven years old. = Eleven; Year
+عُمري / 3umri / My age is | حِداشَر / 7idaashar / eleven | سَنة. / sana. / years.
+
+She is fifteen years old. = Fifteen; Year
+عُمرَها / 3umraha / Her age is | خَمَستاشَر / khamastaashar / fifteen | سَنة. / sana. / years.
+
+A hundred riyals. = Hundred
+مِيّة / miyya / A hundred | ريال. / riyaal. / riyals.
+
+Sixty minutes. = Sixty
+سِتّين / sitteen / Sixty | دَقيقة. / dageega. / minutes.
+
+An hour has sixty minutes. = Sixty
+السّاعة / is-saa3a / The hour | فيها / feeha / has in it | سِتّين / sitteen / sixty | دَقيقة. / dageega. / minutes.
+
+A year has twelve months. = Year; Twelve
+السَّنة / is-sana / The year | فيها / feeha / has in it | إتناشَر / itnaashar / twelve | شَهر. / shahr. / months.
+
+What is your number? = Number
+إيش / eesh / What is | رَقمَك؟ / ragmak? / your number?
+
+My mobile is new. = Mobile phone
+جَوّالي / jawwaali / My mobile is | جَديد. / jadeed. / new.
+
+Where is the mobile? = Mobile phone
+فين / feen / Where is | الجَوّال؟ / il-jawwaal? / the mobile?
+
+The mobile number is wrong. = Number; Mobile phone
+رَقَم / ragam / The number of | الجَوّال / il-jawwaal / the mobile is | غَلَط. / ghalat. / wrong.
+
+Eighty riyals, expensive! = Eighty
+تَمانين / tamaaneen / Eighty | ريال، / riyaal, / riyals, | غالي! / ghaali! / expensive!
+
+Ninety or a hundred? = Ninety; Hundred
+تِسعين / tis3een / Ninety | وَلّا / walla / or | مِيّة؟ / miyya? / a hundred?
+
+Seventy, not eighty. = Seventy; Eighty
+سَبعين، / sab3een, / Seventy, | مو / moo / not | تَمانين. / tamaaneen. / eighty.
+
+Only thirty riyals. = Thirty
+تَلاتين / talaateen / Thirty | ريال / riyaal / riyals | بَس. / bas. / only.
+
+Eleven or twelve? = Eleven; Twelve
+حِداشَر / 7idaashar / Eleven | وَلّا / walla / or | إتناشَر؟ / itnaashar? / twelve?
+
+There are forty students in the class. = Forty
+فيه / feeh / There are | أربَعين / arba3een / forty | طالِب / taalib / students | في / fi / in | الفَصل. / il-fasl. / the class.
+
+Only fifteen minutes. = Fifteen
+خَمَستاشَر / khamastaashar / Fifteen | دَقيقة / dageega / minutes | بَس. / bas. / only.
+
+Eleven players in the team. = Eleven
+حِداشَر / 7idaashar / Eleven | لاعِب / laa3ib / players | في / fi / in | الفَريق. / il-fareeg. / the team.
+
+The mobile is expensive, a hundred riyals. = Mobile phone; Hundred
+الجَوّال / il-jawwaal / The mobile is | غالي، / ghaali, / expensive, | بمِيّة / b-miyya / for a hundred | ريال. / riyaal. / riyals.
+
+Twelve and three is fifteen. = Twelve; Fifteen
+إتناشَر / itnaashar / Twelve | وتَلاتة / w-talaata / and three is | خَمَستاشَر. / khamastaashar. / fifteen.
+
+My dad is sixty years old. = Sixty; Year
+أبويا / abooya / My dad | عُمرُه / 3umru / his age is | سِتّين / sitteen / sixty | سَنة. / sana. / years.
+
+My grandfather is ninety! = Ninety
+جَدّي / jaddi / My grandfather | عُمرُه / 3umru / his age is | تِسعين! / tis3een! / ninety!
+
+What is the house number? = Number
+إيش / eesh / What is | رَقَم / ragam / the number of | البيت؟ / il-bait? / the house?
+
+Eleven riyals. = Eleven
+حِداشَر / 7idaashar / Eleven | ريال. / riyaal. / riyals.
+
+The class has thirty students. = Thirty
+الفَصل / il-fasl / The class | فيه / feeh / has in it | تَلاتين / talaateen / thirty | طالِب. / taalib. / students.
+
+Forty riyals. = Forty
+أربَعين / arba3een / Forty | ريال. / riyaal. / riyals.
+
+Fifty minutes. = Fifty
+خَمسين / khamseen / Fifty | دَقيقة. / dageega. / minutes.
+
+Seventy riyals. = Seventy
+سَبعين / sab3een / Seventy | ريال. / riyaal. / riyals.
+
+Eighty or ninety? = Eighty; Ninety
+تَمانين / tamaaneen / Eighty | وَلّا / walla / or | تِسعين؟ / tis3een? / ninety?
+
+@passage My Family's Ages
+My grandfather is eighty years old.
+جَدّي / jaddi / My grandfather | عُمرُه / 3umru / his age is | تَمانين / tamaaneen / eighty | سَنة. / sana. / years.
+
+My dad is fifty years old.
+أبويا / abooya / My dad | عُمرُه / 3umru / his age is | خَمسين / khamseen / fifty | سَنة. / sana. / years.
+
+I am twenty years old.
+أنا / ana / I | عُمري / 3umri / my age is | عِشرين / 3ishreen / twenty | سَنة. / sana. / years.
+
+@passage At the Phone Shop
+How much is this mobile?
+بِكَم / bikam / For how much is | هادا / haada / this | الجَوّال؟ / il-jawwaal? / mobile?
+
+This one is nine hundred riyals.
+هادا / haada / This one is | بتِسعمِيّة / b-tis3imiyya / for nine hundred | ريال. / riyaal. / riyals.
+
+Expensive! Do you have one for sixty?
+غالي! / ghaali! / Expensive! | عِندَك / 3indak / Do you have | واحِد / waa7id / one | بسِتّين؟ / b-sitteen? / for sixty?
+
+Yes, here you are.
+إيوَه، / eewa, / Yes, | تِفَضَّل. / tifaddal. / here you are.
+
+@scenario
+situation: The student is in a phone shop in a Jeddah mall, looking for a cheap mobile.
+studentRole: A customer learning Saudi (Hijazi) Arabic.
+otherRole: The shop assistant, who likes to bargain.
+goalEnglish: Ask the price of a mobile, bargain it down using numbers in the tens, and give your phone number.
+targetWords: Mobile phone; Number; Twenty; Fifty; Sixty; Ninety; Hundred
