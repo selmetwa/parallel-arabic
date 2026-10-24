@@ -1,6 +1,7 @@
 <script>
 	import { resolve } from '$app/paths';
 	import AppStoreBadge from '$lib/components/AppStoreBadge.svelte';
+	import { PLANS } from '$lib/constants/pricing';
 
 	/**
 	 * Every in-app link the page makes, narrow enough for `resolve()` to type-check.
@@ -107,6 +108,11 @@
 	const CYCLE_MS = 3600;
 
 	let active = $state(0);
+
+	/** @type {'annual' | 'monthly'} */
+	let billing = $state('annual');
+	const monthlyPrice = PLANS.monthly.price.split('/')[0];
+	const annualPerMonth = PLANS.annual.perMonth.split('/')[0];
 	let autoplay = $state(true);
 	let paused = $state(false);
 	let inView = $state(false);
@@ -745,6 +751,7 @@
 				<article class="plan rise">
 					<h3 class="plan-name">Free</h3>
 					<p class="plan-price">$0</p>
+					<p class="plan-billed">Free forever, no card needed</p>
 					<ul class="plan-list">
 						{#each freePlan as item (item)}
 							<li>{@render check()}{item}</li>
@@ -754,8 +761,30 @@
 				</article>
 
 				<article class="plan plan--pro rise">
-					<h3 class="plan-name">Pro</h3>
-					<p class="plan-price">$10<span>/month</span></p>
+					<div class="plan-head">
+						<h3 class="plan-name">Pro</h3>
+						<div class="billing" role="group" aria-label="Billing period">
+							<button
+								type="button"
+								aria-pressed={billing === 'monthly'}
+								onclick={() => (billing = 'monthly')}>{PLANS.monthly.label}</button
+							>
+							<button
+								type="button"
+								aria-pressed={billing === 'annual'}
+								onclick={() => (billing = 'annual')}>{PLANS.annual.label}</button
+							>
+						</div>
+					</div>
+					{#if billing === 'annual'}
+						<p class="plan-price">{annualPerMonth}<span>/month</span></p>
+						<p class="plan-billed">
+							Billed {PLANS.annual.price} · <strong>{PLANS.annual.savings}</strong>
+						</p>
+					{:else}
+						<p class="plan-price">{monthlyPrice}<span>/month</span></p>
+						<p class="plan-billed">Billed monthly, cancel anytime</p>
+					{/if}
 					<p class="plan-note">Everything in Free, plus:</p>
 					<ul class="plan-list">
 						{#each proPlan as item (item)}
@@ -1797,6 +1826,43 @@
 		font-weight: 400;
 		letter-spacing: 0;
 		color: var(--text2);
+	}
+	.plan-head {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.75rem;
+	}
+	.billing {
+		display: inline-flex;
+		gap: 0.15rem;
+		border-radius: 999px;
+		background: var(--tile5);
+		padding: 0.2rem;
+	}
+	.billing button {
+		border-radius: 999px;
+		padding: 0.3rem 0.75rem;
+		font-size: 0.8125rem;
+		font-weight: 600;
+		color: var(--text2);
+		transition:
+			background-color 150ms ease,
+			color 150ms ease;
+	}
+	.billing button[aria-pressed='true'] {
+		background: var(--tile3);
+		color: var(--text1);
+		box-shadow: 0 1px 2px rgb(0 0 0 / 0.12);
+	}
+	.plan-billed {
+		margin-top: 0.5rem;
+		font-size: 0.875rem;
+		color: var(--text2);
+	}
+	.plan-billed strong {
+		font-weight: 600;
+		color: var(--text1);
 	}
 	.plan-note {
 		margin-top: 1.25rem;
