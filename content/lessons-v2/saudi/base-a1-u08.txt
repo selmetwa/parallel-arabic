@@ -1,0 +1,256 @@
+# Saudi (Hijazi) — A1 — Colors and Basic Adjectives (base-a1-u08)
+# Vocab gives the masculine form; sentences practise the feminine agreement too. Hijazi says ظ as ض (نَظيف = "nadheef").
+
+@vocab
+adjective = Red
+أحمَر / a7mar / Red
+
+adjective = Blue
+أزرَق / azrag / Blue
+
+adjective = Green
+أخضَر / akhdhar / Green
+
+adjective = Yellow
+أصفَر / asfar / Yellow
+
+adjective = White
+أبيَض / abyadh / White
+
+adjective = Black
+أسوَد / aswad / Black
+
+noun:m = Color
+لون / loon / Color
+
+adjective = New
+جَديد / jadeed / New
+
+adjective = Old (for things)
+قَديم / gadeem / Old
+
+adjective = Tall
+طَويل / taweel / Tall
+
+adjective = Short
+قَصير / gaseer / Short
+
+adjective = Expensive
+غالي / ghaali / Expensive
+
+adjective = Cheap
+رَخيص / rakhees / Cheap
+
+adjective = Clean
+نَظيف / nadheef / Clean
+
+adjective = Nice
+حِلو / 7ilu / Nice
+
+@pool
+The car is red. = Red
+السَّيّارة / is-sayyaara / The car is | حَمرا. / 7amra. / red.
+
+The pen is red. = Red
+القَلَم / il-galam / The pen is | أحمَر. / a7mar. / red.
+
+The house is white. = White
+البيت / il-bait / The house is | أبيَض. / abyadh. / white.
+
+The car is white. = White
+السَّيّارة / is-sayyaara / The car is | بيضا. / baidha. / white.
+
+The book is blue. = Blue
+الكِتاب / il-kitaab / The book is | أزرَق. / azrag. / blue.
+
+The door is green. = Green
+الباب / il-baab / The door is | أخضَر. / akhdhar. / green.
+
+The sun is yellow. = Yellow
+الشَّمس / ish-shams / The sun is | صَفرا. / safra. / yellow.
+
+The cat is black. = Black
+البِسّة / il-bissa / The cat is | سودا. / sooda. / black.
+
+What color is the car? = Color
+إيش / eesh / What is | لون / loon / the color of | السَّيّارة؟ / is-sayyaara? / the car?
+
+Its color is blue. = Color; Blue
+لونها / loonaha / Its color is | أزرَق. / azrag. / blue.
+
+This mobile is new. = New
+هادا / haada / This | الجَوّال / il-jawwaal / mobile is | جَديد. / jadeed. / new.
+
+The car is new. = New
+السَّيّارة / is-sayyaara / The car is | جَديدة. / jadeeda. / new.
+
+The house is old. = Old (for things)
+البيت / il-bait / The house is | قَديم. / gadeem. / old.
+
+My brother is tall. = Tall
+أخويا / akhooya / My brother is | طَويل. / taweel. / tall.
+
+My sister is short. = Short
+أُختي / ukhti / My sister is | قَصيرة. / gaseera. / short.
+
+This is very expensive. = Expensive
+هادا / haada / This is | غالي / ghaali / expensive | مَرّة. / marra. / very.
+
+Bread is cheap. = Cheap
+العيش / il-3eesh / Bread is | رَخيص. / rakhees. / cheap.
+
+The room is clean. = Clean
+الغُرفة / il-ghurfa / The room is | نَظيفة. / nadheefa. / clean.
+
+I want a red dress. = Red
+أبغى / abgha / I want | فُستان / fustaan / a dress | أحمَر. / a7mar. / red.
+
+Do you have a black pen? = Black
+عِندَك / 3indak / Do you have | قَلَم / galam / a pen | أسوَد؟ / aswad? / black?
+
+The sky is blue. = Blue
+السَّما / is-sama / The sky is | زَرقا. / zarga. / blue.
+
+The tree is green. = Green
+الشَّجَرة / ish-shajara / The tree is | خَضرا. / khadhra. / green.
+
+Bananas are yellow. = Yellow
+المَوز / il-mooz / Bananas are | أصفَر. / asfar. / yellow.
+
+Milk is white. = White
+الحَليب / il-7aleeb / Milk is | أبيَض. / abyadh. / white.
+
+My favourite color is green. = Color; Green
+لوني / looni / My color | المُفَضَّل / il-mufadhdhal / favourite is | الأخضَر. / il-akhdhar. / green.
+
+What is your favourite color? = Color
+إيش / eesh / What is | لونَك / loonak / your color | المُفَضَّل؟ / il-mufadhdhal? / favourite?
+
+The new book is expensive. = New; Expensive
+الكِتاب / il-kitaab / The book | الجَديد / ij-jadeed / new is | غالي. / ghaali. / expensive.
+
+The old car is cheap. = Old (for things); Cheap
+السَّيّارة / is-sayyaara / The car | القَديمة / il-gadeema / old is | رَخيصة. / rakheesa. / cheap.
+
+The girl is tall. = Tall
+البِنت / il-bint / The girl is | طَويلة. / taweela. / tall.
+
+The boy is short. = Short
+الوَلَد / il-walad / The boy is | قَصير. / gaseer. / short.
+
+The house is very clean. = Clean
+البيت / il-bait / The house is | نَظيف / nadheef / clean | مَرّة. / marra. / very.
+
+The black car is expensive. = Black; Expensive
+السَّيّارة / is-sayyaara / The car | السّودا / is-sooda / black is | غالية. / ghaalya. / expensive.
+
+The white thobe is clean. = White; Clean
+التّوب / it-toob / The thobe | الأبيَض / il-abyadh / white is | نَظيف. / nadheef. / clean.
+
+This pen is cheap. = Cheap
+هادا / haada / This | القَلَم / il-galam / pen is | رَخيص. / rakhees. / cheap.
+
+Is the door red or blue? = Red; Blue
+الباب / il-baab / Is the door | أحمَر / a7mar / red | وَلّا / walla / or | أزرَق؟ / azrag? / blue?
+
+I want a yellow car. = Yellow
+أبغى / abgha / I want | سَيّارة / sayyaara / a car | صَفرا. / safra. / yellow.
+
+The old mobile is black. = Old (for things); Black
+الجَوّال / il-jawwaal / The mobile | القَديم / il-gadeem / old is | أسوَد. / aswad. / black.
+
+Green is a nice color. = Green; Color; Nice
+الأخضَر / il-akhdhar / Green is | لون / loon / a color | حِلو. / 7ilu. / nice.
+
+This isn't new, it's old. = New; Old (for things)
+هادا / haada / This is | مو / moo / not | جَديد، / jadeed, / new, | هادا / haada / this is | قَديم. / gadeem. / old.
+
+My dad is tall and my mom is short. = Tall; Short
+أبويا / abooya / My dad is | طَويل / taweel / tall | وأُمّي / w-ummi / and my mom is | قَصيرة. / gaseera. / short.
+
+The room is not clean. = Clean
+الغُرفة / il-ghurfa / The room is | مو / moo / not | نَظيفة. / nadheefa. / clean.
+
+Is the food expensive? No, cheap. = Expensive; Cheap
+الأكل / il-akl / Is the food | غالي؟ / ghaali? / expensive? | لا، / laa, / No, | رَخيص. / rakhees. / cheap.
+
+The white cat is nice. = White; Nice
+البِسّة / il-bissa / The cat | البيضا / il-baidha / white is | حِلوة. / 7ilwa. / nice.
+
+The blue book is mine. = Blue
+الكِتاب / il-kitaab / The book | الأزرَق / il-azrag / blue is | حَقّي. / 7aggi. / mine.
+
+The red car is new. = Red; New
+السَّيّارة / is-sayyaara / The car | الحَمرا / il-7amra / red is | جَديدة. / jadeeda. / new.
+
+Green or yellow? = Green; Yellow
+أخضَر / akhdhar / Green | وَلّا / walla / or | أصفَر؟ / asfar? / yellow?
+
+The big house is old. = Old (for things)
+البيت / il-bait / The house | الكْبير / il-kbeer / big is | قَديم. / gadeem. / old.
+
+The boy is very tall. = Tall
+الوَلَد / il-walad / The boy is | طَويل / taweel / tall | مَرّة. / marra. / very.
+
+The dress is short. = Short
+الفُستان / il-fustaan / The dress is | قَصير. / gaseer. / short.
+
+The street is clean. = Clean
+الشّارع / ish-shaari3 / The street is | نَظيف. / nadheef. / clean.
+
+This color is nice. = Color; Nice
+هادا / haada / This | اللون / il-loon / color is | حِلو. / 7ilu. / nice.
+
+Black or white? = Black; White
+أسوَد / aswad / Black | وَلّا / walla / or | أبيَض؟ / abyadh? / white?
+
+Lemons are yellow. = Yellow
+اللَّيمون / il-laimoon / Lemons are | أصفَر. / asfar. / yellow.
+
+The teacher is tall. = Tall
+المُدَرِّس / il-mudarris / The teacher is | طَويل. / taweel. / tall.
+
+My grandmother is short. = Short
+جَدّتي / jaddati / My grandmother is | قَصيرة. / gaseera. / short.
+
+The mobile is expensive. = Expensive
+الجَوّال / il-jawwaal / The mobile is | غالي. / ghaali. / expensive.
+
+Fruit is cheap at the market. = Cheap
+الفَواكِه / il-fawaakih / Fruit is | رَخيصة / rakheesa / cheap | في / fi / in | السّوق. / is-soog. / the market.
+
+The house is nice and new. = Nice; New
+البيت / il-bait / The house is | حِلو / 7ilu / nice | وجَديد. / w-jadeed. / and new.
+
+@passage My Room
+My room is small but clean.
+غُرفتي / ghurfati / My room is | صُغَيَّرة / sughayyara / small | بَس / bas / but | نَظيفة. / nadheefa. / clean.
+
+The door is white and the chair is blue.
+الباب / il-baab / The door is | أبيَض / abyadh / white | والكُرسي / w-il-kursi / and the chair is | أزرَق. / azrag. / blue.
+
+The bag is red.
+الشَّنطة / ish-shanta / The bag is | حَمرا. / 7amra. / red.
+
+The room is nice.
+الغُرفة / il-ghurfa / The room is | حِلوة. / 7ilwa. / nice.
+
+@passage At the Car Showroom
+This black car is expensive.
+هادي / haadi / This | السَّيّارة / is-sayyaara / car | السّودا / is-sooda / black is | غالية. / ghaalya. / expensive.
+
+What color is the cheap car?
+إيش / eesh / What is | لون / loon / the color of | السَّيّارة / is-sayyaara / the car | الرَّخيصة؟ / ir-rakheesa? / cheap?
+
+Its color is white.
+لونها / loonaha / Its color is | أبيَض. / abyadh. / white.
+
+Okay, I want the white one.
+طَيِّب، / tayyib, / Okay, | أبغى / abgha / I want | البيضا. / il-baidha. / the white one.
+
+@scenario
+situation: The student is shopping for clothes in a Jeddah mall and wants something in a particular color and price.
+studentRole: A shopper learning Saudi (Hijazi) Arabic.
+otherRole: The shop assistant, who has many colors.
+goalEnglish: Ask for a shirt or dress in your favourite color, ask if it is new, and say whether it is expensive or cheap.
+targetWords: Color; Red; Blue; White; Black; New; Expensive; Cheap
