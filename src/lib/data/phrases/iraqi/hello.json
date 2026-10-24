@@ -1,0 +1,63 @@
+{
+  "slug": "hello",
+  "dialect": "iraqi",
+  "english": "hello",
+  "arabic": "هَلا",
+  "arabicPlain": "هلا",
+  "transliteration": "hala",
+  "franco": "hala",
+  "literal": "welcome",
+  "usage": "The everyday Iraqi hello, warm and fine for anyone, man or woman, friend or stranger. Iraqis rarely stop at one word: a hello is usually followed straight away by \"shlonak?\" and a round of blessings.",
+  "variants": [
+    {
+      "label": "formal / traditional",
+      "arabic": "السَّلامُ عَلَيكُم",
+      "transliteration": "is-salaamu 3alaikum",
+      "english": "peace be upon you",
+      "note": "The standard greeting when entering a shop, an office or a room full of people; always answered with \"w-3alaikum is-salaam\"."
+    },
+    {
+      "label": "extra warm",
+      "arabic": "هَلا بيك",
+      "transliteration": "hala beek",
+      "english": "welcome to you",
+      "note": "Adds warmth when greeting one man; to a woman say \"hala beech\", to a group \"hala beekum\"."
+    },
+    {
+      "label": "casual",
+      "arabic": "هَلو",
+      "transliteration": "hallo",
+      "english": "hello",
+      "note": "Borrowed from English and very common among young people in Baghdad."
+    }
+  ],
+  "responses": [
+    {
+      "arabic": "هَلا بيك",
+      "transliteration": "hala beek",
+      "english": "welcome to you"
+    },
+    {
+      "arabic": "هَلا وغَلا",
+      "transliteration": "hala w-ghala",
+      "english": "welcome, dear one"
+    }
+  ],
+  "examples": [
+    {
+      "arabic": "هَلا، شلونَك اليوم؟",
+      "transliteration": "hala, shloonak il-yoom?",
+      "english": "Hello, how are you today?"
+    },
+    {
+      "arabic": "هَلا عيوني، شنو الأخبار؟",
+      "transliteration": "hala 3yooni, shinu il-akhbaar?",
+      "english": "Hello my dear, what's new?"
+    },
+    {
+      "arabic": "هَلا، أحمد موجود؟",
+      "transliteration": "hala, a7mad mawjood?",
+      "english": "Hello, is Ahmed here?"
+    }
+  ]
+}

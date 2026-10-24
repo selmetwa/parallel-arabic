@@ -1,0 +1,56 @@
+{
+  "slug": "whats-the-weather-like",
+  "dialect": "iraqi",
+  "english": "what's the weather like?",
+  "arabic": "شلون الجَو؟",
+  "arabicPlain": "شلون الجو؟",
+  "transliteration": "shloon ij-jaww?",
+  "franco": "shloon ij-jaww?",
+  "literal": "how is the weather?",
+  "usage": "Weather talk in Iraq is mostly about heat in summer and dust storms. \"Ij-jaww\" is the weather.",
+  "variants": [
+    {
+      "label": "today",
+      "arabic": "شلون الجَو اليوم؟",
+      "transliteration": "shloon ij-jaww il-yoom?",
+      "english": "how's the weather today?",
+      "note": "Asking about today."
+    },
+    {
+      "label": "hot",
+      "arabic": "الدُّنيا حَر",
+      "transliteration": "id-dinya 7arr",
+      "english": "the world is hot",
+      "note": "The most common summer answer."
+    }
+  ],
+  "responses": [
+    {
+      "arabic": "حار كُلِّش",
+      "transliteration": "7aarr kullish",
+      "english": "very hot"
+    },
+    {
+      "arabic": "أكو عَجاج",
+      "transliteration": "aku 3ajaaj",
+      "english": "there's a dust storm"
+    }
+  ],
+  "examples": [
+    {
+      "arabic": "شلون الجَو ببَغداد؟",
+      "transliteration": "shloon ij-jaww b-baghdaad?",
+      "english": "What's the weather like in Baghdad?"
+    },
+    {
+      "arabic": "الجَو حِلو بالشِّتا",
+      "transliteration": "ij-jaww 7ilu bish-shita",
+      "english": "The weather is nice in winter"
+    },
+    {
+      "arabic": "اليوم ماكو مُطَر",
+      "transliteration": "il-yoom maaku mutar",
+      "english": "Today there's no rain"
+    }
+  ]
+}
