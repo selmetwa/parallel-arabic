@@ -20,14 +20,14 @@ Companion to `docs/iraqi-khaleeji-saudi-plan.md`. All three dialects' content is
 
 1. **Database migration:** done (verified 2026-10-24).
 2. **Game words:** done 2026-10-24 (917 rows seeded).
-3. **Voices:** fill in the iraqi/khaleeji/saudi voices in `src/lib/utils/voice-config.ts` and `NPC_VOICE` in `scripts/generate-room-hunt-audio.ts` (male NPC voices), then run `npm run generate:room-hunt-audio`.
+3. **Voices:** done 2026-10-24. Voices are set in voice-config.ts, and the Room Hunt audio is generated (408 clips per dialect).
 4. **Speech-to-text:** chirp_3 has no `ar-IQ`, so Iraqi uses `ar-KW` (decided 2026-10-24). `ar-AE` and `ar-SA` are supported.
 5. **Native-speaker review:** done.
 6. **Word of the Day:** not used; nothing to do.
 
 ## Launch PR
 
-Prepared on branch `launch-new-dialects` (2026-10-24). The only remaining blocker is step 3: the Room Hunt recording tests fail until the audio exists.
+Prepared on branch `launch-new-dialects` (2026-10-24). All steps are done and all tests pass. Ready to merge.
 
 What the branch does:
 
