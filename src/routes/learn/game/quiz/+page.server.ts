@@ -5,6 +5,10 @@ import { levantineSections } from '$lib/constants/levantine-sections';
 import { fushaSections } from '$lib/constants/fusha-sections';
 import { supabase } from '$lib/supabaseClient';
 import { QUIZ_FAQS } from '$lib/constants/game-content';
+import { GAME_DIALECTS, GAME_THEMES } from '$lib/games/themes';
+
+/** Dialects whose words were seeded by theme rather than imported as sections. */
+const THEMED_DIALECTS = ['iraqi', 'khaleeji', 'saudi'] as const;
 
 interface GameProgress {
   id: string;
@@ -25,15 +29,29 @@ export const load: PageServerLoad = async ({ parent }) => {
   const { isSubscribed, user } = await parent();
 
   // Get categories based on selected dialect (include count for display)
-  const categoriesByDialect = {
+  const categoriesByDialect: Record<string, { path: string; name: string; count: number }[]> = {
     'egyptian-arabic': sections.map(s => ({ path: s.path, name: s.name, count: s.count })),
     'levantine': levantineSections.map(s => ({ path: s.path, name: s.name, count: s.count })),
     'darija': darijaSections.map(s => ({ path: s.path, name: s.name, count: s.count })),
     'fusha': fushaSections.map(s => ({ path: s.path, name: s.name, count: s.count }))
   };
 
+  // Their categories are the game themes; count the seeded words for each.
+  const { data: themedWords } = await supabase
+    .from('word')
+    .select('dialect, category')
+    .in('dialect', [...THEMED_DIALECTS]);
+  for (const dialect of THEMED_DIALECTS) {
+    categoriesByDialect[dialect] = GAME_THEMES.flatMap((theme) => {
+      const path = theme.categories[dialect];
+      if (!path) return [];
+      const count = (themedWords ?? []).filter((w) => w.dialect === dialect && w.category === path).length;
+      return count ? [{ path, name: theme.label, count }] : [];
+    });
+  }
+
   // Define all available dialects
-  const dialects = ['egyptian-arabic', 'levantine', 'darija', 'fusha'];
+  const dialects: string[] = [...GAME_DIALECTS];
 
   // Fetch in-progress games for logged in users
   let inProgressGames: GameProgress[] = [];
@@ -53,7 +71,10 @@ export const load: PageServerLoad = async ({ parent }) => {
     'egyptian-arabic': Object.fromEntries(sections.map(s => [s.path, s.name])),
     'levantine': Object.fromEntries(levantineSections.map(s => [s.path, s.name])),
     'darija': Object.fromEntries(darijaSections.map(s => [s.path, s.name])),
-    'fusha': Object.fromEntries(fushaSections.map(s => [s.path, s.name]))
+    'fusha': Object.fromEntries(fushaSections.map(s => [s.path, s.name])),
+    ...Object.fromEntries(
+      THEMED_DIALECTS.map((d) => [d, Object.fromEntries(categoriesByDialect[d].map((c) => [c.path, c.name]))])
+    )
   };
 
   return {

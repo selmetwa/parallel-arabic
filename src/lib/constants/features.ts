@@ -176,7 +176,7 @@ export const FEATURES: FeatureInfo[] = [
 			{
 				question: 'Which dialects are the stories in?',
 				answer:
-					'Egyptian Arabic, Levantine Arabic, Moroccan Darija and Modern Standard Arabic (Fusha).'
+					'The ready-made stories are in Egyptian Arabic, Levantine Arabic, Moroccan Darija and Modern Standard Arabic (Fusha). You can create your own stories in Iraqi, Gulf and Saudi Arabic too.'
 			},
 			{
 				question: 'Do I need to read Arabic script first?',
@@ -200,7 +200,7 @@ export const FEATURES: FeatureInfo[] = [
 		seo: {
 			title: 'Tap to Translate Arabic Words in Context | Parallel Arabic',
 			description:
-				'Tap any word in an Arabic story to see what it means in that sentence, hear it, compare it across Egyptian, Levantine, Darija and Fusha, and save it to your spaced-repetition deck.'
+				'Tap any word in an Arabic story to see what it means in that sentence, hear it, compare it across seven Arabic dialects, and save it to your spaced-repetition deck.'
 		},
 		hero: shot(
 			'define',
@@ -257,7 +257,7 @@ export const FEATURES: FeatureInfo[] = [
 		seo: {
 			title: 'Online Arabic Course A1 to C2 - Egyptian, Levantine, Darija & Fusha | Parallel Arabic',
 			description:
-				'A structured Arabic course with a clear learning path. Step-by-step lessons from beginner to advanced in Egyptian Arabic, Levantine, Moroccan Darija or Modern Standard Arabic, at your own pace.'
+				'A structured Arabic course with a clear learning path. Step-by-step lessons from beginner to advanced in Egyptian, Levantine, Darija, Iraqi, Gulf, Saudi or Fusha, at your own pace.'
 		},
 		hero: shot(
 			'lessons',
@@ -284,7 +284,7 @@ export const FEATURES: FeatureInfo[] = [
 			{
 				question: 'Which dialects have a course?',
 				answer:
-					'Egyptian Arabic, Levantine Arabic, Moroccan Darija and Modern Standard Arabic each have their own learning path.'
+					'Egyptian Arabic, Levantine Arabic, Moroccan Darija and Modern Standard Arabic each have their own learning path, and Iraqi, Gulf and Saudi Arabic have courses from A1 to B2.'
 			},
 			{
 				question: 'Is the course free?',
@@ -391,7 +391,7 @@ export const FEATURES: FeatureInfo[] = [
 			{
 				question: 'Which dialects can I practice?',
 				answer:
-					'Egyptian Arabic, Levantine Arabic, Moroccan Darija and Modern Standard Arabic.'
+					'Egyptian Arabic, Levantine Arabic, Moroccan Darija, Iraqi Arabic, Gulf Arabic (Khaleeji), Saudi Arabic (Hijazi) and Modern Standard Arabic.'
 			},
 			{
 				question: 'Is pronunciation practice free?',
@@ -451,7 +451,7 @@ export const FEATURES: FeatureInfo[] = [
 			{
 				question: 'Which dialects are the sentences in?',
 				answer:
-					'Egyptian Arabic, Levantine Arabic, Moroccan Darija and Modern Standard Arabic.'
+					'Egyptian Arabic, Levantine Arabic, Moroccan Darija, Iraqi Arabic, Gulf Arabic (Khaleeji), Saudi Arabic (Hijazi) and Modern Standard Arabic.'
 			}
 		]
 	},
@@ -548,7 +548,7 @@ export const FEATURES: FeatureInfo[] = [
 			{
 				question: 'Which dialects can I compare?',
 				answer:
-					'Egyptian Arabic, Levantine Arabic, Moroccan Darija and Modern Standard Arabic (Fusha).'
+					'Egyptian Arabic, Levantine Arabic, Moroccan Darija, Iraqi Arabic, Gulf Arabic (Khaleeji), Saudi Arabic (Hijazi) and Modern Standard Arabic (Fusha).'
 			},
 			{
 				question: 'Which two dialects are closest?',

@@ -1,3 +1,5 @@
+import { ALL_DIALECTS } from '$lib/constants/dialects';
+
 /**
  * Clear all user-specific data from localStorage on logout
  * This ensures no user data persists after signing out
@@ -9,8 +11,7 @@ export function clearUserLocalStorage(): void {
   const keysToRemove: string[] = [];
 
   // Find all sentence keys (sentences_${dialect})
-  const dialects = ['egyptian-arabic', 'levantine', 'darija', 'fusha', 'khaleeji'];
-  dialects.forEach(dialect => {
+  ALL_DIALECTS.forEach(dialect => {
     keysToRemove.push(`sentences_${dialect}`);
   });
 

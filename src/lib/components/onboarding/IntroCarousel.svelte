@@ -20,10 +20,12 @@
         { text: ', ' },
         { text: 'Levantine', accent: true },
         { text: ', ' },
+        { text: 'Gulf', accent: true },
+        { text: ', ' },
         { text: 'Moroccan', accent: true },
         { text: ' or ' },
         { text: 'Fusha', accent: true },
-        { text: ' — not a blend of all four.' }
+        { text: ' and more — the one you need, not a blend.' }
       ],
       glyph: 'ع'
     },

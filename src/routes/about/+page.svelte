@@ -6,7 +6,7 @@
 	 * Every in-app link the page makes, narrow enough for `resolve()` to type-check.
 	 * @typedef {'/stories' | '/tutor' | '/lessons' | '/alphabet' | '/sentences' | '/conjugations'
 	 *   | '/learn/game' | '/speak' | '/review/all-words' | '/egyptian-arabic' | '/levantine'
-	 *   | '/darija' | '/fusha'} Route
+	 *   | '/darija' | '/fusha' | '/iraqi' | '/khaleeji' | '/saudi'} Route
 	 */
 	/**
 	 * The /features landing page for a step or feature. Descriptive link text, since
@@ -20,7 +20,7 @@
 	/** @typedef {Shot & { body: string; href?: Route; cta?: string; more?: More; focus?: string }} Feature */
 	/** @typedef {{ t: string; b?: boolean }} QuoteSegment */
 
-	// ── Hero demo: one sentence in all four dialects ──────────────────────────
+	// ── Hero demo: one sentence in every dialect ─────────────────────────────
 	// Word order is reading order; the row is laid out right-to-left.
 	/** @type {Dialect[]} */
 	const dialects = [
@@ -55,6 +55,39 @@
 				{ ar: 'بغيت', tr: 'bghit', en: 'I want' },
 				{ ar: 'نتعلّم', tr: "nt'allem", en: 'to learn' },
 				{ ar: 'العربية', tr: "l'arbiya", en: 'Arabic' }
+			]
+		},
+		{
+			label: 'Iraqi',
+			native: 'العراقي',
+			note: 'About 45 million speakers in Iraq, taught here in its Baghdadi form.',
+			href: '/iraqi',
+			words: [
+				{ ar: 'أريد', tr: 'areed', en: 'I want' },
+				{ ar: 'أتعلّم', tr: "at'allam", en: 'to learn' },
+				{ ar: 'عربي', tr: "'arabi", en: 'Arabic' }
+			]
+		},
+		{
+			label: 'Gulf',
+			native: 'الخليجي',
+			note: 'Spoken in the UAE, Kuwait, Qatar, Bahrain and Oman.',
+			href: '/khaleeji',
+			words: [
+				{ ar: 'أبي', tr: 'abi', en: 'I want' },
+				{ ar: 'أتعلّم', tr: "at'allam", en: 'to learn' },
+				{ ar: 'عربي', tr: "'arabi", en: 'Arabic' }
+			]
+		},
+		{
+			label: 'Saudi',
+			native: 'الحجازي',
+			note: 'The Hijazi Arabic of Jeddah, Mecca and Medina.',
+			href: '/saudi',
+			words: [
+				{ ar: 'أبغى', tr: 'abgha', en: 'I want' },
+				{ ar: 'أتعلّم', tr: "at'allam", en: 'to learn' },
+				{ ar: 'عربي', tr: "'arabi", en: 'Arabic' }
 			]
 		},
 		{
@@ -124,7 +157,7 @@
 	// in the database on 2026-09-25.
 	const stats = [
 		{ value: '1,500+', label: 'learners' },
-		{ value: '4', label: 'dialects' },
+		{ value: '7', label: 'dialects' },
 		{ value: 'A1–C2', label: 'lesson levels' }
 	];
 
@@ -349,7 +382,7 @@
 		},
 		{
 			q: 'Which dialect should I learn?',
-			a: 'The one spoken by the people you want to talk to. Egyptian is the most widely understood, thanks to Egyptian film and TV. Levantine is spoken in Syria, Lebanon, Jordan and Palestine, Darija in Morocco, and Fusha is the Arabic of news, books and formal writing. You can switch dialects at any time.'
+			a: 'The one spoken by the people you want to talk to. Egyptian is the most widely understood, thanks to Egyptian film and TV. Levantine is spoken in Syria, Lebanon, Jordan and Palestine, Darija in Morocco, Iraqi in Iraq, Gulf Arabic in the UAE, Kuwait, Qatar and Bahrain, and Saudi (Hijazi) in Jeddah and the west of Saudi Arabia. Fusha is the Arabic of news, books and formal writing. You can switch dialects at any time.'
 		},
 		{
 			q: 'Do I need to know any Arabic to get started?',
@@ -432,8 +465,8 @@
 					Learn the Arabic people <span class="hl">actually speak.</span>
 				</h1>
 				<p class="lede reveal" style="animation-delay: 120ms;">
-					Parallel Arabic teaches the dialects spoken in Cairo, Beirut and Casablanca, with Modern
-					Standard Arabic alongside. Read stories at your level, tap any word you don’t know, and
+					Parallel Arabic teaches the dialects spoken in Cairo, Beirut, Casablanca, Baghdad, Dubai
+					and Jeddah, with Modern Standard Arabic alongside. Read stories at your level, tap any word you don’t know, and
 					practice it until it’s yours.
 				</p>
 
@@ -459,7 +492,7 @@
 				<div
 					class="demo"
 					role="group"
-					aria-label="The same sentence in four Arabic dialects"
+					aria-label="The same sentence in seven varieties of Arabic"
 					style="--cycle: {CYCLE_MS}ms;"
 					use:cycleWhenVisible
 					onpointerenter={() => (paused = true)}
@@ -467,7 +500,7 @@
 					onfocusin={() => (paused = true)}
 					onfocusout={() => (paused = false)}
 				>
-					<p class="demo-label">One sentence, four dialects</p>
+					<p class="demo-label">One sentence, seven ways</p>
 					<div class="demo-tabs" role="group" aria-label="Dialect">
 						{#each dialects as d, i (d.label)}
 							<button
@@ -1144,7 +1177,7 @@
 	.demo-tabs {
 		margin-top: 0.6rem;
 		display: grid;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
+		grid-template-columns: repeat(3, minmax(0, 1fr));
 		gap: 0.25rem;
 		border-radius: 1rem;
 		background: var(--tile4);
@@ -1195,7 +1228,7 @@
 	@container (min-width: 25rem) {
 		.demo-tabs {
 			grid-template-columns: repeat(4, minmax(0, 1fr));
-			border-radius: 999px;
+			border-radius: 1.25rem;
 		}
 		.demo-tab {
 			border-radius: 999px;

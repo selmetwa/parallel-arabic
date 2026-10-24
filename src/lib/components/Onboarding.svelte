@@ -466,8 +466,8 @@
 								class="mb-8 max-w-md text-base leading-relaxed text-text-200 sm:mb-10 sm:text-lg"
 								in:fly={{ y: 20, duration: 500, delay: 500, easing: cubicOut }}
 							>
-								Arabic isn't one language — it's Egyptian, Levantine, Moroccan, Modern Standard, and
-								more. Parallel Arabic is built around the variety you actually want to learn. Let's
+								Arabic isn't one language — it's Egyptian, Levantine, Gulf, Iraqi, Moroccan, Modern
+								Standard, and more. Parallel Arabic is built around the variety you actually want to learn. Let's
 								set you up in a few quick steps.
 							</p>
 

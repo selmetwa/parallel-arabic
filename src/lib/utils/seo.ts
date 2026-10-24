@@ -475,14 +475,14 @@ export function getPageMeta(page: string, data?: any): PageMeta {
 		sentences: {
 			title: 'Arabic Sentence Practice - Build Sentences Word by Word | Parallel Arabic',
 			description:
-				'Practise Arabic sentences: reorder the words, type them out, and check yourself against the translation. Available in Egyptian, Levantine, Darija and Fusha.',
+				'Practise Arabic sentences: reorder the words, type them out, and check yourself against the translation. Available in seven Arabic dialects.',
 			url: `${baseUrl}/sentences`,
 			type: 'website'
 		},
 		speak: {
 			title: 'Arabic Speaking Practice - Say It and Get Scored | Parallel Arabic',
 			description:
-				'Practise speaking Arabic out loud. Record yourself, and get instant feedback on whether you were understood, in Egyptian, Levantine, Darija or Fusha.',
+				'Practise speaking Arabic out loud. Record yourself, and get instant feedback on whether you were understood, in seven Arabic dialects.',
 			url: `${baseUrl}/speak`,
 			type: 'website'
 		},
