@@ -18,14 +18,18 @@ Companion to `docs/iraqi-khaleeji-saudi-plan.md`. All three dialects' content is
 
 ## Steps you need to run
 
-1. **Database migration:** run `docs/sql/2026-10-23-new-dialects.sql`. The Supabase MCP is read-only, so a session can't run it.
+1. **Database migration:** done (verified 2026-10-24).
 2. **Game words:** done 2026-10-24 (917 rows seeded).
 3. **Voices:** fill in the iraqi/khaleeji/saudi voices in `src/lib/utils/voice-config.ts` and `NPC_VOICE` in `scripts/generate-room-hunt-audio.ts` (male NPC voices), then run `npm run generate:room-hunt-audio`.
 4. **Speech-to-text:** chirp_3 has no `ar-IQ`, so Iraqi uses `ar-KW` (decided 2026-10-24). `ar-AE` and `ar-SA` are supported.
-5. **Native-speaker review:** one reviewer per dialect for the lessons, phrases, verbs, Room Hunt and tutor dialogs. Lines flagged "needs a native check" in comments come first.
-6. **Word of the Day:** `scripts/seed-word-of-the-day.ts` schedules from the last existing date and needs the same number of days for every dialect. Decide whether the new dialects should start mid-schedule (backfill rows for the existing dates) or join from the next batch. The `example_*` columns can be filled once that is decided.
+5. **Native-speaker review:** done.
+6. **Word of the Day:** not used; nothing to do.
 
-## Launch PR (after review)
+## Launch PR
+
+Prepared on branch `launch-new-dialects` (2026-10-24). The only remaining blocker is step 3: the Room Hunt recording tests fail until the audio exists.
+
+What the branch does:
 
 - `src/lib/constants/dialects.ts`: set `selectable: true` for the three dialects.
 - `src/lib/data/curriculum-v2.ts`: add `iraqi`, `khaleeji` and `saudi`, each mapped to `baseCurriculumV2A1B2`.
