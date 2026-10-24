@@ -20,7 +20,7 @@ export const DIALECTS: DialectInfo[] = [
 	{ key: 'levantine', name: 'Levantine Arabic', shortName: 'Levantine', flag: '🇱🇧', sttLocale: 'ar-LB', selectable: true },
 	{ key: 'darija', name: 'Moroccan Darija', shortName: 'Darija', flag: '🇲🇦', sttLocale: 'ar-MA', selectable: true },
 	{ key: 'fusha', name: 'Modern Standard Arabic', shortName: 'Fusha', flag: '📖', sttLocale: 'ar-SA', selectable: true },
-	{ key: 'iraqi', name: 'Iraqi Arabic', shortName: 'Iraqi', flag: '🇮🇶', sttLocale: 'ar-IQ', selectable: false },
+	{ key: 'iraqi', name: 'Iraqi Arabic', shortName: 'Iraqi', flag: '🇮🇶', sttLocale: 'ar-KW', selectable: false },
 	{ key: 'khaleeji', name: 'Gulf Arabic (Khaleeji)', shortName: 'Khaleeji', flag: '🇦🇪', sttLocale: 'ar-AE', selectable: false },
 	{ key: 'saudi', name: 'Saudi Arabic (Hijazi)', shortName: 'Saudi', flag: '🇸🇦', sttLocale: 'ar-SA', selectable: false }
 ];
