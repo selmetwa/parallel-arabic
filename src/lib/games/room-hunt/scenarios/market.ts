@@ -12,7 +12,7 @@ export const market: Scenario = {
 	emoji: '🍅',
 	blurb: 'Ask for fruit and veg, say how many kilos, haggle the price and pay.',
 	npcRole: 'Seller',
-	npcGender: { 'egyptian-arabic': 'm', levantine: 'f', darija: 'm', fusha: 'm', iraqi: 'm', khaleeji: 'm', saudi: 'm' },
+	npcGender: { 'egyptian-arabic': 'm', levantine: 'f', darija: 'm', fusha: 'm', iraqi: 'f', khaleeji: 'f', saudi: 'm' },
 	doneHeading: 'Shopping done in Arabic!',
 	text: text as Scenario['text'],
 	lines: {

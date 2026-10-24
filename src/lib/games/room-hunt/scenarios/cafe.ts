@@ -13,7 +13,7 @@ export const cafe: Scenario = {
 	emoji: '☕',
 	blurb: 'Order a coffee or tea how you like it, add a croissant and pay.',
 	npcRole: 'Barista',
-	npcGender: { 'egyptian-arabic': 'm', levantine: 'f', darija: 'm', fusha: 'm', iraqi: 'm', khaleeji: 'm', saudi: 'm' },
+	npcGender: { 'egyptian-arabic': 'm', levantine: 'f', darija: 'm', fusha: 'm', iraqi: 'f', khaleeji: 'f', saudi: 'm' },
 	doneHeading: 'Coffee ordered, in Arabic!',
 	text: text as Scenario['text'],
 	lines: {

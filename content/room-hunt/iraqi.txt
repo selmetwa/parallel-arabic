@@ -1,15 +1,15 @@
-# Iraqi (Baghdadi) Room Hunt lines. The NPC is a man; standard letters only.
+# Iraqi (Baghdadi) Room Hunt lines. The NPC is a woman (voiced by Zahraa Nazar), so the player addresses her in the feminine; standard letters only.
 
 ## common
 y_two_kilos | كيلوين | keeloowein
-y_stop_here | وَقِّف هنا رَجاءً | waggif hna rajaa2an
+y_stop_here | وَقّفي هنا رَجاءً | waggfi hna rajaa2an
 y_tea | شاي رَجاءً | chaay rajaa2an
 y_enjoy | بالعافية! | bil-3aafya!
 y_welcome | أهلاً وسَهلاً! | ahlan w-sahlan!
 y_too_expensive | غالي! عِشرين؟ | ghaali! 3ishreen?
 y_headache | عِندي صُداع | 3indi sudaa3
 y_thanks_bye | شُكراً، مَعَ السَّلامة! | shukran, ma3a is-salaama!
-y_here_you_go | تِفَضَّل | tfadhdhal
+y_here_you_go | تِفَضَّلي | tfadhdhali
 y_yes_please | إي رَجاءً | ee rajaa2an
 y_no_thanks | لا، شُكراً | la, shukran
 y_ok | زين | zein
@@ -36,7 +36,7 @@ a_left | سيدا، عاليَسار | seeda, 3al-yisaar
 a_time | الصُّعود السّاعة عَشرة ونُص | is-su3ood is-saa3a 3ashra w-nuss
 a_trip | رِحلة سَعيدة! | ri7la sa3eeda!
 a_sorry | عَفواً؟ تِقدَر تعيد؟ | 3afwan? tigdar t3eed?
-y_passport | تِفَضَّل الجَواز | tfadhdhal ij-jawaaz
+y_passport | تِفَضَّلي الجَواز | tfadhdhali ij-jawaaz
 y_cairo | للقاهِرة | lil-gaahira
 y_dubai | لِدُبَي | li-dubai
 y_one_bag | جَنطة وحدة | janta wi7da
@@ -81,8 +81,8 @@ r_from | مِنين إنتَ؟ | mineen inta?
 r_welcome | أهلاً وسَهلاً! إنبِسِط بالزِّيارة | ahlan w-sahlan! inbisit biz-ziyaara
 r_bye | مَعَ السَّلامة! | ma3a is-salaama!
 r_sorry | عَفواً؟ ما سِمَعِت زين | 3afwan? ma sima3it zein
-y_museum | لو سَمَحِت، وين المَتحَف؟ | law sima7it, wein il-mat7af?
-y_station | لو سَمَحِت، وين مَحَطّة القِطار؟ | law sima7it, wein ma7attat il-gitaar?
+y_museum | لو سِمَحتي، وين المَتحَف؟ | law sima7ti, wein il-mat7af?
+y_station | لو سِمَحتي، وين مَحَطّة القِطار؟ | law sima7ti, wein ma7attat il-gitaar?
 y_right_lights | يَمين عِند الإشارة؟ | yameen 3ind il-ishaara?
 y_far | بَعيد؟ | ba3eed?
 y_walk | زين، راح أمشي | zein, raa7 amshi
@@ -114,7 +114,7 @@ y_no_fever | لا، ما أعتِقِد | la, ma a3tigid
 y_relief | الحَمدِلله! | il-7amdilla!
 y_pharmacy | أقدَر أجيبَه مِن أي صَيدَلية؟ | agdar ajeeba min ay saidaliyya?
 y_work | أقدَر أروح للشُّغُل؟ | agdar aroo7 lish-shughul?
-y_thanks_doctor | شُكراً دكتور! | shukran diktoor!
+y_thanks_doctor | شُكراً دكتورة! | shukran diktoora!
 item_prescription | وَصفة | wasfa
 
 ## hotel
@@ -131,11 +131,11 @@ y_reservation | مَسا النّور. عِندي حَجِز | masa in-noor. 3in
 y_name | إسمي آدَم | ismi aadam
 y_two_nights | ليلتين | leiltein
 y_three_nights | ثلاث لَيالي | thlath layaali
-y_passport | أكيد، تِفَضَّل | akeed, tfadhdhal
+y_passport | أكيد، تِفَضَّلي | akeed, tfadhdhali
 y_breakfast | شوَكِت الرّيوك؟ | shwakit ir-reiyoog?
 y_wifi | وشنو باسوورد الواي فاي؟ | w-shinu paaswoord il-waay faay?
 y_great | مُمتاز، شُكراً! | mumtaaz, shukran!
-y_good_night | شُكراً، تِصبَح عَلى خير! | shukran, tisba7 3ala khair!
+y_good_night | شُكراً، تِصبحين عَلى خير! | shukran, tisba7een 3ala khair!
 item_key | مِفتاح الغُرفة | miftaa7 il-ghurfa
 h_type | غُرفة لِنَفَر لو لِنَفَرين؟ | ghurfa li-nafar lo li-nafarein?
 h_view | تريد غُرفة تِطِل عالشَّط؟ | treed ghurfa titill 3ash-shatt?
@@ -168,7 +168,7 @@ y_tomatoes | طَماطة رَجاءً | tamaata rajaa2an
 y_oranges | بُرتُقال رَجاءً | purtugaal rajaa2an
 y_one_kilo | كيلو واحِد | keelo waa7id
 y_how_much | لا، شُكراً. بيش؟ | la, shukran. beesh?
-y_ok_here | زين، تِفَضَّل | zein, tfadhdhal
+y_ok_here | زين، تِفَضَّلي | zein, tfadhdhali
 item_tomatoes | طَماطة | tamaata
 item_oranges | بُرتُقال | purtugaal
 m_fresh | شوف، طازة كُلِّش! | shoof, taaza kullish!
@@ -185,7 +185,7 @@ y_tomorrow | لِباجِر رَجاءً | li-baachir rajaa2an
 y_lemons | ونُص كيلو نومي رَجاءً | w-nuss keelo noomi rajaa2an
 y_big | جبير | chbeer
 y_only_hundred | آسِف، ما عِندي غير مِيّة | aasif, ma 3indi ghair miyya
-y_have_change | إي، تِفَضَّل | ee, tfadhdhal
+y_have_change | إي، تِفَضَّلي | ee, tfadhdhali
 y_bag_no | لا، عِندي كيس | la, 3indi chees
 y_tourist | لا، آني زاير | la, aani zaayir
 y_nearby | إي، ساكِن قَريب | ee, saakin gareeb
@@ -238,8 +238,8 @@ y_fish | سِمَك رَجاءً | simach rajaa2an
 y_chicken | دِجاج رَجاءً | dijaaj rajaa2an
 y_soup | شوربة رَجاءً | shoorba rajaa2an
 y_goodbye | مَعَ السَّلامة! | ma3a is-salaama!
-y_welcome | هَلا بيك! | hala beek!
-y_drink_q | شتِشرَب؟ | shtishrab?
+y_welcome | هَلا بيك! | hala beech!
+y_drink_q | شتِشربين؟ | shtishrabeen?
 y_cake | إي، كيك رَجاءً | ee, keik rajaa2an
 y_delicious_bill | طَيِّب! الحِساب رَجاءً | tayyib! il-7isaab rajaa2an
 y_fork | وين الجَطّال؟ | wein ich-chattaal?
@@ -259,8 +259,8 @@ w_total | مِيّة وخَمسين | miyya w-khamseen
 w_thanks | شُكراً هوايه! | shukran hwaaya!
 w_card | أكيد، تِفَضَّل الجِهاز | akeed, tfadhdhal ij-jihaaz
 y_one | نَفَر واحِد بَس رَجاءً | nafar waa7id bass rajaa2an
-y_recommend | شتنصَحني؟ | shtinsa7ni?
-y_pay | تِفَضَّل | tfadhdhal
+y_recommend | شتنصحيني؟ | shtinsa7eeni?
+y_pay | تِفَضَّلي | tfadhdhali
 item_bread | خُبُز | khubuz
 item_coffee | قَهوة | gahwa
 
@@ -277,10 +277,10 @@ d_sorry | عَفواً؟ ما فِتهَمِت | 3afwan? ma fithamit
 y_station | لِمَحَطّة القِطار رَجاءً | li-ma7attat il-gitaar rajaa2an
 y_too_much | هوايه! أربعين؟ | hwaaya! arba3een?
 y_ok_go | زين، يَلّا | zein, yalla
-y_straight_right | روح سيدا، وبَعدين لِف يَمين عِند الإشارة | roo7 seeda, w-ba3dain liff yameen 3ind il-ishaara
-y_stop_here | إي، وَقِّف هنا رَجاءً | ee, waggif hna rajaa2an
-y_change | تِفَضَّل. خَلّي الباقي | tfadhdhal. khalli il-baagi
-y_faster | أسرَع رَجاءً! | asra3 rajaa2an!
+y_straight_right | روحي سيدا، وبَعدين لِفّي يَمين عِند الإشارة | roo7i seeda, w-ba3dain liffi yameen 3ind il-ishaara
+y_stop_here | إي، وَقّفي هنا رَجاءً | ee, waggfi hna rajaa2an
+y_change | تِفَضَّلي. خَلّي الباقي | tfadhdhali. khalli il-baagi
+y_faster | أسرعي رَجاءً! | asra3i rajaa2an!
 d_ac | تريد أشَغِّل المُبَرِّدة؟ | treed ashaghghil il-mubarrida?
 d_traffic | الزَّحمة شَديدة اليوم! | iz-za7ma shadeeda il-yoom!
 d_from | مِنين إنتَ؟ | mineen inta?

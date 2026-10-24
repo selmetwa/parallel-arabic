@@ -16,7 +16,7 @@ export const directions: Scenario = {
 	emoji: '🧭',
 	blurb: 'Ask a passer-by for the museum or the station and follow their directions.',
 	npcRole: 'Passer-by',
-	npcGender: { 'egyptian-arabic': 'm', levantine: 'f', darija: 'm', fusha: 'm', iraqi: 'm', khaleeji: 'm', saudi: 'm' },
+	npcGender: { 'egyptian-arabic': 'm', levantine: 'f', darija: 'm', fusha: 'm', iraqi: 'f', khaleeji: 'f', saudi: 'm' },
 	doneHeading: 'Found your way, in Arabic!',
 	text: text as Scenario['text'],
 	lines: {

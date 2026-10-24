@@ -49,6 +49,8 @@ const NPC_VOICE: Record<GameDialect, Partial<Record<'m' | 'f', string>>> = {
 	levantine: { f: 'Sara – The Premium Humanlike Arabic Voice | سارة – الصوت العربي الواقعي الفاخر' },
 	darija: { m: 'Jawad - Natural and Conversational' },
 	fusha: { m: 'Adam - Warm & Classic' },
+	iraqi: { f: 'Zahraa Nazar - Calm, Natural & Friendly' },
+	khaleeji: { f: 'Lama - Soft Emotional' },
 	saudi: { m: 'Faisal Ali - Sharp and Confident' }
 };
 
