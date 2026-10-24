@@ -1,0 +1,1873 @@
+{
+	"vocab": [
+		{
+			"arabic": "مريض",
+			"arabicTashkeel": "مَريض",
+			"english": "Sick",
+			"transliteration": "mareedh",
+			"wordAlignments": [
+				{
+					"arabic": "مريض",
+					"english": "Sick",
+					"transliteration": "mareedh"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "دكتور",
+			"arabicTashkeel": "دُكتور",
+			"english": "Doctor",
+			"transliteration": "duktoor",
+			"wordAlignments": [
+				{
+					"arabic": "دكتور",
+					"english": "Doctor",
+					"transliteration": "duktoor"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "مستشفى",
+			"arabicTashkeel": "مُستَشفى",
+			"english": "Hospital",
+			"transliteration": "mustashfa",
+			"wordAlignments": [
+				{
+					"arabic": "مستشفى",
+					"english": "Hospital",
+					"transliteration": "mustashfa"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "صيدلية",
+			"arabicTashkeel": "صَيدَلية",
+			"english": "Pharmacy",
+			"transliteration": "saidaliyya",
+			"wordAlignments": [
+				{
+					"arabic": "صيدلية",
+					"english": "Pharmacy",
+					"transliteration": "saidaliyya"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "دوا",
+			"arabicTashkeel": "دَوا",
+			"english": "Medicine",
+			"transliteration": "dawa",
+			"wordAlignments": [
+				{
+					"arabic": "دوا",
+					"english": "Medicine",
+					"transliteration": "dawa"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "حبوب",
+			"arabicTashkeel": "حُبوب",
+			"english": "Pills",
+			"transliteration": "7uboob",
+			"wordAlignments": [
+				{
+					"arabic": "حبوب",
+					"english": "Pills",
+					"transliteration": "7uboob"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "سخونة",
+			"arabicTashkeel": "سُخونة",
+			"english": "Fever",
+			"transliteration": "skhoona",
+			"wordAlignments": [
+				{
+					"arabic": "سخونة",
+					"english": "Fever",
+					"transliteration": "skhoona"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "رشح",
+			"arabicTashkeel": "رَشح",
+			"english": "Cold (illness)",
+			"transliteration": "rash7",
+			"wordAlignments": [
+				{
+					"arabic": "رشح",
+					"english": "Cold",
+					"transliteration": "rash7"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "كحة",
+			"arabicTashkeel": "كُحّة",
+			"english": "Cough",
+			"transliteration": "ku77a",
+			"wordAlignments": [
+				{
+					"arabic": "كحة",
+					"english": "Cough",
+					"transliteration": "ku77a"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "إبرة",
+			"arabicTashkeel": "إبرة",
+			"english": "Injection",
+			"transliteration": "ibra",
+			"wordAlignments": [
+				{
+					"arabic": "إبرة",
+					"english": "Injection",
+					"transliteration": "ibra"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "سلامتك",
+			"arabicTashkeel": "سَلامتَك",
+			"english": "Get well soon",
+			"transliteration": "salaamtak",
+			"wordAlignments": [
+				{
+					"arabic": "سلامتك",
+					"english": "Your safety",
+					"transliteration": "salaamtak"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "وصفة",
+			"arabicTashkeel": "وَصفة",
+			"english": "Prescription",
+			"transliteration": "wasfa",
+			"wordAlignments": [
+				{
+					"arabic": "وصفة",
+					"english": "Prescription",
+					"transliteration": "wasfa"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "حساسية",
+			"arabicTashkeel": "حَساسية",
+			"english": "Allergy",
+			"transliteration": "7asaasiyya",
+			"wordAlignments": [
+				{
+					"arabic": "حساسية",
+					"english": "Allergy",
+					"transliteration": "7asaasiyya"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "راحة",
+			"arabicTashkeel": "راحة",
+			"english": "Rest",
+			"transliteration": "raa7a",
+			"wordAlignments": [
+				{
+					"arabic": "راحة",
+					"english": "Rest",
+					"transliteration": "raa7a"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "أحسن",
+			"arabicTashkeel": "أحسَن",
+			"english": "Better",
+			"transliteration": "a7san",
+			"wordAlignments": [
+				{
+					"arabic": "أحسن",
+					"english": "Better",
+					"transliteration": "a7san"
+				}
+			],
+			"partOfSpeech": "adjective"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "أنا مريض اليوم.",
+			"arabicTashkeel": "أنا مَريض اليوم.",
+			"english": "I'm sick today.",
+			"transliteration": "ana mareedh il-yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "أنا",
+					"english": "I am",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "مريض",
+					"english": "sick",
+					"transliteration": "mareedh"
+				},
+				{
+					"arabic": "اليوم.",
+					"english": "today.",
+					"transliteration": "il-yoom."
+				}
+			],
+			"targetWords": [
+				"Sick"
+			]
+		},
+		{
+			"arabic": "أبغى أشوف دكتور.",
+			"arabicTashkeel": "أبغى أشوف دُكتور.",
+			"english": "I want to see a doctor.",
+			"transliteration": "abgha ashoof duktoor.",
+			"wordAlignments": [
+				{
+					"arabic": "أبغى",
+					"english": "I want",
+					"transliteration": "abgha"
+				},
+				{
+					"arabic": "أشوف",
+					"english": "to see",
+					"transliteration": "ashoof"
+				},
+				{
+					"arabic": "دكتور.",
+					"english": "a doctor.",
+					"transliteration": "duktoor."
+				}
+			],
+			"targetWords": [
+				"Doctor"
+			]
+		},
+		{
+			"arabic": "وديه المستشفى.",
+			"arabicTashkeel": "وَدّيه المُستَشفى.",
+			"english": "Take him to the hospital.",
+			"transliteration": "waddeeh il-mustashfa.",
+			"wordAlignments": [
+				{
+					"arabic": "وديه",
+					"english": "Take him",
+					"transliteration": "waddeeh"
+				},
+				{
+					"arabic": "المستشفى.",
+					"english": "to the hospital.",
+					"transliteration": "il-mustashfa."
+				}
+			],
+			"targetWords": [
+				"Hospital"
+			]
+		},
+		{
+			"arabic": "فين الصيدلية؟",
+			"arabicTashkeel": "فين الصَّيدَلية؟",
+			"english": "Where is the pharmacy?",
+			"transliteration": "feen is-saidaliyya?",
+			"wordAlignments": [
+				{
+					"arabic": "فين",
+					"english": "Where is",
+					"transliteration": "feen"
+				},
+				{
+					"arabic": "الصيدلية؟",
+					"english": "the pharmacy?",
+					"transliteration": "is-saidaliyya?"
+				}
+			],
+			"targetWords": [
+				"Pharmacy"
+			]
+		},
+		{
+			"arabic": "خد الدوا بعد الأكل.",
+			"arabicTashkeel": "خُد الدَّوا بَعد الأكل.",
+			"english": "Take the medicine after eating.",
+			"transliteration": "khud id-dawa ba3d il-akl.",
+			"wordAlignments": [
+				{
+					"arabic": "خد",
+					"english": "Take",
+					"transliteration": "khud"
+				},
+				{
+					"arabic": "الدوا",
+					"english": "the medicine",
+					"transliteration": "id-dawa"
+				},
+				{
+					"arabic": "بعد",
+					"english": "after",
+					"transliteration": "ba3d"
+				},
+				{
+					"arabic": "الأكل.",
+					"english": "eating.",
+					"transliteration": "il-akl."
+				}
+			],
+			"targetWords": [
+				"Medicine"
+			]
+		},
+		{
+			"arabic": "حبتين في اليوم.",
+			"arabicTashkeel": "حَبّتين في اليوم.",
+			"english": "Two pills a day.",
+			"transliteration": "7abbatain fi il-yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "حبتين",
+					"english": "Two pills",
+					"transliteration": "7abbatain"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "اليوم.",
+					"english": "the day.",
+					"transliteration": "il-yoom."
+				}
+			],
+			"targetWords": [
+				"Pills"
+			]
+		},
+		{
+			"arabic": "عندي سخونة.",
+			"arabicTashkeel": "عِندي سُخونة.",
+			"english": "I have a fever.",
+			"transliteration": "3indi skhoona.",
+			"wordAlignments": [
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "سخونة.",
+					"english": "a fever.",
+					"transliteration": "skhoona."
+				}
+			],
+			"targetWords": [
+				"Fever"
+			]
+		},
+		{
+			"arabic": "عندي رشح.",
+			"arabicTashkeel": "عِندي رَشح.",
+			"english": "I have a cold.",
+			"transliteration": "3indi rash7.",
+			"wordAlignments": [
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "رشح.",
+					"english": "a cold.",
+					"transliteration": "rash7."
+				}
+			],
+			"targetWords": [
+				"Cold (illness)"
+			]
+		},
+		{
+			"arabic": "الكحة ما بتوقف.",
+			"arabicTashkeel": "الكُحّة ما بِتوَقِّف.",
+			"english": "The cough doesn't stop.",
+			"transliteration": "il-ku77a ma bitwaggif.",
+			"wordAlignments": [
+				{
+					"arabic": "الكحة",
+					"english": "The cough",
+					"transliteration": "il-ku77a"
+				},
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "بتوقف.",
+					"english": "stopping.",
+					"transliteration": "bitwaggif."
+				}
+			],
+			"targetWords": [
+				"Cough"
+			]
+		},
+		{
+			"arabic": "أخاف من الإبرة.",
+			"arabicTashkeel": "أخاف مِن الإبرة.",
+			"english": "I'm scared of injections.",
+			"transliteration": "akhaaf min il-ibra.",
+			"wordAlignments": [
+				{
+					"arabic": "أخاف",
+					"english": "I'm scared",
+					"transliteration": "akhaaf"
+				},
+				{
+					"arabic": "من",
+					"english": "of",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الإبرة.",
+					"english": "the injection.",
+					"transliteration": "il-ibra."
+				}
+			],
+			"targetWords": [
+				"Injection"
+			]
+		},
+		{
+			"arabic": "سلامتك!",
+			"arabicTashkeel": "سَلامتَك!",
+			"english": "Get well soon!",
+			"transliteration": "salaamtak!",
+			"wordAlignments": [
+				{
+					"arabic": "سلامتك!",
+					"english": "Get well soon!",
+					"transliteration": "salaamtak!"
+				}
+			],
+			"targetWords": [
+				"Get well soon"
+			]
+		},
+		{
+			"arabic": "الدكتور كتب وصفة.",
+			"arabicTashkeel": "الدُّكتور كَتَب وَصفة.",
+			"english": "The doctor wrote a prescription.",
+			"transliteration": "id-duktoor katab wasfa.",
+			"wordAlignments": [
+				{
+					"arabic": "الدكتور",
+					"english": "The doctor",
+					"transliteration": "id-duktoor"
+				},
+				{
+					"arabic": "كتب",
+					"english": "wrote",
+					"transliteration": "katab"
+				},
+				{
+					"arabic": "وصفة.",
+					"english": "a prescription.",
+					"transliteration": "wasfa."
+				}
+			],
+			"targetWords": [
+				"Doctor",
+				"Prescription"
+			]
+		},
+		{
+			"arabic": "عندي حساسية من الغبار.",
+			"arabicTashkeel": "عِندي حَساسية مِن الغُبار.",
+			"english": "I have an allergy to dust.",
+			"transliteration": "3indi 7asaasiyya min il-ghubaar.",
+			"wordAlignments": [
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "حساسية",
+					"english": "an allergy",
+					"transliteration": "7asaasiyya"
+				},
+				{
+					"arabic": "من",
+					"english": "to",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الغبار.",
+					"english": "dust.",
+					"transliteration": "il-ghubaar."
+				}
+			],
+			"targetWords": [
+				"Allergy"
+			]
+		},
+		{
+			"arabic": "تحتاج راحة.",
+			"arabicTashkeel": "تِحتاج راحة.",
+			"english": "You need rest.",
+			"transliteration": "ti7taaj raa7a.",
+			"wordAlignments": [
+				{
+					"arabic": "تحتاج",
+					"english": "You need",
+					"transliteration": "ti7taaj"
+				},
+				{
+					"arabic": "راحة.",
+					"english": "rest.",
+					"transliteration": "raa7a."
+				}
+			],
+			"targetWords": [
+				"Rest"
+			]
+		},
+		{
+			"arabic": "أحس أحسن اليوم.",
+			"arabicTashkeel": "أحِس أحسَن اليوم.",
+			"english": "I feel better today.",
+			"transliteration": "a7iss a7san il-yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "أحس",
+					"english": "I feel",
+					"transliteration": "a7iss"
+				},
+				{
+					"arabic": "أحسن",
+					"english": "better",
+					"transliteration": "a7san"
+				},
+				{
+					"arabic": "اليوم.",
+					"english": "today.",
+					"transliteration": "il-yoom."
+				}
+			],
+			"targetWords": [
+				"Better"
+			]
+		},
+		{
+			"arabic": "ولدي مريض.",
+			"arabicTashkeel": "وَلَدي مَريض.",
+			"english": "My son is sick.",
+			"transliteration": "waladi mareedh.",
+			"wordAlignments": [
+				{
+					"arabic": "ولدي",
+					"english": "My son is",
+					"transliteration": "waladi"
+				},
+				{
+					"arabic": "مريض.",
+					"english": "sick.",
+					"transliteration": "mareedh."
+				}
+			],
+			"targetWords": [
+				"Sick"
+			]
+		},
+		{
+			"arabic": "الدكتور مشغول.",
+			"arabicTashkeel": "الدُّكتور مَشغول.",
+			"english": "The doctor is busy.",
+			"transliteration": "id-duktoor mashghool.",
+			"wordAlignments": [
+				{
+					"arabic": "الدكتور",
+					"english": "The doctor is",
+					"transliteration": "id-duktoor"
+				},
+				{
+					"arabic": "مشغول.",
+					"english": "busy.",
+					"transliteration": "mashghool."
+				}
+			],
+			"targetWords": [
+				"Doctor"
+			]
+		},
+		{
+			"arabic": "المستشفى قريب.",
+			"arabicTashkeel": "المُستَشفى قَريب.",
+			"english": "The hospital is near.",
+			"transliteration": "il-mustashfa gareeb.",
+			"wordAlignments": [
+				{
+					"arabic": "المستشفى",
+					"english": "The hospital is",
+					"transliteration": "il-mustashfa"
+				},
+				{
+					"arabic": "قريب.",
+					"english": "near.",
+					"transliteration": "gareeb."
+				}
+			],
+			"targetWords": [
+				"Hospital"
+			]
+		},
+		{
+			"arabic": "الصيدلية مفتوحة بالليل.",
+			"arabicTashkeel": "الصَّيدَلية مَفتوحة بالليل.",
+			"english": "The pharmacy is open at night.",
+			"transliteration": "is-saidaliyya maftoo7a bil-lail.",
+			"wordAlignments": [
+				{
+					"arabic": "الصيدلية",
+					"english": "The pharmacy is",
+					"transliteration": "is-saidaliyya"
+				},
+				{
+					"arabic": "مفتوحة",
+					"english": "open",
+					"transliteration": "maftoo7a"
+				},
+				{
+					"arabic": "بالليل.",
+					"english": "at night.",
+					"transliteration": "bil-lail."
+				}
+			],
+			"targetWords": [
+				"Pharmacy"
+			]
+		},
+		{
+			"arabic": "هادا الدوا مر.",
+			"arabicTashkeel": "هادا الدَّوا مُر.",
+			"english": "This medicine is bitter.",
+			"transliteration": "haada id-dawa murr.",
+			"wordAlignments": [
+				{
+					"arabic": "هادا",
+					"english": "This",
+					"transliteration": "haada"
+				},
+				{
+					"arabic": "الدوا",
+					"english": "medicine is",
+					"transliteration": "id-dawa"
+				},
+				{
+					"arabic": "مر.",
+					"english": "bitter.",
+					"transliteration": "murr."
+				}
+			],
+			"targetWords": [
+				"Medicine"
+			]
+		},
+		{
+			"arabic": "حبوب للصداع.",
+			"arabicTashkeel": "حُبوب للصُّداع.",
+			"english": "Pills for the headache.",
+			"transliteration": "7uboob lis-sudaa3.",
+			"wordAlignments": [
+				{
+					"arabic": "حبوب",
+					"english": "Pills",
+					"transliteration": "7uboob"
+				},
+				{
+					"arabic": "للصداع.",
+					"english": "for the headache.",
+					"transliteration": "lis-sudaa3."
+				}
+			],
+			"targetWords": [
+				"Pills"
+			]
+		},
+		{
+			"arabic": "السخونة عالية.",
+			"arabicTashkeel": "السُّخونة عالية.",
+			"english": "The fever is high.",
+			"transliteration": "is-skhoona 3aalya.",
+			"wordAlignments": [
+				{
+					"arabic": "السخونة",
+					"english": "The fever is",
+					"transliteration": "is-skhoona"
+				},
+				{
+					"arabic": "عالية.",
+					"english": "high.",
+					"transliteration": "3aalya."
+				}
+			],
+			"targetWords": [
+				"Fever"
+			]
+		},
+		{
+			"arabic": "رشح وكحة.",
+			"arabicTashkeel": "رَشح وكُحّة.",
+			"english": "A cold and a cough.",
+			"transliteration": "rash7 w-ku77a.",
+			"wordAlignments": [
+				{
+					"arabic": "رشح",
+					"english": "A cold",
+					"transliteration": "rash7"
+				},
+				{
+					"arabic": "وكحة.",
+					"english": "and a cough.",
+					"transliteration": "w-ku77a."
+				}
+			],
+			"targetWords": [
+				"Cold (illness)",
+				"Cough"
+			]
+		},
+		{
+			"arabic": "الممرضة إدتني إبرة.",
+			"arabicTashkeel": "المُمَرِّضة إدَّتني إبرة.",
+			"english": "The nurse gave me an injection.",
+			"transliteration": "il-mumarridha iddatni ibra.",
+			"wordAlignments": [
+				{
+					"arabic": "الممرضة",
+					"english": "The nurse",
+					"transliteration": "il-mumarridha"
+				},
+				{
+					"arabic": "إدتني",
+					"english": "gave me",
+					"transliteration": "iddatni"
+				},
+				{
+					"arabic": "إبرة.",
+					"english": "an injection.",
+					"transliteration": "ibra."
+				}
+			],
+			"targetWords": [
+				"Injection"
+			]
+		},
+		{
+			"arabic": "سَلامتِك يا هند!",
+			"arabicTashkeel": "سَلامتِك يا هِند!",
+			"english": "Get well soon, Hind!",
+			"transliteration": "salaamtik ya hind!",
+			"wordAlignments": [
+				{
+					"arabic": "سَلامتِك",
+					"english": "Get well soon,",
+					"transliteration": "salaamtik"
+				},
+				{
+					"arabic": "يا",
+					"english": "O",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "هند!",
+					"english": "Hind!",
+					"transliteration": "hind!"
+				}
+			],
+			"targetWords": [
+				"Get well soon"
+			]
+		},
+		{
+			"arabic": "إدي الوصفة للصيدلية.",
+			"arabicTashkeel": "إدّي الوَصفة للصَّيدَلية.",
+			"english": "Give the prescription to the pharmacy.",
+			"transliteration": "iddi il-wasfa lis-saidaliyya.",
+			"wordAlignments": [
+				{
+					"arabic": "إدي",
+					"english": "Give",
+					"transliteration": "iddi"
+				},
+				{
+					"arabic": "الوصفة",
+					"english": "the prescription",
+					"transliteration": "il-wasfa"
+				},
+				{
+					"arabic": "للصيدلية.",
+					"english": "to the pharmacy.",
+					"transliteration": "lis-saidaliyya."
+				}
+			],
+			"targetWords": [
+				"Prescription",
+				"Pharmacy"
+			]
+		},
+		{
+			"arabic": "حساسية الغبار في الربيع.",
+			"arabicTashkeel": "حَساسية الغُبار في الرَّبيع.",
+			"english": "Dust allergy in spring.",
+			"transliteration": "7asaasiyya il-ghubaar fi ir-rabee3.",
+			"wordAlignments": [
+				{
+					"arabic": "حساسية",
+					"english": "Allergy of",
+					"transliteration": "7asaasiyya"
+				},
+				{
+					"arabic": "الغبار",
+					"english": "dust",
+					"transliteration": "il-ghubaar"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الربيع.",
+					"english": "spring.",
+					"transliteration": "ir-rabee3."
+				}
+			],
+			"targetWords": [
+				"Allergy"
+			]
+		},
+		{
+			"arabic": "خد راحة في البيت.",
+			"arabicTashkeel": "خُد راحة في البيت.",
+			"english": "Rest at home.",
+			"transliteration": "khud raa7a fi il-bait.",
+			"wordAlignments": [
+				{
+					"arabic": "خد",
+					"english": "Take",
+					"transliteration": "khud"
+				},
+				{
+					"arabic": "راحة",
+					"english": "rest",
+					"transliteration": "raa7a"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "البيت.",
+					"english": "the house.",
+					"transliteration": "il-bait."
+				}
+			],
+			"targetWords": [
+				"Rest"
+			]
+		},
+		{
+			"arabic": "إنت أحسن دحين؟",
+			"arabicTashkeel": "إنتَ أحسَن دحين؟",
+			"english": "Are you better now?",
+			"transliteration": "inta a7san da7een?",
+			"wordAlignments": [
+				{
+					"arabic": "إنت",
+					"english": "Are you",
+					"transliteration": "inta"
+				},
+				{
+					"arabic": "أحسن",
+					"english": "better",
+					"transliteration": "a7san"
+				},
+				{
+					"arabic": "دحين؟",
+					"english": "now?",
+					"transliteration": "da7een?"
+				}
+			],
+			"targetWords": [
+				"Better"
+			]
+		},
+		{
+			"arabic": "هوا مريض عنده سخونة.",
+			"arabicTashkeel": "هوّا مَريض عِندُه سُخونة.",
+			"english": "He is sick with a fever.",
+			"transliteration": "huwwa mareedh 3indu skhoona.",
+			"wordAlignments": [
+				{
+					"arabic": "هوا",
+					"english": "He is",
+					"transliteration": "huwwa"
+				},
+				{
+					"arabic": "مريض",
+					"english": "sick,",
+					"transliteration": "mareedh"
+				},
+				{
+					"arabic": "عنده",
+					"english": "he has",
+					"transliteration": "3indu"
+				},
+				{
+					"arabic": "سخونة.",
+					"english": "a fever.",
+					"transliteration": "skhoona."
+				}
+			],
+			"targetWords": [
+				"Sick",
+				"Fever"
+			]
+		},
+		{
+			"arabic": "الدكتور قال راحة.",
+			"arabicTashkeel": "الدُّكتور قال راحة.",
+			"english": "The doctor said rest.",
+			"transliteration": "id-duktoor gaal raa7a.",
+			"wordAlignments": [
+				{
+					"arabic": "الدكتور",
+					"english": "The doctor",
+					"transliteration": "id-duktoor"
+				},
+				{
+					"arabic": "قال",
+					"english": "said",
+					"transliteration": "gaal"
+				},
+				{
+					"arabic": "راحة.",
+					"english": "rest.",
+					"transliteration": "raa7a."
+				}
+			],
+			"targetWords": [
+				"Doctor",
+				"Rest"
+			]
+		},
+		{
+			"arabic": "مستشفى الأطفال.",
+			"arabicTashkeel": "مُستَشفى الأطفال.",
+			"english": "The children's hospital.",
+			"transliteration": "mustashfa il-atfaal.",
+			"wordAlignments": [
+				{
+					"arabic": "مستشفى",
+					"english": "The hospital of",
+					"transliteration": "mustashfa"
+				},
+				{
+					"arabic": "الأطفال.",
+					"english": "the children.",
+					"transliteration": "il-atfaal."
+				}
+			],
+			"targetWords": [
+				"Hospital"
+			]
+		},
+		{
+			"arabic": "اشتريت دوا من الصيدلية.",
+			"arabicTashkeel": "اِشتَريت دَوا مِن الصَّيدَلية.",
+			"english": "I bought medicine from the pharmacy.",
+			"transliteration": "ishtareet dawa min is-saidaliyya.",
+			"wordAlignments": [
+				{
+					"arabic": "اشتريت",
+					"english": "I bought",
+					"transliteration": "ishtareet"
+				},
+				{
+					"arabic": "دوا",
+					"english": "medicine",
+					"transliteration": "dawa"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الصيدلية.",
+					"english": "the pharmacy.",
+					"transliteration": "is-saidaliyya."
+				}
+			],
+			"targetWords": [
+				"Medicine",
+				"Pharmacy"
+			]
+		},
+		{
+			"arabic": "خد الحبوب مع موية.",
+			"arabicTashkeel": "خُد الحُبوب مَعَ مُويَة.",
+			"english": "Take the pills with water.",
+			"transliteration": "khud il-7uboob ma3a mooya.",
+			"wordAlignments": [
+				{
+					"arabic": "خد",
+					"english": "Take",
+					"transliteration": "khud"
+				},
+				{
+					"arabic": "الحبوب",
+					"english": "the pills",
+					"transliteration": "il-7uboob"
+				},
+				{
+					"arabic": "مع",
+					"english": "with",
+					"transliteration": "ma3a"
+				},
+				{
+					"arabic": "موية.",
+					"english": "water.",
+					"transliteration": "mooya."
+				}
+			],
+			"targetWords": [
+				"Pills"
+			]
+		},
+		{
+			"arabic": "السخونة نزلت.",
+			"arabicTashkeel": "السُّخونة نَزلَت.",
+			"english": "The fever went down.",
+			"transliteration": "is-skhoona nazalat.",
+			"wordAlignments": [
+				{
+					"arabic": "السخونة",
+					"english": "The fever",
+					"transliteration": "is-skhoona"
+				},
+				{
+					"arabic": "نزلت.",
+					"english": "went down.",
+					"transliteration": "nazalat."
+				}
+			],
+			"targetWords": [
+				"Fever"
+			]
+		},
+		{
+			"arabic": "الرشح من المكيف.",
+			"arabicTashkeel": "الرَّشح مِن المُكَيِّف.",
+			"english": "The cold is because of the AC.",
+			"transliteration": "ir-rash7 min il-mukayyif.",
+			"wordAlignments": [
+				{
+					"arabic": "الرشح",
+					"english": "The cold is",
+					"transliteration": "ir-rash7"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "المكيف.",
+					"english": "the AC.",
+					"transliteration": "il-mukayyif."
+				}
+			],
+			"targetWords": [
+				"Cold (illness)"
+			]
+		},
+		{
+			"arabic": "دوا للكحة.",
+			"arabicTashkeel": "دَوا للكُحّة.",
+			"english": "Cough medicine.",
+			"transliteration": "dawa lil-ku77a.",
+			"wordAlignments": [
+				{
+					"arabic": "دوا",
+					"english": "Medicine",
+					"transliteration": "dawa"
+				},
+				{
+					"arabic": "للكحة.",
+					"english": "for the cough.",
+					"transliteration": "lil-ku77a."
+				}
+			],
+			"targetWords": [
+				"Cough",
+				"Medicine"
+			]
+		},
+		{
+			"arabic": "إبرة للسخونة.",
+			"arabicTashkeel": "إبرة للسُّخونة.",
+			"english": "An injection for the fever.",
+			"transliteration": "ibra lis-skhoona.",
+			"wordAlignments": [
+				{
+					"arabic": "إبرة",
+					"english": "An injection",
+					"transliteration": "ibra"
+				},
+				{
+					"arabic": "للسخونة.",
+					"english": "for the fever.",
+					"transliteration": "lis-skhoona."
+				}
+			],
+			"targetWords": [
+				"Injection",
+				"Fever"
+			]
+		},
+		{
+			"arabic": "شكرا، الله يسلمك.",
+			"arabicTashkeel": "شُكراً، الله يِسَلِّمَك.",
+			"english": "Thank you, may God keep you safe.",
+			"transliteration": "shukran, allah yisallimak.",
+			"wordAlignments": [
+				{
+					"arabic": "شكرا،",
+					"english": "Thanks,",
+					"transliteration": "shukran,"
+				},
+				{
+					"arabic": "الله",
+					"english": "God",
+					"transliteration": "allah"
+				},
+				{
+					"arabic": "يسلمك.",
+					"english": "keep you safe.",
+					"transliteration": "yisallimak."
+				}
+			],
+			"targetWords": [
+				"Get well soon"
+			]
+		},
+		{
+			"arabic": "تحتاج وصفة؟",
+			"arabicTashkeel": "تِحتاج وَصفة؟",
+			"english": "Do you need a prescription?",
+			"transliteration": "ti7taaj wasfa?",
+			"wordAlignments": [
+				{
+					"arabic": "تحتاج",
+					"english": "Do you need",
+					"transliteration": "ti7taaj"
+				},
+				{
+					"arabic": "وصفة؟",
+					"english": "a prescription?",
+					"transliteration": "wasfa?"
+				}
+			],
+			"targetWords": [
+				"Prescription"
+			]
+		},
+		{
+			"arabic": "عندي حساسية من الدوا.",
+			"arabicTashkeel": "عِندي حَساسية مِن الدَّوا.",
+			"english": "I have an allergy to medicine.",
+			"transliteration": "3indi 7asaasiyya min id-dawa.",
+			"wordAlignments": [
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "حساسية",
+					"english": "an allergy",
+					"transliteration": "7asaasiyya"
+				},
+				{
+					"arabic": "من",
+					"english": "to",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الدوا.",
+					"english": "the medicine.",
+					"transliteration": "id-dawa."
+				}
+			],
+			"targetWords": [
+				"Allergy",
+				"Medicine"
+			]
+		},
+		{
+			"arabic": "أسبوع راحة.",
+			"arabicTashkeel": "أُسبوع راحة.",
+			"english": "A week of rest.",
+			"transliteration": "usboo3 raa7a.",
+			"wordAlignments": [
+				{
+					"arabic": "أسبوع",
+					"english": "A week of",
+					"transliteration": "usboo3"
+				},
+				{
+					"arabic": "راحة.",
+					"english": "rest.",
+					"transliteration": "raa7a."
+				}
+			],
+			"targetWords": [
+				"Rest"
+			]
+		},
+		{
+			"arabic": "أحسن بكتير، الحمد لله.",
+			"arabicTashkeel": "أحسَن بكِتير، الحَمدُ لله.",
+			"english": "Much better, thank God.",
+			"transliteration": "a7san b-kteer, il-7amdu lillaah.",
+			"wordAlignments": [
+				{
+					"arabic": "أحسن",
+					"english": "Better",
+					"transliteration": "a7san"
+				},
+				{
+					"arabic": "بكتير،",
+					"english": "by a lot,",
+					"transliteration": "b-kteer,"
+				},
+				{
+					"arabic": "الحمد",
+					"english": "praise",
+					"transliteration": "il-7amdu"
+				},
+				{
+					"arabic": "لله.",
+					"english": "be to God.",
+					"transliteration": "lillaah."
+				}
+			],
+			"targetWords": [
+				"Better"
+			]
+		},
+		{
+			"arabic": "كنت مريض أمس.",
+			"arabicTashkeel": "كُنت مَريض أمس.",
+			"english": "I was sick yesterday.",
+			"transliteration": "kunt mareedh ams.",
+			"wordAlignments": [
+				{
+					"arabic": "كنت",
+					"english": "I was",
+					"transliteration": "kunt"
+				},
+				{
+					"arabic": "مريض",
+					"english": "sick",
+					"transliteration": "mareedh"
+				},
+				{
+					"arabic": "أمس.",
+					"english": "yesterday.",
+					"transliteration": "ams."
+				}
+			],
+			"targetWords": [
+				"Sick"
+			]
+		},
+		{
+			"arabic": "كلم الدكتور.",
+			"arabicTashkeel": "كَلِّم الدُّكتور.",
+			"english": "Call the doctor.",
+			"transliteration": "kallim id-duktoor.",
+			"wordAlignments": [
+				{
+					"arabic": "كلم",
+					"english": "Call",
+					"transliteration": "kallim"
+				},
+				{
+					"arabic": "الدكتور.",
+					"english": "the doctor.",
+					"transliteration": "id-duktoor."
+				}
+			],
+			"targetWords": [
+				"Doctor"
+			]
+		},
+		{
+			"arabic": "هوا في المستشفى.",
+			"arabicTashkeel": "هوّا في المُستَشفى.",
+			"english": "He is in the hospital.",
+			"transliteration": "huwwa fi il-mustashfa.",
+			"wordAlignments": [
+				{
+					"arabic": "هوا",
+					"english": "He is",
+					"transliteration": "huwwa"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "المستشفى.",
+					"english": "the hospital.",
+					"transliteration": "il-mustashfa."
+				}
+			],
+			"targetWords": [
+				"Hospital"
+			]
+		},
+		{
+			"arabic": "الصيدلية جنب المستشفى.",
+			"arabicTashkeel": "الصَّيدَلية جَنب المُستَشفى.",
+			"english": "The pharmacy is next to the hospital.",
+			"transliteration": "is-saidaliyya jamb il-mustashfa.",
+			"wordAlignments": [
+				{
+					"arabic": "الصيدلية",
+					"english": "The pharmacy is",
+					"transliteration": "is-saidaliyya"
+				},
+				{
+					"arabic": "جنب",
+					"english": "next to",
+					"transliteration": "jamb"
+				},
+				{
+					"arabic": "المستشفى.",
+					"english": "the hospital.",
+					"transliteration": "il-mustashfa."
+				}
+			],
+			"targetWords": [
+				"Pharmacy",
+				"Hospital"
+			]
+		},
+		{
+			"arabic": "أخدت الدوا؟",
+			"arabicTashkeel": "أخَدت الدَّوا؟",
+			"english": "Did you take the medicine?",
+			"transliteration": "akhadt id-dawa?",
+			"wordAlignments": [
+				{
+					"arabic": "أخدت",
+					"english": "Did you take",
+					"transliteration": "akhadt"
+				},
+				{
+					"arabic": "الدوا؟",
+					"english": "the medicine?",
+					"transliteration": "id-dawa?"
+				}
+			],
+			"targetWords": [
+				"Medicine"
+			]
+		},
+		{
+			"arabic": "فين حبوبي؟",
+			"arabicTashkeel": "فين حُبوبي؟",
+			"english": "Where are my pills?",
+			"transliteration": "feen 7uboobi?",
+			"wordAlignments": [
+				{
+					"arabic": "فين",
+					"english": "Where are",
+					"transliteration": "feen"
+				},
+				{
+					"arabic": "حبوبي؟",
+					"english": "my pills?",
+					"transliteration": "7uboobi?"
+				}
+			],
+			"targetWords": [
+				"Pills"
+			]
+		},
+		{
+			"arabic": "عندك سخونة؟",
+			"arabicTashkeel": "عِندَك سُخونة؟",
+			"english": "Do you have a fever?",
+			"transliteration": "3indak skhoona?",
+			"wordAlignments": [
+				{
+					"arabic": "عندك",
+					"english": "Do you have",
+					"transliteration": "3indak"
+				},
+				{
+					"arabic": "سخونة؟",
+					"english": "a fever?",
+					"transliteration": "skhoona?"
+				}
+			],
+			"targetWords": [
+				"Fever"
+			]
+		},
+		{
+			"arabic": "رشح في الشتا.",
+			"arabicTashkeel": "رَشح في الشِّتا.",
+			"english": "A cold in winter.",
+			"transliteration": "rash7 fi ish-shita.",
+			"wordAlignments": [
+				{
+					"arabic": "رشح",
+					"english": "A cold",
+					"transliteration": "rash7"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الشتا.",
+					"english": "winter.",
+					"transliteration": "ish-shita."
+				}
+			],
+			"targetWords": [
+				"Cold (illness)"
+			]
+		},
+		{
+			"arabic": "كحة ناشفة.",
+			"arabicTashkeel": "كُحّة ناشفة.",
+			"english": "A dry cough.",
+			"transliteration": "ku77a naashfa.",
+			"wordAlignments": [
+				{
+					"arabic": "كحة",
+					"english": "A cough",
+					"transliteration": "ku77a"
+				},
+				{
+					"arabic": "ناشفة.",
+					"english": "dry.",
+					"transliteration": "naashfa."
+				}
+			],
+			"targetWords": [
+				"Cough"
+			]
+		},
+		{
+			"arabic": "الإبرة ما وجعت.",
+			"arabicTashkeel": "الإبرة ما وَجَّعَت.",
+			"english": "The injection didn't hurt.",
+			"transliteration": "il-ibra ma wajja3at.",
+			"wordAlignments": [
+				{
+					"arabic": "الإبرة",
+					"english": "The injection",
+					"transliteration": "il-ibra"
+				},
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "وجعت.",
+					"english": "hurt.",
+					"transliteration": "wajja3at."
+				}
+			],
+			"targetWords": [
+				"Injection"
+			]
+		},
+		{
+			"arabic": "حبوب حساسية.",
+			"arabicTashkeel": "حُبوب حَساسية.",
+			"english": "Allergy pills.",
+			"transliteration": "7uboob 7asaasiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "حبوب",
+					"english": "Pills of",
+					"transliteration": "7uboob"
+				},
+				{
+					"arabic": "حساسية.",
+					"english": "allergy.",
+					"transliteration": "7asaasiyya."
+				}
+			],
+			"targetWords": [
+				"Allergy",
+				"Pills"
+			]
+		},
+		{
+			"arabic": "راحة وموية.",
+			"arabicTashkeel": "راحة ومُويَة.",
+			"english": "Rest and water.",
+			"transliteration": "raa7a w-mooya.",
+			"wordAlignments": [
+				{
+					"arabic": "راحة",
+					"english": "Rest",
+					"transliteration": "raa7a"
+				},
+				{
+					"arabic": "وموية.",
+					"english": "and water.",
+					"transliteration": "w-mooya."
+				}
+			],
+			"targetWords": [
+				"Rest"
+			]
+		},
+		{
+			"arabic": "أحسن من أمس.",
+			"arabicTashkeel": "أحسَن مِن أمس.",
+			"english": "Better than yesterday.",
+			"transliteration": "a7san min ams.",
+			"wordAlignments": [
+				{
+					"arabic": "أحسن",
+					"english": "Better",
+					"transliteration": "a7san"
+				},
+				{
+					"arabic": "من",
+					"english": "than",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "أمس.",
+					"english": "yesterday.",
+					"transliteration": "ams."
+				}
+			],
+			"targetWords": [
+				"Better"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "At the Clinic",
+			"sentences": [
+				{
+					"arabic": "يا دكتور، أنا مريض من أمس.",
+					"arabicTashkeel": "يا دُكتور، أنا مَريض مِن أمس.",
+					"english": "Doctor, I've been sick since yesterday.",
+					"transliteration": "ya duktoor, ana mareedh min ams.",
+					"wordAlignments": [
+						{
+							"arabic": "يا",
+							"english": "O",
+							"transliteration": "ya"
+						},
+						{
+							"arabic": "دكتور،",
+							"english": "doctor,",
+							"transliteration": "duktoor,"
+						},
+						{
+							"arabic": "أنا",
+							"english": "I am",
+							"transliteration": "ana"
+						},
+						{
+							"arabic": "مريض",
+							"english": "sick",
+							"transliteration": "mareedh"
+						},
+						{
+							"arabic": "من",
+							"english": "since",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "أمس.",
+							"english": "yesterday.",
+							"transliteration": "ams."
+						}
+					]
+				},
+				{
+					"arabic": "عندي سخونة، كحة ورشح.",
+					"arabicTashkeel": "عِندي سُخونة، كُحّة ورَشح.",
+					"english": "I have a fever, a cough and a cold.",
+					"transliteration": "3indi skhoona, ku77a w-rash7.",
+					"wordAlignments": [
+						{
+							"arabic": "عندي",
+							"english": "I have",
+							"transliteration": "3indi"
+						},
+						{
+							"arabic": "سخونة،",
+							"english": "a fever,",
+							"transliteration": "skhoona,"
+						},
+						{
+							"arabic": "كحة",
+							"english": "a cough",
+							"transliteration": "ku77a"
+						},
+						{
+							"arabic": "ورشح.",
+							"english": "and a cold.",
+							"transliteration": "w-rash7."
+						}
+					]
+				},
+				{
+					"arabic": "خد الحبوب دي وخد راحة تلات أيام.",
+					"arabicTashkeel": "خُد الحُبوب دي وخُد راحة تَلات أيّام.",
+					"english": "Take these pills and rest for three days.",
+					"transliteration": "khud il-7uboob di w-khud raa7a talaat ayyaam.",
+					"wordAlignments": [
+						{
+							"arabic": "خد",
+							"english": "Take",
+							"transliteration": "khud"
+						},
+						{
+							"arabic": "الحبوب",
+							"english": "the pills",
+							"transliteration": "il-7uboob"
+						},
+						{
+							"arabic": "دي",
+							"english": "these",
+							"transliteration": "di"
+						},
+						{
+							"arabic": "وخد",
+							"english": "and take",
+							"transliteration": "w-khud"
+						},
+						{
+							"arabic": "راحة",
+							"english": "rest",
+							"transliteration": "raa7a"
+						},
+						{
+							"arabic": "تلات",
+							"english": "three",
+							"transliteration": "talaat"
+						},
+						{
+							"arabic": "أيام.",
+							"english": "days.",
+							"transliteration": "ayyaam."
+						}
+					]
+				},
+				{
+					"arabic": "تفضل الوصفة. سلامتك!",
+					"arabicTashkeel": "تِفَضَّل الوَصفة. سَلامتَك!",
+					"english": "Here is the prescription. Get well soon!",
+					"transliteration": "tifaddal il-wasfa. salaamtak!",
+					"wordAlignments": [
+						{
+							"arabic": "تفضل",
+							"english": "Here is",
+							"transliteration": "tifaddal"
+						},
+						{
+							"arabic": "الوصفة.",
+							"english": "the prescription.",
+							"transliteration": "il-wasfa."
+						},
+						{
+							"arabic": "سلامتك!",
+							"english": "Get well soon!",
+							"transliteration": "salaamtak!"
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "At the Pharmacy",
+			"sentences": [
+				{
+					"arabic": "أبغى هادا الدوا لو سمحت.",
+					"arabicTashkeel": "أبغى هادا الدَّوا لو سَمَحت.",
+					"english": "I want this medicine, please.",
+					"transliteration": "abgha haada id-dawa law sama7t.",
+					"wordAlignments": [
+						{
+							"arabic": "أبغى",
+							"english": "I want",
+							"transliteration": "abgha"
+						},
+						{
+							"arabic": "هادا",
+							"english": "this",
+							"transliteration": "haada"
+						},
+						{
+							"arabic": "الدوا",
+							"english": "medicine",
+							"transliteration": "id-dawa"
+						},
+						{
+							"arabic": "لو",
+							"english": "if",
+							"transliteration": "law"
+						},
+						{
+							"arabic": "سمحت.",
+							"english": "you please.",
+							"transliteration": "sama7t."
+						}
+					]
+				},
+				{
+					"arabic": "عندك حساسية من أي دوا؟",
+					"arabicTashkeel": "عِندَك حَساسية مِن أيّ دَوا؟",
+					"english": "Do you have an allergy to any medicine?",
+					"transliteration": "3indak 7asaasiyya min ayy dawa?",
+					"wordAlignments": [
+						{
+							"arabic": "عندك",
+							"english": "Do you have",
+							"transliteration": "3indak"
+						},
+						{
+							"arabic": "حساسية",
+							"english": "an allergy",
+							"transliteration": "7asaasiyya"
+						},
+						{
+							"arabic": "من",
+							"english": "to",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "أي",
+							"english": "any",
+							"transliteration": "ayy"
+						},
+						{
+							"arabic": "دوا؟",
+							"english": "medicine?",
+							"transliteration": "dawa?"
+						}
+					]
+				},
+				{
+					"arabic": "لا. شكرا، أحس أحسن من دحين.",
+					"arabicTashkeel": "لا. شُكراً، أحِس أحسَن مِن دحين.",
+					"english": "No. Thank you, I feel better already.",
+					"transliteration": "laa. shukran, a7iss a7san min da7een.",
+					"wordAlignments": [
+						{
+							"arabic": "لا.",
+							"english": "No.",
+							"transliteration": "laa."
+						},
+						{
+							"arabic": "شكرا،",
+							"english": "Thanks,",
+							"transliteration": "shukran,"
+						},
+						{
+							"arabic": "أحس",
+							"english": "I feel",
+							"transliteration": "a7iss"
+						},
+						{
+							"arabic": "أحسن",
+							"english": "better",
+							"transliteration": "a7san"
+						},
+						{
+							"arabic": "من",
+							"english": "from",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "دحين.",
+							"english": "now.",
+							"transliteration": "da7een."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student has caught a bad cold in Jeddah and goes to a pharmacy and then a clinic.",
+		"studentRole": "A patient learning Saudi (Hijazi) Arabic.",
+		"otherRole": "The pharmacist, who asks about symptoms and allergies.",
+		"goalEnglish": "Describe your symptoms, ask for medicine, answer questions about allergies, and understand how to take the pills.",
+		"targetWords": [
+			"Sick",
+			"Fever",
+			"Cold (illness)",
+			"Cough",
+			"Medicine",
+			"Pills",
+			"Allergy",
+			"Get well soon"
+		]
+	}
+}
