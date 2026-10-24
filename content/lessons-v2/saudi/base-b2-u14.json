@@ -1,0 +1,2155 @@
+{
+	"vocab": [
+		{
+			"arabic": "علم",
+			"arabicTashkeel": "عِلم",
+			"english": "Science",
+			"transliteration": "3ilm",
+			"wordAlignments": [
+				{
+					"arabic": "علم",
+					"english": "Science",
+					"transliteration": "3ilm"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "إختراع",
+			"arabicTashkeel": "إختِراع",
+			"english": "Invention",
+			"transliteration": "ikhtiraa3",
+			"wordAlignments": [
+				{
+					"arabic": "إختراع",
+					"english": "Invention",
+					"transliteration": "ikhtiraa3"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "مخترع",
+			"arabicTashkeel": "مُختَرِع",
+			"english": "Inventor",
+			"transliteration": "mukhtari3",
+			"wordAlignments": [
+				{
+					"arabic": "مخترع",
+					"english": "Inventor",
+					"transliteration": "mukhtari3"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "إكتشاف",
+			"arabicTashkeel": "إكتِشاف",
+			"english": "Discovery",
+			"transliteration": "iktishaaf",
+			"wordAlignments": [
+				{
+					"arabic": "إكتشاف",
+					"english": "Discovery",
+					"transliteration": "iktishaaf"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "عالم",
+			"arabicTashkeel": "عالِم",
+			"english": "Scientist",
+			"transliteration": "3aalim",
+			"wordAlignments": [
+				{
+					"arabic": "عالم",
+					"english": "Scientist",
+					"transliteration": "3aalim"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "مختبر",
+			"arabicTashkeel": "مُختَبَر",
+			"english": "Laboratory",
+			"transliteration": "mukhtabar",
+			"wordAlignments": [
+				{
+					"arabic": "مختبر",
+					"english": "Laboratory",
+					"transliteration": "mukhtabar"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "بحث",
+			"arabicTashkeel": "بَحث",
+			"english": "Research",
+			"transliteration": "ba7s",
+			"wordAlignments": [
+				{
+					"arabic": "بحث",
+					"english": "Research",
+					"transliteration": "ba7s"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "فضاء",
+			"arabicTashkeel": "فَضاء",
+			"english": "Space",
+			"transliteration": "fadhaa2",
+			"wordAlignments": [
+				{
+					"arabic": "فضاء",
+					"english": "Space",
+					"transliteration": "fadhaa2"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "روبوت",
+			"arabicTashkeel": "روبوت",
+			"english": "Robot",
+			"transliteration": "roboot",
+			"wordAlignments": [
+				{
+					"arabic": "روبوت",
+					"english": "Robot",
+					"transliteration": "roboot"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "الذكاء الإصطناعي",
+			"arabicTashkeel": "الذَّكاء الإصطِناعي",
+			"english": "Artificial intelligence",
+			"transliteration": "iz-zakaa2 il-istinaa3i",
+			"wordAlignments": [
+				{
+					"arabic": "الذكاء",
+					"english": "The intelligence",
+					"transliteration": "iz-zakaa2"
+				},
+				{
+					"arabic": "الإصطناعي",
+					"english": "artificial",
+					"transliteration": "il-istinaa3i"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "لقاح",
+			"arabicTashkeel": "لِقاح",
+			"english": "Vaccine",
+			"transliteration": "ligaa7",
+			"wordAlignments": [
+				{
+					"arabic": "لقاح",
+					"english": "Vaccine",
+					"transliteration": "ligaa7"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "تطور",
+			"arabicTashkeel": "تَطَوُّر",
+			"english": "Progress",
+			"transliteration": "tatawwur",
+			"wordAlignments": [
+				{
+					"arabic": "تطور",
+					"english": "Development",
+					"transliteration": "tatawwur"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "قمر صناعي",
+			"arabicTashkeel": "قَمَر صِناعي",
+			"english": "Satellite",
+			"transliteration": "gamar sinaa3i",
+			"wordAlignments": [
+				{
+					"arabic": "قمر",
+					"english": "Moon",
+					"transliteration": "gamar"
+				},
+				{
+					"arabic": "صناعي",
+					"english": "artificial",
+					"transliteration": "sinaa3i"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "رائد فضاء",
+			"arabicTashkeel": "رائِد فَضاء",
+			"english": "Astronaut",
+			"transliteration": "raa2id fadhaa2",
+			"wordAlignments": [
+				{
+					"arabic": "رائد",
+					"english": "Pioneer of",
+					"transliteration": "raa2id"
+				},
+				{
+					"arabic": "فضاء",
+					"english": "space",
+					"transliteration": "fadhaa2"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "تجربة",
+			"arabicTashkeel": "تَجرِبة",
+			"english": "Experiment",
+			"transliteration": "tajriba",
+			"wordAlignments": [
+				{
+					"arabic": "تجربة",
+					"english": "Experiment",
+					"transliteration": "tajriba"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "العلم مفتاح المستقبل.",
+			"arabicTashkeel": "العِلم مِفتاح المُستَقبَل.",
+			"english": "Science is the key to the future.",
+			"transliteration": "il-3ilm miftaa7 il-mustagbal.",
+			"wordAlignments": [
+				{
+					"arabic": "العلم",
+					"english": "Science is",
+					"transliteration": "il-3ilm"
+				},
+				{
+					"arabic": "مفتاح",
+					"english": "the key of",
+					"transliteration": "miftaa7"
+				},
+				{
+					"arabic": "المستقبل.",
+					"english": "the future.",
+					"transliteration": "il-mustagbal."
+				}
+			],
+			"targetWords": [
+				"Science"
+			]
+		},
+		{
+			"arabic": "الجوال إختراع عظيم.",
+			"arabicTashkeel": "الجَوّال إختِراع عَظيم.",
+			"english": "The phone is a great invention.",
+			"transliteration": "ij-jawwaal ikhtiraa3 3adheem.",
+			"wordAlignments": [
+				{
+					"arabic": "الجوال",
+					"english": "The mobile is",
+					"transliteration": "ij-jawwaal"
+				},
+				{
+					"arabic": "إختراع",
+					"english": "an invention",
+					"transliteration": "ikhtiraa3"
+				},
+				{
+					"arabic": "عظيم.",
+					"english": "great.",
+					"transliteration": "3adheem."
+				}
+			],
+			"targetWords": [
+				"Invention"
+			]
+		},
+		{
+			"arabic": "المخترع الصغير فاز بجايزة.",
+			"arabicTashkeel": "المُختَرِع الصُّغَيَّر فاز بجايزة.",
+			"english": "The young inventor won a prize.",
+			"transliteration": "il-mukhtari3 is-sughayyar faaz b-jaayza.",
+			"wordAlignments": [
+				{
+					"arabic": "المخترع",
+					"english": "The inventor",
+					"transliteration": "il-mukhtari3"
+				},
+				{
+					"arabic": "الصغير",
+					"english": "young",
+					"transliteration": "is-sughayyar"
+				},
+				{
+					"arabic": "فاز",
+					"english": "won",
+					"transliteration": "faaz"
+				},
+				{
+					"arabic": "بجايزة.",
+					"english": "a prize.",
+					"transliteration": "b-jaayza."
+				}
+			],
+			"targetWords": [
+				"Inventor"
+			]
+		},
+		{
+			"arabic": "إكتشاف البنسلين أنقذ ملايين.",
+			"arabicTashkeel": "إكتِشاف البِنِسِلين أنقَذ مَلايين.",
+			"english": "The discovery of penicillin saved millions.",
+			"transliteration": "iktishaaf il-binisileen angaz malaayeen.",
+			"wordAlignments": [
+				{
+					"arabic": "إكتشاف",
+					"english": "The discovery of",
+					"transliteration": "iktishaaf"
+				},
+				{
+					"arabic": "البنسلين",
+					"english": "penicillin",
+					"transliteration": "il-binisileen"
+				},
+				{
+					"arabic": "أنقذ",
+					"english": "saved",
+					"transliteration": "angaz"
+				},
+				{
+					"arabic": "ملايين.",
+					"english": "millions.",
+					"transliteration": "malaayeen."
+				}
+			],
+			"targetWords": [
+				"Discovery"
+			]
+		},
+		{
+			"arabic": "أختي عالمة في كاوست.",
+			"arabicTashkeel": "أُختي عالِمة في كاوست.",
+			"english": "My sister is a scientist at KAUST.",
+			"transliteration": "ukhti 3aalima fi kaawst.",
+			"wordAlignments": [
+				{
+					"arabic": "أختي",
+					"english": "My sister is",
+					"transliteration": "ukhti"
+				},
+				{
+					"arabic": "عالمة",
+					"english": "a scientist",
+					"transliteration": "3aalima"
+				},
+				{
+					"arabic": "في",
+					"english": "at",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "كاوست.",
+					"english": "KAUST.",
+					"transliteration": "kaawst."
+				}
+			],
+			"targetWords": [
+				"Scientist"
+			]
+		},
+		{
+			"arabic": "المختبر في الدور التاني.",
+			"arabicTashkeel": "المُختَبَر في الدّور التّاني.",
+			"english": "The laboratory is on the second floor.",
+			"transliteration": "il-mukhtabar fi id-door it-taani.",
+			"wordAlignments": [
+				{
+					"arabic": "المختبر",
+					"english": "The laboratory is",
+					"transliteration": "il-mukhtabar"
+				},
+				{
+					"arabic": "في",
+					"english": "on",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الدور",
+					"english": "the floor",
+					"transliteration": "id-door"
+				},
+				{
+					"arabic": "التاني.",
+					"english": "second.",
+					"transliteration": "it-taani."
+				}
+			],
+			"targetWords": [
+				"Laboratory"
+			]
+		},
+		{
+			"arabic": "يسوي بحث عن المرجان.",
+			"arabicTashkeel": "يِسَوّي بَحث عَن المَرجان.",
+			"english": "He is doing research on the coral.",
+			"transliteration": "yisawwi ba7s 3an il-marjaan.",
+			"wordAlignments": [
+				{
+					"arabic": "يسوي",
+					"english": "He is doing",
+					"transliteration": "yisawwi"
+				},
+				{
+					"arabic": "بحث",
+					"english": "research",
+					"transliteration": "ba7s"
+				},
+				{
+					"arabic": "عن",
+					"english": "about",
+					"transliteration": "3an"
+				},
+				{
+					"arabic": "المرجان.",
+					"english": "the coral.",
+					"transliteration": "il-marjaan."
+				}
+			],
+			"targetWords": [
+				"Research"
+			]
+		},
+		{
+			"arabic": "السعودية أرسلت رواد فضاء للفضاء.",
+			"arabicTashkeel": "السُّعودية أرسَلَت رُوّاد فَضاء لِلفَضاء.",
+			"english": "Saudi Arabia sent astronauts to space.",
+			"transliteration": "is-su3oodiyya arsalat ruwwaad fadhaa2 lil-fadhaa2.",
+			"wordAlignments": [
+				{
+					"arabic": "السعودية",
+					"english": "Saudi Arabia",
+					"transliteration": "is-su3oodiyya"
+				},
+				{
+					"arabic": "أرسلت",
+					"english": "sent",
+					"transliteration": "arsalat"
+				},
+				{
+					"arabic": "رواد",
+					"english": "pioneers of",
+					"transliteration": "ruwwaad"
+				},
+				{
+					"arabic": "فضاء",
+					"english": "space",
+					"transliteration": "fadhaa2"
+				},
+				{
+					"arabic": "للفضاء.",
+					"english": "to the space.",
+					"transliteration": "lil-fadhaa2."
+				}
+			],
+			"targetWords": [
+				"Space",
+				"Astronaut"
+			]
+		},
+		{
+			"arabic": "الروبوت ينضف البيت.",
+			"arabicTashkeel": "الرّوبوت يِنَضِّف البيت.",
+			"english": "The robot cleans the house.",
+			"transliteration": "ir-roboot yinadhdhif il-bait.",
+			"wordAlignments": [
+				{
+					"arabic": "الروبوت",
+					"english": "The robot",
+					"transliteration": "ir-roboot"
+				},
+				{
+					"arabic": "ينضف",
+					"english": "cleans",
+					"transliteration": "yinadhdhif"
+				},
+				{
+					"arabic": "البيت.",
+					"english": "the house.",
+					"transliteration": "il-bait."
+				}
+			],
+			"targetWords": [
+				"Robot"
+			]
+		},
+		{
+			"arabic": "الذكاء الإصطناعي حيغير الوظايف.",
+			"arabicTashkeel": "الذَّكاء الإصطِناعي حَيغَيِّر الوَظايِف.",
+			"english": "Artificial intelligence will change jobs.",
+			"transliteration": "iz-zakaa2 il-istinaa3i 7ayghayyir il-wadhaayif.",
+			"wordAlignments": [
+				{
+					"arabic": "الذكاء",
+					"english": "The intelligence",
+					"transliteration": "iz-zakaa2"
+				},
+				{
+					"arabic": "الإصطناعي",
+					"english": "artificial",
+					"transliteration": "il-istinaa3i"
+				},
+				{
+					"arabic": "حيغير",
+					"english": "will change",
+					"transliteration": "7ayghayyir"
+				},
+				{
+					"arabic": "الوظايف.",
+					"english": "the jobs.",
+					"transliteration": "il-wadhaayif."
+				}
+			],
+			"targetWords": [
+				"Artificial intelligence"
+			]
+		},
+		{
+			"arabic": "اللقاح الجديد آمن.",
+			"arabicTashkeel": "اللِّقاح الجَديد آمِن.",
+			"english": "The new vaccine is safe.",
+			"transliteration": "il-ligaa7 ij-jadeed aamin.",
+			"wordAlignments": [
+				{
+					"arabic": "اللقاح",
+					"english": "The vaccine",
+					"transliteration": "il-ligaa7"
+				},
+				{
+					"arabic": "الجديد",
+					"english": "new is",
+					"transliteration": "ij-jadeed"
+				},
+				{
+					"arabic": "آمن.",
+					"english": "safe.",
+					"transliteration": "aamin."
+				}
+			],
+			"targetWords": [
+				"Vaccine"
+			]
+		},
+		{
+			"arabic": "التطور العلمي سريع.",
+			"arabicTashkeel": "التَّطَوُّر العِلمي سَريع.",
+			"english": "Scientific progress is fast.",
+			"transliteration": "it-tatawwur il-3ilmi saree3.",
+			"wordAlignments": [
+				{
+					"arabic": "التطور",
+					"english": "The progress",
+					"transliteration": "it-tatawwur"
+				},
+				{
+					"arabic": "العلمي",
+					"english": "scientific is",
+					"transliteration": "il-3ilmi"
+				},
+				{
+					"arabic": "سريع.",
+					"english": "fast.",
+					"transliteration": "saree3."
+				}
+			],
+			"targetWords": [
+				"Progress"
+			]
+		},
+		{
+			"arabic": "القمر الصناعي يرسل صور الأرض.",
+			"arabicTashkeel": "القَمَر الصِّناعي يِرسِل صُوَر الأرض.",
+			"english": "The satellite sends pictures of the earth.",
+			"transliteration": "il-gamar is-sinaa3i yirsil suwar il-ardh.",
+			"wordAlignments": [
+				{
+					"arabic": "القمر",
+					"english": "The moon",
+					"transliteration": "il-gamar"
+				},
+				{
+					"arabic": "الصناعي",
+					"english": "artificial",
+					"transliteration": "is-sinaa3i"
+				},
+				{
+					"arabic": "يرسل",
+					"english": "sends",
+					"transliteration": "yirsil"
+				},
+				{
+					"arabic": "صور",
+					"english": "pictures of",
+					"transliteration": "suwar"
+				},
+				{
+					"arabic": "الأرض.",
+					"english": "the earth.",
+					"transliteration": "il-ardh."
+				}
+			],
+			"targetWords": [
+				"Satellite"
+			]
+		},
+		{
+			"arabic": "هيا أول رائدة فضاء سعودية.",
+			"arabicTashkeel": "هيّا أوَّل رائِدة فَضاء سُعودية.",
+			"english": "She's the first Saudi woman astronaut.",
+			"transliteration": "hiyya awwal raa2idat fadhaa2 su3oodiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "هيا",
+					"english": "She is",
+					"transliteration": "hiyya"
+				},
+				{
+					"arabic": "أول",
+					"english": "the first",
+					"transliteration": "awwal"
+				},
+				{
+					"arabic": "رائدة",
+					"english": "pioneer of",
+					"transliteration": "raa2idat"
+				},
+				{
+					"arabic": "فضاء",
+					"english": "space",
+					"transliteration": "fadhaa2"
+				},
+				{
+					"arabic": "سعودية.",
+					"english": "Saudi.",
+					"transliteration": "su3oodiyya."
+				}
+			],
+			"targetWords": [
+				"Astronaut"
+			]
+		},
+		{
+			"arabic": "التجربة نجحت.",
+			"arabicTashkeel": "التَّجرِبة نَجَحَت.",
+			"english": "The experiment succeeded.",
+			"transliteration": "it-tajriba naja7at.",
+			"wordAlignments": [
+				{
+					"arabic": "التجربة",
+					"english": "The experiment",
+					"transliteration": "it-tajriba"
+				},
+				{
+					"arabic": "نجحت.",
+					"english": "succeeded.",
+					"transliteration": "naja7at."
+				}
+			],
+			"targetWords": [
+				"Experiment"
+			]
+		},
+		{
+			"arabic": "أحب مواد العلوم.",
+			"arabicTashkeel": "أحِب مَواد العُلوم.",
+			"english": "I love science subjects.",
+			"transliteration": "a7ibb mawaad il-3uloom.",
+			"wordAlignments": [
+				{
+					"arabic": "أحب",
+					"english": "I love",
+					"transliteration": "a7ibb"
+				},
+				{
+					"arabic": "مواد",
+					"english": "the subjects of",
+					"transliteration": "mawaad"
+				},
+				{
+					"arabic": "العلوم.",
+					"english": "the sciences.",
+					"transliteration": "il-3uloom."
+				}
+			],
+			"targetWords": [
+				"Science"
+			]
+		},
+		{
+			"arabic": "إختراع غير العالم.",
+			"arabicTashkeel": "إختِراع غَيَّر العالَم.",
+			"english": "An invention that changed the world.",
+			"transliteration": "ikhtiraa3 ghayyar il-3aalam.",
+			"wordAlignments": [
+				{
+					"arabic": "إختراع",
+					"english": "An invention",
+					"transliteration": "ikhtiraa3"
+				},
+				{
+					"arabic": "غير",
+					"english": "that changed",
+					"transliteration": "ghayyar"
+				},
+				{
+					"arabic": "العالم.",
+					"english": "the world.",
+					"transliteration": "il-3aalam."
+				}
+			],
+			"targetWords": [
+				"Invention"
+			]
+		},
+		{
+			"arabic": "المخترعين العرب في التاريخ.",
+			"arabicTashkeel": "المُختَرِعين العَرَب في التّاريخ.",
+			"english": "Arab inventors in history.",
+			"transliteration": "il-mukhtari3een il-3arab fi it-taareekh.",
+			"wordAlignments": [
+				{
+					"arabic": "المخترعين",
+					"english": "The inventors",
+					"transliteration": "il-mukhtari3een"
+				},
+				{
+					"arabic": "العرب",
+					"english": "Arab",
+					"transliteration": "il-3arab"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "التاريخ.",
+					"english": "the history.",
+					"transliteration": "it-taareekh."
+				}
+			],
+			"targetWords": [
+				"Inventor"
+			]
+		},
+		{
+			"arabic": "إكتشاف جديد في الفضاء.",
+			"arabicTashkeel": "إكتِشاف جَديد في الفَضاء.",
+			"english": "A new discovery in space.",
+			"transliteration": "iktishaaf jadeed fi il-fadhaa2.",
+			"wordAlignments": [
+				{
+					"arabic": "إكتشاف",
+					"english": "A discovery",
+					"transliteration": "iktishaaf"
+				},
+				{
+					"arabic": "جديد",
+					"english": "new",
+					"transliteration": "jadeed"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الفضاء.",
+					"english": "the space.",
+					"transliteration": "il-fadhaa2."
+				}
+			],
+			"targetWords": [
+				"Discovery",
+				"Space"
+			]
+		},
+		{
+			"arabic": "العلما قلقانين على المناخ.",
+			"arabicTashkeel": "العُلَما قَلقانين على المَناخ.",
+			"english": "Scientists are worried about the climate.",
+			"transliteration": "il-3ulama galgaaneen 3ala il-manaakh.",
+			"wordAlignments": [
+				{
+					"arabic": "العلما",
+					"english": "The scientists are",
+					"transliteration": "il-3ulama"
+				},
+				{
+					"arabic": "قلقانين",
+					"english": "worried",
+					"transliteration": "galgaaneen"
+				},
+				{
+					"arabic": "على",
+					"english": "about",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "المناخ.",
+					"english": "the climate.",
+					"transliteration": "il-manaakh."
+				}
+			],
+			"targetWords": [
+				"Scientist"
+			]
+		},
+		{
+			"arabic": "المختبر فيه أجهزة حديثة.",
+			"arabicTashkeel": "المُختَبَر فيه أجهِزة حَديثة.",
+			"english": "The laboratory has modern equipment.",
+			"transliteration": "il-mukhtabar feeh ajhiza 7adeesa.",
+			"wordAlignments": [
+				{
+					"arabic": "المختبر",
+					"english": "The laboratory",
+					"transliteration": "il-mukhtabar"
+				},
+				{
+					"arabic": "فيه",
+					"english": "has",
+					"transliteration": "feeh"
+				},
+				{
+					"arabic": "أجهزة",
+					"english": "equipment",
+					"transliteration": "ajhiza"
+				},
+				{
+					"arabic": "حديثة.",
+					"english": "modern.",
+					"transliteration": "7adeesa."
+				}
+			],
+			"targetWords": [
+				"Laboratory"
+			]
+		},
+		{
+			"arabic": "البحث العلمي يحتاج فلوس.",
+			"arabicTashkeel": "البَحث العِلمي يِحتاج فُلوس.",
+			"english": "Scientific research needs money.",
+			"transliteration": "il-ba7s il-3ilmi yi7taaj fuloos.",
+			"wordAlignments": [
+				{
+					"arabic": "البحث",
+					"english": "Research",
+					"transliteration": "il-ba7s"
+				},
+				{
+					"arabic": "العلمي",
+					"english": "scientific",
+					"transliteration": "il-3ilmi"
+				},
+				{
+					"arabic": "يحتاج",
+					"english": "needs",
+					"transliteration": "yi7taaj"
+				},
+				{
+					"arabic": "فلوس.",
+					"english": "money.",
+					"transliteration": "fuloos."
+				}
+			],
+			"targetWords": [
+				"Research"
+			]
+		},
+		{
+			"arabic": "سياحة الفضاء جاية.",
+			"arabicTashkeel": "سِياحة الفَضاء جايّة.",
+			"english": "Space tourism is coming.",
+			"transliteration": "siyaa7at il-fadhaa2 jaayya.",
+			"wordAlignments": [
+				{
+					"arabic": "سياحة",
+					"english": "The tourism of",
+					"transliteration": "siyaa7at"
+				},
+				{
+					"arabic": "الفضاء",
+					"english": "space",
+					"transliteration": "il-fadhaa2"
+				},
+				{
+					"arabic": "جاية.",
+					"english": "is coming.",
+					"transliteration": "jaayya."
+				}
+			],
+			"targetWords": [
+				"Space"
+			]
+		},
+		{
+			"arabic": "الروبوتات تشتغل في المصانع.",
+			"arabicTashkeel": "الرّوبوتات تِشتَغِل في المَصانِع.",
+			"english": "Robots work in factories.",
+			"transliteration": "ir-robootaat tishtaghil fi il-masaani3.",
+			"wordAlignments": [
+				{
+					"arabic": "الروبوتات",
+					"english": "The robots",
+					"transliteration": "ir-robootaat"
+				},
+				{
+					"arabic": "تشتغل",
+					"english": "work",
+					"transliteration": "tishtaghil"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "المصانع.",
+					"english": "the factories.",
+					"transliteration": "il-masaani3."
+				}
+			],
+			"targetWords": [
+				"Robot"
+			]
+		},
+		{
+			"arabic": "أستخدم الذكاء الإصطناعي في الشغل.",
+			"arabicTashkeel": "أستَخدِم الذَّكاء الإصطِناعي في الشُّغل.",
+			"english": "I use artificial intelligence at work.",
+			"transliteration": "astakhdim iz-zakaa2 il-istinaa3i fi ish-shughl.",
+			"wordAlignments": [
+				{
+					"arabic": "أستخدم",
+					"english": "I use",
+					"transliteration": "astakhdim"
+				},
+				{
+					"arabic": "الذكاء",
+					"english": "the intelligence",
+					"transliteration": "iz-zakaa2"
+				},
+				{
+					"arabic": "الإصطناعي",
+					"english": "artificial",
+					"transliteration": "il-istinaa3i"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الشغل.",
+					"english": "the work.",
+					"transliteration": "ish-shughl."
+				}
+			],
+			"targetWords": [
+				"Artificial intelligence"
+			]
+		},
+		{
+			"arabic": "أخدت اللقاح.",
+			"arabicTashkeel": "أخَدت اللِّقاح.",
+			"english": "I took the vaccine.",
+			"transliteration": "akhadt il-ligaa7.",
+			"wordAlignments": [
+				{
+					"arabic": "أخدت",
+					"english": "I took",
+					"transliteration": "akhadt"
+				},
+				{
+					"arabic": "اللقاح.",
+					"english": "the vaccine.",
+					"transliteration": "il-ligaa7."
+				}
+			],
+			"targetWords": [
+				"Vaccine"
+			]
+		},
+		{
+			"arabic": "التطور التكنولوجي.",
+			"arabicTashkeel": "التَّطَوُّر التِّكنولوجي.",
+			"english": "Technological progress.",
+			"transliteration": "it-tatawwur it-tiknolooji.",
+			"wordAlignments": [
+				{
+					"arabic": "التطور",
+					"english": "The progress",
+					"transliteration": "it-tatawwur"
+				},
+				{
+					"arabic": "التكنولوجي.",
+					"english": "technological.",
+					"transliteration": "it-tiknolooji."
+				}
+			],
+			"targetWords": [
+				"Progress"
+			]
+		},
+		{
+			"arabic": "قمر صناعي سعودي.",
+			"arabicTashkeel": "قَمَر صِناعي سُعودي.",
+			"english": "A Saudi satellite.",
+			"transliteration": "gamar sinaa3i su3oodi.",
+			"wordAlignments": [
+				{
+					"arabic": "قمر",
+					"english": "A moon",
+					"transliteration": "gamar"
+				},
+				{
+					"arabic": "صناعي",
+					"english": "artificial",
+					"transliteration": "sinaa3i"
+				},
+				{
+					"arabic": "سعودي.",
+					"english": "Saudi.",
+					"transliteration": "su3oodi."
+				}
+			],
+			"targetWords": [
+				"Satellite"
+			]
+		},
+		{
+			"arabic": "رائد الفضاء كلم الطلاب من الفضاء.",
+			"arabicTashkeel": "رائِد الفَضاء كَلَّم الطُّلّاب مِن الفَضاء.",
+			"english": "The astronaut talked to students from space.",
+			"transliteration": "raa2id il-fadhaa2 kallam it-tullaab min il-fadhaa2.",
+			"wordAlignments": [
+				{
+					"arabic": "رائد",
+					"english": "The pioneer of",
+					"transliteration": "raa2id"
+				},
+				{
+					"arabic": "الفضاء",
+					"english": "space",
+					"transliteration": "il-fadhaa2"
+				},
+				{
+					"arabic": "كلم",
+					"english": "talked to",
+					"transliteration": "kallam"
+				},
+				{
+					"arabic": "الطلاب",
+					"english": "the students",
+					"transliteration": "it-tullaab"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الفضاء.",
+					"english": "the space.",
+					"transliteration": "il-fadhaa2."
+				}
+			],
+			"targetWords": [
+				"Astronaut"
+			]
+		},
+		{
+			"arabic": "تجربة علمية في المدرسة.",
+			"arabicTashkeel": "تَجرِبة عِلمية في المَدرَسة.",
+			"english": "A science experiment at school.",
+			"transliteration": "tajriba 3ilmiyya fi il-madrasa.",
+			"wordAlignments": [
+				{
+					"arabic": "تجربة",
+					"english": "An experiment",
+					"transliteration": "tajriba"
+				},
+				{
+					"arabic": "علمية",
+					"english": "scientific",
+					"transliteration": "3ilmiyya"
+				},
+				{
+					"arabic": "في",
+					"english": "at",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "المدرسة.",
+					"english": "the school.",
+					"transliteration": "il-madrasa."
+				}
+			],
+			"targetWords": [
+				"Experiment"
+			]
+		},
+		{
+			"arabic": "العلم ما له حدود.",
+			"arabicTashkeel": "العِلم ما لُه حُدود.",
+			"english": "Science has no limits.",
+			"transliteration": "il-3ilm ma lu 7udood.",
+			"wordAlignments": [
+				{
+					"arabic": "العلم",
+					"english": "Science",
+					"transliteration": "il-3ilm"
+				},
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "له",
+					"english": "has",
+					"transliteration": "lu"
+				},
+				{
+					"arabic": "حدود.",
+					"english": "limits.",
+					"transliteration": "7udood."
+				}
+			],
+			"targetWords": [
+				"Science"
+			]
+		},
+		{
+			"arabic": "مين سوى الإختراع دا؟",
+			"arabicTashkeel": "مين سَوّى الإختِراع دا؟",
+			"english": "Who made this invention?",
+			"transliteration": "meen sawwa il-ikhtiraa3 da?",
+			"wordAlignments": [
+				{
+					"arabic": "مين",
+					"english": "Who",
+					"transliteration": "meen"
+				},
+				{
+					"arabic": "سوى",
+					"english": "made",
+					"transliteration": "sawwa"
+				},
+				{
+					"arabic": "الإختراع",
+					"english": "the invention",
+					"transliteration": "il-ikhtiraa3"
+				},
+				{
+					"arabic": "دا؟",
+					"english": "this?",
+					"transliteration": "da?"
+				}
+			],
+			"targetWords": [
+				"Invention"
+			]
+		},
+		{
+			"arabic": "مخترع اللمبة.",
+			"arabicTashkeel": "مُختَرِع اللَّمبة.",
+			"english": "The inventor of the light bulb.",
+			"transliteration": "mukhtari3 il-lamba.",
+			"wordAlignments": [
+				{
+					"arabic": "مخترع",
+					"english": "The inventor of",
+					"transliteration": "mukhtari3"
+				},
+				{
+					"arabic": "اللمبة.",
+					"english": "the light bulb.",
+					"transliteration": "il-lamba."
+				}
+			],
+			"targetWords": [
+				"Inventor"
+			]
+		},
+		{
+			"arabic": "إكتشاف علمي مهم.",
+			"arabicTashkeel": "إكتِشاف عِلمي مُهِم.",
+			"english": "An important scientific discovery.",
+			"transliteration": "iktishaaf 3ilmi muhimm.",
+			"wordAlignments": [
+				{
+					"arabic": "إكتشاف",
+					"english": "A discovery",
+					"transliteration": "iktishaaf"
+				},
+				{
+					"arabic": "علمي",
+					"english": "scientific",
+					"transliteration": "3ilmi"
+				},
+				{
+					"arabic": "مهم.",
+					"english": "important.",
+					"transliteration": "muhimm."
+				}
+			],
+			"targetWords": [
+				"Discovery"
+			]
+		},
+		{
+			"arabic": "عالم مسلم في التاريخ.",
+			"arabicTashkeel": "عالِم مُسلِم في التّاريخ.",
+			"english": "A Muslim scientist in history.",
+			"transliteration": "3aalim muslim fi it-taareekh.",
+			"wordAlignments": [
+				{
+					"arabic": "عالم",
+					"english": "A scientist",
+					"transliteration": "3aalim"
+				},
+				{
+					"arabic": "مسلم",
+					"english": "Muslim",
+					"transliteration": "muslim"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "التاريخ.",
+					"english": "the history.",
+					"transliteration": "it-taareekh."
+				}
+			],
+			"targetWords": [
+				"Scientist"
+			]
+		},
+		{
+			"arabic": "يشتغل طول اليوم في المختبر.",
+			"arabicTashkeel": "يِشتَغِل طول اليوم في المُختَبَر.",
+			"english": "He works all day in the laboratory.",
+			"transliteration": "yishtaghil tool il-yoom fi il-mukhtabar.",
+			"wordAlignments": [
+				{
+					"arabic": "يشتغل",
+					"english": "He works",
+					"transliteration": "yishtaghil"
+				},
+				{
+					"arabic": "طول",
+					"english": "all",
+					"transliteration": "tool"
+				},
+				{
+					"arabic": "اليوم",
+					"english": "the day",
+					"transliteration": "il-yoom"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "المختبر.",
+					"english": "the laboratory.",
+					"transliteration": "il-mukhtabar."
+				}
+			],
+			"targetWords": [
+				"Laboratory"
+			]
+		},
+		{
+			"arabic": "بحثي عن الطاقة الشمسية.",
+			"arabicTashkeel": "بَحثي عَن الطّاقة الشَّمسية.",
+			"english": "My research is about solar energy.",
+			"transliteration": "ba7si 3an it-taaga ish-shamsiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "بحثي",
+					"english": "My research is",
+					"transliteration": "ba7si"
+				},
+				{
+					"arabic": "عن",
+					"english": "about",
+					"transliteration": "3an"
+				},
+				{
+					"arabic": "الطاقة",
+					"english": "the energy",
+					"transliteration": "it-taaga"
+				},
+				{
+					"arabic": "الشمسية.",
+					"english": "solar.",
+					"transliteration": "ish-shamsiyya."
+				}
+			],
+			"targetWords": [
+				"Research"
+			]
+		},
+		{
+			"arabic": "الفضاء ما له نهاية.",
+			"arabicTashkeel": "الفَضاء ما لُه نِهاية.",
+			"english": "Space is endless.",
+			"transliteration": "il-fadhaa2 ma lu nihaaya.",
+			"wordAlignments": [
+				{
+					"arabic": "الفضاء",
+					"english": "Space",
+					"transliteration": "il-fadhaa2"
+				},
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "له",
+					"english": "has",
+					"transliteration": "lu"
+				},
+				{
+					"arabic": "نهاية.",
+					"english": "end.",
+					"transliteration": "nihaaya."
+				}
+			],
+			"targetWords": [
+				"Space"
+			]
+		},
+		{
+			"arabic": "روبوت يتكلم.",
+			"arabicTashkeel": "روبوت يِتكَلَّم.",
+			"english": "A robot that talks.",
+			"transliteration": "roboot yitkallam.",
+			"wordAlignments": [
+				{
+					"arabic": "روبوت",
+					"english": "A robot",
+					"transliteration": "roboot"
+				},
+				{
+					"arabic": "يتكلم.",
+					"english": "that talks.",
+					"transliteration": "yitkallam."
+				}
+			],
+			"targetWords": [
+				"Robot"
+			]
+		},
+		{
+			"arabic": "مخاطر الذكاء الإصطناعي.",
+			"arabicTashkeel": "مَخاطِر الذَّكاء الإصطِناعي.",
+			"english": "The dangers of artificial intelligence.",
+			"transliteration": "makhaatir iz-zakaa2 il-istinaa3i.",
+			"wordAlignments": [
+				{
+					"arabic": "مخاطر",
+					"english": "The dangers of",
+					"transliteration": "makhaatir"
+				},
+				{
+					"arabic": "الذكاء",
+					"english": "the intelligence",
+					"transliteration": "iz-zakaa2"
+				},
+				{
+					"arabic": "الإصطناعي.",
+					"english": "artificial.",
+					"transliteration": "il-istinaa3i."
+				}
+			],
+			"targetWords": [
+				"Artificial intelligence"
+			]
+		},
+		{
+			"arabic": "اللقاح يحمي الأطفال.",
+			"arabicTashkeel": "اللِّقاح يِحمي الأطفال.",
+			"english": "The vaccine protects children.",
+			"transliteration": "il-ligaa7 yi7mi il-atfaal.",
+			"wordAlignments": [
+				{
+					"arabic": "اللقاح",
+					"english": "The vaccine",
+					"transliteration": "il-ligaa7"
+				},
+				{
+					"arabic": "يحمي",
+					"english": "protects",
+					"transliteration": "yi7mi"
+				},
+				{
+					"arabic": "الأطفال.",
+					"english": "the children.",
+					"transliteration": "il-atfaal."
+				}
+			],
+			"targetWords": [
+				"Vaccine"
+			]
+		},
+		{
+			"arabic": "التطور الطبي.",
+			"arabicTashkeel": "التَّطَوُّر الطِّبّي.",
+			"english": "Medical progress.",
+			"transliteration": "it-tatawwur it-tibbi.",
+			"wordAlignments": [
+				{
+					"arabic": "التطور",
+					"english": "The progress",
+					"transliteration": "it-tatawwur"
+				},
+				{
+					"arabic": "الطبي.",
+					"english": "medical.",
+					"transliteration": "it-tibbi."
+				}
+			],
+			"targetWords": [
+				"Progress"
+			]
+		},
+		{
+			"arabic": "إطلاق القمر الصناعي.",
+			"arabicTashkeel": "إطلاق القَمَر الصِّناعي.",
+			"english": "The satellite launch.",
+			"transliteration": "itlaag il-gamar is-sinaa3i.",
+			"wordAlignments": [
+				{
+					"arabic": "إطلاق",
+					"english": "The launch of",
+					"transliteration": "itlaag"
+				},
+				{
+					"arabic": "القمر",
+					"english": "the moon",
+					"transliteration": "il-gamar"
+				},
+				{
+					"arabic": "الصناعي.",
+					"english": "artificial.",
+					"transliteration": "is-sinaa3i."
+				}
+			],
+			"targetWords": [
+				"Satellite"
+			]
+		},
+		{
+			"arabic": "أبغى أصير رائد فضاء.",
+			"arabicTashkeel": "أبغى أصير رائِد فَضاء.",
+			"english": "I want to become an astronaut.",
+			"transliteration": "abgha aseer raa2id fadhaa2.",
+			"wordAlignments": [
+				{
+					"arabic": "أبغى",
+					"english": "I want",
+					"transliteration": "abgha"
+				},
+				{
+					"arabic": "أصير",
+					"english": "I become",
+					"transliteration": "aseer"
+				},
+				{
+					"arabic": "رائد",
+					"english": "a pioneer of",
+					"transliteration": "raa2id"
+				},
+				{
+					"arabic": "فضاء.",
+					"english": "space.",
+					"transliteration": "fadhaa2."
+				}
+			],
+			"targetWords": [
+				"Astronaut"
+			]
+		},
+		{
+			"arabic": "التجربة فشلت، فنجرب مرة تانية.",
+			"arabicTashkeel": "التَّجرِبة فِشلَت، فَنجَرِّب مَرّة تانية.",
+			"english": "The experiment failed, so we try again.",
+			"transliteration": "it-tajriba fishlat, fanjarrib marra taanya.",
+			"wordAlignments": [
+				{
+					"arabic": "التجربة",
+					"english": "The experiment",
+					"transliteration": "it-tajriba"
+				},
+				{
+					"arabic": "فشلت،",
+					"english": "failed,",
+					"transliteration": "fishlat,"
+				},
+				{
+					"arabic": "فنجرب",
+					"english": "so we try",
+					"transliteration": "fanjarrib"
+				},
+				{
+					"arabic": "مرة",
+					"english": "a time",
+					"transliteration": "marra"
+				},
+				{
+					"arabic": "تانية.",
+					"english": "again.",
+					"transliteration": "taanya."
+				}
+			],
+			"targetWords": [
+				"Experiment"
+			]
+		},
+		{
+			"arabic": "العلم والدين.",
+			"arabicTashkeel": "العِلم والدّين.",
+			"english": "Science and religion.",
+			"transliteration": "il-3ilm w-id-deen.",
+			"wordAlignments": [
+				{
+					"arabic": "العلم",
+					"english": "Science",
+					"transliteration": "il-3ilm"
+				},
+				{
+					"arabic": "والدين.",
+					"english": "and the religion.",
+					"transliteration": "w-id-deen."
+				}
+			],
+			"targetWords": [
+				"Science"
+			]
+		},
+		{
+			"arabic": "إختراع مفيد.",
+			"arabicTashkeel": "إختِراع مُفيد.",
+			"english": "A useful invention.",
+			"transliteration": "ikhtiraa3 mufeed.",
+			"wordAlignments": [
+				{
+					"arabic": "إختراع",
+					"english": "An invention",
+					"transliteration": "ikhtiraa3"
+				},
+				{
+					"arabic": "مفيد.",
+					"english": "useful.",
+					"transliteration": "mufeed."
+				}
+			],
+			"targetWords": [
+				"Invention"
+			]
+		},
+		{
+			"arabic": "مخترع سعودي شاب.",
+			"arabicTashkeel": "مُختَرِع سُعودي شاب.",
+			"english": "A young Saudi inventor.",
+			"transliteration": "mukhtari3 su3oodi shaabb.",
+			"wordAlignments": [
+				{
+					"arabic": "مخترع",
+					"english": "An inventor",
+					"transliteration": "mukhtari3"
+				},
+				{
+					"arabic": "سعودي",
+					"english": "Saudi",
+					"transliteration": "su3oodi"
+				},
+				{
+					"arabic": "شاب.",
+					"english": "young.",
+					"transliteration": "shaabb."
+				}
+			],
+			"targetWords": [
+				"Inventor"
+			]
+		},
+		{
+			"arabic": "الإكتشاف فاجأ العلما.",
+			"arabicTashkeel": "الإكتِشاف فاجأ العُلَما.",
+			"english": "The discovery surprised the scientists.",
+			"transliteration": "il-iktishaaf faaja2 il-3ulama.",
+			"wordAlignments": [
+				{
+					"arabic": "الإكتشاف",
+					"english": "The discovery",
+					"transliteration": "il-iktishaaf"
+				},
+				{
+					"arabic": "فاجأ",
+					"english": "surprised",
+					"transliteration": "faaja2"
+				},
+				{
+					"arabic": "العلما.",
+					"english": "the scientists.",
+					"transliteration": "il-3ulama."
+				}
+			],
+			"targetWords": [
+				"Discovery",
+				"Scientist"
+			]
+		},
+		{
+			"arabic": "مختبر أبحاث.",
+			"arabicTashkeel": "مُختَبَر أبحاث.",
+			"english": "A research laboratory.",
+			"transliteration": "mukhtabar ab7aas.",
+			"wordAlignments": [
+				{
+					"arabic": "مختبر",
+					"english": "A laboratory of",
+					"transliteration": "mukhtabar"
+				},
+				{
+					"arabic": "أبحاث.",
+					"english": "research.",
+					"transliteration": "ab7aas."
+				}
+			],
+			"targetWords": [
+				"Laboratory",
+				"Research"
+			]
+		},
+		{
+			"arabic": "مركز أبحاث الفضاء.",
+			"arabicTashkeel": "مَركَز أبحاث الفَضاء.",
+			"english": "Space research centre.",
+			"transliteration": "markaz ab7aas il-fadhaa2.",
+			"wordAlignments": [
+				{
+					"arabic": "مركز",
+					"english": "A centre of",
+					"transliteration": "markaz"
+				},
+				{
+					"arabic": "أبحاث",
+					"english": "research of",
+					"transliteration": "ab7aas"
+				},
+				{
+					"arabic": "الفضاء.",
+					"english": "the space.",
+					"transliteration": "il-fadhaa2."
+				}
+			],
+			"targetWords": [
+				"Space"
+			]
+		},
+		{
+			"arabic": "دكتور روبوت؟",
+			"arabicTashkeel": "دُكتور روبوت؟",
+			"english": "A robot doctor?",
+			"transliteration": "duktoor roboot?",
+			"wordAlignments": [
+				{
+					"arabic": "دكتور",
+					"english": "A doctor",
+					"transliteration": "duktoor"
+				},
+				{
+					"arabic": "روبوت؟",
+					"english": "robot?",
+					"transliteration": "roboot?"
+				}
+			],
+			"targetWords": [
+				"Robot"
+			]
+		},
+		{
+			"arabic": "الذكاء الإصطناعي يكتب مقالات دحين.",
+			"arabicTashkeel": "الذَّكاء الإصطِناعي يِكتُب مَقالات دحين.",
+			"english": "AI writes articles now.",
+			"transliteration": "iz-zakaa2 il-istinaa3i yiktub magaalaat da7een.",
+			"wordAlignments": [
+				{
+					"arabic": "الذكاء",
+					"english": "The intelligence",
+					"transliteration": "iz-zakaa2"
+				},
+				{
+					"arabic": "الإصطناعي",
+					"english": "artificial",
+					"transliteration": "il-istinaa3i"
+				},
+				{
+					"arabic": "يكتب",
+					"english": "writes",
+					"transliteration": "yiktub"
+				},
+				{
+					"arabic": "مقالات",
+					"english": "articles",
+					"transliteration": "magaalaat"
+				},
+				{
+					"arabic": "دحين.",
+					"english": "now.",
+					"transliteration": "da7een."
+				}
+			],
+			"targetWords": [
+				"Artificial intelligence"
+			]
+		},
+		{
+			"arabic": "لقاح ضد الإنفلونزا.",
+			"arabicTashkeel": "لِقاح ضِد الإنفِلوَنزا.",
+			"english": "A vaccine against the flu.",
+			"transliteration": "ligaa7 dhidd il-inflowanza.",
+			"wordAlignments": [
+				{
+					"arabic": "لقاح",
+					"english": "A vaccine",
+					"transliteration": "ligaa7"
+				},
+				{
+					"arabic": "ضد",
+					"english": "against",
+					"transliteration": "dhidd"
+				},
+				{
+					"arabic": "الإنفلونزا.",
+					"english": "the flu.",
+					"transliteration": "il-inflowanza."
+				}
+			],
+			"targetWords": [
+				"Vaccine"
+			]
+		},
+		{
+			"arabic": "تطور البلد.",
+			"arabicTashkeel": "تَطَوُّر البَلَد.",
+			"english": "The progress of the country.",
+			"transliteration": "tatawwur il-balad.",
+			"wordAlignments": [
+				{
+					"arabic": "تطور",
+					"english": "The progress of",
+					"transliteration": "tatawwur"
+				},
+				{
+					"arabic": "البلد.",
+					"english": "the country.",
+					"transliteration": "il-balad."
+				}
+			],
+			"targetWords": [
+				"Progress"
+			]
+		},
+		{
+			"arabic": "تجربة علمية في الفضاء.",
+			"arabicTashkeel": "تَجرِبة عِلمية في الفَضاء.",
+			"english": "A scientific experiment in space.",
+			"transliteration": "tajriba 3ilmiyya fi il-fadhaa2.",
+			"wordAlignments": [
+				{
+					"arabic": "تجربة",
+					"english": "An experiment",
+					"transliteration": "tajriba"
+				},
+				{
+					"arabic": "علمية",
+					"english": "scientific",
+					"transliteration": "3ilmiyya"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الفضاء.",
+					"english": "the space.",
+					"transliteration": "il-fadhaa2."
+				}
+			],
+			"targetWords": [
+				"Experiment",
+				"Space"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "A Visit to KAUST",
+			"sentences": [
+				{
+					"arabic": "الأسبوع اللي فات زرت كاوست، جامعة العلوم اللي جنب جدة.",
+					"arabicTashkeel": "الأُسبوع اللي فات زُرت كاوست، جامعة العُلوم اللي جَنب جِدّة.",
+					"english": "Last week I visited KAUST, the science university near Jeddah.",
+					"transliteration": "il-usboo3 illi faat zurt kaawst, jaam3at il-3uloom illi jamb jidda.",
+					"wordAlignments": [
+						{
+							"arabic": "الأسبوع",
+							"english": "The week",
+							"transliteration": "il-usboo3"
+						},
+						{
+							"arabic": "اللي",
+							"english": "that",
+							"transliteration": "illi"
+						},
+						{
+							"arabic": "فات",
+							"english": "passed",
+							"transliteration": "faat"
+						},
+						{
+							"arabic": "زرت",
+							"english": "I visited",
+							"transliteration": "zurt"
+						},
+						{
+							"arabic": "كاوست،",
+							"english": "KAUST,",
+							"transliteration": "kaawst,"
+						},
+						{
+							"arabic": "جامعة",
+							"english": "the university of",
+							"transliteration": "jaam3at"
+						},
+						{
+							"arabic": "العلوم",
+							"english": "the sciences",
+							"transliteration": "il-3uloom"
+						},
+						{
+							"arabic": "اللي",
+							"english": "that is",
+							"transliteration": "illi"
+						},
+						{
+							"arabic": "جنب",
+							"english": "next to",
+							"transliteration": "jamb"
+						},
+						{
+							"arabic": "جدة.",
+							"english": "Jeddah.",
+							"transliteration": "jidda."
+						}
+					]
+				},
+				{
+					"arabic": "قابلت عالمة شابة تسوي بحث عن مرجان البحر الأحمر.",
+					"arabicTashkeel": "قابَلت عالِمة شابّة تِسَوّي بَحث عَن مَرجان البَحر الأحمَر.",
+					"english": "I met a young scientist who does research on the coral of the Red Sea.",
+					"transliteration": "gaabalt 3aalima shaabba tisawwi ba7s 3an marjaan il-ba7r il-a7mar.",
+					"wordAlignments": [
+						{
+							"arabic": "قابلت",
+							"english": "I met",
+							"transliteration": "gaabalt"
+						},
+						{
+							"arabic": "عالمة",
+							"english": "a scientist",
+							"transliteration": "3aalima"
+						},
+						{
+							"arabic": "شابة",
+							"english": "young",
+							"transliteration": "shaabba"
+						},
+						{
+							"arabic": "تسوي",
+							"english": "who does",
+							"transliteration": "tisawwi"
+						},
+						{
+							"arabic": "بحث",
+							"english": "research",
+							"transliteration": "ba7s"
+						},
+						{
+							"arabic": "عن",
+							"english": "about",
+							"transliteration": "3an"
+						},
+						{
+							"arabic": "مرجان",
+							"english": "the coral of",
+							"transliteration": "marjaan"
+						},
+						{
+							"arabic": "البحر",
+							"english": "the sea",
+							"transliteration": "il-ba7r"
+						},
+						{
+							"arabic": "الأحمر.",
+							"english": "Red.",
+							"transliteration": "il-a7mar."
+						}
+					]
+				},
+				{
+					"arabic": "ورتني المختبر وتجربة جديدة بروبوت.",
+					"arabicTashkeel": "وَرَّتني المُختَبَر وتَجرِبة جَديدة بِروبوت.",
+					"english": "She showed me the laboratory and a new experiment with a robot.",
+					"transliteration": "warratni il-mukhtabar w-tajriba jadeeda bi-roboot.",
+					"wordAlignments": [
+						{
+							"arabic": "ورتني",
+							"english": "She showed me",
+							"transliteration": "warratni"
+						},
+						{
+							"arabic": "المختبر",
+							"english": "the laboratory",
+							"transliteration": "il-mukhtabar"
+						},
+						{
+							"arabic": "وتجربة",
+							"english": "and an experiment",
+							"transliteration": "w-tajriba"
+						},
+						{
+							"arabic": "جديدة",
+							"english": "new",
+							"transliteration": "jadeeda"
+						},
+						{
+							"arabic": "بروبوت.",
+							"english": "with a robot.",
+							"transliteration": "bi-roboot."
+						}
+					]
+				},
+				{
+					"arabic": "قالت: الذكاء الإصطناعي يساعدنا نكتشف أسرع.",
+					"arabicTashkeel": "قالَت: الذَّكاء الإصطِناعي يِساعِدنا نِكتِشِف أسرَع.",
+					"english": "She said: artificial intelligence helps us make discoveries faster.",
+					"transliteration": "gaalat: iz-zakaa2 il-istinaa3i yisaa3idna niktishif asra3.",
+					"wordAlignments": [
+						{
+							"arabic": "قالت:",
+							"english": "She said:",
+							"transliteration": "gaalat:"
+						},
+						{
+							"arabic": "الذكاء",
+							"english": "the intelligence",
+							"transliteration": "iz-zakaa2"
+						},
+						{
+							"arabic": "الإصطناعي",
+							"english": "artificial",
+							"transliteration": "il-istinaa3i"
+						},
+						{
+							"arabic": "يساعدنا",
+							"english": "helps us",
+							"transliteration": "yisaa3idna"
+						},
+						{
+							"arabic": "نكتشف",
+							"english": "we discover",
+							"transliteration": "niktishif"
+						},
+						{
+							"arabic": "أسرع.",
+							"english": "faster.",
+							"transliteration": "asra3."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "Saudi Arabia in Space",
+			"sentences": [
+				{
+					"arabic": "في ألفين وتلاتة وعشرين، اتنين رواد فضاء سعوديين راحوا الفضاء.",
+					"arabicTashkeel": "في أَلفين وتَلاتة وعِشرين، اِتنين رُوّاد فَضاء سُعوديين راحوا الفَضاء.",
+					"english": "In 2023, two Saudi astronauts went to space.",
+					"transliteration": "fi alfain w-talaata w-3ishreen, itnain ruwwaad fadhaa2 su3oodiyyeen raa7u il-fadhaa2.",
+					"wordAlignments": [
+						{
+							"arabic": "في",
+							"english": "In",
+							"transliteration": "fi"
+						},
+						{
+							"arabic": "ألفين",
+							"english": "two thousand",
+							"transliteration": "alfain"
+						},
+						{
+							"arabic": "وتلاتة",
+							"english": "and three",
+							"transliteration": "w-talaata"
+						},
+						{
+							"arabic": "وعشرين،",
+							"english": "and twenty,",
+							"transliteration": "w-3ishreen,"
+						},
+						{
+							"arabic": "اتنين",
+							"english": "two",
+							"transliteration": "itnain"
+						},
+						{
+							"arabic": "رواد",
+							"english": "pioneers of",
+							"transliteration": "ruwwaad"
+						},
+						{
+							"arabic": "فضاء",
+							"english": "space",
+							"transliteration": "fadhaa2"
+						},
+						{
+							"arabic": "سعوديين",
+							"english": "Saudi",
+							"transliteration": "su3oodiyyeen"
+						},
+						{
+							"arabic": "راحوا",
+							"english": "went",
+							"transliteration": "raa7u"
+						},
+						{
+							"arabic": "الفضاء.",
+							"english": "to the space.",
+							"transliteration": "il-fadhaa2."
+						}
+					]
+				},
+				{
+					"arabic": "سووا تجارب علمية، وكان يوم عظيم للعلم في المملكة.",
+					"arabicTashkeel": "سَوّوا تَجارِب عِلمية، وكان يوم عَظيم لِلعِلم في المَملَكة.",
+					"english": "They did scientific experiments, and it was a great day for science in the Kingdom.",
+					"transliteration": "sawwu tajaarib 3ilmiyya, w-kaan yoom 3adheem lil-3ilm fi il-mamlaka.",
+					"wordAlignments": [
+						{
+							"arabic": "سووا",
+							"english": "They did",
+							"transliteration": "sawwu"
+						},
+						{
+							"arabic": "تجارب",
+							"english": "experiments",
+							"transliteration": "tajaarib"
+						},
+						{
+							"arabic": "علمية،",
+							"english": "scientific,",
+							"transliteration": "3ilmiyya,"
+						},
+						{
+							"arabic": "وكان",
+							"english": "and it was",
+							"transliteration": "w-kaan"
+						},
+						{
+							"arabic": "يوم",
+							"english": "a day",
+							"transliteration": "yoom"
+						},
+						{
+							"arabic": "عظيم",
+							"english": "great",
+							"transliteration": "3adheem"
+						},
+						{
+							"arabic": "للعلم",
+							"english": "for the science",
+							"transliteration": "lil-3ilm"
+						},
+						{
+							"arabic": "في",
+							"english": "in",
+							"transliteration": "fi"
+						},
+						{
+							"arabic": "المملكة.",
+							"english": "the Kingdom.",
+							"transliteration": "il-mamlaka."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student visits KAUST on the Red Sea coast and talks with a young Saudi researcher.",
+		"studentRole": "A visitor learning Saudi (Hijazi) Arabic.",
+		"otherRole": "The young researcher, who works on marine science and AI.",
+		"goalEnglish": "Ask about the research and experiments, the Saudi space programme, and discuss the future of science, robots and artificial intelligence.",
+		"targetWords": [
+			"Science",
+			"Space",
+			"Research",
+			"Scientist",
+			"Experiment",
+			"Satellite",
+			"Astronaut",
+			"Artificial intelligence"
+		]
+	}
+}
