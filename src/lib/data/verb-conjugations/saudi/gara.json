@@ -1,0 +1,318 @@
+{
+  "slug": "gara",
+  "arabic": "جرى",
+  "transliteration": "jara",
+  "english": "to run",
+  "wordId": null,
+  "rootLetters": "ر ك ض",
+  "verbClass": "sound",
+  "notes": "Hijazi جرى (jara, yijri) = to run.",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "جريت",
+          "transliteration": "jarait",
+          "english": "I ran"
+        },
+        {
+          "person": "enta",
+          "arabic": "جريت",
+          "transliteration": "jarait",
+          "english": "you (m) ran"
+        },
+        {
+          "person": "enti",
+          "arabic": "جريتي",
+          "transliteration": "jaraiti",
+          "english": "you (f) ran"
+        },
+        {
+          "person": "howa",
+          "arabic": "جرى",
+          "transliteration": "jara",
+          "english": "he ran"
+        },
+        {
+          "person": "heya",
+          "arabic": "جرت",
+          "transliteration": "jarat",
+          "english": "she ran"
+        },
+        {
+          "person": "ehna",
+          "arabic": "جرينا",
+          "transliteration": "jaraina",
+          "english": "we ran"
+        },
+        {
+          "person": "entu",
+          "arabic": "جريتوا",
+          "transliteration": "jaraitu",
+          "english": "you (pl) ran"
+        },
+        {
+          "person": "homma",
+          "arabic": "جروا",
+          "transliteration": "jaru",
+          "english": "they ran"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما جريت",
+          "transliteration": "ma jarait",
+          "english": "I didn't run"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما جريت",
+          "transliteration": "ma jarait",
+          "english": "you (m) didn't run"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما جريتي",
+          "transliteration": "ma jaraiti",
+          "english": "you (f) didn't run"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما جرى",
+          "transliteration": "ma jara",
+          "english": "he didn't run"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما جرت",
+          "transliteration": "ma jarat",
+          "english": "she didn't run"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما جرينا",
+          "transliteration": "ma jaraina",
+          "english": "we didn't run"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما جريتوا",
+          "transliteration": "ma jaraitu",
+          "english": "you (pl) didn't run"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما جروا",
+          "transliteration": "ma jaru",
+          "english": "they didn't run"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "باجري",
+          "transliteration": "bajri",
+          "english": "I run"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتجري",
+          "transliteration": "btijri",
+          "english": "you (m) run"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتجري",
+          "transliteration": "btijri",
+          "english": "you (f) run"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيجري",
+          "transliteration": "byijri",
+          "english": "he runs"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتجري",
+          "transliteration": "btijri",
+          "english": "she runs"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنجري",
+          "transliteration": "bnijri",
+          "english": "we run"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتجروا",
+          "transliteration": "btijru",
+          "english": "you (pl) run"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيجروا",
+          "transliteration": "byijru",
+          "english": "they run"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما باجري",
+          "transliteration": "ma bajri",
+          "english": "I don't run"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتجري",
+          "transliteration": "ma btijri",
+          "english": "you (m) don't run"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتجري",
+          "transliteration": "ma btijri",
+          "english": "you (f) don't run"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيجري",
+          "transliteration": "ma byijri",
+          "english": "he doesn't run"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتجري",
+          "transliteration": "ma btijri",
+          "english": "she doesn't run"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما بنجري",
+          "transliteration": "ma bnijri",
+          "english": "we don't run"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتجروا",
+          "transliteration": "ma btijru",
+          "english": "you (pl) don't run"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيجروا",
+          "transliteration": "ma byijru",
+          "english": "they don't run"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "حاجري",
+          "transliteration": "7ajri",
+          "english": "I will run"
+        },
+        {
+          "person": "enta",
+          "arabic": "حتجري",
+          "transliteration": "7atijri",
+          "english": "you (m) will run"
+        },
+        {
+          "person": "enti",
+          "arabic": "حتجري",
+          "transliteration": "7atijri",
+          "english": "you (f) will run"
+        },
+        {
+          "person": "howa",
+          "arabic": "حيجري",
+          "transliteration": "7ayijri",
+          "english": "he will run"
+        },
+        {
+          "person": "heya",
+          "arabic": "حتجري",
+          "transliteration": "7atijri",
+          "english": "she will run"
+        },
+        {
+          "person": "ehna",
+          "arabic": "حنجري",
+          "transliteration": "7anijri",
+          "english": "we will run"
+        },
+        {
+          "person": "entu",
+          "arabic": "حتجروا",
+          "transliteration": "7atijru",
+          "english": "you (pl) will run"
+        },
+        {
+          "person": "homma",
+          "arabic": "حيجروا",
+          "transliteration": "7ayijru",
+          "english": "they will run"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما حاجري",
+          "transliteration": "ma 7ajri",
+          "english": "I won't run"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما حتجري",
+          "transliteration": "ma 7atijri",
+          "english": "you (m) won't run"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما حتجري",
+          "transliteration": "ma 7atijri",
+          "english": "you (f) won't run"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما حيجري",
+          "transliteration": "ma 7ayijri",
+          "english": "he won't run"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما حتجري",
+          "transliteration": "ma 7atijri",
+          "english": "she won't run"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما حنجري",
+          "transliteration": "ma 7anijri",
+          "english": "we won't run"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما حتجروا",
+          "transliteration": "ma 7atijru",
+          "english": "you (pl) won't run"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما حيجروا",
+          "transliteration": "ma 7ayijru",
+          "english": "they won't run"
+        }
+      ]
+    }
+  }
+}

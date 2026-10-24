@@ -1,0 +1,318 @@
+{
+  "slug": "sa3id",
+  "arabic": "ساعد",
+  "transliteration": "saa3ad",
+  "english": "to help",
+  "wordId": null,
+  "rootLetters": "س ع د",
+  "verbClass": "sound",
+  "notes": "Past saa3ad, present basaa3id (I help).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "ساعدت",
+          "transliteration": "saa3adt",
+          "english": "I helped"
+        },
+        {
+          "person": "enta",
+          "arabic": "ساعدت",
+          "transliteration": "saa3adt",
+          "english": "you (m) helped"
+        },
+        {
+          "person": "enti",
+          "arabic": "ساعدتي",
+          "transliteration": "saa3adti",
+          "english": "you (f) helped"
+        },
+        {
+          "person": "howa",
+          "arabic": "ساعد",
+          "transliteration": "saa3ad",
+          "english": "he helped"
+        },
+        {
+          "person": "heya",
+          "arabic": "ساعدت",
+          "transliteration": "saa3adat",
+          "english": "she helped"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ساعدنا",
+          "transliteration": "saa3adna",
+          "english": "we helped"
+        },
+        {
+          "person": "entu",
+          "arabic": "ساعدتوا",
+          "transliteration": "saa3adtu",
+          "english": "you (pl) helped"
+        },
+        {
+          "person": "homma",
+          "arabic": "ساعدوا",
+          "transliteration": "saa3adu",
+          "english": "they helped"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما ساعدت",
+          "transliteration": "ma saa3adt",
+          "english": "I didn't help"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما ساعدت",
+          "transliteration": "ma saa3adt",
+          "english": "you (m) didn't help"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما ساعدتي",
+          "transliteration": "ma saa3adti",
+          "english": "you (f) didn't help"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما ساعد",
+          "transliteration": "ma saa3ad",
+          "english": "he didn't help"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما ساعدت",
+          "transliteration": "ma saa3adat",
+          "english": "she didn't help"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما ساعدنا",
+          "transliteration": "ma saa3adna",
+          "english": "we didn't help"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما ساعدتوا",
+          "transliteration": "ma saa3adtu",
+          "english": "you (pl) didn't help"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما ساعدوا",
+          "transliteration": "ma saa3adu",
+          "english": "they didn't help"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "باساعد",
+          "transliteration": "basaa3id",
+          "english": "I help"
+        },
+        {
+          "person": "enta",
+          "arabic": "بتساعد",
+          "transliteration": "btsaa3id",
+          "english": "you (m) help"
+        },
+        {
+          "person": "enti",
+          "arabic": "بتساعدي",
+          "transliteration": "btsaa3idi",
+          "english": "you (f) help"
+        },
+        {
+          "person": "howa",
+          "arabic": "بيساعد",
+          "transliteration": "bysaa3id",
+          "english": "he helps"
+        },
+        {
+          "person": "heya",
+          "arabic": "بتساعد",
+          "transliteration": "btsaa3id",
+          "english": "she helps"
+        },
+        {
+          "person": "ehna",
+          "arabic": "بنساعد",
+          "transliteration": "bnsaa3id",
+          "english": "we help"
+        },
+        {
+          "person": "entu",
+          "arabic": "بتساعدوا",
+          "transliteration": "btsaa3idu",
+          "english": "you (pl) help"
+        },
+        {
+          "person": "homma",
+          "arabic": "بيساعدوا",
+          "transliteration": "bysaa3idu",
+          "english": "they help"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما باساعد",
+          "transliteration": "ma basaa3id",
+          "english": "I don't help"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما بتساعد",
+          "transliteration": "ma btsaa3id",
+          "english": "you (m) don't help"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما بتساعدي",
+          "transliteration": "ma btsaa3idi",
+          "english": "you (f) don't help"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما بيساعد",
+          "transliteration": "ma bysaa3id",
+          "english": "he doesn't help"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما بتساعد",
+          "transliteration": "ma btsaa3id",
+          "english": "she doesn't help"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما بنساعد",
+          "transliteration": "ma bnsaa3id",
+          "english": "we don't help"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما بتساعدوا",
+          "transliteration": "ma btsaa3idu",
+          "english": "you (pl) don't help"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما بيساعدوا",
+          "transliteration": "ma bysaa3idu",
+          "english": "they don't help"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "حاساعد",
+          "transliteration": "7asaa3id",
+          "english": "I will help"
+        },
+        {
+          "person": "enta",
+          "arabic": "حتساعد",
+          "transliteration": "7atsaa3id",
+          "english": "you (m) will help"
+        },
+        {
+          "person": "enti",
+          "arabic": "حتساعدي",
+          "transliteration": "7atsaa3idi",
+          "english": "you (f) will help"
+        },
+        {
+          "person": "howa",
+          "arabic": "حيساعد",
+          "transliteration": "7aysaa3id",
+          "english": "he will help"
+        },
+        {
+          "person": "heya",
+          "arabic": "حتساعد",
+          "transliteration": "7atsaa3id",
+          "english": "she will help"
+        },
+        {
+          "person": "ehna",
+          "arabic": "حنساعد",
+          "transliteration": "7ansaa3id",
+          "english": "we will help"
+        },
+        {
+          "person": "entu",
+          "arabic": "حتساعدوا",
+          "transliteration": "7atsaa3idu",
+          "english": "you (pl) will help"
+        },
+        {
+          "person": "homma",
+          "arabic": "حيساعدوا",
+          "transliteration": "7aysaa3idu",
+          "english": "they will help"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما حاساعد",
+          "transliteration": "ma 7asaa3id",
+          "english": "I won't help"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما حتساعد",
+          "transliteration": "ma 7atsaa3id",
+          "english": "you (m) won't help"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما حتساعدي",
+          "transliteration": "ma 7atsaa3idi",
+          "english": "you (f) won't help"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما حيساعد",
+          "transliteration": "ma 7aysaa3id",
+          "english": "he won't help"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما حتساعد",
+          "transliteration": "ma 7atsaa3id",
+          "english": "she won't help"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما حنساعد",
+          "transliteration": "ma 7ansaa3id",
+          "english": "we won't help"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما حتساعدوا",
+          "transliteration": "ma 7atsaa3idu",
+          "english": "you (pl) won't help"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما حيساعدوا",
+          "transliteration": "ma 7aysaa3idu",
+          "english": "they won't help"
+        }
+      ]
+    }
+  }
+}

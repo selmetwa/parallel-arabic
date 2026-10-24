@@ -3,10 +3,10 @@ import { join } from 'path';
 import { describe, expect, it } from 'vitest';
 
 const DIR = 'src/lib/data/verb-conjugations';
-const DIALECTS = ['egyptian-arabic', 'levantine', 'darija', 'fusha', 'iraqi', 'khaleeji'];
+const DIALECTS = ['egyptian-arabic', 'levantine', 'darija', 'fusha', 'iraqi', 'khaleeji', 'saudi'];
 const PERSONS = ['ana', 'enta', 'enti', 'howa', 'heya', 'ehna', 'entu', 'homma'];
 const TENSES = ['past', 'present', 'future'];
-const NEW_DIALECTS = ['levantine', 'darija', 'fusha', 'iraqi', 'khaleeji'];
+const NEW_DIALECTS = ['levantine', 'darija', 'fusha', 'iraqi', 'khaleeji', 'saudi'];
 
 function verbs(dialect: string) {
 	return readdirSync(join(DIR, dialect))
