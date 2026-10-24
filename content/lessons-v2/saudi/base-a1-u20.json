@@ -1,0 +1,1827 @@
+{
+	"vocab": [
+		{
+			"arabic": "شعر",
+			"arabicTashkeel": "شَعر",
+			"english": "Hair",
+			"transliteration": "sha3r",
+			"wordAlignments": [
+				{
+					"arabic": "شعر",
+					"english": "Hair",
+					"transliteration": "sha3r"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "عيون",
+			"arabicTashkeel": "عُيون",
+			"english": "Eyes",
+			"transliteration": "3uyoon",
+			"wordAlignments": [
+				{
+					"arabic": "عيون",
+					"english": "Eyes",
+					"transliteration": "3uyoon"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "وجه",
+			"arabicTashkeel": "وِجه",
+			"english": "Face",
+			"transliteration": "wijh",
+			"wordAlignments": [
+				{
+					"arabic": "وجه",
+					"english": "Face",
+					"transliteration": "wijh"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "دقن",
+			"arabicTashkeel": "دَقن",
+			"english": "Beard",
+			"transliteration": "dagn",
+			"wordAlignments": [
+				{
+					"arabic": "دقن",
+					"english": "Beard",
+					"transliteration": "dagn"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "شنب",
+			"arabicTashkeel": "شَنَب",
+			"english": "Moustache",
+			"transliteration": "shanab",
+			"wordAlignments": [
+				{
+					"arabic": "شنب",
+					"english": "Moustache",
+					"transliteration": "shanab"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "نظارة",
+			"arabicTashkeel": "نَظّارة",
+			"english": "Glasses",
+			"transliteration": "nadhdhaara",
+			"wordAlignments": [
+				{
+					"arabic": "نظارة",
+					"english": "Glasses",
+					"transliteration": "nadhdhaara"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "نحيف",
+			"arabicTashkeel": "نَحيف",
+			"english": "Thin",
+			"transliteration": "na7eef",
+			"wordAlignments": [
+				{
+					"arabic": "نحيف",
+					"english": "Thin",
+					"transliteration": "na7eef"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "مليان",
+			"arabicTashkeel": "مَليان",
+			"english": "Chubby",
+			"transliteration": "malyaan",
+			"wordAlignments": [
+				{
+					"arabic": "مليان",
+					"english": "Chubby",
+					"transliteration": "malyaan"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "أسمر",
+			"arabicTashkeel": "أسمَر",
+			"english": "Dark-skinned",
+			"transliteration": "asmar",
+			"wordAlignments": [
+				{
+					"arabic": "أسمر",
+					"english": "Dark-skinned",
+					"transliteration": "asmar"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "أشقر",
+			"arabicTashkeel": "أشقَر",
+			"english": "Blond",
+			"transliteration": "ashgar",
+			"wordAlignments": [
+				{
+					"arabic": "أشقر",
+					"english": "Blond",
+					"transliteration": "ashgar"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "بني",
+			"arabicTashkeel": "بُنّي",
+			"english": "Brown",
+			"transliteration": "bunni",
+			"wordAlignments": [
+				{
+					"arabic": "بني",
+					"english": "Brown",
+					"transliteration": "bunni"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "مجعد",
+			"arabicTashkeel": "مْجَعَّد",
+			"english": "Curly",
+			"transliteration": "mja33ad",
+			"wordAlignments": [
+				{
+					"arabic": "مجعد",
+					"english": "Curly",
+					"transliteration": "mja33ad"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "شاب",
+			"arabicTashkeel": "شاب",
+			"english": "Young man",
+			"transliteration": "shaabb",
+			"wordAlignments": [
+				{
+					"arabic": "شاب",
+					"english": "Young man",
+					"transliteration": "shaabb"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "كبير في السن",
+			"arabicTashkeel": "كْبير في السِّن",
+			"english": "Elderly",
+			"transliteration": "kbeer fi is-sinn",
+			"wordAlignments": [
+				{
+					"arabic": "كبير",
+					"english": "Big",
+					"transliteration": "kbeer"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "السن",
+					"english": "age",
+					"transliteration": "is-sinn"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "حلو",
+			"arabicTashkeel": "حِلو",
+			"english": "Handsome / pretty",
+			"transliteration": "7ilu",
+			"wordAlignments": [
+				{
+					"arabic": "حلو",
+					"english": "Handsome",
+					"transliteration": "7ilu"
+				}
+			],
+			"partOfSpeech": "adjective"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "شعره أسود.",
+			"arabicTashkeel": "شَعرُه أسوَد.",
+			"english": "His hair is black.",
+			"transliteration": "sha3ru aswad.",
+			"wordAlignments": [
+				{
+					"arabic": "شعره",
+					"english": "His hair is",
+					"transliteration": "sha3ru"
+				},
+				{
+					"arabic": "أسود.",
+					"english": "black.",
+					"transliteration": "aswad."
+				}
+			],
+			"targetWords": [
+				"Hair"
+			]
+		},
+		{
+			"arabic": "عيونها بنية.",
+			"arabicTashkeel": "عُيونها بُنّية.",
+			"english": "Her eyes are brown.",
+			"transliteration": "3uyoonaha bunniyya.",
+			"wordAlignments": [
+				{
+					"arabic": "عيونها",
+					"english": "Her eyes are",
+					"transliteration": "3uyoonaha"
+				},
+				{
+					"arabic": "بنية.",
+					"english": "brown.",
+					"transliteration": "bunniyya."
+				}
+			],
+			"targetWords": [
+				"Eyes",
+				"Brown"
+			]
+		},
+		{
+			"arabic": "وجهه مدور.",
+			"arabicTashkeel": "وِجهُه مْدَوَّر.",
+			"english": "His face is round.",
+			"transliteration": "wijhu mdawwar.",
+			"wordAlignments": [
+				{
+					"arabic": "وجهه",
+					"english": "His face is",
+					"transliteration": "wijhu"
+				},
+				{
+					"arabic": "مدور.",
+					"english": "round.",
+					"transliteration": "mdawwar."
+				}
+			],
+			"targetWords": [
+				"Face"
+			]
+		},
+		{
+			"arabic": "أبويا عنده دقن.",
+			"arabicTashkeel": "أبويا عِندُه دَقن.",
+			"english": "My dad has a beard.",
+			"transliteration": "abooya 3indu dagn.",
+			"wordAlignments": [
+				{
+					"arabic": "أبويا",
+					"english": "My dad",
+					"transliteration": "abooya"
+				},
+				{
+					"arabic": "عنده",
+					"english": "has",
+					"transliteration": "3indu"
+				},
+				{
+					"arabic": "دقن.",
+					"english": "a beard.",
+					"transliteration": "dagn."
+				}
+			],
+			"targetWords": [
+				"Beard"
+			]
+		},
+		{
+			"arabic": "عمي عنده شنب كبير.",
+			"arabicTashkeel": "عَمّي عِندُه شَنَب كْبير.",
+			"english": "My uncle has a big moustache.",
+			"transliteration": "3ammi 3indu shanab kbeer.",
+			"wordAlignments": [
+				{
+					"arabic": "عمي",
+					"english": "My uncle",
+					"transliteration": "3ammi"
+				},
+				{
+					"arabic": "عنده",
+					"english": "has",
+					"transliteration": "3indu"
+				},
+				{
+					"arabic": "شنب",
+					"english": "a moustache",
+					"transliteration": "shanab"
+				},
+				{
+					"arabic": "كبير.",
+					"english": "big.",
+					"transliteration": "kbeer."
+				}
+			],
+			"targetWords": [
+				"Moustache"
+			]
+		},
+		{
+			"arabic": "هيا تلبس نظارة.",
+			"arabicTashkeel": "هيّا تِلبَس نَظّارة.",
+			"english": "She wears glasses.",
+			"transliteration": "hiyya tilbas nadhdhaara.",
+			"wordAlignments": [
+				{
+					"arabic": "هيا",
+					"english": "She",
+					"transliteration": "hiyya"
+				},
+				{
+					"arabic": "تلبس",
+					"english": "wears",
+					"transliteration": "tilbas"
+				},
+				{
+					"arabic": "نظارة.",
+					"english": "glasses.",
+					"transliteration": "nadhdhaara."
+				}
+			],
+			"targetWords": [
+				"Glasses"
+			]
+		},
+		{
+			"arabic": "هوا طويل ونحيف.",
+			"arabicTashkeel": "هوّا طَويل ونَحيف.",
+			"english": "He is tall and thin.",
+			"transliteration": "huwwa taweel w-na7eef.",
+			"wordAlignments": [
+				{
+					"arabic": "هوا",
+					"english": "He is",
+					"transliteration": "huwwa"
+				},
+				{
+					"arabic": "طويل",
+					"english": "tall",
+					"transliteration": "taweel"
+				},
+				{
+					"arabic": "ونحيف.",
+					"english": "and thin.",
+					"transliteration": "w-na7eef."
+				}
+			],
+			"targetWords": [
+				"Thin"
+			]
+		},
+		{
+			"arabic": "البيبي مليان.",
+			"arabicTashkeel": "البيبي مَليان.",
+			"english": "The baby is chubby.",
+			"transliteration": "il-beebi malyaan.",
+			"wordAlignments": [
+				{
+					"arabic": "البيبي",
+					"english": "The baby is",
+					"transliteration": "il-beebi"
+				},
+				{
+					"arabic": "مليان.",
+					"english": "chubby.",
+					"transliteration": "malyaan."
+				}
+			],
+			"targetWords": [
+				"Chubby"
+			]
+		},
+		{
+			"arabic": "هوا أسمر.",
+			"arabicTashkeel": "هوّا أسمَر.",
+			"english": "He is dark-skinned.",
+			"transliteration": "huwwa asmar.",
+			"wordAlignments": [
+				{
+					"arabic": "هوا",
+					"english": "He is",
+					"transliteration": "huwwa"
+				},
+				{
+					"arabic": "أسمر.",
+					"english": "dark-skinned.",
+					"transliteration": "asmar."
+				}
+			],
+			"targetWords": [
+				"Dark-skinned"
+			]
+		},
+		{
+			"arabic": "شعرها أشقر.",
+			"arabicTashkeel": "شَعرَها أشقَر.",
+			"english": "Her hair is blond.",
+			"transliteration": "sha3raha ashgar.",
+			"wordAlignments": [
+				{
+					"arabic": "شعرها",
+					"english": "Her hair is",
+					"transliteration": "sha3raha"
+				},
+				{
+					"arabic": "أشقر.",
+					"english": "blond.",
+					"transliteration": "ashgar."
+				}
+			],
+			"targetWords": [
+				"Hair",
+				"Blond"
+			]
+		},
+		{
+			"arabic": "شعره مجعد.",
+			"arabicTashkeel": "شَعرُه مْجَعَّد.",
+			"english": "His hair is curly.",
+			"transliteration": "sha3ru mja33ad.",
+			"wordAlignments": [
+				{
+					"arabic": "شعره",
+					"english": "His hair is",
+					"transliteration": "sha3ru"
+				},
+				{
+					"arabic": "مجعد.",
+					"english": "curly.",
+					"transliteration": "mja33ad."
+				}
+			],
+			"targetWords": [
+				"Hair",
+				"Curly"
+			]
+		},
+		{
+			"arabic": "هوا شاب، عمره عشرين سنة.",
+			"arabicTashkeel": "هوّا شاب، عُمرُه عِشرين سَنة.",
+			"english": "He is a young man, twenty years old.",
+			"transliteration": "huwwa shaabb, 3umru 3ishreen sana.",
+			"wordAlignments": [
+				{
+					"arabic": "هوا",
+					"english": "He is",
+					"transliteration": "huwwa"
+				},
+				{
+					"arabic": "شاب،",
+					"english": "a young man,",
+					"transliteration": "shaabb,"
+				},
+				{
+					"arabic": "عمره",
+					"english": "his age is",
+					"transliteration": "3umru"
+				},
+				{
+					"arabic": "عشرين",
+					"english": "twenty",
+					"transliteration": "3ishreen"
+				},
+				{
+					"arabic": "سنة.",
+					"english": "years.",
+					"transliteration": "sana."
+				}
+			],
+			"targetWords": [
+				"Young man"
+			]
+		},
+		{
+			"arabic": "جدي كبير في السن.",
+			"arabicTashkeel": "جَدّي كْبير في السِّن.",
+			"english": "My grandfather is elderly.",
+			"transliteration": "jaddi kbeer fi is-sinn.",
+			"wordAlignments": [
+				{
+					"arabic": "جدي",
+					"english": "My grandfather is",
+					"transliteration": "jaddi"
+				},
+				{
+					"arabic": "كبير",
+					"english": "big",
+					"transliteration": "kbeer"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "السن.",
+					"english": "age.",
+					"transliteration": "is-sinn."
+				}
+			],
+			"targetWords": [
+				"Elderly"
+			]
+		},
+		{
+			"arabic": "ولدك حلو!",
+			"arabicTashkeel": "وَلَدَك حِلو!",
+			"english": "Your son is handsome!",
+			"transliteration": "waladak 7ilu!",
+			"wordAlignments": [
+				{
+					"arabic": "ولدك",
+					"english": "Your son is",
+					"transliteration": "waladak"
+				},
+				{
+					"arabic": "حلو!",
+					"english": "handsome!",
+					"transliteration": "7ilu!"
+				}
+			],
+			"targetWords": [
+				"Handsome / pretty"
+			]
+		},
+		{
+			"arabic": "شعرها طويل.",
+			"arabicTashkeel": "شَعرَها طَويل.",
+			"english": "Her hair is long.",
+			"transliteration": "sha3raha taweel.",
+			"wordAlignments": [
+				{
+					"arabic": "شعرها",
+					"english": "Her hair is",
+					"transliteration": "sha3raha"
+				},
+				{
+					"arabic": "طويل.",
+					"english": "long.",
+					"transliteration": "taweel."
+				}
+			],
+			"targetWords": [
+				"Hair"
+			]
+		},
+		{
+			"arabic": "عيونه خضر.",
+			"arabicTashkeel": "عُيونُه خُضر.",
+			"english": "He has green eyes.",
+			"transliteration": "3uyoonu khudhr.",
+			"wordAlignments": [
+				{
+					"arabic": "عيونه",
+					"english": "His eyes are",
+					"transliteration": "3uyoonu"
+				},
+				{
+					"arabic": "خضر.",
+					"english": "green.",
+					"transliteration": "khudhr."
+				}
+			],
+			"targetWords": [
+				"Eyes"
+			]
+		},
+		{
+			"arabic": "وجهها حلو.",
+			"arabicTashkeel": "وِجهَها حِلو.",
+			"english": "Her face is pretty.",
+			"transliteration": "wijhaha 7ilu.",
+			"wordAlignments": [
+				{
+					"arabic": "وجهها",
+					"english": "Her face is",
+					"transliteration": "wijhaha"
+				},
+				{
+					"arabic": "حلو.",
+					"english": "pretty.",
+					"transliteration": "7ilu."
+				}
+			],
+			"targetWords": [
+				"Face",
+				"Handsome / pretty"
+			]
+		},
+		{
+			"arabic": "الدقن رمادي.",
+			"arabicTashkeel": "الدَّقن رَمادي.",
+			"english": "The beard is grey.",
+			"transliteration": "id-dagn ramaadi.",
+			"wordAlignments": [
+				{
+					"arabic": "الدقن",
+					"english": "The beard is",
+					"transliteration": "id-dagn"
+				},
+				{
+					"arabic": "رمادي.",
+					"english": "grey.",
+					"transliteration": "ramaadi."
+				}
+			],
+			"targetWords": [
+				"Beard"
+			]
+		},
+		{
+			"arabic": "شنبه أسود.",
+			"arabicTashkeel": "شَنَبُه أسوَد.",
+			"english": "His moustache is black.",
+			"transliteration": "shanabu aswad.",
+			"wordAlignments": [
+				{
+					"arabic": "شنبه",
+					"english": "His moustache is",
+					"transliteration": "shanabu"
+				},
+				{
+					"arabic": "أسود.",
+					"english": "black.",
+					"transliteration": "aswad."
+				}
+			],
+			"targetWords": [
+				"Moustache"
+			]
+		},
+		{
+			"arabic": "فين نظارتي؟",
+			"arabicTashkeel": "فين نَظّارتي؟",
+			"english": "Where are my glasses?",
+			"transliteration": "feen nadhdhaarti?",
+			"wordAlignments": [
+				{
+					"arabic": "فين",
+					"english": "Where are",
+					"transliteration": "feen"
+				},
+				{
+					"arabic": "نظارتي؟",
+					"english": "my glasses?",
+					"transliteration": "nadhdhaarti?"
+				}
+			],
+			"targetWords": [
+				"Glasses"
+			]
+		},
+		{
+			"arabic": "هيا قصيرة ونحيفة.",
+			"arabicTashkeel": "هيّا قَصيرة ونَحيفة.",
+			"english": "She is short and thin.",
+			"transliteration": "hiyya gaseera w-na7eefa.",
+			"wordAlignments": [
+				{
+					"arabic": "هيا",
+					"english": "She is",
+					"transliteration": "hiyya"
+				},
+				{
+					"arabic": "قصيرة",
+					"english": "short",
+					"transliteration": "gaseera"
+				},
+				{
+					"arabic": "ونحيفة.",
+					"english": "and thin.",
+					"transliteration": "w-na7eefa."
+				}
+			],
+			"targetWords": [
+				"Thin"
+			]
+		},
+		{
+			"arabic": "أخويا مليان شوية.",
+			"arabicTashkeel": "أخويا مَليان شْوَيّة.",
+			"english": "My brother is a bit chubby.",
+			"transliteration": "akhooya malyaan shwayya.",
+			"wordAlignments": [
+				{
+					"arabic": "أخويا",
+					"english": "My brother is",
+					"transliteration": "akhooya"
+				},
+				{
+					"arabic": "مليان",
+					"english": "chubby",
+					"transliteration": "malyaan"
+				},
+				{
+					"arabic": "شوية.",
+					"english": "a bit.",
+					"transliteration": "shwayya."
+				}
+			],
+			"targetWords": [
+				"Chubby"
+			]
+		},
+		{
+			"arabic": "أمي سمرا.",
+			"arabicTashkeel": "أُمّي سَمرا.",
+			"english": "My mom is dark-skinned.",
+			"transliteration": "ummi samra.",
+			"wordAlignments": [
+				{
+					"arabic": "أمي",
+					"english": "My mom is",
+					"transliteration": "ummi"
+				},
+				{
+					"arabic": "سمرا.",
+					"english": "dark-skinned.",
+					"transliteration": "samra."
+				}
+			],
+			"targetWords": [
+				"Dark-skinned"
+			]
+		},
+		{
+			"arabic": "الولد أشقر.",
+			"arabicTashkeel": "الوَلَد أشقَر.",
+			"english": "The boy is blond.",
+			"transliteration": "il-walad ashgar.",
+			"wordAlignments": [
+				{
+					"arabic": "الولد",
+					"english": "The boy is",
+					"transliteration": "il-walad"
+				},
+				{
+					"arabic": "أشقر.",
+					"english": "blond.",
+					"transliteration": "ashgar."
+				}
+			],
+			"targetWords": [
+				"Blond"
+			]
+		},
+		{
+			"arabic": "عيون بنية.",
+			"arabicTashkeel": "عُيون بُنّية.",
+			"english": "Brown eyes.",
+			"transliteration": "3uyoon bunniyya.",
+			"wordAlignments": [
+				{
+					"arabic": "عيون",
+					"english": "Eyes",
+					"transliteration": "3uyoon"
+				},
+				{
+					"arabic": "بنية.",
+					"english": "brown.",
+					"transliteration": "bunniyya."
+				}
+			],
+			"targetWords": [
+				"Eyes",
+				"Brown"
+			]
+		},
+		{
+			"arabic": "شعرها مجعد وأسود.",
+			"arabicTashkeel": "شَعرَها مْجَعَّد وأسوَد.",
+			"english": "Her hair is curly and black.",
+			"transliteration": "sha3raha mja33ad w-aswad.",
+			"wordAlignments": [
+				{
+					"arabic": "شعرها",
+					"english": "Her hair is",
+					"transliteration": "sha3raha"
+				},
+				{
+					"arabic": "مجعد",
+					"english": "curly",
+					"transliteration": "mja33ad"
+				},
+				{
+					"arabic": "وأسود.",
+					"english": "and black.",
+					"transliteration": "w-aswad."
+				}
+			],
+			"targetWords": [
+				"Hair",
+				"Curly"
+			]
+		},
+		{
+			"arabic": "مين داك الشاب؟",
+			"arabicTashkeel": "مين داك الشّاب؟",
+			"english": "Who is that young man?",
+			"transliteration": "meen daak ish-shaabb?",
+			"wordAlignments": [
+				{
+					"arabic": "مين",
+					"english": "Who is",
+					"transliteration": "meen"
+				},
+				{
+					"arabic": "داك",
+					"english": "that",
+					"transliteration": "daak"
+				},
+				{
+					"arabic": "الشاب؟",
+					"english": "young man?",
+					"transliteration": "ish-shaabb?"
+				}
+			],
+			"targetWords": [
+				"Young man"
+			]
+		},
+		{
+			"arabic": "الرجال الكبير في السن جدي.",
+			"arabicTashkeel": "الرِّجّال الكْبير في السِّن جَدّي.",
+			"english": "The elderly man is my grandfather.",
+			"transliteration": "ir-rijjaal il-kbeer fi is-sinn jaddi.",
+			"wordAlignments": [
+				{
+					"arabic": "الرجال",
+					"english": "The man",
+					"transliteration": "ir-rijjaal"
+				},
+				{
+					"arabic": "الكبير",
+					"english": "big",
+					"transliteration": "il-kbeer"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "السن",
+					"english": "age is",
+					"transliteration": "is-sinn"
+				},
+				{
+					"arabic": "جدي.",
+					"english": "my grandfather.",
+					"transliteration": "jaddi."
+				}
+			],
+			"targetWords": [
+				"Elderly"
+			]
+		},
+		{
+			"arabic": "هيا حلوة مرة.",
+			"arabicTashkeel": "هيّا حِلوة مَرّة.",
+			"english": "She is very pretty.",
+			"transliteration": "hiyya 7ilwa marra.",
+			"wordAlignments": [
+				{
+					"arabic": "هيا",
+					"english": "She is",
+					"transliteration": "hiyya"
+				},
+				{
+					"arabic": "حلوة",
+					"english": "pretty",
+					"transliteration": "7ilwa"
+				},
+				{
+					"arabic": "مرة.",
+					"english": "very.",
+					"transliteration": "marra."
+				}
+			],
+			"targetWords": [
+				"Handsome / pretty"
+			]
+		},
+		{
+			"arabic": "شعره قصير.",
+			"arabicTashkeel": "شَعرُه قَصير.",
+			"english": "His hair is short.",
+			"transliteration": "sha3ru gaseer.",
+			"wordAlignments": [
+				{
+					"arabic": "شعره",
+					"english": "His hair is",
+					"transliteration": "sha3ru"
+				},
+				{
+					"arabic": "قصير.",
+					"english": "short.",
+					"transliteration": "gaseer."
+				}
+			],
+			"targetWords": [
+				"Hair"
+			]
+		},
+		{
+			"arabic": "عيونها كبار.",
+			"arabicTashkeel": "عُيونها كْبار.",
+			"english": "Her eyes are big.",
+			"transliteration": "3uyoonaha kbaar.",
+			"wordAlignments": [
+				{
+					"arabic": "عيونها",
+					"english": "Her eyes are",
+					"transliteration": "3uyoonaha"
+				},
+				{
+					"arabic": "كبار.",
+					"english": "big.",
+					"transliteration": "kbaar."
+				}
+			],
+			"targetWords": [
+				"Eyes"
+			]
+		},
+		{
+			"arabic": "وجهه طويل.",
+			"arabicTashkeel": "وِجهُه طَويل.",
+			"english": "He has a long face.",
+			"transliteration": "wijhu taweel.",
+			"wordAlignments": [
+				{
+					"arabic": "وجهه",
+					"english": "His face is",
+					"transliteration": "wijhu"
+				},
+				{
+					"arabic": "طويل.",
+					"english": "long.",
+					"transliteration": "taweel."
+				}
+			],
+			"targetWords": [
+				"Face"
+			]
+		},
+		{
+			"arabic": "عنده دقن سودا.",
+			"arabicTashkeel": "عِندُه دَقن سودا.",
+			"english": "He has a black beard.",
+			"transliteration": "3indu dagn sooda.",
+			"wordAlignments": [
+				{
+					"arabic": "عنده",
+					"english": "He has",
+					"transliteration": "3indu"
+				},
+				{
+					"arabic": "دقن",
+					"english": "a beard",
+					"transliteration": "dagn"
+				},
+				{
+					"arabic": "سودا.",
+					"english": "black.",
+					"transliteration": "sooda."
+				}
+			],
+			"targetWords": [
+				"Beard"
+			]
+		},
+		{
+			"arabic": "جدي عنده شنب أبيض.",
+			"arabicTashkeel": "جَدّي عِندُه شَنَب أبيَض.",
+			"english": "My grandfather has a white moustache.",
+			"transliteration": "jaddi 3indu shanab abyadh.",
+			"wordAlignments": [
+				{
+					"arabic": "جدي",
+					"english": "My grandfather",
+					"transliteration": "jaddi"
+				},
+				{
+					"arabic": "عنده",
+					"english": "has",
+					"transliteration": "3indu"
+				},
+				{
+					"arabic": "شنب",
+					"english": "a moustache",
+					"transliteration": "shanab"
+				},
+				{
+					"arabic": "أبيض.",
+					"english": "white.",
+					"transliteration": "abyadh."
+				}
+			],
+			"targetWords": [
+				"Moustache"
+			]
+		},
+		{
+			"arabic": "أبويا يلبس نظارة.",
+			"arabicTashkeel": "أبويا يِلبَس نَظّارة.",
+			"english": "My dad wears glasses.",
+			"transliteration": "abooya yilbas nadhdhaara.",
+			"wordAlignments": [
+				{
+					"arabic": "أبويا",
+					"english": "My dad",
+					"transliteration": "abooya"
+				},
+				{
+					"arabic": "يلبس",
+					"english": "wears",
+					"transliteration": "yilbas"
+				},
+				{
+					"arabic": "نظارة.",
+					"english": "glasses.",
+					"transliteration": "nadhdhaara."
+				}
+			],
+			"targetWords": [
+				"Glasses"
+			]
+		},
+		{
+			"arabic": "المدرس نحيف.",
+			"arabicTashkeel": "المُدَرِّس نَحيف.",
+			"english": "The teacher is thin.",
+			"transliteration": "il-mudarris na7eef.",
+			"wordAlignments": [
+				{
+					"arabic": "المدرس",
+					"english": "The teacher is",
+					"transliteration": "il-mudarris"
+				},
+				{
+					"arabic": "نحيف.",
+					"english": "thin.",
+					"transliteration": "na7eef."
+				}
+			],
+			"targetWords": [
+				"Thin"
+			]
+		},
+		{
+			"arabic": "مو سمين، مليان شوية.",
+			"arabicTashkeel": "مو سَمين، مَليان شْوَيّة.",
+			"english": "He's not fat, he's a bit chubby.",
+			"transliteration": "moo sameen, malyaan shwayya.",
+			"wordAlignments": [
+				{
+					"arabic": "مو",
+					"english": "Not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "سمين،",
+					"english": "fat,",
+					"transliteration": "sameen,"
+				},
+				{
+					"arabic": "مليان",
+					"english": "chubby",
+					"transliteration": "malyaan"
+				},
+				{
+					"arabic": "شوية.",
+					"english": "a bit.",
+					"transliteration": "shwayya."
+				}
+			],
+			"targetWords": [
+				"Chubby"
+			]
+		},
+		{
+			"arabic": "شاب أسمر.",
+			"arabicTashkeel": "شاب أسمَر.",
+			"english": "A dark-skinned young man.",
+			"transliteration": "shaabb asmar.",
+			"wordAlignments": [
+				{
+					"arabic": "شاب",
+					"english": "A young man",
+					"transliteration": "shaabb"
+				},
+				{
+					"arabic": "أسمر.",
+					"english": "dark-skinned.",
+					"transliteration": "asmar."
+				}
+			],
+			"targetWords": [
+				"Dark-skinned",
+				"Young man"
+			]
+		},
+		{
+			"arabic": "أشقر ولا أسمر؟",
+			"arabicTashkeel": "أشقَر وَلّا أسمَر؟",
+			"english": "Blond or dark?",
+			"transliteration": "ashgar walla asmar?",
+			"wordAlignments": [
+				{
+					"arabic": "أشقر",
+					"english": "Blond",
+					"transliteration": "ashgar"
+				},
+				{
+					"arabic": "ولا",
+					"english": "or",
+					"transliteration": "walla"
+				},
+				{
+					"arabic": "أسمر؟",
+					"english": "dark?",
+					"transliteration": "asmar?"
+				}
+			],
+			"targetWords": [
+				"Blond",
+				"Dark-skinned"
+			]
+		},
+		{
+			"arabic": "شعر بني.",
+			"arabicTashkeel": "شَعر بُنّي.",
+			"english": "Brown hair.",
+			"transliteration": "sha3r bunni.",
+			"wordAlignments": [
+				{
+					"arabic": "شعر",
+					"english": "Hair",
+					"transliteration": "sha3r"
+				},
+				{
+					"arabic": "بني.",
+					"english": "brown.",
+					"transliteration": "bunni."
+				}
+			],
+			"targetWords": [
+				"Hair",
+				"Brown"
+			]
+		},
+		{
+			"arabic": "ولد شعره مجعد.",
+			"arabicTashkeel": "وَلَد شَعرُه مْجَعَّد.",
+			"english": "A curly-haired boy.",
+			"transliteration": "walad sha3ru mja33ad.",
+			"wordAlignments": [
+				{
+					"arabic": "ولد",
+					"english": "A boy",
+					"transliteration": "walad"
+				},
+				{
+					"arabic": "شعره",
+					"english": "his hair is",
+					"transliteration": "sha3ru"
+				},
+				{
+					"arabic": "مجعد.",
+					"english": "curly.",
+					"transliteration": "mja33ad."
+				}
+			],
+			"targetWords": [
+				"Curly"
+			]
+		},
+		{
+			"arabic": "الشاب طويل.",
+			"arabicTashkeel": "الشّاب طَويل.",
+			"english": "The young man is tall.",
+			"transliteration": "ish-shaabb taweel.",
+			"wordAlignments": [
+				{
+					"arabic": "الشاب",
+					"english": "The young man is",
+					"transliteration": "ish-shaabb"
+				},
+				{
+					"arabic": "طويل.",
+					"english": "tall.",
+					"transliteration": "taweel."
+				}
+			],
+			"targetWords": [
+				"Young man"
+			]
+		},
+		{
+			"arabic": "جدتي كبيرة في السن بس قوية.",
+			"arabicTashkeel": "جَدّتي كْبيرة في السِّن بَس قَوية.",
+			"english": "My grandmother is elderly but strong.",
+			"transliteration": "jaddati kbeera fi is-sinn bas gawiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "جدتي",
+					"english": "My grandmother is",
+					"transliteration": "jaddati"
+				},
+				{
+					"arabic": "كبيرة",
+					"english": "big",
+					"transliteration": "kbeera"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "السن",
+					"english": "age",
+					"transliteration": "is-sinn"
+				},
+				{
+					"arabic": "بس",
+					"english": "but",
+					"transliteration": "bas"
+				},
+				{
+					"arabic": "قوية.",
+					"english": "strong.",
+					"transliteration": "gawiyya."
+				}
+			],
+			"targetWords": [
+				"Elderly"
+			]
+		},
+		{
+			"arabic": "هوا حلو وطويل.",
+			"arabicTashkeel": "هوّا حِلو وطَويل.",
+			"english": "He is handsome and tall.",
+			"transliteration": "huwwa 7ilu w-taweel.",
+			"wordAlignments": [
+				{
+					"arabic": "هوا",
+					"english": "He is",
+					"transliteration": "huwwa"
+				},
+				{
+					"arabic": "حلو",
+					"english": "handsome",
+					"transliteration": "7ilu"
+				},
+				{
+					"arabic": "وطويل.",
+					"english": "and tall.",
+					"transliteration": "w-taweel."
+				}
+			],
+			"targetWords": [
+				"Handsome / pretty"
+			]
+		},
+		{
+			"arabic": "عيونه بنية.",
+			"arabicTashkeel": "عُيونُه بُنّية.",
+			"english": "His eyes are brown.",
+			"transliteration": "3uyoonu bunniyya.",
+			"wordAlignments": [
+				{
+					"arabic": "عيونه",
+					"english": "His eyes are",
+					"transliteration": "3uyoonu"
+				},
+				{
+					"arabic": "بنية.",
+					"english": "brown.",
+					"transliteration": "bunniyya."
+				}
+			],
+			"targetWords": [
+				"Eyes",
+				"Brown"
+			]
+		},
+		{
+			"arabic": "اغسل وجهك.",
+			"arabicTashkeel": "اِغسِل وِجهَك.",
+			"english": "Wash your face.",
+			"transliteration": "ighsil wijhak.",
+			"wordAlignments": [
+				{
+					"arabic": "اغسل",
+					"english": "Wash",
+					"transliteration": "ighsil"
+				},
+				{
+					"arabic": "وجهك.",
+					"english": "your face.",
+					"transliteration": "wijhak."
+				}
+			],
+			"targetWords": [
+				"Face"
+			]
+		},
+		{
+			"arabic": "حلق دقنه.",
+			"arabicTashkeel": "حَلَق دَقنُه.",
+			"english": "He shaved his beard.",
+			"transliteration": "7alag dagnu.",
+			"wordAlignments": [
+				{
+					"arabic": "حلق",
+					"english": "He shaved",
+					"transliteration": "7alag"
+				},
+				{
+					"arabic": "دقنه.",
+					"english": "his beard.",
+					"transliteration": "dagnu."
+				}
+			],
+			"targetWords": [
+				"Beard"
+			]
+		},
+		{
+			"arabic": "شنب كبير.",
+			"arabicTashkeel": "شَنَب كْبير.",
+			"english": "A big moustache.",
+			"transliteration": "shanab kbeer.",
+			"wordAlignments": [
+				{
+					"arabic": "شنب",
+					"english": "A moustache",
+					"transliteration": "shanab"
+				},
+				{
+					"arabic": "كبير.",
+					"english": "big.",
+					"transliteration": "kbeer."
+				}
+			],
+			"targetWords": [
+				"Moustache"
+			]
+		},
+		{
+			"arabic": "نظارة جديدة.",
+			"arabicTashkeel": "نَظّارة جَديدة.",
+			"english": "New glasses.",
+			"transliteration": "nadhdhaara jadeeda.",
+			"wordAlignments": [
+				{
+					"arabic": "نظارة",
+					"english": "Glasses",
+					"transliteration": "nadhdhaara"
+				},
+				{
+					"arabic": "جديدة.",
+					"english": "new.",
+					"transliteration": "jadeeda."
+				}
+			],
+			"targetWords": [
+				"Glasses"
+			]
+		},
+		{
+			"arabic": "نحيف ولا مليان؟",
+			"arabicTashkeel": "نَحيف وَلّا مَليان؟",
+			"english": "Thin or chubby?",
+			"transliteration": "na7eef walla malyaan?",
+			"wordAlignments": [
+				{
+					"arabic": "نحيف",
+					"english": "Thin",
+					"transliteration": "na7eef"
+				},
+				{
+					"arabic": "ولا",
+					"english": "or",
+					"transliteration": "walla"
+				},
+				{
+					"arabic": "مليان؟",
+					"english": "chubby?",
+					"transliteration": "malyaan?"
+				}
+			],
+			"targetWords": [
+				"Thin",
+				"Chubby"
+			]
+		},
+		{
+			"arabic": "رجال أسمر عنده دقن.",
+			"arabicTashkeel": "رِجّال أسمَر عِندُه دَقن.",
+			"english": "A dark-skinned man with a beard.",
+			"transliteration": "rijjaal asmar 3indu dagn.",
+			"wordAlignments": [
+				{
+					"arabic": "رجال",
+					"english": "A man",
+					"transliteration": "rijjaal"
+				},
+				{
+					"arabic": "أسمر",
+					"english": "dark-skinned",
+					"transliteration": "asmar"
+				},
+				{
+					"arabic": "عنده",
+					"english": "he has",
+					"transliteration": "3indu"
+				},
+				{
+					"arabic": "دقن.",
+					"english": "a beard.",
+					"transliteration": "dagn."
+				}
+			],
+			"targetWords": [
+				"Dark-skinned",
+				"Beard"
+			]
+		},
+		{
+			"arabic": "البنت شقرا.",
+			"arabicTashkeel": "البِنت شَقرا.",
+			"english": "The girl is blond.",
+			"transliteration": "il-bint shagra.",
+			"wordAlignments": [
+				{
+					"arabic": "البنت",
+					"english": "The girl is",
+					"transliteration": "il-bint"
+				},
+				{
+					"arabic": "شقرا.",
+					"english": "blond.",
+					"transliteration": "shagra."
+				}
+			],
+			"targetWords": [
+				"Blond"
+			]
+		},
+		{
+			"arabic": "بني ولا أسود؟",
+			"arabicTashkeel": "بُنّي وَلّا أسوَد؟",
+			"english": "Brown or black?",
+			"transliteration": "bunni walla aswad?",
+			"wordAlignments": [
+				{
+					"arabic": "بني",
+					"english": "Brown",
+					"transliteration": "bunni"
+				},
+				{
+					"arabic": "ولا",
+					"english": "or",
+					"transliteration": "walla"
+				},
+				{
+					"arabic": "أسود؟",
+					"english": "black?",
+					"transliteration": "aswad?"
+				}
+			],
+			"targetWords": [
+				"Brown"
+			]
+		},
+		{
+			"arabic": "شعرها مجعد مرة.",
+			"arabicTashkeel": "شَعرَها مْجَعَّد مَرّة.",
+			"english": "Her hair is very curly.",
+			"transliteration": "sha3raha mja33ad marra.",
+			"wordAlignments": [
+				{
+					"arabic": "شعرها",
+					"english": "Her hair is",
+					"transliteration": "sha3raha"
+				},
+				{
+					"arabic": "مجعد",
+					"english": "curly",
+					"transliteration": "mja33ad"
+				},
+				{
+					"arabic": "مرة.",
+					"english": "very.",
+					"transliteration": "marra."
+				}
+			],
+			"targetWords": [
+				"Curly"
+			]
+		},
+		{
+			"arabic": "هوا شاب، مو كبير في السن.",
+			"arabicTashkeel": "هوّا شاب، مو كْبير في السِّن.",
+			"english": "He is a young man, not old.",
+			"transliteration": "huwwa shaabb, moo kbeer fi is-sinn.",
+			"wordAlignments": [
+				{
+					"arabic": "هوا",
+					"english": "He is",
+					"transliteration": "huwwa"
+				},
+				{
+					"arabic": "شاب،",
+					"english": "a young man,",
+					"transliteration": "shaabb,"
+				},
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "كبير",
+					"english": "big",
+					"transliteration": "kbeer"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "السن.",
+					"english": "age.",
+					"transliteration": "is-sinn."
+				}
+			],
+			"targetWords": [
+				"Young man",
+				"Elderly"
+			]
+		},
+		{
+			"arabic": "بنتك حلوة.",
+			"arabicTashkeel": "بِنتَك حِلوة.",
+			"english": "Your daughter is pretty.",
+			"transliteration": "bintak 7ilwa.",
+			"wordAlignments": [
+				{
+					"arabic": "بنتك",
+					"english": "Your daughter is",
+					"transliteration": "bintak"
+				},
+				{
+					"arabic": "حلوة.",
+					"english": "pretty.",
+					"transliteration": "7ilwa."
+				}
+			],
+			"targetWords": [
+				"Handsome / pretty"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "My Brother",
+			"sentences": [
+				{
+					"arabic": "أخويا شاب، عمره خمسة وعشرين.",
+					"arabicTashkeel": "أخويا شاب، عُمرُه خَمسة وعِشرين.",
+					"english": "My brother is a young man, twenty-five years old.",
+					"transliteration": "akhooya shaabb, 3umru khamsa w-3ishreen.",
+					"wordAlignments": [
+						{
+							"arabic": "أخويا",
+							"english": "My brother is",
+							"transliteration": "akhooya"
+						},
+						{
+							"arabic": "شاب،",
+							"english": "a young man,",
+							"transliteration": "shaabb,"
+						},
+						{
+							"arabic": "عمره",
+							"english": "his age is",
+							"transliteration": "3umru"
+						},
+						{
+							"arabic": "خمسة",
+							"english": "five",
+							"transliteration": "khamsa"
+						},
+						{
+							"arabic": "وعشرين.",
+							"english": "and twenty.",
+							"transliteration": "w-3ishreen."
+						}
+					]
+				},
+				{
+					"arabic": "هوا طويل ونحيف.",
+					"arabicTashkeel": "هوّا طَويل ونَحيف.",
+					"english": "He is tall and thin.",
+					"transliteration": "huwwa taweel w-na7eef.",
+					"wordAlignments": [
+						{
+							"arabic": "هوا",
+							"english": "He is",
+							"transliteration": "huwwa"
+						},
+						{
+							"arabic": "طويل",
+							"english": "tall",
+							"transliteration": "taweel"
+						},
+						{
+							"arabic": "ونحيف.",
+							"english": "and thin.",
+							"transliteration": "w-na7eef."
+						}
+					]
+				},
+				{
+					"arabic": "شعره أسود ومجعد، وعيونه بنية.",
+					"arabicTashkeel": "شَعرُه أسوَد ومْجَعَّد، وعُيونُه بُنّية.",
+					"english": "His hair is black and curly, and his eyes are brown.",
+					"transliteration": "sha3ru aswad w-mja33ad, w-3uyoonu bunniyya.",
+					"wordAlignments": [
+						{
+							"arabic": "شعره",
+							"english": "His hair is",
+							"transliteration": "sha3ru"
+						},
+						{
+							"arabic": "أسود",
+							"english": "black",
+							"transliteration": "aswad"
+						},
+						{
+							"arabic": "ومجعد،",
+							"english": "and curly,",
+							"transliteration": "w-mja33ad,"
+						},
+						{
+							"arabic": "وعيونه",
+							"english": "and his eyes are",
+							"transliteration": "w-3uyoonu"
+						},
+						{
+							"arabic": "بنية.",
+							"english": "brown.",
+							"transliteration": "bunniyya."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "My Grandfather",
+			"sentences": [
+				{
+					"arabic": "جدي كبير في السن.",
+					"arabicTashkeel": "جَدّي كْبير في السِّن.",
+					"english": "My grandfather is elderly.",
+					"transliteration": "jaddi kbeer fi is-sinn.",
+					"wordAlignments": [
+						{
+							"arabic": "جدي",
+							"english": "My grandfather is",
+							"transliteration": "jaddi"
+						},
+						{
+							"arabic": "كبير",
+							"english": "big",
+							"transliteration": "kbeer"
+						},
+						{
+							"arabic": "في",
+							"english": "in",
+							"transliteration": "fi"
+						},
+						{
+							"arabic": "السن.",
+							"english": "age.",
+							"transliteration": "is-sinn."
+						}
+					]
+				},
+				{
+					"arabic": "عنده دقن بيضا وشنب كبير.",
+					"arabicTashkeel": "عِندُه دَقن بيضا وشَنَب كْبير.",
+					"english": "He has a white beard and a big moustache.",
+					"transliteration": "3indu dagn baidha w-shanab kbeer.",
+					"wordAlignments": [
+						{
+							"arabic": "عنده",
+							"english": "He has",
+							"transliteration": "3indu"
+						},
+						{
+							"arabic": "دقن",
+							"english": "a beard",
+							"transliteration": "dagn"
+						},
+						{
+							"arabic": "بيضا",
+							"english": "white",
+							"transliteration": "baidha"
+						},
+						{
+							"arabic": "وشنب",
+							"english": "and a moustache",
+							"transliteration": "w-shanab"
+						},
+						{
+							"arabic": "كبير.",
+							"english": "big.",
+							"transliteration": "kbeer."
+						}
+					]
+				},
+				{
+					"arabic": "يلبس نظارة ويقرا الجريدة.",
+					"arabicTashkeel": "يِلبَس نَظّارة ويِقرا الجَريدة.",
+					"english": "He wears glasses and reads the newspaper.",
+					"transliteration": "yilbas nadhdhaara w-yigra ij-jareeda.",
+					"wordAlignments": [
+						{
+							"arabic": "يلبس",
+							"english": "He wears",
+							"transliteration": "yilbas"
+						},
+						{
+							"arabic": "نظارة",
+							"english": "glasses",
+							"transliteration": "nadhdhaara"
+						},
+						{
+							"arabic": "ويقرا",
+							"english": "and reads",
+							"transliteration": "w-yigra"
+						},
+						{
+							"arabic": "الجريدة.",
+							"english": "the newspaper.",
+							"transliteration": "ij-jareeda."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is meeting a Jeddawi friend's cousin at a busy café on the Jeddah corniche but has never seen him before, so they describe each other on the phone.",
+		"studentRole": "A visitor learning Saudi (Hijazi) Arabic.",
+		"otherRole": "The friend's cousin, who is trying to spot the student in the café.",
+		"goalEnglish": "Describe your hair, eyes and glasses, ask what the cousin looks like, and find each other.",
+		"targetWords": [
+			"Hair",
+			"Eyes",
+			"Glasses",
+			"Beard",
+			"Young man",
+			"Thin",
+			"Brown",
+			"Dark-skinned"
+		]
+	}
+}
