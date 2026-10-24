@@ -1,0 +1,2047 @@
+{
+	"vocab": [
+		{
+			"arabic": "أهلين",
+			"arabicTashkeel": "أهلين",
+			"english": "Hello",
+			"transliteration": "ahlain",
+			"wordAlignments": [
+				{
+					"arabic": "أهلين",
+					"english": "Hello",
+					"transliteration": "ahlain"
+				}
+			],
+			"partOfSpeech": "greeting"
+		},
+		{
+			"arabic": "السلام عليكم",
+			"arabicTashkeel": "السَّلامُ عَلَيكُم",
+			"english": "Peace be upon you",
+			"transliteration": "is-salaamu 3alaykum",
+			"wordAlignments": [
+				{
+					"arabic": "السلام",
+					"english": "Peace",
+					"transliteration": "is-salaamu"
+				},
+				{
+					"arabic": "عليكم",
+					"english": "upon you",
+					"transliteration": "3alaykum"
+				}
+			],
+			"partOfSpeech": "greeting"
+		},
+		{
+			"arabic": "كيفك؟",
+			"arabicTashkeel": "كيفَك؟",
+			"english": "How are you? (to a man)",
+			"transliteration": "keefak?",
+			"wordAlignments": [
+				{
+					"arabic": "كيفك؟",
+					"english": "How are you?",
+					"transliteration": "keefak?"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "كيفِك؟",
+			"arabicTashkeel": "كيفِك؟",
+			"english": "How are you? (to a woman)",
+			"transliteration": "keefik?",
+			"wordAlignments": [
+				{
+					"arabic": "كيفِك؟",
+					"english": "How are you?",
+					"transliteration": "keefik?"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "كويس",
+			"arabicTashkeel": "كْوَيِّس",
+			"english": "Fine / good",
+			"transliteration": "kwayyis",
+			"wordAlignments": [
+				{
+					"arabic": "كويس",
+					"english": "Fine",
+					"transliteration": "kwayyis"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "الحمد لله",
+			"arabicTashkeel": "الحَمدُ لله",
+			"english": "Praise be to God",
+			"transliteration": "il-7amdu lillaah",
+			"wordAlignments": [
+				{
+					"arabic": "الحمد",
+					"english": "Praise",
+					"transliteration": "il-7amdu"
+				},
+				{
+					"arabic": "لله",
+					"english": "be to God",
+					"transliteration": "lillaah"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "يا هلا",
+			"arabicTashkeel": "يا هَلا",
+			"english": "Welcome",
+			"transliteration": "ya hala",
+			"wordAlignments": [
+				{
+					"arabic": "يا",
+					"english": "O",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "هلا",
+					"english": "welcome",
+					"transliteration": "hala"
+				}
+			],
+			"partOfSpeech": "greeting"
+		},
+		{
+			"arabic": "تشرفنا",
+			"arabicTashkeel": "تْشَرَّفنا",
+			"english": "Nice to meet you",
+			"transliteration": "tsharrafna",
+			"wordAlignments": [
+				{
+					"arabic": "تشرفنا",
+					"english": "Nice to meet you",
+					"transliteration": "tsharrafna"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "إسمي",
+			"arabicTashkeel": "إسمي",
+			"english": "My name is",
+			"transliteration": "ismi",
+			"wordAlignments": [
+				{
+					"arabic": "إسمي",
+					"english": "My name is",
+					"transliteration": "ismi"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "إيش إسمك؟",
+			"arabicTashkeel": "إيش إسمَك؟",
+			"english": "What is your name? (to a man)",
+			"transliteration": "eesh ismak?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "إسمك؟",
+					"english": "your name?",
+					"transliteration": "ismak?"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "إيش إسمِك؟",
+			"arabicTashkeel": "إيش إسمِك؟",
+			"english": "What is your name? (to a woman)",
+			"transliteration": "eesh ismik?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "إسمِك؟",
+					"english": "your name?",
+					"transliteration": "ismik?"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "من فين إنت؟",
+			"arabicTashkeel": "مِن فين إنتَ؟",
+			"english": "Where are you from? (to a man)",
+			"transliteration": "min feen inta?",
+			"wordAlignments": [
+				{
+					"arabic": "من",
+					"english": "From",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "فين",
+					"english": "where",
+					"transliteration": "feen"
+				},
+				{
+					"arabic": "إنت؟",
+					"english": "are you?",
+					"transliteration": "inta?"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "أنا من",
+			"arabicTashkeel": "أنا مِن",
+			"english": "I am from",
+			"transliteration": "ana min",
+			"wordAlignments": [
+				{
+					"arabic": "أنا",
+					"english": "I",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "من",
+					"english": "am from",
+					"transliteration": "min"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "إيش شغلك؟",
+			"arabicTashkeel": "إيش شُغلَك؟",
+			"english": "What is your job? (to a man)",
+			"transliteration": "eesh shughlak?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "شغلك؟",
+					"english": "is your job?",
+					"transliteration": "shughlak?"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "مع السلامة",
+			"arabicTashkeel": "مَعَ السَّلامة",
+			"english": "Goodbye",
+			"transliteration": "ma3a is-salaama",
+			"wordAlignments": [
+				{
+					"arabic": "مع",
+					"english": "With",
+					"transliteration": "ma3a"
+				},
+				{
+					"arabic": "السلامة",
+					"english": "safety",
+					"transliteration": "is-salaama"
+				}
+			],
+			"partOfSpeech": "greeting"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "أهلين، كيفك؟",
+			"arabicTashkeel": "أهلين، كيفَك؟",
+			"english": "Hello, how are you?",
+			"transliteration": "ahlain, keefak?",
+			"wordAlignments": [
+				{
+					"arabic": "أهلين،",
+					"english": "Hello,",
+					"transliteration": "ahlain,"
+				},
+				{
+					"arabic": "كيفك؟",
+					"english": "how are you?",
+					"transliteration": "keefak?"
+				}
+			],
+			"targetWords": [
+				"Hello",
+				"How are you? (to a man)"
+			]
+		},
+		{
+			"arabic": "أهلين، كيفِك؟",
+			"arabicTashkeel": "أهلين، كيفِك؟",
+			"english": "Hello, how are you?",
+			"transliteration": "ahlain, keefik?",
+			"wordAlignments": [
+				{
+					"arabic": "أهلين،",
+					"english": "Hello,",
+					"transliteration": "ahlain,"
+				},
+				{
+					"arabic": "كيفِك؟",
+					"english": "how are you?",
+					"transliteration": "keefik?"
+				}
+			],
+			"targetWords": [
+				"Hello",
+				"How are you? (to a woman)"
+			]
+		},
+		{
+			"arabic": "كويس، الحمد لله.",
+			"arabicTashkeel": "كْوَيِّس، الحَمدُ لله.",
+			"english": "Fine, praise be to God.",
+			"transliteration": "kwayyis, il-7amdu lillaah.",
+			"wordAlignments": [
+				{
+					"arabic": "كويس،",
+					"english": "Fine,",
+					"transliteration": "kwayyis,"
+				},
+				{
+					"arabic": "الحمد",
+					"english": "praise",
+					"transliteration": "il-7amdu"
+				},
+				{
+					"arabic": "لله.",
+					"english": "be to God.",
+					"transliteration": "lillaah."
+				}
+			],
+			"targetWords": [
+				"Fine / good",
+				"Praise be to God"
+			]
+		},
+		{
+			"arabic": "السلام عليكم، كيفك؟",
+			"arabicTashkeel": "السَّلامُ عَلَيكُم، كيفَك؟",
+			"english": "Peace be upon you, how are you?",
+			"transliteration": "is-salaamu 3alaykum, keefak?",
+			"wordAlignments": [
+				{
+					"arabic": "السلام",
+					"english": "Peace",
+					"transliteration": "is-salaamu"
+				},
+				{
+					"arabic": "عليكم،",
+					"english": "upon you,",
+					"transliteration": "3alaykum,"
+				},
+				{
+					"arabic": "كيفك؟",
+					"english": "how are you?",
+					"transliteration": "keefak?"
+				}
+			],
+			"targetWords": [
+				"Peace be upon you",
+				"How are you? (to a man)"
+			]
+		},
+		{
+			"arabic": "الحمد لله، أنا كويس.",
+			"arabicTashkeel": "الحَمدُ لله، أنا كْوَيِّس.",
+			"english": "Praise be to God, I'm fine.",
+			"transliteration": "il-7amdu lillaah, ana kwayyis.",
+			"wordAlignments": [
+				{
+					"arabic": "الحمد",
+					"english": "Praise",
+					"transliteration": "il-7amdu"
+				},
+				{
+					"arabic": "لله،",
+					"english": "be to God,",
+					"transliteration": "lillaah,"
+				},
+				{
+					"arabic": "أنا",
+					"english": "I am",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "كويس.",
+					"english": "fine.",
+					"transliteration": "kwayyis."
+				}
+			],
+			"targetWords": [
+				"Praise be to God",
+				"Fine / good"
+			]
+		},
+		{
+			"arabic": "يا هلا، إسمي فيصل.",
+			"arabicTashkeel": "يا هَلا، إسمي فَيصَل.",
+			"english": "Welcome, my name is Faisal.",
+			"transliteration": "ya hala, ismi faisal.",
+			"wordAlignments": [
+				{
+					"arabic": "يا",
+					"english": "O",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "هلا،",
+					"english": "welcome,",
+					"transliteration": "hala,"
+				},
+				{
+					"arabic": "إسمي",
+					"english": "my name is",
+					"transliteration": "ismi"
+				},
+				{
+					"arabic": "فيصل.",
+					"english": "Faisal.",
+					"transliteration": "faisal."
+				}
+			],
+			"targetWords": [
+				"Welcome",
+				"My name is"
+			]
+		},
+		{
+			"arabic": "إسمي نورة، تشرفنا.",
+			"arabicTashkeel": "إسمي نورة، تْشَرَّفنا.",
+			"english": "My name is Noura, nice to meet you.",
+			"transliteration": "ismi noora, tsharrafna.",
+			"wordAlignments": [
+				{
+					"arabic": "إسمي",
+					"english": "My name is",
+					"transliteration": "ismi"
+				},
+				{
+					"arabic": "نورة،",
+					"english": "Noura,",
+					"transliteration": "noora,"
+				},
+				{
+					"arabic": "تشرفنا.",
+					"english": "nice to meet you.",
+					"transliteration": "tsharrafna."
+				}
+			],
+			"targetWords": [
+				"My name is",
+				"Nice to meet you"
+			]
+		},
+		{
+			"arabic": "أهلين، إيش إسمك؟",
+			"arabicTashkeel": "أهلين، إيش إسمَك؟",
+			"english": "Hello, what is your name?",
+			"transliteration": "ahlain, eesh ismak?",
+			"wordAlignments": [
+				{
+					"arabic": "أهلين،",
+					"english": "Hello,",
+					"transliteration": "ahlain,"
+				},
+				{
+					"arabic": "إيش",
+					"english": "what",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "إسمك؟",
+					"english": "is your name?",
+					"transliteration": "ismak?"
+				}
+			],
+			"targetWords": [
+				"Hello",
+				"What is your name? (to a man)"
+			]
+		},
+		{
+			"arabic": "السلام عليكم، إيش إسمِك؟",
+			"arabicTashkeel": "السَّلامُ عَلَيكُم، إيش إسمِك؟",
+			"english": "Peace be upon you, what is your name?",
+			"transliteration": "is-salaamu 3alaykum, eesh ismik?",
+			"wordAlignments": [
+				{
+					"arabic": "السلام",
+					"english": "Peace",
+					"transliteration": "is-salaamu"
+				},
+				{
+					"arabic": "عليكم،",
+					"english": "upon you,",
+					"transliteration": "3alaykum,"
+				},
+				{
+					"arabic": "إيش",
+					"english": "what",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "إسمِك؟",
+					"english": "is your name?",
+					"transliteration": "ismik?"
+				}
+			],
+			"targetWords": [
+				"Peace be upon you",
+				"What is your name? (to a woman)"
+			]
+		},
+		{
+			"arabic": "إسمي خالد، أنا من جدة.",
+			"arabicTashkeel": "إسمي خالِد، أنا مِن جِدّة.",
+			"english": "My name is Khalid, I am from Jeddah.",
+			"transliteration": "ismi khaalid, ana min jidda.",
+			"wordAlignments": [
+				{
+					"arabic": "إسمي",
+					"english": "My name is",
+					"transliteration": "ismi"
+				},
+				{
+					"arabic": "خالد،",
+					"english": "Khalid,",
+					"transliteration": "khaalid,"
+				},
+				{
+					"arabic": "أنا",
+					"english": "I",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "من",
+					"english": "am from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "جدة.",
+					"english": "Jeddah.",
+					"transliteration": "jidda."
+				}
+			],
+			"targetWords": [
+				"My name is",
+				"I am from"
+			]
+		},
+		{
+			"arabic": "من فين إنت؟ أنا من مكة.",
+			"arabicTashkeel": "مِن فين إنتَ؟ أنا مِن مَكّة.",
+			"english": "Where are you from? I am from Mecca.",
+			"transliteration": "min feen inta? ana min makka.",
+			"wordAlignments": [
+				{
+					"arabic": "من",
+					"english": "From",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "فين",
+					"english": "where",
+					"transliteration": "feen"
+				},
+				{
+					"arabic": "إنت؟",
+					"english": "are you?",
+					"transliteration": "inta?"
+				},
+				{
+					"arabic": "أنا",
+					"english": "I",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "من",
+					"english": "am from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "مكة.",
+					"english": "Mecca.",
+					"transliteration": "makka."
+				}
+			],
+			"targetWords": [
+				"Where are you from? (to a man)",
+				"I am from"
+			]
+		},
+		{
+			"arabic": "تشرفنا، أنا من المدينة.",
+			"arabicTashkeel": "تْشَرَّفنا، أنا مِن المَدينة.",
+			"english": "Nice to meet you, I am from Medina.",
+			"transliteration": "tsharrafna, ana min il-madeena.",
+			"wordAlignments": [
+				{
+					"arabic": "تشرفنا،",
+					"english": "Nice to meet you,",
+					"transliteration": "tsharrafna,"
+				},
+				{
+					"arabic": "أنا",
+					"english": "I",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "من",
+					"english": "am from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "المدينة.",
+					"english": "Medina.",
+					"transliteration": "il-madeena."
+				}
+			],
+			"targetWords": [
+				"Nice to meet you",
+				"I am from"
+			]
+		},
+		{
+			"arabic": "يا هلا، إيش شغلك؟",
+			"arabicTashkeel": "يا هَلا، إيش شُغلَك؟",
+			"english": "Welcome, what is your job?",
+			"transliteration": "ya hala, eesh shughlak?",
+			"wordAlignments": [
+				{
+					"arabic": "يا",
+					"english": "O",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "هلا،",
+					"english": "welcome,",
+					"transliteration": "hala,"
+				},
+				{
+					"arabic": "إيش",
+					"english": "what",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "شغلك؟",
+					"english": "is your job?",
+					"transliteration": "shughlak?"
+				}
+			],
+			"targetWords": [
+				"Welcome",
+				"What is your job? (to a man)"
+			]
+		},
+		{
+			"arabic": "إسمي فهد، إيش إسمك؟",
+			"arabicTashkeel": "إسمي فَهَد، إيش إسمَك؟",
+			"english": "My name is Fahad, what is your name?",
+			"transliteration": "ismi fahad, eesh ismak?",
+			"wordAlignments": [
+				{
+					"arabic": "إسمي",
+					"english": "My name is",
+					"transliteration": "ismi"
+				},
+				{
+					"arabic": "فهد،",
+					"english": "Fahad,",
+					"transliteration": "fahad,"
+				},
+				{
+					"arabic": "إيش",
+					"english": "what",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "إسمك؟",
+					"english": "is your name?",
+					"transliteration": "ismak?"
+				}
+			],
+			"targetWords": [
+				"My name is",
+				"What is your name? (to a man)"
+			]
+		},
+		{
+			"arabic": "مع السلامة، تشرفنا.",
+			"arabicTashkeel": "مَعَ السَّلامة، تْشَرَّفنا.",
+			"english": "Goodbye, nice to meet you.",
+			"transliteration": "ma3a is-salaama, tsharrafna.",
+			"wordAlignments": [
+				{
+					"arabic": "مع",
+					"english": "With",
+					"transliteration": "ma3a"
+				},
+				{
+					"arabic": "السلامة،",
+					"english": "safety,",
+					"transliteration": "is-salaama,"
+				},
+				{
+					"arabic": "تشرفنا.",
+					"english": "nice to meet you.",
+					"transliteration": "tsharrafna."
+				}
+			],
+			"targetWords": [
+				"Goodbye",
+				"Nice to meet you"
+			]
+		},
+		{
+			"arabic": "كويس، مع السلامة.",
+			"arabicTashkeel": "كْوَيِّس، مَعَ السَّلامة.",
+			"english": "Okay, goodbye.",
+			"transliteration": "kwayyis, ma3a is-salaama.",
+			"wordAlignments": [
+				{
+					"arabic": "كويس،",
+					"english": "Okay,",
+					"transliteration": "kwayyis,"
+				},
+				{
+					"arabic": "مع",
+					"english": "with",
+					"transliteration": "ma3a"
+				},
+				{
+					"arabic": "السلامة.",
+					"english": "safety.",
+					"transliteration": "is-salaama."
+				}
+			],
+			"targetWords": [
+				"Fine / good",
+				"Goodbye"
+			]
+		},
+		{
+			"arabic": "أهلين، يا هلا.",
+			"arabicTashkeel": "أهلين، يا هَلا.",
+			"english": "Hello, welcome.",
+			"transliteration": "ahlain, ya hala.",
+			"wordAlignments": [
+				{
+					"arabic": "أهلين،",
+					"english": "Hello,",
+					"transliteration": "ahlain,"
+				},
+				{
+					"arabic": "يا",
+					"english": "O",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "هلا.",
+					"english": "welcome.",
+					"transliteration": "hala."
+				}
+			],
+			"targetWords": [
+				"Hello",
+				"Welcome"
+			]
+		},
+		{
+			"arabic": "السلام عليكم، إسمي ريم.",
+			"arabicTashkeel": "السَّلامُ عَلَيكُم، إسمي ريم.",
+			"english": "Peace be upon you, my name is Reem.",
+			"transliteration": "is-salaamu 3alaykum, ismi reem.",
+			"wordAlignments": [
+				{
+					"arabic": "السلام",
+					"english": "Peace",
+					"transliteration": "is-salaamu"
+				},
+				{
+					"arabic": "عليكم،",
+					"english": "upon you,",
+					"transliteration": "3alaykum,"
+				},
+				{
+					"arabic": "إسمي",
+					"english": "my name is",
+					"transliteration": "ismi"
+				},
+				{
+					"arabic": "ريم.",
+					"english": "Reem.",
+					"transliteration": "reem."
+				}
+			],
+			"targetWords": [
+				"Peace be upon you",
+				"My name is"
+			]
+		},
+		{
+			"arabic": "كيفك؟ كويس؟",
+			"arabicTashkeel": "كيفَك؟ كْوَيِّس؟",
+			"english": "How are you? Good?",
+			"transliteration": "keefak? kwayyis?",
+			"wordAlignments": [
+				{
+					"arabic": "كيفك؟",
+					"english": "How are you?",
+					"transliteration": "keefak?"
+				},
+				{
+					"arabic": "كويس؟",
+					"english": "Good?",
+					"transliteration": "kwayyis?"
+				}
+			],
+			"targetWords": [
+				"How are you? (to a man)",
+				"Fine / good"
+			]
+		},
+		{
+			"arabic": "الحمد لله، وإنتي كيفِك؟",
+			"arabicTashkeel": "الحَمدُ لله، وإنتي كيفِك؟",
+			"english": "Praise be to God, and how are you?",
+			"transliteration": "il-7amdu lillaah, w-inti keefik?",
+			"wordAlignments": [
+				{
+					"arabic": "الحمد",
+					"english": "Praise",
+					"transliteration": "il-7amdu"
+				},
+				{
+					"arabic": "لله،",
+					"english": "be to God,",
+					"transliteration": "lillaah,"
+				},
+				{
+					"arabic": "وإنتي",
+					"english": "and you",
+					"transliteration": "w-inti"
+				},
+				{
+					"arabic": "كيفِك؟",
+					"english": "how are you?",
+					"transliteration": "keefik?"
+				}
+			],
+			"targetWords": [
+				"Praise be to God",
+				"How are you? (to a woman)"
+			]
+		},
+		{
+			"arabic": "أهلين، من فين إنت؟",
+			"arabicTashkeel": "أهلين، مِن فين إنتَ؟",
+			"english": "Hello, where are you from?",
+			"transliteration": "ahlain, min feen inta?",
+			"wordAlignments": [
+				{
+					"arabic": "أهلين،",
+					"english": "Hello,",
+					"transliteration": "ahlain,"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "فين",
+					"english": "where",
+					"transliteration": "feen"
+				},
+				{
+					"arabic": "إنت؟",
+					"english": "are you?",
+					"transliteration": "inta?"
+				}
+			],
+			"targetWords": [
+				"Hello",
+				"Where are you from? (to a man)"
+			]
+		},
+		{
+			"arabic": "أنا من الطايف، تشرفنا.",
+			"arabicTashkeel": "أنا مِن الطّايِف، تْشَرَّفنا.",
+			"english": "I am from Taif, nice to meet you.",
+			"transliteration": "ana min it-taayif, tsharrafna.",
+			"wordAlignments": [
+				{
+					"arabic": "أنا",
+					"english": "I",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "من",
+					"english": "am from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الطايف،",
+					"english": "Taif,",
+					"transliteration": "it-taayif,"
+				},
+				{
+					"arabic": "تشرفنا.",
+					"english": "nice to meet you.",
+					"transliteration": "tsharrafna."
+				}
+			],
+			"targetWords": [
+				"I am from",
+				"Nice to meet you"
+			]
+		},
+		{
+			"arabic": "إيش شغلك؟ أنا مدرس.",
+			"arabicTashkeel": "إيش شُغلَك؟ أنا مُدَرِّس.",
+			"english": "What is your job? I am a teacher.",
+			"transliteration": "eesh shughlak? ana mudarris.",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "شغلك؟",
+					"english": "is your job?",
+					"transliteration": "shughlak?"
+				},
+				{
+					"arabic": "أنا",
+					"english": "I am",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "مدرس.",
+					"english": "a teacher.",
+					"transliteration": "mudarris."
+				}
+			],
+			"targetWords": [
+				"What is your job? (to a man)"
+			]
+		},
+		{
+			"arabic": "مع السلامة، خلي بالك على نفسك.",
+			"arabicTashkeel": "مَعَ السَّلامة، خَلّي بالَك على نَفسَك.",
+			"english": "Goodbye, take care.",
+			"transliteration": "ma3a is-salaama, khalli baalak 3ala nafsak.",
+			"wordAlignments": [
+				{
+					"arabic": "مع",
+					"english": "With",
+					"transliteration": "ma3a"
+				},
+				{
+					"arabic": "السلامة،",
+					"english": "safety,",
+					"transliteration": "is-salaama,"
+				},
+				{
+					"arabic": "خلي",
+					"english": "keep",
+					"transliteration": "khalli"
+				},
+				{
+					"arabic": "بالك",
+					"english": "your mind",
+					"transliteration": "baalak"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "نفسك.",
+					"english": "yourself.",
+					"transliteration": "nafsak."
+				}
+			],
+			"targetWords": [
+				"Goodbye"
+			]
+		},
+		{
+			"arabic": "يا هلا، تشرفنا.",
+			"arabicTashkeel": "يا هَلا، تْشَرَّفنا.",
+			"english": "Welcome, nice to meet you.",
+			"transliteration": "ya hala, tsharrafna.",
+			"wordAlignments": [
+				{
+					"arabic": "يا",
+					"english": "O",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "هلا،",
+					"english": "welcome,",
+					"transliteration": "hala,"
+				},
+				{
+					"arabic": "تشرفنا.",
+					"english": "nice to meet you.",
+					"transliteration": "tsharrafna."
+				}
+			],
+			"targetWords": [
+				"Welcome",
+				"Nice to meet you"
+			]
+		},
+		{
+			"arabic": "إسمي هند، أنا من جدة.",
+			"arabicTashkeel": "إسمي هِند، أنا مِن جِدّة.",
+			"english": "My name is Hind, I am from Jeddah.",
+			"transliteration": "ismi hind, ana min jidda.",
+			"wordAlignments": [
+				{
+					"arabic": "إسمي",
+					"english": "My name is",
+					"transliteration": "ismi"
+				},
+				{
+					"arabic": "هند،",
+					"english": "Hind,",
+					"transliteration": "hind,"
+				},
+				{
+					"arabic": "أنا",
+					"english": "I",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "من",
+					"english": "am from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "جدة.",
+					"english": "Jeddah.",
+					"transliteration": "jidda."
+				}
+			],
+			"targetWords": [
+				"My name is",
+				"I am from"
+			]
+		},
+		{
+			"arabic": "إيش إسمِك؟ إسمي ريم.",
+			"arabicTashkeel": "إيش إسمِك؟ إسمي ريم.",
+			"english": "What is your name? My name is Reem.",
+			"transliteration": "eesh ismik? ismi reem.",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "إسمِك؟",
+					"english": "is your name?",
+					"transliteration": "ismik?"
+				},
+				{
+					"arabic": "إسمي",
+					"english": "My name is",
+					"transliteration": "ismi"
+				},
+				{
+					"arabic": "ريم.",
+					"english": "Reem.",
+					"transliteration": "reem."
+				}
+			],
+			"targetWords": [
+				"What is your name? (to a woman)",
+				"My name is"
+			]
+		},
+		{
+			"arabic": "السلام عليكم، يا هلا.",
+			"arabicTashkeel": "السَّلامُ عَلَيكُم، يا هَلا.",
+			"english": "Peace be upon you, welcome.",
+			"transliteration": "is-salaamu 3alaykum, ya hala.",
+			"wordAlignments": [
+				{
+					"arabic": "السلام",
+					"english": "Peace",
+					"transliteration": "is-salaamu"
+				},
+				{
+					"arabic": "عليكم،",
+					"english": "upon you,",
+					"transliteration": "3alaykum,"
+				},
+				{
+					"arabic": "يا",
+					"english": "O",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "هلا.",
+					"english": "welcome.",
+					"transliteration": "hala."
+				}
+			],
+			"targetWords": [
+				"Peace be upon you",
+				"Welcome"
+			]
+		},
+		{
+			"arabic": "أهلين نورة، كيفِك؟",
+			"arabicTashkeel": "أهلين نورة، كيفِك؟",
+			"english": "Hello Noura, how are you?",
+			"transliteration": "ahlain noora, keefik?",
+			"wordAlignments": [
+				{
+					"arabic": "أهلين",
+					"english": "Hello",
+					"transliteration": "ahlain"
+				},
+				{
+					"arabic": "نورة،",
+					"english": "Noura,",
+					"transliteration": "noora,"
+				},
+				{
+					"arabic": "كيفِك؟",
+					"english": "how are you?",
+					"transliteration": "keefik?"
+				}
+			],
+			"targetWords": [
+				"Hello",
+				"How are you? (to a woman)"
+			]
+		},
+		{
+			"arabic": "كويس الحمد لله، وإنت كيفك؟",
+			"arabicTashkeel": "كْوَيِّس الحَمدُ لله، وإنتَ كيفَك؟",
+			"english": "Fine, praise be to God, and how are you?",
+			"transliteration": "kwayyis il-7amdu lillaah, w-inta keefak?",
+			"wordAlignments": [
+				{
+					"arabic": "كويس",
+					"english": "Fine",
+					"transliteration": "kwayyis"
+				},
+				{
+					"arabic": "الحمد",
+					"english": "praise",
+					"transliteration": "il-7amdu"
+				},
+				{
+					"arabic": "لله،",
+					"english": "be to God,",
+					"transliteration": "lillaah,"
+				},
+				{
+					"arabic": "وإنت",
+					"english": "and you",
+					"transliteration": "w-inta"
+				},
+				{
+					"arabic": "كيفك؟",
+					"english": "how are you?",
+					"transliteration": "keefak?"
+				}
+			],
+			"targetWords": [
+				"Fine / good",
+				"Praise be to God",
+				"How are you? (to a man)"
+			]
+		},
+		{
+			"arabic": "من فين إنت؟ من الرياض؟",
+			"arabicTashkeel": "مِن فين إنتَ؟ مِن الرِّياض؟",
+			"english": "Where are you from? From Riyadh?",
+			"transliteration": "min feen inta? min ir-riyaadh?",
+			"wordAlignments": [
+				{
+					"arabic": "من",
+					"english": "From",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "فين",
+					"english": "where",
+					"transliteration": "feen"
+				},
+				{
+					"arabic": "إنت؟",
+					"english": "are you?",
+					"transliteration": "inta?"
+				},
+				{
+					"arabic": "من",
+					"english": "From",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الرياض؟",
+					"english": "Riyadh?",
+					"transliteration": "ir-riyaadh?"
+				}
+			],
+			"targetWords": [
+				"Where are you from? (to a man)"
+			]
+		},
+		{
+			"arabic": "إيش شغلك هنا؟",
+			"arabicTashkeel": "إيش شُغلَك هِنا؟",
+			"english": "What is your job here?",
+			"transliteration": "eesh shughlak hina?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "شغلك",
+					"english": "is your job",
+					"transliteration": "shughlak"
+				},
+				{
+					"arabic": "هنا؟",
+					"english": "here?",
+					"transliteration": "hina?"
+				}
+			],
+			"targetWords": [
+				"What is your job? (to a man)"
+			]
+		},
+		{
+			"arabic": "إسمي عبدالله، إيش شغلك؟",
+			"arabicTashkeel": "إسمي عَبدالله، إيش شُغلَك؟",
+			"english": "My name is Abdullah, what is your job?",
+			"transliteration": "ismi 3abdallah, eesh shughlak?",
+			"wordAlignments": [
+				{
+					"arabic": "إسمي",
+					"english": "My name is",
+					"transliteration": "ismi"
+				},
+				{
+					"arabic": "عبدالله،",
+					"english": "Abdullah,",
+					"transliteration": "3abdallah,"
+				},
+				{
+					"arabic": "إيش",
+					"english": "what",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "شغلك؟",
+					"english": "is your job?",
+					"transliteration": "shughlak?"
+				}
+			],
+			"targetWords": [
+				"My name is",
+				"What is your job? (to a man)"
+			]
+		},
+		{
+			"arabic": "تشرفنا يا فيصل، مع السلامة.",
+			"arabicTashkeel": "تْشَرَّفنا يا فَيصَل، مَعَ السَّلامة.",
+			"english": "Nice to meet you, Faisal, goodbye.",
+			"transliteration": "tsharrafna ya faisal, ma3a is-salaama.",
+			"wordAlignments": [
+				{
+					"arabic": "تشرفنا",
+					"english": "Nice to meet you",
+					"transliteration": "tsharrafna"
+				},
+				{
+					"arabic": "يا",
+					"english": "O",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "فيصل،",
+					"english": "Faisal,",
+					"transliteration": "faisal,"
+				},
+				{
+					"arabic": "مع",
+					"english": "with",
+					"transliteration": "ma3a"
+				},
+				{
+					"arabic": "السلامة.",
+					"english": "safety.",
+					"transliteration": "is-salaama."
+				}
+			],
+			"targetWords": [
+				"Nice to meet you",
+				"Goodbye"
+			]
+		},
+		{
+			"arabic": "أهلين، إسمي سعود.",
+			"arabicTashkeel": "أهلين، إسمي سُعود.",
+			"english": "Hello, my name is Saud.",
+			"transliteration": "ahlain, ismi su3ood.",
+			"wordAlignments": [
+				{
+					"arabic": "أهلين،",
+					"english": "Hello,",
+					"transliteration": "ahlain,"
+				},
+				{
+					"arabic": "إسمي",
+					"english": "my name is",
+					"transliteration": "ismi"
+				},
+				{
+					"arabic": "سعود.",
+					"english": "Saud.",
+					"transliteration": "su3ood."
+				}
+			],
+			"targetWords": [
+				"Hello",
+				"My name is"
+			]
+		},
+		{
+			"arabic": "السلام عليكم، من فين إنت؟",
+			"arabicTashkeel": "السَّلامُ عَلَيكُم، مِن فين إنتَ؟",
+			"english": "Peace be upon you, where are you from?",
+			"transliteration": "is-salaamu 3alaykum, min feen inta?",
+			"wordAlignments": [
+				{
+					"arabic": "السلام",
+					"english": "Peace",
+					"transliteration": "is-salaamu"
+				},
+				{
+					"arabic": "عليكم،",
+					"english": "upon you,",
+					"transliteration": "3alaykum,"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "فين",
+					"english": "where",
+					"transliteration": "feen"
+				},
+				{
+					"arabic": "إنت؟",
+					"english": "are you?",
+					"transliteration": "inta?"
+				}
+			],
+			"targetWords": [
+				"Peace be upon you",
+				"Where are you from? (to a man)"
+			]
+		},
+		{
+			"arabic": "يا هلا، من فين إنت؟",
+			"arabicTashkeel": "يا هَلا، مِن فين إنتَ؟",
+			"english": "Welcome, where are you from?",
+			"transliteration": "ya hala, min feen inta?",
+			"wordAlignments": [
+				{
+					"arabic": "يا",
+					"english": "O",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "هلا،",
+					"english": "welcome,",
+					"transliteration": "hala,"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "فين",
+					"english": "where",
+					"transliteration": "feen"
+				},
+				{
+					"arabic": "إنت؟",
+					"english": "are you?",
+					"transliteration": "inta?"
+				}
+			],
+			"targetWords": [
+				"Welcome",
+				"Where are you from? (to a man)"
+			]
+		},
+		{
+			"arabic": "أنا من ينبع، وإنت؟",
+			"arabicTashkeel": "أنا مِن يَنبُع، وإنتَ؟",
+			"english": "I am from Yanbu, and you?",
+			"transliteration": "ana min yanbu3, w-inta?",
+			"wordAlignments": [
+				{
+					"arabic": "أنا",
+					"english": "I",
+					"transliteration": "ana"
+				},
+				{
+					"arabic": "من",
+					"english": "am from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "ينبع،",
+					"english": "Yanbu,",
+					"transliteration": "yanbu3,"
+				},
+				{
+					"arabic": "وإنت؟",
+					"english": "and you?",
+					"transliteration": "w-inta?"
+				}
+			],
+			"targetWords": [
+				"I am from"
+			]
+		},
+		{
+			"arabic": "إيش إسمك؟ إسمي محمد.",
+			"arabicTashkeel": "إيش إسمَك؟ إسمي مُحَمَّد.",
+			"english": "What is your name? My name is Mohammed.",
+			"transliteration": "eesh ismak? ismi mu7ammad.",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "إسمك؟",
+					"english": "is your name?",
+					"transliteration": "ismak?"
+				},
+				{
+					"arabic": "إسمي",
+					"english": "My name is",
+					"transliteration": "ismi"
+				},
+				{
+					"arabic": "محمد.",
+					"english": "Mohammed.",
+					"transliteration": "mu7ammad."
+				}
+			],
+			"targetWords": [
+				"What is your name? (to a man)",
+				"My name is"
+			]
+		},
+		{
+			"arabic": "مع السلامة يا هند!",
+			"arabicTashkeel": "مَعَ السَّلامة يا هِند!",
+			"english": "Goodbye, Hind!",
+			"transliteration": "ma3a is-salaama ya hind!",
+			"wordAlignments": [
+				{
+					"arabic": "مع",
+					"english": "With",
+					"transliteration": "ma3a"
+				},
+				{
+					"arabic": "السلامة",
+					"english": "safety",
+					"transliteration": "is-salaama"
+				},
+				{
+					"arabic": "يا",
+					"english": "O",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "هند!",
+					"english": "Hind!",
+					"transliteration": "hind!"
+				}
+			],
+			"targetWords": [
+				"Goodbye"
+			]
+		},
+		{
+			"arabic": "السلام عليكم، كيفِك؟",
+			"arabicTashkeel": "السَّلامُ عَلَيكُم، كيفِك؟",
+			"english": "Peace be upon you, how are you?",
+			"transliteration": "is-salaamu 3alaykum, keefik?",
+			"wordAlignments": [
+				{
+					"arabic": "السلام",
+					"english": "Peace",
+					"transliteration": "is-salaamu"
+				},
+				{
+					"arabic": "عليكم،",
+					"english": "upon you,",
+					"transliteration": "3alaykum,"
+				},
+				{
+					"arabic": "كيفِك؟",
+					"english": "how are you?",
+					"transliteration": "keefik?"
+				}
+			],
+			"targetWords": [
+				"Peace be upon you",
+				"How are you? (to a woman)"
+			]
+		},
+		{
+			"arabic": "كويس، تشرفنا.",
+			"arabicTashkeel": "كْوَيِّس، تْشَرَّفنا.",
+			"english": "Good, nice to meet you.",
+			"transliteration": "kwayyis, tsharrafna.",
+			"wordAlignments": [
+				{
+					"arabic": "كويس،",
+					"english": "Good,",
+					"transliteration": "kwayyis,"
+				},
+				{
+					"arabic": "تشرفنا.",
+					"english": "nice to meet you.",
+					"transliteration": "tsharrafna."
+				}
+			],
+			"targetWords": [
+				"Fine / good",
+				"Nice to meet you"
+			]
+		},
+		{
+			"arabic": "أهلين خالد، كيفك؟",
+			"arabicTashkeel": "أهلين خالِد، كيفَك؟",
+			"english": "Hello Khalid, how are you?",
+			"transliteration": "ahlain khaalid, keefak?",
+			"wordAlignments": [
+				{
+					"arabic": "أهلين",
+					"english": "Hello",
+					"transliteration": "ahlain"
+				},
+				{
+					"arabic": "خالد،",
+					"english": "Khalid,",
+					"transliteration": "khaalid,"
+				},
+				{
+					"arabic": "كيفك؟",
+					"english": "how are you?",
+					"transliteration": "keefak?"
+				}
+			],
+			"targetWords": [
+				"Hello",
+				"How are you? (to a man)"
+			]
+		},
+		{
+			"arabic": "يا هلا، كيفِك؟",
+			"arabicTashkeel": "يا هَلا، كيفِك؟",
+			"english": "Welcome, how are you?",
+			"transliteration": "ya hala, keefik?",
+			"wordAlignments": [
+				{
+					"arabic": "يا",
+					"english": "O",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "هلا،",
+					"english": "welcome,",
+					"transliteration": "hala,"
+				},
+				{
+					"arabic": "كيفِك؟",
+					"english": "how are you?",
+					"transliteration": "keefik?"
+				}
+			],
+			"targetWords": [
+				"Welcome",
+				"How are you? (to a woman)"
+			]
+		},
+		{
+			"arabic": "الحمد لله، كله كويس.",
+			"arabicTashkeel": "الحَمدُ لله، كُلُّه كْوَيِّس.",
+			"english": "Praise be to God, everything is fine.",
+			"transliteration": "il-7amdu lillaah, kullu kwayyis.",
+			"wordAlignments": [
+				{
+					"arabic": "الحمد",
+					"english": "Praise",
+					"transliteration": "il-7amdu"
+				},
+				{
+					"arabic": "لله،",
+					"english": "be to God,",
+					"transliteration": "lillaah,"
+				},
+				{
+					"arabic": "كله",
+					"english": "all of it is",
+					"transliteration": "kullu"
+				},
+				{
+					"arabic": "كويس.",
+					"english": "fine.",
+					"transliteration": "kwayyis."
+				}
+			],
+			"targetWords": [
+				"Praise be to God",
+				"Fine / good"
+			]
+		},
+		{
+			"arabic": "يا هلا، إيش إسمك؟",
+			"arabicTashkeel": "يا هَلا، إيش إسمَك؟",
+			"english": "Welcome, what is your name?",
+			"transliteration": "ya hala, eesh ismak?",
+			"wordAlignments": [
+				{
+					"arabic": "يا",
+					"english": "O",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "هلا،",
+					"english": "welcome,",
+					"transliteration": "hala,"
+				},
+				{
+					"arabic": "إيش",
+					"english": "what",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "إسمك؟",
+					"english": "is your name?",
+					"transliteration": "ismak?"
+				}
+			],
+			"targetWords": [
+				"Welcome",
+				"What is your name? (to a man)"
+			]
+		},
+		{
+			"arabic": "أهلين يا أخويا، إيش إسمك؟",
+			"arabicTashkeel": "أهلين يا أخويا، إيش إسمَك؟",
+			"english": "Hello brother, what is your name?",
+			"transliteration": "ahlain ya akhooya, eesh ismak?",
+			"wordAlignments": [
+				{
+					"arabic": "أهلين",
+					"english": "Hello",
+					"transliteration": "ahlain"
+				},
+				{
+					"arabic": "يا",
+					"english": "O",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "أخويا،",
+					"english": "my brother,",
+					"transliteration": "akhooya,"
+				},
+				{
+					"arabic": "إيش",
+					"english": "what",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "إسمك؟",
+					"english": "is your name?",
+					"transliteration": "ismak?"
+				}
+			],
+			"targetWords": [
+				"Hello",
+				"What is your name? (to a man)"
+			]
+		},
+		{
+			"arabic": "أهلين، إيش إسمِك؟",
+			"arabicTashkeel": "أهلين، إيش إسمِك؟",
+			"english": "Hello, what is your name?",
+			"transliteration": "ahlain, eesh ismik?",
+			"wordAlignments": [
+				{
+					"arabic": "أهلين،",
+					"english": "Hello,",
+					"transliteration": "ahlain,"
+				},
+				{
+					"arabic": "إيش",
+					"english": "what",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "إسمِك؟",
+					"english": "is your name?",
+					"transliteration": "ismik?"
+				}
+			],
+			"targetWords": [
+				"Hello",
+				"What is your name? (to a woman)"
+			]
+		},
+		{
+			"arabic": "إيش إسمِك؟ إسمي فاطمة.",
+			"arabicTashkeel": "إيش إسمِك؟ إسمي فاطمة.",
+			"english": "What is your name? I'm Fatima.",
+			"transliteration": "eesh ismik? ismi faatma.",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "إسمِك؟",
+					"english": "is your name?",
+					"transliteration": "ismik?"
+				},
+				{
+					"arabic": "إسمي",
+					"english": "My name is",
+					"transliteration": "ismi"
+				},
+				{
+					"arabic": "فاطمة.",
+					"english": "Fatima.",
+					"transliteration": "faatma."
+				}
+			],
+			"targetWords": [
+				"What is your name? (to a woman)",
+				"My name is"
+			]
+		},
+		{
+			"arabic": "أهلين، إيش شغلك؟",
+			"arabicTashkeel": "أهلين، إيش شُغلَك؟",
+			"english": "Hello, what is your job?",
+			"transliteration": "ahlain, eesh shughlak?",
+			"wordAlignments": [
+				{
+					"arabic": "أهلين،",
+					"english": "Hello,",
+					"transliteration": "ahlain,"
+				},
+				{
+					"arabic": "إيش",
+					"english": "what",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "شغلك؟",
+					"english": "is your job?",
+					"transliteration": "shughlak?"
+				}
+			],
+			"targetWords": [
+				"Hello",
+				"What is your job? (to a man)"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "At the Door",
+			"sentences": [
+				{
+					"arabic": "السلام عليكم!",
+					"arabicTashkeel": "السَّلامُ عَلَيكُم!",
+					"english": "Peace be upon you!",
+					"transliteration": "is-salaamu 3alaykum!",
+					"wordAlignments": [
+						{
+							"arabic": "السلام",
+							"english": "Peace",
+							"transliteration": "is-salaamu"
+						},
+						{
+							"arabic": "عليكم!",
+							"english": "upon you!",
+							"transliteration": "3alaykum!"
+						}
+					]
+				},
+				{
+					"arabic": "وعليكم السلام، يا هلا!",
+					"arabicTashkeel": "وعَلَيكُم السَّلام، يا هَلا!",
+					"english": "And upon you be peace, welcome!",
+					"transliteration": "w-3alaykum is-salaam, ya hala!",
+					"wordAlignments": [
+						{
+							"arabic": "وعليكم",
+							"english": "And upon you",
+							"transliteration": "w-3alaykum"
+						},
+						{
+							"arabic": "السلام،",
+							"english": "peace,",
+							"transliteration": "is-salaam,"
+						},
+						{
+							"arabic": "يا",
+							"english": "O",
+							"transliteration": "ya"
+						},
+						{
+							"arabic": "هلا!",
+							"english": "welcome!",
+							"transliteration": "hala!"
+						}
+					]
+				},
+				{
+					"arabic": "كويس الحمد لله. إسمي فيصل.",
+					"arabicTashkeel": "كْوَيِّس الحَمدُ لله. إسمي فَيصَل.",
+					"english": "Fine, praise be to God. My name is Faisal.",
+					"transliteration": "kwayyis il-7amdu lillaah. ismi faisal.",
+					"wordAlignments": [
+						{
+							"arabic": "كويس",
+							"english": "Fine",
+							"transliteration": "kwayyis"
+						},
+						{
+							"arabic": "الحمد",
+							"english": "praise",
+							"transliteration": "il-7amdu"
+						},
+						{
+							"arabic": "لله.",
+							"english": "be to God.",
+							"transliteration": "lillaah."
+						},
+						{
+							"arabic": "إسمي",
+							"english": "My name is",
+							"transliteration": "ismi"
+						},
+						{
+							"arabic": "فيصل.",
+							"english": "Faisal.",
+							"transliteration": "faisal."
+						}
+					]
+				},
+				{
+					"arabic": "يا هلا يا فيصل، تشرفنا.",
+					"arabicTashkeel": "يا هَلا يا فَيصَل، تْشَرَّفنا.",
+					"english": "Welcome, Faisal, nice to meet you.",
+					"transliteration": "ya hala ya faisal, tsharrafna.",
+					"wordAlignments": [
+						{
+							"arabic": "يا",
+							"english": "O",
+							"transliteration": "ya"
+						},
+						{
+							"arabic": "هلا",
+							"english": "welcome",
+							"transliteration": "hala"
+						},
+						{
+							"arabic": "يا",
+							"english": "O",
+							"transliteration": "ya"
+						},
+						{
+							"arabic": "فيصل،",
+							"english": "Faisal,",
+							"transliteration": "faisal,"
+						},
+						{
+							"arabic": "تشرفنا.",
+							"english": "nice to meet you.",
+							"transliteration": "tsharrafna."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "A New Colleague",
+			"sentences": [
+				{
+					"arabic": "أهلين، إسمي نورة.",
+					"arabicTashkeel": "أهلين، إسمي نورة.",
+					"english": "Hello, my name is Noura.",
+					"transliteration": "ahlain, ismi noora.",
+					"wordAlignments": [
+						{
+							"arabic": "أهلين،",
+							"english": "Hello,",
+							"transliteration": "ahlain,"
+						},
+						{
+							"arabic": "إسمي",
+							"english": "my name is",
+							"transliteration": "ismi"
+						},
+						{
+							"arabic": "نورة.",
+							"english": "Noura.",
+							"transliteration": "noora."
+						}
+					]
+				},
+				{
+					"arabic": "أنا من مكة، وإنتي من فين؟",
+					"arabicTashkeel": "أنا مِن مَكّة، وإنتي مِن فين؟",
+					"english": "I am from Mecca, and where are you from?",
+					"transliteration": "ana min makka, w-inti min feen?",
+					"wordAlignments": [
+						{
+							"arabic": "أنا",
+							"english": "I",
+							"transliteration": "ana"
+						},
+						{
+							"arabic": "من",
+							"english": "am from",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "مكة،",
+							"english": "Mecca,",
+							"transliteration": "makka,"
+						},
+						{
+							"arabic": "وإنتي",
+							"english": "and you",
+							"transliteration": "w-inti"
+						},
+						{
+							"arabic": "من",
+							"english": "from",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "فين؟",
+							"english": "where?",
+							"transliteration": "feen?"
+						}
+					]
+				},
+				{
+					"arabic": "أنا من جدة، تشرفنا.",
+					"arabicTashkeel": "أنا مِن جِدّة، تْشَرَّفنا.",
+					"english": "I am from Jeddah, nice to meet you.",
+					"transliteration": "ana min jidda, tsharrafna.",
+					"wordAlignments": [
+						{
+							"arabic": "أنا",
+							"english": "I",
+							"transliteration": "ana"
+						},
+						{
+							"arabic": "من",
+							"english": "am from",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "جدة،",
+							"english": "Jeddah,",
+							"transliteration": "jidda,"
+						},
+						{
+							"arabic": "تشرفنا.",
+							"english": "nice to meet you.",
+							"transliteration": "tsharrafna."
+						}
+					]
+				},
+				{
+					"arabic": "مع السلامة!",
+					"arabicTashkeel": "مَعَ السَّلامة!",
+					"english": "Goodbye!",
+					"transliteration": "ma3a is-salaama!",
+					"wordAlignments": [
+						{
+							"arabic": "مع",
+							"english": "With",
+							"transliteration": "ma3a"
+						},
+						{
+							"arabic": "السلامة!",
+							"english": "safety!",
+							"transliteration": "is-salaama!"
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is visiting a family home in Jeddah and meeting the host's family for the first time.",
+		"studentRole": "A visitor learning Saudi (Hijazi) Arabic.",
+		"otherRole": "A Jeddawi man who welcomes guests at the door.",
+		"goalEnglish": "Greet him, introduce yourself, ask his name, where he is from and what he does, then say goodbye.",
+		"targetWords": [
+			"Peace be upon you",
+			"How are you? (to a man)",
+			"My name is",
+			"What is your name? (to a man)",
+			"Where are you from? (to a man)",
+			"I am from",
+			"Goodbye"
+		]
+	}
+}
