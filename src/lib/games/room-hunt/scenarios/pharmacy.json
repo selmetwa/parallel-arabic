@@ -19,6 +19,10 @@
 		"iraqi": {
 			"arabic": "هَلا، شلون أقدَر أساعدَك؟",
 			"transliteration": "hala, shloon agdar asaa3dak?"
+		},
+		"khaleeji": {
+			"arabic": "هَلا، شلون أقدَر أساعدَك؟",
+			"transliteration": "hala, shloon agdar asaa3dak?"
 		}
 	},
 	"p_since": {
@@ -41,6 +45,10 @@
 		"iraqi": {
 			"arabic": "مِن شوَكِت؟",
 			"transliteration": "min shwakit?"
+		},
+		"khaleeji": {
+			"arabic": "مِن مِتى؟",
+			"transliteration": "min mita?"
 		}
 	},
 	"p_fever": {
@@ -61,6 +69,10 @@
 			"transliteration": "hal ladayka 7umma?"
 		},
 		"iraqi": {
+			"arabic": "عِندَك حَرارة؟",
+			"transliteration": "3indak 7araara?"
+		},
+		"khaleeji": {
 			"arabic": "عِندَك حَرارة؟",
 			"transliteration": "3indak 7araara?"
 		}
@@ -85,6 +97,10 @@
 		"iraqi": {
 			"arabic": "خُذ هاذا ثلاث مَرّات باليوم، بَعد الأكِل",
 			"transliteration": "khudh haadha thlath marraat bil-yoom, ba3d il-akil"
+		},
+		"khaleeji": {
+			"arabic": "خِذ هاذا ثلاث مَرّات في اليوم، بَعد الأكِل",
+			"transliteration": "khidh haadha thalaath marraat fil-yoom, ba3d il-akil"
 		}
 	},
 	"p_price": {
@@ -107,6 +123,10 @@
 		"iraqi": {
 			"arabic": "خُمُستَعَش",
 			"transliteration": "khumusta3ash"
+		},
+		"khaleeji": {
+			"arabic": "خَمستَعَش",
+			"transliteration": "khamsta3ash"
 		}
 	},
 	"p_sorry": {
@@ -129,6 +149,10 @@
 		"iraqi": {
 			"arabic": "عَفواً؟ ما فِتهَمِت",
 			"transliteration": "3afwan? ma fithamit"
+		},
+		"khaleeji": {
+			"arabic": "عَفواً؟ ما فِهَمت",
+			"transliteration": "3afwan? ma fihamt"
 		}
 	},
 	"y_stomach": {
@@ -151,6 +175,10 @@
 		"iraqi": {
 			"arabic": "بَطني يوجَعني",
 			"transliteration": "batni yooja3ni"
+		},
+		"khaleeji": {
+			"arabic": "بَطني يعَوِّرني",
+			"transliteration": "batni y3awwirni"
 		}
 	},
 	"y_cough": {
@@ -173,6 +201,10 @@
 		"iraqi": {
 			"arabic": "عِندي كُحّة",
 			"transliteration": "3indi ku77a"
+		},
+		"khaleeji": {
+			"arabic": "عِندي كَحّة",
+			"transliteration": "3indi ka77a"
 		}
 	},
 	"y_yesterday": {
@@ -195,6 +227,10 @@
 		"iraqi": {
 			"arabic": "مِن البارحة",
 			"transliteration": "min il-baar7a"
+		},
+		"khaleeji": {
+			"arabic": "مِن أمس",
+			"transliteration": "min ams"
 		}
 	},
 	"y_morning": {
@@ -217,6 +253,10 @@
 		"iraqi": {
 			"arabic": "مِن الصُّبُح",
 			"transliteration": "min is-subu7"
+		},
+		"khaleeji": {
+			"arabic": "مِن الصُّبح",
+			"transliteration": "min is-subi7"
 		}
 	},
 	"y_no": {
@@ -237,6 +277,10 @@
 			"transliteration": "la."
 		},
 		"iraqi": {
+			"arabic": "لا",
+			"transliteration": "la"
+		},
+		"khaleeji": {
 			"arabic": "لا",
 			"transliteration": "la"
 		}
@@ -261,6 +305,10 @@
 		"iraqi": {
 			"arabic": "إي، شوَيّة",
 			"transliteration": "ee, shwayya"
+		},
+		"khaleeji": {
+			"arabic": "إي، شوَي",
+			"transliteration": "ee, shway"
 		}
 	},
 	"y_thanks_how_much": {
@@ -283,6 +331,10 @@
 		"iraqi": {
 			"arabic": "شُكراً. بيش؟",
 			"transliteration": "shukran. beesh?"
+		},
+		"khaleeji": {
+			"arabic": "مَشكور. بِكَم؟",
+			"transliteration": "mashkoor. bikam?"
 		}
 	},
 	"item_pills": {
@@ -303,6 +355,10 @@
 			"transliteration": "aqras"
 		},
 		"iraqi": {
+			"arabic": "حُبوب",
+			"transliteration": "7boob"
+		},
+		"khaleeji": {
 			"arabic": "حُبوب",
 			"transliteration": "7boob"
 		}
@@ -327,6 +383,10 @@
 		"iraqi": {
 			"arabic": "شَراب كُحّة",
 			"transliteration": "sharaab ku77a"
+		},
+		"khaleeji": {
+			"arabic": "شَراب كَحّة",
+			"transliteration": "sharaab ka77a"
 		}
 	},
 	"y_headache": {
@@ -347,6 +407,10 @@
 			"transliteration": "3indi suda3."
 		},
 		"iraqi": {
+			"arabic": "عِندي صُداع",
+			"transliteration": "3indi sudaa3"
+		},
+		"khaleeji": {
 			"arabic": "عِندي صُداع",
 			"transliteration": "3indi sudaa3"
 		}
@@ -371,6 +435,10 @@
 		"iraqi": {
 			"arabic": "شُكراً، مَعَ السَّلامة!",
 			"transliteration": "shukran, ma3a is-salaama!"
+		},
+		"khaleeji": {
+			"arabic": "مَشكور، مَعَ السَّلامة!",
+			"transliteration": "mashkoor, ma3a is-salaama!"
 		}
 	},
 	"y_two_kilos": {
@@ -393,6 +461,10 @@
 		"iraqi": {
 			"arabic": "كيلوين",
 			"transliteration": "keeloowein"
+		},
+		"khaleeji": {
+			"arabic": "كيلوين",
+			"transliteration": "keeloowain"
 		}
 	},
 	"y_stop_here": {
@@ -415,6 +487,10 @@
 		"iraqi": {
 			"arabic": "وَقِّف هنا رَجاءً",
 			"transliteration": "waggif hna rajaa2an"
+		},
+		"khaleeji": {
+			"arabic": "وَقِّف هني لو سَمَحت",
+			"transliteration": "waggif hni law sama7t"
 		}
 	},
 	"y_enjoy": {
@@ -435,6 +511,10 @@
 			"transliteration": "bil-hana2 wash-shifa2!"
 		},
 		"iraqi": {
+			"arabic": "بالعافية!",
+			"transliteration": "bil-3aafya!"
+		},
+		"khaleeji": {
 			"arabic": "بالعافية!",
 			"transliteration": "bil-3aafya!"
 		}
@@ -459,6 +539,10 @@
 		"iraqi": {
 			"arabic": "أهلاً وسَهلاً!",
 			"transliteration": "ahlan w-sahlan!"
+		},
+		"khaleeji": {
+			"arabic": "أهلاً وسَهلاً!",
+			"transliteration": "ahlan w-sahlan!"
 		}
 	},
 	"y_tea": {
@@ -481,6 +565,10 @@
 		"iraqi": {
 			"arabic": "شاي رَجاءً",
 			"transliteration": "chaay rajaa2an"
+		},
+		"khaleeji": {
+			"arabic": "شاي لو سَمَحت",
+			"transliteration": "chaay law sama7t"
 		}
 	},
 	"p_allergy": {
@@ -503,6 +591,10 @@
 		"iraqi": {
 			"arabic": "عِندَك حَساسية مِن أي دَوا؟",
 			"transliteration": "3indak 7assaasiyya min ay dawa?"
+		},
+		"khaleeji": {
+			"arabic": "عِندَك حَساسية مِن أي دَوا؟",
+			"transliteration": "3indak 7asaasiyya min ay dawa?"
 		}
 	},
 	"p_other": {
@@ -525,6 +617,10 @@
 		"iraqi": {
 			"arabic": "تاخُذ أي دَوا لاخ؟",
 			"transliteration": "taakhudh ay dawa laakh?"
+		},
+		"khaleeji": {
+			"arabic": "تاخذ أي دَوا ثاني؟",
+			"transliteration": "taakhidh ay dawa thaani?"
 		}
 	},
 	"p_eaten": {
@@ -547,6 +643,10 @@
 		"iraqi": {
 			"arabic": "أكَلِت شي اليوم؟",
 			"transliteration": "akalit shi il-yoom?"
+		},
+		"khaleeji": {
+			"arabic": "كِلت شي اليوم؟",
+			"transliteration": "kilt shay il-yoom?"
 		}
 	},
 	"p_exactly": {
@@ -569,6 +669,10 @@
 		"iraqi": {
 			"arabic": "بالضَّبُط",
 			"transliteration": "bidh-dhabut"
+		},
+		"khaleeji": {
+			"arabic": "بالضَّبط",
+			"transliteration": "bidh-dhabt"
 		}
 	},
 	"p_water": {
@@ -591,6 +695,10 @@
 		"iraqi": {
 			"arabic": "واشرَب ماي هوايه",
 			"transliteration": "w-ishrab maay hwaaya"
+		},
+		"khaleeji": {
+			"arabic": "واشرَب ماي وايد",
+			"transliteration": "w-ishrab maay waayid"
 		}
 	},
 	"p_doctor": {
@@ -613,6 +721,10 @@
 		"iraqi": {
 			"arabic": "إذا ما تحَسَّنِت بثلاث أيّام، روح للدكتور",
 			"transliteration": "idha ma t7assanit b-thlath ayyaam, roo7 lid-diktoor"
+		},
+		"khaleeji": {
+			"arabic": "إذا ما تحَسَّنت في ثلاث أيّام، روح الدكتور",
+			"transliteration": "idha ma t7assant fi thalaath ayyaam, roo7 id-daktoor"
 		}
 	},
 	"p_else": {
@@ -635,6 +747,10 @@
 		"iraqi": {
 			"arabic": "تحتاج شي لاخ؟",
 			"transliteration": "ti7taaj shi laakh?"
+		},
+		"khaleeji": {
+			"arabic": "تِحتاج شي ثاني؟",
+			"transliteration": "ti7taaj shay thaani?"
 		}
 	},
 	"p_bye": {
@@ -655,6 +771,10 @@
 			"transliteration": "salamatuk!"
 		},
 		"iraqi": {
+			"arabic": "سَلامتَك!",
+			"transliteration": "salaamtak!"
+		},
+		"khaleeji": {
 			"arabic": "سَلامتَك!",
 			"transliteration": "salaamtak!"
 		}
@@ -679,6 +799,10 @@
 		"iraqi": {
 			"arabic": "لا، ما عِندي",
 			"transliteration": "la, ma 3indi"
+		},
+		"khaleeji": {
+			"arabic": "لا، ما عِندي",
+			"transliteration": "la, ma 3indi"
 		}
 	},
 	"y_penicillin": {
@@ -701,6 +825,10 @@
 		"iraqi": {
 			"arabic": "إي، مِن البِنسِلين",
 			"transliteration": "ee, min il-binsileen"
+		},
+		"khaleeji": {
+			"arabic": "إي، مِن البِنِسلين",
+			"transliteration": "ee, min il-binisleen"
 		}
 	},
 	"y_nothing": {
@@ -723,6 +851,10 @@
 		"iraqi": {
 			"arabic": "لا، ولا شي",
 			"transliteration": "la, wala shi"
+		},
+		"khaleeji": {
+			"arabic": "لا، ولا شي",
+			"transliteration": "la, wala shay"
 		}
 	},
 	"y_had_breakfast": {
@@ -745,6 +877,10 @@
 		"iraqi": {
 			"arabic": "إي، فطَرِت",
 			"transliteration": "ee, ftarit"
+		},
+		"khaleeji": {
+			"arabic": "إي، تريَّقت",
+			"transliteration": "ee, tryyagt"
 		}
 	},
 	"y_not_yet": {
@@ -767,6 +903,10 @@
 		"iraqi": {
 			"arabic": "بَعَد لا",
 			"transliteration": "ba3ad la"
+		},
+		"khaleeji": {
+			"arabic": "لِين الحين لا",
+			"transliteration": "lain il-7een la"
 		}
 	},
 	"y_repeat": {
@@ -789,6 +929,10 @@
 		"iraqi": {
 			"arabic": "ثلاث مَرّات باليوم، بَعد الأكِل؟",
 			"transliteration": "thlath marraat bil-yoom, ba3d il-akil?"
+		},
+		"khaleeji": {
+			"arabic": "ثلاث مَرّات في اليوم، بَعد الأكِل؟",
+			"transliteration": "thalaath marraat fil-yoom, ba3d il-akil?"
 		}
 	},
 	"y_will": {
@@ -811,6 +955,10 @@
 		"iraqi": {
 			"arabic": "زين، راح أسَوّيها",
 			"transliteration": "zein, raa7 asawweeha"
+		},
+		"khaleeji": {
+			"arabic": "زين، بسَوّيها",
+			"transliteration": "zain, b-sawweeha"
 		}
 	},
 	"y_ok_thanks": {
@@ -833,6 +981,10 @@
 		"iraqi": {
 			"arabic": "زين، شُكراً",
 			"transliteration": "zein, shukran"
+		},
+		"khaleeji": {
+			"arabic": "زين، مَشكور",
+			"transliteration": "zain, mashkoor"
 		}
 	},
 	"y_here_you_go": {
@@ -855,6 +1007,10 @@
 		"iraqi": {
 			"arabic": "تِفَضَّل",
 			"transliteration": "tfadhdhal"
+		},
+		"khaleeji": {
+			"arabic": "تِفَضَّل",
+			"transliteration": "tfadhdhal"
 		}
 	},
 	"y_too_expensive": {
@@ -875,6 +1031,10 @@
 			"transliteration": "hadha ghalin! 3ishrun?"
 		},
 		"iraqi": {
+			"arabic": "غالي! عِشرين؟",
+			"transliteration": "ghaali! 3ishreen?"
+		},
+		"khaleeji": {
 			"arabic": "غالي! عِشرين؟",
 			"transliteration": "ghaali! 3ishreen?"
 		}

@@ -1,0 +1,338 @@
+# Khaleeji (Emirati/Kuwaiti) Room Hunt lines. The NPC is a man; standard letters only (ج said "y", ق "g").
+
+## common
+y_two_kilos | كيلوين | keeloowain
+y_stop_here | وَقِّف هني لو سَمَحت | waggif hni law sama7t
+y_tea | شاي لو سَمَحت | chaay law sama7t
+y_enjoy | بالعافية! | bil-3aafya!
+y_welcome | أهلاً وسَهلاً! | ahlan w-sahlan!
+y_too_expensive | غالي! عِشرين؟ | ghaali! 3ishreen?
+y_headache | عِندي صُداع | 3indi sudaa3
+y_thanks_bye | مَشكور، مَعَ السَّلامة! | mashkoor, ma3a is-salaama!
+y_here_you_go | تِفَضَّل | tfadhdhal
+y_yes_please | إي لو سَمَحت | ee law sama7t
+y_no_thanks | لا، مَشكور | la, mashkoor
+y_ok | زين | zain
+y_will | زين، بسَوّيها | zain, b-sawweeha
+y_little | إي، شوَي | ee, shway
+y_card | أقدَر أدفَع بالكارت؟ | agdar adfa3 bil-kaart?
+y_bill | الحِساب لو سَمَحت | il-7saab law sama7t
+y_kilo | كيلو لو سَمَحت | keelo law sama7t
+y_menu | المِنيو لو سَمَحت | il-menyu law sama7t
+y_table_two | طاولة حَق اِثنين لو سَمَحت | taawla 7agg ithnain law sama7t
+y_small | صغير | sgheer
+y_coffee | قَهوة لو سَمَحت | gahwa law sama7t
+y_thanks | مَشكور | mashkoor
+
+## airport
+a_hello | صَباح الخير. الجَواز لو سَمَحت | sabaa7 il-khair. il-yawaaz law sama7t
+a_where | وين مسافِر؟ | wain msaafir?
+a_bags | كَم شَنطة عِندَك؟ | cham shanta 3indak?
+a_scale | حُط الشَّنطة عالميزان لو سَمَحت | 7utt ish-shanta 3al-meezaan law sama7t
+a_heavy | شوَي ثقيلة، بَس عادي | shway thgeela, bas 3aadi
+a_seat | يَم الدَّريشة ولا يَم المَمَر؟ | yamm id-dareesha walla yamm il-mamarr?
+a_board | تِفَضَّل بِطاقة الصُّعود. البَوّابة رَقَم اِثنَعَش | tfadhdhal bitaagat is-su3ood. il-bawwaaba ragam ithna3ash
+a_left | سيده، عاليَسار | seeda, 3al-yisaar
+a_time | الصُّعود السّاعة عَشر ونُص | is-su3ood is-saa3a 3ashar w-nuss
+a_trip | رِحلة سَعيدة! | ri7la sa3eeda!
+a_sorry | عَفواً؟ تِقدَر تعيد؟ | 3afwan? tigdar t3eed?
+y_passport | تِفَضَّل الجَواز | tfadhdhal il-yawaaz
+y_cairo | للقاهِرة | lil-gaahira
+y_dubai | لِدُبَي | li-dubai
+y_one_bag | شَنطة وحدة | shanta wa7da
+y_two_bags | شَنطتين | shantatain
+y_phew | الحَمدُلله، مَشكور | il-7amdilla, mashkoor
+y_window | يَم الدَّريشة لو سَمَحت | yamm id-dareesha law sama7t
+y_aisle | يَم المَمَر لو سَمَحت | yamm il-mamarr law sama7t
+y_where_gate | وين البَوّابة رَقَم اِثنَعَش؟ | wain il-bawwaaba ragam ithna3ash?
+y_ok_thanks | زين، مَشكور | zain, mashkoor
+y_bye | مَشكور، مَعَ السَّلامة! | mashkoor, ma3a is-salaama!
+item_boarding_pass | بِطاقة الصُّعود | bitaagat is-su3ood
+
+## cafe
+c_hello | صَباح الخير! شو تِبي تِشرَب؟ | sabaa7 il-khair! shu tabi tishrab?
+c_size | صغير ولا كبير؟ | sgheer walla chbeer?
+c_sugar | مَعَ سُكَّر؟ | ma3a sukkar?
+c_eat | تِبي تاكِل شي؟ الكرواسون طازَج | tabi taakil shay? il-kruwaasoon taazay
+c_here | هني ولا تيك أواي؟ | hni walla teik awaay?
+c_ready | تِفَضَّل. خَمسة وثلاثين | tfadhdhal. khamsa w-thalaatheen
+c_card_yes | أكيد | akeed
+c_bye | يومَك سَعيد! | yoomak sa3eed!
+c_sorry | عَفواً؟ ما فِهَمت | 3afwan? ma fihamt
+y_large | كبير | chbeer
+y_no_sugar | بِدون سُكَّر، مَشكور | bidoon sukkar, mashkoor
+y_one_sugar | مَلعَقة سُكَّر وحدة لو سَمَحت | mal3agat sukkar wa7da law sama7t
+y_croissant | إي، كرواسون | ee, kruwaasoon
+y_thats_all | لا، بَس كِذي | la, bas chidhi
+y_for_here | هني | hni
+y_takeaway | تيك أواي | teik awaay
+item_coffee | قَهوة | gahwa
+item_tea | شاي | chaay
+item_croissant | كرواسون | kruwaasoon
+
+## directions
+r_hello | هَلا، أقدَر أساعدَك؟ | hala, agdar asaa3dak?
+r_straight | سير سيده، وبَعدين لِف يَمين عِند الإشارة | seer seeda, w-ba3dain liff yimeen 3ind il-ishaara
+r_exactly | بالضَّبط | bidh-dhabt
+r_then | بِتلقاه عَلى يَسارَك، يَم البَنك | bitilgaa 3ala yisaarak, yamm il-bank
+r_ten_minutes | لا، تَقريباً عَشر دَقايِق مَشي | la, tagreeban 3ashar dagaayig mashi
+r_careful | دير بالَك وإنتَ تِقطَع الشّارِع! | deer baalak w-inta tigta3 ish-shaari3!
+r_from | مِنين إنتَ؟ | mneen inta?
+r_welcome | حَيّاك الله! اِستانِس بالزِّيارة | 7ayyaak alla! istaanis biz-ziyaara
+r_bye | مَعَ السَّلامة! | ma3a is-salaama!
+r_sorry | عَفواً؟ ما سِمَعت زين | 3afwan? ma sima3t zain
+y_museum | لو سَمَحت، وين المَتحَف؟ | law sama7t, wain il-mat7af?
+y_station | لو سَمَحت، وين مَحَطّة المِترو؟ | law sama7t, wain ma7attat il-mitro?
+y_right_lights | يَمين عِند الإشارة؟ | yimeen 3ind il-ishaara?
+y_far | بَعيد؟ | ba3eed?
+y_walk | زين، بَمشي | zain, bamshi
+y_taxi | يِمكِن آخذ تاكسي | yimkin aakhidh taaksi
+y_will_do | أكيد! | akeed!
+y_england | أنا مِن إنجِلترا | ana min inyiltira
+y_america | أنا مِن أمريكا | ana min amreeka
+y_thanks_lot | مَشكور وايد! | mashkoor waayid!
+y_bye | مَعَ السَّلامة! | ma3a is-salaama!
+
+## doctor
+d_hello | هَلا، تِفَضَّل. شو فيك؟ | hala, tfadhdhal. shu feek?
+d_since | مِن مِتى وإنتَ جِذي؟ | min mita w-inta chidhi?
+d_fever | عِندَك حَرارة؟ | 3indak 7araara?
+d_check | خَلّني أفحصَك. خِذ نَفَس عَميق | khallni af7asak. khidh nafas 3ameeg
+d_ok | زين. ما في شي خَطير | zain. ma fi shay khateer
+d_prescription | بَكتِبلَك وَصفة | bachtiblak wasfa
+d_yes | إي، مِن أي صَيدَلية | ee, min ay saidaliyya
+d_rest | اِرتاح يومين واشرَب ماي وايد | irtaa7 yoomain w-ishrab maay waayid
+d_questions | عِندَك أي سُؤال؟ | 3indak ay su2aal?
+d_not_tomorrow | مو باكِر. اِرتاح أوَّل | mu baachir. irtaa7 awwal
+d_bye | سَلامتَك! | salaamtak!
+d_sorry | عَفواً؟ ما فِهَمت | 3afwan? ma fihamt
+y_throat | حَلقي يعَوِّرني | 7algi y3awwirni
+y_back | ظَهري يعَوِّرني | dhahri y3awwirni
+y_three_days | مِن ثلاث أيّام | min thalaath ayyaam
+y_week | مِن أسبوع | min usboo3
+y_no_fever | لا، ما أظِن | la, ma adhinn
+y_relief | الحَمدُلله! | il-7amdilla!
+y_pharmacy | أقدَر أييبَه مِن أي صَيدَلية؟ | agdar ayeeba min ay saidaliyya?
+y_work | أقدَر أروح الدَّوام؟ | agdar aroo7 id-dawaam?
+y_thanks_doctor | مَشكور دكتور! | mashkoor daktoor!
+item_prescription | وَصفة | wasfa
+
+## hotel
+h_hello | مَسا الخير، حَيّاك الله في الفُندُق! | masa il-khair, 7ayyaak alla fil-funduq!
+h_name | شو إسمَك لو سَمَحت؟ | shu ismak law sama7t?
+h_nights | كَم ليلة؟ | cham leila?
+h_passport | أقدَر أشوف الجَواز؟ | agdar ashoof il-yawaaz?
+h_key | تِفَضَّل المِفتاح. غُرفتَك في الدّور الثّالِث | tfadhdhal il-miftaa7. ghurftak fid-door ith-thaalith
+h_breakfast | مِن سَبع لِعَشر، في المَطعَم | min saba3 li-3ashar, fil-mat3am
+h_wifi | الباسوورد عالكارت | il-paaswoord 3al-kaart
+h_enjoy | إقامة سَعيدة! | igaama sa3eeda!
+h_sorry | عَفواً؟ ما فِهَمت | 3afwan? ma fihamt
+y_reservation | مَسا النّور. عِندي حَجز | masa in-noor. 3indi 7ajz
+y_name | إسمي آدَم | ismi aadam
+y_two_nights | ليلتين | leiltain
+y_three_nights | ثلاث لَيالي | thalaath layaali
+y_passport | أكيد، تِفَضَّل | akeed, tfadhdhal
+y_breakfast | مِتى الرّيوق؟ | mita ir-ryoog?
+y_wifi | وشو باسوورد الواي فاي؟ | w-shu paaswoord il-waay faay?
+y_great | مُمتاز، مَشكور! | mumtaaz, mashkoor!
+y_good_night | مَشكور، تِصبَح عَلى خير! | mashkoor, tisba7 3ala khair!
+item_key | مِفتاح الغُرفة | miftaa7 il-ghurfa
+h_type | غُرفة حَق شَخص ولا شَخصين؟ | ghurfa 7agg shakhs walla shakhsain?
+h_view | تِبي غُرفة تِطِل عالبَحر؟ | tabi ghurfa titill 3al-ba7ar?
+h_pay | بِتدفَع الحين ولا يوم تطلَع؟ | bitidfa3 il-7een walla yoom titla3?
+h_lift | المَصعَد عَلى يَمينَك | il-mas3ad 3ala yimeenak
+h_anything | أقدَر أساعدَك بشي ثاني؟ | agdar asaa3dak b-shay thaani?
+h_checkout | الطَّلعة السّاعة اِثنَعَش | it-tal3a is-saa3a ithna3ash
+h_more | شي ثاني؟ | shay thaani?
+h_bags | تِحتاج مُساعدة في الشَّنَط؟ | ti7taaj musaa3ada fish-shanat?
+y_single | حَق شَخص واحِد لو سَمَحت | 7agg shakhs waa7id law sama7t
+y_double | حَق شَخصين لو سَمَحت | 7agg shakhsain law sama7t
+y_view_yes | إي، لو سَمَحت! | ee, law sama7t!
+y_view_no | لا، عادي | la, 3aadi
+y_pay_leave | يوم أطلَع | yoom atla3
+y_pay_now | الحين، بالكارت | il-7een, bil-kaart
+y_lift | مَشكور. وين المَصعَد؟ | mashkoor. wain il-mas3ad?
+y_checkout | مِتى الطَّلعة؟ | mita it-tal3a?
+y_bags_no | لا مَشكور، أنا زين | la mashkoor, ana zain
+y_bags_yes | إي، لو سَمَحت | ee, law sama7t
+
+## market
+m_hello | صَباح الخير! شو تِبي؟ | sabaa7 il-khair! shu tabi?
+m_kilos | كَم كيلو؟ | cham keelo?
+m_here | تِفَضَّل. تِبي شي ثاني؟ | tfadhdhal. tabi shay thaani?
+m_price | ثلاثين | thalaatheen
+m_twentyfive | زين، خَمسة وعِشرين، عَشانَك | zain, khamsa w-3ishreen, 3ashaanak
+m_bye | مَشكور! نِشوفَك مَرّة ثانية | mashkoor! nshoofak marra thaanya
+m_sorry | عَفواً؟ شو قِلت؟ | 3afwan? shu gilt?
+y_tomatoes | طَماط لو سَمَحت | tamaat law sama7t
+y_oranges | بُرتقال لو سَمَحت | burtugaal law sama7t
+y_one_kilo | كيلو واحِد | keelo waa7id
+y_how_much | لا، مَشكور. بِكَم؟ | la, mashkoor. bikam?
+y_ok_here | زين، تِفَضَّل | zain, tfadhdhal
+item_tomatoes | طَماط | tamaat
+item_oranges | بُرتقال | burtugaal
+m_fresh | شوف، طازَج وايد! | shoof, taazay waayid!
+m_ripe | مستوي، حَق اليوم؟ | mistiwi, 7agg il-yoom?
+m_lemon_size | ليمون كبير ولا صغير؟ | leemoon chbeer walla sgheer?
+m_else | شي ثاني؟ | shay thaani?
+m_change | عِندَك خُردة؟ | 3indak khurda?
+m_no_problem | عادي، تِفَضَّل الباقي | 3aadi, tfadhdhal il-baagi
+m_bag | تِبي كيس؟ | tabi chees?
+m_local | إنتَ مِن هني؟ | inta min hni?
+y_look_great | شَكلَه وايد زين! | shakla waayid zain!
+y_today | إي، حَق اليوم | ee, 7agg il-yoom
+y_tomorrow | حَق باكِر لو سَمَحت | 7agg baachir law sama7t
+y_lemons | ونُص كيلو ليمون لو سَمَحت | w-nuss keelo leemoon law sama7t
+y_big | كبير | chbeer
+y_only_hundred | آسِف، ما عِندي غير مِيّة | aasif, ma 3indi ghair miyya
+y_have_change | إي، تِفَضَّل | ee, tfadhdhal
+y_bag_no | لا، عِندي كيس | la, 3indi chees
+y_tourist | لا، أنا سايِح | la, ana saayi7
+y_nearby | إي، ساكِن قَريب | ee, saakin gareeb
+item_lemons | ليمون | leemoon
+
+## pharmacy
+p_hello | هَلا، شلون أقدَر أساعدَك؟ | hala, shloon agdar asaa3dak?
+p_since | مِن مِتى؟ | min mita?
+p_fever | عِندَك حَرارة؟ | 3indak 7araara?
+p_take | خِذ هاذا ثلاث مَرّات في اليوم، بَعد الأكِل | khidh haadha thalaath marraat fil-yoom, ba3d il-akil
+p_price | خَمستَعَش | khamsta3ash
+p_sorry | عَفواً؟ ما فِهَمت | 3afwan? ma fihamt
+y_stomach | بَطني يعَوِّرني | batni y3awwirni
+y_cough | عِندي كَحّة | 3indi ka77a
+y_yesterday | مِن أمس | min ams
+y_morning | مِن الصُّبح | min is-subi7
+y_no | لا | la
+y_thanks_how_much | مَشكور. بِكَم؟ | mashkoor. bikam?
+item_pills | حُبوب | 7boob
+item_syrup | شَراب كَحّة | sharaab ka77a
+p_allergy | عِندَك حَساسية مِن أي دَوا؟ | 3indak 7asaasiyya min ay dawa?
+p_other | تاخذ أي دَوا ثاني؟ | taakhidh ay dawa thaani?
+p_eaten | كِلت شي اليوم؟ | kilt shay il-yoom?
+p_exactly | بالضَّبط | bidh-dhabt
+p_water | واشرَب ماي وايد | w-ishrab maay waayid
+p_doctor | إذا ما تحَسَّنت في ثلاث أيّام، روح الدكتور | idha ma t7assant fi thalaath ayyaam, roo7 id-daktoor
+p_else | تِحتاج شي ثاني؟ | ti7taaj shay thaani?
+p_bye | سَلامتَك! | salaamtak!
+y_not_allergic | لا، ما عِندي | la, ma 3indi
+y_penicillin | إي، مِن البِنِسلين | ee, min il-binisleen
+y_nothing | لا، ولا شي | la, wala shay
+y_had_breakfast | إي، تريَّقت | ee, tryyagt
+y_not_yet | لِين الحين لا | lain il-7een la
+y_repeat | ثلاث مَرّات في اليوم، بَعد الأكِل؟ | thalaath marraat fil-yoom, ba3d il-akil?
+y_ok_thanks | زين، مَشكور | zain, mashkoor
+
+## restaurant
+w_welcome | حَيّاك الله! تِفَضَّل اِيلِس. هاذا المِنيو | 7ayyaak alla! tfadhdhal iyilis. haadha il-menyu
+w_drink | شو تِبي تِشرَب؟ | shu tabi tishrab?
+w_food | وشو تِبي تاكِل؟ | w-shu tabi taakil?
+w_coming | الحين! | il-7een!
+w_enjoy | تِفَضَّل. بالعافية! | tfadhdhal. bil-3aafya!
+w_dessert | تِبي حَلا بَعدين؟ | tabi 7ala ba3dain?
+w_how | شلون كان الأكِل؟ | shloon kaan il-akil?
+w_bye | مَشكور! زورنا مَرّة ثانية | mashkoor! zoorna marra thaanya
+w_sorry | عَفواً؟ ما فِهَمت | 3afwan? ma fihamt
+y_bathroom | وين الحَمّام؟ | wain il-7ammaam?
+y_water | قلاص ماي لو سَمَحت | glaas maay law sama7t
+y_fish | سِمَك لو سَمَحت | simach law sama7t
+y_chicken | دياي لو سَمَحت | diyaay law sama7t
+y_soup | شوربة لو سَمَحت | shoorba law sama7t
+y_goodbye | مَعَ السَّلامة! | ma3a is-salaama!
+y_welcome | حَيّاك الله! | 7ayyaak alla!
+y_drink_q | شو تِبي تِشرَب؟ | shu tabi tishrab?
+y_cake | إي، كيك لو سَمَحت | ee, keik law sama7t
+y_delicious_bill | لَذيذ! الحِساب لو سَمَحت | ladheedh! il-7saab law sama7t
+y_fork | وين الشّوكة؟ | wain ish-shooka?
+y_bye | مَشكور، مَعَ السَّلامة! | mashkoor, ma3a is-salaama!
+item_tea | شاي | chaay
+item_fish | سِمَك | simach
+item_chicken | دياي | diyaay
+item_soup | شوربة | shoorba
+item_cake | كيك | keik
+item_glass | قلاص ماي | glaas maay
+w_people | مَسا الخير! كَم شَخص؟ | masa il-khair! cham shakhs?
+w_questions | خِذ راحتَك. عِندَك أي سُؤال؟ | khidh raa7tak. 3indak ay su2aal?
+w_recommend | الهامور المَشوي وايد لَذيذ اليوم | il-haamoor il-mashwi waayid ladheedh il-yoom
+w_bread | تِبي خُبز وياه؟ | tabi khubz wiyyaa?
+w_coffee | تِبي شي حار؟ قَهوة؟ | tabi shay 7aarr? gahwa?
+w_total | مِيّة وخَمسين | miyya w-khamseen
+w_thanks | مَشكور وايد! | mashkoor waayid!
+w_card | أكيد، تِفَضَّل الجِهاز | akeed, tfadhdhal il-yihaaz
+y_one | شَخص واحِد بَس لو سَمَحت | shakhs waa7id bas law sama7t
+y_recommend | شو تِنصَحني؟ | shu tinsa7ni?
+y_pay | تِفَضَّل | tfadhdhal
+item_bread | خُبز | khubz
+item_coffee | قَهوة | gahwa
+
+## taxi
+d_hello | هَلا! وين؟ | hala! wain?
+d_price | المَحَطّة؟ الأُجرة خَمسين | il-ma7atta? il-ujra khamseen
+d_forty | زين، أربعين | zain, arba3een
+d_lets_go | يَلّا! | yalla!
+d_way | تِعرِف الطَّريق؟ | ti3rif it-tareeg?
+d_here | هني؟ | hni?
+d_arrived | وَصَلنا. هاذي المَحَطّة | wasalna. haadhi il-ma7atta
+d_bye | مَشكور! يومَك سَعيد | mashkoor! yoomak sa3eed
+d_sorry | عَفواً؟ ما فِهَمت | 3afwan? ma fihamt
+y_station | لِمَحَطّة المِترو لو سَمَحت | li-ma7attat il-mitro law sama7t
+y_too_much | وايد! أربعين؟ | waayid! arba3een?
+y_ok_go | زين، يَلّا | zain, yalla
+y_straight_right | سير سيده، وبَعدين لِف يَمين عِند الإشارة | seer seeda, w-ba3dain liff yimeen 3ind il-ishaara
+y_stop_here | إي، وَقِّف هني لو سَمَحت | ee, waggif hni law sama7t
+y_change | تِفَضَّل. خَلّ الباقي | tfadhdhal. khall il-baagi
+y_faster | أسرَع لو سَمَحت! | asra3 law sama7t!
+d_ac | تِبي أشَغِّل المُكَيِّف؟ | tabi ashaghghil il-mkayyif?
+d_traffic | الزَّحمة وايد اليوم! | iz-za7ma waayid il-yoom!
+d_from | مِنين إنتَ؟ | mneen inta?
+d_arabic | عَرَبيتَك وايد زينة! | 3arabiitak waayid zaina!
+d_turn | يَمين ولا يَسار؟ | yimeen walla yisaar?
+d_receipt | تِبي فاتورة؟ | tabi faatoora?
+y_ac_yes | إي لو سَمَحت، الجَو حَر | ee law sama7t, il-yaw 7arr
+y_ac_no | لا مَشكور، الدَّريشة تِكفي | la mashkoor, id-dareesha tikfi
+y_traffic | إي، دايماً جِذي | ee, daayman chidhi
+y_from_canada | أنا مِن كَنَدا | ana min kanada
+y_from_england | أنا مِن إنجِلترا | ana min inyiltira
+y_learning | مَشكور! لِين الحين أتعَلَّم | mashkoor! lain il-7een at3allam
+y_right | يَمين لو سَمَحت | yimeen law sama7t
+y_left | يَسار لو سَمَحت | yisaar law sama7t
+
+## vocab
+fridge | ثَلّاجة | thallaaja | f | وين الثَّلّاجة؟ | wain ith-thallaaja?
+stove | طبّاخة | tabbaakha | f | وين الطّبّاخة؟ | wain it-tabbaakha?
+sink | مَغسَلة | maghsala | f | وين المَغسَلة؟ | wain il-maghsala?
+cupboard | كَبَت | kabat | m | وين الكَبَت؟ | wain il-kabat?
+microwave | مايكرويف | maaykroweif | m | وين المايكرويف؟ | wain il-maaykroweif?
+blender | خَلّاط | khallaat | m | وين الخَلّاط؟ | wain il-khallaat?
+toaster | تَوستَر | toostar | m | وين التَّوستَر؟ | wain it-toostar?
+pot | قِدر | gidir | m | وين القِدر؟ | wain il-gidir?
+frying_pan | طاوة | taawa | f | وين الطّاوة؟ | wain it-taawa?
+coffee_maker | مَكينة قَهوة | makeenat gahwa | f | وين مَكينة القَهوة؟ | wain makeenat il-gahwa?
+cutting_board | لوح تَقطيع | looh tagtee3 | m | وين لوح التَّقطيع؟ | wain looh it-tagtee3?
+knife | سِكّين | sichcheen | m | وين السِّكّين؟ | wain is-sichcheen?
+trash_can | سَلّة زبالة | sallat zbaala | f | وين سَلّة الزبالة؟ | wain sallat iz-zbaala?
+table | طاولة | taawla | f | وين الطّاولة؟ | wain it-taawla?
+chair | كَرسي | kirsi | m | وين الكَرسي؟ | wain il-kirsi?
+mug | كوب | koob | m | وين الكوب؟ | wain il-koob?
+bathtub | بانيو | baanyo | m | وين البانيو؟ | wain il-baanyo?
+shower | شاوَر | shaawar | m | وين الشّاوَر؟ | wain ish-shaawar?
+toilet | تواليت | twaaleit | m | وين التّواليت؟ | wain it-twaaleit?
+washing_machine | غَسّالة | ghassaala | f | وين الغَسّالة؟ | wain il-ghassaala?
+washbasin | مَغسَلة إيدين | maghsalat eedain | f | وين مَغسَلة الإيدين؟ | wain maghsalat il-eedain?
+mirror | مَنظَرة | mandhara | f | وين المَنظَرة؟ | wain il-mandhara?
+lamp | لِمبة | lamba | f | وين اللِّمبة؟ | wain il-lamba?
+rug | زولية | zooliyya | f | وين الزّولية؟ | wain iz-zooliyya?
+door | باب | baab | m | وين الباب؟ | wain il-baab?
+window | دَريشة | dareesha | f | وين الدَّريشة؟ | wain id-dareesha?
+plate | صَحن | sa7an | m | وين الصَّحن؟ | wain is-sa7an?
+fork | شوكة | shooka | f | وين الشّوكة؟ | wain ish-shooka?
+glass | قلاص | glaas | m | وين القلاص؟ | wain il-glaas?
+salt | مِلح | mil7 | m | وين المِلح؟ | wain il-mil7?
+soup | شوربة | shoorba | f | وين الشّوربة؟ | wain ish-shoorba?
+spoon | خاشوقة | khaashooga | f | وين الخاشوقة؟ | wain il-khaashooga?
+tea | شاي | chaay | m | وين الشّاي؟ | wain ich-chaay?
+bread | خُبز | khubz | m | وين الخُبز؟ | wain il-khubz?
+fish | سِمَك | simach | m | وين السِّمَك؟ | wain is-simach?
+chicken | دياي | diyaay | m | وين الدّياي؟ | wain id-diyaay?
+pepper | فِلفِل | filfil | m | وين الفِلفِل؟ | wain il-filfil?
+salad | سَلَطة | salata | f | وين السَّلَطة؟ | wain is-salata?
+cake | كيك | keik | m | وين الكيك؟ | wain il-keik?
