@@ -1,0 +1,2056 @@
+{
+	"vocab": [
+		{
+			"arabic": "قبول",
+			"arabicTashkeel": "قُبول",
+			"english": "Admission",
+			"transliteration": "gubool",
+			"wordAlignments": [
+				{
+					"arabic": "قبول",
+					"english": "Admission",
+					"transliteration": "gubool"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "كلية",
+			"arabicTashkeel": "كُلّية",
+			"english": "College / faculty",
+			"transliteration": "kulliyya",
+			"wordAlignments": [
+				{
+					"arabic": "كلية",
+					"english": "College",
+					"transliteration": "kulliyya"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "تخصص",
+			"arabicTashkeel": "تَخَصُّص",
+			"english": "Major (subject)",
+			"transliteration": "takhassus",
+			"wordAlignments": [
+				{
+					"arabic": "تخصص",
+					"english": "Specialization",
+					"transliteration": "takhassus"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "قسم",
+			"arabicTashkeel": "قِسم",
+			"english": "Department",
+			"transliteration": "gism",
+			"wordAlignments": [
+				{
+					"arabic": "قسم",
+					"english": "Department",
+					"transliteration": "gism"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "محاضرة",
+			"arabicTashkeel": "مُحاضَرة",
+			"english": "Lecture",
+			"transliteration": "mu7aadhara",
+			"wordAlignments": [
+				{
+					"arabic": "محاضرة",
+					"english": "Lecture",
+					"transliteration": "mu7aadhara"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "دكتور",
+			"arabicTashkeel": "دُكتور",
+			"english": "Professor",
+			"transliteration": "duktoor",
+			"wordAlignments": [
+				{
+					"arabic": "دكتور",
+					"english": "Doctor",
+					"transliteration": "duktoor"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "بكالوريوس",
+			"arabicTashkeel": "بَكالوريوس",
+			"english": "Bachelor's degree",
+			"transliteration": "bakaloryoos",
+			"wordAlignments": [
+				{
+					"arabic": "بكالوريوس",
+					"english": "Bachelor's",
+					"transliteration": "bakaloryoos"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "ماجستير",
+			"arabicTashkeel": "ماجِستير",
+			"english": "Master's degree",
+			"transliteration": "maajisteer",
+			"wordAlignments": [
+				{
+					"arabic": "ماجستير",
+					"english": "Master's",
+					"transliteration": "maajisteer"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "دكتوراه",
+			"arabicTashkeel": "دُكتوراه",
+			"english": "PhD",
+			"transliteration": "duktooraah",
+			"wordAlignments": [
+				{
+					"arabic": "دكتوراه",
+					"english": "Doctorate",
+					"transliteration": "duktooraah"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "رسالة",
+			"arabicTashkeel": "رِسالة",
+			"english": "Thesis",
+			"transliteration": "risaala",
+			"wordAlignments": [
+				{
+					"arabic": "رسالة",
+					"english": "Thesis",
+					"transliteration": "risaala"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "السكن الجامعي",
+			"arabicTashkeel": "السَّكَن الجامعي",
+			"english": "Student housing",
+			"transliteration": "is-sakan ij-jaami3i",
+			"wordAlignments": [
+				{
+					"arabic": "السكن",
+					"english": "The housing",
+					"transliteration": "is-sakan"
+				},
+				{
+					"arabic": "الجامعي",
+					"english": "of the university",
+					"transliteration": "ij-jaami3i"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "معدل",
+			"arabicTashkeel": "مُعَدَّل",
+			"english": "GPA",
+			"transliteration": "mu3addal",
+			"wordAlignments": [
+				{
+					"arabic": "معدل",
+					"english": "Average",
+					"transliteration": "mu3addal"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "رسوب",
+			"arabicTashkeel": "رُسوب",
+			"english": "Failing (an exam)",
+			"transliteration": "rusoob",
+			"wordAlignments": [
+				{
+					"arabic": "رسوب",
+					"english": "Failing",
+					"transliteration": "rusoob"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "ترم",
+			"arabicTashkeel": "تِرم",
+			"english": "Semester",
+			"transliteration": "tirm",
+			"wordAlignments": [
+				{
+					"arabic": "ترم",
+					"english": "Term",
+					"transliteration": "tirm"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "الإختبارات النهائية",
+			"arabicTashkeel": "الإختِبارات النِّهائية",
+			"english": "Final exams",
+			"transliteration": "il-ikhtibaaraat in-nihaa2iyya",
+			"wordAlignments": [
+				{
+					"arabic": "الإختبارات",
+					"english": "The exams",
+					"transliteration": "il-ikhtibaaraat"
+				},
+				{
+					"arabic": "النهائية",
+					"english": "final",
+					"transliteration": "in-nihaa2iyya"
+				}
+			],
+			"partOfSpeech": "phrase"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "جاني قبول في جامعة الملك عبدالعزيز.",
+			"arabicTashkeel": "جاني قُبول في جامعة المَلِك عَبدُالعَزيز.",
+			"english": "I got admission to King Abdulaziz University.",
+			"transliteration": "jaani gubool fi jaam3at il-malik 3abdul3azeez.",
+			"wordAlignments": [
+				{
+					"arabic": "جاني",
+					"english": "Came to me",
+					"transliteration": "jaani"
+				},
+				{
+					"arabic": "قبول",
+					"english": "admission",
+					"transliteration": "gubool"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "جامعة",
+					"english": "the university of",
+					"transliteration": "jaam3at"
+				},
+				{
+					"arabic": "الملك",
+					"english": "King",
+					"transliteration": "il-malik"
+				},
+				{
+					"arabic": "عبدالعزيز.",
+					"english": "Abdulaziz.",
+					"transliteration": "3abdul3azeez."
+				}
+			],
+			"targetWords": [
+				"Admission"
+			]
+		},
+		{
+			"arabic": "كلية الطب الأصعب.",
+			"arabicTashkeel": "كُلّية الطِّب الأصعَب.",
+			"english": "The college of medicine is the hardest.",
+			"transliteration": "kulliyyat it-tibb il-as3ab.",
+			"wordAlignments": [
+				{
+					"arabic": "كلية",
+					"english": "The college of",
+					"transliteration": "kulliyyat"
+				},
+				{
+					"arabic": "الطب",
+					"english": "medicine is",
+					"transliteration": "it-tibb"
+				},
+				{
+					"arabic": "الأصعب.",
+					"english": "the hardest.",
+					"transliteration": "il-as3ab."
+				}
+			],
+			"targetWords": [
+				"College / faculty"
+			]
+		},
+		{
+			"arabic": "إيش تخصصك؟",
+			"arabicTashkeel": "إيش تَخَصُّصَك؟",
+			"english": "What's your major?",
+			"transliteration": "eesh takhassusak?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What is",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "تخصصك؟",
+					"english": "your specialization?",
+					"transliteration": "takhassusak?"
+				}
+			],
+			"targetWords": [
+				"Major (subject)"
+			]
+		},
+		{
+			"arabic": "أدرس في قسم الإنجليزي.",
+			"arabicTashkeel": "أدرُس في قِسم الإنجليزي.",
+			"english": "I study in the English department.",
+			"transliteration": "adrus fi gism il-ingleezi.",
+			"wordAlignments": [
+				{
+					"arabic": "أدرس",
+					"english": "I study",
+					"transliteration": "adrus"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "قسم",
+					"english": "the department of",
+					"transliteration": "gism"
+				},
+				{
+					"arabic": "الإنجليزي.",
+					"english": "the English.",
+					"transliteration": "il-ingleezi."
+				}
+			],
+			"targetWords": [
+				"Department"
+			]
+		},
+		{
+			"arabic": "المحاضرة تبدا الساعة تمانية.",
+			"arabicTashkeel": "المُحاضَرة تِبدا السّاعة تَمانية.",
+			"english": "The lecture starts at eight.",
+			"transliteration": "il-mu7aadhara tibda is-saa3a tamaanya.",
+			"wordAlignments": [
+				{
+					"arabic": "المحاضرة",
+					"english": "The lecture",
+					"transliteration": "il-mu7aadhara"
+				},
+				{
+					"arabic": "تبدا",
+					"english": "starts",
+					"transliteration": "tibda"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "at",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "تمانية.",
+					"english": "eight.",
+					"transliteration": "tamaanya."
+				}
+			],
+			"targetWords": [
+				"Lecture"
+			]
+		},
+		{
+			"arabic": "الدكتور صارم مرة.",
+			"arabicTashkeel": "الدُّكتور صارِم مَرّة.",
+			"english": "The professor is very strict.",
+			"transliteration": "id-duktoor saarim marra.",
+			"wordAlignments": [
+				{
+					"arabic": "الدكتور",
+					"english": "The doctor is",
+					"transliteration": "id-duktoor"
+				},
+				{
+					"arabic": "صارم",
+					"english": "strict",
+					"transliteration": "saarim"
+				},
+				{
+					"arabic": "مرة.",
+					"english": "very.",
+					"transliteration": "marra."
+				}
+			],
+			"targetWords": [
+				"Professor"
+			]
+		},
+		{
+			"arabic": "البكالوريوس أربع سنين.",
+			"arabicTashkeel": "البَكالوريوس أربَع سِنين.",
+			"english": "The bachelor's is four years.",
+			"transliteration": "il-bakaloryoos arba3 sineen.",
+			"wordAlignments": [
+				{
+					"arabic": "البكالوريوس",
+					"english": "The bachelor's is",
+					"transliteration": "il-bakaloryoos"
+				},
+				{
+					"arabic": "أربع",
+					"english": "four",
+					"transliteration": "arba3"
+				},
+				{
+					"arabic": "سنين.",
+					"english": "years.",
+					"transliteration": "sineen."
+				}
+			],
+			"targetWords": [
+				"Bachelor's degree"
+			]
+		},
+		{
+			"arabic": "أبغى آخد ماجستير برا.",
+			"arabicTashkeel": "أبغى آخُد ماجِستير بَرّا.",
+			"english": "I want to do a master's abroad.",
+			"transliteration": "abgha aakhud maajisteer barra.",
+			"wordAlignments": [
+				{
+					"arabic": "أبغى",
+					"english": "I want",
+					"transliteration": "abgha"
+				},
+				{
+					"arabic": "آخد",
+					"english": "I take",
+					"transliteration": "aakhud"
+				},
+				{
+					"arabic": "ماجستير",
+					"english": "a master's",
+					"transliteration": "maajisteer"
+				},
+				{
+					"arabic": "برا.",
+					"english": "outside.",
+					"transliteration": "barra."
+				}
+			],
+			"targetWords": [
+				"Master's degree"
+			]
+		},
+		{
+			"arabic": "أختي تحضر دكتوراه في بريطانيا.",
+			"arabicTashkeel": "أُختي تِحَضِّر دُكتوراه في بَريطانيا.",
+			"english": "My sister is doing a PhD in Britain.",
+			"transliteration": "ukhti ti7adhdhir duktooraah fi bareetaanya.",
+			"wordAlignments": [
+				{
+					"arabic": "أختي",
+					"english": "My sister",
+					"transliteration": "ukhti"
+				},
+				{
+					"arabic": "تحضر",
+					"english": "is preparing",
+					"transliteration": "ti7adhdhir"
+				},
+				{
+					"arabic": "دكتوراه",
+					"english": "a doctorate",
+					"transliteration": "duktooraah"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "بريطانيا.",
+					"english": "Britain.",
+					"transliteration": "bareetaanya."
+				}
+			],
+			"targetWords": [
+				"PhD"
+			]
+		},
+		{
+			"arabic": "أكتب رسالة الماجستير.",
+			"arabicTashkeel": "أكتُب رِسالة الماجِستير.",
+			"english": "I'm writing my master's thesis.",
+			"transliteration": "aktub risaalat il-maajisteer.",
+			"wordAlignments": [
+				{
+					"arabic": "أكتب",
+					"english": "I write",
+					"transliteration": "aktub"
+				},
+				{
+					"arabic": "رسالة",
+					"english": "the thesis of",
+					"transliteration": "risaalat"
+				},
+				{
+					"arabic": "الماجستير.",
+					"english": "the master's.",
+					"transliteration": "il-maajisteer."
+				}
+			],
+			"targetWords": [
+				"Thesis",
+				"Master's degree"
+			]
+		},
+		{
+			"arabic": "السكن الجامعي قريب من الكلية.",
+			"arabicTashkeel": "السَّكَن الجامعي قَريب مِن الكُلّية.",
+			"english": "The student housing is near the college.",
+			"transliteration": "is-sakan ij-jaami3i gareeb min il-kulliyya.",
+			"wordAlignments": [
+				{
+					"arabic": "السكن",
+					"english": "The housing",
+					"transliteration": "is-sakan"
+				},
+				{
+					"arabic": "الجامعي",
+					"english": "of the university is",
+					"transliteration": "ij-jaami3i"
+				},
+				{
+					"arabic": "قريب",
+					"english": "near",
+					"transliteration": "gareeb"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الكلية.",
+					"english": "the college.",
+					"transliteration": "il-kulliyya."
+				}
+			],
+			"targetWords": [
+				"Student housing"
+			]
+		},
+		{
+			"arabic": "معدلي عالي.",
+			"arabicTashkeel": "مُعَدَّلي عالي.",
+			"english": "My GPA is high.",
+			"transliteration": "mu3addali 3aali.",
+			"wordAlignments": [
+				{
+					"arabic": "معدلي",
+					"english": "My average is",
+					"transliteration": "mu3addali"
+				},
+				{
+					"arabic": "عالي.",
+					"english": "high.",
+					"transliteration": "3aali."
+				}
+			],
+			"targetWords": [
+				"GPA"
+			]
+		},
+		{
+			"arabic": "الرسوب في مادة مو نهاية الدنيا.",
+			"arabicTashkeel": "الرُّسوب في مادّة مو نِهاية الدُّنيا.",
+			"english": "Failing one subject isn't the end of the world.",
+			"transliteration": "ir-rusoob fi maadda moo nihaayat id-dunya.",
+			"wordAlignments": [
+				{
+					"arabic": "الرسوب",
+					"english": "Failing",
+					"transliteration": "ir-rusoob"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "مادة",
+					"english": "a subject",
+					"transliteration": "maadda"
+				},
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "نهاية",
+					"english": "the end of",
+					"transliteration": "nihaayat"
+				},
+				{
+					"arabic": "الدنيا.",
+					"english": "the world.",
+					"transliteration": "id-dunya."
+				}
+			],
+			"targetWords": [
+				"Failing (an exam)"
+			]
+		},
+		{
+			"arabic": "الترم دا صعب.",
+			"arabicTashkeel": "التِّرم دا صَعب.",
+			"english": "This semester is hard.",
+			"transliteration": "it-tirm da sa3b.",
+			"wordAlignments": [
+				{
+					"arabic": "الترم",
+					"english": "The term",
+					"transliteration": "it-tirm"
+				},
+				{
+					"arabic": "دا",
+					"english": "this is",
+					"transliteration": "da"
+				},
+				{
+					"arabic": "صعب.",
+					"english": "hard.",
+					"transliteration": "sa3b."
+				}
+			],
+			"targetWords": [
+				"Semester"
+			]
+		},
+		{
+			"arabic": "الإختبارات النهائية الأسبوع الجاي.",
+			"arabicTashkeel": "الإختِبارات النِّهائية الأُسبوع الجاي.",
+			"english": "The final exams are next week.",
+			"transliteration": "il-ikhtibaaraat in-nihaa2iyya il-usboo3 ij-jaay.",
+			"wordAlignments": [
+				{
+					"arabic": "الإختبارات",
+					"english": "The exams",
+					"transliteration": "il-ikhtibaaraat"
+				},
+				{
+					"arabic": "النهائية",
+					"english": "final are",
+					"transliteration": "in-nihaa2iyya"
+				},
+				{
+					"arabic": "الأسبوع",
+					"english": "the week",
+					"transliteration": "il-usboo3"
+				},
+				{
+					"arabic": "الجاي.",
+					"english": "next.",
+					"transliteration": "ij-jaay."
+				}
+			],
+			"targetWords": [
+				"Final exams"
+			]
+		},
+		{
+			"arabic": "القبول في الجامعة يعتمد على النسبة.",
+			"arabicTashkeel": "القُبول في الجامعة يِعتِمِد على النِّسبة.",
+			"english": "University admission depends on the percentage.",
+			"transliteration": "il-gubool fi ij-jaam3a yi3timid 3ala in-nisba.",
+			"wordAlignments": [
+				{
+					"arabic": "القبول",
+					"english": "The admission",
+					"transliteration": "il-gubool"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الجامعة",
+					"english": "the university",
+					"transliteration": "ij-jaam3a"
+				},
+				{
+					"arabic": "يعتمد",
+					"english": "depends",
+					"transliteration": "yi3timid"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "النسبة.",
+					"english": "the percentage.",
+					"transliteration": "in-nisba."
+				}
+			],
+			"targetWords": [
+				"Admission"
+			]
+		},
+		{
+			"arabic": "كلية الهندسة.",
+			"arabicTashkeel": "كُلّية الهَندَسة.",
+			"english": "The college of engineering.",
+			"transliteration": "kulliyyat il-handasa.",
+			"wordAlignments": [
+				{
+					"arabic": "كلية",
+					"english": "The college of",
+					"transliteration": "kulliyyat"
+				},
+				{
+					"arabic": "الهندسة.",
+					"english": "engineering.",
+					"transliteration": "il-handasa."
+				}
+			],
+			"targetWords": [
+				"College / faculty"
+			]
+		},
+		{
+			"arabic": "غيرت تخصصي.",
+			"arabicTashkeel": "غَيَّرت تَخَصُّصي.",
+			"english": "I changed my major.",
+			"transliteration": "ghayyart takhassusi.",
+			"wordAlignments": [
+				{
+					"arabic": "غيرت",
+					"english": "I changed",
+					"transliteration": "ghayyart"
+				},
+				{
+					"arabic": "تخصصي.",
+					"english": "my specialization.",
+					"transliteration": "takhassusi."
+				}
+			],
+			"targetWords": [
+				"Major (subject)"
+			]
+		},
+		{
+			"arabic": "رئيس القسم.",
+			"arabicTashkeel": "رَئيس القِسم.",
+			"english": "The head of the department.",
+			"transliteration": "ra2ees il-gism.",
+			"wordAlignments": [
+				{
+					"arabic": "رئيس",
+					"english": "The head of",
+					"transliteration": "ra2ees"
+				},
+				{
+					"arabic": "القسم.",
+					"english": "the department.",
+					"transliteration": "il-gism."
+				}
+			],
+			"targetWords": [
+				"Department"
+			]
+		},
+		{
+			"arabic": "فاتتني المحاضرة.",
+			"arabicTashkeel": "فاتَتني المُحاضَرة.",
+			"english": "I missed the lecture.",
+			"transliteration": "faatatni il-mu7aadhara.",
+			"wordAlignments": [
+				{
+					"arabic": "فاتتني",
+					"english": "I missed",
+					"transliteration": "faatatni"
+				},
+				{
+					"arabic": "المحاضرة.",
+					"english": "the lecture.",
+					"transliteration": "il-mu7aadhara."
+				}
+			],
+			"targetWords": [
+				"Lecture"
+			]
+		},
+		{
+			"arabic": "الدكتور إدانا واجب.",
+			"arabicTashkeel": "الدُّكتور إدّانا واجِب.",
+			"english": "The professor gave us homework.",
+			"transliteration": "id-duktoor iddaana waajib.",
+			"wordAlignments": [
+				{
+					"arabic": "الدكتور",
+					"english": "The doctor",
+					"transliteration": "id-duktoor"
+				},
+				{
+					"arabic": "إدانا",
+					"english": "gave us",
+					"transliteration": "iddaana"
+				},
+				{
+					"arabic": "واجب.",
+					"english": "homework.",
+					"transliteration": "waajib."
+				}
+			],
+			"targetWords": [
+				"Professor"
+			]
+		},
+		{
+			"arabic": "خلصت البكالوريوس.",
+			"arabicTashkeel": "خَلَّصت البَكالوريوس.",
+			"english": "I finished my bachelor's.",
+			"transliteration": "khallast il-bakaloryoos.",
+			"wordAlignments": [
+				{
+					"arabic": "خلصت",
+					"english": "I finished",
+					"transliteration": "khallast"
+				},
+				{
+					"arabic": "البكالوريوس.",
+					"english": "the bachelor's.",
+					"transliteration": "il-bakaloryoos."
+				}
+			],
+			"targetWords": [
+				"Bachelor's degree"
+			]
+		},
+		{
+			"arabic": "ماجستير في إدارة الأعمال.",
+			"arabicTashkeel": "ماجِستير في إدارة الأعمال.",
+			"english": "A master's in business.",
+			"transliteration": "maajisteer fi idaarat il-a3maal.",
+			"wordAlignments": [
+				{
+					"arabic": "ماجستير",
+					"english": "A master's",
+					"transliteration": "maajisteer"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "إدارة",
+					"english": "the management of",
+					"transliteration": "idaarat"
+				},
+				{
+					"arabic": "الأعمال.",
+					"english": "business.",
+					"transliteration": "il-a3maal."
+				}
+			],
+			"targetWords": [
+				"Master's degree"
+			]
+		},
+		{
+			"arabic": "الدكتوراه تاخد سنين.",
+			"arabicTashkeel": "الدُّكتوراه تاخُد سِنين.",
+			"english": "A PhD takes years.",
+			"transliteration": "id-duktooraah taakhud sineen.",
+			"wordAlignments": [
+				{
+					"arabic": "الدكتوراه",
+					"english": "The doctorate",
+					"transliteration": "id-duktooraah"
+				},
+				{
+					"arabic": "تاخد",
+					"english": "takes",
+					"transliteration": "taakhud"
+				},
+				{
+					"arabic": "سنين.",
+					"english": "years.",
+					"transliteration": "sineen."
+				}
+			],
+			"targetWords": [
+				"PhD"
+			]
+		},
+		{
+			"arabic": "الرسالة ميتين صفحة.",
+			"arabicTashkeel": "الرِّسالة مِيتين صَفحة.",
+			"english": "The thesis is two hundred pages.",
+			"transliteration": "ir-risaala meetain saf7a.",
+			"wordAlignments": [
+				{
+					"arabic": "الرسالة",
+					"english": "The thesis is",
+					"transliteration": "ir-risaala"
+				},
+				{
+					"arabic": "ميتين",
+					"english": "two hundred",
+					"transliteration": "meetain"
+				},
+				{
+					"arabic": "صفحة.",
+					"english": "pages.",
+					"transliteration": "saf7a."
+				}
+			],
+			"targetWords": [
+				"Thesis"
+			]
+		},
+		{
+			"arabic": "الحياة في السكن الجامعي حلوة.",
+			"arabicTashkeel": "الحَياة في السَّكَن الجامعي حِلوة.",
+			"english": "Life in the student housing is fun.",
+			"transliteration": "il-7ayaa fi is-sakan ij-jaami3i 7ilwa.",
+			"wordAlignments": [
+				{
+					"arabic": "الحياة",
+					"english": "Life",
+					"transliteration": "il-7ayaa"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "السكن",
+					"english": "the housing",
+					"transliteration": "is-sakan"
+				},
+				{
+					"arabic": "الجامعي",
+					"english": "of the university is",
+					"transliteration": "ij-jaami3i"
+				},
+				{
+					"arabic": "حلوة.",
+					"english": "fun.",
+					"transliteration": "7ilwa."
+				}
+			],
+			"targetWords": [
+				"Student housing"
+			]
+		},
+		{
+			"arabic": "المعدل من خمسة.",
+			"arabicTashkeel": "المُعَدَّل مِن خَمسة.",
+			"english": "The GPA is out of five.",
+			"transliteration": "il-mu3addal min khamsa.",
+			"wordAlignments": [
+				{
+					"arabic": "المعدل",
+					"english": "The average is",
+					"transliteration": "il-mu3addal"
+				},
+				{
+					"arabic": "من",
+					"english": "out of",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "خمسة.",
+					"english": "five.",
+					"transliteration": "khamsa."
+				}
+			],
+			"targetWords": [
+				"GPA"
+			]
+		},
+		{
+			"arabic": "هوا خايف من الرسوب.",
+			"arabicTashkeel": "هوّا خايِف مِن الرُّسوب.",
+			"english": "He's afraid of failing.",
+			"transliteration": "huwwa khaayif min ir-rusoob.",
+			"wordAlignments": [
+				{
+					"arabic": "هوا",
+					"english": "He is",
+					"transliteration": "huwwa"
+				},
+				{
+					"arabic": "خايف",
+					"english": "afraid",
+					"transliteration": "khaayif"
+				},
+				{
+					"arabic": "من",
+					"english": "of",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الرسوب.",
+					"english": "the failing.",
+					"transliteration": "ir-rusoob."
+				}
+			],
+			"targetWords": [
+				"Failing (an exam)"
+			]
+		},
+		{
+			"arabic": "الترم التاني يبدا في يناير.",
+			"arabicTashkeel": "التِّرم التّاني يِبدا في يَنايِر.",
+			"english": "The second semester starts in January.",
+			"transliteration": "it-tirm it-taani yibda fi yanaayir.",
+			"wordAlignments": [
+				{
+					"arabic": "الترم",
+					"english": "The term",
+					"transliteration": "it-tirm"
+				},
+				{
+					"arabic": "التاني",
+					"english": "second",
+					"transliteration": "it-taani"
+				},
+				{
+					"arabic": "يبدا",
+					"english": "starts",
+					"transliteration": "yibda"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "يناير.",
+					"english": "January.",
+					"transliteration": "yanaayir."
+				}
+			],
+			"targetWords": [
+				"Semester"
+			]
+		},
+		{
+			"arabic": "أذاكر طول الليل قبل الإختبارات النهائية.",
+			"arabicTashkeel": "أذاكِر طول الليل قَبل الإختِبارات النِّهائية.",
+			"english": "I study all night before the final exams.",
+			"transliteration": "azaakir tool il-lail gabl il-ikhtibaaraat in-nihaa2iyya.",
+			"wordAlignments": [
+				{
+					"arabic": "أذاكر",
+					"english": "I study",
+					"transliteration": "azaakir"
+				},
+				{
+					"arabic": "طول",
+					"english": "all",
+					"transliteration": "tool"
+				},
+				{
+					"arabic": "الليل",
+					"english": "the night",
+					"transliteration": "il-lail"
+				},
+				{
+					"arabic": "قبل",
+					"english": "before",
+					"transliteration": "gabl"
+				},
+				{
+					"arabic": "الإختبارات",
+					"english": "the exams",
+					"transliteration": "il-ikhtibaaraat"
+				},
+				{
+					"arabic": "النهائية.",
+					"english": "final.",
+					"transliteration": "in-nihaa2iyya."
+				}
+			],
+			"targetWords": [
+				"Final exams"
+			]
+		},
+		{
+			"arabic": "نتايج القبول تطلع الأسبوع الجاي.",
+			"arabicTashkeel": "نَتايِج القُبول تِطلَع الأُسبوع الجاي.",
+			"english": "Admission results come out next week.",
+			"transliteration": "nataayij il-gubool titla3 il-usboo3 ij-jaay.",
+			"wordAlignments": [
+				{
+					"arabic": "نتايج",
+					"english": "The results of",
+					"transliteration": "nataayij"
+				},
+				{
+					"arabic": "القبول",
+					"english": "admission",
+					"transliteration": "il-gubool"
+				},
+				{
+					"arabic": "تطلع",
+					"english": "come out",
+					"transliteration": "titla3"
+				},
+				{
+					"arabic": "الأسبوع",
+					"english": "the week",
+					"transliteration": "il-usboo3"
+				},
+				{
+					"arabic": "الجاي.",
+					"english": "next.",
+					"transliteration": "ij-jaay."
+				}
+			],
+			"targetWords": [
+				"Admission"
+			]
+		},
+		{
+			"arabic": "إنت في أي كلية؟",
+			"arabicTashkeel": "إنتَ في أيّ كُلّية؟",
+			"english": "Which college are you in?",
+			"transliteration": "inta fi ayy kulliyya?",
+			"wordAlignments": [
+				{
+					"arabic": "إنت",
+					"english": "You are",
+					"transliteration": "inta"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "أي",
+					"english": "which",
+					"transliteration": "ayy"
+				},
+				{
+					"arabic": "كلية؟",
+					"english": "college?",
+					"transliteration": "kulliyya?"
+				}
+			],
+			"targetWords": [
+				"College / faculty"
+			]
+		},
+		{
+			"arabic": "تخصص له مستقبل.",
+			"arabicTashkeel": "تَخَصُّص لُه مُستَقبَل.",
+			"english": "A major with a future.",
+			"transliteration": "takhassus lu mustagbal.",
+			"wordAlignments": [
+				{
+					"arabic": "تخصص",
+					"english": "A specialization",
+					"transliteration": "takhassus"
+				},
+				{
+					"arabic": "له",
+					"english": "has",
+					"transliteration": "lu"
+				},
+				{
+					"arabic": "مستقبل.",
+					"english": "a future.",
+					"transliteration": "mustagbal."
+				}
+			],
+			"targetWords": [
+				"Major (subject)"
+			]
+		},
+		{
+			"arabic": "قسم الحاسب جديد.",
+			"arabicTashkeel": "قِسم الحاسِب جَديد.",
+			"english": "The computer science department is new.",
+			"transliteration": "gism il-7aasib jadeed.",
+			"wordAlignments": [
+				{
+					"arabic": "قسم",
+					"english": "The department of",
+					"transliteration": "gism"
+				},
+				{
+					"arabic": "الحاسب",
+					"english": "the computer",
+					"transliteration": "il-7aasib"
+				},
+				{
+					"arabic": "جديد.",
+					"english": "is new.",
+					"transliteration": "jadeed."
+				}
+			],
+			"targetWords": [
+				"Department"
+			]
+		},
+		{
+			"arabic": "محاضرة أونلاين.",
+			"arabicTashkeel": "مُحاضَرة أونلاين.",
+			"english": "An online lecture.",
+			"transliteration": "mu7aadhara onlain.",
+			"wordAlignments": [
+				{
+					"arabic": "محاضرة",
+					"english": "A lecture",
+					"transliteration": "mu7aadhara"
+				},
+				{
+					"arabic": "أونلاين.",
+					"english": "online.",
+					"transliteration": "onlain."
+				}
+			],
+			"targetWords": [
+				"Lecture"
+			]
+		},
+		{
+			"arabic": "الدكتور حقي من جدة.",
+			"arabicTashkeel": "الدُّكتور حَقّي مِن جِدّة.",
+			"english": "My professor is from Jeddah.",
+			"transliteration": "id-duktoor 7aggi min jidda.",
+			"wordAlignments": [
+				{
+					"arabic": "الدكتور",
+					"english": "The doctor",
+					"transliteration": "id-duktoor"
+				},
+				{
+					"arabic": "حقي",
+					"english": "of mine is",
+					"transliteration": "7aggi"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "جدة.",
+					"english": "Jeddah.",
+					"transliteration": "jidda."
+				}
+			],
+			"targetWords": [
+				"Professor"
+			]
+		},
+		{
+			"arabic": "بكالوريوس الطب ياخد سبع سنين.",
+			"arabicTashkeel": "بَكالوريوس الطِّب ياخُد سَبع سِنين.",
+			"english": "A bachelor's in medicine takes seven years.",
+			"transliteration": "bakaloryoos it-tibb yaakhud saba3 sineen.",
+			"wordAlignments": [
+				{
+					"arabic": "بكالوريوس",
+					"english": "The bachelor's of",
+					"transliteration": "bakaloryoos"
+				},
+				{
+					"arabic": "الطب",
+					"english": "medicine",
+					"transliteration": "it-tibb"
+				},
+				{
+					"arabic": "ياخد",
+					"english": "takes",
+					"transliteration": "yaakhud"
+				},
+				{
+					"arabic": "سبع",
+					"english": "seven",
+					"transliteration": "saba3"
+				},
+				{
+					"arabic": "سنين.",
+					"english": "years.",
+					"transliteration": "sineen."
+				}
+			],
+			"targetWords": [
+				"Bachelor's degree"
+			]
+		},
+		{
+			"arabic": "بعد الماجستير حشتغل.",
+			"arabicTashkeel": "بَعد الماجِستير حَشتَغِل.",
+			"english": "After the master's I'll work.",
+			"transliteration": "ba3d il-maajisteer 7ashtaghil.",
+			"wordAlignments": [
+				{
+					"arabic": "بعد",
+					"english": "After",
+					"transliteration": "ba3d"
+				},
+				{
+					"arabic": "الماجستير",
+					"english": "the master's",
+					"transliteration": "il-maajisteer"
+				},
+				{
+					"arabic": "حشتغل.",
+					"english": "I'll work.",
+					"transliteration": "7ashtaghil."
+				}
+			],
+			"targetWords": [
+				"Master's degree"
+			]
+		},
+		{
+			"arabic": "مبروك الدكتوراه يا دكتور!",
+			"arabicTashkeel": "مَبروك الدُّكتوراه يا دُكتور!",
+			"english": "Congratulations on the PhD, doctor!",
+			"transliteration": "mabrook id-duktooraah ya duktoor!",
+			"wordAlignments": [
+				{
+					"arabic": "مبروك",
+					"english": "Congratulations",
+					"transliteration": "mabrook"
+				},
+				{
+					"arabic": "الدكتوراه",
+					"english": "the doctorate",
+					"transliteration": "id-duktooraah"
+				},
+				{
+					"arabic": "يا",
+					"english": "O",
+					"transliteration": "ya"
+				},
+				{
+					"arabic": "دكتور!",
+					"english": "doctor!",
+					"transliteration": "duktoor!"
+				}
+			],
+			"targetWords": [
+				"PhD"
+			]
+		},
+		{
+			"arabic": "مناقشة الرسالة يوم الإتنين.",
+			"arabicTashkeel": "مُناقَشة الرِّسالة يوم الإتنين.",
+			"english": "The thesis discussion is on Monday.",
+			"transliteration": "munaagashat ir-risaala yoom il-itneen.",
+			"wordAlignments": [
+				{
+					"arabic": "مناقشة",
+					"english": "The discussion of",
+					"transliteration": "munaagashat"
+				},
+				{
+					"arabic": "الرسالة",
+					"english": "the thesis is",
+					"transliteration": "ir-risaala"
+				},
+				{
+					"arabic": "يوم",
+					"english": "on",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "الإتنين.",
+					"english": "Monday.",
+					"transliteration": "il-itneen."
+				}
+			],
+			"targetWords": [
+				"Thesis"
+			]
+		},
+		{
+			"arabic": "السكن الجامعي مليان.",
+			"arabicTashkeel": "السَّكَن الجامعي مَليان.",
+			"english": "The student housing is full.",
+			"transliteration": "is-sakan ij-jaami3i malyaan.",
+			"wordAlignments": [
+				{
+					"arabic": "السكن",
+					"english": "The housing",
+					"transliteration": "is-sakan"
+				},
+				{
+					"arabic": "الجامعي",
+					"english": "of the university is",
+					"transliteration": "ij-jaami3i"
+				},
+				{
+					"arabic": "مليان.",
+					"english": "full.",
+					"transliteration": "malyaan."
+				}
+			],
+			"targetWords": [
+				"Student housing"
+			]
+		},
+		{
+			"arabic": "معدلي نزل الترم دا.",
+			"arabicTashkeel": "مُعَدَّلي نِزِل التِّرم دا.",
+			"english": "My GPA went down this semester.",
+			"transliteration": "mu3addali nizil it-tirm da.",
+			"wordAlignments": [
+				{
+					"arabic": "معدلي",
+					"english": "My average",
+					"transliteration": "mu3addali"
+				},
+				{
+					"arabic": "نزل",
+					"english": "went down",
+					"transliteration": "nizil"
+				},
+				{
+					"arabic": "الترم",
+					"english": "the term",
+					"transliteration": "it-tirm"
+				},
+				{
+					"arabic": "دا.",
+					"english": "this.",
+					"transliteration": "da."
+				}
+			],
+			"targetWords": [
+				"GPA",
+				"Semester"
+			]
+		},
+		{
+			"arabic": "نسبة الرسوب عالية في المادة دي.",
+			"arabicTashkeel": "نِسبة الرُّسوب عالية في المادّة دي.",
+			"english": "The failing rate is high in this subject.",
+			"transliteration": "nisbat ir-rusoob 3aalya fi il-maadda di.",
+			"wordAlignments": [
+				{
+					"arabic": "نسبة",
+					"english": "The rate of",
+					"transliteration": "nisbat"
+				},
+				{
+					"arabic": "الرسوب",
+					"english": "failing",
+					"transliteration": "ir-rusoob"
+				},
+				{
+					"arabic": "عالية",
+					"english": "is high",
+					"transliteration": "3aalya"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "المادة",
+					"english": "the subject",
+					"transliteration": "il-maadda"
+				},
+				{
+					"arabic": "دي.",
+					"english": "this.",
+					"transliteration": "di."
+				}
+			],
+			"targetWords": [
+				"Failing (an exam)"
+			]
+		},
+		{
+			"arabic": "الترم الصيفي.",
+			"arabicTashkeel": "التِّرم الصّيفي.",
+			"english": "The summer semester.",
+			"transliteration": "it-tirm is-saifi.",
+			"wordAlignments": [
+				{
+					"arabic": "الترم",
+					"english": "The term",
+					"transliteration": "it-tirm"
+				},
+				{
+					"arabic": "الصيفي.",
+					"english": "of summer.",
+					"transliteration": "is-saifi."
+				}
+			],
+			"targetWords": [
+				"Semester"
+			]
+		},
+		{
+			"arabic": "بالتوفيق في الإختبارات النهائية!",
+			"arabicTashkeel": "بالتَّوفيق في الإختِبارات النِّهائية!",
+			"english": "Good luck in the final exams!",
+			"transliteration": "bit-tawfeeg fi il-ikhtibaaraat in-nihaa2iyya!",
+			"wordAlignments": [
+				{
+					"arabic": "بالتوفيق",
+					"english": "With success",
+					"transliteration": "bit-tawfeeg"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الإختبارات",
+					"english": "the exams",
+					"transliteration": "il-ikhtibaaraat"
+				},
+				{
+					"arabic": "النهائية!",
+					"english": "final!",
+					"transliteration": "in-nihaa2iyya!"
+				}
+			],
+			"targetWords": [
+				"Final exams"
+			]
+		},
+		{
+			"arabic": "شروط القبول.",
+			"arabicTashkeel": "شُروط القُبول.",
+			"english": "Conditions of admission.",
+			"transliteration": "shuroot il-gubool.",
+			"wordAlignments": [
+				{
+					"arabic": "شروط",
+					"english": "The conditions of",
+					"transliteration": "shuroot"
+				},
+				{
+					"arabic": "القبول.",
+					"english": "admission.",
+					"transliteration": "il-gubool."
+				}
+			],
+			"targetWords": [
+				"Admission"
+			]
+		},
+		{
+			"arabic": "كلية إدارة الأعمال.",
+			"arabicTashkeel": "كُلّية إدارة الأعمال.",
+			"english": "The business college.",
+			"transliteration": "kulliyyat idaarat il-a3maal.",
+			"wordAlignments": [
+				{
+					"arabic": "كلية",
+					"english": "The college of",
+					"transliteration": "kulliyyat"
+				},
+				{
+					"arabic": "إدارة",
+					"english": "the management of",
+					"transliteration": "idaarat"
+				},
+				{
+					"arabic": "الأعمال.",
+					"english": "business.",
+					"transliteration": "il-a3maal."
+				}
+			],
+			"targetWords": [
+				"College / faculty"
+			]
+		},
+		{
+			"arabic": "اختيار التخصص صعب.",
+			"arabicTashkeel": "اِختيار التَّخَصُّص صَعب.",
+			"english": "Choosing a major is hard.",
+			"transliteration": "ikhtiyaar it-takhassus sa3b.",
+			"wordAlignments": [
+				{
+					"arabic": "اختيار",
+					"english": "Choosing",
+					"transliteration": "ikhtiyaar"
+				},
+				{
+					"arabic": "التخصص",
+					"english": "the specialization is",
+					"transliteration": "it-takhassus"
+				},
+				{
+					"arabic": "صعب.",
+					"english": "hard.",
+					"transliteration": "sa3b."
+				}
+			],
+			"targetWords": [
+				"Major (subject)"
+			]
+		},
+		{
+			"arabic": "مكتب القسم.",
+			"arabicTashkeel": "مَكتَب القِسم.",
+			"english": "The department's office.",
+			"transliteration": "maktab il-gism.",
+			"wordAlignments": [
+				{
+					"arabic": "مكتب",
+					"english": "The office of",
+					"transliteration": "maktab"
+				},
+				{
+					"arabic": "القسم.",
+					"english": "the department.",
+					"transliteration": "il-gism."
+				}
+			],
+			"targetWords": [
+				"Department"
+			]
+		},
+		{
+			"arabic": "محاضرة مملة.",
+			"arabicTashkeel": "مُحاضَرة مُمِلّة.",
+			"english": "A boring lecture.",
+			"transliteration": "mu7aadhara mumilla.",
+			"wordAlignments": [
+				{
+					"arabic": "محاضرة",
+					"english": "A lecture",
+					"transliteration": "mu7aadhara"
+				},
+				{
+					"arabic": "مملة.",
+					"english": "boring.",
+					"transliteration": "mumilla."
+				}
+			],
+			"targetWords": [
+				"Lecture"
+			]
+		},
+		{
+			"arabic": "ساعات مكتب الدكتور.",
+			"arabicTashkeel": "ساعات مَكتَب الدُّكتور.",
+			"english": "The professor's office hours.",
+			"transliteration": "saa3aat maktab id-duktoor.",
+			"wordAlignments": [
+				{
+					"arabic": "ساعات",
+					"english": "The hours of",
+					"transliteration": "saa3aat"
+				},
+				{
+					"arabic": "مكتب",
+					"english": "the office of",
+					"transliteration": "maktab"
+				},
+				{
+					"arabic": "الدكتور.",
+					"english": "the doctor.",
+					"transliteration": "id-duktoor."
+				}
+			],
+			"targetWords": [
+				"Professor"
+			]
+		},
+		{
+			"arabic": "شهادة البكالوريوس.",
+			"arabicTashkeel": "شَهادة البَكالوريوس.",
+			"english": "A bachelor's degree certificate.",
+			"transliteration": "shahaadat il-bakaloryoos.",
+			"wordAlignments": [
+				{
+					"arabic": "شهادة",
+					"english": "The certificate of",
+					"transliteration": "shahaadat"
+				},
+				{
+					"arabic": "البكالوريوس.",
+					"english": "the bachelor's.",
+					"transliteration": "il-bakaloryoos."
+				}
+			],
+			"targetWords": [
+				"Bachelor's degree"
+			]
+		},
+		{
+			"arabic": "المشرف على الرسالة.",
+			"arabicTashkeel": "المُشرِف على الرِّسالة.",
+			"english": "The thesis supervisor.",
+			"transliteration": "il-mushrif 3ala ir-risaala.",
+			"wordAlignments": [
+				{
+					"arabic": "المشرف",
+					"english": "The supervisor",
+					"transliteration": "il-mushrif"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "الرسالة.",
+					"english": "the thesis.",
+					"transliteration": "ir-risaala."
+				}
+			],
+			"targetWords": [
+				"Thesis"
+			]
+		},
+		{
+			"arabic": "ضغط الإختبارات النهائية.",
+			"arabicTashkeel": "ضَغط الإختِبارات النِّهائية.",
+			"english": "Final exams stress.",
+			"transliteration": "dhaght il-ikhtibaaraat in-nihaa2iyya.",
+			"wordAlignments": [
+				{
+					"arabic": "ضغط",
+					"english": "The pressure of",
+					"transliteration": "dhaght"
+				},
+				{
+					"arabic": "الإختبارات",
+					"english": "the exams",
+					"transliteration": "il-ikhtibaaraat"
+				},
+				{
+					"arabic": "النهائية.",
+					"english": "final.",
+					"transliteration": "in-nihaa2iyya."
+				}
+			],
+			"targetWords": [
+				"Final exams"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "My First Year at University",
+			"sentences": [
+				{
+					"arabic": "جاني قبول في كلية الهندسة في جامعة الملك عبدالعزيز.",
+					"arabicTashkeel": "جاني قُبول في كُلّية الهَندَسة في جامعة المَلِك عَبدُالعَزيز.",
+					"english": "I got admission to the college of engineering at King Abdulaziz University.",
+					"transliteration": "jaani gubool fi kulliyyat il-handasa fi jaam3at il-malik 3abdul3azeez.",
+					"wordAlignments": [
+						{
+							"arabic": "جاني",
+							"english": "Came to me",
+							"transliteration": "jaani"
+						},
+						{
+							"arabic": "قبول",
+							"english": "admission",
+							"transliteration": "gubool"
+						},
+						{
+							"arabic": "في",
+							"english": "in",
+							"transliteration": "fi"
+						},
+						{
+							"arabic": "كلية",
+							"english": "the college of",
+							"transliteration": "kulliyyat"
+						},
+						{
+							"arabic": "الهندسة",
+							"english": "engineering",
+							"transliteration": "il-handasa"
+						},
+						{
+							"arabic": "في",
+							"english": "in",
+							"transliteration": "fi"
+						},
+						{
+							"arabic": "جامعة",
+							"english": "the university of",
+							"transliteration": "jaam3at"
+						},
+						{
+							"arabic": "الملك",
+							"english": "King",
+							"transliteration": "il-malik"
+						},
+						{
+							"arabic": "عبدالعزيز.",
+							"english": "Abdulaziz.",
+							"transliteration": "3abdul3azeez."
+						}
+					]
+				},
+				{
+					"arabic": "تخصصي هندسة كهربائية، والدكاترة ممتازين.",
+					"arabicTashkeel": "تَخَصُّصي هَندَسة كَهرَبائية، والدَّكاترة مُمتازين.",
+					"english": "My major is electrical engineering, and the professors are excellent.",
+					"transliteration": "takhassusi handasa kahrabaa2iyya, w-id-dakaatra mumtaazeen.",
+					"wordAlignments": [
+						{
+							"arabic": "تخصصي",
+							"english": "My specialization is",
+							"transliteration": "takhassusi"
+						},
+						{
+							"arabic": "هندسة",
+							"english": "engineering",
+							"transliteration": "handasa"
+						},
+						{
+							"arabic": "كهربائية،",
+							"english": "electrical,",
+							"transliteration": "kahrabaa2iyya,"
+						},
+						{
+							"arabic": "والدكاترة",
+							"english": "and the doctors are",
+							"transliteration": "w-id-dakaatra"
+						},
+						{
+							"arabic": "ممتازين.",
+							"english": "excellent.",
+							"transliteration": "mumtaazeen."
+						}
+					]
+				},
+				{
+					"arabic": "الترم الأول كان صعب، بس معدلي كان كويس.",
+					"arabicTashkeel": "التِّرم الأوَّل كان صَعب، بَس مُعَدَّلي كان كْوَيِّس.",
+					"english": "The first semester was hard, but my GPA was good.",
+					"transliteration": "it-tirm il-awwal kaan sa3b, bas mu3addali kaan kwayyis.",
+					"wordAlignments": [
+						{
+							"arabic": "الترم",
+							"english": "The term",
+							"transliteration": "it-tirm"
+						},
+						{
+							"arabic": "الأول",
+							"english": "first",
+							"transliteration": "il-awwal"
+						},
+						{
+							"arabic": "كان",
+							"english": "was",
+							"transliteration": "kaan"
+						},
+						{
+							"arabic": "صعب،",
+							"english": "hard,",
+							"transliteration": "sa3b,"
+						},
+						{
+							"arabic": "بس",
+							"english": "but",
+							"transliteration": "bas"
+						},
+						{
+							"arabic": "معدلي",
+							"english": "my average",
+							"transliteration": "mu3addali"
+						},
+						{
+							"arabic": "كان",
+							"english": "was",
+							"transliteration": "kaan"
+						},
+						{
+							"arabic": "كويس.",
+							"english": "good.",
+							"transliteration": "kwayyis."
+						}
+					]
+				},
+				{
+					"arabic": "دحين أذاكر للإختبارات النهائية في السكن الجامعي.",
+					"arabicTashkeel": "دحين أذاكِر لِلإختِبارات النِّهائية في السَّكَن الجامعي.",
+					"english": "Now I'm studying for the final exams in the student housing.",
+					"transliteration": "da7een azaakir lil-ikhtibaaraat in-nihaa2iyya fi is-sakan ij-jaami3i.",
+					"wordAlignments": [
+						{
+							"arabic": "دحين",
+							"english": "Now",
+							"transliteration": "da7een"
+						},
+						{
+							"arabic": "أذاكر",
+							"english": "I study",
+							"transliteration": "azaakir"
+						},
+						{
+							"arabic": "للإختبارات",
+							"english": "for the exams",
+							"transliteration": "lil-ikhtibaaraat"
+						},
+						{
+							"arabic": "النهائية",
+							"english": "final",
+							"transliteration": "in-nihaa2iyya"
+						},
+						{
+							"arabic": "في",
+							"english": "in",
+							"transliteration": "fi"
+						},
+						{
+							"arabic": "السكن",
+							"english": "the housing",
+							"transliteration": "is-sakan"
+						},
+						{
+							"arabic": "الجامعي.",
+							"english": "of the university.",
+							"transliteration": "ij-jaami3i."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "After the Bachelor's",
+			"sentences": [
+				{
+					"arabic": "بعد البكالوريوس أبغى آخد ماجستير، ويمكن دكتوراه.",
+					"arabicTashkeel": "بَعد البَكالوريوس أبغى آخُد ماجِستير، ويِمكِن دُكتوراه.",
+					"english": "After the bachelor's I want to do a master's, and maybe a PhD.",
+					"transliteration": "ba3d il-bakaloryoos abgha aakhud maajisteer, w-yimkin duktooraah.",
+					"wordAlignments": [
+						{
+							"arabic": "بعد",
+							"english": "After",
+							"transliteration": "ba3d"
+						},
+						{
+							"arabic": "البكالوريوس",
+							"english": "the bachelor's",
+							"transliteration": "il-bakaloryoos"
+						},
+						{
+							"arabic": "أبغى",
+							"english": "I want",
+							"transliteration": "abgha"
+						},
+						{
+							"arabic": "آخد",
+							"english": "I take",
+							"transliteration": "aakhud"
+						},
+						{
+							"arabic": "ماجستير،",
+							"english": "a master's,",
+							"transliteration": "maajisteer,"
+						},
+						{
+							"arabic": "ويمكن",
+							"english": "and maybe",
+							"transliteration": "w-yimkin"
+						},
+						{
+							"arabic": "دكتوراه.",
+							"english": "a doctorate.",
+							"transliteration": "duktooraah."
+						}
+					]
+				},
+				{
+					"arabic": "رسالتي حتكون عن الطاقة الشمسية.",
+					"arabicTashkeel": "رِسالتي حَتكون عَن الطّاقة الشَّمسية.",
+					"english": "My thesis will be about solar energy.",
+					"transliteration": "risaalati 7atkoon 3an it-taaga ish-shamsiyya.",
+					"wordAlignments": [
+						{
+							"arabic": "رسالتي",
+							"english": "My thesis",
+							"transliteration": "risaalati"
+						},
+						{
+							"arabic": "حتكون",
+							"english": "will be",
+							"transliteration": "7atkoon"
+						},
+						{
+							"arabic": "عن",
+							"english": "about",
+							"transliteration": "3an"
+						},
+						{
+							"arabic": "الطاقة",
+							"english": "the energy",
+							"transliteration": "it-taaga"
+						},
+						{
+							"arabic": "الشمسية.",
+							"english": "solar.",
+							"transliteration": "ish-shamsiyya."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is a new international student at a university in Jeddah and asks a Jeddawi senior student for advice.",
+		"studentRole": "A first-year student learning Saudi (Hijazi) Arabic.",
+		"otherRole": "The Jeddawi senior student, who knows the university well.",
+		"goalEnglish": "Ask about choosing a major, the professors, lectures, student housing and exams, and talk about your plans after the bachelor's.",
+		"targetWords": [
+			"Admission",
+			"College / faculty",
+			"Major (subject)",
+			"Lecture",
+			"Professor",
+			"Semester",
+			"Final exams",
+			"Student housing"
+		]
+	}
+}
