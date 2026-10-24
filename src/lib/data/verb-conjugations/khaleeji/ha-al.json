@@ -1,0 +1,318 @@
+{
+  "slug": "ha-al",
+  "arabic": "صار",
+  "transliteration": "saar",
+  "english": "to happen",
+  "wordId": null,
+  "rootLetters": "ح ص ل",
+  "verbClass": "sound",
+  "notes": "Gulf uses صار (saar) for \"to happen\" and \"to become\": shu saar? = what happened?",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "صرت",
+          "transliteration": "sirt",
+          "english": "I happened"
+        },
+        {
+          "person": "enta",
+          "arabic": "صرت",
+          "transliteration": "sirt",
+          "english": "you (m) happened"
+        },
+        {
+          "person": "enti",
+          "arabic": "صرتي",
+          "transliteration": "sirti",
+          "english": "you (f) happened"
+        },
+        {
+          "person": "howa",
+          "arabic": "صار",
+          "transliteration": "saar",
+          "english": "he happened"
+        },
+        {
+          "person": "heya",
+          "arabic": "صارت",
+          "transliteration": "saarat",
+          "english": "she happened"
+        },
+        {
+          "person": "ehna",
+          "arabic": "صرنا",
+          "transliteration": "sirna",
+          "english": "we happened"
+        },
+        {
+          "person": "entu",
+          "arabic": "صرتوا",
+          "transliteration": "sirtaw",
+          "english": "you (pl) happened"
+        },
+        {
+          "person": "homma",
+          "arabic": "صاروا",
+          "transliteration": "saaraw",
+          "english": "they happened"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما صرت",
+          "transliteration": "ma sirt",
+          "english": "I didn't happen"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما صرت",
+          "transliteration": "ma sirt",
+          "english": "you (m) didn't happen"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما صرتي",
+          "transliteration": "ma sirti",
+          "english": "you (f) didn't happen"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما صار",
+          "transliteration": "ma saar",
+          "english": "he didn't happen"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما صارت",
+          "transliteration": "ma saarat",
+          "english": "she didn't happen"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما صرنا",
+          "transliteration": "ma sirna",
+          "english": "we didn't happen"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما صرتوا",
+          "transliteration": "ma sirtaw",
+          "english": "you (pl) didn't happen"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما صاروا",
+          "transliteration": "ma saaraw",
+          "english": "they didn't happen"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "اصير",
+          "transliteration": "aseer",
+          "english": "I happen"
+        },
+        {
+          "person": "enta",
+          "arabic": "تصير",
+          "transliteration": "tseer",
+          "english": "you (m) happen"
+        },
+        {
+          "person": "enti",
+          "arabic": "تصيرين",
+          "transliteration": "tseereen",
+          "english": "you (f) happen"
+        },
+        {
+          "person": "howa",
+          "arabic": "يصير",
+          "transliteration": "yseer",
+          "english": "he happens"
+        },
+        {
+          "person": "heya",
+          "arabic": "تصير",
+          "transliteration": "tseer",
+          "english": "she happens"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نصير",
+          "transliteration": "nseer",
+          "english": "we happen"
+        },
+        {
+          "person": "entu",
+          "arabic": "تصيرون",
+          "transliteration": "tseeroon",
+          "english": "you (pl) happen"
+        },
+        {
+          "person": "homma",
+          "arabic": "يصيرون",
+          "transliteration": "yseeroon",
+          "english": "they happen"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما اصير",
+          "transliteration": "ma aseer",
+          "english": "I don't happen"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما تصير",
+          "transliteration": "ma tseer",
+          "english": "you (m) don't happen"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما تصيرين",
+          "transliteration": "ma tseereen",
+          "english": "you (f) don't happen"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما يصير",
+          "transliteration": "ma yseer",
+          "english": "he doesn't happen"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما تصير",
+          "transliteration": "ma tseer",
+          "english": "she doesn't happen"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما نصير",
+          "transliteration": "ma nseer",
+          "english": "we don't happen"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما تصيرون",
+          "transliteration": "ma tseeroon",
+          "english": "you (pl) don't happen"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما يصيرون",
+          "transliteration": "ma yseeroon",
+          "english": "they don't happen"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "راح اصير",
+          "transliteration": "raa7 aseer",
+          "english": "I will happen"
+        },
+        {
+          "person": "enta",
+          "arabic": "راح تصير",
+          "transliteration": "raa7 tseer",
+          "english": "you (m) will happen"
+        },
+        {
+          "person": "enti",
+          "arabic": "راح تصيرين",
+          "transliteration": "raa7 tseereen",
+          "english": "you (f) will happen"
+        },
+        {
+          "person": "howa",
+          "arabic": "راح يصير",
+          "transliteration": "raa7 yseer",
+          "english": "he will happen"
+        },
+        {
+          "person": "heya",
+          "arabic": "راح تصير",
+          "transliteration": "raa7 tseer",
+          "english": "she will happen"
+        },
+        {
+          "person": "ehna",
+          "arabic": "راح نصير",
+          "transliteration": "raa7 nseer",
+          "english": "we will happen"
+        },
+        {
+          "person": "entu",
+          "arabic": "راح تصيرون",
+          "transliteration": "raa7 tseeroon",
+          "english": "you (pl) will happen"
+        },
+        {
+          "person": "homma",
+          "arabic": "راح يصيرون",
+          "transliteration": "raa7 yseeroon",
+          "english": "they will happen"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما راح اصير",
+          "transliteration": "ma raa7 aseer",
+          "english": "I won't happen"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما راح تصير",
+          "transliteration": "ma raa7 tseer",
+          "english": "you (m) won't happen"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما راح تصيرين",
+          "transliteration": "ma raa7 tseereen",
+          "english": "you (f) won't happen"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما راح يصير",
+          "transliteration": "ma raa7 yseer",
+          "english": "he won't happen"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما راح تصير",
+          "transliteration": "ma raa7 tseer",
+          "english": "she won't happen"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما راح نصير",
+          "transliteration": "ma raa7 nseer",
+          "english": "we won't happen"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما راح تصيرون",
+          "transliteration": "ma raa7 tseeroon",
+          "english": "you (pl) won't happen"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما راح يصيرون",
+          "transliteration": "ma raa7 yseeroon",
+          "english": "they won't happen"
+        }
+      ]
+    }
+  }
+}

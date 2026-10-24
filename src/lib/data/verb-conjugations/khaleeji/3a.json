@@ -1,0 +1,318 @@
+{
+  "slug": "3a",
+  "arabic": "عاش",
+  "transliteration": "3aash",
+  "english": "to live",
+  "wordId": null,
+  "rootLetters": "ع ي ش",
+  "verbClass": "hollow",
+  "notes": "Past 3aash, present a3eesh (I live).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "عشت",
+          "transliteration": "3isht",
+          "english": "I lived"
+        },
+        {
+          "person": "enta",
+          "arabic": "عشت",
+          "transliteration": "3isht",
+          "english": "you (m) lived"
+        },
+        {
+          "person": "enti",
+          "arabic": "عشتي",
+          "transliteration": "3ishti",
+          "english": "you (f) lived"
+        },
+        {
+          "person": "howa",
+          "arabic": "عاش",
+          "transliteration": "3aash",
+          "english": "he lived"
+        },
+        {
+          "person": "heya",
+          "arabic": "عاشت",
+          "transliteration": "3aashat",
+          "english": "she lived"
+        },
+        {
+          "person": "ehna",
+          "arabic": "عشنا",
+          "transliteration": "3ishna",
+          "english": "we lived"
+        },
+        {
+          "person": "entu",
+          "arabic": "عشتوا",
+          "transliteration": "3ishtaw",
+          "english": "you (pl) lived"
+        },
+        {
+          "person": "homma",
+          "arabic": "عاشوا",
+          "transliteration": "3aashaw",
+          "english": "they lived"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما عشت",
+          "transliteration": "ma 3isht",
+          "english": "I didn't live"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما عشت",
+          "transliteration": "ma 3isht",
+          "english": "you (m) didn't live"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما عشتي",
+          "transliteration": "ma 3ishti",
+          "english": "you (f) didn't live"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما عاش",
+          "transliteration": "ma 3aash",
+          "english": "he didn't live"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما عاشت",
+          "transliteration": "ma 3aashat",
+          "english": "she didn't live"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما عشنا",
+          "transliteration": "ma 3ishna",
+          "english": "we didn't live"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما عشتوا",
+          "transliteration": "ma 3ishtaw",
+          "english": "you (pl) didn't live"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما عاشوا",
+          "transliteration": "ma 3aashaw",
+          "english": "they didn't live"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "اعيش",
+          "transliteration": "a3eesh",
+          "english": "I live"
+        },
+        {
+          "person": "enta",
+          "arabic": "تعيش",
+          "transliteration": "t3eesh",
+          "english": "you (m) live"
+        },
+        {
+          "person": "enti",
+          "arabic": "تعيشين",
+          "transliteration": "t3eesheen",
+          "english": "you (f) live"
+        },
+        {
+          "person": "howa",
+          "arabic": "يعيش",
+          "transliteration": "y3eesh",
+          "english": "he lives"
+        },
+        {
+          "person": "heya",
+          "arabic": "تعيش",
+          "transliteration": "t3eesh",
+          "english": "she lives"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نعيش",
+          "transliteration": "n3eesh",
+          "english": "we live"
+        },
+        {
+          "person": "entu",
+          "arabic": "تعيشون",
+          "transliteration": "t3eeshoon",
+          "english": "you (pl) live"
+        },
+        {
+          "person": "homma",
+          "arabic": "يعيشون",
+          "transliteration": "y3eeshoon",
+          "english": "they live"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما اعيش",
+          "transliteration": "ma a3eesh",
+          "english": "I don't live"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما تعيش",
+          "transliteration": "ma t3eesh",
+          "english": "you (m) don't live"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما تعيشين",
+          "transliteration": "ma t3eesheen",
+          "english": "you (f) don't live"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما يعيش",
+          "transliteration": "ma y3eesh",
+          "english": "he doesn't live"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما تعيش",
+          "transliteration": "ma t3eesh",
+          "english": "she doesn't live"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما نعيش",
+          "transliteration": "ma n3eesh",
+          "english": "we don't live"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما تعيشون",
+          "transliteration": "ma t3eeshoon",
+          "english": "you (pl) don't live"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما يعيشون",
+          "transliteration": "ma y3eeshoon",
+          "english": "they don't live"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "راح اعيش",
+          "transliteration": "raa7 a3eesh",
+          "english": "I will live"
+        },
+        {
+          "person": "enta",
+          "arabic": "راح تعيش",
+          "transliteration": "raa7 t3eesh",
+          "english": "you (m) will live"
+        },
+        {
+          "person": "enti",
+          "arabic": "راح تعيشين",
+          "transliteration": "raa7 t3eesheen",
+          "english": "you (f) will live"
+        },
+        {
+          "person": "howa",
+          "arabic": "راح يعيش",
+          "transliteration": "raa7 y3eesh",
+          "english": "he will live"
+        },
+        {
+          "person": "heya",
+          "arabic": "راح تعيش",
+          "transliteration": "raa7 t3eesh",
+          "english": "she will live"
+        },
+        {
+          "person": "ehna",
+          "arabic": "راح نعيش",
+          "transliteration": "raa7 n3eesh",
+          "english": "we will live"
+        },
+        {
+          "person": "entu",
+          "arabic": "راح تعيشون",
+          "transliteration": "raa7 t3eeshoon",
+          "english": "you (pl) will live"
+        },
+        {
+          "person": "homma",
+          "arabic": "راح يعيشون",
+          "transliteration": "raa7 y3eeshoon",
+          "english": "they will live"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما راح اعيش",
+          "transliteration": "ma raa7 a3eesh",
+          "english": "I won't live"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما راح تعيش",
+          "transliteration": "ma raa7 t3eesh",
+          "english": "you (m) won't live"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما راح تعيشين",
+          "transliteration": "ma raa7 t3eesheen",
+          "english": "you (f) won't live"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما راح يعيش",
+          "transliteration": "ma raa7 y3eesh",
+          "english": "he won't live"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما راح تعيش",
+          "transliteration": "ma raa7 t3eesh",
+          "english": "she won't live"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما راح نعيش",
+          "transliteration": "ma raa7 n3eesh",
+          "english": "we won't live"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما راح تعيشون",
+          "transliteration": "ma raa7 t3eeshoon",
+          "english": "you (pl) won't live"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما راح يعيشون",
+          "transliteration": "ma raa7 y3eeshoon",
+          "english": "they won't live"
+        }
+      ]
+    }
+  }
+}

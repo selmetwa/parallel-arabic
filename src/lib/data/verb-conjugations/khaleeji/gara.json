@@ -1,0 +1,318 @@
+{
+  "slug": "gara",
+  "arabic": "ركض",
+  "transliteration": "rikadh",
+  "english": "to run",
+  "wordId": null,
+  "rootLetters": "ر ك ض",
+  "verbClass": "sound",
+  "notes": "Past rikadh, present arkidh (I run).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "ركضت",
+          "transliteration": "rikadht",
+          "english": "I ran"
+        },
+        {
+          "person": "enta",
+          "arabic": "ركضت",
+          "transliteration": "rikadht",
+          "english": "you (m) ran"
+        },
+        {
+          "person": "enti",
+          "arabic": "ركضتي",
+          "transliteration": "rikadhti",
+          "english": "you (f) ran"
+        },
+        {
+          "person": "howa",
+          "arabic": "ركض",
+          "transliteration": "rikadh",
+          "english": "he ran"
+        },
+        {
+          "person": "heya",
+          "arabic": "ركضت",
+          "transliteration": "rikdhat",
+          "english": "she ran"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ركضنا",
+          "transliteration": "rikadhna",
+          "english": "we ran"
+        },
+        {
+          "person": "entu",
+          "arabic": "ركضتوا",
+          "transliteration": "rikadhtaw",
+          "english": "you (pl) ran"
+        },
+        {
+          "person": "homma",
+          "arabic": "ركضوا",
+          "transliteration": "rikdhaw",
+          "english": "they ran"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما ركضت",
+          "transliteration": "ma rikadht",
+          "english": "I didn't run"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما ركضت",
+          "transliteration": "ma rikadht",
+          "english": "you (m) didn't run"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما ركضتي",
+          "transliteration": "ma rikadhti",
+          "english": "you (f) didn't run"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما ركض",
+          "transliteration": "ma rikadh",
+          "english": "he didn't run"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما ركضت",
+          "transliteration": "ma rikdhat",
+          "english": "she didn't run"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما ركضنا",
+          "transliteration": "ma rikadhna",
+          "english": "we didn't run"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما ركضتوا",
+          "transliteration": "ma rikadhtaw",
+          "english": "you (pl) didn't run"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما ركضوا",
+          "transliteration": "ma rikdhaw",
+          "english": "they didn't run"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "اركض",
+          "transliteration": "arkidh",
+          "english": "I run"
+        },
+        {
+          "person": "enta",
+          "arabic": "تركض",
+          "transliteration": "tirkidh",
+          "english": "you (m) run"
+        },
+        {
+          "person": "enti",
+          "arabic": "تركضين",
+          "transliteration": "tirkidheen",
+          "english": "you (f) run"
+        },
+        {
+          "person": "howa",
+          "arabic": "يركض",
+          "transliteration": "yirkidh",
+          "english": "he runs"
+        },
+        {
+          "person": "heya",
+          "arabic": "تركض",
+          "transliteration": "tirkidh",
+          "english": "she runs"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نركض",
+          "transliteration": "nirkidh",
+          "english": "we run"
+        },
+        {
+          "person": "entu",
+          "arabic": "تركضون",
+          "transliteration": "tirkidhoon",
+          "english": "you (pl) run"
+        },
+        {
+          "person": "homma",
+          "arabic": "يركضون",
+          "transliteration": "yirkidhoon",
+          "english": "they run"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما اركض",
+          "transliteration": "ma arkidh",
+          "english": "I don't run"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما تركض",
+          "transliteration": "ma tirkidh",
+          "english": "you (m) don't run"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما تركضين",
+          "transliteration": "ma tirkidheen",
+          "english": "you (f) don't run"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما يركض",
+          "transliteration": "ma yirkidh",
+          "english": "he doesn't run"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما تركض",
+          "transliteration": "ma tirkidh",
+          "english": "she doesn't run"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما نركض",
+          "transliteration": "ma nirkidh",
+          "english": "we don't run"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما تركضون",
+          "transliteration": "ma tirkidhoon",
+          "english": "you (pl) don't run"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما يركضون",
+          "transliteration": "ma yirkidhoon",
+          "english": "they don't run"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "راح اركض",
+          "transliteration": "raa7 arkidh",
+          "english": "I will run"
+        },
+        {
+          "person": "enta",
+          "arabic": "راح تركض",
+          "transliteration": "raa7 tirkidh",
+          "english": "you (m) will run"
+        },
+        {
+          "person": "enti",
+          "arabic": "راح تركضين",
+          "transliteration": "raa7 tirkidheen",
+          "english": "you (f) will run"
+        },
+        {
+          "person": "howa",
+          "arabic": "راح يركض",
+          "transliteration": "raa7 yirkidh",
+          "english": "he will run"
+        },
+        {
+          "person": "heya",
+          "arabic": "راح تركض",
+          "transliteration": "raa7 tirkidh",
+          "english": "she will run"
+        },
+        {
+          "person": "ehna",
+          "arabic": "راح نركض",
+          "transliteration": "raa7 nirkidh",
+          "english": "we will run"
+        },
+        {
+          "person": "entu",
+          "arabic": "راح تركضون",
+          "transliteration": "raa7 tirkidhoon",
+          "english": "you (pl) will run"
+        },
+        {
+          "person": "homma",
+          "arabic": "راح يركضون",
+          "transliteration": "raa7 yirkidhoon",
+          "english": "they will run"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما راح اركض",
+          "transliteration": "ma raa7 arkidh",
+          "english": "I won't run"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما راح تركض",
+          "transliteration": "ma raa7 tirkidh",
+          "english": "you (m) won't run"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما راح تركضين",
+          "transliteration": "ma raa7 tirkidheen",
+          "english": "you (f) won't run"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما راح يركض",
+          "transliteration": "ma raa7 yirkidh",
+          "english": "he won't run"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما راح تركض",
+          "transliteration": "ma raa7 tirkidh",
+          "english": "she won't run"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما راح نركض",
+          "transliteration": "ma raa7 nirkidh",
+          "english": "we won't run"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما راح تركضون",
+          "transliteration": "ma raa7 tirkidhoon",
+          "english": "you (pl) won't run"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما راح يركضون",
+          "transliteration": "ma raa7 yirkidhoon",
+          "english": "they won't run"
+        }
+      ]
+    }
+  }
+}
