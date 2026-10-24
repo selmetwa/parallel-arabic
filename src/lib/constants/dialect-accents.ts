@@ -13,9 +13,9 @@ export const DIALECT_ACCENTS: Record<string, Accent> = {
 	darija: { accent: '#f43f5e', deep: '#9f1239' },
 	fusha: { accent: '#8b5cf6', deep: '#6d28d9' },
 	levantine: { accent: '#10b981', deep: '#047857' },
-	iraqi: { accent: '#14b8a6', deep: '#0f766e' },
-	khaleeji: { accent: '#06b6d4', deep: '#0e7490' },
-	saudi: { accent: '#84cc16', deep: '#4d7c0f' }
+	iraqi: { accent: '#dc2626', deep: '#991b1b' },
+	khaleeji: { accent: '#c026d3', deep: '#86198f' },
+	saudi: { accent: '#2563eb', deep: '#1e40af' }
 };
 
 const FALLBACK: Accent = { accent: '#0ea5e9', deep: '#0369a1' };

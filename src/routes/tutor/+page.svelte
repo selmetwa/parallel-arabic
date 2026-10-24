@@ -185,24 +185,24 @@
 			label: 'Iraqi Arabic',
 			short: 'Iraqi',
 			emoji: '🇮🇶',
-			accent: '#14b8a6',
-			deep: '#0f766e'
+			accent: '#dc2626',
+			deep: '#991b1b'
 		},
 		{
 			value: 'khaleeji',
 			label: 'Gulf Arabic',
 			short: 'Khaleeji',
 			emoji: '🇦🇪',
-			accent: '#06b6d4',
-			deep: '#0e7490'
+			accent: '#c026d3',
+			deep: '#86198f'
 		},
 		{
 			value: 'saudi',
 			label: 'Saudi Arabic',
 			short: 'Saudi',
 			emoji: '🇸🇦',
-			accent: '#84cc16',
-			deep: '#4d7c0f'
+			accent: '#2563eb',
+			deep: '#1e40af'
 		}
 	].filter((d) => isSelectableDialect(d.value));
 

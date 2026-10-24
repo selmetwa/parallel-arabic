@@ -135,24 +135,24 @@
 			label: 'Iraqi',
 			emoji: '🇮🇶',
 			description: 'Baghdad, Basra and across Iraq',
-			accent: '#14b8a6',
-			deep: '#0f766e'
+			accent: '#dc2626',
+			deep: '#991b1b'
 		},
 		{
 			id: 'khaleeji',
 			label: 'Khaleeji',
 			emoji: '🇦🇪',
 			description: 'UAE, Kuwait, Qatar, Bahrain and Oman',
-			accent: '#06b6d4',
-			deep: '#0e7490'
+			accent: '#c026d3',
+			deep: '#86198f'
 		},
 		{
 			id: 'saudi',
 			label: 'Saudi',
 			emoji: '🇸🇦',
 			description: 'Jeddah, Mecca and the Hijaz',
-			accent: '#84cc16',
-			deep: '#4d7c0f'
+			accent: '#2563eb',
+			deep: '#1e40af'
 		}
 	].filter((d) => isSelectableDialect(d.id));
 
