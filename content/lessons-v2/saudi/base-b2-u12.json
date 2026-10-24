@@ -1,0 +1,2273 @@
+{
+	"vocab": [
+		{
+			"arabic": "صدمة ثقافية",
+			"arabicTashkeel": "صَدمة ثَقافية",
+			"english": "Culture shock",
+			"transliteration": "sadma sagaafiyya",
+			"wordAlignments": [
+				{
+					"arabic": "صدمة",
+					"english": "Shock",
+					"transliteration": "sadma"
+				},
+				{
+					"arabic": "ثقافية",
+					"english": "cultural",
+					"transliteration": "sagaafiyya"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "عادات",
+			"arabicTashkeel": "عادات",
+			"english": "Customs",
+			"transliteration": "3aadaat",
+			"wordAlignments": [
+				{
+					"arabic": "عادات",
+					"english": "Customs",
+					"transliteration": "3aadaat"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "أجنبي",
+			"arabicTashkeel": "أجنَبي",
+			"english": "Foreigner",
+			"transliteration": "ajnabi",
+			"wordAlignments": [
+				{
+					"arabic": "أجنبي",
+					"english": "Foreigner",
+					"transliteration": "ajnabi"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "إحترام",
+			"arabicTashkeel": "إحتِرام",
+			"english": "Respect",
+			"transliteration": "i7tiraam",
+			"wordAlignments": [
+				{
+					"arabic": "إحترام",
+					"english": "Respect",
+					"transliteration": "i7tiraam"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "تحية",
+			"arabicTashkeel": "تَحية",
+			"english": "Greeting",
+			"transliteration": "ta7iyya",
+			"wordAlignments": [
+				{
+					"arabic": "تحية",
+					"english": "Greeting",
+					"transliteration": "ta7iyya"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "الإلتزام بالمواعيد",
+			"arabicTashkeel": "الإلتِزام بالمَواعيد",
+			"english": "Punctuality",
+			"transliteration": "il-iltizaam bil-mawaa3eed",
+			"wordAlignments": [
+				{
+					"arabic": "الإلتزام",
+					"english": "Commitment",
+					"transliteration": "il-iltizaam"
+				},
+				{
+					"arabic": "بالمواعيد",
+					"english": "to the times",
+					"transliteration": "bil-mawaa3eed"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "صريح",
+			"arabicTashkeel": "صَريح",
+			"english": "Direct (blunt)",
+			"transliteration": "saree7",
+			"wordAlignments": [
+				{
+					"arabic": "صريح",
+					"english": "Direct",
+					"transliteration": "saree7"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "مؤدب",
+			"arabicTashkeel": "مُؤَدَّب",
+			"english": "Polite",
+			"transliteration": "mu2addab",
+			"wordAlignments": [
+				{
+					"arabic": "مؤدب",
+					"english": "Polite",
+					"transliteration": "mu2addab"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "غريب",
+			"arabicTashkeel": "غَريب",
+			"english": "Strange",
+			"transliteration": "ghareeb",
+			"wordAlignments": [
+				{
+					"arabic": "غريب",
+					"english": "Strange",
+					"transliteration": "ghareeb"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "يتأقلم",
+			"arabicTashkeel": "يِتأقلَم",
+			"english": "He adapts",
+			"transliteration": "yit2aglam",
+			"wordAlignments": [
+				{
+					"arabic": "يتأقلم",
+					"english": "He adapts",
+					"transliteration": "yit2aglam"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "مقيم",
+			"arabicTashkeel": "مُقيم",
+			"english": "Expatriate (in Saudi)",
+			"transliteration": "mugeem",
+			"wordAlignments": [
+				{
+					"arabic": "مقيم",
+					"english": "Resident",
+					"transliteration": "mugeem"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "يقارن",
+			"arabicTashkeel": "يِقارِن",
+			"english": "He compares",
+			"transliteration": "yigaarin",
+			"wordAlignments": [
+				{
+					"arabic": "يقارن",
+					"english": "He compares",
+					"transliteration": "yigaarin"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "فرق",
+			"arabicTashkeel": "فَرق",
+			"english": "Difference",
+			"transliteration": "farg",
+			"wordAlignments": [
+				{
+					"arabic": "فرق",
+					"english": "Difference",
+					"transliteration": "farg"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "تشابه",
+			"arabicTashkeel": "تَشابُه",
+			"english": "Similarity",
+			"transliteration": "tashaabuh",
+			"wordAlignments": [
+				{
+					"arabic": "تشابه",
+					"english": "Similarity",
+					"transliteration": "tashaabuh"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "عيب",
+			"arabicTashkeel": "عيب",
+			"english": "Shameful (taboo)",
+			"transliteration": "3aib",
+			"wordAlignments": [
+				{
+					"arabic": "عيب",
+					"english": "Shameful",
+					"transliteration": "3aib"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "جاتني صدمة ثقافية لما وصلت.",
+			"arabicTashkeel": "جاتني صَدمة ثَقافية لَمّا وَصَلت.",
+			"english": "I had culture shock when I arrived.",
+			"transliteration": "jaatni sadma sagaafiyya lamma wasalt.",
+			"wordAlignments": [
+				{
+					"arabic": "جاتني",
+					"english": "Came to me",
+					"transliteration": "jaatni"
+				},
+				{
+					"arabic": "صدمة",
+					"english": "a shock",
+					"transliteration": "sadma"
+				},
+				{
+					"arabic": "ثقافية",
+					"english": "cultural",
+					"transliteration": "sagaafiyya"
+				},
+				{
+					"arabic": "لما",
+					"english": "when",
+					"transliteration": "lamma"
+				},
+				{
+					"arabic": "وصلت.",
+					"english": "I arrived.",
+					"transliteration": "wasalt."
+				}
+			],
+			"targetWords": [
+				"Culture shock"
+			]
+		},
+		{
+			"arabic": "كل شعب له عاداته.",
+			"arabicTashkeel": "كُل شَعب لُه عاداتُه.",
+			"english": "Every people has its customs.",
+			"transliteration": "kull sha3b lu 3aadaatu.",
+			"wordAlignments": [
+				{
+					"arabic": "كل",
+					"english": "Every",
+					"transliteration": "kull"
+				},
+				{
+					"arabic": "شعب",
+					"english": "people",
+					"transliteration": "sha3b"
+				},
+				{
+					"arabic": "له",
+					"english": "has",
+					"transliteration": "lu"
+				},
+				{
+					"arabic": "عاداته.",
+					"english": "its customs.",
+					"transliteration": "3aadaatu."
+				}
+			],
+			"targetWords": [
+				"Customs"
+			]
+		},
+		{
+			"arabic": "فيه أجانب كتير في جدة.",
+			"arabicTashkeel": "فيه أجانِب كِتير في جِدّة.",
+			"english": "There are many foreigners in Jeddah.",
+			"transliteration": "feeh ajaanib kteer fi jidda.",
+			"wordAlignments": [
+				{
+					"arabic": "فيه",
+					"english": "There are",
+					"transliteration": "feeh"
+				},
+				{
+					"arabic": "أجانب",
+					"english": "foreigners",
+					"transliteration": "ajaanib"
+				},
+				{
+					"arabic": "كتير",
+					"english": "many",
+					"transliteration": "kteer"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "جدة.",
+					"english": "Jeddah.",
+					"transliteration": "jidda."
+				}
+			],
+			"targetWords": [
+				"Foreigner"
+			]
+		},
+		{
+			"arabic": "إحترام الكبار مهم مرة.",
+			"arabicTashkeel": "إحتِرام الكِبار مُهِم مَرّة.",
+			"english": "Respect for elders is very important.",
+			"transliteration": "i7tiraam il-kibaar muhimm marra.",
+			"wordAlignments": [
+				{
+					"arabic": "إحترام",
+					"english": "The respect of",
+					"transliteration": "i7tiraam"
+				},
+				{
+					"arabic": "الكبار",
+					"english": "the elders is",
+					"transliteration": "il-kibaar"
+				},
+				{
+					"arabic": "مهم",
+					"english": "important",
+					"transliteration": "muhimm"
+				},
+				{
+					"arabic": "مرة.",
+					"english": "very.",
+					"transliteration": "marra."
+				}
+			],
+			"targetWords": [
+				"Respect"
+			]
+		},
+		{
+			"arabic": "التحية هنا طويلة.",
+			"arabicTashkeel": "التَّحية هِنا طَويلة.",
+			"english": "The greeting here is long.",
+			"transliteration": "it-ta7iyya hina taweela.",
+			"wordAlignments": [
+				{
+					"arabic": "التحية",
+					"english": "The greeting",
+					"transliteration": "it-ta7iyya"
+				},
+				{
+					"arabic": "هنا",
+					"english": "here is",
+					"transliteration": "hina"
+				},
+				{
+					"arabic": "طويلة.",
+					"english": "long.",
+					"transliteration": "taweela."
+				}
+			],
+			"targetWords": [
+				"Greeting"
+			]
+		},
+		{
+			"arabic": "في ألمانيا الإلتزام بالمواعيد شي مقدس.",
+			"arabicTashkeel": "في ألمانيا الإلتِزام بالمَواعيد شي مُقَدَّس.",
+			"english": "In Germany, punctuality is sacred.",
+			"transliteration": "fi almaanya il-iltizaam bil-mawaa3eed shay mugaddas.",
+			"wordAlignments": [
+				{
+					"arabic": "في",
+					"english": "In",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "ألمانيا",
+					"english": "Germany",
+					"transliteration": "almaanya"
+				},
+				{
+					"arabic": "الإلتزام",
+					"english": "the commitment",
+					"transliteration": "il-iltizaam"
+				},
+				{
+					"arabic": "بالمواعيد",
+					"english": "to the times is",
+					"transliteration": "bil-mawaa3eed"
+				},
+				{
+					"arabic": "شي",
+					"english": "a thing",
+					"transliteration": "shay"
+				},
+				{
+					"arabic": "مقدس.",
+					"english": "sacred.",
+					"transliteration": "mugaddas."
+				}
+			],
+			"targetWords": [
+				"Punctuality"
+			]
+		},
+		{
+			"arabic": "الغربيين صرحا مرة.",
+			"arabicTashkeel": "الغَربيين صُرَحا مَرّة.",
+			"english": "Westerners are very direct.",
+			"transliteration": "il-gharbiyyeen sura7a marra.",
+			"wordAlignments": [
+				{
+					"arabic": "الغربيين",
+					"english": "The westerners are",
+					"transliteration": "il-gharbiyyeen"
+				},
+				{
+					"arabic": "صرحا",
+					"english": "direct",
+					"transliteration": "sura7a"
+				},
+				{
+					"arabic": "مرة.",
+					"english": "very.",
+					"transliteration": "marra."
+				}
+			],
+			"targetWords": [
+				"Direct (blunt)"
+			]
+		},
+		{
+			"arabic": "ولدك مؤدب مرة.",
+			"arabicTashkeel": "وَلَدَك مُؤَدَّب مَرّة.",
+			"english": "Your son is very polite.",
+			"transliteration": "waladak mu2addab marra.",
+			"wordAlignments": [
+				{
+					"arabic": "ولدك",
+					"english": "Your son is",
+					"transliteration": "waladak"
+				},
+				{
+					"arabic": "مؤدب",
+					"english": "polite",
+					"transliteration": "mu2addab"
+				},
+				{
+					"arabic": "مرة.",
+					"english": "very.",
+					"transliteration": "marra."
+				}
+			],
+			"targetWords": [
+				"Polite"
+			]
+		},
+		{
+			"arabic": "الأكل كان غريب عليا في الأول.",
+			"arabicTashkeel": "الأكل كان غَريب عَلَيّا في الأوَّل.",
+			"english": "The food was strange to me at first.",
+			"transliteration": "il-akl kaan ghareeb 3alayya fi il-awwal.",
+			"wordAlignments": [
+				{
+					"arabic": "الأكل",
+					"english": "The food",
+					"transliteration": "il-akl"
+				},
+				{
+					"arabic": "كان",
+					"english": "was",
+					"transliteration": "kaan"
+				},
+				{
+					"arabic": "غريب",
+					"english": "strange",
+					"transliteration": "ghareeb"
+				},
+				{
+					"arabic": "عليا",
+					"english": "to me",
+					"transliteration": "3alayya"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الأول.",
+					"english": "the first.",
+					"transliteration": "il-awwal."
+				}
+			],
+			"targetWords": [
+				"Strange"
+			]
+		},
+		{
+			"arabic": "اتأقلم بسرعة مع الحياة في جدة.",
+			"arabicTashkeel": "اِتأقلَم بسُرعة مَعَ الحَياة في جِدّة.",
+			"english": "He adapted quickly to life in Jeddah.",
+			"transliteration": "it2aglam b-sur3a ma3a il-7ayaa fi jidda.",
+			"wordAlignments": [
+				{
+					"arabic": "اتأقلم",
+					"english": "He adapted",
+					"transliteration": "it2aglam"
+				},
+				{
+					"arabic": "بسرعة",
+					"english": "quickly",
+					"transliteration": "b-sur3a"
+				},
+				{
+					"arabic": "مع",
+					"english": "with",
+					"transliteration": "ma3a"
+				},
+				{
+					"arabic": "الحياة",
+					"english": "the life",
+					"transliteration": "il-7ayaa"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "جدة.",
+					"english": "Jeddah.",
+					"transliteration": "jidda."
+				}
+			],
+			"targetWords": [
+				"He adapts"
+			]
+		},
+		{
+			"arabic": "مقيمين كتير عايشين في السعودية.",
+			"arabicTashkeel": "مُقيمين كِتير عايشين في السُّعودية.",
+			"english": "Many expatriates live in Saudi Arabia.",
+			"transliteration": "mugeemeen kteer 3aaysheen fi is-su3oodiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "مقيمين",
+					"english": "Residents",
+					"transliteration": "mugeemeen"
+				},
+				{
+					"arabic": "كتير",
+					"english": "many",
+					"transliteration": "kteer"
+				},
+				{
+					"arabic": "عايشين",
+					"english": "live",
+					"transliteration": "3aaysheen"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "السعودية.",
+					"english": "Saudi Arabia.",
+					"transliteration": "is-su3oodiyya."
+				}
+			],
+			"targetWords": [
+				"Expatriate (in Saudi)"
+			]
+		},
+		{
+			"arabic": "لا تقارن نفسك بالناس.",
+			"arabicTashkeel": "لا تِقارِن نَفسَك بالنّاس.",
+			"english": "Don't compare yourself with others.",
+			"transliteration": "la tigaarin nafsak bin-naas.",
+			"wordAlignments": [
+				{
+					"arabic": "لا",
+					"english": "Don't",
+					"transliteration": "la"
+				},
+				{
+					"arabic": "تقارن",
+					"english": "compare",
+					"transliteration": "tigaarin"
+				},
+				{
+					"arabic": "نفسك",
+					"english": "yourself",
+					"transliteration": "nafsak"
+				},
+				{
+					"arabic": "بالناس.",
+					"english": "with the people.",
+					"transliteration": "bin-naas."
+				}
+			],
+			"targetWords": [
+				"He compares"
+			]
+		},
+		{
+			"arabic": "الفرق بين الثقافتين كبير.",
+			"arabicTashkeel": "الفَرق بين الثَّقافتين كبير.",
+			"english": "The difference between the two cultures is big.",
+			"transliteration": "il-farg bain is-sagaaftain kbeer.",
+			"wordAlignments": [
+				{
+					"arabic": "الفرق",
+					"english": "The difference",
+					"transliteration": "il-farg"
+				},
+				{
+					"arabic": "بين",
+					"english": "between",
+					"transliteration": "bain"
+				},
+				{
+					"arabic": "الثقافتين",
+					"english": "the two cultures is",
+					"transliteration": "is-sagaaftain"
+				},
+				{
+					"arabic": "كبير.",
+					"english": "big.",
+					"transliteration": "kbeer."
+				}
+			],
+			"targetWords": [
+				"Difference"
+			]
+		},
+		{
+			"arabic": "فيه تشابه بين اللهجة الحجازية والمصرية.",
+			"arabicTashkeel": "فيه تَشابُه بين اللَّهجة الحِجازية والمَصرية.",
+			"english": "There's a similarity between the Hijazi and Egyptian dialects.",
+			"transliteration": "feeh tashaabuh bain il-lahja il-7ijaaziyya w-il-masriyya.",
+			"wordAlignments": [
+				{
+					"arabic": "فيه",
+					"english": "There is",
+					"transliteration": "feeh"
+				},
+				{
+					"arabic": "تشابه",
+					"english": "similarity",
+					"transliteration": "tashaabuh"
+				},
+				{
+					"arabic": "بين",
+					"english": "between",
+					"transliteration": "bain"
+				},
+				{
+					"arabic": "اللهجة",
+					"english": "the dialect",
+					"transliteration": "il-lahja"
+				},
+				{
+					"arabic": "الحجازية",
+					"english": "Hijazi",
+					"transliteration": "il-7ijaaziyya"
+				},
+				{
+					"arabic": "والمصرية.",
+					"english": "and the Egyptian.",
+					"transliteration": "w-il-masriyya."
+				}
+			],
+			"targetWords": [
+				"Similarity"
+			]
+		},
+		{
+			"arabic": "عيب تاكل باليد اليسار.",
+			"arabicTashkeel": "عيب تاكُل باليَد اليَسار.",
+			"english": "It's shameful to eat with the left hand.",
+			"transliteration": "3aib taakul bil-yad il-yasaar.",
+			"wordAlignments": [
+				{
+					"arabic": "عيب",
+					"english": "Shameful",
+					"transliteration": "3aib"
+				},
+				{
+					"arabic": "تاكل",
+					"english": "you eat",
+					"transliteration": "taakul"
+				},
+				{
+					"arabic": "باليد",
+					"english": "with the hand",
+					"transliteration": "bil-yad"
+				},
+				{
+					"arabic": "اليسار.",
+					"english": "left.",
+					"transliteration": "il-yasaar."
+				}
+			],
+			"targetWords": [
+				"Shameful (taboo)"
+			]
+		},
+		{
+			"arabic": "الصدمة الثقافية تروح مع الوقت.",
+			"arabicTashkeel": "الصَّدمة الثَّقافية تِروح مَعَ الوَقت.",
+			"english": "Culture shock passes with time.",
+			"transliteration": "is-sadma is-sagaafiyya tirooh ma3a il-wagt.",
+			"wordAlignments": [
+				{
+					"arabic": "الصدمة",
+					"english": "The shock",
+					"transliteration": "is-sadma"
+				},
+				{
+					"arabic": "الثقافية",
+					"english": "cultural",
+					"transliteration": "is-sagaafiyya"
+				},
+				{
+					"arabic": "تروح",
+					"english": "goes",
+					"transliteration": "tirooh"
+				},
+				{
+					"arabic": "مع",
+					"english": "with",
+					"transliteration": "ma3a"
+				},
+				{
+					"arabic": "الوقت.",
+					"english": "the time.",
+					"transliteration": "il-wagt."
+				}
+			],
+			"targetWords": [
+				"Culture shock"
+			]
+		},
+		{
+			"arabic": "اتعلم العادات قبل ما تسافر.",
+			"arabicTashkeel": "اِتعَلَّم العادات قَبل ما تِسافِر.",
+			"english": "Learn the customs before you travel.",
+			"transliteration": "it3allam il-3aadaat gabl ma tisaafir.",
+			"wordAlignments": [
+				{
+					"arabic": "اتعلم",
+					"english": "Learn",
+					"transliteration": "it3allam"
+				},
+				{
+					"arabic": "العادات",
+					"english": "the customs",
+					"transliteration": "il-3aadaat"
+				},
+				{
+					"arabic": "قبل",
+					"english": "before",
+					"transliteration": "gabl"
+				},
+				{
+					"arabic": "ما",
+					"english": "that",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "تسافر.",
+					"english": "you travel.",
+					"transliteration": "tisaafir."
+				}
+			],
+			"targetWords": [
+				"Customs"
+			]
+		},
+		{
+			"arabic": "الأجنبي سألني عن القهوة.",
+			"arabicTashkeel": "الأجنَبي سألني عَن القَهوة.",
+			"english": "The foreigner asked me about the coffee.",
+			"transliteration": "il-ajnabi sa2alni 3an il-gahwa.",
+			"wordAlignments": [
+				{
+					"arabic": "الأجنبي",
+					"english": "The foreigner",
+					"transliteration": "il-ajnabi"
+				},
+				{
+					"arabic": "سألني",
+					"english": "asked me",
+					"transliteration": "sa2alni"
+				},
+				{
+					"arabic": "عن",
+					"english": "about",
+					"transliteration": "3an"
+				},
+				{
+					"arabic": "القهوة.",
+					"english": "the coffee.",
+					"transliteration": "il-gahwa."
+				}
+			],
+			"targetWords": [
+				"Foreigner"
+			]
+		},
+		{
+			"arabic": "احترم ثقافة غيرك.",
+			"arabicTashkeel": "اِحتَرِم ثَقافة غيرَك.",
+			"english": "Respect other people's culture.",
+			"transliteration": "i7tarim sagaafat ghairak.",
+			"wordAlignments": [
+				{
+					"arabic": "احترم",
+					"english": "Respect",
+					"transliteration": "i7tarim"
+				},
+				{
+					"arabic": "ثقافة",
+					"english": "the culture of",
+					"transliteration": "sagaafat"
+				},
+				{
+					"arabic": "غيرك.",
+					"english": "others.",
+					"transliteration": "ghairak."
+				}
+			],
+			"targetWords": [
+				"Respect"
+			]
+		},
+		{
+			"arabic": "رد التحية.",
+			"arabicTashkeel": "رُد التَّحية.",
+			"english": "Return the greeting.",
+			"transliteration": "rudd it-ta7iyya.",
+			"wordAlignments": [
+				{
+					"arabic": "رد",
+					"english": "Return",
+					"transliteration": "rudd"
+				},
+				{
+					"arabic": "التحية.",
+					"english": "the greeting.",
+					"transliteration": "it-ta7iyya."
+				}
+			],
+			"targetWords": [
+				"Greeting"
+			]
+		},
+		{
+			"arabic": "الإلتزام بالمواعيد مو منتشر هنا.",
+			"arabicTashkeel": "الإلتِزام بالمَواعيد مو مُنتَشِر هِنا.",
+			"english": "Punctuality isn't common here.",
+			"transliteration": "il-iltizaam bil-mawaa3eed moo muntashir hina.",
+			"wordAlignments": [
+				{
+					"arabic": "الإلتزام",
+					"english": "The commitment",
+					"transliteration": "il-iltizaam"
+				},
+				{
+					"arabic": "بالمواعيد",
+					"english": "to the times",
+					"transliteration": "bil-mawaa3eed"
+				},
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "منتشر",
+					"english": "widespread",
+					"transliteration": "muntashir"
+				},
+				{
+					"arabic": "هنا.",
+					"english": "here.",
+					"transliteration": "hina."
+				}
+			],
+			"targetWords": [
+				"Punctuality"
+			]
+		},
+		{
+			"arabic": "خليك صريح معايا.",
+			"arabicTashkeel": "خَلّيك صَريح مَعايا.",
+			"english": "Be direct with me.",
+			"transliteration": "khalleek saree7 ma3aaya.",
+			"wordAlignments": [
+				{
+					"arabic": "خليك",
+					"english": "Be",
+					"transliteration": "khalleek"
+				},
+				{
+					"arabic": "صريح",
+					"english": "direct",
+					"transliteration": "saree7"
+				},
+				{
+					"arabic": "معايا.",
+					"english": "with me.",
+					"transliteration": "ma3aaya."
+				}
+			],
+			"targetWords": [
+				"Direct (blunt)"
+			]
+		},
+		{
+			"arabic": "خليك مؤدب مع الضيوف.",
+			"arabicTashkeel": "خَلّيك مُؤَدَّب مَعَ الضُّيوف.",
+			"english": "Be polite with the guests.",
+			"transliteration": "khalleek mu2addab ma3a idh-dhuyoof.",
+			"wordAlignments": [
+				{
+					"arabic": "خليك",
+					"english": "Be",
+					"transliteration": "khalleek"
+				},
+				{
+					"arabic": "مؤدب",
+					"english": "polite",
+					"transliteration": "mu2addab"
+				},
+				{
+					"arabic": "مع",
+					"english": "with",
+					"transliteration": "ma3a"
+				},
+				{
+					"arabic": "الضيوف.",
+					"english": "the guests.",
+					"transliteration": "idh-dhuyoof."
+				}
+			],
+			"targetWords": [
+				"Polite"
+			]
+		},
+		{
+			"arabic": "عادات غريبة.",
+			"arabicTashkeel": "عادات غَريبة.",
+			"english": "Strange customs.",
+			"transliteration": "3aadaat ghareeba.",
+			"wordAlignments": [
+				{
+					"arabic": "عادات",
+					"english": "Customs",
+					"transliteration": "3aadaat"
+				},
+				{
+					"arabic": "غريبة.",
+					"english": "strange.",
+					"transliteration": "ghareeba."
+				}
+			],
+			"targetWords": [
+				"Strange",
+				"Customs"
+			]
+		},
+		{
+			"arabic": "صعب تتأقلم مع الحر.",
+			"arabicTashkeel": "صَعب تِتأقلَم مَعَ الحَر.",
+			"english": "It's hard to adapt to the heat.",
+			"transliteration": "sa3b tit2aglam ma3a il-7arr.",
+			"wordAlignments": [
+				{
+					"arabic": "صعب",
+					"english": "Hard",
+					"transliteration": "sa3b"
+				},
+				{
+					"arabic": "تتأقلم",
+					"english": "you adapt",
+					"transliteration": "tit2aglam"
+				},
+				{
+					"arabic": "مع",
+					"english": "with",
+					"transliteration": "ma3a"
+				},
+				{
+					"arabic": "الحر.",
+					"english": "the heat.",
+					"transliteration": "il-7arr."
+				}
+			],
+			"targetWords": [
+				"He adapts"
+			]
+		},
+		{
+			"arabic": "المقيم يحتاج إقامة.",
+			"arabicTashkeel": "المُقيم يِحتاج إقامة.",
+			"english": "The resident needs an iqama.",
+			"transliteration": "il-mugeem yi7taaj igaama.",
+			"wordAlignments": [
+				{
+					"arabic": "المقيم",
+					"english": "The resident",
+					"transliteration": "il-mugeem"
+				},
+				{
+					"arabic": "يحتاج",
+					"english": "needs",
+					"transliteration": "yi7taaj"
+				},
+				{
+					"arabic": "إقامة.",
+					"english": "a residence permit.",
+					"transliteration": "igaama."
+				}
+			],
+			"targetWords": [
+				"Expatriate (in Saudi)"
+			]
+		},
+		{
+			"arabic": "يقارن كل شي ببلده.",
+			"arabicTashkeel": "يِقارِن كُل شي بِبَلَدُه.",
+			"english": "He compares everything with his country.",
+			"transliteration": "yigaarin kull shay bi-baladu.",
+			"wordAlignments": [
+				{
+					"arabic": "يقارن",
+					"english": "He compares",
+					"transliteration": "yigaarin"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kull"
+				},
+				{
+					"arabic": "شي",
+					"english": "thing",
+					"transliteration": "shay"
+				},
+				{
+					"arabic": "ببلده.",
+					"english": "with his country.",
+					"transliteration": "bi-baladu."
+				}
+			],
+			"targetWords": [
+				"He compares"
+			]
+		},
+		{
+			"arabic": "إيش الفرق؟",
+			"arabicTashkeel": "إيش الفَرق؟",
+			"english": "What's the difference?",
+			"transliteration": "eesh il-farg?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What is",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "الفرق؟",
+					"english": "the difference?",
+					"transliteration": "il-farg?"
+				}
+			],
+			"targetWords": [
+				"Difference"
+			]
+		},
+		{
+			"arabic": "فيه تشابه كبير بينا.",
+			"arabicTashkeel": "فيه تَشابُه كبير بينّا.",
+			"english": "There's a big similarity between us.",
+			"transliteration": "feeh tashaabuh kbeer bainna.",
+			"wordAlignments": [
+				{
+					"arabic": "فيه",
+					"english": "There is",
+					"transliteration": "feeh"
+				},
+				{
+					"arabic": "تشابه",
+					"english": "similarity",
+					"transliteration": "tashaabuh"
+				},
+				{
+					"arabic": "كبير",
+					"english": "big",
+					"transliteration": "kbeer"
+				},
+				{
+					"arabic": "بينا.",
+					"english": "between us.",
+					"transliteration": "bainna."
+				}
+			],
+			"targetWords": [
+				"Similarity"
+			]
+		},
+		{
+			"arabic": "عيب! لا تقول كدا.",
+			"arabicTashkeel": "عيب! لا تِقول كِدا.",
+			"english": "Shameful! Don't say that.",
+			"transliteration": "3aib! la tigool kida.",
+			"wordAlignments": [
+				{
+					"arabic": "عيب!",
+					"english": "Shameful!",
+					"transliteration": "3aib!"
+				},
+				{
+					"arabic": "لا",
+					"english": "Don't",
+					"transliteration": "la"
+				},
+				{
+					"arabic": "تقول",
+					"english": "say",
+					"transliteration": "tigool"
+				},
+				{
+					"arabic": "كدا.",
+					"english": "so.",
+					"transliteration": "kida."
+				}
+			],
+			"targetWords": [
+				"Shameful (taboo)"
+			]
+		},
+		{
+			"arabic": "الأجانب كتير تجيهم صدمة ثقافية.",
+			"arabicTashkeel": "الأجانِب كِتير تِجيهُم صَدمة ثَقافية.",
+			"english": "Foreigners often have culture shock.",
+			"transliteration": "il-ajaanib kteer tijeehum sadma sagaafiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "الأجانب",
+					"english": "The foreigners",
+					"transliteration": "il-ajaanib"
+				},
+				{
+					"arabic": "كتير",
+					"english": "often",
+					"transliteration": "kteer"
+				},
+				{
+					"arabic": "تجيهم",
+					"english": "come to them",
+					"transliteration": "tijeehum"
+				},
+				{
+					"arabic": "صدمة",
+					"english": "a shock",
+					"transliteration": "sadma"
+				},
+				{
+					"arabic": "ثقافية.",
+					"english": "cultural.",
+					"transliteration": "sagaafiyya."
+				}
+			],
+			"targetWords": [
+				"Culture shock",
+				"Foreigner"
+			]
+		},
+		{
+			"arabic": "العادات الحجازية في الزواج.",
+			"arabicTashkeel": "العادات الحِجازية في الزَّواج.",
+			"english": "Hijazi customs at weddings.",
+			"transliteration": "il-3aadaat il-7ijaaziyya fi iz-zawaaj.",
+			"wordAlignments": [
+				{
+					"arabic": "العادات",
+					"english": "The customs",
+					"transliteration": "il-3aadaat"
+				},
+				{
+					"arabic": "الحجازية",
+					"english": "Hijazi",
+					"transliteration": "il-7ijaaziyya"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الزواج.",
+					"english": "the wedding.",
+					"transliteration": "iz-zawaaj."
+				}
+			],
+			"targetWords": [
+				"Customs"
+			]
+		},
+		{
+			"arabic": "الأجنبي تعلم عربي.",
+			"arabicTashkeel": "الأجنَبي تِعَلَّم عَرَبي.",
+			"english": "The foreigner learned Arabic.",
+			"transliteration": "il-ajnabi t3allam 3arabi.",
+			"wordAlignments": [
+				{
+					"arabic": "الأجنبي",
+					"english": "The foreigner",
+					"transliteration": "il-ajnabi"
+				},
+				{
+					"arabic": "تعلم",
+					"english": "learned",
+					"transliteration": "t3allam"
+				},
+				{
+					"arabic": "عربي.",
+					"english": "Arabic.",
+					"transliteration": "3arabi."
+				}
+			],
+			"targetWords": [
+				"Foreigner"
+			]
+		},
+		{
+			"arabic": "إحترام متبادل.",
+			"arabicTashkeel": "إحتِرام مُتَبادَل.",
+			"english": "Mutual respect.",
+			"transliteration": "i7tiraam mutabaadal.",
+			"wordAlignments": [
+				{
+					"arabic": "إحترام",
+					"english": "Respect",
+					"transliteration": "i7tiraam"
+				},
+				{
+					"arabic": "متبادل.",
+					"english": "mutual.",
+					"transliteration": "mutabaadal."
+				}
+			],
+			"targetWords": [
+				"Respect"
+			]
+		},
+		{
+			"arabic": "التحية الإسلامية السلام عليكم.",
+			"arabicTashkeel": "التَّحية الإسلامية السَّلام عَلَيكُم.",
+			"english": "The Islamic greeting is \"peace be upon you\".",
+			"transliteration": "it-ta7iyya il-islaamiyya is-salaam 3alaikum.",
+			"wordAlignments": [
+				{
+					"arabic": "التحية",
+					"english": "The greeting",
+					"transliteration": "it-ta7iyya"
+				},
+				{
+					"arabic": "الإسلامية",
+					"english": "Islamic is",
+					"transliteration": "il-islaamiyya"
+				},
+				{
+					"arabic": "السلام",
+					"english": "peace be",
+					"transliteration": "is-salaam"
+				},
+				{
+					"arabic": "عليكم.",
+					"english": "upon you.",
+					"transliteration": "3alaikum."
+				}
+			],
+			"targetWords": [
+				"Greeting"
+			]
+		},
+		{
+			"arabic": "الإلتزام بالمواعيد في الشغل مهم.",
+			"arabicTashkeel": "الإلتِزام بالمَواعيد في الشُّغل مُهِم.",
+			"english": "Punctuality at work is important.",
+			"transliteration": "il-iltizaam bil-mawaa3eed fi ish-shughl muhimm.",
+			"wordAlignments": [
+				{
+					"arabic": "الإلتزام",
+					"english": "The commitment",
+					"transliteration": "il-iltizaam"
+				},
+				{
+					"arabic": "بالمواعيد",
+					"english": "to the times",
+					"transliteration": "bil-mawaa3eed"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الشغل",
+					"english": "the work is",
+					"transliteration": "ish-shughl"
+				},
+				{
+					"arabic": "مهم.",
+					"english": "important.",
+					"transliteration": "muhimm."
+				}
+			],
+			"targetWords": [
+				"Punctuality"
+			]
+		},
+		{
+			"arabic": "هوا صريح، وفيه ناس ما يحبوا كدا.",
+			"arabicTashkeel": "هوّا صَريح، وفيه ناس ما يِحِبّوا كِدا.",
+			"english": "He's direct, and some people don't like that.",
+			"transliteration": "huwwa saree7, w-feeh naas ma yi7ibbu kida.",
+			"wordAlignments": [
+				{
+					"arabic": "هوا",
+					"english": "He is",
+					"transliteration": "huwwa"
+				},
+				{
+					"arabic": "صريح،",
+					"english": "direct,",
+					"transliteration": "saree7,"
+				},
+				{
+					"arabic": "وفيه",
+					"english": "and there are",
+					"transliteration": "w-feeh"
+				},
+				{
+					"arabic": "ناس",
+					"english": "people",
+					"transliteration": "naas"
+				},
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "يحبوا",
+					"english": "like",
+					"transliteration": "yi7ibbu"
+				},
+				{
+					"arabic": "كدا.",
+					"english": "so.",
+					"transliteration": "kida."
+				}
+			],
+			"targetWords": [
+				"Direct (blunt)"
+			]
+		},
+		{
+			"arabic": "طريقة مؤدبة للرفض.",
+			"arabicTashkeel": "طَريقة مُؤَدَّبة لِلرَّفض.",
+			"english": "A polite way to refuse.",
+			"transliteration": "tareega mu2addaba lir-rafdh.",
+			"wordAlignments": [
+				{
+					"arabic": "طريقة",
+					"english": "A way",
+					"transliteration": "tareega"
+				},
+				{
+					"arabic": "مؤدبة",
+					"english": "polite",
+					"transliteration": "mu2addaba"
+				},
+				{
+					"arabic": "للرفض.",
+					"english": "for the refusal.",
+					"transliteration": "lir-rafdh."
+				}
+			],
+			"targetWords": [
+				"Polite"
+			]
+		},
+		{
+			"arabic": "غريبة!",
+			"arabicTashkeel": "غَريبة!",
+			"english": "That's strange!",
+			"transliteration": "ghareeba!",
+			"wordAlignments": [
+				{
+					"arabic": "غريبة!",
+					"english": "Strange!",
+					"transliteration": "ghareeba!"
+				}
+			],
+			"targetWords": [
+				"Strange"
+			]
+		},
+		{
+			"arabic": "العيال يتأقلموا أسرع.",
+			"arabicTashkeel": "العِيال يِتأقلَموا أسرَع.",
+			"english": "The children adapt faster.",
+			"transliteration": "il-3iyaal yit2aglamu asra3.",
+			"wordAlignments": [
+				{
+					"arabic": "العيال",
+					"english": "The kids",
+					"transliteration": "il-3iyaal"
+				},
+				{
+					"arabic": "يتأقلموا",
+					"english": "adapt",
+					"transliteration": "yit2aglamu"
+				},
+				{
+					"arabic": "أسرع.",
+					"english": "faster.",
+					"transliteration": "asra3."
+				}
+			],
+			"targetWords": [
+				"He adapts"
+			]
+		},
+		{
+			"arabic": "مقيمين من دول كتير.",
+			"arabicTashkeel": "مُقيمين مِن دُوَل كِتير.",
+			"english": "Residents from many countries.",
+			"transliteration": "mugeemeen min duwal kteer.",
+			"wordAlignments": [
+				{
+					"arabic": "مقيمين",
+					"english": "Residents",
+					"transliteration": "mugeemeen"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "دول",
+					"english": "countries",
+					"transliteration": "duwal"
+				},
+				{
+					"arabic": "كتير.",
+					"english": "many.",
+					"transliteration": "kteer."
+				}
+			],
+			"targetWords": [
+				"Expatriate (in Saudi)"
+			]
+		},
+		{
+			"arabic": "قارن الأسعار قبل ما تشتري.",
+			"arabicTashkeel": "قارِن الأسعار قَبل ما تِشتِري.",
+			"english": "Compare the prices before you buy.",
+			"transliteration": "gaarin il-as3aar gabl ma tishtiri.",
+			"wordAlignments": [
+				{
+					"arabic": "قارن",
+					"english": "Compare",
+					"transliteration": "gaarin"
+				},
+				{
+					"arabic": "الأسعار",
+					"english": "the prices",
+					"transliteration": "il-as3aar"
+				},
+				{
+					"arabic": "قبل",
+					"english": "before",
+					"transliteration": "gabl"
+				},
+				{
+					"arabic": "ما",
+					"english": "that",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "تشتري.",
+					"english": "you buy.",
+					"transliteration": "tishtiri."
+				}
+			],
+			"targetWords": [
+				"He compares"
+			]
+		},
+		{
+			"arabic": "فرق التوقيت خمس ساعات.",
+			"arabicTashkeel": "فَرق التَّوقيت خَمس ساعات.",
+			"english": "The time difference is five hours.",
+			"transliteration": "farg it-tawgeet khams saa3aat.",
+			"wordAlignments": [
+				{
+					"arabic": "فرق",
+					"english": "The difference of",
+					"transliteration": "farg"
+				},
+				{
+					"arabic": "التوقيت",
+					"english": "the time is",
+					"transliteration": "it-tawgeet"
+				},
+				{
+					"arabic": "خمس",
+					"english": "five",
+					"transliteration": "khams"
+				},
+				{
+					"arabic": "ساعات.",
+					"english": "hours.",
+					"transliteration": "saa3aat."
+				}
+			],
+			"targetWords": [
+				"Difference"
+			]
+		},
+		{
+			"arabic": "فيه تشابه في الأكل كمان.",
+			"arabicTashkeel": "فيه تَشابُه في الأكل كَمان.",
+			"english": "There's a similarity in the food too.",
+			"transliteration": "feeh tashaabuh fi il-akl kamaan.",
+			"wordAlignments": [
+				{
+					"arabic": "فيه",
+					"english": "There is",
+					"transliteration": "feeh"
+				},
+				{
+					"arabic": "تشابه",
+					"english": "similarity",
+					"transliteration": "tashaabuh"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الأكل",
+					"english": "the food",
+					"transliteration": "il-akl"
+				},
+				{
+					"arabic": "كمان.",
+					"english": "too.",
+					"transliteration": "kamaan."
+				}
+			],
+			"targetWords": [
+				"Similarity"
+			]
+		},
+		{
+			"arabic": "دا عيب هنا؟",
+			"arabicTashkeel": "دا عيب هِنا؟",
+			"english": "Is that shameful here?",
+			"transliteration": "da 3aib hina?",
+			"wordAlignments": [
+				{
+					"arabic": "دا",
+					"english": "Is this",
+					"transliteration": "da"
+				},
+				{
+					"arabic": "عيب",
+					"english": "shameful",
+					"transliteration": "3aib"
+				},
+				{
+					"arabic": "هنا؟",
+					"english": "here?",
+					"transliteration": "hina?"
+				}
+			],
+			"targetWords": [
+				"Shameful (taboo)"
+			]
+		},
+		{
+			"arabic": "كيف تتعامل مع الصدمة الثقافية؟",
+			"arabicTashkeel": "كيف تِتعامَل مَعَ الصَّدمة الثَّقافية؟",
+			"english": "How do you deal with culture shock?",
+			"transliteration": "kaif tit3aamal ma3a is-sadma is-sagaafiyya?",
+			"wordAlignments": [
+				{
+					"arabic": "كيف",
+					"english": "How",
+					"transliteration": "kaif"
+				},
+				{
+					"arabic": "تتعامل",
+					"english": "do you deal",
+					"transliteration": "tit3aamal"
+				},
+				{
+					"arabic": "مع",
+					"english": "with",
+					"transliteration": "ma3a"
+				},
+				{
+					"arabic": "الصدمة",
+					"english": "the shock",
+					"transliteration": "is-sadma"
+				},
+				{
+					"arabic": "الثقافية؟",
+					"english": "cultural?",
+					"transliteration": "is-sagaafiyya?"
+				}
+			],
+			"targetWords": [
+				"Culture shock"
+			]
+		},
+		{
+			"arabic": "العادات القديمة تختفي.",
+			"arabicTashkeel": "العادات القَديمة تِختِفي.",
+			"english": "Old customs disappear.",
+			"transliteration": "il-3aadaat il-gadeema tikhtifi.",
+			"wordAlignments": [
+				{
+					"arabic": "العادات",
+					"english": "The customs",
+					"transliteration": "il-3aadaat"
+				},
+				{
+					"arabic": "القديمة",
+					"english": "old",
+					"transliteration": "il-gadeema"
+				},
+				{
+					"arabic": "تختفي.",
+					"english": "disappear.",
+					"transliteration": "tikhtifi."
+				}
+			],
+			"targetWords": [
+				"Customs"
+			]
+		},
+		{
+			"arabic": "أحس إني أجنبي في مدينتي.",
+			"arabicTashkeel": "أحِس إنّي أجنَبي في مَدينتي.",
+			"english": "I feel like a foreigner in my own city.",
+			"transliteration": "a7iss inni ajnabi fi madeenati.",
+			"wordAlignments": [
+				{
+					"arabic": "أحس",
+					"english": "I feel",
+					"transliteration": "a7iss"
+				},
+				{
+					"arabic": "إني",
+					"english": "that I am",
+					"transliteration": "inni"
+				},
+				{
+					"arabic": "أجنبي",
+					"english": "a foreigner",
+					"transliteration": "ajnabi"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "مدينتي.",
+					"english": "my city.",
+					"transliteration": "madeenati."
+				}
+			],
+			"targetWords": [
+				"Foreigner"
+			]
+		},
+		{
+			"arabic": "الإلتزام بالمواعيد إحترام للناس.",
+			"arabicTashkeel": "الإلتِزام بالمَواعيد إحتِرام لِلنّاس.",
+			"english": "Respect the time of others.",
+			"transliteration": "il-iltizaam bil-mawaa3eed i7tiraam lin-naas.",
+			"wordAlignments": [
+				{
+					"arabic": "الإلتزام",
+					"english": "The commitment",
+					"transliteration": "il-iltizaam"
+				},
+				{
+					"arabic": "بالمواعيد",
+					"english": "to the times is",
+					"transliteration": "bil-mawaa3eed"
+				},
+				{
+					"arabic": "إحترام",
+					"english": "respect",
+					"transliteration": "i7tiraam"
+				},
+				{
+					"arabic": "للناس.",
+					"english": "for the people.",
+					"transliteration": "lin-naas."
+				}
+			],
+			"targetWords": [
+				"Respect",
+				"Punctuality"
+			]
+		},
+		{
+			"arabic": "تحية حارة.",
+			"arabicTashkeel": "تَحية حارّة.",
+			"english": "A warm greeting.",
+			"transliteration": "ta7iyya 7aarra.",
+			"wordAlignments": [
+				{
+					"arabic": "تحية",
+					"english": "A greeting",
+					"transliteration": "ta7iyya"
+				},
+				{
+					"arabic": "حارة.",
+					"english": "warm.",
+					"transliteration": "7aarra."
+				}
+			],
+			"targetWords": [
+				"Greeting"
+			]
+		},
+		{
+			"arabic": "السعوديين مؤدبين مع الضيوف.",
+			"arabicTashkeel": "السُّعوديين مُؤَدَّبين مَعَ الضُّيوف.",
+			"english": "Saudis are polite with guests.",
+			"transliteration": "is-su3oodiyyeen mu2addabeen ma3a idh-dhuyoof.",
+			"wordAlignments": [
+				{
+					"arabic": "السعوديين",
+					"english": "The Saudis are",
+					"transliteration": "is-su3oodiyyeen"
+				},
+				{
+					"arabic": "مؤدبين",
+					"english": "polite",
+					"transliteration": "mu2addabeen"
+				},
+				{
+					"arabic": "مع",
+					"english": "with",
+					"transliteration": "ma3a"
+				},
+				{
+					"arabic": "الضيوف.",
+					"english": "the guests.",
+					"transliteration": "idh-dhuyoof."
+				}
+			],
+			"targetWords": [
+				"Polite"
+			]
+		},
+		{
+			"arabic": "إحساس غريب.",
+			"arabicTashkeel": "إحساس غَريب.",
+			"english": "A strange feeling.",
+			"transliteration": "i7saas ghareeb.",
+			"wordAlignments": [
+				{
+					"arabic": "إحساس",
+					"english": "A feeling",
+					"transliteration": "i7saas"
+				},
+				{
+					"arabic": "غريب.",
+					"english": "strange.",
+					"transliteration": "ghareeb."
+				}
+			],
+			"targetWords": [
+				"Strange"
+			]
+		},
+		{
+			"arabic": "كم أخدت لين اتأقلمت؟",
+			"arabicTashkeel": "كَم أخَدت لِين اِتأقلَمت؟",
+			"english": "How long did it take you to adapt?",
+			"transliteration": "kam akhadt lain it2aglamt?",
+			"wordAlignments": [
+				{
+					"arabic": "كم",
+					"english": "How much",
+					"transliteration": "kam"
+				},
+				{
+					"arabic": "أخدت",
+					"english": "did you take",
+					"transliteration": "akhadt"
+				},
+				{
+					"arabic": "لين",
+					"english": "until",
+					"transliteration": "lain"
+				},
+				{
+					"arabic": "اتأقلمت؟",
+					"english": "you adapted?",
+					"transliteration": "it2aglamt?"
+				}
+			],
+			"targetWords": [
+				"He adapts"
+			]
+		},
+		{
+			"arabic": "لا تقارن بين البلدين.",
+			"arabicTashkeel": "لا تِقارِن بين البَلَدين.",
+			"english": "Don't compare the two countries.",
+			"transliteration": "la tigaarin bain il-baladain.",
+			"wordAlignments": [
+				{
+					"arabic": "لا",
+					"english": "Don't",
+					"transliteration": "la"
+				},
+				{
+					"arabic": "تقارن",
+					"english": "compare",
+					"transliteration": "tigaarin"
+				},
+				{
+					"arabic": "بين",
+					"english": "between",
+					"transliteration": "bain"
+				},
+				{
+					"arabic": "البلدين.",
+					"english": "the two countries.",
+					"transliteration": "il-baladain."
+				}
+			],
+			"targetWords": [
+				"He compares"
+			]
+		},
+		{
+			"arabic": "ما فيه فرق كبير.",
+			"arabicTashkeel": "ما فيه فَرق كبير.",
+			"english": "There's no big difference.",
+			"transliteration": "ma feeh farg kbeer.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "فيه",
+					"english": "there is",
+					"transliteration": "feeh"
+				},
+				{
+					"arabic": "فرق",
+					"english": "a difference",
+					"transliteration": "farg"
+				},
+				{
+					"arabic": "كبير.",
+					"english": "big.",
+					"transliteration": "kbeer."
+				}
+			],
+			"targetWords": [
+				"Difference"
+			]
+		},
+		{
+			"arabic": "عيب في ثقافتنا.",
+			"arabicTashkeel": "عيب في ثَقافتنا.",
+			"english": "Shameful in our culture.",
+			"transliteration": "3aib fi sagaafatna.",
+			"wordAlignments": [
+				{
+					"arabic": "عيب",
+					"english": "Shameful",
+					"transliteration": "3aib"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "ثقافتنا.",
+					"english": "our culture.",
+					"transliteration": "sagaafatna."
+				}
+			],
+			"targetWords": [
+				"Shameful (taboo)"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "My First Year in Jeddah",
+			"sentences": [
+				{
+					"arabic": "لما وصلت جدة كمقيم، جاتني صدمة ثقافية صغيرة.",
+					"arabicTashkeel": "لَمّا وَصَلت جِدّة كَمُقيم، جاتني صَدمة ثَقافية صُغَيَّرة.",
+					"english": "When I arrived in Jeddah as an expatriate, I had a small culture shock.",
+					"transliteration": "lamma wasalt jidda ka-mugeem, jaatni sadma sagaafiyya sughayyara.",
+					"wordAlignments": [
+						{
+							"arabic": "لما",
+							"english": "When",
+							"transliteration": "lamma"
+						},
+						{
+							"arabic": "وصلت",
+							"english": "I arrived",
+							"transliteration": "wasalt"
+						},
+						{
+							"arabic": "جدة",
+							"english": "Jeddah",
+							"transliteration": "jidda"
+						},
+						{
+							"arabic": "كمقيم،",
+							"english": "as a resident,",
+							"transliteration": "ka-mugeem,"
+						},
+						{
+							"arabic": "جاتني",
+							"english": "came to me",
+							"transliteration": "jaatni"
+						},
+						{
+							"arabic": "صدمة",
+							"english": "a shock",
+							"transliteration": "sadma"
+						},
+						{
+							"arabic": "ثقافية",
+							"english": "cultural",
+							"transliteration": "sagaafiyya"
+						},
+						{
+							"arabic": "صغيرة.",
+							"english": "small.",
+							"transliteration": "sughayyara."
+						}
+					]
+				},
+				{
+					"arabic": "التحيات كانت طويلة، والإلتزام بالمواعيد كان مختلف.",
+					"arabicTashkeel": "التَّحيات كانَت طَويلة، والإلتِزام بالمَواعيد كان مُختَلِف.",
+					"english": "The greetings were long, and punctuality was different.",
+					"transliteration": "it-ta7iyyaat kaanat taweela, w-il-iltizaam bil-mawaa3eed kaan mukhtalif.",
+					"wordAlignments": [
+						{
+							"arabic": "التحيات",
+							"english": "The greetings",
+							"transliteration": "it-ta7iyyaat"
+						},
+						{
+							"arabic": "كانت",
+							"english": "were",
+							"transliteration": "kaanat"
+						},
+						{
+							"arabic": "طويلة،",
+							"english": "long,",
+							"transliteration": "taweela,"
+						},
+						{
+							"arabic": "والإلتزام",
+							"english": "and the commitment",
+							"transliteration": "w-il-iltizaam"
+						},
+						{
+							"arabic": "بالمواعيد",
+							"english": "to the times",
+							"transliteration": "bil-mawaa3eed"
+						},
+						{
+							"arabic": "كان",
+							"english": "was",
+							"transliteration": "kaan"
+						},
+						{
+							"arabic": "مختلف.",
+							"english": "different.",
+							"transliteration": "mukhtalif."
+						}
+					]
+				},
+				{
+					"arabic": "تعلمت إن فيه أشيا عيب، زي إنك تمد رجلك في وش أحد.",
+					"arabicTashkeel": "تِعَلَّمت إنّ فيه أشيا عيب، زَي إنَّك تِمِد رِجلَك في وِش أحَد.",
+					"english": "I learned that some things are shameful, like pointing the soles of your feet at someone.",
+					"transliteration": "t3allamt inn feeh ashya 3aib, zay innak timidd rijlak fi wish a7ad.",
+					"wordAlignments": [
+						{
+							"arabic": "تعلمت",
+							"english": "I learned",
+							"transliteration": "t3allamt"
+						},
+						{
+							"arabic": "إن",
+							"english": "that",
+							"transliteration": "inn"
+						},
+						{
+							"arabic": "فيه",
+							"english": "there are",
+							"transliteration": "feeh"
+						},
+						{
+							"arabic": "أشيا",
+							"english": "things",
+							"transliteration": "ashya"
+						},
+						{
+							"arabic": "عيب،",
+							"english": "shameful,",
+							"transliteration": "3aib,"
+						},
+						{
+							"arabic": "زي",
+							"english": "like",
+							"transliteration": "zay"
+						},
+						{
+							"arabic": "إنك",
+							"english": "that you",
+							"transliteration": "innak"
+						},
+						{
+							"arabic": "تمد",
+							"english": "stretch",
+							"transliteration": "timidd"
+						},
+						{
+							"arabic": "رجلك",
+							"english": "your foot",
+							"transliteration": "rijlak"
+						},
+						{
+							"arabic": "في",
+							"english": "in",
+							"transliteration": "fi"
+						},
+						{
+							"arabic": "وش",
+							"english": "the face of",
+							"transliteration": "wish"
+						},
+						{
+							"arabic": "أحد.",
+							"english": "someone.",
+							"transliteration": "a7ad."
+						}
+					]
+				},
+				{
+					"arabic": "بس مع الوقت اتأقلمت، ولقيت تشابه كبير مع ثقافتي.",
+					"arabicTashkeel": "بَس مَعَ الوَقت اِتأقلَمت، ولَقيت تَشابُه كبير مَعَ ثَقافتي.",
+					"english": "But with time I adapted, and I found many similarities with my culture.",
+					"transliteration": "bas ma3a il-wagt it2aglamt, w-lageet tashaabuh kbeer ma3a sagaafati.",
+					"wordAlignments": [
+						{
+							"arabic": "بس",
+							"english": "But",
+							"transliteration": "bas"
+						},
+						{
+							"arabic": "مع",
+							"english": "with",
+							"transliteration": "ma3a"
+						},
+						{
+							"arabic": "الوقت",
+							"english": "the time",
+							"transliteration": "il-wagt"
+						},
+						{
+							"arabic": "اتأقلمت،",
+							"english": "I adapted,",
+							"transliteration": "it2aglamt,"
+						},
+						{
+							"arabic": "ولقيت",
+							"english": "and I found",
+							"transliteration": "w-lageet"
+						},
+						{
+							"arabic": "تشابه",
+							"english": "similarity",
+							"transliteration": "tashaabuh"
+						},
+						{
+							"arabic": "كبير",
+							"english": "big",
+							"transliteration": "kbeer"
+						},
+						{
+							"arabic": "مع",
+							"english": "with",
+							"transliteration": "ma3a"
+						},
+						{
+							"arabic": "ثقافتي.",
+							"english": "my culture.",
+							"transliteration": "sagaafati."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "Comparing Cultures",
+			"sentences": [
+				{
+					"arabic": "أنا دايما أقارن جدة بمدينتي.",
+					"arabicTashkeel": "أنا دايماً أقارِن جِدّة بِمَدينتي.",
+					"english": "I always compare Jeddah with my city.",
+					"transliteration": "ana daayman agaarin jidda bi-madeenati.",
+					"wordAlignments": [
+						{
+							"arabic": "أنا",
+							"english": "I",
+							"transliteration": "ana"
+						},
+						{
+							"arabic": "دايما",
+							"english": "always",
+							"transliteration": "daayman"
+						},
+						{
+							"arabic": "أقارن",
+							"english": "compare",
+							"transliteration": "agaarin"
+						},
+						{
+							"arabic": "جدة",
+							"english": "Jeddah",
+							"transliteration": "jidda"
+						},
+						{
+							"arabic": "بمدينتي.",
+							"english": "with my city.",
+							"transliteration": "bi-madeenati."
+						}
+					]
+				},
+				{
+					"arabic": "أكبر فرق الجو، بس إحترام العيلة نفس الشي.",
+					"arabicTashkeel": "أكبَر فَرق الجَو، بَس إحتِرام العيلة نَفس الشّي.",
+					"english": "The biggest difference is the weather, but the respect for family is the same.",
+					"transliteration": "akbar farg ij-jaw, bas i7tiraam il-3eela nafs ish-shay.",
+					"wordAlignments": [
+						{
+							"arabic": "أكبر",
+							"english": "The biggest",
+							"transliteration": "akbar"
+						},
+						{
+							"arabic": "فرق",
+							"english": "difference is",
+							"transliteration": "farg"
+						},
+						{
+							"arabic": "الجو،",
+							"english": "the weather,",
+							"transliteration": "ij-jaw,"
+						},
+						{
+							"arabic": "بس",
+							"english": "but",
+							"transliteration": "bas"
+						},
+						{
+							"arabic": "إحترام",
+							"english": "the respect of",
+							"transliteration": "i7tiraam"
+						},
+						{
+							"arabic": "العيلة",
+							"english": "the family is",
+							"transliteration": "il-3eela"
+						},
+						{
+							"arabic": "نفس",
+							"english": "the same",
+							"transliteration": "nafs"
+						},
+						{
+							"arabic": "الشي.",
+							"english": "thing.",
+							"transliteration": "ish-shay."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student, a newly arrived expatriate in Jeddah, asks a Jeddawi colleague about local customs before attending a family gathering for the first time.",
+		"studentRole": "A new expatriate learning Saudi (Hijazi) Arabic.",
+		"otherRole": "The Jeddawi colleague, who explains what is polite and what is shameful.",
+		"goalEnglish": "Ask about greetings, punctuality and taboos, describe your own culture, and compare the similarities and differences.",
+		"targetWords": [
+			"Customs",
+			"Greeting",
+			"Respect",
+			"Shameful (taboo)",
+			"Culture shock",
+			"Difference",
+			"Similarity",
+			"He adapts"
+		]
+	}
+}
