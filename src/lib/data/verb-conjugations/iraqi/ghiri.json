@@ -1,0 +1,318 @@
+{
+  "slug": "ghiri",
+  "arabic": "غرق",
+  "transliteration": "ghirag",
+  "english": "to sink",
+  "wordId": null,
+  "rootLetters": "غ ر ق",
+  "verbClass": "sound",
+  "notes": "Past ghirag, present aghrag (I sink).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "غرقت",
+          "transliteration": "ghiragit",
+          "english": "I sank"
+        },
+        {
+          "person": "enta",
+          "arabic": "غرقت",
+          "transliteration": "ghiragit",
+          "english": "you (m) sank"
+        },
+        {
+          "person": "enti",
+          "arabic": "غرقتي",
+          "transliteration": "ghiragti",
+          "english": "you (f) sank"
+        },
+        {
+          "person": "howa",
+          "arabic": "غرق",
+          "transliteration": "ghirag",
+          "english": "he sank"
+        },
+        {
+          "person": "heya",
+          "arabic": "غرقت",
+          "transliteration": "ghirgat",
+          "english": "she sank"
+        },
+        {
+          "person": "ehna",
+          "arabic": "غرقنا",
+          "transliteration": "ghiragna",
+          "english": "we sank"
+        },
+        {
+          "person": "entu",
+          "arabic": "غرقتوا",
+          "transliteration": "ghiragtu",
+          "english": "you (pl) sank"
+        },
+        {
+          "person": "homma",
+          "arabic": "غرقوا",
+          "transliteration": "ghirgaw",
+          "english": "they sank"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما غرقت",
+          "transliteration": "ma ghiragit",
+          "english": "I didn't sink"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما غرقت",
+          "transliteration": "ma ghiragit",
+          "english": "you (m) didn't sink"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما غرقتي",
+          "transliteration": "ma ghiragti",
+          "english": "you (f) didn't sink"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما غرق",
+          "transliteration": "ma ghirag",
+          "english": "he didn't sink"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما غرقت",
+          "transliteration": "ma ghirgat",
+          "english": "she didn't sink"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما غرقنا",
+          "transliteration": "ma ghiragna",
+          "english": "we didn't sink"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما غرقتوا",
+          "transliteration": "ma ghiragtu",
+          "english": "you (pl) didn't sink"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما غرقوا",
+          "transliteration": "ma ghirgaw",
+          "english": "they didn't sink"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "اغرق",
+          "transliteration": "aghrag",
+          "english": "I sink"
+        },
+        {
+          "person": "enta",
+          "arabic": "تغرق",
+          "transliteration": "tighrag",
+          "english": "you (m) sink"
+        },
+        {
+          "person": "enti",
+          "arabic": "تغرقين",
+          "transliteration": "tighrageen",
+          "english": "you (f) sink"
+        },
+        {
+          "person": "howa",
+          "arabic": "يغرق",
+          "transliteration": "yighrag",
+          "english": "he sinks"
+        },
+        {
+          "person": "heya",
+          "arabic": "تغرق",
+          "transliteration": "tighrag",
+          "english": "she sinks"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نغرق",
+          "transliteration": "nighrag",
+          "english": "we sink"
+        },
+        {
+          "person": "entu",
+          "arabic": "تغرقون",
+          "transliteration": "tighragoon",
+          "english": "you (pl) sink"
+        },
+        {
+          "person": "homma",
+          "arabic": "يغرقون",
+          "transliteration": "yighragoon",
+          "english": "they sink"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما اغرق",
+          "transliteration": "ma aghrag",
+          "english": "I don't sink"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما تغرق",
+          "transliteration": "ma tighrag",
+          "english": "you (m) don't sink"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما تغرقين",
+          "transliteration": "ma tighrageen",
+          "english": "you (f) don't sink"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما يغرق",
+          "transliteration": "ma yighrag",
+          "english": "he doesn't sink"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما تغرق",
+          "transliteration": "ma tighrag",
+          "english": "she doesn't sink"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما نغرق",
+          "transliteration": "ma nighrag",
+          "english": "we don't sink"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما تغرقون",
+          "transliteration": "ma tighragoon",
+          "english": "you (pl) don't sink"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما يغرقون",
+          "transliteration": "ma yighragoon",
+          "english": "they don't sink"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "راح اغرق",
+          "transliteration": "raa7 aghrag",
+          "english": "I will sink"
+        },
+        {
+          "person": "enta",
+          "arabic": "راح تغرق",
+          "transliteration": "raa7 tighrag",
+          "english": "you (m) will sink"
+        },
+        {
+          "person": "enti",
+          "arabic": "راح تغرقين",
+          "transliteration": "raa7 tighrageen",
+          "english": "you (f) will sink"
+        },
+        {
+          "person": "howa",
+          "arabic": "راح يغرق",
+          "transliteration": "raa7 yighrag",
+          "english": "he will sink"
+        },
+        {
+          "person": "heya",
+          "arabic": "راح تغرق",
+          "transliteration": "raa7 tighrag",
+          "english": "she will sink"
+        },
+        {
+          "person": "ehna",
+          "arabic": "راح نغرق",
+          "transliteration": "raa7 nighrag",
+          "english": "we will sink"
+        },
+        {
+          "person": "entu",
+          "arabic": "راح تغرقون",
+          "transliteration": "raa7 tighragoon",
+          "english": "you (pl) will sink"
+        },
+        {
+          "person": "homma",
+          "arabic": "راح يغرقون",
+          "transliteration": "raa7 yighragoon",
+          "english": "they will sink"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما راح اغرق",
+          "transliteration": "ma raa7 aghrag",
+          "english": "I won't sink"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما راح تغرق",
+          "transliteration": "ma raa7 tighrag",
+          "english": "you (m) won't sink"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما راح تغرقين",
+          "transliteration": "ma raa7 tighrageen",
+          "english": "you (f) won't sink"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما راح يغرق",
+          "transliteration": "ma raa7 yighrag",
+          "english": "he won't sink"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما راح تغرق",
+          "transliteration": "ma raa7 tighrag",
+          "english": "she won't sink"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما راح نغرق",
+          "transliteration": "ma raa7 nighrag",
+          "english": "we won't sink"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما راح تغرقون",
+          "transliteration": "ma raa7 tighragoon",
+          "english": "you (pl) won't sink"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما راح يغرقون",
+          "transliteration": "ma raa7 yighragoon",
+          "english": "they won't sink"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,318 @@
+{
+  "slug": "wi-i3",
+  "arabic": "وقع",
+  "transliteration": "wiga3",
+  "english": "to fall",
+  "wordId": null,
+  "rootLetters": "و ق ع",
+  "verbClass": "sound",
+  "notes": "Past wiga3, present awga3 (I fall).",
+  "conjugations": {
+    "past": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "وقعت",
+          "transliteration": "wiga3it",
+          "english": "I fell"
+        },
+        {
+          "person": "enta",
+          "arabic": "وقعت",
+          "transliteration": "wiga3it",
+          "english": "you (m) fell"
+        },
+        {
+          "person": "enti",
+          "arabic": "وقعتي",
+          "transliteration": "wiga3ti",
+          "english": "you (f) fell"
+        },
+        {
+          "person": "howa",
+          "arabic": "وقع",
+          "transliteration": "wiga3",
+          "english": "he fell"
+        },
+        {
+          "person": "heya",
+          "arabic": "وقعت",
+          "transliteration": "wig3at",
+          "english": "she fell"
+        },
+        {
+          "person": "ehna",
+          "arabic": "وقعنا",
+          "transliteration": "wiga3na",
+          "english": "we fell"
+        },
+        {
+          "person": "entu",
+          "arabic": "وقعتوا",
+          "transliteration": "wiga3tu",
+          "english": "you (pl) fell"
+        },
+        {
+          "person": "homma",
+          "arabic": "وقعوا",
+          "transliteration": "wig3aw",
+          "english": "they fell"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما وقعت",
+          "transliteration": "ma wiga3it",
+          "english": "I didn't fall"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما وقعت",
+          "transliteration": "ma wiga3it",
+          "english": "you (m) didn't fall"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما وقعتي",
+          "transliteration": "ma wiga3ti",
+          "english": "you (f) didn't fall"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما وقع",
+          "transliteration": "ma wiga3",
+          "english": "he didn't fall"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما وقعت",
+          "transliteration": "ma wig3at",
+          "english": "she didn't fall"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما وقعنا",
+          "transliteration": "ma wiga3na",
+          "english": "we didn't fall"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما وقعتوا",
+          "transliteration": "ma wiga3tu",
+          "english": "you (pl) didn't fall"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما وقعوا",
+          "transliteration": "ma wig3aw",
+          "english": "they didn't fall"
+        }
+      ]
+    },
+    "present": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "اوقع",
+          "transliteration": "awga3",
+          "english": "I fall"
+        },
+        {
+          "person": "enta",
+          "arabic": "توقع",
+          "transliteration": "tooga3",
+          "english": "you (m) fall"
+        },
+        {
+          "person": "enti",
+          "arabic": "توقعين",
+          "transliteration": "toog3een",
+          "english": "you (f) fall"
+        },
+        {
+          "person": "howa",
+          "arabic": "يوقع",
+          "transliteration": "yooga3",
+          "english": "he falls"
+        },
+        {
+          "person": "heya",
+          "arabic": "توقع",
+          "transliteration": "tooga3",
+          "english": "she falls"
+        },
+        {
+          "person": "ehna",
+          "arabic": "نوقع",
+          "transliteration": "nooga3",
+          "english": "we fall"
+        },
+        {
+          "person": "entu",
+          "arabic": "توقعون",
+          "transliteration": "toog3oon",
+          "english": "you (pl) fall"
+        },
+        {
+          "person": "homma",
+          "arabic": "يوقعون",
+          "transliteration": "yoog3oon",
+          "english": "they fall"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما اوقع",
+          "transliteration": "ma awga3",
+          "english": "I don't fall"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما توقع",
+          "transliteration": "ma tooga3",
+          "english": "you (m) don't fall"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما توقعين",
+          "transliteration": "ma toog3een",
+          "english": "you (f) don't fall"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما يوقع",
+          "transliteration": "ma yooga3",
+          "english": "he doesn't fall"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما توقع",
+          "transliteration": "ma tooga3",
+          "english": "she doesn't fall"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما نوقع",
+          "transliteration": "ma nooga3",
+          "english": "we don't fall"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما توقعون",
+          "transliteration": "ma toog3oon",
+          "english": "you (pl) don't fall"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما يوقعون",
+          "transliteration": "ma yoog3oon",
+          "english": "they don't fall"
+        }
+      ]
+    },
+    "future": {
+      "affirmative": [
+        {
+          "person": "ana",
+          "arabic": "راح اوقع",
+          "transliteration": "raa7 awga3",
+          "english": "I will fall"
+        },
+        {
+          "person": "enta",
+          "arabic": "راح توقع",
+          "transliteration": "raa7 tooga3",
+          "english": "you (m) will fall"
+        },
+        {
+          "person": "enti",
+          "arabic": "راح توقعين",
+          "transliteration": "raa7 toog3een",
+          "english": "you (f) will fall"
+        },
+        {
+          "person": "howa",
+          "arabic": "راح يوقع",
+          "transliteration": "raa7 yooga3",
+          "english": "he will fall"
+        },
+        {
+          "person": "heya",
+          "arabic": "راح توقع",
+          "transliteration": "raa7 tooga3",
+          "english": "she will fall"
+        },
+        {
+          "person": "ehna",
+          "arabic": "راح نوقع",
+          "transliteration": "raa7 nooga3",
+          "english": "we will fall"
+        },
+        {
+          "person": "entu",
+          "arabic": "راح توقعون",
+          "transliteration": "raa7 toog3oon",
+          "english": "you (pl) will fall"
+        },
+        {
+          "person": "homma",
+          "arabic": "راح يوقعون",
+          "transliteration": "raa7 yoog3oon",
+          "english": "they will fall"
+        }
+      ],
+      "negative": [
+        {
+          "person": "ana",
+          "arabic": "ما راح اوقع",
+          "transliteration": "ma raa7 awga3",
+          "english": "I won't fall"
+        },
+        {
+          "person": "enta",
+          "arabic": "ما راح توقع",
+          "transliteration": "ma raa7 tooga3",
+          "english": "you (m) won't fall"
+        },
+        {
+          "person": "enti",
+          "arabic": "ما راح توقعين",
+          "transliteration": "ma raa7 toog3een",
+          "english": "you (f) won't fall"
+        },
+        {
+          "person": "howa",
+          "arabic": "ما راح يوقع",
+          "transliteration": "ma raa7 yooga3",
+          "english": "he won't fall"
+        },
+        {
+          "person": "heya",
+          "arabic": "ما راح توقع",
+          "transliteration": "ma raa7 tooga3",
+          "english": "she won't fall"
+        },
+        {
+          "person": "ehna",
+          "arabic": "ما راح نوقع",
+          "transliteration": "ma raa7 nooga3",
+          "english": "we won't fall"
+        },
+        {
+          "person": "entu",
+          "arabic": "ما راح توقعون",
+          "transliteration": "ma raa7 toog3oon",
+          "english": "you (pl) won't fall"
+        },
+        {
+          "person": "homma",
+          "arabic": "ما راح يوقعون",
+          "transliteration": "ma raa7 yoog3oon",
+          "english": "they won't fall"
+        }
+      ]
+    }
+  }
+}
