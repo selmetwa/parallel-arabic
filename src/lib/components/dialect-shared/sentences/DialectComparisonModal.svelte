@@ -21,31 +21,41 @@
     'egyptian-arabic': 'egyptian',
     'darija': 'darija',
     'levantine': 'levantine',
-    'fusha': 'fusha'
+    'fusha': 'fusha',
+    'iraqi': 'iraqi',
+    'khaleeji': 'khaleeji',
+    'saudi': 'saudi'
   };
 
   const displayNames = {
     egyptian: 'Egyptian Arabic',
     darija: 'Moroccan Darija',
     levantine: 'Levantine Arabic',
-    fusha: 'Modern Standard Arabic (Fusha)'
+    fusha: 'Modern Standard Arabic (Fusha)',
+    iraqi: 'Iraqi Arabic',
+    khaleeji: 'Gulf Arabic (Khaleeji)',
+    saudi: 'Saudi Arabic (Hijazi)'
   };
 
   const flags = {
     egyptian: '🇪🇬',
     darija: '🇲🇦',
     levantine: '🇯🇴', // Using Jordan flag for Levantine as a representative
-    fusha: '🇸🇦' // Using Saudi flag for Fusha as a representative
+    fusha: '🇸🇦', // Using Saudi flag for Fusha as a representative
+    iraqi: '🇮🇶',
+    khaleeji: '🇦🇪',
+    saudi: '🇸🇦'
   };
 
-  const dialects: (keyof DialectComparisonSchema)[] = ['egyptian', 'darija', 'levantine', 'fusha'];
+  const ORDER: (keyof DialectComparisonSchema)[] = ['egyptian', 'darija', 'levantine', 'fusha', 'iraqi', 'khaleeji', 'saudi'];
+  // The new dialects are optional in the response; show only what came back.
+  const dialects = $derived(ORDER.filter((key) => comparisonData?.[key]));
   
   // Helper to convert schema key to Dialect type for AudioButton
   function getDialectType(key: keyof DialectComparisonSchema): Dialect {
     if (key === 'egyptian') return 'egyptian-arabic';
-    if (key === 'darija') return 'darija';
-    if (key === 'levantine') return 'levantine';
-    return 'fusha';
+    if (key === 'fusha') return 'fusha';
+    return key;
   }
 </script>
 
@@ -82,8 +92,9 @@
       </div>
     {:else if comparisonData}
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {#each dialects as dialectKey}
+        {#each dialects as dialectKey (dialectKey)}
           {@const isCurrent = dialectMapping[currentDialect] === dialectKey}
+          {@const entry = comparisonData[dialectKey]!}
           <div class={`p-4 rounded-lg border flex flex-col h-full ${isCurrent ? 'bg-tile-300 border-tile-500 ring-2 ring-tile-500' : 'bg-tile-100 border-tile-200'}`}>
             <div class="flex justify-between items-start mb-3">
               <div class="flex items-center gap-2">
@@ -96,13 +107,13 @@
             </div>
             
             <div class="flex-grow flex flex-col justify-center mb-3">
-              <p class="text-2xl text-right font-arabic mb-2 text-text-300 leading-relaxed" dir="rtl">{comparisonData[dialectKey].arabic}</p>
-              <p class="text-text-200 text-sm">{comparisonData[dialectKey].transliteration}</p>
+              <p class="text-2xl text-right font-arabic mb-2 text-text-300 leading-relaxed" dir="rtl">{entry.arabic}</p>
+              <p class="text-text-200 text-sm">{entry.transliteration}</p>
             </div>
             
             <div class="mt-auto pt-2 border-t border-tile-200/50">
               <AudioButton 
-                text={comparisonData[dialectKey].arabic} 
+                text={entry.arabic} 
                 dialect={getDialectType(dialectKey)}
               >
                 Listen

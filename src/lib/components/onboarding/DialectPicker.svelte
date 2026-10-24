@@ -35,14 +35,24 @@
 		LBN: 'levantine',
 		JOR: 'levantine',
 		ISR: 'levantine',
-		PSE: 'levantine'
+		PSE: 'levantine',
+		IRQ: 'iraqi',
+		ARE: 'khaleeji',
+		KWT: 'khaleeji',
+		QAT: 'khaleeji',
+		BHR: 'khaleeji',
+		OMN: 'khaleeji',
+		SAU: 'saudi'
 	};
 
 	// Pin positions [lng, lat]
 	const REGION_PINS: Record<string, [number, number]> = {
 		'egyptian-arabic': [30.5, 26.8],
 		levantine: [36.8, 33.6],
-		darija: [-6.8, 31.6]
+		darija: [-6.8, 31.6],
+		iraqi: [44.4, 33.3],
+		khaleeji: [54.4, 24.4],
+		saudi: [39.2, 21.5]
 	};
 
 	const projection = geoMercator()
@@ -80,7 +90,8 @@
 			return {
 				d: path(feature) ?? '',
 				// null for the surrounding, non-Arab land
-				dialect: iso ? (COUNTRY_DIALECT[iso] ?? 'fusha') : null
+				// A country whose dialect isn't offered falls back to Fusha.
+				dialect: iso ? (COUNTRY_DIALECT[iso] in accents ? COUNTRY_DIALECT[iso] : 'fusha') : null
 			};
 		})
 	);

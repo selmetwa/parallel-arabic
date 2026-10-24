@@ -124,6 +124,12 @@ export const POST: RequestHandler = async ({ request }) => {
       wordList: [], // No specific word list for Khaleeji yet
       commonWordsInstruction: '',
       wordListInstruction: 'Please use vocabulary common in Khaleeji Arabic conversations.'
+    },
+    'saudi': {
+      name: 'SAUDI HIJAZI ARABIC',
+      wordList: [], // No specific word list for Saudi yet
+      commonWordsInstruction: '',
+      wordListInstruction: 'Please use vocabulary common in Saudi Hijazi Arabic conversations.'
     }
   } as const;
 

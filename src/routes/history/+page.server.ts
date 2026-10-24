@@ -26,6 +26,9 @@ const DIALECT_LABELS: Record<string, string> = {
 	fusha: 'Fusha',
 	levantine: 'Levantine',
 	darija: 'Darija',
+	iraqi: 'Iraqi',
+	khaleeji: 'Khaleeji',
+	saudi: 'Saudi',
 	alphabet: 'Alphabet'
 };
 

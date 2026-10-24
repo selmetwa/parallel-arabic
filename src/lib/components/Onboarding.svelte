@@ -29,6 +29,7 @@
 	import { isNativeApp } from '$lib/helpers/is-native-app';
 	import { trackEvent } from '$lib/analytics';
 	import type { Dialect } from '$lib/types';
+	import { isSelectableDialect } from '$lib/constants/dialects';
 
 	type Props = {
 		isOpen: boolean;
@@ -128,8 +129,32 @@
 			description: 'Unique North African dialect',
 			accent: '#f43f5e',
 			deep: '#9f1239'
+		},
+		{
+			id: 'iraqi',
+			label: 'Iraqi',
+			emoji: '🇮🇶',
+			description: 'Baghdad, Basra and across Iraq',
+			accent: '#14b8a6',
+			deep: '#0f766e'
+		},
+		{
+			id: 'khaleeji',
+			label: 'Khaleeji',
+			emoji: '🇦🇪',
+			description: 'UAE, Kuwait, Qatar, Bahrain and Oman',
+			accent: '#06b6d4',
+			deep: '#0e7490'
+		},
+		{
+			id: 'saudi',
+			label: 'Saudi',
+			emoji: '🇸🇦',
+			description: 'Jeddah, Mecca and the Hijaz',
+			accent: '#84cc16',
+			deep: '#4d7c0f'
 		}
-	];
+	].filter((d) => isSelectableDialect(d.id));
 
 	const learningReasons = [
 		{ id: 'Travel', label: 'Travel', emoji: '✈️', accent: '#0ea5e9', deep: '#0369a1' },

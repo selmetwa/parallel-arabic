@@ -40,7 +40,10 @@
 			'egyptian-arabic': '🇪🇬',
 			levantine: '🇱🇧',
 			darija: '🇲🇦',
-			fusha: '📖'
+			fusha: '📖',
+			iraqi: '🇮🇶',
+			khaleeji: '🇦🇪',
+			saudi: '🇸🇦'
 		};
 		return emojis[dialect] || '🌍';
 	}
@@ -200,7 +203,10 @@
 			'egyptian-arabic': 'Egyptian Arabic',
 			levantine: 'Levantine Arabic',
 			darija: 'Moroccan Darija',
-			fusha: 'Modern Standard Arabic (Fusha)'
+			fusha: 'Modern Standard Arabic (Fusha)',
+			iraqi: 'Iraqi Arabic',
+			khaleeji: 'Gulf Arabic (Khaleeji)',
+			saudi: 'Saudi Arabic (Hijazi)'
 		};
 		return labels[dialect] || dialect;
 	}

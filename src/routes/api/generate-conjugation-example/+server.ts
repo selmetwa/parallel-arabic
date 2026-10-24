@@ -12,7 +12,10 @@ const DIALECT_NAMES: Record<string, string> = {
 	'egyptian-arabic': 'Egyptian Arabic (colloquial, not MSA)',
 	fusha: 'Modern Standard Arabic (Fusha)',
 	levantine: 'Levantine Arabic',
-	darija: 'Moroccan Darija'
+	darija: 'Moroccan Darija',
+	iraqi: 'Iraqi Arabic',
+	khaleeji: 'Gulf Arabic (Khaleeji)',
+	saudi: 'Saudi Arabic (Hijazi)'
 };
 
 export const POST: RequestHandler = async ({ request }) => {

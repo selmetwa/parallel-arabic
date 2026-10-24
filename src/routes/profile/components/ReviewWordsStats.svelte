@@ -16,14 +16,20 @@
     'egyptian-arabic': 'Egyptian',
     'fusha': 'MSA',
     'levantine': 'Levantine',
-    'darija': 'Darija'
+    'darija': 'Darija',
+    'iraqi': 'Iraqi',
+    'khaleeji': 'Khaleeji',
+    'saudi': 'Saudi'
   };
 
   const dialectEmojis: Record<string, string> = {
     'egyptian-arabic': '🇪🇬',
     'fusha': '📚',
     'levantine': '🇱🇧',
-    'darija': '🇲🇦'
+    'darija': '🇲🇦',
+    'iraqi': '🇮🇶',
+    'khaleeji': '🇦🇪',
+    'saudi': '🇸🇦'
   };
 
   const dialectEntries = $derived(

@@ -156,6 +156,36 @@ Dialect flavor: mix of Arabic, Berber, and French loanwords — e.g., الطوم
 			examples: [],
 			commonWords: []
 		},
+		'iraqi': {
+			name: 'IRAQI ARABIC',
+			culturalContext: `Settings: Baghdad neighborhoods (Karrada, Mansour, Adhamiya, Kadhimiya), Al-Mutanabbi Street book market, Shorja market, the Tigris riverside, Basra corniche, a chai khana (tea house), a government office, a kebab shop.
+Currency: Iraqi dinars (دينار) — use realistic prices (e.g., a glass of tea is 250-500 dinars, a taxi ride is 3,000-7,000 dinars).
+Food & drink: masgouf (grilled carp), quzi, dolma, samoon bread, kahi with gaimer, tashreeb, chai (strong, sweet tea in small glasses).
+Character archetypes: chai seller, market vendor, taxi driver, engineer, university student, schoolteacher, bookseller on Al-Mutanabbi Street, family elder.
+Dialect flavor words: شلونك، هسّه، شكو ماكو، كلش، هواية، زين، عيني، يمعود، اكو، باچر، خوش`,
+			examples: [],
+			commonWords: []
+		},
+		'khaleeji': {
+			name: 'GULF ARABIC (KHALEEJI)',
+			culturalContext: `Settings: Dubai (Deira souks, Jumeirah, the metro), Abu Dhabi corniche, Sharjah, Kuwait City (Souq Al-Mubarakiya, the Kuwait Towers), a diwaniya, a majlis, desert camping, a mall, a karak tea stand.
+Currency: UAE dirhams (درهم) or Kuwaiti dinars (دينار) — use realistic prices (e.g., karak tea is 1-3 dirhams, a taxi ride is 20-50 dirhams).
+Food & drink: machboos, harees, luqaimat, balaleet, gahwa (cardamom coffee served with dates), karak chai, shawarma.
+Character archetypes: Emirati or Kuwaiti family, diwaniya host, government employee, university student, shop owner, expat colleague, desert guide.
+Dialect flavor words: الحين، وايد، زين، شو، شلونك، يالله، إن شاء الله، عيل، هيه، مب، أبي، بعد`,
+			examples: [],
+			commonWords: []
+		},
+		'saudi': {
+			name: 'SAUDI HIJAZI ARABIC',
+			culturalContext: `Settings: Jeddah (Al-Balad historic district, the corniche, Tahlia Street), Mecca and Medina, a baqala (corner shop), a mall, a family istiraha (rest house), a coffee shop, a souk.
+Currency: Saudi riyals (ريال) — use realistic prices (e.g., a coffee is 10-20 riyals, a taxi ride is 25-60 riyals).
+Food & drink: mutabbaq, ful with tamees bread, saleeg, mandi, kabsa, sobia (Ramadan drink), Arabic coffee with dates.
+Character archetypes: Jeddah shop owner, university student, taxi driver, family elder, pilgrim guide, office worker, young friends at a café.
+Dialect flavor words: دحين، إيش، كدا، مرّة، أبغى، يا شيخ، ترى، عاد، كويس، خلاص، يلا`,
+			examples: [],
+			commonWords: []
+		},
 	} as const;
 
 	type DialectKey = keyof typeof dialectConfigs;

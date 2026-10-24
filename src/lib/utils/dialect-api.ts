@@ -30,7 +30,8 @@ export function getApiEndpoint(dialect: Dialect, section: string): string {
     'levantine': 'levantine', // Future support
     'darija': 'moroccan', // Future support
     'iraqi': 'iraqi', // Future support
-    'khaleeji': 'khaleeji' // Future support
+    'khaleeji': 'khaleeji', // Future support
+    'saudi': 'saudi'
   };
 
   const dialectPath = dialectPaths[dialect];
@@ -77,7 +78,8 @@ export function getDialectDisplayName(dialect: Dialect): string {
     'levantine': 'Levantine Arabic',
     'darija': 'Moroccan Darija',
     'iraqi': 'Iraqi Arabic',
-    'khaleeji': 'Khaleeji Arabic'
+    'khaleeji': 'Khaleeji Arabic',
+    'saudi': 'Saudi Arabic (Hijazi)'
   };
 
   return displayNames[dialect] || dialect;

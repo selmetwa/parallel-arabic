@@ -95,6 +95,15 @@ export const POST: RequestHandler = async ({ request }) => {
     },
     'darija': {
       name: 'MOROCCAN DARIJA',
+    },
+    'iraqi': {
+      name: 'IRAQI ARABIC',
+    },
+    'khaleeji': {
+      name: 'GULF ARABIC (KHALEEJI)',
+    },
+    'saudi': {
+      name: 'SAUDI HIJAZI ARABIC',
     }
   } as const;
 

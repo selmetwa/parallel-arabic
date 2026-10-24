@@ -49,7 +49,7 @@ export type sentenceObjectGroup = {
   answer: sentenceObjectItem
 }
 
-export type Dialect = 'fusha' | 'levantine' | 'darija' | 'egyptian-arabic' | 'iraqi' | 'khaleeji';
+export type Dialect = 'fusha' | 'levantine' | 'darija' | 'egyptian-arabic' | 'iraqi' | 'khaleeji' | 'saudi';
 
 export interface WordAlignment {
   arabic: string;
@@ -77,6 +77,9 @@ export type DialectName = {
   levantine: 'Levantine Arabic',
   darija: 'Moroccan Darija',
   'egyptian-arabic': 'Egyptian Arabic',
+  iraqi: 'Iraqi Arabic',
+  khaleeji: 'Gulf Arabic (Khaleeji)',
+  saudi: 'Saudi Arabic (Hijazi)',
 }
 
 export enum Mode {

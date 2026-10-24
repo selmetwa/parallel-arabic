@@ -106,6 +106,9 @@
     'levantine': 'Levantine Arabic',
     'darija': 'Moroccan Darija',
     'fusha': 'Modern Standard Arabic',
+    'iraqi': 'Iraqi Arabic',
+    'khaleeji': 'Gulf Arabic (Khaleeji)',
+    'saudi': 'Saudi Arabic (Hijazi)',
   };
 
   async function compareDialects() {

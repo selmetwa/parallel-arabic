@@ -41,7 +41,8 @@ export const POST: RequestHandler = async ({ request, locals }) => {
         'darija': 'Moroccan Darija',
         'fusha': 'Modern Standard Arabic (Fusha)',
         'iraqi': 'Iraqi Arabic',
-        'khaleeji': 'Khaleeji Arabic'
+        'khaleeji': 'Khaleeji Arabic',
+        'saudi': 'Saudi Arabic (Hijazi)'
     };
     const dialectName = dialectLabel[dialect] || dialect;
 

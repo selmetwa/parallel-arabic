@@ -92,6 +92,9 @@
     darija: 'Darija',
     levantine: 'Levantine',
     fusha: 'Modern Standard Arabic',
+    iraqi: 'Iraqi',
+    khaleeji: 'Khaleeji',
+    saudi: 'Saudi',
   };
 
   // Dialect geographic centers [lng, lat]

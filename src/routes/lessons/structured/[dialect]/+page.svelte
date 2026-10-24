@@ -26,7 +26,10 @@
 		'egyptian-arabic': 'Egyptian Arabic',
 		'darija': 'Moroccan Darija',
 		'fusha': 'Modern Standard Arabic',
-		'levantine': 'Levantine Arabic'
+		'levantine': 'Levantine Arabic',
+		'iraqi': 'Iraqi Arabic',
+		'khaleeji': 'Gulf Arabic (Khaleeji)',
+		'saudi': 'Saudi Arabic (Hijazi)'
 	};
 
 	// A small calligraphic accent per dialect for the header
@@ -34,7 +37,10 @@
 		'egyptian-arabic': 'مصر',
 		'darija': 'المغرب',
 		'fusha': 'الفصحى',
-		'levantine': 'الشام'
+		'levantine': 'الشام',
+		'iraqi': 'العراق',
+		'khaleeji': 'الخليج',
+		'saudi': 'السعودية'
 	};
 
 	const dialectName = dialectNames[data.dialect] || data.dialect;

@@ -9,6 +9,7 @@
 	import type { StoryTopic } from '$lib/constants/story-topics';
 	import { getDefaultDialect } from '$lib/helpers/get-default-dialect';
 	import { trackEvent } from '$lib/analytics';
+	import { DIALECTS } from '$lib/constants/dialects';
 
 	let { data } = $props();
 
@@ -44,6 +45,9 @@
 		'darija': 'Moroccan Darija',
 		'levantine': 'Levantine Arabic',
 		'fusha': 'Modern Standard Arabic',
+		'iraqi': 'Iraqi Arabic',
+		'khaleeji': 'Gulf Arabic (Khaleeji)',
+		'saudi': 'Saudi Arabic (Hijazi)',
 	};
 
 	// Keep topicStoryMap in sync if server data changes (e.g. after navigation)
@@ -264,6 +268,9 @@
 			'levantine': 'bg-orange-100 text-orange-800',
 			'darija': 'bg-green-100 text-green-800',
 			'fusha': 'bg-purple-100 text-purple-800',
+			'iraqi': 'bg-teal-100 text-teal-800',
+			'khaleeji': 'bg-amber-100 text-amber-800',
+			'saudi': 'bg-emerald-100 text-emerald-800',
 		};
 		return colors[dialect] || 'bg-gray-100 text-gray-800';
 	}
@@ -498,6 +505,9 @@
 					<option value="fusha">Modern Standard Arabic</option>
 					<option value="levantine">Levantine Arabic</option>
 					<option value="darija">Moroccan Darija</option>
+					{#each DIALECTS.filter((d) => d.selectable && ['iraqi', 'khaleeji', 'saudi'].includes(d.key)) as d (d.key)}
+						<option value={d.key}>{d.name}</option>
+					{/each}
 				</select>
 			</div>
 			<div class="flex-1 min-w-[140px]">

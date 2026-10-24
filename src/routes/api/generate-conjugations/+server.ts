@@ -7,7 +7,7 @@ import { createConjugationExerciseSchema } from '$lib/utils/gemini-schemas';
 import { parseJsonFromGeminiResponse } from '$lib/utils/gemini-json-parser';
 import { getDialectSystemInstruction } from '$lib/data/dialect-rules-v2';
 
-type DialectKey = 'egyptian-arabic' | 'fusha' | 'levantine' | 'darija';
+type DialectKey = 'egyptian-arabic' | 'fusha' | 'levantine' | 'darija' | 'iraqi' | 'khaleeji' | 'saudi';
 
 const DIALECT_CONJUGATION_GUIDE: Record<DialectKey, { name: string; guide: string }> = {
 	'egyptian-arabic': {
@@ -39,6 +39,29 @@ const DIALECT_CONJUGATION_GUIDE: Record<DialectKey, { name: string; guide: strin
 - Negation: ما...ش circumfix (e.g. ما كنكتبش ma kanktabsh).
 - Plural present/future take -و (-u) suffix (e.g. كنكتبو kanktabu).
 - Past tense: كتبت ktabt, كتبتي ktabti, كتب ktab, كتبات ktabat, كتبنا ktabna, كتبتو ktabtu, كتبو ktabu.`
+	},
+	iraqi: {
+		name: 'Iraqi Arabic (Baghdadi, colloquial, NOT MSA)',
+		guide: `- Present tense: bare imperfect (e.g. اكتب aktib, تكتب tiktib, يكتب yiktib); enti/entu/homma keep -in/-un (تكتبين tiktibin, تكتبون tiktibun, يكتبون yiktibun).
+- Ongoing actions: prefix دـ / دا (da-) (e.g. دا اكتب da-aktib, ديكتب da-yiktib).
+- Future tense: particle راح (raaḥ) before the imperfect (e.g. راح اكتب raaḥ aktib).
+- Negation: ما (ma) before the verb, no suffix (e.g. ما اكتب ma aktib).
+- Past tense: كتبت kitabit (ana/enta), كتبتي kitabti, كتب kitab, كتبت kitbat, كتبنا kitabna, كتبتوا kitabtu, كتبوا kitbaw.`
+	},
+	khaleeji: {
+		name: 'Gulf Arabic (Khaleeji — Emirati/Kuwaiti, colloquial, NOT MSA)',
+		guide: `- Present tense: bare imperfect (e.g. اكتب aktib, تكتب tiktib, يكتب yiktib); enti/entu/homma keep -in/-un (تكتبين tiktibin, تكتبون tiktibun, يكتبون yiktibun).
+- Ongoing actions: قاعد (gaa3id) before the imperfect (e.g. قاعد اكتب gaa3id aktib).
+- Future tense: prefix بـ (b-) on the imperfect (e.g. بكتب baktib, بيكتب biyiktib).
+- Negation: ما (ma) before the verb (e.g. ما اكتب ma aktib).
+- Past tense: كتبت kitabt (ana/enta), كتبتي kitabti, كتب kitab, كتبت kitbat, كتبنا kitabna, كتبتوا kitabtu, كتبوا kitbaw.`
+	},
+	saudi: {
+		name: 'Saudi Hijazi Arabic (Jeddah/Mecca, colloquial, NOT MSA)',
+		guide: `- Present tense: prefix بـ (b-) on the imperfect (e.g. باكتب baktub, بتكتب btiktub, بيكتب byiktub, بتكتبي btiktubi, بيكتبوا byiktubu).
+- Future tense: prefix حـ (ḥa-) on the bare imperfect (e.g. حكتب ḥaktub, حيكتب ḥayiktub).
+- Negation: ما (ma) before the verb, no suffix (e.g. ما باكتب ma baktub).
+- Past tense: كتبت katabt (ana/enta), كتبتي katabti, كتب katab, كتبت katabat, كتبنا katabna, كتبتوا katabtu, كتبوا katabu.`
 	}
 };
 

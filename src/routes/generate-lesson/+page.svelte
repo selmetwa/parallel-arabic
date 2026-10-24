@@ -196,6 +196,9 @@
                         <option value="levantine">Levantine</option>
                         <option value="fusha">MSA (Fusha)</option>
                         <option value="darija">Moroccan Darija</option>
+                        <option value="iraqi">Iraqi Arabic</option>
+                        <option value="khaleeji">Gulf Arabic (Khaleeji)</option>
+                        <option value="saudi">Saudi Arabic (Hijazi)</option>
                     </select>
                 </div>
             </div>
@@ -221,6 +224,9 @@
                         <option value="levantine">Levantine</option>
                         <option value="fusha">MSA (Fusha)</option>
                         <option value="darija">Moroccan Darija</option>
+                        <option value="iraqi">Iraqi Arabic</option>
+                        <option value="khaleeji">Gulf Arabic (Khaleeji)</option>
+                        <option value="saudi">Saudi Arabic (Hijazi)</option>
                     </select>
                 </div>
                 

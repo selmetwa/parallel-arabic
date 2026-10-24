@@ -543,6 +543,10 @@
 		fusha: 'Modern Standard Arabic',
 		darija: 'Moroccan Darija',
 		'egyptian-arabic': 'Egyptian Arabic',
+		levantine: 'Levantine Arabic',
+		iraqi: 'Iraqi Arabic',
+		khaleeji: 'Gulf Arabic (Khaleeji)',
+		saudi: 'Saudi Arabic (Hijazi)',
 	}
 
 	const learningTopicOptions = [

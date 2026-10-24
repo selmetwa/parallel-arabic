@@ -22,14 +22,20 @@
     'egyptian-arabic': '🇪🇬',
     'darija': '🇲🇦',
     'levantine': '🇱🇧',
-    'fusha': '🇸🇦'
+    'fusha': '🇸🇦',
+    'iraqi': '🇮🇶',
+    'khaleeji': '🇦🇪',
+    'saudi': '🇸🇦'
   };
 
   const dialectDisplayNames: Record<string, string> = {
     'egyptian-arabic': 'Egyptian Arabic',
     'darija': 'Moroccan Darija',
     'levantine': 'Levantine Arabic',
-    'fusha': 'Modern Standard Arabic (Fusha)'
+    'fusha': 'Modern Standard Arabic (Fusha)',
+    'iraqi': 'Iraqi Arabic',
+    'khaleeji': 'Gulf Arabic (Khaleeji)',
+    'saudi': 'Saudi Arabic (Hijazi)'
   };
 
   // Default to Egyptian if no dialect is set - make reactive with $derived

@@ -18,7 +18,8 @@ const dialectNames: Record<Dialect, string> = {
 	darija: 'Moroccan Darija',
 	'egyptian-arabic': 'Egyptian Arabic',
 	iraqi: 'Iraqi Arabic',
-	khaleeji: 'Khaleeji Arabic'
+	khaleeji: 'Khaleeji Arabic',
+	saudi: 'Saudi Arabic (Hijazi)'
 };
 
 /**

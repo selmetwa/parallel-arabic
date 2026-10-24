@@ -16,6 +16,7 @@
 	import { fetchUserReviewWords } from '$lib/helpers/fetch-review-words';
 	import { sentencePractice as session } from '$lib/store/generated-content.svelte';
 	import { trackEvent } from '$lib/analytics';
+	import { isSelectableDialect } from '$lib/constants/dialects';
 
 	let { data } = $props();
 
@@ -367,8 +368,11 @@
 		{ value: 'egyptian-arabic', label: 'Egyptian Arabic', sub: 'Masri' },
 		{ value: 'fusha', label: 'Modern Standard Arabic', sub: 'Fusha' },
 		{ value: 'levantine', label: 'Levantine Arabic', sub: 'Shami' },
-		{ value: 'darija', label: 'Moroccan Darija', sub: 'Darija' }
-	];
+		{ value: 'darija', label: 'Moroccan Darija', sub: 'Darija' },
+		{ value: 'iraqi', label: 'Iraqi Arabic', sub: 'Baghdadi' },
+		{ value: 'khaleeji', label: 'Gulf Arabic', sub: 'Khaleeji' },
+		{ value: 'saudi', label: 'Saudi Arabic', sub: 'Hijazi' }
+	].filter((d) => isSelectableDialect(d.value));
 
 	const learningTopicOptions = [
 		{ label: 'Verb Conjugation', value: 'verb conjugation', emoji: '🔄' },

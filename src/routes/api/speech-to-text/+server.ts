@@ -26,6 +26,9 @@ const dialectToLanguageCode: Record<string, string> = {
   'fusha': 'ar-SA',
   'darija': 'ar-MA',
   'khaleeji': 'ar-AE',
+  // ar-IQ: Google's chirp_3 docs disagree on whether this is Arabic (Iraq); verify before launch.
+  'iraqi': 'ar-IQ',
+  'saudi': 'ar-SA',
   'ar': 'ar-EG',
   'en': 'en-US'
 };

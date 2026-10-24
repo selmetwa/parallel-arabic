@@ -121,7 +121,10 @@
       'egyptian-arabic': 'bg-blue-500 hover:bg-blue-600',
       'levantine': 'bg-purple-500 hover:bg-purple-600',
       'darija': 'bg-orange-500 hover:bg-orange-600',
-      'fusha': 'bg-green-500 hover:bg-green-600'
+      'fusha': 'bg-green-500 hover:bg-green-600',
+      'iraqi': 'bg-teal-500 hover:bg-teal-600',
+      'khaleeji': 'bg-amber-500 hover:bg-amber-600',
+      'saudi': 'bg-emerald-500 hover:bg-emerald-600'
     };
     return colors[slug] || 'bg-gray-500 hover:bg-gray-600';
   }
@@ -131,7 +134,10 @@
       'egyptian-arabic': 'border-blue-500',
       'levantine': 'border-purple-500',
       'darija': 'border-orange-500',
-      'fusha': 'border-green-500'
+      'fusha': 'border-green-500',
+      'iraqi': 'border-teal-500',
+      'khaleeji': 'border-amber-500',
+      'saudi': 'border-emerald-500'
     };
     return colors[slug] || 'border-gray-500';
   }

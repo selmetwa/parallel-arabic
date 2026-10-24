@@ -10,6 +10,7 @@
   import { slide, fade } from 'svelte/transition';
   import { WHITELISTED_EMAILS } from '$lib/config/whitelisted-emails';
   import { CEFR_LEVELS } from '$lib/constants/cefr-levels';
+  import { isSelectableDialect } from '$lib/constants/dialects';
 
   let { data }: { data: PageData } = $props();
 
@@ -90,22 +91,31 @@
     'egyptian-arabic': '🇪🇬',
     'darija': '🇲🇦',
     'levantine': '🇱🇧',
-    'fusha': '📚'
+    'fusha': '📚',
+    'iraqi': '🇮🇶',
+    'khaleeji': '🇦🇪',
+    'saudi': '🇸🇦'
   };
 
   const dialectNames: Record<string, string> = {
     'egyptian-arabic': 'Egyptian Arabic',
     'darija': 'Moroccan Darija',
     'levantine': 'Levantine Arabic',
-    'fusha': 'Modern Standard Arabic'
+    'fusha': 'Modern Standard Arabic',
+    'iraqi': 'Iraqi Arabic',
+    'khaleeji': 'Gulf Arabic (Khaleeji)',
+    'saudi': 'Saudi Arabic (Hijazi)'
   };
 
   const dialectOptions = [
     { value: 'egyptian-arabic', label: 'Egyptian Arabic', flag: '🇪🇬' },
     { value: 'darija', label: 'Moroccan Darija', flag: '🇲🇦' },
     { value: 'levantine', label: 'Levantine Arabic', flag: '🇱🇧' },
-    { value: 'fusha', label: 'Modern Standard Arabic (Fusha)', flag: '📚' }
-  ];
+    { value: 'fusha', label: 'Modern Standard Arabic (Fusha)', flag: '📚' },
+    { value: 'iraqi', label: 'Iraqi Arabic', flag: '🇮🇶' },
+    { value: 'khaleeji', label: 'Gulf Arabic', flag: '🇦🇪' },
+    { value: 'saudi', label: 'Saudi Arabic', flag: '🇸🇦' }
+  ].filter((d) => isSelectableDialect(d.value));
 
   const currentDialect = $derived(data.targetDialect || 'egyptian-arabic');
 

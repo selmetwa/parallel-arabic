@@ -2,15 +2,20 @@
     import type { SelfStudySession } from '$lib/schemas/self-study-schema';
     import type { Dialect } from '$lib/types/index';
     import SelfStudyPlayer from '$lib/components/SelfStudyPlayer.svelte';
+    import { isSelectableDialect } from '$lib/constants/dialects';
 
     let { data } = $props();
 
-    const DIALECTS: { value: Dialect; label: string }[] = [
+    const DIALECT_OPTIONS: { value: Dialect; label: string }[] = [
         { value: 'egyptian-arabic', label: '🇪🇬 Egyptian Arabic' },
         { value: 'levantine', label: '🇱🇧 Levantine' },
         { value: 'fusha', label: '📖 Modern Standard Arabic' },
         { value: 'darija', label: '🇲🇦 Moroccan Darija' },
+        { value: 'iraqi', label: '🇮🇶 Iraqi Arabic' },
+        { value: 'khaleeji', label: '🇦🇪 Gulf Arabic' },
+        { value: 'saudi', label: '🇸🇦 Saudi Arabic' },
     ];
+    const DIALECTS = DIALECT_OPTIONS.filter((d) => isSelectableDialect(d.value));
 
     const LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
 
