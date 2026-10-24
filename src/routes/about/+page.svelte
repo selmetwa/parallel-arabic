@@ -1,12 +1,13 @@
 <script>
 	import { resolve } from '$app/paths';
 	import AppStoreBadge from '$lib/components/AppStoreBadge.svelte';
+	import { PLANS } from '$lib/constants/pricing';
 
 	/**
 	 * Every in-app link the page makes, narrow enough for `resolve()` to type-check.
 	 * @typedef {'/stories' | '/tutor' | '/lessons' | '/alphabet' | '/sentences' | '/conjugations'
 	 *   | '/learn/game' | '/speak' | '/review/all-words' | '/egyptian-arabic' | '/levantine'
-	 *   | '/darija' | '/fusha'} Route
+	 *   | '/darija' | '/fusha' | '/iraqi' | '/khaleeji' | '/saudi'} Route
 	 */
 	/**
 	 * The /features landing page for a step or feature. Descriptive link text, since
@@ -20,7 +21,7 @@
 	/** @typedef {Shot & { body: string; href?: Route; cta?: string; more?: More; focus?: string }} Feature */
 	/** @typedef {{ t: string; b?: boolean }} QuoteSegment */
 
-	// ── Hero demo: one sentence in all four dialects ──────────────────────────
+	// ── Hero demo: one sentence in every dialect ─────────────────────────────
 	// Word order is reading order; the row is laid out right-to-left.
 	/** @type {Dialect[]} */
 	const dialects = [
@@ -58,6 +59,39 @@
 			]
 		},
 		{
+			label: 'Iraqi',
+			native: 'العراقي',
+			note: 'About 45 million speakers in Iraq, taught here in its Baghdadi form.',
+			href: '/iraqi',
+			words: [
+				{ ar: 'أريد', tr: 'areed', en: 'I want' },
+				{ ar: 'أتعلّم', tr: "at'allam", en: 'to learn' },
+				{ ar: 'عربي', tr: "'arabi", en: 'Arabic' }
+			]
+		},
+		{
+			label: 'Gulf',
+			native: 'الخليجي',
+			note: 'Spoken in the UAE, Kuwait, Qatar, Bahrain and Oman.',
+			href: '/khaleeji',
+			words: [
+				{ ar: 'أبي', tr: 'abi', en: 'I want' },
+				{ ar: 'أتعلّم', tr: "at'allam", en: 'to learn' },
+				{ ar: 'عربي', tr: "'arabi", en: 'Arabic' }
+			]
+		},
+		{
+			label: 'Saudi',
+			native: 'الحجازي',
+			note: 'The Hijazi Arabic of Jeddah, Mecca and Medina.',
+			href: '/saudi',
+			words: [
+				{ ar: 'أبغى', tr: 'abgha', en: 'I want' },
+				{ ar: 'أتعلّم', tr: "at'allam", en: 'to learn' },
+				{ ar: 'عربي', tr: "'arabi", en: 'Arabic' }
+			]
+		},
+		{
 			label: 'Fusha',
 			native: 'الفصحى',
 			note: 'Modern Standard Arabic, the shared language of news, books and formal speech.',
@@ -74,6 +108,11 @@
 	const CYCLE_MS = 3600;
 
 	let active = $state(0);
+
+	/** @type {'annual' | 'monthly'} */
+	let billing = $state('annual');
+	const monthlyPrice = PLANS.monthly.price.split('/')[0];
+	const annualPerMonth = PLANS.annual.perMonth.split('/')[0];
 	let autoplay = $state(true);
 	let paused = $state(false);
 	let inView = $state(false);
@@ -124,7 +163,7 @@
 	// in the database on 2026-09-25.
 	const stats = [
 		{ value: '1,500+', label: 'learners' },
-		{ value: '4', label: 'dialects' },
+		{ value: '7', label: 'dialects' },
 		{ value: 'A1–C2', label: 'lesson levels' }
 	];
 
@@ -250,7 +289,7 @@
 		},
 		{
 			title: 'Dialect comparison',
-			body: 'See how any word or phrase is said in all four dialects, side by side.',
+			body: 'See how any word or phrase is said in all seven dialects, side by side.',
 			img: '/images/features-large/dialect-compare.png',
 			w: 787,
 			h: 653,
@@ -345,11 +384,11 @@
 	const faqs = [
 		{
 			q: 'Which Arabic dialects does it support?',
-			a: 'Parallel Arabic currently supports Egyptian Arabic, Levantine Arabic, Moroccan Darija, and Modern Standard Arabic (Fusha). All four are available across stories, vocabulary, lessons, and review.'
+			a: 'Parallel Arabic supports Egyptian Arabic, Levantine Arabic, Moroccan Darija, Iraqi Arabic, Gulf Arabic (Khaleeji), Saudi Arabic (Hijazi) and Modern Standard Arabic (Fusha). All seven are available across lessons, vocabulary, games and review.'
 		},
 		{
 			q: 'Which dialect should I learn?',
-			a: 'The one spoken by the people you want to talk to. Egyptian is the most widely understood, thanks to Egyptian film and TV. Levantine is spoken in Syria, Lebanon, Jordan and Palestine, Darija in Morocco, and Fusha is the Arabic of news, books and formal writing. You can switch dialects at any time.'
+			a: 'The one spoken by the people you want to talk to. Egyptian is the most widely understood, thanks to Egyptian film and TV. Levantine is spoken in Syria, Lebanon, Jordan and Palestine, Darija in Morocco, Iraqi in Iraq, Gulf Arabic in the UAE, Kuwait, Qatar and Bahrain, and Saudi (Hijazi) in Jeddah and the west of Saudi Arabia. Fusha is the Arabic of news, books and formal writing. You can switch dialects at any time.'
 		},
 		{
 			q: 'Do I need to know any Arabic to get started?',
@@ -427,13 +466,13 @@
 	<header class="hero">
 		<div class="hero-grid mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 			<div>
-				<p class="kicker reveal">Egyptian · Levantine · Moroccan · Fusha</p>
+				<p class="kicker reveal">Egyptian · Levantine · Moroccan · Iraqi · Gulf · Saudi · Fusha</p>
 				<h1 class="hero-title reveal" style="animation-delay: 60ms;">
 					Learn the Arabic people <span class="hl">actually speak.</span>
 				</h1>
 				<p class="lede reveal" style="animation-delay: 120ms;">
-					Parallel Arabic teaches the dialects spoken in Cairo, Beirut and Casablanca, with Modern
-					Standard Arabic alongside. Read stories at your level, tap any word you don’t know, and
+					Parallel Arabic teaches the dialects spoken in Cairo, Beirut, Casablanca, Baghdad, Dubai
+					and Jeddah, with Modern Standard Arabic alongside. Read stories at your level, tap any word you don’t know, and
 					practice it until it’s yours.
 				</p>
 
@@ -459,7 +498,7 @@
 				<div
 					class="demo"
 					role="group"
-					aria-label="The same sentence in four Arabic dialects"
+					aria-label="The same sentence in seven varieties of Arabic"
 					style="--cycle: {CYCLE_MS}ms;"
 					use:cycleWhenVisible
 					onpointerenter={() => (paused = true)}
@@ -467,7 +506,7 @@
 					onfocusin={() => (paused = true)}
 					onfocusout={() => (paused = false)}
 				>
-					<p class="demo-label">One sentence, four dialects</p>
+					<p class="demo-label">One sentence, seven ways</p>
 					<div class="demo-tabs" role="group" aria-label="Dialect">
 						{#each dialects as d, i (d.label)}
 							<button
@@ -533,7 +572,7 @@
 				</p>
 				<p class="body mt-4">
 					So Parallel Arabic starts with the dialect you want to speak. Fusha is never far away:
-					compare any word across all four dialects in one tap.
+					compare any word across all seven dialects in one tap.
 				</p>
 			</div>
 
@@ -712,6 +751,7 @@
 				<article class="plan rise">
 					<h3 class="plan-name">Free</h3>
 					<p class="plan-price">$0</p>
+					<p class="plan-billed">Free forever, no card needed</p>
 					<ul class="plan-list">
 						{#each freePlan as item (item)}
 							<li>{@render check()}{item}</li>
@@ -721,8 +761,30 @@
 				</article>
 
 				<article class="plan plan--pro rise">
-					<h3 class="plan-name">Pro</h3>
-					<p class="plan-price">$10<span>/month</span></p>
+					<div class="plan-head">
+						<h3 class="plan-name">Pro</h3>
+						<div class="billing" role="group" aria-label="Billing period">
+							<button
+								type="button"
+								aria-pressed={billing === 'monthly'}
+								onclick={() => (billing = 'monthly')}>{PLANS.monthly.label}</button
+							>
+							<button
+								type="button"
+								aria-pressed={billing === 'annual'}
+								onclick={() => (billing = 'annual')}>{PLANS.annual.label}</button
+							>
+						</div>
+					</div>
+					{#if billing === 'annual'}
+						<p class="plan-price">{annualPerMonth}<span>/month</span></p>
+						<p class="plan-billed">
+							Billed {PLANS.annual.price} · <strong>{PLANS.annual.savings}</strong>
+						</p>
+					{:else}
+						<p class="plan-price">{monthlyPrice}<span>/month</span></p>
+						<p class="plan-billed">Billed monthly, cancel anytime</p>
+					{/if}
 					<p class="plan-note">Everything in Free, plus:</p>
 					<ul class="plan-list">
 						{#each proPlan as item (item)}
@@ -1144,7 +1206,7 @@
 	.demo-tabs {
 		margin-top: 0.6rem;
 		display: grid;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
+		grid-template-columns: repeat(3, minmax(0, 1fr));
 		gap: 0.25rem;
 		border-radius: 1rem;
 		background: var(--tile4);
@@ -1195,7 +1257,7 @@
 	@container (min-width: 25rem) {
 		.demo-tabs {
 			grid-template-columns: repeat(4, minmax(0, 1fr));
-			border-radius: 999px;
+			border-radius: 1.25rem;
 		}
 		.demo-tab {
 			border-radius: 999px;
@@ -1764,6 +1826,43 @@
 		font-weight: 400;
 		letter-spacing: 0;
 		color: var(--text2);
+	}
+	.plan-head {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.75rem;
+	}
+	.billing {
+		display: inline-flex;
+		gap: 0.15rem;
+		border-radius: 999px;
+		background: var(--tile5);
+		padding: 0.2rem;
+	}
+	.billing button {
+		border-radius: 999px;
+		padding: 0.3rem 0.75rem;
+		font-size: 0.8125rem;
+		font-weight: 600;
+		color: var(--text2);
+		transition:
+			background-color 150ms ease,
+			color 150ms ease;
+	}
+	.billing button[aria-pressed='true'] {
+		background: var(--tile3);
+		color: var(--text1);
+		box-shadow: 0 1px 2px rgb(0 0 0 / 0.12);
+	}
+	.plan-billed {
+		margin-top: 0.5rem;
+		font-size: 0.875rem;
+		color: var(--text2);
+	}
+	.plan-billed strong {
+		font-weight: 600;
+		color: var(--text1);
 	}
 	.plan-note {
 		margin-top: 1.25rem;

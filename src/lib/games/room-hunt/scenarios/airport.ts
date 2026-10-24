@@ -13,7 +13,7 @@ export const airport: Scenario = {
 	emoji: '✈️',
 	blurb: 'Check in for your flight, choose a seat and find your gate.',
 	npcRole: 'Check-in agent',
-	npcGender: { 'egyptian-arabic': 'f', levantine: 'f', darija: 'm', fusha: 'm' },
+	npcGender: { 'egyptian-arabic': 'f', levantine: 'f', darija: 'm', fusha: 'm', iraqi: 'f', khaleeji: 'f', saudi: 'm' },
 	doneHeading: 'Checked in, in Arabic!',
 	text: text as Scenario['text'],
 	lines: {

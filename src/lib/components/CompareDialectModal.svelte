@@ -48,9 +48,9 @@
       'levantine': 'bg-purple-500',
       'darija': 'bg-orange-500',
       'fusha': 'bg-green-500',
-      'iraqi': 'bg-teal-500',
-      'khaleeji': 'bg-amber-500',
-      'saudi': 'bg-emerald-500'
+      'iraqi': 'bg-red-500',
+      'khaleeji': 'bg-fuchsia-500',
+      'saudi': 'bg-blue-500'
     };
     return colors[dialect] || 'bg-gray-500';
   }

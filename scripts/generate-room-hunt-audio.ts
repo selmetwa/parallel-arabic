@@ -48,7 +48,10 @@ const NPC_VOICE: Record<GameDialect, Partial<Record<'m' | 'f', string>>> = {
 	'egyptian-arabic': { m: 'Haytham - Conversation', f: 'Hoda' },
 	levantine: { f: 'Sara – The Premium Humanlike Arabic Voice | سارة – الصوت العربي الواقعي الفاخر' },
 	darija: { m: 'Jawad - Natural and Conversational' },
-	fusha: { m: 'Adam - Warm & Classic' }
+	fusha: { m: 'Adam - Warm & Classic' },
+	iraqi: { f: 'Zahraa Nazar - Calm, Natural & Friendly' },
+	khaleeji: { f: 'Lama - Soft Emotional' },
+	saudi: { m: 'Faisal Ali - Sharp and Confident' }
 };
 
 async function main() {

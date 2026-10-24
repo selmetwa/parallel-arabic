@@ -9,7 +9,7 @@ vocab JSON (src/lib/games/room-hunt/). Source: content/room-hunt/<dialect>.txt
     key | arabic | transliteration | m/f | question | question transliteration
 
 Every key in every scenario must end up with a line, so nothing is half-done.
-The NPC is written as a man; npcGender is set when the dialect launches.
+The NPC gender per dialect is npcGender in each scenario .ts file.
 
 Usage: python3 -I scripts/lib/merge-room-hunt.py <dialect>
 """

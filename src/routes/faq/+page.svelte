@@ -50,7 +50,7 @@
     {
       id: 'what-dialects',
       question: 'What Arabic Dialects Does Parallel Arabic Support?',
-      answer: 'Parallel Arabic supports four major Arabic dialects: Egyptian Arabic (the most widely understood), Levantine Arabic (spoken in Syria, Lebanon, Palestine, and Jordan), Moroccan Darija (Moroccan Arabic), and Modern Standard Arabic (Fusha). Each dialect has its own lessons, stories, vocabulary, and practice materials.'
+      answer: 'Parallel Arabic supports seven varieties of Arabic: Egyptian Arabic (the most widely understood), Levantine Arabic (spoken in Syria, Lebanon, Palestine, and Jordan), Moroccan Darija (Moroccan Arabic), Iraqi Arabic, Gulf Arabic (Khaleeji, spoken in the UAE, Kuwait, Qatar and Bahrain), Saudi Arabic (the Hijazi dialect of Jeddah and Mecca), and Modern Standard Arabic (Fusha). Each has its own lessons, vocabulary, and practice materials.'
     },
     {
       id: 'how-it-works',

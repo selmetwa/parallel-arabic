@@ -9,7 +9,7 @@
 			icon: '🗺️',
 			title: 'Structured path',
 			note: 'A step-by-step curriculum from the alphabet upwards, one module at a time.',
-			pills: ['4 dialects', 'A1 to C2', 'Tracks your progress'],
+			pills: ['7 dialects', 'A1 to C2', 'Tracks your progress'],
 			cta: 'Explore the curriculum',
 			accent: '#0ea5e9',
 			deep: '#0369a1'
@@ -43,7 +43,7 @@
 		{
 			emoji: '🌍',
 			title: 'Dialect comparison',
-			body: 'See how a phrase changes across all four dialects.',
+			body: 'See how a phrase changes across all seven dialects.',
 			accent: '#10b981'
 		}
 	];
@@ -53,7 +53,7 @@
 	<div class="inner">
 		<header class="hero">
 			<h1>Lessons</h1>
-			<p>Follow a structured path, or make a lesson on any topic, in four Arabic dialects.</p>
+			<p>Follow a structured path, or make a lesson on any topic, in seven Arabic dialects.</p>
 		</header>
 
 		<div class="step-head">

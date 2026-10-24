@@ -1,15 +1,10 @@
-import type { PageServerLoad, EntryGenerator } from './$types';
+import type { PageServerLoad } from './$types';
 import { error } from '@sveltejs/kit';
 import { VERB_DIALECTS, loadVerb, verbIndexFor } from '$lib/data/verb-conjugations/manifest';
 
-// The conjugation data is static JSON committed to the repo, so these pages are
-// built once at deploy time rather than server-rendered on every request.
-export const prerender = true;
-
-export const entries: EntryGenerator = () =>
-  VERB_DIALECTS.flatMap((dialect) =>
-    verbIndexFor(dialect).map((verb) => ({ dialect, verb: verb.slug }))
-  );
+// Not prerendered: the Vercel adapter adds two routes per prerendered page and
+// Vercel caps a deployment at 2048 routes. These ~500 pages would push us over;
+// the data is bundled static JSON, so server-rendering them is cheap.
 
 export const load: PageServerLoad = async ({ params }) => {
   const verb = await loadVerb(params.dialect, params.verb);

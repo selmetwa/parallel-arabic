@@ -13,7 +13,7 @@ export const pharmacy: Scenario = {
 	emoji: '💊',
 	blurb: 'Say what hurts, answer a few questions and get the right medicine.',
 	npcRole: 'Pharmacist',
-	npcGender: { 'egyptian-arabic': 'f', levantine: 'f', darija: 'm', fusha: 'm' },
+	npcGender: { 'egyptian-arabic': 'f', levantine: 'f', darija: 'm', fusha: 'm', iraqi: 'f', khaleeji: 'f', saudi: 'm' },
 	doneHeading: 'Medicine bought in Arabic!',
 	text: text as Scenario['text'],
 	lines: {

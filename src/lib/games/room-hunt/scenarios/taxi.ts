@@ -16,7 +16,7 @@ export const taxi: Scenario = {
 	emoji: '🚕',
 	blurb: 'Say where you are going, haggle the fare, give directions and pay.',
 	npcRole: 'Driver',
-	npcGender: { 'egyptian-arabic': 'm', levantine: 'f', darija: 'm', fusha: 'm' },
+	npcGender: { 'egyptian-arabic': 'm', levantine: 'f', darija: 'm', fusha: 'm', iraqi: 'f', khaleeji: 'f', saudi: 'm' },
 	doneHeading: 'You made it to the station!',
 	text: text as Scenario['text'],
 	lines: {

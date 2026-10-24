@@ -12,7 +12,7 @@ export const restaurant: Scenario = {
 	emoji: '🍽️',
 	blurb: 'Sit down, order a drink and a main, decide on dessert and ask for the bill.',
 	npcRole: 'Waiter',
-	npcGender: { 'egyptian-arabic': 'm', levantine: 'f', darija: 'm', fusha: 'm' },
+	npcGender: { 'egyptian-arabic': 'm', levantine: 'f', darija: 'm', fusha: 'm', iraqi: 'f', khaleeji: 'f', saudi: 'm' },
 	doneHeading: 'Dinner ordered in Arabic!',
 	text: text as Scenario['text'],
 	lines: {

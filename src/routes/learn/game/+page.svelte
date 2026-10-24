@@ -112,8 +112,8 @@
 	<section class="info">
 		<h2 class="section-title">About these games</h2>
 		<p class="about">
-			Short games for Arabic vocabulary and grammar in Egyptian Arabic, Levantine, Moroccan Darija
-			and Modern Standard Arabic. Every game has two free rounds, with no account needed. Pick one,
+			Short games for Arabic vocabulary and grammar in Egyptian Arabic, Levantine, Moroccan Darija,
+			Iraqi, Gulf, Saudi and Modern Standard Arabic. Every game has two free rounds, with no account needed. Pick one,
 			choose your dialect, and play.
 		</p>
 	</section>

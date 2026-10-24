@@ -36,7 +36,10 @@ export { baseCurriculumV2A1B2 };
 export const curriculumV2: Partial<Record<Dialect, CurriculumV2Module[]>> = {
 	'egyptian-arabic': curriculumEgyptianV2,
 	levantine: baseCurriculumV2A1B2,
-	fusha: baseCurriculumV2A1B2
+	fusha: baseCurriculumV2A1B2,
+	iraqi: baseCurriculumV2A1B2,
+	khaleeji: baseCurriculumV2A1B2,
+	saudi: baseCurriculumV2A1B2
 };
 
 /** Dialects that currently have a v2 curriculum (and therefore v2 lessons). */

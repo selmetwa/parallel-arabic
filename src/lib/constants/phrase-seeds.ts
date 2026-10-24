@@ -47,5 +47,5 @@ export const PHRASE_SEEDS: PhraseSeed[] = [
 	{ slug: 'see-you-later', english: 'see you later' }
 ];
 
-export const PHRASE_DIALECTS = ['egyptian-arabic', 'levantine', 'darija', 'fusha'] as const;
+export const PHRASE_DIALECTS = ['egyptian-arabic', 'levantine', 'darija', 'fusha', 'iraqi', 'khaleeji', 'saudi'] as const;
 export type PhraseDialect = (typeof PHRASE_DIALECTS)[number];

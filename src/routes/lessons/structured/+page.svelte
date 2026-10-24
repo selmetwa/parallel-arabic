@@ -51,8 +51,8 @@
 			label: 'Iraqi Arabic',
 			sub: 'Baghdadi',
 			note: 'Baghdad, Basra and across Iraq',
-			accent: '#14b8a6',
-			deep: '#0f766e'
+			accent: '#dc2626',
+			deep: '#991b1b'
 		},
 		{
 			dialect: 'khaleeji',
@@ -61,8 +61,8 @@
 			label: 'Gulf Arabic',
 			sub: 'Khaleeji',
 			note: 'UAE, Kuwait, Qatar, Bahrain and Oman',
-			accent: '#06b6d4',
-			deep: '#0e7490'
+			accent: '#c026d3',
+			deep: '#86198f'
 		},
 		{
 			dialect: 'saudi',
@@ -71,8 +71,8 @@
 			label: 'Saudi Arabic',
 			sub: 'Hijazi',
 			note: 'Jeddah, Mecca and the Hijaz',
-			accent: '#84cc16',
-			deep: '#4d7c0f'
+			accent: '#2563eb',
+			deep: '#1e40af'
 		}
 	].filter((d) => isSelectableDialect(d.dialect));
 </script>

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { QUESTIONS_PER_ROUND, allDistinct, buildRound, isDistinct } from './dialect-match';
+import { FIND_OPTIONS, QUESTIONS_PER_ROUND, buildRound, findOptions, isDistinct } from './dialect-match';
 import { dialectMatchItems } from '$lib/server/games/dialect-match-items';
 import { GAME_DIALECTS } from './themes';
 
@@ -16,9 +16,11 @@ describe('dialectMatchItems', () => {
 		}
 	});
 
-	it('keeps the hand-written sets four-way distinct', () => {
+	it('can ask every hand-written set as a "find" question in any dialect', () => {
 		for (const item of items.filter((i) => !/^(room|phrase)-/.test(i.id))) {
-			expect(allDistinct(item), item.id).toBe(true);
+			for (const d of GAME_DIALECTS) {
+				expect(findOptions(item, d), `${item.id} ${d}`).not.toBeNull();
+			}
 		}
 	});
 
@@ -39,8 +41,10 @@ describe('buildRound', () => {
 			expect(new Set(round.map((q) => q.item.id)).size).toBe(round.length);
 			for (const q of round) {
 				if (q.kind === 'find') {
-					expect(allDistinct(q.item)).toBe(true);
-					expect([...q.options].sort()).toEqual([...GAME_DIALECTS].sort());
+					expect(q.options).toHaveLength(FIND_OPTIONS);
+					expect(q.options).toContain(q.dialect);
+					const forms = q.options.map((d) => q.item.forms[d].arabic);
+					expect(new Set(forms).size).toBe(FIND_OPTIONS);
 				} else {
 					expect(isDistinct(q.item, q.dialect)).toBe(true);
 				}

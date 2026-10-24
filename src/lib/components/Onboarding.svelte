@@ -135,24 +135,24 @@
 			label: 'Iraqi',
 			emoji: '🇮🇶',
 			description: 'Baghdad, Basra and across Iraq',
-			accent: '#14b8a6',
-			deep: '#0f766e'
+			accent: '#dc2626',
+			deep: '#991b1b'
 		},
 		{
 			id: 'khaleeji',
 			label: 'Khaleeji',
 			emoji: '🇦🇪',
 			description: 'UAE, Kuwait, Qatar, Bahrain and Oman',
-			accent: '#06b6d4',
-			deep: '#0e7490'
+			accent: '#c026d3',
+			deep: '#86198f'
 		},
 		{
 			id: 'saudi',
 			label: 'Saudi',
 			emoji: '🇸🇦',
 			description: 'Jeddah, Mecca and the Hijaz',
-			accent: '#84cc16',
-			deep: '#4d7c0f'
+			accent: '#2563eb',
+			deep: '#1e40af'
 		}
 	].filter((d) => isSelectableDialect(d.id));
 
@@ -466,8 +466,8 @@
 								class="mb-8 max-w-md text-base leading-relaxed text-text-200 sm:mb-10 sm:text-lg"
 								in:fly={{ y: 20, duration: 500, delay: 500, easing: cubicOut }}
 							>
-								Arabic isn't one language — it's Egyptian, Levantine, Moroccan, Modern Standard, and
-								more. Parallel Arabic is built around the variety you actually want to learn. Let's
+								Arabic isn't one language — it's Egyptian, Levantine, Gulf, Iraqi, Moroccan, Modern
+								Standard, and more. Parallel Arabic is built around the variety you actually want to learn. Let's
 								set you up in a few quick steps.
 							</p>
 

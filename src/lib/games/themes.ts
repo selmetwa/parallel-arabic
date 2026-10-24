@@ -7,7 +7,15 @@
  * Levantine has no house category.
  */
 
-export const GAME_DIALECTS = ['egyptian-arabic', 'levantine', 'darija', 'fusha'] as const;
+export const GAME_DIALECTS = [
+	'egyptian-arabic',
+	'levantine',
+	'darija',
+	'fusha',
+	'iraqi',
+	'khaleeji',
+	'saudi'
+] as const;
 export type GameDialect = (typeof GAME_DIALECTS)[number];
 
 export function isGameDialect(value: unknown): value is GameDialect {
@@ -18,7 +26,10 @@ export const DIALECT_OPTIONS: { value: GameDialect; label: string; emoji: string
 	{ value: 'egyptian-arabic', label: 'Egyptian', emoji: '🇪🇬' },
 	{ value: 'levantine', label: 'Levantine', emoji: '🇱🇧' },
 	{ value: 'darija', label: 'Darija', emoji: '🇲🇦' },
-	{ value: 'fusha', label: 'Fusha', emoji: '📖' }
+	{ value: 'fusha', label: 'Fusha', emoji: '📖' },
+	{ value: 'iraqi', label: 'Iraqi', emoji: '🇮🇶' },
+	{ value: 'khaleeji', label: 'Khaleeji', emoji: '🇦🇪' },
+	{ value: 'saudi', label: 'Saudi', emoji: '🇸🇦' }
 ];
 
 export interface GameTheme {
@@ -37,7 +48,10 @@ export const GAME_THEMES: GameTheme[] = [
 			'egyptian-arabic': 'food_and_drink',
 			levantine: 'food_and_drink_2',
 			darija: 'food_and_drink_5',
-			fusha: 'food'
+			fusha: 'food',
+			iraqi: 'food_and_drink',
+			khaleeji: 'food_and_drink',
+			saudi: 'food_and_drink'
 		}
 	},
 	{
@@ -48,7 +62,10 @@ export const GAME_THEMES: GameTheme[] = [
 			'egyptian-arabic': 'animals',
 			levantine: 'animals_2',
 			darija: 'animals_5',
-			fusha: 'animals'
+			fusha: 'animals',
+			iraqi: 'animals',
+			khaleeji: 'animals',
+			saudi: 'animals'
 		}
 	},
 	{
@@ -58,7 +75,10 @@ export const GAME_THEMES: GameTheme[] = [
 		categories: {
 			'egyptian-arabic': 'around_the_house',
 			darija: 'around_the_house_4',
-			fusha: 'vocabulary_from_around_the_house'
+			fusha: 'vocabulary_from_around_the_house',
+			iraqi: 'around_the_house',
+			khaleeji: 'around_the_house',
+			saudi: 'around_the_house'
 		}
 	},
 	{
@@ -69,7 +89,10 @@ export const GAME_THEMES: GameTheme[] = [
 			'egyptian-arabic': 'family',
 			levantine: 'family_2',
 			darija: 'family_5',
-			fusha: 'mankind_and_kinship'
+			fusha: 'mankind_and_kinship',
+			iraqi: 'family',
+			khaleeji: 'family',
+			saudi: 'family'
 		}
 	},
 	{
@@ -80,7 +103,10 @@ export const GAME_THEMES: GameTheme[] = [
 			'egyptian-arabic': 'clothing_jewelry_and_accessories',
 			levantine: 'clothing_jewelry_and_accessories_2',
 			darija: 'clothing_jewelry_and_accessories_5',
-			fusha: 'clothing'
+			fusha: 'clothing',
+			iraqi: 'clothing_jewelry_and_accessories',
+			khaleeji: 'clothing_jewelry_and_accessories',
+			saudi: 'clothing_jewelry_and_accessories'
 		}
 	},
 	{
@@ -91,7 +117,10 @@ export const GAME_THEMES: GameTheme[] = [
 			'egyptian-arabic': 'cars_and_other_transportation',
 			levantine: 'cars_and_other_transportation_2',
 			darija: 'cars_and_other_transportation_5',
-			fusha: 'city_and_transportation'
+			fusha: 'city_and_transportation',
+			iraqi: 'cars_and_other_transportation',
+			khaleeji: 'cars_and_other_transportation',
+			saudi: 'cars_and_other_transportation'
 		}
 	},
 	{
@@ -102,7 +131,10 @@ export const GAME_THEMES: GameTheme[] = [
 			'egyptian-arabic': 'weather',
 			levantine: 'weather_2',
 			darija: 'weather_5',
-			fusha: 'nature__and__weather'
+			fusha: 'nature__and__weather',
+			iraqi: 'weather',
+			khaleeji: 'weather',
+			saudi: 'weather'
 		}
 	},
 	{
@@ -113,7 +145,10 @@ export const GAME_THEMES: GameTheme[] = [
 			'egyptian-arabic': 'work_and_professions',
 			levantine: 'work_and_professions_2',
 			darija: 'work_and_professions_4',
-			fusha: 'work_and_money'
+			fusha: 'work_and_money',
+			iraqi: 'work_and_professions',
+			khaleeji: 'work_and_professions',
+			saudi: 'work_and_professions'
 		}
 	}
 ];
@@ -134,8 +169,7 @@ export function resolveTheme(dialect: GameDialect, themeId: string | null | unde
 
 /**
  * Starting dialect for a game page: `?dialect=` if valid, then the learner's own
- * target dialect, then Egyptian. A target dialect the games don't cover yet
- * (Iraqi, Khaleeji) falls through to the default.
+ * target dialect, then Egyptian.
  */
 export function initialDialect(
 	param: string | null,
