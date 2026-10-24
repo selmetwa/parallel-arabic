@@ -1,0 +1,1853 @@
+{
+	"vocab": [
+		{
+			"arabic": "راح",
+			"arabicTashkeel": "راح",
+			"english": "Went",
+			"transliteration": "raa7",
+			"wordAlignments": [
+				{
+					"arabic": "راح",
+					"english": "He went",
+					"transliteration": "raa7"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "أكل",
+			"arabicTashkeel": "أكَل",
+			"english": "Ate",
+			"transliteration": "akal",
+			"wordAlignments": [
+				{
+					"arabic": "أكل",
+					"english": "He ate",
+					"transliteration": "akal"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "شرب",
+			"arabicTashkeel": "شِرِب",
+			"english": "Drank",
+			"transliteration": "shirib",
+			"wordAlignments": [
+				{
+					"arabic": "شرب",
+					"english": "He drank",
+					"transliteration": "shirib"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "اشتغل",
+			"arabicTashkeel": "اِشتَغَل",
+			"english": "Worked",
+			"transliteration": "ishtaghal",
+			"wordAlignments": [
+				{
+					"arabic": "اشتغل",
+					"english": "He worked",
+					"transliteration": "ishtaghal"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "شاف",
+			"arabicTashkeel": "شاف",
+			"english": "Saw",
+			"transliteration": "shaaf",
+			"wordAlignments": [
+				{
+					"arabic": "شاف",
+					"english": "He saw",
+					"transliteration": "shaaf"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "اتكلم",
+			"arabicTashkeel": "اِتكَلَّم",
+			"english": "Spoke",
+			"transliteration": "itkallam",
+			"wordAlignments": [
+				{
+					"arabic": "اتكلم",
+					"english": "He spoke",
+					"transliteration": "itkallam"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "كتب",
+			"arabicTashkeel": "كَتَب",
+			"english": "Wrote",
+			"transliteration": "katab",
+			"wordAlignments": [
+				{
+					"arabic": "كتب",
+					"english": "He wrote",
+					"transliteration": "katab"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "قرا",
+			"arabicTashkeel": "قَرا",
+			"english": "Read (past)",
+			"transliteration": "gara",
+			"wordAlignments": [
+				{
+					"arabic": "قرا",
+					"english": "He read",
+					"transliteration": "gara"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "نام",
+			"arabicTashkeel": "نام",
+			"english": "Slept",
+			"transliteration": "naam",
+			"wordAlignments": [
+				{
+					"arabic": "نام",
+					"english": "He slept",
+					"transliteration": "naam"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "طبخ",
+			"arabicTashkeel": "طَبَخ",
+			"english": "Cooked",
+			"transliteration": "tabakh",
+			"wordAlignments": [
+				{
+					"arabic": "طبخ",
+					"english": "He cooked",
+					"transliteration": "tabakh"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "ذاكر",
+			"arabicTashkeel": "ذاكَر",
+			"english": "Studied",
+			"transliteration": "zaakar",
+			"wordAlignments": [
+				{
+					"arabic": "ذاكر",
+					"english": "He studied",
+					"transliteration": "zaakar"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "جا",
+			"arabicTashkeel": "جا",
+			"english": "Came",
+			"transliteration": "ja",
+			"wordAlignments": [
+				{
+					"arabic": "جا",
+					"english": "He came",
+					"transliteration": "ja"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "اشترى",
+			"arabicTashkeel": "اِشتَرى",
+			"english": "Bought",
+			"transliteration": "ishtara",
+			"wordAlignments": [
+				{
+					"arabic": "اشترى",
+					"english": "He bought",
+					"transliteration": "ishtara"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "سوى",
+			"arabicTashkeel": "سَوّى",
+			"english": "Did",
+			"transliteration": "sawwa",
+			"wordAlignments": [
+				{
+					"arabic": "سوى",
+					"english": "He did",
+					"transliteration": "sawwa"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "قال",
+			"arabicTashkeel": "قال",
+			"english": "Said",
+			"transliteration": "gaal",
+			"wordAlignments": [
+				{
+					"arabic": "قال",
+					"english": "He said",
+					"transliteration": "gaal"
+				}
+			],
+			"partOfSpeech": "verb"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "أمس رحت المول.",
+			"arabicTashkeel": "أمس رُحت المول.",
+			"english": "Yesterday I went to the mall.",
+			"transliteration": "ams ru7t il-mool.",
+			"wordAlignments": [
+				{
+					"arabic": "أمس",
+					"english": "Yesterday",
+					"transliteration": "ams"
+				},
+				{
+					"arabic": "رحت",
+					"english": "I went",
+					"transliteration": "ru7t"
+				},
+				{
+					"arabic": "المول.",
+					"english": "to the mall.",
+					"transliteration": "il-mool."
+				}
+			],
+			"targetWords": [
+				"Went"
+			]
+		},
+		{
+			"arabic": "فين رحت؟",
+			"arabicTashkeel": "فين رُحت؟",
+			"english": "Where did you go?",
+			"transliteration": "feen ru7t?",
+			"wordAlignments": [
+				{
+					"arabic": "فين",
+					"english": "Where",
+					"transliteration": "feen"
+				},
+				{
+					"arabic": "رحت؟",
+					"english": "did you go?",
+					"transliteration": "ru7t?"
+				}
+			],
+			"targetWords": [
+				"Went"
+			]
+		},
+		{
+			"arabic": "رحتي الدوام؟",
+			"arabicTashkeel": "رُحتي الدَّوام؟",
+			"english": "Did you go to work?",
+			"transliteration": "ru7ti id-dawaam?",
+			"wordAlignments": [
+				{
+					"arabic": "رحتي",
+					"english": "Did you go",
+					"transliteration": "ru7ti"
+				},
+				{
+					"arabic": "الدوام؟",
+					"english": "to work?",
+					"transliteration": "id-dawaam?"
+				}
+			],
+			"targetWords": [
+				"Went"
+			]
+		},
+		{
+			"arabic": "راح الطايف.",
+			"arabicTashkeel": "راح الطّايِف.",
+			"english": "He went to Taif.",
+			"transliteration": "raa7 it-taayif.",
+			"wordAlignments": [
+				{
+					"arabic": "راح",
+					"english": "He went",
+					"transliteration": "raa7"
+				},
+				{
+					"arabic": "الطايف.",
+					"english": "to Taif.",
+					"transliteration": "it-taayif."
+				}
+			],
+			"targetWords": [
+				"Went"
+			]
+		},
+		{
+			"arabic": "راحت البيت.",
+			"arabicTashkeel": "راحَت البيت.",
+			"english": "She went home.",
+			"transliteration": "raa7at il-bait.",
+			"wordAlignments": [
+				{
+					"arabic": "راحت",
+					"english": "She went",
+					"transliteration": "raa7at"
+				},
+				{
+					"arabic": "البيت.",
+					"english": "home.",
+					"transliteration": "il-bait."
+				}
+			],
+			"targetWords": [
+				"Went"
+			]
+		},
+		{
+			"arabic": "أكلت كبسة.",
+			"arabicTashkeel": "أكَلت كَبسة.",
+			"english": "I ate kabsa.",
+			"transliteration": "akalt kabsa.",
+			"wordAlignments": [
+				{
+					"arabic": "أكلت",
+					"english": "I ate",
+					"transliteration": "akalt"
+				},
+				{
+					"arabic": "كبسة.",
+					"english": "kabsa.",
+					"transliteration": "kabsa."
+				}
+			],
+			"targetWords": [
+				"Ate"
+			]
+		},
+		{
+			"arabic": "إيش أكلت؟",
+			"arabicTashkeel": "إيش أكَلت؟",
+			"english": "What did you eat?",
+			"transliteration": "eesh akalt?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "أكلت؟",
+					"english": "did you eat?",
+					"transliteration": "akalt?"
+				}
+			],
+			"targetWords": [
+				"Ate"
+			]
+		},
+		{
+			"arabic": "أكل سمك.",
+			"arabicTashkeel": "أكَل سَمَك.",
+			"english": "He ate fish.",
+			"transliteration": "akal samak.",
+			"wordAlignments": [
+				{
+					"arabic": "أكل",
+					"english": "He ate",
+					"transliteration": "akal"
+				},
+				{
+					"arabic": "سمك.",
+					"english": "fish.",
+					"transliteration": "samak."
+				}
+			],
+			"targetWords": [
+				"Ate"
+			]
+		},
+		{
+			"arabic": "أكلت عيش مع جبنة.",
+			"arabicTashkeel": "أكلَت عيش مَعَ جِبنة.",
+			"english": "She ate bread with cheese.",
+			"transliteration": "aklat 3eesh ma3a jibna.",
+			"wordAlignments": [
+				{
+					"arabic": "أكلت",
+					"english": "She ate",
+					"transliteration": "aklat"
+				},
+				{
+					"arabic": "عيش",
+					"english": "bread",
+					"transliteration": "3eesh"
+				},
+				{
+					"arabic": "مع",
+					"english": "with",
+					"transliteration": "ma3a"
+				},
+				{
+					"arabic": "جبنة.",
+					"english": "cheese.",
+					"transliteration": "jibna."
+				}
+			],
+			"targetWords": [
+				"Ate"
+			]
+		},
+		{
+			"arabic": "شربت شاهي الصبح.",
+			"arabicTashkeel": "شِرِبت شاهي الصُّبح.",
+			"english": "I drank tea in the morning.",
+			"transliteration": "shiribt shaahi is-sub7.",
+			"wordAlignments": [
+				{
+					"arabic": "شربت",
+					"english": "I drank",
+					"transliteration": "shiribt"
+				},
+				{
+					"arabic": "شاهي",
+					"english": "tea",
+					"transliteration": "shaahi"
+				},
+				{
+					"arabic": "الصبح.",
+					"english": "in the morning.",
+					"transliteration": "is-sub7."
+				}
+			],
+			"targetWords": [
+				"Drank"
+			]
+		},
+		{
+			"arabic": "شربت موية؟",
+			"arabicTashkeel": "شِرِبت مُويَة؟",
+			"english": "Did you drink water?",
+			"transliteration": "shiribt mooya?",
+			"wordAlignments": [
+				{
+					"arabic": "شربت",
+					"english": "Did you drink",
+					"transliteration": "shiribt"
+				},
+				{
+					"arabic": "موية؟",
+					"english": "water?",
+					"transliteration": "mooya?"
+				}
+			],
+			"targetWords": [
+				"Drank"
+			]
+		},
+		{
+			"arabic": "شرب قهوة.",
+			"arabicTashkeel": "شِرِب قَهوة.",
+			"english": "He drank coffee.",
+			"transliteration": "shirib gahwa.",
+			"wordAlignments": [
+				{
+					"arabic": "شرب",
+					"english": "He drank",
+					"transliteration": "shirib"
+				},
+				{
+					"arabic": "قهوة.",
+					"english": "coffee.",
+					"transliteration": "gahwa."
+				}
+			],
+			"targetWords": [
+				"Drank"
+			]
+		},
+		{
+			"arabic": "اشتغلت كتير أمس.",
+			"arabicTashkeel": "اِشتَغَلت كِتير أمس.",
+			"english": "I worked a lot yesterday.",
+			"transliteration": "ishtaghalt kteer ams.",
+			"wordAlignments": [
+				{
+					"arabic": "اشتغلت",
+					"english": "I worked",
+					"transliteration": "ishtaghalt"
+				},
+				{
+					"arabic": "كتير",
+					"english": "a lot",
+					"transliteration": "kteer"
+				},
+				{
+					"arabic": "أمس.",
+					"english": "yesterday.",
+					"transliteration": "ams."
+				}
+			],
+			"targetWords": [
+				"Worked"
+			]
+		},
+		{
+			"arabic": "فين اشتغلت؟",
+			"arabicTashkeel": "فين اِشتَغَلت؟",
+			"english": "Where did you work?",
+			"transliteration": "feen ishtaghalt?",
+			"wordAlignments": [
+				{
+					"arabic": "فين",
+					"english": "Where",
+					"transliteration": "feen"
+				},
+				{
+					"arabic": "اشتغلت؟",
+					"english": "did you work?",
+					"transliteration": "ishtaghalt?"
+				}
+			],
+			"targetWords": [
+				"Worked"
+			]
+		},
+		{
+			"arabic": "اشتغلت في المستشفى.",
+			"arabicTashkeel": "اِشتَغلَت في المُستَشفى.",
+			"english": "She worked at the hospital.",
+			"transliteration": "ishtaghalat fi il-mustashfa.",
+			"wordAlignments": [
+				{
+					"arabic": "اشتغلت",
+					"english": "She worked",
+					"transliteration": "ishtaghalat"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "المستشفى.",
+					"english": "the hospital.",
+					"transliteration": "il-mustashfa."
+				}
+			],
+			"targetWords": [
+				"Worked"
+			]
+		},
+		{
+			"arabic": "شفت فيصل في المول.",
+			"arabicTashkeel": "شُفت فَيصَل في المول.",
+			"english": "I saw Faisal at the mall.",
+			"transliteration": "shuft faisal fi il-mool.",
+			"wordAlignments": [
+				{
+					"arabic": "شفت",
+					"english": "I saw",
+					"transliteration": "shuft"
+				},
+				{
+					"arabic": "فيصل",
+					"english": "Faisal",
+					"transliteration": "faisal"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "المول.",
+					"english": "the mall.",
+					"transliteration": "il-mool."
+				}
+			],
+			"targetWords": [
+				"Saw"
+			]
+		},
+		{
+			"arabic": "شفت السيارة؟",
+			"arabicTashkeel": "شُفت السَّيّارة؟",
+			"english": "Did you see the car?",
+			"transliteration": "shuft is-sayyaara?",
+			"wordAlignments": [
+				{
+					"arabic": "شفت",
+					"english": "Did you see",
+					"transliteration": "shuft"
+				},
+				{
+					"arabic": "السيارة؟",
+					"english": "the car?",
+					"transliteration": "is-sayyaara?"
+				}
+			],
+			"targetWords": [
+				"Saw"
+			]
+		},
+		{
+			"arabic": "شاف عيلته.",
+			"arabicTashkeel": "شاف عيلتُه.",
+			"english": "He saw his family.",
+			"transliteration": "shaaf 3eelatu.",
+			"wordAlignments": [
+				{
+					"arabic": "شاف",
+					"english": "He saw",
+					"transliteration": "shaaf"
+				},
+				{
+					"arabic": "عيلته.",
+					"english": "his family.",
+					"transliteration": "3eelatu."
+				}
+			],
+			"targetWords": [
+				"Saw"
+			]
+		},
+		{
+			"arabic": "شافت فيلم حلو.",
+			"arabicTashkeel": "شافَت فيلم حِلو.",
+			"english": "She saw a nice film.",
+			"transliteration": "shaafat film 7ilu.",
+			"wordAlignments": [
+				{
+					"arabic": "شافت",
+					"english": "She saw",
+					"transliteration": "shaafat"
+				},
+				{
+					"arabic": "فيلم",
+					"english": "a film",
+					"transliteration": "film"
+				},
+				{
+					"arabic": "حلو.",
+					"english": "nice.",
+					"transliteration": "7ilu."
+				}
+			],
+			"targetWords": [
+				"Saw"
+			]
+		},
+		{
+			"arabic": "اتكلمت مع المدرس.",
+			"arabicTashkeel": "اِتكَلَّمت مَعَ المُدَرِّس.",
+			"english": "I spoke with the teacher.",
+			"transliteration": "itkallamt ma3a il-mudarris.",
+			"wordAlignments": [
+				{
+					"arabic": "اتكلمت",
+					"english": "I spoke",
+					"transliteration": "itkallamt"
+				},
+				{
+					"arabic": "مع",
+					"english": "with",
+					"transliteration": "ma3a"
+				},
+				{
+					"arabic": "المدرس.",
+					"english": "the teacher.",
+					"transliteration": "il-mudarris."
+				}
+			],
+			"targetWords": [
+				"Spoke"
+			]
+		},
+		{
+			"arabic": "اتكلمت معاه؟",
+			"arabicTashkeel": "اِتكَلَّمت مَعاه؟",
+			"english": "Did you speak with him?",
+			"transliteration": "itkallamt ma3aah?",
+			"wordAlignments": [
+				{
+					"arabic": "اتكلمت",
+					"english": "Did you speak",
+					"transliteration": "itkallamt"
+				},
+				{
+					"arabic": "معاه؟",
+					"english": "with him?",
+					"transliteration": "ma3aah?"
+				}
+			],
+			"targetWords": [
+				"Spoke"
+			]
+		},
+		{
+			"arabic": "اتكلم عربي.",
+			"arabicTashkeel": "اِتكَلَّم عَرَبي.",
+			"english": "He spoke Arabic.",
+			"transliteration": "itkallam 3arabi.",
+			"wordAlignments": [
+				{
+					"arabic": "اتكلم",
+					"english": "He spoke",
+					"transliteration": "itkallam"
+				},
+				{
+					"arabic": "عربي.",
+					"english": "Arabic.",
+					"transliteration": "3arabi."
+				}
+			],
+			"targetWords": [
+				"Spoke"
+			]
+		},
+		{
+			"arabic": "كتبت رسالة.",
+			"arabicTashkeel": "كَتَبت رِسالة.",
+			"english": "I wrote a letter.",
+			"transliteration": "katabt risaala.",
+			"wordAlignments": [
+				{
+					"arabic": "كتبت",
+					"english": "I wrote",
+					"transliteration": "katabt"
+				},
+				{
+					"arabic": "رسالة.",
+					"english": "a letter.",
+					"transliteration": "risaala."
+				}
+			],
+			"targetWords": [
+				"Wrote"
+			]
+		},
+		{
+			"arabic": "كتبت إسمك؟",
+			"arabicTashkeel": "كَتَبت إسمَك؟",
+			"english": "Did you write your name?",
+			"transliteration": "katabt ismak?",
+			"wordAlignments": [
+				{
+					"arabic": "كتبت",
+					"english": "Did you write",
+					"transliteration": "katabt"
+				},
+				{
+					"arabic": "إسمك؟",
+					"english": "your name?",
+					"transliteration": "ismak?"
+				}
+			],
+			"targetWords": [
+				"Wrote"
+			]
+		},
+		{
+			"arabic": "كتبت الواجب.",
+			"arabicTashkeel": "كَتبَت الواجِب.",
+			"english": "She wrote the homework.",
+			"transliteration": "katabat il-waajib.",
+			"wordAlignments": [
+				{
+					"arabic": "كتبت",
+					"english": "She wrote",
+					"transliteration": "katabat"
+				},
+				{
+					"arabic": "الواجب.",
+					"english": "the homework.",
+					"transliteration": "il-waajib."
+				}
+			],
+			"targetWords": [
+				"Wrote"
+			]
+		},
+		{
+			"arabic": "قريت الكتاب.",
+			"arabicTashkeel": "قَريت الكِتاب.",
+			"english": "I read the book.",
+			"transliteration": "gareet il-kitaab.",
+			"wordAlignments": [
+				{
+					"arabic": "قريت",
+					"english": "I read",
+					"transliteration": "gareet"
+				},
+				{
+					"arabic": "الكتاب.",
+					"english": "the book.",
+					"transliteration": "il-kitaab."
+				}
+			],
+			"targetWords": [
+				"Read (past)"
+			]
+		},
+		{
+			"arabic": "قريت الجريدة؟",
+			"arabicTashkeel": "قَريت الجَريدة؟",
+			"english": "Did you read the newspaper?",
+			"transliteration": "gareet ij-jareeda?",
+			"wordAlignments": [
+				{
+					"arabic": "قريت",
+					"english": "Did you read",
+					"transliteration": "gareet"
+				},
+				{
+					"arabic": "الجريدة؟",
+					"english": "the newspaper?",
+					"transliteration": "ij-jareeda?"
+				}
+			],
+			"targetWords": [
+				"Read (past)"
+			]
+		},
+		{
+			"arabic": "قرا القصة.",
+			"arabicTashkeel": "قَرا القِصّة.",
+			"english": "He read the story.",
+			"transliteration": "gara il-gissa.",
+			"wordAlignments": [
+				{
+					"arabic": "قرا",
+					"english": "He read",
+					"transliteration": "gara"
+				},
+				{
+					"arabic": "القصة.",
+					"english": "the story.",
+					"transliteration": "il-gissa."
+				}
+			],
+			"targetWords": [
+				"Read (past)"
+			]
+		},
+		{
+			"arabic": "نمت بدري.",
+			"arabicTashkeel": "نِمت بَدري.",
+			"english": "I slept early.",
+			"transliteration": "nimt badri.",
+			"wordAlignments": [
+				{
+					"arabic": "نمت",
+					"english": "I slept",
+					"transliteration": "nimt"
+				},
+				{
+					"arabic": "بدري.",
+					"english": "early.",
+					"transliteration": "badri."
+				}
+			],
+			"targetWords": [
+				"Slept"
+			]
+		},
+		{
+			"arabic": "نمت كويس؟",
+			"arabicTashkeel": "نِمت كْوَيِّس؟",
+			"english": "Did you sleep well?",
+			"transliteration": "nimt kwayyis?",
+			"wordAlignments": [
+				{
+					"arabic": "نمت",
+					"english": "Did you sleep",
+					"transliteration": "nimt"
+				},
+				{
+					"arabic": "كويس؟",
+					"english": "well?",
+					"transliteration": "kwayyis?"
+				}
+			],
+			"targetWords": [
+				"Slept"
+			]
+		},
+		{
+			"arabic": "البيبي نام.",
+			"arabicTashkeel": "البيبي نام.",
+			"english": "The baby slept.",
+			"transliteration": "il-beebi naam.",
+			"wordAlignments": [
+				{
+					"arabic": "البيبي",
+					"english": "The baby",
+					"transliteration": "il-beebi"
+				},
+				{
+					"arabic": "نام.",
+					"english": "slept.",
+					"transliteration": "naam."
+				}
+			],
+			"targetWords": [
+				"Slept"
+			]
+		},
+		{
+			"arabic": "طبخت دجاج.",
+			"arabicTashkeel": "طَبَخت دَجاج.",
+			"english": "I cooked chicken.",
+			"transliteration": "tabakht dajaaj.",
+			"wordAlignments": [
+				{
+					"arabic": "طبخت",
+					"english": "I cooked",
+					"transliteration": "tabakht"
+				},
+				{
+					"arabic": "دجاج.",
+					"english": "chicken.",
+					"transliteration": "dajaaj."
+				}
+			],
+			"targetWords": [
+				"Cooked"
+			]
+		},
+		{
+			"arabic": "إيش طبختي؟",
+			"arabicTashkeel": "إيش طَبَختي؟",
+			"english": "What did you cook?",
+			"transliteration": "eesh tabakhti?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "طبختي؟",
+					"english": "did you cook?",
+					"transliteration": "tabakhti?"
+				}
+			],
+			"targetWords": [
+				"Cooked"
+			]
+		},
+		{
+			"arabic": "أمي طبخت مطبق.",
+			"arabicTashkeel": "أُمّي طَبخَت مُطَبَّق.",
+			"english": "My mom cooked mutabbaq.",
+			"transliteration": "ummi tabakhat mutabbag.",
+			"wordAlignments": [
+				{
+					"arabic": "أمي",
+					"english": "My mom",
+					"transliteration": "ummi"
+				},
+				{
+					"arabic": "طبخت",
+					"english": "cooked",
+					"transliteration": "tabakhat"
+				},
+				{
+					"arabic": "مطبق.",
+					"english": "mutabbaq.",
+					"transliteration": "mutabbag."
+				}
+			],
+			"targetWords": [
+				"Cooked"
+			]
+		},
+		{
+			"arabic": "ذاكرت للإختبار.",
+			"arabicTashkeel": "ذاكَرت للإختِبار.",
+			"english": "I studied for the exam.",
+			"transliteration": "zaakart lil-ikhtibaar.",
+			"wordAlignments": [
+				{
+					"arabic": "ذاكرت",
+					"english": "I studied",
+					"transliteration": "zaakart"
+				},
+				{
+					"arabic": "للإختبار.",
+					"english": "for the exam.",
+					"transliteration": "lil-ikhtibaar."
+				}
+			],
+			"targetWords": [
+				"Studied"
+			]
+		},
+		{
+			"arabic": "فين درست؟",
+			"arabicTashkeel": "فين دَرَست؟",
+			"english": "Where did you study?",
+			"transliteration": "feen darast?",
+			"wordAlignments": [
+				{
+					"arabic": "فين",
+					"english": "Where",
+					"transliteration": "feen"
+				},
+				{
+					"arabic": "درست؟",
+					"english": "did you study?",
+					"transliteration": "darast?"
+				}
+			],
+			"targetWords": [
+				"Studied"
+			]
+		},
+		{
+			"arabic": "درست في جامعة الملك عبدالعزيز.",
+			"arabicTashkeel": "دَرسَت في جامعة المَلِك عَبدالعَزيز.",
+			"english": "She studied at King Abdulaziz University.",
+			"transliteration": "darasat fi jaam3at il-malik 3abdil3azeez.",
+			"wordAlignments": [
+				{
+					"arabic": "درست",
+					"english": "She studied",
+					"transliteration": "darasat"
+				},
+				{
+					"arabic": "في",
+					"english": "at",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "جامعة",
+					"english": "the university of",
+					"transliteration": "jaam3at"
+				},
+				{
+					"arabic": "الملك",
+					"english": "King",
+					"transliteration": "il-malik"
+				},
+				{
+					"arabic": "عبدالعزيز.",
+					"english": "Abdulaziz.",
+					"transliteration": "3abdil3azeez."
+				}
+			],
+			"targetWords": [
+				"Studied"
+			]
+		},
+		{
+			"arabic": "جيت أمس.",
+			"arabicTashkeel": "جيت أمس.",
+			"english": "I came yesterday.",
+			"transliteration": "jeet ams.",
+			"wordAlignments": [
+				{
+					"arabic": "جيت",
+					"english": "I came",
+					"transliteration": "jeet"
+				},
+				{
+					"arabic": "أمس.",
+					"english": "yesterday.",
+					"transliteration": "ams."
+				}
+			],
+			"targetWords": [
+				"Came"
+			]
+		},
+		{
+			"arabic": "إمتى جيت؟",
+			"arabicTashkeel": "إمتى جيت؟",
+			"english": "When did you come?",
+			"transliteration": "imta jeet?",
+			"wordAlignments": [
+				{
+					"arabic": "إمتى",
+					"english": "When",
+					"transliteration": "imta"
+				},
+				{
+					"arabic": "جيت؟",
+					"english": "did you come?",
+					"transliteration": "jeet?"
+				}
+			],
+			"targetWords": [
+				"Came"
+			]
+		},
+		{
+			"arabic": "فيصل جا متأخر.",
+			"arabicTashkeel": "فَيصَل جا مِتأخِّر.",
+			"english": "Faisal came late.",
+			"transliteration": "faisal ja mit2akhkhir.",
+			"wordAlignments": [
+				{
+					"arabic": "فيصل",
+					"english": "Faisal",
+					"transliteration": "faisal"
+				},
+				{
+					"arabic": "جا",
+					"english": "came",
+					"transliteration": "ja"
+				},
+				{
+					"arabic": "متأخر.",
+					"english": "late.",
+					"transliteration": "mit2akhkhir."
+				}
+			],
+			"targetWords": [
+				"Came"
+			]
+		},
+		{
+			"arabic": "اشتريت جوال جديد.",
+			"arabicTashkeel": "اِشتَريت جَوّال جَديد.",
+			"english": "I bought a new mobile.",
+			"transliteration": "ishtareet jawwaal jadeed.",
+			"wordAlignments": [
+				{
+					"arabic": "اشتريت",
+					"english": "I bought",
+					"transliteration": "ishtareet"
+				},
+				{
+					"arabic": "جوال",
+					"english": "a mobile",
+					"transliteration": "jawwaal"
+				},
+				{
+					"arabic": "جديد.",
+					"english": "new.",
+					"transliteration": "jadeed."
+				}
+			],
+			"targetWords": [
+				"Bought"
+			]
+		},
+		{
+			"arabic": "إيش اشتريت؟",
+			"arabicTashkeel": "إيش اِشتَريت؟",
+			"english": "What did you buy?",
+			"transliteration": "eesh ishtareet?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "اشتريت؟",
+					"english": "did you buy?",
+					"transliteration": "ishtareet?"
+				}
+			],
+			"targetWords": [
+				"Bought"
+			]
+		},
+		{
+			"arabic": "اشترت شنطة حمرا.",
+			"arabicTashkeel": "اِشترَت شَنطة حَمرا.",
+			"english": "She bought a red bag.",
+			"transliteration": "ishtarat shanta 7amra.",
+			"wordAlignments": [
+				{
+					"arabic": "اشترت",
+					"english": "She bought",
+					"transliteration": "ishtarat"
+				},
+				{
+					"arabic": "شنطة",
+					"english": "a bag",
+					"transliteration": "shanta"
+				},
+				{
+					"arabic": "حمرا.",
+					"english": "red.",
+					"transliteration": "7amra."
+				}
+			],
+			"targetWords": [
+				"Bought"
+			]
+		},
+		{
+			"arabic": "إيش سويت أمس؟",
+			"arabicTashkeel": "إيش سَوّيت أمس؟",
+			"english": "What did you do yesterday?",
+			"transliteration": "eesh sawweet ams?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "سويت",
+					"english": "did you do",
+					"transliteration": "sawweet"
+				},
+				{
+					"arabic": "أمس؟",
+					"english": "yesterday?",
+					"transliteration": "ams?"
+				}
+			],
+			"targetWords": [
+				"Did"
+			]
+		},
+		{
+			"arabic": "سويت الواجب.",
+			"arabicTashkeel": "سَوّيت الواجِب.",
+			"english": "I did my homework.",
+			"transliteration": "sawweet il-waajib.",
+			"wordAlignments": [
+				{
+					"arabic": "سويت",
+					"english": "I did",
+					"transliteration": "sawweet"
+				},
+				{
+					"arabic": "الواجب.",
+					"english": "the homework.",
+					"transliteration": "il-waajib."
+				}
+			],
+			"targetWords": [
+				"Did"
+			]
+		},
+		{
+			"arabic": "ما سوى شي.",
+			"arabicTashkeel": "ما سَوّى شي.",
+			"english": "He did nothing.",
+			"transliteration": "ma sawwa shay.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "سوى",
+					"english": "he did",
+					"transliteration": "sawwa"
+				},
+				{
+					"arabic": "شي.",
+					"english": "a thing.",
+					"transliteration": "shay."
+				}
+			],
+			"targetWords": [
+				"Did"
+			]
+		},
+		{
+			"arabic": "إيش قال؟",
+			"arabicTashkeel": "إيش قال؟",
+			"english": "What did he say?",
+			"transliteration": "eesh gaal?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "قال؟",
+					"english": "did he say?",
+					"transliteration": "gaal?"
+				}
+			],
+			"targetWords": [
+				"Said"
+			]
+		},
+		{
+			"arabic": "قلت لا.",
+			"arabicTashkeel": "قُلت لا.",
+			"english": "I said no.",
+			"transliteration": "gult laa.",
+			"wordAlignments": [
+				{
+					"arabic": "قلت",
+					"english": "I said",
+					"transliteration": "gult"
+				},
+				{
+					"arabic": "لا.",
+					"english": "no.",
+					"transliteration": "laa."
+				}
+			],
+			"targetWords": [
+				"Said"
+			]
+		},
+		{
+			"arabic": "قالت إنها تعبانة.",
+			"arabicTashkeel": "قالَت إنّها تَعبانة.",
+			"english": "She said she is tired.",
+			"transliteration": "gaalat innaha ta3baana.",
+			"wordAlignments": [
+				{
+					"arabic": "قالت",
+					"english": "She said",
+					"transliteration": "gaalat"
+				},
+				{
+					"arabic": "إنها",
+					"english": "that she is",
+					"transliteration": "innaha"
+				},
+				{
+					"arabic": "تعبانة.",
+					"english": "tired.",
+					"transliteration": "ta3baana."
+				}
+			],
+			"targetWords": [
+				"Said"
+			]
+		},
+		{
+			"arabic": "أمس رحت واشتريت عيش.",
+			"arabicTashkeel": "أمس رُحت واِشتَريت عيش.",
+			"english": "Yesterday I went and bought bread.",
+			"transliteration": "ams ru7t w-ishtareet 3eesh.",
+			"wordAlignments": [
+				{
+					"arabic": "أمس",
+					"english": "Yesterday",
+					"transliteration": "ams"
+				},
+				{
+					"arabic": "رحت",
+					"english": "I went",
+					"transliteration": "ru7t"
+				},
+				{
+					"arabic": "واشتريت",
+					"english": "and bought",
+					"transliteration": "w-ishtareet"
+				},
+				{
+					"arabic": "عيش.",
+					"english": "bread.",
+					"transliteration": "3eesh."
+				}
+			],
+			"targetWords": [
+				"Went",
+				"Bought"
+			]
+		},
+		{
+			"arabic": "جا، وأكل، ونام.",
+			"arabicTashkeel": "جا، وأكَل، ونام.",
+			"english": "He came, ate and slept.",
+			"transliteration": "ja, w-akal, w-naam.",
+			"wordAlignments": [
+				{
+					"arabic": "جا،",
+					"english": "He came,",
+					"transliteration": "ja,"
+				},
+				{
+					"arabic": "وأكل،",
+					"english": "and ate,",
+					"transliteration": "w-akal,"
+				},
+				{
+					"arabic": "ونام.",
+					"english": "and slept.",
+					"transliteration": "w-naam."
+				}
+			],
+			"targetWords": [
+				"Came",
+				"Ate",
+				"Slept"
+			]
+		},
+		{
+			"arabic": "قريت وكتبت.",
+			"arabicTashkeel": "قَريت وكَتَبت.",
+			"english": "I read and wrote.",
+			"transliteration": "gareet w-katabt.",
+			"wordAlignments": [
+				{
+					"arabic": "قريت",
+					"english": "I read",
+					"transliteration": "gareet"
+				},
+				{
+					"arabic": "وكتبت.",
+					"english": "and wrote.",
+					"transliteration": "w-katabt."
+				}
+			],
+			"targetWords": [
+				"Read (past)",
+				"Wrote"
+			]
+		},
+		{
+			"arabic": "هيا طبخت وإحنا أكلنا.",
+			"arabicTashkeel": "هيّا طَبخَت وإحنا أكَلنا.",
+			"english": "She cooked and we ate.",
+			"transliteration": "hiyya tabakhat w-i7na akalna.",
+			"wordAlignments": [
+				{
+					"arabic": "هيا",
+					"english": "She",
+					"transliteration": "hiyya"
+				},
+				{
+					"arabic": "طبخت",
+					"english": "cooked",
+					"transliteration": "tabakhat"
+				},
+				{
+					"arabic": "وإحنا",
+					"english": "and we",
+					"transliteration": "w-i7na"
+				},
+				{
+					"arabic": "أكلنا.",
+					"english": "ate.",
+					"transliteration": "akalna."
+				}
+			],
+			"targetWords": [
+				"Cooked",
+				"Ate"
+			]
+		},
+		{
+			"arabic": "ذاكرت واشتغلت.",
+			"arabicTashkeel": "ذاكَرت واِشتَغَلت.",
+			"english": "I studied and worked.",
+			"transliteration": "zaakart w-ishtaghalt.",
+			"wordAlignments": [
+				{
+					"arabic": "ذاكرت",
+					"english": "I studied",
+					"transliteration": "zaakart"
+				},
+				{
+					"arabic": "واشتغلت.",
+					"english": "and worked.",
+					"transliteration": "w-ishtaghalt."
+				}
+			],
+			"targetWords": [
+				"Studied",
+				"Worked"
+			]
+		},
+		{
+			"arabic": "اتكلم وقال شكرا.",
+			"arabicTashkeel": "اِتكَلَّم وقال شُكراً.",
+			"english": "He spoke and said thank you.",
+			"transliteration": "itkallam w-gaal shukran.",
+			"wordAlignments": [
+				{
+					"arabic": "اتكلم",
+					"english": "He spoke",
+					"transliteration": "itkallam"
+				},
+				{
+					"arabic": "وقال",
+					"english": "and said",
+					"transliteration": "w-gaal"
+				},
+				{
+					"arabic": "شكرا.",
+					"english": "thank you.",
+					"transliteration": "shukran."
+				}
+			],
+			"targetWords": [
+				"Spoke",
+				"Said"
+			]
+		},
+		{
+			"arabic": "شفته واتكلمت معاه.",
+			"arabicTashkeel": "شُفتُه واِتكَلَّمت مَعاه.",
+			"english": "I saw him and spoke with him.",
+			"transliteration": "shuftu w-itkallamt ma3aah.",
+			"wordAlignments": [
+				{
+					"arabic": "شفته",
+					"english": "I saw him",
+					"transliteration": "shuftu"
+				},
+				{
+					"arabic": "واتكلمت",
+					"english": "and spoke",
+					"transliteration": "w-itkallamt"
+				},
+				{
+					"arabic": "معاه.",
+					"english": "with him.",
+					"transliteration": "ma3aah."
+				}
+			],
+			"targetWords": [
+				"Saw",
+				"Spoke"
+			]
+		},
+		{
+			"arabic": "شربتي شاهي؟",
+			"arabicTashkeel": "شِرِبتي شاهي؟",
+			"english": "Did you drink tea?",
+			"transliteration": "shiribti shaahi?",
+			"wordAlignments": [
+				{
+					"arabic": "شربتي",
+					"english": "Did you drink",
+					"transliteration": "shiribti"
+				},
+				{
+					"arabic": "شاهي؟",
+					"english": "tea?",
+					"transliteration": "shaahi?"
+				}
+			],
+			"targetWords": [
+				"Drank"
+			]
+		},
+		{
+			"arabic": "اشتغل في الرياض.",
+			"arabicTashkeel": "اِشتَغَل في الرِّياض.",
+			"english": "He worked in Riyadh.",
+			"transliteration": "ishtaghal fi ir-riyaadh.",
+			"wordAlignments": [
+				{
+					"arabic": "اشتغل",
+					"english": "He worked",
+					"transliteration": "ishtaghal"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الرياض.",
+					"english": "Riyadh.",
+					"transliteration": "ir-riyaadh."
+				}
+			],
+			"targetWords": [
+				"Worked"
+			]
+		},
+		{
+			"arabic": "إيش سويتي اليوم؟",
+			"arabicTashkeel": "إيش سَوّيتي اليوم؟",
+			"english": "What did you do today?",
+			"transliteration": "eesh sawweeti il-yoom?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "سويتي",
+					"english": "did you do",
+					"transliteration": "sawweeti"
+				},
+				{
+					"arabic": "اليوم؟",
+					"english": "today?",
+					"transliteration": "il-yoom?"
+				}
+			],
+			"targetWords": [
+				"Did"
+			]
+		},
+		{
+			"arabic": "إيش قلت؟",
+			"arabicTashkeel": "إيش قُلت؟",
+			"english": "What did you say?",
+			"transliteration": "eesh gult?",
+			"wordAlignments": [
+				{
+					"arabic": "إيش",
+					"english": "What",
+					"transliteration": "eesh"
+				},
+				{
+					"arabic": "قلت؟",
+					"english": "did you say?",
+					"transliteration": "gult?"
+				}
+			],
+			"targetWords": [
+				"Said"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "Yesterday",
+			"sentences": [
+				{
+					"arabic": "أمس صحيت بدري.",
+					"arabicTashkeel": "أمس صِحيت بَدري.",
+					"english": "Yesterday I woke up early.",
+					"transliteration": "ams si7eet badri.",
+					"wordAlignments": [
+						{
+							"arabic": "أمس",
+							"english": "Yesterday",
+							"transliteration": "ams"
+						},
+						{
+							"arabic": "صحيت",
+							"english": "I woke up",
+							"transliteration": "si7eet"
+						},
+						{
+							"arabic": "بدري.",
+							"english": "early.",
+							"transliteration": "badri."
+						}
+					]
+				},
+				{
+					"arabic": "شربت شاهي وأكلت عيش بالفول.",
+					"arabicTashkeel": "شِرِبت شاهي وأكَلت عيش بالفول.",
+					"english": "I drank tea and ate bread with fava beans.",
+					"transliteration": "shiribt shaahi w-akalt 3eesh bil-fool.",
+					"wordAlignments": [
+						{
+							"arabic": "شربت",
+							"english": "I drank",
+							"transliteration": "shiribt"
+						},
+						{
+							"arabic": "شاهي",
+							"english": "tea",
+							"transliteration": "shaahi"
+						},
+						{
+							"arabic": "وأكلت",
+							"english": "and ate",
+							"transliteration": "w-akalt"
+						},
+						{
+							"arabic": "عيش",
+							"english": "bread",
+							"transliteration": "3eesh"
+						},
+						{
+							"arabic": "بالفول.",
+							"english": "with fava beans.",
+							"transliteration": "bil-fool."
+						}
+					]
+				},
+				{
+					"arabic": "بعدين رحت السوق واشتريت سمك.",
+					"arabicTashkeel": "بَعدين رُحت السّوق واِشتَريت سَمَك.",
+					"english": "Then I went to the market and bought fish.",
+					"transliteration": "ba3dain ru7t is-soog w-ishtareet samak.",
+					"wordAlignments": [
+						{
+							"arabic": "بعدين",
+							"english": "Then",
+							"transliteration": "ba3dain"
+						},
+						{
+							"arabic": "رحت",
+							"english": "I went",
+							"transliteration": "ru7t"
+						},
+						{
+							"arabic": "السوق",
+							"english": "to the market",
+							"transliteration": "is-soog"
+						},
+						{
+							"arabic": "واشتريت",
+							"english": "and bought",
+							"transliteration": "w-ishtareet"
+						},
+						{
+							"arabic": "سمك.",
+							"english": "fish.",
+							"transliteration": "samak."
+						}
+					]
+				},
+				{
+					"arabic": "بالليل قريت كتاب ونمت.",
+					"arabicTashkeel": "بالليل قَريت كِتاب ونِمت.",
+					"english": "At night I read a book and slept.",
+					"transliteration": "bil-lail gareet kitaab w-nimt.",
+					"wordAlignments": [
+						{
+							"arabic": "بالليل",
+							"english": "At night",
+							"transliteration": "bil-lail"
+						},
+						{
+							"arabic": "قريت",
+							"english": "I read",
+							"transliteration": "gareet"
+						},
+						{
+							"arabic": "كتاب",
+							"english": "a book",
+							"transliteration": "kitaab"
+						},
+						{
+							"arabic": "ونمت.",
+							"english": "and slept.",
+							"transliteration": "w-nimt."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "A Visit",
+			"sentences": [
+				{
+					"arabic": "خالي جا من المدينة.",
+					"arabicTashkeel": "خالي جا مِن المَدينة.",
+					"english": "My uncle came from Medina.",
+					"transliteration": "khaali ja min il-madeena.",
+					"wordAlignments": [
+						{
+							"arabic": "خالي",
+							"english": "My uncle",
+							"transliteration": "khaali"
+						},
+						{
+							"arabic": "جا",
+							"english": "came",
+							"transliteration": "ja"
+						},
+						{
+							"arabic": "من",
+							"english": "from",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "المدينة.",
+							"english": "Medina.",
+							"transliteration": "il-madeena."
+						}
+					]
+				},
+				{
+					"arabic": "أمي طبخت كبسة سمك.",
+					"arabicTashkeel": "أُمّي طَبخَت كَبسة سَمَك.",
+					"english": "My mom cooked fish kabsa.",
+					"transliteration": "ummi tabakhat kabsat samak.",
+					"wordAlignments": [
+						{
+							"arabic": "أمي",
+							"english": "My mom",
+							"transliteration": "ummi"
+						},
+						{
+							"arabic": "طبخت",
+							"english": "cooked",
+							"transliteration": "tabakhat"
+						},
+						{
+							"arabic": "كبسة",
+							"english": "kabsa of",
+							"transliteration": "kabsat"
+						},
+						{
+							"arabic": "سمك.",
+							"english": "fish.",
+							"transliteration": "samak."
+						}
+					]
+				},
+				{
+					"arabic": "أكل وقال: لذيذ!",
+					"arabicTashkeel": "أكَل وقال: لَذيذ!",
+					"english": "He ate and said: delicious!",
+					"transliteration": "akal w-gaal: lazeez!",
+					"wordAlignments": [
+						{
+							"arabic": "أكل",
+							"english": "He ate",
+							"transliteration": "akal"
+						},
+						{
+							"arabic": "وقال:",
+							"english": "and said:",
+							"transliteration": "w-gaal:"
+						},
+						{
+							"arabic": "لذيذ!",
+							"english": "delicious!",
+							"transliteration": "lazeez!"
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "It is Sunday morning at the office in Jeddah and a Saudi colleague asks how the student spent the weekend.",
+		"studentRole": "An employee learning Saudi (Hijazi) Arabic.",
+		"otherRole": "The curious Jeddawi colleague, who also shares weekend news.",
+		"goalEnglish": "Say where you went, what you ate and bought, who you saw, and ask what your colleague did.",
+		"targetWords": [
+			"Went",
+			"Ate",
+			"Bought",
+			"Saw",
+			"Did",
+			"Came",
+			"Slept",
+			"Said"
+		]
+	}
+}
