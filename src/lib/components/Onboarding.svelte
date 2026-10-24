@@ -684,6 +684,7 @@
 							{tried}
 							{proficiencyLevel}
 							{goalLevel}
+							egyptianQuote={targetDialect === 'egyptian-arabic'}
 						/>
 					{/if}
 

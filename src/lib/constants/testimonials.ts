@@ -22,5 +22,29 @@ export const TESTIMONIALS: TestimonialSegment[][] = [
 		{ t: 'I love it! This is something I have been ' },
 		{ t: 'searching for ages', b: true },
 		{ t: ' :) thank you so much' }
+	],
+	[
+		{
+			t: 'Wow this is perfect for what I need currently. The stories section in particular is a great idea as '
+		},
+		{ t: "I can't find any graded stories for practice.", b: true },
+		{ t: ' Thank you so much for this :)' }
+	],
+	[
+		{ t: 'Stories UI is really good!', b: true },
+		{
+			t: ' The large, readable font, easy switching of transliteration and English, and interactive click-to-define are all really excellent.'
+		}
+	],
+	[
+		{ t: 'I really like the website and find it very useful. For me ' },
+		{ t: "it's better than a lot of other platforms", b: true },
+		{ t: " — it's well thought out and has a lot of features." }
 	]
+];
+
+/** Led with on paywalls, since it names a dialect. */
+export const EGYPTIAN_TESTIMONIAL: TestimonialSegment[] = [
+	{ t: "It's the best app I have found so far", b: true },
+	{ t: ' in my journey to learn Egyptian Arabic' }
 ];

@@ -6,6 +6,7 @@
 	import SubscribeButton from '$lib/components/SubscribeButton.svelte';
 	import SocialProof from '$lib/components/SocialProof.svelte';
 	import FeatureGrid from '$lib/components/FeatureGrid.svelte';
+	import { EGYPTIAN_TESTIMONIAL } from '$lib/constants/testimonials';
 	import { GAMES } from '$lib/constants/games';
 	import {
 		PAYWALL_HEADLINES,
@@ -261,7 +262,7 @@
 					{/if}
 				</div>
 
-				<SocialProof quotes={0} />
+				<SocialProof quotes={1} lead={EGYPTIAN_TESTIMONIAL} />
 
 				<div class="flex flex-col items-center gap-2">
 					<button class="link" aria-expanded={showAll} onclick={() => (showAll = !showAll)}>

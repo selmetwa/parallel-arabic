@@ -1,11 +1,13 @@
 <script lang="ts">
-	import { fly } from 'svelte/transition';
+	import { fade, fly } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
 	import { onMount } from 'svelte';
 	import { page } from '$app/state';
 	import SubscribeButton from '$lib/components/SubscribeButton.svelte';
 	import SocialProof from '$lib/components/SocialProof.svelte';
+	import Testimonial from '$lib/components/Testimonial.svelte';
 	import FeatureGrid from '$lib/components/FeatureGrid.svelte';
+	import { EGYPTIAN_TESTIMONIAL, TESTIMONIALS } from '$lib/constants/testimonials';
 	import { isNativeApp } from '$lib/helpers/is-native-app';
 	import { RevenueCatService } from '$lib/services/revenuecat.service';
 	import { CEFR_LEVEL_INFO, type CefrLevel } from '$lib/constants/cefr-levels';
@@ -22,6 +24,8 @@
 		tried?: TryProgress;
 		proficiencyLevel?: CefrLevel | '';
 		goalLevel?: CefrLevel | '';
+		/** Lead the quotes with the Egyptian Arabic one. */
+		egyptianQuote?: boolean;
 	};
 
 	let {
@@ -30,10 +34,20 @@
 		onLogout,
 		tried = NOTHING_TRIED,
 		proficiencyLevel = '',
-		goalLevel = ''
+		goalLevel = '',
+		egyptianQuote = false
 	}: Props = $props();
 
 	let showAll = $state(false);
+	/** Desktop only: "See everything included" opens as a full-page overlay with its own checkout. */
+	let showAllPage = $state(false);
+
+	function openIncluded() {
+		if (window.matchMedia('(min-width: 1024px)').matches) showAllPage = true;
+		else showAll = !showAll;
+	}
+
+	const quotes = $derived(egyptianQuote ? [EGYPTIAN_TESTIMONIAL, ...TESTIMONIALS] : TESTIMONIALS);
 
 	const hasRecap = $derived(
 		tried.read || tried.spoke || tried.traced || tried.played || !!tried.goal || !!goalLevel
@@ -56,7 +70,9 @@
 		proficiencyLevel && goalLevel && proficiencyLevel !== goalLevel
 			? `A path from ${proficiencyLevel} to ${goalLevel}, one lesson a day`
 			: 'A step-by-step path from A1 to C2, one lesson a day',
-		"Words that come back right before you'd forget them"
+		"Words that come back right before you'd forget them",
+		`Graded stories in ${dialectName || 'Arabic'}, with audio and tap-to-translate`,
+		'Games, verb drills and pronunciation practice'
 	]);
 
 	// Someone who already used their trial (or let it lapse) can only subscribe.
@@ -79,85 +95,177 @@
 	});
 </script>
 
-<div class="mx-auto max-w-md text-center" in:fly={{ y: 30, duration: 500, easing: cubicOut }}>
-	{#if hasRecap}
-		<ul class="recap">
-			{#if didSummary}
-				<li>
-					<span class="tick" aria-hidden="true"></span>
-					{didSummary}
-				</li>
-			{/if}
-			{#if goalLevel}
-				<li>
-					<span class="tick tick--goal" aria-hidden="true"></span>
-					Goal: {goalLevel}, "{CEFR_LEVEL_INFO[goalLevel].goal.replace(/^I want to /, '')}"
-				</li>
-			{/if}
-			{#if tried.goal}
-				<li>
-					<span class="tick tick--goal" aria-hidden="true"></span>
-					Every day: {describeGoal(tried.goal)}
-				</li>
-			{/if}
-			{#if streakStarted}
-				<li>
-					<span class="tick tick--streak" aria-hidden="true"></span>
-					Day 1 of your streak
-				</li>
-			{/if}
+<!-- Stacked on phones; from 1024px the offer sits left and what learners say sits right. -->
+<div class="offer" in:fly={{ y: 30, duration: 500, easing: cubicOut }}>
+	<div class="main">
+		{#if hasRecap}
+			<ul class="recap">
+				{#if didSummary}
+					<li>
+						<span class="tick" aria-hidden="true"></span>
+						{didSummary}
+					</li>
+				{/if}
+				{#if goalLevel}
+					<li>
+						<span class="tick tick--goal" aria-hidden="true"></span>
+						Goal: {goalLevel}, "{CEFR_LEVEL_INFO[goalLevel].goal.replace(/^I want to /, '')}"
+					</li>
+				{/if}
+				{#if tried.goal}
+					<li>
+						<span class="tick tick--goal" aria-hidden="true"></span>
+						Every day: {describeGoal(tried.goal)}
+					</li>
+				{/if}
+				{#if streakStarted}
+					<li>
+						<span class="tick tick--streak" aria-hidden="true"></span>
+						Day 1 of your streak
+					</li>
+				{/if}
+			</ul>
+		{/if}
+
+		{#if trialEligible}
+			<h2 class="screen-title">
+				{hasRecap ? 'Keep going, free for 7 days' : 'Unlock everything free for 7 days'}
+			</h2>
+		{:else}
+			<h2 class="screen-title">
+				{hasRecap ? 'Keep going with full access' : 'Subscribe to unlock everything'}
+			</h2>
+		{/if}
+
+		<ul class="benefits">
+			{#each benefits as benefit (benefit)}
+				<li>{benefit}</li>
+			{/each}
 		</ul>
-	{/if}
 
-	{#if trialEligible}
-		<h2 class="screen-title">
-			{hasRecap ? 'Keep going, free for 7 days' : 'Unlock everything free for 7 days'}
-		</h2>
-	{:else}
-		<h2 class="screen-title">
-			{hasRecap ? 'Keep going with full access' : 'Subscribe to unlock everything'}
-		</h2>
-	{/if}
+		<div class="included">
+			<button
+				class="all-toggle"
+				aria-expanded={showAll || showAllPage}
+				aria-haspopup="dialog"
+				onclick={openIncluded}
+			>
+				{#if showAll}Hide everything included{:else}See everything included <span aria-hidden="true">→</span>{/if}
+			</button>
+			{#if showAll}
+				<div class="mt-3 text-center" in:fly={{ y: 10, duration: 250 }}>
+					<FeatureGrid />
+				</div>
+			{/if}
+		</div>
 
-	<ul class="benefits">
-		{#each benefits as benefit (benefit)}
-			<li>{benefit}</li>
-		{/each}
-	</ul>
+		{#if trialEligible}
+			<ol class="timeline" aria-label="How the free trial works">
+				<li><strong>Today</strong><span>Full access</span></li>
+				<li><strong>Day 7</strong><span>Your plan starts</span></li>
+				<li><strong>Any time</strong><span>Cancel, no charge before day 7</span></li>
+			</ol>
+		{/if}
 
-	{#if trialEligible}
-		<ol class="timeline" aria-label="How the free trial works">
-			<li><strong>Today</strong><span>Full access</span></li>
-			<li><strong>Day 7</strong><span>Your plan starts</span></li>
-			<li><strong>Any time</strong><span>Cancel, no charge before day 7</span></li>
-		</ol>
-	{/if}
+		<SubscribeButton className="!py-3 !text-lg w-full !rounded-2xl" />
 
-	<SubscribeButton className="!py-3 !text-lg w-full !rounded-2xl" />
-
-	{#if onSkip}
-		<button class="skip-link mt-4" onclick={onSkip}>Continue with the free plan</button>
-	{/if}
-	{#if onLogout}
-		<button class="skip-link mt-4" onclick={onLogout}>Log out</button>
-	{/if}
-
-	<SocialProof class="mt-6" />
-
-	<div class="mt-6">
-		<button class="all-toggle" aria-expanded={showAll} onclick={() => (showAll = !showAll)}>
-			{showAll ? 'Hide' : 'See'} everything included
-		</button>
+		{#if onSkip}
+			<button class="skip-link mt-4" onclick={onSkip}>Continue with the free plan</button>
+		{/if}
+		{#if onLogout}
+			<button class="skip-link mt-4" onclick={onLogout}>Log out</button>
+		{/if}
 	</div>
+
+	<aside class="proof">
+		<SocialProof quotes={0} />
+		<div class="quote-cols">
+			{#each quotes as segments, i (i)}
+				<Testimonial {segments} class="text-left" />
+			{/each}
+		</div>
+	</aside>
 </div>
 
-{#if showAll}
-	<div class="mx-auto mt-4 max-w-4xl text-center" in:fly={{ y: 10, duration: 250 }}>
-		<FeatureGrid />
+<svelte:window onkeydown={(e) => showAllPage && e.key === 'Escape' && (showAllPage = false)} />
+
+{#if showAllPage}
+	<div
+		class="included-page"
+		role="dialog"
+		aria-modal="true"
+		aria-labelledby="included-title"
+		transition:fade={{ duration: 200 }}
+	>
+		<div class="included-body">
+			<div class="included-head">
+				<h2 id="included-title" class="screen-title">Everything included</h2>
+				<button class="included-close" aria-label="Close" onclick={() => (showAllPage = false)}>
+					✕
+				</button>
+			</div>
+			<div class="text-center">
+				<FeatureGrid />
+			</div>
+		</div>
+		<!-- Checkout stays in reach while they browse. -->
+		<div class="included-bar">
+			<div class="mx-auto max-w-md">
+				<SubscribeButton className="!py-3 !text-lg w-full !rounded-2xl" />
+			</div>
+		</div>
 	</div>
 {/if}
 
 <style>
+	.offer {
+		max-width: 28rem;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.included {
+		margin: -0.6rem 0 1.25rem;
+		text-align: left;
+	}
+
+	.proof {
+		margin-top: 1.5rem;
+	}
+
+	.quote-cols {
+		display: grid;
+		gap: 0.75rem;
+		margin-top: 1rem;
+	}
+
+	@media (min-width: 1024px) {
+		.offer {
+			max-width: none;
+			display: grid;
+			grid-template-columns: minmax(0, 22rem) minmax(0, 1fr);
+			gap: 3rem;
+			align-items: start;
+			text-align: left;
+		}
+
+		.proof {
+			margin-top: 0;
+		}
+
+		/* Two masonry columns, so quotes of different lengths pack without gaps. */
+		.quote-cols {
+			display: block;
+			columns: 2;
+			column-gap: 0.75rem;
+		}
+
+		.quote-cols :global(figure) {
+			break-inside: avoid;
+			margin-bottom: 0.75rem;
+		}
+	}
+
 	.screen-title {
 		font-size: 1.5rem;
 		font-weight: 600;
@@ -278,6 +386,53 @@
 	}
 	.all-toggle:hover {
 		color: var(--text1);
+	}
+
+	.included-page {
+		position: fixed;
+		inset: 0;
+		z-index: 200;
+		display: flex;
+		flex-direction: column;
+		overflow-y: auto;
+		overscroll-behavior: contain;
+		background: var(--tile2);
+	}
+
+	.included-body {
+		flex: 1;
+		width: 100%;
+		max-width: 72rem;
+		margin: 0 auto;
+		padding: 2.5rem 2rem 0;
+	}
+
+	.included-head {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.included-close {
+		width: 2.5rem;
+		height: 2.5rem;
+		border-radius: 50%;
+		border: 2px solid var(--tile5);
+		background: var(--tile3);
+		font-size: 1rem;
+		color: var(--text2);
+		cursor: pointer;
+	}
+	.included-close:hover {
+		color: var(--text1);
+	}
+
+	.included-bar {
+		position: sticky;
+		bottom: 0;
+		padding: 1rem 2rem 1.25rem;
+		border-top: 2px solid var(--tile5);
+		background: var(--tile2);
 	}
 
 	.skip-link {
