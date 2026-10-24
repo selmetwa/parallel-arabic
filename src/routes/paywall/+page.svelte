@@ -39,7 +39,7 @@
 <div class="paywall-bg fixed inset-0 z-50 overflow-y-auto overscroll-contain">
 	<div class="flex min-h-full justify-center px-4 py-8 sm:px-8">
 		<div class="my-auto w-full max-w-4xl">
-			<TrialOffer {dialectName} onLogout={logout} />
+			<TrialOffer {dialectName} onLogout={logout} egyptianQuote />
 			<!-- Apple requires account deletion to be reachable in the app (5.1.1(v)). -->
 			<p class="mt-2 text-center">
 				<a href={resolve('/profile')} class="text-xs text-text-200 underline hover:text-text-300">

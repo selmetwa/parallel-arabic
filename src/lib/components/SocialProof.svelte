@@ -1,15 +1,20 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import Testimonial from '$lib/components/Testimonial.svelte';
-	import { TESTIMONIALS } from '$lib/constants/testimonials';
+	import { TESTIMONIALS, type TestimonialSegment } from '$lib/constants/testimonials';
+	import { SELECTABLE_DIALECTS } from '$lib/constants/dialects';
 
 	interface Props {
-		/** How many quotes to show under the numbers. */
+		/** How many quotes to show under the numbers, counting `lead`. */
 		quotes?: number;
+		/** A quote to show first, ahead of the shared ones. */
+		lead?: TestimonialSegment[];
 		class?: string;
 	}
 
-	let { quotes = 2, class: className = '' }: Props = $props();
+	let { quotes = 2, lead, class: className = '' }: Props = $props();
+
+	const shown = $derived((lead ? [lead, ...TESTIMONIALS] : TESTIMONIALS).slice(0, quotes));
 
 	let proof = $state<{ learners: number; wordsSavedThisMonth: number } | null>(null);
 
@@ -32,12 +37,14 @@
 				<span class="dot" aria-hidden="true"></span>
 				<span><strong>{fmt(proof.wordsSavedThisMonth)}+</strong> words saved this month</span>
 			{/if}
+			<span class="dot" aria-hidden="true"></span>
+			<span><strong>{SELECTABLE_DIALECTS.length}</strong> dialects</span>
 		{/if}
 	</p>
 
-	{#if quotes > 0}
+	{#if shown.length > 0}
 		<div class="quotes">
-			{#each TESTIMONIALS.slice(0, quotes) as segments, i (i)}
+			{#each shown as segments, i (i)}
 				<Testimonial {segments} class="text-left" />
 			{/each}
 		</div>
