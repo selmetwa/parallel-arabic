@@ -19,7 +19,7 @@ Companion to `docs/iraqi-khaleeji-saudi-plan.md`. All three dialects' content is
 ## Steps you need to run
 
 1. **Database migration:** run `docs/sql/2026-10-23-new-dialects.sql`. The Supabase MCP is read-only, so a session can't run it.
-2. **Game words:** run `npx tsx scripts/seed-new-dialect-words.ts --dry-run`, then run it again without `--dry-run`. It upserts about 917 rows into `word` with `source = 'claude-authored'`.
+2. **Game words:** done 2026-10-24 (917 rows seeded).
 3. **Voices:** fill in the iraqi/khaleeji/saudi voices in `src/lib/utils/voice-config.ts` and `NPC_VOICE` in `scripts/generate-room-hunt-audio.ts` (male NPC voices), then run `npm run generate:room-hunt-audio`.
 4. **Speech-to-text:** check that Google `chirp_3` supports `ar-IQ` in the `us` region (and `ar-AE` and `ar-SA`).
 5. **Native-speaker review:** one reviewer per dialect for the lessons, phrases, verbs, Room Hunt and tutor dialogs. Lines flagged "needs a native check" in comments come first.
