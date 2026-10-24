@@ -3,7 +3,7 @@ import { scrambleSentences, tryContent } from './onboarding-try';
 import { onboardingLines, onboardingScenario } from './tutor-scenarios';
 import { stripArabicDiacritics } from '$lib/utils/arabic-normalization';
 
-const DIALECTS = ['egyptian-arabic', 'levantine', 'fusha', 'darija'] as const;
+const DIALECTS = ['egyptian-arabic', 'levantine', 'fusha', 'darija', 'iraqi', 'khaleeji', 'saudi'] as const;
 const REASONS = ['Work', 'Travel', 'Heritage'];
 
 describe('tryContent', () => {
