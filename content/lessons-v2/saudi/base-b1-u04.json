@@ -1,0 +1,2197 @@
+{
+	"vocab": [
+		{
+			"arabic": "جواز",
+			"arabicTashkeel": "جَواز",
+			"english": "Passport",
+			"transliteration": "jawaaz",
+			"wordAlignments": [
+				{
+					"arabic": "جواز",
+					"english": "Passport",
+					"transliteration": "jawaaz"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "فيزا",
+			"arabicTashkeel": "فيزا",
+			"english": "Visa",
+			"transliteration": "feeza",
+			"wordAlignments": [
+				{
+					"arabic": "فيزا",
+					"english": "Visa",
+					"transliteration": "feeza"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "رحلة",
+			"arabicTashkeel": "رِحلة",
+			"english": "Flight",
+			"transliteration": "ri7la",
+			"wordAlignments": [
+				{
+					"arabic": "رحلة",
+					"english": "Flight",
+					"transliteration": "ri7la"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "مغادرة",
+			"arabicTashkeel": "مُغادَرة",
+			"english": "Departure",
+			"transliteration": "mughaadara",
+			"wordAlignments": [
+				{
+					"arabic": "مغادرة",
+					"english": "Departure",
+					"transliteration": "mughaadara"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "وصول",
+			"arabicTashkeel": "وُصول",
+			"english": "Arrival",
+			"transliteration": "wusool",
+			"wordAlignments": [
+				{
+					"arabic": "وصول",
+					"english": "Arrival",
+					"transliteration": "wusool"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "بوابة",
+			"arabicTashkeel": "بَوّابة",
+			"english": "Gate",
+			"transliteration": "bawwaaba",
+			"wordAlignments": [
+				{
+					"arabic": "بوابة",
+					"english": "Gate",
+					"transliteration": "bawwaaba"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "شنط",
+			"arabicTashkeel": "شُنَط",
+			"english": "Luggage",
+			"transliteration": "shunat",
+			"wordAlignments": [
+				{
+					"arabic": "شنط",
+					"english": "Bags",
+					"transliteration": "shunat"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "بطاقة الصعود",
+			"arabicTashkeel": "بِطاقة الصُّعود",
+			"english": "Boarding pass",
+			"transliteration": "bitaagat is-su3ood",
+			"wordAlignments": [
+				{
+					"arabic": "بطاقة",
+					"english": "Card of",
+					"transliteration": "bitaagat"
+				},
+				{
+					"arabic": "الصعود",
+					"english": "boarding",
+					"transliteration": "is-su3ood"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "ذهاب بس",
+			"arabicTashkeel": "ذِهاب بَس",
+			"english": "One way",
+			"transliteration": "dhahaab bas",
+			"wordAlignments": [
+				{
+					"arabic": "ذهاب",
+					"english": "Going",
+					"transliteration": "dhahaab"
+				},
+				{
+					"arabic": "بس",
+					"english": "only",
+					"transliteration": "bas"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "ذهاب وعودة",
+			"arabicTashkeel": "ذِهاب وعَودة",
+			"english": "Return (ticket)",
+			"transliteration": "dhahaab w-3awda",
+			"wordAlignments": [
+				{
+					"arabic": "ذهاب",
+					"english": "Going",
+					"transliteration": "dhahaab"
+				},
+				{
+					"arabic": "وعودة",
+					"english": "and return",
+					"transliteration": "w-3awda"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "مقعد",
+			"arabicTashkeel": "مَقعَد",
+			"english": "Seat",
+			"transliteration": "mag3ad",
+			"wordAlignments": [
+				{
+					"arabic": "مقعد",
+					"english": "Seat",
+					"transliteration": "mag3ad"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "ملغية",
+			"arabicTashkeel": "مَلغية",
+			"english": "Cancelled",
+			"transliteration": "malghiyya",
+			"wordAlignments": [
+				{
+					"arabic": "ملغية",
+					"english": "Cancelled",
+					"transliteration": "malghiyya"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "مواعيد",
+			"arabicTashkeel": "مَواعيد",
+			"english": "Timetable",
+			"transliteration": "mawaa3eed",
+			"wordAlignments": [
+				{
+					"arabic": "مواعيد",
+					"english": "Times",
+					"transliteration": "mawaa3eed"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "يحجز",
+			"arabicTashkeel": "يِحجِز",
+			"english": "He books",
+			"transliteration": "yi7jiz",
+			"wordAlignments": [
+				{
+					"arabic": "يحجز",
+					"english": "He books",
+					"transliteration": "yi7jiz"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "مكتب سفريات",
+			"arabicTashkeel": "مَكتَب سَفَريات",
+			"english": "Travel agency",
+			"transliteration": "maktab safariyyaat",
+			"wordAlignments": [
+				{
+					"arabic": "مكتب",
+					"english": "Office of",
+					"transliteration": "maktab"
+				},
+				{
+					"arabic": "سفريات",
+					"english": "travels",
+					"transliteration": "safariyyaat"
+				}
+			],
+			"partOfSpeech": "phrase"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "لا تنسى جوازك.",
+			"arabicTashkeel": "لا تِنسى جَوازَك.",
+			"english": "Don't forget your passport.",
+			"transliteration": "la tinsa jawaazak.",
+			"wordAlignments": [
+				{
+					"arabic": "لا",
+					"english": "Don't",
+					"transliteration": "la"
+				},
+				{
+					"arabic": "تنسى",
+					"english": "forget",
+					"transliteration": "tinsa"
+				},
+				{
+					"arabic": "جوازك.",
+					"english": "your passport.",
+					"transliteration": "jawaazak."
+				}
+			],
+			"targetWords": [
+				"Passport"
+			]
+		},
+		{
+			"arabic": "أحتاج فيزا لمصر؟",
+			"arabicTashkeel": "أحتاج فيزا لِمَصر؟",
+			"english": "Do I need a visa for Egypt?",
+			"transliteration": "a7taaj feeza li-masr?",
+			"wordAlignments": [
+				{
+					"arabic": "أحتاج",
+					"english": "Do I need",
+					"transliteration": "a7taaj"
+				},
+				{
+					"arabic": "فيزا",
+					"english": "a visa",
+					"transliteration": "feeza"
+				},
+				{
+					"arabic": "لمصر؟",
+					"english": "for Egypt?",
+					"transliteration": "li-masr?"
+				}
+			],
+			"targetWords": [
+				"Visa"
+			]
+		},
+		{
+			"arabic": "الرحلة الساعة ستة الصبح.",
+			"arabicTashkeel": "الرِّحلة السّاعة سِتّة الصُّبح.",
+			"english": "The flight is at six in the morning.",
+			"transliteration": "ir-ri7la is-saa3a sitta is-sub7.",
+			"wordAlignments": [
+				{
+					"arabic": "الرحلة",
+					"english": "The flight is",
+					"transliteration": "ir-ri7la"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "at",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "ستة",
+					"english": "six",
+					"transliteration": "sitta"
+				},
+				{
+					"arabic": "الصبح.",
+					"english": "in the morning.",
+					"transliteration": "is-sub7."
+				}
+			],
+			"targetWords": [
+				"Flight"
+			]
+		},
+		{
+			"arabic": "صالة المغادرة فوق.",
+			"arabicTashkeel": "صالة المُغادَرة فوق.",
+			"english": "The departure hall is upstairs.",
+			"transliteration": "saalat il-mughaadara foog.",
+			"wordAlignments": [
+				{
+					"arabic": "صالة",
+					"english": "The hall of",
+					"transliteration": "saalat"
+				},
+				{
+					"arabic": "المغادرة",
+					"english": "departure is",
+					"transliteration": "il-mughaadara"
+				},
+				{
+					"arabic": "فوق.",
+					"english": "upstairs.",
+					"transliteration": "foog."
+				}
+			],
+			"targetWords": [
+				"Departure"
+			]
+		},
+		{
+			"arabic": "وقت الوصول الساعة تنتين.",
+			"arabicTashkeel": "وَقت الوُصول السّاعة تِنتين.",
+			"english": "The arrival time is two o'clock.",
+			"transliteration": "wagt il-wusool is-saa3a tinteen.",
+			"wordAlignments": [
+				{
+					"arabic": "وقت",
+					"english": "The time of",
+					"transliteration": "wagt"
+				},
+				{
+					"arabic": "الوصول",
+					"english": "arrival is",
+					"transliteration": "il-wusool"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "at",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "تنتين.",
+					"english": "two.",
+					"transliteration": "tinteen."
+				}
+			],
+			"targetWords": [
+				"Arrival"
+			]
+		},
+		{
+			"arabic": "أي بوابة؟",
+			"arabicTashkeel": "أيّ بَوّابة؟",
+			"english": "Which gate?",
+			"transliteration": "ayy bawwaaba?",
+			"wordAlignments": [
+				{
+					"arabic": "أي",
+					"english": "Which",
+					"transliteration": "ayy"
+				},
+				{
+					"arabic": "بوابة؟",
+					"english": "gate?",
+					"transliteration": "bawwaaba?"
+				}
+			],
+			"targetWords": [
+				"Gate"
+			]
+		},
+		{
+			"arabic": "شنطي تقيلة.",
+			"arabicTashkeel": "شُنَطي تِقيلة.",
+			"english": "My bags are heavy.",
+			"transliteration": "shunati tgeela.",
+			"wordAlignments": [
+				{
+					"arabic": "شنطي",
+					"english": "My bags are",
+					"transliteration": "shunati"
+				},
+				{
+					"arabic": "تقيلة.",
+					"english": "heavy.",
+					"transliteration": "tgeela."
+				}
+			],
+			"targetWords": [
+				"Luggage"
+			]
+		},
+		{
+			"arabic": "هادي بطاقة الصعود حقتك.",
+			"arabicTashkeel": "هادي بِطاقة الصُّعود حَقّتَك.",
+			"english": "Here is your boarding pass.",
+			"transliteration": "haadi bitaagat is-su3ood 7aggatak.",
+			"wordAlignments": [
+				{
+					"arabic": "هادي",
+					"english": "This is",
+					"transliteration": "haadi"
+				},
+				{
+					"arabic": "بطاقة",
+					"english": "the card of",
+					"transliteration": "bitaagat"
+				},
+				{
+					"arabic": "الصعود",
+					"english": "boarding",
+					"transliteration": "is-su3ood"
+				},
+				{
+					"arabic": "حقتك.",
+					"english": "yours.",
+					"transliteration": "7aggatak."
+				}
+			],
+			"targetWords": [
+				"Boarding pass"
+			]
+		},
+		{
+			"arabic": "أبغى تذكرة ذهاب بس.",
+			"arabicTashkeel": "أبغى تَذكَرة ذِهاب بَس.",
+			"english": "I want a one-way ticket.",
+			"transliteration": "abgha tazkara dhahaab bas.",
+			"wordAlignments": [
+				{
+					"arabic": "أبغى",
+					"english": "I want",
+					"transliteration": "abgha"
+				},
+				{
+					"arabic": "تذكرة",
+					"english": "a ticket",
+					"transliteration": "tazkara"
+				},
+				{
+					"arabic": "ذهاب",
+					"english": "going",
+					"transliteration": "dhahaab"
+				},
+				{
+					"arabic": "بس.",
+					"english": "only.",
+					"transliteration": "bas."
+				}
+			],
+			"targetWords": [
+				"One way"
+			]
+		},
+		{
+			"arabic": "تذكرة ذهاب وعودة للقاهرة لو سمحت.",
+			"arabicTashkeel": "تَذكَرة ذِهاب وعَودة للقاهِرة لو سَمَحت.",
+			"english": "A return ticket to Cairo, please.",
+			"transliteration": "tazkara dhahaab w-3awda lil-gaahira law sama7t.",
+			"wordAlignments": [
+				{
+					"arabic": "تذكرة",
+					"english": "A ticket",
+					"transliteration": "tazkara"
+				},
+				{
+					"arabic": "ذهاب",
+					"english": "going",
+					"transliteration": "dhahaab"
+				},
+				{
+					"arabic": "وعودة",
+					"english": "and return",
+					"transliteration": "w-3awda"
+				},
+				{
+					"arabic": "للقاهرة",
+					"english": "to Cairo",
+					"transliteration": "lil-gaahira"
+				},
+				{
+					"arabic": "لو",
+					"english": "if",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "سمحت.",
+					"english": "you please.",
+					"transliteration": "sama7t."
+				}
+			],
+			"targetWords": [
+				"Return (ticket)"
+			]
+		},
+		{
+			"arabic": "أبغى مقعد جنب الشباك.",
+			"arabicTashkeel": "أبغى مَقعَد جَنب الشُّبّاك.",
+			"english": "I want a window seat.",
+			"transliteration": "abgha mag3ad jamb ish-shubbaak.",
+			"wordAlignments": [
+				{
+					"arabic": "أبغى",
+					"english": "I want",
+					"transliteration": "abgha"
+				},
+				{
+					"arabic": "مقعد",
+					"english": "a seat",
+					"transliteration": "mag3ad"
+				},
+				{
+					"arabic": "جنب",
+					"english": "next to",
+					"transliteration": "jamb"
+				},
+				{
+					"arabic": "الشباك.",
+					"english": "the window.",
+					"transliteration": "ish-shubbaak."
+				}
+			],
+			"targetWords": [
+				"Seat"
+			]
+		},
+		{
+			"arabic": "الرحلة ملغية.",
+			"arabicTashkeel": "الرِّحلة مَلغية.",
+			"english": "The flight was cancelled.",
+			"transliteration": "ir-ri7la malghiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "الرحلة",
+					"english": "The flight",
+					"transliteration": "ir-ri7la"
+				},
+				{
+					"arabic": "ملغية.",
+					"english": "is cancelled.",
+					"transliteration": "malghiyya."
+				}
+			],
+			"targetWords": [
+				"Cancelled",
+				"Flight"
+			]
+		},
+		{
+			"arabic": "شوف المواعيد على الشاشة.",
+			"arabicTashkeel": "شوف المَواعيد على الشّاشة.",
+			"english": "Look at the timetable on the screen.",
+			"transliteration": "shoof il-mawaa3eed 3ala ish-shaasha.",
+			"wordAlignments": [
+				{
+					"arabic": "شوف",
+					"english": "Look at",
+					"transliteration": "shoof"
+				},
+				{
+					"arabic": "المواعيد",
+					"english": "the times",
+					"transliteration": "il-mawaa3eed"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "الشاشة.",
+					"english": "the screen.",
+					"transliteration": "ish-shaasha."
+				}
+			],
+			"targetWords": [
+				"Timetable"
+			]
+		},
+		{
+			"arabic": "أبويا يحجز التذاكر أونلاين.",
+			"arabicTashkeel": "أبويا يِحجِز التَّذاكِر أونلاين.",
+			"english": "My father books the tickets online.",
+			"transliteration": "abooya yi7jiz it-tazaakir onlain.",
+			"wordAlignments": [
+				{
+					"arabic": "أبويا",
+					"english": "My father",
+					"transliteration": "abooya"
+				},
+				{
+					"arabic": "يحجز",
+					"english": "books",
+					"transliteration": "yi7jiz"
+				},
+				{
+					"arabic": "التذاكر",
+					"english": "the tickets",
+					"transliteration": "it-tazaakir"
+				},
+				{
+					"arabic": "أونلاين.",
+					"english": "online.",
+					"transliteration": "onlain."
+				}
+			],
+			"targetWords": [
+				"He books"
+			]
+		},
+		{
+			"arabic": "مكتب السفريات جنب البنك.",
+			"arabicTashkeel": "مَكتَب السَّفَريات جَنب البَنك.",
+			"english": "The travel agency is next to the bank.",
+			"transliteration": "maktab is-safariyyaat jamb il-bank.",
+			"wordAlignments": [
+				{
+					"arabic": "مكتب",
+					"english": "The office of",
+					"transliteration": "maktab"
+				},
+				{
+					"arabic": "السفريات",
+					"english": "travels is",
+					"transliteration": "is-safariyyaat"
+				},
+				{
+					"arabic": "جنب",
+					"english": "next to",
+					"transliteration": "jamb"
+				},
+				{
+					"arabic": "البنك.",
+					"english": "the bank.",
+					"transliteration": "il-bank."
+				}
+			],
+			"targetWords": [
+				"Travel agency"
+			]
+		},
+		{
+			"arabic": "جوازي يخلص الشهر الجاي.",
+			"arabicTashkeel": "جَوازي يِخلَص الشَّهر الجاي.",
+			"english": "My passport expires next month.",
+			"transliteration": "jawaazi yikhlas ish-shahr ij-jaay.",
+			"wordAlignments": [
+				{
+					"arabic": "جوازي",
+					"english": "My passport",
+					"transliteration": "jawaazi"
+				},
+				{
+					"arabic": "يخلص",
+					"english": "expires",
+					"transliteration": "yikhlas"
+				},
+				{
+					"arabic": "الشهر",
+					"english": "the month",
+					"transliteration": "ish-shahr"
+				},
+				{
+					"arabic": "الجاي.",
+					"english": "next.",
+					"transliteration": "ij-jaay."
+				}
+			],
+			"targetWords": [
+				"Passport"
+			]
+		},
+		{
+			"arabic": "فيزا السياحة سهلة دحين.",
+			"arabicTashkeel": "فيزا السِّياحة سَهلة دحين.",
+			"english": "The tourist visa is easy now.",
+			"transliteration": "feezat is-siyaa7a sahla da7een.",
+			"wordAlignments": [
+				{
+					"arabic": "فيزا",
+					"english": "The visa of",
+					"transliteration": "feezat"
+				},
+				{
+					"arabic": "السياحة",
+					"english": "tourism is",
+					"transliteration": "is-siyaa7a"
+				},
+				{
+					"arabic": "سهلة",
+					"english": "easy",
+					"transliteration": "sahla"
+				},
+				{
+					"arabic": "دحين.",
+					"english": "now.",
+					"transliteration": "da7een."
+				}
+			],
+			"targetWords": [
+				"Visa"
+			]
+		},
+		{
+			"arabic": "الرحلة للرياض تاخد ساعة ونص.",
+			"arabicTashkeel": "الرِّحلة لِلرِّياض تاخُد ساعة ونُص.",
+			"english": "The flight to Riyadh takes an hour and a half.",
+			"transliteration": "ir-ri7la lir-riyaadh taakhud saa3a w-nuss.",
+			"wordAlignments": [
+				{
+					"arabic": "الرحلة",
+					"english": "The flight",
+					"transliteration": "ir-ri7la"
+				},
+				{
+					"arabic": "للرياض",
+					"english": "to Riyadh",
+					"transliteration": "lir-riyaadh"
+				},
+				{
+					"arabic": "تاخد",
+					"english": "takes",
+					"transliteration": "taakhud"
+				},
+				{
+					"arabic": "ساعة",
+					"english": "an hour",
+					"transliteration": "saa3a"
+				},
+				{
+					"arabic": "ونص.",
+					"english": "and a half.",
+					"transliteration": "w-nuss."
+				}
+			],
+			"targetWords": [
+				"Flight"
+			]
+		},
+		{
+			"arabic": "المغادرة من الصالة رقم واحد.",
+			"arabicTashkeel": "المُغادَرة مِن الصّالة رَقَم واحِد.",
+			"english": "Departure is from Terminal One.",
+			"transliteration": "il-mughaadara min is-saala ragam waa7id.",
+			"wordAlignments": [
+				{
+					"arabic": "المغادرة",
+					"english": "Departure is",
+					"transliteration": "il-mughaadara"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الصالة",
+					"english": "the terminal",
+					"transliteration": "is-saala"
+				},
+				{
+					"arabic": "رقم",
+					"english": "number",
+					"transliteration": "ragam"
+				},
+				{
+					"arabic": "واحد.",
+					"english": "one.",
+					"transliteration": "waa7id."
+				}
+			],
+			"targetWords": [
+				"Departure"
+			]
+		},
+		{
+			"arabic": "حستناك في صالة الوصول.",
+			"arabicTashkeel": "حَستَنّاك في صالة الوُصول.",
+			"english": "I'll wait for you in the arrival hall.",
+			"transliteration": "7astannaak fi saalat il-wusool.",
+			"wordAlignments": [
+				{
+					"arabic": "حستناك",
+					"english": "I'll wait for you",
+					"transliteration": "7astannaak"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "صالة",
+					"english": "the hall of",
+					"transliteration": "saalat"
+				},
+				{
+					"arabic": "الوصول.",
+					"english": "arrival.",
+					"transliteration": "il-wusool."
+				}
+			],
+			"targetWords": [
+				"Arrival"
+			]
+		},
+		{
+			"arabic": "البوابة تغيرت.",
+			"arabicTashkeel": "البَوّابة تِغَيَّرَت.",
+			"english": "The gate changed.",
+			"transliteration": "il-bawwaaba tighayyarat.",
+			"wordAlignments": [
+				{
+					"arabic": "البوابة",
+					"english": "The gate",
+					"transliteration": "il-bawwaaba"
+				},
+				{
+					"arabic": "تغيرت.",
+					"english": "changed.",
+					"transliteration": "tighayyarat."
+				}
+			],
+			"targetWords": [
+				"Gate"
+			]
+		},
+		{
+			"arabic": "فين أحط شنطي؟",
+			"arabicTashkeel": "فين أحُط شُنَطي؟",
+			"english": "Where do I put my bags?",
+			"transliteration": "feen a7ut shunati?",
+			"wordAlignments": [
+				{
+					"arabic": "فين",
+					"english": "Where",
+					"transliteration": "feen"
+				},
+				{
+					"arabic": "أحط",
+					"english": "do I put",
+					"transliteration": "a7ut"
+				},
+				{
+					"arabic": "شنطي؟",
+					"english": "my bags?",
+					"transliteration": "shunati?"
+				}
+			],
+			"targetWords": [
+				"Luggage"
+			]
+		},
+		{
+			"arabic": "ضيعت بطاقة الصعود!",
+			"arabicTashkeel": "ضَيَّعت بِطاقة الصُّعود!",
+			"english": "I lost my boarding pass!",
+			"transliteration": "dhayya3t bitaagat is-su3ood!",
+			"wordAlignments": [
+				{
+					"arabic": "ضيعت",
+					"english": "I lost",
+					"transliteration": "dhayya3t"
+				},
+				{
+					"arabic": "بطاقة",
+					"english": "the card of",
+					"transliteration": "bitaagat"
+				},
+				{
+					"arabic": "الصعود!",
+					"english": "boarding!",
+					"transliteration": "is-su3ood!"
+				}
+			],
+			"targetWords": [
+				"Boarding pass"
+			]
+		},
+		{
+			"arabic": "بكم الذهاب بس؟",
+			"arabicTashkeel": "بكَم الذِّهاب بَس؟",
+			"english": "How much is one way?",
+			"transliteration": "bikam idh-dhahaab bas?",
+			"wordAlignments": [
+				{
+					"arabic": "بكم",
+					"english": "How much is",
+					"transliteration": "bikam"
+				},
+				{
+					"arabic": "الذهاب",
+					"english": "the going",
+					"transliteration": "idh-dhahaab"
+				},
+				{
+					"arabic": "بس؟",
+					"english": "only?",
+					"transliteration": "bas?"
+				}
+			],
+			"targetWords": [
+				"One way"
+			]
+		},
+		{
+			"arabic": "الذهاب والعودة أرخص.",
+			"arabicTashkeel": "الذِّهاب والعَودة أرخَص.",
+			"english": "Return is cheaper.",
+			"transliteration": "idh-dhahaab w-il-3awda arkhas.",
+			"wordAlignments": [
+				{
+					"arabic": "الذهاب",
+					"english": "The going",
+					"transliteration": "idh-dhahaab"
+				},
+				{
+					"arabic": "والعودة",
+					"english": "and return is",
+					"transliteration": "w-il-3awda"
+				},
+				{
+					"arabic": "أرخص.",
+					"english": "cheaper.",
+					"transliteration": "arkhas."
+				}
+			],
+			"targetWords": [
+				"Return (ticket)"
+			]
+		},
+		{
+			"arabic": "هادا المقعد فاضي؟",
+			"arabicTashkeel": "هادا المَقعَد فاضي؟",
+			"english": "Is this seat free?",
+			"transliteration": "haada il-mag3ad faadhi?",
+			"wordAlignments": [
+				{
+					"arabic": "هادا",
+					"english": "Is this",
+					"transliteration": "haada"
+				},
+				{
+					"arabic": "المقعد",
+					"english": "seat",
+					"transliteration": "il-mag3ad"
+				},
+				{
+					"arabic": "فاضي؟",
+					"english": "free?",
+					"transliteration": "faadhi?"
+				}
+			],
+			"targetWords": [
+				"Seat"
+			]
+		},
+		{
+			"arabic": "ليش الرحلة ملغية؟",
+			"arabicTashkeel": "ليش الرِّحلة مَلغية؟",
+			"english": "Why was the flight cancelled?",
+			"transliteration": "laish ir-ri7la malghiyya?",
+			"wordAlignments": [
+				{
+					"arabic": "ليش",
+					"english": "Why",
+					"transliteration": "laish"
+				},
+				{
+					"arabic": "الرحلة",
+					"english": "is the flight",
+					"transliteration": "ir-ri7la"
+				},
+				{
+					"arabic": "ملغية؟",
+					"english": "cancelled?",
+					"transliteration": "malghiyya?"
+				}
+			],
+			"targetWords": [
+				"Cancelled"
+			]
+		},
+		{
+			"arabic": "مواعيد القطار تغيرت.",
+			"arabicTashkeel": "مَواعيد القِطار تِغَيَّرَت.",
+			"english": "The train timetable changed.",
+			"transliteration": "mawaa3eed il-gitaar tighayyarat.",
+			"wordAlignments": [
+				{
+					"arabic": "مواعيد",
+					"english": "The times of",
+					"transliteration": "mawaa3eed"
+				},
+				{
+					"arabic": "القطار",
+					"english": "the train",
+					"transliteration": "il-gitaar"
+				},
+				{
+					"arabic": "تغيرت.",
+					"english": "changed.",
+					"transliteration": "tighayyarat."
+				}
+			],
+			"targetWords": [
+				"Timetable"
+			]
+		},
+		{
+			"arabic": "هيا تحجز الفندق بنفسها.",
+			"arabicTashkeel": "هيّا تِحجِز الفُندُق بنَفسَها.",
+			"english": "She books the hotel herself.",
+			"transliteration": "hiyya ti7jiz il-funduq b-nafsaha.",
+			"wordAlignments": [
+				{
+					"arabic": "هيا",
+					"english": "She",
+					"transliteration": "hiyya"
+				},
+				{
+					"arabic": "تحجز",
+					"english": "books",
+					"transliteration": "ti7jiz"
+				},
+				{
+					"arabic": "الفندق",
+					"english": "the hotel",
+					"transliteration": "il-funduq"
+				},
+				{
+					"arabic": "بنفسها.",
+					"english": "herself.",
+					"transliteration": "b-nafsaha."
+				}
+			],
+			"targetWords": [
+				"He books"
+			]
+		},
+		{
+			"arabic": "حجزت عن طريق مكتب سفريات.",
+			"arabicTashkeel": "حَجَزت عَن طَريق مَكتَب سَفَريات.",
+			"english": "I booked through a travel agency.",
+			"transliteration": "7ajazt 3an tareeg maktab safariyyaat.",
+			"wordAlignments": [
+				{
+					"arabic": "حجزت",
+					"english": "I booked",
+					"transliteration": "7ajazt"
+				},
+				{
+					"arabic": "عن",
+					"english": "through",
+					"transliteration": "3an"
+				},
+				{
+					"arabic": "طريق",
+					"english": "the way of",
+					"transliteration": "tareeg"
+				},
+				{
+					"arabic": "مكتب",
+					"english": "an office of",
+					"transliteration": "maktab"
+				},
+				{
+					"arabic": "سفريات.",
+					"english": "travels.",
+					"transliteration": "safariyyaat."
+				}
+			],
+			"targetWords": [
+				"Travel agency",
+				"He books"
+			]
+		},
+		{
+			"arabic": "وريني الجواز لو سمحت.",
+			"arabicTashkeel": "وَرّيني الجَواز لو سَمَحت.",
+			"english": "Show me your passport, please.",
+			"transliteration": "warreeni ij-jawaaz law sama7t.",
+			"wordAlignments": [
+				{
+					"arabic": "وريني",
+					"english": "Show me",
+					"transliteration": "warreeni"
+				},
+				{
+					"arabic": "الجواز",
+					"english": "the passport",
+					"transliteration": "ij-jawaaz"
+				},
+				{
+					"arabic": "لو",
+					"english": "if",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "سمحت.",
+					"english": "you please.",
+					"transliteration": "sama7t."
+				}
+			],
+			"targetWords": [
+				"Passport"
+			]
+		},
+		{
+			"arabic": "الفيزا تاخد أسبوع.",
+			"arabicTashkeel": "الفيزا تاخُد أُسبوع.",
+			"english": "The visa takes a week.",
+			"transliteration": "il-feeza taakhud usboo3.",
+			"wordAlignments": [
+				{
+					"arabic": "الفيزا",
+					"english": "The visa",
+					"transliteration": "il-feeza"
+				},
+				{
+					"arabic": "تاخد",
+					"english": "takes",
+					"transliteration": "taakhud"
+				},
+				{
+					"arabic": "أسبوع.",
+					"english": "a week.",
+					"transliteration": "usboo3."
+				}
+			],
+			"targetWords": [
+				"Visa"
+			]
+		},
+		{
+			"arabic": "الرحلة متأخرة ساعة.",
+			"arabicTashkeel": "الرِّحلة مِتأخِّرة ساعة.",
+			"english": "The flight is delayed one hour.",
+			"transliteration": "ir-ri7la mit2akhkhira saa3a.",
+			"wordAlignments": [
+				{
+					"arabic": "الرحلة",
+					"english": "The flight",
+					"transliteration": "ir-ri7la"
+				},
+				{
+					"arabic": "متأخرة",
+					"english": "is delayed",
+					"transliteration": "mit2akhkhira"
+				},
+				{
+					"arabic": "ساعة.",
+					"english": "an hour.",
+					"transliteration": "saa3a."
+				}
+			],
+			"targetWords": [
+				"Flight"
+			]
+		},
+		{
+			"arabic": "وقت المغادرة الساعة عشرة.",
+			"arabicTashkeel": "وَقت المُغادَرة السّاعة عَشَرة.",
+			"english": "Departure time is ten.",
+			"transliteration": "wagt il-mughaadara is-saa3a 3ashara.",
+			"wordAlignments": [
+				{
+					"arabic": "وقت",
+					"english": "The time of",
+					"transliteration": "wagt"
+				},
+				{
+					"arabic": "المغادرة",
+					"english": "departure is",
+					"transliteration": "il-mughaadara"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "at",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "عشرة.",
+					"english": "ten.",
+					"transliteration": "3ashara."
+				}
+			],
+			"targetWords": [
+				"Departure"
+			]
+		},
+		{
+			"arabic": "إمتى الوصول؟",
+			"arabicTashkeel": "إمتى الوُصول؟",
+			"english": "When is the arrival?",
+			"transliteration": "imta il-wusool?",
+			"wordAlignments": [
+				{
+					"arabic": "إمتى",
+					"english": "When is",
+					"transliteration": "imta"
+				},
+				{
+					"arabic": "الوصول؟",
+					"english": "the arrival?",
+					"transliteration": "il-wusool?"
+				}
+			],
+			"targetWords": [
+				"Arrival"
+			]
+		},
+		{
+			"arabic": "روح البوابة اتناشر.",
+			"arabicTashkeel": "روح البَوّابة اِتناشَر.",
+			"english": "Go to gate twelve.",
+			"transliteration": "rooh il-bawwaaba itnaashar.",
+			"wordAlignments": [
+				{
+					"arabic": "روح",
+					"english": "Go",
+					"transliteration": "rooh"
+				},
+				{
+					"arabic": "البوابة",
+					"english": "to gate",
+					"transliteration": "il-bawwaaba"
+				},
+				{
+					"arabic": "اتناشر.",
+					"english": "twelve.",
+					"transliteration": "itnaashar."
+				}
+			],
+			"targetWords": [
+				"Gate"
+			]
+		},
+		{
+			"arabic": "كم شنطة معاك؟",
+			"arabicTashkeel": "كَم شَنطة مَعاك؟",
+			"english": "How many bags do you have?",
+			"transliteration": "kam shanta ma3aak?",
+			"wordAlignments": [
+				{
+					"arabic": "كم",
+					"english": "How many",
+					"transliteration": "kam"
+				},
+				{
+					"arabic": "شنطة",
+					"english": "bags",
+					"transliteration": "shanta"
+				},
+				{
+					"arabic": "معاك؟",
+					"english": "with you?",
+					"transliteration": "ma3aak?"
+				}
+			],
+			"targetWords": [
+				"Luggage"
+			]
+		},
+		{
+			"arabic": "اطبع بطاقة الصعود في البيت.",
+			"arabicTashkeel": "اِطبَع بِطاقة الصُّعود في البيت.",
+			"english": "Print the boarding pass at home.",
+			"transliteration": "itba3 bitaagat is-su3ood fi il-bait.",
+			"wordAlignments": [
+				{
+					"arabic": "اطبع",
+					"english": "Print",
+					"transliteration": "itba3"
+				},
+				{
+					"arabic": "بطاقة",
+					"english": "the card of",
+					"transliteration": "bitaagat"
+				},
+				{
+					"arabic": "الصعود",
+					"english": "boarding",
+					"transliteration": "is-su3ood"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "البيت.",
+					"english": "the house.",
+					"transliteration": "il-bait."
+				}
+			],
+			"targetWords": [
+				"Boarding pass"
+			]
+		},
+		{
+			"arabic": "مو متأكد، فحاخد ذهاب بس.",
+			"arabicTashkeel": "مو مِتأكِّد، فَحاخُد ذِهاب بَس.",
+			"english": "I'm not sure, so I'll take one way.",
+			"transliteration": "moo mit2akkid, fa7aakhud dhahaab bas.",
+			"wordAlignments": [
+				{
+					"arabic": "مو",
+					"english": "Not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "متأكد،",
+					"english": "sure,",
+					"transliteration": "mit2akkid,"
+				},
+				{
+					"arabic": "فحاخد",
+					"english": "so I'll take",
+					"transliteration": "fa7aakhud"
+				},
+				{
+					"arabic": "ذهاب",
+					"english": "going",
+					"transliteration": "dhahaab"
+				},
+				{
+					"arabic": "بس.",
+					"english": "only.",
+					"transliteration": "bas."
+				}
+			],
+			"targetWords": [
+				"One way"
+			]
+		},
+		{
+			"arabic": "حجزت ذهاب وعودة.",
+			"arabicTashkeel": "حَجَزت ذِهاب وعَودة.",
+			"english": "I booked a return ticket.",
+			"transliteration": "7ajazt dhahaab w-3awda.",
+			"wordAlignments": [
+				{
+					"arabic": "حجزت",
+					"english": "I booked",
+					"transliteration": "7ajazt"
+				},
+				{
+					"arabic": "ذهاب",
+					"english": "going",
+					"transliteration": "dhahaab"
+				},
+				{
+					"arabic": "وعودة.",
+					"english": "and return.",
+					"transliteration": "w-3awda."
+				}
+			],
+			"targetWords": [
+				"Return (ticket)"
+			]
+		},
+		{
+			"arabic": "مقعد رقم أربعتاشر.",
+			"arabicTashkeel": "مَقعَد رَقَم أربَعتاشَر.",
+			"english": "Seat number fourteen.",
+			"transliteration": "mag3ad ragam arba3taashar.",
+			"wordAlignments": [
+				{
+					"arabic": "مقعد",
+					"english": "Seat",
+					"transliteration": "mag3ad"
+				},
+				{
+					"arabic": "رقم",
+					"english": "number",
+					"transliteration": "ragam"
+				},
+				{
+					"arabic": "أربعتاشر.",
+					"english": "fourteen.",
+					"transliteration": "arba3taashar."
+				}
+			],
+			"targetWords": [
+				"Seat"
+			]
+		},
+		{
+			"arabic": "الرحلة انلغت بسبب الجو.",
+			"arabicTashkeel": "الرِّحلة اِنلَغَت بسَبَب الجَو.",
+			"english": "The trip was cancelled because of the weather.",
+			"transliteration": "ir-ri7la inlaghat b-sabab ij-jaw.",
+			"wordAlignments": [
+				{
+					"arabic": "الرحلة",
+					"english": "The trip",
+					"transliteration": "ir-ri7la"
+				},
+				{
+					"arabic": "انلغت",
+					"english": "was cancelled",
+					"transliteration": "inlaghat"
+				},
+				{
+					"arabic": "بسبب",
+					"english": "because of",
+					"transliteration": "b-sabab"
+				},
+				{
+					"arabic": "الجو.",
+					"english": "the weather.",
+					"transliteration": "ij-jaw."
+				}
+			],
+			"targetWords": [
+				"Cancelled"
+			]
+		},
+		{
+			"arabic": "شيك المواعيد قبل ما تطلع.",
+			"arabicTashkeel": "شَيِّك المَواعيد قَبل ما تِطلَع.",
+			"english": "Check the timetable before you go.",
+			"transliteration": "shayyik il-mawaa3eed gabl ma titla3.",
+			"wordAlignments": [
+				{
+					"arabic": "شيك",
+					"english": "Check",
+					"transliteration": "shayyik"
+				},
+				{
+					"arabic": "المواعيد",
+					"english": "the times",
+					"transliteration": "il-mawaa3eed"
+				},
+				{
+					"arabic": "قبل",
+					"english": "before",
+					"transliteration": "gabl"
+				},
+				{
+					"arabic": "ما",
+					"english": "that",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "تطلع.",
+					"english": "you go out.",
+					"transliteration": "titla3."
+				}
+			],
+			"targetWords": [
+				"Timetable"
+			]
+		},
+		{
+			"arabic": "مين يحجز التذاكر المرة دي؟",
+			"arabicTashkeel": "مين يِحجِز التَّذاكِر المَرّة دي؟",
+			"english": "Who books the tickets this time?",
+			"transliteration": "meen yi7jiz it-tazaakir il-marra di?",
+			"wordAlignments": [
+				{
+					"arabic": "مين",
+					"english": "Who",
+					"transliteration": "meen"
+				},
+				{
+					"arabic": "يحجز",
+					"english": "books",
+					"transliteration": "yi7jiz"
+				},
+				{
+					"arabic": "التذاكر",
+					"english": "the tickets",
+					"transliteration": "it-tazaakir"
+				},
+				{
+					"arabic": "المرة",
+					"english": "the time",
+					"transliteration": "il-marra"
+				},
+				{
+					"arabic": "دي؟",
+					"english": "this?",
+					"transliteration": "di?"
+				}
+			],
+			"targetWords": [
+				"He books"
+			]
+		},
+		{
+			"arabic": "مكتب السفريات يسكر الساعة تسعة.",
+			"arabicTashkeel": "مَكتَب السَّفَريات يِسَكِّر السّاعة تِسعة.",
+			"english": "The travel agency closes at nine.",
+			"transliteration": "maktab is-safariyyaat yisakkir is-saa3a tis3a.",
+			"wordAlignments": [
+				{
+					"arabic": "مكتب",
+					"english": "The office of",
+					"transliteration": "maktab"
+				},
+				{
+					"arabic": "السفريات",
+					"english": "travels",
+					"transliteration": "is-safariyyaat"
+				},
+				{
+					"arabic": "يسكر",
+					"english": "closes",
+					"transliteration": "yisakkir"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "at",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "تسعة.",
+					"english": "nine.",
+					"transliteration": "tis3a."
+				}
+			],
+			"targetWords": [
+				"Travel agency"
+			]
+		},
+		{
+			"arabic": "الجواز وبطاقة الصعود لو سمحت.",
+			"arabicTashkeel": "الجَواز وبِطاقة الصُّعود لو سَمَحت.",
+			"english": "Passport and boarding pass, please.",
+			"transliteration": "ij-jawaaz w-bitaagat is-su3ood law sama7t.",
+			"wordAlignments": [
+				{
+					"arabic": "الجواز",
+					"english": "The passport",
+					"transliteration": "ij-jawaaz"
+				},
+				{
+					"arabic": "وبطاقة",
+					"english": "and the card of",
+					"transliteration": "w-bitaagat"
+				},
+				{
+					"arabic": "الصعود",
+					"english": "boarding",
+					"transliteration": "is-su3ood"
+				},
+				{
+					"arabic": "لو",
+					"english": "if",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "سمحت.",
+					"english": "you please.",
+					"transliteration": "sama7t."
+				}
+			],
+			"targetWords": [
+				"Passport",
+				"Boarding pass"
+			]
+		},
+		{
+			"arabic": "طلعت الفيزا أمس.",
+			"arabicTashkeel": "طِلعَت الفيزا أمس.",
+			"english": "I got the visa yesterday.",
+			"transliteration": "til3at il-feeza ams.",
+			"wordAlignments": [
+				{
+					"arabic": "طلعت",
+					"english": "Came out",
+					"transliteration": "til3at"
+				},
+				{
+					"arabic": "الفيزا",
+					"english": "the visa",
+					"transliteration": "il-feeza"
+				},
+				{
+					"arabic": "أمس.",
+					"english": "yesterday.",
+					"transliteration": "ams."
+				}
+			],
+			"targetWords": [
+				"Visa"
+			]
+		},
+		{
+			"arabic": "رحلة مباشرة لإسطنبول.",
+			"arabicTashkeel": "رِحلة مُباشِرة لإسطَنبول.",
+			"english": "A direct flight to Istanbul.",
+			"transliteration": "ri7la mubaashira l-istanbool.",
+			"wordAlignments": [
+				{
+					"arabic": "رحلة",
+					"english": "A flight",
+					"transliteration": "ri7la"
+				},
+				{
+					"arabic": "مباشرة",
+					"english": "direct",
+					"transliteration": "mubaashira"
+				},
+				{
+					"arabic": "لإسطنبول.",
+					"english": "to Istanbul.",
+					"transliteration": "l-istanbool."
+				}
+			],
+			"targetWords": [
+				"Flight"
+			]
+		},
+		{
+			"arabic": "شاشة المغادرة.",
+			"arabicTashkeel": "شاشة المُغادَرة.",
+			"english": "The departures screen.",
+			"transliteration": "shaashat il-mughaadara.",
+			"wordAlignments": [
+				{
+					"arabic": "شاشة",
+					"english": "The screen of",
+					"transliteration": "shaashat"
+				},
+				{
+					"arabic": "المغادرة.",
+					"english": "departure.",
+					"transliteration": "il-mughaadara."
+				}
+			],
+			"targetWords": [
+				"Departure"
+			]
+		},
+		{
+			"arabic": "حنكلمك أول ما نوصل.",
+			"arabicTashkeel": "حَنكَلِّمَك أوّل ما نِوصَل.",
+			"english": "We'll call you on arrival.",
+			"transliteration": "7ankallimak awwal ma niwsal.",
+			"wordAlignments": [
+				{
+					"arabic": "حنكلمك",
+					"english": "We'll call you",
+					"transliteration": "7ankallimak"
+				},
+				{
+					"arabic": "أول",
+					"english": "first",
+					"transliteration": "awwal"
+				},
+				{
+					"arabic": "ما",
+					"english": "thing",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "نوصل.",
+					"english": "we arrive.",
+					"transliteration": "niwsal."
+				}
+			],
+			"targetWords": [
+				"Arrival"
+			]
+		},
+		{
+			"arabic": "البوابة تسكر بعد عشرين دقيقة.",
+			"arabicTashkeel": "البَوّابة تِسَكِّر بَعد عِشرين دَقيقة.",
+			"english": "The gate closes in twenty minutes.",
+			"transliteration": "il-bawwaaba tisakkir ba3d 3ishreen dageega.",
+			"wordAlignments": [
+				{
+					"arabic": "البوابة",
+					"english": "The gate",
+					"transliteration": "il-bawwaaba"
+				},
+				{
+					"arabic": "تسكر",
+					"english": "closes",
+					"transliteration": "tisakkir"
+				},
+				{
+					"arabic": "بعد",
+					"english": "after",
+					"transliteration": "ba3d"
+				},
+				{
+					"arabic": "عشرين",
+					"english": "twenty",
+					"transliteration": "3ishreen"
+				},
+				{
+					"arabic": "دقيقة.",
+					"english": "minutes.",
+					"transliteration": "dageega."
+				}
+			],
+			"targetWords": [
+				"Gate"
+			]
+		},
+		{
+			"arabic": "الشنط وصلت متأخرة.",
+			"arabicTashkeel": "الشُّنَط وَصَلَت مِتأخِّرة.",
+			"english": "The bags arrived late.",
+			"transliteration": "ish-shunat wasalat mit2akhkhira.",
+			"wordAlignments": [
+				{
+					"arabic": "الشنط",
+					"english": "The bags",
+					"transliteration": "ish-shunat"
+				},
+				{
+					"arabic": "وصلت",
+					"english": "arrived",
+					"transliteration": "wasalat"
+				},
+				{
+					"arabic": "متأخرة.",
+					"english": "late.",
+					"transliteration": "mit2akhkhira."
+				}
+			],
+			"targetWords": [
+				"Luggage"
+			]
+		},
+		{
+			"arabic": "بطاقة الصعود في الجوال.",
+			"arabicTashkeel": "بِطاقة الصُّعود في الجَوّال.",
+			"english": "The boarding pass is on my mobile.",
+			"transliteration": "bitaagat is-su3ood fi ij-jawwaal.",
+			"wordAlignments": [
+				{
+					"arabic": "بطاقة",
+					"english": "The card of",
+					"transliteration": "bitaagat"
+				},
+				{
+					"arabic": "الصعود",
+					"english": "boarding is",
+					"transliteration": "is-su3ood"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الجوال.",
+					"english": "the mobile.",
+					"transliteration": "ij-jawwaal."
+				}
+			],
+			"targetWords": [
+				"Boarding pass"
+			]
+		},
+		{
+			"arabic": "الذهاب بس أغلى.",
+			"arabicTashkeel": "الذِّهاب بَس أغلى.",
+			"english": "One way is more expensive.",
+			"transliteration": "idh-dhahaab bas aghla.",
+			"wordAlignments": [
+				{
+					"arabic": "الذهاب",
+					"english": "The going",
+					"transliteration": "idh-dhahaab"
+				},
+				{
+					"arabic": "بس",
+					"english": "only is",
+					"transliteration": "bas"
+				},
+				{
+					"arabic": "أغلى.",
+					"english": "more expensive.",
+					"transliteration": "aghla."
+				}
+			],
+			"targetWords": [
+				"One way"
+			]
+		},
+		{
+			"arabic": "العودة مفتوحة؟",
+			"arabicTashkeel": "العَودة مَفتوحة؟",
+			"english": "Is the return open?",
+			"transliteration": "il-3awda maftoo7a?",
+			"wordAlignments": [
+				{
+					"arabic": "العودة",
+					"english": "Is the return",
+					"transliteration": "il-3awda"
+				},
+				{
+					"arabic": "مفتوحة؟",
+					"english": "open?",
+					"transliteration": "maftoo7a?"
+				}
+			],
+			"targetWords": [
+				"Return (ticket)"
+			]
+		},
+		{
+			"arabic": "غير مقعدي لو سمحت.",
+			"arabicTashkeel": "غَيِّر مَقعَدي لو سَمَحت.",
+			"english": "Change my seat, please.",
+			"transliteration": "ghayyir mag3adi law sama7t.",
+			"wordAlignments": [
+				{
+					"arabic": "غير",
+					"english": "Change",
+					"transliteration": "ghayyir"
+				},
+				{
+					"arabic": "مقعدي",
+					"english": "my seat",
+					"transliteration": "mag3adi"
+				},
+				{
+					"arabic": "لو",
+					"english": "if",
+					"transliteration": "law"
+				},
+				{
+					"arabic": "سمحت.",
+					"english": "you please.",
+					"transliteration": "sama7t."
+				}
+			],
+			"targetWords": [
+				"Seat"
+			]
+		},
+		{
+			"arabic": "كل الرحلات ملغية اليوم.",
+			"arabicTashkeel": "كُل الرِّحلات مَلغية اليوم.",
+			"english": "All flights are cancelled today.",
+			"transliteration": "kull ir-ri7laat malghiyya il-yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "كل",
+					"english": "All",
+					"transliteration": "kull"
+				},
+				{
+					"arabic": "الرحلات",
+					"english": "the flights",
+					"transliteration": "ir-ri7laat"
+				},
+				{
+					"arabic": "ملغية",
+					"english": "are cancelled",
+					"transliteration": "malghiyya"
+				},
+				{
+					"arabic": "اليوم.",
+					"english": "today.",
+					"transliteration": "il-yoom."
+				}
+			],
+			"targetWords": [
+				"Cancelled"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "At the Travel Agency",
+			"sentences": [
+				{
+					"arabic": "رحت مكتب السفريات عشان أحجز رحلة للقاهرة.",
+					"arabicTashkeel": "رُحت مَكتَب السَّفَريات عَشان أحجِز رِحلة للقاهِرة.",
+					"english": "I went to the travel agency to book a trip to Cairo.",
+					"transliteration": "ru7t maktab is-safariyyaat 3ashaan a7jiz ri7la lil-gaahira.",
+					"wordAlignments": [
+						{
+							"arabic": "رحت",
+							"english": "I went",
+							"transliteration": "ru7t"
+						},
+						{
+							"arabic": "مكتب",
+							"english": "to the office of",
+							"transliteration": "maktab"
+						},
+						{
+							"arabic": "السفريات",
+							"english": "travels",
+							"transliteration": "is-safariyyaat"
+						},
+						{
+							"arabic": "عشان",
+							"english": "so that",
+							"transliteration": "3ashaan"
+						},
+						{
+							"arabic": "أحجز",
+							"english": "I book",
+							"transliteration": "a7jiz"
+						},
+						{
+							"arabic": "رحلة",
+							"english": "a trip",
+							"transliteration": "ri7la"
+						},
+						{
+							"arabic": "للقاهرة.",
+							"english": "to Cairo.",
+							"transliteration": "lil-gaahira."
+						}
+					]
+				},
+				{
+					"arabic": "الموظف سألني: ذهاب بس ولا ذهاب وعودة؟",
+					"arabicTashkeel": "المُوَظَّف سألني: ذِهاب بَس وَلّا ذِهاب وعَودة؟",
+					"english": "The employee asked me: one way or return?",
+					"transliteration": "il-muwadhdhaf sa2alni: dhahaab bas walla dhahaab w-3awda?",
+					"wordAlignments": [
+						{
+							"arabic": "الموظف",
+							"english": "The employee",
+							"transliteration": "il-muwadhdhaf"
+						},
+						{
+							"arabic": "سألني:",
+							"english": "asked me:",
+							"transliteration": "sa2alni:"
+						},
+						{
+							"arabic": "ذهاب",
+							"english": "going",
+							"transliteration": "dhahaab"
+						},
+						{
+							"arabic": "بس",
+							"english": "only",
+							"transliteration": "bas"
+						},
+						{
+							"arabic": "ولا",
+							"english": "or",
+							"transliteration": "walla"
+						},
+						{
+							"arabic": "ذهاب",
+							"english": "going",
+							"transliteration": "dhahaab"
+						},
+						{
+							"arabic": "وعودة؟",
+							"english": "and return?",
+							"transliteration": "w-3awda?"
+						}
+					]
+				},
+				{
+					"arabic": "أخدت ذهاب وعودة عشان أرخص.",
+					"arabicTashkeel": "أخَدت ذِهاب وعَودة عَشان أرخَص.",
+					"english": "I took a return ticket because it's cheaper.",
+					"transliteration": "akhadt dhahaab w-3awda 3ashaan arkhas.",
+					"wordAlignments": [
+						{
+							"arabic": "أخدت",
+							"english": "I took",
+							"transliteration": "akhadt"
+						},
+						{
+							"arabic": "ذهاب",
+							"english": "going",
+							"transliteration": "dhahaab"
+						},
+						{
+							"arabic": "وعودة",
+							"english": "and return",
+							"transliteration": "w-3awda"
+						},
+						{
+							"arabic": "عشان",
+							"english": "because",
+							"transliteration": "3ashaan"
+						},
+						{
+							"arabic": "أرخص.",
+							"english": "cheaper.",
+							"transliteration": "arkhas."
+						}
+					]
+				},
+				{
+					"arabic": "الرحلة يوم الأحد الساعة ستة الصبح.",
+					"arabicTashkeel": "الرِّحلة يوم الأحَد السّاعة سِتّة الصُّبح.",
+					"english": "The flight is on Sunday at six in the morning.",
+					"transliteration": "ir-ri7la yoom il-a7ad is-saa3a sitta is-sub7.",
+					"wordAlignments": [
+						{
+							"arabic": "الرحلة",
+							"english": "The flight is",
+							"transliteration": "ir-ri7la"
+						},
+						{
+							"arabic": "يوم",
+							"english": "on",
+							"transliteration": "yoom"
+						},
+						{
+							"arabic": "الأحد",
+							"english": "Sunday",
+							"transliteration": "il-a7ad"
+						},
+						{
+							"arabic": "الساعة",
+							"english": "at",
+							"transliteration": "is-saa3a"
+						},
+						{
+							"arabic": "ستة",
+							"english": "six",
+							"transliteration": "sitta"
+						},
+						{
+							"arabic": "الصبح.",
+							"english": "in the morning.",
+							"transliteration": "is-sub7."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "At the Airport",
+			"sentences": [
+				{
+					"arabic": "في المطار إديت الموظف جوازي وشنطي.",
+					"arabicTashkeel": "في المَطار إدّيت المُوَظَّف جَوازي وشُنَطي.",
+					"english": "At the airport I gave the employee my passport and my bags.",
+					"transliteration": "fi il-mataar iddeet il-muwadhdhaf jawaazi w-shunati.",
+					"wordAlignments": [
+						{
+							"arabic": "في",
+							"english": "At",
+							"transliteration": "fi"
+						},
+						{
+							"arabic": "المطار",
+							"english": "the airport",
+							"transliteration": "il-mataar"
+						},
+						{
+							"arabic": "إديت",
+							"english": "I gave",
+							"transliteration": "iddeet"
+						},
+						{
+							"arabic": "الموظف",
+							"english": "the employee",
+							"transliteration": "il-muwadhdhaf"
+						},
+						{
+							"arabic": "جوازي",
+							"english": "my passport",
+							"transliteration": "jawaazi"
+						},
+						{
+							"arabic": "وشنطي.",
+							"english": "and my bags.",
+							"transliteration": "w-shunati."
+						}
+					]
+				},
+				{
+					"arabic": "إدتني بطاقة الصعود وقالت: البوابة رقم خمسة.",
+					"arabicTashkeel": "إدَّتني بِطاقة الصُّعود وقالَت: البَوّابة رَقَم خَمسة.",
+					"english": "She gave me the boarding pass and said: gate number five.",
+					"transliteration": "iddatni bitaagat is-su3ood w-gaalat: il-bawwaaba ragam khamsa.",
+					"wordAlignments": [
+						{
+							"arabic": "إدتني",
+							"english": "She gave me",
+							"transliteration": "iddatni"
+						},
+						{
+							"arabic": "بطاقة",
+							"english": "the card of",
+							"transliteration": "bitaagat"
+						},
+						{
+							"arabic": "الصعود",
+							"english": "boarding",
+							"transliteration": "is-su3ood"
+						},
+						{
+							"arabic": "وقالت:",
+							"english": "and said:",
+							"transliteration": "w-gaalat:"
+						},
+						{
+							"arabic": "البوابة",
+							"english": "the gate",
+							"transliteration": "il-bawwaaba"
+						},
+						{
+							"arabic": "رقم",
+							"english": "number",
+							"transliteration": "ragam"
+						},
+						{
+							"arabic": "خمسة.",
+							"english": "five.",
+							"transliteration": "khamsa."
+						}
+					]
+				},
+				{
+					"arabic": "بس الرحلة تأخرت ساعتين!",
+					"arabicTashkeel": "بَس الرِّحلة تأخَّرَت ساعتين!",
+					"english": "But the flight was delayed two hours!",
+					"transliteration": "bas ir-ri7la ta2akhkharat saa3tain!",
+					"wordAlignments": [
+						{
+							"arabic": "بس",
+							"english": "But",
+							"transliteration": "bas"
+						},
+						{
+							"arabic": "الرحلة",
+							"english": "the flight",
+							"transliteration": "ir-ri7la"
+						},
+						{
+							"arabic": "تأخرت",
+							"english": "was delayed",
+							"transliteration": "ta2akhkharat"
+						},
+						{
+							"arabic": "ساعتين!",
+							"english": "two hours!",
+							"transliteration": "saa3tain!"
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is at a travel agency in Jeddah booking a holiday trip, then checking in at King Abdulaziz Airport.",
+		"studentRole": "A traveller learning Saudi (Hijazi) Arabic.",
+		"otherRole": "The travel agent, who later turns into the check-in employee.",
+		"goalEnglish": "Book a flight (one way or return, dates, seat), then check in with your passport and bags, and ask about the gate and departure time.",
+		"targetWords": [
+			"Passport",
+			"Flight",
+			"Luggage",
+			"Boarding pass",
+			"Return (ticket)",
+			"Seat",
+			"Gate",
+			"Departure"
+		]
+	}
+}

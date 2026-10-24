@@ -1,0 +1,2320 @@
+{
+	"vocab": [
+		{
+			"arabic": "تخييم",
+			"arabicTashkeel": "تَخييم",
+			"english": "Camping",
+			"transliteration": "takhyeem",
+			"wordAlignments": [
+				{
+					"arabic": "تخييم",
+					"english": "Camping",
+					"transliteration": "takhyeem"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "خيمة",
+			"arabicTashkeel": "خيمة",
+			"english": "Tent",
+			"transliteration": "khaima",
+			"wordAlignments": [
+				{
+					"arabic": "خيمة",
+					"english": "Tent",
+					"transliteration": "khaima"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "نار",
+			"arabicTashkeel": "نار",
+			"english": "Fire",
+			"transliteration": "naar",
+			"wordAlignments": [
+				{
+					"arabic": "نار",
+					"english": "Fire",
+					"transliteration": "naar"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "حطب",
+			"arabicTashkeel": "حَطَب",
+			"english": "Firewood",
+			"transliteration": "7atab",
+			"wordAlignments": [
+				{
+					"arabic": "حطب",
+					"english": "Firewood",
+					"transliteration": "7atab"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "جبل",
+			"arabicTashkeel": "جَبَل",
+			"english": "Mountain",
+			"transliteration": "jabal",
+			"wordAlignments": [
+				{
+					"arabic": "جبل",
+					"english": "Mountain",
+					"transliteration": "jabal"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "وادي",
+			"arabicTashkeel": "وادي",
+			"english": "Valley (wadi)",
+			"transliteration": "waadi",
+			"wordAlignments": [
+				{
+					"arabic": "وادي",
+					"english": "Valley",
+					"transliteration": "waadi"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "رمل",
+			"arabicTashkeel": "رَمل",
+			"english": "Sand",
+			"transliteration": "raml",
+			"wordAlignments": [
+				{
+					"arabic": "رمل",
+					"english": "Sand",
+					"transliteration": "raml"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "البر",
+			"arabicTashkeel": "البَر",
+			"english": "The open desert",
+			"transliteration": "il-barr",
+			"wordAlignments": [
+				{
+					"arabic": "البر",
+					"english": "The open land",
+					"transliteration": "il-barr"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "نجوم",
+			"arabicTashkeel": "نُجوم",
+			"english": "Stars",
+			"transliteration": "nujoom",
+			"wordAlignments": [
+				{
+					"arabic": "نجوم",
+					"english": "Stars",
+					"transliteration": "nujoom"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "فرشة",
+			"arabicTashkeel": "فَرشة",
+			"english": "Sleeping mat",
+			"transliteration": "farsha",
+			"wordAlignments": [
+				{
+					"arabic": "فرشة",
+					"english": "Mat",
+					"transliteration": "farsha"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "كشاف",
+			"arabicTashkeel": "كَشّاف",
+			"english": "Torch",
+			"transliteration": "kashshaaf",
+			"wordAlignments": [
+				{
+					"arabic": "كشاف",
+					"english": "Torch",
+					"transliteration": "kashshaaf"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "شوي",
+			"arabicTashkeel": "شَوي",
+			"english": "Barbecue",
+			"transliteration": "shawi",
+			"wordAlignments": [
+				{
+					"arabic": "شوي",
+					"english": "Grilling",
+					"transliteration": "shawi"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "شنطة ضهر",
+			"arabicTashkeel": "شَنطة ضَهر",
+			"english": "Backpack",
+			"transliteration": "shantat dhahr",
+			"wordAlignments": [
+				{
+					"arabic": "شنطة",
+					"english": "Bag of",
+					"transliteration": "shantat"
+				},
+				{
+					"arabic": "ضهر",
+					"english": "back",
+					"transliteration": "dhahr"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "طبيعة",
+			"arabicTashkeel": "طَبيعة",
+			"english": "Nature",
+			"transliteration": "tabee3a",
+			"wordAlignments": [
+				{
+					"arabic": "طبيعة",
+					"english": "Nature",
+					"transliteration": "tabee3a"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "طلوع الشمس",
+			"arabicTashkeel": "طُلوع الشَّمس",
+			"english": "Sunrise",
+			"transliteration": "tuloo3 ish-shams",
+			"wordAlignments": [
+				{
+					"arabic": "طلوع",
+					"english": "Rising of",
+					"transliteration": "tuloo3"
+				},
+				{
+					"arabic": "الشمس",
+					"english": "the sun",
+					"transliteration": "ish-shams"
+				}
+			],
+			"partOfSpeech": "phrase"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "نحب التخييم في الشتا.",
+			"arabicTashkeel": "نِحِب التَّخييم في الشِّتا.",
+			"english": "We love camping in winter.",
+			"transliteration": "ni7ibb it-takhyeem fi ish-shita.",
+			"wordAlignments": [
+				{
+					"arabic": "نحب",
+					"english": "We love",
+					"transliteration": "ni7ibb"
+				},
+				{
+					"arabic": "التخييم",
+					"english": "camping",
+					"transliteration": "it-takhyeem"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الشتا.",
+					"english": "winter.",
+					"transliteration": "ish-shita."
+				}
+			],
+			"targetWords": [
+				"Camping"
+			]
+		},
+		{
+			"arabic": "نصبنا الخيمة على الرمل.",
+			"arabicTashkeel": "نَصَبنا الخيمة على الرَّمل.",
+			"english": "We put up the tent on the sand.",
+			"transliteration": "nasabna il-khaima 3ala ir-raml.",
+			"wordAlignments": [
+				{
+					"arabic": "نصبنا",
+					"english": "We put up",
+					"transliteration": "nasabna"
+				},
+				{
+					"arabic": "الخيمة",
+					"english": "the tent",
+					"transliteration": "il-khaima"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "الرمل.",
+					"english": "the sand.",
+					"transliteration": "ir-raml."
+				}
+			],
+			"targetWords": [
+				"Tent",
+				"Sand"
+			]
+		},
+		{
+			"arabic": "ولعنا نار في المسا.",
+			"arabicTashkeel": "وَلَّعنا نار في المَسا.",
+			"english": "We lit a fire in the evening.",
+			"transliteration": "walla3na naar fi il-masa.",
+			"wordAlignments": [
+				{
+					"arabic": "ولعنا",
+					"english": "We lit",
+					"transliteration": "walla3na"
+				},
+				{
+					"arabic": "نار",
+					"english": "a fire",
+					"transliteration": "naar"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "المسا.",
+					"english": "the evening.",
+					"transliteration": "il-masa."
+				}
+			],
+			"targetWords": [
+				"Fire"
+			]
+		},
+		{
+			"arabic": "جيب حطب للنار.",
+			"arabicTashkeel": "جيب حَطَب للنّار.",
+			"english": "Bring firewood for the fire.",
+			"transliteration": "jeeb 7atab lin-naar.",
+			"wordAlignments": [
+				{
+					"arabic": "جيب",
+					"english": "Bring",
+					"transliteration": "jeeb"
+				},
+				{
+					"arabic": "حطب",
+					"english": "firewood",
+					"transliteration": "7atab"
+				},
+				{
+					"arabic": "للنار.",
+					"english": "for the fire.",
+					"transliteration": "lin-naar."
+				}
+			],
+			"targetWords": [
+				"Firewood",
+				"Fire"
+			]
+		},
+		{
+			"arabic": "طلعنا الجبل الصبح.",
+			"arabicTashkeel": "طِلِعنا الجَبَل الصُّبح.",
+			"english": "We climbed the mountain in the morning.",
+			"transliteration": "tili3na ij-jabal is-sub7.",
+			"wordAlignments": [
+				{
+					"arabic": "طلعنا",
+					"english": "We climbed",
+					"transliteration": "tili3na"
+				},
+				{
+					"arabic": "الجبل",
+					"english": "the mountain",
+					"transliteration": "ij-jabal"
+				},
+				{
+					"arabic": "الصبح.",
+					"english": "in the morning.",
+					"transliteration": "is-sub7."
+				}
+			],
+			"targetWords": [
+				"Mountain"
+			]
+		},
+		{
+			"arabic": "الوادي أخضر بعد المطر.",
+			"arabicTashkeel": "الوادي أخضَر بَعد المَطَر.",
+			"english": "The valley is green after the rain.",
+			"transliteration": "il-waadi akhdhar ba3d il-matar.",
+			"wordAlignments": [
+				{
+					"arabic": "الوادي",
+					"english": "The valley is",
+					"transliteration": "il-waadi"
+				},
+				{
+					"arabic": "أخضر",
+					"english": "green",
+					"transliteration": "akhdhar"
+				},
+				{
+					"arabic": "بعد",
+					"english": "after",
+					"transliteration": "ba3d"
+				},
+				{
+					"arabic": "المطر.",
+					"english": "the rain.",
+					"transliteration": "il-matar."
+				}
+			],
+			"targetWords": [
+				"Valley (wadi)"
+			]
+		},
+		{
+			"arabic": "الرمل حر الضهر.",
+			"arabicTashkeel": "الرَّمل حَر الضُّهر.",
+			"english": "The sand is hot at noon.",
+			"transliteration": "ir-raml 7arr idh-dhuhr.",
+			"wordAlignments": [
+				{
+					"arabic": "الرمل",
+					"english": "The sand is",
+					"transliteration": "ir-raml"
+				},
+				{
+					"arabic": "حر",
+					"english": "hot",
+					"transliteration": "7arr"
+				},
+				{
+					"arabic": "الضهر.",
+					"english": "at noon.",
+					"transliteration": "idh-dhuhr."
+				}
+			],
+			"targetWords": [
+				"Sand"
+			]
+		},
+		{
+			"arabic": "يوم الخميس نطلع البر.",
+			"arabicTashkeel": "يوم الخَميس نِطلَع البَر.",
+			"english": "On Thursday we go out to the desert.",
+			"transliteration": "yoom il-khamees nitla3 il-barr.",
+			"wordAlignments": [
+				{
+					"arabic": "يوم",
+					"english": "On",
+					"transliteration": "yoom"
+				},
+				{
+					"arabic": "الخميس",
+					"english": "Thursday",
+					"transliteration": "il-khamees"
+				},
+				{
+					"arabic": "نطلع",
+					"english": "we go out",
+					"transliteration": "nitla3"
+				},
+				{
+					"arabic": "البر.",
+					"english": "to the desert.",
+					"transliteration": "il-barr."
+				}
+			],
+			"targetWords": [
+				"The open desert"
+			]
+		},
+		{
+			"arabic": "النجوم واضحة في البر.",
+			"arabicTashkeel": "النُّجوم واضحة في البَر.",
+			"english": "The stars are clear in the desert.",
+			"transliteration": "in-nujoom waadh7a fi il-barr.",
+			"wordAlignments": [
+				{
+					"arabic": "النجوم",
+					"english": "The stars are",
+					"transliteration": "in-nujoom"
+				},
+				{
+					"arabic": "واضحة",
+					"english": "clear",
+					"transliteration": "waadh7a"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "البر.",
+					"english": "the desert.",
+					"transliteration": "il-barr."
+				}
+			],
+			"targetWords": [
+				"Stars",
+				"The open desert"
+			]
+		},
+		{
+			"arabic": "حط الفرشة جوا الخيمة.",
+			"arabicTashkeel": "حُط الفَرشة جُوّا الخيمة.",
+			"english": "Put the mat inside the tent.",
+			"transliteration": "7ut il-farsha juwwa il-khaima.",
+			"wordAlignments": [
+				{
+					"arabic": "حط",
+					"english": "Put",
+					"transliteration": "7ut"
+				},
+				{
+					"arabic": "الفرشة",
+					"english": "the mat",
+					"transliteration": "il-farsha"
+				},
+				{
+					"arabic": "جوا",
+					"english": "inside",
+					"transliteration": "juwwa"
+				},
+				{
+					"arabic": "الخيمة.",
+					"english": "the tent.",
+					"transliteration": "il-khaima."
+				}
+			],
+			"targetWords": [
+				"Sleeping mat",
+				"Tent"
+			]
+		},
+		{
+			"arabic": "فين الكشاف؟ الدنيا ضلمة.",
+			"arabicTashkeel": "فين الكَشّاف؟ الدُّنيا ضَلمة.",
+			"english": "Where is the torch? It's dark.",
+			"transliteration": "feen il-kashshaaf? id-dunya dhalma.",
+			"wordAlignments": [
+				{
+					"arabic": "فين",
+					"english": "Where is",
+					"transliteration": "feen"
+				},
+				{
+					"arabic": "الكشاف؟",
+					"english": "the torch?",
+					"transliteration": "il-kashshaaf?"
+				},
+				{
+					"arabic": "الدنيا",
+					"english": "The world is",
+					"transliteration": "id-dunya"
+				},
+				{
+					"arabic": "ضلمة.",
+					"english": "dark.",
+					"transliteration": "dhalma."
+				}
+			],
+			"targetWords": [
+				"Torch"
+			]
+		},
+		{
+			"arabic": "الشوي جاهز.",
+			"arabicTashkeel": "الشَّوي جاهِز.",
+			"english": "The barbecue is ready.",
+			"transliteration": "ish-shawi jaahiz.",
+			"wordAlignments": [
+				{
+					"arabic": "الشوي",
+					"english": "The barbecue is",
+					"transliteration": "ish-shawi"
+				},
+				{
+					"arabic": "جاهز.",
+					"english": "ready.",
+					"transliteration": "jaahiz."
+				}
+			],
+			"targetWords": [
+				"Barbecue"
+			]
+		},
+		{
+			"arabic": "شنطة ضهري تقيلة.",
+			"arabicTashkeel": "شَنطة ضَهري تِقيلة.",
+			"english": "My backpack is heavy.",
+			"transliteration": "shantat dhahri tgeela.",
+			"wordAlignments": [
+				{
+					"arabic": "شنطة",
+					"english": "The bag of",
+					"transliteration": "shantat"
+				},
+				{
+					"arabic": "ضهري",
+					"english": "my back is",
+					"transliteration": "dhahri"
+				},
+				{
+					"arabic": "تقيلة.",
+					"english": "heavy.",
+					"transliteration": "tgeela."
+				}
+			],
+			"targetWords": [
+				"Backpack"
+			]
+		},
+		{
+			"arabic": "أحب الطبيعة والهدو.",
+			"arabicTashkeel": "أحِب الطَّبيعة والهُدو.",
+			"english": "I love nature and quiet.",
+			"transliteration": "a7ibb it-tabee3a w-il-hudoo.",
+			"wordAlignments": [
+				{
+					"arabic": "أحب",
+					"english": "I love",
+					"transliteration": "a7ibb"
+				},
+				{
+					"arabic": "الطبيعة",
+					"english": "nature",
+					"transliteration": "it-tabee3a"
+				},
+				{
+					"arabic": "والهدو.",
+					"english": "and quiet.",
+					"transliteration": "w-il-hudoo."
+				}
+			],
+			"targetWords": [
+				"Nature"
+			]
+		},
+		{
+			"arabic": "صحينا بدري عشان نشوف طلوع الشمس.",
+			"arabicTashkeel": "صِحينا بَدري عَشان نِشوف طُلوع الشَّمس.",
+			"english": "We woke up early to see the sunrise.",
+			"transliteration": "si7eena badri 3ashaan nishoof tuloo3 ish-shams.",
+			"wordAlignments": [
+				{
+					"arabic": "صحينا",
+					"english": "We woke up",
+					"transliteration": "si7eena"
+				},
+				{
+					"arabic": "بدري",
+					"english": "early",
+					"transliteration": "badri"
+				},
+				{
+					"arabic": "عشان",
+					"english": "so that",
+					"transliteration": "3ashaan"
+				},
+				{
+					"arabic": "نشوف",
+					"english": "we see",
+					"transliteration": "nishoof"
+				},
+				{
+					"arabic": "طلوع",
+					"english": "the rising of",
+					"transliteration": "tuloo3"
+				},
+				{
+					"arabic": "الشمس.",
+					"english": "the sun.",
+					"transliteration": "ish-shams."
+				}
+			],
+			"targetWords": [
+				"Sunrise"
+			]
+		},
+		{
+			"arabic": "التخييم في أبها حلو في الصيف.",
+			"arabicTashkeel": "التَّخييم في أبها حِلو في الصّيف.",
+			"english": "Camping in Abha is lovely in summer.",
+			"transliteration": "it-takhyeem fi abha 7ilu fi is-saif.",
+			"wordAlignments": [
+				{
+					"arabic": "التخييم",
+					"english": "Camping",
+					"transliteration": "it-takhyeem"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "أبها",
+					"english": "Abha is",
+					"transliteration": "abha"
+				},
+				{
+					"arabic": "حلو",
+					"english": "lovely",
+					"transliteration": "7ilu"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الصيف.",
+					"english": "summer.",
+					"transliteration": "is-saif."
+				}
+			],
+			"targetWords": [
+				"Camping"
+			]
+		},
+		{
+			"arabic": "الخيمة كبيرة، تشيل ستة أشخاص.",
+			"arabicTashkeel": "الخيمة كبيرة، تِشيل سِتّة أشخاص.",
+			"english": "The tent is big; it fits six people.",
+			"transliteration": "il-khaima kbeera, tisheel sitta ashkhaas.",
+			"wordAlignments": [
+				{
+					"arabic": "الخيمة",
+					"english": "The tent is",
+					"transliteration": "il-khaima"
+				},
+				{
+					"arabic": "كبيرة،",
+					"english": "big,",
+					"transliteration": "kbeera,"
+				},
+				{
+					"arabic": "تشيل",
+					"english": "it holds",
+					"transliteration": "tisheel"
+				},
+				{
+					"arabic": "ستة",
+					"english": "six",
+					"transliteration": "sitta"
+				},
+				{
+					"arabic": "أشخاص.",
+					"english": "people.",
+					"transliteration": "ashkhaas."
+				}
+			],
+			"targetWords": [
+				"Tent"
+			]
+		},
+		{
+			"arabic": "اقعد جنب النار، الجو برد.",
+			"arabicTashkeel": "اُقعُد جَنب النّار، الجَو بَرد.",
+			"english": "Sit by the fire, it's cold.",
+			"transliteration": "ug3ud jamb in-naar, ij-jaw bard.",
+			"wordAlignments": [
+				{
+					"arabic": "اقعد",
+					"english": "Sit",
+					"transliteration": "ug3ud"
+				},
+				{
+					"arabic": "جنب",
+					"english": "next to",
+					"transliteration": "jamb"
+				},
+				{
+					"arabic": "النار،",
+					"english": "the fire,",
+					"transliteration": "in-naar,"
+				},
+				{
+					"arabic": "الجو",
+					"english": "the weather is",
+					"transliteration": "ij-jaw"
+				},
+				{
+					"arabic": "برد.",
+					"english": "cold.",
+					"transliteration": "bard."
+				}
+			],
+			"targetWords": [
+				"Fire"
+			]
+		},
+		{
+			"arabic": "الحطب مبلول.",
+			"arabicTashkeel": "الحَطَب مَبلول.",
+			"english": "The firewood is wet.",
+			"transliteration": "il-7atab mablool.",
+			"wordAlignments": [
+				{
+					"arabic": "الحطب",
+					"english": "The firewood is",
+					"transliteration": "il-7atab"
+				},
+				{
+					"arabic": "مبلول.",
+					"english": "wet.",
+					"transliteration": "mablool."
+				}
+			],
+			"targetWords": [
+				"Firewood"
+			]
+		},
+		{
+			"arabic": "جبال الطايف حلوة.",
+			"arabicTashkeel": "جِبال الطّايِف حِلوة.",
+			"english": "The mountains of Taif are beautiful.",
+			"transliteration": "jibaal it-taayif 7ilwa.",
+			"wordAlignments": [
+				{
+					"arabic": "جبال",
+					"english": "The mountains of",
+					"transliteration": "jibaal"
+				},
+				{
+					"arabic": "الطايف",
+					"english": "Taif are",
+					"transliteration": "it-taayif"
+				},
+				{
+					"arabic": "حلوة.",
+					"english": "beautiful.",
+					"transliteration": "7ilwa."
+				}
+			],
+			"targetWords": [
+				"Mountain"
+			]
+		},
+		{
+			"arabic": "لا تخيم في الوادي لما تمطر.",
+			"arabicTashkeel": "لا تِخَيِّم في الوادي لَمّا تِمَطِّر.",
+			"english": "Don't camp in the valley when it rains.",
+			"transliteration": "la tikhayyim fi il-waadi lamma timattir.",
+			"wordAlignments": [
+				{
+					"arabic": "لا",
+					"english": "Don't",
+					"transliteration": "la"
+				},
+				{
+					"arabic": "تخيم",
+					"english": "camp",
+					"transliteration": "tikhayyim"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الوادي",
+					"english": "the valley",
+					"transliteration": "il-waadi"
+				},
+				{
+					"arabic": "لما",
+					"english": "when",
+					"transliteration": "lamma"
+				},
+				{
+					"arabic": "تمطر.",
+					"english": "it rains.",
+					"transliteration": "timattir."
+				}
+			],
+			"targetWords": [
+				"Valley (wadi)"
+			]
+		},
+		{
+			"arabic": "العيال يلعبوا في الرمل.",
+			"arabicTashkeel": "العِيال يِلعَبوا في الرَّمل.",
+			"english": "The kids are playing in the sand.",
+			"transliteration": "il-3iyaal yil3abu fi ir-raml.",
+			"wordAlignments": [
+				{
+					"arabic": "العيال",
+					"english": "The kids",
+					"transliteration": "il-3iyaal"
+				},
+				{
+					"arabic": "يلعبوا",
+					"english": "are playing",
+					"transliteration": "yil3abu"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الرمل.",
+					"english": "the sand.",
+					"transliteration": "ir-raml."
+				}
+			],
+			"targetWords": [
+				"Sand"
+			]
+		},
+		{
+			"arabic": "البر حلو في الشتا.",
+			"arabicTashkeel": "البَر حِلو في الشِّتا.",
+			"english": "The desert is beautiful in winter.",
+			"transliteration": "il-barr 7ilu fi ish-shita.",
+			"wordAlignments": [
+				{
+					"arabic": "البر",
+					"english": "The desert is",
+					"transliteration": "il-barr"
+				},
+				{
+					"arabic": "حلو",
+					"english": "beautiful",
+					"transliteration": "7ilu"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الشتا.",
+					"english": "winter.",
+					"transliteration": "ish-shita."
+				}
+			],
+			"targetWords": [
+				"The open desert"
+			]
+		},
+		{
+			"arabic": "عدينا النجوم.",
+			"arabicTashkeel": "عَدّينا النُّجوم.",
+			"english": "We counted the stars.",
+			"transliteration": "3addeena in-nujoom.",
+			"wordAlignments": [
+				{
+					"arabic": "عدينا",
+					"english": "We counted",
+					"transliteration": "3addeena"
+				},
+				{
+					"arabic": "النجوم.",
+					"english": "the stars.",
+					"transliteration": "in-nujoom."
+				}
+			],
+			"targetWords": [
+				"Stars"
+			]
+		},
+		{
+			"arabic": "نسيت فرشتي في البيت.",
+			"arabicTashkeel": "نِسيت فَرشتي في البيت.",
+			"english": "I forgot my mat at home.",
+			"transliteration": "niseet farshati fi il-bait.",
+			"wordAlignments": [
+				{
+					"arabic": "نسيت",
+					"english": "I forgot",
+					"transliteration": "niseet"
+				},
+				{
+					"arabic": "فرشتي",
+					"english": "my mat",
+					"transliteration": "farshati"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "البيت.",
+					"english": "the house.",
+					"transliteration": "il-bait."
+				}
+			],
+			"targetWords": [
+				"Sleeping mat"
+			]
+		},
+		{
+			"arabic": "بطاريات الكشاف خلصت.",
+			"arabicTashkeel": "بَطّاريّات الكَشّاف خِلصَت.",
+			"english": "The torch's batteries are dead.",
+			"transliteration": "battaariyyaat il-kashshaaf khilsat.",
+			"wordAlignments": [
+				{
+					"arabic": "بطاريات",
+					"english": "The batteries of",
+					"transliteration": "battaariyyaat"
+				},
+				{
+					"arabic": "الكشاف",
+					"english": "the torch",
+					"transliteration": "il-kashshaaf"
+				},
+				{
+					"arabic": "خلصت.",
+					"english": "are finished.",
+					"transliteration": "khilsat."
+				}
+			],
+			"targetWords": [
+				"Torch"
+			]
+		},
+		{
+			"arabic": "مين مسؤول عن الشوي؟",
+			"arabicTashkeel": "مين مَسؤول عَن الشَّوي؟",
+			"english": "Who's in charge of the barbecue?",
+			"transliteration": "meen mas2ool 3an ish-shawi?",
+			"wordAlignments": [
+				{
+					"arabic": "مين",
+					"english": "Who is",
+					"transliteration": "meen"
+				},
+				{
+					"arabic": "مسؤول",
+					"english": "in charge",
+					"transliteration": "mas2ool"
+				},
+				{
+					"arabic": "عن",
+					"english": "of",
+					"transliteration": "3an"
+				},
+				{
+					"arabic": "الشوي؟",
+					"english": "the barbecue?",
+					"transliteration": "ish-shawi?"
+				}
+			],
+			"targetWords": [
+				"Barbecue"
+			]
+		},
+		{
+			"arabic": "حط الموية في شنطة ضهرك.",
+			"arabicTashkeel": "حُط المُويَة في شَنطة ضَهرَك.",
+			"english": "Put the water in your backpack.",
+			"transliteration": "7ut il-mooya fi shantat dhahrak.",
+			"wordAlignments": [
+				{
+					"arabic": "حط",
+					"english": "Put",
+					"transliteration": "7ut"
+				},
+				{
+					"arabic": "الموية",
+					"english": "the water",
+					"transliteration": "il-mooya"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "شنطة",
+					"english": "the bag of",
+					"transliteration": "shantat"
+				},
+				{
+					"arabic": "ضهرك.",
+					"english": "your back.",
+					"transliteration": "dhahrak."
+				}
+			],
+			"targetWords": [
+				"Backpack"
+			]
+		},
+		{
+			"arabic": "الطبيعة في الجنوب خضرا.",
+			"arabicTashkeel": "الطَّبيعة في الجَنوب خَضرا.",
+			"english": "Nature in the south is green.",
+			"transliteration": "it-tabee3a fi ij-janoob khadhra.",
+			"wordAlignments": [
+				{
+					"arabic": "الطبيعة",
+					"english": "Nature",
+					"transliteration": "it-tabee3a"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الجنوب",
+					"english": "the south is",
+					"transliteration": "ij-janoob"
+				},
+				{
+					"arabic": "خضرا.",
+					"english": "green.",
+					"transliteration": "khadhra."
+				}
+			],
+			"targetWords": [
+				"Nature"
+			]
+		},
+		{
+			"arabic": "طلوع الشمس على البحر يجنن.",
+			"arabicTashkeel": "طُلوع الشَّمس على البَحر يِجَنِّن.",
+			"english": "The sunrise over the sea is beautiful.",
+			"transliteration": "tuloo3 ish-shams 3ala il-ba7r yijannin.",
+			"wordAlignments": [
+				{
+					"arabic": "طلوع",
+					"english": "The rising of",
+					"transliteration": "tuloo3"
+				},
+				{
+					"arabic": "الشمس",
+					"english": "the sun",
+					"transliteration": "ish-shams"
+				},
+				{
+					"arabic": "على",
+					"english": "over",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "البحر",
+					"english": "the sea is",
+					"transliteration": "il-ba7r"
+				},
+				{
+					"arabic": "يجنن.",
+					"english": "beautiful.",
+					"transliteration": "yijannin."
+				}
+			],
+			"targetWords": [
+				"Sunrise"
+			]
+		},
+		{
+			"arabic": "التخييم يبغاله تجهيز كويس.",
+			"arabicTashkeel": "التَّخييم يِبغالُه تَجهيز كْوَيِّس.",
+			"english": "Camping needs good preparation.",
+			"transliteration": "it-takhyeem yibghaalu tajheez kwayyis.",
+			"wordAlignments": [
+				{
+					"arabic": "التخييم",
+					"english": "Camping",
+					"transliteration": "it-takhyeem"
+				},
+				{
+					"arabic": "يبغاله",
+					"english": "needs",
+					"transliteration": "yibghaalu"
+				},
+				{
+					"arabic": "تجهيز",
+					"english": "preparation",
+					"transliteration": "tajheez"
+				},
+				{
+					"arabic": "كويس.",
+					"english": "good.",
+					"transliteration": "kwayyis."
+				}
+			],
+			"targetWords": [
+				"Camping"
+			]
+		},
+		{
+			"arabic": "ساعدني أنصب الخيمة.",
+			"arabicTashkeel": "ساعِدني أنصُب الخيمة.",
+			"english": "Help me put up the tent.",
+			"transliteration": "saa3idni ansub il-khaima.",
+			"wordAlignments": [
+				{
+					"arabic": "ساعدني",
+					"english": "Help me",
+					"transliteration": "saa3idni"
+				},
+				{
+					"arabic": "أنصب",
+					"english": "I put up",
+					"transliteration": "ansub"
+				},
+				{
+					"arabic": "الخيمة.",
+					"english": "the tent.",
+					"transliteration": "il-khaima."
+				}
+			],
+			"targetWords": [
+				"Tent"
+			]
+		},
+		{
+			"arabic": "انتبه، النار قوية.",
+			"arabicTashkeel": "اِنتَبِه، النّار قَوية.",
+			"english": "Be careful, the fire is strong.",
+			"transliteration": "intabih, in-naar gawiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "انتبه،",
+					"english": "Be careful,",
+					"transliteration": "intabih,"
+				},
+				{
+					"arabic": "النار",
+					"english": "the fire is",
+					"transliteration": "in-naar"
+				},
+				{
+					"arabic": "قوية.",
+					"english": "strong.",
+					"transliteration": "gawiyya."
+				}
+			],
+			"targetWords": [
+				"Fire"
+			]
+		},
+		{
+			"arabic": "اشترينا حطب في الطريق.",
+			"arabicTashkeel": "اِشتَرينا حَطَب في الطَّريق.",
+			"english": "We bought firewood on the way.",
+			"transliteration": "ishtareena 7atab fi it-tareeg.",
+			"wordAlignments": [
+				{
+					"arabic": "اشترينا",
+					"english": "We bought",
+					"transliteration": "ishtareena"
+				},
+				{
+					"arabic": "حطب",
+					"english": "firewood",
+					"transliteration": "7atab"
+				},
+				{
+					"arabic": "في",
+					"english": "on",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الطريق.",
+					"english": "the way.",
+					"transliteration": "it-tareeg."
+				}
+			],
+			"targetWords": [
+				"Firewood"
+			]
+		},
+		{
+			"arabic": "الجبل عالي وبارد.",
+			"arabicTashkeel": "الجَبَل عالي وبارِد.",
+			"english": "The mountain is high and cold.",
+			"transliteration": "ij-jabal 3aali w-baarid.",
+			"wordAlignments": [
+				{
+					"arabic": "الجبل",
+					"english": "The mountain is",
+					"transliteration": "ij-jabal"
+				},
+				{
+					"arabic": "عالي",
+					"english": "high",
+					"transliteration": "3aali"
+				},
+				{
+					"arabic": "وبارد.",
+					"english": "and cold.",
+					"transliteration": "w-baarid."
+				}
+			],
+			"targetWords": [
+				"Mountain"
+			]
+		},
+		{
+			"arabic": "الموية نزلت في الوادي.",
+			"arabicTashkeel": "المُويَة نَزَلَت في الوادي.",
+			"english": "Water came down the valley.",
+			"transliteration": "il-mooya nazalat fi il-waadi.",
+			"wordAlignments": [
+				{
+					"arabic": "الموية",
+					"english": "The water",
+					"transliteration": "il-mooya"
+				},
+				{
+					"arabic": "نزلت",
+					"english": "came down",
+					"transliteration": "nazalat"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الوادي.",
+					"english": "the valley.",
+					"transliteration": "il-waadi."
+				}
+			],
+			"targetWords": [
+				"Valley (wadi)"
+			]
+		},
+		{
+			"arabic": "الرمل دخل في جزمتي.",
+			"arabicTashkeel": "الرَّمل دَخَل في جَزمتي.",
+			"english": "The sand got into my shoes.",
+			"transliteration": "ir-raml dakhal fi jazmati.",
+			"wordAlignments": [
+				{
+					"arabic": "الرمل",
+					"english": "The sand",
+					"transliteration": "ir-raml"
+				},
+				{
+					"arabic": "دخل",
+					"english": "went",
+					"transliteration": "dakhal"
+				},
+				{
+					"arabic": "في",
+					"english": "into",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "جزمتي.",
+					"english": "my shoes.",
+					"transliteration": "jazmati."
+				}
+			],
+			"targetWords": [
+				"Sand"
+			]
+		},
+		{
+			"arabic": "الليل في البر هادي مرة.",
+			"arabicTashkeel": "اللّيل في البَر هادي مَرّة.",
+			"english": "The night in the desert is very quiet.",
+			"transliteration": "il-lail fi il-barr haadi marra.",
+			"wordAlignments": [
+				{
+					"arabic": "الليل",
+					"english": "The night",
+					"transliteration": "il-lail"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "البر",
+					"english": "the desert is",
+					"transliteration": "il-barr"
+				},
+				{
+					"arabic": "هادي",
+					"english": "quiet",
+					"transliteration": "haadi"
+				},
+				{
+					"arabic": "مرة.",
+					"english": "very.",
+					"transliteration": "marra."
+				}
+			],
+			"targetWords": [
+				"The open desert"
+			]
+		},
+		{
+			"arabic": "شوف النجوم!",
+			"arabicTashkeel": "شوف النُّجوم!",
+			"english": "Look at the stars!",
+			"transliteration": "shoof in-nujoom!",
+			"wordAlignments": [
+				{
+					"arabic": "شوف",
+					"english": "Look at",
+					"transliteration": "shoof"
+				},
+				{
+					"arabic": "النجوم!",
+					"english": "the stars!",
+					"transliteration": "in-nujoom!"
+				}
+			],
+			"targetWords": [
+				"Stars"
+			]
+		},
+		{
+			"arabic": "الفرشة ناعمة.",
+			"arabicTashkeel": "الفَرشة ناعمة.",
+			"english": "The mat is soft.",
+			"transliteration": "il-farsha naa3ma.",
+			"wordAlignments": [
+				{
+					"arabic": "الفرشة",
+					"english": "The mat is",
+					"transliteration": "il-farsha"
+				},
+				{
+					"arabic": "ناعمة.",
+					"english": "soft.",
+					"transliteration": "naa3ma."
+				}
+			],
+			"targetWords": [
+				"Sleeping mat"
+			]
+		},
+		{
+			"arabic": "ولع الكشاف.",
+			"arabicTashkeel": "وَلِّع الكَشّاف.",
+			"english": "Turn on the torch.",
+			"transliteration": "walli3 il-kashshaaf.",
+			"wordAlignments": [
+				{
+					"arabic": "ولع",
+					"english": "Turn on",
+					"transliteration": "walli3"
+				},
+				{
+					"arabic": "الكشاف.",
+					"english": "the torch.",
+					"transliteration": "il-kashshaaf."
+				}
+			],
+			"targetWords": [
+				"Torch"
+			]
+		},
+		{
+			"arabic": "الشوي أحسن شي في التخييم.",
+			"arabicTashkeel": "الشَّوي أحسَن شي في التَّخييم.",
+			"english": "Barbecue is the best thing about camping.",
+			"transliteration": "ish-shawi a7san shay fi it-takhyeem.",
+			"wordAlignments": [
+				{
+					"arabic": "الشوي",
+					"english": "The barbecue is",
+					"transliteration": "ish-shawi"
+				},
+				{
+					"arabic": "أحسن",
+					"english": "the best",
+					"transliteration": "a7san"
+				},
+				{
+					"arabic": "شي",
+					"english": "thing",
+					"transliteration": "shay"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "التخييم.",
+					"english": "camping.",
+					"transliteration": "it-takhyeem."
+				}
+			],
+			"targetWords": [
+				"Barbecue",
+				"Camping"
+			]
+		},
+		{
+			"arabic": "شنطة ضهر صغيرة تكفي.",
+			"arabicTashkeel": "شَنطة ضَهر صُغَيَّرة تِكفي.",
+			"english": "A small backpack is enough.",
+			"transliteration": "shantat dhahr sughayyara tikfi.",
+			"wordAlignments": [
+				{
+					"arabic": "شنطة",
+					"english": "A bag of",
+					"transliteration": "shantat"
+				},
+				{
+					"arabic": "ضهر",
+					"english": "back",
+					"transliteration": "dhahr"
+				},
+				{
+					"arabic": "صغيرة",
+					"english": "small",
+					"transliteration": "sughayyara"
+				},
+				{
+					"arabic": "تكفي.",
+					"english": "is enough.",
+					"transliteration": "tikfi."
+				}
+			],
+			"targetWords": [
+				"Backpack"
+			]
+		},
+		{
+			"arabic": "أطلع للطبيعة عشان أرتاح.",
+			"arabicTashkeel": "أطلَع للطَّبيعة عَشان أرتاح.",
+			"english": "I go out to nature to relax.",
+			"transliteration": "atla3 lit-tabee3a 3ashaan artaa7.",
+			"wordAlignments": [
+				{
+					"arabic": "أطلع",
+					"english": "I go out",
+					"transliteration": "atla3"
+				},
+				{
+					"arabic": "للطبيعة",
+					"english": "to nature",
+					"transliteration": "lit-tabee3a"
+				},
+				{
+					"arabic": "عشان",
+					"english": "so that",
+					"transliteration": "3ashaan"
+				},
+				{
+					"arabic": "أرتاح.",
+					"english": "I relax.",
+					"transliteration": "artaa7."
+				}
+			],
+			"targetWords": [
+				"Nature"
+			]
+		},
+		{
+			"arabic": "طلوع الشمس الساعة كم؟",
+			"arabicTashkeel": "طُلوع الشَّمس السّاعة كَم؟",
+			"english": "What time is sunrise?",
+			"transliteration": "tuloo3 ish-shams is-saa3a kam?",
+			"wordAlignments": [
+				{
+					"arabic": "طلوع",
+					"english": "The rising of",
+					"transliteration": "tuloo3"
+				},
+				{
+					"arabic": "الشمس",
+					"english": "the sun is",
+					"transliteration": "ish-shams"
+				},
+				{
+					"arabic": "الساعة",
+					"english": "at",
+					"transliteration": "is-saa3a"
+				},
+				{
+					"arabic": "كم؟",
+					"english": "what time?",
+					"transliteration": "kam?"
+				}
+			],
+			"targetWords": [
+				"Sunrise"
+			]
+		},
+		{
+			"arabic": "أول مرة أخيم.",
+			"arabicTashkeel": "أوّل مَرّة أخَيِّم.",
+			"english": "My first time camping.",
+			"transliteration": "awwal marra akhayyim.",
+			"wordAlignments": [
+				{
+					"arabic": "أول",
+					"english": "The first",
+					"transliteration": "awwal"
+				},
+				{
+					"arabic": "مرة",
+					"english": "time",
+					"transliteration": "marra"
+				},
+				{
+					"arabic": "أخيم.",
+					"english": "I camp.",
+					"transliteration": "akhayyim."
+				}
+			],
+			"targetWords": [
+				"Camping"
+			]
+		},
+		{
+			"arabic": "الهوا طيح الخيمة.",
+			"arabicTashkeel": "الهَوا طَيَّح الخيمة.",
+			"english": "The wind knocked down the tent.",
+			"transliteration": "il-hawa tayya7 il-khaima.",
+			"wordAlignments": [
+				{
+					"arabic": "الهوا",
+					"english": "The wind",
+					"transliteration": "il-hawa"
+				},
+				{
+					"arabic": "طيح",
+					"english": "knocked down",
+					"transliteration": "tayya7"
+				},
+				{
+					"arabic": "الخيمة.",
+					"english": "the tent.",
+					"transliteration": "il-khaima."
+				}
+			],
+			"targetWords": [
+				"Tent"
+			]
+		},
+		{
+			"arabic": "طفي النار قبل ما تنام.",
+			"arabicTashkeel": "طَفّي النّار قَبل ما تِنام.",
+			"english": "Put out the fire before you sleep.",
+			"transliteration": "taffi in-naar gabl ma tinaam.",
+			"wordAlignments": [
+				{
+					"arabic": "طفي",
+					"english": "Put out",
+					"transliteration": "taffi"
+				},
+				{
+					"arabic": "النار",
+					"english": "the fire",
+					"transliteration": "in-naar"
+				},
+				{
+					"arabic": "قبل",
+					"english": "before",
+					"transliteration": "gabl"
+				},
+				{
+					"arabic": "ما",
+					"english": "that",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "تنام.",
+					"english": "you sleep.",
+					"transliteration": "tinaam."
+				}
+			],
+			"targetWords": [
+				"Fire"
+			]
+		},
+		{
+			"arabic": "ما فيه حطب باقي.",
+			"arabicTashkeel": "ما فيه حَطَب باقي.",
+			"english": "There's no firewood left.",
+			"transliteration": "ma feeh 7atab baagi.",
+			"wordAlignments": [
+				{
+					"arabic": "ما",
+					"english": "Not",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "فيه",
+					"english": "there is",
+					"transliteration": "feeh"
+				},
+				{
+					"arabic": "حطب",
+					"english": "firewood",
+					"transliteration": "7atab"
+				},
+				{
+					"arabic": "باقي.",
+					"english": "left.",
+					"transliteration": "baagi."
+				}
+			],
+			"targetWords": [
+				"Firewood"
+			]
+		},
+		{
+			"arabic": "أخدنا صور فوق الجبل.",
+			"arabicTashkeel": "أخَدنا صُوَر فوق الجَبَل.",
+			"english": "We took photos on top of the mountain.",
+			"transliteration": "akhadna suwar foog ij-jabal.",
+			"wordAlignments": [
+				{
+					"arabic": "أخدنا",
+					"english": "We took",
+					"transliteration": "akhadna"
+				},
+				{
+					"arabic": "صور",
+					"english": "photos",
+					"transliteration": "suwar"
+				},
+				{
+					"arabic": "فوق",
+					"english": "on top of",
+					"transliteration": "foog"
+				},
+				{
+					"arabic": "الجبل.",
+					"english": "the mountain.",
+					"transliteration": "ij-jabal."
+				}
+			],
+			"targetWords": [
+				"Mountain"
+			]
+		},
+		{
+			"arabic": "الوادي بعيد عن المدينة.",
+			"arabicTashkeel": "الوادي بَعيد عَن المَدينة.",
+			"english": "The valley is far from the city.",
+			"transliteration": "il-waadi ba3eed 3an il-madeena.",
+			"wordAlignments": [
+				{
+					"arabic": "الوادي",
+					"english": "The valley is",
+					"transliteration": "il-waadi"
+				},
+				{
+					"arabic": "بعيد",
+					"english": "far",
+					"transliteration": "ba3eed"
+				},
+				{
+					"arabic": "عن",
+					"english": "from",
+					"transliteration": "3an"
+				},
+				{
+					"arabic": "المدينة.",
+					"english": "the city.",
+					"transliteration": "il-madeena."
+				}
+			],
+			"targetWords": [
+				"Valley (wadi)"
+			]
+		},
+		{
+			"arabic": "رمل في كل مكان!",
+			"arabicTashkeel": "رَمل في كُل مَكان!",
+			"english": "Sand everywhere!",
+			"transliteration": "raml fi kull makaan!",
+			"wordAlignments": [
+				{
+					"arabic": "رمل",
+					"english": "Sand",
+					"transliteration": "raml"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kull"
+				},
+				{
+					"arabic": "مكان!",
+					"english": "place!",
+					"transliteration": "makaan!"
+				}
+			],
+			"targetWords": [
+				"Sand"
+			]
+		},
+		{
+			"arabic": "البر له جو خاص.",
+			"arabicTashkeel": "البَر لُه جَوّ خاص.",
+			"english": "The desert has its own charm.",
+			"transliteration": "il-barr lu jaww khaas.",
+			"wordAlignments": [
+				{
+					"arabic": "البر",
+					"english": "The desert",
+					"transliteration": "il-barr"
+				},
+				{
+					"arabic": "له",
+					"english": "has",
+					"transliteration": "lu"
+				},
+				{
+					"arabic": "جو",
+					"english": "an atmosphere",
+					"transliteration": "jaww"
+				},
+				{
+					"arabic": "خاص.",
+					"english": "special.",
+					"transliteration": "khaas."
+				}
+			],
+			"targetWords": [
+				"The open desert"
+			]
+		},
+		{
+			"arabic": "النوم تحت النجوم.",
+			"arabicTashkeel": "النّوم تَحت النُّجوم.",
+			"english": "Sleeping under the stars.",
+			"transliteration": "in-noom ta7t in-nujoom.",
+			"wordAlignments": [
+				{
+					"arabic": "النوم",
+					"english": "Sleeping",
+					"transliteration": "in-noom"
+				},
+				{
+					"arabic": "تحت",
+					"english": "under",
+					"transliteration": "ta7t"
+				},
+				{
+					"arabic": "النجوم.",
+					"english": "the stars.",
+					"transliteration": "in-nujoom."
+				}
+			],
+			"targetWords": [
+				"Stars"
+			]
+		},
+		{
+			"arabic": "كل واحد يجيب فرشته.",
+			"arabicTashkeel": "كُل واحِد يِجيب فَرشتُه.",
+			"english": "Each person brings their own mat.",
+			"transliteration": "kull waa7id yijeeb farshatu.",
+			"wordAlignments": [
+				{
+					"arabic": "كل",
+					"english": "Each",
+					"transliteration": "kull"
+				},
+				{
+					"arabic": "واحد",
+					"english": "one",
+					"transliteration": "waa7id"
+				},
+				{
+					"arabic": "يجيب",
+					"english": "brings",
+					"transliteration": "yijeeb"
+				},
+				{
+					"arabic": "فرشته.",
+					"english": "his mat.",
+					"transliteration": "farshatu."
+				}
+			],
+			"targetWords": [
+				"Sleeping mat"
+			]
+		},
+		{
+			"arabic": "الكشاف في السيارة.",
+			"arabicTashkeel": "الكَشّاف في السَّيّارة.",
+			"english": "The torch is in the car.",
+			"transliteration": "il-kashshaaf fi is-sayyaara.",
+			"wordAlignments": [
+				{
+					"arabic": "الكشاف",
+					"english": "The torch is",
+					"transliteration": "il-kashshaaf"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "السيارة.",
+					"english": "the car.",
+					"transliteration": "is-sayyaara."
+				}
+			],
+			"targetWords": [
+				"Torch"
+			]
+		},
+		{
+			"arabic": "ريحة الشوي تجنن.",
+			"arabicTashkeel": "ريحة الشَّوي تِجَنِّن.",
+			"english": "The smell of the barbecue is lovely.",
+			"transliteration": "ree7at ish-shawi tijannin.",
+			"wordAlignments": [
+				{
+					"arabic": "ريحة",
+					"english": "The smell of",
+					"transliteration": "ree7at"
+				},
+				{
+					"arabic": "الشوي",
+					"english": "the barbecue is",
+					"transliteration": "ish-shawi"
+				},
+				{
+					"arabic": "تجنن.",
+					"english": "lovely.",
+					"transliteration": "tijannin."
+				}
+			],
+			"targetWords": [
+				"Barbecue"
+			]
+		},
+		{
+			"arabic": "الطبيعة أحسن دوا.",
+			"arabicTashkeel": "الطَّبيعة أحسَن دَوا.",
+			"english": "Nature is the best medicine.",
+			"transliteration": "it-tabee3a a7san dawa.",
+			"wordAlignments": [
+				{
+					"arabic": "الطبيعة",
+					"english": "Nature is",
+					"transliteration": "it-tabee3a"
+				},
+				{
+					"arabic": "أحسن",
+					"english": "the best",
+					"transliteration": "a7san"
+				},
+				{
+					"arabic": "دوا.",
+					"english": "medicine.",
+					"transliteration": "dawa."
+				}
+			],
+			"targetWords": [
+				"Nature"
+			]
+		},
+		{
+			"arabic": "طلوع الشمس في البر غير.",
+			"arabicTashkeel": "طُلوع الشَّمس في البَر غير.",
+			"english": "The sunrise in the desert is special.",
+			"transliteration": "tuloo3 ish-shams fi il-barr ghair.",
+			"wordAlignments": [
+				{
+					"arabic": "طلوع",
+					"english": "The rising of",
+					"transliteration": "tuloo3"
+				},
+				{
+					"arabic": "الشمس",
+					"english": "the sun",
+					"transliteration": "ish-shams"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "البر",
+					"english": "the desert is",
+					"transliteration": "il-barr"
+				},
+				{
+					"arabic": "غير.",
+					"english": "different.",
+					"transliteration": "ghair."
+				}
+			],
+			"targetWords": [
+				"Sunrise"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "A Night in the Desert",
+			"sentences": [
+				{
+					"arabic": "يوم الخميس طلعنا البر مع الأصحاب.",
+					"arabicTashkeel": "يوم الخَميس طِلِعنا البَر مَعَ الأصحاب.",
+					"english": "On Thursday we went out to the desert with friends.",
+					"transliteration": "yoom il-khamees tili3na il-barr ma3a il-as7aab.",
+					"wordAlignments": [
+						{
+							"arabic": "يوم",
+							"english": "On",
+							"transliteration": "yoom"
+						},
+						{
+							"arabic": "الخميس",
+							"english": "Thursday",
+							"transliteration": "il-khamees"
+						},
+						{
+							"arabic": "طلعنا",
+							"english": "we went out",
+							"transliteration": "tili3na"
+						},
+						{
+							"arabic": "البر",
+							"english": "to the desert",
+							"transliteration": "il-barr"
+						},
+						{
+							"arabic": "مع",
+							"english": "with",
+							"transliteration": "ma3a"
+						},
+						{
+							"arabic": "الأصحاب.",
+							"english": "the friends.",
+							"transliteration": "il-as7aab."
+						}
+					]
+				},
+				{
+					"arabic": "نصبنا الخيمة وولعنا نار.",
+					"arabicTashkeel": "نَصَبنا الخيمة ووَلَّعنا نار.",
+					"english": "We put up the tent and lit a fire.",
+					"transliteration": "nasabna il-khaima w-walla3na naar.",
+					"wordAlignments": [
+						{
+							"arabic": "نصبنا",
+							"english": "We put up",
+							"transliteration": "nasabna"
+						},
+						{
+							"arabic": "الخيمة",
+							"english": "the tent",
+							"transliteration": "il-khaima"
+						},
+						{
+							"arabic": "وولعنا",
+							"english": "and lit",
+							"transliteration": "w-walla3na"
+						},
+						{
+							"arabic": "نار.",
+							"english": "a fire.",
+							"transliteration": "naar."
+						}
+					]
+				},
+				{
+					"arabic": "شوينا لحم وشربنا شاهي جنب النار.",
+					"arabicTashkeel": "شَوينا لَحم وشِرِبنا شاهي جَنب النّار.",
+					"english": "We grilled meat and drank tea by the fire.",
+					"transliteration": "shaweena la7am w-shiribna shaahi jamb in-naar.",
+					"wordAlignments": [
+						{
+							"arabic": "شوينا",
+							"english": "We grilled",
+							"transliteration": "shaweena"
+						},
+						{
+							"arabic": "لحم",
+							"english": "meat",
+							"transliteration": "la7am"
+						},
+						{
+							"arabic": "وشربنا",
+							"english": "and drank",
+							"transliteration": "w-shiribna"
+						},
+						{
+							"arabic": "شاهي",
+							"english": "tea",
+							"transliteration": "shaahi"
+						},
+						{
+							"arabic": "جنب",
+							"english": "next to",
+							"transliteration": "jamb"
+						},
+						{
+							"arabic": "النار.",
+							"english": "the fire.",
+							"transliteration": "in-naar."
+						}
+					]
+				},
+				{
+					"arabic": "بالليل انسدحنا على الرمل وشفنا النجوم.",
+					"arabicTashkeel": "بالليل اِنسَدَحنا على الرَّمل وشُفنا النُّجوم.",
+					"english": "At night we lay down on the sand and looked at the stars.",
+					"transliteration": "bil-lail insada7na 3ala ir-raml w-shufna in-nujoom.",
+					"wordAlignments": [
+						{
+							"arabic": "بالليل",
+							"english": "At night",
+							"transliteration": "bil-lail"
+						},
+						{
+							"arabic": "انسدحنا",
+							"english": "we lay down",
+							"transliteration": "insada7na"
+						},
+						{
+							"arabic": "على",
+							"english": "on",
+							"transliteration": "3ala"
+						},
+						{
+							"arabic": "الرمل",
+							"english": "the sand",
+							"transliteration": "ir-raml"
+						},
+						{
+							"arabic": "وشفنا",
+							"english": "and looked at",
+							"transliteration": "w-shufna"
+						},
+						{
+							"arabic": "النجوم.",
+							"english": "the stars.",
+							"transliteration": "in-nujoom."
+						}
+					]
+				},
+				{
+					"arabic": "الصبح صحينا بدري عشان طلوع الشمس.",
+					"arabicTashkeel": "الصُّبح صِحينا بَدري عَشان طُلوع الشَّمس.",
+					"english": "In the morning we woke up early for the sunrise.",
+					"transliteration": "is-sub7 si7eena badri 3ashaan tuloo3 ish-shams.",
+					"wordAlignments": [
+						{
+							"arabic": "الصبح",
+							"english": "In the morning",
+							"transliteration": "is-sub7"
+						},
+						{
+							"arabic": "صحينا",
+							"english": "we woke up",
+							"transliteration": "si7eena"
+						},
+						{
+							"arabic": "بدري",
+							"english": "early",
+							"transliteration": "badri"
+						},
+						{
+							"arabic": "عشان",
+							"english": "for",
+							"transliteration": "3ashaan"
+						},
+						{
+							"arabic": "طلوع",
+							"english": "the rising of",
+							"transliteration": "tuloo3"
+						},
+						{
+							"arabic": "الشمس.",
+							"english": "the sun.",
+							"transliteration": "ish-shams."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "The Mountains of Taif",
+			"sentences": [
+				{
+					"arabic": "في الصيف نروح الطايف عشان الجو بارد.",
+					"arabicTashkeel": "في الصّيف نِروح الطّايِف عَشان الجَو بارِد.",
+					"english": "In summer we go to Taif because it's cool.",
+					"transliteration": "fi is-saif nirooh it-taayif 3ashaan ij-jaw baarid.",
+					"wordAlignments": [
+						{
+							"arabic": "في",
+							"english": "In",
+							"transliteration": "fi"
+						},
+						{
+							"arabic": "الصيف",
+							"english": "summer",
+							"transliteration": "is-saif"
+						},
+						{
+							"arabic": "نروح",
+							"english": "we go",
+							"transliteration": "nirooh"
+						},
+						{
+							"arabic": "الطايف",
+							"english": "to Taif",
+							"transliteration": "it-taayif"
+						},
+						{
+							"arabic": "عشان",
+							"english": "because",
+							"transliteration": "3ashaan"
+						},
+						{
+							"arabic": "الجو",
+							"english": "the weather is",
+							"transliteration": "ij-jaw"
+						},
+						{
+							"arabic": "بارد.",
+							"english": "cool.",
+							"transliteration": "baarid."
+						}
+					]
+				},
+				{
+					"arabic": "نتمشى في الجبال ونستمتع بالطبيعة.",
+					"arabicTashkeel": "نِتمَشّى في الجِبال ونِستَمتِع بالطَّبيعة.",
+					"english": "We walk in the mountains and enjoy nature.",
+					"transliteration": "nitmashsha fi ij-jibaal w-nistamti3 bit-tabee3a.",
+					"wordAlignments": [
+						{
+							"arabic": "نتمشى",
+							"english": "We walk",
+							"transliteration": "nitmashsha"
+						},
+						{
+							"arabic": "في",
+							"english": "in",
+							"transliteration": "fi"
+						},
+						{
+							"arabic": "الجبال",
+							"english": "the mountains",
+							"transliteration": "ij-jibaal"
+						},
+						{
+							"arabic": "ونستمتع",
+							"english": "and enjoy",
+							"transliteration": "w-nistamti3"
+						},
+						{
+							"arabic": "بالطبيعة.",
+							"english": "nature.",
+							"transliteration": "bit-tabee3a."
+						}
+					]
+				},
+				{
+					"arabic": "لا تنسى شنطة ضهرك والكشاف.",
+					"arabicTashkeel": "لا تِنسى شَنطة ضَهرَك والكَشّاف.",
+					"english": "Don't forget your backpack and the torch.",
+					"transliteration": "la tinsa shantat dhahrak w-il-kashshaaf.",
+					"wordAlignments": [
+						{
+							"arabic": "لا",
+							"english": "Don't",
+							"transliteration": "la"
+						},
+						{
+							"arabic": "تنسى",
+							"english": "forget",
+							"transliteration": "tinsa"
+						},
+						{
+							"arabic": "شنطة",
+							"english": "the bag of",
+							"transliteration": "shantat"
+						},
+						{
+							"arabic": "ضهرك",
+							"english": "your back",
+							"transliteration": "dhahrak"
+						},
+						{
+							"arabic": "والكشاف.",
+							"english": "and the torch.",
+							"transliteration": "w-il-kashshaaf."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is joining a Jeddawi friend's family on a winter camping trip in the desert and they are packing the car.",
+		"studentRole": "A guest learning Saudi (Hijazi) Arabic.",
+		"otherRole": "The Jeddawi friend, an experienced desert camper.",
+		"goalEnglish": "Ask what to bring, offer to carry things, talk about the tent, the fire and the food, and say what you're looking forward to (the stars, the sunrise).",
+		"targetWords": [
+			"Camping",
+			"Tent",
+			"Fire",
+			"Firewood",
+			"The open desert",
+			"Stars",
+			"Torch",
+			"Sunrise"
+		]
+	}
+}
