@@ -1,0 +1,1990 @@
+{
+	"vocab": [
+		{
+			"arabic": "جار",
+			"arabicTashkeel": "جار",
+			"english": "Neighbour",
+			"transliteration": "jaar",
+			"wordAlignments": [
+				{
+					"arabic": "جار",
+					"english": "Neighbour",
+					"transliteration": "jaar"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "جيران",
+			"arabicTashkeel": "جيران",
+			"english": "Neighbours",
+			"transliteration": "jeeraan",
+			"wordAlignments": [
+				{
+					"arabic": "جيران",
+					"english": "Neighbours",
+					"transliteration": "jeeraan"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "إيجار",
+			"arabicTashkeel": "إيجار",
+			"english": "Rent",
+			"transliteration": "eejaar",
+			"wordAlignments": [
+				{
+					"arabic": "إيجار",
+					"english": "Rent",
+					"transliteration": "eejaar"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "صاحب البيت",
+			"arabicTashkeel": "صاحِب البيت",
+			"english": "Landlord",
+			"transliteration": "saa7ib il-bait",
+			"wordAlignments": [
+				{
+					"arabic": "صاحب",
+					"english": "Owner of",
+					"transliteration": "saa7ib"
+				},
+				{
+					"arabic": "البيت",
+					"english": "the house",
+					"transliteration": "il-bait"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "شقة",
+			"arabicTashkeel": "شَقّة",
+			"english": "Flat (apartment)",
+			"transliteration": "shagga",
+			"wordAlignments": [
+				{
+					"arabic": "شقة",
+					"english": "Flat",
+					"transliteration": "shagga"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "عقد",
+			"arabicTashkeel": "عَقد",
+			"english": "Contract",
+			"transliteration": "3agd",
+			"wordAlignments": [
+				{
+					"arabic": "عقد",
+					"english": "Contract",
+					"transliteration": "3agd"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "تأمين",
+			"arabicTashkeel": "تأمين",
+			"english": "Deposit",
+			"transliteration": "ta2meen",
+			"wordAlignments": [
+				{
+					"arabic": "تأمين",
+					"english": "Deposit",
+					"transliteration": "ta2meen"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "علاقة",
+			"arabicTashkeel": "عَلاقة",
+			"english": "Relationship",
+			"transliteration": "3alaaga",
+			"wordAlignments": [
+				{
+					"arabic": "علاقة",
+					"english": "Relationship",
+					"transliteration": "3alaaga"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "صديق",
+			"arabicTashkeel": "صَديق",
+			"english": "Friend",
+			"transliteration": "sadeeg",
+			"wordAlignments": [
+				{
+					"arabic": "صديق",
+					"english": "Friend",
+					"transliteration": "sadeeg"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "يزور",
+			"arabicTashkeel": "يِزور",
+			"english": "He visits",
+			"transliteration": "yizoor",
+			"wordAlignments": [
+				{
+					"arabic": "يزور",
+					"english": "He visits",
+					"transliteration": "yizoor"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "هادي",
+			"arabicTashkeel": "هادي",
+			"english": "Quiet",
+			"transliteration": "haadi",
+			"wordAlignments": [
+				{
+					"arabic": "هادي",
+					"english": "Quiet",
+					"transliteration": "haadi"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "مزعج",
+			"arabicTashkeel": "مُزعِج",
+			"english": "Noisy / annoying",
+			"transliteration": "muz3ij",
+			"wordAlignments": [
+				{
+					"arabic": "مزعج",
+					"english": "Annoying",
+					"transliteration": "muz3ij"
+				}
+			],
+			"partOfSpeech": "adjective"
+		},
+		{
+			"arabic": "يساعد",
+			"arabicTashkeel": "يِساعِد",
+			"english": "He helps",
+			"transliteration": "yisaa3id",
+			"wordAlignments": [
+				{
+					"arabic": "يساعد",
+					"english": "He helps",
+					"transliteration": "yisaa3id"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "استراحة",
+			"arabicTashkeel": "اِستِراحة",
+			"english": "Istiraha (rest house)",
+			"transliteration": "istiraa7a",
+			"wordAlignments": [
+				{
+					"arabic": "استراحة",
+					"english": "Rest house",
+					"transliteration": "istiraa7a"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "مفروش",
+			"arabicTashkeel": "مَفروش",
+			"english": "Furnished",
+			"transliteration": "mafroosh",
+			"wordAlignments": [
+				{
+					"arabic": "مفروش",
+					"english": "Furnished",
+					"transliteration": "mafroosh"
+				}
+			],
+			"partOfSpeech": "adjective"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "جارنا طيب مرة.",
+			"arabicTashkeel": "جارنا طَيِّب مَرّة.",
+			"english": "Our neighbour is very kind.",
+			"transliteration": "jaarna tayyib marra.",
+			"wordAlignments": [
+				{
+					"arabic": "جارنا",
+					"english": "Our neighbour is",
+					"transliteration": "jaarna"
+				},
+				{
+					"arabic": "طيب",
+					"english": "kind",
+					"transliteration": "tayyib"
+				},
+				{
+					"arabic": "مرة.",
+					"english": "very.",
+					"transliteration": "marra."
+				}
+			],
+			"targetWords": [
+				"Neighbour"
+			]
+		},
+		{
+			"arabic": "الجيران من مصر.",
+			"arabicTashkeel": "الجيران مِن مَصر.",
+			"english": "The neighbours are from Egypt.",
+			"transliteration": "ij-jeeraan min masr.",
+			"wordAlignments": [
+				{
+					"arabic": "الجيران",
+					"english": "The neighbours are",
+					"transliteration": "ij-jeeraan"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "مصر.",
+					"english": "Egypt.",
+					"transliteration": "masr."
+				}
+			],
+			"targetWords": [
+				"Neighbours"
+			]
+		},
+		{
+			"arabic": "الإيجار بكم؟",
+			"arabicTashkeel": "الإيجار بكَم؟",
+			"english": "How much is the rent?",
+			"transliteration": "il-eejaar bikam?",
+			"wordAlignments": [
+				{
+					"arabic": "الإيجار",
+					"english": "The rent is",
+					"transliteration": "il-eejaar"
+				},
+				{
+					"arabic": "بكم؟",
+					"english": "for how much?",
+					"transliteration": "bikam?"
+				}
+			],
+			"targetWords": [
+				"Rent"
+			]
+		},
+		{
+			"arabic": "صاحب البيت ساكن فوق.",
+			"arabicTashkeel": "صاحِب البيت ساكِن فوق.",
+			"english": "The landlord lives upstairs.",
+			"transliteration": "saa7ib il-bait saakin foog.",
+			"wordAlignments": [
+				{
+					"arabic": "صاحب",
+					"english": "The owner of",
+					"transliteration": "saa7ib"
+				},
+				{
+					"arabic": "البيت",
+					"english": "the house",
+					"transliteration": "il-bait"
+				},
+				{
+					"arabic": "ساكن",
+					"english": "lives",
+					"transliteration": "saakin"
+				},
+				{
+					"arabic": "فوق.",
+					"english": "upstairs.",
+					"transliteration": "foog."
+				}
+			],
+			"targetWords": [
+				"Landlord"
+			]
+		},
+		{
+			"arabic": "الشقة كبيرة.",
+			"arabicTashkeel": "الشَّقّة كبيرة.",
+			"english": "The flat is big.",
+			"transliteration": "ish-shagga kbeera.",
+			"wordAlignments": [
+				{
+					"arabic": "الشقة",
+					"english": "The flat is",
+					"transliteration": "ish-shagga"
+				},
+				{
+					"arabic": "كبيرة.",
+					"english": "big.",
+					"transliteration": "kbeera."
+				}
+			],
+			"targetWords": [
+				"Flat (apartment)"
+			]
+		},
+		{
+			"arabic": "العقد سنة.",
+			"arabicTashkeel": "العَقد سَنة.",
+			"english": "The contract is for one year.",
+			"transliteration": "il-3agd sana.",
+			"wordAlignments": [
+				{
+					"arabic": "العقد",
+					"english": "The contract is",
+					"transliteration": "il-3agd"
+				},
+				{
+					"arabic": "سنة.",
+					"english": "a year.",
+					"transliteration": "sana."
+				}
+			],
+			"targetWords": [
+				"Contract"
+			]
+		},
+		{
+			"arabic": "التأمين إيجار شهر.",
+			"arabicTashkeel": "التّأمين إيجار شَهر.",
+			"english": "The deposit is one month's rent.",
+			"transliteration": "it-ta2meen eejaar shahr.",
+			"wordAlignments": [
+				{
+					"arabic": "التأمين",
+					"english": "The deposit is",
+					"transliteration": "it-ta2meen"
+				},
+				{
+					"arabic": "إيجار",
+					"english": "the rent of",
+					"transliteration": "eejaar"
+				},
+				{
+					"arabic": "شهر.",
+					"english": "a month.",
+					"transliteration": "shahr."
+				}
+			],
+			"targetWords": [
+				"Deposit",
+				"Rent"
+			]
+		},
+		{
+			"arabic": "عندي علاقة حلوة مع الجيران.",
+			"arabicTashkeel": "عِندي عَلاقة حِلوة مَعَ الجيران.",
+			"english": "I have a good relationship with my neighbours.",
+			"transliteration": "3indi 3alaaga 7ilwa ma3a ij-jeeraan.",
+			"wordAlignments": [
+				{
+					"arabic": "عندي",
+					"english": "I have",
+					"transliteration": "3indi"
+				},
+				{
+					"arabic": "علاقة",
+					"english": "a relationship",
+					"transliteration": "3alaaga"
+				},
+				{
+					"arabic": "حلوة",
+					"english": "good",
+					"transliteration": "7ilwa"
+				},
+				{
+					"arabic": "مع",
+					"english": "with",
+					"transliteration": "ma3a"
+				},
+				{
+					"arabic": "الجيران.",
+					"english": "the neighbours.",
+					"transliteration": "ij-jeeraan."
+				}
+			],
+			"targetWords": [
+				"Relationship",
+				"Neighbours"
+			]
+		},
+		{
+			"arabic": "هوا صديقي من المدرسة.",
+			"arabicTashkeel": "هوّا صَديقي مِن المَدرَسة.",
+			"english": "He's my friend from school.",
+			"transliteration": "huwwa sadeegi min il-madrasa.",
+			"wordAlignments": [
+				{
+					"arabic": "هوا",
+					"english": "He is",
+					"transliteration": "huwwa"
+				},
+				{
+					"arabic": "صديقي",
+					"english": "my friend",
+					"transliteration": "sadeegi"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "المدرسة.",
+					"english": "the school.",
+					"transliteration": "il-madrasa."
+				}
+			],
+			"targetWords": [
+				"Friend"
+			]
+		},
+		{
+			"arabic": "خالي يزورنا كل جمعة.",
+			"arabicTashkeel": "خالي يِزورنا كُل جُمعة.",
+			"english": "My uncle visits us every Friday.",
+			"transliteration": "khaali yizoorna kull jum3a.",
+			"wordAlignments": [
+				{
+					"arabic": "خالي",
+					"english": "My uncle",
+					"transliteration": "khaali"
+				},
+				{
+					"arabic": "يزورنا",
+					"english": "visits us",
+					"transliteration": "yizoorna"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kull"
+				},
+				{
+					"arabic": "جمعة.",
+					"english": "Friday.",
+					"transliteration": "jum3a."
+				}
+			],
+			"targetWords": [
+				"He visits"
+			]
+		},
+		{
+			"arabic": "الحارة هادية.",
+			"arabicTashkeel": "الحارة هادية.",
+			"english": "The neighbourhood is quiet.",
+			"transliteration": "il-7aara haadya.",
+			"wordAlignments": [
+				{
+					"arabic": "الحارة",
+					"english": "The neighbourhood is",
+					"transliteration": "il-7aara"
+				},
+				{
+					"arabic": "هادية.",
+					"english": "quiet.",
+					"transliteration": "haadya."
+				}
+			],
+			"targetWords": [
+				"Quiet"
+			]
+		},
+		{
+			"arabic": "البنا مزعج.",
+			"arabicTashkeel": "البِنا مُزعِج.",
+			"english": "The construction is annoying.",
+			"transliteration": "il-bina muz3ij.",
+			"wordAlignments": [
+				{
+					"arabic": "البنا",
+					"english": "The construction is",
+					"transliteration": "il-bina"
+				},
+				{
+					"arabic": "مزعج.",
+					"english": "annoying.",
+					"transliteration": "muz3ij."
+				}
+			],
+			"targetWords": [
+				"Noisy / annoying"
+			]
+		},
+		{
+			"arabic": "يساعد جيرانه.",
+			"arabicTashkeel": "يِساعِد جيرانُه.",
+			"english": "He helps his neighbours.",
+			"transliteration": "yisaa3id jeeraanu.",
+			"wordAlignments": [
+				{
+					"arabic": "يساعد",
+					"english": "He helps",
+					"transliteration": "yisaa3id"
+				},
+				{
+					"arabic": "جيرانه.",
+					"english": "his neighbours.",
+					"transliteration": "jeeraanu."
+				}
+			],
+			"targetWords": [
+				"He helps"
+			]
+		},
+		{
+			"arabic": "نتقابل في الإستراحة كل خميس.",
+			"arabicTashkeel": "نِتقابَل في الإستِراحة كُل خَميس.",
+			"english": "We meet at the istiraha every Thursday.",
+			"transliteration": "nitgaabal fi il-istiraa7a kull khamees.",
+			"wordAlignments": [
+				{
+					"arabic": "نتقابل",
+					"english": "We meet",
+					"transliteration": "nitgaabal"
+				},
+				{
+					"arabic": "في",
+					"english": "at",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الإستراحة",
+					"english": "the rest house",
+					"transliteration": "il-istiraa7a"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kull"
+				},
+				{
+					"arabic": "خميس.",
+					"english": "Thursday.",
+					"transliteration": "khamees."
+				}
+			],
+			"targetWords": [
+				"Istiraha (rest house)"
+			]
+		},
+		{
+			"arabic": "الشقة مفروشة؟",
+			"arabicTashkeel": "الشَّقّة مَفروشة؟",
+			"english": "Is the flat furnished?",
+			"transliteration": "ish-shagga mafroosha?",
+			"wordAlignments": [
+				{
+					"arabic": "الشقة",
+					"english": "Is the flat",
+					"transliteration": "ish-shagga"
+				},
+				{
+					"arabic": "مفروشة؟",
+					"english": "furnished?",
+					"transliteration": "mafroosha?"
+				}
+			],
+			"targetWords": [
+				"Furnished",
+				"Flat (apartment)"
+			]
+		},
+		{
+			"arabic": "الجار الجديد نقل أمس.",
+			"arabicTashkeel": "الجار الجَديد نَقَل أمس.",
+			"english": "The new neighbour moved in yesterday.",
+			"transliteration": "ij-jaar ij-jadeed nagal ams.",
+			"wordAlignments": [
+				{
+					"arabic": "الجار",
+					"english": "The neighbour",
+					"transliteration": "ij-jaar"
+				},
+				{
+					"arabic": "الجديد",
+					"english": "new",
+					"transliteration": "ij-jadeed"
+				},
+				{
+					"arabic": "نقل",
+					"english": "moved",
+					"transliteration": "nagal"
+				},
+				{
+					"arabic": "أمس.",
+					"english": "yesterday.",
+					"transliteration": "ams."
+				}
+			],
+			"targetWords": [
+				"Neighbour"
+			]
+		},
+		{
+			"arabic": "جيرانا مزعجين بالليل.",
+			"arabicTashkeel": "جيرانا مُزعِجين بالليل.",
+			"english": "Our neighbours are noisy at night.",
+			"transliteration": "jeeraana muz3ijeen bil-lail.",
+			"wordAlignments": [
+				{
+					"arabic": "جيرانا",
+					"english": "Our neighbours are",
+					"transliteration": "jeeraana"
+				},
+				{
+					"arabic": "مزعجين",
+					"english": "annoying",
+					"transliteration": "muz3ijeen"
+				},
+				{
+					"arabic": "بالليل.",
+					"english": "at night.",
+					"transliteration": "bil-lail."
+				}
+			],
+			"targetWords": [
+				"Neighbours",
+				"Noisy / annoying"
+			]
+		},
+		{
+			"arabic": "الإيجار زاد.",
+			"arabicTashkeel": "الإيجار زاد.",
+			"english": "The rent went up.",
+			"transliteration": "il-eejaar zaad.",
+			"wordAlignments": [
+				{
+					"arabic": "الإيجار",
+					"english": "The rent",
+					"transliteration": "il-eejaar"
+				},
+				{
+					"arabic": "زاد.",
+					"english": "increased.",
+					"transliteration": "zaad."
+				}
+			],
+			"targetWords": [
+				"Rent"
+			]
+		},
+		{
+			"arabic": "كلمت صاحب البيت.",
+			"arabicTashkeel": "كَلَّمت صاحِب البيت.",
+			"english": "I called the landlord.",
+			"transliteration": "kallamt saa7ib il-bait.",
+			"wordAlignments": [
+				{
+					"arabic": "كلمت",
+					"english": "I called",
+					"transliteration": "kallamt"
+				},
+				{
+					"arabic": "صاحب",
+					"english": "the owner of",
+					"transliteration": "saa7ib"
+				},
+				{
+					"arabic": "البيت.",
+					"english": "the house.",
+					"transliteration": "il-bait."
+				}
+			],
+			"targetWords": [
+				"Landlord"
+			]
+		},
+		{
+			"arabic": "أدور شقة في شمال جدة.",
+			"arabicTashkeel": "أدَوِّر شَقّة في شَمال جِدّة.",
+			"english": "I'm looking for a flat in north Jeddah.",
+			"transliteration": "adawwir shagga fi shamaal jidda.",
+			"wordAlignments": [
+				{
+					"arabic": "أدور",
+					"english": "I'm looking for",
+					"transliteration": "adawwir"
+				},
+				{
+					"arabic": "شقة",
+					"english": "a flat",
+					"transliteration": "shagga"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "شمال",
+					"english": "the north of",
+					"transliteration": "shamaal"
+				},
+				{
+					"arabic": "جدة.",
+					"english": "Jeddah.",
+					"transliteration": "jidda."
+				}
+			],
+			"targetWords": [
+				"Flat (apartment)"
+			]
+		},
+		{
+			"arabic": "اقرا العقد قبل ما توقع.",
+			"arabicTashkeel": "اِقرا العَقد قَبل ما تِوَقِّع.",
+			"english": "Read the contract before you sign.",
+			"transliteration": "igra il-3agd gabl ma tiwaggi3.",
+			"wordAlignments": [
+				{
+					"arabic": "اقرا",
+					"english": "Read",
+					"transliteration": "igra"
+				},
+				{
+					"arabic": "العقد",
+					"english": "the contract",
+					"transliteration": "il-3agd"
+				},
+				{
+					"arabic": "قبل",
+					"english": "before",
+					"transliteration": "gabl"
+				},
+				{
+					"arabic": "ما",
+					"english": "that",
+					"transliteration": "ma"
+				},
+				{
+					"arabic": "توقع.",
+					"english": "you sign.",
+					"transliteration": "tiwaggi3."
+				}
+			],
+			"targetWords": [
+				"Contract"
+			]
+		},
+		{
+			"arabic": "إمتى آخد التأمين؟",
+			"arabicTashkeel": "إمتى آخُد التّأمين؟",
+			"english": "When do I get the deposit back?",
+			"transliteration": "imta aakhud it-ta2meen?",
+			"wordAlignments": [
+				{
+					"arabic": "إمتى",
+					"english": "When",
+					"transliteration": "imta"
+				},
+				{
+					"arabic": "آخد",
+					"english": "do I take",
+					"transliteration": "aakhud"
+				},
+				{
+					"arabic": "التأمين؟",
+					"english": "the deposit?",
+					"transliteration": "it-ta2meen?"
+				}
+			],
+			"targetWords": [
+				"Deposit"
+			]
+		},
+		{
+			"arabic": "العلاقة بينهم قوية.",
+			"arabicTashkeel": "العَلاقة بينهُم قَوية.",
+			"english": "The relationship between them is strong.",
+			"transliteration": "il-3alaaga bainahum gawiyya.",
+			"wordAlignments": [
+				{
+					"arabic": "العلاقة",
+					"english": "The relationship",
+					"transliteration": "il-3alaaga"
+				},
+				{
+					"arabic": "بينهم",
+					"english": "between them is",
+					"transliteration": "bainahum"
+				},
+				{
+					"arabic": "قوية.",
+					"english": "strong.",
+					"transliteration": "gawiyya."
+				}
+			],
+			"targetWords": [
+				"Relationship"
+			]
+		},
+		{
+			"arabic": "صديق وقت الضيق.",
+			"arabicTashkeel": "صَديق وَقت الضّيق.",
+			"english": "A friend in need.",
+			"transliteration": "sadeeg wagt idh-dheeg.",
+			"wordAlignments": [
+				{
+					"arabic": "صديق",
+					"english": "A friend",
+					"transliteration": "sadeeg"
+				},
+				{
+					"arabic": "وقت",
+					"english": "at the time of",
+					"transliteration": "wagt"
+				},
+				{
+					"arabic": "الضيق.",
+					"english": "hardship.",
+					"transliteration": "idh-dheeg."
+				}
+			],
+			"targetWords": [
+				"Friend"
+			]
+		},
+		{
+			"arabic": "مين يزورك في العيد؟",
+			"arabicTashkeel": "مين يِزورَك في العيد؟",
+			"english": "Who visits you on Eid?",
+			"transliteration": "meen yizoorak fi il-3eed?",
+			"wordAlignments": [
+				{
+					"arabic": "مين",
+					"english": "Who",
+					"transliteration": "meen"
+				},
+				{
+					"arabic": "يزورك",
+					"english": "visits you",
+					"transliteration": "yizoorak"
+				},
+				{
+					"arabic": "في",
+					"english": "on",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "العيد؟",
+					"english": "Eid?",
+					"transliteration": "il-3eed?"
+				}
+			],
+			"targetWords": [
+				"He visits"
+			]
+		},
+		{
+			"arabic": "أبغى شقة هادية.",
+			"arabicTashkeel": "أبغى شَقّة هادية.",
+			"english": "I want a quiet flat.",
+			"transliteration": "abgha shagga haadya.",
+			"wordAlignments": [
+				{
+					"arabic": "أبغى",
+					"english": "I want",
+					"transliteration": "abgha"
+				},
+				{
+					"arabic": "شقة",
+					"english": "a flat",
+					"transliteration": "shagga"
+				},
+				{
+					"arabic": "هادية.",
+					"english": "quiet.",
+					"transliteration": "haadya."
+				}
+			],
+			"targetWords": [
+				"Quiet",
+				"Flat (apartment)"
+			]
+		},
+		{
+			"arabic": "الشارع مزعج بسبب السيارات.",
+			"arabicTashkeel": "الشّارِع مُزعِج بسَبَب السَّيّارات.",
+			"english": "The street is annoying because of the cars.",
+			"transliteration": "ish-shaari3 muz3ij b-sabab is-sayyaaraat.",
+			"wordAlignments": [
+				{
+					"arabic": "الشارع",
+					"english": "The street is",
+					"transliteration": "ish-shaari3"
+				},
+				{
+					"arabic": "مزعج",
+					"english": "annoying",
+					"transliteration": "muz3ij"
+				},
+				{
+					"arabic": "بسبب",
+					"english": "because of",
+					"transliteration": "b-sabab"
+				},
+				{
+					"arabic": "السيارات.",
+					"english": "the cars.",
+					"transliteration": "is-sayyaaraat."
+				}
+			],
+			"targetWords": [
+				"Noisy / annoying"
+			]
+		},
+		{
+			"arabic": "جاري ساعدني في الشنط.",
+			"arabicTashkeel": "جاري ساعَدني في الشُّنَط.",
+			"english": "My neighbour helped me with the bags.",
+			"transliteration": "jaari saa3adni fi ish-shunat.",
+			"wordAlignments": [
+				{
+					"arabic": "جاري",
+					"english": "My neighbour",
+					"transliteration": "jaari"
+				},
+				{
+					"arabic": "ساعدني",
+					"english": "helped me",
+					"transliteration": "saa3adni"
+				},
+				{
+					"arabic": "في",
+					"english": "with",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الشنط.",
+					"english": "the bags.",
+					"transliteration": "ish-shunat."
+				}
+			],
+			"targetWords": [
+				"He helps",
+				"Neighbour"
+			]
+		},
+		{
+			"arabic": "الإستراحة فيها مسبح.",
+			"arabicTashkeel": "الإستِراحة فيها مَسبَح.",
+			"english": "The istiraha has a pool.",
+			"transliteration": "il-istiraa7a feeha masba7.",
+			"wordAlignments": [
+				{
+					"arabic": "الإستراحة",
+					"english": "The rest house",
+					"transliteration": "il-istiraa7a"
+				},
+				{
+					"arabic": "فيها",
+					"english": "has",
+					"transliteration": "feeha"
+				},
+				{
+					"arabic": "مسبح.",
+					"english": "a swimming pool.",
+					"transliteration": "masba7."
+				}
+			],
+			"targetWords": [
+				"Istiraha (rest house)"
+			]
+		},
+		{
+			"arabic": "مفروشة ولا فاضية؟",
+			"arabicTashkeel": "مَفروشة وَلّا فاضية؟",
+			"english": "Furnished or empty?",
+			"transliteration": "mafroosha walla faadhya?",
+			"wordAlignments": [
+				{
+					"arabic": "مفروشة",
+					"english": "Furnished",
+					"transliteration": "mafroosha"
+				},
+				{
+					"arabic": "ولا",
+					"english": "or",
+					"transliteration": "walla"
+				},
+				{
+					"arabic": "فاضية؟",
+					"english": "empty?",
+					"transliteration": "faadhya?"
+				}
+			],
+			"targetWords": [
+				"Furnished"
+			]
+		},
+		{
+			"arabic": "ولد الجار صديقي.",
+			"arabicTashkeel": "وَلَد الجار صَديقي.",
+			"english": "The neighbour's son is my friend.",
+			"transliteration": "walad ij-jaar sadeegi.",
+			"wordAlignments": [
+				{
+					"arabic": "ولد",
+					"english": "The son of",
+					"transliteration": "walad"
+				},
+				{
+					"arabic": "الجار",
+					"english": "the neighbour is",
+					"transliteration": "ij-jaar"
+				},
+				{
+					"arabic": "صديقي.",
+					"english": "my friend.",
+					"transliteration": "sadeegi."
+				}
+			],
+			"targetWords": [
+				"Neighbour",
+				"Friend"
+			]
+		},
+		{
+			"arabic": "عزمنا الجيران على العشا.",
+			"arabicTashkeel": "عَزَمنا الجيران على العَشا.",
+			"english": "We invited the neighbours to dinner.",
+			"transliteration": "3azamna ij-jeeraan 3ala il-3asha.",
+			"wordAlignments": [
+				{
+					"arabic": "عزمنا",
+					"english": "We invited",
+					"transliteration": "3azamna"
+				},
+				{
+					"arabic": "الجيران",
+					"english": "the neighbours",
+					"transliteration": "ij-jeeraan"
+				},
+				{
+					"arabic": "على",
+					"english": "to",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "العشا.",
+					"english": "the dinner.",
+					"transliteration": "il-3asha."
+				}
+			],
+			"targetWords": [
+				"Neighbours"
+			]
+		},
+		{
+			"arabic": "أدفع الإيجار كل شهر.",
+			"arabicTashkeel": "أدفَع الإيجار كُل شَهر.",
+			"english": "I pay the rent every month.",
+			"transliteration": "adfa3 il-eejaar kull shahr.",
+			"wordAlignments": [
+				{
+					"arabic": "أدفع",
+					"english": "I pay",
+					"transliteration": "adfa3"
+				},
+				{
+					"arabic": "الإيجار",
+					"english": "the rent",
+					"transliteration": "il-eejaar"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kull"
+				},
+				{
+					"arabic": "شهر.",
+					"english": "month.",
+					"transliteration": "shahr."
+				}
+			],
+			"targetWords": [
+				"Rent"
+			]
+		},
+		{
+			"arabic": "صاحب البيت محترم.",
+			"arabicTashkeel": "صاحِب البيت مُحتَرَم.",
+			"english": "The landlord is respectable.",
+			"transliteration": "saa7ib il-bait mu7taram.",
+			"wordAlignments": [
+				{
+					"arabic": "صاحب",
+					"english": "The owner of",
+					"transliteration": "saa7ib"
+				},
+				{
+					"arabic": "البيت",
+					"english": "the house is",
+					"transliteration": "il-bait"
+				},
+				{
+					"arabic": "محترم.",
+					"english": "respectable.",
+					"transliteration": "mu7taram."
+				}
+			],
+			"targetWords": [
+				"Landlord"
+			]
+		},
+		{
+			"arabic": "شقة تلات غرف.",
+			"arabicTashkeel": "شَقّة تَلات غُرَف.",
+			"english": "A flat with three rooms.",
+			"transliteration": "shagga talaat ghuraf.",
+			"wordAlignments": [
+				{
+					"arabic": "شقة",
+					"english": "A flat",
+					"transliteration": "shagga"
+				},
+				{
+					"arabic": "تلات",
+					"english": "three",
+					"transliteration": "talaat"
+				},
+				{
+					"arabic": "غرف.",
+					"english": "rooms.",
+					"transliteration": "ghuraf."
+				}
+			],
+			"targetWords": [
+				"Flat (apartment)"
+			]
+		},
+		{
+			"arabic": "العقد يخلص في يوليو.",
+			"arabicTashkeel": "العَقد يِخلَص في يوليو.",
+			"english": "The contract ends in July.",
+			"transliteration": "il-3agd yikhlas fi yoolyo.",
+			"wordAlignments": [
+				{
+					"arabic": "العقد",
+					"english": "The contract",
+					"transliteration": "il-3agd"
+				},
+				{
+					"arabic": "يخلص",
+					"english": "ends",
+					"transliteration": "yikhlas"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "يوليو.",
+					"english": "July.",
+					"transliteration": "yoolyo."
+				}
+			],
+			"targetWords": [
+				"Contract"
+			]
+		},
+		{
+			"arabic": "التأمين ألفين ريال.",
+			"arabicTashkeel": "التّأمين ألفين ريال.",
+			"english": "The deposit is two thousand riyals.",
+			"transliteration": "it-ta2meen alfain riyaal.",
+			"wordAlignments": [
+				{
+					"arabic": "التأمين",
+					"english": "The deposit is",
+					"transliteration": "it-ta2meen"
+				},
+				{
+					"arabic": "ألفين",
+					"english": "two thousand",
+					"transliteration": "alfain"
+				},
+				{
+					"arabic": "ريال.",
+					"english": "riyals.",
+					"transliteration": "riyaal."
+				}
+			],
+			"targetWords": [
+				"Deposit"
+			]
+		},
+		{
+			"arabic": "علاقتهم خلصت.",
+			"arabicTashkeel": "عَلاقتهُم خِلصَت.",
+			"english": "Their relationship ended.",
+			"transliteration": "3alaagat-hum khilsat.",
+			"wordAlignments": [
+				{
+					"arabic": "علاقتهم",
+					"english": "Their relationship",
+					"transliteration": "3alaagat-hum"
+				},
+				{
+					"arabic": "خلصت.",
+					"english": "ended.",
+					"transliteration": "khilsat."
+				}
+			],
+			"targetWords": [
+				"Relationship"
+			]
+		},
+		{
+			"arabic": "أعز صديق عندي.",
+			"arabicTashkeel": "أعَز صَديق عِندي.",
+			"english": "My best friend.",
+			"transliteration": "a3azz sadeeg 3indi.",
+			"wordAlignments": [
+				{
+					"arabic": "أعز",
+					"english": "The dearest",
+					"transliteration": "a3azz"
+				},
+				{
+					"arabic": "صديق",
+					"english": "friend",
+					"transliteration": "sadeeg"
+				},
+				{
+					"arabic": "عندي.",
+					"english": "I have.",
+					"transliteration": "3indi."
+				}
+			],
+			"targetWords": [
+				"Friend"
+			]
+		},
+		{
+			"arabic": "يزور أمه كل يوم.",
+			"arabicTashkeel": "يِزور أُمُّه كُل يوم.",
+			"english": "He visits his mother every day.",
+			"transliteration": "yizoor ummu kull yoom.",
+			"wordAlignments": [
+				{
+					"arabic": "يزور",
+					"english": "He visits",
+					"transliteration": "yizoor"
+				},
+				{
+					"arabic": "أمه",
+					"english": "his mother",
+					"transliteration": "ummu"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kull"
+				},
+				{
+					"arabic": "يوم.",
+					"english": "day.",
+					"transliteration": "yoom."
+				}
+			],
+			"targetWords": [
+				"He visits"
+			]
+		},
+		{
+			"arabic": "جار هادي.",
+			"arabicTashkeel": "جار هادي.",
+			"english": "A quiet neighbour.",
+			"transliteration": "jaar haadi.",
+			"wordAlignments": [
+				{
+					"arabic": "جار",
+					"english": "A neighbour",
+					"transliteration": "jaar"
+				},
+				{
+					"arabic": "هادي.",
+					"english": "quiet.",
+					"transliteration": "haadi."
+				}
+			],
+			"targetWords": [
+				"Quiet",
+				"Neighbour"
+			]
+		},
+		{
+			"arabic": "كلب الجار مزعج.",
+			"arabicTashkeel": "كَلب الجار مُزعِج.",
+			"english": "The neighbour's dog is annoying.",
+			"transliteration": "kalb ij-jaar muz3ij.",
+			"wordAlignments": [
+				{
+					"arabic": "كلب",
+					"english": "The dog of",
+					"transliteration": "kalb"
+				},
+				{
+					"arabic": "الجار",
+					"english": "the neighbour is",
+					"transliteration": "ij-jaar"
+				},
+				{
+					"arabic": "مزعج.",
+					"english": "annoying.",
+					"transliteration": "muz3ij."
+				}
+			],
+			"targetWords": [
+				"Noisy / annoying"
+			]
+		},
+		{
+			"arabic": "مين يساعدك في البيت؟",
+			"arabicTashkeel": "مين يِساعدَك في البيت؟",
+			"english": "Who helps you at home?",
+			"transliteration": "meen yisaa3dak fi il-bait?",
+			"wordAlignments": [
+				{
+					"arabic": "مين",
+					"english": "Who",
+					"transliteration": "meen"
+				},
+				{
+					"arabic": "يساعدك",
+					"english": "helps you",
+					"transliteration": "yisaa3dak"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "البيت؟",
+					"english": "the house?",
+					"transliteration": "il-bait?"
+				}
+			],
+			"targetWords": [
+				"He helps"
+			]
+		},
+		{
+			"arabic": "استأجرنا استراحة للويكند.",
+			"arabicTashkeel": "اِستأجَرنا اِستِراحة للويكِند.",
+			"english": "We rented an istiraha for the weekend.",
+			"transliteration": "ista2jarna istiraa7a lil-weekend.",
+			"wordAlignments": [
+				{
+					"arabic": "استأجرنا",
+					"english": "We rented",
+					"transliteration": "ista2jarna"
+				},
+				{
+					"arabic": "استراحة",
+					"english": "a rest house",
+					"transliteration": "istiraa7a"
+				},
+				{
+					"arabic": "للويكند.",
+					"english": "for the weekend.",
+					"transliteration": "lil-weekend."
+				}
+			],
+			"targetWords": [
+				"Istiraha (rest house)"
+			]
+		},
+		{
+			"arabic": "الشقة المفروشة أغلى.",
+			"arabicTashkeel": "الشَّقّة المَفروشة أغلى.",
+			"english": "A furnished flat is more expensive.",
+			"transliteration": "ish-shagga il-mafroosha aghla.",
+			"wordAlignments": [
+				{
+					"arabic": "الشقة",
+					"english": "The flat",
+					"transliteration": "ish-shagga"
+				},
+				{
+					"arabic": "المفروشة",
+					"english": "furnished is",
+					"transliteration": "il-mafroosha"
+				},
+				{
+					"arabic": "أغلى.",
+					"english": "more expensive.",
+					"transliteration": "aghla."
+				}
+			],
+			"targetWords": [
+				"Furnished",
+				"Flat (apartment)"
+			]
+		},
+		{
+			"arabic": "الجيران القدام.",
+			"arabicTashkeel": "الجيران القُدام.",
+			"english": "The old neighbours.",
+			"transliteration": "ij-jeeraan il-gudaam.",
+			"wordAlignments": [
+				{
+					"arabic": "الجيران",
+					"english": "The neighbours",
+					"transliteration": "ij-jeeraan"
+				},
+				{
+					"arabic": "القدام.",
+					"english": "old.",
+					"transliteration": "il-gudaam."
+				}
+			],
+			"targetWords": [
+				"Neighbours"
+			]
+		},
+		{
+			"arabic": "الإيجار معقول.",
+			"arabicTashkeel": "الإيجار مَعقول.",
+			"english": "The rent is reasonable.",
+			"transliteration": "il-eejaar ma3gool.",
+			"wordAlignments": [
+				{
+					"arabic": "الإيجار",
+					"english": "The rent is",
+					"transliteration": "il-eejaar"
+				},
+				{
+					"arabic": "معقول.",
+					"english": "reasonable.",
+					"transliteration": "ma3gool."
+				}
+			],
+			"targetWords": [
+				"Rent"
+			]
+		},
+		{
+			"arabic": "صاحب البيت صلح المكيف.",
+			"arabicTashkeel": "صاحِب البيت صَلَّح المُكَيِّف.",
+			"english": "The landlord fixed the air conditioner.",
+			"transliteration": "saa7ib il-bait salla7 il-mukayyif.",
+			"wordAlignments": [
+				{
+					"arabic": "صاحب",
+					"english": "The owner of",
+					"transliteration": "saa7ib"
+				},
+				{
+					"arabic": "البيت",
+					"english": "the house",
+					"transliteration": "il-bait"
+				},
+				{
+					"arabic": "صلح",
+					"english": "fixed",
+					"transliteration": "salla7"
+				},
+				{
+					"arabic": "المكيف.",
+					"english": "the air conditioner.",
+					"transliteration": "il-mukayyif."
+				}
+			],
+			"targetWords": [
+				"Landlord"
+			]
+		},
+		{
+			"arabic": "وقعت العقد.",
+			"arabicTashkeel": "وَقَّعت العَقد.",
+			"english": "I signed the contract.",
+			"transliteration": "waggat3 il-3agd.",
+			"wordAlignments": [
+				{
+					"arabic": "وقعت",
+					"english": "I signed",
+					"transliteration": "waggat3"
+				},
+				{
+					"arabic": "العقد.",
+					"english": "the contract.",
+					"transliteration": "il-3agd."
+				}
+			],
+			"targetWords": [
+				"Contract"
+			]
+		},
+		{
+			"arabic": "دفعت التأمين.",
+			"arabicTashkeel": "دَفَعت التّأمين.",
+			"english": "I paid the deposit.",
+			"transliteration": "dafa3t it-ta2meen.",
+			"wordAlignments": [
+				{
+					"arabic": "دفعت",
+					"english": "I paid",
+					"transliteration": "dafa3t"
+				},
+				{
+					"arabic": "التأمين.",
+					"english": "the deposit.",
+					"transliteration": "it-ta2meen."
+				}
+			],
+			"targetWords": [
+				"Deposit"
+			]
+		},
+		{
+			"arabic": "علاقة حلوة مع الزملا.",
+			"arabicTashkeel": "عَلاقة حِلوة مَعَ الزُّمَلا.",
+			"english": "A good relationship with colleagues.",
+			"transliteration": "3alaaga 7ilwa ma3a iz-zumala.",
+			"wordAlignments": [
+				{
+					"arabic": "علاقة",
+					"english": "A relationship",
+					"transliteration": "3alaaga"
+				},
+				{
+					"arabic": "حلوة",
+					"english": "good",
+					"transliteration": "7ilwa"
+				},
+				{
+					"arabic": "مع",
+					"english": "with",
+					"transliteration": "ma3a"
+				},
+				{
+					"arabic": "الزملا.",
+					"english": "the colleagues.",
+					"transliteration": "iz-zumala."
+				}
+			],
+			"targetWords": [
+				"Relationship"
+			]
+		},
+		{
+			"arabic": "هوا صديق قديم.",
+			"arabicTashkeel": "هوّا صَديق قَديم.",
+			"english": "He's an old friend.",
+			"transliteration": "huwwa sadeeg gadeem.",
+			"wordAlignments": [
+				{
+					"arabic": "هوا",
+					"english": "He is",
+					"transliteration": "huwwa"
+				},
+				{
+					"arabic": "صديق",
+					"english": "a friend",
+					"transliteration": "sadeeg"
+				},
+				{
+					"arabic": "قديم.",
+					"english": "old.",
+					"transliteration": "gadeem."
+				}
+			],
+			"targetWords": [
+				"Friend"
+			]
+		},
+		{
+			"arabic": "زورونا في أي وقت!",
+			"arabicTashkeel": "زورونا في أيّ وَقت!",
+			"english": "Visit us anytime!",
+			"transliteration": "zooroona fi ayy wagt!",
+			"wordAlignments": [
+				{
+					"arabic": "زورونا",
+					"english": "Visit us",
+					"transliteration": "zooroona"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "أي",
+					"english": "any",
+					"transliteration": "ayy"
+				},
+				{
+					"arabic": "وقت!",
+					"english": "time!",
+					"transliteration": "wagt!"
+				}
+			],
+			"targetWords": [
+				"He visits"
+			]
+		},
+		{
+			"arabic": "العيال مو هاديين.",
+			"arabicTashkeel": "العِيال مو هاديين.",
+			"english": "The kids aren't quiet.",
+			"transliteration": "il-3iyaal moo haadyeen.",
+			"wordAlignments": [
+				{
+					"arabic": "العيال",
+					"english": "The kids",
+					"transliteration": "il-3iyaal"
+				},
+				{
+					"arabic": "مو",
+					"english": "not",
+					"transliteration": "moo"
+				},
+				{
+					"arabic": "هاديين.",
+					"english": "quiet.",
+					"transliteration": "haadyeen."
+				}
+			],
+			"targetWords": [
+				"Quiet"
+			]
+		},
+		{
+			"arabic": "غرفة مفروشة.",
+			"arabicTashkeel": "غُرفة مَفروشة.",
+			"english": "A furnished room.",
+			"transliteration": "ghurfa mafroosha.",
+			"wordAlignments": [
+				{
+					"arabic": "غرفة",
+					"english": "A room",
+					"transliteration": "ghurfa"
+				},
+				{
+					"arabic": "مفروشة.",
+					"english": "furnished.",
+					"transliteration": "mafroosha."
+				}
+			],
+			"targetWords": [
+				"Furnished"
+			]
+		},
+		{
+			"arabic": "أصحابي يتقابلوا في الإستراحة.",
+			"arabicTashkeel": "أصحابي يِتقابَلوا في الإستِراحة.",
+			"english": "My friends meet at the istiraha.",
+			"transliteration": "as7aabi yitgaabalu fi il-istiraa7a.",
+			"wordAlignments": [
+				{
+					"arabic": "أصحابي",
+					"english": "My friends",
+					"transliteration": "as7aabi"
+				},
+				{
+					"arabic": "يتقابلوا",
+					"english": "meet",
+					"transliteration": "yitgaabalu"
+				},
+				{
+					"arabic": "في",
+					"english": "at",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الإستراحة.",
+					"english": "the rest house.",
+					"transliteration": "il-istiraa7a."
+				}
+			],
+			"targetWords": [
+				"Istiraha (rest house)"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "The New Flat",
+			"sentences": [
+				{
+					"arabic": "لقيت شقة في حارة هادية في جدة.",
+					"arabicTashkeel": "لَقيت شَقّة في حارة هادية في جِدّة.",
+					"english": "I found a flat in a quiet neighbourhood in Jeddah.",
+					"transliteration": "lageet shagga fi 7aara haadya fi jidda.",
+					"wordAlignments": [
+						{
+							"arabic": "لقيت",
+							"english": "I found",
+							"transliteration": "lageet"
+						},
+						{
+							"arabic": "شقة",
+							"english": "a flat",
+							"transliteration": "shagga"
+						},
+						{
+							"arabic": "في",
+							"english": "in",
+							"transliteration": "fi"
+						},
+						{
+							"arabic": "حارة",
+							"english": "a neighbourhood",
+							"transliteration": "7aara"
+						},
+						{
+							"arabic": "هادية",
+							"english": "quiet",
+							"transliteration": "haadya"
+						},
+						{
+							"arabic": "في",
+							"english": "in",
+							"transliteration": "fi"
+						},
+						{
+							"arabic": "جدة.",
+							"english": "Jeddah.",
+							"transliteration": "jidda."
+						}
+					]
+				},
+				{
+					"arabic": "الشقة مفروشة، والإيجار معقول.",
+					"arabicTashkeel": "الشَّقّة مَفروشة، والإيجار مَعقول.",
+					"english": "The flat is furnished, and the rent is reasonable.",
+					"transliteration": "ish-shagga mafroosha, w-il-eejaar ma3gool.",
+					"wordAlignments": [
+						{
+							"arabic": "الشقة",
+							"english": "The flat is",
+							"transliteration": "ish-shagga"
+						},
+						{
+							"arabic": "مفروشة،",
+							"english": "furnished,",
+							"transliteration": "mafroosha,"
+						},
+						{
+							"arabic": "والإيجار",
+							"english": "and the rent is",
+							"transliteration": "w-il-eejaar"
+						},
+						{
+							"arabic": "معقول.",
+							"english": "reasonable.",
+							"transliteration": "ma3gool."
+						}
+					]
+				},
+				{
+					"arabic": "صاحب البيت ساكن في نفس العمارة ومحترم مرة.",
+					"arabicTashkeel": "صاحِب البيت ساكِن في نَفس العِمارة ومُحتَرَم مَرّة.",
+					"english": "The landlord lives in the same building and is very respectable.",
+					"transliteration": "saa7ib il-bait saakin fi nafs il-3imaara w-mu7taram marra.",
+					"wordAlignments": [
+						{
+							"arabic": "صاحب",
+							"english": "The owner of",
+							"transliteration": "saa7ib"
+						},
+						{
+							"arabic": "البيت",
+							"english": "the house",
+							"transliteration": "il-bait"
+						},
+						{
+							"arabic": "ساكن",
+							"english": "lives",
+							"transliteration": "saakin"
+						},
+						{
+							"arabic": "في",
+							"english": "in",
+							"transliteration": "fi"
+						},
+						{
+							"arabic": "نفس",
+							"english": "the same",
+							"transliteration": "nafs"
+						},
+						{
+							"arabic": "العمارة",
+							"english": "building",
+							"transliteration": "il-3imaara"
+						},
+						{
+							"arabic": "ومحترم",
+							"english": "and respectable",
+							"transliteration": "w-mu7taram"
+						},
+						{
+							"arabic": "مرة.",
+							"english": "very.",
+							"transliteration": "marra."
+						}
+					]
+				},
+				{
+					"arabic": "وقعت العقد ودفعت التأمين.",
+					"arabicTashkeel": "وَقَّعت العَقد ودَفَعت التّأمين.",
+					"english": "I signed the contract and paid the deposit.",
+					"transliteration": "waggat3 il-3agd w-dafa3t it-ta2meen.",
+					"wordAlignments": [
+						{
+							"arabic": "وقعت",
+							"english": "I signed",
+							"transliteration": "waggat3"
+						},
+						{
+							"arabic": "العقد",
+							"english": "the contract",
+							"transliteration": "il-3agd"
+						},
+						{
+							"arabic": "ودفعت",
+							"english": "and paid",
+							"transliteration": "w-dafa3t"
+						},
+						{
+							"arabic": "التأمين.",
+							"english": "the deposit.",
+							"transliteration": "it-ta2meen."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "My Neighbours",
+			"sentences": [
+				{
+					"arabic": "جيراني طيبين، وعندنا علاقة حلوة.",
+					"arabicTashkeel": "جيراني طَيّبين، وعِندِنا عَلاقة حِلوة.",
+					"english": "My neighbours are kind, and we have a good relationship.",
+					"transliteration": "jeeraani tayyibeen, w-3indina 3alaaga 7ilwa.",
+					"wordAlignments": [
+						{
+							"arabic": "جيراني",
+							"english": "My neighbours are",
+							"transliteration": "jeeraani"
+						},
+						{
+							"arabic": "طيبين،",
+							"english": "kind,",
+							"transliteration": "tayyibeen,"
+						},
+						{
+							"arabic": "وعندنا",
+							"english": "and we have",
+							"transliteration": "w-3indina"
+						},
+						{
+							"arabic": "علاقة",
+							"english": "a relationship",
+							"transliteration": "3alaaga"
+						},
+						{
+							"arabic": "حلوة.",
+							"english": "good.",
+							"transliteration": "7ilwa."
+						}
+					]
+				},
+				{
+					"arabic": "ولد الجار يساعدني، وأبوه عزمني على الإستراحة.",
+					"arabicTashkeel": "وَلَد الجار يِساعِدني، وأبوه عَزَمني على الإستِراحة.",
+					"english": "The neighbour's son helps me, and his father invited me to the istiraha.",
+					"transliteration": "walad ij-jaar yisaa3idni, w-aboo 3azamni 3ala il-istiraa7a.",
+					"wordAlignments": [
+						{
+							"arabic": "ولد",
+							"english": "The son of",
+							"transliteration": "walad"
+						},
+						{
+							"arabic": "الجار",
+							"english": "the neighbour",
+							"transliteration": "ij-jaar"
+						},
+						{
+							"arabic": "يساعدني،",
+							"english": "helps me,",
+							"transliteration": "yisaa3idni,"
+						},
+						{
+							"arabic": "وأبوه",
+							"english": "and his father",
+							"transliteration": "w-aboo"
+						},
+						{
+							"arabic": "عزمني",
+							"english": "invited me",
+							"transliteration": "3azamni"
+						},
+						{
+							"arabic": "على",
+							"english": "to",
+							"transliteration": "3ala"
+						},
+						{
+							"arabic": "الإستراحة.",
+							"english": "the rest house.",
+							"transliteration": "il-istiraa7a."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student is viewing a flat to rent in north Jeddah, and the landlord, who lives in the same building, shows them around.",
+		"studentRole": "A prospective tenant learning Saudi (Hijazi) Arabic.",
+		"otherRole": "The friendly Jeddawi landlord, who also invites them to his weekend istiraha.",
+		"goalEnglish": "Ask about the rent, the contract, the deposit and whether it is furnished, and find out what the neighbours and neighbourhood are like.",
+		"targetWords": [
+			"Flat (apartment)",
+			"Rent",
+			"Landlord",
+			"Contract",
+			"Deposit",
+			"Furnished",
+			"Neighbours",
+			"Quiet"
+		]
+	}
+}
