@@ -236,5 +236,134 @@ export const DIALECT_LANDING: Record<string, DialectLandingContent> = {
 					'It depends on your goal. Fusha first makes reading and formal study easier and gives you the full sound system. A dialect first gets you talking to people sooner. Neither order is wrong.'
 			}
 		]
+	},
+	iraqi: {
+		heading: 'Iraqi Arabic',
+		nativeName: 'العراقي',
+		tagline:
+			'The Arabic of Baghdad and the two rivers — direct, warm, and full of words borrowed from Persian, Turkish and English.',
+		whereSpoken:
+			'Spoken by over 40 million people in Iraq and by large communities abroad. What is taught as Iraqi Arabic is usually Baghdadi, the variety heard on Iraqi television and understood across the country.',
+		features: [
+			{
+				title: 'ك often becomes "ch"',
+				body: 'kalb (dog) is said chalib, and "you (f)" endings are -ich instead of -ik: shloonich? (how are you, to a woman). It is one of the most recognisable Iraqi sounds.'
+			},
+			{
+				title: 'ق becomes "g"',
+				body: 'qahwa (coffee) is gahwa and qalb (heart) is galub. Iraqi keeps a hard g where Egyptian and city Levantine use a glottal stop.'
+			},
+			{
+				title: 'aku and maku',
+				body: 'aku means "there is" and maku "there isn\'t". shaku maku? ("what\'s there, what\'s not?") is the classic Iraqi "what\'s up?".'
+			},
+			{
+				title: 'Its own everyday words',
+				body: 'hassa (now), shlon (how), shgadd (how much), baachir (tomorrow) and hwaaya (a lot) set Iraqi apart from its neighbours from the first conversation.'
+			}
+		],
+		faqs: [
+			{
+				question: 'Is Iraqi Arabic hard to understand for other Arabs?',
+				answer:
+					'It is less familiar than Egyptian or Levantine because less Iraqi media is watched abroad, but Gulf speakers understand it easily and most Arabs can follow it with a little exposure.'
+			},
+			{
+				question: 'How do you say "how are you" in Iraqi Arabic?',
+				answer:
+					'shloonak? (شلونك) to a man, shloonich? to a woman and shloonkum? to a group. It literally asks "what is your colour?".'
+			},
+			{
+				question: 'Should I learn Iraqi or Gulf Arabic?',
+				answer:
+					'They are close cousins and share many words and sounds. Learn Iraqi if you have family, friends or work connected to Iraq; Gulf Arabic if your life is in the UAE, Kuwait or Qatar.'
+			}
+		]
+	},
+	khaleeji: {
+		heading: 'Gulf Arabic (Khaleeji)',
+		nativeName: 'الخليجي',
+		tagline:
+			'The Arabic of the UAE, Kuwait, Qatar and Bahrain — the language of the majlis, the souk and the fast-growing Gulf cities.',
+		whereSpoken:
+			'Spoken by the citizens of the UAE, Kuwait, Qatar, Bahrain and parts of Oman and eastern Saudi Arabia. What is taught as Khaleeji is a shared Gulf koine, closest to Emirati and Kuwaiti speech.',
+		features: [
+			{
+				title: 'ج often becomes "y"',
+				body: 'jadeed (new) is said yideed, and dijaaj (chicken) is diyaay. Not every speaker does it every time, but it is the clearest Gulf sound.'
+			},
+			{
+				title: 'ق is "g" and ك can be "ch"',
+				body: 'gahwa (coffee) keeps a hard g, and kaif (how) can become chaif. "You (f)" endings are -ich: shloonich?'
+			},
+			{
+				title: 'abi, wayid and il-7een',
+				body: 'abi means "I want", waayid "a lot" and il-7een "now". These three alone make a sentence sound Gulf: abi gahwa il-7een.'
+			},
+			{
+				title: 'Hospitality has its own language',
+				body: '7ayyaak alla (God greet you) welcomes a guest, and coffee from the dalla comes with its own etiquette: shake the cup gently when you have had enough.'
+			}
+		],
+		faqs: [
+			{
+				question: 'Is Khaleeji the same in every Gulf country?',
+				answer:
+					'Not exactly. Emirati, Kuwaiti, Qatari and Bahraini Arabic differ in accent and some words, but Gulf speakers understand each other easily. Learning the shared Gulf forms prepares you for all of them.'
+			},
+			{
+				question: 'Do I need Arabic in Dubai if everyone speaks English?',
+				answer:
+					'You can get by in English, but even a little Khaleeji changes how people respond to you — at work, in the majlis, and with Emirati colleagues and neighbours.'
+			},
+			{
+				question: 'How do you say "I want" in Gulf Arabic?',
+				answer:
+					'abi (أبي), as in abi gahwa (I want coffee). Saudis say abgha, Egyptians 3aayiz and Levantines biddi.'
+			}
+		]
+	},
+	saudi: {
+		heading: 'Saudi Arabic (Hijazi)',
+		nativeName: 'الحجازي',
+		tagline:
+			'The Arabic of Jeddah, Mecca and Medina — a crossroads dialect shaped by centuries of pilgrims and traders.',
+		whereSpoken:
+			'Hijazi is spoken in the western region of Saudi Arabia, in Jeddah, Mecca, Medina and Taif. Because Jeddah has always welcomed people from everywhere, Hijazi is one of the easiest Saudi varieties for other Arabs to understand.',
+		features: [
+			{
+				title: 'ث and ذ become ت and د',
+				body: 'thalaatha (three) is talaata and haadha (this) is haada. Hijazis also write them that way in casual messages.'
+			},
+			{
+				title: 'b- for the present, 7a- for the future',
+				body: 'baktub means "I write" and 7aktub "I will write", much like Egyptian. That makes Hijazi a natural step for anyone who already knows some Egyptian Arabic.'
+			},
+			{
+				title: 'da7een, eesh and abgha',
+				body: 'da7een (now), eesh (what), feen (where) and abgha (I want) are the everyday words you hear first in Jeddah.'
+			},
+			{
+				title: 'marra means "very"',
+				body: '7ilu marra means "very nice". The word that means "once" elsewhere is the Hijazi intensifier, and you will hear it in almost every conversation.'
+			}
+		],
+		faqs: [
+			{
+				question: 'Is Hijazi the same as Saudi Arabic?',
+				answer:
+					'Saudi Arabia has several dialects. Hijazi is spoken in the west (Jeddah, Mecca, Medina); Najdi in the centre around Riyadh; and Gulf-style dialects in the east. Hijazi is the most widely understood outside the country.'
+			},
+			{
+				question: 'Is Hijazi close to Egyptian Arabic?',
+				answer:
+					'In some ways, yes: both use b- for the present and ha-/7a- for the future, and many words overlap. Hijazi keeps ق as a "g" and has its own vocabulary like da7een and eesh.'
+			},
+			{
+				question: 'How do you say "how are you" in Saudi Hijazi?',
+				answer:
+					'kaifak? (كيفك) to a man and kaifik? to a woman. The answer is usually il-7amdulillah, tamaam (praise God, fine).'
+			}
+		]
 	}
 };
