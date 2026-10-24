@@ -1,0 +1,244 @@
+# Saudi (Hijazi) — B1 — The News Bulletin (base-b1-u14)
+# News vocabulary is mostly MSA. Hijazis say MSA ث as s and ذ as z: حادِث = 7aadis, مُذيع = muzee3. أمير المَنطِقة = the regional governor (emir).
+
+@vocab
+noun = News
+أخبار / akhbaar / News
+
+noun:f = Bulletin
+نَشرة / nashra / Bulletin
+
+noun:m = Presenter
+مُذيع / muzee3 / Presenter
+
+noun:m = News item
+خَبَر / khabar / News item
+
+adjective = Breaking (news)
+عاجِل / 3aajil / Urgent
+
+noun:f = Government
+حُكومة / 7ukooma / Government
+
+noun:m = Governor (emir)
+أمير / ameer / Emir
+
+noun:m = Minister
+وَزير / wazeer / Minister
+
+noun:m = Decision / decree
+قَرار / garaar / Decision
+
+phrase = Shura Council
+مَجلِس / majlis / Council of | الشّورى / ish-shoora / consultation
+
+noun:m = Economy
+إقتِصاد / igtisaad / Economy
+
+noun:m = Accident
+حادِث / 7aadis / Accident
+
+phrase = Weather forecast
+النَّشرة / in-nashra / The bulletin | الجَوّية / il-jawwiyya / of the weather
+
+noun:f = Channel
+قَناة / ganaat / Channel
+
+noun:m = Summary
+مُلَخَّص / mulakhkhas / Summary
+
+@pool
+I watch the news every evening. = News
+أتفَرَّج / atfarraj / I watch | على / 3ala / on | الأخبار / il-akhbaar / the news | كُل / kull / every | مَسا. / masa. / evening.
+
+The bulletin is at nine. = Bulletin
+النَّشرة / in-nashra / The bulletin is | السّاعة / is-saa3a / at | تِسعة. / tis3a. / nine.
+
+The presenter speaks clearly. = Presenter
+المُذيع / il-muzee3 / The presenter | يِتكَلَّم / yitkallam / speaks | بِوُضوح. / bi-wudhoo7. / clearly.
+
+I heard a strange news item. = News item
+سِمِعت / simi3t / I heard | خَبَر / khabar / a news item | غَريب. / ghareeb. / strange.
+
+Breaking news! = Breaking (news)
+خَبَر / khabar / A news item | عاجِل! / 3aajil! / urgent!
+
+The government announced a new project. = Government
+الحُكومة / il-7ukooma / The government | أعلَنَت / a3lanat / announced | مَشروع / mashroo3 / a project | جَديد. / jadeed. / new.
+
+The governor of Mecca region visited Jeddah. = Governor (emir)
+أمير / ameer / The emir of | مَنطِقة / mantigat / the region of | مَكّة / makka / Mecca | زار / zaar / visited | جِدّة. / jidda. / Jeddah.
+
+The minister met the businessmen. = Minister
+الوَزير / il-wazeer / The minister | قابَل / gaabal / met | رِجال / rijaal / the men of | الأعمال. / il-a3maal. / business.
+
+A new decision about schools. = Decision / decree
+قَرار / garaar / A decision | جَديد / jadeed / new | عَن / 3an / about | المَدارِس. / il-madaaris. / the schools.
+
+The Shura Council met today. = Shura Council
+مَجلِس / majlis / The council of | الشّورى / ish-shoora / consultation | اِجتَمَع / ijtama3 / met | اليوم. / il-yoom. / today.
+
+The economy is growing. = Economy
+الإقتِصاد / il-igtisaad / The economy | يِكبَر. / yikbar. / is growing.
+
+There was an accident on the highway. = Accident
+صار / saar / Happened | حادِث / 7aadis / an accident | على / 3ala / on | الطَّريق / it-tareeg / the road | السَّريع. / is-saree3. / fast.
+
+The weather forecast says it will rain. = Weather forecast
+النَّشرة / in-nashra / The bulletin | الجَوّية / il-jawwiyya / of the weather | تِقول / tigool / says | حَتمَطِّر. / 7atmattir. / it will rain.
+
+Which channel? = Channel
+أيّ / ayy / Which | قَناة؟ / ganaa? / channel?
+
+Give me a summary of the news. = Summary; News
+إدّيني / iddeeni / Give me | مُلَخَّص / mulakhkhas / a summary of | الأخبار. / il-akhbaar. / the news.
+
+What's the news today? = News
+إيش / eesh / What are | الأخبار / il-akhbaar / the news | اليوم؟ / il-yoom? / today?
+
+The morning bulletin. = Bulletin
+نَشرة / nashrat / The bulletin of | الصُّبح. / is-sub7. / the morning.
+
+The presenter is new on the channel. = Presenter; Channel
+المُذيع / il-muzee3 / The presenter is | جَديد / jadeed / new | في / fi / on | القَناة. / il-ganaa. / the channel.
+
+A happy news item. = News item
+خَبَر / khabar / A news item | يِفَرِّح. / yifarri7. / that makes happy.
+
+Breaking news about the economy. = Breaking (news); Economy
+خَبَر / khabar / A news item | عاجِل / 3aajil / urgent | عَن / 3an / about | الإقتِصاد. / il-igtisaad. / the economy.
+
+The government building in Jeddah. = Government
+مَبنى / mabna / The building of | الحُكومة / il-7ukooma / the government | في / fi / in | جِدّة. / jidda. / Jeddah.
+
+The governor opened the new hospital. = Governor (emir)
+الأمير / il-ameer / The emir | اِفتَتَح / iftata7 / opened | المُستَشفى / il-mustashfa / the hospital | الجَديد. / ij-jadeed. / new.
+
+The Minister of Health spoke about the virus. = Minister
+وَزير / wazeer / The minister of | الصِّحّة / is-si77a / health | تِكَلَّم / tkallam / spoke | عَن / 3an / about | الفايروس. / il-faayroos. / the virus.
+
+The decision starts next month. = Decision / decree
+القَرار / il-garaar / The decision | يِبدا / yibda / starts | الشَّهر / ish-shahr / the month | الجاي. / ij-jaay. / next.
+
+Women are members of the Shura Council. = Shura Council
+فيه / feeh / There are | سَيِّدات / sayyidaat / ladies | في / fi / in | مَجلِس / majlis / the council of | الشّورى. / ish-shoora. / consultation.
+
+Tourism helps the economy. = Economy
+السِّياحة / is-siyaa7a / Tourism | تِساعِد / tisaa3id / helps | الإقتِصاد. / il-igtisaad. / the economy.
+
+The accident caused traffic. = Accident
+الحادِث / il-7aadis / The accident | سَوّى / sawwa / made | زَحمة. / za7ma. / traffic.
+
+What does the weather forecast say? = Weather forecast
+إيش / eesh / What | تِقول / tigool / says | النَّشرة / in-nashra / the bulletin | الجَوّية؟ / il-jawwiyya? / of the weather?
+
+Change the channel. = Channel
+غَيِّر / ghayyir / Change | القَناة. / il-ganaa. / the channel.
+
+A short summary. = Summary
+مُلَخَّص / mulakhkhas / A summary | قَصير. / gaseer. / short.
+
+I read the news on my phone. = News
+أقرا / agra / I read | الأخبار / il-akhbaar / the news | في / fi / on | الجَوّال. / ij-jawwaal. / the mobile.
+
+The bulletin was long today. = Bulletin
+النَّشرة / in-nashra / The bulletin | كانَت / kaanat / was | طَويلة / taweela / long | اليوم. / il-yoom. / today.
+
+A famous presenter. = Presenter
+مُذيع / muzee3 / A presenter | مَشهور. / mashhoor. / famous.
+
+Did you hear the news item? = News item
+سِمِعت / simi3t / Did you hear | الخَبَر؟ / il-khabar? / the news item?
+
+They stopped the programme for breaking news. = Breaking (news)
+وَقَّفوا / waggafu / They stopped | البَرنامِج / il-barnaamij / the programme | عَشان / 3ashaan / for | خَبَر / khabar / a news item | عاجِل. / 3aajil. / urgent.
+
+The government is building new houses. = Government
+الحُكومة / il-7ukooma / The government | تِبني / tibni / builds | بُيوت / buyoot / houses | جَديدة. / jadeeda. / new.
+
+The governor's office. = Governor (emir)
+مَكتَب / maktab / The office of | الأمير. / il-ameer. / the emir.
+
+A new minister. = Minister
+وَزير / wazeer / A minister | جَديد. / jadeed. / new.
+
+People are happy with the decision. = Decision / decree
+النّاس / in-naas / The people are | مَبسوطين / mabsooteen / pleased | بالقَرار. / bil-garaar. / with the decision.
+
+The Shura Council discussed the economy. = Shura Council; Economy
+مَجلِس / majlis / The council of | الشّورى / ish-shoora / consultation | ناقَش / naagash / discussed | الإقتِصاد. / il-igtisaad. / the economy.
+
+The Saudi economy is big. = Economy
+الإقتِصاد / il-igtisaad / The economy | السُّعودي / is-su3oodi / Saudi is | كبير. / kbeer. / big.
+
+Nobody was hurt in the accident. = Accident
+مَحَد / ma7ad / Nobody | اِنصاب / insaab / was hurt | في / fi / in | الحادِث. / il-7aadis. / the accident.
+
+The weather forecast was wrong. = Weather forecast
+النَّشرة / in-nashra / The bulletin | الجَوّية / il-jawwiyya / of the weather | كانَت / kaanat / was | غَلَط. / ghalat. / wrong.
+
+A sports channel. = Channel
+قَناة / ganaat / A channel of | رِياضة. / riyaadha. / sport.
+
+The summary is at the end of the bulletin. = Summary; Bulletin
+المُلَخَّص / il-mulakhkhas / The summary is | في / fi / at | آخِر / aakhir / the end of | النَّشرة. / in-nashra. / the bulletin.
+
+Good news, thank God. = News
+أخبار / akhbaar / News | حِلوة، / 7ilwa, / good, | الحَمدُ / il-7amdu / praise | لِله. / lillah. / be to God.
+
+The evening bulletin. = Bulletin
+نَشرة / nashrat / The bulletin of | المَسا. / il-masa. / the evening.
+
+The presenter asked the minister. = Presenter; Minister
+المُذيع / il-muzee3 / The presenter | سأل / sa2al / asked | الوَزير. / il-wazeer. / the minister.
+
+The news item spread fast. = News item
+الخَبَر / il-khabar / The news item | اِنتَشَر / intashar / spread | بسُرعة. / b-sur3a. / fast.
+
+An urgent decision. = Breaking (news); Decision / decree
+قَرار / garaar / A decision | عاجِل. / 3aajil. / urgent.
+
+The government's new plan. = Government
+خُطّة / khuttat / The plan of | الحُكومة / il-7ukooma / the government | الجَديدة. / ij-jadeeda. / new.
+
+The governor of Mecca region. = Governor (emir)
+أمير / ameer / The emir of | مَنطِقة / mantigat / the region of | مَكّة. / makka. / Mecca.
+
+The Minister of Education. = Minister
+وَزير / wazeer / The minister of | التَّعليم. / it-ta3leem. / education.
+
+A big accident. = Accident
+حادِث / 7aadis / An accident | كبير. / kbeer. / big.
+
+The local channel. = Channel
+القَناة / il-ganaa / The channel | المَحَلّية. / il-ma7alliyya. / local.
+
+I want a summary only. = Summary
+أبغى / abgha / I want | مُلَخَّص / mulakhkhas / a summary | بَس. / bas. / only.
+
+@passage The Evening Bulletin
+In tonight's bulletin, the presenter started with breaking news.
+في / fi / In | نَشرة / nashrat / the bulletin of | الليلة، / il-laila, / tonight, | المُذيع / il-muzee3 / the presenter | بَدا / bada / started | بِخَبَر / bi-khabar / with a news item | عاجِل. / 3aajil. / urgent.
+
+The government announced a new decision about the economy.
+الحُكومة / il-7ukooma / The government | أعلَنَت / a3lanat / announced | قَرار / garaar / a decision | جَديد / jadeed / new | عَن / 3an / about | الإقتِصاد. / il-igtisaad. / the economy.
+
+The governor of Mecca region visited the new port in Jeddah.
+أمير / ameer / The emir of | مَنطِقة / mantigat / the region of | مَكّة / makka / Mecca | زار / zaar / visited | الميناء / il-meena / the port | الجَديد / ij-jadeed / new | في / fi / in | جِدّة. / jidda. / Jeddah.
+
+There was an accident on the Mecca road, but nobody was hurt.
+صار / saar / Happened | حادِث / 7aadis / an accident | على / 3ala / on | طَريق / tareeg / the road of | مَكّة، / makka, / Mecca, | بَس / bas / but | مَحَد / ma7ad / nobody | اِنصاب. / insaab. / was hurt.
+
+@passage The Weather
+At the end, the weather forecast said: rain tomorrow in Jeddah.
+في / fi / At | الآخِر، / il-aakhir, / the end, | النَّشرة / in-nashra / the bulletin | الجَوّية / il-jawwiyya / of the weather | قالَت: / gaalat: / said: | مَطَر / matar / rain | بُكرة / bukra / tomorrow | في / fi / in | جِدّة. / jidda. / Jeddah.
+
+My grandfather asked me for a summary of the news.
+جِدّي / jiddi / My grandfather | طَلَب / talab / asked | مِنّي / minni / from me | مُلَخَّص / mulakhkhas / a summary of | الأخبار. / il-akhbaar. / the news.
+
+@scenario
+situation: The student's elderly Jeddawi host missed the evening news and asks the student to tell them what happened.
+studentRole: A guest learning Saudi (Hijazi) Arabic.
+otherRole: The elderly host, who asks follow-up questions about every story.
+goalEnglish: Summarise the main news (the government, a new decision, the economy, an accident and the weather) and answer questions about it.
+targetWords: News; Bulletin; Breaking (news); Government; Decision / decree; Economy; Accident; Weather forecast
