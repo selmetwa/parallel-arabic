@@ -1,0 +1,2414 @@
+{
+	"vocab": [
+		{
+			"arabic": "تاريخ",
+			"arabicTashkeel": "تاريخ",
+			"english": "History",
+			"transliteration": "taareekh",
+			"wordAlignments": [
+				{
+					"arabic": "تاريخ",
+					"english": "History",
+					"transliteration": "taareekh"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "آثار",
+			"arabicTashkeel": "آثار",
+			"english": "Ruins / antiquities",
+			"transliteration": "aasaar",
+			"wordAlignments": [
+				{
+					"arabic": "آثار",
+					"english": "Antiquities",
+					"transliteration": "aasaar"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "سور",
+			"arabicTashkeel": "سور",
+			"english": "City wall",
+			"transliteration": "soor",
+			"wordAlignments": [
+				{
+					"arabic": "سور",
+					"english": "Wall",
+					"transliteration": "soor"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "قبيلة",
+			"arabicTashkeel": "قَبيلة",
+			"english": "Tribe",
+			"transliteration": "gabeela",
+			"wordAlignments": [
+				{
+					"arabic": "قبيلة",
+					"english": "Tribe",
+					"transliteration": "gabeela"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "حجاج",
+			"arabicTashkeel": "حُجّاج",
+			"english": "Pilgrims",
+			"transliteration": "7ujjaaj",
+			"wordAlignments": [
+				{
+					"arabic": "حجاج",
+					"english": "Pilgrims",
+					"transliteration": "7ujjaaj"
+				}
+			],
+			"partOfSpeech": "noun"
+		},
+		{
+			"arabic": "حجر منقبي",
+			"arabicTashkeel": "حَجَر مَنقَبي",
+			"english": "Coral stone",
+			"transliteration": "7ajar mangabi",
+			"wordAlignments": [
+				{
+					"arabic": "حجر",
+					"english": "Stone",
+					"transliteration": "7ajar"
+				},
+				{
+					"arabic": "منقبي",
+					"english": "coral",
+					"transliteration": "mangabi"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "ميناء",
+			"arabicTashkeel": "ميناء",
+			"english": "Port",
+			"transliteration": "meena",
+			"wordAlignments": [
+				{
+					"arabic": "ميناء",
+					"english": "Port",
+					"transliteration": "meena"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "تاجر",
+			"arabicTashkeel": "تاجِر",
+			"english": "Merchant",
+			"transliteration": "taajir",
+			"wordAlignments": [
+				{
+					"arabic": "تاجر",
+					"english": "Merchant",
+					"transliteration": "taajir"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "بدو",
+			"arabicTashkeel": "بَدو",
+			"english": "Bedouin",
+			"transliteration": "badu",
+			"wordAlignments": [
+				{
+					"arabic": "بدو",
+					"english": "Bedouin",
+					"transliteration": "badu"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "قافلة",
+			"arabicTashkeel": "قافلة",
+			"english": "Caravan",
+			"transliteration": "gaafla",
+			"wordAlignments": [
+				{
+					"arabic": "قافلة",
+					"english": "Caravan",
+					"transliteration": "gaafla"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "قرن",
+			"arabicTashkeel": "قَرن",
+			"english": "Century",
+			"transliteration": "garn",
+			"wordAlignments": [
+				{
+					"arabic": "قرن",
+					"english": "Century",
+					"transliteration": "garn"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "m"
+		},
+		{
+			"arabic": "مخطوطة",
+			"arabicTashkeel": "مَخطوطة",
+			"english": "Manuscript",
+			"transliteration": "makhtoota",
+			"wordAlignments": [
+				{
+					"arabic": "مخطوطة",
+					"english": "Manuscript",
+					"transliteration": "makhtoota"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		},
+		{
+			"arabic": "يحافظ",
+			"arabicTashkeel": "يِحافِظ",
+			"english": "He preserves",
+			"transliteration": "yi7aafidh",
+			"wordAlignments": [
+				{
+					"arabic": "يحافظ",
+					"english": "He preserves",
+					"transliteration": "yi7aafidh"
+				}
+			],
+			"partOfSpeech": "verb"
+		},
+		{
+			"arabic": "عالم آثار",
+			"arabicTashkeel": "عالِم آثار",
+			"english": "Archaeologist",
+			"transliteration": "3aalim aasaar",
+			"wordAlignments": [
+				{
+					"arabic": "عالم",
+					"english": "Scholar of",
+					"transliteration": "3aalim"
+				},
+				{
+					"arabic": "آثار",
+					"english": "antiquities",
+					"transliteration": "aasaar"
+				}
+			],
+			"partOfSpeech": "phrase"
+		},
+		{
+			"arabic": "باب",
+			"arabicTashkeel": "باب",
+			"english": "Gate (of the old city)",
+			"transliteration": "baab",
+			"wordAlignments": [
+				{
+					"arabic": "باب",
+					"english": "Gate",
+					"transliteration": "baab"
+				}
+			],
+			"partOfSpeech": "noun",
+			"gender": "f"
+		}
+	],
+	"pool": [
+		{
+			"arabic": "تاريخ جدة يرجع لآلاف السنين.",
+			"arabicTashkeel": "تاريخ جِدّة يِرجَع لِآلاف السِّنين.",
+			"english": "Jeddah's history goes back thousands of years.",
+			"transliteration": "taareekh jidda yirja3 li-aalaaf is-sineen.",
+			"wordAlignments": [
+				{
+					"arabic": "تاريخ",
+					"english": "The history of",
+					"transliteration": "taareekh"
+				},
+				{
+					"arabic": "جدة",
+					"english": "Jeddah",
+					"transliteration": "jidda"
+				},
+				{
+					"arabic": "يرجع",
+					"english": "goes back",
+					"transliteration": "yirja3"
+				},
+				{
+					"arabic": "لآلاف",
+					"english": "to thousands of",
+					"transliteration": "li-aalaaf"
+				},
+				{
+					"arabic": "السنين.",
+					"english": "the years.",
+					"transliteration": "is-sineen."
+				}
+			],
+			"targetWords": [
+				"History"
+			]
+		},
+		{
+			"arabic": "العلا مليانة آثار.",
+			"arabicTashkeel": "العُلا مَليانة آثار.",
+			"english": "Al-Ula is full of antiquities.",
+			"transliteration": "il-3ula malyaana aasaar.",
+			"wordAlignments": [
+				{
+					"arabic": "العلا",
+					"english": "Al-Ula is",
+					"transliteration": "il-3ula"
+				},
+				{
+					"arabic": "مليانة",
+					"english": "full",
+					"transliteration": "malyaana"
+				},
+				{
+					"arabic": "آثار.",
+					"english": "of antiquities.",
+					"transliteration": "aasaar."
+				}
+			],
+			"targetWords": [
+				"Ruins / antiquities"
+			]
+		},
+		{
+			"arabic": "جدة القديمة كان حوالينها سور.",
+			"arabicTashkeel": "جِدّة القَديمة كان حَوالينها سور.",
+			"english": "Old Jeddah had a wall around it.",
+			"transliteration": "jidda il-gadeema kaan 7awaalainha soor.",
+			"wordAlignments": [
+				{
+					"arabic": "جدة",
+					"english": "Jeddah",
+					"transliteration": "jidda"
+				},
+				{
+					"arabic": "القديمة",
+					"english": "the old",
+					"transliteration": "il-gadeema"
+				},
+				{
+					"arabic": "كان",
+					"english": "was",
+					"transliteration": "kaan"
+				},
+				{
+					"arabic": "حوالينها",
+					"english": "around her",
+					"transliteration": "7awaalainha"
+				},
+				{
+					"arabic": "سور.",
+					"english": "a wall.",
+					"transliteration": "soor."
+				}
+			],
+			"targetWords": [
+				"City wall"
+			]
+		},
+		{
+			"arabic": "كل قبيلة لها تاريخها.",
+			"arabicTashkeel": "كُل قَبيلة لَها تاريخها.",
+			"english": "Every tribe has its history.",
+			"transliteration": "kull gabeela laha taareekh-ha.",
+			"wordAlignments": [
+				{
+					"arabic": "كل",
+					"english": "Every",
+					"transliteration": "kull"
+				},
+				{
+					"arabic": "قبيلة",
+					"english": "tribe",
+					"transliteration": "gabeela"
+				},
+				{
+					"arabic": "لها",
+					"english": "has",
+					"transliteration": "laha"
+				},
+				{
+					"arabic": "تاريخها.",
+					"english": "its history.",
+					"transliteration": "taareekh-ha."
+				}
+			],
+			"targetWords": [
+				"Tribe",
+				"History"
+			]
+		},
+		{
+			"arabic": "الحجاج كانوا يوصلوا جدة بالبحر.",
+			"arabicTashkeel": "الحُجّاج كانوا يِوصَلوا جِدّة بالبَحر.",
+			"english": "Pilgrims used to arrive in Jeddah by sea.",
+			"transliteration": "il-7ujjaaj kaanu yiwsalu jidda bil-ba7r.",
+			"wordAlignments": [
+				{
+					"arabic": "الحجاج",
+					"english": "The pilgrims",
+					"transliteration": "il-7ujjaaj"
+				},
+				{
+					"arabic": "كانوا",
+					"english": "were",
+					"transliteration": "kaanu"
+				},
+				{
+					"arabic": "يوصلوا",
+					"english": "arriving",
+					"transliteration": "yiwsalu"
+				},
+				{
+					"arabic": "جدة",
+					"english": "Jeddah",
+					"transliteration": "jidda"
+				},
+				{
+					"arabic": "بالبحر.",
+					"english": "by the sea.",
+					"transliteration": "bil-ba7r."
+				}
+			],
+			"targetWords": [
+				"Pilgrims"
+			]
+		},
+		{
+			"arabic": "البيوت القديمة مبنية بالحجر المنقبي.",
+			"arabicTashkeel": "البُيوت القَديمة مَبنية بالحَجَر المَنقَبي.",
+			"english": "The old houses were built of coral stone.",
+			"transliteration": "il-buyoot il-gadeema mabniyya bil-7ajar il-mangabi.",
+			"wordAlignments": [
+				{
+					"arabic": "البيوت",
+					"english": "The houses",
+					"transliteration": "il-buyoot"
+				},
+				{
+					"arabic": "القديمة",
+					"english": "old",
+					"transliteration": "il-gadeema"
+				},
+				{
+					"arabic": "مبنية",
+					"english": "are built",
+					"transliteration": "mabniyya"
+				},
+				{
+					"arabic": "بالحجر",
+					"english": "with the stone",
+					"transliteration": "bil-7ajar"
+				},
+				{
+					"arabic": "المنقبي.",
+					"english": "coral.",
+					"transliteration": "il-mangabi."
+				}
+			],
+			"targetWords": [
+				"Coral stone"
+			]
+		},
+		{
+			"arabic": "ميناء جدة أكبر ميناء على البحر الأحمر.",
+			"arabicTashkeel": "ميناء جِدّة أكبَر ميناء على البَحر الأحمَر.",
+			"english": "Jeddah port is the biggest on the Red Sea.",
+			"transliteration": "meena jidda akbar meena 3ala il-ba7r il-a7mar.",
+			"wordAlignments": [
+				{
+					"arabic": "ميناء",
+					"english": "The port of",
+					"transliteration": "meena"
+				},
+				{
+					"arabic": "جدة",
+					"english": "Jeddah is",
+					"transliteration": "jidda"
+				},
+				{
+					"arabic": "أكبر",
+					"english": "the biggest",
+					"transliteration": "akbar"
+				},
+				{
+					"arabic": "ميناء",
+					"english": "port",
+					"transliteration": "meena"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "البحر",
+					"english": "the sea",
+					"transliteration": "il-ba7r"
+				},
+				{
+					"arabic": "الأحمر.",
+					"english": "Red.",
+					"transliteration": "il-a7mar."
+				}
+			],
+			"targetWords": [
+				"Port"
+			]
+		},
+		{
+			"arabic": "جدي كان تاجر في السوق القديم.",
+			"arabicTashkeel": "جِدّي كان تاجِر في السّوق القَديم.",
+			"english": "My grandfather was a merchant in the old market.",
+			"transliteration": "jiddi kaan taajir fi is-soog il-gadeem.",
+			"wordAlignments": [
+				{
+					"arabic": "جدي",
+					"english": "My grandfather",
+					"transliteration": "jiddi"
+				},
+				{
+					"arabic": "كان",
+					"english": "was",
+					"transliteration": "kaan"
+				},
+				{
+					"arabic": "تاجر",
+					"english": "a merchant",
+					"transliteration": "taajir"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "السوق",
+					"english": "the market",
+					"transliteration": "is-soog"
+				},
+				{
+					"arabic": "القديم.",
+					"english": "old.",
+					"transliteration": "il-gadeem."
+				}
+			],
+			"targetWords": [
+				"Merchant"
+			]
+		},
+		{
+			"arabic": "البدو عاشوا في الصحرا مع جمالهم.",
+			"arabicTashkeel": "البَدو عاشوا في الصَّحرا مَعَ جِمالُهُم.",
+			"english": "The Bedouin lived in the desert with their camels.",
+			"transliteration": "il-badu 3aashu fi is-sa7ra ma3a jimaaluhum.",
+			"wordAlignments": [
+				{
+					"arabic": "البدو",
+					"english": "The Bedouin",
+					"transliteration": "il-badu"
+				},
+				{
+					"arabic": "عاشوا",
+					"english": "lived",
+					"transliteration": "3aashu"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الصحرا",
+					"english": "the desert",
+					"transliteration": "is-sa7ra"
+				},
+				{
+					"arabic": "مع",
+					"english": "with",
+					"transliteration": "ma3a"
+				},
+				{
+					"arabic": "جمالهم.",
+					"english": "their camels.",
+					"transliteration": "jimaaluhum."
+				}
+			],
+			"targetWords": [
+				"Bedouin"
+			]
+		},
+		{
+			"arabic": "القوافل كانت تشيل البخور من اليمن للشام.",
+			"arabicTashkeel": "القَوافِل كانَت تِشيل البَخور مِن اليَمَن لِلشّام.",
+			"english": "The caravans carried incense from Yemen to the Levant.",
+			"transliteration": "il-gawaafil kaanat tisheel il-bakhoor min il-yaman lish-shaam.",
+			"wordAlignments": [
+				{
+					"arabic": "القوافل",
+					"english": "The caravans",
+					"transliteration": "il-gawaafil"
+				},
+				{
+					"arabic": "كانت",
+					"english": "were",
+					"transliteration": "kaanat"
+				},
+				{
+					"arabic": "تشيل",
+					"english": "carrying",
+					"transliteration": "tisheel"
+				},
+				{
+					"arabic": "البخور",
+					"english": "the incense",
+					"transliteration": "il-bakhoor"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "اليمن",
+					"english": "Yemen",
+					"transliteration": "il-yaman"
+				},
+				{
+					"arabic": "للشام.",
+					"english": "to the Levant.",
+					"transliteration": "lish-shaam."
+				}
+			],
+			"targetWords": [
+				"Caravan"
+			]
+		},
+		{
+			"arabic": "هادا البيت من القرن التاسع عشر.",
+			"arabicTashkeel": "هادا البيت مِن القَرن التّاسِع عَشَر.",
+			"english": "This house is from the nineteenth century.",
+			"transliteration": "haada il-bait min il-garn it-taasi3 3ashar.",
+			"wordAlignments": [
+				{
+					"arabic": "هادا",
+					"english": "This",
+					"transliteration": "haada"
+				},
+				{
+					"arabic": "البيت",
+					"english": "house is",
+					"transliteration": "il-bait"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "القرن",
+					"english": "the century",
+					"transliteration": "il-garn"
+				},
+				{
+					"arabic": "التاسع",
+					"english": "ninth",
+					"transliteration": "it-taasi3"
+				},
+				{
+					"arabic": "عشر.",
+					"english": "ten.",
+					"transliteration": "3ashar."
+				}
+			],
+			"targetWords": [
+				"Century"
+			]
+		},
+		{
+			"arabic": "المكتبة فيها مخطوطات قديمة.",
+			"arabicTashkeel": "المَكتَبة فيها مَخطوطات قَديمة.",
+			"english": "The library has old manuscripts.",
+			"transliteration": "il-maktaba feeha makhtootaat gadeema.",
+			"wordAlignments": [
+				{
+					"arabic": "المكتبة",
+					"english": "The library",
+					"transliteration": "il-maktaba"
+				},
+				{
+					"arabic": "فيها",
+					"english": "has",
+					"transliteration": "feeha"
+				},
+				{
+					"arabic": "مخطوطات",
+					"english": "manuscripts",
+					"transliteration": "makhtootaat"
+				},
+				{
+					"arabic": "قديمة.",
+					"english": "old.",
+					"transliteration": "gadeema."
+				}
+			],
+			"targetWords": [
+				"Manuscript"
+			]
+		},
+		{
+			"arabic": "الحكومة تحافظ على البلد.",
+			"arabicTashkeel": "الحُكومة تِحافِظ على البَلَد.",
+			"english": "The government preserves Al-Balad.",
+			"transliteration": "il-7ukooma ti7aafidh 3ala il-balad.",
+			"wordAlignments": [
+				{
+					"arabic": "الحكومة",
+					"english": "The government",
+					"transliteration": "il-7ukooma"
+				},
+				{
+					"arabic": "تحافظ",
+					"english": "preserves",
+					"transliteration": "ti7aafidh"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "البلد.",
+					"english": "Al-Balad.",
+					"transliteration": "il-balad."
+				}
+			],
+			"targetWords": [
+				"He preserves"
+			]
+		},
+		{
+			"arabic": "عالم الآثار لقى نقوش قديمة.",
+			"arabicTashkeel": "عالِم الآثار لَقى نُقوش قَديمة.",
+			"english": "The archaeologist found ancient inscriptions.",
+			"transliteration": "3aalim il-aasaar laga nugoosh gadeema.",
+			"wordAlignments": [
+				{
+					"arabic": "عالم",
+					"english": "The scholar of",
+					"transliteration": "3aalim"
+				},
+				{
+					"arabic": "الآثار",
+					"english": "antiquities",
+					"transliteration": "il-aasaar"
+				},
+				{
+					"arabic": "لقى",
+					"english": "found",
+					"transliteration": "laga"
+				},
+				{
+					"arabic": "نقوش",
+					"english": "inscriptions",
+					"transliteration": "nugoosh"
+				},
+				{
+					"arabic": "قديمة.",
+					"english": "old.",
+					"transliteration": "gadeema."
+				}
+			],
+			"targetWords": [
+				"Archaeologist"
+			]
+		},
+		{
+			"arabic": "باب مكة باب مشهور في جدة.",
+			"arabicTashkeel": "باب مَكّة باب مَشهور في جِدّة.",
+			"english": "Bab Makkah is a famous gate in Jeddah.",
+			"transliteration": "baab makka baab mashhoor fi jidda.",
+			"wordAlignments": [
+				{
+					"arabic": "باب",
+					"english": "The gate of",
+					"transliteration": "baab"
+				},
+				{
+					"arabic": "مكة",
+					"english": "Mecca is",
+					"transliteration": "makka"
+				},
+				{
+					"arabic": "باب",
+					"english": "a gate",
+					"transliteration": "baab"
+				},
+				{
+					"arabic": "مشهور",
+					"english": "famous",
+					"transliteration": "mashhoor"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "جدة.",
+					"english": "Jeddah.",
+					"transliteration": "jidda."
+				}
+			],
+			"targetWords": [
+				"Gate (of the old city)"
+			]
+		},
+		{
+			"arabic": "أحب أقرا تاريخ.",
+			"arabicTashkeel": "أحِب أقرا تاريخ.",
+			"english": "I love reading history.",
+			"transliteration": "a7ibb agra taareekh.",
+			"wordAlignments": [
+				{
+					"arabic": "أحب",
+					"english": "I love",
+					"transliteration": "a7ibb"
+				},
+				{
+					"arabic": "أقرا",
+					"english": "I read",
+					"transliteration": "agra"
+				},
+				{
+					"arabic": "تاريخ.",
+					"english": "history.",
+					"transliteration": "taareekh."
+				}
+			],
+			"targetWords": [
+				"History"
+			]
+		},
+		{
+			"arabic": "آثار الحجر موقع اليونسكو.",
+			"arabicTashkeel": "آثار الحِجر مَوقِع اليونِسكو.",
+			"english": "The antiquities of Hegra are a UNESCO site.",
+			"transliteration": "aasaar il-7ijr mawgi3 il-yooniskoo.",
+			"wordAlignments": [
+				{
+					"arabic": "آثار",
+					"english": "The antiquities of",
+					"transliteration": "aasaar"
+				},
+				{
+					"arabic": "الحجر",
+					"english": "Hegra",
+					"transliteration": "il-7ijr"
+				},
+				{
+					"arabic": "موقع",
+					"english": "are a site of",
+					"transliteration": "mawgi3"
+				},
+				{
+					"arabic": "اليونسكو.",
+					"english": "UNESCO.",
+					"transliteration": "il-yooniskoo."
+				}
+			],
+			"targetWords": [
+				"Ruins / antiquities"
+			]
+		},
+		{
+			"arabic": "شالوا السور سنة ألف وتسعمية وسبعة وأربعين.",
+			"arabicTashkeel": "شالوا السّور سَنة ألف وتِسعَمِيّة وسَبعة وأربعين.",
+			"english": "They removed the wall in 1947.",
+			"transliteration": "shaalu is-soor sanat alf w-tis3amiyya w-sab3a w-arba3een.",
+			"wordAlignments": [
+				{
+					"arabic": "شالوا",
+					"english": "They removed",
+					"transliteration": "shaalu"
+				},
+				{
+					"arabic": "السور",
+					"english": "the wall",
+					"transliteration": "is-soor"
+				},
+				{
+					"arabic": "سنة",
+					"english": "in the year",
+					"transliteration": "sanat"
+				},
+				{
+					"arabic": "ألف",
+					"english": "thousand",
+					"transliteration": "alf"
+				},
+				{
+					"arabic": "وتسعمية",
+					"english": "and nine hundred",
+					"transliteration": "w-tis3amiyya"
+				},
+				{
+					"arabic": "وسبعة",
+					"english": "and seven",
+					"transliteration": "w-sab3a"
+				},
+				{
+					"arabic": "وأربعين.",
+					"english": "and forty.",
+					"transliteration": "w-arba3een."
+				}
+			],
+			"targetWords": [
+				"City wall"
+			]
+		},
+		{
+			"arabic": "هوا فخور بقبيلته.",
+			"arabicTashkeel": "هوّا فَخور بِقَبيلتُه.",
+			"english": "He's proud of his tribe.",
+			"transliteration": "huwwa fakhoor bi-gabeelatu.",
+			"wordAlignments": [
+				{
+					"arabic": "هوا",
+					"english": "He is",
+					"transliteration": "huwwa"
+				},
+				{
+					"arabic": "فخور",
+					"english": "proud",
+					"transliteration": "fakhoor"
+				},
+				{
+					"arabic": "بقبيلته.",
+					"english": "of his tribe.",
+					"transliteration": "bi-gabeelatu."
+				}
+			],
+			"targetWords": [
+				"Tribe"
+			]
+		},
+		{
+			"arabic": "ملايين الحجاج يجوا كل سنة.",
+			"arabicTashkeel": "مَلايين الحُجّاج يِجوا كُل سَنة.",
+			"english": "Millions of pilgrims come every year.",
+			"transliteration": "malaayeen il-7ujjaaj yiju kull sana.",
+			"wordAlignments": [
+				{
+					"arabic": "ملايين",
+					"english": "Millions of",
+					"transliteration": "malaayeen"
+				},
+				{
+					"arabic": "الحجاج",
+					"english": "the pilgrims",
+					"transliteration": "il-7ujjaaj"
+				},
+				{
+					"arabic": "يجوا",
+					"english": "come",
+					"transliteration": "yiju"
+				},
+				{
+					"arabic": "كل",
+					"english": "every",
+					"transliteration": "kull"
+				},
+				{
+					"arabic": "سنة.",
+					"english": "year.",
+					"transliteration": "sana."
+				}
+			],
+			"targetWords": [
+				"Pilgrims"
+			]
+		},
+		{
+			"arabic": "الحجر المنقبي يخلي البيت بارد.",
+			"arabicTashkeel": "الحَجَر المَنقَبي يِخَلّي البيت بارِد.",
+			"english": "Coral stone keeps the house cool.",
+			"transliteration": "il-7ajar il-mangabi yikhalli il-bait baarid.",
+			"wordAlignments": [
+				{
+					"arabic": "الحجر",
+					"english": "The stone",
+					"transliteration": "il-7ajar"
+				},
+				{
+					"arabic": "المنقبي",
+					"english": "coral",
+					"transliteration": "il-mangabi"
+				},
+				{
+					"arabic": "يخلي",
+					"english": "keeps",
+					"transliteration": "yikhalli"
+				},
+				{
+					"arabic": "البيت",
+					"english": "the house",
+					"transliteration": "il-bait"
+				},
+				{
+					"arabic": "بارد.",
+					"english": "cool.",
+					"transliteration": "baarid."
+				}
+			],
+			"targetWords": [
+				"Coral stone"
+			]
+		},
+		{
+			"arabic": "الميناء القديم كان صغير.",
+			"arabicTashkeel": "الميناء القَديم كان صُغَيَّر.",
+			"english": "The old port was small.",
+			"transliteration": "il-meena il-gadeem kaan sughayyar.",
+			"wordAlignments": [
+				{
+					"arabic": "الميناء",
+					"english": "The port",
+					"transliteration": "il-meena"
+				},
+				{
+					"arabic": "القديم",
+					"english": "old",
+					"transliteration": "il-gadeem"
+				},
+				{
+					"arabic": "كان",
+					"english": "was",
+					"transliteration": "kaan"
+				},
+				{
+					"arabic": "صغير.",
+					"english": "small.",
+					"transliteration": "sughayyar."
+				}
+			],
+			"targetWords": [
+				"Port"
+			]
+		},
+		{
+			"arabic": "التجار الحجازيين تاجروا مع الهند.",
+			"arabicTashkeel": "التُّجّار الحِجازيين تاجَروا مَعَ الهِند.",
+			"english": "The Hijazi merchants traded with India.",
+			"transliteration": "it-tujjaar il-7ijaaziyyeen taajaru ma3a il-hind.",
+			"wordAlignments": [
+				{
+					"arabic": "التجار",
+					"english": "The merchants",
+					"transliteration": "it-tujjaar"
+				},
+				{
+					"arabic": "الحجازيين",
+					"english": "Hijazi",
+					"transliteration": "il-7ijaaziyyeen"
+				},
+				{
+					"arabic": "تاجروا",
+					"english": "traded",
+					"transliteration": "taajaru"
+				},
+				{
+					"arabic": "مع",
+					"english": "with",
+					"transliteration": "ma3a"
+				},
+				{
+					"arabic": "الهند.",
+					"english": "India.",
+					"transliteration": "il-hind."
+				}
+			],
+			"targetWords": [
+				"Merchant"
+			]
+		},
+		{
+			"arabic": "حياة البدو كانت صعبة.",
+			"arabicTashkeel": "حَياة البَدو كانَت صَعبة.",
+			"english": "The life of the Bedouin was hard.",
+			"transliteration": "7ayaat il-badu kaanat sa3ba.",
+			"wordAlignments": [
+				{
+					"arabic": "حياة",
+					"english": "The life of",
+					"transliteration": "7ayaat"
+				},
+				{
+					"arabic": "البدو",
+					"english": "the Bedouin",
+					"transliteration": "il-badu"
+				},
+				{
+					"arabic": "كانت",
+					"english": "was",
+					"transliteration": "kaanat"
+				},
+				{
+					"arabic": "صعبة.",
+					"english": "hard.",
+					"transliteration": "sa3ba."
+				}
+			],
+			"targetWords": [
+				"Bedouin"
+			]
+		},
+		{
+			"arabic": "قافلة الحجاج من الشام.",
+			"arabicTashkeel": "قافلة الحُجّاج مِن الشّام.",
+			"english": "The pilgrims' caravan from Syria.",
+			"transliteration": "gaaflat il-7ujjaaj min ish-shaam.",
+			"wordAlignments": [
+				{
+					"arabic": "قافلة",
+					"english": "The caravan of",
+					"transliteration": "gaaflat"
+				},
+				{
+					"arabic": "الحجاج",
+					"english": "the pilgrims",
+					"transliteration": "il-7ujjaaj"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الشام.",
+					"english": "the Levant.",
+					"transliteration": "ish-shaam."
+				}
+			],
+			"targetWords": [
+				"Caravan",
+				"Pilgrims"
+			]
+		},
+		{
+			"arabic": "مية سنة قرن.",
+			"arabicTashkeel": "مِيّة سَنة قَرن.",
+			"english": "A hundred years is a century.",
+			"transliteration": "miyyat sana garn.",
+			"wordAlignments": [
+				{
+					"arabic": "مية",
+					"english": "A hundred of",
+					"transliteration": "miyyat"
+				},
+				{
+					"arabic": "سنة",
+					"english": "year is",
+					"transliteration": "sana"
+				},
+				{
+					"arabic": "قرن.",
+					"english": "a century.",
+					"transliteration": "garn."
+				}
+			],
+			"targetWords": [
+				"Century"
+			]
+		},
+		{
+			"arabic": "مخطوطة عربية قديمة.",
+			"arabicTashkeel": "مَخطوطة عَرَبية قَديمة.",
+			"english": "An old Arabic manuscript.",
+			"transliteration": "makhtoota 3arabiyya gadeema.",
+			"wordAlignments": [
+				{
+					"arabic": "مخطوطة",
+					"english": "A manuscript",
+					"transliteration": "makhtoota"
+				},
+				{
+					"arabic": "عربية",
+					"english": "Arabic",
+					"transliteration": "3arabiyya"
+				},
+				{
+					"arabic": "قديمة.",
+					"english": "old.",
+					"transliteration": "gadeema."
+				}
+			],
+			"targetWords": [
+				"Manuscript"
+			]
+		},
+		{
+			"arabic": "لازم نحافظ على التاريخ.",
+			"arabicTashkeel": "لازِم نِحافِظ على التّاريخ.",
+			"english": "We must preserve history.",
+			"transliteration": "laazim ni7aafidh 3ala it-taareekh.",
+			"wordAlignments": [
+				{
+					"arabic": "لازم",
+					"english": "We must",
+					"transliteration": "laazim"
+				},
+				{
+					"arabic": "نحافظ",
+					"english": "preserve",
+					"transliteration": "ni7aafidh"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "التاريخ.",
+					"english": "the history.",
+					"transliteration": "it-taareekh."
+				}
+			],
+			"targetWords": [
+				"He preserves",
+				"History"
+			]
+		},
+		{
+			"arabic": "أختي تبغى تصير عالمة آثار.",
+			"arabicTashkeel": "أُختي تِبغى تِصير عالِمة آثار.",
+			"english": "My sister wants to be an archaeologist.",
+			"transliteration": "ukhti tibgha tiseer 3aalimat aasaar.",
+			"wordAlignments": [
+				{
+					"arabic": "أختي",
+					"english": "My sister",
+					"transliteration": "ukhti"
+				},
+				{
+					"arabic": "تبغى",
+					"english": "wants",
+					"transliteration": "tibgha"
+				},
+				{
+					"arabic": "تصير",
+					"english": "she becomes",
+					"transliteration": "tiseer"
+				},
+				{
+					"arabic": "عالمة",
+					"english": "a scholar of",
+					"transliteration": "3aalimat"
+				},
+				{
+					"arabic": "آثار.",
+					"english": "antiquities.",
+					"transliteration": "aasaar."
+				}
+			],
+			"targetWords": [
+				"Archaeologist"
+			]
+		},
+		{
+			"arabic": "المدينة القديمة كان فيها كم باب.",
+			"arabicTashkeel": "المَدينة القَديمة كان فيها كَم باب.",
+			"english": "The old city had several gates.",
+			"transliteration": "il-madeena il-gadeema kaan feeha kam baab.",
+			"wordAlignments": [
+				{
+					"arabic": "المدينة",
+					"english": "The city",
+					"transliteration": "il-madeena"
+				},
+				{
+					"arabic": "القديمة",
+					"english": "old",
+					"transliteration": "il-gadeema"
+				},
+				{
+					"arabic": "كان",
+					"english": "was",
+					"transliteration": "kaan"
+				},
+				{
+					"arabic": "فيها",
+					"english": "in it",
+					"transliteration": "feeha"
+				},
+				{
+					"arabic": "كم",
+					"english": "some",
+					"transliteration": "kam"
+				},
+				{
+					"arabic": "باب.",
+					"english": "gates.",
+					"transliteration": "baab."
+				}
+			],
+			"targetWords": [
+				"Gate (of the old city)"
+			]
+		},
+		{
+			"arabic": "تاريخ الإسلام بدا في الحجاز.",
+			"arabicTashkeel": "تاريخ الإسلام بَدا في الحِجاز.",
+			"english": "The history of Islam started in Hijaz.",
+			"transliteration": "taareekh il-islaam bada fi il-7ijaaz.",
+			"wordAlignments": [
+				{
+					"arabic": "تاريخ",
+					"english": "The history of",
+					"transliteration": "taareekh"
+				},
+				{
+					"arabic": "الإسلام",
+					"english": "Islam",
+					"transliteration": "il-islaam"
+				},
+				{
+					"arabic": "بدا",
+					"english": "started",
+					"transliteration": "bada"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الحجاز.",
+					"english": "Hijaz.",
+					"transliteration": "il-7ijaaz."
+				}
+			],
+			"targetWords": [
+				"History"
+			]
+		},
+		{
+			"arabic": "لا تلمس الآثار.",
+			"arabicTashkeel": "لا تِلمِس الآثار.",
+			"english": "Don't touch the antiquities.",
+			"transliteration": "la tilmis il-aasaar.",
+			"wordAlignments": [
+				{
+					"arabic": "لا",
+					"english": "Don't",
+					"transliteration": "la"
+				},
+				{
+					"arabic": "تلمس",
+					"english": "touch",
+					"transliteration": "tilmis"
+				},
+				{
+					"arabic": "الآثار.",
+					"english": "the antiquities.",
+					"transliteration": "il-aasaar."
+				}
+			],
+			"targetWords": [
+				"Ruins / antiquities"
+			]
+		},
+		{
+			"arabic": "السور كان يحمي المدينة من الهجمات.",
+			"arabicTashkeel": "السّور كان يِحمي المَدينة مِن الهَجَمات.",
+			"english": "The wall protected the city from attacks.",
+			"transliteration": "is-soor kaan yi7mi il-madeena min il-hajamaat.",
+			"wordAlignments": [
+				{
+					"arabic": "السور",
+					"english": "The wall",
+					"transliteration": "is-soor"
+				},
+				{
+					"arabic": "كان",
+					"english": "was",
+					"transliteration": "kaan"
+				},
+				{
+					"arabic": "يحمي",
+					"english": "protecting",
+					"transliteration": "yi7mi"
+				},
+				{
+					"arabic": "المدينة",
+					"english": "the city",
+					"transliteration": "il-madeena"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "الهجمات.",
+					"english": "the attacks.",
+					"transliteration": "il-hajamaat."
+				}
+			],
+			"targetWords": [
+				"City wall"
+			]
+		},
+		{
+			"arabic": "القبايل الكبيرة في الحجاز.",
+			"arabicTashkeel": "القَبايِل الكبيرة في الحِجاز.",
+			"english": "The big tribes of Hijaz.",
+			"transliteration": "il-gabaayil il-kbeera fi il-7ijaaz.",
+			"wordAlignments": [
+				{
+					"arabic": "القبايل",
+					"english": "The tribes",
+					"transliteration": "il-gabaayil"
+				},
+				{
+					"arabic": "الكبيرة",
+					"english": "big",
+					"transliteration": "il-kbeera"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الحجاز.",
+					"english": "Hijaz.",
+					"transliteration": "il-7ijaaz."
+				}
+			],
+			"targetWords": [
+				"Tribe"
+			]
+		},
+		{
+			"arabic": "جدة خدمت الحجاج قرون.",
+			"arabicTashkeel": "جِدّة خَدَمَت الحُجّاج قُرون.",
+			"english": "Jeddah served the pilgrims for centuries.",
+			"transliteration": "jidda khadamat il-7ujjaaj guroon.",
+			"wordAlignments": [
+				{
+					"arabic": "جدة",
+					"english": "Jeddah",
+					"transliteration": "jidda"
+				},
+				{
+					"arabic": "خدمت",
+					"english": "served",
+					"transliteration": "khadamat"
+				},
+				{
+					"arabic": "الحجاج",
+					"english": "the pilgrims",
+					"transliteration": "il-7ujjaaj"
+				},
+				{
+					"arabic": "قرون.",
+					"english": "centuries.",
+					"transliteration": "guroon."
+				}
+			],
+			"targetWords": [
+				"Pilgrims",
+				"Century"
+			]
+		},
+		{
+			"arabic": "رمموا بيوت الحجر المنقبي.",
+			"arabicTashkeel": "رَمَّموا بُيوت الحَجَر المَنقَبي.",
+			"english": "They restored the coral stone houses.",
+			"transliteration": "rammamu buyoot il-7ajar il-mangabi.",
+			"wordAlignments": [
+				{
+					"arabic": "رمموا",
+					"english": "They restored",
+					"transliteration": "rammamu"
+				},
+				{
+					"arabic": "بيوت",
+					"english": "the houses of",
+					"transliteration": "buyoot"
+				},
+				{
+					"arabic": "الحجر",
+					"english": "the stone",
+					"transliteration": "il-7ajar"
+				},
+				{
+					"arabic": "المنقبي.",
+					"english": "coral.",
+					"transliteration": "il-mangabi."
+				}
+			],
+			"targetWords": [
+				"Coral stone"
+			]
+		},
+		{
+			"arabic": "السفن كانت تيجي الميناء من مصر.",
+			"arabicTashkeel": "السُّفُن كانَت تيجي الميناء مِن مَصر.",
+			"english": "The ships came to the port from Egypt.",
+			"transliteration": "is-sufun kaanat teeji il-meena min masr.",
+			"wordAlignments": [
+				{
+					"arabic": "السفن",
+					"english": "The ships",
+					"transliteration": "is-sufun"
+				},
+				{
+					"arabic": "كانت",
+					"english": "were",
+					"transliteration": "kaanat"
+				},
+				{
+					"arabic": "تيجي",
+					"english": "coming",
+					"transliteration": "teeji"
+				},
+				{
+					"arabic": "الميناء",
+					"english": "to the port",
+					"transliteration": "il-meena"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "مصر.",
+					"english": "Egypt.",
+					"transliteration": "masr."
+				}
+			],
+			"targetWords": [
+				"Port"
+			]
+		},
+		{
+			"arabic": "تاجر غني بنى هادا البيت.",
+			"arabicTashkeel": "تاجِر غَني بَنى هادا البيت.",
+			"english": "A rich merchant built this house.",
+			"transliteration": "taajir ghani bana haada il-bait.",
+			"wordAlignments": [
+				{
+					"arabic": "تاجر",
+					"english": "A merchant",
+					"transliteration": "taajir"
+				},
+				{
+					"arabic": "غني",
+					"english": "rich",
+					"transliteration": "ghani"
+				},
+				{
+					"arabic": "بنى",
+					"english": "built",
+					"transliteration": "bana"
+				},
+				{
+					"arabic": "هادا",
+					"english": "this",
+					"transliteration": "haada"
+				},
+				{
+					"arabic": "البيت.",
+					"english": "the house.",
+					"transliteration": "il-bait."
+				}
+			],
+			"targetWords": [
+				"Merchant"
+			]
+		},
+		{
+			"arabic": "البدو مشهورين بالكرم.",
+			"arabicTashkeel": "البَدو مَشهورين بالكَرَم.",
+			"english": "The Bedouin are famous for generosity.",
+			"transliteration": "il-badu mashhooreen bil-karam.",
+			"wordAlignments": [
+				{
+					"arabic": "البدو",
+					"english": "The Bedouin are",
+					"transliteration": "il-badu"
+				},
+				{
+					"arabic": "مشهورين",
+					"english": "famous",
+					"transliteration": "mashhooreen"
+				},
+				{
+					"arabic": "بالكرم.",
+					"english": "for generosity.",
+					"transliteration": "bil-karam."
+				}
+			],
+			"targetWords": [
+				"Bedouin"
+			]
+		},
+		{
+			"arabic": "القافلة ارتاحت في الواحة.",
+			"arabicTashkeel": "القافلة اِرتاحَت في الواحة.",
+			"english": "The caravan rested in the oasis.",
+			"transliteration": "il-gaafla irtaa7at fi il-waa7a.",
+			"wordAlignments": [
+				{
+					"arabic": "القافلة",
+					"english": "The caravan",
+					"transliteration": "il-gaafla"
+				},
+				{
+					"arabic": "ارتاحت",
+					"english": "rested",
+					"transliteration": "irtaa7at"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "الواحة.",
+					"english": "the oasis.",
+					"transliteration": "il-waa7a."
+				}
+			],
+			"targetWords": [
+				"Caravan"
+			]
+		},
+		{
+			"arabic": "في القرن اللي فات، الحياة تغيرت كتير.",
+			"arabicTashkeel": "في القَرن اللي فات، الحَياة تِغَيَّرَت كِتير.",
+			"english": "In the last century, life changed a lot.",
+			"transliteration": "fi il-garn illi faat, il-7ayaa tighayyarat kteer.",
+			"wordAlignments": [
+				{
+					"arabic": "في",
+					"english": "In",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "القرن",
+					"english": "the century",
+					"transliteration": "il-garn"
+				},
+				{
+					"arabic": "اللي",
+					"english": "that",
+					"transliteration": "illi"
+				},
+				{
+					"arabic": "فات،",
+					"english": "passed,",
+					"transliteration": "faat,"
+				},
+				{
+					"arabic": "الحياة",
+					"english": "life",
+					"transliteration": "il-7ayaa"
+				},
+				{
+					"arabic": "تغيرت",
+					"english": "changed",
+					"transliteration": "tighayyarat"
+				},
+				{
+					"arabic": "كتير.",
+					"english": "a lot.",
+					"transliteration": "kteer."
+				}
+			],
+			"targetWords": [
+				"Century"
+			]
+		},
+		{
+			"arabic": "المتحف يحافظ على المخطوطات.",
+			"arabicTashkeel": "المَتحَف يِحافِظ على المَخطوطات.",
+			"english": "The museum preserves the manuscripts.",
+			"transliteration": "il-mat7af yi7aafidh 3ala il-makhtootaat.",
+			"wordAlignments": [
+				{
+					"arabic": "المتحف",
+					"english": "The museum",
+					"transliteration": "il-mat7af"
+				},
+				{
+					"arabic": "يحافظ",
+					"english": "preserves",
+					"transliteration": "yi7aafidh"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "المخطوطات.",
+					"english": "the manuscripts.",
+					"transliteration": "il-makhtootaat."
+				}
+			],
+			"targetWords": [
+				"Manuscript",
+				"He preserves"
+			]
+		},
+		{
+			"arabic": "جدتي تحافظ على الوصفات القديمة.",
+			"arabicTashkeel": "جِدّتي تِحافِظ على الوَصَفات القَديمة.",
+			"english": "My grandmother preserves the old recipes.",
+			"transliteration": "jiddati ti7aafidh 3ala il-wasafaat il-gadeema.",
+			"wordAlignments": [
+				{
+					"arabic": "جدتي",
+					"english": "My grandmother",
+					"transliteration": "jiddati"
+				},
+				{
+					"arabic": "تحافظ",
+					"english": "preserves",
+					"transliteration": "ti7aafidh"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "الوصفات",
+					"english": "the recipes",
+					"transliteration": "il-wasafaat"
+				},
+				{
+					"arabic": "القديمة.",
+					"english": "old.",
+					"transliteration": "il-gadeema."
+				}
+			],
+			"targetWords": [
+				"He preserves"
+			]
+		},
+		{
+			"arabic": "علما الآثار يشتغلوا في العلا.",
+			"arabicTashkeel": "عُلَما الآثار يِشتَغِلوا في العُلا.",
+			"english": "The archaeologists work in Al-Ula.",
+			"transliteration": "3ulama il-aasaar yishtaghilu fi il-3ula.",
+			"wordAlignments": [
+				{
+					"arabic": "علما",
+					"english": "The scholars of",
+					"transliteration": "3ulama"
+				},
+				{
+					"arabic": "الآثار",
+					"english": "antiquities",
+					"transliteration": "il-aasaar"
+				},
+				{
+					"arabic": "يشتغلوا",
+					"english": "work",
+					"transliteration": "yishtaghilu"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "العلا.",
+					"english": "Al-Ula.",
+					"transliteration": "il-3ula."
+				}
+			],
+			"targetWords": [
+				"Archaeologist"
+			]
+		},
+		{
+			"arabic": "باب الشام.",
+			"arabicTashkeel": "باب الشّام.",
+			"english": "The Sham Gate.",
+			"transliteration": "baab ish-shaam.",
+			"wordAlignments": [
+				{
+					"arabic": "باب",
+					"english": "The gate of",
+					"transliteration": "baab"
+				},
+				{
+					"arabic": "الشام.",
+					"english": "the Levant.",
+					"transliteration": "ish-shaam."
+				}
+			],
+			"targetWords": [
+				"Gate (of the old city)"
+			]
+		},
+		{
+			"arabic": "تاريخ طويل.",
+			"arabicTashkeel": "تاريخ طَويل.",
+			"english": "A long history.",
+			"transliteration": "taareekh taweel.",
+			"wordAlignments": [
+				{
+					"arabic": "تاريخ",
+					"english": "A history",
+					"transliteration": "taareekh"
+				},
+				{
+					"arabic": "طويل.",
+					"english": "long.",
+					"transliteration": "taweel."
+				}
+			],
+			"targetWords": [
+				"History"
+			]
+		},
+		{
+			"arabic": "آثار إسلامية في مكة.",
+			"arabicTashkeel": "آثار إسلامية في مَكّة.",
+			"english": "Islamic antiquities in Mecca.",
+			"transliteration": "aasaar islaamiyya fi makka.",
+			"wordAlignments": [
+				{
+					"arabic": "آثار",
+					"english": "Antiquities",
+					"transliteration": "aasaar"
+				},
+				{
+					"arabic": "إسلامية",
+					"english": "Islamic",
+					"transliteration": "islaamiyya"
+				},
+				{
+					"arabic": "في",
+					"english": "in",
+					"transliteration": "fi"
+				},
+				{
+					"arabic": "مكة.",
+					"english": "Mecca.",
+					"transliteration": "makka."
+				}
+			],
+			"targetWords": [
+				"Ruins / antiquities"
+			]
+		},
+		{
+			"arabic": "باقي جزء من السور القديم.",
+			"arabicTashkeel": "باقي جُزء مِن السّور القَديم.",
+			"english": "A part of the old wall remains.",
+			"transliteration": "baagi juz2 min is-soor il-gadeem.",
+			"wordAlignments": [
+				{
+					"arabic": "باقي",
+					"english": "Remains",
+					"transliteration": "baagi"
+				},
+				{
+					"arabic": "جزء",
+					"english": "a part",
+					"transliteration": "juz2"
+				},
+				{
+					"arabic": "من",
+					"english": "of",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "السور",
+					"english": "the wall",
+					"transliteration": "is-soor"
+				},
+				{
+					"arabic": "القديم.",
+					"english": "old.",
+					"transliteration": "il-gadeem."
+				}
+			],
+			"targetWords": [
+				"City wall"
+			]
+		},
+		{
+			"arabic": "إنت من أي قبيلة؟",
+			"arabicTashkeel": "إنتَ مِن أيّ قَبيلة؟",
+			"english": "Which tribe are you from?",
+			"transliteration": "inta min ayy gabeela?",
+			"wordAlignments": [
+				{
+					"arabic": "إنت",
+					"english": "You are",
+					"transliteration": "inta"
+				},
+				{
+					"arabic": "من",
+					"english": "from",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "أي",
+					"english": "which",
+					"transliteration": "ayy"
+				},
+				{
+					"arabic": "قبيلة؟",
+					"english": "tribe?",
+					"transliteration": "gabeela?"
+				}
+			],
+			"targetWords": [
+				"Tribe"
+			]
+		},
+		{
+			"arabic": "خدمة الحجاج شرف.",
+			"arabicTashkeel": "خِدمة الحُجّاج شَرَف.",
+			"english": "Service of the pilgrims is an honour.",
+			"transliteration": "khidmat il-7ujjaaj sharaf.",
+			"wordAlignments": [
+				{
+					"arabic": "خدمة",
+					"english": "The service of",
+					"transliteration": "khidmat"
+				},
+				{
+					"arabic": "الحجاج",
+					"english": "the pilgrims is",
+					"transliteration": "il-7ujjaaj"
+				},
+				{
+					"arabic": "شرف.",
+					"english": "an honour.",
+					"transliteration": "sharaf."
+				}
+			],
+			"targetWords": [
+				"Pilgrims"
+			]
+		},
+		{
+			"arabic": "سور من حجر منقبي.",
+			"arabicTashkeel": "سور مِن حَجَر مَنقَبي.",
+			"english": "A wall of coral stone.",
+			"transliteration": "soor min 7ajar mangabi.",
+			"wordAlignments": [
+				{
+					"arabic": "سور",
+					"english": "A wall",
+					"transliteration": "soor"
+				},
+				{
+					"arabic": "من",
+					"english": "of",
+					"transliteration": "min"
+				},
+				{
+					"arabic": "حجر",
+					"english": "stone",
+					"transliteration": "7ajar"
+				},
+				{
+					"arabic": "منقبي.",
+					"english": "coral.",
+					"transliteration": "mangabi."
+				}
+			],
+			"targetWords": [
+				"Coral stone",
+				"City wall"
+			]
+		},
+		{
+			"arabic": "ميناء جدة الإسلامي.",
+			"arabicTashkeel": "ميناء جِدّة الإسلامي.",
+			"english": "The Islamic Port of Jeddah.",
+			"transliteration": "meena jidda il-islaami.",
+			"wordAlignments": [
+				{
+					"arabic": "ميناء",
+					"english": "The port of",
+					"transliteration": "meena"
+				},
+				{
+					"arabic": "جدة",
+					"english": "Jeddah",
+					"transliteration": "jidda"
+				},
+				{
+					"arabic": "الإسلامي.",
+					"english": "Islamic.",
+					"transliteration": "il-islaami."
+				}
+			],
+			"targetWords": [
+				"Port"
+			]
+		},
+		{
+			"arabic": "تاجر بهارات.",
+			"arabicTashkeel": "تاجِر بَهارات.",
+			"english": "A spice merchant.",
+			"transliteration": "taajir bahaaraat.",
+			"wordAlignments": [
+				{
+					"arabic": "تاجر",
+					"english": "A merchant of",
+					"transliteration": "taajir"
+				},
+				{
+					"arabic": "بهارات.",
+					"english": "spices.",
+					"transliteration": "bahaaraat."
+				}
+			],
+			"targetWords": [
+				"Merchant"
+			]
+		},
+		{
+			"arabic": "شعر البدو.",
+			"arabicTashkeel": "شِعر البَدو.",
+			"english": "Bedouin poetry.",
+			"transliteration": "shi3r il-badu.",
+			"wordAlignments": [
+				{
+					"arabic": "شعر",
+					"english": "The poetry of",
+					"transliteration": "shi3r"
+				},
+				{
+					"arabic": "البدو.",
+					"english": "the Bedouin.",
+					"transliteration": "il-badu."
+				}
+			],
+			"targetWords": [
+				"Bedouin"
+			]
+		},
+		{
+			"arabic": "قافلة جمال.",
+			"arabicTashkeel": "قافلة جِمال.",
+			"english": "A camel caravan.",
+			"transliteration": "gaafla jimaal.",
+			"wordAlignments": [
+				{
+					"arabic": "قافلة",
+					"english": "A caravan of",
+					"transliteration": "gaafla"
+				},
+				{
+					"arabic": "جمال.",
+					"english": "camels.",
+					"transliteration": "jimaal."
+				}
+			],
+			"targetWords": [
+				"Caravan"
+			]
+		},
+		{
+			"arabic": "الباب يفتح على البحر.",
+			"arabicTashkeel": "الباب يِفتَح على البَحر.",
+			"english": "The gate opens to the sea.",
+			"transliteration": "il-baab yifta7 3ala il-ba7r.",
+			"wordAlignments": [
+				{
+					"arabic": "الباب",
+					"english": "The gate",
+					"transliteration": "il-baab"
+				},
+				{
+					"arabic": "يفتح",
+					"english": "opens",
+					"transliteration": "yifta7"
+				},
+				{
+					"arabic": "على",
+					"english": "on",
+					"transliteration": "3ala"
+				},
+				{
+					"arabic": "البحر.",
+					"english": "the sea.",
+					"transliteration": "il-ba7r."
+				}
+			],
+			"targetWords": [
+				"Gate (of the old city)"
+			]
+		}
+	],
+	"passages": [
+		{
+			"title": "Jeddah Before Oil",
+			"sentences": [
+				{
+					"arabic": "قبل البترول، جدة كانت مدينة صغيرة حوالينها سور.",
+					"arabicTashkeel": "قَبل البِترول، جِدّة كانَت مَدينة صُغَيَّرة حَوالينها سور.",
+					"english": "Before oil, Jeddah was a small city surrounded by a wall.",
+					"transliteration": "gabl il-bitrool, jidda kaanat madeena sughayyara 7awaalainha soor.",
+					"wordAlignments": [
+						{
+							"arabic": "قبل",
+							"english": "Before",
+							"transliteration": "gabl"
+						},
+						{
+							"arabic": "البترول،",
+							"english": "the oil,",
+							"transliteration": "il-bitrool,"
+						},
+						{
+							"arabic": "جدة",
+							"english": "Jeddah",
+							"transliteration": "jidda"
+						},
+						{
+							"arabic": "كانت",
+							"english": "was",
+							"transliteration": "kaanat"
+						},
+						{
+							"arabic": "مدينة",
+							"english": "a city",
+							"transliteration": "madeena"
+						},
+						{
+							"arabic": "صغيرة",
+							"english": "small",
+							"transliteration": "sughayyara"
+						},
+						{
+							"arabic": "حوالينها",
+							"english": "around her",
+							"transliteration": "7awaalainha"
+						},
+						{
+							"arabic": "سور.",
+							"english": "a wall.",
+							"transliteration": "soor."
+						}
+					]
+				},
+				{
+					"arabic": "السور كان فيه أبواب، زي باب مكة وباب شريف.",
+					"arabicTashkeel": "السّور كان فيه أبواب، زَي باب مَكّة وباب شَريف.",
+					"english": "The wall had gates, like Bab Makkah and Bab Sharif.",
+					"transliteration": "is-soor kaan feeh abwaab, zay baab makka w-baab shareef.",
+					"wordAlignments": [
+						{
+							"arabic": "السور",
+							"english": "The wall",
+							"transliteration": "is-soor"
+						},
+						{
+							"arabic": "كان",
+							"english": "was",
+							"transliteration": "kaan"
+						},
+						{
+							"arabic": "فيه",
+							"english": "in it",
+							"transliteration": "feeh"
+						},
+						{
+							"arabic": "أبواب،",
+							"english": "gates,",
+							"transliteration": "abwaab,"
+						},
+						{
+							"arabic": "زي",
+							"english": "like",
+							"transliteration": "zay"
+						},
+						{
+							"arabic": "باب",
+							"english": "the gate of",
+							"transliteration": "baab"
+						},
+						{
+							"arabic": "مكة",
+							"english": "Mecca",
+							"transliteration": "makka"
+						},
+						{
+							"arabic": "وباب",
+							"english": "and the gate of",
+							"transliteration": "w-baab"
+						},
+						{
+							"arabic": "شريف.",
+							"english": "Sharif.",
+							"transliteration": "shareef."
+						}
+					]
+				},
+				{
+					"arabic": "التجار عاشوا في بيوت عالية من الحجر المنقبي، برواشين خشب.",
+					"arabicTashkeel": "التُّجّار عاشوا في بُيوت عالية مِن الحَجَر المَنقَبي، بِرَواشين خَشَب.",
+					"english": "The merchants lived in tall houses of coral stone, with wooden rawasheen.",
+					"transliteration": "it-tujjaar 3aashu fi buyoot 3aalya min il-7ajar il-mangabi, bi-rawaasheen khashab.",
+					"wordAlignments": [
+						{
+							"arabic": "التجار",
+							"english": "The merchants",
+							"transliteration": "it-tujjaar"
+						},
+						{
+							"arabic": "عاشوا",
+							"english": "lived",
+							"transliteration": "3aashu"
+						},
+						{
+							"arabic": "في",
+							"english": "in",
+							"transliteration": "fi"
+						},
+						{
+							"arabic": "بيوت",
+							"english": "houses",
+							"transliteration": "buyoot"
+						},
+						{
+							"arabic": "عالية",
+							"english": "tall",
+							"transliteration": "3aalya"
+						},
+						{
+							"arabic": "من",
+							"english": "of",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "الحجر",
+							"english": "the stone",
+							"transliteration": "il-7ajar"
+						},
+						{
+							"arabic": "المنقبي،",
+							"english": "coral,",
+							"transliteration": "il-mangabi,"
+						},
+						{
+							"arabic": "برواشين",
+							"english": "with rawasheen",
+							"transliteration": "bi-rawaasheen"
+						},
+						{
+							"arabic": "خشب.",
+							"english": "of wood.",
+							"transliteration": "khashab."
+						}
+					]
+				},
+				{
+					"arabic": "الحجاج كانوا يوصلوا الميناء، والقوافل تاخدهم لمكة.",
+					"arabicTashkeel": "الحُجّاج كانوا يِوصَلوا الميناء، والقَوافِل تاخُدهُم لِمَكّة.",
+					"english": "The pilgrims arrived at the port, and caravans took them to Mecca.",
+					"transliteration": "il-7ujjaaj kaanu yiwsalu il-meena, w-il-gawaafil taakhudhum li-makka.",
+					"wordAlignments": [
+						{
+							"arabic": "الحجاج",
+							"english": "The pilgrims",
+							"transliteration": "il-7ujjaaj"
+						},
+						{
+							"arabic": "كانوا",
+							"english": "were",
+							"transliteration": "kaanu"
+						},
+						{
+							"arabic": "يوصلوا",
+							"english": "arriving",
+							"transliteration": "yiwsalu"
+						},
+						{
+							"arabic": "الميناء،",
+							"english": "at the port,",
+							"transliteration": "il-meena,"
+						},
+						{
+							"arabic": "والقوافل",
+							"english": "and the caravans",
+							"transliteration": "w-il-gawaafil"
+						},
+						{
+							"arabic": "تاخدهم",
+							"english": "take them",
+							"transliteration": "taakhudhum"
+						},
+						{
+							"arabic": "لمكة.",
+							"english": "to Mecca.",
+							"transliteration": "li-makka."
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "Preserving the Heritage",
+			"sentences": [
+				{
+					"arabic": "اليوم الحكومة تحافظ على البلد، وعلما الآثار يدرسوا تاريخها.",
+					"arabicTashkeel": "اليوم الحُكومة تِحافِظ على البَلَد، وعُلَما الآثار يِدرُسوا تاريخها.",
+					"english": "Today the government preserves Al-Balad, and archaeologists study its history.",
+					"transliteration": "il-yoom il-7ukooma ti7aafidh 3ala il-balad, w-3ulama il-aasaar yidrusu taareekh-ha.",
+					"wordAlignments": [
+						{
+							"arabic": "اليوم",
+							"english": "Today",
+							"transliteration": "il-yoom"
+						},
+						{
+							"arabic": "الحكومة",
+							"english": "the government",
+							"transliteration": "il-7ukooma"
+						},
+						{
+							"arabic": "تحافظ",
+							"english": "preserves",
+							"transliteration": "ti7aafidh"
+						},
+						{
+							"arabic": "على",
+							"english": "on",
+							"transliteration": "3ala"
+						},
+						{
+							"arabic": "البلد،",
+							"english": "Al-Balad,",
+							"transliteration": "il-balad,"
+						},
+						{
+							"arabic": "وعلما",
+							"english": "and the scholars of",
+							"transliteration": "w-3ulama"
+						},
+						{
+							"arabic": "الآثار",
+							"english": "antiquities",
+							"transliteration": "il-aasaar"
+						},
+						{
+							"arabic": "يدرسوا",
+							"english": "study",
+							"transliteration": "yidrusu"
+						},
+						{
+							"arabic": "تاريخها.",
+							"english": "its history.",
+							"transliteration": "taareekh-ha."
+						}
+					]
+				},
+				{
+					"arabic": "في المتحف فيه مخطوطات قديمة من قرون فاتت.",
+					"arabicTashkeel": "في المَتحَف فيه مَخطوطات قَديمة مِن قُرون فاتَت.",
+					"english": "In the museum there are old manuscripts from past centuries.",
+					"transliteration": "fi il-mat7af feeh makhtootaat gadeema min guroon faatat.",
+					"wordAlignments": [
+						{
+							"arabic": "في",
+							"english": "In",
+							"transliteration": "fi"
+						},
+						{
+							"arabic": "المتحف",
+							"english": "the museum",
+							"transliteration": "il-mat7af"
+						},
+						{
+							"arabic": "فيه",
+							"english": "there are",
+							"transliteration": "feeh"
+						},
+						{
+							"arabic": "مخطوطات",
+							"english": "manuscripts",
+							"transliteration": "makhtootaat"
+						},
+						{
+							"arabic": "قديمة",
+							"english": "old",
+							"transliteration": "gadeema"
+						},
+						{
+							"arabic": "من",
+							"english": "from",
+							"transliteration": "min"
+						},
+						{
+							"arabic": "قرون",
+							"english": "centuries",
+							"transliteration": "guroon"
+						},
+						{
+							"arabic": "فاتت.",
+							"english": "that passed.",
+							"transliteration": "faatat."
+						}
+					]
+				}
+			]
+		}
+	],
+	"scenario": {
+		"situation": "The student visits a heritage house museum in Al-Balad with an elderly Jeddawi guide whose family were merchants in the old city.",
+		"studentRole": "A visitor learning Saudi (Hijazi) Arabic.",
+		"otherRole": "The elderly guide, who remembers the city before the wall came down.",
+		"goalEnglish": "Ask about life before oil (the port, the merchants, the pilgrims, the Bedouin), the history of the city and how the heritage is preserved.",
+		"targetWords": [
+			"History",
+			"Port",
+			"Merchant",
+			"Pilgrims",
+			"Coral stone",
+			"City wall",
+			"He preserves",
+			"Ruins / antiquities"
+		]
+	}
+}
