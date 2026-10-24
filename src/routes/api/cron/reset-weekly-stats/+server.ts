@@ -1,5 +1,6 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
+import { recordCronRun } from '$lib/server/health-checks';
 import { supabase } from '$lib/supabaseClient';
 
 /**
@@ -41,6 +42,7 @@ export const GET: RequestHandler = async ({ request }) => {
     }
 
     if (!users || users.length === 0) {
+      await recordCronRun('reset-weekly-stats');
       return json({ 
         success: true, 
         message: 'No users need weekly reset',
@@ -67,6 +69,7 @@ export const GET: RequestHandler = async ({ request }) => {
       return json({ error: 'Failed to reset weekly stats' }, { status: 500 });
     }
 
+    await recordCronRun('reset-weekly-stats');
     return json({ 
       success: true, 
       message: `Weekly stats reset for ${users.length} user(s)`,

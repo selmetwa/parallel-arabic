@@ -1,5 +1,6 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
+import { recordCronRun } from '$lib/server/health-checks';
 import { supabase } from '$lib/supabaseClient';
 import { sendBrandedEmail, sendStreakReminderEmail } from '$lib/server/email';
 import { daysBetween, localDayKey, localHour, streakAtRisk } from '$lib/helpers/streak';
@@ -101,6 +102,7 @@ export const GET: RequestHandler = async ({ request }) => {
 			return 0;
 		});
 
+		await recordCronRun('send-streak-reminders');
 		return json({ success: true, emailsSent, comebacksSent, pushesSent, considered: users?.length ?? 0 });
 	} catch (error) {
 		console.error('Error in send-streak-reminders cron job:', error);
